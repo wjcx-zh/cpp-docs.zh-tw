@@ -1,5 +1,5 @@
 ---
-title: "&lt;mutex&gt; 函式和變數 | Microsoft Docs"
+title: '&lt;mutex&gt; functions and variables | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,28 +15,34 @@ f1_keywords:
 ms.assetid: 78ab3c8b-c7db-4226-ac93-e2e78ff8b964
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: dd24fb7f1b65f92c57915afa5f9b0412e019059d
+helpviewer_keywords:
+- std::adopt_lock [C++]
+- std::call_once [C++]
+- std::defer_lock [C++]
+- std::lock [C++]
+- std::try_to_lock [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 28ceab348f8daac6f764125a933d6e8e0dd12b84
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 函式和變數
+# <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; functions and variables
 ||||  
 |-|-|-|  
 |[adopt_lock](#adopt_lock)|[call_once](#call_once)|[defer_lock](#defer_lock)|  
 |[lock](#lock)|[try_to_lock](#try_to_lock)|  
   
-##  <a name="adopt_lock"></a>  adopt_lock 變數  
- 代表可傳遞給 [lock_guard](../standard-library/lock-guard-class.md) 和 [unique_lock](../standard-library/unique-lock-class.md) 之建構函式的物件，用來指出一併傳遞給建構函式的 mutex 物件已鎖定。  
+##  <a name="adopt_lock"></a>  adopt_lock Variable  
+ Represents an object that can be passed to constructors for [lock_guard](../standard-library/lock-guard-class.md) and [unique_lock](../standard-library/unique-lock-class.md) to indicate that the mutex object that is also being passed to the constructor is locked.  
   
 ```cpp  
 const adopt_lock_t adopt_lock;
 ```  
   
 ##  <a name="call_once"></a>  call_once  
- 提供用來呼叫指定之可呼叫物件一次執行期間的機制。  
+ Provides a mechanism for calling a specified callable object exactly once during execution.  
   
 ```
 template <class Callable, class... Args>
@@ -44,47 +50,47 @@ void call_once(once_flag& Flag,
     Callable F&&, Args&&... A);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Flag`  
- [once_flag](../standard-library/once-flag-structure.md) 物件，可確保只呼叫可呼叫的物件一次。  
+ A [once_flag](../standard-library/once-flag-structure.md) object that ensures that the callable object is only called once.  
   
  `F`  
- 可呼叫的物件。  
+ A callable object.  
   
  `A`  
- 引數清單。  
+ An argument list.  
   
-### <a name="remarks"></a>備註  
- 如果 `Flag` 無效，此函式就會擲回一個錯誤碼為 `invalid_argument` 的 [system_error](../standard-library/system-error-class.md)。 否則，此範本函式會使用其 `Flag` 引數，來確保不論此範本函式被呼叫多少次，它都只確切成功呼叫 `F(A...)` 一次。 如果 `F(A...)` 透過擲回例外狀況來結束，即表示該呼叫不成功。  
+### <a name="remarks"></a>Remarks  
+ If `Flag` is not valid, the function throws a [system_error](../standard-library/system-error-class.md) that has an error code of `invalid_argument`. Otherwise, the template function uses its `Flag` argument to ensure that it calls `F(A...)` successfully exactly once, regardless of how many times the template function is called. If `F(A...)` exits by throwing an exception, the call was not successful.  
   
-##  <a name="defer_lock"></a>  defer_lock 變數  
- 代表可傳遞給 [unique_lock](../standard-library/unique-lock-class.md) 之建構函式的物件。 這會指出建構函式不應將一併傳遞給它的 mutex 物件鎖定。  
+##  <a name="defer_lock"></a>  defer_lock Variable  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md). This indicates that the constructor should not lock the mutex object that's also being passed to it.  
   
 ```cpp  
 const defer_lock_t defer_lock;
 ```  
   
 ##  <a name="lock"></a>  lock  
- 會嘗試鎖定所有不包含死結的引數。  
+ Attempts to lock all arguments without deadlock.  
   
 ```cpp  
 template <class L1, class L2, class... L3>
 void lock(L1&, L2&, L3&...);
 ```  
   
-### <a name="remarks"></a>備註  
- 此範本函式的引數必須是「mutex 類型」，但對 `try_lock` 的呼叫可能會擲回例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The arguments to the template function must be *mutex types*, except that calls to `try_lock` might throw exceptions.  
   
- 此函式會藉由對 `lock`、`try_lock` 及 `unlock` 的呼叫，在不造成死結的情況下，鎖定其所有引數。 如果對 `lock` 或 `try_lock` 的呼叫擲回例外狀況，此函式就會先在任何先前已成功鎖定的 mutex 物件上呼叫 `unlock`，然後才重新擲回例外狀況。  
+ The function locks all of its arguments without deadlock by calls to `lock`, `try_lock`, and `unlock`. If a call to `lock` or `try_lock` throws an exception, the function calls `unlock` on any of the mutex objects that were successfully locked before rethrowing the exception.  
   
 ##  <a name="try_to_lock"></a>  try_to_lock Variable  
- 代表可傳遞給 [unique_lock](../standard-library/unique-lock-class.md) 之建構函式的物件，用來指出建構函式應嘗試將一併傳遞給它的 `mutex` 解除鎖定而不封鎖。  
+ Represents an object that can be passed to the constructor for [unique_lock](../standard-library/unique-lock-class.md) to indicate that the constructor should try to unlock the `mutex` that is also being passed to it without blocking.  
   
 ```cpp  
 const try_to_lock_t try_to_lock;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<mutex>](../standard-library/mutex.md)
 
 

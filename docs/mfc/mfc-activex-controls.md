@@ -1,123 +1,139 @@
 ---
-title: "MFC ActiveX 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC ActiveX Controls (MFC)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [C++], MFC"
-  - "COleControl 類別, MFC ActiveX 控制項"
-  - "容器 [C++], MFC ActiveX 控制項"
-  - "分派對應, MFC ActiveX 控制項的"
-  - "事件 [C++], ActiveX 控制項"
-  - "MFC ActiveX 控制項 [C++]"
-  - "MFC ActiveX 控制項 [C++], 現用/非現用狀態"
-  - "MFC ActiveX 控制項 [C++], 容器"
-  - "MFC ActiveX 控制項 [C++], 序列化"
-  - "序列化 [C++], MFC ActiveX 控制項"
+title: MFC ActiveX Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC ActiveX Controls (MFC)
+dev_langs:
+- C++
+helpviewer_keywords:
+- COleControl class [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], MFC
+- containers [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], serializing
+- MFC ActiveX controls [MFC], containers
+- serialization [MFC], MFC ActiveX controls
+- dispatch maps [MFC]], for MFC ActiveX controls
+- MFC ActiveX controls [MFC], active/inactive state
+- events [MFC], ActiveX controls
+- MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# MFC ActiveX 控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a584f1787c8ee5a3bb28cb3b336a138cb9f56f54
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-ActiveX 控制項是以元件物件模型 \(Component Object Model，COM\) 為基礎的重複使用軟體元件，可支援各種不同的 OLE 功能，也能夠自訂來符合許多軟體需求。  ActiveX 控制項是設計來用於一般 ActiveX 控制項容器以及網際網路上的全球資訊網 \(World Wide Web\) 網頁中。  您可以用在此描述的 MFC，或 [Active Template Library \(ATL\)](../atl/active-template-library-atl-concepts.md)建立 ActiveX 控制項。  
+---
+# <a name="mfc-activex-controls"></a>MFC ActiveX Controls
+An ActiveX control is a reusable software component based on the Component Object Model (COM) that supports a wide variety of OLE functionality and can be customized to fit many software needs. ActiveX controls are designed for use both in ordinary ActiveX control containers and on the Internet, in World Wide Web pages. You can create ActiveX controls either with MFC, described here, or with the [Active Template Library (ATL)](../atl/active-template-library-atl-concepts.md).  
   
- ActiveX 控制項可以在其視窗繪製自己，回應事件 \(例如按一下滑鼠\) 和透過 Automation 物件包含屬性和類似方法的介面來管理。  
+ An ActiveX control can draw itself in its own window, respond to events (such as mouse clicks), and be managed through an interface that includes properties and methods similar to those in Automation objects.  
   
- 這些控制項可以開發給許多用處，例如資料庫存取，資料監視或繪圖。  除了其可攜性以外， ActiveX 控制項支援先前對 ActiveX 控制項無效的功能，例如與現有的 OLE 容器的相容性以及將其功能表與 OLE 容器功能表整合的能力。  此外， ActiveX 控制項完全支援 Automation，允許控制項公開讀取\\寫入屬性和一組可以由控制項呼叫使用者的方法。  
+ These controls can be developed for many uses, such as database access, data monitoring, or graphing. Besides their portability, ActiveX controls support features previously not available to ActiveX controls, such as compatibility with existing OLE containers and the ability to integrate their menus with the OLE container menus. In addition, an ActiveX control fully supports Automation, which allows the control to expose read\write properties and a set of methods that can be called by the control user.  
   
- 您可以在他們啟動時建立無視窗 ActiveX 控制項和只建立視窗的控制項。  無視窗控制項加速應用程式顯示並可以讓其具有透明和非矩形控制項。  您也可以非同步地裝載 ActiveX 控制項屬性。  
+ You can create windowless ActiveX controls and controls that only create a window when they become active. Windowless controls speed up the display of your application and make it possible to have transparent and nonrectangular controls. You can also load ActiveX control properties asynchronously.  
   
- ActiveX 控制項實作為可用於所有 OLE 容器的同處理序伺服程式 \(通常是小型物件\)。  請注意只有在使用所設計的 OLE 容器內知道 ActiveX 控制項時， ActiveX 控制項的完整功能才可供使用。  請參閱 [將 ActiveX 控制項至其他應用程式](../mfc/containers-for-activex-controls.md) 為支援 ActiveX 控制項容器的清單。  這個容器型別，此後稱為「容器控制項」，可以使用控制項的屬性和方法操作 ActiveX 控制項，並從 ActiveX 控制項以事件的形式接收通知。  下列圖示顯示這個交互作用。  
+ An ActiveX control is implemented as an in-process server (typically a small object) that can be used in any OLE container. Note that the full functionality of an ActiveX control is available only when used within an OLE container designed to be aware of ActiveX controls. See [Port ActiveX Controls to Other Applications](../mfc/containers-for-activex-controls.md) for a list of containers that support ActiveX controls. This container type, hereafter called a "control container," can operate an ActiveX control by using the control's properties and methods, and receives notifications from the ActiveX control in the form of events. The following figure demonstrates this interaction.  
   
- ![ActiveX 控制項容器和控制項相互作用](../mfc/media/vc37221.png "vc37221")  
-ActiveX 控制項容器和視窗型 ActiveX 控制項之間的互動  
+ ![Interplay of ActiveX control container and control](../mfc/media/vc37221.gif "vc37221")  
+Interaction Between an ActiveX Control Container and a Windowed ActiveX Control  
   
- 如需最佳化 ActiveX 控制項的一些最新資訊，請參閱 [MFC ActiveX 控制項:最佳化](../mfc/mfc-activex-controls-optimization.md)。  
+ For some recent information on optimizing your ActiveX controls, see [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
- 若要建立 MFC ActiveX 控制項，請參閱 [建立 ActiveX 控制項專案](../mfc/reference/mfc-activex-control-wizard.md)。  
+ To create an MFC ActiveX control, see [Create an ActiveX control project](../mfc/reference/mfc-activex-control-wizard.md).  
   
- 如需詳細資訊，請參閱：  
+ For more information, see:  
   
--   [ActiveX 控制項容器](../mfc/activex-control-containers.md)  
+-   [ActiveX Control Containers](../mfc/activex-control-containers.md)  
   
--   [主動式文件](../mfc/active-documents.md)  
+-   [Active Documents](../mfc/active-documents.md)  
   
--   [使用 ActiveX 控制項](../data/ado-rdo/using-activex-controls.md)  
+-   [Understanding ActiveX Controls](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
   
--   [\<caps:sentence id\="tgt23" sentenceid\="e07c7a1ebdac21120a91f75018670c81" class\="tgtSentence"\>了解 ActiveX 控制項\<\/caps:sentence\>](http://msdn.microsoft.com/library/windows/desktop/ms693753)  
+-   [Upgrading an Existing ActiveX Control to be Used on the Internet](../mfc/upgrading-an-existing-activex-control.md)  
   
--   [升級現有的網際網路使用 ActiveX 控制項](../mfc/upgrading-an-existing-activex-control.md)  
+##  <a name="_core_basic_components_of_an_activex_control"></a> Basic Components of an ActiveX Control  
+ An ActiveX control uses several programmatic elements to interact efficiently with a control container and with the user. These are class [COleControl](../mfc/reference/colecontrol-class.md), a set of event-firing functions, and a dispatch map.  
   
-##  <a name="_core_basic_components_of_an_activex_control"></a> ActiveX 控制項的基本元件  
- ActiveX 控制項使用幾個程式設計項目有效地與控制項容器和使用者互動。  這些是 [COleControl](../mfc/reference/colecontrol-class.md)類別，一組事件引發函式和分派對應。  
+ Every ActiveX control object you develop inherits a powerful set of features from its MFC base class, `COleControl`. These features include in-place activation, and Automation logic. `COleControl` can provide the control object with the same functionality as an MFC window object, plus the ability to fire events. `COleControl` can also provide [windowless controls](../mfc/providing-windowless-activation.md), which rely on their container for help with some of the functionality a window provides (mouse capture, keyboard focus, scrolling), but offer much faster display.  
   
- 您正在開發的每一個 ActiveX 控制項物件從 MFC 基底類別 `COleControl`繼承強大的功能集。  這些功能包括就地啟動和 Automation 邏輯。  `COleControl` 可提供控制物件與 MFC Windows 物件相同的功能，再加上能夠引發事件的能力。  `COleControl` 也可以提供 [無視窗控制項](../mfc/providing-windowless-activation.md)，取決於其說明的容器與某些功能視窗提供 \(滑鼠捕捉，鍵盤焦點，移動\)，不過提供更快的顯示。  
+ Because the control class derives from `COleControl`, it inherits the capability to send, or "fire," messages, called events, to the control container when certain conditions are met. These events are used to notify the control container when something important happens in the control. You can send additional information about an event to the control container by attaching parameters to the event. For more information about ActiveX control events, see the article [MFC ActiveX Controls: Events](../mfc/mfc-activex-controls-events.md).  
   
- 由於控制項類別衍生自 `COleControl`，它會繼承功能傳送或「發射」訊息，呼叫事件，在符合特定條件時加入至容器控制項。  當控制項中發生重要的事時，這些事件被用來通知控制項容器。  您可以藉由將參數加入至事件傳送有關事件的其他資訊至控制項容器。  如需 ActiveX 控制項事件的詳細資訊，請參閱本文件的 [MFC ActiveX 控制項:事件](../mfc/mfc-activex-controls-events.md)。  
+ The final element is a dispatch map, which is used to expose a set of functions (called methods) and attributes (called properties) to the control user. Properties allow the control container or the control user to manipulate the control in various ways. The user can change the appearance of the control, change certain values of the control, or make requests of the control, such as accessing a specific piece of data that the control maintains. This interface is determined by the control developer and is defined using **Class View**. For more information on ActiveX control methods and properties, see the articles [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md) and [Properties](../mfc/mfc-activex-controls-properties.md).  
   
- 最後一個項目是分派對應，用來公開一組函式 \(呼叫方法\) 和屬性 \(稱為特性\) 至使用者控制項。  屬性允許控制項容器或控制項使用者管理以各種方式操縱控制項。  使用者可以變更控制項的外觀，變更控制項的某些值或提出要求控制項，例如存取控制維護資料的特定項目。  這個介面由控制項開發人員決定並使用 \[**類別檢視**\]定義。  如需 ActiveX 控制項的方法和屬性的詳細資訊，請參閱文件 [MFC ActiveX 控制項:方法](../mfc/mfc-activex-controls-methods.md) 和 [屬性](../mfc/mfc-activex-controls-properties.md)。  
+##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Interaction Between Controls with Windows and ActiveX Control Containers  
+ When a control is used within a control container, it uses two mechanisms to communicate: it exposes properties and methods, and it fires events. The following figure demonstrates how these two mechanisms are implemented.  
   
-##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> 視窗控制項和 ActiveX 控制項容器之間的互動  
- 當控制在控制項容器內部使用時，它會使用兩個機制通訊:它會公開屬性和方法，然後引發事件。  下圖示範這兩種機制如何實作。  
+ ![ActiveX control communicates with its container](../mfc/media/vc37222.gif "vc37222")  
+Communication Between an ActiveX Control Container and an ActiveX Control  
   
- ![ActiveX 控制項與其容器通訊](../mfc/media/vc37222.png "vc37222")  
-ActiveX 控制項容器和 ActiveX 控制項之間的通訊。  
+ The previous figure also illustrates how other OLE interfaces (besides automation and events) are handled by controls.  
   
- 先前的圖也會說明其他 OLE 介面 \(除了自動化和事件以外\) 如何由控制項處理。  
+ All of a control's communication with the container is performed by `COleControl`. To handle some of the container's requests, **COleControl** will call member functions that are implemented in the control class. All methods and some properties are handled in this way. Your control's class can also initiate communication with the container by calling member functions of `COleControl`. Events are fired in this manner.  
   
- 所有與容器控制項的通訊由 `COleControl`實作。  若要處理某些容器的要求， **COleControl** 會呼叫控制項類別實作的成員函式。  所有方法和某些屬性以這種方式處理。  控制項的類別可以透過呼叫 `COleControl`的成員函式來初始與容器的通訊。  事件會引發。  
+##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> Active and Inactive States of an ActiveX Control  
+ A control has two basic states: active and inactive. Traditionally, these states were distinguished by whether the control had a window. An active control had a window; an inactive control did not. With the introduction of windowless activation, this distinction is no longer universal, but still applies to many controls.  
   
-##  <a name="_core_active_and_inactive_states_of_an_activex_control"></a> ActiveX 控制項的現用及非現用狀態。  
- 控制項有兩種基本的狀態:現用及非現用。  傳統上，這些狀態分別由是否具有視窗的控制項區別。  現用控制項具有視窗;非現用控制項沒有。  無視窗啟動的簡介，這分別不再是通用的，不過仍適用於許多控制項。  
+ When a [windowless control](../mfc/providing-windowless-activation.md) goes active, it invokes mouse capture, keyboard focus, scrolling, and other window services from its container. You can also [provide mouse interaction to inactive controls](../mfc/providing-mouse-interaction-while-inactive.md), as well as create controls that [wait until activated to create a window](../mfc/turning-off-the-activate-when-visible-option.md).  
   
- 當 [無視窗控制項](../mfc/providing-windowless-activation.md) 移至作用中時，它會從它的容器叫用滑鼠捕捉、鍵盤焦點、捲動和其他 Windows 服務。  您也可以 [提供滑鼠互動給非現用控制項](../mfc/providing-mouse-interaction-while-inactive.md)，以及 [等待直到啟動建立視窗](../mfc/turning-off-the-activate-when-visible-option.md)中建立控制項。  
+ When a control with a window becomes active, it is able to interact fully with the control container, the user, and Windows. The figure below demonstrates the paths of communication between the ActiveX control, the control container, and the operating system.  
   
- 當有視窗的控制項變為作用中時，可以使用控制項容器、使用者和視窗完全互動。  下圖示範 ActiveX 控制項、控制項容器和作業系統之間的通訊路徑。  
+ ![Msg processing in active windowed ActiveX control](../mfc/media/vc37223.gif "vc37223")  
+Windows Message Processing in a Windowed ActiveX Control (When Active)  
   
- ![視窗化之 ActiveX 控制項中的訊息處理流程](../mfc/media/vc37223.png "vc37223")  
-處理視窗型 ActiveX 控制項的視窗訊息 \(當作用中\)  
+##  <a name="_core_serializing_activex_elements"></a> Serialization  
+ The ability to serialize data, sometimes referred to as persistence, allows the control to write the value of its properties to persistent storage. Controls can then be recreated by reading the object's state from the storage.  
   
-##  <a name="_core_serializing_activex_elements"></a> 序列化  
- 還原序列化能力的資料，有時稱為持續性，允許控制項給持續性儲存體寫入其屬性的值。  控制項可以讀取從儲存區物件狀態然後重新建立。  
+ Note that a control is not responsible for obtaining access to the storage medium. Instead, the control's container is responsible for providing the control with a storage medium to use at the appropriate times. For more information on serialization, see the article [MFC ActiveX Controls: Serializing](../mfc/mfc-activex-controls-serializing.md). For information on optimizing serialization, see [Optimizing Persistence and Initialization](../mfc/optimizing-persistence-and-initialization.md) in ActiveX Controls: Optimization.  
   
- 請注意控制項不負責取得存放媒體的存取。  相反地，控制項的容器負責提供對控制項存放媒體使用在適當的時間。  如需序列化的詳細資訊，請參閱本文件的 [MFC ActiveX 控制項:序列化](../mfc/mfc-activex-controls-serializing.md)。  如需最佳化序列化的詳細資訊，請參閱在 ActiveX 控制項的 [最佳化持續性和初始化](../mfc/optimizing-persistence-and-initialization.md) :最佳化。  
+##  <a name="_core_installing_activex_control_classes_and_tools"></a> Installing ActiveX Control Classes and Tools  
+ When you install Visual C++, the MFC ActiveX control classes and retail and debug ActiveX control run-time DLLs are automatically installed if ActiveX controls are selected in Setup (they are selected by default).  
   
-##  <a name="_core_installing_activex_control_classes_and_tools"></a> 安裝 ActiveX 控制項類別和工具  
- 當您安裝 Visual C\+\+ 時， 如果 ActiveX 控制項設定預設 \(它們被選取選取\)，MFC ActiveX 控制項類別和零售和偵錯執行階段 DLL 將被自動安裝。  
+ By default, the ActiveX control classes and tools are installed in the following subdirectories under \Program Files\Microsoft Visual Studio .NET:  
   
- 根據預設， ActiveX 控制項類別和工具安裝在下列子目錄\\ Program Files \\ Microsoft Visual Studio .NET:  
+-   **\Common7\Tools**  
   
--   **\\ Common7 \\ Tools**  
+     Contains the Test Container files (TstCon32.exe, as well as its Help files).  
   
-     包含測試容器檔案 \(TstCon32.exe，以及其說明檔\)。  
+-   **\Vc7\atlmfc\include**  
   
--   **\\ Vc7 \\ atlmfc \\ include**  
+     Contains the include files needed to develop ActiveX controls with MFC  
   
-     包含需要以 MFC 開發的 ActiveX 控制項  
+-   **\Vc7\atlmfc\src\mfc**  
   
--   **\\ Vc7 \\ atlmfc \\ src \\ mfc**  
+     Contains the source code for specific ActiveX control classes in MFC  
   
-     包含在 MFC 中特定的 ActiveX 控制項類別的原始程式碼  
+-   **\Vc7\atlmfc\lib**  
   
--   **\\ Vc7 \\ atlmfc \\ lib**  
+     Contains the libraries required to develop ActiveX controls with MFC  
   
-     包含要求以 MFC 開發 ActiveX 控制項的程式庫  
+ There are also samples for MFC ActiveX controls. For more information about these samples, see [Controls Samples: MFC-Based ActiveX Controls](../visual-cpp-samples.md)  
   
- 也有 MFC ActiveX 控制項的範例。  如需這些範例的詳細資訊，請參閱 [控制項範例:MFC 架構的 ActiveX 控制項](../top/visual-cpp-samples.md)  
-  
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

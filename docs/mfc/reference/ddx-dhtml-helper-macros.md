@@ -1,5 +1,5 @@
 ---
-title: "DDX_DHtml Helper 巨集 |Microsoft 文件"
+title: DDX_DHtml Helper Macros | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,11 +20,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros, exchanging data with HMTL pages
-- DDX macros
-- HTML pages, helper macros
+- macros [MFC], exchanging data with HMTL pages
+- DDX macros [MFC]
+- HTML pages [MFC], helper macros
 - DDX (dialog data exchange), DHtml helper macros
-- macros, DDX_DHtml helpers
+- macros [MFC], DDX_DHtml helpers
 ms.assetid: c46302d2-ea43-4fea-bfc2-6f590d99f267
 caps.latest.revision: 14
 author: mikeblome
@@ -44,34 +44,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: d3c5136b52206a1ec67e1e1fc78ec291a2954faf
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0ef5d607ee9a3a0dcd9651141174201857d7330
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper 巨集
-DDX_DHtml helper 巨集可讓您輕鬆存取常用的 HTML 網頁上的控制項屬性。  
+# <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper Macros
+The DDX_DHtml helper macros allow easy access to the commonly used properties of controls on an HTML page.  
   
-### <a name="data-exchange-macros"></a>資料交換巨集  
+### <a name="data-exchange-macros"></a>Data Exchange Macros  
   
 |||  
 |-|-|  
-|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|設定或從選取的控制項擷取值的屬性。|  
-|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|設定或擷取目前項目的開始和結束標記之間的文字。|  
-|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|設定或擷取目前項目的開始和結束標記之間的 HTML。|  
-|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|設定或擷取目的地 URL 或錨點。|  
-|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|設定或擷取的目標視窗或框架。|  
-|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|設定或擷取映像或文件中的視訊剪輯的名稱。|  
-|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|設定或擷取關聯框架的 URL。|  
-|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|設定或擷取關聯框架的 URL。|  
+|[DDX_DHtml_ElementValue](#ddx_dhtml_elementvalue)|Sets or retrieves the Value property from the selected control.|  
+|[DDX_DHtml_ElementInnerText](#ddx_dhtml_elementinnertext)|Sets or retrieves the text between the start and end tags of the current element.|  
+|[DDX_DHtml_ElementInnerHtml](#ddx_dhtml_elementinnerhtml)|Sets or retrieves the HTML between the start and end tags of the current element.|  
+|[DDX_DHtml_Anchor_Href](#ddx_dhtml_anchor_href)|Sets or retrieves the destination URL or anchor point.|  
+|[DDX_DHtml_Anchor_Target](#ddx_dhtml_anchor_target)|Sets or retrieves the target window or frame.|  
+|[DDX_DHtml_Img_Src](#ddx_dhtml_img_src)|Sets or retrieves the name of an image or a video clip in the document.|  
+|[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|Sets or retrieves the URL of the associated frame.|  
+|[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|Sets or retrieves the URL of the associated frame.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
 
-## <a name="ddx_dhtml_anchor_href"></a>DDX_DHtml_Anchor_Href
-設定或擷取目的地 URL 或錨點。  
+## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
+Sets or retrieves the destination URL or anchor point.  
   
   
   
@@ -82,21 +82,21 @@ DDX_DHtml_Anchor_Href(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。  
+ The value being exchanged.  
   
-## <a name="remarks"></a>備註  
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLANCHORELEMENT_HREF 分派識別碼。
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLANCHORELEMENT_HREF dispatch ID.
 
-## <a name="ddx_dhtml_anchor_target"></a>DDX_DHtml_Anchor_Target
- 設定或擷取的目標視窗或框架。  
+## <a name="ddx_dhtml_anchor_target"></a>  DDX_DHtml_Anchor_Target
+ Sets or retrieves the target window or frame.  
     
 ```  
 DDX_DHtml_Anchor_Target(
@@ -105,21 +105,21 @@ DDX_DHtml_Anchor_Target(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。  
+ The value being exchanged.  
   
-## <a name="remarks"></a>備註  
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLANCHORELEMENT_TARGET 分派識別碼。  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLANCHORELEMENT_TARGET dispatch ID.  
 
-## <a name="ddx_dhtml_elementinnerhtml"></a>DDX_DHtml_ElementInnerHtml
- 設定或擷取目前項目的開始和結束標記之間的 HTML。  
+## <a name="ddx_dhtml_elementinnerhtml"></a>  DDX_DHtml_ElementInnerHtml
+ Sets or retrieves the HTML between the start and end tags of the current element.  
   
   
   
@@ -130,22 +130,22 @@ DDX_DHtml_ElementInnerHtml(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。  
+ The value being exchanged.  
   
-## <a name="remarks"></a>備註  
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLELEMENT_INNERHTML 分派識別碼。  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLELEMENT_INNERHTML dispatch ID.  
   
 
-## <a name="ddx_dhtml_elementinnertext"></a>DDX_DHtml_ElementInnerText
-設定或擷取目前項目的開始和結束標記之間的文字。  
+## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
+Sets or retrieves the text between the start and end tags of the current element.  
   
   
   
@@ -156,21 +156,21 @@ DDX_DHtml_ElementInnerText(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。  
+ The value being exchanged.  
   
-## <a name="remarks"></a>備註  
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLELEMENT_INNERTEXT 分派識別碼。 
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLELEMENT_INNERTEXT dispatch ID. 
 
-## <a name="ddx_dhtml_elementvalue"></a>DDX_DHtml_ElementValue  
-設定或從選取的控制項擷取值的屬性。  
+## <a name="ddx_dhtml_elementvalue"></a> DDX_DHtml_ElementValue  
+Sets or retrieves the Value property from the selected control.  
  
 ```  
 DDX_DHtml_ElementValue(
@@ -179,23 +179,23 @@ DDX_DHtml_ElementValue(
     var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。 請參閱*值*中[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)。  
+ The value being exchanged. See *value* in [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext).  
   
-## <a name="remarks"></a>備註  
- 在具有 Value 屬性的控制項上執行時，此巨集才會成功。 具有 Value 屬性的控制項包含編輯方塊、 清單方塊和下拉式方塊。  
+## <a name="remarks"></a>Remarks  
+ This macro will only succeed when run on controls that have a Value property. Controls that have a Value property include edit boxes, list boxes, and combo boxes.  
   
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_A_VALUE 分派識別碼。  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_A_VALUE dispatch ID.  
 
-## <a name="ddx_dhtml_frame_src"></a>DDX_DHtml_Frame_Src
-設定或擷取關聯框架的 URL。  
+## <a name="ddx_dhtml_frame_src"></a> DDX_DHtml_Frame_Src
+Sets or retrieves the URL of the associated frame.  
   
 ```  
 DDX_DHtml_Frame_Src(
@@ -204,21 +204,21 @@ DDX_DHtml_Frame_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。  
+ The value being exchanged.  
   
-## <a name="remarks"></a>備註  
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLFRAMEBASE_SRC 分派識別碼。  
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLFRAMEBASE_SRC dispatch ID.  
 
-## <a name="ddx_dhtml_iframe_src"></a>DDX_DHtml_IFrame_Src
-設定或擷取關聯框架的 URL。  
+## <a name="ddx_dhtml_iframe_src"></a> DDX_DHtml_IFrame_Src
+Sets or retrieves the URL of the associated frame.  
   
   
   
@@ -229,21 +229,21 @@ DDX_DHtml_IFrame_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。  
+ The value being exchanged.  
   
-## <a name="remarks"></a>備註  
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLFRAMEBASE_SRC 分派識別碼。 
+## <a name="remarks"></a>Remarks  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLFRAMEBASE_SRC dispatch ID. 
 
 ## <a name="ddx_dhtml_img_src"></a>DDX_DHtml_Img_Src
-取得或擷取映像或文件中的視訊剪輯的名稱。  
+Gets or retrieves the name of an image or a video clip in the document.  
   
 ```  
 DDX_DHtml_Img_Src(
@@ -252,22 +252,22 @@ DDX_DHtml_Img_Src(
     CString& var)  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `dx`  
- 指標[CDataExchange](../../mfc/reference/cdataexchange-class.md)物件。  
+ A pointer to a [CDataExchange](../../mfc/reference/cdataexchange-class.md) object.  
   
  `name`  
- 您指定 HTML 控制項的 ID 參數的值。  
+ The value that you specified for the HTML control's ID parameter.  
   
  `var`  
- 要交換的值。  
+ The value being exchanged.  
   
-## <a name="remarks"></a>備註  
- 當使用`DDX_DHtml_Img_Src`巨集來擷取影像項目時，Internet Explorer 映像物件的 src 屬性會傳回映像來源的逸出完整 URL。 例如，如果您使用`DDX_DHtml_Img_Src`巨集，以將影像元素的 src 屬性設為字串"一些有趣圖片，「 Internet Explorer 時擷取該屬性時，會傳回字串"res://d:\myapplication\myapp.exe/some%20interesting%20picture"。  
+## <a name="remarks"></a>Remarks  
+ When using the `DDX_DHtml_Img_Src` macro to retrieve the src property for an IMAGE element, the Internet Explorer image object will return the fully escaped URL for the image source. For example, if you use the `DDX_DHtml_Img_Src` macro to set the src property of an IMAGE element to the string "some interesting picture," when you retrieve that property, Internet Explorer will return the string "res://d:\myapplication\myapp.exe/some%20interesting%20picture."  
   
- 這個巨集會呼叫[CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext)函式使用 DISPID_IHTMLIMGELEMENT_SRC 分派識別碼。  
+ This macro calls the [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) function using the DISPID_IHTMLIMGELEMENT_SRC dispatch ID.  
 
   
-## <a name="see-also"></a>另請參閱  
- [CDHtmlDialog 類別](../../mfc/reference/cdhtmldialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)
 

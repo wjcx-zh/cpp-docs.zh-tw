@@ -1,49 +1,67 @@
 ---
-title: "回呼項目和回呼遮罩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 類別中的回呼項目"
-  - "CListCtrl 類別, 回呼項目和回呼遮罩"
+title: Callback Items and the Callback Mask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- callback items in CListCtrl class [MFC]
+- CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 回呼項目和回呼遮罩
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e943e5445620b25437a0f6d70a6703a927d5e636
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-對於其項目中，清單檢視控制項通常會儲存標籤文字、項目圖示的影像清單索引，和一組位元為項目的狀態旗標。  您可以定義個別項目在回呼項目，如果您的應用程式已經儲存特定項目的資訊的話是有用的。  
+---
+# <a name="callback-items-and-the-callback-mask"></a>Callback Items and the Callback Mask
+For each of its items, a list view control typically stores the label text, the image list index of the item's icons, and a set of bit flags for the item's state. You can define individual items as callback items, which are useful if your application already stores some of the information for an item.  
   
- 您定義了某個項目做為回呼項目藉由指定適當的值給 **LV\_ITEM** 結構的 `pszText` 和 `iImage` 成員 \(請參閱 [CListCtrl::GetItem](../Topic/CListCtrl::GetItem.md)\)。  如果應用程式維護項目或子項目的文字，指定 **LPSTR\_TEXTCALLBACK** 值作為 `pszText` 成員。  如果應用程式記錄檔項目的圖示，為 `iImage` 成員指定 **I\_IMAGECALLBACK** 值。  
+ You define an item as a callback item by specifying appropriate values for the `pszText` and `iImage` members of the **LV_ITEM** structure (see [CListCtrl::GetItem](../mfc/reference/clistctrl-class.md#getitem)). If the application maintains the item's or subitem's text, specify the **LPSTR_TEXTCALLBACK** value for the `pszText` member. If the application keeps track of the icon for the item, specify the **I_IMAGECALLBACK** value for the `iImage` member.  
   
- 除了定義回呼項目之外，您也可以修改控制項的回呼遮罩。  這個遮罩是一組項目狀態應用程式的位元旗標，而不是控制項會儲存目前資料。  回呼遮罩適用於所有控制項的項目，不同於回呼項目指定，套用至特定項目。  預設回呼遮罩為零，表示控制項正在追蹤所有項目的狀態。  若要變更此預設行為，請使用遮罩設定為下列值的任何組合：  
+ In addition to defining callback items, you can also modify the control's callback mask. This mask is a set of bit flags that specify the item states for which the application, rather than the control, stores the current data. The callback mask applies to all of the control's items, unlike the callback item designation, which applies to a specific item. The callback mask is zero by default, meaning that the control tracks all item states. To change this default behavior, initialize the mask to any combination of the following values:  
   
--   `LVIS_CUT` 項目被標記為剪貼作業。  
+-   `LVIS_CUT` The item is marked for a cut-and-paste operation.  
   
--   `LVIS_DROPHILITED` 項目會反白顯示拖放目標。  
+-   `LVIS_DROPHILITED` The item is highlighted as a drag-and-drop target.  
   
--   `LVIS_FOCUSED`這個項目有焦點。  
+-   `LVIS_FOCUSED` The item has the focus.  
   
--   `LVIS_SELECTED`這個項目已選取。  
+-   `LVIS_SELECTED` The item is selected.  
   
--   **LVIS\_OVERLAYMASK** 應用程式儲存目前每一個項目的覆疊影像的影像清單索引。  
+-   **LVIS_OVERLAYMASK** The application stores the image list index of the current overlay image for each item.  
   
--   **LVIS\_STATEIMAGEMASK** 應用程式儲存目前每一個項目的狀態影像的影像清單索引。  
+-   **LVIS_STATEIMAGEMASK** The application stores the image list index of the current state image for each item.  
   
- 如需擷取和設定這個遮罩的詳細資訊，請參閱 [CListCtrl::GetCallbackMask](../Topic/CListCtrl::GetCallbackMask.md) 和 [CListCtrl::SetCallbackMask](../Topic/CListCtrl::SetCallbackMask.md)。  
+ For further information on retrieving and setting this mask, see [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask) and [CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask).  
   
-## 請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

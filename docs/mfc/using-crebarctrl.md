@@ -1,50 +1,69 @@
 ---
-title: "使用 CReBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CReBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "子視窗, Rebar 控制項"
-  - "下拉式方塊, 在 Rebar 控制項中"
-  - "Rebar 控制項"
+title: Using CReBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CReBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- child windows [MFC], rebar controls
+- combo boxes [MFC], in rebar controls
+- rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CReBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2c3d9f122e7217da9fa1751883365c86cdb4a1db
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Rebar 控制項當做子視窗的容器。  這些子視窗，通常是其他控制項，指派給 Rebar 控制項範圍。  Rebar 控制項可以包含一或多個群組列，而且每個群組列的移駐夾列、點陣圖、文字標籤和子視窗中的任何組合。  不過，群組列不能包含一個以上的子視窗。  
+---
+# <a name="using-crebarctrl"></a>Using CReBarCtrl
+A rebar control acts as a container for child windows. These child windows, often other controls, are assigned to a rebar control band. A rebar control can contain one or more bands, with each band having any combination of a gripper bar, a bitmap, a text label, and a child window. However, bands cannot contain more than one child window.  
   
- 下圖顯示具有兩個群組列中 Rebar 控制項。  包含 Rebar 的移駐夾列、文字標籤 \(「address」\) 和下拉式方塊子視窗。  其他群組列包含的移駐夾列、文字標籤和一般工具列 \(實作具有子視窗\)。  
+ The following illustration shows a rebar control that has two bands. One contains a gripper bar, a text label ("Address"), and a combo box child window. The other band contains a gripper bar, a text label, and a flat toolbar (implemented with a child window).  
   
- ![具有兩個群組列的 Rebar 控制項](../mfc/media/vc4ruz1.png "vc4RUZ1")  
+ ![Rebar control that has two bands](../mfc/media/vc4ruz1.gif "vc4ruz1")  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [CReBar 和 CReBarCtrl 比較](../mfc/crebar-vs-crebarctrl.md)  
+-   [CReBar vs. CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)  
   
--   [建立 Rebar 控制項](../mfc/creating-a-rebar-control.md)  
+-   [Creating a Rebar Control](../mfc/creating-a-rebar-control.md)  
   
--   [Rebar 控制項和群組列](../mfc/rebar-controls-and-bands.md)  
+-   [Rebar Controls and Bands](../mfc/rebar-controls-and-bands.md)  
   
--   [搭配使用影像清單與 Rebar 控制項](../mfc/using-an-image-list-with-a-rebar-control.md)  
+-   [Using an Image List with a Rebar Control](../mfc/using-an-image-list-with-a-rebar-control.md)  
   
--   [搭配使用對話方塊列與 Rebar 控制項](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
+-   [Using a Dialog Bar with a Rebar Control](../mfc/using-a-dialog-bar-with-a-rebar-control.md)  
   
--   [處理 Rebar 控制項中的通知訊息](../mfc/processing-notification-messages-in-a-rebar-control.md)  
+-   [Processing Notification Messages in a Rebar Control](../mfc/processing-notification-messages-in-a-rebar-control.md)  
   
-## 請參閱  
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

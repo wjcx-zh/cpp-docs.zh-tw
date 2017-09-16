@@ -1,5 +1,5 @@
 ---
-title: "CBaseKeyFrame 類別 |Microsoft 文件"
+title: CBaseKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseKeyFrame class
+- CBaseKeyFrame [MFC], CBaseKeyFrame
+- CBaseKeyFrame [MFC], AddToStoryboard
+- CBaseKeyFrame [MFC], GetAnimationKeyframe
+- CBaseKeyFrame [MFC], IsAdded
+- CBaseKeyFrame [MFC], IsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_bAdded
+- CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
 caps.latest.revision: 17
 author: mikeblome
@@ -42,17 +49,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: cfbaac379097c89b5dcb52fa36c0cd1f6e3d2c7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f79f26454a66666e317122c27df4ccf82a64bde
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasekeyframe-class"></a>CBaseKeyFrame 類別
-實作主要畫面格的基本功能。  
+# <a name="cbasekeyframe-class"></a>CBaseKeyFrame Class
+Implements the basic functionality of a keyframe.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBaseKeyFrame : public CObject;  
@@ -60,42 +67,42 @@ class CBaseKeyFrame : public CObject;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|建構主要畫面格物件。|  
+|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Constructs a keyframe object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|加入主要畫面格分鏡腳本。|  
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|傳回基礎主要畫面格的值。|  
-|[CBaseKeyFrame::IsAdded](#isadded)|會指示是否已加入主要畫面格分鏡腳本。|  
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|指定是否應加入主要畫面格位移，或在轉換之後，分鏡腳本。|  
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to storyboard.|  
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Returns the underlying keyframe value.|  
+|[CBaseKeyFrame::IsAdded](#isadded)|Tells whether a keyframe has been added to storyboard.|  
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Specifies whether the keyframe should be added to storyboard at offset, or after transition.|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::m_bAdded](#m_badded)|指定是否已加入至此主要畫面格的分鏡腳本。|  
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|指定是否應分鏡腳本開頭的位移，從另一個現有主要畫面格，或在某些轉換結尾處加入這個主要畫面格。|  
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|代表 Windows 動畫 API 主要畫面格。 當未初始化的主要畫面格系統是設定為預先定義的值 UI_ANIMATION_KEYFRAME_STORYBOARD_START。|  
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Specifies whether this keyframe has been added to a storyboard.|  
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.|  
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
   
-## <a name="remarks"></a>備註  
- 封裝 UI_ANIMATION_KEYFRAME 變數。 做為任何主要畫面格實作的基底類別。 主要畫面格代表一個時間點內的分鏡腳本的時間，而且可用來指定轉換的開始和結束時間。 有兩種類型的主要畫面格的主要畫面格加入至分鏡腳本中指定的位移 （以時間） 或加入指定的轉換後的主要畫面格。 因為無法知道的某些轉換持續時間，動畫開始之前，在執行階段才決定的一些主要畫面格實際值。 因為主要畫面格可能相依於轉換，轉而在相依於主要畫面格，務必建立主要畫面格鏈結時，防止無限遞迴。  
+## <a name="remarks"></a>Remarks  
+ Encapsulates UI_ANIMATION_KEYFRAME variable. Serves as a base class for any keyframe implementation. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. There are two types of keyframes - keyframes added to storyboard at the specified offset (in time), or keyframes added after specified transition. Because durations of some transitions can't be known before animation starts, the actual values of some keyframes are determined at runtime only. Because keyframes may depend on transitions, which in their turn depend on keyframes, it's important to prevent infinite recursions when building keyframe chains.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
- 加入主要畫面格分鏡腳本。  
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
+ Adds a keyframe to storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -103,86 +110,86 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- 分鏡腳本指標。  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- 如果此參數為 TRUE，而且要加入主要畫面格取決於一些其他的主要畫面格或轉換，這個方法會嘗試將此主要畫面格或轉為分鏡腳本第一次。  
+ If this parameter is TRUE and the keyframe being added depends on some other keyframe or transition, this method tries to add this keyframe or transition to storyboard first.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，分鏡腳本加入主要畫面格，則為 TRUE。否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if keyframe was added to storyboard successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>備註  
- 您可以呼叫這個方法加入至分鏡腳本主要畫面格。  
+### <a name="remarks"></a>Remarks  
+ This method is called to add a keyframe to storyboard.  
   
-##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
- 建構主要畫面格物件。  
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
+ Constructs a keyframe object.  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
- 傳回基礎主要畫面格的值。  
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
+ Returns the underlying keyframe value.  
   
 ```  
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的主要畫面格。 預設值是 UI_ANIMATION_KEYFRAME_STORYBOARD_START。  
+### <a name="return-value"></a>Return Value  
+ A current keyframe. The default value is UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
-### <a name="remarks"></a>備註  
- 這是為基礎的主要畫面格值的存取子。  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to the underlying keyframe value.  
   
-##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
- 會指示是否已加入主要畫面格分鏡腳本。  
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
+ Tells whether a keyframe has been added to storyboard.  
   
 ```  
 BOOL IsAdded() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果主要畫面格加入至腳本，則為 TRUE則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if a keyframe is added to a storyboard; otehrwise FALSE.  
   
-### <a name="remarks"></a>備註  
- 基底類別中 IsAdded 一定會傳回 TRUE，但在衍生類別中覆寫。  
+### <a name="remarks"></a>Remarks  
+ In the base class IsAdded always returns TRUE, but it's overridden in derived classes.  
   
-##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
- 指定是否應加入主要畫面格位移，或在轉換之後，分鏡腳本。  
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
+ Specifies whether the keyframe should be added to storyboard at offset, or after transition.  
   
 ```  
 BOOL IsKeyframeAtOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果主要畫面格應該加入至分鏡腳本中某些指定的位移，則為 TRUE。 如果主要畫面格應該加入至分鏡腳本某些轉換之後，則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if the keyframe should be added to storyboard at some specified offset. FALSE if the keyframe should be added to storyboard after some transition.  
   
-### <a name="remarks"></a>備註  
- 指定是否應加入主要畫面格位移分鏡腳本。 必須在衍生類別中指定的位移或轉換。  
+### <a name="remarks"></a>Remarks  
+ Specifies whether the keyframe should be added to storyboard at offset. The offset or transition must be specified in a derived class.  
   
-##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
- 指定是否已加入至此主要畫面格的分鏡腳本。  
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
+ Specifies whether this keyframe has been added to a storyboard.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
- 指定是否應分鏡腳本開頭的位移，從另一個現有主要畫面格，或在某些轉換結尾處加入這個主要畫面格。  
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
+ Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
- 代表 Windows 動畫 API 主要畫面格。 當未初始化的主要畫面格系統是設定為預先定義的值 UI_ANIMATION_KEYFRAME_STORYBOARD_START。  
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
+ Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ```  
 UI_ANIMATION_KEYFRAME m_keyframe;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

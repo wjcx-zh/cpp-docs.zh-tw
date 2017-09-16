@@ -1,67 +1,86 @@
 ---
-title: "提供無視窗啟用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "啟用 [C++], MFC ActiveX 控制項"
-  - "啟用 [C++], 無視窗"
-  - "MFC ActiveX 控制項 [C++], 啟用選項"
-  - "MFC ActiveX 控制項的無視窗啟用"
+title: Providing Windowless Activation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- windowless activation of MFC ActiveX controls
+- activation [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], activate options
+- activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 提供無視窗啟用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 882240d66205fba2ebcfa348f6cc3edc110d0b57
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-視窗中發生的建立程式碼 \(亦即，當您呼叫 **CreateWindow**\) 是高度耗費資源的執行。  維護一個螢幕上的視窗的控制項必須處理 Windows 訊息。  因此無視窗控制項與視窗控制項快速地為。  
+---
+# <a name="providing-windowless-activation"></a>Providing Windowless Activation
+Window creation code (that is, everything that happens when you call **CreateWindow**) is costly to execute. A control that maintains an on-screen window has to manage messages for the window. Windowless controls are therefore faster than controls with windows.  
   
- 無視窗控制項的進一步的好處是，不同於視窗型控制項，無視窗控制項支援透明繪製和非矩形螢幕區域。  表示控制項的一個常見的範例是具有透明背景的文字控制項。  控制項的文字，但不是背景，因此，哪些傳入的文字展示下。  較新的表單通常是矩形利用控制項，例如箭號和圓形按鈕。  
+ A further advantage of windowless controls is that, unlike windowed controls, windowless controls support transparent painting and nonrectangular screen regions. A common example of a transparent control is a text control with a transparent background. The controls paints the text but not the background, so whatever is under the text shows through. Newer forms often make use of nonrectangular controls, such as arrows and round buttons.  
   
- 通常，在這種情況下，容器撰寫支援無視窗物件的情況下，控制項不需要它的視窗，因此，反之，無法使用其容器的 Windows 服務。  無視窗控制項與舊的容器回溯相容。  在沒有寫入的較舊的容器支援無視窗控制項，無視窗控制項建立視窗，當現用。  
+ Often, a control does not need a window of its own and, instead, can use the window services of its container, provided that the container has been written to support windowless objects. Windowless controls are backward compatible with older containers. In older containers not written to support windowless controls, the windowless controls create a window when active.  
   
- 由於無視窗控制項沒有自己的視窗，具有視窗\) 的容器 \(如提供控制項的視窗則會提供的服務執行。  例如，如果控制項需要查詢鍵盤焦點，捕捉滑鼠或取得裝置內容，這些作業由容器處理。  容器傳送使用者輸入訊息傳送至其視窗為適當的無視窗控制項，請使用 `IOleInPlaceObjectWindowless` 介面。\(這個介面的說明請參閱 *ActiveX SDK* \)。 `COleControl` 成員函式叫用從容器的這些服務。  
+ Because windowless controls do not have their own windows, the container (which does have a window) is responsible for providing services that would otherwise have been provided by the control's own window. For example, if your control needs to query the keyboard focus, capture the mouse, or obtain a device context, these operations are managed by the container. The container routes user input messages sent to its window to the appropriate windowless control, using the `IOleInPlaceObjectWindowless` interface. (See the *ActiveX SDK* for a description of this interface.) `COleControl` member functions invoke these services from the container.  
   
- 若要讓控制項使用無視窗啟動，包括 **windowlessActivate** 旗標在 [COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md)所傳回的旗標集。  例如：  
+ To make your control use windowless activation, include the **windowlessActivate** flag in the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/providing-windowless-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/CPP/providing-windowless-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/providing-windowless-activation_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-windowless-activation_3.cpp)]  
   
- 如果在 MFC ActiveX 控制項精靈的 [控制項設定](../mfc/reference/control-settings-mfc-activex-control-wizard.md) 頁面中， **Windowless activation** 選項包括這個旗標的自動產生程式碼。  
+ The code to include this flag is automatically generated if you select the **Windowless activation** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page of the MFC ActiveX Control Wizard.  
   
- 在無視窗啟動時，容器會委派輸入訊息至控制項的 `IOleInPlaceObjectWindowless` 介面。  此介面的`COleControl` 實作會將您的控制項的訊息對應分派訊息在適當調整滑鼠座標之後。  將對應的項目加入至訊息對應讓您可以像一般的 Windows 訊息般處理訊息。  在這些訊息的處理常式，請避免使用 `m_hWnd` 成員變數 \(或使用它的任何成員函式\)，而不需先檢查其值不是 **NULL**。  
+ When windowless activation is enabled, the container will delegate input messages to the control's `IOleInPlaceObjectWindowless` interface. `COleControl`'s implementation of this interface dispatches the messages through your control's message map, after adjusting the mouse coordinates appropriately. You can process the messages like ordinary window messages, by adding the corresponding entries to the message map. In your handlers for these messages, avoid using the `m_hWnd` member variable (or any member function that uses it) without first checking that its value is not **NULL**.  
   
- `COleControl` 提供叫用滑鼠捕捉、鍵盤焦點、捲動和其他 Windows 服務從容器適當的成員函式，包括：  
+ `COleControl` provides member functions that invoke mouse capture, keyboard focus, scrolling, and other window services from the container as appropriate, including:  
   
--   [GetFocus](../Topic/COleControl::GetFocus.md)， [SetFocus](../Topic/COleControl::SetFocus.md)  
+-   [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   
--   [GetCapture](../Topic/COleControl::GetCapture.md)， [SetCapture](../Topic/COleControl::SetCapture.md)， [ReleaseCapture](../Topic/COleControl::ReleaseCapture.md)  
+-   [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)  
   
--   [GetDC](../Topic/COleControl::GetDC.md)， [ReleaseDC](../Topic/COleControl::ReleaseDC.md)  
+-   [GetDC](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)  
   
--   [InvalidateRgn](../Topic/COleControl::InvalidateRgn.md)  
+-   [InvalidateRgn](../mfc/reference/colecontrol-class.md#invalidatergn)  
   
--   [ScrollWindow](../Topic/COleControl::ScrollWindow.md)  
+-   [ScrollWindow](../mfc/reference/colecontrol-class.md#scrollwindow)  
   
--   [GetClientRect](../Topic/COleControl::GetClientRect.md)  
+-   [GetClientRect](../mfc/reference/colecontrol-class.md#getclientrect)  
   
- 在無視窗控制項，您必須使用 `COleControl` 成員函式來取代對應的 `CWnd` 成員函式或及其相關的 Win32 API 函式。  
+ In windowless controls, you should always use the `COleControl` member functions instead of the corresponding `CWnd` member functions or their related Win32 API functions.  
   
- 您可以無視窗控制項是 OLE 拖放作業的目標。  通常，這需要控制 Windows 登錄為置放目標。  因為控制項沒有自己的視窗，容器使用其視窗做為置放目標。  控制項提供容器可以在適當時間呼叫委派 `IDropTarget` 介面的實作。  若要公開這個介面的控制項，請覆寫 [COleControl::GetWindowlessDropTarget](../Topic/COleControl::GetWindowlessDropTarget.md)。  例如：  
+ You may want a windowless control to be the target of an OLE drag-and-drop operation. Normally, this would require that the control's window be registered as a drop target. Since the control has no window of its own, the container uses its own window as a drop target. The control provides an implementation of the `IDropTarget` interface to which the container can delegate calls at the appropriate time. To expose this interface to the container, override [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/CPP/providing-windowless-activation_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   
-## 請參閱  
- [MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

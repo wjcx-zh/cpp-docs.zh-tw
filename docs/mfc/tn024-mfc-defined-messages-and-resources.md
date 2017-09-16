@@ -1,208 +1,227 @@
 ---
-title: "TN024：MFC 定義的訊息和資源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.messages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "訊息 [C++], MFC"
-  - "資源 [MFC]"
-  - "TN024"
-  - "Windows 訊息 [C++], MFC 定義的"
+title: 'TN024: MFC-Defined Messages and Resources | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.messages
+dev_langs:
+- C++
+helpviewer_keywords:
+- resources [MFC]
+- Windows messages [MFC], MFC-defined
+- messages [MFC], MFC
+- TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN024：MFC 定義的訊息和資源
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b4b85251977bee3466a4e3857514de6fc219e56c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: MFC-Defined Messages and Resources
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。  因此，有些程序和主題可能已過期或不正確。  如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 這個附註說明 MFC 和資源格式使用的\) 內部視窗訊息。  這項資訊說明架構的實作和協助您偵錯的應用程式。  對風險，，即使這些資訊正式不受支援，您可以為進階實作使用這些資訊。  
+ This note describes the internal Windows messages and resource formats used by MFC. This information explains the implementation of the framework, and will assist you in debugging your application. For the adventurous, even though all this information is officially unsupported, you may use some of this information for advanced implementations.  
   
- 這個標記包含 MFC 私用實作詳細資料;所有內容在未來可能會變更。  MFC 私用視窗訊息只有意義之應用程式的範圍內，但在未來變更包含全系統訊息。  
+ This note contains MFC private implementation details; all the contents are subject to change in the future. MFC private Windows messages have meaning in the scope of one application only but will change in the future to contain system-wide messages.  
   
- MFC 私用 Windows 訊息的範圍和資源型別在 Microsoft Windows 中剩下的保留「System」範圍。  目前不是在範圍中的數字，而且可能，未來使用，在這個範圍的新數目。  可能會變更目前使用的數字。  
+ The range of MFC private Windows messages and resource types are in the reserved "system" range set aside by Microsoft Windows. Currently not all numbers in the ranges are used and, in the future, new numbers in the range may be used. The currently used numbers may be changed.  
   
- MFC 私用視窗訊息在範圍 0x360\-0x37F\>。  
+ MFC private Windows messages are in the range 0x360->0x37F.  
   
- MFC 私用資源型別在範圍 0xF0\-0xFF\>。  
+ MFC private resource types are in the range 0xF0->0xFF.  
   
- **MFC 私用視窗訊息**  
+ **MFC Private Windows Messages**  
   
- 這些視窗訊息在相對鬆散結合需要在視窗物件之間的 C\+\+ 虛擬函式位置，並使用 C \+\+. 虛擬函式不會是適當的位置。  
+ These Windows messages are used in place of C++ virtual functions where relatively loose coupling is required between window objects and where a C++ virtual function would not be appropriate.  
   
- 這些私用 Windows 訊息和相關參數結構在 MFC 私用標題「AFXPRIV.H」宣告。  請將警告任何程式碼包含這個標頭將 MFC 未來版本可能相依於未記載的行為，而且可能會中斷。  
+ These private Windows messages and associated parameter structures are declared in the MFC private header 'AFXPRIV.H'. Be warned that any of your code that includes this header may be relying on undocumented behavior and will likely break in future versions of MFC.  
   
- 在極少數的必要之時處理這些訊息之一，您在泛型 LRESULT\/WPARAM\/LPARAM 格式應該使用 `ON_MESSAGE` 訊息對應巨集和處理訊息。  
+ In the rare case of needing to handle one of these messages, you should use the `ON_MESSAGE` message map macro and handle the message in the generic LRESULT/WPARAM/LPARAM format.  
   
- **WM\_QUERYAFXWNDPROC**  
+ **WM_QUERYAFXWNDPROC**  
   
- 這個資訊傳送到建立的視窗。  這非常之前建立處理序傳送做為方法判斷 WndProc 是否 **AfxWndProc. AfxWndProc** 傳回 1。  
-  
-|||  
-|-|-|  
-|wParam|未使用|  
-|lParam|未使用|  
-|傳回|1，如果處理 **AfxWndProc**|  
-  
- **WM\_SIZEPARENT**  
-  
- 此資訊由框架視窗傳送至階層架構中 \(**CFrameWnd::OnSize** 呼叫 `CWnd::RepositionBars`\) 的 `CFrameWnd::RecalcLayout` 變更位置時控制列的調整在框架周圍的邊界。  **AFX\_SIZEPARENTPARAMS** 結構包含可能是 NULL\) 呼叫 `DeferWindowPos` 最小化重新繪製目前可用的用戶端矩形父代和 HDWP \(。  
+ This message is sent to a window that is being created. This is sent very early in the creation process as a method of determining if the WndProc is **AfxWndProc. AfxWndProc** returns 1.  
   
 |||  
 |-|-|  
-|wParam|未使用|  
-|lParam|**AFX\_SIZEPARENTPARAMS** 結構的位址|  
-|傳回|不適用 \(0\)。|  
+|wParam|Not used|  
+|lParam|Not used|  
+|returns|1 if processed by **AfxWndProc**|  
   
- 忽略訊息指出視窗在配置不參與。  
+ **WM_SIZEPARENT**  
   
- **WM\_SETMESSAGESTRING**  
-  
- 這個訊息會傳送至框架視窗提出要求時更新狀態列訊息行。  字串 ID 或 LPCSTR \(可以指定，而不是兩個\)。  
+ This message is sent by a frame window to its immediate children during resizing (**CFrameWnd::OnSize** calls `CFrameWnd::RecalcLayout` which calls `CWnd::RepositionBars`) to reposition the control bars around the side of the frame. The **AFX_SIZEPARENTPARAMS** structure contains the current available client rectangle of the parent and a HDWP (which may be NULL) with which to call `DeferWindowPos` to minimize repainting.  
   
 |||  
 |-|-|  
-|wParam|字串 ID \(或零\)|  
-|lParam|字串 \(或 null\) LPCSTR|  
-|傳回|不適用 \(0\)。|  
+|wParam|Not used|  
+|lParam|Address of an **AFX_SIZEPARENTPARAMS** structure|  
+|returns|Not used (0)|  
   
- **WM\_IDLEUPDATECMDUI**  
+ Ignoring the message indicates that the window doesn't take part in the layout.  
   
- 這個資訊提示閒置時間實作更新命令 UI 處理常式閒置時間更新傳送。  如果視窗 \(通常是控制列\) 處理訊息，則會建立 `CCmdUI` 物件 \(或衍生類別的每個物件\) 和呼叫 **CCmdUI::DoUpdate** 「Item」在視窗。  這個接著會檢查物件的 `ON_UPDATE_COMMAND_UI` 處理常式在命令處理常式鏈結。  
+ **WM_SETMESSAGESTRING**  
+  
+ This message is sent to a frame window to ask it to update the message line in the status bar. Either a string ID or a LPCSTR can be specified (but not both).  
+  
+|||  
+|-|-|  
+|wParam|String ID (or zero)|  
+|lParam|LPCSTR for the string (or NULL)|  
+|returns|Not used (0)|  
+  
+ **WM_IDLEUPDATECMDUI**  
+  
+ This message is sent in idle time to implement the idle-time update of update-command UI handlers. If the window (usually a control bar) handles the message, it creates a `CCmdUI` object (or an object of a derived class) and call **CCmdUI::DoUpdate** for each of the "items" in the window. This will in turn check for an `ON_UPDATE_COMMAND_UI` handler for the objects in the command-handler chain.  
   
 |||  
 |-|-|  
 |wParam|BOOL bDisableIfNoHandler|  
-|lParam|不適用 \(0\)。|  
-|傳回|不適用 \(0\)。|  
+|lParam|Not used (0)|  
+|returns|Not used (0)|  
   
- *bDisableIfNoHandler* 非零停用 UI 物件是否有 `ON_UPDATE_COMMAND_UI` 和 `ON_COMMAND` 處理常式。  
+ *bDisableIfNoHandler* is nonzero to disable the UI object if there is neither an `ON_UPDATE_COMMAND_UI` nor an `ON_COMMAND` handler.  
   
- **WM\_EXITHELPMODE**  
+ **WM_EXITHELPMODE**  
   
- 這個訊息會向關閉即時線上說明模式的 `CFrameWnd` 。  這個訊息的收據終止 **CFrameWnd::OnContextHelp.**開始強制回應迴圈  
-  
-|||  
-|-|-|  
-|wParam|不適用 \(0\)。|  
-|lParam|不適用 \(0\)。|  
-|傳回|未使用|  
-  
- **WM\_INITIALUPDATE**  
-  
- 在最初的更新時，它們是安全的此資訊由文件樣板傳送至框架視窗的所有子代。  對應至呼叫 `CView::OnInitialUpdate` ，但可用於其他 `CWnd`\-其他一次更新的衍生類別。  
+ This message is posted to a `CFrameWnd` that to exit context sensitive help mode. The receipt of this message terminates the modal loop started by **CFrameWnd::OnContextHelp.**  
   
 |||  
 |-|-|  
-|wParam|不適用 \(0\)。|  
-|lParam|不適用 \(0\)。|  
-|傳回|不適用 \(0\)。|  
+|wParam|Not used (0)|  
+|lParam|Not used (0)|  
+|returns|Not used|  
   
- **WM\_RECALCPARENT**  
+ **WM_INITIALUPDATE**  
   
- 此資訊由檢視傳送給其父視窗 \(可透過 `GetParent`\) 會強制執行配置重新計算 \(通常，父代會呼叫 `RecalcLayout`\)。  這個大小增加的 OLE 伺服器應用程式框架是必要的，因為檢視的總大小成長。  
-  
- 如果父視窗處理此訊息應該傳回 true，並以新會填滿 lParam 傳遞的 RECT 調整工作區。  用於 `CScrollView` 適當地處理捲軸 \(位元然後視窗的，並且加入\) 時，就地啟動時的伺服器物件。  
+ This message is sent by the document template to all descendants of a frame window when it is safe for them to do their initial update. It maps to a call to `CView::OnInitialUpdate` but can be used in other `CWnd`-derived classes for other one-shot updating.  
   
 |||  
 |-|-|  
-|wParam|不適用 \(0\)。|  
-|lParam|rectClient 的 LPRECT，可能是空的|  
-|傳回|為 true，否則傳回矩形的新用戶端，否則為 false。|  
+|wParam|Not used (0)|  
+|lParam|Not used (0)|  
+|returns|Not used (0)|  
   
- **WM\_SIZECHILD**  
+ **WM_RECALCPARENT**  
   
- 此資訊由 `COleResizeBar` 傳送至其主控視窗 \(透過 `GetOwner`\)，當使用者調整大小的調整大小控點時的調整大小列。  `COleIPFrameWnd` 回應訊息傳遞嘗試重新定位框架視窗，使用者要求。  
+ This message is sent by a view to its parent window (obtained via `GetParent`) to force a layout recalculation (usually, the parent will call `RecalcLayout`). This is used in OLE server applications where it is necessary for the frame to grow in size as the view's total size grows.  
   
- 新矩形將用戶端座標相對於包含調整資料列的框架視窗，會在 lParam。  
+ If the parent window processes this message it should return TRUE and fill the RECT passed in lParam with the new size of the client area. This is used in `CScrollView` to properly handle scrollbars (place then on the outside of the window when they are added) when a server object is in-place activated.  
   
 |||  
 |-|-|  
-|wParam|不適用 \(0\)。|  
+|wParam|Not used (0)|  
+|lParam|LPRECT rectClient, may be NULL|  
+|returns|TRUE if new client rectangle returned, FALSE otherwise|  
+  
+ **WM_SIZECHILD**  
+  
+ This message is sent by `COleResizeBar` to its owner window (via `GetOwner`) when the user resizes the resize bar with the resize handles. `COleIPFrameWnd` responds to this message by attempting to reposition the frame window as the user has requested.  
+  
+ The new rectangle, given in client coordinates relative to the frame window which contains the resize bar, is pointed at by lParam.  
+  
+|||  
+|-|-|  
+|wParam|Not used (0)|  
 |lParam|LPRECT rectNew|  
-|傳回|不適用 \(0\)。|  
+|returns|Not used (0)|  
   
- **WM\_DISABLEMODAL**  
+ **WM_DISABLEMODAL**  
   
- 這個資訊傳送到停用的框架視窗所擁有的任何快顯視窗。  框架視窗是否使用結果判斷停用快顯視窗。  
+ This message is sent to all pop-up windows owned by a frame window that is being deactivated. The frame window uses the result to determine whether or not to disable the pop-up window.  
   
- 您在快顯視窗可以使用此執行特殊處理，在框架進入強制回應狀態時或防止失效的某些快顯視窗。  工具提示使用此訊息自我終結，在框架視窗進入強制回應狀態時，例如。  
-  
-|||  
-|-|-|  
-|wParam|不適用 \(0\)。|  
-|lParam|不適用 \(0\)。|  
-|傳回|非零的 **NOT** 停用視窗， 0 表示視窗將停用|  
-  
- **WM\_FLOATSTATUS**  
-  
- 在啟動或另一個最上層框架視窗時，停用這個框架傳送到框架視窗所擁有的任何快顯視窗。  這個由 **MFS\_SYNCACTIVE** 的實作會使用 `CMiniFrameWnd`，保留這些快顯視窗的啟用與最上層框架視窗的啟用同步處理。  
+ You can use this to perform special processing in your pop-up window when the frame enters a modal state or to keep certain pop-up windows from getting disabled. Tooltips use this message to destroy themselves when the frame window goes into a modal state, for example.  
   
 |||  
 |-|-|  
-|wParam|是下列其中一個值:<br /><br /> **FS\_SHOW**<br /><br /> **FS\_HIDE**<br /><br /> **FS\_ACTIVATE**<br /><br /> **FS\_DEACTIVATE**<br /><br /> **FS\_ENABLEFS\_DISABLE**<br /><br /> **FS\_SYNCACTIVE**|  
-|lParam|不適用 \(0\)。|  
+|wParam|Not used (0)|  
+|lParam|Not used (0)|  
+|returns|Non-zero to **NOT** disable the window, 0 indicates the window will be disabled|  
   
- 傳回值應該為非零，如果 **FS\_SYNCACTIVE** 集合，且視窗會同步處理其與父框架的啟動。  當樣式設定為 **MFS\_SYNCACTIVE.**時，`CMiniFrameWnd` 會傳回非零  
+ **WM_FLOATSTATUS**  
   
- 如需詳細資訊，請參閱 `CMiniFrameWnd`的實作。  
+ This message is sent to all pop-up windows owned by a frame window when the frame is either activated or deactivated by another top-level frame window. This is used by the implementation of **MFS_SYNCACTIVE** in `CMiniFrameWnd`, to keep the activation of these pop-up windows in sync with the activation of the top level frame window.  
   
-## WM\_ACTIVATETOPLEVEL  
- 當一個視窗在其父群組」啟動或停用時，此訊息會傳送至最上層視窗。  視窗是最上層群組的一部分，則它是最上層視窗 \(沒有父代或擁有人\)，或者由這類視窗所擁有。  這個訊息類似於使用中屬於不同的處理序的視窗在單一視窗階層架構的情況下 **WM\_ACTIVATEAPP,** ，但是工作 \(OLE 應用程式的共用混合\)。  
+|||  
+|-|-|  
+|wParam|Is one of the following values:<br /><br /> **FS_SHOW**<br /><br /> **FS_HIDE**<br /><br /> **FS_ACTIVATE**<br /><br /> **FS_DEACTIVATE**<br /><br /> **FS_ENABLEFS_DISABLE**<br /><br /> **FS_SYNCACTIVE**|  
+|lParam|Not used (0)|  
   
-## WM\_COMMANDHELP， WM\_HELPHITTEST， WM\_EXITHELPMODE  
- 這些訊息會使用即時線上說明的實作。  如需 [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) 的詳細資訊。  
+ The return value should be non-zero if **FS_SYNCACTIVE** is set and the window syncronizes its activation with the parent frame. `CMiniFrameWnd` returns non-zero when the style is set to **MFS_SYNCACTIVE.**  
   
-## MFC 私用資源格式  
- 目前， MFC 會定義兩個私用資源格式: **RT\_TOOLBAR** 和 **RT\_DLGINIT**。  
+ For more information, see the implementation of `CMiniFrameWnd`.  
   
-## RT\_TOOLBAR 資源格式  
- AppWizard 提供的預設工具列根據 **RT\_TOOLBAR** 自訂資源，在 MFC 4.0 中引入。  使用工具列編輯器，您可以編輯這個資源。  
+## <a name="wmactivatetoplevel"></a>WM_ACTIVATETOPLEVEL  
+ This message is sent to a top-level window when a window in its "top-level group" is either activated or deactivated. A window is part of a top-level group if it is a top-level window (no parent or owner), or it is owned by such a window. This message is similar in use to **WM_ACTIVATEAPP,** but works in situations where windows belonging to different processes are mixed in a single window hierarchy (common in OLE applications).  
   
-## RT\_DLGINIT 資源格式  
- 建立 MFC 私用資源格式是用來儲存額外對話初始化資訊。  這包括在下拉式方塊中的初始字串。  這個資源格式並非設計經過手動編輯，，而是由 Visual C\+\+ 處理。  
+## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE  
+ These messages are used in the implementation of context-sensitive Help. Please refer to [Technical Note 28](../mfc/tn028-context-sensitive-help-support.md) for more information.  
   
- 因為有 API 替代使用資訊在資源，所以 Visual C\+\+ 和這個 **RT\_DLGINIT** 資源使用 MFC 相關功能。  使用 Visual C\+\+ 比較容易撰寫，維護及長度從遠端查看翻譯應用程式。  
+## <a name="mfc-private-resource-formats"></a>MFC Private Resource Formats  
+ Currently, MFC defines two private resource formats: **RT_TOOLBAR** and **RT_DLGINIT**.  
   
- **RT\_DLGINIT** 資源的基礎結構如下:  
+## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR Resource Format  
+ The default toolbar supplied by AppWizard is based on an **RT_TOOLBAR** custom resource, which was introduced in MFC 4.0. You can edit this resource using the Toolbar editor.  
+  
+## <a name="rtdlginit-resource-format"></a>RT_DLGINIT Resource Format  
+ One MFC private resource format is used to store extra dialog initialization information. This includes the initial strings stored in a combo box. The format of this resource is not designed to be manually edited, but is handled by Visual C++.  
+  
+ Visual C++ and this **RT_DLGINIT** resource are not required to use the related features of MFC since there are API alternative to using the information in the resource. Using Visual C++ makes it much easier to write, maintain, and translate your application in the long run.  
+  
+ The basic structure of a **RT_DLGINIT** resource is as follows:  
   
 ```  
-+---------------+                    \  
++---------------+    \  
 | Control ID    |   UINT             |  
-+---------------+                    |  
++---------------+    |  
 | Message #     |   UINT             |  
-+---------------+                    |  
++---------------+    |  
 |length of data |   DWORD            |  
-+---------------+                    |   Repeated  
++---------------+    |   Repeated  
 |   Data        |   Variable Length  |   for each control  
 |   ...         |   and Format       |   and message  
-+---------------+                    /  
++---------------+    /  
 |     0         |   BYTE  
 +---------------+  
 ```  
   
- 一個迴圈中包含控制項 ID 傳送訊息至佇列，訊息 \# 傳送 \(一般視窗訊息\) 和可變長度的資料。  傳送 Windows 訊息的格式:  
+ A repeated section contains the control ID to send the message to, the Message # to send (a normal Windows message) and a variable length of data. The Windows message is sent in a form:  
   
 ```  
-SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);  
+SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```  
   
- 這是非常一般格式，讓所有 Windows 訊息和資料內容。  Visual C\+\+ 資源編輯器和 MFC 只支援 Windows 訊息的受限制的子集:初始清單選取 CB\_ADDSTRING 下拉式方塊 \(資料是文字字串\)。  
+ This is a very general format, allowing any Windows messages and data content. The Visual C++ resource editor and MFC only support a limited subset of Windows messages: CB_ADDSTRING for the initial list-choices for combo boxes (the data is a text string).  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

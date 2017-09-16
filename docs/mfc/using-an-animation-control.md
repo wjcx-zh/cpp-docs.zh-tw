@@ -1,44 +1,62 @@
 ---
-title: "使用動畫控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "動畫控制項 [C++]"
-  - "CAnimateCtrl 類別, 動畫控制項"
-  - "控制項 [MFC], 動畫"
+title: Using an Animation Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], animation
+- CAnimateCtrl class [MFC], animation controls
+- animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 使用動畫控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7555102fdfdb3cbe1405b23a1acde25178567bb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-動畫控制項的一般使用方式會遵循下列模式:  
+---
+# <a name="using-an-animation-control"></a>Using an Animation Control
+Typical usage of an animation control follows the pattern below:  
   
--   會建立控制項。  如果控制項在對話方塊樣板指定，建立是自動的，在對話方塊中建立時。\(您應該會包含動畫控制項\) 的對話方塊類別中的 [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) 成員。或者，您可以使用 [建立](../Topic/CAnimateCtrl::Create.md) 成員函式來建立控制項做為子視窗的所有視窗。  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) member in your dialog class that corresponds to the animation control.) Alternatively, you can use the [Create](../mfc/reference/canimatectrl-class.md#create) member function to create the control as a child window of any window.  
   
--   載入 AVI 裁剪至動畫控制項藉由呼叫 [開啟](../Topic/CAnimateCtrl::Open.md) 成員函式。  如果您的動畫控制項在對話方塊中，執行此動作的好位置在對話方塊類別的 [OnInitDialog](../Topic/CDialog::OnInitDialog.md) 函式。  
+-   Load an AVI clip into the animation control by calling the [Open](../mfc/reference/canimatectrl-class.md#open) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   藉由呼叫 [播放](../Topic/CAnimateCtrl::Play.md) 成員函式播放裁剪。  如果您的動畫控制項在對話方塊中，執行此動作的好位置在對話方塊類別的 **OnInitDialog** 函式。  呼叫 **Play** 不需要動畫控制項是否已設定 `ACS_AUTOPLAY` 的樣式。  
+-   Play the clip by calling the [Play](../mfc/reference/canimatectrl-class.md#play) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's **OnInitDialog** function. Calling **Play** is not necessary if the animation control has the `ACS_AUTOPLAY` style set.  
   
--   如果您要顯示裁剪的部分或由架構播放它框架，請使用 `Seek` 成員函式。  若要停止播放的裁剪，請使用 `Stop` 成員函式。  
+-   If you want to display portions of the clip or play it frame by frame, use the `Seek` member function. To stop a clip that is playing, use the `Stop` member function.  
   
--   如果您沒有立即終結控制項，從記憶體中移除裁剪呼叫 **Close** 成員函式。  
+-   If you are not going to destroy the control right away, remove the clip from memory by calling the **Close** member function.  
   
--   如果動畫控制項在對話方塊中，將自動終結和 `CAnimateCtrl` 物件。  否則，您必須確保適當地終結控制項和 `CAnimateCtrl` 物件。  終結控制自動關閉 AVI 裁剪。  
+-   If the animation control is in a dialog box, it and the `CAnimateCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CAnimateCtrl` object are properly destroyed. Destroying the control automatically closes the AVI clip.  
   
-## 請參閱  
- [使用 CAnimateCtrl](../mfc/using-canimatectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CAnimateCtrl](../mfc/using-canimatectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

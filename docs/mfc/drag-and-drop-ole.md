@@ -1,52 +1,71 @@
 ---
-title: "拖放 (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "拖放 [C++]"
-  - "拖放 [C++], 關於 OLE 拖放"
-  - "檔案管理員拖放支援"
-  - "OLE 應用程式, 拖放"
-  - "OLE 拖放"
-  - "OLE 伺服器應用程式, 拖放"
+title: Drag and Drop (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], drag and drop
+- drag and drop [MFC]
+- OLE applications [MFC], drag and drop
+- File Manager drag and drop support [MFC]
+- drag and drop [MFC], about OLE drag and drop
+- OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 拖放 (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b1f25b062583bf498fa18399a84e708db774aecf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-OLE 拖放功能是複製並貼上資料的主要捷徑。  當您使用剪貼簿複製或貼上資料時，需要幾個步驟。  您選取的資料，從 **編輯** 功能表按一下 **Cut** 或 **Copy**，移動到目的檔案，視窗或應用程式中，將游標放置於目標地，然後從 **編輯** 功能表按一下 **貼上**。  
+---
+# <a name="drag-and-drop-ole"></a>Drag and Drop (OLE)
+The drag-and-drop feature of OLE is primarily a shortcut for copying and pasting data. When you use the Clipboard to copy or paste data, a number of steps are required. You select the data, click **Cut** or **Copy** from the **Edit** menu, move to the destination file, window or application, place the cursor in the desired location, and click **Paste** from the **Edit** menu.  
   
- OLE 拖放與文件管理員拖放機制不同，它只能處理檔名且特別設計來傳遞檔名給應用程式。  OLE 拖放更為泛用。  它允許您拖放能在剪貼簿上放置的資料。  
+ OLE drag and drop is different from the File Manager drag-and-drop mechanism, which can only handle filenames and is designed specifically to pass filenames to applications. OLE drag and drop is much more general. It allows you to drag and drop any data that could also be placed on the Clipboard.  
   
- 當您使用 OLE 拖放時，您從工作流程移除兩個步驟。  您從來源視窗 \(置放來源\) 選取資料，將它拖曳至想要的目的 \(置放目標\)，並透過放開滑鼠按鈕放下。  此作業消除對功能表的需要，且比複製\/貼上操作流程更快。  唯一的要求是拖曳來源和置放目標必須為開啟且至少部分顯示在螢幕上。  
+ When you use OLE drag and drop, you remove two steps from the process. You select the data from the source window (the "drop source"), drag it to the desired destination (the "drop target"), and drop it by releasing the mouse button. The operation eliminates the need for menus and is quicker than the copy/paste sequence. The only requirement is that both the drop source and drop target must be open and at least partially visible on the screen.  
   
- 使用 OLE 拖放功能，可以從一個位置和資料夾內，不同資料夾之間，或應用程式之間傳輸資料。  它可以在容器或伺服器應用程式實做，且所有應用程式可以是置放來源，置放目標或兩者都是。  如果應用程式實作置放來源和置放目標支援，允許在子視窗之間，或在一個視窗中拖放。  此功能可讓應用程式更容易使用。  
+ Using OLE drag and drop, data can be transferred from one location to another within a document, between different documents, or between applications. It can be implemented in either a container or a server application, and any application can be a drop source, a drop target, or both. If an application has both drop-source and drop-target support implemented, drag and drop is enabled between child windows, or within one window. This feature can make your application much easier to use.  
   
- 如果您只想要使用 OLE 的拖放功能，請參閱 [拖放:自訂](../mfc/drag-and-drop-customizing.md)。  可以使用在該文件說明的技巧進行非 OLE 應用程式成為置放來源。  [拖放:實作置放目標](../mfc/drag-and-drop-implementing-a-drop-target.md) 文件描述如何實作置放目標支援 OLE 和非 OLE 應用程式。  檢查 MFC OLE 範例 [OCLIENT](../top/visual-cpp-samples.md) 和 [HIERSVR](../top/visual-cpp-samples.md)也會很有用。  
+ If you only want to use the drag-and-drop capabilities of OLE, see [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md). You can use the techniques explained in that article to make non-OLE applications drop sources. The article [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md) describes how to implement drop-target support for both OLE and non-OLE applications. It will also be helpful to examine the MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md).  
   
- 如果您還沒有閱讀 [資料物件和資料來源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md) 文件系列，您可能會想要現在閱讀。  這些文章說明資料傳輸的基本概念，以及如何在您的應用程式實作它。  
+ If you have not read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) family of articles, you may want to do so now. These articles explain the fundamentals of data transfer, and how to implement it in your applications.  
   
- 如需拖放功能的詳細資訊，請參閱：  
+ For more information about drag and drop, see:  
   
--   [拖放：實作置放來源](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Drag and Drop: Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [拖放：實作置放目標](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Drag and Drop: Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [拖放：自訂](../mfc/drag-and-drop-customizing.md)  
+-   [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [資料物件和資料來源 \(OLE\)](../mfc/data-objects-and-data-sources-ole.md)
+ [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+
+

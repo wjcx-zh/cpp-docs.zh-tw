@@ -1,55 +1,73 @@
 ---
-title: "設定個別項目的影像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "擴充的下拉式方塊, 影像"
-  - "影像 [C++], 下拉式方塊項目"
+title: Setting the Images for an Individual Item | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extended combo boxes [MFC], images
+- images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 設定個別項目的影像
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc4ae8c5833256c105009348ebe8a4e2624eb51a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-展開的下拉式方塊項目使用的不同影像類型取決於 `iImage`、 **iSelectedImage**和 [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) 結構的 **iOverlay** 成員的值。  每個值為影像的索引控制項關聯的影像清單的。  根據預設，這些成員不是設定為 0，使控制項顯示項目的影像。  如果您想要針對特定項目使用影像，可以適當修改結構，其中一個，當插入下拉式方塊項目時或修改現有的下拉式方塊項目。  
+---
+# <a name="setting-the-images-for-an-individual-item"></a>Setting the Images for an Individual Item
+The different types of images used by the extended combo box item are determined by the values in the `iImage`, **iSelectedImage**, and **iOverlay** members of the [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) structure. Each value is the index of an image in the associated image list of the control. By default, these members are set to 0, causing the control to display no image for the item. If you want to use images for a specific item, you can modify the structure accordingly, either when inserting the combo box item or by modifying an existing combo box item.  
   
-## 將新項目加入影像  
- 如果您要插入新的項目，請使用 `iImage`、 **iSelectedImage**和 **iOverlay** 結構成員有適當的值然後插入項目與呼叫 [CComboBoxEx::InsertItem](../Topic/CComboBoxEx::InsertItem.md)。  
+## <a name="setting-the-image-for-a-new-item"></a>Setting the Image for a New Item  
+ If you are inserting a new item, initialize the `iImage`, **iSelectedImage**, and **iOverlay** structure members with the proper values and then insert the item with a call to [CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
   
- 下列範例會插入新的展開的下拉式方塊項目 \(`cbi`\) 的展開的下拉式方塊控制項 \(`m_comboEx`\)，提供所有三個影像狀態的索引:  
+ The following example inserts a new extended combo box item (`cbi`) into the extended combo box control (`m_comboEx`), supplying indices for all three image states:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/CPP/setting-the-images-for-an-individual-item_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]  
   
-## 設定現有項目的影像  
- 如果您修改現有的項目，您必須使用 **COMBOBOXEXITEM** 結構的 **mask** 成員。  
+## <a name="setting-the-image-for-an-existing-item"></a>Setting the Image for an Existing Item  
+ If you are modifying an existing item, you need to work with the **mask** member of a **COMBOBOXEXITEM** structure.  
   
-#### 修改現有的項目使用影像  
+#### <a name="to-modify-an-existing-item-to-use-images"></a>To modify an existing item to use images  
   
-1.  **COMBOBOXEXITEM** 宣告結構並將 **mask** 資料成員對要修改感興趣的值。  
+1.  Declare a **COMBOBOXEXITEM** structure and set the **mask** data member to the values you are interested in modifying.  
   
-2.  使用這個類別，請呼叫 [CComboBoxEx::GetItem](../Topic/CComboBoxEx::GetItem.md)。  
+2.  Using this structure, make a call to [CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
   
-3.  使用適當的值，修改 **mask**、 `iImage`和最近傳回結構的 **iSelectedImage** 成員。  
+3.  Modify the **mask**, `iImage`, and **iSelectedImage** members of the newly returned structure, using the appropriate values.  
   
-4.  呼叫 [CComboBoxEx::SetItem](../Topic/CComboBoxEx::SetItem.md)，本修改結構。  
+4.  Make a call to [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), passing in the modified structure.  
   
- 下列範例會交換第三個擴充的下拉式方塊項目的選取或未選取的影像示範這個程序:  
+ The following example demonstrates this procedure by swapping the selected and unselected images of the third extended combo box item:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/CPP/setting-the-images-for-an-individual-item_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]  
   
-## 請參閱  
- [使用 CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CComboBoxEx](../mfc/using-ccomboboxex.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

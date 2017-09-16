@@ -1,38 +1,57 @@
 ---
-title: "Rich Edit 控制項中的資料流作業 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRichEditCtrl 類別, 資料流作業"
-  - "CRichEditCtrl 類別, 資料流儲存體"
-  - "Rich Edit 控制項, 資料流作業"
-  - "儲存體, CRichEditCtrl 中的資料流"
-  - "CRichEditCtrl 中的資料流作業"
-  - "資料流儲存體和 CRichEditCtrl"
+title: Stream Operations in Rich Edit Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CRichEditCtrl class [MFC], stream operations
+- CRichEditCtrl class [MFC], stream storage
+- rich edit controls [MFC], stream operations
+- storage, stream in CRichEditCtrl
+- stream operations in CRichEditCtrl
+- stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Rich Edit 控制項中的資料流作業
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6db5dc840d0fdd08f1f04107b53fa69a7ff4fff3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您可以使用資料流傳送資料至或從 Rich 編輯控制項 \([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\)。  資料流是由 [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) 結構中定義的，指定緩衝區和應用程式定義的回呼函式。  
+---
+# <a name="stream-operations-in-rich-edit-controls"></a>Stream Operations in Rich Edit Controls
+You can use streams to transfer data into or out of a rich edit control ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). A stream is defined by an [EDITSTREAM](http://msdn.microsoft.com/library/windows/desktop/bb787891) structure, which specifies a buffer and an application-defined callback function.  
   
- 若要將資料讀入 Rich Edit 控制項 \(即資料流資料\)，請使用 [StreamIn](../Topic/CRichEditCtrl::StreamIn.md) 成員函式。  控制項會重複呼叫應用程式定義的回呼函式時，都會將資料的區段加入至緩衝區。  
+ To read data into a rich edit control (that is, stream the data in), use the [StreamIn](../mfc/reference/cricheditctrl-class.md#streamin) member function. The control repeatedly calls the application-defined callback function, which transfers a portion of the data into the buffer each time.  
   
- 要儲存的 Rich Edit 控制項的內容 \(也就是資料流資料\)，您可以使用 [StreamOut](../Topic/CRichEditCtrl::StreamOut.md) 成員函式。  控制項將資料寫入重複撰寫並呼叫應用程式定義的回呼函式。  針對每個呼叫，回呼函式儲存緩衝區的內容。  
+ To save the contents of a rich edit control (that is, stream the data out), you can use the [StreamOut](../mfc/reference/cricheditctrl-class.md#streamout) member function. The control repeatedly writes to the buffer and then calls the application-defined callback function. For each call, the callback function saves the contents of the buffer.  
   
-## 請參閱  
- [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CRichEditCtrl](../mfc/using-cricheditctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

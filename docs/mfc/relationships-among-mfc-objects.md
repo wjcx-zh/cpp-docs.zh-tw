@@ -1,62 +1,81 @@
 ---
-title: "MFC 物件關聯性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 物件關聯性"
-  - "MFC, 索引鍵物件之間的關聯性"
-  - "物件 [C++], 關聯性"
-  - "關聯性, MFC 物件"
+title: Relationships Among MFC Objects | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, relationships between key objects
+- objects [MFC], relationships
+- relationships, MFC objects
+- MFC object relationships
 ms.assetid: 6e8f3b51-e80f-4d88-94c8-4c1e4ee163ad
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# MFC 物件關聯性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 66df0ca425038c60927822b14aba1cb6379488c4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-為了協助將文件\/檢視建立程序在檢視方塊，請考慮執行程式:文件框架視窗用來包含檢視和檢視關聯的文件。  
+---
+# <a name="relationships-among-mfc-objects"></a>Relationships Among MFC Objects
+To help put the document/view creation process in perspective, consider a running program: a document, the frame window used to contain the view, and the view associated with the document.  
   
--   文件保留該資料和指標檢視清單來建立文件的文件範本。  
+-   A document keeps a list of the views of that document and a pointer to the document template that created the document.  
   
--   檢視保留指標對其資料並為其父框架視窗的子系。  
+-   A view keeps a pointer to its document and is a child of its parent frame window.  
   
--   文件框架視窗保留指標為其目前現用檢視表。  
+-   A document frame window keeps a pointer to its current active view.  
   
--   文件樣板保留其開啟的文件清單。  
+-   A document template keeps a list of its open documents.  
   
--   應用程式保留它的文件範本清單。  
+-   The application keeps a list of its document templates.  
   
--   視窗記錄所有開啟的視窗，因此可以傳送訊息給它們。  
+-   Windows keeps track of all open windows so it can send messages to them.  
   
- 這些關聯性文件\/檢視建立期間建立。  下表顯示執行中程式的物件如何存取其他物件。  任何物件都可以藉由呼叫全域函式 [AfxGetApp](../Topic/AfxGetApp.md) 取得應用程式物件的指標。  
+ These relationships are established during document/view creation. The following table shows how objects in a running program can access other objects. Any object can obtain a pointer to the application object by calling the global function [AfxGetApp](../mfc/reference/application-information-and-management.md#afxgetapp).  
   
-### 存取在應用程式中其他物件  
+### <a name="gaining-access-to-other-objects-in-your-application"></a>Gaining Access to Other Objects in Your Application  
   
-|來自物件|如何存取其他物件|  
-|----------|--------------|  
-|Document|使用 [GetFirstViewPosition](../Topic/CDocument::GetFirstViewPosition.md) 和 [GetNextView](../Topic/CDocument::GetNextView.md) 存取文件的檢視清單。<br /><br /> 呼叫取得文件範本的 [GetDocTemplate](../Topic/CDocument::GetDocTemplate.md) 。|  
-|檢視|呼叫以取得文件中的 [GetDocument](../Topic/CView::GetDocument.md) 。<br /><br /> 呼叫取得框架視窗的 [GetParentFrame](../Topic/CWnd::GetParentFrame.md) 。|  
-|文件框架視窗|呼叫 [GetActiveView](../Topic/CFrameWnd::GetActiveView.md) 以取得目前檢視。<br /><br /> 呼叫 [GetActiveDocument](../Topic/CFrameWnd::GetActiveDocument.md) 以取得文件附加至目前的檢視。|  
-|MDI 框架視窗|呼叫 [MDIGetActive](../Topic/CMDIFrameWnd::MDIGetActive.md) 以取得目前啟動中的 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)。|  
+|From object|How to access other objects|  
+|-----------------|---------------------------------|  
+|Document|Use [GetFirstViewPosition](../mfc/reference/cdocument-class.md#getfirstviewposition) and [GetNextView](../mfc/reference/cdocument-class.md#getnextview) to access the document's view list.<br /><br /> Call [GetDocTemplate](../mfc/reference/cdocument-class.md#getdoctemplate) to get the document template.|  
+|View|Call [GetDocument](../mfc/reference/cview-class.md#getdocument) to get the document.<br /><br /> Call [GetParentFrame](../mfc/reference/cwnd-class.md#getparentframe) to get the frame window.|  
+|Document frame window|Call [GetActiveView](../mfc/reference/cframewnd-class.md#getactiveview) to get the current view.<br /><br /> Call [GetActiveDocument](../mfc/reference/cframewnd-class.md#getactivedocument) to get the document attached to the current view.|  
+|MDI frame window|Call [MDIGetActive](../mfc/reference/cmdiframewnd-class.md#mdigetactive) to get the currently active [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).|  
   
- 通常，框架視窗有一個檢視，不過有時候，在分隔視窗中同一個框架視窗包含多個檢視。  框架視窗保留目前啟用檢視的指標；指標會在檢視啟動時的任何時候進行更新。  
+ Typically, a frame window has one view, but sometimes, as in splitter windows, the same frame window contains multiple views. The frame window keeps a pointer to the currently active view; the pointer is updated any time another view is activated.  
   
 > [!NOTE]
->  儲存在 [m\_pMainWnd](../Topic/CWinThread::m_pMainWnd.md) 應用程式物件的成員變數中的主框架視窗的指標。  在`InitInstance` 的複寫中呼叫`OnFileNew` 會讓`CWinApp` 的成員函式幫你設好`m_pMainWnd`。  如果您未呼叫 `OnFileNew`，則必須設定 `InitInstance` 的變數值。如果 \/Embedding 在命令列上，則 \(SDI COM 元件 \(伺服器\) 應用程式可能無法設定變數。請注意 `m_pMainWnd` 現在是 `CWinThread` 類別的成員而非 `CWinApp` 類別。  
+>  A pointer to the main frame window is stored in the [m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd) member variable of the application object. A call to `OnFileNew` in your override of the `InitInstance` member function of `CWinApp` sets `m_pMainWnd` for you. If you do not call `OnFileNew`, you must set the variable's value in `InitInstance` yourself. (SDI COM component (server) applications may not set the variable if /Embedding is on the command line.) Note that `m_pMainWnd` is now a member of class `CWinThread` rather than `CWinApp`.  
   
-## 請參閱  
- [文件範本和文件\/檢視建立流程](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [文件樣板建立](../mfc/document-template-creation.md)   
- [文件\/檢視建立](../mfc/document-view-creation.md)   
- [建立新文件、視窗和檢視](../mfc/creating-new-documents-windows-and-views.md)
+## <a name="see-also"></a>See Also  
+ [Document Templates and the Document/View Creation Process](../mfc/document-templates-and-the-document-view-creation-process.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "hash 類別 | Microsoft Docs"
+title: hash Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- hash
 - functional/std::hash
 - bitset/std::hash
 - memory/std::hash
@@ -23,7 +22,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hash class
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
+- std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
 caps.latest.revision: 21
 author: corob-msft
@@ -43,17 +50,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: d549fb7aeed268327122532e6c4390ac931740e7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 23f654c648e834f238143648b59150eebcc73aec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="hash-class"></a>hash 類別
-計算值的雜湊碼。  
+# <a name="hash-class"></a>hash Class
+Computes hash code for a value.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -62,10 +69,10 @@ struct hash {
 };  
 ```  
   
-## <a name="remarks"></a>備註  
-函式物件會定義雜湊函式，適用於將 *Ty* 類型的值對應到索引值的分佈。 成員 `operator()` 會傳回 *val* 的雜湊碼，適合用來與範本類別 `unordered_map`、`unordered_multimap`、`unordered_set` 及 `unordered_multiset` 搭配使用。 標準程式庫提供適用於基本類型的特製化：*Ty* 可以是任何純量類型，包括指標類型和列舉類型。 此外，還有適用於程式庫類型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant` 及 `vector<bool>` 的特製化。  
+## <a name="remarks"></a>Remarks  
+The function object defines a hash function, suitable for mapping values of type *Ty* to a distribution of index values. The member `operator()` returns a hash code for *val*, suitable for use with template classes `unordered_map`, `unordered_multimap`, `unordered_set`, and `unordered_multiset`. The standard library provides specializations for basic types: *Ty* may be any scalar type, including pointer types and enumeration types. In addition, there are specializations for the library types `string`, `wstring`, `u16string`, `u32string`, `string_view`, `wstring_view`, `u16string_view`, `u32string_view`, `bitset`, `error_code`, `error_condition`, `optional`, `shared_ptr`, `thread`, `type_index`, `unique_ptr`, `variant`, and `vector<bool>`.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional__hash.cpp   
@@ -89,15 +96,15 @@ int main()
 3  
 ```  
   
-## <a name="requirements"></a>需求  
-**標頭：**\<functional>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<functional>  
   
-**命名空間：** std  
+**Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<unordered_map>](../standard-library/unordered-map.md)   
- [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)   
- [unordered_multiset 類別](../standard-library/unordered-multiset-class.md)   
+ [unordered_multimap Class](../standard-library/unordered-multimap-class.md)   
+ [unordered_multiset Class](../standard-library/unordered-multiset-class.md)   
  [<unordered_set>](../standard-library/unordered-set.md)
 
 

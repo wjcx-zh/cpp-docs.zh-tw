@@ -1,5 +1,5 @@
 ---
-title: "CString 格式和訊息方塊顯示 |Microsoft 文件"
+title: CString Formatting and Message-Box Display | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CString objects, formatting and message boxes
+- CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 caps.latest.revision: 14
 author: mikeblome
@@ -33,32 +33,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 356562dc61971aa7a74ce9e9be94fc34af58f6f9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: abe0ce15f9fdf83c4cd15156916779e112ab72a8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstring-formatting-and-message-box-display"></a>CString 格式和訊息方塊顯示
-提供數個函數來格式化和剖析`CString`物件。 您可以使用這些函式，只要有操作`CString`物件，但它們會特別有用，會出現在訊息方塊文字的字串進行格式化。  
+# <a name="cstring-formatting-and-message-box-display"></a>CString Formatting and Message-Box Display
+A number of functions are provided to format and parse `CString` objects. You can use these functions whenever you have to manipulate `CString` objects, but they are particularly useful for formatting strings that will appear in message-box text.  
   
- 此群組的函式也包含全域的常式，以顯示訊息方塊。  
+ This group of functions also includes a global routine for displaying a message box.  
   
-### <a name="cstring-functions"></a>CString 函式  
+### <a name="cstring-functions"></a>CString Functions  
   
 |||  
 |-|-|  
-|[AfxExtractSubString](#afxextractsubstring)|擷取指定的來源字串中分隔單一字元的子字串。|  
-|[AfxFormatString1](#afxformatstring1)|取代字串中格式字元 「 %1"的指定的字串包含在字串資料表。|  
-|[AfxFormatString2](#afxformatstring2)|以兩個字串的格式字元 「 %1"和"%2"在字串中包含在字串資料表中。|  
-|[AfxMessageBox](#afxmessagebox)|顯示訊息方塊。|  
+|[AfxExtractSubString](#afxextractsubstring)|Extracts substrings separated by a single character from a given source string.|  
+|[AfxFormatString1](#afxformatstring1)|Substitutes a given string for the format characters "%1" in a string contained in the string table.|  
+|[AfxFormatString2](#afxformatstring2)|Substitutes two strings for the format characters "%1" and "%2" in a string contained in the string table.|  
+|[AfxMessageBox](#afxmessagebox)|Displays a message box.|  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
- 此全域函式可以用來從指定的來源字串擷取子字串。  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
+ This global function can be used to extract a substring from a given source string.  
   
 ```   
 BOOL AFXAPI AfxExtractSubString (
@@ -68,35 +68,35 @@ BOOL AFXAPI AfxExtractSubString (
     TCHAR chSep  = '\n'); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *rString*  
- -   若要參考[CString](../../atl-mfc-shared/using-cstring.md)將收到個別的子字串的物件。  
+ -   Reference to a [CString](../../atl-mfc-shared/using-cstring.md) object that will receive an individual substring.  
   
  *lpszFullString*  
- -   字串，包含要擷取之字串的全文檢索。  
+ -   String containing the full text of the string to extract from.  
   
  *iSubString*  
- -   以零為起始的索引，要擷取之子字串*lpszFullString*。  
+ -   Zero-based index of the substring to extract from *lpszFullString*.  
   
  *chSep*  
- -   用來分隔的子字串的分隔符號字元。  
+ -   Separator character used to delimit substrings.  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**如果函式成功擷取的子字串在提供的索引; 否則**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the function successfully extracted the substring at the provided index; otherwise, **FALSE**.  
   
-### <a name="remarks"></a>備註  
- 此函式可用於擷取來源字串中的多個子字串時已知的單一字元會分隔每一個子字串。 此函式會搜尋的起點的`lpszFullString`參數每次呼叫時。  
+### <a name="remarks"></a>Remarks  
+ This function is useful for extracting multiple substrings from a source string when a known single character separates each substring. This function searches from the beginning of the `lpszFullString` parameter each time it is called.  
   
- 此函式會傳回 FALSE，如果`lpszFullString`設為**NULL**或函式達到結尾`lpszFullString`尋找沒有`iSubString`+ 1 出現指定的分隔符號字元。 `rString`參數將不會修改從其原始值如果`lpszFullString`設**NULL**，否則`rString`如果無法擷取子字串，指定索引參數設定為空字串。  
+ This function will return FALSE if either `lpszFullString` is set to **NULL** or the function reaches the end of `lpszFullString` without finding `iSubString`+1 occurrences of the specified separator character. The `rString` parameter will not be modified from its original value if `lpszFullString` was set to **NULL**; otherwise, the `rString` parameter is set to the empty string if the substring could not be extracted for the specified index.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
- 用 `lpsz1` 指向的字串，替代由 `nIDS`所識別之範本字串資源中字元「%1」的任何執行個體。  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1" in the template string resource identified by `nIDS`.  
   
 ```  
 void  AfxFormatString1(
@@ -105,29 +105,29 @@ void  AfxFormatString1(
     LPCTSTR lpsz1); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rString`  
- `CString` 物件的參考，在執行替代之後將會包含結果字串。  
+ A reference to a `CString` object that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- 要執行替代作業之範本字串的資源 ID。  
+ The resource ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- 將取代範本字串中格式字元「%1」的字串。  
+ A string that will replace the format characters "%1" in the template string.  
   
-### <a name="remarks"></a>備註  
- 新建構的字串儲存於 `rString`中。 例如，假設字串資料表中的字串是「找不到檔案 %1」，而 `lpsz1` 等於「C:\MYFILE.TXT」，則 `rString` 將會包含字串「找不到檔案 C:\MYFILE.TXT」。 此函式在為傳送到訊息方塊和其他視窗的字串進行格式化時，便可派上用場。  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found", and `lpsz1` is equal to "C:\MYFILE.TXT", then `rString` will contain the string "File C:\MYFILE.TXT not found". This function is useful for formatting strings sent to message boxes and other windows.  
   
- 如果格式字元「%1」多次出現在字串中，將會進行多個替代作業。  
+ If the format characters "%1" appear in the string more than once, multiple substitutions will be made.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
- 替代字串所指向`lpsz1`字元"%1"和字串所指向的任何執行個體`lpsz2`所識別的範本字串資源中的字元"%2"的任何執行個體`nIDS`。  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1", and the string pointed to by `lpsz2` for any instances of the characters "%2", in the template string resource identified by `nIDS`.  
   
 ```   
 void AfxFormatString2(
@@ -137,32 +137,32 @@ void AfxFormatString2(
     LPCTSTR lpsz2); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rString`  
- 若要參考`CString`執行替代之後將包含結果的字串。  
+ A reference to the `CString` that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- 可執行替代的範本字串的字串資料表識別碼。  
+ The string table ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- 將取代範本字串中格式字元「%1」的字串。  
+ A string that will replace the format characters "%1" in the template string.  
   
  `lpsz2`  
- 將會取代格式字串的範本字串中字元"%2"。  
+ A string that will replace the format characters "%2" in the template string.  
   
-### <a name="remarks"></a>備註  
- 新建構的字串儲存於 `rString`中。 例如，如果字串資料表中的字串為"File 目錄 %2 中找不到 %1"，`lpsz1`指向 「 MYFILE。TXT"和`lpsz2`指向 「 C:\MYDIR"，然後`rString`將包含字串"File MYFILE。TXT C:\MYDIR 目錄中找不到"  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found in directory %2", `lpsz1` points to "MYFILE.TXT", and `lpsz2` points to "C:\MYDIR", then `rString` will contain the string "File MYFILE.TXT not found in directory C:\MYDIR"  
   
- 如果格式字元 「 %1"或"%2"出現在字串中一次以上，將會進行多個替代項目。 它們不必是數字的順序。  
+ If the format characters "%1" or "%2" appear in the string more than once, multiple substitutions will be made. They do not have to be in numerical order.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_Utilities # 26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
- 在畫面上顯示訊息方塊。  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
+ Displays a message box on the screen.  
   
 ```  
 int AfxMessageBox(
@@ -176,49 +176,49 @@ int AFXAPI AfxMessageBox(
     UINT nIDHelp = (UINT) -1); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 指向`CString`物件或 null 結束的字串，包含要顯示在訊息方塊中的訊息。  
+ Points to a `CString` object or null-terminated string containing the message to be displayed in the message box.  
   
  `nType`  
- 訊息方塊樣式。 套用這其中任何[訊息方塊樣式](../../mfc/reference/message-box-styles.md)到方塊。  
+ The style of the message box. Apply any of the [message-box styles](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) to the box.  
   
  `nIDHelp`  
- 說明內容識別碼的訊息。0 表示會使用應用程式的預設說明內容。  
+ The Help context ID for the message; 0 indicates the application's default Help context will be used.  
   
  `nIDPrompt`  
- 唯一識別碼，用來參考字串資料表中的字串。  
+ A unique ID used to reference a string in the string table.  
   
-### <a name="return-value"></a>傳回值  
- 如果不是記憶體不足，無法顯示訊息方塊，則為零否則，會傳回下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ Zero if there is not enough memory to display the message box; otherwise, one of the following values is returned:  
   
-- **IDABORT**中止按鈕已選取。  
+- **IDABORT** The Abort button was selected.  
   
-- **IDCANCEL**已選取 [取消] 按鈕。  
+- **IDCANCEL** The Cancel button was selected.  
   
-- **IDIGNORE**已選取 [忽略] 按鈕。  
+- **IDIGNORE** The Ignore button was selected.  
   
-- **IDNO**已選取 [否] 按鈕。  
+- **IDNO** The No button was selected.  
   
-- **IDOK**已選取 [確定] 按鈕。  
+- **IDOK** The OK button was selected.  
   
-- **IDRETRY**重試 按鈕已選取。  
+- **IDRETRY** The Retry button was selected.  
   
-- **IDYES**已選取 [是] 按鈕。  
+- **IDYES** The Yes button was selected.  
   
- 如果訊息方塊具有 取消 按鈕， **IDCANCEL**如果按下 ESC 鍵，或選取取消 5d; 按鈕，將會傳回值。 如果訊息方塊具有不到 [取消] 按鈕，按 ESC 鍵任何作用。  
+ If a message box has a Cancel button, the **IDCANCEL** value will be returned if either the ESC key is pressed or the Cancel button is selected. If the message box has no Cancel button, pressing the ESC key has no effect.  
   
- 函式[AfxFormatString1](#afxformatstring1)和[AfxFormatString2](#afxformatstring2)可以用來設定出現在訊息方塊的文字格式。  
+ The functions [AfxFormatString1](#afxformatstring1) and [AfxFormatString2](#afxformatstring2) can be useful in formatting text that appears in a message box.  
   
-### <a name="remarks"></a>備註  
- 第一種形式的多載函式顯示的文字字串所指向`lpszText`在訊息方塊，並使用`nIDHelp`來描述說明內容。 說明內容用來跳到相關的說明主題，當使用者按下的說明鍵 (通常 F1)。  
+### <a name="remarks"></a>Remarks  
+ The first form of this overloaded function displays a text string pointed to by `lpszText` in the message box and uses `nIDHelp` to describe a Help context. The Help context is used to jump to an associated Help topic when the user presses the Help key (typically F1).  
   
- 函式的第二個表單使用字串資源識別碼`nIDPrompt`顯示訊息方塊中的訊息。 相關聯的說明頁面透過值找到`nIDHelp`。 如果預設值的`nIDHelp`為使用 (-1)，字串資源識別碼`nIDPrompt`，用於說明內容。 如需定義說明內容的詳細資訊，請參閱[技術附註 28](../../mfc/tn028-context-sensitive-help-support.md)。  
+ The second form of the function uses the string resource with the ID `nIDPrompt` to display a message in the message box. The associated Help page is found through the value of `nIDHelp`. If the default value of `nIDHelp` is used (-1), the string resource ID, `nIDPrompt`, is used for the Help context. For more information about defining Help contexts, see [Technical Note 28](../../mfc/tn028-context-sensitive-help-support.md).  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCWindowing # 133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)   
- [CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CStringT Class](../../atl-mfc-shared/reference/cstringt-class.md)
 

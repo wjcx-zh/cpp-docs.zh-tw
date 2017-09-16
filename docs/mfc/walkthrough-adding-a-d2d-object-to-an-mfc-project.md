@@ -1,144 +1,173 @@
 ---
-title: "逐步解說：將 D2D 物件加入至 MFC 專案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D2D [MFC]"
-  - "MFC, D2D"
+title: 'Walkthrough: Adding a D2D Object to an MFC Project | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, D2D
+- D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
 caps.latest.revision: 20
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 逐步解說：將 D2D 物件加入至 MFC 專案
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3bd7fde24dc39cba1d3fcce1b7aa7d1cb08a11df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本逐步解說教導如何將基本 Direct2D \(D2D\) 物件加入至 Visual C\+\+ MFC 程式庫專案，然後將專案建置成為在漸層背景中列印 "Hello, world" 的應用程式。  
+---
+# <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>Walkthrough: Adding a D2D Object to an MFC Project
+This walkthrough teaches how to add a basic Direct2D (D2D) object to a Visual C++, Microsoft Foundation Class Library (MFC) project, and then build the project into an application that prints "Hello, world" on a gradient background.  
   
- 逐步解說將示範如何完成這些工作：  
+ The walkthrough shows how to accomplish these tasks:  
   
--   建立 MFC 應用程式。  
+-   Create an MFC application.  
   
--   建立純色筆刷和線性漸層筆刷。  
+-   Create a solid-color brush and a linear-gradient brush.  
   
--   修改漸層筆刷，讓它在視窗調整大小時適當變更。  
+-   Modify the gradient brush so that it will change appropriately when the window is resized.  
   
--   實作 D2D 繪圖處理常式。  
+-   Implement a D2D drawing handler.  
   
--   驗證結果。  
+-   Verify the results.  
   
  [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]  
   
-## 必要條件  
- 若要完成這個逐步解說中，您必須有 Visual Studio。  
+## <a name="prerequisites"></a>Prerequisites  
+ To complete this walkthrough, you must have Visual Studio.  
   
-### 若要建立 MFC 應用程式  
+### <a name="to-create-an-mfc-application"></a>To create an MFC application  
   
-1.  在 \[**檔案**\] 功能表上，指向 \[**新增**\]，然後按一下 \[**專案**\]。  
+1.  On the **File** menu, point to **New** and then click **Project**.  
   
-2.  在 \[**新增專案**\] 對話方塊中，展開左窗格中 \[**已安裝的範本**\] 底下的 \[**Visual C\+\+**\]，然後選取 \[**MFC**\]。  在中間窗格中選取 \[**MFC 應用程式**\]。  在 \[**名稱**\] 方塊中輸入 `MFCD2DWalkthrough`。  按一下 \[**確定**\]。  
+2.  In the **New Project** dialog box, in the left pane under **Installed Templates**, expand **Visual C++** and then select **MFC**. In the middle pane, select **MFC Application**. In the **Name** box, type `MFCD2DWalkthrough`. Click **OK**.  
   
-3.  在 \[**MFC 應用程式精靈**\] 中，按一下 \[**完成**\]，而不要變更任何設定。  
+3.  In the **MFC Application Wizard**, click **Finish** without changing any settings.  
   
-### 若要建立純色筆刷和線性漸層筆刷  
+### <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>To create a solid-color brush and a linear-gradient brush  
   
-1.  在 \[**方案總管**\] 中，在 **MFCD2DWalkthrough** 專案的 \[**標頭檔**\] 資料夾中開啟 MFCD2DWalkthroughView.h。  將下列程式碼加入至 `CMFCD2DWalkthroughView` 類別，以建立三個資料變數。  
+1.  In **Solution Explorer**, in the **MFCD2DWalkthrough** project, in the **Header Files** folder, open MFCD2DWalkthroughView.h. Add the following code to the `CMFCD2DWalkthroughView` class to create three data variables.  
   
-    ```  
+ ```  
     CD2DTextFormat* m_pTextFormat;  
     CD2DSolidColorBrush* m_pBlackBrush;  
     CD2DLinearGradientBrush* m_pLinearGradientBrush;  
-    ```  
+ ```  
   
-     儲存並關閉檔案。  
+     Save the file and close it.  
   
-2.  在 \[**原始程式檔**\] 資料夾中，開啟 MFCD2DWalkthroughView.cpp。  在 `CMFCD2DWalkthroughView` 類別的建構函式中加入下列程式碼。  
+2.  In the **Source Files** folder, open MFCD2DWalkthroughView.cpp. In the constructor for the `CMFCD2DWalkthroughView` class, add the following code.  
   
-    ```  
-    // Enable D2D support for this window:  
-    EnableD2DSupport();  
-  
-    // Initialize D2D resources:  
-    m_pBlackBrush = new CD2DSolidColorBrush(GetRenderTarget(), D2D1::ColorF(D2D1::ColorF::Black));  
-  
-    m_pTextFormat = new CD2DTextFormat(GetRenderTarget(), _T("Verdana"), 50);  
-    m_pTextFormat->Get()->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);  
-    m_pTextFormat->Get()->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_CENTER);  
-  
+ ``` *// Enable D2D support for this window:  
+    EnableD2DSupport();
+
+ *// Initialize D2D resources:  
+    m_pBlackBrush = new CD2DSolidColorBrush(GetRenderTarget(), D2D1::ColorF(D2D1::ColorF::Black));
+
+ 
+    m_pTextFormat = new CD2DTextFormat(GetRenderTarget(), _T("Verdana"), 50);
+
+    m_pTextFormat->Get()->SetTextAlignment(DWRITE_TEXT_ALIGNMENT_CENTER);
+
+ m_pTextFormat->Get()->SetParagraphAlignment(DWRITE_PARAGRAPH_ALIGNMENT_CENTER);
+
+ 
     D2D1_GRADIENT_STOP gradientStops[2];  
-  
-    gradientStops[0].color = D2D1::ColorF(D2D1::ColorF::White);  
+ 
+    gradientStops[0].color = D2D1::ColorF(D2D1::ColorF::White);
+
     gradientStops[0].position = 0.f;  
-    gradientStops[1].color = D2D1::ColorF(D2D1::ColorF::Indigo);  
+    gradientStops[1].color = D2D1::ColorF(D2D1::ColorF::Indigo);
+
     gradientStops[1].position = 1.f;  
-  
+ 
     m_pLinearGradientBrush = new CD2DLinearGradientBrush(GetRenderTarget(),   
-        gradientStops, ARRAYSIZE(gradientStops),  
-        D2D1::LinearGradientBrushProperties(D2D1::Point2F(0, 0), D2D1::Point2F(0, 0)));  
-    ```  
+    gradientStops, ARRAYSIZE(gradientStops),  
+    D2D1::LinearGradientBrushProperties(D2D1::Point2F(0, 0), D2D1::Point2F(0, 0)));
+
+ ```  
   
-     儲存並關閉檔案。  
+     Save the file and close it.  
   
-### 若要修改漸層筆刷，讓它在視窗調整大小時適當變更  
+### To modify the gradient brush so that it will change appropriately when the window is resized  
   
-1.  在 \[**專案**\] 功能表上按一下 \[**類別精靈**\]。  
+1.  On the **Project** menu, click **Class Wizard**.  
   
-2.  在 \[**MFC 類別精靈**\] 中，選取 \[**類別名稱**\] 底下的 `CMFCD2DWalkthroughView`。  
+2.  In the **MFC Class Wizard**, under **Class name**, select `CMFCD2DWalkthroughView`.  
   
-3.  在 \[**訊息**\] 索引標籤的 \[**訊息**\] 方塊中，選取 `WM_SIZE`，然後按一下 \[**加入處理常式**\]。  這個動作會將 `OnSize` 訊息處理常式加入至 `CMFCD2DWalkthroughView` 類別。  
+3.  On the **Messages** tab, in the **Messages** box, select `WM_SIZE` and then click **Add Handler**. This action adds the `OnSize` message handler to the `CMFCD2DWalkthroughView` class.  
   
-4.  在 \[**現有的處理常式**\] 方塊中選取 `OnSize`。  按一下 \[**編輯程式碼**\]，以顯示 `CMFCD2DWalkthroughView::OnSize` 方法。  在方法的結尾加入下列程式碼。  
+4.  In the **Existing handlers** box, select `OnSize`. Click **Edit Code** to display the `CMFCD2DWalkthroughView::OnSize` method. At the end of the method, add the following code.  
   
-    ```  
-    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));  
-    ```  
+ ```  
+    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
+
+ ```  
   
-     儲存並關閉檔案。  
+     Save the file and close it.  
   
-### 若要實作 D2D 繪圖處理常式  
+### To implement a D2D drawing handler  
   
-1.  在 \[**專案**\] 功能表上按一下 \[**類別精靈**\]。  
+1.  On the **Project** menu, click **Class Wizard**.  
   
-2.  在 \[**MFC 類別精靈**\] 中，選取 \[**類別名稱**\] 底下的 `CMFCD2DWalkthroughView`。  
+2.  In the **MFC Class Wizard**, under **Class name**, select `CMFCD2DWalkthroughView`.  
   
-3.  按一下 \[**訊息**\] 索引標籤上的 \[**加入自訂訊息**\]。  
+3.  On the **Messages** tab, click **Add Custom Message**.  
   
-4.  在 \[**加入自訂訊息**\] 對話方塊中，在 \[**自訂 Windows 訊息**\] 方塊內輸入 `AFX_WM_DRAW2D`。  在 \[**訊息處理常式名稱**\] 方塊中，輸入 `OnDraw2D`。  選取 \[**註冊訊息**\] 選項，然後按一下 \[**確定**\]。  這個動作會將 `AFX_WM_DRAW2D` 訊息的訊息處理常式加入至 `CMFCD2DWalkthroughView` 類別。  
+4.  In the **Add Custom Message** dialog box, in the **Custom Windows Message** box, type `AFX_WM_DRAW2D`. In the **Message handler name** box, type `OnDraw2D`. Select the **Registered Message** option and then click **OK**. This action adds a message handler for the `AFX_WM_DRAW2D` message to the `CMFCD2DWalkthroughView` class.  
   
-5.  在 \[**現有的處理常式**\] 方塊中選取 `OnDraw2D`。  按一下 \[**編輯程式碼**\]，以顯示 `CMFCD2DWalkthroughView::OnDraw2D` 方法。  將下列程式碼用於 `CMFCD2DWalkthroughView::OnDrawD2D` 方法。  
+5.  In the **Existing handlers** box, select `OnDraw2D`. Click **Edit Code** to display the `CMFCD2DWalkthroughView::OnDraw2D` method. Use the following code for the `CMFCD2DWalkthroughView::OnDrawD2D` method.  
   
-    ```  
+ ```  
     afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(WPARAM wParam, LPARAM lParam)  
     {  
-        CHwndRenderTarget* pRenderTarget = (CHwndRenderTarget*)lParam;  
-        ASSERT_VALID(pRenderTarget);  
+ CHwndRenderTarget* pRenderTarget = (CHwndRenderTarget*)lParam;  
+    ASSERT_VALID(pRenderTarget);
+
+ 
+    CRect rect;  
+    GetClientRect(rect);
+
+ 
+    pRenderTarget->FillRectangle(rect, m_pLinearGradientBrush);
+
+    pRenderTarget->DrawText(_T("Hello, World!"), rect, m_pBlackBrush, m_pTextFormat);
+
+ 
+    return TRUE;  
+ }  
+ ```  
   
-        CRect rect;  
-        GetClientRect(rect);  
+     Save the file and close it.  
   
-        pRenderTarget->FillRectangle(rect, m_pLinearGradientBrush);  
-        pRenderTarget->DrawText(_T("Hello, World!"), rect, m_pBlackBrush, m_pTextFormat);  
+### To verify the results  
   
-        return TRUE;  
-    }  
-    ```  
+1.  Build and run the application. It should have a gradient rectangle that changes when you resize the window. “Hello World!” should be displayed in the center of the rectangle.  
   
-     儲存並關閉檔案。  
-  
-### 若要驗證結果  
-  
-1.  建置並執行應用程式。  其漸層矩形應該會在視窗調整大小時變更。"Hello World\!" 應該會顯示在矩形中心。  
-  
-## 請參閱  
- [逐步解說](../mfc/walkthroughs-mfc.md)
+## See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)
+
+

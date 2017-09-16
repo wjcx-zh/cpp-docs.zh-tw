@@ -1,47 +1,65 @@
 ---
-title: "容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式容器 [C++]"
-  - "容器 [C++]"
-  - "容器 [C++], 容器應用程式"
-  - "容器 [C++], OLE 容器應用程式"
-  - "OLE 容器"
+title: Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- containers [MFC]
+- OLE containers
+- application containers [MFC]
+- containers [MFC], OLE container applications
+- containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c8d7fce817920b9e11d4c6cf95d952522aed0371
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-容器應用程式是一種應用程式，可以將內嵌或連結項目加入到本身的文件中。  由容器應用程式管理的文件必須能夠儲存和顯示 OLE 複合檔案元件以及由應用程式建立的檔案。  容器應用程式也必須允許使用者插入新項目或編輯現有的項目。  
+---
+# <a name="containers"></a>Containers
+A container application is an application that can incorporate embedded or linked items into its own documents. The documents managed by a container application must be able to store and display OLE compound document components as well as data created by the application itself. A container application must also allow users to insert new items or edit existing items.  
   
-## 本章節內容  
- [實作容器](../mfc/containers-implementing-a-container.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Implement a Container](../mfc/containers-implementing-a-container.md)  
   
- [容器用戶端項目](../mfc/containers-client-items.md)  
+ [Container Client Items](../mfc/containers-client-items.md)  
   
- [使用複合檔案](../mfc/containers-compound-files.md)  
+ [Use Compound Files](../mfc/containers-compound-files.md)  
   
- [容器：使用者介面問題](../mfc/containers-user-interface-issues.md)  
+ [Container User-Interface Issues](../mfc/containers-user-interface-issues.md)  
   
- [容器的進階功能](../mfc/containers-advanced-features.md)  
+ [Advanced Features of Containers](../mfc/containers-advanced-features.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [伺服器](../mfc/servers.md)   
- [啟用](../mfc/activation-cpp.md)   
- [功能表和資源 \(OLE\)](../mfc/menus-and-resources-ole.md)
+ [Servers](../mfc/servers.md)   
+ [Activation](../mfc/activation-cpp.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)
+
+

@@ -1,64 +1,87 @@
 ---
-title: "儲存類別 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "thread_local_cpp"
-  - "external_cpp"
-  - "static_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "儲存類別, 基本概念"
+title: Storage classes (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- thread_local_cpp
+- external_cpp
+- static_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- storage classes, basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 儲存類別 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 0286098cb87ecfea244269a8e5756829759b82f7
+ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
-C\+\+ 變數宣告內容中的*「儲存類別」*\(Storage Class\) 是一種類型規範，可控管物件的存留期、連結和記憶體位置。  指定的物件只能有一個儲存類別。  除非使用 `extern`、`static` 或 `thread_local` 規範另外指定，否則區塊內定義的變數會具有自動儲存區。  自動物件和變數沒有連結；區塊外部的程式碼看不到它們。  
+---
+# <a name="storage-classes-c"></a>Storage classes (C++)  
   
- **備註**  
+A *storage class* in the context of C++ variable declarations is a type specifier that governs the lifetime, linkage, and memory location of objects. A given object can have only one storage class. Variables defined within a block have automatic storage unless otherwise specified using the `extern`, `static`, or `thread_local` specifiers. Automatic objects and variables have no linkage; they are not visible to code outside the block.  
   
-1.  [mutable](../cpp/mutable-data-members-cpp.md) 關鍵字可視為儲存類別規範。  不過，它只能在類別定義的成員清單中使用。  
+**Notes**  
   
-2.  從 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 開始，`auto` 關鍵字不再是 C\+\+ 儲存類別規範，而且 `register` 關鍵字已遭取代。  
+1.  The [mutable](../cpp/mutable-data-members-cpp.md) keyword may be considered a storage class specifier. However, it is only available in the member list of a class definition.  
   
--   [靜態](#static)  
+2.  **Visual C++ 2010 and later:** The `auto` keyword is no longer a C++ storage-class specifier, and the `register` keyword is deprecated. **Visual Studio 2017 version 15.3 and later:** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)): The `register` keyword is no longer a supported storage class. The keyword is still reserved in the standard for future use. 
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="in-this-section"></a>In this section:
   
+-   [static](#static)  
 -   [extern](#extern)  
+-   [thread_local](#thread_local)
+
+<a name="static"></a>
   
--   [thread\_local](#thread_local)  
+## <a name="static"></a>static  
   
-## 靜態  
- `static` 關鍵字可以用來在全域範圍、命名空間範圍和類別範圍宣告變數和函式。  靜態變數也可以在區域範圍內進行宣告。  
+The `static` keyword can be used to declare variables and functions at global scope, namespace scope, and class scope. Static variables can also be declared at local scope.  
   
- 靜態持續期間是指，物件或變數會在程式啟動時配置，並在程式結束時解除配置。  外部連結是指，變數名稱在變數宣告所在的檔案外部可見。  相反地，內部連結是指，名稱在變數宣告所在的檔案外部不可見。  根據預設，全域命名空間中所定義的物件或變數具有靜態持續期間和外部連結。  `static` 關鍵字可在下列狀況中使用。  
+Static duration means that the object or variable is allocated when the program starts and is deallocated when the program ends. External linkage means that the name of the variable is visible from outside the file in which the variable is declared. Conversely, internal linkage means that the name is not visible outside the file in which the variable is declared. By default, an object or variable that is defined in the global namespace has static duration and external linkage. The `static` keyword can be used in the following situations.  
   
-1.  當您在檔案範圍 \(全域和\/或命名空間範圍\) 宣告變數或函式時，`static` 關鍵字會指定變數或函式擁有內部連結。  當您宣告變數時，變數會擁有靜態持續期間，且編譯器會將其初始化為 0 \(除非您指定其他值\)。  
+1.  When you declare a variable or function at file scope (global and/or namespace scope), the `static` keyword specifies that the variable or function has internal linkage. When you declare a variable, the variable has static duration and the compiler initializes it to 0 unless you specify another value.  
   
-2.  當您在函式中宣告變數時，`static` 關鍵字會指定該變數在兩次呼叫該函式之間保留其狀態。  
+2.  When you declare a variable in a function, the `static` keyword specifies that the variable retains its state between calls to that function.  
   
-3.  當您在類別宣告中宣告資料成員時，`static` 關鍵字會指定成員的一個複本供類別的所有執行個體共用。  靜態資料成員必須以檔案範圍定義。  您宣告為 `const` `static` 的整數資料成員可以擁有初始設定式。  
+3.  When you declare a data member in a class declaration, the `static` keyword specifies that one copy of the member is shared by all instances of the class. A static data member must be defined at file scope. An integral data member that you declare as `const static` can have an initializer.  
   
-4.  當您在類別宣告中宣告成員函式時，`static` 關鍵字會指定該函式供類別的所有執行個體共用。  靜態成員函式無法存取執行個體成員，因為函式沒有隱含的 `this` 指標。  若要存取執行個體成員，請使用本身為執行個體指標或參考的參數宣告函式。  
+4.  When you declare a member function in a class declaration, the `static` keyword specifies that the function is shared by all instances of the class. A static member function cannot access an instance member because the function does not have an implicit `this` pointer. To access an instance member, declare the function with a parameter that is an instance pointer or reference.  
   
-5.  您無法將等位的成員宣告為靜態。  不過，全域宣告的匿名等位必須明確宣告為 `static`。  
+5.  You cannot declare the members of a union as static. However, a globally declared anonymous union must be explicitly declared `static`.  
   
- 下列範例將示範在函式中宣告為 `static` 的變數如何在兩次呼叫該函式之間保留其狀態。  
+This example shows how a variable declared `static` in a function retains its state between calls to that function.  
   
-```  
+```cpp  
 // static1.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -77,13 +100,17 @@ int main() {
 }  
 ```  
   
-  **nStatic is 0**  
-**nStatic is 1**  
-**nStatic is 3**  
-**nStatic is 6**  
-**nStatic is 10** 下列範例將示範類別中 `static` 的用法。  
-  
+```Output  
+nStatic is 0  
+nStatic is 1  
+nStatic is 3  
+nStatic is 6  
+nStatic is 10  
 ```  
+  
+This example shows the use of `static` in a class.  
+  
+```cpp  
 // static2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -116,16 +143,20 @@ int main() {
 }  
 ```  
   
-  **0**  
-**0**  
-**1**  
-**1**  
-**2**  
-**2**  
-**3**  
-**3** 下列範例將示範在成員函式中宣告為 `static` 的區域變數。  靜態變數可供整個程式使用，而類型的所有執行個體會共用靜態變數的相同複本。  
-  
+```Output  
+0  
+0  
+1  
+1  
+2  
+2  
+3  
+3  
 ```  
+  
+This example shows a local variable declared `static` in a member function. The static variable is available to the whole program; all instances of the type share the same copy of the static variable.  
+  
+```cpp  
 // static3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -150,82 +181,89 @@ int main() {
 }  
 ```  
   
-  **var \!\= value**  
-**var \=\= value** 從 C\+\+11 開始，保證靜態區域變數初始化為執行緒安全。  這項功能有時稱為*「識別靜態」*\(Magic Static\)。  不過，在多執行緒應用程式中，必須同步處理所有後續指派。  若要避免採用 CRT 相依性，使用 \/Zc:threadSafeInit\- 旗標可停用安全執行緒的靜態變數功能。  
-  
-## extern  
- 宣告為 `extern` 的物件和變數，會將在另一個轉譯單位或封閉範圍中定義的物件，宣告為具有外部連結。  
-  
- 宣告具有  **儲存類別的 `extern`const** 變數會強制該變數具有外部連結。  定義轉譯單位時可以初始化 **extern const** 變數。  若在定義轉譯單位以外的轉譯單位中初始化，會產生未定義的結果。  如需詳細資訊，請參閱[使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)。  
-  
- 下列程式碼顯示兩個 `extern` 宣告，即 `DefinedElsewhere` \(參考不同轉譯單位中定義的名稱\) 和 `DefinedHere` \(參考封閉範圍中定義的名稱\)：  
-  
+```Output  
+var != value  
+var == value  
 ```  
+  
+Starting in C++11, a static local variable initialization is guaranteed to be thread-safe. This feature is sometimes called *magic statics*. However, in a multithreaded application all subsequent assignments must be synchronized. The thread-safe static initialization feature can be disabled by using the [/Zc:threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) flag to avoid taking a dependency on the CRT.  
+  
+<a name="extern"></a>  
+  
+## <a name="extern"></a>extern  
+  
+Objects and variables declared as `extern` declare an object that is defined in another translation unit or in an enclosing scope as having external linkage.  
+  
+Declaration of `const` variables with the `extern` storage class forces the variable to have external linkage. An initialization of an `extern const` variable is allowed in the defining translation unit. Initializations in translation units other than the defining translation unit produce undefined results. For more information, see [Using extern to Specify Linkage](../cpp/using-extern-to-specify-linkage.md)  
+  
+The following code shows two `extern` declarations, `DefinedElsewhere` (which refers to a name defined in a different translation unit) and `DefinedHere` (which refers to a name defined in an enclosing scope):  
+  
+```cpp  
 // external.cpp  
-// defined in another translation unit  
+// DefinedElsewhere is defined in another translation unit  
 extern int DefinedElsewhere;     
 int main() {  
    int DefinedHere;   
    {  
       // refers to DefinedHere in the enclosing scope  
       extern int DefinedHere;  
-    }  
+   }  
 }  
 ```  
   
-## thread\_local \(C\+\+11\)  
- 如果變數是使用 `thread_local` 規範所宣告，則只有在建立它的執行緒上才能進行存取。  變數會在建立執行緒時建立，並在終結執行緒時終結。  每個執行緒都有它自己的變數複本。  在 Windows 上，`thread_local` 的功能相當於 Microsoft 特定 [\_\_declspec\( thread \)](../cpp/thread.md) 屬性。  
+<a name="thread_local"></a>  
   
-```  
-thread_local float f = 42.0; //global namespace  
+## <a name="threadlocal-c11"></a>thread_local (C++11)  
   
-struct C // cannot be applied to type definition  
+A variable declared with the `thread_local` specifier is accessible only on the thread on which it is created. The variable is created when the thread is created, and destroyed when the thread is destroyed. Each thread has its own copy of the variable. On Windows, `thread_local` is functionally equivalent to the Microsoft-specific [__declspec( thread )](../cpp/thread.md) attribute.  
+  
+```cpp  
+thread_local float f = 42.0; // Global namespace. Not implicitly static.
+  
+struct S // cannot be applied to type definition  
 {  
-thread_local int i; //local  
-thread_local static char buf[10]; // local and static  
+    thread_local int i; // Illegal. The member must be static.  
+    thread_local static char buf[10]; // OK 
 };  
   
 void DoSomething()  
 {  
-thread_local C my_struct; // Apply  thread_local to a variable  
+    // Apply thread_local to a local variable.
+    // Implicitly "thread_local static S my_struct".
+    thread_local S my_struct;  
 }  
 ```  
   
-1.  thread\_local 規範可能會與 `static` 或 `extern` 一起使用。  
+Things to note about the `thread_local` specifier:  
   
-2.  您只能將 `thread_local` 套用至資料宣告和定義；**thread\_local** 無法用於函式宣告或定義中。  
+-  The `thread_local` specifier may be combined with `static` or `extern`.  
   
-3.  使用 `thread_local` 可能會干擾 DLL 匯入的[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)**。**  
+-  You can apply `thread_local` only to data declarations and definitions; `thread_local` cannot be used on function declarations or definitions.  
   
-4.  在 XP 系統上，如果 DLL 使用 `thread_local` 資料並透過 LoadLibrary 動態予以載入，則 `thread_local` 可能無法正確運作。  
+-  The use of `thread_local` may interfere with [delay loading](../build/reference/linker-support-for-delay-loaded-dlls.md) of DLL imports. 
   
-5.  您只能在具有靜態儲存持續時間的資料項目上指定 `thread_local`。  這包括全域資料物件 \(**static** 和 `extern`\)、區域靜態物件和類別的靜態資料成員。  您無法使用 **thread\_local** 來宣告自動資料物件。  
+-  On XP systems, `thread_local` may not function correctly if a DLL uses `thread_local` data and it is loaded dynamically via `LoadLibrary`.  
   
-6.  不論是在相同的檔案還是不同的檔案進行宣告和定義，您都必須指定執行緒區域物件之宣告和定義的 `thread_local`。  
+-  You can specify `thread_local` only on data items with static storage duration. This includes global data objects (both `static` and `extern`), local static objects, and static data members of classes. Any local variable declared `thread_local` is implicitly static if no other storage class is provided; in other words, at block scope `thread_local` is equivalent to `thread_local static`. 
   
- 在 Windows 中，`thread_local` 的功能相當於 [\_\_declspec\(thread\)](../cpp/thread.md)，差異在於 \_\_declspec\(thread\) 可以套用至類型定義並在 C 程式碼中有效。  只要可能，都請使用 `thread_local`，因為它是 C\+\+ 標準的一部分，因此更具可攜性。  
+-  You must specify `thread_local` for both the declaration and the definition of a thread local object, whether the declaration and definition occur in the same file or separate files.  
   
- 如需詳細資訊，請參閱[執行緒區域儲存區](../parallel/thread-local-storage-tls.md)。  
+On Windows, `thread_local` is functionally equivalent to  [__declspec(thread)](../cpp/thread.md) except that `__declspec(thread)` can be applied to a type definition and is valid in C code. Whenever possible, use `thread_local` because it is part of the C++ standard and is therefore more portable.  
   
-## 註冊  
- 在 C\+\+11 中，**register** 關鍵字已遭取代。  它會將變數指定為儲存在電腦的暫存器中 \(如果可能\)。  只有函式引數和區域變數可以使用暫存器儲存類別進行宣告。  
+##  <a name="register"></a>  register  
+**Visual Studio 2017 version 15.3 and later** (available with [/std:c++17](../build/reference/std-specify-language-standard-version.md)): The `register` keyword is no longer a supported storage class. The keyword is still reserved in the standard for future use. 
+
+```cpp
+   register int val; // warning C5033: 'register' is no longer a supported storage class
+```
+
+## <a name="example-automatic-vs-static-initialization"></a>Example: automatic vs. static initialization  
   
-```  
-register int num;  
-```  
+A local automatic object or variable is initialized every time the flow of control reaches its definition. A local static object or variable is initialized the first time the flow of control reaches its definition.  
   
- 如同自動變數，暫存器變數只能保存到宣告區段的結尾。  
+Consider the following example, which defines a class that logs initialization and destruction of objects and then defines three objects, `I1`, `I2`, and `I3`:  
   
- 編譯器不接受使用者要求的暫存器變數，而是在全域最佳化開啟時自行選擇暫存器。  不過，編譯器接受其他所有與 [register](http://msdn.microsoft.com/zh-tw/5b66905a-2f7f-4918-bb55-5e66d4bc50f9) 關鍵字相關的語意。  
-  
- 如果在使用 register 所宣告的物件上使用傳址運算子 \(**&**\)，編譯器必須將該物件放在記憶體中，而非暫存器中。  
-  
-## 範例：automatic vs.靜態初始化  
- 區域自動物件或變數會在每次控制流程到達其定義時初始化。  區域靜態物件或變數會在控制流程第一次到達其定義時初始化。  
-  
- 請考慮下列範例，範例中會定義記錄物件初始化和解構的類別，然後再定義三個物件 `I1`、`I2` 和 `I3`：  
-  
-```  
+```cpp  
 // initialization_of_objects.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -235,65 +273,74 @@ using namespace std;
 // Define a class that logs initializations and destructions.  
 class InitDemo {  
 public:  
-   InitDemo( const char *szWhat );  
-   ~InitDemo();  
+    InitDemo( const char *szWhat );  
+    ~InitDemo();  
   
 private:  
-   char *szObjName;  
-   size_t sizeofObjName;  
+    char *szObjName;  
+    size_t sizeofObjName;  
 };  
   
 // Constructor for class InitDemo  
 InitDemo::InitDemo( const char *szWhat ) :  
-   szObjName(NULL), sizeofObjName(0) {  
-   if( szWhat != 0 && strlen( szWhat ) > 0 ) {  
-      // Allocate storage for szObjName, then copy  
-      // initializer szWhat into szObjName, using  
-      // secured CRT functions.  
-      sizeofObjName = strlen( szWhat ) + 1;  
+    szObjName(NULL), sizeofObjName(0) {  
+    if ( szWhat != 0 && strlen( szWhat ) > 0 ) {  
+        // Allocate storage for szObjName, then copy  
+        // initializer szWhat into szObjName, using  
+        // secured CRT functions.  
+        sizeofObjName = strlen( szWhat ) + 1;  
   
-      szObjName = new char[ sizeofObjName ];  
-      strcpy_s( szObjName, sizeofObjName, szWhat );  
+        szObjName = new char[ sizeofObjName ];  
+        strcpy_s( szObjName, sizeofObjName, szWhat );  
   
-      cout << "Initializing: " << szObjName << "\n";  
-   }  
-   else  
-      szObjName = 0;  
+        cout << "Initializing: " << szObjName << "\n";  
+    }  
+    else {  
+        szObjName = 0;  
+    }
 }  
   
 // Destructor for InitDemo  
 InitDemo::~InitDemo() {  
-   if( szObjName != 0 ) {  
-      cout << "Destroying: " << szObjName << "\n";  
-      delete szObjName;  
-   }  
+    if( szObjName != 0 ) {  
+        cout << "Destroying: " << szObjName << "\n";  
+        delete szObjName;  
+    }  
 }  
   
 // Enter main function  
 int main() {  
-   InitDemo I1( "Auto I1" ); {  
-      cout << "In block.\n";  
-      InitDemo I2( "Auto I2" );  
-      static InitDemo I3( "Static I3" );  
-   }  
-   cout << "Exited block.\n";  
+    InitDemo I1( "Auto I1" ); {  
+        cout << "In block.\n";  
+        InitDemo I2( "Auto I2" );  
+        static InitDemo I3( "Static I3" );  
+    }  
+    cout << "Exited block.\n";  
 }  
 ```  
   
-  **Initializing: Auto I1**  
-**In block.  Initializing: Auto I2**  
-**Initializing: Static I3**  
-**Destroying: Auto I2**  
-**Exited block.  Destroying: Auto I1**  
-**Destroying: Static I3**  上述程式碼示範了如何及何時將 `I1`、`I2` 和 `I3` 物件初始化，以及何時將這些物件終結。  
+```Output  
+Initializing: Auto I1  
+In block.  
+Initializing: Auto I2  
+Initializing: Static I3  
+Destroying: Auto I2  
+Exited block.  
+Destroying: Auto I1  
+Destroying: Static I3  
+```  
   
- 關於程式，有幾點必須注意。  
+This example demonstrates how and when the objects `I1`, `I2`, and `I3` are initialized and when they are destroyed.  
   
- 首先，`I1` 和 `I2` 會在控制流程離開其定義所在的區塊時自動終結。  
+There are several points to note about the program:  
   
- 其次，在 C\+\+ 中，不需要在區塊開頭宣告物件或變數。  再者，只有在控制流程到達其定義時，這些物件才會初始化   \(這類定義的範例包括 `I2` 和 `I3`\)。 輸出中會顯示它們初始化的確切時間。  
+- First, `I1` and `I2` are automatically destroyed when the flow of control exits the block in which they are defined.  
   
- 最後，靜態區域變數 \(例如 `I3`\) 會在程式執行期間保留其值，不過會在程式終止時終結。  
+- Second, in C++, it is not necessary to declare objects or variables at the beginning of a block. Furthermore, these objects are initialized only when the flow of control reaches their definitions. (`I2` and `I3` are examples of such definitions.) The output shows exactly when they are initialized.  
   
-## 請參閱  
- [宣告和定義](../cpp/declarations-and-definitions-cpp.md)
+- Finally, static local variables such as `I3` retain their values for the duration of the program, but are destroyed as the program terminates.  
+  
+## <a name="see-also"></a>See Also  
+  
+ [Declarations and Definitions](../cpp/declarations-and-definitions-cpp.md)
+

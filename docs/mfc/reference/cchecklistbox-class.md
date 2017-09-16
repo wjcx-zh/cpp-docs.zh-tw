@@ -1,5 +1,5 @@
 ---
-title: "CCheckListBox 類別 |Microsoft 文件"
+title: CCheckListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCheckListBox class
-- checklist boxes
+- CCheckListBox [MFC], CCheckListBox
+- CCheckListBox [MFC], Create
+- CCheckListBox [MFC], DrawItem
+- CCheckListBox [MFC], Enable
+- CCheckListBox [MFC], GetCheck
+- CCheckListBox [MFC], GetCheckStyle
+- CCheckListBox [MFC], IsEnabled
+- CCheckListBox [MFC], MeasureItem
+- CCheckListBox [MFC], OnGetCheckPosition
+- CCheckListBox [MFC], SetCheck
+- CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
 caps.latest.revision: 26
 author: mikeblome
@@ -46,17 +55,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 2cce91e3b6cb6cdf6ec2f4564fcf5090a54c917f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af338e05ffbbbcce5cd6fadd8e8d9e432924b353
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cchecklistbox-class"></a>CCheckListBox 類別
-提供 Windows 檢查清單方塊的功能。  
+# <a name="cchecklistbox-class"></a>CCheckListBox Class
+Provides the functionality of a Windows checklist box.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CCheckListBox : public CListBox  
@@ -64,55 +73,55 @@ class CCheckListBox : public CListBox
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::CCheckListBox](#cchecklistbox)|建構 `CCheckListBox` 物件。|  
+|[CCheckListBox::CCheckListBox](#cchecklistbox)|Constructs a `CCheckListBox` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CCheckListBox::Create](#create)|建立 Windows 檢查清單方塊，並將它附加`CCheckListBox`物件。|  
-|[CCheckListBox::DrawItem](#drawitem)|當主控描繪清單方塊中變更的視覺外觀的架構所呼叫。|  
-|[CCheckListBox::Enable](#enable)|啟用或停用檢查清單方塊項目。|  
-|[CCheckListBox::GetCheck](#getcheck)|取得項目的核取方塊的狀態。|  
-|[CCheckListBox::GetCheckStyle](#getcheckstyle)|取得控制項的核取方塊的樣式。|  
-|[CCheckListBox::IsEnabled](#isenabled)|判斷是否已啟用項目。|  
-|[CCheckListBox::MeasureItem](#measureitem)|建立具有主控描繪樣式的清單方塊時，由架構呼叫。|  
-|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|若要取得項目的核取方塊的位置，架構呼叫。|  
-|[CCheckListBox::SetCheck](#setcheck)|設定項目的核取方塊的狀態。|  
-|[CCheckListBox::SetCheckStyle](#setcheckstyle)|設定控制項的核取方塊的樣式。|  
+|[CCheckListBox::Create](#create)|Creates the Windows checklist box and attaches it to the `CCheckListBox` object.|  
+|[CCheckListBox::DrawItem](#drawitem)|Called by the framework when a visual aspect of an owner-draw list box changes.|  
+|[CCheckListBox::Enable](#enable)|Enables or disables a checklist box item.|  
+|[CCheckListBox::GetCheck](#getcheck)|Gets the state of an item's check box.|  
+|[CCheckListBox::GetCheckStyle](#getcheckstyle)|Gets the style of the control's check boxes.|  
+|[CCheckListBox::IsEnabled](#isenabled)|Determines whether an item is enabled.|  
+|[CCheckListBox::MeasureItem](#measureitem)|Called by the framework when a list box with an owner-draw style is created.|  
+|[CCheckListBox::OnGetCheckPosition](#ongetcheckposition)|Called by the framework to get the position of an item's check box.|  
+|[CCheckListBox::SetCheck](#setcheck)|Sets the state of an item's check box.|  
+|[CCheckListBox::SetCheckStyle](#setcheckstyle)|Sets the style of the control's check boxes.|  
   
-## <a name="remarks"></a>備註  
- 「 檢查清單方塊 」 顯示項目，例如檔案名稱的清單。 在清單中的每個項目有使用者可以檢查或清除它旁邊的核取方塊。  
+## <a name="remarks"></a>Remarks  
+ A "checklist box" displays a list of items, such as filenames. Each item in the list has a check box next to it that the user can check or clear.  
   
- `CCheckListBox`因為清單包含多個文字字串，是只針對主控描繪控制項。 簡單來說，檢查清單方塊包含文字字串和核取方塊，但您不需要完全文字。 比方說，您可能有一份小型點陣圖，每個項目旁的核取方塊。  
+ `CCheckListBox` is only for owner-drawn controls because the list contains more than text strings. At its simplest, a checklist box contains text strings and check boxes, but you do not need to have text at all. For example, you could have a list of small bitmaps with a check box next to each item.  
   
- 若要建立您自己的檢查清單方塊，您必須衍生您自己的類別，從`CCheckListBox`。 若要衍生您自己的類別，撰寫在衍生類別的建構函式，然後呼叫**建立**。  
+ To create your own checklist box, you must derive your own class from `CCheckListBox`. To derive your own class, write a constructor for the derived class, then call **Create**.  
   
- 如果您想要處理 Windows 通知訊息傳送至其父代的清單方塊 (通常是一個類別衍生自[CDialog](../../mfc/reference/cdialog-class.md))，將訊息對應項目和訊息處理常式成員函式加入至每個訊息的父類別。  
+ If you want to handle Windows notification messages sent by a list box to its parent (usually a class derived from [CDialog](../../mfc/reference/cdialog-class.md)), add a message-map entry and message-handler member function to the parent class for each message.  
   
- 每個訊息對應項目都會使用下列格式︰  
+ Each message-map entry takes the following form:  
   
  **ON_**Notification **(**`id`, `memberFxn`**)**  
   
- 其中`id`指定子視窗控制項的 ID 而傳送通知和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。  
+ where `id` specifies the child window ID of the control sending the notification and `memberFxn` is the name of the parent member function you have written to handle the notification.  
   
- 父函式原型如下所示︰  
+ The parent's function prototype is as follows:  
   
  **afx_msg** `void` `memberFxn` **( );**  
   
- 只有一個專為相關的訊息對應項目**CCheckListBox** (請參閱訊息對應項目，但[CListBox](../../mfc/reference/clistbox-class.md)):  
+ There is only one message-map entry that pertains specifically to **CCheckListBox** (but see also the message-map entries for [CListBox](../../mfc/reference/clistbox-class.md)):  
   
-- **ON_CLBN_CHKCHANGE**使用者已變更的項目核取方塊的狀態。  
+- **ON_CLBN_CHKCHANGE** The user has changed the state of an item's checkbox.  
   
- 如果檢查清單方塊的預設檢查清單方塊 （預設大小的核取方塊左邊的每個的字串清單），您可以使用預設[CCheckListBox::DrawItem](#drawitem)繪製檢查清單方塊。 否則，您必須覆寫[CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem)函式和[CCheckListBox::DrawItem](#drawitem)和[CCheckListBox::MeasureItem](#measureitem)函式。  
+ If your checklist box is a default checklist box (a list of strings with the default-sized checkboxes to the left of each), you can use the default [CCheckListBox::DrawItem](#drawitem) to draw the checklist box. Otherwise, you must override the [CListBox::CompareItem](../../mfc/reference/clistbox-class.md#compareitem) function and the [CCheckListBox::DrawItem](#drawitem) and [CCheckListBox::MeasureItem](#measureitem) functions.  
   
- 從對話方塊範本，或是直接在您的程式碼中，您可以建立檢查清單方塊。  
+ You can create a checklist box either from a dialog template or directly in your code.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -123,24 +132,24 @@ class CCheckListBox : public CListBox
   
  `CCheckListBox`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cchecklistbox"></a>CCheckListBox::CCheckListBox  
- 建構 `CCheckListBox` 物件。  
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox  
+ Constructs a `CCheckListBox` object.  
   
 ```  
 CCheckListBox();
 ```  
   
-### <a name="remarks"></a>備註  
- 您建構`CCheckListBox`兩個步驟中的物件。 首先定義一個衍生自類別`CCheckListBox`，然後呼叫**建立**，這會初始化 Windows 檢查清單方塊，並將其以附加`CCheckListBox`物件。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First define a class derived from `CCheckListBox`, then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCControlLadenDialog #&60;](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#60](../../mfc/codesnippet/cpp/cchecklistbox-class_1.cpp)]  
   
-##  <a name="create"></a>CCheckListBox::Create  
- 建立 Windows 檢查清單方塊，並將它附加`CCheckListBox`物件。  
+##  <a name="create"></a>  CCheckListBox::Create  
+ Creates the Windows checklist box and attaches it to the `CCheckListBox` object.  
   
 ```  
 virtual BOOL Create(
@@ -150,67 +159,67 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定檢查清單方塊的樣式。 類型必須是**LBS_HASSTRINGS**和**LBS_OWNERDRAWFIXED** （在清單中的所有項目都有相同的高度） 或**LBS_OWNERDRAWVARIABLE** （在清單中的項目是不同高度的）。 這個樣式可以結合其他[清單方塊樣式](../../mfc/reference/list-box-styles.md)除了**LBS_USETABSTOPS**。  
+ Specifies the style of the checklist box. The style must be **LBS_HASSTRINGS** and either **LBS_OWNERDRAWFIXED** (all items in the list are the same height) or **LBS_OWNERDRAWVARIABLE** (items in the list are of varying heights). This style can be combined with other [list-box styles](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) except **LBS_USETABSTOPS**.  
   
  `rect`  
- 指定的檢查清單方塊的大小和位置。 可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](../../mfc/reference/rect-structure1.md)結構。  
+ Specifies the checklist-box size and position. Can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](../../mfc/reference/rect-structure1.md) structure.  
   
  `pParentWnd`  
- 指定檢查清單方塊的父視窗 (通常是`CDialog`物件)。 它不得為**NULL**。  
+ Specifies the checklist box's parent window (usually a `CDialog` object). It must not be **NULL**.  
   
  `nID`  
- 指定的檢查清單方塊控制項的 id。  
+ Specifies the checklist box's control ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 您建構`CCheckListBox`兩個步驟中的物件。 首先，定義一個衍生自類別**CcheckListBox** ，然後呼叫**建立**，這會初始化 Windows 檢查清單方塊，並將其以附加`CCheckListBox`。 請參閱[CCheckListBox::CCheckListBox](#cchecklistbox)範例。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CCheckListBox` object in two steps. First, define a class derived from **CcheckListBox** and then call **Create**, which initializes the Windows checklist box and attaches it to the `CCheckListBox`. See [CCheckListBox::CCheckListBox](#cchecklistbox) for a sample.  
   
- 當**建立**執行時，Windows 會傳送[WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)的檢查清單方塊控制項的訊息。  
+ When **Create** executes, Windows sends the [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) messages to the checklist-box control.  
   
- 根據預設，處理這些訊息[OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate)， [OnCreate](../../mfc/reference/cwnd-class.md#oncreate)， [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)成員函式中`CWnd`基底類別。 若要擴充的預設訊息處理，將訊息對應至您的衍生的類別並覆寫先前的訊息處理常式成員函式。 覆寫`OnCreate`，例如，執行所需的初始化新的類別。  
+ These messages are handled by default by the [OnNcCreate](../../mfc/reference/cwnd-class.md#onnccreate), [OnCreate](../../mfc/reference/cwnd-class.md#oncreate), [OnNcCalcSize](../../mfc/reference/cwnd-class.md#onnccalcsize), and [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo) member functions in the `CWnd` base class. To extend the default message handling, add a message map to the your derived class and override the preceding message-handler member functions. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- 適用於下列[視窗樣式](../../mfc/reference/window-styles.md)檢查清單方塊控制項︰  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a checklist-box control:  
   
-- **WS_CHILD**一律  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE**通常  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED**很少  
+- **WS_DISABLED** Rarely  
   
-- **WS_VSCROLL**新增垂直捲軸  
+- **WS_VSCROLL** To add a vertical scroll bar  
   
-- **WS_HSCROLL**新增水平捲軸  
+- **WS_HSCROLL** To add a horizontal scroll bar  
   
-- **WS_GROUP**控制項群組  
+- **WS_GROUP** To group controls  
   
-- **WS_TABSTOP**允許這個控制項的定位停駐  
+- **WS_TABSTOP** To allow tabbing to this control  
   
-##  <a name="drawitem"></a>CCheckListBox::DrawItem  
- 架構變更為主控描繪的檢查清單方塊的視覺外觀時呼叫。  
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem  
+ Called by the framework when a visual aspect of an owner-drawn checklist box changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 長指標[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)結構，其中包含所需的繪圖的類型資訊。  
+ A long pointer to a [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>備註  
- **ItemAction**和**itemState**成員`DRAWITEMSTRUCT`結構定義繪圖要執行的動作。  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** and **itemState** members of the `DRAWITEMSTRUCT` structure define the drawing action that is to be performed.  
   
- 根據預設，此函式會繪製預設核取方塊清單中，字串的每個預設大小的核取方塊左邊的清單所組成。 核取方塊清單的大小是指定在[建立](#create)。  
+ By default, this function draws a default checkbox list, consisting of a list of strings each with a default-sized checkbox to the left. The checkbox list size is the one specified in [Create](#create).  
   
- 覆寫此成員函式實作繪製主控描繪檢查清單方塊不是預設值，例如檢查清單方塊不是字串的清單、 可變高度的項目，或不在左邊的核取方塊。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前終止此成員函式。  
+ Override this member function to implement drawing of owner-draw checklist boxes that are not the default, such as checklist boxes with lists that aren't strings, with variable-height items, or with checkboxes that aren't on the left. The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before the termination of this member function.  
   
- 如果檢查清單方塊項目不是所有具有相同的高度，檢查清單方塊樣式 (指定在**建立**) 必須是**LBS_OWNERVARIABLE**，而且您必須覆寫[MeasureItem](#measureitem)函式。  
+ If checklist box items are not all the same height, the checklist box style (specified in **Create**) must be **LBS_OWNERVARIABLE**, and you must override the [MeasureItem](#measureitem) function.  
   
-##  <a name="enable"></a>CCheckListBox::Enable  
- 呼叫此函式可啟用或停用檢查清單方塊項目。  
+##  <a name="enable"></a>  CCheckListBox::Enable  
+ Call this function to enable or disable a checklist box item.  
   
 ```  
 void Enable(
@@ -218,76 +227,76 @@ void Enable(
     BOOL bEnabled = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 若要啟用的檢查清單方塊項目的索引。  
+ Index of the checklist box item to be enabled.  
   
  `bEnabled`  
- 指定是否啟用或停用項目。  
+ Specifies whether the item is enabled or disabled.  
   
-##  <a name="getcheck"></a>CCheckListBox::GetCheck  
- 擷取指定的核取方塊的狀態。  
+##  <a name="getcheck"></a>  CCheckListBox::GetCheck  
+ Retrieves the state of the specified check box.  
   
 ```  
 int GetCheck(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含在清單方塊的核取方塊以零為起始的索引。  
+ Zero-based index of a check box that is contained in the list box.  
   
-### <a name="return-value"></a>傳回值  
- 指定的核取方塊的狀態。 下表列出可能的值。  
+### <a name="return-value"></a>Return Value  
+ The state of the specified check box. The following table lists possible values.  
   
-|值|說明|  
+|Value|Description|  
 |-----------|-----------------|  
-|`BST_CHECKED`|核取方塊。|  
-|`BST_UNCHECKED`|不會檢查核取方塊。|  
-|`BST_INDETERMINATE`|核取方塊狀態尚未確定。|  
+|`BST_CHECKED`|The check box is checked.|  
+|`BST_UNCHECKED`|The check box is not checked.|  
+|`BST_INDETERMINATE`|The check box state is indeterminate.|  
   
-##  <a name="getcheckstyle"></a>CCheckListBox::GetCheckStyle  
- 呼叫此函式可取得檢查清單方塊的樣式。  
+##  <a name="getcheckstyle"></a>  CCheckListBox::GetCheckStyle  
+ Call this function to get the checklist box's style.  
   
 ```  
 UINT GetCheckStyle();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 控制項的核取方塊的樣式。  
+### <a name="return-value"></a>Return Value  
+ The style of the control's check boxes.  
   
-### <a name="remarks"></a>備註  
- 如需可能的樣式資訊，請參閱[SetCheckStyle](#setcheckstyle)。  
+### <a name="remarks"></a>Remarks  
+ For information on possible styles, see [SetCheckStyle](#setcheckstyle).  
   
-##  <a name="isenabled"></a>CCheckListBox::IsEnabled  
- 呼叫此函式可判斷是否已啟用項目。  
+##  <a name="isenabled"></a>  CCheckListBox::IsEnabled  
+ Call this function to determine whether an item is enabled.  
   
 ```  
 BOOL IsEnabled(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 項目的索引。  
+ Index of the item.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果已啟用此項目。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the item is enabled; otherwise 0.  
   
-##  <a name="measureitem"></a>CCheckListBox::MeasureItem  
- 建立使用非預設樣式的檢查清單方塊時，由架構呼叫。  
+##  <a name="measureitem"></a>  CCheckListBox::MeasureItem  
+ Called by the framework when a checklist box with a nondefault style is created.  
   
 ```  
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpMeasureItemStruct`  
- 長指標[MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)結構。  
+ A long pointer to a [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) structure.  
   
-### <a name="remarks"></a>備註  
- 根據預設，此成員函式沒有作用。 覆寫此成員函式，並填入`MEASUREITEMSTRUCT`通知 Windows 檢查清單方塊項目維度的結構。 如果檢查清單方塊以建立[LBS_OWNERDRAWVARIABLE](../../mfc/reference/list-box-styles.md)樣式，架構會呼叫此成員函式的清單方塊中的每個項目。 否則，這個成員是只呼叫一次。  
+### <a name="remarks"></a>Remarks  
+ By default, this member function does nothing. Override this member function and fill in the `MEASUREITEMSTRUCT` structure to inform Windows of the dimensions of checklist-box items. If the checklist box is created with the [LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) style, the framework calls this member function for each item in the list box. Otherwise, this member is called only once.  
   
-##  <a name="ongetcheckposition"></a>CCheckListBox::OnGetCheckPosition  
- 架構會呼叫此函式可取得項目中的位置和大小的核取方塊。  
+##  <a name="ongetcheckposition"></a>  CCheckListBox::OnGetCheckPosition  
+ The framework calls this function to get the position and size of the check box in an item.  
   
 ```  
 virtual CRect OnGetCheckPosition(
@@ -295,21 +304,21 @@ virtual CRect OnGetCheckPosition(
     CRect rectCheckBox);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *rectItem*  
- 位置和大小的清單項目。  
+ The position and size of the list item.  
   
  `rectCheckBox`  
- 預設位置和大小的項目核取方塊。  
+ The default position and size of an item's check box.  
   
-### <a name="return-value"></a>傳回值  
- 位置和大小的項目核取方塊。  
+### <a name="return-value"></a>Return Value  
+ The position and size of an item's check box.  
   
-### <a name="remarks"></a>備註  
- 預設實作只會傳回的預設位置和大小的核取方塊 ( `rectCheckBox`)。 根據預設，核取方塊對齊左上角的項目，將標準的核取方塊的大小。 可能的情況下您所要的核取方塊，在右側，或想要放大或縮小的核取方塊。 在這些情況下，覆寫`OnGetCheckPosition`來變更項目中的大小和位置 核取方塊。  
+### <a name="remarks"></a>Remarks  
+ The default implementation only returns the default position and size of the check box ( `rectCheckBox`). By default, a check box is aligned in the upper-left corner of an item and is the standard check box size. There may be cases where you want the check boxes on the right, or want a larger or smaller check box. In these cases, override `OnGetCheckPosition` to change the check box position and size within the item.  
   
-##  <a name="setcheck"></a>CCheckListBox::SetCheck  
- 設定指定的核取方塊的狀態。  
+##  <a name="setcheck"></a>  CCheckListBox::SetCheck  
+ Sets the state of the specified check box.  
   
 ```  
 void SetCheck(
@@ -317,35 +326,35 @@ void SetCheck(
     int nCheck);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 包含在清單方塊的核取方塊以零為起始的索引。  
+ Zero-based index of a check box that is contained in the list box.  
   
  `nCheck`  
- 指定的核取方塊按鈕狀態。 請參閱 < 備註 > 一節，取得可能的值。  
+ The button state for the specified check box. See the Remarks section for possible values.  
   
-### <a name="remarks"></a>備註  
- 下表列出可能的值為`nCheck`參數。  
+### <a name="remarks"></a>Remarks  
+ The following table lists possible values for the `nCheck` parameter.  
   
-|值|描述|  
+|Value|Description|  
 |-----------|-----------------|  
-|**BST_CHECKED**|選取指定的核取方塊。|  
-|**BST_UNCHECKED**|清除指定的核取方塊。|  
-|**BST_INDETERMINATE**|指定的核取方塊狀態設定為不明確。<br /><br /> 這個狀態才可以使用這個核取方塊樣式`BS_AUTO3STATE`或`BS_3STATE`。 如需詳細資訊，請參閱[按鈕樣式](../../mfc/reference/button-styles.md)。|  
+|**BST_CHECKED**|Select the specified check box.|  
+|**BST_UNCHECKED**|Clear the specified check box.|  
+|**BST_INDETERMINATE**|Set the specified check box state to indeterminate.<br /><br /> This state is only available if the check box style is `BS_AUTO3STATE` or `BS_3STATE`. For more information, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
   
-##  <a name="setcheckstyle"></a>CCheckListBox::SetCheckStyle  
- 呼叫此函式可在檢查清單方塊中設定的核取方塊樣式。  
+##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle  
+ Call this function to set the style of check boxes in the checklist box.  
   
 ```  
 void SetCheckStyle(UINT nStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nStyle`  
- 決定檢查清單方塊中的核取方塊樣式。  
+ Determines the style of check boxes in the checklist box.  
   
-### <a name="remarks"></a>備註  
- 有效樣式有︰  
+### <a name="remarks"></a>Remarks  
+ Valid styles are:  
   
 - **BS_CHECKBOX**  
   
@@ -355,11 +364,11 @@ void SetCheckStyle(UINT nStyle);
   
 - **BS_3STATE**  
   
- 如需這些樣式資訊，請參閱[按鈕樣式](../../mfc/reference/button-styles.md)。  
+ For information on these styles, see [Button Styles](../../mfc/reference/styles-used-by-mfc.md#button-styles).  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 TSTCON](../../visual-cpp-samples.md)   
- [CListBox 類別](../../mfc/reference/clistbox-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CListBox 類別](../../mfc/reference/clistbox-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample TSTCON](../../visual-cpp-samples.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)
 

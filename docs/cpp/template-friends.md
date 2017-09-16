@@ -1,32 +1,63 @@
+
 ---
-title: "樣板 Friend | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Template Friends | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 077acea5-0d0f-4b33-916d-1211797e5e28
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
 robots: noindex,nofollow
-caps.handback.revision: 9
----
-# 樣板 Friend
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2503967191bed658e8f3e9f56f8a32b3917590b2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-類別樣板可以有 [friend](http://msdn.microsoft.com/zh-tw/bf412640-d857-4acb-b2b5-513131cb9681)。  類別或類別樣板、函式或函式樣板可以是樣板類別的 friend。  friend 也可以是類別樣板或函式樣板的特製化，但不是部分特製化。  
+---
+# <a name="template-friends"></a>Template Friends
+
+Class templates can have [friends](http://msdn.microsoft.com/en-us/bf412640-d857-4acb-b2b5-513131cb9681). A class or class template, function, or function template can be a friend to a template class. Friends can also be specializations of a class template or function template, but not partial specializations.  
   
-## 範例  
- 在下列範例中，friend 函式會定義為類別樣板中的函式樣板。  此程式碼會為樣板的每個執行個體產生一個 friend 函式版本。  如果您的 friend 函式取決於與類別相同的樣板參數，這個建構會很有用。  
+**C++ 11**:  A type parameter can be declared as a friend by using the form `friend T;`.  
   
+```cpp
+template <typename T>  
+class my_class  
+{  
+    friend T;  
+    //...  
+};  
 ```  
+  
+## <a name="example"></a>Example
+
+In the following example, a friend function is defined as a function template within the class template. This code produces a version of the friend function for every instantiation of the template. This construct is useful if your friend function depends on the same template parameters as the class does.  
+  
+```cpp
 // template_friend1.cpp  
 // compile with: /EHsc  
   
@@ -96,15 +127,19 @@ int main() {
 }  
 ```  
   
-  **A B C D E F G H I J K L M N O P Q R S T U V W X Y Z**  
-**a b c d e f g h i j k l m n o p q r s t u v w x y z**  
-**A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z**   
-## 範例  
- 下一個範例內含具有樣板特製化的 friend。  如果原始函式樣板為 friend，則函式樣板特製化會自動為 friend。  
-  
- 您也可以只將樣板的特製化版本宣告為 friend，如下列程式碼的 friend 宣告之前的註解所示。  如果要這麼做，您必須將 friend 樣板特製化的定義置於樣板類別之外。  
-  
+```Output
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z   
+a b c d e f g h i j k l m n o p q r s t u v w x y z   
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z a b c d e f g h i j k l m n o p q r s t u v w x y z   
 ```  
+  
+## <a name="example"></a>Example  
+
+The next example involves a friend that has a template specialization. A function template specialization is automatically a friend if the original function template is a friend.  
+  
+It is also possible to declare only the specialized version of the template as the friend, as the comment before the friend declaration in the following code indicates. If you do this, you must put the definition of the friend template specialization outside of the template class.  
+  
+```cpp
 // template_friend2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -182,13 +217,17 @@ int main()
     f(a);  
 }  
 ```  
-  
-  **10 generic**  
-**10 int**   
-## 範例  
- 下一個範例會顯示在類別樣板中宣告的 friend 類別樣板。  類別樣板接著會做為 friend 類別的樣板引數。  friend 類別樣板必須定義在其宣告的類別樣板之外。  friend 樣板的任何特製化或部分特製化也是原始類別樣板的 friend。  
-  
+
+```Output
+10 generic  
+10 int  
 ```  
+  
+## <a name="example"></a>Example  
+ 
+The next example shows a friend class template declared within a class template. The class template is then used as the template argument for the friend class. Friend class templates must be defined outside of the class template in which they are declared. Any specializations or partial specializations of the friend template are also friends of the original class template.  
+  
+```cpp  
 // template_friend3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -232,10 +271,15 @@ int main()
    x4->print();  
 }  
 ```  
+
+```Output 
+65  
+97  
+A  
+a  
+```  
   
-  **65**  
-**97**  
-**A**  
-**a**   
-## 請參閱  
- [預設引數](../cpp/default-arguments.md)
+## <a name="see-also"></a>See Also  
+
+[Default Arguments](../cpp/default-arguments.md)
+

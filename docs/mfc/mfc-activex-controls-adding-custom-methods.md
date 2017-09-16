@@ -1,85 +1,104 @@
 ---
-title: "MFC ActiveX 控制項：加入自訂方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控制項, 方法"
-  - "PtInCircle 自訂方法"
+title: 'MFC ActiveX Controls: Adding Custom Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], methods
+- PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC ActiveX 控制項：加入自訂方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8ca25680f3da358fb1e7dda710bd65dfb39ee6c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-自訂方法與內建方法不同尚未由 `COleControl` 實作。  您必須提供每個自訂方法的實作您加入至控制項。  
+---
+# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX Controls: Adding Custom Methods
+Custom methods differ from stock methods in that they are not already implemented by `COleControl`. You must supply the implementation for each custom method you add to your control.  
   
- ActiveX 控制項使用者可以隨時呼叫自訂方法所執行的特定動作。  自訂方法的分派對應項目的格式為 `DISP_FUNCTION`。  
+ An ActiveX control user can call a custom method at any time to perform control-specific actions. The dispatch map entry for custom methods is of the form `DISP_FUNCTION`.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a> 將具有的加入方法精靈的自訂方法  
- 下列程序示範如何將自訂方法 PtInCircle 到 ActiveX 控制項的最基本的程式碼。  PtInCircle 判斷座標傳遞至控制項內部或在圓形之外。  這個程序也可以用來加入其他自訂方法。  用 PtInCircle 方法名稱和參數替代自訂方法名稱和其參數。  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Adding a Custom Method With the Add Method Wizard  
+ The following procedure demonstrates adding the custom method PtInCircle to an ActiveX control's skeleton code. PtInCircle determines whether the coordinates passed to the control are inside or outside the circle. This same procedure can also be used to add other custom methods. Substitute your custom method name and its parameters for the PtInCircle method name and parameters.  
   
 > [!NOTE]
->  這個範例會使用文件事件的 `InCircle` 函式。  如需這個函式的詳細資訊，請參閱本文件的 [MFC ActiveX 控制項:將自訂事件加入 ActiveX 控制項](../mfc/mfc-activex-controls-adding-custom-events.md)。  
+>  This example uses the `InCircle` function from the article Events. For more information on this function, see the article [MFC ActiveX Controls: Adding Custom Events to an ActiveX Control](../mfc/mfc-activex-controls-adding-custom-events.md).  
   
-#### 使用加入方法精靈，將 PtInCircle 自訂方法  
+#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>To add the PtInCircle custom method using the Add Method Wizard  
   
-1.  載入控制項的專案。  
+1.  Load the control's project.  
   
-2.  在類別檢視中，展開您的控制項程式庫節點。  
+2.  In Class View, expand the library node of your control.  
   
-3.  以滑鼠右鍵按一下控制項的 \(程式庫節點的第二個節點介面節點\) 開啟捷徑功能表。  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  在捷徑功能表中，按一下 **加入** 後再按一下加入方法。  
+4.  From the shortcut menu, click **Add** and then click **Add Method**.  
   
-     這會開啟加入方法精靈。  
+     This opens the Add Method Wizard.  
   
-5.  在 **方法名稱** 方塊中，輸入 `PtInCircle`。  
+5.  In the **Method Name** box, type `PtInCircle`.  
   
-6.  在 **Internal Name** 方塊中，輸入方法的內部功能的名稱或使用預設值 \(在這種情況下， `PtInCircle`\)。  
+6.  In the **Internal Name** box, type the name of the method's internal function or use the default value (in this case, `PtInCircle`).  
   
-7.  在 **Return Type** 方塊中，按一下方法之傳回型別的 **VARIANT\_BOOL** 。  
+7.  In the **Return Type** box, click **VARIANT_BOOL** for the method's return type.  
   
-8.  使用 **Parameter Type** 和 **Parameter Name** 控制項，加入名為 `xCoord` 的參數型別 \( **OLE\_XPOS\_PIXELS**\)。  
+8.  Using the **Parameter Type** and **Parameter Name** controls, add a parameter called `xCoord` (type **OLE_XPOS_PIXELS**).  
   
-9. 使用 **Parameter Type** 和 **Parameter Name** 控制項，加入名為 `yCoord`  的參數型別 \( **OLE\_XPOS\_PIXELS**\)。  
+9. Using the **Parameter Type** and **Parameter Name** controls, add a parameter called `yCoord` (type **OLE_YPOS_PIXELS**).  
   
-10. 按一下 \[**完成**\]。  
+10. Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a> 加入方法的自訂方法的精靈變更  
- 當您將自訂方法時，加入方法精靈會對控制項類別標頭的變更 \(.H\) 和實作 \(.CPP\) 檔案。  下列程式碼行加入至控制項類別標頭的分派對應宣告 \(.H\) 檔案:  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Add Method Wizard Changes for Custom Methods  
+ When you add a custom method, the Add Method Wizard makes some changes to the control class header (.H) and implementation (.CPP) files. The following line is added to the dispatch map declaration in the control class header (.H) file:  
   
- [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
   
- 這個程式碼會宣告分派方法會呼叫處理常式的 `PtInCircle`。  這個函式可以使用外部名稱 PtInCircle 的使用者控制項呼叫。  
+ This code declares a dispatch method handler called `PtInCircle`. This function can be called by the control user using the external name PtInCircle.  
   
- 下列程式碼行加入至控制項的.IDL 檔案:  
+ The following line is added to the control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]  
   
- 這一行會將 PtInCircle 方法每個特定 ID 編號、方法的位置加入方法精靈方法和屬性清單中。  由於加入方法精靈用來加入自訂方法，其項目將會自動加入至專案的 .IDL 檔案。  
+ This line assigns the PtInCircle method a specific ID number, the method's position in the Add Method Wizard methods and properties list. Because the Add Method Wizard was used to add the custom method, the entry for it was added automatically to the project's .IDL file.  
   
- 此外，下列程式碼行，位於控制項類別的實作 \(.CPP\) 檔案中，加入控制項的分派對應:  
+ In addition, the following line, located in the implementation (.CPP) file of the control class, is added to the control's dispatch map:  
   
- [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]  
   
- `DISP_FUNCTION` 巨集對應方法 PtInCircle 對控制項的處理常式函式，則為 `PtInCircle`，宣告傳回型別是 **VARIANT\_BOOL**，並宣告型別傳遞的 **VTS\_XPOS\_PIXELS** 和 **VTS\_YPOSPIXELS** 兩個參數設定為 `PtInCircle`。  
+ The `DISP_FUNCTION` macro maps the method PtInCircle to the control's handler function, `PtInCircle`, declares the return type to be **VARIANT_BOOL**, and declares two parameters of type **VTS_XPOS_PIXELS** and **VTS_YPOSPIXELS** to be passed to `PtInCircle`.  
   
- 最後，加入方法精靈將 Stub 函式 `CSampleCtrl::PtInCircle` 到控制項的實作 \(.CPP\) 檔案的底部。  如需 `PtInCircle` 函式如先前陳述式，必須修改如下:  
+ Finally, the Add Method Wizard adds the stub function `CSampleCtrl::PtInCircle` to the bottom of the control's implementation (.CPP) file. For `PtInCircle` to function as stated previously, it must be modified as follows:  
   
- [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_4.cpp)]  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
- [類別檢視和物件瀏覽器圖示](../Topic/Class%20View%20and%20Object%20Browser%20Icons.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [Class View and Object Browser Icons](/visualstudio/ide/class-view-and-object-browser-icons)
+
+

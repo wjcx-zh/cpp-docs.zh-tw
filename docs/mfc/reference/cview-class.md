@@ -1,5 +1,5 @@
 ---
-title: "CView 類別 |Microsoft 文件"
+title: CView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,17 +37,29 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- views [C++], view classes
-- multiple views
-- CView class
-- document/view architecture
-- input, and view class
-- MDI [C++], view windows
-- print preview, view windows
-- windows [C++], views
-- child windows, views
-- frame windows [C++], views
-- user input [C++], interpreting through view class
+- CView [MFC], CView
+- CView [MFC], DoPreparePrinting
+- CView [MFC], GetDocument
+- CView [MFC], IsSelected
+- CView [MFC], OnDragEnter
+- CView [MFC], OnDragLeave
+- CView [MFC], OnDragOver
+- CView [MFC], OnDragScroll
+- CView [MFC], OnDrop
+- CView [MFC], OnDropEx
+- CView [MFC], OnInitialUpdate
+- CView [MFC], OnPrepareDC
+- CView [MFC], OnScroll
+- CView [MFC], OnScrollBy
+- CView [MFC], OnActivateFrame
+- CView [MFC], OnActivateView
+- CView [MFC], OnBeginPrinting
+- CView [MFC], OnDraw
+- CView [MFC], OnEndPrinting
+- CView [MFC], OnEndPrintPreview
+- CView [MFC], OnPreparePrinting
+- CView [MFC], OnPrint
+- CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 caps.latest.revision: 25
 author: mikeblome
@@ -67,17 +79,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ce5100a9ee4a1c20df04f79f0c8cd645ae3afce7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f14c725b33e407cd797050304e5928fe90afdcfc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cview-class"></a>CView 類別
-提供使用者定義的檢視類別的基本功能。  
+# <a name="cview-class"></a>CView Class
+Provides the basic functionality for user-defined view classes.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CView : public CWnd  
@@ -85,84 +97,84 @@ class AFX_NOVTABLE CView : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保護的建構函式  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CView::CView](#cview)|建構 `CView` 物件。|  
+|[CView::CView](#cview)|Constructs a `CView` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CView::DoPreparePrinting](#doprepareprinting)|顯示 [列印] 對話方塊並建立印表機裝置內容。覆寫時，呼叫`OnPreparePrinting`成員函式。|  
-|[CView::GetDocument](#getdocument)|傳回與檢視相關聯的文件。|  
-|[CView::IsSelected](#isselected)|測試是否已選取文件項目。 所需的 OLE 支援。|  
-|[CView::OnDragEnter](#ondragenter)|項目第一次拖曳至檢視的拖放區域時呼叫。|  
-|[CView::OnDragLeave](#ondragleave)|拖曳的項目離開檢視拖放區域時呼叫。|  
-|[CView::OnDragOver](#ondragover)|項目拖曳至檢視的拖放區域上方時呼叫。|  
-|[CView::OnDragScroll](#ondragscroll)|呼叫以判斷是否要將資料指標拖曳至捲動視窗的區域。|  
-|[CView::OnDrop](#ondrop)|已經卸除項目至檢視時，預設處理常式的拖放區域時呼叫。|  
-|[CView::OnDropEx](#ondropex)|已經卸除項目至檢視時，主要的處理常式的拖放區域時呼叫。|  
-|[Cview:: Oninitialupdate](#oninitialupdate)|檢視第一次連接至文件之後呼叫。|  
-|[CView::OnPrepareDC](#onpreparedc)|之前呼叫`OnDraw`螢幕上顯示呼叫成員函式或`OnPrint`列印或列印預覽呼叫成員函式。|  
-|[CView::OnScroll](#onscroll)|當 OLE 項目拖曳超出檢視的邊界時呼叫。|  
-|[CView::OnScrollBy](#onscrollby)|捲動檢視，包含使用中的就地 OLE 項目時呼叫。|  
+|[CView::DoPreparePrinting](#doprepareprinting)|Displays Print dialog box and creates printer device context; call when overriding the `OnPreparePrinting` member function.|  
+|[CView::GetDocument](#getdocument)|Returns the document associated with the view.|  
+|[CView::IsSelected](#isselected)|Tests whether a document item is selected. Required for OLE support.|  
+|[CView::OnDragEnter](#ondragenter)|Called when an item is first dragged into the drag-and-drop region of a view.|  
+|[CView::OnDragLeave](#ondragleave)|Called when a dragged item leaves the drag-and-drop region of a view.|  
+|[CView::OnDragOver](#ondragover)|Called when an item is dragged over the drag-and-drop region of a view.|  
+|[CView::OnDragScroll](#ondragscroll)|Called to determine whether the cursor is dragged into the scroll region of the window.|  
+|[CView::OnDrop](#ondrop)|Called when an item has been dropped into the drag-and-drop region of a view, default handler.|  
+|[CView::OnDropEx](#ondropex)|Called when an item has been dropped into the drag-and-drop region of a view, primary handler.|  
+|[CView::OnInitialUpdate](#oninitialupdate)|Called after a view is first attached to a document.|  
+|[CView::OnPrepareDC](#onpreparedc)|Called before the `OnDraw` member function is called for screen display or the `OnPrint` member function is called for printing or print preview.|  
+|[CView::OnScroll](#onscroll)|Called when OLE items are dragged beyond the borders of the view.|  
+|[CView::OnScrollBy](#onscrollby)|Called when a view containing active in-place OLE items is scrolled.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CView::OnActivateFrame](#onactivateframe)|包含檢視的框架視窗是啟用或停用時呼叫。|  
-|[CView::OnActivateView](#onactivateview)|檢視啟動時呼叫。|  
-|[CView::OnBeginPrinting](#onbeginprinting)|呼叫時開始列印工作。覆寫，以配置圖形裝置介面 (GDI) 資源。|  
-|[Ongetembeddeditem](#ondraw)|呼叫來轉譯螢幕顯示、 列印或預覽列印的文件的映像。 所需的實作。|  
-|[CView::OnEndPrinting](#onendprinting)|呼叫時結束某項列印工作。若要解除配置 GDI 資源覆寫。|  
-|[CView::OnEndPrintPreview](#onendprintpreview)|預覽模式結束時呼叫。|  
-|[CView::OnPreparePrinting](#onprepareprinting)|列印或預覽; 文件之前呼叫覆寫以初始化 [列印] 對話方塊。|  
-|[CView::OnPrint](#onprint)|呼叫以列印或預覽文件的頁面。|  
-|[CView::OnUpdate](#onupdate)|呼叫以通知的檢視，其文件已被修改。|  
+|[CView::OnActivateFrame](#onactivateframe)|Called when the frame window containing the view is activated or deactivated.|  
+|[CView::OnActivateView](#onactivateview)|Called when a view is activated.|  
+|[CView::OnBeginPrinting](#onbeginprinting)|Called when a print job begins; override to allocate graphics device interface (GDI) resources.|  
+|[CView::OnDraw](#ondraw)|Called to render an image of the document for screen display, printing, or print preview. Implementation required.|  
+|[CView::OnEndPrinting](#onendprinting)|Called when a print job ends; override to deallocate GDI resources.|  
+|[CView::OnEndPrintPreview](#onendprintpreview)|Called when preview mode is exited.|  
+|[CView::OnPreparePrinting](#onprepareprinting)|Called before a document is printed or previewed; override to initialize Print dialog box.|  
+|[CView::OnPrint](#onprint)|Called to print or preview a page of the document.|  
+|[CView::OnUpdate](#onupdate)|Called to notify a view that its document has been modified.|  
   
-## <a name="remarks"></a>備註  
- 檢視附加至文件，並做為文件與使用者之間的媒介︰ 檢視呈現在螢幕或印表機上的文件影像，但將使用者輸入解譯為文件的操作。  
+## <a name="remarks"></a>Remarks  
+ A view is attached to a document and acts as an intermediary between the document and the user: the view renders an image of the document on the screen or printer and interprets user input as operations upon the document.  
   
- 檢視是框架視窗的子系。 多個檢視可以共用框架視窗，如下所示的分隔視窗的大小寫。 框架視窗類別中，檢視類別的文件類別之間的關聯性由建立`CDocTemplate`物件。 當使用者開啟新視窗或分割現有一個架構建構新的檢視，並將其附加至文件。  
+ A view is a child of a frame window. More than one view can share a frame window, as in the case of a splitter window. The relationship between a view class, a frame window class, and a document class is established by a `CDocTemplate` object. When the user opens a new window or splits an existing one, the framework constructs a new view and attaches it to the document.  
   
- 檢視可以附加至單一文件，但文件可以有多個同時連接到它的檢視 — 例如，如果文件會顯示在分隔視窗中，或在多個文件介面 (MDI) 應用程式中的多個子視窗。 您的應用程式可支援不同類型的檢視給定文件類型。例如，文書處理程式可能會提供文件的完整文字檢視和顯示區段標頭的大綱檢視。 這些不同類型的檢視可以放在個別的框架視窗中，或在個別的單一框架視窗的窗格如果您使用的分隔視窗。  
+ A view can be attached to only one document, but a document can have multiple views attached to it at once — for example, if the document is displayed in a splitter window or in multiple child windows in a multiple document interface (MDI) application. Your application can support different types of views for a given document type; for example, a word-processing program might provide both a complete text view of a document and an outline view that shows only the section headings. These different types of views can be placed in separate frame windows or in separate panes of a single frame window if you use a splitter window.  
   
- 檢視可能會負責處理許多不同類型的輸入，例如鍵盤、 滑鼠輸入或輸入透過拖放，以及命令的功能表、 工具列或捲軸。 檢視接收轉送的其框架視窗的命令。 如果檢視不會處理指定的命令，它會轉送至其相關聯的文件的命令。 所有的命令目標，例如檢視會處理透過訊息對應的訊息。  
+ A view may be responsible for handling several different types of input, such as keyboard input, mouse input or input via drag-and-drop, as well as commands from menus, toolbars, or scroll bars. A view receives commands forwarded by its frame window. If the view does not handle a given command, it forwards the command to its associated document. Like all command targets, a view handles messages via a message map.  
   
- 此檢視會負責顯示和修改文件的資料，但不適用於儲存它。 文件提供有關其資料與必要的詳細資料檢視。 您可以讓文件的資料成員，或者您可以提供成員函式呼叫的檢視類別的文件類別中的檢視存取權。  
+ The view is responsible for displaying and modifying the document's data but not for storing it. The document provides the view with the necessary details about its data. You can let the view access the document's data members directly, or you can provide member functions in the document class for the view class to call.  
   
- 當文件的資料變更時，負責變更檢視通常會呼叫[CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews)文件，就會通知所有其他檢視所呼叫的函式`OnUpdate`每個成員函式。 預設實作`OnUpdate`使檢視的整個用戶端區域。 您可以覆寫它使其失效的只有這些區域的工作區對應至文件已修改的部分。  
+ When a document's data changes, the view responsible for the changes typically calls the [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) function for the document, which notifies all the other views by calling the `OnUpdate` member function for each. The default implementation of `OnUpdate` invalidates the view's entire client area. You can override it to invalidate only those regions of the client area that map to the modified portions of the document.  
   
- 若要使用`CView`、 衍生的類別和實作`OnDraw`進行螢幕顯示的成員函式。 您也可以使用`OnDraw`執行列印和預覽列印。 架構會處理列印和文件預覽列印迴圈。  
+ To use `CView`, derive a class from it and implement the `OnDraw` member function to perform screen display. You can also use `OnDraw` to perform printing and print preview. The framework handles the print loop for printing and previewing your document.  
   
- 檢視會處理具有捲軸訊息[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)成員函式。 您可以實作捲軸訊息處理的這些函式，或者您可以使用`CView`衍生的類別[CScrollView](../../mfc/reference/cscrollview-class.md)來處理您捲動功能。  
+ A view handles scroll-bar messages with the [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) member functions. You can implement scroll-bar message handling in these functions, or you can use the `CView` derived class [CScrollView](../../mfc/reference/cscrollview-class.md) to handle scrolling for you.  
   
- 除了`CScrollView`，Mfc 程式庫提供九個衍生自其他類別`CView`:  
+ Besides `CScrollView`, the Microsoft Foundation Class Library provides nine other classes derived from `CView`:  
   
-- [CCtrlView](../../mfc/reference/cctrlview-class.md)，允許文件-架構與樹狀目錄、 清單和 rich edit 控制項的檢視使用的檢視。  
+- [CCtrlView](../../mfc/reference/cctrlview-class.md), a view that allows usage of document - view architecture with tree, list, and rich edit controls.  
   
-- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)，對話方塊在控制項中顯示資料庫記錄的檢視。  
+- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md), a view that displays database records in dialog-box controls.  
   
-- [CEditView](../../mfc/reference/ceditview-class.md)，提供一個簡單的多行文字編輯器的檢視。 您可以使用`CEditView`為控制項的對話方塊，以及文件中的檢視中的物件。  
+- [CEditView](../../mfc/reference/ceditview-class.md), a view that provides a simple multiline text editor. You can use a `CEditView` object as a control in a dialog box as well as a view on a document.  
   
-- [CFormView](../../mfc/reference/cformview-class.md)，包含對話方塊控制項和對話方塊範本資源為基礎的可捲動檢視。  
+- [CFormView](../../mfc/reference/cformview-class.md), a scrollable view that contains dialog-box controls and is based on a dialog template resource.  
   
-- [CListView](../../mfc/reference/clistview-class.md)，允許使用文件-使用清單控制項的檢視架構的檢視。  
+- [CListView](../../mfc/reference/clistview-class.md), a view that allows usage of document - view architecture with list controls.  
   
-- [CRecordView](../../mfc/reference/crecordview-class.md)，對話方塊在控制項中顯示資料庫記錄的檢視。  
+- [CRecordView](../../mfc/reference/crecordview-class.md), a view that displays database records in dialog-box controls.  
   
-- [CRichEditView](../../mfc/reference/cricheditview-class.md)，允許文件-架構與 rich edit 控制項的檢視使用的檢視。  
+- [CRichEditView](../../mfc/reference/cricheditview-class.md), a view that allows usage of document - view architecture with rich edit controls.  
   
-- [CScrollView](../../mfc/reference/cscrollview-class.md)，會自動提供支援捲動檢視。  
+- [CScrollView](../../mfc/reference/cscrollview-class.md), a view that automatically provides scrolling support.  
   
-- [CTreeView](../../mfc/reference/ctreeview-class.md)，允許使用文件-檢視架構與樹狀目錄控制項的檢視。  
+- [CTreeView](../../mfc/reference/ctreeview-class.md), a view that allows usage of document - view architecture with tree controls.  
   
- `CView`類別也具有名為衍生的實作類別**CPreviewView**，由架構用來執行 預覽列印時。 這個類別提供預覽列印 視窗中，例如工具列、 單一或雙頁面預覽的獨特功能的支援和縮放的，擴大預覽的影像。 您不需要呼叫或覆寫任何**CPreviewView**的成員函式，除非您想要實作您自己的預覽列印的介面 （例如，如果您想要支援在預覽列印模式中編輯）。 如需有關使用`CView`，請參閱[文件/檢視架構](../../mfc/document-view-architecture.md)和[列印](../../mfc/printing.md)。 此外，請參閱[技術附註 30](../../mfc/tn030-customizing-printing-and-print-preview.md)如需有關自訂列印預覽。  
+ The `CView` class also has a derived implementation class named **CPreviewView**, which is used by the framework to perform print previewing. This class provides support for the features unique to the print-preview window, such as a toolbar, single- or double-page preview, and zooming, that is, enlarging the previewed image. You don't need to call or override any of **CPreviewView**'s member functions unless you want to implement your own interface for print preview (for example, if you want to support editing in print preview mode). For more information on using `CView`, see [Document/View Architecture](../../mfc/document-view-architecture.md) and [Printing](../../mfc/printing.md). In addition, see [Technical Note 30](../../mfc/tn030-customizing-printing-and-print-preview.md) for more details on customizing print preview.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -171,70 +183,70 @@ class AFX_NOVTABLE CView : public CWnd
   
  `CView`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cview"></a>CView::CView  
- 建構 `CView` 物件。  
+##  <a name="cview"></a>  CView::CView  
+ Constructs a `CView` object.  
   
 ```  
 CView();
 ```  
   
-### <a name="remarks"></a>備註  
- 建立新的框架視窗，或分隔視窗時，架構會呼叫建構函式。 覆寫[OnInitialUpdate](#oninitialupdate)文件連結之後初始化檢視的成員函式。  
+### <a name="remarks"></a>Remarks  
+ The framework calls the constructor when a new frame window is created or a window is split. Override the [OnInitialUpdate](#oninitialupdate) member function to initialize the view after the document is attached.  
   
-##  <a name="doprepareprinting"></a>CView::DoPreparePrinting  
- 呼叫此函式的覆寫從[OnPreparePrinting](#onprepareprinting)叫用 [列印] 對話方塊中，並建立印表機裝置內容。  
+##  <a name="doprepareprinting"></a>  CView::DoPreparePrinting  
+ Call this function from your override of [OnPreparePrinting](#onprepareprinting) to invoke the Print dialog box and create a printer device context.  
   
 ```  
 BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pInfo`  
- 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)該結構描述目前的列印工作。  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果可以開始列印或列印預覽。0，表示作業已取消。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if printing or print preview can begin; 0 if the operation has been canceled.  
   
-### <a name="remarks"></a>備註  
- 此函式的行為取決於是否呼叫它的列印或預覽列印 (所指定**m_bPreview**成員`pInfo`參數)。 如果列印檔案後，此函式會叫用列印對話方塊中，使用中的值[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構`pInfo`指向; 使用者關閉對話方塊之後，此函數便會根據使用者在對話方塊中指定，並傳回透過這個裝置內容設定的印表機裝置內容`pInfo`參數。 這個裝置內容用來列印文件。  
+### <a name="remarks"></a>Remarks  
+ This function's behavior depends on whether it is being called for printing or print preview (specified by the **m_bPreview** member of the `pInfo` parameter). If a file is being printed, this function invokes the Print dialog box, using the values in the [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that `pInfo` points to; after the user has closed the dialog box, the function creates a printer device context based on settings the user specified in the dialog box and returns this device context through the `pInfo` parameter. This device context is used to print the document.  
   
- 如果預覽檔案時，此函式會建立使用目前的印表機設定，印表機裝置內容這個裝置內容可以用來模擬在預覽期間的印表機。  
+ If a file is being previewed, this function creates a printer device context using the current printer settings; this device context is used for simulating the printer during preview.  
   
-##  <a name="getdocument"></a>CView::GetDocument  
- 呼叫此函式可取得檢視的文件的指標。  
+##  <a name="getdocument"></a>  CView::GetDocument  
+ Call this function to get a pointer to the view's document.  
   
 ```  
 CDocument* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標[CDocument](../../mfc/reference/cdocument-class.md)與檢視相關聯的物件。 **NULL**檢視並未附加至文件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CDocument](../../mfc/reference/cdocument-class.md) object associated with the view. **NULL** if the view is not attached to a document.  
   
-### <a name="remarks"></a>備註  
- 這可讓您呼叫文件的成員函式。  
+### <a name="remarks"></a>Remarks  
+ This allows you to call the document's member functions.  
   
-##  <a name="isselected"></a>CView::IsSelected  
- 若要檢查是否已選取指定的文件項目架構呼叫。  
+##  <a name="isselected"></a>  CView::IsSelected  
+ Called by the framework to check whether the specified document item is selected.  
   
 ```  
 virtual BOOL IsSelected(const CObject* pDocItem) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDocItem`  
- 指向要測試的文件項目。  
+ Points to the document item being tested.  
   
-### <a name="return-value"></a>傳回值  
- 選取指定的文件項目; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified document item is selected; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會傳回**FALSE**。 覆寫這個函式，如果您正在實作選擇使用[CDocItem](../../mfc/reference/cdocitem-class.md)物件。 如果您檢視包含 OLE 項目，您必須覆寫這個函式。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function returns **FALSE**. Override this function if you are implementing selection using [CDocItem](../../mfc/reference/cdocitem-class.md) objects. You must override this function if your view contains OLE items.  
   
-##  <a name="onactivateframe"></a>CView::OnActivateFrame  
- 包含檢視的框架視窗是啟用或停用時，由架構呼叫。  
+##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
+ Called by the framework when the frame window containing the view is activated or deactivated.  
   
 ```  
 virtual void OnActivateFrame(
@@ -242,24 +254,24 @@ virtual void OnActivateFrame(
     CFrameWnd* pFrameWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nState`  
- 指定是否要在框架視窗啟用或停用。 它可以是下列值之一︰  
+ Specifies whether the frame window is being activated or deactivated. It can be one of the following values:  
   
-- **WA_INACTIVE**框架視窗正在停用。  
+- **WA_INACTIVE** The frame window is being deactivated.  
   
-- **WA_ACTIVE**框架視窗正在啟用透過某些方法以外 （例如，藉由使用的選取視窗的鍵盤介面） 按一下滑鼠。  
+- **WA_ACTIVE** The frame window is being activated through some method other than a mouse click (for example, by use of the keyboard interface to select the window).  
   
-- **WA_CLICKACTIVE**滑鼠點按啟動框架視窗  
+- **WA_CLICKACTIVE** The frame window is being activated by a mouse click  
   
  `pFrameWnd`  
- 要啟動的框架視窗的指標。  
+ Pointer to the frame window that is to be activated.  
   
-### <a name="remarks"></a>備註  
- 如果您想要執行特殊處理與檢視相關聯的框架視窗是啟用或停用時，覆寫此成員函式。 例如， [CFormView](../../mfc/reference/cformview-class.md)執行此覆寫時，它會儲存並還原具有焦點的控制項。  
+### <a name="remarks"></a>Remarks  
+ Override this member function if you want to perform special processing when the frame window associated with the view is activated or deactivated. For example, [CFormView](../../mfc/reference/cformview-class.md) performs this override when it saves and restores the control that has focus.  
   
-##  <a name="onactivateview"></a>CView::OnActivateView  
- 啟用或停用檢視時，由架構呼叫。  
+##  <a name="onactivateview"></a>  CView::OnActivateView  
+ Called by the framework when a view is activated or deactivated.  
   
 ```  
 virtual void OnActivateView(
@@ -268,25 +280,25 @@ virtual void OnActivateView(
     CView* pDeactiveView);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bActivate`  
- 指出檢視是否目前已啟用或停用。  
+ Indicates whether the view is being activated or deactivated.  
   
  `pActivateView`  
- 正在啟動之 view 物件的指標。  
+ Points to the view object that is being activated.  
   
  `pDeactiveView`  
- 正在停用的檢視物件的指標。  
+ Points to the view object that is being deactivated.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會將焦點設的檢視，使其無法啟動。 如果您想要執行特殊處理，啟用或停用檢視時，覆寫這個函式。 例如，如果您想要提供特殊視覺提示以區別現用檢視的非作用中的檢視，您會檢查`bActivate`參數並據此更新檢視的外觀。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function sets the focus to the view being activated. Override this function if you want to perform special processing when a view is activated or deactivated. For example, if you want to provide special visual cues that distinguish the active view from the inactive views, you would examine the `bActivate` parameter and update the view's appearance accordingly.  
   
- `pActivateView`和`pDeactiveView`參數指向同一個檢視如果應用程式的主框架視窗已啟動且不會變更使用中的檢視 — 例如，如果焦點在傳輸到這台，另一個應用程式，而不是一個檢視，以另一個應用程式內或 MDI 子視窗之間切換時。 如有需要這可讓重新了解其調色盤上，檢視。  
+ The `pActivateView` and `pDeactiveView` parameters point to the same view if the application's main frame window is activated with no change in the active view — for example, if the focus is being transferred from another application to this one, rather than from one view to another within the application or when switching amongst MDI child windows. This allows a view to re-realize its palette, if needed.  
   
- 這些參數與不同時[CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview)檢視不同的功能稱為[CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview)會傳回。 發生這種情況最常使用分隔視窗。  
+ These parameters differ when [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) is called with a view that is different from what [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) would return. This happens most often with splitter windows.  
   
-##  <a name="onbeginprinting"></a>CView::OnBeginPrinting  
- 在呼叫 `OnPreparePrinting` 之後，由架構在列印或預覽列印工作開始時呼叫。  
+##  <a name="onbeginprinting"></a>  CView::OnBeginPrinting  
+ Called by the framework at the beginning of a print or print preview job, after `OnPreparePrinting` has been called.  
   
 ```  
 virtual void OnBeginPrinting(
@@ -294,20 +306,20 @@ virtual void OnBeginPrinting(
     CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向印表機裝置內容。  
+ Points to the printer device context.  
   
  `pInfo`  
- 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)該結構描述目前的列印工作。  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作不做任何動作。 覆寫此函式以配置列印特別需要的任何 GDI 資源，例如畫筆或字型。 選取的 GDI 物件放入裝置內容中，從[OnPrint](#onprint)成員函式會使用這些資源的每一頁。 如果您使用相同的檢視物件來執行螢幕顯示和列印，請為每個顯示所需的 GDI 資源使用不同的變數；這可讓您在列印期間更新螢幕。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to allocate any GDI resources, such as pens or fonts, needed specifically for printing. Select the GDI objects into the device context from within the [OnPrint](#onprint) member function for each page that uses them. If you are using the same view object to perform both screen display and printing, use separate variables for the GDI resources needed for each display; this allows you to update the screen during printing.  
   
- 您也可以使用此函式，執行因印表機裝置內容屬性而異的初始設定。 例如，列印文件所需的頁數可能會因使用者在 [列印] 對話方塊中指定的設定 (例如頁面長度) 而異。 在這種情況下，您無法指定文件的長度，以[OnPreparePrinting](#onprepareprinting)成員函式，其中通常會進行操作，您必須等到印表機裝置內容建立根據對話方塊設定。 [OnBeginPrinting](#onbeginprinting)是第一個可覆寫函式，可讓您存取[CDC](../../mfc/reference/cdc-class.md)物件，代表印表機裝置內容，因此您可以從這個函式來設定文件的長度。 請注意，如果此時未指定文件長度，預覽列印期間將不會顯示捲軸。  
+ You can also use this function to perform initializations that depend on properties of the printer device context. For example, the number of pages needed to print the document may depend on settings that the user specified from the Print dialog box (such as page length). In such a situation, you cannot specify the document length in the [OnPreparePrinting](#onprepareprinting) member function, where you would normally do so; you must wait until the printer device context has been created based on the dialog box settings. [OnBeginPrinting](#onbeginprinting) is the first overridable function that gives you access to the [CDC](../../mfc/reference/cdc-class.md) object representing the printer device context, so you can set the document length from this function. Note that if the document length is not specified by this time, a scroll bar is not displayed during print preview.  
   
-##  <a name="ondragenter"></a>CView::OnDragEnter  
- 當滑鼠初次進入置放目標視窗的非捲動區域，由架構呼叫。  
+##  <a name="ondragenter"></a>  CView::OnDragEnter  
+ Called by the framework when the mouse first enters the non-scrolling region of the drop target window.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -316,46 +328,46 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳至檢視的放置區。  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) being dragged into the drop area of the view.  
   
  `dwKeyState`  
- 包含輔助按鍵的狀態。 這是下列任何數目的組合︰ **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- 目前滑鼠位置相對於用戶端區域的檢視。  
+ The current mouse position relative to the client area of the view.  
   
-### <a name="return-value"></a>傳回值  
- 介於`DROPEFFECT`列舉型別，指出如果使用者在這個位置卸除物件就會發生的卸除的類型。 卸除類型通常取決於目前所指示的索引鍵狀態`dwKeyState`。 以 keystates 標準對應`DROPEFFECT`值為︰  
+### <a name="return-value"></a>Return Value  
+ A value from the `DROPEFFECT` enumerated type, which indicates the type of drop that would occur if the user dropped the object at this position. The type of drop usually depends on the current key state indicated by `dwKeyState`. A standard mapping of keystates to `DROPEFFECT` values is:  
   
-- `DROPEFFECT_NONE`無法卸除的資料物件，此視窗中。  
+- `DROPEFFECT_NONE` The data object cannot be dropped in this window.  
   
-- `DROPEFFECT_LINK`如**MK_CONTROL |MK_SHIFT**建立物件和它的伺服器之間的連結。  
+- `DROPEFFECT_LINK` for **MK_CONTROL &#124; MK_SHIFT** Creates a linkage between the object and its server.  
   
-- `DROPEFFECT_COPY`如**MK_CONTROL**會建立一份已卸除物件。  
+- `DROPEFFECT_COPY` for **MK_CONTROL** Creates a copy of the dropped object.  
   
-- `DROPEFFECT_MOVE`如**MK_ALT**會建立一份已卸除的物件，並刪除原始的物件。 這通常是預設的拖放效果，檢視可接受這個資料物件。  
+- `DROPEFFECT_MOVE` for **MK_ALT** Creates a copy of the dropped object and delete the original object. This is typically the default drop effect, when the view can accept this data object.  
   
- 如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../visual-cpp-samples.md)。  
+ For more information, see the MFC Advanced Concepts sample [OCLIENT](../../visual-cpp-samples.md).  
   
-### <a name="remarks"></a>備註  
- 預設實作會執行任何動作，並傳回`DROPEFFECT_NONE`。  
+### <a name="remarks"></a>Remarks  
+ Default implementation is to do nothing and return `DROPEFFECT_NONE`.  
   
- 若要準備的未來呼叫此函式會覆寫[OnDragOver](#ondragover)成員函式。 應該擷取從資料物件所需的任何資料，供稍後使用，此時`OnDragOver`成員函式。 讓使用者視覺化回應，此時也應該更新檢視。 如需詳細資訊，請參閱文章[將拖放︰ 實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
+ Override this function to prepare for future calls to the [OnDragOver](#ondragover) member function. Any data required from the data object should be retrieved at this time for later use in the `OnDragOver` member function. The view should also be updated at this time to give the user visual feedback. For more information, see the article [Drag and Drop: Implementing a Drop Target](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondragleave"></a>CView::OnDragLeave  
- 有效的置放區超出該視窗移動滑鼠時呼叫架構在拖曳作業期間。  
+##  <a name="ondragleave"></a>  CView::OnDragLeave  
+ Called by the framework during a drag operation when the mouse is moved out of the valid drop area for that window.  
   
 ```  
 virtual void OnDragLeave();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果目前的檢視必須清除期間採取任何動作，請覆寫此函數[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)呼叫，例如當物件被拖曳和卸除時移除任何視覺化使用者意見反應。  
+### <a name="remarks"></a>Remarks  
+ Override this function if the current view needs to clean up any actions taken during [OnDragEnter](#ondragenter) or [OnDragOver](#ondragover) calls, such as removing any visual user feedback while the object was dragged and dropped.  
   
-##  <a name="ondragover"></a>CView::OnDragOver  
- 當滑鼠移動經過置放目標視窗呼叫由架構在拖曳作業期間。  
+##  <a name="ondragover"></a>  CView::OnDragOver  
+ Called by the framework during a drag operation when the mouse is moved over the drop target window.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -364,36 +376,36 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md)拖曳到置放目標。  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) being dragged over the drop target.  
   
  `dwKeyState`  
- 包含輔助按鍵的狀態。 這是下列任何數目的組合︰ **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- 目前的滑鼠位置相對於檢視用戶端區域。  
+ The current mouse position relative to the view client area.  
   
-### <a name="return-value"></a>傳回值  
- 介於`DROPEFFECT`列舉型別，指出如果使用者在這個位置卸除物件就會發生的卸除的類型。 卸除類型通常取決於目前的索引鍵狀態所示`dwKeyState`。 以 keystates 標準對應`DROPEFFECT`值為︰  
+### <a name="return-value"></a>Return Value  
+ A value from the `DROPEFFECT` enumerated type, which indicates the type of drop that would occur if the user dropped the object at this position. The type of drop often depends on the current key state as indicated by `dwKeyState`. A standard mapping of keystates to `DROPEFFECT` values is:  
   
-- `DROPEFFECT_NONE`無法卸除的資料物件，此視窗中。  
+- `DROPEFFECT_NONE` The data object cannot be dropped in this window.  
   
-- `DROPEFFECT_LINK`如**MK_CONTROL |MK_SHIFT**建立物件和它的伺服器之間的連結。  
+- `DROPEFFECT_LINK` for **MK_CONTROL &#124; MK_SHIFT** Creates a linkage between the object and its server.  
   
-- `DROPEFFECT_COPY`如**MK_CONTROL**會建立一份已卸除物件。  
+- `DROPEFFECT_COPY` for **MK_CONTROL** Creates a copy of the dropped object.  
   
-- `DROPEFFECT_MOVE`如**MK_ALT**會建立一份已卸除的物件，並刪除原始的物件。 這通常是預設的拖放效果，檢視可接受的資料物件。  
+- `DROPEFFECT_MOVE` for **MK_ALT** Creates a copy of the dropped object and delete the original object. This is typically the default drop effect, when the view can accept the data object.  
   
- 如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../visual-cpp-samples.md)。  
+ For more information, see the MFC Advanced Concepts sample [OCLIENT](../../visual-cpp-samples.md).  
   
-### <a name="remarks"></a>備註  
- 預設實作會執行任何動作，並傳回`DROPEFFECT_NONE`。  
+### <a name="remarks"></a>Remarks  
+ The default implementation is to do nothing and return `DROPEFFECT_NONE`.  
   
- 此函式可讓使用者視覺化回應拖曳作業期間會覆寫。 因為連續呼叫此函式，其內所含的任何程式碼應該最佳化儘可能。 如需詳細資訊，請參閱文章[將拖放︰ 實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
+ Override this function to give the user visual feedback during the drag operation. Since this function is called continuously, any code contained within it should be optimized as much as possible. For more information, see the article [Drag and Drop: Implementing a Drop Target](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondragscroll"></a>CView::OnDragScroll  
- 然後再呼叫架構呼叫[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)判斷點是否捲動區域。  
+##  <a name="ondragscroll"></a>  CView::OnDragScroll  
+ Called by the framework before calling [OnDragEnter](#ondragenter) or [OnDragOver](#ondragover) to determine whether the point is in the scrolling region.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -401,51 +413,51 @@ virtual DROPEFFECT OnDragScroll(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwKeyState`  
- 包含輔助按鍵的狀態。 這是下列任何數目的組合︰ **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- 包含的資料指標，相對於螢幕像素為單位的位置。  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>傳回值  
- 介於`DROPEFFECT`列舉型別，指出如果使用者在這個位置卸除物件就會發生的卸除的類型。 卸除類型通常取決於目前所指示的索引鍵狀態`dwKeyState`。 以 keystates 標準對應`DROPEFFECT`值為︰  
+### <a name="return-value"></a>Return Value  
+ A value from the `DROPEFFECT` enumerated type, which indicates the type of drop that would occur if the user dropped the object at this position. The type of drop usually depends on the current key state indicated by `dwKeyState`. A standard mapping of keystates to `DROPEFFECT` values is:  
   
-- `DROPEFFECT_NONE`無法卸除的資料物件，此視窗中。  
+- `DROPEFFECT_NONE` The data object cannot be dropped in this window.  
   
-- `DROPEFFECT_LINK`如**MK_CONTROL |MK_SHIFT**建立物件和它的伺服器之間的連結。  
+- `DROPEFFECT_LINK` for **MK_CONTROL &#124; MK_SHIFT** Creates a linkage between the object and its server.  
   
-- `DROPEFFECT_COPY`如**MK_CONTROL**會建立一份已卸除物件。  
+- `DROPEFFECT_COPY` for **MK_CONTROL** Creates a copy of the dropped object.  
   
-- `DROPEFFECT_MOVE`如**MK_ALT**會建立一份已卸除的物件，並刪除原始的物件。  
+- `DROPEFFECT_MOVE` for **MK_ALT** Creates a copy of the dropped object and delete the original object.  
   
-- `DROPEFFECT_SCROLL`表示拖曳捲軸作業即將發生或發生在 [目標] 檢視。  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target view.  
   
- 如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../visual-cpp-samples.md)。  
+ For more information, see the MFC Advanced Concepts sample [OCLIENT](../../visual-cpp-samples.md).  
   
-### <a name="remarks"></a>備註  
- 當您想要針對此事件提供特殊行為時，覆寫這個函式。 預設實作資料指標拖曳至預設的捲動區域內的每個視窗框線時，會自動捲動 windows。如需詳細資訊，請參閱文章[將拖放︰ 實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。  
+### <a name="remarks"></a>Remarks  
+ Override this function when you want to provide special behavior for this event. The default implementation automatically scrolls windows when the cursor is dragged into the default scroll region inside the border of each window.For more information, see the article [Drag and Drop: Implementing a Drop Target](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondraw"></a>Ongetembeddeditem  
- 呈現影像的文件的架構所呼叫。  
+##  <a name="ondraw"></a>  CView::OnDraw  
+ Called by the framework to render an image of the document.  
   
 ```  
 virtual void OnDraw(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 裝置內容，以便用來呈現文件的映像的指標。  
+ Points to the device context to be used for rendering an image of the document.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫此函式來執行螢幕顯示、 列印和預覽列印，並且會傳遞不同的裝置內容中的每個案例。 沒有預設的實作。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function to perform screen display, printing, and print preview, and it passes a different device context in each case. There is no default implementation.  
   
- 您必須覆寫這個函式來顯示文件的檢視。 您可以使用的圖形裝置介面 (GDI) 呼叫[CDC](../../mfc/reference/cdc-class.md)指向的物件`pDC`參數。 您可以選取放入裝置內容中繪製前的 GDI 資源，例如 [畫筆] 或 [字型]，並接著之後取消。 繪圖程式碼通常可以與裝置無關。也就是說，它不需要哪種裝置類型顯示影像的相關資訊。  
+ You must override this function to display your view of the document. You can make graphic device interface (GDI) calls using the [CDC](../../mfc/reference/cdc-class.md) object pointed to by the `pDC` parameter. You can select GDI resources, such as pens or fonts, into the device context before drawing and then deselect them afterwards. Often your drawing code can be device-independent; that is, it doesn't require information about what type of device is displaying the image.  
   
- 若要最佳化的繪圖，呼叫[RectVisible](../../mfc/reference/cdc-class.md#rectvisible)裝置內容，以找出是否要繪製指定的矩形的成員函式。 如果您需要區別正常螢幕顯示和列印，呼叫[IsPrinting](../../mfc/reference/cdc-class.md#isprinting)裝置內容的成員函式。  
+ To optimize drawing, call the [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) member function of the device context to find out whether a given rectangle will be drawn. If you need to distinguish between normal screen display and printing, call the [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) member function of the device context.  
   
-##  <a name="ondrop"></a>CView::OnDrop  
- 在使用者釋放資料物件的有效置放目標時，由架構呼叫。  
+##  <a name="ondrop"></a>  CView::OnDrop  
+ Called by the framework when the user releases a data object over a valid drop target.  
   
 ```  
 virtual BOOL OnDrop(
@@ -454,35 +466,35 @@ virtual BOOL OnDrop(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md) ，放入置放目標。  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) that is dropped into the drop target.  
   
  `dropEffect`  
- 使用者已要求置放效果。  
+ The drop effect that the user has requested.  
   
-- `DROPEFFECT_COPY`建立要卸除的資料物件的複本。  
+- `DROPEFFECT_COPY` Creates a copy of the data object being dropped.  
   
-- `DROPEFFECT_MOVE`將資料物件移至目前的滑鼠位置。  
+- `DROPEFFECT_MOVE` Moves the data object to the current mouse location.  
   
-- `DROPEFFECT_LINK`建立資料物件和它的伺服器之間的連結。  
+- `DROPEFFECT_LINK` Creates a link between a data object and its server.  
   
  `point`  
- 目前的滑鼠位置相對於檢視用戶端區域。  
+ The current mouse position relative to the view client area.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果卸除成功。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the drop was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 預設實作不做任何動作，並傳回**FALSE**。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing and returns **FALSE**.  
   
- 覆寫此函式可檢視的工作區中實作的 OLE 拖放效果。 資料物件可以透過檢查`pDataObject`剪貼簿資料格式和資料在卸除指定的點。  
+ Override this function to implement the effect of an OLE drop into the client area of the view. The data object can be examined via `pDataObject` for Clipboard data formats and data dropped at the specified point.  
   
 > [!NOTE]
->  架構不會呼叫此函式，如果沒有覆寫， [OnDropEx](#ondropex)這個檢視類別中。  
+>  The framework does not call this function if there is an override to [OnDropEx](#ondropex) in this view class.  
   
-##  <a name="ondropex"></a>CView::OnDropEx  
- 在使用者釋放資料物件的有效置放目標時，由架構呼叫。  
+##  <a name="ondropex"></a>  CView::OnDropEx  
+ Called by the framework when the user releases a data object over a valid drop target.  
   
 ```  
 virtual DROPEFFECT OnDropEx(
@@ -492,57 +504,57 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- 指向[COleDataObject](../../mfc/reference/coledataobject-class.md) ，放入置放目標。  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) that is dropped into the drop target.  
   
  `dropDefault`  
- 使用者選擇根據索引鍵的目前狀態的預設拖放作業效果。 可能是`DROPEFFECT_NONE`。 < 備註 > 一節中討論的置放效果。  
+ The effect that the user chose for the default drop operation based on the current key state. It may be `DROPEFFECT_NONE`. Drop effects are discussed in the Remarks section.  
   
  `dropList`  
- 卸除來源支援拖放效果的清單。 可以使用的位元 OR 合併置放效果值 ( **|**) 作業。 < 備註 > 一節中討論的置放效果。  
+ A list of the drop effects that the drop source supports. Drop effect values can be combined using the bitwise OR ( **&#124;**) operation. Drop effects are discussed in the Remarks section.  
   
  `point`  
- 目前的滑鼠位置相對於檢視用戶端區域。  
+ The current mouse position relative to the view client area.  
   
-### <a name="return-value"></a>傳回值  
- 卸除嘗試在所指定的位置所產生的置放效果`point`。 這必須是其中一個值表示*dropEffectList*。 < 備註 > 一節中討論的置放效果。  
+### <a name="return-value"></a>Return Value  
+ The drop effect that resulted from the drop attempt at the location specified by `point`. This must be one of the values indicated by *dropEffectList*. Drop effects are discussed in the Remarks section.  
   
-### <a name="remarks"></a>備註  
- 預設實作會執行任何動作，並傳回空值 (-1)，表示應該呼叫架構[OnDrop](#ondrop)處理常式。  
+### <a name="remarks"></a>Remarks  
+ The default implementation is to do nothing and return a dummy value ( -1 ) to indicate that the framework should call the [OnDrop](#ondrop) handler.  
   
- 覆寫此函式以實作滑鼠右鍵拖曳和卸除的效果。 滑鼠右鍵拖曳和卸除通常會顯示選項功能表時釋放滑鼠右按鈕。  
+ Override this function to implement the effect of an right mouse-button drag and drop. Right mouse-button drag and drop typically displays a menu of choices when the right mouse-button is released.  
   
- 覆寫`OnDropEx`應該查詢滑鼠右按鈕。 您可以呼叫[GetKeyState](http://msdn.microsoft.com/library/windows/desktop/ms646301)或從右邊的滑鼠按鈕狀態儲存您[OnDragEnter](#ondragenter)處理常式。  
+ Your override of `OnDropEx` should query for the right mouse-button. You can call [GetKeyState](http://msdn.microsoft.com/library/windows/desktop/ms646301) or store the right mouse-button state from your [OnDragEnter](#ondragenter) handler.  
   
--   如果右邊的滑鼠按鈕已關閉，您的覆寫應該會顯示快顯功能表提供支援置放來源置放效果。  
+-   If the right mouse-button is down, your override should display a popup menu which offers the drop effects support by the drop source.  
   
-    -   檢查`dropList`以判斷拖曳來源所支援的拖放效果。 啟用快顯功能表中的這些動作。  
+    -   Examine `dropList` to determine the drop effects supported by the drop source. Enable only these actions on the popup menu.  
   
-    -   使用[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)設為基礎的預設動作`dropDefault`。  
+    -   Use [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) to set the default action based on `dropDefault`.  
   
-    -   最後，採取動作以快顯功能表的使用者選取項目。  
+    -   Finally, take the action indicated by the user selection from the popup menu.  
   
--   如果未按下滑鼠右鍵，覆寫應該處理這個做為標準的卸除要求。 使用指定的拖放效果`dropDefault`。 或者，您的覆寫可能會傳回空值 (-1)，指出`OnDrop`會處理此拖放作業。  
+-   If the right mouse-button is not down, your override should process this as a standard drop request. Use the drop effect specified in `dropDefault`. Alternately, your override can return the dummy value ( -1 ) to indicate that `OnDrop` will handle this drop operation.  
   
- 使用`pDataObject`檢查`COleDataObject`剪貼簿資料格式和資料在卸除指定的點。  
+ Use `pDataObject` to examine the `COleDataObject` for Clipboard data format and data dropped at the specified point.  
   
- 置放效果會描述與拖放作業相關聯的動作。 請參閱下列置放效果的清單︰  
+ Drop effects describe the action associated with a drop operation. See the following list of drop effects:  
   
-- `DROPEFFECT_NONE`不會允許置放。  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`會建立原始資料的連結從卸除的資料。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`表示拖曳捲軸作業即將發生或發生在目標中。  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
- 如需有關如何設定預設的功能表命令的詳細資訊，請參閱[SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]和[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)此磁碟區中。  
+ For more information on setting the default menu command, see [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) in the Windows SDK and [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) in this volume.  
   
-##  <a name="onendprinting"></a>CView::OnEndPrinting  
- 列印或預覽的文件之後，由架構呼叫。  
+##  <a name="onendprinting"></a>  CView::OnEndPrinting  
+ Called by the framework after a document has been printed or previewed.  
   
 ```  
 virtual void OnEndPrinting(
@@ -550,18 +562,18 @@ virtual void OnEndPrinting(
     CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向印表機裝置內容。  
+ Points to the printer device context.  
   
  `pInfo`  
- 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)該結構描述目前的列印工作。  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作不做任何動作。 覆寫這個函式來釋放任何您在中配置的 GDI 資源[OnBeginPrinting](#onbeginprinting)成員函式。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to free any GDI resources you allocated in the [OnBeginPrinting](#onbeginprinting) member function.  
   
-##  <a name="onendprintpreview"></a>CView::OnEndPrintPreview  
- 當使用者結束預覽列印模式時，由架構呼叫。  
+##  <a name="onendprintpreview"></a>  CView::OnEndPrintPreview  
+ Called by the framework when the user exits print preview mode.  
   
 ```  
 virtual void OnEndPrintPreview(
@@ -571,36 +583,36 @@ virtual void OnEndPrintPreview(
     CPreviewView* pView);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向印表機裝置內容。  
+ Points to the printer device context.  
   
  `pInfo`  
- 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)該結構描述目前的列印工作。  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
  `point`  
- 在上一次顯示在預覽模式 頁面上指定的點。  
+ Specifies the point on the page that was last displayed in preview mode.  
   
  `pView`  
- 用來預覽的檢視物件的指標。  
+ Points to the view object used for previewing.  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會呼叫[OnEndPrinting](#onendprinting)成員函式並還原主框架視窗的預覽列印之前的狀態開始。 覆寫這個函式來執行特殊處理終止預覽模式時。 例如，如果您想要維護使用者的文件中的位置，從 [預覽] 模式切換到一般顯示模式時，您可以捲動所描述的位置`point`參數和`m_nCurPage`成員`CPrintInfo`結構`pInfo`參數所指向。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function calls the [OnEndPrinting](#onendprinting) member function and restores the main frame window to the state it was in before print preview began. Override this function to perform special processing when preview mode is terminated. For example, if you want to maintain the user's position in the document when switching from preview mode to normal display mode, you can scroll to the position described by the `point` parameter and the `m_nCurPage` member of the `CPrintInfo` structure that the `pInfo` parameter points to.  
   
- 請務必呼叫基底類別版本`OnEndPrintPreview`從您的覆寫通常是在函式結尾。  
+ Always call the base class version of `OnEndPrintPreview` from your override, typically at the end of the function.  
   
-##  <a name="oninitialupdate"></a>Cview:: Oninitialupdate  
- 檢視第一次連接到文件之後，但一開始會顯示檢視之前，由架構呼叫。  
+##  <a name="oninitialupdate"></a>  CView::OnInitialUpdate  
+ Called by the framework after the view is first attached to the document, but before the view is initially displayed.  
   
 ```  
 virtual void OnInitialUpdate();
 ```  
   
-### <a name="remarks"></a>備註  
- 此函式的預設實作會呼叫[OnUpdate](#onupdate)成員函式，而沒有提示的資訊 (也就使用預設值為 0，表示`lHint`參數和**NULL**的`pHint`參數)。 覆寫這個函式來執行任何需要文件的相關資訊的單次初始化。 比方說，如果您的應用程式有固定大小的文件，您可以使用此函式來初始化檢視的捲動根據文件大小的限制。 如果您的應用程式支援可變大小的文件，使用[OnUpdate](#onupdate)更新捲動會限制每次文件的變更。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function calls the [OnUpdate](#onupdate) member function with no hint information (that is, using the default values of 0 for the `lHint` parameter and **NULL** for the `pHint` parameter). Override this function to perform any one-time initialization that requires information about the document. For example, if your application has fixed-sized documents, you can use this function to initialize a view's scrolling limits based on the document size. If your application supports variable-sized documents, use [OnUpdate](#onupdate) to update the scrolling limits every time the document changes.  
   
-##  <a name="onpreparedc"></a>CView::OnPrepareDC  
- 之前的架構所呼叫[OnDraw](#ondraw)螢幕顯示和更早呼叫成員函式[OnPrint](#onprint)成員函式列印或預覽列印期間，會呼叫每個頁面。  
+##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
+ Called by the framework before the [OnDraw](#ondraw) member function is called for screen display and before the [OnPrint](#onprint) member function is called for each page during printing or print preview.  
   
 ```  
 virtual void OnPrepareDC(
@@ -608,67 +620,67 @@ virtual void OnPrepareDC(
     CPrintInfo* pInfo = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 裝置內容，以便用來呈現文件的映像的指標。  
+ Points to the device context to be used for rendering an image of the document.  
   
  `pInfo`  
- 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構描述目前的列印工作，如果`OnPrepareDC`呼叫以列印或列印預覽功能;`m_nCurPage`成員指定即將列印的頁面。 這個參數是**NULL**如果`OnPrepareDC`螢幕上的呼叫。  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job if `OnPrepareDC` is being called for printing or print preview; the `m_nCurPage` member specifies the page about to be printed. This parameter is **NULL** if `OnPrepareDC` is being called for screen display.  
   
-### <a name="remarks"></a>備註  
- 如果螢幕顯示被呼叫函式，此函式的預設實作會沒有作用。 不過，此函式會覆寫在衍生類別中，例如[CScrollView](../../mfc/reference/cscrollview-class.md)、 調整屬性的裝置內容中; 因此，務必呼叫基底類別實作您的覆寫的開頭。  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing if the function is called for screen display. However, this function is overridden in derived classes, such as [CScrollView](../../mfc/reference/cscrollview-class.md), to adjust attributes of the device context; consequently, you should always call the base class implementation at the beginning of your override.  
   
- 如果列印的呼叫函式，則預設實作會檢查中儲存的頁面資訊`pInfo`參數。 如果未指定文件的長度，`OnPrepareDC`假設只有一頁長文件，並在列印頁之後，停止列印迴圈。 函式藉由設定停止列印迴圈`m_bContinuePrinting`結構的成員**FALSE**。  
+ If the function is called for printing, the default implementation examines the page information stored in the `pInfo` parameter. If the length of the document has not been specified, `OnPrepareDC` assumes the document to be one page long and stops the print loop after one page has been printed. The function stops the print loop by setting the `m_bContinuePrinting` member of the structure to **FALSE**.  
   
- 覆寫`OnPrepareDC`基於下列原因︰  
+ Override `OnPrepareDC` for any of the following reasons:  
   
--   視需要針對指定的頁面調整裝置內容的屬性。 比方說，如果您需要設定的對應模式] 或 [裝置內容的其他特性，這樣在這個函式。  
+-   To adjust attributes of the device context as needed for the specified page. For example, if you need to set the mapping mode or other characteristics of the device context, do so in this function.  
   
--   若要執行列印時分頁。 通常您指定長度的文件列印開始時，使用[OnPreparePrinting](#onprepareprinting)成員函式。 不過，如果您不知道事先多久文件列印中時 （例如，不確定的數目的記錄從資料庫），覆寫`OnPrepareDC`測試時在列印文件結尾。 當有沒有其他要列印的文件，來設定`m_bContinuePrinting`成員`CPrintInfo`結構以**FALSE**。  
+-   To perform print-time pagination. Normally you specify the length of the document when printing begins, using the [OnPreparePrinting](#onprepareprinting) member function. However, if you don't know in advance how long the document is (for example, when printing an undetermined number of records from a database), override `OnPrepareDC` to test for the end of the document while it is being printed. When there is no more of the document to be printed, set the `m_bContinuePrinting` member of the `CPrintInfo` structure to **FALSE**.  
   
--   若要傳送至印表機的頁面為基礎的逸出程式碼。 若要傳送逸出程式碼從`OnPrepareDC`，呼叫**逸出**成員函式`pDC`參數。  
+-   To send escape codes to the printer on a page-by-page basis. To send escape codes from `OnPrepareDC`, call the **Escape** member function of the `pDC` parameter.  
   
- 呼叫基底類別版本`OnPrepareDC`覆寫的開頭。  
+ Call the base class version of `OnPrepareDC` at the beginning of your override.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&183;](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
   
-##  <a name="onprepareprinting"></a>CView::OnPreparePrinting  
- 由架構呼叫之前列印或預覽文件。  
+##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting  
+ Called by the framework before a document is printed or previewed.  
   
 ```  
 virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pInfo`  
- 指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)該結構描述目前的列印工作。  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="return-value"></a>傳回值  
- 非零開始列印。0，表示已取消列印工作。  
+### <a name="return-value"></a>Return Value  
+ Nonzero to begin printing; 0 if the print job has been canceled.  
   
-### <a name="remarks"></a>備註  
- 預設實作不做任何動作。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing.  
   
- 您必須覆寫這個函式會啟用列印和預覽列印。 呼叫[DoPreparePrinting](#doprepareprinting)成員函式，將它傳遞`pInfo`參數，然後傳回它的傳回值。`DoPreparePrinting`會顯示 [列印] 對話方塊中，並建立印表機裝置內容。 如果您想要初始化列印對話方塊中，使用預設值以外的值，指定的成員值`pInfo`。 例如，如果您知道文件的長度，將值傳遞到[SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)成員函式`pInfo`之前，先呼叫`DoPreparePrinting`。 這個值會顯示在 [收件者:] 方塊中的 [列印] 對話方塊中的範圍部分。  
+ You must override this function to enable printing and print preview. Call the [DoPreparePrinting](#doprepareprinting) member function, passing it the `pInfo` parameter, and then return its return value; `DoPreparePrinting` displays the Print dialog box and creates a printer device context. If you want to initialize the Print dialog box with values other than the defaults, assign values to the members of `pInfo`. For example, if you know the length of the document, pass the value to the [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) member function of `pInfo` before calling `DoPreparePrinting`. This value is displayed in the To: box in the Range portion of the Print dialog box.  
   
- `DoPreparePrinting`不會顯示預覽工作 [列印] 對話方塊。 如果您想要略過的列印工作的 [列印] 對話方塊，請檢查**m_bPreview**成員`pInfo`是**FALSE**然後將它設定為**TRUE**再傳遞給`DoPreparePrinting`; 它重設為**FALSE**之後。  
+ `DoPreparePrinting` does not display the Print dialog box for a preview job. If you want to bypass the Print dialog box for a print job, check that the **m_bPreview** member of `pInfo` is **FALSE** and then set it to **TRUE** before passing it to `DoPreparePrinting`; reset it to **FALSE** afterwards.  
   
- 如果您要執行需要存取的初始化`CDC`物件，代表印表機裝置內容 （例如，如果您需要知道的頁面大小指定文件的長度），覆寫`OnBeginPrinting`成員函式。  
+ If you need to perform initializations that require access to the `CDC` object representing the printer device context (for example, if you need to know the page size before specifying the length of the document), override the `OnBeginPrinting` member function.  
   
- 如果您想要設定的值**m_nNumPreviewPages**或**m_strPageDesc**成員`pInfo`參數，執行這項操作之後呼叫`DoPreparePrinting`。 `DoPreparePrinting`成員函式集合**m_nNumPreviewPages**找到的應用程式中的值。INI 檔案，並設定**m_strPageDesc**為其預設值。  
+ If you want to set the value of the **m_nNumPreviewPages** or **m_strPageDesc** members of the `pInfo` parameter, do so after calling `DoPreparePrinting`. The `DoPreparePrinting` member function sets **m_nNumPreviewPages** to the value found in the application's .INI file and sets **m_strPageDesc** to its default value.  
   
-### <a name="example"></a>範例  
-  覆寫`OnPreparePrinting`呼叫`DoPreparePrinting`覆寫從使得架構將顯示 [列印] 對話方塊，然後為您建立的印表機 DC。  
+### <a name="example"></a>Example  
+  Override `OnPreparePrinting` and call `DoPreparePrinting` from the override so that the framework will display a Print dialog box and create a printer DC for you.  
   
- [!code-cpp[NVC_MFCDocView #&184;](../../mfc/codesnippet/cpp/cview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#184](../../mfc/codesnippet/cpp/cview-class_2.cpp)]  
   
- 如果您知道文件中包含的頁數，請在中設定最大頁面`OnPreparePrinting`之前，先呼叫`DoPreparePrinting`。 架構會顯示 [列印] 對話方塊中的 「 目標 」 方塊中的最大頁面數目。  
+ If you know how many pages the document contains, set the maximum page in `OnPreparePrinting` before calling `DoPreparePrinting`. The framework will display the maximum page number in the "to" box of the Print dialog box.  
   
- [!code-cpp[NVC_MFCDocView #&185;](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
   
-##  <a name="onprint"></a>CView::OnPrint  
- 若要列印或預覽文件的頁面架構呼叫。  
+##  <a name="onprint"></a>  CView::OnPrint  
+ Called by the framework to print or preview a page of the document.  
   
 ```  
 virtual void OnPrint(
@@ -676,39 +688,39 @@ virtual void OnPrint(
     CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 指向印表機裝置內容。  
+ Points to the printer device context.  
   
  `pInfo`  
- 指向`CPrintInfo`該結構描述目前的列印工作。  
+ Points to a `CPrintInfo` structure that describes the current print job.  
   
-### <a name="remarks"></a>備註  
- 針對每個正在列印的頁面，架構會呼叫此函式後立即呼叫[OnPrepareDC](#onpreparedc)成員函式。 正在列印的頁面由`m_nCurPage`成員[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構`pInfo`指向。 預設實作會呼叫[OnDraw](#ondraw)成員函式，並將它印表機裝置內容。  
+### <a name="remarks"></a>Remarks  
+ For each page being printed, the framework calls this function immediately after calling the [OnPrepareDC](#onpreparedc) member function. The page being printed is specified by the `m_nCurPage` member of the [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that `pInfo` points to. The default implementation calls the [OnDraw](#ondraw) member function and passes it the printer device context.  
   
- 基於下列原因，覆寫這個函式︰  
+ Override this function for any of the following reasons:  
   
--   若要允許列印多頁文件。 轉譯只對應於目前列印的頁面的文件的一部分。 如果您使用`OnDraw`若要執行的轉譯，您可以調整檢視區原點使列印文件的適當部分。  
+-   To allow printing of multipage documents. Render only the portion of the document that corresponds to the page currently being printed. If you're using `OnDraw` to perform the rendering, you can adjust the viewport origin so that only the appropriate portion of the document is printed.  
   
--   若要列印的影像看起來不同於螢幕影像 （也就是說，如果您的應用程式不是 WYSIWYG）。 而不是傳遞印表機裝置內容至`OnDraw`，用來呈現使用屬性不會顯示在螢幕上影像的裝置內容。  
+-   To make the printed image look different from the screen image (that is, if your application is not WYSIWYG). Instead of passing the printer device context to `OnDraw`, use the device context to render an image using attributes not shown on the screen.  
   
-     如果您不要使用螢幕上顯示的列印需要 GDI 資源放入裝置內容中繪製前加以選取，之後將它們取消選取。 這些 GDI 資源應該配置在[OnBeginPrinting](#onbeginprinting)及發行在[OnEndPrinting](#onendprinting)。  
+     If you need GDI resources for printing that you don't use for screen display, select them into the device context before drawing and deselect them afterwards. These GDI resources should be allocated in [OnBeginPrinting](#onbeginprinting) and released in [OnEndPrinting](#onendprinting).  
   
--   若要實作的頁首或頁尾。 您仍然可以使用`OnDraw`如何呈現藉由限制可列印的區域。  
+-   To implement headers or footers. You can still use `OnDraw` to do the rendering by restricting the area that it can print on.  
   
- 請注意， **m_rectDraw**成員`pInfo`參數描述中的邏輯單元的頁面可列印區域。  
+ Note that the **m_rectDraw** member of the `pInfo` parameter describes the printable area of the page in logical units.  
   
- 請勿呼叫`OnPrepareDC`在覆寫`OnPrint`，架構會呼叫`OnPrepareDC`呼叫之前自動`OnPrint`。  
+ Do not call `OnPrepareDC` in your override of `OnPrint`; the framework calls `OnPrepareDC` automatically before calling `OnPrint`.  
   
-### <a name="example"></a>範例  
- 以下是透過覆寫基本架構`OnPrint`函式︰  
+### <a name="example"></a>Example  
+ The following is a skeleton for an overridden `OnPrint` function:  
   
- [!code-cpp[NVC_MFCDocView #&186;](../../mfc/codesnippet/cpp/cview-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#186](../../mfc/codesnippet/cpp/cview-class_4.cpp)]  
   
- 如需其他範例，請參閱[CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)。  
+ For another example, see [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect).  
   
-##  <a name="onscroll"></a>CView::OnScroll  
- 若要判斷是否捲動架構呼叫可供使用。  
+##  <a name="onscroll"></a>  CView::OnScroll  
+ Called by the framework to determine whether scrolling is possible.  
   
 ```  
 virtual BOOL OnScroll(
@@ -717,38 +729,38 @@ virtual BOOL OnScroll(
     BOOL bDoScroll = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nScrollCode`  
- 捲軸程式碼，指出使用者的捲動要求。 這個參數由兩個部分組成︰ 低序位位元組，這會決定捲動發生水平的型別，以及高序位位元組，這會決定捲動發生垂直的型別︰  
+ A scroll-bar code that indicates the user's scrolling request. This parameter is composed of two parts: a low-order byte, which determines the type of scrolling occurring horizontally, and a high-order byte, which determines the type of scrolling occurring vertically:  
   
-- **SB_BOTTOM**向下捲動。  
+- **SB_BOTTOM** Scrolls to bottom.  
   
-- **SB_LINEDOWN**向下捲動一行。  
+- **SB_LINEDOWN** Scrolls one line down.  
   
-- **SB_LINEUP**向上捲動一行。  
+- **SB_LINEUP** Scrolls one line up.  
   
-- **SB_PAGEDOWN**向下捲動一頁。  
+- **SB_PAGEDOWN** Scrolls one page down.  
   
-- **SB_PAGEUP**向上捲動一頁。  
+- **SB_PAGEUP** Scrolls one page up.  
   
-- **SB_THUMBTRACK**拖曳捲動方塊以指定的位置。 目前的位置中指定`nPos`。  
+- **SB_THUMBTRACK** Drags scroll box to specified position. The current position is specified in `nPos`.  
   
-- **SB_TOP**捲動至最上方。  
+- **SB_TOP** Scrolls to top.  
   
  `nPos`  
- 如果捲軸的程式碼，包含目前的捲動方塊位置**SB_THUMBTRACK**; 否則會無法使用。 根據初始的捲軸範圍，`nPos`可能是負數，並且應該轉換成`int`如有必要。  
+ Contains the current scroll-box position if the scroll-bar code is **SB_THUMBTRACK**; otherwise it is not used. Depending on the initial scroll range, `nPos` may be negative and should be cast to an `int` if necessary.  
   
  `bDoScroll`  
- 決定是否應該實際進行指定捲動的動作。 如果**為 TRUE，**再捲動應該發生; 如果**FALSE**，然後捲動應該不會發生。  
+ Determines whether you should actually do the specified scrolling action. If **TRUE,** then scrolling should take place; if **FALSE**, then scrolling should not occur.  
   
-### <a name="return-value"></a>傳回值  
- 如果`bDoScroll`是**TRUE**實際上捲動檢視，然後傳回非零，否則為 0。 如果`bDoScroll`是**FALSE**，則傳回值，如果會傳回您`bDoScroll`已**TRUE**，即使實際上沒有進行捲動。  
+### <a name="return-value"></a>Return Value  
+ If `bDoScroll` is **TRUE** and the view was actually scrolled, then return nonzero; otherwise 0. If `bDoScroll` is **FALSE**, then return the value that you would have returned if `bDoScroll` were **TRUE**, even though you don't actually do the scrolling.  
   
-### <a name="remarks"></a>備註  
- 使用架構在某種情況下呼叫這個函式`bDoScroll`設**TRUE**檢視當接收捲軸訊息。 在此情況下，您應該實際捲動檢視。 在其他情況下呼叫這個函式與`bDoScroll`設**FALSE**當 OLE 項目一開始拖曳到置放目標的自動捲動區域捲動實際發生之前。 在此情況下，您不應該實際捲動檢視。  
+### <a name="remarks"></a>Remarks  
+ In one case this function is called by the framework with `bDoScroll` set to **TRUE** when the view receives a scrollbar message. In this case, you should actually scroll the view. In the other case this function is called with `bDoScroll` set to **FALSE** when an OLE item is initially dragged into the auto-scrolling region of a drop target before scrolling actually takes place. In this case, you should not actually scroll the view.  
   
-##  <a name="onscrollby"></a>CView::OnScrollBy  
- 當使用者檢視之外存在的文件，藉由拖曳 OLE 項目對檢視目前的框線或操作的垂直或水平捲軸檢視區域時，由架構呼叫。  
+##  <a name="onscrollby"></a>  CView::OnScrollBy  
+ Called by the framework when the user views an area beyond the present view of the document, either by dragging an OLE item against the view's current borders or by manipulating the vertical or horizontal scrollbars.  
   
 ```  
 virtual BOOL OnScrollBy(
@@ -756,25 +768,25 @@ virtual BOOL OnScrollBy(
     BOOL bDoScroll = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `sizeScroll`  
- 水平及垂直，捲動到 像素數目。  
+ Number of pixels scrolled horizontally and vertically.  
   
  `bDoScroll`  
- 判斷是否捲動檢視。 如果**為 TRUE，**捲動會發生; 然後**FALSE**，然後捲動不會發生。  
+ Determines whether scrolling of the view occurs. If **TRUE,** then scrolling takes place; if **FALSE**, then scrolling does not occur.  
   
-### <a name="return-value"></a>傳回值  
- 檢視已設為 1; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the view was able to be scrolled; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 在衍生類別中這個方法會檢查以查看是否可在使用者要求，然後更新新的區域，如有必要的方向捲動檢視。 此函式會自動呼叫[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)執行實際的捲動要求。  
+### <a name="remarks"></a>Remarks  
+ In derived classes this method checks to see whether the view is scrollable in the direction the user requested and then updates the new region if necessary. This function is automatically called by [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) to perform the actual scrolling request.  
   
- 這個方法的預設實作不會變更檢視，但如果不呼叫時，檢視不會捲動中`CScrollView`-衍生的類別。  
+ The default implementation of this method does not change the view, but if it is not called, the view will not scroll in a `CScrollView`-derived class.  
   
- 如果文件寬度或高度超過 32767 個像素，超過 32767 捲動會失敗，因為`OnScrollBy`稱為無效`sizeScroll`引數。  
+ If the document width or height exceeds 32767 pixels, scrolling past 32767 will fail because `OnScrollBy` is called with an invalid `sizeScroll` argument.  
   
-##  <a name="onupdate"></a>CView::OnUpdate  
- 修改檢視的文件; 之後，由框架呼叫此函式會呼叫[CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) ，並可讓更新以反映這些修改顯示的檢視。  
+##  <a name="onupdate"></a>  CView::OnUpdate  
+ Called by the framework after the view's document has been modified; this function is called by [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) and allows the view to update its display to reflect those modifications.  
   
 ```  
 virtual void OnUpdate(
@@ -783,33 +795,33 @@ virtual void OnUpdate(
     CObject* pHint);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pSender`  
- 指向修改文件中，檢視或**NULL**如果所有的檢視更新。  
+ Points to the view that modified the document, or **NULL** if all views are to be updated.  
   
  `lHint`  
- 包含資訊所做的修改。  
+ Contains information about the modifications.  
   
  `pHint`  
- 指向以儲存修改的相關資訊的物件。  
+ Points to an object storing information about the modifications.  
   
-### <a name="remarks"></a>備註  
- 它也可以呼叫的預設實作[OnInitialUpdate](#oninitialupdate)。 預設實作會使整個工作區中，繪製時，將下一個`WM_PAINT`接收訊息。 如果您想要更新只有在對應至文件已修改的部分的區域，請覆寫此函式。 若要這樣做，您必須傳遞修改使用提示參數的相關資訊。  
+### <a name="remarks"></a>Remarks  
+ It is also called by the default implementation of [OnInitialUpdate](#oninitialupdate). The default implementation invalidates the entire client area, marking it for painting when the next `WM_PAINT` message is received. Override this function if you want to update only those regions that map to the modified portions of the document. To do this you must pass information about the modifications using the hint parameters.  
   
- 若要使用`lHint`、 定義特殊的提示值通常位元遮罩或列舉型別，以及文件傳遞其中一個值。 若要使用`pHint`，衍生的提示類別[CObject](../../mfc/reference/cobject-class.md)和文件的覆寫時，將指標傳遞到提示的物件; `OnUpdate`，使用[cobject:: Iskindof](../../mfc/reference/cobject-class.md#iskindof)成員函式來判斷提示物件的執行階段型別。  
+ To use `lHint`, define special hint values, typically a bitmask or an enumerated type, and have the document pass one of these values. To use `pHint`, derive a hint class from [CObject](../../mfc/reference/cobject-class.md) and have the document pass a pointer to a hint object; when overriding `OnUpdate`, use the [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) member function to determine the run-time type of the hint object.  
   
- 通常您不應該執行任何直接從描繪`OnUpdate`。 相反地，判斷裝置座標中描述需要更新; 區域的矩形傳遞到這個矩形[CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect)。 這會導致發生在下一次繪製[WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213)接收訊息。  
+ Typically you should not perform any drawing directly from `OnUpdate`. Instead, determine the rectangle describing, in device coordinates, the area that requires updating; pass this rectangle to [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). This causes painting to occur the next time a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message is received.  
   
- 如果`lHint`為 0 和`pHint`是**NULL**，文件已傳送的一般更新通知。 如果檢視收到一般的更新通知，或無法解碼的提示，它應該確認其整個工作區。  
+ If `lHint` is 0 and `pHint` is **NULL**, the document has sent a generic update notification. If a view receives a generic update notification, or if it cannot decode the hints, it should invalidate its entire client area.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 MDIDOCVW](../../visual-cpp-samples.md)   
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)   
- [CSplitterWnd 類別](../../mfc/reference/csplitterwnd-class.md)   
- [CDC 類別](../../mfc/reference/cdc-class.md)   
- [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)   
- [CDocument 類別](../../mfc/reference/cdocument-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDIDOCVW](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)
 

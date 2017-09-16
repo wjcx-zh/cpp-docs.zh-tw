@@ -1,55 +1,73 @@
 ---
-title: "控制項 (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows 通用控制項 [C++]"
-  - "通用控制項 [C++]"
-  - "控制項 [MFC]"
+title: Controls (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows common controls [MFC]
+- common controls [MFC]
+- controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 控制項 (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1a2fad4323b03cd302644561820fa436a3f4a6c6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-控制項是使用者可以與之互動，以輸入或操作資料的物件。 它們通常會出現在對話方塊或工具列中。 本主題系列涵蓋三種主要的控制項︰  
+---
+# <a name="controls-mfc"></a>Controls (MFC)
+Controls are objects that users can interact with to enter or manipulate data. They commonly appear in dialog boxes or on toolbars. This topic family covers three main kinds of controls:  
   
--   Windows 通用控制項，包括主控描繪控制項  
+-   Windows common controls, including owner-drawn controls  
   
--   ActiveX 控制項  
+-   ActiveX Controls  
   
--   MFC 程式庫所提供的其他控制項類別  
+-   Other control classes supplied by the Microsoft Foundation Class Library (MFC)  
   
-## Windows 通用控制項  
- Windows 作業系統長久以來一直提供許多 Windows 通用控制項。 這些控制項物件可程式化，而且 Visual C\+\+ 對話方塊編輯器支援將這些控制項加入您的對話方塊。 MFC 程式庫提供類別來封裝上述每個控制項，如[Windows 通用控制項和 MFC 類別](#_core_windows_common_controls_and_mfc_classes)表格所示。 \(表格中的某些項目具有進一步說明的相關主題。 至於缺乏主題的控制項，請參閱 MFC 類別的文件。\)  
+## <a name="windows-common-controls"></a>Windows Common Controls  
+ The Windows operating system has always provided a number of Windows common controls. These control objects are programmable, and the Visual C++ dialog editor supports adding them to your dialog boxes. The Microsoft Foundation Class Library (MFC) supplies classes that encapsulate each of these controls, as shown in the table [Windows Common Controls and MFC Classes](#_core_windows_common_controls_and_mfc_classes). (Some items in the table have related topics that describe them further. For controls that lack topics, see the documentation for the MFC class.)  
   
- [CWnd](../mfc/reference/cwnd-class.md) 類別是所有視窗類別 \(包括所有控制項類別\) 的基底類別。 下列環境支援 Windows 通用控制項︰  
+ Class [CWnd](../mfc/reference/cwnd-class.md) is the base class of all window classes, including all of the control classes. The Windows common controls are supported in the following environments:  
   
--   Windows 95、Windows 98 和 Windows 2000  
+-   Windows 95, Windows 98, and Windows 2000  
   
--   Windows NT 3.51 版及更新版本  
+-   Windows NT, version 3.51 and later  
   
--   Win32 1.3 版 \(Visual C\+\+ 4.2 版及更新版本不支援 Win32\)  
+-   Win32s, version 1.3 (Visual C++ versions 4.2 and later do not support Win32s)  
   
- 舊版通用控制項 \(核取方塊、下拉式方塊、編輯方塊、清單方塊、選項按鈕、按鈕、捲軸控制項和靜態控制項\) 在舊版 Windows 中也可以使用。  
+ The older common controls — check boxes, combo boxes, edit boxes, list boxes, option buttons, pushbuttons, scroll bar controls, and static controls — were available in earlier versions of Windows as well.  
   
-## ActiveX 控制項  
- ActiveX 控制項 \(先前稱為 OLE 控制項\) 可用於 Windows 應用程式的對話方塊中，或全球資訊網的 HTML 網頁中。 如需詳細資訊，請參閱 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)。  
+## <a name="activex-controls"></a>ActiveX Controls  
+ ActiveX controls, formerly known as OLE controls, can be used in dialog boxes in your applications for Windows, or in HTML pages on the World Wide Web. For more information, see [MFC ActiveX Controls](../mfc/mfc-activex-controls.md).  
   
-## 其他 MFC 控制項類別  
- 除了封裝所有 Windows 通用控制項的類別，以及支援編寫您自己的 ActiveX 控制項 \(或使用其他人所提供的 ActiveX 控制項\) 的類別之外，MFC 還提供自己的控制項類別︰  
+## <a name="other-mfc-control-classes"></a>Other MFC Control Classes  
+ In addition to classes that encapsulate all of the Windows common controls and that support programming your own ActiveX controls (or using ActiveX controls supplied by others), MFC supplies the following control classes of its own:  
   
 -   [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)  
   
@@ -57,66 +75,68 @@ caps.handback.revision: 7
   
 -   [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
   
-##  <a name="_core_finding_information_about_windows_common_controls"></a> 尋找 Windows 通用控制項的相關資訊  
- 下表簡短描述每個 Windows 通用控制項，包括控制項的 MFC 包裝函式類別。  
+##  <a name="_core_finding_information_about_windows_common_controls"></a> Finding Information About Windows Common Controls  
+ The table below briefly describes each of the Windows common controls, including the control's MFC wrapper class.  
   
-### Windows 通用控制項和 MFC 類別  
+### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Windows Common Controls and MFC Classes  
   
-|控制項|MFC 類別|描述|Windows 95 的新功能？|  
-|---------|------------|--------|----------------------|  
-|[動畫](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|顯示 AVI 視訊剪輯的連續畫面格|是|  
-|按鈕|[CButton](../mfc/reference/cbutton-class.md)|造成動作的按鈕；也用於核取方塊、選項按鈕和群組方塊|否|  
-|下拉式方塊|[CComboBox](../mfc/reference/ccombobox-class.md)|編輯方塊和清單方塊的組合|否|  
-|[日期和時間選擇器](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|可讓使用者選擇特定日期或時間值|是|  
-|編輯方塊|[CEdit](../mfc/reference/cedit-class.md)|用於輸入文字的方塊|否|  
-|[擴充的下拉式方塊](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|可顯示影像的下拉式方塊控制項|是|  
-|[標頭](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|出現在文字資料行上方的按鈕；顯示的文字控制項寬度|是|  
-|[熱鍵](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|視窗，可讓使用者建立「熱鍵」以快速執行動作|是|  
-|[影像清單](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|用來管理大量圖示或點陣圖的影像集合 \(影像清單並非真正的控制項；它支援其他控制項所使用的清單\)|是|  
-|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|顯示具有圖示之文字清單的視窗|是|  
-|清單方塊|[CListBox](../mfc/reference/clistbox-class.md)|包含字串清單的方塊|否|  
-|[月曆](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|顯示日期資訊的控制項|是|  
-|[進度](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|表示長時間作業進度的視窗|是|  
-|[Rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|可包含其他控制項形式之子視窗的工具列|是|  
-|[Rich Edit](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|使用者可在其中編輯字元和段落格式的視窗 \(請參閱[與 Rich Edit 控制項相關的類別](../mfc/classes-related-to-rich-edit-controls.md)\)|是|  
-|捲軸|[CScrollBar](../mfc/reference/cscrollbar-class.md)|捲軸，用作為對話方塊內 \(而非視窗上\) 控制項|否|  
-|[滑桿](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|含有選擇性使用刻度之滑桿控制項的視窗|是|  
-|[微調按鈕](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|一對箭號按鈕，使用者可在上方按一下以遞增或遞減值|是|  
-|靜態文字|[CStatic](../mfc/reference/cstatic-class.md)|用於標示其他控制項的文字|否|  
-|[狀態列](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|用於顯示狀態資訊的視窗，類似於 MFC 類別 `CStatusBar`|是|  
-|[索引標籤](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|類似於筆記本的插頁；用於「索引標籤對話方塊」或屬性工作表|是|  
-|[工具列](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|具有產生命令之按鈕的視窗，類似於 MFC 類別 `CToolBar`|是|  
-|[工具提示](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|小型快顯視窗，描述工具列按鈕或其他工具的用途|是|  
-|[樹狀](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|顯示階層式項目清單的視窗|是|  
+|Control|MFC class|Description|New in Windows 95|  
+|-------------|---------------|-----------------|------------------------|  
+|[animation](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Displays successive frames of an AVI video clip|Yes|  
+|button|[CButton](../mfc/reference/cbutton-class.md)|Pushbuttons that cause an action; also used for check boxes, radio buttons, and group boxes|No|  
+|combo box|[CComboBox](../mfc/reference/ccombobox-class.md)|Combination of an edit box and a list box|No|  
+|[date and time picker](../mfc/using-cdatetimectrl.md)|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|Allows the user to choose a specific date or time value|Yes|  
+|edit box|[CEdit](../mfc/reference/cedit-class.md)|Boxes for entering text|No|  
+|[extended combo box](../mfc/using-ccomboboxex.md)|[CComboBoxEx](../mfc/reference/ccomboboxex-class.md)|A combo box control with the ability to display images|Yes|  
+|[header](../mfc/using-cheaderctrl.md)|[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)|Button that appears above a column of text; controls width of text displayed|Yes|  
+|[hotkey](../mfc/using-chotkeyctrl.md)|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Window that enables user to create a "hot key" to perform an action quickly|Yes|  
+|[image list](../mfc/using-cimagelist.md)|[CImageList](../mfc/reference/cimagelist-class.md)|Collection of images used to manage large sets of icons or bitmaps (image list isn't really a control; it supports lists used by other controls)|Yes|  
+|[list](../mfc/using-clistctrl.md)|[CListCtrl](../mfc/reference/clistctrl-class.md)|Window that displays a list of text with icons|Yes|  
+|list box|[CListBox](../mfc/reference/clistbox-class.md)|Box that contains a list of strings|No|  
+|[month calendar](../mfc/using-cmonthcalctrl.md)|[CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)|Control that displays date information|Yes|  
+|[progress](../mfc/using-cprogressctrl.md)|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Window that indicates progress of a long operation|Yes|  
+|[rebar](../mfc/using-crebarctrl.md)|[CRebarCtrl](../mfc/reference/crebarctrl-class.md)|Tool bar that can contain additional child windows in the form of controls|Yes|  
+|[rich edit](../mfc/using-cricheditctrl.md)|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|Window in which user can edit with character and paragraph formatting (see [Classes Related to Rich Edit Controls](../mfc/classes-related-to-rich-edit-controls.md))|Yes|  
+|scroll bar|[CScrollBar](../mfc/reference/cscrollbar-class.md)|Scroll bar used as a control inside a dialog box (not on a window)|No|  
+|[slider](../mfc/using-csliderctrl.md)|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|Window containing a slider control with optional tick marks|Yes|  
+|[spin button](../mfc/using-cspinbuttonctrl.md)|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Pair of arrow buttons user can click to increment or decrement a value|Yes|  
+|static-text|[CStatic](../mfc/reference/cstatic-class.md)|Text for labeling other controls|No|  
+|[status bar](../mfc/using-cstatusbarctrl.md)|[CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)|Window for displaying status information, similar to MFC class `CStatusBar`|Yes|  
+|[tab](../mfc/using-ctabctrl.md)|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Analogous to the dividers in a notebook; used in "tab dialog boxes" or property sheets|Yes|  
+|[toolbar](../mfc/using-ctoolbarctrl.md)|[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)|Window with command-generating buttons, similar to MFC class `CToolBar`|Yes|  
+|[tool tip](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|Small pop-up window that describes purpose of a toolbar button or other tool|Yes|  
+|[tree](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Window that displays a hierarchical list of items|Yes|  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   個別控制項︰請參閱本主題的 [Windows 通用控制項和 MFC 類別](#_core_windows_common_controls_and_mfc_classes)表格，以取得所有控制項的連結  
+-   An individual control: see the table [Windows Common Controls and MFC Classes](#_core_windows_common_controls_and_mfc_classes) in this topic for links to all controls  
   
--   [建立及使用控制項](../mfc/making-and-using-controls.md)  
+-   [Making and using controls](../mfc/making-and-using-controls.md)  
   
--   [使用對話方塊編輯器加入控制項](../mfc/using-the-dialog-editor-to-add-controls.md)  
+-   [Using the dialog editor to add controls](../mfc/using-the-dialog-editor-to-add-controls.md)  
   
--   [以手動方式將控制項加入對話方塊](../mfc/adding-controls-by-hand.md)  
+-   [Adding controls to a dialog box by hand](../mfc/adding-controls-by-hand.md)  
   
--   [從 MFC 控制項類別衍生控制項類別](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Deriving control classes from the MFC control classes](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [將通用控制項作為子視窗使用](../mfc/using-a-common-control-as-a-child-window.md)  
+-   [Using common controls as child windows](../mfc/using-a-common-control-as-a-child-window.md)  
   
--   [來自通用控制項的通知](../mfc/receiving-notification-from-common-controls.md)  
+-   [Notifications from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [將通用控制項加入對話方塊](../mfc/using-common-controls-in-a-dialog-box.md)。  
+-   [Add common controls to a dialog box](../mfc/using-common-controls-in-a-dialog-box.md).  
   
--   [從標準 Windows 控制項衍生控制項](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Derive a control from a standard Windows control](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [以型別安全存取對話方塊控制項](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
+-   [Access dialog-box controls with type safety](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
   
--   [從通用控制項接收通知訊息](../mfc/receiving-notification-from-common-controls.md)  
+-   [Receive notification messages from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [範例](../mfc/common-control-sample-list.md)  
+-   [Samples](../mfc/common-control-sample-list.md)  
   
- 如需 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 中 Windows 通用控制項的資訊，請參閱 [About Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493) \(關於通用控制項\)。  
+ For information about Windows common controls in the Windows SDK, see [Common Controls](http://msdn.microsoft.com/library/windows/desktop/bb775493).  
   
-## 請參閱  
- [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)   
+ [Dialog Editor](../windows/dialog-editor.md)
+
+

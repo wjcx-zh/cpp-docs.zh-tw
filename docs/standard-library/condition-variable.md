@@ -32,59 +32,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 6002dcd4cd0fe35c99ce56a1d9fd3b5f3c23dd08
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5cf0a7bed02578f4bd4e7fe8146c7f67835a01ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
-定義 [condition_variable](../standard-library/condition-variable-class.md) 和 [condition_variable_any](../standard-library/condition-variable-any-class.md) 類別，以用來建立等候條件為 True 時的物件。  
+Defines the classes [condition_variable](../standard-library/condition-variable-class.md) and [condition_variable_any](../standard-library/condition-variable-any-class.md) that are used to create objects that wait for a condition to become true.  
   
- 此標頭使用並行執行階段 (ConcRT)，因此您可以搭配使用其他 ConcRT 機制。 如需有關 ConcRT 的詳細資訊，請參閱[並行執行階段](../parallel/concrt/concurrency-runtime.md)。  
+ This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms. For more information about ConcRT, see [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <condition_variable>  
 ```  
   
 > [!NOTE]
->  使用已編譯的程式碼中**/clr**，此標頭會封鎖。  
+>  In code that is compiled by using **/clr**, this header is blocked.  
   
-### <a name="remarks"></a>備註  
- 等候條件變數的程式碼也必須使用 `mutex`。 呼叫端執行緒必須先鎖定 `mutex` 之後，才能呼叫等候條件變數的函數。 傳回呼叫的函數時，便會鎖定 `mutex`。 當執行緒等候條件為 True 時，不會鎖定 `mutex`。 由於每個等候條件變數的執行緒皆必須使用相同的 `mutex` 物件，因此不會發生未預期的結果。  
+### <a name="remarks"></a>Remarks  
+ Code that waits for a condition variable must also use a `mutex`. A calling thread must lock the `mutex` before it calls the functions that wait for the condition variable. The `mutex` is then locked when the called function returns. The `mutex` is not locked while the thread waits for the condition to become true. So that there are no unpredictable results, each thread that waits for a condition variable must use the same `mutex` object.  
   
- 任何類型的 Mutex 皆可搭配使用 `condition_variable_any` 類型的物件。 所使用的 Mutex 類型不需要提供 `try_lock` 方法。 `unique_lock<mutex>` 類型的 Mutex 僅可搭配使用 `condition_variable` 類型的物件。 此類型的物件可能會比 `condition_variable_any<unique_lock<mutex>>` 類型的物件更快。  
+ Objects of type `condition_variable_any` can be used with a mutex of any type. The type of the mutex that is used does not have to provide the `try_lock` method. Objects of type `condition_variable` can only be used with a mutex of type `unique_lock<mutex>`. Objects of this type may be faster than objects of type `condition_variable_any<unique_lock<mutex>>`.  
   
- 若要等候事件，請先鎖定 Mutex，然後呼叫條件變數上的其中一個 `wait` 方法。 `wait` 呼叫會受到封鎖，直到其他執行緒通知條件變數為止。  
+ To wait for an event, first lock the mutex, and then call one of the `wait` methods on the condition variable. The `wait` call blocks until another thread signals the condition variable.  
   
- 未經適當通知就解除封鎖等候條件變數的執行緒時，會發生「假喚醒」的情況。 若要辨識這類假喚醒，等候條件為 True 的程式碼應在 wait 函式傳回程式碼時，明確檢查該項條件。 上述作業通常是透過使用迴圈來完成，因此您可以使用 `wait(unique_lock<mutex>& lock, Predicate pred)` 來執行這個迴圈。  
+ *Spurious wakeups* occur when threads that are waiting for condition variables become unblocked without appropriate notifications. To recognize such spurious wakeups, code that waits for a condition to become true should explicitly check that condition when the code returns from a wait function. This is usually done by using a loop; you can use `wait(unique_lock<mutex>& lock, Predicate pred)` to perform this loop for you.  
   
 ```cpp  
 while (condition is false)
     wait for condition variable;
 ```  
   
- `condition_variable_any` 和 `condition_variable` 類別都有三種等候條件的方法。  
+ The `condition_variable_any` and `condition_variable` classes each have three methods that wait for a condition.  
   
-- `wait` 會等候無限制的時間週期。  
+- `wait` waits for an unbounded time period.  
   
-- `wait_until` 會等候到指定的 `time` 為止。  
+- `wait_until` waits until a specified `time`.  
   
-- `wait_for` 會等候指定的 `time interval`。  
+- `wait_for` waits for a specified `time interval`.  
   
- 每種方法皆有兩個多載的版本。 其中一個只會等待，並可能會假喚醒。 另一個則會使用述詞中定義的其他範本引數。 要等到述詞為 `true` 之後，才會傳回方法。  
+ Each of these methods has two overloaded versions. One just waits and can wake up spuriously. The other takes an additional template argument that defines a predicate. The method does not return until the predicate is `true`.  
   
- 每個類別也有兩種方法，用來在其條件為 `true` 時通知條件變數。  
+ Each class also has two methods that are used to notify a condition variable that its condition is `true`.  
   
-- `notify_one` 會喚醒正在等候條件變數的其中一個執行緒。  
+- `notify_one` wakes up one of the threads that is waiting for the condition variable.  
   
-- `notify_all` 會喚醒正在等候條件變數的所有執行緒。  
+- `notify_all` wakes up all of the threads that are waiting for the condition variable.  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)   
- [condition_variable 類別](../standard-library/condition-variable-class.md)   
- [condition_variable_any 類別](../standard-library/condition-variable-any-class.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [condition_variable Class](../standard-library/condition-variable-class.md)   
+ [condition_variable_any Class](../standard-library/condition-variable-any-class.md)
 

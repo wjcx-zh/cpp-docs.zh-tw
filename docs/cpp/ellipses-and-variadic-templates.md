@@ -1,56 +1,73 @@
 ---
-title: "省略符號和 Variadic 範本 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Ellipses and Variadic Templates | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
 caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# 省略符號和 Variadic 範本
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: cd760bb7b3d5c91ac0fccd92866043cda70d9967
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-本文說明如何使用省略符號 \(`...`\) 與 C\+\+ variadic 範本。  省略符號在 C 和 C\+\+ 中有[許多用途](../misc/ellipsis-dot-dot-dot.md)。  這些包括函式的變數引數清單。  從 C 執行階段程式庫的 `printf()` 函式是其中一個最知名的範例。  
+---
+# <a name="ellipses-and-variadic-templates"></a>Ellipses and Variadic Templates
+This article shows how to use the ellipsis (`...`) with C++ variadic templates. The ellipsis has had many uses in C and C++. These include variable argument lists for functions. The `printf()` function from the C Runtime Library is one of the most well-known examples.  
   
- *variadic 範本* 是支援任意數目的引數傳遞的類別或函式樣板。  這個機制對於 C\+\+ 程式庫開發人員特別有用，因為您可以將它套用至類別樣板和函式樣板，進而提供各種類型安全且非一般的功能和彈性。  
+ A *variadic template* is a class or function template that supports an arbitrary number of arguments. This mechanism is especially useful to C++ library developers because you can apply it to both class templates and function templates, and thereby provide a wide range of type-safe and non-trivial functionality and flexibility.  
   
-## 語法  
- 在 variadic 範本中，省略符號有兩種用法。  在參數名稱左邊，它表示*參數封裝*，在參數名稱右邊，則會展開參數封裝至不同的名稱。  
+## <a name="syntax"></a>Syntax  
+ An ellipsis is used in two ways by variadic templates. To the left of the parameter name, it signifies a *parameter pack*, and to the right of the parameter name, it expands the parameter packs into separate names.  
   
- 以下是「*variadic 樣板類別*」\(variadic Template Class\) 定義語法的基本範例：  
+ Here's a basic example of *variadic template class* definition syntax:  
   
 ```cpp  
 template<typename... Arguments> class classname;  
 ```  
   
- 對於參數套件與延伸套件，您可以依您的喜好在 ellipsis 周圍增加空白，就像底下這些例子:  
+ For both parameter packs and expansions, you can add whitespace around the ellipsis, based on your preference, as shown in these examples:  
   
 ```cpp  
 template<typename ...Arguments> class classname;  
 ```  
   
- 或是:  
+ Or this:  
   
 ```cpp  
 template<typename ... Arguments> class classname;  
 ```  
   
- 請注意這篇文章使用第一個例子裡面使用的慣例 \(ellipsis 連接至 `typename`\)。  
+ Notice that this article uses the convention that's shown in the first example (the ellipsis is attached to `typename`).  
   
- 在前述範例中，`Arguments` 是參數封裝。  類別 `classname` 可以接受可變數目的引數，如下列範例所示：  
+ In the preceding examples, `Arguments` is a parameter pack. The class `classname` can accept a variable number of arguments, as in these examples:  
   
 ```cpp  
-  
 template<typename... Arguments> class vtclass;  
   
 vtclass< > vtinstance1;  
@@ -60,22 +77,22 @@ vtclass<long, std::vector<int>, std::string> vtinstance4;
   
 ```  
   
- 使用 variadic 樣板類別定義也可以至少要求一個參數:  
+ By using a variadic template class definition, you can also require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> class classname;  
   
 ```  
   
- 以下是「*variadic 樣板函式*」\(variadic Template Function\) 語法的基本範例：  
+ Here's a basic example of *variadic template function* syntax:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments... args);  
 ```  
   
- `Arguments` 參數封裝接著會展開以供使用，如下一節**了解 variadic 樣板**中所示。  
+ The `Arguments` parameter pack is then expanded for use, as shown in the next section, **Understanding variadic templates**.  
   
- 可能還有其他形式的 variadic 樣板函式語法，包括但不限於下列範例：  
+ Other forms of variadic template function syntax are possible—including, but not limited to, these examples:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(Arguments&... args);   
@@ -83,27 +100,27 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);  
 ```  
   
- 也允許像 `const` 之類的規範：  
+ Specifiers like `const` are also allowed:  
   
 ```cpp  
 template <typename... Arguments> returntype functionname(const Arguments&... args);  
   
 ```  
   
- 就像 variadic 樣板類別定義，您可以設定至少需要一個參數的函式:  
+ As with variadic template class definitions, you can make functions that require at least one parameter:  
   
 ```cpp  
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);  
   
 ```  
   
- Variadic 範本使用 `sizeof...()` 運算子 \(與舊版 `sizeof()` 運算子無關\)：  
+ Variadic templates use the `sizeof...()` operator (unrelated to the older `sizeof()` operator):  
   
 ```cpp  
 template<typename... Arguments>  
 void tfunc(const Arguments&... args)  
 {  
-    const unsigned numargs = sizeof...(Arguments);  
+    constexpr auto numargs{ sizeof...(Arguments) };  
   
     X xobj[numargs]; // array of some previously defined type X  
   
@@ -112,15 +129,14 @@ void tfunc(const Arguments&... args)
   
 ```  
   
-## 進一步了解省略符號放置  
- 在過去，本文說明了定義參數套件和擴充的省略符號放置，「在參數名稱左邊的它表示參數套件，在參數名稱右邊，它展開參數套件中不同的名稱」。  這在技術上是對的，但是可能會造成在轉譯程式碼的混淆。  請考量：  
+## <a name="more-about-ellipsis-placement"></a>More about ellipsis placement  
+ Previously, this article described ellipsis placement that defines parameter packs and expansions as "to the left of the parameter name, it signifies a parameter pack, and to the right of the parameter name, it expands the parameter packs into separate names". This is technically true but can be confusing in translation to code. Consider:  
   
--   在樣板參數清單 \(`template <parameter-list>`\)， `typename...` 引入樣板參數套件。  
+-   In a template-parameter-list (`template <parameter-list>`), `typename...` introduces a template parameter pack.  
   
--   在參數宣告子句 \(`func(parameter-list)`\)， 「最上層」省略符號引入函式參數套件，且省略定位非常重要:  
+-   In a parameter-declaration-clause (`func(parameter-list)`), a "top-level" ellipsis introduces a function parameter pack, and the ellipsis positioning is important:  
   
     ```cpp  
-  
     // v1 is NOT a function parameter pack:  
     template <typename... Types> void func1(std::vector<Types...> v1);   
   
@@ -128,10 +144,10 @@ void tfunc(const Arguments&... args)
     template <typename... Types> void func2(std::vector<Types>... v2);   
     ```  
   
--   若省略符號在參數名稱之後顯示，您有參數封裝擴充。  
+-   Where the ellipsis appears immediately after a parameter name, you have a parameter pack expansion.  
   
-## 範例  
- 說明 variadic 範本功能機制的一個好方法是在重寫 `printf`的某些功能時使用它:  
+## <a name="example"></a>Example  
+ A good way to illustrate the variadic template function mechanism is to use it in a re-write of some of the functionality of `printf`:  
   
 ```cpp  
 #include <iostream>  
@@ -165,7 +181,7 @@ int main()
   
 ```  
   
-## Output  
+## <a name="output"></a>Output  
   
 ```  
   
@@ -176,7 +192,6 @@ first, 2, third, 3.14159
 ```  
   
 > [!NOTE]
->  合併 variadic 樣板函式的大部分實作會使用某種形式的遞迴，但只是與傳統遞迴稍有不同。傳統遞迴涉及使用相同簽章呼叫其自身的函式。\(它可以多載或設為範本，不過每次都會選擇相同簽章\)。Variadic 遞迴包含使用不同引數數目 \(幾乎一定會減少\) 來呼叫 variadic 函式樣板，並因此每次戳記不同的簽章。  仍然需要「基底案例」，不過，遞迴的本質是不同的。  
+>  Most implementations that incorporate variadic template functions use recursion of some form, but it's slightly different from traditional recursion.  Traditional recursion involves a function calling itself by using the same signature. (It may be overloaded or templated, but the same signature is chosen each time.) Variadic recursion involves calling a variadic function template by using differing (almost always decreasing) numbers of arguments, and thereby stamping out a different signature every time. A "base case" is still required, but the nature of the recursion is different.  
   
-## 請參閱  
- [省略符號 \(...\)](../misc/ellipsis-dot-dot-dot.md)
+

@@ -1,35 +1,54 @@
 ---
-title: "處理索引標籤控制項通知訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl 類別, 處理通知"
-  - "告知, CTabCtrl 中的處理"
-  - "告知, 索引標籤控制項"
-  - "處理通知"
-  - "索引標籤控制項, 處理通知"
+title: Processing Tab Control Notification Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- notifications [MFC], tab controls
+- CTabCtrl class [MFC], processing notifications
+- notifications [MFC], processing in CTabCtrl
+- processing notifications [MFC]
+- tab controls [MFC], processing notifications
 ms.assetid: 758ccb7a-9e73-48f8-9073-23f7cb09918c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 處理索引標籤控制項通知訊息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76c40264c0726a321714704720ac177828daaffd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當使用者按一下選項或按鈕，索引標籤控制項 \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\) 傳送通知訊息至其父視窗。  如果您想要執行某個動作以回應，請處理這些訊息。  例如，在中，當使用者按一下索引標籤時，您可能想要在顯示之前預先設定網頁上的控制項資料。  
+---
+# <a name="processing-tab-control-notification-messages"></a>Processing Tab Control Notification Messages
+As users click tabs or buttons, the tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)) sends notification messages to its parent window. Handle these messages if you want to do something in response. For example, when the user clicks a tab, you may want to preset control data on the page prior to displaying it.  
   
- 從索引標籤控制項處理 **WM\_NOTIFY** 訊息中的檢視或對話方塊類別。  使用屬性視窗建立視通知訊息的 switch 的 [OnChildNotify](../Topic/CWnd::OnChildNotify.md) 處理常式函式被處理。  如需選項控制項傳送給其父視窗通知的清單，請參閱 [索引標籤控制項參考](http://msdn.microsoft.com/library/windows/desktop/bb760548) 的 **Notifications** 部分以 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]為單位\)。  
+ Process **WM_NOTIFY** messages from the tab control in your view or dialog class. Use the Properties window to create an [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) handler function with a switch statement based on which notification message is being handled. For a list of the notifications a tab control can send to its parent window, see the **Notifications** section of [Tab Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb760548) in the Windows SDK.  
   
-## 請參閱  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

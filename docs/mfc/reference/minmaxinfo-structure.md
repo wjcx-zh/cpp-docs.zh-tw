@@ -1,5 +1,5 @@
 ---
-title: "MINMAXINFO 結構 |Microsoft 文件"
+title: MINMAXINFO Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MINMAXINFO structure
+- MINMAXINFO structure [MFC]
 ms.assetid: be6fb578-f98a-4581-9ada-be9df308ed2f
 caps.latest.revision: 10
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 772416bdac3c72f55644fa31aef23ba76a14e606
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c47c470afa26a0db326f9403d5adcfc557caceea
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="minmaxinfo-structure"></a>MINMAXINFO 結構
-`MINMAXINFO`結構包含相關的視窗最大化的大小和位置和大小的最小和最大的追蹤資訊。  
+# <a name="minmaxinfo-structure"></a>MINMAXINFO Structure
+The `MINMAXINFO` structure contains information about a window's maximized size and position and its minimum and maximum tracking size.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagMINMAXINFO {  
@@ -55,27 +55,27 @@ typedef struct tagMINMAXINFO {
 } MINMAXINFO;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  *ptReserved*  
- 保留供內部使用。  
+ Reserved for internal use.  
   
  *ptMaxSize*  
- 指定以最大化的寬度 (point.x) 和視窗最大化的高度 (point.y)。  
+ Specifies the maximized width (point.x) and the maximized height (point.y) of the window.  
   
  `ptMaxPosition`  
- 指定的最大化的視窗 (point.x) 的左側位置及最大化的視窗 (point.y) 頂端的位置。  
+ Specifies the position of the left side of the maximized window (point.x) and the position of the top of the maximized window (point.y).  
   
  *ptMinTrackSize*  
- 指定的最小追蹤寬度 (point.x)，追蹤視窗的高度 (point.y) 最小值。  
+ Specifies the minimum tracking width (point.x) and the minimum tracking height (point.y) of the window.  
   
  *ptMaxTrackSize*  
- 指定追蹤寬度 (point.x) 的最大值和追蹤的視窗的高度 (point.y) 的最大值。  
+ Specifies the maximum tracking width (point.x) and the maximum tracking height (point.y) of the window.  
   
-## <a name="requirements"></a>需求  
- **標頭：** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)
 
 

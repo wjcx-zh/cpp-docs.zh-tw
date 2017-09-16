@@ -1,5 +1,5 @@
 ---
-title: "&lt;array&gt; 函式 | Microsoft Docs"
+title: '&lt;array&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,22 +17,26 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 326e4fddbf29e706faa4e726ece331a0fe64471b
+helpviewer_keywords:
+- std::array [C++], get
+- std::get [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d7bb16b490d20934a263147c0d6e28694e006552
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltarraygt-functions"></a>&lt;array&gt; 函式
-\<array> 標頭包含兩個非成員函式 `get` 和 `swap` 以作業於 `array` 物件。  
+# <a name="ltarraygt-functions"></a>&lt;array&gt; functions
+The \<array> header includes two non-member functions, `get` and `swap`, that operate on `array` objects.  
   
 |||  
 |-|-|  
 |[get](#get)|[swap](#swap)|  
   
-##  <a name="get"></a> get  
-傳回陣列中所指定元素的參考。  
+##  <a name="get"></a>  get  
+Returns a reference to the specified element of the array.  
   
 ```  
 template <int Index, class T, size_t N>  
@@ -45,20 +49,20 @@ template <int Index, class T, size_t N>
 constexpr T&& get(array<T, N>&& arr) noexcept;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Index`  
- 項目位移。  
+ The element offset.  
   
  `T`  
- 項目的類型。  
+ The type of an element.  
   
  `N`  
- 陣列中的項目數。  
+ The number of elements in the array.  
   
  `arr`  
- 要從中選取的陣列。  
+ The array to select from.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <array>   
@@ -90,31 +94,31 @@ int main()
 1 3  
 ```  
   
-##  <a name="swap"></a> swap  
-交換兩個 `array` 物件之 `std::swap` 的非成員範本特製化。  
+##  <a name="swap"></a>  swap  
+A non-member template specialization of `std::swap` that swaps two `array` objects.  
   
 ```  
 template <class Ty, std::size_t N>  
 void swap(array<Ty, N>& left, array<Ty, N>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Ty`  
- 元素的類型。  
+ The type of an element.  
   
  `N`  
- 陣列的大小。  
+ The size of the array.  
   
  `left`  
- 要交換的第一個陣列。  
+ The first array to swap.  
   
  `right`  
- 要交換的第二個陣列。  
+ The second array to swap.  
   
-### <a name="remarks"></a>備註  
- 這個範本函式會執行 `left.swap(right)`。  
+### <a name="remarks"></a>Remarks  
+ The template function executes `left.swap(right)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__array__swap.cpp   
@@ -160,7 +164,7 @@ int main()
 0 1 2 3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

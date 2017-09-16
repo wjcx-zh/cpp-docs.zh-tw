@@ -1,5 +1,5 @@
 ---
-title: "CDaoRecordView 類別 |Microsoft 文件"
+title: CDaoRecordView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,12 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoRecordView class
-- data-bound controls [C++], DAO controls
-- data binding [C++], DAO views
-- bound controls [C++], displaying database data
-- application wizards [C++], creating record views
-- controls [MFC], data binding
+- CDaoRecordView [MFC], CDaoRecordView
+- CDaoRecordView [MFC], IsOnFirstRecord
+- CDaoRecordView [MFC], IsOnLastRecord
+- CDaoRecordView [MFC], OnGetRecordset
+- CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
 caps.latest.revision: 23
 author: mikeblome
@@ -44,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 11aa318e84e89835ceb710725590f3c3e6387fcd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4d300082bf01394958c02a4cf8dd33305df1c4a0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorecordview-class"></a>CDaoRecordView 類別
-在控制項中顯示資料庫記錄的檢視。  
+# <a name="cdaorecordview-class"></a>CDaoRecordView Class
+A view that displays database records in controls.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CDaoRecordView : public CFormView  
@@ -62,40 +61,40 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
 ## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>受保護的建構函式  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|建構 `CDaoRecordView` 物件。|  
+|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|Constructs a `CDaoRecordView` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|傳回非零，如果目前的記錄中相關聯的資料錄集的第一個記錄。|  
-|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|傳回非零，如果目前的記錄中相關聯的資料錄集的最後一個記錄。|  
-|[CDaoRecordView::OnGetRecordset](#ongetrecordset)|傳回從衍生的類別物件的指標`CDaoRecordset`。 ClassWizard 您的覆寫這個函式，並在必要時建立資料錄集。|  
-|[CDaoRecordView::OnMove](#onmove)|如果目前資料錄已變更，更新資料來源上，則會移至指定的記錄 （下一個、 上一筆，第一個或最後一個）。|  
+|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Returns nonzero if the current record is the first record in the associated recordset.|  
+|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Returns nonzero if the current record is the last record in the associated recordset.|  
+|[CDaoRecordView::OnGetRecordset](#ongetrecordset)|Returns a pointer to an object of a class derived from `CDaoRecordset`. ClassWizard overrides this function for you and creates the recordset if necessary.|  
+|[CDaoRecordView::OnMove](#onmove)|If the current record has changed, updates it on the data source, then moves to the specified record (next, previous, first, or last).|  
   
-## <a name="remarks"></a>備註  
- 檢視是表單檢視，直接連線到`CDaoRecordset`物件。 檢視從對話方塊樣板資源建立，並顯示欄位的`CDaoRecordset`對話方塊範本的控制項中的物件。 `CDaoRecordView`物件用來自動化的表單上的控制項之間的資料錄集欄位的資料移動的對話方塊資料交換 (DDX) 和 DAO 資料錄欄位交換 (DFX)。 `CDaoRecordView`也提供的預設實作移動第一筆、 下一個、 上一個或最後一筆，更新目前在檢視中的記錄的介面。  
+## <a name="remarks"></a>Remarks  
+ The view is a form view directly connected to a `CDaoRecordset` object. The view is created from a dialog template resource and displays the fields of the `CDaoRecordset` object in the dialog template's controls. The `CDaoRecordView` object uses dialog data exchange (DDX) and DAO record field exchange (DFX) to automate the movement of data between the controls on the form and the fields of the recordset. `CDaoRecordView` also supplies a default implementation for moving to the first, next, previous, or last record and an interface for updating the record currently in view.  
   
 > [!NOTE]
->  DAO 資料庫類別所基礎開放式資料庫連接 (ODBC) 之 MFC 資料庫類別不同。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 您仍然可以使用 DAO 類別; 存取 ODBC 資料來源DAO 類別通常提供卓越的功能，因為它們使用 Microsoft Jet 資料庫引擎。  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes; the DAO classes generally offer superior capabilities because they use the Microsoft Jet database engine.  
   
- 若要建立資料錄檢視的最常見方式是使用應用程式精靈。 應用程式精靈建立資料錄檢視類別和其相關聯的資料錄集類別，做為入門的基本架構應用程式的一部分。  
+ The most common way to create your record view is with the Application Wizard. The Application Wizard creates both the record view class and its associated recordset class as part of your skeleton starter application.  
   
- 如果您只需要在單一表單時，應用程式精靈 的方法很容易的。 類別可讓您決定稍後在開發程序中使用資料錄檢視。 如果您不要使用應用程式精靈建立資料錄檢視類別，您稍後可以建立其與類別。 使用 ClassWizard 分別建立資料錄檢視和資料錄集，然後再將它們連線是最具彈性的方式，因為它讓您更能控制在資料錄集類別命名並將其。H /。CPP 檔案。 這個方法也可讓您有多個資料錄檢視上相同的資料錄集類別。  
+ If you simply need a single form, the Application Wizard approach is easier. ClassWizard lets you decide to use a record view later in the development process. If you don't create the record view class with the Application Wizard, you can create it later with ClassWizard. Using ClassWizard to create a record view and a recordset separately and then connect them is the most flexible approach because it gives you more control in naming the recordset class and its .H/.CPP files. This approach also lets you have multiple record views on the same recordset class.  
   
- 為了方便使用者在記錄間移動資料錄檢視中，應用程式精靈建立功能表 （或工具列） 移動的資源第一筆、 下一個、 上一個或最後一筆記錄。 如果您建立資料錄檢視類別與類別精靈，您需要這些資源自行建立具有功能表和點陣圖編輯器。  
+ To make it easy for end-users to move from record to record in the record view, the Application Wizard creates menu (and optionally toolbar) resources for moving to the first, next, previous, or last record. If you create a record view class with ClassWizard, you need to create these resources yourself with the menu and bitmap editors.  
   
- 移動記錄記錄的預設實作的相關資訊，請參閱`IsOnFirstRecord`和`IsOnLastRecord`與發行項[使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)，這同時適用於`CRecordView`和`CDaoRecordView`。  
+ For information about the default implementation for moving from record to record, see `IsOnFirstRecord` and `IsOnLastRecord` and the article [Using a Record View](../../data/using-a-record-view-mfc-data-access.md), which applies to both `CRecordView` and `CDaoRecordView`.  
   
- `CDaoRecordView`資料錄檢視才能更新使用者介面，則會追蹤的資料錄集的使用者的位置。 當使用者移至任一端的資料錄集時，資料錄檢視停用使用者介面物件，例如功能表項目或工具列按鈕 — 移動中相同的方向。  
+ `CDaoRecordView` keeps track of the user's position in the recordset so that the record view can update the user interface. When the user moves to either end of the recordset, the record view disables user interface objects — such as menu items or toolbar buttons — for moving further in the same direction.  
   
- 多個宣告和使用您的資料錄檢視和資料錄集類別的詳細資訊，請參閱 < 設計和建立資料錄檢視 >，文件中[資料錄檢視](../../data/record-views-mfc-data-access.md)。 如需如何記錄檢視的工作，以及如何使用它們的詳細資訊，請參閱文章[使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。 上述的所有發行項套用到`CRecordView`和`CDaoRecordView`。  
+ For more information about declaring and using your record view and recordset classes, see "Designing and Creating a Record View" in the article [Record Views](../../data/record-views-mfc-data-access.md). For more information about how record views work and how to use them, see the article [Using a Record View](../../data/using-a-record-view-mfc-data-access.md). All the articles mentioned above apply to both `CRecordView` and `CDaoRecordView`.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -110,124 +109,124 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  `CDaoRecordView`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
- 當您建立的物件型別衍生自`CDaoRecordView`，呼叫任一種形式的建構函式來初始化檢視的物件，並識別檢視所根據的對話方塊資源。  
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
+ When you create an object of a type derived from `CDaoRecordView`, call either form of the constructor to initialize the view object and identify the dialog resource on which the view is based.  
   
 ```  
 explicit CDaoRecordView(LPCTSTR lpszTemplateName);  
 explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- 包含的對話方塊範本資源名稱的 null 終止字串。  
+ Contains a null-terminated string that is the name of a dialog template resource.  
   
  `nIDTemplate`  
- 包含的對話方塊範本資源的 ID 編號。  
+ Contains the ID number of a dialog template resource.  
   
-### <a name="remarks"></a>備註  
- 依名稱 (pass 字串做為引數的建構函式) 或其 ID （不帶正負號的整數做為引數傳遞），您可能可以識別的資源。 資源識別碼被建議使用。  
-  
-> [!NOTE]
->  您的衍生的類別必須提供自己的建構函式。 在衍生類別的建構函式，呼叫建構函式`CDaoRecordView::CDaoRecordView`資源名稱或識別碼做為引數。  
-  
- **CDaoRecordView::OnInitialUpdate**呼叫`CWnd::UpdateData`，而它會呼叫`CWnd::DoDataExchange`。 這個初始呼叫`DoDataExchange`連接`CDaoRecordView`（間接） 可控制`CDaoRecordset`欄位類別精靈所建立的資料成員。 在呼叫基底類別後，這些資料成員無法之前使用**CFormView::OnInitialUpdate**成員函式。  
+### <a name="remarks"></a>Remarks  
+ You can either identify the resource by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument). Using a resource ID is recommended.  
   
 > [!NOTE]
->  如果您使用類別精靈，精靈定義`enum`值`CDaoRecordView::IDD`類別宣告並使用它在成員初始化清單建構函式。  
+>  Your derived class must supply its own constructor. In the constructor of your derived class, call the constructor `CDaoRecordView::CDaoRecordView` with the resource name or ID as an argument.  
   
- [!code-cpp[NVC_MFCDatabase #&35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
+ **CDaoRecordView::OnInitialUpdate** calls `CWnd::UpdateData`, which calls `CWnd::DoDataExchange`. This initial call to `DoDataExchange` connects `CDaoRecordView` controls (indirectly) to `CDaoRecordset` field data members created by ClassWizard. These data members cannot be used until after you call the base class **CFormView::OnInitialUpdate** member function.  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
- 呼叫此成員函式，以判斷目前的記錄是第一筆記錄，此資料錄檢視相關聯的資料錄集物件中。  
+> [!NOTE]
+>  If you use ClassWizard, the wizard defines an `enum` value `CDaoRecordView::IDD` in the class declaration and uses it in the member initialization list for the constructor.  
+  
+ [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
+  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
+ Call this member function to determine whether the current record is the first record in the recordset object associated with this record view.  
   
 ```  
 BOOL IsOnFirstRecord();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果目前的記錄資料錄集; 第一筆記錄為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current record is the first record in the recordset; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式是適用於撰寫自己的實作預設的命令更新處理常式類別精靈所撰寫。  
+### <a name="remarks"></a>Remarks  
+ This function is useful for writing your own implementations of the default command update handlers written by ClassWizard.  
   
- 如果使用者移到第一筆記錄，架構會停用任何使用者介面物件 （例如功能表項目或工具列按鈕） 您可以移至第一個或上一筆記錄。  
+ If the user moves to the first record, the framework disables any user interface objects (for example, menu items or toolbar buttons) you have for moving to the first or the previous record.  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
- 呼叫此成員函式，以判斷目前的記錄是最後一筆記錄，此資料錄檢視相關聯的資料錄集物件中。  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
+ Call this member function to determine whether the current record is the last record in the recordset object associated with this record view.  
   
 ```  
 BOOL IsOnLastRecord();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果目前的記錄資料錄集; 最後一筆記錄為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current record is the last record in the recordset; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式可用來撰寫您自己的預設實作 ClassWizard 寫入支援移動記錄從使用者介面的命令更新處理常式。  
+### <a name="remarks"></a>Remarks  
+ This function is useful for writing your own implementations of the default command update handlers that ClassWizard writes to support a user interface for moving from record to record.  
   
 > [!CAUTION]
->  此函式的結果是可靠的不同之處在於檢視可能無法偵測資料錄集的結尾，直到使用者已移動過。 使用者可能要超越資料錄檢視可以告訴它必須停用任何使用者介面物件移動到下一個或最後一筆記錄之前的最後一筆記錄。 如果使用者移過去的最後一筆記錄，然後將傳回的最後一個記錄 （或之前），資料錄檢視可以追蹤使用者的資料錄集中的位置，並正確地停用使用者介面物件。  
+>  The result of this function is reliable except that the view may not be able to detect the end of the recordset until the user has moved past it. The user might have to move beyond the last record before the record view can tell that it must disable any user interface objects for moving to the next or last record. If the user moves past the last record and then moves back to the last record (or before it), the record view can track the user's position in the recordset and disable user interface objects correctly.  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
- 傳回的指標`CDaoRecordset`-衍生的資料錄檢視相關聯的物件。  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
+ Returns a pointer to the `CDaoRecordset`-derived object associated with the record view.  
   
 ```  
 virtual CDaoRecordset* OnGetRecordset() = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CDaoRecordset`-衍生物件，如果物件已成功建立，否則**NULL**指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CDaoRecordset`-derived object if the object was successfully created; otherwise a **NULL** pointer.  
   
-### <a name="remarks"></a>備註  
- 您必須覆寫此成員函式建構或取得資料錄集物件並傳回的指標。 如果您宣告您的資料錄檢視類別與類別精靈，精靈會為您撰寫的預設值覆寫。 類別精靈的預設實作會傳回資料錄集的指標儲存在資料錄檢視中，如果有的話。 如果沒有，它會建構類型的資料錄集物件指定使用 ClassWizard 和呼叫其**開啟**成員函式以開啟資料表，或執行查詢，並再傳回物件的指標。  
+### <a name="remarks"></a>Remarks  
+ You must override this member function to construct or obtain a recordset object and return a pointer to it. If you declare your record view class with ClassWizard, the wizard writes a default override for you. ClassWizard's default implementation returns the recordset pointer stored in the record view if one exists. If not, it constructs a recordset object of the type you specified with ClassWizard and calls its **Open** member function to open the table or run the query, and then returns a pointer to the object.  
   
- 如需詳細資訊和範例，請參閱文章[資料錄檢視︰ 使用資料錄檢視](../../data/using-a-record-view-mfc-data-access.md)。  
+ For more information and examples, see the article [Record Views: Using a Record View](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
- 呼叫此成員函式，將移至不同的資料錄集，資料錄檢視控制項中顯示其欄位。  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
+ Call this member function to move to a different record in the recordset and display its fields in the controls of the record view.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIDMoveCommand`  
- 它有下列標準命令 ID 值︰  
+ One of the following standard command ID values:  
   
-- `ID_RECORD_FIRST`移至資料錄集的第一個記錄。  
+- `ID_RECORD_FIRST` Move to the first record in the recordset.  
   
-- `ID_RECORD_LAST`資料錄集中移動至最後一筆記錄。  
+- `ID_RECORD_LAST` Move to the last record in the recordset.  
   
-- `ID_RECORD_NEXT`移至資料錄集的下一個記錄。  
+- `ID_RECORD_NEXT` Move to the next record in the recordset.  
   
-- `ID_RECORD_PREV`移至資料錄集的上一個記錄。  
+- `ID_RECORD_PREV` Move to the previous record in the recordset.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果移動成功。否則為 0，表示移動要求遭到拒絕。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the move was successful; otherwise 0 if the move request was denied.  
   
-### <a name="remarks"></a>備註  
- 預設實作會呼叫適當的移動成員函式的`CDaoRecordset`資料錄檢視相關聯的物件。  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the appropriate Move member function of the `CDaoRecordset` object associated with the record view.  
   
- 根據預設，`OnMove`更新目前的記錄資料來源上，如果使用者資料錄檢視中已變更。  
+ By default, `OnMove` updates the current record on the data source if the user has changed it in the record view.  
   
- 應用程式精靈建立功能表資源與第一筆、 最後一筆記錄、 下一筆記錄和上一筆記錄的功能表項目。 如果您選取的初始工具列選項時，應用程式精靈會建立工具列按鈕對應至這些命令。  
+ The Application Wizard creates a menu resource with First Record, Last Record, Next Record, and Previous Record menu items. If you select the Initial Toolbar option, the Application Wizard also creates a toolbar with buttons corresponding to these commands.  
   
- 如果您跳過資料錄集中的最後一筆記錄時，資料錄檢視會繼續顯示最後一筆記錄。 如果您向後跳過第一筆記錄，資料錄檢視會繼續顯示第一筆記錄。  
+ If you move past the last record in the recordset, the record view continues to display the last record. If you move backward past the first record, the record view continues to display the first record.  
   
 > [!CAUTION]
->  呼叫`OnMove`擲回例外狀況，如果資料錄集沒有任何記錄。 呼叫適當的使用者介面更新處理常式函式 — **OnUpdateRecordFirst**， **OnUpdateRecordLast**， **OnUpdateRecordNext**，或**OnUpdateRecordPrev** — 在對應的移動作業，以判斷資料錄集是否有任何記錄。  
+>  Calling `OnMove` throws an exception if the recordset has no records. Call the appropriate user interface update handler function — **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, or **OnUpdateRecordPrev** — before the corresponding move operation to determine whether the recordset has any records.  
   
-## <a name="see-also"></a>另請參閱  
- [CFormView 類別](../../mfc/reference/cformview-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CDaoRecordset 類別](../../mfc/reference/cdaorecordset-class.md)   
- [CDaoTableDef 類別](../../mfc/reference/cdaotabledef-class.md)   
- [CDaoQueryDef 類別](../../mfc/reference/cdaoquerydef-class.md)   
- [CDaoDatabase 類別](../../mfc/reference/cdaodatabase-class.md)   
- [CDaoWorkspace 類別](../../mfc/reference/cdaoworkspace-class.md)   
- [CFormView 類別](../../mfc/reference/cformview-class.md)
+## <a name="see-also"></a>See Also  
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)
 

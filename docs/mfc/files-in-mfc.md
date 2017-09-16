@@ -1,74 +1,91 @@
 ---
-title: "MFC 中的檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "二進位存取"
-  - "二進位存取, MFC 中的二進位檔案作業"
-  - "檔案 I/O 類別 [C++]"
-  - "檔案 [C++], 操作"
-  - "檔案 [C++], MFC"
-  - "檔案 [C++], 序列化"
-  - "I/O [C++], MFC 類別"
-  - "I/O [MFC]"
-  - "MFC [C++], 檔案作業"
-  - "持續性 [C++]"
-  - "序列化 [C++], MFC 檔案"
+title: Files in MFC | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- serialization [MFC], MFC files
+- I/O [MFC], MFC classes
+- files [MFC], MFC
+- files [MFC], serialization
+- binary access, binary file operations in MFC
+- file I/O classes [MFC]
+- I/O [MFC]
+- persistence [MFC]
+- MFC, file operations
+- files [MFC], manipulating
+- binary access [MFC]
 ms.assetid: ae25e2c5-2859-4679-ab97-438824e93ce1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC 中的檔案
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 57c2dd6e4e69d4dccaa0a31a0dd01f62140b3334
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 MFC 程式庫， [C 檔案](../mfc/reference/cfile-class.md) 類別處理一般檔案 I\/O 作業。  這系列文章說明如何開啟和關閉檔案以及讀取和寫入資料至檔案。  它也說明檔案狀態作業。  如需說明如何在檔案使用 MFC 架構物件的序列化功能為讀取和寫入資料的一種方法，請參閱本文件的 [序列化](../mfc/serialization-in-mfc.md)。  
+---
+# <a name="files-in-mfc"></a>Files in MFC
+In the Microsoft Foundation Class Library (MFC), class [CFile](../mfc/reference/cfile-class.md) handles normal file I/O operations. This family of articles explains how to open and close files as well as read and write data to those files. It also discusses file status operations. For a description of how to use the object-based serialization features of MFC as an alternative way of reading and writing data in files, see the article [Serialization](../mfc/serialization-in-mfc.md).  
   
 > [!NOTE]
->  當您使用 MFC **CDocument** 物件時，這個架構完成您的許多序列化工作。  特別是，架構會建立並使用 `CFile` 物件。  您只需要在您的類別 **CDocument**的 `Serialize` 成員函式撰寫覆寫程式碼。  
+>  When you use MFC **CDocument** objects, the framework does much of the serialization work for you. In particular, the framework creates and uses the `CFile` object. You only have to write code in your override of the `Serialize` member function of class **CDocument**.  
   
- `CFile` 類別提供通用二進位檔案作業介面。  從 `CFile` 取得的 `CStdioFile` 和 `CMemFile` 類別和 `CMemFile` 衍生的 `CSharedFile` 類別提供特製化資料服務。  
+ The `CFile` class provides an interface for general-purpose binary file operations. The `CStdioFile` and `CMemFile` classes derived from `CFile` and the `CSharedFile` class derived from `CMemFile` supply more specialized file services.  
   
- 如需 MFC 檔案控制代碼之其他選擇的詳細資訊，請參閱《*執行階段程式庫參考*》中的 [檔案控制](../c-runtime-library/file-handling.md)。  
+ For more information about alternatives to MFC file handling, see [File Handling](../c-runtime-library/file-handling.md) in the *Run-Time Library Reference*.  
   
- 如需衍生自 `CFile` 之類別的詳細資訊，請參閱 [MFC 階層架構圖表](../mfc/hierarchy-chart.md)。  
+ For information about derived `CFile` classes, see the [MFC hierarchy chart](../mfc/hierarchy-chart.md).  
   
-## 您想要執行甚麼工作？  
- *使用 CFile*  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
+ *Use CFile*  
   
--   [使用 CFile 開啟檔案](../mfc/opening-files.md)  
+-   [Open a file with CFile](../mfc/opening-files.md)  
   
--   [使用 CFile 讀取和寫入檔案](../mfc/reading-and-writing-files.md)  
+-   [Read and write a file with CFile](../mfc/reading-and-writing-files.md)  
   
--   [使用 CFile 關閉檔案](../mfc/closing-files.md)  
+-   [Close a file with CFile](../mfc/closing-files.md)  
   
--   [使用 CFile 存取檔案狀態](../mfc/accessing-file-status.md)  
+-   [Access file status with CFile](../mfc/accessing-file-status.md)  
   
- *使用 MFC 序列化 \(物件持續性\)*  
+ *Use MFC Serialization (Object Persistence)*  
   
--   [建立可序列化的類別庫。](../mfc/serialization-making-a-serializable-class.md)  
+-   [Create a serializable class](../mfc/serialization-making-a-serializable-class.md)  
   
--   [使用 CArchive 物件序列化物件](../mfc/serialization-serializing-an-object.md)  
+-   [Serialize an object via a CArchive object](../mfc/serialization-serializing-an-object.md)  
   
--   [建立 CArchive 物件](../mfc/two-ways-to-create-a-carchive-object.md)  
+-   [Create a CArchive object](../mfc/two-ways-to-create-a-carchive-object.md)  
   
--   [使用 CArchive \<\< and \>\> 運算子](../mfc/using-the-carchive-output-and-input-operators.md)  
+-   [Use CArchive <\< and >> operators](../mfc/using-the-carchive-output-and-input-operators.md)  
   
--   [透過封存儲存和載入 CObjects 和衍生自 CObject 的物件](../mfc/storing-and-loading-cobjects-via-an-archive.md)  
+-   [Store and load CObjects and CObject-derived objects via an archive](../mfc/storing-and-loading-cobjects-via-an-archive.md)  
   
-## 請參閱  
- [概念](../mfc/mfc-concepts.md)   
- [一般 MFC 主題](../mfc/general-mfc-topics.md)   
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
  [CArchive Class](../mfc/reference/carchive-class.md)   
- [CObject Class](../mfc/reference/cobject-class.md)   
- [如何?:使用 C 檔案類別?](http://go.microsoft.com/fwlink/?LinkId=128046)
+ [CObject Class](../mfc/reference/cobject-class.md)
+

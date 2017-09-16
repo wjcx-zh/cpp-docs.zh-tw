@@ -1,5 +1,5 @@
 ---
-title: "CMFCColorDialog 類別 |Microsoft 文件"
+title: CMFCColorDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,20 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCColorDialog::m_CurrentColor data member
-- CMFCColorDialog::m_pPropSheet data member
-- CMFCColorDialog::m_btnColorSelect data member
-- CMFCColorDialog class
-- CMFCColorDialog::m_wndColors data member
-- CMFCColorDialog::m_bIsMyPalette data member
-- CMFCColorDialog::m_pColourSheetTwo data member
-- CMFCColorDialog::m_NewColor data member
-- CMFCColorDialog::m_pPalette data member
-- CMFCColorDialog::m_wndStaticPlaceHolder data member
-- CMFCColorDialog::m_pColourSheetOne data member
-- CMFCColorDialog::m_hcurPicker data member
-- CMFCColorDialog::PreTranslateMessage method
-- CMFCColorDialog::m_bPickerMode data member
+- CMFCColorDialog [MFC], CMFCColorDialog
+- CMFCColorDialog [MFC], GetColor
+- CMFCColorDialog [MFC], GetPalette
+- CMFCColorDialog [MFC], RebuildPalette
+- CMFCColorDialog [MFC], SetCurrentColor
+- CMFCColorDialog [MFC], SetNewColor
+- CMFCColorDialog [MFC], SetPageOne
+- CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
 caps.latest.revision: 30
 author: mikeblome
@@ -55,17 +49,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ac621157e0fcb5bcabef2ae8f367a1b141b4ace0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 12272d0a71099bd2e65c8c32c65fc38035da0047
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
-`CMFCColorDialog`類別表示色彩選取對話方塊。  
+# <a name="cmfccolordialog-class"></a>CMFCColorDialog Class
+The `CMFCColorDialog` class represents a color selection dialog box.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCColorDialog : public CDialogEx  
@@ -73,49 +67,49 @@ class CMFCColorDialog : public CDialogEx
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|建構 `CMFCColorDialog` 物件。|  
-|`CMFCColorDialog::~CMFCColorDialog`|解構函式。|  
+|[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Constructs a `CMFCColorDialog` object.|  
+|`CMFCColorDialog::~CMFCColorDialog`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCColorDialog::GetColor](#getcolor)|傳回目前選取的色彩。|  
-|[CMFCColorDialog::GetPalette](#getpalette)|傳回的色彩調色盤。|  
-|`CMFCColorDialog::PreTranslateMessage`|轉譯的視窗訊息，再分派給[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 如需語法和詳細資訊，請參閱[CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CDialogEx::PreTranslateMessage`。)|  
-|[CMFCColorDialog::RebuildPalette](#rebuildpalette)|調色盤會衍生自系統調色盤。|  
-|[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|設定目前選取的色彩。|  
-|[CMFCColorDialog::SetNewColor](#setnewcolor)|設定色彩最相當於指定的 RGB 值。|  
-|[CMFCColorDialog::SetPageOne](#setpageone)|選取第一個內容頁的 RGB 值。|  
-|[CMFCColorDialog::SetPageTwo](#setpagetwo)|選取第二個屬性頁的 RGB 值。|  
+|[CMFCColorDialog::GetColor](#getcolor)|Returns the current selected color.|  
+|[CMFCColorDialog::GetPalette](#getpalette)|Returns the color's palette.|  
+|`CMFCColorDialog::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For syntax and more information, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CDialogEx::PreTranslateMessage`.)|  
+|[CMFCColorDialog::RebuildPalette](#rebuildpalette)|Derives a palette from the system palette.|  
+|[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|Sets the current selected color.|  
+|[CMFCColorDialog::SetNewColor](#setnewcolor)|Sets the color most equivalent to a specified RGB value.|  
+|[CMFCColorDialog::SetPageOne](#setpageone)|Selects an RGB value for the first property page.|  
+|[CMFCColorDialog::SetPageTwo](#setpagetwo)|Selects an RGB value for the second property page.|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`m_bIsMyPalette`|`TRUE`如果色彩選取對話方塊中使用它自己的調色盤，或`FALSE`如果對話方塊中，將會使用調色盤中指定`CMFCColorDialog`建構函式。|  
-|`m_bPickerMode`|`TRUE`當使用者從選取範圍 對話方塊中，選取一個色彩否則， `FALSE`。|  
-|`m_btnColorSelect`|使用者選取 [色彩] 按鈕。|  
-|`m_CurrentColor`|目前選取的色彩。|  
-|`m_hcurPicker`|用來挑選色彩的資料指標。|  
-|`m_NewColor`|潛在選取的色彩，可以永久選取或已還原成原始的色彩。|  
-|`m_pColourSheetOne`|第一個內容頁色彩選取項目屬性工作表的指標。|  
-|`m_pColourSheetTwo`|第二個屬性頁色彩選取項目屬性工作表的指標。|  
-|`m_pPalette`|目前的邏輯調色盤。|  
-|`m_pPropSheet`|色彩選取對話方塊的屬性工作表指標。|  
-|`m_wndColors`|色彩選擇器控制項物件。|  
-|`m_wndStaticPlaceHolder`|靜態控制項的色彩選擇器的屬性工作表的預留位置。|  
+|`m_bIsMyPalette`|`TRUE` if the color selection dialog box uses its own color palette, or `FALSE` if the dialog box uses a palette that is specified in the `CMFCColorDialog` constructor.|  
+|`m_bPickerMode`|`TRUE` while the user is selecting a color from the selection dialog box; otherwise, `FALSE`.|  
+|`m_btnColorSelect`|The color button that the user has selected.|  
+|`m_CurrentColor`|The currently selected color.|  
+|`m_hcurPicker`|The cursor that is used to pick a color.|  
+|`m_NewColor`|The prospective selected color, which can be permanently selected or reverted to the original color.|  
+|`m_pColourSheetOne`|A pointer to the first property page of the color selection property sheet.|  
+|`m_pColourSheetTwo`|A pointer to the second property page of the color selection property sheet.|  
+|`m_pPalette`|The current logical palette.|  
+|`m_pPropSheet`|A pointer to the property sheet for the color selection dialog box.|  
+|`m_wndColors`|A color picker control object.|  
+|`m_wndStaticPlaceHolder`|A static control that is a placeholder for the color picker property sheet.|  
   
-## <a name="remarks"></a>備註  
- 色彩選取對話方塊會顯示為兩個頁面將屬性工作表。 在第一個頁面上，您的標準色彩從調色盤中選取系統。在第二個頁面上，您可以選取自訂色彩。  
+## <a name="remarks"></a>Remarks  
+ The color selection dialog box is displayed as a property sheet with two pages. On the first page, you select a standard color from the system palette; on the second page, you select a custom color.  
   
- 您可以建構`CMFCColorDialog`物件在堆疊上，然後呼叫`DoModal`，做為參數傳遞的初始色彩`CMFCColorDialog`建構函式。 色彩選取對話方塊接著會建立數個[CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)物件來處理每個色彩調色盤。  
+ You can construct a `CMFCColorDialog` object on the stack and then call `DoModal`, passing the initial color as a parameter to the `CMFCColorDialog` constructor. The color selection dialog box then creates several [CMFCColorPickerCtrl Class](../../mfc/reference/cmfccolorpickerctrl-class.md) objects to handle each color palette.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -128,16 +122,16 @@ class CMFCColorDialog : public CDialogEx
   
  [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的設定色彩對話方塊`CMFCColorDialog`類別。 此範例示範如何設定目前和新的色彩 對話方塊中，以及如何設定兩個屬性頁面上的 色彩 對話方塊中選取之色彩的紅色、 綠色和藍色元件。 這個範例是屬於[新的控制項範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to configure a color dialog by using various methods in the `CMFCColorDialog` class. The example shows how to set the current and the new colors of the dialog, and how to set the red, green, and blue components of a selected color on the two property pages of the color dialog. This example is part of the [New Controls sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_NewControls #&3;](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxcolordialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcolordialog.h  
   
-##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog  
- 建構 `CMFCColorDialog` 物件。  
+##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog  
+ Constructs a `CMFCColorDialog` object.  
   
 ```  
 CMFCColorDialog(
@@ -147,84 +141,84 @@ CMFCColorDialog(
     HPALETTE hPal=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `clrInit`  
- 預設色彩選項。 如果未不指定任何值，預設為 RGB(0,0,0) （黑色）。  
+ The default color selection. If no value is specified, the default is RGB(0,0,0) (black).  
   
  [in] `dwFlags`  
- （保留）。  
+ (Reserved.)  
   
  [in] `pParentWnd`  
- 對話方塊的父系或擁有者視窗的指標。  
+ A pointer to the dialog box's parent or owner window.  
   
  [in] `hPal`  
- 色彩調色盤的控制代碼。  
+ A handle to a color palette.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcolor"></a>CMFCColorDialog::GetColor  
- 擷取使用者從 [色彩] 對話方塊中選取的色彩。  
+##  <a name="getcolor"></a>  CMFCColorDialog::GetColor  
+ Retrieves the color that the user selects from the color dialog.  
   
 ```  
 COLORREF GetColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，其中包含 [色彩] 對話方塊中選取的色彩的 RGB 資訊。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the RGB information for the color selected in the color dialog box.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式之後您呼叫,`DoModal`方法。  
+### <a name="remarks"></a>Remarks  
+ Call this function after you call the `DoModal` method.  
   
-##  <a name="getpalette"></a>CMFCColorDialog::GetPalette  
- 擷取目前的色彩 對話方塊中可用的色彩調色盤。  
+##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette  
+ Retrieves the color palette that is available in the current color dialog.  
   
 ```  
 CPalette* GetPalette() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CPalette`中所指定的物件`CMFCColorDialog`建構函式。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CPalette` object that was specified in the `CMFCColorDialog` constructor.  
   
-### <a name="remarks"></a>備註  
- 色彩調色盤指定使用者可以選擇的色彩。  
+### <a name="remarks"></a>Remarks  
+ The color palette specifies the colors that the user can choose.  
   
-##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette  
- 調色盤會衍生自系統調色盤。  
+##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette  
+ Derives a palette from the system palette.  
   
 ```  
 void RebuildPalette();
 ```  
   
-##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor  
- 設定目前的色彩 對話方塊。  
+##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor  
+ Sets the current color of the dialog box.  
   
 ```  
 void SetCurrentColor(COLORREF rgb);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rgb`  
- RGB 色彩值  
+ An RGB color value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor  
- 將目前的色彩設定為目前最類似的調色盤的色彩。  
+##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor  
+ Sets the current color to the color in the current palette that is most similar.  
   
 ```  
 void SetNewColor(COLORREF rgb);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rgb`  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)指定 RGB 色彩。  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) that specifies an RGB color.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne  
- 第一個內容頁的 [色彩] 對話方塊上，明確地指定所選取之色彩的紅色、 綠色和藍色元件。  
+##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne  
+ Explicitly specifies the red, green, and blue components of a selected color on the first property page of a color dialog.  
   
 ```  
 void SetPageOne(
@@ -233,20 +227,20 @@ void SetPageOne(
     BYTE B);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `R`  
- 指定 RGB 值的紅色元件。  
+ Specifies the red component of the RGB value.  
   
  [in] `G`  
- 指定 RGB 值的綠色元件。  
+ Specifies the green component of the RGB value.  
   
  [in] `B`  
- 指定藍元件的 RGB 值。  
+ Specifies the blue component of the RGB value.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo  
- 第二個屬性頁的 [色彩] 對話方塊上，明確地指定所選取之色彩的紅色、 綠色和藍色元件。  
+##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo  
+ Explicitly specifies the red, green, and blue components of a selected color on the second property page of a color dialog.  
   
 ```  
 void SetPageTwo(
@@ -255,20 +249,20 @@ void SetPageTwo(
     BYTE B);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `R`  
- 指定 RGB 值的紅色的元件  
+ Specifies a red component of the RGB value  
   
  [in] `G`  
- 指定 RGB 值的綠色的元件  
+ Specifies a green component of an RGB value  
   
  [in] `B`  
- 指定 RGB 值的藍色的元件  
+ Specifies a blue component of an RGB value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCColorPickerCtrl Class](../../mfc/reference/cmfccolorpickerctrl-class.md)
 

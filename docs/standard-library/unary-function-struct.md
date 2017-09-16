@@ -1,5 +1,5 @@
 ---
-title: "unary_function 結構 | Microsoft Docs"
+title: unary_function Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unary
 - functional/std::unary
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 85c900f2263ae1c1089478badc85388e3b5e8548
-ms.openlocfilehash: 3b7f2da8315046e7ed39f73e76832940f5ba199b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bf173d75b04598f7472e7c906b74b9d11fc76870
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="unaryfunction-struct"></a>unary_function 結構
-空的基底結構，這個結構定義可能由衍生類別繼承並提供一元函式物件的類型。  
+# <a name="unaryfunction-struct"></a>unary_function Struct
+An empty base struct that defines types that may be inherited by derived classes that provides a unary function object.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
 ```  
 struct unary_function 
 {
@@ -52,12 +51,12 @@ struct unary_function
    typedef Result result_type;
 };  
 ``` 
-## <a name="remarks"></a>備註  
- 範本結構做為定義格式為 **result_type**`operator()`( **constargument_type&**) **const** 之成員函式的類別基底。  
+## <a name="remarks"></a>Remarks  
+ The template struct serves as a base for classes that define a member function of the form **result_type**`operator()`( **constargument_type&**) **const**.  
   
- 所有此類衍生的一元函式可以將其唯一引數類型參考為 **argument_type**，並將其傳回類型參考為 **result_type**。  
+ All such derived unary functions can refer to their sole argument type as **argument_type** and their return type as **result_type**.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_unary_function.cpp  
@@ -107,14 +106,14 @@ The number of elements in v1 greater than 10 is: 3.
 *\  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

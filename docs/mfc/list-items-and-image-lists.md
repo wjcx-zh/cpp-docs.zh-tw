@@ -1,46 +1,64 @@
 ---
-title: "清單項目和影像清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList 類別, 和清單項目"
-  - "CListCtrl 類別, 影像清單"
-  - "影像清單 [C++], 清單項目"
-  - "清單項目, 影像清單"
+title: List Items and Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], and list items
+- image lists [MFC], list items
+- CListCtrl class [MFC], image lists
+- list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
 caps.latest.revision: 13
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 清單項目和影像清單
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de7e5fa9537d4cec3fed7c891fba9a7c4c11c4d2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-一個「項目」在清單控制項 \([CListCtrl](../mfc/reference/clistctrl-class.md)\) 包括圖示、標籤和可能其他資訊 \(「子項目」\)。  
+---
+# <a name="list-items-and-image-lists"></a>List Items and Image Lists
+An "item" in a list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) consists of an icon, a label, and possibly other information (in "subitems").  
   
- 清單控制項項目的圖示會出現在影像清單中。  影像清單包含圖示檢視的大型圖示。  第二，選擇性，影像清單在控制項的其他檢視包含相同的圖示的小型版本可供使用。  第三個選擇性清單在某些檢視包含「狀態影像，例如核取方塊，以小圖示上顯示的。  第四個選擇性清單包含在清單控制項中的標頭項目中顯示的影像。  
+ The icons for list control items are contained in image lists. One image list contains full-sized icons used in icon view. A second, optional, image list contains smaller versions of the same icons for use in other views of the control. A third optional list contains "state" images, such as check boxes, for display in front of the small icons in certain views. A fourth optional list contains images that are displayed in individual header items of the list control.  
   
 > [!NOTE]
->  如果清單檢視控制項建立 `LVS_SHAREIMAGELISTS` 樣式，您要負責終結影像清單，並且不再使用時。  如果您指派相同的影像清單對多清單檢視控制項，請指定樣式;否則，多個控制項會終結相同的影像清單。  
+>  If a list view control is created with the `LVS_SHAREIMAGELISTS` style, you are responsible for destroying the image lists when they are no longer in use. Specify this style if you assign the same image lists to multiple list view controls; otherwise, more than one control might try to destroy the same image list.  
   
- 如需清單項目的詳細資訊，請參閱 [清單檢視影像清單](http://msdn.microsoft.com/library/windows/desktop/bb774736) 和 [項目和子項目](http://msdn.microsoft.com/library/windows/desktop/bb774736) 在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  請參閱《 *MFC 參考》中的*[CImageList](../mfc/reference/cimagelist-class.md) 和 [使用 CImageList](../mfc/using-cimagelist.md) 類別在文件這系列。  
+ For more information about list items, see [List View Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb774736) and [Items and Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK. Also see class [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Using CImageList](../mfc/using-cimagelist.md) in this family of articles.  
   
- 在插入新的項目至清單時，要建立清單控制項，您必須提供要用的影像清單。  下列範例示範這個程序中， `m_pImagelist` 是 `CImageList` 型別指標，而且 `m_listctrl` 為 `CListCtrl` 資料成員。  
+ To create a list control, you need to supply image lists to be used when you insert new items into the list. The following example demonstrates this procedure, where `m_pImagelist` is a pointer of type `CImageList` and `m_listctrl` is a `CListCtrl` data member.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/CPP/list-items-and-image-lists_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   
- 不過，因此，如果您不打算顯示在清單檢視或清單控制項的圖示，您不需要影像清單。  
+ However, if you don't plan to display icons in your list view or list control, you don't need image lists.  
   
-## 請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

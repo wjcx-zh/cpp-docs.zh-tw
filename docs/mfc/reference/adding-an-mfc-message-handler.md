@@ -1,5 +1,5 @@
 ---
-title: "加入 MFC 訊息處理常式 |Microsoft 文件"
+title: Adding an MFC Message Handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- message handling, adding handlers
+- message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
 caps.latest.revision: 9
 author: mikeblome
@@ -33,28 +33,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: b80ebf607b7a11bf80f14c5375a5ace27ce1047c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c5568c7d75b0d98349c7086d9efd367c15deda51
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
-您可以[使用 [屬性] 視窗中加入訊息處理常式](../../mfc/reference/mapping-messages-to-functions.md)（成員函式處理 Windows 訊息的） 類別和對應的 Windows 訊息至訊息處理常式。 您也可以加入[任何對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。  
+# <a name="adding-an-mfc-message-handler"></a>Adding an MFC Message Handler
+You can [use the Properties window to add a message handler](../../mfc/reference/mapping-messages-to-functions.md) (a member function that handles Windows messages) to a class and map Windows messages to the message handler. You can also add [an event handler for any dialog box control](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
   
- 使用 [屬性] 視窗來定義訊息和事件處理函式，您可以自動更新訊息分派資料表 （或） 訊息對應和類別標頭檔。  
+ By using the Properties window to define message- and event-handling functions, you can automatically update the message-dispatch table (or message map) and your class header file.  
   
 > [!NOTE]
->  您可以使用 [屬性] 視窗中，ATL 類別加入訊息處理常式不過，某些結果可能不同。 如需詳細資訊，請參閱 ATL 主題[加入 ATL 訊息處理常式](../../atl/adding-an-atl-message-handler.md)。  
+>  You can add a message handler to an ATL class using the Properties window; however, some results may vary. For more information, see the ATL topic [Adding an ATL Message Handler](../../atl/adding-an-atl-message-handler.md).  
   
-## <a name="see-also"></a>另請參閱  
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)   
- [對話方塊編輯器](../../windows/dialog-editor.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)   
+ [Dialog Editor](../../windows/dialog-editor.md)
 
 

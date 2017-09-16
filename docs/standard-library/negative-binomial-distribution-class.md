@@ -1,5 +1,5 @@
 ---
-title: "negative_binomial_distribution 類別 | Microsoft Docs"
+title: negative_binomial_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- negative_binomial_distribution
 - random/std::negative_binomial_distribution
 - random/std::negative_binomial_distribution::reset
 - random/std::negative_binomial_distribution::k
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- negative_binomial_distribution class
+- std::negative_binomial_distribution [C++]
+- std::negative_binomial_distribution [C++], reset
+- std::negative_binomial_distribution [C++], k
+- std::negative_binomial_distribution [C++], p
+- std::negative_binomial_distribution [C++], param
+- std::negative_binomial_distribution [C++], min
+- std::negative_binomial_distribution [C++], max
+- std::negative_binomial_distribution [C++], param_type
+- std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
 caps.latest.revision: 15
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 28d1c6ab187e29198380ceab75cd588b9d69340d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 21d45442f60f5cb290430fc6842b75747ac66245
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 類別
-產生負二項式分佈。  
+# <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution Class
+Generates a negative binomial distribution.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template<class IntType = int>
@@ -170,7 +177,7 @@ int main()
   
 ```  
   
-第一次執行：  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -189,7 +196,7 @@ Histogram for 100 samples:
     5 ::  
 ```  
   
-第二次執行：  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -233,38 +240,38 @@ Histogram for 100 samples:
     69 ::::  
 ```  
   
-## <a name="requirements"></a>需求  
-**標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**命名空間：** std  
+**Namespace:** std  
   
 ##  <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution  
-建構分佈。  
+Constructs the distribution.  
   
 ```  
 explicit negative_binomial_distribution(result_type k = 1, double p = 0.5);
 explicit negative_binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *k*  
-`k` 分佈參數。  
+The `k` distribution parameter.  
   
 *p*  
-`p` 分佈參數。  
+The `p` distribution parameter.  
   
 *parm*  
-用於建構分佈的參數結構。  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>備註  
-**前置條件：**`0.0 < k` 和 `0.0 < p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < k` and `0.0 < p ≤ 1.0`  
   
-第一個建構函式會建構預存 `p` 值具有 *p* 值而預存 `k` 值具有 *k* 值的物件。  
+The first constructor constructs an object whose stored `p` value holds the value *p* and whose stored `k` value holds the value *k*.  
   
-第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  negative_binomial_distribution::param_type  
-儲存分佈的參數。  
+Stores the parameters of the distribution.  
   
 struct param_type {  
    typedef negative_binomial_distribution`<`result_type> distribution_type;  
@@ -272,21 +279,21 @@ struct param_type {
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *k*  
-`k` 分佈參數。  
+The `k` distribution parameter.  
   
 *p*  
-`p` 分佈參數。  
+The `p` distribution parameter.  
   
 *right*  
-用來進行比較的 `param_type` 結構。  
+The `param_type` structure used to compare.  
   
-### <a name="remarks"></a>備註  
-**前置條件：**`0.0 < k` 和 `0.0 < p ≤ 1.0`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < k` and `0.0 < p ≤ 1.0`  
   
-此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 

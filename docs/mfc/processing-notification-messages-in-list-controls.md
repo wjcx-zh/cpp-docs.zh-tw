@@ -1,35 +1,53 @@
 ---
-title: "處理清單控制項中的通知訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 類別, 處理通知"
-  - "處理通知"
+title: Processing Notification Messages in List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- processing notifications [MFC]
+- CListCtrl class [MFC], processing notifications
 ms.assetid: 1f0e296e-d2a3-48fc-ae38-51d7fb096f51
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 處理清單控制項中的通知訊息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5891cae5528e221bebf5d59863881dd863fd99a4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-使用者按一下資料行行首，請拖曳圖示，編輯標籤，依此類推，清單控制項 \([CListCtrl](../mfc/reference/clistctrl-class.md)\) 傳送通知訊息至其父視窗。  如果您想要執行某個動作以回應，請處理這些訊息。  例如，當使用者按一下資料行行首時，您可能會想要排序依據按一下資料行的內容項目，在 Microsoft Outlook。  
+---
+# <a name="processing-notification-messages-in-list-controls"></a>Processing Notification Messages in List Controls
+As users click column headers, drag icons, edit labels, and so on, the list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) sends notification messages to its parent window. Handle these messages if you want to do something in response. For example, when the user clicks a column header, you might want to sort the items based on the contents of the clicked column, as in Microsoft Outlook.  
   
- 從清單控制項處理 **WM\_NOTIFY** 訊息中的檢視或對話方塊類別。  使用屬性視窗建立視通知訊息的 switch 的 [OnChildNotify](../Topic/CWnd::OnChildNotify.md) 處理常式函式被處理。  
+ Process **WM_NOTIFY** messages from the list control in your view or dialog class. Use the Properties window to create an [OnChildNotify](../mfc/reference/cwnd-class.md#onchildnotify) handler function with a switch statement based on which notification message is being handled.  
   
- 如需清單控制項可以傳送給其父視窗通知的清單，請參閱 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]的 [清單檢視控制項參考。](http://msdn.microsoft.com/library/windows/desktop/bb774737) 。  
+ For a list of the notifications a list control can send to its parent window, see [List View Control Reference](http://msdn.microsoft.com/library/windows/desktop/bb774737) in the Windows SDK.  
   
-## 請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,61 +1,80 @@
 ---
-title: "OLE 容器類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 類別 [C++]"
-  - "容器類別 [C++]"
-  - "容器 [C++], OLE 容器應用程式"
-  - "OLE [C++], 類別"
-  - "OLE 類別 [C++]"
-  - "視覺化編輯 [C++], 類別"
+title: OLE Container Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- container classes [MFC]
+- OLE classes [MFC]
+- visual editing [MFC], classes
+- OLE [MFC], classes
+- containers [MFC], OLE container applications
 ms.assetid: 1e27e1ab-4c22-41eb-8547-6915c72668ae
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 容器類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb954b9d9671bc9f09bae737469c90151c7011f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-伺服器容器使用這些類別。  `COleLinkingDoc` 和 `COleDocument` 管理 `COleClientItem` 物件的集合。  您自己的文件類別而非從 **CDocument**衍生，從 `COleLinkingDoc` 或 `COleDocument`是衍生，取決於您是否想要支援連結至您的文件中內嵌的物件。  
+---
+# <a name="ole-container-classes"></a>OLE Container Classes
+These classes are used by container applications. Both `COleLinkingDoc` and `COleDocument` manage collections of `COleClientItem` objects. Rather than deriving your document class from **CDocument**, you'll derive it from `COleLinkingDoc` or `COleDocument`, depending on whether you want support for links to objects embedded in your document.  
   
- 使用 `COleClientItem` 物件表示從另一份文件中內嵌或連結至另一個文件的文件的每個 OLE 項目。  
+ Use a `COleClientItem` object to represent each OLE item in your document that is embedded from another document or is a link to another document.  
   
  [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- 支援主動式文件內含項目。  
+ Supports active document containment.  
   
  [COleDocument](../mfc/reference/coledocument-class.md)  
- 使用為複合檔案實作，以及基礎容器支援。  以容器階層架構的根類別衍生自 `CDocItem`。  這個類別可以當做基底類別為容器文件且為 `COleServerDoc`的基底類別。  
+ Used for compound document implementation, as well as basic container support. Serves as a container for classes derived from `CDocItem`. This class can be used as the base class for container documents and is the base class for `COleServerDoc`.  
   
  [COleLinkingDoc](../mfc/reference/colelinkingdoc-class.md)  
- 用於連接的基礎結構的類別衍生自 `COleDocument` 。  如果您想要對支援連接至內嵌物件，您應該從這個類別衍生您的容器應用程式的文件類別而不是 `COleDocument` 。  
+ A class derived from `COleDocument` that provides the infrastructure for linking. You should derive the document classes for your container applications from this class instead of from `COleDocument` if you want them to support links to embedded objects.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- 維護在 Rich 編輯控制項中 OLE 用戶端項目的清單。  使用 [CRichEditView](../mfc/reference/cricheditview-class.md) 和 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)。  
+ Maintains the list of OLE client items that are in the rich edit control. Used with [CRichEditView](../mfc/reference/cricheditview-class.md) and [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md).  
   
  [CDocItem](../mfc/reference/cdocitem-class.md)  
- `COleClientItem` 和`COleServerItem` 的基底類別。  衍生自 `CDocItem` 的類別物件代表文件的部分。  
+ Abstract base class of `COleClientItem` and `COleServerItem`. Objects of classes derived from `CDocItem` represent parts of documents.  
   
  [COleClientItem](../mfc/reference/coleclientitem-class.md)  
- 表示連接的用戶端框具有內嵌或連結的 OLE 項目的用戶端項目類別。  從這個類別衍生您的用戶端項目。  
+ A client item class that represents the client's side of the connection to an embedded or linked OLE item. Derive your client items from this class.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- 提供用戶端存取在 Rich 編輯控制項儲存的 OLE 項目，同時使用 `CRichEditView` 和 `CRichEditDoc`。  
+ Provides client-side access to an OLE item stored in a rich edit control when used with `CRichEditView` and `CRichEditDoc`.  
   
  [COleException](../mfc/reference/coleexception-class.md)  
- 例外狀況造成 OLE 處理失敗。  容器和伺服器會使用這個類別。  
+ An exception resulting from a failure in OLE processing. This class is used by both containers and servers.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

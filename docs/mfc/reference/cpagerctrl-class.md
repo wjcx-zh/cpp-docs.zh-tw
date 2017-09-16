@@ -1,5 +1,5 @@
 ---
-title: "CPagerCtrl 類別 |Microsoft 文件"
+title: CPagerCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,7 +35,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPagerCtrl class
+- CPagerCtrl [MFC], CPagerCtrl
+- CPagerCtrl [MFC], Create
+- CPagerCtrl [MFC], CreateEx
+- CPagerCtrl [MFC], ForwardMouse
+- CPagerCtrl [MFC], GetBkColor
+- CPagerCtrl [MFC], GetBorder
+- CPagerCtrl [MFC], GetButtonSize
+- CPagerCtrl [MFC], GetButtonState
+- CPagerCtrl [MFC], GetDropTarget
+- CPagerCtrl [MFC], GetScrollPos
+- CPagerCtrl [MFC], IsButtonDepressed
+- CPagerCtrl [MFC], IsButtonGrayed
+- CPagerCtrl [MFC], IsButtonHot
+- CPagerCtrl [MFC], IsButtonInvisible
+- CPagerCtrl [MFC], IsButtonNormal
+- CPagerCtrl [MFC], RecalcSize
+- CPagerCtrl [MFC], SetBkColor
+- CPagerCtrl [MFC], SetBorder
+- CPagerCtrl [MFC], SetButtonSize
+- CPagerCtrl [MFC], SetChild
+- CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
 caps.latest.revision: 26
 author: mikeblome
@@ -55,17 +75,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8b8bf05873239f274a9b1285797c01123fe071f7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e8ef536f35e3ec4db57befc51b79549b346f71f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpagerctrl-class"></a>CPagerCtrl 類別
-`CPagerCtrl` 類別會封裝 Windows 頁面巡覽區控制項，可以將不符合容器視窗大小的包含視窗捲動到檢視中。  
+# <a name="cpagerctrl-class"></a>CPagerCtrl Class
+The `CPagerCtrl` class wraps the Windows pager control, which can scroll into view a contained window that does not fit the containing window.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPagerCtrl : public CWnd  
@@ -73,45 +93,45 @@ class CPagerCtrl : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPagerCtrl::CPagerCtrl](#cpagerctrl)|建構 `CPagerCtrl` 物件。|  
+|[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Constructs a `CPagerCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPagerCtrl::Create](#create)|使用指定的樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。|  
-|[CPagerCtrl::CreateEx](#createex)|使用指定的延伸樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|啟用或停用轉送[WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616)包含在目前的頁面巡覽區控制項的視窗訊息。|  
-|[CPagerCtrl::GetBkColor](#getbkcolor)|擷取目前的頁面巡覽區控制項的背景色彩。|  
-|[CPagerCtrl::GetBorder](#getborder)|擷取目前的頁面巡覽區控制項的框線大小。|  
-|[CPagerCtrl::GetButtonSize](#getbuttonsize)|擷取目前的頁面巡覽區控制項的按鈕大小。|  
-|[CPagerCtrl::GetButtonState](#getbuttonstate)|擷取目前的頁面巡覽區控制項中指定的按鍵的狀態。|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|擷取[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)目前的頁面巡覽區控制項的介面。|  
-|[CPagerCtrl::GetScrollPos](#getscrollpos)|擷取目前的頁面巡覽區控制項的捲動位置。|  
-|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|指出指定的按鈕，目前的頁面巡覽區控制項是否處於`pressed`狀態。|  
-|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|指出指定的按鈕，目前的頁面巡覽區控制項是否處於`grayed`狀態。|  
-|[CPagerCtrl::IsButtonHot](#isbuttonhot)|指出指定的按鈕，目前的頁面巡覽區控制項是否處於`hot`狀態。|  
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|指出指定的按鈕，目前的頁面巡覽區控制項是否處於`invisible`狀態。|  
-|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|指出指定的按鈕，目前的頁面巡覽區控制項是否處於`normal`狀態。|  
-|[CPagerCtrl::RecalcSize](#recalcsize)|導致目前的頁面巡覽區控制項重新計算包含視窗的大小。|  
-|[CPagerCtrl::SetBkColor](#setbkcolor)|設定目前的頁面巡覽區控制項的背景色彩。|  
-|[CPagerCtrl::SetBorder](#setborder)|設定目前的頁面巡覽區控制項的框線大小。|  
-|[CPagerCtrl::SetButtonSize](#setbuttonsize)|設定目前的頁面巡覽區控制項的按鈕大小。|  
-|[CPagerCtrl::SetChild](#setchild)|設定目前的頁面巡覽區控制項所包含的視窗。|  
-|[CPagerCtrl::SetScrollPos](#setscrollpos)|設定目前的頁面巡覽區控制項的捲動位置。|  
+|[CPagerCtrl::Create](#create)|Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.|  
+|[CPagerCtrl::CreateEx](#createex)|Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Enables or disables forwarding [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages to the window that is contained in the current pager control.|  
+|[CPagerCtrl::GetBkColor](#getbkcolor)|Retrieves the background color of the current pager control.|  
+|[CPagerCtrl::GetBorder](#getborder)|Retrieves the border size of the current pager control.|  
+|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Retrieves the button size of the current pager control.|  
+|[CPagerCtrl::GetButtonState](#getbuttonstate)|Retrieves the state of the specified button in the current pager control.|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Retrieves the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface for the current pager control.|  
+|[CPagerCtrl::GetScrollPos](#getscrollpos)|Retrieves the scroll position of the current pager control.|  
+|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Indicates whether the specified button of the current pager control is in `pressed` state.|  
+|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Indicates whether the specified button of the current pager control is in `grayed` state.|  
+|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Indicates whether the specified button of the current pager control is in `hot` state.|  
+|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Indicates whether the specified button of the current pager control is in `invisible` state.|  
+|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Indicates whether the specified button of the current pager control is in `normal` state.|  
+|[CPagerCtrl::RecalcSize](#recalcsize)|Causes the current pager control to recalculate the size of the contained window.|  
+|[CPagerCtrl::SetBkColor](#setbkcolor)|Sets the background color of the current pager control.|  
+|[CPagerCtrl::SetBorder](#setborder)|Sets the border size of the current pager control.|  
+|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Sets the button size of the current pager control.|  
+|[CPagerCtrl::SetChild](#setchild)|Sets the contained window for the current pager control.|  
+|[CPagerCtrl::SetScrollPos](#setscrollpos)|Sets the scroll position of the current pager control.|  
   
-## <a name="remarks"></a>備註  
- 頁面巡覽區控制項是包含是線性和大於所包含的視窗，並可讓您包含的視窗捲動到檢視的另一個視窗的視窗。 頁面巡覽區控制項顯示兩個捲軸按鈕，會自動地消失包含的視窗捲動到最遠的範圍，與否則會重新出現。 您可以建立水平或垂直捲動頁面巡覽區控制項。  
+## <a name="remarks"></a>Remarks  
+ A pager control is a window that contains another window that is linear and larger than the containing window, and enables you to scroll the contained window into view. The pager control displays two scroll buttons that automatically disappear when the contained window is scrolled to its farthest extent, and reappear otherwise. You can create a pager control that scrolls either horizontally or vertically.  
   
- 比方說，如果您的應用程式有一個工具列，寬度不足以顯示所有項目，您可以指定頁面巡覽區控制項工具列和使用者能夠捲動到左邊或右邊來存取所有項目工具列。 Microsoft Internet Explorer 版本 4.0 （commctrl.dll 版本 4.71） 介紹頁面巡覽區控制項。  
+ For example, if your application has a toolbar that is not wide enough to show all of its items, you can assign the toolbar to a pager control and users will be able to scroll the toolbar to the left or right to access all of the items. Microsoft Internet Explorer Version 4.0 (commctrl.dll version 4.71) introduces the pager control.  
   
- `CPagerCtrl`類別衍生自[CWnd](../../mfc/reference/cwnd-class.md)類別。 如需詳細資訊和頁面巡覽區控制項的說明，請參閱[頁面巡覽區控制項](http://msdn.microsoft.com/library/windows/desktop/bb760855)。  
+ The `CPagerCtrl` class is derived from the [CWnd](../../mfc/reference/cwnd-class.md) class. For more information and an illustration of a pager control, see [Pager Controls](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -120,21 +140,21 @@ class CPagerCtrl : public CWnd
   
  `CPagerCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
- 建構 `CPagerCtrl` 物件。  
+##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
+ Constructs a `CPagerCtrl` object.  
   
 ```  
 CPagerCtrl();
 ```  
   
-### <a name="remarks"></a>備註  
- 使用[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)方法來建立頁面巡覽區控制項，並將其附加至`CPagerCtrl`物件。  
+### <a name="remarks"></a>Remarks  
+ Use the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method to create a pager control and attach it to the `CPagerCtrl` object.  
   
-##  <a name="create"></a>CPagerCtrl::Create  
- 使用指定的樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。  
+##  <a name="create"></a>  CPagerCtrl::Create  
+ Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -144,28 +164,28 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwStyle`|位元組合 (OR)[視窗樣式](../../mfc/reference/window-styles.md)和[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)来套用至控制項。|  
-|[in] `rect`|參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含用戶端座標中控制項的大小與位置。|  
-|[in] `pParentWnd`|指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 此參數不得為`NULL`。|  
-|[in] `nID`|控制項的 ID。|  
+|[in] `dwStyle`|A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](http://msdn.microsoft.com/library/windows/desktop/bb760859) to be applied to the control.|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|  
+|[in] `pParentWnd`|A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be `NULL`.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 若要建立頁面巡覽區控制項，宣告`CPagerCtrl`變數，然後呼叫[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)位於變數上的方法。  
+### <a name="remarks"></a>Remarks  
+ To create a pager control, declare a `CPagerCtrl` variable, then call the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method on that variable.  
   
-### <a name="example"></a>範例  
- 下列範例會建立頁面巡覽區控制項，則會使用[CPagerCtrl::SetChild](#setchild)方法與頁面巡覽區控制項產生關聯很長的按鈕控制項。 然後此範例使用[CPagerCtrl::SetButtonSize](#setbuttonsize)方法，以將頁面巡覽區控制項的高度設為 20 像素，而[CPagerCtrl::SetBorder](#setborder)方法，將框線粗細設定為 1 個像素。  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CPagerCtrl::CreateEx  
- 使用指定的延伸樣式建立頁面巡覽區控制項，並將其附加至目前`CPagerCtrl`物件。  
+##  <a name="createex"></a>  CPagerCtrl::CreateEx  
+ Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -176,380 +196,380 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|若要套用至控制項的延伸樣式的位元組合。 如需詳細資訊，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函式。|  
-|[in] `dwStyle`|位元組合 (OR)[視窗樣式](../../mfc/reference/window-styles.md)和[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)来套用至控制項。|  
-|[in] `rect`|參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，其中包含用戶端座標中控制項的大小與位置。|  
-|[in] `pParentWnd`|指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。 此參數不得為`NULL`。|  
-|[in] `nID`|控制項的 ID。|  
+|[in] `dwExStyle`|A bitwise combination of extended styles to be applied to the control. For more information, see the `dwExStyle` parameter of the [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) function.|  
+|[in] `dwStyle`|A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](http://msdn.microsoft.com/library/windows/desktop/bb760859) to be applied to the control.|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|  
+|[in] `pParentWnd`|A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be `NULL`.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 若要建立頁面巡覽區控制項，宣告`CPagerCtrl`變數，然後呼叫[CPagerCtrl::Create](#create)或[CPagerCtrl::CreateEx](#createex)位於變數上的方法。  
+### <a name="remarks"></a>Remarks  
+ To create a pager control, declare a `CPagerCtrl` variable, then call the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method on that variable.  
   
-##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
- 啟用或停用轉送[WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616)包含在目前的頁面巡覽區控制項的視窗訊息。  
+##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
+ Enables or disables forwarding [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages to the window that is contained in the current pager control.  
   
 ```  
 void ForwardMouse(BOOL bForward);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `bForward`|`true`將滑鼠訊息轉送或`false`將滑鼠訊息無法轉送。|  
+|[in] `bForward`|`true` to forward mouse messages, or `false` to not forward mouse messages.|  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) message, which is described in the Windows SDK.  
   
-##  <a name="getborder"></a>CPagerCtrl::GetBorder  
- 擷取目前的頁面巡覽區控制項的框線大小。  
+##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
+ Retrieves the border size of the current pager control.  
   
 ```  
 int GetBorder() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的框線大小，以像素為單位。  
+### <a name="return-value"></a>Return Value  
+ The current border size, measured in pixels.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列範例會使用[CPagerCtrl::GetBorder](#getborder)方法來擷取頁面巡覽區控制項的框線的粗細。  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::GetBorder](#getborder) method to retrieve the thickness of the pager control's border.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&5;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
- 擷取目前的頁面巡覽區控制項的背景色彩。  
+##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
+ Retrieves the background color of the current pager control.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，其中包含目前的頁面巡覽區控制項的背景色彩。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the current background color of the pager control.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列範例會使用[CPagerCtrl::SetBkColor](#setbkcolor)方法，將頁面巡覽區控制項的背景色彩設定為紅色，而[CPagerCtrl::GetBkColor](#getbkcolor)方法，以確認已進行變更。  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to set the background color of the pager control to red, and the [CPagerCtrl::GetBkColor](#getbkcolor) method to confirm that the change was made.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
- 擷取目前的頁面巡覽區控制項的按鈕大小。  
+##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
+ Retrieves the button size of the current pager control.  
   
 ```  
 int GetButtonSize() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前按鈕的大小，單位為像素為單位。  
+### <a name="return-value"></a>Return Value  
+ The current button size, measured in pixels.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) message, which is described in the Windows SDK.  
   
- 如果頁面巡覽區控制項有`PGS_HORZ`樣式 按鈕的大小會決定頁面巡覽區按鈕的寬度與頁面巡覽區控制項有`PGS_VERT`樣式 按鈕的大小會決定頁面巡覽區按鈕的高度。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。  
+ If the pager control has the `PGS_HORZ` style, the button size determines the width of the pager buttons, and if the pager control has the `PGS_VERT` style, the button size determines the height of the pager buttons. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
- 擷取目前的頁面巡覽區控制項中指定的捲軸按鈕的狀態。  
+##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
+ Retrieves the state of the specified scroll button in the current pager control.  
   
 ```  
 DWORD GetButtonState(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左按鈕和`PGB_BOTTOMORRIGHT`的向右按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`下方的按鈕。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>傳回值  
- 所指定的按鍵的狀態`iButton`參數。 The state is either `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, or `PGF_HOT`. 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
+### <a name="return-value"></a>Return Value  
+ The state of the button specified by the `iButton` parameter. The state is either `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, or `PGF_HOT`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK.  
   
-##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
- 擷取[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)目前的頁面巡覽區控制項的介面。  
+##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
+ Retrieves the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface for the current pager control.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`IDropTarget`目前的頁面巡覽區控制項的介面。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `IDropTarget` interface for the current pager control.  
   
-### <a name="remarks"></a>備註  
- `IDropTarget`是您所實作的介面的其中一個支援您的應用程式中的拖放作業。  
+### <a name="remarks"></a>Remarks  
+ `IDropTarget` is one of the interfaces you implement to support drag-and-drop operations in your application.  
   
- 這個方法會傳送[PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此方法的呼叫端會負責呼叫`Release`成員[IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679)介面時不再需要的介面。  
+ This method sends the [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) message, which is described in the Windows SDK. The caller of this method is responsible for calling the `Release` member of the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface when the interface is no longer needed.  
   
-##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
- 擷取目前的頁面巡覽區控制項的捲動位置。  
+##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
+ Retrieves the scroll position of the current pager control.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的捲動位置，以像素為單位。  
+### <a name="return-value"></a>Return Value  
+ The current scroll position, measured in pixels.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列範例會使用[CPagerCtrl::GetScrollPos](#getscrollpos)方法來擷取目前捲動位置的頁面巡覽區控制項。 如果為零，最左邊的位置，已經不捲動頁面巡覽區控制項的範例會使用[CPagerCtrl::SetScrollPos](#setscrollpos)方法，以將捲軸的位置設定為零。  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::GetScrollPos](#getscrollpos) method to retrieve the current scroll position of the pager control. If the pager control is not already scrolled to zero, the leftmost position, the example uses the [CPagerCtrl::SetScrollPos](#setscrollpos) method to set the scroll position to zero.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&7;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
- 表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於已按下的狀態。  
+##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
+ Indicates whether the specified scroll button of the current pager control is in pressed state.  
   
 ```  
 BOOL IsButtonDepressed(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左按鈕和`PGB_BOTTOMORRIGHT`的向右按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`下方的按鈕。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕是處於已按下狀態;否則， `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in pressed state; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_DEPRESSED`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_DEPRESSED`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
- 表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於灰色的狀態。  
+##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
+ Indicates whether the specified scroll button of the current pager control is in grayed state.  
   
 ```  
 BOOL IsButtonGrayed(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左按鈕和`PGB_BOTTOMORRIGHT`的向右按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`下方的按鈕。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕是處於灰色狀態;否則， `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in grayed state; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_GRAYED`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_GRAYED`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
- 表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於作用中狀態。  
+##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
+ Indicates whether the specified scroll button of the current pager control is in hot state.  
   
 ```  
 BOOL IsButtonHot(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左按鈕和`PGB_BOTTOMORRIGHT`的向右按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`下方的按鈕。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕處於作用中狀態。否則， `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in hot state; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_HOT`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_HOT`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
- 表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於隱藏狀態。  
+##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
+ Indicates whether the specified scroll button of the current pager control is in invisible state.  
   
 ```  
 BOOL IsButtonInvisible(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左按鈕和`PGB_BOTTOMORRIGHT`的向右按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`下方的按鈕。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕是不可見狀態。否則， `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in invisible state; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- Windows 會讓捲軸按鈕以特定方向時則包含的視窗捲動以顯示其最遠由於按一下按鈕進一步無法讓多個 [包含] 視窗中檢視。  
+### <a name="remarks"></a>Remarks  
+ Windows makes the scroll button in a particular direction invisible when the contained window is scrolled to its farthest extent because clicking the button further cannot bring more of the contained window into view.  
   
- 這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_INVISIBLE`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_INVISIBLE`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-### <a name="example"></a>範例  
- 下列範例會使用[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)方法，以判斷是否頁面巡覽區控制項的左與向右捲動按鈕會顯示。  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) method to determine whether the pager control's left and right scroll buttons are visible.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&6;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
- 表示指定之捲軸按鈕的目前頁面巡覽區控制項是否處於正常狀態。  
+##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
+ Indicates whether the specified scroll button of the current pager control is in normal state.  
   
 ```  
 BOOL IsButtonNormal(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|表示要擷取狀態的按鈕。 如果頁面巡覽區控制項樣式`PGS_HORZ`，指定`PGB_TOPORLEFT`左按鈕和`PGB_BOTTOMORRIGHT`的向右按鈕。 如果頁面巡覽區控制項樣式`PGS_VERT`，指定`PGB_TOPORLEFT`頂端的按鈕和`PGB_BOTTOMORRIGHT`下方的按鈕。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>傳回值  
- `true`如果指定的按鈕處於正常狀態。否則， `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in normal state; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 然後它會測試是否會傳回的狀態為`PGF_NORMAL`。 如需詳細資訊，請參閱 > 一節會傳回值[PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871)訊息。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_NORMAL`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
- 導致目前的頁面巡覽區控制項重新計算包含視窗的大小。  
+##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
+ Causes the current pager control to recalculate the size of the contained window.  
   
 ```  
 void RecalcSize();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 因此，會傳送頁面巡覽區控制項[PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864)通知，以取得包含視窗的可捲動的維度。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) message, which is described in the Windows SDK. Consequently, the pager control sends the [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification to obtain the scrollable dimensions of the contained window.  
   
-### <a name="example"></a>範例  
- 下列範例會使用[CPagerCtrl::RecalcSize](#recalcsize)方法來要求重新計算其大小目前的頁面巡覽區控制項。  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::RecalcSize](#recalcsize) method to request the current pager control to recalculate its size.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&3;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
-### <a name="example"></a>範例  
- 下列範例會使用[訊息反映](../../mfc/tn062-message-reflection-for-windows-controls.md)啟用頁面巡覽區控制項，重新計算而不需要執行計算的控制項的父對話方塊大小。 範例衍生`MyPagerCtrl`類別是從[CPagerCtrl 類別](../../mfc/reference/cpagerctrl-class.md)，然後使用訊息對應產生關聯[PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864)通知`OnCalcsize`通知處理常式。 在此範例中，通知處理常式將設定的頁面巡覽區控制項的高度與寬度固定值。  
+### <a name="example"></a>Example  
+ The following example uses [message reflection](../../mfc/tn062-message-reflection-for-windows-controls.md) to enable the pager control to recalculate its own size instead of requiring the control's parent dialog to perform the calculation. The example derives the `MyPagerCtrl` class from the [CPagerCtrl class](../../mfc/reference/cpagerctrl-class.md), then uses a message map to associate the [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification with the `OnCalcsize` notification handler. In this example, the notification handler sets the width and height of the pager control to fixed values.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&8;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
- 設定目前的頁面巡覽區控制項的背景色彩。  
+##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
+ Sets the background color of the current pager control.  
   
 ```  
 COLORREF SetBkColor(COLORREF clrBk);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，其中包含新的頁面巡覽區控制項的背景色彩。|  
+|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the new background color of the pager control.|  
   
-### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，其中包含前一個頁面巡覽區控制項的背景色彩。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the previous background color of the pager control.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列範例會使用[CPagerCtrl::SetBkColor](#setbkcolor)方法，將頁面巡覽區控制項的背景色彩設定為紅色，而[CPagerCtrl::GetBkColor](#getbkcolor)方法，以確認已進行變更。  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to set the background color of the pager control to red, and the [CPagerCtrl::GetBkColor](#getbkcolor) method to confirm that the change was made.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&4;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="setborder"></a>CPagerCtrl::SetBorder  
- 設定目前的頁面巡覽區控制項的框線大小。  
+##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
+ Sets the border size of the current pager control.  
   
 ```  
 int SetBorder(int iBorder);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iBorder`|新框線的大小，單位為像素為單位。 如果`iBorder`參數是負值，框線大小會設為零。|  
+|[in] `iBorder`|The new border size, measured in pixels. If the `iBorder` parameter is negative, the border size is set to zero.|  
   
-### <a name="return-value"></a>傳回值  
- 先前的框線大小，以像素為單位。  
+### <a name="return-value"></a>Return Value  
+ The previous border size, measured in pixels.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列範例會建立頁面巡覽區控制項，則會使用[CPagerCtrl::SetChild](#setchild)方法與頁面巡覽區控制項產生關聯很長的按鈕控制項。 然後此範例使用[CPagerCtrl::SetButtonSize](#setbuttonsize)方法，以將頁面巡覽區控制項的高度設為 20 像素，而[CPagerCtrl::SetBorder](#setborder)方法，將框線粗細設定為 1 個像素。  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
- 設定目前的頁面巡覽區控制項的按鈕大小。  
+##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
+ Sets the button size of the current pager control.  
   
 ```  
 int SetButtonSize(int iButtonSize);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|新按鈕的大小，單位為像素為單位。|  
+|[in] `iButtonSize`|The new button size, measured in pixels.|  
   
-### <a name="return-value"></a>傳回值  
- 先前按鈕的大小，單位為像素為單位。  
+### <a name="return-value"></a>Return Value  
+ The previous button size, measured in pixels.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, which is described in the Windows SDK.  
   
- 如果頁面巡覽區控制項有`PGS_HORZ`樣式 按鈕的大小會決定頁面巡覽區按鈕的寬度與頁面巡覽區控制項有`PGS_VERT`樣式 按鈕的大小會決定頁面巡覽區按鈕的高度。 預設按鈕的大小是四分之三的捲軸的寬度，而按鈕的最小大小為 12 個像素。 如需詳細資訊，請參閱[頁面巡覽區控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760859)。  
+ If the pager control has the `PGS_HORZ` style, the button size determines the width of the pager buttons, and if the pager control has the `PGS_VERT` style, the button size determines the height of the pager buttons. The default button size is three-fourths of the width of the scroll bar, and the minimum button size is 12 pixels. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-### <a name="example"></a>範例  
- 下列範例會建立頁面巡覽區控制項，則會使用[CPagerCtrl::SetChild](#setchild)方法與頁面巡覽區控制項產生關聯很長的按鈕控制項。 然後此範例使用[CPagerCtrl::SetButtonSize](#setbuttonsize)方法，以將頁面巡覽區控制項的高度設為 20 像素，而[CPagerCtrl::SetBorder](#setborder)方法，將框線粗細設定為 1 個像素。  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setchild"></a>CPagerCtrl::SetChild  
- 設定目前的頁面巡覽區控制項所包含的視窗。  
+##  <a name="setchild"></a>  CPagerCtrl::SetChild  
+ Sets the contained window for the current pager control.  
   
 ```  
 void SetChild(HWND hwndChild);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `hwndChild`|包含視窗控制代碼。|  
+|[in] `hwndChild`|Handle to the window to be contained.|  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) message, which is described in the Windows SDK.  
   
- 這個方法不會變更父系的包含視窗中，它只會指派給捲動頁面巡覽區控制項的視窗控制代碼。 在大部分情況下，包含的視窗會是頁面巡覽區控制項的子視窗。  
+ This method does not change the parent of the contained window; it only assigns a window handle to the pager control for scrolling. In most cases, the contained window will be a child window of the pager control.  
   
-### <a name="example"></a>範例  
- 下列範例會建立頁面巡覽區控制項，則會使用[CPagerCtrl::SetChild](#setchild)方法與頁面巡覽區控制項產生關聯很長的按鈕控制項。 然後此範例使用[CPagerCtrl::SetButtonSize](#setbuttonsize)方法，以將頁面巡覽區控制項的高度設為 20 像素，而[CPagerCtrl::SetBorder](#setborder)方法，將框線粗細設定為 1 個像素。  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;&1;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
- 設定目前的頁面巡覽區控制項的捲動位置。  
+##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
+ Sets the scroll position of the current pager control.  
   
 ```  
 void SetScrollPos(int iPos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iPos`|新的捲動位置，以像素為單位。|  
+|[in] `iPos`|The new scroll position, measured in pixels.|  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, which is described in the Windows SDK.  
   
-## <a name="see-also"></a>另請參閱  
- [CPagerCtrl 類別](../../mfc/reference/cpagerctrl-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [頁面巡覽區控制項](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+## <a name="see-also"></a>See Also  
+ [CPagerCtrl Class](../../mfc/reference/cpagerctrl-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Pager Controls](http://msdn.microsoft.com/library/windows/desktop/bb760855)
 
 
 

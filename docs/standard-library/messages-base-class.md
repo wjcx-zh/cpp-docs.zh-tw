@@ -1,5 +1,5 @@
 ---
-title: "messages_base 類別 | Microsoft Docs"
+title: messages_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- messages_base
 - locale/std::messages_base
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4e10582050f922e880577dc5a19d99a1ac03128e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e6b6228f458fedc9db0117e52ae2e0a76cafa519
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="messagesbase-class"></a>messages_base 類別
-基底類別，描述訊息目錄的 `int` 類型。  
+# <a name="messagesbase-class"></a>messages_base Class
+The base class describes an `int` type for the catalog of messages.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 struct messages_base : locale::facet {
@@ -53,16 +52,16 @@ struct messages_base : locale::facet {
 };
 ```  
   
-## <a name="remarks"></a>備註  
- catalog 類型與描述可能從 messages:: [do_open](../standard-library/messages-class.md#do_open) 傳回之值的 `int` 類型同義。  
+## <a name="remarks"></a>Remarks  
+ The type catalog is a synonym for type `int` that describes the possible return values from messages:: [do_open](../standard-library/messages-class.md#do_open).  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

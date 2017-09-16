@@ -1,5 +1,5 @@
 ---
-title: "MFC 應用程式精靈、 應用程式類型 |Microsoft 文件"
+title: Application Type, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,91 +33,91 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: bd862d4a537f2297c1ee5a6fd517e22f7c684fa4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fef2f03dddd85b8b4469172cb0c594e3643a62da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-type-mfc-application-wizard"></a>MFC 應用程式精靈、應用程式類型
-使用此頁面的[MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)來設計並將新的 MFC 應用程式的基本功能。  
+# <a name="application-type-mfc-application-wizard"></a>Application Type, MFC Application Wizard
+Use this page of the [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md) to design and add basic features to a new MFC application.  
   
- **應用程式類型**  
- 指定您想要在您的應用程式中建立的文件支援的類型。 您選取的應用程式類型會決定可供您的應用程式的使用者介面選項。 請參閱[MFC 應用程式精靈、 使用者介面功能](../../mfc/reference/user-interface-features-mfc-application-wizard.md)取得更多資訊。  
+ **Application type**  
+ Specifies the type of document support that you want to create in your application. The type of application you select determines the user interface options that are available for your application. See [User Interface Features, MFC Application Wizard](../../mfc/reference/user-interface-features-mfc-application-wizard.md) for more information.  
   
- 如需類型的文件的詳細資訊，請參閱︰  
+ For more information about the types of documents, see:  
   
--   [SDI 和 MDI](../../mfc/sdi-and-mdi.md)  
+-   [SDI and MDI](../../mfc/sdi-and-mdi.md)  
   
--   [框架視窗](../../mfc/frame-windows.md)  
+-   [Frame Windows](../../mfc/frame-windows.md)  
   
--   [框架視窗類別](../../mfc/frame-window-classes.md)  
+-   [Frame-Window Classes](../../mfc/frame-window-classes.md)  
   
--   [文件、檢視和架構](../../mfc/documents-views-and-the-framework.md)  
+-   [Documents, Views, and the Framework](../../mfc/documents-views-and-the-framework.md)  
   
--   [對話方塊](../../mfc/dialog-boxes.md)  
+-   [Dialog Boxes](../../mfc/dialog-boxes.md)  
   
-|選項|說明|  
+|Option|Description|  
 |------------|-----------------|  
-|**單一文件**|建立單一文件介面 (SDI) 架構應用程式，其中的檢視類別根據[CView 類別](../../mfc/reference/cview-class.md)。 您可以變更檢視中的基底類別[產生的類別，MFC 應用程式精靈](../../mfc/reference/generated-classes-mfc-application-wizard.md)精靈頁面。 若要建立表單架構應用程式，例如，使用[CFormView 類別](../../mfc/reference/cformview-class.md)檢視類別。<br /><br /> 在這種應用程式的文件框架視窗可以保存只能有一個文件。|  
-|**多個文件**|建立您的應用程式，其中的檢視類別根據多個文件介面 (MDI) 架構`CView`。 您可以變更檢視中的基底類別**產生的類別**精靈頁面。 若要建立表單架構應用程式，例如，使用`CFormView`檢視類別。<br /><br /> 在這種應用程式的文件框架視窗可以保存多個子 windows。|  
-|**索引標籤式文件**|每份文件放置於另一個索引標籤。|  
-|**對話方塊架構**|建立您的應用程式的對話方塊類別為基礎，對話方塊架構架構`CDialog`。 (若要建立的 [HTML] 對話方塊，選取方塊**對話方塊使用 HTML**。)|  
-|**使用 HTML 對話方塊**|對話方塊方塊僅為應用程式。 衍生對話方塊類別從[CDHtmlDialog 類別](../../mfc/reference/cdhtmldialog-class.md)而不是[CDialog 類別](../../mfc/reference/cdialog-class.md)。 如果您核取此方塊，`CDHtmlDialog`會列在**基底類別**方塊中[產生的類別，MFC 應用程式精靈](../../mfc/reference/generated-classes-mfc-application-wizard.md)精靈頁面。<br /><br /> A `CDHtmlDialog`-衍生的對話方塊顯示 HTML 為基礎的對話方塊，請使用 HTML 的交換資料控制項和處理 HTML 事件。|  
-|**多個最上層文件**|建立您的應用程式，其中的檢視類別根據多個最上層架構`CView`。<br /><br /> 在這種類型的應用程式，當使用者按一下**新增**(或**新框架**) 上**檔案**功能表上，應用程式建立的父代為隱含桌面視窗。 新的文件框架出現在工作列中，不受限於應用程式視窗的工作區。|  
+|**Single document**|Creates a single document interface (SDI) architecture for your application, where a view class is based on [CView Class](../../mfc/reference/cview-class.md). You can change the base class for the view in the [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard. To create a form-based application, for example, use [CFormView Class](../../mfc/reference/cformview-class.md) for the view class.<br /><br /> In this type of application, the document's frame window can hold only one document.|  
+|**Multiple documents**|Creates a multiple document interface (MDI) architecture for your application, where a view class is based on `CView`. You can change the base class for the view in the **Generated Classes** page of the wizard. To create a form-based application, for example, use `CFormView` for the view class.<br /><br /> In this type of application, the document's frame window can hold multiple child windows.|  
+|**Tabbed documents**|Places each document on a separate tab.|  
+|**Dialog based**|Creates a dialog-based architecture for your application where a dialog class is based on `CDialog`. (To create an HTML dialog, select the box **Use HTML dialog**.)|  
+|**Use HTML dialog**|For dialog box applications only. Derives the dialog class from [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md) instead of [CDialog Class](../../mfc/reference/cdialog-class.md). If you check this box, `CDHtmlDialog` is listed in the **Base class** box in the [Generated Classes, MFC Application Wizard](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard.<br /><br /> A `CDHtmlDialog`-derived dialog box displays HTML-based dialog boxes, exchanges data with HTML controls and handles HTML events.|  
+|**Multiple top-level documents**|Creates a multiple top-level architecture for your application, where a view class is based on `CView`.<br /><br /> In this type of application, when a user clicks **New** (or **New Frame**) on the **File** menu, the application creates a window whose parent is implicitly the desktop. The new document frame appears in the taskbar and is not restricted to the client area of the application window.|  
   
- **文件/檢視架構支援**  
- 指定是否要包含在應用程式中的文件/檢視架構使用[CDocument 類別](../../mfc/reference/cdocument-class.md)和[CView 類別](../../mfc/reference/cview-class.md)（預設值）。 如果您要移植非 MFC 應用程式，或如果您想要減少編譯可執行檔的大小，請清除此核取方塊。 根據預設，不具有文件/檢視架構的應用程式衍生自[CWinApp 類別](../../mfc/reference/cwinapp-class.md)，而且不包含 MFC 支援的磁碟檔案從開啟的文件。  
+ **Document/view architecture support**  
+ Specifies whether to include document/view architecture in your application by using the [CDocument Class](../../mfc/reference/cdocument-class.md) and the [CView Class](../../mfc/reference/cview-class.md) (default). Clear this check box if you are porting a non-MFC application or if you want to reduce the size of your compiled executable. By default, an application without document/view architecture is derived from [CWinApp Class](../../mfc/reference/cwinapp-class.md), and it does not include MFC support for opening a document from a disk file.  
   
- **資源語言**  
- 設定資源的語言。 清單會顯示可用的語言在您系統上，為已安裝 Visual studio。 如果您想要選取您的系統語言以外之語言，必須已安裝該語言的適當的範本資料夾。 如需有關安裝與使用中的預設值不同的語言資源**資源語言**清單中，請參閱[其他語言的精靈支援](../../ide/wizard-support-for-other-languages.md)。  
+ **Resource language**  
+ Sets the language of your resources. The list displays the languages available on your system, as installed by Visual Studio. If you want to select a language other than your system language, the appropriate template folder for that language must already be installed. For more information about installing language resources different from the defaults available in the **Resource language** list, see [Wizard Support for Other Languages](../../ide/wizard-support-for-other-languages.md).  
   
- 您選取的語言會反映在**當地語系化字串**選項[文件樣板字串、 MFC 應用程式精靈](../../mfc/reference/document-template-strings-mfc-application-wizard.md)精靈頁面。  
+ The language that you select is reflected in the **Localized strings** option of the [Document Template Strings, MFC Application Wizard](../../mfc/reference/document-template-strings-mfc-application-wizard.md) page of the wizard.  
   
- **使用 Unicode 程式庫**  
- 指定是否要使用 MFC 程式庫的 Unicode 或非 Unicode 版本。  
+ **Use Unicode libraries**  
+ Specifies whether the Unicode or non-Unicode version of the MFC libraries is used.  
   
- **專案樣式**  
- 指出您的應用程式是否有標準 MFC、 檔案總管 中，Visual Studio 中，或 Office 架構和顯示。 如需詳細資訊，請參閱[建立檔案總管樣式的 MFC 應用程式](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)。  
+ **Project style**  
+ Indicates whether your application has a standard MFC, File Explorer, Visual Studio, or Office architecture and display. For more information, see [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md).  
   
-|選項|描述|  
+|Option|Description|  
 |------------|-----------------|  
-|**MFC 的標準**|提供標準的 MFC 應用程式架構。|  
-|**檔案總管**|實作類似檔案總管的應用程式的檔案使用所在的左的窗格的分隔視窗[CTreeView 類別](../../mfc/reference/ctreeview-class.md)而右窗格是[CListView 類別](../../mfc/reference/clistview-class.md)。|  
-|**Visual Studio**|實作包含四個可停駐窗格的 Visual Studio 類似的應用程式 (**檔案檢視**，**類別檢視**，**屬性**，和**輸出**)，都是衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)和主框架視窗是衍生自[CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)（預設值）。|  
-|**Office**|實作類似 Office 的應用程式，其中包含衍生自的功能區[CMFCRibbonBar 類別](../../mfc/reference/cmfcribbonbar-class.md)，衍生自 outlook 功能區[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)，衍生自的標題列[CMFCCaptionBar 類別](../../mfc/reference/cmfccaptionbar-class.md)，以及衍生自的主要畫面格[CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)。|  
+|**MFC standard**|Provides a standard MFC application architecture.|  
+|**File Explorer**|Implements a File Explorer-like application by using a splitter window where the left pane is a [CTreeView Class](../../mfc/reference/ctreeview-class.md) and the right pane is a [CListView Class](../../mfc/reference/clistview-class.md).|  
+|**Visual Studio**|Implements a Visual Studio-like application that contains four dockable panes (**File View**, **Class View**, **Properties**, and **Output**) that are derived from [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) and a main frame window that is derived from [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md) (default).|  
+|**Office**|Implements an Office-like application that contains a ribbon that is derived from [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md), an Outlook bar that is derived from [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md), a caption bar that is derived from [CMFCCaptionBar Class](../../mfc/reference/cmfccaptionbar-class.md), and a main frame that is derived from [CMDIFrameWndEx Class](../../mfc/reference/cmdiframewndex-class.md).|  
   
- **視覺化樣式和色彩**  
- 判斷應用程式的視覺化樣式。 有下列選項可供使用：  
+ **Visual style and colors**  
+ Determines the visual style of the application. The following options are available:  
   
--   **Windows 原生/預設值**  
+-   **Windows Native/Default**  
   
 -   **Office 2003**  
   
 -   **Visual Studio 2005**  
   
--   **Office 2007 （藍色主題）**  
+-   **Office 2007 (Blue theme)**  
   
--   **Office 2007 （黑色主題）**  
+-   **Office 2007 (Black theme)**  
   
--   **Office 2007 （銀色主題）**  
+-   **Office 2007 (Silver theme)**  
   
--   **Office 2007 （青色主題）**  
+-   **Office 2007 (Aqua theme)**  
   
- **啟用視覺化樣式切換**  
- 指定使用者是否可以變更之視覺樣式的應用程式在執行階段，通常從功能表或功能區中選取適當的視覺化樣式。  
+ **Enable visual style switching**  
+ Specifies whether the user can change the visual style of the application at runtime, usually by selecting the appropriate visual style from a menu or ribbon.  
   
- **MFC 的使用**  
- 指定如何連結至 MFC 程式庫。 根據預設，MFC 會為共用的 DLL 連結。  
+ **Use of MFC**  
+ Specifies how to link to the MFC library. By default, MFC is linked as a shared DLL.  
   
-|選項|描述|  
+|Option|Description|  
 |------------|-----------------|  
-|**使用 MFC 共用 dll**|MFC 程式庫共用的 dll 的應用程式的連結。 應用程式會呼叫 MFC 程式庫，在執行階段。 這個選項可以減少使用的 MFC 程式庫的多個可執行檔所組成的應用程式的磁碟和記憶體需求。 Win32 和 MFC 應用程式可以呼叫您的 DLL （預設值） 中的函式|  
-|**使用 MFC 的靜態程式庫**|連結至 MFC 靜態程式庫應用程式在建置階段。|  
+|**Use MFC in a shared DLL**|Links the MFC library to an application as a shared DLL. The application makes calls to the MFC library at run time. This option reduces the disk and memory requirements of applications that consist of multiple executable files that use the MFC library. Both Win32 and MFC applications can call functions in your DLL (default)|  
+|**Use MFC in a static library**|Links an application to the static MFC library at build time.|  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)   
- [為 Visual C++ 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

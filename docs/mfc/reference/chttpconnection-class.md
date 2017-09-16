@@ -1,5 +1,5 @@
 ---
-title: "CHttpConnection 類別 |Microsoft 文件"
+title: CHttpConnection Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,18 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- servers, connecting to
-- protocols, HTTP
-- connecting to servers, HTTP servers
-- Internet protocols, HTTP
-- HTTP connections
-- Internet protocols
-- CHttpConnection class
-- HTTP servers, connecting to
-- connecting to servers
-- Internet connections, HTTP
-- connections [C++], HTTP
-- Internet server, HTTP
+- CHttpConnection [MFC], CHttpConnection
+- CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
 caps.latest.revision: 24
 author: mikeblome
@@ -47,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1b02a79cebbd73a05478887115646f0544f0a92d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4a484b97fcdb5a3cb3ddfe603594d6e10657a181
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chttpconnection-class"></a>CHttpConnection 類別
-管理您與 HTTP 伺服器的連接。  
+# <a name="chttpconnection-class"></a>CHttpConnection Class
+Manages your connection to an HTTP server.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHttpConnection : public CInternetConnection  
@@ -65,39 +55,39 @@ class CHttpConnection : public CInternetConnection
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHttpConnection::CHttpConnection](#chttpconnection)|建立 `CHttpConnection` 物件。|  
+|[CHttpConnection::CHttpConnection](#chttpconnection)|Creates a `CHttpConnection` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[Chttpconnection::](#openrequest)|開啟 HTTP 要求。|  
+|[CHttpConnection::OpenRequest](#openrequest)|Opens an HTTP request.|  
   
-## <a name="remarks"></a>備註  
- HTTP 是其中一個 MFC WinInet 類別所實作的三種網際網路伺服器通訊協定。  
+## <a name="remarks"></a>Remarks  
+ HTTP is one of three Internet server protocols implemented by the MFC WinInet classes.  
   
- 類別`CHttpConnection`包含建構函式和一個成員函式， [OpenRequest](#openrequest)，來管理使用 HTTP 通訊協定與伺服器連接。  
+ The class `CHttpConnection` contains a constructor and one member function, [OpenRequest](#openrequest), that manages connections to a server with an HTTP protocol.  
   
- 與 HTTP 伺服器通訊，您必須先建立的執行個體[CInternetSession](../../mfc/reference/cinternetsession-class.md)，然後再建立[CHttpConnection](#_mfc_chttpconnection)物件。 絕對不要建立`CHttpConnection`直接物件; 而是呼叫[Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)，這樣就可以建立`CHttpConnection`物件，並傳回的指標。  
+ To communicate with an HTTP server, you must first create an instance of [CInternetSession](../../mfc/reference/cinternetsession-class.md), and then create a [CHttpConnection](#_mfc_chttpconnection) object. You never create a `CHttpConnection` object directly; rather, call [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection), which creates the `CHttpConnection` object and returns a pointer to it.  
   
- 若要深入了解如何`CHttpConnection`運作方式與其他 MFC 網際網路類別，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。 如需有關連接到伺服器使用其他兩個支援的網際網路通訊協定、 gopher 和 FTP，請參閱類別[CGopherConnection](../../mfc/reference/cgopherconnection-class.md)和[CFtpConnection](../../mfc/reference/cftpconnection-class.md)。  
+ To learn more about how `CHttpConnection` works with the other MFC Internet classes, see the article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md). For more information about connecting to servers using the other two supported Internet protocols, gopher and FTP, see the classes [CGopherConnection](../../mfc/reference/cgopherconnection-class.md) and [CFtpConnection](../../mfc/reference/cftpconnection-class.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)  
   
  `CHttpConnection`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxinet.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxinet.h  
   
-##  <a name="chttpconnection"></a>CHttpConnection::CHttpConnection  
- 此成員函式呼叫來建構`CHttpConnection`物件。  
+##  <a name="chttpconnection"></a>  CHttpConnection::CHttpConnection  
+ This member function is called to construct a `CHttpConnection` object.  
   
 ```  
 CHttpConnection(
@@ -126,43 +116,43 @@ CHttpConnection(
     DWORD_PTR dwContext = 1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pSession`  
- 指標[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。  
+ A pointer to a [CInternetSession](../../mfc/reference/cinternetsession-class.md) object.  
   
  `hConnected`  
- 連上網際網路控制代碼。  
+ A handle to an Internet connection.  
   
  `pstrServer`  
- 包含伺服器名稱的字串指標。  
+ A pointer to a string containing the server name.  
   
  `dwContext`  
- 內容識別碼`CInternetConnection`物件。 請參閱**備註**如需詳細資訊`dwContext`。  
+ The context identifier for the `CInternetConnection` object. See **Remarks** for more information about `dwContext`.  
   
  `nPort`  
- 識別此連線的網際網路連接埠的數字。  
+ The number that identifies the Internet port for this connection.  
   
  `pstrUserName`  
- 以 null 終止的字串，指定使用者登入名稱的指標。 如果**NULL**，預設值是匿名的。  
+ Pointer to a null-terminated string that specifies the name of the user to log in. If **NULL**, the default is anonymous.  
   
  `pstrPassword`  
- 以 null 終止的字串，指定要用來登入密碼指標。 如果兩個`pstrPassword`和`pstrUserName`是**NULL**，預設匿名密碼是使用者的電子郵件名稱。 如果`pstrPassword`是**NULL** （或空字串），但`pstrUserName`不**NULL**，使用空白密碼。 下表說明的四個可能的設定行為`pstrUserName`和`pstrPassword`:  
+ A pointer to a null-terminated string that specifies the password to use to log in. If both `pstrPassword` and `pstrUserName` are **NULL**, the default anonymous password is the user's email name. If `pstrPassword` is **NULL** (or an empty string) but `pstrUserName` is not **NULL**, a blank password is used. The following table describes the behavior for the four possible settings of `pstrUserName` and `pstrPassword`:  
   
-|`pstrUserName`|`pstrPassword`|傳送至 FTP 伺服器的使用者名稱|傳送至 FTP 伺服器的密碼|  
+|`pstrUserName`|`pstrPassword`|Username sent to FTP server|Password sent to FTP server|  
 |--------------------|--------------------|---------------------------------|---------------------------------|  
-|**NULL**或 「 」|**NULL**或 「 」|「 匿名 」|使用者的電子郵件名稱|  
-|非- **NULL**字串|**NULL**或 「 」|`pstrUserName`|" "|  
-|**NULL**非**NULL**字串|**錯誤**|**錯誤**||  
-|非- **NULL**字串|非- **NULL**字串|`pstrUserName`|`pstrPassword`|  
+|**NULL** or " "|**NULL** or " "|"anonymous"|User's email name|  
+|Non- **NULL** String|**NULL** or " "|`pstrUserName`|" "|  
+|**NULL** Non- **NULL** String|**ERROR**|**ERROR**||  
+|Non- **NULL** String|Non- **NULL** String|`pstrUserName`|`pstrPassword`|  
   
  `dwFlags`  
- 任何組合**INTERNET_ FLAG_\* **旗標。 請參閱表格**備註**區段[chttpconnection::](#openrequest)的說明`dwFlags`值。  
+ Any combination of the **INTERNET_ FLAG_\*** flags. See the table in the **Remarks** section of [CHttpConnection::OpenRequest](#openrequest) for a description of `dwFlags` values.  
   
-### <a name="remarks"></a>備註  
- 絕對不要建立`CHttpConnection`直接。 相反地，您建立物件呼叫[Gethttpconnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection)。  
+### <a name="remarks"></a>Remarks  
+ You never create a `CHttpConnection` directly. Rather, you create an object by calling [CInternetSession::GetHttpConnection](../../mfc/reference/cinternetsession-class.md#gethttpconnection).  
   
-##  <a name="openrequest"></a>Chttpconnection::  
- 呼叫此成員函式，以開啟 HTTP 連接。  
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest  
+ Call this member function to open an HTTP connection.  
   
 ```  
 CHttpFile* OpenRequest(
@@ -185,32 +175,32 @@ CHttpFile* OpenRequest(
     DWORD dwFlags = INTERNET_FLAG_EXISTING_CONNECT);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pstrVerb`  
- 包含在要求中使用的動詞命令的字串指標。 如果`NULL`，使用 「 取得 」。  
+ A pointer to a string containing the verb to use in the request. If `NULL`, "GET" is used.  
   
  `pstrObjectName`  
- 包含指定的動詞命令的目標物件的字串指標。 這通常是檔名、 可執行模組或搜尋規範。  
+ A pointer to a string containing the target object of the specified verb. This is generally a filename, an executable module, or a search specifier.  
   
  `pstrReferer`  
- 指定的文件的位址 (URL) 字串的指標中要求的 URL ( `pstrObjectName`) 取得。 如果`NULL`，不指定任何 HTTP 標頭。  
+ A pointer to a string that specifies the address (URL) of the document from which the URL in the request ( `pstrObjectName`) was obtained. If `NULL`, no HTTP header is specified.  
   
  `dwContext`  
- 內容識別碼`OpenRequest`作業。 請參閱 < 備註 > 一節，如需詳細資訊，關於`dwContext`。  
+ The context identifier for the `OpenRequest` operation. See the Remarks section for more information about `dwContext`.  
   
  `ppstrAcceptTypes`  
- 之 null 終端陣列的指標`LPCTSTR`用戶端接受字串，表示內容類型的指標。 如果`ppstrAcceptTypes`是`NULL`，伺服器解譯用戶端只接受類型的文件 「 text / *"（也就是唯一的文字文件並不圖片或其他二進位檔案）。 內容類型相當於 CGI 變數 CONTENT_TYPE，識別已連接資訊，例如 HTTP POST 和 PUT 的查詢的資料類型。  
+ A pointer to a null-terminated array of `LPCTSTR` pointers to strings indicating content types accepted by the client. If `ppstrAcceptTypes` is `NULL`, the servers interpret that the client only accepts documents of type "text/*" (that is, only text documents and not pictures or other binary files). The content type is equivalent to the CGI variable CONTENT_TYPE, which identifies the type of data for queries that have attached information, such as HTTP POST and PUT.  
   
  `pstrVersion`  
- 定義的 HTTP 版本字串的指標。 如果`NULL`，會使用 「 HTTP/1.0 」。  
+ A pointer to a string defining the HTTP version. If `NULL`, "HTTP/1.0" is used.  
   
  `dwFlags`  
- INTERNET_ FLAG_ * 旗標的任何組合。 請參閱 < 備註 > 一節說明可能的`dwFlags`值。  
+ Any combination of the INTERNET_ FLAG_* flags. See the Remarks section for a description of possible `dwFlags` values.  
   
  `nVerb`  
- HTTP 要求類型相關聯的數字。 可以是下列其中一項：  
+ A number associated with the HTTP request type. Can be one of the following:  
   
-|HTTP 要求類型|`nVerb` 值|  
+|HTTP request type|`nVerb` value|  
 |-----------------------|-------------------|  
 |`HTTP_VERB_POST`|0|  
 |`HTTP_VERB_GET`|1|  
@@ -220,27 +210,27 @@ CHttpFile* OpenRequest(
 |`HTTP_VERB_DELETE`|5|  
 |`HTTP_VERB_UNLINK`|6|  
   
-### <a name="return-value"></a>傳回值  
- 指標[CHttpFile](../../mfc/reference/chttpfile-class.md)要求物件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CHttpFile](../../mfc/reference/chttpfile-class.md) object requested.  
   
-### <a name="remarks"></a>備註  
- `dwFlags` 可以是下列其中一項：  
+### <a name="remarks"></a>Remarks  
+ `dwFlags` can be one of the following:  
   
-|網際網路旗標|說明|  
+|Internet flag|Description|  
 |-------------------|-----------------|  
-|`INTERNET_FLAG_RELOAD`|從原始伺服器，而不是從快取，會強制下載要求的檔案、 物件或目錄清單。|  
-|`INTERNET_FLAG_DONT_CACHE`|不會新增至快取傳回的實體。|  
-|`INTERNET_FLAG_MAKE_PERSISTENT`|新增至快取傳回的實體，做為持續性的實體。 這表示，標準快取清除、 一致性檢查，或回收無法移除此項目從快取。|  
-|`INTERNET_FLAG_SECURE`|會使用安全的交易語意。 這會轉譯為使用 SSL/百分比，才有意義的 HTTP 要求|  
-|`INTERNET_FLAG_NO_AUTO_REDIRECT`|僅適用於 HTTP、 指定的重新導向應該不會自動處理在[CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest)。|  
+|`INTERNET_FLAG_RELOAD`|Forces a download of the requested file, object, or directory listing from the origin server, not from the cache.|  
+|`INTERNET_FLAG_DONT_CACHE`|Does not add the returned entity to the cache.|  
+|`INTERNET_FLAG_MAKE_PERSISTENT`|Adds the returned entity to the cache as a persistent entity. This means that standard cache cleanup, consistency checking, or garbage collection cannot remove this item from the cache.|  
+|`INTERNET_FLAG_SECURE`|Uses secure transaction semantics. This translates to using SSL/PCT and is only meaningful in HTTP requests|  
+|`INTERNET_FLAG_NO_AUTO_REDIRECT`|Used only with HTTP, specifies that redirections should not be automatically handled in [CHttpFile::SendRequest](../../mfc/reference/chttpfile-class.md#sendrequest).|  
   
- 覆寫`dwContext`預設將內容識別碼設定為您選擇的值。 內容識別碼是與這個特定作業的相關聯`CHttpConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路第一個步驟︰ WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
+ Override the `dwContext` default to set the context identifier to a value of your choosing. The context identifier is associated with this specific operation of the `CHttpConnection` object created by its [CInternetSession](../../mfc/reference/cinternetsession-class.md) object. The value is returned to [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) to provide status on the operation with which it is identified. See the article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) for more information about the context identifier.  
   
- 此函式可能會擲回例外狀況。  
+ Exceptions may be thrown with this function.  
   
-## <a name="see-also"></a>另請參閱  
- [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   
- [CHttpFile 類別](../../mfc/reference/chttpfile-class.md)
+## <a name="see-also"></a>See Also  
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CInternetConnection Class](../../mfc/reference/cinternetconnection-class.md)   
+ [CHttpFile Class](../../mfc/reference/chttpfile-class.md)
 

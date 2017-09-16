@@ -1,48 +1,67 @@
 ---
-title: "建立 Rebar 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CReBarCtrl 類別, 建立"
-  - "Rebar 控制項, 建立"
+title: Creating a Rebar Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rebar controls [MFC], creating
+- CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 建立 Rebar 控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0ed89f4b375331aab4390ac2e4128e8a8a8b5536
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-[CReBarCtrl](../mfc/reference/crebarctrl-class.md) 物件應該在父物件為可見之前建立。  這樣可以將繪製問題的可能性最小化。  
+---
+# <a name="creating-a-rebar-control"></a>Creating a Rebar Control
+[CReBarCtrl](../mfc/reference/crebarctrl-class.md) objects should be created before the parent object is visible. This minimizes the possibilities of painting problems.  
   
- 例如， Rebar 控制項 \(用來框架視窗物件\) 通常用於當工具列控制項的父視窗。  因此， Rebar 控制項的父代是框架視窗物件。  由於框架視窗物件是父代， `OnCreate` 成員函式 \(父\) 是建立 Rebar 控制項的好位置。  
+ For instance, rebar controls (used in frame window objects) are commonly used as parent windows for toolbar controls. Therefore, the parent of the rebar control is the frame window object. Because the frame window object is the parent, the `OnCreate` member function (of the parent) is an excellent place to create the rebar control.  
   
- 若要使用 `CReBarCtrl` 物件，您通常會執行下列步驟:  
+ To use a `CReBarCtrl` object, you will typically follow these steps:  
   
-### 使用 CReBarCtrl 物件  
+### <a name="to-use-a-crebarctrl-object"></a>To use a CReBarCtrl object  
   
-1.  建構[CReBarCtrl](../mfc/reference/crebarctrl-class.md)物件。  
+1.  Construct the [CReBarCtrl](../mfc/reference/crebarctrl-class.md) object.  
   
-2.  呼叫 [建立](../Topic/CReBarCtrl::Create.md) 以建立公用 Rebar 控制項並將它附加至 `CReBarCtrl` 物件，指定所需的任何樣式。  
+2.  Call [Create](../mfc/reference/crebarctrl-class.md#create) to create the Windows rebar common control and attach it to the `CReBarCtrl` object, specifying any desired styles.  
   
-3.  用對 [CBitmap::LoadBitmap](../Topic/CBitmap::LoadBitmap.md)的呼叫載入點陣圖，當做 Rebar 控制項物件的背景。  
+3.  Load a bitmap, with a call to [CBitmap::LoadBitmap](../mfc/reference/cbitmap-class.md#loadbitmap), to be used as the background of the rebar control object.  
   
-4.  建立並初始化要由 Rebar 控制項中包含所有子視窗物件 \(工具列、對話方塊控制項，依此類推\)。  
+4.  Create and initialize any child window objects (toolbars, dialog controls, and so on) that will be contained by the rebar control object.  
   
-5.  初始化具有所需資訊的 **REBARBANDINFO** 結構的群組列將插入。  
+5.  Initialize a **REBARBANDINFO** structure with the necessary information for the band about to be inserted.  
   
-6.  呼叫 [InsertBand](../Topic/CReBarCtrl::InsertBand.md) 插入現有子視窗 \(例如 `m_wndReToolBar`\) 到新 Rebar 控制項。  如需外掛程式的詳細資訊結合到現有的 Rebar 控制項，請參閱 [Rebar 控制項和群組列](../mfc/rebar-controls-and-bands.md)。  
+6.  Call [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) to insert existing child windows (such as `m_wndReToolBar`) into the new rebar control. For more information on inserting bands into an existing rebar control, see [Rebar Controls and Bands](../mfc/rebar-controls-and-bands.md).  
   
-## 請參閱  
- [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

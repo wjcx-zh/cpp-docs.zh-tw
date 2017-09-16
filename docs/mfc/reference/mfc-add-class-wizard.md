@@ -1,5 +1,5 @@
 ---
-title: "MFC 加入類別精靈 |Microsoft 文件"
+title: MFC Add Class Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,72 +34,72 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 08d258c2b8386a4dd0c1d24c6ac6aa10f6c04a63
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7960628af7aefae7647ec185e461abc3aac5852
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-add-class-wizard"></a>MFC 加入類別精靈
-使用此程式碼精靈，將類別加入至現有的 MFC 專案，或將類別加入至支援 MFC 的 ATL 專案。 您也可以加入至 Win32 專案 MFC 支援的 MFC 類別。 建立專案時所指定的功能會決定在此對話方塊中可用的選項。  
+# <a name="mfc-add-class-wizard"></a>MFC Add Class Wizard
+Use this code wizard to add a class to an existing MFC project, or to add a class to an ATL project that supports MFC. You can also add MFC classes to Win32 projects that have MFC support. The features you specified when you created your project determine the options available in this dialog box.  
   
-## <a name="names"></a>名稱  
- 在此頁面上，指定類別名稱、 基底類別，以及針對新的類別檔案名稱。  
+## <a name="names"></a>Names  
+ In this page, specify the class name, the base class, and file names for the new class.  
   
- **類別名稱**  
- 指定新類別的名稱並提供預設值為基礎的 Id 和在此頁面上的檔案名稱。 C + + 類別通常啟動以"C"，比方說，「 CMyClass 」 變成 「 MyClass.h 」，依此類推。  
+ **Class name**  
+ Specifies the name of the new class and provides the default basis for the names of IDs and files on this page. C++ classes typically start with "C", so for example, "CMyClass" becomes "MyClass.h", and so on.  
   
- **基底類別**  
- 指定基底類別的新類別的名稱。 根據預設，基底類別是[CWnd](../../mfc/reference/cwnd-class.md)。 您選取的基底類別會判斷此頁面上的其他方塊是否作用中。  
+ **Base class**  
+ Specifies the name of the base class for the new class. By default, the base class is [CWnd](../../mfc/reference/cwnd-class.md). The base class you select determines whether other boxes on this page are active.  
   
- 您設定基底類別判斷類別有對話 ID 或資源識別碼為類別的型別 類別的一般型別如下︰  
+ The type of class you set as the base class determines whether the class has a dialog ID or a resource ID. The general types of classes are as follows:  
   
--   之類的類別[CButton](../../mfc/reference/cbutton-class.md)， [CWnd](../../mfc/reference/cwnd-class.md)，或[CDocument](../../mfc/reference/cdocument-class.md)，這不需要對話識別碼或資源識別碼。 這些類別並不會使用對話方塊或資源的識別碼。 如果您選取其中一個類別的基底類別，**對話方塊 ID**方塊和**DHTML 資源識別碼**方塊會呈現暗灰色。  
+-   Classes such as [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), or [CDocument](../../mfc/reference/cdocument-class.md), which do not require a dialog ID or resource ID. These classes do not use a dialog or resource ID. If you select one of these classes for your base class, the **Dialog ID** box and the **DHTML resource ID** box are dimmed.  
   
--   之類的類別[CDialog](../../mfc/reference/cdialog-class.md)， [CFormView](../../mfc/reference/cformview-class.md)，或[CPropertyPage](../../mfc/reference/cpropertypage-class.md)，而這需要對話方塊 id。  
+-   Classes such as [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), or [CPropertyPage](../../mfc/reference/cpropertypage-class.md), which require a dialog ID.  
   
--   類別[CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)，皆需要對話方塊 ID、 DHTML 資源識別碼和 HTML 檔案名稱。  
+-   The class [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), which requires a dialog ID, a DHTML resource ID, and an HTML file name.  
   
- 需要對話方塊 ID 的類別，您可能會發現使用更有效率[資源編輯器](../../windows/resource-editors.md)若要建立對話方塊資源，必須將在其 ID[屬性 視窗中](/visualstudio/ide/reference/properties-window)，然後建立該資源 ID 相關聯的類別 請參閱[建立新的對話方塊](../../windows/creating-a-new-dialog-box.md)如需有關建立標準 Windows 對話方塊。  
+ For classes requiring a dialog ID, you might find it more efficient to use the [Resource editor](../../windows/resource-editors.md) to create the dialog resource, assign its ID in the [Properties window](/visualstudio/ide/reference/properties-window), and then create a class associated with that resource ID. See [Creating a New Dialog Box](../../windows/creating-a-new-dialog-box.md) for more information on creating a standard Windows dialog box.  
   
 > [!NOTE]
->  如果您先建立對話方塊資源，並衍生其新的類別，從`CDHtmlDialog`，刪除標準 Windows**確定**和**取消**出現在 [預設] 對話方塊的按鈕。 標準 Windows 對話方塊裝載 DHTML 表單，其中包含它自己**確定**和**取消**按鈕。  
+>  If you create a dialog resource first and derive its new class from `CDHtmlDialog`, delete the standard Windows **OK** and **Cancel** buttons that appear on the default dialog box. The standard Windows dialog box hosts the DHTML form, which contains its own **OK** and **Cancel** buttons.  
   
- 雖然 Windows 控制項和 DHTML 控制項，可以包含您的對話方塊，不建議。  
+ While your dialog box can contain both Windows controls and DHTML controls, it is not recommended.  
   
- **對話方塊 ID**  
- 指定的識別碼 對話方塊中，如果您選取`CDialog`， `CFormView`， `CPropertyPage`，或`CDHtmlDialog`為**基底類別**。  
+ **Dialog ID**  
+ Specifies the ID of the dialog, if you selected `CDialog`, `CFormView`, `CPropertyPage`, or `CDHtmlDialog` as the **Base class**.  
   
- **.h 檔案**  
- 設定新的物件類別的標頭檔名稱。 根據預設，這個名稱會根據您在提供的名稱上**類別名稱**。 按一下省略符號按鈕，將檔案名稱儲存至您選擇的位置，或將類別宣告附加至現有的檔案。 如果您選擇現有的檔案，精靈將不將它儲存到選取的位置直到您按一下**完成**在精靈中。  
+ **.h file**  
+ Sets the name of the header file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- 精靈不會覆寫檔案。 如果當您按一下 選取現有的檔案名稱**完成**，精靈會提示您是否要在類別宣告附加至檔案的內容。 按一下 **是**附加檔案，按一下 **否**回到精靈，並指定另一個檔案名稱。  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
- **.cpp 檔**  
- 設定新的物件類別的實作檔名稱。 根據預設，這個名稱會根據您在提供的名稱上**類別名稱**。 按一下省略符號按鈕，將檔案名稱儲存至您選擇的位置。 直到您按一下該檔案不儲存選取的位置**完成**在精靈中。  
+ **.cpp file**  
+ Sets the name of the implementation file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice. The file is not saved to the selected location until you click **Finish** in the wizard.  
   
- 精靈不會覆寫檔案。 如果當您按一下 選取現有的檔案名稱**完成**，精靈會提示您是否要在類別實作附加至檔案的內容。 按一下 **是**附加檔案，按一下 **否**回到精靈，並指定另一個檔案名稱。  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class implementation should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
- **使用中的協助工具**  
- 藉由呼叫可讓使用中的協助工具的 MFC 支援[EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility)建構函式。 此選項可用，類別衍生自[CWnd](../../mfc/reference/cwnd-class.md)。  
+ **Active accessibility**  
+ Enables MFC's support for Active Accessibility by calling [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) in the constructor. This option is available for classes derived from [CWnd](../../mfc/reference/cwnd-class.md).  
   
- **DHTML 資源識別碼**  
- 套用至類別衍生自`CDHtmlDialog`只。 指定 DHTML 對話方塊中的資源識別碼。 資源識別碼會出現在 HTML 區段的專案的.rc 檔，以及 HTML 對話方塊 方塊中的檔案名稱。 這個識別碼所識別的 DHTML 資源，由對話方塊中，由**對話方塊 ID**。  
+ **DHTML resource ID**  
+ Applies to classes derived from `CDHtmlDialog` only. Specifies the resource ID of the DHTML dialog box. The resource ID appears in the HTML section of the project's .rc file, along with the HTML dialog box file name. The DHTML resource, identified by this ID, is hosted by the dialog box, identified by **Dialog ID**.  
   
- **.HTM 檔。**  
- 套用至類別衍生自`CDHtmlDialog`只。 設定 DHTML 對話方塊中的 HTML 檔案的名稱。 根據預設，此檔案名稱根據類別名稱。 檔案名稱會出現在 HTML 區段的專案的.rc 檔，以及 DHTML 對話方塊 方塊中的資源 id。  
+ **.HTM file**  
+ Applies to classes derived from `CDHtmlDialog` only. Sets the name of the HTML file for the DHTML dialog box. By default, this file name is based on the class name. The file name appears in the HTML section of the project's .rc file, along with the DHTML dialog box resource ID.  
   
- **自動化**  
- 設定類別層級的支援[自動化](../../mfc/automation.md)。 在類別層級的自動化是適用於所有支援自動化的類別。 它也會提供自動化的支援建立的專案。 也就是其中一個 MFC 專案[支援 ATL](../../atl/reference/mfc-support-in-atl-projects.md)，或在您選取的 MFC 專案**自動化**中核取方塊[進階功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)MFC 應用程式精靈頁面。  
+ **Automation**  
+ Sets the class level of support for [Automation](../../mfc/automation.md). Automation at the class level is available for all classes that support Automation. It is also available for projects created with support for Automation. That is, either an MFC project that [supports ATL](../../atl/reference/mfc-support-in-atl-projects.md), or an MFC project for which you selected the **Automation** check box in the [Advanced Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) page of the MFC Application Wizard.  
   
-|選項|描述|  
+|Option|Description|  
 |------------|-----------------|  
-|**無**|指出類別有任何自動化的支援。|  
-|**自動化**|表示此類別支援自動化。 如果您選取此選項時，新建立的類別可自動化用戶端應用程式，例如 Microsoft Visual Basic 和 Microsoft Excel 的可程式化物件。 此選項不適用於這個表格後面列出的基底類別。|  
-|**建立類型識別碼**|表示類別和專案都支援其他應用程式建立這個類別使用自動化的物件。 使用此選項，自動化用戶端可以直接建立 Automation 物件。 在文字方塊中的型別 ID 用於用戶端應用程式所指定的物件建立;它是全系統，而且必須是唯一。 此選項不適用於這個表格後面列出的基底類別。|  
+|**None**|Indicates that the class has no Automation support.|  
+|**Automation**|Indicates that the class supports Automation. If you select this option, the newly created class is available as a programmable object by Automation client applications, such as Microsoft Visual Basic and Microsoft Excel. This option is not available for the base classes listed after this table.|  
+|**Creatable by type ID**|Indicates that both the class and project support other applications creating objects of this class using Automation. With this option, automation clients can directly create an Automation object. The type ID in the text box is used by the client application to specify the object to be created; it is systemwide and must be unique. This option is not available for the base classes listed after this table.|  
   
- 自動化支援不適用於下列的基底類別︰  
+ Automation support is not available for the following base classes:  
   
 -   `CAsyncMonitorFile`  
   
@@ -123,15 +123,15 @@ ms.lasthandoff: 02/24/2017
   
 -   `CSocket`  
   
- **類型識別碼**  
- 設定類別的型別識別碼。 **類型識別碼**方塊會串連專案名稱和新的類別名稱，如下所示︰ *MFCProj.MFCClass*。 此識別碼是當您選取才可變更**自動化**選項**Creatable 的類型識別碼**。  
+ **Type ID**  
+ Sets the type ID of the class. The **Type ID** box concatenates the project name and the new class name as follows: *MFCProj.MFCClass*. This ID is changeable only if you selected the **Automation** option **Creatable by type ID**.  
   
- **產生 DocTemplate 資源**  
- 指示應用程式所建立的文件的文件範本資源。 若要啟用此核取方塊，專案必須支援 MFC 的文件/檢視架構，而且這個類別的基底類別必須是[CFormView](../../mfc/reference/cformview-class.md)。  
+ **Generate DocTemplate resources**  
+ Indicates that the documents created by the application have document template resources. To activate this check box, the project must support the MFC document/view architecture, and the base class of this class must be [CFormView](../../mfc/reference/cformview-class.md).  
   
- 請參閱[文件範本和文件/檢視建立程序](../../mfc/document-templates-and-the-document-view-creation-process.md)如需詳細資訊。  
+ See [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md) for more information.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 類別](../../mfc/reference/adding-an-mfc-class.md)   
- [加入類別](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
 

@@ -1,44 +1,63 @@
 ---
-title: "從影像清單描繪影像 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList 類別, 繪圖影像來源"
-  - "繪製, 影像清單的影像"
-  - "影像清單 [C++], 繪圖影像來源"
-  - "影像 [C++], 繪製"
+title: Drawing Images from an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], drawing images from
+- drawing [MFC], images from image lists
+- image lists [MFC], drawing images from
+- images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 從影像清單描繪影像
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0ffa8a402eb7a9c34d2496a39621f12310df12c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要繪製影像，請使用 [CImageList::Draw](../Topic/CImageList::Draw.md) 成員函式。  您要指定指標裝置內容物件，影像的索引位置，繪製在繪製影像和一組旗標的繪製樣式的裝置內容。  
+---
+# <a name="drawing-images-from-an-image-list"></a>Drawing Images from an Image List
+To draw an image, use the [CImageList::Draw](../mfc/reference/cimagelist-class.md#draw) member function. You'll specify a pointer to a device context object, the index of the image to draw, the location in the device context at which to draw the image, and a set of flags to indicate the drawing style.  
   
- 當您指定 `ILD_TRANSPARENT` 樣式時， **Draw** 使用兩個步驟遮罩繪製影像。  首先，它會執行 AND 邏輯作業在影像的位元和位元遮罩。  然後它會在第一個作業的結果與目的裝置内容的背景位元的邏輯 XOR 運算。  這個程序會在產生的影像透明區域;即遮罩中每個白色位元組所產生的影像造成對應的位元透明。  
+ When you specify the `ILD_TRANSPARENT` style, **Draw** uses a two-step process to draw a masked image. First, it performs a logical-AND operation on the bits of the image and the bits of the mask. Then it performs a logical-XOR operation on the results of the first operation and the background bits of the destination device context. This process creates transparent areas in the resulting image; that is, each white bit in the mask causes the corresponding bit in the resulting image to be transparent.  
   
- 在繪製純色背景的遮罩影像之前，您應該使用 [SetBkColor](../Topic/CImageList::SetBkColor.md) 成員函式將影像清單的背景色彩為色彩和目的相同。  設定色彩不需要建立在影像透明區域並使 **Draw** 複製至目的裝置内容，導致效能降低的明顯地增加。  當您呼叫 **Draw**時，若要繪製影像，請指定 `ILD_NORMAL` 樣式。  
+ Before drawing a masked image on a solid color background, you should use the [SetBkColor](../mfc/reference/cimagelist-class.md#setbkcolor) member function to set the background color of the image list to the same color as the destination. Setting the color eliminates the need to create transparent areas in the image and enables **Draw** to simply copy the image to the destination device context, resulting in a significant increase in performance. To draw the image, specify the `ILD_NORMAL` style when you call **Draw**.  
   
- 您可以隨時設定遮罩影像清單 \([CImageList](../mfc/reference/cimagelist-class.md)\) 背景色彩，以便在所有的背景純色正確繪製。  造成繪製影像上的預設設定為 `CLR_NONE` 的背景色彩。  若要擷取影像清單的背景色彩，請使用 [GetBkColor](../Topic/CImageList::GetBkColor.md) 成員函式。  
+ You can set the background color for a masked image list ([CImageList](../mfc/reference/cimagelist-class.md)) at any time so that it draws correctly on any solid background. Setting the background color to `CLR_NONE` causes images to be drawn transparently by default. To retrieve the background color of an image list, use the [GetBkColor](../mfc/reference/cimagelist-class.md#getbkcolor) member function.  
   
- 使用系統的醒目提示色彩的影像的 `ILD_BLEND25` 和 `ILD_BLEND50` 樣式遞色。  這些樣式是有用的，如果您使用遮罩表示使用者可選取的物件。  例如，在中，當使用者選取控制項時，您可以使用 `ILD_BLEND50` 樣式來繪製影像。  
+ The `ILD_BLEND25` and `ILD_BLEND50` styles dither the image with the system highlight color. These styles are useful if you use a masked image to represent an object that the user can select. For example, you can use the `ILD_BLEND50` style to draw the image when the user selects it.  
   
- 使用 **SRCCOPY** 光柵作業，一 nonmasked 影像複製到目的裝置內容。  不論裝置內容的背景色彩，在影像的色彩出現相同。  在 **Draw** 指定的繪製樣式也會一 nonmasked 影像的外觀。  
+ A nonmasked image is copied to the destination device context using the **SRCCOPY** raster operation. The colors in the image appear the same regardless of the background color of the device context. The drawing styles specified in **Draw** also have no effect on the appearance of a nonmasked image.  
   
- 除了繪製成員函式之外，另一個函式， [DrawIndirect](../Topic/CImageList::DrawIndirect.md)，延伸能力呈現影像。  `DrawIndirect` ，會接受做為參數， [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) 結構。  這個結構可以用來自訂目前影像的呈現，包括使用光柵作業 \(ROP\) 程式碼。  如需 ROP 程式碼的詳細資訊，請參閱 [光柵作業程式碼](http://msdn.microsoft.com/library/windows/desktop/dd162892) 和 [點陣圖當做筆刷使用](http://msdn.microsoft.com/library/windows/desktop/dd183378) 在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+ In addition to the Draw member function, another function, [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect), extends the ability to render an image. `DrawIndirect` takes, as a parameter, an [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395) structure. This structure can be used to customize the rendering of the current image, including the use of raster operation (ROP) codes. For more information on ROP codes, see [Raster Operation Codes](http://msdn.microsoft.com/library/windows/desktop/dd162892) and [Bitmaps as Brushes](http://msdn.microsoft.com/library/windows/desktop/dd183378) in the Windows SDK.  
   
-## 請參閱  
- [使用 CImageList](../mfc/using-cimagelist.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

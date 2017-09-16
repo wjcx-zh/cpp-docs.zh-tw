@@ -1,5 +1,5 @@
 ---
-title: "bitset 類別 | Microsoft Docs"
+title: bitset Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - bitset/std::bitset
-- bitset
 - bitset/std::bitset::element_type
 - bitset/std::bitset::all
 - bitset/std::bitset::any
@@ -28,7 +27,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- bitset class
+- std::bitset [C++]
+- std::bitset [C++], element_type
+- std::bitset [C++], all
+- std::bitset [C++], any
+- std::bitset [C++], count
+- std::bitset [C++], flip
+- std::bitset [C++], none
+- std::bitset [C++], reset
+- std::bitset [C++], set
+- std::bitset [C++], size
+- std::bitset [C++], test
+- std::bitset [C++], to_string
+- std::bitset [C++], to_ullong
+- std::bitset [C++], to_ulong
+- std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
 caps.latest.revision: 21
 author: corob-msft
@@ -48,109 +61,109 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8e3518fb40cdd3e8bdd14b5ed64f4cc6dbcb1058
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1c8e1e5aee495d11911aef2723e8e243a155fc63
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="bitset-class"></a>bitset 類別
-描述物件類型，其可儲存由固定位元數所組成的序列，以提供精簡的方式，來保留一組項目或條件的旗標。 bitset 類別支援類型 bitset 物件上的作業，該作業包含位元的集合，並提供每一個位元的常數時間存取。  
+# <a name="bitset-class"></a>bitset Class
+Describes a type of object that stores a sequence consisting of a fixed number of bits that provide a compact way of keeping flags for a set of items or conditions. The bitset class supports operations on objects of type bitset that contain a collection of bits and provide constant-time access to each bit.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <size_t N>  
 class bitset  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  *N*  
- 指定 bitset 物件中的位元數，搭配非零整數的類型 **size_t**，其在編譯時期必須為已知。  
+ Specifies the number of bits in the bitset object with a nonzero integer of type **size_t** that must be known at compile time.  
   
-## <a name="remarks"></a>備註  
- 不同於類似的 [vector\<bool> 類別](../standard-library/vector-bool-class.md)，bitset 類別並沒有迭代器，而且不是 C++ 標準程式庫容器。 它也與 vector\<bool> 在編譯時期固定的指定大小相異，與樣板參數 **N** 在 **bitset\<N\>** 宣告時指定的大小一致。  
+## <a name="remarks"></a>Remarks  
+ Unlike the similar [vector\<bool> Class](../standard-library/vector-bool-class.md), the bitset class does not have iterators and is not a C++ Standard Library container. It also differs from vector\<bool> by being of some specific size that is fixed at compile time in accordance with the size specified by the template parameter **N** when the **bitset\<N\>** is declared.  
   
- 如果位元值為 1 則設定位元，如果其值為 0 則重設。 若要翻轉或反轉位元，方法是從 1 到 0 或從 0 到 1 變更其值。 bitset 中的 **N** 位元會由從 0 到 **N** - 1 的整數值編製索引，其中 0 為第一個位元位置的索引，**N** - 1 是最終位元位置。  
+ A bit is set if its value is 1 and reset if its value is 0. To flip or invert a bit is to change its value from 1 to 0 or from 0 to 1. The **N** bits in a bitset are indexed by integer values from 0 to **N** - 1, where 0 indexes the first bit position and **N** - 1 the final bit position.  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[bitset](#bitset)|建構 `bitset\<N>` 類別的物件並將此位元初始化為零、某指定值或字串字元中取得的值。|  
+|[bitset](#bitset)|Constructs an object of class `bitset\<N>` and initializes the bits to zero, to some specified value, or to values obtained from characters in a string.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|資料類型 `bool` 同義字的類型，可以用來參考 `bitset` 中的項目位元。|  
+|[element_type](#element_type)|A type that is a synonym for the data type `bool` and can be used to reference element bits in a `bitset`.|  
   
-### <a name="member-functions"></a>成員函式  
-  
-|||  
-|-|-|  
-|[all](#all)|測試這個 `bitset` 中的所有位元，以判斷是否全部設定為 `true`。|  
-|[any](#any)|此成員函式會測試該序列中的任何位元是否設為 1。|  
-|[count](#count)|此成員函式會傳回位元序列中設定的位元數。|  
-|[flip](#flip)|反轉 `bitset` 中的所有位元值，或在指定位置反轉單一位元。|  
-|[none](#none)|測試在 `bitset` 物件中是否沒有已設為 1 的位元。|  
-|[reset](#reset)|將 `bitset` 中的所有位元重設為 0，或將指定位置的位元重設為 0。|  
-|[set](#set)|將 `bitset` 中的所有位元設為 1，或將指定位置的位元設為 1。|  
-|[size](#size)|傳回 `bitset` 物件中的位元數。|  
-|[test](#test)|測試位於 `bitset` 中指定位置的位元是否設為 1。|  
-|[to_string](#to_string)|將 `bitset` 物件轉換為字串表示。|  
-|[to_ullong](#to_ullong)|以 `unsigned long long` 傳回 `bitset` 中的位元值總和。|  
-|[to_ulong](#to_ulong)|將 `bitset` 物件轉換成 `unsigned long`，如果用來初始化 `bitset`，其可能產生所包含位元的序列。|  
-  
-### <a name="member-classes"></a>成員類別  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[reference](#reference)|Proxy 類別，提供參考給包含於 `bitset` 中的位元，而 bitset 是用來存取及管理做為類別 `bitset` 之 `operator[]` 協助程式類別的個別位元。|  
+|[all](#all)|Tests all of the bits in this `bitset` to determine whether they are all set to `true`.|  
+|[any](#any)|The member function tests whether any bit in the sequence is set to 1.|  
+|[count](#count)|The member function returns the number of bits set in the bit sequence.|  
+|[flip](#flip)|Inverts the value of all the bits in a `bitset` or inverts a single bit at a specified position.|  
+|[none](#none)|Tests if no bit has been set to 1 in a `bitset` object.|  
+|[reset](#reset)|Resets all the bits in a `bitset` to 0 or resets a bit at a specified position to 0.|  
+|[set](#set)|Sets all the bits in a `bitset` to 1 or sets a bit at a specified position to 1.|  
+|[size](#size)|Returns the number of bits in a `bitset` object.|  
+|[test](#test)|Tests whether the bit at a specified position in a `bitset` is set to 1.|  
+|[to_string](#to_string)|Converts a `bitset` object to a string representation.|  
+|[to_ullong](#to_ullong)|Returns the sum of the bit values in the `bitset` as an `unsigned long long`.|  
+|[to_ulong](#to_ulong)|Converts a `bitset` object to the `unsigned long` that would generate the sequence of bits contained if used to initialize the `bitset`.|  
   
-### <a name="operators"></a>運算子  
+### <a name="member-classes"></a>Member Classes  
   
 |||  
 |-|-|  
-|[operator!=](#op_neq)|測試目標 `bitset` 是否與指定的 `bitset` 不相等。|  
-|[operator&=](#op_and_eq)|以邏輯 `AND` 作業執行 bitset 的位元組合。|  
-|[operator<<](#op_lshift)|以位置的指定數目將 `bitset` 中的位元移位至左邊，並傳回結果至新的 `bitset`。|  
-|[operator<<=](#op_lshift_eq)|以位置的指定數目將 `bitset` 中的位元移位至左邊，並傳回結果至目標的 `bitset`。|  
-|[operator==](#op_eq_eq)|測試目標 `bitset` 是否與指定之 `bitset` 相等。|  
-|[operator>>](#op_rshift)|以位置的指定數目將 `bitset` 中的位元移位至右邊，並傳回結果至新的 `bitset`。|  
-|[operator>>=](#op_rshift_eq)|以位置的指定數目將 `bitset` 中的位元移位至右邊，並傳回結果至目標的 `bitset`。|  
-|[operator&#91;&#93;](#op_at)|如果 `bitset` 可修改，則傳回位於 `bitset` 中指定位置的位元參考；否則它會傳回該位置的位元值。|  
-|[operator^=](#op_xor_eq)|以互斥 `OR` 作業執行 bitset 的位元組合。|  
-|[operator&#124;=](#op_or_eq')|以包含 `OR` 作業執行 bitset 的位元組合。|  
-|[operator~](#op_dtor)|反轉目標 `bitset` 中的所有位元，並傳回結果。|  
+|[reference](#reference)|A proxy class that provides references to bits contained in a `bitset` that is used to access and manipulate the individual bits as a helper class for the `operator[]` of class `bitset`.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<bitset>  
+### <a name="operators"></a>Operators  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|Tests a target `bitset` for inequality with a specified `bitset`.|  
+|[operator&=](#op_and_eq)|Performs a bitwise combination of bitsets with the logical `AND` operation.|  
+|[operator<<](#op_lshift)|Shifts the bits in a `bitset` to the left a specified number of positions and returns the result to a new `bitset`.|  
+|[operator<<=](#op_lshift_eq)|Shifts the bits in a `bitset` to the left a specified number of positions and returns the result to the targeted `bitset`.|  
+|[operator==](#op_eq_eq)|Tests a target `bitset` for equality with a specified `bitset`.|  
+|[operator>>](#op_rshift)|Shifts the bits in a `bitset` to the right a specified number of positions and returns the result to a new `bitset`.|  
+|[operator>>=](#op_rshift_eq)|Shifts the bits in a `bitset` to the right a specified number of positions and returns the result to the targeted `bitset`.|  
+|[operator&#91;&#93;](#op_at)|Returns a reference to a bit at a specified position in a `bitset` if the `bitset` is modifiable; otherwise, it returns the value of the bit at that position.|  
+|[operator^=](#op_xor_eq)|Performs a bitwise combination of bitsets with the exclusive `OR` operation.|  
+|[operator&#124;=](#op_or_eq')|Performs a bitwise combination of bitsets with the inclusive `OR` operation.|  
+|[operator~](#op_dtor)|Inverts all the bits in a target `bitset` and returns the result.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<bitset>  
+  
+ **Namespace:** std  
   
 ##  <a name="all"></a>  bitset::all  
- 測試這個位元集中的所有位元，以判斷是否全部設定為 true。  
+ Tests all of the bits in this bitset to determine if they are all set to true.  
   
 ```  
 bool all() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果這個集合中的所有位元都為 true，則傳回 true。 如果一或多個位元為 false，則傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ Returns true if all bits in this set are true. Returns **false** if one or more bits are false.  
   
 ##  <a name="any"></a>  bitset::any  
- 測試序列中是否有任何位元設為 1。  
+ Tests whether any bit in the sequence is set to 1.  
   
 ```  
 bool any() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果 bitset 中有任何位元設為 1，則為 **true**；如果所有位元都是 0，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if any bit in the bitset is set to 1; **false** if all the bits are 0.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_any.cpp  
@@ -202,7 +215,7 @@ None of the bits in bitset b1 are set to 1.
 ```  
   
 ##  <a name="bitset"></a>  bitset::bitset  
- 建構 `bitset\<N>` 類別的物件，並將此位元初始化為零、某指定值或字串字元中取得的值。  
+ Constructs an object of class `bitset\<N>` and initializes the bits to zero, or to some specified value, or to values obtained from characters in a string.  
   
 ```  
 bitset();
@@ -231,44 +244,44 @@ explicit bitset(
     CharType _One = CharType ('1'));
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `val`  
- 不帶正負號的整數，其以 2 為底數的表示可用來初始化所建構之 bitset 中的位元。  
+ The unsigned integer whose base two representation is used to initialize the bits in the bitset being constructed.  
   
  `str`  
- 以零和一組成的字串，用來初始化 bitset 的位元值。  
+ The string of zeros and ones used to initialize the bitset bit values.  
   
  `_CStr`  
- 以零和一組成的 C 樣式字串，用來初始化 bitset 的位元值。  
+ A C-style string of zeros and ones used to initialize the bitset bit values.  
   
  `_Pos`  
- 字串中的字元位置，由左到右算起並以零起始，用來初始化 bitset 中的第一個位元。  
+ The position of the character in the string, counting from left to right and starting with zero, used to initialize the first bit in the bitset.  
   
  `count`  
- 字串中的字元數，用來提供初始值給 bitset 中的位元。  
+ The number of characters in the string that is used to provide initial values for the bits in the bitset.  
   
  `_Zero`  
- 用來表示零的字元。 預設值為 '0'。  
+ The character that is used to represent a zero. The default is '0'.  
   
  `_One`  
- 用來表示一的字元。 預設值為 '1'。  
+ The character that is used to represent a one. The default is '1'.  
   
-### <a name="remarks"></a>備註  
- 三個建構函式可用來建構 `bitset\<N>` 類別的物件：  
+### <a name="remarks"></a>Remarks  
+ Three constructors can be used to construct obects of class `bitset\<N>`:  
   
--   第一個建構函式不會接受任何參數、會建構 `bitset\<N>` 類別的物件，並將所有 N 位元初始化為預設值零。  
+-   The first constructor accepts no parameters, constructs an object of class `bitset\<N>` and initializes all N bits to a default value of zero.  
   
--   第二個建構函式會建構 `bitset\<N>` 類別的物件，並使用單一 `unsigned long long` 參數將位元初始化。  
+-   The second constructor constructs an object of class `bitset\<N>` and initializes the bits by using the single `unsigned long long` parameter.  
   
--   第三個建構函式會建構 `bitset\<N>` 類別的物件，並將 N 位元初始化為與由零和一組成之 C 樣式字元字串所提供的字元相對應的值。 您可以呼叫此建構函式，而不需要將字串轉換為字串類型︰`bitset<5> b5("01011");`  
+-   The third constructor constructs an object of class `bitset\<N>`, initializing the N bits to values that correspond to the characters provided in a c-style character string of zeros and ones. You call the constructor without casting the string into a string type: `bitset<5> b5("01011");`  
   
- 另外還提供兩個建構函式樣板：  
+ There are also two constructor templates provided:  
   
--   第一個建構函式樣板會建構 `bitset\<N>` 類別的物件，並從由零和一組成之字串所提供的字元，將位元初始化。 如果字串的任何字元不是 0 或 1，此建構函式會擲回 [invalid_argument](../standard-library/invalid-argument-class.md) 類別的物件。 如果指定的位置 (`_Pos`) 超過字串的長度，則此建構函式會擲回 [out_of_range](../standard-library/out-of-range-class.md) 類別的物件。 此建構函式只會設定位於 bitset 中 *j* 位置的這些位元，而位於 `_Pos + j` 位置的字串字元會是 1。 `_Pos` 預設為 0。  
+-   The first constructor template constructs an object of class `bitset\<N>` and initializes bits from the characters provided in a string of zeros and ones. If any characters of the string are other than 0 or 1, the constructor throws an object of class [invalid argument](../standard-library/invalid-argument-class.md). If the position specified ( `_Pos`) is beyond the length of the string, then the constructor throws an object of class [out_of_range](../standard-library/out-of-range-class.md). The constructor sets only those bits at position *j* in the bitset for which the character in the string at position `_Pos + j` is 1. By default, `_Pos` is 0.  
   
--   第二個建構函式樣板類似於第一個建構函式樣板，但會包含一個額外的參數 (`count`)，以用來指定要初始化的位元數。 它也有兩個選擇性參數 `_Zero` 和 `_One`，表示 `str` 中要解譯以分別表示 0 位元和 1 位元的字元。  
+-   The second constructor template is similar to the first, but includes an additional parameter ( `count`) that is used to specify the number of bits to initialize. It also has two optional parameters, `_Zero` and `_One`, which indicate what character in `str` is to be interpreted to mean a 0 bit and a 1 bit, respectively.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_bitset.cpp  
@@ -344,19 +357,19 @@ The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).
 ```  
   
 ##  <a name="count"></a>  bitset::count  
- 傳回位元序列中設定的位元數。  
+ Returns the number of bits set in the bit sequence.  
   
 ```  
 size_t count() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-位元序列中設定的位元數。  
+The number of bits set in the bit sequence.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
-下列範例示範如何使用 bitset::count 成員函式。  
+The following example demonstrates the use of the bitset::count member function.  
   
 ```cpp  
 // bitset_count.cpp  
@@ -399,13 +412,13 @@ The number of bits in the bitset set to 1 is: 4.
 ```  
   
 ##  <a name="element_type"></a>  bitset::element_type  
- 與資料類型 `bool` 同義的類型，可用來參考 bitset 中的元素位元。  
+ A type that is a synonym for the data type `bool` and can be used to reference element bits in a bitset.  
   
 ```  
 typedef bool element_type;  
 ```  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_elem_type.cpp  
@@ -454,24 +467,24 @@ The bit at position 2 of bitset b1has a value of 1.
 ```  
   
 ##  <a name="flip"></a>  bitset::flip  
- 反轉 bitset 中的所有位元值，或在指定位置反轉單一位元。  
+ Inverts the value of all the bits in a bitset or inverts a single bit at a specified position.  
   
 ```  
 bitset\<N>& flip();  
 bitset\<N>& flip(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- 要反轉其值之位元的位置。  
+ The position of the bit whose value is to be inverted.  
   
-### <a name="return-value"></a>傳回值  
- 叫用成員函式之已修改的 bitset 複本。  
+### <a name="return-value"></a>Return Value  
+ A copy of the modified bitset for which the member function was invoked.  
   
-### <a name="remarks"></a>備註  
- 如果指定為參數的位置大於已反轉其位元之 **bitset\<***N***>** 的大小 *N*，第二個成員函式會擲回 [out_of_range](../standard-library/out-of-range-class.md) 例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The second member function throws an [out_of_range](../standard-library/out-of-range-class.md) exception if the position specified as a parameter is greater than the size *N* of the **bitset\<***N***>** whose bit was inverted.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_flip.cpp  
@@ -523,16 +536,16 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 ```  
   
 ##  <a name="none"></a>  bitset::none  
- 測試在 bitset 物件中是否沒有已設為 1 的位元。  
+ Tests if no bit has been set to 1 in a bitset object.  
   
 ```  
 bool none() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果 bitset 中沒有已設為 1 的位元，則為 **true**；如果至少有一個位元已設為 1，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if no bit in the bitset has been set to 1; **false** if at least one bit has been set to 1.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_none.cpp  
@@ -578,23 +591,23 @@ None of the bits in bitset b1 are set to 1.
 ```  
   
 ##  <a name="op_neq"></a>  bitset::operator!=  
- 測試目標 bitset 是否與指定的 bitset 不相等。  
+ Tests a target bitset for inequality with a specified bitset.  
   
 ```  
 bool operator!=(const bitset\<N>& right) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與目標 bitset 比較是否不相等的 bitset。  
+ The bitset that is to be compared to the target bitset for inequality.  
   
-### <a name="return-value"></a>傳回值  
- 如果 bitset 不同，則為 **true**；如果兩者相同，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the bitsets are different; **false** if they are the same.  
   
-### <a name="remarks"></a>備註  
- bitset 的大小必須相同，才能由成員運算子函式測試是否不相等。  
+### <a name="remarks"></a>Remarks  
+ Bitsets must be of the same size to be tested for inequality by the member operator function.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_NE.cpp  
@@ -636,25 +649,25 @@ Bitset b1 is different from bitset b3.
 ```  
   
 ##  <a name="op_and_eq"></a>  bitset::operator&amp;=  
- 以邏輯 **AND** 運算執行 bitset 的位元組合。  
+ Performs a bitwise combination of bitsets with the logical **AND** operation.  
   
 ```  
 bitset\<N>& operator&=(const bitset\<N>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與目標 bitset 進行位元結合的 bitset。  
+ The bitset that is to be combined bitwise with the target bitset.  
   
-### <a name="return-value"></a>傳回值  
- 使用指定為參數的 bitset，從位元 **AND** 運算產生之已修改的目標 bitset。  
+### <a name="return-value"></a>Return Value  
+ The modified target bitset that results from the bitwise **AND** operation with the bitset specified as a parameter.  
   
-### <a name="remarks"></a>備註  
- 如果每個位元都為 true，由 **AND** 運算子結合的兩個位元會傳回 **true**；否則，其組合會傳回 **false**。  
+### <a name="remarks"></a>Remarks  
+ Two bits combined by the **AND** operator return **true** if each bit is true; otherwise, their combination returns **false**.  
   
- bitset 的大小必須相同，才能由成員運算子函式透過 **AND** 運算子進行位元結合。  
+ Bitsets must be of the same size to be combined bitwise with the **AND** operator by the member operator function.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_bitwise.cpp  
@@ -700,23 +713,23 @@ The parameter bitset b2 remains: ( 01011 ).
 
 ##  <a name="op_lshift"></a> bitset::operator\<\<    
   
-將 bitset 中的位元向左移位指定的位置數值，並將結果傳回至新的 bitset。  
+Shifts the bits in a bitset to the left a specified number of positions and returns the result to a new bitset.  
   
 ```  
 bitset\<N> operator<<(size_t _Pos) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- bitset 中的位元向左移位的位置數值。  
+ The number of positions to the left that the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>傳回值  
- 已修改的 bitset，其中的位元會向左移位必要的位置數值。  
+### <a name="return-value"></a>Return Value  
+ The modified bitset with the bits shifted to the left the required number of positions.  
   
-### <a name="remarks"></a>備註  
- 此成員運算子函式會傳回 **bitset**( **\*this**) **<<= pos**，其中 [<<=](#op_lshift_eq) 會將 bitset 中的位元向左移位指定的位置數值，並將結果傳回至目標 bitset。  
+### <a name="remarks"></a>Remarks  
+ The member operator function returns **bitset**( **\*this**) **<<= pos,** where [<<=](#op_lshift_eq) shifts the bits in a bitset to the left a specified number of positions and returns the result to the targeted bitset.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_LS.cpp  
@@ -748,23 +761,23 @@ int main( )
 ```  
   
 ##  <a name="op_lshift_eq"></a>  bitset::operator&lt;&lt;=  
- 將 bitset 中的位元向左移位指定的位置數值，並將結果傳回至目標 bitset。  
+ Shifts the bits in a bitset to the left a specified number of positions and returns the result to the targeted bitset.  
   
 ```  
 bitset\<N>& operator<<=(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- bitset 中的位元向左移位的位置數值。  
+ The number of positions to the left the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>傳回值  
- 已修改的目標 bitset，其中的位元已向左移位必要的位置數值。  
+### <a name="return-value"></a>Return Value  
+ The targeted bitset modified so that the bits have been shifted to the left the required number of positions.  
   
-### <a name="remarks"></a>備註  
- 如果沒有要移位至該位置的元素，此函式會將位元值清除成 0。  
+### <a name="remarks"></a>Remarks  
+ If no element exists to shift into the position, the function clears the bit to a value of 0.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_LSE.cpp  
@@ -791,23 +804,23 @@ After shifting the bits 2 positions to the left,
 ```  
   
 ##  <a name="op_eq_eq"></a>  bitset::operator==  
- 測試目標 bitset 是否與指定的 bitset 相等。  
+ Tests a target bitset for equality with a specified bitset.  
   
 ```  
 bool operator==(const bitset\<N>& right) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與目標 bitset 比較是否相等的 bitset。  
+ The bitset that is to be compared to the target bitset for equality.  
   
-### <a name="return-value"></a>傳回值  
- 如果 bitset 相同，則為 **true**；如果兩者不同，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the bitsets are the same; **false** if they are different.  
   
-### <a name="remarks"></a>備註  
- bitset 的大小必須相同，才能由成員運算子函式測試是否相等。  
+### <a name="remarks"></a>Remarks  
+ Bitsets must be of the same size to be tested for equality by the member operator function.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_EQ.cpp  
@@ -848,20 +861,20 @@ Bitset b1 is different from bitset b3.
 ```  
   
 ##  <a name="op_rshift"></a>  bitset::operator&gt;&gt;  
- 將 bitset 中的位元向右移位指定的位置數值，並將結果傳回至新的 bitset。  
+ Shifts the bits in a bitset to the right a specified number of positions and returns the result to a new bitset.  
   
 ```  
 bitset\<N> operator>>(size_t _Pos) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- bitset 中的位元向右移位的位置數值。  
+ The number of positions to the right the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>傳回值  
- 新的 bitset，其中的位元已相對於目標 bitset 向右移位必要的位置數值。  
+### <a name="return-value"></a>Return Value  
+ A new bitset where the bits have been shifted to the right the required number of positions relative to the targeted bitset.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_RS.cpp  
@@ -898,23 +911,23 @@ After shifting the bits 1 position to the right,
 ```  
   
 ##  <a name="op_rshift_eq"></a>  bitset::operator&gt;&gt;=  
- 將 bitset 中的位元向右移位指定的位置數值，並將結果傳回至目標 bitset。  
+ Shifts the bits in a bitset to the right a specified number of positions and returns the result to the targeted bitset.  
   
 ```  
 bitset\<N>& operator>>=(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- bitset 中的位元向右移位的位置數值。  
+ The number of positions to the right the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>傳回值  
- 已修改的目標 bitset，其中的位元已向右移位必要的位置數值。  
+### <a name="return-value"></a>Return Value  
+ The targeted bitset modified so that the bits have been shifted to the right the required number of positions.  
   
-### <a name="remarks"></a>備註  
- 如果沒有要移位至該位置的元素，此函式會將位元值清除成 0。  
+### <a name="remarks"></a>Remarks  
+ If no element exists to shift into the position, the function clears the bit to a value of 0.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_RSE.cpp  
@@ -942,21 +955,21 @@ After shifting the bits 2 positions to the right,
 ```  
   
 ##  <a name="op_at"></a>  bitset::operator[]  
- 如果 bitset 可修改，則傳回位於 bitset 中指定位置的位元參考；否則會傳回該位置的位元值。  
+ Returns a reference to a bit at a specified position in a bitset if the bitset is modifiable; otherwise, it returns the value of the bit at that position.  
   
 ```  
 bool operator[](size_t _Pos) const;
 reference operator[](size_t _Pos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- 此位元在 bitset 中的位置。  
+ The position locating the bit within the bitset.  
   
-### <a name="remarks"></a>備註  
-當您將組建中的 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 定義為 1 或 2 時，如果嘗試存取 bitset 界限之外的元素，您的可執行檔中將會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
+### <a name="remarks"></a>Remarks  
+When you define [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) as 1 or 2 in your build, a runtime error will occur in your executable if you attempt to access an element outside the bounds of the bitset. For more informations, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_REF.cpp  
@@ -983,25 +996,25 @@ int main( )
 ```  
   
 ##  <a name="op_xor_eq"></a>  bitset::operator^=  
- 以互斥 `OR` 作業執行 bitset 的位元組合。  
+ Performs a bitwise combination of bitsets with the exclusive `OR` operation.  
   
 ```  
 bitset\<N>& operator^=(const bitset\<N>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與目標 bitset 進行位元結合的 bitset。  
+ The bitset that is to be combined bitwise with the target bitset.  
   
-### <a name="return-value"></a>傳回值  
- 使用指定為參數的 bitset，從位元排除 `OR` 運算產生之已修改的目標 bitset。  
+### <a name="return-value"></a>Return Value  
+ The modified target bitset that results from the bitwise exclusive `OR` operation with the bitset specified as a parameter.  
   
-### <a name="remarks"></a>備註  
- 由排除 **OR** 運算子結合的兩個位元若至少其中之一 (而非兩者) 為 **true**，則會傳回 **true**；否則，其組合會傳回 **false**。  
+### <a name="remarks"></a>Remarks  
+ Two bits combined by the exclusive **OR** operator return **true** if at least one, but not both, of the bits is **true**; otherwise, their combination returns **false**.  
   
- bitset 的大小必須相同，才能由成員運算子函式透過排除 `OR` 運算子進行位元結合。  
+ Bitsets must be of the same size to be combined bitwise with the exclusive `OR` operator by the member operator function.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_bitwiseOR.cpp  
@@ -1045,25 +1058,25 @@ The parameter bitset b2 remains: ( 01011 ).
 ```  
   
 ##  <a name="op_or_eq"></a>  bitset::operator&#124;=  
- 以包含 `OR` 作業執行 bitset 的位元組合。  
+ Performs a bitwise combination of bitsets with the inclusive `OR` operation.  
   
 ```  
 bitset\<N>& operator|=(const bitset\<N>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 要與目標 bitset 進行位元結合的 bitset。  
+ The bitset that is to be combined bitwise with the target bitset.  
   
-### <a name="return-value"></a>傳回值  
- 使用指定為參數的 bitset，從位元包含 `OR` 運算產生之已修改的目標 bitset。  
+### <a name="return-value"></a>Return Value  
+ The modified target bitset that results from the bitwise inclusive `OR` operation with the bitset specified as a parameter.  
   
-### <a name="remarks"></a>備註  
- 由包含 `OR` 運算子結合的兩個位元若至少其中之一為 **true**，則會傳回 **true**；如果兩個位元都是 **false**，則其組合會傳回 **false**。  
+### <a name="remarks"></a>Remarks  
+ Two bits combined by the inclusive `OR` operator return **true** if at least one of the bits is **true**; if both bits are **false**, their combination returns **false**.  
   
- bitset 的大小必須相同，才能由成員運算子函式透過包含 `OR` 運算子進行位元結合。  
+ Bitsets must be of the same size to be combined bitwise with the inclusive `OR` operator by the member operator function.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_BIO.cpp  
@@ -1108,16 +1121,16 @@ The parameter bitset b2 remains: ( 01011 ).
 ```  
   
 ##  <a name="op_dtor"></a>  bitset::operator~  
- 反轉目標 bitset 中的所有位元，並傳回結果。  
+ Inverts all the bits in a target bitset and returns the result.  
   
 ```  
 bitset\<N> operator~() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 其所有位元已根據目標 bitset 反轉的 bitset。  
+### <a name="return-value"></a>Return Value  
+ The bitset with all its bits inverted with respect to the targeted bitset.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_invert.cpp  
@@ -1151,7 +1164,7 @@ Bitset b3 = b1.flip( ) is: ( 11000 ).
 ```  
   
 ##  <a name="reference"></a>  bitset::reference  
- Proxy 類別，提供參考給包含於 bitset 中的位元，而 bitset 是用來存取及管理作為 bitset 類別之 `operator[]` 協助程式類別的個別位元。  
+ A proxy class that provides references to bits contained in a bitset that is used to access and manipulate the individual bits as a helper class for the `operator[]` of class bitset.  
   
 ```  
 class reference {  
@@ -1165,28 +1178,28 @@ public:
 };  
 ```    
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `val`  
- 要指派給 bitset 中位元之 `bool` 類型物件的值。  
+ The value of the object of type `bool` to be assigned to a bit in a bitset.  
   
  `_Bitref`  
- 位於 bitset *x* 中 *i* 位置的位元參考，其格式為 *x [ i ]*。  
+ A reference of the form *x [ i ]* to the bit at position *i* in bitset *x*.  
   
-### <a name="return-value"></a>傳回值  
- 針對類別參考的第一個、第二個和第五個成員函式，會是引數位置所指定之 bitset 中的位元參考；針對類別參考的第三個和第四個成員函式，會是 **true** 或 **false**，以反映 bitset 中已修改的位元值。  
+### <a name="return-value"></a>Return Value  
+ A reference to the bit in the bitset specified by the argument position for the first, second, and fifth member functions of class reference, and **true** or **false**, to reflect the value of the modified bit in the bitset for the third and fourth member functions of class reference.  
   
-### <a name="remarks"></a>備註  
- 類別 `reference` 只有作為 bitset `operator[]` 的協助程式類別時才會出現。 此成員類別描述可存取 bitset 中個別位元的物件。 讓 *b* 成為 `bool` 類型的物件、讓 *x* 和 *y* 物件屬於 **bitset\<***N***>** 類型，並讓 *i* 和 *j* 成為這類物件中的有效位置。 標記法 *x [i]* 參考位於 bitset *x* 中位置 *i* 的位元。 `reference` 類別的成員函式會依序提供下列作業：  
+### <a name="remarks"></a>Remarks  
+ The class `reference` exists only as a helper class for the bitset `operator[]`. The member class describes an object that can access an individual bit within a bitset. Let *b* be an object of type `bool`, *x* and *y* objects of type **bitset\<***N***>**, and *i* and *j* valid positions within such an object. The notation *x [i]* references the bit at position *i* in bitset *x*. The member functions of class `reference` provide, in order, the following operations:  
   
-|作業|定義|  
+|Operation|Definition|  
 |---------------|----------------|  
-|*x*[*i*] = *b*|將 `bool` 值 *b* 儲存在 bitset *x* 中的位元位置 *i*。|  
-|*x*[*i*] = *y*[*j*]|將位元 *y*[ *j*] 的值儲存在 bitset *x* 中的位元位置 *i*。|  
-|*b* = ~ *x*[*i*]|將位元 *x*[ *i*] 的翻轉值儲存在 `bool` *b*。|  
-|*b* = *x*[*i*]|將位元 *x*[ *i*] 的值儲存在 `bool` *b*。|  
-|*x*[*i*]. `flip`( )|將位元 *x*[ *i*] 的翻轉值儲存回 *x* 中的位元位置 *i*。|  
+|*x*[*i*] = *b*|Stores `bool` value *b* at bit position *i* in bitset *x*.|  
+|*x*[*i*] = *y*[*j*]|Stores the value of the bit *y*[ *j*] at bit position *i* in bitset *x*.|  
+|*b* = ~ *x*[*i*]|Stores the flipped value of the bit *x*[ *i*] in `bool` *b*.|  
+|*b* = *x*[*i*]|Stores the value of the bit *x*[ *i*] in `bool` *b*.|  
+|*x*[*i*]. `flip`( )|Stores the flipped value of the bit *x*[ *i*] back at bit position *i* in *x*.|  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_reference.cpp  
@@ -1269,24 +1282,24 @@ After a second flip, the value of the position 4 bit in b2 is now: 1.
 ```  
   
 ##  <a name="reset"></a>  bitset::reset  
- 將 bitset 中的所有位元重設為 0，或將指定位置的位元重設為 0。  
+ Resets all the bits in a bitset to 0 or resets a bit at a specified position to 0.  
   
 ```  
 bitset\<N>& reset();  
 bitset\<N>& reset(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- bitset 中要重設為 0 的位元位置。  
+ The position of the bit in the bitset to be reset to 0.  
   
-### <a name="return-value"></a>傳回值  
- 叫用成員函式的 bitset 複本。  
+### <a name="return-value"></a>Return Value  
+ A copy of the bitset for which the member function was invoked.  
   
-### <a name="remarks"></a>備註  
- 如果指定的位置大於 bitset 的大小，第二個成員函式會擲回 [out_of_range](../standard-library/out-of-range-class.md) 例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The second member function throws an [out_of_range](../standard-library/out-of-range-class.md) exception if the position specified is greater than the size of the bitset.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_reset.cpp  
@@ -1325,7 +1338,7 @@ The collecion of bits obtained from resetting all
 ```  
   
 ##  <a name="set"></a>  bitset::set  
- 將 bitset 中的所有位元設為 1，或將指定位置的位元設為 1。  
+ Sets all the bits in a bitset to 1 or sets a bit at a specified position to 1.  
   
 ```   
 bitset\<N>& set();
@@ -1335,20 +1348,20 @@ bitset\<N>& set(
     bool val = true);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- bitset 中要設定以指派值的位元位置。  
+ The position of the bit in the bitset to be set to assigned a value.  
   
  `val`  
- 要指派給位於指定位置之位元的值。  
+ The value to be assigned to the bit at the position specified.  
   
-### <a name="return-value"></a>傳回值  
- 叫用成員函式的 bitset 複本。  
+### <a name="return-value"></a>Return Value  
+ A copy of the bitset for which the member function was invoked.  
   
-### <a name="remarks"></a>備註  
- 如果指定的位置大於 bitset 的大小，第二個成員函式會擲回 [out_of_range](../standard-library/out-of-range-class.md) 例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The second member function throws an [out_of_range](../standard-library/out-of-range-class.md) exception if the position specified is greater than the size of the bitset.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_set.cpp  
@@ -1387,17 +1400,17 @@ The collecion of bits obtained from setting all the
 ```  
   
 ##  <a name="size"></a>  bitset::size  
- 傳回 bitset 物件中的位元數。  
+ Returns the number of bits in a bitset object.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- bitset\<N> 中的位元數 *N*。  
+### <a name="return-value"></a>Return Value  
+ The number of bits, *N*, in a bitset\<N>.  
   
-### <a name="example"></a>範例  
-  下列範例示範如何使用 bitset::size 成員函式。  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the bitset::size member function.  
   
 ```cpp  
 // bitset_size.cpp  
@@ -1428,20 +1441,20 @@ The number of bits in bitset b1 is: 5.
 ```  
   
 ##  <a name="test"></a>  bitset::test  
- 測試位於 bitset 中指定位置的位元是否設為 1。  
+ Tests whether the bit at a specified position in a bitset is set to 1.  
   
 ```  
 bool test(size_t _Pos) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- bitset 中要測試其值的位元位置。  
+ The position of the bit in the bitset to be tested for its value.  
   
-### <a name="return-value"></a>傳回值  
- 若引數位置所指定的位元設為 1，即為 **true**；否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the bit specified by the argument position is set to 1; otherwise, **false**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會擲回 [out_of_range](../standard-library/out-of-range-class.md)
+### <a name="remarks"></a>Remarks  
+ The member function throws an [out_of_range](../standard-library/out-of-range-class.md)
 
 

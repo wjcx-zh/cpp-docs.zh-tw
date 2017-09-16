@@ -1,52 +1,71 @@
 ---
-title: "Rebar 控制項和群組列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "寬線, 在 Rebar 控制項中"
-  - "Rebar 控制項, 使用其中的群組列"
+title: Rebar Controls and Bands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rebar controls [MFC], working with bands in
+- bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Rebar 控制項和群組列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17449db3f089f882e8314befe51ac69991e5d46a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Rebar 控制項的主要目的是要當做子視窗，通用對話方塊控制項，功能表，工具列容器，依此類推。  這個內含項目由「群組列的概念支援」。每個 Rebar 群組列可以包含移駐夾列、點陣圖、文字標籤和子視窗中的任何組合。  
+---
+# <a name="rebar-controls-and-bands"></a>Rebar Controls and Bands
+The main purpose of a rebar control is to act as a container for child windows, common dialog controls, menus, toolbars, and so on. This containment is supported by the concept of a "band." Each rebar band can contain any combination of a gripper bar, a bitmap, a text label, and a child window.  
   
- `CReBarCtrl` 類別可用來擷取的許多成員函式和管理，特定 Rebar 群組列的資訊:  
+ Class `CReBarCtrl` has many member functions that you can use to retrieve, and manipulate, information for a specific rebar band:  
   
--   [GetBandCount](../Topic/CReBarCtrl::GetBandCount.md) 擷取目前的群組列數目 Rebar 控制項的。  
+-   [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) Retrieves the number of current bands in the rebar control.  
   
--   [GetBandInfo](../Topic/CReBarCtrl::GetBandInfo.md) 的資訊初始化一 **REBARBANDINFO** 結構從指定的群組列。  沒有對應的 [SetBandInfo](../Topic/CReBarCtrl::SetBandInfo.md) 成員函式。  
+-   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) Initializes a **REBARBANDINFO** structure with information from the specified band. There is a corresponding [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) member function.  
   
--   [GetRect](../Topic/CReBarCtrl::GetRect.md) 會擷取指定的群組列的週框。  
+-   [GetRect](../mfc/reference/crebarctrl-class.md#getrect) Retrieves the bounding rectangle of a specified band.  
   
--   [GetRowCount](../Topic/CReBarCtrl::GetRowCount.md) 擷取群組列行數目 Rebar 控制項中。  
+-   [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount) Retrieves the number of band rows in a rebar control.  
   
--   [IDToIndex](../Topic/CReBarCtrl::IDToIndex.md) 會擷取指定的群組列的索引。  
+-   [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex) Retrieves the index of a specified band.  
   
--   [GetBandBorders](../Topic/CReBarCtrl::GetBandBorders.md) 擷取群組列的框線。  
+-   [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders) Retrieves the borders of a band.  
   
- 刪除作業之外，數個成員函式時，讓您將特定 Rebar 群組列的手的情況。  
+ In addition to manipulation, several member functions are provided that allow you to operate on specific rebar bands.  
   
- [InsertBand](../Topic/CReBarCtrl::InsertBand.md) 和 [DeleteBand](../Topic/CReBarCtrl::DeleteBand.md) 加入和移除 Rebar 群組列。  [MinimizeBand](../Topic/CReBarCtrl::MinimizeBand.md) 和 [MaximizeBand](../Topic/CReBarCtrl::MaximizeBand.md) 會影響特定 Rebar 群組列的目前大小。  [MoveBand](../Topic/CReBarCtrl::MoveBand.md) 變更特定 Rebar 群組列的索引。  [ShowBand](../Topic/CReBarCtrl::ShowBand.md) 會顯示或隱藏使用者的 Rebar 群組列。  
+ [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) and [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) add and remove rebar bands. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) and [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) affect the current size of a specific rebar band. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) changes the index of a specific rebar band. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) shows or hides a rebar band from the user.  
   
- 下列範例示範加入工具列群組列 \(`m_wndToolBar`\) 加入至現有的 Rebar 控制項 \(`m_wndReBar`\)。  群組列以初始化 `rbi` 結構的 `InsertBand` 呼叫成員函式描述的:  
+ The following example demonstrates adding a toolbar band (`m_wndToolBar`) to an existing rebar control (`m_wndReBar`). The band is described by initializing the `rbi` structure and then calling the `InsertBand` member function:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/CPP/rebar-controls-and-bands_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   
-## 請參閱  
- [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

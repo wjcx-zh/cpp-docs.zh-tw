@@ -1,5 +1,5 @@
 ---
-title: "OLE 控制項的持續性 |Microsoft 文件"
+title: Persistence of OLE Controls | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE controls, persistence
+- OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
 caps.latest.revision: 17
@@ -34,41 +34,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b8bbf72a1ea16b37dabf88c5d41a34b1a03ba0d1
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4134d8b916fbe2b5a33066708a2078d28cb1ee6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="persistence-of-ole-controls"></a>OLE 控制項的持續性
-OLE 控制項的其中一個功能是屬性持續性 (或序列化)，其允許 OLE 控制項對檔案或資料流來回讀取或寫入屬性值。 即使在應用程式已終結控制項之後，容器應用程式仍可以使用序列化來儲存控制項的屬性值。 當控制項的新執行個體在稍後建立時，便可以從檔案或資料流讀取 OLE 控制項的屬性值。  
+# <a name="persistence-of-ole-controls"></a>Persistence of OLE Controls
+One capability of OLE controls is property persistence (or serialization), which allows the OLE control to read or write property values to and from a file or stream. A container application can use serialization to store a control's property values even after the application has destroyed the control. The property values of the OLE control can then be read from the file or stream when a new instance of the control is created at a later time.  
   
-### <a name="persistence-of-ole-controls"></a>OLE 控制項的持續性  
+### <a name="persistence-of-ole-controls"></a>Persistence of OLE Controls  
   
 |||  
 |-|-|  
-|[PX_Blob](#px_blob)|交換儲存二進位大型物件 (BLOB) 資料的控制項屬性。|  
-|[PX_Bool](#px_bool)|交換控制項屬性的型別**BOOL**。|  
-|[PX_Color](#px_color)|交換控制項的色彩屬性。|  
-|[PX_Currency](#px_currency)|交換控制項屬性的型別**CY**。|  
-|[PX_DataPath](#px_datapath)|交換 `CDataPathProperty` 類型的控制項屬性。|  
-|[PX_Double](#px_double)|交換控制項屬性的型別**雙**。|  
-|[PX_Font](#px_font)|交換控制項的字型屬性。|  
-|[PX_Float](#px_float)|交換控制項屬性的型別**float**。|  
-|[PX_IUnknown](#px_iunknown)|交換未定義類型的控制項屬性。|  
-|[PX_Long](#px_long)|交換控制項屬性的型別**長**。|  
-|[PX_Picture](#px_picture)|交換控制項的圖片屬性。|  
-|[PX_Short](#px_short)|交換控制項屬性的型別**簡短**。|  
-|[PX_ULong](#px_ulong)|交換控制項屬性的型別**ULONG**。|  
-|[PX_UShort](#px_ushort)|交換控制項屬性的型別**USHORT**。|  
-|[PXstring](#px_string)|交換字元字串控制項屬性。|  
-|[PX_VBXFontConvert](#px_vbxfontconvert)|交換 VBX 控制項的字型相關屬性與 OLE 控制項的字型屬性。|  
+|[PX_Blob](#px_blob)|Exchanges a control property that stores binary large object (BLOB) data.|  
+|[PX_Bool](#px_bool)|Exchanges a control property of type **BOOL**.|  
+|[PX_Color](#px_color)|Exchanges a color property of a control.|  
+|[PX_Currency](#px_currency)|Exchanges a control property of type **CY**.|  
+|[PX_DataPath](#px_datapath)|Exchanges a control property of type `CDataPathProperty`.|  
+|[PX_Double](#px_double)|Exchanges a control property of type **double**.|  
+|[PX_Font](#px_font)|Exchanges a font property of a control.|  
+|[PX_Float](#px_float)|Exchanges a control property of type **float**.|  
+|[PX_IUnknown](#px_iunknown)|Exchanges a control property of undefined type.|  
+|[PX_Long](#px_long)|Exchanges a control property of type **long**.|  
+|[PX_Picture](#px_picture)|Exchanges a picture property of a control.|  
+|[PX_Short](#px_short)|Exchanges a control property of type **short**.|  
+|[PX_ULong](#px_ulong)|Exchanges a control property of type **ULONG**.|  
+|[PX_UShort](#px_ushort)|Exchanges a control property of type **USHORT**.|  
+|[PXstring](#px_string)|Exchanges a character string control property.|  
+|[PX_VBXFontConvert](#px_vbxfontconvert)|Exchanges a VBX control's font-related properties into an OLE control font property.|  
   
- 此外，提供 `AfxOleTypeMatchGuid` 全域函式來測試 `TYPEDESC` 與指定 GUID 之間的相符項目。  
+ In addition, the `AfxOleTypeMatchGuid` global function is provided to test for a match between a `TYPEDESC` and a given GUID.  
   
-##  <a name="px_blob"></a>PX_Blob  
- 呼叫此函式內控制項的`DoPropExchange`来序列化或儲存二進位大型物件 (BLOB) 資料的屬性初始化的成員函式。  
+##  <a name="px_blob"></a>  PX_Blob  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property that stores binary large object (BLOB) data.  
   
 ```  
  
@@ -85,35 +85,35 @@ hBlobDefault
 = NULL);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `hBlob`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `hBlobDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 要讀取或寫入變數所參考的屬性值`hBlob`視需要。 這個變數必須初始化為**NULL**一開始呼叫之前`PX_Blob`第一次 （一般而言，做法是在控制項的建構函式）。 如果`hBlobDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而控制項的初始化或序列化程序失敗時，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `hBlob`, as appropriate. This variable should be initialized to **NULL** before initially calling `PX_Blob` for the first time (typically, this can be done in the control's constructor). If `hBlobDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's initialization or serialization process fails.  
   
- 控制代碼`hBlob`和`hBlobDefault`記憶體區塊的其中包含下列參考︰  
+ The handles `hBlob` and `hBlobDefault` refer to a block of memory which contains the following:  
   
--   A`DWORD`其中包含二進位資料，如下所示長度，以位元組為單位，隨後緊接  
+-   A `DWORD` which contains the length, in bytes, of the binary data that follows, followed immediately by  
   
--   包含實際的二進位資料的記憶體區塊。  
+-   A block of memory containing the actual binary data.  
   
- 請注意，`PX_Blob`會配置記憶體，使用 Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API，當載入 BLOB 類型屬性。 您必須負責釋放這個記憶體。 因此，控制項的解構函式應該呼叫[GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) BLOB 類型屬性來釋放控制代碼註冊至您的控制項配置任何記憶體。  
+ Note that `PX_Blob` will allocate memory, using the Windows [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574) API, when loading BLOB-type properties. You are responsible for freeing this memory. Therefore, the destructor of your control should call [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) on any BLOB-type property handles to free up any memory allocated to your control.  
   
-##  <a name="px_bool"></a>PX_Bool  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**BOOL**。  
+##  <a name="px_bool"></a>  PX_Bool  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **BOOL**.  
   
 ```  
  
@@ -136,27 +136,27 @@ bValue  ,
     BOOL bDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `bValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `bDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 要讀取或寫入變數所參考的屬性值`bValue`視需要。 如果`bDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `bValue`, as appropriate. If `bDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_color"></a>PX_Color  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**OLE_COLOR**。  
+##  <a name="px_color"></a>  PX_Color  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **OLE_COLOR**.  
   
 ```  
  
@@ -178,27 +178,27 @@ clrValue  ,
 clrDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `clrValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `clrDefault`  
- 由控制項開發人員所定義的屬性的預設值。  
+ Default value for the property, as defined by the control developer.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 要讀取或寫入變數所參考的屬性值`clrValue`視需要。 如果`clrDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `clrValue`, as appropriate. If `clrDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_currency"></a>PX_Currency  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**貨幣**。  
+##  <a name="px_currency"></a>  PX_Currency  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **currency**.  
   
 ```  
  
@@ -221,27 +221,27 @@ cyValue  ,
     CY cyDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `cyValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `cyDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 要讀取或寫入變數所參考的屬性值`cyValue`視需要。 如果`cyDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value will be read from or written to the variable referenced by `cyValue`, as appropriate. If `cyDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_datapath"></a>PX_DataPath  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或資料路徑屬性的型別初始化[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)。  
+##  <a name="px_datapath"></a>  PX_DataPath  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a data path property of type [CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md).  
   
 ```  
  
@@ -260,24 +260,24 @@ pPX,
     CDataPathProperty& dataPathProperty);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `dataPathProperty`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 資料路徑屬性來實作非同步控制項屬性。 要讀取或寫入變數所參考的屬性值`dataPathProperty`視需要。  
+### <a name="remarks"></a>Remarks  
+ Data path properties implement asynchronous control properties. The property's value will be read from or written to the variable referenced by `dataPathProperty`, as appropriate.  
   
-##  <a name="px_double"></a>PX_Double  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**雙**。  
+##  <a name="px_double"></a>  PX_Double  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **double**.  
   
 ```  
  
@@ -300,27 +300,27 @@ doubleValue  ,
     double doubleDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `doubleValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `doubleDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考`doubleValue`視需要。 如果`doubleDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `doubleValue`, as appropriate. If `doubleDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_font"></a>PX_Font  
- 呼叫此函式內控制項的`DoPropExchange`来序列化或 type 字型的屬性初始化的成員函式。  
+##  <a name="px_font"></a>  PX_Font  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type font.  
   
 ```  
  
@@ -343,30 +343,30 @@ pFontDispAmbient
 = NULL);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `font`  
- 參考`CFontHolder`物件，其中包含的字型屬性。  
+ A reference to a `CFontHolder` object that contains the font property.  
   
  `pFontDesc`  
- 指標**FONTDESC**結構，其中包含要初始化的字型屬性，在案例中的預設狀態中使用的值，`pFontDispAmbient`是**NULL**。  
+ A pointer to a **FONTDESC** structure containing the values to use in initializing the default state of the font property, in the case where `pFontDispAmbient` is **NULL**.  
   
  `pFontDispAmbient`  
- 指標**IFontDisp**介面初始化的字型屬性的預設狀態中使用的字型。  
+ A pointer to the **IFontDisp** interface of a font to use in initializing the default state of the font property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入`font`、`CFontHolder`參考，適當的時候。 如果`pFontDesc`和`pFontDispAmbient`指定，它們用來初始化屬性的預設值，在需要時。 如果因為任何原因而無法控制序列化程序，會使用這些值。 一般而言，您將傳遞**NULL**的`pFontDesc`環境所傳回的值和`COleControl::AmbientFont`的`pFontDispAmbient`。 請注意，傳回字型物件`COleControl::AmbientFont`必須釋放呼叫**IFontDisp::Release**成員函式。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to `font`, a `CFontHolder` reference, when appropriate. If `pFontDesc` and `pFontDispAmbient` are specified, they are used for initializing the property's default value, when needed. These values are used if, for any reason, the control's serialization process fails. Typically, you pass **NULL** for `pFontDesc` and the ambient value returned by `COleControl::AmbientFont` for `pFontDispAmbient`. Note that the font object returned by `COleControl::AmbientFont` must be released by a call to the **IFontDisp::Release** member function.  
   
-##  <a name="px_float"></a>PX_Float  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**float**。  
+##  <a name="px_float"></a>  PX_Float  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **float**.  
   
 ```  
  
@@ -389,27 +389,27 @@ floatValue  ,
     float floatDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `floatValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `floatDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考`floatValue`視需要。 如果`floatDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `floatValue`, as appropriate. If `floatDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_iunknown"></a>PX_IUnknown  
- 呼叫此函式內控制項的`DoPropExchange`要序列化或初始化物件，而所表示的屬性成員函式**IUnknown**-衍生的介面。  
+##  <a name="px_iunknown"></a>  PX_IUnknown  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property represented by an object having an **IUnknown**-derived interface.  
   
 ```  
  
@@ -428,30 +428,30 @@ pUnkDefault
 = NULL);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  *pUnk*  
- 包含介面的物件，表示屬性值的變數參考。  
+ Reference to a variable containing the interface of the object that represents the value of the property.  
   
  `iid`  
- 介面識別碼，表示控制項所使用的屬性物件的介面。  
+ An interface ID indicating which interface of the property object is used by the control.  
   
  `pUnkDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考*pUnk*視需要。 如果`pUnkDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by *pUnk*, as appropriate. If `pUnkDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_long"></a>PX_Long  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**長**。  
+##  <a name="px_long"></a>  PX_Long  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **long**.  
   
 ```  
  
@@ -474,27 +474,27 @@ lValue  ,
     long lDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `lValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `lDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考`lValue`視需要。 如果`lDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `lValue`, as appropriate. If `lDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_picture"></a>PX_Picture  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或初始化控制項的圖片屬性。  
+##  <a name="px_picture"></a>  PX_Picture  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a picture property of your control.  
   
 ```  
  
@@ -517,27 +517,27 @@ pict  ,
     CPictureHolder& pictDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `pict`  
- 若要參考[CPictureHolder](../../mfc/reference/cpictureholder-class.md)儲存屬性的物件 （通常是您的類別成員變數）。  
+ Reference to a [CPictureHolder](../../mfc/reference/cpictureholder-class.md) object where the property is stored (typically a member variable of your class).  
   
  `pictDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考`pict`視需要。 如果`pictDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `pict`, as appropriate. If `pictDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_short"></a>PX_Short  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**簡短**。  
+##  <a name="px_short"></a>  PX_Short  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **short**.  
   
 ```  
  
@@ -560,27 +560,27 @@ sValue  ,
     short sDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `sValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `sDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考`sValue`視需要。 如果`sDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `sValue`, as appropriate. If `sDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_ulong"></a>PX_ULong  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化**ULONG**。  
+##  <a name="px_ulong"></a>  PX_ULong  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type **ULONG**.  
   
 ```  
  
@@ -603,27 +603,27 @@ ulValue  ,
     long ulDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ Name of the property being exchanged.  
   
  `ulValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `ulDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考`ulValue`視需要。 如果`ulDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `ulValue`, as appropriate. If `ulDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_ushort"></a>PX_UShort  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來序列化或類型的屬性初始化`unsigned`**簡短**。  
+##  <a name="px_ushort"></a>  PX_UShort  
+ Call this function within your control's `DoPropExchange` member function to serialize or initialize a property of type `unsigned` **short**.  
   
 ```  
  
@@ -646,27 +646,27 @@ usValue  ,
     USHORT usDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ Name of the property being exchanged.  
   
  *usValue*  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  *usDefault*  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考*usValue*視需要。 如果*usDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by *usValue*, as appropriate. If *usDefault* is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_string"></a>PXstring  
- 呼叫此函式內控制項的**DoPropExchange**来序列化或初始化字元字串屬性的成員函式。  
+##  <a name="px_string"></a>  PXstring  
+ Call this function within your control's **DoPropExchange** member function to serialize or initialize a character string property.  
   
 ```  
  
@@ -689,27 +689,27 @@ strValue  ,
     CString strDefault);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `strValue`  
- 變數儲存屬性的參考 （通常是您的類別成員變數）。  
+ Reference to the variable where the property is stored (typically a member variable of your class).  
   
  `strDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入變數所參考`strValue`視需要。 如果`strDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而無法控制序列化程序，會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to the variable referenced by `strValue`, as appropriate. If `strDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization process fails.  
   
-##  <a name="px_vbxfontconvert"></a>PX_VBXFontConvert  
- 呼叫此函式內控制項的`DoPropExchange`成員函式來轉換 VBX 控制項的字型相關屬性來初始化的字型屬性。  
+##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert  
+ Call this function within your control's `DoPropExchange` member function to initialize a font property by converting a VBX control's font-related properties.  
   
 ```  
  
@@ -720,24 +720,24 @@ pPX  ,
     CFontHolder& font);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPX`  
- 指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常做為參數傳遞`DoPropExchange`)。  
+ Pointer to the [CPropExchange](../../mfc/reference/cpropexchange-class.md) object (typically passed as a parameter to `DoPropExchange`).  
   
  `font`  
- 將會包含已轉換的 VBX 字型相關屬性的 OLE 控制項的字型屬性。  
+ The font property of the OLE control that will contain the converted VBX font-related properties.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 此函式應僅供 OLE 控制項的設計為 VBX 控制項的直接取代。 當 Visual Basic 開發環境將包含使用相對應的 OLE 控制項取代 VBX 控制項的表單時，它會呼叫控制項的**IDataObject::SetData**函式，並傳入包含 VBX 控制項的屬性資料的屬性集。 這項作業，又會導致控制項的`DoPropExchange`要叫用的函式。 `DoPropExchange`可以呼叫`PX_VBXFontConvert`VBX 控制項的字型相關屬性轉換 (比方說，「 字型名稱，「 fontsize 」 設，依此類推) 的 OLE 控制項的字型屬性對應的元件。  
+### <a name="remarks"></a>Remarks  
+ This function should be used only by an OLE control that is designed as a direct replacement for a VBX control. When the Visual Basic development environment converts a form containing a VBX control to use the corresponding replacement OLE control, it will call the control's **IDataObject::SetData** function, passing in a property set that contains the VBX control's property data. This operation, in turn, causes the control's `DoPropExchange` function to be invoked. `DoPropExchange` can call `PX_VBXFontConvert` to convert the VBX control's font-related properties (for example, "FontName," "FontSize," and so on) into the corresponding components of the OLE control's font property.  
   
- `PX_VBXFontConvert`應該只呼叫控制項實際上當轉換從 VBX 表單應用程式時。 例如:   
+ `PX_VBXFontConvert` should only be called when the control is actually being converted from a VBX form application. For example:  
   
- [!code-cpp[NVC_MFCActiveXControl #&14;](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
-[!code-cpp[NVC_MFCActiveXControl #&15;](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]  
+[!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

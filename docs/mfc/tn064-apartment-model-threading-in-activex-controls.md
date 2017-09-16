@@ -1,114 +1,136 @@
 ---
-title: "TN064：ActiveX 控制項中的 Apartment Model 執行緒 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.activex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Apartment Model 執行緒"
-  - "容器 [C++], 多執行緒"
-  - "多執行緒容器"
-  - "OLE 控制項, 容器支援"
-  - "TN064"
+title: 'TN064: Apartment-Model Threading in ActiveX Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.activex
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE controls [MFC], container support
+- containers [MFC], multithreaded
+- TN064 [MFC]
+- multithread container [MFC]
+- apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN064：ActiveX 控制項中的 Apartment Model 執行緒
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1c3fe1e70ffb0747bf519873cab0a784cc1c60b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Apartment-Model Threading in ActiveX Controls
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。  因此，有些程序和主題可能已過期或不正確。  如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 這個技術提示說明如何啟用 ActiveX 控制項的 Apartment Model 執行緒。  請注意 Apartment Model 執行緒在 Visual C\+\+ 4.2 版 \(含\) 以後版本才支援。  
+ This technical note explains how to enable apartment-model threading in an ActiveX control. Note that apartment-model threading is only supported in Visual C++ versions 4.2 or later.  
   
-## 什麼是 Apartment Model 執行緒?  
- Apartment 模型是方法對支援內嵌物件，例如 ActiveX 控制項，在多執行緒的容器應用程式內。  雖然應用程式可能具有多執行緒，內嵌物件的每個執行個體將指派給單一執行緒 Apartment 「，」一執行緒才會執行。  換句話說，所有呼叫控制項的執行個體內的相同執行緒上發生。  
+## <a name="what-is-apartment-model-threading"></a>What Is Apartment-Model Threading  
+ The apartment model is an approach to supporting embedded objects, such as ActiveX controls, within a multithreaded container application. Although the application may have multiple threads, each instance of an embedded object will be assigned to one "apartment," which will execute on only one thread. In other words, all calls into an instance of a control will happen on the same thread.  
   
- 不過，同一個控制項的不同執行個體可以指派給不同的 Apartment。  對這個的，因此，如果控制項的多個執行個體共用任何資料共同的 \(例如，靜態或全域資料\)，然後存取共用資料必須受同步物件的保護，例如關鍵區段。  
+ However, different instances of the same type of control may be assigned to different apartments. So, if multiple instances of a control share any data in common (for example, static or global data), then access to this shared data will need to be protected by a synchronization object, such as a critical section.  
   
- 如需在 Apartment 執行緒模型的完整詳細資訊，請參閱《 *OLE 程式設計人員參考》的*[處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms684841) 。  
+ For complete details on the apartment threading model, please see [Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms684841) in the *OLE Programmer's Reference*.  
   
-## 為什麼支援 Apartment Model 執行緒?  
- 支援 Apartment Model 執行緒的控制項也支援 Apartment 模型的多執行緒的容器應用程式。  如果不啟用 Apartment Model 執行緒，您可能會限制您的控制項可以使用的設定容器。  
+## <a name="why-support-apartment-model-threading"></a>Why Support Apartment-Model Threading  
+ Controls that support apartment-model threading can be used in multithreaded container applications that also support the apartment model. If you do not enable apartment-model threading, you will limit the potential set of containers in which your control could be used.  
   
- 特別是如果它們有少許或不使用共用資料，啟用 Apartment Model 執行緒對大部分控制項都可以。  
+ Enabling apartment-model threading is easy for most controls, particularly if they have little or no shared data.  
   
-## 保護共用資料  
- 如果您的控制項共用資料，例如靜態成員變數，請存取該應該保護資料以關鍵區段防止多個執行緒同時修改資料。  若要針對此目的設定關鍵區段，請宣告類別 `CCriticalSection` 的靜態成員變數在您的控制項的類別。  使用這個關鍵區段物件的 `Lock` 和 **Unlock** 成員函式的地方，您的程式碼存取共用資料。  
+## <a name="protecting-shared-data"></a>Protecting Shared Data  
+ If your control uses shared data, such as a static member variable, access to that data should be protected with a critical section to prevent more than one thread from modifying the data at the same time. To set up a critical section for this purpose, declare a static member variable of class `CCriticalSection` in your control's class. Use the `Lock` and **Unlock** member functions of this critical section object wherever your code accesses the shared data.  
   
- 考量，例如，需要保留字串的所有執行個體共用的控制項類別。  這個字串使用靜態成員變數可以維護和受關鍵區段 \(Critical Section\) 保護。  控制項的類別宣告中包含下列項目:  
+ Consider, for example, a control class that needs to maintain a string that is shared by all instances. This string can be maintained in a static member variable and protected by a critical section. The control's class declaration would contain the following:  
   
 ```  
 class CSampleCtrl : public COleControl  
 {  
-    ...  
+ ...  
     static CString _strShared;  
     static CCriticalSection _critSect;  
 };  
 ```  
   
- 類別的實作將包含這些變數的定義:  
+ The implementation for the class would include definitions for these variables:  
   
 ```  
 int CString CSampleCtrl::_strShared;  
 CCriticalSection CSampleCtrl::_critSect;  
 ```  
   
- 對 `_strShared` 之靜態成員的存取可能受關鍵區段則保護:  
+ Access to the `_strShared` static member can then be protected by the critical section:  
   
 ```  
 void CSampleCtrl::SomeMethod()  
 {  
-    _critSect.Lock();  
-    if (_strShared.Empty())  
-        _strShared = "<text>";  
-    _critSect.Unlock();  
-    ...  
+    _critSect.Lock();
+if (_strShared.Empty())  
+    _strShared = "<text>";  
+    _critSect.Unlock();
+
+ ...  
 }  
 ```  
   
-## 註冊 Apartment Model 明確的控制項  
- 支援 Apartment Model 執行緒的控制項應該將具名值表示註冊這個功能， 「ThreadingModel」與「Apartment」值在其類別 ID 登錄項目在 *類別 ID*\\**InprocServer32** 機碼。  若要讓這個金鑰便會自動註冊控制項，請將第六個參數的 `afxRegApartmentThreading` 旗標為 `AfxOleRegisterControlClass`:  
+## <a name="registering-an-apartment-model-aware-control"></a>Registering an Apartment-Model-Aware Control  
+ Controls that support apartment-model threading should indicate this capability in the registry, by adding the named value "ThreadingModel" with a value of "Apartment" in their class ID registry entry under the *class id*\\**InprocServer32** key. To cause this key to be automatically registered for your control, pass the `afxRegApartmentThreading` flag in the sixth parameter to `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
 {  
     if (bRegister)  
-        return AfxOleRegisterControlClass(  
-            AfxGetInstanceHandle(),  
-            m_clsid,  
-            m_lpszProgID,  
-            IDS_SAMPLE,  
-            IDB_SAMPLE,  
-            afxRegApartmentThreading,  
-            _dwSampleOleMisc,  
-            _tlid,  
-            _wVerMajor,  
-            _wVerMinor);  
-    else  
-        return AfxOleUnregisterClass(m_clsid, m_lpszProgID);  
+    return AfxOleRegisterControlClass(
+    AfxGetInstanceHandle(), 
+    m_clsid, 
+    m_lpszProgID, 
+    IDS_SAMPLE, 
+    IDB_SAMPLE, 
+    afxRegApartmentThreading, 
+    _dwSampleOleMisc, 
+    _tlid, 
+    _wVerMajor, 
+    _wVerMinor);
+
+ else  
+    return AfxOleUnregisterClass(m_clsid,
+    m_lpszProgID);
+
 }  
 ```  
   
- 如果控制項專案是以 Visual C\+\+ 4.1 版 \(含\) 以後版本的 ControlWizard 產生，這個旗標會已經是存在於您的程式碼。  變更不需要註冊執行緒模型。  
+ If your control project was generated by ControlWizard in Visual C++ version 4.1 or later, this flag will already be present in your code. No changes are necessary to register the threading model.  
   
- 如果您的專案是 ControlWizard 舊版產生，將現有的程式碼將具有布林值做為第六個參數。  如果現有的參數為 true 時，請將它加入至`afxRegInsertable | afxRegApartmentThreading`。  如果現有的參數為 false，請將它加入至`afxRegApartmentThreading`。  
+ If your project was generated by an earlier version of ControlWizard, your existing code will have a Boolean value as the sixth parameter. If the existing parameter is TRUE, change it to `afxRegInsertable | afxRegApartmentThreading`. If the existing parameter is FALSE, change it to `afxRegApartmentThreading`.  
   
- 如果控制項不符合 Apartment Model 執行緒的規則，您不能將這個參數的 `afxRegApartmentThreading` 。  
+ If your control does not follow the rules for apartment-model threading, you must not pass `afxRegApartmentThreading` in this parameter.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

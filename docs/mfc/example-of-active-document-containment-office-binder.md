@@ -1,42 +1,60 @@
 ---
-title: "主動式文件內含項目範例：Office 文件夾 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "主動式文件容器 [C++], 範例"
-  - "主動式文件 [C++], 容器"
-  - "容器 [C++], 主動式文件"
-  - "範例 [C++], 主動式文件內含項目"
-  - "MFC COM [C++], 主動式文件內含項目"
-  - "Office 文件夾"
+title: 'Example of Active Document Containment: Office Binder | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- examples [MFC], active document containment
+- containers [MFC], active document
+- active document containers [MFC], examples
+- Office Binder [MFC]
+- MFC COM, active document containment
 ms.assetid: 70dd8568-e8bc-44ac-bf5e-678767efe8e3
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 主動式文件內含項目範例：Office 文件夾
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63a7202da76d8b7bf66f0d912b4cc855ccfd12d2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Microsoft Office Binder 是主動式文件容器的範例。  Office 文件夾如一般容器包含兩個主要窗格。  左窗格會包含任何對應於繫結器的現用文件的圖示。  每個文件會呼叫繫結器中的*區段*。  例如，繫結器可以包含Word文件， PowerPoint 檔， Excel 報表等等。  
+---
+# <a name="example-of-active-document-containment-office-binder"></a>Example of Active Document Containment: Office Binder
+The Microsoft Office Binder is an example of an active document container. An Office Binder includes two primary panes, as containers typically do. The left pane contains icons that correspond to active documents in the Binder. Each document is called a *section* within the Binder. For example, a Binder can contain Word documents, PowerPoint files, Excel spreadsheets, and so on.  
   
- 按一下左窗格中的圖示啟動對應的現用文件。  繫結器的右窗格會顯示目前選取的現用文件的內容。  
+ Clicking an icon in the left pane activates the corresponding active document. The right pane of the Binder then displays the contents of the currently selected active document.  
   
- 如果您開啟並啟動在繫結器中的 Word 文件，文字功能表列和工具列會出現在檢視的頂端，使用所有文字命令或工具，因此，您可以編輯文件的內容。  不過，功能表列是繫結器的和文字的組合功能表列。  由於繫結器和文字有 **Help** 功能表，個別功能表的內容合併。  主動式文件容器 \(例如 Office 文件夾自動提供 **Help** 功能表合併;如需詳細資訊，請參閱 [說明功能表合併](../mfc/help-menu-merging.md)。  
+ If you open and activate a Word document in a Binder, the Word menu bar and toolbars appear at the top of the view frame, and you can edit the document's contents using any Word command or tool. However, the menu bar is a combination of both the Binder's and Word's menu bars. Because both Binder and Word have **Help** menus, the contents of the respective menus are merged. Active document containers such as Office Binder automatically provide **Help** menu merging; for more information, see [Help Menu Merging](../mfc/help-menu-merging.md).  
   
- 當您選取另一個應用程式類型時現用文件，繫結器的介面變更容納該現用文件的應用程式類型。  例如，如果繫結器包含 Excel 報表，則當您選取 Excel 試算表區段時，您會注意到在繫結器的功能表變更。  
+ When you select an active document of another application type, the Binder's interface changes to accommodate that of the active document's application type. For example, if a Binder contains an Excel spreadsheet, you will observe that the menus in the Binder change when you select the Excel spreadsheet section.  
   
- 當然也有其他可能容器的型別在繫結器旁邊。  檔案總管使用左窗格使用樹狀目錄控制項顯示在磁碟或網路的目錄的階層式清單的典型的雙重介面，而使用右窗格顯示目前選取目錄中的檔案內。  網際網路瀏覽器型容器 \(例如 Microsoft Internet Explorer\) 使用超連結，而不是使用通常具有單一框架並提供巡覽的雙窗格介面。  
+ There are, of course, other possible types of containers beside Binders. File Explorer uses the typical dual-pane interface in which the left pane uses a tree control to display a hierarchical list of directories in a drive or network, while the right pane displays the files contained in the currently selected directory. An Internet browser-type of container (such as Microsoft Internet Explorer), rather than using a dual-pane interface, usually has a single frame and provides navigation using hyperlinks.  
   
-## 請參閱  
- [主動式文件內含項目](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

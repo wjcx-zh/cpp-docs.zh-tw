@@ -1,5 +1,5 @@
 ---
-title: "linear_congruential_engine 類別 | Microsoft Docs"
+title: linear_congruential_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- linear_congruential_engine
 - random/std::linear_congruential_engine
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: bbb733e102af57627c00006816bb8d955877d0f8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 633e8219aa39a503af2e716deb41d25cdcd8f751
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine 類別
-依線性同餘演算法產生隨機序列。  
+# <a name="linearcongruentialengine-class"></a>linear_congruential_engine Class
+Generates a random sequence by the linear congruential algorithm.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
 ```  
 class linear_congruential_engine{  
    public:  // types  
@@ -68,18 +67,18 @@ class linear_congruential_engine{
    void discard(unsigned long long z);
    };  
 ```  
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `A`  
- **乘數**。 **前置條件**：請參閱＜備註＞一節。  
+ **Multiplier**. **Precondition**: See Remarks section.  
   
  `C`  
- **遞增**。 **前置條件**：請參閱＜備註＞一節。  
+ **Increment**. **Precondition**: See Remarks section.  
   
  `M`  
- **模數**。 **前置條件**：請參閱備註。  
+ **Modulus**. **Precondition**: See remarks.  
   
 ## <a name="members"></a>Members  
   
@@ -88,41 +87,41 @@ class linear_congruential_engine{
 |`linear_congruential_engine::linear_congruential_engine`|`linear_congruential_engine::min`|`linear_congruential_engine::discard`|  
 |`linear_congruential_engine::operator()`|`linear_congruential_engine::max`|`linear_congruential_engine::seed`|  
   
- `default_seed` 是一個成員常數，定義為 `1u`，用做 `linear_congruential_engine::seed` 的預設參數值以及單一值建構函式。  
+ `default_seed` is a member constant, defined as `1u`, used as the default parameter value for `linear_congruential_engine::seed` and the single value constructor.  
   
- 如需引擎成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>備註  
- `linear_congruential_engine` 範本類別是最簡單的產生器引擎，但不具有最快或最高的品質。 和此引擎相較之下較為改進的是 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。  
+## <a name="remarks"></a>Remarks  
+ The `linear_congruential_engine` template class is the simplest generator engine, but not the fastest or highest quality. An improvement over this engine is the [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md). Neither of these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- 此引擎使用週期關聯 ( *period*) `x(i) = (A * x(i-1) + C) mod M` 來產生使用者指定之不帶正負號的整數類型值。  
+ This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (A * x(i-1) + C) mod M`.  
   
- 若 `M` 為零，則此模數作業所使用的值為 `numeric_limits<result_type>::max() + 1`。 引擎的狀態會是上次傳回的值；若沒有對 `operator()` 執行任何呼叫，則引擎的狀態是初始值。  
+ If `M` is zero, the value used for this modulus operation is `numeric_limits<result_type>::max() + 1`. The engine's state is the last value returned, or the seed value if no call has been made to `operator()`.  
   
- 若 `M` 不是零，則範本引數 `A` 和 `C` 的值必須小於 `M`。  
+ If `M` is not zero, the values of the template arguments `A` and `C` must be less than `M`.  
   
- 雖然您可以直接從此引擎建構產生器，但您也可以使用下列其中一個預先定義的 typedef。  
+ Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs.  
   
- `minstd_rand0`：1988 最低標準引擎 (Lewis、Goodman 及 Miller，1969 年)。  
+ `minstd_rand0`: 1988 minimal standard engine (Lewis, Goodman, and Miller, 1969).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;  
 ```  
   
- `minstd_rand`：更新的最低標準引擎 `minstd_rand0` (Park、Miller 及 Stockmeyer，1993 年)。  
+ `minstd_rand`: Updated minimal standard engine `minstd_rand0` (Park, Miller, and Stockmeyer, 1993).  
   
 ```  
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;  
 ```  
   
- 如需有關線性同餘引擎演算法的詳細資訊，請參閱 Wikipedia 文章[線性同餘方法](http://go.microsoft.com/fwlink/LinkId=402446)。  
+ For detailed information about the linear congruential engine algorithm, see the Wikipedia article [Linear congruential generator](http://go.microsoft.com/fwlink/LinkId=402446).  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -1,115 +1,134 @@
 ---
-title: "Windows Sockets：位元組順序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通訊端程式設計中的位元組順序問題"
-  - "通訊端 [C++], 位元組順序問題"
-  - "Windows Sockets [C++], 位元組順序問題"
+title: 'Windows Sockets: Byte Ordering | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- byte order issues in sockets programming
+- sockets [MFC], byte order issues
+- Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Windows Sockets：位元組順序
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8542122bc1d242c564a3b25eacc7387d784057fb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文和兩個方針手冊說明視窗通訊端程式設計的幾個問題。  本文包含位元組順序。  其他問題的文章報表: [Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md) 和 [Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)。  
+---
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Byte Ordering
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers byte ordering. The other issues are covered in the articles: [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md) and [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).  
   
- 如果您從 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)類別使用或衍生自類別，您必須處理這些問題。  如果您從 [CSocket](../mfc/reference/csocket-class.md)類別使用或衍生， MFC 會為您處理它們。  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## 位元組順序  
- 不同機器架構有時候使用不同位元組順序存放資料。  例如，在 Macintosh \(Motorola\) 機器相反順序 Intel 架構電腦存放區資料。  Intel 位元組順序，稱為位元組由小到大，」也是 Web 標準「位元組由大到小順序的相反。  下表說明這些詞彙。  
+## <a name="byte-ordering"></a>Byte Ordering  
+ Different machine architectures sometimes store data using different byte orders. For example, Intel-based machines store data in the reverse order of Macintosh (Motorola) machines. The Intel byte order, called "little-Endian," is also the reverse of the network standard "big-Endian" order. The following table explains these terms.  
   
-### 由大到小與由小到大的位元組順序  
+### <a name="big--and-little-endian-byte-ordering"></a>Big- and Little-Endian Byte Ordering  
   
-|位元組順序|意義|  
-|-----------|--------|  
-|位元組由大到小|表示最大顯著性位元組位於文字左端。|  
-|位元組由小到大|表示最大顯著性位元組位於文字右端。|  
+|Byte ordering|Meaning|  
+|-------------------|-------------|  
+|Big-Endian|The most significant byte is on the left end of a word.|  
+|Little-Endian|The most significant byte is on the right end of a word.|  
   
- 通常，您不必擔心您在網路上傳送和接收資料的位元組順序轉換，不過，您必須將位元組順序的情況。  
+ Typically, you do not have to worry about byte-order conversion for data that you send and receive over the network, but there are situations in which you must convert byte orders.  
   
-## 當您必須轉換成位元組順序。  
- 您需要在下列情況下將位元組順序:  
+## <a name="when-you-must-convert-byte-orders"></a>When You Must Convert Byte Orders  
+ You need to convert byte orders in the following situations:  
   
--   您將需要透過網路說明的資訊，與您傳送到另一部電腦的資料\)。  例如，您可以透過通訊埠和網路位址，必須了解。  
+-   You are passing information that needs to be interpreted by the network, as opposed to the data you are sending to another machine. For example, you might pass ports and addresses, which the network must understand.  
   
--   您進行通訊的伺服器應用程式不是 MFC 應用程式 \(以及您沒有原始程式碼\)。  這個呼叫的位元組順序轉換，如果兩部機器不共用相同的位元組順序。  
+-   The server application with which you are communicating is not an MFC application (and you do not have source code for it). This calls for byte order conversions if the two machines do not share the same byte ordering.  
   
-## 當您不需要將位元組順序  
- 您可以避免在下列情況下將位元組順序工作:  
+## <a name="when-you-do-not-have-to-convert-byte-orders"></a>When You Do Not Have to Convert Byte Orders  
+ You can avoid the work of converting byte orders in the following situations:  
   
--   在兩端的電腦可能不同意交換位元組，，且兩個電腦使用相同的位元組順序。  
+-   The machines on both ends can agree not to swap bytes, and both machines use the same byte order.  
   
--   您通訊的伺服器是 MFC 應用程式。  
+-   The server you are communicating with is an MFC application.  
   
--   您通訊之伺服器上的原始程式碼，因此，您可以明確地指出是否必須將位元組順序。  
+-   You have source code for the server you're communicating with, so you can tell explicitly whether you must convert byte orders or not.  
   
--   您可以將伺服器加入至 MFC。  這很容易進行，因此，結果通常較小，更快速的程式碼。  
+-   You can port the server to MFC. This is fairly easy to do, and the result is usually smaller, faster code.  
   
- 使用 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)，您必須處理所有必要的位元組順序轉換。  Windows Sockets 標準化「位元組由大到小位元組順序模型並提供函式可在此順序和其他之間轉換。  [CArchive](../mfc/reference/carchive-class.md)，不過，可以使用 [CSocket](../mfc/reference/csocket-class.md)，使用此相反 \(位元組由小到大順序\)，不過， `CArchive` 會處理位元組順序轉換您的詳細資料。  您可以在應用程式中使用此標準順序或使用 Windows Sockets 位元組順序轉換函式，您可以讓程式碼更具有可攜性。  
+ Working with [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you must manage any necessary byte-order conversions yourself. Windows Sockets standardizes the "big-Endian" byte-order model and provides functions to convert between this order and others. [CArchive](../mfc/reference/carchive-class.md), however, which you use with [CSocket](../mfc/reference/csocket-class.md), uses the opposite ("little-Endian") order, but `CArchive` takes care of the details of byte-order conversions for you. By using this standard ordering in your applications, or using Windows Sockets byte-order conversion functions, you can make your code more portable.  
   
- 使用 MFC 通訊端的理想情況是當您在撰寫兩端通訊:在兩端使用 MFC。  如果您正在撰寫與非 MFC 應用程式將通訊，例如 FTP 伺服器，您的應用程式可能需要處理位元組交換使用 Windows Sockets 轉換常式 **ntohs**和 **ntohl**和 **htons**和 **htonl**之前，在中，在您將資料傳遞至封存物件。  用於通訊的這些函式的範例與非 MFC 應用程式本文後面。  
+ The ideal case for using MFC sockets is when you are writing both ends of the communication: using MFC at both ends. If you are writing an application that will communicate with non-MFC applications, such as an FTP server, you will probably need to manage byte-swapping yourself before you pass data to the archive object, using the Windows Sockets conversion routines **ntohs**, **ntohl**, **htons**, and **htonl**. An example of these functions used in communicating with a non-MFC application appears later in this article.  
   
 > [!NOTE]
->  當通訊的另一端非 MFC 應用程式時，您也必須避免資料流從 `CObject` 取得的 C\+\+ 物件到封存，因為接收者無法處理它們。  請參閱 [Windows Sockets:使用已封存的通訊端](../mfc/windows-sockets-using-sockets-with-archives.md)中的注意事項。  
+>  When the other end of the communication is not an MFC application, you also must avoid streaming C++ objects derived from `CObject` into your archive because the receiver will not be able to handle them. See the note in [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md).  
   
- 如需位元組順序的詳細資訊，請參閱 Windows Sockets 規格，在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]中使用。  
+ For more information about byte orders, see the Windows Sockets specification, available in the Windows SDK.  
   
-## 位元組順序轉換範例  
- 下列範例顯示使用封存之 `CSocket` 物件的序列化函式。  使用在 Windows Sockets API，的位元組順序轉換函式同時說明。  
+## <a name="a-byte-order-conversion-example"></a>A Byte-Order Conversion Example  
+ The following example shows a serialization function for a `CSocket` object that uses an archive. It also illustrates using the byte-order conversion functions in the Windows Sockets API.  
   
- 這個範例中呈現您撰寫用戶端與非 MFC 伺服器應用程式通訊。您無法存取原始程式碼的情節。  在這個案例中，您必須假設，非 MFC 伺服器使用標準網路位元組順序。  相反地，您的 MFC 用戶端應用程式使用與 `CSocket` 物件的 `CArchive` 物件和 `CArchive` 會使用位元組由小到大的位元組順序， Web 標準的相反。  
+ This example presents a scenario in which you are writing a client that communicates with a non-MFC server application for which you have no access to the source code. In this scenario, you must assume that the non-MFC server uses standard network byte order. In contrast, your MFC client application uses a `CArchive` object with a `CSocket` object, and `CArchive` uses "little-Endian" byte order, the opposite of the network standard.  
   
- 假設您計劃通訊有訊息封包中建立的通訊協定如下的非 MFC 伺服器:  
+ Suppose the non-MFC server with which you plan to communicate has an established protocol for a message packet like the following:  
   
- [!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/CPP/windows-sockets-byte-ordering_1.cpp)]  
+ [!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_1.cpp)]  
   
- 以 MFC 來說，這表示如下:  
+ In MFC terms, this would be expressed as follows:  
   
- [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/CPP/windows-sockets-byte-ordering_2.cpp)]  
+ [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- 在 C\+\+ 中， `struct` 基本上是項目與類別相同。  `Message` 結構可以具有成員函式，例如宣告的 `Serialize` 成員函式以上。  `Serialize` 成員函式如下所示::  
+ In C++, a `struct` is essentially the same thing as a class. The `Message` structure can have member functions, such as the `Serialize` member function declared above. The `Serialize` member function might look like this:  
   
- [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/CPP/windows-sockets-byte-ordering_3.cpp)]  
+ [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   
- 這個範例會要求資料位元組順序轉換，因為有非 MFC 伺服器應用程式的位元組順序在一端和用於在另一端的 MFC 用戶端應用程式的 `CArchive` 之間沒有清楚的不符。  範例說明數個位元組順序轉換函式 Windows Sockets 提供。  下表將說明這些函式。  
+ This example calls for byte-order conversions of data because there is a clear mismatch between the byte ordering of the non-MFC server application on one end and the `CArchive` used in your MFC client application on the other end. The example illustrates several of the byte-order conversion functions that Windows Sockets supplies. The following table describes these functions.  
   
-### Windows Sockets 位元組順序轉換函式  
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows Sockets Byte-Order Conversion Functions  
   
-|功能|用途|  
-|--------|--------|  
-|**ntohs**|轉換從網路位元組順序轉換為 16 位元的個數的位元組順序 \(位元組由小到大的位元組由大到小\)。|  
-|**ntohl**|轉換從網路位元組順序轉換為 32 位元的個數的位元組順序 \(位元組由小到大的位元組由大到小\)。|  
-|**Htons**|轉換從主機位元組順序轉換為 16 位元的網路位元組順序 \(位元組由小到大的位元組由大到小\)。|  
-|**Htonl**|轉換從主機位元組順序轉換為 32 位元的網路位元組順序 \(位元組由小到大的位元組由大到小\)。|  
+|Function|Purpose|  
+|--------------|-------------|  
+|**ntohs**|Convert a 16-bit quantity from network byte order to host byte order (big-Endian to little-Endian).|  
+|**ntohl**|Convert a 32-bit quantity from network byte order to host byte order (big-Endian to little-Endian).|  
+|**Htons**|Convert a 16-bit quantity from host byte order to network byte order (little-Endian to big-Endian).|  
+|**Htonl**|Convert a 32-bit quantity from host byte order to network byte order (little-Endian to big-Endian).|  
   
- 這個範例另一點是，在另一端通訊的通訊端應用程式為非 MFC 應用程式時，您必須避免建立類似下列:  
+ Another point of this example is that when the socket application on the other end of the communication is a non-MFC application, you must avoid doing something like the following:  
   
  `ar << pMsg;`  
   
- 其中 `pMsg` 是指向衍生自類別的 C \+\+. `CObject`物件。  這會傳送額外 MFC 資訊與物件，以及伺服器不了解，，它會，如果它是 MFC 應用程式。  
+ where `pMsg` is a pointer to a C++ object derived from class `CObject`. This will send extra MFC information associated with objects and the server will not understand it, as it would if it were an MFC application.  
   
- 如需詳細資訊，請參閱：  
+ For more information, see:  
   
--   [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets：背景](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows Sockets：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows Sockets：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## 請參閱  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

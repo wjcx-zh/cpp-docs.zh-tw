@@ -1,5 +1,5 @@
 ---
-title: "CList 類別 |Microsoft 文件"
+title: CList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -36,9 +36,28 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- lists
-- lists, base class for
-- CList class
+- CList [MFC], CList
+- CList [MFC], AddHead
+- CList [MFC], AddTail
+- CList [MFC], Find
+- CList [MFC], FindIndex
+- CList [MFC], GetAt
+- CList [MFC], GetCount
+- CList [MFC], GetHead
+- CList [MFC], GetHeadPosition
+- CList [MFC], GetNext
+- CList [MFC], GetPrev
+- CList [MFC], GetSize
+- CList [MFC], GetTail
+- CList [MFC], GetTailPosition
+- CList [MFC], InsertAfter
+- CList [MFC], InsertBefore
+- CList [MFC], IsEmpty
+- CList [MFC], RemoveAll
+- CList [MFC], RemoveAt
+- CList [MFC], RemoveHead
+- CList [MFC], RemoveTail
+- CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 caps.latest.revision: 23
 author: mikeblome
@@ -58,17 +77,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 05d35419f70ab039e6981938c516201b252878d4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3e8f0b3da8b057d0bbed0cb69a630ddd91714fe8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="clist-class"></a>CList 類別
-支援可循序或依值存取之非唯一物件的排序清單。  
+# <a name="clist-class"></a>CList Class
+Supports ordered lists of nonunique objects accessible sequentially or by value.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class TYPE, class ARG_TYPE = const TYPE&>  
@@ -77,142 +96,142 @@ class CList : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CList::CList](#clist)|建構空的已排序的清單。|  
+|[CList::CList](#clist)|Constructs an empty ordered list.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CList::AddHead](#addhead)|新增項目 （或另一個清單中的所有項目） 標頭的清單 （產生新的標頭）。|  
-|[CList::AddTail](#addtail)|（產生新的結尾） 的清單結尾加入項目 （或另一個清單中的所有項目）。|  
-|[CList::Find](#find)|取得指標值所指定的項目位置。|  
-|[CList::FindIndex](#findindex)|取得指定的項目以零為起始的索引位置。|  
-|[CList::GetAt](#getat)|取得指定位置的項目。|  
-|[CList::GetCount](#getcount)|這份清單中傳回的項目數。|  
-|[CList::GetHead](#gethead)|傳回的清單 （不能是空的） 的標頭的項目。|  
-|[CList::GetHeadPosition](#getheadposition)|傳回的標頭的項目清單的位置。|  
-|[CList::GetNext](#getnext)|取得逐一查看下一個項目。|  
-|[CList::GetPrev](#getprev)|取得逐一查看的上一個項目。|  
-|[CList::GetSize](#getsize)|這份清單中傳回的項目數。|  
-|[CList::GetTail](#gettail)|傳回的結尾項目清單 （不能是空的）。|  
-|[CList::GetTailPosition](#gettailposition)|傳回清單的結尾項目的位置。|  
-|[CList::InsertAfter](#insertafter)|指定的位置之後插入新項目。|  
-|[CList::InsertBefore](#insertbefore)|將指定的位置之前的新項目。|  
-|[CList::IsEmpty](#isempty)|空白清單條件 （沒有項目） 的測試。|  
-|[CList::RemoveAll](#removeall)|從這個清單中移除所有項目。|  
-|[CList::RemoveAt](#removeat)|從此清單中，指定位置移除元素。|  
-|[CList::RemoveHead](#removehead)|從清單的開頭移除的項目。|  
-|[CList::RemoveTail](#removetail)|從清單的結尾的項目。|  
-|[CList::SetAt](#setat)|設定位於指定位置的項目。|  
+|[CList::AddHead](#addhead)|Adds an element (or all the elements in another list) to the head of the list (makes a new head).|  
+|[CList::AddTail](#addtail)|Adds an element (or all the elements in another list) to the tail of the list (makes a new tail).|  
+|[CList::Find](#find)|Gets the position of an element specified by pointer value.|  
+|[CList::FindIndex](#findindex)|Gets the position of an element specified by a zero-based index.|  
+|[CList::GetAt](#getat)|Gets the element at a given position.|  
+|[CList::GetCount](#getcount)|Returns the number of elements in this list.|  
+|[CList::GetHead](#gethead)|Returns the head element of the list (cannot be empty).|  
+|[CList::GetHeadPosition](#getheadposition)|Returns the position of the head element of the list.|  
+|[CList::GetNext](#getnext)|Gets the next element for iterating.|  
+|[CList::GetPrev](#getprev)|Gets the previous element for iterating.|  
+|[CList::GetSize](#getsize)|Returns the number of elements in this list.|  
+|[CList::GetTail](#gettail)|Returns the tail element of the list (cannot be empty).|  
+|[CList::GetTailPosition](#gettailposition)|Returns the position of the tail element of the list.|  
+|[CList::InsertAfter](#insertafter)|Inserts a new element after a given position.|  
+|[CList::InsertBefore](#insertbefore)|Inserts a new element before a given position.|  
+|[CList::IsEmpty](#isempty)|Tests for the empty list condition (no elements).|  
+|[CList::RemoveAll](#removeall)|Removes all the elements from this list.|  
+|[CList::RemoveAt](#removeat)|Removes an element from this list, specified by position.|  
+|[CList::RemoveHead](#removehead)|Removes the element from the head of the list.|  
+|[CList::RemoveTail](#removetail)|Removes the element from the tail of the list.|  
+|[CList::SetAt](#setat)|Sets the element at a given position.|  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `TYPE`  
- 在清單中物件的類型。  
+ Type of object stored in the list.  
   
  `ARG` *_* `TYPE`  
- 用來參考儲存在清單中的物件類型。 可以是參考。  
+ Type used to reference objects stored in the list. Can be a reference.  
   
-## <a name="remarks"></a>備註  
- `CList`列出表現雙向連結清單。  
+## <a name="remarks"></a>Remarks  
+ `CList` lists behave like doubly-linked lists.  
   
- 型別的變數**位置**是索引鍵清單。 您可以使用**位置**變數為迭代器周遊循序清單，以及要保留圖形的位置的書籤。 位置不是相同的索引，不過。  
+ A variable of type **POSITION** is a key for the list. You can use a **POSITION** variable as an iterator to traverse a list sequentially and as a bookmark to hold a place. A position is not the same as an index, however.  
   
- 插入項目是非常快速在清單的開頭、 結尾，以及在已知**位置**。 循序搜尋的必要值或索引來查閱某個元素。 這項搜尋可能會很慢，如果清單很長的。  
+ Element insertion is very fast at the list head, at the tail, and at a known **POSITION**. A sequential search is necessary to look up an element by value or index. This search can be slow if the list is long.  
   
- 如果您需要在清單中的個別項目傾印，您必須設定為 1 或更高的傾印內容的深度。  
+ If you need a dump of individual elements in the list, you must set the depth of the dump context to 1 or greater.  
   
- 全域 helper 函式，這個類別呼叫的特定成員函式必須是可自訂的大部分的使用`CList`類別。 請參閱[集合類別 Helper](../../mfc/reference/collection-class-helpers.md) 」 巨集和全域變數 」 一節。  
+ Certain member functions of this class call global helper functions that must be customized for most uses of the `CList` class. See [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md) in the "Macros and Globals" section.  
   
- 如需有關使用`CList`，請參閱文章[集合](../../mfc/collections.md)。  
+ For more information on using `CList`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&35;](../../mfc/codesnippet/cpp/clist-class_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#35](../../mfc/codesnippet/cpp/clist-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CList`  
   
-## <a name="requirements"></a>需求  
+## <a name="requirements"></a>Requirements  
  **Header:** afxtempl.h  
   
-##  <a name="addhead"></a>CList::AddHead  
- 這份清單的開頭加入新項目或項目清單。  
+##  <a name="addhead"></a>  CList::AddHead  
+ Adds a new element or list of elements to the head of this list.  
   
 ```  
 POSITION AddHead(ARG_TYPE newElement);  
 void AddHead(CList* pNewList);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ARG_TYPE`  
- 指定清單項目 (可以是參考) 之類型的樣板參數。  
+ Template parameter specifying the type of the list element (can be a reference).  
   
  `newElement`  
- 新的項目。  
+ The new element.  
   
  `pNewList`  
- 另一個指標`CList`清單。 中的項目`pNewList`會新增到此清單。  
+ A pointer to another `CList` list. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>傳回值  
- 第一個版本會傳回**位置**新插入的項目值。  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
-### <a name="remarks"></a>備註  
- 清單可以是空的作業之前。  
+### <a name="remarks"></a>Remarks  
+ The list can be empty before the operation.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&36;](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#36](../../mfc/codesnippet/cpp/clist-class_2.cpp)]  
   
-##  <a name="addtail"></a>CList::AddTail  
- 這份清單的結尾加入新項目或項目清單。  
+##  <a name="addtail"></a>  CList::AddTail  
+ Adds a new element or list of elements to the tail of this list.  
   
 ```  
 POSITION AddTail(ARG_TYPE newElement);  
 void AddTail(CList* pNewList);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ARG_TYPE`  
- 指定清單項目 (可以是參考) 之類型的樣板參數。  
+ Template parameter specifying the type of the list element (can be a reference).  
   
  `newElement`  
- 要加入這份清單中的項目。  
+ The element to be added to this list.  
   
  `pNewList`  
- 另一個指標`CList`清單。 中的項目`pNewList`會新增到此清單。  
+ A pointer to another `CList` list. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>傳回值  
- 第一個版本會傳回**位置**新插入的項目值。  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
-### <a name="remarks"></a>備註  
- 清單可以是空的作業之前。  
+### <a name="remarks"></a>Remarks  
+ The list can be empty before the operation.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&37;](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#37](../../mfc/codesnippet/cpp/clist-class_3.cpp)]  
   
-##  <a name="clist"></a>CList::CList  
- 建構空的已排序的清單。  
+##  <a name="clist"></a>  CList::CList  
+ Constructs an empty ordered list.  
   
 ```  
 CList(INT_PTR nBlockSize = 10);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nBlockSize`  
- 記憶體配置資料粒度的延伸清單。  
+ The memory-allocation granularity for extending the list.  
   
-### <a name="remarks"></a>備註  
- 隨著清單時，配置單位的記憶體`nBlockSize`項目。  
+### <a name="remarks"></a>Remarks  
+ As the list grows, memory is allocated in units of `nBlockSize` entries.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&38;](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#38](../../mfc/codesnippet/cpp/clist-class_4.cpp)]  
   
-##  <a name="find"></a>CList::Find  
- 搜尋以尋找符合指定的第一個項目清單`searchValue`。  
+##  <a name="find"></a>  CList::Find  
+ Searches the list sequentially to find the first element matching the specified `searchValue`.  
   
 ```  
 POSITION Find(
@@ -220,86 +239,86 @@ POSITION Find(
     POSITION startAfter = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ARG_TYPE`  
- 指定清單項目 (可以是參考) 之類型的樣板參數。  
+ Template parameter specifying the type of the list element (can be a reference).  
   
  `searchValue`  
- 要在清單中找到的值。  
+ The value to be found in the list.  
   
  `startAfter`  
- 搜尋開始位置。 如果未不指定任何值，標頭項目將會開始搜尋。  
+ The start position for the search. If no value is specified, the search begins with the head element.  
   
-### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果找不到物件。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if the object is not found.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&39;](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#39](../../mfc/codesnippet/cpp/clist-class_5.cpp)]  
   
-##  <a name="findindex"></a>CList::FindIndex  
- 使用的值`nIndex`以清單的索引。  
+##  <a name="findindex"></a>  CList::FindIndex  
+ Uses the value of `nIndex` as an index into the list.  
   
 ```  
 POSITION FindIndex(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 要找的清單項目以零為起始的索引。  
+ The zero-based index of the list element to be found.  
   
-### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果`nIndex`為負數或太大。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if `nIndex` is negative or too large.  
   
-### <a name="remarks"></a>備註  
- 從清單中，停止上的開頭開始循序掃描*n*個項目。  
+### <a name="remarks"></a>Remarks  
+ It starts a sequential scan from the head of the list, stopping on the *n*th element.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&40;](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#40](../../mfc/codesnippet/cpp/clist-class_6.cpp)]  
   
-##  <a name="getat"></a>CList::GetAt  
- 取得位於指定位置的清單項目。  
+##  <a name="getat"></a>  CList::GetAt  
+ Gets the list element at a given position.  
   
 ```  
 TYPE& GetAt(POSITION position);  
 const TYPE& GetAt(POSITION position) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 樣板參數清單中指定的物件類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of object in the list.  
   
- *位置*  
- 要取得項目清單中的位置。  
+ *position*  
+ The position in the list of the element to get.  
   
-### <a name="return-value"></a>傳回值  
- 請參閱的傳回值描述`GetHead`。  
+### <a name="return-value"></a>Return Value  
+ See the return value description for `GetHead`.  
   
-### <a name="remarks"></a>備註  
- `GetAt`傳回指定的位置與關聯的項目 （或項目的參考）。 不是索引，相同，而且無法用於**位置**自己的值。 型別的變數**位置**是索引鍵清單。  
+### <a name="remarks"></a>Remarks  
+ `GetAt` returns the element (or a reference to the element) associated with a given position. It is not the same as an index, and you cannot operate on a **POSITION** value yourself. A variable of type **POSITION** is a key for the list.  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果它是無效的 Mfc 程式庫的偵錯版本會判斷提示。  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CList::GetHeadPosition](#getheadposition)。  
+### <a name="example"></a>Example  
+  See the example for [CList::GetHeadPosition](#getheadposition).  
   
-##  <a name="getcount"></a>CList::GetCount  
- 這份清單中取得的項目數。  
+##  <a name="getcount"></a>  CList::GetCount  
+ Gets the number of elements in this list.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 整數值，包含項目計數。  
+### <a name="return-value"></a>Return Value  
+ An integer value containing the element count.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法會產生相同結果[CList::GetSize](#getsize)方法。  
+### <a name="remarks"></a>Remarks  
+ Calling this method will generate the same result as the [CList::GetSize](#getsize) method.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CList::RemoveHead](#removehead)。  
+### <a name="example"></a>Example  
+  See the example for [CList::RemoveHead](#removehead).  
   
-##  <a name="gethead"></a>CList::GetHead  
- 取得此清單的標頭項目 （或標頭項目的參考）。  
+##  <a name="gethead"></a>  CList::GetHead  
+ Gets the head element (or a reference to the head element) of this list.  
   
 ```  
 const TYPE& GetHead() const;  
@@ -307,305 +326,305 @@ const TYPE& GetHead() const;
 TYPE& GetHead();
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 樣板參數清單中指定的物件類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of object in the list.  
   
-### <a name="return-value"></a>傳回值  
- 如果清單是**const**，`GetHead`傳回一份清單的開頭處的項目。 這可讓函式只能用在指派陳述式的右側，並防止修改的清單。  
+### <a name="return-value"></a>Return Value  
+ If the list is **const**, `GetHead` returns a copy of the element at the head of the list. This allows the function to be used only on the right side of an assignment statement and protects the list from modification.  
   
- 如果清單不是**const**，`GetHead`傳回的參考清單的開頭處的項目。 這可讓函式來指派陳述式的任一邊，而讓 要修改之清單項目。  
+ If the list is not **const**, `GetHead` returns a reference to the element at the head of the list. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>備註  
- 您必須確定清單不是空的再呼叫`GetHead`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](#isempty)確認清單中含有項目。  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](#isempty) to verify that the list contains elements.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&41;](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#41](../../mfc/codesnippet/cpp/clist-class_7.cpp)]  
   
-##  <a name="getheadposition"></a>CList::GetHeadPosition  
- 取得標頭項目，此清單的位置。  
+##  <a name="getheadposition"></a>  CList::GetHeadPosition  
+ Gets the position of the head element of this list.  
   
 ```  
 POSITION GetHeadPosition() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果清單是空的。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if the list is empty.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&42;](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#42](../../mfc/codesnippet/cpp/clist-class_8.cpp)]  
   
-##  <a name="getnext"></a>CList::GetNext  
- 取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**清單中的下一個項目值。  
+##  <a name="getnext"></a>  CList::GetNext  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the **POSITION** value of the next entry in the list.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
 const TYPE& GetNext(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 樣板參數清單中指定的項目類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the elements in the list.  
   
  `rPosition`  
- 參考**位置**前一個傳回值`GetNext`， [GetHeadPosition](#getheadposition)，或其他成員函式呼叫。  
+ A reference to a **POSITION** value returned by a previous `GetNext`, [GetHeadPosition](#getheadposition), or other member function call.  
   
-### <a name="return-value"></a>傳回值  
- 如果清單是**const**，`GetNext`傳回清單中項目的複本。 這可讓函式只能用在指派陳述式的右側，並防止修改的清單。  
+### <a name="return-value"></a>Return Value  
+ If the list is **const**, `GetNext` returns a copy of an element of the list. This allows the function to be used only on the right side of an assignment statement and protects the list from modification.  
   
- 如果清單不是**const**，`GetNext`傳回的項目清單的參考。 這可讓函式來指派陳述式的任一邊，而讓 要修改之清單項目。  
+ If the list is not **const**, `GetNext` returns a reference to an element of the list. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>備註  
- 您可以使用`GetNext`向前反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetHeadPosition`或**尋找**。  
+### <a name="remarks"></a>Remarks  
+ You can use `GetNext` in a forward iteration loop if you establish the initial position with a call to `GetHeadPosition` or **Find**.  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果它是無效的 Mfc 程式庫的偵錯版本會判斷提示。  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- 如果擷取的項目是在清單中，最後則新值`rPosition`設為**NULL**。  
+ If the retrieved element is the last in the list, then the new value of `rPosition` is set to **NULL**.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&43;](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#43](../../mfc/codesnippet/cpp/clist-class_9.cpp)]  
   
-##  <a name="getprev"></a>CList::GetPrev  
- 取得所識別的清單項目`rPosition`，然後設定`rPosition`至**位置**先前的項目清單中的值。  
+##  <a name="getprev"></a>  CList::GetPrev  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the **POSITION** value of the previous entry in the list.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
 const TYPE& GetPrev(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 樣板參數清單中指定的項目類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the elements in the list.  
   
  `rPosition`  
- 參考**位置**前一個傳回值`GetPrev`或其他成員函式呼叫。  
+ A reference to a **POSITION** value returned by a previous `GetPrev` or other member function call.  
   
-### <a name="return-value"></a>傳回值  
- 如果清單是**const**，`GetPrev`傳回一份清單的開頭處的項目。 這可讓函式只能用在指派陳述式的右側，並防止修改的清單。  
+### <a name="return-value"></a>Return Value  
+ If the list is **const**, `GetPrev` returns a copy of the element at the head of the list. This allows the function to be used only on the right side of an assignment statement and protects the list from modification.  
   
- 如果清單不是**const**，`GetPrev`傳回的項目清單的參考。 這可讓函式來指派陳述式的任一邊，而讓 要修改之清單項目。  
+ If the list is not **const**, `GetPrev` returns a reference to an element of the list. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>備註  
- 您可以使用`GetPrev`反向反覆項目迴圈，如果您建立的初始位置，藉由呼叫`GetTailPosition`或**尋找**。  
+### <a name="remarks"></a>Remarks  
+ You can use `GetPrev` in a reverse iteration loop if you establish the initial position with a call to `GetTailPosition` or **Find**.  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果它是無效的 Mfc 程式庫的偵錯版本會判斷提示。  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- 如果擷取的項目是在清單中，第一則新值`rPosition`設為**NULL**。  
+ If the retrieved element is the first in the list, then the new value of `rPosition` is set to **NULL**.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&44;](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#44](../../mfc/codesnippet/cpp/clist-class_10.cpp)]  
   
-##  <a name="getsize"></a>CList::GetSize  
- 傳回清單項目數目。  
+##  <a name="getsize"></a>  CList::GetSize  
+ Returns the number of list elements.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 清單中的項目數。  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以擷取清單中的項目數。  呼叫這個方法會產生相同結果[CList::GetCount](#getcount)方法。  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the list.  Calling this method will generate the same result as the [CList::GetCount](#getcount) method.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&45;](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#45](../../mfc/codesnippet/cpp/clist-class_11.cpp)]  
   
-##  <a name="gettail"></a>CList::GetTail  
- 取得`CObject`指標，表示此清單的結尾項目。  
+##  <a name="gettail"></a>  CList::GetTail  
+ Gets the `CObject` pointer that represents the tail element of this list.  
   
 ```  
 TYPE& GetTail();  
 const TYPE& GetTail() const;  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 樣板參數清單中指定的項目類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements in the list.  
   
-### <a name="return-value"></a>傳回值  
- 請參閱的傳回值描述[GetHead](../../mfc/reference/coblist-class.md#gethead)。  
+### <a name="return-value"></a>Return Value  
+ See the return value description for [GetHead](../../mfc/reference/coblist-class.md#gethead).  
   
-### <a name="remarks"></a>備註  
- 您必須確定清單不是空的再呼叫`GetTail`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](../../mfc/reference/coblist-class.md#isempty)確認清單中含有項目。  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&46;](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#46](../../mfc/codesnippet/cpp/clist-class_12.cpp)]  
   
-##  <a name="gettailposition"></a>CList::GetTailPosition  
- 取得這份清單; 的結尾項目位置**NULL**如果清單是空的。  
+##  <a name="gettailposition"></a>  CList::GetTailPosition  
+ Gets the position of the tail element of this list; **NULL** if the list is empty.  
   
 ```  
 POSITION GetTailPosition() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A**位置**值，可用於反覆項目或物件指標擷取。**NULL**如果清單是空的。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or object pointer retrieval; **NULL** if the list is empty.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&47;](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#47](../../mfc/codesnippet/cpp/clist-class_13.cpp)]  
   
-##  <a name="insertafter"></a>CList::InsertAfter  
- 將這份清單的項目之後的指定位置處的項目。  
+##  <a name="insertafter"></a>  CList::InsertAfter  
+ Adds an element to this list after the element at the specified position.  
   
 ```  
 POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>參數  
- *位置*  
- 先前的 **、** 或 `GetNext`Find `GetPrev`成員函式呼叫所傳回的 **POSITION** 值。  
+### <a name="parameters"></a>Parameters  
+ *position*  
+ A **POSITION** value returned by a previous `GetNext`, `GetPrev`, or **Find** member function call.  
   
  `ARG_TYPE`  
- 指定清單項目類型的樣板參數。  
+ Template parameter specifying the type of the list element.  
   
  `newElement`  
- 要加入這份清單中的項目。  
+ The element to be added to this list.  
   
-### <a name="return-value"></a>傳回值  
- 可用於反覆項目或清單項目擷取的 **POSITION** 值。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or list element retrieval.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&48;](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#48](../../mfc/codesnippet/cpp/clist-class_14.cpp)]  
   
-##  <a name="insertbefore"></a>CList::InsertBefore  
- 將項目加入這份清單中相同項目之前的指定位置。  
+##  <a name="insertbefore"></a>  CList::InsertBefore  
+ Adds an element to this list before the element at the specified position.  
   
 ```  
 POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>參數  
- *位置*  
- 先前的 **、** 或 `GetNext`Find `GetPrev`成員函式呼叫所傳回的 **POSITION** 值。  
+### <a name="parameters"></a>Parameters  
+ *position*  
+ A **POSITION** value returned by a previous `GetNext`, `GetPrev`, or **Find** member function call.  
   
  `ARG_TYPE`  
- 指定清單項目 (可以是參考) 之類型的樣板參數。  
+ Template parameter specifying the type of the list element (can be a reference).  
   
  `newElement`  
- 要加入這份清單中的項目。  
+ The element to be added to this list.  
   
-### <a name="return-value"></a>傳回值  
- 可用於反覆項目或清單項目擷取的 **POSITION** 值。  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that can be used for iteration or list element retrieval.  
   
-### <a name="remarks"></a>備註  
- 如果 *position* 為 **NULL**，則會在清單頂端插入項目。  
+### <a name="remarks"></a>Remarks  
+ If *position* is **NULL**, the element is inserted at the head of the list.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&49;](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#49](../../mfc/codesnippet/cpp/clist-class_15.cpp)]  
   
-##  <a name="isempty"></a>CList::IsEmpty  
- 指出此清單是否包含任何項目。  
+##  <a name="isempty"></a>  CList::IsEmpty  
+ Indicates whether this list contains no elements.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果此清單是空的。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this list is empty; otherwise 0.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&50;](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#50](../../mfc/codesnippet/cpp/clist-class_16.cpp)]  
   
-##  <a name="removeall"></a>CList::RemoveAll  
- 從這個清單中移除所有項目，然後釋放相關聯的記憶體。  
+##  <a name="removeall"></a>  CList::RemoveAll  
+ Removes all the elements from this list and frees the associated memory.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果已經是空的清單，會不產生任何錯誤。  
+### <a name="remarks"></a>Remarks  
+ No error is generated if the list is already empty.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&51;](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#51](../../mfc/codesnippet/cpp/clist-class_17.cpp)]  
   
-##  <a name="removeat"></a>CList::RemoveAt  
- 從這個清單中移除指定的項目。  
+##  <a name="removeat"></a>  CList::RemoveAt  
+ Removes the specified element from this list.  
   
 ```  
 void RemoveAt(POSITION position);
 ```  
   
-### <a name="parameters"></a>參數  
- *位置*  
- 要從清單中移除之項目的位置。  
+### <a name="parameters"></a>Parameters  
+ *position*  
+ The position of the element to be removed from the list.  
   
-### <a name="remarks"></a>備註  
- 您必須確定您**位置**值代表在清單中的有效位置。 如果它是無效的 Mfc 程式庫的偵錯版本會判斷提示。  
+### <a name="remarks"></a>Remarks  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&52;](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#52](../../mfc/codesnippet/cpp/clist-class_18.cpp)]  
   
-##  <a name="removehead"></a>CList::RemoveHead  
- 從清單的開頭移除的項目，並傳回的指標。  
+##  <a name="removehead"></a>  CList::RemoveHead  
+ Removes the element from the head of the list and returns a pointer to it.  
   
 ```  
 TYPE RemoveHead();
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 樣板參數清單中指定的項目類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements in the list.  
   
-### <a name="return-value"></a>傳回值  
- 先前在對 list 的 head 項目。  
+### <a name="return-value"></a>Return Value  
+ The element previously at the head of the list.  
   
-### <a name="remarks"></a>備註  
- 您必須確定清單不是空的再呼叫`RemoveHead`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](#isempty)確認清單中含有項目。  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](#isempty) to verify that the list contains elements.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&53;](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#53](../../mfc/codesnippet/cpp/clist-class_19.cpp)]  
   
-##  <a name="removetail"></a>CList::RemoveTail  
- 從清單的結尾的項目，並傳回的指標。  
+##  <a name="removetail"></a>  CList::RemoveTail  
+ Removes the element from the tail of the list and returns a pointer to it.  
   
 ```  
 TYPE RemoveTail();
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 樣板參數清單中指定的項目類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements in the list.  
   
-### <a name="return-value"></a>傳回值  
- 在清單結尾的項目。  
+### <a name="return-value"></a>Return Value  
+ The element that was at the tail of the list.  
   
-### <a name="remarks"></a>備註  
- 您必須確定清單不是空的再呼叫`RemoveTail`。 如果清單是空的 Mfc 程式庫的偵錯版本會判斷提示。 使用[IsEmpty](#isempty)確認清單中含有項目。  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](#isempty) to verify that the list contains elements.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&54;](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#54](../../mfc/codesnippet/cpp/clist-class_20.cpp)]  
   
-##  <a name="setat"></a>CList::SetAt  
- 型別的變數**位置**是索引鍵清單。  
+##  <a name="setat"></a>  CList::SetAt  
+ A variable of type **POSITION** is a key for the list.  
   
 ```  
 void SetAt(POSITION pos, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pos`  
- **位置**来設定的項目。  
+ The **POSITION** of the element to be set.  
   
  `ARG_TYPE`  
- 指定清單項目 (可以是參考) 之類型的樣板參數。  
+ Template parameter specifying the type of the list element (can be a reference).  
   
  `newElement`  
- 要加入至清單的項目。  
+ The element to be added to the list.  
   
-### <a name="remarks"></a>備註  
- 不是索引，相同，而且無法用於**位置**自己的值。 `SetAt`項目寫入至清單中指定的位置。  
+### <a name="remarks"></a>Remarks  
+ It is not the same as an index, and you cannot operate on a **POSITION** value yourself. `SetAt` writes the element to the specified position in the list.  
   
- 您必須確定您**位置**值代表在清單中的有效位置。 如果它是無效的 Mfc 程式庫的偵錯版本會判斷提示。  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections #&55;](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例收集](../../visual-cpp-samples.md)   
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CMap 類別](../../mfc/reference/cmap-class.md)   
- [CArray 類別](../../mfc/reference/carray-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMap Class](../../mfc/reference/cmap-class.md)   
+ [CArray Class](../../mfc/reference/carray-class.md)
 

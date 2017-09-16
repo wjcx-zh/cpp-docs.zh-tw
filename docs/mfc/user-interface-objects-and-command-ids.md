@@ -1,43 +1,62 @@
 ---
-title: "使用者介面物件和命令 ID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令處理, 使用者介面物件"
-  - "命令 ID, 使用者介面物件"
-  - "命令傳送, MFC"
-  - "鍵盤快速鍵, 與 ID 產生關聯"
-  - "功能表項目, 與 ID 產生關聯"
-  - "MFC, 命令傳送"
-  - "工具列控制項 [MFC], 命令 ID"
-  - "使用者介面物件, 與 ID 產生關聯"
+title: User-Interface Objects and Command IDs | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- keyboard shortcuts, associating with IDs
+- MFC, command routing
+- toolbar controls [MFC], command ID
+- menu items, associating with IDs
+- user interface objects [MFC], associating with IDs
+- command IDs, user interface objects
+- command routing [MFC], MFC
+- command handling [MFC], user-interface objects
 ms.assetid: 4ea19e9b-ed1e-452e-bd33-7f509107a45b
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用者介面物件和命令 ID
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b3051afe12e290990d6248e4cfc1ad2994e617f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-功能表項目、工具列按鈕和快速鍵是使用介面物件」能夠產生命令。  每一個使用者介面物件具有 ID.  建立自訂使用者介面物件與命令將相同 ID 的物件和命令。  如 [訊息](../mfc/messages.md)所說明，命令會實作為特殊資訊。  這個檢視在 Framework 命令」下面架構如何處理命令。  當使用者介面物件產生一命令，例如 `ID_EDIT_CLEAR_ALL`，一個應用程式的物件處理命令—在下面這個圖形，資料物件的 `OnEditClearAll` 函式會將文件的訊息對應呼叫。  
+---
+# <a name="user-interface-objects-and-command-ids"></a>User-Interface Objects and Command IDs
+Menu items, toolbar buttons, and accelerator keys are "user-interface objects" capable of generating commands. Each such user-interface object has an ID. You associate a user-interface object with a command by assigning the same ID to the object and the command. As explained in [Messages](../mfc/messages.md), commands are implemented as special messages. The figure "Commands in the Framework" below shows how the framework manages commands. When a user-interface object generates a command, such as `ID_EDIT_CLEAR_ALL`, one of the objects in your application handles the command — in the figure below, the document object's `OnEditClearAll` function is called via the document's message map.  
   
- ![Framework 中的命令](../mfc/media/vc385p1.png "vc385P1")  
-Framework 中的命令  
+ ![Commands in the Framework](../mfc/media/vc385p1.gif "vc385p1")  
+Commands in the Framework  
   
- 嘗試更新在 Framework 的命令」下面 MFC 如何更新使用者介面物件 \(例如功能表項目和工具列按鈕。  在工具列按鈕的情況下，才能在功能表下拉，或者在閒置迴圈期間， MFC 路由更新命令。  在下面這個圖形，資料物件呼叫它的更新命令處理常式，則為 `OnUpdateEditClearAll`，啟用或停用使用者介面物件。  
+ The figure "Command Updating in the Framework" below shows how MFC updates user-interface objects such as menu items and toolbar buttons. Before a menu drops down, or during the idle loop in the case of toolbar buttons, MFC routes an update command. In the figure below, the document object calls its update command handler, `OnUpdateEditClearAll`, to enable or disable the user-interface object.  
   
- ![Framework 中的命令更新](../mfc/media/vc385p2.png "vc385P2")  
-Framework 中的命令更新  
+ ![Command updating in the Framework](../mfc/media/vc385p2.png "vc385p2")  
+Command Updating in the Framework  
   
-## 請參閱  
- [架構中的訊息和命令](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

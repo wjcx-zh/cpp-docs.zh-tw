@@ -1,5 +1,5 @@
 ---
-title: "Cgopherfile 類別 |Microsoft 文件"
+title: CStdioFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,9 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CStdioFile class
-- I/O [MFC], stream
-- stream I/O
+- CStdioFile [MFC], CStdioFile
+- CStdioFile [MFC], Open
+- CStdioFile [MFC], ReadString
+- CStdioFile [MFC], Seek
+- CStdioFile [MFC], WriteString
+- CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
 caps.latest.revision: 22
 author: mikeblome
@@ -42,17 +45,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6b334c2973a2567a8a9bd16a80bd4c3628ced6d2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83a92d94332b9af71f6cbce7997530fa5714a009
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstdiofile-class"></a>Cgopherfile 類別
-代表執行階段函式所開啟的 C 執行階段資料流檔案[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
+# <a name="cstdiofile-class"></a>CStdioFile Class
+Represents a C run-time stream file as opened by the run-time function [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CStdioFile : public CFile  
@@ -60,50 +63,50 @@ class CStdioFile : public CFile
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStdioFile::CStdioFile](#cstdiofile)|建構`CStdioFile`從路徑或檔案指標的物件。|  
+|[CStdioFile::CStdioFile](#cstdiofile)|Constructs a `CStdioFile` object from a path or file pointer.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStdioFile::Open](#open)|多載。 開啟適用於與預設`CStdioFile`建構函式 (會覆寫[CFile::Open](../../mfc/reference/cfile-class.md#open))。|  
-|[CStdioFile::ReadString](#readstring)|讀取單行文字。|  
-|[CStdioFile::Seek](#seek)|將目前的檔案指標。|  
-|[CStdioFile::WriteString](#writestring)|寫入單一文字行。|  
+|[CStdioFile::Open](#open)|Overloaded. Open is designed for use with the default `CStdioFile` constructor (Overrides [CFile::Open](../../mfc/reference/cfile-class.md#open)).|  
+|[CStdioFile::ReadString](#readstring)|Reads a single line of text.|  
+|[CStdioFile::Seek](#seek)|Positions the current file pointer.|  
+|[CStdioFile::WriteString](#writestring)|Writes a single line of text.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStdioFile::m_pStream](#m_pstream)|包含已開啟的檔案的指標。|  
+|[CStdioFile::m_pStream](#m_pstream)|Contains a pointer to an open file.|  
   
-## <a name="remarks"></a>備註  
- 資料流檔案會進行緩衝處理，且可以在文字模式 （預設值） 或二進位模式中開啟。  
+## <a name="remarks"></a>Remarks  
+ Stream files are buffered and can be opened in either text mode (the default) or binary mode.  
   
- 文字模式提供特殊處理的歸位字元傳回換行字元組。 當您撰寫一個新行字元 （0x0a） 新增到文字模式`CStdioFile`物件、 位元組組 (0x0D，0x0A) 傳送至檔案。 您在讀取時，位元組組 (0x0D，0x0A) 轉譯成單一的 0x0A 位元組。  
+ Text mode provides special processing for carriage return-linefeed pairs. When you write a newline character (0x0A) to a text-mode `CStdioFile` object, the byte pair (0x0D, 0x0A) is sent to the file. When you read, the byte pair (0x0D, 0x0A) is translated to a single 0x0A byte.  
   
- [CFile](../../mfc/reference/cfile-class.md)函式[重複](../../mfc/reference/cfile-class.md#duplicate)， [LockRange](../../mfc/reference/cfile-class.md#lockrange)，和[UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)不支援`CStdioFile`。  
+ The [CFile](../../mfc/reference/cfile-class.md) functions [Duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), and [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) are not supported for `CStdioFile`.  
   
- 如果您在上呼叫這些函式`CStdioFile`，您會收到[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。  
+ If you call these functions on a `CStdioFile`, you will get a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- 如需有關使用`CStdioFile`，請參閱文章[MFC 中的檔案](../../mfc/files-in-mfc.md)和[檔案處理](../../c-runtime-library/file-handling.md)中*執行階段程式庫參考*。  
+ For more information on using `CStdioFile`, see the articles [Files in MFC](../../mfc/files-in-mfc.md) and [File Handling](../../c-runtime-library/file-handling.md) in the *Run-Time Library Reference*.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
   
  `CStdioFile`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cstdiofile"></a>CStdioFile::CStdioFile  
- 建構並初始化 `CStdioFile` 物件。  
+##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile  
+ Constructs and initializes a `CStdioFile` object.  
   
 ```  
 CStdioFile();  
@@ -122,47 +125,47 @@ CStdioFile(
     CAtlTransactionManager* pTM);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pOpenStream`  
- 指定 C 執行階段函式呼叫所傳回的檔案指標[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
+ Specifies the file pointer returned by a call to the C run-time function [fopen](../../c-runtime-library/reference/fopen-wfopen.md).  
   
  `lpszFileName`  
- 指定所需的檔案路徑的字串。 路徑可以是相對或絕對。  
+ Specifies a string that is the path to the desired file. The path can be relative or absolute.  
   
  `nOpenFlags`  
- 指定用來建立檔案、 檔案共用和檔案存取模式選項。 您可以指定多個選項，藉由使用位元 OR ( `|`) 運算子。  
+ Specifies options for file creation, file sharing, and file access modes. You can specify multiple options by using the bitwise OR ( `|`) operator.  
   
- 其中一個檔案存取模式選項是必要的。其他模式是選擇性的。 請參閱[CFile::CFile](../../mfc/reference/cfile-class.md#cfile)模式選項和其他旗標的清單。 在 MFC 3.0 版和更新版本中，允許共用旗標。  
+ One file access mode option is required; other modes are optional. See [CFile::CFile](../../mfc/reference/cfile-class.md#cfile) for a list of mode options and other flags. In MFC version 3.0 and later, share flags are allowed.  
   
  `pTM`  
- CAtlTransactionManager 物件的指標。  
+ Pointer to CAtlTransactionManager object.  
   
-### <a name="remarks"></a>備註  
- 預設建構函式不會附加至檔案`CStdioFile`物件。 當使用這個建構函式，您必須使用`CStdioFile::Open`方法來開啟檔案，並將其附加至`CStdioFile`物件。  
+### <a name="remarks"></a>Remarks  
+ The default constructor does not attach a file to the `CStdioFile` object. When using this constructor, you must use the `CStdioFile::Open` method to open a file and attach it to the `CStdioFile` object.  
   
- 單一參數建構函式會將附加至開啟的檔案資料流`CStdioFile`物件。 允許指標的值包括預先定義的輸入/輸出檔案指標`stdin`， `stdout`，或`stderr`。  
+ The single-parameter constructor attaches an open file stream to the `CStdioFile` object. Allowed pointer values include the predefined input/output file pointers `stdin`, `stdout`, or `stderr`.  
   
- 兩個參數的建構函式建立`CStdioFile`物件，並開啟對應的檔案，以指定的路徑。  
+ The two-parameter constructor creates a `CStdioFile` object and opens the corresponding file with the given path.  
   
- 如果您要傳入`NULL`針對`pOpenStream`或`lpszFileName`，建構函式會擲回`CInvalidArgException*`。  
+ If you pass `NULL` for either `pOpenStream` or `lpszFileName`, the constructor throws a `CInvalidArgException*`.  
   
- 如果無法開啟或建立檔案，建構函式會擲回`CFileException*`。  
+ If the file cannot be opened or created, the constructor throws a `CFileException*`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCFiles # 37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#37](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_1.cpp)]  
   
-##  <a name="m_pstream"></a>CStdioFile::m_pStream  
- `m_pStream`資料成員是開啟的檔案指標所傳回的 C 執行階段函式`fopen`。  
+##  <a name="m_pstream"></a>  CStdioFile::m_pStream  
+ The `m_pStream` data member is the pointer to an open file as returned by the C run-time function `fopen`.  
   
 ```  
 FILE* m_pStream;  
 ```  
   
-### <a name="remarks"></a>備註  
- 它是**NULL**如果從未開啟檔案，或已關閉。  
+### <a name="remarks"></a>Remarks  
+ It is **NULL** if the file has never been opened or has been closed.  
   
-##  <a name="open"></a>CStdioFile::Open  
- 多載。 開啟適用於與預設`CStdioFile`建構函式。  
+##  <a name="open"></a>  CStdioFile::Open  
+ Overloaded. Open is designed for use with the default `CStdioFile` constructor.  
   
 ```  
 virtual BOOL Open(
@@ -178,26 +181,26 @@ virtual BOOL Open(
     CFileException* pError = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszFileName`  
- 所需的檔案的路徑字串。 路徑可以是相對或絕對。  
+ A string that is the path to the desired file. The path can be relative or absolute.  
   
  `nOpenFlags`  
- 共用及存取模式。 指定開啟檔案時要採取的動作。 您可以使用位元 OR (|) 運算子來結合選項。 一個存取權限，以及一個共用選項是必要的。modeCreate 和 modeNoInherit 模式是選擇性的。  
+ Sharing and access mode. Specifies the action to take when opening the file. You can combine options by using the bitwise-OR (&#124;) operator. One access permission and one share option are required; the modeCreate and modeNoInherit modes are optional.  
   
  `pError`  
- 將會收到失敗的作業狀態的現有檔案例外狀況物件指標。  
+ A pointer to an existing file-exception object that will receive the status of a failed operation.  
   
  `pTM`  
- 指向 `CAtlTransactionManager` 物件的指標。  
+ Pointer to a `CAtlTransactionManager` object.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則為 `TRUE`，否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="readstring"></a>CStdioFile::ReadString  
- 文字資料讀入緩衝區中，最大的限制`nMax`-1 個字元，與關聯的檔案從`CStdioFile`物件。  
+##  <a name="readstring"></a>  CStdioFile::ReadString  
+ Reads text data into a buffer, up to a limit of `nMax`-1 characters, from the file associated with the `CStdioFile` object.  
   
 ```  
 virtual LPTSTR ReadString(
@@ -207,32 +210,32 @@ virtual LPTSTR ReadString(
 virtual BOOL ReadString(CString& rString);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpsz`  
- 指定使用者提供的緩衝區會接收以 null 結尾的文字字串的指標。  
+ Specifies a pointer to a user-supplied buffer that will receive a null-terminated text string.  
   
  `nMax`  
- 指定要讀取的字元數目上限，不計結束的 null 字元。  
+ Specifies the maximum number of characters to read, not counting the terminating null character.  
   
  `rString`  
- 若要參考`CString`函式傳回時，將包含字串的物件。  
+ A reference to a `CString` object that will contain the string when the function returns.  
   
-### <a name="return-value"></a>傳回值  
- 包含文字資料的緩衝區指標。 **NULL**或檔案結尾已到達未讀取任何資料; 如果布林值，如果**FALSE**如果檔案結尾已到達未讀取的任何資料。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the buffer containing the text data. **NULL** if end-of-file was reached without reading any data; or if boolean, **FALSE** if end-of-file was reached without reading any data.  
   
-### <a name="remarks"></a>備註  
- 停止讀取第一個新行字元。 如果在此情況下，少於`nMax`已讀取-1 個字元、 新行字元會儲存在緩衝區中。 在任一情況下，會附加 null 字元 ('\0')。  
+### <a name="remarks"></a>Remarks  
+ Reading is stopped by the first newline character. If, in that case, fewer than `nMax`-1 characters have been read, a newline character is stored in the buffer. A null character ('\0') is appended in either case.  
   
- [CFile::Read](../../mfc/reference/cfile-class.md#read)也會提供的文字模式的輸入，但它不會終止歸位字元傳回換行字元組。  
+ [CFile::Read](../../mfc/reference/cfile-class.md#read) is also available for text-mode input, but it does not terminate on a carriage return-linefeed pair.  
   
 > [!NOTE]
->  `CString`此函式版本會移除`'\n'`存在; 如果`LPTSTR`版本並不會。  
+>  The `CString` version of this function removes the `'\n'` if present; the `LPTSTR` version does not.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCFiles # 38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#38](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_2.cpp)]  
   
-##  <a name="seek"></a>CStdioFile::Seek  
- 在先前開啟的檔案會重新調整位置指標。  
+##  <a name="seek"></a>  CStdioFile::Seek  
+ Repositions the pointer in a previously opened file.  
   
 ```  
 virtual ULONGLONG Seek(
@@ -240,63 +243,63 @@ virtual ULONGLONG Seek(
     UINT nFrom);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lOff`  
- 要移動指標的位元組數目。  
+ Number of bytes to move the pointer.  
   
  `nFrom`  
- 指標移動模式。 必須是下列值之一︰  
+ Pointer movement mode. Must be one of the following values:  
   
-- `CFile::begin`︰ 移動檔案指標`lOff`將從檔案開頭的位元組。  
+- `CFile::begin`: Move the file pointer `lOff` bytes forward from the beginning of the file.  
   
-- `CFile::current`︰ 移動檔案指標`lOff`位元組從檔案中的目前位置。  
+- `CFile::current`: Move the file pointer `lOff` bytes from the current position in the file.  
   
-- `CFile::end`︰ 移動檔案指標`lOff`從檔案結尾的位元組。 請注意，`lOff`必須負到現有的搜尋檔案進行; 正數值將會搜尋超出檔案結尾。  
+- `CFile::end`: Move the file pointer `lOff` bytes from the end of the file. Note that `lOff` must be negative to seek into the existing file; positive values will seek past the end of the file.  
   
-### <a name="return-value"></a>傳回值  
- 如果要求的位置是合法的`Seek`從檔案開頭傳回新的位元組位移。 否則，傳回值未定義和`CFileException`物件就會擲回。  
+### <a name="return-value"></a>Return Value  
+ If the requested position is legal, `Seek` returns the new byte offset from the beginning of the file. Otherwise, the return value is undefined and a `CFileException` object is thrown.  
   
-### <a name="remarks"></a>備註  
- `Seek`函式可讓您隨機存取檔案的內容移動指標指定的數量，具有絕對或相對。 在搜尋期間實際不讀取任何資料。 如果檔案的大小大於要求的位置，檔案的長度會因此擴充至該位置，並將擲回任何例外狀況。  
+### <a name="remarks"></a>Remarks  
+ The `Seek` function permits random access to a file's contents by moving the pointer a specified amount, absolutely or relatively. No data is actually read during the seek. If the requested position is larger than the size of the file, the file length will be extended to that position, and no exception will be thrown.  
   
- 開啟檔案時，檔案指標位於位移 0 時，檔案的開頭。  
+ When a file is opened, the file pointer is positioned at offset 0, the beginning of the file.  
   
- 這項實作`Seek`執行階段程式庫 (CRT) 函式根據`fseek`。 上的使用方式有數個限制`Seek`文字模式開啟的資料流。 如需詳細資訊，請參閱[fseek、 _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)。  
+ This implementation of `Seek` is based on the Run-Time Library (CRT) function `fseek`. There are several limits on the usage of `Seek` on streams opened in text mode. For more information, see [fseek, _fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md).  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`Seek`移動指標 1000 個位元組，從開頭`cfile`檔案。 請注意，`Seek`不會讀取資料，讓您後續必須呼叫[CStdioFile::ReadString](#readstring)讀取資料。  
+### <a name="example"></a>Example  
+ The following example shows how to use `Seek` to move the pointer 1000 bytes from the beginning of the `cfile` file. Note that `Seek` does not read data, so you must subsequently call [CStdioFile::ReadString](#readstring) to read data.  
   
- [!code-cpp[NVC_MFCFiles # 39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
+ [!code-cpp[NVC_MFCFiles#39](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_3.cpp)]  
   
-##  <a name="writestring"></a>CStdioFile::WriteString  
- 緩衝區中的資料寫入至與相關聯的檔案`CStdioFile`物件。  
+##  <a name="writestring"></a>  CStdioFile::WriteString  
+ Writes data from a buffer to the file associated with the `CStdioFile` object.  
   
 ```  
 virtual void WriteString(LPCTSTR lpsz);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpsz`  
- 指定包含以 null 結束的字串緩衝區的指標。  
+ Specifies a pointer to a buffer that contains a null-terminated string.  
   
-### <a name="remarks"></a>備註  
- 結束的 null 字元 ( `\0`) 不會寫入至檔案。 這個方法會寫入新行字元`lpsz`作為歸位字元/換行對檔案。  
+### <a name="remarks"></a>Remarks  
+ The terminating null character ( `\0`) is not written to the file. This method writes newline characters in `lpsz` to the file as a carriage return/linefeed pair.  
   
- 如果您想要寫入的資料，不是以 null 結束的檔案時，使用`CStdioFile::Write`或[CFile::Write](../../mfc/reference/cfile-class.md#write)。  
+ If you want to write data that is not null-terminated to a file, use `CStdioFile::Write` or [CFile::Write](../../mfc/reference/cfile-class.md#write).  
   
- 這個方法會擲回`CInvalidArgException*`如果您指定`NULL`如`lpsz`參數。  
+ This method throws a `CInvalidArgException*` if you specify `NULL` for the `lpsz` parameter.  
   
- 這個方法會擲回`CFileException*`以回應檔案系統錯誤。  
+ This method throws a `CFileException*` in response to file system errors.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCFiles # 40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [CFile 類別](../../mfc/reference/cfile-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CFile 類別](../../mfc/reference/cfile-class.md)   
+## <a name="see-also"></a>See Also  
+ [CFile Class](../../mfc/reference/cfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFile Class](../../mfc/reference/cfile-class.md)   
  [CFile::Duplicate](../../mfc/reference/cfile-class.md#duplicate)   
  [CFile::LockRange](../../mfc/reference/cfile-class.md#lockrange)   
  [CFile::UnlockRange](../../mfc/reference/cfile-class.md#unlockrange)   
- [CNotSupportedException 類別](../../mfc/reference/cnotsupportedexception-class.md)
+ [CNotSupportedException Class](../../mfc/reference/cnotsupportedexception-class.md)
 

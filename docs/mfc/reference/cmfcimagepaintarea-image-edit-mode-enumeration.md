@@ -1,70 +1,86 @@
 ---
-title: "CMFCImagePaintArea::IMAGE_EDIT_MODE 列舉 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IMAGE_EDIT_MODE Enumeration"
-  - "CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration"
-  - "CMFCImagePaintArea.IMAGE_EDIT_MODE Enumeration"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IMAGE_EDIT_MODE 列舉方法"
+title: CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IMAGE_EDIT_MODE Enumeration
+dev_langs:
+- C++
+helpviewer_keywords:
+- IMAGE_EDIT_MODE Enumeration method [MFC]
 ms.assetid: e51db66a-fa1c-4766-9dac-a25b595f871a
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# CMFCImagePaintArea::IMAGE_EDIT_MODE 列舉
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 644159d71a44297094f8304d40f990ee6957f450
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-指定用於修改在影像編輯器對話方塊的影像的繪製模式。  
+---
+# <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE Enumeration
+Specifies a drawing mode that you use to modify an image in an image editor dialog box.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 enum IMAGE_EDIT_MODE  
 {  
-   IMAGE_EDIT_MODE_PEN = 0,  
-   IMAGE_EDIT_MODE_FILL,  
-   IMAGE_EDIT_MODE_LINE,  
-   IMAGE_EDIT_MODE_RECT,  
-   IMAGE_EDIT_MODE_ELLIPSE,  
-   IMAGE_EDIT_MODE_COLOR  
+    IMAGE_EDIT_MODE_PEN = 0,  
+    IMAGE_EDIT_MODE_FILL, 
+    IMAGE_EDIT_MODE_LINE, 
+    IMAGE_EDIT_MODE_RECT, 
+    IMAGE_EDIT_MODE_ELLIPSE, 
+    IMAGE_EDIT_MODE_COLOR 
 };  
 ```  
   
-## 成員  
+## <a name="members"></a>Members  
   
 |||  
 |-|-|  
-|Name|說明|  
-|`IMAGE_EDIT_MODE_PEN`|用來繪製個別像素。|  
-|`IMAGE_EDIT_MODE_FILL`|用來填滿目前游標位置包含所有色彩的相鄰區域。|  
-|`IMAGE_EDIT_MODE_LINE`|用來繪製線條。|  
-|`IMAGE_EDIT_MODE_RECT`|用來繪製矩形。|  
-|`IMAGE_EDIT_MODE_ELLIPSE`|用來繪製橢圓形。|  
-|`IMAGE_EDIT_MODE_COLOR`|用來設定目前色彩到色彩包含在目前的游標位置。|  
+|Name|Description|  
+|`IMAGE_EDIT_MODE_PEN`|Used to draw individual pixels.|  
+|`IMAGE_EDIT_MODE_FILL`|Used to fill all adjacent areas that contain the color at the current cursor location.|  
+|`IMAGE_EDIT_MODE_LINE`|Used to draw a line.|  
+|`IMAGE_EDIT_MODE_RECT`|Used to draw a rectangle.|  
+|`IMAGE_EDIT_MODE_ELLIPSE`|Used to draw an ellipse.|  
+|`IMAGE_EDIT_MODE_COLOR`|Used to set the current color to the color at the current cursor location.|  
   
-### 備註  
- `CMFCImagePaintArea` 和 `CMFCImageEditorDialog` 類別使用這個列舉型別來設定目前的繪製模式。  繪製模式與目前色彩用來修改在影像編輯器對話方塊的影像區域。  如需 `CMFCImagePaintArea` 和 `CMFCImageEditorDialog` 的詳細資訊，請參閱 [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md) 和 [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)。  
+### <a name="remarks"></a>Remarks  
+ The `CMFCImagePaintArea` and `CMFCImageEditorDialog` classes use this enumeration to set the current drawing mode. The drawing mode and current color are used to modify the picture area in an image editor dialog box. For more information about `CMFCImagePaintArea` and `CMFCImageEditorDialog`, see [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md) and [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
- 當您選取色彩從使用影像繪製模式的 `IMAGE_EDIT_MODE_COLOR` ，這個架構設定目前繪圖模式為 `IMAGE_EDIT_MODE_PEN`。  
+ When you select a color from an image by using the `IMAGE_EDIT_MODE_COLOR` drawing mode, the framework sets the current drawing mode to `IMAGE_EDIT_MODE_PEN`.  
   
-## 需求  
- **標題:** afximagepaintarea.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afximagepaintarea.h  
   
-## 請參閱  
- [巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CMFCImagePaintArea Class](../../mfc/reference/cmfcimagepaintarea-class.md)   
  [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
+

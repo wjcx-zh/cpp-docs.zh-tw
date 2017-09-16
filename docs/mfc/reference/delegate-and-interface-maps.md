@@ -1,5 +1,5 @@
 ---
-title: "委派和介面對應巨集 (MFC) |Microsoft 文件"
+title: Delegate and Interface Map Macros (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 03/30/2017
 ms.reviewer: 
@@ -11,9 +11,9 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- delegate map macros
-- event map macros
-- interface map macros
+- delegate map macros [MFC]
+- event map macros [MFC]
+- interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
 caps.latest.revision: 1
 author: mikeblome
@@ -33,178 +33,178 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9b6bd91f5fe02f3747a104be13b448d503af843c
-ms.openlocfilehash: 51bf4627c8939a381ceaf14d51d05518b3859718
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 481801757db191eabe10d1f199afad29222636f3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/22/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 
 |||  
 |-|-|  
-|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|開始委派對應。|
-|[BEGIN_INTERFACE_MAP](#begin_interface_map)|開始 interfaced 對應的定義。|
-|[CommandHandler 委派](#commandhandler)|向命令來源註冊回呼方法。  |
-|[END_DELEGATE_MAP](#end_delegate_map)|結束委派對應。|
-|[END_INTERFACE_MAP](#end_interface_map)|結束實作檔中的介面對應。 |
-|[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|建立委派對應中的項目。|
-|[INTERFACE_PART](#interface_part)|之間使用`BEGIN_INTERFACE_MAP`巨集和`END_INTERFACE_MAP`物件將支援的每個介面的巨集。|
-|[MAKE_DELEGATE](#make_delegate)|將事件處理常式附加至 managed 控制項。|
+|[BEGIN_DELEGATE_MAP](#begin_delegate_map)|Begins a delegate map.|
+|[BEGIN_INTERFACE_MAP](#begin_interface_map)|Begins the definition of the interfaced map.|
+|[CommandHandler Delegate](#commandhandler)|Registers callback methods with a command source.  |
+|[END_DELEGATE_MAP](#end_delegate_map)|Ends a delegate map.|
+|[END_INTERFACE_MAP](#end_interface_map)|Ends the interface map in the implementation file. |
+|[EVENT_DELEGATE_ENTRY](#event_delegate_entry)|Creates an entry in the delegate map.|
+|[INTERFACE_PART](#interface_part)|Used between the `BEGIN_INTERFACE_MAP` macro and the `END_INTERFACE_MAP` macro for each interface your object will support.|
+|[MAKE_DELEGATE](#make_delegate)|Attaches an event handler to a managed control.|
 
 
-## <a name="begin_delegate_map"></a>BEGIN_DELEGATE_MAP
-開始委派對應。  
+## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
+Begins a delegate map.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```  
 BEGIN_DELEGATE_MAP(  CLASS );  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `CLASS`  
- 在其中裝載 managed 的控制項類別。  
+ The class in which the managed control is hosted.  
    
-### <a name="remarks"></a>備註  
- 這個巨集標記的委派項目，撰寫委派對應清單的開頭。 如需如何使用這個巨集的範例，請參閱[EVENT_DELEGATE_ENTRY](#event_delegate_entry)。  
+### <a name="remarks"></a>Remarks  
+ This macro marks the beginning of a list of delegate entries, which compose a delegate map. For an example of how this macro is used, see [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
    
-### <a name="requirements"></a>需求  
- **標頭︰** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
- [如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+### <a name="see-also"></a>See Also  
+ [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
  
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
-開始在實作檔中使用時 interfaced 對應的定義。  
+Begins the definition of the interfaced map when used in the implementation file.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 在其中定義介面對應的類別  
+ The class in which the interface map is to be defined  
   
  `baseClass`  
- 從中衍生 `theClass` 的類別。  
+ The class from which `theClass` derives from.  
    
-### <a name="remarks"></a>備註  
- 每個實作的介面，沒有一或多個`INTERFACE_PART`巨集引動過程。 類別會使用每個彙總，有一個**INTERFACE_AGGREGATE**巨集引動過程。  
+### <a name="remarks"></a>Remarks  
+ For each interface that is implemented, there is one or more `INTERFACE_PART` macro invocations. For each aggregate that the class uses, there is one **INTERFACE_AGGREGATE** macro invocation.  
   
- 如需有關介面對應的詳細資訊，請參閱[技術提示 38](../tn038-mfc-ole-iunknown-implementation.md)。  
+ For more information on interface maps, see [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
  
-##  <a name="commandhandler"></a>CommandHandler 委派
-向命令來源註冊回呼方法。  
+##  <a name="commandhandler"></a>CommandHandler Delegate
+Registers callback methods with a command source.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```  
 delegate void CommandHandler(  UINT^ cmdID  );  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 命令 ID。  
+ The command ID.  
    
-### <a name="remarks"></a>備註  
- 這會向命令來源委派註冊回呼方法。 當您將委派加入命令來源物件時，回呼方法會成為來自指定之來源的命令的處理常式。  
+### <a name="remarks"></a>Remarks  
+ This delegate registers callback methods with a command source. When you add a delegate to the command source object, the callback method becomes a handler for commands coming from the specified source.  
   
- 如需詳細資訊，請參閱[如何︰ 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。  
+ For more information, see [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).  
   
- 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    
-### <a name="requirements"></a>需求  
- **標頭︰** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
    
-### <a name="see-also"></a>另請參閱  
- [如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
+### <a name="see-also"></a>See Also  
+ [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
  
 ##  <a name="commanduihandler"></a>CommandUIHandler
-使用者介面更新命令訊息向註冊回呼方法。  
+Registers callback methods with a user interface update command message.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```  
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cmdID`  
- 命令 ID。  
+ The command ID.  
   
  `cmdUI`  
- 命令訊息識別碼。  
+ The command message ID.  
    
-### <a name="remarks"></a>備註  
- 此委派註冊回呼方法與使用者介面更新命令訊息。 `CommandUIHandler`類似於[CommandHandler](#commandhandler)不同之處在於此委派會搭配使用者介面物件更新命令。 使用者介面更新命令應對應一對一與訊息處理常式方法。  
+### <a name="remarks"></a>Remarks  
+ This delegate registers callback methods with a user interface update command message. `CommandUIHandler` is similar to [CommandHandler](#commandhandler) except that this delegate is used with user interface object update commands. User interface update commands should be mapped one-to-one with message handler methods.  
   
- 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
    
-### <a name="requirements"></a>需求  
- **標頭︰** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
    
-### <a name="see-also"></a>另請參閱  
- [如何︰ 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+### <a name="see-also"></a>See Also  
+ [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [CommandHandler](#commandhandler)
 
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
-結束委派對應。  
+Ends a delegate map.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```  
 END_DELEGATE_MAP();  
 ```  
    
-### <a name="remarks"></a>備註  
- 這個巨集標記的委派項目，撰寫委派對應清單的結尾。 如需如何使用這個巨集的範例，請參閱[EVENT_DELEGATE_ENTRY](#event_delegate_entry)。  
+### <a name="remarks"></a>Remarks  
+ This macro marks the end of a list of delegate entries, which compose a delegate map. For an example of how this macro is used, see [EVENT_DELEGATE_ENTRY](#event_delegate_entry).  
    
-### <a name="requirements"></a>需求  
- **標頭︰** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>See Also  
 
- [如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
+ [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
  
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
-結束實作檔中的介面對應。  
+Ends the interface map in the implementation file.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 END_INTERFACE_MAP( )    
 ```  
    
-### <a name="remarks"></a>備註  
- 如需介面對應的詳細資訊，請參閱[技術提示 38](../tn038-mfc-ole-iunknown-implementation.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about interface maps, see [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
    
-### <a name="see-also"></a>另請參閱  
- [巨集和全域變數](mfc-macros-and-globals.md)   
+### <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [BEGIN_INTERFACE_MAP](#begin_interface_map)
  
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
-建立委派對應中的項目。  
+Creates an entry in the delegate map.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```  
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `MEMBER`  
- 要附加到控制項的事件處理常式方法。  
+ The event handler method to be attached to the control.  
   
  `ARG0`  
- 第一個引數，managed 的事件處理常式方法，例如**物件 ^**。  
+ The first argument of the managed event handler method, such as **Object^**.  
   
  `ARG1`  
- 第二個引數，managed 的事件處理常式方法，例如**EventArgs ^**。  
+ The second argument of the managed event handler method, such as **EventArgs^**.  
    
-### <a name="remarks"></a>備註  
- 在委派對應中的每個項目對應至所建立的 managed 的事件處理常式委派[MAKE_DELEGATE](#make_delegate)。  
+### <a name="remarks"></a>Remarks  
+ Each entry in the delegate map corresponds to a managed event handler delegate created by [MAKE_DELEGATE](#make_delegate).  
    
-### <a name="example"></a>範例  
- 下列程式碼範例示範如何使用 `EVENT_DELEGATE_ENTRY` 針對 `OnClick` 事件處理常式在委派對應中建立項目中，您也可參閱 `MAKE_DELEGATE`的程式碼範例。 如需詳細資訊，請參閱[How to︰ 從原生 c + + 類別接收 Windows Form 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。  
+### <a name="example"></a>Example  
+ The following code example shows how to use `EVENT_DELEGATE_ENTRY` to create an entry in the delegate map for the `OnClick` event handler; also see the code example in `MAKE_DELEGATE`. For more information, see [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
  ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -213,58 +213,58 @@ END_DELEGATE_MAP()
 
 ```  
    
-### <a name="requirements"></a>需求  
- **標頭︰** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>See Also  
  [MAKE_DELEGATE](#make_delegate)   
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)
  
 
 ##  <a name="interface_part"></a>INTERFACE_PART
-之間使用`BEGIN_INTERFACE_MAP`巨集和`END_INTERFACE_MAP`物件將支援的每個介面的巨集。  
+Used between the `BEGIN_INTERFACE_MAP` macro and the `END_INTERFACE_MAP` macro for each interface your object will support.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 INTERFACE_PART( theClass, iid, localClass)  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 包含介面對應的類別名稱。    
+ The name of the class that contains the interface map.    
  `iid`  
- IID 為對應到內嵌的類別。    
+ The IID that is to be mapped to the embedded class.    
  *localClass*  
- 區域類別的名稱。  
+ The name of the local class.  
    
-### <a name="remarks"></a>備註  
- 它可讓您將 IID 對應至所指定的類別成員`theClass`和*localClass*。  
+### <a name="remarks"></a>Remarks  
+ It allows you to map an IID to a member of the class indicated by `theClass` and *localClass*.  
   
- 如需有關介面對應的詳細資訊，請參閱[技術提示 38](../tn038-mfc-ole-iunknown-implementation.md)。  
+ For more information on interface maps, see [Technical Note 38](../tn038-mfc-ole-iunknown-implementation.md).  
    
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
    
  
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
-將事件處理常式附加至 managed 控制項。  
+Attaches an event handler to a managed control.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```  
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `DELEGATE`  
- Managed 的事件處理常式的類型委派視為相等，例如[EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True)。  
+ The type of the managed event handler delegate, such as [EventHandler](assetId:///T:System.EventHandler?qualifyHint=False&autoUpgrade=True).  
   
  `MEMBER`  
- 要附加到控制項的事件處理常式方法名稱。  
+ The name of the event handler method to be attached to the control.  
    
-### <a name="remarks"></a>備註  
- 這個巨集建立之類型的 managed 的事件處理常式委派`DELEGATE`和名稱的`MEMBER`。 Managed 的事件處理常式委派可讓原生類別來處理受管理的事件。  
+### <a name="remarks"></a>Remarks  
+ This macro creates a managed event handler delegate of type `DELEGATE` and of the name `MEMBER`. The managed event handler delegate allows a native class to handle managed events.  
    
-### <a name="example"></a>範例  
- 下列程式碼範例示範如何呼叫`MAKE_DELEGATE`附加`OnClick`MFC 控制項的事件處理常式`MyControl`。 這個巨集的 MFC 應用程式中的運作方式的更廣泛的說明，請參閱[How to︰ 從原生 c + + 類別接收 Windows Form 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。  
+### <a name="example"></a>Example  
+ The following code example shows how to call `MAKE_DELEGATE` to attach an `OnClick` event handler to an MFC control `MyControl`. For a broader explanation of how this macro works in an MFC application, see [How to: Sink Windows Forms Events from Native C++ Classes](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).  
   
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -276,10 +276,10 @@ void CMyView::OnInitialUpdate()
 }
 ```
    
-### <a name="requirements"></a>需求  
- **標頭︰** msclr\event.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>See Also  
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)   
  [EVENT_DELEGATE_ENTRY](#event_delegate_entry)

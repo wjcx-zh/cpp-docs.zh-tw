@@ -1,5 +1,5 @@
 ---
-title: "CDaoRelationFieldInfo 結構 |Microsoft 文件"
+title: CDaoRelationFieldInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
-- CDaoRelationFieldInfo structure
+- CDaoRelationFieldInfo structure [MFC]
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 23d7497502f611cf2311e574556186dc5f7c7d3d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 58505b69e8acb04122bbf62d8cecf6635a4efb8a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo 結構
-`CDaoRelationFieldInfo`結構包含定義的資料存取物件 (DAO) 的關聯性中欄位的相關資訊。  
+# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo Structure
+The `CDaoRelationFieldInfo` structure contains information about a field in a relation defined for data access objects (DAO).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoRelationFieldInfo  
@@ -54,24 +54,24 @@ struct CDaoRelationFieldInfo
 };  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- 關聯性的主資料表中的欄位名稱。  
+ The name of the field in the primary table of the relation.  
   
  `m_strForeignName`  
- 關聯性的外部索引資料表中的欄位名稱。  
+ The name of the field in the foreign table of the relation.  
   
-## <a name="remarks"></a>備註  
- DAO 關聯物件的主要資料表和外部資料表中定義關聯性的欄位中指定的欄位。 在上述的結構定義主要參考表示中傳回資訊的方式`m_pFieldInfos`成員[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)取得藉由呼叫物件[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)類別成員函式`CDaoDatabase`。  
+## <a name="remarks"></a>Remarks  
+ A DAO relation object specifies the fields in a primary table and the fields in a foreign table that define the relation. The references to Primary in the structure definition above indicate how the information is returned in the `m_pFieldInfos` member of a [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object obtained by calling the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of class `CDaoDatabase`.  
   
- 關聯性物件和物件關聯欄位不會顯示由 MFC 類別。 相反地，DAO 物件類別的基礎 MFC 物件[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)包含稱為關聯性集合的關聯性物件的集合。 每一個關聯性物件，包含關聯欄位物件的集合。 每個關聯的欄位物件相互關聯的主資料表中的欄位，與外部索引資料表中的欄位。 數位簽章物件關聯欄位定義欄位的群組中每個資料表，它定義了此關聯性。 `CDaoDatabase`可讓您存取與物件關聯`CDaoRelationInfo`物件呼叫`GetRelationInfo`成員函式。 `CDaoRelationInfo`物件，接著，必須為資料成員， `m_pFieldInfos`，指向陣列`CDaoRelationFieldInfo`物件。  
+ Relation objects and relation field objects are not represented by an MFC class. Instead, the DAO objects underlying MFC objects of class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contain a collection of relation objects, called the Relations collection. Each relation object, in turn, contains a collection of relation field objects. Each relation field object correlates a field in the primary table with a field in the foreign table. Taken together, the relation field objects define a group of fields in each table, which together define the relation. `CDaoDatabase` lets you access relation objects with a `CDaoRelationInfo` object by calling the `GetRelationInfo` member function. The `CDaoRelationInfo` object, then, has a data member, `m_pFieldInfos`, that points to an array of `CDaoRelationFieldInfo` objects.  
   
- 呼叫[GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)成員函式包含`CDaoDatabase`物件在其關聯集合會儲存您感興趣的關聯性物件。 然後存取`m_pFieldInfos`成員[CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)物件。 `CDaoRelationFieldInfo`也會定義`Dump`成員函式中偵錯組建。 您可以使用`Dump`來傾印的內容`CDaoRelationFieldInfo`物件。  
+ Call the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of the containing `CDaoDatabase` object in whose Relations collection is stored the relation object you are interested in. Then access the `m_pFieldInfos` member of the [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object. `CDaoRelationFieldInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoRelationFieldInfo` object.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CDaoRelationInfo 結構](../../mfc/reference/cdaorelationinfo-structure.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoRelationInfo Structure](../../mfc/reference/cdaorelationinfo-structure.md)
 

@@ -1,36 +1,54 @@
 ---
-title: "MFC 應用程式精靈所建立的文件和檢視類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式精靈 [C++], 建立的文件/檢視類別"
-  - "文件類別"
-  - "文件類別, 由應用程式精靈建立的"
-  - "檢視類別, 由應用程式精靈建立的"
+title: Document and View Classes Created by the MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document classes [MFC]
+- document classes [MFC], created by application wizards
+- application wizards [MFC], document/view classes created
+- view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC 應用程式精靈所建立的文件和檢視類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0e9dfa01e51a5f35fff079c37abd3d6dc80648f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 應用程式精靈會引導您建立基本架構文件和檢視類別可讓您在程式開發的優先順序。  您可以使用 [對應命令和訊息至這些類別](../mfc/reference/mapping-messages-to-functions.md) 和 Visual C\+\+ 原始程式碼編輯器來撰寫其成員函式。  
+---
+# <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Document and View Classes Created by the MFC Application Wizard
+The MFC Application Wizard gives you a head start on your program development by creating skeletal document and view classes for you. You can then [map commands and messages to these classes](../mfc/reference/mapping-messages-to-functions.md) and use the Visual C++ source code editor to write their member functions.  
   
- MFC 應用程式精靈所建立的文件類別是從類別衍生自 [CDocument](../mfc/reference/cdocument-class.md)。  檢視類別會衍生自 [CView](../mfc/reference/cview-class.md)。  名稱應用程式精靈給包含它們的這些類別和檔案會根據您在應用程式精靈對話方塊提供的專案名稱。  在應用程式精靈，您可以使用產生的類別頁面修改預設名稱。  
+ The document class created by the MFC Application Wizard is derived from class [CDocument](../mfc/reference/cdocument-class.md). The view class is derived from [CView](../mfc/reference/cview-class.md). The names that the Application Wizard gives these classes and the files that contain them are based on the project name you supply in the Application Wizard dialog box. In the Application Wizard, you can use the Generated Classes page to alter the default names.  
   
- 某些應用程式可能需要多個文件類別、檢視類別或框架視窗類別。  如需詳細資訊，請參閱 [許多資料型別、檢視和框架視窗](../mfc/multiple-document-types-views-and-frame-windows.md)。  
+ Some applications might need more than one document class, view class, or frame-window class. For more information, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).  
   
-## 請參閱  
- [文件\/檢視架構](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

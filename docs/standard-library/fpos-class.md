@@ -1,5 +1,5 @@
 ---
-title: "fpos 類別 | Microsoft Docs"
+title: fpos Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - iosfwd/std::fpos
-- fpos
 - ios/std::fpos::seekpos
 - ios/std::fpos::state
 - ios/std::fpos::operator streamoff
 dev_langs:
 - C++
 helpviewer_keywords:
-- fpos class, about fpos class
-- fpos class
+- std::fpos [C++]
+- std::fpos [C++], seekpos
+- std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
 caps.latest.revision: 20
 author: corob-msft
@@ -38,65 +38,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dfa9ee908b89c94b2eea95c450f67ca71031cf45
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f26bd0d0d94f33f9e771f4c3de1547d96a773642
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="fpos-class"></a>fpos 類別
-此範本類別說明可儲存對任何資料流內的任意檔案位置指標進行還原之所有必要資訊的物件。 類別 fpos\< **St**> 的物件可有效儲存至少兩個成員物件：  
+# <a name="fpos-class"></a>fpos Class
+The template class describes an object that can store all the information needed to restore an arbitrary file-position indicator within any stream. An object of class fpos\< **St**> effectively stores at least two member objects:  
   
--   位元組位移，屬於 [streamoff](../standard-library/ios-typedefs.md#streamoff) 類型。  
+-   A byte offset, of type [streamoff](../standard-library/ios-typedefs.md#streamoff).  
   
--   轉換狀態 (供 basic_filebuf 類別的物件使用)，屬於 **St** 類型，通常是 `mbstate_t`。  
+-   A conversion state, for use by an object of class basic_filebuf, of type **St**, typically `mbstate_t`.  
   
- 它也可以儲存 `fpos_t` 類型的任意檔案位置，以供 [basic_filebuf](../standard-library/basic-filebuf-class.md) 類別的物件使用。 但在大小受限的環境中，`streamoff` 與 `fpos_t` 有時候可以互換使用。 若環境中沒有任何資料流有依存於狀態的編碼，實際上可能不會用到 `mbstate_t`。 因此，儲存的成員物件數目可能會不同。  
+ It can also store an arbitrary file position, for use by an object of class [basic_filebuf](../standard-library/basic-filebuf-class.md), of type `fpos_t`. For an environment with limited file size, however, `streamoff` and `fpos_t` may sometimes be used interchangeably. For an environment with no streams that have a state-dependent encoding, `mbstate_t` may actually be unused. Therefore, the number of member objects stored may vary.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Statetype>  
 class fpos  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  *Statetype*  
- 狀態資訊。  
+ State information.  
   
-### <a name="constructors"></a>建構函式  
-  
-|||  
-|-|-|  
-|[fpos](#fpos)|建立一個物件，其中包含與資料流中的位置 (位移) 有關的資訊。|  
-  
-### <a name="member-functions"></a>成員函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[seekpos](#seekpos)|僅限 C++ 標準程式庫內部使用。 請勿從您的程式碼呼叫此方法。|  
-|[state](#state)|設定或傳回轉換狀態。|  
+|[fpos](#fpos)|Create an object that contains information about a position (offset) in a stream.|  
   
-### <a name="operators"></a>運算子  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator!=](#op_neq)|測試檔案位置指標是否不相等。|  
-|[operator+](#op_add)|遞增檔案位置指標|  
-|[operator+=](#op_add_eq)|遞增檔案位置指標|  
-|[operator-](#operator-)|減少檔案位置指標。|  
-|[operator-=](#operator-_eq)|減少檔案位置指標。|  
-|[operator==](#op_eq_eq)|測試檔案位置指標是否相等。|  
-|[operator streamoff](#op_streamoff)|將類型 `fpos` 的物件轉換成類型 `streamoff` 的物件。|  
+|[seekpos](#seekpos)|Used internally by the C++ Standard Library only. Do not call this method from your code.|  
+|[state](#state)|Sets or returns the conversion state.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<ios>  
+### <a name="operators"></a>Operators  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|Tests file-position indicators for inequality.|  
+|[operator+](#op_add)|Increments a file-position indicator.|  
+|[operator+=](#op_add_eq)|Increments a file-position indicator.|  
+|[operator-](#operator-)|Decrements a file-position indicator.|  
+|[operator-=](#operator-_eq)|Decrements a file-position indicator.|  
+|[operator==](#op_eq_eq)|Tests file-position indicators for equality.|  
+|[operator streamoff](#op_streamoff)|Casts object of type `fpos` to object of type `streamoff`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<ios>  
+  
+ **Namespace:** std  
   
 ##  <a name="fpos"></a>  fpos::fpos  
- 建立一個物件，其中包含與資料流中的位置 (位移) 有關的資訊。  
+ Create an object that contains information about a position (offset) in a stream.  
   
 ```  
 fpos(streamoff _Off = 0);
@@ -104,39 +104,39 @@ fpos(streamoff _Off = 0);
 fpos(Statetype _State, fpos_t _Filepos);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 資料流中的位移。  
+ The offset into the stream.  
   
  `_State`  
- `fpos` 物件的開始狀態。  
+ The starting state of the `fpos` object.  
   
  *_Filepos*  
- 資料流中的位移。  
+ The offset into the stream.  
   
-### <a name="remarks"></a>備註  
- 第一個建構函式會儲存相對於檔案開頭和初始轉換狀態 (如果重要的話) 中的 `_Off` 位移。 如果 `_Off` 為 -1，產生的物件代表無效的資料流位置。  
+### <a name="remarks"></a>Remarks  
+ The first constructor stores the offset `_Off`, relative to the beginning of file and in the initial conversion state (if that matters). If `_Off` is -1, the resulting object represents an invalid stream position.  
   
- 第二個建構函式會儲存一個零位移及 `_State` 物件。  
+ The second constructor stores a zero offset and the object `_State`.  
   
 ##  <a name="op_neq"></a>  fpos::operator!=  
- 測試檔案位置指標是否不相等。  
+ Tests file-position indicators for inequality.  
   
 ```  
 bool operator!=(const fpos<Statetype>& right) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 以比較目標為依據的檔案位置指標。  
+ The file-position indicator against which to compare.  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案位置指標不相等，即為 **true**；否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the file-position indicators are not equal, otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 `!(*this == right)`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `!(*this == right)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // fpos_op_neq.cpp  
@@ -189,47 +189,47 @@ int main( )
 ```  
   
 ##  <a name="op_add"></a>  fpos::operator+  
- 遞增檔案位置指標  
+ Increments a file-position indicator.  
   
 ```  
 fpos<Statetype> operator+(streamoff _Off) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 遞增檔案位置指標時所要依據的位移。  
+ The offset by which you want to increment the file-position indicator.  
   
-### <a name="return-value"></a>傳回值  
- 檔案中的位置。  
+### <a name="return-value"></a>Return Value  
+ The position in the file.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 **fpos(\*this) +=** `_Off`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns **fpos(\*this) +=** `_Off`.  
   
-### <a name="example"></a>範例  
-  如需 `operator+` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator+`.  
   
 ##  <a name="op_add_eq"></a>  fpos::operator+=  
- 遞增檔案位置指標  
+ Increments a file-position indicator.  
   
 ```  
 fpos<Statetype>& operator+=(streamoff _Off);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 遞增檔案位置指標時所要依據的位移。  
+ The offset by which you want to increment the file-position indicator.  
   
-### <a name="return-value"></a>傳回值  
- 檔案中的位置。  
+### <a name="return-value"></a>Return Value  
+ The position in the file.  
   
-### <a name="remarks"></a>備註  
- 成員函式會將 `_Off` 新增至預存的位移成員物件，然後傳回 **\*this**。 針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。  
+### <a name="remarks"></a>Remarks  
+ The member function adds `_Off` to the stored offset member object and then returns **\*this**. For positioning within a file, the result is generally valid only for binary streams that do not have a state-dependent encoding.  
   
-### <a name="example"></a>範例  
-  如需 `operator+=` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator+=`.  
   
 ##  <a name="fpos__operator-"></a>  fpos::operator-  
- 減少檔案位置指標。  
+ Decrements a file-position indicator.  
   
 ```  
 streamoff operator-(const fpos<Statetype>& right) const;
@@ -237,70 +237,70 @@ streamoff operator-(const fpos<Statetype>& right) const;
 fpos<Statetype> operator-(streamoff _Off) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 檔案位置。  
+ File position.  
   
  `_Off`  
- 資料流位移。  
+ Stream offset.  
   
-### <a name="return-value"></a>傳回值  
- 第一個成員函式會傳回 `(streamoff)*this - (streamoff) right`。 第二個成員函式會傳回 `fpos(*this) -= _Off`。  
+### <a name="return-value"></a>Return Value  
+ The first member function returns `(streamoff)*this - (streamoff) right`. The second member function returns `fpos(*this) -= _Off`.  
   
-### <a name="example"></a>範例  
-  如需 `operator-` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator-`.  
   
 ##  <a name="fpos__operator-_eq"></a>  fpos::operator-=  
- 減少檔案位置指標。  
+ Decrements a file-position indicator.  
   
 ```  
 fpos<Statetype>& operator-=(streamoff _Off);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Off`  
- 資料流位移。  
+ Stream offset.  
   
-### <a name="return-value"></a>傳回值  
- 成員函式會傳回 `fpos(*this) -= _Off`。  
+### <a name="return-value"></a>Return Value  
+ The member function returns `fpos(*this) -= _Off`.  
   
-### <a name="remarks"></a>備註  
- 針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。  
+### <a name="remarks"></a>Remarks  
+ For positioning within a file, the result is generally valid only for binary streams that do not have a state-dependent encoding.  
   
-### <a name="example"></a>範例  
-  如需 `operator-=` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator-=`.  
   
 ##  <a name="op_eq_eq"></a>  fpos::operator==  
- 測試檔案位置指標是否相等。  
+ Tests file-position indicators for equality.  
   
 ```  
 bool operator==(const fpos<Statetype>& right) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `right`  
- 以比較目標為依據的檔案位置指標。  
+ The file-position indicator against which to compare.  
   
-### <a name="return-value"></a>傳回值  
- 如果檔案位置指標相等，即為 **true**；否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the file-position indicators are equal; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回 `(streamoff)*this == (streamoff)right`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns `(streamoff)*this == (streamoff)right`.  
   
-### <a name="example"></a>範例  
-  如需 `operator+=` 的使用方式範例，請參閱 [operator!=](#op_neq)。  
+### <a name="example"></a>Example  
+  See [operator!=](#op_neq) for a sample of using `operator+=`.  
   
 ##  <a name="op_streamoff"></a>  fpos::operator streamoff  
- 將 `fpos` 類型的物件轉換成 `streamoff` 類型的物件。  
+ Cast object of type `fpos` to object of type `streamoff`.  
   
 ```  
 operator streamoff() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回預存位移物件以及任何其他位移 (儲存為 `fpos_t` 成員物件的一部分)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored offset member object and any additional offset stored as part of the `fpos_t` member object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // fpos_op_streampos.cpp  
@@ -328,14 +328,14 @@ int main( )
 ```  
   
 ##  <a name="seekpos"></a>  fpos::seekpos  
- 此方法僅限 C++ 標準程式庫內部使用。 請勿從您的程式碼呼叫此方法。  
+ This method is used internally by the C++ Standard Library only. Do not call this method from your code.  
   
 ```  
 fpos_t seekpos() const;
 ```  
   
 ##  <a name="state"></a>  fpos::state  
- 設定或傳回轉換狀態。  
+ Sets or returns the conversion state.  
   
 ```  
 Statetype state() const;
@@ -343,17 +343,17 @@ Statetype state() const;
 void state(Statetype _State);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_State`  
- 新的轉換狀態。  
+ The new conversion state.  
   
-### <a name="return-value"></a>傳回值  
- 轉換狀態。  
+### <a name="return-value"></a>Return Value  
+ The conversion state.  
   
-### <a name="remarks"></a>備註  
- 第一個成員函式會傳回儲存在 **St** 成員物件中的值。 第二個成員函式會將 `_State` 儲存在 **St** 成員物件中。  
+### <a name="remarks"></a>Remarks  
+ The first member function returns the value stored in the **St** member object. The second member function stores `_State` in the **St** member object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // fpos_state.cpp  
@@ -378,9 +378,9 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [iostream 程式設計](../standard-library/iostream-programming.md)   
- [iostream 慣例](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

@@ -1,49 +1,67 @@
 ---
-title: "呼叫更新處理常式的時機 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令傳送, 更新命令"
-  - "命令傳送, 更新處理常式"
-  - "停用功能表項目"
-  - "停用工具列按鈕"
-  - "功能表項目, 啟用"
-  - "功能表 [C++], 初始化"
-  - "功能表 [C++], 更新為內容變更"
-  - "工具列按鈕 [C++], 啟用"
-  - "工具列控制項 [MFC], OnIdle 方法期間更新的"
-  - "工具列 [C++], 更新"
-  - "更新處理常式"
-  - "更新處理常式, 呼叫"
-  - "更新使用者介面物件"
+title: When Update Handlers Are Called | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- updating user interface objects [MFC]
+- command routing [MFC], update commands
+- toolbar buttons [MFC], enabling
+- disabling toolbar buttons
+- menus [MFC], initializing
+- update handlers [MFC]
+- disabling menu items
+- toolbars [MFC], updating
+- menus [MFC], updating as context changes
+- toolbar controls [MFC], updated during OnIdle method [MFC]
+- menu items, enabling
+- command routing [MFC], update handlers
+- update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 呼叫更新處理常式的時機
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f49d34db80d94236e2c435f786a338b73d4dca99
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-假設使用者按一下檔案功能表上方時，產生 `WM_INITMENUPOPUP` 訊息。  框架的更新機制共同更新檔案功能表上的所有項目，在功能表下拉前，因此使用者可以看到它。  
+---
+# <a name="when-update-handlers-are-called"></a>When Update Handlers Are Called
+Suppose the user clicks the mouse in the File menu, which generates a `WM_INITMENUPOPUP` message. The framework's update mechanism collectively updates all items on the File menu before the menu drops down so the user can see it.  
   
- 若要這樣做，框架路由更新所有功能表項目的命令在沿標準命令路由的快顯功能表。  在路由的命令目標有機會可以比更新命令以適當的訊息對應項目 \(格式為 `ON_UPDATE_COMMAND_UI`\) 和呼叫「更新處理常式」函式更新所有功能表項目。  因此，為有六個功能表項目的功能表，六更新命令已送出。  如果更新處理常式為功能表項目的命令識別碼存在，則會進行更新。  否則，架構會檢查處理常式的存在該命令 ID 的並啟用或停用功能表項目屬性。  
+ To do this, the framework routes update commands for all menu items in the pop-up menu along the standard command routing. Command targets on the routing have an opportunity to update any menu items by matching the update command with an appropriate message-map entry (of the form `ON_UPDATE_COMMAND_UI`) and calling an "update handler" function. Thus, for a menu with six menu items, six update commands are sent out. If an update handler exists for the command ID of the menu item, it is called to do the updating. If not, the framework checks for the existence of a handler for that command ID and enables or disables the menu item as appropriate.  
   
- 在命令路由期間，如果此框架沒找到一個 `ON_UPDATE_COMMAND_UI` 項目，它會自動啟用使用者介面物件是否有 `ON_COMMAND` 輸入某個相同的命令 ID.  否則，它會停用使用者介面物件。  因此，確保使用者介面物件時，請提供命令的處理常式物件產生或提供其新處理常式。  請參閱本主題稍後 [使用者介面物件和命令 ID。](../mfc/user-interface-objects-and-command-ids.md)的圖表。  
+ If the framework does not find an `ON_UPDATE_COMMAND_UI` entry during command routing, it automatically enables the user-interface object if there is an `ON_COMMAND` entry somewhere with the same command ID. Otherwise, it disables the user-interface object. Therefore, to ensure that a user-interface object is enabled, supply a handler for the command the object generates or supply an update handler for it. See the figure in the topic [User-Interface Objects and Command IDs](../mfc/user-interface-objects-and-command-ids.md).  
   
- 停用使用者介面物件預設不是可能的。  如需詳細資訊，請參閱*MFC 參考* 中`CFrameWnd`類別的 [m\_bAutoMenuEnable](../Topic/CFrameWnd::m_bAutoMenuEnable.md) 成員函式。  
+ It is possible to disable the default disabling of user-interface objects. For more information, see the [m_bAutoMenuEnable](../mfc/reference/cframewnd-class.md#m_bautomenuenable) member of class `CFrameWnd` in the *MFC Reference*.  
   
- 當應用程式發生收到 `WM_INITMENUPOPUP` 訊息時，功能表使用為自動在架構中。  在閒置迴圈期間，架構搜尋命令傳送按鈕更新處理常式，以與它為功能表類似的方式進行。  
+ Menu initialization is automatic in the framework, occurring when the application receives a `WM_INITMENUPOPUP` message. During the idle loop, the framework searches the command routing for button update handlers in much the same way as it does for menus.  
   
-## 請參閱  
- [如何：更新使用者介面物件](../mfc/how-to-update-user-interface-objects.md)
+## <a name="see-also"></a>See Also  
+ [How to: Update User-Interface Objects](../mfc/how-to-update-user-interface-objects.md)
+
+

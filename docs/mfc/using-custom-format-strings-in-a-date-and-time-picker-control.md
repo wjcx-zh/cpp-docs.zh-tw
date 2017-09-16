@@ -1,45 +1,64 @@
 ---
-title: "在日期時間選擇器控制項中使用自訂格式字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl 類別, 顯示樣式"
-  - "DateTimePicker 控制項 [MFC]"
-  - "DateTimePicker 控制項 [MFC], 顯示樣式"
+title: Using Custom Format Strings in a Date and Time Picker Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDateTimeCtrl class [MFC], display styles
+- DateTimePicker control [MFC], display styles
+- DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 在日期時間選擇器控制項中使用自訂格式字串
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9832b2b5316e00dc67487f5fcc117c75cc6f2f9b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-根據預設，日期時間選擇器控制項用來顯示目前日期提供三個格式類型 \(與唯一樣式對應的每個格式\) 或逾時:  
+---
+# <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>Using Custom Format Strings in a Date and Time Picker Control
+By default, date and time picker controls provide three format types (each format corresponding to a unique style) for displaying the current date or time:  
   
--   **DTS\_LONGDATEFORMAT** 顯示長格式的日期，會產生如「 2000 年 1 月 3 日 星期三」的輸出。  
+-   **DTS_LONGDATEFORMAT** Displays the date in long format, producing output like "Wednesday, January 3, 2000".  
   
--   **DTS\_SHORTDATEFORMAT** 顯示簡短日期，會產生與「1\/3\/00 」的輸出。  
+-   **DTS_SHORTDATEFORMAT** Displays the date in short format, producing output like "1/3/00".  
   
--   **DTS\_TIMEFORMAT** 顯示長格式的時間，產生像「5:31: 42 PM」的輸出。  
+-   **DTS_TIMEFORMAT** Displays the time in long format, producing output like "5:31:42 PM".  
   
- 不過，您可以使用自訂格式字串，您可以自訂日期或時間的外觀。  這個自訂字串組合現有的格式字元，內部格式字元或兩者的混合。  一旦自訂字串已建置，請呼叫將您的自訂字串的 [CDateTimeCtrl::SetFormat](../Topic/CDateTimeCtrl::SetFormat.md) 。  使用您的自訂格式字串，日期時間選擇器控制項會顯示目前的值。  
+ However, you can customize the appearance of the date or time by using a custom format string. This custom string is made up of either existing format characters, nonformat characters, or a combination of both. Once the custom string is built, make a call to [CDateTimeCtrl::SetFormat](../mfc/reference/cdatetimectrl-class.md#setformat) passing in your custom string. The date and time picker control will then display the current value using your custom format string.  
   
- 下列範例程式碼 \(其中 `m_dtPicker` 是 `CDateTimeCtrl` 物件\) 會示範一個可行的解決方法:  
+ The following example code (where `m_dtPicker` is the `CDateTimeCtrl` object) demonstrates one possible solution:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/CPP/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#7](../mfc/codesnippet/cpp/using-custom-format-strings-in-a-date-and-time-picker-control_1.cpp)]  
   
- 除了自訂格式字串之外，日期時間選擇器控制項也支援 [回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。  
+ In addition to custom format strings, date and time picker controls also support [callback fields](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md).  
   
-## 請參閱  
- [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

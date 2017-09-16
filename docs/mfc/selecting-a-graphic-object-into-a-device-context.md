@@ -1,49 +1,67 @@
 ---
-title: "選取圖形物件放入裝置內容中 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "裝置內容, 圖形物件"
-  - "裝置內容, 選取圖形物件放入"
-  - "GDI 物件 [C++], 裝置內容"
-  - "圖形物件, 選取放入裝置內容中"
-  - "存留期, 圖形物件"
-  - "SelectObject 方法"
+title: Selecting a Graphic Object into a Device Context | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- graphic objects [MFC], selecting into device context
+- SelectObject method [MFC]
+- GDI objects [MFC], device contexts
+- lifetime, graphic objects [MFC]
+- device contexts, selecting graphic objects into
+- device contexts, graphic objects [MFC]
 ms.assetid: cf54a330-63ef-421f-83eb-90ec7bd82eef
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 選取圖形物件放入裝置內容中
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c9d3aaa2a3580be476f750d31c24ee61ddd6dbb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這個主題適用於使用圖形物件在視窗的裝置內容。  在 [建立繪圖物件](../mfc/one-stage-and-two-stage-construction-of-objects.md)，您必須選取到裝置內容中儲存的預設物件位置其中之後:  
+---
+# <a name="selecting-a-graphic-object-into-a-device-context"></a>Selecting a Graphic Object into a Device Context
+This topic applies to using graphic objects in a window's device context. After you [create a drawing object](../mfc/one-stage-and-two-stage-construction-of-objects.md), you must select it into the device context in place of the default object stored there:  
   
- [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/CPP/selecting-a-graphic-object-into-a-device-context_1.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#7](../mfc/codesnippet/cpp/selecting-a-graphic-object-into-a-device-context_1.cpp)]  
   
-## 存留期的圖形物件。  
- [SelectObject](../Topic/CDC::SelectObject.md) 傳回的圖表物件為暫存的」。也就是說，下次程式取得閒置時間，它會由類別刪除 `CWinApp` 的 [OnIdle](../Topic/CWinApp::OnIdle.md) 成員函式。  只要您在單一函式使用 `SelectObject` 所傳回的物件，而不會傳回控制項的主要訊息迴圈，就不會有問題。  
+## <a name="lifetime-of-graphic-objects"></a>Lifetime of Graphic Objects  
+ The graphic object returned by [SelectObject](../mfc/reference/cdc-class.md#selectobject) is "temporary." That is, it will be deleted by the [OnIdle](../mfc/reference/cwinapp-class.md#onidle) member function of class `CWinApp` the next time the program gets idle time. As long as you use the object returned by `SelectObject` in a single function without returning control to the main message loop, you will have no problem.  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [圖形物件](../mfc/graphic-objects.md)  
+-   [Graphic objects](../mfc/graphic-objects.md)  
   
--   [圖形物件的階段和兩階段建構](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
+-   [One-stage and two-stage construction of graphic objects](../mfc/one-stage-and-two-stage-construction-of-objects.md)  
   
--   [裝置內容。](../mfc/device-contexts.md)  
+-   [Device contexts](../mfc/device-contexts.md)  
   
--   [繪製在檢視](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a View](../mfc/drawing-in-a-view.md)  
   
-## 請參閱  
- [圖形物件](../mfc/graphic-objects.md)
+## <a name="see-also"></a>See Also  
+ [Graphic Objects](../mfc/graphic-objects.md)
+
+

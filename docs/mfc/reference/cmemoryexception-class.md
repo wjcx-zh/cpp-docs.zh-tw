@@ -1,5 +1,5 @@
 ---
-title: "Afxthrowmemoryexception 類別 |Microsoft 文件"
+title: CMemoryException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,11 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMemoryException class
-- memory exceptions
-- exceptions, memory type
-- C++ exception handling, memory
-- memory, exception handling
+- CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
 caps.latest.revision: 20
 author: mikeblome
@@ -39,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 87be1b16d546791d24bbffa62207ec9ccb350139
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ed7fb0e3689129bf41b13511c70073253bb81b4a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmemoryexception-class"></a>Afxthrowmemoryexception 類別
-表示記憶體不足例外狀況。  
+# <a name="cmemoryexception-class"></a>CMemoryException Class
+Represents an out-of-memory exception condition.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMemoryException : public CSimpleException  
@@ -57,18 +53,18 @@ class CMemoryException : public CSimpleException
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMemoryException::CMemoryException](#cmemoryexception)|建構 `CMemoryException` 物件。|  
+|[CMemoryException::CMemoryException](#cmemoryexception)|Constructs a `CMemoryException` object.|  
   
-## <a name="remarks"></a>備註  
- 沒有進一步限定性條件是必要或不可能。 自動擲回記憶體例外狀況**新**。 如果您撰寫您自己的記憶體函式，使用`malloc`，如範例中，則您必須負責擲回記憶體例外狀況。  
+## <a name="remarks"></a>Remarks  
+ No further qualification is necessary or possible. Memory exceptions are thrown automatically by **new**. If you write your own memory functions, using `malloc`, for example, then you are responsible for throwing memory exceptions.  
   
- 如需有關`CMemoryException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ For more information on `CMemoryException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -77,22 +73,22 @@ class CMemoryException : public CSimpleException
   
  `CMemoryException`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cmemoryexception"></a>CMemoryException::CMemoryException  
- 建構 `CMemoryException` 物件。  
+##  <a name="cmemoryexception"></a>  CMemoryException::CMemoryException  
+ Constructs a `CMemoryException` object.  
   
 ```  
 CMemoryException();  
 ```  
   
-### <a name="remarks"></a>備註  
- 請勿直接使用這個建構函式，但呼叫全域函式，而是[AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception)。 此全域函式會在記憶體不足的情況下成功，因為它會建構先前配置的記憶體中的例外狀況物件。 如需例外狀況處理的詳細資訊，請參閱文章[例外狀況](../exception-handling-in-mfc.md)。  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). this global function can succeed in an out-of-memory situation because it constructs the exception object in previously allocated memory. for more information about exception processing, see the article [exceptions](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>另請參閱  
- [CException 類別](cexception-class.md)   
- [階層架構圖表](../hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](cexception-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)
 
 
 

@@ -1,45 +1,64 @@
 ---
-title: "使用 CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl 類別, 使用"
-  - "狀態列控制項, 關於狀態列控制項"
+title: Using CStatusBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CStatusBarCtrl class [MFC], using
+- status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c5c03ed4d1ad2bb9814f2a3b6e229808e844d9c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您可以使用狀態列控制項 \([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)\) ，來建立會反映各種應用程式相關狀態資訊的控制項視窗。  狀態視窗可以分割為顯示一個以上資訊類型的部分。  
+---
+# <a name="using-cstatusbarctrl"></a>Using CStatusBarCtrl
+You can use the status bar control ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) to create a control window that reflects various kinds of status information about the application. The status window can be divided into parts that display more than one type of information.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [建立狀態列的方法](../mfc/methods-of-creating-a-status-bar.md)  
+-   [Methods of Creating a Status Bar](../mfc/methods-of-creating-a-status-bar.md)  
   
--   [CStatusBarCtrl 的設定](../mfc/settings-for-the-cstatusbarctrl.md)  
+-   [Settings for the CStatusBarCtrl](../mfc/settings-for-the-cstatusbarctrl.md)  
   
--   [使用 CStatusBarCtrl 建立 CStatusBarCtrl 物件](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)  
+-   [Using CStatusBarCtrl to Create a CStatusBarCtrl Object](../mfc/using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md)  
   
--   [設定 CStatusBarCtrl 物件的模式](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)  
+-   [Setting the Mode of a CStatusBarCtrl Object](../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)  
   
--   [初始化 CStatusBarCtrl 物件的組件](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)  
+-   [Initializing the Parts of a CStatusBarCtrl Object](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)  
   
--   [在 CStatusBarCtrl 物件中使用工具提示](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)  
+-   [Using Tooltips in a CStatusBarCtrl Object](../mfc/using-tooltips-in-a-cstatusbarctrl-object.md)  
   
-## 請參閱  
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

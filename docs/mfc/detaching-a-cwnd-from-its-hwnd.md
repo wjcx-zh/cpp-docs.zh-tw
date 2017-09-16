@@ -1,42 +1,61 @@
 ---
-title: "從 HWND 中斷連結 CWnd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CWnd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CWnd 物件, 從 HWND 中斷連結"
-  - "Detach 方法 (CWnd 類別)"
-  - "從 HWND 中斷連結 CWnd"
-  - "HWND, 從中中斷連結 CWnd"
-  - "從 CWnd 移除 HWND"
+title: Detaching a CWnd from Its HWND | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CWnd
+dev_langs:
+- C++
+helpviewer_keywords:
+- HWND, detaching CWnd from
+- removing HWNDs from CWnds
+- CWnd objects [MFC], detaching from HWND
+- detaching CWnds from HWNDs
+- Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 從 HWND 中斷連結 CWnd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b93a8205a5e6bafbf1561735e02b137ad4aa56e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如果您需要規避物件`HWND` 關聯性， MFC 提供另一個 `CWnd` 成員函式，從 Windows 視窗斷開 C\+\+ 視窗物件的[Detach](../Topic/CWnd::Detach.md)函式。  這可以避免解構函式在物件被終止時終結Windows的視窗物件。  
+---
+# <a name="detaching-a-cwnd-from-its-hwnd"></a>Detaching a CWnd from Its HWND
+If you need to circumvent the object-`HWND` relationship, MFC provides another `CWnd` member function, [Detach](../mfc/reference/cwnd-class.md#detach), which disconnects the C++ window object from the Windows window. This prevents the destructor from destroying the Windows window when the object is destroyed.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [建立視窗](../mfc/creating-windows.md)  
+-   [Creating windows](../mfc/creating-windows.md)  
   
--   [視窗解構序列](../mfc/window-destruction-sequence.md)  
+-   [Window destruction sequence](../mfc/window-destruction-sequence.md)  
   
--   [配置和解除配置視窗記憶體](../mfc/allocating-and-deallocating-window-memory.md)  
+-   [Allocating and deallocating window memory](../mfc/allocating-and-deallocating-window-memory.md)  
   
-## 請參閱  
- [視窗物件](../mfc/window-objects.md)
+## <a name="see-also"></a>See Also  
+ [Window Objects](../mfc/window-objects.md)
+
+

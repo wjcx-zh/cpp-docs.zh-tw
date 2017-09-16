@@ -1,46 +1,65 @@
 ---
-title: "OLE 拖放和資料傳輸類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 類別 [C++]"
-  - "資料傳輸 [C++], OLE"
-  - "資料傳輸類別 [C++]"
-  - "拖放 [C++], 類別"
-  - "OLE 拖放 [C++], 和資料傳輸類別"
+title: OLE Drag-and-Drop and Data Transfer Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX classes [MFC]
+- OLE drag and drop [MFC], and data transfer classes
+- drag and drop [MFC], classes
+- data transfer [MFC], OLE
+- data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 拖放和資料傳輸類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 53bcb98592f0fc9dd1af72aec61f5dd30882d9c1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這些類別是用於 OLE 資料傳輸。  它們允許資料是將應用程式之間使用剪貼簿或透過拖放。  
+---
+# <a name="ole-drag-and-drop-and-data-transfer-classes"></a>OLE Drag-and-Drop and Data Transfer Classes
+These classes are used in OLE data transfers. They allow data to be transferred between applications by using the Clipboard or through drag and drop.  
   
  [COleDropSource](../mfc/reference/coledropsource-class.md)  
- 從開始到結束控制項拖放作業。  這個類別會決定拖放作業何時開始，以及何時結束。  在拖放作業期間也顯示游標回應。  
+ Controls the drag-and-drop operation from start to finish. This class determines when the drag operation starts and when it ends. It also displays cursor feedback during the drag-and-drop operation.  
   
  [COleDataSource](../mfc/reference/coledatasource-class.md)  
- 使用，在應用程式的資料傳輸的資料。  `COleDataSource` 可以視為物件導向的剪貼簿物件。  
+ Used when an application provides data for a data transfer. `COleDataSource` could be viewed as an object-oriented Clipboard object.  
   
  [COleDropTarget](../mfc/reference/coledroptarget-class.md)  
- 表示拖放作業的目標。  `COleDropTarget` 物件對應到螢幕上的視窗。  它會判斷是否接受任何資料卸除了上方並實作實際置放作業。  
+ Represents the target of a drag-and-drop operation. A `COleDropTarget` object corresponds to a window on screen. It determines whether to accept any data dropped onto it and implements the actual drop operation.  
   
  [COleDataObject](../mfc/reference/coledataobject-class.md)  
- 當做接收器邊為 `COleDataSource`。  `COleDataObject` 物件可用來存取 `COleDataSource` 物件中的資料。  
+ Used as the receiver side to `COleDataSource`. `COleDataObject` objects provide access to the data stored by a `COleDataSource` object.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

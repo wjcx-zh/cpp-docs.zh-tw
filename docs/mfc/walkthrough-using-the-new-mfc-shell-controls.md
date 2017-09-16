@@ -1,183 +1,219 @@
 ---
-title: "逐步解說：使用新的 MFC Shell 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "shell 控制項 (MFC)"
+title: 'Walkthrough: Using the New MFC Shell Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
 caps.latest.revision: 14
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 逐步解說：使用新的 MFC Shell 控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6d09173d555fe5990917e2519da15b0cc657048
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在此逐步解說中，您會建立類似 Windows 檔案總管的應用程式。  您會建立包含兩個窗格的視窗。  左側的窗格含有 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) 物件，此物件能以階層式檢視顯示您的桌面。  右側的窗格含有 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)，此物件能顯示在左側窗格中選取之資料夾內的檔案。  
+---
+# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Walkthrough: Using the New MFC Shell Controls
+In this walkthrough, you will create an application that resembles File Explorer. You will create a window that contains two panes. The left pane will contain a [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) object that displays your Desktop in a hierarchical view. The right pane will contain a [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) that shows the files in the folder that is selected in the left pane.  
   
-## 必要條件  
- 這個逐步解說假設您已設定 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 使用 \[**一般開發設定**\]。  如果您使用不同的開發設定，一些此逐步解說使用的 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 視窗可能預設為無法顯示。  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set up [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using a different development setting, some [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] windows that we use in this walkthrough might not be displayed by default.  
   
-### 若要使用 MFC 應用程式精靈建立新的 MFC 應用程式  
+### <a name="to-create-a-new-mfc-application-by-using-the-mfc-application-wizard"></a>To create a new MFC application by using the MFC Application Wizard  
   
-1.  使用 \[**MFC 應用程式精靈**\] 建立新的 MFC 應用程式  從 \[**檔案**\] 功能表中選取 \[**新增**\] 以執行精靈，，然後選取 \[**專案**\]。  \[**新增專案**\] 對話方塊隨即出現。  
+1.  Use the **MFC Application Wizard** to create a new MFC application. To run the wizard, from the **File** menu select **New**, and then select **Project**. The **New Project** dialog box will be displayed.  
   
-2.  在 \[**新增專案**\] 對話方塊中，展開 \[**Project types**\] 窗格的 \[**Visual C\+\+**\] 節點，並選取 \[**MFC**\]。  在 \[**範本**\] 窗格中選取 \[**MFC 應用程式**\]。  輸入專案名稱，例如 `MFCShellControls` 並按一下 \[**確定**\]。  \[**MFC 應用程式精靈**\] 隨即出現。  
+2.  In the **New Project** dialog box, expand the **Visual C++** node in the **Project types** pane and select **MFC**. Then, in the **Templates** pane, select **MFC Application**. Type a name for the project, such as `MFCShellControls` and click **OK**. The **MFC Application Wizard** will be displayed.  
   
-3.  在 \[**MFC 應用程式精靈**\] 對話方塊中按 \[**下一步**\]。  \[**應用程式類型**\] 窗格隨即顯示。  
+3.  In the **MFC Application Wizard** dialog box, click **Next**. The **Application Type** pane will be displayed.  
   
-4.  在 \[**應用程式類型**\] 窗格中，在 \[**應用程式類型**\] 下，清除 \[**具有標籤的文件**\] 選項。  然後選取 \[**單一文件**\] 並選取 \[**文件\/檢視架構支援**\]。  在 \[**專案樣式**\] 下選取 \[**Visual Studio**\]，然後從 \[**視覺化樣式和色彩。**\] 下拉式清單選取 \[**Office 2007 \(藍色佈景主題\)**\]。  保留其他選項為原本的值。  按一下 \[**下一個**\] 以顯示 \[**複合文件支援**\] 窗格。  
+4.  On the **Application Type** pane, under **Application type**, clear the **Tabbed documents** option. Next, select **Single document** and select **Document/View architecture support**. Under **Project style**, select **Visual Studio**, and from the **Visual style and colors** drop down list select **Office 2007 (Blue theme)**. Leave all other options as they are. Click **Next** to display the **Compound Document Support** pane.  
   
-5.  在 \[**複合文件支援**\] 窗格中，選取 \[**無**\]。  按一下 \[**下一個**\] 以顯示 \[**文件樣板字串**\] 窗格。  
+5.  On the **Compound Document Support** pane, select **None**. Click **Next** to display the **Document Template Strings** pane.  
   
-6.  不要對 \[**文件樣板字串**\] 窗格作任何變更。  按一下 \[**下一個**\] 以顯示 \[**資料庫支援**\] 窗格。  
+6.  Do not make any changes to the **Document Template Strings** pane. Click **Next** to display the **Database Support** pane.  
   
-7.  在 \[**資料庫支援**\] 窗格中，請選取 \[**無**\] ，因為這個應用程式不使用資料庫。  按一下 \[**下一個**\] 以顯示 \[**使用者介面功能**\] 窗格。  
+7.  On the **Database Support** pane, select **None** because this application does not use a database. Click **Next** to display the **User Interface Features** pane.  
   
-8.  在 \[**使用者介面功能**\] 窗格中，確定已選取 \[**使用功能表列和工具列**\] 選項。  保留其他選項為原本的值。  按一下 \[**下一個**\] 以顯示 \[**進階功能**\] 窗格。  
+8.  On the **User Interface Features** pane, make sure that the **Use a menu bar and toolbar** option is selected. Leave all other options as they are. Click **Next** to display the **Advanced Features** pane.  
   
-9. 在 \[**進階功能**\] 窗格中，在 \[**進階功能**\] 底下，只選取 \[**ActiveX 控制項**\] 和 \[**通用控制項資訊清單**\]。  在 \[**進階框架窗格**\] 底下，只選取 \[**巡覽窗格**\] 選項。  這會使精靈建立已內嵌 `CMFCShellTreeCtrl` 的視窗左側窗格。  按一下 \[**下一個**\] 以顯示 \[**產生的類別**\] 窗格。  
+9. On the **Advanced Features** pane, under **Advanced features**, select only **ActiveX controls** and **Common Control Manifest**. Under **Advanced frame panes**, select only the **Navigation pane** option. This will cause the wizard to create the pane to the left of the window with a `CMFCShellTreeCtrl` already embedded. Click **Next** to display the **Generated Classes** pane.  
   
-10. 我們不會對 \[**產生的類別**\] 窗格作任何變更。  因此，按一下 \[**結束**\] 以建立新的 MFC 專案。  
+10. We are not going to make any changes to the **Generated Classes** pane. Therefore, click **Finish** to create your new MFC project.  
   
-11. 建置並執行應用程式，以確認應用程式建立成功。  若要建置應用程式，請從 \[**建置**\] 功能表中選取 \[**建置方案**\]。  如果應用程式建置成功，請從 \[**偵錯**\] 功能表上選取 \[**開始偵錯**\] 以執行應用程式。  
+11. Verify that the application was created successfully by building and running it. To build the application, from the **Build** menu select **Build Solution**. If the application builds successfully, run the application by selecting **Start Debugging** from the **Debug** menu.  
   
-     精靈會自動建立具有標準功能表列、標準工具列、一個標準狀態列和一個 Outlook 列在視窗左側並加上 \[**資料夾**\] 檢視和 \[**行事曆**\] 檢視的應用程式。  
+     The wizard automatically creates an application that has a standard menu bar, a standard toolbar, a standard status bar, and an Outlook bar to the left of the window with a **Folders** view and a **Calendar** view.  
   
-### 若要將殼層清單控制項加入至文件檢視  
+### <a name="to-add-the-shell-list-control-to-the-document-view"></a>To add the shell list control to the document view  
   
-1.  在本章節中，您會將 `CMFCShellListCtrl` 執行個體加入至精靈所建立的檢視。  您可以按兩下 \[**方案總管**\] 中的 MFCShellControlsView.h 開啟檢視標頭檔。  
+1.  In this section, you will add an instance of `CMFCShellListCtrl` to the view that the wizard created. Open the view header file by double-clicking MFCShellControlsView.h in the **Solution Explorer**.  
   
-     在標頭檔頂端附近找出 `#pragma once` 指示詞。  在其正下方加入用以包含 `CMFCShellListCtrl`標頭檔的程式碼:  
+     Locate the `#pragma once` directive near the top of the header file. Immediately underneath it add this code to include the header file for `CMFCShellListCtrl`:  
   
-    ```  
+ ```  
     #include <afxShellListCtrl.h>  
-    ```  
+ ```  
   
-     現在加入 `CMFCShellListCtrl` 型別的成員變數。  首先，請於標頭檔找出下列註解:  
+     Now add a member variable of type `CMFCShellListCtrl`. First, locate the following comment in the header file:  
   
-    ```  
-    // Generated message map functions  
-    ```  
+ ``` *// Generated message map functions  
+ ```  
   
-     於該註解之上加入這段程式碼:  
+     Immediately above that comment add this code:  
   
-    ```  
-    private:  
-        CMFCShellListCtrl m_wndList;  
-    ```  
+ ```  
+    private: CMFCShellListCtrl m_wndList;  
+ ```  
   
-2.  \[**MFC 應用程式精靈**\] 已建立 `CMainFrame` 類別的 `CMFCShellTreeCtrl` 物件，不過，它是一個受保護的成員。  我們稍後會存取這個物件。  因此，現在請建立其存取子。  您可以在 \[**方案總管**\] 按兩下 MainFrm.h 以開啟標頭檔。  尋找下列註解：  
+2.  The **MFC Application Wizard** already created a `CMFCShellTreeCtrl` object in the `CMainFrame` class, but it is a protected member. We will access this object later. Therefore, create an accessor for it now. Open the MainFrm.h header file by double-clicking it in the **Solution Explorer**. Locate the following comment:  
   
-    ```  
-    // Attributes  
-    ```  
+ ``` *// Attributes  
+ ```  
   
-     於正下方，加入下列方法宣告:  
+     Immediately under it, add the following method declaration:  
   
-    ```  
-    public:  
-        CMFCShellTreeCtrl& GetShellTreeCtrl();  
-    ```  
+ ```  
+    public: 
+    CMFCShellTreeCtrl& GetShellTreeCtrl();
+
+ ```  
   
-     接著，您可以於 \[**方案總管**\] 按兩下 MainFrm.cpp 以開啟原始程式檔。  在該檔案中的下方，加入下列方法定義:  
+     Next, open the MainFrm.cpp source file by double-clicking it in the **Solution Explorer**. At the bottom of that file, add the following method definition:  
   
-    ```  
+ ```  
     CMFCShellTreeCtrl& CMainFrame::GetShellTreeCtrl()  
-    {  
-        return m_wndTree;  
-    }  
-    ```  
+ {  
+    return m_wndTree;  
+ }  
+ ```  
   
-3.  現在我們更新 `CMFCShellControlsView` 類別以處理 **WM\_CREATE** 視窗訊息。  開啟 MFCShellControlsView.h 標頭檔並按一下這一行程式碼:  
+3.  Now we update the `CMFCShellControlsView` class to handle the **WM_CREATE** windows message. Open the MFCShellControlsView.h header file and click on this line of code:  
   
-    ```  
+ ```  
     class CMFCShellControlsView : public CView  
-    ```  
+ ```  
   
-     接下來，在 \[**屬性**\] 視窗中，按一下 \[**訊息**\] 圖示。  向下捲動，直到您找到 **WM\_CREATE** 訊息。  從 **WM\_CREATE**旁的下拉清單中，選取 \[**\<Add\> OnCreate**\]。  這會為我們建立訊息處理常式並自動更新 MFC 訊息對應。  
+     Next, in the **Properties** window, click the **Messages** icon. Scroll down until you find the **WM_CREATE** message. From the drop down list next to **WM_CREATE**, select **\<Add> OnCreate**. This creates a message handler for us and automatically updates the MFC message map.  
   
-     在 `OnCreate` 方法我們現在會建立我們的 `CMFCShellListCtrl` 物件。  於 MFCShellControlsView.cpp 原始程式檔尋找 `OnCreate` 方法定義，並以下列程式碼取代它的實作:  
+     In the `OnCreate` method we will now create our `CMFCShellListCtrl` object. Find the `OnCreate` method definition in the MFCShellControlsView.cpp source file, and replace its implementation with the following code:  
   
-    ```  
+ ```  
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)  
-    {  
-        if (CView::OnCreate(lpCreateStruct) == -1)  
-            return -1;  
+ {  
+    if (CView::OnCreate(lpCreateStruct) == -1)  
+    return -1;  
+ 
+    CRect rectDummy (0,
+    0,
+    0,
+    0);
+
+    m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
+    rectDummy,
+    this,
+    1);
+
+ 
+    return 0;  
+ }  
+ ```  
   
-        CRect rectDummy (0, 0, 0, 0);  
-        m_wndList.Create(WS_CHILD | WS_VISIBLE | LVS_REPORT,  
-            rectDummy, this, 1);  
+4.  Repeat the previous step but for the **WM_SIZE** message. This will cause your applications view to be redrawn whenever a user changes the size of the application window. Replace the definition for the `OnSize` method with the following code:  
   
-        return 0;  
-    }  
-    ```  
+ ```  
+    void CMFCShellControlsView::OnSize(UINT nType,
+    int cx,
+    int cy)  
+ {  
+    CView::OnSize(nType,
+    cx,
+    cy);
+
+    m_wndList.SetWindowPos(NULL, -1, -1,
+    cx,
+    cy,  
+    SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
+
+ }  
+ ```  
   
-4.  為 **WM\_SIZE** 訊息重複上述步驟。  這會導致您的應用程式每當使用者變更應用程式視窗的大小時重新繪製。  以下列程式碼取代 `OnSize` 方法定義：  
+5.  The last step is to connect the `CMFCShellTreeCtrl` and `CMFCShellListCtrl` objects by using the [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist) method. After you call this method, the `CMFCShellListCtrl` will automatically display the contents of the item selected in the `CMFCShellTreeCtrl`. We will do this in the `OnActivateView` method, which is overridden from [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview).  
   
-    ```  
-    void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)  
-    {  
-        CView::OnSize(nType, cx, cy);  
-        m_wndList.SetWindowPos(NULL, -1, -1, cx, cy,  
-            SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);  
-    }  
-    ```  
+     In the MFCShellControlsView.h header file, inside the `CMFCShellControlsView` class declaration, add the following method declaration:  
   
-5.  最後一個步驟是使用 [CMFCShellTreeCtrl::SetRelatedList](../Topic/CMFCShellTreeCtrl::SetRelatedList.md) 方法連接 `CMFCShellTreeCtrl` 和 `CMFCShellListCtrl` 物件。  在呼叫這個方法之後， `CMFCShellListCtrl` 會自動顯示在 `CMFCShellTreeCtrl`中選取之項目的內容。  我們將在覆寫自 [CView::OnActivateView](../Topic/CView::OnActivateView.md) 的 `OnActivateView` 方法中做這項動作。  
+ ```  
+    protected: 
+    virtual void OnActivateView(BOOL bActivate,  
+    CView* pActivateView,  
+    CView* pDeactiveView);
+
+ ```  
   
-     在 MFCShellControlsView.h 標頭檔， `CMFCShellControlsView` 類別宣告中，加入下列方法宣告:  
+     Next, add the definition for this method to the MFCShellControlsView.cpp source file:  
   
-    ```  
-    protected:  
-        virtual void OnActivateView(BOOL bActivate,  
-            CView* pActivateView,  
-            CView* pDeactiveView);  
-    ```  
-  
-     接下來，將這個方法的定義加入 MFCShellControlsView.cpp 原始程式檔:  
-  
-    ```  
+ ```  
     void CMFCShellControlsView::OnActivateView(BOOL bActivate,  
-        CView* pActivateView,  
-        CView* pDeactiveView)   
-    {  
-        if (bActivate && AfxGetMainWnd() != NULL)  
-        {  
-            ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);  
-        }  
+    CView* pActivateView,  
+    CView* pDeactiveView)   
+ {  
+    if (bActivate&& AfxGetMainWnd() != NULL)  
+ {  
+ ((CMainFrame*)AfxGetMainWnd())->GetShellTreeCtrl().SetRelatedList(&m_wndList);
+
+ }  
+ 
+    CView::OnActivateView(bActivate,
+    pActivateView,
+    pDeactiveView);
+
+ }  
+ ```  
   
-        CView::OnActivateView(bActivate, pActivateView, pDeactiveView);  
-    }  
-    ```  
+     Because we are calling methods from the `CMainFrame` class, we must add an `#include` directive at the top of the MFCShellControlsView.cpp source file:  
   
-     由於我們從 `CMainFrame` 呼叫方法，我們必須將 `#include` 指示詞加到 MFCShellControlsView.cpp 原始程式檔的上方:  
-  
-    ```  
+ ```  
     #include "MainFrm.h"  
-    ```  
+ ```  
   
-6.  建置並執行應用程式，以確認應用程式建立成功。  若要建置應用程式，請從 \[**建置**\] 功能表中選取 \[**建置方案**\]。  如果應用程式建置成功，請選擇 \[**偵錯**\] 功能表上的 \[**開始偵錯**\] 以執行應用程式。  
+6.  Verify that the application was created successfully by building and running it. To build the application, from the **Build** menu select **Build Solution**. If the application builds successfully, run it by selecting **Start Debugging** from the **Debug** menu.  
   
-     您現在應該會在檢視窗格中的 `CMFCShellTreeCtrl` 查看所選取的項目的詳細資料。  當您按一下 `CMFCShellTreeCtrl`中的節點，便會自動更新 `CMFCShellListCtrl` 。  同樣地，如果您按兩下 `CMFCShellListCtrl`中的資料夾，應該會自動更新 `CMFCShellTreeCtrl` 。  
+     You should now see the details for the item selected in the `CMFCShellTreeCtrl` in the view pane. When you click a node in the `CMFCShellTreeCtrl`, the `CMFCShellListCtrl` will be automatically updated. Likewise, if you double-click a folder in the `CMFCShellListCtrl`, the `CMFCShellTreeCtrl` should be automatically updated.  
   
-     以滑鼠右鍵按一下任何樹狀目錄控制項或清單控制項的項目。  請注意您會得到相同的內容功能表，就像您正在使用真正的檔案總管。  
+     Right click any item in the tree control or in the list control. Note that you get the same context menu as if you were using the real File Explorer.  
   
-## 後續步驟  
+## <a name="next-steps"></a>Next Steps  
   
--   精靈會建立具有 \[**資料夾**\] 窗格和 \[**行事曆**\] 窗格中的 Outlook 功能區。  這可能沒有必要在總管視窗顯示 \[**行事曆**\] 窗格。  因此，現在請移除該窗格。  
+-   The wizard created an Outlook bar with both a **Folders** pane and a **Calendar** pane. It probably does not make sense to have a **Calendar** pane in an Explorer window. Therefore, remove that pane now.  
   
--   `CMFCShellListCtrl` 支援以不同的方式檢視檔案，例如 \[**大圖示**\]、 \[**小圖示**\]、 \[**清單**\] 和 \[**詳細資料**\]。  更新您的應用程式以實作這項功能。  提示:請參閱 [Visual C\+\+ 範例](../top/visual-cpp-samples.md)。  
+-   The `CMFCShellListCtrl` supports viewing files in different modes, such as **Large Icons**, **Small Icons**, **List**, and **Details**. Update your application to implement this functionality. Hint: see [Visual C++ Samples](../visual-cpp-samples.md).  
   
-## 請參閱  
- [逐步解說](../mfc/walkthroughs-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)
+
+

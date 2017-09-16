@@ -1,40 +1,58 @@
 ---
-title: "主動式文件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.document"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "主動式文件類別"
+title: Active Document Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.document
+dev_langs:
+- C++
+helpviewer_keywords:
+- Active document classes [MFC]
 ms.assetid: cc20af37-b658-406d-8148-7670737f4c03
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 主動式文件類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6de937e1e23757bd42fb14a5f5d7dd0fcb7c923c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-現用文件可以顯示在 Web 瀏覽器中的整個用戶端視窗，例如 Internet Explorer 5.5，或使用中容器，例如 Microsoft Office Binder，支援主動式文件。  
+---
+# <a name="active-document-classes"></a>Active Document Classes
+Active documents can be displayed either in the entire client window of a Web browser, such as Internet Explorer 5.5, or in an Active container, such as the Microsoft Office Binder, that supports Active documents.  
   
  [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md)  
- 將現用文件介面，並初始化和啟動現用文件物件。  
+ Maps the Active document interfaces, and initializes and activates an Active document object.  
   
  [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md)  
- 特定實作 OLE 伺服器動詞主動式文件伺服程式的。  
+ Implements OLE server verbs specifically for Active document servers.  
   
  [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
- 實作主動式文件內含項目。  
+ Implements Active document containment.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

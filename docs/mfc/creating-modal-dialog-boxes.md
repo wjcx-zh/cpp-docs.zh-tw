@@ -1,30 +1,49 @@
 ---
-title: "建立強制回應對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 對話方塊, 建立"
-  - "MFC 對話方塊, 強制回應"
-  - "強制回應對話方塊, 建立"
+title: Creating Modal Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modal dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], creating
+- MFC dialog boxes [MFC], modal
 ms.assetid: 26c7a68c-79f6-4862-a5a8-6024984644d2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 建立強制回應對話方塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b8e350830275aaa9202782eb69a997822a3d0f9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要建立強制回應對話方塊，請呼叫以 [CDialog](../mfc/reference/cdialog-class.md)宣告的兩個公用建構函式之一。  接著，呼叫對話方塊物件的 [DoModal](../Topic/CDialog::DoModal.md) 成員函式來顯示對話方塊和管理與其互動，直到使用者選擇確定或取消。  由 `DoModal` 的這個管理會讓對話方塊強制回應。  對於強制回應對話方塊， `DoModal` 載入對話方塊資源。  
+---
+# <a name="creating-modal-dialog-boxes"></a>Creating Modal Dialog Boxes
+To create a modal dialog box, call either of the two public constructors declared in [CDialog](../mfc/reference/cdialog-class.md). Next, call the dialog object's [DoModal](../mfc/reference/cdialog-class.md#domodal) member function to display the dialog box and manage interaction with it until the user chooses OK or Cancel. This management by `DoModal` is what makes the dialog box modal. For modal dialog boxes, `DoModal` loads the dialog resource.  
   
-## 請參閱  
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "money_put 類別 | Microsoft Docs"
+title: money_put Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocmon/std::money_put
-- money_put
 - locale/std::money_put::char_type
 - locale/std::money_put::iter_type
 - locale/std::money_put::string_type
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- money_put class
+- std::money_put [C++]
+- std::money_put [C++], char_type
+- std::money_put [C++], iter_type
+- std::money_put [C++], string_type
+- std::money_put [C++], do_put
+- std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
 caps.latest.revision: 19
 author: corob-msft
@@ -39,17 +43,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 825edc66a7b4b565222133ebb47a789efbdba52b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cac0d424273a2c497f42b6aec2cfb78281d20b9d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="moneyput-class"></a>money_put 類別
-此樣板類別描述可以做為地區設定 facet 的物件，以控制貨幣值轉換為類型 `CharType` 的序列。  
+# <a name="moneyput-class"></a>money_put Class
+The template class describes an object that can serve as a locale facet to control conversions of monetary values to sequences of type `CharType`.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType,  
@@ -57,54 +61,54 @@ template <class CharType,
 class money_put : public locale::facet;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 程式內用於編碼地區設定字元的類型。  
+ The type used within a program to encode characters in a locale.  
   
  `OutputIterator`  
- 貨幣 put 函式將其輸出寫入其中的迭代器類型。  
+ The type of iterator to which the monetary put functions write their output.  
   
-## <a name="remarks"></a>備註  
- 如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[money_put](#money_put)|`money_put` 類型物件的建構函式。|  
+|[money_put](#money_put)|The constructor for objects of type `money_put`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|  
-|[iter_type](#iter_type)|描述輸出迭代器的類型。|  
-|[string_type](#string_type)|類型，描述包含 `CharType` 類型字元的字串。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an output iterator.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[do_put](#do_put)|虛擬函式，呼叫以將數字或字串轉換為代表貨幣值的字元序列。|  
-|[put](#put)|將數字或字串轉換為代表貨幣值的字元序列。|  
+|[do_put](#do_put)|A virtual function called to convert either number or a string to a character sequence that represents a monetary value.|  
+|[put](#put)|Converts either number or a string to a character sequence that represents a monetary value.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  money_put::char_type  
- 類型，用來描述由地區設定使用的字元。  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_put"></a>  money_put::do_put  
- 虛擬函式，呼叫以將數字或字串轉換為代表貨幣值的字元序列。  
+ A virtual function called to convert either number or a string to a character sequence that represents a monetary value.  
   
 ```  
 virtual iter_type do_put(
@@ -123,101 +127,101 @@ virtual iter_type do_put(
     long double val) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `next`  
- 迭代器，定址對象是所插入字串的第一個元素。  
+ An iterator addressing the first element of the inserted string.  
   
  `_Intl`  
- 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `_Iosbase`  
- 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
   
  `_Fill`  
- 間距所使用的字元。  
+ A character which is used for spacing.  
   
  `val`  
- 要轉換的字串物件。  
+ A string object to be converted.  
   
-### <a name="return-value"></a>傳回值  
- 輸出迭代器，定址對象是所產生之最後一個元素的後面一個位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>備註  
- 第一個虛擬的受保護成員函式會從 `next` 開始產生一系列元素，以從 [string_type](#string_type) 物件 `val` 產生貨幣輸出欄位。 所控制的序列`val`必須以一個或多個十進位的數字，選擇性地加上減號 （-），表示量開頭。 此函式會傳回迭代器，此迭代器指定所產生之貨幣輸出欄位後的第一個元素。  
+### <a name="remarks"></a>Remarks  
+ The first virtual protected member function generates sequential elements beginning at `next` to produce a monetary output field from the [string_type](#string_type) object `val`. The sequence controlled by `val` must begin with one or more decimal digits, optionally preceded by a minus sign (-), which represents the amount. The function returns an iterator designating the first element beyond the generated monetary output field.  
   
- 第二個虛擬受保護成員函式的行為與第一個相同，不同的是，它會先將 `val` 實際轉換成十進位數字的序列，視需要在前面加上減號，然後依上述方式轉換該序列。  
+ The second virtual protected member function behaves the same as the first, except that it effectively first converts `val` to a sequence of decimal digits, optionally preceded by a minus sign, then converts that sequence as above.  
   
- 貨幣輸出欄位的格式會由 [locale facet](../standard-library/locale-class.md#facet_class) fac (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 有效呼叫所傳回) 決定。  
+ The format of a monetary output field is determined by the [locale facet](../standard-library/locale-class.md#facet_class) fac returned by the (effective) call [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)).  
   
- 尤其是：  
+ Specifically:  
   
-- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) 會決定為非負數值產生欄位元件時的順序。  
+- **fac**. [pos_format](../standard-library/moneypunct-class.md#pos_format) determines the order in which components of the field are generated for a nonnegative value.  
   
-- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) 會決定為負數值產生欄位元件時的順序。  
+- **fac**. [neg_format](../standard-library/moneypunct-class.md#neg_format) determines the order in which components of the field are generated for a negative value.  
   
-- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) 會決定要為貨幣符號產生的元素序列。  
+- **fac**. [curr_symbol](../standard-library/moneypunct-class.md#curr_symbol) determines the sequence of elements to generate for a currency symbol.  
   
-- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) 會決定要為正號產生的元素序列。  
+- **fac**. [positive_sign](../standard-library/moneypunct-class.md#positive_sign) determines the sequence of elements to generate for a positive sign.  
   
-- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) 會決定要為負號產生的元素序列。  
+- **fac**. [negative_sign](../standard-library/moneypunct-class.md#negative_sign) determines the sequence of elements to generate for a negative sign.  
   
-- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) 會決定任何小數點左邊數字分組的方式。  
+- **fac**. [grouping](../standard-library/moneypunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
   
-- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) 會決定任何小數點左邊分隔數字群組的元素。  
+- **fac**. [thousands_sep](../standard-library/moneypunct-class.md#thousands_sep) determines the element that separates groups of digits to the left of any decimal point.  
   
-- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) 會決定將整數與任何小數分隔的元素。  
+- **fac**. [decimal_point](../standard-library/moneypunct-class.md#decimal_point) determines the element that separates the integer digits from any fraction digits.  
   
-- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) 會決定任何小數點右邊的有效小數數目。  
+- **fac**. [frac_digits](../standard-library/moneypunct-class.md#frac_digits) determines the number of significant fraction digits to the right of any decimal point.  
   
- 如果正負號字串 ( **fac**. `negative_sign` 或 **fac**. `positive_sign`) 有多個元素，將只會在格式模式中與 **money_base::sign** 相等之元素出現的位置，產生第一個元素，其中該格式模式為 ( **fac**. `neg_format` 或 **fac**. `pos_format`)。 所有其餘元素則是在貨幣輸入欄位的結尾產生。  
+ If the sign string ( **fac**. `negative_sign` or **fac**. `positive_sign`) has more than one element, only the first element is generated where the element equal to **money_base::sign** appears in the format pattern ( **fac**. `neg_format` or **fac**. `pos_format`). Any remaining elements are generated at the end of the monetary output field.  
   
- 如果 **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) 不為零，字串 **fac**. `curr_symbol` 就會在格式模式中與 **money_base::symbol** 相等之元素出現的位置產生。 否則，不會產生任何貨幣符號。  
+ If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & [showbase](../standard-library/ios-functions.md#showbase) is nonzero, the string **fac**. `curr_symbol` is generated where the element equal to **money_base::symbol** appears in the format pattern. Otherwise, no currency symbol is generated.  
   
- 如果 **fac**. **grouping** (其第一個元素的值為 CHAR_MAX) 未施加任何千分號條件約束，就不會有任何 **fac**. `thousands_sep` 執行個體在貨幣輸出欄位的值部分 (格式模式中與 **money_base::value** 相等之元素出現的位置) 產生。 如果 **fac**. `frac_digits` 為零，則在十進位數字之後不會產生任何 **fac**. `decimal_point` 執行個體。 否則，產生的貨幣輸出欄位會將低序位 **fac**. `frac_digits` 十進位數字放在小數點右邊。  
+ If no grouping constraints are imposed by **fac**. **grouping** (its first element has the value CHAR_MAX), then no instances of **fac**. `thousands_sep` are generated in the value portion of the monetary output field (where the element equal to **money_base::value** appears in the format pattern). If **fac**. `frac_digits` is zero, then no instance of **fac**. `decimal_point` is generated after the decimal digits. Otherwise, the resulting monetary output field places the low-order **fac**. `frac_digits` decimal digits to the right of the decimal point.  
   
- 系統會針對所有數字輸出欄位進行填補，但有例外，就是如果 **iosbase**. **flags** & **iosbase**. [internal](../standard-library/ios-functions.md#internal) 不為零，便會在格式模式中與 **money_base::space** 相等之元素出現的位置，於該元素未出現的情況下，產生任何內部填補字元。 否則，內部填補字元會出現在已產生的序列之前。 填補字元為 **fill**。  
+ Padding occurs as for any numeric output field, except that if **iosbase**. **flags** & **iosbase**. [internal](../standard-library/ios-functions.md#internal) is nonzero, any internal padding is generated where the element equal to **money_base::space** appears in the format pattern, if it does appear. Otherwise, internal padding occurs before the generated sequence. The padding character is **fill**.  
   
- 函式會呼叫 **iosbase**. **width**(0) 將欄位寬度重設為零。  
+ The function calls **iosbase**. **width**(0) to reset the field width to zero.  
   
-### <a name="example"></a>範例  
-  請參閱 [put](#put) 的範例，其中會由 **put** 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [put](#put), where the virtual member function is called by **put**.  
   
 ##  <a name="iter_type"></a>  money_put::iter_type  
- 描述輸出迭代器的類型。  
+ A type that describes an output iterator.  
   
 ```  
 typedef OutputIterator iter_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與範本參數 **OutputIterator** 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **OutputIterator.**  
   
 ##  <a name="money_put"></a>  money_put::money_put  
- `money_put` 類型物件的建構函式。  
+ The constructor for objects of type `money_put`.  
   
 ```  
 explicit money_put(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 整數值，用來指定物件的記憶體管理類型。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>備註  
- `_Refs` 參數的可能值和其意義如下：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：物件的存留期由包含該物件的地區設定來管理。  
+-   0: the lifetime of the object is managed by the locales that contain it.  
   
--   1：物件的存留期必須以手動方式管理。  
+-   1: the lifetime of the object must be manually managed.  
   
--   \>1︰ 未定義這些值。  
+-   \> 1: these values are not defined.  
   
- 無法提供任何直接範例，因為解構函式受到保護。  
+ No direct examples are possible, because the destructor is protected.  
   
- 建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
 ##  <a name="put"></a>  money_put::put  
- 將數字或字串轉換為代表貨幣值的字元序列。  
+ Converts either number or a string to a character sequence that represents a monetary value.  
   
 ```  
 iter_type put(
@@ -236,29 +240,29 @@ iter_type put(
     long double val) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `next`  
- 迭代器，定址對象是所插入字串的第一個元素。  
+ An iterator addressing the first element of the inserted string.  
   
  `_Intl`  
- 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。  
+ A Boolean value indicating the type of currency symbol expected in the sequence: **true** if international, **false** if domestic.  
   
  `_Iosbase`  
- 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。  
+ A format flag which when set indicates that the currency symbol is optional; otherwise, it is required  
   
  `_Fill`  
- 間距所使用的字元。  
+ A character which is used for spacing.  
   
  `val`  
- 要轉換的字串物件。  
+ A string object to be converted.  
   
-### <a name="return-value"></a>傳回值  
- 輸出迭代器，定址對象是所產生之最後一個元素的後面一個位置。  
+### <a name="return-value"></a>Return Value  
+ An output iterator the addresses the position one beyond the last element produced.  
   
-### <a name="remarks"></a>備註  
- 兩個成員函式都會傳回 [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`)。  
+### <a name="remarks"></a>Remarks  
+ Both member functions return [do_put](#do_put)( `next`, `_Intl`, `_Iosbase`, `_Fill`, `val`).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // money_put_put.cpp  
@@ -291,18 +295,18 @@ money_put( ) = "CAD1,000.12"
 ```  
   
 ##  <a name="string_type"></a>  money_put::string_type  
- 一種類型，描述包含 **CharType** 類型字元的字串。  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型描述 [basic_string](../standard-library/basic-string-class.md) 範本類別的特製化，其中此類別的物件可儲存來自來源序列的元素序列。  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store sequences of elements from the source sequence.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [facet 類別](../standard-library/locale-class.md#facet_class)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

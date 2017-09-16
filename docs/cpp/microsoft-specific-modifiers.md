@@ -1,50 +1,67 @@
 ---
-title: "Microsoft 專有的修飾詞 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Microsoft-Specific Modifiers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 22c7178c-f854-47fa-9de6-07d23fda58e1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Microsoft 專有的修飾詞
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0aa0480efacfade3dab0f58bc8c558479e875e28
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-本節將描述下列各層面 Microsoft 專有的 C\+\+ 擴充功能：  
+---
+# <a name="microsoft-specific-modifiers"></a>Microsoft-Specific Modifiers
+This section describes Microsoft-specific extensions to C++ in the following areas:  
   
--   [基底定址](../cpp/based-addressing.md)，使用指標做為其他指標可以位移之基底的做法  
+-   [Based addressing](../cpp/based-addressing.md), the practice of using a pointer as a base from which other pointers can be offset  
   
--   [函式呼叫慣例](../cpp/calling-conventions.md)  
+-   [Function calling conventions](../cpp/calling-conventions.md)  
   
--   以 [\_\_declspec](../cpp/declspec.md) 關鍵字宣告的擴充儲存類別屬性  
+-   Extended storage-class attributes declared with the [__declspec](../cpp/declspec.md) keyword  
   
--   [\_\_w64](../cpp/w64.md) 關鍵字  
+-   The [__w64](../cpp/w64.md) keyword  
   
- 許多 Microsoft 專有關鍵字可用來將宣告子修改為衍生類型。  如需宣告子的詳細資訊，請參閱[宣告子](http://msdn.microsoft.com/zh-tw/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
+ Many of the Microsoft-specific keywords can be used to modify declarators to form derived types. For more information about declarators, see [Declarators](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
-### Microsoft 專有關鍵字  
+### <a name="microsoft-specific-keywords"></a>Microsoft-Specific Keywords  
   
-|關鍵字|意義|是否用來形成衍生類型？|  
-|---------|--------|-----------------|  
-|[\_\_based](../cpp/based-grammar.md)|後面的名稱會將 32 位元位移宣告為宣告中包含的 32 位元基底。|是|  
-|[\_\_cdecl](../cpp/cdecl.md)|後面的名稱會使用 C 命名和呼叫慣例。|是|  
-|[\_\_declspec](../cpp/declspec.md)|後面的名稱會指定 Microsoft 專有的儲存類別屬性。|否|  
-|[\_\_fastcall](../cpp/fastcall.md)|後面的名稱會將函式宣告為使用暫存器 \(如果有的話\)，而不使用可進行引數傳遞的堆疊。|是|  
-|[\_\_restrict](../cpp/extension-restrict.md)|類似於 \_\_declspec\([restrict](../cpp/restrict.md)\)，但是用於變數。|否|  
-|[\_\_stdcall](../cpp/stdcall.md)|後面的名稱會指定採用標準呼叫慣例的函式。|是|  
-|[\_\_w64](../cpp/w64.md)|在 64 位元編譯器上將資料類型標示為較大。|否|  
-|[\_\_unaligned](../cpp/unaligned.md)|指出某個類型或其他資料的指標未對齊。|否|  
-|[\_\_vectorcall](../cpp/vectorcall.md)|後面的名稱會將函式宣告為只要有暫存器可用即使用暫存器 \(包括 SSE 暫存器\)，而不使用可進行引數傳遞的堆疊。|是|  
+|Keyword|Meaning|Used to Form Derived Types?|  
+|-------------|-------------|---------------------------------|  
+|[__based](../cpp/based-grammar.md)|The name that follows declares a 32-bit offset to the 32-bit base contained in the declaration.|Yes|  
+|[__cdecl](../cpp/cdecl.md)|The name that follows uses the C naming and calling conventions.|Yes|  
+|[__declspec](../cpp/declspec.md)|The name that follows specifies a Microsoft-specific storage-class attribute.|No|  
+|[__fastcall](../cpp/fastcall.md)|The name that follows declares a function that uses registers, when available, instead of the stack for argument passing.|Yes|  
+|[__restrict](../cpp/extension-restrict.md)|Similar to __declspec([restrict](../cpp/restrict.md)), but for use on variables.|No|  
+|[__stdcall](../cpp/stdcall.md)|The name that follows specifies a function that observes the standard calling convention.|Yes|  
+|[__w64](../cpp/w64.md)|Marks a data type as being larger on a 64-bit compiler.|No|  
+|[__unaligned](../cpp/unaligned.md)|Specifies that a pointer to a type or other data is not aligned..|No|  
+|[__vectorcall](../cpp/vectorcall.md)|The name that follows declares a function that uses registers, including SSE registers, when available, instead of the stack for argument passing.|Yes|  
   
-## 請參閱  
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)

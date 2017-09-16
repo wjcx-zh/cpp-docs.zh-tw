@@ -1,5 +1,5 @@
 ---
-title: "WM_ 訊息的處理常式 |Microsoft 文件"
+title: Handlers for WM_ Messages | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WM_ messages
+- WM_ messages [MFC]
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
 caps.latest.revision: 11
 author: mikeblome
@@ -33,28 +33,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7f2e2af15aa30ad50e50bf3de6db77b7ecdf59f7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 77d3c34f4cbe46748a647f05e9659b1e9d572133
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="handlers-for-wm-messages"></a>WM_ 訊息的處理常式
-下列主題會對應至對應項目。  
+# <a name="handlers-for-wm-messages"></a>Handlers for WM_ Messages
+The following topics correspond to the map entries.  
   
-|主題|對應項目|  
+|Topic|Map entries|  
 |-----------|-----------------|  
-|[A-C](../../mfc/reference/wm-message-handlers-a-c.md)|**ON_WM_ACTIVATE**透過**ON_WM_CTLCOLOR**|  
-|[D-E](../../mfc/reference/wm-message-handlers-d-e.md)|**ON_WM_DEADCHAR**透過**ON_WM_ERASEBKGND**|  
-|[F-K](../../mfc/reference/wm-message-handlers-f-k.md)|**ON_WM_FONTCHANGE**透過**ON_WM_KILLFOCUS**|  
-|[L-M](../../mfc/reference/wm-message-handlers-l-m.md)|**ON_WM_LBUTTONDBLCLK**透過**ON_WM_MOVING**|  
-|[N-O](../../mfc/reference/wm-message-handlers-n-o.md)|**ON_WM_NCACTIVATE**透過**ON_WM_NCRBUTTONUP**|  
-|[P-R](../../mfc/reference/wm-messages-p-r.md)|**ON_WM_PAINT**透過**ON_WM_RENDERFORMAT**|  
-|[S](../../mfc/reference/wm-messages-s.md)|**ON_WM_SETCURSOR**透過**ON_WM_SYSKEYUP**|  
-|[T-Z](../../mfc/reference/wm-messages-t-z.md)|**ON_WM_TIMECHANGE**透過**ON_WM_WININICHANGE**|  
+|[A - C](../../mfc/reference/wm-message-handlers-a-c.md)|**ON_WM_ACTIVATE** through **ON_WM_CTLCOLOR**|  
+|[D - E](../../mfc/reference/wm-message-handlers-d-e.md)|**ON_WM_DEADCHAR** through **ON_WM_ERASEBKGND**|  
+|[F - K](../../mfc/reference/wm-message-handlers-f-k.md)|**ON_WM_FONTCHANGE** through **ON_WM_KILLFOCUS**|  
+|[L - M](../../mfc/reference/wm-message-handlers-l-m.md)|**ON_WM_LBUTTONDBLCLK** through **ON_WM_MOVING**|  
+|[N - O](../../mfc/reference/wm-message-handlers-n-o.md)|**ON_WM_NCACTIVATE** through **ON_WM_NCRBUTTONUP**|  
+|[P - R](../../mfc/reference/wm-messages-p-r.md)|**ON_WM_PAINT** through **ON_WM_RENDERFORMAT**|  
+|[S](../../mfc/reference/wm-messages-s.md)|**ON_WM_SETCURSOR** through **ON_WM_SYSKEYUP**|  
+|[T - Z](../../mfc/reference/wm-messages-t-z.md)|**ON_WM_TIMECHANGE** through **ON_WM_WININICHANGE**|  
   
-## <a name="see-also"></a>另請參閱  
- [訊息對應](../../mfc/reference/message-maps-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Message Maps](../../mfc/reference/message-maps-mfc.md)
 
 

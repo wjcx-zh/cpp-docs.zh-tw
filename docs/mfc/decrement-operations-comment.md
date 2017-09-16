@@ -1,40 +1,58 @@
 ---
-title: "// 作業註解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "註解, MFC"
-  - "MFC 原始程式檔, 作業註解"
-  - "MFC 原始程式檔中的作業註解"
+title: -- Operations Comment | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Operations comment in MFC source files
+- comments, MFC
+- MFC source files, Operations comments
 ms.assetid: f3bff48d-26be-4db6-8435-9e4d079838c9
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# // 作業註解
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f7b358534dbf0446aac45315f175ced930d0a53e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 類別宣告的 `// Operations` 區段包含您在物件上呼叫會進行或執行動作的成員函式 \(作業\)。  因為它們通常有副作用，這些函式通常是非**const** 。  它們可以是虛擬或虛擬以類別為基礎的需要。  一般來說，這些成員都是公用的。  
+---
+# <a name="-operations-comment"></a>// Operations Comment
+The `// Operations` section of an MFC class declaration contains member functions that you can call on the object to make it do things or perform actions (perform operations). These functions are typically non-**const** because they usually have side effects. They may be virtual or nonvirtual depending on the needs of the class. Typically, these members are public.  
   
- 在從類別 `CStdioFile`的範例目錄，在 [註解的範例](../mfc/an-example-of-the-comments.md)中，清單中包含兩個成員函式在此註解中: `ReadString` 和 `WriteString`。  
+ In the sample listing from class `CStdioFile`, in [An Example of the Comments](../mfc/an-example-of-the-comments.md), the list includes two member functions under this comment: `ReadString` and `WriteString`.  
   
- 使用屬性，可以執行作業進一步細分。  
+ As with attributes, operations can be further subdivided.  
   
-## 請參閱  
- [使用 MFC 原始程式檔](../mfc/using-the-mfc-source-files.md)   
- [註解的範例](../mfc/an-example-of-the-comments.md)   
- [\/\/ 實作註解](../mfc/decrement-implementation-comment.md)   
- [\/\/ 建構函式註解](../mfc/decrement-constructors-comment.md)   
- [\/\/ 屬性註解](../mfc/decrement-attributes-comment.md)   
- [\/\/ 可覆寫函式註解](../mfc/decrement-overridables-comment.md)
+## <a name="see-also"></a>See Also  
+ [Using the MFC Source Files](../mfc/using-the-mfc-source-files.md)   
+ [An Example of the Comments](../mfc/an-example-of-the-comments.md)   
+ [// Implementation Comment](../mfc/decrement-implementation-comment.md)   
+ [// Constructors Comment](../mfc/decrement-constructors-comment.md)   
+ [// Attributes Comment](../mfc/decrement-attributes-comment.md)   
+ [// Overridables Comment](../mfc/decrement-overridables-comment.md)
+
+

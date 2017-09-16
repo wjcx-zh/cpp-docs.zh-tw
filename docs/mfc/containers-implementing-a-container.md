@@ -1,77 +1,95 @@
 ---
-title: "容器：實作容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式 [OLE], OLE 容器"
-  - "OLE 容器, 實作"
+title: 'Containers: Implementing a Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], OLE container
+- OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 容器：實作容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e9b68ee081de334a8ee0b5bfe599876a52c46896
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文摘要說明實作容器的方法並指向您要提供有關實作之容器的詳細說明的其他文件。  它也會列出您可以實作和描述這些功能的文件的可選擇 OLE 功能。  
+---
+# <a name="containers-implementing-a-container"></a>Containers: Implementing a Container
+This article summarizes the procedure for implementing a container and points you to other articles that provide more detailed explanations about implementing containers. It also lists some optional OLE features you may want to implement and the articles describing these features.  
   
-#### 準備您的 CWinApp 衍生的類別  
+#### <a name="to-prepare-your-cwinapp-derived-class"></a>To prepare your CWinApp-derived class  
   
-1.  藉由呼叫 `InitInstance` 成員函式的 **AfxOleInit** 初始化 OLE 程式庫。  
+1.  Initialize the OLE libraries by calling **AfxOleInit** in the `InitInstance` member function.  
   
-2.  當內嵌項目就地啟動時，呼叫 `InitInstance` 的 `CDocTemplate::SetContainerInfo` 指派功能表，然後使用加速資源。  如需關於此主題的詳細資訊，請參閱 [啟用](../mfc/activation-cpp.md)。  
+2.  Call `CDocTemplate::SetContainerInfo` in `InitInstance` to assign the menu and accelerator resources used when an embedded item is activated in-place. For more information on this topic, see [Activation](../mfc/activation-cpp.md).  
   
- 當您使用 MFC 應用程式精靈建立容器應用程式時，這些功能會自動為您提供。  請參閱 [建立 MFC EXE 程式](../mfc/reference/mfc-application-wizard.md)。  
+ These features are provided for you automatically when you use the MFC Application Wizard to create a container application. See [Creating an MFC EXE Program](../mfc/reference/mfc-application-wizard.md).  
   
-#### 準備您的檢視類別。  
+#### <a name="to-prepare-your-view-class"></a>To prepare your view class  
   
-1.  保持追蹤藉由維護指標選取了指標項目，如果支援多重選取，則為對所選取的項目的指標清單。  您的 `OnDraw` 函式必須繪製所有 OLE 項目。  
+1.  Keep track of selected items by maintaining a pointer, or list of pointers if you support multiple selection, to the selected items. Your `OnDraw` function must draw all OLE items.  
   
-2.  覆寫 `IsSelected` 確認項目傳遞給它目前是否已選取。  
+2.  Override `IsSelected` to check whether the item passed to it is currently selected.  
   
-3.  實作 **OnInsertObject** 訊息處理常式以顯示 **Insert Object** 對話方塊。  
+3.  Implement an **OnInsertObject** message handler to display the **Insert Object** dialog box.  
   
-4.  實作 `OnSetFocus` 訊息處理常式以從檢視將焦點移至就地啟動 OLE 內嵌項目。  
+4.  Implement an `OnSetFocus` message handler to transfer focus from the view to an in-place active OLE embedded item.  
   
-5.  實作 `OnSize` 訊息處理常式以通知 OLE 內嵌項目需要變更其矩形以反映它包含的檢視的大小變更。  
+5.  Implement an `OnSize` message handler to inform an OLE embedded item that it needs to change its rectangle to reflect the change in size of its containing view.  
   
- 由於這些功能的實作會大幅不同於相異應用程式，應用程式精靈只提供基底實作。  您可能必須自訂這些函式才能讓您的應用程式正常運作。  如需這些的範例，請參閱 [CONTAINER](../top/visual-cpp-samples.md) 範例。  
+ Because the implementation of these features varies dramatically from one application to the next, the application wizard provides only a basic implementation. You will likely have to customize these functions to get your application to function properly. For an example of this, see the [CONTAINER](../visual-cpp-samples.md) sample.  
   
-#### 處理內嵌和連結的項目。  
+#### <a name="to-handle-embedded-and-linked-items"></a>To handle embedded and linked items  
   
-1.  從 [COleClientItem](../mfc/reference/coleclientitem-class.md) 衍生一個類別  這個類別物件代表已內嵌或連結至您的 OLE 文件的項目。  
+1.  Derive a class from [COleClientItem](../mfc/reference/coleclientitem-class.md). Objects of this class represent items that have been embedded in or linked to your OLE document.  
   
-2.  覆寫 **OnChange**、 `OnChangeItemPosition`和 `OnGetItemPosition`。  這些函式處理縮放，定位和修改內嵌和連結的項目。  
+2.  Override **OnChange**, `OnChangeItemPosition`, and `OnGetItemPosition`. These functions handle sizing, positioning, and modifying embedded and linked items.  
   
- 應用程式精靈將為您衍生類別，不過，您可能需要覆寫 **OnChange** 和其他函式與其它在先前程序中的步驟 2 的清單。  因為這些函式實作每個應用程式都不同，基本架構實作需要對大部分的應用程式自訂。  以此範例，請參閱 MFC 範例 [DRAWCLI](../top/visual-cpp-samples.md) 和 [容器](../top/visual-cpp-samples.md)。  
+ The application wizard will derive the class for you, but you will likely need to override **OnChange** and the other functions listed with it in step 2 in the preceding procedure. The skeleton implementations need to be customized for most applications, because these functions are implemented differently from one application to the next. For examples of this, see the MFC samples [DRAWCLI](../visual-cpp-samples.md) and [CONTAINER](../visual-cpp-samples.md).  
   
- 您必須將多個項目加入至容器應用程式的功能表結構以支援 OLE。  如需這些功能的詳細資訊，請參閱 [功能表和資源:加入容器](../mfc/menus-and-resources-container-additions.md)。  
+ You must add a number of items to the container application's menu structure to support OLE. For more information on these, see [Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md).  
   
- 您可能也要支援下列某些在您的容器應用程式的功能:  
+ You may also want to support some of the following features in your container application:  
   
--   於編輯內嵌項目時就地啟動。  
+-   In-place activation when editing an embedded item.  
   
-     如需詳細資訊，請參閱 [啟動](../mfc/activation-cpp.md)。  
+     For more information, see [Activation](../mfc/activation-cpp.md).  
   
--   OLE 項目的建立透過拖放伺服器應用程式中的選項。  
+-   Creation of OLE items by dragging and dropping a selection from a server application.  
   
-     如需詳細資訊，請參閱 [拖放功能 \(OLE\)](../mfc/drag-and-drop-ole.md)。  
+     For more information, see [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
--   內嵌物件或組合容器\/伺服器應用程式的連結。  
+-   Links to embedded objects or combination container/server applications.  
   
-     如需詳細資訊，請參閱 [容器:進階功能](../mfc/containers-advanced-features.md)。  
+     For more information, see [Containers: Advanced Features](../mfc/containers-advanced-features.md).  
   
-## 請參閱  
- [容器](../mfc/containers.md)   
- [容器：用戶端項目](../mfc/containers-client-items.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)
+
+

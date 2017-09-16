@@ -1,83 +1,102 @@
 ---
-title: "使用類別來編寫 Windows 應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式 [OLE], MFC 應用程式架構"
-  - "資料庫應用程式 [C++], 建立"
-  - "MFC [C++], 應用程式開發"
-  - "MFC ActiveX 控制項, 建立"
-  - "OLE 應用程式 [C++], MFC 應用程式架構"
-  - "Windows 應用程式 [C++], MFC 應用程式架構"
+title: Using the Classes to Write Applications for Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows applications [MFC], MFC application framework
+- MFC, application development
+- applications [OLE], MFC application framework
+- MFC ActiveX controls [MFC], creating
+- OLE applications [MFC], MFC application framework
+- database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用類別來編寫 Windows 應用程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17290c69b0cffbfeb6d70667a45719836f2707fe
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 Microsoft Foundation 的類別將 \(MFC\) 程式庫組成分類的「應用程式架構」在建立對 Windows 作業系統的應用程式。  在一般層級，架構會定義應用程式的基本架構並提供可以放置在基本架構上的標準使用者介面實作。  您為程式設計人員的工作是填入基本架構的其餘部分，是這些項目是指您的應用程式。  您可以先佔使用 MFC 應用程式精靈建立非常詳盡的起始應用程式的檔案。  您可以使用 Microsoft Visual C\+\+ 資源編輯器設計您的使用者介面項目視覺上，類別檢視命令連接那些項目程式碼和實作應用程式專屬邏輯的類別庫。  
+---
+# <a name="using-the-classes-to-write-applications-for-windows"></a>Using the Classes to Write Applications for Windows
+Taken together, the classes in the Microsoft Foundation Class (MFC) Library make up an "application framework," on which you build an application for the Windows operating system. At a very general level, the framework defines the skeleton of an application and supplies standard user-interface implementations that can be placed onto the skeleton. Your job as programmer is to fill in the rest of the skeleton, which are those things that are specific to your application. You can get a head start by using the MFC Application Wizard to create the files for a very thorough starter application. You use the Microsoft Visual C++ resource editors to design your user-interface elements visually, Class View commands to connect those elements to code, and the class library to implement your application-specific logic.  
   
- 3.0 版和以後 MFC 架構支援 Win32 平台，包括 Microsoft Windows 95 \(含\) 以後版本及 Windows NT 3.51 \(含\) 以後版本。  MFC Win32 支援包含多個執行緒。  如果您需要進行 16 位元程式設計，使用版本 1.5*x* 。  
+ Version 3.0 and later of the MFC framework supports programming for Win32 platforms, including Microsoft Windows 95 and later, and Windows NT versions 3.51 and later. MFC Win32 support includes multithreading. Use version 1.5*x* if you need to do 16-bit programming.  
   
- 本文章系列提供應用程式架構廣泛的概觀。  它也探索組成應用程式的主要物件以及如何建立。  在這些文件中包含的主題是下列:  
+ This family of articles presents a broad overview of the application framework. It also explores the major objects that make up your application and how they are created. Among the topics covered in these articles are the following:  
   
--   [架構](../mfc/framework-mfc.md)。  
+-   [The framework](../mfc/framework-mfc.md).  
   
--   分工在框架和程式碼之間的，如 [在 Framework 建置](../mfc/building-on-the-framework.md)中所述。  
+-   Division of labor between the framework and your code, as described in [Building on the Framework](../mfc/building-on-the-framework.md).  
   
--   [應用程式類別](../mfc/cwinapp-the-application-class.md)，封裝應用程式層級的功能。  
+-   [The application class](../mfc/cwinapp-the-application-class.md), which encapsulates application-level functionality.  
   
--   [文件樣板](../mfc/document-templates-and-the-document-view-creation-process.md) 建立及如何處理文件及其相關聯的檢視和框架視窗。  
+-   How [document templates](../mfc/document-templates-and-the-document-view-creation-process.md) create and manage documents and their associated views and frame windows.  
   
--   [CWnd](../mfc/window-objects.md)類別是所有視窗基底。  
+-   Class [CWnd](../mfc/window-objects.md), the root base class of all windows.  
   
--   [圖形物件](../mfc/graphic-objects.md)，例如畫筆和筆刷。  
+-   [Graphic objects](../mfc/graphic-objects.md), such as pens and brushes.  
   
- 框架中的其他部分:  
+ Other parts of the framework include:  
   
--   [視窗物件:概觀](../mfc/window-objects.md)  
+-   [Window Objects: Overview](../mfc/window-objects.md)  
   
--   [訊息處理和對應](../mfc/message-handling-and-mapping.md)  
+-   [Message handling and mapping](../mfc/message-handling-and-mapping.md)  
   
--   [CObject，在 MFC 的基底類別。](../mfc/using-cobject.md)  
+-   [CObject, The Root Base Class in MFC](../mfc/using-cobject.md)  
   
--   [文件\/檢視架構](../mfc/document-view-architecture.md)  
+-   [Document/View Architecture](../mfc/document-view-architecture.md)  
   
--   [對話方塊](../mfc/dialog-boxes.md)  
+-   [Dialog Boxes](../mfc/dialog-boxes.md)  
   
--   [控制項](../mfc/controls-mfc.md)  
+-   [Controls](../mfc/controls-mfc.md)  
   
--   [控制列](../mfc/control-bars.md)  
+-   [Control Bars](../mfc/control-bars.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   
--   [記憶體管理](../mfc/memory-management.md)  
+-   [Memory Management](../mfc/memory-management.md)  
   
-     除了讓您在 Word 應用程式的一個好處以外對 Windows 作業系統， MFC 也比較容易撰寫特別使用連結和內嵌技術的 OLE 的應用程式。  您可以讓應用程式 OLE 視覺化編輯容器， OLE 視覺化編輯伺服器或兩者，因此，您可以將自動化，如此其他應用程式可以使用應用程式的物件會從遠端巡覽它。  
+     Besides giving you an advantage in writing applications for the Windows operating system, MFC also makes it much easier to write applications that specifically use OLE linking and embedding technology. You can make your application an OLE visual editing container, an OLE visual editing server, or both, and you can add Automation so that other applications can use objects from your application or even drive it remotely.  
   
--   [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)  
+-   [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)  
   
-     OLE automation 控制項 Development Kit \(CDK\) 完全現在已經與架構。  本文章系列把 MFC 提供 ActiveX 控制項開發概觀。ActiveX 控制項 \(先前稱為 OLE automation 控制項\)。  
+     The OLE control development kit (CDK) is now fully integrated with the framework. This article family supplies an overview of ActiveX control development with MFC. (ActiveX controls were formerly known as OLE controls.)  
   
--   [資料庫程式設計](../data/data-access-programming-mfc-atl.md)  
+-   [Database Programming](../data/data-access-programming-mfc-atl.md)  
   
-     MFC 也提供兩組簡化資料存取應用程式的資料庫類別。  使用 ODBC 資料庫類別，您透過開放式資料庫連接 \(ODBC\) 驅動程式可以連接至資料庫，用來為資料集中的資料表和顯示記錄資訊以螢幕上的形式。  使用資料存取物件 \(DAO\) 類別，您可以使用資料庫透過 Microsoft Jet 資料庫引擎或外部 \(非 Jet\) 資料來源，包括 ODBC 資料來源。  
+     MFC also supplies two sets of database classes that simplify writing data-access applications. Using the ODBC database classes, you can connect to databases through an Open Database Connectivity (ODBC) driver, select records from tables, and display record information in an on-screen form. Using the Data Access Object (DAO) classes, you can work with databases through the Microsoft Jet database engine or external (non-Jet) data sources, including ODBC data sources.  
   
-     此外， MFC 會撰寫使用 Unicode 和多位元組字元集的應用程式完全啟用 \(MBCS\)，尤其是雙位元組字元集 \(DBCS\)。  
+     In addition, MFC is fully enabled for writing applications that use Unicode and multibyte character sets (MBCS), specifically double-byte character sets (DBCS).  
   
- 如需 MFC 文件的一般方針，請參閱 [MFC 概觀主題](../mfc/general-mfc-topics.md)。  
+ For a general guide to MFC documentation, see [General MFC Topics](../mfc/general-mfc-topics.md).  
   
-## 請參閱  
- [一般 MFC 主題](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

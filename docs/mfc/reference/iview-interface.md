@@ -1,5 +1,5 @@
 ---
-title: "IView 介面 |Microsoft 文件"
+title: IView Interface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,8 +18,8 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - views [MFC]
-- IView class
-- views, classes
+- IView class [MFC]
+- views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
 caps.latest.revision: 23
 author: mikeblome
@@ -39,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 9a8b5f2d9d123aa3032cb30ecdbdd1cd380b32f8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 542db0506e72f326fbc64ddb61d9db4ee8a50884
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="iview-interface"></a>IView 介面
-實作數個方法， [CWinFormsView](../../mfc/reference/cwinformsview-class.md)檢視通知傳送至 managed 控制項使用。  
+# <a name="iview-interface"></a>IView Interface
+Implements several methods that [CWinFormsView](../../mfc/reference/cwinformsview-class.md) uses to send view notifications to a managed control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 interface class IView  
@@ -57,49 +57,49 @@ interface class IView
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[IView::OnActivateView](#onactivateview)|由 MFC 檢視是啟用或停用時呼叫。|  
-|[IView::OnInitialUpdate](#oninitialupdate)|檢視第一次連接到文件之後，但一開始會顯示檢視之前，由架構呼叫。|  
-|[IView::OnUpdate](#onupdate)|修改檢視的文件; 之後，由 MFC 呼叫此函式可更新以反映修改顯示的檢視。|  
+|[IView::OnActivateView](#onactivateview)|Called by MFC when a view is activated or deactivated.|  
+|[IView::OnInitialUpdate](#oninitialupdate)|Called by the framework after the view is first attached to the document, but before the view is initially displayed.|  
+|[IView::OnUpdate](#onupdate)|Called by MFC after the view's document has been modified; this function allows the view to update its display to reflect modifications.|  
   
-## <a name="remarks"></a>備註  
- `IView`實作數個方法，`CWinFormsView`使用轉送至裝載的 managed 控制項的一般檢視通知。 這些是[OnInitialUpdate](#oninitialupdate)， [OnUpdate](#onupdate)和[OnActivateView](#onactivateview)。  
+## <a name="remarks"></a>Remarks  
+ `IView` implements several methods that `CWinFormsView` uses to forward common view notifications to a hosted managed control. These are [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) and [OnActivateView](#onactivateview).  
   
- `IView`類似於[CView](../../mfc/reference/cview-class.md)，但僅適用於受管理的檢視和控制。  
+ `IView` is similar to [CView](../../mfc/reference/cview-class.md), but is used only with managed views and controls.  
   
- 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 
-## <a name="requirements"></a>需求  
- 標頭︰ afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
+## <a name="requirements"></a>Requirements  
+ Header: afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
 
-## <a name="onactivateview"></a>IView::OnActivateView  
-由 MFC 檢視是啟用或停用時呼叫。
+## <a name="onactivateview"></a> IView::OnActivateView  
+Called by MFC when a view is activated or deactivated.
 ```
 void OnActivateView(bool activate);
 ```
-## <a name="parameters"></a>參數
+## <a name="parameters"></a>Parameters
 `activate`  
-指出檢視是否目前已啟用或停用。  
+Indicates whether the view is being activated or deactivated.  
 
-## <a name="oninitialupdate"></a>IView::OnInitialUpdate
-檢視第一次連接到文件之後，但一開始會顯示檢視之前，由架構呼叫。
+## <a name="oninitialupdate"></a> IView::OnInitialUpdate
+Called by the framework after the view is first attached to the document, but before the view is initially displayed.
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a>IView::OnUpdate 
-修改檢視的文件之後，由 MFC 呼叫。  
+## <a name="onupdate"></a> IView::OnUpdate 
+Called by MFC after the view's document has been modified.  
 ```
 void OnUpdate();
 ```
-## <a name="remarks"></a>備註  
-此函式可更新以反映修改顯示的檢視。
+## <a name="remarks"></a>Remarks  
+This function allows the view to update its display to reflect modifications.
 
-## <a name="see-also"></a>另請參閱  
- [CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)   
- [CView 類別](../../mfc/reference/cview-class.md)
+## <a name="see-also"></a>See Also  
+ [CWinFormsView Class](../../mfc/reference/cwinformsview-class.md)   
+ [CView Class](../../mfc/reference/cview-class.md)
 

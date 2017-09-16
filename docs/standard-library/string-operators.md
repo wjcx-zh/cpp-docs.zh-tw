@@ -1,23 +1,42 @@
 ---
-title: "&lt;string&gt; 運算子 | Microsoft Docs"
+title: '&lt;string&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- string/std::operator!=
+- string/std::operator&gt;
+- string/std::operator&gt;&gt;
+- string/std::operator&gt;=
+- string/std::operator&lt;
+- string/std::operator&lt;&lt;
+- string/std::operator&lt;=
+- string/std::operator+
+- string/std::operator==
+dev_langs:
+- C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
 caps.latest.revision: 11
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 7ed2e8ebcfec6c7d592969208c155daa0e27724e
+helpviewer_keywords:
+- std::operator!= (string)
+- std::operator&gt; (string)
+- std::operator&gt;&gt; (string)
+- std::operator&gt;= (string)
+- std::operator&lt; (string)
+- std::operator&lt;&lt; (string)
+- std::operator&lt;= (string), std::operator== (string)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7df007a987c224f4a0e0fff25ebdf6b8cc8ec1c7
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltstringgt-operators"></a>&lt;string&gt; 運算子
+# <a name="ltstringgt-operators"></a>&lt;string&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
@@ -25,7 +44,7 @@ ms.lasthandoff: 04/29/2017
 |[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_add"></a>  operator+  
- 串連兩個字串物件。  
+ Concatenates two string objects.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -89,20 +108,20 @@ basic_string<CharType, Traits, Allocator>&& operator+(
     const basic_string<CharType, Traits, Allocator>&& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要串連的 C 樣式字串或 `basic_string` 類型物件。  
+ A C-style string or an object of type `basic_string` to be concatenated.  
   
  `right`  
- 要串連的 C 樣式字串或 `basic_string` 類型物件。  
+ A C-style string or an object of type `basic_string` to be concatenated.  
   
-### <a name="return-value"></a>傳回值  
- 輸入字串的串連字串。  
+### <a name="return-value"></a>Return Value  
+ The string that is the concatenation of the input strings.  
   
-### <a name="remarks"></a>備註  
- 每個函式都會多載 `operator+`，來串連樣板類別 [basic_string 類別](../standard-library/basic-string-class.md)的兩個物件。 所有函式都會有效地傳回 `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*)。  
+### <a name="remarks"></a>Remarks  
+ The functions each overload `operator+` to concatenate two objects of template class [basic_string Class](../standard-library/basic-string-class.md). All effectively return `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_con.cpp  
@@ -155,7 +174,7 @@ The string concatenating s1 & s3 is: antiheroine!
 ```  
   
 ##  <a name="op_neq"></a>  operator!=  
- 測試運算子左邊的字串物件是否不等於右邊的字串物件。  
+ Tests if the string object on the left side of the operator is not equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -174,20 +193,20 @@ bool operator!=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 string 物件在詞典編纂上不等於右邊的 string 物件，即為 **true**，否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is not lexicographically equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- string 物件之間的比較是以其字元的成對辭典編纂比較為基礎。 如果兩個字串具有相同的字元數，而且其各自的字元值都一樣，則這兩個字串相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between string objects is based on a pairwise lexicographical comparison of their characters. Two strings are equal if they have the same number of characters and their respective character values are the same. Otherwise, they are unequal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_ne.cpp  
@@ -242,7 +261,7 @@ The strings s3 & s2 are not equal.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 測試運算子左邊的字串物件是否等於右邊的字串物件。  
+ Tests if the string object on the left side of the operator is equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -261,20 +280,20 @@ bool operator==(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 string 物件在詞典編纂上等於右邊的 string 物件，即為 **true**，否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- string 物件之間的比較是以其字元的成對辭典編纂比較為基礎。 如果兩個字串具有相同的字元數，而且其各自的字元值都一樣，則這兩個字串相等。 反之則為不相等。  
+### <a name="remarks"></a>Remarks  
+ The comparison between string objects is based on a pairwise lexicographical comparison of their characters. Two strings are equal if they have the same number of characters and their respective character values are the same. Otherwise, they are unequal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_eq.cpp  
@@ -329,7 +348,7 @@ The strings s3 & s2 are not equal.
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 測試運算子左邊的字串物件是否小於右邊的字串物件。  
+ Tests if the string object on the left side of the operator is less than to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -348,26 +367,26 @@ bool operator<(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 string 物件在詞典編纂上小於右邊的 string 物件，即為 **true**，否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically less than the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 字串間辭典編纂的比較會逐一字元來進行比較，直到符合下列其中一種情況：  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   找不到任何差異，但有一個字串的字元數比另一個字串還多，因而將較短的字串視為小於較長的字串。  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   找不到任何差異，並發現字串具有相同的字串數，因此字串是相等的。  
+-   It finds no inequalities and finds that the strings have the same number of characters, and so the strings are equal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_lt.cpp  
@@ -420,8 +439,8 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.  
 ```  
   
-##  <a name="op_lt_eq"></a>  運算子&lt;=  
- 測試運算子左邊的字串物件是否小於或等於右邊的字串物件。  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Tests if the string object on the left side of the operator is less than or equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -440,26 +459,26 @@ bool operator<=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 string 物件在詞典編纂上小於或等於右邊的 string 物件，即為 **true**，否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically less than or equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 字串間辭典編纂的比較會逐一字元來進行比較，直到符合下列其中一種情況：  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   找不到任何差異，但有一個字串的字元數比另一個字串還多，因而將較短的字串視為小於較長的字串。  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   找到相等的字串，並發現字串具有相同的字串數，因此字串是相等的。  
+-   It finds no inequalities and finds that the strings have the same number of characters, so the strings are equal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_le.cpp  
@@ -519,8 +538,8 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_lt_lt"></a>  運算子&lt;&lt;  
- 將字串寫入輸出資料流的樣板函式。  
+##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+ A template function that writes a string into the output stream.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -529,21 +548,21 @@ basic_ostream<CharType, Traits>& operator<<(
     const basic_string<CharType, Traits, Allocator>& str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  _Ostr  
- 要寫入的輸出資料流。  
+ The output stream being written to.  
   
  `str`  
- 要輸入至輸出資料流的字串。  
+ The string to be entered into the output stream.  
   
-### <a name="return-value"></a>傳回值  
- 將指定字串的值寫入輸出資料流 `_Ostr`。  
+### <a name="return-value"></a>Return Value  
+ Writes the value of the specified string to the output stream `_Ostr`.  
   
-### <a name="remarks"></a>備註  
- 樣板函式會多載 **operator<<**，以將樣板類別 [basic_string](../standard-library/basic-string-class.md) 的物件 _ *Str* 插入資料流 \_ *Ostr*。 函式會有效地傳回 \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size))。  
+### <a name="remarks"></a>Remarks  
+ The template function overloads **operator<<** to insert an object _ *Str* of template class [basic_string](../standard-library/basic-string-class.md) into the stream \_ *Ostr.* The function effectively returns \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).  
   
-##  <a name="op_gt"></a>  運算子&gt;  
- 測試運算子左邊的字串物件是否大於右邊的字串物件。  
+##  <a name="op_gt"></a>  operator&gt;  
+ Tests if the string object on the left side of the operator is greater than to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -562,26 +581,26 @@ bool operator>(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 string 物件在詞典編纂上大於右邊的 string 物件，即為 **true**，否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically greater than the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 字串間辭典編纂的比較會逐一字元來進行比較，直到符合下列其中一種情況：  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   找不到任何差異，但有一個字串的字元數比另一個字串還多，因而將較短的字串視為小於較長的字串。  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   找不到任何差異，並發現字串具有相同的字串數，因此字串是相等的。  
+-   It finds no inequalities and finds that the strings have the same number of characters, and so the strings are equal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_gt.cpp  
@@ -641,8 +660,8 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.  
 ```  
   
-##  <a name="op_gt_eq"></a>  運算子&gt;=  
- 測試運算子左邊的字串物件是否大於或等於右邊的字串物件。  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Tests if the string object on the left side of the operator is greater than or equal to the string object on the right side.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -661,26 +680,26 @@ bool operator>=(
     const basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
  `right`  
- 要比較的 C 樣式字串或 `basic_string` 類型的物件。  
+ A C-style string or an object of type `basic_string` to be compared.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 string 物件在詞典編纂上大於或等於右邊的 string 物件，即為 **true**，否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the string object on the left side of the operator is lexicographically greater than or equal to the string object on the right side; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 字串間辭典編纂的比較會逐一字元來進行比較，直到符合下列其中一種情況：  
+### <a name="remarks"></a>Remarks  
+ A lexicographical comparison between strings compares them character by character until:  
   
--   發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。  
+-   It finds two corresponding characters unequal, and the result of their comparison is taken as the result of the comparison between the strings.  
   
--   找不到任何差異，但有一個字串的字元數比另一個字串還多，因而將較短的字串視為小於較長的字串。  
+-   It finds no inequalities, but one string has more characters than the other, and the shorter string is considered less than the longer string.  
   
--   找不到任何差異，並發現字串具有相同的字串數，因此字串是相等的。  
+-   It finds no inequalities and finds the strings have the same number of characters, and so the strings are equal.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_ge.cpp  
@@ -740,8 +759,8 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.  
 ```  
   
-##  <a name="op_gt_gt"></a>  運算子&gt;&gt;  
- 從輸入資料流讀取字串的樣板函式。  
+##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+ A template function that reads a string from an input stream.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -750,32 +769,32 @@ basic_istream<CharType, Traits>& operator>>(
     basic_string<CharType, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Istr`  
- 用來擷取序列的輸入資料流  
+ The input stream used to extract the sequence  
   
  `right`  
- 要從輸入資料流擷取的字串。  
+ The string that is being extracted from the input stream.  
   
-### <a name="return-value"></a>傳回值  
- 讀取從指定的字串值`_Istr`並傳回其`right`。  
+### <a name="return-value"></a>Return Value  
+ Reads the value of the specified string from `_Istr` and returns it into `right`.  
   
-### <a name="remarks"></a>備註  
- 除非設定了 `skipws` 旗標，否則運算子會略過開頭的空白字元。 它會讀取後續所有字元，直到下一個字元是空白字元或到達檔案結尾為止。  
+### <a name="remarks"></a>Remarks  
+ The operator skips the leading white spaces unless the `skipws` flag is set. It reads all the following characters until the next character is a white space or the end of the file is reached.  
   
- 樣板函式會多載 **operator>>**，使用擷取自資料流 `_Istr` 的項目序列來取代 `right` 所控制的序列。 擷取停止：  
+ The template function overloads **operator>>** to replace the sequence controlled by `right` with a sequence of elements extracted from the stream `_Istr`. Extraction stops:  
   
--   到達檔案結尾時。  
+-   At end of file.  
   
--   在函式擷取 `_Istr`. **width** 項目之後 (如果該值不為零)。  
+-   After the function extracts `_Istr`. **width** elements, if that value is nonzero.  
   
- 在函式擷取 `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) 項目之後。  
+ After the function extracts `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) elements.  
   
--   在函式擷取項目 *ch* 之後 (其 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) 為 true)，會將字元放回去。  
+-   After the function extracts an element *ch* for which [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) is true, in which case the character is put back.  
   
- 如果函式未擷取任何項目，則會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`)。 在任何情況下，它會呼叫 **istr**. **width**(0)，並傳回 \* **this**。  
+ If the function extracts no elements, it calls [setstate](../standard-library/basic-ios-class.md#setstate)( `ios_base::failbit`). In any case, it calls **istr**. **width**(0) and returns \* **this**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // string_op_read_.cpp  
@@ -794,6 +813,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<string>](../standard-library/string.md)
 

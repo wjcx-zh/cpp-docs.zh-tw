@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolBar 類別 |Microsoft 文件"
+title: CMFCToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -167,7 +167,159 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolBar class
+- CMFCToolBar [MFC], AddBasicCommand
+- CMFCToolBar [MFC], AddCommandUsage
+- CMFCToolBar [MFC], AddToolBarForImageCollection
+- CMFCToolBar [MFC], AdjustLayout
+- CMFCToolBar [MFC], AdjustSize
+- CMFCToolBar [MFC], AllowChangeTextLabels
+- CMFCToolBar [MFC], AreTextLabels
+- CMFCToolBar [MFC], AutoGrayInactiveImages
+- CMFCToolBar [MFC], ButtonToIndex
+- CMFCToolBar [MFC], CalcFixedLayout
+- CMFCToolBar [MFC], CalcSize
+- CMFCToolBar [MFC], CanHandleSiblings
+- CMFCToolBar [MFC], CleanUpImages
+- CMFCToolBar [MFC], CleanUpLockedImages
+- CMFCToolBar [MFC], CanBeClosed
+- CMFCToolBar [MFC], CanBeRestored
+- CMFCToolBar [MFC], CanFocus
+- CMFCToolBar [MFC], CanHandleSiblings
+- CMFCToolBar [MFC], CommandToIndex
+- CMFCToolBar [MFC], Create
+- CMFCToolBar [MFC], CreateEx
+- CMFCToolBar [MFC], Deactivate
+- CMFCToolBar [MFC], EnableCustomizeButton
+- CMFCToolBar [MFC], EnableDocking
+- CMFCToolBar [MFC], EnableLargeIcons
+- CMFCToolBar [MFC], EnableQuickCustomization
+- CMFCToolBar [MFC], EnableReflections
+- CMFCToolBar [MFC], EnableTextLabels
+- CMFCToolBar [MFC], FromHandlePermanent
+- CMFCToolBar [MFC], GetAllButtons
+- CMFCToolBar [MFC], GetAllToolbars
+- CMFCToolBar [MFC], GetBasicCommands
+- CMFCToolBar [MFC], GetButton
+- CMFCToolBar [MFC], GetButtonInfo
+- CMFCToolBar [MFC], GetButtonSize
+- CMFCToolBar [MFC], GetButtonStyle
+- CMFCToolBar [MFC], GetButtonText
+- CMFCToolBar [MFC], GetColdImages
+- CMFCToolBar [MFC], GetColumnWidth
+- CMFCToolBar [MFC], GetCommandButtons
+- CMFCToolBar [MFC], GetCount
+- CMFCToolBar [MFC], GetCustomizeButton
+- CMFCToolBar [MFC], GetDefaultImage
+- CMFCToolBar [MFC], GetDisabledImages
+- CMFCToolBar [MFC], GetDisabledMenuImages
+- CMFCToolBar [MFC], GetDroppedDownMenu
+- CMFCToolBar [MFC], GetGrayDisabledButtons
+- CMFCToolBar [MFC], GetHighlightedButton
+- CMFCToolBar [MFC], GetHotBorder
+- CMFCToolBar [MFC], GetHotTextColor
+- CMFCToolBar [MFC], GetHwndLastFocus
+- CMFCToolBar [MFC], GetIgnoreSetText
+- CMFCToolBar [MFC], GetImageSize
+- CMFCToolBar [MFC], GetImages
+- CMFCToolBar [MFC], GetImagesOffset
+- CMFCToolBar [MFC], GetInvalidateItemRect
+- CMFCToolBar [MFC], GetItemID
+- CMFCToolBar [MFC], GetItemRect
+- CMFCToolBar [MFC], GetLargeColdImages
+- CMFCToolBar [MFC], GetLargeDisabledImages
+- CMFCToolBar [MFC], GetLargeImages
+- CMFCToolBar [MFC], GetLockedColdImages
+- CMFCToolBar [MFC], GetLockedDisabledImages
+- CMFCToolBar [MFC], GetLockedImages
+- CMFCToolBar [MFC], GetLockedImageSize
+- CMFCToolBar [MFC], GetLockedMenuImages
+- CMFCToolBar [MFC], GetMenuButtonSize
+- CMFCToolBar [MFC], GetMenuImageSize
+- CMFCToolBar [MFC], GetMenuImages
+- CMFCToolBar [MFC], GetOrigButtons
+- CMFCToolBar [MFC], GetOrigResetButtons
+- CMFCToolBar [MFC], GetResourceID
+- CMFCToolBar [MFC], GetRouteCommandsViaFrame
+- CMFCToolBar [MFC], GetRowHeight
+- CMFCToolBar [MFC], GetShowTooltips
+- CMFCToolBar [MFC], GetSiblingToolBar
+- CMFCToolBar [MFC], GetUserImages
+- CMFCToolBar [MFC], HitTest
+- CMFCToolBar [MFC], InsertButton
+- CMFCToolBar [MFC], InsertSeparator
+- CMFCToolBar [MFC], InvalidateButton
+- CMFCToolBar [MFC], IsAddRemoveQuickCustomize
+- CMFCToolBar [MFC], IsAltCustomizeMode
+- CMFCToolBar [MFC], IsAutoGrayInactiveImages
+- CMFCToolBar [MFC], IsBasicCommand
+- CMFCToolBar [MFC], IsButtonExtraSizeAvailable
+- CMFCToolBar [MFC], IsButtonHighlighted
+- CMFCToolBar [MFC], IsCommandPermitted
+- CMFCToolBar [MFC], IsCommandRarelyUsed
+- CMFCToolBar [MFC], IsCustomizeMode
+- CMFCToolBar [MFC], IsDragButton
+- CMFCToolBar [MFC], IsExistCustomizeButton
+- CMFCToolBar [MFC], IsFloating
+- CMFCToolBar [MFC], IsLargeIcons
+- CMFCToolBar [MFC], IsLastCommandFromButton
+- CMFCToolBar [MFC], IsLocked
+- CMFCToolBar [MFC], IsOneRowWithSibling
+- CMFCToolBar [MFC], IsUserDefined
+- CMFCToolBar [MFC], LoadBitmap
+- CMFCToolBar [MFC], LoadBitmapEx
+- CMFCToolBar [MFC], LoadParameters
+- CMFCToolBar [MFC], LoadState
+- CMFCToolBar [MFC], LoadToolBar
+- CMFCToolBar [MFC], LoadToolBarEx
+- CMFCToolBar [MFC], OnChangeHot
+- CMFCToolBar [MFC], OnFillBackground
+- CMFCToolBar [MFC], OnReset
+- CMFCToolBar [MFC], OnSetAccData
+- CMFCToolBar [MFC], OnSetDefaultButtonText
+- CMFCToolBar [MFC], RemoveAllButtons
+- CMFCToolBar [MFC], RemoveButton
+- CMFCToolBar [MFC], RemoveStateFromRegistry
+- CMFCToolBar [MFC], ReplaceButton
+- CMFCToolBar [MFC], ResetAll
+- CMFCToolBar [MFC], ResetAllImages
+- CMFCToolBar [MFC], RestoreOriginalState
+- CMFCToolBar [MFC], SaveState
+- CMFCToolBar [MFC], SetBasicCommands
+- CMFCToolBar [MFC], SetButtonInfo
+- CMFCToolBar [MFC], SetButtonStyle
+- CMFCToolBar [MFC], SetButtonText
+- CMFCToolBar [MFC], SetButtons
+- CMFCToolBar [MFC], SetCommandUsageOptions
+- CMFCToolBar [MFC], SetCustomizeMode
+- CMFCToolBar [MFC], SetGrayDisabledButtons
+- CMFCToolBar [MFC], SetHeight
+- CMFCToolBar [MFC], SetHotBorder
+- CMFCToolBar [MFC], SetHotTextColor
+- CMFCToolBar [MFC], SetLargeIcons
+- CMFCToolBar [MFC], SetLockedSizes
+- CMFCToolBar [MFC], SetMenuSizes
+- CMFCToolBar [MFC], SetNonPermittedCommands
+- CMFCToolBar [MFC], SetOneRowWithSibling
+- CMFCToolBar [MFC], SetPermament
+- CMFCToolBar [MFC], SetRouteCommandsViaFrame
+- CMFCToolBar [MFC], SetShowTooltips
+- CMFCToolBar [MFC], SetSiblingToolBar
+- CMFCToolBar [MFC], SetSizes
+- CMFCToolBar [MFC], SetToolBarBtnText
+- CMFCToolBar [MFC], SetTwoRowsWithSibling
+- CMFCToolBar [MFC], SetUserImages
+- CMFCToolBar [MFC], StretchPane
+- CMFCToolBar [MFC], TranslateChar
+- CMFCToolBar [MFC], UpdateButton
+- CMFCToolBar [MFC], WrapToolBar
+- CMFCToolBar [MFC], AllowShowOnList
+- CMFCToolBar [MFC], CalcMaxButtonHeight
+- CMFCToolBar [MFC], DoPaint
+- CMFCToolBar [MFC], DrawButton
+- CMFCToolBar [MFC], DrawSeparator
+- CMFCToolBar [MFC], OnUserToolTip
+- CMFCToolBar [MFC], m_bDontScaleImages
+- CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
 caps.latest.revision: 48
 author: mikeblome
@@ -187,17 +339,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: d592cd2c2bd0d26bc82bf61baad4e01696209236
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 46118db7c26a11607e0e7960d55756e41080822e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbar-class"></a>CMFCToolBar 類別
-`CMFCToolBar`類別類似於[CToolBar 類別](../../mfc/reference/ctoolbar-class.md)，但是提供額外的使用者介面功能的支援。 這包括一般工具列、含作用中影像的工具列、大圖示、頁面巡覽區按鈕、鎖定工具列、Rebar 控制項、影像下方文字、背景影像和索引標籤式工具列。 `CMFCToolBar` 類別的內建支援也包括工具列和功能表的使用者自訂、工具列和功能表之間的拖放、下拉式方塊按鈕、編輯方塊按鈕、色彩選擇器和縮合按鈕。  
+# <a name="cmfctoolbar-class"></a>CMFCToolBar Class
+The `CMFCToolBar` class resembles [CToolBar Class](../../mfc/reference/ctoolbar-class.md), but provides additional support for user interface features. These include flat toolbars, toolbars with hot images, large icons, pager buttons, locked toolbars, rebar controls, text under images, background images, and tabbed toolbars. The `CMFCToolBar` class also contains built-in support for user customization of toolbars and menus, drag-and-drop between toolbars and menus, combo box buttons, edit box buttons, color pickers, and roll-up buttons.
+
+ [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]    
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBar : public CMFCBaseToolBar  
@@ -205,206 +359,206 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCToolBar::CMFCToolBar`|預設建構函式。|  
-|`CMFCToolBar::~CMFCToolBar`|解構函式。|  
+|`CMFCToolBar::CMFCToolBar`|Default constructor.|  
+|`CMFCToolBar::~CMFCToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBar::AddBasicCommand](#addbasiccommand)|將功能表命令加入至永遠會在使用者開啟功能表時所顯示的命令的清單。|  
-|[CMFCToolBar::AddCommandUsage](#addcommandusage)|其中一個指定的命令相關聯的計數器遞增。|  
-|[CMFCToolBar::AddToolBarForImageCollection](#addtoolbarforimagecollection)|將影像從使用者介面資源加入至應用程式中的映像的集合。|  
-|[CMFCToolBar::AdjustLayout](#adjustlayout)|重新計算的大小和位置 工具列。 (覆寫[cbasepane:: Adjustlayout](../../mfc/reference/cbasepane-class.md#adjustlayout))。|  
-|[CMFCToolBar::AdjustSize](#adjustsize)|重新計算工具列的大小。|  
-|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|指定是否可以顯示文字標籤底下的工具列按鈕上的映像。|  
-|[CMFCToolBar::AreTextLabels](#aretextlabels)|指定影像下方文字標籤是否目前顯示在工具列按鈕上。|  
-|[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)|啟用或停用自動產生的非作用中的按鈕影像。|  
-|[CMFCToolBar::ButtonToIndex](#buttontoindex)|傳回指定之索引[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)此工具列中的物件。|  
-|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|計算工具列的水平大小。 (覆寫[cbasepane:: Calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout)。)|  
-|[CMFCToolBar::CalcSize](#calcsize)|由架構呼叫配置計算程序的一部分。 (覆寫[CPane::CalcSize](../../mfc/reference/cpane-class.md#calcsize)。)|  
-|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|決定是否工具列和其同層級位於相同的窗格上。|  
-|[CMFCToolBar::CleanUpImages](#cleanupimages)|釋放系統資源配置給下工具列影像。|  
-|[CMFCToolBar::CleanUpLockedImages](#cleanuplockedimages)|釋放系統資源配置的鎖定的工具列影像。|  
-|[CMFCToolBar::CanBeClosed](#canbeclosed)|指定使用者是否可以關閉工具列。 (覆寫[cbasepane:: Canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed)。)|  
-|[CMFCToolBar::CanBeRestored](#canberestored)|決定是否系統可以還原工具列到其原始狀態後自訂。|  
-|[CMFCToolBar::CanFocus](#canfocus)|指定窗格是否能夠接收焦點。 (覆寫[CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)。)|  
-|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|決定是否工具列和其同層級位於相同的窗格上。|  
-|[CMFCToolBar::CommandToIndex](#commandtoindex)|傳回與指定的命令識別碼工具列中按鈕的索引|  
-|[CMFCToolBar::Create](#create)|建立 `CMFCToolBar` 物件。|  
-|[CMFCToolBar::CreateEx](#createex)|建立`CMFCToolBar`會使用其他樣式選項，例如大型圖示的物件。|  
-|[CMFCToolBar::Deactivate](#deactivate)|工具列就會停用。|  
-|[Cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)|啟用或停用**新增或移除按鈕**會出現在結尾工具列的按鈕。|  
-|[CMFCToolBar::EnableDocking](#enabledocking)|主框架窗格的停駐啟用。 (覆寫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)。)|  
-|[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|啟用或停用工具列按鈕上的大型圖示。|  
-|[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|啟用或停用快速自訂工具列，讓使用者可以按**Alt**鍵，然後將按鈕拖曳至新位置。|  
-|[CMFCToolBar::EnableReflections](#enablereflections)|啟用或停用命令反映。|  
-|[CMFCToolBar::EnableTextLabels](#enabletextlabels)|啟用或停用工具列按鈕影像下方文字標籤。|  
-|[CMFCToolBar::FromHandlePermanent](#fromhandlepermanent)|擷取的指標`CMFCToolBar`物件，其中包含指定的視窗控制代碼。|  
-|[CMFCToolBar::GetAllButtons](#getallbuttons)|在工具列中傳回按鈕的唯讀的清單。|  
-|[CMFCToolBar::GetAllToolbars](#getalltoolbars)|在應用程式會傳回所有工具列的唯讀清單。|  
-|[CMFCToolBar::GetBasicCommands](#getbasiccommands)|傳回唯讀的應用程式中定義的基本命令清單。|  
-|[CMFCToolBar::GetButton](#getbutton)|將指標傳回至`CMFCToolBarButton`物件具有指定的工具列按鈕索引。|  
-|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|傳回命令 ID、 樣式和映像索引的指定索引處的按鈕。|  
-|[CMFCToolBar::GetButtonSize](#getbuttonsize)|傳回維度的每個按鈕的工具列上。|  
-|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|傳回目前位於指定索引上的工具列按鈕的樣式。|  
-|[CMFCToolBar::GetButtonText](#getbuttontext)|傳回具有指定的索引的按鈕的文字標籤。|  
-|[CMFCToolBar::GetColdImages](#getcoldimages)|讓指標回到應用程式中的非作用中工具列按鈕影像的集合。|  
-|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|傳回工具列按鈕的寬度。|  
-|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|傳回一份應用程式中有指定的命令識別碼從所有工具列按鈕。|  
-|[CMFCToolBar::GetCount](#getcount)|在工具列上傳回按鈕和分隔線的數目。|  
-|[CMFCToolBar::GetCustomizeButton](#getcustomizebutton)|擷取的指標`CMFCCustomizeButton`與工具列相關聯的物件。|  
-|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|傳回具有指定之命令識別碼的工具列按鈕的預設影像索引|  
-|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|讓指標回到可用來在應用程式中的已停用的工具列按鈕的影像集合。|  
-|[CMFCToolBar::GetDisabledMenuImages](#getdisabledmenuimages)|讓指標回到可用來在應用程式中已停用的功能表按鈕的影像集合。|  
-|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|擷取目前顯示其子功能表的功能表按鈕物件的指標。|  
-|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|指定已停用按鈕的影像是否要呈現暗灰色的版本，一般按鈕的影像，或從已停用的按鈕影像的集合。|  
-|[CMFCToolBar::GetHighlightedButton](#gethighlightedbutton)|讓指標回到目前反白顯示的工具列按鈕。|  
-|[CMFCToolBar::GetHotBorder](#gethotborder)|判斷工具列按鈕是否熱追蹤。|  
-|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|傳回反白顯示的工具列按鈕的文字色彩。|  
-|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|傳回之前工具列未具有輸入的焦點的視窗控制代碼。|  
-|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|指定是否忽略呼叫設定按鈕的標籤。|  
-|[CMFCToolBar::GetImageSize](#getimagesize)|傳回目前的工具列按鈕影像的大小。|  
-|[CMFCToolBar::GetImages](#getimages)|傳回的指標集合的預設按鈕影像的應用程式中。|  
-|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|傳回用來尋找工具列按鈕影像的工具列按鈕影像的全域清單在此工具列索引位移。|  
-|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|擷取指定索引處的按鈕必須重繪用戶端區域的區域。|  
-|[CMFCToolBar::GetItemID](#getitemid)|傳回指定索引處的工具列按鈕的命令識別碼。|  
-|[CMFCToolBar::GetItemRect](#getitemrect)|傳回指定索引處的按鈕的週框矩形。|  
-|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|讓指標回到應用程式中的大型非作用中工具列按鈕影像的集合。|  
-|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|讓指標回到應用程式中的大型已停用的工具列按鈕影像的集合。|  
-|[CMFCToolBar::GetLargeImages](#getlargeimages)|讓指標回到應用程式中的大型工具列按鈕影像的集合。|  
-|[CMFCToolBar::GetLockedColdImages](#getlockedcoldimages)|在工具列上的鎖定冷映像的集合中傳回的指標。|  
-|[CMFCToolBar::GetLockedDisabledImages](#getlockeddisabledimages)|在工具列上的鎖定已停用映像的集合中傳回的指標。|  
-|[CMFCToolBar::GetLockedImages](#getlockedimages)|在工具列上的鎖定的按鈕影像的集合中傳回的指標。|  
-|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|傳回鎖定的工具列影像的預設大小。|  
-|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|讓指標回到集合已鎖定工具列的功能表影像的工具列中。|  
-|[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)|傳回應用程式中的功能表按鈕的大小。|  
-|[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)|傳回應用程式中的功能表按鈕影像的大小。|  
-|[CMFCToolBar::GetMenuImages](#getmenuimages)|讓指標回到應用程式中的功能表按鈕影像的集合。|  
-|[CMFCToolBar::GetOrigButtons](#getorigbuttons)|擷取非自訂的按鈕，工具列的集合。|  
-|[CMFCToolBar::GetOrigResetButtons](#getorigresetbuttons)|擷取集合的非自訂的重設按鈕的工具列。|  
-|[CMFCToolBar::GetResourceID](#getresourceid)|擷取工具列的資源識別碼。|  
-|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|決定哪一個物件，父框架或擁有者，將命令傳送至工具列。|  
-|[CMFCToolBar::GetRowHeight](#getrowheight)|傳回工具列按鈕的高度。|  
-|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|指定工具列按鈕是否顯示工具提示。|  
-|[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)|擷取工具列的同層級。|  
-|[CMFCToolBar::GetUserImages](#getuserimages)|讓指標回到應用程式中的使用者定義工具列按鈕影像的集合。|  
-|[CMFCToolBar::HitTest](#hittest)|傳回位於指定位置處的工具列按鈕的索引。|  
-|[CMFCToolBar::InsertButton](#insertbutton)|插入工具列按鈕。|  
-|[CMFCToolBar::InsertSeparator](#insertseparator)|插入工具列中的分隔符號。|  
-|[CMFCToolBar::InvalidateButton](#invalidatebutton)|工具列按鈕提供的索引已存在的工作區會導致無效。|  
-|[CMFCToolBar::IsAddRemoveQuickCustomize](#isaddremovequickcustomize)|決定使用者是否可以加入或移除工具列按鈕使用**自訂**功能表選項。|  
-|[CMFCToolBar::IsAltCustomizeMode](#isaltcustomizemode)|指定是否*快速自訂*正將按鈕拖曳。|  
-|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|指定是否啟用自動產生的非作用中 （非-反白顯示） 的按鈕影像。|  
-|[CMFCToolBar::IsBasicCommand](#isbasiccommand)|判斷命令是否在基本命令的清單。|  
-|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|決定工具列是否顯示已延伸框線的按鈕。|  
-|[CMFCToolBar::IsButtonHighlighted](#isbuttonhighlighted)|決定工具列上的按鈕會反白顯示。|  
-|[CMFCToolBar::IsCommandPermitted](#iscommandpermitted)|決定是否要允許的命令。|  
-|[CMFCToolBar::IsCommandRarelyUsed](#iscommandrarelyused)|決定是否很少使用的命令 (請參閱[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions))。|  
-|[CMFCToolBar::IsCustomizeMode](#iscustomizemode)|指定工具列 framework 是否為自訂模式。|  
-|[CMFCToolBar::IsDragButton](#isdragbutton)|決定是否要拖曳工具列按鈕。|  
-|[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)|判斷是否要包含工具列**自訂** 按鈕。|  
-|[CMFCToolBar::IsFloating](#isfloating)|決定是否要浮動工具列。|  
-|[CMFCToolBar::IsLargeIcons](#islargeicons)|指定應用程式中的工具列是否目前顯示大圖示。|  
-|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|決定是否最近執行已傳送命令，從指定的工具列按鈕。|  
-|[CMFCToolBar::IsLocked](#islocked)|決定工具列是否已鎖定。|  
-|[Cmfctoolbar:: Isonerowwithsibling](#isonerowwithsibling)|決定是否工具列和工具列，其同層級位於相同的資料列。|  
-|[CMFCToolBar::IsUserDefined](#isuserdefined)|指定工具列是否為使用者定義。|  
-|[CMFCToolBar::LoadBitmap](#loadbitmap)|從應用程式資源載入工具列影像。|  
-|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|從應用程式資源載入工具列影像。 包含大型影像。|  
-|[CMFCToolBar::LoadParameters](#loadparameters)|從 Windows 登錄載入全域工具列上的選項。|  
-|[CMFCToolBar::LoadState](#loadstate)|從 Windows 登錄載入工具列狀態資訊。 (覆寫[CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate)。)|  
-|[CMFCToolBar::LoadToolBar](#loadtoolbar)|從應用程式資源載入工具列。|  
-|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|透過使用從應用程式資源載入工具列`CMFCToolBarInfo`helper 類別，讓應用程式使用大型影像。|  
-|[CMFCToolBar::OnChangeHot](#onchangehot)|當使用者選取工具列上的按鈕時由架構呼叫。|  
-|[CMFCToolBar::OnFillBackground](#onfillbackground)|從架構呼叫[CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint)工具列背景填滿。|  
-|[CMFCToolBar::OnReset](#onreset)|將工具列還原成原始狀態。|  
-|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(覆寫[cbasepane:: Onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata)。)|  
-|[CMFCToolBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|工具列按鈕的文字會還原為其預設狀態。|  
-|`CMFCToolBar::OnUpdateCmdUI`|在內部使用。|  
-|[CMFCToolBar::RemoveAllButtons](#removeallbuttons)|從工具列中移除所有的按鈕。|  
-|[CMFCToolBar::RemoveButton](#removebutton)|從工具列中移除具有指定之索引的按鈕。|  
-|[CMFCToolBar::RemoveStateFromRegistry](#removestatefromregistry)|從 Windows 登錄中刪除工具列的狀態資訊。|  
-|[CMFCToolBar::ReplaceButton](#replacebutton)|取代另一個工具列按鈕的工具列按鈕。|  
-|[CMFCToolBar::ResetAll](#resetall)|將所有工具列都還原成其原始狀態。|  
-|[CMFCToolBar::ResetAllImages](#resetallimages)|清除所有應用程式中的工具列影像集合。|  
-|[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|還原工具列的原始狀態。|  
-|[CMFCToolBar::SaveState](#savestate)|將工具列的狀態資訊儲存在 Windows 登錄中。 (覆寫[CPane::SaveState](../../mfc/reference/cpane-class.md#savestate)。)|  
-|`CMFCToolBar::Serialize`|(覆寫 `CBasePane::Serialize`。)|  
-|[CMFCToolBar::SetBasicCommands](#setbasiccommands)|設定永遠會在使用者開啟功能表時所顯示的命令清單。|  
-|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|設定命令 ID、 樣式和工具列按鈕的影像 ID。|  
-|[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|設定指定索引處的工具列按鈕的樣式。|  
-|[CMFCToolBar::SetButtonText](#setbuttontext)|設定的文字標籤的工具列按鈕。|  
-|[CMFCToolBar::SetButtons](#setbuttons)|集合的工具列按鈕。|  
-|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|指定當很少使用的命令未出現在應用程式的功能表。|  
-|[CMFCToolBar::SetCustomizeMode](#setcustomizemode)|啟用或停用應用程式中的所有工具列的自訂模式。|  
-|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|指定工具列上的已停用的按鈕會呈暗灰色，或如果已停用映像可用的已停用按鈕。|  
-|[CMFCToolBar::SetHeight](#setheight)|設定工具列的高度。|  
-|[CMFCToolBar::SetHotBorder](#sethotborder)|指定工具列按鈕是否熱追蹤。|  
-|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|設定作用中工具列按鈕的文字色彩。|  
-|[CMFCToolBar::SetLargeIcons](#setlargeicons)|指定工具列按鈕是否顯示大圖示。|  
-|[CMFCToolBar::SetLockedSizes](#setlockedsizes)|在工具列上設定鎖定的按鈕和鎖定的映像的大小。|  
-|[CMFCToolBar::SetMenuSizes](#setmenusizes)|設定工具列功能表按鈕和其映像的大小。|  
-|[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|設定無法在使用者所執行的命令清單。|  
-|[Cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling)|工具列和其同層級置於相同的資料列。|  
-|[CMFCToolBar::SetPermament](#setpermament)|指定使用者是否可以關閉工具列。|  
-|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|指定是否在父框架或擁有者的命令傳送至工具列。|  
-|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|指定是否 framework 顯示在工具提示。|  
-|[Cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)|指定工具列的同層級。|  
-|[CMFCToolBar::SetSizes](#setsizes)|指定所有工具列按鈕和映像的大小。|  
-|[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|在工具列上，指定按鈕的屬性。|  
-|[Cmfctoolbar:: Settworowswithsibling](#settworowswithsibling)|工具列和其同層級置於個別的資料列。|  
-|[CMFCToolBar::SetUserImages](#setuserimages)|應用程式中設定使用者定義的映像的集合。|  
-|[CMFCToolBar::StretchPane](#stretchpane)|垂直或水平伸展工具列。 (覆寫[cbasepane:: Stretchpane](../../mfc/reference/cbasepane-class.md#stretchpane)。)|  
-|[CMFCToolBar::TranslateChar](#translatechar)|如果指定的按鍵碼對應至有效的鍵盤快速鍵，請執行按鈕命令。|  
-|[CMFCToolBar::UpdateButton](#updatebutton)|更新指定的按鈕狀態。|  
-|[CMFCToolBar::WrapToolBar](#wraptoolbar)|重新調整位置指定的維度內的工具列按鈕。|  
+|[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Adds a menu command to the list of commands that are always displayed when a user opens a menu.|  
+|[CMFCToolBar::AddCommandUsage](#addcommandusage)|Increments by one the counter that is associated with the given command.|  
+|[CMFCToolBar::AddToolBarForImageCollection](#addtoolbarforimagecollection)|Adds images from the user interface resources to the collection of images in the application.|  
+|[CMFCToolBar::AdjustLayout](#adjustlayout)|Recalculates the size and position of a toolbar. (Overrides [CBasePane::AdjustLayout](../../mfc/reference/cbasepane-class.md#adjustlayout)).|  
+|[CMFCToolBar::AdjustSize](#adjustsize)|Recalculates the size of the toolbar.|  
+|[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)|Specifies whether text labels can be shown under images on the toolbar buttons.|  
+|[CMFCToolBar::AreTextLabels](#aretextlabels)|Specifies whether text labels under images are currently displayed on the toolbar buttons.|  
+|[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)|Enable or disables the automatic generation of inactive button images.|  
+|[CMFCToolBar::ButtonToIndex](#buttontoindex)|Returns the index of a specified [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) object in this toolbar.|  
+|[CMFCToolBar::CalcFixedLayout](#calcfixedlayout)|Calculates the horizontal size of the toolbar. (Overrides [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
+|[CMFCToolBar::CalcSize](#calcsize)|Called by the framework as part of the layout calculation process. (Overrides [CPane::CalcSize](../../mfc/reference/cpane-class.md#calcsize).)|  
+|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Determines whether the toolbar and its sibling are positioned on the same pane.|  
+|[CMFCToolBar::CleanUpImages](#cleanupimages)|Frees the system resources allocated for toolbar images.|  
+|[CMFCToolBar::CleanUpLockedImages](#cleanuplockedimages)|Frees the system resources allocated for locked toolbar images.|  
+|[CMFCToolBar::CanBeClosed](#canbeclosed)|Specifies whether a user can close the toolbar. (Overrides [CBasePane::CanBeClosed](../../mfc/reference/cbasepane-class.md#canbeclosed).)|  
+|[CMFCToolBar::CanBeRestored](#canberestored)|Determines whether the system can restore a toolbar to its original state after customization.|  
+|[CMFCToolBar::CanFocus](#canfocus)|Specifies whether the pane can receive focus. (Overrides [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus).)|  
+|[CMFCToolBar::CanHandleSiblings](#canhandlesiblings)|Determines whether the toolbar and its sibling are positioned on the same pane.|  
+|[CMFCToolBar::CommandToIndex](#commandtoindex)|Returns the index of the button in the toolbar with a specified command ID.|  
+|[CMFCToolBar::Create](#create)|Creates a `CMFCToolBar` object.|  
+|[CMFCToolBar::CreateEx](#createex)|Creates a `CMFCToolBar` object that uses additional style options, such as large icons.|  
+|[CMFCToolBar::Deactivate](#deactivate)|Deactivates the toolbar.|  
+|[CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton)|Enables or disables the **Add or Remove Buttons** button that appears on the end of the toolbar.|  
+|[CMFCToolBar::EnableDocking](#enabledocking)|Enables docking of the pane to the main frame. (Overrides [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking).)|  
+|[CMFCToolBar::EnableLargeIcons](#enablelargeicons)|Enables or disables large icons on toolbar buttons.|  
+|[CMFCToolBar::EnableQuickCustomization](#enablequickcustomization)|Enables or disables the quick customization of toolbars so that the user can press the **Alt** key and drag a button to a new location.|  
+|[CMFCToolBar::EnableReflections](#enablereflections)|Enables or disables command reflection.|  
+|[CMFCToolBar::EnableTextLabels](#enabletextlabels)|Enables or disables text labels under toolbar button images.|  
+|[CMFCToolBar::FromHandlePermanent](#fromhandlepermanent)|Retrieves a pointer to the `CMFCToolBar` object that contains the given window handle.|  
+|[CMFCToolBar::GetAllButtons](#getallbuttons)|Returns a read-only list of buttons in a toolbar.|  
+|[CMFCToolBar::GetAllToolbars](#getalltoolbars)|Returns a read-only list of all toolbars in the application.|  
+|[CMFCToolBar::GetBasicCommands](#getbasiccommands)|Returns a read-only list of the basic commands defined in the application.|  
+|[CMFCToolBar::GetButton](#getbutton)|Returns a pointer to the `CMFCToolBarButton` object that has a specified toolbar button index.|  
+|[CMFCToolBar::GetButtonInfo](#getbuttoninfo)|Returns the command ID, style, and image index of the button at a specified index.|  
+|[CMFCToolBar::GetButtonSize](#getbuttonsize)|Returns the dimensions of each button on the toolbar.|  
+|[CMFCToolBar::GetButtonStyle](#getbuttonstyle)|Returns the current style of the toolbar button that is located at the specified index.|  
+|[CMFCToolBar::GetButtonText](#getbuttontext)|Returns the text label of a button that has a specified index.|  
+|[CMFCToolBar::GetColdImages](#getcoldimages)|Returns a pointer to the collection of cold toolbar button images in the application.|  
+|[CMFCToolBar::GetColumnWidth](#getcolumnwidth)|Returns the width of the toolbar buttons.|  
+|[CMFCToolBar::GetCommandButtons](#getcommandbuttons)|Returns a list of buttons that have a specified command ID from all toolbars in the application.|  
+|[CMFCToolBar::GetCount](#getcount)|Returns the number of buttons and separators on the toolbar.|  
+|[CMFCToolBar::GetCustomizeButton](#getcustomizebutton)|Retrieves a pointer to the `CMFCCustomizeButton` object that is associated with the toolbar.|  
+|[CMFCToolBar::GetDefaultImage](#getdefaultimage)|Returns the index of the default image for a toolbar button with a specified command ID.|  
+|[CMFCToolBar::GetDisabledImages](#getdisabledimages)|Returns a pointer to the collection of images that are used for disabled toolbar buttons in the application.|  
+|[CMFCToolBar::GetDisabledMenuImages](#getdisabledmenuimages)|Returns a pointer to the collection of images that are used for disabled menu buttons in the application.|  
+|[CMFCToolBar::GetDroppedDownMenu](#getdroppeddownmenu)|Retrieves a pointer to the menu button object that is currently displaying its sub-menu.|  
+|[CMFCToolBar::GetGrayDisabledButtons](#getgraydisabledbuttons)|Specifies whether the images of disabled buttons are dimmed versions of the regular button images, or taken from the collection of disabled button images.|  
+|[CMFCToolBar::GetHighlightedButton](#gethighlightedbutton)|Returns a pointer to the toolbar button that is currently highlighted.|  
+|[CMFCToolBar::GetHotBorder](#gethotborder)|Determines whether the toolbar buttons are hot-tracked.|  
+|[CMFCToolBar::GetHotTextColor](#gethottextcolor)|Returns the text color of the highlighted toolbar buttons.|  
+|[CMFCToolBar::GetHwndLastFocus](#gethwndlastfocus)|Returns a handle to the window that had the input focus just before the toolbar did.|  
+|[CMFCToolBar::GetIgnoreSetText](#getignoresettext)|Specifies whether calls to set button labels are ignored.|  
+|[CMFCToolBar::GetImageSize](#getimagesize)|Returns the current size of toolbar button images.|  
+|[CMFCToolBar::GetImages](#getimages)|Returns a pointer to the collection of default button images in the application.|  
+|[CMFCToolBar::GetImagesOffset](#getimagesoffset)|Returns the index offset used to find the toolbar button images for this toolbar in the global list of toolbar button images.|  
+|[CMFCToolBar::GetInvalidateItemRect](#getinvalidateitemrect)|Retrieves the region of the client area that must be redrawn for the button at the given index.|  
+|[CMFCToolBar::GetItemID](#getitemid)|Returns the command ID of the toolbar button at a specified index.|  
+|[CMFCToolBar::GetItemRect](#getitemrect)|Returns the bounding rectangle of the button at a specified index.|  
+|[CMFCToolBar::GetLargeColdImages](#getlargecoldimages)|Returns a pointer to the collection of large cold toolbar button images in the application.|  
+|[CMFCToolBar::GetLargeDisabledImages](#getlargedisabledimages)|Returns a pointer to the collection of large disabled toolbar button images in the application.|  
+|[CMFCToolBar::GetLargeImages](#getlargeimages)|Returns a pointer to the collection of large toolbar button images in the application.|  
+|[CMFCToolBar::GetLockedColdImages](#getlockedcoldimages)|Returns a pointer to the collection of locked cold images in the toolbar.|  
+|[CMFCToolBar::GetLockedDisabledImages](#getlockeddisabledimages)|Returns a pointer to the collection of locked disabled images in the toolbar.|  
+|[CMFCToolBar::GetLockedImages](#getlockedimages)|Returns a pointer to the collection of locked button images in the toolbar.|  
+|[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)|Returns the default size of locked toolbar images.|  
+|[CMFCToolBar::GetLockedMenuImages](#getlockedmenuimages)|Returns a pointer to the collection of locked toolbar menu images in the toolbar.|  
+|[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)|Returns the size of menu buttons in the application.|  
+|[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)|Returns the size of menu button images in the application.|  
+|[CMFCToolBar::GetMenuImages](#getmenuimages)|Returns a pointer to the collection of menu button images in the application.|  
+|[CMFCToolBar::GetOrigButtons](#getorigbuttons)|Retrieves the collection of non-customized buttons of the toolbar.|  
+|[CMFCToolBar::GetOrigResetButtons](#getorigresetbuttons)|Retrieves the collection of non-customized reset buttons of the toolbar.|  
+|[CMFCToolBar::GetResourceID](#getresourceid)|Retrieves the resource ID of the toolbar.|  
+|[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)|Determines which object, the parent frame or the owner, sends commands to the toolbar.|  
+|[CMFCToolBar::GetRowHeight](#getrowheight)|Returns the height of toolbar buttons.|  
+|[CMFCToolBar::GetShowTooltips](#getshowtooltips)|Specifies whether tool tips are displayed for toolbar buttons.|  
+|[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)|Retrieves the sibling of the toolbar.|  
+|[CMFCToolBar::GetUserImages](#getuserimages)|Returns a pointer to the collection of user-defined toolbar button images in the application.|  
+|[CMFCToolBar::HitTest](#hittest)|Returns the index of the toolbar button that is located at the specified position.|  
+|[CMFCToolBar::InsertButton](#insertbutton)|Inserts a button into the toolbar.|  
+|[CMFCToolBar::InsertSeparator](#insertseparator)|Inserts a separator into the toolbar.|  
+|[CMFCToolBar::InvalidateButton](#invalidatebutton)|Invalidates the client area of the toolbar button that exists at the provided index.|  
+|[CMFCToolBar::IsAddRemoveQuickCustomize](#isaddremovequickcustomize)|Determines whether a user can add or remove toolbar buttons by using the **Customize** menu option.|  
+|[CMFCToolBar::IsAltCustomizeMode](#isaltcustomizemode)|Specifies whether *quick customization* is being used to drag a button.|  
+|[CMFCToolBar::IsAutoGrayInactiveImages](#isautograyinactiveimages)|Specifies whether the automatic generation of inactive (non-highlighted) button images is enabled.|  
+|[CMFCToolBar::IsBasicCommand](#isbasiccommand)|Determines whether a command is on the list of basic commands.|  
+|[CMFCToolBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determines whether the toolbar can display buttons that have extended borders.|  
+|[CMFCToolBar::IsButtonHighlighted](#isbuttonhighlighted)|Determines whether a button on the toolbar is highlighted.|  
+|[CMFCToolBar::IsCommandPermitted](#iscommandpermitted)|Determines whether a command is permitted.|  
+|[CMFCToolBar::IsCommandRarelyUsed](#iscommandrarelyused)|Determines whether a command is rarely used (see [CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)).|  
+|[CMFCToolBar::IsCustomizeMode](#iscustomizemode)|Specifies whether the toolbar framework is in customization mode.|  
+|[CMFCToolBar::IsDragButton](#isdragbutton)|Determines whether a toolbar button is being dragged.|  
+|[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)|Determines whether the toolbar contains the **Customize** button.|  
+|[CMFCToolBar::IsFloating](#isfloating)|Determines whether the toolbar is floating.|  
+|[CMFCToolBar::IsLargeIcons](#islargeicons)|Specifies whether toolbars in the application currently display large icons.|  
+|[CMFCToolBar::IsLastCommandFromButton](#islastcommandfrombutton)|Determines whether the most recently executed command was sent from the specified toolbar button.|  
+|[CMFCToolBar::IsLocked](#islocked)|Determines whether the toolbar is locked.|  
+|[CMFCToolBar::IsOneRowWithSibling](#isonerowwithsibling)|Determines whether the toolbar and its sibling toolbar are positioned on the same row.|  
+|[CMFCToolBar::IsUserDefined](#isuserdefined)|Specifies whether the toolbar is user-defined.|  
+|[CMFCToolBar::LoadBitmap](#loadbitmap)|Loads toolbar images from application resources.|  
+|[CMFCToolBar::LoadBitmapEx](#loadbitmapex)|Loads toolbar images from application resources. Includes large images.|  
+|[CMFCToolBar::LoadParameters](#loadparameters)|Loads global toolbar options from the Windows registry.|  
+|[CMFCToolBar::LoadState](#loadstate)|Loads the toolbar state information from the Windows registry. (Overrides [CPane::LoadState](../../mfc/reference/cpane-class.md#loadstate).)|  
+|[CMFCToolBar::LoadToolBar](#loadtoolbar)|Loads the toolbar from application resources.|  
+|[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)|Loads the toolbar from application resources by using the `CMFCToolBarInfo` helper class to enable the application to use large images.|  
+|[CMFCToolBar::OnChangeHot](#onchangehot)|Called by the framework when a user selects a button on the toolbar.|  
+|[CMFCToolBar::OnFillBackground](#onfillbackground)|Called by the framework from [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) to fill the toolbar background.|  
+|[CMFCToolBar::OnReset](#onreset)|Restores the toolbar to its original state.|  
+|[CMFCToolBar::OnSetAccData](#onsetaccdata)|(Overrides [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
+|[CMFCToolBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|Restores the text of a toolbar button to its default state.|  
+|`CMFCToolBar::OnUpdateCmdUI`|Used internally.|  
+|[CMFCToolBar::RemoveAllButtons](#removeallbuttons)|Removes all buttons from the toolbar.|  
+|[CMFCToolBar::RemoveButton](#removebutton)|Removes the button with the specified index from the toolbar.|  
+|[CMFCToolBar::RemoveStateFromRegistry](#removestatefromregistry)|Deletes the state information for the toolbar from the Windows registry.|  
+|[CMFCToolBar::ReplaceButton](#replacebutton)|Replaces a toolbar button with another toolbar button.|  
+|[CMFCToolBar::ResetAll](#resetall)|Restores all toolbars to their original states.|  
+|[CMFCToolBar::ResetAllImages](#resetallimages)|Clears all toolbar image collections in the application.|  
+|[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|Restores the original state of a toolbar.|  
+|[CMFCToolBar::SaveState](#savestate)|Saves the state information for the toolbar in the Windows registry. (Overrides [CPane::SaveState](../../mfc/reference/cpane-class.md#savestate).)|  
+|`CMFCToolBar::Serialize`|(Overrides `CBasePane::Serialize`.)|  
+|[CMFCToolBar::SetBasicCommands](#setbasiccommands)|Sets the list of commands that are always displayed when a user opens a menu.|  
+|[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|Sets the command ID, style, and image ID of a toolbar button.|  
+|[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|Sets the style of the toolbar button at the given index.|  
+|[CMFCToolBar::SetButtonText](#setbuttontext)|Sets the text label of a toolbar button.|  
+|[CMFCToolBar::SetButtons](#setbuttons)|Sets the buttons for the toolbar.|  
+|[CMFCToolBar::SetCommandUsageOptions](#setcommandusageoptions)|Specifies when rarely used commands do not appear in the menu of the application.|  
+|[CMFCToolBar::SetCustomizeMode](#setcustomizemode)|Enables or disables customization mode for all toolbars in the application.|  
+|[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)|Specifies whether the disabled buttons on the toolbar are dimmed or if disabled images are used for the disabled buttons.|  
+|[CMFCToolBar::SetHeight](#setheight)|Sets the height of the toolbar.|  
+|[CMFCToolBar::SetHotBorder](#sethotborder)|Specifies whether toolbar buttons are hot-tracked.|  
+|[CMFCToolBar::SetHotTextColor](#sethottextcolor)|Sets the text color for hot toolbar buttons.|  
+|[CMFCToolBar::SetLargeIcons](#setlargeicons)|Specifies whether toolbar buttons display large icons.|  
+|[CMFCToolBar::SetLockedSizes](#setlockedsizes)|Sets the sizes of locked buttons and locked images on the toolbar.|  
+|[CMFCToolBar::SetMenuSizes](#setmenusizes)|Sets the size of toolbar menu buttons and their images.|  
+|[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)|Sets the list of commands that cannot be executed by the user.|  
+|[CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling)|Positions the toolbar and its sibling on the same row.|  
+|[CMFCToolBar::SetPermament](#setpermament)|Specifies whether a user can close the toolbar.|  
+|[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)|Specifies whether the parent frame or the owner sends commands to the toolbar.|  
+|[CMFCToolBar::SetShowTooltips](#setshowtooltips)|Specifies whether the framework displays tool tips.|  
+|[CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar)|Specifies the sibling of the toolbar.|  
+|[CMFCToolBar::SetSizes](#setsizes)|Specifies the sizes of buttons and images on all toolbars.|  
+|[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)|Specifies properties of a button on the toolbar.|  
+|[CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling)|Positions the toolbar and its sibling on separate rows.|  
+|[CMFCToolBar::SetUserImages](#setuserimages)|Sets the collection of user-defined images in the application.|  
+|[CMFCToolBar::StretchPane](#stretchpane)|Stretches the toolbar vertically or horizontally. (Overrides [CBasePane::StretchPane](../../mfc/reference/cbasepane-class.md#stretchpane).)|  
+|[CMFCToolBar::TranslateChar](#translatechar)|Executes a button command if the specified key code corresponds to a valid keyboard shortcut.|  
+|[CMFCToolBar::UpdateButton](#updatebutton)|Updates the state of the specified button.|  
+|[CMFCToolBar::WrapToolBar](#wraptoolbar)|Repositions toolbar buttons within the given dimensions.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|決定工具列是否會顯示在清單上**工具列**窗格**自訂** 對話方塊。|  
-|[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|計算工具列中按鈕的最大的高度。|  
-|[CMFCToolBar::DoPaint](#dopaint)|工具列會重新繪製。|  
-|[CMFCToolBar::DrawButton](#drawbutton)|工具列按鈕會重新繪製。|  
-|[CMFCToolBar::DrawSeparator](#drawseparator)|在工具列上的分隔符號會重新繪製。|  
-|[CMFCToolBar::OnUserToolTip](#onusertooltip)|即將顯示工具提示按鈕時由架構呼叫。|  
+|[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Determines whether the toolbar is displayed in the list on the **Toolbars** pane of the **Customize** dialog box.|  
+|[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Calculates the maximum height of a button in the toolbar.|  
+|[CMFCToolBar::DoPaint](#dopaint)|Repaints a toolbar.|  
+|[CMFCToolBar::DrawButton](#drawbutton)|Repaints a toolbar button.|  
+|[CMFCToolBar::DrawSeparator](#drawseparator)|Repaints a separator on a toolbar.|  
+|[CMFCToolBar::OnUserToolTip](#onusertooltip)|Called by the framework when the tooltip for a button is about to be displayed.|  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|在高 DPI 模式中，指定是否要調整或不下工具列影像。|  
-|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|指定大型影像的維度 （高度或寬度） 和維度的一般映像之間的比率。|  
+|[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Specifies whether to scale or not toolbar images in high DPI mode.|  
+|[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Specifies the ratio between the dimension (height or width) of large images and the dimension of regular images.|  
   
-## <a name="remarks"></a>備註  
- 若要納入`CMFCToolBar`物件插入您的應用程式，請遵循下列步驟︰  
+## <a name="remarks"></a>Remarks  
+ To incorporate a `CMFCToolBar` object into your application, follow these steps:  
   
-1.  新增`CMFCToolBar`主框架視窗的物件。  
+1.  Add a `CMFCToolBar` object to the main frame window.  
   
-2.  當您處理`WM_CREATE`主框架視窗的訊息、 呼叫[CMFCToolBar::Create](#create)或[CMFCToolBar::CreateEx](#createex)建立工具列，並指定其樣式。  
+2.  When you process the `WM_CREATE` message for the main frame window, call either [CMFCToolBar::Create](#create) or [CMFCToolBar::CreateEx](#createex) to create the toolbar and specify its style.  
   
-3.  呼叫[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)指定的停駐樣式。  
+3.  Call [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) to specify the docking style.  
   
- 若要插入的特殊按鈕，例如下拉式方塊或下拉式工具列中，保留 dummy 按鈕在父資源中，並取代 dummy 按鈕，在執行階段使用[CMFCToolBar::ReplaceButton](#replacebutton)。 如需詳細資訊，請參閱[逐步解說︰ 將工具列控制項](../walkthrough-putting-controls-on-toolbars.md)。  
+ To insert a special button, such as a combo box or drop-down toolbar, reserve a dummy button in the parent resource, and replace the dummy button at runtime by using [CMFCToolBar::ReplaceButton](#replacebutton). For more information, see [Walkthrough: Putting Controls On Toolbars](../walkthrough-putting-controls-on-toolbars.md).  
   
- `CMFCToolBar`MFC 程式庫類別的基底類別[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)， [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)，和[CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)。  
+ `CMFCToolBar` is the base class for the MFC Library classes [CMFCMenuBar Class](../../mfc/reference/cmfcmenubar-class.md), [CMFCPopupMenuBar Class](../../mfc/reference/cmfcpopupmenubar-class.md), and [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md).  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的`CMFCToolBar`類別。 此範例示範如何設定標籤文字的視窗的工具列、 設定的框線，將樣式 窗格中，設定和啟用**新增或移除按鈕**會出現在結尾工具列的按鈕。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCToolBar` class. The example shows how to set the text of the window label of the tool bar, set the borders, set the style of the pane, and enable the **Add or Remove Buttons** button that appears on the end of the toolbar. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo # 8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxtoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbar.h  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -419,42 +573,42 @@ class CMFCToolBar : public CMFCBaseToolBar
   
  `CMFCToolBar`  
   
-##  <a name="addbasiccommand"></a>CMFCToolBar::AddBasicCommand  
- 將功能表命令加入至永遠會在使用者開啟功能表時所顯示的命令的清單。  
+##  <a name="addbasiccommand"></a>  CMFCToolBar::AddBasicCommand  
+ Adds a menu command to the list of commands that are always displayed when a user opens a menu.  
   
 ```  
 static void __stdcall AddBasicCommand(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 指定要加入的命令。  
+ Specifies the command to add.  
   
-### <a name="remarks"></a>備註  
- 在功能表開啟時，一律會顯示基本的命令。 當使用者選擇要檢視最近使用的命令時，這個方法是有意義。  
+### <a name="remarks"></a>Remarks  
+ A basic command is always displayed when the menu is opened. This method is meaningful when the user chooses to view recently used commands.  
   
- 使用[CMFCToolBar::SetBasicCommands](#setbasiccommands)方法，以設定永遠會在使用者開啟功能表時所顯示的命令的清單。 使用[CMFCToolBar::GetBasicCommands](#getbasiccommands)方法來擷取基本的命令，可由您的應用程式的清單。  
+ Use the [CMFCToolBar::SetBasicCommands](#setbasiccommands) method to set the list of commands that are always displayed when a user opens a menu. Use the [CMFCToolBar::GetBasicCommands](#getbasiccommands) method to retrieve the list of basic commands that is used by your application.  
   
-##  <a name="addcommandusage"></a>CMFCToolBar::AddCommandUsage  
- 其中一個指定的命令相關聯的計數器遞增。  
+##  <a name="addcommandusage"></a>  CMFCToolBar::AddCommandUsage  
+ Increments by one the counter that is associated with the given command.  
   
 ```  
 static void __stdcall AddCommandUsage(UINT uiCommand);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCommand`  
- 指定命令計數器遞增。  
+ Specifies the command counter to increment.  
   
-### <a name="remarks"></a>備註  
- 當使用者選取功能表項目時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the user selects a menu item.  
   
- 架構會使用命令的計數器，可用來顯示最近使用的功能表項目。  
+ The framework uses command counters to display recently used menu items.  
   
- 這個方法會使用命令計數器[CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd)方法。  
+ This method increments the command counter by using the [CMFCCmdUsageCount::AddCmd](../../mfc/reference/cmfccmdusagecount-class.md#addcmd) method.  
   
-##  <a name="addtoolbarforimagecollection"></a>CMFCToolBar::AddToolBarForImageCollection  
- 將影像從使用者介面資源加入至應用程式中的映像的集合。  
+##  <a name="addtoolbarforimagecollection"></a>  CMFCToolBar::AddToolBarForImageCollection  
+ Adds images from the user interface resources to the collection of images in the application.  
   
 ```  
 static BOOL __stdcall AddToolBarForImageCollection(
@@ -466,104 +620,104 @@ static BOOL __stdcall AddToolBarForImageCollection(
     UINT uiMenuDisabledResID=0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiResID`  
- 資源識別碼的映像包含的工具列來載入。  
+ Resource ID of a toolbar with images to load.  
   
  [in] `uiBmpResID`  
- 工具列影像的點陣圖的資源識別碼。  
+ Resource ID of a bitmap with toolbar images.  
   
  [in] `uiColdResID`  
- 「 冷 」 的工具列影像的點陣圖的資源識別碼。  
+ Resource ID of a bitmap with "cold" toolbar images.  
   
  [in] `uiMenuResID`  
- 功能表影像的點陣圖的資源識別碼。  
+ Resource ID of a bitmap with menu images.  
   
  [in] `uiDisabledResID`  
- 已停用的工具列影像的點陣圖的資源識別碼。  
+ Resource ID of a bitmap with disabled toolbar images.  
   
  [in] `uiMenuDisabledResID`  
- 已停用的功能表影像的點陣圖的資源識別碼。  
+ Resource ID of a bitmap with disabled menu images.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功。`FALSE`如果`uiResID`或`uiBmpResID`未指定有效的資源，或發生其他錯誤。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds; `FALSE` if `uiResID` or `uiBmpResID` do not specify valid resources, or another error occurs.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以載入工具列影像的點陣圖，並將它加入至工具列影像的集合。 這個方法會建立暫存的工具列物件並呼叫[CMFCToolBar::LoadToolBar](#loadtoolbar)。  
+### <a name="remarks"></a>Remarks  
+ Call this method to load a bitmap with toolbar images and add it to the collection of toolbar images. This method creates a temporary toolbar object and calls [CMFCToolBar::LoadToolBar](#loadtoolbar).  
   
-##  <a name="adjustlayout"></a>CMFCToolBar::AdjustLayout  
- 重新計算的大小和位置 工具列。  
+##  <a name="adjustlayout"></a>  CMFCToolBar::AdjustLayout  
+ Recalculates the size and position of a toolbar.  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-### <a name="remarks"></a>備註  
- 若要重新計算的大小和位置建立工具列之後呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ Call this method when the toolbar has been created to recalculate its size and position.  
   
- 架構會呼叫這個方法必須變更工具列的版面配置每次。 例如，使用者將另一個控制列移動、 調整應用程式視窗，或自訂工具列時，必須變更版面配置。  
+ The framework calls this method every time that the layout of the toolbar must be changed. For example, the layout must change when the user moves another control bar, resizes an application window, or customizes the toolbar.  
   
- 覆寫這個方法以提供您自己衍生自的類別中的動態配置`CMFCToolbar`。  
+ Override this method to provide your own dynamic layout in classes that you derive from `CMFCToolbar`.  
   
-##  <a name="adjustsize"></a>CMFCToolBar::AdjustSize  
- 重新計算工具列的大小。  
+##  <a name="adjustsize"></a>  CMFCToolBar::AdjustSize  
+ Recalculates the size of the toolbar.  
   
 ```  
 void AdjustSize();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法可確保工具列納入父框架的界限。 如果工具列有沒有父框架，這個方法任何作用。  
+### <a name="remarks"></a>Remarks  
+ This method makes sure that the toolbar fits in the bounds of the parent frame. This method does nothing if the toolbar has no parent frame.  
   
- [CMFCToolBar::AdjustLayout](#adjustlayout)方法會呼叫這個方法，以重新計算的大小，如果不是工具列的父`CMFCReBar`物件。  
+ The [CMFCToolBar::AdjustLayout](#adjustlayout) method calls this method to recalculate the size if the parent of the toolbar is not a `CMFCReBar` object.  
   
-##  <a name="allowchangetextlabels"></a>CMFCToolBar::AllowChangeTextLabels  
- 指定是否可以顯示文字標籤底下的工具列按鈕上的映像。  
+##  <a name="allowchangetextlabels"></a>  CMFCToolBar::AllowChangeTextLabels  
+ Specifies whether text labels can be shown under images on the toolbar buttons.  
   
 ```  
 virtual BOOL AllowChangeTextLabels() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果允許顯示影像; 下方的文字標籤否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if it is allowed to display text labels below images; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法是 [自訂] 對話方塊，來判斷是否要啟用**顯示文字標籤**上的核取方塊**工具列**頁面選取的工具列。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the customization dialog box to determine whether to enable a **Show text labels** check-box on the **Toolbars** page for the selected toolbar.  
   
- 預設實作會傳回 `TRUE`。  
+ The default implementation returns `TRUE`.  
   
- 覆寫這個方法在衍生自物件`CMFCToolBar`並傳回`FALSE`當您不要使用者決定是否在影像下方的工具列按鈕上顯示文字標籤。  
+ Override this method in an object derived from `CMFCToolBar` and return `FALSE` when you do not want the user to decide whether text labels are displayed on toolbar buttons under the images.  
   
-##  <a name="allowshowonlist"></a>CMFCToolBar::AllowShowOnList  
- 決定工具列是否會顯示在清單中的工具列上**工具列**窗格**自訂** 對話方塊。  
+##  <a name="allowshowonlist"></a>  CMFCToolBar::AllowShowOnList  
+ Determines whether the toolbar is displayed in the list of toolbars on the **Toolbars** pane of the **Customize** dialog box.  
   
 ```  
 virtual BOOL AllowShowOnList() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列物件可以顯示在清單方塊中，在工具列的 [自訂] 頁面。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar object can be displayed in the list box on the toolbar customization page; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來判斷工具列的 [自訂] 頁面上的清單是否應包含衍生自特定的物件架構`CMFCToolBar`。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework to determine whether the list on the toolbar customization page should include a particular object derived from `CMFCToolBar`.  
   
- 預設實作一定會傳回`TRUE`。 當您不想要出現在 [自訂] 對話方塊中的 [工具列] 清單中的工具列，請覆寫這個方法。  
+ The default implementation always returns `TRUE`. Override this method when you do not want a toolbar to appear in the toolbars list in the customization dialog box.  
   
-##  <a name="aretextlabels"></a>CMFCToolBar::AreTextLabels  
- 指定影像下方文字標籤是否目前顯示在工具列按鈕上。  
+##  <a name="aretextlabels"></a>  CMFCToolBar::AreTextLabels  
+ Specifies whether text labels under images are currently displayed on the toolbar buttons.  
   
 ```  
 BOOL AreTextLabels() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列按鈕顯示的影像; 下方的文字標籤否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar buttons display text labels below images; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCToolBar::EnableTextLabels](#enabletextlabels)可指定是否要顯示的文字。 預設值是 `FALSE`。 呼叫[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels)來指定使用者是否可以變更此設定在 [自訂] 對話方塊。  
+### <a name="remarks"></a>Remarks  
+ Use [CMFCToolBar::EnableTextLabels](#enabletextlabels) to specify whether the text is displayed. The default value is `FALSE`. Call [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) to specify whether the user can change this setting in the customization dialog box.  
   
-##  <a name="autograyinactiveimages"></a>CMFCToolBar::AutoGrayInactiveImages  
- 啟用或停用自動產生的非作用中的按鈕影像。  
+##  <a name="autograyinactiveimages"></a>  CMFCToolBar::AutoGrayInactiveImages  
+ Enable or disables the automatic generation of inactive button images.  
   
 ```  
 static void AutoGrayInactiveImages(
@@ -572,37 +726,37 @@ static void AutoGrayInactiveImages(
     BOOL bRedrawAllToolbars=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 布林值，指定是否要將非使用中的映像變暗。 如果這個參數是`TRUE`，會以灰色顯示非作用中的映像。 否則，非作用中的映像未呈現灰色。  
+ A Boolean value that specifies whether to dim inactive images. If this parameter is `TRUE`, inactive images are dimmed. Otherwise, inactive images are not dimmed.  
   
  [in] `nGrayImagePercentage`  
- 指定非使用中的映像的明亮百分比。 如果`bEnable`是`FALSE`，這個值會被忽略。  
+ Specifies the luminance percentage for inactive images. If `bEnable` is `FALSE`, this value is ignored.  
   
  [in] `bRedrawAllToolbars`  
- 布林值，指定是否要在應用程式中重新繪製所有工具列。 如果這個參數是`TRUE`，這個方法會重新繪製所有工具列。  
+ A Boolean value that specifies whether to redraw all toolbars in the application. If this parameter is `TRUE`, this method redraws all toolbars.  
   
-### <a name="remarks"></a>備註  
- 如果`bEnable`是`TRUE`，架構會使用`nGrayImagePercentage`來產生非使用中的影像，從一般的映像。 否則，您必須使用提供的一組非作用中的影像[CMFCToolBar::GetColdImages](#getcoldimages)方法。 根據預設，此選項已停用。  
+### <a name="remarks"></a>Remarks  
+ If `bEnable` is `TRUE`, the framework uses `nGrayImagePercentage` to generate inactive images from the regular images. Otherwise, you must provide the set of inactive images by using the [CMFCToolBar::GetColdImages](#getcoldimages) method. By default, this option is disabled.  
   
- 如需有關`nGrayImagePercentage`參數，請參閱[CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages)。  
+ For more information about the `nGrayImagePercentage` parameter, see [CMFCToolBarImages::GrayImages](../../mfc/reference/cmfctoolbarimages-class.md#grayimages).  
   
-##  <a name="buttontoindex"></a>CMFCToolBar::ButtonToIndex  
- 傳回指定之索引[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)此工具列中的物件。  
+##  <a name="buttontoindex"></a>  CMFCToolBar::ButtonToIndex  
+ Returns the index of a specified [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) object in this toolbar.  
   
 ```  
 int ButtonToIndex(const CMFCToolBarButton* pButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 工具列按鈕物件指標。  
+ A pointer to the toolbar button object.  
   
-### <a name="return-value"></a>傳回值  
- 索引的`pButton`工具列按鈕，則為-1 指定的按鈕不在此工具列上的內部清單中。  
+### <a name="return-value"></a>Return Value  
+ Index of `pButton` in the internal list of toolbar buttons; or -1 if the specified button is not on this toolbar.  
   
-##  <a name="calcfixedlayout"></a>CMFCToolBar::CalcFixedLayout  
- 計算工具列的水平大小。  
+##  <a name="calcfixedlayout"></a>  CMFCToolBar::CalcFixedLayout  
+ Calculates the horizontal size of the toolbar.  
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -610,139 +764,139 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bStretch`  
- `TRUE`若要延伸的父框架大小工具列。  
+ `TRUE` to stretch the toolbar to the size of the parent frame.  
   
  [in] `bHorz`  
- `TRUE`為設定工具列水平空間。`FALSE`調整成垂直工具列。  
+ `TRUE` to orient the toolbar horizontally; `FALSE` to orient the toolbar vertically.  
   
-### <a name="return-value"></a>傳回值  
- A`CSize`物件，指定工具列的大小。  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that specifies the size of the toolbar.  
   
-### <a name="remarks"></a>備註  
- 這個方法會使用計算工具列的大小`CMFCToolBar::CalcLayout`方法。 它會傳遞`LM_STRETCH`旗標，以`dwMode`參數如果`bStretch`是`TRUE`。 它會傳遞`LM_HORZ`旗標，如果`bHorz`是`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ This method calculates the size of the toolbar by using the `CMFCToolBar::CalcLayout` method. It passes the `LM_STRETCH` flag for the `dwMode` parameter if `bStretch` is `TRUE`. It passes the `LM_HORZ` flag if `bHorz` is `TRUE`.  
   
- 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
+ See the VisualStudioDemo sample for an example that uses this method.  
   
-##  <a name="calcmaxbuttonheight"></a>CMFCToolBar::CalcMaxButtonHeight  
- 計算工具列中按鈕的最大的高度。  
+##  <a name="calcmaxbuttonheight"></a>  CMFCToolBar::CalcMaxButtonHeight  
+ Calculates the maximum height of buttons in the toolbar.  
   
 ```  
 virtual int CalcMaxButtonHeight();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 按鈕的最大高度。  
+### <a name="return-value"></a>Return Value  
+ The maximum height of buttons.  
   
-### <a name="remarks"></a>備註  
- 這個方法會計算在工具列上的所有工具列按鈕之間的最大高度。 高度會根據目前的工具列停駐狀態等因素而有所不同。  
+### <a name="remarks"></a>Remarks  
+ This method calculates the maximum height among all toolbar buttons on the toolbar. The height may vary depending on factors such as the current toolbar docking state.  
   
- 衍生自的類別中置換此方法`CMFCToolBar`提供您自己的高度計算。  
+ Override this method in a class derived from `CMFCToolBar` to provide your own height calculation.  
   
-##  <a name="calcsize"></a>CMFCToolBar::CalcSize  
- 由架構呼叫配置計算程序的一部分。  
+##  <a name="calcsize"></a>  CMFCToolBar::CalcSize  
+ Called by the framework as part of the layout calculation process.  
   
 ```  
 virtual CSize CalcSize(BOOL bVertDock);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bVertDock`  
- `TRUE`若要指定的工具列停駐垂直;`FALSE`指定的工具列是否停駐水平。  
+ `TRUE` to specify that the toolbar is docked vertically; `FALSE` to specify that the toolbar is docked horizontally.  
   
-### <a name="return-value"></a>傳回值  
- A`CSize`物件，指定在工具列上的按鈕的整體大小。  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that specifies the overall size of the buttons on the toolbar.  
   
-### <a name="remarks"></a>備註  
- 這個方法會將視為會影響每個按鈕，例如文字標籤框線大小的區域大小的屬性。  
+### <a name="remarks"></a>Remarks  
+ This method considers the attributes that affect the size of each button, such as the area of the text label and the border size.  
   
- 如果工具列不包含任何按鈕時，這個方法會傳回單一的按鈕保留的大小使用[CMFCToolBar::GetButtonSize](#getbuttonsize)方法。  
+ If the toolbar contains no buttons, this method returns the reserved size of a single button by using the [CMFCToolBar::GetButtonSize](#getbuttonsize) method.  
   
-##  <a name="canbeclosed"></a>CMFCToolBar::CanBeClosed  
- 指定使用者是否可以關閉工具列。  
+##  <a name="canbeclosed"></a>  CMFCToolBar::CanBeClosed  
+ Specifies whether a user can close the toolbar.  
   
 ```  
 virtual BOOL CanBeClosed() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可由使用者; 關閉工具列否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar can be closed by the user; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來判斷使用者是否可以關閉工具列。 如果此方法會傳回`TRUE`架構可讓 SC_CLOSE 命令工具列的 [系統] 功能表中，使用者可以關閉工具列使用 [自訂] 對話方塊中的工具列的清單中的核取方塊。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether the user can close a toolbar. If the method returns `TRUE`, the framework enables the SC_CLOSE command in the system menu of the toolbar and the user can close the toolbar by using a check box in the list of toolbars in the customization dialog box.  
   
- 預設實作會傳回 `TRUE`。 衍生自的類別中置換此方法`CMFCToolBar`讓使用者無法關閉的工具列物件。  
+ The default implementation returns `TRUE`. Override this method in a class derived from `CMFCToolBar` to make toolbar objects that cannot be closed by the user.  
   
-##  <a name="canberestored"></a>CMFCToolBar::CanBeRestored  
- 決定是否系統可以還原工具列到其原始狀態後自訂。  
+##  <a name="canberestored"></a>  CMFCToolBar::CanBeRestored  
+ Determines whether the system can restore a toolbar to its original state after customization.  
   
 ```  
 virtual BOOL CanBeRestored() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果您可以從應用程式資源還原工具列否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar can be restored from the application resources; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，以決定是否工具列可回到其原始狀態後自訂。 從應用程式資源載入原始狀態。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether a toolbar can be returned to its original state after customization. The original state is loaded from the application resources.  
   
- 如果`CanBeRestored`傳回`TRUE`、**工具列**頁面的 [自訂] 對話方塊可讓**重設**選取的工具列按鈕。  
+ If `CanBeRestored` returns `TRUE`, the **Toolbars** page of the customization dialog box enables the **Reset** button for the selected toolbar.  
   
- 預設實作會傳回`TRUE`工具列時載入它的原始的資源識別碼是否為非零。 通常，只有使用者定義工具列無法還原。  
+ The default implementation returns `TRUE` if the original resource ID of the toolbar when it was loaded is non-zero. Usually, only user-defined toolbars cannot be restored.  
   
- 您可以覆寫`CanBeRestored`方法，以自訂此行為在衍生類別。  
+ You can override the `CanBeRestored` method to customize this behavior in derived classes.  
   
-##  <a name="canfocus"></a>CMFCToolBar::CanFocus  
- 指定窗格是否能夠接收焦點。  
+##  <a name="canfocus"></a>  CMFCToolBar::CanFocus  
+ Specifies whether the pane can receive focus.  
   
 ```  
 virtual BOOL CanFocus() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 此方法會傳回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會覆寫基底類別實作中， [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus)，因為工具列物件無法接收焦點。  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation, [CBasePane::CanFocus](../../mfc/reference/cbasepane-class.md#canfocus), because toolbar objects cannot receive focus.  
   
-##  <a name="canhandlesiblings"></a>CMFCToolBar::CanHandleSiblings  
- 決定是否工具列和其同層級位於相同的窗格上。  
+##  <a name="canhandlesiblings"></a>  CMFCToolBar::CanHandleSiblings  
+ Determines whether the toolbar and its sibling are positioned on the same pane.  
   
 ```  
 BOOL CanHandleSiblings();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果工具列有同層級而工具列和其同層級位於相同的窗格上則為 `TRUE`，否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar has a sibling and the toolbar and its sibling are positioned on the same pane; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 內部 cmfccustomizebutton:: Createpopupmenu 方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果此方法傳回`TRUE`，架構會顯示**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕。  
+### <a name="remarks"></a>Remarks  
+ The internal CMFCCustomizeButton::CreatePopupMenu method calls this method to determine how to show the **Customize** pop-up menu. If this method returns `TRUE`, the framework displays the **Show Buttons on One Row** or **Show Buttons on Two Rows** buttons.  
   
- 您通常不需要使用這個方法。 若要啟用**自訂**按鈕出現在工具列上，呼叫[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法。 若要啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕，請呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
+ You typically do not have to use this method. To enable the **Customize** button that appears on the toolbar, call the [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) method. To enable the **Show Buttons on One Row** or **Show Buttons on Two Rows** buttons, call [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="cleanupimages"></a>CMFCToolBar::CleanUpImages  
- 釋放系統資源配置給下工具列影像。  
+##  <a name="cleanupimages"></a>  CMFCToolBar::CleanUpImages  
+ Frees the system resources allocated for toolbar images.  
   
 ```  
 static void CMFCToolBar::CleanUpImages();
 ```  
   
-### <a name="remarks"></a>備註  
- 應用程式關閉時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when an application shuts down.  
   
-##  <a name="cleanuplockedimages"></a>CMFCToolBar::CleanUpLockedImages  
- 釋放系統資源配置的鎖定的工具列影像。  
+##  <a name="cleanuplockedimages"></a>  CMFCToolBar::CleanUpLockedImages  
+ Frees the system resources allocated for locked toolbar images.  
   
 ```  
 void CleanUpLockedImages();
 ```  
   
-### <a name="remarks"></a>備註  
- 當您的應用程式的視覺化樣式變更時，請呼叫這個方法。 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
+### <a name="remarks"></a>Remarks  
+ Call this method when the visual style of your application changes. See the VisualStudioDemo sample for an example that uses this method.  
   
-##  <a name="commandtoindex"></a>CMFCToolBar::CommandToIndex  
- 傳回與指定的命令識別碼工具列中按鈕的索引  
+##  <a name="commandtoindex"></a>  CMFCToolBar::CommandToIndex  
+ Returns the index of the button in the toolbar with a specified command ID.  
   
 ```  
 int CommandToIndex(
@@ -750,23 +904,23 @@ int CommandToIndex(
     int iIndexFirst=0) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIDFind`  
- 指定命令識別碼。  
+ Specifies the command ID.  
   
  [in] `iIndexFirst`  
- 指定從啟動的起始索引。  
+ Specifies the initial index to start from.  
   
-### <a name="return-value"></a>傳回值  
- 如果該方法成功; 工具列按鈕的以零起始的索引-1 表示沒有 按鈕以指定的識別碼。  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the toolbar button if the method was successful; -1 if there is no button with the specified ID.  
   
-### <a name="remarks"></a>備註  
- A`CMFCToolBar`物件會維護的內部清單，在工具列上的按鈕。 呼叫此函式可擷取按鈕指定按鈕的命令 ID 的清單中的索引。  
+### <a name="remarks"></a>Remarks  
+ A `CMFCToolBar` object maintains an internal list of the buttons on the toolbar. Call this function to retrieve the index of a button in the list given the command ID of the button.  
   
- 如果`iIndex`大於 0，這個方法會忽略任何索引鍵的工具列上的按鈕少於`iIndex`。  
+ If `iIndex` is greater than 0, this method ignores any button on the toolbar that has an index less than `iIndex`.  
   
-##  <a name="create"></a>CMFCToolBar::Create  
- 建立 `CMFCToolBar` 物件。  
+##  <a name="create"></a>  CMFCToolBar::Create  
+ Creates a `CMFCToolBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -775,24 +929,24 @@ virtual BOOL Create(
     UINT nID=AFX_IDW_TOOLBAR);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
- 工具列的父視窗的指標。  
+ A pointer to the parent window of the toolbar.  
   
  [in] `dwStyle`  
- 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如樣式清單。  
+ The toolbar style. See [Toolbar Control and Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb760439) in the Windows SDK for the list of styles.  
   
  [in] `nID`  
- 子視窗的工具列的識別碼。  
+ The ID of the child window of the toolbar.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method succeeds; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會建立一種控制列，並將其附加至工具列。 它會建立具有的控制列`TBSTYLE_FLAT`樣式。 呼叫[CMFCToolBar::CreateEx](#createex)如果要使用不同的控制項列樣式。  
+### <a name="remarks"></a>Remarks  
+ This method creates a control bar and attaches it to the toolbar. It creates the control bar with the `TBSTYLE_FLAT` style. Call [CMFCToolBar::CreateEx](#createex) if you want a different control bar style.  
   
-##  <a name="createex"></a>CMFCToolBar::CreateEx  
- 建立`CMFCToolBar`會使用其他樣式選項，例如大型圖示的物件。  
+##  <a name="createex"></a>  CMFCToolBar::CreateEx  
+ Creates a `CMFCToolBar` object that uses additional style options, such as large icons.  
   
 ```  
 virtual BOOL CreateEx(
@@ -806,64 +960,64 @@ virtual BOOL CreateEx(
     UINT nID=AFX_IDW_TOOLBAR);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pParentWnd`  
- 工具列的父視窗的指標。  
+ A pointer to the parent window of the toolbar.  
   
  [in] `dwCtrlStyle`  
- 建立內嵌的控制列物件的其他樣式。  
+ Additional styles for creating the embedded control bar object.  
   
  [in] `dwStyle`  
- 工具列的樣式。 請參閱[工具列控制項和按鈕樣式](http://msdn.microsoft.com/library/windows/desktop/bb760439)適當樣式的清單。  
+ The toolbar style. See [Toolbar Control and Button Styles](http://msdn.microsoft.com/library/windows/desktop/bb760439) for a list of appropriate styles.  
   
  [in] `rcBorders`  
- A`CRect`物件，指定工具列視窗框線的寬度。  
+ A `CRect` object that specifies the widths of the toolbar window borders.  
   
  [in] `nID`  
- 子視窗的工具列的識別碼。  
+ The ID of the child window of the toolbar.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這個方法會建立一種控制列，並將其附加至工具列。  
+### <a name="remarks"></a>Remarks  
+ This method creates a control bar and attaches it to the toolbar.  
   
- 呼叫這個方法，而不是[CMFCToolBar::Create](#create)當您想要提供特定的樣式。 例如，設定`dwCtrlStyle`至`TBSTYLE_FLAT | TBSTYLE_TRANSPARENT`來建立類似於所使用的 Internet Explorer 4 工具列的工具列。  
+ Call this method instead of [CMFCToolBar::Create](#create) when you want to provide specific styles. For example, set `dwCtrlStyle` to `TBSTYLE_FLAT | TBSTYLE_TRANSPARENT` to create a toolbar that resembles the toolbars that are used by Internet Explorer 4.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`CreateEx`方法`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `CreateEx` method of the `CMFCToolBar` class. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo # 7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="deactivate"></a>CMFCToolBar::Deactivate  
- 工具列就會停用。  
+##  <a name="deactivate"></a>  CMFCToolBar::Deactivate  
+ Deactivates the toolbar.  
   
 ```  
 virtual void Deactivate();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會將焦點移除反白顯示的工具列按鈕，停用工具列。 工具列失去焦點或損毀時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ This method deactivates the toolbar by removing the focus from the highlighted toolbar button. The framework calls this method when the toolbar loses focus or is destroyed.  
   
-##  <a name="dopaint"></a>CMFCToolBar::DoPaint  
- 工具列會重新繪製。  
+##  <a name="dopaint"></a>  CMFCToolBar::DoPaint  
+ Repaints a toolbar.  
   
 ```  
 virtual void DoPaint(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>備註  
- 必須重新繪製該工具列的一部分時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when a part of the toolbar must be repainted.  
   
- 覆寫這個方法以自訂物件衍生自外觀`CMFCToolBar`。  
+ Override this method to customize the appearance of an object derived from `CMFCToolBar`.  
   
-##  <a name="drawbutton"></a>CMFCToolBar::DrawButton  
- 工具列按鈕會重新繪製。  
+##  <a name="drawbutton"></a>  CMFCToolBar::DrawButton  
+ Repaints a toolbar button.  
   
 ```  
 virtual BOOL DrawButton(
@@ -874,32 +1028,32 @@ virtual BOOL DrawButton(
     BOOL bDrawDisabledImages);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `pButton`  
- 若要繪製的按鈕指標。  
+ A pointer to a button to draw.  
   
  [in] `pImages`  
- 指標，工具列影像。  
+ A pointer to the toolbar images.  
   
  [in] `bHighlighted`  
- `TRUE`如果按鈕會反白顯示。，否則`FALSE`。  
+ `TRUE` if the button is highlighted; otherwise `FALSE`.  
   
  [in] `bDrawDisabledImages`  
- `TRUE`如果已停用的按鈕會呈暗灰色。，否則`FALSE`。  
+ `TRUE` if disabled buttons are dimmed; otherwise `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果按鈕重新繪製。`FALSE`如果會隱藏按鈕。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button was repainted; `FALSE` if the button is hidden.  
   
-### <a name="remarks"></a>備註  
- [CMFCToolBar::DrawButton](#drawbutton)工具列按鈕必須重繪時，方法會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The [CMFCToolBar::DrawButton](#drawbutton) method calls this method when a toolbar button must be repainted.  
   
- 如果您想要自訂的工具列上的按鈕外觀，請覆寫這個方法。  
+ Override this method if you want to customize the appearance of buttons on your toolbar.  
   
-##  <a name="drawseparator"></a>CMFCToolBar::DrawSeparator  
- 在工具列上的分隔符號會重新繪製。  
+##  <a name="drawseparator"></a>  CMFCToolBar::DrawSeparator  
+ Repaints a separator on a toolbar.  
   
 ```  
 virtual void DrawSeparator(
@@ -908,23 +1062,23 @@ virtual void DrawSeparator(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
  [in] `rect`  
- 週框繪製分隔符號的位置，可像素為單位的位置。  
+ The bounding rectangle of the location where the separator is drawn, in pixels.  
   
  [in] `bHorz`  
- `TRUE`如果分隔符號是水平的`FALSE`如果分隔符號是垂直。  
+ `TRUE` if the separator is horizontal, `FALSE` if the separator is vertical.  
   
-### <a name="remarks"></a>備註  
- [CMFCToolBar::DoPaint](#dopaint)呼叫這個方法針對每個[CMFCToolBar::DrawSeparator](#drawseparator)具有物件`TBBS_SEPARATOR`樣式，而不是呼叫[CMFCToolBar::DrawButton](#drawbutton)這些按鈕。  
+### <a name="remarks"></a>Remarks  
+ [CMFCToolBar::DoPaint](#dopaint) calls this method for each [CMFCToolBar::DrawSeparator](#drawseparator) object that has the `TBBS_SEPARATOR` style, instead of calling [CMFCToolBar::DrawButton](#drawbutton) for those buttons.  
   
- 衍生自的類別中置換此方法[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)自訂分隔符號 工具列上的外觀。 預設實作會呼叫[CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator)繪製其外觀取決於目前的視覺管理員的分隔符號。  
+ Override this method in a class derived from [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) to customize the appearance of separators on the toolbar. The default implementation calls [CMFCVisualManager::OnDrawSeparator](../../mfc/reference/cmfcvisualmanager-class.md#ondrawseparator) to draw a separator whose appearance is determined by the current visual manager.  
   
-##  <a name="enablecustomizebutton"></a>Cmfctoolbar:: Enablecustomizebutton  
- 啟用或停用會出現在工具列的 [自訂] 按鈕。  
+##  <a name="enablecustomizebutton"></a>  CMFCToolBar::EnableCustomizeButton  
+ Enables or disables the Customize button that appears on the toolbar.  
   
 ```  
 void EnableCustomizeButton(
@@ -941,164 +1095,164 @@ void EnableCustomizeButton(
     BOOL bQuickCustomize=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- 啟用或停用 [自訂] 按鈕。  
+ Enables or disables the Customize button.  
   
  [in] `iCustomizeCmd`  
- 自訂按鈕的命令識別碼。  
+ The command ID of the Customize button.  
   
  [in] `strCustomizeText`  
- 自訂按鈕的文字標籤。  
+ The text label of the Customize button.  
   
  [in] `uiCustomizeTextResId`  
- 資源字串的自訂按鈕標籤識別碼。  
+ The resource string ID of the Customize button label.  
   
  [in] `bQuickCustomize`  
- 啟用或停用**新增或移除按鈕**下拉按鈕的功能表上的選項。  
+ Enables or disables the **Add or Remove Buttons** option on the menu that drops down from the button.  
   
-### <a name="remarks"></a>備註  
- 如果`iCustomizeCmd`為-1，架構會顯示自訂按鈕時多個工具列按鈕不適合工具列區域中。 按鈕會顯示兩個向左箭號的 > 形箭號，表示有更多的按鈕。  
+### <a name="remarks"></a>Remarks  
+ If `iCustomizeCmd` is -1, the framework displays the Customize button when multiple toolbar buttons do not fit in the toolbar area. The button displays a double left-pointing arrow, or chevron, which indicates that there are more buttons.  
   
- 如果`iCustomizeCmd`指定有效的命令識別碼和`bEnable`是`TRUE`，一律會顯示 [自訂] 按鈕。 按鈕會有少量向下箭號，並開啟的功能表包含命令。 此命令會使用所指定的文字標籤`strCustomizeText`。 如果`bQuickCustomize`也`TRUE`，功能表就會顯示**新增或移除按鈕**選項。  
+ If `iCustomizeCmd` specifies a valid command ID, and `bEnable` is `TRUE`, the Customize button is always displayed. The button has a small down arrow and opens a menu that contains a command. This command uses the text label specified by `strCustomizeText`. If `bQuickCustomize` is also `TRUE`, the menu displays the **Add or Remove Buttons** option.  
   
- 架構動態新增至功能表工具列區域之前由所指定的項目不符合任何按鈕`iCustomizeCmd`。 隨即出現的 > 形箭號旁的向下箭號。  
+ The framework dynamically adds to the menu any buttons that do not fit in the toolbar area before the item that is specified by `iCustomizeCmd`. The chevron is displayed next to the down arrow.  
   
-##  <a name="enabledocking"></a>CMFCToolBar::EnableDocking  
- 主框架窗格的停駐啟用。  
+##  <a name="enabledocking"></a>  CMFCToolBar::EnableDocking  
+ Enables docking of the pane to the main frame.  
   
 ```  
 virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwAlignment`  
- 指定要啟用的停駐對齊。  
+ Specifies the docking alignment to enable.  
   
-### <a name="remarks"></a>備註  
- 此方法擴充的基底類別實作， [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)，藉由設定`CBasePane::m_dwControlBarStyle`資料成員，才能`AFX_CBRS_FLOAT`。 這個方法接著會傳遞`dwAlignment`基底類別實作。  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking), by setting the `CBasePane::m_dwControlBarStyle` data member to `AFX_CBRS_FLOAT`. This method then passes `dwAlignment` to the base class implementation.  
   
-##  <a name="enablelargeicons"></a>CMFCToolBar::EnableLargeIcons  
- 啟用或停用工具列按鈕上的大型圖示。  
+##  <a name="enablelargeicons"></a>  CMFCToolBar::EnableLargeIcons  
+ Enables or disables large icons on toolbar buttons.  
   
 ```  
 void EnableLargeIcons(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用大型圖示，`FALSE`停用大圖示。  
+ `TRUE` to enable large icons, `FALSE` to disable large icons.  
   
-### <a name="remarks"></a>備註  
- 根據預設，會啟用 大圖示。  
+### <a name="remarks"></a>Remarks  
+ By default, large icons are enabled.  
   
-##  <a name="enablequickcustomization"></a>CMFCToolBar::EnableQuickCustomization  
- 啟用或停用快速自訂工具列，讓使用者可以按**Alt**鍵，然後將按鈕拖曳至新位置。  
+##  <a name="enablequickcustomization"></a>  CMFCToolBar::EnableQuickCustomization  
+ Enables or disables the quick customization of toolbars so that the user can press the **Alt** key and drag a button to a new location.  
   
 ```  
 static void EnableQuickCustomization(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用快速的自訂`FALSE`停用快速自訂。  
+ `TRUE` to enable quick customization, `FALSE` to disable quick customization.  
   
-##  <a name="enablereflections"></a>CMFCToolBar::EnableReflections  
- 啟用或停用命令反映。  
+##  <a name="enablereflections"></a>  CMFCToolBar::EnableReflections  
+ Enables or disables command reflection.  
   
 ```  
 void EnableReflections(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用命令反映;`FALSE`停用命令反映。  
+ `TRUE` to enable command reflection; `FALSE` to disable command reflection.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以啟用命令的工具列按鈕的包含內嵌的控制項，例如下拉式方塊的反映。  
+### <a name="remarks"></a>Remarks  
+ Call this method to enable command reflection for toolbar buttons that contain embedded controls, such as combo boxes.  
   
- 更多關於命令反映的詳細資訊，請參閱[TN062: Windows 控制項訊息反映的](../../mfc/tn062-message-reflection-for-windows-controls.md)。  
+ For more information about command reflection, see [TN062: Message Reflection for Windows Controls](../../mfc/tn062-message-reflection-for-windows-controls.md).  
   
-##  <a name="enabletextlabels"></a>CMFCToolBar::EnableTextLabels  
- 啟用或停用工具列按鈕影像下方文字標籤。  
+##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels  
+ Enables or disables text labels under toolbar button images.  
   
 ```  
 void EnableTextLabels(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bEnable`  
- `TRUE`如果文字標籤出現在工具列按鈕影像。否則`FALSE`。  
+ `TRUE` if text labels appear under toolbar button images; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 如果已啟用文字標籤，在工具列上的所有按鈕會都擴大來提供用於影像下方顯示標籤的空間。 [自訂] 對話方塊已**顯示文字標籤**上的核取方塊**工具列**頁面。 當使用者選取工具列，並檢查此選項時，架構會呼叫`EnableTextLabels`針對選取的工具列。 您可以停用核取方塊物件衍生自[CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)藉由傳回`FALSE`從[CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) 。  
+### <a name="remarks"></a>Remarks  
+ If text labels are enabled, all buttons on the toolbar are enlarged to provide space for the labels to be displayed under the images. The customization dialog box has a **Show text label** check-box on the **Toolbars** page. When the user selects a toolbar and checks this option, the framework calls `EnableTextLabels` for the selected toolbar. You can disable the check-box for an object derived from [CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md) by returning `FALSE` from [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) .  
   
-##  <a name="fromhandlepermanent"></a>CMFCToolBar::FromHandlePermanent  
- 擷取的指標`CMFCToolBar`物件，其中包含指定的視窗控制代碼。  
+##  <a name="fromhandlepermanent"></a>  CMFCToolBar::FromHandlePermanent  
+ Retrieves a pointer to the `CMFCToolBar` object that contains the given window handle.  
   
 ```  
 static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hwnd`  
- 若要尋找的視窗控制代碼。  
+ The window handle to look for.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CMFCToolBar`物件，其中包含指定的視窗控制代碼，或`NULL`如果沒有對應`CMFCToolBar`物件存在。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CMFCToolBar` object that contains the given window handle, or `NULL` if no corresponding `CMFCToolBar` object exists.  
   
-### <a name="remarks"></a>備註  
- 此共用的方法會檢查在應用程式，為每個工具列`CMFCToolBar`物件，其中包含指定的視窗控制代碼。  
+### <a name="remarks"></a>Remarks  
+ This shared method examines each toolbar in the application for the `CMFCToolBar` object that contains the given window handle.  
   
-##  <a name="getallbuttons"></a>CMFCToolBar::GetAllButtons  
- 在工具列中傳回按鈕的唯讀的清單。  
+##  <a name="getallbuttons"></a>  CMFCToolBar::GetAllButtons  
+ Returns a read-only list of buttons in a toolbar.  
   
 ```  
 const CObList& GetAllButtons() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 常數參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含的集合[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ A constant reference to a [CObList Class](../../mfc/reference/coblist-class.md) object, which contains a collection of [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) objects.  
   
-##  <a name="getalltoolbars"></a>CMFCToolBar::GetAllToolbars  
- 在應用程式會傳回所有工具列的唯讀清單。  
+##  <a name="getalltoolbars"></a>  CMFCToolBar::GetAllToolbars  
+ Returns a read-only list of all toolbars in the application.  
   
 ```  
 static const CObList& GetAllToolbars();
 ```  
   
-### <a name="return-value"></a>傳回值  
- Const 參考[CObList 類別](../../mfc/reference/coblist-class.md)物件，其中包含的集合`CMFCToolBar`物件。  
+### <a name="return-value"></a>Return Value  
+ A const reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that contains a collection of `CMFCToolBar` objects.  
   
-##  <a name="getbasiccommands"></a>CMFCToolBar::GetBasicCommands  
- 傳回唯讀的應用程式中定義的基本命令清單。  
+##  <a name="getbasiccommands"></a>  CMFCToolBar::GetBasicCommands  
+ Returns a read-only list of the basic commands defined in the application.  
   
 ```  
 static const CList<UINT,UINT>& GetBasicCommands();
 ```  
   
-### <a name="return-value"></a>傳回值  
- Const 參考[CList 類別](../../mfc/reference/clist-class.md)物件，其中包含基本命令的集合。  
+### <a name="return-value"></a>Return Value  
+ A const reference to a [CList Class](../../mfc/reference/clist-class.md) object that contains a collection of basic commands.  
   
-### <a name="remarks"></a>備註  
- 新增基本命令藉由呼叫[CMFCToolBar::AddBasicCommand](#addbasiccommand)或[CMFCToolBar::SetBasicCommands](#setbasiccommands)。  
+### <a name="remarks"></a>Remarks  
+ Add basic commands by calling [CMFCToolBar::AddBasicCommand](#addbasiccommand) or [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
-##  <a name="getbutton"></a>CMFCToolBar::GetButton  
- 將指標傳回至[CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)指定索引處的物件。  
+##  <a name="getbutton"></a>  CMFCToolBar::GetButton  
+ Returns a pointer to the [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) object at a specified index.  
   
 ```  
 CMFCToolBarButton* GetButton(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 指定要傳回的按鈕索引。  
+ Specifies the index of the button to return.  
   
-### <a name="return-value"></a>傳回值  
- 如果它存在; 工具列按鈕的指標或`NULL`如果沒有這類的按鈕。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the toolbar button if it exists; or `NULL` if there is no such button.  
   
-##  <a name="getbuttoninfo"></a>CMFCToolBar::GetButtonInfo  
- 傳回命令 ID、 樣式和映像索引的指定索引處的按鈕。  
+##  <a name="getbuttoninfo"></a>  CMFCToolBar::GetButtonInfo  
+ Returns the command ID, style, and image index of the button at a specified index.  
   
 ```  
 void GetButtonInfo(
@@ -1108,56 +1262,56 @@ void GetButtonInfo(
     int& iImage) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 在工具列按鈕清單中指定的按鈕索引。  
+ Specifies the index of the button in the list of buttons on the toolbar.  
   
- [輸出] `nID`  
- 按鈕的命令識別碼。  
+ [out] `nID`  
+ The command ID of a button.  
   
- [輸出] `nStyle`  
- 按鈕的樣式。  
+ [out] `nStyle`  
+ The style of the button.  
   
- [輸出] `iImage`  
- 按鈕的影像索引。  
+ [out] `iImage`  
+ The index of the image for the button.  
   
-### <a name="remarks"></a>備註  
- `GetButtonInfo`方法尋找指定之索引處的工具列按鈕和擷取的按鈕命令識別碼、 樣式和映像索引。  
+### <a name="remarks"></a>Remarks  
+ The `GetButtonInfo` method finds a toolbar button at the specified index and retrieves the command ID, style and image index of the button.  
   
- 指定索引處的按鈕不存在，架構會將`nID`和`nStyle`為 0，和`iImage`為-1 方法傳回時。  
+ If the button at the specified index does not exist, the framework sets `nID` and `nStyle` to 0, and `iImage` to -1 when the method returns.  
   
-##  <a name="getbuttonsize"></a>CMFCToolBar::GetButtonSize  
- 傳回維度的每個按鈕的工具列上。  
+##  <a name="getbuttonsize"></a>  CMFCToolBar::GetButtonSize  
+ Returns the dimensions of each button on the toolbar.  
   
 ```  
 CSize GetButtonSize() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)指定維度的每個按鈕的工具列的物件。  
+### <a name="return-value"></a>Return Value  
+ A [CSize Class](../../atl-mfc-shared/reference/csize-class.md) object that specifies the dimensions of each button on the toolbar.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetSizes](#setsizes)或[CMFCToolBar::SetLockedSizes](#setlockedsizes)設定工具列上的每個按鈕的維度。  
+### <a name="remarks"></a>Remarks  
+ Call [CMFCToolBar::SetSizes](#setsizes) or [CMFCToolBar::SetLockedSizes](#setlockedsizes) to set the dimensions of each button on the toolbar.  
   
-##  <a name="getbuttonstyle"></a>CMFCToolBar::GetButtonStyle  
- 傳回目前位於指定索引上的工具列按鈕的樣式。  
+##  <a name="getbuttonstyle"></a>  CMFCToolBar::GetButtonStyle  
+ Returns the current style of the toolbar button that is located at the specified index.  
   
 ```  
 UINT GetButtonStyle(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定工具列按鈕的索引。  
+ Specifies the index of a toolbar button.  
   
-### <a name="return-value"></a>傳回值  
- 值，指定工具列按鈕的樣式。 。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)取得一份可能的樣式。  
+### <a name="return-value"></a>Return Value  
+ A value that specifies the style of the toolbar button. . See [ToolBar Control Styles](../../mfc/reference/toolbar-control-styles.md) for a list of possible styles.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetButtonStyle](#setbuttonstyle)設定工具列按鈕的樣式  
+### <a name="remarks"></a>Remarks  
+ Call [CMFCToolBar::SetButtonStyle](#setbuttonstyle) to set the style of a toolbar button  
   
-##  <a name="getbuttontext"></a>CMFCToolBar::GetButtonText  
- 傳回具有指定的索引的按鈕的文字標籤。  
+##  <a name="getbuttontext"></a>  CMFCToolBar::GetButtonText  
+ Returns the text label of a button that has a specified index.  
   
 ```  
 CString GetButtonText(int nIndex) const;  
@@ -1167,47 +1321,47 @@ void GetButtonText(
     CString& rString) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 工具列按鈕的索引。  
+ The index of a toolbar button.  
   
- [輸出] `rString`  
- 工具列按鈕的標籤文字。  
+ [out] `rString`  
+ The label text of the toolbar button.  
   
-### <a name="return-value"></a>傳回值  
- 工具列按鈕的標籤文字。  
+### <a name="return-value"></a>Return Value  
+ The label text of the toolbar button.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetButtonText](#setbuttontext)或[CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext)設定的文字標籤。  
+### <a name="remarks"></a>Remarks  
+ Call [CMFCToolBar::SetButtonText](#setbuttontext) or [CMFCToolBar::SetToolBarBtnText](#settoolbarbtntext) to set the text label.  
   
-##  <a name="getcoldimages"></a>CMFCToolBar::GetColdImages  
- 讓指標回到應用程式中的非作用中工具列按鈕影像的集合。  
+##  <a name="getcoldimages"></a>  CMFCToolBar::GetColdImages  
+ Returns a pointer to the collection of cold toolbar button images in the application.  
   
 ```  
 static CMFCToolBarImages* GetColdImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標的非作用中工具列按鈕的影像集合。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of cold toolbar button images.  
   
-### <a name="remarks"></a>備註  
- 冷映像是指在使用者不互動的工具列按鈕時所使用。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)或[CMFCToolBar::LoadBitmap](#loadbitmap)載入原始的映像。  
+### <a name="remarks"></a>Remarks  
+ Cold images are the images that are used when the user is not interacting with the toolbar buttons. Call [CMFCToolBar::LoadBitmapEx](#loadbitmapex) or [CMFCToolBar::LoadBitmap](#loadbitmap) to load the cold images.  
   
-##  <a name="getcolumnwidth"></a>CMFCToolBar::GetColumnWidth  
- 傳回工具列按鈕的寬度。  
+##  <a name="getcolumnwidth"></a>  CMFCToolBar::GetColumnWidth  
+ Returns the width of the toolbar buttons.  
   
 ```  
 virtual int GetColumnWidth() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 值，指定工具列按鈕的寬度。  
+### <a name="return-value"></a>Return Value  
+ A value that specifies the width of toolbar buttons.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來計算工具列版面配置。 衍生的類別，以指定不同的資料行寬度工具列中，這個方法會覆寫。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to calculate toolbar layout. Override this method in a derived class to specify a different column width for your toolbar.  
   
-##  <a name="getcommandbuttons"></a>CMFCToolBar::GetCommandButtons  
- 傳回一份應用程式中有指定的命令識別碼從所有工具列按鈕。  
+##  <a name="getcommandbuttons"></a>  CMFCToolBar::GetCommandButtons  
+ Returns a list of buttons that have a specified command ID from all toolbars in the application.  
   
 ```  
 static int GetCommandButtons(
@@ -1215,220 +1369,220 @@ static int GetCommandButtons(
     CObList& listButtons);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 按鈕的命令識別碼。  
+ The command ID of the buttons.  
   
- [輸出] `listButtons`  
- 若要參考[CObList 類別](../../mfc/reference/coblist-class.md)接收工具列按鈕清單物件。  
+ [out] `listButtons`  
+ A reference to a [CObList Class](../../mfc/reference/coblist-class.md) object that receives the list of toolbar buttons.  
   
-### <a name="return-value"></a>傳回值  
- 具有指定的命令識別碼的按鈕數目  
+### <a name="return-value"></a>Return Value  
+ The number of buttons that have the specified command ID.  
   
-##  <a name="getcount"></a>CMFCToolBar::GetCount  
- 在工具列上傳回按鈕和分隔線的數目。  
+##  <a name="getcount"></a>  CMFCToolBar::GetCount  
+ Returns the number of buttons and separators on the toolbar.  
   
 ```  
 int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 按鈕和工具列上的分隔線數目。  
+### <a name="return-value"></a>Return Value  
+ The number of buttons and separators on the toolbar.  
   
-##  <a name="getcustomizebutton"></a>CMFCToolBar::GetCustomizeButton  
- 擷取的指標`CMFCCustomizeButton`與工具列相關聯的物件。  
+##  <a name="getcustomizebutton"></a>  CMFCToolBar::GetCustomizeButton  
+ Retrieves a pointer to the `CMFCCustomizeButton` object that is associated with the toolbar.  
   
 ```  
 CMFCCustomizeButton* GetCustomizeButton();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CMFCCustomizeButton`與工具列相關聯的物件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CMFCCustomizeButton` object that is associated with the toolbar.  
   
-### <a name="remarks"></a>備註  
- 這個方法會擷取**自訂**會出現在工具列結尾的按鈕。 使用[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法，將**自訂**至工具列按鈕。  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the **Customize** button that appears at the end of the toolbar. Use the [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) method to add the **Customize** button to your toolbar.  
   
- 您可以呼叫[CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton)方法，以判斷工具列是否包含有效`CMFCCustomizeButton`物件。  
+ You can call the [CMFCToolBar::IsExistCustomizeButton](#isexistcustomizebutton) method to determine whether the toolbar contains a valid `CMFCCustomizeButton` object.  
   
-##  <a name="getdefaultimage"></a>CMFCToolBar::GetDefaultImage  
- 傳回具有指定之命令識別碼的工具列按鈕的預設影像索引  
+##  <a name="getdefaultimage"></a>  CMFCToolBar::GetDefaultImage  
+ Returns the index of the default image for a toolbar button with a specified command ID.  
   
 ```  
 static int GetDefaultImage(UINT uiID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- 指定按鈕的命令識別碼。  
+ Specifies the command ID of the button.  
   
-### <a name="return-value"></a>傳回值  
- 共用映像的清單中的工具列影像的索引。  
+### <a name="return-value"></a>Return Value  
+ The index of the toolbar image in the shared list of images.  
   
-### <a name="remarks"></a>備註  
- 使用此共用的方法來擷取具有指定之命令識別碼的工具列按鈕的預設影像索引 傳回值是共用的應用程式中的所有工具列的工具列按鈕影像集合索引。 呼叫[CMFCToolBar::GetImages](#getimages)方法，以取得此集合的指標。  
+### <a name="remarks"></a>Remarks  
+ Use this shared method to retrieve the index of the default image for a toolbar button with the specified command ID. The return value is an index into the shared collection of toolbar button images for all toolbars in the application. Call the [CMFCToolBar::GetImages](#getimages) method to obtain a pointer to this collection.  
   
-##  <a name="getdisabledimages"></a>CMFCToolBar::GetDisabledImages  
- 讓指標回到可用來在應用程式中的已停用的工具列按鈕的影像集合。  
+##  <a name="getdisabledimages"></a>  CMFCToolBar::GetDisabledImages  
+ Returns a pointer to the collection of images that are used for disabled toolbar buttons in the application.  
   
 ```  
 static CMFCToolBarImages* __stdcall GetDisabledImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 集合已停用的工具列按鈕影像的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of disabled toolbar button images.  
   
-### <a name="remarks"></a>備註  
- 使用載入已停用的工具列按鈕影像[CMFCToolBarEditBoxButton 類別](../../mfc/reference/cmfctoolbareditboxbutton-class.md)和[CMFCToolBar::LoadBitmap](#loadbitmap)方法。  
+### <a name="remarks"></a>Remarks  
+ Load the disabled toolbar button images by using the [CMFCToolBarEditBoxButton Class](../../mfc/reference/cmfctoolbareditboxbutton-class.md) and [CMFCToolBar::LoadBitmap](#loadbitmap) methods.  
   
-##  <a name="getdisabledmenuimages"></a>CMFCToolBar::GetDisabledMenuImages  
- 讓指標回到可用來在應用程式中已停用的功能表按鈕的影像集合。  
+##  <a name="getdisabledmenuimages"></a>  CMFCToolBar::GetDisabledMenuImages  
+ Returns a pointer to the collection of images that are used for disabled menu buttons in the application.  
   
 ```  
 static CMFCToolBarImages* __stdcall GetDisabledMenuImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 集合已停用的功能表影像的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of disabled menu images.  
   
-### <a name="remarks"></a>備註  
- 已停用的映像載入使用[CMFCToolBarEditBoxButton 類別](../../mfc/reference/cmfctoolbareditboxbutton-class.md)方法。  
+### <a name="remarks"></a>Remarks  
+ Load the disabled images by using the [CMFCToolBarEditBoxButton Class](../../mfc/reference/cmfctoolbareditboxbutton-class.md) method.  
   
-##  <a name="getdroppeddownmenu"></a>CMFCToolBar::GetDroppedDownMenu  
- 擷取目前顯示其子功能表的功能表按鈕物件的指標。  
+##  <a name="getdroppeddownmenu"></a>  CMFCToolBar::GetDroppedDownMenu  
+ Retrieves a pointer to the menu button object that is currently displaying its sub-menu.  
   
 ```  
 CMFCToolBarMenuButton* GetDroppedDownMenu(int* pIndex = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `pIndex`  
- 接收的按鈕索引集合中的工具列按鈕。  
+### <a name="parameters"></a>Parameters  
+ [out] `pIndex`  
+ Receives the index of the button in the collection of toolbar buttons.  
   
-### <a name="return-value"></a>傳回值  
- 顯示其子功能表的功能表按鈕物件的指標或`NULL`如果功能表沒有顯示其子功能表。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the menu button object that is displaying its sub-menu or `NULL` if no menu is displaying its sub-menu.  
   
-### <a name="remarks"></a>備註  
- 如果這個方法會傳回非`NULL`值和`pIndex`不`NULL`，指之值`pIndex`設為功能表按鈕的工具列按鈕集合中的索引。  
+### <a name="remarks"></a>Remarks  
+ If this method returns a non- `NULL` value and `pIndex` is not `NULL`, the value pointed to by `pIndex` is set to the index of the menu button in the collection of toolbar buttons.  
   
-##  <a name="getgraydisabledbuttons"></a>CMFCToolBar::GetGrayDisabledButtons  
- 指定已停用按鈕的影像是否要呈現暗灰色的版本，一般按鈕的影像，或從已停用的按鈕影像的集合。  
+##  <a name="getgraydisabledbuttons"></a>  CMFCToolBar::GetGrayDisabledButtons  
+ Specifies whether the images of disabled buttons are dimmed versions of the regular button images, or taken from the collection of disabled button images.  
   
 ```  
 BOOL GetGrayDisabledButtons() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`變暗的已停用按鈕; 映像的方法`FALSE`取得集合中已停用映像的映像。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` to dim the images of disabled buttons; `FALSE` to obtain images from the collection of disabled images.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons)呈現暗灰色的映像和集合中已停用映像的映像之間切換。  
+### <a name="remarks"></a>Remarks  
+ Use [CMFCToolBar::SetGrayDisabledButtons](#setgraydisabledbuttons) to switch between dimmed images and the images from the collection of disabled images.  
   
-##  <a name="gethighlightedbutton"></a>CMFCToolBar::GetHighlightedButton  
- 讓指標回到目前反白顯示的工具列按鈕。  
+##  <a name="gethighlightedbutton"></a>  CMFCToolBar::GetHighlightedButton  
+ Returns a pointer to the toolbar button that is currently highlighted.  
   
 ```  
 CMFCToolBarButton* GetHighlightedButton() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向工具列按鈕物件。或`NULL`如果沒有按鈕會反白顯示。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a toolbar button object; or `NULL` if no button is highlighted.  
   
-### <a name="remarks"></a>備註  
- 如果它具有鍵盤焦點時，會反白顯示的工具列按鈕。 如果工具列按鈕的熱追蹤此應用程式中的工具列按鈕會也會反白顯示 (如需詳細資訊，請參閱[CMFCToolBar::GetHotBorder](#gethotborder)和[CMFCToolBar::SetHotBorder](#sethotborder)) 和滑鼠指向它時沒有工具列按鈕或功能表項目具有鍵盤焦點。  
+### <a name="remarks"></a>Remarks  
+ A toolbar button is highlighted if it has keyboard focus. A toolbar button is also highlighted if the toolbar buttons are hot-tracked in this application (for more information, see [CMFCToolBar::GetHotBorder](#gethotborder) and [CMFCToolBar::SetHotBorder](#sethotborder)) and the mouse is pointing at it when no toolbar button or menu item has keyboard focus.  
   
-##  <a name="gethotborder"></a>CMFCToolBar::GetHotBorder  
- 判斷工具列按鈕是否*熱追蹤*。 如果按鈕熱追蹤，其反白顯示，當滑鼠移過它。  
+##  <a name="gethotborder"></a>  CMFCToolBar::GetHotBorder  
+ Determines whether the toolbar buttons are *hot-tracked*. If a button is hot-tracked, it is highlighted when the mouse moves across it.  
   
 ```  
 BOOL GetHotBorder() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列按鈕的熱追蹤。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar buttons are hot-tracked; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，工具列按鈕會熱追蹤。  
+### <a name="remarks"></a>Remarks  
+ By default, toolbar buttons are hot-tracked.  
   
-##  <a name="gethottextcolor"></a>CMFCToolBar::GetHotTextColor  
- 傳回反白顯示的工具列按鈕的文字色彩。  
+##  <a name="gethottextcolor"></a>  CMFCToolBar::GetHotTextColor  
+ Returns the text color of the highlighted toolbar buttons.  
   
 ```  
 static COLORREF GetHotTextColor();
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，表示目前反白顯示的文字色彩。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that represent the current highlighted text color.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetHotTextColor](#sethottextcolor)設定新的文字色彩反白顯示的工具列按鈕。  
+### <a name="remarks"></a>Remarks  
+ Call [CMFCToolBar::SetHotTextColor](#sethottextcolor) to set a new text color for highlighted toolbar buttons.  
   
-##  <a name="gethwndlastfocus"></a>CMFCToolBar::GetHwndLastFocus  
- 傳回之前工具列未具有輸入的焦點的視窗控制代碼。  
+##  <a name="gethwndlastfocus"></a>  CMFCToolBar::GetHwndLastFocus  
+ Returns a handle to the window that had the input focus just before the toolbar did.  
   
 ```  
 HWND GetHwndLastFocus() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 不衍生自的視窗控制代碼[CMFCBaseToolBar 類別](../../mfc/reference/cmfcbasetoolbar-class.md)，其中先前擁有輸入的焦點，或`NULL`如果沒有這類視窗。  
+### <a name="return-value"></a>Return Value  
+ A handle to window that is not derived from [CMFCBaseToolBar Class](../../mfc/reference/cmfcbasetoolbar-class.md), which previously had the input focus; or `NULL` if there is no such window.  
   
-### <a name="remarks"></a>備註  
- 當`CMFCToolBar`控制項收到輸入的焦點，它會儲存失去焦點，好讓它可以在稍後還原視窗的控制代碼。  
+### <a name="remarks"></a>Remarks  
+ When a `CMFCToolBar` control receives the input focus, it stores a handle to the window that lost the focus so that it can restore it later.  
   
-##  <a name="getignoresettext"></a>CMFCToolBar::GetIgnoreSetText  
- 指定是否忽略呼叫設定按鈕的標籤。  
+##  <a name="getignoresettext"></a>  CMFCToolBar::GetIgnoreSetText  
+ Specifies whether calls to set button labels are ignored.  
   
 ```  
 BOOL GetIgnoreSetText() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果要設定按鈕的標籤的呼叫都會被忽略;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if calls to set button labels are ignored; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getimages"></a>CMFCToolBar::GetImages  
- 傳回的指標集合的預設按鈕影像的應用程式中。  
+##  <a name="getimages"></a>  CMFCToolBar::GetImages  
+ Returns a pointer to the collection of default button images in the application.  
   
 ```  
 static CMFCToolBarImages* GetImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)物件，其中包含應用程式中的所有工具列的預設映像的集合。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md) object that contains the collection of default images for all toolbars in the application.  
   
-### <a name="remarks"></a>備註  
- 此共用的方法提供應用程式的存取權的所有預設集合工具列影像。 呼叫[CMFCToolBar::LoadBitmap](#loadbitmap)方法，以將影像加入至集合。  
+### <a name="remarks"></a>Remarks  
+ This shared method provides access to the collection of all default toolbar images for the application. Call the [CMFCToolBar::LoadBitmap](#loadbitmap) method to add images to the collection.  
   
-##  <a name="getimagesize"></a>CMFCToolBar::GetImageSize  
- 傳回目前的工具列按鈕影像的大小。  
+##  <a name="getimagesize"></a>  CMFCToolBar::GetImageSize  
+ Returns the current size of toolbar button images.  
   
 ```  
 CSize GetImageSize() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)物件，代表目前的工具列按鈕影像的大小。  
+### <a name="return-value"></a>Return Value  
+ A [CSize Class](../../atl-mfc-shared/reference/csize-class.md) object that represents the current size of toolbar button images.  
   
-##  <a name="getimagesoffset"></a>CMFCToolBar::GetImagesOffset  
- 傳回用來尋找工具列按鈕影像的工具列按鈕影像的全域清單在此工具列索引位移。  
+##  <a name="getimagesoffset"></a>  CMFCToolBar::GetImagesOffset  
+ Returns the index offset used to find the toolbar button images for this toolbar in the global list of toolbar button images.  
   
 ```  
 int GetImagesOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 工具列影像索引位移。  
+### <a name="return-value"></a>Return Value  
+ The index offset of the toolbar images.  
   
-### <a name="remarks"></a>備註  
- 所有工具列預設影像會都儲存在全域[CMFCToolBarImages 類別](../../mfc/reference/cmfctoolbarimages-class.md)清單。 在工具列中的每個按鈕的映像會由左至右連續儲存該清單中。 若要計算之影像的索引，加入在工具列的按鈕索引的工具列按鈕的影像清單開頭的位移。  
+### <a name="remarks"></a>Remarks  
+ All toolbar default images are stored in the global [CMFCToolBarImages Class](../../mfc/reference/cmfctoolbarimages-class.md) list. The images for each button in the toolbar are stored consecutively in that list. To compute the index of the image, add the index of the button in the toolbar to the offset of the beginning of the list of images for that toolbar button.  
   
- 呼叫[CMFCToolBar::ButtonToIndex](#buttontoindex)取得給您的指標至按鈕的工具列按鈕的索引。  
+ Call [CMFCToolBar::ButtonToIndex](#buttontoindex) to obtain the index of a toolbar button given a pointer to the button.  
   
- 呼叫[CMFCToolBar::GetImages](#getimages)來取得指向工具列影像的集合。  
+ Call [CMFCToolBar::GetImages](#getimages) to obtain a pointer to the collection of toolbar images.  
   
-##  <a name="getinvalidateitemrect"></a>CMFCToolBar::GetInvalidateItemRect  
- 擷取指定索引處的按鈕必須重繪用戶端區域的區域。  
+##  <a name="getinvalidateitemrect"></a>  CMFCToolBar::GetInvalidateItemRect  
+ Retrieves the region of the client area that must be redrawn for the button at the given index.  
   
 ```  
 virtual void GetInvalidateItemRect(
@@ -1436,32 +1590,32 @@ virtual void GetInvalidateItemRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 要擷取工作區按鈕的索引。  
+ The index of the button for which to retrieve the client area.  
   
- [輸出] `lpRect`  
- 指標`RECT`物件，可接收用戶端區域的區域。  
+ [out] `lpRect`  
+ A pointer to a `RECT` object that receives the region of the client area.  
   
-### <a name="remarks"></a>備註  
- `lpRect`參數不得為`NULL`。 如果沒有按鈕有提供的索引，`lpRect`接收`RECT`初始化為零的物件。  
+### <a name="remarks"></a>Remarks  
+ The `lpRect` parameter must not be `NULL`. If no button exists at the provided index, `lpRect` receives a `RECT` object that is initialized to zero.  
   
-##  <a name="getitemid"></a>CMFCToolBar::GetItemID  
- 傳回指定索引處的工具列按鈕的命令識別碼。  
+##  <a name="getitemid"></a>  CMFCToolBar::GetItemID  
+ Returns the command ID of the toolbar button at a specified index.  
   
 ```  
 UINT GetItemID(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定工具列按鈕的索引。  
+ Specifies the index of the toolbar button.  
   
-### <a name="return-value"></a>傳回值  
- 命令 ID 的工具列按鈕。或如果不存在具有指定之索引按鈕則為零。  
+### <a name="return-value"></a>Return Value  
+ The command ID of the toolbar button; or zero if the button with the specified index does not exist.  
   
-##  <a name="getitemrect"></a>CMFCToolBar::GetItemRect  
- 傳回指定索引處的按鈕的週框矩形。  
+##  <a name="getitemrect"></a>  CMFCToolBar::GetItemRect  
+ Returns the bounding rectangle of the button at a specified index.  
   
 ```  
 virtual void GetItemRect(
@@ -1469,313 +1623,313 @@ virtual void GetItemRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定工具列按鈕的索引。  
+ Specifies the index of a toolbar button.  
   
- [輸出] `lpRect`  
- 指標`CRect`接收影像的周框的座標的物件。  
+ [out] `lpRect`  
+ A pointer to `CRect` object that receives the coordinates of the image bounding rectangle.  
   
-### <a name="remarks"></a>備註  
- `CRect`物件`lpRect`點設定為 0，如果指定索引處的按鈕不存在。  
+### <a name="remarks"></a>Remarks  
+ The `CRect` object to which `lpRect` points is set to 0 if a button at the specified index does not exist.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`GetItemRect`方法`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `GetItemRect` method of the `CMFCToolBar` class. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo # 9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]  
   
-##  <a name="getlargecoldimages"></a>CMFCToolBar::GetLargeColdImages  
- 讓指標回到應用程式中的大型非作用中工具列按鈕影像的集合。  
+##  <a name="getlargecoldimages"></a>  CMFCToolBar::GetLargeColdImages  
+ Returns a pointer to the collection of large cold toolbar button images in the application.  
   
 ```  
 static CMFCToolBarImages* GetLargeColdImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標的大型冷影像集合。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of large cold images.  
   
-### <a name="remarks"></a>備註  
- 冷映像是指在使用者不互動的工具列按鈕時所使用。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)載入大型冷映像。  
+### <a name="remarks"></a>Remarks  
+ Cold images are the images that are used when the user is not interacting with the toolbar buttons. Call [CMFCToolBar::LoadBitmapEx](#loadbitmapex) to load the large cold images.  
   
-##  <a name="getlargedisabledimages"></a>CMFCToolBar::GetLargeDisabledImages  
- 讓指標回到應用程式中的大型已停用的工具列按鈕影像的集合。  
+##  <a name="getlargedisabledimages"></a>  CMFCToolBar::GetLargeDisabledImages  
+ Returns a pointer to the collection of large disabled toolbar button images in the application.  
   
 ```  
 static CMFCToolBarImages* GetLargeDisabledImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標的大型集合停用工具列按鈕影像。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of large disabled toolbar button images.  
   
-### <a name="remarks"></a>備註  
- 大型影像是大型的規則 工具列按鈕影像的版本。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)或[CMFCToolBar::LoadBitmap](#loadbitmap)載入大型影像。  
+### <a name="remarks"></a>Remarks  
+ Large images are large versions of the regular toolbar button images. Call [CMFCToolBar::LoadBitmapEx](#loadbitmapex) or [CMFCToolBar::LoadBitmap](#loadbitmap) to load the large images.  
   
-##  <a name="getlargeimages"></a>CMFCToolBar::GetLargeImages  
- 讓指標回到應用程式中的大型工具列按鈕影像的集合。  
+##  <a name="getlargeimages"></a>  CMFCToolBar::GetLargeImages  
+ Returns a pointer to the collection of large toolbar button images in the application.  
   
 ```  
 static CMFCToolBarImages* GetLargeImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標的大型工具列按鈕的影像集合。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of large toolbar button images.  
   
-### <a name="remarks"></a>備註  
- 大型影像是大型的規則 工具列按鈕影像的版本。 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)載入大型影像。  
+### <a name="remarks"></a>Remarks  
+ Large images are large versions of the regular toolbar button images. Call [CMFCToolBar::LoadBitmapEx](#loadbitmapex) to load the large images.  
   
-##  <a name="getlockedcoldimages"></a>CMFCToolBar::GetLockedColdImages  
- 在工具列上的鎖定冷映像的集合中傳回的指標。  
+##  <a name="getlockedcoldimages"></a>  CMFCToolBar::GetLockedColdImages  
+ Returns a pointer to the collection of locked cold images in the toolbar.  
   
 ```  
 CMFCToolBarImages* GetLockedColdImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 鎖定的冷映像的集合的指標或`NULL`如果未鎖定工具列。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of locked cold images, or `NULL` if the toolbar is not locked.  
   
-### <a name="remarks"></a>備註  
- 鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。 冷映像是指在使用者不互動的工具列按鈕時所使用。  
+### <a name="remarks"></a>Remarks  
+ Locked images are versions of the regular toolbar button images that the framework uses when the user cannot customize the toolbar. Cold images are the images that are used when the user is not interacting with the toolbar buttons.  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ This method returns `NULL` if the toolbar is not locked. This method also generates an assertion failure in Debug builds if the toolbar is not locked. For more information about locked toolbars, see [CMFCToolBar::IsLocked](#islocked).  
   
- 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法以載入鎖定的冷映像。  
+ Call the [CMFCToolBar::LoadBitmapEx](#loadbitmapex) method to load the locked cold images.  
   
-##  <a name="getlockeddisabledimages"></a>CMFCToolBar::GetLockedDisabledImages  
- 在工具列上的鎖定已停用映像的集合中傳回的指標。  
+##  <a name="getlockeddisabledimages"></a>  CMFCToolBar::GetLockedDisabledImages  
+ Returns a pointer to the collection of locked disabled images in the toolbar.  
   
 ```  
 CMFCToolBarImages* GetLockedDisabledImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向影像的集合已鎖定已停用，或`NULL`如果未鎖定工具列。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of locked disabled images, or `NULL` if the toolbar is not locked.  
   
-### <a name="remarks"></a>備註  
- 鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。 已停用的影像是按鈕時，架構會使用這些影像`TBBS_DISABLED`樣式。  
+### <a name="remarks"></a>Remarks  
+ Locked images are versions of the regular toolbar button images that the framework uses when the user cannot customize the toolbar. Disabled images are the images that the framework uses when a button has the `TBBS_DISABLED` style.  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ This method returns `NULL` if the toolbar is not locked. This method also generates an assertion failure in Debug builds if the toolbar is not locked. For more information about locked toolbars, see [CMFCToolBar::IsLocked](#islocked).  
   
- 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法以載入鎖定已停用映像。  
+ Call the [CMFCToolBar::LoadBitmapEx](#loadbitmapex) method to load the locked disabled images.  
   
-##  <a name="getlockedimages"></a>CMFCToolBar::GetLockedImages  
- 在工具列上的鎖定的按鈕影像的集合中傳回的指標。  
+##  <a name="getlockedimages"></a>  CMFCToolBar::GetLockedImages  
+ Returns a pointer to the collection of locked button images in the toolbar.  
   
 ```  
 CMFCToolBarImages* GetLockedImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 鎖定的工具列按鈕的影像，集合的指標或`NULL`如果未鎖定工具列。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of locked toolbar button images, or `NULL` if the toolbar is not locked.  
   
-### <a name="remarks"></a>備註  
- 鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。  
+### <a name="remarks"></a>Remarks  
+ Locked images are versions of the regular toolbar button images that the framework uses when the user cannot customize the toolbar.  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ This method returns `NULL` if the toolbar is not locked. This method also generates an assertion failure in Debug builds if the toolbar is not locked. For more information about locked toolbars, see [CMFCToolBar::IsLocked](#islocked).  
   
-##  <a name="getlockedimagesize"></a>CMFCToolBar::GetLockedImageSize  
- 傳回鎖定的工具列影像的預設大小。  
+##  <a name="getlockedimagesize"></a>  CMFCToolBar::GetLockedImageSize  
+ Returns the default size of locked toolbar images.  
   
 ```  
 CSize GetLockedImageSize() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`CSize`結構，指定鎖定的工具列影像或空的大小`CSize`結構若未鎖定工具列。  
+### <a name="return-value"></a>Return Value  
+ A `CSize` structure that specifies the size of locked toolbar images or an empty `CSize` structure if the toolbar is not locked.  
   
-### <a name="remarks"></a>備註  
- 鎖定的影像是當使用者無法自訂工具列時，架構會使用標準工具列按鈕影像的版本。  
+### <a name="remarks"></a>Remarks  
+ Locked images are versions of the regular toolbar button images that the framework uses when the user cannot customize the toolbar.  
   
- 這個方法會傳回`CSize`結構和零的寬度和高度零，如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ This method returns a `CSize` structure with zero width and zero height if the toolbar is not locked. This method also generates an assertion failure in Debug builds if the toolbar is not locked. For more information about locked toolbars, see [CMFCToolBar::IsLocked](#islocked).  
   
- 呼叫[CMFCToolBar::SetLockedSizes](#setlockedsizes)方法，以指定鎖定的映像大小。  
+ Call the [CMFCToolBar::SetLockedSizes](#setlockedsizes) method to specify the locked image size.  
   
-##  <a name="getlockedmenuimages"></a>CMFCToolBar::GetLockedMenuImages  
- 讓指標回到集合已鎖定工具列的功能表影像的工具列中。  
+##  <a name="getlockedmenuimages"></a>  CMFCToolBar::GetLockedMenuImages  
+ Returns a pointer to the collection of locked toolbar menu images in the toolbar.  
   
 ```  
 CMFCToolBarImages* GetLockedMenuImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指向影像的集合已鎖定的工具列 功能表，或`NULL`如果未鎖定工具列。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of locked toolbar menu images, or `NULL` if the toolbar is not locked.  
   
-### <a name="remarks"></a>備註  
- 鎖定的影像是當使用者無法自訂工具列時，架構會使用一般工具列功能表影像的版本。  
+### <a name="remarks"></a>Remarks  
+ Locked images are versions of the regular toolbar menu images that the framework uses when the user cannot customize the toolbar.  
   
- 這個方法會傳回`NULL`如果未鎖定工具列。 如果未鎖定工具列，則這個方法也在偵錯組建產生判斷提示失敗。 如需鎖定工具列的詳細資訊，請參閱[CMFCToolBar::IsLocked](#islocked)。  
+ This method returns `NULL` if the toolbar is not locked. This method also generates an assertion failure in Debug builds if the toolbar is not locked. For more information about locked toolbars, see [CMFCToolBar::IsLocked](#islocked).  
   
- 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法來載入鎖定的功能表影像。  
+ Call the [CMFCToolBar::LoadBitmapEx](#loadbitmapex) method to load the locked menu images.  
   
-##  <a name="getmenubuttonsize"></a>CMFCToolBar::GetMenuButtonSize  
- 傳回應用程式中的功能表按鈕的大小。  
+##  <a name="getmenubuttonsize"></a>  CMFCToolBar::GetMenuButtonSize  
+ Returns the size of menu buttons in the application.  
   
 ```  
 static CSize GetMenuButtonSize();
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`CSize`物件，表示功能表按鈕，像素為單位的大小。  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that represents the size of menu buttons, in pixels.  
   
-### <a name="remarks"></a>備註  
- 在工具列上的功能表按鈕的大小會維護與全域變數，而且可以擷取由這個靜態方法。  
+### <a name="remarks"></a>Remarks  
+ The size of menu buttons on toolbars is maintained as a global variable and can be retrieved by this static method.  
   
- 呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)設定這個全域變數。  
+ Call [CMFCToolBar::SetMenuSizes](#setmenusizes) to set this global variable.  
   
-##  <a name="getmenuimages"></a>CMFCToolBar::GetMenuImages  
- 讓指標回到應用程式中的功能表按鈕影像的集合。  
+##  <a name="getmenuimages"></a>  CMFCToolBar::GetMenuImages  
+ Returns a pointer to the collection of menu button images in the application.  
   
 ```  
 static CMFCToolBarImages* GetMenuImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標的功能表影像集合。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of menu images.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::LoadBitmapEx](#loadbitmapex)方法以載入功能表影像。  
+### <a name="remarks"></a>Remarks  
+ Call the [CMFCToolBar::LoadBitmapEx](#loadbitmapex) method to load the menu images.  
   
- 呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)方法，以設定按鈕和其映像的大小。  
+ Call the [CMFCToolBar::SetMenuSizes](#setmenusizes) method to set the size of buttons and their images.  
   
-##  <a name="getmenuimagesize"></a>CMFCToolBar::GetMenuImageSize  
- 傳回應用程式中的功能表按鈕影像的大小。  
+##  <a name="getmenuimagesize"></a>  CMFCToolBar::GetMenuImageSize  
+ Returns the size of menu button images in the application.  
   
 ```  
 static CSize GetMenuImageSize();
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`CSize`物件，表示功能表影像的大小。  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that represents the size of menu images.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回上維護與全域變數的工具列功能表按鈕的影像大小。 呼叫[CMFCToolBar::SetMenuSizes](#setmenusizes)設定這個全域變數。  
+### <a name="remarks"></a>Remarks  
+ This method returns the size of images on toolbar menu buttons that is maintained as a global variable. Call [CMFCToolBar::SetMenuSizes](#setmenusizes) to set this global variable.  
   
-##  <a name="getorigbuttons"></a>CMFCToolBar::GetOrigButtons  
- 擷取非自訂的按鈕，工具列的集合。  
+##  <a name="getorigbuttons"></a>  CMFCToolBar::GetOrigButtons  
+ Retrieves the collection of non-customized buttons of the toolbar.  
   
 ```  
 const CObList& GetOrigButtons() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 參考的非自訂的按鈕，工具列的清單。  
+### <a name="return-value"></a>Return Value  
+ A reference to the list of non-customized buttons of the toolbar.  
   
-### <a name="remarks"></a>備註  
- 它們由使用者自訂之前，架構會建立一份工具列按鈕。 [CMFCToolBar::SetButtons](#setbuttons)方法會將複本的每個按鈕所提供的陣列中加入原始按鈕的清單。 [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)方法還原工具列的原始狀態，藉由從資源檔載入它。  
+### <a name="remarks"></a>Remarks  
+ The framework creates a copy of toolbar buttons before they are customized by the user. The [CMFCToolBar::SetButtons](#setbuttons) method adds a copy of each button in the provided array to the list of original buttons. The [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) method restores the original state of the toolbar by loading it from the resource file.  
   
- 若要設定的原始工具列按鈕清單，請呼叫[CMFCToolBar::SetOrigButtons](#setorigbuttons)方法。  
+ To set the list of original buttons for your toolbar, call the [CMFCToolBar::SetOrigButtons](#setorigbuttons) method.  
   
-##  <a name="getorigresetbuttons"></a>CMFCToolBar::GetOrigResetButtons  
- 擷取集合的非自訂的重設按鈕的工具列。  
+##  <a name="getorigresetbuttons"></a>  CMFCToolBar::GetOrigResetButtons  
+ Retrieves the collection of non-customized reset buttons of the toolbar.  
   
 ```  
 const CObList& GetOrigResetButtons() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 參考清單的非自訂化重設工具列的按鈕。  
+### <a name="return-value"></a>Return Value  
+ A reference to the list of non-customized reset buttons of the toolbar.  
   
-### <a name="remarks"></a>備註  
- 當使用者按一下**重設**按鈕在自訂模式下，架構會使用這個方法來還原已移除從工具列的按鈕。  
+### <a name="remarks"></a>Remarks  
+ When the user clicks the **Reset** button during customization mode, the framework uses this method to restore buttons that were removed from the toolbar.  
   
- [CMFCToolBar::SetButtons](#setbuttons)方法會將複本的每個工具列按鈕加入原始重設按鈕的清單之後，它會呼叫[CMFCToolBar::OnReset](#onreset)方法。 您可以覆寫[CMFCToolBar::OnReset](#onreset)方法，以自訂按鈕的外觀之後使用者按下,**重設** 按鈕。  
+ The [CMFCToolBar::SetButtons](#setbuttons) method adds a copy of each toolbar button to the list of original reset buttons after it calls the [CMFCToolBar::OnReset](#onreset) method. You can override the [CMFCToolBar::OnReset](#onreset) method to customize the appearance of buttons after the user presses the **Reset** button.  
   
-##  <a name="getresourceid"></a>CMFCToolBar::GetResourceID  
- 擷取工具列的資源識別碼。  
+##  <a name="getresourceid"></a>  CMFCToolBar::GetResourceID  
+ Retrieves the resource ID of the toolbar.  
   
 ```  
 UINT GetResourceID() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 工具列資源識別碼。  
+### <a name="return-value"></a>Return Value  
+ The resource ID of the toolbar.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::LoadToolBarEx](#loadtoolbarex)方法，以設定工具列的資源識別碼。  
+### <a name="remarks"></a>Remarks  
+ Call the [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) method to set the resource ID of the toolbar.  
   
-##  <a name="getroutecommandsviaframe"></a>CMFCToolBar::GetRouteCommandsViaFrame  
- 決定哪一個物件，父框架或擁有者，將命令傳送至工具列。  
+##  <a name="getroutecommandsviaframe"></a>  CMFCToolBar::GetRouteCommandsViaFrame  
+ Determines which object, the parent frame or the owner, sends commands to the toolbar.  
   
 ```  
 BOOL GetRouteCommandsViaFrame();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果父框架的命令傳送至工具列，則為非零0，表示擁有者會將命令傳送至工具列。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the parent frame sends commands to the toolbar; 0 if the owner sends commands to the toolbar.  
   
-### <a name="remarks"></a>備註  
- 根據預設，父框架會將命令傳送至工具列。 呼叫[CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe)來變更此行為。  
+### <a name="remarks"></a>Remarks  
+ By default, the parent frame sends commands to the toolbar. Call [CMFCToolBar::SetRouteCommandsViaFrame](#setroutecommandsviaframe) to change this behavior.  
   
- 如果此方法會傳回非零值，您可以使用擷取父框架物件的指標`CMFCToolBar::GetCommandTarget`方法。 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
+ If this method returns a nonzero value, you can retrieve a pointer to the parent frame object by using the `CMFCToolBar::GetCommandTarget` method. See the VisualStudioDemo sample for an example that uses this method.  
   
-##  <a name="getrowheight"></a>CMFCToolBar::GetRowHeight  
- 傳回工具列按鈕的高度。  
+##  <a name="getrowheight"></a>  CMFCToolBar::GetRowHeight  
+ Returns the height of toolbar buttons.  
   
 ```  
 virtual int GetRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 工具列按鈕，單位為像素的高度。  
+### <a name="return-value"></a>Return Value  
+ The height of toolbar buttons, in pixels.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來計算工具列版面配置。 在衍生的類別，以指定不同的高度，工具列中，這個方法會覆寫。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to calculate toolbar layout. Override this method in a derived class to specify a different height for your toolbar.  
   
-##  <a name="getshowtooltips"></a>CMFCToolBar::GetShowTooltips  
- 指定工具列按鈕是否顯示工具提示。  
+##  <a name="getshowtooltips"></a>  CMFCToolBar::GetShowTooltips  
+ Specifies whether tool tips are displayed for toolbar buttons.  
   
 ```  
 static BOOL GetShowTooltips();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工具提示顯示的工具列按鈕。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if tool tips are shown for toolbar buttons; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，會顯示工具提示。 您可以變更這個靜態旗標，藉由呼叫[CMFCToolBar::SetShowTooltips](#setshowtooltips)。  
+### <a name="remarks"></a>Remarks  
+ By default tool tips are shown. You can change this static flag by calling [CMFCToolBar::SetShowTooltips](#setshowtooltips).  
   
-##  <a name="getsiblingtoolbar"></a>CMFCToolBar::GetSiblingToolBar  
- 擷取工具列的同層級。  
+##  <a name="getsiblingtoolbar"></a>  CMFCToolBar::GetSiblingToolBar  
+ Retrieves the sibling of the toolbar.  
   
 ```  
 CMFCToolBar* GetSiblingToolBar();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 同層級工具列指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the sibling toolbar.  
   
-### <a name="remarks"></a>備註  
- 如需有關如何啟用**在一個資料列上顯示按鈕**和**在兩個資料列上顯示按鈕**按鈕，請參閱[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
+### <a name="remarks"></a>Remarks  
+ For more information about how to enable the **Show Buttons on One Row** and **Show Buttons on Two Rows** buttons, see [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="getuserimages"></a>CMFCToolBar::GetUserImages  
- 讓指標回到應用程式中的使用者定義工具列按鈕影像的集合。  
+##  <a name="getuserimages"></a>  CMFCToolBar::GetUserImages  
+ Returns a pointer to the collection of user-defined toolbar button images in the application.  
   
 ```  
 static CMFCToolBarImages* GetUserImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標集合的應用程式中的所有工具列的使用者定義工具列按鈕影像。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the collection of user-defined toolbar button images for all toolbars in the application.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetUserImages](#setuserimages)方法，以設定應用程式中的使用者定義的映像的集合。  
+### <a name="remarks"></a>Remarks  
+ Call the [CMFCToolBar::SetUserImages](#setuserimages) method to set the collection of user-defined images in the application.  
   
-##  <a name="hittest"></a>CMFCToolBar::HitTest  
- 傳回位於指定位置處的工具列按鈕的索引。  
+##  <a name="hittest"></a>  CMFCToolBar::HitTest  
+ Returns the index of the toolbar button that is located at the specified position.  
   
 ```  
 virtual int HitTest(CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 要測試，在工作區座標的點。  
+ The point to be tested, in client coordinates.  
   
-### <a name="return-value"></a>傳回值  
- 位於指定的位置，則為-1 如果沒有這類按鈕的按鈕索引為分隔符號。  
+### <a name="return-value"></a>Return Value  
+ The index of the button that is located at the specified position, or -1 if there is no such button or the button is a separator.  
   
-##  <a name="insertbutton"></a>CMFCToolBar::InsertButton  
- 插入工具列按鈕。  
+##  <a name="insertbutton"></a>  CMFCToolBar::InsertButton  
+ Inserts a button into the toolbar.  
   
 ```  
 virtual int InsertButton(
@@ -1788,342 +1942,342 @@ virtual int InsertButton(
     int iInsertAt=-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `button`  
- 指定要插入的按鈕。  
+ Specifies the button to insert.  
   
  [in] `iInsertAt`  
- 指定要插入按鈕之以零為起始位置。  
+ Specifies the zero-based position to insert the button at.  
   
-### <a name="return-value"></a>傳回值  
- 位置的已插入按鈕或-1 如果發生錯誤，就會發生。  
+### <a name="return-value"></a>Return Value  
+ The position at which the button was inserted or -1 if an error occurs.  
   
-### <a name="remarks"></a>備註  
- 如果`iInsertAt`為-1，這個方法會將按鈕加入至工具列按鈕清單的結尾。  
+### <a name="remarks"></a>Remarks  
+ If `iInsertAt` is -1, this method adds the button to the end of the list of toolbar buttons.  
   
- 呼叫[CMFCToolBar::InsertSeparator](#insertseparator)分隔符號插入工具列的方法。  
+ Call the [CMFCToolBar::InsertSeparator](#insertseparator) method to insert a separator into the toolbar.  
   
-##  <a name="insertseparator"></a>CMFCToolBar::InsertSeparator  
- 插入工具列中的分隔符號。  
+##  <a name="insertseparator"></a>  CMFCToolBar::InsertSeparator  
+ Inserts a separator into the toolbar.  
   
 ```  
 virtual int InsertSeparator(INT_PTR iInsertAt=-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iInsertAt`  
- 指定要插入在分隔字元之以零為起始的位置。 這個參數必須是大於 0。  
+ Specifies the zero-based position to insert the separator at. This parameter must be larger than 0.  
   
-### <a name="return-value"></a>傳回值  
- 位置的插入分隔符號或-1 如果發生錯誤，就會發生。  
+### <a name="return-value"></a>Return Value  
+ The position at which the separator was inserted or -1 if an error occurs.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以兩個現有的按鈕之間插入分隔符號。 如果`iInsertAt`為-1，這個方法加入至工具列按鈕清單結尾的分隔符號。  
+### <a name="remarks"></a>Remarks  
+ Call this method to insert a separator between two existing buttons. If `iInsertAt` is -1, this method adds the separator to the end of the list of toolbar buttons.  
   
- 您無法使用這個方法，加入空白的工具列中的分隔符號。  
+ You cannot use this method to add a separator to an empty toolbar.  
   
- 呼叫[CMFCToolBar::InsertButton](#insertbutton)方法插入工具列的按鈕。  
+ Call the [CMFCToolBar::InsertButton](#insertbutton) method to insert a button into the toolbar.  
   
-##  <a name="invalidatebutton"></a>CMFCToolBar::InvalidateButton  
- 工具列按鈕提供的索引已存在的工作區會導致無效。  
+##  <a name="invalidatebutton"></a>  CMFCToolBar::InvalidateButton  
+ Invalidates the client area of the toolbar button that exists at the provided index.  
   
 ```  
 CMFCToolBarButton* InvalidateButton(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 在工具列中按鈕的以零為起始的索引。  
+ The zero-based index of the button in the toolbar.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CMFCToolBarButton`存在於所提供的索引處的物件或`NULL`如果物件不存在。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CMFCToolBarButton` object that exists at the provided index or `NULL` if no such object exists.  
   
-### <a name="remarks"></a>備註  
- 在更新工具列按鈕與相關聯的工作區時，架構會呼叫這個方法。 它會呼叫[CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect)方法的用戶端矩形`CMFCToolBarButton`存在於所提供的索引處的物件。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it updates the client area that is associated with a toolbar button. It calls the [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect) method with the client rectangle of the `CMFCToolBarButton` object that exists at the provided index.  
   
-##  <a name="isaddremovequickcustomize"></a>CMFCToolBar::IsAddRemoveQuickCustomize  
- 決定使用者是否可以加入或移除工具列按鈕使用**自訂**功能表選項。  
+##  <a name="isaddremovequickcustomize"></a>  CMFCToolBar::IsAddRemoveQuickCustomize  
+ Determines whether a user can add or remove toolbar buttons by using the **Customize** menu option.  
   
 ```  
 BOOL IsAddRemoveQuickCustomize();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者可以使用**自訂**功能表選項以修改工具列，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a user can use the **Customize** menu option to modify the toolbar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isaltcustomizemode"></a>CMFCToolBar::IsAltCustomizeMode  
- 指定是否*快速自訂*正將按鈕拖曳。 啟用快速的自訂時，使用者可以按按住 Alt 鍵，按鈕拖曳至新位置。  
+##  <a name="isaltcustomizemode"></a>  CMFCToolBar::IsAltCustomizeMode  
+ Specifies whether *quick customization* is being used to drag a button. When quick customization is enabled, a user can press and hold the Alt key and drag a button to a new location.  
   
 ```  
 static BOOL __stdcall IsAltCustomizeMode();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果正在拖曳的按鈕，使用快速自訂否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if quick customization is being used to drag a button; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isautograyinactiveimages"></a>CMFCToolBar::IsAutoGrayInactiveImages  
- 指定是否啟用自動產生的非作用中 （非-反白顯示） 的按鈕影像。  
+##  <a name="isautograyinactiveimages"></a>  CMFCToolBar::IsAutoGrayInactiveImages  
+ Specifies whether the automatic generation of inactive (non-highlighted) button images is enabled.  
   
 ```  
 static BOOL IsAutoGrayInactiveImages();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用自動 dim 非作用中的映像的選項。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the option to automatically dim inactive images is enabled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 您可以啟用或停用自動變暗的非作用中的映像藉由呼叫[CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages)。  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable automatic dimming of inactive images by calling [CMFCToolBar::AutoGrayInactiveImages](#autograyinactiveimages).  
   
-##  <a name="isbasiccommand"></a>CMFCToolBar::IsBasicCommand  
- 判斷命令是否在基本命令的清單。  
+##  <a name="isbasiccommand"></a>  CMFCToolBar::IsBasicCommand  
+ Determines whether a command is on the list of basic commands.  
   
 ```  
 static BOOL IsBasicCommand(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 指定要檢查的命令。  
+ Specifies the command to check.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的命令屬於基本命令; 的清單否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified command belongs to the list of basic commands; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個靜態方法會判斷命令是否已由`uiCmd`屬於基本命令的全域清單。 您可以藉由呼叫變更的基本命令清單[CMFCToolBar::AddBasicCommand](#addbasiccommand)或[CMFCToolBar::SetBasicCommands](#setbasiccommands)。  
+### <a name="remarks"></a>Remarks  
+ This static method determines whether the command specified by `uiCmd` belongs to the global list of basic commands. You can change the list of basic commands by calling [CMFCToolBar::AddBasicCommand](#addbasiccommand) or [CMFCToolBar::SetBasicCommands](#setbasiccommands).  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCToolBar::IsButtonExtraSizeAvailable  
- 決定工具列是否顯示已延伸框線的按鈕。  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCToolBar::IsButtonExtraSizeAvailable  
+ Determines whether the toolbar can display buttons that have extended borders.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果軸可以選擇顯示按鈕具有額外的框線大小。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the bar can display buttons with the extra border size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 工具列物件傳回`TRUE`若它可顯示已延伸框線的按鈕。 工具列按鈕時呼叫這個方法也可以處理[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)通知，並據以設定其內部的額外框線大小旗標。 此內部旗標可能會稍後擷取藉由呼叫[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)。  
+### <a name="remarks"></a>Remarks  
+ The toolbar object returns `TRUE` if it can display buttons that have extended borders. A toolbar button calls this method when it handles the [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd) notification and will set its internal extra border size flag accordingly. This internal flag may be retrieved later by calling [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize).  
   
- 衍生自的類別中置換此方法`CMFCToolBar`並傳回`TRUE`如果您的列可以顯示額外的框線大小的工具列按鈕，並傳回`FALSE`否則。 預設實作會傳回 `TRUE`。  
+ Override this method in a class derived from `CMFCToolBar` and return `TRUE` if your bar can display the toolbar buttons with the extra border size and return `FALSE` otherwise. The default implementation returns `TRUE`.  
   
-##  <a name="isbuttonhighlighted"></a>CMFCToolBar::IsButtonHighlighted  
- 判斷指定的按鈕會反白顯示。  
+##  <a name="isbuttonhighlighted"></a>  CMFCToolBar::IsButtonHighlighted  
+ Determines whether the specified button is highlighted.  
   
 ```  
 BOOL IsButtonHighlighted(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iButton`  
- 指定工具列按鈕的索引。  
+ Specifies the index of a toolbar button.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的按鈕會反白顯示。，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified button is highlighted; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iscommandpermitted"></a>CMFCToolBar::IsCommandPermitted  
- 決定是否要允許的命令。  
+##  <a name="iscommandpermitted"></a>  CMFCToolBar::IsCommandPermitted  
+ Determines whether a command is permitted.  
   
 ```  
 static BOOL IsCommandPermitted(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 指定要檢查的命令。  
+ Specifies the command to check.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果允許指定的命令。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified command is permitted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個靜態方法會判斷命令是否已由`uiCmd`屬於非允許命令的全域清單。  
+### <a name="remarks"></a>Remarks  
+ This static method determines whether the command specified by `uiCmd` belongs to the global list of non-permitted commands.  
   
- 您可以變更非允許命令的清單，藉由呼叫[CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands)。  
+ You can change the list of non-permitted commands by calling [CMFCToolBar::SetNonPermittedCommands](#setnonpermittedcommands).  
   
-##  <a name="iscommandrarelyused"></a>CMFCToolBar::IsCommandRarelyUsed  
- 決定是否很少使用的命令。  
+##  <a name="iscommandrarelyused"></a>  CMFCToolBar::IsCommandRarelyUsed  
+ Determines whether a command is rarely used.  
   
 ```  
 static BOOL IsCommandRarelyUsed(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 指定要檢查的命令。  
+ Specifies the command to check.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的命令很少使用;否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified command is rarely used; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- `IsCommandRarelyUsed`方法會傳回`FALSE`發生一或多個下列條件︰  
+### <a name="remarks"></a>Remarks  
+ The `IsCommandRarelyUsed` method returns `FALSE` when one or more of the following conditions occur:  
   
--   指定的命令屬於基本命令的清單  
+-   The specified command belongs to the list of basic commands  
   
--   指定的命令是其中一個標準命令  
+-   The specified command is one of the standard commands  
   
--   架構會在自訂模式  
+-   The framework is in customization mode  
   
--   基本命令的清單是空的  
+-   The list of basic commands is empty  
   
--   超過 20%的命令呼叫為呼叫指定的命令。  
+-   More than 20% of command calls are calls to the specified command.  
   
-##  <a name="iscustomizemode"></a>CMFCToolBar::IsCustomizeMode  
- 指定工具列 framework 是否為自訂模式。  
+##  <a name="iscustomizemode"></a>  CMFCToolBar::IsCustomizeMode  
+ Specifies whether the toolbar framework is in customization mode.  
   
 ```  
 static BOOL IsCustomizeMode();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果 framework 自訂模式。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework is in customization mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 您可以藉由呼叫切換自訂模式[CMFCToolBar::SetCustomizeMode](#setcustomizemode)。  
+### <a name="remarks"></a>Remarks  
+ You can toggle customization mode by calling [CMFCToolBar::SetCustomizeMode](#setcustomizemode).  
   
- 架構變更的模式，當使用者叫用的自訂對話方塊 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md))。  
+ The framework changes the mode when the user invokes the customization dialog box ( [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)).  
   
-##  <a name="isdragbutton"></a>CMFCToolBar::IsDragButton  
- 決定是否要拖曳工具列按鈕。  
+##  <a name="isdragbutton"></a>  CMFCToolBar::IsDragButton  
+ Determines whether a toolbar button is being dragged.  
   
 ```  
 BOOL IsDragButton(const CMFCToolBarButton* pButton) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 工具列按鈕的指標。  
+ Pointer to a toolbar button.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的按鈕拖曳至;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified button is being dragged; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isexistcustomizebutton"></a>CMFCToolBar::IsExistCustomizeButton  
- 判斷是否要包含工具列**自訂** 按鈕。  
+##  <a name="isexistcustomizebutton"></a>  CMFCToolBar::IsExistCustomizeButton  
+ Determines whether the toolbar contains the **Customize** button.  
   
 ```  
 BOOL IsExistCustomizeButton();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列包含**自訂**按鈕; 否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar contains the **Customize** button; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 如果此方法傳回`TRUE`、 [CMFCToolBar::GetCustomizeButton](#getcustomizebutton)方法將指標傳回至**自訂**會出現在工具列結尾的按鈕。  
+### <a name="remarks"></a>Remarks  
+ If this method returns `TRUE`, the [CMFCToolBar::GetCustomizeButton](#getcustomizebutton) method returns a pointer to the **Customize** button that appears at the end of the toolbar.  
   
- 使用[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法，將**自訂**至工具列按鈕。  
+ Use the [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) method to add the **Customize** button to your toolbar.  
   
-##  <a name="isfloating"></a>CMFCToolBar::IsFloating  
- 決定是否要浮動工具列。  
+##  <a name="isfloating"></a>  CMFCToolBar::IsFloating  
+ Determines whether the toolbar is floating.  
   
 ```  
 virtual BOOL IsFloating() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果浮動工具列。，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar is floating; otherwise, `FALSE`.  
   
-##  <a name="islargeicons"></a>CMFCToolBar::IsLargeIcons  
- 指定應用程式中的工具列是否目前顯示大圖示。  
+##  <a name="islargeicons"></a>  CMFCToolBar::IsLargeIcons  
+ Specifies whether toolbars in the application currently display large icons.  
   
 ```  
 static BOOL IsLargeIcons();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果應用程式使用大圖示。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the application is using large icons; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCToolBar::SetLargeIcons](#setlargeicons)切換大圖示和規則的圖示。  
+### <a name="remarks"></a>Remarks  
+ Call [CMFCToolBar::SetLargeIcons](#setlargeicons) to toggle between large icons and regular icons.  
   
- 架構會自動變更的模式，當使用者切換**大圖示**上的核取方塊**選項**頁面**自訂** 對話方塊。  
+ The framework automatically changes the mode when the user toggles the **Large icons** check-box on the **Options** page of the **Customization** dialog box.  
   
-##  <a name="islastcommandfrombutton"></a>CMFCToolBar::IsLastCommandFromButton  
- 決定是否最近執行已傳送命令，從指定的工具列按鈕。  
+##  <a name="islastcommandfrombutton"></a>  CMFCToolBar::IsLastCommandFromButton  
+ Determines whether the most recently executed command was sent from the specified toolbar button.  
   
 ```  
 static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 按鈕的指標。  
+ Pointer to button.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果最後一個命令已傳送 按鈕，`pButton`指定; 否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the last command was sent from the button that `pButton` specifies; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會取得的指標[MSG 結構](../../mfc/reference/msg-structure1.md)藉由呼叫`CWnd::GetCurrentMessage`。 然後它會比較`HWND`與按鈕的`MSG::lParam`和`MSG::hwnd`成員以判斷是否在按鈕原先的命令的來源。  
+### <a name="remarks"></a>Remarks  
+ This method obtains a pointer to a [MSG Structure](../../mfc/reference/msg-structure1.md) by calling `CWnd::GetCurrentMessage`. It then compares the `HWND` of the button with the `MSG::lParam` and `MSG::hwnd` members to determine whether the button was the source of the command.  
   
-##  <a name="islocked"></a>CMFCToolBar::IsLocked  
- 決定工具列是否已鎖定。  
+##  <a name="islocked"></a>  CMFCToolBar::IsLocked  
+ Determines whether the toolbar is locked.  
   
 ```  
 BOOL IsLocked() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果鎖定工具列。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar is locked; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回`TRUE`當使用者無法執行自訂工作，例如重新定位工具列按鈕。  
+### <a name="remarks"></a>Remarks  
+ This method returns `TRUE` when the user cannot perform customization tasks such as repositioning toolbar buttons.  
   
- 鎖定的工具列會使用不同的影像清單。 如需這些映像清單的詳細資訊，請參閱[CMFCToolBar::LoadBitmapEx](#loadbitmapex)。  
+ Locked toolbars use separate image lists. For more information about these image lists, see [CMFCToolBar::LoadBitmapEx](#loadbitmapex).  
   
-##  <a name="isonerowwithsibling"></a>Cmfctoolbar:: Isonerowwithsibling  
- 決定是否工具列和工具列，其同層級位於相同的資料列。  
+##  <a name="isonerowwithsibling"></a>  CMFCToolBar::IsOneRowWithSibling  
+ Determines whether the toolbar and its sibling toolbar are positioned on the same row.  
   
 ```  
 BOOL IsOneRowWithSibling();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工具列和其同層級位於相同的資料列。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar and its sibling are positioned on the same row; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- [Cmfccustomizebutton:: Createpopupmenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8)方法會呼叫這個方法，以決定如何顯示**自訂**快顯功能表。 如果此方法傳回`TRUE`，架構會顯示**在一個資料列上顯示按鈕** 按鈕。 否則，架構就會顯示**在兩個資料列上顯示按鈕** 按鈕。  
+### <a name="remarks"></a>Remarks  
+ The [CMFCCustomizeButton::CreatePopupMenu](http://msdn.microsoft.com/en-us/e501083e-f78e-4d8d-900c-40bd6e2bb7f8) method calls this method to determine how to show the **Customize** pop-up menu. If this method returns `TRUE`, the framework displays the **Show Buttons on One Row** button. Otherwise, the framework displays the **Show Buttons on Two Rows** button.  
   
- 您通常不需要使用這個方法。 若要啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕，請呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)。  
+ You typically do not have to use this method. To enable the **Show Buttons on One Row** or **Show Buttons on Two Rows** buttons, call [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar).  
   
-##  <a name="isresourcechanged"></a>CMFCToolBar::IsResourceChanged  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged  
+
   
 ```  
 virtual BOOL IsResourceChanged() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="issibling"></a>CMFCToolBar::IsSibling  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="issibling"></a>  CMFCToolBar::IsSibling  
+
   
 ```  
 BOOL IsSibling();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isuserdefined"></a>CMFCToolBar::IsUserDefined  
- 指定工具列是否為使用者定義。  
+##  <a name="isuserdefined"></a>  CMFCToolBar::IsUserDefined  
+ Specifies whether the toolbar is user-defined.  
   
 ```  
 BOOL IsUserDefined() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者; 建立工具列否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the toolbar was created by the user; otherwise `FALSE`.  
   
-##  <a name="loadbitmap"></a>CMFCToolBar::LoadBitmap  
- 從應用程式資源載入工具列影像。  
+##  <a name="loadbitmap"></a>  CMFCToolBar::LoadBitmap  
+ Loads toolbar images from application resources.  
   
 ```  
 virtual BOOL LoadBitmap(
@@ -2135,35 +2289,35 @@ virtual BOOL LoadBitmap(
     UINT uiMenuDisabledResID=0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiResID`  
- 參考作用中工具列影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the hot toolbar images.  
   
  [in] `uiColdResID`  
- 參考非作用中工具列影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the cold toolbar images.  
   
  [in] `uiMenuResID`  
- 參考標準功能表影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the regular menu images.  
   
  [in] `bLocked`  
- `TRUE`若要鎖定工具列，否則`FALSE`。  
+ `TRUE` to lock the toolbar; otherwise `FALSE`.  
   
  [in] `uiDisabledResID`  
- 參考已停用工具列影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the disabled toolbar images.  
   
  [in] `uiMenuDisabledResID`  
- 參考已停用功能表影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the disabled menu images.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- [CMFCToolBar::LoadToolBarEx](#loadtoolbarex)方法會呼叫這個方法來載入與工具列相關聯的映像。 覆寫這個方法可執行影像資源的自訂載入。  
+### <a name="remarks"></a>Remarks  
+ The [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) method calls this method to load the images that are associated with the toolbar. Override this method to perform custom loading of image resources.  
   
- 呼叫 `LoadBitmapEx` 方法可在建立工具列之後載入其他影像。  
+ Call the `LoadBitmapEx` method to load additional images after you create the toolbar.  
   
-##  <a name="loadbitmapex"></a>CMFCToolBar::LoadBitmapEx  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx  
+
   
 ```  
 virtual BOOL LoadBitmapEx(
@@ -2171,49 +2325,49 @@ virtual BOOL LoadBitmapEx(
     BOOL bLocked = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `params`  
  [in] `bLocked`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="loadlargeiconsstate"></a>CMFCToolBar::LoadLargeIconsState  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState  
+
   
 ```  
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="loadparameters"></a>CMFCToolBar::LoadParameters  
- 從 Windows 登錄載入全域工具列上的選項。  
+##  <a name="loadparameters"></a>  CMFCToolBar::LoadParameters  
+ Loads global toolbar options from the Windows registry.  
   
 ```  
 static BOOL LoadParameters(LPCTSTR lpszProfileName=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 指定 Windows 登錄機碼的相對路徑。  
+ Specifies the relative path of the Windows registry key.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 這個方法會載入通用參數，例如功能表動畫類型、 功能表陰影樣式，以及是否要顯示大圖示從 Windows 登錄。  
+### <a name="remarks"></a>Remarks  
+ This method loads global parameters such as the menu animation type, the menu shadow style, and whether to display large icons from the Windows registry.  
   
- [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)方法會呼叫這個方法初始化程序的應用程式的一部分。  
+ The [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate) method calls this method as a part of the initialization process of the application.  
   
-##  <a name="loadstate"></a>CMFCToolBar::LoadState  
- 從 Windows 登錄載入工具列狀態資訊。  
+##  <a name="loadstate"></a>  CMFCToolBar::LoadState  
+ Loads the toolbar state information from the Windows registry.  
   
 ```  
 virtual BOOL LoadState(
@@ -2222,24 +2376,24 @@ virtual BOOL LoadState(
     UINT uiID=(UINT)-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 指定 Windows 登錄機碼的相對路徑。  
+ Specifies the relative path of the Windows registry key.  
   
  [in] `nIndex`  
- 指定工具列的控制項 ID。  
+ Specifies the control ID of the toolbar.  
   
  [in] `uiID`  
- 指定的資源識別碼的工具列。  
+ Specifies the resource ID of the toolbar.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法初始化程序的應用程式的一部分。 如需詳細資訊，請參閱[CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method as a part of the initialization process of the application. For more information, see [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="loadtoolbar"></a>CMFCToolBar::LoadToolBar  
- 從應用程式資源載入工具列。  
+##  <a name="loadtoolbar"></a>  CMFCToolBar::LoadToolBar  
+ Loads the toolbar from application resources.  
   
 ```  
 virtual BOOL LoadToolBar(
@@ -2252,42 +2406,42 @@ virtual BOOL LoadToolBar(
     UINT uiHotResID=0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiResID`  
- 工具列資源識別碼。  
+ The resource ID of the toolbar.  
   
  [in] `uiColdResID`  
- 參考非作用中工具列影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the cold toolbar images.  
   
  [in] `uiMenuResID`  
- 參考標準功能表影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the regular menu images.  
   
  [in] `bLocked`  
- 布林值，指定是否不論鎖定工具列。 如果這個參數是`TRUE`，工具列會鎖定。 否則，不鎖定工具列。  
+ A Boolean value that specifies whether the toolbar is locked or not. If this parameter is `TRUE`, the toolbar is locked. Otherwise, the toolbar is not locked.  
   
  [in] `uiDisabledResID`  
- 參考已停用工具列影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the disabled toolbar images.  
   
  [in] `uiMenuDisabledResID`  
- 參考已停用功能表影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the disabled menu images.  
   
  [in] `uiHotResID`  
- 參考作用中工具列影像之點陣圖的資源 ID。  
+ The resource ID of the bitmap that refers to the hot toolbar images.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 載入與工具列相關聯的映像的初始化期間，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method during initialization to load the images that are associated with the toolbar.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`LoadToolBar`方法中的`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `LoadToolBar` method in the `CMFCToolBar` class. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo # 7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]  
   
-##  <a name="loadtoolbarex"></a>CMFCToolBar::LoadToolBarEx  
- 透過使用從應用程式資源載入工具列`CMFCToolBarInfo`helper 類別，讓應用程式使用大型影像。  
+##  <a name="loadtoolbarex"></a>  CMFCToolBar::LoadToolBarEx  
+ Loads the toolbar from application resources by using the `CMFCToolBarInfo` helper class to enable the application to use large images.  
   
 ```  
 virtual BOOL LoadToolBarEx(
@@ -2296,47 +2450,47 @@ virtual BOOL LoadToolBarEx(
     BOOL bLocked=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiToolbarResID`  
- 工具列資源識別碼。  
+ The resource ID of the toolbar.  
   
  [in] `params`  
- 若要參考`CMFCToolBarInfo`物件，其中包含的工具列影像的資源 Id。  
+ A reference to a `CMFCToolBarInfo` object that contains the resource IDs for the toolbar images.  
   
  [in] `bLocked`  
- 布林值，指定是否不論鎖定工具列。 如果這個參數是`TRUE`，工具列會鎖定。 否則，不鎖定工具列。  
+ A Boolean value that specifies whether the toolbar is locked or not. If this parameter is `TRUE`, the toolbar is locked. Otherwise, the toolbar is not locked.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以從應用程式資源載入工具列影像。  
+### <a name="remarks"></a>Remarks  
+ Call this method to load toolbar images from the application resources.  
   
-##  <a name="m_dbllargeimageratio"></a>CMFCToolBar::m_dblLargeImageRatio  
- 指定大型影像的維度 （高度或寬度） 和維度的一般映像之間的比率。  
+##  <a name="m_dbllargeimageratio"></a>  CMFCToolBar::m_dblLargeImageRatio  
+ Specifies the ratio between the dimension (height or width) of large images and the dimension of regular images.  
   
 ```  
 AFX_IMPORT_DATA static double m_dblLargeImageRatio;  
 ```  
   
-### <a name="remarks"></a>備註  
- 預設比例為 2。 您可以變更此值可讓大型工具列影像，較大或變小。  
+### <a name="remarks"></a>Remarks  
+ The default ratio is 2. You can change this value to make large toolbar images larger or smaller.  
   
- 當您未指定一組大型映像，架構會使用此資料成員。 例如，如果您提供只有一組小型影像大小為 16 x 16，而且想要有大小 24 x 24 的大型影像，設定此資料成員為 1.5。  
+ The framework uses this data member when you do not specify a set of large images. For example, if you provide only the set of small images with size 16x16 and want the large images to have the size 24x24, set this data member to 1.5.  
   
-##  <a name="nextmenu"></a>CMFCToolBar::NextMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu  
+
   
 ```  
 virtual BOOL NextMenu();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onbeforeremovebutton"></a>CMFCToolBar::OnBeforeRemoveButton  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton  
+
   
 ```  
 virtual BOOL OnBeforeRemoveButton(
@@ -2344,112 +2498,112 @@ virtual BOOL OnBeforeRemoveButton(
     DROPEFFECT dropEffect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 未使用。  
+ Unused.  
   
  [in] `dropEffect`  
- 未使用。  
+ Unused.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onchangehot"></a>CMFCToolBar::OnChangeHot  
- 當使用者選取工具列上的按鈕時由架構呼叫。  
+##  <a name="onchangehot"></a>  CMFCToolBar::OnChangeHot  
+ Called by the framework when a user selects a button on the toolbar.  
   
 ```  
 virtual void OnChangeHot(int iHot);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iHot`  
- 指定已選取; 工具列按鈕的索引或是-1，如果不選取任何工具列按鈕。  
+ Specifies the index of the toolbar button that is selected; or -1 if no toolbar button is selected.  
   
-### <a name="remarks"></a>備註  
- 覆寫此方法以處理程序通知使用者選取工具列上的按鈕。  
+### <a name="remarks"></a>Remarks  
+ Override this method to process notifications that the user selected a button on a toolbar.  
   
-##  <a name="onchangevisualmanager"></a>CMFCToolBar::OnChangeVisualManager  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager  
+
   
 ```  
 virtual void OnChangeVisualManager();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onfillbackground"></a>CMFCToolBar::OnFillBackground  
- 從架構呼叫[CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint)工具列背景填滿。  
+##  <a name="onfillbackground"></a>  CMFCToolBar::OnFillBackground  
+ Called by the framework from [CBasePane::DoPaint](../../mfc/reference/cbasepane-class.md#dopaint) to fill the toolbar background.  
   
 ```  
 virtual void OnFillBackground(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>備註  
- [CMFCToolBar::DoPaint](#dopaint)已滿工具列的背景時呼叫這個方法。 預設實作不做任何動作。  
+### <a name="remarks"></a>Remarks  
+ [CMFCToolBar::DoPaint](#dopaint) calls this method when the background of a toolbar has been filled. The default implementation does nothing.  
   
- 覆寫這個方法在衍生類別中繪製自訂背景。  
+ Override this method to draw custom background in derived classes.  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBar::OnGlobalFontsChanged  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged  
+
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onreset"></a>CMFCToolBar::OnReset  
- 將工具列還原成原始狀態。  
+##  <a name="onreset"></a>  CMFCToolBar::OnReset  
+ Restores the toolbar to its original state.  
   
 ```  
 virtual void OnReset();
 ```  
   
-### <a name="remarks"></a>備註  
- 覆寫此方法以處理工具列重設的相關通知。  
+### <a name="remarks"></a>Remarks  
+ Override this method to handle notification about a toolbar reset.  
   
- 預設實作不做任何動作。 覆寫`OnReset`類別，衍生自中`CMFCToolBar`工具列時有 dummy 工具列回到其原始狀態時，必須被取代的按鈕。  
+ The default implementation does nothing. Override `OnReset` in a class derived from `CMFCToolBar` when the toolbar has dummy buttons that must be replaced when the toolbar returns to its original state.  
   
-##  <a name="onsetaccdata"></a>CMFCToolBar::OnSetAccData  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData  
+
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lVal`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsetdefaultbuttontext"></a>CMFCToolBar::OnSetDefaultButtonText  
- 工具列按鈕的文字會還原為其預設狀態。  
+##  <a name="onsetdefaultbuttontext"></a>  CMFCToolBar::OnSetDefaultButtonText  
+ Restores the text of a toolbar button to its default state.  
   
 ```  
 virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 指向要設定其文字的按鈕。  
+ Points to a button, whose text is being set.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`ifthe 文字已經順利還原;否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` ifthe text was successfully restored; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫此方法以處理程序通知工具列按鈕的文字會變成預設值。  
+### <a name="remarks"></a>Remarks  
+ Override this method to process notifications that the text of a toolbar button is being changed to its default.  
   
- 預設實作會從應用程式資源載入按鈕的文字。  
+ The default implementation loads the text of a button from the application resources.  
   
-##  <a name="onusertooltip"></a>CMFCToolBar::OnUserToolTip  
- 即將顯示工具提示按鈕時由架構呼叫。  
+##  <a name="onusertooltip"></a>  CMFCToolBar::OnUserToolTip  
+ Called by the framework when the tooltip for a button is about to be displayed.  
   
 ```  
 virtual BOOL OnUserToolTip(
@@ -2457,82 +2611,82 @@ virtual BOOL OnUserToolTip(
     CString& strTTText) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 指向工具列按鈕顯示工具提示的。  
+ Points to a toolbar button for which a tooltip is to be displayed.  
   
- [輸出] `strTTText`  
- 若要參考`CString`物件，可接收的工具提示文字。  
+ [out] `strTTText`  
+ A reference to `CString` object that receives the text of the tooltip.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果`strTTText`填入工具提示文字，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if `strTTText` was populated with tooltip text; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 工具列按鈕的工具提示即將顯示時，架構會呼叫這個方法。 如果`OnUserToolTip`傳回`TRUE`，架構會顯示工具提示，其中包含所傳回的文字`OnUserToolTip`中`strTTText`。 否則，工具提示會包含按鈕的文字。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the tooltip for a toolbar button is about to be displayed. If `OnUserToolTip` returns `TRUE`, the framework displays a tooltip which contains the text returned by `OnUserToolTip` in `strTTText`. Otherwise, the tooltip contains the button text.  
   
- 覆寫`OnUserToolTip`自訂工具列按鈕的工具提示。 預設實作會呼叫[CMFCToolBar::OnUserToolTip](#onusertooltip)取得工具提示文字。  
+ Override `OnUserToolTip` to customize tool tips of toolbar buttons. The default implementation calls [CMFCToolBar::OnUserToolTip](#onusertooltip) to obtain the tooltip text.  
   
-##  <a name="prevmenu"></a>CMFCToolBar::PrevMenu  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu  
+
   
 ```  
 virtual BOOL PrevMenu();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="processcommand"></a>CMFCToolBar::ProcessCommand  
- 文章`WM_COMMAND`擁有工具列的視窗訊息。  
+##  <a name="processcommand"></a>  CMFCToolBar::ProcessCommand  
+ Posts a `WM_COMMAND` message to the window that owns the toolbar.  
   
 ```  
 BOOL ProcessCommand(CMFCToolBarButton* pButton);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 在工具列上的按鈕的指標。  
+ Pointer to a button on the toolbar.  
   
-### <a name="return-value"></a>傳回值  
- 這個方法一律會傳回`TRUE`。 MFC 使用`FALSE`內部值。  
+### <a name="return-value"></a>Return Value  
+ This method should always return `TRUE`. MFC uses `FALSE` values internally.  
   
-### <a name="remarks"></a>備註  
- 這個方法回傳`WM_COMMAND`藉由呼叫擁有工具列的視窗訊息[CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage)和傳遞做為指定的按鈕的命令識別碼`wParam`參數。  
+### <a name="remarks"></a>Remarks  
+ This method posts a `WM_COMMAND` message to the window that owns the toolbar by calling [CWnd::PostMessage](../../mfc/reference/cwnd-class.md#postmessage) and passing the command ID of the specified button as the `wParam` parameter.  
   
- 使用[ON_COMMAND](message-map-macros-mfc.md#on_command)巨集將對應`WM_COMMAND`成員函式的訊息。  
+ Use the [ON_COMMAND](message-map-macros-mfc.md#on_command) macro to map the `WM_COMMAND` message to a member function.  
   
-##  <a name="removeallbuttons"></a>CMFCToolBar::RemoveAllButtons  
- 從工具列中移除所有的按鈕和分隔符號。  
+##  <a name="removeallbuttons"></a>  CMFCToolBar::RemoveAllButtons  
+ Removes all buttons and separators from the toolbar.  
   
 ```  
 virtual void RemoveAllButtons();
 ```  
   
-### <a name="remarks"></a>備註  
- 它會重新建立或終結工具列時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it recreates or destroys a toolbar.  
   
-##  <a name="removebutton"></a>CMFCToolBar::RemoveButton  
- 從工具列中移除具有指定的索引的按鈕。  
+##  <a name="removebutton"></a>  CMFCToolBar::RemoveButton  
+ Removes from the toolbar the button that has the specified index.  
   
 ```  
 virtual BOOL RemoveButton(int iIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 指定 [移除] 按鈕的以零為起始的索引。  
+ Specifies the zero-based index of the button to remove.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功，或`FALSE`如果指定的索引不正確，或索引是指**自訂** 按鈕。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, or `FALSE` if the specified index is invalid or the index refers to the **Customize** button.  
   
-### <a name="remarks"></a>備註  
- 這個方法會更新受影響的移除按鈕的其他工具列屬性。 例如，這個方法會從工具列中移除不必要的分隔字元，並重建的快速鍵資料表。  
+### <a name="remarks"></a>Remarks  
+ This method updates additional toolbar attributes that are affected by the removal of the button. For example, this method removes nonessential separators from the toolbar and rebuilds the table of shortcut keys.  
   
- 如需有關**自訂**按鈕，請參閱[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)。  
+ For more information about the **Customize** button, see [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
-##  <a name="removestatefromregistry"></a>CMFCToolBar::RemoveStateFromRegistry  
- 從 Windows 登錄中刪除工具列的狀態資訊。  
+##  <a name="removestatefromregistry"></a>  CMFCToolBar::RemoveStateFromRegistry  
+ Deletes the state information for the toolbar from the Windows registry.  
   
 ```  
 virtual BOOL RemoveStateFromRegistry(
@@ -2541,26 +2695,26 @@ virtual BOOL RemoveStateFromRegistry(
     UINT uiID=(UINT)-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 指定的登錄機碼的狀態資訊所在的位置。  
+ Specifies the registry key where the state information is located.  
   
  [in] `nIndex`  
- 工具列控制項 ID。  
+ The control ID of the toolbar.  
   
  [in] `uiID`  
- 工具列資源識別碼。 如果這個參數是-1，這個方法會使用[CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid)方法來擷取資源識別碼。  
+ The resource ID of the toolbar. If this parameter is -1, this method uses the [CWnd::GetDlgCtrlID](../../mfc/reference/cwnd-class.md#getdlgctrlid) method to retrieve the resource ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 它會刪除使用者定義工具列時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it deletes a user-defined toolbar.  
   
- 如果您在 Windows 登錄中儲存其他狀態資訊，請覆寫這個方法。  
+ Override this method if you store additional state information in the Windows registry.  
   
-##  <a name="replacebutton"></a>CMFCToolBar::ReplaceButton  
- 取代另一個工具列按鈕的工具列按鈕。  
+##  <a name="replacebutton"></a>  CMFCToolBar::ReplaceButton  
+ Replaces a toolbar button with another toolbar button.  
   
 ```  
 int ReplaceButton(
@@ -2569,97 +2723,97 @@ int ReplaceButton(
     BOOL bAll=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- 要取代的按鈕命令識別碼。  
+ The command ID of the button to replace.  
   
  [in] `button`  
- 若要參考`CMFCToolBarButton`插入。  
+ A reference to the `CMFCToolBarButton` to insert.  
   
  [in] `bAll`  
- 布林值，指定是否要取代所有具有所指定的命令 ID 的按鈕`uiCmd`。 如果這個參數是`TRUE`，取代所有具有指定的命令 ID 的按鈕。 否則，會取代第一個按鈕。  
+ A Boolean value that specifies whether to replace all buttons that have the command ID specified by `uiCmd`. If this parameter is `TRUE`, all buttons that have the specified command ID are replaced. Otherwise, the first button is replaced.  
   
-### <a name="return-value"></a>傳回值  
- 會被取代的按鈕數目。 如果不存在具有指定的命令 ID 的按鈕，這是在工具列上，這個方法會傳回 0。  
+### <a name="return-value"></a>Return Value  
+ The number of buttons that are replaced. This method returns 0 if a button with the specified command ID does not exist on the toolbar.  
   
-### <a name="remarks"></a>備註  
- 當您想要加入，無法從資源載入工具列按鈕時呼叫這個方法。 您可以在設計階段中建立預留位置按鈕，並初始化工具列時，自訂按鈕取代該按鈕。 請參閱 VisualStudioDemo 範例的範例，會使用這個方法。  
+### <a name="remarks"></a>Remarks  
+ Call this method when you want to add toolbar buttons that cannot be loaded from resources. You can create a placeholder button at design-time and replace that button with a custom button when you initialize the toolbar. See the VisualStudioDemo sample for an example that uses this method.  
   
-### <a name="example"></a>範例  
- 下列範例示範如何使用`ReplaceButton`方法中的`CMFCToolBar`類別。 此程式碼片段是部分[IE 示範範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to use the `ReplaceButton` method in the `CMFCToolBar` class. This code snippet is part of the [IE Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_IEDemo # 6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
-[!code-cpp[NVC_MFC_IEDemo # 10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]  
+[!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]  
   
-##  <a name="resetall"></a>CMFCToolBar::ResetAll  
- 將所有工具列都還原成其原始狀態。  
+##  <a name="resetall"></a>  CMFCToolBar::ResetAll  
+ Restores all toolbars to their original states.  
   
 ```  
 static void __stdcall ResetAll();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會呼叫[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)可還原的應用程式中的每個工具列上的方法。 它會使用[CMFCToolBar::CanBeRestored](#canberestored)方法，以判斷是否可以還原工具列。  
+### <a name="remarks"></a>Remarks  
+ This method calls the [CMFCToolBar::RestoreOriginalState](#restoreoriginalstate) method on each toolbar in the application that can be restored. It uses the [CMFCToolBar::CanBeRestored](#canberestored) method to determine whether a toolbar can be restored.  
   
-##  <a name="resetallimages"></a>CMFCToolBar::ResetAllImages  
- 清除所有應用程式中的工具列影像集合。  
+##  <a name="resetallimages"></a>  CMFCToolBar::ResetAllImages  
+ Clears all toolbar image collections in the application.  
   
 ```  
 static void __stdcall ResetAllImages();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會清除已初始化的影像集合[CMFCToolBar::LoadToolBar](#loadtoolbar)和[CMFCToolBar::LoadBitmap](#loadbitmap)方法。  
+### <a name="remarks"></a>Remarks  
+ This method clears the image collections that are initialized by the [CMFCToolBar::LoadToolBar](#loadtoolbar) and [CMFCToolBar::LoadBitmap](#loadbitmap) methods.  
   
-##  <a name="resetimages"></a>CMFCToolBar::ResetImages  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="resetimages"></a>  CMFCToolBar::ResetImages  
+
   
 ```  
 virtual void ResetImages();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="restorefocus"></a>CMFCToolBar::RestoreFocus  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus  
+
   
 ```  
 virtual void RestoreFocus();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="restoreoriginalstate"></a>CMFCToolBar::RestoreOriginalState  
- 還原工具列的原始狀態。  
+##  <a name="restoreoriginalstate"></a>  CMFCToolBar::RestoreOriginalState  
+ Restores the original state of a toolbar.  
   
 ```  
 virtual BOOL RestoreOriginalState();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功即為 `TRUE`，方法失敗或工具列為使用者定義的，則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, or `FALSE` if the method fails or the toolbar is user-defined.  
   
-### <a name="remarks"></a>備註  
- 這個方法透過使用從資源檔載入工具列[CMFCToolBar::LoadToolBar](#loadtoolbar)方法。  
+### <a name="remarks"></a>Remarks  
+ This method loads the toolbar from the resource file by using the [CMFCToolBar::LoadToolBar](#loadtoolbar) method.  
   
- 架構會呼叫這個方法，當使用者選擇**全部重設**按鈕**工具列**自訂對話方塊的頁面。  
+ The framework calls this method when the user chooses the **Reset All** button on the **Toolbars** page of a customization dialog box.  
   
-##  <a name="saveparameters"></a>CMFCToolBar::SaveParameters  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters  
+
   
 ```  
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="savestate"></a>CMFCToolBar::SaveState  
- 將工具列的狀態資訊儲存在 Windows 登錄中。  
+##  <a name="savestate"></a>  CMFCToolBar::SaveState  
+ Saves the state information for the toolbar in the Windows registry.  
   
 ```  
 virtual BOOL SaveState(
@@ -2668,42 +2822,42 @@ virtual BOOL SaveState(
     UINT uiID=(UINT)-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 指定 Windows 登錄機碼的相對路徑。  
+ Specifies the relative path of the Windows registry key.  
   
  [in] `nIndex`  
- 工具列控制項 ID。  
+ The control ID of the toolbar.  
   
  [in] `uiID`  
- 工具列資源識別碼。  
+ The resource ID of the toolbar.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 它會將應用程式狀態儲存至登錄時，架構會呼叫這個方法。 如需詳細資訊，請參閱[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it saves the application state to the registry. For more information, see [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="setbasiccommands"></a>CMFCToolBar::SetBasicCommands  
- 設定永遠會在使用者開啟功能表時所顯示的命令清單。  
+##  <a name="setbasiccommands"></a>  CMFCToolBar::SetBasicCommands  
+ Sets the list of commands that are always displayed when a user opens a menu.  
   
 ```  
 static void __stdcall SetBasicCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lstCommands`  
- 若要參考`CList`物件，其中包含命令集合。  
+ A reference to a `CList` object that contains a collection of commands.  
   
-### <a name="remarks"></a>備註  
- 在功能表開啟時，一律會顯示基本的命令。 當使用者選擇要檢視最近使用的命令時，這個方法是有意義。  
+### <a name="remarks"></a>Remarks  
+ A basic command is always displayed when the menu is opened. This method is meaningful when the user chooses to view recently used commands.  
   
- 使用[CMFCToolBar::AddBasicCommand](#addbasiccommand)方法將命令新增至基本命令的清單。 使用[CMFCToolBar::GetBasicCommands](#getbasiccommands)方法來擷取基本的命令，可由您的應用程式的清單。  
+ Use the [CMFCToolBar::AddBasicCommand](#addbasiccommand) method to add a command to the list of basic commands. Use the [CMFCToolBar::GetBasicCommands](#getbasiccommands) method to retrieve the list of basic commands that is used by your application.  
   
- 請參閱在總管的範例會使用這個方法的範例。  
+ See the Explorer sample for an example that uses this method.  
   
-##  <a name="setbuttoninfo"></a>CMFCToolBar::SetButtonInfo  
- 設定命令 ID、 樣式和工具列按鈕的影像 ID。  
+##  <a name="setbuttoninfo"></a>  CMFCToolBar::SetButtonInfo  
+ Sets the command ID, style, and image ID of a toolbar button.  
   
 ```  
 void SetButtonInfo(
@@ -2713,28 +2867,28 @@ void SetButtonInfo(
     int iImage);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 按鈕設定其屬性的以零為起始的索引。  
+ The zero-based index of the button whose properties are set.  
   
  [in] `nID`  
- 按鈕的命令識別碼。  
+ The command ID of the button.  
   
  [in] `nStyle`  
- 按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
+ The style of the button. See [ToolBar Control Styles](../../mfc/reference/toolbar-control-styles.md) for the list of available toolbar button styles.  
   
  [in] `iImage`  
- （也就是下工具列影像集合中索引） 的按鈕之以零為起始的映像索引。  
+ The zero-based image index of the button (that is, the index in the collection of toolbar images).  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以設定工具列按鈕的屬性。  
+### <a name="remarks"></a>Remarks  
+ Call this method to set the properties of a toolbar button.  
   
- 在偵錯組建中，這個方法會產生判斷提示失敗如果所指定的索引`nIndex`無效。  
+ In Debug builds, this method generates an assertion failure if the index that is specified by `nIndex` is invalid.  
   
- 呼叫[CMFCToolBar::SetButtonStyle](#setbuttonstyle)方法，以設定按鈕的樣式。  
+ Call the [CMFCToolBar::SetButtonStyle](#setbuttonstyle) method to set only the style of the button.  
   
-##  <a name="setbuttons"></a>CMFCToolBar::SetButtons  
- 集合的工具列按鈕。  
+##  <a name="setbuttons"></a>  CMFCToolBar::SetButtons  
+ Sets the buttons for the toolbar.  
   
 ```  
 virtual BOOL SetButtons(
@@ -2743,26 +2897,26 @@ virtual BOOL SetButtons(
     BOOL bRemapImages=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpIDArray`  
- 要插入的命令 id 的按鈕陣列的指標。  
+ A pointer to the array of command IDs of the buttons to insert.  
   
  [in] `nIDCount`  
- 中的項目數`lpIDArray`。  
+ The number of items in `lpIDArray`.  
   
  [in] `bRemapImages`  
- 布林值，指定是否要將現有的按鈕影像與插入按鈕產生關聯。 如果這個參數是`TRUE`，影像會重新對應。  
+ A Boolean value that specifies whether to associate the existing button images with the inserted buttons. If this parameter is `TRUE`, the images are remapped.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，則為非零，否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以從工具列移除現有的按鈕，並插入新的按鈕的集合。  
+### <a name="remarks"></a>Remarks  
+ Call this method to remove existing buttons from a toolbar and insert a collection of new buttons.  
   
- 這個方法會加入**自訂**按鈕的工具列和傳送`AFX_WM_RESETTOOLBAR`工具列的父視窗的訊息。 如需有關**自訂**按鈕，請參閱[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)。  
+ This method adds the **Customize** button to the toolbar and sends the `AFX_WM_RESETTOOLBAR` message to the parent window of the toolbar. For more information about the **Customize** button, see [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton).  
   
-##  <a name="setbuttonstyle"></a>CMFCToolBar::SetButtonStyle  
- 設定指定索引處的工具列按鈕的樣式。  
+##  <a name="setbuttonstyle"></a>  CMFCToolBar::SetButtonStyle  
+ Sets the style of the toolbar button at the given index.  
   
 ```  
 virtual void SetButtonStyle(
@@ -2770,18 +2924,18 @@ virtual void SetButtonStyle(
     UINT nStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 工具列按鈕的樣式是要設定的以零為起始的索引。  
+ The zero-based index of the toolbar button whose style is to be set.  
   
  [in] `nStyle`  
- 按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
+ The style of the button. See [ToolBar Control Styles](../../mfc/reference/toolbar-control-styles.md) for the list of available toolbar button styles.  
   
-### <a name="remarks"></a>備註  
- 這個方法會移除`TBBS_PRESSED`樣式如果`nStyle`是`TBBS_DISABLED`因為使用者不能按一下 已停用的按鈕。  
+### <a name="remarks"></a>Remarks  
+ This method removes the `TBBS_PRESSED` style if `nStyle` is `TBBS_DISABLED` because the user cannot click a disabled button.  
   
-##  <a name="setbuttontext"></a>CMFCToolBar::SetButtonText  
- 設定的文字標籤的工具列按鈕。  
+##  <a name="setbuttontext"></a>  CMFCToolBar::SetButtonText  
+ Sets the text label of a toolbar button.  
   
 ```  
 BOOL SetButtonText(
@@ -2789,21 +2943,21 @@ BOOL SetButtonText(
     LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 工具列按鈕的索引。  
+ The index of the toolbar button.  
   
  [in] `lpszText`  
- 工具列按鈕的文字標籤。 必須為非`NULL`。  
+ The text label of the toolbar button. Must be non- `NULL`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳回`FALSE`如果提供的索引未參考有效的工具列按鈕。  
+### <a name="remarks"></a>Remarks  
+ This method returns `FALSE` if the provided index does not refer to a valid toolbar button.  
   
-##  <a name="setcommandusageoptions"></a>CMFCToolBar::SetCommandUsageOptions  
- 指定當很少使用的命令未出現在應用程式的功能表。  
+##  <a name="setcommandusageoptions"></a>  CMFCToolBar::SetCommandUsageOptions  
+ Specifies when rarely used commands do not appear in the menu of the application.  
   
 ```  
 static BOOL SetCommandUsageOptions(
@@ -2811,154 +2965,154 @@ static BOOL SetCommandUsageOptions(
     UINT nMinUsagePercentage=5);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nStartCount`  
- 指定在架構顯示只有基本] 和 [最近使用過的命令之前，必須先執行命令的次數。  
+ Specifies the number of times that commands must be executed before the framework shows only the basic and recently-used commands.  
   
  [in] `nMinUsagePercentage`  
- 必須考量的最近使用過的命令執行命令的時間百分比。  
+ The percentage of times that a command must be executed to be considered a recently-used command.  
   
-### <a name="return-value"></a>傳回值  
- `FALSE`如果`nMinUsagePercentage`等於或大於 100，否則為`TRUE`。  
+### <a name="return-value"></a>Return Value  
+ `FALSE` if `nMinUsagePercentage` is equal to or larger than 100; otherwise `TRUE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以自訂的架構用來決定如何基本和最近使用的功能表項目出現的演算法。 如需基本命令的詳細資訊，請參閱[CMFCToolBar::AddBasicCommand](#addbasiccommand)。  
+### <a name="remarks"></a>Remarks  
+ Call this method to customize the algorithm that the framework uses to determine how basic and recently used menu items appear. For more information about basic commands, see [CMFCToolBar::AddBasicCommand](#addbasiccommand).  
   
- 這個類別會使用`CMFCCmdUsageCount`類別來追蹤使用方式的命令計數。 如需此類別的詳細資訊，請參閱[CMFCCmdUsageCount 類別](../../mfc/reference/cmfccmdusagecount-class.md)。  
+ This class uses the `CMFCCmdUsageCount` class to track the usage count of commands. For more information about this class, see [CMFCCmdUsageCount Class](../../mfc/reference/cmfccmdusagecount-class.md).  
   
-##  <a name="setcustomizemode"></a>CMFCToolBar::SetCustomizeMode  
- 啟用或停用應用程式中的所有工具列的自訂模式。  
+##  <a name="setcustomizemode"></a>  CMFCToolBar::SetCustomizeMode  
+ Enables or disables customization mode for all toolbars in the application.  
   
 ```  
 static BOOL __stdcall SetCustomizeMode(BOOL bSet=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- 布林值，指定是否要啟用或停用自訂模式。 這個參數設定為`TRUE`若要啟用自訂模式或`FALSE`停用此功能。  
+ A Boolean value that specifies whether to enable or disable customization mode. Set this parameter to `TRUE` to enable customization mode or `FALSE` to disable it.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果呼叫這個方法會變更的自訂模式。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if calling this method changes the customization mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會調整的版面配置，並重新繪製應用程式中的每個工具列。 呼叫[CMFCToolBar::IsCustomizeMode](#iscustomizemode)方法，以判斷應用程式是否為自訂模式，  
+### <a name="remarks"></a>Remarks  
+ This method adjusts the layout of and redraws each toolbar in the application. Call the [CMFCToolBar::IsCustomizeMode](#iscustomizemode) method to determine whether the application is in customization mode,  
   
-##  <a name="setgraydisabledbuttons"></a>CMFCToolBar::SetGrayDisabledButtons  
- 指定是否無法使用工具列上的按鈕會呈暗灰色，或是否使用按鈕無法使用映像。  
+##  <a name="setgraydisabledbuttons"></a>  CMFCToolBar::SetGrayDisabledButtons  
+ Specifies whether unavailable buttons on the toolbar are dimmed, or whether button-unavailable images are used.  
   
 ```  
 void SetGrayDisabledButtons(BOOL bGrayDisabledButtons);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bGrayDisabledButtons`  
- 布林值，指定如何顯示按鈕無法使用。 如果這個參數是`TRUE`，架構會使按鈕變成灰色。 否則，架構會使用按鈕無法使用的影像的集合。  
+ A Boolean value that specifies how to display unavailable buttons. If this parameter is `TRUE`, the framework dims the buttons. Otherwise, the framework uses the collection of button-unavailable images.  
   
-### <a name="remarks"></a>備註  
- 根據預設，無法使用的按鈕會呈暗灰色。  
+### <a name="remarks"></a>Remarks  
+ By default, unavailable buttons are dimmed.  
   
-##  <a name="setheight"></a>CMFCToolBar::SetHeight  
- 設定工具列的高度。  
+##  <a name="setheight"></a>  CMFCToolBar::SetHeight  
+ Sets the height of the toolbar.  
   
 ```  
 void SetHeight(int cyHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `cyHeight`  
- 工具列上，單位為像素的高度。  
+ The height of the toolbar, in pixels.  
   
-### <a name="remarks"></a>備註  
- 之後它設定的高度，這個方法會重繪工具列。  
+### <a name="remarks"></a>Remarks  
+ This method redraws the toolbar after it sets the height.  
   
-##  <a name="sethelpmode"></a>CMFCToolBar::SetHelpMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode  
+
   
 ```  
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bOn`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sethot"></a>CMFCToolBar::SetHot  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="sethot"></a>  CMFCToolBar::SetHot  
+
   
 ```  
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuButton`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="sethotborder"></a>CMFCToolBar::SetHotBorder  
- 指定工具列按鈕是否熱追蹤。  
+##  <a name="sethotborder"></a>  CMFCToolBar::SetHotBorder  
+ Specifies whether toolbar buttons are hot-tracked.  
   
 ```  
 void SetHotBorder(BOOL bShowHotBorder);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bShowHotBorder`  
- 布林值，指定是否要熱追蹤工具列按鈕。 如果這個參數是`TRUE`，工具列熱追蹤其按鈕。 否則，工具列不會不熱追蹤其按鈕。  
+ A Boolean value that specifies whether to hot-track toolbar buttons. If this parameter is `TRUE`, the toolbar hot-tracks its buttons. Otherwise, the toolbar does not hot-track its buttons.  
   
-### <a name="remarks"></a>備註  
- 如果按鈕熱追蹤，架構會反白顯示的按鈕時在滑鼠移動經過它。 根據預設，每個工具列熱追蹤其按鈕。  
+### <a name="remarks"></a>Remarks  
+ If a button is hot-tracked, the framework highlights the button when the mouse moves across it. By default, each toolbar hot-tracks its buttons.  
   
- 呼叫[CMFCToolBar::GetHotBorder](#gethotborder)方法，以判斷是否工具列熱追蹤其按鈕。  
+ Call the [CMFCToolBar::GetHotBorder](#gethotborder) method to determine whether the toolbar hot-tracks its buttons.  
   
-##  <a name="sethottextcolor"></a>CMFCToolBar::SetHotTextColor  
- 設定作用中工具列按鈕的文字色彩。  
+##  <a name="sethottextcolor"></a>  CMFCToolBar::SetHotTextColor  
+ Sets the text color for hot toolbar buttons.  
   
 ```  
 static void SetHotTextColor(COLORREF clrText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `clrText`  
- 指定熱追蹤的工具列按鈕的文字色彩。  
+ Specifies the text color for toolbar buttons that are hot-tracked.  
   
-### <a name="remarks"></a>備註  
- 如需熱追蹤工具列按鈕的詳細資訊，請參閱[CMFCToolBar::GetHotBorder](#gethotborder)和[CMFCToolBar::SetHotBorder](#sethotborder)。  
+### <a name="remarks"></a>Remarks  
+ For more information about hot-tracked toolbar buttons, see [CMFCToolBar::GetHotBorder](#gethotborder) and [CMFCToolBar::SetHotBorder](#sethotborder).  
   
-##  <a name="setignoresettext"></a>CMFCToolBar::SetIgnoreSetText  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText  
+
   
 ```  
 void SetIgnoreSetText(BOOL bValue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bValue`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setlargeicons"></a>CMFCToolBar::SetLargeIcons  
- 指定工具列按鈕是否顯示大圖示。  
+##  <a name="setlargeicons"></a>  CMFCToolBar::SetLargeIcons  
+ Specifies whether toolbar buttons display large icons.  
   
 ```  
 static void SetLargeIcons(BOOL bLargeIcons=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bLargeIcons`  
- 布林值，指定要使用的圖示。 如果這個參數是`TRUE`，架構會顯示大圖示。 否則，架構會顯示規則的圖示。  
+ A Boolean value that specifies which icons to use. If this parameter is `TRUE`, the framework displays large icons. Otherwise, the framework displays regular icons.  
   
-### <a name="remarks"></a>備註  
- 使用者變更的狀態時，架構會呼叫這個方法**大圖示**中核取方塊**選項** 索引標籤**自訂** 對話方塊。 這個方法會調整大小的所有應用程式中的工具列。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the user changes the state of the **Large Icons** check box in the **Options** tab of the **Customize** dialog box. This method resizes all toolbars in the application.  
   
- 根據預設，架構會顯示規則的圖示。  
+ By default, the framework displays regular icons.  
   
- 如需有關**自訂**對話方塊中，請參閱[CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)。  
+ For more information about the **Customize** dialog box, see [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="setlockedsizes"></a>CMFCToolBar::SetLockedSizes  
- 在工具列上設定鎖定的按鈕和鎖定的映像的大小。  
+##  <a name="setlockedsizes"></a>  CMFCToolBar::SetLockedSizes  
+ Sets the sizes of locked buttons and locked images on the toolbar.  
   
 ```  
 void SetLockedSizes(
@@ -2967,35 +3121,35 @@ void SetLockedSizes(
     BOOL bDontScale = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `sizeButton`  
- 指定鎖定的工具列按鈕的大小。  
+ Specifies the size of locked toolbar buttons.  
   
  [in] `sizeImage`  
- 指定鎖定的工具列影像的大小。  
+ Specifies the size of locked toolbar images.  
   
  `bDontScale`  
- 指定是否調整或無法鎖定工具列影像在高 DPI 模式中。  
+ Specifies whether to scale or not locked toolbar images in high DPI mode.  
   
-### <a name="remarks"></a>備註  
- 鎖定按鈕的預設大小為 23 x 22 像素。 鎖定的映像的預設大小為 16 x 15 像素。  
+### <a name="remarks"></a>Remarks  
+ The default size of locked buttons is 23x22 pixels. The default size of locked images is 16x15 pixels.  
   
- 呼叫[CMFCToolBar::GetLockedImageSize](#getlockedimagesize)方法來擷取的大小鎖定映像。 呼叫[CMFCToolBar::GetButtonSize](#getbuttonsize)方法來擷取的大小鎖定工具列按鈕。  
+ Call the [CMFCToolBar::GetLockedImageSize](#getlockedimagesize) method to retrieve the size of locked images. Call the [CMFCToolBar::GetButtonSize](#getbuttonsize) method to retrieve the size of locked toolbar buttons.  
   
-##  <a name="setmaskmode"></a>CMFCToolBar::SetMaskMode  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode  
+
   
 ```  
 void SetMaskMode(BOOL bMasked);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bMasked`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setmenusizes"></a>CMFCToolBar::SetMenuSizes  
- 設定工具列功能表按鈕和其映像的大小。  
+##  <a name="setmenusizes"></a>  CMFCToolBar::SetMenuSizes  
+ Sets the size of toolbar menu buttons and their images.  
   
 ```  
 static void __stdcall SetMenuSizes(
@@ -3003,128 +3157,128 @@ static void __stdcall SetMenuSizes(
     SIZE sizeImage);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `sizeButton`  
- 指定工具列按鈕的大小，單位為像素。  
+ Specifies the size of toolbar buttons, in pixels.  
   
  [in] `sizeImage`  
- 指定工具列影像的大小，單位為像素。  
+ Specifies the size of toolbar images, in pixels.  
   
-### <a name="remarks"></a>備註  
- 根據預設，功能表按鈕和其映像具有未定義的大小。  
+### <a name="remarks"></a>Remarks  
+ By default, menu buttons and their images have an undefined size.  
   
- 呼叫[CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize)方法，以判斷功能表按鈕的大小和[CMFCToolBar::GetMenuImageSize](#getmenuimagesize)方法，以判斷功能表按鈕影像的大小。  
+ Call the [CMFCToolBar::GetMenuButtonSize](#getmenubuttonsize) method to determine the size of menu buttons and the [CMFCToolBar::GetMenuImageSize](#getmenuimagesize) method to determine the size of menu button images.  
   
- 如需範例，請使用這個方法的 IEDemo 和 MSMoneyDemo 範例，請參閱。  
+ See the IEDemo and MSMoneyDemo samples for examples that use this method.  
   
-##  <a name="setnonpermittedcommands"></a>CMFCToolBar::SetNonPermittedCommands  
- 設定無法在使用者所執行的命令清單。  
+##  <a name="setnonpermittedcommands"></a>  CMFCToolBar::SetNonPermittedCommands  
+ Sets the list of commands that cannot be executed by the user.  
   
 ```  
 static void SetNonPermittedCommands(CList<UINT,UINT>& lstCommands);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lstCommands`  
- 若要參考`CList`物件，其中包含無法在使用者所執行的命令。  
+ A reference to a `CList` object that contains the commands that cannot be executed by the user.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以防止使用者選取特定命令。 例如，您可以防止使用者選取特定的命令，基於安全性考量。 請參閱 MDITabsDemo 和 MenuSubSet 範例如需範例，使用這個方法。  
+### <a name="remarks"></a>Remarks  
+ Call this method to prevent the user from selecting certain commands. For example, you might want to prevent the user from selecting certain commands for security reasons. See the MDITabsDemo and MenuSubSet samples for examples that use this method.  
   
- 這個方法會清除先前的非允許的命令清單。 根據預設，不允許的命令的清單是空的。  
+ This method clears the previous list of non-permitted commands. By default, the list of non-permitted commands is empty.  
   
-##  <a name="setonerowwithsibling"></a>Cmfctoolbar:: Setonerowwithsibling  
- 工具列和其同層級置於相同的資料列。  
+##  <a name="setonerowwithsibling"></a>  CMFCToolBar::SetOneRowWithSibling  
+ Positions the toolbar and its sibling on the same row.  
   
 ```  
 void SetOneRowWithSibling();
 ```  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，當使用者按一下**在一個資料列上顯示按鈕** 按鈕。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the user clicks the **Show Buttons on One Row** button.  
   
- 呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)方法，以啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕。 如果您呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)對於此工具列，同層級工具列會移動到此工具列的資料列。 否則，此工具列會移到同層級的資料列。  
+ Call the [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) method to enable the **Show Buttons on One Row** or **Show Buttons on Two Rows** buttons. If you call [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) for this toolbar, the sibling toolbar is moved to the row of this toolbar. Otherwise, this toolbar is moved to the row of the sibling.  
   
- 這個架構會呼叫[cmfctoolbar:: Settworowswithsibling](#settworowswithsibling)方法，當使用者按一下**在兩個資料列上顯示按鈕** 按鈕。  
+ The framework calls the [CMFCToolBar::SetTwoRowsWithSibling](#settworowswithsibling) method when the user clicks the **Show Buttons on Two Rows** button.  
   
-##  <a name="setorigbuttons"></a>CMFCToolBar::SetOrigButtons  
- [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
+##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons  
+
   
 ```  
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lstOrigButtons`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setpermament"></a>CMFCToolBar::SetPermament  
- 指定使用者是否可以關閉工具列。  
+##  <a name="setpermament"></a>  CMFCToolBar::SetPermament  
+ Specifies whether a user can close the toolbar.  
   
 ```  
 void SetPermament(BOOL bPermament=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bPermament`  
- 布林值，指定使用者是否可以關閉工具列。 如果這個參數是`TRUE`，使用者無法關閉工具列。 否則，使用者可以關閉工具列。  
+ A Boolean value that specifies whether a user can close the toolbar. If this parameter is `TRUE`, a user cannot close the toolbar. Otherwise, a user can close the toolbar.  
   
-### <a name="remarks"></a>備註  
- 根據預設，使用者可以關閉每個工具列。  
+### <a name="remarks"></a>Remarks  
+ By default, a user can close each toolbar.  
   
- 呼叫[CMFCToolBar::CanBeClosed](#canbeclosed)方法，以判斷使用者是否可以關閉工具列。  
+ Call the [CMFCToolBar::CanBeClosed](#canbeclosed) method to determine whether a user can close the toolbar.  
   
-##  <a name="setroutecommandsviaframe"></a>CMFCToolBar::SetRouteCommandsViaFrame  
- 指定是否在父框架或擁有者的命令傳送至工具列。  
+##  <a name="setroutecommandsviaframe"></a>  CMFCToolBar::SetRouteCommandsViaFrame  
+ Specifies whether the parent frame or the owner sends commands to the toolbar.  
   
 ```  
 void SetRouteCommandsViaFrame(BOOL bValue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bValue`  
- 如果這個參數是`TRUE`，父框架將命令傳送至工具列。 否則，擁有者會將命令傳送至工具列。  
+ If this parameter is `TRUE`, the parent frame sends commands to the toolbar. Otherwise, the owner sends commands to the toolbar.  
   
-### <a name="remarks"></a>備註  
- 根據預設，父框架會將命令傳送至工具列。 呼叫[CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe)方法，以判斷是否父框架或擁有者的命令傳送至工具列。  
+### <a name="remarks"></a>Remarks  
+ By default, the parent frame sends commands to the toolbar. Call the [CMFCToolBar::GetRouteCommandsViaFrame](#getroutecommandsviaframe) method to determine whether the parent frame or the owner sends commands to the toolbar.  
   
-##  <a name="setshowtooltips"></a>CMFCToolBar::SetShowTooltips  
- 指定是否 framework 顯示在工具提示。  
+##  <a name="setshowtooltips"></a>  CMFCToolBar::SetShowTooltips  
+ Specifies whether the framework displays tool tips.  
   
 ```  
 static void SetShowTooltips(BOOL bValue);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bValue`  
- 如果這個參數是`TRUE`，架構會顯示工具提示。 否則，架構會隱藏工具提示。  
+ If this parameter is `TRUE`, the framework shows tool tips. Otherwise, the framework hides tool tips.  
   
-### <a name="remarks"></a>備註  
- 根據預設，此架構會顯示工具提示。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework shows tool tips.  
   
- 呼叫[CMFCToolBar::GetShowTooltips](#getshowtooltips)方法，以判斷是否在架構顯示工具提示。  
+ Call the [CMFCToolBar::GetShowTooltips](#getshowtooltips) method to determine whether the framework shows tool tips.  
   
-##  <a name="setsiblingtoolbar"></a>Cmfctoolbar:: Setsiblingtoolbar  
- 指定工具列的同層級。  
+##  <a name="setsiblingtoolbar"></a>  CMFCToolBar::SetSiblingToolBar  
+ Specifies the sibling of the toolbar.  
   
 ```  
 void SetSiblingToolBar(CMFCToolBar* pBrotherToolbar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBrotherToolbar`  
- 同層級工具列指標。  
+ A pointer to the sibling toolbar.  
   
-### <a name="remarks"></a>備註  
- 這個方法可讓**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**使用者顯示時，所顯示的按鈕**自訂**快顯功能表。 當您想要讓使用者能夠指定是否要在相同的資料列或不同的資料列上顯示相關的工具列，請呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ This method enables the **Show Buttons on One Row** or **Show Buttons on Two Rows** buttons that are shown when the user displays the **Customize** pop-up menu. Call this method when you want to enable the user to specify whether related toolbars appear on the same row or on different rows.  
   
- 呼叫這個方法，啟用之後，您**自訂**會出現在工具列的按鈕。 若要啟用**自訂**按鈕，請呼叫[cmfctoolbar:: Enablecustomizebutton](#enablecustomizebutton)方法。  
+ Call this method after you enable the **Customize** button that appears on the toolbar. To enable the **Customize** button, call the [CMFCToolBar::EnableCustomizeButton](#enablecustomizebutton) method.  
   
- 若要擷取工具列的同層級，請呼叫[CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar)。  
+ To retrieve the sibling of a toolbar, call [CMFCToolBar::GetSiblingToolBar](#getsiblingtoolbar).  
   
-##  <a name="setsizes"></a>CMFCToolBar::SetSizes  
- 指定所有工具列按鈕和映像的大小。  
+##  <a name="setsizes"></a>  CMFCToolBar::SetSizes  
+ Specifies the sizes of buttons and images on all toolbars.  
   
 ```  
 static void __stdcall SetSizes(
@@ -3132,20 +3286,20 @@ static void __stdcall SetSizes(
     SIZE sizeImage);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `sizeButton`  
- 工具列按鈕，像素為單位的大小。  
+ The size of toolbar buttons, in pixels.  
   
  [in] `sizeImage`  
- 工具列按鈕影像像素為單位的大小。  
+ The size of toolbar button images, in pixels.  
   
-### <a name="remarks"></a>備註  
- 工具列按鈕的預設大小為 23 x 22 像素。 工具列按鈕影像的預設大小為 16 x 15 像素。  
+### <a name="remarks"></a>Remarks  
+ The default size of toolbar buttons is 23x22 pixels. The default size of toolbar button images is 16x15 pixels.  
   
- 呼叫[CMFCToolBar::GetImageSize](#getimagesize)方法來擷取工具列按鈕影像的大小。 呼叫[CMFCToolBar::GetButtonSize](#getbuttonsize)方法來擷取工具列按鈕的大小。  
+ Call the [CMFCToolBar::GetImageSize](#getimagesize) method to retrieve the size of toolbar button images. Call the [CMFCToolBar::GetButtonSize](#getbuttonsize) method to retrieve the size of toolbar buttons.  
   
-##  <a name="settoolbarbtntext"></a>CMFCToolBar::SetToolBarBtnText  
- 在工具列上，指定按鈕的屬性。  
+##  <a name="settoolbarbtntext"></a>  CMFCToolBar::SetToolBarBtnText  
+ Specifies properties of a button on the toolbar.  
   
 ```  
 void SetToolBarBtnText(
@@ -3155,63 +3309,63 @@ void SetToolBarBtnText(
     BOOL bShowImage=TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nBtnIndex`  
- 工具列按鈕清單中的工具列按鈕之以零為起始的索引。  
+ The zero-based index of the toolbar button in the list of toolbar buttons.  
   
  [in] `szText`  
- 指定工具列按鈕的文字標籤。  
+ Specifies the text label of the toolbar button.  
   
  [in] `bShowText`  
- 如果這個參數是`TRUE`，架構會顯示文字標籤。 否則，架構會隱藏的文字標籤。  
+ If this parameter is `TRUE`, the framework shows the text label. Otherwise, the framework hides the text label.  
   
  [in] `bShowImage`  
- 如果這個參數是`TRUE`，架構會顯示工具列按鈕影像。 否則，架構會隱藏工具列按鈕影像。  
+ If this parameter is `TRUE`, the framework shows the toolbar button image. Otherwise, the framework hides the toolbar button image.  
   
-### <a name="remarks"></a>備註  
- 根據預設，架構會顯示工具列按鈕的影像，但不會顯示工具列按鈕的文字標籤。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework shows the images of toolbar buttons but does not show the text label of toolbar buttons.  
   
- 在偵錯組建中，這個方法會產生判斷提示失敗如果`nBtnIndex`未參考有效的工具列按鈕或工具列按鈕為分隔符號。  
+ In Debug builds, this method generates an assertion failure if `nBtnIndex` does not refer to a valid toolbar button or the toolbar button is a separator.  
   
-##  <a name="settworowswithsibling"></a>Cmfctoolbar:: Settworowswithsibling  
- 工具列和其同層級置於個別的資料列。  
+##  <a name="settworowswithsibling"></a>  CMFCToolBar::SetTwoRowsWithSibling  
+ Positions the toolbar and its sibling on separate rows.  
   
 ```  
 void SetTwoRowsWithSibling();
 ```  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，當使用者按一下**在兩個資料列上顯示按鈕** 按鈕。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the user clicks the **Show Buttons on Two Rows** button.  
   
- 呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)方法，以啟用**在一個資料列上顯示按鈕**或**在兩個資料列上顯示按鈕**按鈕。 如果您呼叫[cmfctoolbar:: Setsiblingtoolbar](#setsiblingtoolbar)對於此工具列，同層級工具列會移動到個別的資料列。 否則，此工具列會移至不同的資料列。  
+ Call the [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) method to enable the **Show Buttons on One Row** or **Show Buttons on Two Rows** buttons. If you call [CMFCToolBar::SetSiblingToolBar](#setsiblingtoolbar) for this toolbar, the sibling toolbar is moved to a separate row. Otherwise, this toolbar is moved to a separate row.  
   
- 這個架構會呼叫[cmfctoolbar:: Setonerowwithsibling](#setonerowwithsibling)方法，當使用者按一下**在一個資料列上顯示按鈕** 按鈕。  
+ The framework calls the [CMFCToolBar::SetOneRowWithSibling](#setonerowwithsibling) method when the user clicks the **Show Buttons on One Row** button.  
   
-##  <a name="setuserimages"></a>CMFCToolBar::SetUserImages  
- 應用程式中設定使用者定義的映像的集合。  
+##  <a name="setuserimages"></a>  CMFCToolBar::SetUserImages  
+ Sets the collection of user-defined images in the application.  
   
 ```  
 static BOOL SetUserImages(CMFCToolBarImages* pUserImages);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pUserImages`  
- 指標的使用者定義的影像集合。  
+ A pointer to the collection of user-defined images.  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功則為非零否則為 0 指定`CMFCToolBarImages`物件無效，或從工具列的預設映像大小不同的映像大小。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method succeeds; otherwise 0 if the specified `CMFCToolBarImages` object is not valid or has an image size that differs from the default image size of the toolbar.  
   
-### <a name="remarks"></a>備註  
- 架構會使用使用者定義的映像繪製使用者所自訂的工具列按鈕。 所指定的映像清單`pUserImages`共用應用程式中所有的工具列。  
+### <a name="remarks"></a>Remarks  
+ The framework uses user-defined images to draw toolbar buttons that are customized by the user. The image list specified by `pUserImages` is shared among all toolbars in the application.  
   
- 這個方法會產生判斷提示失敗偵錯組建中若指定`CMFCToolBarImages`物件無效，或從工具列的預設映像大小不同的映像大小。  
+ This method generates an assertion failure in Debug builds if the specified `CMFCToolBarImages` object is not valid or has an image size that differs from the default image size of the toolbar.  
   
- OutlookDemo、 ToolTipDemo 和 VisualStudioDemo 範例會使用這個方法來設定全域集合的使用者定義的映像。 這些載入名為 UserImages.bmp 位於應用程式的工作目錄中的檔案。  
+ The OutlookDemo, ToolTipDemo, and VisualStudioDemo samples use this method to set the global collection of user-defined images. They load the file that is named UserImages.bmp, which is located in the working directory of the application.  
   
- 呼叫[CMFCToolBar::GetUserImages](#getuserimages)方法來擷取應用程式中使用者定義的映像的集合。  
+ Call the [CMFCToolBar::GetUserImages](#getuserimages) method to retrieve the collection of user-defined images in the application.  
   
-##  <a name="stretchpane"></a>CMFCToolBar::StretchPane  
- 垂直或水平伸展工具列和按鈕重新調整位置，如有必要。  
+##  <a name="stretchpane"></a>  CMFCToolBar::StretchPane  
+ Stretches the toolbar vertically or horizontally, and repositions the buttons if necessary.  
   
 ```  
 virtual CSize StretchPane(
@@ -3219,53 +3373,53 @@ virtual CSize StretchPane(
     BOOL bVert);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nLength`  
- 數量，以像素為單位，所要依據伸展窗格。  
+ The amount, in pixels, by which to stretch the pane.  
   
  [in] `bVert`  
- 如果`TRUE`，垂直伸展窗格。 如果`FALSE`，水平伸展窗格。  
+ If `TRUE`, stretches the pane vertically. If `FALSE`, stretches the pane horizontally.  
   
-### <a name="return-value"></a>傳回值  
- A`CSize`物件，指定工具列用戶端區域的大小。  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object that specifies the size of the toolbar client area.  
   
-### <a name="remarks"></a>備註  
- 這個方法會呼叫[CMFCToolBar::WrapToolBar](#wraptoolbar)來重新調整位置內 [延展] 工具列按鈕。  
+### <a name="remarks"></a>Remarks  
+ This method calls [CMFCToolBar::WrapToolBar](#wraptoolbar) to reposition the buttons within the stretched toolbar.  
   
- 傳回值由呼叫[CMFCToolBar::CalcSize](#calcsize)。  
+ The return value is determined by calling [CMFCToolBar::CalcSize](#calcsize).  
   
-##  <a name="translatechar"></a>CMFCToolBar::TranslateChar  
- 如果指定的按鍵碼對應至有效的鍵盤快速鍵，請執行按鈕命令。  
+##  <a name="translatechar"></a>  CMFCToolBar::TranslateChar  
+ Executes a button command if the specified key code corresponds to a valid keyboard shortcut.  
   
 ```  
 virtual BOOL TranslateChar(UINT nChar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- 指定虛擬按鍵碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h  
+ Specifies a virtual key code. For a list of standard virtual key codes, see Winuser.h  
   
-### <a name="return-value"></a>傳回值  
- `FALSE`如果指定的按鍵碼是不可列印或未對應至有效的鍵盤快速鍵。`TRUE`如果指定的按鍵碼對應至一個下拉式功能表選項; 否則傳回值從[CMFCToolBar::ProcessCommand](#processcommand)。  
+### <a name="return-value"></a>Return Value  
+ `FALSE` if the specified key code is either unprintable or does not correspond to a valid keyboard shortcut; `TRUE` if the specified key code corresponds to a drop-down menu option; otherwise, the return value from [CMFCToolBar::ProcessCommand](#processcommand).  
   
-### <a name="remarks"></a>備註  
- Alt 鍵與按下按鍵時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a key is pressed together with the Alt key.  
   
-##  <a name="updatebutton"></a>CMFCToolBar::UpdateButton  
- 更新指定的按鈕狀態。  
+##  <a name="updatebutton"></a>  CMFCToolBar::UpdateButton  
+ Updates the state of the specified button.  
   
 ```  
 void UpdateButton(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- 指定的 [更新] 按鈕以零為起始的索引。  
+ Specifies the zero-based index of the button to update.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="wraptoolbar"></a>CMFCToolBar::WrapToolBar  
- 重新調整位置指定的維度內的工具列按鈕。  
+##  <a name="wraptoolbar"></a>  CMFCToolBar::WrapToolBar  
+ Repositions toolbar buttons within the given dimensions.  
   
 ```  
 int WrapToolBar(
@@ -3276,44 +3430,44 @@ int WrapToolBar(
     int nRowHeight = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nWidth`  
- 工具列的最大寬度。  
+ Maximum width of the toolbar.  
   
  [in] `nHeight`  
- 工具列的最大高度。 如果不會使用浮動工具列。  
+ Maximum height of the toolbar. Not used if the toolbar is floating.  
   
  [in] `pDC`  
- 裝置內容的指標。 如果是 NULL，則會使用工具列的裝置內容。  
+ Pointer to a device context. If NULL, the device context for the toolbar is used.  
   
  [in] `nColumnWidth`  
- 按鈕的寬度。 如果-1，則會使用目前的寬度。  
+ Button width. If -1, the current width is used.  
   
- [] in m`nRowHeight`  
- 按鈕的高度。 如果-1，則會使用目前的高度。  
+ [in] m `nRowHeight`  
+ Button height. If -1, the current height is used.  
   
-### <a name="return-value"></a>傳回值  
- 工具列按鈕的資料列數目。  
+### <a name="return-value"></a>Return Value  
+ The number of rows of buttons on the toolbar.  
   
-### <a name="remarks"></a>備註  
- 這個方法會重新調整位置工具列上，包裝按鈕，如有必要，其他資料列中的按鈕。  
+### <a name="remarks"></a>Remarks  
+ This method repositions buttons within the toolbar, wrapping buttons to additional rows if necessary.  
   
-##  <a name="m_bdontscaleimages"></a>CMFCToolBar::m_bDontScaleImages  
- 指定要在高 DPI 模式縮放工具列影像。  
+##  <a name="m_bdontscaleimages"></a>  CMFCToolBar::m_bDontScaleImages  
+ Specifies whether or not to scale toolbar images in high DPI mode.  
   
 ```  
 AFX_IMPORT_DATA static BOOL m_bDontScaleImages;  
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)   
- [CMFCPopupMenuBar 類別](../../mfc/reference/cmfcpopupmenubar-class.md)   
- [CMFCDropDownToolBar 類別](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCMenuBar Class](../../mfc/reference/cmfcmenubar-class.md)   
+ [CMFCPopupMenuBar Class](../../mfc/reference/cmfcpopupmenubar-class.md)   
+ [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

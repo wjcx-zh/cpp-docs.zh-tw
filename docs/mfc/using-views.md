@@ -1,62 +1,81 @@
 ---
-title: "使用檢視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CView 類別, 檢視架構"
-  - "繪製, 資料"
-  - "與使用者互動，以及檢視類別的角色"
-  - "MFC, 檢視"
-  - "繪製資料"
-  - "呈現資料"
-  - "使用者輸入, 透過檢視類別解譯"
-  - "檢視類別, 在顯示應用程式資料中扮演的角色"
-  - "檢視類別, 在管理使用者互動中扮演的角色"
-  - "檢視, 使用"
+title: Using Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- interacting with users and role of view class [MFC]
+- drawing [MFC], data
+- rendering data
+- view classes [MFC], role in managing user interaction
+- CView class [MFC], view architecture
+- MFC, views
+- views [MFC], using
+- painting data
+- user input [MFC], interpreting through view class [MFC]
+- view classes [MFC], role in displaying application data
 ms.assetid: dc3de6ad-5c64-4317-8f10-8bdcc38cdbd5
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用檢視
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c26798bd71270b37a25d2665c030b615c6bb032e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-檢視的責任是以圖形顯示文件的資料給使用者和接受和解譯為文件的作業中的使用者輸入。  您在撰寫自己的檢視類別的工作包括:  
+---
+# <a name="using-views"></a>Using Views
+The view's responsibilities are to display the document's data graphically to the user and to accept and interpret user input as operations on the document. Your tasks in writing your view class are to:  
   
--   撰寫自己的檢視類別的 [OnDraw](../Topic/CView::OnDraw.md) 成員函式，呈現文件的資料。  
+-   Write your view class's [OnDraw](../mfc/reference/cview-class.md#ondraw) member function, which renders the document's data.  
   
--   連接到適當的 Windows 訊息和使用者介面物件 \(例如功能表項目的訊息處理常式成員函式在檢視類別。  
+-   Connect appropriate Windows messages and user-interface objects such as menu items to message-handler member functions in the view class.  
   
--   實作這些處理常式會解譯使用者輸入。  
+-   Implement those handlers to interpret user input.  
   
- 此外，您可能需要覆寫您的衍生類別檢視的其他 `CView` 成員函式。  特別是，在這種情況下，檢視重繪之前，您可能想要覆寫 [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) 執行檢視和 [OnUpdate](../Topic/CView::OnUpdate.md) 的特殊初始設定可以進行任何需要的特殊處理。  對於多頁文件，您也必須覆寫 [OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) 初始化具有的頁數的列印對話方塊加入至列印和其他資訊。  如需覆寫 `CView` 成員函式的詳細資訊，請參閱《 *MFC 參考》中的*[CView](../mfc/reference/cview-class.md) 類別。  
+ In addition, you may need to override other `CView` member functions in your derived view class. In particular, you may want to override [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) to perform special initialization for the view and [OnUpdate](../mfc/reference/cview-class.md#onupdate) to do any special processing needed just before the view redraws itself. For multipage documents, you also must override [OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) to initialize the Print dialog box with the number of pages to print and other information. For more information on overriding `CView` member functions, see class [CView](../mfc/reference/cview-class.md) in the *MFC Reference*.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [取得檢視在 MFC 的可用分類](../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived view classes available in MFC](../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [繪製在檢視](../mfc/drawing-in-a-view.md)  
+-   [Drawing in a view](../mfc/drawing-in-a-view.md)  
   
--   [您可以檢視輸入的解譯使用者](../mfc/interpreting-user-input-through-a-view.md)  
+-   [Interpreting user input through a view](../mfc/interpreting-user-input-through-a-view.md)  
   
--   [檢視的作用在列印](../mfc/role-of-the-view-in-printing.md)  
+-   [The role of the view in printing](../mfc/role-of-the-view-in-printing.md)  
   
--   [捲動和縮放檢視](../mfc/scrolling-and-scaling-views.md)  
+-   [Scrolling and scaling views](../mfc/scrolling-and-scaling-views.md)  
   
--   [初始化和清除文件和檢視](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
+-   [Initializing and cleaning up documents and views](../mfc/initializing-and-cleaning-up-documents-and-views.md)  
   
-## 請參閱  
- [文件\/檢視架構](../mfc/document-view-architecture.md)   
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)   
  [CFormView Class](../mfc/reference/cformview-class.md)   
- [記錄檢視 \(MFC 資料存取\)](../data/record-views-mfc-data-access.md)   
- [略過序列化機制](../mfc/bypassing-the-serialization-mechanism.md)
+ [Record Views  (MFC Data Access)](../data/record-views-mfc-data-access.md)   
+ [Bypassing the Serialization Mechanism](../mfc/bypassing-the-serialization-mechanism.md)
+
+

@@ -1,36 +1,54 @@
 ---
-title: "序列化：序列化和資料庫輸入/輸出比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料庫應用程式 [C++], 檔案 I/O 和序列化比較"
-  - "資料庫 [C++], 輸入/輸出處理"
-  - "I/O [C++], 和序列化比較"
-  - "序列化 [C++], 和資料庫 I/O 比較"
+title: 'Serialization: Serialization vs. Database Input-Output | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- database applications [MFC], file I/O vs. serialization
+- serialization [MFC], vs. database I/O
+- I/O [MFC], vs. serialization
+- databases [MFC], input/output handling
 ms.assetid: f1d23d77-4761-4a52-a7ea-54fc92d347ea
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 序列化：序列化和資料庫輸入/輸出比較
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ad76e1a264605f63e6e04c513e89f65081a38d97
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文時說明使用資料物件，並根據檔案的輸入\/輸出的 \(I\/O\) 序列化和其他 I\/O 技巧時適用\)，因為應用程式在每個交易來讀取和寫入資料，在資料庫應用程式。  如果您不使用序列化，您不需要開啟的檔案，也保存，而不儲存為命令。  涵蓋的主題包括：  
+---
+# <a name="serialization-serialization-vs-database-inputoutput"></a>Serialization: Serialization vs. Database Input/Output
+This article explains when to use document objects and serialization for file-based input/output (I/O) and when other I/O techniques are appropriate — because the application reads and writes data on a per-transaction basis, as in database applications. If you don't use serialization, you also won't need the File Open, Save, and Save As commands. Topics covered include:  
   
--   [對處理輸入\/輸出的建議](../mfc/recommendations-for-handling-input-output.md)  
+-   [Recommendations for handling input/output](../mfc/recommendations-for-handling-input-output.md)  
   
--   [處理在資料庫應用程式的檔案功能表](../mfc/file-menu-in-an-mfc-database-application.md)  
+-   [Handling the File menu in database applications](../mfc/file-menu-in-an-mfc-database-application.md)  
   
-## 請參閱  
- [序列化](../mfc/serialization-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Serialization](../mfc/serialization-in-mfc.md)
+
+

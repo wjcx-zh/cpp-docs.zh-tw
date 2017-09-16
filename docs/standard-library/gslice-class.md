@@ -1,5 +1,5 @@
 ---
-title: "gslice 類別 | Microsoft Docs"
+title: gslice Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- gslice
 - valarray/std::gslice
 - valarray/std::gslice::size
 - valarray/std::gslice::start
@@ -17,7 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- gslice class
+- std::gslice [C++]
+- std::gslice [C++], size
+- std::gslice [C++], start
+- std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 caps.latest.revision: 21
 author: corob-msft
@@ -37,52 +39,52 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fa02312073af18591d25e31d465b268153b56784
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5b3e42db53019cd891373285c9f8a36dfb540189
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="gslice-class"></a>gslice 類別
-valarray 的一個公用程式類別，用來定義 valarray 的多維度子集。 如果 valarray 被視為含有陣列中所有元素的多維度矩陣，則配量會從多維度陣列中擷取向量。  
+# <a name="gslice-class"></a>gslice Class
+A utility class to valarray that is used to define multidimensional subsets of a valarray. If a valarray is regarded as a multidimensional matrix with all elements in an array, then the slice extracts a vector out of the multidimensional array.  
   
-## <a name="remarks"></a>備註  
- 此類別會儲存用來描述 [gslice_array](../standard-library/gslice-array-class.md) 類型之物件特性的參數。 當 gslice 類別的物件是作為 [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** 類別之物件的引數時，會間接建構 valarray 的子集。 會指定從父 valarray 選取之子集的預存值包括：  
+## <a name="remarks"></a>Remarks  
+ The class stores the parameters that characterize an object of type [gslice_array](../standard-library/gslice-array-class.md). The subset of a valarray is indirectly constructed when an object of class gslice appears as an argument for an object of class [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. The stored values that specify the subset selected from the parent valarray include:  
   
--   起始索引。  
+-   A starting index.  
   
--   **valarray<size_t>** 類別的長度向量。  
+-   A length vector of class **valarray<size_t>**.  
   
--   **valarray<size_t>** 類別的跨度向量。  
+-   A stride vector of class **valarray<size_t>**.  
   
- 兩個向量的長度必須相同。  
+ The two vectors must have the same length.  
   
- 如果 gslice 定義的集合是常數 valarray 的子集，則 gslice 會是新的 valarray。 如果 gslice 定義的集合是非常數 valarray 的子集，則 gslice 會有原始 valarray 的參考語意。 非常數 valarrays 的評估機制可節省時間和記憶體。  
+ If the set defined by a gslice is the subset of a constant valarray, then the gslice is a new valarray. If the set defined by a gslice is the subset of a nonconstant valarray, then the gslice has reference semantics to the original valarray. The evaluation mechanism for nonconstant valarrays saves time and memory.  
   
- 只有在 gslice 所定義的來源和目的地子集相異，且所有索引皆有效時，才能保證 valarray 的作業。  
+ Operations on valarrays are guaranteed only if the source and destination subsets defined by the gslices are distinct and all indices are valid.  
   
-### <a name="constructors"></a>建構函式  
-  
-|||  
-|-|-|  
-|[gslice](#gslice)|定義 `valarray` 的子集，其中包含 `valarray` 的多個配量 (全都起始於指定的元素)。|  
-  
-### <a name="member-functions"></a>成員函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[size](#size)|尋找指定 `valarray` 之一般配量中的元素數的陣列值。|  
-|[start](#start)|尋找 `valarray` 之一般配量的起始索引。|  
-|[stride](#stride)|尋找 `valarray` 之一般配量的元素之間的距離。|  
+|[gslice](#gslice)|Defines a subset of a `valarray` that consists of multiple slices of the `valarray` that all start at a specified element.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<valarray>  
+### <a name="member-functions"></a>Member Functions  
   
- **命名空間：** std  
+|||  
+|-|-|  
+|[size](#size)|Finds the array values specifying the numbers of elements in a general slice of a `valarray`.|  
+|[start](#start)|Finds the starting index of a general slice of a `valarray`.|  
+|[stride](#stride)|Finds the distance between elements in a general slice of a `valarray`.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
+  
+ **Namespace:** std  
   
 ##  <a name="gslice"></a>  gslice::gslice  
- valarray 的一個公用程式類別，用來定義 valarray 的多維度切割。  
+ A utility class to valarray that is used to define multi-dimensional slices of a valarray.  
   
 ```  
 gslice();
@@ -93,23 +95,23 @@ gslice(
     const valarray<size_t>& _IncArray);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_StartIndex`  
- 子集中第一個元素的 valarray 索引。  
+ The valarray index of the first element in the subset.  
   
  `_LenArray`  
- 指定每個配量中元素數目的陣列。  
+ An array specifying the number of elements in each slice.  
   
  `_IncArray`  
- 指定每個配量中跨度的陣列。  
+ An array specifying the stride in each slice.  
   
-### <a name="return-value"></a>傳回值  
- 預設建構函式會針對起始索引儲存零，以及針對長度和跨度向量儲存零長度向量。 第二個建構函式會針對起始索引儲存 `_StartIndex`、針對長度陣列儲存 `_LenArray`，以及針對跨度陣列儲存 `_IncArray`。  
+### <a name="return-value"></a>Return Value  
+ The default constructor stores zero for the starting index, and zero-length vectors for the length and stride vectors. The second constructor stores `_StartIndex` for the starting index, `_LenArray` for the length array, and `_IncArray` for the stride array.  
   
-### <a name="remarks"></a>備註  
- **gslice** 會定義 valarray 的子集，此子集由該 valarray 的多個配量所構成，其中每個配量都起始於相同的指定元素。 使用陣列來定義多個配量的能力是 `gslice` 與 [slice::slice](../standard-library/slice-class.md#slice) 之間唯一的差異。 第一個配量具有索引為 `_StartIndex` 的第一個元素、`_LenArray` 的第一個元素所指定的元素數目，以及 `_IncArray` 的第一個元素所指定的跨度。 下一組正交配量的第一個元素會由第一個配量指定。 `_LenArray` 的第二個元素會指定元素數目。 跨度是由 `_IncArray` 的第二個元素指定。 配量的第三維度會以二維陣列的元素作為起始元素，然後以類似的方式繼續進行  
+### <a name="remarks"></a>Remarks  
+ **gslice** defines a subset of a valarray that consists of multiple slices of the valarray that each start at the same specified element. The ability to use arrays to define multiple slices is the only difference between `gslice` and [slice::slice](../standard-library/slice-class.md#slice). The first slice has a first element with an index of `_StartIndex`, a number of elements specified by the first element of `_LenArray`, and a stride given by the first element of `_IncArray`. The next set of orthogonal slices has first elements given by the first slice. The second element of `_LenArray` specifies the number of elements. The stride is given by the second element of `_IncArray`. A third dimension of slices would take the elements of the two-dimensional array as the starting elements and proceed analogously  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_ctor.cpp  
@@ -157,19 +159,19 @@ va[vaGSlice] = ( 0 4 8 12 7 11 15 19)
 ```  
   
 ##  <a name="size"></a>  gslice::size  
- 尋找指定 valarray 之一般配量中元素數目的陣列值。  
+ Finds the array values specifying the numbers of elements in a general slice of a valarray.  
   
 ```  
 valarray<size_t> size() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指定 valarray 之一般配量的每個配量中元素數目的 valarray。  
+### <a name="return-value"></a>Return Value  
+ A valarray specifying the number of elements in each slice of a general slice of a valarray.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回預存的配量長度。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored lengths of slices.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_size.cpp  
@@ -232,16 +234,16 @@ The size of vaResult is:
 ```  
   
 ##  <a name="start"></a>  gslice::start  
- 尋找 valarray 之一般配量的起始索引。  
+ Finds the starting index of a general slice of a valarray.  
   
 ```  
 size_t start() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- valarray 之一般配量的起始索引。  
+### <a name="return-value"></a>Return Value  
+ The starting index of a general slice of a valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_start.cpp  
@@ -293,16 +295,16 @@ The index of the first element of vaResult is: 0.
 ```  
   
 ##  <a name="stride"></a>  gslice::stride  
- 尋找 valarray 之一般配量中元素之間的距離。  
+ Finds the distance between elements in a general slice of a valarray.  
   
 ```  
 valarray<size_t> stride() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指定 valarray 之一般配量的每個配量中元素間距離的 valarray。  
+### <a name="return-value"></a>Return Value  
+ A valarray specifying the distances between elements in each slice of a general slice of a valarray.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // gslice_stride.cpp  
@@ -358,7 +360,7 @@ The strides of vaResult are:
  vaGSlice.stride ( ) = ( 7 4 ).  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

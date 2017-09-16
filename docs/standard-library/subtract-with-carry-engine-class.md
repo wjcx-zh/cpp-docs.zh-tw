@@ -1,5 +1,5 @@
 ---
-title: "subtract_with_carry_engine 類別 | Microsoft Docs"
+title: subtract_with_carry_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- subtract_with_carry_engine
 - random/std::subtract_with_carry_engine
 - random/std::subtract_with_carry_engine::default_seed
 - random/std::subtract_with_carry_engine::discard
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- subtract_with_carry_engine class
+- std::subtract_with_carry_engine [C++]
+- std::subtract_with_carry_engine [C++], default_seed
+- std::subtract_with_carry_engine [C++], discard
+- std::subtract_with_carry_engine [C++], min
+- std::subtract_with_carry_engine [C++], max
+- std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 caps.latest.revision: 20
 author: corob-msft
@@ -39,35 +43,35 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: c73401963b231883d26aa45590a9cad305b13875
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b686e174e483e619dd7b45c54eef9ce3244ad4ba
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 類別
-使用帶進位減法 (延隔 Fibonacci) 演算法，以產生隨機序列。  
+# <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine Class
+Generates a random sequence by the subtract-with-carry (lagged Fibonacci) algorithm.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class UIntType, size_t W, size_t S, size_t R>  
 class subtract_with_carry_engine;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `UIntType`  
- 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+ The unsigned integer result type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `W`  
- **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Word size**. Size of each word, in bits, of the state sequence. **Precondition**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `S`  
- **短延隔**。 整數值數目。 **前置條件**：`0 < S < R`  
+ **Short lag**. Number of integer values. **Precondition**: `0 < S < R`  
   
  `R`  
- **長延隔**。 決定所產生數列中的週期。  
+ **Long lag**. Determines recurrence in the series generated.  
   
 ## <a name="members"></a>Members  
   
@@ -75,33 +79,33 @@ class subtract_with_carry_engine;
 |-|-|-|  
 |`subtract_with_carry_engine::subtract_with_carry_engine`|`subtract_with_carry_engine::min`|`subtract_with_carry_engine::discard`|  
 |`subtract_with_carry_engine::operator()`|`subtract_with_carry_engine::max`|`subtract_with_carry_engine::seed`|  
-|`default_seed` 是一個成員常數，定義為 `19780503u`，用做 `subtract_with_carry_engine::seed` 的預設參數值以及單一值建構函式。|||  
+|`default_seed` is a member constant, defined as `19780503u`, used as the default parameter value for `subtract_with_carry_engine::seed` and the single value constructor.|||  
   
- 如需引擎成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>備註  
- `substract_with_carry_engine` 樣板類別是針對 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) 的改良。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。  
+## <a name="remarks"></a>Remarks  
+ The `substract_with_carry_engine` template class is an improvement over the [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Neither for these engines is as fast or with as high quality results as the [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).  
   
- 此引擎會使用週期關聯 ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 來產生使用者指定的不帶正負號整數類型值，其中，如果 `x(i - S) - x(i - R) - cy(i - 1) < 0`，則 `cy(i)` 的值為 `1`，否則為 `0`，而`M` 的值為 `2`<sup>W</sup>。引擎的狀態是一個進位指標加上 `R` 值。 這些值包含已至少呼叫 `R` `operator()` 次時所傳回的最後一個 `R` 值，否則為已傳回的 `N` 值，以及種子的最後一個 `R - N` 值。  
+ This engine produces values of a user-specified unsigned integral type using the recurrence relation ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, where `cy(i)` has the value `1` if `x(i - S) - x(i - R) - cy(i - 1) < 0`, otherwise `0`, and `M` has the value `2`<sup>W</sup>. The engine's state is a carry indicator plus `R` values. These values consist of the last `R` values returned if `operator()` has been called at least `R` times, otherwise the `N` values that have been returned and the last `R - N` values of the seed.  
   
- 範本引數 `UIntType` 必須夠大，才能保留最多 `M - 1` 個值。  
+ The template argument `UIntType` must be large enough to hold values up to `M - 1`.  
   
- 雖然您可以直接從此引擎建構產生器，但您也可以使用下列其中一個預先定義的 typedef：  
+ Although you can construct a generator from this engine directly, you can also use one of these predefined typedefs:  
   
- `ranlux24_base`：用來做為 `ranlux24` 的基底。                   
+ `ranlux24_base`: Used as a base for `ranlux24`.                   
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`  
   
- `ranlux48_base`：用來做為 `ranlux48` 的基底。                   
+ `ranlux48_base`: Used as a base for `ranlux48`.                   
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`  
   
- 如需帶進位減法引擎演算法的詳細資訊，請參閱維基百科文章：[延隔 Fibonacci 產生器 (英文)](http://go.microsoft.com/fwlink/LinkId=402445)。  
+ For detailed information about the subract with carry engine algorithm, see the Wikipedia article [Lagged Fibonacci generator](http://go.microsoft.com/fwlink/LinkId=402445).  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

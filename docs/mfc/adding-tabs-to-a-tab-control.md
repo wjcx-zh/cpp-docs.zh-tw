@@ -1,42 +1,61 @@
 ---
-title: "將索引標籤加入至索引標籤控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTabCtrl 類別, 加入索引標籤"
-  - "在 CTabCtrls 上放置索引標籤"
-  - "索引標籤控制項, 加入索引標籤"
-  - "索引標籤, 加入至 CTabCtrl 類別"
+title: Adding Tabs to a Tab Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tab controls [MFC], adding tabs
+- putting tabs on CTabCtrls [MFC]
+- CTabCtrl class [MFC], adding tabs
+- tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 將索引標籤加入至索引標籤控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9da423b56c254bc58bcbe940ebcd366e83c8f385
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在建立索引標籤控制項 \([CTabCtrl](../mfc/reference/ctabctrl-class.md)\)，將多個選項，您需要。  
+---
+# <a name="adding-tabs-to-a-tab-control"></a>Adding Tabs to a Tab Control
+After creating the tab control ([CTabCtrl](../mfc/reference/ctabctrl-class.md)), add as many tabs as you need.  
   
-### 若要加入標籤項目  
+### <a name="to-add-a-tab-item"></a>To add a tab item  
   
-1.  準備一 [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) 結構。  
+1.  Prepare a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure.  
   
-2.  呼叫 [CTabCtrl::InsertItem](../Topic/CTabCtrl::InsertItem.md)，將結構。  
+2.  Call [CTabCtrl::InsertItem](../mfc/reference/ctabctrl-class.md#insertitem), passing the structure.  
   
-3.  迴圈其他選項項目的步驟 1 和 2。  
+3.  Repeat steps 1 and 2 for additional tab items.  
   
- 在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]\(如需詳細資訊，請參閱 [建立索引標籤控制項](http://msdn.microsoft.com/library/windows/desktop/bb760550) 。  
+ For more information, see [Creating a Tab Control](http://msdn.microsoft.com/library/windows/desktop/bb760550) in the Windows SDK.  
   
-## 請參閱  
- [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTabCtrl](../mfc/using-ctabctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

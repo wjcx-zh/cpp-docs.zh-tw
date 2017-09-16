@@ -1,5 +1,5 @@
 ---
-title: "輸出檔資料流成員函式 | Microsoft Docs"
+title: Output File Stream Member Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,8 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- output streams, member functions
-f1_keywords: []
+- output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 caps.latest.revision: 8
 author: corob-msft
@@ -32,24 +31,24 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: baa226c95d396232ea8ac545c839352c5df4c22f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 571e2c0248317511773e9d33cf6745b446d82b7f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
-輸出資料流的成員函式有三種類型：相當於操作工具的類型、會執行未格式化寫入作業的類型，以及其他會修改資料流狀態，且沒有對等的操作工具或插入運算子的類型。 對於循序的格式化輸出，您可能僅會使用插入運算子和操作工具。 對於隨機存取二進位磁碟輸出，您會使用其他的成員函式 (無論搭配插入運算子與否)。  
+# <a name="output-file-stream-member-functions"></a>Output File Stream Member Functions
+Output stream member functions have three types: those that are equivalent to manipulators, those that perform unformatted write operations, and those that otherwise modify the stream state and have no equivalent manipulator or insertion operator. For sequential, formatted output, you might use only insertion operators and manipulators. For random-access binary disk output, you use other member functions, with or without insertion operators.  
   
-## <a name="the-open-function-for-output-streams"></a>輸出資料流的 open 函式  
- 若要使用輸出檔案資料流 ([ofstream](../standard-library/basic-ofstream-class.md))，您必須在建構函式或是 **open** 函式中，將該資料流與特定的磁碟檔案建立關聯。 如果您使用 **open** 函式，您就可以重複使用相同的資料流物件搭配一系列檔案。 不論使用哪一種，描述檔案的引數都一樣。  
+## <a name="the-open-function-for-output-streams"></a>The open Function for Output Streams  
+ To use an output file stream ([ofstream](../standard-library/basic-ofstream-class.md)), you must associate that stream with a specific disk file in the constructor or the **open** function. If you use the **open** function, you can reuse the same stream object with a series of files. In either case, the arguments describing the file are the same.  
   
- 當您開啟與輸出資料流相關聯的檔案時，通常會指定 **open_mode** 旗標。 您可以使用位元 OR ( &#124; ) 運算子，來合併這些在 `ios` 類別中定義為列舉程式的旗標。 如需列舉程式的清單，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。  
+ When you open the file associated with an output stream, you generally specify an **open_mode** flag. You can combine these flags, which are defined as enumerators in the `ios` class, with the bitwise OR ( &#124; ) operator. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for a list of the enumerators.  
   
- 有三種常見的輸出資料流情況會牽涉到模式選項：  
+ Three common output stream situations involve mode options:  
   
--   建立檔案。 如果檔案已經存在，將會刪除舊版本檔案。  
+-   Creating a file. If the file already exists, the old version is deleted.  
   
  ```  
     ostream ofile("FILENAME");
@@ -59,13 +58,13 @@ ms.lasthandoff: 04/29/2017
 // Equivalent to above  
 ```  
   
--   將記錄附加到現有檔案，或在檔案不存在的情況下建立檔案。  
+-   Appending records to an existing file or creating one if it does not exist.  
   
  ```  
     ofstream ofile("FILENAME", ios::app);
 ```  
   
--   在相同的資料流上開啟兩個檔案，一次開啟一個。  
+-   Opening two files, one at a time, on the same stream.  
   
  ```  
     ofstream ofile();
@@ -83,8 +82,8 @@ ofile.open("FILE1",
 // FILE2 closed  // When ofile goes out of scope it is destroyed.  
 ```  
   
-## <a name="the-put"></a>Put
- **put** 函式會將一個字元寫入輸出資料流。 下列兩個陳述式的預設值都相同，但第二個會受到資料流的格式引數影響：  
+## <a name="the-put"></a>The put
+ The **put** function writes one character to the output stream. The following two statements are the same by default, but the second is affected by the stream's format arguments:  
   
 ```  
 cout.put('A');
@@ -93,8 +92,8 @@ cout.put('A');
 cout <<'A'; // Format arguments 'width' and 'fill' apply   
 ```  
   
-## <a name="the-write"></a>寫入
- **write** 函式會寫入輸出檔案資料流的記憶體區塊。 長度引數會指定要寫入的位元組數目。 這個範例會建立輸出檔案資料流，並將 `Date` 結構的二進位值寫入它：  
+## <a name="the-write"></a>The write
+ The **write** function writes a block of memory to an output file stream. The length argument specifies the number of bytes written. This example creates an output file stream and writes the binary value of the `Date` structure to it:  
   
 ```  
 // write_function.cpp  
@@ -115,55 +114,55 @@ int main( )
 }  
 ```  
   
- **write** 函式遇到 null 字元時並不會停止，因此會寫入完整的類別結構。 此函式會採用兩個引數：`char` 指標和要寫入的字元計數。 請注意，在結構物件的位址之前必須轉型成 **char\***。  
+ The **write** function does not stop when it reaches a null character, so the complete class structure is written. The function takes two arguments: a `char` pointer and a count of characters to write. Note the required cast to **char\*** before the address of the structure object.  
   
-## <a name="the-seekp-and-tellp-functions"></a>seekp 和 tellp 函式  
- 輸出檔案資料流會保留內部指標，該指標指向接下來要寫入資料的位置。 `seekp` 成員函式會設定此指標，並提供隨機存取磁碟檔案輸出。 `tellp` 成員函式會傳回檔案位置。 如需使用對應至 `seekp` 和 `tellp` 的輸入資料流範例，請參閱 [seekg 和 tellg 函式](../standard-library/input-stream-member-functions.md)。  
+## <a name="the-seekp-and-tellp-functions"></a>The seekp and tellp Functions  
+ An output file stream keeps an internal pointer that points to the position where data is to be written next. The `seekp` member function sets this pointer and thus provides random-access disk file output. The `tellp` member function returns the file position. For examples that use the input stream equivalents to `seekp` and `tellp`, see [The seekg and tellg Functions](../standard-library/input-stream-member-functions.md).  
   
-## <a name="the-close-function-for-output-streams"></a>輸出資料流的 close 函式  
- **close** 成員函式會關閉與輸出檔案資料流相關聯的磁碟檔案。 若要完成所有的磁碟輸出，必須先關閉檔案。 如有必要，`ofstream` 解構函式能為您關閉檔案，但如果您需要在相同的資料流物件中開啟另一個檔案，您可以使用 **close** 函式。  
+## <a name="the-close-function-for-output-streams"></a>The close Function for Output Streams  
+ The **close** member function closes the disk file associated with an output file stream. The file must be closed to complete all disk output. If necessary, the `ofstream` destructor closes the file for you, but you can use the **close** function if you need to open another file for the same stream object.  
   
- 輸出資料流解構函式只有在建構函式或是 **open** 成員函式開啟檔案後，才會自動關閉資料流的檔案。 如果您將已開啟之檔案的檔案描述元傳遞給建構函式，或使用 **attach** 成員函式，您必須明確地關閉檔案。  
+ The output stream destructor automatically closes a stream's file only if the constructor or the **open** member function opened the file. If you pass the constructor a file descriptor for an already-open file or use the **attach** member function, you must close the file explicitly.  
   
-##  <a name="vclrferrorprocessingfunctionsanchor10"></a> 錯誤處理函式  
- 寫入資料流時，請使用下列成員函式來測試是否發生錯誤：  
+##  <a name="vclrferrorprocessingfunctionsanchor10"></a> Error Processing Functions  
+ Use these member functions to test for errors while writing to a stream:  
   
-|函式|傳回值|  
+|Function|Return value|  
 |--------------|------------------|  
-|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果有無法復原的錯誤，則傳回 **true**。|  
-|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 在呼叫不具有引數的 **clear** 之後，通常可以繼續處理。|  
-|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|如果沒有任何錯誤狀況 (無論是否可復原) 且未設定檔案結尾旗標，則會傳回 **true**。|  
-|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|針對檔案結尾條件傳回 **true**。|  
-|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|設定內部錯誤狀態。 如果使用預設引數呼叫，它會清除所有錯誤位元。|  
-|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|傳回目前的錯誤狀態。|  
+|[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|Returns **true** if there is an unrecoverable error.|  
+|[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|Returns **true** if there is an unrecoverable error or an "expected" condition, such as a conversion error, or if the file is not found. Processing can often resume after a call to **clear** with a zero argument.|  
+|[good](http://msdn.microsoft.com/Library/77f0aa17-2ae1-48ae-8040-592d301e3972)|Returns **true** if there is no error condition (unrecoverable or otherwise) and the end-of-file flag is not set.|  
+|[eof](http://msdn.microsoft.com/Library/3087f631-1268-49cd-86cf-ff4108862329)|Returns **true** on the end-of-file condition.|  
+|[clear](http://msdn.microsoft.com/Library/dc172694-1267-45f8-8f5c-e822e16fc271)|Sets the internal error state. If called with the default arguments, it clears all error bits.|  
+|[rdstate](http://msdn.microsoft.com/Library/e235e4e2-7e95-4777-a160-3938d263dd9c)|Returns the current error state.|  
   
- **!** 運算子會多載以執行與 **fail** 函式相同的功能。 因此運算式︰  
+ The **!** operator is overloaded to perform the same function as the **fail** function. Thus the expression:  
   
 ```  
 if(!cout)...  
 ```  
   
- 等於：  
+ is equivalent to:  
   
 ```  
 if(cout.fail())...  
 ```  
   
- **void\*()** 運算子會多載成為相反的 **!** 運算子；因此運算式：  
+ The **void\*()** operator is overloaded to be the opposite of the **!** operator; thus the expression:  
   
 ```  
 if(cout)...  
 ```  
   
- 等於：  
+ is equal to:  
   
 ```  
 if(!cout.fail())...  
 ```  
   
- **void\*()** 運算子不等於 **good**，因為它並不會測試檔案結尾。  
+ The **void\*()** operator is not equivalent to **good** because it does not test for the end of file.  
   
-## <a name="see-also"></a>另請參閱  
- [輸出資料流](../standard-library/output-streams.md)
+## <a name="see-also"></a>See Also  
+ [Output Streams](../standard-library/output-streams.md)
 
 

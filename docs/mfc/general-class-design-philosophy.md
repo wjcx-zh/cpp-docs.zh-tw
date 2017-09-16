@@ -1,61 +1,79 @@
 ---
-title: "一般類別設計原理 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], MFC 類別設計"
-  - "設計類別"
-  - "MFC [C++], Windows 應用程式開發介面"
-  - "Visual C, Windows 應用程式開發介面呼叫"
-  - "Windows API [C++], 與 MFC"
+title: General Class Design Philosophy | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- designing classes [MFC]
+- MFC, Windows API
+- Visual C, Windows API calls
+- classes [MFC], MFC class design
+- Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 一般類別設計原理
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 020ec3f850cb626206e14f2a8782b4a065670815
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 C\+\+ 語言變得普遍之前， Microsoft Windows 所設計的。  由於數千應用程式使用 C 語言 Windows 應用程式 Interface \(API\)，該介面會維持在可預見的未來。  必須建立讓所有 C\+\+ Windows 介面在 C 程式設計語言 API 之上。  這可確保 C\+\+ 應用程式中同時使用 C\# 應用程式。  
+---
+# <a name="general-class-design-philosophy"></a>General Class Design Philosophy
+Microsoft Windows was designed long before the C++ language became popular. Because thousands of applications use the C-language Windows application programming interface (API), that interface will be maintained for the foreseeable future. Any C++ Windows interface must therefore be built on top of the procedural C-language API. This guarantees that C++ applications will be able to coexist with C applications.  
   
- MFC 程式庫是達成下列設計目標的物件導向介面到視窗:  
+ The Microsoft Foundation Class Library is an object-oriented interface to Windows that meets the following design goals:  
   
--   對工作大幅降低撰寫的 Windows 應用程式。  
+-   Significant reduction in the effort to write an application for Windows.  
   
--   執行速度比較與 C 語言應用程式開發介面。  
+-   Execution speed comparable to that of the C-language API.  
   
--   最小程式碼大小的額外負荷。  
+-   Minimum code size overhead.  
   
--   能夠直接呼叫任何視窗 C 函式。  
+-   Ability to call any Windows C function directly.  
   
--   現有的 C\# 應用程式更容易轉換成 C\+\+。  
+-   Easier conversion of existing C applications to C++.  
   
--   可從 C 語言視窗現有基底設計經驗的支援。  
+-   Ability to leverage from the existing base of C-language Windows programming experience.  
   
--   對運用 C\+\+ 的 Windows API 的比較容易使用與 C。  
+-   Easier use of the Windows API with C++ than with C.  
   
--   更容易使用，複雜的功能強大的抽象 \(如 ActiveX 控制項、資料庫支援、列印、工具列和狀態列。  
+-   Easier to use yet powerful abstractions of complicated features such as ActiveX controls, database support, printing, toolbars, and status bars.  
   
--   true 表示有效地使用 C\+\+ 語言功能的 C\+\+ 的 Windows 應用程式開發介面。  
+-   True Windows API for C++ that effectively uses C++ language features.  
   
- 如需在 MFC 程式庫的設計，請參閱:  
+ For more on the design of the MFC Library, see:  
   
--   [應用程式架構](../mfc/application-framework.md)  
+-   [The Application Framework](../mfc/application-framework.md)  
   
--   [對 C 語言 API 的關聯性](../mfc/relationship-to-the-c-language-api.md)  
+-   [Relationship to the C-Language API](../mfc/relationship-to-the-c-language-api.md)  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

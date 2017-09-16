@@ -1,83 +1,99 @@
 ---
-title: "MFC ActiveX 控制項：繪製 ActiveX 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX 控制項, 最佳化"
-  - "MFC ActiveX 控制項, 繪圖"
+title: 'MFC ActiveX Controls: Painting an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], painting
+- MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC ActiveX 控制項：繪製 ActiveX 控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bb07151fa696f34c74c6ed1021d116b2dd21f2ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明 ActiveX 控制項繪製製程，以及如何修改繪製程式碼最佳化處理。\(請參閱技術的 [最佳繪製控制項](../mfc/optimizing-control-drawing.md) 如何由會最佳化繪圖控制個別還原先前選取的 GDI 物件。  在所有控制項繪製之後，容器可以自動還原原始物件\)。  
+---
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX Controls: Painting an ActiveX Control
+This article describes the ActiveX control painting process and how you can alter paint code to optimize the process. (See [Optimizing Control Drawing](../mfc/optimizing-control-drawing.md) for techniques on how to optimize drawing by not having controls individually restore previously selected GDI objects. After all of the controls have been drawn, the container can automatically restore the original objects.)  
   
- 範例本文是擁有預設設定的 MFC ActiveX 控制項精靈所建立的控制項。  如需使用 MFC ActiveX 控制項精靈的基本架構控制應用程式的詳細資訊，請參閱本文件的 [MFC ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md)。  
+ Examples in this article are from a control created by the MFC ActiveX Control Wizard with default settings. For more information on creating a skeleton control application using the MFC ActiveX Control Wizard, see the article [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md).  
   
- 其中包含下列主題：  
+ The following topics are covered:  
   
--   [繪製的 ActiveX 控制項精靈和程式碼整體程序建立的控制項支援繪製](#_core_the_painting_process_of_an_activex_control)  
+-   [The overall process for painting a control and the code created by the ActiveX Control Wizard to support painting](#_core_the_painting_process_of_an_activex_control)  
   
--   [如何最佳化繪製製程](#_core_optimizing_your_paint_code)  
+-   [How to optimize the painting process](#_core_optimizing_your_paint_code)  
   
--   [使用中繼檔，如何使用您的控制項](#_core_painting_your_control_using_metafiles)  
+-   [How to paint your control using metafiles](#_core_painting_your_control_using_metafiles)  
   
-##  <a name="_core_the_painting_process_of_an_activex_control"></a> ActiveX 控制項的繪製行為  
- 當 ActiveX 控制項最初會顯示或重新繪製時，會依照繪製製程類似使用 MFC 所開發的應用程式，其中一個重要差異:ActiveX 控制項可以處於作用中或一個非現用狀態。  
+##  <a name="_core_the_painting_process_of_an_activex_control"></a> The Painting Process of an ActiveX Control  
+ When ActiveX controls are initially displayed or are redrawn, they follow a painting process similar to other applications developed using MFC, with one important distinction: ActiveX controls can be in an active or an inactive state.  
   
- 現用控制項在 ActiveX 控制項容器所表示的子視窗。  就像其他視窗，當 `WM_PAINT` 收到訊息時，它會繪製負責。  控制項的基底類別， [COleControl](../mfc/reference/colecontrol-class.md)，控制代碼會在其 `OnPaint` 函式中的這個訊息。  這個預設實作會呼叫控制項的 `OnDraw` 函式。  
+ An active control is represented in an ActiveX control container by a child window. Like other windows, it is responsible for painting itself when a `WM_PAINT` message is received. The control's base class, [COleControl](../mfc/reference/colecontrol-class.md), handles this message in its `OnPaint` function. This default implementation calls the `OnDraw` function of your control.  
   
- 非現用控制項不同方式繪製。  當控制項處於非現用狀態時，它的視窗是可見或不存在的，因此無法接收繪製訊息。  相反地，控制項容器直接呼叫控制項的 `OnDraw` 函式。  這與使用中控制項的繪製製程在於 `OnPaint` 成員函式絕不會呼叫。  
+ An inactive control is painted differently. When the control is inactive, its window is either invisible or nonexistent, so it can not receive a paint message. Instead, the control container directly calls the `OnDraw` function of the control. This differs from an active control's painting process in that the `OnPaint` member function is never called.  
   
- 如前面所述， ActiveX 控制項如何更新取決於控制項的狀態。  不過，因為架構在兩種情況下呼叫 `OnDraw` 成員函式，將大部分的此成員函式的繪製程式碼。  
+ As discussed in the preceding paragraphs, how an ActiveX control is updated depends on the state of the control. However, because the framework calls the `OnDraw` member function in both cases, you add the majority of your painting code in this member function.  
   
- `OnDraw` 成員函式來處理控制項的繪製。  當控制項處於非現用狀態時，控制項容器呼叫 `OnDraw`，透過控制項容器的裝置內容和所佔用的矩形區域的座標控制。  
+ The `OnDraw` member function handles control painting. When a control is inactive, the control container calls `OnDraw`, passing the device context of the control container and the coordinates of the rectangular area occupied by the control.  
   
- 這個架構會將參數所 `OnDraw` 成員函式包含的控制項佔據的區域。  如果控制項正在使用中，左上角為 \(0， 0\)，並傳遞的裝置內容是包含控制項的子視窗。  如果控制項是無作用的，其左上角座標不一定是 \(0， 0\)，並傳遞的裝置內容是包含控制項的容器。  
-  
-> [!NOTE]
->  請務必對  `OnDraw` 的修改不依賴矩形左上角的位置等於 \(0， 0\)，而您只繪製矩形內傳遞至 `OnDraw`。  如果您在矩形的區域之外，繪製非預期的結果可能發生。  
-  
- 控制項實作檔 \(.CPP\) MFC ActiveX 控制項精靈提供的預設實作，如下所示，繪製一個白色筆刷矩形並以目前的背景色彩填滿橢圓形。  
-  
- [!code-cpp[NVC_MFC_AxUI#1](../mfc/codesnippet/CPP/mfc-activex-controls-painting-an-activex-control_1.cpp)]  
+ The rectangle passed by the framework to the `OnDraw` member function contains the area occupied by the control. If the control is active, the upper-left corner is (0, 0) and the device context passed is for the child window that contains the control. If the control is inactive, the upper-left coordinate is not necessarily (0, 0) and the device context passed is for the control container containing the control.  
   
 > [!NOTE]
->  在繪製控制項時，您不應該對以 *pdc* 參數對 `OnDraw` 函式裝置內容狀態的假設。  有時候容器應用程式提供裝置內容，並不一定初始化為預設狀態。  特別是，明確選取畫筆、筆刷、色彩、字型和您的繪圖程式碼相依的其他資源。  
+>  It is important that your modifications to `OnDraw` do not depend on the rectangle's upper left point being equal to (0, 0) and that you draw only inside the rectangle passed to `OnDraw`. Unexpected results can occur if you draw beyond the rectangle's area.  
   
-##  <a name="_core_optimizing_your_paint_code"></a> 最佳化繪畫程式碼  
- 在控制項已成功自己繪製之後，下一步是最佳化 `OnDraw` 函式。  
+ The default implementation provided by the MFC ActiveX Control Wizard in the control implementation file (.CPP), shown below, paints the rectangle with a white brush and fills the ellipse with the current background color.  
   
- 繪製繪製的 ActiveX 控制項的預設實作整個控制項範圍。  對於簡單的控制項已經足夠，不過在大部分的情況下重新繪製控制項是快速，如果需要更新重新繪製的部分，而不是整個控制項。  
+ [!code-cpp[NVC_MFC_AxUI#1](../mfc/codesnippet/cpp/mfc-activex-controls-painting-an-activex-control_1.cpp)]  
   
- `OnDraw` 函式會透過 `rcInvalid`提供最佳化簡單方法，需要重新繪製控制項的矩形範圍。  小於整個控制項範圍內使用這個區域，通常快速繪製製程。  
+> [!NOTE]
+>  When painting a control, you should not make assumptions about the state of the device context that is passed as the *pdc* parameter to the `OnDraw` function. Occasionally the device context is supplied by the container application and will not necessarily be initialized to the default state. In particular, explicitly select the pens, brushes, colors, fonts, and other resources that your drawing code depends upon.  
   
-##  <a name="_core_painting_your_control_using_metafiles"></a> 繪製您的使用中繼檔的控制項  
- 在許多情況 \(如 `OnDraw` 函式中的 `pdc` 參數轉換螢幕裝置內容 \(DC\)。  不過，在列印時，控制項的影像或在預覽列印工作階段期間，會接收的 DC 是稱為中繼檔 DC」的特殊型別。  不同於螢幕 DC，立即處理要求傳送給它，中繼檔 DC 儲存之後使用。  有些容器應用程式也可以選擇將控制項呈現影像使用中繼檔 DC，在設計模式中。  
+##  <a name="_core_optimizing_your_paint_code"></a> Optimizing Your Paint Code  
+ After the control is successfully painting itself, the next step is to optimize the `OnDraw` function.  
   
- 中繼檔繪製要求可以由容器來兩個介面功能: **IViewObject::Draw** \(這個函式可能為非中繼檔繪圖也稱為\) 和 **IDataObject::GetData**。  在刪除中繼檔 DC 會當成其中一個參數時， MFC 框架呼叫 [COleControl::OnDrawMetafile](../Topic/COleControl::OnDrawMetafile.md)。  由於這是虛擬成員函式，請覆寫控制項類別的這個函式會執行任何特殊處理。  使用預設行為會呼叫 `COleControl::OnDraw`。  
+ The default implementation of ActiveX control painting paints the entire control area. This is sufficient for simple controls, but in many cases repainting the control would be faster if only the portion that needed updating was repainted, instead of the entire control.  
   
- 若要判斷控制項在螢幕上繪製，且中繼檔裝置內容，您必須在螢幕和中繼檔 DC 只支援的成員函式。  請注意座標系統以像素不可以測量。  
+ The `OnDraw` function provides an easy method of optimization by passing `rcInvalid`, the rectangular area of the control that needs redrawing. Use this area, usually smaller than the entire control area, to speed up the painting process.  
   
- 因為 `OnDrawMetafile` 的預設實作會呼叫控制項的 `OnDraw` 函式，請使用適用於中繼檔和螢幕裝置內容的成員函式，，除非您覆寫 `OnDrawMetafile`。  下列清單 `CDC` 可中繼檔和螢幕裝置內容的成員函式的子集。  如需這些功能的詳細資訊，請參閱《 *MFC 參考》中的*[CDC](../mfc/reference/cdc-class.md) 類別。  
+##  <a name="_core_painting_your_control_using_metafiles"></a> Painting Your Control Using Metafiles  
+ In most cases the `pdc` parameter to the `OnDraw` function points to a screen device context (DC). However, when printing images of the control or during a print preview session, the DC received for rendering is a special type called a "metafile DC". Unlike a screen DC, which immediately handles requests sent to it, a metafile DC stores requests to be played back at a later time. Some container applications may also choose to render the control image using a metafile DC when in design mode.  
   
-|弧形|BibBlt|字串|  
-|--------|------------|--------|  
-|**橢圓形**|**逸出字元**|`ExcludeClipRect`|  
+ Metafile drawing requests can be made by the container through two interface functions: **IViewObject::Draw** (this function can also be called for non-metafile drawing) and **IDataObject::GetData**. When a metafile DC is passed as one of the parameters, the MFC framework makes a call to [COleControl::OnDrawMetafile](../mfc/reference/colecontrol-class.md#ondrawmetafile). Because this is a virtual member function, override this function in the control class to do any special processing. The default behavior calls `COleControl::OnDraw`.  
+  
+ To make sure the control can be drawn in both screen and metafile device contexts, you must use only member functions that are supported in both a screen and a metafile DC. Be aware that the coordinate system may not be measured in pixels.  
+  
+ Because the default implementation of `OnDrawMetafile` calls the control's `OnDraw` function, use only member functions that are suitable for both a metafile and a screen device context, unless you override `OnDrawMetafile`. The following lists the subset of `CDC` member functions that can be used in both a metafile and a screen device context. For more information on these functions, see class [CDC](../mfc/reference/cdc-class.md) in the *MFC Reference*.  
+  
+|Arc|BibBlt|Chord|  
+|---------|------------|-----------|  
+|**Ellipse**|**Escape**|`ExcludeClipRect`|  
 |`ExtTextOut`|`FloodFill`|`IntersectClipRect`|  
 |`LineTo`|`MoveTo`|`OffsetClipRgn`|  
 |`OffsetViewportOrg`|`OffsetWindowOrg`|`PatBlt`|  
@@ -92,25 +108,27 @@ manager: "ghogen"
 |`SetViewportOrg`|`SetWindowExt`|`SetWindowORg`|  
 |`StretchBlt`|`TextOut`||  
   
- 除了 `CDC` 成員函式之外，還有相容於中繼檔 DC 的許多其他功能。  其中包括 [CPalette::AnimatePalette](../Topic/CPalette::AnimatePalette.md)、 [CFont::CreateFontIndirect](../Topic/CFont::CreateFontIndirect.md)和 `CBrush`的三 \+ 成成員的函式: [CreateBrushIndirect](../Topic/CBrush::CreateBrushIndirect.md)、 [CreateDIBPatternBrush](../Topic/CBrush::CreateDIBPatternBrush.md)和 [CreatePatternBrush](../Topic/CBrush::CreatePatternBrush.md)。  
+ In addition to `CDC` member functions, there are several other functions that are compatible in a metafile DC. These include [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect), and three member functions of `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), and [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).  
   
- 在中繼檔不會錄製的函式是: [DrawFocusRect](../Topic/CDC::DrawFocusRect.md)、 [DrawIcon](../Topic/CDC::DrawIcon.md)、 [DrawText](../Topic/CDC::DrawText.md)、 [ExcludeUpdateRgn](../Topic/CDC::ExcludeUpdateRgn.md)、 [FillRect](../Topic/CDC::FillRect.md)、 [FrameRect](../Topic/CDC::FrameRect.md)、 [GrayString](../Topic/CDC::GrayString.md)、 [InvertRect](../Topic/CDC::InvertRect.md)、 [ScrollDC](../Topic/CDC::ScrollDC.md)和 [TabbedTextOut](../Topic/CDC::TabbedTextOut.md)。  由於中繼檔 DC 實際上並未與裝置，您無法使用 SetDIBits、GetDIBits 和 CreateDIBitmap 與中繼檔 DC。  您可以使用 SetDIBitsToDevice 和 StretchDIBits 與中繼檔 DC 做為目的端。  [CreateCompatibleDC](../Topic/CDC::CreateCompatibleDC.md)、 [CreateCompatibleBitmap](../Topic/CBitmap::CreateCompatibleBitmap.md)和 [CreateDiscardableBitmap](../Topic/CBitmap::CreateDiscardableBitmap.md) 不具任何意義與中繼檔 DC。  
+ Functions that are not recorded in a metafile are: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), and [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Because a metafile DC is not actually associated with a device, you cannot use SetDIBits, GetDIBits, and CreateDIBitmap with a metafile DC. You can use SetDIBitsToDevice and StretchDIBits with a metafile DC as the destination. [CreateCompatibleDC](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), and [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) are not meaningful with a metafile DC.  
   
- 考慮使用中繼檔網域控制站 \(DC\) 時的另一點是座標系統以像素不可以測量。  因此，應該以符合調整所有的繪圖程式碼矩形傳入 `rcBounds` 參數的 `OnDraw` 。  因為 `rcBounds` 代表控制項視窗的大小，這可防止在控制項外部的意外繪製。  
+ Another point to consider when using a metafile DC is that the coordinate system may not be measured in pixels. For this reason, all your drawing code should be adjusted to fit in the rectangle passed to `OnDraw` in the `rcBounds` parameter. This prevents accidental painting outside the control because `rcBounds` represents the size of the control's window.  
   
- 在您實作了控制項後中繼檔轉換，請使用測試容器測試中繼檔。  如需存取測試容器的詳細資訊，請參閱[用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)。  
+ After you have implemented metafile rendering for the control, use Test Container to test the metafile. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
   
-#### 使用測試容器，測試控制項的中繼檔。  
+#### <a name="to-test-the-controls-metafile-using-test-container"></a>To test the control's metafile using Test Container  
   
-1.  在測試容器的 **Edit** 功能表上，按一下 **Insert New Control**。  
+1.  On the Test Container's **Edit** menu, click **Insert New Control**.  
   
-2.  在 **Insert New Control** 方塊中，選取控制項並按一下 \[**好**\]。  
+2.  In the **Insert New Control** box, select the control and click **OK**.  
   
-     控制項會出現在測試容器。  
+     The control will appear in Test container.  
   
-3.  在 **Control** 功能表上，按一下 **Draw Metafile**。  
+3.  On the **Control** menu, click **Draw Metafile**.  
   
-     另一個視窗中會出現哪些中繼檔隨即顯示。  您可以變更這個視窗的大小會調整如何影響控制項的中繼檔。  您可以隨時關閉此視窗。  
+     A separate window appears in which the metafile is displayed. You can change the size of this window to see how scaling affects the control's metafile. You can close this window at any time.  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

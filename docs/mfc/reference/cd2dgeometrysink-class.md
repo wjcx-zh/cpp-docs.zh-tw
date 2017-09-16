@@ -1,5 +1,5 @@
 ---
-title: "CD2DGeometrySink 類別 |Microsoft 文件"
+title: CD2DGeometrySink Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -30,7 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DGeometrySink class
+- CD2DGeometrySink [MFC], CD2DGeometrySink
+- CD2DGeometrySink [MFC], AddArc
+- CD2DGeometrySink [MFC], AddBezier
+- CD2DGeometrySink [MFC], AddBeziers
+- CD2DGeometrySink [MFC], AddLine
+- CD2DGeometrySink [MFC], AddLines
+- CD2DGeometrySink [MFC], AddQuadraticBezier
+- CD2DGeometrySink [MFC], AddQuadraticBeziers
+- CD2DGeometrySink [MFC], BeginFigure
+- CD2DGeometrySink [MFC], Close
+- CD2DGeometrySink [MFC], EndFigure
+- CD2DGeometrySink [MFC], Get
+- CD2DGeometrySink [MFC], IsValid
+- CD2DGeometrySink [MFC], SetFillMode
+- CD2DGeometrySink [MFC], SetSegmentFlags
+- CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
 caps.latest.revision: 17
 author: mikeblome
@@ -50,17 +65,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8a51d9475437ae460340d419a88bc46effa81f5f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8b373c36ecf04faa13aab17b3fde69aa39395cb5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 類別
-ID2D1GeometrySink 包裝函式。  
+# <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink Class
+A wrapper for ID2D1GeometrySink.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DGeometrySink;  
@@ -68,81 +83,81 @@ class CD2DGeometrySink;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|建構 CD2DGeometrySink 物件從 CD2DPathGeometry 物件。|  
-|[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|解構函式。 D2D 幾何接收器物件終結時呼叫。|  
+|[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Constructs a CD2DGeometrySink object from CD2DPathGeometry object.|  
+|[CD2DGeometrySink::~CD2DGeometrySink](#_dtorcd2dgeometrysink)|The destructor. Called when a D2D geometry sink object is being destroyed.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometrySink::AddArc](#addarc)|加入之路徑幾何中的單一弧形|  
-|[CD2DGeometrySink::AddBezier](#addbezier)|建立目前點和指定的結束點之間的三次方貝茲曲線。|  
-|[CD2DGeometrySink::AddBeziers](#addbeziers)|建立一系列三次方貝茲曲線，並將它們加入至幾何接收。|  
-|[CD2DGeometrySink::AddLine](#addline)|建立目前點和指定的結束點之間的直線線段，並將它加入至幾何接收器。|  
-|[CD2DGeometrySink::AddLines](#addlines)|建立使用指定的點線的序列，並將它們加入至幾何接收。|  
-|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|建立目前點和指定的結束點之間的二次方貝茲曲線。|  
-|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|將一系列二次方貝茲區段加入做為陣列的單一呼叫中。|  
-|[CD2DGeometrySink::BeginFigure](#beginfigure)|開始新的圖形，在指定的點。|  
-|[CD2DGeometrySink::Close](#close)|關閉幾何接收器|  
-|[CD2DGeometrySink::EndFigure](#endfigure)|結束目前的圖表。（選擇性） 會關閉。|  
-|[CD2DGeometrySink::Get](#get)|傳回 ID2D1GeometrySink 介面|  
-|[CD2DGeometrySink::IsValid](#isvalid)|檢查幾何接收器有效性|  
-|[CD2DGeometrySink::SetFillMode](#setfillmode)|指定用來判斷屬於這個幾何接收所描述的 geometry 內點與點以外的方法。|  
-|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|指定要套用至新的區段加入至幾何接收筆劃並加入選項。|  
+|[CD2DGeometrySink::AddArc](#addarc)|Adds a single arc to the path geometry|  
+|[CD2DGeometrySink::AddBezier](#addbezier)|Creates a cubic Bezier curve between the current point and the specified end point.|  
+|[CD2DGeometrySink::AddBeziers](#addbeziers)|Creates a sequence of cubic Bezier curves and adds them to the geometry sink.|  
+|[CD2DGeometrySink::AddLine](#addline)|Creates a line segment between the current point and the specified end point and adds it to the geometry sink.|  
+|[CD2DGeometrySink::AddLines](#addlines)|Creates a sequence of lines using the specified points and adds them to the geometry sink.|  
+|[CD2DGeometrySink::AddQuadraticBezier](#addquadraticbezier)|Creates a quadratic Bezier curve between the current point and the specified end point.|  
+|[CD2DGeometrySink::AddQuadraticBeziers](#addquadraticbeziers)|Adds a sequence of quadratic Bezier segments as an array in a single call.|  
+|[CD2DGeometrySink::BeginFigure](#beginfigure)|Starts a new figure at the specified point.|  
+|[CD2DGeometrySink::Close](#close)|Closes the geometry sink|  
+|[CD2DGeometrySink::EndFigure](#endfigure)|Ends the current figure; optionally, closes it.|  
+|[CD2DGeometrySink::Get](#get)|Returns ID2D1GeometrySink interface|  
+|[CD2DGeometrySink::IsValid](#isvalid)|Checks geometry sink validity|  
+|[CD2DGeometrySink::SetFillMode](#setfillmode)|Specifies the method used to determine which points are inside the geometry described by this geometry sink and which points are outside.|  
+|[CD2DGeometrySink::SetSegmentFlags](#setsegmentflags)|Specifies stroke and join options to be applied to new segments added to the geometry sink.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|傳回 ID2D1GeometrySink 介面|  
+|[CD2DGeometrySink::operator ID2D1GeometrySink*](#operator_id2d1geometrysink_star)|Returns ID2D1GeometrySink interface|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DGeometrySink::m_pSink](#m_psink)|ID2D1GeometrySink 指標。|  
+|[CD2DGeometrySink::m_pSink](#m_psink)|A pointer to an ID2D1GeometrySink.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CD2DGeometrySink`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dgeometrysink"></a>CD2DGeometrySink:: ~ CD2DGeometrySink  
- 解構函式。 D2D 幾何接收器物件終結時呼叫。  
+##  <a name="_dtorcd2dgeometrysink"></a>  CD2DGeometrySink::~CD2DGeometrySink  
+ The destructor. Called when a D2D geometry sink object is being destroyed.  
   
 ```  
 virtual ~CD2DGeometrySink();
 ```  
   
-##  <a name="addarc"></a>CD2DGeometrySink::AddArc  
- 加入之路徑幾何中的單一弧形  
+##  <a name="addarc"></a>  CD2DGeometrySink::AddArc  
+ Adds a single arc to the path geometry  
   
 ```  
 void AddArc(const D2D1_ARC_SEGMENT& arc);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `arc`  
- 圖中加入此圓弧線段  
+ The arc segment to add to the figure  
   
-##  <a name="addbezier"></a>CD2DGeometrySink::AddBezier  
- 建立目前點和指定的結束點之間的三次方貝茲曲線。  
+##  <a name="addbezier"></a>  CD2DGeometrySink::AddBezier  
+ Creates a cubic Bezier curve between the current point and the specified end point.  
   
 ```  
 void AddBezier(const D2D1_BEZIER_SEGMENT& bezier);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bezier`  
- 結構描述的控點和結束點將貝茲曲線。  
+ A structure that describes the control points and end point of the Bezier curve to add.  
   
-##  <a name="addbeziers"></a>CD2DGeometrySink::AddBeziers  
- 建立一系列三次方貝茲曲線，並將它們加入至幾何接收。  
+##  <a name="addbeziers"></a>  CD2DGeometrySink::AddBeziers  
+ Creates a sequence of cubic Bezier curves and adds them to the geometry sink.  
   
 ```  
 void AddBeziers(
@@ -150,23 +165,23 @@ void AddBeziers(
     D2D1_BEZIER_SEGMENT>& beziers);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `beziers`  
- 描述建立貝茲曲線的貝茲片段陣列。 曲線取自幾何接收器目前點 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置），到陣列中的第一個貝茲區段的結束點。 如果陣列包含額外的貝茲片段，每個後續的貝茲區段會使用上述的貝茲區段的結束點做為其起始點。  
+ An array of Bezier segments that describes the Bezier curves to create. A curve is drawn from the geometry sink's current point (the end point of the last segment drawn or the location specified by BeginFigure) to the end point of the first Bezier segment in the array. if the array contains additional Bezier segments, each subsequent Bezier segment uses the end point of the preceding Bezier segment as its start point.  
   
-##  <a name="addline"></a>CD2DGeometrySink::AddLine  
- 建立目前點和指定的結束點之間的直線線段，並將它加入至幾何接收器。  
+##  <a name="addline"></a>  CD2DGeometrySink::AddLine  
+ Creates a line segment between the current point and the specified end point and adds it to the geometry sink.  
   
 ```  
 void AddLine(CD2DPointF point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `point`  
- 若要繪製線條的結束點。  
+ The end point of the line to draw.  
   
-##  <a name="addlines"></a>CD2DGeometrySink::AddLines  
- 建立使用指定的點線的序列，並將它們加入至幾何接收。  
+##  <a name="addlines"></a>  CD2DGeometrySink::AddLines  
+ Creates a sequence of lines using the specified points and adds them to the geometry sink.  
   
 ```  
 void AddLines(
@@ -174,23 +189,23 @@ void AddLines(
     CD2DPointF>& points);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `points`  
- 描述要繪製線條的一或多個點的陣列。 陣列中的第一個點，一條線是取自幾何接收器目前點 （結束點繪製的最後一個區段或 BeginFigure 所指定的位置）。 如果陣列包含額外的連接點，線條繪製從第一個點到第二個點陣列中從第二個點到第三個點，依此類推。 要繪製線條的終點序列的陣列。  
+ An array of one or more points that describe the lines to draw. A line is drawn from the geometry sink's current point (the end point of the last segment drawn or the location specified by BeginFigure) to the first point in the array. if the array contains additional points, a line is drawn from the first point to the second point in the array, from the second point to the third point, and so on. An array of a sequence of the end points of the lines to draw.  
   
-##  <a name="addquadraticbezier"></a>CD2DGeometrySink::AddQuadraticBezier  
- 建立目前點和指定的結束點之間的二次方貝茲曲線。  
+##  <a name="addquadraticbezier"></a>  CD2DGeometrySink::AddQuadraticBezier  
+ Creates a quadratic Bezier curve between the current point and the specified end point.  
   
 ```  
 void AddQuadraticBezier(const D2D1_QUADRATIC_BEZIER_SEGMENT& bezier);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bezier`  
- 描述控制項控點和結束點的二次方貝茲曲線，若要新增的結構。  
+ A structure that describes the control point and the end point of the quadratic Bezier curve to add.  
   
-##  <a name="addquadraticbeziers"></a>CD2DGeometrySink::AddQuadraticBeziers  
- 將一系列二次方貝茲區段加入做為陣列的單一呼叫中。  
+##  <a name="addquadraticbeziers"></a>  CD2DGeometrySink::AddQuadraticBeziers  
+ Adds a sequence of quadratic Bezier segments as an array in a single call.  
   
 ```  
 void AddQuadraticBeziers(
@@ -198,12 +213,12 @@ void AddQuadraticBeziers(
     D2D1_QUADRATIC_BEZIER_SEGMENT>& beziers);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `beziers`  
- 陣列的一系列二次方貝茲區段。  
+ An array of a sequence of quadratic Bezier segments.  
   
-##  <a name="beginfigure"></a>CD2DGeometrySink::BeginFigure  
- 開始新的圖形，在指定的點。  
+##  <a name="beginfigure"></a>  CD2DGeometrySink::BeginFigure  
+ Starts a new figure at the specified point.  
   
 ```  
 void BeginFigure(
@@ -211,104 +226,104 @@ void BeginFigure(
     D2D1_FIGURE_BEGIN figureBegin);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `startPoint`  
- 要開始新的圖形點。  
+ The point at which to begin the new figure.  
   
  `figureBegin`  
- 新的圖是否應空心或填滿。  
+ Whether the new figure should be hollow or filled.  
   
-##  <a name="cd2dgeometrysink"></a>CD2DGeometrySink::CD2DGeometrySink  
- 建構 CD2DGeometrySink 物件從 CD2DPathGeometry 物件。  
+##  <a name="cd2dgeometrysink"></a>  CD2DGeometrySink::CD2DGeometrySink  
+ Constructs a CD2DGeometrySink object from CD2DPathGeometry object.  
   
 ```  
 CD2DGeometrySink(CD2DPathGeometry& pathGeometry);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pathGeometry`  
- 現有的 CD2DPathGeometry 物件。  
+ An existing CD2DPathGeometry object.  
   
-##  <a name="close"></a>CD2DGeometrySink::Close  
- 關閉幾何接收器  
+##  <a name="close"></a>  CD2DGeometrySink::Close  
+ Closes the geometry sink  
   
 ```  
 BOOL Close();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise FALSE.  
   
-##  <a name="endfigure"></a>CD2DGeometrySink::EndFigure  
- 結束目前的圖表。（選擇性） 會關閉。  
+##  <a name="endfigure"></a>  CD2DGeometrySink::EndFigure  
+ Ends the current figure; optionally, closes it.  
   
 ```  
 void EndFigure(D2D1_FIGURE_END figureEnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `figureEnd`  
- 值，指出是否已關閉目前的圖形。 如果關閉此圖中，在目前點和 BeginFigure 所指定的開始點之間繪製線條。  
+ A value that indicates whether the current figure is closed. If the figure is closed, a line is drawn between the current point and the start point specified by BeginFigure.  
   
-##  <a name="get"></a>CD2DGeometrySink::Get  
- 傳回 ID2D1GeometrySink 介面  
+##  <a name="get"></a>  CD2DGeometrySink::Get  
+ Returns ID2D1GeometrySink interface  
   
 ```  
 ID2D1GeometrySink* Get();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1GeometrySink 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1GeometrySink interface or NULL if object is not initialized yet.  
   
-##  <a name="isvalid"></a>CD2DGeometrySink::IsValid  
- 檢查幾何接收器有效性  
+##  <a name="isvalid"></a>  CD2DGeometrySink::IsValid  
+ Checks geometry sink validity  
   
 ```  
 BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果幾何接收無效，則為 TRUE否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if geometry sink is valid; otherwise FALSE.  
   
-##  <a name="m_psink"></a>CD2DGeometrySink::m_pSink  
- ID2D1GeometrySink 指標。  
+##  <a name="m_psink"></a>  CD2DGeometrySink::m_pSink  
+ A pointer to an ID2D1GeometrySink.  
   
 ```  
 ID2D1GeometrySink* m_pSink;  
 ```  
   
-##  <a name="operator_id2d1geometrysink_star"></a>CD2DGeometrySink::operator ID2D1GeometrySink *  
- 傳回 ID2D1GeometrySink 介面  
+##  <a name="operator_id2d1geometrysink_star"></a>  CD2DGeometrySink::operator ID2D1GeometrySink*  
+ Returns ID2D1GeometrySink interface  
   
 ```  
 operator ID2D1GeometrySink*();
 ```   
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 ID2D1GeometrySink 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1GeometrySink interface or NULL if object is not initialized yet.  
   
-##  <a name="setfillmode"></a>CD2DGeometrySink::SetFillMode  
- 指定用來判斷屬於這個幾何接收所描述的 geometry 內點與點以外的方法。  
+##  <a name="setfillmode"></a>  CD2DGeometrySink::SetFillMode  
+ Specifies the method used to determine which points are inside the geometry described by this geometry sink and which points are outside.  
   
 ```  
 void SetFillMode(D2D1_FILL_MODE fillMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `fillMode`  
- 用來判斷指定的點是幾何的一部分的方法。  
+ The method used to determine whether a given point is part of the geometry.  
   
-##  <a name="setsegmentflags"></a>CD2DGeometrySink::SetSegmentFlags  
- 指定要套用至新的區段加入至幾何接收筆劃並加入選項。  
+##  <a name="setsegmentflags"></a>  CD2DGeometrySink::SetSegmentFlags  
+ Specifies stroke and join options to be applied to new segments added to the geometry sink.  
   
 ```  
 void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `vertexFlags`  
- 要套用至新的區段加入至幾何接收筆劃並加入選項。  
+ Stroke and join options to be applied to new segments added to the geometry sink.  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

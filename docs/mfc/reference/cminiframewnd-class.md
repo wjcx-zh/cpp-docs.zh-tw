@@ -1,5 +1,5 @@
 ---
-title: "CMiniFrameWnd 類別 |Microsoft 文件"
+title: CMiniFrameWnd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,9 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMiniFrameWnd class
-- mini-frame windows
-- toolbars [C++]
+- CMiniFrameWnd [MFC], CMiniFrameWnd
+- CMiniFrameWnd [MFC], Create
+- CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 caps.latest.revision: 21
 author: mikeblome
@@ -39,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7a7119a7317e8837c7ce672b2607a4e37b5239f5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7191683a95253c2a1eb0d8ed49552b5d2e507894
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
-表示通常在浮動工具列周圍出現的半高度框架視窗。  
+# <a name="cminiframewnd-class"></a>CMiniFrameWnd Class
+Represents a half-height frame window typically seen around floating toolbars.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMiniFrameWnd : public CFrameWnd  
@@ -57,27 +57,27 @@ class CMiniFrameWnd : public CFrameWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|建構 `CMiniFrameWnd` 物件。|  
+|[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Constructs a `CMiniFrameWnd` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMiniFrameWnd::Create](#create)|建立`CMiniFrameWnd`完成建構後的物件。|  
-|[CMiniFrameWnd::CreateEx](#createex)|建立`CMiniFrameWnd`完成建構後的物件 （使用其他選項）。|  
+|[CMiniFrameWnd::Create](#create)|Creates a `CMiniFrameWnd` object after construction.|  
+|[CMiniFrameWnd::CreateEx](#createex)|Creates a `CMiniFrameWnd` object (with additional options) after construction.|  
   
-## <a name="remarks"></a>備註  
- 這些迷你框架視窗的行為與一般的框架視窗中，不同之處在於它們之間沒有最小化/最大化按鈕或功能表，您只需要按一下 [系統] 功能表，若要關閉它們。  
+## <a name="remarks"></a>Remarks  
+ These mini-frame windows behave like normal frame windows, except that they do not have minimize/maximize buttons or menus and you only have to single-click on the system menu to dismiss them.  
   
- 若要使用`CMiniFrameWnd`物件，請先定義的物件。 然後呼叫[建立](#create)顯示迷你框架視窗的成員函式。  
+ To use a `CMiniFrameWnd` object, first define the object. Then call the [Create](#create) member function to display the mini-frame window.  
   
- 如需有關如何使用`CMiniFrameWnd`物件，請參閱文章[停駐和浮動工具列](../../mfc/docking-and-floating-toolbars.md)。  
+ For more information on how to use `CMiniFrameWnd` objects, see the article [Docking and Floating Toolbars](../../mfc/docking-and-floating-toolbars.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,21 +88,21 @@ class CMiniFrameWnd : public CFrameWnd
   
  `CMiniFrameWnd`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cminiframewnd"></a>CMiniFrameWnd::CMiniFrameWnd  
- 建構`CMiniFrameWnd`物件，但不會建立視窗。  
+##  <a name="cminiframewnd"></a>  CMiniFrameWnd::CMiniFrameWnd  
+ Constructs a `CMiniFrameWnd` object, but does not create the window.  
   
 ```  
 CMiniFrameWnd();
 ```  
   
-### <a name="remarks"></a>備註  
- 若要建立的視窗，呼叫[CMiniFrameWnd::Create](#create)。  
+### <a name="remarks"></a>Remarks  
+ To create the window, call [CMiniFrameWnd::Create](#create).  
   
-##  <a name="create"></a>CMiniFrameWnd::Create  
- 建立 Windows 迷你框架視窗，並將它附加至`CMiniFrameWnd`物件。  
+##  <a name="create"></a>  CMiniFrameWnd::Create  
+ Creates the Windows mini-frame window and attaches it to the `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL Create(
@@ -114,57 +114,57 @@ virtual BOOL Create(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpClassName`  
- 指向以 null 結束的字元字串，Windows 類別命名。 類別名稱可以是任何名稱登錄與全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式。 如果**NULL**，將會為您登錄視窗類別，由架構。 MFC 提供的預設類別樣式，下列屬性︰  
+ Points to a null-terminated character string that names the Windows class. The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function. If **NULL**, the window class will be registered for you by the framework. MFC gives the default class the following styles and attributes:  
   
--   設定樣式位元**CS_DBLCLKS**，會將按兩下訊息至視窗程序在使用者按兩下滑鼠時。  
+-   Sets style bit **CS_DBLCLKS**, which sends double-click messages to the window procedure when the user double-clicks the mouse.  
   
--   設定樣式位元**CS_HREDRAW**和**CS_VREDRAW**，其直接重新繪製視窗變更大小的工作區的內容。  
+-   Sets style bits **CS_HREDRAW** and **CS_VREDRAW**, which direct the contents of the client area to be redrawn when the window changes size.  
   
--   將類別資料指標設定為 Windows 標準**IDC_ARROW**。  
+-   Sets the class cursor to the Windows standard **IDC_ARROW**.  
   
--   若要設定類別的背景筆刷**NULL**，因此視窗不會清除它的背景。  
+-   Sets the class background brush to **NULL**, so the window will not erase its background.  
   
--   將類別圖示設定為標準的旗標 Windows 標誌圖示。  
+-   Sets the class icon to the standard, waving-flag Windows logo icon.  
   
--   設定視窗的預設大小和位置，由 Windows 所示。  
+-   Sets the window to the default size and position, as indicated by Windows.  
   
  `lpWindowName`  
- 指向以 null 結尾字元字串，包含視窗名稱。  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- 指定視窗的樣式屬性。 這些可以包括標準的視窗樣式與一個或多個下列特殊的樣式︰  
+ Specifies the window style attributes. These can include standard window styles and one or more of the following special styles:  
   
-- **MFS_MOVEFRAME**可讓任何視窗，而不只是標題的邊緣上的 要移動迷你框架視窗。  
+- **MFS_MOVEFRAME** Allows the mini-frame window to be moved by clicking on any edge of the window, not just the caption.  
   
-- **MFS_4THICKFRAME**停用迷你框架視窗的調整大小。  
+- **MFS_4THICKFRAME** Disables resizing of the mini-frame window.  
   
-- **MFS_SYNCACTIVE**同步處理的迷你框架視窗至其父視窗的啟用啟動。  
+- **MFS_SYNCACTIVE** Synchronizes the activation of the mini-frame window to the activation of its parent window.  
   
-- **MFS_THICKFRAME**小因為用戶端區域內容允許的大小調整迷你框架視窗。  
+- **MFS_THICKFRAME** Allows the mini-frame window to be sized as small as the contents of the client area allow.  
   
-- **MFS_BLOCKSYSMENU**會停用存取 [系統] 功能表和 [控制] 功能表中，並將它們轉換成標題 （標題列） 的一部分。  
+- **MFS_BLOCKSYSMENU** Disables access to the system menu and the control menu, and converts them to part of the caption (title bar).  
   
- 請參閱[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)如需可能的視窗樣式值的說明。 典型的迷你框架視窗使用，就是**WS_POPUP |WS_CAPTION |WS_SYSMENU**。  
+ See [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of possible window style values. The typical combination used for mini-frame windows is **WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU**.  
   
  `rect`  
- A`RECT`結構，指定視窗的所需的維度。  
+ A `RECT` structure specifying the desired dimensions of the window.  
   
  `pParentWnd`  
- 指向父視窗。 使用**NULL**為最上層視窗。  
+ Points to the parent window. Use **NULL** for top-level windows.  
   
  `nID`  
- 如果做為子視窗建立迷你框架視窗時，這是識別項的子控制項，否則便是 0。  
+ If the mini-frame window is created as a child window, this is the identifier of the child control; otherwise 0.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- **建立**初始化視窗的類別名稱和視窗名稱，並註冊其樣式和父代的預設值。  
+### <a name="remarks"></a>Remarks  
+ **Create** initializes the window's class name and window name and registers default values for its style and parent.  
   
-##  <a name="createex"></a>CMiniFrameWnd::CreateEx  
- 建立 `CMiniFrameWnd` 物件。  
+##  <a name="createex"></a>  CMiniFrameWnd::CreateEx  
+ Creates a `CMiniFrameWnd` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -177,48 +177,48 @@ virtual BOOL CreateEx(
     UINT nID = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定的擴充的樣式`CMiniFrameWnd`所建立。 套用這其中任何[延伸視窗樣式](../../mfc/reference/extended-window-styles.md)至視窗。  
+ Specifies the extended style of the `CMiniFrameWnd` being created. Apply any of the [extended window styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) to the window.  
   
  `lpClassName`  
- 指向以 null 結束的字元字串，名稱的 Windows 類別 ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)結構)。 類別名稱可以是任何名稱登錄與全域[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)函式或任何預先定義的控制項類別名稱。 它不得為**NULL**。  
+ Points to a null-terminated character string that names the Windows class (a [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure). The class name can be any name registered with the global [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) function or any of the predefined control-class names. It must not be **NULL**.  
   
  `lpWindowName`  
- 指向以 null 結尾字元字串，包含視窗名稱。  
+ Points to a null-terminated character string that contains the window name.  
   
  `dwStyle`  
- 指定視窗的樣式屬性。 請參閱[視窗樣式](../../mfc/reference/window-styles.md)和[cwnd:: Create](../../mfc/reference/cwnd-class.md#create)的可能值的描述。  
+ Specifies the window style attributes. See [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [CWnd::Create](../../mfc/reference/cwnd-class.md#create) for a description of the possible values.  
   
  `rect`  
- 大小和視窗的位置，在用戶端座標`pParentWnd`。  
+ The size and position of the window, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 指向父視窗物件。  
+ Points to the parent window object.  
   
  `nID`  
- 子視窗的識別項。  
+ The identifier of the child window.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則傳回 TRUE 失敗，則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE on success, FALSE on failure.  
   
-### <a name="remarks"></a>備註  
- `CreateEx`參數會指定**WNDCLASS**，視窗樣式 （選擇性） 初始位置和視窗大小。 `CreateEx`也會指定視窗的父代 （如果有的話） 和識別碼。  
+### <a name="remarks"></a>Remarks  
+ The `CreateEx` parameters specify the **WNDCLASS**, window style, and (optionally) initial position and size of the window. `CreateEx` also specifies the window's parent (if any) and ID.  
   
- 當`CreateEx`執行時，Windows 會傳送[WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)， [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate)， [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize)，和[WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate)至視窗的訊息。  
+ When `CreateEx` executes, Windows sends the [WM_GETMINMAXINFO](../../mfc/reference/cwnd-class.md#ongetminmaxinfo), [WM_NCCREATE](../../mfc/reference/cwnd-class.md#onnccreate), [WM_NCCALCSIZE](../../mfc/reference/cwnd-class.md#onnccalcsize), and [WM_CREATE](../../mfc/reference/cwnd-class.md#oncreate) messages to the window.  
   
- 若要擴充的預設訊息處理，衍生自`CMiniFrameWnd`、 新增訊息對應到新的類別，並提供成員函式出現上述訊息。 覆寫`OnCreate`，例如，若要執行所需的初始化新的類別。  
+ To extend the default message handling, derive a class from `CMiniFrameWnd`, add a message map to the new class, and provide member functions for the above messages. Override `OnCreate`, for example, to perform needed initialization for a new class.  
   
- 覆寫進一步**上***訊息*訊息處理常式，以進一步將功能加入至您的衍生類別。  
+ Override further **On***Message* message handlers to add further functionality to your derived class.  
   
- 如果**WS_VISIBLE**樣式，Windows 會將視窗啟動並顯示視窗所需的所有訊息。 如果視窗樣式指定標題列，視窗標題所指`lpszWindowName`參數會顯示在標題列中。  
+ If the **WS_VISIBLE** style is given, Windows sends the window all the messages required to activate and show the window. If the window style specifies a title bar, the window title pointed to by the `lpszWindowName` parameter is displayed in the title bar.  
   
- `dwStyle`參數可以是任何的組合[視窗樣式](../../mfc/reference/window-styles.md)。  
+ The `dwStyle` parameter can be any combination of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
- 不再支援的舊樣式的調色盤 [工具箱] 視窗。 支援舊版的 Windows 上執行 MFC 應用程式時的舊樣式，並沒有"X"按鈕，但已不再支援 Visual c + +.NET 中。 只有新`WS_EX_TOOLWINDOW`樣式現在支援; 如需此樣式的說明，請參閱[延伸視窗樣式](../../mfc/reference/extended-window-styles.md)。  
+ The old style Palette toolbox windows are no longer supported. The old style, which did not have an "X" Close button, was supported when running an MFC application on previous versions of Windows, but is no longer supported in Visual C++.NET. Only the new `WS_EX_TOOLWINDOW` style is now supported; for a description of this style, see [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles).  
   
-## <a name="see-also"></a>另請參閱  
- [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CFrameWnd 類別](../../mfc/reference/cframewnd-class.md)
+## <a name="see-also"></a>See Also  
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)
 

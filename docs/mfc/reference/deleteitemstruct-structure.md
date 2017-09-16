@@ -1,5 +1,5 @@
 ---
-title: "DELETEITEMSTRUCT 結構 |Microsoft 文件"
+title: DELETEITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DELETEITEMSTRUCT structure
+- DELETEITEMSTRUCT structure [MFC]
 ms.assetid: 48d3998c-f4a8-402a-bf90-df3770a78685
 caps.latest.revision: 13
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f5936cbb863cf8ace851609cb1dc8352e21f9456
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 609cce99d61b1b3262fc0f72ac9c20cc38369973
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 結構
-`DELETEITEMSTRUCT` 結構描述已刪除的主控描繪清單方塊或下拉式方塊項目。  
+# <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT Structure
+The `DELETEITEMSTRUCT` structure describes a deleted owner-drawn list-box or combo-box item.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagDELETEITEMSTRUCT { /* ditms */  
@@ -55,30 +55,30 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 } DELETEITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- 指定**ODT_LISTBOX** （主控描繪清單方塊） 或**ODT_COMBOBOX** （主控描繪下拉式方塊）。  
+ Specifies **ODT_LISTBOX** (an owner-drawn list box) or **ODT_COMBOBOX** (an owner-drawn combo box).  
   
  `CtlID`  
- 指定清單方塊或下拉式方塊的識別項。  
+ Specifies the identifier of the list box or combo box.  
   
  `itemID`  
- 指定要移除之清單方塊或下拉式方塊中的項目索引。  
+ Specifies index of the item in the list box or combo box being removed.  
   
  `hwndItem`  
- 識別控制項。  
+ Identifies the control.  
   
  `itemData`  
- 為項目指定應用程式定義的資料。 這個值會傳遞到中的控制項**lParam**參數，將項目加入清單方塊或下拉式方塊的訊息。  
+ Specifies application-defined data for the item. This value is passed to the control in the **lParam** parameter of the message that adds the item to the list box or combo box.  
   
-## <a name="remarks"></a>備註  
- 從清單方塊或下拉式方塊移除項目或者終結清單方塊或下拉式方塊時，Windows 會將 `WM_DELETEITEM` 訊息傳送給每個已刪除項目的擁有者。 **LParam**訊息參數包含此結構的指標。  
+## <a name="remarks"></a>Remarks  
+ When an item is removed from the list box or combo box or when the list box or combo box is destroyed, Windows sends the `WM_DELETEITEM` message to the owner for each deleted item. The **lParam** parameter of the message contains a pointer to this structure.  
   
-## <a name="requirements"></a>需求  
- **標題:** atldbcli.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
- [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
 
 

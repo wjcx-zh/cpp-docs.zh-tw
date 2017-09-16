@@ -1,41 +1,60 @@
 ---
-title: "從 CDocument 衍生文件類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocument 類別, 衍生自"
-  - "類別 [C++], 從 CDocument 衍生"
-  - "衍生類別, 通常被覆寫的函式"
-  - "文件類別, 通常被覆寫的函式"
-  - "文件物件, 衍生"
+title: Deriving a Document Class from CDocument | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDocument class [MFC], deriving from
+- classes [MFC], deriving from CDocument
+- document objects [MFC], derived
+- derived classes [MFC], functions often overridden
+- document classes [MFC], functions often overridden
 ms.assetid: e6a198e0-9799-43c0-83c5-04174d8b532c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 從 CDocument 衍生文件類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 60954a57bd498479022703a27d1de96647b785df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-文件包含和管理應用程式資料。  若要使用 MFC 應用程式精靈所提供的資料類別，您必須執行下列動作:  
+---
+# <a name="deriving-a-document-class-from-cdocument"></a>Deriving a Document Class from CDocument
+Documents contain and manage your application's data. To use the MFC Application Wizard-supplied document class, you must do the following:  
   
--   從文件類型的 **CDocument** 衍生類別。  
+-   Derive a class from **CDocument** for each type of document.  
   
--   加入成員變數儲存每個文件的資料。  
+-   Add member variables to store each document's data.  
   
--   覆寫 **CDocument**`Serialize` 在文件類別的成員函式。  `Serialize` 來回磁碟寫入和讀取文件的資料。  
+-   Override **CDocument**'s `Serialize` member function in your document class. `Serialize` writes and reads the document's data to and from disk.  
   
-## 通常會覆寫的所有文件功能。  
- 您也可以覆寫其他 **CDocument** 成員函式。  特別是，通常會需要覆寫 [OnNewDocument](../Topic/CDocument::OnNewDocument.md) ，並初始化文件資料成員和 [DeleteContents](../Topic/CDocument::DeleteContents.md) 的 [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) 動態地終結配置的資料。  如需可覆寫成員的詳細資訊，請參閱《 *MFC 參考》中的*[CDocument](../mfc/reference/cdocument-class.md) 類別。  
+## <a name="other-document-functions-often-overridden"></a>Other Document Functions Often Overridden  
+ You may also want to override other **CDocument** member functions. In particular, you will often need to override [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) and [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) to initialize the document's data members and [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) to destroy dynamically allocated data. For information about overridable members, see class [CDocument](../mfc/reference/cdocument-class.md) in the *MFC Reference*.  
   
-## 請參閱  
- [使用文件](../mfc/using-documents.md)
+## <a name="see-also"></a>See Also  
+ [Using Documents](../mfc/using-documents.md)
+
+

@@ -1,56 +1,75 @@
 ---
-title: "從標準控制項衍生控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通用控制項 [C++], 衍生自"
-  - "控制項 [MFC], 衍生"
-  - "衍生控制項"
-  - "標準控制項"
-  - "標準控制項, 衍生控制項來源"
-  - "Windows 通用控制項 [C++], 衍生自"
+title: Deriving Controls from a Standard Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- standard controls [MFC], deriving controls from
+- common controls [MFC], deriving from
+- derived controls
+- controls [MFC], derived
+- Windows common controls [MFC], deriving from
+- standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 從標準控制項衍生控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6bab0175dee887cbf16ea45827ddd2b0cf17b347
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-與任何 [CWnd](../mfc/reference/cwnd-class.md) 衍生類別，您可以從現有控制項類別衍生新類別以修改控制項行為。  
+---
+# <a name="deriving-controls-from-a-standard-control"></a>Deriving Controls from a Standard Control
+As with any [CWnd](../mfc/reference/cwnd-class.md)-derived class, you can modify a control's behavior by deriving a new class from an existing control class.  
   
-### 建立衍生的控制項類別  
+### <a name="to-create-a-derived-control-class"></a>To create a derived control class  
   
-1.  從現有的控制項類別衍生您的類別並選擇性地覆寫 **Create** 成員函式，以便提供必要的引數給基底類別 **Create** 函式。  
+1.  Derive your class from an existing control class and optionally override the **Create** member function so that it provides the necessary arguments to the base-class **Create** function.  
   
-2.  提供訊息處理常式成員函式和訊息對應項以修改控制項行為以回應特定 Windows 訊息。  請參閱[將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md)。  
+2.  Provide message-handler member functions and message-map entries to modify the control's behavior in response to specific Windows messages. See [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md).  
   
-3.  提供新的成員函式以擴充控制項的功能 \(選擇項\)。  
+3.  Provide new member functions to extend the functionality of the control (optional).  
   
- 使用對話方塊中的衍生控制項需要額外的工作。  對話方塊中的控制項的型別和位置通常指定於對話方塊樣板資源。  如果您建立衍生的控制項類別，您不可以在對話方塊樣板指定它，因為資源編譯器不知道您的衍生類別。  
+ Using a derived control in a dialog box requires extra work. The types and positions of controls in a dialog box are normally specified in a dialog-template resource. If you create a derived control class, you cannot specify it in a dialog template since the resource compiler knows nothing about your derived class.  
   
-#### 將衍生的控制項置於對話方塊  
+#### <a name="to-place-your-derived-control-in-a-dialog-box"></a>To place your derived control in a dialog box  
   
-1.  將衍生的控制項類別的物件內嵌在您的衍生對話方塊類別的宣告。  
+1.  Embed an object of the derived control class in the declaration of your derived dialog class.  
   
-2.  覆寫您的對話方塊類別的 `OnInitDialog` 成員函式以呼叫衍生控制項的 `SubclassDlgItem` 成員函式。  
+2.  Override the `OnInitDialog` member function in your dialog class to call the `SubclassDlgItem` member function for the derived control.  
   
- `SubclassDlgItem` 「動態子類別」從對話方塊樣板建立的控制項。  當控制項動態子類別化時，您將之掛勾於 Windows，處理應用程式中的某些訊息，然後再傳遞剩餘的訊息到 Windows。  如需詳細資訊，請參閱類別 `CWnd` 的 [SubclassDlgItem](../Topic/CWnd::SubclassDlgItem.md) 成員函式於 *MFC 參考*。  下列範例顯示如何寫入呼叫 `SubclassDlgItem` 的 `OnInitDialog` 覆寫:  
+ `SubclassDlgItem` "dynamically subclasses" a control created from a dialog template. When a control is dynamically subclassed, you hook into Windows, process some messages within your own application, then pass the remaining messages on to Windows. For more information, see the [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) member function of class `CWnd` in the *MFC Reference*. The following example shows how you might write an override of `OnInitDialog` to call `SubclassDlgItem`:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/CPP/deriving-controls-from-a-standard-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   
- 由於衍生的控制項在對話方塊類別中的，它會在建構對話方塊時建構，因此會當終結對話方塊時終結。  在 [手動加入控制項](../mfc/adding-controls-by-hand.md)的範例比較這個程式碼。  
+ Because the derived control is embedded in the dialog class, it will be constructed when the dialog box is constructed, and it will be destroyed when the dialog box is destroyed. Compare this code to the example in [Adding Controls By Hand](../mfc/adding-controls-by-hand.md).  
   
-## 請參閱  
- [建立及使用控制項](../mfc/making-and-using-controls.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

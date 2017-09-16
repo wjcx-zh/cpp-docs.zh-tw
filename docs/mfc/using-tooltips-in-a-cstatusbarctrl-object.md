@@ -1,40 +1,59 @@
 ---
-title: "在 CStatusBarCtrl 物件中使用工具提示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl 類別, 工具提示"
-  - "狀態列, 工具提示"
-  - "工具提示 [C++], 在狀態列中使用"
+title: Using Tooltips in a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], using in status bars
+- status bars [MFC], tool tips
+- CStatusBarCtrl class [MFC], tool tips
 ms.assetid: a77597a7-43ef-4b8f-87bc-a8ea1dc63dc3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 在 CStatusBarCtrl 物件中使用工具提示
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26867f71fc81bf332a86fe24ed1ef9c53924b2e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要啟用狀態列控制項的工具提示，請建立 **SBT\_TOOLTIPS** 樣式的 `CStatusBarCtrl` 物件。  
+---
+# <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>Using Tooltips in a CStatusBarCtrl Object
+To enable tooltips for a status bar control, create the `CStatusBarCtrl` object with the **SBT_TOOLTIPS** style.  
   
 > [!NOTE]
->  如果您使用 `CStatusBar` 物件實作自己的狀態列，請使用 `CStatusBar::CreateEx` 函式。  它可讓您為內嵌 **CStatusBarCtrl** 物件指定不同的樣式。  
+>  If you are using a `CStatusBar` object to implement your status bar, use the `CStatusBar::CreateEx` function. It allows you to specify additional styles for the embedded **CStatusBarCtrl** object.  
   
- 當 `CStatusBarCtrl` 物件已成功建立，請使用 [CStatusBarCtrl::SetTipText](../Topic/CStatusBarCtrl::SetTipText.md) 和 [CStatusBarCtrl::GetTipText](../Topic/CStatusBarCtrl::GetTipText.md) 設定和擷取特定窗格的提示文字。  
+ Once the `CStatusBarCtrl` object has been successfully created, use [CStatusBarCtrl::SetTipText](../mfc/reference/cstatusbarctrl-class.md#settiptext) and [CStatusBarCtrl::GetTipText](../mfc/reference/cstatusbarctrl-class.md#gettiptext) to set and retrieve the tip text for a specific pane.  
   
- 當工具提示設定時，它會只有當組件沒有圖示和文字，或者，如果所有文字不能顯示在這個組件中才顯示。  工具提示在簡單模式不支援。  
+ Once the tool tip has been set, it is displayed only if the part has an icon and no text, or if all of the text cannot be displayed inside the part. Tool tips are not supported in simple mode.  
   
-## 請參閱  
- [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

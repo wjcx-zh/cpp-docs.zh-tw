@@ -1,5 +1,5 @@
 ---
-title: "&lt;deque&gt; 函式 | Microsoft Docs"
+title: '&lt;deque&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,20 +13,20 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 5cccff749b58c7e229068ebedf9e8b3c6984114c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 13e8632452c4fb76503f3ad489b155b0d58e9056
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltdequegt-functions"></a>&lt;deque&gt; 函式
+# <a name="ltdequegt-functions"></a>&lt;deque&gt; functions
 ||  
 |-|  
 |[swap](#swap)|  
   
 ##  <a name="swap"></a>  swap  
- 交換兩個 deque 的項目。  
+ Exchanges the elements of two deques.  
   
 ```
 void swap(
@@ -34,17 +34,17 @@ void swap(
     deque<Type, Allocator>& right,);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- `deque` 類型的物件。  
+ An object of type `deque`.  
   
  `right`  
- `deque` 類型的物件。  
+ An object of type `deque`.  
   
-### <a name="example"></a>範例  
- 請參閱 [deque::swap](../standard-library/deque-class.md#swap) 範例。  
+### <a name="example"></a>Example  
+ See the example for [deque::swap](../standard-library/deque-class.md#swap).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<deque>](../standard-library/deque.md)
 
 

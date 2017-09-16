@@ -1,5 +1,5 @@
 ---
-title: "CTabView 類別 |Microsoft 文件"
+title: CTabView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CTabView class
+- CTabView [MFC], AddView
+- CTabView [MFC], FindTab
+- CTabView [MFC], GetActiveView
+- CTabView [MFC], GetTabControl
+- CTabView [MFC], RemoveView
+- CTabView [MFC], SetActiveView
+- CTabView [MFC], IsScrollBar
+- CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
 caps.latest.revision: 32
 author: mikeblome
@@ -42,17 +49,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 20f5745c3784e771d6ec95f7d4dc363142c687f8
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bc561997877259c61443a99389a161534bd7e12e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabview-class"></a>CTabView 類別
-`CTabView`類別簡化了使用索引標籤控制項類別 ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) 在使用 MFC 的文件/檢視架構的應用程式。  
+# <a name="ctabview-class"></a>CTabView Class
+The `CTabView` class simplifies the use of the tab control class ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) in applications that use MFC's document/view architecture.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CTabbedView : public CView  
@@ -60,41 +67,41 @@ class CTabbedView : public CView
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabView::AddView](#addview)|將新的檢視加入至索引標籤控制項。|  
-|[CTabView::FindTab](#findtab)|傳回指定之檢視的索引 索引標籤控制項中。|  
-|[CTabView::GetActiveView](#getactiveview)|將指標傳回至目前使用的檢視|  
-|[CTabView::GetTabControl](#gettabcontrol)|傳回與檢視相關聯的索引標籤控制項的參考。|  
-|[CTabView::RemoveView](#removeview)|從索引標籤控制項移除檢視。|  
-|[CTabView::SetActiveView](#setactiveview)|讓檢視成為使用中。|  
+|[CTabView::AddView](#addview)|Adds a new view to the tab control.|  
+|[CTabView::FindTab](#findtab)|Returns the index of the specified view in the tab control.|  
+|[CTabView::GetActiveView](#getactiveview)|Returns a pointer to the currently active view|  
+|[CTabView::GetTabControl](#gettabcontrol)|Returns a reference to the tab control associated with the view.|  
+|[CTabView::RemoveView](#removeview)|Removes the view from the tab control.|  
+|[CTabView::SetActiveView](#setactiveview)|Makes a view active.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabView::IsScrollBar](#isscrollbar)|在建立索引標籤檢視來判斷索引標籤檢視是否有共用水平捲軸時，由架構呼叫。|  
-|[CTabView::OnActivateView](#onactivateview)|索引標籤檢視進行作用中或非作用中時，由架構呼叫。|  
+|[CTabView::IsScrollBar](#isscrollbar)|Called by the framework when creating a tab view to determine whether the tab view has a shared horizontal scroll bar.|  
+|[CTabView::OnActivateView](#onactivateview)|Called by the framework when the tab view is made active or inactive.|  
   
-## <a name="remarks"></a>備註  
- 此類別可讓您輕鬆地將索引標籤式的檢視放入文件/檢視應用程式。 `CTabView`是`CView`-衍生的類別，其中包含內嵌`CMFCTabCtrl`物件。 `CTabView`處理支援所需的所有訊息`CMFCTabCtrl`物件。 直接衍生自`CTabView`並插入您的應用程式，然後新增`CView`-藉由衍生類別`AddView`方法。 這些檢視就會顯示索引標籤控制項 索引標籤。  
+## <a name="remarks"></a>Remarks  
+ This class makes it easy to put a tabbed view into a document/view application. `CTabView` is a `CView`-derived class that contains an embedded `CMFCTabCtrl` object. `CTabView` handles all messages required to support the `CMFCTabCtrl` object. Simply derive a class from `CTabView` and plug it into your application, then add `CView`-derived classes by using the `AddView` method. The tab control will display those views as tabs.  
   
- 例如，您可能可以用不同的方式表示的文件︰ 試算表、 圖表、 可編輯的表單等等。 您可以建立繪圖資料所需的個別檢視、 插入到您`CTabView`-衍生物件，並讓它們不含任何額外的程式碼索引標籤。  
+ For example, you might have a document that can be represented in different ways: as a spreadsheet, a chart, an editable form, and so on. You can create individual views drawing the data as needed, insert them into your `CTabView`-derived object and have them tabbed without any additional coding.  
   
- [TabbedView 範例︰ MFC 索引標籤式檢視應用程式](../../visual-cpp-samples.md)說明使用方式的`CTabView`。  
+ [TabbedView Sample: MFC Tabbed View Application](../../visual-cpp-samples.md) illustrates usage of `CTabView`.  
   
-## <a name="example"></a>範例  
- 下列範例將示範如何`CTabView`TabbedView 範例中使用。  
+## <a name="example"></a>Example  
+ The following example shows how `CTabView` is used in the TabbedView sample.  
   
- [!code-cpp[NVC_MFC_TabbedView #&1;](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]  
+ [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxTabView.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTabView.h  
   
-##  <a name="addview"></a>CTabView::AddView  
- 將檢視加入至索引標籤控制項。  
+##  <a name="addview"></a>  CTabView::AddView  
+ Adds a view to the tab control.  
   
 ```  
 int AddView(
@@ -104,129 +111,129 @@ int AddView(
     CCreateContext* pContext=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pViewClass`  
- [插入] 檢視的執行階段類別的指標。  
+ A pointer to a runtime class of the inserted view.  
   
  [in] `strViewLabel`  
- 指定在索引標籤的文字。  
+ Specifies the tab's text.  
   
  [in] `iIndex`  
- 指定要插入的檢視以零為起始的位置。 如果這個位置是新的索引標籤插入尾端的-1。  
+ Specifies the zero-based position at which to insert the view. If the position is -1 the new tab is inserted at the end.  
   
  [in] `pContext`  
- 指標`CCreateContext`的檢視。  
+ A pointer to the `CCreateContext` of the view.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為檢視索引。 反之則為-1。  
+### <a name="return-value"></a>Return Value  
+ A view index if this method succeeds. Otherwise, -1.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可加入內嵌於框架 索引標籤控制項的檢視。  
+### <a name="remarks"></a>Remarks  
+ Call this function to add a view to the tab control that is embedded in a frame.  
   
-##  <a name="findtab"></a>CTabView::FindTab  
- 傳回指定之檢視的索引 索引標籤控制項中。  
+##  <a name="findtab"></a>  CTabView::FindTab  
+ Returns the index of the specified view in the tab control.  
   
 ```  
 int FindTab(HWND hWndView) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `hWndView`  
- 檢視的控制代碼。  
+ The handle of the view.  
   
-### <a name="return-value"></a>傳回值  
- 如果找到，檢視的索引反之則為-1。  
+### <a name="return-value"></a>Return Value  
+ The index of the view if it is found; otherwise, -1.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可擷取具有指定控制代碼的檢視索引。  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the index of a view that has a specified handle.  
   
-##  <a name="getactiveview"></a>CTabView::GetActiveView  
- 傳回目前使用中檢視的指標。  
+##  <a name="getactiveview"></a>  CTabView::GetActiveView  
+ Returns a pointer to the currently active view.  
   
 ```  
 CView* GetActiveView() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 有效的指標使用中的檢視，或`NULL`如果沒有使用中的檢視。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to the active view, or `NULL` if there is no active view.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettabcontrol"></a>CTabView::GetTabControl  
- 傳回與檢視相關聯的索引標籤控制項的參考。  
+##  <a name="gettabcontrol"></a>  CTabView::GetTabControl  
+ Returns a reference to the tab control associated with the view.  
   
 ```  
 DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 與檢視相關聯的索引標籤控制項參考。  
+### <a name="return-value"></a>Return Value  
+ A reference to the tab control associated with the view.  
   
-##  <a name="isscrollbar"></a>CTabView::IsScrollBar  
- 在建立索引標籤檢視來判斷索引標籤檢視是否有共用水平捲軸時，由架構呼叫。  
+##  <a name="isscrollbar"></a>  CTabView::IsScrollBar  
+ Called by the framework when creating a tab view to determine whether the tab view has a shared horizontal scroll bar.  
   
 ```  
 virtual BOOL IsScrollBar() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果應該建立索引標籤檢視，以及共用的捲軸。 否則為 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab view should be created together with a shared scroll bar. Otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法時`CTabView`建立物件。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a `CTabView` object is being created.  
   
- 覆寫`IsScrollBar`方法中的`CTabView`-衍生類別，並傳回`TRUE`如果您想要建立具有共用水平捲軸檢視。  
+ Override the `IsScrollBar` method in a `CTabView`-derived class and return `TRUE` if you want to create a view that has a shared horizontal scroll bar.  
   
-##  <a name="onactivateview"></a>CTabView::OnActivateView  
- 索引標籤檢視進行作用中或非作用中時，由架構呼叫。  
+##  <a name="onactivateview"></a>  CTabView::OnActivateView  
+ Called by the framework when the tab view is made active or inactive.  
   
 ```  
 virtual void OnActivateView(CView* view);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `view`  
- 檢視指標。  
+ A pointer to the view.  
   
-### <a name="remarks"></a>備註  
- 預設實作不做任何動作。 覆寫這個方法在`CTabView`-衍生的類別來處理此通知。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing. Override this method in a `CTabView`-derived class to process this notification.  
   
-##  <a name="removeview"></a>CTabView::RemoveView  
- 從索引標籤控制項移除檢視。  
+##  <a name="removeview"></a>  CTabView::RemoveView  
+ Removes the view from the tab control.  
   
 ```  
 BOOL RemoveView(int iTabNum);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iTabNum`  
- 要移除之檢視的索引。  
+ The index of the view to remove.  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功移除檢視的索引。 否則為-1。  
+### <a name="return-value"></a>Return Value  
+ The index of the removed view if this method succeeds. Otherwise -1.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactiveview"></a>CTabView::SetActiveView  
- 讓檢視成為使用中。  
+##  <a name="setactiveview"></a>  CTabView::SetActiveView  
+ Makes a view active.  
   
 ```  
 BOOL SetActiveView(int iTabNum);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iTabNum`  
- 索引標籤檢視以零為起始的索引。  
+ The zero-based index of the tab view.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的檢視已啟用，`FALSE`如果檢視的索引無效。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified view was made active, `FALSE` if the view's index is invalid.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)。  
+### <a name="remarks"></a>Remarks  
+ For more information see [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)   
- [CView 類別](../../mfc/reference/cview-class.md)
+ [CView Class](../../mfc/reference/cview-class.md)
 

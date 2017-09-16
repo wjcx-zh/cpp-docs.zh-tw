@@ -33,41 +33,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ae857750efe2d1f80e703e0c44f9646f7bfd3733
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 39d42e2a74e2ef5000367dfbc5cd789011837434
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
-定義容器樣板類別 [unordered_multiset](../standard-library/unordered-multiset-class.md) 和 [unordered_set](../standard-library/unordered-set-class.md) 以及其支援的範本。  
+Defines the container template classes [unordered_multiset](../standard-library/unordered-multiset-class.md) and [unordered_set](../standard-library/unordered-set-class.md) and their supporting templates.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <unordered_set>  
 ```  
   
-### <a name="classes"></a>類別  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[unordered_multiset 類別](../standard-library/unordered-multiset-class.md)|儲存機碼的雜湊表。|  
-|[unordered_set 類別](../standard-library/unordered-set-class.md)|儲存機碼的雜湊表。|  
+|[unordered_multiset Class](../standard-library/unordered-multiset-class.md)|Stores hash table of keys.|  
+|[unordered_set Class](../standard-library/unordered-set-class.md)|Stores hash table of keys.|  
   
-### <a name="functions"></a>函式  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|測試運算子左邊的 unordered_multiset 物件是否不等於右邊的 unordered_multiset 物件。|  
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|測試運算子左邊的 unordered_multiset 物件是否等於右邊的 unordered_multiset 物件。|  
-|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|交換兩個多重集。|  
-|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|測試運算子左邊的 unordered_set 物件是否不等於右邊的 unordered_set 物件。|  
-|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|測試運算子左邊的 unordered_set 物件是否等於右邊的 unordered_set 物件。|  
-|[swap](../standard-library/unordered-set-functions.md#swap)|交換兩個集合。|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Tests if the unordered_multiset object on the left side of the operator is not equal to the unordered_multiset object on the right side.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Tests if the unordered_multiset object on the left side of the operator is equal to the unordered_multiset object on the right side.|  
+|[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Swaps two multisets.|  
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Tests if the unordered_set object on the left side of the operator is not equal to the unordered_set object on the right side.|  
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Tests if the unordered_set object on the left side of the operator is equal to the unordered_set object on the right side.|  
+|[swap](../standard-library/unordered-set-functions.md#swap)|Swaps two sets.|  
   
-## <a name="see-also"></a>另請參閱  
- [unordered_map 類別](../standard-library/unordered-map-class.md)   
- [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)
+## <a name="see-also"></a>See Also  
+ [unordered_map Class](../standard-library/unordered-map-class.md)   
+ [unordered_multimap Class](../standard-library/unordered-multimap-class.md)
 

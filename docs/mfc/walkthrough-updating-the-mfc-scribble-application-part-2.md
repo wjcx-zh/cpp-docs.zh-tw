@@ -1,340 +1,350 @@
 ---
-title: "逐步解說：更新 MFC Scribble 應用程式 (第 2 部分) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "逐步解說 [C++]"
+title: 'Walkthrough: Updating the MFC Scribble Application (Part 2) | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
 caps.latest.revision: 36
-caps.handback.revision: 32
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 逐步解說：更新 MFC Scribble 應用程式 (第 2 部分)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 68a0cd9d36d869db9945b3921c7837b3d1410535
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在本逐步解說的 [Part 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) 中，說明如何加入 Office Fluent 功能區至傳統 Scribble 應用程式中。  本節說明如何加入功能區面板及控制使用者可以使用而不是功能表和命令。  
+---
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>Walkthrough: Updating the MFC Scribble Application (Part 2)
+[Part 1](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md) of this walkthrough showed how to add an Office Fluent Ribbon to the classic Scribble application. This part shows how to add ribbon panels and controls that users can use instead of menus and commands.  
   
-## 必要條件  
- [Visual C\+\+ 範例](../top/visual-cpp-samples.md)  
+## <a name="prerequisites"></a>Prerequisites  
+ [Visual C++ Samples](../visual-cpp-samples.md)  
   
-##  <a name="top"></a> 章節  
- 這部分的逐步解說中有下列部分:  
+##  <a name="top"></a> Sections  
+ This part of the walkthrough has the following sections:  
   
--   [將新的面板加入至功能區](#addNewPanel)  
+- [Adding New Panels to the Ribbon](#addnewpanel)  
   
--   [將說明面板加入至功能區](#addHelpPanel)  
+- [Adding a Help Panel to the Ribbon](#addhelppanel)  
   
--   [將畫筆面板加入至功能區](#addPenPanel)  
+- [Adding a Pen Panel to the Ribbon](#addpenpanel)  
   
--   [將顏色按鈕加入至功能區。](#addColorButton)  
+- [Adding a Color Button to the Ribbon](#addcolorbutton)  
   
--   [將色彩成員加入至文件類別](#addColorMember)  
+- [Adding a Color Member to the Document Class](#addcolormember)  
   
--   [初始化筆和儲存喜好設定](#initPenSave)  
+- [Initializing Pens and Saving Preferences](#initpensave)  
   
-##  <a name="addNewPanel"></a> 將新的面板加入至功能區  
- 這些步驟顯示如何加入包含兩個控制工具列及狀態列的核取方塊的 \[**檢視**\] 面板，和包含控制多重文件介面\(MDI\)視窗的建立和排列的垂直方向分割按鈕的 **視窗** 面板。  
+##  <a name="addnewpanel"></a> Adding New Panels to the Ribbon  
+ These steps show how to add a **View** panel that contains two check boxes that control the visibility of the toolbar and the status bar, and also a **Window** panel that contains a vertically oriented split button that controls the creation and arrangement of multiple-document interface (MDI) windows.  
   
-#### 將檢視面板和視窗面板加入至功能區列  
+#### <a name="to-add-a-view-panel-and-window-panel-to-the-ribbon-bar"></a>To add a View panel and Window panel to the ribbon bar  
   
-1.  建立名為 `檢視`的面板，有兩個核取方塊切換狀態列和工具列。  
+1.  Create a panel named `View`, which has two check boxes that toggle the status bar and toolbar.  
   
-    1.  從 \[**工具箱**\] 中，將 \[**面板** \] 拖曳至 \[**首頁**\] 分類。  然後拖曳兩個 \[**核取方塊。**\] 至面板。  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Check Boxes** to the panel.  
   
-    2.  按一下面板來變更其屬性。  將 \[**標題**\] 變更為 \[`檢視`\]。  
+    2.  Click the panel to modify its properties. Change **Caption** to `View`.  
   
-    3.  按一下第一個核取方塊來修改其屬性。  將 \[**ID**\] 變更為 `ID_VIEW_TOOLBAR` 、將 \[**標題**\] 變更為 `工具列`。  
+    3.  Click the first check box to modify its properties. Change **ID** to `ID_VIEW_TOOLBAR` and **Caption** to `Toolbar`.  
   
-    4.  Click the second check box to modify its properties.  將 \[**ID**\] 變更為 `ID_VIEW_STATUS_BAR` 、將 \[**標題**\] 變更為 `狀態列`。  
+    4.  Click the second check box to modify its properties. Change **ID** to `ID_VIEW_STATUS_BAR` and **Caption** to `Status Bar`.  
   
-2.  建立具有分割按鈕命名為 `視窗` 的面板。  當使用者按一下分割按鈕，捷徑功能表會顯示在 Scribble 應用程式已定義的三個命令。  
+2.  Create a panel named `Window` that has a split button. When a user clicks the split button, a shortcut menu displays three commands that are already defined in the Scribble application.  
   
-    1.  從 \[**工具箱**\] 中，將 \[**面板** \] 拖曳至 \[**首頁**\] 分類。  然後將 \[**按鈕**\] 拖曳至面板。  
+    1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Button** to the panel.  
   
-    2.  按一下面板來變更其屬性。  將 \[**標題**\] 變更為 `視窗`。  
+    2.  Click the panel to modify its properties. Change **Caption** to `Window`.  
   
-    3.  按一下這個按鈕。  將 \[**標題**\] 變更為 `視窗`， \[**索引鍵**\] 為 `w`， \[**大型影像索引**\] 設定為 `1`、將 \[**拆分模式**\] 變更為 `false`。  然後按一下 \[**功能表項目**\] 旁邊的省略符號 \(\[**...**\]\) 開啟 \[**項目編輯器**\] 對話方塊。  
+    3.  Click the button. Change **Caption** to `Windows`, **Keys** to `w`, **Large Image Index** to `1`, and **Split Mode** to `False`. Then click the ellipsis (**...**) next to **Menu Items** to open the **Items Editor** dialog box.  
   
-    4.  按三次 \[**加入**\] 以加入三個按鈕。  
+    4.  Click **Add** three times to add three buttons.  
   
-    5.  按一下第一個按鈕並將 \[**標題**\] 設定為 `新視窗`、將 \[**ID**\] 變更為 `ID_WINDOW_NEW`。  
+    5.  Click the first button and then change **Caption** to `New Window`, and **ID** to `ID_WINDOW_NEW`.  
   
-    6.  按一下第二個按鈕並將 \[**標題**\] 設定為 `重疊顯示，`、將 \[**ID**\] 變更為 `ID_WINDOW_CASCADE`。  
+    6.  Click the second button and then change **Caption** to `Cascade`, and **ID** to `ID_WINDOW_CASCADE`.  
   
-    7.  按一下第三個按鈕並將 \[**標題**\] 設定為 `並排顯示`、將 \[**ID**\] 變更為 `ID_WINDOW_TILE_HORZ`。  
+    7.  Click the third button and then change **Caption** to `Tile`, and **ID** to `ID_WINDOW_TILE_HORZ`.  
   
-3.  儲存變更，接著建置並執行應用程式。  應該顯示 \[**檢視**\] 和 \[**視窗**\] 面板。  按一下按鈕以確認是否正確運作。  
+3.  Save the changes, and then build and run the application. The **View** and **Window** panels should be displayed. Click the buttons to confirm that they function correctly.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="addHelpPanel"></a> 將說明面板加入至功能區  
- 現在，您可以指派兩個定義在 Scribble 應用程式中的功能表項目給名為 **Help Topics**  和  **About Scribble** 的功能區按鈕。  按鈕會加入命名為 \[**說明**\] 的新面板。  
+##  <a name="addhelppanel"></a> Adding a Help Panel to the Ribbon  
+ Now, you can assign two menu items that are defined in the Scribble application to ribbon buttons that are named **Help Topics** and **About Scribble**. The buttons are added to a new panel named **Help**.  
   
-#### 若要加入說明面板  
+#### <a name="to-add-a-help-panel"></a>To add a Help panel  
   
-1.  從 \[**工具箱**\] 中，將 \[**面板** \] 拖曳至 \[**首頁**\] 分類。  然後拖曳兩個 \[**按鈕**\] 至面板中 。  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag two **Buttons** to the panel.  
   
-2.  按一下面板來變更其屬性。  將 \[**標題**\] 變更為 `說明`。  
+2.  Click the panel to modify its properties. Change **Caption** to `Help`.  
   
-3.  按一下第一個按鈕。  將 \[**標題**\] 變更為 `說明主題`、將 \[**ID**\] 變更為 `ID_HELP_FINDER`。  
+3.  Click the first button. Change **Caption** to `Help Topics`, and **ID** to `ID_HELP_FINDER`.  
   
-4.  按一下第二個按鈕。  將 \[**標題**\] 變更為 `關於 Scribble…`、將 \[**ID**\] 變更為 `ID_APP_ABOUT`。  
+4.  Click the second button. Change **Caption** to `About Scribble...`, and **ID** to `ID_APP_ABOUT`.  
   
-5.  儲存變更，接著建置並執行應用程式。  包含兩個功能區按鈕的 \[**說明**\] 面板應顯示。  
+5.  Save the changes, and then build and run the application. A **Help** panel that contains two ribbon buttons should be displayed.  
   
     > [!IMPORTANT]
-    >  當您按一下 \[**說明主題**\] 按鈕時， Scribble 應用程式開啟壓縮 HTML \(.chm\) 說明檔命名為 *your\_project\_name*.chm。  因此，如果您的專案未命名為 Scribble，您必須提供說明檔重新命名為您的專案名稱。  
+    >  When you click the **Help Topics** button, the Scribble application opens a compressed HTML (.chm) help file named *your_project_name*.chm. Consequently, if your project is not named Scribble, you must rename the help file to your project name.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="addPenPanel"></a> 將畫筆面板加入至功能區  
- 現在，請加入面板來顯示控制畫筆粗細和顏色的按鈕。  這個面板包含切換粗和細畫筆的核取方塊。  其功能類似於 Scribble 應用程式的 \[**粗線**\] 功能表項目。  
+##  <a name="addpenpanel"></a> Adding a Pen Panel to the Ribbon  
+ Now, add a panel to display buttons that control the thickness and the color of the pen. This panel contains a check box that toggles between thick and thin pens. Its functionality resembles that of the **Thick Line** menu item in the Scribble application.  
   
- 原始的 Scribble 應用程式讓使用者點功能表上的 **畫筆寬度** 時，出現的對話方塊來選擇畫筆寬度。  由於功能區列有寬敞的空間給新控制項，使用在功能區上的兩個下拉式方塊可以取代對話方塊。  下拉式方塊調整這個細畫筆的寬度，而另一個下拉式方塊調整這個粗畫筆的寬度。  
+ The original Scribble application lets the user select pen widths from a dialog box that appears when the user clicks **Pen Widths** on the menu. Because the ribbon bar has ample room for new controls, you can replace the dialog box by using two combo boxes on the ribbon. One combo box adjusts the width of the thin pen and the other combo box adjusts the width of the thick pen.  
   
-#### 若要將畫筆面板和下拉式方塊加入至功能區  
+#### <a name="to-add-a-pen-panel-and-combo-boxes-to-the-ribbon"></a>To add a Pen panel and combo boxes to the ribbon  
   
-1.  從 \[**工具箱**\] 中，將 \[**面板** \] 拖曳至 \[**首頁**\] 分類。  然後將 \[**核取方塊。**\] 和 \[**下拉式方塊**\] 拖曳至面板。  
+1.  From the **Toolbox**, drag a **Panel** to the **Home** category. Then drag a **Check Box** and two **Combo Boxes** to the panel.  
   
-2.  按一下面板來變更其屬性。  將 \[**標題**\] 變更為 `畫筆`。  
+2.  Click the panel to modify its properties. Change **Caption** to `Pen`.  
   
-3.  按一下核取方塊。  將 \[**標題**\] 變更為 `使用粗`、將 \[**ID**\] 變更為 `ID_PEN_THICK_OR_THIN`。  
+3.  Click the check box. Change **Caption** to `Use Thick`, and **ID** to `ID_PEN_THICK_OR_THIN`.  
   
-4.  按一下第一個下拉式方塊。  將 \[**標題**\] 變更為 `細畫筆`， \[**ID**\] 為 `ID_PEN_THIN_WIDTH`， \[**文字**\] 為 `2`， \[**型別**\] 設定為 `下拉式清單`、將 \[**資料**\] 變更為 `1; 2; 3; 4; 5; 6; 7; 8; 9;`。  
+4.  Click the first combo box. Change **Caption** to `Thin Pen`, **ID** to `ID_PEN_THIN_WIDTH`, **Text** to `2`, **Type** to `Drop List`, and **Data** to `1;2;3;4;5;6;7;8;9;`.  
   
-5.  按一下第二個下拉式方塊。  將 \[**標題**\] 變更為 `粗畫筆`， \[**ID**\] 為 `ID_PEN_THIN_WIDTH`， \[**文字**\] 為 `5`， \[**型別**\] 設定為 `下拉式清單`、將 \[**資料**\] 變更為 `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`。  
+5.  Click the second combo box. Change **Caption** to `Thick Pen`, **ID** to `ID_PEN_THICK_WIDTH`, **Text** to `5`, **Type** to `Drop List`, and **Data** to `5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;`.  
   
-6.  新的下拉式方塊未對應到任何現有的功能表項目。  因此，您必須針對每個選項建立一個功能表項目。  
+6.  The new combo boxes do not correspond to any existing menu items. Therefore, you must create a menu item for every pen option.  
   
-    1.  在 \[**資源檢視**\] 視窗中，開啟 IDR\_SCRIBBTYPE 功能表資源。  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  按一下 \[**畫筆**\] 開啟 \[**畫筆**\] 功能表。  然後按一下 \[**在此輸入**\] 並輸入 `細&畫筆`。  
+    2.  Click **Pen** to open the p**en** menu. Then click **Type Here** and type `Thi&n Pen`.  
   
-    3.  以滑鼠右鍵按一下您輸入開啟 \[**屬性**\] 視窗的文字，然後將 ID 屬性設定為 `ID_PEN_THIN_WIDTH`。  
+    3.  Right-click the text that you just typed to open the **Properties** window, and then change the ID property to `ID_PEN_THIN_WIDTH`.  
   
-    4.  您也必須建立每筆功能表項目的事件處理常式。  以滑鼠右鍵按一下您建立的 \[**細&畫筆**\] 功能表項目然後按一下 \[**加入事件處理常式**\]。  \[**事件處理常式精靈。**\] 隨即顯示。  
+    4.  You must also create an event handler for every pen menu item. Right-click the **Thi&n Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  在精靈的 \[**類別清單**\] 方塊中選取 \[**CScribbleDoc**\] ，然後按一下 \[**加入和編輯**\]。  這會建立名為 `CScribbleDoc::OnPenThinWidth`的事件處理常式。  
+    5.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThinWidth`.  
   
-    6.  將下列程式碼加入至 `CScribbleDoc::OnPenThinWidth`。  
+    6.  Add the following code to `CScribbleDoc::OnPenThinWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        // Get a pointer to the Thin Width combo box  
-        CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-        //Get the selected value  
-        int nCurSel = pThinComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();    
-        ```  
+ ``` *// Get a pointer to the ribbon bar CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon); *// Get a pointer to the Thin Width combo box CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *//Get the selected value  
+    int nCurSel = pThinComboBox->GetCurSel(); if (nCurSel>= 0)  
+{  
+m_nThinWidth = atoi(pThinComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-7.  接下來，為這個粗的畫筆建立一個功能表項目和事件處理常式。  
+7.  Next, create a menu item and event handlers for the thick pen.  
   
-    1.  在 \[**資源檢視**\] 視窗中，開啟 IDR\_SCRIBBTYPE 功能表資源。  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  按一下 \[**畫筆**\] 開啟 \[畫筆\] 功能表。  然後按一下 \[**在此輸入**\] 並輸入 `粗&畫筆`。  
+    2.  Click **Pen** to open the pen menu. Then click **Type Here** and type `Thic&k Pen`.  
   
-    3.  以滑鼠右鍵按一下您輸入的字顯示 \[**屬性**\] 視窗中的文字。  變更 ID 屬性為 `ID_PEN_THICK_WIDTH`。  
+    3.  Right-click the text that you just typed to display the **Properties** window. Change the ID property to `ID_PEN_THICK_WIDTH`.  
   
-    4.  以滑鼠右鍵按一下您建立的 \[**粗**畫筆**\] 功能表項目然後按一下 \[**加入事件處理常式\]。  \[**事件處理常式精靈。**\] 隨即顯示。  
+    4.  Right-click the **Thick Pen** menu item that you just created and then click **Add Event Handler**. The **Event Handler Wizard** is displayed.  
   
-    5.  在精靈的 \[**類別清單**\] 方塊中選取 \[**CScribbleDoc**\] ，然後按一下 \[**加入和編輯**\]。  這會建立名為 `CScribbleDoc::OnPenThickWidth`的事件處理常式。  
+    5.  In the **Class list** box of the wizard, select **CScribbleDoc** and then click **Add and Edit**. This creates an event handler named `CScribbleDoc::OnPenThickWidth`.  
   
-    6.  將下列程式碼加入至 `CScribbleDoc::OnPenThickWidth`。  
+    6.  Add the following code to `CScribbleDoc::OnPenThickWidth`.  
   
-        ```  
-        // Get a pointer to the ribbon bar  
-        CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();  
-        ASSERT_VALID(pRibbon);  
-        CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-           CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-        // Get the selected value  
-        int nCurSel = pThickComboBox->GetCurSel();  
-        if (nCurSel >= 0)  
-        {  
-           m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));  
-        }  
-        // Create a new pen using the selected width  
-        ReplacePen();  
-        ```  
+ ``` *// Get a pointer to the ribbon bar  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx *) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(
+    CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH));
+*// Get the selected value  
+    int nCurSel = pThickComboBox->GetCurSel();
+if (nCurSel>= 0)  
+ {  
+    m_nThickWidth = atoi(pThickComboBox->GetItem(nCurSel));
+
+ } *// Create a new pen using the selected width  
+    ReplacePen();
+
+ ```  
   
-8.  儲存變更，接著建置並執行應用程式。  應顯示新增按鈕和下拉式方塊。  使用 scribble 寫入不同的畫筆寬度的嘗試。  
+8.  Save the changes, and then build and run the application. New buttons and combo boxes should be displayed. Try using different pen widths to scribble.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="addColorButton"></a> 將色彩按鈕加入至筆面板  
- 接著，加入讓使用者以顏色書寫的 [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) 物件。  
+##  <a name="addcolorbutton"></a> Adding a Color Button to the Pen Panel  
+ Next, add a [CMFCRibbonColorButton](../mfc/reference/cmfcribboncolorbutton-class.md) object that lets the user scribble in color.  
   
-#### 將色彩按鈕加入至畫筆面板  
+#### <a name="to-add-a-color-button-to-the-pen-panel"></a>To add a color button to the Pen panel  
   
-1.  加入色彩按鈕之前，請先建立它的功能表項目。  在 \[**資源檢視**\] 視窗中，開啟 IDR\_SCRIBBTYPE 功能表資源。  按一下 \[**畫筆**\] 功能表項目以開啟畫筆功能表。  然後按一下 \[**在此處輸入**\] 並輸入 `&Color`。  以滑鼠右鍵按一下您輸入的字顯示 \[**屬性**\] 視窗中的文字。  變更 ID 為 `ID_PEN_COLOR`。  
+1.  Before you add the color button, create a menu item for it. In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource. Click the **Pen** menu item to open the pen menu. Then click **Type Here** and type `&Color`. Right-click the text that you just typed to display the **Properties** window. Change the ID to `ID_PEN_COLOR`.  
   
-2.  現在加入色彩按鈕。  從 \[**工具箱**\] 中，將 \[**色彩按鈕**\] 拖曳至 \[**畫筆**\] 面板。  
+2.  Now add the color button. From the **Toolbox**, drag a **Color Button** to the **Pen** panel.  
   
-3.  按一下 \[色彩\] 按鈕。  將 \[**標題**\] 變更為 `色彩`、**ID** 為 `ID_PEN_COLOR`、\[**簡單**\] \[**觀看**\] 為 `true` 、\[**大型影像索引。**\] 設為 `1`，及 **拆分模式** 設為 `False`。  
+3.  Click the color button. Change **Caption** to `Color`, **ID** to `ID_PEN_COLOR`, **SimpleLook** to `True`, **Large Image Index** to `1`, and **Split Mode** to `False`.  
   
-4.  儲存變更，接著建置並執行應用程式。  在 \[**畫筆**\] 面板會顯示新的色彩按鈕。  不過，它因為沒有一個事件處理常式中尚無法使用。  下列步驟顯示如何將色彩按鈕加入事件處理常式。  
+4.  Save the changes, and then build and run the application. The new color button should be displayed on the **Pen** panel. However, it cannot be used because it does not yet have an event handler. The next steps show how to add an event handler for the color button.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="addColorMember"></a> 將色彩成員加入至文件類別  
- 因為原始的 Scribble 應用程式沒有色彩筆，您必須為它們撰寫實作。  要儲存文件的畫筆顏色，將新的成員加入至文件， `CscribbleDoc.`類別  
+##  <a name="addcolormember"></a> Adding a Color Member to the Document Class  
+ Because the original Scribble application does not have color pens, you must write an implementation for them. To store the pen color of the document, add a new member to the document class, `CscribbleDoc.`  
   
-#### 若要將色彩成員加入至文件類別  
+#### <a name="to-add-a-color-member-to-the-document-class"></a>To add a color member to the document class  
   
-1.  在 scribdoc.h， `CScribbleDoc` 類別，尋找 `// Attributes` 區段。  在 `m_nThickWidth` 資料成員的定義之後加入下列程式碼。  
+1.  In scribdoc.h, in the `CScribbleDoc` class, find the `// Attributes` section. Add the following lines of code after the definition of the `m_nThickWidth` data member.  
   
-    ```  
-    // Current pen color  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Current pen color  
+    COLORREF m_penColor;  
+ ```  
   
-2.  每個文件包含一份使用者已繪製的筆劃清單。  每個筆劃都是由 `CStroke` 物件所定義的。  `CStroke` 類別不包含畫筆的色彩資訊。  因此，您必須修改類別。  在 scribdoc.h， `CStroke` 類別，在 `m_nPenWidth` 資料成員的定義之後的加入下列程式碼。  
+2.  Every document contains a list of stokes that the user has already drawn. Every stroke is defined by a `CStroke` object. The `CStroke` class does not include information about pen color. Therefore, you must modify the class. In scribdoc.h, in the `CStroke` class, add the following lines of code after the definition of the `m_nPenWidth` data member.  
   
-    ```  
-    // Pen color for the stroke  
-    COLORREF   m_penColor;  
-    ```  
+ ``` *// Pen color for the stroke  
+    COLORREF m_penColor;  
+ ```  
   
-3.  在 scribdoc.h，請加入參數指定寬度和色彩的新 `CStroke` 建構函式。  將下列程式碼加入 `CStroke(UINT nPenWidth);` 陳述式之後。  
+3.  In scribdoc.h, add a new `CStroke` constructor whose parameters specify a width and color. Add the following line of code after the `CStroke(UINT nPenWidth);` statement.  
   
-    ```  
-    CStroke(UINT nPenWidth, COLORREF penColor);  
-    ```  
+ ```  
+    CStroke(UINT nPenWidth, COLORREF penColor);
+
+ ```  
   
-4.  在 scribdoc.cpp，請加入新的 `CStroke` 建構函式的實作。  在 `CStroke::CStroke(UINT nPenWidth)` 的建構函式實作之後，加入下列程式碼。  
+4.  In scribdoc.cpp, add the implementation of the new `CStroke` constructor. Add the following code after the implementation of the `CStroke::CStroke(UINT nPenWidth)` constructor.  
   
-    ```  
-    // Constructor that uses the document's current width and color  
+ ``` *// Constructor that uses the document's current width and color  
     CStroke::CStroke(UINT nPenWidth, COLORREF penColor)  
-    {  
-       m_nPenWidth = nPenWidth;  
-       m_penColor = penColor;  
-       m_rectBounding.SetRectEmpty();  
-    }  
-    ```  
+ {  
+    m_nPenWidth = nPenWidth;  
+    m_penColor = penColor;  
+    m_rectBounding.SetRectEmpty();
+
+ }  
+ ```  
   
-5.  如下變更 `CStroke::DrawStroke` 方法的第二行。  
+5.  Change the second line of the `CStroke::DrawStroke` method as follows.  
   
-    ```  
+ ```  
     if (!penStroke.CreatePen(PS_SOLID, m_nPenWidth, m_penColor))  
-    ```  
+ ```  
   
-6.  設定文件類別的預設畫筆顏色。  在 scribdoc.cpp，請將下列行加入至 `CScribbleDoc::InitDocument`，在 `m_nThickWidth = 5;` 陳述式之後。  
+6.  Set the default pen color for the document class. In scribdoc.cpp, add the following lines to `CScribbleDoc::InitDocument`, after the `m_nThickWidth = 5;` statement.  
   
-    ```  
-    // default pen color is black  
-    m_penColor = RGB(0,0,0);   
-    ```  
+ ``` *// default pen color is black  
+    m_penColor = RGB(0,
+    0,
+    0);
+
+ ```  
   
-7.  在 scribdoc.cpp，變更 `CScribbleDoc::NewStroke` 方法的第一行到下。  
+7.  In scribdoc.cpp, change the first line of the `CScribbleDoc::NewStroke` method to the following.  
   
-    ```  
-    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    CStroke* pStrokeItem = new CStroke(m_nPenWidth, m_penColor);
+
+ ```  
   
-8.  變更 `CScribbleDoc::ReplacePen` 方法的最後一行到下。  
+8.  Change the last line of the `CScribbleDoc::ReplacePen` method to the following.  
   
-    ```  
-    m_penCur.CreatePen(PS_SOLID, m_nPenWidth, m_penColor);  
-    ```  
+ ```  
+    m_penCur.CreatePen(PS_SOLID,
+    m_nPenWidth,
+    m_penColor);
+
+ ```  
   
-9. 您加入上述步驟的 `m_penColor` 成員。  現在，請建立設定成員的色彩按鈕的事件處理常式。  
+9. You added the `m_penColor` member in a previous step. Now, create an event handler for the color button that sets the member.  
   
-    1.  在 \[**資源檢視**\] 視窗中，開啟 IDR\_SCRIBBTYPE 功能表資源。  
+    1.  In the **Resource View** window, open the IDR_SCRIBBTYPE menu resource.  
   
-    2.  以滑鼠右鍵按一下 \[**色彩**\] 功能表項目並按一下 \[**加入事件處理常式…**\]。  \[**事件處理常式精靈。**\] 隨即出現。  
+    2.  Right-click the **Color** menu item and click **Add Event Handler**. The **Event Handler Wizard** appears.  
   
-    3.  在精靈的 \[**類別清單**\] 方塊中選取 \[**CScribbleDoc**\] ，然後按一下 \[**加入和編輯**\] 按鈕。  這個動作會建立 `CScribbleDoc::OnPenColor` 事件處理常式。  
+    3.  In the **Class list** box in the wizard, select **CScribbleDoc** and then click the **Add and Edit** button. This creates the `CScribbleDoc::OnPenColor` event handler stub.  
   
-10. 以下列程式碼取代 `CScribbleDoc::OnPenColor` 事件處理常式。  
+10. Replace the stub for the `CScribbleDoc::OnPenColor` event handler with the following code.  
   
-    ```  
+ ```  
     void CScribbleDoc::OnPenColor()  
-    {  
-    // Change pen color to reflect color button's current selection  
-    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));  
-    m_penColor = pColorBtn->GetColor();  
-    // Create new pen using the selected color  
-    ReplacePen();  
-    }  
-    ```  
+ { *// Change pen color to reflect color button's current selection  
+    CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();
+ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(
+    CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR));
+
+    m_penColor = pColorBtn->GetColor();
+*// Create new pen using the selected color  
+    ReplacePen();
+
+ }  
+ ```  
   
-11. 儲存變更，接著建置並執行應用程式。  您應該可以按色彩按鈕和變更畫筆的色彩。  
+11. Save the changes and then build and run the application. You should be able to press the color button and change the pen's color.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-##  <a name="initPenSave"></a> 初始化筆和儲存喜好設定  
- 接著，初始畫筆的色彩和寬度。  最後，儲存並從檔案載入一個色彩繪製。  
+##  <a name="initpensave"></a> Initializing Pens and Saving Preferences  
+ Next, initialize the color and width of the pens. Finally, save and load a color drawing from a file.  
   
-#### 若要初始功能區列上的控制項  
+#### <a name="to-initialize-controls-on-the-ribbon-bar"></a>To initialize controls on the ribbon bar  
   
-1.  初始功能區列的畫筆。  
+1.  Initialize the pens on the ribbon bar.  
   
-     將下列程式碼加入至 scribdoc.cpp，在 `CScribbleDoc::InitDocument` 方法， `m_sizeDoc = CSize(200,200)` 陳述式之後。  
+     Add the following code to scribdoc.cpp, in the `CScribbleDoc::InitDocument` method, after the `m_sizeDoc = CSize(200,200)` statement.  
   
-    ```  
-    // Reset the ribbon UI to its initial values  
-    CMFCRibbonBar* pRibbon =   
-       ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar();  
-    ASSERT_VALID(pRibbon);  
-    CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST(  
-       CMFCRibbonColorButton,   
-       pRibbon->FindByID(ID_PEN_COLOR));  
-    // Set ColorButton to black  
-    pColorBtn->SetColor(RGB(0,0,0));    
-    CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THIN_WIDTH));  
-    // Set Thin pen combobox to 2  
-    pThinComboBox->SelectItem(1);   
-    CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST(  
-       CMFCRibbonComboBox,   
-       pRibbon->FindByID(ID_PEN_THICK_WIDTH));  
-    // Set Thick pen combobox to 5  
-    pThickComboBox->SelectItem(0);  
-    ```  
+ ``` *// Reset the ribbon UI to its initial values CMFCRibbonBar* pRibbon = ((CMDIFrameWndEx*) AfxGetMainWnd())->GetRibbonBar(); ASSERT_VALID(pRibbon);
+
+ CMFCRibbonColorButton* pColorBtn = DYNAMIC_DOWNCAST( CMFCRibbonColorButton, pRibbon->FindByID(ID_PEN_COLOR)); *// Set ColorButton to black  
+    pColorBtn->SetColor(RGB(0, 0, 0));
+
+ CMFCRibbonComboBox* pThinComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THIN_WIDTH)); *// Set Thin pen combobox to 2  
+    pThinComboBox->SelectItem(1);
+
+ CMFCRibbonComboBox* pThickComboBox = DYNAMIC_DOWNCAST( CMFCRibbonComboBox, pRibbon->FindByID(ID_PEN_THICK_WIDTH)); *// Set Thick pen combobox to 5  
+    pThickComboBox->SelectItem(0);
+
+ ```  
   
-2.  儲存繪製至檔案的色彩。  將下列陳述式加入至 scribdoc.cpp，在 `CStroke::Serialize` 方法， `ar << (WORD)m_nPenWidth;` 陳述式之後。  
+2.  Save a color drawing to a file. Add the following statement to scribdoc.cpp, in the `CStroke::Serialize` method, after the `ar << (WORD)m_nPenWidth;` statement.  
   
-    ```  
-    ar << (COLORREF)m_penColor;  
-    ```  
+ ```  
+    ar <<(COLORREF)m_penColor;  
+ ```  
   
-3.  最後，請從檔案載入一個色彩繪製。  加入下列程式碼，在 `CStroke::Serialize` 方法中，`m_nPenWidth = w;` 陳述式之後。  
+3.  Finally, load a color drawing from a file. Add the following line of code, in the `CStroke::Serialize` method, after the `m_nPenWidth = w;` statement.  
   
-    ```  
-    ar >> m_penColor;  
-    ```  
+ ```  
+    ar>> m_penColor;  
+ ```  
   
-4.  現在以色彩繪製並儲存繪製到檔案。  
+4.  Now scribble in color and save your drawing to a file.  
   
- [章節](#top)  
+ [[Sections](#top)]  
   
-## 結論  
- 您已更新 MFC Scribble 應用程式。  當您修改現有應用程式時，請使用這個逐步解說為導覽。  
+## Conclusion  
+ You have updated the MFC Scribble application. Use this walkthrough as a guide when you modify your existing applications.  
   
-## 請參閱  
- [逐步解說](../mfc/walkthroughs-mfc.md)   
- [逐步解說：更新 MFC Scribble 應用程式 \(第 1 部分\)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+## See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Walkthrough: Updating the MFC Scribble Application (Part 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+
+

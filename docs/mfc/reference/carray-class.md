@@ -1,5 +1,5 @@
 ---
-title: "CArray 類別 |Microsoft 文件"
+title: CArray Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,10 +32,24 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CArray class
-- arrays [C++], classes
-- templates, collection classes
-- collection classes, template-based
+- CArray [MFC], CArray
+- CArray [MFC], Add
+- CArray [MFC], Append
+- CArray [MFC], Copy
+- CArray [MFC], ElementAt
+- CArray [MFC], FreeExtra
+- CArray [MFC], GetAt
+- CArray [MFC], GetCount
+- CArray [MFC], GetData
+- CArray [MFC], GetSize
+- CArray [MFC], GetUpperBound
+- CArray [MFC], InsertAt
+- CArray [MFC], IsEmpty
+- CArray [MFC], RemoveAll
+- CArray [MFC], RemoveAt
+- CArray [MFC], SetAt
+- CArray [MFC], SetAtGrow
+- CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 caps.latest.revision: 33
 author: mikeblome
@@ -55,297 +69,297 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d76790072babb607c223937d9c9dae67f90d50b5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 94fdb7947d1ef7e993a47b9a55e9faf5903d3d2c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="carray-class"></a>CArray 類別
-支援類似 C 陣列，但可以動態減少或增加視的陣列。  
+# <a name="carray-class"></a>CArray Class
+Supports arrays that are like C arrays, but can dynamically reduce and grow as necessary.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class TYPE, class ARG_TYPE = const TYPE&>  
 class CArray : public CObject  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `TYPE`  
- 指定儲存在陣列中的物件類型的樣板參數。 `TYPE`為參數，由`CArray`。  
+ Template parameter that specifies the type of objects stored in the array. `TYPE` is a parameter that is returned by `CArray`.  
   
  `ARG` *_* `TYPE`  
- 指定用來存取儲存在陣列中物件的引數類型的樣板參數。 通常參考`TYPE`。 `ARG_TYPE`為參數傳遞給`CArray`。  
+ Template parameter that specifies the argument type that is used to access objects stored in the array. Often a reference to `TYPE`. `ARG_TYPE` is a parameter that is passed to `CArray`.  
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArray::CArray](#carray)|建構空陣列。|  
+|[CArray::CArray](#carray)|Constructs an empty array.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CArray::Add](#add)|將項目加入至陣列結尾；必要時讓陣列增長。|  
-|[Carray:: Append](#append)|將其他陣列附加至陣列。如有必要，讓陣列成長|  
-|[Carray:: Copy](#copy)|將其他陣列複製到該陣列；必要時讓陣列成長。|  
-|[CArray::ElementAt](#elementat)|傳回陣列中項目指標的臨時參考。|  
-|[CArray::FreeExtra](#freeextra)|釋放超過目前上限的所有未使用記憶體。|  
-|[CArray::GetAt](#getat)|傳回給定索引的值。|  
-|[CArray::GetCount](#getcount)|取得此陣列中項目的數目。|  
-|[CArray::GetData](#getdata)|容許存取陣列中的項目。 可以是**NULL**。|  
-|[CArray::GetSize](#getsize)|取得此陣列中項目的數目。|  
-|[CArray::GetUpperBound](#getupperbound)|傳回最大的有效索引。|  
-|[CArray::InsertAt](#insertat)|在指定索引處插入項目 (或其他陣列中的所有項目)。|  
-|[CArray::IsEmpty](#isempty)|判斷是否為空陣列。|  
-|[CArray::RemoveAll](#removeall)|從此陣列移除所有項目。|  
-|[CArray::RemoveAt](#removeat)|移除特定索引處的項目。|  
-|[CArray::SetAt](#setat)|設定給定索引的值；不容許陣列成長。|  
-|[CArray::SetAtGrow](#setatgrow)|設定給定索引的值；必要時讓陣列成長。|  
-|[CArray::SetSize](#setsize)|設定此陣列中要包含的項目數目。|  
+|[CArray::Add](#add)|Adds an element to the end of the array; grows the array if necessary.|  
+|[CArray::Append](#append)|Appends another array to the array; grows the array if necessary|  
+|[CArray::Copy](#copy)|Copies another array to the array; grows the array if necessary.|  
+|[CArray::ElementAt](#elementat)|Returns a temporary reference to the element pointer within the array.|  
+|[CArray::FreeExtra](#freeextra)|Frees all unused memory above the current upper bound.|  
+|[CArray::GetAt](#getat)|Returns the value at a given index.|  
+|[CArray::GetCount](#getcount)|Gets the number of elements in this array.|  
+|[CArray::GetData](#getdata)|Allows access to elements in the array. Can be **NULL**.|  
+|[CArray::GetSize](#getsize)|Gets the number of elements in this array.|  
+|[CArray::GetUpperBound](#getupperbound)|Returns the largest valid index.|  
+|[CArray::InsertAt](#insertat)|Inserts an element (or all the elements in another array) at a specified index.|  
+|[CArray::IsEmpty](#isempty)|Determines whether the array is empty.|  
+|[CArray::RemoveAll](#removeall)|Removes all the elements from this array.|  
+|[CArray::RemoveAt](#removeat)|Removes an element at a specific index.|  
+|[CArray::SetAt](#setat)|Sets the value for a given index; array not allowed to grow.|  
+|[CArray::SetAtGrow](#setatgrow)|Sets the value for a given index; grows the array if necessary.|  
+|[CArray::SetSize](#setsize)|Sets the number of elements to be contained in this array.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[operator&#91;&#93;](#operator_at)|設定或取得指定索引處的項目。|  
+|[operator&#91;&#93;](#operator_at)|Sets or gets the element at the specified index.|  
   
-## <a name="remarks"></a>備註  
- 陣列索引一律從開始位置 0。 您可以決定是否要修正上限，或是啟用以展開，當您新增超過目前的繫結項目陣列。 記憶體配置連續的上限，即使某些項目都是 null。  
+## <a name="remarks"></a>Remarks  
+ Array indexes always start at position 0. You can decide whether to fix the upper bound or enable the array to expand when you add elements past the current bound. Memory is allocated contiguously to the upper bound, even if some elements are null.  
   
 > [!NOTE]
->  調整大小的大部分方法`CArray`物件或加入項目，它使用[memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)来移動的項目。 這是一個問題，因為`memcpy_s`不相容的任何要求所要呼叫建構函式的物件。 如果中的項目`CArray`與不相容`memcpy_s`，您必須建立新`CArray`適當的大小。 然後，您必須使用[carray:: Copy](#copy)和[CArray::SetAt](#setat)來填入新的陣列，因為這些方法會使用指派運算子，而不是`memcpy_s`。  
+>  Most methods that resize a `CArray` object or add elements to it use [memcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md) to move elements. This is a problem because `memcpy_s` is not compatible with any objects that require the constructor to be called. If the items in the `CArray` are not compatible with `memcpy_s`, you must create a new `CArray` of the appropriate size. You must then use [CArray::Copy](#copy) and [CArray::SetAt](#setat) to populate the new array because those methods use an assignment operator instead of `memcpy_s`.  
   
- 如同 C 陣列、 存取時間`CArray`索引的項目是常數，而且陣列大小無關。  
+ As with a C array, the access time for a `CArray` indexed element is constant and is independent of the array size.  
   
 > [!TIP]
->  使用陣列，之前先使用[SetSize](#setsize)建立其大小，並為它配置記憶體。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
+>  Before using an array, use [SetSize](#setsize) to establish its size and allocate memory for it. If you do not use `SetSize`, adding elements to your array causes it to be frequently reallocated and copied. Frequent reallocation and copying are inefficient and can fragment memory.  
   
- 如果您需要在陣列中的個別項目的傾印，您必須設定的深度[CDumpContext](../../mfc/reference/cdumpcontext-class.md)為 1 或更大的物件。  
+ If you need a dump of individual elements in an array, you must set the depth of the [CDumpContext](../../mfc/reference/cdumpcontext-class.md) object to 1 or larger.  
   
- 全域 helper 函式，這個類別呼叫的特定成員函式必須是可自訂的大部分的使用`CArray`類別。 請參閱主題[集合類別 Helper](../../mfc/reference/collection-class-helpers.md) MFC 巨集和全域變數的區段中。  
+ Certain member functions of this class call global helper functions that must be customized for most uses of the `CArray` class. See the topic [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md) in the MFC Macros and Globals section.  
   
- 陣列類別衍生，就像衍生清單。  
+ Array class derivation is like list derivation.  
   
- 如需有關如何使用`CArray`，請參閱文章[集合](../../mfc/collections.md)。  
+ For more information about how to use `CArray`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CArray`  
   
-## <a name="requirements"></a>需求  
- `Header:`afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ `Header:` afxtempl.h  
   
-##  <a name="add"></a>CArray::Add  
- 將新的項目加入至陣列，1 成長陣列的結尾。  
+##  <a name="add"></a>  CArray::Add  
+ Adds a new element to the end of an array, growing the array by 1.  
   
 ```  
 INT_PTR Add(ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ARG_TYPE`  
- 指定的參考項目，這個陣列中的引數類型的樣板參數。  
+ Template parameter specifying the type of arguments referencing elements in this array.  
   
  `newElement`  
- 要加入此陣列的項目。  
+ The element to be added to this array.  
   
-### <a name="return-value"></a>傳回值  
- 加入項目的索引。  
+### <a name="return-value"></a>Return Value  
+ The index of the added element.  
   
-### <a name="remarks"></a>備註  
- 如果[SetSize](#setsize)已搭配`nGrowBy`值大於 1，則額外的記憶體可以配置。 不過，只有 1 提高上限。  
+### <a name="remarks"></a>Remarks  
+ If [SetSize](#setsize) has been used with an `nGrowBy` value greater than 1, then extra memory may be allocated. However, the upper bound will increase by only 1.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#22](../../mfc/codesnippet/cpp/carray-class_1.cpp)]  
   
-##  <a name="append"></a>Carray:: Append  
- 呼叫此成員函式，加入另一個陣列的內容。  
+##  <a name="append"></a>  CArray::Append  
+ Call this member function to add the contents of one array to the end of another.  
   
 ```  
 INT_PTR Append(const CArray& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *src*  
- 要附加至陣列元素的來源。  
+ Source of the elements to be appended to an array.  
   
-### <a name="return-value"></a>傳回值  
- 第一個附加的項目索引。  
+### <a name="return-value"></a>Return Value  
+ The index of the first appended element.  
   
-### <a name="remarks"></a>備註  
- 陣列必須是相同的型別。  
+### <a name="remarks"></a>Remarks  
+ The arrays must be of the same type.  
   
- 如有必要，**附加**可能會配置額外的記憶體來容納附加至陣列的項目。  
+ If necessary, **Append** may allocate extra memory to accommodate the elements appended to the array.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#23](../../mfc/codesnippet/cpp/carray-class_2.cpp)]  
   
-##  <a name="carray"></a>CArray::CArray  
- 建構空陣列。  
+##  <a name="carray"></a>  CArray::CArray  
+ Constructs an empty array.  
   
 ```  
 CArray();
 ```  
   
-### <a name="remarks"></a>備註  
- 陣列逐漸增加一個項目，一次。  
+### <a name="remarks"></a>Remarks  
+ The array grows one element at a time.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#24](../../mfc/codesnippet/cpp/carray-class_3.cpp)]  
   
-##  <a name="copy"></a>Carray:: Copy  
- 使用此成員函式複製到另一個陣列的項目。  
+##  <a name="copy"></a>  CArray::Copy  
+ Use this member function to copy the elements of one array to another.  
   
 ```  
 void Copy(const CArray& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *src*  
- 要複製到陣列之項目的來源。  
+ Source of the elements to be copied to an array.  
   
-### <a name="remarks"></a>備註  
- 呼叫此成員函式，另一個陣列的項目以覆寫一個陣列的項目。  
+### <a name="remarks"></a>Remarks  
+ Call this member function to overwrite the elements of one array with the elements of another array.  
   
- **複製**不會釋放記憶體; 不過，如有必要，**複製**可能會配置額外的記憶體來容納的項目複製到陣列。  
+ **Copy** does not free memory; however, if necessary, **Copy** may allocate extra memory to accommodate the elements copied to the array.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#25](../../mfc/codesnippet/cpp/carray-class_4.cpp)]  
   
-##  <a name="elementat"></a>CArray::ElementAt  
- 傳回指定的項目陣列中的臨時參考。  
+##  <a name="elementat"></a>  CArray::ElementAt  
+ Returns a temporary reference to the specified element within the array.  
   
 ```  
 TYPE& ElementAt(INT_PTR nIndex);  
 const TYPE& ElementAt(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
-### <a name="return-value"></a>傳回值  
- 陣列項目的參考。  
+### <a name="return-value"></a>Return Value  
+ A reference to an array element.  
   
-### <a name="remarks"></a>備註  
- 它用來實作的左側的指派運算子的陣列。  
+### <a name="remarks"></a>Remarks  
+ It is used to implement the left-side assignment operator for arrays.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[GetSize](#getsize)。  
+### <a name="example"></a>Example  
+  See the example for [GetSize](#getsize).  
   
-##  <a name="freeextra"></a>CArray::FreeExtra  
- 釋出時已成長陣列配置任何額外的記憶體。  
+##  <a name="freeextra"></a>  CArray::FreeExtra  
+ Frees any extra memory that was allocated while the array was grown.  
   
 ```  
 void FreeExtra();
 ```  
   
-### <a name="remarks"></a>備註  
- 此函式會有任何影響陣列的大小或上限。  
+### <a name="remarks"></a>Remarks  
+ This function has no effect on the size or upper bound of the array.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[GetData](#getdata)。  
+### <a name="example"></a>Example  
+  See the example for [GetData](#getdata).  
   
-##  <a name="getat"></a>CArray::GetAt  
- 傳回指定索引處的陣列元素。  
+##  <a name="getat"></a>  CArray::GetAt  
+ Returns the array element at the specified index.  
   
 ```  
 TYPE& GetAt(INT_PTR nIndex);  
 const TYPE& GetAt(INT_PTR nIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 指定的陣列元素的類型樣板參數。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the array elements.  
   
  `nIndex`  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
-### <a name="return-value"></a>傳回值  
- 在這個索引的目前陣列項目。  
+### <a name="return-value"></a>Return Value  
+ The array element currently at this index.  
   
-### <a name="remarks"></a>備註  
- 傳遞負數的值所傳回的值大於`GetUpperBound`會導致失敗的判斷提示。  
+### <a name="remarks"></a>Remarks  
+ Passing a negative value or a value greater than the value returned by `GetUpperBound` will result in a failed assertion.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]  
   
-##  <a name="getcount"></a>CArray::GetCount  
- 傳回陣列元素的數目。  
+##  <a name="getcount"></a>  CArray::GetCount  
+ Returns the number of array elements.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 陣列中的項目數目。  
+### <a name="return-value"></a>Return Value  
+ The number of items in the array.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以擷取陣列中的項目數。 因為索引會以零為起始，大小為 1 大於最大的索引。 呼叫這個方法會產生相同結果[CArray::GetSize](#getsize)方法。  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the array. Because indexes are zero-based, the size is 1 greater than the largest index. Calling this method will generate the same result as the [CArray::GetSize](#getsize) method.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#27](../../mfc/codesnippet/cpp/carray-class_6.cpp)]  
   
-##  <a name="getdata"></a>CArray::GetData  
- 您可以使用此成員函式來直接存取陣列中的項目。  
+##  <a name="getdata"></a>  CArray::GetData  
+ Use this member function to gain direct access to the elements in an array.  
   
 ```  
 const TYPE* GetData() const; 
 TYPE* GetData();
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 指定的陣列元素的類型樣板參數。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the array elements.  
   
-### <a name="return-value"></a>傳回值  
- 陣列項目的指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to an array element.  
   
-### <a name="remarks"></a>備註  
- 如果沒有元素可用`GetData`會傳回 null 值。  
+### <a name="remarks"></a>Remarks  
+ If no elements are available, `GetData` returns a null value.  
   
- 雖然直接存取陣列的項目可協助您更快速地處理，請呼叫時謹慎小心`GetData`; 您直接進行的任何錯誤會影響您陣列的項目。  
+ While direct access to the elements of an array can help you work more quickly, use caution when calling `GetData`; any errors you make directly affect the elements of your array.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]  
   
-##  <a name="getsize"></a>CArray::GetSize  
- 傳回陣列的大小。  
+##  <a name="getsize"></a>  CArray::GetSize  
+ Returns the size of the array.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="remarks"></a>備註  
- 因為索引會以零為起始，大小為 1 大於最大的索引。 呼叫這個方法會產生相同結果[CArray::GetCount](#getcount)方法。  
+### <a name="remarks"></a>Remarks  
+ Because indexes are zero-based, the size is 1 greater than the largest index. Calling this method will generate the same result as the [CArray::GetCount](#getcount) method.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#29](../../mfc/codesnippet/cpp/carray-class_8.cpp)]  
   
-##  <a name="getupperbound"></a>CArray::GetUpperBound  
- 傳回目前的上限，此陣列。  
+##  <a name="getupperbound"></a>  CArray::GetUpperBound  
+ Returns the current upper bound of this array.  
   
 ```  
 INT_PTR GetUpperBound() const;  
 ```  
   
-### <a name="remarks"></a>備註  
- 因為是以零為起始的陣列索引，此函數會傳回值 1 小於`GetSize`。  
+### <a name="remarks"></a>Remarks  
+ Because array indexes are zero-based, this function returns a value 1 less than `GetSize`.  
   
- 條件**GetUpperBound （)** =-1 表示陣列是否包含任何項目。  
+ The condition **GetUpperBound( )** = -1 indicates that the array contains no elements.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CArray::GetAt](#getat)。  
+### <a name="example"></a>Example  
+  See the example for [CArray::GetAt](#getat).  
   
-##  <a name="insertat"></a>CArray::InsertAt  
- 第一個版本`InsertAt`陣列中指定索引處插入一個項目 （或多個項目的複本）。  
+##  <a name="insertat"></a>  CArray::InsertAt  
+ The first version of `InsertAt` inserts one element (or multiple copies of an element) at a specified index in an array.  
   
 ```  
 void InsertAt(
@@ -358,70 +372,70 @@ void InsertAt(
     CArray* pNewArray);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 可能會大於所傳回的值的整數索引`GetUpperBound`。  
+ An integer index that may be greater than the value returned by `GetUpperBound`.  
   
  `ARG_TYPE`  
- 這個陣列中指定的項目類型的樣板參數。  
+ Template parameter specifying the type of elements in this array.  
   
  `newElement`  
- 要放在這個陣列的項目。  
+ The element to be placed in this array.  
   
  `nCount`  
- 這個項目應該是次數插入 （預設值為 1）。  
+ The number of times this element should be inserted (defaults to 1).  
   
  `nStartIndex`  
- 可能會大於所傳回的值的整數索引[GetUpperBound](#getupperbound)。  
+ An integer index that may be greater than the value returned by [GetUpperBound](#getupperbound).  
   
  `pNewArray`  
- 另一個陣列，包含要加入至這個陣列的項目。  
+ Another array that contains elements to be added to this array.  
   
-### <a name="remarks"></a>備註  
- 在過程中，它會往上移動這個索引及它在現有的項目移位上面的所有項目 （依遞增索引）。  
+### <a name="remarks"></a>Remarks  
+ In the process, it shifts up (by incrementing the index) the existing element at this index, and it shifts up all the elements above it.  
   
- 第二個版本從另一個插入的所有項目`CArray`集合中，開始`nStartIndex`位置。  
+ The second version inserts all the elements from another `CArray` collection, starting at the `nStartIndex` position.  
   
- `SetAt`函式，相較之下，取代一個指定的陣列項目，並且不移動任何項目。  
+ The `SetAt` function, in contrast, replaces one specified array element and does not shift any elements.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#30](../../mfc/codesnippet/cpp/carray-class_9.cpp)]  
   
-##  <a name="isempty"></a>CArray::IsEmpty  
- 判斷是否為空陣列。  
+##  <a name="isempty"></a>  CArray::IsEmpty  
+ Determines whether the array is empty.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果陣列不包含任何項目; 非零，否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the array contains no elements; otherwise 0.  
   
-##  <a name="operator_at"></a>CArray::operator\[\]  
- 這些註標運算子是方便的替代[SetAt](#setat)和[GetAt](#getat)函式。  
+##  <a name="operator_at"></a>  CArray::operator \[\]  
+ These subscript operators are a convenient substitute for the [SetAt](#setat) and [GetAt](#getat) functions.  
   
 ```  
 TYPE& operator[](int_ptr nindex);  
 const TYPE& operator[](int_ptr nindex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 這個陣列中指定的項目類型的樣板參數。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements in this array.  
   
  `nIndex`  
- 若要存取的項目索引。  
+ Index of the element to be accessed.  
   
-### <a name="remarks"></a>備註  
- 針對陣列不是呼叫第一個運算子， **const**，可能的權限 （右值） 或指派陳述式的左邊 （左值） 上使用。 第二個，針對呼叫**const**陣列可能只能用在右邊。  
+### <a name="remarks"></a>Remarks  
+ The first operator, called for arrays that are not **const**, may be used on either the right (r-value) or the left (l-value) of an assignment statement. The second, called for **const** arrays, may be used only on the right.  
   
- 偵錯版本的程式庫判斷提示的註標 （請在左邊或右邊指派陳述式） 是否超出範圍。  
+ The Debug version of the library asserts if the subscript (either on the left or right side of an assignment statement) is out of bounds.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#34](../../mfc/codesnippet/cpp/carray-class_10.cpp)]  
   
-##  <a name="relocateelements"></a>CArray::RelocateElements  
- 當陣列應該成長或壓縮時，基底位址資料到新的緩衝區。  
+##  <a name="relocateelements"></a>  CArray::RelocateElements  
+ Relocates data to a new buffer when the array should grow or shrink.  
   
 ```  
 template<class TYPE, class ARG_TYPE>  
@@ -431,38 +445,38 @@ AFX_INLINE void CArray<TYPE, ARG_TYPE>::RelocateElements(
     INT_PTR nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pNewData`  
- 新的緩衝區陣列的項目。  
+ A new buffer for the array of elements.  
   
  `pData`  
- 舊的項目陣列。  
+ The old array of elements.  
   
  `nCount`  
- 舊的陣列中的元素數目。  
+ Number of elements in the old array.  
   
-### <a name="remarks"></a>備註  
- `pNewData`一定是足以容納所有`pData`項目。  
+### <a name="remarks"></a>Remarks  
+ `pNewData` is always large enough to hold all the `pData` elements.  
   
- [CArray](../../mfc/reference/carray-class.md)實作會使用這個方法時，要複製的舊資料到新的緩衝區陣列應該擴張或縮小 (當[SetSize](#setsize)或[FreeExtra](#freeextra)稱為)。 預設實作只複製資料。  
+ The [CArray](../../mfc/reference/carray-class.md) implementation uses this method to copy the old data to a new buffer when the array should grow or shrink (when [SetSize](#setsize) or [FreeExtra](#freeextra) are called). The default implementation just copies the data.  
   
- 對於陣列，其中某個元素包含它自己的成員，其中的指標或另一個結構包含其中一個陣列元素的指標，不會更新指標中純文字複本。 在此情況下，您可以更正指標實作的特製化`RelocateElements`與相關的型別。 您必須也負責複製資料。  
+ For arrays in which an element contains a pointer to one of its own members, or another structure contains a pointer to one of the array elements, the pointers are not updated in plain copy. In this case, you can correct pointers by implementing a specialization of `RelocateElements` with the relevant types. You are also responsible for data copying.  
   
-##  <a name="removeall"></a>CArray::RemoveAll  
- 從此陣列移除所有項目。  
+##  <a name="removeall"></a>  CArray::RemoveAll  
+ Removes all the elements from this array.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果陣列已經是空的此函式仍能運作。  
+### <a name="remarks"></a>Remarks  
+ If the array is already empty, the function still works.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#31](../../mfc/codesnippet/cpp/carray-class_11.cpp)]  
   
-##  <a name="removeat"></a>CArray::RemoveAt  
- 移除陣列中的指定索引處開始的一或多個項目。  
+##  <a name="removeat"></a>  CArray::RemoveAt  
+ Removes one or more elements starting at a specified index in an array.  
   
 ```  
 void RemoveAt(
@@ -470,71 +484,71 @@ void RemoveAt(
     INT_PTR nCount = 1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
  `nCount`  
- 要移除的項目數目。  
+ The number of elements to remove.  
   
-### <a name="remarks"></a>備註  
- 在過程中，它會進入下移除的項目上方的所有項目。 它遞減上層陣列的繫結，但不是會釋放記憶體。  
+### <a name="remarks"></a>Remarks  
+ In the process, it shifts down all the elements above the removed element(s). It decrements the upper bound of the array but does not free memory.  
   
- 如果您嘗試移除比上述移除點陣列中所包含的項目，然後判斷提示的程式庫的偵錯版本。  
+ If you try to remove more elements than are contained in the array above the removal point, then the Debug version of the library asserts.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#32](../../mfc/codesnippet/cpp/carray-class_12.cpp)]  
   
-##  <a name="setat"></a>CArray::SetAt  
- 設定指定索引處的陣列項目。  
+##  <a name="setat"></a>  CArray::SetAt  
+ Sets the array element at the specified index.  
   
 ```  
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 整數索引大於或等於 0 且小於或等於所傳回的值[GetUpperBound](#getupperbound)。  
+ An integer index that is greater than or equal to 0 and less than or equal to the value returned by [GetUpperBound](#getupperbound).  
   
  `ARG_TYPE`  
- 指定的引數是用來參考陣列項目類型的樣板參數。  
+ Template parameter specifying the type of arguments used for referencing array elements.  
   
  `newElement`  
- 新的項目值儲存在指定的位置。  
+ The new element value to be stored at the specified position.  
   
-### <a name="remarks"></a>備註  
- `SetAt`不會導致要成長的陣列。 使用[SetAtGrow](#setatgrow)如果您想要自動成長的陣列。  
+### <a name="remarks"></a>Remarks  
+ `SetAt` will not cause the array to grow. Use [SetAtGrow](#setatgrow) if you want the array to grow automatically.  
   
- 您必須確定您的索引值，代表陣列中的有效位置。 如果它超出範圍時，偵錯版本的程式庫判斷提示。  
+ You must ensure that your index value represents a valid position in the array. If it is out of bounds, then the Debug version of the library asserts.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[GetAt](#getat)。  
+### <a name="example"></a>Example  
+  See the example for [GetAt](#getat).  
   
-##  <a name="setatgrow"></a>CArray::SetAtGrow  
- 設定指定索引處的陣列項目。  
+##  <a name="setatgrow"></a>  CArray::SetAtGrow  
+ Sets the array element at the specified index.  
   
 ```  
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 大於或等於 0 的整數索引。  
+ An integer index that is greater than or equal to 0.  
   
  `ARG_TYPE`  
- 陣列中指定的項目類型的樣板參數。  
+ Template parameter specifying the type of elements in the array.  
   
  `newElement`  
- 要加入此陣列的項目。 A **NULL**允許值。  
+ The element to be added to this array. A **NULL** value is allowed.  
   
-### <a name="remarks"></a>備註  
- 必要時自動成長陣列 （也就是上限會調整來容納新項目）。  
+### <a name="remarks"></a>Remarks  
+ The array grows automatically if necessary (that is, the upper bound is adjusted to accommodate the new element).  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCCollections # 33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#33](../../mfc/codesnippet/cpp/carray-class_13.cpp)]  
   
-##  <a name="setsize"></a>CArray::SetSize  
- 建立空的或現有陣列; 的大小如有必要，請配置記憶體。  
+##  <a name="setsize"></a>  CArray::SetSize  
+ Establishes the size of an empty or existing array; allocates memory if necessary.  
   
 ```  
 void SetSize(
@@ -542,27 +556,27 @@ void SetSize(
     INT_PTR nGrowBy = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nNewSize`  
- 新陣列的大小 （數字的項目）。 必須是大於或等於 0。  
+ The new array size (number of elements). Must be greater than or equal to 0.  
   
  `nGrowBy`  
- 如果是必要的大小增加配置項目位置最小數目。  
+ The minimum number of element slots to allocate if a size increase is necessary.  
   
-### <a name="remarks"></a>備註  
- 如果新的大小小於舊的大小，然後陣列會被截斷，並釋放所有未使用的記憶體。  
+### <a name="remarks"></a>Remarks  
+ If the new size is smaller than the old size, then the array is truncated and all unused memory is released.  
   
- 使用這個函數來開始使用陣列之前，設定您的陣列的大小。 如果您未使用 `SetSize`，則將項目加入至陣列會導致其被頻繁地重新配置及複製。 頻繁的重新配置及複製效率不高，且可能會讓記憶體分段。  
+ Use this function to set the size of your array before you begin using the array. If you do not use `SetSize`, adding elements to your array causes it to be frequently reallocated and copied. Frequent reallocation and copying are inefficient and can fragment memory.  
   
- `nGrowBy`陣列成長的情況時，參數會影響內部記憶體配置。 其用途並不會影響陣列大小所報告[GetSize](#getsize)和[GetUpperBound](#getupperbound)。 如果使用預設值時，MFC 會配置記憶體的方式計算，以避免記憶體分散的情形，並最佳化大部分的情況下的效率。  
+ The `nGrowBy` parameter affects internal memory allocation while the array is growing. Its use never affects the array size as reported by [GetSize](#getsize) and [GetUpperBound](#getupperbound). If the default value is used, MFC allocates memory in a way calculated to avoid memory fragmentation and optimize efficiency for most cases.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[GetData](#getdata)。  
+### <a name="example"></a>Example  
+  See the example for [GetData](#getdata).  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例收集](../../visual-cpp-samples.md)   
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CObArray 類別](../../mfc/reference/cobarray-class.md)   
- [集合類別協助程式](../../mfc/reference/collection-class-helpers.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObArray Class](../../mfc/reference/cobarray-class.md)   
+ [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md)
 

@@ -1,39 +1,58 @@
 ---
-title: "訊息處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令處理, 訊息處理常式"
-  - "處理常式"
-  - "處理常式, 命令"
-  - "處理常式, message"
-  - "訊息處理常式"
-  - "訊息處理, 訊息處理函式"
+title: Message Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- command handling [MFC], message handlers
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- handlers [MFC], command
+- handlers [MFC], message
 ms.assetid: 51bc4e76-dbe3-4cc2-b026-3199d56b2fa9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 訊息處理常式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4c645aba2c37f403121b311f12863334277e5612
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 MFC 中，專用的 *handler* 函式處理每個個別的訊息。  訊息處理函式是類別的成員函式。  本文件交替使用詞彙 *訊息處理常式成員函式*、 *訊息處理函式*、 *訊息處理常式*與 *處理*常式。  訊息處理常式 \(也稱為命令處理常式」。  
+---
+# <a name="message-handlers"></a>Message Handlers
+In MFC, a dedicated *handler* function processes each separate message. Message-handler functions are member functions of a class. This documentation uses the terms *message-handler member function*, *message-handler function*, *message handler*, and *handler* interchangeably. Some kinds of message handlers are also called "command handlers."  
   
- 將訊息處理常式會在寫入架構應用程式的一個大比例。  本文章系列描述這個訊息處理的機制的運作方式。  
+ Writing message handlers accounts for a large proportion of your work in writing a framework application. This article family describes how the message-processing mechanism works.  
   
- 訊息的處理常式做什麼?  這會讓您想要做回應的訊息。  您可以使用類別的屬性視窗中，使用原始程式碼編輯器中，您可以建立處理常式，然後填入處理常式的程式碼。  
+ What does the handler for a message do It does whatever you want done in response to that message. You can create the handlers by using the Properties window of the class, and then fill in the handler's code using the source code editor.  
   
- 您可以使用任何 Microsoft Visual C\+\+ 和 MFC 的功能撰寫處理常式。  如需所有類別清單，請參閱《 *MFC 參考》中的*[類別庫概觀](../mfc/class-library-overview.md) 。  
+ You can use all of the facilities of Microsoft Visual C++ and MFC to write your handlers. For a list of all classes, see [Class Library Overview](../mfc/class-library-overview.md) in the *MFC Reference*.  
   
-## 請參閱  
- [架構中的訊息和命令](../mfc/messages-and-commands-in-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Messages and Commands in the Framework](../mfc/messages-and-commands-in-the-framework.md)
+
+

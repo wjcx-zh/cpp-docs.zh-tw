@@ -1,64 +1,83 @@
 ---
-title: "Automation 伺服程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation 伺服程式"
-  - "COM 元件, Automation 伺服程式"
-  - "分派對應, Automation 伺服程式"
-  - "伺服器, Automation"
+title: Automation Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers
+- COM components, Automation servers
+- dispatch maps [MFC]], Automation servers
+- servers, Automation
 ms.assetid: 523fd155-51ce-4f91-b986-b74bdbdd7d92
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Automation 伺服程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7e5d43a45b9b09c93319ae447a229075ec04c064
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Automation 可讓您的應用程式可以操作在另一個應用程式實作的物件，或者公開物件，因此可以操作。  Automation 伺服程式是公開可程式化物件的應用程式呼叫 \(Automation 物件\) 到其他應用程式 \(稱為 [Automation 用戶端](../mfc/automation-clients.md)\)。  Automation 伺服程式有時稱為 Automation 元件。  
+---
+# <a name="automation-servers"></a>Automation Servers
+Automation makes it possible for your application to manipulate objects implemented in another application, or to expose objects so they can be manipulated. An Automation server is an application that exposes programmable objects (called Automation objects) to other applications (called [Automation clients](../mfc/automation-clients.md)). Automation servers are sometimes called Automation components.  
   
- 公開 Automation 物件使用戶端可以直接存取物件自動化某些程序，而功能伺服器所提供。  公開物件以這種方式有用處，當應用程式提供其他應用程式很有用的功能。  例如，文書處理器可能會公開其拼字檢查功能，讓其他程式可以使用它。  使用其他應用程式的現成的功能，使物件公開廠商改善其應用程式的功能。  
+ Exposing Automation objects enables clients to automate certain procedures by directly accessing the objects and functionality the server makes available. Exposing objects this way is beneficial when applications provide functionality that is useful for other applications. For example, a word processor might expose its spell-checking functionality so that other programs can use it. Exposure of objects thus enables vendors to improve their applications' functionality by using the ready-made functionality of other applications.  
   
- 這些 Automation 物件具有的屬性與方法做為其外部介面。  屬性是 Automation 物件的名稱屬性。  屬性與 C \+\+. 類別的資料成員。  方法是在 Automation 物件運作的函式。  方法類似 C \+\+ 類別的公用成員函式。  
+ These Automation objects have properties and methods as their external interface. Properties are named attributes of the Automation object. Properties are like the data members of a C++ class. Methods are functions that work on Automation objects. Methods are like the public member functions of a C++ class.  
   
 > [!NOTE]
->  雖然屬性是像 C\+\+ 資料成員，就無法直接存取的。  若要提供透明的存取，請在 Automation 物件的內部變數以取得\/設定成員函式存取它們。  
+>  Although properties are like C++ data members, they are not directly accessible. To provide transparent access, set up an internal variable in the Automation object with a pair of get/set member functions to access them.  
   
- 透過公開應用程式功能可以共用，明確定義的介面，在 Automation \(如 Microsoft Visual Basic 的單一一般程式語言可以用來建立應用程式而不是在不同，應用程式專屬巨集語言存取。  
+ By exposing application functionality through a common, well-defined interface, Automation makes it possible to build applications in a single general programming language like Microsoft Visual Basic instead of in diverse, application-specific macro languages.  
   
-##  <a name="_core_support_for_automation_servers"></a> 支援 Automation 伺服程式  
- Visual C\+\+ 和 MFC 架構的 Automation 伺服程式提供廣泛的支援。  這些處理做 Automation 伺服程式的許多額外負荷，因此，您可以將您的工作於應用程式的功能。  
+##  <a name="_core_support_for_automation_servers"></a> Support for Automation Servers  
+ Visual C++ and the MFC framework provide extensive support for Automation servers. They handle much of the overhead involved in making an Automation server, so you can focus your efforts on the functionality of your application.  
   
- 支援的 Automation 架構的主要機制是分派對應，展開成宣告及呼叫需要公開方法和屬性 OLE 的一組巨集。  典型的分派對應如下所示:  
+ The framework's principal mechanism for supporting Automation is the dispatch map, a set of macros that expands into the declarations and calls needed to expose methods and properties for OLE. A typical dispatch map looks like this:  
   
- [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/CPP/automation-servers_1.cpp)]  
+ [!code-cpp[NVC_MFCAutomation#1](../mfc/codesnippet/cpp/automation-servers_1.cpp)]  
   
- 屬性視窗和類別檢視協助維護的分派對應。  當您將新的方法或屬性加入至類別時， Visual C\+\+ 會將對應的 `DISP_FUNCTION` 或 `DISP_PROPERTY` 巨集與表示類別名稱、方法的外部和內部名稱的參數或屬性和資料型別。  
+ The Properties window and Class View assist in maintaining dispatch maps. When you add a new method or property to a class, Visual C++ adds a corresponding `DISP_FUNCTION` or `DISP_PROPERTY` macro with parameters indicating the class name, external and internal names of the method or property, and data types.  
   
- **Add Class** 對話方塊也簡化了 Automation 類別及其屬性和作業的管理的宣告。  當您使用加入類別\] 對話方塊將類別加入至專案時，您會指定它的基底類別。  如果基底類別允許 Automation，使用指定的加入類別\] 對話方塊中顯示控制項新的類別是否應支援 Automation，它是否「OLE」\(可建立類別的物件即是否在從 COM 用戶端的要求可以建立\) 和外部名稱對於 COM 用戶端使用。  
+ The **Add Class** dialog box also simplifies the declaration of Automation classes and the management of their properties and operations. When you use the Add Class dialog box to add a class to your project, you specify its base class. If the base class allows Automation, the Add Class dialog box displays controls you use to specify whether the new class should support Automation, whether it is "OLE creatable" (that is, whether objects of the class can be created on a request from a COM client), and the external name for the COM client to use.  
   
- **Add Class** 對話方塊會建立一個類別宣告，包括您指定的 OLE 功能的適當的巨集。  它也會將類別成員函式的實作基本架構程式碼。  
+ The **Add Class** dialog box then creates a class declaration, including the appropriate macros for the OLE features you have specified. It also adds the skeleton code for implementation of your class's member functions.  
   
- MFC 應用程式精靈簡化在取得您的 Automation 伺服器應用程式所需的步驟間接。  如果您選取 **Automation** 核取方塊從 \[**進階功能**\] 頁， MFC 應用程式精靈將加入至應用程式的 `InitInstance` 函式所需的呼叫註冊 Automation 物件並執行您的應用程式當做 Automation 伺服程式。  
+ The MFC Application Wizard simplifies the steps involved in getting your automation server application off the ground. If you select the **Automation** check box from the **Advanced Features** page, the MFC Application Wizard adds to your application's `InitInstance` function the calls required to register your Automation objects and run your application as an Automation server.  
   
-### 您想要執行甚麼工作？  
+### <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [了解 Automation 用戶端](../mfc/automation-clients.md)  
+-   [Learn about Automation clients](../mfc/automation-clients.md)  
   
--   [進一步了解類別 CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
+-   [Learn more about class CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
   
--   [進一步了解類別 COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
+-   [Learn more about class COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Automation](../mfc/automation.md)   
- [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
+ [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md)
+
+

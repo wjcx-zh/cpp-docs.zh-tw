@@ -1,5 +1,5 @@
 ---
-title: "CDateTimeCtrl 類別 |Microsoft 文件"
+title: CDateTimeCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,10 +31,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DateTimePicker control [MFC], CDateTimeCtrl class
-- date-picking functionality
-- CDateTimeCtrl class
-- DateTimePicker control [MFC]
+- CDateTimeCtrl [MFC], CDateTimeCtrl
+- CDateTimeCtrl [MFC], CloseMonthCal
+- CDateTimeCtrl [MFC], Create
+- CDateTimeCtrl [MFC], GetDateTimePickerInfo
+- CDateTimeCtrl [MFC], GetIdealSize
+- CDateTimeCtrl [MFC], GetMonthCalColor
+- CDateTimeCtrl [MFC], GetMonthCalCtrl
+- CDateTimeCtrl [MFC], GetMonthCalFont
+- CDateTimeCtrl [MFC], GetMonthCalStyle
+- CDateTimeCtrl [MFC], GetRange
+- CDateTimeCtrl [MFC], GetTime
+- CDateTimeCtrl [MFC], SetFormat
+- CDateTimeCtrl [MFC], SetMonthCalColor
+- CDateTimeCtrl [MFC], SetMonthCalFont
+- CDateTimeCtrl [MFC], SetMonthCalStyle
+- CDateTimeCtrl [MFC], SetRange
+- CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 caps.latest.revision: 23
 author: mikeblome
@@ -54,17 +67,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: e5407934021abdb64dfb625e3dfb2c1841b7a5f0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b8f3c9ca1ef2b9aa72e4d1ce7c4139bd74f5d0b3
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
-封裝日期與時間選擇器控制項的功能。  
+# <a name="cdatetimectrl-class"></a>CDateTimeCtrl Class
+Encapsulates the functionality of a date and time picker control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDateTimeCtrl : public CWnd  
@@ -72,41 +85,41 @@ class CDateTimeCtrl : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|建構 `CDateTimeCtrl` 物件。|  
+|[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Constructs a `CDateTimeCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|關閉目前的日期和時間選擇器控制項。|  
-|[CDateTimeCtrl::Create](#create)|建立日期和時間選擇器控制項並將它附加`CDateTimeCtrl`物件。|  
-|[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|擷取目前的日期和時間選擇器控制項的相關資訊。|  
-|[CDateTimeCtrl::GetIdealSize](#getidealsize)|傳回日期和時間選擇器控制項，顯示目前的日期或時間所需的理想大小。|  
-|[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|擷取日期和時間選擇器控制項中的月份行事曆的指定部分的色彩。|  
-|[Cdatetimectrl:: Getmonthcalctrl](#getmonthcalctrl)|擷取`CMonthCalCtrl`日期和時間選擇器控制項相關聯的物件。|  
-|[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|擷取目前的日期和時間選擇器控制項的子系月曆控制項所使用的字型。|  
-|[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|取得目前的日期和時間選擇器控制項的樣式。|  
-|[CDateTimeCtrl::GetRange](#getrange)|擷取目前的最小和最大允許系統時間的日期和時間選擇器控制項。|  
-|[CDateTimeCtrl::GetTime](#gettime)|擷取日期和時間選擇器控制項中目前選取的時間，並將它放在指定的`SYSTEMTIME`結構。|  
-|[Cdatetimectrl:: Setformat](#setformat)|設定顯示的日期和時間選擇器控制項根據指定的格式字串。|  
-|[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|設定月曆的日期和時間選擇器控制項中的某個部分的色彩。|  
-|[Cdatetimectrl:: Setmonthcalfont](#setmonthcalfont)|設定將會使用日期和時間選擇器控制項的子系月曆控制項的字型。|  
-|[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|設定目前的日期和時間選擇器控制項的樣式。|  
-|[CDateTimeCtrl::SetRange](#setrange)|設定日期和時間選擇器控制項的最小和最大允許的系統時間。|  
-|[CDateTimeCtrl::SetTime](#settime)|日期和時間選擇器控制項中設定的時間。|  
+|[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|Closes the current date and time picker control.|  
+|[CDateTimeCtrl::Create](#create)|Creates the date and time picker control and attaches it to the `CDateTimeCtrl` object.|  
+|[CDateTimeCtrl::GetDateTimePickerInfo](#getdatetimepickerinfo)|Retrieves information about the current date and time picker control.|  
+|[CDateTimeCtrl::GetIdealSize](#getidealsize)|Returns the ideal size of the date and time picker control that is required to display the current date or time.|  
+|[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)|Retrieves the color for a given portion of the month calendar within the date and time picker control.|  
+|[CDateTimeCtrl::GetMonthCalCtrl](#getmonthcalctrl)|Retrieves the `CMonthCalCtrl` object associated with the date and time picker control.|  
+|[CDateTimeCtrl::GetMonthCalFont](#getmonthcalfont)|Retrieves the font currently used by the date and time picker control's child month calendar control.|  
+|[CDateTimeCtrl::GetMonthCalStyle](#getmonthcalstyle)|Gets the style of the current date and time picker control.|  
+|[CDateTimeCtrl::GetRange](#getrange)|Retrieves the current minimum and maximum allowed system times for a date and time picker control.|  
+|[CDateTimeCtrl::GetTime](#gettime)|Retrieves the currently selected time from a date and time picker control and puts it in a specified `SYSTEMTIME` structure.|  
+|[CDateTimeCtrl::SetFormat](#setformat)|Sets the display of a date and time picker control in accordance with a given format string.|  
+|[CDateTimeCtrl::SetMonthCalColor](#setmonthcalcolor)|Sets the color for a given portion of the month calendar within a date and time picker control.|  
+|[CDateTimeCtrl::SetMonthCalFont](#setmonthcalfont)|Sets the font that the date and time picker control's child month calendar control will use.|  
+|[CDateTimeCtrl::SetMonthCalStyle](#setmonthcalstyle)|Sets the style of the current date and time picker control.|  
+|[CDateTimeCtrl::SetRange](#setrange)|Sets the minimum and maximum allowed system times for a date and time picker control.|  
+|[CDateTimeCtrl::SetTime](#settime)|Sets the time in a date and time picker control.|  
   
-## <a name="remarks"></a>備註  
- 日期和時間選擇器控制項 （DTP 控制項） 提供一個簡單的介面，交換與使用者的日期和時間資訊。 這個介面包含的欄位，其中每個會顯示儲存在該控制項的日期和時間資訊的一部分。 使用者可以變更控制項中儲存的內容中指定欄位的字串的變更資訊。 使用者可以移動欄位的使用滑鼠或鍵盤。  
+## <a name="remarks"></a>Remarks  
+ The date and time picker control (DTP control) provides a simple interface to exchange date and time information with a user. This interface contains fields, each of which displays a part of the date and time information stored in the control. The user can change the information stored in the control by changing the content of the string in a given field. The user can move from field to field using the mouse or the keyboard.  
   
- 您可以將各種樣式套用至物件，當您在建立自訂日期和時間選擇器控制項。 請參閱[日期和時間選擇器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761728)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需有關特定日期和時間選擇器控制項的樣式。 您可以設定使用格式樣式 DTP 控制項的顯示格式。 這些格式樣式中所述在 「 格式樣式 」[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]主題[日期和時間選擇器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761728)。  
+ You can customize the date and time picker control by applying a variety of styles to the object when you create it. See [Date and Time Picker Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb761728) in the Windows SDK for more information about styles specific to the date and time picker control. You can set the display format of the DTP control using format styles. These format styles are described under "Format Styles" in the Windows SDK topic [Date and Time Picker Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb761728).  
   
- 日期和時間選擇器控制項也會使用通知和回呼，如下所述[使用 CDateTimeCtrl](../../mfc/using-cdatetimectrl.md)。  
+ The date and time picker control also uses notifications and callbacks, which are described in [Using CDateTimeCtrl](../../mfc/using-cdatetimectrl.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -115,38 +128,38 @@ class CDateTimeCtrl : public CWnd
   
  `CDateTimeCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdtctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdtctl.h  
   
-##  <a name="cdatetimectrl"></a>CDateTimeCtrl::CDateTimeCtrl  
- 建構 `CDateTimeCtrl` 物件。  
+##  <a name="cdatetimectrl"></a>  CDateTimeCtrl::CDateTimeCtrl  
+ Constructs a `CDateTimeCtrl` object.  
   
 ```  
 CDateTimeCtrl();
 ```  
   
-##  <a name="closemonthcal"></a>CDateTimeCtrl::CloseMonthCal  
- 關閉目前的日期和時間選擇器控制項。  
+##  <a name="closemonthcal"></a>  CDateTimeCtrl::CloseMonthCal  
+ Closes the current date and time picker control.  
   
 ```  
 void CloseMonthCal() const;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [DTM_CLOSEMONTHCAL](http://msdn.microsoft.com/library/windows/desktop/bb761753) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數， `m_dateTimeCtrl`，也就是用來以程式設計方式存取日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_dateTimeCtrl`, that is used to programmatically access the date and time picker control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會關閉目前的日期和時間選擇器控制項的下拉式行事曆。  
+### <a name="example"></a>Example  
+ The following code example closes the drop-down calendar for the current date and time picker control.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&5;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_2.cpp)]  
   
-##  <a name="create"></a>CDateTimeCtrl::Create  
- 建立日期和時間選擇器控制項並將它附加`CDateTimeCtrl`物件。  
+##  <a name="create"></a>  CDateTimeCtrl::Create  
+ Creates the date and time picker control and attaches it to the `CDateTimeCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -156,128 +169,128 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定日期時間控制項樣式的組合。 請參閱[日期和時間選擇器控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb761728)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需有關日期和時間選擇器樣式。  
+ Specifies the combination of date time control styles. See [Date and Time Picker Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb761728) in the Windows SDK for more information about date and time picker styles.  
   
  `rect`  
- 參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，也就是日期和時間選擇器控制項的大小與位置。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure, which is the position and size of the date and time picker control.  
   
  `pParentWnd`  
- 指標[CWnd](../../mfc/reference/cwnd-class.md)是日期和時間選擇器控制項的父視窗的物件。 它不得為**NULL**。  
+ A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the date and time picker control. It must not be **NULL**.  
   
  `nID`  
- 指定日期和時間選擇器控制項的控制項 id。  
+ Specifies the date and time picker control's control ID.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果建立成功。否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if creation was successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##### <a name="to-create-a-date-and-time-picker-control"></a>若要建立的日期和時間選擇器控制項  
+##### <a name="to-create-a-date-and-time-picker-control"></a>To create a date and time picker control  
   
-1.  呼叫[CDateTimeCtrl](#cdatetimectrl)建構`CDateTimeCtrl`物件。  
+1.  Call [CDateTimeCtrl](#cdatetimectrl) to construct a `CDateTimeCtrl` object.  
   
-2.  呼叫此成員函式，建立 Windows 日期和時間選擇器控制項並將它附加`CDateTimeCtrl`物件。  
+2.  Call this member function, which creates the Windows date and time picker control and attaches it to the `CDateTimeCtrl` object.  
   
- 當您呼叫**建立**，通用控制項都已初始化。  
+ When you call **Create**, the common controls are initialized.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&1;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_3.cpp)]  
   
-##  <a name="getdatetimepickerinfo"></a>CDateTimeCtrl::GetDateTimePickerInfo  
- 擷取目前的日期和時間選擇器控制項的相關資訊。  
+##  <a name="getdatetimepickerinfo"></a>  CDateTimeCtrl::GetDateTimePickerInfo  
+ Retrieves information about the current date and time picker control.  
   
 ```   
 BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[輸出] `pDateTimePickerInfo`|指標[DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729)結構會接收目前的日期和時間選擇器控制項的描述。<br /><br /> 呼叫端會負責配置這個結構。 不過，這個方法會初始化`cbSize`結構的成員。|  
+|[out] `pDateTimePickerInfo`|A pointer to a [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729) structure that receives a description of the current date and time picker control.<br /><br /> The caller is responsible for allocating this structure. However, this method initializes the `cbSize` member of the structure.|  
   
-### <a name="return-value"></a>傳回值  
- 如果此方法成功為 `true`；否則為 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [DTM_GETDATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761755) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數， `m_dateTimeCtrl`，也就是用來以程式設計方式存取日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_dateTimeCtrl`, that is used to programmatically access the date and time picker control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例指出它是否已成功擷取目前的日期和時間選擇器控制項的相關資訊。  
+### <a name="example"></a>Example  
+ The following code example indicates whether it successfully retrieves information about the current date and time picker control.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&4;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_4.cpp)]  
   
-##  <a name="getmonthcalcolor"></a>CDateTimeCtrl::GetMonthCalColor  
- 擷取日期和時間選擇器控制項中的月份行事曆的指定部分的色彩。  
+##  <a name="getmonthcalcolor"></a>  CDateTimeCtrl::GetMonthCalColor  
+ Retrieves the color for a given portion of the month calendar within the date and time picker control.  
   
 ```  
 COLORREF GetMonthCalColor(int iColor) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `iColor`  
- `int`值，指定要擷取的月曆色彩區域。 如需值的清單，請參閱`iColor`參數[SetMonthCalColor](#setmonthcalcolor)。  
+ An `int` value specifying which color area of the month calendar to retrieve. For a list of values, see the `iColor` parameter for [SetMonthCalColor](#setmonthcalcolor).  
   
-### <a name="return-value"></a>傳回值  
- A **COLORREF**如果成功，表示月曆控制項的指定部分的色彩設定的值。 如果不成功，函式會傳回-1。  
+### <a name="return-value"></a>Return Value  
+ A **COLORREF** value that represents the color setting for the specified portion of the month calendar control if successful. The function returns -1 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_GETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761759)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_GETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761759), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&2;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_5.cpp)]  
   
-##  <a name="getmonthcalctrl"></a>Cdatetimectrl:: Getmonthcalctrl  
- 擷取`CMonthCalCtrl`日期和時間選擇器控制項相關聯的物件。  
+##  <a name="getmonthcalctrl"></a>  CDateTimeCtrl::GetMonthCalCtrl  
+ Retrieves the `CMonthCalCtrl` object associated with the date and time picker control.  
   
 ```  
 CMonthCalCtrl* GetMonthCalCtrl() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標[CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)物件，或**NULL**如果不成功，或如果看不到視窗。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md) object, or **NULL** if unsuccessful or if the window is not visible.  
   
-### <a name="remarks"></a>備註  
- 日期和時間選擇器控制項建立子月曆控制項，當使用者按一下下拉箭號。 當`CMonthCalCtrl`不再需要物件、 被損毀，因此您的應用程式必須依賴儲存物件，代表日期時間選擇器控制項的子系月曆。  
+### <a name="remarks"></a>Remarks  
+ Date and time picker controls create a child month calendar control when the user clicks the drop-down arrow. When the `CMonthCalCtrl` object is no longer needed, it is destroyed, so your application must not rely on storing the object representing the date time picker control's child month calendar.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&3;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_6.cpp)]  
   
-##  <a name="getmonthcalfont"></a>CDateTimeCtrl::GetMonthCalFont  
- 取得目前的日期和時間選擇器控制項的月曆控制項所使用的字型。  
+##  <a name="getmonthcalfont"></a>  CDateTimeCtrl::GetMonthCalFont  
+ Gets the font currently used by the date and time picker control's month calendar control.  
   
 ```  
 CFont* GetMonthCalFont() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標[CFont](../../mfc/reference/cfont-class.md)物件，或**NULL**如果不成功。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a [CFont](../../mfc/reference/cfont-class.md) object, or **NULL** if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- `CFont`所指之傳回值的物件是暫存物件，並且被終結在下一步的閒置處理時間。  
+### <a name="remarks"></a>Remarks  
+ The `CFont` object pointed to by the return value is a temporary object and is destroyed during the next idle processing time.  
   
-##  <a name="getmonthcalstyle"></a>CDateTimeCtrl::GetMonthCalStyle  
- 取得下拉式月曆控制項與目前的日期和時間選擇器控制項相關聯的樣式。  
+##  <a name="getmonthcalstyle"></a>  CDateTimeCtrl::GetMonthCalStyle  
+ Gets the style of the drop-down month calendar control that is associated with the current date and time picker control.  
   
 ```  
 DWORD GetMonthCalStyle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 樣式下拉式月曆控制項，也就是位元的組合 （或者） 的日期和時間選擇器控制項的樣式。 如需詳細資訊，請參閱[月份行事曆控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。  
+### <a name="return-value"></a>Return Value  
+ The style of the drop-down month calendar control, which is a bitwise combination (OR) of date and time picker control styles. For more information, see [Month Calendar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760919).  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [DTM_GETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761763) message, which is described in the Windows SDK.  
   
-##  <a name="getrange"></a>CDateTimeCtrl::GetRange  
- 擷取目前的最小和最大允許系統時間的日期和時間選擇器控制項。  
+##  <a name="getrange"></a>  CDateTimeCtrl::GetRange  
+ Retrieves the current minimum and maximum allowed system times for a date and time picker control.  
   
 ```  
 DWORD GetRange(
@@ -289,32 +302,32 @@ DWORD GetRange(
     CTime* pMaxRange) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pMinRange`  
- 指標[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含在允許的最早時間`CDateTimeCtrl`物件。  
+ A pointer to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object or a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object containing the earliest time allowed in the `CDateTimeCtrl` object.  
   
  `pMaxRange`  
- 指標`COleDateTime`物件或`CTime`物件，其中包含在允許的最晚時間`CDateTimeCtrl`物件。  
+ A pointer to a `COleDateTime` object or a `CTime` object containing the latest time allowed in the `CDateTimeCtrl` object.  
   
-### <a name="return-value"></a>傳回值  
- A`DWORD`包含指出哪些範圍已設定的旗標的值。 如果  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value containing flags that indicate which ranges are set. If  
   
  `return value & GDTR_MAX` == 0  
   
- 然後第二個參數才有效。 同樣地，如果  
+ then the second parameter is valid. Similarly, if  
   
  `return value & GDTR_MIN` == 0  
   
- 然後第一個參數是有效的。  
+ then the first parameter is valid.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761767)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 在 MFC 的實作中，您可以指定`COleDateTime`或`CTime`的使用方式。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_GETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761767), as described in the Windows SDK. In MFC's implementation, you can specify either `COleDateTime` or `CTime` usages.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&4;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#4](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_7.cpp)]  
   
-##  <a name="gettime"></a>CDateTimeCtrl::GetTime  
- 擷取日期和時間選擇器控制項中目前選取的時間，並將它放在指定的`SYSTEMTIME`結構。  
+##  <a name="gettime"></a>  CDateTimeCtrl::GetTime  
+ Retrieves the currently selected time from a date and time picker control and puts it in a specified `SYSTEMTIME` structure.  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;  
@@ -322,78 +335,78 @@ DWORD GetTime(CTime& timeDest) const;
 DWORD GetTime(LPSYSTEMTIME pTimeDest) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *timeDest*  
- 第一版的參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)將會收到系統時間資訊的物件。 在第二個版本中，參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)將會收到系統時間資訊的物件。  
+ In the first version, a reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object that will receive the system time information. In the second version, a reference to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that will receive the system time information.  
   
  *pTimeDest*  
- 指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)接收系統時間資訊的結構。 不能**NULL**。  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure to receive the system time information. Must not be **NULL**.  
   
-### <a name="return-value"></a>傳回值  
- 在第一個版本中，如果要成功寫入的時間為非零`COleDateTime`物件，否則傳回 0。 在第二個和第三個版本中，`DWORD`值等於**dwFlag**成員集中[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構。 請參閱**備註**如需詳細資訊，如下一節。  
+### <a name="return-value"></a>Return Value  
+ In the first version, nonzero if the time is successfully written to the `COleDateTime` object; otherwise 0. In the second and third versions, a `DWORD` value equal to the **dwFlag** member set in the [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) structure. See the **Remarks** section below for more information.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 在 MFC 實作**GetTime**，您可以使用`COleDateTime`或`CTime`類別，或者您可以使用`SYSTEMTIME`結構，來儲存時間資訊。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_GETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761769), as described in the Windows SDK. In the MFC implementation of **GetTime**, you can use `COleDateTime` or `CTime` classes, or you can use a `SYSTEMTIME` structure, to store the time information.  
   
- 傳回值`DWORD`在第二個和第三個版本中，上述方式，表示日期和時間選擇器控制項是否設定為 「 沒有日期 」 狀態，如下所示[NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730)結構成員`dwFlags`。 如果傳回的值等於**GDT_NONE**，控制項設定為 「 沒有日期 」 狀態，並使用**DTS_SHOWNONE**樣式。 如果傳回的值等於**GDT_VALID**，系統時間已成功儲存在目的地位置。  
+ The return value `DWORD` in the second and third versions, above, indicates whether or not the date and time picker control is set to the "no date" status, as indicated in the [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) structure member `dwFlags`. If the value returned equals **GDT_NONE**, the control is set to "no date" status, and uses the **DTS_SHOWNONE** style. If the value returned equals **GDT_VALID**, the system time is successfully stored in the destination location.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&5;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#5](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_8.cpp)]  
   
-##  <a name="getidealsize"></a>CDateTimeCtrl::GetIdealSize  
- 傳回日期和時間選擇器控制項，顯示目前的日期或時間所需的理想大小。  
+##  <a name="getidealsize"></a>  CDateTimeCtrl::GetIdealSize  
+ Returns the ideal size of the date and time picker control that is required to display the current date or time.  
   
 ```  
 BOOL GetIdealSize(LPSIZE psize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[輸出] `psize`|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構，包含控制項的理想大小。|  
+|[out] `psize`|Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that contains the ideal size for the control.|  
   
-### <a name="return-value"></a>傳回值  
- 傳回值永遠是`true`。  
+### <a name="return-value"></a>Return Value  
+ The return value is always `true`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [DTM_GETIDEALSIZE](http://msdn.microsoft.com/library/windows/desktop/bb761757) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數， `m_dateTimeCtrl`，也就是用來以程式設計方式存取日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_dateTimeCtrl`, that is used to programmatically access the date and time picker control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會擷取顯示日期和時間選擇器控制項的理想大小。  
+### <a name="example"></a>Example  
+ The following code example retrieves the ideal size to display the date and time picker control.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&2;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_9.cpp)]  
   
-##  <a name="setformat"></a>Cdatetimectrl:: Setformat  
- 設定顯示的日期和時間選擇器控制項根據指定的格式字串。  
+##  <a name="setformat"></a>  CDateTimeCtrl::SetFormat  
+ Sets the display of a date and time picker control in accordance with a given format string.  
   
 ```  
 BOOL SetFormat(LPCTSTR pstrFormat);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *pstrFormat*  
- 定義所要的顯示零結尾的格式字串的指標。 此參數設定為**NULL**會將控制項重設目前的樣式的預設格式字串。  
+ A pointer to a zero-terminated format string that defines the desired display. Setting this parameter to **NULL** will reset the control to the default format string for the current style.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
 > [!NOTE]
->  使用者輸入不會判斷成功或失敗，此呼叫。  
+>  User input does not determine success or failure for this call.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_SETFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb761771)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_SETFORMAT](http://msdn.microsoft.com/library/windows/desktop/bb761771), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&6;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#6](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_10.cpp)]  
   
-##  <a name="setmonthcalcolor"></a>CDateTimeCtrl::SetMonthCalColor  
- 設定月曆的日期和時間選擇器控制項中的某個部分的色彩。  
+##  <a name="setmonthcalcolor"></a>  CDateTimeCtrl::SetMonthCalColor  
+ Sets the color for a given portion of the month calendar within a date and time picker control.  
   
 ```  
 COLORREF SetMonthCalColor(
@@ -401,33 +414,33 @@ COLORREF SetMonthCalColor(
     COLORREF ref);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `iColor`  
- `int`值，指定設定月曆控制項的哪個區域。 這個值可以是下列其中一個項目。  
+ `int` value specifying which area of the month calendar control to set. This value can be one of the following.  
   
-|值|意義|  
+|Value|Meaning|  
 |-----------|-------------|  
-|MCSC_BACKGROUND|設定背景色彩顯示幾個月之間。|  
-|MCSC_MONTHBK|設定每個月內顯示的背景色彩。|  
-|MCSC_TEXT|設定用來顯示每個月內文字的色彩。|  
-|MCSC_TITLEBK|設定行事曆的標題中顯示的背景色彩。|  
-|MCSC_TITLETEXT|設定用來顯示行事曆的標題中文字的色彩。|  
-|MCSC_TRAILINGTEXT|設定用來顯示標頭和結尾的日期文字的色彩。 標頭和結尾天數是從目前的行事曆會出現之前與之後月份的天數。|  
+|MCSC_BACKGROUND|Set the background color displayed between months.|  
+|MCSC_MONTHBK|Set the background color displayed within a month.|  
+|MCSC_TEXT|Set the color used to display text within a month.|  
+|MCSC_TITLEBK|Set the background color displayed in the calendar's title.|  
+|MCSC_TITLETEXT|Set the color used to display text within the calendar's title.|  
+|MCSC_TRAILINGTEXT|Set the color used to display header and trailing-day text. Header and trailing days are the days from the previous and following months that appear on the current calendar.|  
   
  `ref`  
- A **COLORREF**值，表示將月份行事曆的指定區域的色彩。  
+ A **COLORREF** value representing the color that will be set for the specified area of the month calendar.  
   
-### <a name="return-value"></a>傳回值  
- A **COLORREF**值，如果成功，表示月曆控制項的指定部分原來的色彩設定。 否則，訊息會傳回-1。  
+### <a name="return-value"></a>Return Value  
+ A **COLORREF** value that represents the previous color setting for the specified portion of the month calendar control if successful. Otherwise, the message returns -1.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_SETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761773)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_SETMCCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb761773), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor)。  
+### <a name="example"></a>Example  
+  See the example for [CDateTimeCtrl::GetMonthCalColor](#getmonthcalcolor).  
   
-##  <a name="setmonthcalfont"></a>Cdatetimectrl:: Setmonthcalfont  
- 設定將會使用日期和時間選擇器控制項的子系月曆控制項的字型。  
+##  <a name="setmonthcalfont"></a>  CDateTimeCtrl::SetMonthCalFont  
+ Sets the font that the date and time picker control's child month calendar control will use.  
   
 ```  
 void SetMonthCalFont(
@@ -435,53 +448,53 @@ void SetMonthCalFont(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hFont`  
- 將字型的控制代碼。  
+ Handle to the font that will be set.  
   
  `bRedraw`  
- 指定是否在控制項應該立即更新時設定字型。 此參數設定為**TRUE**會使控制項重繪其本身。  
+ Specifies whether the control should be redrawn immediately upon setting the font. Setting this parameter to **TRUE** causes the control to redraw itself.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_SETMCFONT](http://msdn.microsoft.com/library/windows/desktop/bb761775)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_SETMCFONT](http://msdn.microsoft.com/library/windows/desktop/bb761775), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&7;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#7](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_11.cpp)]  
   
 > [!NOTE]
->  如果您使用此程式碼，您要將您`CDialog`-衍生類別呼叫`m_MonthFont`型別的**CFont**。  
+>  If you use this code, you'll want to make a member of your `CDialog`-derived class called `m_MonthFont` of type **CFont**.  
   
-##  <a name="setmonthcalstyle"></a>CDateTimeCtrl::SetMonthCalStyle  
- 設定下拉式月曆控制項與目前的日期和時間選擇器控制項相關聯的樣式。  
+##  <a name="setmonthcalstyle"></a>  CDateTimeCtrl::SetMonthCalStyle  
+ Sets the style of the drop-down month calendar control that is associated with the current date and time picker control.  
   
 ```  
 DWORD SetMonthCalStyle(DWORD dwStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwStyle`|新的月份行事曆控制項樣式，也就是每月的行事曆控制項樣式位元組合 (OR)。 如需詳細資訊，請參閱[月份行事曆控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。|  
+|[in] `dwStyle`|A new month calendar control style, which is a bitwise combination (OR) of month calendar control styles. For more information, see [Month Calendar Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760919).|  
   
-### <a name="return-value"></a>傳回值  
- 上一個下拉式月曆控制項的樣式。  
+### <a name="return-value"></a>Return Value  
+ The previous style of the drop-down month calendar control.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [DTM_SETMCSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb761778) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數， `m_dateTimeCtrl`，也就是用來以程式設計方式存取日期和時間選擇器控制項。 下一個範例中會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines the variable, `m_dateTimeCtrl`, that is used to programmatically access the date and time picker control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&1;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_1.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會設定日期和時間選擇器控制項來顯示週數、 每週和任何今日指標的時代的縮寫名稱。  
+### <a name="example"></a>Example  
+ The following code example sets the date and time picker control to display week numbers, abbreviated names of days of the week, and no today indicator.  
   
- [!code-cpp[NVC_MFC_CDateTimeCtrl_s&#1;&3;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_12.cpp)]  
   
-##  <a name="setrange"></a>CDateTimeCtrl::SetRange  
- 設定日期和時間選擇器控制項的最小和最大允許的系統時間。  
+##  <a name="setrange"></a>  CDateTimeCtrl::SetRange  
+ Sets the minimum and maximum allowed system times for a date and time picker control.  
   
 ```  
 BOOL SetRange(
@@ -494,24 +507,24 @@ BOOL SetRange(
     const CTime* pMaxRange);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pMinRange`  
- 指標[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件或[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含在允許的最早時間`CDateTimeCtrl`物件。  
+ A pointer to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object or a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object containing the earliest time allowed in the `CDateTimeCtrl` object.  
   
  `pMaxRange`  
- 指標`COleDateTime`物件或`CTime`物件，其中包含在允許的最晚時間`CDateTimeCtrl`物件。  
+ A pointer to a `COleDateTime` object or a `CTime` object containing the latest time allowed in the `CDateTimeCtrl` object.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761780)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 在 MFC 的實作中，您可以指定`COleDateTime`或`CTime`的使用方式。 如果`COleDateTime`物件具有**NULL**狀態，將會移除範圍。 如果`CTime`指標或`COleDateTime`指標**NULL**，將會移除範圍。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761780), as described in the Windows SDK. In MFC's implementation, you can specify either `COleDateTime` or `CTime` usages. If the `COleDateTime` object has a **NULL** status, the range will be removed. If the `CTime` pointer or the `COleDateTime` pointer is **NULL**, the range will be removed.  
   
-### <a name="example"></a>範例  
-  請參閱範例[CDateTimeCtrl::GetRange](#getrange)。  
+### <a name="example"></a>Example  
+  See the example for [CDateTimeCtrl::GetRange](#getrange).  
   
-##  <a name="settime"></a>CDateTimeCtrl::SetTime  
- 日期和時間選擇器控制項中設定的時間。  
+##  <a name="settime"></a>  CDateTimeCtrl::SetTime  
+ Sets the time in a date and time picker control.  
   
 ```  
 BOOL SetTime(const COleDateTime& timeNew);  
@@ -519,25 +532,25 @@ BOOL SetTime(const CTime* pTimeNew);
 BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *timeNew*  
- 參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件，包含控制項設定。  
+ A reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object containing the to which the control will be set.  
   
  *pTimeNew*  
- 在上面的指標，第二個版本[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件，其中包含要將設定控制項的時間。 在第三個版本以上的指標[SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950)結構，其中包含要將設定控制項的時間。  
+ In the second version above, a pointer to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object containing the time to which the control will be set. In the third version above, a pointer to a [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure containing the time to which the control will be set.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息的行為[DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782)所述，在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 在 MFC 實作**SetTime**，您可以使用`COleDateTime`或`CTime`類別，或者您可以使用`SYSTEMTIME`結構，來設定的時間資訊。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [DTM_SETSYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/bb761782), as described in the Windows SDK. In the MFC implementation of **SetTime**, you can use the `COleDateTime` or `CTime` classes, or you can use a `SYSTEMTIME` structure, to set the time information.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CDateTimeCtrl #&8;](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)   
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CMonthCalCtrl 類別](../../mfc/reference/cmonthcalctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample CMNCTRL1](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CMonthCalCtrl Class](../../mfc/reference/cmonthcalctrl-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "mask_array 類別 | Microsoft Docs"
+title: mask_array Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- mask_array
 - valarray/std::mask_array
 dev_langs:
 - C++
@@ -35,28 +34,28 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bdc17f9cd2964cc18895b7fe4063aabd054268a1
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f2e587423bbd706ac732180872a56db920f661a1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="maskarray-class"></a>mask_array 類別
-可藉由提供子集之間的作業，以布林運算式指定，並支援父代 valarray 子集物件的內部、輔助的範本類別。  
+# <a name="maskarray-class"></a>mask_array Class
+An internal, auxiliary template class that supports objects that are subsets of parent valarrays, specified with a Boolean expression, by providing operations between the subset arrays.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
   
   
-## <a name="remarks"></a>備註  
- 此類別描述一個物件，該物件會將對 [valarray](../standard-library/valarray-class.md)**\<Type>** 類別之 **va** 物件的參考與 [valarray\<bool>](../standard-library/valarray-bool-class.md) 類別的 **ba** 物件儲存在一起，後者描述要從 **valarray\<Type>** 物件選取的元素序列。  
+## <a name="remarks"></a>Remarks  
+ The class describes an object that stores a reference to an object **va** of class [valarray](../standard-library/valarray-class.md)**\<Type>**, along with an object **ba** of class [valarray\<bool>](../standard-library/valarray-bool-class.md), which describes the sequence of elements to select from the **valarray\<Type>** object.  
   
- 您只能藉由撰寫 [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at) 格式的運算式來建構 **mask_array\<Type>** 物件。 mask_array 類別的成員函式會接著像針對 **valarray\<Type>** 定義的對應函式簽章一樣運作，不同的是，只有選取的元素序列會受到影響。  
+ You construct a **mask_array\<Type>** object only by writing an expression of the form [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). The member functions of class mask_array then behave like the corresponding function signatures defined for **valarray\<Type>**, except that only the sequence of selected elements is affected.  
   
- 序列最多包含 **ba.size** 個項目。 只有在 *ba* [ **J**] 為 true 時才會包含項目 *J*。 因此，序列中的項目數會和 **ba**中的 true 項目數相同。 如果 `I` 是 **ba**中最低 true 項目的索引，則 **va**[ `I`] 便是選取之序列中的第零個項目。  
+ The sequence consists of at most **ba.size** elements. An element *J* is included only if **ba**[ *J*] is true. Thus, there are as many elements in the sequence as there are true elements in **ba**. If `I` is the index of the lowest true element in **ba**, then **va**[ `I`] is element zero in the selected sequence.  
   
-## <a name="example"></a>範例：  
+## <a name="example"></a>Example:  
   
 ```  
 // mask_array.cpp  
@@ -90,19 +89,19 @@ int main( )
 }  
 ```  
   
-### <a name="output"></a>輸出  
+### <a name="output"></a>Output  
   
 ```  
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).  
 The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

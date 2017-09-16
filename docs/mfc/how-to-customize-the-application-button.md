@@ -1,66 +1,85 @@
 ---
-title: "如何：自訂應用程式按鈕 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式按鈕, 自訂"
+title: 'How to: Customize the Application Button | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 如何：自訂應用程式按鈕
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28a3c05e9df5e3bb62e5019e3664a939a34e8b29
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當您按一下應用程式按鈕時，命令功能表隨即顯示。  通常，功能表包含檔案相關的命令 \(例如 \[**開啟**\]、 \[**儲存**\]、 \[**列印**\] 和 \[**匯出**\]。  
+---
+# <a name="how-to-customize-the-application-button"></a>How to: Customize the Application Button
+When you click the Application button, a menu of commands is displayed. Typically, the menu contains file-related commands such as **Open**, **Save**, **Print**, and **Exit**.  
   
- ![MFC 功能區應用程式按鈕](../mfc/media/application_button.png "Application\_Button")  
+ ![MFC Ribbon Application Button](../mfc/media/application_button.png "application_button")  
   
- 若要自訂應用程式按鈕，開啟它在 \[**屬性**\] 視窗中，修改它的屬性，然後預覽功能區控制項。  
+ To customize the Application button, open it in the **Properties** window, modify its properties, and then preview the ribbon control.  
   
-### 若要開啟應用程式會在屬性視窗  
+### <a name="to-open-the-application-button-in-the-properties-window"></a>To open the Application button in the Properties window  
   
-1.  在 Visual Studio 中，按一下 \[**檢視**\] 功能表上，按一下 \[**資源檢視**\]。  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  在 \[**資源檢視**\] 中，按兩下功能區資源顯示在設計介面上。  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-3.  在設計介面上，以滑鼠右鍵按一下應用程式按鈕功能表然後按一下 \[**屬性**\]。  
+3.  On design surface, right-click the Application button menu and then click **Properties**.  
   
-## 應用程式按鈕屬性。  
- 下表定義應用程式按鈕的屬性。  
+## <a name="application-button-properties"></a>Application Button Properties  
+ The following table defines the properties of the Application button.  
   
-|屬性|定義|  
-|--------|--------|  
-|**按鈕**|包含會出現在應用程式功能表的右下角三個按鈕的集合。|  
-|**Caption**|指定控制項的文字。  不同於其他功能區項目，應用程式按鈕不顯示標題文字。  相反地，文字為協助工具使用。|  
-|**HDPI 影像**|指定高 Dots Per Inch \(HDPI\) 應用程式按鈕之圖示的識別項。  當應用程式在高 DPI 監視器執行 \[**HDPI 影像**\] ，而不是 \[**影像**\]。|  
-|**HDPI Large Images**|指定高 DPI 大型影像的識別項。  當應用程式在高 DPI 監視器執行 \[**HDPI Large Images**\] ，而不是 \[**大型影像**\]。|  
-|**HDPI Small Images**|指定高 DPI 小型影像的識別項。  當應用程式在高 DPI 監視器執行 \[**HDPI Small Images**\] ，而不是 \[**小型影像**\]。|  
-|**ID**|指定控制項的識別項。|  
-|**Image**|指定應用程式按鈕之圖示的識別項。  圖示是有 Alpha 透明度的 32 位元 26x26 點陣圖。  當應用程式按下按鈕或停留時，圖示的透明部分會反白顯示。|  
-|**索引鍵**|指定顯示的字串，做為索引鍵提示巡覽時。  當您按下 ALT 鍵時，提示巡覽啟用。|  
-|**大型影像**|指定影像的識別項那個包含一系列 32x32 圖示。  按鈕以顯示在主要項目集合。|  
-|**主項目**|包含會出現在應用程式功能表的功能表項目的集合。|  
-|**MRU 標題**|在最近清單指定面板中顯示的文字。|  
-|**小型影像**|指定影像的識別項那個包含一系列 16x16 圖示。  按鈕使用圖示按鈕集合。|  
-|**用法**|啟用或停用最近清單面板。  最近清單面板會出現在應用程式功能表。|  
-|**Width**|在最近清單指定面板的像素寬度。|  
+|Property|Definition|  
+|--------------|----------------|  
+|**Buttons**|Contains the collection of up to three buttons that appear in the bottom-right corner of the Application menu.|  
+|**Caption**|Specifies the text of the control. Unlike other ribbon elements, the Application button does not display caption text. Instead, the text is used for accessibility.|  
+|**HDPI Image**|Specifies the identifier of the high dots per inch (HDPI) Application button icon. When the application runs on a high DPI monitor, **HDPI Image** is used instead of **Image**.|  
+|**HDPI Large Images**|Specifies the identifier of the high DPI large images. When the application runs on a high DPI monitor, **HDPI Large Images** is used instead of **Large Images**.|  
+|**HDPI Small Images**|Specifies the identifier of the high DPI small images. When the application runs on a high DPI monitor, **HDPI Small Images** is used instead of **Small Images**.|  
+|**ID**|Specifies the identifier of the control.|  
+|**Image**|Specifies the identifier of the Application button icon. The icon is a 32-bit 26x26 bitmap that has alpha transparency. The transparent portions of the icon are highlighted when the Application button is clicked or hovered over.|  
+|**Keys**|Specifies the string that is displayed when key-tip navigation is enabled. Key-tip navigation is enabled when you press ALT.|  
+|**Large Images**|Specifies the identifier of the image that contains a series of 32x32 icons. The icons are used by the buttons in the Main Items collection.|  
+|**Main Items**|Contains a collection of menu items that appear on the Application menu.|  
+|**MRU Caption**|Specifies the text displayed on the Recent List panel.|  
+|**Small Images**|Specifies the identifier of the image that contains a series of 16x16 icons. The icons are used by the buttons in the Buttons collection.|  
+|**Use**|Enables or disables the Recent List panel. The Recent List panel appears on the Application menu.|  
+|**Width**|Specifies the width in pixels of the Recent List panel.|  
   
- 應用程式功能表不會出現在設計介面上。  若要檢視，您必須預覽功能區或執行應用程式。  
+ The Application menu does not appear on the design surface. To view it, you must either preview the ribbon or run the application.  
   
-#### 預覽功能區控制項  
+#### <a name="to-preview-the-ribbon-control"></a>To preview the ribbon control  
   
--   在 \[**功能區編輯器工具列**\] 中，按一下 \[**測試功能區**\]。  
+-   On the **Ribbon Editor Toolbar**, click **Test Ribbon**.  
   
-## 請參閱  
- [功能區設計工具 \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

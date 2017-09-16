@@ -1,5 +1,5 @@
 ---
-title: "char_traits&lt;char32_t&gt; 結構 | Microsoft Docs"
+title: char_traits&lt;char32_t&gt; Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,32 +34,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 1f3d57902c4da909672f48f40f2b916485c63566
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: edf2be9a3848e926f4da256d130210da74a9e935
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt; 結構
-結構，其為類型 `char32_t` 之元素的樣板結構 **char_traits\<CharType>** 的特製化。  
+# <a name="chartraitsltchar32tgt-struct"></a>char_traits&lt;char32_t&gt; Struct
+A struct that is a specialization of the template struct **char_traits\<CharType>** to an element of type `char32_t`.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>  
 struct char_traits<char32_t>;
 ```  
   
-## <a name="remarks"></a>備註  
- 特製化可讓結構利用操作此 `char32_t` 類型物件的程式庫函式。  
+## <a name="remarks"></a>Remarks  
+ Specialization allows the struct to take advantage of library functions that manipulate objects of this type `char32_t`.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<string>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<string>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<string>](../standard-library/string.md)   
- [char_traits 結構](../standard-library/char-traits-struct.md)
+ [char_traits Struct](../standard-library/char-traits-struct.md)
 

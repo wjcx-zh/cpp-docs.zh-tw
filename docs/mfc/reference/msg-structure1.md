@@ -1,66 +1,84 @@
 ---
-title: "MSG 結構 1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MSG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MSG 結構"
+title: MSG Structure1 | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MSG
+dev_langs:
+- C++
+helpviewer_keywords:
+- MSG structure [MFC]
 ms.assetid: dc166d27-9423-41f1-9599-5ba76d2f0138
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# MSG 結構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2c07f74157d8bcccb9c5b23727ce0a9107bfb51b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-`MSG` 結構包含來自執行緒之訊息佇列的訊息資訊。  
+---
+# <a name="msg-structure1"></a>MSG Structure1
+The `MSG` structure contains message information from a thread's message queue.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-  
-      typedef struct tagMSG {     // msg    
-   HWND hwnd;  
-   UINT message;  
-   WPARAM wParam;  
-   LPARAM lParam;  
-   DWORD time;  
-   POINT pt;  
+typedef struct tagMSG {     // msg    
+    HWND hwnd;  
+    UINT message;  
+    WPARAM wParam;  
+    LPARAM lParam;  
+    DWORD time;  
+    POINT pt;  
 } MSG;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>Parameters  
  *hwnd*  
- 識別視窗程序會接收訊息的視窗。  
+ Identifies the window whose window procedure receives the message.  
   
  `message`  
- 指定訊息號碼。  
+ Specifies the message number.  
   
  `wParam`  
- 指定訊息的其他資訊。  確切意義取決於訊息成員的值。  
+ Specifies additional information about the message. The exact meaning depends on the value of the **message** member.  
   
  `lParam`  
- 指定訊息的其他資訊。  確切意義取決於訊息成員的值。  
+ Specifies additional information about the message. The exact meaning depends on the value of the **message** member.  
   
  `time`  
- 指定公佈訊息的時間。  
+ Specifies the time at which the message was posted.  
   
  `pt`  
- 當公佈訊息，指定游標位置，螢幕座標的。  
+ Specifies the cursor position, in screen coordinates, when the message was posted.  
   
-## 需求  
- **Header:** 中  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## 請參閱  
- [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
+
+

@@ -1,44 +1,63 @@
 ---
-title: "使用樹狀目錄控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 類別, 使用"
-  - "樹狀目錄控制項, 關於樹狀目錄控制項"
+title: Using Tree Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], using
+- tree controls [MFC], about tree controls
 ms.assetid: 4e92941a-e477-4fb1-b1ce-4abeafbef1c1
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用樹狀目錄控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 906a4ba64103450e4c2d8e0496a33bd9543122e0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 的一般使用方式會遵循下列模式:  
+---
+# <a name="using-tree-controls"></a>Using Tree Controls
+Typical usage of a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) follows the pattern below:  
   
--   會建立控制項。  如果控制項在對話方塊樣板指定或，如果您使用 `CTreeView`，建立是自動的，在這個對話方塊或檢視建立時。  如果您要建立樹狀目錄控制項初始化為子視窗的視窗中，使用 [建立](../Topic/CTreeCtrl::Create.md) 成員函式。  
+-   The control is created. If the control is specified in a dialog box template or if you're using `CTreeView`, creation is automatic when the dialog box or view is created. If you want to create the tree control as a child window of some other window, use the [Create](../mfc/reference/ctreectrl-class.md#create) member function.  
   
--   如果您希望樹狀目錄控制項使用影像，藉由呼叫 [SetImageList](../Topic/CTreeCtrl::SetImageList.md)設定影像清單。  您可以藉由呼叫 [SetIndent](../Topic/CTreeCtrl::SetIndent.md)來變更縮排。  的好時機會在 [OnInitDialog](../Topic/CDialog::OnInitDialog.md) \(在對話方塊的控制項\) 或 [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) \(檢視\)。  
+-   If you want your tree control to use images, set an image list by calling [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist). You can also change the indentation by calling [SetIndent](../mfc/reference/ctreectrl-class.md#setindent). A good time to do this is in [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) (for controls in dialog boxes) or [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) (for views).  
   
--   將命令加入至資料控制項呼叫 `CTreeCtrl` [InsertItem](../Topic/CTreeCtrl::InsertItem.md) 為每個資料項目一次運作。  `InsertItem` 傳回的控制代碼。您可以使用中參考它的項目，例如，當加入子項目時。  的好時機初始化資料為 `OnInitDialog` \(在對話方塊的控制項\) 或 `OnInitialUpdate` \(檢視\)。  
+-   Put data into the control by calling the `CTreeCtrl`'s [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) function once for each data item. `InsertItem` returns a handle to the item you can use to refer to it later, such as when adding child items. A good time to initialize the data is in `OnInitDialog` (for controls in dialog boxes) or `OnInitialUpdate` (for views).  
   
--   因為使用者與控制項互動，它會傳送各種告知訊息。  您可以指定函式處理要處理將在控制項視窗的訊息對應的 **ON\_NOTIFY\_REFLECT** 巨集或將 `ON_NOTIFY` 巨集加入至父視窗的訊息對應的每個訊息。  為可能的通知清單後請參閱本主題稍後的 [樹狀目錄控制項通知訊息](../mfc/tree-control-notification-messages.md) 。  
+-   As the user interacts with the control, it will send various notification messages. You can specify a function to handle each of the messages you want to handle by adding an **ON_NOTIFY_REFLECT** macro in your control window's message map or by adding an `ON_NOTIFY` macro to your parent window's message map. See [Tree Control Notification Messages](../mfc/tree-control-notification-messages.md) later in this topic for a list of possible notifications.  
   
--   呼叫各種成員函式對控制項的值。  變更可以設定縮排和變更文字、影像或資料包括與項目。  
+-   Call the various Set member functions to set values for the control. Changes that you can make include setting the indentation and changing the text, image, or data associated with an item.  
   
--   使用各種 Get 函式檢查控制項的內容。  您也可以周遊樹狀目錄控制項的內容可讓您擷取控制代碼給父、指定之項目的子系和同層級的函式。  您甚至可以排序特定節點的子系。  
+-   Use the various Get functions to examine the contents of the control. You can also traverse the contents of the tree control with functions that allow you to retrieve handles to parents, children, and siblings of a specified item. You can even sort the children of a particular node.  
   
--   當您在使用控制項時，請確定正確地終止。  如果樹狀目錄控制項在對話方塊中，或者是檢視，將自動終結和 `CTreeCtrl` 物件。  否則，您必須確保適當地終結控制項和 `CTreeCtrl` 物件。  
+-   When you're done with the control, make sure it's properly destroyed. If the tree control is in a dialog box or if it's a view, it and the `CTreeCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CTreeCtrl` object are properly destroyed.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

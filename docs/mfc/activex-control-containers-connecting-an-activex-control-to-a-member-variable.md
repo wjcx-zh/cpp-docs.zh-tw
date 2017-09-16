@@ -1,52 +1,71 @@
 ---
-title: "ActiveX 控制項容器：將 ActiveX 控制項連接至成員變數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項容器 [C++], 存取 ActiveX 控制項"
-  - "ActiveX 控制項容器 [C++], ActiveX 控制項做為成員變數"
-  - "ActiveX 控制項 [C++], 存取"
-  - "ActiveX 控制項 [C++], 專案的成員變數"
-  - "將 ActiveX 控制項連接到容器成員變數"
-  - "成員變數 [C++], 專案中的 ActiveX 控制項"
+title: 'ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], accessing ActiveX controls
+- ActiveX controls [MFC], member variables of project
+- connecting ActiveX controls to container member variables
+- ActiveX controls [MFC], accessing
+- member variables [MFC], ActiveX controls in project
+- ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# ActiveX 控制項容器：將 ActiveX 控制項連接至成員變數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d79444d098c1946f6cd54d8d904a06c17923c3f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-存取 ActiveX 控制項與其控制項容器應用程式中與關聯 ActiveX 控制項與將包含控制項的對話方塊類別的成員變數。  
+---
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable
+The easiest way to access an ActiveX control from within its control container application is to associate the ActiveX control with a member variable of the dialog class that will contain the control.  
   
 > [!NOTE]
->  這不是唯一可以存取內嵌控制項從容器類別的內部，不過，為本文即可。  
+>  This is not the only way to access an embedded control from within a container class, but for the purposes of this article it is sufficient.  
   
-### 將成員變數加入至對話方塊類別。  
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>Adding a member variable to the dialog class  
   
-1.  從類別檢視中，以滑鼠右鍵按一下主對話方塊類別開啟捷徑功能表。  例如 `CContainerDlg`。  
+1.  From Class View, right-click the main dialog class to open the shortcut menu. For example, `CContainerDlg`.  
   
-2.  從捷徑功能表上按一下**加入**，然後按一下 \[**加入變數**\]。  
+2.  From the shortcut menu, click **Add** and then **Add Variable**.  
   
-3.  在加入成員變數精靈中，按一下 **Control variable**。  
+3.  In the Add Member Variable Wizard, click **Control variable**.  
   
-4.  在 **Control ID** 清單方塊中，選取內嵌 ActiveX 控制項的控制項 ID。  例如 `IDC_CIRCCTRL1`。  
+4.  In the **Control ID** list box, select the control ID of the embedded ActiveX control. For example, `IDC_CIRCCTRL1`.  
   
-5.  在**變數名稱** 方塊中，輸入名稱。  
+5.  In the **Variable Name** box, enter a name.  
   
-     例如 `m_circctl`。  
+     For example, `m_circctl`.  
   
-6.  按一下 **Finish** 接受您的索引和結尾加入成員變數精靈。  
+6.  Click **Finish** to accept your choices and exit the Add Member Variable Wizard.  
   
-## 請參閱  
- [ActiveX 控制項容器](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

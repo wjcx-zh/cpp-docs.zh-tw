@@ -1,74 +1,92 @@
 ---
-title: "在應用程式中使用屬性工作表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddPage 方法"
-  - "CPropertyPage 類別, 樣式"
-  - "Create 方法 [C++], 屬性工作表"
-  - "對話方塊資源"
-  - "對話方塊範本, 屬性工作表"
-  - "DoModal 方法屬性工作表"
-  - "屬性頁, 屬性工作表"
-  - "屬性工作表, 關於屬性工作表"
+title: Using Property Sheets in Your Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog templates [MFC], property sheets
+- dialog resources
+- property pages [MFC], property sheets
+- DoModal method property sheets
+- AddPage method [MFC]
+- property sheets, about property sheets
+- Create method [MFC], property sheets
+- CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 在應用程式中使用屬性工作表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 45c1c305309c7136dc3b749bb1489c818764479b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-若要使用屬性工作表在您的應用程式，請完成下列步驟:  
+---
+# <a name="using-property-sheets-in-your-application"></a>Using Property Sheets in Your Application
+To use a property sheet in your application, complete the following steps:  
   
-1.  建立每個屬性頁的對話方塊範本資源。  記住使用者可能轉換一頁到另一個，因此，盡可能相同一致地規劃每頁。  
+1.  Create a dialog template resource for each property page. Keep in mind that the user may be switching from one page to another, so lay out each page as consistently as possible.  
   
-     所有頁面的對話方塊範本不需要有相同的大小。  架構會使用最大頁面的大小決定配置多少空間屬性上的屬性工作表呼叫。  
+     The dialog templates for all pages do not have to be the same size. The framework uses the size of the largest page to determine how much space to allocate in the property sheet for the property pages.  
   
-     當您建立屬性頁時對話方塊樣板資源，您必須在對話方塊屬性屬性工作表指定下列模式:  
+     When you create the dialog template resource for a property page, you must specify the following styles in the Dialog Properties property sheet:  
   
-    -   設定 **General** 頁面的 **Caption** 編輯方塊對您希望出現在頁面上的選項的文字。  
+    -   Set the **Caption** edit box on the **General** page to the text you wish to appear in the tab for this page.  
   
-    -   設定在 **Styles** 頁面的 **Style** 清單方塊對 **Child**。  
+    -   Set the **Style** list box on the **Styles** page to **Child**.  
   
-    -   設定在 **Styles** 頁面的 **Border** 清單方塊對 **Thin**。  
+    -   Set the **Border** list box on the **Styles** page to **Thin**.  
   
-    -   確定選取在 **Styles** 頁面的 **Titlebar** 核取方塊。  
+    -   Ensure that the **Titlebar** check box on the **Styles** page is selected.  
   
-    -   確定選取在 **More Styles** 頁面的 **Disabled** 核取方塊。  
+    -   Ensure that the **Disabled** check box on the **More Styles** page is selected.  
   
-2.  建立 [CPropertyPage](../mfc/reference/cpropertypage-class.md) 衍生類別與每個屬性頁對話方塊範本對應。  請參閱 [加入類別](../ide/adding-a-class-visual-cpp.md)。  選取 `CPropertyPage` 做為基底類別。  
+2.  Create a [CPropertyPage](../mfc/reference/cpropertypage-class.md)-derived class corresponding to each property page dialog template. See [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose `CPropertyPage` as the base class.  
   
-3.  建立成員變數來保存這個屬性頁的值。  因為屬性頁是特定對話方塊，加入成員變數傳入屬性頁完全相同。將成員變數加入至對話方塊。  如需詳細資訊，請參閱 [定義對話方塊控制項的成員變數](../mfc/defining-member-variables-for-dialog-controls.md)。  
+3.  Create member variables to hold the values for this property page. The process for adding member variables to a property page is exactly the same as adding member variables to a dialog box, because a property page is a specialized dialog box. For more information, see [Defining Member Variables for Dialog Controls](../windows/defining-member-variables-for-dialog-controls.md).  
   
-4.  建構一個 [CPropertySheet](../mfc/reference/cpropertysheet-class.md) 物件在原始程式碼。  通常，您可以在處理常式的 `CPropertySheet` 物件顯示屬性工作表的命令。  這個物件代表整個屬性工作表。  如果您使用 [DoModal](../Topic/CPropertySheet::DoModal.md) 建立函式的強制回應屬性工作表，根據預設架構提供三個命令按鈕: 好、移除和同意。  架構不建立非強制回應屬性工作表的按鈕會使用 [建立](../Topic/CPropertySheet::Create.md) 函式。  您不需要衍生自 `CPropertySheet` 的類別，除非您要加入其他控制項 \(例如預覽視窗\) 或顯示非強制回應的屬性工作表。  此步驟為非強制回應的屬性工作表是必要的，因為它們不包含可以用來關閉屬性工作表的任何預設控制項。  
+4.  Construct a [CPropertySheet](../mfc/reference/cpropertysheet-class.md) object in your source code. Usually, you construct the `CPropertySheet` object in the handler for the command that displays the property sheet. This object represents the entire property sheet. If you create a modal property sheet with the [DoModal](../mfc/reference/cpropertysheet-class.md#domodal) function, the framework supplies three command buttons by default: OK, Cancel, and Apply. The framework creates no command buttons for modeless property sheets created with the [Create](../mfc/reference/cpropertysheet-class.md#create) function. You do not need to derive a class from `CPropertySheet` unless you want to either add other controls (such as a preview window) or display a modeless property sheet. This step is necessary for modeless property sheets because they do not contain any default controls that could be used to close the property sheet.  
   
-5.  對於每個頁面加入至屬性工作表，請執行下列步驟:  
+5.  For each page to be added to the property sheet, do the following:  
   
-    -   在這個程序建立之前建構 `CPropertyPage`衍生類別的每一個物件。  
+    -   Construct one object for each `CPropertyPage`-derived class that you created earlier in this process.  
   
-    -   在每個網頁上呼叫 [CPropertySheet::AddPage](../Topic/CPropertySheet::AddPage.md) 。  
+    -   Call [CPropertySheet::AddPage](../mfc/reference/cpropertysheet-class.md#addpage) for each page.  
   
-     通常，建立 `CPropertySheet` 的物件會在這個步驟建立 `CPropertyPage` 物件。  不過，如果您實作 `CPropertySheet`衍生類別，您可以在 `CPropertySheet` 物件上的 `CPropertyPage` 物件和呼叫每個頁面的 `AddPage` 從 `CPropertySheet`衍生類別的建構函式。  `AddPage` 中加入頁面屬性工作表清單的 `CPropertyPage` 物件，但實際上不會建立該頁面的視窗。  因此，等候直到屬性工作表視窗的建立 `AddPage`呼叫是不必要的;您可以從屬性工作表的建構函式的 `AddPage` 呼叫。  
+     Typically, the object that creates the `CPropertySheet` also creates the `CPropertyPage` objects in this step. However, if you implement a `CPropertySheet`-derived class, you can embed the `CPropertyPage` objects in the `CPropertySheet` object and call `AddPage` for each page from the `CPropertySheet`-derived class constructor. `AddPage` adds the `CPropertyPage` object to the property sheet's list of pages but does not actually create the window for that page. Therefore, it is not necessary to wait until creation of the property sheet window to call `AddPage`; you can call `AddPage` from the property sheet's constructor.  
   
-     根據預設，如果屬性工作表會符合屬性工作表中有更多選項單行，選項在多行將堆疊。  若要停用堆疊，請呼叫 [CPropertySheet::EnableStackedTabs](../Topic/CPropertySheet::EnableStackedTabs.md) 將參數設定為 **FALSE**。  在建立屬性工作表時，您必須呼叫 `EnableStackedTabs` 。  
+     By default, if a property sheet has more tabs than will fit in a single row of the property sheet, the tabs will stack in multiple rows. To disable stacking, call [CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs) with the parameter set to **FALSE**. You must call `EnableStackedTabs` when you create the property sheet.  
   
-6.  呼叫 [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) 或 [建立](../Topic/CPropertySheet::Create.md) 顯示屬性工作表。  呼叫 `DoModal` 來建立屬性工作表為強制回應對話方塊。  呼叫 **Create** 建立屬性工作表為非強制回應對話方塊。  
+6.  Call [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) or [Create](../mfc/reference/cpropertysheet-class.md#create) to display the property sheet. Call `DoModal` to create a property sheet as a modal dialog box. Call **Create** to create the property sheet as a modeless dialog box.  
   
-7.  在屬性頁和屬性工作表的擁有人之間交換資料。  這在文件 [交換資料](../mfc/exchanging-data.md)中說明。  
+7.  Exchange data between property pages and the owner of the property sheet. This is explained in the article [Exchanging Data](../mfc/exchanging-data.md).  
   
- 如需如何使用屬性工作表，請參閱 MFC 一般 [PROPDLG](../top/visual-cpp-samples.md)範例。  
+ For an example of how to use property sheets, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## 請參閱  
- [屬性工作表](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

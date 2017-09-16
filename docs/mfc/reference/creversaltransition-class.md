@@ -1,5 +1,5 @@
 ---
-title: "CReversalTransition 類別 |Microsoft 文件"
+title: CReversalTransition Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,7 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CReversalTransition class
+- CReversalTransition [MFC], CReversalTransition
+- CReversalTransition [MFC], Create
+- CReversalTransition [MFC], m_duration
 ms.assetid: e89516be-2d07-4885-95a8-fc278f46e3ad
 caps.latest.revision: 18
 author: mikeblome
@@ -37,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 028ea275cc345513248e76dcf5b0eba931823b7a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 923c1c38a77e9f51194a0b4a319bf06a1b3bf0da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creversaltransition-class"></a>CReversalTransition 類別
-封裝反轉的轉換。  
+# <a name="creversaltransition-class"></a>CReversalTransition Class
+Encapsulates a reversal transition.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CReversalTransition : public CBaseTransition;  
@@ -55,39 +57,39 @@ class CReversalTransition : public CBaseTransition;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CReversalTransition::CReversalTransition](#creversaltransition)|建構反轉轉換物件並初始化其持續時間。|  
+|[CReversalTransition::CReversalTransition](#creversaltransition)|Constructs a reversal transition object and initializes its duration.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CReversalTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
+|[CReversalTransition::Create](#create)|Calls the transition library to create encapsulated transition COM object. (Overrides [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CReversalTransition::m_duration](#m_duration)|轉換的持續時間。|  
+|[CReversalTransition::m_duration](#m_duration)|The duration of the transition.|  
   
-## <a name="remarks"></a>備註  
- 反轉的轉換順利變更方向指定持續期間。 最後的值是相同的初始值，而且最終的速度的初始速度負值。 因為所有的轉換會自動清除，建議配置它們使用新的運算子。 封裝 IUIAnimationTransition 建立 COM 物件是由 CAnimationController::AnimateGroup，直到則為 NULL。 之後建立的 COM 物件沒有任何作用，請變更成員變數。  
+## <a name="remarks"></a>Remarks  
+ A reversal transition smoothly changes direction over a given duration. The final value will be the same as the initial value and the final velocity will be the negative of the initial velocity. Because all transitions are cleared automatically, it's recommended to allocated them using operator new. The encapsulated IUIAnimationTransition COM object is created by CAnimationController::AnimateGroup, until then it's NULL. Changing member variables after creation of this COM object has no effect.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseTransition](../../mfc/reference/cbasetransition-class.md)  
   
  [CReversalTransition](../../mfc/reference/creversaltransition-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="create"></a>CReversalTransition::Create  
- 呼叫轉換程式庫來建立封裝的轉換 COM 物件。  
+##  <a name="create"></a>  CReversalTransition::Create  
+ Calls the transition library to create encapsulated transition COM object.  
   
 ```  
 virtual BOOL Create(
@@ -95,31 +97,31 @@ virtual BOOL Create(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pLibrary`  
- 這是負責建立的標準轉換轉換程式庫指標。  
+ A pointer to transition library, which is responsible for creation of standard transitions.  
   
-### <a name="return-value"></a>傳回值  
- 如果轉換成功; 建立，則為 TRUE。否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if transition is created successfully; otherwise FALSE.  
   
-##  <a name="creversaltransition"></a>CReversalTransition::CReversalTransition  
- 建構反轉轉換物件並初始化其持續時間。  
+##  <a name="creversaltransition"></a>  CReversalTransition::CReversalTransition  
+ Constructs a reversal transition object and initializes its duration.  
   
 ```  
 CReversalTransition(UI_ANIMATION_SECONDS duration);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `duration`  
- 轉換的持續時間。  
+ The duration of the transition.  
   
-##  <a name="m_duration"></a>CReversalTransition::m_duration  
- 轉換的持續時間。  
+##  <a name="m_duration"></a>  CReversalTransition::m_duration  
+ The duration of the transition.  
   
 ```  
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

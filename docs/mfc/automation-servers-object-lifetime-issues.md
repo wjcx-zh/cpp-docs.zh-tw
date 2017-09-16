@@ -1,42 +1,61 @@
 ---
-title: "Automation 伺服程式：物件存留期問題 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Automation 伺服程式, 物件存留期"
-  - "存留期, Automation 伺服程式"
-  - "物件 [C++], 存留期"
-  - "伺服器, Automation 的存留期"
+title: 'Automation Servers: Object-Lifetime Issues | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [MFC], lifetime
+- lifetime, automation server
+- Automation servers, object lifetime
+- servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Automation 伺服程式：物件存留期問題
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ffb133e595e8367b2c454e2c77b3e453d65f4afe
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當 Automation 用戶端建立或啟動 OLE 項目時，伺服器透過用戶端傳遞指標給該物件。  用戶端藉由呼叫 OLE 函式 [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) 建立對物件的參考。  這個參考直到用戶端呼叫 [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317) 為止都會是有效的。\(以 MFC 程式庫的 OLE 類別撰寫的用戶端應用程式不需要建立這些呼叫；架構也是如此\)。這個 OLE 系統和伺服器可能會建立對物件的參考。  只要物件的外部參考仍然有效，伺服器不應終結物件。  
+---
+# <a name="automation-servers-object-lifetime-issues"></a>Automation Servers: Object-Lifetime Issues
+When an Automation client creates or activates an OLE item, the server passes the client a pointer to that object. The client establishes a reference to the object through a call to the OLE function [IUnknown::AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379). This reference is in effect until the client calls [IUnknown::Release](http://msdn.microsoft.com/library/windows/desktop/ms682317). (Client applications written with the Microsoft Foundation Class Library's OLE classes need not make these calls; the framework does so.) The OLE system and the server itself may establish references to the object. A server should not destroy an object as long as external references to the object remain in effect.  
   
- 架構會維護一個內部計數，計算衍生自 [CCmdTarget](../mfc/reference/ccmdtarget-class.md) 的任何伺服器物件的參考之數目。  當 Automation 用戶端或其他實體加入或釋放對物件的參考時，這個計數會更新。  
+ The framework maintains an internal count of the number of references to any server object derived from [CCmdTarget](../mfc/reference/ccmdtarget-class.md). This count is updated when an Automation client or other entity adds or releases a reference to the object.  
   
- 當參考計數變成 0 時，架構會呼叫虛擬函式 [CCmdTarget::OnFinalRelease](../Topic/CCmdTarget::OnFinalRelease.md)。  這個函式的預設實作會呼叫 **delete** 運算子刪除這個物件。  
+ When the reference count becomes 0, the framework calls the virtual function [CCmdTarget::OnFinalRelease](../mfc/reference/ccmdtarget-class.md#onfinalrelease). The default implementation of this function calls the **delete** operator to delete this object.  
   
- 當外部用戶端擁有對應用程式物件的參考時，MFC 程式庫會為控制應用程式行為提供額外的功能。  除了維護對每個物件的參考計數，伺服器會維護使用中物件的全域計數。  全域函式 [AfxOleLockApp](../Topic/AfxOleLockApp.md) 和 [AfxOleUnlockApp](../Topic/AfxOleUnlockApp.md) 函式會更新應用程式中使用中物件的計數。  如果這個計數為零，當使用者從系統功能表選取關閉或匯出檔案功能表時，應用程式不會結束。  相反地，應用程式的主視窗會被隱藏 \(但不會被終結\)，直到所有暫止的用戶端要求已經完成。  通常， `AfxOleLockApp` 和 `AfxOleUnlockApp` 會分別由支援 Automation 的類別之建構和解構函式呼叫。  
+ The Microsoft Foundation Class Library provides additional facilities for controlling application behavior when external clients have references to the application's objects. Besides maintaining a count of references to each object, servers maintain a global count of active objects. The global functions [AfxOleLockApp](../mfc/reference/application-control.md#afxolelockapp) and [AfxOleUnlockApp](../mfc/reference/application-control.md#afxoleunlockapp) update the application's count of active objects. If this count is nonzero, the application does not terminate when the user chooses Close from the system menu or Exit from the File menu. Instead, the application's main window is hidden (but not destroyed) until all pending client requests have been completed. Typically, `AfxOleLockApp` and `AfxOleUnlockApp` are called in the constructors and destructors, respectively, of classes that support Automation.  
   
- 當用戶端仍然永有對物件的參考時，有些情況會強制終止伺服器。  例如，伺服器根據的一個資源變成無法使用，造成伺服器遇到錯誤。  使用者也可以關閉包含有其他應用程式具有參考的物件之伺服器文件。  
+ Sometimes circumstances force the server to terminate while a client still has a reference to an object. For example, a resource on which the server depends may become unavailable, causing the server to encounter an error. The user may also close a server document that contains objects to which other applications have references.  
   
- 在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 中，請參閱 `IUnknown::AddRef` 和 `IUnknown::Release`。  
+ In the Windows SDK, see `IUnknown::AddRef` and `IUnknown::Release`.  
   
-## 請參閱  
- [Automation 伺服程式](../mfc/automation-servers.md)   
- [AfxOleCanExitApp](../Topic/AfxOleCanExitApp.md)
+## <a name="see-also"></a>See Also  
+ [Automation Servers](../mfc/automation-servers.md)   
+ [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
+
+

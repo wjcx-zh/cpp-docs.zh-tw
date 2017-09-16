@@ -1,15 +1,14 @@
 ---
-title: "numeric_limits 類別 | Microsoft Docs"
+title: numeric_limits Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- numeric_limits
 - limits/std::numeric_limits
 - limits/std::numeric_limits::denorm_min
 - limits/std::numeric_limits::digits
@@ -46,7 +45,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- numeric_limits class
+- std::numeric_limits [C++]
+- std::numeric_limits [C++], denorm_min
+- std::numeric_limits [C++], digits
+- std::numeric_limits [C++], digits10
+- std::numeric_limits [C++], epsilon
+- std::numeric_limits [C++], has_denorm
+- std::numeric_limits [C++], has_denorm_loss
+- std::numeric_limits [C++], has_infinity
+- std::numeric_limits [C++], has_quiet_NaN
+- std::numeric_limits [C++], has_signaling_NaN
+- std::numeric_limits [C++], infinity
+- std::numeric_limits [C++], is_bounded
+- std::numeric_limits [C++], is_exact
+- std::numeric_limits [C++], is_iec559
+- std::numeric_limits [C++], is_integer
+- std::numeric_limits [C++], is_modulo
+- std::numeric_limits [C++], is_signed
+- std::numeric_limits [C++], is_specialized
+- std::numeric_limits [C++], lowest
+- std::numeric_limits [C++], max
+- std::numeric_limits [C++], max_digits10
+- std::numeric_limits [C++], max_exponent
+- std::numeric_limits [C++], max_exponent10
+- std::numeric_limits [C++], min
+- std::numeric_limits [C++], min_exponent
+- std::numeric_limits [C++], min_exponent10
+- std::numeric_limits [C++], quiet_NaN
+- std::numeric_limits [C++], radix
+- std::numeric_limits [C++], round_error
+- std::numeric_limits [C++], round_style
+- std::numeric_limits [C++], signaling_NaN
+- std::numeric_limits [C++], tinyness_before
+- std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 caps.latest.revision: 26
 author: corob-msft
@@ -66,90 +97,90 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 87b1be7f31a8f28425dc80f16ed60528f811ad32
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7f4e22293ac1ece487d99ea7c2d4e8f62310e2fa
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numericlimits-class"></a>numeric_limits 類別
-此範本類別可說明內建數值類型的算術屬性。  
+# <a name="numericlimits-class"></a>numeric_limits Class
+The template class describes arithmetic properties of built-in numerical types.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type>  
 class numeric_limits  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Type`  
- 正在測試、查詢或設定其屬性的基本項目資料類型。  
+ The fundamental element data type whose properties are being tested or queried or set.  
   
-## <a name="remarks"></a>備註  
- 這個標頭定義 `wchar_t`、 `bool`、 `char`、 `signed char`、 `unsigned char`、 `short`、 `unsigned short`、 `int`、 `unsigned int`、 `long`、 `unsigned long`、 `float`、 `double`、 `long double`**、** `long long`、 `unsigned long long`、 `char16_t`和 `char32_t`類型的明確特製化。 就這些明確的特製化而言，成員 [numeric_limits::is_specialized](#is_specialized) 是 `true`，而所有相關的成員都包含有意義的值。 這個程式可提供額外的明確特製化。 類別的大部分成員函式都在描述或測試 `float`的可能實作。  
+## <a name="remarks"></a>Remarks  
+ The header defines explicit specializations for the types `wchar_t`, `bool`, `char`, `signed char`, `unsigned char`, `short`, `unsigned short`, `int`, `unsigned int`, `long`, `unsigned long`, `float`, `double`, `long double`**,** `long long`, `unsigned long long`, `char16_t`, and `char32_t`. For these explicit specializations, the member [numeric_limits::is_specialized](#is_specialized) is `true`, and all relevant members have meaningful values. The program can supply additional explicit specializations. Most member functions of the class describe or test possible implementations of `float`.  
   
- 針對任意特製化，沒有任何成員包含有意義的值。 未包含有意義的值的成員物件會儲存零 (或 `false`)，而未傳回有意義的值的成員函式會傳回 `Type(0)`。  
+ For an arbitrary specialization, no members have meaningful values. A member object that does not have a meaningful value stores zero (or `false`) and a member function that does not return a meaningful value returns `Type(0)`.  
   
-### <a name="static-functions-and-constants"></a>靜態函式和常數  
+### <a name="static-functions-and-constants"></a>Static Functions and Constants  
   
 |||  
 |-|-|  
-|[denorm_min](#denorm_min)|傳回未標準化的最小非零值。|  
-|[digits](#digits)|傳回基數數字的數目，其中該類型可以在不減少有效位數的情況下表示。|  
-|[digits10](#digits10)|傳回十進位數字的數目，其中該類型可以在不減少有效位數的情況下表示。|  
-|[epsilon](#epsilon)|傳回資料類型可以表示之介於 1 到大於 1 的最小值之間的差異。|  
-|[has_denorm](#has_denorm)|測試類型是否允許未標準化的值。|  
-|[has_denorm_loss](#has_denorm_loss)|測試偵測到的精確度遺失是否為未標準化遺失，而非不精確的結果。|  
-|[has_infinity](#has_infinity)|測試類型是否有正無限大的表示。|  
-|[has_quiet_NaN](#has_quiet_nan)|測試類型是否有不是數字 (NAN) 的無訊息 (非訊號) 表示。|  
-|[has_signaling_NaN](#has_signaling_nan)|測試類型是否有不是數字 (NAN) 的訊號表示。|  
-|[infinity](#infinity)|類型的正無限大表示 (如果有的話)。|  
-|[is_bounded](#is_bounded)|測試類型可能代表的一組值是否為有限值。|  
-|[is_exact](#is_exact)|測試執行計算的類型是否沒有進位誤差。|  
-|[is_iec559](#is_iec559)|測試類型是否符合 IEC 559 標準。|  
-|[is_integer](#is_integer)|測試類型是否有整數表示。|  
-|[is_modulo](#is_modulo)|測試類型是否有模數表示。|  
-|[is_signed](#is_signed)|測試類型是否有正負號表示。|  
-|[is_specialized](#is_specialized)|測試類型是否在範本類別 `numeric_limits`中定義了明確特製化。|  
-|[lowest](#lowest)|傳回最大負數的有限值。|  
-|[max](#max)|傳回類型的最大有限值。|  
-|[max_digits10](#max_digits10)|傳回十進位數字的數目，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。|  
-|[max_exponent](#max_exponent)|傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。|  
-|[max_exponent10](#max_exponent10)|傳回當 10 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。|  
-|[min](#min)|傳回類型的最小標準化數值。|  
-|[min_exponent](#min_exponent)|傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。|  
-|[min_exponent10](#min_exponent10)|傳回當 10 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。|  
-|[quiet_NaN](#quiet_nan)|傳回類型非數字 (NAN) 的無訊息表示。|  
-|[radix](#radix)|傳回用來表示類型的整數基底 (稱為基數)。|  
-|[round_error](#round_error)|傳回類型的最大進位誤差。|  
-|[round_style](#round_style)|傳回一個值，該值描述實作可選擇用來將浮點值捨入為整數值的各種方法。|  
-|[signaling_NaN](#signaling_nan)|傳回類型非數字 (NAN) 的訊號表示。|  
-|[tinyness_before](#tinyness_before)|測試類型是否可以判斷某個值太小，而無法在捨入前以標準化數值表示。|  
-|[traps](#traps)|測試要報告算術例外狀況的設限是否會針對類型實作。|  
+|[denorm_min](#denorm_min)|Returns the smallest nonzero denormalized value.|  
+|[digits](#digits)|Returns the number of radix digits that the type can represent without loss of precision.|  
+|[digits10](#digits10)|Returns the number of decimal digits that the type can represent without loss of precision.|  
+|[epsilon](#epsilon)|Returns the difference between 1 and the smallest value greater than 1 that the data type can represent.|  
+|[has_denorm](#has_denorm)|Tests whether a type allows denormalized values.|  
+|[has_denorm_loss](#has_denorm_loss)|Tests whether loss of accuracy is detected as a denormalization loss rather than as an inexact result.|  
+|[has_infinity](#has_infinity)|Tests whether a type has a representation for positive infinity.|  
+|[has_quiet_NaN](#has_quiet_nan)|Tests whether a type has a representation for a quiet not a number (NAN), which is nonsignaling.|  
+|[has_signaling_NaN](#has_signaling_nan)|Tests whether a type has a representation for signaling not a number (NAN).|  
+|[infinity](#infinity)|The representation for positive infinity for a type, if available.|  
+|[is_bounded](#is_bounded)|Tests if the set of values that a type may represent is finite.|  
+|[is_exact](#is_exact)|Tests if the calculations done on a type are free of rounding errors.|  
+|[is_iec559](#is_iec559)|Tests if a type conforms to IEC 559 standards.|  
+|[is_integer](#is_integer)|Tests if a type has an integer representation.|  
+|[is_modulo](#is_modulo)|Tests if a type has a modulo representation.|  
+|[is_signed](#is_signed)|Tests if a type has a signed representation.|  
+|[is_specialized](#is_specialized)|Tests if a type has an explicit specialization defined in the template class `numeric_limits`.|  
+|[lowest](#lowest)|Returns the most negative finite value.|  
+|[max](#max)|Returns the maximum finite value for a type.|  
+|[max_digits10](#max_digits10)|Returns the number of decimal digits required to ensure that two distinct values of the type have distinct decimal representations.|  
+|[max_exponent](#max_exponent)|Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.|  
+|[max_exponent10](#max_exponent10)|Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.|  
+|[min](#min)|Returns the minimum normalized value for a type.|  
+|[min_exponent](#min_exponent)|Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.|  
+|[min_exponent10](#min_exponent10)|Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.|  
+|[quiet_NaN](#quiet_nan)|Returns the representation of a quiet not a number (NAN) for the type.|  
+|[radix](#radix)|Returns the integral base, referred to as radix, used for the representation of a type.|  
+|[round_error](#round_error)|Returns the maximum rounding error for the type.|  
+|[round_style](#round_style)|Returns a value that describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.|  
+|[signaling_NaN](#signaling_nan)|Returns the representation of a signaling not a number (NAN) for the type.|  
+|[tinyness_before](#tinyness_before)|Tests whether a type can determine that a value is too small to represent as a normalized value before rounding it.|  
+|[traps](#traps)|Tests whether trapping that reports on arithmetic exceptions is implemented for a type.|  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<limits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<limits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="denorm_min"></a>  numeric_limits::denorm_min  
- 傳回未標準化的最小非零值。  
+ Returns the smallest nonzero denormalized value.  
   
 ```  
 static Type denorm_min() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 反正規化的最小非零值。  
+### <a name="return-value"></a>Return Value  
+ The smallest nonzero denormalized value.  
   
-### <a name="remarks"></a>備註  
- `long double` 與 C++ 編譯器的 **double** 相同。  
+### <a name="remarks"></a>Remarks  
+ `long double` is the same as **double** for the C++ compiler.  
   
- 此函式會傳回該類型的最小值，如果 [has_denorm](#has_denorm) 不等於 **denorm_present**，最小值就會與 [min](#min) 相同。  
+ The function returns the minimum value for the type, which is the same as [min](#min) if [has_denorm](#has_denorm) is not equal to **denorm_present**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_denorm_min.cpp  
@@ -191,19 +222,19 @@ The smallest nonzero denormalized value
 ```  
   
 ##  <a name="digits"></a>  numeric_limits::digits  
- 傳回基數數字的數目，其中該類型可以在不減少有效位數的情況下表示。  
+ Returns the number of radix digits that the type can represent without loss of precision.  
   
 ```  
 static const int digits = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 該類型可在不減少有效位數的情況下代表的基數數字數目。  
+### <a name="return-value"></a>Return Value  
+ The number of radix digits that the type can represent without loss of precision.  
   
-### <a name="remarks"></a>備註  
- 成員會儲存該類型在不變更的情況下可代表的基數數字數目，這是預先定義之整數類型的位元數 (所有正負號位元除外)，或是預先定義之浮點數類型的尾數數字數目。  
+### <a name="remarks"></a>Remarks  
+ The member stores the number of radix digits that the type can represent without change, which is the number of bits other than any sign bit for a predefined integer type, or the number of mantissa digits for a predefined floating-point type.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_digits_min.cpp  
@@ -232,16 +263,16 @@ int main( )
 ```  
   
 ##  <a name="digits10"></a>  numeric_limits::digits10  
- 傳回十進位數字的數目，其中該類型可以在不減少有效位數的情況下表示。  
+ Returns the number of decimal digits that the type can represent without loss of precision.  
   
 ```  
 static const int digits10 = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 該類型可在不減少有效位數的情況下代表的十進位數字數目。  
+### <a name="return-value"></a>Return Value  
+ The number of decimal digits that the type can represent without loss of precision.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_digits10.cpp  
@@ -274,19 +305,19 @@ The float is; 100000000
 ```  
   
 ##  <a name="epsilon"></a>  numeric_limits::epsilon  
- 函式會傳回可針對資料類型代表的 1 到大於 1 的最小值之間的差異。  
+ The function returns the difference between 1 and the smallest value greater than 1 that is representable for the data type.  
   
 ```  
 static Type epsilon() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 可針對資料類型代表的 1 到大於 1 的最小值之間的差異。  
+### <a name="return-value"></a>Return Value  
+ The difference between 1 and the smallest value greater than 1 that is representable for the data type.  
   
-### <a name="remarks"></a>備註  
- 就 **float** 類型而言，值為 FLT_EPSILON。 一個類型的 `epsilon` 是最小的正浮點數 *N*，因此可顯示為 *N* + `epsilon` + *N*。  
+### <a name="remarks"></a>Remarks  
+ The value is FLT_EPSILON for type **float**. `epsilon` for a type is the smallest positive floating-point number *N* such that *N* + `epsilon` + *N* is representable.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_epsilon.cpp  
@@ -323,19 +354,19 @@ The difference between 1 and the smallest value greater than 1
 ```  
   
 ##  <a name="has_denorm"></a>  numeric_limits::has_denorm  
- 測試類型是否允許未標準化的值。  
+ Tests whether a type allows denormalized values.  
   
 ```  
 static const float_denorm_style has_denorm = denorm_absent;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- **const**`float_denorm_style` 類型的列舉值，指出該類型是否允許反正規化的值。  
+### <a name="return-value"></a>Return Value  
+ An enumeration value of type **const**`float_denorm_style`, indicating whether the type allows denormalized values.  
   
-### <a name="remarks"></a>備註  
- 成員會針對具有反正規化值 (實際上就是數目可變的指數位元) 的浮點數類型儲存 **denorm_present**。  
+### <a name="remarks"></a>Remarks  
+ The member stores **denorm_present** for a floating-point type that has denormalized values, effectively a variable number of exponent bits.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_has_denorm.cpp  
@@ -366,19 +397,19 @@ Whether long int objects allow denormalized values: 0
 ```  
   
 ##  <a name="has_denorm_loss"></a>  numeric_limits::has_denorm_loss  
- 測試偵測到的精確度遺失是否為未標準化遺失，而非不精確的結果。  
+ Tests whether loss of accuracy is detected as a denormalization loss rather than as an inexact result.  
   
 ```  
 static const bool has_denorm_loss = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果偵測到精確度減損是反正規化減損，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the loss of accuracy is detected as a denormalization loss; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 成員會針對判斷一個值是否損失精確度的類型儲存 true，損失精確度的原因包括以反正規化結果 (太小以致於無法以正規化的值來表示) 形式傳遞該值，或是該值不精確 (與不受限於指數範圍和有效位數限制的結果不同)，這是使用 IEC 559 浮點數表示法時的一個選項，而此選項可能影響某些結果。  
+### <a name="remarks"></a>Remarks  
+ The member stores true for a type that determines whether a value has lost accuracy because it is delivered as a denormalized result (too small to represent as a normalized value) or because it is inexact (not the same as a result not subject to limitations of exponent range and precision), an option with IEC 559 floating-point representations that can affect some results.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_has_denorm_loss.cpp  
@@ -409,19 +440,19 @@ Whether long int objects can detect denormalized loss: 0
 ```  
   
 ##  <a name="has_infinity"></a>  numeric_limits::has_infinity  
- 測試類型是否有正無限大的表示。  
+ Tests whether a type has a representation for positive infinity.  
   
 ```  
 static const bool has_infinity = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型有正無限大的表示，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type has a representation for positive infinity; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 如果 [is_iec559](#is_iec559) 為 **true**，成員就會傳回 **true**。  
+### <a name="remarks"></a>Remarks  
+ The member returns **true** if [is_iec559](#is_iec559) is **true**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_has_infinity.cpp  
@@ -452,19 +483,19 @@ Whether long int objects have infinity: 0
 ```  
   
 ##  <a name="has_quiet_nan"></a>  numeric_limits::has_quiet_NaN  
- 測試類型是否有不是數字 (NAN) 的無訊息 (非訊號) 表示。  
+ Tests whether a type has a representation for a quiet not a number (NAN), which is nonsignaling.  
   
 ```  
 static const bool has_quiet_NaN = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該「類型」有無訊息 (quiet) NAN 的表示，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the **type** has a representation for a quiet NAN; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 無訊息 NAN 是代表「不是數字」(not a number) 的編碼，不會在運算式中發出其存在訊號。 如果 [is_iec559](#is_iec559) 為 true，傳回值就會是 **true**。  
+### <a name="remarks"></a>Remarks  
+ A quiet NAN is an encoding for not a number, which does not signal its presence in an expression. The return value is **true** if [is_iec559](#is_iec559) is true.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_has_quiet_nan.cpp  
@@ -495,19 +526,19 @@ Whether long int objects have quiet_NaN: 0
 ```  
   
 ##  <a name="has_signaling_nan"></a>  numeric_limits::has_signaling_NaN  
- 測試類型是否有不是數字 (NAN) 的訊號表示。  
+ Tests whether a type has a representation for signaling not a number (NAN).  
   
 ```  
 static const bool has_signaling_NaN = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型有帶訊息 (signaling) NAN 的表示，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type has a representation for a signaling NAN; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 帶訊號 NAN 是代表「不是數字」的編碼，會在運算式中發出其存在訊號。 如果 [is_iec559](#is_iec559) 為 true，傳回值就會是 **true**。  
+### <a name="remarks"></a>Remarks  
+ A signaling NAN is an encoding for not a number, which signals its presence in an expression. The return value is **true**[is_iec559](#is_iec559) is true.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_has_signaling_nan.cpp  
@@ -538,19 +569,19 @@ Whether long int objects have a signaling_NaN: 0
 ```  
   
 ##  <a name="infinity"></a>  numeric_limits::infinity  
- 類型的正無限大表示 (如果有的話)。  
+ The representation of positive infinity for a type, if available.  
   
 ```  
 static Type infinity() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 類型的正無限大表示 (如果有的話)。  
+### <a name="return-value"></a>Return Value  
+ The representation of positive infinity for a type, if available.  
   
-### <a name="remarks"></a>備註  
- 只有當 [has_infinity](#has_infinity) 為 **true** 時，該傳回值才有意義。  
+### <a name="remarks"></a>Remarks  
+ The return value is meaningful only if [has_infinity](#has_infinity) is **true**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_infinity.cpp  
@@ -589,19 +620,19 @@ The representation of infinity for type long double is: 1.#INF
 ```  
   
 ##  <a name="is_bounded"></a>  numeric_limits::is_bounded  
- 測試類型可能代表的一組值是否為有限值。  
+ Tests if the set of values that a type may represent is finite.  
   
 ```  
 static const bool is_bounded = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型有一組限定的可代表值，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type has a bounded set of representable values; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 所有預先定義的類型都有一組限定的可代表值，因此會傳回 **true**。  
+### <a name="remarks"></a>Remarks  
+ All predefined types have a bounded set of representable values and return **true**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_is_bounded.cpp  
@@ -640,19 +671,19 @@ Whether unsigned char objects have bounded set of representable values: 1
 ```  
   
 ##  <a name="is_exact"></a>  numeric_limits::is_exact  
- 測試執行計算的類型是否沒有進位誤差。  
+ Tests if the calculations done on a type are free of rounding errors.  
   
 ```  
 static const bool is_exact = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果計算沒有進位誤差，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the calculations are free of rounding errors; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 所有預先定義之整數類型的值都有精確的表示，因此會傳回 **false**。 固定點或有理數表示也視為精確，但浮點數表示則不視為精確。  
+### <a name="remarks"></a>Remarks  
+ All predefined integer types have exact representations for their values and return **false**. A fixed-point or rational representation is also considered exact, but a floating-point representation is not.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_is_exact.cpp  
@@ -691,19 +722,19 @@ Whether unsigned char objects have calculations free of rounding errors: 1
 ```  
   
 ##  <a name="is_iec559"></a>  numeric_limits::is_iec559  
- 測試類型是否符合 IEC 559 標準。  
+ Tests if a type conforms to IEC 559 standards.  
   
 ```  
 static const bool is_iec559 = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型符合 IEC 559 標準，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type conforms to the IEC 559 standards; **false** if not.  
   
-### <a name="remarks"></a>備註  
- IEC 559 是一個表示浮點值的國際標準，在美國也稱為 IEEE 754。  
+### <a name="remarks"></a>Remarks  
+ The IEC 559 is an international standard for representing floating-point values and is also known as IEEE 754 in the USA.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_is_iec559.cpp  
@@ -738,19 +769,19 @@ Whether unsigned char objects conform to iec559 standards: 0
 ```  
   
 ##  <a name="is_integer"></a>  numeric_limits::is_integer  
- 測試類型是否有整數表示。  
+ Tests if a type has an integer representation.  
   
 ```  
 static const bool is_integer = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型有整數表示，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type has an integer representation; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 所有預先定義的整數類型都有整數表示。  
+### <a name="remarks"></a>Remarks  
+ All predefined integer types have an integer representation.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_is_integer.cpp  
@@ -785,19 +816,19 @@ Whether unsigned char objects have an integral representation: 1
 ```  
   
 ##  <a name="is_modulo"></a>  numeric_limits::is_modulo  
- 測試「類型」是否有模數表示。  
+ Tests if a **type** has a modulo representation.  
   
 ```  
 static const bool is_modulo = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型有模數表示，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type has a modulo representation; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 模數表示是一種所有結果都是某個值之簡化模數的表示。 所有預先定義的不帶正負號整數類型都有模數表示。  
+### <a name="remarks"></a>Remarks  
+ A modulo representation is a representation where all results are reduced modulo some value. All predefined unsigned integer types have a modulo representation.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_is_modulo.cpp  
@@ -832,19 +863,19 @@ Whether unsigned char objects have a modulo representation: 1
 ```  
   
 ##  <a name="is_signed"></a>  numeric_limits::is_signed  
- 測試類型是否有正負號表示。  
+ Tests if a type has a signed representation.  
   
 ```  
 static const bool is_signed = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型有正負號表示，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type has a signed representation; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 成員會針對有正負號表示的類型儲存 true，這適用於所有預先定義的浮點數和帶正負號的整數類型。  
+### <a name="remarks"></a>Remarks  
+ The member stores true for a type that has a signed representation, which is the case for all predefined floating-point and signed integer types.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_is_signaled.cpp  
@@ -879,19 +910,19 @@ Whether unsigned char objects have a signed representation: 0
 ```  
   
 ##  <a name="is_specialized"></a>  numeric_limits::is_specialized  
- 測試類型是否在範本類別 `numeric_limits`中定義了明確特製化。  
+ Tests if a type has an explicit specialization defined in the template class `numeric_limits`.  
   
 ```  
 static const bool is_specialized = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果範例類別中為類型定義了明確的特製化，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the type has an explicit specialization defined in the template class; **false** if not.  
   
-### <a name="remarks"></a>備註  
- 指標以外的所有純量類型都有針對範本類別 `numeric_limits` 定義的明確特製化。  
+### <a name="remarks"></a>Remarks  
+ All scalar types other than pointers have an explicit specialization defined for template class `numeric_limits`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_is_specialized.cpp  
@@ -930,32 +961,32 @@ Whether int* objects have an explicit specialization in the class: 0
 ```  
   
 ##  <a name="lowest"></a>  numeric_limits::lowest  
- 傳回最大負數的有限值。  
+ Returns the most negative finite value.  
   
 ```  
 static Type lowest() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回最大負數的有限值。  
+### <a name="return-value"></a>Return Value  
+ Returns the most negative finite value.  
   
-### <a name="remarks"></a>備註  
- 傳回類型的最大負數有限值 (如果是整數類型，通常是 `min` `()`，如果是浮點數類型則是 `-``max` `()`)。 如果 `is_bounded` 是 `true`，則傳回值有意義。  
+### <a name="remarks"></a>Remarks  
+ Returns the most negative finite value for the type (which is typically `min()` for integer types and `-max()` for floating-point types). The return value is meaningful if `is_bounded` is `true`.  
   
 ##  <a name="max"></a>  numeric_limits::max  
- 傳回類型的最大有限值。  
+ Returns the maximum finite value for a type.  
   
 ```  
 static Type max() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 類型的最大有限值。  
+### <a name="return-value"></a>Return Value  
+ The maximum finite value for a type.  
   
-### <a name="remarks"></a>備註  
- `int` 類型的最大有限值是 INT_MAX，**float** 類型的最大有限值則是 FLT_MAX。 如果 [is_bounded](#is_bounded) 為 **true**，傳回值便有意義。  
+### <a name="remarks"></a>Remarks  
+ The maximum finite value is INT_MAX for type `int` and FLT_MAX for type **float**. The return value is meaningful if [is_bounded](#is_bounded) is **true**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_max.cpp  
@@ -982,32 +1013,32 @@ int main() {
 ```  
   
 ##  <a name="max_digits10"></a>  numeric_limits::max_digits10  
- 傳回十進位數字的數值，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。  
+ Returns the number of decimal digits required to make sure that two distinct values of the type have distinct decimal representations.  
   
 ```  
 static int max_digits10 = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回十進位數字的數值，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。  
+### <a name="return-value"></a>Return Value  
+ Returns the number of decimal digits that are required to make sure that two distinct values of the type have distinct decimal representations.  
   
-### <a name="remarks"></a>備註  
- 此成員儲存十進位數字的數值，需要有這個數值，才能確保類型的兩個不同值有不同的十進位表示法。  
+### <a name="remarks"></a>Remarks  
+ The member stores the number of decimal digits required to make sure that two distinct values of the type have distinct decimal representations.  
   
 ##  <a name="max_exponent"></a>  numeric_limits::max_exponent  
- 傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。  
+ Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.  
   
 ```  
 static const int max_exponent = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 類型可代表的最大整數基數型指數。  
+### <a name="return-value"></a>Return Value  
+ The maximum integral radix-based exponent representable by the type.  
   
-### <a name="remarks"></a>備註  
- 此成員函式傳回值僅對浮點數類型有意義。 就 **float** 類型而言，`max_exponent` 的值為 FLT_MAX_EXP。  
+### <a name="remarks"></a>Remarks  
+ The member function return is meaningful only for floating-point types. The `max_exponent` is the value FLT_MAX_EXP for type **float**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_max_exponent.cpp  
@@ -1038,19 +1069,19 @@ The maximum radix-based exponent for type long double is:  1024
 ```  
   
 ##  <a name="max_exponent10"></a>  numeric_limits::max_exponent10  
- 傳回當 10 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大正整數指數。  
+ Returns the maximum positive integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.  
   
 ```  
 static const int max_exponent10 = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 類型可代表之以 10 為底數的最大整數指數。  
+### <a name="return-value"></a>Return Value  
+ The maximum integral base 10 exponent representable by the type.  
   
-### <a name="remarks"></a>備註  
- 此成員函式傳回值僅對浮點數類型有意義。 就 **float** 類型而言，`max_exponent` 的值為 FLT_MAX_10。  
+### <a name="remarks"></a>Remarks  
+ The member function return is meaningful only for floating-point types. The `max_exponent` is the value FLT_MAX_10 for type **float**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_max_exponent10.cpp  
@@ -1081,19 +1112,19 @@ The maximum base 10 exponent for type long double is:  308
 ```  
   
 ##  <a name="min"></a>  numeric_limits::min  
- 傳回類型的最小標準化數值。  
+ Returns the minimum normalized value for a type.  
   
 ```  
 static Type min() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 類型的最小正規化值。  
+### <a name="return-value"></a>Return Value  
+ The minimum normalized value for the type.  
   
-### <a name="remarks"></a>備註  
- `int` 類型的最小正規化值是 INT_MIN，`float` 類型的最大正規化值則是 FLT_MIN。 如果 [is_bounded](#is_bounded) 為 `true`，或如果 [is_signed](#is_signed) 為 `false`，傳回值便有意義。  
+### <a name="remarks"></a>Remarks  
+ The minimum normalized value is INT_MIN for type `int` and FLT_MIN for type `float`. The return value is meaningful if [is_bounded](#is_bounded) is `true` or if [is_signed](#is_signed) is `false`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_min.cpp  
@@ -1128,19 +1159,19 @@ The minimum value for type short int is:  -32768
 ```  
   
 ##  <a name="min_exponent"></a>  numeric_limits::min_exponent  
- 傳回當基數的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。  
+ Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of radix is raised to that power.  
   
 ```  
 static const int min_exponent = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 類型可代表的最小整數基數型指數。  
+### <a name="return-value"></a>Return Value  
+ The minimum integral radix-based exponent representable by the type.  
   
-### <a name="remarks"></a>備註  
- 此成員函式僅對浮點數類型有意義。 就 **float** 類型而言，`min_exponent` 的值為 FLT_MIN_EXP。  
+### <a name="remarks"></a>Remarks  
+ The member function is meaningful only for floating-point types. The `min_exponent` is the value FLT_MIN_EXP for type **float**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_min_exponent.cpp  
@@ -1171,19 +1202,19 @@ The minimum radix-based exponent for type long double is:  -1021
 ```  
   
 ##  <a name="min_exponent10"></a>  numeric_limits::min_exponent10  
- 傳回當 10 的基底自乘至該乘冪時，浮點類型可以有限值表示的最大負整數指數。  
+ Returns the maximum negative integral exponent that the floating-point type can represent as a finite value when a base of ten is raised to that power.  
   
 ```  
 static const int min_exponent10 = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 類型可代表之以 10 為底數的最小整數指數。  
+### <a name="return-value"></a>Return Value  
+ The minimum integral base 10 exponent representable by the type.  
   
-### <a name="remarks"></a>備註  
- 此成員函式僅對浮點數類型有意義。 就 **float** 類型而言，`min_exponent10` 的值為 FLT_MIN_10_EXP。  
+### <a name="remarks"></a>Remarks  
+ The member function is meaningful only for floating-point types. The `min_exponent10` is the value FLT_MIN_10_EXP for type **float**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_min_exponent10.cpp  
@@ -1214,19 +1245,19 @@ The minimum base 10 exponent for type long double is:  -307
 ```  
   
 ##  <a name="quiet_nan"></a>  numeric_limits::quiet_NaN  
- 傳回類型非數字 (NAN) 的無訊息表示。  
+ Returns the representation of a quiet not a number (NAN) for the type.  
   
 ```  
 static Type quiet_NaN() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 該類型的無訊息 NAN 表示。  
+### <a name="return-value"></a>Return Value  
+ The representation of a quiet NAN for the type.  
   
-### <a name="remarks"></a>備註  
- 只有當 [has_quiet_NaN](#has_quiet_nan) 為 **true** 時，該傳回值才有意義。  
+### <a name="remarks"></a>Remarks  
+ The return value is meaningful only if [has_quiet_NaN](#has_quiet_nan) is **true**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_quiet_nan.cpp  
@@ -1257,19 +1288,19 @@ The quiet NaN for type long double is:  1.#QNAN
 ```  
   
 ##  <a name="radix"></a>  numeric_limits::radix  
- 傳回用來表示類型的整數基底 (稱為基數)。  
+ Returns the integral base, referred to as radix, used for the representation of a type.  
   
 ```  
 static const int radix = 0;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 用來表示類型的整數底數。  
+### <a name="return-value"></a>Return Value  
+ The integral base for the representation of the type.  
   
-### <a name="remarks"></a>備註  
- 就預先定義的整數類型而言，底數為 2，而就預先定義的浮點數類型而言，則為指數的底數 (或 FLT_RADIX)。  
+### <a name="remarks"></a>Remarks  
+ The base is 2 for the predefined integer types, and the base to which the exponent is raised, or FLT_RADIX, for the predefined floating-point types.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_radix.cpp  
@@ -1300,16 +1331,16 @@ The base for type long double is:  2
 ```  
   
 ##  <a name="round_error"></a>  numeric_limits::round_error  
- 傳回類型的最大進位誤差。  
+ Returns the maximum rounding error for the type.  
   
 ```  
 static Type round_error() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 該類型的最大進位誤差。  
+### <a name="return-value"></a>Return Value  
+ The maximum rounding error for the type.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_round_error.cpp  
@@ -1340,21 +1371,21 @@ The maximum rounding error for type long double is:  0.5
 ```  
   
 ##  <a name="round_style"></a>  numeric_limits::round_style  
- 傳回一個值，該值描述實作可選擇用來將浮點值捨入為整數值的各種方法。  
+ Returns a value that describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.  
   
 ```  
 static const float_round_style round_style = round_toward_zero;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 一個來自 `float_round_style` 列舉的值，描述捨入樣式。  
+### <a name="return-value"></a>Return Value  
+ A value from the `float_round_style` enumeration that describes the rounding style.  
   
-### <a name="remarks"></a>備註  
- 成員會儲存一個值，此值描述實作在將浮點數值捨入成整數值時，可選擇的各種方法。  
+### <a name="remarks"></a>Remarks  
+ The member stores a value that describes the various methods that an implementation can choose for rounding a floating-point value to an integer value.  
   
- 捨入樣式在此實作中是採用硬式編碼，因此，即使是以不同的捨入模式啟動程式，該值也不會改變。  
+ The round style is hard coded in this implementation, so even if the program starts up with a different rounding mode, that value will not change.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_round_style.cpp  
@@ -1384,19 +1415,19 @@ The rounding style for an int type is: 0
 ```  
   
 ##  <a name="signaling_nan"></a>  numeric_limits::signaling_NaN  
- 傳回類型非數字 (NAN) 的訊號表示。  
+ Returns the representation of a signaling not a number (NAN) for the type.  
   
 ```  
 static Type signaling_NaN() throw();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 該類型的帶訊號 NAN 表示。  
+### <a name="return-value"></a>Return Value  
+ The representation of a signaling NAN for the type.  
   
-### <a name="remarks"></a>備註  
- 只有當 [has_signaling_NaN](#has_signaling_nan) 為 **true** 時，該傳回值才有意義。  
+### <a name="remarks"></a>Remarks  
+ The return value is meaningful only if [has_signaling_NaN](#has_signaling_nan) is **true**.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_signaling_nan.cpp  
@@ -1421,19 +1452,19 @@ int main( )
 ```  
   
 ##  <a name="tinyness_before"></a>  numeric_limits::tinyness_before  
- 測試類型是否可以判斷某個值太小，而無法在捨入前以標準化數值表示。  
+ Tests whether a type can determine that a value is too small to represent as a normalized value before rounding it.  
   
 ```  
 static const bool tinyness_before = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果該類型可以偵測到捨入前的微小值，便會傳回 `true`；否則會傳回 `false`。  
+### <a name="return-value"></a>Return Value  
+ `true` if the type can detect tiny values before rounding; `false` if it cannot.  
   
-### <a name="remarks"></a>備註  
- 可偵測微小值的類型已包含在使用 IEC 559 浮點數表示法的選項中，而其實作可能影響某些結果。  
+### <a name="remarks"></a>Remarks  
+ Types that can detect tinyness were included as an option with IEC 559 floating-point representations and its implementation can affect some results.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_tinyness_before.cpp  
@@ -1468,16 +1499,16 @@ Whether unsigned char types can detect tinyness before rounding: 0
 ```  
   
 ##  <a name="traps"></a>  numeric_limits::traps  
- 測試要報告算術例外狀況的設限是否會針對類型實作。  
+ Tests whether trapping that reports on arithmetic exceptions is implemented for a type.  
   
 ```  
 static const bool traps = false;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果已為類型實作設陷，便會傳回 **true**；否則會傳回 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if trapping is implemented for the type; **false** if it is not.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // numeric_limits_traps.cpp  
@@ -1511,7 +1542,7 @@ Whether long int types have implemented trapping: 0
 Whether unsigned char types have implemented trapping: 0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

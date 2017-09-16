@@ -1,40 +1,58 @@
 ---
-title: "CTreeCtrl 和 CTreeView 比較 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-  - "CTreeView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 類別, 和 CTreeView 類別比較"
-  - "CTreeView 類別, 和 CTreeCtrl 類別比較"
-  - "樹狀目錄控制項, 和樹狀檢視"
-  - "樹狀檢視控制項"
+title: CTreeCtrl vs. CTreeView | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CTreeCtrl
+- CTreeView
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree view controls
+- CTreeCtrl class [MFC], vs. CTreeView class [MFC]
+- CTreeView class [MFC], vs. CTreeCtrl class [MFC]
+- tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CTreeCtrl 和 CTreeView 比較
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9579c973c75898cb243fc1b47b638c35bd0423ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 提供封裝樹狀目錄控制項的兩個類別: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) 和 [CTreeView](../mfc/reference/ctreeview-class.md)。  每個類別適用於不同的情況。  
+---
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs. CTreeView
+MFC provides two classes that encapsulate tree controls: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) and [CTreeView](../mfc/reference/ctreeview-class.md). Each class is useful in different situations.  
   
- 當您需要簡單的子視窗控制項時，請使用 `CTreeCtrl` ;例如，在對話方塊。  您在一般對話方塊特別會使用 `CTreeCtrl` ，則會在視窗中的其他子控制項。  
+ Use `CTreeCtrl` when you need a plain child window control; for instance, in a dialog box. You'd especially want to use `CTreeCtrl` if there will be other child controls in the window, as in a typical dialog box.  
   
- 例如，當您想要樹狀目錄控制項會在文件\/檢視架構以及樹狀目錄控制項時，系統檢視視窗中使用 `CTreeView` 。  `CTreeView` 會佔用框架視窗或分隔視窗的整個工作區。  它會自動調整大小，當其父視窗調整大小，因此，它可以處理從功能表、快速鍵和工具列的命令訊息。  因為樹狀目錄控制項包含必要的資料顯示樹狀結構中，對應的資料物件不一定是複雜的—您甚至可以使用 [CDocument](../mfc/reference/cdocument-class.md) 做為文件類型您的資料範本。  
+ Use `CTreeView` when you want the tree control to act like a view window in document/view architecture as well as a tree control. A `CTreeView` will occupy the entire client area of a frame window or splitter window. It will be automatically resized when its parent window is resized, and it can process command messages from menus, accelerator keys, and toolbars. Since a tree control contains the data necessary to display the tree, the corresponding document object does not have to be complicated — you could even use [CDocument](../mfc/reference/cdocument-class.md) as the document type in your document template.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

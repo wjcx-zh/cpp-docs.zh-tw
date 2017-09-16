@@ -1,45 +1,63 @@
 ---
-title: "如何：建立和使用 CComPtr 和 CComQIPtr 執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use CComPtr and CComQIPtr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 如何：建立和使用 CComPtr 和 CComQIPtr 執行個體
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 27d3ae9fe9f740cec799218ab12897a7dd842d15
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 \(或更精確地說是 COM 伺服器\)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 如需 COM 基本概念的資訊，請參閱 [Component Object Model \(COM\)](http://msdn.microsoft.com/zh-tw/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4)。  
+---
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>How to: Create and Use CComPtr and CComQIPtr Instances
+In classic Windows programming, libraries are often implemented as COM objects (or more precisely, as COM servers). Many Windows operating system components are implemented as COM servers, and many contributors provide libraries in this form. For information about the basics of COM, see [Component Object Model (COM)](http://msdn.microsoft.com/en-us/3578ca42-a4b6-44b3-ad5b-aeb5fa61f3f4).  
   
- 當您具現化元件物件模型 \(COM\) 物件時，請將介面指標存放於 COM 智慧型指標，它在解構函式中使用 `AddRef` 和 `Release` 呼叫來執行參考計數。 如果您使用 Active Template Library \(ATL\) 或 MFC 程式庫，則使用 `CComPtr` 智慧型指標。 如果您不使用 ATL 或 MFC，則使用 `_com_ptr_t`。 由於沒有 `std::unique_ptr` 的 COM 對等用法，為單一擁有者和多擁有者案例中使用這些智慧型指標。`CComPtr` 和 `ComQIPtr` 都支援有右值參考的移動作業。  
+ When you instantiate a Component Object Model (COM) object, store the interface pointer in a COM smart pointer, which performs the reference counting by using calls to `AddRef` and `Release` in the destructor. If you are using the Active Template Library (ATL) or the Microsoft Foundation Class Library (MFC), then use the `CComPtr` smart pointer. If you are not using ATL or MFC, then use `_com_ptr_t`. Because there is no COM equivalent to `std::unique_ptr`, use these smart pointers for both single-owner and multiple-owner scenarios. Both `CComPtr` and `ComQIPtr` support move operations that have rvalue references.  
   
-## 範例  
- 下列範例示範如何使用 `CComPtr` 以具現化 COM 物件和取得其介面的指標。 請注意 `CComPtr::CoCreateInstance` 成員函式用以建立 COM 物件，而不是有相同名稱的 Win32 函式。  
+## <a name="example"></a>Example  
+ The following example shows how to use `CComPtr` to instantiate a COM object and obtain pointers to its interfaces. Notice that the `CComPtr::CoCreateInstance` member function is used to create the COM object, instead of the Win32 function that has the same name.  
   
  [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]  
   
- `CComPtr` 及其相關項目是 ATL 的一部分且已定義在 atlcomcli.h。`_com_ptr_t` 在 comip.h 中宣告。 當編譯器產生類型程式庫的包裝函式類別時，編譯器會建立 `_com_ptr_t` 的特製化。  
+ `CComPtr` and its relatives are part of the ATL and are defined in atlcomcli.h. `_com_ptr_t` is declared in comip.h. The compiler creates specializations of `_com_ptr_t` when it generates wrapper classes for type libraries.  
   
-## 範例  
- ATL 也提供 `CComQIPtr`，查詢 COM 物件以擷取其他介面的語法更簡單。 然而，建議使用 `CComPtr`，因為 `CComQIPtr` 可以執行的所有作業，它也可以執行，而且在語意上與原始 COM 介面指標更加一致。 如果您使用 `CComPtr` 查詢介面，新介面指標是放在 out 參數中。 如果呼叫失敗，傳回 HRESULT，這是一般的 COM 模式。 使用 `CComQIPtr`，傳回值是指標本身，而且如果呼叫失敗，無法存取內部 HRESULT 傳回值。 下列兩行顯示 `CComPtr` 和 `CComQIPtr` 的錯誤處理機制之間的差異。  
+## <a name="example"></a>Example  
+ ATL also provides `CComQIPtr`, which has a simpler syntax for querying a COM object to retrieve an additional interface. However, we recommend `CComPtr` because it does everything that `CComQIPtr` can do and is semantically more consistent with raw COM interface pointers. If you use a `CComPtr` to query for an interface, the new interface pointer is placed in an out parameter. If the call fails, an HRESULT is returned, which is the typical COM pattern. With `CComQIPtr`, the return value is the pointer itself, and if the call fails, the internal HRESULT return value cannot be accessed. The following two lines show how the error handling mechanisms in `CComPtr` and `CComQIPtr` differ.  
   
  [!code-cpp[COM_smart_pointers#02](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_2.cpp)]  
   
-## 範例  
- `CComPtr` 提供 IDispatch 特製化，讓它能夠儲存 COM Automation 元件指標並藉由使用晚期繫結叫用方法。`CComDispatchDriver` 是 `CComQIPtr<IDispatch, &IIDIDispatch>` 的 typedef，它可以隱含地轉換為 `CComPtr<IDispatch>`。 因此，當任何這三個名稱出現在程式碼中，它相當於 `CComPtr<IDispatch>`。 下列範例顯示如何使用 `CComPtr<IDispatch>`，取得 Microsoft Word 物件模型的指標。  
+## <a name="example"></a>Example  
+ `CComPtr` provides a specialization for IDispatch that enables it to store pointers to COM automation components and invoke the methods on the interface by using late binding. `CComDispatchDriver` is a typedef for `CComQIPtr<IDispatch, &IIDIDispatch>`, which is implicitly convertible to `CComPtr<IDispatch>`. Therefore, when any of these three names appears in code, it is equivalent to `CComPtr<IDispatch>`. The following example shows how to obtain a pointer to the Microsoft Word object model by using a `CComPtr<IDispatch>`.  
   
  [!code-cpp[COM_smart_pointers#03](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_3.cpp)]  
   
-## 請參閱  
- [智慧型指標](../cpp/smart-pointers-modern-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)

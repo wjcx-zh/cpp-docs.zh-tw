@@ -1,52 +1,69 @@
 ---
-title: "資料物件和資料來源 (OLE) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料物件 [C++], 定義"
-  - "資料來源 [C++], 定義"
-  - "資料傳輸 [C++]"
-  - "資料傳輸 [C++], 定義"
-  - "OLE [C++], 資料物件"
-  - "OLE [C++], 資料來源"
-  - "OLE [C++], 資料傳輸"
+title: Data Objects and Data Sources (OLE) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- data objects [MFC], definition
+- data transfer [MFC]
+- OLE [MFC], data transfer
+- data sources [MFC], definition
+- data transfer [MFC], definition
+- OLE [MFC], data objects
+- OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 資料物件和資料來源 (OLE)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7bfc4f325461ed3689ab9ade8b6604291ddfacca
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-使用剪貼簿或拖放作業時，就會執行資料傳輸，資料具有來源和目的端。  應用程式會複製資料，而另一個應用程式接受貼上文字的。  傳輸所需的每一邊對相同資料的不同作業為傳輸成功。  Microsoft Foundation Class \(MFC\) 程式庫提供代表這個傳輸的每一邊的兩個類別:  
+---
+# <a name="data-objects-and-data-sources-ole"></a>Data Objects and Data Sources (OLE)
+When you perform a data transfer, either by using the Clipboard or drag and drop, the data has a source and a destination. One application provides the data for copying and another application accepts it for pasting. Each side of the transfer needs to perform different operations on the same data for the transfer to succeed. The Microsoft Foundation Class (MFC) Library provides two classes that represent each side of this transfer:  
   
--   資料來源 \(如實作由 `COleDataSource` 物件表示\) 傳送資料的來源。  它們的來源應用程式，會建立資料複製到剪貼簿時，或者，當資料為拖放作業期間提供。  
+-   Data sources (as implemented by `COleDataSource` objects) represent the source side of the data transfer. They are created by the source application when data is to be copied to the Clipboard, or when data is provided for a drag-and-drop operation.  
   
--   資料物件 \(實作由 `COleDataObject` 物件表示\) 資料傳輸的目的端。  它們建立，在接收端應用程式有資料進入時，或要求執行永遠從剪貼簿中貼上作業。  
+-   Data objects (as implemented by `COleDataObject` objects) represent the destination side of the data transfer. They are created when the destination application has data dropped into it, or when it is asked to perform a paste operation from the Clipboard.  
   
- 下列文件在您的應用程式會示範如何使用資料物件和資料來源。  因為這兩個可能會要求複製並貼上資料，這份資訊同時適用容器和伺服器應用程式。  
+ The following articles explain how to use data objects and data sources in your applications. This information applies to both container and server applications, because both may be called upon to copy and paste data.  
   
--   [資料物件和資料來源：建立和解構](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Data Objects and Data Sources: Creation and Destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [資料物件和資料來源：管理](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Data Objects and Data Sources: Manipulation](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## 本章節內容  
- [拖放](../mfc/drag-and-drop-ole.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Drag and Drop](../mfc/drag-and-drop-ole.md)  
   
- [剪貼簿](../mfc/clipboard.md)  
+ [Clipboard](../mfc/clipboard.md)  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
  [COleDataObject Class](../mfc/reference/coledataobject-class.md)   
  [COleDataSource Class](../mfc/reference/coledatasource-class.md)
+

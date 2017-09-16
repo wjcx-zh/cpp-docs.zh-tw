@@ -1,42 +1,60 @@
 ---
-title: "管理影像清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList 類別, 操作"
-  - "影像清單 [C++], 操作"
-  - "清單 [C++], 影像"
+title: Manipulating Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], manipulating
+- lists [MFC], image
+- CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 管理影像清單
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e913c26ad4fa616e215f3c732aa92ca612bf55d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-[取代](../Topic/CImageList::Replace.md) 成員函式用新的影像取代影像清單 \([CImageList](../mfc/reference/cimagelist-class.md)\) 的影像。  如果需要動態加入的影像數。影像清單的物件，這個函式也很有用。  [SetImageCount](../Topic/CImageList::SetImageCount.md) 函式會動態變更影像清單中的影像數目。  如果您將影像清單的大小，要加入影像的呼叫 **Replace** 對新的影像位置。  如果您取消影像清單的大小，以新的大小之外的影像會釋放。  
+---
+# <a name="manipulating-image-lists"></a>Manipulating Image Lists
+The [Replace](../mfc/reference/cimagelist-class.md#replace) member function replaces an image in an image list ([CImageList](../mfc/reference/cimagelist-class.md)) with a new image. This function is also useful if you need to dynamically increase the number of images in an image list object. The [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) function dynamically changes the number of images stored in the image list. If you increase the size of the image list, call **Replace** to add images to the new image slots. If you decrease the size of the image list, the images beyond the new size are freed.  
   
- [移除](../Topic/CImageList::Remove.md) 成員函式從影像清單中的影像。  [複製](../Topic/CImageList::Copy.md) 成員函式可以複製或交換影像內的影像清單。  這個函式可讓您指出應該複製來源影像到目的索引或應該交換來源和目的地影像。  
+ The [Remove](../mfc/reference/cimagelist-class.md#remove) member function removes an image from an image list. The [Copy](../mfc/reference/cimagelist-class.md#copy) member function can copy or swap images within an image list. This function allows you to indicate whether the source image should be copied to the destination index or the source and destination images should be swapped.  
   
- 透過結合兩個影像清單中建立新的影像清單，請使用 [建立](../Topic/CImageList::Create.md) 成員函式的適當多載。  **Create** 這個多載組合現有的影像清單中的第一個影像，以產生影像在新的影像清單物件。  新的影像來繪製第二個影像建立透明在第一個。  新的影像的遮罩是執行、邏輯 OR 運算的結果遮罩中的位元兩個現有影像的。  
+ To create a new image list by merging two image lists, use the appropriate overload of the [Create](../mfc/reference/cimagelist-class.md#create) member function. This overload of **Create** merges the first image of the existing image lists, storing the resultant image in a new image list object. The new image is created by drawing the second image transparently over the first. The mask for the new image is the result of performing a logical-OR operation on the bits of the masks for the two existing images.  
   
- 這個迴圈會一直重複直到所有影像合併並加入新的影像清單物件。  
+ This is repeated until all images are merged and added to the new image list object.  
   
- 您可以將封存寫入影像資訊藉由呼叫 [寫入](../Topic/CImageList::Write.md) 成員函式和呼叫 [讀取](../Topic/CImageList::Read.md) 成員函式傳回讀取它。  
+ You can write the image information to an archive by calling the [Write](../mfc/reference/cimagelist-class.md#write) member function, and read it back by calling the [Read](../mfc/reference/cimagelist-class.md#read) member function.  
   
- [GetSafeHandle](../Topic/CImageList::GetSafeHandle.md)、 [附加](../Topic/CImageList::Attach.md)和 [中斷連結](../Topic/CImageList::Detach.md) 成員函式可讓您管理影像清單的控制代碼附加至 `CImageList` 物件，則為，而 [DeleteImageList](../Topic/CImageList::DeleteImageList.md) 成員函式來刪除影像清單，而不會終結 `CImageList` 物件。  
+ The [GetSafeHandle](../mfc/reference/cimagelist-class.md#getsafehandle), [Attach](../mfc/reference/cimagelist-class.md#attach), and [Detach](../mfc/reference/cimagelist-class.md#detach) member functions allow you to manipulate the handle of the image list attached to the `CImageList` object, while the [DeleteImageList](../mfc/reference/cimagelist-class.md#deleteimagelist) member function deletes the image list without destroying the `CImageList` object.  
   
-## 請參閱  
- [使用 CImageList](../mfc/using-cimagelist.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

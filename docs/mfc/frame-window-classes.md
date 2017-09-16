@@ -1,50 +1,69 @@
 ---
-title: "框架視窗類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], 視窗"
-  - "文件框架視窗, 類別"
-  - "框架視窗類別"
-  - "框架視窗類別, 關於框架視窗類別"
-  - "MDI [C++], 框架視窗"
-  - "MFC [C++], 框架視窗"
-  - "單一文件介面 (SDI), 框架視窗"
-  - "視窗類別, 框架"
-  - "視窗 [C++], MDI"
+title: Frame-Window Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame window classes [MFC], about frame window classes
+- frame window classes [MFC]
+- windows [MFC], MDI
+- document frame windows [MFC], classes
+- single document interface (SDI), frame windows
+- window classes [MFC], frame
+- MFC, frame windows
+- MDI [MFC], frame windows
+- classes [MFC], window
 ms.assetid: c27e43a7-8ad0-4759-b1b7-43f4725f4132
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 框架視窗類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4817243b2dc96365af8f1b98008a4169d4aa6f0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-每個應用程式具有主框架視窗，」通常有應用程式名稱在標題的桌面視窗。  每個文件通常具有文件框架視窗」。文件框架視窗至少包含一個檢視，顯示文件中的資料。  
+---
+# <a name="frame-window-classes"></a>Frame-Window Classes
+Each application has one "main frame window," a desktop window that usually has the application name in its caption. Each document usually has one "document frame window." A document frame window contains at least one view, which presents the document's data.  
   
-## 在 SDI、MDI 應用程式框架視窗  
- 如果是 SDI 應用程式，有衍生自框架視窗 [CFrameWnd](../mfc/reference/cframewnd-class.md)。  這個視窗是主框架視窗與文件框架視窗。  對於 MDI 應用程式中，主框架視窗從類別衍生自 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)，，且文件框架視窗，是 MDI 子視窗，請從類別衍生自 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)。  
+## <a name="frame-windows-in-sdi-and-mdi-applications"></a>Frame Windows in SDI and MDI Applications  
+ For an SDI application, there is one frame window derived from class [CFrameWnd](../mfc/reference/cframewnd-class.md). This window is both the main frame window and the document frame window. For an MDI application, the main frame window is derived from class [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), and the document frame windows, which are MDI child windows, are derived from class [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md).  
   
-## 使用框架視窗類別或衍生自它?  
- 這些類別提供您為應用程式所需的大部分框架視窗功能。  在一般情況下，它們所提供的預設行為和外觀符合您的需要。  如果您需要其他功能，從這些類別衍生。  
+## <a name="use-the-frame-window-class-or-derive-from-it"></a>Use the Frame-Window Class, or Derive from It  
+ These classes provide most of the frame-window functionality you need for your applications. Under normal circumstances, the default behavior and appearance they provide will suit your needs. If you need additional functionality, derive from these classes.  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [應用程式精靈建立框架視窗類別](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
+-   [Frame-window classes created by the Application Wizard](../mfc/frame-window-classes-created-by-the-application-wizard.md)  
   
--   [框架視窗樣式。](../mfc/frame-window-styles-cpp.md)  
+-   [Frame-window styles](../mfc/frame-window-styles-cpp.md)  
   
--   [變更視窗的樣式由 MFC 建立](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
+-   [Changing the styles of a window created by MFC](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)  
   
-## 請參閱  
- [框架視窗](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

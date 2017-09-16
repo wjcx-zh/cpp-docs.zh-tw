@@ -1,5 +1,5 @@
 ---
-title: "訊息對應巨集 (MFC) |Microsoft 文件"
+title: Message Map Macros (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,10 +29,10 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - message map macros
-- Windows messages [C++], declaration
+- Windows messages [MFC], declaration
 - demarcating Windows messages
-- message maps [C++], macros
-- message maps [C++], declaration and demarcation
+- message maps [MFC], macros
+- message maps [MFC], declaration and demarcation
 - message mapping macros
 - ranges, message map
 - message map ranges
@@ -55,124 +55,124 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d6b6322989db936f67c0d248b5b6a6e781e263ac
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
-若要支援訊息對應，MFC 提供下列巨集：  
+# <a name="message-map-macros-mfc"></a>Message Map Macros (MFC)
+To support message maps, MFC supplies the following macros:  
   
-### <a name="message-map-declaration-and-demarcation-macros"></a>訊息對應宣告和分界巨集  
-  
-|||  
-|-|-|  
-|[DECLARE_MESSAGE_MAP](#declare_message_map)|宣告的訊息對應會使用類別將訊息與函式對應 (必須在類別宣告中使用)。|  
-|[BEGIN_MESSAGE_MAP](#begin_message_map)|開始進行訊息對應的定義 (必須在類別實作中使用)。|  
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|開始訊息對應包含單一的樣板引數的類別類型上的定義。 |
-|[END_MESSAGE_MAP](#end_message_map)|結束訊息對應的定義 (必須在類別實作中使用)。|  
-  
-### <a name="message-mapping-macros"></a>訊息對應巨集  
+### <a name="message-map-declaration-and-demarcation-macros"></a>Message-Map Declaration and Demarcation Macros  
   
 |||  
 |-|-|  
-|[ON_COMMAND](#on_command)|指出哪些函式會處理指定的命令訊息。|  
-|[ON_COMMAND_EX](#on_command_ex)|指出哪些函式會處理指定的命令訊息。|  
-|[ON_CONTROL](#on_control)|指出哪些函式會處理指定的控制項通知訊息。|  
-|[ON_MESSAGE](#on_message)|指出哪些函式會處理使用者定義的訊息。|  
-|[ON_OLECMD](#on_olecmd)|指出哪些函式會處理來自 DocObject 或其容器的功能表命令。|  
-|[ON_REGISTERED_MESSAGE](#on_registered_message)|指出哪些函式會處理已註冊的使用者定義訊息。|  
-|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|指出當您擁有 `CWinThread` 類別時，哪些函式會處理已註冊的使用者定義訊息。|  
-|[ON_THREAD_MESSAGE](#on_thread_message)|指出當您擁有 `CWinThread` 類別時，哪些函式會處理使用者定義的訊息。|  
-|[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|指出哪些函式會處理指定的使用者介面更新命令訊息。|  
+|[DECLARE_MESSAGE_MAP](#declare_message_map)|Declares that a message map will be used in a class to map messages to functions (must be used in the class declaration).|  
+|[BEGIN_MESSAGE_MAP](#begin_message_map)|Begins the definition of a message map (must be used in the class implementation).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Begins the definition of a message map on a class type containing a single template argument. |
+|[END_MESSAGE_MAP](#end_message_map)|Ends the definition of a message map (must be used in the class implementation).|  
   
-### <a name="message-map-range-macros"></a>訊息對應範圍巨集  
+### <a name="message-mapping-macros"></a>Message-Mapping Macros  
   
 |||  
 |-|-|  
-|[ON_COMMAND_RANGE](#on_command_range)|指出哪些函式會處理巨集的前兩個參數中指定之命令 ID 的範圍。|  
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|指出哪些更新處理常式會處理前兩個 pa 中指定的命令 Id 的範圍] rameters 巨集。|  
-|[ON_CONTROL_RANGE](#on_control_range)|指出哪些函式會處理來自在巨集的第二和第三個參數中指定之控制項 ID 範圍的通知。 第一個參數是控制項通知訊息，例如**BN_CLICKED**。|  
+|[ON_COMMAND](#on_command)|Indicates which function will handle a specified command message.|  
+|[ON_COMMAND_EX](#on_command_ex)|Indicates which function will handle a specified command message.|  
+|[ON_CONTROL](#on_control)|Indicates which function will handle a specified control-notification message.|  
+|[ON_MESSAGE](#on_message)|Indicates which function will handle a user-defined message.|  
+|[ON_OLECMD](#on_olecmd)|Indicates which function will handle a menu command from a DocObject or its container.|  
+|[ON_REGISTERED_MESSAGE](#on_registered_message)|Indicates which function will handle a registered user-defined message.|  
+|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Indicates which function will handle a registered user-defined message when you have a `CWinThread` class.|  
+|[ON_THREAD_MESSAGE](#on_thread_message)|Indicates which function will handle a user-defined message when you have a `CWinThread` class.|  
+|[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Indicates which function will handle a specified user-interface update command message.|  
   
- 如需訊息對應、 訊息對應宣告和分界巨集和訊息對應巨集的詳細資訊，請參閱[訊息對應](../../mfc/reference/message-maps-mfc.md)和[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。 如需訊息對應範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
+### <a name="message-map-range-macros"></a>Message-Map Range Macros  
+  
+|||  
+|-|-|  
+|[ON_COMMAND_RANGE](#on_command_range)|Indicates which function will handle the range of command IDs specified in the first two parameters to the macro.|  
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Indicates which update handler will handle the range of command IDs specified in the first two pa]rameters to the macro.|  
+|[ON_CONTROL_RANGE](#on_control_range)|Indicates which function will handle notifications from the range of control IDs specified in the second and third parameters to the macro. The first parameter is a control-notification message, such as **BN_CLICKED**.|  
+  
+ For more information on message maps, the message-map declaration and demarcation macros, and the message-mapping macros, see [Message Maps](../../mfc/reference/message-maps-mfc.md) and [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md). For more information about message-map ranges, see [Handlers for Message-Map Ranges](../../mfc/handlers-for-message-map-ranges.md).  
 
 
-## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
-開始訊息對應的定義。  
+## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
+Begins the definition of your message map.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 BEGIN_MESSAGE_MAP( theClass, baseClass )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 指定的訊息對應的類別名稱。  
+ Specifies the name of the class whose message map this is.  
   
  `baseClass`  
- 指定 `theClass` 基底類別的名稱。  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>備註  
- 在定義類別的成員函式的實作 (.cpp) 檔案，會啟動的訊息對應`BEGIN_MESSAGE_MAP`巨集，然後針對每個訊息處理常式函式，新增巨集項目，並完成的訊息對應`END_MESSAGE_MAP`巨集。  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the message map with the `BEGIN_MESSAGE_MAP` macro, then add macro entries for each of your message-handler functions, and complete the message map with the `END_MESSAGE_MAP` macro.  
   
- 如需訊息對應的詳細資訊，請參閱[訊息對應](message-maps-mfc.md)  
+ For more information about message maps, see [Message Maps](message-maps-mfc.md)  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
 ```cpp  
 BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
    ON_WM_CREATE()
 END_MESSAGE_MAP()
 ```
   
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h 
 
 ##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
-開始訊息對應包含單一的樣板引數的類別類型上的定義。  
+Begins the definition of a message map on a class type containing a single template argument.  
    
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   ```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- 指定的訊息對應的類別名稱。    
+ Specifies the name of the class whose message map this is.    
  `type_name`  
- 指定類別的範本參數名稱。    
+ The name of the template parameter specified for the class.    
  `baseClass`  
- 指定 `theClass` 基底類別的名稱。  
+ Specifies the name of the base class of `theClass`.  
    
-### <a name="remarks"></a>備註  
- 這個巨集就類似於[BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map)巨集; 不過，此巨集用於包含單一的樣板引數的類別。  
+### <a name="remarks"></a>Remarks  
+ This macro is similar to the [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) macro; however, this macro is intended for classes containing a single template argument.  
   
- 在您類別的方法實作區段，會啟動的訊息對應**BEGIN_TEMPLATE_MESSAGE_MAP**巨集; 然後新增巨集項目針對每個訊息處理常式方法，如同標準訊息對應。 如同**BEGIN_MESSAGE_MAP**巨集，完成與範本訊息對應[END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map)巨集。  
+ In the method implementation section of your class, start the message map with the **BEGIN_TEMPLATE_MESSAGE_MAP** macro; then add macro entries for each of your message-handler methods as you would for a standard message map. As with the **BEGIN_MESSAGE_MAP** macro, complete the template message map with the [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) macro.  
   
- 如需實作訊息對應的樣板類別的詳細資訊，請參閱[How to︰ 建立樣板類別的訊息對應](../how-to-create-a-message-map-for-a-template-class.md)。  
+ For more information on implementing message maps for template classes, refer to [How to: Create a Message Map for a Template Class](../how-to-create-a-message-map-for-a-template-class.md).  
    
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
  
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- 宣告該類別定義的訊息對應。 每個`CCmdTarget`位在程式中的衍生的類別必須提供處理訊息的訊息對應。  
+## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
+ Declares that the class defines a message map. Each `CCmdTarget`-derived class in your program must provide a message map to handle messages.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```    
 DECLARE_MESSAGE_MAP( )  
 ```  
   
-### <a name="remarks"></a>備註  
- 使用`DECLARE_MESSAGE_MAP`巨集，在類別宣告的結尾。 接著，在定義類別的成員函式的.cpp 檔案，使用`BEGIN_MESSAGE_MAP`巨集，每個訊息處理常式函式的巨集項目和`END_MESSAGE_MAP`巨集。  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_MESSAGE_MAP` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_MESSAGE_MAP` macro, macro entries for each of your message-handler functions, and the `END_MESSAGE_MAP` macro.  
   
 > [!NOTE]
->  如果您宣告之後的任何成員`DECLARE_MESSAGE_MAP`，您必須指定新的存取類型 (**公用**， `private`，或`protected`) 它們。  
+>  If you declare any member after `DECLARE_MESSAGE_MAP`, you must specify a new access type (**public**, `private`, or `protected`) for them.  
   
- 如需訊息對應和`DECLARE_MESSAGE_MAP`巨集，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+ For more information on message maps and the `DECLARE_MESSAGE_MAP` macro, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
 ```cpp  
 class CMainFrame : public CMDIFrameWnd
 {
@@ -181,159 +181,159 @@ class CMainFrame : public CMDIFrameWnd
    // Remainder of class declaration omitted.
 ``` 
   
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
 
-## <a name="end_message_map"></a>END_MESSAGE_MAP
-結束訊息對應的定義。  
+## <a name="end_message_map"></a>  END_MESSAGE_MAP
+Ends the definition of your message map.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```   
 END_MESSAGE_MAP( )  
 ```  
   
-### <a name="remarks"></a>備註  
- 如需訊息對應和`END_MESSAGE_MAP`巨集，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information on message maps and the `END_MESSAGE_MAP` macro, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
-## <a name="on_command"></a>ON_COMMAND
-這個巨集對應的成員函式的命令訊息。  
+## <a name="on_command"></a>  ON_COMMAND
+This macro maps a command message to a member function.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_COMMAND( id, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `id`  
- 命令 ID。  
+ The command ID.  
   
  `memberFxn`  
- 命令對應的訊息處理函式名稱。  
+ The name of the message-handler function to which the command is mapped.  
   
-### <a name="remarks"></a>備註  
- 它會指出哪些函式會處理命令的使用者介面物件，例如功能表項目或工具列按鈕的命令訊息。  
+### <a name="remarks"></a>Remarks  
+ It indicates which function will handle a command message from a command user-interface object such as a menu item or toolbar button.  
   
- 當命令目標物件接收 Windows **WM_COMMAND**訊息具有指定的識別碼，`ON_COMMAND`會呼叫此成員函式`memberFxn`以處理訊息。  
+ When a command-target object receives a Windows **WM_COMMAND** message with the specified ID, `ON_COMMAND` will call the member function `memberFxn` to handle the message.  
   
- 使用`ON_COMMAND`對應的成員函式的單一命令。 使用[ON_COMMAND_RANGE](#on_command_range)來對應至一個成員函式的命令 id 的範圍。 只有一個訊息對應項目可以比對指定的命令識別碼。 也就是說，您無法將命令對應至一個以上的處理常式。 如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+ Use `ON_COMMAND` to map a single command to a member function. Use [ON_COMMAND_RANGE](#on_command_range) to map a range of command ids to one member function. Only one message-map entry can match a given command id. That is, you can't map a command to more than one handler. For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
 ```cpp  
 BEGIN_MESSAGE_MAP(CMFCListViewDoc, CDocument)
    ON_COMMAND(ID_MYCOMMAND, &CMFCListViewDoc::OnMycommand)
 END_MESSAGE_MAP()
 ``` 
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
- ## <a name="on_command_ex"></a>ON_COMMAND_EX
-擴充命令處理常式成員函式。  
+ ## <a name="on_command_ex"></a>  ON_COMMAND_EX
+Extended command-handler member function.  
    
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   ```  
 ON_COMMAND_EX(id, memberFxn);  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `id`  
- 命令 ID。  
+ The command ID.  
   
  `memberFxn`  
- 命令對應的訊息處理常式函式的名稱。  
+ The name of the  message-handler  function to which the  command is mapped.  
    
-### <a name="remarks"></a>備註 
-命令訊息處理常式的延伸的格式是供進階使用。 `ON_COMMAND_EX`巨集使用這類訊息處理常式，並提供 [ON_COMMAND] (#on_command) 功能的超集。  擴充的命令處理常式成員函式採用單一參數， **UINT**包含命令 ID，並傳回**BOOL**。 傳回的值應為 true 
+### <a name="remarks"></a>Remarks 
+An extended form of  command message  handlers is available  for advanced uses. The  `ON_COMMAND_EX` macro  is used for such  message handlers, and  it provides a superset  of the [ON_COMMAND] (#on_command)  functionality.  Extended  command-handler member  functions take a single  parameter, a **UINT**  containing the command  ID, and return a  **BOOL**. The return  value should be TRUE to 
 
-這個巨集將命令訊息對應到延伸的命令處理常式成員函式中。  
+This macro maps a command message to an extended command-handler member function.  
    
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
 ```  
 ON_COMMAND_EX(id,  memberFxn);  
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `id`  
- 命令 ID。  
+ The command ID.  
   
  `memberFxn`  
- 命令對應的訊息處理函式名稱。  
+ The name of the message-handler function to which the command is mapped.  
    
-### <a name="remarks"></a>備註  
- 命令訊息處理常式的延伸的格式是供進階使用。 `ON_COMMAND_EX`巨集使用這類訊息處理常式，而且它提供的超集[ON_COMMAND](message-map-macros-mfc.md#on_command)功能。 擴充的命令處理常式成員函式採用單一參數， **UINT**包含命令 ID，並傳回**BOOL**。 傳回的值應為 TRUE 表示已處理命令。否則路由將會繼續其他命令目標物件。  
-如需詳細資訊，請參閱 < 技術提示 [TN006︰ 訊息對應] tm006-訊息-maps.md)。  
+### <a name="remarks"></a>Remarks  
+ An extended form of command message handlers is available for advanced uses. The `ON_COMMAND_EX` macro is used for such message handlers, and it provides a superset of the [ON_COMMAND](message-map-macros-mfc.md#on_command) functionality. Extended command-handler member functions take a single parameter, a **UINT** containing the command ID, and return a **BOOL**. The return value should be TRUE to indicate that the command has been handled; otherwise routing will continue to other command target objects.  
+For more information, see Technical Note [TN006: Message Maps]tm006-message-maps.md).  
    
-### <a name="requirements"></a>需求  
- 標頭檔︰ afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ Header file: afxmsg_.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>See Also  
  [ON_COMMAND](message-map-macros-mfc.md#on_command)   
- [TN006︰ 訊息對應] tm006-訊息-maps.md)
+ [TN006: Message Maps]tm006-message-maps.md)
 
   
-## <a name="on_control"></a>ON_CONTROL
-指出哪些函式會處理自訂控制項通知訊息。  
+## <a name="on_control"></a>  ON_CONTROL
+Indicates which function will handle a custom-control notification message.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_CONTROL( wNotifyCode, id, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `wNotifyCode`  
- 控制項通知碼。  
+ The notification code of the control.  
   
  `id`  
- 命令 ID。  
+ The command ID.  
   
  `memberFxn`  
- 命令對應的訊息處理函式名稱。  
+ The name of the message-handler function to which the command is mapped.  
   
-### <a name="remarks"></a>備註  
- 控制項通知訊息是從控制項傳送至其父視窗。  
+### <a name="remarks"></a>Remarks  
+ Control notification messages are those sent from a control to its parent window.  
   
- 應該有正好一個`ON_CONTROL`巨集的每一個都必須對應至訊息處理常式函式的控制項通知訊息的訊息對應中的陳述式。  
+ There should be exactly one `ON_CONTROL` macro statement in your message map for every control notification message that must be mapped to a message-handler function.  
   
- 如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
   
 
-## <a name="on_message"></a>ON_MESSAGE  
-指出哪些函式會處理使用者定義的訊息。  
+## <a name="on_message"></a>  ON_MESSAGE  
+Indicates which function will handle a user-defined message.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_MESSAGE( message, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `message`  
- 訊息 ID。  
+ The message ID.  
   
  `memberFxn`  
- 訊息對應的訊息處理常式函式的名稱。  
+ The name of the message-handler function to which the message is mapped.  
   
- 函式的類型必須是`afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`。  
+ The type of the function must be `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
-### <a name="remarks"></a>備註  
- 使用者定義的訊息會顯示任何訊息不是標準的 Windows`WM_MESSAGE`訊息。 當選取的訊息識別碼，您必須使用的範圍內的值`WM_USER`(0x0400) 至 0x7FFF 或`WM_APP`(0x8000) 至 0xBFFF。 如需有關訊息識別碼的詳細資訊，請參閱[WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930)。  
+### <a name="remarks"></a>Remarks  
+ User-defined messages are any messages that are not standard Windows `WM_MESSAGE` messages. When selecting a message ID, you must use values within the range of `WM_USER` (0x0400) to 0x7FFF or `WM_APP` (0x8000) to 0xBFFF. For more information regarding message IDs, see [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
   
- 應該有正好一個`ON_MESSAGE`巨集的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應中的陳述式。  
+ There should be exactly one `ON_MESSAGE` macro statement in your message map for every user-defined message that must be mapped to a message-handler function.  
   
 > [!NOTE]
->  使用者定義的訊息，除了`ON_MESSAGE`處理較不常見的 Windows 訊息。 如需詳細資訊，請參閱知識庫文件[99848︰ 資訊︰ 使用 ON_MESSAGE() 巨集對應較不常見訊息](http://go.microsoft.com/fwlink/?linkId=192022)。  
+>  In addition to user-defined messages, `ON_MESSAGE` handles less common Windows messages. For more information, see Knowledge Base article [99848: INFO: Use ON_MESSAGE() Macro to Map Less-Common Messages](http://go.microsoft.com/fwlink/?linkId=192022).  
   
- 如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)和[使用者定義的處理常式](user-defined-handlers.md)  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md) and [User-Defined Handlers](user-defined-handlers.md)  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
 ```cpp  
 #define WM_MYMESSAGE (WM_USER + 100)
 
@@ -355,160 +355,160 @@ END_MESSAGE_MAP()
 }
 ```   
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_olecmd"></a>ON_OLECMD    
-透過命令分派介面會將命令路由`IOleCommandTarget`。  
+## <a name="on_olecmd"></a>  ON_OLECMD  
+Routes commands through the command dispatch interface `IOleCommandTarget`.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_OLECMD( pguid, olecmdid, id )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pguid`  
- 此命令屬於哪個命令群組的識別碼。 使用**NULL**標準的群組。  
+ Identifier of the command group to which the command belongs. Use **NULL** for the standard group.  
   
  *olecmdid*  
- OLE 命令的識別碼。  
+ The identifier of the OLE command.  
   
  `id`  
- 功能表識別碼、 工具列 ID、 按鈕 ID 或其他資源或物件發出命令的識別碼。  
+ The menu ID, toolbar ID, button ID, or other ID of the resource or object issuing the command.  
   
-### <a name="remarks"></a>備註  
- `IOleCommandTarget`允許容器接收來自 DocObject 使用者介面中的命令，並允許容器來傳送相同的命令 (例如新增、 開啟、 另存新檔，以及在 [檔案] 功能表中，列印和複製、 貼上、 復原，依此類推 [編輯] 功能表) 以 DocObject。  
+### <a name="remarks"></a>Remarks  
+ `IOleCommandTarget` allows a container to receive commands that originate in a DocObject's user interface, and allows the container to send the same commands (such as New, Open, SaveAs, and Print on the File menu; and Copy, Paste, Undo, and so forth on the Edit menu) to a DocObject.  
   
- `IOleCommandTarget`會比 OLE Automation 的簡單`IDispatch`。 `IOleCommandTarget`完全依賴一組標準的命令也很少需要引數，並不涉及任何類型資訊 （型別安全就會受到影響的命令引數）。 如果您需要分派命令與引數，使用[COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)。  
+ `IOleCommandTarget` is simpler than OLE Automation's `IDispatch`. `IOleCommandTarget` relies entirely on a standard set of commands that rarely have arguments, and no type information is involved (type safety is diminished for command arguments as well). If you do need to dispatch commands with arguments, use [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
   
- `IOleCommandTarget`標準功能表命令已由 MFC 實作在下列巨集︰  
+ The `IOleCommandTarget` standard menu commands have been implemented by MFC in the following macros:  
   
- **ON_OLECMD_CLEARSELECTION （)**  
+ **ON_OLECMD_CLEARSELECTION( )**  
   
- 將分派清除編輯命令。 實作為︰  
+ Dispatches the Edit Clear command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`  
   
- **ON_OLECMD_COPY （)**  
+ **ON_OLECMD_COPY( )**  
   
- 將分派編輯複製命令。 實作為︰  
+ Dispatches the Edit Copy command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`  
   
- **ON_OLECMD_CUT （)**  
+ **ON_OLECMD_CUT( )**  
   
- 將分派編輯剪下 命令。 實作為︰  
+ Dispatches the Edit Cut command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`  
   
- **ON_OLECMD_NEW （)**  
+ **ON_OLECMD_NEW( )**  
   
- 將分派檔案到新的命令。 實作為︰  
+ Dispatches the File New command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`  
   
- **ON_OLECMD_OPEN （)**  
+ **ON_OLECMD_OPEN( )**  
   
- 將分派檔案開啟的命令。 實作為︰  
+ Dispatches the File Open command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`  
   
- **ON_OLECMD_PAGESETUP （)**  
+ **ON_OLECMD_PAGESETUP( )**  
   
- 將分派檔案 版面設定命令。 實作為︰  
+ Dispatches the File Page Setup command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`  
   
- **ON_OLECMD_PASTE （)**  
+ **ON_OLECMD_PASTE( )**  
   
- 將分派編輯貼上 命令。 實作為︰  
+ Dispatches the Edit Paste command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`  
   
- **ON_OLECMD_PASTESPECIAL （)**  
+ **ON_OLECMD_PASTESPECIAL( )**  
   
- 將分派編輯選擇性貼上命令。 實作為︰  
+ Dispatches the Edit Paste Special command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`  
   
- **ON_OLECMD_PRINT （)**  
+ **ON_OLECMD_PRINT( )**  
   
- 將分派檔案列印命令。 實作為︰  
+ Dispatches the File Print command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`  
   
- **ON_OLECMD_PRINTPREVIEW （)**  
+ **ON_OLECMD_PRINTPREVIEW( )**  
   
- 將分派檔案的預覽列印 命令。 實作為︰  
+ Dispatches the File Print Preview command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`  
   
- **ON_OLECMD_REDO （)**  
+ **ON_OLECMD_REDO( )**  
   
- 將分派編輯取消復原命令。 實作為︰  
+ Dispatches the Edit Redo command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`  
   
- **ON_OLECMD_SAVE （)**  
+ **ON_OLECMD_SAVE( )**  
   
- 將分派儲存檔案的命令。 實作為︰  
+ Dispatches the File Save command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`  
   
- **ON_OLECMD_SAVE_AS （)**  
+ **ON_OLECMD_SAVE_AS( )**  
   
- 將分派檔案另存新檔 命令。 實作為︰  
+ Dispatches the File Save As command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`  
   
- **ON_OLECMD_SAVE_COPY_AS （)**  
+ **ON_OLECMD_SAVE_COPY_AS( )**  
   
- 將分派檔案存複本命令。 實作為︰  
+ Dispatches the File Save Copy As command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`  
   
- **ON_OLECMD_SELECTALL （)**  
+ **ON_OLECMD_SELECTALL( )**  
   
- 將分派編輯選取的所有命令。 實作為︰  
+ Dispatches the Edit Select All command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`  
   
- **ON_OLECMD_UNDO （)**  
+ **ON_OLECMD_UNDO( )**  
   
- 將分派編輯 Undo 命令。 實作為︰  
+ Dispatches the Edit Undo command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxdocob.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdocob.h  
   
-### <a name="see-also"></a>另請參閱  
- [COleCmdUI 類別](colecmdui-class.md)   
+### <a name="see-also"></a>See Also  
+ [COleCmdUI Class](colecmdui-class.md)   
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
-## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
-Windows **RegisterWindowMessage**函式用來定義新的視窗訊息，保證是唯一的整個系統。  
+## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
+The Windows **RegisterWindowMessage** function is used to define a new window message that is guaranteed to be unique throughout the system.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nMessageVariable`  
- 已註冊的視窗訊息 ID 變數中。  
+ The registered window-message ID variable.  
   
  `memberFxn`  
- 訊息對應的訊息處理常式函式的名稱。  
+ The name of the message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>備註  
- 這個巨集指出哪些函式會處理已註冊的訊息。  
+### <a name="remarks"></a>Remarks  
+ This macro indicates which function will handle the registered message.  
   
- 如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
 ```cpp  
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
@@ -518,111 +518,111 @@ BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
 END_MESSAGE_MAP()
 ```  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>See Also  
  [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
- [使用者定義的處理常式](user-defined-handlers.md)
+ [User-Defined Handlers](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE    
-指出哪些函式會處理註冊 Windows RegisterWindowMessage 函式的訊息。  
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+Indicates which function will handle the message registered by the Windows RegisterWindowMessage function.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nMessageVariable`  
- 已註冊的視窗訊息 ID 變數中。  
+ The registered window-message ID variable.  
   
  `memberFxn`  
- 訊息對應到 CWinThread 訊息處理常式函式的名稱。  
+ The name of the CWinThread-message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>備註  
- RegisterWindowMessage 用來定義新的視窗訊息，保證是唯一的整個系統。 ON_REGISTERED_THREAD_MESSAGE 必須代替 ON_REGISTERED_MESSAGE，當您有 CWinThread 類別。 
+### <a name="remarks"></a>Remarks  
+ RegisterWindowMessage is used to define a new window message that is guaranteed to be unique throughout the system. ON_REGISTERED_THREAD_MESSAGE must be used instead of ON_REGISTERED_MESSAGE when you have a CWinThread class. 
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_thread_message"></a>ON_THREAD_MESSAGE    
-指出哪些函式會處理使用者定義的訊息。  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+Indicates which function will handle a user-defined message.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_THREAD_MESSAGE( message, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `message`  
- 訊息 ID。  
+ The message ID.  
   
  `memberFxn`  
- 名稱`CWinThread`-訊息-訊息對應的處理常式函式。  
+ The name of the `CWinThread`-message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>備註  
- `ON_THREAD_MESSAGE`必須使用而不是`ON_MESSAGE`當您有`CWinThread`類別。 使用者定義的訊息會顯示任何訊息不是標準的 Windows **WM_MESSAGE**訊息。 應該有正好一個`ON_THREAD_MESSAGE`巨集的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應中的陳述式。  
+### <a name="remarks"></a>Remarks  
+ `ON_THREAD_MESSAGE` must be used instead of `ON_MESSAGE` when you have a `CWinThread` class. User-defined messages are any messages that are not standard Windows **WM_MESSAGE** messages. There should be exactly one `ON_THREAD_MESSAGE` macro statement in your message map for every user-defined message that must be mapped to a message-handler function.  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxole.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
 
-## <a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI    
-這個巨集指出哪些函式會處理使用者介面更新命令訊息。  
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+This macro indicates which function will handle a user-interface update command message.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_UPDATE_COMMAND_UI( id, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `id`  
- 訊息 ID。  
+ The message ID.  
   
  `memberFxn`  
- 訊息對應的訊息處理常式函式的名稱。  
+ The name of the message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>備註  
- 應該有正好一個`ON_UPDATE_COMMAND_UI`巨集的訊息處理常式函式必須對應每個使用者介面更新命令訊息對應中的陳述式。  
+### <a name="remarks"></a>Remarks  
+ There should be exactly one `ON_UPDATE_COMMAND_UI` macro statement in your message map for every user-interface update command that must be mapped to a message-handler function.  
   
- 如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)。  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxole.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-### <a name="see-also"></a>另請參閱  
- [CCmdUI 類別](ccmdui-class.md)
+### <a name="see-also"></a>See Also  
+ [CCmdUI Class](ccmdui-class.md)
 
-## <a name="on_command_range"></a>ON_COMMAND_RANGE  
-使用此巨集將命令 Id 的連續範圍對應到單一訊息處理常式函式。  
+## <a name="on_command_range"></a>  ON_COMMAND_RANGE  
+Use this macro to map a contiguous range of command IDs to a single message handler function.  
   
-### <a name="syntax"></a>語法
+### <a name="syntax"></a>Syntax
   
 ```  
 ON_COMMAND_RANGE( id1, id2, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `id1`  
- 命令 Id 的連續範圍的開頭的命令識別碼。  
+ Command ID at the beginning of a contiguous range of command IDs.  
   
  `id2`  
- 命令 ID 的命令 Id 連續範圍的結尾。  
+ Command ID at the end of a contiguous range of command IDs.  
   
  `memberFxn`  
- 命令所對應的訊息處理常式函式的名稱。  
+ The name of the message-handler function to which the commands are mapped.  
   
-### <a name="remarks"></a>備註  
- 範圍的識別碼開頭`id1`，並結束`id2`。  
+### <a name="remarks"></a>Remarks  
+ The range of IDs starts with `id1` and ends with `id2`.  
   
- 使用`ON_COMMAND_RANGE`來對應至一個成員函式的命令 Id 的範圍。 使用[ON_COMMAND](#on_command)對應的成員函式的單一命令。 只有一個訊息對應項目可以比對指定的命令識別碼。 也就是說，您無法將命令對應至一個以上的處理常式。 如需有關對應訊息範圍的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
+ Use `ON_COMMAND_RANGE` to map a range of command IDs to one member function. Use [ON_COMMAND](#on_command) to map a single command to a member function. Only one message-map entry can match a given command ID. That is, you can't map a command to more than one handler. For more information on mapping message ranges, see [Handlers for Message-Map Ranges](../../mfc/handlers-for-message-map-ranges.md).  
   
- 沒有支援自動訊息對應範圍，因此您必須自行將巨集。  
+ There is no automatic support for message map ranges, so you must place the macro yourself.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
 ```cpp  
 // The code fragment below shows how to use ON_COMMAND_RANGE macro 
 // to map a contiguous range of command IDs to a single message  
@@ -643,67 +643,67 @@ void CChildFrame::OnRangeCmds(UINT nID)
 }
 ```
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE    
-將連續的命令 Id 對應至單一更新訊息處理常式函式。  
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+Maps a contiguous range of command IDs to a single update message handler function.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `id1`  
- 命令 Id 的連續範圍的開頭的命令識別碼。  
+ Command ID at the beginning of a contiguous range of command IDs.  
   
  `id2`  
- 命令 ID 的命令 Id 連續範圍的結尾。  
+ Command ID at the end of a contiguous range of command IDs.  
   
  `memberFxn`  
- 更新訊息處理常式函式，命令所對應的名稱。  
+ The name of the update message-handler function to which the commands are mapped.  
   
-### <a name="remarks"></a>備註  
- 更新處理常式更新功能表項目和工具列按鈕與命令相關聯的狀態訊息。 範圍的識別碼開頭`id1`，並結束`id2`。  
+### <a name="remarks"></a>Remarks  
+ Update message handlers update the state of menu items and toolbar buttons associated with the command. The range of IDs starts with `id1` and ends with `id2`.  
   
- 沒有支援自動訊息對應範圍，因此您必須自行將巨集。  
+ There is no automatic support for message map ranges, so you must place the macro yourself.  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_control_range"></a>ON_CONTROL_RANGE     
-使用這個巨集，例如對應至指定的 Windows 通知訊息的單一訊息處理常式函式的控制項 Id 的連續範圍**BN_CLICKED**。  
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE     
+Use this macro to map a contiguous range of control IDs to a single message handler function for a specified Windows notification message, such as **BN_CLICKED**.  
   
-### <a name="syntax"></a>語法  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `wNotifyCode`  
- 您的處理常式有回應通知的程式碼。  
+ The notification code to which your handler is responding.  
   
  `id1`  
- 命令 ID 的控制項 Id 連續範圍的開頭。  
+ Command ID at the beginning of a contiguous range of control IDs.  
   
  `id2`  
- 命令 ID 的控制項 Id 連續範圍的結尾。  
+ Command ID at the end of a contiguous range of control IDs.  
   
  `memberFxn`  
- 控制項所對應的訊息處理常式函式的名稱。  
+ The name of the message-handler function to which the controls are mapped.  
   
-### <a name="remarks"></a>備註  
- 範圍的識別碼開頭`id1`，並結束`id2`。 指定通知來自任何對應的控制項，會呼叫處理常式。  
+### <a name="remarks"></a>Remarks  
+ The range of IDs starts with `id1` and ends with `id2`. The handler is called for the specified notification coming from any of the mapped controls.  
   
- 沒有支援自動訊息對應範圍，因此您必須自行將巨集。  
+ There is no automatic support for message map ranges, so you must place the macro yourself.  
   
- 如需實作的控制項識別碼範圍的處理常式函式的詳細資訊，請參閱[訊息對應範圍的處理常式](../../mfc/handlers-for-message-map-ranges.md)。  
+ For more information on implementing handler functions for a range of control IDs, refer to [Handlers for Message-Map Ranges](../../mfc/handlers-for-message-map-ranges.md).  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
   
 
 

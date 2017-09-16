@@ -1,71 +1,90 @@
 ---
-title: "從 Typelib 加入類別精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.class.typelib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TypeLib 精靈的加入類別 [C++]"
-  - "COM 介面, 加入類別"
+title: Add Class from Typelib Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.codewiz.class.typelib
+dev_langs:
+- C++
+helpviewer_keywords:
+- Add Class from TypeLib Wizard [MFC]
+- COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 從 Typelib 加入類別精靈
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9622a818e6334caad172f31f717eddc7e1230965
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-使用本精靈自可用的型別程式庫加入 MFC 類別。  精靈為每個從選取之型別程式庫加入的介面，建立一個類別。  
+---
+# <a name="add-class-from-typelib-wizard"></a>Add Class from Typelib Wizard
+Use this wizard to add an MFC class from an available type library. The wizard creates a class for each interface you add from the selected type library.  
   
- **加入類別來源**  
- 指定建立類別之來源型別程式庫的位置。  
+ **Add class from**  
+ Specifies the location of the type library, from which the class is created.  
   
-|選項|說明|  
-|--------|--------|  
-|**登錄**|型別程式庫已登錄於系統中。  \[可用的型別程式庫\] 中會列出已登錄的型別程式庫|  
-|**檔案**|當型別程式庫包含在一個檔案中時便不一定要在系統中登錄，  您必須在 \[位置\] 中提供該檔案的位置|  
+|Option|Description|  
+|------------|-----------------|  
+|**Registry**|The type library is registered in the system. Registered type libraries are listed in **Available type libraries**.|  
+|**File**|The type library is not necessarily registered in the system but is contained in a file. You must provide the file location in **Location**.|  
   
- **可用的型別程式庫**  
- 列出目前系統中登錄的型別程式庫清單。  自本清單中選取型別程式庫，以便在 \[介面\] 清單中顯示其介面。  
+ **Available type libraries**  
+ Lists the type libraries currently registered in the system. Select a type library from this list to display its interfaces in the **Interfaces** list.  
   
- 如需登錄型別程式庫的詳細資訊，請參閱 MSDN Library 中的＜深入探討分散式 COM：型別程式庫和語言整合＞\(英文\)。  
+ See "Inside Distributed COM: Type Libraries and Language Integration" in the MSDN library for more information about registering type libraries.  
   
- **位置**  
- 指定型別程式庫的位置。  如果按一下 \[加入類別來源\] 下的 \[**檔案**\]，您便可以提供包含型別程式庫的檔案位置。  若要瀏覽檔案位置，請按一下省略按鈕。  
+ **Location**  
+ Specifies the location of the type library. If you click **File** under **Add Class From**, you can provide the location of the file containing the type library. To browse to the location of the file, click the ellipsis button.  
   
- **介面**  
- 列出目前在 \[可用的型別程式庫\] 清單中選取之型別程式庫的介面清單。  
+ **Interfaces**  
+ Lists the interfaces in the type library currently selected in the **Available type libraries** list.  
   
-|傳送按鈕|說明|  
-|----------|--------|  
-|**\>**|加入 \[介面\] 清單中目前選取的介面。  若未選取介面則為暗灰色的|  
-|**\>\>**|加入 \[可用的型別程式庫\] 清單中目前選取的型別程式庫中所有的介面|  
-|**\<**|移除 \[產生的類別\] 清單中目前選取的類別，  若 \[產生的類別\] 清單中目前未選取任何類別則為暗灰色的|  
-|**\<\<**|移除 \[產生的類別\] 清單中所有類別，  若 \[產生的類別\] 清單空白則為暗灰色的|  
+|Transfer button|Description|  
+|---------------------|-----------------|  
+|**>**|Adds the interface currently selected in the **Interfaces** list. Dimmed if no interface is selected.|  
+|**>>**|Adds all the interfaces in the type library currently selected in the **Available type libraries** list.|  
+|**<**|Removes the class currently selected in the **Generated classes** list. Dimmed if no class is currently selected in the **Generated classes** list.|  
+|**<\<**|Removes all the classes in the **Generated classes** list. Dimmed if the **Generated classes** list is empty.|  
   
- **產生的類別**  
- 指定使用 **\>**或**\>\>** 按鈕加入要從介面產生的類別名稱。  按一下這個方塊可以選取類別，然後使用向上或向下鍵捲動整個清單，檢視 \[`Class`\] 方塊中的每個類別名稱和在 \[檔案\] 方塊中的每個檔案名稱，當按一下 \[完成\] 按鈕時精靈便會幫您產生。  在此方塊中一次只能選取一個類別。  
+ **Generated classes**  
+ Specifies the class names to be generated from the interfaces added using the **>** or **>>** button. You can click this box to select a class, and then use the up or down keys to scroll through the list, viewing each class name in the `Class` box and file name in the **File** box that the wizard generates when you click **Finish**. You can select only one class at a time in this box.  
   
- 在清單中選取類別然後按一下**\<**按鈕就能移除類別。  若要移除所有類別，不必在產生的類別方塊中選取類別，只要按一下**\<\<**， 按鈕就能移除**產生的類別**方塊中全部的類別。  
+ You can remove a class by selecting it in this list and clicking **<**. You do not need to select a class in the Generated classes box to remove all classes; by clicking **<<**, you remove all classes in the **Generated classes** box.  
   
  `Class`  
- 指定 \[產生的類別\] 方塊中所選取類別的類別名稱，在按一下 \[完成\] 按鈕時精靈會將之加入。  可在 \[`Class`\] 方塊裡編輯類別名稱。  
+ Specifies the name of the class selected in the **Generated classes** box that the wizard adds when you click **Finish**. You can edit the name in the `Class` box.  
   
- **檔案**  
- 為新類別設定標頭檔 \(Header File\) 名稱。  預設情況下，這個名稱會根據您在 \[產生的類別\] 方塊中提供的名稱來命名。  按一下省略按鈕，將檔名儲存至您選擇的位置，或將類別宣告附加至現有的檔案。  如果您選擇現有檔案，除非您在精靈中按一下 \[完成\]，否則精靈不會將檔案儲存到選取位置。  
+ **File**  
+ Sets the name of the header file for the new class. By default, this name is based on the name you provide in **Generated classes**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- 精靈不會覆寫檔案。  如果您選取現有檔案的名稱，則當您按一下 \[完成\] 時，精靈會提示您是否要將類別宣告附加至檔案內容。  按一下 \[**是**\] 會將類別宣告附加至檔案，按一下 \[**否**\] 則可回到精靈並指定另一個檔名。  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
-## 請參閱  
- [來自類型程式庫的 MFC 類別](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
- [Automation 用戶端：使用類型程式庫](../../mfc/automation-clients-using-type-libraries.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class from a Type Library](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)   
+ [Automation Clients: Using Type Libraries](../../mfc/automation-clients-using-type-libraries.md)
+
+

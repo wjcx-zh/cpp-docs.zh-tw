@@ -1,47 +1,65 @@
 ---
-title: "排序標題控制項中的項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DS_DRAGDROP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DS_DRAGDROP 告知"
-  - "GetOrderArray 方法"
-  - "標題控制項, 排序項目"
-  - "OrderToIndex 方法"
-  - "序列"
-  - "序列, 標題控制項目"
-  - "SetOrderArray 方法"
+title: Ordering Items in the Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DS_DRAGDROP
+dev_langs:
+- C++
+helpviewer_keywords:
+- sequence [MFC]
+- sequence [MFC], header control items
+- OrderToIndex method [MFC]
+- DS_DRAGDROP notification [MFC]
+- GetOrderArray method [MFC]
+- SetOrderArray method [MFC]
+- header controls [MFC], ordering items
 ms.assetid: 5aaef872-75b5-49c5-8fed-6f9a81fca812
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 排序標題控制項中的項目
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b2cb956d72d2d72cefe8dc9b9084d66e40324b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-一旦您有 [加入項目至標題控制項](../mfc/adding-items-to-the-header-control.md)，您可以操作或取得有關順序的資訊與下列函式：  
+---
+# <a name="ordering-items-in-the-header-control"></a>Ordering Items in the Header Control
+Once you've [added items to a header control](../mfc/adding-items-to-the-header-control.md), you can manipulate or get information about their order with the following functions:  
   
--   [CHeaderCtrl::GetOrderArray](../Topic/CHeaderCtrl::GetOrderArray.md) 和 [CHeaderCtrl::SetOrderArray](../Topic/CHeaderCtrl::SetOrderArray.md)  
+-   [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) and [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)  
   
-     擷取和設定標題項目由左至右的順序。  
+     Retrieves and sets the left-to-right order of header items.  
   
--   [CHeaderCtrl::OrderToIndex](../Topic/CHeaderCtrl::OrderToIndex.md)。  
+-   [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).  
   
-     擷取特定標頭項目的索引值。  
+     Retrieves the index value for a specific header item.  
   
- 除了先前的成員函式之外， `HDS_DRAGDROP` 模式允許使用者拖放至標題控制項內的標題項目。  如需詳細資訊，請參閱 [提供拖放支援針對標頭項目](../mfc/providing-drag-and-drop-support-for-header-items.md)。  
+ In addition to the previous member functions, the `HDS_DRAGDROP` style allows the user to drag and drop header items within the header control. For more information, see [Providing Drag-and-Drop Support for Header Items](../mfc/providing-drag-and-drop-support-for-header-items.md).  
   
-## 請參閱  
- [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)
+
+

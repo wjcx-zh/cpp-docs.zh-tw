@@ -1,57 +1,75 @@
 ---
-title: "拖放：實作置放目標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "拖放, 置放目標"
-  - "OLE 拖放, 置放目標"
-  - "OLE 拖放, 實作置放目標"
+title: 'Drag and Drop: Implementing a Drop Target | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], implementing drop targets
+- OLE drag and drop [MFC], drop target
+- drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 拖放：實作置放目標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f6d4fb84423e3d2b67ad6d5a91bf001be5098061
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文概述如何讓應用程式置放目標。  實作置放目標版本實作置放來源採用稍微更多工作，不過，它仍然是相當簡單。  這些技術也套用至非 OLE 應用程式。  
+---
+# <a name="drag-and-drop-implementing-a-drop-target"></a>Drag and Drop: Implementing a Drop Target
+This article outlines how to make your application a drop target. Implementing a drop target takes slightly more work than implementing a drop source, but it is still relatively simple. These techniques also apply to non-OLE applications.  
   
-#### 實作置放目標。  
+#### <a name="to-implement-a-drop-target"></a>To implement a drop target  
   
-1.  將 10% 成員變數加入至您要做為置放目標的應用程式中的每個檢視。  這個成員變數必須從它衍生的型別是 `COleDropTarget` 或類別。  
+1.  Add a member variable to each view in the application that you want to be a drop target. This member variable must be of type `COleDropTarget` or a class derived from it.  
   
-2.  從處理 `WM_CREATE` 訊息的檢視類別函式 \(一般為 `OnCreate`\)，請呼叫新成員變數的 `Register` 成員函式。  排程器，`Revoke` 將會自動呼叫您的意圖。  
+2.  From your view class's function that handles the `WM_CREATE` message (typically `OnCreate`), call the new member variable's `Register` member function. `Revoke` will be called automatically for you when your view is destroyed.  
   
-3.  覆寫下列函式。  如果您想要在應用程式中的相同的行為，請覆寫您的檢視類別的這些函式。  如果您要修改行為在不同案例中或要啟用置放在非`CView` 視窗，請覆寫您的 `COleDropTarget`的這些函式的衍生類別。  
+3.  Override the following functions. If you want the same behavior throughout your application, override these functions in your view class. If you want to modify behavior in isolated cases or want to enable dropping on non-`CView` windows, override these functions in your `COleDropTarget`-derived class.  
   
-    |覆寫|允許|  
-    |--------|--------|  
-    |`OnDragEnter`|在視窗發生置放作業。  當游標第一次進入視窗時呼叫。|  
-    |`OnDragLeave`|在拖曳作業將指定的視窗時的特殊行為。|  
-    |`OnDragOver`|在視窗發生置放作業。  在游標跨視窗拖曳時呼叫。|  
-    |`OnDrop`|置放入指定之視窗的資料處理。|  
-    |`OnScrollBy`|特殊行為，當移動所需的目標視窗。|  
+    |Override|To allow|  
+    |--------------|--------------|  
+    |`OnDragEnter`|Drop operations to occur in the window. Called when the cursor first enters the window.|  
+    |`OnDragLeave`|Special behavior when the drag operation leaves the specified window.|  
+    |`OnDragOver`|Drop operations to occur in the window. Called when the cursor is being dragged across the window.|  
+    |`OnDrop`|Handling of data being dropped into the specified window.|  
+    |`OnScrollBy`|Special behavior for when scrolling is necessary in the target window.|  
   
- 請參閱 MFC OLE 範例[OCLIENT](../top/visual-cpp-samples.md) 中部分範例的 MAINVIEW.CPP 檔案示範這些函式如何一起運作。  
+ See the MAINVIEW.CPP file that is part of the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) for an example of how these functions work together.  
   
- 如需詳細資訊，請參閱：  
+ For more information, see:  
   
--   [實作置放來源](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [建立和終結的 OLE 資料物件和資料來源](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [管理OLE資料物件和資料來源](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## 請參閱  
- [拖放 \(OLE\)](../mfc/drag-and-drop-ole.md)   
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
  [COleDropTarget Class](../mfc/reference/coledroptarget-class.md)
+

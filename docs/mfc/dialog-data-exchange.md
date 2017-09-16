@@ -1,64 +1,83 @@
 ---
-title: "對話方塊資料交換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "取消資料交換"
-  - "擷取使用者輸入"
-  - "CDataExchange 類別, 使用 DDX"
-  - "DDX (對話資料交換), 取消"
-  - "DDX (對話資料交換), 資料交換機制"
-  - "對話方塊資料"
-  - "對話方塊資料, 擷取"
-  - "對話方塊, 資料交換"
-  - "對話方塊, 初始化"
-  - "對話方塊, 使用 DDX 擷取使用者輸入"
-  - "DoDataExchange 方法"
-  - "初始化對話方塊"
-  - "擷取對話方塊資料"
-  - "傳輸對話方塊資料"
-  - "UpdateData 方法"
-  - "使用者輸入, 從 MFC 對話方塊擷取"
+title: Dialog Data Exchange | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing dialog boxes
+- canceling data exchange
+- dialog box data, retrieving
+- DDX (dialog data exchange), data exchange mechanism
+- dialog boxes [MFC], initializing
+- dialog boxes [MFC], retrieving user input using DDX
+- dialog box data
+- dialog boxes [MFC], data exchange
+- CDataExchange class [MFC], using DDX
+- DoDataExchange method [MFC]
+- user input [MFC], retrieving from MFC dialog boxes
+- capturing user input [MFC]
+- transferring dialog box data
+- DDX (dialog data exchange), canceling
+- UpdateData method [MFC]
+- retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 對話方塊資料交換
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fbb20507f4412ee32309d178ab473375bec1d29
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如果您使用 DDX 機制，通常您會將對話方塊物件成員變數的初始值設定在 `OnInitDialog` 處理常式或對話方塊建構函式中。  在對話方塊顯示之前，框架的 DDX 機制將成員變數的值傳送至對話方塊的控制項，當對話方塊顯示時它們會出現，已回應 `DoModal` 或 **Create**。  `CDialog` 的 `OnInitDialog` 的預設實作會呼叫類別 `CWnd` 的 `UpdateData` 成員函式，來初始化對話方塊中的控制項。  
+---
+# <a name="dialog-data-exchange"></a>Dialog Data Exchange
+If you use the DDX mechanism, you set the initial values of the dialog object's member variables, typically in your `OnInitDialog` handler or the dialog constructor. Immediately before the dialog is displayed, the framework's DDX mechanism transfers the values of the member variables to the controls in the dialog box, where they appear when the dialog box itself appears in response to `DoModal` or **Create**. The default implementation of `OnInitDialog` in `CDialog` calls the `UpdateData` member function of class `CWnd` to initialize the controls in the dialog box.  
   
- 當使用者按一下確定按鈕時 \(或者每當您使用引數 **TRUE** 呼叫 `UpdateData` 成員函式時\)，同一個機制會將值從控制項傳送至成員變數。  對話資料驗證機制會驗證您指定驗證規則的所有資料項目。  
+ The same mechanism transfers values from the controls to the member variables when the user clicks the OK button (or whenever you call the `UpdateData` member function with the argument **TRUE**). The dialog data validation mechanism validates any data items for which you specified validation rules.  
   
- 下圖說明對話資料交換。  
+ The following figure illustrates dialog data exchange.  
   
- ![對話方塊資料交換](../mfc/media/vc379d1.png "vc379D1")  
-對話資料交換  
+ ![Dialog box data exchange](../mfc/media/vc379d1.gif "vc379d1")  
+Dialog Data Exchange  
   
- `UpdateData` 可用於雙向，如 **BOOL** 參數傳遞給它所指定的。  若要執行交換，`UpdateData` 會使用 `CDataExchange` 物件並呼叫您對話方塊類別的 `CDialog` `DoDataExchange` 成員函式的覆寫。  `DoDataExchange` 會採用型別 `CDataExchange`的引數。  傳遞至 `UpdateData` 的 `CDataExchange` 物件表示交換的內容，定義資訊，例如交換的方向。  
+ `UpdateData` works in both directions, as specified by the **BOOL** parameter passed to it. To carry out the exchange, `UpdateData` sets up a `CDataExchange` object and calls your dialog class's override of `CDialog`'s `DoDataExchange` member function. `DoDataExchange` takes an argument of type `CDataExchange`. The `CDataExchange` object passed to `UpdateData` represents the context of the exchange, defining such information as the direction of the exchange.  
   
- 當您 \(或程式碼精靈\) 覆寫 `DoDataExchange` 時，請指定每個資料成員 \(控制項\) 的 DDX 函式的呼叫。  每個 DDX 函式根據 `UpdateData` 傳遞給 `DoDataExchange` 的 `CDataExchange` 引數所提供之內容，知道如何雙向的交換資料。  
+ When you (or a Code wizard) override `DoDataExchange`, you specify a call to one DDX function per data member (control). Each DDX function knows how to exchange data in both directions based on the context supplied by the `CDataExchange` argument passed to your `DoDataExchange` by `UpdateData`.  
   
- MFC 提供許多 DDX 函式，以進行不同種類的交換。  下列範例顯示呼叫兩個 DDX 函式和一個 DDV 函式的 `DoDataExchange` 覆寫：  
+ MFC provides many DDX functions for different kinds of exchange. The following example shows a `DoDataExchange` override in which two DDX functions and one DDV function are called:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/CPP/dialog-data-exchange_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]  
   
- `DDX_` 和 `DDV_` 這些行是資料映像。  這個範例 DDX 和 DDV 函式分別為核取方塊控制項和編輯方塊控制項。  
+ The `DDX_` and `DDV_` lines are a data map. The sample DDX and DDV functions shown are for a check-box control and an edit-box control, respectively.  
   
- 如果使用者取消強制回應對話方塊，`OnCancel` 成員函式會結束對話方塊，並且 `DoModal` 傳回值 **IDCANCEL**。  在這種情況下，對話方塊和對話方塊物件之間不會有資料交換。  
+ If the user cancels a modal dialog box, the `OnCancel` member function terminates the dialog box and `DoModal` returns the value **IDCANCEL**. In that case, no data is exchanged between the dialog box and the dialog object.  
   
-## 請參閱  
- [對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)   
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)   
- [對話方塊資料驗證](../mfc/dialog-data-validation.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Data Validation](../mfc/dialog-data-validation.md)
+
+

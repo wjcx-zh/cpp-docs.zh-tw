@@ -1,41 +1,60 @@
 ---
-title: "例外狀況：檢查例外狀況內容 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "catch 區塊, MFC 函式例外狀況"
-  - "CException 類別, 類別例外狀況"
-  - "例外狀況處理, MFC"
-  - "擲回例外狀況, 例外狀況內容"
-  - "try-catch 例外狀況處理, 例外狀況內容"
-  - "try-catch 例外狀況處理, MFC 函式例外狀況"
+title: 'Exceptions: Examining Exception Contents | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exception handling [MFC], MFC
+- try-catch exception handling [MFC], MFC function exceptions
+- catch blocks, MFC function exceptions
+- CException class [MFC], class exceptions
+- try-catch exception handling [MFC], exception contents
+- throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 例外狀況：檢查例外狀況內容
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 22ceae611fe0b5326e673e7845be9cfa2b68fbf0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-雖然 catch 區塊的引數可以幾乎任何資料型別， MFC 函式擲回衍生自類別之型別的例外狀況的 `CException`。  若要攔截 MFC 函式所擲回的例外狀況，然後，您可以撰寫引數是指向 `CException` 物件的 catch 區塊 \(或衍生自 `CException`的物件，例如 `CMemoryException`\)。  根據例外狀況的確切型別，您可以檢查例外狀況物件的資料成員對彙總資訊的有關例外狀況的特定原因。  
+---
+# <a name="exceptions-examining-exception-contents"></a>Exceptions: Examining Exception Contents
+Although a **catch** block's argument can be of almost any data type, the MFC functions throw exceptions of types derived from the class `CException`. To catch an exception thrown by an MFC function, then, you write a **catch** block whose argument is a pointer to a `CException` object (or an object derived from `CException`, such as `CMemoryException`). Depending on the exact type of the exception, you can examine the data members of the exception object to gather information about the specific cause of the exception.  
   
- 例如， `CFileException` 型別的 `m_cause` 資料成員，會包含列舉型別指定此案例外的原因。  可能的傳回值的範例是 **CFileException::fileNotFound** 和 **CFileException::readOnly**。  
+ For example, the `CFileException` type has the `m_cause` data member, which contains an enumerated type that specifies the cause of the file exception. Some examples of the possible return values are **CFileException::fileNotFound** and **CFileException::readOnly**.  
   
- 下列範例顯示如何檢查 `CFileException`的內容。  其他例外狀況型別可以相同方式檢查。  
+ The following example shows how to examine the contents of a `CFileException`. Other exception types can be examined similarly.  
   
- [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/CPP/exceptions-examining-exception-contents_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]  
   
- 如需詳細資訊，請參閱 [例外狀況:在例外狀況的釋放物件](../mfc/exceptions-freeing-objects-in-exceptions.md) 和 [例外狀況:攔截和刪除例外狀況。](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
+ For more information, see [Exceptions: Freeing Objects in Exceptions](../mfc/exceptions-freeing-objects-in-exceptions.md) and [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-## 請參閱  
- [例外狀況處理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

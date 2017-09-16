@@ -1,5 +1,5 @@
 ---
-title: "num_get 類別 | Microsoft Docs"
+title: num_get Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- num_get
 - xlocnum/std::num_get
 - locale/std::num_get::char_type
 - locale/std::num_get::iter_type
@@ -18,7 +17,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- num_get class
+- std::num_get [C++]
+- std::num_get [C++], char_type
+- std::num_get [C++], iter_type
+- std::num_get [C++], do_get
+- std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 caps.latest.revision: 18
 author: corob-msft
@@ -38,70 +41,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f8595909a294775034c3e1b725d37bfe0f846a93
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d0b5823b285ace08d64652e22660ea3c9a742e90
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="numget-class"></a>num_get 類別
-樣板類別，描述可以做為地區設定 facet 的物件，以控制類型 `CharType` 的序列轉換為數值。  
+# <a name="numget-class"></a>num_get Class
+A template class that describes an object that can serve as a locale facet to control conversions of sequences of type `CharType` to numeric values.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class CharType, class InputIterator = istreambuf_iterator<CharType>>  
 class num_get : public locale::facet;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 程式內用於編碼地區設定字元的類型。  
+ The type used within a program to encode characters in a locale.  
   
  `InputIterator`  
- 數值 get 函式從中讀取其輸入的迭代器類型。  
+ The type of iterator from which the numeric get functions read their input.  
   
-## <a name="remarks"></a>備註  
- 如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[num_get](#num_get)|用來從序列擷取數值之 `num_get` 類型物件的建構函式。|  
+|[num_get](#num_get)|The constructor for objects of type `num_get` that are used to extract numerical values from sequences.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|  
-|[iter_type](#iter_type)|描述輸入迭代器的類型。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[iter_type](#iter_type)|A type that describes an input iterator.|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[do_get](#do_get)|虛擬函式，呼叫以從字元序列擷取數值或布林值。|  
-|[get](#get)|從字元序列擷取數值或布林值。|  
+|[do_get](#do_get)|A virtual function that is called to extracts a numerical or Boolean value from a character sequence.|  
+|[get](#get)|Extracts a numerical or Boolean value from a character sequence.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  num_get::char_type  
- 類型，用來描述由地區設定使用的字元。  
+ A type that is used to describe a character used by a locale.  
   
 ```
 typedef CharType char_type;
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="do_get"></a>  num_get::do_get  
- 虛擬函式，呼叫以從字元序列擷取數值或布林值。  
+ A virtual function that is called to extracts a numerical or Boolean value from a character sequence.  
   
 ```
 virtual iter_type do_get(
@@ -182,27 +185,27 @@ virtual iter_type do_get(
     bool& val) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `first`  
- 要從中讀取數字的字元範圍開頭。  
+ The beginning of the range of characters from which to read the number.  
   
  `last`  
- 要從中讀取數字的字元範圍結尾。  
+ The end of the range of characters from which to read the number.  
   
  `_Iosbase`  
- 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。  
+ The [ios_base](../standard-library/ios-base-class.md) whose flags are used by the conversion.  
   
  `_State`  
- 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。  
+ The state to which failbit (see [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) is added upon failure.  
   
  `val`  
- 已讀取的值。  
+ The value that was read.  
   
-### <a name="return-value"></a>傳回值  
- 已讀取值之後的迭代器。  
+### <a name="return-value"></a>Return Value  
+ The iterator after the value has been read.  
   
-### <a name="remarks"></a>備註  
- 第一個虛擬的受保護成員函式  
+### <a name="remarks"></a>Remarks  
+ The first virtual protected member function,  
   
 ```  
 virtual iter_type do_get(
@@ -213,27 +216,27 @@ virtual iter_type do_get(
     long& val) const;
 ```  
   
- 比對開始的循序項目`first`序列中`[first, last)`直到它卻被完整，非空白的整數輸入欄位。 如果成功，它會將轉換此欄位類型為其相等的值`long`，並將導致`val`。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式不會在 `val` 中儲存任何內容，並會在 `state` 中設定 `ios_base::failbit`。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `state` 中設定 `ios_base::eofbit`。  
+ matches sequential elements beginning at `first` in the sequence `[first, last)` until it has recognized a complete, nonempty integer input field. If successful, it converts this field to its equivalent value as type `long`, and stores the result in `val`. It returns an iterator designating the first element beyond the numeric input field. Otherwise, the function stores nothing in `val` and sets `ios_base::failbit` in `state`. It returns an iterator designating the first element beyond any prefix of a valid integer input field. In either case, if the return value equals `last`, the function sets `ios_base::eofbit` in `state`.  
   
- 轉換整數輸入欄位的規則，與掃描函式在比對及轉換來自某個檔案的一系列 `char` 元素時所使用的規則相同。 (每個這類 `char` 元素都會被假設為與 `Elem` 類型的對等元素以簡單、一對一的對應方式對應)。對等的掃描轉換規格是以下列方式決定：  
+ The integer input field is converted by the same rules used by the scan functions for matching and converting a series of `char` elements from a file. (Each such `char` element is assumed to map to an equivalent element of type `Elem` by a simple, one-to-one, mapping.) The equivalent scan conversion specification is determined as follows:  
   
- 如果 `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，則轉換規格為 `lo`。  
+ If `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), the conversion specification is `lo`.  
   
- 如果 `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex)，則轉換規格為 `lx`。  
+ If `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), the conversion specification is `lx`.  
   
- 如果 `iosbase.flags() & ios_base::basefield == 0`，則轉換規格為 `li`。  
+ If `iosbase.flags() & ios_base::basefield == 0`, the conversion specification is `li`.  
   
- 否則，轉換規格會是 `ld`。  
+ Otherwise, the conversion specification is `ld`.  
   
- 整數輸入欄位的格式會進一步由 [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())` 呼叫所傳回的 [locale facet](../standard-library/locale-class.md#facet_class)`fac` 決定。 尤其是：  
+ The format of an integer input field is further determined by the [locale facet](../standard-library/locale-class.md#facet_class)`fac` returned by the call [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.` [ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. Specifically:  
   
- `fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` 會決定任何小數點左邊數字分組的方式  
+ `fac.` [numpunct::grouping](../standard-library/numpunct-class.md#grouping) `()` determines how digits are grouped to the left of any decimal point  
   
- `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` 會決定任何小數點左邊分隔數字群組的序列。  
+ `fac.` [numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` determines the sequence that separates groups of digits to the left of any decimal point.  
   
- 如果沒有任何 `fac.thousands_sep()` 執行個體出現在數字輸入欄位中，就不會施加任何千分號條件約束。 否則，將會強制執行 `fac.grouping()` 所施加的任何千分號條件約束，並在進行掃描轉換之前將分隔符號移除。  
+ If no instances of `fac.thousands_sep()` occur in the numeric input field, no grouping constraint is imposed. Otherwise, any grouping constraints imposed by `fac.grouping()` are enforced and separators are removed before the scan conversion occurs.  
   
- 第四個虛擬的受保護成員函式：  
+ The fourth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -244,9 +247,9 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。 如果成功，它就會將數字輸入欄位轉換成 `unsigned long` 類型的值，並將該值儲存在 `val` 中。  
+ behaves the same as the first, except that it replaces a conversion specification of `ld` with `lu`. If successful it converts the numeric input field to a value of type `unsigned long` and stores that value in `val`.  
   
- 第五個虛擬的受保護成員函式：  
+ The fifth virtual protected member function:  
   
 ```
 virtual iter_type do_get(
@@ -257,9 +260,9 @@ virtual iter_type do_get(
     long long& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會以 `lld` 取代 `ld` 轉換規格。 如果成功，它就會將數字輸入欄位轉換成 `long long` 類型的值，並將該值儲存在 `val` 中。  
+ behaves the same as the first, except that it replaces a conversion specification of `ld` with `lld`. If successful it converts the numeric input field to a value of type `long long` and stores that value in `val`.  
   
- 第六個虛擬的受保護成員函式：  
+ The sixth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -270,9 +273,9 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```  
 
- 行為與第一個相同，不同的是，它會以 `llu` 取代 `ld` 轉換規格。 如果成功，它就會將數字輸入欄位轉換成 `unsigned long long` 類型的值，並將該值儲存在 `val` 中。  
+ behaves the same as the first, except that it replaces a conversion specification of `ld` with `llu`. If successful it converts the numeric input field to a value of type `unsigned long long` and stores that value in `val`.  
   
- 第七個虛擬的受保護成員函式：  
+ The seventh virtual protected member function:  
   
 ```
 virtual iter_type do_get(
@@ -283,9 +286,9 @@ virtual iter_type do_get(
     float& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會盡力比對出完整、非空白的浮點數輸入欄位。 `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` 會決定將整數與小數分隔的序列。 對等掃描轉換指定名稱是 `lf`。  
+ behaves the same as the first, except that it endeavors to match a complete, nonempty floating-point input field. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is `lf`.  
   
- 第八個虛擬的受保護成員函式：  
+ The eighth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -296,9 +299,9 @@ virtual iter_type do_get(
     double& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會盡力比對出完整、非空白的浮點數輸入欄位。 `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` 會決定將整數與小數分隔的序列。 對等掃描轉換指定名稱是 `lf`。  
+ behaves the same as the first, except that it endeavors to match a complete, nonempty floating-point input field. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is `lf`.  
   
- 第九個虛擬的受保護成員函式：  
+ The ninth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -309,9 +312,9 @@ virtual iter_type do_get(
     long double& val) const;
 ```  
   
- 行為與第八個相同，不同的是，對等掃描轉換指定名稱是 `Lf`。  
+ behaves the same as the eighth, except that the equivalent scan conversion specifier is `Lf`.  
   
- 第十個受保護的虛擬成員函式︰  
+ The tenth virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -322,9 +325,9 @@ virtual iter_type do_get(
     void *& val) const;
 ```  
   
- 行為與第一個相同，不同的是，對等掃描轉換指定名稱是 `p`。  
+ behaves the same the first, except that the equivalent scan conversion specifier is `p`.  
   
- 最後一個 (第十一個) 虛擬的受保護成員函式：  
+ The last (eleventh) virtual protected member function:  
   
 ```  
 virtual iter_type do_get(
@@ -335,15 +338,15 @@ virtual iter_type do_get(
     bool& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會盡力比對出完整、非空白的布林值輸入欄位。 如果成功，它就會將布林值輸入欄位轉換成 `bool` 類型的值，並將該值儲存在 `val` 中。  
+ behaves the same as the first, except that it endeavors to match a complete, nonempty Boolean input field. If successful it converts the Boolean input field to a value of type `bool` and stores that value in `val`.  
   
- 布林值輸入欄位採用下列兩種形式其中之一。 如果 `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 為 false，它就與整數輸入欄位相同，不同的是，轉換的值必須是 0 (代表 false) 或 1 (代表 true)。 否則，序列必須與 `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (代表 false) 或 `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (代表 true) 相符。  
+ A Boolean input field takes one of two forms. If `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) is false, it is the same as an integer input field, except that the converted value must be either 0 (for false) or 1 (for true). Otherwise, the sequence must match either `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (for false), or `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (for true).  
   
-### <a name="example"></a>範例  
-  請參閱 [get](#get) 的範例，其中會由 `do_get` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [get](#get), where the virtual member function is called by `do_get`.  
   
 ##  <a name="get"></a>  num_get::get  
- 從字元序列擷取數值或布林值。  
+ Extracts a numerical or Boolean value from a character sequence.  
   
 ```
 iter_type get(
@@ -424,49 +427,49 @@ iter_type get(
     void *& val) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `first`  
- 要從中讀取數字的字元範圍開頭。  
+ The beginning of the range of characters from which to read the number.  
   
  `last`  
- 要從中讀取數字的字元範圍結尾。  
+ The end of the range of characters from which to read the number.  
   
  `_Iosbase`  
- 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。  
+ The [ios_base](../standard-library/ios-base-class.md) whose flags are used by the conversion.  
   
  `_State`  
- 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。  
+ The state to which failbit (see [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) is added upon failure.  
   
  `val`  
- 已讀取的值。  
+ The value that was read.  
   
-### <a name="return-value"></a>傳回值  
- 已讀取值之後的迭代器。  
+### <a name="return-value"></a>Return Value  
+ The iterator after the value has been read.  
   
-### <a name="remarks"></a>備註  
- 所有成員函式都會傳回 [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`)。  
+### <a name="remarks"></a>Remarks  
+ All member functions return [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`).  
   
- 第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它就會將此欄位轉換成其 **long** 類型的對等值，並將結果儲存在 `val` 中。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式不會在 `val` 中儲存任何內容，並會在 _ *State* 中設定 `ios_base::failbit`。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 **last**，函式就會在 `_State` 中設定 `ios_base::eofbit`。  
+ The first virtual protected member function tries to match sequential elements beginning at first in the sequence [ `first`, `last`) until it has recognized a complete, nonempty integer input field. If successful, it converts this field to its equivalent value as type **long** and stores the result in `val`. It returns an iterator designating the first element beyond the numeric input field. Otherwise, the function stores nothing in `val` and sets `ios_base::failbit` in _ *State*. It returns an iterator designating the first element beyond any prefix of a valid integer input field. In either case, if the return value equals **last**, the function sets `ios_base::eofbit` in `_State`.  
   
- 轉換整數輸入欄位的規則，與掃描函式在比對及轉換來自某個檔案的一系列 `char` 元素時所使用的規則相同。 每個這類 `char` 元素都會被假設為與 **CharType** 類型的對等元素以簡單、一對一的對應方式對應。 對等的掃描轉換規格是以下列方式決定：  
+ The integer input field is converted by the same rules used by the scan functions for matching and converting a series of `char` elements from a file. Each such `char` element is assumed to map to an equivalent element of type **CharType** by a simple, one-to-one mapping. The equivalent scan conversion specification is determined as follows:  
   
--   如果 **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct)，則轉換規格為 **lo**。  
+-   If **iosbase**. [flags](../standard-library/ios-base-class.md#flags) & `ios_base::basefield` == `ios_base::`[oct](../standard-library/ios-functions.md#oct), the conversion specification is **lo**.  
   
--   如果 **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex)，則轉換規格為 **lx**。  
+-   If **iosbase.flags** & **ios_base::basefield** == `ios_base::`[hex](../standard-library/ios-functions.md#hex), the conversion specification is **lx**.  
   
--   如果 **iosbase.flags** & **ios_base::basefield** == 0，則轉換規格為 `li`。  
+-   If **iosbase.flags** & **ios_base::basefield** == 0, the conversion specification is `li`.  
   
--   否則，轉換規格會是 **ld**。  
+-   Otherwise, the conversion specification is **ld**.  
   
- 整數輸入欄位的格式會進一步由 [locale facet](../standard-library/locale-class.md#facet_class)**fac** (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 呼叫所傳回) 決定。 尤其是：  
+ The format of an integer input field is further determined by the [locale facet](../standard-library/locale-class.md#facet_class)**fac** returned by the call [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)). Specifically:  
   
-- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) 會決定任何小數點左邊數字分組的方式。  
+- **fac**. [grouping](../standard-library/numpunct-class.md#grouping) determines how digits are grouped to the left of any decimal point.  
   
-- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) 會決定任何小數點左邊分隔數字群組的序列。  
+- **fac**. [thousands_sep](../standard-library/numpunct-class.md#thousands_sep) determines the sequence that separates groups of digits to the left of any decimal point.  
   
- 如果沒有任何 **fac**. `thousands_sep` 執行個體出現在數字輸入欄位中，就不會施加任何千分號條件約束。 否則，將會強制執行 **fac**. **grouping** 所施加的任何千分號條件約束，並在進行掃描轉換之前將分隔符號移除。  
+ If no instances of **fac**. `thousands_sep` occur in the numeric input field, no grouping constraint is imposed. Otherwise, any grouping constraints imposed by **fac**. **grouping** is enforced and separators are removed before the scan conversion occurs.  
   
- 第二個虛擬的受保護成員函式：  
+ The second virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -476,9 +479,9 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會以 **lu** 取代 **ld** 轉換規格。 如果成功，它就會將數字輸入欄位轉換成 `unsigned long` 類型的值，並將該值儲存在 `val` 中。  
+ behaves the same as the first, except that it replaces a conversion specification of **ld** with **lu**. If successful, it converts the numeric input field to a value of type `unsigned long` and stores that value in `val`.  
   
- 第三個虛擬的受保護成員函式：  
+ The third virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -488,9 +491,9 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會嘗試比對出完整、非空白的浮點數輸入欄位。 **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) 會決定將整數與小數分隔的序列。 對等掃描轉換指定名稱是 **lf**。  
+ behaves the same as the first, except that it tries to match a complete, nonempty floating-point input field. **fac**. [decimal_point](../standard-library/numpunct-class.md#decimal_point) determines the sequence that separates the integer digits from the fraction digits. The equivalent scan conversion specifier is **lf**.  
   
- 第四個虛擬的受保護成員函式：  
+ The fourth virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -500,9 +503,9 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```  
   
- 行為與第一個相同，不同的是，對等掃描轉換指定名稱是 **Lf**。  
+ behaves the same the third, except that the equivalent scan conversion specifier is **Lf**.  
   
- 第五個虛擬的受保護成員函式：  
+ The fifth virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -512,9 +515,9 @@ virtual iter_type do_get(iter_type first,
     void *& val) const;
 ```  
   
- 行為與第一個相同，不同的是，對等掃描轉換指定名稱是 **p**。  
+ behaves the same the first, except that the equivalent scan conversion specifier is **p**.  
   
- 第六個虛擬的受保護成員函式：  
+ The sixth virtual protected member function:  
   
 ```
 virtual iter_type do_get(iter_type first,
@@ -524,11 +527,11 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```  
   
- 行為與第一個相同，不同的是，它會嘗試比對出完整、非空白的布林值輸入欄位。 如果成功，它就會將布林值輸入欄位轉換成 `bool` 類型的值，並將該值儲存在 `val` 中。  
+ behaves the same as the first, except that it tries to match a complete, nonempty boolean input field. If successful it converts the Boolean input field to a value of type `bool` and stores that value in `val`.  
   
- 布林值輸入欄位採用下列兩種形式其中之一。 如果 **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 為 **false**，它就與整數輸入欄位相同，不同的是，轉換的值必須是 0 (代表 **false**) 或 1 (代表 **true**)。 否則，序列必須符合 **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (代表 **false**) 或 **fac**. [truename](../standard-library/numpunct-class.md#truename) (代表 **true**)。  
+ A boolean input field takes one of two forms. If **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) is **false**, it is the same as an integer input field, except that the converted value must be either 0 (for **false**) or 1 (for **true**). Otherwise, the sequence must match either **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (for **false**), or **fac**. [truename](../standard-library/numpunct-class.md#truename) (for **true**).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // num_get_get.cpp  
@@ -561,43 +564,43 @@ int main( )
 ```  
   
 ##  <a name="iter_type"></a>  num_get::iter_type  
- 描述輸入迭代器的類型。  
+ A type that describes an input iterator.  
   
 ```
 typedef InputIterator iter_type;
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與範本參數 **InputIterator** 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **InputIterator**.  
   
 ##  <a name="num_get"></a>  num_get::num_get  
- 用來從序列擷取數值之 `num_get` 類型物件的建構函式。  
+ The constructor for objects of type `num_get` that are used to extract numerical values from sequences.  
   
 ```
 explicit num_get(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 整數值，用來指定物件的記憶體管理類型。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>備註  
- `_Refs` 參數的可能值和其意義如下：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：物件的存留期由包含該物件的地區設定來管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：物件的存留期必須以手動方式管理。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定義這些值。  
+-   \> 1: These values are not defined.  
   
- 無法提供任何直接範例，因為解構函式受到保護。  
+ No direct examples are possible, because the destructor is protected.  
   
- 建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。  
+ The constructor initializes its base object with **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`).  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [facet 類別](../standard-library/locale-class.md#facet_class)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [facet Class](../standard-library/locale-class.md#facet_class)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "enable_shared_from_this 類別 | Microsoft Docs"
+title: enable_shared_from_this Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- enable_shared_from_this
 - memory/std::enable_shared_from_this
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bfe398bf4829d6ef86543890bea28a351bcb4a3d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 79690ccec24d8efc2f4b3a61bb889fa8ed109483
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="enablesharedfromthis-class"></a>enable_shared_from_this 類別
-幫助產生 `shared_ptr`。  
+# <a name="enablesharedfromthis-class"></a>enable_shared_from_this Class
+Helps generate a `shared_ptr`.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
 ```    
 class enable_shared_from_this {
 public:
@@ -59,34 +58,34 @@ protected:
     ~enable_shared_from_this();
 }; 
 ``` 
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 共用指標所控制的類型。  
+ The type controlled by the shared pointer.  
   
-## <a name="remarks"></a>備註  
- 衍生自 `enable_shared_from_this` 的物件可以使用成員函式中的 `shared_from_this` 方法，來建立執行個體的 [shared_ptr](../standard-library/shared-ptr-class.md) 擁有者，其與現有 `shared_ptr` 擁有者共用擁有權。 否則，如果您使用 `this` 建立新的 `shared_ptr`，它與現有 `shared_ptr` 擁有者不同，可能會導致參考無效，或物件遭到重複刪除。  
+## <a name="remarks"></a>Remarks  
+ Objects derived from `enable_shared_from_this` can use the `shared_from_this` methods in member functions to create [shared_ptr](../standard-library/shared-ptr-class.md) owners of the instance that share ownership with existing `shared_ptr` owners. Otherwise, if you create a new `shared_ptr` by using `this`, it is distinct from existing `shared_ptr` owners, which can lead to invalid references or cause the object to be deleted more than once.  
   
- 建構函式、解構函式和指派運算子會受到保護以防止意外誤用。 範本引數類型 `Ty` 必須是衍生類別的類型。  
+ The constructors, destructor, and assignment operator are protected to help prevent accidental misuse. The template argument type `Ty` must be the type of the derived class.  
   
- 如需使用方式的範例，請參閱 [enable_shared_from_this::shared_from_this](#shared_from_this)。  
+ For an example of usage, see [enable_shared_from_this::shared_from_this](#shared_from_this).  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this  
- 產生的 `shared_ptr` 會與現有的 `shared_ptr` 擁有者共用執行個體擁有權。  
+ Generates a `shared_ptr` that shares ownership of the instance with existing `shared_ptr` owners.  
   
 ```  
 shared_ptr<T> shared_from_this();
 shared_ptr<const T> shared_from_this() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 當您從 `enable_shared_from_this` 基底類別衍生物件時，`shared_from_this` 範本成員函式會傳回 [shared_ptr 類別](../standard-library/shared-ptr-class.md)物件，其與現有的 `shared_ptr` 擁有者共用此執行個體的擁有權。 否則，如果您從 `this` 建立新的 `shared_ptr`，它與現有 `shared_ptr` 擁有者不同，可能會導致參考無效，或物件遭到重複刪除。 如果 `shared_ptr` 物件不再擁有某個執行個體，而您呼叫其中的 `shared_from_this`，則行為是未定義的。  
+### <a name="remarks"></a>Remarks  
+ When you derive objects from the `enable_shared_from_this` base class, the `shared_from_this` template member functions return a [shared_ptr Class](../standard-library/shared-ptr-class.md) object that shares ownership of this instance with existing `shared_ptr` owners. Otherwise, if you create a new `shared_ptr` from `this`, it is distinct from existing `shared_ptr` owners, which can lead to invalid references or cause the object to be deleted more than once. The  behavior is undefined if you call `shared_from_this` on an instance that is not already owned by a `shared_ptr` object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std_memory_shared_from_this.cpp   
@@ -120,6 +119,6 @@ int main()
 sp2->val == 3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [enable_shared_from_this::shared_from_this](#shared_from_this)   
- [shared_ptr 類別](../standard-library/shared-ptr-class.md)
+ [shared_ptr Class](../standard-library/shared-ptr-class.md)

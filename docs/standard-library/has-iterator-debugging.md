@@ -33,39 +33,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 9e2bfb1095c28ea3592c5af2b89cb2fbeddcb60c
-ms.openlocfilehash: 97d899ead2c556a39118dd49bf1f6ac7ef8a9b04
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 509b189610f4bdc682951205c468274c517f0cf9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="hasiteratordebugging"></a>_HAS_ITERATOR_DEBUGGING  
   
-此巨集 (已被 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 取代) 定義偵錯組建中是否啟用迭代器偵錯功能。 預設會在「偵錯」組建中啟用迭代器偵錯功能，而在「零售」組建中停用此功能。 如需詳細資訊，請參閱[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。  
+Superseded by [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), this macro defines whether the iterator debugging feature is enabled in a debug build. By default, iterator debugging is enabled in Debug builds and disabled in Retail builds. For more information, see [Debug Iterator Support](../standard-library/debug-iterator-support.md).  
   
 > [!IMPORTANT]
-> 目前已不再直接使用 `_HAS_ITERATOR_DEBUGGING` 巨集。 請改用 `_ITERATOR_DEBUG_LEVEL` 來控制迭代器偵錯設定。 如需詳細資訊，請參閱 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)。  
+> Direct use of the `_HAS_ITERATOR_DEBUGGING` macro is deprecated. Instead, use `_ITERATOR_DEBUG_LEVEL` to control iterator debug settings. For more information, see [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).  
   
-## <a name="remarks"></a>備註  
-若要在偵錯組建中啟用迭代器偵錯功能，請將 `_ITERATOR_DEBUG_LEVEL` 設定為 2。 這等同於將 `_HAS_ITERATOR_DEBUGGING` 設定為 1 或 enabled：  
+## <a name="remarks"></a>Remarks  
+To enable iterator debugging in debug builds, set `_ITERATOR_DEBUG_LEVEL` to 2. This is equivalent to a `_HAS_ITERATOR_DEBUGGING` setting of 1, or enabled:  
   
 ```  
 #define _ITERATOR_DEBUG_LEVEL 2  
 ```  
   
-在偵錯組建中，`_ITERATOR_DEBUG_LEVEL` 不能設定為 2 (且 `_HAS_ITERATOR_DEBUGGING` 不能設定為 1)。  
+`_ITERATOR_DEBUG_LEVEL` cannot be set to 2 (and `_HAS_ITERATOR_DEBUGGING` cannot be set to 1) in retail builds.  
   
-若要在偵錯組建中停用偵錯迭代器，請將 `_ITERATOR_DEBUG_LEVEL` 設定為 0 或 1。 這等同於將 `_HAS_ITERATOR_DEBUGGING` 設定為 0 或 disabled：  
+To disable debug iterators in debug builds, set `_ITERATOR_DEBUG_LEVEL` to 0 or 1. This is equivalent to a `_HAS_ITERATOR_DEBUGGING` setting of 0, or disabled:  
   
 ```  
 #define _ITERATOR_DEBUG_LEVEL 0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)   
- [偵錯迭代器支援](../standard-library/debug-iterator-support.md)   
- [已檢查的迭代器](../standard-library/checked-iterators.md)   
- [安全程式庫：C++ 標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)
+ [Debug Iterator Support](../standard-library/debug-iterator-support.md)   
+ [Checked Iterators](../standard-library/checked-iterators.md)   
+ [Safe Libraries: C++ Standard Library](../standard-library/safe-libraries-cpp-standard-library.md)
 
 

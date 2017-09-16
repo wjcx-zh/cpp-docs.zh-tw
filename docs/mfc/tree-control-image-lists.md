@@ -1,41 +1,60 @@
 ---
-title: "樹狀目錄控制項影像清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl 類別, 影像清單"
-  - "影像 [C++], 樹狀目錄控制項中的清單"
-  - "樹狀目錄控制項, 影像清單"
+title: Tree Control Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- images [MFC], lists in tree controls
+- tree controls [MFC], image lists
+- CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 樹狀目錄控制項影像清單
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: bcc246de7a4a0d403129589a9af1495f6f9084cb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在樹狀目錄控制項 \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) 的每個項目都可以有一組位元對應影像相關聯的。  影像在項目標籤的左邊。  影像會顯示，當項目被選取時，，和其他顯示項目時，沒有選取。  例如，項目可能會顯示一個開啟的資料夾，當選取和已關閉的資料夾時，如果沒有被選取時。  
+---
+# <a name="tree-control-image-lists"></a>Tree Control Image Lists
+Each item in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) can have a pair of bitmapped images associated with it. The images appear on the left side of an item's label. One image is displayed when the item is selected, and the other is displayed when the item is not selected. For example, an item might display an open folder when it is selected and a closed folder when it is not selected.  
   
- 若要使用項目影像，您必須藉由建構 [CImageList](../mfc/reference/cimagelist-class.md) 物件並使用 [CImageList::Create](../Topic/CImageList::Create.md) 函式建立關聯的影像清單建立影像清單。  使用 [SetImageList](../Topic/CTreeCtrl::SetImageList.md) 成員函式，然後將想要點陣圖到清單，並使清單與樹狀目錄控制項。  根據預設，所有項目顯示在影像清單中的第一個影像的選取或 nonselected 狀態。  您可以指定已選取和 nonselected 影像的索引變更特定項目的預設行為，當將項目加入至樹狀目錄控制項使用 [InsertItem](../Topic/CTreeCtrl::InsertItem.md) 成員函式。  使用 [SetItemImage](../Topic/CTreeCtrl::SetItemImage.md) 成員函式，您可以在加入項目後變更索引。  
+ To use item images, you must create an image list by constructing a [CImageList](../mfc/reference/cimagelist-class.md) object and using the [CImageList::Create](../mfc/reference/cimagelist-class.md#create) function to create the associated image list. Then add the desired bitmaps to the list, and associate the list with the tree control by using the [SetImageList](../mfc/reference/ctreectrl-class.md#setimagelist) member function. By default, all items display the first image in the image list for both the selected and nonselected states. You can change the default behavior for a particular item by specifying the indexes of the selected and nonselected images when adding the item to the tree control using the [InsertItem](../mfc/reference/ctreectrl-class.md#insertitem) member function. You can change the indexes after adding an item by using the [SetItemImage](../mfc/reference/ctreectrl-class.md#setitemimage) member function.  
   
- 樹狀目錄控制項的影像清單也可以包含覆疊影像，在項目影像會重疊。  在位元 8 到 11 的非零值樹狀控制項目狀態指定覆疊影像的以一起始的索引 \(0 表示沒有覆疊影像\)。  由於，以一起始的索引使用 4 位元，覆疊影像必須是在影像清單中的最後 15 個影像中。  如需樹狀控制項目狀態的詳細資訊，請參閱本主題稍早的 [樹狀目錄控制項項目狀態概觀](../mfc/tree-control-item-states-overview.md) 。  
+ A tree control's image lists can also contain overlay images, which are designed to be superimposed on item images. A nonzero value in bits 8 through 11 of a tree control item's state specifies the one-based index of an overlay image (0 indicates no overlay image). Because a 4-bit, one-based index is used, overlay images must be among the first 15 images in the image lists. For more information about tree control item states, see [Tree Control Item States Overview](../mfc/tree-control-item-states-overview.md) earlier in this topic.  
   
- 如果狀態影像清單中指定，樹狀目錄控制項中各個項目的圖示左邊為其保留空間的狀態影像。  應用程式可以使用狀態影像，例如已選取或已清除核取方塊，表示應用程式定義的項目狀態。  在位元 12 到 15 的非零的值指定狀態影像的以一起始的索引 \(0 表示沒有狀態影像\)。  
+ If a state image list is specified, a tree control reserves space to the left of each item's icon for a state image. An application can use state images, such as checked and cleared check boxes, to indicate application-defined item states. A nonzero value in bits 12 through 15 specifies the one-based index of a state image (0 indicates no state image).  
   
- 藉由指定而非影像索引的 **I\_IMAGECALLBACK** 值，您可以延遲指定選取的或 nonselected 影像，直到項目會重新繪製。  **I\_IMAGECALLBACK** 指示樹狀控制項傳送 [TVN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) 通知訊息查詢索引的應用程式。  
+ By specifying the **I_IMAGECALLBACK** value instead of the index of an image, you can delay specifying the selected or nonselected image until the item is about to be redrawn. **I_IMAGECALLBACK** directs the tree control to query the application for the index by sending the [TVN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773518) notification message.  
   
- [GetImageList](../Topic/CTreeCtrl::GetImageList.md) 成員函式來擷取樹狀目錄控制項的影像清單的控制代碼。  如果您需要加入多個影像加入至清單，這個函式會很有用。  如需影像清單的詳細資訊，請參閱 [使用 CImageList](../mfc/using-cimagelist.md)、 [CImageList](../mfc/reference/cimagelist-class.md) 《 *MFC*參考》中的 [影像清單](http://msdn.microsoft.com/library/windows/desktop/bb761389) 和 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+ The [GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist) member function retrieves the handle of a tree control's image list. This function is useful if you need to add more images to the list. For more information about image lists, see [Using CImageList](../mfc/using-cimagelist.md), [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference*, and [Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb761389) in the Windows SDK.  
   
-## 請參閱  
- [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

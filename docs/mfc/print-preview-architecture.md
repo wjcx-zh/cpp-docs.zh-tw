@@ -1,69 +1,87 @@
 ---
-title: "預覽列印架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "預覽列印"
-  - "預覽列印, 架構"
-  - "預覽列印, 修改 MFC"
-  - "預覽列印, 處理序"
-  - "列印 [MFC], 預覽列印"
+title: Print Preview Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- print preview [MFC], process
+- previewing printing
+- print preview [MFC], architecture
+- printing [MFC], print preview
+- print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 預覽列印架構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a4460ad3ea8377c566cfd55e50010db5f1ed9254
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明 MFC 架構如何實作預覽列印功能。  涵蓋的主題包括：  
+---
+# <a name="print-preview-architecture"></a>Print Preview Architecture
+This article explains how the MFC framework implements print preview functionality. Topics covered include:  
   
--   [預覽列印處理序](#_core_the_print_preview_process)  
+-   [Print preview process](#_core_the_print_preview_process)  
   
--   [修改預覽列印](#_core_modifying_print_preview)  
+-   [Modifying print preview](#_core_modifying_print_preview)  
   
- 預覽列印為某些與螢幕顯示和列印不同，因為，使用螢幕，而不是直接繪製在裝置的影像，應用程式必須模擬印表機。  為了納入此， MFC 程式庫定義衍生自 [CDC 類別](../mfc/reference/cdc-class.md)的特殊 \(未記載的\) 類別，呼叫 **CPreviewDC**。  任何 `CDC` 物件包含兩個裝置內容，不過，通常會是相同的。  在 **CPreviewDC** 物件，它們會不同：第一個代表模擬的印表機，第二個代表輸出實際顯示的畫面。  
+ Print preview is somewhat different from screen display and printing because, instead of directly drawing an image on a device, the application must simulate the printer using the screen. To accommodate this, the Microsoft Foundation Class Library defines a special (undocumented) class derived from [CDC Class](../mfc/reference/cdc-class.md), called **CPreviewDC**. All `CDC` objects contain two device contexts, but usually they are identical. In a **CPreviewDC** object, they are different: the first represents the printer being simulated, and the second represents the screen on which output is actually displayed.  
   
-##  <a name="_core_the_print_preview_process"></a> \[預覽列印\] 流程。  
- 當使用者選取列印預覽命令從 **檔案**功能表時，這個架構建立 **CPreviewDC** 物件。  當您的應用程式執行設定印表機內容的特性的作業，架構也會在螢幕裝置內容類似的作業。  例如，如果您的應用程式會選取字型，架構為模擬印表機字型的螢幕顯示選取字型。  當您的應用程式會將輸出傳送至印表機，架構會傳送輸出至螢幕。  
+##  <a name="_core_the_print_preview_process"></a> The Print Preview Process  
+ When the user selects the Print Preview command from the **File** menu, the framework creates a **CPreviewDC** object. Whenever your application performs an operation that sets a characteristic of the printer device context, the framework also performs a similar operation on the screen device context. For example, if your application selects a font for printing, the framework selects a font for screen display that simulates the printer font. Whenever your application would send output to the printer, the framework instead sends the output to the screen.  
   
- 每個繪製文件頁面的預覽列印和列印也不同順序相同。  在列印期間，架構會繼續列印迴圈，直到頁面的部分範圍轉譯。  在預覽列印期間，一個網頁隨時顯示，應用程式等待;進一步頁面上不會顯示，直到使用者回應。  在預覽列印期間，在泛型的螢幕顯示期間，，就讓應用程式也必須回應 `WM_PAINT` 訊息。  
+ Print preview also differs from printing in the order that each draws the pages of a document. During printing, the framework continues a print loop until a certain range of pages has been rendered. During print preview, one or two pages are displayed at any time, and then the application waits; no further pages are displayed until the user responds. During print preview, the application must also respond to `WM_PAINT` messages, just as it does during ordinary screen display.  
   
- [CView::OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) 函式呼叫，以預覽方式叫用時，就是在列印工作開始。  [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) 結構傳遞至函式包含值可以設定調整預覽列印作業的某些特性的數個成員。  例如，您可以設定 **m\_nNumPreviewPages** 成員指定是否在一個頁面或頁面模式下要預覽的文件。  
+ The [CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) function is called when preview mode is invoked, just as it is at the beginning of a print job. The [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) structure passed to the function contains several members whose values you can set to adjust certain characteristics of the print preview operation. For example, you can set the **m_nNumPreviewPages** member to specify whether you want to preview the document in one-page or two-page mode.  
   
-##  <a name="_core_modifying_print_preview"></a> 修改預覽列印  
- 您可以用多種更輕鬆的方式來修改預覽列印的行為和外觀。  例如，您可以依以下：  
+##  <a name="_core_modifying_print_preview"></a> Modifying Print Preview  
+ You can modify the behavior and appearance of print preview in a number of ways rather easily. For example, you can, among other things:  
   
--   造成預覽列印視窗中顯示可存取的捲軸加入文件的所有頁面。  
+-   Cause the print preview window to display a scroll bar for easy access to any page of the document.  
   
--   造成預覽列印透過啟動其顯示保持在文件的使用者的位置在目前頁面。  
+-   Cause print preview to maintain the user's position in the document by beginning its display at the current page.  
   
--   造成額外初始化預覽列印和列印執行。  
+-   Cause different initialization to be performed for print preview and printing.  
   
--   產生預覽列印到顯示頁碼格式中。  
+-   Cause print preview to display page numbers in your own formats.  
   
- 如果您知道文件就是並呼叫具有適當值的 `SetMaxPage` ，在列印期間，架構會使用這項資訊在預覽方式以及。  一旦架構知道文件的長度，則會在預覽模式中提供預覽視窗的捲軸，允許使用者透過文件反覆呼叫。  如果您未設定文件的長度，架構無法將捲動方塊表示目前位置，因此，架構不將捲軸。  在這個案例中，使用者必須在預覽視窗中控制列的下一頁和上一頁按鈕的文字呼叫。  
+ If you know how long the document is and call `SetMaxPage` with the appropriate value, the framework can use this information in preview mode as well as during printing. Once the framework knows the length of the document, it can provide the preview window with a scroll bar, allowing the user to page back and forth through the document in preview mode. If you haven't set the length of the document, the framework cannot position the scroll box to indicate the current position, so the framework doesn't add a scroll bar. In this case, the user must use the Next Page and Previous Page buttons on the preview window's control bar to page through the document.  
   
- 如需預覽列印，您可能會發覺指派值給 `CPrintInfo`的 `m_nCurPage` 成員，因此，即使您為一般列印將不會執行。  在一般列印期間，成員傳用從架構的資訊加入至檢視類別。  這是架構如何指示檢視要列印的頁面。  
+ For print preview, you may find it useful to assign a value to the `m_nCurPage` member of `CPrintInfo`, even though you would never do so for ordinary printing. During ordinary printing, this member carries information from the framework to your view class. This is how the framework tells the view which page should be printed.  
   
- 相反地，在預覽列印模式啟動時， `m_nCurPage` 成員傳用以相反方向的資訊:從檢視加入至框架。  架構會使用這個成員的值判斷應該先預覽哪個頁面。  此成員的預設值為 1，因此最初顯示為文件第一頁。  在預覽列印命令叫用時，您可以覆寫 `OnPreparePrinting` 設定成員至檢視網頁的數字。  如此一來，當從顯示模式向預覽列印模式時，應用程式維護使用者的目前位置。  
+ By contrast, when print preview mode is started, the `m_nCurPage` member carries information in the opposite direction: from the view to the framework. The framework uses the value of this member to determine which page should be previewed first. The default value of this member is 1, so the first page of the document is displayed initially. You can override `OnPreparePrinting` to set this member to the number of the page being viewed at the time the Print Preview command was invoked. This way, the application maintains the user's current position when moving from normal display mode to print preview mode.  
   
- 有時您可能 `OnPreparePrinting` 執行其他初始化取決於是否呼叫用於列印工作或預覽列印。  您可以藉由查看 `CPrintInfo` 結構的 **m\_bPreview** 成員變數判斷此。  在預覽列印叫用時，這個成員設定為 **TRUE** 。  
+ Sometimes you may want `OnPreparePrinting` to perform different initialization depending on whether it is called for a print job or for print preview. You can determine this by examining the **m_bPreview** member variable in the `CPrintInfo` structure. This member is set to **TRUE** when print preview is invoked.  
   
- `CPrintInfo` 結構也包含名為 **m\_strPageDesc** 的成員，其用來格式化單一頁面和多頁方式中顯示在螢幕底部的字串。  預設情況下這些字串的格式為「Page *n*」以及「Page *n* \-*m*」，但是您可以修改 **m\_strPageDesc** 於 `OnPreparePrinting` 並設定字串為更複雜的事。  如需詳細資訊，請參閱*MFC Reference*中的[CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md)。  
+ The `CPrintInfo` structure also contains a member named **m_strPageDesc**, which is used to format the strings displayed at the bottom of the screen in single-page and multiple-page modes. By default these strings are of the form "Page *n*" and "Pages *n* - *m*," but you can modify **m_strPageDesc** from within `OnPreparePrinting` and set the strings to something more elaborate. See [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) in the *MFC Reference* for more information.  
   
-## 請參閱  
- [列印和預覽列印](../mfc/printing-and-print-preview.md)   
- [列印](../mfc/printing.md)   
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)   
+ [Printing](../mfc/printing.md)   
  [CView Class](../mfc/reference/cview-class.md)   
- [CDC 類別](../mfc/reference/cdc-class.md)
+ [CDC Class](../mfc/reference/cdc-class.md)
+

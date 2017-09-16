@@ -1,5 +1,5 @@
 ---
-title: "underlying_type 類別 | Microsoft Docs"
+title: underlying_type Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- underlying_type
 - type_traits/std::underlying_type
 dev_langs:
 - C++
@@ -35,35 +34,36 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 95012fdeb3ac78d5e1cc76e03ed851a0b9701f5e
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9c70d546726ace71a2696f729da0506be028650d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="underlyingtype-class"></a>underlying_type 類別
-產生列舉類型的基礎整數類型。  
+# <a name="underlyingtype-class"></a>underlying_type Class
+Produces the underlying integral type for an enumeration type.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>  
 struct underlying_type;
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要修改的類型。  
+ The type to modify.  
   
-## <a name="remarks"></a>備註  
- 當 `T` 為列舉類型時，樣板類別的 `type` 成員 typedef 會命名 `T` 的基礎整數類型，否則沒有成員 typedef `type`。  
+## <a name="remarks"></a>Remarks  
+ The `type` member typedef of the template class names the underlying integral type of `T`, when `T` is an enumeration type, otherwise there is no member typedef `type`.  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

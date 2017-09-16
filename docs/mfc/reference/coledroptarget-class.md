@@ -1,5 +1,5 @@
 ---
-title: "COleDropTarget 類別 |Microsoft 文件"
+title: COleDropTarget Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,10 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COleDropTarget class
-- drag and drop, drop target
-- drop commands, accepting
-- drop commands
+- COleDropTarget [MFC], COleDropTarget
+- COleDropTarget [MFC], OnDragEnter
+- COleDropTarget [MFC], OnDragLeave
+- COleDropTarget [MFC], OnDragOver
+- COleDropTarget [MFC], OnDragScroll
+- COleDropTarget [MFC], OnDrop
+- COleDropTarget [MFC], OnDropEx
+- COleDropTarget [MFC], Register
+- COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
 caps.latest.revision: 23
 author: mikeblome
@@ -46,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 0e9429d531d6af86bc571b1f871fbcd4a8fe2532
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5cdf8f39470df66a3a9e6a625774744da6d3fd4a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coledroptarget-class"></a>COleDropTarget 類別
-提供視窗與 OLE 程式庫之間的溝通機制。  
+# <a name="coledroptarget-class"></a>COleDropTarget Class
+Provides the communication mechanism between a window and the OLE libraries.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleDropTarget : public CCmdTarget  
@@ -64,54 +69,54 @@ class COleDropTarget : public CCmdTarget
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropTarget::COleDropTarget](#coledroptarget)|建構 `COleDropTarget` 物件。|  
+|[COleDropTarget::COleDropTarget](#coledroptarget)|Constructs a `COleDropTarget` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleDropTarget::OnDragEnter](#ondragenter)|資料指標第一次進入視窗時呼叫。|  
-|[COleDropTarget::OnDragLeave](#ondragleave)|資料指標拖曳出視窗時呼叫。|  
-|[COleDropTarget::OnDragOver](#ondragover)|當游標拖曳到視窗時重複呼叫。|  
-|[COleDropTarget::OnDragScroll](#ondragscroll)|呼叫以判斷是否要將資料指標拖曳至捲動視窗的區域。|  
-|[COleDropTarget::OnDrop](#ondrop)|當資料放入 視窗中，預設處理常式時呼叫。|  
-|[COleDropTarget::OnDropEx](#ondropex)|當資料放入 視窗中，初始的處理常式時呼叫。|  
-|[COleDropTarget::Register](#register)|暫存器視窗，以做為有效的置放目標。|  
-|[COleDropTarget::Revoke](#revoke)|會停止正在有效的置放目標視窗。|  
+|[COleDropTarget::OnDragEnter](#ondragenter)|Called when the cursor first enters the window.|  
+|[COleDropTarget::OnDragLeave](#ondragleave)|Called when the cursor is dragged out of the window.|  
+|[COleDropTarget::OnDragOver](#ondragover)|Called repeatedly when the cursor is dragged over the window.|  
+|[COleDropTarget::OnDragScroll](#ondragscroll)|Called to determine whether the cursor is dragged into the scroll region of the window.|  
+|[COleDropTarget::OnDrop](#ondrop)|Called when data is dropped into the window, default handler.|  
+|[COleDropTarget::OnDropEx](#ondropex)|Called when data is dropped into the window, initial handler.|  
+|[COleDropTarget::Register](#register)|Registers the window as a valid drop target.|  
+|[COleDropTarget::Revoke](#revoke)|Causes the window to cease being a valid drop target.|  
   
-## <a name="remarks"></a>備註  
- 建立這個類別的物件，讓透過 OLE 拖放機制接受資料的視窗。  
+## <a name="remarks"></a>Remarks  
+ Creating an object of this class allows a window to accept data through the OLE drag-and-drop mechanism.  
   
- 若要取得接受 drop 命令視窗，您應該先建立的物件`COleDropTarget`類別，並接著呼叫[註冊](#register)函式指標指向所需的`CWnd`物件做為唯一參數。  
+ To get a window to accept drop commands, you should first create an object of the `COleDropTarget` class, and then call the [Register](#register) function with a pointer to the desired `CWnd` object as the only parameter.  
   
- 如需有關拖放作業使用 OLE，請參閱文章[拖放 (OLE)](../../mfc/drag-and-drop-ole.md)。  
+ For more information on drag-and-drop operations using OLE, see the article [Drag and Drop (OLE)](../../mfc/drag-and-drop-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
   
  `COleDropTarget`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="coledroptarget"></a>COleDropTarget::COleDropTarget  
- 建構類別的物件`COleDropTarget`。  
+##  <a name="coledroptarget"></a>  COleDropTarget::COleDropTarget  
+ Constructs an object of class `COleDropTarget`.  
   
 ```  
 COleDropTarget();
 ```  
   
-### <a name="remarks"></a>備註  
- 呼叫[註冊](#register)此物件關聯的視窗。  
+### <a name="remarks"></a>Remarks  
+ Call [Register](#register) to associate this object with a window.  
   
-##  <a name="ondragenter"></a>COleDropTarget::OnDragEnter  
- 當資料指標第一次拖曳到視窗時，由架構呼叫。  
+##  <a name="ondragenter"></a>  COleDropTarget::OnDragEnter  
+ Called by the framework when the cursor is first dragged into the window.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -121,55 +126,55 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 正在進入點至視窗資料指標。  
+ Points to the window the cursor is entering.  
   
  `pDataObject`  
- 包含要卸除之資料的資料物件的指標。  
+ Points to the data object containing the data that can be dropped.  
   
  `dwKeyState`  
- 包含輔助按鍵的狀態。 這是下列任何數目的組合︰ **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- 包含用戶端座標中的資料指標目前位置。  
+ Contains the current location of the cursor in client coordinates.  
   
-### <a name="return-value"></a>傳回值  
- 卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多項動作︰  
+### <a name="return-value"></a>Return Value  
+ The effect that would result if a drop were attempted at the location specified by `point`. It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`不會允許置放。  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`會建立原始資料的連結從卸除的資料。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`拖曳捲軸作業即將發生或發生在目標中。  
+- `DROPEFFECT_SCROLL` A drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="remarks"></a>備註  
- 覆寫此函式可允許拖放作業，才會發生在視窗中。 預設實作會呼叫[CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter)，它只會傳回`DROPEFFECT_NONE`預設。  
+### <a name="remarks"></a>Remarks  
+ Override this function to allow drop operations to occur in the window. The default implementation calls [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter), which simply returns `DROPEFFECT_NONE` by default.  
   
- 如需詳細資訊，請參閱[IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IDropTarget::DragEnter](http://msdn.microsoft.com/library/windows/desktop/ms680106) in the Windows SDK.  
   
-##  <a name="ondragleave"></a>COleDropTarget::OnDragLeave  
- 由架構呼叫時，游標離開視窗拖曳作業時生效。  
+##  <a name="ondragleave"></a>  COleDropTarget::OnDragLeave  
+ Called by the framework when the cursor leaves the window while a dragging operation is in effect.  
   
 ```  
 virtual void OnDragLeave(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 指向視窗的游標離開。  
+ Points to the window the cursor is leaving.  
   
-### <a name="remarks"></a>備註  
- 如果您想在拖曳作業離開指定的視窗時的特殊行為，請覆寫這個函式。 此函式的預設實作會呼叫[CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave)。  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want special behavior when the drag operation leaves the specified window. The default implementation of this function calls [CView::OnDragLeave](../../mfc/reference/cview-class.md#ondragleave).  
   
- 如需詳細資訊，請參閱[IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IDropTarget::DragLeave](http://msdn.microsoft.com/library/windows/desktop/ms680110) in the Windows SDK.  
   
-##  <a name="ondragover"></a>COleDropTarget::OnDragOver  
- 將游標拖曳到視窗時，由架構呼叫。  
+##  <a name="ondragover"></a>  COleDropTarget::OnDragOver  
+ Called by the framework when the cursor is dragged over the window.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -179,42 +184,42 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 游標位於視窗的指標。  
+ Points to the window that the cursor is over.  
   
  `pDataObject`  
- 資料物件，其中包含要卸除的資料點。  
+ Points to the data object that contains the data to be dropped.  
   
  `dwKeyState`  
- 包含輔助按鍵的狀態。 這是下列任何數目的組合︰ **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- 包含用戶端座標中的資料指標目前位置。  
+ Contains the current location of the cursor in client coordinates.  
   
-### <a name="return-value"></a>傳回值  
- 卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多項動作︰  
+### <a name="return-value"></a>Return Value  
+ The effect that would result if a drop were attempted at the location specified by `point`. It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`不會允許置放。  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`會建立原始資料的連結從卸除的資料。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`表示拖曳捲軸作業即將發生或發生在目標中。  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="remarks"></a>備註  
- 此函式應該覆寫，以允許拖放作業，才會發生在視窗中。 此函式的預設實作會呼叫[CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover)，它會傳回`DROPEFFECT_NONE`預設。 在拖放作業期間經常會呼叫此函數，因為它應該最佳化儘可能。  
+### <a name="remarks"></a>Remarks  
+ This function should be overridden to allow drop operations to occur in the window. The default implementation of this function calls [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover), which returns `DROPEFFECT_NONE` by default. Because this function is called frequently during a drag-and-drop operation, it should be optimized as much as possible.  
   
- 如需詳細資訊，請參閱[IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IDropTarget::DragOver](http://msdn.microsoft.com/library/windows/desktop/ms680129) in the Windows SDK.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCOleContainer #&21;](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCOleContainer#21](../../mfc/codesnippet/cpp/coledroptarget-class_1.cpp)]  
   
-##  <a name="ondragscroll"></a>COleDropTarget::OnDragScroll  
- 然後再呼叫架構呼叫[OnDragEnter](#ondragenter)或[OnDragOver](#ondragover)來判斷是否`point`捲動區域中。  
+##  <a name="ondragscroll"></a>  COleDropTarget::OnDragScroll  
+ Called by the framework before calling [OnDragEnter](#ondragenter) or [OnDragOver](#ondragover) to determine whether `point` is in the scrolling region.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -223,34 +228,34 @@ virtual DROPEFFECT OnDragScroll(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 游標位於目前視窗的指標。  
+ Points to the window the cursor is currently over.  
   
  `dwKeyState`  
- 包含輔助按鍵的狀態。 這是下列任何數目的組合︰ **MK_CONTROL**， **MK_SHIFT**， **MK_ALT**， **MK_LBUTTON**， **MK_MBUTTON**，和**MK_RBUTTON**。  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- 包含的資料指標，相對於螢幕像素為單位的位置。  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>傳回值  
- 卸除已嘗試在所指定的位置時，會產生的效果`point`。 它可以是下列一或多項動作︰  
+### <a name="return-value"></a>Return Value  
+ The effect that would result if a drop were attempted at the location specified by `point`. It can be one or more of the following:  
   
-- `DROPEFFECT_NONE`不會允許置放。  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`會建立原始資料的連結從卸除的資料。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`表示拖曳捲軸作業即將發生或發生在目標中。  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
-### <a name="remarks"></a>備註  
- 當您想要針對此事件提供特殊行為時，覆寫這個函式。 此函式的預設實作會呼叫[CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll)，它會傳回`DROPEFFECT_NONE`和捲動資料指標拖曳至視窗的框線的預設捲動區域時的視窗。  
+### <a name="remarks"></a>Remarks  
+ Override this function when you want to provide special behavior for this event. The default implementation of this function calls [CView::OnDragScroll](../../mfc/reference/cview-class.md#ondragscroll), which returns `DROPEFFECT_NONE` and scrolls the window when the cursor is dragged into the default scroll region inside the border of the window.  
   
-##  <a name="ondrop"></a>COleDropTarget::OnDrop  
- 卸除作業發生時，由架構呼叫。  
+##  <a name="ondrop"></a>  COleDropTarget::OnDrop  
+ Called by the framework when a drop operation is to occur.  
   
 ```  
 virtual BOOL OnDrop(
@@ -260,37 +265,37 @@ virtual BOOL OnDrop(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 游標位於目前視窗的指標。  
+ Points to the window the cursor is currently over.  
   
  `pDataObject`  
- 資料物件，其中包含要卸除的資料點。  
+ Points to the data object that contains the data to be dropped.  
   
  `dropEffect`  
- 使用者選擇拖放作業效果。 它可以是下列一或多項動作︰  
+ The effect that the user chose for the drop operation. It can be one or more of the following:  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`會建立原始資料的連結從卸除的資料。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
  `point`  
- 包含的資料指標，相對於螢幕像素為單位的位置。  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>傳回值  
- 如果卸除成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the drop is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 架構會先呼叫[OnDropEx](#ondropex)。 如果`OnDropEx`函式不會處理卸除，然後架構會呼叫此成員函式， `OnDrop`。 一般而言，應用程式會覆寫[OnDropEx](../../mfc/reference/cview-class.md#ondropex)中檢視類別來處理滑鼠右鍵拖曳和卸除。 通常，檢視類別[OnDrop](../../mfc/reference/cview-class.md#ondrop)用來處理簡單拖曳和卸除。  
+### <a name="remarks"></a>Remarks  
+ The framework first calls [OnDropEx](#ondropex). If the `OnDropEx` function does not handle the drop, the framework then calls this member function, `OnDrop`. Typically, the application overrides [OnDropEx](../../mfc/reference/cview-class.md#ondropex) in the view class to handle right mouse-button drag and drop. Typically, the view class [OnDrop](../../mfc/reference/cview-class.md#ondrop) is used to handle simple drag and drop.  
   
- 預設實作`COleDropTarget::OnDrop`呼叫[CView::OnDrop](../../mfc/reference/cview-class.md#ondrop)，它只會傳回**FALSE**預設。  
+ The default implementation of `COleDropTarget::OnDrop` calls [CView::OnDrop](../../mfc/reference/cview-class.md#ondrop), which simply returns **FALSE** by default.  
   
- 如需詳細資訊，請參閱[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) in the Windows SDK.  
   
-##  <a name="ondropex"></a>COleDropTarget::OnDropEx  
- 卸除作業發生時，由架構呼叫。  
+##  <a name="ondropex"></a>  COleDropTarget::OnDropEx  
+ Called by the framework when a drop operation is to occur.  
   
 ```  
 virtual DROPEFFECT OnDropEx(
@@ -301,79 +306,79 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 游標位於目前視窗的指標。  
+ Points to the window the cursor is currently over.  
   
  `pDataObject`  
- 資料物件，其中包含要卸除的資料點。  
+ Points to the data object that contains the data to be dropped.  
   
  `dropDefault`  
- 使用者選擇根據索引鍵的目前狀態的預設拖放作業效果。 它可以是`DROPEFFECT_NONE`。 < 備註 > 一節中討論的置放效果。  
+ The effect that the user chose for the default drop operation based on the current key state. It can be `DROPEFFECT_NONE`. Drop effects are discussed in the Remarks section.  
   
  `dropList`  
- 卸除來源支援拖放效果的清單。 可以使用的位元 OR 合併置放效果值 ( **|**) 作業。 < 備註 > 一節中討論的置放效果。  
+ A list of the drop effects that the drop source supports. Drop effect values can be combined using the bitwise OR ( **&#124;**) operation. Drop effects are discussed in the Remarks section.  
   
  `point`  
- 包含的資料指標，相對於螢幕像素為單位的位置。  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>傳回值  
- 卸除嘗試在所指定的位置所產生的置放效果`point`。 < 備註 > 一節中討論的置放效果。  
+### <a name="return-value"></a>Return Value  
+ The drop effect that resulted from the drop attempt at the location specified by `point`. Drop effects are discussed in the Remarks section.  
   
-### <a name="remarks"></a>備註  
- 架構會先呼叫此函式。 如果它不會處理卸除，架構會呼叫[OnDrop](#ondrop)。 一般而言，您將會覆寫[OnDropEx](../../mfc/reference/cview-class.md#ondropex)中的檢視類別，以支援滑鼠右鍵拖曳和卸除。 通常，檢視類別[OnDrop](../../mfc/reference/cview-class.md#ondrop)用來處理的簡單儲存拖放支援的情況。  
+### <a name="remarks"></a>Remarks  
+ The framework first calls this function. If it does not handle the drop, the framework then calls [OnDrop](#ondrop). Typically, you will override [OnDropEx](../../mfc/reference/cview-class.md#ondropex) in the view class to support right mouse-button drag and drop. Typically, the view class [OnDrop](../../mfc/reference/cview-class.md#ondrop) is used to handle the case of support for simple drag and drop.  
   
- 預設實作`COleDropTarget::OnDropEx`呼叫[CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex)。 根據預設， [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex)只會傳回空值，指出[OnDrop](#ondrop)應該呼叫成員函式。  
+ The default implementation of `COleDropTarget::OnDropEx` calls [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex). By default, [CView::OnDropEx](../../mfc/reference/cview-class.md#ondropex) simply returns a dummy value to indicate the [OnDrop](#ondrop) member function should be called.  
   
- 置放效果會描述與拖放作業相關聯的動作。 請參閱下列置放效果的清單︰  
+ Drop effects describe the action associated with a drop operation. See the following list of drop effects:  
   
-- `DROPEFFECT_NONE`不會允許置放。  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`執行複製作業。  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`會執行移動作業。  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`會建立原始資料的連結從卸除的資料。  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`表示拖曳捲軸作業即將發生或發生在目標中。  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
- 如需詳細資訊，請參閱[IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [IDropTarget::Drop](http://msdn.microsoft.com/library/windows/desktop/ms687242) in the Windows SDK.  
   
-##  <a name="register"></a>COleDropTarget::Register  
- 呼叫此函式可註冊您的視窗與 OLE Dll 做為有效的置放目標。  
+##  <a name="register"></a>  COleDropTarget::Register  
+ Call this function to register your window with the OLE DLLs as a valid drop target.  
   
 ```  
 BOOL Register(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 指向以登錄為置放目標的視窗。  
+ Points to the window that is to be registered as a drop target.  
   
-### <a name="return-value"></a>傳回值  
- 如果註冊成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if registration is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式必須接受拖放作業的呼叫。  
+### <a name="remarks"></a>Remarks  
+ This function must be called for drop operations to be accepted.  
   
- 如需詳細資訊，請參閱[RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [RegisterDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms678405) in the Windows SDK.  
   
-##  <a name="revoke"></a>COleDropTarget::Revoke  
- 呼叫此函式，然後再終結登錄為置放目標，透過呼叫的任何視窗[註冊](#register)若要移除的置放目標清單。  
+##  <a name="revoke"></a>  COleDropTarget::Revoke  
+ Call this function before destroying any window that has been registered as a drop target through a call to [Register](#register) to remove it from the list of drop targets.  
   
 ```  
 virtual void Revoke();
 ```  
   
-### <a name="remarks"></a>備註  
- 從自動呼叫此函式[OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy)已註冊，因此通常不需要明確呼叫此函式 視窗的處理常式。  
+### <a name="remarks"></a>Remarks  
+ This function is called automatically from the [OnDestroy](../../mfc/reference/cwnd-class.md#ondestroy) handler for the window that was registered, so it is usually not necessary to call this function explicitly.  
   
- 如需詳細資訊，請參閱[RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [RevokeDragDrop](http://msdn.microsoft.com/library/windows/desktop/ms692643) in the Windows SDK.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
- [MFC 範例 OCLIENT](../../visual-cpp-samples.md)   
- [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [COleDropSource 類別](../../mfc/reference/coledropsource-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample HIERSVR](../../visual-cpp-samples.md)   
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [CCmdTarget Class](../../mfc/reference/ccmdtarget-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDropSource Class](../../mfc/reference/coledropsource-class.md)
 

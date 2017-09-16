@@ -12,10 +12,11 @@ f1_keywords:
 ms.assetid: 2ec4dc52-a01f-4654-bd65-dd5288777c48
 caps.latest.revision: 11
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 310954b0965be071c288f09de058e3cebe3ce27d
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 614eb4ff9af57d7d8d26e74938e26cdc8b44949c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltostreamgt-typedefs"></a>&lt;ostream&gt; typedefs
@@ -24,26 +25,26 @@ ms.lasthandoff: 02/24/2017
 |[ostream](#ostream)|[wostream](#wostream)|  
   
 ##  <a name="ostream"></a>  ostream  
- 從根據 `char` 特製化的 basic_ostream 和根據 `char` 特製化的 `char_traits` 建立型別。  
+ Creates a type from basic_ostream that is specialized on `char` and `char_traits` specialized on `char`.  
   
 ```
 typedef basic_ostream<char, char_traits<char>> ostream;
 ```  
   
-### <a name="remarks"></a>備註  
- 這個型別與專為具有預設字元特性之 `char` 型別項目所特製的樣板類別 [basic_ostream](../standard-library/basic-ostream-class.md) 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ostream](../standard-library/basic-ostream-class.md), specialized for elements of type `char` with default character traits.  
   
 ##  <a name="wostream"></a>  wostream  
- 從根據 `wchar_t` 特製化的 basic_ostream 和根據 `wchar_t` 特製化的 `char_traits` 建立型別。  
+ Creates a type from basic_ostream that is specialized on `wchar_t` and `char_traits` specialized on `wchar_t`.  
   
 ```
 typedef basic_ostream<wchar_t, char_traits<wchar_t>> wostream;
 ```  
   
-### <a name="remarks"></a>備註  
- 這個型別與專為具有預設字元特性之 `wchar_t` 型別項目所特製的樣板類別 [basic_ostream](../standard-library/basic-ostream-class.md) 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for template class [basic_ostream](../standard-library/basic-ostream-class.md), specialized for elements of type `wchar_t` with default character traits.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<ostream>](../standard-library/ostream.md)
 
 

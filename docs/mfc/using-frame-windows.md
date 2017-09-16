@@ -1,54 +1,73 @@
 ---
-title: "使用框架視窗 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架視窗 [C++], 使用"
-  - "MFC [C++], 框架視窗"
-  - "視窗 [C++], 框架視窗"
+title: Using Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- windows [MFC], frame windows
+- frame windows [MFC], using
+- MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 使用框架視窗
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d570d89da4acf7ec3b13092661725bd21d42f86
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 架構建立文件框架視窗—及其檢視和文件—做為其新增的實作和檔案功能表上的開啟命令的一部分。  由於這個框架執行大部分的框架視窗的工作，您可以在建立，使用和終結這些視窗扮演只小作用。  您可以，然而，明確建立框架視窗和子視窗中使用。  
+---
+# <a name="using-frame-windows"></a>Using Frame Windows
+The MFC framework creates document frame windows — and their views and documents — as part of its implementation of the New and Open commands on the File menu. Because the framework does most of the frame-window work for you, you play only a small role in creating, using, and destroying those windows. You can, however, explicitly create your own frame windows and child windows for special purposes.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [建立文件框架視窗](../mfc/creating-document-frame-windows.md)  
+-   [Creating document frame windows](../mfc/creating-document-frame-windows.md)  
   
--   [初始化 CWnd 物件的時機](../mfc/when-to-initialize-cwnd-objects.md)  
+-   [When to Initialize CWnd Objects](../mfc/when-to-initialize-cwnd-objects.md)  
   
--   [終結框架視窗](../mfc/destroying-frame-windows.md)  
+-   [Destroying frame windows](../mfc/destroying-frame-windows.md)  
   
--   [管理 MDI 子視窗](../mfc/managing-mdi-child-windows.md)  
+-   [Managing MDI child windows](../mfc/managing-mdi-child-windows.md)  
   
--   [管理目前的檢視](../mfc/managing-the-current-view.md)  
+-   [Managing the current view](../mfc/managing-the-current-view.md)  
   
--   [管理功能表、控制列和快速鍵](../mfc/managing-menus-control-bars-and-accelerators.md)  
+-   [Managing menus, control bars, and accelerators](../mfc/managing-menus-control-bars-and-accelerators.md)  
   
--   [在框架視窗中拖放檔案](../mfc/dragging-and-dropping-files-in-a-frame-window.md)  
+-   [Dragging and dropping files in a frame window](../mfc/dragging-and-dropping-files-in-a-frame-window.md)  
   
--   [回應動態資料交換 \(DDE\)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
+-   [Responding to dynamic data exchange (DDE)](../mfc/responding-to-dynamic-data-exchange-dde.md)  
   
--   [協調其他視窗動作](../mfc/orchestrating-other-window-actions.md)  
+-   [Orchestrating other window actions](../mfc/orchestrating-other-window-actions.md)  
   
--   [新增即時線上說明。](../mfc/orchestrating-other-window-actions.md)  
+-   [Managing context-sensitive help](../mfc/orchestrating-other-window-actions.md)  
   
--   [在列印和預覽列印的框架視窗的作用](../mfc/orchestrating-other-window-actions.md)  
+-   [The frame window's role in printing and print preview](../mfc/orchestrating-other-window-actions.md)  
   
-## 請參閱  
- [框架視窗](../mfc/frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Frame Windows](../mfc/frame-windows.md)
+
+

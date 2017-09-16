@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::complex<float>
-- std.complex<float>
-- complex<float>
+- std::complex<float>", "complex<float>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 50b4cd9578da0b70c1c37ea2919bc2dc765ee521
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c6dcc25f08b2a57e9992b9e85dc3ff0b3d39af9c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
-描述一個物件，該物件會儲存一組類型皆為 **float** 之物件的有序對，第一個代表複數的實數部分，而第二個代表虛數部分。  
+Describes an object that stores an ordered pair of objects both of type **float***,* the first representing the real part of a complex number and the second representing the imaginary part.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <>
@@ -67,25 +65,25 @@ constexpr complex(
 };
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `_RealVal`  
- 要建構之複數實數部分的 **float** 類型值。  
+ The value of type **float** for the real part of the complex number being constructed.  
   
  `_ImagVal`  
- 要建構之複數虛數部分的 **float** 類型值。  
+ The value of type **float** for the imaginary part of the complex number being constructed.  
   
  `complexNum`  
- **double** 類型或 `long double` 類型的複數，其實數及虛數部分用於初始化要建構之 **float** 類型的複數。  
+ The complex number of type **double** or of type `long double` whose real and imaginary parts are used to initialize a complex number of type **float** being constructed.  
   
-## <a name="return-value"></a>傳回值  
- **float** 類型的複數。  
+## <a name="return-value"></a>Return Value  
+ A complex number of type **float**.  
   
-## <a name="remarks"></a>備註  
- **float** 類型 complex 類別的 complex 範本類別明確特製化，其與範本類別的差異只在於所定義的建構函式。 允許從 **float** 到 **double** 的隱含但較不安全的轉換，但從 **float** 轉換成 `long double` 必須是**明確**的。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。  
+## <a name="remarks"></a>Remarks  
+ The explicit specialization of the template class complex to a complex class of type **float** differs from the template class only in the constructors it defines. The conversion from **float** to **double** is allowed to be implicit, but the less safe conversion from **float** to `long double` is required to be **explicit**. The use of **explicit** rules out the initiation with type conversion using assignment syntax.  
   
- 如需 `complex` 範本類別的詳細資訊，請參閱 [complex 類別](../standard-library/complex-class.md)。 如需範本類別 `complex` 的成員清單，請參閱  
+ For more information on the template class `complex`, see [complex Class](../standard-library/complex-class.md). For a list of members of the template class `complex`, see .  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // complex_comp_flt.cpp  
@@ -140,14 +138,14 @@ Argument of c3 is recovered from c3 using:
 *\  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭**：\<complex>  
+## <a name="requirements"></a>Requirements  
+ **Header**: \<complex>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [complex 類別](../standard-library/complex-class.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [complex Class](../standard-library/complex-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

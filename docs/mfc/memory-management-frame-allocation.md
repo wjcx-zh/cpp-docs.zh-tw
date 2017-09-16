@@ -1,52 +1,71 @@
 ---
-title: "記憶體管理：框架配置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "偵測記憶體流失"
-  - "框架配置"
-  - "框架變數"
-  - "框架變數, 自動刪除"
-  - "堆積配置, 與框架配置的比較"
-  - "記憶體配置, 框架"
-  - "記憶體遺漏, 在框架上配置物件"
-  - "記憶體遺漏, 偵測"
-  - "記憶體遺漏, 框架配置"
-  - "記憶體, 偵測流失"
-  - "記憶體, 回收"
-  - "記憶體, 釋放"
-  - "範圍, 框架變數"
-  - "堆疊框架"
-  - "變數, 框架變數"
+title: 'Memory Management: Frame Allocation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- memory leaks [MFC], frame allocation
+- memory [MFC], detecting leaks
+- memory [MFC], reclaiming
+- memory allocation [MFC], frames
+- frame variables [MFC], automatic deletion of
+- scope [MFC], frame variables
+- heap allocation [MFC], vs. frame allocation
+- variables [MFC], frame variables
+- memory leaks [MFC], detecting
+- memory, releasing [MFC]
+- stack frames [MFC]
+- memory leaks [MFC], allocating objects on the frame
+- detecting memory leaks [MFC]
+- frame allocation [MFC]
+- frame variables [MFC]
 ms.assetid: 945a211a-6f4f-4679-bb6a-b0f2a0d4a6c1
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 記憶體管理：框架配置
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b52e647f3639977f28906f49de2d5a605bf32622
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當函式呼叫時，在架構的配置會從已設定的「堆疊框架的名稱」。  堆疊框架是暫時保留引數給函式以及任何變數是定義區域的對函式的記憶體區域。  因為編譯器會自動將其空間框架變數通常稱為「自動」變數。  
+---
+# <a name="memory-management-frame-allocation"></a>Memory Management: Frame Allocation
+Allocation on the frame takes its name from the "stack frame" that is set up whenever a function is called. The stack frame is an area of memory that temporarily holds the arguments to the function as well as any variables that are defined local to the function. Frame variables are often called "automatic" variables because the compiler automatically allocates the space for them.  
   
- 有兩個主要畫面格配置特性。  首先，當您定義區域變數時，即使它是大型陣列或資料結構，有足夠空間堆疊框架上配置保留整數變數。  其次，會在超出範圍時，框架變數自動刪除:  
+ There are two key characteristics of frame allocations. First, when you define a local variable, enough space is allocated on the stack frame to hold the entire variable, even if it is a large array or data structure. Second, frame variables are automatically deleted when they go out of scope:  
   
- [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/CPP/memory-management-frame-allocation_1.cpp)]  
+ [!code-cpp[NVC_MFC_Utilities#10](../mfc/codesnippet/cpp/memory-management-frame-allocation_1.cpp)]  
   
- 對於區域函式變數，當函式結束，此範圍轉換發生，不過，框架變數的範圍小於函式可以使用巢狀括號。  框架變數的這個自動刪除是非常重要的。  在簡單的基本型別的情況下 \(例如 `int` \) 或 **byte**，陣列或資料結構，自動刪除回收變數使用的記憶體。  因為變數超出的範圍，就無法繼續存取。  在 C\+\+ 物件，然而，自動刪除流程更為複雜。  
+ For local function variables, this scope transition happens when the function exits, but the scope of a frame variable can be smaller than a function if nested braces are used. This automatic deletion of frame variables is very important. In the case of simple primitive types (such as `int` or **byte**), arrays, or data structures, the automatic deletion simply reclaims the memory used by the variable. Since the variable has gone out of scope, it cannot be accessed anyway. In the case of C++ objects, however, the process of automatic deletion is a bit more complicated.  
   
- 當物件定義為框架變數時，它的建構函式會自動叫用這個定義發生的點。  當物件超出範圍時，它的解構函式自動叫用，在物件的記憶體回收之前。  這個自動建構和解構非常方便得應手的，不過，您必須知道自動呼叫，特別是對解構函式。  
+ When an object is defined as a frame variable, its constructor is automatically invoked at the point where the definition is encountered. When the object goes out of scope, its destructor is automatically invoked before the memory for the object is reclaimed. This automatic construction and destruction can be very handy, but you must be aware of the automatic calls, especially to the destructor.  
   
- 配置在框架物件的主要優點是會自動刪除。  當您配置在框架物件時，您不必擔心會導致記憶體遺漏的忘記的物件。\(如需記憶體遺漏的詳細資訊，請參閱本文 [在 MFC 偵測記憶體遺漏](http://msdn.microsoft.com/zh-tw/29ee8909-96e9-4246-9332-d3a8aa8d4658)\)。框架配置的缺點是框架變數無法在其範圍之外使用。  在選取框架配置的另一個因素對堆積配置是由結構的，並使用堆積物件，而不是堆疊為儲存體通常最好是，因為堆疊空間通常是有限的。  
+ The key advantage of allocating objects on the frame is that they are automatically deleted. When you allocate your objects on the frame, you don't have to worry about forgotten objects causing memory leaks. (For details on memory leaks, see the article [Detecting Memory Leaks in MFC](http://msdn.microsoft.com/en-us/29ee8909-96e9-4246-9332-d3a8aa8d4658).) A disadvantage of frame allocation is that frame variables cannot be used outside their scope. Another factor in choosing frame allocation versus heap allocation is that for large structures and objects, it is often better to use the heap instead of the stack for storage since stack space is often limited.  
   
-## 請參閱  
- [記憶體管理](../mfc/memory-management.md)
+## <a name="see-also"></a>See Also  
+ [Memory Management](../mfc/memory-management.md)
+
+

@@ -1,63 +1,78 @@
 ---
-title: "歡迎回到 C++ (現代 C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Welcome Back to C++ (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 caps.latest.revision: 23
-caps.handback.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 歡迎回到 C++ (現代 C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 462f2fbc8b1c7b81a1536a9620b8f628231fb2dc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-C\+\+ 是世界上最廣泛使用的程式語言之一。  編寫完善的 C\+\+ 程式不但執行快速，而且有效率。  這種語言較其他語言更具彈性，因為您可以用它來建立各種應用程式，從好玩刺激的遊戲到高效能科學軟體、裝置驅動程式、內嵌程式和 Windows 用戶端應用程式，一應俱全。  20 多年來，C\+\+ 已經用來解決這類和許多其他的問題。  您可能不知道的是，有越來越多的 C\+\+ 程式設計人員已經捲藏過時的 C\-Style 程式設計舊衣，換上了現代 C\+\+ 的新裝。  
+---
+# <a name="welcome-back-to-c-modern-c"></a>Welcome Back to C++ (Modern C++)
+C++ is one of the most widely used programming languages in the world. Well-written C++ programs are fast and efficient. The language is more flexible than other languages because you can use it to create a wide range of apps—from fun and exciting games, to high-performance scientific software, to device drivers, embedded programs, and Windows client apps. For more than 20 years, C++ has been used to solve problems like these and many others. What you might not know is that an increasing number of C++ programmers have folded up the dowdy C-style programming of yesterday and have donned modern C++ instead.  
   
- C\+\+ 的其中一個原始需求是與 C 語言的回溯相容性。  從那時起，C\+\+ 就幾經更迭，逐漸發展成形；先是具有類別的 C，繼而有原始的 C\+\+ 語言規格，然後加入許多後續的增強功能。  由於這樣的傳承，C\+\+ 通常稱為多典範程式語言。  在 C\+\+ 中，您可以單純地進行程序式 C\-Style 程式設計，包括可能獲致絕佳效能的原始指標、陣列、null 結尾字元字串、自訂資料結構及其他功能，但也可能孳生 Bug 和複雜性。  由於 C\-Style 程式設計充滿這類的危險，C\+\+ 其中一個建置目標就是讓程式為類型安全，而且更容易撰寫、擴充和維護。  C\+\+ 在初期接受物件導向程式設計之類的程式設計典範。  多年來，已有許多功能跟隨多方測試的結構與演算法標準程式庫一起加入這個語言的陣容。  也就是這些新增功能造就了現代 C\+\+ 樣式。  
+ One of the original requirements for C++ was backward compatibility with the C language. Since then, C++ has evolved through several iterations—C with Classes, then the original C++ language specification, and then the many subsequent enhancements. Because of this heritage, C++ is often referred to as a multi-paradigm programming language. In C++, you can do purely procedural C-style programming that involves raw pointers, arrays, null-terminated character strings, custom data structures, and other features that may enable great performance but can also spawn bugs and complexity.  Because C-style programming is fraught with perils like these, one of the founding goals for C++ was to make programs both type-safe and easier to write, extend, and maintain. Early on, C++ embraced programming paradigms such as object-oriented programming. Over the years, features have been added to the language, together with highly-tested standard libraries of data structures and algorithms. It's these additions that have made the modern C++ style possible.  
   
- 現代 C\+\+ 著重於：  
+ Modern C++ emphasizes:  
   
--   堆疊式範圍，而不是堆積或靜態全域範圍。  
+-   Stack-based scope instead of heap or static global scope.  
   
--   自動類型推斷，而不是明確類型名稱。  
+-   Auto type inference instead of explicit type names.  
   
--   智慧型指標，而不是原始指標。  
+-   Smart pointers instead of raw pointers.  
   
--   `std::string` 和 `std::wstring` 類型 \(請參閱 [\<string\>](../standard-library/string.md)\)，而不是未經處理的 `char[]` 陣列。  
+-   `std::string` and `std::wstring` types (see [\<string>](../standard-library/string.md)) instead of raw `char[]` arrays.  
   
--   [標準範本庫](../standard-library/cpp-standard-library-header-files.md) \(STL\) 容器 \(例如 `vector`、`list` 和 `map`\)，而不是原始陣列或自訂容器。  請參閱[\<vector\>](../standard-library/vector.md)、[\<list\>](../standard-library/list.md)和[\< 對應 \>](../standard-library/map.md)。  
+-   [C++ Standard Library](../standard-library/cpp-standard-library-header-files.md) containers like `vector`, `list`, and `map` instead of raw arrays or custom containers. See [\<vector>](../standard-library/vector.md), [\<list>](../standard-library/list.md), and [\<map>](../standard-library/map.md).  
   
--   [STL 演算法](../standard-library/algorithm.md)，而不是手動撰寫的演算法程式碼。  
+-   C++ Standard Library [algorithms](../standard-library/algorithm.md) instead of manually coded ones.  
   
--   例外狀況，用來報告和處理錯誤狀況。  
+-   Exceptions, to report and handle error conditions.  
   
--   使用 STL `std::atomic<>` \(請參閱 [\<atomic\>](../standard-library/atomic.md)\) 的無鎖定執行緒間通訊，而不是其他執行緒間的通訊機制。  
+-   Lock-free inter-thread communication using C++ Standard Library `std::atomic<>` (see [\<atomic>](../standard-library/atomic.md)) instead of other inter-thread communication mechanisms.  
   
--   內嵌 [Lambda 函式](../cpp/lambda-expressions-in-cpp.md)，而不是個別實作的小型函式。  
+-   Inline [lambda functions](../cpp/lambda-expressions-in-cpp.md) instead of small functions implemented separately.  
   
--   範圍架構的 for 迴圈，用來撰寫更強固的、以 `for ( for-range-declaration : expression )` 的形式，搭配使用陣列、STL 容器和 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]集合的迴圈。  這是核心語言支援的一部分。  如需詳細資訊，請參閱[以範圍為基礎的 for 陳述式 \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)。  
+-   Range-based for loops to write more robust loops that work with arrays, C++ Standard Library containers, and Windows Runtime collections in the form `for ( for-range-declaration : expression )`. This is part of the Core Language support. For more information, see [Range-based for Statement (C++)](../cpp/range-based-for-statement-cpp.md).  
   
- C\+\+ 語言本身也有所演變。  比較下列程式碼片段。  這是顯示 C\+\+ 過去一般狀況的程式碼片段：  
+ The C++ language itself has also evolved. Compare the following code snippets. This one shows how things used to be in C++:  
   
 ```cpp  
-  
 // circle and shape are user-defined types  
 circle* p = new circle( 42 );   
 vector<shape*> v = load_shapes();  
   
 for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {  
     if( *i && **i == *p )  
-        cout << **i << “ is a match\n”;  
+        cout << **i << " is a match\n";  
 }  
   
 for( vector<circle*>::iterator i = v.begin();  
@@ -66,13 +81,11 @@ for( vector<circle*>::iterator i = v.begin();
 }  
   
 delete p;  
-  
 ```  
   
- 在現代 C\+\+ 中達成相同狀況的做法如下：  
+ Here's how the same thing is accomplished in modern C++:  
   
 ```cpp  
-  
 #include <memory>  
 #include <vector>  
 // ...  
@@ -80,52 +93,51 @@ delete p;
 auto p = make_shared<circle>( 42 );  
 vector<shared_ptr<shape>> v = load_shapes();  
   
-for_each( begin(v), end(v), [&](const shared_ptr<shape>& s) {  
+for( auto& s : v ) {  
     if( s && *s == *p )  
         cout << *s << " is a match\n";  
-} );  
-  
+} 
 ```  
   
- 在現代 C\+\+ 中，因為可以改用智慧型指標，就不需要使用 new\/delete 或明確例外狀況處理。  當您使用 `auto` 類型推算和 [Lambda 函式](../cpp/lambda-expressions-in-cpp.md)時，可以更快速撰寫、更強化且更容易了解程式碼。  `for_each` 會比 `for` 迴圈更清楚、更輕鬆使用，而且比較不容易發生未知的錯誤。  您可以使用未定案程式碼搭配最少的程式行來撰寫應用程式。  您可以使該程式碼成為記憶體安全和例外狀況安全，而且沒有要處理的配置\/解除配置或錯誤碼。  
+ In modern C++, you don't have to use new/delete or explicit exception handling because you can use smart pointers instead. When you use the `auto` type deduction and [lambda function](../cpp/lambda-expressions-in-cpp.md), you can write code quicker, tighten it, and understand it better. And `for_each` is cleaner, easier to use, and less prone to unintended errors than a `for` loop. You can use boilerplate together with minimal lines of code to write your app. And you can make that code exception-safe and memory-safe, and have no allocation/deallocation or error codes to deal with.  
   
- 現代 C\+\+ 結合了兩種多型：編譯時期 \(透過樣板\) 和執行階段 \(透過繼承和虛擬化\)。  您可以混合使用這兩種多型來產生良好效果。  STL 樣板 `shared_ptr` 使用內部虛擬方法，完成其顯然毫不費力的類型清除。  但是當範本是較佳選擇時，請勿對多型過度使用虛擬。  樣板有可觀的強大功能。  
+ Modern C++ incorporates two kinds of polymorphism: compile-time, through templates, and run-time, through inheritance and virtualization. You can mix the two kinds of polymorphism to great effect. The C++ Standard Library template `shared_ptr` uses internal virtual methods to accomplish its apparently effortless type erasure. But don't over-use virtualization for polymorphism when a template is the better choice. Templates can be very powerful.  
   
- 如果您是從其他語言改換過來使用 C\+\+，特別是從類型多半為參考類型、少有實值類型的 Managed 語言過來，請記得 C\+\+ 類別預設是實值類型。  但是您可以將這些類別指定為參考類型，啟用支援物件導向程式設計的多型行為。  有用的觀點：實值類型與記憶體及配置控制較有關聯，參考類型則多偏向支援多型的基底類別及虛擬函式。  根據預設，實值類型是可複製的，每個類型都具有複製建構函式和複製指派運算子。  當您指定參考類型時，請將類別設定為不可複製 \(停用複製建構函式和複製指派運算子\)，並使用支援多型的虛擬解構函式。  實值類型也是與內容有關，當您複製這些內容時，會取得兩個可分別修改的獨立值。  但是參考類型則與識別有關 \(屬於哪種物件\)，因此有時稱為多型類型。  
+ If you're coming to C++ from another language, especially from a managed language in which most of the types are reference types and very few are value types, know that C++ classes are value types by default. But you can specify them as reference types to enable polymorphic behavior that supports object-oriented programming. A helpful perspective: value types are more about memory and layout control, reference types are more about base classes and virtual functions to support polymorphism. By default, value types are copyable—they each have a copy constructor and a copy assignment operator. When you specify a reference type, make the class non-copyable—disable the copy constructor and copy assignment operator—and use a virtual destructor, which supports the polymorphism. Value types are also about the contents, which, when they are copied, give you two independent values that you can modify separately. But reference types are about identity—what kind of object it is—and for this reason are sometimes referred to as polymorphic types.  
   
- C\+\+ 正在復活，因為功能強大再度成為王道。  當程式設計人員產能很重要時，像 Java 和 C\# 這樣的語言很適用，但是當功能與效能變得至關重要時，這些語言就顯得有所局限。  就高效率和功能而論，尤其是在硬體資源有限的裝置上，所有語言都比不上現代 C\+\+。  
+ C++ is experiencing a renaissance because power is king again. Languages like Java and C# are good when programmer productivity is important, but they show their limitations when power and performance are paramount. For high efficiency and power, especially on devices that have limited hardware, nothing beats modern C++.  
   
- 不僅語言現代，連開發工具也是。  [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 穩固且有效率地打造開發週期的所有環節。  這包含 Application Lifecycle Management \(ALM\) 工具、IDE 增強功能 \(例如 IntelliSense\)、工具易用的機制 \(例如 XAML\) 以及建置、偵錯等許多其他工具。  
+ Not only the language is modern, the development tools are, too. [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] makes all parts of the development cycle robust and efficient. It includes Application Lifecycle Management (ALM) tools, IDE enhancements like IntelliSense, tool-friendly mechanisms like XAML, and building, debugging, and many other tools.  
   
- 本文件中的這篇文章針對撰寫現代 C\+\+ 程式所需的最重要功能及技術，提供了高階方針和最佳作法。  
+ The articles in this part of the documentation provide high-level guidelines and best practices for the most important features and techniques for writing modern C++ programs.  
   
--   [C\+\+11\/14\/17 功能的支援](../cpp/support-for-cpp11-14-17-features-modern-cpp.md)  
+-   [C++ Type System](../cpp/cpp-type-system-modern-cpp.md)  
   
--   [C\+\+ 類型系統](../cpp/cpp-type-system-modern-cpp.md)  
+-   [Uniform Initialization and Delegating Constructors](../cpp/uniform-initialization-and-delegating-constructors.md)  
   
--   [統一初始設定和委派建構函式](../cpp/uniform-initialization-and-delegating-constructors.md)  
+-   [Object Lifetime And Resource Management](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
   
--   [物件存留期和資源管理](../cpp/object-lifetime-and-resource-management-modern-cpp.md)  
+-   [Objects Own Resources (RAII)](../cpp/objects-own-resources-raii.md)  
   
--   [物件擁有資源 \(RAII\)](../cpp/objects-own-resources-raii.md)  
+-   [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)  
   
--   [智慧型指標](../cpp/smart-pointers-modern-cpp.md)  
+-   [Pimpl For Compile-Time Encapsulation](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)  
   
--   [編譯時期封裝的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)  
+-   [Containers](../cpp/containers-modern-cpp.md)  
   
--   [容器](../cpp/containers-modern-cpp.md)  
+-   [Algorithms](../cpp/algorithms-modern-cpp.md)  
   
--   [演算法](../cpp/algorithms-modern-cpp.md)  
+-   [String and I/O Formatting (Modern C++)](../cpp/string-and-i-o-formatting-modern-cpp.md)  
   
--   [字串和 I\/O 格式化](../cpp/string-and-i-o-formatting-modern-cpp.md)  
+-   [Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)  
   
--   [錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)  
+-   [Portability At ABI Boundaries](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
   
--   [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)  
+ For more information, see the StackOverflow article [what C++ idioms are deprecated in C++11](http://go.microsoft.com/fwlink/?LinkId=402836)  
   
- 如需詳細資訊，請參閱 StackOverflow 文章 [C\+\+11 中已取代的 C\+\+ 慣用語](http://go.microsoft.com/fwlink/?LinkId=402836) \(英文\)  
-  
-## 請參閱  
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)   
- [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)   
- [C\+\+ Standard Library](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [Lambda Expressions](../cpp/lambda-expressions-in-cpp.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)  
+ [Visual C++ language conformance](../visual-cpp-language-conformance.md)  
+

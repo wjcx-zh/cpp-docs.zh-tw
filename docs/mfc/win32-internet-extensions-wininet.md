@@ -1,61 +1,81 @@
 ---
-title: "Win32 網際網路擴充功能 (WinInet) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "用戶端應用程式, Win32 網際網路"
-  - "網際網路應用程式, Win32 網際網路擴充功能"
-  - "網際網路用戶端應用程式, 關於網際網路用戶端應用程式"
-  - "WinInet 類別, 關於 WinInet 類別"
+title: Win32 Internet Extensions (WinInet) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], Win32 Internet Extensions
+- Internet client applications [MFC], about Internet client applications
+- client applications [MFC], Win32 Internet
+- WinInet classes [MFC], about WinInet classes
 ms.assetid: f8c80f0b-ce14-4f0d-a3cf-4f7d8c5cca59
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Win32 網際網路擴充功能 (WinInet)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6a79dbe269dd9c39b4f875f574fc8100ae7f367f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-網際網路用戶端應用程式是從網路資料來源的程式 \(伺服器\) 存取資訊使用網際網路通訊協定 \(例如 Gopher、FTP、HTTP，。  例如網際網路用戶端應用程式可以存取伺服器擷取資料 \(例如天氣圖、股票價格或報紙大標頭。  網際網路用戶端可以透過外部網路 \(網際網路\) 或內部網路存取伺服器 \(有時稱為內部網路\)。  
+---
+# <a name="win32-internet-extensions-wininet"></a>Win32 Internet Extensions (WinInet)
+An Internet client application is a program that accesses information from a network data source (server) using Internet protocols such as gopher, FTP, or HTTP. An Internet client application might access a server to retrieve data such as weather maps, stock prices, or newspaper headlines, for example. The Internet client can access the server through an external network (the Internet) or an internal network (sometimes called an intranet).  
   
- MFC 包括 Win32 網際網路副檔名或 WinInet，建立的網際網路用戶端應用程式。  MFC 封裝在一組這些網際網路擴充標準，便於使用的類別。  使用 MFC WinInet 類別，您可以撰寫 WinInet 用戶端應用程式 \(透過直接呼叫 Win32 函式或。  
+ MFC includes the Win32 Internet Extensions, or WinInet, for creating an Internet client application. MFC encapsulates these Internet extensions in a set of standard, easy-to-use classes. You can write a WinInet client application by calling the Win32 functions directly or by using the MFC WinInet classes.  
   
- Microsoft Win32 Internet \(WinInet\) 函式協助您做的網際網路的所有應用程式的整數部分。  新的函式，在 WININET.DLL 所包含，簡化存取網際網路使用 HTTP \(Hypertext Transfer Protocol\)， FTP \(檔案傳輸通訊協定 \(File Transfer Protocol，FTP\) 和 Gopher。  
+ The Microsoft Win32 Internet functions (WinInet) assist you in making the Internet an integral part of any application. The new functions, contained in WININET.DLL, simplify accessing the Internet using HTTP (Hypertext Transfer Protocol), FTP (File Transfer Protocol), and gopher.  
   
- 下列主題討論建立網際網路用戶端應用程式處理序:  
+ The following topics discuss the process of creating an Internet client application:  
   
--   [WinInet 如何讓您輕鬆建立網際網路用戶端應用程式](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)  
+-   [How WinInet Makes It Easier to Create Internet Client Applications](../mfc/how-wininet-makes-it-easier-to-create-internet-client-applications.md)  
   
--   [MFC 如何讓您輕鬆建立網際網路用戶端應用程式](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)  
+-   [How MFC Makes It Easier to Create Internet Client Applications](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)  
   
--   [建立的網際網路用戶端應用程式 MFC 類別](../mfc/mfc-classes-for-creating-internet-client-applications.md)  
+-   [MFC Classes for Creating Internet Client Applications](../mfc/mfc-classes-for-creating-internet-client-applications.md)  
   
--   [必要條件網際網路用戶端類別。](../mfc/prerequisites-for-internet-client-classes.md)  
+-   [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)  
   
--   [撰寫使用 MFC WinInet 類別的網際網路用戶端應用程式](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
+-   [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)  
   
- 下列主題提供執行一般 WinInet 工作的步驟:  
+ The following topics provide steps for performing typical WinInet tasks:  
   
--   [在典型的網際網路用戶端應用程式的步驟](../mfc/steps-in-a-typical-internet-client-application.md)  
+-   [Steps in a Typical Internet Client Application](../mfc/steps-in-a-typical-internet-client-application.md)  
   
--   [在典型的 FTP 用戶端應用程式的步驟](../mfc/steps-in-a-typical-ftp-client-application.md)  
+-   [Steps in a Typical FTP Client Application](../mfc/steps-in-a-typical-ftp-client-application.md)  
   
--   [在典型的 FTP 用戶端應用程式的步驟刪除檔案](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
+-   [Steps in a Typical FTP Client Application to Delete a File](../mfc/steps-in-a-typical-ftp-client-application-to-delete-a-file.md)  
   
--   [在典型的田鼠系統用戶端用戶端應用程式的步驟](../mfc/steps-in-a-typical-gopher-client-application.md)  
+-   [Steps in a Typical Gopher Client Application](../mfc/steps-in-a-typical-gopher-client-application.md)  
   
--   [在典型的 HTTP 用戶端應用程式的步驟](../mfc/steps-in-a-typical-http-client-application.md)  
+-   [Steps in a Typical HTTP Client Application](../mfc/steps-in-a-typical-http-client-application.md)  
   
-## 請參閱  
- [MFC Internet Programming \(NIB\)](http://msdn.microsoft.com/zh-tw/0f7a1f3a-385b-4d56-a55b-0d766840c58a)   
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)   
- [WinInet 基本概念](../mfc/wininet-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)   
+ [WinInet Basics](../mfc/wininet-basics.md)
+
+
+
+

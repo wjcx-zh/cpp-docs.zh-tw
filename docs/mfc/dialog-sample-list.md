@@ -1,66 +1,85 @@
 ---
-title: "對話方塊範例清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "範例應用程式 [MFC], 對話方塊"
+title: Dialog Sample List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 對話方塊範例清單
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: daab211b6f804bb5ab16eaddf970b90bd9ec32b3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-請參閱說明對話方塊和屬性工作表的下列範例程式：  
+---
+# <a name="dialog-sample-list"></a>Dialog Sample List
+See the following sample programs that illustrate dialog boxes and property sheets:  
   
- *使用對話方塊的 MDI 範例應用程式*  
+ *MDI Sample Application with Dialog Boxes*  
   
--   [SCRIBBLE](../top/visual-cpp-samples.md)  
+-   [SCRIBBLE](../visual-cpp-samples.md)  
   
- *非強制回應對話方塊*  
+ *Modeless Dialog Box*  
   
--   [MODELESS](../top/visual-cpp-samples.md)  
+-   [MODELESS](../visual-cpp-samples.md)  
   
- *屬性工作表對話方塊 \(在對話方塊標籤\)*  
+ *Property Sheet Dialog Box (Tab Dialog Box)*  
   
--   [PROPDLG](../top/visual-cpp-samples.md)  
+-   [PROPDLG](../visual-cpp-samples.md)  
   
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
   
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
   
- *根據對話方塊的應用程式*  
+ *Application Based on a Dialog Box*  
   
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
   
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
   
- *對話方塊控制項*  
+ *Dialog-Box Controls*  
   
--   [CMNCTRL1](../top/visual-cpp-samples.md)  
+-   [CMNCTRL1](../visual-cpp-samples.md)  
   
--   [CMNCTRL2](../top/visual-cpp-samples.md)  
+-   [CMNCTRL2](../visual-cpp-samples.md)  
   
--   [CTRLTEST](../top/visual-cpp-samples.md)  
+-   [CTRLTEST](../visual-cpp-samples.md)  
   
- *類似對話的表單檢視*  
+ *Dialog-Like Form Views*  
   
--   [VIEWEX](../top/visual-cpp-samples.md)  
+-   [VIEWEX](../visual-cpp-samples.md)  
   
- *在記憶體內的對話方塊範本*  
+ *In-Memory Dialog Template*  
   
--   [DLGTEMPL](../top/visual-cpp-samples.md)  
+-   [DLGTEMPL](../visual-cpp-samples.md)  
   
-## 請參閱  
- [對話方塊](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

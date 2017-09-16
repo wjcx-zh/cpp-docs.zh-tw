@@ -1,35 +1,54 @@
 ---
-title: "影像清單的類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList 類別, 類型"
-  - "影像清單 [C++], 類型"
-  - "清單 [C++], 影像"
+title: Types of Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lists [MFC], image
+- image lists [MFC], types of
+- CImageList class [MFC], types
 ms.assetid: bee5e7c3-78f5-4037-a136-9c50d67cdee5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 影像清單的類型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5c04ab083e66a698623c3d143c927a6216148a9e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-取得影像清單 \([CImageList](../mfc/reference/cimagelist-class.md)\) 有兩種:nonmasked 和遮罩。  「nonmasked 影像清單包括包含一個或多個影像的色彩點陣圖。  「遮罩影像清單包括兩個大小相等的點陣圖。  第一個是包含影像的色彩點陣圖，，第二個是包含一系列遮罩—一個在第一個點陣圖中每個影像的單色點陣圖。  
+---
+# <a name="types-of-image-lists"></a>Types of Image Lists
+There are two types of image lists ([CImageList](../mfc/reference/cimagelist-class.md)): nonmasked and masked. A "nonmasked image list" consists of a color bitmap that contains one or more images. A "masked image list" consists of two bitmaps of equal size. The first is a color bitmap that contains the images, and the second is a monochrome bitmap that contains a series of masks — one for each image in the first bitmap.  
   
- 其中一個 **Create** 成員函式的多載旗標指示影像清單是否遮罩。\(另一個多載建立遮住了影像清單\)。  
+ One of the overloads of the **Create** member function takes a flag to indicate whether or not the image list is masked. (The other overloads create masked image lists.)  
   
- 在繪製時一 nonmasked 影像，則會複製到目標裝置內容;即會繪製在裝置內容的現有的背景色彩。  在繪製影像時遮罩，影像的位元結合，通常會在目標裝置內容背景色彩會顯示得的點陣圖位元遮罩的透明區域。  遮罩，在繪製影像時，您可以指定幾個繪製樣式。  例如，您可以指定影像遞色表示選取的物件。  
+ When a nonmasked image is drawn, it is simply copied into the target device context; that is, it is drawn over the existing background color of the device context. When a masked image is drawn, the bits of the image are combined with the bits of the mask, typically producing transparent areas in the bitmap where the background color of the target device context shows through. You can specify several drawing styles when drawing a masked image. For example, you can specify that the image be dithered to indicate a selected object.  
   
-## 請參閱  
- [使用 CImageList](../mfc/using-cimagelist.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

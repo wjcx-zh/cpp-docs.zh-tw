@@ -1,43 +1,60 @@
 ---
-title: "以範圍為基礎的 for 陳述式 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Range-based for Statement (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 以範圍為基礎的 for 陳述式 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: bc7fe69f815a1a1b10f36ef10b5f6f0c62811778
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-對於 `expression` 中的每個項目重複且循序地執行 `statement` 。  
+---
+# <a name="range-based-for-statement-c"></a>Range-based for Statement (C++)
+Executes `statement` repeatedly and sequentially for each element in `expression`.  
   
-## 語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
   
       for ( for-range-declaration : expression )  
-   statement   
+   statement   
 ```  
   
-## 備註  
- 使用範圍架構的 `for` 陳述式來建構迴圈時，必須定義一個可以逐一查看的範圍一例如 `std::vector` 或其他 STL 序列的範圍是由 `begin()` 和 `end()` 所定義。  在 `for-range-declaration` 區段宣告的名稱是 `for` 陳述式的區域變數，不可在 `expression` 或 `statement` 重複宣告。  請注意 [auto](../cpp/auto-cpp.md) 關鍵字建議陳述式的在 `for-range-declaration` 區段使用。  
+## <a name="remarks"></a>Remarks  
+ Use the range-based `for` statement to construct loops that must execute through a "range", which is defined as anything that you can iterate through—for example, `std::vector`, or any other C++ Standard Library sequence whose range is defined by a `begin()` and `end()`. The name that is declared in the `for-range-declaration` portion is local to the `for` statement and cannot be re-declared in `expression` or `statement`. Note that the [auto](../cpp/auto-cpp.md) keyword is preferred in the `for-range-declaration` portion of the statement. 
+
+ **New in Visual Studio 2017:**  Range-based for loops no longer require that begin() and end() return objects of the same type. This enables end() to return a sentinel object such as used by ranges as defined in the Ranges-V3 proposal. For more information, see [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) and the [range-v3 library on GitHub](https://github.com/ericniebler/range-v3).
   
- 以下程式碼示範如何使用排列的 `for` 迴圈逐一查看一個陣列和一個向量：  
+ This code shows how to use range-based `for` loops to iterate through an array and a vector:  
   
 ```cpp  
-  
 // range-based-for.cpp  
 // compile by using: cl /EHsc /nologo /W4  
 #include <iostream>  
@@ -69,7 +86,7 @@ int main()
     }  
     cout << endl;  
   
-    for( const auto &y : x ) { // Type inference by reference.  
+    for( const auto &y : x ) { // Type inference by const reference.  
         // Observes in-place. Preferred when no modify is needed.  
         cout << y << " ";  
     }  
@@ -93,7 +110,7 @@ int main()
   
 ```  
   
- 輸出如下：  
+ Here is the output:  
   
  `1 2 3 4 5 6 7 8 9 10`  
   
@@ -109,20 +126,20 @@ int main()
   
  `end of vector test`  
   
- 執行以下其中一個 `statement` 時，範圍架構的 `for` 會終止： [break](../cpp/break-statement-cpp.md) 、 [return](../cpp/return-statement-cpp.md) ，或 [goto](../cpp/goto-statement-cpp.md) 至範圍架構的 **for** 迴圈之外被標記的陳述式。  [continue](../cpp/continue-statement-cpp.md) 陳述式僅終止目前所在的 `for` 迴圈項目。  
+ A range-based `for` loop terminates when one of these in `statement` is executed: a [break](../cpp/break-statement-cpp.md), [return](../cpp/return-statement-cpp.md), or [goto](../cpp/goto-statement-cpp.md) to a labeled statement outside the range-based **for** loop. A [continue](../cpp/continue-statement-cpp.md) statement in a range-based `for` loop terminates only the current iteration.  
   
- 請謹記有關範圍架構的 `for` 迴圈的這些特性：  
+ Keep in mind these facts about range-based `for`:  
   
--   自動辨識陣列。  
+-   Automatically recognizes arrays.  
   
--   辨識具有 `.begin()` 和 `.end()`的容器。  
+-   Recognizes containers that have `.begin()` and `.end()`.  
   
--   使用引數相關查閱 `begin()` 和 `end()` 。  
+-   Uses argument-dependent lookup `begin()` and `end()` for anything else.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [auto](../cpp/auto-cpp.md)   
- [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
- [while 陳述式 \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [do\-while 陳述式 \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for 陳述式 \(C\+\+\)](../cpp/for-statement-cpp.md)
+ [Iteration Statements](../cpp/iteration-statements-cpp.md)   
+ [Keywords](../cpp/keywords-cpp.md)   
+ [while Statement (C++)](../cpp/while-statement-cpp.md)   
+ [do-while Statement (C++)](../cpp/do-while-statement-cpp.md)   
+ [for Statement (C++)](../cpp/for-statement-cpp.md)

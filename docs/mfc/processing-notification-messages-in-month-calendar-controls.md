@@ -1,43 +1,62 @@
 ---
-title: "處理月曆控制項中的通知訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMonthCalCtrl 類別, 日期狀態"
-  - "CMonthCalCtrl 類別, 告知"
-  - "月曆控制項, 通知訊息"
-  - "告知, CMonthCalCtrl 的"
-  - "告知, 月曆控制項"
+title: Processing Notification Messages in Month Calendar Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CMonthCalCtrl class [MFC], notifications
+- CMonthCalCtrl class [MFC], day states
+- month calendar controls [MFC], notification messages
+- notifications [MFC], for CMonthCalCtrl
+- notifications [MFC], month calendar control
 ms.assetid: 607c3e90-0756-493b-9503-ce835a50c7ab
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 處理月曆控制項中的通知訊息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d672052ebd3b98c82d997c0b100e36bcd93731a3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當使用者與月曆控制項互動 \(選取日期和\/或檢視不同的月份\)，控制項 \(`CMonthCalCtrl`\) 傳送通知訊息至其父視窗，通常為檢視或對話物件。  如果您想要執行某個動作以回應，請處理這些訊息。  例如，當使用者選取新的月份檢視時，您可以提供一組應該被強調的日期。  
+---
+# <a name="processing-notification-messages-in-month-calendar-controls"></a>Processing Notification Messages in Month Calendar Controls
+As users interact with the month calendar control (selecting dates and/or viewing a different month), the control (`CMonthCalCtrl`) sends notification messages to its parent window, usually a view or dialog object. Handle these messages if you want to do something in response. For example, when the user selects a new month to view, you could provide a set of dates that should be emphasized.  
   
- 使用屬性視窗加入通知處理常式到您要實作的訊息的父類別。  
+ Use the Properties window to add notification handlers to the parent class for those messages you want to implement.  
   
- 下列清單說明月曆控制項傳送的各種通知。  
+ The following list describes the various notifications sent by the month calendar control.  
   
--   **MCN\_GETDAYSTATE** 要求應顯示的天數資訊為粗體。  如需處理這個通知的詳細資訊，請參閱 [設定月份行事曆控制項的狀態](../mfc/setting-the-day-state-of-a-month-calendar-control.md)。  
+-   **MCN_GETDAYSTATE** Requests information about which days should be displayed in bold. For information on handling this notification, see [Setting the Day State of a Month Calendar Control](../mfc/setting-the-day-state-of-a-month-calendar-control.md).  
   
--   **MCN\_SELCHANGE** 通知父日期選取的日期或日期範圍發生變更。  
+-   **MCN_SELCHANGE** Notifies the parent that the selected date or range of the date has changed.  
   
--   **MCN\_SELECT** 通知父已明確選取日期。  
+-   **MCN_SELECT** Notifies the parent that an explicit date selection has been made.  
   
-## 請參閱  
- [使用 CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CMonthCalCtrl](../mfc/using-cmonthcalctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

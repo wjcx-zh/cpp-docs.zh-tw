@@ -1,47 +1,66 @@
 ---
-title: "使用 CDateTimeCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDateTimeCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DateTimePicker 控制項 [MFC], CDateTimeCtrl 類別"
+title: Using CDateTimeCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDateTimeCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC], CDateTimeCtrl class
 ms.assetid: cb2a8720-43f1-4c33-a3a4-def9a1622e00
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用 CDateTimeCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cb830cfa065546d07e49484b80dce084274d213c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-日期時間選擇器控制項 \([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)\) 會實作輸入或選取特定日期直覺式和可辨識的方法。  控制項的主要介面類似於功能下拉式方塊。  然而，在中，如果使用者展開控制項，月曆控制項出現 \(預設\)，可讓使用者指定特定日期。  當日期時，月曆控制項自動消失。  
+---
+# <a name="using-cdatetimectrl"></a>Using CDateTimeCtrl
+The date and time picker control ([CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)) implements an intuitive and recognizable method of entering or selecting a specific date. The main interface of the control is similar in functionality to a combo box. However, if the user expands the control, a month calendar control appears (by default), allowing the user to specify a particular date. When a date is chosen, the month calendar control automatically disappears.  
   
 > [!NOTE]
->  若要使用 **CDateTimePicker** 和 `CMonthCalCtrl` 在您的專案中，您可以在專案 STDAFX.H 檔案類別必須包含 AFXDTCTL.H，通常是。  
+>  To use both the **CDateTimePicker** and `CMonthCalCtrl` classes in your project, you must include AFXDTCTL.H, usually in your project's STDAFX.H file.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [建立日期時間選擇器控制項](../mfc/creating-the-date-and-time-picker-control.md)  
+-   [Creating the Date and Time Picker Control](../mfc/creating-the-date-and-time-picker-control.md)  
   
--   [日期時間選擇器控制項範例](../mfc/date-and-time-picker-control-examples.md)  
+-   [Date and Time Picker Control Examples](../mfc/date-and-time-picker-control-examples.md)  
   
--   [存取內嵌月份行事曆控制項](../mfc/accessing-the-embedded-month-calendar-control.md)  
+-   [Accessing the Embedded Month Calendar Control](../mfc/accessing-the-embedded-month-calendar-control.md)  
   
--   [使用在日期時間選擇器控制項的自訂格式字串](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)  
+-   [Using Custom Format Strings in a Date and Time Picker Control](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)  
   
--   [使用日期時間選擇器控制項的回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)  
+-   [Using Callback Fields in a Date and Time Picker Control](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)  
   
--   [處理在日期時間選擇器控制項傳回的通知訊息](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
+-   [Processing Notification Messages in Date and Time Picker Controls](../mfc/processing-notification-messages-in-date-and-time-picker-controls.md)  
   
-## 請參閱  
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,41 +1,58 @@
 ---
-title: "使用 MFC 原始程式檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "註解, MFC"
-  - "MFC 原始程式檔"
-  - "MFC, 原始程式檔"
-  - "Private 成員存取"
-  - "Protected 成員存取"
-  - "Public 成員"
-  - "原始程式檔"
-  - "原始程式檔, MFC"
+title: Using the MFC Source Files | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- public members
+- source files
+- MFC, source files
+- MFC source files
+- comments, MFC
+- private member access
+- protected member access
+- source files, MFC
 ms.assetid: 3230e8fb-3b69-4ddf-9538-365ac7ea5e72
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 使用 MFC 原始程式檔
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d9bca5c1f58a4028b8395c19d465825eb353701
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-Microsoft Foundation Class \(MFC\) 程式庫提供完整的原始程式碼。  標頭檔 \(.h\) 在\\ atlmfc \\ Include 目錄;實作檔 \(.cpp\) 在\\ atlmfc \\ src \\ mfc 目錄。  
+---
+# <a name="using-the-mfc-source-files"></a>Using the MFC Source Files
+The Microsoft Foundation Class (MFC) Library supplies full source code. Header files (.h) are in the \atlmfc\include directory; implementation files (.cpp) are in the \atlmfc\src\mfc directory.  
   
- 本文章系列說明 MFC 使用註解每個類別的各部分的慣例，以及這些註解，方法，以及您在每一個區段應該預期尋找。  Visual C\+\+ 精靈會為您建立的類別使用類似的慣例，因此，您可能會發現這些慣例有助於您的程式碼。  
+ This family of articles explains the conventions that MFC uses to comment the various parts of each class, what these comments mean, and what you should expect to find in each section. The Visual C++ wizards use similar conventions for the classes that they create for you, and you will probably find these conventions useful for your own code.  
   
- 您可能已經熟悉 **public**、 `protected`和 `private` C\+\+ 關鍵字。  當查看 MFC 標頭檔時，您會發現每個類別可能會有的每一個。  例如，公用成員變數和函式可能會在多個 **public** 關鍵字底下。  這是因為， MFC 分隔根據其使用和函式的成員變數，而不是允許的存取類型。  MFC 使用 `private` 謹慎;即使項目考量的實作詳細資料通常是受保護的，而許多時間是公用的。  雖然對實作詳細資料的存取是鼓勵， MFC 離開這個決定給您。  
+ You might be familiar with the **public**, `protected`, and `private` C++ keywords. When looking at the MFC header files, you will find that each class may have several of each of these. For example, public member variables and functions might be under more than one **public** keyword. This is because MFC separates member variables and functions based on their use, not by the type of access allowed. MFC uses `private` sparingly; even items considered implementation details are generally protected and many times are public. Although access to the implementation details is discouraged, MFC leaves the decision to you.  
   
- 在 MFC 原始程式檔和 MFC 應用程式精靈建立的檔案，您會發現這類的註解在類別宣告內 \(通常會依此順序\):  
+ In both the MFC source files and the files that the MFC Application Wizard creates, you will find comments like these within class declarations (usually in this order):  
   
  `// Constructors`  
   
@@ -47,19 +64,21 @@ Microsoft Foundation Class \(MFC\) 程式庫提供完整的原始程式碼。  �
   
  `// Implementation`  
   
- 在文件包括這系列所包含的主題:  
+ Topics covered in this family of articles include:  
   
--   [註解的範例](../mfc/an-example-of-the-comments.md)  
+-   [An example of the comments](../mfc/an-example-of-the-comments.md)  
   
--   [\/\/ 實作註解](../mfc/decrement-implementation-comment.md)  
+-   [The // Implementation comment](../mfc/decrement-implementation-comment.md)  
   
--   [\/\/ 建構函式註解](../mfc/decrement-constructors-comment.md)  
+-   [The // Constructors comment](../mfc/decrement-constructors-comment.md)  
   
--   [取消註解屬性。](../mfc/decrement-attributes-comment.md)  
+-   [The // Attributes comment](../mfc/decrement-attributes-comment.md)  
   
--   [\/\/作業註解](../mfc/decrement-operations-comment.md)  
+-   [The // Operations comment](../mfc/decrement-operations-comment.md)  
   
--   [\/\/ 可覆寫函式註解](../mfc/decrement-overridables-comment.md)  
+-   [The // Overridables comment](../mfc/decrement-overridables-comment.md)  
   
-## 請參閱  
- [一般 MFC 主題](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

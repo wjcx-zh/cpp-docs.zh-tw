@@ -1,34 +1,53 @@
 ---
-title: "程式執行期間管理功能表 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMenu 類別, 執行期間管理功能表"
-  - "執行期間的功能表"
-  - "執行期間的功能表, 刪除"
-  - "功能表, 執行期間編輯"
-  - "功能表, 執行期間管理"
+title: Manipulating Menus During Program Execution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- menus [MFC], editing during execution
+- menus during execution [MFC], deleting
+- CMenu class [MFC], manipulating menus during execution
+- menus [MFC], manipulating during execution
+- menus during execution
 ms.assetid: 722c7c00-4be2-4967-877d-f96aaa604396
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 程式執行期間管理功能表
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aef857f9d6d59626d5fa152ef311adbac61050ef
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-使用 `CMenu` 類別以即時操作功能表和功能表項目。  `CMenu` 會封裝 Windows `HMENU` 控制代碼並把功能表提供工作的成員函式。  
+---
+# <a name="manipulating-menus-during-program-execution"></a>Manipulating Menus During Program Execution
+Use class `CMenu` to manipulate menus and menu items on the fly. `CMenu` encapsulates a Windows `HMENU` handle and supplies member functions for working with menus.  
   
- 參閱 [CMenu](../mfc/reference/cmenu-class.md) 類別概觀的詳細資料。  
+ See the overview for class [CMenu](../mfc/reference/cmenu-class.md) for details.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Menus](../mfc/menus-mfc.md)
+
+

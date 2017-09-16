@@ -1,107 +1,127 @@
 ---
-title: "選擇集合類別的建議 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "集合類別的類型安全 [C++]"
-  - "集合類別, 序列化"
-  - "集合類別, 速度"
-  - "集合類別, 型別安全"
-  - "集合類別, 選擇"
-  - "集合類別, 功能"
-  - "圖形, 集合"
-  - "集合類別, 範本型"
-  - "MFC 集合類別, 特性"
-  - "集合類別, 關於集合類別"
-  - "序列化 [C++], 集合類別"
-  - "集合類別, 允許重複"
-  - "集合類別, 圖形"
+title: Recommendations for Choosing a Collection Class | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- type safety of collection classes [MFC]
+- collection classes [MFC], serialization
+- collection classes [MFC], speed
+- collection classes [MFC], type safety
+- collection classes [MFC], choosing
+- collection classes [MFC], functionality
+- shapes, collection
+- collection classes [MFC], template-based
+- MFC collection classes [MFC], characteristics
+- collection classes [MFC], about collection classes [MFC]
+- serialization [MFC], collection classes
+- collection classes [MFC], duplicates allowed
+- collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 選擇集合類別的建議
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 293503782cc27ef44654cf7931fcb8235ac66eee
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文所包含的詳細資訊，旨在協助您選擇特定應用程式所需的集合類別。  
+---
+# <a name="recommendations-for-choosing-a-collection-class"></a>Recommendations for Choosing a Collection Class
+This article contains detailed information designed to help you choose a collection class for your particular application needs.  
   
- 集合類別的選擇取決於許多因素，包括︰  
+ Your choice of a collection class depends on a number of factors, including:  
   
--   類別圖形的功能︰排序、編製索引和效能，如本主題稍後的[集合圖形功能](#_core_collection_shape_features)表格所示  
+-   The features of the class shape: order, indexing, and performance, as shown in the [Collection Shape Features](#_core_collection_shape_features) table later in this topic  
   
--   類別會使用 C\+\+ 樣板與否  
+-   Whether the class uses C++ templates  
   
--   儲存在集合中的項目是否可序列化  
+-   Whether the elements stored in the collection can be serialized  
   
--   儲存在集合中的項目是否可傾印以進行診斷  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   集合是否為安全類型  
+-   Whether the collection is type-safe  
   
- 以下的[集合圖形功能](#_core_collection_shape_features)表格摘要說明可用集合圖形的特性。  
+ The following table, [Collection Shape Features](#_core_collection_shape_features), summarizes the characteristics of the available collection shapes.  
   
--   欄 2 和 3 描述每個圖形的排序和存取特性。 在下表中，「已排序」一詞是指項目的插入和刪除順序決定其在集合中的順序；而不是指項目依其內容排序。 「已編製索引」一詞是指集合中的項目可由整數索引擷取，就像是一般陣列中的項目。  
+-   Columns 2 and 3 describe each shape's ordering and access characteristics. In the table, the term "ordered" means that the order in which items are inserted and deleted determines their order in the collection; it does not mean the items are sorted on their contents. The term "indexed" means that the items in the collection can be retrieved by an integer index, much like items in a typical array.  
   
--   欄 4 和 5 描述每個圖形的效能。 在需要多次插入集合的應用程式中，插入速度可能特別重要；至於其他應用程式，查閱速度可能比較重要。  
+-   Columns 4 and 5 describe each shape's performance. In applications that require many insertions into the collection, insertion speed might be especially important; for other applications, lookup speed may be more important.  
   
--   欄 6 描述每個圖形是否允許重複的項目。  
+-   Column 6 describes whether each shape allows duplicate elements.  
   
-### 集合圖形功能  
+### <a name="_core_collection_shape_features"></a>  Collection Shape Features  
   
-|圖形|已排序？|已編製索引？|插入項目|搜尋指定的項目|重複的項目？|  
-|--------|----------|------------|----------|-------------|------------|  
-|清單|是|否|快速|緩慢|是|  
-|陣列|是|依 int|緩慢|緩慢|是|  
-|對應|否|依索引鍵|快速|快速|否 \(索引鍵\) 是 \(值\)|  
+|Shape|Ordered|Indexed|Insert an element|Search for specified element|Duplicate elements|  
+|-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|  
+|List|Yes|No|Fast|Slow|Yes|  
+|Array|Yes|By int|Slow|Slow|Yes|  
+|Map|No|By key|Fast|Fast|No (keys) Yes (values)|  
   
- 以下的 [MFC 集合類別的特性](#_core_characteristics_of_mfc_collection_classes)表格摘要說明特定 MFC 集合類別的其他重要特性，可作為選擇時的指南。 您的選擇可能取決於下列因素：類別是否依據 C\+\+ 範本、其元素是否可透過 MFC 的文件[序列化](../mfc/serialization-in-mfc.md)機制進行序列化、其元素是否可透過 MFC 的診斷傾印機制進行傾印，或者類別是否為型別安全 \(換句話說，您是否可以保證元素的類型儲存在以類別為基礎的集合中，並從中擷取\)。  
+ The following table, [Characteristics of MFC Collection Classes](#_core_characteristics_of_mfc_collection_classes), summarizes other important characteristics of specific MFC collection classes as a guide to selection. Your choice may depend on whether the class is based on C++ templates, whether its elements can be serialized via MFC's document [serialization](../mfc/serialization-in-mfc.md) mechanism, whether its elements can be dumped via MFC's diagnostic dumping mechanism, or whether the class is type-safe — that is, whether you can guarantee the type of elements stored in and retrieved from a collection based on the class.  
   
-### MFC 集合類別的特性  
+### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Characteristics of MFC Collection Classes  
   
-|類別|使用 C\+\+<br /><br /> 範本|可以是<br /><br /> 已序列化|可以是<br /><br /> 已傾印|為<br /><br /> Type\-Safe \- 類型安全|  
-|--------|---------------------|------------------|-----------------|------------------------------|  
-|`CArray`|是|是 1|是 1|否|  
-|`CByteArray`|否|是|是|是 3|  
-|`CDWordArray`|否|是|是|是 3|  
-|`CList`|是|是 1|是 1|否|  
-|`CMap`|是|是 1|是 1|否|  
-|`CMapPtrToPtr`|否|否|是|否|  
-|`CMapPtrToWord`|否|否|是|否|  
-|`CMapStringToOb`|否|是|是|否|  
-|`CMapStringToPtr`|否|否|是|否|  
-|`CMapStringToString`|否|是|是|是 3|  
-|`CMapWordToOb`|否|是|是|否|  
-|`CMapWordToPtr`|否|否|是|否|  
-|`CObArray`|否|是|是|否|  
-|`CObList`|否|是|是|否|  
-|`CPtrArray`|否|否|是|否|  
-|`CPtrList`|否|否|是|否|  
-|`CStringArray`|否|是|是|是 3|  
-|`CStringList`|否|是|是|是 3|  
-|`CTypedPtrArray`|是|不一定 2|是|是|  
-|`CTypedPtrList`|是|不一定 2|是|是|  
-|`CTypedPtrMap`|是|不一定 2|是|是|  
-|`CUIntArray`|否|否|是|是 3|  
-|`CWordArray`|否|是|是|是 3|  
+|Class|Uses C++<br /><br /> templates|Can be<br /><br /> serialized|Can be<br /><br /> dumped|Is<br /><br /> type-safe|  
+|-----------|------------------------------|---------------------------|-----------------------|-----------------------|  
+|`CArray`|Yes|Yes 1|Yes 1|No|  
+|`CByteArray`|No|Yes|Yes|Yes 3|  
+|`CDWordArray`|No|Yes|Yes|Yes 3|  
+|`CList`|Yes|Yes 1|Yes 1|No|  
+|`CMap`|Yes|Yes 1|Yes 1|No|  
+|`CMapPtrToPtr`|No|No|Yes|No|  
+|`CMapPtrToWord`|No|No|Yes|No|  
+|`CMapStringToOb`|No|Yes|Yes|No|  
+|`CMapStringToPtr`|No|No|Yes|No|  
+|`CMapStringToString`|No|Yes|Yes|Yes 3|  
+|`CMapWordToOb`|No|Yes|Yes|No|  
+|`CMapWordToPtr`|No|No|Yes|No|  
+|`CObArray`|No|Yes|Yes|No|  
+|`CObList`|No|Yes|Yes|No|  
+|`CPtrArray`|No|No|Yes|No|  
+|`CPtrList`|No|No|Yes|No|  
+|`CStringArray`|No|Yes|Yes|Yes 3|  
+|`CStringList`|No|Yes|Yes|Yes 3|  
+|`CTypedPtrArray`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrList`|Yes|Depends 2|Yes|Yes|  
+|`CTypedPtrMap`|Yes|Depends 2|Yes|Yes|  
+|`CUIntArray`|No|No|Yes|Yes 3|  
+|`CWordArray`|No|Yes|Yes|Yes 3|  
   
- 1.若要序列化，您必須明確呼叫集合物件的 `Serialize` 函式；若要傾印，您必須明確呼叫其 `Dump` 函式。 您不能使用 `ar << collObj` 格式進行序列化，也不能使用 `dmp``<< collObj` 格式進行傾印。  
+ 1. To serialize, you must explicitly call the collection object's `Serialize` function; to dump, you must explicitly call its `Dump` function. You cannot use the form `ar << collObj` to serialize or the form `dmp` `<< collObj` to dump.  
   
- 2.能否序列化取決於基礎集合類型。 例如，如果具類型的指標陣列是以 `CObArray` 為基礎，則可以序列化；如果是以 `CPtrArray` 為基礎，則無法序列化。 一般而言，您無法序列化 "Ptr" 類別。  
+ 2. Serializability depends on the underlying collection type. For example, if a typed pointer array is based on `CObArray`, it is serializable; if based on `CPtrArray`, it is not serializable. In general, the "Ptr" classes cannot be serialized.  
   
- 3.如果在此欄中標示為 \[是\]，則非範本集合類別為型別安全 \(但前提是您必須如預期般使用它\)。 例如，如果您將位元組儲存在 `CByteArray` 中，則陣列為型別安全。 但是，如果您用來儲存字元，就不一定是型別安全。  
+ 3. If marked Yes in this column, a nontemplate collection class is type-safe provided you use it as intended. For example, if you store bytes in a `CByteArray`, the array is type-safe. But if you use it to store characters, its type safety is less certain.  
   
-## 請參閱  
- [集合](../mfc/collections.md)   
- [樣板架構類別](../mfc/template-based-classes.md)   
- [如何：建立類型安全集合](../mfc/how-to-make-a-type-safe-collection.md)   
- [存取集合的所有成員](../mfc/accessing-all-members-of-a-collection.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)   
+ [Template-Based Classes](../mfc/template-based-classes.md)   
+ [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)   
+ [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)
+
+

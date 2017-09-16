@@ -1,124 +1,141 @@
 ---
-title: "如何：例外狀況安全的設計 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Design for Exception Safety | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 如何：例外狀況安全的設計
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 22a642cdb8d789dda99d127dda7905dc08b33a9b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-其中一個例外狀況機制的優點是，執行與例外狀況的相關資料，直接從擲回例外狀況的陳述式跳躍到處理它的第一個 catch 陳述式。  處理常式可能是在呼叫堆疊的任意的層級。  在 try 陳述式和 throw 陳述式之間呼叫的函式不必知道任何關於擲回例外狀況的事情。然而，它們必須被設計，以便超出範圍之「意外」例外狀況隨時可能會從下面傳播，而這麼做，不用留下部分建立的物件、遺漏在無法使用的狀態的記憶體或資料結構。  
+---
+# <a name="how-to-design-for-exception-safety"></a>How to: Design for Exception Safety
+One of the advantages of the exception mechanism is that execution, together with data about the exception, jumps directly from the statement that throws the exception to the first catch statement that handles it. The handler may be any number of levels up in the call stack. Functions that are called between the try statement and the throw statement are not required to know anything about the exception that is thrown.  However, they have to be designed so that they can go out of scope "unexpectedly" at any point where an exception might propagate up from below, and do so without leaving behind partially created objects, leaked memory, or data structures that are in unusable states.  
   
-## 基本技術  
- 一項強大例外狀況處理原則需要仔細考量，且應該是設計程序的一部分。  一般而言，大部分例外狀況會被偵測並擲回到軟體模組的較低層，不過，這些圖層通常沒有足夠的內容去處理錯誤或公開訊息給使用者。  在中介層，函式可以攔截並重新擲回例外狀況，當必須檢查例外狀況物件時，或有其他有用的資訊提供最上層在最後攔截例外狀況。  只要可以從它完全復原，函式應該攔截，且「忍受」例外狀況。  在大部分情況下，在中介層的正確行為是讓呼叫堆疊中的例外狀況傳播的。  在最高的圖層，如果保留在程式裡的例外狀況無法保證正確性，讓未處理的例外狀況結束程式可能是較適當的。  
+## <a name="basic-techniques"></a>Basic Techniques  
+ A robust exception-handling policy requires careful thought and should be part of the design process. In general, most exceptions are detected and thrown at the lower layers of a software module, but typically these layers do not have enough context to handle the error or expose a message to end users. In the middle layers, functions can catch and rethrow an exception when they have to inspect the exception object, or they have additional useful information to provide for the upper layer that ultimately catches the exception. A function should catch and "swallow" an exception only if it is able to completely recover from it. In many cases, the correct behavior in the middle layers is to let an exception propagate up the call stack. Even at the highest layer, it might be appropriate to let an unhandled exception terminate a program if the exception leaves the program in a state in which its correctness cannot be guaranteed.  
   
- 不論函式如何處理例外狀況，為了協助確保「例外狀況的安全」，必須根據下列基本規則設計它。  
+ No matter how a function handles an exception, to help guarantee that it is "exception-safe," it must be designed according to the following basic rules.  
   
-### 保持資源類別簡單  
- 當您封裝在類別中手動資源管理，請使用沒在處理每個資源的類別；否則，您可能會造成遺漏。  使用 [智慧型指標](../cpp/smart-pointers-modern-cpp.md) ，可能的話，如下列範例所示。  當使用 `shared_ptr` 時，這個範例會刻意人工的或簡單的反白來顯示差異。  
+### <a name="keep-resource-classes-simple"></a>Keep Resource Classes Simple  
+ When you encapsulate manual resource management in classes, use a class that does nothing else to manage each resource; otherwise, you might introduce leaks. Use [smart pointers](../cpp/smart-pointers-modern-cpp.md) when possible, as shown in the following example. This example is intentionally artificial and simplistic to highlight the differences when `shared_ptr` is used.  
   
 ```cpp  
-// old-style new/delete version  
-class NDResourceClass {  
+// old-style new/delete version  
+class NDResourceClass {  
 private:  
-    int*   m_p;  
-    float* m_q;  
+    int*   m_p;  
+    float* m_q;  
 public:  
-    NDResourceClass() : m_p(0), m_q(0) {  
-        m_p = new int;  
-        m_q = new float;  
-    }  
+    NDResourceClass() : m_p(0), m_q(0) {  
+        m_p = new int;  
+        m_q = new float;  
+    }  
   
-    ~NDResourceClass() {  
-        delete m_p;  
-        delete m_q;  
-    }  
-    // Potential leak! When a constructor emits an exception,   
-    // the destructor will not be invoked.     
+    ~NDResourceClass() {  
+        delete m_p;  
+        delete m_q;  
+    }  
+    // Potential leak! When a constructor emits an exception,   
+    // the destructor will not be invoked.     
 };  
   
-// shared_ptr version  
-#include <memory>  
+// shared_ptr version  
+#include <memory>  
   
-using namespace std;  
+using namespace std;  
   
-class SPResourceClass {  
+class SPResourceClass {  
 private:  
-    shared_ptr<int> m_p;  
-    shared_ptr<float> m_q;  
+    shared_ptr<int> m_p;  
+    shared_ptr<float> m_q;  
 public:  
-    SPResourceClass() : m_p(new int), m_q(new float) { }  
-    // Implicitly defined dtor is OK for these members,   
-    // shared_ptr will clean up and avoid leaks regardless.  
+    SPResourceClass() : m_p(new int), m_q(new float) { }  
+    // Implicitly defined dtor is OK for these members,   
+    // shared_ptr will clean up and avoid leaks regardless.  
 };  
   
-// A more powerful case for shared_ptr  
+// A more powerful case for shared_ptr  
   
-class Shape {  
-    // ...  
+class Shape {  
+    // ...  
 };  
   
-class Circle : public Shape {  
-    // ...  
+class Circle : public Shape {  
+    // ...  
 };  
   
-class Triangle : public Shape {  
-    // ...  
+class Triangle : public Shape {  
+    // ...  
 };  
   
-class SPShapeResourceClass {  
+class SPShapeResourceClass {  
 private:  
-    shared_ptr<Shape> m_p;  
-    shared_ptr<Shape> m_q;  
+    shared_ptr<Shape> m_p;  
+    shared_ptr<Shape> m_q;  
 public:  
-    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
+    SPShapeResourceClass() : m_p(new Circle), m_q(new Triangle) { }  
 };  
   
 ```  
   
-### 使用 RAII 慣用語處置資源。  
- 若要例外狀況安全，函式必須確定物件是使用 `malloc` 來配置或終結 `new` 和所有資源，像是檔案控制之關閉或釋放，即使擲回例外狀況。  *Resource Acquisition Is Initialization* \(RAII\) 慣用語有這類資源至壽命自動變數的管理。  透過一般傳回或發生例外狀況所造成之函式超出範圍時，所有完整建構之自動變數的解構函式會被叫用。  RAII 包裝函式物件 \(例如智慧型指標\) 呼叫其解構函式之適當的刪除或終止函式。  用無例外狀況之虞的程式碼，直接將每個資源擁有權轉到同樣的 RAII 物件是最重要的。  請注意 `vector`、 `string`、 `make_shared`、 `fstream`和類似的類別處理資源之獲取。不過，因為資源擷取由使用者執行而不是物件， `unique_ptr` 與傳統的 `shared_ptr` 建構是較特別的；因此，它們因為 *資源版本是解構函式*來計數，但做為 RAII 是有疑問的。  
+### <a name="use-the-raii-idiom-to-manage-resources"></a>Use the RAII Idiom to Manage Resources  
+ To be exception-safe, a function must ensure that objects that it has allocated by using `malloc` or `new` are destroyed, and all resources such as file handles are closed or released even if an exception is thrown. The *Resource Acquisition Is Initialization* (RAII) idiom ties management of such resources to the lifespan of automatic variables. When a function goes out of scope, either by returning normally or because of an exception, the destructors for all fully-constructed automatic variables are invoked. An RAII wrapper object such as a smart pointer calls the appropriate delete or close function in its destructor. In exception-safe code, it is critically important to pass ownership of each resource immediately to some kind of RAII object. Note that the `vector`, `string`, `make_shared`, `fstream`, and similar classes handle acquisition of the resource for you.  However, `unique_ptr` and traditional `shared_ptr` constructions are special because resource acquisition is performed by the user instead of the object; therefore, they count as *Resource Release Is Destruction* but are questionable as RAII.  
   
-## 三個例外狀況之保證  
- 通常，例外狀況安全是根據函式可能提供之三個例外狀況保證來討論: *無期限保證*、 *強的保證*和 *基本的保證*。  
+## <a name="the-three-exception-guarantees"></a>The Three Exception Guarantees  
+ Typically, exception safety is discussed in terms of the three exception guarantees that a function can provide: the *no-fail guarantee*, the *strong guarantee*, and the *basic guarantee*.  
   
-### 無期限保證  
- 無期限 \(或，而「非擲回」\) 保證是函式可能提供之最強的保證。  它說明了函式不會擲回例外狀況也不會允許傳播。  不過，您無法可靠地提供這類保證，除非 \(a\) 您知道所有函式，且函式呼叫也是無期限或、 \(b\) 您知道在到達這個函式之前擲回的所有例外狀況、 \(c\) 您會攔截並正確處理可能會到達這個函式的所有例外狀況。  
+### <a name="no-fail-guarantee"></a>No-fail Guarantee  
+ The no-fail (or, "no-throw") guarantee is the strongest guarantee that a function can provide. It states that the function will not throw an exception or allow one to propagate. However, you cannot reliably provide such a guarantee unless (a) you know that all the functions that this function calls are also no-fail, or (b) you know that any exceptions that are thrown are caught before they reach this function, or (c) you know how to catch and correctly handle all exceptions that might reach this function.  
   
- 強的保證與基礎確保證都是依賴在解構函式是無失效的假設。  所有解構函式不會擲回的標準程式庫保證的容器和型別。  也有相反的需求：標準程式庫會要求使用者定義型別，例如樣板引數，必須有非擲回的解構函式。  
+ Both the strong guarantee and the basic guarantee rely on the assumption that the destructors are no-fail. All containers and types in the Standard Library guarantee that their destructors do not throw. There is also a converse requirement: The Standard Library requires that user-defined types that are given to it—for example, as template arguments—must have non-throwing destructors.  
   
-### 強的保證  
- 強的保證說明，如果因為發生例外狀況而函式超過範圍，則不會遺漏記憶體，且程式狀態不會修改。  提供強的保證的函式基本上是有認可或復原語意的交易：不是完全成功就是沒有作用。  
+### <a name="strong-guarantee"></a>Strong Guarantee  
+ The strong guarantee states that if a function goes out of scope because of an exception, it will not leak memory and program state will not be modified. A function that provides a strong guarantee is essentially a transaction that has commit or rollback semantics: either it completely succeeds or it has no effect.  
   
-### 基礎保證  
- 基本保證是三種保證裡面最弱的。  不過，當強的保證在記憶體用量或在效能上太昂貴時，它可能是最佳選擇。  基本的保證，說明如果發生例外狀況，記憶體不會遺漏，而且物件仍處於可用的狀態，即使可能已經修改了資料。  
+### <a name="basic-guarantee"></a>Basic Guarantee  
+ The basic guarantee is the weakest of the three. However, it might be the best choice when a strong guarantee is too expensive in memory consumption or in performance. The basic guarantee states that if an exception occurs, no memory is leaked and the object is still in a usable state even though the data might have been modified.  
   
-## 例外狀況安全類別  
- 此類別可協助確保它的例外狀況安全，即使它是不安全的函式使用，因為它防止部分建構或部分被終結。  如果類別建構函式在完成之前結束，則物件會建立，而且其解構函式不會呼叫。  雖然在例外狀況之前初始化的自動變數都會叫用解構函式，但不為智慧型指標或類似的自動變數處理的動態方式配置記憶體或資源將會遺漏。  
+## <a name="exception-safe-classes"></a>Exception-Safe Classes  
+ A class can help ensure its own exception safety, even when it is consumed by unsafe functions, by preventing itself from being partially constructed or partially destroyed. If a class constructor exits before completion, then the object is never created and its destructor will never be called. Although automatic variables that are initialized prior to the exception will have their destructors invoked, dynamically allocated memory or resources that are not managed by a smart pointer or similar automatic variable will be leaked.  
   
- 內建型別都會失效，因此標準程式庫型別在最小的狀況下支援這個基礎保證。  遵循一定是例外狀況安全的使用者定義型別的方針：  
+ The built-in types are all no-fail, and the Standard Library types support the basic guarantee at a minimum. Follow these guidelines for any user-defined type that must be exception-safe:  
   
--   使用智慧型指標或其他 RAII 型別的包裝函式來管理所有資源。  避免在類別解構函式的資源管理功能，因為如果建構函式擲回例外狀況的話，解構函式不會叫用。  不過，如果類別是控制資源的專屬資源管理員，則使用解構函式管理資源是可接受的。  
+-   Use smart pointers or other RAII-type wrappers to manage all resources. Avoid resource management functionality in your class destructor, because the destructor will not be invoked if the constructor throws an exception. However, if the class is a dedicated resource manager that controls just one resource, then it's acceptable to use the destructor to manage resources.  
   
--   要了解基底類別建構函式所擲回的例外狀況在衍生類別建構函式中不可以被忍受。  如果您要轉譯和重新擲回在衍生的類別建構函式的基底類別例外狀況，請使用函式 try 區塊。  如需詳細資訊，請參閱[\(NOTINBUILD\)How to: Handle Exceptions in Base Class Constructors \(C\+\+\)](http://msdn.microsoft.com/zh-tw/53bb822e-785b-4581-9517-210dd05060a3)。  
+-   Understand that an exception thrown in a base class constructor cannot be swallowed in a derived class constructor. If you want to translate and re-throw the base class exception in a derived constructor, use a function try block.   
   
--   考慮是否儲存所有類別狀態在智慧型指標包裝的資料成員，特別是如果類別有「允許初始化失敗」的概念。雖然 C\+\+ 允許未初始化的資料成員，但不支援未初始化或部分初始化的類別執行個體。  建構函式必須不是成功就是失敗；如果建構函式沒有執行到完成，物件則不會建立。  
+-   Consider whether to store all class state in a data member that is wrapped in a smart pointer, especially if a class has a concept of "initialization that is permitted to fail." Although C++ allows for uninitialized data members, it does not support uninitialized or partially initialized class instances. A constructor must either succeed or fail; no object is created if the constructor does not run to completion.  
   
--   不允許任何例外狀況從解構函式逸出。  C\+\+ 基礎公理說明解構函式不應該允許例外狀況散佈到呼叫堆疊。  如果解構函式必須執行可能會擲回例外狀況的作業，它必須在 try catch 區塊動作且忍受例外狀況。  標準程式庫提供所有解構函式所定義的這個保證。  
+-   Do not allow any exceptions to escape from a destructor. A basic axiom of C++ is that destructors should never allow an exception to propagate up the call stack. If a destructor must perform a potentially exception-throwing operation, it must do so in a try catch block and swallow the exception. The standard library provides this guarantee on all destructors it defines.  
   
-## 請參閱  
- [錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)   
- [如何：例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+## <a name="see-also"></a>See Also  
+ [Errors and Exception Handling](../cpp/errors-and-exception-handling-modern-cpp.md)   
+ [How to: Interface Between Exceptional and Non-Exceptional Code](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

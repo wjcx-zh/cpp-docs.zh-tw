@@ -1,74 +1,93 @@
 ---
-title: "存取執行階段類別資訊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], 執行階段類別資訊"
-  - "CObject 類別, 存取執行階段類別資訊"
-  - "CObject 類別, 與 RTTI"
-  - "CObject 類別, 使用 IsKindOf 方法"
-  - "CObject 類別, 使用 RUNTIME_CLASS 巨集"
-  - "IsKindOf 方法"
-  - "RTTI 編譯器選項"
-  - "執行階段"
-  - "執行階段, 類別資訊"
-  - "執行階段類別"
-  - "執行階段類別, 存取資訊"
-  - "RUNTIME_CLASS 巨集"
-  - "RUNTIME_CLASS 巨集, 使用"
+title: Accessing Run-Time Class Information | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CObject class [MFC], and RTTI
+- CObject class [MFC], using IsKindOf method [MFC]
+- run time [MFC], class information
+- RUNTIME_CLASS macro [MFC]
+- CObject class [MFC], using RUNTIME_CLASS macro [MFC]
+- RTTI compiler option [MFC]
+- CObject class [MFC], accessing run-time class information
+- run time [MFC]
+- IsKindOf method method [MFC]
+- run-time class [MFC], accessing information
+- classes [MFC], run-time class information
+- run-time class [MFC]
+- RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 存取執行階段類別資訊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc720b2d47767acc4ef8ffcb91d2ef214bfe609a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明如何在執行階段存取物件之類別的資訊。  
+---
+# <a name="accessing-run-time-class-information"></a>Accessing Run-Time Class Information
+This article explains how to access information about the class of an object at run time.  
   
 > [!NOTE]
->  MFC 在 Visual C\+\+ 4.0 不使用 [執行階段型別資訊](../cpp/run-time-type-information.md) \(RTTI\) 支援。  
+>  MFC does not use the [Run-Time Type Information](../cpp/run-time-type-information.md) (RTTI) support introduced in Visual C++ 4.0.  
   
- 如果您從 [CObject](../mfc/reference/cobject-class.md) 衍生您的類別，並使用 從 [CObject衍生類別](../mfc/deriving-a-class-from-cobject.md) 一文所述的 **DECLARE**\_**DYNAMIC** 和 `IMPLEMENT_DYNAMIC`、`DECLARE_DYNCREATE` 和 `IMPLEMENT_DYNCREATE`，或 `DECLARE_SERIAL` 和 `IMPLEMENT_SERIAL` 巨集，`CObject` 類別將有能力可以在執行階段判斷物件的實際類別。  
+ If you have derived your class from [CObject](../mfc/reference/cobject-class.md) and used the **DECLARE**_**DYNAMIC** and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros explained in the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md), the `CObject` class has the ability to determine the exact class of an object at run time.  
   
- 當函式引數的額外型別檢查是必要時，以及當您必須根據物件的類別撰寫特殊功能的程式碼時，這項功能十分實用。  不過，通常不建議使用這種作法，因為這會重複虛擬函式的功能。  
+ This ability is most useful when extra type checking of function arguments is needed and when you must write special-purpose code based on the class of an object. However, this practice is not usually recommended because it duplicates the functionality of virtual functions.  
   
- `CObject` 成員函式 `IsKindOf` 可以用來判斷特定物件是否屬於指定的類別，或是否衍生自特定類別。  對 `IsKindOf` 的引數是 `CRuntimeClass` 物件，您可以以類別名稱使用 `RUNTIME_CLASS` 巨集來取得。  
+ The `CObject` member function `IsKindOf` can be used to determine if a particular object belongs to a specified class or if it is derived from a specific class. The argument to `IsKindOf` is a `CRuntimeClass` object, which you can get using the `RUNTIME_CLASS` macro with the name of the class.  
   
-### 若要使用 RUNTIME\_CLASS 巨集  
+### <a name="to-use-the-runtimeclass-macro"></a>To use the RUNTIME_CLASS macro  
   
-1.  與類別名稱使用 `RUNTIME_CLASS` ，如下所示為 `CObject` 類別：  
+1.  Use `RUNTIME_CLASS` with the name of the class, as shown here for the class `CObject`:  
   
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/CPP/accessing-run-time-class-information_1.cpp)]  
+     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]  
   
- 您很少需要直接存取執行階段類別的物件。  一般用法是傳遞執行階段類別物件至 `IsKindOf` 函式，如下面的程序所示。  `IsKindOf` 函式會測試可視物件是否屬於特定類別。  
+ You will rarely need to access the run-time class object directly. A more common use is to pass the run-time class object to the `IsKindOf` function, as shown in the next procedure. The `IsKindOf` function tests an object to see if it belongs to a particular class.  
   
-#### 若要使用 IsKindOf 函式  
+#### <a name="to-use-the-iskindof-function"></a>To use the IsKindOf function  
   
-1.  請確定類別擁有執行階段類別支援。  也就是，類別必須是直接或間接地衍生自 `CObject` 並且使用 [從 CObject 衍生類別](../mfc/deriving-a-class-from-cobject.md) 一文所述的 **DECLARE**\_**DYNAMIC** 和 `IMPLEMENT_DYNAMIC`， `DECLARE_DYNCREATE` 和 `IMPLEMENT_DYNCREATE`，或 `DECLARE_SERIAL` 和 `IMPLEMENT_SERIAL` 巨集。  
+1.  Make sure the class has run-time class support. That is, the class must have been derived directly or indirectly from `CObject` and used the **DECLARE**_**DYNAMIC** and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros explained in the article [Deriving a Class from CObject](../mfc/deriving-a-class-from-cobject.md).  
   
-2.  呼叫該類別之物件的 `IsKindOf` 成員函式，使用 `RUNTIME_CLASS` 巨集產生 `CRuntimeClass` 引數，如下所示：  
+2.  Call the `IsKindOf` member function for objects of that class, using the `RUNTIME_CLASS` macro to generate the `CRuntimeClass` argument, as shown here:  
   
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/CPP/accessing-run-time-class-information_2.h)]  
+     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]  
   
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/CPP/accessing-run-time-class-information_3.cpp)]  
+     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]  
   
     > [!NOTE]
-    >  如果物件是指定類別的成員或是衍生自特定的類別之類別，則 IsKindOf 傳回 **TRUE** 。  `IsKindOf` 不支援多重繼承或虛擬基底類別 \(Base Class\)，不過您可以為衍生的 Microsoft Foundation Class 在必要時，使用多重繼承。  
+    >  IsKindOf returns **TRUE** if the object is a member of the specified class or of a class derived from the specified class. `IsKindOf` does not support multiple inheritance or virtual base classes, although you can use multiple inheritance for your derived Microsoft Foundation classes if necessary.  
   
- 執行階段類別資訊的一個用法是物件的動態建立。  這個流程在這篇文章 [動態物件建立](../mfc/dynamic-object-creation.md) 中已討論。  
+ One use of run-time class information is in the dynamic creation of objects. This process is discussed in the article [Dynamic Object Creation](../mfc/dynamic-object-creation.md).  
   
- 如需序列化和執行階段類別資訊的詳細資訊，請參閱文件 [MFC 中的檔案](../mfc/files-in-mfc.md) 和 [序列化](../mfc/serialization-in-mfc.md)。  
+ For more detailed information on serialization and run-time class information, see the articles [Files in MFC](../mfc/files-in-mfc.md) and [Serialization](../mfc/serialization-in-mfc.md).  
   
-## 請參閱  
- [使用 CObject](../mfc/using-cobject.md)
+## <a name="see-also"></a>See Also  
+ [Using CObject](../mfc/using-cobject.md)
+
+

@@ -1,94 +1,114 @@
 ---
-title: "多重文件類型、檢視和框架視窗 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "靜態分隔視窗"
-  - "多重檢視"
-  - "多個文件類型"
-  - "多個檢視, 框架視窗"
-  - "文件類別, 多個"
-  - "文件 [C++], 的多個類型"
-  - "分隔視窗, 動態"
-  - "動態分隔視窗"
-  - "視窗 [C++], 動態分隔器"
-  - "視窗 [C++], 靜態分隔器"
-  - "多個框架視窗"
-  - "分隔視窗, 靜態"
+title: Multiple Document Types, Views, and Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- static splitter windows [MFC]
+- multiple views [MFC]
+- multiple document types [MFC]
+- multiple views [MFC], frame windows
+- document classes [MFC], multiple
+- documents [MFC], multiple types of
+- splitter windows [MFC], dynamic
+- dynamic splitter windows [MFC]
+- windows [MFC], dynamic splitter
+- windows [MFC], static splitter
+- multiple frame windows [MFC]
+- splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 多重文件類型、檢視和框架視窗
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d9b5d66ae012516ba17b8590c158dee6284642a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-[Document\/View Creation](../mfc/document-view-creation.md) \(文件\/檢視建立\) 中描述文件、其檢視及其框架視窗之間的標準關聯性。 許多應用程式支援單一文件類型 \(但可能開啟該類型的多份文件\)，該類型具有單一文件檢視，而且每份文件只有一個框架視窗。 但有些應用程式可能需要更改一或多個預設。  
+---
+# <a name="multiple-document-types-views-and-frame-windows"></a>Multiple Document Types, Views, and Frame Windows
+The standard relationship among a document, its view, and its frame window is described in [Document/View Creation](../mfc/document-view-creation.md). Many applications support a single document type (but possibly multiple open documents of that type) with a single view on the document and only one frame window per document. But some applications may need to alter one or more of those defaults.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [多個文件類型](#_core_multiple_document_types)  
+-   [Multiple document types](#_core_multiple_document_types)  
   
--   [多個檢視](#_core_multiple_views)  
+-   [Multiple views](#_core_multiple_views)  
   
--   [多個框架視窗](#_core_multiple_frame_windows)  
+-   [Multiple frame windows](#_core_multiple_frame_windows)  
   
--   [分隔視窗](#_core_splitter_windows)  
+-   [Splitter windows](#_core_splitter_windows)  
   
-##  <a name="_core_multiple_document_types"></a> 多個文件類型  
- \[MFC 應用程式精靈\] 為您建立單一文件類別。 不過在某些案例下，您可能需要支援多個文件類型。 例如，您的應用程式可能需要工作表和圖表文件。 每個文件類型會以其本身的文件類別表示，也可能以其本身的檢視類別表示。 當使用者選擇 \[開新檔案\] 命令時，此架構會顯示對話方塊，列出支援的文件類型。 然後根據使用者選擇的類型建立文件。 每個文件類型是由其本身的文件範本物件管理。  
+##  <a name="_core_multiple_document_types"></a> Multiple Document Types  
+ The MFC Application Wizard creates a single document class for you. In some cases, though, you may need to support more than one document type. For example, your application may need worksheet and chart documents. Each document type is represented by its own document class and probably by its own view class as well. When the user chooses the File New command, the framework displays a dialog box that lists the supported document types. Then it creates a document of the type that the user chooses. Each document type is managed by its own document-template object.  
   
- 若要建立額外的文件類別，請參閱[加入類別](../ide/adding-a-class-visual-cpp.md)。 選擇 [CDocument](../mfc/reference/cdocument-class.md) 作為要從中衍生並提供所要求之文件資訊的類別類型。 然後實作新類別的資料。  
+ To create extra document classes, see [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose [CDocument](../mfc/reference/cdocument-class.md) as the Class Type to derive from and supply the requested document information. Then implement the new class's data.  
   
- 若要讓架構知道此額外的文件類別，您必須將第二個呼叫加入應用程式類別之 [InitInstance](../Topic/CWinApp::InitInstance.md) 覆寫中的 [AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md)。 如需詳細資訊，請參閱[文件範本](../mfc/document-templates-and-the-document-view-creation-process.md)。  
+ To let the framework know about your extra document class, you must add a second call to [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) in your application class's [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) override. For more information, see [Document Templates](../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-##  <a name="_core_multiple_views"></a> 多個檢視  
- 許多文件只需要單一檢視，但也可能支援單一文件的多個檢視。 為了協助您實作多個檢視，文件物件保留一份自己的檢視清單、提供成員函式以加入及移除檢視，並提供 [UpdateAllViews](../Topic/CDocument::UpdateAllViews.md) 成員函式讓多個檢視知道文件資料何時變更。  
+##  <a name="_core_multiple_views"></a> Multiple Views  
+ Many documents require only a single view, but it is possible to support more than one view of a single document. To help you implement multiple views, a document object keeps a list of its views, provides member functions for adding and removing views, and supplies the [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) member function for letting multiple views know when the document's data has changed.  
   
- MFC 支援相同文件上需要多個檢視的三種常見使用者介面。 這些模式包括︰  
+ MFC supports three common user interfaces requiring multiple views on the same document. These models are:  
   
--   檢視相同類別的物件，每個物件在不同的 MDI 文件框架視窗中。  
+-   View objects of the same class, each in a separate MDI document frame window.  
   
-     您可能想要支援在文件上建立第二個框架視窗。 使用者可以選擇 \[開新視窗\] 命令，以開啟第二個具有相同文件檢視的框架，然後使用這兩個框架同時檢視文件的不同部分。 此架構透過複製附加至文件的初始框架視窗和檢視，來支援對 MDI 應用程式使用 \[視窗\] 功能表上的 \[開新視窗\] 命令。  
+     You might want to support creating a second frame window on a document. The user could choose a New Window command to open a second frame with a view of the same document and then use the two frames to view different portions of the document simultaneously. The framework supports the New Window command on the Window menu for MDI applications by duplicating the initial frame window and view attached to the document.  
   
--   檢視相同文件框架視窗中相同類別的物件。  
+-   View objects of the same class in the same document frame window.  
   
-     分隔視窗會將單一文件視窗的檢視空間，分隔成文件的多個不同檢視。 此架構會從相同檢視類別建立多個檢視物件。 如需詳細資訊，請參閱[分隔視窗](#_core_splitter_windows)。  
+     Splitter windows split the view space of a single document window into multiple separate views of the document. The framework creates multiple view objects from the same view class. For more information, see [Splitter Windows](#_core_splitter_windows).  
   
--   檢視單一框架視窗中不同類別的物件。  
+-   View objects of different classes in a single frame window.  
   
-     在此分隔視窗變化模型中，多個檢視會共用單一框架視窗。 這些檢視是從不同類別建構，每個檢視提供不同方式來檢視相同文件。 例如，一個檢視可能以標準模式顯示文書處理文件，而另一個檢視則以大綱模式顯示相同文件。 分隔器控制項可讓使用者調整檢視的相對大小。  
+     In this model, a variation of the splitter window, multiple views share a single frame window. The views are constructed from different classes, each view providing a different way to view the same document. For example, one view might show a word-processing document in normal mode while the other view shows it in outline mode. A splitter control allows the user to adjust the relative sizes of the views.  
   
- 下圖分成 a、b 和 c 部分，並依上述順序顯示三種使用者介面模型。  
+ The following figure, divided into parts a, b, and c, shows the three user-interface models in the order presented above.  
   
- ![多重檢視使用者介面](../mfc/media/vc37a71.png "vc37A71")  
-多個檢視使用者介面  
+ ![Multiple&#45;view user interfaces](../mfc/media/vc37a71.gif "vc37a71")  
+Multiple-View User Interfaces  
   
- 此架構透過實作 \[開新視窗\] 命令及提供 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) 類別，來提供這些模型 \(如[分隔視窗](#_core_splitter_windows)中所述\)。 您可以使用這些模型作為起點，來實作其他模型。 如需說明檢視、框架視窗和分隔器之不同組態的範例程式，請參閱 [MFC 範例](../top/visual-cpp-samples.md)。  
+ The framework provides these models by implementing the New Window command and by providing class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), as discussed in [Splitter Windows](#_core_splitter_windows). You can implement other models using these as your starting point. For sample programs that illustrate different configurations of views, frame windows, and splitters, see [MFC Samples](../visual-cpp-samples.md).  
   
- 如需 `UpdateAllViews` 的詳細資訊，請參閱＜MFC 參考＞中的 [CView 類別](../mfc/reference/cview-class.md)和 [Scribble 範例](../top/visual-cpp-samples.md)。  
+ For more information about `UpdateAllViews`, see class [CView](../mfc/reference/cview-class.md) in the *MFC Reference* and the [Scribble sample](../visual-cpp-samples.md).  
   
-##  <a name="_core_multiple_frame_windows"></a> 多個框架視窗  
- 您可以對 MDI 應用程式使用 \[視窗\] 功能表上的 \[開新視窗\] 命令，在相同文件上建立第二個框架視窗。 如需詳細資訊，請參閱[多個檢視使用者介面](#_core_multiple.2d.view_user_interfaces)圖中的第一個模型。  
+##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows  
+ You can use the New Window command on the Window menu for MDI applications to create a second frame window on the same document. For more information, see the first model in the figure Multiple-View User Interfaces.  
   
-##  <a name="_core_splitter_windows"></a> 分隔視窗  
- 在分隔視窗中，視窗會 \(或可以\) 分隔成兩個或多個可捲動的窗格。 捲軸旁之視窗框架中的分隔器控制項 \(或「分隔方塊」\)，可讓使用者調整窗格的相對大小。 每個窗格是相同文件的檢視。 在「動態」分隔器中，檢視屬於相同類別，如[多個檢視使用者介面](#_core_multiple.2d.view_user_interfaces)圖的 b 部分所示。 在「靜態」分隔器中，檢視可以屬於不同類別。[CSplitterWnd](../mfc/reference/csplitterwnd-class.md) 類別支援這兩種類型的分隔視窗。  
+##  <a name="_core_splitter_windows"></a> Splitter Windows  
+ In a splitter window, the window is, or can be, split into two or more scrollable panes. A splitter control (or "split box") in the window frame next to the scroll bars allows the user to adjust the relative sizes of the panes. Each pane is a view on the same document. In "dynamic" splitters, the views are of the same class, as shown in part b of the figure Multiple-View User Interfaces. In "static" splitters, the views can be of different classes. Splitter windows of both kinds are supported by class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).  
   
- 動態分隔視窗具有相同類別的檢視，可讓使用者隨意將視窗分隔成多個窗格，然後捲動不同窗格以查看文件的不同部分。 使用者也可以取消分隔視窗，以移除其他檢視。 加入 [Scribble 範例](../top/visual-cpp-samples.md)中的分隔視窗即為一例。 該主題描述建立動態分隔視窗的技術。[多個檢視使用者介面](#_core_multiple.2d.view_user_interfaces)圖的 b 部分顯示動態分隔視窗。  
+ Dynamic splitter windows, with views of the same class, allow the user to split a window into multiple panes at will and then scroll different panes to see different parts of the document. The user can also unsplit the window to remove the additional views. The splitter windows added to the [Scribble sample](../visual-cpp-samples.md) are an example. That topic describes the technique for creating dynamic splitter windows. A dynamic splitter window is shown in part b of the figure Multiple-View User Interfaces.  
   
- 靜態分隔視窗具有不同類別的檢視，視窗一開始就分隔成多個窗格，每個窗格各有不同用途。 例如，在 Visual C\+\+ 點陣圖編輯器中，影像視窗並排顯示兩個窗格。 左窗格顯示實際大小的點陣圖影像。 右窗格顯示縮小或放大的相同點陣圖影像。 這兩個窗格是以「分隔列」隔開，使用者可加以拖曳來變更窗格的相對大小。[多個檢視使用者介面](#_core_multiple.2d.view_user_interfaces)圖的 c 部分顯示靜態分隔視窗。  
+ Static splitter windows, with views of different classes, start with the window split into multiple panes, each with a different purpose. For example, in the Visual C++ bitmap editor, the image window shows two panes side by side. The left-hand pane displays a life-sized image of the bitmap. The right-hand pane displays a zoomed or magnified image of the same bitmap. The panes are separated by a "splitter bar" that the user can drag to change the relative sizes of the panes. A static splitter window is shown in part c of the figure Multiple-View User Interfaces.  
   
- 如需詳細資訊，請參閱＜MFC 參考＞中的 [CSplitterWnd 類別](../mfc/reference/csplitterwnd-class.md)和 [MFC 範例](../top/visual-cpp-samples.md)。  
+ For more information, see class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) in the *MFC Reference* and [MFC Samples](../visual-cpp-samples.md).  
   
-## 請參閱  
- [文件\/檢視架構](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

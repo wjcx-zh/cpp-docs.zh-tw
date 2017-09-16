@@ -1,48 +1,66 @@
 ---
-title: "非衍生自 CFrameWnd 之視窗中的工具提示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制項 [MFC], 工具提示"
-  - "啟用工具提示"
-  - "處理函式, 工具提示"
-  - "說明, 控制項的工具提示"
-  - "TOOLTIPTEXT 結構"
-  - "TTN_NEEDTEXT 訊息"
+title: Tool Tips in Windows Not Derived from CFrameWnd | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- enabling tool tips [MFC]
+- TOOLTIPTEXT structure [MFC]
+- Help [MFC], tool tips for controls
+- TTN_NEEDTEXT message [MFC]
+- controls [MFC], tool tips
+- handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 非衍生自 CFrameWnd 之視窗中的工具提示
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd2adc442eaa9a37522a276cca097bb9feda8fb6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文章系列涵蓋啟用從 [CFrameWnd](../mfc/reference/cframewnd-class.md)不是衍生自的視窗包含的控制項的工具提示。  這篇文章 [工具列工具提示](../mfc/toolbar-tool-tips.md) 做為 `CFrameWnd`中的控制項提供工具提示的資訊。  
+---
+# <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>Tool Tips in Windows Not Derived from CFrameWnd
+This article family covers enabling tool tips for controls contained in a window that is not derived from [CFrameWnd](../mfc/reference/cframewnd-class.md). The article [Toolbars Tool Tips](../mfc/toolbar-tool-tips.md) provides information about tool tips for controls in a `CFrameWnd`.  
   
- 本文章系列中包含的主題:  
+ Topics covered in this article family include:  
   
--   [啟用工具提示](../mfc/enabling-tool-tips.md)  
+-   [Enabling Tool Tips](../mfc/enabling-tool-tips.md)  
   
--   [工具提示的處理 TTN\_NEEDTEXT 通知](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)  
+-   [Handling TTN_NEEDTEXT Notification for Tool Tips](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)  
   
--   [TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)  
+-   [The TOOLTIPTEXT Structure](../mfc/tooltiptext-structure.md)  
   
- 工具提示的按鈕和其他控制項的自動顯示在衍生自 `CFrameWnd`的父視窗。  這是因為， `CFrameWnd` 有 [TTN\_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269) 通知的預設處理常式，處理從工具提示控制項 **TTN\_NEEDTEXT** 告知與控制項。  
+ Tool tips are automatically displayed for buttons and other controls contained in a parent window derived from `CFrameWnd`. This is because `CFrameWnd` has a default handler for the [TTN_GETDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb760269) notification, which handles **TTN_NEEDTEXT** notifications from tool tip controls associated with controls.  
   
- 不過，此預設處理常式未呼叫，在 **TTN\_NEEDTEXT** 通知從工具提示控制項傳送與不是 `CFrameWnd`時的視窗的控制項，例如在對話方塊或表單檢視的控制項。  因此，對於 **TTN\_NEEDTEXT** 通知訊息提供處理函式以顯示子控制項的工具提示您是必要的。  
+ However, this default handler is not called when the **TTN_NEEDTEXT** notification is sent from a tool tip control associated with a control in a window that is not a `CFrameWnd`, such as a control on a dialog box or a form view. Therefore, it is necessary for you to provide a handler function for the **TTN_NEEDTEXT** notification message in order to display tool tips for child controls.  
   
- 為您的 Windows 提供的預設工具提示由 [CWnd::EnableToolTips](../Topic/CWnd::EnableToolTips.md) 沒有文字相關聯的量值。  在工具提示視窗中顯示之前，要擷取的工具提示文字，可以顯示 **TTN\_NEEDTEXT** 通知傳送給工具提示控制項的父視窗。  如果沒有這個訊息的處理常式可以指定某些值對 **TOOLTIPTEXT** 結構的 **pszText** 成員，將不會為工具提示所顯示的文字。  
+ The default tool tips provided for your windows by [CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips) do not have text associated with them. To retrieve text for the tool tip to display, the **TTN_NEEDTEXT** notification is sent to the tool tip control's parent window just before the tool tip window is displayed. If there is no handler for this message to assign some value to the **pszText** member of the **TOOLTIPTEXT** structure, there will be no text displayed for the tool tip.  
   
-## 請參閱  
- [工具提示](../mfc/tool-tips.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips](../mfc/tool-tips.md)
+
+

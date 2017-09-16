@@ -1,5 +1,5 @@
 ---
-title: "集合類別 Helper |Microsoft 文件"
+title: Collection Class Helpers | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,8 +16,8 @@ helpviewer_keywords:
 - DestructElements function
 - ConstructElements function
 - SerializeElements function
-- collection classes, helper functions
-- helper functions collection class
+- collection classes [MFC], helper functions
+- helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 caps.latest.revision: 14
 author: mikeblome
@@ -37,30 +37,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d2649ef9c8b0320a94ec28a2341baa0f768b07d0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 20e953c408a72717bc7e738298fd7f12ffc30699
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="collection-class-helpers"></a>集合類別 Helper
-集合類別`CMap`， `CList`，和`CArray`樣板化的全域 helper 函式用於等目的的比較、 複製和序列化項目。 做為一部分的基礎類別實作`CMap`， `CList`，和`CArray`，您必須視需要這些函式覆寫版本量身訂做的資料儲存在您的對應、 清單或陣列型別。 如需覆寫 helper 函式時，例如`SerializeElements`，請參閱文章[集合︰ 如何製作類型安全集合](../../mfc/how-to-make-a-type-safe-collection.md)。 請注意， **ConstructElements**和**DestructElements**已被取代。  
+# <a name="collection-class-helpers"></a>Collection Class Helpers
+The collection classes `CMap`, `CList`, and `CArray` use templated global helper functions for such purposes as comparing, copying, and serializing elements. As part of your implementation of classes based on `CMap`, `CList`, and `CArray`, you must override these functions as necessary with versions tailored to the type of data stored in your map, list, or array. For information on overriding helper functions such as `SerializeElements`, see the article [Collections: How to Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md). Note that **ConstructElements** and **DestructElements** have been deprecated.  
   
- Mfc 程式庫提供 afxtempl.h 來協助您自訂您的集合類別的下列全域函式︰  
+ The Microsoft Foundation Class Library provides the following global functions in afxtempl.h to help you customize your collection classes:  
   
-### <a name="collection-class-helpers"></a>集合類別 Helper  
+### <a name="collection-class-helpers"></a>Collection Class Helpers  
   
 |||  
 |-|-|  
-|[CompareElements](#compareelements)|表示項目是否相同。|  
-|[CopyElements](#copyelements)|複製的項目一個陣列至另一個。|  
-|[DumpElements](#dumpelements)|提供以資料流導向診斷輸出。|  
-|[HashKey](#hashkey)|計算雜湊索引鍵。|  
-|[SerializeElements](#serializeelements)|儲存或擷取項目或從封存。|  
+|[CompareElements](#compareelements)|Indicates whether elements are the same.|  
+|[CopyElements](#copyelements)|Copies elements from one array to another.|  
+|[DumpElements](#dumpelements)|Provides stream-oriented diagnostic output.|  
+|[HashKey](#hashkey)|Calculates a hash key.|  
+|[SerializeElements](#serializeelements)|Stores or retrieves elements to or from an archive.|  
   
-##  <a name="compareelements"></a>CompareElements  
- 直接呼叫 [CList::Find] (clist class.md #not_found.md #clist__find 和間接[cmap__lookup](cmap-class.md#lookup)和[cmap__operator []](cmap-class.md#operator_at)。  
+##  <a name="compareelements"></a>  CompareElements  
+ Called directly by [CList::Find](clist-class.md#not_found.md#clist__find and indirectly by [cmap__lookup](cmap-class.md#lookup) and [cmap__operator &#91;&#93;](cmap-class.md#operator_at).  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -70,34 +70,34 @@ CompareElements(
     const ARG_TYPE* pElement2);  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 要比較的第一個項目類型。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ The type of the first element to be compared.  
   
  `pElement1`  
- 要比較的第一個元素的指標。  
+ Pointer to the first element to be compared.  
   
  `ARG_TYPE`  
- 要比較的第二個項目類型。  
+ The type of the second element to be compared.  
   
  `pElement2`  
- 要比較的第二個元素的指標。  
+ Pointer to the second element to be compared.  
   
-### <a name="return-value"></a>傳回值  
- 如果指向的物件為非零`pElement1`所指向的物件等於`pElement2`，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object pointed to by `pElement1` is equal to the object pointed to by `pElement2`; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `CMap`呼叫使用`CMap`範本參數*金鑰*和`ARG_KEY`。  
+### <a name="remarks"></a>Remarks  
+ The `CMap` calls use the `CMap` template parameters *KEY* and `ARG_KEY`.  
   
- 預設實作會傳回的比較結果的* \*pElement1*和* \*pElement2*。 覆寫此函數，使它比較適合您的應用程式的方法中的項目。  
+ The default implementation returns the result of the comparison of *\*pElement1* and *\*pElement2*. Override this function so that it compares the elements in a way that is appropriate for your application.  
   
- C + + 語言定義比較運算子 ( `==`) 的簡單型別 ( `char`， `int`， **float**等等)，但沒有定義類別和結構的比較運算子。 如果您想要使用`CompareElements`或具現化的其中一個使用該集合類別，您必須定義比較運算子，或多載`CompareElements`傳回適當的值的版本。  
+ The C++ language defines the comparison operator ( `==`) for simple types ( `char`, `int`, **float**, and so on) but does not define a comparison operator for classes and structures. If you want to use `CompareElements` or to instantiate one of the collection classes that uses it, you must either define the comparison operator or overload `CompareElements` with a version that returns appropriate values.  
   
-### <a name="requirements"></a>需求  
+### <a name="requirements"></a>Requirements  
    **Header:** afxtempl.h   
   
-##  <a name="copyelements"></a>CopyElements  
- 呼叫此函式是直接由[carray:: Append](carray-class.md#append)和[carray:: Copy](carray-class.md#copy)。  
+##  <a name="copyelements"></a>  CopyElements  
+ This function is called directly by [CArray::Append](carray-class.md#append) and [CArray::Copy](carray-class.md#copy).  
   
 ```   
 template<class TYPE>  
@@ -107,29 +107,29 @@ void AFXAPI CopyElements(
     INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 指定要複製之項目的類型的樣板參數。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements to be copied.  
   
  `pDest`  
- 指向項目複製目的地的指標。  
+ Pointer to the destination where the elements will be copied.  
   
  `pSrc`  
- 指向要複製項目之來源的指標。  
+ Pointer to the source of the elements to be copied.  
   
  `nCount`  
- 要複製項目的數目。  
+ Number of elements to be copied.  
   
-### <a name="remarks"></a>備註  
- 預設實作會使用簡單指派運算子 ( ** = ** ) 來執行複製作業。 如果要複製的類型沒有多載的 operator=，則預設實作會執行位元複製。  
+### <a name="remarks"></a>Remarks  
+ The default implementation uses the simple assignment operator ( **=** ) to perform the copy operation. If the type being copied does not have an overloaded operator=, then the default implementation performs a bitwise copy.  
   
- 如需實作這和其他 helper 函式，請參閱文章[集合︰ 如何製作類型安全集合](../how-to-make-a-type-safe-collection.md)。  
+ For information on implementing this and other helper functions, see the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxtempl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h  
   
-##  <a name="dumpelements"></a>DumpElements  
- 提供覆寫時，將集合元素的文字格式的資料流導向診斷輸出。  
+##  <a name="dumpelements"></a>  DumpElements  
+ Provides stream-oriented diagnostic output in text form for the elements of your collection when overridden.  
   
 ```   
 template<class TYPE>  
@@ -139,52 +139,52 @@ void  AFXAPI DumpElements(
     INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dc`  
- 傾印內容傾印的項目。  
+ Dump context for dumping elements.  
   
- *型別*  
- 指定的項目類型的樣板參數。  
+ *TYPE*  
+ Template parameter specifying the type of the elements.  
   
  `pElements`  
- 要傾印之項目的指標。  
+ Pointer to the elements to be dumped.  
   
  `nCount`  
- 傾印的項目數目。  
+ Number of elements to be dumped.  
   
-### <a name="remarks"></a>備註  
- **CArray::Dump**， **CList::Dump**，和**CMap::Dump**函式會呼叫這個傾印的深度是否大於 0。  
+### <a name="remarks"></a>Remarks  
+ The **CArray::Dump**, **CList::Dump**, and **CMap::Dump** functions call this if the depth of the dump is greater than 0.  
   
- 預設實作不做任何動作。 如果您的集合的項目衍生自`CObject`，覆寫會通常逐一查看集合的項目，呼叫`Dump`中開啟每個元素。  
+ The default implementation does nothing. If the elements of your collection are derived from `CObject`, your override will typically iterate through the collection's elements, calling `Dump` for each element in turn.  
   
 
-### <a name="requirements"></a>需求  
-  **標頭**afxtempl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
- 計算指定的索引鍵的雜湊值。  
+##  <a name="hashkey"></a>  HashKey  
+ Calculates a hash value for the given key.  
   
 ```  
 template<class ARG_KEY>  
 AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key); 
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- 指定用來存取對應索引鍵的資料類型的樣板參數。  
+ Template parameter specifying the data type used to access map keys.  
   
  `key`  
- 雜湊值會計算索引鍵。  
+ The key whose hash value is to be calculated.  
   
-### <a name="return-value"></a>傳回值  
- 索引鍵的雜湊值。  
+### <a name="return-value"></a>Return Value  
+ The key's hash value.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式是直接由[CMap::RemoveKey](cmap-class.md#removekey) ，間接經由[CMap::Lookup](cmap-class.md#lookup)和[CMap::Operator []](cmap-class.md#operator_at)。
+### <a name="remarks"></a>Remarks  
+ This function is called directly by [CMap::RemoveKey](cmap-class.md#removekey) and indirectly by [CMap::Lookup](cmap-class.md#lookup) and [CMap::Operator &#91;&#93;](cmap-class.md#operator_at).
   
- 預設實作會建立雜湊值移位`key`的四個位置。 覆寫此函數，使其傳回雜湊值適用於您的應用程式。  
+ The default implementation creates a hash value by shifting `key` right by four positions. Override this function so that it returns hash values appropriate for your application.  
   
-### <a name="example"></a>範例
+### <a name="example"></a>Example
  ```cpp  
 template <> UINT AFXAPI HashKey(unsigned __int64 key)
 {
@@ -194,43 +194,43 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>需求  
-  **標頭**afxtempl.h 
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h 
   
-##  <a name="serializeelements"></a>SerializeElements  
- [CArray](carray-class.md)， [CList](clist-class.md)，和[CMap](cmap-class.md)呼叫此函式可序列化的項目。  
+##  <a name="serializeelements"></a>  SerializeElements  
+ [CArray](carray-class.md), [CList](clist-class.md), and [CMap](cmap-class.md) call this function to serialize elements.  
   
 ```   
 template<class TYPE>  
 void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>參數  
- *型別*  
- 指定的項目類型的樣板參數。  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the elements.  
   
  `ar`  
- 封存或從封存物件。  
+ An archive object to archive to or from.  
   
  `pElements`  
- 封存項目的指標。  
+ Pointer to the elements being archived.  
   
  `nCount`  
- 封存的項目數目  
+ Number of elements being archived  
   
-### <a name="remarks"></a>備註  
- 預設實作未位元讀取或寫入。  
+### <a name="remarks"></a>Remarks  
+ The default implementation does a bitwise read or write.  
   
- 如需實作這和其他 helper 函式，請參閱文章[集合︰ 如何製作類型安全集合](../how-to-make-a-type-safe-collection.md)。  
+ For information on implementing this and other helper functions, see the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="example"></a>範例  
- 請參閱文件中的範例[集合︰ 如何製作類型安全集合](../how-to-make-a-type-safe-collection.md)。  
+### <a name="example"></a>Example  
+ See the example in the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
  
-### <a name="requirements"></a>需求  
-  **標頭**afxtempl.h 
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h 
     
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](mfc-macros-and-globals.md)   
- [CMap 類別](cmap-class.md)   
- [CList 類別](clist-class.md)   
- [CArray 類別](carray-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
+ [CMap Class](cmap-class.md)   
+ [CList Class](clist-class.md)   
+ [CArray Class](carray-class.md)

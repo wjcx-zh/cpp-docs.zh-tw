@@ -1,5 +1,5 @@
 ---
-title: "CUserException 類別 |Microsoft 文件"
+title: CUserException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,12 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- operations [C++], stopping
-- exceptions, throwing
-- CUserException class
-- errors [C++], trapping
-- operations [C++]
-- throwing exceptions, stopping user operations
+- operations [MFC], stopping
+- exceptions [MFC], throwing
+- CUserException class [MFC]
+- errors [MFC], trapping
+- operations [MFC]
+- throwing exceptions [MFC], stopping user operations
 ms.assetid: 2156ba6d-2cce-415a-9000-6f02c26fcd7d
 caps.latest.revision: 23
 author: mikeblome
@@ -38,34 +38,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 8548ffa7ad9032e174d650e210a70a29b0e3f19d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 35681dc28f5486a90acf8d07623cd0e3540e2355
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cuserexception-class"></a>CUserException 類別
-擲回以停止使用者作業。  
+# <a name="cuserexception-class"></a>CUserException Class
+Thrown to stop an end-user operation.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CUserException : public CSimpleException  
 ```  
   
-## <a name="remarks"></a>備註  
- 使用`CUserException`當您想要用於應用程式特定的例外狀況擲回/catch 例外狀況機制。 「 使用者 」 中的類別名稱可以解譯為 「 我的使用者進行某項操作，需要處理例外狀況。 」  
+## <a name="remarks"></a>Remarks  
+ Use `CUserException` when you want to use the throw/catch exception mechanism for application-specific exceptions. "User" in the class name can be interpreted as "my user did something exceptional that I need to handle."  
   
- A`CUserException`通常會呼叫全域函式之後擲回`AfxMessageBox`來通知使用者作業已失敗。 當您撰寫例外狀況處理常式時，處理例外狀況，特別因為使用者通常已經已經被通知失敗。 架構會在某些情況下，擲回這個例外狀況。 擲回`CUserException`自己，警告使用者，並接著呼叫全域函式`AfxThrowUserException`。  
+ A `CUserException` is usually thrown after calling the global function `AfxMessageBox` to notify the user that an operation has failed. When you write an exception handler, handle the exception specially since the user usually has already been notified of the failure. The framework throws this exception in some cases. To throw a `CUserException` yourself, alert the user and then call the global function `AfxThrowUserException`.  
   
- 在下列範例中，包含可能會失敗的作業的函式會警示使用者並擲回`CUserException`。 呼叫函式攔截到例外狀況，並特別處理它︰  
+ In the example below, a function containing operations that may fail alerts the user and throws a `CUserException`. The calling function catches the exception and handles it specially:  
   
- [!code-cpp[NVC_MFCExceptions #&24;](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
   
- 如需有關使用`CUserException`，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)。  
+ For more information on using `CUserException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -74,10 +74,10 @@ class CUserException : public CSimpleException
   
  `CUserException`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CException 類別](../../mfc/reference/cexception-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)
 

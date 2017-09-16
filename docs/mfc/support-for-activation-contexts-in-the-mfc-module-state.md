@@ -1,29 +1,46 @@
 ---
-title: "MFC 模組狀態的啟用內容支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "啟用內容 [C++]"
-  - "啟用內容 [C++], MFC 支援"
+title: Support for Activation Contexts in the MFC Module State | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- activation contexts [MFC]
+- activation contexts [MFC], MFC support
 ms.assetid: 1e49eea9-3620-46dd-bc5f-d664749567c7
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# MFC 模組狀態的啟用內容支援
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a269fcc1100df489ffc4c3eaf84c4950cc293f9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 建立啟動內容使用使用者模組所提供的資訊清單資源。  如需啟動內容的詳細資訊，請參閱下列主題:  
+---
+# <a name="support-for-activation-contexts-in-the-mfc-module-state"></a>Support for Activation Contexts in the MFC Module State
+MFC creates an activation context using a manifest resource provided by the user module. For more information on how activation contexts are created, see the following topics:  
   
 -   [Activation Contexts](http://msdn.microsoft.com/library/aa374153)  
   
@@ -31,27 +48,29 @@ MFC 建立啟動內容使用使用者模組所提供的資訊清單資源。  �
   
 -   [Assembly Manifests](http://msdn.microsoft.com/library/aa374219)  
   
-## 備註  
- 當讀取這些 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 主題時，請注意 MFC 啟動內容機制類似 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 啟動內容，除了 MFC 不使用 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] 啟動內容應用程式開發介面。  
+## <a name="remarks"></a>Remarks  
+ When reading these Windows SDK topics, note that the MFC activation context mechanism resembles the Windows SDK activation context except that MFC does not use the Windows SDK Activation Context API.  
   
- 啟動內容在 MFC 應用程式、使用者 DLL 和擴充 DLL 以下列方式運作:  
+ Activation context works in MFC applications, user DLLs, and MFC extension DLLs in the following ways:  
   
--   MFC 應用程式為它們的資訊清單資源使用資源 ID 1。  在這種情況下， MFC 不建立它的啟動內容，而是使用預設的應用程式內容。  
+-   MFC applications use resource ID 1 for their manifest resource. In this case, the MFC does not create its own activation context, but uses the default application context.  
   
--   MFC 使用者 DLL 使用它們的資訊清單資源的資源 ID 2。  在這裡， MFC 會為每個使用者 DLL 的啟動內容，因此，其他使用者 DLL 可以使用相同的程式庫 \(例如，通用控制項程式庫\) 的不同版本。  
+-   MFC user DLLs use resource ID 2 for their manifest resource. Here, MFC creates an activation context for each User DLL, so different user DLLs can use different versions of the same libraries (for example, the Common Controls library).  
   
--   MFC 擴充 DLL 相依於其裝載應用程式或使用者 DLL 建立它們的啟動內容。  
+-   MFC extension DLLs rely on their hosting applications or user DLLs to establish their activation context.  
   
- 雖然啟動內容狀態中修改使用處理序會描述在 [Using the Activation Context API](http://msdn.microsoft.com/library/aa376620)下，使用 MFC 啟動內容機制很有用，在開發不容易以 DLL 的外掛程式結構 \(或無法\) 手動轉換成啟動狀態在個別的呼叫前後外部插入。  
+ Although the activation context state can be modified using the processes described under [Using the Activation Context API](http://msdn.microsoft.com/library/aa376620), using the MFC activation context mechanism can be useful when developing DLL-based plug-in architectures where it is not easy (or not possible) to manually switch activation state before and after individual calls to external plug-ins.  
   
- 啟動內容在 [AfxWinInit](../Topic/AfxWinInit.md)建立。  會在 `AFX_MODULE_STATE` 解構函式被終結。  啟動內容控制代碼在 `AFX_MODULE_STATE`被保留。\(`AFX_MODULE_STATE`將在[AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md)中加以說明。\)  
+ The activation context is created in [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit). It is destroyed in the `AFX_MODULE_STATE` destructor. An activation context handle is kept in `AFX_MODULE_STATE`. (`AFX_MODULE_STATE` is described in [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate).)  
   
- [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md) 巨集啟動和停用啟動內容。  `AFX_MANAGE_STATE` 為 MFC 靜態程式庫，以及 MFC DLL 啟用，允許 MFC 程式碼在使用者 DLL 選取適當的啟動內容執行。  
+ The [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro activates and deactivates the activation context. `AFX_MANAGE_STATE` is enabled for static MFC libraries, as well as MFC DLLs, to allow MFC code to execute in the proper activation context selected by the User DLL.  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [Activation Contexts](http://msdn.microsoft.com/library/aa374153)   
  [Application Manifests](http://msdn.microsoft.com/library/aa374191)   
  [Assembly Manifests](http://msdn.microsoft.com/library/aa374219)   
- [AfxWinInit](../Topic/AfxWinInit.md)   
- [AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md)   
- [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md)
+ [AfxWinInit](../mfc/reference/application-information-and-management.md#afxwininit)   
+ [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate)   
+ [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state)
+
+

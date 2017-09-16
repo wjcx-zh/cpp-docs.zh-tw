@@ -1,5 +1,5 @@
 ---
-title: "進階功能，MFC 應用程式精靈 |Microsoft 文件"
+title: Advanced Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,62 +33,62 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 9a291af4641742cd9b771c80a7ea0770fab6de06
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0a476f56ef4119065884a152f475fa86bfb9a090
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="advanced-features-mfc-application-wizard"></a>MFC 應用程式精靈、進階功能
-本主題列出應用程式的其他功能選項，例如說明、列印支援等。 請在各章節中，指明這些進階功能的額外支援。  
+# <a name="advanced-features-mfc-application-wizard"></a>Advanced Features, MFC Application Wizard
+This topic lists options for additional features for your application, such as Help, printing support, and so on. In each section, specify additional support for these advanced features.  
   
- **即時線上說明 (HTML)**  
- 會產生一組即時線上說明，請使用 F1 使用 說明 功能表中，或按一下說明檔案**協助** 對話方塊上的按鈕。 必須有說明編譯器才能支援 [說明]。 如果沒有說明編譯器，可重新執行安裝程式進行安裝。  
+ **Context-sensitive help (HTML)**  
+ Generates a set of help files for context-sensitive help, available by using F1 and a Help menu, or by clicking a **Help** button on a dialog box. Help support requires the help compiler. If you do not have the help compiler, you can install it by rerunning Setup.  
   
- 請參閱[HTML 說明︰ 程式的即時線上說明](../../mfc/html-help-context-sensitive-help-for-your-programs.md)和[說明檔 （HTML 說明）](../../ide/help-files-html-help.md)如需詳細資訊。  
+ See [HTML Help: Context-Sensitive Help for Your Programs](../../mfc/html-help-context-sensitive-help-for-your-programs.md) and [Help Files (HTML Help)](../../ide/help-files-html-help.md) for more information.  
   
- **列印和預覽列印**  
- 產生程式碼來處理列印、 列印設定和預覽列印命令藉由呼叫成員函式中[CView 類別](../../mfc/reference/cview-class.md)從 MFC 程式庫。 精靈也會將這些函式的命令加入應用程式的功能表中。 列印支援會指定的應用程式僅供**文件/檢視架構支援**中[應用程式類型、 MFC 應用程式精靈](../../mfc/reference/application-type-mfc-application-wizard.md)精靈頁面。 在預設情況下，文件 / 檢視應用程式皆有列印支援。  
+ **Printing and print preview**  
+ Generates the code to handle the print, print setup and print preview commands by calling member functions in the [CView Class](../../mfc/reference/cview-class.md) from the MFC library. The wizard also adds commands for these functions to the application's menu. Printing support is available only for applications that specify **Document/view architecture support** in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the wizard. By default, document/view applications have printing support.  
   
  **Automation**  
- 指定應用程式可處理另一個應用程式中實作的物件，或將應用程式公開至 Automation 用戶端。  
+ Specifies that the application can handle objects that are implemented in another application, or exposes the application to Automation clients.  
   
- **ActiveX 控制項**  
- 支援 ActiveX 控制項 (預設)。 如果您不選取此選項與稍後想要插入您的專案中的 ActiveX 控制項，您必須將呼叫加入[AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer)應用程式中[Afxenablecontrolcontainer](../../mfc/reference/cwinapp-class.md#initinstance)成員函式。  
+ **ActiveX controls**  
+ Supports ActiveX controls (default). If you do not select this option and later want to insert ActiveX controls into your project, you must add a call to [AfxEnableControlContainer](ole-initialization.md#afxenablecontrolcontainer) in your application's [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) member function.  
   
- **MAPI (訊息 API)**  
- 指定應用程式可建立、操作、傳輸和儲存郵件訊息。  
+ **MAPI (Messaging API)**  
+ Specifies that the application can create, manipulate, transfer, and store mail messages.  
   
- **Windows 通訊端**  
- 支援 Windows Sockets，您可以用來撰寫在 TCP/IP 網路上通訊的應用程式。  
+ **Windows sockets**  
+ Supports Windows sockets, which you can use to write applications that communicate over TCP/IP networks.  
   
  **Active Accessibility**  
- 新增支援[Cwnd](http://msdn.microsoft.com/library/windows/desktop/dd318466)至[CWnd](../../mfc/reference/cwnd-class.md)-衍生的類別，您可以使用自訂使用者介面的更佳的協助工具用戶端互動。  
+ Adds support for [IAccessible](http://msdn.microsoft.com/library/windows/desktop/dd318466) to [CWnd](../../mfc/reference/cwnd-class.md)-derived classes, which you can use to customize the user interface for better interaction with accessibility clients.  
   
- **通用控制項資訊清單**  
- 預設為啟用。 產生應用程式資訊清單，以啟用 Microsoft Windows XP 和新作業系統中的通用控制項 DLL。  
+ **Common Control Manifest**  
+ Enabled by default. Generates an application manifest to enable the Common Control DLL that is included with Microsoft Windows XP and newer operating systems.  
   
- 6.0 版的通用控制項 DLL 不會自動更新目前應用程式所使用的舊版通用控制項。 若要使用 6.0 版的通用控制項 DLL，您必須建立應用程式資訊清單，以引導應用程式載入此 DLL。 這個通用控制項 DLL 也支援 Windows XP 主題。  
+ Version 6 of the Common Control DLL does not automatically update the earlier version of the Common Controls that your existing applications use. To use version 6 of the Common Control DLL, you must create an application manifest that directs your application to load the DLL. This Common Control DLL also supports the Windows XP themes.  
   
- 應用程式資訊清單也可以指定您的應用程式所需的其他 DLL 和版本。 如需應用程式資訊清單的詳細資訊，請參閱[隔離的應用程式和-並存組件](http://msdn.microsoft.com/library/dd408052)中[!INCLUDE[winsdkshort](../../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
+ An application manifest can also specify other DLLs and versions that your application needs. For more information about application manifests, see [Isolated Applications and Side-by-Side Assemblies](http://msdn.microsoft.com/library/dd408052) in the Windows SDK.  
   
- **支援重新啟動管理員**  
- 新增支援[Windows 重新啟動管理員](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx)。 這部影片示範如何使用 MFC 的重新啟動管理員︰[如何︰ 使用新的重新啟動管理員](http://msdn.microsoft.com/vstudio/ee886407)。  
+ **Support Restart Manager**  
+ Adds support for the [Windows Restart Manager](http://msdn.microsoft.com/library/windows/desktop/aa373680\(v=vs.85\).aspx). This video shows how to use the Restart Manager from MFC: [How Do I: Use the New Restart Manager](http://msdn.microsoft.com/vstudio/ee886407).  
   
- **進階的框架窗格**  
- |選項|描述|  
+ **Advanced frame panes**  
+ |Option|Description|  
 |------------|-----------------|  
-|**總管停駐窗格**|建立類似 Visual Studio 的停駐窗格**方案總管 中**主框架視窗的左邊。|  
-|**輸出停駐**|建立類似 Visual Studio 的停駐窗格**輸出**位於主框架視窗下的窗格。|  
-|**屬性停駐窗格**|建立類似 Visual Studio 的停駐窗格**屬性**主框架視窗右邊的窗格。|  
-|**瀏覽窗格**|在主框架視窗左邊，建立類似 Outlook 巡覽列的停駐窗格。|  
-|**標題列**|在主框架視窗上方建立 Office 樣式的標題列。|  
+|**Explorer docking pane**|Creates a docking pane that resembles the Visual Studio **Solution Explorer** to the left of the main frame window.|  
+|**Output docking frame**|Creates a docking pane that resembles the Visual Studio **Output** pane that is located under the main frame window.|  
+|**Properties docking pane**|Creates a docking pane that resembles the Visual Studio **Properties** pane to the right of the main frame window.|  
+|**Navigation pane**|Creates a docking pane that resembles the Outlook navigation bar and is located to the left of the main frame window.|  
+|**Caption bar**|Creates an Office-style caption bar above the main frame window.|  
   
- **最近使用的檔案清單上的檔案數目**  
- 指定最近使用的檔案清單中列出的檔案數量。 預設值為 4。  
+ **Number of files on recent file list**  
+ Specifies the number of files to be listed on the most recently used list. The default number is 4.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

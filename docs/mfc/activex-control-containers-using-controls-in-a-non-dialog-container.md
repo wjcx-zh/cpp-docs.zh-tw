@@ -1,74 +1,93 @@
 ---
-title: "ActiveX 控制項容器：在非對話方塊容器中使用控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項容器 [C++], 插入控制項"
-  - "ActiveX 控制項容器 [C++], 非對話方塊容器"
-  - "ActiveX 控制項 [C++], 建立"
-  - "Create 方法 [C++], ActiveX 控制項"
-  - "CreateControl 方法"
+title: 'ActiveX Control Containers: Using Controls in a Non-Dialog Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Create method [MFC], ActiveX controls
+- CreateControl method [MFC]
+- ActiveX controls [MFC], creating
+- ActiveX control containers [MFC], non-dialog containers
+- ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# ActiveX 控制項容器：在非對話方塊容器中使用控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9c845604a9dc21334920c5d214d1250349ac25bf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在某些應用程式 \(例如 SDI 或 MDI 應用程式\)，您可以在應用程式的視窗中內嵌控制項。  包裝函式類別的 **Create** 成員函式 \(由 Visual C\+\+ 插入\)，可以動態建立控制項的執行個體，而不需對話方塊。  
+---
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>ActiveX Control Containers: Using Controls in a Non-Dialog Container
+In some applications, such as an SDI or MDI application, you will want to embed a control in a window of the application. The **Create** member function of the wrapper class, inserted by Visual C++, can create an instance of the control dynamically, without the need for a dialog box.  
   
- **Create** 成員函式具有下列參數：  
+ The **Create** member function has the following parameters:  
   
  `lpszWindowName`  
- 對控制項中的文字或標題屬性中顯示之文字的指標 \(如果有的話\)。  
+ A pointer to the text to be displayed in the control's Text or Caption property (if any).  
   
  `dwStyle`  
- 視窗樣式。  如需完整的清單，請參閱 [CWnd::CreateControl](../Topic/CWnd::CreateControl.md)。  
+ Windows styles. For a complete list, see [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).  
   
  `rect`  
- 指定控制項的大小和位置。  
+ Specifies the control's size and position.  
   
  `pParentWnd`  
- 指定控制項的父視窗，通常是 `CDialog`。  它不得為 **NULL**。  
+ Specifies the control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- 指定控制項的 ID，而且可以由容器使用、參考控制項。  
+ Specifies the control ID and can be used by the container to refer to the control.  
   
- 一個使用這函式動態建立 ActiveX 控制項的範例是在 SDI 應用程式的表單檢視。  您可以建立控制項的執行個體在應用程式的 `WM_CREATE` 處理常式中。  
+ One example of using this function to dynamically create an ActiveX control would be in a form view of an SDI application. You could then create an instance of the control in the `WM_CREATE` handler of the application.  
   
- 對於這個範例中， `CMyView` 是主要檢視類別， `CCirc` 是包裝函式類別，而 CIRC.H 是包裝函式類別的標題 \(.H\) 檔案。  
+ For this example, `CMyView` is the main view class, `CCirc` is the wrapper class, and CIRC.H is the header (.H) file of the wrapper class.  
   
- 實作這個功能需要四個步驟。  
+ Implementing this feature is a four-step process.  
   
-### 若要在非對話方塊視窗動態建立 ActiveX 控制項  
+### <a name="to-dynamically-create-an-activex-control-in-a-non-dialog-window"></a>To dynamically create an ActiveX control in a non-dialog window  
   
-1.  在 CMYVIEW.H 插入 CIRC.H，在 `CMyView` 類別定義之前：  
+1.  Insert CIRC.H in CMYVIEW.H, just before the `CMyView` class definition:  
   
-     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]  
+     [!code-cpp[NVC_MFC_AxCont#12](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_1.h)]  
   
-2.  將成員變數 \(為 `CCirc` 型別\) 增加至位於 CMYVIEW.H 的 `CMyView` 類別定義的受保護區段：  
+2.  Add a member variable (of type `CCirc`) to the protected section of the `CMyView` class definition located in CMYVIEW.H:  
   
-     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]  
-    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]  
+     [!code-cpp[NVC_MFC_AxCont#13](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_2.h)]  
+    [!code-cpp[NVC_MFC_AxCont#14](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_3.h)]  
   
-3.  若要加入訊息處理常式 `WM_CREATE` 至類別 `CMyView`。  
+3.  Add a `WM_CREATE` message handler to class `CMyView`.  
   
-4.  在處理函式中，`CMyView::OnCreate` 呼叫控制項的 `Create` 函式 \(使用 **this** 指標做為父視窗\)：  
+4.  In the handler function, `CMyView::OnCreate`, make a call to the control's `Create` function using the **this** pointer as the parent window:  
   
-     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/CPP/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#15](../mfc/codesnippet/cpp/activex-control-containers-using-controls-in-a-non-dialog-container_4.cpp)]  
   
-5.  重建專案。  每當應用程式檢視建立時，Circ 控制項將動態建立。  
+5.  Rebuild the project. A Circ control will be created dynamically whenever the application's view is created.  
   
-## 請參閱  
- [ActiveX 控制項容器](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

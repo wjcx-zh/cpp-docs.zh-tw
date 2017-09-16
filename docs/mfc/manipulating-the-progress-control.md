@@ -1,61 +1,80 @@
 ---
-title: "管理進度控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "控制進度控制項"
-  - "CProgressCtrl 類別, 操作"
-  - "CProgressCtrl 類別, 使用"
-  - "CProgressCtrl 類別, 使用"
-  - "進度控制項 [C++], 操作"
+title: Manipulating the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CProgressCtrl class [MFC], working with
+- progress controls [MFC], manipulating
+- CProgressCtrl class [MFC], manipulating
+- controlling progress controls [MFC]
+- CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 管理進度控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 82c8e32789f396a371af38c372d622d1405024f4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-有三種方式變更進度控制項 \([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)\) 中的目前位置。  
+---
+# <a name="manipulating-the-progress-control"></a>Manipulating the Progress Control
+There are three ways to change the current position of a progress control ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
   
--   位置可以變更由預設加入數目。  
+-   The position can be changed by a preset increment amount.  
   
--   位置可以變更由一個任意數目。  
+-   The position can be changed by an arbitrary amount.  
   
--   位置可以變更為特定值。  
+-   The position can be changed to a specific value.  
   
-### 由預設要變更位置中總數  
+### <a name="to-change-the-position-by-a-preset-amount"></a>To change the position by a preset amount  
   
-1.  使用 [SetStep](../Topic/CProgressCtrl::SetStep.md) 成員函式中的程式碼數量。  這個值預設為 10。  這個值通常設定為其中一個控制項的初始設定。  逐步執行的值可以是負數值。  
+1.  Use the [SetStep](../mfc/reference/cprogressctrl-class.md#setstep) member function to set the increment amount. By default, this value is 10. This value is typically set as one of the initial settings for the control. The step value can be negative.  
   
-2.  使用 [StepIt](../Topic/CProgressCtrl::StepIt.md) 成員函式將位置。  這會造成控制項重繪本身。  
-  
-    > [!NOTE]
-    >  `StepIt` 會導致位置換行。  例如將範圍 1 – 100，步驟 20 和 90 位置，則 `StepIt` 會設定為 10。  
-  
-### 由一個任意數目變更位置。  
-  
-1.  使用 [OffsetPos](../Topic/CProgressCtrl::OffsetPos.md) 成員函式變更位置。  `OffsetPos` 會接受負數值。  
+2.  Use the [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) member function to increment the position. This causes the control to redraw itself.  
   
     > [!NOTE]
-    >  `OffsetPos`，不同於 `StepIt`，不會包裝位置。  新位置調整在範圍內保持。  
+    >  `StepIt` will cause the position to wrap. For example, given a range of 1 -100, a step of 20, and a position of 90, `StepIt` will set the position to 10.  
   
-### 變更位置到特定值  
+### <a name="to-change-the-position-by-an-arbitrary-amount"></a>To change the position by an arbitrary amount  
   
-1.  使用 [SetPos](../Topic/CProgressCtrl::SetPos.md) 成員函式設定為特定值。  如果需要，則調整在範圍內。  
+1.  Use the [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) member function to change the position. `OffsetPos` will accept negative values.  
   
- 通常，進度控制項為輸出個別使用。  若要取得目前位置，但不指定新的值，請使用 [GetPos](../Topic/CProgressCtrl::GetPos.md)。  
+    > [!NOTE]
+    >  `OffsetPos`, unlike `StepIt`, will not wrap the position. The new position is adjusted to remain within the range.  
   
-## 請參閱  
- [使用 CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+### <a name="to-change-the-position-to-a-specific-value"></a>To change the position to a specific value  
+  
+1.  Use the [SetPos](../mfc/reference/cprogressctrl-class.md#setpos) member function to set the position to a specific value. If necessary, the new position is adjusted to be within the range.  
+  
+ Typically, the progress control is used solely for output. To get the current position without specifying a new value, use [GetPos](../mfc/reference/cprogressctrl-class.md#getpos).  
+  
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

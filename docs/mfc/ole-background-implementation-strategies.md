@@ -1,51 +1,70 @@
 ---
-title: "OLE 背景：實作策略 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式 [OLE], 實作 OLE"
-  - "OLE [C++], 開發策略"
-  - "OLE 應用程式 [C++], 實作 OLE"
+title: 'OLE Background: Implementation Strategies | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE [MFC], development strategy
+- OLE applications [MFC], implementing OLE
+- applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# OLE 背景：實作策略
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ac98cd3ba6b9d75be159a51b35238ecec03126d0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-根據您的應用程式，則會加上 OLE 支援四種可能的實作策略：  
+---
+# <a name="ole-background-implementation-strategies"></a>OLE Background: Implementation Strategies
+Depending on your application, there are four possible implementation strategies for adding OLE support:  
   
--   撰寫新的應用程式。  
+-   You are writing a new application.  
   
-     這種情況通常需要最少工作。  您執行 MFC 應用程式精靈並選擇進階功能或複合文件支援建立基本架構應用程式。  如需這些選項的詳細資訊以及在做什麼，請參閱本文件的 [建立 MFC EXE 程式](../mfc/reference/mfc-application-wizard.md)。  
+     This situation usually requires the least work. You run the MFC Application Wizard and select either Advanced Features or Compound Document Support to create a skeleton application. For information on these options and what they do, see the article [Creating an MFC EXE Program](../mfc/reference/mfc-application-wizard.md).  
   
--   您有程式是以不支援 OLE 的MFC 程式庫版本 2.0 \(含\) 以上版本所撰寫的。  
+-   You have a program written with the Microsoft Foundation Class Library version 2.0 or higher that does not support OLE.  
   
-     如前所述建立 MFC 應用程式精靈建立新的應用程式，然後複製並貼上新應用程式的程式碼加入至現有的應用程式。  對於伺服器、容器或自動化應用程式中運作。  為這個策略的範例參閱 MFC [Scribble](../top/visual-cpp-samples.md) 範例。  
+     Create a new application with the MFC Application Wizard as previously mentioned, and then copy and paste the code from the new application into your existing application. This will work for servers, containers, or automated applications. See the MFC [SCRIBBLE](../visual-cpp-samples.md) sample for an example of this strategy.  
   
--   您可以實作 OLE 1.0 版支援的 MFC 程式庫程式。  
+-   You have a Microsoft Foundation Class Library program that implements OLE version 1.0 support.  
   
-     為這個轉換策略，請參閱 [MFC 技術提示 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) 。  
+     See [MFC Technical Note 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md) for this conversion strategy.  
   
--   您有尚未寫入使用 Microsoft Foundation Class，而且可以或不可以實作 OLE 支援的應用程式。  
+-   You have an application that was not written using the Microsoft Foundation Classes and that may or may not have implemented OLE support.  
   
-     這種情況需要大部分的工作。  一種方法是建立新的應用程式，在第一項策略，然後複製並貼上您現有的程式碼貼入其中。  如果現有的程式碼撰寫 C\#，則您可能需要修改，因此它可以當作 C\+\+ 程式碼編譯。  如果您的 C\# 程式碼呼叫 Windows API，則您不需要變更它使用 Microsoft Foundation Class。  這個方法可能會要求您的程式某些變更結構支援版本使用文件\/檢視架構 2.0 而 Microsoft Foundation Classes。  如需結構的詳細資訊，請參閱 [Technical Note 25](../mfc/tn025-document-view-and-frame-creation.md)。  
+     This situation requires the most work. One approach is to create a new application, as in the first strategy, and then copy and paste your existing code into it. If your existing code is written in C, then you may need to modify it so it can compile as C++ code. If your C code calls the Windows API, then you do not have to change it to use the Microsoft Foundation classes. This approach likely will require some restructuring of your program to support the document/view architecture used by versions 2.0 and higher of the Microsoft Foundation Classes. For more information on this architecture, see [Technical Note 25](../mfc/tn025-document-view-and-frame-creation.md).  
   
- 一旦決定了策略，您應該閱讀 [容器](../mfc/containers.md) 或 [伺服器](../mfc/servers.md) 文章 \(視您寫入\) 的應用程式類型或檢查範例程式或兩者。  MFC OLE、MFC 範例 [OCLIENT](../top/visual-cpp-samples.md) 和 [HIERSVR](../top/visual-cpp-samples.md) 分別顯示如何實作容器和伺服器的各個層面。  在這些文件中的幾個不同點，您將會在這些範例中參考的某些函式，如討論的技術之範例。  
+ Once you have decided on a strategy, you should either read the [Containers](../mfc/containers.md) or [Servers](../mfc/servers.md) articles (depending on the type of application you are writing) or examine the sample programs, or both. The MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md) show how to implement the various aspects of containers and servers, respectively. At various points throughout these articles, you will be referred to certain functions in these samples as examples of the techniques being discussed.  
   
-## 請參閱  
- [OLE 背景](../mfc/ole-background.md)   
- [容器：實作容器](../mfc/containers-implementing-a-container.md)   
- [伺服器：實作伺服器](../mfc/servers-implementing-a-server.md)   
- [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [Containers: Implementing a Container](../mfc/containers-implementing-a-container.md)   
+ [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md)   
+ [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md)
+
+

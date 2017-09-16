@@ -1,79 +1,98 @@
 ---
-title: "剪貼簿：複製和貼上資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剪貼簿, 複製資料至"
-  - "剪貼簿, 貼上"
+title: 'Clipboard: Copying and Pasting Data | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Clipboard, copying data to
+- Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 剪貼簿：複製和貼上資料
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19305f919f7276b17ac24c5e2907a8a84b23e13e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本主題說明實作複製到剪貼簿並貼至您的 OLE 應用程式所需的最低工作。  建議您在進行前先閱讀 [資料物件和資料來源 \(Object Linking and Embedding，OLE\)](../mfc/data-objects-and-data-sources-ole.md) 主題。  
+---
+# <a name="clipboard-copying-and-pasting-data"></a>Clipboard: Copying and Pasting Data
+This topic describes the minimum work necessary to implement copying to and pasting from the Clipboard in your OLE application. It is recommended that you read the [Data Objects and Data Sources (OLE)](../mfc/data-objects-and-data-sources-ole.md) topics before proceeding.  
   
- 在您可以實作複製或貼上之前，必須先在編輯功能表提供函式處理複製、剪下和貼上選項。  
+ Before you can implement either copying or pasting, you must first provide functions to handle the Copy, Cut, and Paste options on the Edit menu.  
   
-##  <a name="_core_copying_or_cutting_data"></a> 複製或剪下資料  
+##  <a name="_core_copying_or_cutting_data"></a> Copying or Cutting Data  
   
-#### 若要將資料複製到剪貼簿  
+#### <a name="to-copy-data-to-the-clipboard"></a>To copy data to the Clipboard  
   
-1.  判斷複製的資料是否為原生資料或是內嵌或連結的項目。  
+1.  Determine whether the data to be copied is native data or is an embedded or linked item.  
   
-    -   如果資料為內嵌資料或連接，請取得對選取的 `COleClientItem` 物件的指標。  
+    -   If the data is embedded or linked, obtain a pointer to the `COleClientItem` object that has been selected.  
   
-    -   如果資料是原生的，而且應用程式是伺服器，請建立包含選取資料衍生自 `COleServerItem` 的新物件。  否則，請建立資料的 `COleDataSource` 物件。  
+    -   If the data is native and the application is a server, create a new object derived from `COleServerItem` containing the selected data. Otherwise, create a `COleDataSource` object for the data.  
   
-2.  呼叫選取之項目的 `CopyToClipboard` 成員函式。  
+2.  Call the selected item's `CopyToClipboard` member function.  
   
-3.  如果使用者選取了剪下作業而不是複製作業，請刪除應用程式的選取資料。  
+3.  If the user chose a Cut operation instead of a Copy operation, delete the selected data from your application.  
   
- 若要查看這個序列的範例，請參閱 MFC OLE 範例程式 [OCLIENT](../top/visual-cpp-samples.md) 和 [HIERSVR](../top/visual-cpp-samples.md) 中的 **OnEditCut** 和 **OnEditCopy** 函式。  請注意這些範例維護指標目前所選的資料，因此，第 1 步驟已完成。  
+ To see an example of this sequence, see the **OnEditCut** and **OnEditCopy** functions in the MFC OLE sample programs [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md). Note that these samples maintain a pointer to the currently selected data, so step 1 is already complete.  
   
-##  <a name="_core_pasting_data"></a> 貼上資料  
- 貼上資料比複製它複雜，因為您在貼上需要選取將資料貼入應用程式的格式。  
+##  <a name="_core_pasting_data"></a> Pasting Data  
+ Pasting data is more complicated than copying it because you need to choose the format to use in pasting the data into your application.  
   
-#### 若要從剪貼簿貼上資料  
+#### <a name="to-paste-data-from-the-clipboard"></a>To paste data from the Clipboard  
   
-1.  在您的檢視類別，實作 **OnEditPaste** 處理使用者從\[編輯\]功能表選取粘貼選項。  
+1.  In your view class, implement **OnEditPaste** to handle users choosing the Paste option from the Edit menu.  
   
-2.  在 **OnEditPaste** 函式中，建立 `COleDataObject` 物件並呼叫它的 `AttachClipboard` 成員函式連接至資料的這個物件在剪貼簿上。  
+2.  In the **OnEditPaste** function, create a `COleDataObject` object and call its `AttachClipboard` member function to link this object to the data on the Clipboard.  
   
-3.  呼叫 `COleDataObject::IsDataAvailable` 檢查特定格式是否可用。  
+3.  Call `COleDataObject::IsDataAvailable` to check whether a particular format is available.  
   
-     或者，您可以使用 `COleDataObject::BeginEnumFormats` 尋找其他格式，直到您發現最適合您的應用程式。  
+     Alternately, you can use `COleDataObject::BeginEnumFormats` to look for other formats until you find one most suited to your application.  
   
-4.  執行格式的貼上  
+4.  Perform the paste of the format.  
   
- 如需這個範例的運作方式，請參閱 **OnEditPaste** 成員函式在 MFC OLE 範例程式 [OCLIENT](../top/visual-cpp-samples.md) 和 [HIERSVR](../top/visual-cpp-samples.md) 定義的檢視類別。  
+ For an example of how this works, see the implementation of the **OnEditPaste** member functions in the view classes defined in the MFC OLE sample programs [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md).  
   
 > [!TIP]
->  分隔貼上作業至他自己的函式的主要優點為相同的貼上程式碼可以在您的應用程式中的拖放作業期間使用。  如同在 OCLIENT 和 HIERSVR 中，您的 `OnDrop` 函式也可以呼叫 **DoPasteItem**，重複使用用來實作貼上作業的程式碼。  
+>  The main benefit of separating the paste operation into its own function is that the same paste code can be used when data is dropped in your application during a drag-and-drop operation. As in OCLIENT and HIERSVR, your `OnDrop` function can also call **DoPasteItem**, reusing the code written to implement Paste operations.  
   
- 若要處理在編輯功能表的貼上特殊選項，請參閱 [在 OLE 的對話方塊](../mfc/dialog-boxes-in-ole.md)主題。  
+ To handle the Paste Special option on the Edit menu, see the topic [Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md).  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [加入其他格式](../mfc/clipboard-adding-other-formats.md)  
+-   [Adding other formats](../mfc/clipboard-adding-other-formats.md)  
   
--   [OLE 資料物件和資料來源以及一致的資料傳輸。](../mfc/data-objects-and-data-sources-ole.md)  
+-   [OLE data objects and data sources and uniform data transfer](../mfc/data-objects-and-data-sources-ole.md)  
   
--   [OLE 拖放](../mfc/drag-and-drop-ole.md)  
+-   [OLE drag and drop](../mfc/drag-and-drop-ole.md)  
   
 -   [OLE](../mfc/ole-background.md)  
   
-## 請參閱  
- [剪貼簿：使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard: Using the OLE Clipboard Mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "is_member_object_pointer 類別 | Microsoft Docs"
+title: is_member_object_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_member_object_pointer
 - type_traits/std::is_member_object_pointer
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 4ceafd4a1b8ae366fe27f26c5fc067ed562af921
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 3710c02d1222682274db8a1cb5a5ce2a94b068f9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ismemberobjectpointer-class"></a>is_member_object_pointer 類別
-測試類型是否為成員物件的指標。  
+# <a name="ismemberobjectpointer-class"></a>is_member_object_pointer Class
+Tests if type is a pointer to member object.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_member_object_pointer;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- 要查詢的類型。  
+ The type to query.  
   
-## <a name="remarks"></a>備註  
- 如果類型 `Ty` 是成員物件的指標，或 `cv-qualified` 是成員物件的指標，則類型述詞的執行個體為 true，否則為 false。 請注意，如果 `Ty` 是成員函式的指標，則 `is_member_object_pointer` 會保留 false。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a pointer to member object or a `cv-qualified` pointer to member object, otherwise it holds false. Note that `is_member_object_pointer` holds false if `Ty` is a pointer to member function.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_member_object_pointer.cpp   
@@ -103,12 +102,12 @@ is_member_object_pointer<int trivial::*> == true
 is_member_object_pointer<int (functional::*)()> == false  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [is_member_pointer 類別](../standard-library/is-member-pointer-class.md)
+ [is_member_pointer Class](../standard-library/is-member-pointer-class.md)
 

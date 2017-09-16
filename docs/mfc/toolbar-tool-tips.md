@@ -1,80 +1,99 @@
 ---
-title: "工具列工具提示 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBRS_FLYBY 常數"
-  - "CBRS_TOOLTIPS 常數"
-  - "flyby 狀態列更新"
-  - "狀態列, 工具提示"
-  - "工具提示 [C++]"
-  - "工具提示 [C++], 啟動"
-  - "工具提示 [C++], 加入文字"
-  - "更新"
-  - "更新, 狀態列訊息"
-  - "更新狀態列訊息"
+title: Toolbar Tool Tips | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- tool tips [MFC], activating
+- CBRS_TOOLTIPS constant [MFC]
+- tool tips [MFC], adding text
+- updates [MFC]
+- CBRS_FLYBY constant [MFC]
+- tool tips [MFC]
+- updating status bar messages
+- updates, status bar messages
+- status bars [MFC], tool tips
+- flyby status bar updates
 ms.assetid: d1696305-b604-4fad-9f09-638878371412
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 工具列工具提示
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 766437e46f51610a032db8ed3c24e880be2b17c2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-工具提示會顯示工具列按鈕的用途的簡短描述的微小的快顯視窗，當您一段時間放置在按鈕上。  當您使用有工具列的應用程式精靈的應用程式時，工具提示支援提供。  本文說明兩個應用程式精靈建立的工具提示支援以及如何將工具提示支援加入至應用程式。  
+---
+# <a name="toolbar-tool-tips"></a>Toolbar Tool Tips
+Tool tips are the tiny popup windows that present short descriptions of a toolbar button's purpose when you position the mouse over a button for a period of time. When you create an application with the Application Wizard that has a toolbar, tool tip support is provided for you. This article explains both the tool tip support created by the Application Wizard and how to add tool tip support to your application.  
   
- 本文包括:  
+ This article covers:  
   
--   [啟動工具提示](#_core_activating_tool_tips)  
+-   [Activating tool tips](#_core_activating_tool_tips)  
   
--   [定點代表越狀態列更新](#_core_fly_by_status_bar_updates)  
+-   [Flyby status bar updates](#_core_fly_by_status_bar_updates)  
   
-##  <a name="_core_activating_tool_tips"></a> 啟動工具提示  
- 若要啟用應用程式的工具提示，您必須執行兩個動作:  
+##  <a name="_core_activating_tool_tips"></a> Activating Tool Tips  
+ To activate tool tips in your application, you must do two things:  
   
--   將 `CBRS_TOOLTIPS` 樣式套用至以 `dwStyle` 參數 \(例如 **WS\_CHILD**和 **WS\_VISIBLE**和 **CBRS\_** 其他樣式\) 傳遞的其他樣式套用至函式 [CToolBar::Create](../Topic/CToolBar::Create.md) 或 [SetBarStyle](../Topic/CControlBar::SetBarStyle.md)。  
+-   Add the `CBRS_TOOLTIPS` style to the other styles (such as **WS_CHILD**, **WS_VISIBLE**, and other **CBRS_** styles) passed as the `dwStyle` parameter to the [CToolBar::Create](../mfc/reference/ctoolbar-class.md#create) function or in [SetBarStyle](../mfc/reference/ccontrolbar-class.md#setbarstyle).  
   
--   依照下列程序所述，請附加工具列提示文字，以新行字元 \(「\\ n」\)，其中包含命令列提示字元中輸入工具列命令的字串資源。  字串資源共用工具列按鈕的 ID。  
+-   As described in the procedure below, append the toolbar tip text, separated by a newline character ('\n'), to the string resource containing the command-line prompt for the toolbar command. The string resource shares the ID of the toolbar button.  
   
-#### 將工具提示文字  
+#### <a name="to-add-the-tool-tip-text"></a>To add the tool tip text  
   
-1.  當您編輯工具列編輯器中的工具列，請開啟特定按鈕的 **Toolbar Button Properties** 視窗。  
+1.  While you are editing the toolbar in the toolbar editor, open the **Toolbar Button Properties** window for a given button.  
   
-2.  在 **Prompt** 方塊中，指定您希望出現在該按鈕的工具提示文字。  
+2.  In the **Prompt** box, specify the text you want to appear in the tool tip for that button.  
   
 > [!NOTE]
->  設定文字顯示為工具列編輯器的按鈕屬性取代程序之前，您必須開啟和編輯字串資源。  
+>  Setting the text as a button property in the toolbar editor replaces the former procedure, in which you had to open and edit the string resource.  
   
- 如果與工具提示允許的控制列在其上放置的子控制項，控制列將顯示每個子控制項的工具提示在控制列，只要符合下列準則:  
+ If a control bar with tool tips enabled has child controls placed on it, the control bar will display a tool tip for every child control on the control bar as long as it meets the following criteria:  
   
--   控制項的 ID 不是– 1。  
+-   The ID of the control is not - 1.  
   
--   ID 的字串資料表輸入和資源檔中的子控制項相同的工具提示字串。  
+-   The string-table entry with the same ID as the child control in the resource file has a tool tip string.  
   
-##  <a name="_core_fly_by_status_bar_updates"></a> 定點代表越狀態列更新  
- 功能與工具提示相關為定點代表越」狀態列更新。  根據預設，按鈕時，會啟動時，在狀態列中的訊息只描述特定工具列按鈕。  將 `CBRS_FLYBY` 樣式清單中傳遞至 `CToolBar::Create`，您可以讓這些訊息被更新，當滑鼠游標經過工具列時，而不用實際啟動按鈕。  
+##  <a name="_core_fly_by_status_bar_updates"></a> Flyby Status Bar Updates  
+ A feature related to tool tips is "flyby" status bar updating. By default, the message on the status bar describes only a particular toolbar button when the button is activated. By including `CBRS_FLYBY` in your list of styles passed to `CToolBar::Create`, you can have these messages updated when the mouse cursor passes over the toolbar without actually activating the button.  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [MFC 工具列實作 \(如需工具列的概觀資訊\)](../mfc/mfc-toolbar-implementation.md)  
+-   [MFC Toolbar Implementation (overview information on toolbars)](../mfc/mfc-toolbar-implementation.md)  
   
--   [停駐和浮動工具列](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) 類別  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
--   [與工具列控制項](../mfc/working-with-the-toolbar-control.md)  
+-   [Working with the toolbar control](../mfc/working-with-the-toolbar-control.md)  
   
--   [使用舊的工具列](../mfc/using-your-old-toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## 請參閱  
- [MFC 工具列實作](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

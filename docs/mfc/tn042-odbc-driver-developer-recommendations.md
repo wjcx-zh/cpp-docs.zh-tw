@@ -1,120 +1,139 @@
 ---
-title: "TN042：ODBC 驅動程式開發人員建議 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.odbc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料庫 [C++], ODBC"
-  - "ODBC 驅動程式 [C++], 撰寫"
-  - "TN042"
+title: 'TN042: ODBC Driver Developer Recommendations | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.odbc
+dev_langs:
+- C++
+helpviewer_keywords:
+- ODBC drivers [MFC], writing
+- databases [MFC], ODBC
+- TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN042：ODBC 驅動程式開發人員建議
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ca7b19b5f6e9c82ebf680f3c1728c21925bf6f34
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: ODBC Driver Developer Recommendations
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。  因此，有些程序和主題可能已過期或不正確。  如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 這個附註描述 ODBC 驅動程式寫入器的方針。  大綱功能 MFC ODBC 資料庫類別進行各種專案語意詳細資料的一般需求和做法。  支援三個 `CRecordset` 開啟模式所需的驅動程式功能 \(**forwardOnly**和 **snapshot** 和 **dynaset**\) 中所述。  
+ This note describes guidelines for ODBC driver writers. It outlines general requirements and assumptions of ODBC functionality that the MFC Database classes make, and various expected semantic details. Required driver functionality to support the three `CRecordset` Open modes (**forwardOnly**, **snapshot** and **dynaset**) are described.  
   
-## ODBC 資料指標程式庫  
- MFC 資料庫類別目前功能分類給在許多情況下多大部分層級 1 ODBC 驅動程式提供的功能的使用者。  所幸， ODBC 資料指標程式庫將分層自己在資料庫類別和驅動程式之間和自動提供這個額外的功能。  
+## <a name="odbcs-cursor-library"></a>ODBC's Cursor Library  
+ The MFC Database classes present functionality to the user that in many cases surpasses the functionality provided by most level 1 ODBC drivers. Fortunately, ODBC's Cursor Library will layer itself between the database classes and the driver, and will automatically provide much of this additional functionality.  
   
- 例如，大部分 1.0 驅動程式不支援向後捲動。  資料指標程式庫在 FETCH\_PREV 呼叫 **SQLExtendedFetch**可能偵測到和快取從驅動程式的資料列並顯示它們按照需求。  
+ For instance, most 1.0 drivers do not support backward scrolling. The Cursor Library can detect this, and will cache rows from the driver and present them as requested on FETCH_PREV calls in **SQLExtendedFetch**.  
   
- 資料指標程式庫相依性的另一個重要範例是定位更新。  大部分 1.0 驅動程式可能未將更新，不過，資料指標程式庫會產生識別資料來源的目標資料列會根據其目前快取的資料值的更新陳述式，或快取的時間戳記值。  
+ Another important example of cursor library dependence is positioned updates. Most 1.0 drivers also do not have positioned updates, but the cursor library will generate update statements which identify a target row on the data source based upon its current cached data values, or a cached timestamp value.  
   
- 類別庫從未使用多個資料列集。  因此，幾個 **SQLSetPos** 陳述式一律套用資料列 1 資料列集。  
+ The class library never makes use of multiple rowsets. Therefore, the few **SQLSetPos** statements are always applied to row 1 of the rowset.  
   
-## CDatabases  
- 每個 `CDatabase` 指派唯一 **HDBC**。\(如果使用 `CDatabase``ExecuteSQL` 函式，暫時配置 **HSTMT** \)。因此，如果需要多 entity\_CODECDatabase 的，必須支援多個 **HDBC**的每個 **HENV** 。  
+## <a name="cdatabases"></a>CDatabases  
+ Each `CDatabase` allocates a single **HDBC**. (If `CDatabase`'s `ExecuteSQL` function is used, an **HSTMT** is temporarily allocated.) So if multiple `CDatabase`'s are required, multiple **HDBC**s per **HENV** must be supported.  
   
- 資料庫類別要求資料指標程式庫。  這在 **SQLSetConnections** 呼叫 **SQL\_ODBC\_CURSORS**， **SQL\_CUR\_USE\_ODBC**反映。  
+ The database classes require the cursor library. This is reflected in a **SQLSetConnections** call **SQL_ODBC_CURSORS**, **SQL_CUR_USE_ODBC**.  
   
- `CDatabase::Open` 用來**SQLDriverConnectSQL\_DRIVER\_COMPLETE** ，建立與資料來源的連接。  
+ **SQLDriverConnect**, **SQL_DRIVER_COMPLETE** is used by `CDatabase::Open` to establish the connection to the data source.  
   
- 驅動程式必須支援 **SQLGetInfo SQL\_ODBC\_API\_CONFORMANCE** \>\= **SQL\_OAC\_LEVEL1**， **SQLGetInfo SQL\_ODBC\_SQL\_CONFORMANCE** \>\= **SQL\_OSC\_MINIMUM**。  
+ The driver must support **SQLGetInfo SQL_ODBC_API_CONFORMANCE** >= **SQL_OAC_LEVEL1**, **SQLGetInfo SQL_ODBC_SQL_CONFORMANCE** >= **SQL_OSC_MINIMUM**.  
   
- 為 `CDatabase` 和其相依的資料錄集要支援的交易， **SQLGetInfo SQL\_CURSOR\_COMMIT\_BEHAVIOR** 和 **SQL\_CURSOR\_ROLLBACK\_BEHAVIOR** 都必須有 **SQL\_CR\_PRESERVE**。  否則，嘗試執行交易控制將被忽略。  
+ In order for transactions to be supported for the `CDatabase` and its dependent recordsets, **SQLGetInfo SQL_CURSOR_COMMIT_BEHAVIOR** and **SQL_CURSOR_ROLLBACK_BEHAVIOR** must have **SQL_CR_PRESERVE**. Otherwise, attempts to perform transaction control will be ignored.  
   
- 必須支援**SQLGetInfoSQL\_DATA\_SOURCE\_READ\_ONLY** 。  如果它傳回「Y」，更新作業在資料來源不會執行。  
+ **SQLGetInfo SQL_DATA_SOURCE_READ_ONLY** must be supported. If it returns "Y", no update operations will be performed on the data source.  
   
- 如果 `CDatabase` 開啟的唯讀，嘗試設定唯讀資料來源以 **SQLSetConnectOption SQL\_ACCESS\_MODE**， **SQL\_MODE\_READ\_ONLY**會做出。  
+ If the `CDatabase` is opened ReadOnly, an attempt to set the data source read only will be made with **SQLSetConnectOption SQL_ACCESS_MODE**, **SQL_MODE_READ_ONLY**.  
   
- 如果識別項需要使用引號，應該從具有 **SQLGetInfo SQL\_IDENTIFIER\_QUOTE\_CHAR** 呼叫的驅動程式傳回這項資訊。  
+ If identifiers require quoting, this information should be returned from the driver with an **SQLGetInfo SQL_IDENTIFIER_QUOTE_CHAR** call.  
   
- 進行偵錯， **SQLGetInfo SQL\_DBMS\_VER** 和 **SQL\_DBMS\_NAME** 從驅動程式擷取。  
+ For debugging purposes, **SQLGetInfo SQL_DBMS_VER** and **SQL_DBMS_NAME** are retrieved from the driver.  
   
- **SQLSetStmtOption SQL\_QUERY\_TIMEOUT** 和 **SQL\_ASYNC\_ENABLE** 可能呼叫 `CDatabase`**HDBC**。  
+ **SQLSetStmtOption SQL_QUERY_TIMEOUT** and **SQL_ASYNC_ENABLE** may be called on a `CDatabase`'s **HDBC**.  
   
- **SQLError** 可能呼叫與任一或所有的引數為 null。  
+ **SQLError** may be called with any or all arguments NULL.  
   
- 當然，必須支援 **SQLAllocEnv**和 **SQLAllocConnect**和 **SQLDisconnect** 和 **SQLFreeConnect** 。  
+ Of course, **SQLAllocEnv**, **SQLAllocConnect**, **SQLDisconnect** and **SQLFreeConnect** must be supported.  
   
-## ExecuteSQL  
- 除了配置和釋放暫存 **HSTMT**之外， `ExecuteSQL` 呼叫 **SQLExecDirect**、、 **SQLNumResultCol** 和 **SQLFetch**`SQLMoreResults`。  **SQLCancel** 可能呼叫 **HSTMT**。  
+## <a name="executesql"></a>ExecuteSQL  
+ In addition to allocating and freeing a temporary **HSTMT**, `ExecuteSQL` calls **SQLExecDirect**, **SQLFetch**, **SQLNumResultCol** and `SQLMoreResults`. **SQLCancel** may be called on the **HSTMT**.  
   
-## GetDatabaseName  
- **SQLGetInfo SQL\_DATABASE\_NAME** 會呼叫。  
+## <a name="getdatabasename"></a>GetDatabaseName  
+ **SQLGetInfo SQL_DATABASE_NAME** will be called.  
   
-## BeginTrans，以及，復原  
- 如果交易產生要求，**SQLSetConnectOption SQL\_AUTOCOMMIT** 和 **SQLTransact SQL\_COMMIT**， **SQL\_ROLLBACK** 和 **SQL\_AUTOCOMMIT** 會呼叫。  
+## <a name="begintrans-committrans-rollback"></a>BeginTrans, CommitTrans, Rollback  
+ **SQLSetConnectOption SQL_AUTOCOMMIT** and **SQLTransact SQL_COMMIT**, **SQL_ROLLBACK** and **SQL_AUTOCOMMIT** will be called if transaction requests are made.  
   
-## CRecordsets  
- 必須支援**SQLAllocStmt**， **SQLPrepare**， **SQLExecute** \( **Open** 和 **Requery**\)， **SQLExecDirect** \(為更新作業\)， **SQLFreeStmt** 。  **SQLNumResultCols** 和 **SQLDescribeCol** 會呼叫在不同時間設定的結果。  
+## <a name="crecordsets"></a>CRecordsets  
+ **SQLAllocStmt**, **SQLPrepare**, **SQLExecute** (For **Open** and **Requery**), **SQLExecDirect** (for update operations), **SQLFreeStmt** must be supported. **SQLNumResultCols** and **SQLDescribeCol** will be called on the results set at various times.  
   
- **SQLSetParam** 為繫結參數資料和 **DATA\_AT\_EXEC** 功能大量使用。  
+ **SQLSetParam** is used extensively for binding parameter data and **DATA_AT_EXEC** functionality.  
   
- **SQLBindCol** 廣泛使用於登錄輸出行 ODBC 資料儲存體儲存位置。  
+ **SQLBindCol** is used extensively to register output Column data storage locations with ODBC.  
   
- 兩個 **SQLGetData** 呼叫用來擷取 **SQL\_LONG\_VARCHAR** 和 **SQL\_LONG\_VARBINARY** 資料。  先嘗試藉由呼叫 **SQLGetData** 尋找資料行值的總長度與 cbMaxValue 0，不過，以有效的 pcbValue。  如果 pcbValue 保留 **SQL\_NO\_TOTAL**，就會擲回例外狀況。  否則， `HGLOBAL` 會配置和進行的另一個 **SQLGetData** 呼叫擷取整個結果。  
+ Two **SQLGetData** calls are used to retrieve **SQL_LONG_VARCHAR** and **SQL_LONG_VARBINARY** data. The first call attempts to find the total length of the column value by calling **SQLGetData** with cbMaxValue of 0, but with a valid pcbValue. If pcbValue holds **SQL_NO_TOTAL**, an exception is thrown. Otherwise, an `HGLOBAL` is allocated, and another **SQLGetData** call made to retrieve the entire result.  
   
-## Updating  
- 如果封閉式鎖定要求， **SQLGetInfo SQL\_LOCK\_TYPES** 要查詢。  如果 **SQL\_LCK\_EXCLUSIVE** 不受支援，將擲回例外狀況。  
+## <a name="updating"></a>Updating  
+ If pessimistic locking is requested, **SQLGetInfo SQL_LOCK_TYPES** will be queried. If **SQL_LCK_EXCLUSIVE** is not supported, an exception will be thrown.  
   
- 嘗試更新 `CRecordset` \(**snapshot** 或 **dynaset**\) 會使一秒 **HSTMT** 配置。  對於不支援第二個 **HSTMT**的驅動程式，資料指標程式庫會模擬這項功能。  可惜的是，這有時可能表示強制在第一個 **HSTMT** 的目前查詢到完成處理第二個 **HSTMT** 要求。  
+ Attempts to update a `CRecordset` (**snapshot** or **dynaset**) will cause a second **HSTMT** to be allocated. For drivers that do not support second **HSTMT**, the cursor library will simulate this functionality. Unfortunately, this may sometimes mean forcing the current query on the first **HSTMT** to completion before processing the second **HSTMT**'s request.  
   
- 在更新作業期間，**SQLFreeStmt SQL\_CLOSE** 和 **SQL\_RESET\_PARAMS** 和 **SQLGetCursorName** 會呼叫。  
+ **SQLFreeStmt SQL_CLOSE** and **SQL_RESET_PARAMS** and **SQLGetCursorName** will be called during update operations.  
   
- 如果在 **outputColumns**的 **CLongBinarys** ， ODBC 的必須支援 **DATA\_AT\_EXEC** 功能。  這包括從傳回 **SQLExecDirect**和 **SQLParamData** 和 **SQLPutData**的 **SQL\_NEED\_DATA** 。  
+ If there are **CLongBinarys** in the **outputColumns**, ODBC's **DATA_AT_EXEC** functionality must be supported. This includes returning **SQL_NEED_DATA** from **SQLExecDirect**, **SQLParamData** and **SQLPutData**.  
   
- **SQLRowCount** 在執行驗證之後呼叫 **SQLExecDirect**只更新 1 筆資料錄。  
+ **SQLRowCount** is called after executing to verify that only 1 record was updated by the **SQLExecDirect**.  
   
-## 僅順向資料指標  
- 只有 **SQLFetch** 對於 **Move** 作業所需的。  請注意 **forwardOnly** 游標不支援更新。  
+## <a name="forwardonly-cursors"></a>ForwardOnly Cursors  
+ Only **SQLFetch** is required for the **Move** operations. Note that **forwardOnly** cursors do not support updates.  
   
-## 快照游標  
- 快照功能需要 **SQLExtendedFetch** 支援。  如先前所述， ODBC 資料指標程式庫會偵測驅動程式時不支援 **SQLExtendedFetch**，並提供必要的支援。  
+## <a name="snapshot-cursors"></a>Snapshot Cursors  
+ Snapshot functionality requires **SQLExtendedFetch** support. As noted above, the ODBC cursor library will detect when a driver does not support **SQLExtendedFetch**, and provide the necessary support itself.  
   
- **SQLGetInfo**， **SQL\_SCROLL\_OPTIONS** 必須支援 **SQL\_SO\_STATIC**。  
+ **SQLGetInfo**, **SQL_SCROLL_OPTIONS** must support **SQL_SO_STATIC**.  
   
-## Dynaset 游標  
- 下面所需的最小支援開啟動態集:  
+## <a name="dynaset-cursors"></a>Dynaset Cursors  
+ Below is the minimum support required to open a dynaset:  
   
- **SQLGetInfo**， **SQL\_ODBC\_VER** 必須傳回「 \> 01 "。  
+ **SQLGetInfo**, **SQL_ODBC_VER** must return > "01".  
   
- **SQLGetInfo**， **SQL\_SCROLL\_OPTIONS** 必須支援 **SQL\_SO\_KEYSET\_DRIVEN**。  
+ **SQLGetInfo**, **SQL_SCROLL_OPTIONS** must support **SQL_SO_KEYSET_DRIVEN**.  
   
- **SQLGetInfo**， **SQL\_ROW\_UPDATES** 必須傳回「Y」。  
+ **SQLGetInfo**, **SQL_ROW_UPDATES** must return "Y".  
   
- **SQLGetInfo**， **SQL\_POSITIONED\_UPDATES** 必須支援 **SQL\_PS\_POSITIONED\_DELETE** 和 **SQL\_PS\_POSITIONED\_UPDATE**。  
+ **SQLGetInfo**, **SQL_POSITIONED_UPDATES** must support **SQL_PS_POSITIONED_DELETE** and **SQL_PS_POSITIONED_UPDATE**.  
   
- 此外，如果，封閉式鎖定要求，對 **SQLSetPos** 的呼叫與 irow 1， fRefresh false 和群組 **SQL\_LCK\_EXCLUSIVE** 即將執行。  
+ In addition, if pessimistic locking is requested, a call to **SQLSetPos** with irow 1, fRefresh FALSE and fLock **SQL_LCK_EXCLUSIVE** will be made.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

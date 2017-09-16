@@ -1,5 +1,5 @@
 ---
-title: "CDBException 類別 |Microsoft 文件"
+title: CDBException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,11 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDBException class
-- exceptions [C++], database
-- database exceptions [C++]
-- ODBC classes [C++], exceptions
-- errors [C++], database
+- CDBException [MFC], m_nRetCode
+- CDBException [MFC], m_strError
+- CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
 caps.latest.revision: 23
 author: mikeblome
@@ -41,17 +39,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 4a82f66f0b6f6535de8e9707c2d68b94b7eb69c5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f3da8691ce7a16ffc8c20b32c1066697ad61d06
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdbexception-class"></a>CDBException 類別
-表示資料庫類別引發的例外狀況。  
+# <a name="cdbexception-class"></a>CDBException Class
+Represents an exception condition arising from the database classes.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDBException : public CException  
@@ -59,122 +57,122 @@ class CDBException : public CException
   
 ## <a name="members"></a>Members  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDBException::m_nRetCode](#m_nretcode)|包含開放式資料庫連接 (ODBC) 傳回碼，型別**RETCODE**。|  
-|[CDBException::m_strError](#m_strerror)|包含在英數字元的詞彙描述錯誤的字串。|  
-|[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|包含描述錯誤方面 ODBC 所傳回的錯誤碼的字串。|  
+|[CDBException::m_nRetCode](#m_nretcode)|Contains an Open Database Connectivity (ODBC) return code, of type **RETCODE**.|  
+|[CDBException::m_strError](#m_strerror)|Contains a string that describes the error in alphanumeric terms.|  
+|[CDBException::m_strStateNativeOrigin](#m_strstatenativeorigin)|Contains a string describing the error in terms of the error codes returned by ODBC.|  
   
-## <a name="remarks"></a>備註  
- 類別包含兩個公用資料成員，您可以使用以判斷造成例外狀況，或顯示描述例外狀況的文字訊息。 `CDBException`物件是建構，而且資料庫類別的成員函式所擲回。  
+## <a name="remarks"></a>Remarks  
+ The class includes two public data members you can use to determine the cause of the exception or to display a text message describing the exception. `CDBException` objects are constructed and thrown by member functions of the database classes.  
   
 > [!NOTE]
->  這個類別是其中一個 MFC 的開放式資料庫連接 (ODBC) 類別。 如果您改為使用較新的資料存取物件 (DAO) 類別，使用[CDaoException](../../mfc/reference/cdaoexception-class.md)改為。 DAO 類別的所有名稱都有"CDao"做為前置詞。 如需詳細資訊，請參閱文章[概觀︰ 資料庫程式設計](../../data/data-access-programming-mfc-atl.md)。  
+>  This class is one of MFC's Open Database Connectivity (ODBC) classes. If you are instead using the newer Data Access Objects (DAO) classes, use [CDaoException](../../mfc/reference/cdaoexception-class.md) instead. All DAO class names have "CDao" as a prefix. For more information, see the article [Overview: Database Programming](../../data/data-access-programming-mfc-atl.md).  
   
- 例外狀況會牽涉到外部程式的控制權，例如資料來源的狀況不正常執行的情況下，或網路 I/O 錯誤。 您可能會執行您的程式正常操作程序中看到的錯誤通常不考慮例外狀況。  
+ Exceptions are cases of abnormal execution involving conditions outside the program's control, such as data source or network I/O errors. Errors that you might expect to see in the normal course of executing your program are usually not considered exceptions.  
   
- 您可以存取這些物件的範圍內**攔截**運算式。 您也可以擲回`CDBException`物件從自己的程式碼與`AfxThrowDBException`全域函式。  
+ You can access these objects within the scope of a **CATCH** expression. You can also throw `CDBException` objects from your own code with the `AfxThrowDBException` global function.  
   
- 如需有關的一般情況下，或將例外狀況處理`CDBException`物件，請參閱文章[例外狀況處理 (MFC)](../../mfc/exception-handling-in-mfc.md)和[例外狀況︰ 資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)。  
+ For more information about exception handling in general, or about `CDBException` objects, see the articles [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md) and [Exceptions: Database Exceptions](../../mfc/exceptions-database-exceptions.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
   
  `CDBException`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdb.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-##  <a name="m_nretcode"></a>CDBException::m_nRetCode  
- 包含型別的 ODBC 錯誤碼**RETCODE** ODBC 應用程式的程式設計介面 (API) 函數所傳回。  
+##  <a name="m_nretcode"></a>  CDBException::m_nRetCode  
+ Contains an ODBC error code of type **RETCODE** returned by an ODBC application programming interface (API) function.  
   
-### <a name="remarks"></a>備註  
- 這種類型包括 ODBC 所定義的 SQL 前置碼和資料庫類別所定義的 AFX_SQL 前置碼。 如`CDBException`，這個成員會包含下列值之一︰  
+### <a name="remarks"></a>Remarks  
+ This type includes SQL-prefixed codes defined by ODBC and AFX_SQL-prefixed codes defined by the database classes. For a `CDBException`, this member will contain one of the following values:  
   
-- **AFX_SQL_ERROR_API_CONFORMANCE**的驅動程式`CDatabase::OpenEx`或`CDatabase::Open`呼叫不符合需要的 ODBC API 的一致性層級 1 ( **SQL_OAC_LEVEL1**)。  
+- **AFX_SQL_ERROR_API_CONFORMANCE** The driver for a `CDatabase::OpenEx` or `CDatabase::Open` call does not conform to required ODBC API Conformance level 1 ( **SQL_OAC_LEVEL1**).  
   
-- **AFX_SQL_ERROR_CONNECT_FAIL**資料來源連接失敗。 您傳遞**NULL** `CDatabase`指標資料錄集建構函式和建立連接的後續嘗試根據`GetDefaultConnect`失敗。  
+- **AFX_SQL_ERROR_CONNECT_FAIL** Connection to the data source failed. You passed a **NULL**`CDatabase` pointer to your recordset constructor and the subsequent attempt to create a connection based on `GetDefaultConnect` failed.  
   
-- **AFX_SQL_ERROR_DATA_TRUNCATED**要求超過您所提供的儲存體的資料。 如需增加的資料提供儲存體`CString`或`CByteArray`資料類型，請參閱`nMaxLength`引數[RFX_Text](record-field-exchange-functions.md#rfx_text)和[RFX_Binary](record-field-exchange-functions.md#rfx_binary)下 「 巨集和全域變數。 」  
+- **AFX_SQL_ERROR_DATA_TRUNCATED** You requested more data than you have provided storage for. For information on increasing the provided data storage for `CString` or `CByteArray` data types, see the `nMaxLength` argument for [RFX_Text](record-field-exchange-functions.md#rfx_text) and [RFX_Binary](record-field-exchange-functions.md#rfx_binary) under "Macros and Globals."  
   
-- **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED**呼叫`CRecordset::Open`要求動態集失敗。 驅動程式不支援 Dynaset。  
+- **AFX_SQL_ERROR_DYNASET_NOT_SUPPORTED** A call to `CRecordset::Open` requesting a dynaset failed. Dynasets are not supported by the driver.  
   
-- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST**您嘗試開啟資料表 (或您提供給無法辨識為程序呼叫或**選取**陳述式)，但沒有資料行中的資料錄欄位交換 (RFX) 函式呼叫中識別您`DoFieldExchange`覆寫。  
+- **AFX_SQL_ERROR_EMPTY_COLUMN_LIST** You attempted to open a table (or what you gave could not be identified as a procedure call or **SELECT** statement) but there are no columns identified in record field exchange (RFX) function calls in your `DoFieldExchange` override.  
   
-- **AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH** RFX 函式中的型別您`DoFieldExchange`覆寫與不相容的資料錄集中的資料行資料類型。  
+- **AFX_SQL_ERROR_FIELD_SCHEMA_MISMATCH** The type of an RFX function in your `DoFieldExchange` override is not compatible with the column data type in the recordset.  
   
-- **AFX_SQL_ERROR_ILLEGAL_MODE**您呼叫`CRecordset::Update`而不需要先前呼叫`CRecordset::AddNew`或`CRecordset::Edit`。  
+- **AFX_SQL_ERROR_ILLEGAL_MODE** You called `CRecordset::Update` without previously calling `CRecordset::AddNew` or `CRecordset::Edit`.  
   
-- **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED**無法完成您的要求鎖定記錄進行更新，因為 ODBC 驅動程式不支援鎖定。  
+- **AFX_SQL_ERROR_LOCK_MODE_NOT_SUPPORTED** Your request to lock records for update could not be fulfilled because your ODBC driver does not support locking.  
   
-- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**您呼叫`CRecordset::Update`或**刪除**沒有唯一索引鍵的資料表，而且變更多筆記錄。  
+- **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED** You called `CRecordset::Update` or **Delete** for a table with no unique key and changed multiple records.  
   
-- **AFX_SQL_ERROR_NO_CURRENT_RECORD**您嘗試編輯或刪除先前刪除的記錄。 您必須在刪除後，捲動到新的目前記錄。  
+- **AFX_SQL_ERROR_NO_CURRENT_RECORD** You attempted to edit or delete a previously deleted record. You must scroll to a new current record after a deletion.  
   
-- **AFX_SQL_ERROR_NO_POSITIONED_UPDATES**您的要求無法完成動態集，因為 ODBC 驅動程式不支援的定位更新。  
+- **AFX_SQL_ERROR_NO_POSITIONED_UPDATES** Your request for a dynaset could not be fulfilled because your ODBC driver does not support positioned updates.  
   
-- **AFX_SQL_ERROR_NO_ROWS_AFFECTED**您呼叫`CRecordset::Update`或**刪除**，但作業開始時找不到記錄。  
+- **AFX_SQL_ERROR_NO_ROWS_AFFECTED** You called `CRecordset::Update` or **Delete**, but when the operation began the record could no longer be found.  
   
-- **AFX_SQL_ERROR_ODBC_LOAD_FAILED**嘗試載入 ODBC。DLL 失敗;Windows 找不到或無法載入此 DLL。 這個錯誤是嚴重威脅。  
+- **AFX_SQL_ERROR_ODBC_LOAD_FAILED** An attempt to load the ODBC.DLL failed; Windows could not find or could not load this DLL. This error is fatal.  
   
-- **AFX_SQL_ERROR_ODBC_V2_REQUIRED**需要層級 2 相容的 ODBC 驅動程式，因此無法完成您要求的動態集。  
+- **AFX_SQL_ERROR_ODBC_V2_REQUIRED** Your request for a dynaset could not be fulfilled because a Level 2-compliant ODBC driver is required.  
   
-- **AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY**捲動嘗試失敗，因為資料來源不支援向後捲動。  
+- **AFX_SQL_ERROR_RECORDSET_FORWARD_ONLY** An attempt to scroll did not succeed because the data source does not support backward scrolling.  
   
-- **AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED**呼叫`CRecordset::Open`要求快照集失敗。 驅動程式不支援快照集。 (這應該只出現時的 ODBC 資料指標程式庫 ODBCCURS。DLL 不存在）。  
+- **AFX_SQL_ERROR_SNAPSHOT_NOT_SUPPORTED** A call to `CRecordset::Open` requesting a snapshot failed. Snapshots are not supported by the driver. (This should only occur when the ODBC cursor library ODBCCURS.DLL is not present.)  
   
-- **AFX_SQL_ERROR_SQL_CONFORMANCE**的驅動程式`CDatabase::OpenEx`或`CDatabase::Open`呼叫不符合必要的 「 最低 」 的 ODBC SQL 一致性層級 ( **SQL_OSC_MINIMUM**)。  
+- **AFX_SQL_ERROR_SQL_CONFORMANCE** The driver for a `CDatabase::OpenEx` or `CDatabase::Open` call does not conform to the required ODBC SQL Conformance level of "Minimum" ( **SQL_OSC_MINIMUM**).  
   
-- **AFX_SQL_ERROR_SQL_NO_TOTAL** ODBC 驅動程式無法指定的大小總計`CLongBinary`資料值。 作業可能失敗，因為預先未配置全域記憶體區塊。  
+- **AFX_SQL_ERROR_SQL_NO_TOTAL** The ODBC driver was unable to specify the total size of a `CLongBinary` data value. The operation probably failed because a global memory block could not be preallocated.  
   
-- **AFX_SQL_ERROR_RECORDSET_READONLY**您嘗試更新唯讀的資料錄集或資料來源是唯讀的。 資料錄集可以執行任何 update 作業或`CDatabase`相關聯的物件。  
+- **AFX_SQL_ERROR_RECORDSET_READONLY** You attempted to update a read-only recordset, or the data source is read-only. No update operations can be performed with the recordset or the `CDatabase` object it is associated with.  
   
-- **SQL_ERROR**函數失敗。 ODBC 函數所傳回的錯誤訊息**SQLError**會儲存在**m_strError**資料成員。  
+- **SQL_ERROR** Function failed. The error message returned by the ODBC function **SQLError** is stored in the **m_strError** data member.  
   
-- **SQL_INVALID_HANDLE**函式失敗，因為無效的環境控制代碼、 連接控制代碼或陳述式控制代碼。 這會指出程式設計錯誤。 沒有其他資訊可從 ODBC 函數**SQLError**。  
+- **SQL_INVALID_HANDLE** Function failed due to an invalid environment handle, connection handle, or statement handle. This indicates a programming error. No additional information is available from the ODBC function **SQLError**.  
   
- ODBC 所定義的 SQL 前置碼。 AFX 前置的碼 AFXDB 中定義。H、 MFC\INCLUDE 中找到。  
+ The SQL-prefixed codes are defined by ODBC. The AFX-prefixed codes are defined in AFXDB.H, found in MFC\INCLUDE.  
   
-##  <a name="m_strerror"></a>CDBException::m_strError  
- 包含描述錯誤造成的例外狀況的字串。  
+##  <a name="m_strerror"></a>  CDBException::m_strError  
+ Contains a string describing the error that caused the exception.  
   
-### <a name="remarks"></a>備註  
- 字串在英數字元的詞彙，描述錯誤。 如需詳細資訊和範例，請參閱**m_strStateNativeOrigin**。  
+### <a name="remarks"></a>Remarks  
+ The string describes the error in alphanumeric terms. For more detailed information and an example, see **m_strStateNativeOrigin**.  
   
-##  <a name="m_strstatenativeorigin"></a>CDBException::m_strStateNativeOrigin  
- 包含描述錯誤造成的例外狀況的字串。  
+##  <a name="m_strstatenativeorigin"></a>  CDBException::m_strStateNativeOrigin  
+ Contains a string describing the error that caused the exception.  
   
-### <a name="remarks"></a>備註  
- 字串為形式"狀態: %s，原生: %ld，來源: %s"，其中描述值會取代格式化程式碼中的，依序︰  
+### <a name="remarks"></a>Remarks  
+ The string is of the form "State:%s,Native:%ld,Origin:%s", where the format codes, in order, are replaced by values that describe:  
   
--   **SQLSTATE**、 null 結尾字串，包含五個字元中傳回錯誤碼*szSqlState* ODBC 函數的參數**SQLError**。 **SQLSTATE**值會列在 < 附錄 A， [ODBC 錯誤碼](https://msdn.microsoft.com/library/ms714687.aspx)，請在*ODBC 程式設計人員參考*。 範例: 「 S0022"。  
+-   The **SQLSTATE**, a null-terminated string containing a five-character error code returned in the *szSqlState* parameter of the ODBC function **SQLError**. **SQLSTATE** values are listed in Appendix A, [ODBC Error Codes](https://msdn.microsoft.com/library/ms714687.aspx), in the *ODBC Programmer's Reference*. Example: "S0022".  
   
--   中的原生錯誤碼，特定的資料來源，傳回*pfNativeError*參數**SQLError**函式。 範例︰ 207。  
+-   The native error code, specific to the data source, returned in the *pfNativeError* parameter of the **SQLError** function. Example: 207.  
   
--   錯誤訊息文字中傳回*szErrorMsg*參數**SQLError**函式。 此訊息包含數個以方括弧括住的名稱。 當錯誤從其來源傳遞給使用者時，每個 ODBC 元件 （驅動程式，驅動程式管理員中的 資料來源） 將附加自己的名稱。 這項資訊有助於找出錯誤的來源。 範例: [Microsoft] [ODBC SQL Server Driver] [SQL Server]  
+-   The error message text returned in the *szErrorMsg* parameter of the **SQLError** function. This message consists of several bracketed names. As an error is passed from its source to the user, each ODBC component (data source, driver, Driver Manager) appends its own name. This information helps to pinpoint the origin of the error. Example: [Microsoft][ODBC SQL Server Driver][SQL Server]  
   
- 架構會將錯誤字串解譯，並將放入其元件**m_strStateNativeOrigin**; 如果**m_strStateNativeOrigin**包含資訊的多個錯誤，錯誤會以換行分隔。 架構對英數字元的錯誤文字**m_strError**。  
+ The framework interprets the error string and puts its components into **m_strStateNativeOrigin**; if **m_strStateNativeOrigin** contains information for more than one error, the errors are separated by newlines. The framework puts the alphanumeric error text into **m_strError**.  
   
- 如需用來構成這個字串的程式碼的詳細資訊，請參閱[SQLError](https://msdn.microsoft.com/library/ms716312.aspx)函式在*ODBC 程式設計人員參考*。  
+ For additional information about the codes used to make up this string, see the [SQLError](https://msdn.microsoft.com/library/ms716312.aspx) function in the *ODBC Programmer's Reference*.  
   
-### <a name="example"></a>範例  
-  從 ODBC: 「 狀態︰ S0022、 原生︰ 207、 原點: [Microsoft] [ODBC SQL Server Driver] [SQL Server] 不正確的資料行名稱 'ColName' 」  
+### <a name="example"></a>Example  
+  From ODBC: "State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server] Invalid column name 'ColName'"  
   
- 在**m_strStateNativeOrigin**: 」 狀態︰ S0022、 原生︰ 207、 原點: [Microsoft] [ODBC SQL Server Driver] [SQL Server]"  
+ In **m_strStateNativeOrigin**: "State:S0022,Native:207,Origin:[Microsoft][ODBC SQL Server Driver][SQL Server]"  
   
- 在**m_strError**: 「 無效的資料行名稱 'ColName' 」  
+ In **m_strError**: "Invalid column name 'ColName'"  
   
-## <a name="see-also"></a>另請參閱  
- [CException 類別](../../mfc/reference/cexception-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CDatabase 類別](../../mfc/reference/cdatabase-class.md)   
- [CRecordset 類別](../../mfc/reference/crecordset-class.md)   
- [CFieldExchange 類別](../../mfc/reference/cfieldexchange-class.md)   
+## <a name="see-also"></a>See Also  
+ [CException Class](../../mfc/reference/cexception-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset Class](../../mfc/reference/crecordset-class.md)   
+ [CFieldExchange Class](../../mfc/reference/cfieldexchange-class.md)   
  [CRecordset::Update](../../mfc/reference/crecordset-class.md#update)   
  [CRecordset::Delete](../../mfc/reference/crecordset-class.md#delete)   
- [CException 類別](../../mfc/reference/cexception-class.md)
+ [CException Class](../../mfc/reference/cexception-class.md)
 

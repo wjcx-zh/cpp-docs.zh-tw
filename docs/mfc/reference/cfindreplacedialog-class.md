@@ -1,5 +1,5 @@
 ---
-title: "CFindReplaceDialog 類別 |Microsoft 文件"
+title: CFindReplaceDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,12 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- text searches, replacing text
-- text searches, CFindReplaceDialog class
-- Find/Replace dialog box
-- replacing text, CFindReplaceDialog class
-- CFindReplaceDialog class
-- replacing text
+- CFindReplaceDialog [MFC], CFindReplaceDialog
+- CFindReplaceDialog [MFC], Create
+- CFindReplaceDialog [MFC], FindNext
+- CFindReplaceDialog [MFC], GetFindString
+- CFindReplaceDialog [MFC], GetNotifier
+- CFindReplaceDialog [MFC], GetReplaceString
+- CFindReplaceDialog [MFC], IsTerminating
+- CFindReplaceDialog [MFC], MatchCase
+- CFindReplaceDialog [MFC], MatchWholeWord
+- CFindReplaceDialog [MFC], ReplaceAll
+- CFindReplaceDialog [MFC], ReplaceCurrent
+- CFindReplaceDialog [MFC], SearchDown
+- CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
 caps.latest.revision: 25
 author: mikeblome
@@ -52,17 +59,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 6ec814e3e96addfdadaaaa855260c8dbd495537e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dac8fd589c2350d6964a0108efb25fc362a13910
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 類別
-可讓您在您的應用程式中實作的標準字串尋找/取代對話方塊。  
+# <a name="cfindreplacedialog-class"></a>CFindReplaceDialog Class
+Allows you to implement standard string Find/Replace dialog boxes in your application.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CFindReplaceDialog : public CCommonDialog  
@@ -70,56 +77,56 @@ class CFindReplaceDialog : public CCommonDialog
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|呼叫此函式來建構`CFindReplaceDialog`物件。|  
+|[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Call this function to construct a `CFindReplaceDialog` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFindReplaceDialog::Create](#create)|建立並顯示`CFindReplaceDialog` 對話方塊。|  
-|[CFindReplaceDialog::FindNext](#findnext)|呼叫此函式可判斷使用者是否想要尋找尋找字串的下一個出現位置。|  
-|[CFindReplaceDialog::GetFindString](#getfindstring)|呼叫此函式可擷取目前尋找字串。|  
-|[CFindReplaceDialog::GetNotifier](#getnotifier)|呼叫此函式可擷取**FINDREPLACE**已註冊的訊息處理常式中的結構。|  
-|[CFindReplaceDialog::GetReplaceString](#getreplacestring)|呼叫此函式可擷取目前的取代字串。|  
-|[CFindReplaceDialog::IsTerminating](#isterminating)|呼叫此函式可判斷是否已終止 對話方塊。|  
-|[CFindReplaceDialog::MatchCase](#matchcase)|呼叫此函式可判斷使用者是否想要完全符合尋找字串的大小寫。|  
-|[CFindReplaceDialog::MatchWholeWord](#matchwholeword)|呼叫此函式可判斷使用者是否想要比對整個的文字。|  
-|[CFindReplaceDialog::ReplaceAll](#replaceall)|呼叫此函式可判斷使用者是否想要被取代字串的所有項目。|  
-|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|呼叫此函式可判斷使用者是否想要取代目前的文字。|  
-|[CFindReplaceDialog::SearchDown](#searchdown)|呼叫此函式可判斷使用者是否要繼續往下方向搜尋。|  
+|[CFindReplaceDialog::Create](#create)|Creates and displays a `CFindReplaceDialog` dialog box.|  
+|[CFindReplaceDialog::FindNext](#findnext)|Call this function to determine whether the user wants to find the next occurrence of the find string.|  
+|[CFindReplaceDialog::GetFindString](#getfindstring)|Call this function to retrieve the current find string.|  
+|[CFindReplaceDialog::GetNotifier](#getnotifier)|Call this function to retrieve the **FINDREPLACE** structure in your registered message handler.|  
+|[CFindReplaceDialog::GetReplaceString](#getreplacestring)|Call this function to retrieve the current replace string.|  
+|[CFindReplaceDialog::IsTerminating](#isterminating)|Call this function to determine whether the dialog box is terminating.|  
+|[CFindReplaceDialog::MatchCase](#matchcase)|Call this function to determine whether the user wants to match the case of the find string exactly.|  
+|[CFindReplaceDialog::MatchWholeWord](#matchwholeword)|Call this function to determine whether the user wants to match entire words only.|  
+|[CFindReplaceDialog::ReplaceAll](#replaceall)|Call this function to determine whether the user wants all occurrences of the string to be replaced.|  
+|[CFindReplaceDialog::ReplaceCurrent](#replacecurrent)|Call this function to determine whether the user wants the current word to be replaced.|  
+|[CFindReplaceDialog::SearchDown](#searchdown)|Call this function to determine whether the user wants the search to proceed in a downward direction.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CFindReplaceDialog::m_fr](#m_fr)|結構，用來自訂`CFindReplaceDialog`物件。|  
+|[CFindReplaceDialog::m_fr](#m_fr)|A structure used to customize a `CFindReplaceDialog` object.|  
   
-## <a name="remarks"></a>備註  
- 不像其他 Windows 通用對話方塊，`CFindReplaceDialog`物件會非強制回應，可讓使用者在螢幕上時，與其他 windows 互動。 有兩種類型的`CFindReplaceDialog`物件︰ 尋找對話方塊和尋找/取代對話方塊。 雖然對話方塊可讓使用者輸入的搜尋，並搜尋/取代字串，它們不執行任何搜尋或取代函式。 您必須將這些新增到應用程式。  
+## <a name="remarks"></a>Remarks  
+ Unlike the other Windows common dialog boxes, `CFindReplaceDialog` objects are modeless, allowing users to interact with other windows while they are on screen. There are two kinds of `CFindReplaceDialog` objects: Find dialog boxes and Find/Replace dialog boxes. Although the dialog boxes allow the user to input search and search/replace strings, they do not perform any of the searching or replacing functions. You must add these to the application.  
   
- 若要建構`CFindReplaceDialog`物件，請使用提供的建構函式 （它沒有任何引數）。 由於這是強制回應對話方塊時，配置堆積上的物件**新**運算子，而不是在堆疊上。  
+ To construct a `CFindReplaceDialog` object, use the provided constructor (which has no arguments). Since this is a modeless dialog box, allocate the object on the heap using the **new** operator, rather than on the stack.  
   
- 一次`CFindReplaceDialog`在建構物件，您必須呼叫[建立](#create)成員函式來建立和顯示對話方塊。  
+ Once a `CFindReplaceDialog` object has been constructed, you must call the [Create](#create) member function to create and display the dialog box.  
   
- 使用[m_fr](#m_fr)結構，以初始化對話方塊中，然後再呼叫**建立**。 `m_fr`結構的類型是[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 如需有關此結構的詳細資訊，請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Use the [m_fr](#m_fr) structure to initialize the dialog box before calling **Create**. The `m_fr` structure is of type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). For more information on this structure, see the Windows SDK.  
   
- 為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函式，並使用[ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message)您處理這個已註冊的訊息的框架視窗中的訊息對應巨集。  
+ In order for the parent window to be notified of find/replace requests, you must use the Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function and use the [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) message-map macro in your frame window that handles this registered message.  
   
- 您可以判斷使用者是否已決定要終止與對話方塊`IsTerminating`成員函式。  
+ You can determine whether the user has decided to terminate the dialog box with the `IsTerminating` member function.  
   
- `CFindReplaceDialog`依賴 COMMDLG。隨附於 Windows 版本 3.1 和更新版本的 DLL 檔案。  
+ `CFindReplaceDialog` relies on the COMMDLG.DLL file that ships with Windows versions 3.1 and later.  
   
- 若要自訂對話方塊中，衍生自`CFindReplaceDialog`，提供自訂對話方塊範本中，加入處理從擴充的控制項通知訊息的訊息對應。 任何未處理的訊息應該傳遞至基底類別。  
+ To customize the dialog box, derive a class from `CFindReplaceDialog`, provide a custom dialog template, and add a message map to process the notification messages from the extended controls. Any unprocessed messages should be passed to the base class.  
   
- 自訂攔截函式不需要。  
+ Customizing the hook function is not required.  
   
- 如需有關使用`CFindReplaceDialog`，請參閱[通用對話方塊類別](../../mfc/common-dialog-classes.md)。  
+ For more information on using `CFindReplaceDialog`, see [Common Dialog Classes](../../mfc/common-dialog-classes.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -132,28 +139,28 @@ class CFindReplaceDialog : public CCommonDialog
   
  `CFindReplaceDialog`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cfindreplacedialog"></a>CFindReplaceDialog::CFindReplaceDialog  
- 建構 `CFindReplaceDialog` 物件。  
+##  <a name="cfindreplacedialog"></a>  CFindReplaceDialog::CFindReplaceDialog  
+ Constructs a `CFindReplaceDialog` object.  
   
 ```  
 CFindReplaceDialog();
 ```  
   
-### <a name="remarks"></a>備註  
- 因為`CFindReplaceDialog`物件非強制回應對話方塊，您必須先將它在堆積上建構，使用`new`運算子。  
+### <a name="remarks"></a>Remarks  
+ Because the `CFindReplaceDialog` object is a modeless dialog box, you must construct it on the heap by using the `new` operator.  
   
- 解構期間，架構會嘗試執行`delete this`指標 對話方塊。 如果您在堆疊上，建立對話方塊`this`指標不存在，而且可能造成未定義的行為。  
+ During destruction, the framework tries to perform a `delete this` on the pointer to the dialog box. If you created the dialog box on the stack, the `this` pointer does not exist and undefined behavior may result.  
   
- 如需有關建構`CFindReplaceDialog`物件，請參閱[CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)概觀。 使用[CFindReplaceDialog::Create](#create)成員函式來顯示對話方塊。  
+ For more information on the construction of `CFindReplaceDialog` objects, see the [CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md) overview. Use the [CFindReplaceDialog::Create](#create) member function to display the dialog box.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#170](../../mfc/codesnippet/cpp/cfindreplacedialog-class_1.cpp)]  
   
-##  <a name="create"></a>CFindReplaceDialog::Create  
- 建立並顯示 尋找 或 尋找/取代對話方塊物件，根據的值`bFindDialogOnly`。  
+##  <a name="create"></a>  CFindReplaceDialog::Create  
+ Creates and displays either a Find or Find/Replace dialog box object, depending on the value of `bFindDialogOnly`.  
   
 ```  
 virtual BOOL Create(
@@ -164,179 +171,179 @@ virtual BOOL Create(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bFindDialogOnly`  
- 這個參數設定為`TRUE`顯示**尋找** 對話方塊。 將它設定為`FALSE`顯示**尋找/取代** 對話方塊。  
+ Set this parameter to `TRUE` to display a **Find** dialog box. Set it to `FALSE` to display a **Find/Replace** dialog box.  
   
  `lpszFindWhat`  
- 當對話方塊出現時的預設搜尋字串的指標。 如果`NULL`，對話方塊不包含預設的搜尋字串。  
+ Pointer to the default search string when the dialog box appears. If `NULL`, the dialog box does not contain a default search string.  
   
  `lpszReplaceWith`  
- 當對話方塊出現時，預設取代字串的指標。 如果`NULL`，對話方塊不包含預設值取代字串。  
+ Pointer to the default replacement string when the dialog box appears. If `NULL`, the dialog box does not contain a default replacement string.  
   
  `dwFlags`  
- 一或多個旗標可用於自訂的對話方塊中，使用位元 OR 運算子結合在一起設定。 預設值是`FR_DOWN`，指定是要繼續往下方向搜尋。 請參閱[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]有關這些旗標。  
+ One or more flags you can use to customize the settings of the dialog box, combined using the bitwise OR operator. The default value is `FR_DOWN`, which specifies that the search is to proceed in a downward direction. See the [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835) structure in the Windows SDK for more information on these flags.  
   
  `pParentWnd`  
- 對話方塊的父系或擁有者視窗的指標。 這是視窗，將會收到指出要求之尋找/取代動作的特殊訊息。 如果`NULL`，使用應用程式的主視窗。  
+ A pointer to the dialog box's parent or owner window. This is the window that will receive the special message indicating that a find/replace action is requested. If `NULL`, the main window of the application is used.  
   
-### <a name="return-value"></a>傳回值  
- 已成功建立對話方塊物件; 如果為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the dialog box object was successfully created; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 為了讓父視窗的 尋找/取代要求通知，您必須使用 Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)函式的傳回值是唯一的應用程式執行個體的訊息編號。 框架視窗應該有回呼函式宣告的訊息對應項目 (`OnFindReplace`接下來的範例中)，會處理已註冊的訊息。 下列程式碼片段是如何執行此動作的框架視窗類別的範例`CMyRichEditView`:  
+### <a name="remarks"></a>Remarks  
+ In order for the parent window to be notified of find/replace requests, you must use the Windows [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947) function whose return value is a message number unique to the application's instance. Your frame window should have a message map entry that declares the callback function ( `OnFindReplace` in the example that follows) that handles this registered message. The following code fragment is an example of how to do this for a frame window class named `CMyRichEditView`:  
   
- [!code-cpp[NVC_MFCDocView # 171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
+ [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]  
   
- [!code-cpp[NVC_MFCDocView # 172](../../mfc/codesnippet/cpp/cfindreplacedialog-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#172](../../mfc/codesnippet/cpp/cfindreplacedialog-class_3.cpp)]  
   
- [!code-cpp[NVC_MFCDocView # 173](../../mfc/codesnippet/cpp/cfindreplacedialog-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#173](../../mfc/codesnippet/cpp/cfindreplacedialog-class_4.cpp)]  
   
- 在您`OnFindReplace`函式，您使用解譯的使用者是否同意[CFindReplaceDialog::FindNext](#findnext)和[CFindReplaceDialog::IsTerminating](#isterminating)方法和您建立尋找/取代作業的程式碼。  
+ Within your `OnFindReplace` function, you interpret the intentions of the user by using the [CFindReplaceDialog::FindNext](#findnext) and [CFindReplaceDialog::IsTerminating](#isterminating) methods and you create the code for the find/replace operations.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="findnext"></a>CFindReplaceDialog::FindNext  
- 從您的回呼函式，以判斷使用者是否想要搜尋字串的下一個呼叫此函式。  
+##  <a name="findnext"></a>  CFindReplaceDialog::FindNext  
+ Call this function from your callback function to determine whether the user wants to find the next occurrence of the search string.  
   
 ```  
 BOOL FindNext() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果使用者想要搜尋的字串; 的下一個非零，否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants to find the next occurrence of the search string; otherwise 0.  
   
-##  <a name="getfindstring"></a>CFindReplaceDialog::GetFindString  
- 呼叫此函式，從您的回呼函式來擷取要尋找的預設字串。  
+##  <a name="getfindstring"></a>  CFindReplaceDialog::GetFindString  
+ Call this function from your callback function to retrieve the default string to find.  
   
 ```  
 CString GetFindString() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 要尋找的預設字串。  
+### <a name="return-value"></a>Return Value  
+ The default string to find.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getnotifier"></a>CFindReplaceDialog::GetNotifier  
- 呼叫此函式可擷取目前的尋找取代對話方塊中的指標。  
+##  <a name="getnotifier"></a>  CFindReplaceDialog::GetNotifier  
+ Call this function to retrieve a pointer to the current Find Replace dialog box.  
   
 ```  
 static CFindReplaceDialog* PASCAL GetNotifier(LPARAM lParam);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lParam`  
- **Lparam**值傳遞至框架視窗的**OnFindReplace**成員函式。  
+ The **lparam** value passed to the frame window's **OnFindReplace** member function.  
   
-### <a name="return-value"></a>傳回值  
- 目前對話方塊指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the current dialog box.  
   
-### <a name="remarks"></a>備註  
- 應該在您的回呼函式中用來存取目前的對話方塊，請呼叫其成員函式和存取`m_fr`結構。  
+### <a name="remarks"></a>Remarks  
+ It should be used within your callback function to access the current dialog box, call its member functions, and access the `m_fr` structure.  
   
-### <a name="example"></a>範例  
- 請參閱[CFindReplaceDialog::Create](#create)如需如何註冊 OnFindReplace 處理常式，來尋找取代 對話方塊中接收通知的範例。  
+### <a name="example"></a>Example  
+ See [CFindReplaceDialog::Create](#create) for an example of how to register the OnFindReplace handler to receive notifications from the Find Replace dialog box.  
   
- [!code-cpp[NVC_MFCDocView # 69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
+ [!code-cpp[NVC_MFCDocView#69](../../mfc/codesnippet/cpp/cfindreplacedialog-class_5.cpp)]  
   
-##  <a name="getreplacestring"></a>CFindReplaceDialog::GetReplaceString  
- 呼叫此函式可擷取目前的取代字串。  
+##  <a name="getreplacestring"></a>  CFindReplaceDialog::GetReplaceString  
+ Call this function to retrieve the current replace string.  
   
 ```  
 CString GetReplaceString() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 預設的字串，用來取代找到的字串。  
+### <a name="return-value"></a>Return Value  
+ The default string with which to replace found strings.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CFindReplaceDialog::GetFindString](#getfindstring)。  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="isterminating"></a>CFindReplaceDialog::IsTerminating  
- 呼叫此函式回呼函式來判斷使用者是否已決定要終止的對話方塊內。  
+##  <a name="isterminating"></a>  CFindReplaceDialog::IsTerminating  
+ Call this function within your callback function to determine whether the user has decided to terminate the dialog box.  
   
 ```  
 BOOL IsTerminating() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果使用者已決定要結束對話方塊。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user has decided to terminate the dialog box; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果此函數會傳回非零，您應該呼叫`DestroyWindow`目前對話方塊和任何對話方塊指標變數的集合的成員函式**NULL**。 （選擇性） 您也可以儲存最後輸入的尋找/取代文字，並使用它來初始化下一個尋找/取代對話方塊。  
+### <a name="remarks"></a>Remarks  
+ If this function returns nonzero, you should call the `DestroyWindow` member function of the current dialog box and set any dialog box pointer variable to **NULL**. Optionally, you can also store the find/replace text last entered and use it to initialize the next find/replace dialog box.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CFindReplaceDialog::GetFindString](#getfindstring)。  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::GetFindString](#getfindstring).  
   
-##  <a name="m_fr"></a>CFindReplaceDialog::m_fr  
- 用來自訂`CFindReplaceDialog`物件。  
+##  <a name="m_fr"></a>  CFindReplaceDialog::m_fr  
+ Used to customize a `CFindReplaceDialog` object.  
   
 ```  
 FINDREPLACE m_fr;  
 ```  
   
-### <a name="remarks"></a>備註  
- `m_fr`是一種類型的結構[FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835)。 其成員儲存對話方塊物件的特性。 之後建構`CFindReplaceDialog`物件，您可以使用`m_fr`來修改在對話方塊中的各種值。  
+### <a name="remarks"></a>Remarks  
+ `m_fr` is a structure of type [FINDREPLACE](http://msdn.microsoft.com/library/windows/desktop/ms646835). Its members store the characteristics of the dialog-box object. After constructing a `CFindReplaceDialog` object, you can use `m_fr` to modify various values in the dialog box.  
   
- 如需有關此結構的詳細資訊，請參閱**FINDREPLACE**結構[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on this structure, see the **FINDREPLACE** structure in the Windows SDK.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)。  
+### <a name="example"></a>Example  
+  See the example for [CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog).  
   
-##  <a name="matchcase"></a>CFindReplaceDialog::MatchCase  
- 呼叫此函式可判斷使用者是否想要完全符合尋找字串的大小寫。  
+##  <a name="matchcase"></a>  CFindReplaceDialog::MatchCase  
+ Call this function to determine whether the user wants to match the case of the find string exactly.  
   
 ```  
 BOOL MatchCase() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果使用者想要尋找完全相符的搜尋字串，大小寫的搜尋字串的出現非零，否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants to find occurrences of the search string that exactly match the case of the search string; otherwise 0.  
   
-##  <a name="matchwholeword"></a>CFindReplaceDialog::MatchWholeWord  
- 呼叫此函式可判斷使用者是否想要比對整個的文字。  
+##  <a name="matchwholeword"></a>  CFindReplaceDialog::MatchWholeWord  
+ Call this function to determine whether the user wants to match entire words only.  
   
 ```  
 BOOL MatchWholeWord() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果使用者想要比對整個文字的搜尋字串。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants to match only the entire words of the search string; otherwise 0.  
   
-##  <a name="replaceall"></a>CFindReplaceDialog::ReplaceAll  
- 呼叫此函式可判斷使用者是否想要被取代字串的所有項目。  
+##  <a name="replaceall"></a>  CFindReplaceDialog::ReplaceAll  
+ Call this function to determine whether the user wants all occurrences of the string to be replaced.  
   
 ```  
 BOOL ReplaceAll() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果使用者已要求，會取代所有相符的取代字串的字串;否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user has requested that all strings matching the replace string be replaced; otherwise 0.  
   
-##  <a name="replacecurrent"></a>CFindReplaceDialog::ReplaceCurrent  
- 呼叫此函式可判斷使用者是否想要取代目前的文字。  
+##  <a name="replacecurrent"></a>  CFindReplaceDialog::ReplaceCurrent  
+ Call this function to determine whether the user wants the current word to be replaced.  
   
 ```  
 BOOL ReplaceCurrent() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果使用者已要求來取代目前選取的字串取代字串。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user has requested that the currently selected string be replaced with the replace string; otherwise 0.  
   
-##  <a name="searchdown"></a>CFindReplaceDialog::SearchDown  
- 呼叫此函式可判斷使用者是否要繼續往下方向搜尋。  
+##  <a name="searchdown"></a>  CFindReplaceDialog::SearchDown  
+ Call this function to determine whether the user wants the search to proceed in a downward direction.  
   
 ```  
 BOOL SearchDown() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果使用者想要以向下的方向; 繼續進行搜尋0，如果使用者想要向上繼續搜尋。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user wants the search to proceed in a downward direction; 0 if the user wants the search to proceed in an upward direction.  
   
-## <a name="see-also"></a>另請參閱  
- [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)  
+## <a name="see-also"></a>See Also  
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)  
 

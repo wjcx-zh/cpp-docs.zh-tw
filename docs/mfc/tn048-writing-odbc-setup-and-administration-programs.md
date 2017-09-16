@@ -1,66 +1,84 @@
 ---
-title: "TN048：撰寫 MFC 資料庫應用程式的 ODBC 安裝和管理程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.odbc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "安裝 ODBC"
-  - "MFC, 資料庫應用程式"
-  - "ODBC, 與 MFC"
-  - "ODBC, 安裝"
-  - "設定, ODBC 安裝程式"
-  - "TN048"
+title: 'TN048: Writing ODBC Setup and Administration Programs for MFC Database Applications | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.odbc
+dev_langs:
+- C++
+helpviewer_keywords:
+- installing ODBC
+- ODBC, installing
+- setup, ODBC setup programs
+- TN048
+- ODBC, and MFC
+- MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN048：撰寫 MFC 資料庫應用程式的 ODBC 安裝和管理程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b7ccc6afffa028589ddc86e9f0a6124425aa0d8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Writing ODBC Setup and Administration Programs for MFC Database Applications
 > [!NOTE]
->  下列技術提示自其納入線上文件以來，未曾更新。  因此，有些程序和主題可能已過期或不正確。  如需最新資訊，建議您在線上文件索引中搜尋相關的主題。  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- 使用 MFC 資料庫類別的應用程式需要安裝 ODBC 元件的安裝程式。  它們可能也需要將擷取關於可用驅動程式的資訊，指定預設磁碟機和設定資料來源的 ODBC 管理員程式。  這個會描述使用 ODBC 安裝程式 API 撰寫這些程式。  
+ Applications using MFC database classes will need a setup program that installs ODBC components. They may also need an ODBC Administration program that will retrieve information about the available drivers, to specify default drivers and to configure data sources. This note describes the use of the ODBC Installer API to write these programs.  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> 寫入 ODBC 安裝程式  
- MFC 資料庫應用程式要求 ODBC 驅動程式管理員 \(ODBC.DLL\) 和 ODBC 驅動程式可以有資料來源。  許多 ODBC 驅動程式可能需要其他網路通訊和 DLL。  大部分的 ODBC 驅動程式隨附於安裝必要的 ODBC 元件的安裝程式。  使用 MFC 資料庫類別的應用程式開發人員可以:  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Writing an ODBC Setup Program  
+ An MFC database application requires the ODBC Driver Manager (ODBC.DLL) and ODBC drivers to be able to get to data sources. Many ODBC drivers also require additional network and communication DLLs. Most ODBC drivers ship with a setup program that will install the required ODBC components. Application developers using MFC database classes can:  
   
--   根據安裝的元件 ODBC 驅動程式特定安裝程式。  這不需要在部分的開發人員的進一步工作可以轉散發驅動程式的安裝程式。  
+-   Rely on the driver-specific setup programs for installing ODBC components. This will require no further work on the developer's part — you can just redistribute the driver's setup program.  
   
--   或者，您可以撰寫自己的安裝程式，安裝驅動程式管理員和驅動程式。  
+-   Alternatively, you can write your own setup program, which will install the driver manager and the driver.  
   
- ODBC 安裝程式 API 可用來寫入應用程式特定的安裝程式。  在安裝程式 API 的函式是由 ODBC 安裝程式 DLL \(在 16 位元 Windows 上為在 Win32 中 ODBCINST.DLL 和 ODBCCP32.DLL 實作。  應用程式可以呼叫安裝程式 DLL 的 **SQLInstallODBC** ，將安裝 ODBC 驅動程式管理員、ODBC 驅動程式和所有必要的轉換。  然後記錄安裝的驅動程式和轉譯 ODBCINST.INI 檔案 \(或註冊的，在 NT\)。  **SQLInstallODBC** 要求完整路徑 ODBC.INF 檔案，其中包含要安裝的驅動程式的清單和描述檔包含每個驅動程式。  它也包含驅動程式管理員和轉譯的類似資訊。  驅動程式開發人員通常會提供 ODBC.INF 檔案。  
+ The ODBC installer API can be used to write application-specific setup programs. The functions in the installer API are implemented by the ODBC installer DLL — ODBCINST.DLL on 16-bit Windows and ODBCCP32.DLL on Win32. An application can call **SQLInstallODBC** in the installer DLL, which will install the ODBC driver manager, ODBC drivers, and any required translators. It then records the installed drivers and translators in the ODBCINST.INI file (or the registry, on NT). **SQLInstallODBC** requires the full path to the ODBC.INF file, which contains the list of drivers to be installed and describes the files that comprise each driver. It also contains similar information about the driver manager and translators. ODBC.INF files are typically supplied by driver developers.  
   
- 程式可能也會安裝個別的 ODBC 元件。  安裝驅動程式管理員，在安裝程式 DLL 的程式第一次呼叫 **SQLInstallDriverManager** 取得驅動程式管理員的目標目錄。  這通常是 Windows DLL 所在的目錄。  在程式 ODBC.INF 檔案的 \[ODBC 驅動程式管理員\] 部分然後使用資訊複製驅動程式管理員和相關檔案從安裝光碟子目錄。  安裝個別的驅動程式，在安裝程式 DLL 的程式第一次呼叫 **SQLInstallDriver** 加入驅動程式規格到 ODBCINST.INI 檔案 \(或登錄，在 NT\)。  傳回**SQLInstallDriver** 驅動程式的目標目錄— Windows DLL 通常位於的目錄。  在程式 ODBC.INF 檔案的驅動程式的部分然後使用資訊複製驅動程式 DLL 和相關檔案從安裝光碟子目錄。  
+ A program can also install individual ODBC components. To install the Driver Manager, a program first calls **SQLInstallDriverManager** in the installer DLL to get the target directory for the Driver Manager. This is usually the directory in which Windows DLLs reside. The program then uses the information in the [ODBC Driver Manager] section of the ODBC.INF file to copy the Driver Manager and related files from the installation disk to this directory. To install an individual driver, a program first calls **SQLInstallDriver** in the installer DLL to add the driver specification to the ODBCINST.INI file (or the registry, on NT). **SQLInstallDriver** returns the driver's target directory — usually the directory in which Windows DLLs reside. The program then uses the information in the driver's section of the ODBC.INF file to copy the driver DLL and related files from the installation disk to this directory.  
   
- 如需 ODBC.INF 的詳細資訊， ODBCINST.INI 和使用安裝程式 API，請參閱《ODBC SDK *程式設計人員參考》，* 第 19 章，安裝 ODBC 軟體。  
+ For more information on ODBC.INF, ODBCINST.INI and using the installer API, see ODBC SDK *Programmer's Reference,* Chapter 19, Installing ODBC Software.  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> 寫入 ODBC 管理員  
- MFC 資料庫應用程式有兩種可能和設定 ODBC 資料來源，如下所示:  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Writing an ODBC Administrator  
+ An MFC database application can set up and configure ODBC data sources in one of two ways, as follows:  
   
--   使用 ODBC 管理員 \(可做為程式或做為主控台項目\)。  
+-   Use the ODBC Administrator (available as a program or as a Control Panel item).  
   
--   建立您的程式設定資料來源。  
+-   Create your own program to configure data sources.  
   
- 設定資料來源的程式呼叫函式呼叫安裝程式 DLL。  安裝程式 DLL 呼叫設定 DLL 設定資料來源。  在每一個驅動程式的已設定的 DLL;它可能是驅動程式 DLL 或個別的 DLL。  設定 DLL 提示使用者對於驅動程式需要連接至資料來源和預設轉譯器的，否則，支援的資訊。  然後它會呼叫安裝程式 DLL 和 Windows API 記錄在 ODBC.INI 檔案 \(或登錄\) 這項資訊。  
+ A program that configures data sources makes function calls to the installer DLL. The installer DLL calls a setup DLL to configure a data source. There is one setup DLL for each driver; it may be the driver DLL itself, or a separate DLL. The setup DLL prompts the user for information that the driver needs to connect to the data source and the default translator, if supported. It then calls the installer DLL and Windows APIs to record this information in the ODBC.INI file (or registry).  
   
- 顯示使用者可以加入的對話方塊，修改和刪除資料來源，安裝程式 DLL 的程式呼叫 **SQLManageDataSources** 。  當安裝程式 DLL 從主控台時，呼叫這個函式叫用。  若要加入、修改，或刪除資料來源， **SQLManageDataSources** 會在設定 DLL 的 **ConfigDSN** 驅動程式的與該資料來源。  直接加入、修改，或刪除資料來源，程式會在安裝程式 DLL 的 **SQLConfigDataSource** 。  程式會藉由指定動作會以資料來源和選項的名稱。  **SQLConfigDataSource** 會在設定 DLL 和傳遞的 **ConfigDSN** 它從 **SQLConfigDataSource**的引數。  
+ To display a dialog box with which a user can add, modify, and delete data sources, a program calls **SQLManageDataSources** in the installer DLL. This function is invoked when the installer DLL is called from the Control Panel. To add, modify, or delete a data source, **SQLManageDataSources** calls **ConfigDSN** in the setup DLL for the driver associated with that data source. To directly add, modify, or delete data sources, a program calls **SQLConfigDataSource** in the installer DLL. The program passes the name of the data source and an option that specifies the action to take. **SQLConfigDataSource** calls **ConfigDSN** in the setup DLL and passes it the arguments from **SQLConfigDataSource**.  
   
- 如需詳細資訊，請參閱《ODBC SDK 程式設計人員參考 *、* 第 23 章，被設定的 DLL 函式參考和 Chapter 24，安裝程式 DLL 函式參考。  
+ For more information, see ODBC SDK *Programmer's Reference,* Chapter 23, Setup DLL Function Reference, and Chapter 24, Installer DLL Function Reference.  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

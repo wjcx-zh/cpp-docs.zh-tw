@@ -1,86 +1,103 @@
 ---
-title: "TN029：分隔視窗 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.windows.splitter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "分隔視窗, 關於分隔視窗"
-  - "TN029"
+title: 'TN029: Splitter Windows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.windows.splitter
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN029
+- splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# TN029：分隔視窗
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0885dea840b73b78be581383c7f4a194b5cb9a8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這個附註說明 MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-class.md)，提供視窗分割和管理調整其他窗格視窗。  
+---
+# <a name="tn029-splitter-windows"></a>TN029: Splitter Windows
+This note describes the MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-class.md), which provides window splits and manages the resizing of other pane windows.  
   
-## 分隔器樣式  
- `CSplitterWnd` 支援分割的視窗兩個不同樣式。  
+## <a name="splitter-styles"></a>Splitter Styles  
+ A `CSplitterWnd` supports two different styles of splitting windows.  
   
- 在「靜態分隔」，建立時分隔視窗窗格建立。  窗格的順序和數目永遠不會變更。  分隔列來調整大小不同窗格。  您可以使用這個樣式中顯示每個窗格不同的檢視類別。  Visual C\+\+ 圖形編輯和 Windows 文件管理員是使用這個分隔器樣式程式的範例。  分隔視窗樣式不使用分隔器方塊。  
+ In "static splitters," the splitter window creates the panes when it is created. The order and number of panes never change. Splitter bars are used to resize the different panes. You can use this style to display a different view class in each pane. The Visual C++ graphics editor and the Windows File Manager are examples of programs that use this splitter style. This style of splitter window does not use splitter boxes.  
   
- 在「動態分隔器」，當使用者分割和非分割新檢視，其他窗格建立和終結。  這個分隔器啟動以單一檢視並為使用者提供分隔器方塊啟始分割。  表示這個檢視某一方向時，分割分隔視窗動態建立一個新的檢視物件。  這個新的檢視物件表示新窗格。  使用鍵盤介面，如果檢視在兩個方向分割，分隔視窗建立三個新窗格的三個新的檢視物件。  當分割為作用中時，視窗會顯示分隔器方塊為在窗格之間的一個分隔列。  視窗終結其他檢視物件，當使用者移除分割時，不過，原始的檢視中，直到終結分隔視窗。  Microsoft Excel 和 Microsoft Word 是使用動態分隔樣式應用程式的範例。  
+ In "dynamic splitters," additional panes are created and destroyed as the user splits and un-splits new views. This splitter starts out with a single view and provides splitter boxes for the user to initiate splitting. The splitter window dynamically creates a new view object when the view is split in one direction. This new view object represents the new pane. If the view is split in two directions by using the keyboard interface, the splitter window creates three new view objects for the three new panes. While the split is active, Windows displays the splitter box as a splitter bar between the panes. Windows destroys additional view objects when the user removes a split, but the original view remains until the splitter window itself is destroyed. Microsoft Excel and Microsoft Word are examples of applications that use the dynamic splitter style.  
   
- 當您建立任一類型分隔視窗時，您必須指定分隔器處理的最大資料列和資料行。  一個靜態分隔窗格會填入所有資料列和資料行。  建立 `CSplitterWnd` 時，一個動態分隔器將只會建立第一個窗格。  
+ When you create either kind of splitter window, you must specify the maximum number of rows and columns that the splitter will manage. A static splitter will create panes to fill all the rows and columns. A dynamic splitter will create only the first pane when the `CSplitterWnd` is created.  
   
- 您可以為靜態分隔指定窗格的最大字元數是 16 x 16 資料行。  建議的組態是:  
+ The maximum number of panes you can specify for static splitters is 16 rows by 16 columns. The recommended configurations are:  
   
--   資料行 1 x 2 行:通常與不同的窗格  
+-   1 row x 2 columns : usually with dissimilar panes  
   
--   資料行 1 x 2 行:通常與不同的窗格  
+-   2 rows x 1 column : usually with dissimilar panes  
   
--   資料行 2 x 2 行:通常與類似的窗格  
+-   2 rows x 2 columns : usually with similar panes  
   
- 您可以為動態分隔器指定窗格的最大字元數是 2 x 2 資料行。  建議的組態是:  
+ The maximum number of panes that you can specify for dynamic splitters is 2 rows by 2 columns. The recommended configurations are:  
   
--   資料行 1 x 2 行:對於分欄式資料  
+-   1 row x 2 columns : for columnar data  
   
--   資料行 2 x 1 行:對於文字或其他資料。  
+-   2 rows x 1 column : for textual or other data  
   
--   資料行 2 x 2 行:對於格線或資料表中的資料  
+-   2 rows x 2 columns : for grid or table oriented data  
   
-## 分隔器範例  
- 許多 MFC 範例程式直接或間接使用分隔視窗。  一般 MFC 範例 [VIEWEX](../top/visual-cpp-samples.md) 在分隔器說明靜態分隔的數個用法，包括如何將分隔器。  
+## <a name="splitter-examples"></a>Splitter Examples  
+ Many of the MFC sample programs use splitter windows directly or indirectly. The MFC General sample [VIEWEX](../visual-cpp-samples.md) illustrates several uses of static splitters, including how to place a splitter in a splitter.  
   
- 您也可以使用 ClassWizard 建立包含分隔視窗的新的多重文件介面 \(MDI\) 子框架視窗類別。  如需分隔視窗的詳細資訊，請參閱 [許多資料型別、檢視和框架視窗](../mfc/multiple-document-types-views-and-frame-windows.md)。  
+ You can also use ClassWizard to create a new multiple document interface (MDI) Child frame window class that contains a splitter window. For more information on splitter windows, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).  
   
-## 實作使用的詞彙  
- 這是特定的到分隔視窗的詞彙清單:  
+## <a name="terminology-used-by-implementation"></a>Terminology Used by Implementation  
+ Here is a list of terms that are specific to splitter windows:  
   
  `CSplitterWnd`:  
- 提供分割窗格的控制項和捲軸共用資料列中的所有窗格或資料行之間的視窗。  您指定資料列和資料行的以零起始的數字 \(第一個窗格是資料行和資料列 \= 0 \= 0\)。  
+ A window that provides pane-splitting controls and scroll bars that are shared between all panes on a row or column. You specify rows and columns with zero-based numbers (the first pane is row = 0 and column = 0).  
   
  Pane:  
- `CSplitterWnd` 處理的特定的視窗。  窗格通常是從 [CView Class](../mfc/reference/cview-class.md)衍生的物件，不過，可以是有適當的子視窗 ID. 的 [CWnd](../mfc/reference/cwnd-class.md) 物件。  
+ An application-specific window that a `CSplitterWnd` manages. A pane is usually an object that is derived from the [CView Class](../mfc/reference/cview-class.md), but can be any [CWnd](../mfc/reference/cwnd-class.md) object that has the appropriate child window ID.  
   
- 使用 `CWnd`衍生物件，請將物件的 `RUNTIME_CLASS` 和 `CreateView` 函式中，您會，如果您使用 `CView`衍生類別。  因為架構使用動態建立在執行階段，您的類別必須使用 `DECLARE_DYNCREATE` 和 `IMPLEMENT_DYNCREATE` 。  雖然有專用的 `CView` 類別中 `CSplitterWnd` 的大量程式碼時，請一律使用 [CObject::IsKindOf](../Topic/CObject::IsKindOf.md) ，在這些動作執行之前\)。  
+ To use a `CWnd`-derived object, pass the `RUNTIME_CLASS` of the object to the `CreateView` function as you would if you were using a `CView`-derived class. Your class must use `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` because the framework uses dynamic creation at runtime. Although there is a lot of code in `CSplitterWnd` that is specific to the `CView` class, [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) is always used before those actions are performed.  
   
- 分隔列:  
- 放置在窗格之間資料列和資料行的控制項。  它可以用來調整執行窗格大小或行。  
+ Splitter Bar:  
+ A control that is placed between rows and columns of panes. It may be used to adjust the sizes of rows or columns of panes.  
   
- 分隔器方塊:  
- 在您可以使用建立新窗格欄或列的動態 `CSplitterWnd` 控制項。  它位於垂直捲軸頂端或在水平捲軸左邊。  
+ Splitter Box:  
+ A control in a dynamic `CSplitterWnd` that you can use to create new rows or columns of panes. It is located at the top of the vertical scroll bars or to the left of the horizontal scroll bars.  
   
- 分隔器交集:  
- 一個垂直分隔列和一個水平分隔列的交集。  您可以將它同時調整窗格資料列和資料行的大小。  
+ Splitter Intersection:  
+ The intersection of a vertical splitter bar and a horizontal splitter bar. You can drag it to adjust the size of a row and column of panes simultaneously.  
   
-## 共用的捲軸。  
- `CSplitterWnd` 類別也支援共用的捲軸。  這些捲軸控制項是 `CSplitterWnd` 的子系和與在分隔器的不同窗格之間共用。  
+## <a name="shared-scroll-bars"></a>Shared Scroll Bars  
+ The `CSplitterWnd` class also supports shared scroll bars. These scroll bar controls are children of the `CSplitterWnd` and are shared with the different panes in the splitter.  
   
- 例如，在中，在建立 `CSplitterWnd`時，在第 1 x 2 行視窗，您可以指定 WS\_VSCROLL。  視窗建立共用在兩個窗格之間的特殊捲軸控制項。  
+ For example, in a 1 row x 2 column window, you can specify WS_VSCROLL when creating the `CSplitterWnd`. Windows creates a special scroll bar control that is shared between the two panes.  
   
 ```  
 [      ][      ][^]  
@@ -88,57 +105,59 @@ caps.handback.revision: 14
 [      ][      ][v]  
 ```  
   
- 當使用者移動捲軸， `WM_VSCROLL` 資訊傳送到兩個檢視。  當任一個檢視設定捲軸位置，共用捲軸將設定。  
+ When the user moves the scroll bar, `WM_VSCROLL` messages will be sent to both views. When either view sets the scroll bar position, the shared scroll bar will be set.  
   
- 請注意共用捲軸是最有用的類似的檢視物件。  如果混合檢視不同輸入分隔器，則您可能需要撰寫特殊程式碼協調它們的捲動位置。  任何 `CView`\- `CWnd` 使用捲軸 API 的衍生類別會委派至共用捲軸，如果有的話。  `CScrollView` 實作不支援共用的捲軸 `CView` 類別的範例。  從 `CView`，類別不是衍生自非依賴控制項捲軸的類別，例如或使用標準 Windows 實作的類別 \( `CEditView`\)，不會與 `CSplitterWnd`搭配使用共用捲軸功能。  
+ Note that shared scroll bars are most useful with similar view objects. If you mix views of different types in a splitter, then you may have to write special code to coordinate their scroll positions. Any `CView`-derived class that uses the `CWnd` scroll bar APIs will delegate to the shared scroll bar if it exists. The `CScrollView` implementation is one example of a `CView` class that supports shared scroll bars. Classes that are not derived from `CView`, classes that rely on non-control scroll bars, or classes that use standard Windows implementations (for example, `CEditView`) will not work with the shared scroll bar feature of `CSplitterWnd`.  
   
-## 最小大小  
- 對於每個資料行具有資料列最低高度，，並針對每個資料行具有的最小寬度。  最小確保窗格不太小而無法顯示完整的詳細資料。  
+## <a name="minimum-sizes"></a>Minimum Sizes  
+ For each row there is a minimum row height, and for each column there is a minimum column width. This minimum guarantees that a pane is not too small to be shown in complete detail.  
   
- 對於靜態分隔視窗，初始資料列最低高度和寬度為 0。  對於動態分隔視窗，初始資料列最低高度和寬度由 `CSplitterWnd::Create` 函式的 `sizeMin` 參數設定為。  
+ For a static splitter window, the initial minimum row height and column width is 0. For a dynamic splitter window, the initial minimum row height and column width are set by the `sizeMin` parameter of the `CSplitterWnd::Create` function.  
   
- 使用 [CSplitterWnd::SetRowInfo](../Topic/CSplitterWnd::SetRowInfo.md) 和 [CSplitterWnd::SetColumnInfo](../Topic/CSplitterWnd::SetColumnInfo.md) 函式，您可以變更這些最小大小。  
+ You can change these minimum sizes by using the [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) and [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) functions.  
   
-## 實際的理想的大小  
- 窗格的配置在分隔視窗的取決於包含這些框架的大小。  當使用者調整包含框架時， `CSplitterWnd` 重新定位和調整窗格，以便盡可能好相容。  
+## <a name="actual-vs-ideal-sizes"></a>Actual vs. Ideal Sizes  
+ The layout of the panes in the splitter window depends on the size of the frame that contains them. When a user resizes the containing frame, the `CSplitterWnd` repositions and resizes the panes so that they fit as well as possible.  
   
- 使用者可以手動設定資料列高度和寬度大小，或使用 `CSplitterWnd` 類別，或者程式可以設定理想的大小。  實際大小大於理想可小或。  視窗會調整為實際大小，如果沒有足夠的空間顯示理想的大小，或有右邊分隔視窗的或下方的許多空白空間。  
+ The user can manually set the row height and column width sizes, or the program can set the ideal size by using the `CSplitterWnd` class. The actual size can be smaller or larger than the ideal. Windows will adjust the actual size if there is not enough room to display the ideal size or if there is too much empty space on the right or bottom of the splitter window.  
   
-## 自訂控制項  
- 您可以覆寫許多函式提供自訂行為和自訂的介面。  您可以覆寫這個設定為分隔視窗的各種圖形元件提供替代成像。  
+## <a name="custom-controls"></a>Custom Controls  
+ You can override many functions to provide customized behavior and a customized interface. You can override this first set to provide alternate imagery for the various graphical components of a splitter window.  
   
--   `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
+- `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
   
--   `virtual void OnInvertTracker(const CRect& rect);`  
+- `virtual void OnInvertTracker(const CRect& rect);`  
   
- 您呼叫這個函式會建立共用捲軸控制項。  您可以覆寫它在捲軸旁邊建立額外的控制項。  
+ You call this function to create a shared scroll bar control. You can override it to create extra controls next to the scroll bar.  
   
--   `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
+- `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
   
- 這些函式實作動態分隔視窗的邏輯。  您可以覆寫這些提供更多進階的分隔器邏輯。  
+ These functions implement the logic of the dynamic splitter window. You can override these to provide more advanced splitter logic.  
   
--   `virtual void DeleteView(int row, int col);`  
+- `virtual void DeleteView(int row, int col);`  
   
--   `virtual BOOL SplitRow(int cyBefore);`  
+- `virtual BOOL SplitRow(int cyBefore);`  
   
--   `virtual BOOL SplitColumn(int cxBefore);`  
+- `virtual BOOL SplitColumn(int cxBefore);`  
   
--   `virtual void DeleteRow(int rowDelete);`  
+- `virtual void DeleteRow(int rowDelete);`  
   
--   `virtual void DeleteColumn(int colDelete);`  
+- `virtual void DeleteColumn(int colDelete);`  
   
-## CView 功能  
- `CView` 類別使用下列進階命令委派至 `CSplitterWnd` 實作。  由於這些命令是虛擬的，標準 `CView` 實作不需要整個 `CSplitterWnd` 實作連接點。  如需使用不是 `CView` ，但是 `CSplitterWnd`的應用程式， `CSplitterWnd` 實作的應用程式將無法連接。  
+## <a name="cview-functionality"></a>CView Functionality  
+ The `CView` class uses the following high level commands to delegate to the `CSplitterWnd` implementation. Because these commands are virtual, the standard `CView` implementation will not require the entire `CSplitterWnd` implementation to be linked in. For applications that use `CView` but not `CSplitterWnd`, the `CSplitterWnd` implementation will not be linked with the application.  
   
  `virtual BOOL CanActivateNext(BOOL bPrev = FALSE);`  
- 確認 ID\_NEXT\_PANE 或 ID\_PREV\_PANE 目前是否可能的。  
+ Checks whether ID_NEXT_PANE or ID_PREV_PANE is currently possible.  
   
  `virtual void ActivateNext(BOOL bPrev = FALSE);`  
- 執行下一個窗格」或「上一個窗格」命令。  
+ Executes the "Next Pane" or "Previous Pane" command.  
   
  `virtual BOOL DoKeyboardSplit();`  
- 執行鍵盤分割命令，通常是「被分隔視窗」。  
+ Executes the keyboard split command, usually "Window Split".  
   
-## 請參閱  
- [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)   
- [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

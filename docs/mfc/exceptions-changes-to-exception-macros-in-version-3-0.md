@@ -1,72 +1,90 @@
 ---
-title: "例外狀況：3.0 版例外狀況巨集的變更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 例外狀況處理, 升級考量"
-  - "CATCH 巨集"
-  - "例外狀況, 已變更的內容"
-  - "THROW_LAST 巨集"
+title: 'Exceptions: Changes to Exception Macros in Version 3.0 | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- C++ exception handling [MFC], upgrade considerations
+- CATCH macro [MFC]
+- exceptions [MFC], what's changed
+- THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 例外狀況：3.0 版例外狀況巨集的變更
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d3046dae0bad83d8fffc98e5c93573c4efb9d919
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-這是進階主題。  
+---
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>Exceptions: Changes to Exception Macros in Version 3.0
+This is an advanced topic.  
   
- 在 MFC 3.0 版和更新版本中，例外處理巨集已改變為使用 C\+\+ 例外狀況。  本文說明這些變更如何影響使用巨集現有程式碼的行為。  
+ In MFC version 3.0 and later, the exception-handling macros have been changed to use C++ exceptions. This article tells how those changes can affect the behavior of existing code that uses the macros.  
   
- 本章節涵蓋下列主題：  
+ This article covers the following topics:  
   
--   [例外狀況型別和 Catch 巨集](#_core_exception_types_and_the_catch_macro)  
+-   [Exception types and the CATCH macro](#_core_exception_types_and_the_catch_macro)  
   
--   [重新擲回例外狀況](#_core_re.2d.throwing_exceptions)  
+-   [Re-throwing exceptions](#_core_re.2d.throwing_exceptions)  
   
-##  <a name="_core_exception_types_and_the_catch_macro"></a> 例外狀況型別和 Catch 巨集  
- 在 MFC 舊版，**CATCH** 巨集使用 MFC 的執行階段型別資訊判斷例外狀況型別；也就是說，例外狀況型別是在 catch 網站決定的。  然而，有了 C\+\+ 例外狀況，例外狀況型別永遠是在擲回網站判斷，並且是根據所擲回的例外狀況物件的型別。  這在一些罕見情況會造成不相容，像是指標對被擲回物件的型別與被擲回物件的型別不同。  
+##  <a name="_core_exception_types_and_the_catch_macro"></a> Exception Types and the CATCH Macro  
+ In earlier versions of MFC, the **CATCH** macro used MFC run-time type information to determine an exception's type; the exception's type is determined, in other words, at the catch site. With C++ exceptions, however, the exception's type is always determined at the throw site by the type of the exception object that is thrown. This will cause incompatibilities in the rare case where the type of the pointer to the thrown object differs from the type of the thrown object.  
   
- 下列範例說明在 MFC 3.0 版和舊版之間，這個差異的後果：  
+ The following example illustrates the consequence of this difference between MFC version 3.0 and earlier versions:  
   
- [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#1](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_1.cpp)]  
   
- 這段程式碼的行為和在版本 3.0 中不同，因為控制項會傳遞具有相符例外狀況宣告的 **catch** 區塊。  擲回運算式的結果。  
+ This code behaves differently in version 3.0 because control always passes to the first **catch** block with a matching exception-declaration. The result of the throw expression  
   
- [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#19](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_2.cpp)]  
   
- 被擲回做為 **CException\***，即使它是建構為 **CCustomException**。  在 MFC 2.5 版和更早的版本中，**CATCH** 巨集使用 `CObject::IsKindOf` 在執行階段測試型別。  因為運算式  
+ is thrown as a **CException\***, even though it is constructed as a **CCustomException**. The **CATCH** macro in MFC versions 2.5 and earlier uses `CObject::IsKindOf` to test the type at run time. Because the expression  
   
- [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]  
   
- 為 true 時，第一個 catch 區塊攔截例外狀況。  3.0 版使用 C\+\+ 例外狀況實作許多例外狀況處理巨集，第二個 catch 區塊符合擲回的 `CException`。  
+ is true, the first catch block catches the exception. In version 3.0, which uses C++ exceptions to implement many of the exception-handling macros, the second catch block matches the thrown `CException`.  
   
- 像這樣的程式碼並不常見。  這通常會發生在例外狀況物件傳遞給接受泛型 **CException\*** 的另一個函式，執行「處理之前擲回」，並最後擲回給例外狀況。  
+ Code like this is uncommon. It usually appears when an exception object is passed to another function that accepts a generic **CException\***, performs "pre-throw" processing, and finally throws the exception.  
   
- 若要解決此問題，請將擲回運算式從函式移動至呼叫程式碼，並在產生例外狀況時擲回這個編譯器知道的實際型別的例外狀況。  
+ To work around this problem, move the throw expression from the function to the calling code and throw an exception of the actual type known to the compiler at the time the exception is generated.  
   
-##  <a name="_core_re.2d.throwing_exceptions"></a> 重新擲回例外狀況  
- Catch 區塊不能擲回與它攔截的相同的例外狀況指標。  
+##  <a name="_core_re.2d.throwing_exceptions"></a> Re-Throwing Exceptions  
+ A catch block cannot throw the same exception pointer that it caught.  
   
- 例如，這個程式碼在舊版本有效，但是在版本 3.0 會有非預期的結果：  
+ For example, this code was valid in previous versions, but will have unexpected results with version 3.0:  
   
- [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/CPP/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#2](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_4.cpp)]  
   
- 在 catch 區塊使用 **THROW** 蕙造成指標 `e` 被刪除，因此外部 catch 網站會收到無效的指標。  使用 `THROW_LAST` 重新擲回 `e`。  
+ Using **THROW** in the catch block causes the pointer `e` to be deleted, so that the outer catch site will receive an invalid pointer. Use `THROW_LAST` to re-throw `e`.  
   
- 如需詳細資訊，請參閱 [例外狀況：攔截和刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。  
+ For more information, see [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).  
   
-## 請參閱  
- [例外狀況處理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

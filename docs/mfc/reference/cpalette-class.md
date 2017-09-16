@@ -1,5 +1,5 @@
 ---
-title: "CPalette 類別 |Microsoft 文件"
+title: CPalette Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,9 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPalette class
-- HPALETTE
-- color palettes, MFC
+- CPalette [MFC], CPalette
+- CPalette [MFC], AnimatePalette
+- CPalette [MFC], CreateHalftonePalette
+- CPalette [MFC], CreatePalette
+- CPalette [MFC], FromHandle
+- CPalette [MFC], GetEntryCount
+- CPalette [MFC], GetNearestPaletteIndex
+- CPalette [MFC], GetPaletteEntries
+- CPalette [MFC], ResizePalette
+- CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
 caps.latest.revision: 23
 author: mikeblome
@@ -46,17 +53,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6ccd389eaf765993c59311cc1041893f2cf9fbfa
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2408f0701ee3fc7b4eb702ab024fc261443a5b40
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpalette-class"></a>CPalette 類別
-封裝 Windows 調色盤。  
+# <a name="cpalette-class"></a>CPalette Class
+Encapsulates a Windows color palette.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPalette : public CGdiObject  
@@ -64,51 +71,51 @@ class CPalette : public CGdiObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPalette::CPalette](#cpalette)|建構`CPalette`物件沒有附加的 Windows 調色盤。 您必須先初始化`CPalette`物件與其中一個成員函式初始化才能使用。|  
+|[CPalette::CPalette](#cpalette)|Constructs a `CPalette` object with no attached Windows palette. You must initialize the `CPalette` object with one of the initialization member functions before it can be used.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[Cpalette:: Animatepalette](#animatepalette)|取代項目中所識別的邏輯調色盤`CPalette`物件。 應用程式並沒有更新其工作區，因為 Windows 對應立即將新的項目變成系統調色盤。|  
-|[CPalette::CreateHalftonePalette](#createhalftonepalette)|建立裝置內容的半色調調色盤並將它附加`CPalette`物件。|  
-|[CPalette::CreatePalette](#createpalette)|建立 Windows 調色盤並將它附加`CPalette`物件。|  
-|[CPalette::FromHandle](#fromhandle)|若要將指標傳回`CPalette`物件控制代碼給 Windows 調色盤物件時。|  
-|[CPalette::GetEntryCount](#getentrycount)|擷取調色盤邏輯調色盤中的項目的數目。|  
-|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|最接近的色彩值的邏輯調色盤中傳回的項目索引。|  
-|[CPalette::GetPaletteEntries](#getpaletteentries)|擷取各種調色盤邏輯調色盤中的項目。|  
-|[CPalette::ResizePalette](#resizepalette)|變更大小所指定的邏輯調色盤`CPalette`物件指定的項目數目。|  
-|[CPalette::SetPaletteEntries](#setpaletteentries)|設定邏輯調色盤中的項目範圍中的 RGB 色彩值和旗標。|  
+|[CPalette::AnimatePalette](#animatepalette)|Replaces entries in the logical palette identified by the `CPalette` object. The application does not have to update its client area, because Windows maps the new entries into the system palette immediately.|  
+|[CPalette::CreateHalftonePalette](#createhalftonepalette)|Creates a halftone palette for the device context and attaches it to the `CPalette` object.|  
+|[CPalette::CreatePalette](#createpalette)|Creates a Windows color palette and attaches it to the `CPalette` object.|  
+|[CPalette::FromHandle](#fromhandle)|Returns a pointer to a `CPalette` object when given a handle to a Windows palette object.|  
+|[CPalette::GetEntryCount](#getentrycount)|Retrieves the number of palette entries in a logical palette.|  
+|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|Returns the index of the entry in the logical palette that most closely matches a color value.|  
+|[CPalette::GetPaletteEntries](#getpaletteentries)|Retrieves a range of palette entries in a logical palette.|  
+|[CPalette::ResizePalette](#resizepalette)|Changes the size of the logical palette specified by the `CPalette` object to the specified number of entries.|  
+|[CPalette::SetPaletteEntries](#setpaletteentries)|Sets RGB color values and flags in a range of entries in a logical palette.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPalette::operator HPALETTE](#operator_hpalette)|傳回`HPALETTE`附加至`CPalette`。|  
+|[CPalette::operator HPALETTE](#operator_hpalette)|Returns the `HPALETTE` attached to the `CPalette`.|  
   
-## <a name="remarks"></a>備註  
- 調色盤提供應用程式與色彩輸出裝置 （例如顯示裝置） 之間的介面。 介面可讓應用程式以充分利用輸出裝置的色彩功能而不會嚴重妨礙其他應用程式所顯示的色彩。 Windows 會使用應用程式的邏輯調色盤 （所需的色彩清單） 和系統調色盤 （會定義可用的色彩） 來判斷所使用的色彩。  
+## <a name="remarks"></a>Remarks  
+ A palette provides an interface between an application and a color output device (such as a display device). The interface allows the application to take full advantage of the color capabilities of the output device without severely interfering with the colors displayed by other applications. Windows uses the application's logical palette (a list of needed colors) and the system palette (which defines available colors) to determine the colors used.  
   
- A`CPalette`物件提供成員函式的物件操作調色盤參考。 建構`CPalette`物件，並將其成員函式來建立實際的調色盤，圖形裝置介面 (GDI) 物件，並管理其項目和其他屬性。  
+ A `CPalette` object provides member functions for manipulating the palette referred to by the object. Construct a `CPalette` object and use its member functions to create the actual palette, a graphics device interface (GDI) object, and to manipulate its entries and other properties.  
   
- 如需有關使用`CPalette`，請參閱[圖形物件](../../mfc/graphic-objects.md)。  
+ For more information on using `CPalette`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CPalette`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="animatepalette"></a>Cpalette:: Animatepalette  
- 取代附加至邏輯調色盤中的項目`CPalette`物件。  
+##  <a name="animatepalette"></a>  CPalette::AnimatePalette  
+ Replaces entries in the logical palette attached to the `CPalette` object.  
   
 ```  
 void AnimatePalette(
@@ -117,110 +124,110 @@ void AnimatePalette(
     LPPALETTEENTRY lpPaletteColors);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nStartIndex`  
- 指定以動畫顯示調色盤中的第一個項目。  
+ Specifies the first entry in the palette to be animated.  
   
  `nNumEntries`  
- 以動畫顯示調色盤中指定的項目數。  
+ Specifies the number of entries in the palette to be animated.  
   
  `lpPaletteColors`  
- 指向陣列的第一個成員[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目`nStartIndex`和`nNumEntries`。  
+ Points to the first member of an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) structures to replace the palette entries identified by `nStartIndex` and `nNumEntries`.  
   
-### <a name="remarks"></a>備註  
- 當應用程式呼叫`AnimatePalette`，它並沒有要更新其工作區，因為 Windows 對應立即將新的項目變成系統調色盤。  
+### <a name="remarks"></a>Remarks  
+ When an application calls `AnimatePalette`, it does not have to update its client area, because Windows maps the new entries into the system palette immediately.  
   
- `AnimatePalette`函式只會變更的項目**PC_RESERVED**旗標設在對應**palPaletteEntry**成員[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構連接至`CPalette`物件。 請參閱**LOGPALETTE**中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需有關此結構。  
+ The `AnimatePalette` function will only change entries with the **PC_RESERVED** flag set in the corresponding **palPaletteEntry** member of the [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure that is attached to the `CPalette` object. See **LOGPALETTE** in the Windows SDK for more information about this structure.  
   
-##  <a name="cpalette"></a>CPalette::CPalette  
- 建構 `CPalette` 物件。  
+##  <a name="cpalette"></a>  CPalette::CPalette  
+ Constructs a `CPalette` object.  
   
 ```  
 CPalette();
 ```  
   
-### <a name="remarks"></a>備註  
- 物件會有任何附加的調色盤，直到您呼叫`CreatePalette`附加一個。  
+### <a name="remarks"></a>Remarks  
+ The object has no attached palette until you call `CreatePalette` to attach one.  
   
-##  <a name="createhalftonepalette"></a>CPalette::CreateHalftonePalette  
- 建立裝置內容的半色調調色盤。  
+##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette  
+ Creates a halftone palette for the device context.  
   
 ```  
 BOOL CreateHalftonePalette(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 識別的裝置內容。  
+ Identifies the device context.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 當裝置內容的縮放模式設為應用程式應建立半色調調色盤**半色調**。 傳回邏輯半色調調色盤[CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503)成員函式應該然後選取並放入裝置內容之前實現[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[stretchdibits 做](http://msdn.microsoft.com/library/windows/desktop/dd145121)函式呼叫。  
+### <a name="remarks"></a>Remarks  
+ An application should create a halftone palette when the stretching mode of a device context is set to **HALFTONE**. The logical halftone palette returned by the [CreateHalftonePalette](http://msdn.microsoft.com/library/windows/desktop/dd183503) member function should then be selected and realized into the device context before the [CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt) or [StretchDIBits](http://msdn.microsoft.com/library/windows/desktop/dd145121) function is called.  
   
- 請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需詳細資訊`CreateHalftonePalette`和**stretchdibits 做**。  
+ See the Windows SDK for more information about `CreateHalftonePalette` and **StretchDIBits**.  
   
-##  <a name="createpalette"></a>CPalette::CreatePalette  
- 初始化`CPalette`藉由建立 Windows 邏輯調色盤，並附加至物件`CPalette`物件。  
+##  <a name="createpalette"></a>  CPalette::CreatePalette  
+ Initializes a `CPalette` object by creating a Windows logical color palette and attaching it to the `CPalette` object.  
   
 ```  
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpLogPalette`  
- 指向[LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040)結構，其中包含邏輯調色盤色彩的相關資訊。  
+ Points to a [LOGPALETTE](http://msdn.microsoft.com/library/windows/desktop/dd145040) structure that contains information about the colors in the logical palette.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 請參閱[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需詳細資訊**LOGPALETTE**結構。  
+### <a name="remarks"></a>Remarks  
+ See the Windows SDK for more information about the **LOGPALETTE** structure.  
   
-##  <a name="fromhandle"></a>CPalette::FromHandle  
- 若要將指標傳回`CPalette`物件控制代碼給 Windows 調色盤物件時。  
+##  <a name="fromhandle"></a>  CPalette::FromHandle  
+ Returns a pointer to a `CPalette` object when given a handle to a Windows palette object.  
   
 ```  
 static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hPalette`  
- Windows GDI 調色盤控制代碼。  
+ A handle to a Windows GDI color palette.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CPalette`物件如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CPalette` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 如果`CPalette`物件尚未附加至 Windows 調色盤，暫存`CPalette`會建立並附加物件。 此暫存`CPalette`僅直到下一次應用程式在其事件迴圈中有閒置時間，在這次所有暫存圖形會刪除物件，物件才有效。 換句話說，暫存物件只在一個視窗訊息處理期間有效。  
+### <a name="remarks"></a>Remarks  
+ If a `CPalette` object is not already attached to the Windows palette, a temporary `CPalette` object is created and attached. This temporary `CPalette` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. In other words, the temporary object is valid only during the processing of one window message.  
   
-##  <a name="getentrycount"></a>CPalette::GetEntryCount  
- 呼叫此成員函式擷取指定的邏輯調色盤中的項目數。  
+##  <a name="getentrycount"></a>  CPalette::GetEntryCount  
+ Call this member function to retrieve the number of entries in a given logical palette.  
   
 ```  
 int GetEntryCount();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 邏輯調色盤中的項目數。  
+### <a name="return-value"></a>Return Value  
+ Number of entries in a logical palette.  
   
-##  <a name="getnearestpaletteindex"></a>CPalette::GetNearestPaletteIndex  
- 最接近指定的色彩值的邏輯調色盤中傳回的項目索引。  
+##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex  
+ Returns the index of the entry in the logical palette that most closely matches the specified color value.  
   
 ```  
 UINT GetNearestPaletteIndex(COLORREF crColor) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 指定要比對的色彩。  
+ Specifies the color to be matched.  
   
-### <a name="return-value"></a>傳回值  
- 邏輯調色盤中的項目索引。 項目包含最幾乎符合指定的色彩的色彩。  
+### <a name="return-value"></a>Return Value  
+ The index of an entry in a logical palette. The entry contains the color that most nearly matches the specified color.  
   
-##  <a name="getpaletteentries"></a>CPalette::GetPaletteEntries  
- 擷取各種調色盤邏輯調色盤中的項目。  
+##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries  
+ Retrieves a range of palette entries in a logical palette.  
   
 ```  
 UINT GetPaletteEntries(
@@ -229,55 +236,55 @@ UINT GetPaletteEntries(
     LPPALETTEENTRY lpPaletteColors) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nStartIndex`  
- 指定要擷取邏輯調色盤中的第一個項目。  
+ Specifies the first entry in the logical palette to be retrieved.  
   
  `nNumEntries`  
- 要擷取邏輯調色盤中指定的項目數。  
+ Specifies the number of entries in the logical palette to be retrieved.  
   
  `lpPaletteColors`  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含至少盡所指定的資料結構`nNumEntries`。  
+ Points to an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) data structures to receive the palette entries. The array must contain at least as many data structures as specified by `nNumEntries`.  
   
-### <a name="return-value"></a>傳回值  
- 從邏輯調色盤; 擷取的項目數目0，表示失敗的函式。  
+### <a name="return-value"></a>Return Value  
+ The number of entries retrieved from the logical palette; 0 if the function failed.  
   
-##  <a name="operator_hpalette"></a>CPalette::operator HPALETTE  
- 使用這個運算子來取得附加的 Windows GDI 控制代碼的`CPalette`物件。  
+##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE  
+ Use this operator to get the attached Windows GDI handle of the `CPalette` object.  
   
 ```  
 operator HPALETTE() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，Windows GDI 物件的控制代碼所代表`CPalette`物件; 否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CPalette` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 這位操作員便轉型運算子，支援直接使用`HPALETTE`物件。  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HPALETTE` object.  
   
- 如需使用圖形物件的詳細資訊，請參閱文章[圖形物件](http://msdn.microsoft.com/library/windows/desktop/dd144962)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-##  <a name="resizepalette"></a>CPalette::ResizePalette  
- 變更大小，連接到的邏輯調色盤`CPalette`物件所指定的項目數`nNumEntries`。  
+##  <a name="resizepalette"></a>  CPalette::ResizePalette  
+ Changes the size of the logical palette attached to the `CPalette` object to the number of entries specified by `nNumEntries`.  
   
 ```  
 BOOL ResizePalette(UINT nNumEntries);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nNumEntries`  
- 已調整大小之後，調色盤中指定的項目數。  
+ Specifies the number of entries in the palette after it has been resized.  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果已成功調整調色盤;否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the palette was successfully resized; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果應用程式呼叫`ResizePalette`可縮小的調色盤，剩餘調整調色盤中的項目是不變。 如果應用程式呼叫`ResizePalette`擴大調色盤，其他調色盤項目已設定為黑色 （紅色、 綠色和藍色值是所有的 0），以及所有其他項目的旗標會設為 0。  
+### <a name="remarks"></a>Remarks  
+ If an application calls `ResizePalette` to reduce the size of the palette, the entries remaining in the resized palette are unchanged. If the application calls `ResizePalette` to enlarge the palette, the additional palette entries are set to black (the red, green, and blue values are all 0), and the flags for all additional entries are set to 0.  
   
- 如需有關 Windows API `ResizePalette`，請參閱[ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on the Windows API `ResizePalette`, see [ResizePalette](http://msdn.microsoft.com/library/windows/desktop/dd162928) in the Windows SDK.  
   
-##  <a name="setpaletteentries"></a>CPalette::SetPaletteEntries  
- 設定邏輯調色盤中的項目範圍中的 RGB 色彩值和旗標。  
+##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries  
+ Sets RGB color values and flags in a range of entries in a logical palette.  
   
 ```  
 UINT SetPaletteEntries(
@@ -286,28 +293,28 @@ UINT SetPaletteEntries(
     LPPALETTEENTRY lpPaletteColors);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nStartIndex`  
- 設定邏輯調色盤中，指定第一個項目。  
+ Specifies the first entry in the logical palette to be set.  
   
  `nNumEntries`  
- 若要設定邏輯調色盤中指定的項目數。  
+ Specifies the number of entries in the logical palette to be set.  
   
  `lpPaletteColors`  
- 指向陣列[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含至少盡所指定的資料結構`nNumEntries`。  
+ Points to an array of [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) data structures to receive the palette entries. The array must contain at least as many data structures as specified by `nNumEntries`.  
   
-### <a name="return-value"></a>傳回值  
- 設定邏輯調色盤; 中的項目數0，表示失敗的函式。  
+### <a name="return-value"></a>Return Value  
+ The number of entries set in the logical palette; 0 if the function failed.  
   
-### <a name="remarks"></a>備註  
- 當應用程式呼叫時，如果要邏輯調色盤選取放入裝置內容`SetPaletteEntries`，變更將不會生效，直到應用程式呼叫[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。  
+### <a name="remarks"></a>Remarks  
+ If the logical palette is selected into a device context when the application calls `SetPaletteEntries`, the changes will not take effect until the application calls [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).  
   
- 如需有關 Windows 結構**PALETTEENTRY**，請參閱[PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information on the Windows structure **PALETTEENTRY**, see [PALETTEENTRY](http://msdn.microsoft.com/library/windows/desktop/dd162769) in the Windows SDK.  
   
-## <a name="see-also"></a>另請參閱  
- [MFC 範例 DIBLOOK](../../visual-cpp-samples.md)   
- [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [MFC Sample DIBLOOK](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CPalette::GetPaletteEntries](#getpaletteentries)   
  [CPalette::SetPaletteEntries](#setpaletteentries)
 

@@ -1,31 +1,48 @@
 ---
-title: "TOOLTIPTEXT 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TOOLTIPTEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "工具提示 [C++], 告知"
-  - "TOOLTIPTEXT 結構"
+title: TOOLTIPTEXT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TOOLTIPTEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- TOOLTIPTEXT structure [MFC]
+- tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# TOOLTIPTEXT 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7d5ad1e3607d21d2d8243455e479e78d87897c0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-撰寫 [工具提示告知處理常式。](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)，您必須使用 `TOOLTIPTEXT` 結構。  `TOOLTIPTEXT`結構的成員包括:  
+---
+# <a name="tooltiptext-structure"></a>TOOLTIPTEXT Structure
+In writing your [tool tip notification handler](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), you need to use the `TOOLTIPTEXT` structure. The members of the `TOOLTIPTEXT` structure are:  
   
  `typedef struct {`  
   
@@ -46,24 +63,26 @@ caps.handback.revision: 9
  `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
   
  `hdr`  
- 識別需要文字的工具。  您可能需要將這個結構的成員是控制命令 ID.  控制命令 ID 在 `NMHDR` 結構的 `idFrom` 成員，可存取使用語法 `hdr.idFrom`。  如需 `NMHDR` 結構成員的討論參閱 [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) 。  
+ Identifies the tool that needs text. The only member of this structure you might need is the control's command ID. The control's command ID will be in the `idFrom` member of the `NMHDR` structure, accessed with the syntax `hdr.idFrom`. See [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) for a discussion of members of the `NMHDR` structure.  
   
  `lpszText`  
- 接收工具的文字字串的位址。  
+ Address of a string to receive the text for a tool.  
   
  `szText`  
- 緩衝區的工具提示文字。  應用程式可以將文字複製到這個緩衝區而不用指定字串的位址。  
+ Buffer that receives the tool tip text. An application can copy the text to this buffer as an alternative to specifying a string address.  
   
  `hinst`  
- 包含做為工具提示文字所使用的字串執行個體的控制代碼。  如果 `lpszText` 是工具提示文字的位址，這個成員是空的。  
+ Handle of the instance that contains a string to be used as the tool tip text. If `lpszText` is the address of the tool tip text, this member is NULL.  
   
- 當您處理 `TTN_NEEDTEXT` 通知訊息時，請指定下列其中一種方法將顯示的字串:  
+ When you handle the `TTN_NEEDTEXT` notification message, specify the string to be displayed in one of the following ways:  
   
--   將文字複製到 `szText` 成員所指定的緩衝區。  
+-   Copy the text to the buffer specified by the `szText` member.  
   
--   複製包含文字至 `lpszText` 成員緩衝區的位址。  
+-   Copy the address of the buffer that contains the text to the `lpszText` member.  
   
--   複製字串資源的識別項給 `lpszText` 成員，並複製包含資源給 `hinst` 成員的執行個體控制代碼。  
+-   Copy the identifier of a string resource to the `lpszText` member, and copy the handle of the instance that contains the resource to the `hinst` member.  
   
-## 請參閱  
- [非衍生自 CFrameWnd 之視窗中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

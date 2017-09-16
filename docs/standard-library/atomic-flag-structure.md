@@ -1,5 +1,5 @@
 ---
-title: "atomic_flag 結構 | Microsoft Docs"
+title: atomic_flag Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9fe3617331c7019956af5d64789624e299c17242
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: cd9b53126f07bc2ab847d4921a7cdc569e6f5ea0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="atomicflag-structure"></a>atomic_flag 結構
-描述以不可部分完成方式設定和清除 `bool` 旗標的物件。 不可部分完成的旗標之作業永遠是無鎖定。  
+# <a name="atomicflag-structure"></a>atomic_flag Structure
+Describes an object that atomically sets and clears a `bool` flag. Operations on atomic flags are always lock-free.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 struct atomic_flag;
@@ -51,49 +51,49 @@ struct atomic_flag;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[clear](#clear)|將已儲存的旗標設定為 `false`。|  
-|[test_and_set](#test_and_set)|將已儲存的旗標設定為 `true` 並傳回初始旗標值。|  
+|[clear](#clear)|Sets the stored flag to `false`.|  
+|[test_and_set](#test_and_set)|Sets the stored flag to `true` and returns the initial flag value.|  
   
-## <a name="remarks"></a>備註  
- `atomic_flag` 物件可以傳遞至非成員函式 [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)、[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)、[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set) 和 [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)。 這些非成員函式可以透過使用 `ATOMIC_FLAG_INIT` 值初始化。  
+## <a name="remarks"></a>Remarks  
+ `atomic_flag` objects can be passed to the non-member functions [atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear), [atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit), [atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set), and [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit). They can be initialized by using the value `ATOMIC_FLAG_INIT`.  
   
-## <a name="requirements"></a>需求  
- **標頭︰** \<不可部分完成 >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<atomic>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-##  <a name="clear"></a>atomic_flag:: clear
- 在指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束內，將儲存在 `*this` 中的 `bool` 旗標設定為 `false`。  
+##  <a name="clear"></a>  atomic_flag::clear
+ Sets the `bool` flag that is stored in `*this` to `false`, within the specified [memory_order](../standard-library/atomic-enums.md#memory_order_enum) constraints.  
   
 ```
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Order`  
- [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。  
+ A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
   
-##  <a name="test_and_set"></a>atomic_flag:: test_and_set
- 在指定的 [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 條件約束內，將儲存在 `*this` 中的 `bool` 旗標設定為 `true`。  
+##  <a name="test_and_set"></a>  atomic_flag::test_and_set
+ Sets the `bool` flag that is stored in `*this` to `true`, within the specified [memory_order](../standard-library/atomic-enums.md#memory_order_enum) constraints.  
   
 ```
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexcept;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Order`  
- [memory_order](../standard-library/atomic-enums.md#memory_order_enum)。  
+ A [memory_order](../standard-library/atomic-enums.md#memory_order_enum).  
   
-### <a name="return-value"></a>傳回值  
- 儲存於 `*this` 之旗標的初始值。  
+### <a name="return-value"></a>Return Value  
+ The initial value of the flag that is stored in `*this`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<atomic>](../standard-library/atomic.md)
 
 

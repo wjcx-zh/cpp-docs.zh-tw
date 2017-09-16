@@ -1,5 +1,5 @@
 ---
-title: "&lt;chrono&gt; 運算子 | Microsoft Docs"
+title: '&lt;chrono&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,23 +11,23 @@ f1_keywords:
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 caps.latest.revision: 8
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a58daf9d43392ffa89872ab0a76e680b63dbb977
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c7403464027d1e08a926dc6edb67b8cb8a37523a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltchronogt-operators"></a>&lt;chrono&gt; 運算子
+# <a name="ltchronogt-operators"></a>&lt;chrono&gt; operators
 ||||  
 |-|-|-|  
-|[運算子模數](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
+|[operator modulo](#op_modulo)|[operator!=](#op_neq)|[operator&gt;](#op_gt)|  
 |[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
 ##  <a name="operator-"></a>  operator-  
- [duration](../standard-library/duration-class.md) 和 [time_point](../standard-library/time-point-class.md) 物件的減法或否定運算子。  
+ Operator for subtraction or negation of [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -50,28 +50,28 @@ constexpr typename common_type<Duration1, Duration2>::type
        const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
  `Time`  
- `time_point` 物件。  
+ A `time_point` object.  
   
  `Dur`  
- `duration` 物件。  
+ A `duration` object.  
   
-### <a name="return-value"></a>傳回值  
- 第一個函式會傳回 `duration` 物件，其時間間隔長度是兩個引數的時間間隔差。  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object whose interval length is the difference between the time intervals of the two arguments.  
   
- 第二個函式傳回的 `time_point` 物件，代表因為否定 `Dur` 代表的時間間隔，形成與 `Time` 指定的時間點的偏移。  
+ The second function returns a `time_point` object that represents a point in time that is displaced, by the negation of the time interval that is represented by `Dur`, from the point in time that is specified by `Time`.  
   
- 第三個函式傳回 `duration` 物件，代表 `Left` 和 `Right` 之間的時間間隔。  
+ The third function returns a `duration` object that represents the time interval between `Left` and `Right`.  
   
 ##  <a name="op_neq"></a>  operator!=  
- [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件的不等比較運算子。  
+ Inequality operator for [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -86,18 +86,18 @@ constexpr bool operator!=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>傳回值  
- 每個函式都會傳回 `!(Left == Right)`。  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Left == Right)`.  
   
 ##  <a name="op_star"></a>  operator*  
- [duration](../standard-library/chrono-operators.md#op_star) 物件的乘法運算子。  
+ Multiplication operator for [duration](../standard-library/chrono-operators.md#op_star) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -115,22 +115,22 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
        Period2>& Dur);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- `duration` 物件。  
+ A `duration` object.  
   
  `Mult`  
- 整數值。  
+ An integral value.  
   
-### <a name="return-value"></a>傳回值  
- 每個函式都會傳回 `duration` 物件，其時間間隔長度為 `Mult` 乘以 `Dur` 的長度。  
+### <a name="return-value"></a>Return Value  
+ Each function returns a `duration` object whose interval length is `Mult` multiplied by the length of `Dur`.  
   
- 除非 `is_convertible<Rep2, common_type<Rep1, Rep2>>`「判斷為 true」(holds true)，否則第一個函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。  
+ Unless `is_convertible<Rep2, common_type<Rep1, Rep2>>`*holds true*, the first function does not participate in overload resolution. For more information, sssee [<type_traits>](../standard-library/type-traits.md).  
   
- 除非 `is_convertible<Rep1, common_type<Rep1, Rep2>>`「判斷為 true」(holds true)，否則第二個函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。  
+ Unless `is_convertible<Rep1, common_type<Rep1, Rep2>>`*holds true*, the second function does not participate in overload resolution. For more information, see [<type_traits>](../standard-library/type-traits.md).  
   
 ##  <a name="op_div"></a>  operator/  
- [duration](../standard-library/chrono-operators.md#op_star) 物件的除法運算子。  
+ Division operator for [duration](../standard-library/chrono-operators.md#op_star) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -147,28 +147,28 @@ constexpr typename common_type<Rep1, Rep2>::type
      const duration<Rep2, Period2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- `duration` 物件。  
+ A `duration` object.  
   
  `Div`  
- 整數值。  
+ An integral value.  
   
  `Left`  
- 左 `duration` 物件。  
+ The left `duration` object.  
   
  `Right`  
- 右 `duration` 物件。  
+ The right `duration` object.  
   
-### <a name="return-value"></a>傳回值  
- 第一個運算子傳回 duration 物件，其間隔長度是 `Dur` 的長度除以值 `Div`。  
+### <a name="return-value"></a>Return Value  
+ The first operator returns a duration object whose interval length is the length of `Dur` divided by the value `Div`.  
   
- 第二個運算子傳回 `Left` 和 `Right` 的時間間隔長度比例。  
+ The second operator returns the ratio of the interval lengths of `Left` and `Right`.  
   
- 除非 `is_convertible<Rep2, common_type<Rep1, Rep2>>`「判斷為 true」(holds true)，而且 `Rep2` 不是 `duration` 的具現化，否則第一個運算子不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。  
+ Unless `is_convertible<Rep2, common_type<Rep1, Rep2>>`*holds true*, and `Rep2` is not an instantiation of `duration`, the first operator does not participate in overload resolution. For more information, see [<type_traits>](../standard-library/type-traits.md).  
   
 ##  <a name="op_add"></a>  operator+  
- 新增 [duration](../standard-library/duration-class.md) 和 [time_point](../standard-library/time-point-class.md) 物件。  
+ Adds [duration](../standard-library/duration-class.md) and [time_point](../standard-library/time-point-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -192,26 +192,26 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
       const time_point<Clock, Duration2>& Time);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
  `Time`  
- `time_point` 物件。  
+ A `time_point` object.  
   
  `Dur`  
- `duration` 物件。  
+ A `duration` object.  
   
-### <a name="return-value"></a>傳回值  
- 第一個函式傳回的 `duration` 物件，其時間間隔等於 `Left` 和 `Right` 的時間間隔總和。  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object that has a time interval that is equal to the sum of the intervals of `Left` and `Right`.  
   
- 第二個和第三個函式傳回的 `time_point` 物件，代表因時間間隔 `Dur` 形成與時間點 `Time` 的偏移。  
+ The second and third functions return a `time_point` object that represents a point in time that is displaced, by the interval `Dur`, from the point in time `Time`.  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否小於另一個 `duration` 或 `time_point` 物件。  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is less than another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -226,20 +226,20 @@ constexpr bool operator<(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>傳回值  
- 第一個函式會傳回 `true`，如果 `Left` 的間隔長度少於 `Right` 的間隔長度。 否則，此函式會傳回 `false`。  
+### <a name="return-value"></a>Return Value  
+ The first function returns `true` if the interval length of `Left` is less than the interval length of `Right`. Otherwise, the function returns `false`.  
   
- 第二個函式會傳回 `true`，如果 `Left` 在 `Right` 之前。 否則，此函式會傳回 `false`。  
+ The second function returns `true` if `Left` precedes `Right`. Otherwise, the function returns `false`.  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否小於或等於另一個 `duration` 或 `time_point` 物件。  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is less than or equal to another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -253,18 +253,18 @@ constexpr bool operator<=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>傳回值  
- 每個函式都會傳回 `!(Right < Left)`。  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Right < Left)`.  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 判斷兩個 `duration` 物件是否代表具有相同長度的時間間隔，或兩個 `time_point` 物件是否代表相同的時間點。  
+ Determines whether two `duration` objects represent time intervals that have the same length, or whether two `time_point` objects represent the same point in time.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -278,20 +278,20 @@ constexpr bool operator==(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>傳回值  
- 第一個函式會傳回 `true`，如果 `Left` 和 `Right` 代表相同長度的時間間隔。 否則，此函式會傳回 `false`。  
+### <a name="return-value"></a>Return Value  
+ The first function returns `true` if `Left` and `Right` represent time intervals that have the same length. Otherwise, the function returns `false`.  
   
- 第二個函式會傳回 `true`，如果 `Left` 和 `Right` 代表相同的時間點。 否則，此函式會傳回 `false`。  
+ The second function returns `true` if `Left` and `Right` represent the same point in time. Otherwise, the function returns `false`.  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否大於另一個 `duration` 或 `time_point` 物件。  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is greater than another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -305,18 +305,18 @@ constexpr bool operator>(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>傳回值  
- 每個函式都會傳回 `Right < Left`。  
+### <a name="return-value"></a>Return Value  
+ Each function returns `Right < Left`.  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 判斷某個 [duration](../standard-library/duration-class.md) 或 [time_point](../standard-library/time-point-class.md) 物件是否大於或等於另一個 `duration` 或 `time_point` 物件。  
+ Determines whether one [duration](../standard-library/duration-class.md) or [time_point](../standard-library/time-point-class.md) object is greater than or equal to another `duration` or `time_point` object.  
   
 ```  
 template <class Rep1, class Period1, class Rep2, class Period2>  
@@ -330,18 +330,18 @@ constexpr bool operator>=(
     const time_point<Clock, Duration2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Left`  
- 左邊的 `duration` 或 `time_point` 物件。  
+ The left `duration` or `time_point` object.  
   
  `Right`  
- 右邊的 `duration` 或 `time_point` 物件。  
+ The right `duration` or `time_point` object.  
   
-### <a name="return-value"></a>傳回值  
- 每個函式都會傳回 `!(Left < Right)`。  
+### <a name="return-value"></a>Return Value  
+ Each function returns `!(Left < Right)`.  
   
-##  <a name="op_modulo"></a>  運算子模數  
- [duration](../standard-library/duration-class.md) 物件上的模數運算的運算子。  
+##  <a name="op_modulo"></a>  operator modulo  
+ Operator for modulo operations on [duration](../standard-library/duration-class.md) objects.  
   
 ```  
 template <class Rep1, class Period1, class Rep2>  
@@ -357,25 +357,25 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
      const duration<Rep2, Period2>& Right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `Dur`  
- `duration` 物件。  
+ A `duration` object.  
   
  `Div`  
- 整數值。  
+ An integral value.  
   
  `Left`  
- 左 `duration` 物件。  
+ The left `duration` object.  
   
  `Right`  
- 右 `duration` 物件。  
+ The right `duration` object.  
   
-### <a name="return-value"></a>傳回值  
- 第一個函式會傳回 `duration` 物件，其間隔長度為 `Dur` 除以 `Div` 的餘數。  
+### <a name="return-value"></a>Return Value  
+ The first function returns a `duration` object whose interval length is `Dur` modulo `Div`.  
   
- 第二個函式傳回的值代表 `Left` 除以 `Right` 的餘數。  
+ The second function returns a value that represents `Left` modulo `Right`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<chrono>](../standard-library/chrono.md)
 
 

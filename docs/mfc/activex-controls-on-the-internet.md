@@ -1,172 +1,189 @@
 ---
-title: "網際網路上的 ActiveX 控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [C++], 建立"
-  - "ActiveX 控制項 [C++], 網際網路"
-  - "使用 ActiveX 控制項下載資料"
-  - "網際網路應用程式 [C++], ActiveX 控制項"
-  - "網路 [C++], 使用 ActiveX 控制項下載"
-  - "OLE 控制項 [C++], 升級至 ActiveX"
+title: ActiveX Controls on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], creating
+- ActiveX controls [MFC], Internet
+- downloading data with ActiveX controls
+- OLE controls [MFC], upgrading to ActiveX
+- Internet applications [MFC], ActiveX controls
+- networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 網際網路上的 ActiveX 控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 988f0e2e303f6789ddc4d779ccba6f3d34435a42
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-ActiveX 控制項是 OLE automation 控制項規格的更新版本。  控制項是開發的可用於各種不同的容器的可程式化軟體元件的主要結構，包括在網際網路上 COM 明確的 Web 瀏覽器。  所有 ActiveX 控制項是網際網路位址控制項，並可將功能加入至現用文件或是網頁的一部分。  使用指令碼，網頁上的控制項才能彼此通訊。  
+---
+# <a name="activex-controls-on-the-internet"></a>ActiveX Controls on the Internet
+ActiveX controls are the updated version of the OLE control specification. Controls are a primary architecture for developing programmable software components that can be used in a variety of different containers, including COM-aware Web browsers on the Internet. Any ActiveX control can be an Internet control and can add its functionality to an Active document or be part of a Web page. Controls on a Web page can communicate with each other using scripting.  
   
- ActiveX 控制項不限於網際網路。  只要控制項支援該容器，需要的介面 ActiveX 控制項也可以用於所有容器。  
+ ActiveX controls are not limited to the Internet. An ActiveX control can also be used in any container, as long as the control supports the interfaces required by that container.  
   
- **ActiveX 控制項有幾個優點，包括:**  
+ **ActiveX controls have several advantages, including:**  
   
--   最少必要介面比上一個 OLE automation 控制項。  
+-   Fewer required interfaces than previous OLE controls.  
   
--   可以是無視窗和永遠就地啟動。  
+-   The ability to be windowless and always in-place active.  
   
- **若要為 ActiveX 控制項，控制項必須:**  
+ **In order to be an ActiveX control, a control must:**  
   
--   支援 **IUnknown** 介面。  
+-   Support the **IUnknown** interface.  
   
--   是個COM 物件。  
+-   Be a COM object.  
   
--   匯出 **DLLRegisterServer** 和 **DLLUnRegisterServer**。  
+-   Export **DLLRegisterServer** and **DLLUnRegisterServer**.  
   
--   支援其他介面所需的功能。  
+-   Support additional interfaces as needed for functionality.  
   
-## 讓您現有的控制項很容易在網際網路上使用  
- 設計在網際網路環境中正常運作的控制項在網際網路上相當低傳輸速率需要考量。  您可以使用現有的控制項；不過，您應該採用使您的程式碼大小較小且控制項的屬性下載非同步的步驟。  
+## <a name="making-your-existing-controls-internet-friendly"></a>Making Your Existing Controls Internet-Friendly  
+ Designing a control that will work well in an Internet environment requires consideration for the relatively low transmission rates on the Internet. You can use your existing controls; however, there are steps you should take to make your code size smaller and to make your control properties download asynchronously.  
   
- 若要提高控制效能，請遵循效率考量這些技巧:  
+ To improve performance of your controls, follow these tips on efficiency considerations:  
   
--   實作本文所述的技術 [ActiveX 控制項:最佳化](../mfc/mfc-activex-controls-optimization.md)。  
+-   Implement the techniques described in the article [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
--   考慮控制項如何具現化。  
+-   Consider how a control is instantiated.  
   
--   為非同步作業;不要封鎖其他程式。  
+-   Be asynchronous; don't hold up other programs.  
   
--   下載位於小區塊中的資料。  
+-   Download data in small blocks.  
   
-     當下載大型資料流 \(例如點陣圖或視訊資料時，請在與容器合作下存取控制資料非同步。  擷取資料加入或進度方式，以合作方式與可能也會擷取資料的其他控制項一起使用。  程式碼也可以下載非同步。  
+     When downloading large streams such as bitmaps or video data, access a control's data asynchronously in cooperation with the container. Retrieve the data in an incremental or progressive fashion, working cooperatively with other controls that may also be retrieving data. Code can also be downloading asynchronously.  
   
--   下載程式碼和屬性在背景。  
+-   Download code and properties in the background.  
   
--   會成為之使用者介面 \(UI\) 現用盡快。  
+-   Become user-interface active as quickly as possible.  
   
--   考慮如何儲存持續性資料，屬性和大型資料 BLOB \(例如點陣圖影像或視訊資料\)。  
+-   Consider how persistent data is stored, both properties and large data BLOBs (such as a bitmap image or video data).  
   
-     與數量的控制項沒有中繼資料，例如大型點陣圖或 AVI 檔名，需要下載方法的仔細考慮。  當控制項在背景中擷取資料時，資料的文件或頁面可以儘快變成可見，並允許使用者與網頁互動。  
+     Controls with significant amounts of persistent data, such as large bitmaps or AVI files, require careful attention to downloading method. A document or page can become visible as soon as possible, and allow the user to interact with the page while controls retrieve data in the background.  
   
--   撰寫有效率的常式保留程式碼大小和執行階段。  
+-   Write efficient routines to keep code size and run time down.  
   
-     小按鈕和標籤控制項，只以位元組陣列持續性資料，適用於網際網路環境並適合在瀏覽器內的。  
+     Small button and label controls, with only a few bytes of persistent data, are suitable for use in the Internet environment and work well inside browsers.  
   
--   考慮進度通訊至容器。  
+-   Consider progress is communicated to the container.  
   
-     告知容器在非同步下載進度，包括使用者何時可以啟動與頁面互動和下載的方法。  容器可以顯示進度 \(例如完成百分比\) 給使用者。  
+     Notify the container of progress in the asynchronous download, including when the user can start to interact with a page, and when the download is complete. The container can display progress (such as percent complete) to the user.  
   
--   允許控制項在用戶端電腦上註冊。  
+-   Consider how controls are registered on the client computer.  
   
-## 建立新的ActiveX 控制項  
- 當建立新的控制項使用應用程式精靈時，您可以選擇啟用支援非同步標記以及其他最佳化。  若要加入支援到下載控制項屬性的步驟，請依照下列步驟執行:  
+## <a name="creating-a-new-activex-control"></a>Creating a New ActiveX Control  
+ When creating a new control using the Application Wizard, you can choose to enable support for asynchronous monikers as well as other optimizations. To add support to download control properties asynchronously, follow these steps:  
   
-#### 使用 MFC ActiveX 控制項精靈以建立您的專案  
+#### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>To create your project using the MFC ActiveX Control Wizard  
   
-1.  按一下 **檔案** 功能表中的`New`。  
+1.  Click `New` on the **File** menu.  
   
-2.  從 Visual C\+\+ 專案選取 **MFC ActiveX Control Wizard** 並命名您的專案。  
+2.  Select **MFC ActiveX Control Wizard** from the Visual C++ projects and name your project.  
   
-3.  在 **Control Settings** 頁面上，選取 **Loads properties asynchronously**。  選取這個選項設定為就緒狀態屬性和就緒狀態變更事件。  
+3.  On the **Control Settings** page, select **Loads properties asynchronously**. Selecting this option sets up the ready state property and the ready state changed event for you.  
   
-     您也可以選擇其他最佳化，例如在 [ActiveX 控制項:最佳化](../mfc/mfc-activex-controls-optimization.md)中說明的**Windowless activation**。  
+     You can also select other optimizations, such as **Windowless activation**, which is described in [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
-4.  選擇 \[**完成**\] 以建立專案。  
+4.  Choose **Finish** to create the project.  
   
-#### 從 CDataPathProperty 建立的衍生類別  
+#### <a name="to-create-a-class-derived-from-cdatapathproperty"></a>To create a class derived from CDataPathProperty  
   
-1.  建立一個衍生自 `CDataPathProperty` 的類別。  
+1.  Create a class derived from `CDataPathProperty`.  
   
-2.  在包含控制項的標頭檔的每一個原始程式檔，請在它的前面加入這個類別的標頭檔。  
+2.  In each of your source files that includes the header file for your control, add the header file for this class before it.  
   
-3.  在這個類別，請覆寫 `OnDataAvailable`。  每當資料為顯示可供使用會呼叫這個函式。  當資料可用時，您可以進行呈現它處理它所選擇的任何方法，例如逐步轉譯他。  
+3.  In this class, override `OnDataAvailable`. This function is called whenever data is available for display. As data becomes available, you can handle it any way you choose, for example by progressively rendering it.  
   
-     下列程式碼摘要是進度顯示編輯控制項的資料的簡單範例。  請注意使用旗標 **BSCF\_FIRSTDATANOTIFICATION** 清除編輯控制項。  
+     The code excerpt below is a simple example of progressively displaying data in an edit control. Note the use of flag **BSCF_FIRSTDATANOTIFICATION** to clear the edit control.  
   
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/CPP/activex-controls-on-the-internet_1.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]  
   
-     請注意您必須包含 AFXCMN.H 以使用 `CListCtrl` 類別。  
+     Note that you must include AFXCMN.H to use the `CListCtrl` class.  
   
-4.  當控制項的整體狀態變更 \(例如，從載入到初始化的或使用者互動\)，呼叫 `COleControl::InternalSetReadyState`。  如果控制項只含有資料路徑屬性，將在 **BSCF\_LASTDATANOTIFICATION** 的程式碼告知容器您下載完成。  例如：  
+4.  When your control's overall state changes (for example, from loading to initialized or user interactive), call `COleControl::InternalSetReadyState`. If your control has only one data path property, you can add code on **BSCF_LASTDATANOTIFICATION** to notify the container that your download is complete. For example:  
   
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/CPP/activex-controls-on-the-internet_2.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
-5.  覆寫 `OnProgress`。  在 `OnProgress`中，您可透過所顯示的數字會顯示目前下載多遠的最大範圍和數字是。  您可以使用這些數字顯示狀態 \(例如完成百分比\)給使用者。  
+5.  Override `OnProgress`. In `OnProgress`, you are passed a number showing the maximum range and a number showing how far along the current download is. You can use these numbers to display status such as percent complete to the user.  
   
- 下一個程序將屬性加入至控制項使用衍生的類別。  
+ The next procedure adds a property to the control to use the class just derived.  
   
-#### 若要加入屬性  
+#### <a name="to-add-a-property"></a>To add a property  
   
-1.  在 \[**類別檢視**\] 中，以滑鼠右鍵按一下程式庫節點下的介面並選取 **加入**，再按一下 \[**加入屬性**\]。  這會啟動 **Add Property Wizard**。  
+1.  In **Class View**, right-click the interface underneath the library node and select **Add**, then **Add Property**. This will start the **Add Property Wizard**.  
   
-2.  在 **Add Property Wizard**，選取 **Set\/Get Methods** 選項按鈕，輸入 **Property Name**，例如， EditControlText，並選取 BSTR 做為 **Property type**。  
+2.  In the **Add Property Wizard**, select the **Set/Get Methods** radio button, type the **Property Name**, for example, EditControlText, and select BSTR as the **Property type**.  
   
-3.  按一下 \[**完成**\]。  
+3.  Click **Finish**.  
   
-4.  宣告您的 `CDataPathProperty`成員變數，對您的 ActiveX 控制項類別的衍生類別。  
+4.  Declare a member variable of your `CDataPathProperty`-derived class to your ActiveX control class.  
   
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/CPP/activex-controls-on-the-internet_3.h)]  
+     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  實做 **Get\/Set** 方法。  對於 **Get**，傳回字串。  對於 `Set`，請載入屬性並呼叫 `SetModifiedFlag`。  
+5.  Implement the **Get/Set** methods. For **Get**, return the string. For `Set`, load the property and call `SetModifiedFlag`.  
   
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/CPP/activex-controls-on-the-internet_4.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   
-6.  在[DoPropExchange](../Topic/COleControl::DoPropExchange.md)中，加入下列程式碼行：  
+6.  In [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), add the following line:  
   
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/CPP/activex-controls-on-the-internet_5.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]  
   
-7.  覆寫通知屬性的 [ResetData](../Topic/CDataPathProperty::ResetData.md) 將這行重設其控制項:  
+7.  Override [ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) to notify the property to reset its control by adding this line:  
   
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/CPP/activex-controls-on-the-internet_6.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]  
   
-## 決定是否要從 CDataPathProperty 或 CCachedDataPathProperty 衍生  
- 上述範例說明衍生的控制項的屬性步驟從 `CDataPathProperty`。  如果經常變更的您下載執行階段資料，這是很好的選擇，如此一來，您不需要保留所有資料，不過，只有目前值。  範例是股票行情即時看板控制。  
+## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Deciding Whether to Derive from CDataPathProperty or CCachedDataPathProperty  
+ The previous example describes steps for deriving your control's property from `CDataPathProperty`. This is a good choice if you are downloading real-time data that frequently changes, and for which you do not need to keep all the data, but only the current value. An example is a stock ticker control.  
   
- 您也可以從 `CCachedDataPathProperty`衍生。  在這種情況下，下載的資料在記憶體檔案快取。  這是很好的選擇—例如，如果您需要保留所有呈現點陣圖的控制項的下載資料。  在這個案例中，類別有包含資料的 10% 成員變數:  
+ You can also derive from `CCachedDataPathProperty`. In this case, the downloaded data is cached in a memory file. This is a good choice if you need to keep all the downloaded data — for example, a control that progressively renders a bitmap. In this case, the class has a member variable containing your data:  
   
  `CMemFile m_Cache;`  
   
- 在您的 ActiveX 控制項類別，您可以在 `OnDraw` 中使用這個記憶體對應檔中的資料。  在您的 ActiveX 控制項 `CCachedDataPathProperty`衍生類別，請覆寫成員函式 `OnDataAvailable` 並在呼叫基底類別實作之後無法使用控制項。  
+ In your ActiveX control class, you can use this memory mapped file in `OnDraw` to display the data. In your ActiveX control `CCachedDataPathProperty`-derived class, override the member function `OnDataAvailable` and invalidate the control, after calling the base class implementation.  
   
- [!code-cpp[NVC_MFCActiveXControl#7](../mfc/codesnippet/CPP/activex-controls-on-the-internet_7.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#7](../mfc/codesnippet/cpp/activex-controls-on-the-internet_7.cpp)]  
   
-## 非同步下載資料的 ActiveX 控制項  
- 應該在網路上以非同步方式下載資料。  這麼做的好處是如果轉換大量資料或是連接緩慢，下載程序也不會封鎖在用戶端的其他處理序。  
+## <a name="downloading-data-asynchronously-using-activex-controls"></a>Downloading Data Asynchronously Using ActiveX Controls  
+ Downloading data over a network should be done asynchronously. The advantage of doing so is that if a large amount of data is transferred or if the connection is slow, the download process will not block other processes on the client.  
   
- 非同步標記提供一種方法以非同步方式在網路下載資料。  即使作業尚未完成，在非同步 Moniker 的讀取作業會立即傳回。  
+ Asynchronous monikers provide a way to download data asynchronously over a network. A Read operation on an Asynchronous moniker returns immediately, even if the operation has not been completed.  
   
- 例如，如果只有 10 位元組可用以及讀取 1K 檔案非同步呼叫，則將不會封鎖讀取，但只會傳回目前可用的 10 個位元組。  
+ For example, if only 10 bytes are available and Read is called asynchronously on a 1K file, Read does not block, but returns with the currently available 10 bytes.  
   
- 使用 `CAsyncMonikerFile` 類別以實作 [非同步標記](../mfc/asynchronous-monikers-on-the-internet.md) 。  不過， ActiveX 控制項可以使用 `CDataPathProperty` 類別，衍生自 `CAsyncMonikerFile`，以說明實作非同步控制項屬性。  
+ You implement [asynchronous monikers](../mfc/asynchronous-monikers-on-the-internet.md) using the `CAsyncMonikerFile` class. However, ActiveX controls can use the `CDataPathProperty` class, which is derived from `CAsyncMonikerFile`, to help implement asynchronous control properties.  
   
- ASYNDOWN 範例示範如何設定非同步重複使用計時器讀取資料。   可從 Microsoft 下載中心下載在知識庫文件「HOWTO 詳細說明:AsyncDown 示範非同步資料下載」\(Q177244\) 中說明的ASYNDOWN 。\(如需下載的更多資訊從 Microsoft 下載中心下載檔案，查看在Microsoft 知識庫的這篇文章 \< 如何取得從 Microsoft 線上服務的支援檔案 \> \(Q119591\) \)。您可以在 MSDN Library CD\-ROM 或是在 [http:\/\/support.microsoft.com\/support](http://support.microsoft.com/support) 找到知識庫文件。  
+ The ASYNDOWN sample demonstrates how to set up an asynchronous loop using timers to read the data. ASYNDOWN is described in detail in the Knowledge Base article "HOWTO: AsyncDown Demonstrates Asynchronous Data Download" (Q177244) and is available for download from the Microsoft Download Center. (For more information about downloading files from the Microsoft Download Center, see the article "How to Obtain Microsoft Support Files from Online Services" (Q119591) in the Microsoft Knowledge Base.) You can find Knowledge Base articles at [http://support.microsoft.com/support](http://support.microsoft.com/support).  
   
- 在ASYNDOWN 用來在 **CDataPathProperty::OnDataAvailable** 設定計時器的基本技術是指示當資料可供使用的時候。  當計時器收到訊息時，應用程式會寫入資料 128 位元組區塊並填入編輯控制項。  當計時器訊息被處理時，如果資料無法使用，計時器就會關閉。  如果詳細資料延遲到，則`OnDataAvailable` 會啟動計時器。  
+ The basic technique used in ASYNDOWN is to set a timer in **CDataPathProperty::OnDataAvailable** to indicate when data is available. When the timer message is received, the application reads in 128-byte blocks of data and fills an edit control. If data is not available when the timer message is handled, the timer is turned off. `OnDataAvailable` turns on the timer if more data arrives later.  
   
-## 顯示在 Web 網頁上的控制項。  
- 這個物件標記和屬性的範例插入的 Web 網頁上的控制項。  
+## <a name="displaying-a-control-on-a-web-page"></a>Displaying a Control on a Web Page  
+ Here is an example of an object tag and attributes for inserting a control on a Web page.  
   
  `<OBJECT`  
   
@@ -196,17 +213,19 @@ ActiveX 控制項是 OLE automation 控制項規格的更新版本。  控制項
   
  `</OBJECT>`  
   
-## 更新現有的 OLE automation 控制項使用新的 ActiveX 控制項的功能。  
- 如果您的 OLE automation 控制項以 Visual C\+\+ 4.2 之前的版本所建立的，這些是您可採取以可改善其效能並提高其功能的步驟。  如需這些功能的深入的討論變更，請參閱 [ActiveX 控制項:最佳化](../mfc/mfc-activex-controls-optimization.md)。  
+## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Updating an Existing OLE Control to Use New ActiveX Control Features  
+ If your OLE control was created with a version of Visual C++ prior to 4.2, there are steps you can take to improve its performance and enhance its functionality. For a detailed discussion of these changes, see [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
- 如果您將非同步屬性支援加入至現有的控制項，您將需要加入就緒狀態屬性和 `ReadyStateChange` 事件。  在控制項的建構函式，請加入:  
+ If you are adding asynchronous property support to an existing control, you will need to add the ready state property and the `ReadyStateChange` event yourself. In the constructor for your control, add:  
   
- [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/CPP/activex-controls-on-the-internet_8.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]  
   
- 您將更新就緒狀態，您的程式碼會藉由呼叫 [COleControl::InternalSetReadyState](../Topic/COleControl::InternalSetReadyState.md)下載。  您可以呼叫 `InternalSetReadyState` 的位置是從 `CDataPathProperty``OnProgress` 覆寫衍生類別。  
+ You will update the ready state as your code is downloaded by calling [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). One place you could call `InternalSetReadyState` is from the `OnProgress` override of `CDataPathProperty`-derived class.  
   
- 然後，請遵循 [建立新的 ActiveX 控制項](#_core_how_do_i_create_a_new_activex_control.3f)中的步驟。  
+
   
-## 請參閱  
- [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

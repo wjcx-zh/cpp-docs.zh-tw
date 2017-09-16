@@ -1,51 +1,69 @@
 ---
-title: "Windows Sockets：從通訊端類別衍生 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "衍生類別, 從通訊端類別"
-  - "通訊端 [C++], 衍生自通訊端類別"
-  - "Windows Sockets [C++], 衍生自通訊端類別"
+title: 'Windows Sockets: Deriving from Socket Classes | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- derived classes [MFC], from socket classes
+- Windows Sockets [MFC], deriving from socket classes
+- sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Windows Sockets：從通訊端類別衍生
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 796e65a7e54f1b98ea57b3682a6ef94db3e95524
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明您可以從其中一個通訊端類別衍生自己的類別，進而得到的某些功能。  
+---
+# <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets: Deriving from Socket Classes
+This article describes some of the functionality you can gain by deriving your own class from one of the socket classes.  
   
- 您可以從 [CAsyncSocket](../mfc/reference/casyncsocket-class.md) 或 [CSocket](../mfc/reference/csocket-class.md) 衍生您自己的通訊端類別，以加入您的功能。  特別是，這些類別提供大量可以覆寫的虛擬成員函式。  這些功能包括 [OnReceive](../Topic/CAsyncSocket::OnReceive.md)、[OnSend](../Topic/CAsyncSocket::OnSend.md)、 [OnAccept](../Topic/CAsyncSocket::OnAccept.md)、[OnConnect](../Topic/CAsyncSocket::OnConnect.md) 和 [OnClose](../Topic/CAsyncSocket::OnClose.md)。  您可以在您的衍生通訊端類別覆寫函式，在網路事件發生時使用它們提供的功能。  架構會呼叫這些通知回呼函式，以通知您重要的事件，例如您可以開始讀取資料的收據。  如需告知函式的詳細資訊，請參閱 [Windows Sockets：通訊端告知](../mfc/windows-sockets-socket-notifications.md)。  
+ You can derive your own socket classes from either [CAsyncSocket](../mfc/reference/casyncsocket-class.md) or [CSocket](../mfc/reference/csocket-class.md) to add your own functionality. In particular, these classes supply a number of virtual member functions that you can override. These functions include [OnReceive](../mfc/reference/casyncsocket-class.md#onreceive), [OnSend](../mfc/reference/casyncsocket-class.md#onsend), [OnAccept](../mfc/reference/casyncsocket-class.md#onaccept), [OnConnect](../mfc/reference/casyncsocket-class.md#onconnect), and [OnClose](../mfc/reference/casyncsocket-class.md#onclose). You can override the functions in your derived socket class to take advantage of the notifications they provide when network events occur. The framework calls these notification callback functions to notify you of important socket events, such as the receipt of data that you can begin reading. For more information about notification functions, see [Windows Sockets: Socket Notifications](../mfc/windows-sockets-socket-notifications.md).  
   
- 此外，類別 `CSocket` 提供 [OnMessagePending](../Topic/CSocket::OnMessagePending.md) 成員函式 \(可進階覆寫\)。  當通訊端提取 Windows 訊息時， MFC 呼叫此函式。  您可以覆寫 `OnMessagePending`，搜尋來自視窗的特定資訊和回應它們。  
+ Additionally, class `CSocket` supplies the [OnMessagePending](../mfc/reference/csocket-class.md#onmessagepending) member function (an advanced overridable). MFC calls this function while the socket is pumping Windows-based messages. You can override `OnMessagePending` to look for particular messages from Windows and respond to them.  
   
- 類別 `CSocket` 提供的預設版本 `OnMessagePending` 會在等待封鎖呼叫完成時，檢查 `WM_PAINT` 訊息的訊息佇列。  它會繪製訊息以改善顯示品質。  除了這些好用的功能以外，以下說明您可能會覆寫函式的一種方式。  此為另一個範例，請考慮為下列工作使用 `OnMessagePending` 。  假設您在等待網路交易完成時，顯示非強制回應對話方塊。  對話方塊包含取消按鈕，讓使用者可以用來取消花費太久的交易。  您的 `OnMessagePending` 覆寫可能出現與這個非強制回應對話方塊相關的訊息。  
+ The default version of `OnMessagePending` supplied in class `CSocket` examines the message queue for `WM_PAINT` messages while waiting for a blocking call to complete. It dispatches paint messages to improve display quality. Aside from doing something useful, this illustrates one way you might override the function yourself. As another example, consider using `OnMessagePending` for the following task. Suppose you display a modeless dialog box while waiting for a network transaction to complete. The dialog box contains a Cancel button that the user can use to cancel blocking transactions that take too long. Your `OnMessagePending` override might pump messages related to this modeless dialog box.  
   
- 在 `OnMessagePending` 的覆寫中，請傳回  **TRUE** 或傳回呼叫 `OnMessagePending` 基底類別版本的結果。  若基底類別版本執行您仍然希望完成的工作，請呼叫它。  
+ In your `OnMessagePending` override, return either **TRUE** or the return from a call to the base-class version of `OnMessagePending`. Call the base-class version if it performs work that you still want done.  
   
- 如需詳細資訊，請參閱：  
+ For more information, see:  
   
--   [Windows Sockets：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows Sockets：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows Sockets：封鎖](../mfc/windows-sockets-blocking.md)  
+-   [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md)  
   
--   [Windows Sockets：位元組順序](../mfc/windows-sockets-byte-ordering.md)  
+-   [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md)  
   
--   [Windows Sockets：轉換字串](../mfc/windows-sockets-converting-strings.md)  
+-   [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md)  
   
-## 請參閱  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

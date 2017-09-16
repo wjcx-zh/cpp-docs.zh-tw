@@ -1,44 +1,63 @@
 ---
-title: "匯出的 DLL 函式進入點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "匯出 DLL, 函式"
-  - "MFC, 管理狀態資料"
-  - "狀態管理, 匯出的 DLL"
+title: Exported DLL Function Entry Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exporting DLLs [MFC], functions
+- MFC, managing state data
+- state management [MFC], exported DLLs
 ms.assetid: 3268666e-d24b-44f2-80e8-7c80f73b93ca
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 匯出的 DLL 函式進入點
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9e6d9db627e34af49ed48a97997b2677ff3f09d1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-如需 DLL 的匯出函式轉換成時，從 DLL 模組加入至呼叫的應用程式的 DLL 時，請使用 [AFX\_MANAGE\_STATE](../Topic/AFX_MANAGE_STATE.md) 巨集維護適當的全域狀態。  
+---
+# <a name="exported-dll-function-entry-points"></a>Exported DLL Function Entry Points
+For exported functions of a DLL, use the [AFX_MANAGE_STATE](reference/extension-dll-macros.md#afx_manage_state) macro to maintain the proper global state when switching from the DLL module to the calling application's DLL.  
   
- 呼叫時，這個巨集合 `pModuleState`，其中包含全域資料為模組的 `AFX_MODULE_STATE` 結構的指標，做為函式的包含範圍的其餘部分的有效的模組狀態。  當離開包含巨集的範圍之後，前一個有效的模組狀態會自動還原。  
+ When called, this macro sets `pModuleState`, a pointer to an `AFX_MODULE_STATE` structure containing global data for the module, as the effective module state for the remainder of the containing scope of the function. Upon leaving the scope containing the macro, the previous effective module state is automatically restored.  
   
- 這個切換藉由建構執行個體在堆疊上 **AFX\_MODULE\_STATE** 類別來達成。  在它的建構函式，這個類別在成員變數取得指標目前模組狀態並儲存它，然後將 `pModuleState` 做為新有效的模組狀態。  在其解構函式，這個類別會還原其成員變數儲存的指標做為有效的模組狀態。  
+ This switching is achieved by constructing an instance of an **AFX_MODULE_STATE** class on the stack. In its constructor, this class obtains a pointer to the current module state and stores it in a member variable, and then sets `pModuleState` as the new effective module state. In its destructor, this class restores the pointer stored in its member variable as the effective module state.  
   
- 如果您有輸出函式，例如啟動 DLL 中的對話方塊的話，您必須將下列程式碼加入至函式的開頭:  
+ If you have an exported function, such as one that launches a dialog box in your DLL, you need to add the following code to the beginning of the function:  
   
- [!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/CPP/exported-dll-function-entry-points_1.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#6](../mfc/codesnippet/cpp/exported-dll-function-entry-points_1.cpp)]  
   
- 這個互換直到從目前範圍結尾的 [AfxGetStaticModuleState](../Topic/AfxGetStaticModuleState.md) 傳回的這個狀態的目前模組狀態。  
+ This swaps the current module state with the state returned from [AfxGetStaticModuleState](reference/extension-dll-macros.md#afxgetstaticmodulestate) until the end of the current scope.  
   
- 如果沒有使用，資源的問題在 DLL 會發生 `AFX_MANAGE_STATE` 巨集。  根據預設， MFC 會使用主應用程式的資源控制代碼載入資源範本。  這個範本在 DLL 實際儲存。  原因是 MFC 模組狀態資訊由 `AFX_MANAGE_STATE` 巨集交換。  資源控制代碼從 MFC 模組狀態復原。  造成錯誤的資源控制代碼不使用交換模組狀態。  
+ Problems with resources in DLLs will occur if the `AFX_MANAGE_STATE` macro is not used. By default, MFC uses the resource handle of the main application to load the resource template. This template is actually stored in the DLL. The root cause is that MFC's module state information has not been switched by the `AFX_MANAGE_STATE` macro. The resource handle is recovered from MFC's module state. Not switching the module state causes the wrong resource handle to be used.  
   
- `AFX_MANAGE_STATE` 不需要將每個函式放在 DLL 。  例如， `InitInstance` 可以由應用程式的 MFC 程式碼呼叫，而不使用 `AFX_MANAGE_STATE` ，因為 MFC 在 `InitInstance` 然後參數之前自動將模組狀態， `InitInstance` 傳回之後。  這也適用於所有訊息對應的處理常式。  標準 DLL 實際上會在傳送任何訊息之前自動切換至模組狀態的特殊主視窗程序。  
+ `AFX_MANAGE_STATE` does not need to be put into every function in the DLL. For example, `InitInstance` can be called by the MFC code in the application without `AFX_MANAGE_STATE` because MFC automatically shifts the module state before `InitInstance` and then switches it back after `InitInstance` returns. The same is true for all message-map handlers. Regular MFC DLLs actually have a special master window procedure that automatically switches the module state before routing any message.  
   
-## 請參閱  
- [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
+## <a name="see-also"></a>See Also  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+

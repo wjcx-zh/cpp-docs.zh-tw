@@ -1,33 +1,52 @@
 ---
-title: "非命令訊息如何連接其處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "訊息處理 [C++], 非命令訊息"
-  - "訊息 [C++], 傳送"
-  - "非命令訊息"
-  - "Windows 訊息 [C++], 傳送"
+title: How Noncommand Messages Reach Their Handlers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- messages [MFC], routing
+- noncommand messages
+- Windows messages [MFC], routing
+- message handling [MFC], noncommand messages
 ms.assetid: e7df8aef-9fae-41f4-9c11-881d8465f602
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 非命令訊息如何連接其處理常式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 512c69c81e2d2226fd3336a911e62c21e4ad67ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-不同於命令，標準 Windows 訊息通過指示系統物件被路由，而是由視窗傳送訊息的視窗通常處理。  視窗可能是框架視窗 \(Main Frame Window\)、MDI 子視窗、標準控制項、對話方塊、檢視，或子視窗。  
+---
+# <a name="how-noncommand-messages-reach-their-handlers"></a>How Noncommand Messages Reach Their Handlers
+Unlike commands, standard Windows messages do not get routed through a chain of command targets but are usually handled by the window to which Windows sends the message. The window might be a main frame window, an MDI child window, a standard control, a dialog box, a view, or some other kind of child window.  
   
- 在執行階段，每個視窗視窗附加至有關聯的訊息對應和處理函式的視窗物件 \(直接或間接衍生自 `CWnd`\)。  架構會使用訊息對應—至於為命令時傳入訊息與針對處理常式。  
+ At run time, each Windows window is attached to a window object (derived directly or indirectly from `CWnd`) that has its own associated message map and handler functions. The framework uses the message map — as for a command — to map incoming messages to handlers.  
   
-## 請參閱  
- [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

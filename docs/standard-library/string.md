@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std::<string>
-- string/std::<string>
-- std.<string>
-- <string>
+- std::<string>", "string/std::<string>", "<string>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,100 +33,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6cc4af94f5eae06cde244da58c4aa03e561821a7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 89e99200f1ee6f680c76e748df23cdfe3569ce68
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
-定義容器範本類別 `basic_string` 和各種支援的範本。  
+Defines the container template class `basic_string` and various supporting templates.  
   
- 如需 `basic_string` 的詳細資訊，請參閱 [basic_string Class](../standard-library/basic-string-class.md)。  
+ For more information about `basic_string`, see [basic_string Class](../standard-library/basic-string-class.md)  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <string>  
 ```  
   
-## <a name="remarks"></a>備註  
- C++ 語言和 C++ 標準程式庫支援兩種字串類型：  
+## <a name="remarks"></a>Remarks  
+ The C++ language and the C++ Standard Library support two types of strings:  
   
--   以 Null 結束的字元陣列，通常稱為 C 字串。  
+-   Null-terminated character arrays often referred to as C strings.  
   
--   類型 `basic_string` 的範本類別物件，處理所有 `char` 之類的範本引數。  
+-   Template class objects, of type `basic_string`, that handle all `char`-like template arguments.  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[string](../standard-library/string-typedefs.md#string)|類型，以類型 `basic_string` 的元素做為 `char`，描述範本類別 `string` 的特製化。|  
-|[wstring](../standard-library/string-typedefs.md#wstring)|類型，以類型 `basic_string` 的元素做為 `wchar_t`，描述範本類別 `wstring` 的特製化。|  
-|[u16string](../standard-library/string-typedefs.md#u16string)|類型，根據類型 `basic_string` 的元素，描述範本類別 `char16_t` 的特製化。|  
-|[u32string](../standard-library/string-typedefs.md#u32string)|類型，根據類型 `basic_string` 的元素，描述範本類別 `char32_t` 的特製化。|  
+|[string](../standard-library/string-typedefs.md#string)|A type that describes a specialization of the template class `basic_string` with elements of type `char` as a `string`.|  
+|[wstring](../standard-library/string-typedefs.md#wstring)|A type that describes a specialization of the template class `basic_string` with elements of type `wchar_t` as a `wstring`.|  
+|[u16string](../standard-library/string-typedefs.md#u16string)|A type that describes a specialization of the template class `basic_string` based on elements of type `char16_t`.|  
+|[u32string](../standard-library/string-typedefs.md#u32string)|A type that describes a specialization of the template class `basic_string` based on elements of type `char32_t`.|  
   
-### <a name="operators"></a>運算子  
-  
-|||  
-|-|-|  
-|[operator+](../standard-library/string-operators.md#op_add)|串連兩個字串物件。|  
-|[operator!=](../standard-library/string-operators.md#op_neq)|測試運算子左邊的字串物件是否不等於右邊的字串物件。|  
-|[operator==](../standard-library/string-operators.md#op_eq_eq)|測試運算子左邊的字串物件是否等於右邊的字串物件。|  
-|[operator<](../standard-library/string-operators.md#op_lt)|測試運算子左邊的字串物件是否小於右邊的字串物件。|  
-|[operator<=](../standard-library/string-operators.md#op_lt_eq)|測試運算子左邊的字串物件是否小於或等於右邊的字串物件。|  
-|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|將字串插入至輸出資料流的範本函式。|  
-|[operator>](../standard-library/string-operators.md#op_gt)|測試運算子左邊的字串物件是否大於右邊的字串物件。|  
-|[operator>=](../standard-library/string-operators.md#op_gt_eq)|測試運算子左邊的字串物件是否大於或等於右邊的字串物件。|  
-|[operator>>](../standard-library/string-operators.md#op_gt_gt)|從輸入資料流擷取字串的範本函式。|  
-  
-### <a name="specialized-template-functions"></a>特製化樣板函式  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[swap](../standard-library/string-functions.md#swap)|交換兩個字串的字元陣列。|  
-|[stod](../standard-library/string-functions.md#stod)|將字元序列轉換為 `double.`|  
-|[stof](../standard-library/string-functions.md#stof)|將字元序列轉換為 `float`。|  
-|[stoi](../standard-library/string-functions.md#stoi)|將字元序列轉換為整數。|  
-|[stold](../standard-library/string-functions.md#stold)|將字元序列轉換為 `long double`。|  
-|[stoll](../standard-library/string-functions.md#stoll)|將字元序列轉換為 `long long`。|  
-|[stoul](../standard-library/string-functions.md#stoul)|將字元序列轉換為 `unsigned long`。|  
-|[stoull](../standard-library/string-functions.md#stoull)|將字元序列轉換為 `unsigned long long`。|  
-|[to_string](../standard-library/string-functions.md#to_string)|將值轉換成 `string`。|  
-|[to_wstring](../standard-library/string-functions.md#to_wstring)|將值轉換成寬 `string`。|  
+|[operator+](../standard-library/string-operators.md#op_add)|Concatenates two string objects.|  
+|[operator!=](../standard-library/string-operators.md#op_neq)|Tests if the string object on the left side of the operator is not equal to the string object on the right side.|  
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Tests if the string object on the left side of the operator is equal to the string object on the right side.|  
+|[operator<](../standard-library/string-operators.md#op_lt)|Tests if the string object on the left side of the operator is less than to the string object on the right side.|  
+|[operator<=](../standard-library/string-operators.md#op_lt_eq)|Tests if the string object on the left side of the operator is less than or equal to the string object on the right side.|  
+|[operator<\<](../standard-library/string-operators.md#op_lt_lt)|A template function that inserts a string into the output stream.|  
+|[operator>](../standard-library/string-operators.md#op_gt)|Tests if the string object on the left side of the operator is greater than to the string object on the right side.|  
+|[operator>=](../standard-library/string-operators.md#op_gt_eq)|Tests if the string object on the left side of the operator is greater than or equal to the string object on the right side.|  
+|[operator>>](../standard-library/string-operators.md#op_gt_gt)|A template function that extracts a string from the input stream.|  
   
-### <a name="functions"></a>函式  
-  
-|||  
-|-|-|  
-|[getline 範本](../standard-library/string-functions.md#getline)|從輸入資料流一行一行地擷取字串。|  
-  
-### <a name="classes"></a>類別  
+### <a name="specialized-template-functions"></a>Specialized Template Functions  
   
 |||  
 |-|-|  
-|[basic_string 類別](../standard-library/basic-string-class.md)|範本類別，描述可以儲存一連串任意類似字元之物件的物件。|  
-|[char_traits 結構](../standard-library/char-traits-struct.md)|範本類別，描述與 CharType 類型的字元相關聯的屬性。|  
+|[swap](../standard-library/string-functions.md#swap)|Exchanges the arrays of characters of two strings.|  
+|[stod](../standard-library/string-functions.md#stod)|Converts a character sequence to a `double.`|  
+|[stof](../standard-library/string-functions.md#stof)|Converts a character sequence to a `float`.|  
+|[stoi](../standard-library/string-functions.md#stoi)|Converts a character sequence to an integer.|  
+|[stold](../standard-library/string-functions.md#stold)|Converts a character sequence to a `long double`.|  
+|[stoll](../standard-library/string-functions.md#stoll)|Converts a character sequence to a `long long`.|  
+|[stoul](../standard-library/string-functions.md#stoul)|Converts a character sequence to an `unsigned long`.|  
+|[stoull](../standard-library/string-functions.md#stoull)|Converts a character sequence to an `unsigned long long`.|  
+|[to_string](../standard-library/string-functions.md#to_string)|Converts a value to a `string`.|  
+|[to_wstring](../standard-library/string-functions.md#to_wstring)|Converts a value to a wide `string`.|  
   
-### <a name="specializations"></a>特製化  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[char_traits\<char> 結構](../standard-library/char-traits-char-struct.md)|結構，會將樣板結構 `char_traits`\<CharType> 特製化為 `char` 類型的項目。|  
-|[char_traits<wchar_t> 結構](../standard-library/char-traits-wchar-t-struct.md)|結構，會將樣板結構 `char_traits`\<CharType> 特製化為 `wchar_t` 類型的項目。|  
-|[char_traits<char16_t> 結構](../standard-library/char-traits-char16-t-struct.md)|結構，會將樣板結構 `char_traits`\<CharType> 特製化為 `char16_t` 類型的項目。|  
-|[char_traits<char32_t> 結構](../standard-library/char-traits-char32-t-struct.md)|結構，會將樣板結構 `char_traits`\<CharType> 特製化為 `char32_t` 類型的項目。|  
+|[getline Template](../standard-library/string-functions.md#getline)|Extract strings from the input stream line by line.|  
   
-## <a name="requirements"></a>需求  
+### <a name="classes"></a>Classes  
   
-- **標頭：**\<string>  
+|||  
+|-|-|  
+|[basic_string Class](../standard-library/basic-string-class.md)|A template class that describes objects that can store a sequence of arbitrary character-like objects.|  
+|[char_traits Struct](../standard-library/char-traits-struct.md)|A template class that describes attributes associated with a character of type CharType|  
   
-- **命名空間：** std  
+### <a name="specializations"></a>Specializations  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+|||  
+|-|-|  
+|[char_traits\<char> Struct](../standard-library/char-traits-char-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char`.|  
+|[char_traits<wchar_t> Struct](../standard-library/char-traits-wchar-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `wchar_t`.|  
+|[char_traits<char16_t> Struct](../standard-library/char-traits-char16-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char16_t`.|  
+|[char_traits<char32_t> Struct](../standard-library/char-traits-char32-t-struct.md)|A struct that is a specialization of the template struct `char_traits`\<CharType> to an element of type `char32_t`.|  
+  
+## <a name="requirements"></a>Requirements  
+  
+- **Header:** \<string>  
+  
+- **Namespace:** std  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

@@ -1,72 +1,87 @@
 ---
-title: "如何：建立和使用 shared_ptr 執行個體 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: 'How to: Create and Use shared_ptr Instances | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# 如何：建立和使用 shared_ptr 執行個體
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 0d5915a9c05e115dd4af9303c08287259066a8dd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-`shared_ptr` 型別是在 C\+\+ 標準程式庫中的一種智慧型指標，是為一個以上的擁有者可能必須管理物件在記憶體中的存留期之情節所設計。  在您初始化`shared_ptr` 後，您可以複製、 以函式引數的值傳送也可以將它賦值給其他 `shared_ptr` 執行個體。  所有執行個體都指向相同的物件，並對一「控制區塊」共用存取其參考計數的遞增和遞減，當新的 `shared_ptr` 加入，將會超出範圍或重設。  在參考計數達到零時，控制區塊會刪除記憶體資源和自己本身。  
+---
+# <a name="how-to-create-and-use-sharedptr-instances"></a>How to: Create and Use shared_ptr Instances
+The `shared_ptr` type is a smart pointer in the C++ standard library that is designed for scenarios in which more than one owner might have to manage the lifetime of the object in memory. After you initialize a `shared_ptr` you can copy it, pass it by value in function arguments, and assign it to other `shared_ptr` instances. All the instances point to the same object, and share access to one "control block" that increments and decrements the reference count whenever a new `shared_ptr` is added, goes out of scope, or is reset. When the reference count reaches zero, the control block deletes the memory resource and itself.  
   
- 下圖顯示的是指向一記憶體位置的多個 `shared_ptr` 執行個體。  
+ The following illustration shows several `shared_ptr` instances that point to one memory location.  
   
- [![共用指標](../cpp/media/shared_ptr.png "shared\_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
+ [![Shared pointer](../cpp/media/shared_ptr.png "shared_ptr")](assetId:///9785ad08-31d8-411a-86a9-fb9cd9684c27)  
   
-## 範例  
- 可能的話，當記憶體資源第一次建立時，請使用 [make\_shared](../Topic/make_shared%20\(%3Cmemory%3E\).md) 函式建立 `shared_ptr` 。  `make_shared` 是例外狀況安全的。  它會使用相同的呼叫去配置控制區塊和資源的記憶體，因而降低建構的額外負荷。  如果您不使用 `make_shared`，則在將它傳遞給 `shared_ptr` 建構函式前，您必須先使用明確的新運算式建立物件。  下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。  
+## <a name="example"></a>Example  
+ Whenever possible, use the [make_shared](../standard-library/memory-functions.md#make_shared) function to create a `shared_ptr` when the memory resource is created for the first time. `make_shared` is exception-safe. It uses the same call to allocate the memory for the control block and the resource, and thereby reduces the construction overhead. If you do not use `make_shared`, then you have to use an explicit new expression to create the object before you pass it to the `shared_ptr` constructor. The following example shows various ways to declare and initialize a `shared_ptr` together with a new object.  
   
  [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]  
   
-## 範例  
- 下列範例顯示如何宣告和初始化採用已被另一個`shared_ptr`配置之物件共用擁有權的 `shared_ptr` 執行個體。  假設 `sp2` 是一個已初始化的 `shared_ptr`。  
+## <a name="example"></a>Example  
+ The following example shows how to declare and initialize `shared_ptr` instances that take on shared ownership of an object that has already been allocated by another `shared_ptr`. Assume that `sp2` is an initialized `shared_ptr`.  
   
  [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]  
   
-## 範例  
- 當您使用複製項目的演算法時，`shared_ptr` 也適用於 Standard Template Library \(STL\) 容器。  您可以將 `shared_ptr` 中的項目包裝，然後將它複製到能夠辨識只要需要且不再需要即有效之基礎記憶體的其他容器中。  下列範例說明如何在向量中的 `shared_ptr` 執行個體運用 `replace_copy_if` 演算法。  
+## <a name="example"></a>Example  
+ `shared_ptr` is also helpful in C++ Standard Library containers when you are using algorithms that copy elements. You can wrap elements in a `shared_ptr`, and then copy it into other containers with the understanding that the underlying memory is valid as long as you need it, and no longer. The following example shows how to use the `replace_copy_if` algorithm on `shared_ptr` instances in a vector.  
   
  [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]  
   
-## 範例  
- 您可以使用 `dynamic_pointer_cast`、 `static_pointer_cast` 和 `const_pointer_cast` 轉換成 `shared_ptr`。  這些函式類似 `dynamic_cast`、 `static_cast` 和 `const_cast` 運算子。  下列範例顯示如何測試在基底類別的 `shared_ptr` 向量中每個項目的衍生型別，然後複製元素並顯示其相關資訊。  
+## <a name="example"></a>Example  
+ You can use `dynamic_pointer_cast`, `static_pointer_cast`, and `const_pointer_cast` to cast a `shared_ptr`. These functions resemble the `dynamic_cast`, `static_cast`, and `const_cast` operators. The following example shows how to test the derived type of each element in a vector of `shared_ptr` of base classes, and then copy the elements and display information about them.  
   
  [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]  
   
-## 範例  
- 您可以透過下列方式將 `shared_ptr` 傳遞至另一個函式：  
+## <a name="example"></a>Example  
+ You can pass a `shared_ptr` to another function in the following ways:  
   
--   `shared_ptr` 的傳值。  這個呼叫複製建構函式、增加參考計數並且讓被呼叫端成為擁有者。  此作業有少量的額外負荷，也可能視您傳的 `shared_ptr` 物件多寡而變顯著。  當程式碼在呼叫端和被呼叫端之間的協定 \(隱含或明確\) 需要被呼叫端為擁有人時，請使用這個選項。  
+-   Pass the `shared_ptr` by value. This invokes the copy constructor, increments the reference count, and makes the callee an owner. There is a small amount of overhead in this operation, which may be significant depending on how many `shared_ptr` objects you are passing. Use this option when the code contract (implied or explicit) between the caller and callee requires that the callee be an owner.  
   
--   `shared_ptr` 的傳參考或常數參考 。  在這種情況下，參考計數不會增加，因此只要呼叫端不超出範圍被呼叫端可以存取指標。  或者，接收者可以決定建立根據參考的 `shared_ptr` 進而成為共用的擁有者。  當呼叫端不了解被呼叫端或您必須傳 `shared_ptr` 且要基於效能考量要避免複製作業時，請使用這個選項。  
+-   Pass the `shared_ptr` by reference or const reference. In this case, the reference count is not incremented, and the callee can access the pointer as long as the caller does not go out of scope. Or, the callee can decide to create a `shared_ptr` based on the reference, and thereby become a shared owner. Use this option when the caller has no knowledge of the callee, or when you must pass a `shared_ptr` and want to avoid the copy operation for performance reasons.  
   
--   將基底指標或參考傳至基礎物件。  這可讓被呼叫端使用物件，但是並不讓它共用擁有權或擴充其存留期。  如果被呼叫端會從原始指標創建 `shared_ptr` ，則新 `shared_ptr` 與原始無關並且不控制基礎資源。  當呼叫端和被呼叫端之間的協定明確指定被呼叫端保留 `shared_ptr` 存留期的擁有權時，請使用這個選項。  
+-   Pass the underlying pointer or a reference to the underlying object. This enables the callee to use the object, but does not enable it to share ownership or extend the lifetime. If the callee creates a `shared_ptr` from the raw pointer, the new `shared_ptr` is independent from the original, and does not control the underlying resource. Use this option when the contract between the caller and callee clearly specifies that the caller retains ownership of the `shared_ptr` lifetime.  
   
--   當您決定如何傳 `shared_ptr` 時，判斷被呼叫端是否必須共用基底資源的擁有權。  「Owner」是一個只要需要基礎資源就能使用它的物件或函式。  如果呼叫端必須確保被呼叫端可以擴充指標的存留期在其 \(函式\) 的存留期之外的，請使用第一個選項。  如果您不在乎被呼叫端是否擴充存留期，則傳參考並讓被呼叫端複製它。  
+-   When you are deciding how to pass a `shared_ptr`, determine whether the callee has to share ownership of the underlying resource. An "owner" is an object or function that can keep the underlying resource alive for as long as it needs it. If the caller has to guarantee that the callee can extend the life of the pointer beyond its (the function's) lifetime, use the first option. If you don't care whether the callee extends the lifetime, then pass by reference and let the callee copy it or not.  
   
--   如果您必須允許 Helper 函式對基底指標的存取，並且您知道 Helper 函式將使用指標並在呼叫的函式傳回之前傳回，則此函式不需要共用基底指標的擁有權。  它只能存取在呼叫端的 `shared_ptr` 存留期內之指標。  在這種情況下，`shared_ptr` 傳參考、原始指標、或基礎物件的參考是安全的。  以這種方式提供一個小的效能優點，也可以協助您表達程式設計的意圖。  
+-   If you have to give a helper function access to the underlying pointer, and you know that the helper function will just use the pointer and return before the calling function returns, then that function does not have to share ownership of the underlying pointer. It just has to access the pointer within the lifetime of the caller's `shared_ptr`. In this case, it is safe to pass the `shared_ptr` by reference, or pass the raw pointer or a reference to the underlying object. Passing this way provides a small performance benefit, and may also help you express your programming intent.  
   
--   在某些情況下，例如在 `std:vector<shared_ptr<T>>` 中，您可能必須將每個 `shared_ptr` 傳到 Lambda 運算式主體或具名函式物件。  如果 lambda 或函式不儲存指標，則傳 `shared_ptr` 參考以避免呼叫每個元素的複製建構函式。  
+-   Sometimes, for example in a `std:vector<shared_ptr<T>>`, you may have to pass each `shared_ptr` to a lambda expression body or named function object. If the lambda or function is not storing the pointer, then pass the `shared_ptr` by reference to avoid invoking the copy constructor for each element.    
   
- [!CODE [stl_smart_pointers#6](../CodeSnippet/VS_Snippets_Cpp/stl_smart_pointers#6)]  
-  
-## 範例  
- 下列範例顯示 `shared_ptr` 如何多載各種比較運算子以啟用 `shared_ptr` 執行個體所擁有之記憶體的指標比較。  
+## <a name="example"></a>Example  
+ The following example shows how `shared_ptr` overloads various comparison operators to enable pointer comparisons on the memory that is owned by the `shared_ptr` instances.  
   
  [!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]  
   
-## 請參閱  
- [智慧型指標](../cpp/smart-pointers-modern-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Smart Pointers](../cpp/smart-pointers-modern-cpp.md)

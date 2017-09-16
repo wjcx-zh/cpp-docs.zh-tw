@@ -1,79 +1,97 @@
 ---
-title: "在日期時間選擇器控制項中使用回呼欄位 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DTN_FORMATQUERY"
-  - "DTN_FORMAT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl 類別中的回呼欄位"
-  - "CDateTimeCtrl 類別, 回呼欄位"
-  - "CDateTimeCtrl 類別, 處理 DTN_FORMAT 和 DTN_FORMATQ"
-  - "DateTimePicker 控制項 [MFC]"
-  - "DateTimePicker 控制項 [MFC], 回呼欄位"
-  - "DTN_FORMAT 告知"
-  - "DTN_FORMATQUERY 告知"
+title: Using Callback Fields in a Date and Time Picker Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DTN_FORMATQUERY
+- DTN_FORMAT
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC], callback fields
+- callback fields in CDateTimeCtrl class [MFC]
+- CDateTimeCtrl class [MFC], callback fields
+- CDateTimeCtrl class [MFC], handling DTN_FORMAT and DTN_FORMATQ
+- DTN_FORMATQUERY notification [MFC]
+- DTN_FORMAT notification [MFC]
+- DateTimePicker control [MFC]
 ms.assetid: 404f4ba9-cba7-4718-9faa-bc6b274a723f
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 在日期時間選擇器控制項中使用回呼欄位
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 49e81c60625ee246c2b6ccb589330da2c65d92f1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-除了定義日期和時間選擇器欄位的標準格式字元以外，您也可以指定自訂字串的某些部分以自訂輸出，做為回呼欄位。  若要宣告回呼欄位，請在格式字串的主體的任何位置包含一個或多個「X」字元 \(ASCII 碼 88\)。  例如，下列字串「'Today is: 'yy'\/'MM'\/'dd' \(Day 'X'\)'」讓日期和時間選擇控制項以年、月、日期、年的天數顯示目前的值。  
+---
+# <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Using Callback Fields in a Date and Time Picker Control
+In addition to the standard format characters that define date and time picker fields, you can customize your output by specifying certain parts of a custom format string as callback fields. To declare a callback field, include one or more "X" characters (ASCII Code 88) anywhere in the body of the format string. For example, the following string "'Today is: 'yy'/'MM'/'dd' (Day 'X')'"causes the date and time picker control to display the current value as the year followed by the month, date, and finally the day of the year.  
   
 > [!NOTE]
->  回呼欄位的 X 數值不會對應至要顯示的字元數值。  
+>  The number of X's in a callback field does not correspond to the number of characters that will be displayed.  
   
- 您可以重複「X」字元，以區別自訂字串的多個回呼欄位。  因此，格式字串「XXddddMMMdd', 'yyyXXX」包含兩個唯一的回呼欄位， 「XX」和「XXX」。  
-  
-> [!NOTE]
->  回呼欄位視為有效欄位，因此您的應用程式必須準備處理 **DTN\_WMKEYDOWN**  通知訊息。  
-  
- 實作日期和時間選擇器控制項的回呼欄位，包含三個部分：  
-  
--   初始化自訂格式字串  
-  
--   處理 **DTN\_FORMATQUERY** 通知  
-  
--   處理 **DTN\_FORMAT** 通知  
-  
-## 初始化自訂格式字串  
- 呼叫 `CDateTimeCtrl::SetFormat` 初始化自訂字串。  如需詳細資訊，請參閱 [在日期和時間選擇器控制項使用自訂格式字串](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)。  設定自訂格式字串的位置通常是在包含對話方塊類別的 `OnInitDialog` 函式，或是包含檢視類別的 `OnInitialUpdate` 函式。  
-  
-## 處理 DTN\_FORMATQUERY 通知  
- 當控制項剖析格式字串並遇到回呼欄位時，應用程式會傳送 **DTN\_FORMAT** 和 **DTN\_FORMATQUERY** 通知訊息。  回呼欄位字串包含通知，讓您可判斷哪一個回呼欄位正在進行查詢。  
-  
- 會傳送 **DTN\_FORMATQUERY** 通知以擷取目前回呼欄位中顯示字串之像素的最大容許大小。  
-  
- 若要適當地計算這個值，您必須使用控制項顯示字型，計算要被替代給欄位的字串之高度和寬度。  字串的實際計算可以呼叫 [GetTextExtentPoint32](http://msdn.microsoft.com/library/windows/desktop/dd144938) Win32 函式輕鬆達成。  一旦大小決定後，請將值傳遞至應用程式並結束處理函式。  
-  
- 下列範例是提供回呼字串的大小的一個方法：  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/CPP/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]  
-  
- 一旦目前回呼欄位的大小被計算後，您必須為欄位提供值。  這會在 **DTN\_FORMAT**  通知的處理常式進行。  
-  
-## 處理 DTN\_FORMAT 通知  
- 應用程式使用 **DTN\_FORMAT** 通知來要求會被取代的字串。  下列範例示範可能的一個方法：  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/CPP/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]  
+ You can distinguish between multiple callback fields in a custom string by repeating the "X" character. Thus, the format string "XXddddMMMdd', 'yyyXXX" contains two unique callback fields, "XX" and "XXX".  
   
 > [!NOTE]
->  轉換通知處理常式的第一個參數至適當的型別，可以找到對 **NMDATETIMEFORMAT**  結構的指標。  
+>  Callback fields are treated as valid fields, so your application must be prepared to handle **DTN_WMKEYDOWN** notification messages.  
   
-## 請參閱  
- [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [控制項](../mfc/controls-mfc.md)
+ Implementing callback fields in your date and time picker control consists of three parts:  
+  
+-   Initializing the custom format string  
+  
+-   Handling the **DTN_FORMATQUERY** notification  
+  
+-   Handling the **DTN_FORMAT** notification  
+  
+## <a name="initializing-the-custom-format-string"></a>Initializing the Custom Format String  
+ Initialize the custom string with a call to `CDateTimeCtrl::SetFormat`. For more information, see [Using Custom Format Strings in a Date and Time Picker Control](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md). A common place to set the custom format string is in the `OnInitDialog` function of your containing dialog class or `OnInitialUpdate` function of your containing view class.  
+  
+## <a name="handling-the-dtnformatquery-notification"></a>Handling the DTN_FORMATQUERY Notification  
+ When the control parses the format string and encounters a callback field, the application sends **DTN_FORMAT** and **DTN_FORMATQUERY** notification messages. The callback field string is included with the notifications so you can determine which callback field is being queried.  
+  
+ The **DTN_FORMATQUERY** notification is sent to retrieve the maximum allowable size in pixels of the string that will be displayed in the current callback field.  
+  
+ To properly calculate this value, you must calculate the height and width of the string, to be substituted for the field, using the control's display font. The actual calculation of the string is easily achieved with a call to the [GetTextExtentPoint32](http://msdn.microsoft.com/library/windows/desktop/dd144938) Win32 function. Once the size is determined, pass the value back to the application and exit the handler function.  
+  
+ The following example is one method of supplying the size of the callback string:  
+  
+ [!code-cpp[NVC_MFCControlLadenDialog#8](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_1.cpp)]  
+  
+ Once the size of the current callback field has been calculated, you must supply a value for the field. This is done in the handler for the **DTN_FORMAT** notification.  
+  
+## <a name="handling-the-dtnformat-notification"></a>Handling the DTN_FORMAT Notification  
+ The **DTN_FORMAT** notification is used by the application to request the character string that will be substituted. The following example demonstrates one possible method:  
+  
+ [!code-cpp[NVC_MFCControlLadenDialog#9](../mfc/codesnippet/cpp/using-callback-fields-in-a-date-and-time-picker-control_2.cpp)]  
+  
+> [!NOTE]
+>  The pointer to the **NMDATETIMEFORMAT** structure is found by casting the first parameter of the notification handler to the proper type.  
+  
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

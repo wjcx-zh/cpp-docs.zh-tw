@@ -1,51 +1,70 @@
 ---
-title: "OLE 背景：容器和伺服器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "容器, OLE 容器應用程式"
-  - "全伺服程式"
-  - "OLE 容器, 容器應用程式"
-  - "OLE 全伺服應用程式"
-  - "OLE 伺服器應用程式, 關於伺服器應用程式"
-  - "OLE 伺服器應用程式, 迷你伺服應用程式"
-  - "伺服器應用程式"
-  - "伺服器應用程式, 與容器通訊"
-  - "伺服器應用程式, 已定義的"
-  - "伺服器應用程式, 全伺服程式和迷你伺服程式比較"
-  - "伺服器應用程式, 需求"
+title: 'OLE Background: Containers and Servers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE full-server applications [MFC]
+- server applications [MFC], communication with containers
+- full-server [MFC]
+- server applications [MFC], requirements
+- server applications [MFC], defined
+- OLE server applications [MFC], about server applications
+- server applications [MFC], full-server vs. mini-server
+- OLE server applications [MFC], mini-server applications
+- OLE containers [MFC], container applications
+- containers [MFC], OLE container applications
+- server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# OLE 背景：容器和伺服器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d8f9c9a5735d7c66935acafee320335861d7030e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-容器應用程式可以合併內嵌或連結的項目加入至文件的應用程式。  由容器應用程式的文件 Managed 必須能夠儲存和顯示 OLE 文件組件以及應用程式所建立的資料。  容器應用程式也必須授與使用者插入新項目或透過啟動伺服器應用程式編輯現有的項目，如果必要。  容器應用程式的使用者介面 \(UI\) 要求在 [容器:使用者介面問題](../mfc/containers-user-interface-issues.md)一文清單。  
+---
+# <a name="ole-background-containers-and-servers"></a>OLE Background: Containers and Servers
+A container application is an application that can incorporate embedded or linked items into its own documents. The documents managed by a container application must be able to store and display OLE document components as well as the data created by the application itself. A container application must also allow users to insert new items or edit existing items by activating server applications when necessary. The user-interface requirements of a container application are listed in the article [Containers: User-Interface Issues](../mfc/containers-user-interface-issues.md).  
   
- 伺服器應用程式或元件的應用程式可以建立 OLE 文件組件供容器應用程式使用的應用程式。  通常伺服器應用程式支援拖放或複製到剪貼簿的資料，讓容器應用程式可以插入資料做為內嵌或連結的項目。  應用程式可以是容器和伺服器。  
+ A server application or component application is an application that can create OLE document components for use by container applications. Server applications usually support drag and drop or copying their data to the Clipboard so that a container application can insert the data as an embedded or linked item. An application can be both a container and a server.  
   
- 大部分伺服器是獨立應用程式或全伺服器;它們以獨立應用程式或可由容器應用程式啟動。  miniserver 是容器來啟動伺服器應用程式的特定型別。  它不能當做獨立的應用程式。  Microsoft 繪製和 Microsoft Graph 伺服器是 miniservers 的範例。  
+ Most servers are stand-alone applications or full servers; they can either be run as stand-alone applications or can be launched by a container application. A miniserver is a special type of server application that can be launched only by a container. It cannot be run as a stand-alone application. Microsoft Draw and Microsoft Graph servers are examples of miniservers.  
   
- 容器和伺服器不直接通訊。  相反地，會透過 OLE 系統動態連結程式庫 \(DLL\) \(DLL\) 進行通訊。  這些 DLL 函式提供容器和伺服器呼叫和容器和伺服器提供 DLL 呼叫的回呼函式。  
+ Containers and servers do not communicate directly. Instead, they communicate through the OLE system dynamic-link libraries (DLL). These DLLs provide functions that containers and servers call, and the containers and servers provide callback functions that the DLLs call.  
   
- 使用這個通訊方式，容器不需要知道伺服器應用程式的實作詳細資料。  它可讓容器接受所有伺服器所建立的項目，而不需要定義一起使用可以伺服器類型。  因此，容器應用程式的使用者可以利用未來應用程式和資料格式。  如果這些新的應用程式是 OLE 元件，則複合文件可以結合這些應用程式建立的項目。  
+ Using this means of communication, a container does not need to know the implementation details of the server application. It allows a container to accept items created by any server without having to define the types of servers with which it can work. As a result, the user of a container application can take advantage of future applications and data formats. If these new applications are OLE components, then a compound document will be able to incorporate items created by those applications.  
   
-## 請參閱  
- [OLE 背景](../mfc/ole-background.md)   
- [OLE 背景：MFC 實作](../mfc/ole-background-mfc-implementation.md)   
- [容器](../mfc/containers.md)   
- [伺服器](../mfc/servers.md)   
- [容器：用戶端項目](../mfc/containers-client-items.md)   
- [伺服器：伺服器項目](../mfc/servers-server-items.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: MFC Implementation](../mfc/ole-background-mfc-implementation.md)   
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)   
+ [Servers: Server Items](../mfc/servers-server-items.md)
+
+

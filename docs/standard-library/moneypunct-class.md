@@ -1,5 +1,5 @@
 ---
-title: "moneypunct 類別 | Microsoft Docs"
+title: moneypunct Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- moneypunct
 - xlocmon/std::moneypunct
 - locale/std::moneypunct::char_type
 - locale/std::moneypunct::string_type
@@ -34,7 +33,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- moneypunct class
+- std::moneypunct [C++]
+- std::moneypunct [C++], char_type
+- std::moneypunct [C++], string_type
+- std::moneypunct [C++], curr_symbol
+- std::moneypunct [C++], decimal_point
+- std::moneypunct [C++], do_curr_symbol
+- std::moneypunct [C++], do_decimal_point
+- std::moneypunct [C++], do_frac_digits
+- std::moneypunct [C++], do_grouping
+- std::moneypunct [C++], do_neg_format
+- std::moneypunct [C++], do_negative_sign
+- std::moneypunct [C++], do_pos_format
+- std::moneypunct [C++], do_positive_sign
+- std::moneypunct [C++], do_thousands_sep
+- std::moneypunct [C++], frac_digits
+- std::moneypunct [C++], grouping
+- std::moneypunct [C++], neg_format
+- std::moneypunct [C++], negative_sign
+- std::moneypunct [C++], pos_format
+- std::moneypunct [C++], positive_sign
+- std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 caps.latest.revision: 20
 author: corob-msft
@@ -54,100 +73,100 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 9567db1b823f373a5ea26e6d113cc9176901453d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6d93d1577734d8ae8ec3211218108474de329635
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="moneypunct-class"></a>moneypunct 類別
-此樣板類別描述可以做為地區設定 facet 的物件，以描述用來表示貨幣輸入欄位或貨幣輸出欄位之 `CharType` 類型的序列。 如果樣板參數 `Intl` 為 `true`，則遵守國際慣例。  
+# <a name="moneypunct-class"></a>moneypunct Class
+The template class describes an object that can serve as a locale facet to describe the sequences of type `CharType` used to represent a monetary input field or a monetary output field. If the template parameter `Intl` is `true`, international conventions are observed.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class CharType, bool Intl>  
 class moneypunct;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `CharType`  
- 用於程式內部字元編碼的類型。  
+ The type used within a program to encode characters.  
   
  `Intl`  
- 旗標，指定是否要遵守國際慣例。  
+ A flag specifying whether international conventions are to be observed.  
   
-## <a name="remarks"></a>備註  
- 如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。  
+## <a name="remarks"></a>Remarks  
+ As with any locale facet, the static object ID has an initial stored value of zero. The first attempt to access its stored value stores a unique positive value in **id.**  
   
- 常數靜態物件 intl 會儲存範本參數 **Intl** 的值。  
+ The const static object intl stores the value of the template parameter **Intl**.  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[moneypunct](#moneypunct)|`moneypunct` 類型物件的建構函式。|  
+|[moneypunct](#moneypunct)|Constructor of objects of type `moneypunct`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|  
-|[string_type](#string_type)|類型，描述包含 `CharType` 類型字元的字串。|  
+|[char_type](#char_type)|A type that is used to describe a character used by a locale.|  
+|[string_type](#string_type)|A type that describes a string containing characters of type `CharType`.|  
   
-### <a name="member-functions"></a>成員函式  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[curr_symbol](#curr_symbol)|傳回地區設定特定的項目序列，做為貨幣符號。|  
-|[decimal_point](#decimal_point)|傳回地區設定特定的項目序列，做為小數點符號。|  
-|[do_curr_symbol](#do_curr_symbol)|受保護的虛擬成員函式，傳回地區設定特定的項目序列以做為貨幣符號。|  
-|[do_decimal_point](#do_decimal_point)|受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為小數點符號。|  
-|[do_frac_digits](#do_frac_digits)|受保護的虛擬成員函式傳回地區設定特定的小數點右邊位數。|  
-|[do_grouping](#do_grouping)|受保護的虛擬成員函式傳回決定如何將數字群組在小數點左側的地區設定特定規則。|  
-|[do_neg_format](#do_neg_format)|受保護的虛擬成員函式，呼叫以傳回具有負數數量的格式化輸出的地區設定特定規則。|  
-|[do_negative_sign](#do_negative_sign)|受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為負號。|  
-|[do_pos_format](#do_pos_format)|受保護的虛擬成員函式，呼叫以傳回具有正數數量的格式化輸出的地區設定特定規則。|  
-|[do_positive_sign](#do_positive_sign)|受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為正號。|  
-|[do_thousands_sep](#do_thousands_sep)|受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為千位分隔符號。|  
-|[frac_digits](#frac_digits)|傳回地區設定特定的小數點右邊位數。|  
-|[grouping](#grouping)|傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。|  
-|[neg_format](#neg_format)|傳回具有負數數量的格式化輸出的地區設定特定規則。|  
-|[negative_sign](#negative_sign)|傳回地區設定特定的項目序列，做為負號。|  
-|[pos_format](#pos_format)|傳回具有正數數量的格式化輸出的地區設定特定規則。|  
-|[positive_sign](#positive_sign)|傳回地區設定特定的項目序列，做為正號。|  
-|[thousands_sep](#thousands_sep)|傳回地區設定特定的項目序列，做為千位分隔符號。|  
+|[curr_symbol](#curr_symbol)|Returns a locale-specific sequence of elements to use as a currency symbol.|  
+|[decimal_point](#decimal_point)|Returns a locale-specific sequence of elements to use as a decimal point symbol.|  
+|[do_curr_symbol](#do_curr_symbol)|A protected virtual member function that returns a locale-specific sequence of elements to use as a currency symbol.|  
+|[do_decimal_point](#do_decimal_point)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a decimal point symbol.|  
+|[do_frac_digits](#do_frac_digits)|The protected virtual member function returns a locale-specific count of the number of digits to display to the right of any decimal point.|  
+|[do_grouping](#do_grouping)|The protected virtual member function returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[do_neg_format](#do_neg_format)|A protected virtual member function that is called to return a locale-specific rule for formatting outputs with negative amounts.|  
+|[do_negative_sign](#do_negative_sign)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a negative sign symbol.|  
+|[do_pos_format](#do_pos_format)|A protected virtual member function that is called to return a locale-specific rule for formatting outputs with positive amounts.|  
+|[do_positive_sign](#do_positive_sign)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a positive sign symbol.|  
+|[do_thousands_sep](#do_thousands_sep)|A protected virtual member function that is called to return a locale-specific sequence of elements to use as a thousands separator symbol.|  
+|[frac_digits](#frac_digits)|Returns a locale-specific count of the number of digits to display to the right of any decimal point.|  
+|[grouping](#grouping)|Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.|  
+|[neg_format](#neg_format)|Returns a locale-specific rule for formatting outputs with negative amounts.|  
+|[negative_sign](#negative_sign)|Returns a locale-specific sequence of elements to use as a negative sign symbol.|  
+|[pos_format](#pos_format)|Returns a locale-specific rule for formatting outputs with positive amounts.|  
+|[positive_sign](#positive_sign)|Returns a locale-specific sequence of elements to use as a positive sign symbol.|  
+|[thousands_sep](#thousands_sep)|Returns a locale-specific sequence of elements to use as a thousands separator symbol.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="char_type"></a>  moneypunct::char_type  
- 類型，用來描述由地區設定使用的字元。  
+ A type that is used to describe a character used by a locale.  
   
 ```  
 typedef CharType char_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **CharType**.  
   
 ##  <a name="curr_symbol"></a>  moneypunct::curr_symbol  
- 傳回地區設定特定的項目序列，做為貨幣符號。  
+ Returns a locale-specific sequence of elements to use as a currency symbol.  
   
 ```  
 string_type curr_symbol() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 包含貨幣符號的字串。  
+### <a name="return-value"></a>Return Value  
+ A string containing the currency symbol.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_curr_symbol](#do_curr_symbol)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_curr_symbol](#do_curr_symbol).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_curr_symbol.cpp  
@@ -169,19 +188,19 @@ int main( )
 ```  
   
 ##  <a name="decimal_point"></a>  moneypunct::decimal_point  
- 傳回地區設定特定的項目序列，做為小數點符號。  
+ Returns a locale-specific sequence of elements to use as a decimal point symbol.  
   
 ```  
 CharType decimal_point() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素序列，用來作為小數點符號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a decimal point symbol.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_decimal_point](#do_decimal_point)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_decimal_point](#do_decimal_point).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_decimal_pt.cpp  
@@ -212,152 +231,152 @@ German_Germany.1252 domestic decimal point ,
 ```  
   
 ##  <a name="do_curr_symbol"></a>  moneypunct::do_curr_symbol  
- 受保護的虛擬成員函式，傳回地區設定特定的項目序列以做為貨幣符號。  
+ A protected virtual member function that returns a locale-specific sequence of elements to use as a currency symbol.  
   
 ```  
 virtual string_type do_curr_symbol() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素序列，用來作為小數點符號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a decimal point symbol.  
   
-### <a name="example"></a>範例  
-  請參閱 [curr_symbol](#curr_symbol) 的範例，其中會由 `curr_symbol` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [curr_symbol](#curr_symbol), where the virtual member function is called by `curr_symbol`.  
   
 ##  <a name="do_decimal_point"></a>  moneypunct::do_decimal_point  
- 受保護的虛擬成員函式，會傳回地區設定特定的元素序列以作為貨幣符號。  
+ A protected virtual member function that returns a locale-specific sequence of elements to use as a decimal point symbol.  
   
 ```  
 virtual CharType do_decimal_point() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素序列，用來作為小數點符號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a decimal point symbol.  
   
-### <a name="example"></a>範例  
-  請參閱 [decimal_point](#decimal_point) 的範例，其中會由 `decimal_point` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [decimal_point](#decimal_point), where the virtual member function is called by `decimal_point`.  
   
 ##  <a name="do_frac_digits"></a>  moneypunct::do_frac_digits  
- 受保護的虛擬成員函式，會傳回地區設定特定的小數點右邊位數。  
+ A protected virtual member function that returns a locale-specific count of the number of digits to display to the right of any decimal point.  
   
 ```  
 virtual int do_frac_digits() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的小數點右邊位數。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific count of the number of digits to display to the right of any decimal point.  
   
-### <a name="example"></a>範例  
-  請參閱 [frac_digits](#frac_digits) 的範例，其中會由 `frac_digits` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [frac_digits](#frac_digits), where the virtual member function is called by `frac_digits`.  
   
 ##  <a name="do_grouping"></a>  moneypunct::do_grouping  
- 受保護的虛擬成員函式，會傳回地區設定特定規則，來決定任何小數點左邊數字分組的方式。  
+ A protected virtual member function that returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 virtual string do_grouping() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定規則，用來決定任何小數點左邊數字分組的方式。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="example"></a>範例  
-  請參閱 [grouping](#grouping) 的範例，其中會由 **grouping** 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [grouping](#grouping), where the virtual member function is called by **grouping**.  
   
 ##  <a name="do_neg_format"></a>  moneypunct::do_neg_format  
- 受保護的虛擬成員函式，呼叫以傳回具有負數數量的格式化輸出的地區設定特定規則。  
+ A protected virtual member function that is called to return a locale-specific rule for formatting outputs with negative amounts.  
   
 ```  
 virtual pattern do_neg_format() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 **pattern::field** 的四個元素每一個可擁有的值如下：  
+### <a name="return-value"></a>Return Value  
+ The protected virtual member function returns a locale-specific rule for determining how to generate a monetary output field for a negative amount. Each of the four elements of **pattern::field** can have the values:  
   
-- **none**：比對零個或多個空格，或不產生任何項目。  
+- **none** to match zero or more spaces or generate nothing.  
   
-- **sign**：比對或產生正負號。  
+- **sign** to match or generate a positive or negative sign.  
   
-- **space**：比對零個或多個空格，或是產生空格。  
+- **space** to match zero or more spaces or generate a space.  
   
-- **symbol**：比對或產生貨幣符號。  
+- **symbol** to match or generate a currency symbol.  
   
-- **value**：比對或產生貨幣值。  
+- **value** to match or generate a monetary value.  
   
- 系統會依照這些元素在 **pattern::field** 中的出現順序，產生貨幣輸出欄位的元件，以及比對貨幣輸入欄位的元件。 **sign**、**symbol**、**value** 當中每一個值，以及 **none** 或 **space**，必須確切出現一次。 **none** 值不得第一個出現。 space 值「不得」第一個或最後一個出現。 如果 **Intl** 為 true，順序便是 **symbol**、**sign**、**none**，然後 **value**。  
+ Components of a monetary output field are generated and components of a monetary input field are matched in the order in which these elements appear in **pattern::field**. Each of the values **sign**, **symbol**, **value**, and either **none** or **space** must appear exactly once. The value **none** must not appear first. The value space **must** not appear first or last. If **Intl** is true, the order is **symbol**, **sign**, **none**, then **value**.  
   
- `moneypunct`\< **CharType**, **Intl**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。  
+ The template version of `moneypunct`\< **CharType**, **Intl**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.  
   
-### <a name="example"></a>範例  
-  請參閱 [neg_format](#neg_format) 的範例，其中會由 `neg_format` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [neg_format](#neg_format), where the virtual member function is called by `neg_format`.  
   
 ##  <a name="do_negative_sign"></a>  moneypunct::do_negative_sign  
- 受保護的虛擬成員函式，呼叫以傳回地區設定特定的項目序列，做為負號。  
+ A protected virtual member function that is called to return a locale-specific sequence of elements to use as a negative sign symbol.  
   
 ```  
 virtual string_type do_negative_sign() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素序列，用來作為負號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a negative sign.  
   
-### <a name="example"></a>範例  
-  請參閱 [negative_sign](#negative_sign) 的範例，其中會由 `negative_sign` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [negative_sign](#negative_sign), where the virtual member function is called by `negative_sign`.  
   
 ##  <a name="do_pos_format"></a>  moneypunct::do_pos_format  
- 受保護的虛擬成員函式，呼叫以傳回具有正數數量的格式化輸出的地區設定特定規則。  
+ A protected virtual member function that is called to return a locale-specific rule for formatting outputs with positive amounts.  
   
 ```  
 virtual pattern do_pos_format() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為正數金額產生貨幣輸出欄位。 (它也會決定如何比對貨幣輸入欄位的元件)。此編碼與 [do_neg_format](#do_neg_format) 的編碼相同。  
+### <a name="return-value"></a>Return Value  
+ The protected virtual member function returns a locale-specific rule for determining how to generate a monetary output field for a positive amount. (It also determines how to match the components of a monetary input field.) The encoding is the same as for [do_neg_format](#do_neg_format).  
   
- moneypunct\< **CharType**, **Inputlterator**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。  
+ The template version of moneypunct\< **CharType**, **Inputlterator**> returns `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.  
   
-### <a name="example"></a>範例  
-  請參閱 [pos_format](#pos_format) 的範例，其中會由 `pos_format` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [pos_format](#pos_format), where the virtual member function is called by `pos_format`.  
   
 ##  <a name="do_positive_sign"></a>  moneypunct::do_positive_sign  
- 受保護的虛擬成員函式，會傳回地區設定特定的元素序列以作為正號。  
+ A protected virtual member function that returns a locale-specific sequence of elements to use as a positive sign.  
   
 ```  
 virtual string_type do_positive_sign() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素序列，用來作為正號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a positive sign.  
   
-### <a name="example"></a>範例  
-  請參閱 [positive_sign](#positive_sign) 的範例，其中會由 `positive_sign` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [positive_sign](#positive_sign), where the virtual member function is called by `positive_sign`.  
   
 ##  <a name="do_thousands_sep"></a>  moneypunct::do_thousands_sep  
- 受保護的虛擬成員函式，會傳回地區設定特定的元素，用來作為任何小數點左邊的群組分隔符號。  
+ A protected virtual member function that returns a locale-specific element to use as a group separator to the left of any decimal point.  
   
 ```  
 virtual CharType do_thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素，用來作為任何小數點左邊的群組分隔符號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific element to use as a group separator to the left of any decimal point.  
   
-### <a name="example"></a>範例  
-  請參閱 [thousands_sep](#thousands_sep) 的範例，其中會由 `thousands_sep` 呼叫此虛擬成員函式。  
+### <a name="example"></a>Example  
+  See the example for [thousands_sep](#thousands_sep), where the virtual member function is called by `thousands_sep`.  
   
 ##  <a name="frac_digits"></a>  moneypunct::frac_digits  
- 傳回地區設定特定的小數點右邊位數。  
+ Returns a locale-specific count of the number of digits to display to the right of any decimal point.  
   
 ```  
 int frac_digits() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的小數點右邊位數。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific count of the number of digits to display to the right of any decimal point.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_frac_digits](#do_frac_digits)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_frac_digits](#do_frac_digits).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_frac_digits.cpp  
@@ -411,19 +430,19 @@ German_Germany.1252 domestic frac_digits
 ```  
   
 ##  <a name="grouping"></a>  moneypunct::grouping  
- 傳回決定如何將數字群組在任何小數點左側的地區設定特定規則。  
+ Returns a locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
 ```  
 string grouping() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定規則，用來決定任何小數點左邊數字分組的方式。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for determining how digits are grouped to the left of any decimal point.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_grouping](#do_grouping)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_grouping](#do_grouping).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_grouping.cpp  
@@ -477,43 +496,43 @@ German_Germany.1252 domestic frac_digits
 ```  
   
 ##  <a name="moneypunct"></a>  moneypunct::moneypunct  
- `moneypunct` 類型物件的建構函式。  
+ Constructor of objects of type `moneypunct`.  
   
 ```  
 explicit moneypunct(size_t _Refs = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `_Refs`  
- 整數值，用來指定物件的記憶體管理類型。  
+ Integer value used to specify the type of memory management for the object.  
   
-### <a name="remarks"></a>備註  
- `_Refs` 參數的可能值和其意義如下：  
+### <a name="remarks"></a>Remarks  
+ The possible values for the `_Refs` parameter and their significance are:  
   
--   0：物件的存留期由包含該物件的地區設定來管理。  
+-   0: The lifetime of the object is managed by the locales that contain it.  
   
--   1：物件的存留期必須以手動方式管理。  
+-   1: The lifetime of the object must be manually managed.  
   
--   \>1︰ 未定義這些值。  
+-   \> 1: These values are not defined.  
   
- 無法提供任何直接範例，因為解構函式受到保護。  
+ No direct examples are possible, because the destructor is protected.  
   
- 建構函式會以 [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*) 將其基底物件初始化。  
+ The constructor initializes its base object with [locale::facet](../standard-library/locale-class.md#facet_class)(_ *Refs*).  
   
 ##  <a name="neg_format"></a>  moneypunct::neg_format  
- 傳回具有負數數量的格式化輸出的地區設定特定規則。  
+ Returns a locale-specific rule for formatting outputs with negative amounts.  
   
 ```  
 pattern neg_format() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定規則，用來將具有負數金額的輸出格式化。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for formatting outputs with negative amounts.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_neg_format](#do_neg_format)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_neg_format](#do_neg_format).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_neg_format.cpp  
@@ -546,19 +565,19 @@ int main( ) {
 ```  
   
 ##  <a name="negative_sign"></a>  moneypunct::negative_sign  
- 傳回地區設定特定的項目序列，做為負號。  
+ Returns a locale-specific sequence of elements to use as a negative sign symbol.  
   
 ```  
 string_type negative_sign() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回地區設定特定的項目序列，做為負號。  
+### <a name="return-value"></a>Return Value  
+ Returns a locale-specific sequence of elements to use as a negative sign symbol.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_negative_sign](#do_negative_sign)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_negative_sign](#do_negative_sign).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_neg_sign.cpp  
@@ -605,19 +624,19 @@ French_France.1252 domestic negative sign: -
 ```  
   
 ##  <a name="pos_format"></a>  moneypunct::pos_format  
- 傳回具有正數數量的格式化輸出的地區設定特定規則。  
+ Returns a locale-specific rule for formatting outputs with positive amounts.  
   
 ```  
 pattern pos_format() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定規則，用來將具有正數金額的輸出格式化。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific rule for formatting outputs with positive amounts.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_pos_format](#do_pos_format)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_pos_format](#do_pos_format).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_pos_format.cpp  
@@ -650,19 +669,19 @@ int main() {
 ```  
   
 ##  <a name="positive_sign"></a>  moneypunct::positive_sign  
- 傳回地區設定特定的項目序列，做為正號。  
+ Returns a locale-specific sequence of elements to use as a positive sign symbol.  
   
 ```  
 string_type positive_sign() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素序列，用來作為正號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a positive sign symbol.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_positive_sign](#do_positive_sign)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_positive_sign](#do_positive_sign).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_pos_sign.cpp  
@@ -709,29 +728,29 @@ French_France.1252 domestic positive sign:
 ```  
   
 ##  <a name="string_type"></a>  moneypunct::string_type  
- 一種類型，描述包含 **CharType** 類型字元的字串。  
+ A type that describes a string containing characters of type **CharType**.  
   
 ```  
 typedef basic_string<CharType, Traits, Allocator> string_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型描述 [basic_string](../standard-library/basic-string-class.md) 範本類別的特製化，其中此類別的物件可儲存標點符號序列的複本。  
+### <a name="remarks"></a>Remarks  
+ The type describes a specialization of template class [basic_string](../standard-library/basic-string-class.md) whose objects can store copies of the punctuation sequences.  
   
 ##  <a name="thousands_sep"></a>  moneypunct::thousands_sep  
- 傳回地區設定特定的項目序列，做為千位分隔符號。  
+ Returns a locale-specific sequence of elements to use as a thousands separator symbol.  
   
 ```  
 CharType thousands_sep() const;
 ```  
   
-### <a name="return-value"></a>傳回值  
- 地區設定特定的元素序列，用來作為千分號。  
+### <a name="return-value"></a>Return Value  
+ A locale-specific sequence of elements to use as a thousands separator  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回 [do_thousands_sep](#do_thousands_sep)。  
+### <a name="remarks"></a>Remarks  
+ The member function returns [do_thousands_sep](#do_thousands_sep).  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // moneypunct_thou_sep.cpp  
@@ -776,8 +795,8 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<locale>](../standard-library/locale.md)   
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

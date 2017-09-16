@@ -1,52 +1,72 @@
 ---
-title: "如何：加入功能區控制項和事件處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件處理常式, 加入"
-  - "功能區控制項, 加入"
+title: 'How to: Add Ribbon Controls and Event Handlers | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- event handlers [MFC], adding
+- ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 如何：加入功能區控制項和事件處理常式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 99bd07de331cb9281bffeb39eb78123377fe31b6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-功能區控制項項目，例如按鈕和下拉式方塊，那您新增至面板。  面板是顯示相關控制項群組功能區列的區域。  
+---
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>How to: Add Ribbon Controls and Event Handlers
+Ribbon controls are elements, such as buttons and combo boxes, that you add to panels. Panels are areas of the ribbon bar that display a group of related controls.  
   
- 本主題中，您會開啟功能區設計工具，將按鈕，然後連接顯示「Hello World」的事件。  
+ In this topic, you will open the Ribbon Designer, add a button, and then link an event that displays "Hello World".  
   
-### 開啟功能區設計工具  
+### <a name="to-open-the-ribbon-designer"></a>To open the Ribbon Designer  
   
-1.  在 Visual Studio 中，按一下 \[**檢視**\] 功能表上，按一下 \[**資源檢視**\]。  
+1.  In Visual Studio, on the **View** menu, click **Resource View**.  
   
-2.  在 \[**資源檢視**\] 中，按兩下功能區資源顯示在設計介面上。  
+2.  In **Resource View**, double-click the ribbon resource to display it on the design surface.  
   
-### 將按鈕和事件處理常式  
+### <a name="to-add-a-button-and-an-event-handler"></a>To add a Button and an Event Handler  
   
-1.  從 \[**工具列**\] 中，按一下 \[**按鈕**\] 並將其拖曳到設計介面上的面板。  
+1.  From the **Toolbar**, click **Button** and drag it on to a panel in the design surface.  
   
-2.  以滑鼠右鍵按一下按鈕，然後按一下 \[ **加入事件處理常式**\]。  
+2.  Right-click the button, and click **Add Event Handler**.  
   
-3.  在 \[**事件處理常式精靈。**\] 中，確認預設值並按一下 \[**加入和編輯**\]。  如需詳細資訊，請參閱[事件處理常式精靈](../ide/event-handler-wizard.md)。  
+3.  In the **Event Handler Wizard**, confirm the default settings and click **Add and Edit**. For more information, see [Event Handler Wizard](../ide/event-handler-wizard.md).  
   
-4.  在程式碼編輯器中，加入下列程式碼輸入到處理常式函式:  
+4.  In the code editor, add the following code into the handler function:  
   
-    ```  
-    MessageBox((LPCTSTR)L"Hello World");  
-    ```  
+ ```  
+    MessageBox((LPCTSTR)L"Hello World");
+
+ ```  
   
-## 請參閱  
- [RibbonGadgets 範例：功能區小工具應用程式](../top/visual-cpp-samples.md)   
- [功能區設計工具 \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [RibbonGadgets Sample: Ribbon Gadgets Application](../visual-cpp-samples.md)   
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

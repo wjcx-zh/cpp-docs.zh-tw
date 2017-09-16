@@ -1,5 +1,5 @@
 ---
-title: "tuple_size 函式 | Microsoft Docs"
+title: tuple_size Class; | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,11 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple_size
-- std::tuple_size
-- utility/std::tuple_size
+- tuple_size", "std::tuple_size", "utility/std::tuple_size
 dev_langs:
 - C++
 helpviewer_keywords:
-- tuple_size Class
+- ', '
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
 caps.latest.revision: 23
 author: corob-msft
@@ -35,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: f0ae102852f1db46b68d86438e20ce9645535d19
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 15bc0b29c4775438ee93b899c061aa539f5c1546
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="tuplesize-class"></a>tuple_size 函式
-報告 `tuple` 包含的元素數目。  
+# <a name="tuplesize-class"></a>tuple_size Class;
+Reports the number of elements that a `tuple` contains.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 // TEMPLATE STRUCT tuple_size  
@@ -80,34 +78,34 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;   
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
 *Tuple*  
-Tuple 的類型。 
+The type of the tuple. 
   
 *Elem*  
-陣列元素的類型。 
+The type of the array elements. 
   
 *Size*  
-陣列的大小。 
+The size of the array. 
   
 *T1*  
-第一個配對成員的類型。 
+The type of the first member of the pair. 
   
 *T2*  
-第二個配對成員的類型。 
+The type of the second member of the pair. 
   
-*型別*  
-元組元素的類型。 
+*Types*  
+The types of the tuple elements. 
   
   
-## <a name="remarks"></a>備註  
-範本類別有一個成員 `value` 是整數常數運算式，其值為 tuple 類型 `Tuple`的範圍。  
+## <a name="remarks"></a>Remarks  
+The template class has a member `value` that is an integral constant expression whose value is the extent of the tuple type `Tuple`.  
   
-陣列的樣板特製化有一個成員 `value`，其是值為 `Size` 的整數常數運算式，而該值是陣列的大小。  
+The template specialization for arrays has a member `value` that is an integral constant expression whose value is `Size`, which is the size of the array.  
   
-配對的樣板特製化有一個成員 `value`，其是值為 2 的整數常數運算式。  
+The template specialization for pair has a member `value` that is an integral constant expression whose value is 2.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <tuple>   
@@ -135,15 +133,15 @@ int main()
  0 1.5 2 3.7  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：** \<tuple>  
- **標頭：** \<array> (用於陣列特製化)  
- **標頭：** \<utility> (用於配對特製化)  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<tuple>  
+ **Header:** \<array> (for array specialization)  
+ **Header:** \<utility> (for pair specialization)  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)   
  [tuple](../standard-library/tuple-class.md)  
- [tuple_element 類別](../standard-library/tuple-element-class-tuple.md)
+ [tuple_element Class](../standard-library/tuple-element-class-tuple.md)
 

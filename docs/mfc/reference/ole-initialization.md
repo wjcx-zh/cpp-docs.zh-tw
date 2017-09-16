@@ -1,5 +1,5 @@
 ---
-title: "OLE 初始化 |Microsoft 文件"
+title: OLE Initialization | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,65 +34,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b943ef8dd652df061965fe81ecc9c08115636141
-ms.openlocfilehash: c598a2c78e92725e656de82397418f1635d4f92d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5e756feff21f498129b0a077309b7784fd810212
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ole-initialization"></a>OLE 初始化
-應用程式必須先初始化 OLE 系統 DLL 並驗證 DLL 版本是否正確，才可以使用 OLE 系統服務。 **AfxOleInit**函式會初始化 OLE 系統 Dll。  
+# <a name="ole-initialization"></a>OLE Initialization
+Before an application can use OLE system services, it must initialize the OLE system DLLs and verify that the DLLs are the correct version. The **AfxOleInit** function initializes the OLE system DLLs.  
   
-### <a name="ole-initialization"></a>OLE 初始化  
+### <a name="ole-initialization"></a>OLE Initialization  
   
 |||  
 |-|-|  
-|[AfxOleInit](#afxoleinit)|初始化 OLE 程式庫。| 
-|[AfxEnableControlContainer](#afxenablecontrolcontainer)|呼叫應用程式物件的 `InitInstance` 函式中的這個函式，可支援 OLE 控制項的內含項目。| 
+|[AfxOleInit](#afxoleinit)|Initializes the OLE libraries.| 
+|[AfxEnableControlContainer](#afxenablecontrolcontainer)|Call this function in your application object's `InitInstance` function to enable support for containment of OLE controls.| 
 
 
-## <a name="afxenablecontrolcontainer"></a>AfxEnableControlContainer
-呼叫應用程式物件的 `InitInstance` 函式中的這個函式，可支援 OLE 控制項的內含項目。  
+## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
+Call this function in your application object's `InitInstance` function to enable support for containment of OLE controls.  
    
-### <a name="syntax"></a>語法    
+### <a name="syntax"></a>Syntax    
 ```
 void AfxEnableControlContainer( );  
 ```  
    
-### <a name="remarks"></a>備註  
- 如需 OLE 控制項 （現在稱為 ActiveX 控制項） 的詳細資訊，請參閱[ActiveX 控制項主題](../mfc-activex-controls.md)。  
+### <a name="remarks"></a>Remarks  
+ For more information about OLE controls (now called ActiveX controls), see [ActiveX Control Topics](../mfc-activex-controls.md).  
    
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
   
-##  <a name="afxoleinit"></a>AfxOleInit  
- 初始化 OLE 應用程式的支援。  
+##  <a name="afxoleinit"></a>  AfxOleInit  
+ Initializes OLE support for the application.  
   
 ``` 
 BOOL AFXAPI AfxOleInit(); 
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則為非零如果初始化失敗，可能是因為安裝的 OLE 系統 Dll 不正確的版本是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; 0 if initialization fails, possibly because incorrect versions of the OLE system DLLs are installed.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式以初始化 OLE 支援的 MFC 應用程式。 呼叫此函式時，執行下列動作︰  
+### <a name="remarks"></a>Remarks  
+ Call this function to initialize the OLE support for an MFC application. When this function is called, the following actions occur:  
   
--   初始化 COM 程式庫上呼叫的應用程式目前的 apartment。 如需詳細資訊，請參閱[OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134)。  
+-   Initializes the COM library on the current apartment of the calling application. For more information, see [OleInitialize](http://msdn.microsoft.com/library/windows/desktop/ms690134).  
   
--   建立訊息篩選物件，實作[IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740)介面。 此訊息篩選條件可以存取透過呼叫[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)。  
-  
-> [!NOTE]
->  如果**AfxOleInit**呼叫從 MFC DLL，則呼叫會失敗。 因為函式會假設，如果呼叫的 dll，OLE 系統原先已初始化呼叫的應用程式，就會發生故障。  
+-   Creates a message filter object, implementing the [IMessageFilter](http://msdn.microsoft.com/library/windows/desktop/ms693740) interface. This message filter can be accessed with a call to [AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter).  
   
 > [!NOTE]
->  MFC 應用程式必須初始化為單一執行緒 apartment (STA)。 如果您呼叫[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)中您`InitInstance`覆寫中，指定`COINIT_APARTMENTTHREADED`(而非`COINIT_MULTITHREADED`)。 如需詳細資訊，請參閱 < PRB: MFC 應用程式停止回應時初始化為多執行緒 Apartment （828643） 在應用程式[http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)。  
+>  If **AfxOleInit** is called from an MFC DLL, the call will fail. The failure occurs because the function assumes that, if it is called from a DLL, the OLE system was previously initialized by the calling application.  
+  
+> [!NOTE]
+>  MFC applications must be initialized as single threaded apartment (STA). If you call [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279) in your `InitInstance` override, specify `COINIT_APARTMENTTHREADED` (rather than `COINIT_MULTITHREADED`). For more information, see PRB: MFC Application Stops Responding When You Initialize the Application as a Multithreaded Apartment (828643) at [http://support.microsoft.com/default.aspxscid=kb;en-us;828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).  
 
-### <a name="requirements"></a>需求  
- **標頭：** afxdisp.h
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h
 
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

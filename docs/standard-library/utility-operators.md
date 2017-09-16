@@ -1,30 +1,45 @@
 ---
-title: "&lt;utility&gt; 運算子 | Microsoft Docs"
+title: '&lt;utility&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- utility/std::operator!=
+- utility/std::operator&gt;
+- utility/std::operator&gt;=
+- utility/std::operator&lt;
+- utility/std::operator&lt;=
+- utility/std::operator==
+dev_langs:
+- C++
 ms.assetid: a6617109-2cec-4a69-948f-6c87116eda5f
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 46b2da82830b734ffd44eba5f72e8c5e912c3915
+helpviewer_keywords:
+- std::operator!= (utility)
+- std::operator&gt; (utility)
+- std::operator&gt;= (utility)
+- std::operator&lt; (utility)
+- std::operator&lt;= (utility)
+- std::operator== (utility)
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ad12c4282efb7fea13b0d61e10f4810fd5314cb5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltutilitygt-operators"></a>&lt;utility&gt; 運算子
+# <a name="ltutilitygt-operators"></a>&lt;utility&gt; operators
 ||||  
 |-|-|-|  
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  operator!=  
- 測試成對運算子左側的物件是否不等於右側的物件。  
+ Tests if the pair object on the left side of the operator is not equal to the pair object on the right side.  
   
 ```  
 template <class Type>  
@@ -34,20 +49,20 @@ template <class T, class U>
 constexpr bool operator!=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **pair** 型別的物件。  
+ An object of type **pair.**  
   
  `right`  
- `pair` 類型的物件。  
+ An object of type `pair`.  
   
-### <a name="return-value"></a>傳回值  
- 如果 pair 不相等，則為 **true**；如果 pair 相等，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the pairs are not equal; **false** if the pairs are equal.  
   
-### <a name="remarks"></a>備註  
- 如果配對的每個項目都相等，則其中一對等於另一對。 如果其中一對的第一個或第二個項目不等於另一對的對應項目，則這兩對不相等。  
+### <a name="remarks"></a>Remarks  
+ One pair is equal to another pair if each of their respective elements is equal. Two pairs are unequal if either the first or the second element of one is not equal to the corresponding element of the other pair.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // utility_op_ne.cpp  
@@ -95,27 +110,27 @@ The pairs p1 and p3 are equal.
 ```  
   
 ##  <a name="op_eq_eq"></a>  operator==  
- 測試成對運算子左側的物件是否等於右側的物件。  
+ Tests if the pair object on the left side of the operator is equal to the pair object on the right side.  
   
 ```  
 template <class T, class U>  
 constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- **pair** 型別的物件。  
+ An object of type **pair.**  
   
  `right`  
- `pair` 類型的物件。  
+ An object of type `pair`.  
   
-### <a name="return-value"></a>傳回值  
- 如果 pair 相等，則為 **true**；如果 `pair` 不相等，則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the pairs are equal; **false** if the `pair`s are not equal.  
   
-### <a name="remarks"></a>備註  
- 如果配對的每個項目都相等，則其中一對等於另一對。 函式會傳回 `left`。 **first** == `right`. **first** && `left`. **second** == `right`. **second**。 如果其中一對的第一個或第二個項目不等於另一對的對應項目，則這兩對不相等。  
+### <a name="remarks"></a>Remarks  
+ One pair is equal to another pair if each of their respective elements is equal. The function returns `left`. **first** == `right`. **first** && `left`. **second** == `right`. **second**. Two pairs are unequal if either the first or the second element of one is not equal to the corresponding element of the other pair.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // utility_op_eq.cpp  
@@ -154,29 +169,29 @@ int main( )
 ```  
   
 ##  <a name="op_lt"></a>  operator&lt;  
- 測試成對運算子左側的物件是否小於右側的物件。  
+ Tests if the pair object on the left side of the operator is less than the pair object on the right side.  
   
 ```  
 template <class T, class U>  
 constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 運算子左側 `pair` 類型的物件。  
+ An object of type `pair` on the left side of the operator.  
   
  `right`  
- 運算子右側 `pair` 類型的物件。  
+ An object of type `pair` on the right side of the operator.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左側的 `pair` 必定小於運算子右側的 `pair`，則為 **true**；否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the `pair` on the left side of the operator is strictly less than the `pair` on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- `left` `pair`物件，即所謂必小於`right``pair`物件，如果`left`小於且不等於`right`。  
+### <a name="remarks"></a>Remarks  
+ The `left` `pair` object is said to be strictly less than the `right` `pair` object if `left` is less than and not equal to `right`.  
   
- 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。  
+ In a comparison of pairs, the values' first elements of the two pairs have the highest priority. If they differ, then the result of their comparison is taken as the result of the comparison of the pair. If the values of the first elements are not different, then the values of the second elements are compared and the result of their comparison is taken as the result of the comparison of the pair.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // utility_op_lt.cpp  
@@ -224,7 +239,7 @@ The pair p1 is not less than the pair p3.
 ```  
   
 ##  <a name="op_lt_eq"></a>  operator&lt;=  
- 測試成對運算子左側的物件是否小於或等於右側的物件。  
+ Tests if the pair object on the left side of the operator is less than or equal to the pair object on the right side.  
   
 ```  
 template <class Type>  
@@ -234,20 +249,20 @@ template <class T, class U>
 constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 運算子左側 `pair` 類型的物件。  
+ An object of type `pair` on the left side of the operator.  
   
  `right`  
- 運算子右側 `pair` 類型的物件。  
+ An object of type `pair` on the right side of the operator.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左側的 `pair` 小於或等於運算子右側的 `pair`，則為 **true**；否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the `pair` on the left side of the operator is less than or equal to the `pair` on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。  
+### <a name="remarks"></a>Remarks  
+ In a comparison of pairs, the values' first elements of the two pairs have the highest priority. If they differ, then the result of their comparison is taken as the result of the comparison of the pair. If the values of the first elements are not different, then the values of the second elements are compared and the result of their comparison is taken as the result of the comparison of the pair.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // utility_op_le.cpp  
@@ -305,7 +320,7 @@ The pair p1 is less than or equal to the pair p4.
 ```  
   
 ##  <a name="op_gt"></a>  operator&gt;  
- 測試成對運算子左側的物件是否大於右側的物件。  
+ Tests if the pair object on the left side of the operator is greater than the pair object on the right side.  
   
 ```  
 template <class Type>  
@@ -315,22 +330,22 @@ template <class T, class U>
 constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 運算子左側 `pair` 類型的物件。  
+ An object of type `pair` on the left side of the operator.  
   
  `right`  
- 運算子右側 `pair` 類型的物件。  
+ An object of type `pair` on the right side of the operator.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左邊的 `pair` 必定大於運算子右邊的 `pair`，則為 **true**；否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the `pair` on the left side of the operator is strictly greater than the `pair` on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- `left` `pair`物件，即所謂必大於`right``pair`物件，如果`left`大於且不等於`right`。  
+### <a name="remarks"></a>Remarks  
+ The `left` `pair` object is said to be strictly greater than the `right` `pair` object if `left` is greater than and not equal to `right`.  
   
- 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。  
+ In a comparison of pairs, the values' first elements of the two pairs have the highest priority. If they differ, then the result of their comparison is taken as the result of the comparison of the pair. If the values of the first elements are not different, then the values of the second elements are compared and the result of their comparison is taken as the result of the comparison of the pair.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // utility_op_gt.cpp  
@@ -388,7 +403,7 @@ The pair p1 is not greater than the pair p4.
 ```  
   
 ##  <a name="op_gt_eq"></a>  operator&gt;=  
- 測試成寺運算子左側的物件是否大於或等於右側的物件。  
+ Tests if the pair object on the left side of the operator is greater than or equal to the pair object on the right side.  
   
 ```  
 template <class Type>  
@@ -398,20 +413,20 @@ template <class T, class U>
 constexpr bool operator>=(const pair<T, U>& left, const pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `left`  
- 運算子左側 `pair` 類型的物件。  
+ An object of type `pair` on the left side of the operator.  
   
  `right`  
- 運算子右側 `pair` 類型的物件。  
+ An object of type `pair` on the right side of the operator.  
   
-### <a name="return-value"></a>傳回值  
- 如果運算子左側的 `pair` 大於或等於運算子右側的 `pair`，則為 **true**；否則為 **false**。  
+### <a name="return-value"></a>Return Value  
+ **true** if the `pair` on the left side of the operator is greater than or equal to the `pair` on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>備註  
- 在比較配對時，兩對中第一個項目的值，優先權最高。 如果值不同，則會將其比較結果視為配對比較的結果。 如果第一個項目的值並無不同，則會比較第二個項目的值，並將其比較結果視為配對比較的結果。  
+### <a name="remarks"></a>Remarks  
+ In a comparison of pairs, the values' first elements of the two pairs have the highest priority. If they differ, then the result of their comparison is taken as the result of the comparison of the pair. If the values of the first elements are not different, then the values of the second elements are compared and the result of their comparison is taken as the result of the comparison of the pair.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // utility_op_ge.cpp  
@@ -468,7 +483,7 @@ Pair p1 is greater than or equal to pair p3.
 Pair p1 is greater than or equal to pair p4.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<utility>](../standard-library/utility.md)
 
 

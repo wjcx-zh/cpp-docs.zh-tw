@@ -1,93 +1,112 @@
 ---
-title: "檢視類別 (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "表單和資料錄檢視"
-  - "分隔視窗類別"
-  - "檢視類別, Windows"
+title: View Classes (Windows) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.view
+dev_langs:
+- C++
+helpviewer_keywords:
+- form and record views [MFC]
+- splitter window classes [MFC]
+- view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 檢視類別 (Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ff65a4a581035536bee8077f2736e273e36ce68d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-`CView` 及其衍生類別是表示框架視窗的工作區的子視窗。  檢視顯示資料並接受資料的項目。  
+---
+# <a name="view-classes-windows"></a>View Classes (Windows)
+`CView` and its derived classes are child windows that represent the client area of a frame window. Views show data and accept input for a document.  
   
- 使用文件樣板物件，檢視類別與文件類別和框架視窗類別。  
+ A view class is associated with a document class and a frame window class using a document-template object.  
   
  [CView](../mfc/reference/cview-class.md)  
- 文件資料的應用程式特定的檢視的基底類別。  檢視顯示資料並接受編輯或選取資料的使用者輸入。  從 `CView`衍生您自己的檢視類別或類別。  
+ The base class for application-specific views of a document's data. Views display data and accept user input to edit or select the data. Derive your view class or classes from `CView`.  
   
  [CScrollView](../mfc/reference/cscrollview-class.md)  
- 檢視的基底類別以捲動功能。  從自動捲動的 `CScrollView` 衍生您自己的檢視類別。  
+ The base class for views with scrolling capabilities. Derive your view class from `CScrollView` for automatic scrolling.  
   
-## 表單和資料錄檢視  
- 表單檢視也捲動檢視。  它們會根據對話方塊範本。  
+## <a name="form-and-record-views"></a>Form and Record Views  
+ Form views are also scrolling views. They are based on a dialog box template.  
   
- 資料錄檢視從表單檢視衍生。  除了對話方塊範本以外，也有與資料庫的連接。  
+ Record views are derived from form views. In addition to the dialog box template, they also have a connection to a database.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- 設定對話方塊範本中定義的捲動檢視。  衍生自 `CFormView` 類別實作以對話方塊範本的使用者介面。  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- 提供一個表單檢視直接連接到資料存取物件 \(DAO\) 資料錄集物件。  就像所有表單檢視 `CDaoRecordView` ，根據對話方塊範本。  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- 提供一個表單檢視直接連接至開放式資料庫連接 \(Open Database Connectivity，ODBC\) 資料錄集物件。  就像所有表單檢視 `CRecordView` ，根據對話方塊範本。  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
  [CHtmlEditView](../mfc/reference/chtmleditview-class.md)  
- 提供編輯平台的瀏覽器功能的 HTML 表單檢視。  
+ A form view that provides the functionality of the WebBrowser HTML editing platform.  
   
-## 控制項檢視  
- 控制項檢視中顯示控制項做為其檢視。  
+## <a name="control-views"></a>Control Views  
+ Control views display a control as their view.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- 所有檢視的基底類別與視窗控制項。  根據控制項的檢視說明如下。  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
  [CEditView](../mfc/reference/ceditview-class.md)  
- 包含 Windows 標準編輯控制項的檢視 \(請參閱 [CEdit](../mfc/reference/cedit-class.md)\)。  編輯控制項支援文字編輯，搜尋，取代和捲動功能。  
+ A view that contains a Windows standard edit control (see [CEdit](../mfc/reference/cedit-class.md)). Edit controls support text editing, searching, replacing, and scrolling capabilities.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- 包含 Windows Rich Edit 控制項的檢視 \(請參閱 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)\)。  除了編輯控制項的功能，雜項編輯控制項支援字型、色彩、段落格式和內嵌 OLE 物件。  
+ A view that contains a Windows rich edit control (see [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). In addition to the capabilities of an edit control, rich edit controls support fonts, colors, paragraph formatting, and embedded OLE objects.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- 包含 Windows 清單控制項的檢視 \(請參閱 [CListCtrl](../mfc/reference/clistctrl-class.md)\)。  清單控制項顯示項目的集合，每項包括圖示和標籤，如檔案總管的右窗格中的方式。  
+ A view that contains a Windows list control (see [CListCtrl](../mfc/reference/clistctrl-class.md)). A list control displays a collection of items, each consisting of an icon and a label, in a manner similar to the right pane of File Explorer.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- 包含視窗樹狀控制項的檢視 \(請參閱 [CTreeCtrl](../mfc/reference/ctreectrl-class.md)\)。  樹狀目錄控制項顯示階層式清單圖示與標籤排列的方式，類似於檔案總管左窗格中。  
+ A view that contains a Windows tree control (see [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). A tree control displays a hierarchical list of icons and labels arranged in a manner similar to the left pane of File Explorer.  
   
-## 相關類別  
- `CSplitterWnd` 可讓您在單一框架視窗內有多個檢視。  `CPrintDialog` 和 `CPrintInfo` 支援檢視的列印和預覽列印功能。  `CRichEditDoc` 和 `CRichEditCntrItem` 以 `CRichEditView` 實作 OLE 容器功能。  
+## <a name="related-classes"></a>Related Classes  
+ `CSplitterWnd` allows you to have multiple views within a single frame window. `CPrintDialog` and `CPrintInfo` support the print and print preview ability of views. `CRichEditDoc` and `CRichEditCntrItem` are used with `CRichEditView` to implement OLE container capabilities.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
- 使用者可以分割成多個窗格的視窗。  這些窗格可以由使用者調整大小或固定大小。  
+ A window that the user can split into multiple panes. These panes can be resizable by the user or fixed size.  
   
  [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
- 提供列印檔案的標準對話方塊。  
+ Provides a standard dialog box for printing a file.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- 包含列印或預覽列印工作的結構資訊。  用於列印結構的 `CView` 。  
+ A structure containing information about a print or print preview job. Used by `CView`'s printing architecture.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- 維持 `CRichEditView` 中 OLE 客戶端項目清單。  
+ Maintains the list of OLE client items that are in a `CRichEditView`.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- 提供用戶端中 `CRichEditView`儲存的 OLE 項目。  
+ Provides client-side access to an OLE item stored in a `CRichEditView`.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

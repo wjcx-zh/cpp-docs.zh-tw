@@ -1,5 +1,5 @@
 ---
-title: "CMFCToolTipInfo 類別 |Microsoft 文件"
+title: CMFCToolTipInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -27,7 +27,19 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCToolTipInfo class
+- CMFCToolTipInfo [MFC], m_bBalloonTooltip
+- CMFCToolTipInfo [MFC], m_bBoldLabel
+- CMFCToolTipInfo [MFC], m_bDrawDescription
+- CMFCToolTipInfo [MFC], m_bDrawIcon
+- CMFCToolTipInfo [MFC], m_bDrawSeparator
+- CMFCToolTipInfo [MFC], m_bRoundedCorners
+- CMFCToolTipInfo [MFC], m_bVislManagerTheme
+- CMFCToolTipInfo [MFC], m_clrBorder
+- CMFCToolTipInfo [MFC], m_clrFill
+- CMFCToolTipInfo [MFC], m_clrFillGradient
+- CMFCToolTipInfo [MFC], m_clrText
+- CMFCToolTipInfo [MFC], m_nGradientAngle
+- CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
 caps.latest.revision: 27
 author: mikeblome
@@ -47,17 +59,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed15ce9f3e1abb48c0a6c4eacdf662cc2ef3f9c9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e489fa20aa86f2106c42d288ddd8c4f410ece7b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo 類別
-儲存工具提示視覺外觀的相關資訊。  
+# <a name="cmfctooltipinfo-class"></a>CMFCToolTipInfo Class
+Stores information about the visual appearance of tooltips.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolTipInfo  
@@ -65,184 +77,184 @@ class CMFCToolTipInfo
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::operator =](#operator_eq)||  
+|[CMFCToolTipInfo::operator=](#operator_eq)||  
   
-### <a name="data-members"></a>資料成員  
+### <a name="data-members"></a>Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|一個布林值變數，指出工具提示是否有氣球外觀。|  
-|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|一個布林值變數，指出工具提示標籤是否以粗體字顯示。|  
-|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|一個布林值變數，指出工具提示是否包含描述。|  
-|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|一個布林值變數，指出工具提示是否包含圖示。|  
-|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|一個布林值變數，指出是否要在工具提示標籤與工具提示描述之間顯示分隔符號。|  
-|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|一個布林值變數，指出工具提示是否有圓角。|  
-|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|布林值變數，指出是否應該由的視覺管理員控制工具提示的外觀 (請參閱[CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md))。|  
-|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|工具提示框線的色彩。|  
-|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|工具提示背景的色彩。|  
-|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|工具提示中填入的漸層色彩。|  
-|[CMFCToolTipInfo::m_clrText](#m_clrtext)|工具提示的文字色彩。|  
-|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|工具提示中填入的漸層角度。|  
-|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|工具提示描述的最大可能寬度，以像素為單位。|  
+|[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|A Boolean variable that indicates whether the tooltip has a balloon appearance.|  
+|[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|A Boolean variable that indicates whether tooltip labels are displayed in a bold font.|  
+|[CMFCToolTipInfo::m_bDrawDescription](#m_bdrawdescription)|A Boolean variable that indicates whether the tooltip contains a description.|  
+|[CMFCToolTipInfo::m_bDrawIcon](#m_bdrawicon)|A Boolean variable that indicates whether the tooltip contains an icon.|  
+|[CMFCToolTipInfo::m_bDrawSeparator](#m_bdrawseparator)|A Boolean variable that indicates whether a separator is displayed between the tooltip label and the tooltip description.|  
+|[CMFCToolTipInfo::m_bRoundedCorners](#m_broundedcorners)|A Boolean variable that indicates whether the tooltip has rounded corners.|  
+|[CMFCToolTipInfo::m_bVislManagerTheme](#m_bvislmanagertheme)|A Boolean variable that indicates whether the appearance of the tooltip should be controlled by a visual manager (see [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)).|  
+|[CMFCToolTipInfo::m_clrBorder](#m_clrborder)|The color of the tooltip border.|  
+|[CMFCToolTipInfo::m_clrFill](#m_clrfill)|The color of the tooltip background.|  
+|[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)|The color of the gradient fill in the tooltip.|  
+|[CMFCToolTipInfo::m_clrText](#m_clrtext)|The text color in the tooltip.|  
+|[CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)|The angle of the gradient fill in the tooltip.|  
+|[CMFCToolTipInfo::m_nMaxDescrWidth](#m_nmaxdescrwidth)|The maximum possible width, in pixels, of the description in the tooltip.|  
   
-## <a name="remarks"></a>備註  
- 使用[CMFCToolTipCtrl 類別](../../mfc/reference/cmfctooltipctrl-class.md)， `CMFCToolTipInfo`，和[CTooltipManager 類別](../../mfc/reference/ctooltipmanager-class.md)在一起，以在您的應用程式中實作自訂的工具提示。 如需如何使用這些工具提示類別的範例，請參閱[CMFCToolTipCtrl 類別](../../mfc/reference/cmfctooltipctrl-class.md)主題。  
+## <a name="remarks"></a>Remarks  
+ Use [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md), `CMFCToolTipInfo`, and [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md) together to implement customized tooltips in your application. For an example of how to use these tooltip classes, see the [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md) topic.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何設定 `CMFCToolTipInfo` 類別中各種成員變數的值。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to set the values of the various member variables in the `CMFCToolTipInfo` class.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&42;](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#42](../../mfc/reference/codesnippet/cpp/cmfctooltipinfo-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxtooltipctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtooltipctrl.h  
   
-##  <a name="m_bballoontooltip"></a>CMFCToolTipInfo::m_bBalloonTooltip  
- 指定所有的工具提示的顯示樣式。  
+##  <a name="m_bballoontooltip"></a>  CMFCToolTipInfo::m_bBalloonTooltip  
+ Specifies the display style of all tooltips.  
   
 ```  
 BOOL m_bBalloonTooltip;  
 ```  
   
-### <a name="remarks"></a>備註  
- `TRUE`指出工具提示使用汽球樣式`FALSE`指出工具提示使用的矩形樣式。  
+### <a name="remarks"></a>Remarks  
+ `TRUE` indicates that tooltips use the balloon style, `FALSE` indicates that tooltips use the rectangular style.  
   
-##  <a name="m_bboldlabel"></a>CMFCToolTipInfo::m_bBoldLabel  
- 指定工具提示文字的字型是否為粗體。  
+##  <a name="m_bboldlabel"></a>  CMFCToolTipInfo::m_bBoldLabel  
+ Specifies whether the font of the tooltip text is bold.  
   
 ```  
 BOOL m_bBoldLabel;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這個成員設定為`TRUE`以粗體顯示的字型顯示工具提示文字或`FALSE`以非粗體字型顯示工具提示標籤。  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display tooltip text with bold font, or `FALSE` to display tooltip labels with non-bold font.  
   
-##  <a name="m_bdrawdescription"></a>CMFCToolTipInfo::m_bDrawDescription  
- 指定是否每個工具提示會顯示描述文字。  
+##  <a name="m_bdrawdescription"></a>  CMFCToolTipInfo::m_bDrawDescription  
+ Specifies whether each tooltip displays description text.  
   
 ```  
 BOOL m_bDrawDescription;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這個成員設定為`TRUE`來顯示說明，或`FALSE`隱藏描述。 您可以在工具提示指定描述，藉由呼叫[CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display the description, or `FALSE` to hide the description. You can specify the description on a tooltip by calling [CMFCToolTipCtrl::SetDescription](../../mfc/reference/cmfctooltipctrl-class.md#setdescription)  
   
-##  <a name="m_bdrawicon"></a>CMFCToolTipInfo::m_bDrawIcon  
- 指定是否所有的工具提示會顯示圖示。  
+##  <a name="m_bdrawicon"></a>  CMFCToolTipInfo::m_bDrawIcon  
+ Specifies whether all tooltips display icons.  
   
 ```  
 BOOL m_bDrawIcon;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這個成員設定為`TRUE`顯示圖示，在每個工具提示，或`FALSE`顯示沒有圖示的工具提示。  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display an icon on each tooltip, or `FALSE` to display tooltips without icons.  
   
-##  <a name="m_bdrawseparator"></a>CMFCToolTipInfo::m_bDrawSeparator  
- 指定每一個工具提示是否有其標籤以及其描述之間的分隔符號。  
+##  <a name="m_bdrawseparator"></a>  CMFCToolTipInfo::m_bDrawSeparator  
+ Specifies whether each tooltip has a separator between its label and its description.  
   
 ```  
 BOOL m_bDrawSeparator;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這個成員設定為`TRUE`顯示工具提示標籤和描述，之間的分隔符號或`FALSE`沒有分隔符號中顯示工具提示。  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display separator between tooltip label and description, or `FALSE` to display tooltips with no separator.  
   
-##  <a name="m_broundedcorners"></a>CMFCToolTipInfo::m_bRoundedCorners  
- 指定所有的工具提示是否具有圓角。  
+##  <a name="m_broundedcorners"></a>  CMFCToolTipInfo::m_bRoundedCorners  
+ Specifies whether all tooltips have rounded corners.  
   
 ```  
 BOOL m_bRoundedCorners;  
 ```  
   
-### <a name="remarks"></a>備註  
- 這個成員設定為`TRUE`顯示工具提示上的圓的角或`FALSE`顯示工具提示在矩形的邊角。  
+### <a name="remarks"></a>Remarks  
+ Set this member to `TRUE` to display rounded corners on tooltips, or `FALSE` to display rectangular corners on tooltips.  
   
-##  <a name="m_clrborder"></a>CMFCToolTipInfo::m_clrBorder  
- 指定所有的工具提示框線的色彩。  
+##  <a name="m_clrborder"></a>  CMFCToolTipInfo::m_clrBorder  
+ Specifies the color of the borders on all tooltips.  
   
 ```  
 COLORREF m_clrBorder;  
 ```  
   
-##  <a name="m_clrfill"></a>CMFCToolTipInfo::m_clrFill  
- 指定工具提示的背景色彩。  
+##  <a name="m_clrfill"></a>  CMFCToolTipInfo::m_clrFill  
+ Specifies the color of tooltip backgrounds.  
   
 ```  
 COLORREF m_clrFill;  
 ```  
   
-### <a name="remarks"></a>備註  
- 如果[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient)為-1，工具提示的背景色彩是`m_clrFill`。 否則，`m_clrFill`指定的色彩漸層的開始和`m_clrFillGradient`指定漸層結束色彩。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)決定漸層的方向。  
+### <a name="remarks"></a>Remarks  
+ If [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) is -1, the tooltip background color is `m_clrFill`. Otherwise, `m_clrFill` specifies the color of the beginning of the gradient and `m_clrFillGradient` specifies the color of the end of the gradient. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determines the direction of the gradient.  
   
-##  <a name="m_clrfillgradient"></a>CMFCToolTipInfo::m_clrFillGradient  
- 指定工具提示的漸層背景的結束色彩。  
+##  <a name="m_clrfillgradient"></a>  CMFCToolTipInfo::m_clrFillGradient  
+ Specifies the end color for a gradient background for tooltips.  
   
 ```  
 COLORREF m_clrFillGradient;  
 ```  
   
-### <a name="remarks"></a>備註  
- 如果`m_clrFillGradient`為-1，沒有任何漸層。 否則，所指定的初始的漸層色彩[CMFCToolTipInfo::m_clrFill](#m_clrfill) ，並且完成漸層色彩由指定`m_clrFillGradient`。 [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle)決定漸層的方向。  
+### <a name="remarks"></a>Remarks  
+ If `m_clrFillGradient` is -1, there is no gradient. Otherwise, the gradient initial color is specified by [CMFCToolTipInfo::m_clrFill](#m_clrfill) and the gradient finish color is specified by `m_clrFillGradient`. [CMFCToolTipInfo::m_nGradientAngle](#m_ngradientangle) determines the direction of the gradient.  
   
-##  <a name="m_clrtext"></a>CMFCToolTipInfo::m_clrText  
- 指定所有的工具提示的文字色彩。  
+##  <a name="m_clrtext"></a>  CMFCToolTipInfo::m_clrText  
+ Specifies text color of all tooltips.  
   
 ```  
 COLORREF m_clrText;  
 ```  
   
-##  <a name="m_ngradientangle"></a>CMFCToolTipInfo::m_nGradientAngle  
- 指定的工具提示的背景繪製漸層的角度。  
+##  <a name="m_ngradientangle"></a>  CMFCToolTipInfo::m_nGradientAngle  
+ Specifies the angle at which a gradient is drawn on the background of tooltips.  
   
 ```  
 int m_nGradientAngle;  
 ```  
   
-### <a name="remarks"></a>備註  
- `m_nGradientAngle`指定的角度，以度為單位，工具提示的背景漸層的從水平位移。 如果`m_nGradientAngle`是 0，漸層繪製從左到右。 如果`m_nGradientAngle`是介於 1 到 360 度，漸層會旋轉順時針度的數字。 如果`m_nGradientAngle`為-1，這是預設值，漸層繪製從上到下。 這是設定相同`m_nGradientAngle`為 90。  
+### <a name="remarks"></a>Remarks  
+ `m_nGradientAngle` specifies the angle, in degrees, that the gradient on the background of tooltips is offset from horizontal. If `m_nGradientAngle` is 0, the gradient is drawn from left to right. If `m_nGradientAngle` is between 1 and 360, the gradient is rotating clockwise by that number of degrees. If `m_nGradientAngle` is -1, which is the default value, the gradient is drawn from top to bottom. This is the same as setting `m_nGradientAngle` to 90.  
   
- [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill`指定的色彩漸層的開始和[CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient`指定漸層結束色彩。 如果`m_clrFillGradient`為-1，沒有任何漸層。  
+ [CMFCToolTipInfo::m_clrFill](#m_clrfill) `clrFill` specifies the color of the beginning of the gradient and [CMFCToolTipInfo::m_clrFillGradient](#m_clrfillgradient) `clrFillGradient` specifies the color of the end of the gradient. If `m_clrFillGradient` is -1, there is no gradient.  
   
-##  <a name="m_nmaxdescrwidth"></a>CMFCToolTipInfo::m_nMaxDescrWidth  
- 指定描述每一個工具提示中顯示的最大寬度。 如果描述寬度超過指定的值，表示文字換行。  
+##  <a name="m_nmaxdescrwidth"></a>  CMFCToolTipInfo::m_nMaxDescrWidth  
+ Specifies the maximum width of the description that it displayed in each tooltip. If the description width exceeds the specified value, the text is wrapped.  
   
 ```  
 int m_nMaxDescrWidth;  
 ```  
   
-##  <a name="m_bvislmanagertheme"></a>CMFCToolTipInfo::m_bVislManagerTheme  
- 指定是否在應用程式的視覺管理員控制所有的工具提示的外觀。  
+##  <a name="m_bvislmanagertheme"></a>  CMFCToolTipInfo::m_bVislManagerTheme  
+ Specifies whether the visual manager of the application controls the appearance of all tooltips.  
   
 ```  
 BOOL m_bVislManagerTheme;  
 ```  
   
-### <a name="remarks"></a>備註  
- 如果`m_bVislManagerTheme`是`TRUE`，每一個工具提示會要求新[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)從應用程式，才能出現在畫面上，並使用該物件中的值來判斷其外觀的視覺管理員。 其他成員您[CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md)會被忽略。  
+### <a name="remarks"></a>Remarks  
+ If `m_bVislManagerTheme` is `TRUE`, every tooltip requests a new [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) from the visual manager of the application before they appear on the screen, and uses the values in that object to determine their appearance. The other members of your [CMFCToolTipInfo](../../mfc/reference/cmfctooltipinfo-class.md) are ignored.  
   
-##  <a name="operator_eq"></a>CMFCToolTipInfo::operator =  
+##  <a name="operator_eq"></a>  CMFCToolTipInfo::operator=  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 CMFCToolTipInfo& operator=(CMFCToolTipInfo& src);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CTooltipManager 類別](../../mfc/reference/ctooltipmanager-class.md)   
- [CMFCToolTipCtrl 類別](../../mfc/reference/cmfctooltipctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CTooltipManager Class](../../mfc/reference/ctooltipmanager-class.md)   
+ [CMFCToolTipCtrl Class](../../mfc/reference/cmfctooltipctrl-class.md)
 

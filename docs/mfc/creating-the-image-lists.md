@@ -1,38 +1,57 @@
 ---
-title: "建立影像清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CListCtrl 類別, 建立其影像清單"
-  - "影像清單 [C++], 為 CListCtrl 建立"
-  - "清單 [C++], 影像"
+title: Creating the Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], creating image lists for
+- image lists [MFC], creating for CListCtrl
+- lists [MFC], image
 ms.assetid: c2768515-deba-49e8-a6f3-5be6482afb19
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 建立影像清單
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7a384572397c78a91d93f2aaba338591a6158b5a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-建立影像清單與則使用 [CListView](../mfc/reference/clistview-class.md) 或 [CListCtrl](../mfc/reference/clistctrl-class.md)。  
+---
+# <a name="creating-the-image-lists"></a>Creating the Image Lists
+Creating image lists is the same whether you use [CListView](../mfc/reference/clistview-class.md) or [CListCtrl](../mfc/reference/clistctrl-class.md).  
   
 > [!NOTE]
->  因此，如果您的清單控制項包含 `LVS_ICON` 樣式，您只需要影像清單。  
+>  You only need image lists if your list control includes the `LVS_ICON` style.  
   
- 使用類別建立一個或多個影像清單的 `CImageList` \(為大型圖示、小圖示和狀態\)。  請參閱 [CImageList](../mfc/reference/cimagelist-class.md)，並查看在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]的 [清單檢視影像清單](http://msdn.microsoft.com/library/windows/desktop/bb774736) 。  
+ Use class `CImageList` to create one or more image lists (for full-size icons, small icons, and states). See [CImageList](../mfc/reference/cimagelist-class.md), and see [List View Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK.  
   
- 每個影像清單的呼叫 [CListCtrl::SetImageList](../Topic/CListCtrl::SetImageList.md) ;將指標傳遞給適當的 `CImageList` 物件。  
+ Call [CListCtrl::SetImageList](../mfc/reference/clistctrl-class.md#setimagelist) for each image list; pass a pointer to the appropriate `CImageList` object.  
   
-## 請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

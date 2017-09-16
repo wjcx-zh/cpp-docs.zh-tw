@@ -1,49 +1,67 @@
 ---
-title: "強制回應和非強制回應對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 對話方塊, 強制回應"
-  - "MFC 對話方塊, 非強制回應"
-  - "強制回應對話方塊"
-  - "非強制回應對話方塊"
+title: Modal and Modeless Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], modeless
+- modeless dialog boxes [MFC]
+- MFC dialog boxes [MFC], modal
+- modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 強制回應和非強制回應對話方塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85bddb463705b83332bd16dc19fcbd627ffc3063
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您可以使用 [CDialog](../mfc/reference/cdialog-class.md) 類別處理兩種對話方塊:  
+---
+# <a name="modal-and-modeless-dialog-boxes"></a>Modal and Modeless Dialog Boxes
+You can use class [CDialog](../mfc/reference/cdialog-class.md) to manage two kinds of dialog boxes:  
   
--   *強制回應對話方塊*，要求使用者在繼續執行程式前回應  
+-   *Modal dialog boxes*, which require the user to respond before continuing the program  
   
--   *非強制回應對話方塊*，在螢幕上暫停並隨時可供使用，但允許其他使用者活動  
+-   *Modeless dialog boxes*, which stay on the screen and are available for use at any time but permit other user activities  
   
- 建立對話方塊樣板資源編輯和方法是相同的強制回應和非強制回應對話方塊的。  
+ The resource editing and procedures for creating a dialog template are the same for modal and modeless dialog boxes.  
   
- 建立程式的對話方塊需要下列步驟:  
+ Creating a dialog box for your program requires the following steps:  
   
-1.  使用 [對話方塊編輯器](../mfc/dialog-editor.md) 設計對話方塊並建立自己的對話方塊範本資源。  
+1.  Use the [dialog editor](../windows/dialog-editor.md) to design the dialog box and create its dialog-template resource.  
   
-2.  建立對話方塊類別。  
+2.  Create a dialog class.  
   
-3.  連接至對話方塊類別的 [對話方塊的訊息處理常式的資源](../mfc/adding-event-handlers-for-dialog-box-controls.md) 。  
+3.  Connect the [dialog resource's controls to message handlers](../windows/adding-event-handlers-for-dialog-box-controls.md) in the dialog class.  
   
-4.  加入資料成員與對話方塊的控制項以及控制項指定 [對話資料交換](../mfc/dialog-data-exchange.md) 和 [對話資料驗證](../mfc/dialog-data-validation.md) 。  
+4.  Add data members associated with the dialog box's controls and to specify [dialog data exchange](../mfc/dialog-data-exchange.md) and [dialog data validations](../mfc/dialog-data-validation.md) for the controls.  
   
-## 請參閱  
- [對話方塊](../mfc/dialog-boxes.md)   
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

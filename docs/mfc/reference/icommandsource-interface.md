@@ -1,5 +1,5 @@
 ---
-title: "ICommandSource 介面 |Microsoft 文件"
+title: ICommandSource Interface | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- ICommandSource interface
+- ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
 caps.latest.revision: 24
 author: mikeblome
@@ -44,17 +44,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f923a8a42327cb74ce9323f72aae90c7411da27c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0597617c7127e17ec4b8e97a00c8b22412489bdf
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="icommandsource-interface"></a>ICommandSource 介面
-管理從命令來源物件傳送至使用者控制項的命令。  
+# <a name="icommandsource-interface"></a>ICommandSource Interface
+Manages commands sent from a command source object to a user control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 interface class ICommandSource  
@@ -62,179 +62,179 @@ interface class ICommandSource
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[ICommandSource::AddCommandHandler](#addcommandhandler)|命令處理常式加入命令來源物件。|  
-|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|將一組命令處理常式加入至命令來源物件。|  
-|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|將一群使用者介面的命令訊息處理常式加入至命令來源物件。|  
-|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|將使用者介面命令訊息處理常式加入至命令來源物件。|  
-|[ICommandSource::PostCommand](#postcommand)|張貼的訊息，而不需等待處理。|  
-|[ICommandSource::RemoveCommandHandler](#removecommandhandler)|命令來源物件中移除的命令處理常式。|  
-|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|命令來源物件中移除一組命令處理常式。|  
-|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|命令來源物件中移除一群使用者介面的命令訊息處理常式。|  
-|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|命令來源物件中移除的使用者介面命令訊息處理常式。|  
-|[ICommandSource::SendCommand](#sendcommand)|傳送訊息，並等候它處理後再傳回。|  
+|[ICommandSource::AddCommandHandler](#addcommandhandler)|Adds a command handler to a command source object.|  
+|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Adds a group of command handlers to a command source object.|  
+|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Adds a group of user interface command message handlers to a command source object.|  
+|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Adds a user interface command message handler to a command source object.|  
+|[ICommandSource::PostCommand](#postcommand)|Posts a message without waiting for it to be processed.|  
+|[ICommandSource::RemoveCommandHandler](#removecommandhandler)|Removes a command handler from a command source object.|  
+|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|Removes a group of command handlers from a command source object.|  
+|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Removes a group of user interface command message handlers from a command source object.|  
+|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Removes a user interface command message handler from a command source object.|  
+|[ICommandSource::SendCommand](#sendcommand)|Sends a message and waits for it to be processed before returning.|  
   
-### <a name="remarks"></a>備註  
- 當您將使用者控制項裝載在 MFC 檢視中， [CWinFormsView 類別](../../mfc/reference/cwinformsview-class.md)路由命令，並更新命令 UI 至使用者控制項中的郵件，讓它處理 MFC 命令 （例如，框架的功能表項目和工具列按鈕）。 藉由實作[ICommandTarget 介面](../../mfc/reference/icommandtarget-interface.md)，讓使用者控制項的參考`ICommandSource`物件。  
+### <a name="remarks"></a>Remarks  
+ When you host a user control in an MFC View, [CWinFormsView Class](../../mfc/reference/cwinformsview-class.md) routes commands and update command UI messages to the user control to allow it to handle MFC commands (for example, frame menu items and toolbar buttons). By implementing [ICommandTarget Interface](../../mfc/reference/icommandtarget-interface.md), you give the user control a reference to the `ICommandSource` object.  
   
- 請參閱[How to︰ 將命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)如需如何使用`ICommandTarget`。  
+ See [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) for an example of how to use `ICommandTarget`.  
   
- 如需有關如何使用 Windows Form 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-### <a name="requirements"></a>需求  
- **標頭︰** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h (defined in assembly atlmfc\lib\mfcmifc80.dll)  
   
-## <a name="addcommandhandler"></a>ICommandSource::AddCommandHandler
-命令處理常式加入命令來源物件。
+## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
+Adds a command handler to a command source object.
 ```
 void AddCommandHandler(
     unsigned int cmdID,
     CommandHandler^ cmdHandler);
 ```
 
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 `cmdID`  
-命令 ID。  
+The command ID.  
 `cmdHandler`  
-命令處理常式方法的處理常式。
+A handle to the command handler method.
 
-### <a name="remarks"></a>備註
-這個方法將命令處理常式 cmdHandler 加入命令來源物件，並將此處理常式對應 cmdID。
-請參閱[How to︰ 將命令傳送至 Windows Form 控制項](https://msdn.microsoft.com/library/y33d8624.aspx)如需如何使用 AddCommandHandler 的範例。
+### <a name="remarks"></a>Remarks
+This method adds the command handler cmdHandler to the command source object and maps the handler to cmdID.
+See [How to: Add Command Routing to the Windows Forms Control](https://msdn.microsoft.com/library/y33d8624.aspx) for an example of how to use AddCommandHandler.
 
-## <a name="addcommandrangehandler"></a>ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
 
-將一組命令處理常式加入至命令來源物件。
+Adds a group of command handlers to a command source object.
 ```
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 `cmdIDMin`  
-命令 ID 範圍的起始索引。
+The beginning index of the command ID range.
 `cmdIDMax`  
-命令識別碼範圍結束的索引。
+The ending index of the command ID range.
 `cmdHandler`  
-命令對應的訊息處理常式方法控制代碼。
-### <a name="remarks"></a>備註
-這個方法會將連續的命令 Id 對應至單一訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。
+A handle to the message handler method to which the commands are mapped.
+### <a name="remarks"></a>Remarks
+This method maps a contiguous range of command IDs to a single message handler and adds it to the command source object. This is used for handling a group of related buttons with one method.
 
-## <a name="addcommandrangeuihandler"></a>ICommandSource::AddCommandRangeUIHandler
-將一群使用者介面的命令訊息處理常式加入至命令來源物件。
+## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
+Adds a group of user interface command message handlers to a command source object.
 ```
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin, 
     unsigned int cmdIDMax, 
     CommandUIHandler^ cmdUIHandler);
 ```
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 `cmdIDMin`  
-命令 ID 範圍的起始索引。
+The beginning index of the command ID range.
 `cmdIDMax`  
-命令識別碼範圍結束的索引。
+The ending index of the command ID range.
 `cmdHandler`  
-命令對應的訊息處理常式方法控制代碼。
+A handle to the message handler method to which the commands are mapped.
 
-### <a name="remarks"></a>備註
-這個方法會將連續的命令 Id 對應至單一使用者介面命令訊息處理常式，並將其加入命令來源物件。 這用來處理一組相關的按鈕有一個方法。
+### <a name="remarks"></a>Remarks
+This method maps a contiguous range of command IDs to a single user interface command message handler and adds it to the command source object. This is used for handling a group of related buttons with one method.
 
-## <a name="addcommanduihandler"></a>ICommandSource::AddCommandUIHandler
-將使用者介面命令訊息處理常式加入至命令來源物件。
+## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
+Adds a user interface command message handler to a command source object.
 ```
 void AddCommandUIHandler(
     unsigned int cmdID, 
     CommandUIHandler^ cmdUIHandler);
 ```
-### <a name="parameters"></a>參數
+### <a name="parameters"></a>Parameters
 `cmdID`  
-命令 ID。  
+The command ID.  
 `cmdUIHandler`  
-使用者介面命令訊息處理常式方法的處理常式。
+A handle to the user interface command message handler method.
 
-### <a name="remarks"></a>備註
-這個方法會將使用者介面命令訊息處理常式 cmdHandler 加入命令來源物件，並將處理常式對應 cmdID。
+### <a name="remarks"></a>Remarks
+This method adds the user interface command message handler cmdHandler to the command source object and maps the handler to cmdID.
 
-## <a name="postcommand"></a>ICommandSource::PostCommand
-張貼的訊息，而不需等待處理。
+## <a name="postcommand"></a> ICommandSource::PostCommand
+Posts a message without waiting for it to be processed.
 ```
 void PostCommand(unsigned int command);
 ```
-### <a name="parameters"></a>參數
+### <a name="parameters"></a>Parameters
 `command`  
-要張貼之訊息的命令 ID。
-### <a name="remarks"></a>備註
-這個方法以非同步方式張貼訊息對應至命令所指定的識別碼。 它會呼叫 CWnd::PostMessage 將訊息放在視窗的訊息佇列，並傳回而不需等待處理訊息對應的視窗。
+The command ID of the message to be posted.
+### <a name="remarks"></a>Remarks
+This method asynchronously posts the message mapped to the ID specified by command. It calls CWnd::PostMessage to place the message in the window's message queue and then returns without waiting for the corresponding window to process the message.
 
 
-## <a name="removecommandhandler"></a>ICommandSource::RemoveCommandHandler
-命令來源物件中移除的命令處理常式。
+## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
+Removes a command handler from a command source object.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
-### <a name="parameters"></a>參數
+### <a name="parameters"></a>Parameters
 `cmdID`  
-命令 ID。
-### <a name="remarks"></a>備註
-這個方法會移除對應至 cmdID 命令來源物件的命令處理常式。
+The command ID.
+### <a name="remarks"></a>Remarks
+This method removes the command handler mapped to cmdID from the command source object.
 
 
-## <a name="removecommandrangecommandhandler"></a>ICommandSource::RemoveCommandRangeHandler 
-命令來源物件中移除一組命令處理常式。
+## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler 
+Removes a group of command handlers from a command source object.
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
-### <a name="parameters"></a>參數
+### <a name="parameters"></a>Parameters
 `cmdIDMin`  
-命令 ID 範圍的起始索引。
+The beginning index of the command ID range.
 `cmdIDMax`  
-命令識別碼範圍結束的索引。
-### <a name="remarks"></a>備註
-這個方法會移除的訊息處理常式，藉由 cmdIDMin 和 cmdIDMax，對應至命令 Id 指定的命令來源物件中的群組。
+The ending index of the command ID range.
+### <a name="remarks"></a>Remarks
+This method removes a group of message handlers, mapped to the command IDs specifed by cmdIDMin and cmdIDMax, from the command source object.
 
-## <a name="removecommandrangeuihandler"></a>ICommandSource::RemoveCommandRangeUIHandler 
-命令來源物件中移除一群使用者介面的命令訊息處理常式。
+## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler 
+Removes a group of user interface command message handlers from a command source object.
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
-### <a name="parameters"></a>參數
+### <a name="parameters"></a>Parameters
 `cmdIDMin`  
-命令 ID 範圍的起始索引。
+The beginning index of the command ID range.
 `cmdIDMax`  
-命令識別碼範圍結束的索引。
-### <a name="remarks"></a>備註
-這個方法會移除的使用者介面命令訊息處理常式，藉由 cmdIDMin 和 cmdIDMax，對應至命令 Id 指定的命令來源物件中的群組。
+The ending index of the command ID range.
+### <a name="remarks"></a>Remarks
+This method removes a group of user interface command message handlers, mapped to the command IDs specifed by cmdIDMin and cmdIDMax, from the command source object.
 
-## <a name="removecommanduihandler"></a>ICommandSource::RemoveCommandUIHandler 
-命令來源物件中移除的使用者介面命令訊息處理常式。
+## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler 
+Removes a user interface command message handler from a command source object.
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
-### <a name="parameters"></a>參數
+### <a name="parameters"></a>Parameters
 `cmdID`  
-命令 ID。
-### <a name="remarks"></a>備註
-這個方法會移除的使用者介面命令訊息處理常式對應至 cmdID 命令來源物件。
+The command ID.
+### <a name="remarks"></a>Remarks
+This method removes the user interface command message handler mapped to cmdID from the command source object.
 
-## <a name="sendcommand"></a>ICommandSource::SendCommand 
-傳送訊息，並等候它處理後再傳回。
+## <a name="sendcommand"></a> ICommandSource::SendCommand 
+Sends a message and waits for it to be processed before returning.
 ```
 void SendCommand(unsigned int command);
 ```
-### <a name="parameters"></a>參數
+### <a name="parameters"></a>Parameters
 `command`  
-要傳送訊息的命令 ID。
-### <a name="remarks"></a>備註
-這個方法會以同步方式傳送訊息對應至命令所指定的識別碼。 它會呼叫 CWnd::SendMessage 將訊息放在視窗的訊息佇列，並等待，直到該視窗程序傳回之前處理訊息之後。
-## <a name="see-also"></a>另請參閱  
- [如何︰ 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
- [ICommandTarget 介面](../../mfc/reference/icommandtarget-interface.md)
+The command ID of the message to be sent.
+### <a name="remarks"></a>Remarks
+This method synchronously sends the message mapped to the ID specified by command. It calls CWnd::SendMessage to place the message in the window's message queue and waits until that window procedure has processed the message before returning.
+## <a name="see-also"></a>See Also  
+ [How to: Add Command Routing to the Windows Forms Control](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
+ [ICommandTarget Interface](../../mfc/reference/icommandtarget-interface.md)
 

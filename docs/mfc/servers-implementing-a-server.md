@@ -1,57 +1,75 @@
 ---
-title: "伺服器：實作伺服器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE 伺服器應用程式, 實作 OLE 伺服器"
-  - "伺服器, 實作"
+title: 'Servers: Implementing a Server | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- servers, implementing
+- OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 伺服器：實作伺服器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a5a1dd3183d9ee6debc0b82aea7b88e519422701
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明 MFC 應用程式精靈為視覺化編輯伺服器應用程式所建立的程式碼。  如果您不使用應用程式精靈，本文列出您必須撰寫程式碼實作伺服器應用程式的位置。  
+---
+# <a name="servers-implementing-a-server"></a>Servers: Implementing a Server
+This article explains the code the MFC Application Wizard creates for a visual editing server application. If you are not using the application wizard, this article lists the areas where you must write code to implement a server application.  
   
- 如果您使用應用程式精靈建立新的伺服器應用程式，它會提供大量的伺服器特定程式碼。  如果您將視覺化編輯伺服程式功能加入至現有的應用程式，您必須重複應用程式精靈會將在加入其餘必要的伺服器端程式碼之前提供的程式碼。  
+ If you are using the application wizard to create a new server application, it provides a significant amount of server-specific code for you. If you are adding visual editing server functionality to an existing application, you must duplicate the code that the application wizard would have provided before adding the rest of the necessary server code.  
   
- 應用程式精靈提供的伺服器端程式碼分成數個分類：  
+ The server code that the application wizard provides falls into several categories:  
   
--   定義伺服器資源：  
+-   Defining server resources:  
   
-    -   當伺服器在其視窗編輯其內嵌視窗時所使用的功能表資源。  
+    -   The menu resource used when the server is editing an embedded item in its own window.  
   
-    -   當伺服器就地使用時使用的功能表和工具列資源。  
+    -   The menu and toolbar resources used when the server is active in place.  
   
-     如需這些資源的詳細資訊，請參閱 [功能表和資源：伺服器加入](../mfc/menus-and-resources-server-additions.md)。  
+     For more information on these resources, see [Menus and Resources: Server Additions](../mfc/menus-and-resources-server-additions.md).  
   
--   定義衍生自 `COleServerItem`的項目類別。  如需在伺服器上項目的詳細資訊，請參閱 [伺服器：伺服器項目](../mfc/servers-server-items.md)。  
+-   Defining an item class derived from `COleServerItem`. For further details on server items, see [Servers: Server Items](../mfc/servers-server-items.md).  
   
--   將文件類別的基底類別變更為 `COleServerDoc`。  如需詳細資訊，請參閱 [伺服器：實作伺服器資料](../mfc/servers-implementing-server-documents.md)。  
+-   Changing the base class of the document class to `COleServerDoc`. For further details, see [Servers: Implementing Server Documents](../mfc/servers-implementing-server-documents.md).  
   
--   定義從 `COleIPFrameWnd`衍生的框架視窗類別。  如需詳細資訊，請參閱 [伺服器：實作就地框架視窗](../mfc/servers-implementing-in-place-frame-windows.md)。  
+-   Defining a frame-window class derived from `COleIPFrameWnd`. For further details, see [Servers: Implementing In-Place Frame Windows](../mfc/servers-implementing-in-place-frame-windows.md).  
   
--   建立伺服器應用程式的項目在 Windows 系統註冊資料庫和登錄伺服器的新執行個體的 OLE 系統。  如需關於此主題的詳細資訊，請參閱 [Registration](../mfc/registration.md)。  
+-   Creating an entry for the server application in the Windows registration database and registering the new instance of the server with the OLE system. For information on this topic, see [Registration](../mfc/registration.md).  
   
--   初始化和啟動伺服器應用程式。  如需關於此主題的詳細資訊，請參閱 [Registration](../mfc/registration.md)。  
+-   Initializing and launching the server application. For information on this topic, see [Registration](../mfc/registration.md).  
   
- 如需詳細資訊，請參閱 *Class Library Reference* 中的 [COleServerItem](../mfc/reference/coleserveritem-class.md)、[COleServerDoc](../mfc/reference/coleserverdoc-class.md) 和 [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)。  
+ For more information, see [COleServerItem](../mfc/reference/coleserveritem-class.md), [COleServerDoc](../mfc/reference/coleserverdoc-class.md), and [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md) in the *Class Library Reference*.  
   
-## 請參閱  
- [伺服器](../mfc/servers.md)   
- [容器](../mfc/containers.md)   
- [功能表和資源 \(OLE\)](../mfc/menus-and-resources-ole.md)   
- [註冊](../mfc/registration.md)
+## <a name="see-also"></a>See Also  
+ [Servers](../mfc/servers.md)   
+ [Containers](../mfc/containers.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)   
+ [Registration](../mfc/registration.md)
+
+

@@ -1,58 +1,76 @@
 ---
-title: "啟用 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "啟動物件"
-  - "啟用 [C++]"
-  - "啟用 [C++], 內嵌 OLE 項目"
-  - "文件, OLE"
-  - "內嵌物件"
-  - "就地啟用"
-  - "就地啟用, 內嵌和連結項目"
-  - "OLE [C++], 啟動"
-  - "OLE [C++], 編輯"
-  - "OLE [C++], 就地啟用"
-  - "OLE 啟動"
-  - "OLE 項目, 視覺化編輯"
-  - "OLE 伺服器應用程式, 啟動"
-  - "視覺化編輯"
-  - "視覺化編輯, 啟動"
+title: Activation (C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE server applications [MFC], activation
+- OLE items [MFC], visual editing
+- activation [MFC]
+- OLE [MFC], in-place activation
+- OLE [MFC], activation
+- in-place activation, embedded and linked items
+- activating objects
+- visual editing, activation
+- visual editing
+- documents [MFC], OLE
+- embedded objects [MFC]
+- OLE [MFC], editing
+- in-place activation
+- activation [MFC], embedded OLE items
+- OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 啟用 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b0c5d9a92de6d15b4034d44bf4a07a9526eeb3fb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明啟動作用在視覺化編輯 OLE 項目。  在使用者在容器文件後內嵌 OLE 項目，可能需要使用。  若要這樣做，使用者按一下項目，啟動該項目。  啟動的最常見的活動編輯。  許多目前 OLE 項目，也就是說，當啟動進行編輯，在目前框架視窗讓功能表和工具列會變更以反映屬於建立項目的伺服器應用程式的項目。  這個行為，稱為就地啟動，讓使用者編輯複合文件的所有內嵌項目，而不需要離開容器文件的視窗。  
+---
+# <a name="activation-c"></a>Activation (C++)
+This article explains the role of activation in the visual editing of OLE items. After a user has embedded an OLE item in a container document, it may need to be used. To do this, the user double-clicks the item, which activates that item. The most frequent activity for activation is editing. Many current OLE items, when activated for editing, cause the menus and toolbars in the current frame window to change to reflect those belonging to the server application that created the item. This behavior, known as in-place activation, allows the user to edit any embedded item in a compound document without leaving the container document's window.  
   
- 編輯個別視窗中嵌入這個 OLE 項目也是可能的。  如果容器或伺服器應用程式不支援就地啟動，就會發生。  在這種情況下，，當使用者按兩下內嵌項目時，伺服器應用程式在不同視窗中啟動，並內嵌項目顯示成其資料。  使用者可以在這個視窗的項目。  當編輯完成時，使用者關閉伺服器應用程式並回到容器應用程式。  
+ It is also possible to edit embedded OLE items in a separate window. This will happen if either the container or server application does not support in-place activation. In this case, when the user double-clicks an embedded item, the server application is launched in a separate window and the embedded item appears as its own document. The user edits the item in this window. When editing is complete, the user closes the server application and returns to the container application.  
   
- 或者，使用者可以選擇開啟編輯與 **Edit** 功能表的 **\<object\> Open** 命令。  這會在另一個視窗中的物件。  
+ As an alternative, the user can choose "open editing" with the **\<object> Open** command on the **Edit** menu. This opens the object in a separate window.  
   
 > [!NOTE]
->  若要在另一個視窗中的內嵌項目是在版本 OLE 1 的標準行為，因此，某些 OLE 應用程式可能只支援樣式編輯。  
+>  Editing embedded items in a separate window was standard behavior in version 1 of OLE, and some OLE applications may support only this style of editing.  
   
- 就地啟動升級一種以檔案為主的方法文件建立。  使用者可以將複合文件做為單一實體，運作的方法，而不用交換在應用程式之間。  不過，就地啟動只對內嵌項目，而不會針對連結的項目:在不同的視窗必須進行編輯。  這是因為，連結的項目在不同位置實際儲存。  也就是說，編輯連結的項目資料的實際內容之內其中存放資料。  編輯個別視窗中連結的項目提醒使用者資料屬於另一個文件。  
+ In-place activation promotes a document-centric approach to document creation. The user can treat a compound document as a single entity, working on it without switching between applications. However, in-place activation is used only for embedded items, not for linked items: they must be edited in a separate window. This is because a linked item is actually stored in a different place. The editing of a linked item takes place within the actual context of the data, that is, where the data is stored. Editing a linked item in a separate window reminds the user that the data belongs to another document.  
   
- MFC 不支援巢狀就地啟動。  如果您建立容器\/伺服器應用程式，如此一來，該容器\/伺服器在另一個容器和就地啟動內嵌，它不能就地啟動物件會內嵌在其中。  
+ MFC does not support nested in-place activation. If you build a container/server application, and that container/server is embedded in another container and in-place activated, it cannot in-place activate objects embedded inside it.  
   
- 就在內嵌項目，當使用者按兩下取決於為項目定義的動詞命令。  如需詳細資訊，請參閱 [啟動:動詞命令](../mfc/activation-verbs.md)。  
+ What happens to an embedded item when the user double-clicks it depends on the verbs defined for the item. For information, see [Activation: Verbs](../mfc/activation-verbs.md).  
   
-## 請參閱  
+## <a name="see-also"></a>See Also  
  [OLE](../mfc/ole-in-mfc.md)   
- [容器](../mfc/containers.md)   
- [伺服器](../mfc/servers.md)
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)
+
+

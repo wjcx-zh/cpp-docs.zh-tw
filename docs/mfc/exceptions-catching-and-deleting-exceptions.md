@@ -1,64 +1,83 @@
 ---
-title: "例外狀況：攔截及刪除例外狀況 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AND_CATCH 巨集"
-  - "catch 區塊, 攔截及刪除例外狀況"
-  - "例外狀況處理, 攔截及刪除例外狀況"
-  - "例外狀況, 刪除"
-  - "執行, 從 catch 區塊內傳回"
-  - "try-catch 例外狀況處理, 攔截及刪除例外狀況"
+title: 'Exceptions: Catching and Deleting Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions [MFC], deleting
+- AND_CATCH macro [MFC]
+- try-catch exception handling [MFC], catching and deleting exceptions
+- exception handling [MFC], catching and deleting exceptions
+- catch blocks [MFC], catching and deleting exceptions
+- execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 例外狀況：攔截及刪除例外狀況
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24544b69849dca2425cdd0df6e7919c89f0a1e72
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-下列指示和範例會示範如何攔截和刪除例外狀況。  如需 **try**， **catch**和 `throw` 關鍵字，請參閱 [C\+\+ 例外狀況處理。](../cpp/cpp-exception-handling.md)。  
+---
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions: Catching and Deleting Exceptions
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and `throw` keywords, see [C++ Exception Handling](../cpp/cpp-exception-handling.md).  
   
- 每當程式碼攔截例外狀況時，被處理的例外狀況處理常式必須刪除例外狀況物件，因為無法刪除例外狀況就會造成記憶體遺漏 \(Memory Leak\)。  
+ Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.  
   
- 您的 **catch** 區塊必須刪除例外狀況，當:  
+ Your **catch** block must delete an exception when:  
   
--   **catch** 區塊擲回新的例外狀況。  
+-   The **catch** block throws a new exception.  
   
-     當然，如果您再擲回相同的例外狀況，您不能刪除例外狀況:  
+     Of course, you must not delete the exception if you throw the same exception again:  
   
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]  
   
--   會從**catch**區塊內傳回。  
+-   Execution returns from within the **catch** block.  
   
 > [!NOTE]
->  當刪除 `CException`時，請使用 **Delete** 成員函式刪除例外狀況。  不要使用 **delete** 關鍵字，因為如果例外狀況不在堆積的話，它會失敗。  
+>  When deleting a `CException`, use the **Delete** member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.  
   
-#### 攔截和刪除例外狀況。  
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions  
   
-1.  使用 **try** 關鍵字設定 **try** 區塊。  執行可能會擲回在 **try** 區塊中例外狀況的任何程式陳述式。  
+1.  Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.  
   
-     使用 **catch** 關鍵字設定 **catch**區塊。  位在 **catch** 區塊的例外處理程式碼。  只有在 **try** 區塊中的程式碼擲回在 **catch**陳述式，指定之型別的例外狀況**catch** 區塊中的程式碼執行。  
+     Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.  
   
-     下列基本架構顯示如何定期安排 **try** 和 **catch** 區塊:  
+     The following skeleton shows how **try** and **catch** blocks are normally arranged:  
   
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]  
   
-     當例外狀況擲回時，將控制項傳遞給例外狀況宣告符合的例外狀況型別的第一個 **catch**區塊。  您可以選擇性地處理例外狀況的不同類型與執行中 **catch** 區塊的如如下所列:  
+     When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:  
   
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_3.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]  
   
- 如需詳細資訊，請參閱 [例外狀況:轉換從 MFC 例外狀況巨集](../mfc/exceptions-converting-from-mfc-exception-macros.md)。  
+ For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
   
-## 請參閱  
- [例外狀況處理](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

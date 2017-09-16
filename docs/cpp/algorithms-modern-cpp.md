@@ -1,92 +1,101 @@
 ---
-title: "演算法 (現代 C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: Algorithms (Modern C++) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 演算法 (現代 C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 39a215bb62e4452a2324db5dec40c6754d59209b
+ms.openlocfilehash: 13b5b6c097bd8a68b0c91e6ede508559344a89ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/11/2017
 
-對於現代 C\+\+ 程式設計，建議您使用[標準樣板程式庫](../standard-library/cpp-standard-library-reference.md) \(STL\) 中的演算法。  以列是一些重要的範例：  
+---
+# <a name="algorithms-modern-c"></a>Algorithms (Modern C++)
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Here are some important examples:  
   
--   `for_each`，這是預設周遊演算法。\(也是非原地語意的 `transform`。\)  
+-   `for_each`, which is the default traversal algorithm. (Also `transform` for not-in-place semantics.)  
   
--   `find_if`，這是預設搜尋演算法。  
+-   `find_if`, which is the default search algorithm.  
   
--   `sort`、`lower_bound` 和其他預設排序及搜尋演算法。  
+-   `sort`, `lower_bound`, and the other default sorting and searching algorithms.  
   
- 若要寫入比較子，盡可能使用嚴格的 `<` 並使用*具名 Lambda*。  
+ To write a comparator, use strict `<` and use  *named lambdas* when you can.  
   
 ```cpp  
-  
 auto comp = [](const widget& w1, const widget& w2)  
       { return w1.weight() < w2.weight(); }  
   
 sort( v.begin(), v.end(), comp );  
   
 auto i = lower_bound( v.begin(), v.end(), comp );  
-  
 ```  
   
-## 迴圈  
- 如果可能，請使用範圍架構的 `for` 迴圈或演算法呼叫或兩者都使用，而不是手寫的迴圈。  `copy`、`transform`、`count_if`、`remove_if` 和其他類似項目比手寫迴圈更適合，因為其目的明顯，而且更容易撰寫無 Bug 的程式碼。  此外，許多 STL 演算法有實作最佳化，因此更有效率。  
+## <a name="loops"></a>Loops  
+ When possible, use range-based `for` loops or algorithm calls, or both, instead of hand-written loops.`copy`, `transform`, `count_if`, `remove_if`, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.  
   
- 而不是如下的舊版 C\+\+：  
+ Instead of old C++ like this:  
   
 ```cpp  
-  
-for( auto i = strings.begin(); i != strings.end(); ++i ) {  
-  :::  
-  :::  
+for ( auto i = strings.begin(); i != strings.end(); ++i ) {  
+   /* ... */  
 }  
   
 auto i = v.begin();  
   
-for( ; i != v.end(); ++i ) {  
+for ( ; i != v.end(); ++i ) {  
   if (*i > x && *i < y) break;  
 }  
-  
 ```  
   
- 使用像這樣的現代 C\+\+：  
+ Use modern C++ like this:  
   
 ```cpp  
-  
 for_each( begin(strings), end(strings), [](string& s) {  
-  :::  
-  :::  
+   // ...  
 } );  
-auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; }  );  
   
+auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );  
 ```  
   
-### 迴圈的範圍架構  
- 範圍架構的 `for` 迴圈是 C\+\+ 11 語言功能，而非 STL 演算法。  但在討論迴圈時有必要提及。  範圍架構的 `for` 迴圈是 `for` 關鍵字的擴充，提供便利且有效率的方式撰寫逐一查看值範圍的迴圈。  STL 容器、字串和陣列是現成可供範圍架構的 `for` 迴圈使用。  若要為您的使用者定義類型啟用這個新的反覆項目語法，請加入下列支援：  
+### <a name="range-based-for-loops"></a>Range-based for loops  
+ The range-based `for` loop is a C++11 language feature, not a C++ Standard Library algorithm. But it deserves mention in this discussion about loops. Range-based `for` loops are an extension of the `for` keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based `for` loops. To enable this new iteration syntax for your user-defined type, add the following support:  
   
--   傳回迭代器至結構開頭的 `end` 方法和傳回迭代器至結構結尾的 `begin` 方法。  
+-   A `begin` method that returns an iterator to the beginning of the structure and an `end` method that returns an iterator to the end of the structure.  
   
--   在迭代器中支援這些方法：`operator*`、`operator!=` 和 `operator++` \(前置版本\)。  
+-   Support in the iterator for these methods: `operator*`, `operator!=`, and `operator++` (prefix version).  
   
- 這些方法可以是成員或獨立函式。  
+ These methods can be either members or stand-alone functions.  
   
-## 亂數  
- 眾所周知的是，舊版 CRT `rand()` 函式有許多缺點，這已在 C\+\+ 社群中完整討論。  在現代 C\+\+ 中，您不一定要處理這些缺點，也不需要自行發明一致分配亂數產生器，因為 STL 有輕鬆快速建立這些產生器的工具可用，如 [\<random\>](../standard-library/random.md) 所示。  
+## <a name="random-numbers"></a>Random Numbers  
+ It's no secret that the old CRT `rand()` function has many flaws, which have been discussed at length in the C++ community. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).  
   
-## 請參閱  
- [歡迎回到 C\+\+](../cpp/welcome-back-to-cpp-modern-cpp.md)   
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)   
- [C\+\+ Standard Library](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Welcome Back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)   
+ [C++ Language Reference](../cpp/cpp-language-reference.md)   
+ [C++ Standard Library](../standard-library/cpp-standard-library-reference.md)

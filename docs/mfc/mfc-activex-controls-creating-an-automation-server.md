@@ -1,60 +1,79 @@
 ---
-title: "MFC ActiveX 控制項：建立 Automation 伺服程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [C++], Automation 伺服程式"
-  - "Automation 伺服程式 [C++], MFC ActiveX 控制項"
-  - "MFC ActiveX 控制項 [C++], Automation 伺服程式"
+title: 'MFC ActiveX Controls: Creating an Automation Server | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], Automation server
+- MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# MFC ActiveX 控制項：建立 Automation 伺服程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 725d452e56a0729b76eed7889018cc21149596f8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您可以開發 MFC ActiveX 控制項做為 Automation 伺服程式提供以程式設計的方式將該控制項在其他應用程式和呼叫方法的目的是在應用程式中的控制項。  這類控制項可以裝載 ActiveX 控制項容器。  
+---
+# <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX Controls: Creating an Automation Server
+You can develop an MFC ActiveX control as an Automation server for the purpose of programmatically embedding that control in another application and calling methods in the control from the application. Such a control would still be available to be hosted in an ActiveX control container.  
   
-### 建立控制項做為 Automation 伺服程式  
+### <a name="to-create-a-control-as-an-automation-server"></a>To create a control as an Automation server  
   
-1.  [建立](../mfc/reference/mfc-activex-control-wizard.md) 控制項。  
+1.  [Create](../mfc/reference/mfc-activex-control-wizard.md) the control.  
   
-2.  [Add 方法](../mfc/mfc-activex-controls-methods.md)。  
+2.  [Add methods](../mfc/mfc-activex-controls-methods.md).  
   
-3.  覆寫 [IsInvokeAllowed](../Topic/COleControl::IsInvokeAllowed.md)。  如需詳細資訊，請參閱知識庫文件 Q146120。  
+3.  Override [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). For more information, see Knowledge Base article Q146120.  
   
-4.  建置控制項。  
+4.  Build the control.  
   
-### 以程式設計方式存取在 Automation 伺服程式的方法  
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>To programmatically access the methods in an Automation server  
   
-1.  建立應用程式，例如， [MFC exe](../mfc/reference/mfc-application-wizard.md)。  
+1.  Create an application, for example, an [MFC exe](../mfc/reference/mfc-application-wizard.md).  
   
-2.  在 `InitInstance` 函式的開頭，加入下列程式碼:  
+2.  At the beginning of the `InitInstance` function, add the following line:  
   
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/CPP/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
   
-3.  在類別檢視中，以滑鼠右鍵按一下專案節點並選取 **Add class from typelib** 匯入型別程式庫。  
+3.  In Class View, right-click the project node and select **Add class from typelib** to import the type library.  
   
-     這會將副檔名為 .h 和 .cpp 檔案加入至專案。  
+     This will add files with the file name extensions .h and .cpp to the project.  
   
-4.  在您將會在 ActiveX 控制項的一或多個方法類別的標頭檔，請將下列程式碼: `#include filename.h`，其中的檔名是建立標頭檔的名稱，當您匯入型別程式庫。  
+4.  In the header file of the class where you will call one or more methods in the ActiveX control, add the following line: `#include filename.h`, where file name is the name of the header file that was created when you imported the type library.  
   
-5.  在呼叫將會對在 ActiveX 控制項的方法的函式，建立控制項的包裝函式類別的物件中加入、修改和 ActiveX 物件。  例如，在中，當 OK 按鈕顯示在對話方塊中，按一下下列 MFC 程式碼具現化 `CCirc` 控制項，取得標頭屬性，並顯示結果:  
+5.  In the function where a call will be made to a method in the ActiveX control, add code that creates an object of the control's wrapper class and create the ActiveX object. For example, the following MFC code instantiates a `CCirc` control, gets the Caption property, and displays the result when the OK button is clicked in a dialog box:  
   
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/CPP/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
   
- 如果您將方法加入至 ActiveX 控制項，在應用程式之後使用它，您可以開始使用控制項的最新版本應用程式藉由刪除建置的檔案，在匯入型別程式庫。  然後再次匯入型別程式庫。  
+ If you add methods to the ActiveX control after you use it in an application, you can begin using the latest version of the control in the application by deleting the files that were created when you imported the type library. Then import the type library again.  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

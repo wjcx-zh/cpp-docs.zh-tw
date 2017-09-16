@@ -1,5 +1,5 @@
 ---
-title: "CPropExchange 類別 |Microsoft 文件"
+title: CPropExchange Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPropExchange class
-- OLE controls, persistence
-- controls [MFC], OLE
+- CPropExchange [MFC], ExchangeBlobProp
+- CPropExchange [MFC], ExchangeFontProp
+- CPropExchange [MFC], ExchangePersistentProp
+- CPropExchange [MFC], ExchangeProp
+- CPropExchange [MFC], ExchangeVersion
+- CPropExchange [MFC], GetVersion
+- CPropExchange [MFC], IsAsynchronous
+- CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
 caps.latest.revision: 22
 author: mikeblome
@@ -44,17 +49,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 655d8e2f074c3bd12b1b52ece74efb844c7a9904
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cf71556f16272d2d4beef7ade248c28dd2509f01
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpropexchange-class"></a>CPropExchange 類別
-支援 OLE 控制項的永續性實作。  
+# <a name="cpropexchange-class"></a>CPropExchange Class
+Supports the implementation of persistence for your OLE controls.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CPropExchange  
@@ -62,42 +67,42 @@ class AFX_NOVTABLE CPropExchange
   
 ## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|交換二進位大型物件 (BLOB) 屬性。|  
-|[CPropExchange::ExchangeFontProp](#exchangefontprop)|交換的字型屬性。|  
-|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|交換控制項和檔案之間的屬性。|  
-|[CPropExchange::ExchangeProp](#exchangeprop)|交換的任何內建類型的屬性。|  
-|[CPropExchange::ExchangeVersion](#exchangeversion)|交換 OLE 控制項的版本號碼。|  
-|[CPropExchange::GetVersion](#getversion)|擷取 OLE 控制項的版本號碼。|  
-|[CPropExchange::IsAsynchronous](#isasynchronous)|決定屬性交換會以非同步方式進行。|  
-|[CPropExchange::IsLoading](#isloading)|指出屬性是否被載入控制項或儲存它。|  
+|[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|Exchanges a binary large object (BLOB) property.|  
+|[CPropExchange::ExchangeFontProp](#exchangefontprop)|Exchanges a font property.|  
+|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|Exchanges a property between a control and a file.|  
+|[CPropExchange::ExchangeProp](#exchangeprop)|Exchanges properties of any built-in type.|  
+|[CPropExchange::ExchangeVersion](#exchangeversion)|Exchanges the version number of an OLE control.|  
+|[CPropExchange::GetVersion](#getversion)|Retrieves the version number of an OLE control.|  
+|[CPropExchange::IsAsynchronous](#isasynchronous)|Determines if property exchanges are done asynchronously.|  
+|[CPropExchange::IsLoading](#isloading)|Indicates whether properties are being loaded into the control or saved from it.|  
   
-## <a name="remarks"></a>備註  
- `CPropExchange`沒有基底類別。  
+## <a name="remarks"></a>Remarks  
+ `CPropExchange` does not have a base class.  
   
- 建立內容和屬性交換的方向。  
+ Establishes the context and direction of a property exchange.  
   
- 持續性是控制項的狀態資訊時，通常由其屬性，控制項本身和媒體之間的交換。  
+ Persistence is the exchange of the control's state information, usually represented by its properties, between the control itself and a medium.  
   
- 架構會建構物件衍生自`CPropExchange`時它會通知 OLE 控制項的屬性是從載入或儲存至持續性儲存體。  
+ The framework constructs an object derived from `CPropExchange` when it is notified that an OLE control's properties are to be loaded from or stored to persistent storage.  
   
- 架構會將指標傳遞至這個`CPropExchange`物件至控制項的`DoPropExchange`函式。 如果您使用精靈來建立控制項，控制項的起始檔案`DoPropExchange`函式呼叫`COleControl::DoPropExchange`。 基底類別版本交換控制項的內建屬性。您修改您已加入至您的控制項來交換內容的衍生的類別版本。  
+ The framework passes a pointer to this `CPropExchange` object to your control's `DoPropExchange` function. If you used a wizard to create the starter files for your control, your control's `DoPropExchange` function calls `COleControl::DoPropExchange`. The base-class version exchanges the control's stock properties; you modify your derived class's version to exchange properties you have added to your control.  
   
- `CPropExchange`可用來序列化控制項的屬性，或在初始化時載入或建立控制項的控制項的屬性。 `ExchangeProp`和`ExchangeFontProp`的成員函式`CPropExchange`能夠儲存至屬性，以及從不同的媒體載入它們。  
+ `CPropExchange` can be used to serialize a control's properties or initialize a control's properties upon the load or creation of a control. The `ExchangeProp` and `ExchangeFontProp` member functions of `CPropExchange` are able to store properties to and load them from different media.  
   
- 如需有關使用`CPropExchange`，請參閱文章[MFC ActiveX 控制項︰ 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。  
+ For more information on using `CPropExchange`, see the article [MFC ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CPropExchange`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxctl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxctl.h  
   
-##  <a name="exchangeblobprop"></a>CPropExchange::ExchangeBlobProp  
- 將序列化儲存二進位大型物件 (BLOB) 資料的屬性。  
+##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp  
+ Serializes a property that stores binary large object (BLOB) data.  
   
 ```  
 virtual BOOL ExchangeBlobProp(
@@ -106,26 +111,26 @@ virtual BOOL ExchangeBlobProp(
     HGLOBAL hBlobDefault = NULL) = 0;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `phBlob`  
- 指標指向變數，來儲存屬性 （變數通常是您的類別的成員）。  
+ Pointer to a variable pointing to where the property is stored (variable is typically a member of your class).  
   
  `hBlobDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 屬性的值從位址讀取或寫入，，因為已適當情況下，所參考的變數`phBlob`。 如果`hBlobDefault`指定，它將用於做為屬性的預設值。 如果因為任何原因而控制項的序列化失敗，則會使用此值。  
+### <a name="remarks"></a>Remarks  
+ The property's value is read from or written to, as appropriate, the variable referenced by `phBlob`. If `hBlobDefault` is specified, it will be used as the property's default value. This value is used if, for any reason, the control's serialization fails.  
   
- 函式**CArchivePropExchange::ExchangeBlobProp**， **CResetPropExchange::ExchangeBlobProp**，和**CPropsetPropExchange::ExchangeBlobProp**覆寫此純虛擬函式。  
+ The functions **CArchivePropExchange::ExchangeBlobProp**, **CResetPropExchange::ExchangeBlobProp**, and **CPropsetPropExchange::ExchangeBlobProp** override this pure virtual function.  
   
-##  <a name="exchangefontprop"></a>CPropExchange::ExchangeFontProp  
- 交換儲存媒體和控制項之間的字型屬性。  
+##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp  
+ Exchanges a font property between a storage medium and the control.  
   
 ```  
 virtual BOOL ExchangeFontProp(
@@ -135,29 +140,29 @@ virtual BOOL ExchangeFontProp(
     LPFONTDISP pFontDispAmbient) = 0;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `font`  
- 參考[CFontHolder](../../mfc/reference/cfontholder-class.md)物件，其中包含的字型屬性。  
+ A reference to a [CFontHolder](../../mfc/reference/cfontholder-class.md) object that contains the font property.  
   
  `pFontDesc`  
- 指標[FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782)結構，其中包含值初始化的字型屬性的預設狀態時`pFontDispAmbient`是**NULL**。  
+ A pointer to a [FONTDESC](http://msdn.microsoft.com/library/windows/desktop/ms692782) structure containing values for initializing the default state of the font property when `pFontDispAmbient` is **NULL**.  
   
  `pFontDispAmbient`  
- 指標**IFontDisp**介面要用來初始化的字型屬性的預設狀態的字型。  
+ A pointer to the **IFontDisp** interface of a font to be used for initializing the default state of the font property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 如果正在從媒體載入至控制項的字型屬性，從媒體擷取字型的特性和`CFontHolder`所參考物件`font`會使用它們來初始化。 如果要儲存的字型屬性，會寫入媒體字型物件中的特性。  
+### <a name="remarks"></a>Remarks  
+ If the font property is being loaded from the medium to the control, the font's characteristics are retrieved from the medium and the `CFontHolder` object referenced by `font` is initialized with them. If the font property is being stored, the characteristics in the font object are written to the medium.  
   
- 函式**CArchivePropExchange::ExchangeFontProp**， **CResetPropExchange::ExchangeFontProp**，和**CPropsetPropExchange::ExchangeFontProp**覆寫此純虛擬函式。  
+ The functions **CArchivePropExchange::ExchangeFontProp**, **CResetPropExchange::ExchangeFontProp**, and **CPropsetPropExchange::ExchangeFontProp** override this pure virtual function.  
   
-##  <a name="exchangepersistentprop"></a>CPropExchange::ExchangePersistentProp  
- 交換控制項和檔案之間的屬性。  
+##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp  
+ Exchanges a property between the control and a file.  
   
 ```  
 virtual BOOL ExchangePersistentProp(
@@ -167,29 +172,29 @@ virtual BOOL ExchangePersistentProp(
     LPUNKNOWN pUnkDefault) = 0;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `ppUnk`  
- 包含屬性的指標變數的指標**IUnknown** （這個變數通常是您的類別的成員） 的介面。  
+ A pointer to a variable containing a pointer to the property's **IUnknown** interface (this variable is typically a member of your class).  
   
  `iid`  
- 介面上的控制項將會使用屬性的介面 ID。  
+ Interface ID of the interface on the property that the control will use.  
   
  `pUnkDefault`  
- 屬性的預設值。  
+ Default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 如果屬性從檔案載入至控制項，此屬性是建立並從檔案初始化。 如果儲存屬性時，其值會寫入至檔案。  
+### <a name="remarks"></a>Remarks  
+ If the property is being loaded from the file to the control, the property is created and initialized from the file. If the property is being stored, its value is written to the file.  
   
- 函式**CArchivePropExchange::ExchangePersistentProp**， **CResetPropExchange::ExchangePersistentProp**，和**CPropsetPropExchange::ExchangePersistentProp**覆寫此純虛擬函式。  
+ The functions **CArchivePropExchange::ExchangePersistentProp**, **CResetPropExchange::ExchangePersistentProp**, and **CPropsetPropExchange::ExchangePersistentProp** override this pure virtual function.  
   
-##  <a name="exchangeprop"></a>CPropExchange::ExchangeProp  
- 交換儲存媒體和控制項之間的屬性。  
+##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp  
+ Exchanges a property between a storage medium and the control.  
   
 ```  
 virtual BOOL ExchangeProp(
@@ -199,14 +204,14 @@ virtual BOOL ExchangeProp(
     const void* pvDefault = NULL) = 0 ;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pszPropName`  
- 交換屬性的名稱。  
+ The name of the property being exchanged.  
   
  `vtProp`  
- 符號，指定要交換之屬性的型別。 可能的值為：  
+ A symbol specifying the type of the property being exchanged. Possible values are:  
   
-|符號|屬性類型|  
+|Symbol|Property Type|  
 |------------|-------------------|  
 |`VT_I2`|**short**|  
 |`VT_I4`|**long**|  
@@ -217,21 +222,21 @@ virtual BOOL ExchangeProp(
 |`VT_R8`|**double**|  
   
  `pvProp`  
- 屬性的值的指標。  
+ A pointer to the property's value.  
   
  *pvDefault*  
- 屬性的預設值的指標。  
+ Pointer to a default value for the property.  
   
-### <a name="return-value"></a>傳回值  
- Exchange 已成功; 如果為非零0，如果不成功。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the exchange was successful; 0 if unsuccessful.  
   
-### <a name="remarks"></a>備註  
- 如果正在從媒體載入至控制項的屬性，屬性的值會從媒體擷取，並儲存在所指向的物件`pvProp`。 如果屬性儲存為 「 中 」，將物件的值所指`pvProp`寫入至媒體。  
+### <a name="remarks"></a>Remarks  
+ If the property is being loaded from the medium to the control, the property's value is retrieved from the medium and stored in the object pointed to by `pvProp`. If the property is being stored to the medium, the value of the object pointed to by `pvProp` is written to the medium.  
   
- 函式**CArchivePropExchange::ExchangeProp**， **CResetPropExchange::ExchangeProp**，和**CPropsetPropExchange::ExchangeProp**覆寫此純虛擬函式。  
+ The functions **CArchivePropExchange::ExchangeProp**, **CResetPropExchange::ExchangeProp**, and **CPropsetPropExchange::ExchangeProp** override this pure virtual function.  
   
-##  <a name="exchangeversion"></a>CPropExchange::ExchangeVersion  
- 若要處理的版本號碼的持續性架構呼叫。  
+##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion  
+ Called by the framework to handle persistence of a version number.  
   
 ```  
 virtual BOOL ExchangeVersion(
@@ -240,51 +245,51 @@ virtual BOOL ExchangeVersion(
     BOOL bConvert);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *dwVersionLoaded*  
- 參考變數，將儲存所載入的永續性資料的版本號碼。  
+ Reference to a variable where the version number of the persistent data being loaded will be stored.  
   
  `dwVersionDefault`  
- 控制項的目前版本號碼。  
+ The current version number of the control.  
   
  `bConvert`  
- 指出是否要永續性資料轉換成目前的版本，或將它放在已載入的版本相同。  
+ Indicates whether to convert persistent data to the current version or keep it at the same version that was loaded.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function succeeded; 0 otherwise.  
   
-##  <a name="getversion"></a>CPropExchange::GetVersion  
- 呼叫此函式可擷取控制項的版本號碼。  
+##  <a name="getversion"></a>  CPropExchange::GetVersion  
+ Call this function to retrieve the version number of the control.  
   
 ```  
 DWORD GetVersion();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 控制版本號碼。  
+### <a name="return-value"></a>Return Value  
+ The version number of the control.  
   
-##  <a name="isasynchronous"></a>CPropExchange::IsAsynchronous  
- 決定屬性交換會以非同步方式進行。  
+##  <a name="isasynchronous"></a>  CPropExchange::IsAsynchronous  
+ Determines if property exchanges are done asynchronously.  
   
 ```  
 BOOL IsAsynchronous();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回 TRUE，如果屬性被交換以非同步的方式，否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ Returns TRUE if properties are exchanged asynchronously, otherwise FALSE.  
   
-##  <a name="isloading"></a>CPropExchange::IsLoading  
- 呼叫此函式來判斷屬性是否在控制項載入或儲存它。  
+##  <a name="isloading"></a>  CPropExchange::IsLoading  
+ Call this function to determine whether properties are being loaded to the control or saved from it.  
   
 ```  
 BOOL IsLoading();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 正在載入內容; 如果為非零否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if properties are being loaded; otherwise 0.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
 
 

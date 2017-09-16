@@ -1,50 +1,69 @@
 ---
-title: "在清單控制項中實作工作區域 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "清單控制項, 工作區域"
-  - "清單控制項中的工作區域"
+title: Implementing Working Areas in List Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- list controls [MFC], working areas
+- working areas in list control [MFC]
 ms.assetid: fbbb356b-3359-4348-8603-f1cb114cadde
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 在清單控制項中實作工作區域
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a6e1f2eea1f21dfef17389e5534107c0ba15c41e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-根據預設，清單控制項排列所有項目標準格線模式。  不過，另一個方法支援，工作區域，將清單項目置於矩形群組。  如需實作工作區域清單控制項的影像，請參閱 \< 使用清單檢視控制項在 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+---
+# <a name="implementing-working-areas-in-list-controls"></a>Implementing Working Areas in List Controls
+By default, a list control arranges all items in a standard grid fashion. However, another method is supported, working areas, that arranges the list items into rectangular groups. For an image of a list control that implements working areas, see Using List-View Controls in the Windows SDK.  
   
 > [!NOTE]
->  只有在清單控制項在圖示或小圖示模式時，工作區域為可見的。  不過，所有目前工作區中維持這個值表示這個轉換成報表或 List 模式。  
+>  Working areas are visible only when the list control is in icon or small icon mode. However, any current working areas are maintained if the view is switched to the report or list mode.  
   
- 工作區域可用來顯示空白框線 \(左邊，上方和 \(或\) 正確的項目\)，或是造成水平捲軸，會顯示通常並不是一個。  另一種常見的使用方式是建立項目可以移動或置放的多個工作區。  這個方法，您可以建立具有不同的意義在單一檢視的區域。  使用者可以將它們然後分類項目在不同的區域。  這個範例是具有讀取\/寫入檔案的本機和唯讀檔案的另一個本機檔案系統的檢視。  如果檔案項目將唯讀欄位，它會自動變成唯讀。  將檔案從唯讀區域讀寫區域會讓檔案讀取\/寫入。  
+ Working areas can be used to display an empty border (on the left, top and/or right of the items), or cause a horizontal scroll bar to be displayed when there normally wouldn't be one. Another common usage is to create multiple working areas to which items can be moved or dropped. With this method, you could create areas in a single view that have different meanings. The user could then categorize the items by placing them in a different area. An example of this would be a view of a file system that has an area for read/write files and another area for read-only files. If a file item were moved into the read-only area, it would automatically become read-only. Moving a file from the read-only area into the read/write area would make the file read/write.  
   
- `CListCtrl` 為清單控制項的建立和管理工作區域提供數個成員函式。  [GetWorkAreas](../Topic/CListCtrl::GetWorkAreas.md) 和 [SetWorkAreas](../Topic/CListCtrl::SetWorkAreas.md) 擷取和設定 `CRect` 物件的陣列 \(或 `RECT` 結構\)，儲存您的清單控制項的目前實作的工作區域。  此外， [GetNumberOfWorkAreas](../Topic/CListCtrl::GetNumberOfWorkAreas.md) 擷取工作區域目前數目您的清單控制項的 \(根據預設，零\)。  
+ `CListCtrl` provides several member functions for creating and managing working areas in your list control. [GetWorkAreas](../mfc/reference/clistctrl-class.md#getworkareas) and [SetWorkAreas](../mfc/reference/clistctrl-class.md#setworkareas) retrieve and set an array of `CRect` objects (or `RECT` structures), which store the currently implemented working areas for your list control. In addition, [GetNumberOfWorkAreas](../mfc/reference/clistctrl-class.md#getnumberofworkareas) retrieves the current number of working areas for your list control (by default, zero).  
   
-## 項目和工作區域  
- 當工作區域建立時，在工作區域之間的項目相容的成員上。  同樣地，如果項目，將工作區域，它符合其移動作業範圍的成員。  如果項目不在任何工作區域之間，它會自動符合第一個 \(索引 0\) 工作區域的成員。  如果您要建立項目並將它放置在特定工作區域內，您將需要建立項目並將它與呼叫所需的工作區域移至 [SetItemPosition](../Topic/CListCtrl::SetItemPosition.md)。  下列第二個範例示範這項技術。  
+## <a name="items-and-working-areas"></a>Items and Working Areas  
+ When a working area is created, items that lie within the working area become members of it. Similarly, if an item is moved into a working area, it becomes a member of the working area to which it was moved. If an item does not lie within any working area, it automatically becomes a member of the first (index 0) working area. If you want to create an item and have it placed within a specific working area, you will need to create the item and then move it into the desired working area with a call to [SetItemPosition](../mfc/reference/clistctrl-class.md#setitemposition). The second example below demonstrates this technique.  
   
- 下列範例會在每個工作區域周圍實作四個工作區域 \(`rcWorkAreas`\)，具有 10 個像素邊界的相等的大小，在清單控制項 \(`m_WorkAreaListCtrl`\)。  
+ The following example implements four working areas (`rcWorkAreas`), of equal size with a 10-pixel-wide border around each working area, in a list control (`m_WorkAreaListCtrl`).  
   
- [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/CPP/implementing-working-areas-in-list-controls_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#20](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_1.cpp)]  
   
- 對 [ApproximateViewRect](../Topic/CListCtrl::ApproximateViewRect.md) 的呼叫是在本機進行取得要求的整個頁面區域的專案中的所有項目。  此估計值再分成四個區域並用一個 5 像素邊界。  
+ The call to [ApproximateViewRect](../mfc/reference/clistctrl-class.md#approximateviewrect) was made to get an estimate of the total area required to display all items in one region. This estimate is then divided into four regions and padded with a 5-pixel-wide border.  
   
- 下面的範例會將現有的清單項目指派給每個群組 \(`rcWorkAreas`\) 和重新整理控制項檢視中 \(`m_``WorkAreaListCtrl`\) 完成這個動作。  
+ The next example assigns the existing list items to each group (`rcWorkAreas`) and refreshes the control view (`m_WorkAreaListCtrl`) to complete the effect.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/CPP/implementing-working-areas-in-list-controls_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#21](../mfc/codesnippet/cpp/implementing-working-areas-in-list-controls_2.cpp)]  
   
-## 請參閱  
- [使用 CListCtrl](../mfc/using-clistctrl.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

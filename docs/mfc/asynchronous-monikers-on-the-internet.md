@@ -1,74 +1,93 @@
 ---
-title: "網際網路上的非同步 Moniker | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [C++], 非同步"
-  - "非同步 Moniker [C++]"
-  - "下載網際網路資源和非同步 Moniker"
-  - "網際網路 [C++], 非同步下載"
-  - "MFC [C++], 非同步 Moniker"
-  - "最佳化 [C++], 跨網際網路非同步下載"
-  - "Web 應用程式 [C++], 非同步"
+title: Asynchronous Monikers on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], asynchronous
+- MFC, asynchronous monikers
+- asynchronous monikers [MFC]
+- Web applications [MFC], asynchronous
+- downloading Internet resources and asynchronous monikers
+- optimization [MFC], asynchronous downloading across Internet
+- Internet [MFC], asynchronous downloading
 ms.assetid: 418b0c64-0046-4dae-8118-c9c762b5822e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 網際網路上的非同步 Moniker
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fded09fa7a92cc6a13baaa926b1dcc95c870f904
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-由於緩慢的網路存取，網際網路需要加入新的方法至應用程式設計。  應用程式應該非同步地執行網路存取，避免讓使用者介面失去作用。  MFC 類別 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) 為下載檔案提供非同步支援。  
+---
+# <a name="asynchronous-monikers-on-the-internet"></a>Asynchronous Monikers on the Internet
+The Internet requires new approaches to application design because of its slow network access. Applications should perform network access asynchronously to avoid stalling the user interface. The MFC class [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) provides asynchronous support for downloading files.  
   
- 有了非同步 Moniker，您可以擴充 COM 應用程式，跨網際網路非同步地下載並提供大型物件的轉換，例如點陣圖和 VRML 物件。  非同步 Moniker 在網際網路啟用要下載的 ActiveX 控制項屬性或檔案中網際網路，而不會封鎖使用者介面的回應。  
+ With asynchronous monikers, you can extend your COM application to download asynchronously across the Internet and to provide progressive rendering of large objects such as bitmaps and VRML objects. Asynchronous monikers enable an ActiveX control property or a file on the Internet to be downloaded without blocking the response of the user interface.  
   
-## 非同步 Moniker 的優點  
- 您可以使用非同步 Moniker 進行：  
+## <a name="advantages-of-asynchronous-monikers"></a>Advantages of Asynchronous Monikers  
+ You can use asynchronous monikers to:  
   
--   下載程式碼和檔案，並且不會封鎖。  
+-   Download code and files without blocking.  
   
--   在 ActiveX 控制項下載屬性，並且不會封鎖。  
+-   Download properties in ActiveX controls without blocking.  
   
--   接收下載進度通知。  
+-   Receive notifications of downloading progress.  
   
--   追蹤進度和就緒狀態資訊。  
+-   Track progress and ready state information.  
   
--   提供進度的狀態資訊給使用者。  
+-   Provide status information to the user about progress.  
   
--   允許使用者隨時取消下載。  
+-   Allow the user to cancel a download at any time.  
   
-## 非同步 Moniker 的 MFC 類別  
- [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) 衍生自 [CMonikerFile](../mfc/reference/cmonikerfile-class.md)，其又是衍生自 [COleStreamFile](../mfc/reference/colestreamfile-class.md)。  `COleStreamFile` 物件表示資料流；`CMonikerFile` 物件使用 `IMoniker` 取得資料，而 `CAsyncMonikerFile` 也是非同步地如此做。  
+## <a name="mfc-classes-for-asynchronous-monikers"></a>MFC Classes for Asynchronous Monikers  
+ [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) is derived from [CMonikerFile](../mfc/reference/cmonikerfile-class.md), which in turn is derived from [COleStreamFile](../mfc/reference/colestreamfile-class.md). A `COleStreamFile` object represents a stream of data; a `CMonikerFile` object uses an `IMoniker` to obtain the data, and a `CAsyncMonikerFile` object does so asynchronously.  
   
- 非同步 Moniekr 主要使用在網際網路可用的應用程式和 ActiveX 控制項，在檔案傳輸期間提供反應靈敏的使用者介面。  一個基本的使用範例是使用 [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md) 為 ActiveX 控制項提供非同步屬性。  
+ Asynchronous monikers are used primarily in Internet-enabled applications and ActiveX controls to provide a responsive user interface during file transfers. A prime example of this is the use of [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md) to provide asynchronous properties for ActiveX controls.  
   
-## MFC 類別 ActiveX 控制項的資料路徑  
- MFC 類別 `CDataPathProperty` 和 [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) 實作可以非同步載入的 ActiveX 控制項屬性。  非同步屬性在同步初始之後載入。  非同步 ActiveX 控制項重複叫用回呼，在長時間的屬性交換過程中表示新資料的可用性。  
+## <a name="mfc-classes-for-data-paths-in-activex-controls"></a>MFC Classes for Data Paths in ActiveX Controls  
+ The MFC classes `CDataPathProperty` and [CCachedDataPathProperty](../mfc/reference/ccacheddatapathproperty-class.md) implement ActiveX control properties that can be loaded asynchronously. Asynchronous properties are loaded after synchronous initiation. Asynchronous ActiveX controls repeatedly invoke a callback to indicate availability of new data during a lengthy property exchange process.  
   
- `CDataPathProperty` 是衍生自 `CAsyncMonikerFile`。  `CCachedDataPathProperty` 是衍生自 `CDataPathProperty`。  若要實作您的 ActiveX 控制項的非同步屬性，從 `CDataPathProperty` 或 `CCachedDataPathProperty` 衍生類別，並覆寫 [OnDataAvailable](../Topic/CAsyncMonikerFile::OnDataAvailable.md) 和您想要接收的其他通知。  
+ `CDataPathProperty` is derived from `CAsyncMonikerFile`. `CCachedDataPathProperty` is derived from `CDataPathProperty`. To implement asynchronous properties in your ActiveX controls, derive a class from `CDataPathProperty` or `CCachedDataPathProperty`, and override [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) and other notifications you wish to receive.  
   
-#### 若要使用非同步 Moniker 下載檔案  
+#### <a name="to-download-a-file-using-asynchronous-monikers"></a>To download a file using asynchronous monikers  
   
-1.  宣告一個會衍生自 [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) 的類別。  
+1.  Declare a class derived from [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
-2.  覆寫 [OnDataAvailable](../Topic/CAsyncMonikerFile::OnDataAvailable.md) 以顯示資料。  
+2.  Override [OnDataAvailable](../mfc/reference/casyncmonikerfile-class.md#ondataavailable) to display the data.  
   
-3.  覆寫其他成員函式，包括 [OnProgress](../Topic/CAsyncMonikerFile::OnProgress.md)、[OnStartBinding](../Topic/CAsyncMonikerFile::OnStartBinding.md) 和 [OnStopBinding](../Topic/CAsyncMonikerFile::OnStopBinding.md)。  
+3.  Override other member functions, including [OnProgress](../mfc/reference/casyncmonikerfile-class.md#onprogress), [OnStartBinding](../mfc/reference/casyncmonikerfile-class.md#onstartbinding), and [OnStopBinding](../mfc/reference/casyncmonikerfile-class.md#onstopbinding).  
   
-4.  宣告這個類別的執行個體來開啟 URL。  
+4.  Declare an instance of this class and use it to open URLs.  
   
- 如需在 ActiveX 控制項非同步下載的詳細資訊，請參閱 [在網際網路上的 ActiveX 控制項](../mfc/activex-controls-on-the-internet.md)。  
+ For information about downloading asynchronously in an ActiveX control, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
-## 請參閱  
- [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
- [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

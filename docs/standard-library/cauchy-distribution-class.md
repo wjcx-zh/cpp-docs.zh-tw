@@ -1,5 +1,5 @@
 ---
-title: "cauchy_distribution 類別 | Microsoft Docs"
+title: cauchy_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- cauchy_distribution
 - random/std::cauchy_distribution
 - random/std::cauchy_distribution::reset
 - random/std::cauchy_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- cauchy_distribution class
+- std::cauchy_distribution [C++]
+- std::cauchy_distribution [C++], reset
+- std::cauchy_distribution [C++], a
+- std::cauchy_distribution [C++], b
+- std::cauchy_distribution [C++], param
+- std::cauchy_distribution [C++], min
+- std::cauchy_distribution [C++], max
+- std::cauchy_distribution [C++], param_type
+- std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
 caps.latest.revision: 25
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2af8fbb5fb6bfee6bc0a996fffe2e62f1d78cde0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bf0bfe22396096a054e841619959b5285b11fab8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="cauchydistribution-class"></a>cauchy_distribution 類別
-產生柯西 (Cauchy) 分佈。  
+# <a name="cauchydistribution-class"></a>cauchy_distribution Class
+Generates a Cauchy distribution.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class RealType = double>  
@@ -88,35 +95,35 @@ public:
    };  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-浮點結果類型，預設值為 `double`。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*URNG*：統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
 
-## <a name="remarks"></a>備註  
-此樣板類別描述產生使用者指定之浮點類型的值的分佈 (若無提供則為 `double` 類型)，而這是根據柯西分佈進行分佈。 下表提供各個成員的文章連結。  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Cauchy Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[cauchy_distribution](#cauchy_distribution)|`cauchy_distribution::a`|`cauchy_distribution::param`|  
 |`cauchy_distribution::operator()`|`cauchy_distribution::b`|[param_type](#param_type)|  
   
-屬性函式 `a()` 和 `b()` 會針對儲存的分佈參數 `a` 和 `b` 分別傳回各自的值。  
+The property functions `a()` and `b()` return their respective values for stored distribution parameters `a` and `b`.  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-`min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-`reset()` 成員函式會捨棄任何快取的值，讓下個針對 `operator()` 呼叫的結果不是取決於呼叫之前取自引擎的任何值。  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-`operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-如需柯西分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Cauchy Distribution](http://go.microsoft.com/fwlink/LinkId=400523) (柯西分佈)。  
+For detailed information about the cauchy distribution, see the Wolfram MathWorld article [Cauchy Distribution](http://go.microsoft.com/fwlink/LinkId=400523).  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -176,7 +183,7 @@ int main()
 }  
 ```  
   
-第一次執行：  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -201,7 +208,7 @@ Distribution for 10 samples:
     10: 2.5253154706  
 ```  
   
-第二次執行：  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -226,7 +233,7 @@ Distribution for 10 samples:
     10: 25.2531547063  
 ```  
   
-第三次執行：  
+Third run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -251,38 +258,38 @@ Distribution for 10 samples:
     10: 35.2531547063  
 ```  
   
-## <a name="requirements"></a>需求  
-**標頭：**\<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**命名空間：** std  
+**Namespace:** std  
   
 ##  <a name="cauchy_distribution"></a>  cauchy_distribution::cauchy_distribution  
-建構分佈。  
+Constructs the distribution.  
   
 ```  
 explicit cauchy_distribution(result_type a = 0.0, result_type b = 1.0);
 explicit cauchy_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *a*  
-`a` 分佈參數。  
+The `a` distribution parameter.  
   
 *b*  
-`b` 分佈參數。  
+The `b` distribution parameter.  
   
 *parm*  
-用來建構分佈的 `param_type` 結構。  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>備註  
-**前置條件：**`0.0 < b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < b`  
   
-第一個建構函式建構的物件，其預存的 `a` 值具有 *a* 值，而其預存的 `b` 值具有 *b* 值。  
+The first constructor constructs an object whose stored `a` value holds the value *a* and whose stored `b` value holds the value *b*.  
   
-第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  cauchy_distribution::param_type  
-儲存分佈的所有參數。  
+Stores all the parameters of the distribution.  
   
 ```cpp    
 struct param_type {  
@@ -296,22 +303,22 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
 *a*  
-`a` 分佈參數。  
+The `a` distribution parameter.  
   
 *b*  
-`b` 分佈參數。  
+The `b` distribution parameter.  
   
 *right*  
-要與這個項目比較的 `param_type` 物件。  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>備註  
-**前置條件：**`0.0 < b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < b`  
   
-此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)
 
 

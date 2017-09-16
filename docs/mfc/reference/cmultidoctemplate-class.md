@@ -1,5 +1,5 @@
 ---
-title: "CMultiDocTemplate 類別 |Microsoft 文件"
+title: CMultiDocTemplate Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,8 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MDI, template
-- CMultiDocTemplate class
+- CMultiDocTemplate [MFC], CMultiDocTemplate
 ms.assetid: 5b8aa328-e461-41d0-b388-00594535e119
 caps.latest.revision: 21
 author: mikeblome
@@ -36,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 6e58325cd4dcaec01bf8a76006bb397fccd9a171
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24a67c832c2fca2af5e91acc799e42f2324df6ad
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmultidoctemplate-class"></a>CMultiDocTemplate 類別
-定義實作多重文件介面 (MDI) 的文件範本。  
+# <a name="cmultidoctemplate-class"></a>CMultiDocTemplate Class
+Defines a document template that implements the multiple document interface (MDI).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMultiDocTemplate : public CDocTemplate  
@@ -54,32 +53,32 @@ class CMultiDocTemplate : public CDocTemplate
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|建構 `CMultiDocTemplate` 物件。|  
+|[CMultiDocTemplate::CMultiDocTemplate](#cmultidoctemplate)|Constructs a `CMultiDocTemplate` object.|  
   
-## <a name="remarks"></a>備註  
- MDI 應用程式使用中的使用者可以開啟零或多個文件框架視窗，其中每個文件顯示的工作區的主框架視窗。 如需 MDI 更詳細的說明，請參閱*軟體設計的 Windows 介面方針*。  
+## <a name="remarks"></a>Remarks  
+ An MDI application uses the main frame window as a workspace in which the user can open zero or more document frame windows, each of which displays a document. For a more detailed description of the MDI, see *Windows Interface Guidelines for Software Design*.  
   
- 文件範本會定義三種類型的類別之間的關聯性︰  
+ A document template defines the relationships among three types of classes:  
   
--   文件類別，衍生自[CDocument](../../mfc/reference/cdocument-class.md)。  
+-   A document class, which you derive from [CDocument](../../mfc/reference/cdocument-class.md).  
   
--   檢視類別，會顯示上面所列的文件類別中的資料。 您可以衍生此類別從[CView](../../mfc/reference/cview-class.md)， `CScrollView`， `CFormView`，或`CEditView`。 (您也可以使用`CEditView`直接。)  
+-   A view class, which displays data from the document class listed above. You can derive this class from [CView](../../mfc/reference/cview-class.md), `CScrollView`, `CFormView`, or `CEditView`. (You can also use `CEditView` directly.)  
   
--   框架視窗類別，其中包含檢視。 MDI 文件範本，您可以衍生此類別從`CMDIChildWnd`，或者，如果您不需要自訂文件框架視窗的行為，您可以使用[CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)直接而不需衍生您自己的類別。  
+-   A frame window class, which contains the view. For an MDI document template, you can derive this class from `CMDIChildWnd`, or, if you don't need to customize the behavior of the document frame windows, you can use [CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md) directly without deriving your own class.  
   
- MDI 應用程式可以支援多個文件、 類型和不同類型的文件可以同時開啟。 您的應用程式具有每個文件類型所支援的文件範本。 例如，如果您的 MDI 應用程式支援試算表和文字文件，應用程式有兩個`CMultiDocTemplate`物件。  
+ An MDI application can support more than one type of document, and documents of different types can be open at the same time. Your application has one document template for each document type that it supports. For example, if your MDI application supports both spreadsheets and text documents, the application has two `CMultiDocTemplate` objects.  
   
- 使用者建立新的文件時，應用程式會使用文件範本。 如果應用程式支援多個文件類型，架構文件範本從取得支援的文件類型的名稱，並顯示在 [開新檔案] 對話方塊中的清單。 一旦使用者選取文件類型，應用程式會建立文件類別物件、 框架視窗物件，以及檢視物件，並將其附加到彼此。  
+ The application uses the document template(s) when the user creates a new document. If the application supports more than one type of document, then the framework gets the names of the supported document types from the document templates and displays them in a list in the File New dialog box. Once the user has selected a document type, the application creates a document class object, a frame window object, and a view object and attaches them to each other.  
   
- 您不需要呼叫任何成員函式`CMultiDocTemplate`除非建構函式。 架構會處理`CMultiDocTemplate`內部物件。  
+ You do not need to call any member functions of `CMultiDocTemplate` except the constructor. The framework handles `CMultiDocTemplate` objects internally.  
   
- 如需有關`CMultiDocTemplate`，請參閱[文件範本和文件/檢視建立程序](../../mfc/document-templates-and-the-document-view-creation-process.md)。  
+ For more information on `CMultiDocTemplate`, see [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,11 +87,11 @@ class CMultiDocTemplate : public CDocTemplate
   
  `CMultiDocTemplate`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cmultidoctemplate"></a>CMultiDocTemplate::CMultiDocTemplate  
- 建構 `CMultiDocTemplate` 物件。  
+##  <a name="cmultidoctemplate"></a>  CMultiDocTemplate::CMultiDocTemplate  
+ Constructs a `CMultiDocTemplate` object.  
   
 ```  
 CMultiDocTemplate(
@@ -102,11 +101,11 @@ CMultiDocTemplate(
     CRuntimeClass* pViewClass);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIDResource`  
- 指定文件類型所使用的資源的識別碼。 這可能包括功能表、 圖示、 快速鍵對應表，以及字串資源。  
+ Specifies the ID of the resources used with the document type. This may include menu, icon, accelerator table, and string resources.  
   
- 最多七個以 '\n' 字元分隔的子字串所組成的字串資源 （不包含子字串時，需要 '\n' 字元做為預留位置; 不過，不需要尾端的 '\n' 字元）;這些子字串會描述文件類型。 如需子字串，請參閱[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 應用程式的資源檔中找到此字串資源。 例如：  
+ The string resource consists of up to seven substrings separated by the '\n' character (the '\n' character is needed as a place holder if a substring is not included; however, trailing '\n' characters are not necessary); these substrings describe the document type. For information on the substrings, see [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring). This string resource is found in the application's resource file. For example:  
   
  `// MYCALC.RC`  
   
@@ -118,33 +117,33 @@ CMultiDocTemplate(
   
  `END`  
   
- 請注意，字串是以 '\n' 字元。這是因為第一個子字串不是 MDI 應用程式，因此並不包含。 您可以編輯這個字串使用字串編輯器。整個字串會顯示為單一項目在字串編輯器中，不是以七個個別的項目。  
+ Note that the string begins with a '\n' character; this is because the first substring is not used for MDI applications and so is not included. You can edit this string using the string editor; the entire string appears as a single entry in the String Editor, not as seven separate entries.  
   
- 如需這些資源類型的詳細資訊，請參閱[資源編輯器](../../windows/resource-editors.md)。  
+ For more information about these resource types, see [Resource Editors](../../windows/resource-editors.md).  
   
  `pDocClass`  
- 指向`CRuntimeClass`文件類別的物件。 這個類別是**CDocument**-衍生的類別定義以代表您的文件。  
+ Points to the `CRuntimeClass` object of the document class. This class is a **CDocument**-derived class you define to represent your documents.  
   
  `pFrameClass`  
- 指向`CRuntimeClass`框架視窗類別的物件。 這個類別可以是`CMDIChildWnd`-衍生的類別，或者它可以是`CMDIChildWnd`本身如果想要對您的文件框架視窗的預設行為。  
+ Points to the `CRuntimeClass` object of the frame-window class. This class can be a `CMDIChildWnd`-derived class, or it can be `CMDIChildWnd` itself if you want default behavior for your document frame windows.  
   
  `pViewClass`  
- 指向`CRuntimeClass`檢視類別的物件。 這個類別是`CView`-衍生的類別定義顯示文件。  
+ Points to the `CRuntimeClass` object of the view class. This class is a `CView`-derived class you define to display your documents.  
   
-### <a name="remarks"></a>備註  
- 以動態方式配置一個`CMultiDocTemplate`物件的每個文件類型支援您的應用程式，並傳遞至每個`CWinApp::AddDocTemplate`從`InitInstance`應用程式類別的成員函式。  
+### <a name="remarks"></a>Remarks  
+ Dynamically allocate one `CMultiDocTemplate` object for each document type that your application supports and pass each one to `CWinApp::AddDocTemplate` from the `InitInstance` member function of your application class.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView #&92;](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#92](../../mfc/codesnippet/cpp/cmultidoctemplate-class_1.cpp)]  
   
- 以下是第二個範例。  
+ Here is a second example.  
   
- [!code-cpp[NVC_MFCDocView #&93;](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#93](../../mfc/codesnippet/cpp/cmultidoctemplate-class_2.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CDocTemplate 類別](../../mfc/reference/cdoctemplate-class.md)   
- [CSingleDocTemplate 類別](../../mfc/reference/csingledoctemplate-class.md)   
- [CWinApp 類別](../../mfc/reference/cwinapp-class.md)
+## <a name="see-also"></a>See Also  
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CSingleDocTemplate Class](../../mfc/reference/csingledoctemplate-class.md)   
+ [CWinApp Class](../../mfc/reference/cwinapp-class.md)
 

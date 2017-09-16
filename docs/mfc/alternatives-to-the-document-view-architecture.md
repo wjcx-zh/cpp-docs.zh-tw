@@ -1,77 +1,96 @@
 ---
-title: "文件/檢視架構的替代方案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocument 類別, 空間需求"
-  - "文件, 應用程式不含"
-  - "檢視, 應用程式不含"
+title: Alternatives to the Document-View Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- documents [MFC], applications without
+- CDocument class [MFC], space requirements
+- views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 文件/檢視架構的替代方案
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d9f1d9a04a85565096892cd0e2ead82d5b74e288
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-MFC 應用程式通常使用文件\/檢視架構處理資訊、檔案格式和資料的視覺呈現給使用者。  對於大部分的桌面應用程式，文件\/檢視架構是適當且有效率的應用程式架構。  這個結構是從檢視分隔資料，因此，在大部分情況下，簡化應用程式並減少多餘的程式碼。  
+---
+# <a name="alternatives-to-the-documentview-architecture"></a>Alternatives to the Document/View Architecture
+MFC applications normally use the document/view architecture to manage information, file formats, and the visual representation of data to users. For the majority of desktop applications, the document/view architecture is an appropriate and efficient application architecture. This architecture separates data from viewing and, in most cases, simplifies your application and reduces redundant code.  
   
- 不過，文件\/檢視架構為某些情況不適當。  請考量範例：  
+ However, the document/view architecture is not appropriate for some situations. Consider these examples:  
   
--   如果您將 C\# 撰寫的應用程式視窗，您可能要將文件\/檢視支援前完成您的通訊埠加入至應用程式。  
+-   If you are porting an application written in C for Windows, you might want to complete your port before adding document/view support to your application.  
   
--   如果您正在撰寫輕量型公用程式，您可能會發現您可以執行，而不使用文件\/檢視架構。  
+-   If you are writing a lightweight utility, you might find that you can do without the document/view architecture.  
   
--   如果原始程式碼與資料檢視已經混合資料管理，將程式碼移至文件\/檢視模型不值工作，因為您必須中斷連接兩個。  您可能想要留下程式碼。  
+-   If your original code already mixes data management with data viewing, moving the code to the document/view model is not worth the effort because you must separate the two. You might prefer to leave the code as is.  
   
- 若要建立不使用文件\/檢視架構的應用程式，請清除在 MFC 應用程式精靈的步驟 1 的 **Document\/View architecture support** 核取方塊。  請參閱 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md) 以取得詳細資訊。  
+ To create an application that does not use the document/view architecture, clear the **Document/View architecture support** check box in step 1 of the MFC Application Wizard. See [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md) for details.  
   
 > [!NOTE]
->  MFC 應用程式精靈所產生的對話方塊架構的應用程式不使用文件\/檢視架構，，因此 **Document\/View architecture support** 核取方塊會停用，您還是可以選擇對話方塊應用程式類型。  
+>  Dialog-based applications produced by the MFC Application Wizard do not use the document/view architecture, so the **Document/View architecture support** check box is disabled if you select the dialog application type.  
   
- Visual C\+\+ 精靈，以及來源和對話方塊編輯器，與產生的應用程式使用正它們會與其他精靈產生的應用程式。  應用程式可以支援工具列、捲軸和狀態列，而且有 \[**About**\] 方塊。  應用程式不會登錄任何文件樣板，因此它不會包含資料類別。  
+ The Visual C++ wizards, as well as the source and dialog editors, work with the generated application just as they would with any other Wizard-generated application. The application can support toolbars, scrollbars, and a status bar, and has an **About** box. Your application will not register any document templates, and it will not contain a document class.  
   
- 請注意產生的應用程式具有檢視類別， **CChildView**，衍生自 `CWnd`。  建立 MFC 和位置檢視類別的執行個體在應用程式中建立的框架視窗內。  因為它可簡化當地語系化和管理應用程式的內容，使用檢視視窗， MFC 仍然強制執行。  您可以將繪製程式碼加入至類別的 `OnPaint` 成員。  您的程式碼應該將捲軸加入檢視而不是加入至框架。  
+ Note that your generated application has a view class, **CChildView**, derived from `CWnd`. MFC creates and positions one instance of the view class within the frame windows created by your application. MFC still enforces using a view window, because it simplifies positioning and managing the application's content. You can add painting code to the `OnPaint` member of this class. Your code should add scrollbars to the view rather than to the frame.  
   
- 由於文件\/檢視架構的 MFC 提供了實作許多應用程式的基本功能，其在專案中找不到負責表示您負責實作應用程式許多重要功能:  
+ Because the document/view architecture provided by MFC is responsible for implementing many of an application's basic features, its absence in your project means that you are responsible for implementing many important features of your application:  
   
--   所提供由 MFC 應用程式精靈，您的應用程式功能表包含 `New` 和 `Exit` 命令只在**檔案**功能表。\( `New` 命令不會只針對 MDI 應用程式，而不是 SDI 應用程式支援不具有文件\/檢視支援\)。產生的功能表資源不支援 MRU \(最近使用的清單\)。  
+-   As provided by the MFC Application Wizard, the menu for your application contains only `New` and `Exit` commands on the **File** menu. (The `New` command is supported only for MDI applications, not SDI applications without Document/View support.) The generated menu resource will not support an MRU (most recently used) list.  
   
--   您必須將處理函式和實作應用程式將支援的所有命令，包括 **Open** 和 **File** 在 \[**儲存**\] 功能表。  MFC 通常提供程式碼支援這些功能，不過，該支援緊密繫結至文件\/檢視架構。  
+-   You must add handler functions and implementations for any commands that your application will support, including **Open** and **Save** on the **File** menu. MFC normally provides code to support these features, but that support is tightly bound to the document/view architecture.  
   
--   您的應用程式工具列，如果您要求一個工具列，將會是最小。  
+-   The toolbar for your application, if you requested one, will be minimal.  
   
- 強烈建議您使用 MFC 應用程式精靈建立應用程式，而不使用文件\/檢視架構，，因為精靈保證的正確 MFC 結構。  不過，如果您必須避免使用精靈，這會略過的文件\/檢視架構幾種方法的程式碼:  
+ It is strongly recommended that you use the MFC Application Wizard to create applications without the document/view architecture, because the wizard guarantees a correct MFC architecture. However, if you must avoid using the wizard, here are several approaches for bypassing the document/view architecture in your code:  
   
--   將文件當做一個未使用的附件並實作您的檢視類別的資料管理程式碼，如建議以上。  文件的額外負荷很低。  單一 [CDocument](../mfc/reference/cdocument-class.md) 物件本身產生較少的額外負荷，加上小負荷 **CDocument** 基底類別、 [CCmdTarget](../mfc/reference/ccmdtarget-class.md) 和 [CObject](../mfc/reference/cobject-class.md)。  兩個後者類別很小。  
+-   Treat the document as an unused appendage and implement your data management code in the view class, as suggested above. Overhead for the document is relatively low. A single [CDocument](../mfc/reference/cdocument-class.md) object incurs a small amount of overhead by itself, plus the small overhead of **CDocument**'s base classes, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) and [CObject](../mfc/reference/cobject-class.md). Both of the latter classes are small.  
   
-     宣告在 **CDocument**:  
+     Declared in **CDocument**:  
   
-    -   兩個 `CString` 物件。  
+    -   Two `CString` objects.  
   
-    -   三個 **BOOL**的。  
+    -   Three **BOOL**s.  
   
-    -   `CDocTemplate` 的指標。  
+    -   One `CDocTemplate` pointer.  
   
-    -   建立 `CPtrList` 物件，包含文件的檢視清單。  
+    -   One `CPtrList` object, which contains a list of the document's views.  
   
-     此外，文件要求時間建立資料物件、其檢視物件、框架視窗與文件樣板物件。  
+     Additionally, the document requires the amount of time to create the document object, its view objects, a frame window, and a document template object.  
   
--   將文件和檢視為未使用的附件。  將資料管理和繪圖程式碼在框架視窗而不是檢視。  這個方法是 C 語言程式設計模型較接近。  
+-   Treat both the document and view as unused appendages. Put your data management and drawing code in the frame window rather than the view. This approach is closer to the C-language programming model.  
   
--   覆寫建立文件和檢視中排除建立它們 MFC 架構的一部分。  此文件創造處理序一開始會呼叫 `CWinApp::AddDocTemplate` 。  從您的應用程式類別的 `InitInstance` 成員函式排除該呼叫，而且，相反地，會在 `InitInstance` 的框架視窗。  將資料管理程式碼在框架視窗類別。  文件\/檢視建立程序在 [文件\/檢視建立](../mfc/document-view-creation.md)中說明。  這是更多工作並需要架構的更深入了解，不過它可以讓您完全文件\/檢視額外負荷。  
+-   Override the parts of the MFC framework that create the document and view to eliminate creating them at all. The document creation process begins with a call to `CWinApp::AddDocTemplate`. Eliminate that call from your application class's `InitInstance` member function and, instead, create a frame window in `InitInstance` yourself. Put your data management code in your frame window class. The document/view creation process is illustrated in [Document/View Creation](../mfc/document-view-creation.md). This is more work and requires a deeper understanding of the framework, but it frees you entirely of the document/view overhead.  
   
- 這篇文章 [MFC:使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md) 將文件\/檢視選取的特定執行個體在資料庫應用程式中。  
+ The article [MFC: Using Database Classes Without Documents and Views](../data/mfc-using-database-classes-without-documents-and-views.md) gives more concrete examples of document/view alternatives in the context of database applications.  
   
-## 請參閱  
- [文件\/檢視架構](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

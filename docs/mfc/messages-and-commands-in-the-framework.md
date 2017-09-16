@@ -1,49 +1,68 @@
 ---
-title: "架構中的訊息和命令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件驅動型程式設計"
-  - "事件 [C++], MFC 中的命令路由"
-  - "事件 [C++], 事件驅動型程式設計"
-  - "訊息驅動型程式設計"
+title: Messages and Commands in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- events [MFC], command routing in MFC
+- event-driven programming [MFC]
+- events [MFC], event-driven programming
+- message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 架構中的訊息和命令
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40bdb27fe1812237f7b9ad3439d6abd227fd427b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-為 Microsoft Windows 所撰寫的應用程式是要巡覽的訊息」。回應事件 \(例如按一下滑鼠，按鍵，視窗移動，依此類推，視窗傳送至適當的視窗。  Framework 應用程式處理序視窗訊息時想對視窗的其他應用程式。  但是，架構也提供讓處理訊息更容易，更容易維護和更好封裝的一些增強功能。  
+---
+# <a name="messages-and-commands-in-the-framework"></a>Messages and Commands in the Framework
+Applications written for Microsoft Windows are "message driven." In response to events such as mouse clicks, keystrokes, window movements, and so on, Windows sends messages to the proper window. Framework applications process Windows messages like any other application for Windows. But the framework also provides some enhancements that make processing messages easier, more maintainable, and better encapsulated.  
   
- 下列主題介紹用來文章系列的其餘部分的重要詞彙討論訊息和命令:  
+ The following topics introduce the key terms used in the rest of the article family to discuss messages and commands:  
   
--   [訊息](../mfc/messages.md)  
+-   [Messages](../mfc/messages.md)  
   
--   [訊息處理常式](../mfc/message-handlers.md)  
+-   [Message handlers](../mfc/message-handlers.md)  
   
--   [訊息的類別](../mfc/message-categories.md)  
+-   [Message categories](../mfc/message-categories.md)  
   
--   [Windows 訊息和控制通知訊息](../mfc/message-categories.md)  
+-   [Windows messages and control-notification messages](../mfc/message-categories.md)  
   
--   [命令訊息](../mfc/message-categories.md)  
+-   [Command messages](../mfc/message-categories.md)  
   
--   [訊息對應](../mfc/mapping-messages.md)  
+-   [Message maps](../mfc/mapping-messages.md)  
   
--   [使用者介面物件和命令 ID。](../mfc/user-interface-objects-and-command-ids.md)  
+-   [User-interface objects and command IDs](../mfc/user-interface-objects-and-command-ids.md)  
   
--   [命令目標。](../mfc/command-targets.md)  
+-   [Command targets](../mfc/command-targets.md)  
   
-## 請參閱  
- [訊息處理和對應](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

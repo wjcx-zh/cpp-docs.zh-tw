@@ -1,5 +1,5 @@
 ---
-title: "CStatusBarCtrl 類別 |Microsoft 文件"
+title: CStatusBarCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,9 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows common controls [C++], CStatusBarCtrl
-- CStatusBarCtrl class
-- status bar controls
+- CStatusBarCtrl [MFC], CStatusBarCtrl
+- CStatusBarCtrl [MFC], Create
+- CStatusBarCtrl [MFC], CreateEx
+- CStatusBarCtrl [MFC], DrawItem
+- CStatusBarCtrl [MFC], GetBorders
+- CStatusBarCtrl [MFC], GetIcon
+- CStatusBarCtrl [MFC], GetParts
+- CStatusBarCtrl [MFC], GetRect
+- CStatusBarCtrl [MFC], GetText
+- CStatusBarCtrl [MFC], GetTextLength
+- CStatusBarCtrl [MFC], GetTipText
+- CStatusBarCtrl [MFC], IsSimple
+- CStatusBarCtrl [MFC], SetBkColor
+- CStatusBarCtrl [MFC], SetIcon
+- CStatusBarCtrl [MFC], SetMinHeight
+- CStatusBarCtrl [MFC], SetParts
+- CStatusBarCtrl [MFC], SetSimple
+- CStatusBarCtrl [MFC], SetText
+- CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 caps.latest.revision: 20
 author: mikeblome
@@ -55,17 +71,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d9fc341963572e343123994577a1bec735775386
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4fc280d73aaef923e1045a20870d6659ecfa49d2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstatusbarctrl-class"></a>CStatusBarCtrl 類別
-提供 Windows 通用狀態列控制項的功能。  
+# <a name="cstatusbarctrl-class"></a>CStatusBarCtrl Class
+Provides the functionality of the Windows common status bar control.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CStatusBarCtrl : public CWnd  
@@ -73,43 +89,43 @@ class CStatusBarCtrl : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|建構 `CStatusBarCtrl` 物件。|  
+|[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|Constructs a `CStatusBarCtrl` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CStatusBarCtrl::Create](#create)|建立狀態列控制項，並將它附加至`CStatusBarCtrl`物件。|  
-|[CStatusBarCtrl::CreateEx](#createex)|使用指定的 Windows 延伸樣式建立狀態列控制項，並將它附加至`CStatusBarCtrl`物件。|  
-|[CStatusBarCtrl::DrawItem](#drawitem)|當主控描繪狀態列控制項會變更的視覺外觀時呼叫。|  
-|[CStatusBarCtrl::GetBorders](#getborders)|擷取目前狀態列控制項的水平和垂直框線的寬度。|  
-|[CStatusBarCtrl::GetIcon](#geticon)|擷取目前狀態列控制項中的組件 （也稱為窗格） 的圖示。|  
-|[CStatusBarCtrl::GetParts](#getparts)|擷取狀態列控制項中的組件的計數。|  
-|[CStatusBarCtrl::GetRect](#getrect)|擷取狀態列控制項中的組件的週框矩形。|  
-|[Cstatusbarctrl:: Gettext](#gettext)|狀態列控制項的指定部分從擷取的文字。|  
-|[Cstatusbarctrl:: Gettextlength](#gettextlength)|擷取的長度，以字元為單位，從指定的組件的狀態列控制項的文字。|  
-|[Cstatusbarctrl:: Gettiptext](#gettiptext)|擷取在狀態列中顯示窗格的工具提示文字。|  
-|[CStatusBarCtrl::IsSimple](#issimple)|檢查以判斷它是否在簡單模式下狀態視窗控制項。|  
-|[CStatusBarCtrl::SetBkColor](#setbkcolor)|在狀態列中設定的背景色彩。|  
-|[CStatusBarCtrl::SetIcon](#seticon)|在狀態列中設定一個窗格的圖示。|  
-|[CStatusBarCtrl::SetMinHeight](#setminheight)|設定狀態的最小高度軸控制項的繪圖區域。|  
-|[CStatusBarCtrl::SetParts](#setparts)|在狀態列控制項與每個部分的右邊緣的座標中設定之部分的數目。|  
-|[CStatusBarCtrl::SetSimple](#setsimple)|指定狀態列控制項是否會顯示簡單的文字或顯示先前呼叫所設定的所有控制項組件`SetParts`。|  
-|[CStatusBarCtrl::SetText](#settext)|在狀態列控制項的指定部分設定文字。|  
-|[Cstatusbarctrl:: Settiptext](#settiptext)|設定狀態列窗格的工具提示文字。|  
+|[CStatusBarCtrl::Create](#create)|Creates a status bar control and attaches it to a `CStatusBarCtrl` object.|  
+|[CStatusBarCtrl::CreateEx](#createex)|Creates a status bar control with the specified Windows extended styles and attaches it to a `CStatusBarCtrl` object.|  
+|[CStatusBarCtrl::DrawItem](#drawitem)|Called when a visual aspect of an owner-draw status bar control changes.|  
+|[CStatusBarCtrl::GetBorders](#getborders)|Retrieves the current widths of the horizontal and vertical borders of a status bar control.|  
+|[CStatusBarCtrl::GetIcon](#geticon)|Retrieves the icon for a part (also known as a pane) in the current status bar control.|  
+|[CStatusBarCtrl::GetParts](#getparts)|Retrieves a count of the parts in a status bar control.|  
+|[CStatusBarCtrl::GetRect](#getrect)|Retrieves the bounding rectangle of a part in a status bar control.|  
+|[CStatusBarCtrl::GetText](#gettext)|Retrieves the text from the given part of a status bar control.|  
+|[CStatusBarCtrl::GetTextLength](#gettextlength)|Retrieve the length, in characters, of the text from the given part of a status bar control.|  
+|[CStatusBarCtrl::GetTipText](#gettiptext)|Retrieves the tooltip text for a pane in a status bar.|  
+|[CStatusBarCtrl::IsSimple](#issimple)|Checks a status window control to determine if it is in simple mode.|  
+|[CStatusBarCtrl::SetBkColor](#setbkcolor)|Sets the background color in a status bar.|  
+|[CStatusBarCtrl::SetIcon](#seticon)|Sets the icon for a pane in a status bar.|  
+|[CStatusBarCtrl::SetMinHeight](#setminheight)|Sets the minimum height of a status bar control's drawing area.|  
+|[CStatusBarCtrl::SetParts](#setparts)|Sets the number of parts in a status bar control and the coordinate of the right edge of each part.|  
+|[CStatusBarCtrl::SetSimple](#setsimple)|Specifies whether a status bar control displays simple text or displays all control parts set by a previous call to `SetParts`.|  
+|[CStatusBarCtrl::SetText](#settext)|Sets the text in the given part of a status bar control.|  
+|[CStatusBarCtrl::SetTipText](#settiptext)|Sets the tooltip text for a pane in a status bar.|  
   
-## <a name="remarks"></a>備註  
- 「 狀態列控制項 」 是水平視窗，通常會顯示在父視窗，在其中應用程式可以顯示各種狀態資訊的底部。 狀態列控制項可以分割成組件來顯示多個類型的資訊。  
+## <a name="remarks"></a>Remarks  
+ A "status bar control" is a horizontal window, usually displayed at the bottom of a parent window, in which an application can display various kinds of status information. The status bar control can be divided into parts to display more than one type of information.  
   
- 這個控制項 (因此`CStatusBarCtrl`類別) 僅適用於 Windows 95/98、 Windows NT 的版本 3.51 下執行的程式和更新版本。  
+ This control (and therefore the `CStatusBarCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- 如需有關使用`CStatusBarCtrl`，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md)。  
+ For more information on using `CStatusBarCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CStatusBarCtrl](../../mfc/using-cstatusbarctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -118,11 +134,11 @@ class CStatusBarCtrl : public CWnd
   
  `CStatusBarCtrl`  
   
-## <a name="requirements"></a>需求  
- **標頭：** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="create"></a>CStatusBarCtrl::Create  
- 建立狀態列控制項，並將它附加至`CStatusBarCtrl`物件。  
+##  <a name="create"></a>  CStatusBarCtrl::Create  
+ Creates a status bar control and attaches it to a `CStatusBarCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -132,34 +148,34 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- 指定狀態列控制項的樣式。 套用狀態列控制項樣式中所列的任何組合[通用控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此參數必須包含**WS_CHILD**樣式。 它也應該包含**WS_VISIBLE**樣式。  
+ Specifies the status bar control's style. Apply any combination of status bar control styles listed in [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK. This parameter must include the **WS_CHILD** style. It should also include the **WS_VISIBLE** style.  
   
  `rect`  
- 指定狀態列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構。  
+ Specifies the status bar control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- 指定狀態列控制項的父視窗，通常`CDialog`。 它不得為**NULL。**  
+ Specifies the status bar control's parent window, usually a `CDialog`. It must not be **NULL.**  
   
  `nID`  
- 指定狀態列控制項的 id。  
+ Specifies the status bar control's ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 您建構`CStatusBarCtrl`分成兩個步驟。 首先，呼叫建構函式，然後再呼叫**建立**，建立狀態列控制項，並將它附加至`CStatusBarCtrl`物件。  
+### <a name="remarks"></a>Remarks  
+ You construct a `CStatusBarCtrl` in two steps. First, call the constructor, and then call **Create**, which creates the status bar control and attaches it to the `CStatusBarCtrl` object.  
   
- 狀態視窗的預設位置為底端的父視窗，但您可以指定`CCS_TOP`讓它出現在父視窗工作區頂端的樣式。 您可以指定**SBARS_SIZEGRIP**来包含在狀態視窗右端的調整大小底框樣式。 結合`CCS_TOP`和**SBARS_SIZEGRIP**不建議樣式，因為產生的調整大小底框沒有作用，即使系統則會在狀態視窗中繪製它。  
+ The default position of a status window is along the bottom of the parent window, but you can specify the `CCS_TOP` style to have it appear at the top of the parent window's client area. You can specify the **SBARS_SIZEGRIP** style to include a sizing grip at the right end of the status window. Combining the `CCS_TOP` and **SBARS_SIZEGRIP** styles is not recommended, because the resulting sizing grip is not functional even though the system draws it in the status window.  
   
- 若要使用延伸的視窗樣式建立狀態列，呼叫[CStatusBarCtrl::CreateEx](#createex)而不是**建立**。  
+ To create a status bar with extended window styles, call [CStatusBarCtrl::CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CStatusBarCtrl::CreateEx  
- 建立控制項 （子視窗），並將它與相關聯`CStatusBarCtrl`物件。  
+##  <a name="createex"></a>  CStatusBarCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CStatusBarCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -170,55 +186,55 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- 指定正在建立的控制項的延伸的樣式。 如需延伸的視窗樣式的清單，請參閱`dwExStyle`參數[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- 指定狀態列控制項的樣式。 套用狀態列控制項樣式中所列的任何組合[通用控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb775498)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 此參數必須包含**WS_CHILD**樣式。 它也應該包含**WS_VISIBLE**樣式。  
+ Specifies the status bar control's style. Apply any combination of status bar control styles listed in [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK. This parameter must include the **WS_CHILD** style. It should also include the **WS_VISIBLE** style.  
   
  `rect`  
- 若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構描述的大小和位置來建立，用戶端座標中之視窗`pParentWnd`。  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- 為控制項的父視窗的指標。  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- 控制項的子視窗識別碼。  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用`CreateEx`而不是[建立](#create)套用延伸的視窗樣式，由 Windows 擴充的樣式序言**WS_EX_**。  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="cstatusbarctrl"></a>CStatusBarCtrl::CStatusBarCtrl  
- 建構 `CStatusBarCtrl` 物件。  
+##  <a name="cstatusbarctrl"></a>  CStatusBarCtrl::CStatusBarCtrl  
+ Constructs a `CStatusBarCtrl` object.  
   
 ```  
 CStatusBarCtrl();
 ```  
   
-##  <a name="drawitem"></a>CStatusBarCtrl::DrawItem  
- 當主控描繪狀態列控制項會變更的視覺外觀時，架構呼叫。  
+##  <a name="drawitem"></a>  CStatusBarCtrl::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw status bar control changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- 長指標[DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802)結構，其中包含所需的繪圖的類型資訊。  
+ A long pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure that contains information about the type of drawing required.  
   
-### <a name="remarks"></a>備註  
- **ItemAction**隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed.  
   
- 根據預設，此成員函式沒有任何作用。 覆寫此成員函式，來實作主控描繪的繪圖`CStatusBarCtrl`物件。  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CStatusBarCtrl` object.  
   
- 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件`lpDrawItemStruct`之前此成員函式會結束。  
+ The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before this member function terminates.  
   
-##  <a name="getborders"></a>CStatusBarCtrl::GetBorders  
- 擷取目前狀態列控制項的寬度水平及垂直框線和矩形之間的間距。  
+##  <a name="getborders"></a>  CStatusBarCtrl::GetBorders  
+ Retrieves the status bar control's current widths of the horizontal and vertical borders and of the space between rectangles.  
   
 ```  
 BOOL GetBorders(int* pBorders) const;  
@@ -229,61 +245,61 @@ BOOL GetBorders(
     int& nSpacing) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *pBorders*  
- 具有三個元素的整數陣列的位址。 第一個項目會接收水平框線的寬度，第二個接收垂直框線寬度，而第三個收到矩形間框線的寬度。  
+ Address of an integer array having three elements. The first element receives the width of the horizontal border, the second receives the width of the vertical border, and the third receives the width of the border between rectangles.  
   
  *nHorz*  
- 接收的水平框線的寬度為整數的參考。  
+ Reference to an integer that receives the width of the horizontal border.  
   
  *nVert*  
- 接收的垂直框線寬度的整數的參考。  
+ Reference to an integer that receives the width of the vertical border.  
   
  *nSpacing*  
- 參考接收矩形間框線的寬度的整數。  
+ Reference to an integer that receives the width of the border between rectangles.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 這些框線判斷控制項的外緣與控制項中包含文字的矩形之間的間距。  
+### <a name="remarks"></a>Remarks  
+ These borders determine the spacing between the outside edge of the control and the rectangles within the control that contain text.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_2.cpp)]  
   
-##  <a name="geticon"></a>CStatusBarCtrl::GetIcon  
- 擷取目前狀態列控制項中的組件 （也稱為窗格） 的圖示。  
+##  <a name="geticon"></a>  CStatusBarCtrl::GetIcon  
+ Retrieves the icon for a part (also known as a pane) in the current status bar control.  
   
 ```  
 HICON GetIcon(int iPart) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
   
-|參數|描述|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iPart`|組件，其中包含要擷取圖示的以零為起始的索引。 如果這個參數是-1，[狀態] 列會假設為簡單模式狀態列。|  
+|[in] `iPart`|The zero-based index of the part that contains the icon to be retrieved. If this parameter is -1, the status bar is assumed to be a simple mode status bar.|  
   
-### <a name="return-value"></a>傳回值  
- 圖示的控制代碼如果方法成功。否則， `NULL`。  
+### <a name="return-value"></a>Return Value  
+ The handle to the icon if the method successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會傳送[SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744)訊息中所述[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method sends the [SB_GETICON](http://msdn.microsoft.com/library/windows/desktop/bb760744) message, which is described in the Windows SDK.  
   
- 狀態列控制項所組成的資料列文字輸出窗格，也就是也稱為組件。 如需 [狀態] 列的詳細資訊，請參閱[狀態在 MFC 中的列實作](../../mfc/status-bar-implementation-in-mfc.md)和[設定 CStatusBarCtrl 物件的模式](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)。  
+ A status bar control consists of a row of text output panes, which are also known as parts. For more information about the status bar, see [Status Bar Implementation in MFC](../../mfc/status-bar-implementation-in-mfc.md) and [Setting the Mode of a CStatusBarCtrl Object](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md).  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會定義變數`m_statusBar`，也就是用來存取目前狀態列控制項。 下一個範例中會使用此變數。  
+### <a name="example"></a>Example  
+ The following code example defines a variable, `m_statusBar`, that is used to access the current status bar control. This variable is used in the next example.  
   
- [!code-cpp[NVC_MFC_CStatusBarCtrl_s&#1; 1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#1](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_3.h)]  
   
-### <a name="example"></a>範例  
- 下列程式碼範例會將圖示複製到目前狀態列控制項的兩個窗格。 在先前章節中的程式碼範例，我們建立狀態列控制項具有三個窗格，然後加入第一個窗格中的圖示。 這個範例會擷取第一個窗格中的圖示，並再將它加入至第二個和第三個窗格。  
+### <a name="example"></a>Example  
+ The following code example copies an icon to two panes of the current status bar control. In an earlier section of the code example we created a status bar control with three panes and then added an icon to the first pane. This example retrieves the icon from the first pane and then adds it to the second and third pane.  
   
- [!code-cpp[NVC_MFC_CStatusBarCtrl_s&#1; 2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_4.cpp)]  
   
-##  <a name="getparts"></a>CStatusBarCtrl::GetParts  
- 擷取狀態列控制項中的組件的計數。  
+##  <a name="getparts"></a>  CStatusBarCtrl::GetParts  
+ Retrieves a count of the parts in a status bar control.  
   
 ```  
 int GetParts(
@@ -291,24 +307,24 @@ int GetParts(
     int* pParts) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nParts`  
- 要擷取座標的部分數目。 此參數是否大於控制項中的部分數目，訊息就會擷取現有組件的座標。  
+ Number of parts for which to retrieve coordinates. If this parameter is greater than the number of parts in the control, the message retrieves coordinates for existing parts only.  
   
  *pParts*  
- 具有相同數目的項目與所指定的部分數目的整數陣列的地址`nParts`。 陣列中的每個項目會接收對應的組件的右邊緣的用戶端座標。 如果項目設定為-1，就會有該部分的右邊緣的位置延伸至右邊的 [狀態] 列中。  
+ Address of an integer array having the same number of elements as the number of parts specified by `nParts`. Each element in the array receives the client coordinate of the right edge of the corresponding part. If an element is set to - 1, the position of the right edge for that part extends to the right edge of the status bar.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，則為控制項或零，否則為中的部分數目。  
+### <a name="return-value"></a>Return Value  
+ The number of parts in the control if successful, or zero otherwise.  
   
-### <a name="remarks"></a>備註  
- 此成員函式也會擷取指定數目的組件的右邊緣的座標。  
+### <a name="remarks"></a>Remarks  
+ This member function also retrieves the coordinate of the right edge of the given number of parts.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#3](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_5.cpp)]  
   
-##  <a name="getrect"></a>CStatusBarCtrl::GetRect  
- 擷取狀態列控制項中的組件的週框矩形。  
+##  <a name="getrect"></a>  CStatusBarCtrl::GetRect  
+ Retrieves the bounding rectangle of a part in a status bar control.  
   
 ```  
 BOOL GetRect(
@@ -316,21 +332,21 @@ BOOL GetRect(
     LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPane`  
- 組件的週框是要擷取的以零為起始的索引。  
+ Zero-based index of the part whose bounding rectangle is to be retrieved.  
   
  `lpRect`  
- 位址[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收之周框的結構。  
+ Address of a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]  
   
-##  <a name="gettext"></a>Cstatusbarctrl:: Gettext  
- 狀態列控制項的指定部分從擷取的文字。  
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText  
+ Retrieves the text from the given part of a status bar control.  
   
 ```  
 CString GetText(
@@ -343,32 +359,32 @@ int GetText(
     int* pType = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 收到的文字緩衝區的位址。 這個參數是以 null 結束的字串。  
+ Address of the buffer that receives the text. This parameter is a null-terminated string.  
   
  `nPane`  
- 要從中擷取的文字部分的以零為起始的索引。  
+ Zero-based index of the part from which to retrieve text.  
   
  `pType`  
- 接收的類型資訊的整數指標。 類型可以是下列值之一︰  
+ Pointer to an integer that receives the type information. The type can be one of these values:  
   
-- **0**帶有框線，看來會低於狀態列的平面繪製文字。  
+- **0** The text is drawn with a border to appear lower than the plane of the status bar.  
   
-- `SBT_NOBORDERS`沒有框線繪製文字。  
+- `SBT_NOBORDERS` The text is drawn without borders.  
   
-- `SBT_POPOUT`使用顯示高於狀態列面板框線繪製文字。  
+- `SBT_POPOUT` The text is drawn with a border to appear higher than the plane of the status bar.  
   
-- `SBT_OWNERDRAW`如果文字具有`SBT_OWNERDRAW`繪圖類型，`pType`接收此訊息，並傳回的文字，而不是長度和作業的類型與關聯的 32 位元值。  
+- `SBT_OWNERDRAW` If the text has the `SBT_OWNERDRAW` drawing type, `pType` receives this message and returns the 32-bit value associated with the text instead of the length and operation type.  
   
-### <a name="return-value"></a>傳回值  
- 長度，以字元為單位的文字或[CString](../../atl-mfc-shared/reference/cstringt-class.md)包含目前的文字。  
+### <a name="return-value"></a>Return Value  
+ The length, in characters, of the text or a [CString](../../atl-mfc-shared/reference/cstringt-class.md) containing the current text.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]  
   
-##  <a name="gettextlength"></a>Cstatusbarctrl:: Gettextlength  
- 擷取的長度，以字元為單位，從指定的組件的狀態列控制項的文字。  
+##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength  
+ Retrieves the length, in characters, of the text from the given part of a status bar control.  
   
 ```  
 int GetTextLength(
@@ -376,82 +392,82 @@ int GetTextLength(
     int* pType = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPane`  
- 要從中擷取的文字部分的以零為起始的索引。  
+ Zero-based index of the part from which to retrieve text.  
   
  `pType`  
- 接收的類型資訊的整數指標。 類型可以是下列值之一︰  
+ Pointer to an integer that receives the type information. The type can be one of these values:  
   
-- **0**帶有框線，看來會低於狀態列的平面繪製文字。  
+- **0** The text is drawn with a border to appear lower than the plane of the status bar.  
   
-- `SBT_NOBORDERS`沒有框線繪製文字。  
+- `SBT_NOBORDERS` The text is drawn without borders.  
   
-- `SBT_OWNERDRAW`繪製文字是由父視窗。  
+- `SBT_OWNERDRAW` The text is drawn by the parent window.  
   
-- `SBT_POPOUT`使用顯示高於狀態列面板框線繪製文字。  
+- `SBT_POPOUT` The text is drawn with a border to appear higher than the plane of the status bar.  
   
-### <a name="return-value"></a>傳回值  
- 以字元為單位，文字的長度。  
+### <a name="return-value"></a>Return Value  
+ The length, in characters, of the text.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#6](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_8.cpp)]  
   
-##  <a name="gettiptext"></a>Cstatusbarctrl:: Gettiptext  
- 擷取在狀態列中顯示窗格的工具提示文字。  
+##  <a name="gettiptext"></a>  CStatusBarCtrl::GetTipText  
+ Retrieves the tooltip text for a pane in a status bar.  
   
 ```  
 CString GetTipText(int nPane) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPane`  
- 接收工具提示文字狀態列窗格的以零為起始的索引。  
+ The zero-based index of status bar pane to receive the tooltip text.  
   
-### <a name="return-value"></a>傳回值  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要用於工具提示文字。  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object containing the text to be used in the tooltip.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [SB_GETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760751), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#7](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_9.cpp)]  
   
-##  <a name="issimple"></a>CStatusBarCtrl::IsSimple  
- 檢查以判斷它是否在簡單模式下狀態視窗控制項。  
+##  <a name="issimple"></a>  CStatusBarCtrl::IsSimple  
+ Checks a status window control to determine if it is in simple mode.  
   
 ```  
 BOOL IsSimple() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果狀態視窗控制項為簡單模式，則為非零否則為零。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the status window control is in simple mode; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [SB_ISSIMPLE](http://msdn.microsoft.com/library/windows/desktop/bb760753), as described in the Windows SDK.  
   
-##  <a name="setbkcolor"></a>CStatusBarCtrl::SetBkColor  
- 在狀態列中設定的背景色彩。  
+##  <a name="setbkcolor"></a>  CStatusBarCtrl::SetBkColor  
+ Sets the background color in a status bar.  
   
 ```  
 COLORREF SetBkColor(COLORREF cr);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cr`  
- **COLORREF**值，指定新的背景色彩。 指定`CLR_DEFAULT`會造成狀態列，以使用其預設背景色彩的值。  
+ **COLORREF** value that specifies the new background color. Specify the `CLR_DEFAULT` value to cause the status bar to use its default background color.  
   
-### <a name="return-value"></a>傳回值  
- A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值，表示先前的預設背景色彩。  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that represents the previous default background color.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [SB_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760754), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#8](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_10.cpp)]  
   
-##  <a name="seticon"></a>CStatusBarCtrl::SetIcon  
- 在狀態列中設定一個窗格的圖示。  
+##  <a name="seticon"></a>  CStatusBarCtrl::SetIcon  
+ Sets the icon for a pane in a status bar.  
   
 ```  
 BOOL SetIcon(
@@ -459,41 +475,41 @@ BOOL SetIcon(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPane`  
- 將會收到圖示 窗格的以零為起始的索引。 如果這個參數是-1，[狀態] 列會假設是簡單的狀態列。  
+ The zero-based index of the pane that will receive the icon. If this parameter is -1, the status bar is assumed to be a simple status bar.  
   
  `hIcon`  
- 設定圖示的控制代碼。 如果此值為**NULL**，圖示會移除從組件。  
+ Handle to the icon to be set. If this value is **NULL**, the icon is removed from the part.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [SB_SETICON](http://msdn.microsoft.com/library/windows/desktop/bb760755), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CStatusBarCtrl::SetBkColor](#setbkcolor)。  
+### <a name="example"></a>Example  
+  See the example for [CStatusBarCtrl::SetBkColor](#setbkcolor).  
   
-##  <a name="setminheight"></a>CStatusBarCtrl::SetMinHeight  
- 設定狀態的最小高度軸控制項的繪圖區域。  
+##  <a name="setminheight"></a>  CStatusBarCtrl::SetMinHeight  
+ Sets the minimum height of a status bar control's drawing area.  
   
 ```  
 void SetMinHeight(int nMin);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nMin`  
- 最小高度，單位為像素的控制項。  
+ Minimum height, in pixels, of the control.  
   
-### <a name="remarks"></a>備註  
- 最小高度是總和`nMin`和兩次的寬度，單位為像素狀態列控制項的垂直框線。  
+### <a name="remarks"></a>Remarks  
+ The minimum height is the sum of `nMin` and twice the width, in pixels, of the vertical border of the status bar control.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#9](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_11.cpp)]  
   
-##  <a name="setparts"></a>CStatusBarCtrl::SetParts  
- 在狀態列控制項與每個部分的右邊緣的座標中設定之部分的數目。  
+##  <a name="setparts"></a>  CStatusBarCtrl::SetParts  
+ Sets the number of parts in a status bar control and the coordinate of the right edge of each part.  
   
 ```  
 BOOL SetParts(
@@ -501,38 +517,38 @@ BOOL SetParts(
     int* pWidths);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nParts`  
- 若要設定的部分數目。 部分數目不能大於 255。  
+ Number of parts to set. The number of parts cannot be greater than 255.  
   
  *pWidths*  
- 為所指定的組件具有相同的項目數的整數陣列的地址`nParts`。 陣列中的每個項目會指定對應的組件的右邊緣的位置，在用戶端座標。 若元素是-1，該部分的右邊緣的位置會延伸到控制項的右邊緣。  
+ Address of an integer array having the same number of elements as parts specified by `nParts`. Each element in the array specifies the position, in client coordinates, of the right edge of the corresponding part. If an element is - 1, the position of the right edge for that part extends to the right edge of the control.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#10](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_12.cpp)]  
   
-##  <a name="setsimple"></a>CStatusBarCtrl::SetSimple  
- 指定狀態列控制項是否會顯示簡單的文字或顯示先前呼叫所設定的所有控制項組件[SetParts](#setparts)。  
+##  <a name="setsimple"></a>  CStatusBarCtrl::SetSimple  
+ Specifies whether a status bar control displays simple text or displays all control parts set by a previous call to [SetParts](#setparts).  
   
 ```  
 BOOL SetSimple(BOOL bSimple = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bSimple`  
- 顯示類型的旗標。 如果這個參數是`TRUE`，控制項會顯示簡單的文字; 如果它是`FALSE`，它會顯示多個部分。  
+ Display-type flag. If this parameter is `TRUE`, the control displays simple text; if it is `FALSE`, it displays multiple parts.  
   
-### <a name="return-value"></a>傳回值  
- 一律傳回 0。  
+### <a name="return-value"></a>Return Value  
+ Always returns 0.  
   
-### <a name="remarks"></a>備註  
- 如果您的應用程式會從非簡單變更狀態列控制項為 simple 時，或反之亦然，系統會立即重新繪製控制項。  
+### <a name="remarks"></a>Remarks  
+ If your application changes the status bar control from non-simple to simple, or vice versa, the system immediately redraws the control.  
   
-##  <a name="settext"></a>CStatusBarCtrl::SetText  
- 在狀態列控制項的指定部分設定文字。  
+##  <a name="settext"></a>  CStatusBarCtrl::SetText  
+ Sets the text in the given part of a status bar control.  
   
 ```  
 BOOL SetText(
@@ -541,27 +557,27 @@ BOOL SetText(
     int nType);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- 以 Null 結束的字串位址，其指定要設定的文字。 如果 `nType` 為 `SBT_OWNERDRAW``lpszText` 代表 32 位元的資料。  
+ Address of a null-terminated string specifying the text to set. If `nType` is `SBT_OWNERDRAW`, `lpszText` represents 32 bits of data.  
   
  `nPane`  
- 要設定之部分的以零為起始的索引。 如果此值為 255，則假設狀態列控制項是只有一個部分的簡單控制項。  
+ Zero-based index of the part to set. If this value is 255, the status bar control is assumed to be a simple control having only one part.  
   
  `nType`  
- 繪圖作業的類型。 請參閱[SB_SETTEXT 訊息](http://msdn.microsoft.com/library/bb760758\(vs.85\).aspx)取得一份可能的值。  
+ Type of drawing operation. See [SB_SETTEXT message](http://msdn.microsoft.com/library/bb760758\(vs.85\).aspx) for a list of possible values.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則不為零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>備註  
- 此訊息會使已變更的控制項部分失效，使其在控制項接著接收 `WM_PAINT` 訊息時顯示新的文字。  
+### <a name="remarks"></a>Remarks  
+ The message invalidates the portion of the control that has changed, causing it to display the new text when the control next receives the `WM_PAINT` message.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#11](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_13.cpp)]  
   
-##  <a name="settiptext"></a>Cstatusbarctrl:: Settiptext  
- 設定狀態列窗格的工具提示文字。  
+##  <a name="settiptext"></a>  CStatusBarCtrl::SetTipText  
+ Sets the tooltip text for a pane in a status bar.  
   
 ```  
 void SetTipText(
@@ -569,21 +585,21 @@ void SetTipText(
     LPCTSTR pszTipText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPane`  
- 接收工具提示文字狀態列窗格的以零為起始的索引。  
+ The zero-based index of status bar pane to receive the tooltip text.  
   
  *pszTipText*  
- 包含的工具提示文字的字串指標。  
+ A pointer to a string containing the tooltip text.  
   
-### <a name="remarks"></a>備註  
- 此成員函式實作的 Win32 訊息行為[SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [SB_SETTIPTEXT](http://msdn.microsoft.com/library/windows/desktop/bb760759), as described in the Windows SDK.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFC_CStatusBarCtrl # 12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CStatusBarCtrl#12](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_14.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
- [CWnd 類別](../../mfc/reference/cwnd-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CToolBarCtrl 類別](../../mfc/reference/ctoolbarctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CToolBarCtrl Class](../../mfc/reference/ctoolbarctrl-class.md)
 

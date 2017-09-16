@@ -1,40 +1,58 @@
 ---
-title: "命令路由類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.command"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令傳送, 類別"
-  - "MFC, 命令傳送"
+title: Command Routing Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.command
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 命令路由類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 27401c529be06eb473f3dc53c5e32ebfce13e726
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-當使用者與應用程式互動來選取功能表或控制列按鈕具有滑鼠的，應用程式會將資訊從受影響的使用者介面物件加入至適當的命令目標物件。  從 `CCmdTarget` 取得的命令目標類別包括 [CWinApp](../mfc/reference/cwinapp-class.md)、 [CWnd](../mfc/reference/cwnd-class.md)、 [CDocTemplate](../mfc/reference/cdoctemplate-class.md)、 [CDocument](../mfc/reference/cdocument-class.md)、 [CView](../mfc/reference/cview-class.md)和從其衍生的類別。  架構支援自動命令路由命令，以便可以由最適當的物件處理目前作用中的應用程式。  
+---
+# <a name="command-routing-classes"></a>Command Routing Classes
+As the user interacts with the application by choosing menus or control-bar buttons with the mouse, the application sends messages from the affected user-interface object to an appropriate command-target object. Command-target classes derived from `CCmdTarget` include [CWinApp](../mfc/reference/cwinapp-class.md), [CWnd](../mfc/reference/cwnd-class.md), [CDocTemplate](../mfc/reference/cdoctemplate-class.md), [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), and the classes derived from them. The framework supports automatic command routing so that commands can be handled by the most appropriate object currently active in the application.  
   
- 類別 `CCmdUI` 物件傳遞給命令目標的更新命令 UI \([ON\_UPDATE\_COMMAND\_UI](../Topic/ON_UPDATE_COMMAND_UI.md)\) 處理常式可讓您更新使用者介面的狀態特定命令 \(例如，從功能表項目核取或移除檢查\)。  您呼叫 `CCmdUI` 物件的成員函式來更新 UI 物件的狀態。  這個程序是相同的 UI 物件與特定命令是功能表項目或按鈕 \(或兩者\)。  
+ An object of class `CCmdUI` is passed to your command targets' update command UI ([ON_UPDATE_COMMAND_UI](reference/message-map-macros-mfc.md#on_update_command_ui)) handlers to allow you to update the state of the user interface for a particular command (for instance, to check or remove the check from menu items). You call member functions of the `CCmdUI` object to update the state of the UI object. This process is the same whether the UI object associated with a particular command is a menu item or a button or both.  
   
  [CCmdTarget](../mfc/reference/ccmdtarget-class.md)  
- 做為類別的基底類別 \(Base Class\) 可以接收和回應訊息物件的所有類別。  
+ Serves as the base class for all classes of objects that can receive and respond to messages.  
   
  [CCmdUI](../mfc/reference/ccmdui-class.md)  
- 為更新使用者介面物件的程式設計介面 \(例如功能表項目或控制列按鈕。  命令目標物件啟用，停用，檢查，及\/或清除與這個物件的使用者介面物件。  
+ Provides a programmatic interface for updating user-interface objects such as menu items or control-bar buttons. The command target object enables, disables, checks, and/or clears the user-interface object with this object.  
   
-## 請參閱  
- [類別概觀](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

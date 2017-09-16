@@ -1,55 +1,74 @@
 ---
-title: "Windows Sockets：資料流通訊端 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通訊端 [C++], 資料流通訊端"
-  - "資料流通訊端 [C++]"
-  - "Windows Sockets [C++], 資料流通訊端"
+title: 'Windows Sockets: Stream Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], stream sockets
+- sockets [MFC], stream sockets
+- stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
 caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Windows Sockets：資料流通訊端
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 380b2922e253fcbeea84557e8bb15f9c2912e3c3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明資料流通訊端，可利用兩個 Windows Sockets 的其中一種型別。\(另一個型別為 [資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)\)。  
+---
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Stream Sockets
+This article describes stream sockets, one of the two Windows Socket types available. (The other type is the [datagram socket](../mfc/windows-sockets-datagram-sockets.md).)  
   
- 資料流通訊端提供未記錄界限的資料流:可以是雙向的位元組資料流 \(應用程式全雙工:它可以透過通訊端傳送和接收\)。  資料流可以重新排序至順序交付， unduplicated 資料。\(「依序」表示封包按傳送的順序傳遞。「無副本的」 是指您一次只能取得一個特定封包。\)資料流訊息的收據保證，和資料流相當適合處理大量的資料。  
+ Stream sockets provide for a data flow without record boundaries: a stream of bytes that can be bidirectional (the application is full duplex: it can both transmit and receive through the socket). Streams can be relied upon to deliver sequenced, unduplicated data. ("Sequenced" means that packets are delivered in the order sent. "Unduplicated" means that you get a particular packet only once.) Receipt of stream messages is guaranteed, and streams are well suited to handling large amounts of data.  
   
- 網路傳輸層可能終結或群組資料讀入封包適當的大小。  `CSocket` 類別會處理封裝並為您打開。  
+ The network transport layer may break up or group data into packets of reasonable size. The `CSocket` class will handle the packing and unpacking for you.  
   
- 資料流以明確連結:通訊端的要求與通訊端 B 的連接;通訊端 B 接受或拒絕要求。  
+ Streams are based on explicit connections: socket A requests a connection to socket B; socket B accepts or rejects the connection request.  
   
- 呼叫為資料流提供良好類比。  在一般情況下，這個接收的一方聽見所按順序假設您將它，不用複製或遺失。  資料流通訊端為實作是適當的，例如，例如 File Transfer Protocol \(FTP\)，協助將任意大小 ASCII 或二進位檔案。  
+ A telephone call provides a good analogy for a stream. Under normal circumstances, the receiving party hears what you say in the order that you say it, without duplication or loss. Stream sockets are appropriate, for example, for implementations such as the File Transfer Protocol (FTP), which facilitates transferring ASCII or binary files of arbitrary size.  
   
- 資料流通訊端最好是對資料包通訊端，則必須確定資料抵達時，此外，當資料大小太大時。  如需資料流通訊端的詳細資訊，請參閱 Windows Sockets 規格。  這個規格可用於 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
+ Stream sockets are preferable to datagram sockets when the data must be guaranteed to arrive and when data size is large. For more information about stream sockets, see the Windows Sockets specification. The specification is available in the Windows SDK.  
   
- 使用資料流通訊端可以較多所設計的應用程式為廣播使用資料包通訊端到網路上的所有接收的通訊端，因為  
+ Using stream sockets can be superior to applications designed to use a datagram socket for broadcasting to all receiving sockets on the network because  
   
--   這個模型廣播受限於網路氾濫式 \(或「自暴」\) 問題的限制。  
+-   The broadcast model is subject to network flood (or "storm") problems.  
   
--   隨後獲得的主從模型會更有效率。  
+-   The client-server model adopted subsequently is more efficient.  
   
--   資料流模型提供可靠的資料時，傳送資料包模型不。  
+-   The stream model supplies reliable data transfer, where the datagram model does not.  
   
--   最終模型利用通訊 Unicode 之間，並把 ANSI CArchive 分類的通訊端應用程式有一個 CSocket 分類。  
+-   The final model takes advantage of the ability to communicate between Unicode and ANSI socket applications that class CArchive lends to class CSocket.  
   
     > [!NOTE]
-    >  如果您使用 `CSocket`類別，您必須使用資料流。  如果您指定，通訊端類型做為 **SOCK\_DGRAM**， MFC 判斷提示就會失敗。  
+    >  If you use class `CSocket`, you must use a stream. An MFC assertion fails if you specify the socket type as **SOCK_DGRAM**.  
   
-## 請參閱  
- [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
- [Windows Sockets：背景](../mfc/windows-sockets-background.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

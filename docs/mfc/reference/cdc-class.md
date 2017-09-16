@@ -1,5 +1,5 @@
 ---
-title: "CDC 類別 |Microsoft 文件"
+title: CDC Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -212,13 +212,204 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Windows [C++], device contexts
-- Windows 95 [C++], screen coordinates
-- device contexts [C++], CDC class
-- screen coordinates in device contexts
-- coordinates in Windows 95/98 [C++]
-- Windows 98 [C++], screen coordinates
-- CDC class
+- CDC [MFC], CDC
+- CDC [MFC], AbortDoc
+- CDC [MFC], AbortPath
+- CDC [MFC], AddMetaFileComment
+- CDC [MFC], AlphaBlend
+- CDC [MFC], AngleArc
+- CDC [MFC], Arc
+- CDC [MFC], ArcTo
+- CDC [MFC], Attach
+- CDC [MFC], BeginPath
+- CDC [MFC], BitBlt
+- CDC [MFC], Chord
+- CDC [MFC], CloseFigure
+- CDC [MFC], CreateCompatibleDC
+- CDC [MFC], CreateDC
+- CDC [MFC], CreateIC
+- CDC [MFC], DeleteDC
+- CDC [MFC], DeleteTempMap
+- CDC [MFC], Detach
+- CDC [MFC], DPtoHIMETRIC
+- CDC [MFC], DPtoLP
+- CDC [MFC], Draw3dRect
+- CDC [MFC], DrawDragRect
+- CDC [MFC], DrawEdge
+- CDC [MFC], DrawEscape
+- CDC [MFC], DrawFocusRect
+- CDC [MFC], DrawFrameControl
+- CDC [MFC], DrawIcon
+- CDC [MFC], DrawState
+- CDC [MFC], DrawText
+- CDC [MFC], DrawTextEx
+- CDC [MFC], Ellipse
+- CDC [MFC], EndDoc
+- CDC [MFC], EndPage
+- CDC [MFC], EndPath
+- CDC [MFC], EnumObjects
+- CDC [MFC], Escape
+- CDC [MFC], ExcludeClipRect
+- CDC [MFC], ExcludeUpdateRgn
+- CDC [MFC], ExtFloodFill
+- CDC [MFC], ExtTextOut
+- CDC [MFC], FillPath
+- CDC [MFC], FillRect
+- CDC [MFC], FillRgn
+- CDC [MFC], FillSolidRect
+- CDC [MFC], FlattenPath
+- CDC [MFC], FloodFill
+- CDC [MFC], FrameRect
+- CDC [MFC], FrameRgn
+- CDC [MFC], FromHandle
+- CDC [MFC], GetArcDirection
+- CDC [MFC], GetAspectRatioFilter
+- CDC [MFC], GetBkColor
+- CDC [MFC], GetBkMode
+- CDC [MFC], GetBoundsRect
+- CDC [MFC], GetBrushOrg
+- CDC [MFC], GetCharABCWidths
+- CDC [MFC], GetCharABCWidthsI
+- CDC [MFC], GetCharacterPlacement
+- CDC [MFC], GetCharWidth
+- CDC [MFC], GetCharWidthI
+- CDC [MFC], GetClipBox
+- CDC [MFC], GetColorAdjustment
+- CDC [MFC], GetCurrentBitmap
+- CDC [MFC], GetCurrentBrush
+- CDC [MFC], GetCurrentFont
+- CDC [MFC], GetCurrentPalette
+- CDC [MFC], GetCurrentPen
+- CDC [MFC], GetCurrentPosition
+- CDC [MFC], GetDCBrushColor
+- CDC [MFC], GetDCPenColor
+- CDC [MFC], GetDeviceCaps
+- CDC [MFC], GetFontData
+- CDC [MFC], GetFontLanguageInfo
+- CDC [MFC], GetGlyphOutline
+- CDC [MFC], GetGraphicsMode
+- CDC [MFC], GetHalftoneBrush
+- CDC [MFC], GetKerningPairs
+- CDC [MFC], GetLayout
+- CDC [MFC], GetMapMode
+- CDC [MFC], GetMiterLimit
+- CDC [MFC], GetNearestColor
+- CDC [MFC], GetOutlineTextMetrics
+- CDC [MFC], GetOutputCharWidth
+- CDC [MFC], GetOutputTabbedTextExtent
+- CDC [MFC], GetOutputTextExtent
+- CDC [MFC], GetOutputTextMetrics
+- CDC [MFC], GetPath
+- CDC [MFC], GetPixel
+- CDC [MFC], GetPolyFillMode
+- CDC [MFC], GetROP2
+- CDC [MFC], GetSafeHdc
+- CDC [MFC], GetStretchBltMode
+- CDC [MFC], GetTabbedTextExtent
+- CDC [MFC], GetTextAlign
+- CDC [MFC], GetTextCharacterExtra
+- CDC [MFC], GetTextColor
+- CDC [MFC], GetTextExtent
+- CDC [MFC], GetTextExtentExPointI
+- CDC [MFC], GetTextExtentPointI
+- CDC [MFC], GetTextFace
+- CDC [MFC], GetTextMetrics
+- CDC [MFC], GetViewportExt
+- CDC [MFC], GetViewportOrg
+- CDC [MFC], GetWindow
+- CDC [MFC], GetWindowExt
+- CDC [MFC], GetWindowOrg
+- CDC [MFC], GetWorldTransform
+- CDC [MFC], GradientFill
+- CDC [MFC], GrayString
+- CDC [MFC], HIMETRICtoDP
+- CDC [MFC], HIMETRICtoLP
+- CDC [MFC], IntersectClipRect
+- CDC [MFC], InvertRect
+- CDC [MFC], InvertRgn
+- CDC [MFC], IsPrinting
+- CDC [MFC], LineTo
+- CDC [MFC], LPtoDP
+- CDC [MFC], LPtoHIMETRIC
+- CDC [MFC], MaskBlt
+- CDC [MFC], ModifyWorldTransform
+- CDC [MFC], MoveTo
+- CDC [MFC], OffsetClipRgn
+- CDC [MFC], OffsetViewportOrg
+- CDC [MFC], OffsetWindowOrg
+- CDC [MFC], PaintRgn
+- CDC [MFC], PatBlt
+- CDC [MFC], Pie
+- CDC [MFC], PlayMetaFile
+- CDC [MFC], PlgBlt
+- CDC [MFC], PolyBezier
+- CDC [MFC], PolyBezierTo
+- CDC [MFC], PolyDraw
+- CDC [MFC], Polygon
+- CDC [MFC], Polyline
+- CDC [MFC], PolylineTo
+- CDC [MFC], PolyPolygon
+- CDC [MFC], PolyPolyline
+- CDC [MFC], PtVisible
+- CDC [MFC], RealizePalette
+- CDC [MFC], Rectangle
+- CDC [MFC], RectVisible
+- CDC [MFC], ReleaseAttribDC
+- CDC [MFC], ReleaseOutputDC
+- CDC [MFC], ResetDC
+- CDC [MFC], RestoreDC
+- CDC [MFC], RoundRect
+- CDC [MFC], SaveDC
+- CDC [MFC], ScaleViewportExt
+- CDC [MFC], ScaleWindowExt
+- CDC [MFC], ScrollDC
+- CDC [MFC], SelectClipPath
+- CDC [MFC], SelectClipRgn
+- CDC [MFC], SelectObject
+- CDC [MFC], SelectPalette
+- CDC [MFC], SelectStockObject
+- CDC [MFC], SetAbortProc
+- CDC [MFC], SetArcDirection
+- CDC [MFC], SetAttribDC
+- CDC [MFC], SetBkColor
+- CDC [MFC], SetBkMode
+- CDC [MFC], SetBoundsRect
+- CDC [MFC], SetBrushOrg
+- CDC [MFC], SetColorAdjustment
+- CDC [MFC], SetDCBrushColor
+- CDC [MFC], SetDCPenColor
+- CDC [MFC], SetGraphicsMode
+- CDC [MFC], SetLayout
+- CDC [MFC], SetMapMode
+- CDC [MFC], SetMapperFlags
+- CDC [MFC], SetMiterLimit
+- CDC [MFC], SetOutputDC
+- CDC [MFC], SetPixel
+- CDC [MFC], SetPixelV
+- CDC [MFC], SetPolyFillMode
+- CDC [MFC], SetROP2
+- CDC [MFC], SetStretchBltMode
+- CDC [MFC], SetTextAlign
+- CDC [MFC], SetTextCharacterExtra
+- CDC [MFC], SetTextColor
+- CDC [MFC], SetTextJustification
+- CDC [MFC], SetViewportExt
+- CDC [MFC], SetViewportOrg
+- CDC [MFC], SetWindowExt
+- CDC [MFC], SetWindowOrg
+- CDC [MFC], SetWorldTransform
+- CDC [MFC], StartDoc
+- CDC [MFC], StartPage
+- CDC [MFC], StretchBlt
+- CDC [MFC], StrokeAndFillPath
+- CDC [MFC], StrokePath
+- CDC [MFC], TabbedTextOut
+- CDC [MFC], TextOut
+- CDC [MFC], TransparentBlt
+- CDC [MFC], UpdateColors
+- CDC [MFC], WidenPath
+- CDC [MFC], m_hAttribDC
+- CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 caps.latest.revision: 21
 author: mikeblome
@@ -238,17 +429,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: edbb8c4b62fc6536971f275c8079a3a91caccaa2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3fdd44ca064270450640539ace6dd21d67409b85
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdc-class"></a>CDC 類別
-定義裝置內容物件的類別。  
+# <a name="cdc-class"></a>CDC Class
+Defines a class of device-context objects.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CDC : public CObject  
@@ -256,313 +447,313 @@ class CDC : public CObject
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDC::CDC](#cdc)|建構 `CDC` 物件。|  
+|[CDC::CDC](#cdc)|Constructs a `CDC` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDC::AbortDoc](#abortdoc)|終止目前的列印工作，清除所有項目自上次呼叫的應用程式寫入至裝置`StartDoc`成員函式。|  
-|[CDC::AbortPath](#abortpath)|關閉並捨棄任何裝置內容中的路徑。|  
-|[CDC::AddMetaFileComment](#addmetafilecomment)|將註解緩衝區中複製到指定的格式增強型中繼檔。|  
-|[CDC::AlphaBlend](#alphablend)|顯示具有透明或半透明的像素的點陣圖。|  
-|[CDC::AngleArc](#anglearc)|繪製的直線線段和弧線，並將目前位置移到弧形結束點。|  
-|[CDC::Arc](#arc)|繪製橢圓形弧線。|  
-|[CDC::ArcTo](#arcto)|繪製橢圓形弧線。 此函式是類似於`Arc`，不同之處在於會更新目前的位置。|  
-|[CDC::Attach](#attach)|將 Windows 裝置內容附加至這個`CDC`物件。|  
-|[Cdc:: beginpath](#beginpath)|裝置內容中開啟的路徑括號。|  
-|[Cdc:: bitblt](#bitblt)|複製點陣圖，從指定的裝置內容。|  
-|[CDC::Chord](#chord)|繪製套索鍵 （橢圓形和直線線段的交集所繫結到封閉的圖表）。|  
-|[CDC::CloseFigure](#closefigure)|關閉開放的圖表，在路徑中。|  
-|[CDC::CreateCompatibleDC](#createcompatibledc)|建立與另一個裝置內容的記憶體裝置內容。 您可以使用它來準備映像，在記憶體中。|  
-|[CDC::CreateDC](#createdc)|建立特定裝置的裝置內容。|  
-|[CDC::CreateIC](#createic)|建立特定裝置的資訊內容。 這會提供一個快速方式來取得裝置的相關資訊，而建立的裝置內容。|  
-|[CDC::DeleteDC](#deletedc)|刪除與此相關聯的 Windows 裝置內容`CDC`物件。|  
-|[CDC::DeleteTempMap](#deletetempmap)|由呼叫`CWinApp`閒置時間處理常式，以刪除任何暫存`CDC`所建立的物件`FromHandle`。 也會一併中斷裝置內容。|  
-|[CDC::Detach](#detach)|卸離 Windows 裝置內容，從這個`CDC`物件。|  
-|[CDC::DPtoHIMETRIC](#dptohimetric)|將轉換成裝置單位**HIMETRIC**單位。|  
-|[CDC::DPtoLP](#dptolp)|將裝置單位轉換成邏輯單元。|  
-|[CDC::Draw3dRect](#draw3drect)|繪製三維的矩形。|  
-|[CDC::DrawDragRect](#drawdragrect)|清除並重新繪製矩形，如拖曳。|  
-|[CDC::DrawEdge](#drawedge)|繪製矩形邊緣。|  
-|[CDC::DrawEscape](#drawescape)|繪圖功能的視訊顯示無法直接使用透過圖形裝置介面 (GDI) 的存取。|  
-|[CDC::DrawFocusRect](#drawfocusrect)|用來表示焦點樣式中繪製的矩形。|  
-|[CDC::DrawFrameControl](#drawframecontrol)|繪製框架控制項。|  
-|[CDC::DrawIcon](#drawicon)|繪製圖示。|  
-|[CDC::DrawState](#drawstate)|顯示影像，並套用視覺效果來表示狀態。|  
-|[CDC::DrawText](#drawtext)|繪製格式化文字中指定的矩形。|  
-|[CDC::DrawTextEx](#drawtextex)|繪製格式化文字，使用其他格式指定的矩形中。|  
-|[CDC::Ellipse](#ellipse)|繪製橢圓形。|  
-|[CDC::EndDoc](#enddoc)|結束所啟動的列印工作`StartDoc`成員函式。|  
-|[CDC::EndPage](#endpage)|通知頁面即將結束的裝置驅動程式。|  
-|[CDC::EndPath](#endpath)|關閉路徑括號，並選取放入裝置內容的 在括號所定義的路徑。|  
-|[Cdc:: enumobjects](#enumobjects)|列舉畫筆和筆刷在裝置內容中使用。|  
-|[CDC::Escape](#escape)|允許應用程式存取無法直接使用來自特定裝置透過 GDI 的設備。 也可讓 Windows 逸出功能的存取權。 逸出呼叫應用程式所轉譯，並傳送至裝置驅動程式。|  
-|[CDC::ExcludeClipRect](#excludecliprect)|建立新的裁剪區域所組成的現有的裁剪區域減去指定的矩形。|  
-|[CDC::ExcludeUpdateRgn](#excludeupdatergn)|從裁剪區域排除在視窗中的更新的區域，以防止無效的視窗區域內的繪圖。|  
-|[CDC::ExtFloodFill](#extfloodfill)|使用目前的筆刷，填滿區域。 提供更大的彈性比[CDC::FloodFill](#floodfill)成員函式。|  
-|[CDC::ExtTextOut](#exttextout)|寫入使用目前選取的字型的矩形區域中的字元字串。|  
-|[CDC::FillPath](#fillpath)|關閉目前路徑中的任何開放圖形，並使用目前的筆刷和多邊形填滿模式，填滿路徑的內部。|  
-|[CDC::FillRect](#fillrect)|使用特定的筆刷填滿指定的矩形。|  
-|[CDC::FillRgn](#fillrgn)|使用指定的筆刷，填滿的特定區域。|  
-|[CDC::FillSolidRect](#fillsolidrect)|使用純色，填滿的矩形。|  
-|[CDC::FlattenPath](#flattenpath)|轉換到目前的裝置內容中，選取的路徑中任何曲線，並將每個曲線轉換成一連串的行。|  
-|[CDC::FloodFill](#floodfill)|使用目前的筆刷，填滿區域。|  
-|[CDC::FrameRect](#framerect)|繪製矩形周圍的框線。|  
-|[CDC::FrameRgn](#framergn)|使用筆刷的特定區域周圍繪製框線。|  
-|[CDC::FromHandle](#fromhandle)|將指標傳回至`CDC`物件時指定的裝置內容控制代碼。 如果 `CDC` 物件沒有附加至控制代碼，會建立並附加暫存 `CDC` 物件。|  
-|[CDC::GetArcDirection](#getarcdirection)|傳回目前弧形方向之裝置內容。|  
-|[CDC::GetAspectRatioFilter](#getaspectratiofilter)|擷取目前的長寬比篩選條件的設定。|  
-|[CDC::GetBkColor](#getbkcolor)|擷取目前的背景色彩。|  
-|[CDC::GetBkMode](#getbkmode)|擷取背景模式。|  
-|[CDC::GetBoundsRect](#getboundsrect)|傳回指定之裝置內容的目前累積週框矩形。|  
-|[CDC::GetBrushOrg](#getbrushorg)|擷取目前的筆刷的原點。|  
-|[CDC::GetCharABCWidths](#getcharabcwidths)|擷取的寬度，以邏輯單位，指定的範圍從目前的字型中的連續字元。|  
-|[CDC::GetCharABCWidthsI](#getcharabcwidthsi)|擷取的寬度，以邏輯單位，從目前的 TrueType 字型在指定範圍中的連續圖像索引。|  
-|[CDC::GetCharacterPlacement](#getcharacterplacement)|擷取各種類型的字元字串的詳細資訊。|  
-|[CDC::GetCharWidth](#getcharwidth)|擷取目前的字型顯示小數給定範圍中的連續字元的寬度。|  
-|[CDC::GetCharWidthI](#getcharwidthi)|擷取的寬度，以邏輯座標，從目前的字型的指定範圍內的連續圖像索引。|  
-|[CDC::GetClipBox](#getclipbox)|擷取目前裁剪邊界周圍 tightest 週框矩形的維度。|  
-|[CDC::GetColorAdjustment](#getcoloradjustment)|擷取裝置內容的色彩調整值。|  
-|[CDC::GetCurrentBitmap](#getcurrentbitmap)|讓指標回到目前所選`CBitmap`物件。|  
-|[CDC::GetCurrentBrush](#getcurrentbrush)|讓指標回到目前所選`CBrush`物件。|  
-|[CDC::GetCurrentFont](#getcurrentfont)|讓指標回到目前所選`CFont`物件。|  
-|[CDC::GetCurrentPalette](#getcurrentpalette)|讓指標回到目前所選`CPalette`物件。|  
-|[CDC::GetCurrentPen](#getcurrentpen)|讓指標回到目前所選`CPen`物件。|  
-|[CDC::GetCurrentPosition](#getcurrentposition)|擷取目前的畫筆位置 （以邏輯座標表示）。|  
-|[CDC::GetDCBrushColor](#getdcbrushcolor)|擷取目前的筆刷色彩。|  
-|[CDC::GetDCPenColor](#getdcpencolor)|擷取目前的畫筆顏色。|  
-|[Rastercaps](#getdevicecaps)|擷取指定的特定的顯示裝置的功能相關的裝置特定資訊種類。|  
-|[CDC::GetFontData](#getfontdata)|擷取可調式字型檔案中的字型度量資訊。 指定位移至字型檔案，以及要傳回的資訊來識別要擷取之資訊。|  
-|[CDC::GetFontLanguageInfo](#getfontlanguageinfo)|傳回指定的顯示內容的目前選取字型的相關資訊。|  
-|[CDC::GetGlyphOutline](#getglyphoutline)|擷取大綱曲線或點陣圖的外框字元，在目前的字型。|  
-|[CDC::GetGraphicsMode](#getgraphicsmode)|擷取指定之裝置內容的目前圖形模式。|  
-|[CDC::GetHalftoneBrush](#gethalftonebrush)|筆刷半色調。|  
-|[CDC::GetKerningPairs](#getkerningpairs)|擷取的字元間距組指定的裝置內容中目前選取的字型。|  
-|[CDC::GetLayout](#getlayout)|擷取裝置內容 (DC) 的配置。 配置可以是保留到右 （預設值） 或由右至左 （鏡像）。|  
-|[CDC::GetMapMode](#getmapmode)|擷取目前的對應模式。|  
-|[CDC::GetMiterLimit](#getmiterlimit)|傳回裝置內容的斜接角限制。|  
-|[CDC::GetNearestColor](#getnearestcolor)|擷取最接近的邏輯色彩至指定的邏輯色彩時，可以表示給定的裝置。|  
-|[CDC::GetOutlineTextMetrics](#getoutlinetextmetrics)|擷取 TrueType 字型的字型度量資訊。|  
-|[CDC::GetOutputCharWidth](#getoutputcharwidth)|使用輸出的裝置內容的目前字型會擷取在連續的字元群組中的個別字元的寬度。|  
-|[CDC::GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|計算字元字串的輸出裝置內容的高度與寬度。|  
-|[CDC::GetOutputTextExtent](#getoutputtextextent)|計算使用來決定維度的目前字型的輸出裝置內容上的文字行高度與寬度。|  
-|[CDC::GetOutputTextMetrics](#getoutputtextmetrics)|擷取輸出裝置內容中的目前字型度量資訊。|  
-|[CDC::GetPath](#getpath)|擷取定義的線條端點和的曲線選入裝置內容的路徑中找到的控點的座標。|  
-|[CDC::GetPixel](#getpixel)|擷取位於指定點的像素的 RGB 色彩值。|  
-|[CDC::GetPolyFillMode](#getpolyfillmode)|擷取目前的多邊形填滿模式。|  
-|[CDC::GetROP2](#getrop2)|擷取目前的繪圖模式。|  
-|[CDC::GetSafeHdc](#getsafehdc)|傳回[CDC::m_hDC](#m_hdc)，輸出裝置內容。|  
-|[CDC::GetStretchBltMode](#getstretchbltmode)|擷取目前的點陣圖自動縮放模式。|  
-|[CDC::GetTabbedTextExtent](#gettabbedtextextent)|計算的寬度和高度屬性裝置內容上的字元字串。|  
-|[CDC::GetTextAlign](#gettextalign)|擷取的文字對齊方式的旗標。|  
-|[CDC::GetTextCharacterExtra](#gettextcharacterextra)|擷取 intercharacter 距離的目前設定。|  
-|[CDC::GetTextColor](#gettextcolor)|擷取目前的文字色彩。|  
-|[CDC::GetTextExtent](#gettextextent)|計算來決定維度使用目前的字型屬性裝置內容上的文字行高度與寬度。|  
-|[CDC::GetTextExtentExPointI](#gettextextentexpointi)|擷取指定的空間可容納和陣列填入每個字元的文字範圍的指定字串中的字元數目。|  
-|[CDC::GetTextExtentPointI](#gettextextentpointi)|擷取指定之圖像索引陣列的高度與寬度。|  
-|[CDC::GetTextFace](#gettextface)|將目前的字型的字體名稱複製到緩衝區中，以 null 結束的字串。|  
-|[CDC::GetTextMetrics](#gettextmetrics)|擷取屬性的裝置內容中的目前字型度量資訊。|  
-|[CDC::GetViewportExt](#getviewportext)|擷取，x-與 y-範圍的檢視區。|  
-|[CDC::GetViewportOrg](#getviewportorg)|擷取捲動檢視區原點 x 和 y 座標。|  
-|[CDC::GetWindow](#getwindow)|傳回顯示裝置內容相關聯的視窗。|  
-|[CDC::GetWindowExt](#getwindowext)|擷取，x-與 y-範圍的相關聯的視窗。|  
-|[CDC::GetWindowOrg](#getwindoworg)|擷取相關聯的視窗原點 x 和 y 座標。|  
-|[CDC::GetWorldTransform](#getworldtransform)|擷取目前分頁空間轉換到全球的空間。|  
-|[CDC::GradientFill](#gradientfill)|矩形和三角形結構填入 gradating 色彩。|  
-|[Cdc:: graystring](#graystring)|繪製呈暗灰色 （灰色） 在指定位置的文字。|  
-|[CDC::HIMETRICtoDP](#himetrictodp)|將轉換**HIMETRIC**成裝置單位的單位。|  
-|[CDC::HIMETRICtoLP](#himetrictolp)|將轉換**HIMETRIC**成邏輯單元的單位。|  
-|[CDC::IntersectClipRect](#intersectcliprect)|建立新的裁剪區域所形成的目前地區和矩形的交集。|  
-|[CDC::InvertRect](#invertrect)|反轉矩形的內容。|  
-|[CDC::InvertRgn](#invertrgn)|反轉一個區域中的色彩。|  
-|[CDC::IsPrinting](#isprinting)|決定是否正在使用的裝置內容進行列印。|  
-|[CDC::LineTo](#lineto)|從目前的位置，但不是包括、 點繪製的線條。|  
-|[CDC::LPtoDP](#lptodp)|將邏輯單元轉換成裝置單位。|  
-|[CDC::LPtoHIMETRIC](#lptohimetric)|將轉換成邏輯單元**HIMETRIC**單位。|  
-|[CDC::MaskBlt](#maskblt)|結合使用給定的遮罩和點陣作業的來源和目的地點陣圖的色彩資料。|  
-|[CDC::ModifyWorldTransform](#modifyworldtransform)|變更裝置內容中使用指定的模式的自然轉換。|  
-|[CDC::MoveTo](#moveto)|移動目前的位置。|  
-|[CDC::OffsetClipRgn](#offsetcliprgn)|移動指定的裝置之裁剪區域。|  
-|[CDC::OffsetViewportOrg](#offsetviewportorg)|修改檢視區原點，相對於目前的檢視區原點的座標。|  
-|[CDC::OffsetWindowOrg](#offsetwindoworg)|修改視窗原點，相對於目前視窗原點的座標。|  
-|[CDC::PaintRgn](#paintrgn)|選取的筆刷填滿區域。|  
-|[CDC::PatBlt](#patblt)|建立一個位元模式。|  
-|[CDC::Pie](#pie)|繪製派形的楔形。|  
-|[CDC::PlayMetaFile](#playmetafile)|指定的裝置上播放內容的指定中繼檔。 增強型的版本`PlayMetaFile`顯示儲存在給定的格式增強型中繼檔中的圖片。 中繼檔就可以播放次數。|  
-|[CDC::PlgBlt](#plgblt)|在來源裝置內容中指定的矩形的色彩資料位元的位元區塊傳輸，執行至指定的裝置內容中指定的平行四邊形中。|  
-|[CDC::PolyBezier](#polybezier)|繪製一或多個 Bzier 曲線。 尚未使用或更新目前的位置。|  
-|[CDC::PolyBezierTo](#polybezierto)|繪製一或多個 Bzier 曲線，並將目前位置移至最後一個 Bzier 曲線的結束點。|  
-|[CDC::PolyDraw](#polydraw)|繪製一組直線線段和 Bzier 曲線。 此函式會更新目前的位置。|  
-|[CDC::Polygon](#polygon)|繪製多邊形，其包含兩個或多個點 （端點） 透過線路連線。|  
-|[CDC::Polyline](#polyline)|繪製一組連接的指定的點之直線線段。|  
-|[CDC::PolylineTo](#polylineto)|繪製一或多個直線和目前的位置移至之結束點的最後一行。|  
-|[CDC::PolyPolygon](#polypolygon)|建立兩個或多個使用目前的多邊形填滿模式會填滿的多邊形。 多邊形可能不相鄰，或可能會重疊。|  
-|[CDC::PolyPolyline](#polypolyline)|繪製連接的直線線段的多個數列。 目前的位置是使用都更新此函式。|  
-|[CDC::PtVisible](#ptvisible)|指定內的裁剪區域是否為指定的點。|  
-|[CDC::RealizePalette](#realizepalette)|將目前的邏輯調色盤中的調色盤項目對應至系統調色盤。|  
-|[CDC::Rectangle](#rectangle)|使用目前的畫筆繪製矩形，並填滿它使用目前的筆刷。|  
-|[CDC::RectVisible](#rectvisible)|判斷指定的任何的矩形部分是否之內的裁剪區域。|  
-|[CDC::ReleaseAttribDC](#releaseattribdc)|版本`m_hAttribDC`，屬性的裝置內容。|  
-|[CDC::ReleaseOutputDC](#releaseoutputdc)|版本`m_hDC`，輸出裝置內容。|  
-|[CDC::ResetDC](#resetdc)|更新`m_hAttribDC`裝置內容。|  
-|[CDC::RestoreDC](#restoredc)|裝置內容還原至先前的狀態，以儲存`SaveDC`。|  
-|[CDC::RoundRect](#roundrect)|繪製具有圓角使用目前的畫筆並使用目前的筆刷填滿的矩形。|  
-|[CDC::SaveDC](#savedc)|儲存裝置內容的目前狀態。|  
-|[CDC::ScaleViewportExt](#scaleviewportext)|修改檢視區範圍相對於目前的值。|  
-|[CDC::ScaleWindowExt](#scalewindowext)|修改視窗範圍相對於目前的值。|  
-|[CDC::ScrollDC](#scrolldc)|水平和垂直捲動的位元的矩形。|  
-|[CDC::SelectClipPath](#selectclippath)|選取目前的路徑做為裝置內容中，使用指定的模式結合具有任何現有的裁剪區域的新區域的裁剪區域。|  
-|[CDC::SelectClipRgn](#selectcliprgn)|使用指定的模式會結合為目前裁剪區域與給定的區域。|  
-|[Cdc:: selectobject](#selectobject)|選取 GDI 繪製的物件，例如畫筆。|  
-|[CDC::SelectPalette](#selectpalette)|選取邏輯色板。|  
-|[CDC::SelectStockObject](#selectstockobject)|選取其中一個預先定義的內建畫筆、 筆刷或由 Windows 提供的字型。|  
-|[Cdc:: setabortproc](#setabortproc)|設定 Windows 會呼叫如果必須中止列印工作的程式設計人員提供的回呼函式。|  
-|[CDC::SetArcDirection](#setarcdirection)|設定要用於弧線和矩形函式的繪圖方向。|  
-|[CDC::SetAttribDC](#setattribdc)|設定`m_hAttribDC`，屬性的裝置內容。|  
-|[CDC::SetBkColor](#setbkcolor)|設定目前的背景色彩。|  
-|[CDC::SetBkMode](#setbkmode)|設定背景模式。|  
-|[CDC::SetBoundsRect](#setboundsrect)|控制累積的週框矩形指定之裝置內容的資訊。|  
-|[CDC::SetBrushOrg](#setbrushorg)|指定下一步選取放入裝置內容的筆刷的原點。|  
-|[CDC::SetColorAdjustment](#setcoloradjustment)|設定彩色調整值之裝置內容，使用指定的值。|  
-|[CDC::SetDCBrushColor](#setdcbrushcolor)|設定目前的筆刷色彩。|  
-|[CDC::SetDCPenColor](#setdcpencolor)|設定目前的畫筆顏色。|  
-|[CDC::SetGraphicsMode](#setgraphicsmode)|設定指定之裝置內容的目前圖形模式。|  
-|[CDC::SetLayout](#setlayout)|裝置內容 (DC) 的配置變更。|  
-|[CDC::SetMapMode](#setmapmode)|將目前的對應模式設定。|  
-|[CDC::SetMapperFlags](#setmapperflags)|更改時則會對應至實體字型的邏輯字型的字型對應程式所使用的演算法。|  
-|[CDC::SetMiterLimit](#setmiterlimit)|設定斜接角聯結之裝置內容的長度限制。|  
-|[CDC::SetOutputDC](#setoutputdc)|設定`m_hDC`，輸出裝置內容。|  
-|[CDC::SetPixel](#setpixel)|在指定的色彩最接近的指定點中設定像素。|  
-|[CDC::SetPixelV](#setpixelv)|以指定的色彩最接近的指定座標上設定像素。 `SetPixelV`速度比`SetPixel`因為不需要傳回實際繪製點的色彩值。|  
-|[CDC::SetPolyFillMode](#setpolyfillmode)|將多邊形填滿模式設定。|  
-|[CDC::SetROP2](#setrop2)|設定目前的繪圖模式。|  
-|[CDC::SetStretchBltMode](#setstretchbltmode)|設定點陣圖縮放模式。|  
-|[CDC::SetTextAlign](#settextalign)|設定文字對齊方式的旗標。|  
-|[CDC::SetTextCharacterExtra](#settextcharacterextra)|設定 intercharacter 的間距數量。|  
-|[CDC::SetTextColor](#settextcolor)|設定文字色彩。|  
-|[CDC::SetTextJustification](#settextjustification)|分行符號字元，在字串中加上空格。|  
-|[CDC::SetViewportExt](#setviewportext)|設定 x-與 y-範圍的檢視區。|  
-|[CDC::SetViewportOrg](#setviewportorg)|設定檢視區原點。|  
-|[CDC::SetWindowExt](#setwindowext)|設定 x-和 y-範圍相關聯的視窗。|  
-|[CDC::SetWindowOrg](#setwindoworg)|設定裝置內容的視窗原點。|  
-|[CDC::SetWorldTransform](#setworldtransform)|設定目前的世界空間分頁空間轉換。|  
-|[CDC::StartDoc](#startdoc)|正在啟動新的列印工作的裝置驅動程式就會通知。|  
-|[CDC::StartPage](#startpage)|通知裝置驅動程式正在啟動新的頁面。|  
-|[CDC::StretchBlt](#stretchblt)|將點陣圖從來源矩形和裝置移到目的地矩形，延伸或壓縮點陣圖，必要時以符合目的地矩形的維度。|  
-|[CDC::StrokeAndFillPath](#strokeandfillpath)|關閉任何開啟的圖形路徑中，使用目前的畫筆，萬一外框的路徑並填滿其內部使用目前的筆刷。|  
-|[CDC::StrokePath](#strokepath)|使用目前的畫筆來呈現指定的路徑。|  
-|[CDC::TabbedTextOut](#tabbedtextout)|將指定的位置，並展開索引標籤的定位停駐點位置陣列中指定的值在字元字串。|  
-|[CDC::TextOut](#textout)|將使用目前選取的字型的指定位置的字元字串。|  
-|[CDC::TransparentBlt](#transparentblt)|從指定的來源裝置內容的色彩資料位元區塊傳輸到目的地裝置內容中，呈現透明在傳送指定的色彩中。|  
-|[CDC::UpdateColors](#updatecolors)|更新裝置內容比對目前的工作區中工作區，以像素 x 像素為基礎的系統調色盤的色彩。|  
-|[CDC::WidenPath](#widenpath)|如果路徑圖案使用目前選取的裝置內容到畫筆會繪製的區域來重新定義的目前路徑。|  
+|[CDC::AbortDoc](#abortdoc)|Terminates the current print job, erasing everything the application has written to the device since the last call of the `StartDoc` member function.|  
+|[CDC::AbortPath](#abortpath)|Closes and discards any paths in the device context.|  
+|[CDC::AddMetaFileComment](#addmetafilecomment)|Copies the comment from a buffer into a specified enhanced-format metafile.|  
+|[CDC::AlphaBlend](#alphablend)|Displays bitmaps that have transparent or semitransparent pixels.|  
+|[CDC::AngleArc](#anglearc)|Draws a line segment and an arc, and moves the current position to the ending point of the arc.|  
+|[CDC::Arc](#arc)|Draws an elliptical arc.|  
+|[CDC::ArcTo](#arcto)|Draws an elliptical arc. This function is similar to `Arc`, except that the current position is updated.|  
+|[CDC::Attach](#attach)|Attaches a Windows device context to this `CDC` object.|  
+|[CDC::BeginPath](#beginpath)|Opens a path bracket in the device context.|  
+|[CDC::BitBlt](#bitblt)|Copies a bitmap from a specified device context.|  
+|[CDC::Chord](#chord)|Draws a chord (a closed figure bounded by the intersection of an ellipse and a line segment).|  
+|[CDC::CloseFigure](#closefigure)|Closes an open figure in a path.|  
+|[CDC::CreateCompatibleDC](#createcompatibledc)|Creates a memory-device context that is compatible with another device context. You can use it to prepare images in memory.|  
+|[CDC::CreateDC](#createdc)|Creates a device context for a specific device.|  
+|[CDC::CreateIC](#createic)|Creates an information context for a specific device. This provides a fast way to get information about the device without creating a device context.|  
+|[CDC::DeleteDC](#deletedc)|Deletes the Windows device context associated with this `CDC` object.|  
+|[CDC::DeleteTempMap](#deletetempmap)|Called by the `CWinApp` idle-time handler to delete any temporary `CDC` object created by `FromHandle`. Also detaches the device context.|  
+|[CDC::Detach](#detach)|Detaches the Windows device context from this `CDC` object.|  
+|[CDC::DPtoHIMETRIC](#dptohimetric)|Converts device units into **HIMETRIC** units.|  
+|[CDC::DPtoLP](#dptolp)|Converts device units into logical units.|  
+|[CDC::Draw3dRect](#draw3drect)|Draws a three-dimensional rectangle.|  
+|[CDC::DrawDragRect](#drawdragrect)|Erases and redraws a rectangle as it is dragged.|  
+|[CDC::DrawEdge](#drawedge)|Draws the edges of a rectangle.|  
+|[CDC::DrawEscape](#drawescape)|Accesses drawing capabilities of a video display that are not directly available through the graphics device interface (GDI).|  
+|[CDC::DrawFocusRect](#drawfocusrect)|Draws a rectangle in the style used to indicate focus.|  
+|[CDC::DrawFrameControl](#drawframecontrol)|Draw a frame control.|  
+|[CDC::DrawIcon](#drawicon)|Draws an icon.|  
+|[CDC::DrawState](#drawstate)|Displays an image and applies a visual effect to indicate a state.|  
+|[CDC::DrawText](#drawtext)|Draws formatted text in the specified rectangle.|  
+|[CDC::DrawTextEx](#drawtextex)|Draws formatted text in the specified rectangle using additional formats.|  
+|[CDC::Ellipse](#ellipse)|Draws an ellipse.|  
+|[CDC::EndDoc](#enddoc)|Ends a print job started by the `StartDoc` member function.|  
+|[CDC::EndPage](#endpage)|Informs the device driver that a page is ending.|  
+|[CDC::EndPath](#endpath)|Closes a path bracket and selects the path defined by the bracket into the device context.|  
+|[CDC::EnumObjects](#enumobjects)|Enumerates the pens and brushes available in a device context.|  
+|[CDC::Escape](#escape)|Allows applications to access facilities that are not directly available from a particular device through GDI. Also allows access to Windows escape functions. Escape calls made by an application are translated and sent to the device driver.|  
+|[CDC::ExcludeClipRect](#excludecliprect)|Creates a new clipping region that consists of the existing clipping region minus the specified rectangle.|  
+|[CDC::ExcludeUpdateRgn](#excludeupdatergn)|Prevents drawing within invalid areas of a window by excluding an updated region in the window from a clipping region.|  
+|[CDC::ExtFloodFill](#extfloodfill)|Fills an area with the current brush. Provides more flexibility than the [CDC::FloodFill](#floodfill) member function.|  
+|[CDC::ExtTextOut](#exttextout)|Writes a character string within a rectangular region using the currently selected font.|  
+|[CDC::FillPath](#fillpath)|Closes any open figures in the current path and fills the path's interior by using the current brush and polygon-filling mode.|  
+|[CDC::FillRect](#fillrect)|Fills a given rectangle by using a specific brush.|  
+|[CDC::FillRgn](#fillrgn)|Fills a specific region with the specified brush.|  
+|[CDC::FillSolidRect](#fillsolidrect)|Fills a rectangle with a solid color.|  
+|[CDC::FlattenPath](#flattenpath)|Transforms any curves in the path selected into the current device context, and turns each curve into a sequence of lines.|  
+|[CDC::FloodFill](#floodfill)|Fills an area with the current brush.|  
+|[CDC::FrameRect](#framerect)|Draws a border around a rectangle.|  
+|[CDC::FrameRgn](#framergn)|Draws a border around a specific region using a brush.|  
+|[CDC::FromHandle](#fromhandle)|Returns a pointer to a `CDC` object when given a handle to a device context. If a `CDC` object is not attached to the handle, a temporary `CDC` object is created and attached.|  
+|[CDC::GetArcDirection](#getarcdirection)|Returns the current arc direction for the device context.|  
+|[CDC::GetAspectRatioFilter](#getaspectratiofilter)|Retrieves the setting for the current aspect-ratio filter.|  
+|[CDC::GetBkColor](#getbkcolor)|Retrieves the current background color.|  
+|[CDC::GetBkMode](#getbkmode)|Retrieves the background mode.|  
+|[CDC::GetBoundsRect](#getboundsrect)|Returns the current accumulated bounding rectangle for the specified device context.|  
+|[CDC::GetBrushOrg](#getbrushorg)|Retrieves the origin of the current brush.|  
+|[CDC::GetCharABCWidths](#getcharabcwidths)|Retrieves the widths, in logical units, of consecutive characters in a given range from the current font.|  
+|[CDC::GetCharABCWidthsI](#getcharabcwidthsi)|Retrieves the widths, in logical units, of consecutive glyph indices in a specified range from the current TrueType font.|  
+|[CDC::GetCharacterPlacement](#getcharacterplacement)|Retrieves various types of information on a character string.|  
+|[CDC::GetCharWidth](#getcharwidth)|Retrieves the fractional widths of consecutive characters in a given range from the current font.|  
+|[CDC::GetCharWidthI](#getcharwidthi)|Retrieves the widths, in logical coordinates, of consecutive glyph indices in a specified range from the current font.|  
+|[CDC::GetClipBox](#getclipbox)|Retrieves the dimensions of the tightest bounding rectangle around the current clipping boundary.|  
+|[CDC::GetColorAdjustment](#getcoloradjustment)|Retrieves the color adjustment values for the device context.|  
+|[CDC::GetCurrentBitmap](#getcurrentbitmap)|Returns a pointer to the currently selected `CBitmap` object.|  
+|[CDC::GetCurrentBrush](#getcurrentbrush)|Returns a pointer to the currently selected `CBrush` object.|  
+|[CDC::GetCurrentFont](#getcurrentfont)|Returns a pointer to the currently selected `CFont` object.|  
+|[CDC::GetCurrentPalette](#getcurrentpalette)|Returns a pointer to the currently selected `CPalette` object.|  
+|[CDC::GetCurrentPen](#getcurrentpen)|Returns a pointer to the currently selected `CPen` object.|  
+|[CDC::GetCurrentPosition](#getcurrentposition)|Retrieves the current position of the pen (in logical coordinates).|  
+|[CDC::GetDCBrushColor](#getdcbrushcolor)|Retrieves the current brush color.|  
+|[CDC::GetDCPenColor](#getdcpencolor)|Retrieves the current pen color.|  
+|[CDC::GetDeviceCaps](#getdevicecaps)|Retrieves a specified kind of device-specific information about a given display device's capabilities.|  
+|[CDC::GetFontData](#getfontdata)|Retrieves font metric information from a scalable font file. The information to retrieve is identified by specifying an offset into the font file and the length of the information to return.|  
+|[CDC::GetFontLanguageInfo](#getfontlanguageinfo)|Returns information about the currently selected font for the specified display context.|  
+|[CDC::GetGlyphOutline](#getglyphoutline)|Retrieves the outline curve or bitmap for an outline character in the current font.|  
+|[CDC::GetGraphicsMode](#getgraphicsmode)|Retrieves the current graphics mode for the specified device context.|  
+|[CDC::GetHalftoneBrush](#gethalftonebrush)|Retrieves a halftone brush.|  
+|[CDC::GetKerningPairs](#getkerningpairs)|Retrieves the character kerning pairs for the font that is currently selected in the specified device context.|  
+|[CDC::GetLayout](#getlayout)|Retrieves the layout of a device context (DC). The layout can be either left to right (default) or right to left (mirrored).|  
+|[CDC::GetMapMode](#getmapmode)|Retrieves the current mapping mode.|  
+|[CDC::GetMiterLimit](#getmiterlimit)|Returns the miter limit for the device context.|  
+|[CDC::GetNearestColor](#getnearestcolor)|Retrieves the closest logical color to a specified logical color that the given device can represent.|  
+|[CDC::GetOutlineTextMetrics](#getoutlinetextmetrics)|Retrieves font metric information for TrueType fonts.|  
+|[CDC::GetOutputCharWidth](#getoutputcharwidth)|Retrieves the widths of individual characters in a consecutive group of characters from the current font using the output device context.|  
+|[CDC::GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|Computes the width and height of a character string on the output device context.|  
+|[CDC::GetOutputTextExtent](#getoutputtextextent)|Computes the width and height of a line of text on the output device context using the current font to determine the dimensions.|  
+|[CDC::GetOutputTextMetrics](#getoutputtextmetrics)|Retrieves the metrics for the current font from the output device context.|  
+|[CDC::GetPath](#getpath)|Retrieves the coordinates defining the endpoints of lines and the control points of curves found in the path that is selected into the device context.|  
+|[CDC::GetPixel](#getpixel)|Retrieves the RGB color value of the pixel at the specified point.|  
+|[CDC::GetPolyFillMode](#getpolyfillmode)|Retrieves the current polygon-filling mode.|  
+|[CDC::GetROP2](#getrop2)|Retrieves the current drawing mode.|  
+|[CDC::GetSafeHdc](#getsafehdc)|Returns [CDC::m_hDC](#m_hdc), the output device context.|  
+|[CDC::GetStretchBltMode](#getstretchbltmode)|Retrieves the current bitmap-stretching mode.|  
+|[CDC::GetTabbedTextExtent](#gettabbedtextextent)|Computes the width and height of a character string on the attribute device context.|  
+|[CDC::GetTextAlign](#gettextalign)|Retrieves the text-alignment flags.|  
+|[CDC::GetTextCharacterExtra](#gettextcharacterextra)|Retrieves the current setting for the amount of intercharacter spacing.|  
+|[CDC::GetTextColor](#gettextcolor)|Retrieves the current text color.|  
+|[CDC::GetTextExtent](#gettextextent)|Computes the width and height of a line of text on the attribute device context using the current font to determine the dimensions.|  
+|[CDC::GetTextExtentExPointI](#gettextextentexpointi)|Retrieves the number of characters in a specified string that will fit within a specified space and fills an array with the text extent for each of those characters.|  
+|[CDC::GetTextExtentPointI](#gettextextentpointi)|Retrieves the width and height of the specified array of glyph indices.|  
+|[CDC::GetTextFace](#gettextface)|Copies the typeface name of the current font into a buffer as a null-terminated string.|  
+|[CDC::GetTextMetrics](#gettextmetrics)|Retrieves the metrics for the current font from the attribute device context.|  
+|[CDC::GetViewportExt](#getviewportext)|Retrieves the x- and y-extents of the viewport.|  
+|[CDC::GetViewportOrg](#getviewportorg)|Retrieves the x- and y-coordinates of the viewport origin.|  
+|[CDC::GetWindow](#getwindow)|Returns the window associated with the display device context.|  
+|[CDC::GetWindowExt](#getwindowext)|Retrieves the x- and y-extents of the associated window.|  
+|[CDC::GetWindowOrg](#getwindoworg)|Retrieves the x- and y-coordinates of the origin of the associated window.|  
+|[CDC::GetWorldTransform](#getworldtransform)|Retrieves the current world-space to page-space transformation.|  
+|[CDC::GradientFill](#gradientfill)|Fills rectangle and triangle structures with a gradating color.|  
+|[CDC::GrayString](#graystring)|Draws dimmed (grayed) text at the given location.|  
+|[CDC::HIMETRICtoDP](#himetrictodp)|Converts **HIMETRIC** units into device units.|  
+|[CDC::HIMETRICtoLP](#himetrictolp)|Converts **HIMETRIC** units into logical units.|  
+|[CDC::IntersectClipRect](#intersectcliprect)|Creates a new clipping region by forming the intersection of the current region and a rectangle.|  
+|[CDC::InvertRect](#invertrect)|Inverts the contents of a rectangle.|  
+|[CDC::InvertRgn](#invertrgn)|Inverts the colors in a region.|  
+|[CDC::IsPrinting](#isprinting)|Determines whether the device context is being used for printing.|  
+|[CDC::LineTo](#lineto)|Draws a line from the current position up to, but not including, a point.|  
+|[CDC::LPtoDP](#lptodp)|Converts logical units into device units.|  
+|[CDC::LPtoHIMETRIC](#lptohimetric)|Converts logical units into **HIMETRIC** units.|  
+|[CDC::MaskBlt](#maskblt)|Combines the color data for the source and destination bitmaps using the given mask and raster operation.|  
+|[CDC::ModifyWorldTransform](#modifyworldtransform)|Changes the world transformation for a device context using the specified mode.|  
+|[CDC::MoveTo](#moveto)|Moves the current position.|  
+|[CDC::OffsetClipRgn](#offsetcliprgn)|Moves the clipping region of the given device.|  
+|[CDC::OffsetViewportOrg](#offsetviewportorg)|Modifies the viewport origin relative to the coordinates of the current viewport origin.|  
+|[CDC::OffsetWindowOrg](#offsetwindoworg)|Modifies the window origin relative to the coordinates of the current window origin.|  
+|[CDC::PaintRgn](#paintrgn)|Fills a region with the selected brush.|  
+|[CDC::PatBlt](#patblt)|Creates a bit pattern.|  
+|[CDC::Pie](#pie)|Draws a pie-shaped wedge.|  
+|[CDC::PlayMetaFile](#playmetafile)|Plays the contents of the specified metafile on the given device. The enhanced version of `PlayMetaFile` displays the picture stored in the given enhanced-format metafile. The metafile can be played any number of times.|  
+|[CDC::PlgBlt](#plgblt)|Performs a bit-block transfer of the bits of color data from the specified rectangle in the source device context to the specified parallelogram in the given device context.|  
+|[CDC::PolyBezier](#polybezier)|Draws one or more Bzier splines. The current position is neither used nor updated.|  
+|[CDC::PolyBezierTo](#polybezierto)|Draws one or more Bzier splines, and moves the current position to the ending point of the last Bzier spline.|  
+|[CDC::PolyDraw](#polydraw)|Draws a set of line segments and Bzier splines. This function updates the current position.|  
+|[CDC::Polygon](#polygon)|Draws a polygon consisting of two or more points (vertices) connected by lines.|  
+|[CDC::Polyline](#polyline)|Draws a set of line segments connecting the specified points.|  
+|[CDC::PolylineTo](#polylineto)|Draws one or more straight lines and moves the current position to the ending point of the last line.|  
+|[CDC::PolyPolygon](#polypolygon)|Creates two or more polygons that are filled using the current polygon-filling mode. The polygons may be disjoint or they may overlap.|  
+|[CDC::PolyPolyline](#polypolyline)|Draws multiple series of connected line segments. The current position is neither used nor updated by this function.|  
+|[CDC::PtVisible](#ptvisible)|Specifies whether the given point is within the clipping region.|  
+|[CDC::RealizePalette](#realizepalette)|Maps palette entries in the current logical palette to the system palette.|  
+|[CDC::Rectangle](#rectangle)|Draws a rectangle using the current pen and fills it using the current brush.|  
+|[CDC::RectVisible](#rectvisible)|Determines whether any part of the given rectangle lies within the clipping region.|  
+|[CDC::ReleaseAttribDC](#releaseattribdc)|Releases `m_hAttribDC`, the attribute device context.|  
+|[CDC::ReleaseOutputDC](#releaseoutputdc)|Releases `m_hDC`, the output device context.|  
+|[CDC::ResetDC](#resetdc)|Updates the `m_hAttribDC` device context.|  
+|[CDC::RestoreDC](#restoredc)|Restores the device context to a previous state saved with `SaveDC`.|  
+|[CDC::RoundRect](#roundrect)|Draws a rectangle with rounded corners using the current pen and filled using the current brush.|  
+|[CDC::SaveDC](#savedc)|Saves the current state of the device context.|  
+|[CDC::ScaleViewportExt](#scaleviewportext)|Modifies the viewport extent relative to the current values.|  
+|[CDC::ScaleWindowExt](#scalewindowext)|Modifies the window extents relative to the current values.|  
+|[CDC::ScrollDC](#scrolldc)|Scrolls a rectangle of bits horizontally and vertically.|  
+|[CDC::SelectClipPath](#selectclippath)|Selects the current path as a clipping region for the device context, combining the new region with any existing clipping region by using the specified mode.|  
+|[CDC::SelectClipRgn](#selectcliprgn)|Combines the given region with the current clipping region by using the specified mode.|  
+|[CDC::SelectObject](#selectobject)|Selects a GDI drawing object such as a pen.|  
+|[CDC::SelectPalette](#selectpalette)|Selects the logical palette.|  
+|[CDC::SelectStockObject](#selectstockobject)|Selects one of the predefined stock pens, brushes, or fonts provided by Windows.|  
+|[CDC::SetAbortProc](#setabortproc)|Sets a programmer-supplied callback function that Windows calls if a print job must be aborted.|  
+|[CDC::SetArcDirection](#setarcdirection)|Sets the drawing direction to be used for arc and rectangle functions.|  
+|[CDC::SetAttribDC](#setattribdc)|Sets `m_hAttribDC`, the attribute device context.|  
+|[CDC::SetBkColor](#setbkcolor)|Sets the current background color.|  
+|[CDC::SetBkMode](#setbkmode)|Sets the background mode.|  
+|[CDC::SetBoundsRect](#setboundsrect)|Controls the accumulation of bounding-rectangle information for the specified device context.|  
+|[CDC::SetBrushOrg](#setbrushorg)|Specifies the origin for the next brush selected into a device context.|  
+|[CDC::SetColorAdjustment](#setcoloradjustment)|Sets the color adjustment values for the device context using the specified values.|  
+|[CDC::SetDCBrushColor](#setdcbrushcolor)|Sets the current brush color.|  
+|[CDC::SetDCPenColor](#setdcpencolor)|Sets the current pen color.|  
+|[CDC::SetGraphicsMode](#setgraphicsmode)|Sets the current graphics mode for the specified device context.|  
+|[CDC::SetLayout](#setlayout)|Changes the layout of a device context (DC).|  
+|[CDC::SetMapMode](#setmapmode)|Sets the current mapping mode.|  
+|[CDC::SetMapperFlags](#setmapperflags)|Alters the algorithm that the font mapper uses when it maps logical fonts to physical fonts.|  
+|[CDC::SetMiterLimit](#setmiterlimit)|Sets the limit for the length of miter joins for the device context.|  
+|[CDC::SetOutputDC](#setoutputdc)|Sets `m_hDC`, the output device context.|  
+|[CDC::SetPixel](#setpixel)|Sets the pixel at the specified point to the closest approximation of the specified color.|  
+|[CDC::SetPixelV](#setpixelv)|Sets the pixel at the specified coordinates to the closest approximation of the specified color. `SetPixelV` is faster than `SetPixel` because it does not need to return the color value of the point actually painted.|  
+|[CDC::SetPolyFillMode](#setpolyfillmode)|Sets the polygon-filling mode.|  
+|[CDC::SetROP2](#setrop2)|Sets the current drawing mode.|  
+|[CDC::SetStretchBltMode](#setstretchbltmode)|Sets the bitmap-stretching mode.|  
+|[CDC::SetTextAlign](#settextalign)|Sets the text-alignment flags.|  
+|[CDC::SetTextCharacterExtra](#settextcharacterextra)|Sets the amount of intercharacter spacing.|  
+|[CDC::SetTextColor](#settextcolor)|Sets the text color.|  
+|[CDC::SetTextJustification](#settextjustification)|Adds space to the break characters in a string.|  
+|[CDC::SetViewportExt](#setviewportext)|Sets the x- and y-extents of the viewport.|  
+|[CDC::SetViewportOrg](#setviewportorg)|Sets the viewport origin.|  
+|[CDC::SetWindowExt](#setwindowext)|Sets the x- and y-extents of the associated window.|  
+|[CDC::SetWindowOrg](#setwindoworg)|Sets the window origin of the device context.|  
+|[CDC::SetWorldTransform](#setworldtransform)|Sets the current world-space to page-space transformation.|  
+|[CDC::StartDoc](#startdoc)|Informs the device driver that a new print job is starting.|  
+|[CDC::StartPage](#startpage)|Informs the device driver that a new page is starting.|  
+|[CDC::StretchBlt](#stretchblt)|Moves a bitmap from a source rectangle and device into a destination rectangle, stretching or compressing the bitmap if necessary to fit the dimensions of the destination rectangle.|  
+|[CDC::StrokeAndFillPath](#strokeandfillpath)|Closes any open figures in a path, strikes the outline of the path by using the current pen, and fills its interior by using the current brush.|  
+|[CDC::StrokePath](#strokepath)|Renders the specified path by using the current pen.|  
+|[CDC::TabbedTextOut](#tabbedtextout)|Writes a character string at a specified location, expanding tabs to the values specified in an array of tab-stop positions.|  
+|[CDC::TextOut](#textout)|Writes a character string at a specified location using the currently selected font.|  
+|[CDC::TransparentBlt](#transparentblt)|Transfers a bit-block of color data from the specified source device context into a destination device context, rendering a specified color transparent in the transfer.|  
+|[CDC::UpdateColors](#updatecolors)|Updates the client area of the device context by matching the current colors in the client area to the system palette on a pixel-by-pixel basis.|  
+|[CDC::WidenPath](#widenpath)|Redefines the current path as the area that would be painted if the path were stroked using the pen currently selected into the device context.|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDC::operator HDC](#operator_hdc)|擷取裝置內容的控制代碼。|  
+|[CDC::operator HDC](#operator_hdc)|Retrieves the handle of the device context.|  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDC::m_hAttribDC](#m_hattribdc)|所使用的屬性裝置內容`CDC`物件。|  
-|[CDC::m_hDC](#m_hdc)|所使用的輸出裝置內容`CDC`物件。|  
+|[CDC::m_hAttribDC](#m_hattribdc)|The attribute-device context used by this `CDC` object.|  
+|[CDC::m_hDC](#m_hdc)|The output-device context used by this `CDC` object.|  
   
-## <a name="remarks"></a>備註  
- `CDC`物件提供成員函式 視窗的工作區相關聯的顯示內容所使用的裝置內容，例如顯示或印表機，以及成員使用。  
+## <a name="remarks"></a>Remarks  
+ The `CDC` object provides member functions for working with a device context, such as a display or printer, as well as members for working with a display context associated with the client area of a window.  
   
- 執行所有的繪圖，透過成員函式的`CDC`物件。 類別提供成員函式的裝置內容的作業，使用繪圖工具，安全類型的圖形裝置介面 (GDI) 物件選取項目，和使用的色彩與調色盤。 它也會提供用於取得及設定的繪圖屬性，對應，使用檢視區中，視窗範圍內，使用轉換座標、 使用區域，裁剪、 繪製線條，和繪製簡單圖形、 省略符號和多邊形的成員函式。 成員函式也會提供繪製文字，使用字型、 使用印表機逸出字元、 向下捲動，以及播放中繼檔。  
+ Do all drawing through the member functions of a `CDC` object. The class provides member functions for device-context operations, working with drawing tools, type-safe graphics device interface (GDI) object selection, and working with colors and palettes. It also provides member functions for getting and setting drawing attributes, mapping, working with the viewport, working with the window extent, converting coordinates, working with regions, clipping, drawing lines, and drawing simple shapes, ellipses, and polygons. Member functions are also provided for drawing text, working with fonts, using printer escapes, scrolling, and playing metafiles.  
   
- 若要使用`CDC`物件，來建構它，然後呼叫其成員函式的平行使用裝置內容的 Windows 函式。  
+ To use a `CDC` object, construct it, and then call its member functions that parallel Windows functions that use device contexts.  
   
 > [!NOTE]
->  在 Windows 95/98，所有的螢幕座標皆會限制為 16 位元。 因此，`int`傳遞至`CDC`成員函式必須介於-32768 到 32767 之間。  
+>  Under Windows 95/98, all screen coordinates are limited to 16 bits. Therefore, an `int` passed to a `CDC` member function must lie in the range -32768 to 32767.  
   
- 針對特定用途，Microsoft Foundation 類別庫提供數個類別衍生自`CDC`。 `CPaintDC`封裝呼叫`BeginPaint`和`EndPaint`。 `CClientDC`管理視窗的工作區相關聯的顯示內容。 `CWindowDC`管理整個視窗，包括其框架與控制項相關聯的顯示內容。 `CMetaFileDC`關聯中繼檔裝置內容。  
+ For specific uses, the Microsoft Foundation Class Library provides several classes derived from `CDC` . `CPaintDC` encapsulates calls to `BeginPaint` and `EndPaint`. `CClientDC` manages a display context associated with a window's client area. `CWindowDC` manages a display context associated with an entire window, including its frame and controls. `CMetaFileDC` associates a device context with a metafile.  
   
- `CDC`提供兩個成員函式， [GetLayout](#getlayout)和[SetLayout](#setlayout)，為反轉的裝置內容，不會繼承其配置從視窗版面配置。 這類由右至左的方向是必要的文化特性，例如阿拉伯文或希伯來文字元配置並不在歐洲的標準所撰寫的應用程式。  
+ `CDC` provides two member functions, [GetLayout](#getlayout) and [SetLayout](#setlayout), for reversing the layout of a device context, which does not inherit its layout from a window. Such right-to-left orientation is necessary for applications written for cultures, such as Arabic or Hebrew, where the character layout is not the European standard.  
   
- `CDC`包含兩種裝置內容， [m_hDC](#m_hdc)和[m_hAttribDC](#m_hattribdc)，它會在建立`CDC`物件，參考到相同的裝置。 `CDC`將所有輸出 GDI 呼叫都導向`m_hDC`和大部分屬性 GDI 呼叫`m_hAttribDC`。 (屬性呼叫的範例是`GetTextColor`，雖然`SetTextColor`是輸出呼叫。)  
+ `CDC` contains two device contexts, [m_hDC](#m_hdc) and [m_hAttribDC](#m_hattribdc), which, on creation of a `CDC` object, refer to the same device. `CDC` directs all output GDI calls to `m_hDC` and most attribute GDI calls to `m_hAttribDC`. (An example of an attribute call is `GetTextColor`, while `SetTextColor` is an output call.)  
   
- 比方說，架構會使用以下兩種裝置內容實作`CMetaFileDC`會將輸出傳送到中繼檔讀取從實體裝置的屬性時的物件。 預覽列印中的 framework 中類似的方式實作。 您也可以使用兩個裝置內容類似的方式，在特定應用程式程式碼中。  
+ For example, the framework uses these two device contexts to implement a `CMetaFileDC` object that will send output to a metafile while reading attributes from a physical device. Print preview is implemented in the framework in a similar fashion. You can also use the two device contexts in a similar way in your application-specific code.  
   
- 有時候當您需要同時從文字度量資訊`m_hDC`和`m_hAttribDC`裝置內容。 下列函式的括號提供這項功能︰  
+ There are times when you may need text-metric information from both the `m_hDC` and `m_hAttribDC` device contexts. The following pairs of functions provide this capability:  
   
-|使用 m_hAttribDC|使用 m_hDC|  
+|Uses m_hAttribDC|Uses m_hDC|  
 |-----------------------|-----------------|  
 |[GetTextExtent](#gettextextent)|[GetOutputTextExtent](#getoutputtextextent)|  
 |[GetTabbedTextExtent](#gettabbedtextextent)|[GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|  
 |[GetTextMetrics](#gettextmetrics)|[GetOutputTextMetrics](#getoutputtextmetrics)|  
 |[GetCharWidth](#getcharwidth)|[GetOutputCharWidth](#getoutputcharwidth)|  
   
- 如需有關`CDC`，請參閱[裝置內容](../../mfc/device-contexts.md)。  
+ For more information on `CDC`, see [Device Contexts](../../mfc/device-contexts.md).  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDC`  
   
-## <a name="requirements"></a>需求  
- **標題:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="abortdoc"></a>CDC::AbortDoc  
- 結束目前的列印工作，並清除所有項目自上次呼叫應用程式寫入至裝置[Cdc](#startdoc)成員函式。  
+##  <a name="abortdoc"></a>  CDC::AbortDoc  
+ Terminates the current print job and erases everything the application has written to the device since the last call to the [StartDoc](#startdoc) member function.  
   
 ```  
 int AbortDoc();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 當發生的錯誤為負值或大於或等於 0，如果成功的值。 下列清單顯示常見的錯誤值和其意義︰  
+### <a name="return-value"></a>Return Value  
+ A value greater than or equal to 0 if successful, or a negative value if an error has occurred. The following list shows common error values and their meanings:  
   
-- **SP_ERROR**一般錯誤。  
+- **SP_ERROR** General error.  
   
-- **SP_OUTOFDISK**足夠的磁碟空間是目前可供多工緩衝處理，且沒有更多的空間會變成可用。  
+- **SP_OUTOFDISK** Not enough disk space is currently available for spooling, and no more space will become available.  
   
-- **SP_OUTOFMEMORY**沒有足夠的記憶體可用於多工緩衝處理。  
+- **SP_OUTOFMEMORY** Not enough memory is available for spooling.  
   
-- **SP_USERABORT**使用者終止列印管理員工作。  
+- **SP_USERABORT** User terminated the job through the Print Manager.  
   
-### <a name="remarks"></a>備註  
- 此成員函式取代`ABORTDOC`印表機逸出。  
+### <a name="remarks"></a>Remarks  
+ This member function replaces the `ABORTDOC` printer escape.  
   
- **AbortDoc**應該用來終止下列︰  
+ **AbortDoc** should be used to terminate the following:  
   
--   未指定中止函式使用的列印作業[SetAbortProc](#setabortproc)。  
+-   Printing operations that do not specify an abort function using [SetAbortProc](#setabortproc).  
   
--   列印作業尚未到達其第一個**NEWFRAME**或**NEXTBAND**逸出呼叫。  
+-   Printing operations that have not yet reached their first **NEWFRAME** or **NEXTBAND** escape call.  
   
- 如果應用程式發生列印錯誤或已取消的列印作業時，它必須不會嘗試使用終止作業[EndDoc](#enddoc)或**AbortDoc**類別成員函式`CDC`。 GDI 自動終止之前傳回錯誤值的作業。  
+ If an application encounters a printing error or a canceled print operation, it must not attempt to terminate the operation by using either the [EndDoc](#enddoc) or **AbortDoc** member functions of class `CDC`. GDI automatically terminates the operation before returning the error value.  
   
- 如果應用程式顯示對話方塊，讓使用者取消列印作業，則必須呼叫**AbortDoc**之前終結對話方塊。  
+ If the application displays a dialog box to allow the user to cancel the print operation, it must call **AbortDoc** before destroying the dialog box.  
   
- 如果列印管理員用來開始列印工作，則呼叫**AbortDoc**清除整個多工緩衝處理作業，印表機會收到 nothing。 如果列印管理員不用來開始列印工作，資料可能已傳送至印表機之前**AbortDoc**呼叫。 在此情況下，印表機驅動程式會重設印表機 （自動），和已關閉的列印工作。  
+ If Print Manager was used to start the print job, calling **AbortDoc** erases the entire spool job — the printer receives nothing. If Print Manager was not used to start the print job, the data may have been sent to the printer before **AbortDoc** was called. In this case, the printer driver would have reset the printer (when possible) and closed the print job.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CDC::StartDoc](#startdoc)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::StartDoc](#startdoc).  
   
-##  <a name="abortpath"></a>CDC::AbortPath  
- 關閉並捨棄任何裝置內容中的路徑。  
+##  <a name="abortpath"></a>  CDC::AbortPath  
+ Closes and discards any paths in the device context.  
   
 ```  
 BOOL AbortPath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果在裝置內容中沒有開啟路徑括號，路徑括號會關閉，而路徑會被捨棄。 如果在裝置內容中沒有已關閉的路徑，路徑會被捨棄。  
+### <a name="remarks"></a>Remarks  
+ If there is an open path bracket in the device context, the path bracket is closed and the path is discarded. If there is a closed path in the device context, the path is discarded.  
   
-##  <a name="addmetafilecomment"></a>CDC::AddMetaFileComment  
- 將註解緩衝區中複製到指定的格式增強型中繼檔。  
+##  <a name="addmetafilecomment"></a>  CDC::AddMetaFileComment  
+ Copies the comment from a buffer into a specified enhanced-format metafile.  
   
 ```  
 BOOL AddMetaFileComment(
@@ -570,21 +761,21 @@ BOOL AddMetaFileComment(
     const BYTE* pCommentData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *nDataSize*  
- 指定的註解緩衝區長度，以位元組為單位。  
+ Specifies the length of the comment buffer, in bytes.  
   
  *pCommentData*  
- 指向包含註解的緩衝區。  
+ Points to the buffer that contains the comment.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 註解可能包含任何私人資訊 — 例如，圖片和日期的來源建立。 註解開頭應該是應用程式簽章，後面接著資料。 註解不應包含位置特定資料。 位置特定資料指定位置的記錄，以及它應該不會包含因為一個中繼檔可能會內嵌在另一個中繼檔。 此函式只可以搭配增強型中繼檔。  
+### <a name="remarks"></a>Remarks  
+ A comment may include any private information — for example, the source of the picture and the date it was created. A comment should begin with an application signature, followed by the data. Comments should not contain position-specific data. Position-specific data specifies the location of a record, and it should not be included because one metafile may be embedded within another metafile. This function can only be used with enhanced metafiles.  
   
-##  <a name="alphablend"></a>CDC::AlphaBlend  
- 呼叫此成員函式，以顯示具有透明或半透明的像素的點陣圖。  
+##  <a name="alphablend"></a>  CDC::AlphaBlend  
+ Call this member function to display bitmaps that have transparent or semitransparent pixels.  
   
 ```  
 BOOL AlphaBlend(
@@ -600,45 +791,45 @@ BOOL AlphaBlend(
     BLENDFUNCTION blend);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `xDest`  
- 指定邏輯的單位，目的地矩形左上角的 x 軸座標。  
+ Specifies the x-coordinate, in logical units, of the upper-left corner of the destination rectangle.  
   
  `yDest`  
- 指定邏輯的單位，目的地矩形左上角的 y 軸座標。  
+ Specifies the y-coordinate, in logical units, of the upper-left corner of the destination rectangle.  
   
  `nDestWidth`  
- 指定邏輯單元，目的矩形的寬度。  
+ Specifies the width, in logical units, of the destination rectangle.  
   
  `nDestHeight`  
- 指定邏輯單元，目的矩形的高度。  
+ Specifies the height, in logical units, of the destination rectangle.  
   
  `pSrcDC`  
- 來源裝置內容的指標。  
+ A pointer to the source device context.  
   
  `xSrc`  
- 指定邏輯單元，來源矩形左上角的 x 軸座標。  
+ Specifies the x-coordinate, in logical units, of the upper-left corner of the source rectangle.  
   
  `ySrc`  
- 指定邏輯單元，來源矩形左上角的 y 座標。  
+ Specifies the y-coordinate, in logical units, of the upper-left corner of the source rectangle.  
   
  `nSrcWidth`  
- 指定邏輯單元，來源矩形的寬度。  
+ Specifies the width, in logical units, of the source rectangle.  
   
  `nSrcHeight`  
- 指定邏輯單元，來源矩形的高度。  
+ Specifies the height, in logical units, of the source rectangle.  
   
  *blend*  
- 指定[BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393)結構。  
+ Specifies a [BLENDFUNCTION](http://msdn.microsoft.com/library/windows/desktop/dd183393) structure.  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**如果成功，否則**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if successful; otherwise **FALSE**.  
   
-### <a name="remarks"></a>備註  
- 請參閱[AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需詳細資訊。  
+### <a name="remarks"></a>Remarks  
+ See [AlphaBlend](http://msdn.microsoft.com/library/windows/desktop/dd183351) in the Windows SDK for more information.  
   
-##  <a name="anglearc"></a>CDC::AngleArc  
- 繪製的直線線段與圓弧。  
+##  <a name="anglearc"></a>  CDC::AngleArc  
+ Draws a line segment and an arc.  
   
 ```  
 BOOL AngleArc(
@@ -649,34 +840,34 @@ BOOL AngleArc(
     float fSweepAngle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定邏輯的圓形中心的 x 座標。  
+ Specifies the logical x-coordinate of the center of the circle.  
   
  *y*  
- 指定邏輯的圓形中心的 y 座標。  
+ Specifies the logical y-coordinate of the center of the circle.  
   
  *nRadius*  
- 指定圓形的半徑，以邏輯單位表示。 此值必須是正數。  
+ Specifies the radius of the circle in logical units. This value must be positive.  
   
  *fStartAngle*  
- 指定的開始角度，以度為單位的相對 x 軸。  
+ Specifies the starting angle in degrees relative to the x-axis.  
   
  *fSweepAngle*  
- 指定的掃掠角度，以度為單位的相對的開始角度。  
+ Specifies the sweep angle in degrees relative to the starting angle.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 弧線的開頭會從目前的位置繪製直線線段。 繪製弧形沿著指定的 radius 與管理中心圓形的周邊。 由給定的開始和掃掠角度定義的弧形的長度。  
+### <a name="remarks"></a>Remarks  
+ The line segment is drawn from the current position to the beginning of the arc. The arc is drawn along the perimeter of a circle with the given radius and center. The length of the arc is defined by the given start and sweep angles.  
   
- `AngleArc`將目前位置移到弧形結束點。 這個函式所繪製弧線似乎橢圓形，根據目前的轉換和對應模式而定。 繪製弧形之前, 此函式會繪製直線線段，從目前位置弧線的開頭。 藉由建構繞著指定的中心點的指定半徑虛數圓形繪製弧形。 以逆時針方向從圓形的 x 軸測量的開始角度的度數數目取決於弧線的起點。 結束點同樣位於的測量以逆時針方向從起點的掃掠角度度數。  
+ `AngleArc` moves the current position to the ending point of the arc. The arc drawn by this function may appear to be elliptical, depending on the current transformation and mapping mode. Before drawing the arc, this function draws the line segment from the current position to the beginning of the arc. The arc is drawn by constructing an imaginary circle with the specified radius around the specified center point. The starting point of the arc is determined by measuring counterclockwise from the x-axis of the circle by the number of degrees in the start angle. The ending point is similarly located by measuring counterclockwise from the starting point by the number of degrees in the sweep angle.  
   
- 如果掃掠角度為 360 度大於弧線是清理多次。 此函式會使用目前的畫筆繪製線條。 此圖不會填滿。  
+ If the sweep angle is greater than 360 degrees the arc is swept multiple times. This function draws lines by using the current pen. The figure is not filled.  
   
-##  <a name="arc"></a>CDC::Arc  
- 繪製橢圓形弧線。  
+##  <a name="arc"></a>  CDC::Arc  
+ Draws an elliptical arc.  
   
 ```  
 BOOL Arc(
@@ -696,53 +887,53 @@ BOOL Arc(
     POINT ptEnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定 （以邏輯單位表示），這個周框左上角的 x 座標。  
+ Specifies the x-coordinate of the upper-left corner of the bounding rectangle (in logical units).  
   
  `y1`  
- 指定 （以邏輯單位表示），這個周框左上角的 y 座標。  
+ Specifies the y-coordinate of the upper-left corner of the bounding rectangle (in logical units).  
   
  `x2`  
- 指定 （以邏輯單位表示），這個周框的右下角的 x 座標。  
+ Specifies the x-coordinate of the lower-right corner of the bounding rectangle (in logical units).  
   
  `y2`  
- 指定 （以邏輯單位表示），這個周框的右下角的 y 座標。  
+ Specifies the y-coordinate of the lower-right corner of the bounding rectangle (in logical units).  
   
  *x3*  
- 指定定義弧形的點的 x 座標的起點 （以邏輯單位表示）。 此時沒有完全位於弧線。  
+ Specifies the x-coordinate of the point that defines the arc's starting point (in logical units). This point does not have to lie exactly on the arc.  
   
  `y3`  
- 指定定義弧形的點的 y 座標的起點 （以邏輯單位表示）。 此時沒有完全位於弧線。  
+ Specifies the y-coordinate of the point that defines the arc's starting point (in logical units). This point does not have to lie exactly on the arc.  
   
  `x4`  
- 指定定義弧線的端點 （以邏輯單位表示） 的點的 x 座標。 此時沒有完全位於弧線。  
+ Specifies the x-coordinate of the point that defines the arc's endpoint (in logical units). This point does not have to lie exactly on the arc.  
   
  `y4`  
- 指定定義弧線的端點 （以邏輯單位表示） 的點的 y 座標。 此時沒有完全位於弧線。  
+ Specifies the y-coordinate of the point that defines the arc's endpoint (in logical units). This point does not have to lie exactly on the arc.  
   
  `lpRect`  
- 指定的周框 （以邏輯單位表示）。 您可以傳遞`LPRECT`或[CRect](../../atl-mfc-shared/reference/crect-class.md)這個參數的物件。  
+ Specifies the bounding rectangle (in logical units). You can pass either an `LPRECT` or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object for this parameter.  
   
  `ptStart`  
- 指定定義弧形的點 x 和 y 座標的起點 （以邏輯單位表示）。 此時沒有完全位於弧線。 您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)這個參數的物件。  
+ Specifies the x- and y-coordinates of the point that defines the arc's starting point (in logical units). This point does not have to lie exactly on the arc. You can pass either a [POINT](../../mfc/reference/point-structure1.md) structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object for this parameter.  
   
  `ptEnd`  
- 指定定義的弧形結束點 （以邏輯單位表示） 的點 x 和 y 座標。 此時沒有完全位於弧線。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the x- and y-coordinates of the point that defines the arc's ending point (in logical units). This point does not have to lie exactly on the arc. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用此函式來繪製弧線是所指定的周框定義橢圓形的一個區段。  
+### <a name="remarks"></a>Remarks  
+ The arc drawn by using the function is a segment of the ellipse defined by the specified bounding rectangle.  
   
- 弧線的實際的起點是取自 < 透過指定的起點，這個周框 center 光線與交集橢圓形的點。 弧線的實際結束點是取自 < 透過指定的結束點，這個周框 center 光線與交集橢圓形的點。 以逆時針方向繪製弧形。 弧線不是封閉的圖表，因為它未填入。 寬度和矩形的高度必須大於 2 的單位和小於 32,767 個單位。  
+ The actual starting point of the arc is the point at which a ray drawn from the center of the bounding rectangle through the specified starting point intersects the ellipse. The actual ending point of the arc is the point at which a ray drawn from the center of the bounding rectangle through the specified ending point intersects the ellipse. The arc is drawn in a counterclockwise direction. Since an arc is not a closed figure, it is not filled. Both the width and height of the rectangle must be greater than 2 units and less than 32,767 units.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 29](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#29](../../mfc/codesnippet/cpp/cdc-class_1.cpp)]  
   
-##  <a name="arcto"></a>CDC::ArcTo  
- 繪製橢圓形弧線。  
+##  <a name="arcto"></a>  CDC::ArcTo  
+ Draws an elliptical arc.  
   
 ```  
 BOOL ArcTo(
@@ -762,85 +953,85 @@ BOOL ArcTo(
     POINT ptEnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定 （以邏輯單位表示），這個周框左上角的 x 座標。  
+ Specifies the x-coordinate of the upper-left corner of the bounding rectangle (in logical units).  
   
  `y1`  
- 指定 （以邏輯單位表示），這個周框左上角的 y 座標。  
+ Specifies the y-coordinate of the upper-left corner of the bounding rectangle (in logical units).  
   
  `x2`  
- 指定 （以邏輯單位表示），這個周框的右下角的 x 座標。  
+ Specifies the x-coordinate of the lower-right corner of the bounding rectangle (in logical units).  
   
  `y2`  
- 指定 （以邏輯單位表示），這個周框的右下角的 y 座標。  
+ Specifies the y-coordinate of the lower-right corner of the bounding rectangle (in logical units).  
   
  *x3*  
- 指定定義弧形的點的 x 座標的起點 （以邏輯單位表示）。 此時沒有完全位於弧線。  
+ Specifies the x-coordinate of the point that defines the arc's starting point (in logical units). This point does not have to lie exactly on the arc.  
   
  `y3`  
- 指定定義弧形的點的 y 座標的起點 （以邏輯單位表示）。 此時沒有完全位於弧線。  
+ Specifies the y-coordinate of the point that defines the arc's starting point (in logical units). This point does not have to lie exactly on the arc.  
   
  `x4`  
- 指定定義弧線的端點 （以邏輯單位表示） 的點的 x 座標。 此時沒有完全位於弧線。  
+ Specifies the x-coordinate of the point that defines the arc's endpoint (in logical units). This point does not have to lie exactly on the arc.  
   
  `y4`  
- 指定定義弧線的端點 （以邏輯單位表示） 的點的 y 座標。 此時沒有完全位於弧線。  
+ Specifies the y-coordinate of the point that defines the arc's endpoint (in logical units). This point does not have to lie exactly on the arc.  
   
  `lpRect`  
- 指定的周框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](../../mfc/reference/rect-structure1.md)資料結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)這個參數的物件。  
+ Specifies the bounding rectangle (in logical units). You can pass either a pointer to a [RECT](../../mfc/reference/rect-structure1.md) data structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object for this parameter.  
   
  `ptStart`  
- 指定定義弧形的點 x 和 y 座標的起點 （以邏輯單位表示）。 此時沒有完全位於弧線。 您可以傳遞[點](../../mfc/reference/point-structure1.md)資料結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)這個參數的物件。  
+ Specifies the x- and y-coordinates of the point that defines the arc's starting point (in logical units). This point does not have to lie exactly on the arc. You can pass either a [POINT](../../mfc/reference/point-structure1.md) data structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object for this parameter.  
   
  `ptEnd`  
- 指定定義的弧形結束點 （以邏輯單位表示） 的點 x 和 y 座標。 此時沒有完全位於弧線。 您可以傳遞**點**資料結構或`CPoint`這個參數的物件。  
+ Specifies the x- and y-coordinates of the point that defines the arc's ending point (in logical units). This point does not have to lie exactly on the arc. You can pass either a **POINT** data structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式是類似於`CDC::Arc`，不同之處在於會更新目前的位置。 點 ( `x1`， `y1`) 和 ( `x2`， `y2`) 指定的周框。 所指定的周框的橢圓形定義曲線的弧線。 弧線以逆時針方向延伸 （預設弧形方向） 從它交集星形行至週框的中心點 ( *x3*， `y3`)。 它與相交，這個周框到中央的星形行弧形結束 ( `x4`， `y4`)。 如果的起點和終點是相同的則會完整橢圓形繪製。  
+### <a name="remarks"></a>Remarks  
+ This function is similar to `CDC::Arc`, except that the current position is updated. The points ( `x1`, `y1`) and ( `x2`, `y2`) specify the bounding rectangle. An ellipse formed by the given bounding rectangle defines the curve of the arc. The arc extends counterclockwise (the default arc direction) from the point where it intersects the radial line from the center of the bounding rectangle to ( *x3*, `y3`). The arc ends where it intersects the radial line from the center of the bounding rectangle to ( `x4`, `y4`). If the starting point and ending point are the same, a complete ellipse is drawn.  
   
- 線條會繪製弧線的起點從目前的位置。 如果沒有發生錯誤，目前的位置會設定為弧線的終點。 使用目前的畫筆; 繪製弧形未填入。  
+ A line is drawn from the current position to the starting point of the arc. If no error occurs, the current position is set to the ending point of the arc. The arc is drawn using the current pen; it is not filled.  
   
-##  <a name="attach"></a>CDC::Attach  
- 使用此成員函式來附加`hDC`至`CDC`物件。  
+##  <a name="attach"></a>  CDC::Attach  
+ Use this member function to attach an `hDC` to the `CDC` object.  
   
 ```  
 BOOL Attach(HDC hDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- Windows 裝置內容。  
+ A Windows device context.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `hDC`會儲存在同時`m_hDC`，輸出裝置內容中，然後在`m_hAttribDC`，屬性的裝置內容。  
+### <a name="remarks"></a>Remarks  
+ The `hDC` is stored in both `m_hDC`, the output device context, and in `m_hAttribDC`, the attribute device context.  
   
-##  <a name="beginpath"></a>Cdc:: beginpath  
- 裝置內容中開啟的路徑括號。  
+##  <a name="beginpath"></a>  CDC::BeginPath  
+ Opens a path bracket in the device context.  
   
 ```  
 BOOL BeginPath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 開啟路徑括號後，應用程式可以開始呼叫 GDI 繪製函式定義之間的點的路徑中。 應用程式可以藉由呼叫關閉開啟的路徑括號`EndPath`成員函式。 當應用程式呼叫`BeginPath`，會捨棄任何先前的路徑。  
+### <a name="remarks"></a>Remarks  
+ After a path bracket is open, an application can begin calling GDI drawing functions to define the points that lie in the path. An application can close an open path bracket by calling the `EndPath` member function. When an application calls `BeginPath`, any previous paths are discarded.  
   
- 請參閱[BeginPath](http://msdn.microsoft.com/library/windows/desktop/dd183363)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]點定義路徑中的繪圖函式的清單。  
+ See [BeginPath](http://msdn.microsoft.com/library/windows/desktop/dd183363) in the Windows SDK for a list of the drawing functions that define points in a path.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#30](../../mfc/codesnippet/cpp/cdc-class_2.cpp)]  
   
-##  <a name="bitblt"></a>Cdc:: bitblt  
- 將點陣圖從來源裝置內容複製到這個目前的裝置內容。  
+##  <a name="bitblt"></a>  CDC::BitBlt  
+ Copies a bitmap from the source device context to this current device context.  
   
 ```  
 BOOL BitBlt(
@@ -854,61 +1045,61 @@ BOOL BitBlt(
     DWORD dwRop);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定目的地矩形的左上角的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the destination rectangle.  
   
  *y*  
- 指定目的地矩形的左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the destination rectangle.  
   
  `nWidth`  
- 指定目的地矩形和來源點陣圖的寬度 （以邏輯單位表示）。  
+ Specifies the width (in logical units) of the destination rectangle and source bitmap.  
   
  `nHeight`  
- 指定目的地矩形和來源點陣圖的高度 （以邏輯單位表示）。  
+ Specifies the height (in logical units) of the destination rectangle and source bitmap.  
   
  `pSrcDC`  
- 指標`CDC`識別點陣圖會複製來源裝置內容的物件。 它必須是**NULL**如果*dwRop*指定不包含來源點陣作業。  
+ Pointer to a `CDC` object that identifies the device context from which the bitmap will be copied. It must be **NULL** if *dwRop* specifies a raster operation that does not include a source.  
   
  `xSrc`  
- 指定邏輯來源點陣圖的左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the source bitmap.  
   
  `ySrc`  
- 指定的來源點陣圖的左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the source bitmap.  
   
  *dwRop*  
- 指定待執行的點陣作業。 點陣作業程式碼定義 GDI 結合在輸出作業牽涉到目前的筆刷、 可能的來源點陣圖和目的地點陣圖中色彩的方式。 請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]的點陣作業程式碼的清單*dwRop*及其描述  
+ Specifies the raster operation to be performed. Raster-operation codes define how the GDI combines colors in output operations that involve a current brush, a possible source bitmap, and a destination bitmap. See [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) in the Windows SDK for a list of the raster-operation codes for *dwRop* and their descriptions  
   
- 如需完整的點陣作業程式碼清單，請參閱[點陣作業程式碼有關](http://msdn.microsoft.com/library/windows/desktop/dd162892)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For a complete list of raster-operation codes, see [About Raster Operation Codes](http://msdn.microsoft.com/library/windows/desktop/dd162892) in the Windows SDK.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 應用程式可以在 windows 或工作區，確保位元組界限上的對齊`BitBlt`位元組對齊矩形上發生的作業。 (設定**CS_BYTEALIGNWINDOW**或**CS_BYTEALIGNCLIENT**旗標，當您註冊視窗類別。)  
+### <a name="remarks"></a>Remarks  
+ The application can align the windows or client areas on byte boundaries to ensure that the `BitBlt` operations occur on byte-aligned rectangles. (Set the **CS_BYTEALIGNWINDOW** or **CS_BYTEALIGNCLIENT** flags when you register the window classes.)  
   
- `BitBlt`位元組對齊矩形上的作業會比 new-object 快得`BitBlt`上繪製的矩形，不是位元組對齊的作業。 如果您想要指定類別樣式，例如您自己的裝置內容的位元組對齊，您必須註冊視窗類別而不需依賴 Microsoft Foundation classes，為您執行。 使用全域函式[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)。  
+ `BitBlt` operations on byte-aligned rectangles are considerably faster than `BitBlt` operations on rectangles that are not byte aligned. If you want to specify class styles such as byte-alignment for your own device context, you will have to register a window class rather than relying on the Microsoft Foundation classes to do it for you. Use the global function [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass).  
   
- GDI 轉換`nWidth`和`nHeight`、 一次使用目的地裝置內容，以及一次使用 來源裝置內容。 如果不相符結果的範圍，GDI 就會使用 Windows`StretchBlt`来壓縮還是要延伸的來源點陣圖，視函式。  
+ GDI transforms `nWidth` and `nHeight`, once by using the destination device context, and once by using the source device context. If the resulting extents do not match, GDI uses the Windows `StretchBlt` function to compress or stretch the source bitmap as necessary.  
   
- 如果目的地、 來源和模式點陣圖沒有相同的色彩格式`BitBlt`函式轉換來源和模式點陣圖以符合目的地。 轉換中使用的前景和背景色彩的目的地點陣圖。  
+ If destination, source, and pattern bitmaps do not have the same color format, the `BitBlt` function converts the source and pattern bitmaps to match the destination. The foreground and background colors of the destination bitmap are used in the conversion.  
   
- 當`BitBlt`函式會將單色點陣圖轉換成色彩、 將白色位元 (1) 的背景色彩與黑色的位元 (0) 的前景色彩。 可用的目的地裝置內容的前景和背景色彩。 若要將色彩轉換為單色，`BitBlt`將符合背景色彩為白色像素，並將其他所有像素設為黑色。 `BitBlt`若要將色彩轉換為單色，會使用彩色裝置內容的前景和背景色彩。  
+ When the `BitBlt` function converts a monochrome bitmap to color, it sets white bits (1) to the background color and black bits (0) to the foreground color. The foreground and background colors of the destination device context are used. To convert color to monochrome, `BitBlt` sets pixels that match the background color to white and sets all other pixels to black. `BitBlt` uses the foreground and background colors of the color device context to convert from color to monochrome.  
   
- 請注意，並非所有的裝置內容支援`BitBlt`。 若要檢查是否支援給定的裝置內容`BitBlt`，使用`GetDeviceCaps`成員函式，並指定**cdc:: GETDEVICECAPS**索引。  
+ Note that not all device contexts support `BitBlt`. To check whether a given device context does support `BitBlt`, use the `GetDeviceCaps` member function and specify the **RASTERCAPS** index.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CDC::CreateCompatibleDC](#createcompatibledc)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::CreateCompatibleDC](#createcompatibledc).  
   
-##  <a name="cdc"></a>CDC::CDC  
- 建構 `CDC` 物件。  
+##  <a name="cdc"></a>  CDC::CDC  
+ Constructs a `CDC` object.  
   
 ```  
 CDC();
 ```  
   
-##  <a name="chord"></a>CDC::Chord  
- 繪製套索鍵 （橢圓形和直線線段的交集所繫結到封閉的圖表）。  
+##  <a name="chord"></a>  CDC::Chord  
+ Draws a chord (a closed figure bounded by the intersection of an ellipse and a line segment).  
   
 ```  
 BOOL Chord(
@@ -928,92 +1119,92 @@ BOOL Chord(
     POINT ptEnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定弦左上角 x 座標之週框 （以邏輯單位表示）。  
+ Specifies the x-coordinate of the upper-left corner of the chord's bounding rectangle (in logical units).  
   
  `y1`  
- 指定弦左上角 y 座標之週框 （以邏輯單位表示）。  
+ Specifies the y-coordinate of the upper-left corner of the chord's bounding rectangle (in logical units).  
   
  `x2`  
- 指定弦右下角的 x 座標之週框 （以邏輯單位表示）。  
+ Specifies the x-coordinate of the lower-right corner of the chord's bounding rectangle (in logical units).  
   
  `y2`  
- 指定弦右下角的 y 座標之週框 （以邏輯單位表示）。  
+ Specifies the y-coordinate of the lower-right corner of the chord's bounding rectangle (in logical units).  
   
  *x3*  
- 指定定義弦點的 x 座標的起點 （以邏輯單位表示）。  
+ Specifies the x-coordinate of the point that defines the chord's starting point (in logical units).  
   
  `y3`  
- 指定定義弦點的 y 座標的起點 （以邏輯單位表示）。  
+ Specifies the y-coordinate of the point that defines the chord's starting point (in logical units).  
   
  `x4`  
- 指定定義套索鍵端點 （以邏輯單位表示） 的點的 x 座標。  
+ Specifies the x-coordinate of the point that defines the chord's endpoint (in logical units).  
   
  `y4`  
- 指定定義套索鍵端點 （以邏輯單位表示） 的點的 y 座標。  
+ Specifies the y-coordinate of the point that defines the chord's endpoint (in logical units).  
   
  `lpRect`  
- 指定的周框 （以邏輯單位表示）。 您可以傳遞`LPRECT`或[CRect](../../atl-mfc-shared/reference/crect-class.md)這個參數的物件。  
+ Specifies the bounding rectangle (in logical units). You can pass either a `LPRECT` or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object for this parameter.  
   
  `ptStart`  
- 指定定義弦點 x 和 y 座標的起點 （以邏輯單位表示）。 此時沒有完全位於弦。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the x- and y-coordinates of the point that defines the chord's starting point (in logical units). This point does not have to lie exactly on the chord. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
  `ptEnd`  
- 指定定義套索鍵的結束點 （以邏輯單位表示） 的點 x 和 y 座標。 此時沒有完全位於弦。 您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)這個參數的物件。  
+ Specifies the x- and y-coordinates of the point that defines the chord's ending point (in logical units). This point does not have to lie exactly on the chord. You can pass either a [POINT](../../mfc/reference/point-structure1.md) structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- ( `x1`， `y1`) 和 ( `x2`， `y2`) 參數的左上角和右下角，分別指定週框是個套索鍵一部分的橢圓形的矩形。 ( *X3*， `y3`) 和 ( `x4`， `y4`) 參數指定的行之交集橢圓形的端點。 弦會使用所選的畫筆來繪製，並使用選取的筆刷填滿。  
+### <a name="remarks"></a>Remarks  
+ The ( `x1`, `y1`) and ( `x2`, `y2`) parameters specify the upper-left and lower-right corners, respectively, of a rectangle bounding the ellipse that is part of the chord. The ( *x3*, `y3`) and ( `x4`, `y4`) parameters specify the endpoints of a line that intersects the ellipse. The chord is drawn by using the selected pen and filled by using the selected brush.  
   
- 所繪製的圖`Chord`函式最多至延伸，但不包含右側和底部的座標。 這表示圖的高度是`y2`  -  `y1`圖的寬度，且`x2`  -  `x1`。  
+ The figure drawn by the `Chord` function extends up to, but does not include the right and bottom coordinates. This means that the height of the figure is `y2` - `y1` and the width of the figure is `x2` - `x1`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 31](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#31](../../mfc/codesnippet/cpp/cdc-class_3.cpp)]  
   
-##  <a name="closefigure"></a>CDC::CloseFigure  
- 關閉開放的圖表，在路徑中。  
+##  <a name="closefigure"></a>  CDC::CloseFigure  
+ Closes an open figure in a path.  
   
 ```  
 BOOL CloseFigure();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 函式會關閉此圖中繪製一條線從目前位置的第一個圖中點 (通常會將最新的呼叫所指定的點`MoveTo`成員函式) 並連接所使用的線條聯結樣式的行。 如果使用關閉圖`LineTo`成員函式，而不是`CloseFigure`，端點會用來建立而不是聯結的角。 `CloseFigure`只能呼叫如果在裝置內容中開啟路徑括號。  
+### <a name="remarks"></a>Remarks  
+ The function closes the figure by drawing a line from the current position to the first point of the figure (usually, the point specified by the most recent call to the `MoveTo` member function) and connects the lines by using the line join style. If a figure is closed by using the `LineTo` member function instead of `CloseFigure`, end caps are used to create the corner instead of a join. `CloseFigure` should only be called if there is an open path bracket in the device context.  
   
- 在路徑中的圖形會開啟，除非它已明確關閉使用此函式。 （即使目前點和圖的起點是相同的圖可以是開啟）。任何線條或曲線加入路徑後`CloseFigure`開始新的圖形。  
+ A figure in a path is open unless it is explicitly closed by using this function. (A figure can be open even if the current point and the starting point of the figure are the same.) Any line or curve added to the path after `CloseFigure` starts a new figure.  
   
-##  <a name="createcompatibledc"></a>CDC::CreateCompatibleDC  
- 建立記憶體裝置內容與所指定的裝置相容`pDC`。  
+##  <a name="createcompatibledc"></a>  CDC::CreateCompatibleDC  
+ Creates a memory device context that is compatible with the device specified by `pDC`.  
   
 ```  
 BOOL CreateCompatibleDC(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- 裝置內容的指標。 如果`pDC`是**NULL**，函式會建立與系統顯示記憶體裝置內容。  
+ A pointer to a device context. If `pDC` is **NULL**, the function creates a memory device context that is compatible with the system display.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 記憶體裝置內容是記憶體的表示顯示介面區塊。 它可以用來準備記憶體中的映像，然後再將它們複製到相容的裝置的實際裝置介面。  
+### <a name="remarks"></a>Remarks  
+ A memory device context is a block of memory that represents a display surface. It can be used to prepare images in memory before copying them to the actual device surface of the compatible device.  
   
- 建立記憶體裝置內容時，GDI 會自動為它選取 1-1 的單色股票點陣圖。 GDI 輸出函式可以搭配記憶體裝置內容，只有當已建立並選取放入該內容的點陣圖。  
+ When a memory device context is created, GDI automatically selects a 1-by-1 monochrome stock bitmap for it. GDI output functions can be used with a memory device context only if a bitmap has been created and selected into that context.  
   
- 此函式只可以用於建立支援點陣作業的裝置相容的裝置內容。 請參閱[cdc:: bitblt](#bitblt)成員函式，如需有關裝置內容之間的位元區塊傳輸。 若要判斷裝置內容是否支援點陣作業，請參閱**RC_BITBLT**點陣成員函式中的功能`CDC::GetDeviceCaps`。  
+ This function can only be used to create compatible device contexts for devices that support raster operations. See the [CDC::BitBlt](#bitblt) member function for information regarding bit-block transfers between device contexts. To determine whether a device context supports raster operations, see the **RC_BITBLT** raster capability in the member function `CDC::GetDeviceCaps`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 32](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#32](../../mfc/codesnippet/cpp/cdc-class_4.cpp)]  
   
-##  <a name="createdc"></a>CDC::CreateDC  
- 建立指定之裝置的裝置內容。  
+##  <a name="createdc"></a>  CDC::CreateDC  
+ Creates a device context for the specified device.  
   
 ```  
 BOOL CreateDC(
@@ -1023,29 +1214,29 @@ BOOL CreateDC(
     const void* lpInitData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszDriverName`  
- 指向以 null 終止的字串，指定裝置驅動程式 (例如，"EPSON") 的檔名 （不含副檔名）。 您也可以傳遞`CString`這個參數的物件。  
+ Points to a null-terminated string that specifies the filename (without extension) of the device driver (for example, "EPSON"). You can also pass a `CString` object for this parameter.  
   
  `lpszDeviceName`  
- 指向以 null 終止的字串，指定必須支援特定裝置 （例如，"EPSON FX-80"） 的名稱。 `lpszDeviceName`如果模組支援多個裝置，會使用參數。 您也可以傳遞`CString`這個參數的物件。  
+ Points to a null-terminated string that specifies the name of the specific device to be supported (for example, "EPSON FX-80"). The `lpszDeviceName` parameter is used if the module supports more than one device. You can also pass a `CString` object for this parameter.  
   
  `lpszOutput`  
- 指向以 null 終止的字串，指定實體輸出媒介 （檔或輸出連接埠） 的檔案或裝置名稱。 您也可以傳遞`CString`這個參數的物件。  
+ Points to a null-terminated string that specifies the file or device name for the physical output medium (file or output port). You can also pass a `CString` object for this parameter.  
   
  `lpInitData`  
- 指向`DEVMODE`包含裝置驅動程式的特定裝置的初始化資料結構。 Windows **DocumentProperties**函式會擷取指定裝置自動填入這個結構。 `lpInitData`參數必須是**NULL**裝置驅動程式是否使用使用者已透過控制台所指定的預設初始化 （如果有的話）。  
+ Points to a `DEVMODE` structure containing device-specific initialization data for the device driver. The Windows **DocumentProperties** function retrieves this structure filled in for a given device. The `lpInitData` parameter must be **NULL** if the device driver is to use the default initialization (if any) specified by the user through the Control Panel.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 列印。如果 H 標頭檔，則需要[DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565)使用結構。  
+### <a name="remarks"></a>Remarks  
+ The PRINT.H header file is required if the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure is used.  
   
- 裝置名稱遵循下列慣例︰ 結束的冒號 （:），建議使用，但並非必要。 Windows 會去除終止的冒號，裝置名稱結尾冒號會對應至連接埠與不含冒號相同的名稱相同。 驅動程式和連接埠的名稱不能包含開頭或尾端空格。 GDI 輸出函式不能與內容資訊。  
+ Device names follow these conventions: an ending colon (:) is recommended, but optional. Windows strips the terminating colon so that a device name ending with a colon is mapped to the same port as the same name without a colon. The driver and port names must not contain leading or trailing spaces. GDI output functions cannot be used with information contexts.  
   
-##  <a name="createic"></a>CDC::CreateIC  
- 建立指定之裝置的資訊內容。  
+##  <a name="createic"></a>  CDC::CreateIC  
+ Creates an information context for the specified device.  
   
 ```  
 BOOL CreateIC(
@@ -1055,82 +1246,82 @@ BOOL CreateIC(
     const void* lpInitData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszDriverName`  
- 指向以 null 終止的字串，指定裝置驅動程式 (例如，"EPSON") 的檔名 （不含副檔名）。 您可以傳遞`CString`這個參數的物件。  
+ Points to a null-terminated string that specifies the filename (without extension) of the device driver (for example, "EPSON"). You can pass a `CString` object for this parameter.  
   
  `lpszDeviceName`  
- 指向以 null 終止的字串，指定必須支援特定裝置 （例如，"EPSON FX-80"） 的名稱。 `lpszDeviceName`如果模組支援多個裝置，會使用參數。 您可以傳遞`CString`這個參數的物件。  
+ Points to a null-terminated string that specifies the name of the specific device to be supported (for example, "EPSON FX-80"). The `lpszDeviceName` parameter is used if the module supports more than one device. You can pass a `CString` object for this parameter.  
   
  `lpszOutput`  
- 指向以 null 終止的字串，指定實體輸出媒介 （檔案或連接埠） 的檔案或裝置名稱。 您可以傳遞`CString`這個參數的物件。  
+ Points to a null-terminated string that specifies the file or device name for the physical output medium (file or port). You can pass a `CString` object for this parameter.  
   
  `lpInitData`  
- 裝置驅動程式的特定裝置的初始化資料點。 `lpInitData`參數必須是**NULL**裝置驅動程式是否使用使用者已透過控制台所指定的預設初始化 （如果有的話）。 請參閱`CreateDC`裝置專屬的初始化資料格式。  
+ Points to device-specific initialization data for the device driver. The `lpInitData` parameter must be **NULL** if the device driver is to use the default initialization (if any) specified by the user through the Control Panel. See `CreateDC` for the data format for device-specific initialization.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 資訊內容提供可快速取得裝置的相關資訊，而建立的裝置內容。  
+### <a name="remarks"></a>Remarks  
+ The information context provides a fast way to get information about the device without creating a device context.  
   
- 裝置名稱遵循下列慣例︰ 結束的冒號 （:），建議使用，但並非必要。 Windows 會去除終止的冒號，裝置名稱結尾冒號會對應至連接埠與不含冒號相同的名稱相同。 驅動程式和連接埠的名稱不能包含開頭或尾端空格。 GDI 輸出函式不能與內容資訊。  
+ Device names follow these conventions: an ending colon (:) is recommended, but optional. Windows strips the terminating colon so that a device name ending with a colon is mapped to the same port as the same name without a colon. The driver and port names must not contain leading or trailing spaces. GDI output functions cannot be used with information contexts.  
   
-##  <a name="deletedc"></a>CDC::DeleteDC  
- 一般情況下，請勿呼叫此函式。解構函式會替您完成。  
+##  <a name="deletedc"></a>  CDC::DeleteDC  
+ In general, do not call this function; the destructor will do it for you.  
   
 ```  
 BOOL DeleteDC();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function completed successfully; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `DeleteDC`成員函式會刪除相關聯的 Windows 裝置內容`m_hDC`在目前`CDC`物件。 如果這個`CDC`物件是最後一個作用中的裝置內容指定的裝置、 裝置就會通知並釋放所有裝置使用的儲存體與系統資源。  
+### <a name="remarks"></a>Remarks  
+ The `DeleteDC` member function deletes the Windows device contexts that are associated with `m_hDC` in the current `CDC` object. If this `CDC` object is the last active device context for a given device, the device is notified and all storage and system resources used by the device are released.  
   
- 應用程式不應該呼叫`DeleteDC`若已選取的物件放入裝置內容。 於刪除之前物件必須先選取完裝置內容。  
+ An application should not call `DeleteDC` if objects have been selected into the device context. Objects must first be selected out of the device context before it is deleted.  
   
- 應用程式就不能刪除裝置內容控制代碼的取得方式呼叫[cwnd:: Getdc](../../mfc/reference/cwnd-class.md#getdc)。 相反地，它必須呼叫[cwnd:: Releasedc](../../mfc/reference/cwnd-class.md#releasedc)釋放裝置內容。 [CClientDC](../../mfc/reference/cclientdc-class.md)和[CWindowDC](../../mfc/reference/cwindowdc-class.md)類別，可將這項功能。  
+ An application must not delete a device context whose handle was obtained by calling [CWnd::GetDC](../../mfc/reference/cwnd-class.md#getdc). Instead, it must call [CWnd::ReleaseDC](../../mfc/reference/cwnd-class.md#releasedc) to free the device context. The [CClientDC](../../mfc/reference/cclientdc-class.md) and [CWindowDC](../../mfc/reference/cwindowdc-class.md) classes are provided to wrap this functionality.  
   
- `DeleteDC`函式通常用來刪除裝置內容，以建立[CreateDC](#createdc)， [CreateIC](#createic)，或[CreateCompatibleDC](#createcompatibledc)。  
+ The `DeleteDC` function is generally used to delete device contexts created with [CreateDC](#createdc), [CreateIC](#createic), or [CreateCompatibleDC](#createcompatibledc).  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)。  
+### <a name="example"></a>Example  
+  See the example for [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).  
   
-##  <a name="deletetempmap"></a>CDC::DeleteTempMap  
- 自動呼叫`CWinApp`閒置時間處理常式，`DeleteTempMap`刪除任何暫存`CDC`所建立的物件`FromHandle`，但不會終結裝置內容控制代碼 ( `hDC`s) 暫時聯`CDC`物件。  
+##  <a name="deletetempmap"></a>  CDC::DeleteTempMap  
+ Called automatically by the `CWinApp` idle-time handler, `DeleteTempMap` deletes any temporary `CDC` objects created by `FromHandle`, but does not destroy the device context handles ( `hDC`s) temporarily associated with the `CDC` objects.  
   
 ```  
 static void PASCAL DeleteTempMap();
 ```  
   
-##  <a name="detach"></a>CDC::Detach  
- 呼叫此函式可卸離`m_hDC`（輸出裝置內容） 從`CDC`物件，並請同時設定`m_hDC`和`m_hAttribDC`至**NULL**。  
+##  <a name="detach"></a>  CDC::Detach  
+ Call this function to detach `m_hDC` (the output device context) from the `CDC` object and set both `m_hDC` and `m_hAttribDC` to **NULL**.  
   
 ```  
 HDC Detach();
 ```  
   
-### <a name="return-value"></a>傳回值  
- Windows 裝置內容。  
+### <a name="return-value"></a>Return Value  
+ A Windows device context.  
   
-##  <a name="dptohimetric"></a>CDC::DPtoHIMETRIC  
- 使用此函式，當您授與**HIMETRIC**至 OLE，轉換至的像素為單位的大小**HIMETRIC**。  
+##  <a name="dptohimetric"></a>  CDC::DPtoHIMETRIC  
+ Use this function when you give **HIMETRIC** sizes to OLE, converting pixels to **HIMETRIC**.  
   
 ```  
 void DPtoHIMETRIC(LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpSize`  
- 指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ Points to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure or [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 裝置內容物件的對應模式是否`MM_LOENGLISH`， `MM_HIENGLISH`， `MM_LOMETRIC`，或`MM_HIMETRIC`，則轉換會根據實體英吋的像素數目。 如果對應模式是一種其他非限制模式 (例如`MM_TEXT`)，然後轉換為基礎的邏輯英吋的像素數目。  
+### <a name="remarks"></a>Remarks  
+ If the mapping mode of the device context object is `MM_LOENGLISH`, `MM_HIENGLISH`, `MM_LOMETRIC`, or `MM_HIMETRIC`, then the conversion is based on the number of pixels in the physical inch. If the mapping mode is one of the other non-constrained modes (e.g., `MM_TEXT`), then the conversion is based on the number of pixels in the logical inch.  
   
-##  <a name="dptolp"></a>CDC::DPtoLP  
- 將裝置單位轉換成邏輯單元。  
+##  <a name="dptolp"></a>  CDC::DPtoLP  
+ Converts device units into logical units.  
   
 ```  
 void DPtoLP(
@@ -1141,24 +1332,24 @@ void DPtoLP(LPRECT lpRect) const;
 void DPtoLP(LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
+ Points to an array of [POINT](../../mfc/reference/point-structure1.md) structures or [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) objects.  
   
  `nCount`  
- 陣列中的點數目。  
+ The number of points in the array.  
   
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。 這個參數會用於簡單的情況下，將一個矩形從裝置點轉換為邏輯點。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object. This parameter is used for the simple case of converting one rectangle from device points to logical points.  
   
  `lpSize`  
- 指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ Points to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure or [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 函式會在每個點的座標或維度的大小，從裝置座標系統到 GDI 的邏輯座標系統的對應。 轉換取決於目前的對應模式和來源的範圍，以及裝置的視窗和檢視區的設定。  
+### <a name="remarks"></a>Remarks  
+ The function maps the coordinates of each point, or dimension of a size, from the device coordinate system into GDI's logical coordinate system. The conversion depends on the current mapping mode and the settings of the origins and extents for the device's window and viewport.  
   
-##  <a name="draw3drect"></a>CDC::Draw3dRect  
- 呼叫此成員函式，來繪製三維的矩形。  
+##  <a name="draw3drect"></a>  CDC::Draw3dRect  
+ Call this member function to draw a three-dimensional rectangle.  
   
 ```  
 void Draw3dRect(
@@ -1176,36 +1367,36 @@ void Draw3dRect(
     COLORREF clrBottomRight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指定的周框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)這個參數的物件。  
+ Specifies the bounding rectangle (in logical units). You can pass either a pointer to a [RECT](../../mfc/reference/rect-structure1.md) structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object for this parameter.  
   
  *clrTopLeft*  
- 指定三維矩形上方和左方側邊的色彩。  
+ Specifies the color of the top and left sides of the three-dimensional rectangle.  
   
  `clrBottomRight`  
- 指定底部的色彩和三維矩形左右兩側。  
+ Specifies the color of the bottom and right sides of the three-dimensional rectangle.  
   
  *x*  
- 指定邏輯三維矩形左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the three-dimensional rectangle.  
   
  *y*  
- 指定邏輯三維矩形左上角的 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the three-dimensional rectangle.  
   
- /cx  
- 指定三維矩形的寬度。  
+ cx  
+ Specifies the width of the three-dimensional rectangle.  
   
  cy  
- 指定三維矩形的高度。  
+ Specifies the height of the three-dimensional rectangle.  
   
-### <a name="remarks"></a>備註  
- 搭配線上方和左側中所指定的色彩繪製矩形*clrTopLeft*下方和右側中所指定的色彩`clrBottomRight`。  
+### <a name="remarks"></a>Remarks  
+ The rectangle will be drawn with the top and left sides in the color specified by *clrTopLeft* and the bottom and right sides in the color specified by `clrBottomRight`.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 33](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#33](../../mfc/codesnippet/cpp/cdc-class_5.cpp)]  
   
-##  <a name="drawdragrect"></a>CDC::DrawDragRect  
- 呼叫此成員函式重複重繪拖曳矩形。  
+##  <a name="drawdragrect"></a>  CDC::DrawDragRect  
+ Call this member function repeatedly to redraw a drag rectangle.  
   
 ```  
 void DrawDragRect(
@@ -1217,32 +1408,32 @@ void DrawDragRect(
     CBrush* pBrushLast = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定矩形的邏輯座標 — 在此情況下，重新繪製的矩形的結束位置。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the logical coordinates of a rectangle — in this case, the end position of the rectangle being redrawn.  
   
  `size`  
- 會指定從左上角的外框左上角的矩形內部的框線 （也就是框線的粗細）。  
+ Specifies the displacement from the top-left corner of the outer border to the top-left corner of the inner border (that is, the thickness of the border) of a rectangle.  
   
  `lpRectLast`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定矩形的位置的邏輯座標 — 在此情況下，重新繪製的矩形的原始位置。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the logical coordinates of the position of a rectangle — in this case, the original position of the rectangle being redrawn.  
   
  *sizeLast*  
- 會指定從左上角的外框左上角的原始重新繪製的矩形內部的框線 （也就是框線的粗細）。  
+ Specifies the displacement from the top-left corner of the outer border to the top-left corner of the inner border (that is, the thickness of the border) of the original rectangle being redrawn.  
   
  `pBrush`  
- 筆刷物件指標。 設定為**NULL**使用預設半色調筆刷。  
+ Pointer to a brush object. Set to **NULL** to use the default halftone brush.  
   
  *pBrushLast*  
- 使用的最後一筆刷物件指標。 設定為**NULL**使用預設半色調筆刷。  
+ Pointer to the last brush object used. Set to **NULL** to use the default halftone brush.  
   
-### <a name="remarks"></a>備註  
- 以呼叫它在迴圈中您才能將提供的視覺化回饋取樣滑鼠位置。 當您呼叫`DrawDragRect`，先前的矩形會被清除，而且新繪製。 例如，以使用者的身分在畫面上中, 拖曳矩形`DrawDragRect`會清除原始矩形，然後重繪其新位置中的新建一個。 根據預設，`DrawDragRect`消除閃爍，並建立順暢移動矩形的外觀，使用半色調筆刷繪製的矩形。  
+### <a name="remarks"></a>Remarks  
+ Call it in a loop as you sample mouse position, in order to give visual feedback. When you call `DrawDragRect`, the previous rectangle is erased and a new one is drawn. For example, as the user drags a rectangle across the screen, `DrawDragRect` will erase the original rectangle and redraw a new one in its new position. By default, `DrawDragRect` draws the rectangle by using a halftone brush to eliminate flicker and to create the appearance of a smoothly moving rectangle.  
   
- 第一次呼叫`DrawDragRect`、`lpRectLast`參數應該是**NULL**。  
+ The first time you call `DrawDragRect`, the `lpRectLast` parameter should be **NULL**.  
   
-##  <a name="drawedge"></a>CDC::DrawEdge  
- 呼叫此成員函式，來繪製指定的型別和樣式的矩形邊緣。  
+##  <a name="drawedge"></a>  CDC::DrawEdge  
+ Call this member function to draw the edges of a rectangle of the specified type and style.  
   
 ```  
 BOOL DrawEdge(
@@ -1251,21 +1442,21 @@ BOOL DrawEdge(
     UINT nFlags);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指標**RECT**結構，其中包含矩形的邏輯座標。  
+ A pointer to a **RECT** structure that contains the logical coordinates of the rectangle.  
   
  *nEdge*  
- 指定要繪製的內部和外部邊緣類型。 這個參數必須是一個內部框線旗標和一個外框旗標的組合。 請參閱[DrawEdge](http://msdn.microsoft.com/library/windows/desktop/dd162477)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]參數類型的資料表。  
+ Specifies the type of inner and outer edge to draw. This parameter must be a combination of one inner-border flag and one outer-border flag. See [DrawEdge](http://msdn.microsoft.com/library/windows/desktop/dd162477) in the Windows SDK for a table of the parameter's types.  
   
  `nFlags`  
- 指定要繪製的框線類型的旗標。 請參閱`DrawEdge`中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]參數值的資料表。 如斜**BF_RECT**旗標指定的結束點的矩形參數所限定的向量。  
+ The flags that specify the type of border to be drawn. See `DrawEdge` in the Windows SDK for a table of the parameter's values. For diagonal lines, the **BF_RECT** flags specify the end point of the vector bounded by the rectangle parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="drawescape"></a>CDC::DrawEscape  
- 繪圖功能的視訊顯示無法直接使用透過圖形裝置介面 (GDI) 的存取。  
+##  <a name="drawescape"></a>  CDC::DrawEscape  
+ Accesses drawing capabilities of a video display that are not directly available through the graphics device interface (GDI).  
   
 ```  
 int DrawEscape(
@@ -1274,41 +1465,41 @@ int DrawEscape(
     LPCSTR lpszInputData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nEscape`  
- 指定要執行的逸出函數。  
+ Specifies the escape function to be performed.  
   
  `nInputSize`  
- 指定的資料所指向的位元組數目`lpszInputData`參數。  
+ Specifies the number of bytes of data pointed to by the `lpszInputData` parameter.  
   
  `lpszInputData`  
- 指定的逸出所需的輸入結構的點。  
+ Points to the input structure required for the specified escape.  
   
-### <a name="return-value"></a>傳回值  
- 指定函式的結果。 小於或等於零，如果成功，除了**QUERYESCSUPPORT**繪製逸出的檢查執行; 或如果未實作逸出; 或小於零的錯誤如果發生。  
+### <a name="return-value"></a>Return Value  
+ Specifies the outcome of the function. Greater than zero if successful, except for the **QUERYESCSUPPORT** draw escape, which checks for implementation only; or zero if the escape is not implemented; or less than zero if an error occurred.  
   
-### <a name="remarks"></a>備註  
- 當應用程式呼叫`DrawEscape`，所識別的資料`nInputSize`和`lpszInputData`直接傳遞至指定的顯示驅動程式。  
+### <a name="remarks"></a>Remarks  
+ When an application calls `DrawEscape`, the data identified by `nInputSize` and `lpszInputData` is passed directly to the specified display driver.  
   
-##  <a name="drawfocusrect"></a>CDC::DrawFocusRect  
- 用來表示矩形具有焦點的樣式繪製的矩形。  
+##  <a name="drawfocusrect"></a>  CDC::DrawFocusRect  
+ Draws a rectangle in the style used to indicate that the rectangle has the focus.  
   
 ```  
 void DrawFocusRect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，指定要繪製矩形的邏輯座標。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object that specifies the logical coordinates of the rectangle to be drawn.  
   
-### <a name="remarks"></a>備註  
- 由於這是布林值 XOR 函式，呼叫這個函式的第二次相同的矩形在顯示中移除矩形。 無法捲動此函式所繪製的矩形。 若要捲動包含此函式所繪製的矩形區域，請先呼叫`DrawFocusRect`從顯示中移除矩形，然後捲動區域，然後呼叫`DrawFocusRect`即可在新的位置繪製矩形。  
+### <a name="remarks"></a>Remarks  
+ Since this is a Boolean XOR function, calling this function a second time with the same rectangle removes the rectangle from the display. The rectangle drawn by this function cannot be scrolled. To scroll an area containing a rectangle drawn by this function, first call `DrawFocusRect` to remove the rectangle from the display, then scroll the area, and then call `DrawFocusRect` again to draw the rectangle in the new position.  
   
 > [!CAUTION]
-> `DrawFocusRect`只適用於`MM_TEXT`模式。 在其他模式中，此函式不能正確地繪製焦點矩形，但它不會傳回錯誤值。  
+> `DrawFocusRect` works only in `MM_TEXT` mode. In other modes, this function does not draw the focus rectangle correctly, but it does not return error values.  
   
-##  <a name="drawframecontrol"></a>CDC::DrawFrameControl  
- 呼叫此成員函式可繪製框架控制項的指定型別和樣式。  
+##  <a name="drawframecontrol"></a>  CDC::DrawFrameControl  
+ Call this member function to draw a frame control of the specified type and style.  
   
 ```  
 BOOL DrawFrameControl(
@@ -1317,77 +1508,77 @@ BOOL DrawFrameControl(
     UINT nState);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指標**RECT**結構，其中包含矩形的邏輯座標。  
+ A pointer to a **RECT** structure that contains the logical coordinates of the rectangle.  
   
  `nType`  
- 指定要繪製的畫面格控制項類型。 請參閱*uType*中的參數[DrawFrameControl](http://msdn.microsoft.com/library/windows/desktop/dd162480)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需此參數的可能值的清單。  
+ Specifies the type of frame control to draw. See the *uType* parameter in [DrawFrameControl](http://msdn.microsoft.com/library/windows/desktop/dd162480) in the Windows SDK for a list of this parameter's possible values.  
   
  `nState`  
- 指定框架控制的初始的狀態。 可以是下列一或多個值所述，對*uState*中的參數`DrawFrameControl`中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 使用`nState`值**DFCS_ADJUSTRECT**調整排除按鈕的周圍邊緣的周框。  
+ Specifies the initial state of the frame control. Can be one or more of the values described for the *uState* parameter in `DrawFrameControl` in the Windows SDK. Use the `nState` value **DFCS_ADJUSTRECT** to adjust the bounding rectangle to exclude the surrounding edge of the push button.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 在數個情況下，`nState`取決於`nType`參數。 下列清單顯示四個之間的關聯性`nType`值和`nState`:  
+### <a name="remarks"></a>Remarks  
+ In several cases, `nState` depends on the `nType` parameter. The following list shows the relationship between the four `nType` values and `nState`:  
   
 - **DFC_BUTTON**  
   
-    - **DFCS_BUTTON3STATE**三態按鈕  
+    - **DFCS_BUTTON3STATE** Three-state button  
   
-    - **DFCS_BUTTONCHECK**核取方塊  
+    - **DFCS_BUTTONCHECK** Check box  
   
-    - **DFCS_BUTTONPUSH**按鈕  
+    - **DFCS_BUTTONPUSH** Push button  
   
-    - **DFCS_BUTTONRADIO**選項按鈕  
+    - **DFCS_BUTTONRADIO** Radio button  
   
-    - **DFCS_BUTTONRADIOIMAGE**選項按鈕的影像 （非方形需要映像）  
+    - **DFCS_BUTTONRADIOIMAGE** Image for radio button (nonsquare needs image)  
   
-    - **DFCS_BUTTONRADIOMASK**選項按鈕的遮罩 （非方形必須遮罩）  
+    - **DFCS_BUTTONRADIOMASK** Mask for radio button (nonsquare needs mask)  
   
 - **DFC_CAPTION**  
   
-    - **DFCS_CAPTIONCLOSE** [關閉] 按鈕  
+    - **DFCS_CAPTIONCLOSE** Close button  
   
-    - **DFCS_CAPTIONHELP**說明 按鈕  
+    - **DFCS_CAPTIONHELP** Help button  
   
-    - **DFCS_CAPTIONMAX**最大化 按鈕  
+    - **DFCS_CAPTIONMAX** Maximize button  
   
-    - **DFCS_CAPTIONMIN**最小化按鈕  
+    - **DFCS_CAPTIONMIN** Minimize button  
   
-    - **DFCS_CAPTIONRESTORE**還原按鈕  
+    - **DFCS_CAPTIONRESTORE** Restore button  
   
 - **DFC_MENU**  
   
-    - **DFCS_MENUARROW**子功能表箭號  
+    - **DFCS_MENUARROW** Submenu arrow  
   
-    - **DFCS_MENUBULLET**項目符號  
+    - **DFCS_MENUBULLET** Bullet  
   
-    - **DFCS_MENUCHECK**核取記號  
+    - **DFCS_MENUCHECK** Check mark  
   
 - **DFC_SCROLL**  
   
-    - **DFCS_SCROLLCOMBOBOX**下拉式方塊捲軸  
+    - **DFCS_SCROLLCOMBOBOX** Combo box scroll bar  
   
-    - **DFCS_SCROLLDOWN**向下捲軸的箭號  
+    - **DFCS_SCROLLDOWN** Down arrow of scroll bar  
   
-    - **DFCS_SCROLLLEFT**捲軸向左箭號  
+    - **DFCS_SCROLLLEFT** Left arrow of scroll bar  
   
-    - **DFCS_SCROLLRIGHT**捲軸上的向右箭號  
+    - **DFCS_SCROLLRIGHT** Right arrow of scroll bar  
   
-    - **DFCS_SCROLLSIZEGRIP**視窗的右下角調整大小底框  
+    - **DFCS_SCROLLSIZEGRIP** Size grip in bottom-right corner of window  
   
-    - **DFCS_SCROLLUP**向上捲軸的箭號  
+    - **DFCS_SCROLLUP** Up arrow of scroll bar  
   
-### <a name="example"></a>範例  
- 此程式碼繪製大小移駐夾視窗的右下角。 適用於`OnPaint`的對話方塊，其中有沒有樣式，且通常不包含其他控制項 （例如 [狀態] 列中），可能會讓它大小移駐夾的處理常式。  
+### <a name="example"></a>Example  
+ This code draws the size gripper in the bottom-right corner of your window. It's appropriate for the `OnPaint` handler of a dialog box, which has no styles and normally doesn't contain other controls (like a status bar) that may give it a size gripper.  
   
- [!code-cpp[NVC_MFCDocView # 34](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#34](../../mfc/codesnippet/cpp/cdc-class_6.cpp)]  
   
-##  <a name="drawicon"></a>CDC::DrawIcon  
- 代表目前的裝置上繪製圖示`CDC`物件。  
+##  <a name="drawicon"></a>  CDC::DrawIcon  
+ Draws an icon on the device represented by the current `CDC` object.  
   
 ```  
 BOOL DrawIcon(
@@ -1401,35 +1592,35 @@ BOOL DrawIcon(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定邏輯圖示的左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the icon.  
   
  *y*  
- 指定邏輯圖示的左上角的 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the icon.  
   
  `hIcon`  
- 識別要繪製圖示的控制代碼。  
+ Identifies the handle of the icon to be drawn.  
   
  `point`  
- 指定邏輯 x 和 y 座標的左上角的圖示。 您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)這個參數的物件。  
+ Specifies the logical x- and y-coordinates of the upper-left corner of the icon. You can pass a [POINT](../../mfc/reference/point-structure1.md) structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，則為非零否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function completed successfully; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式會在所指定的位置放置圖示的左上角*x*和*y*。 位置受限於目前的裝置內容的對應模式。  
+### <a name="remarks"></a>Remarks  
+ The function places the icon's upper-left corner at the location specified by *x* and *y*. The location is subject to the current mapping mode of the device context.  
   
- 圖示資源必須先前已載入使用的函式`CWinApp::LoadIcon`， `CWinApp::LoadStandardIcon`，或`CWinApp::LoadOEMIcon`。 `MM_TEXT`必須使用此函式之前選取的對應模式。  
+ The icon resource must have been previously loaded by using the functions `CWinApp::LoadIcon`, `CWinApp::LoadStandardIcon`, or `CWinApp::LoadOEMIcon`. The `MM_TEXT` mapping mode must be selected prior to using this function.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::IsIconic](../../mfc/reference/cwnd-class.md#isiconic).  
   
-##  <a name="drawstate"></a>CDC::DrawState  
- 呼叫此成員函式，來顯示影像，並套用視覺效果來指示狀態，例如已停用或預設狀態。  
+##  <a name="drawstate"></a>  CDC::DrawState  
+ Call this member function to display an image and apply a visual effect to indicate a state, such as a disabled or default state.  
   
 > [!NOTE]
->  所有`nFlag`狀態除了**DSS_NORMAL**，視覺效果套用之前，將會轉換為單色的映像。  
+>  For all `nFlag` states except **DSS_NORMAL**, the image is converted to monochrome before the visual effect is applied.  
   
 ```  
 BOOL DrawState(
@@ -1502,51 +1693,51 @@ BOOL DrawState(
     CBrush* pBrush = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pt`  
- 指定映像的位置。  
+ Specifies the location of the image.  
   
  `size`  
- 指定影像的大小。  
+ Specifies the size of the image.  
   
  `hBitmap`  
- 點陣圖的控制代碼。  
+ A handle to a bitmap.  
   
  `nFlags`  
- 指定的映像類型和狀態的旗標。 請參閱[DrawState](http://msdn.microsoft.com/library/windows/desktop/dd162496)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]可能`nFlags`型別和狀態。  
+ Flags that specify the image type and state. See [DrawState](http://msdn.microsoft.com/library/windows/desktop/dd162496) in the Windows SDK for the possible `nFlags` types and states.  
   
  `hBrush`  
- 筆刷控制代碼。  
+ A handle to a brush.  
   
  `pBitmap`  
- CBitmap 物件的指標。  
+ A pointer to a CBitmap object.  
   
  `pBrush`  
- CBrush 物件的指標。  
+ A pointer to a CBrush object.  
   
  `hIcon`  
- 圖示的控制代碼。  
+ A handle to an icon.  
   
  `lpszText`  
- 文字指標。  
+ A pointer to text.  
   
  *bPrefixText*  
- 可能包含快速鍵的助憶鍵的文字。 `lData`參數會指定字串的位址和`nTextLen`參數指定的長度。 如果`nTextLen`是 0，則會假設字串是以 null 結束。  
+ Text that may contain an accelerator mnemonic. The `lData` parameter specifies the address of the string, and the `nTextLen` parameter specifies the length. If `nTextLen` is 0, the string is assumed to be null-terminated.  
   
  `nTextLen`  
- 所指向的文字字串的長度`lpszText`。 如果`nTextLen`是 0，則會假設字串是以 null 結束。  
+ Length of the text string pointed to by `lpszText`. If `nTextLen` is 0, the string is assumed to be null-terminated.  
   
  *lpDrawProc*  
- 用來呈現影像的回呼函式指標。 這個參數是必要項，如果映像中鍵入`nFlags`是**DST_COMPLEX**。 它是選擇性的而且可以是**NULL**映像類型是否**DST_TEXT**。 對於其他所有影像類型，這個參數已忽略。 如需回呼函式的詳細資訊，請參閱[DrawStateProc](http://msdn.microsoft.com/library/windows/desktop/dd162497)函式在[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ A pointer to a callback function used to render an image. This parameter is required if the image type in `nFlags` is **DST_COMPLEX**. It is optional and can be **NULL** if the image type is **DST_TEXT**. For all other image types, this parameter is ignored. For more information about the callback function, see the [DrawStateProc](http://msdn.microsoft.com/library/windows/desktop/dd162497) function in the Windows SDK.  
   
  `lData`  
- 指定映像的相關資訊。 這個參數的意義取決於影像類型。  
+ Specifies information about the image. The meaning of this parameter depends on the image type.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="drawtext"></a>CDC::DrawText  
- 呼叫此成員函式，可以格式化文字方塊中指定的矩形。 若要指定其他格式化選項，請使用[CDC::DrawTextEx](#drawtextex)。  
+##  <a name="drawtext"></a>  CDC::DrawText  
+ Call this member function to format text in the given rectangle. To specify additional formatting options, use [CDC::DrawTextEx](#drawtextex).  
   
 ```  
 virtual int DrawText(
@@ -1562,43 +1753,43 @@ int DrawText(
     UINT nFormat);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- 指向要繪製的字串。 如果`nCount`為-1，字串必須是以 null 結束。  
+ Points to the string to be drawn. If `nCount` is -1, the string must be null-terminated.  
   
  `nCount`  
- 在字串中指定字元的數目。 如果`nCount`是-1，則`lpszString`假設為以 null 終止的字串長度指標和`DrawText`自動計算的字元計數。  
+ Specifies the number of chars in the string. If `nCount` is -1, then `lpszString` is assumed to be a long pointer to a null-terminated string and `DrawText` computes the character count automatically.  
   
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含文字為格式化的矩形 （以邏輯座標表示）。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the rectangle (in logical coordinates) in which the text is to be formatted.  
   
  `str`  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要繪製指定的字元。  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the specified characters to be drawn.  
   
  `nFormat`  
- 指定的格式化文字的方法。 它可以是所述，對任何的值組合`uFormat`中的參數[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 （結合使用位元 OR 運算子）︰  
+ Specifies the method of formatting the text. It can be any combination of the values described for the `uFormat` parameter in [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) in the Windows SDK. (combine using the bitwise OR operator):  
   
 > [!NOTE]
->  某些`uFormat`旗標的組合可能會導致修改傳遞的字串。 使用**DT_MODIFYSTRING**其中一種**DT_END_ELLIPSIS**或**DT_PATH_ELLIPSIS**可能會造成要修改字串造成的判斷提示`CString`覆寫。 值`DT_CALCRECT`， `DT_EXTERNALLEADING`， **DT_INTERNAL**， `DT_NOCLIP`，和`DT_NOPREFIX`不能與`DT_TABSTOP`值。  
+>  Some `uFormat` flag combinations can cause the passed string to be modified. Using **DT_MODIFYSTRING** with either **DT_END_ELLIPSIS** or **DT_PATH_ELLIPSIS** may cause the string to be modified, causing an assertion in the `CString` override. The values `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, and `DT_NOPREFIX` cannot be used with the `DT_TABSTOP` value.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功之文字的高度。  
+### <a name="return-value"></a>Return Value  
+ The height of the text if the function is successful.  
   
-### <a name="remarks"></a>備註  
- 它會將文字格式化成適當的空格，將文字左、 右對齊或置給定矩形中，展開索引標籤，並分為符合給定矩形內的行中的文字。 所指定的格式類型`nFormat`。  
+### <a name="remarks"></a>Remarks  
+ It formats text by expanding tabs into appropriate spaces, aligning text to the left, right, or center of the given rectangle, and breaking text into lines that fit within the given rectangle. The type of formatting is specified by `nFormat`.  
   
- 此成員函式會使用裝置內容的選取的字型、 文字色彩和背景色彩來繪製文字。 除非`DT_NOCLIP`使用格式，`DrawText`裁剪文字，讓文字未出現在指定的矩形的外面。 所有格式設定都假設擁有多行，除非`DT_SINGLELINE`格式指定。  
+ This member function uses the device context's selected font, text color, and background color to draw the text. Unless the `DT_NOCLIP` format is used, `DrawText` clips the text so that the text does not appear outside the given rectangle. All formatting is assumed to have multiple lines unless the `DT_SINGLELINE` format is given.  
   
- 如果選取的字型太大而無法針對指定的矩形，`DrawText`成員函式不會嘗試取代較小的字型。  
+ If the selected font is too large for the specified rectangle, the `DrawText` member function does not attempt to substitute a smaller font.  
   
- 如果`DT_CALCRECT`指定旗標時，所指定的矩形`lpRect`將更新以反映所需來繪製文字的高度與寬度。  
+ If the `DT_CALCRECT` flag is specified, the rectangle specified by `lpRect` will be updated to reflect the width and height needed to draw the text.  
   
- 如果**TA_UPDATECP**已設定文字對齊方式的旗標 (請參閱[CDC::SetTextAlign](#settextalign))，`DrawText`會顯示從目前位置，而不在給定矩形左邊的文字。 `DrawText`不會換行的文字時**TA_UPDATECP**設定旗標 (也就是`DT_WORDBREAK`旗標會有任何作用)。  
+ If the **TA_UPDATECP** text-alignment flag has been set (see [CDC::SetTextAlign](#settextalign)), `DrawText` will display text starting at the current position, rather than at the left of the given rectangle. `DrawText` will not wrap text when the **TA_UPDATECP** flag has been set (that is, the `DT_WORDBREAK` flag will have no effect).  
   
- 可能設定的文字色彩[CDC::SetTextColor](#settextcolor)。  
+ The text color may be set by [CDC::SetTextColor](#settextcolor).  
   
-##  <a name="drawtextex"></a>CDC::DrawTextEx  
- 將指定的矩形中的文字。  
+##  <a name="drawtextex"></a>  CDC::DrawTextEx  
+ Formats text in the given rectangle.  
   
 ```  
 virtual int DrawTextEx(
@@ -1616,35 +1807,35 @@ int DrawTextEx(
     LPDRAWTEXTPARAMS lpDTParams);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- 指向要繪製的字串。 如果`nCount`為-1，字串必須結束的 null。  
+ Points to the string to be drawn. If `nCount` is -1, the string must be null terminated.  
   
  `nCount`  
- 在字串中指定字元的數目。 如果`nCount`是-1，則`lpszString`假設為以 null 終止的字串長度指標和`DrawText`自動計算的字元計數。  
+ Specifies the number of chars in the string. If `nCount` is -1, then `lpszString` is assumed to be a long pointer to a null-terminated string and `DrawText` computes the character count automatically.  
   
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含文字為格式化的矩形 （以邏輯座標表示）。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the rectangle (in logical coordinates) in which the text is to be formatted.  
   
  `str`  
- A [CString](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含要繪製指定的字元。  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the specified characters to be drawn.  
   
  `nFormat`  
- 指定的格式化文字的方法。 它可以是所述，對任何的值組合`uFormat`中的參數[DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。 (結合使用位元`OR`運算子):  
+ Specifies the method of formatting the text. It can be any combination of the values described for the `uFormat` parameter in [DrawText](http://msdn.microsoft.com/library/windows/desktop/dd162498) in the Windows SDK. (Combine using the bitwise `OR` operator):  
   
 > [!NOTE]
->  某些`uFormat`旗標的組合可能會導致修改傳遞的字串。 使用**DT_MODIFYSTRING**其中一種**DT_END_ELLIPSIS**或**DT_PATH_ELLIPSIS**可能會造成要修改字串造成的判斷提示`CString`覆寫。 值`DT_CALCRECT`， `DT_EXTERNALLEADING`， **DT_INTERNAL**， `DT_NOCLIP`，和`DT_NOPREFIX`不能與`DT_TABSTOP`值。  
+>  Some `uFormat` flag combinations can cause the passed string to be modified. Using **DT_MODIFYSTRING** with either **DT_END_ELLIPSIS** or **DT_PATH_ELLIPSIS** may cause the string to be modified, causing an assertion in the `CString` override. The values `DT_CALCRECT`, `DT_EXTERNALLEADING`, **DT_INTERNAL**, `DT_NOCLIP`, and `DT_NOPREFIX` cannot be used with the `DT_TABSTOP` value.  
   
  `lpDTParams`  
- 指標[DRAWTEXTPARAMS](http://msdn.microsoft.com/library/windows/desktop/dd162500)結構，指定其他格式化選項。 這個參數可以是**NULL**。  
+ Pointer to a [DRAWTEXTPARAMS](http://msdn.microsoft.com/library/windows/desktop/dd162500) structure that specifies additional formatting options. This parameter can be **NULL**.  
   
-### <a name="remarks"></a>備註  
- 它會將文字格式化成適當的空格，將文字左、 右對齊或置給定矩形中，展開索引標籤，並分為符合給定矩形內的行中的文字。 所指定的格式類型`nFormat`和`lpDTParams`。 如需詳細資訊，請參閱[CDC::DrawText](#drawtext)和[DrawTextEx](http://msdn.microsoft.com/library/windows/desktop/dd162499)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ It formats text by expanding tabs into appropriate spaces, aligning text to the left, right, or center of the given rectangle, and breaking text into lines that fit within the given rectangle. The type of formatting is specified by `nFormat` and `lpDTParams`. For more information, see [CDC::DrawText](#drawtext) and [DrawTextEx](http://msdn.microsoft.com/library/windows/desktop/dd162499) in the Windows SDK.  
   
- 可能設定的文字色彩[CDC::SetTextColor](#settextcolor)。  
+ The text color may be set by [CDC::SetTextColor](#settextcolor).  
   
-##  <a name="ellipse"></a>CDC::Ellipse  
- 繪製橢圓形。  
+##  <a name="ellipse"></a>  CDC::Ellipse  
+ Draws an ellipse.  
   
 ```  
 BOOL Ellipse(
@@ -1656,85 +1847,85 @@ BOOL Ellipse(
 BOOL Ellipse(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定邏輯橢圓形之周框左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the ellipse's bounding rectangle.  
   
  `y1`  
- 指定邏輯橢圓形之周框左上角的 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the ellipse's bounding rectangle.  
   
  `x2`  
- 指定邏輯橢圓形之周框的右下角的 x 座標。  
+ Specifies the logical x-coordinate of the lower-right corner of the ellipse's bounding rectangle.  
   
  `y2`  
- 指定邏輯橢圓形之周框的右下角的 y 座標。  
+ Specifies the logical y-coordinate of the lower-right corner of the ellipse's bounding rectangle.  
   
  `lpRect`  
- 指定的橢圓形之周框。 您也可以傳遞[CRect](../../atl-mfc-shared/reference/crect-class.md)這個參數的物件。  
+ Specifies the ellipse's bounding rectangle. You can also pass a [CRect](../../atl-mfc-shared/reference/crect-class.md) object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 橢圓形的中心是所指定的週框矩形的中心`x1`， `y1`， `x2`，和`y2`，或`lpRect`。 使用目前的畫筆繪製橢圓形和它的內部會填入目前的筆刷。  
+### <a name="remarks"></a>Remarks  
+ The center of the ellipse is the center of the bounding rectangle specified by `x1`, `y1`, `x2`, and `y2`, or `lpRect`. The ellipse is drawn with the current pen, and its interior is filled with the current brush.  
   
- 此函式所繪製的圖最多至延伸，但不包括，右側和底部的座標。 這表示圖的高度是`y2`  -  `y1`圖的寬度，且`x2`  -  `x1`。  
+ The figure drawn by this function extends up to, but does not include, the right and bottom coordinates. This means that the height of the figure is `y2` - `y1` and the width of the figure is `x2` - `x1`.  
   
- 如果週框的高度或寬度是 0，會不繪製任何橢圓形。  
+ If either the width or the height of the bounding rectangle is 0, no ellipse is drawn.  
   
-##  <a name="enddoc"></a>CDC::EndDoc  
- 結束呼叫所啟動的列印工作[Cdc](#startdoc)成員函式。  
+##  <a name="enddoc"></a>  CDC::EndDoc  
+ Ends a print job started by a call to the [StartDoc](#startdoc) member function.  
   
 ```  
 int EndDoc();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 大於或等於 0，如果函式成功或負數值，如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ Greater than or equal to 0 if the function is successful, or a negative value if an error occurred.  
   
-### <a name="remarks"></a>備註  
- 此成員函式取代**ENDDOC**印表機逸出，而且應該完成成功的列印工作之後，立即呼叫。  
+### <a name="remarks"></a>Remarks  
+ This member function replaces the **ENDDOC** printer escape, and should be called immediately after finishing a successful print job.  
   
- 如果應用程式發生列印錯誤或已取消的列印作業時，它必須不會嘗試使用終止作業`EndDoc`或[AbortDoc](#abortdoc)。 GDI 自動終止之前傳回錯誤值的作業。  
+ If an application encounters a printing error or a canceled print operation, it must not attempt to terminate the operation by using either `EndDoc` or [AbortDoc](#abortdoc). GDI automatically terminates the operation before returning the error value.  
   
- 此函式不應在中繼檔內。  
+ This function should not be used inside metafiles.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CDC::StartDoc](#startdoc)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::StartDoc](#startdoc).  
   
-##  <a name="endpage"></a>CDC::EndPage  
- 通知裝置，應用程式已完成寫入頁面。  
+##  <a name="endpage"></a>  CDC::EndPage  
+ Informs the device that the application has finished writing to a page.  
   
 ```  
 int EndPage();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 大於或等於 0，如果函式成功或負數值，如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ Greater than or equal to 0 if the function is successful, or a negative value if an error occurred.  
   
-### <a name="remarks"></a>備註  
- 此成員函式通常用來直接前往新頁面的裝置驅動程式。  
+### <a name="remarks"></a>Remarks  
+ This member function is typically used to direct the device driver to advance to a new page.  
   
- 此成員函式取代**NEWFRAME**印表機逸出。 不同於**NEWFRAME**，一律會呼叫此函數後列印的頁面。  
+ This member function replaces the **NEWFRAME** printer escape. Unlike **NEWFRAME**, this function is always called after printing a page.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CDC::StartDoc](#startdoc)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::StartDoc](#startdoc).  
   
-##  <a name="endpath"></a>CDC::EndPath  
- 關閉路徑括號，並選取放入裝置內容的 在括號所定義的路徑。  
+##  <a name="endpath"></a>  CDC::EndPath  
+ Closes a path bracket and selects the path defined by the bracket into the device context.  
   
 ```  
 BOOL EndPath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[cdc:: beginpath](#beginpath)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::BeginPath](#beginpath).  
   
-##  <a name="enumobjects"></a>Cdc:: enumobjects  
- 列舉畫筆和筆刷在裝置內容中使用。  
+##  <a name="enumobjects"></a>  CDC::EnumObjects  
+ Enumerates the pens and brushes available in a device context.  
   
 ```  
 int EnumObjects(
@@ -1745,39 +1936,39 @@ int EnumObjects(
     LPARAM lpData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *nObjectType*  
- 指定的物件類型。 它可以包含值**OBJ_BRUSH**或**OBJ_PEN**。  
+ Specifies the object type. It can have the values **OBJ_BRUSH** or **OBJ_PEN**.  
   
  `lpfn`  
- 是應用程式所提供的回呼函式的程序執行個體位址。 請參閱 < 備註 > 一節。  
+ Is the procedure-instance address of the application-supplied callback function. See the "Remarks" section below.  
   
  `lpData`  
- 應用程式提供資料點。 資料會傳遞至回呼函式，以及物件中的資訊。  
+ Points to the application-supplied data. The data is passed to the callback function along with the object information.  
   
-### <a name="return-value"></a>傳回值  
- 指定所傳回的最後一個值[回呼函式](../../mfc/reference/callback-function-for-cdc-enumobjects.md)。 它的意義是使用者定義的。  
+### <a name="return-value"></a>Return Value  
+ Specifies the last value returned by the [callback function](../../mfc/reference/callback-function-for-cdc-enumobjects.md). Its meaning is user-defined.  
   
-### <a name="remarks"></a>備註  
- 對於特定類型的每個物件，您傳遞的回呼函式稱為與該物件的資訊。 系統會呼叫回呼函式，直到沒有任何多個物件或回呼函式會傳回 0。  
+### <a name="remarks"></a>Remarks  
+ For each object of a given type, the callback function that you pass is called with the information for that object. The system calls the callback function until there are no more objects or the callback function returns 0.  
   
- 請注意，Microsoft Visual c + + 的新功能可讓您使用一般函式，函式傳遞至`EnumObjects`。 位址傳遞至`EnumObjects`與匯出的函式的指標**匯出**與 Pascal 呼叫慣例。 保護模式應用程式中，您不必使用 Windows MakeProcInstance 函式建立此函式或函式釋放之後 FreeProcInstance Windows 函式搭配使用。  
+ Note that new features of Microsoft Visual C++ let you use an ordinary function as the function passed to `EnumObjects`. The address passed to `EnumObjects` is a pointer to a function exported with **EXPORT** and with the Pascal calling convention. In protect-mode applications, you do not have to create this function with the Windows                         MakeProcInstance function or free the function after use with the FreeProcInstance Windows function.  
   
- 您也沒有要匯出函式名稱中的**匯出**應用程式的模組定義檔中的陳述式。 您可以改為使用**匯出**函式中的修飾詞，  
+ You also do not have to export the function name in an **EXPORTS** statement in your application's module-definition file. You can instead use the **EXPORT** function modifier, as in  
   
- **int 回呼匯出**AFunction **(LPSTR**， **LPSTR);**  
+ **int CALLBACK EXPORT** AFunction **(LPSTR**, **LPSTR);**  
   
- 導致編譯器發出不含別名名稱所匯出的適當匯出記錄。 這適用於大部分的需求。 如需某些特殊情況下，例如匯出的函式依序數或別名匯出，您仍需要使用**匯出**模組定義檔中的陳述式。  
+ to cause the compiler to emit the proper export record for export by name without aliasing. This works for most needs. For some special cases, such as exporting a function by ordinal or aliasing the export, you still need to use an **EXPORTS** statement in a module-definition file.  
   
- 編譯 Mfc 程式，您通常會使用 /GA 和 /GEs 編譯器選項。 /Gw 編譯器選項未 Microsoft Foundation classes 搭配使用。 (如果您使用 Windows 函式**MakeProcInstance**，您必須明確轉型從傳回的函式指標**FARPROC**這個 API 中所需的型別。)回呼註冊介面現在是型別安全 （您必須指向正確類型的特定回呼函式的函式指標傳遞）。  
+ For compiling Microsoft Foundation programs, you will normally use the /GA and /GEs compiler options. The /Gw compiler option is not used with the Microsoft Foundation classes. (If you do use the Windows function **MakeProcInstance**, you will need to explicitly cast the returned function pointer from **FARPROC** to the type needed in this API.) Callback registration interfaces are now type-safe (you must pass in a function pointer that points to the right kind of function for the specific callback).  
   
- 也請注意所有的回呼函式必須再傳回給 Windows，，因為無法跨回呼界限擲回例外狀況設陷 Mfc 例外狀況。 如需例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。  
+ Also note that all callback functions must trap Microsoft Foundation exceptions before returning to Windows, since exceptions cannot be thrown across callback boundaries. For more information about exceptions, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#35](../../mfc/codesnippet/cpp/cdc-class_7.cpp)]  
   
-##  <a name="escape"></a>CDC::Escape  
- 此成員函式是 Win32 程式設計實際上已過時。  
+##  <a name="escape"></a>  CDC::Escape  
+ This member function is practically obsolete for Win32 programming.  
   
 ```  
 virtual int Escape(
@@ -1795,48 +1986,48 @@ int Escape(
     LPSTR lpszOutputData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nEscape`  
- 指定要執行的逸出函數。  
+ Specifies the escape function to be performed.  
   
- 如需逸出函式的完整清單，請參閱[逸出](http://msdn.microsoft.com/library/windows/desktop/dd162701)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For a complete list of escape functions, see [Escape](http://msdn.microsoft.com/library/windows/desktop/dd162701) in the Windows SDK.  
   
  `nCount`  
- 指定的資料所指向的位元組數目`lpszInData`。  
+ Specifies the number of bytes of data pointed to by `lpszInData`.  
   
  `lpszInData`  
- 指向此逸出所需的輸入的資料結構。  
+ Points to the input data structure required for this escape.  
   
  `lpOutData`  
- 指向結構，這是要從這個逸出接收輸出。 `lpOutData`參數是**NULL**如果未不傳回任何資料。  
+ Points to the structure that is to receive output from this escape. The `lpOutData` parameter is **NULL** if no data is returned.  
   
  `nInputSize`  
- 指定的資料所指向的位元組數目`lpszInputData`參數。  
+ Specifies the number of bytes of data pointed to by the `lpszInputData` parameter.  
   
  `lpszInputData`  
- 指定的逸出所需的輸入結構的點。  
+ Points to the input structure required for the specified escape.  
   
  `nOutputSize`  
- 指定的資料所指向的位元組數目`lpszOutputData`參數。  
+ Specifies the number of bytes of data pointed to by the `lpszOutputData` parameter.  
   
  `lpszOutputData`  
- 指向以接收來自此逸出之輸出的結構。 這個參數應該是**NULL**如果未不傳回任何資料。  
+ Points to the structure that receives output from this escape. This parameter should be **NULL** if no data is returned.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，但傳回正值**QUERYESCSUPPORT**逸出，只會檢查實作。 如果未實作逸出，則會傳回零。 如果發生錯誤，則會傳回負值。 以下是常見的錯誤值︰  
+### <a name="return-value"></a>Return Value  
+ A positive value is returned if the function is successful, except for the **QUERYESCSUPPORT** escape, which only checks for implementation. Zero is returned if the escape is not implemented. A negative value is returned if an error occurred. The following are common error values:  
   
-- **SP_ERROR**一般錯誤。  
+- **SP_ERROR** General error.  
   
-- **SP_OUTOFDISK**足夠的磁碟空間是目前可供多工緩衝處理，且沒有更多的空間會變成可用。  
+- **SP_OUTOFDISK** Not enough disk space is currently available for spooling, and no more space will become available.  
   
-- **SP_OUTOFMEMORY**沒有足夠的記憶體可用於多工緩衝處理。  
+- **SP_OUTOFMEMORY** Not enough memory is available for spooling.  
   
-- **SP_USERABORT**使用者結束透過列印管理員工作。  
+- **SP_USERABORT** User ended the job through the Print Manager.  
   
-### <a name="remarks"></a>備註  
- 原始印表機逸出字元，僅**QUERYESCSUPPORT**支援 Win32 應用程式。 所有其他印表機逸出已經過時，僅支援以 16 位元應用程式的相容性。  
+### <a name="remarks"></a>Remarks  
+ Of the original printer escapes, only **QUERYESCSUPPORT** is supported for Win32 applications. All other printer escapes are obsolete and are supported only for compatibility with 16-bit applications.  
   
- Win32 程式設計`CDC`現在提供六個成員函式取代其對應的印表機逸出的應用程式︰  
+ For Win32 programming, `CDC` now provides six member functions that supersede their corresponding printer escapes:  
   
 - [CDC::AbortDoc](#abortdoc)  
   
@@ -1844,20 +2035,20 @@ int Escape(
   
 - [CDC::EndPage](#endpage)  
   
-- [Cdc:: setabortproc](#setabortproc)  
+- [CDC::SetAbortProc](#setabortproc)  
   
 - [CDC::StartDoc](#startdoc)  
   
 - [CDC::StartPage](#startpage)  
   
- 此外， [rastercaps](#getdevicecaps)支援 Win32 索引取代其他印表機逸出的應用程式。 請參閱[GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需詳細資訊。  
+ In addition, [CDC::GetDeviceCaps](#getdevicecaps) supports Win32 indexes that supersede other printer escapes. See [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) in the Windows SDK for more information.  
   
- 此成員函式可讓應用程式存取特定裝置不是直接透過 GDI 可用的設備。  
+ This member function allows applications to access facilities of a particular device that are not directly available through GDI.  
   
- 如果您的應用程式會使用預先定義的逸出值，請使用第一個版本。 如果您的應用程式定義私用的逸出值，請使用第二個版本。 請參閱[ExtEscape](http://msdn.microsoft.com/library/windows/desktop/dd162708)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]的第二個版本的詳細資訊。  
+ Use the first version if your application uses predefined escape values. Use the second version if your application defines private escape values. See [ExtEscape](http://msdn.microsoft.com/library/windows/desktop/dd162708) in the Windows SDK for more information about the second version.  
   
-##  <a name="excludecliprect"></a>CDC::ExcludeClipRect  
- 建立新的裁剪區域所組成的現有的裁剪區域減去指定的矩形。  
+##  <a name="excludecliprect"></a>  CDC::ExcludeClipRect  
+ Creates a new clipping region that consists of the existing clipping region minus the specified rectangle.  
   
 ```  
 int ExcludeClipRect(
@@ -1869,60 +2060,60 @@ int ExcludeClipRect(
 int ExcludeClipRect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定邏輯之矩形左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the rectangle.  
   
  `y1`  
- 指定矩形左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the rectangle.  
   
  `x2`  
- 指定矩形右下角的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the lower-right corner of the rectangle.  
   
  `y2`  
- 指定矩形右下角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the lower-right corner of the rectangle.  
   
  `lpRect`  
- 指定的矩形。 也可以是`CRect`物件。  
+ Specifies the rectangle. Can also be a `CRect` object.  
   
-### <a name="return-value"></a>傳回值  
- 指定新裁剪區域的類型。 它可以是下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ Specifies the new clipping region's type. It can be any of the following values:  
   
-- **COMPLEXREGION**區域具有重疊的框線。  
+- **COMPLEXREGION** The region has overlapping borders.  
   
-- **錯誤**已建立的任何區域。  
+- **ERROR** No region was created.  
   
-- **NULLREGION**區域是空白。  
+- **NULLREGION** The region is empty.  
   
-- **SIMPLEREGION**區域有任何重疊的框線。  
+- **SIMPLEREGION** The region has no overlapping borders.  
   
-### <a name="remarks"></a>備註  
- 數值的絕對值所指定的矩形的寬度`x2`  -  `x1`，不能超過 32,767 單位。 這項限制適用於以及矩形的高度。  
+### <a name="remarks"></a>Remarks  
+ The width of the rectangle, specified by the absolute value of `x2` - `x1`, must not exceed 32,767 units. This limit applies to the height of the rectangle as well.  
   
-##  <a name="excludeupdatergn"></a>CDC::ExcludeUpdateRgn  
- 從相關聯的裁剪區域排除在視窗中的更新的區域，以防止無效區域內的視窗繪圖`CDC`物件。  
+##  <a name="excludeupdatergn"></a>  CDC::ExcludeUpdateRgn  
+ Prevents drawing within invalid areas of a window by excluding an updated region in the window from the clipping region associated with the `CDC` object.  
   
 ```  
 int ExcludeUpdateRgn(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- 指向要更新其視窗的視窗物件。  
+ Points to the window object whose window is being updated.  
   
-### <a name="return-value"></a>傳回值  
- 排除區域的類型。 它可以是下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ The type of excluded region. It can be any one of the following values:  
   
-- **COMPLEXREGION**區域具有重疊的框線。  
+- **COMPLEXREGION** The region has overlapping borders.  
   
-- **錯誤**已建立的任何區域。  
+- **ERROR** No region was created.  
   
-- **NULLREGION**區域是空白。  
+- **NULLREGION** The region is empty.  
   
-- **SIMPLEREGION**區域有任何重疊的框線。  
+- **SIMPLEREGION** The region has no overlapping borders.  
   
-##  <a name="extfloodfill"></a>CDC::ExtFloodFill  
- 填入目前的筆刷顯示介面的區域。  
+##  <a name="extfloodfill"></a>  CDC::ExtFloodFill  
+ Fills an area of the display surface with the current brush.  
   
 ```  
 BOOL ExtFloodFill(
@@ -1932,37 +2123,37 @@ BOOL ExtFloodFill(
     UINT nFillType);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定的點，填滿的開始處的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the point where filling begins.  
   
  *y*  
- 指定的點，填滿的開始處的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the point where filling begins.  
   
  `crColor`  
- 指定的色彩，或要填滿區域的界限。 解譯`crColor`取決於值`nFillType`。  
+ Specifies the color of the boundary or of the area to be filled. The interpretation of `crColor` depends on the value of `nFillType`.  
   
  `nFillType`  
- 指定要執行的大量封包填滿的類型。 它必須是下列值之一︰  
+ Specifies the type of flood fill to be performed. It must be either of the following values:  
   
-- **FLOODFILLBORDER**所指定的色彩填滿區域會受限於`crColor`。 這個樣式等同於所執行的填滿`FloodFill`。  
+- **FLOODFILLBORDER** The fill area is bounded by the color specified by `crColor`. This style is identical to the filling performed by `FloodFill`.  
   
-- **FLOODFILLSURFACE**定義所指定的色彩填滿區域`crColor`。 填滿所有方向中繼續向外，只要遇到色彩。 這個樣式可用於以彩色界限填滿區域。  
+- **FLOODFILLSURFACE** The fill area is defined by the color specified by `crColor`. Filling continues outward in all directions as long as the color is encountered. This style is useful for filling areas with multicolored boundaries.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，則為非零否則為 0，如果填滿無法完成，如果指定的點的界限所指定的色彩`crColor`(如果**FLOODFILLBORDER**要求)，如果指定的點沒有所指定的色彩`crColor`(如果**FLOODFILLSURFACE**要求)，或如果點裁剪區域外。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0 if the filling could not be completed, if the given point has the boundary color specified by `crColor` (if **FLOODFILLBORDER** was requested), if the given point does not have the color specified by `crColor` (if **FLOODFILLSURFACE** was requested), or if the point is outside the clipping region.  
   
-### <a name="remarks"></a>備註  
- 此成員函式提供更多的彈性比`FloodFill`因為您可以指定在填滿類型`nFillType`。  
+### <a name="remarks"></a>Remarks  
+ This member function offers more flexibility than `FloodFill` because you can specify a fill type in `nFillType`.  
   
- 如果`nFillType`設**FLOODFILLBORDER**，區域會假設為完整的限制所指定的色彩， `crColor`。 此函式的開頭位於所指定的點*x*和*y*並填滿色彩界限的所有方向。  
+ If `nFillType` is set to **FLOODFILLBORDER**, the area is assumed to be completely bounded by the color specified by `crColor`. The function begins at the point specified by *x* and *y* and fills in all directions to the color boundary.  
   
- 如果`nFillType`設**FLOODFILLSURFACE**，函式的開頭位於所指定的點*x*和*y*並繼續在所有方向中，所有相鄰的區域，其中包含所指定的色彩填滿`crColor`。  
+ If `nFillType` is set to **FLOODFILLSURFACE**, the function begins at the point specified by *x* and *y* and continues in all directions, filling all adjacent areas containing the color specified by `crColor`.  
   
- 只有記憶體裝置內容和支援點陣顯示技術支援的裝置`ExtFloodFill`。 如需詳細資訊，請參閱[GetDeviceCaps](#getdevicecaps)成員函式。  
+ Only memory-device contexts and devices that support raster-display technology support `ExtFloodFill`. For more information, see the [GetDeviceCaps](#getdevicecaps) member function.  
   
-##  <a name="exttextout"></a>CDC::ExtTextOut  
- 呼叫此成員函式，將使用目前選取的字型的矩形區域中的字元字串。  
+##  <a name="exttextout"></a>  CDC::ExtTextOut  
+ Call this member function to write a character string within a rectangular region using the currently selected font.  
   
 ```  
 virtual BOOL ExtTextOut(
@@ -1984,58 +2175,58 @@ BOOL ExtTextOut(
     LPINT lpDxWidths);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定的字串中指定的第一個字元的字元儲存格的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the character cell for the first character in the specified string.  
   
  *y*  
- 指定字串中指定的第一個字元的字元儲存格的頂端的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the top of the character cell for the first character in the specified string.  
   
  `nOptions`  
- 指定矩形的型別。 這個參數可以是其中一個，兩者，或兩者皆非的下列值︰  
+ Specifies the rectangle type. This parameter can be one, both, or neither of the following values:  
   
-- **ETO_CLIPPED**指定文字會被裁剪矩形中。  
+- **ETO_CLIPPED** Specifies that text is clipped to the rectangle.  
   
-- **ETO_OPAQUE**指定目前的背景色彩填滿的矩形。 (您可以設定與查詢目前的背景色彩與[SetBkColor](#setbkcolor)和[GetBkColor](#getbkcolor)成員函式。)  
+- **ETO_OPAQUE** Specifies that the current background color fills the rectangle. (You can set and query the current background color with the [SetBkColor](#setbkcolor) and [GetBkColor](#getbkcolor) member functions.)  
   
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構，決定矩形的維度。 這個參數可以是**NULL**。 您也可以傳遞[CRect](../../atl-mfc-shared/reference/crect-class.md)這個參數的物件。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure that determines the dimensions of the rectangle. This parameter can be **NULL**. You can also pass a [CRect](../../atl-mfc-shared/reference/crect-class.md) object for this parameter.  
   
  `lpszString`  
- 指向要繪製指定的字元字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)這個參數的物件。  
+ Points to the specified character string to be drawn. You can also pass a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object for this parameter.  
   
  `nCount`  
- 指定字串中的字元數。  
+ Specifies the number of characters in the string.  
   
  `lpDxWidths`  
- 指向陣列，這個值表示來源的相鄰的字元儲存格之間的距離。 比方說， `lpDxWidths`[*我*] 的邏輯單元會分隔字元儲存格的出處*我*和字元儲存格*我*+ 1。 如果`lpDxWidths`是**NULL**，`ExtTextOut`會使用預設值之間的間距字元。  
+ Points to an array of values that indicate the distance between origins of adjacent character cells. For instance, `lpDxWidths`[ *i*] logical units will separate the origins of character cell *i* and character cell *i* + 1. If `lpDxWidths` is **NULL**, `ExtTextOut` uses the default spacing between characters.  
   
  `str`  
- A`CString`物件，其中包含要繪製指定的字元。  
+ A `CString` object that contains the specified characters to be drawn.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 矩形區域可以是不透明 （填滿，而且目前的背景色彩），而且它可以裁剪區域。  
+### <a name="remarks"></a>Remarks  
+ The rectangular region can be opaque (filled with the current background color), and it can be a clipping region.  
   
- 如果`nOptions`為 0 和`lpRect`是**NULL**，函式將文字寫入至裝置內容而不使用矩形區域。 根據預設，函式不會使用或更新目前的位置。 如果應用程式需要更新目前的位置時，它會呼叫`ExtTextOut`，應用程式可以呼叫`CDC`成員函式[SetTextAlign](#settextalign)與`nFlags`設**TA_UPDATECP**。 當設定這個旗標時，Windows 會略過*x*和*y*在後續呼叫`ExtTextOut`，並改為使用目前的位置。 當應用程式使用**TA_UPDATECP**更新目前的位置，`ExtTextOut`至文字的上一行的結尾，或所指陣列的最後一個元素所指定的位置設定的目前位置`lpDxWidths`，較長者為準。  
+ If `nOptions` is 0 and `lpRect` is **NULL**, the function writes text to the device context without using a rectangular region. By default, the current position is not used or updated by the function. If an application needs to update the current position when it calls `ExtTextOut`, the application can call the `CDC` member function [SetTextAlign](#settextalign) with `nFlags` set to **TA_UPDATECP**. When this flag is set, Windows ignores *x* and *y* on subsequent calls to `ExtTextOut` and uses the current position instead. When an application uses **TA_UPDATECP** to update the current position, `ExtTextOut` sets the current position either to the end of the previous line of text or to the position specified by the last element of the array pointed to by `lpDxWidths`, whichever is greater.  
   
-##  <a name="fillpath"></a>CDC::FillPath  
- 關閉目前路徑中的任何開放圖形，並使用目前的筆刷和多邊形填滿模式，填滿路徑的內部。  
+##  <a name="fillpath"></a>  CDC::FillPath  
+ Closes any open figures in the current path and fills the path's interior by using the current brush and polygon-filling mode.  
   
 ```  
 BOOL FillPath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 填入其內部之後，就會捨棄裝置內容的路徑。  
+### <a name="remarks"></a>Remarks  
+ After its interior is filled, the path is discarded from the device context.  
   
-##  <a name="fillrect"></a>CDC::FillRect  
- 呼叫此成員函式，以填滿指定的矩形，使用指定的筆刷。  
+##  <a name="fillrect"></a>  CDC::FillRect  
+ Call this member function to fill a given rectangle using the specified brush.  
   
 ```  
 void FillRect(
@@ -2043,24 +2234,24 @@ void FillRect(
     CBrush* pBrush);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構，其中包含要填滿的矩形的邏輯座標。 您也可以傳遞[CRect](../../atl-mfc-shared/reference/crect-class.md)這個參數的物件。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure that contains the logical coordinates of the rectangle to be filled. You can also pass a [CRect](../../atl-mfc-shared/reference/crect-class.md) object for this parameter.  
   
  `pBrush`  
- 識別用來填滿之矩形的筆刷。  
+ Identifies the brush used to fill the rectangle.  
   
-### <a name="remarks"></a>備註  
- 函式會填滿完整的矩形中，包括左端和頂端的框線，但不會填右邊緣和下框線。  
+### <a name="remarks"></a>Remarks  
+ The function fills the complete rectangle, including the left and top borders, but it does not fill the right and bottom borders.  
   
- 筆刷必須設為 使用建立[CBrush](../../mfc/reference/cbrush-class.md)成員函式[CreateHatchBrush](../../mfc/reference/cbrush-class.md#createhatchbrush)， [CreatePatternBrush](../../mfc/reference/cbrush-class.md#createpatternbrush)，和[CreateSolidBrush](../../mfc/reference/cbrush-class.md#createsolidbrush)，或擷取`GetStockObject`Windows 函式。  
+ The brush needs to either be created using the [CBrush](../../mfc/reference/cbrush-class.md) member functions [CreateHatchBrush](../../mfc/reference/cbrush-class.md#createhatchbrush), [CreatePatternBrush](../../mfc/reference/cbrush-class.md#createpatternbrush), and [CreateSolidBrush](../../mfc/reference/cbrush-class.md#createsolidbrush), or retrieved by the `GetStockObject` Windows function.  
   
- 當填滿指定的矩形，`FillRect`不包含矩形的右邊緣和下面。 GDI 最多至填滿的矩形，但不包括，正確資料行和底端的資料列，不論目前的對應模式。 `FillRect`比較的值**頂端**，**底部**，**左**，和**右**指定矩形的成員。 如果**底部**小於或等於**頂端**，或如果**右**小於或等於**左**，不繪製矩形。  
+ When filling the specified rectangle, `FillRect` does not include the rectangle's right and bottom sides. GDI fills a rectangle up to, but does not include, the right column and bottom row, regardless of the current mapping mode. `FillRect` compares the values of the **top**, **bottom**, **left**, and **right** members of the specified rectangle. If **bottom** is less than or equal to **top**, or if **right** is less than or equal to **left**, the rectangle is not drawn.  
   
- `FillRect`類似於[CDC::FillSolidRect](#fillsolidrect); 不過，`FillRect`採用筆刷，因此可以用來填入純色、 遞色的色彩，包含陰影的筆刷或圖樣的矩形。 `FillSolidRect`使用僅純色 (由**COLORREF**參數)。 `FillRect`通常低於`FillSolidRect`。  
+ `FillRect` is similar to [CDC::FillSolidRect](#fillsolidrect); however, `FillRect` takes a brush and therefore can be used to fill a rectangle with a solid color, a dithered color, hatched brushes, or a pattern. `FillSolidRect` uses only solid colors (indicated by a **COLORREF** parameter). `FillRect` usually is slower than `FillSolidRect`.  
   
-##  <a name="fillrgn"></a>CDC::FillRgn  
- 所指定的區域填滿`pRgn`與所指定的筆刷`pBrush`。  
+##  <a name="fillrgn"></a>  CDC::FillRgn  
+ Fills the region specified by `pRgn` with the brush specified by `pBrush`.  
   
 ```  
 BOOL FillRgn(
@@ -2068,24 +2259,24 @@ BOOL FillRgn(
     CBrush* pBrush);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- 指向要填滿區域。 以邏輯單位表示指定的給定區域座標。  
+ A pointer to the region to be filled. The coordinates for the given region are specified in logical units.  
   
  `pBrush`  
- 識別用來填滿區域的筆刷。  
+ Identifies the brush to be used to fill the region.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 筆刷必須建立使用`CBrush`成員函式`CreateHatchBrush`， `CreatePatternBrush`， `CreateSolidBrush`，或擷取**GetStockObject**。  
+### <a name="remarks"></a>Remarks  
+ The brush must either be created using the `CBrush` member functions `CreateHatchBrush`, `CreatePatternBrush`, `CreateSolidBrush`, or be retrieved by **GetStockObject**.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn)。  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateRoundRectRgn](../../mfc/reference/crgn-class.md#createroundrectrgn).  
   
-##  <a name="fillsolidrect"></a>CDC::FillSolidRect  
- 呼叫此成員函式可使用的指定純色填滿指定的矩形。  
+##  <a name="fillsolidrect"></a>  CDC::FillSolidRect  
+ Call this member function to fill the given rectangle with the specified solid color.  
   
 ```  
 void FillSolidRect(
@@ -2101,42 +2292,42 @@ void FillSolidRect(
     COLORREF clr);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指定的周框 （以邏輯單位表示）。 您可以傳遞指標給[RECT](../../mfc/reference/rect-structure1.md)資料結構或`CRect`這個參數的物件。  
+ Specifies the bounding rectangle (in logical units). You can pass either a pointer to a [RECT](../../mfc/reference/rect-structure1.md) data structure or a `CRect` object for this parameter.  
   
- `clr`指定要用來填滿之矩形的色彩。  
+ `clr` Specifies the color to be used to fill the rectangle.  
   
  *x*  
- 指定邏輯之矩形左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the rectangle.  
   
  *y*  
- 指定目的地矩形的左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the destination rectangle.  
   
  `cx`  
- 指定的矩形的寬度。  
+ Specifies the width of the rectangle.  
   
  `cy`  
- 指定的矩形的高度。  
+ Specifies the height of the rectangle.  
   
-### <a name="remarks"></a>備註  
- `FillSolidRect`非常類似於[CDC::FillRect](#fillrect); 不過，`FillSolidRect`使用只有純色 (由**COLORREF**參數)，而`FillRect`採用筆刷，因此可以用來填入純色、 遞色的色彩，包含陰影的筆刷或圖樣的矩形。 `FillSolidRect`通常的速度比`FillRect`。  
+### <a name="remarks"></a>Remarks  
+ `FillSolidRect` is very similar to [CDC::FillRect](#fillrect); however, `FillSolidRect` uses only solid colors (indicated by the **COLORREF** parameter), while `FillRect` takes a brush and therefore can be used to fill a rectangle with a solid color, a dithered color, hatched brushes, or a pattern. `FillSolidRect` usually is faster than `FillRect`.  
   
 > [!NOTE]
->  當您呼叫`FillSolidRect`，背景色彩，而這些先前使用設定[SetBkColor](#setbkcolor)，設定為所指定的色彩`clr`。  
+>  When you call `FillSolidRect`, the background color, which was previously set using [SetBkColor](#setbkcolor), is set to the color indicated by `clr`.  
   
-##  <a name="flattenpath"></a>CDC::FlattenPath  
- 轉換到目前的裝置內容中，選取的路徑中任何曲線，並將每個曲線轉換成一連串的行。  
+##  <a name="flattenpath"></a>  CDC::FlattenPath  
+ Transforms any curves in the path selected into the current device context, and turns each curve into a sequence of lines.  
   
 ```  
 BOOL FlattenPath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-##  <a name="floodfill"></a>CDC::FloodFill  
- 填入目前的筆刷顯示介面的區域。  
+##  <a name="floodfill"></a>  CDC::FloodFill  
+ Fills an area of the display surface with the current brush.  
   
 ```  
 BOOL FloodFill(
@@ -2145,28 +2336,28 @@ BOOL FloodFill(
     COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定的點，填滿的開始處的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the point where filling begins.  
   
  *y*  
- 指定的點，填滿的開始處的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the point where filling begins.  
   
  `crColor`  
- 指定界限的色彩。  
+ Specifies the color of the boundary.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，則為非零否則會傳回 0 無法完成填滿，如果指定的點具有所指定的界限色彩`crColor`，或該點是否裁剪區域外。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0 is returned if the filling could not be completed, the given point has the boundary color specified by `crColor`, or the point is outside the clipping region.  
   
-### <a name="remarks"></a>備註  
- 區域會假設所限制為指定`crColor`。 `FloodFill`函式所指定的點開始*x*和*y*並繼續在所有的方向，色彩界限。  
+### <a name="remarks"></a>Remarks  
+ The area is assumed to be bounded as specified by `crColor`. The `FloodFill` function begins at the point specified by *x* and *y* and continues in all directions to the color boundary.  
   
- 只有記憶體裝置內容和支援點陣顯示技術支援的裝置`FloodFill`成員函式。 如需有關資訊**RC_BITBLT**功能，請參閱`GetDeviceCaps`成員函式。  
+ Only memory-device contexts and devices that support raster-display technology support the `FloodFill` member function. For information about **RC_BITBLT** capability, see the `GetDeviceCaps` member function.  
   
- `ExtFloodFill`函式會提供類似的功能，但更大的彈性。  
+ The `ExtFloodFill` function provides similar capability but greater flexibility.  
   
-##  <a name="framerect"></a>CDC::FrameRect  
- 繪製框線所指定的矩形`lpRect`。  
+##  <a name="framerect"></a>  CDC::FrameRect  
+ Draws a border around the rectangle specified by `lpRect`.  
   
 ```  
 void FrameRect(
@@ -2174,22 +2365,22 @@ void FrameRect(
     CBrush* pBrush);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件，其中包含矩形的左上角和右下角的邏輯座標。 您也可以傳遞`CRect`這個參數的物件。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that contains the logical coordinates of the upper-left and lower-right corners of the rectangle. You can also pass a `CRect` object for this parameter.  
   
  `pBrush`  
- 識別要用於框架矩形的筆刷。  
+ Identifies the brush to be used for framing the rectangle.  
   
-### <a name="remarks"></a>備註  
- 此函數會使用指定的筆刷繪製的框線。 框線的高度與寬度永遠為 1 的邏輯單元。  
+### <a name="remarks"></a>Remarks  
+ The function uses the given brush to draw the border. The width and height of the border is always 1 logical unit.  
   
- 如果矩形**底部**座標小於或等於**頂端**，或如果**右**小於或等於**左**，不繪製矩形。  
+ If the rectangle's **bottom** coordinate is less than or equal to **top**, or if **right** is less than or equal to **left**, the rectangle is not drawn.  
   
- 所繪製的框線`FrameRect`位於相同位置所繪製的框線**矩形**成員函式使用相同的座標 (如果**矩形**使用是 1 的邏輯單元寬的畫筆使用)。 不會填入的矩形內部`FrameRect`。  
+ The border drawn by `FrameRect` is in the same position as a border drawn by the **Rectangle** member function using the same coordinates (if **Rectangle** uses a pen that is 1 logical unit wide). The interior of the rectangle is not filled by `FrameRect`.  
   
-##  <a name="framergn"></a>CDC::FrameRgn  
- 所指定的區域周圍繪製框線`pRgn`使用所指定的筆刷`pBrush`。  
+##  <a name="framergn"></a>  CDC::FrameRgn  
+ Draws a border around the region specified by `pRgn` using the brush specified by `pBrush`.  
   
 ```  
 BOOL FrameRgn(
@@ -2199,105 +2390,105 @@ BOOL FrameRgn(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- 指向`CRgn`物件，可識別要框線括住的區域。 以邏輯單位表示指定的給定區域座標。  
+ Points to the `CRgn` object that identifies the region to be enclosed in a border. The coordinates for the given region are specified in logical units.  
   
  `pBrush`  
- 指向`CBrush`物件，可識別用來繪製框線的筆刷。  
+ Points to the `CBrush` object that identifies the brush to be used to draw the border.  
   
  `nWidth`  
- 在垂直的筆刷筆觸以裝置為單位指定框線的寬度。  
+ Specifies the width of the border in vertical brush strokes in device units.  
   
  `nHeight`  
- 在水平的筆刷筆觸以裝置為單位指定框線的高度。  
+ Specifies the height of the border in horizontal brush strokes in device units.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn)。  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CombineRgn](../../mfc/reference/crgn-class.md#combinergn).  
   
-##  <a name="fromhandle"></a>CDC::FromHandle  
- 將指標傳回至`CDC`物件時指定的裝置內容控制代碼。  
+##  <a name="fromhandle"></a>  CDC::FromHandle  
+ Returns a pointer to a `CDC` object when given a handle to a device context.  
   
 ```  
 static CDC* PASCAL FromHandle(HDC hDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- 包含 Windows 裝置內容的控制代碼。  
+ Contains a handle to a Windows device context.  
   
-### <a name="return-value"></a>傳回值  
- 指標可能是暫時性的不會儲存超過立即使用。  
+### <a name="return-value"></a>Return Value  
+ The pointer may be temporary and should not be stored beyond immediate use.  
   
-### <a name="remarks"></a>備註  
- 如果 `CDC` 物件沒有附加至控制代碼，會建立並附加暫存 `CDC` 物件。  
+### <a name="remarks"></a>Remarks  
+ If a `CDC` object is not attached to the handle, a temporary `CDC` object is created and attached.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc)。  
+### <a name="example"></a>Example  
+  See the example for [CPrintDialog::GetPrinterDC](../../mfc/reference/cprintdialog-class.md#getprinterdc).  
   
-##  <a name="getarcdirection"></a>CDC::GetArcDirection  
- 傳回目前弧形方向之裝置內容。  
+##  <a name="getarcdirection"></a>  CDC::GetArcDirection  
+ Returns the current arc direction for the device context.  
   
 ```  
 int GetArcDirection() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功的話，請指定目前的弧形方向。 以下是有效的傳回值︰  
+### <a name="return-value"></a>Return Value  
+ Specifies the current arc direction, if successful. Following are the valid return values:  
   
-- **AD_COUNTERCLOCKWISE**弧形和以逆時針方向繪製的矩形。  
+- **AD_COUNTERCLOCKWISE** Arcs and rectangles drawn counterclockwise.  
   
-- **AD_CLOCKWISE**弧形和朝順時針方向繪製的矩形。  
+- **AD_CLOCKWISE** Arcs and rectangles drawn clockwise.  
   
- 如果發生錯誤，傳回的值為零。  
+ If an error occurs, the return value is zero.  
   
-### <a name="remarks"></a>備註  
- 弧線和矩形函式使用弧形方向。  
+### <a name="remarks"></a>Remarks  
+ Arc and rectangle functions use the arc direction.  
   
-##  <a name="getaspectratiofilter"></a>CDC::GetAspectRatioFilter  
- 擷取目前的長寬比篩選條件的設定。  
+##  <a name="getaspectratiofilter"></a>  CDC::GetAspectRatioFilter  
+ Retrieves the setting for the current aspect-ratio filter.  
   
 ```  
 CSize GetAspectRatioFilter() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`CSize`物件，代表目前的長寬比篩選所使用的長寬比。  
+### <a name="return-value"></a>Return Value  
+ A `CSize` object representing the aspect ratio used by the current aspect ratio filter.  
   
-### <a name="remarks"></a>備註  
- 外觀比例是裝置的像素寬度和高度所形成的比例。 裝置的外觀比例的相關資訊用於建立、 選取範圍，以及顯示的字型。 Windows 提供的特殊篩選器長寬比篩選器，以選取 針對特定的長寬比，從所有可用的字型的字型。 篩選器會使用所指定的外觀比例`SetMapperFlags`成員函式。  
+### <a name="remarks"></a>Remarks  
+ The aspect ratio is the ratio formed by a device's pixel width and height. Information about a device's aspect ratio is used in the creation, selection, and display of fonts. Windows provides a special filter, the aspect-ratio filter, to select fonts designed for a particular aspect ratio from all of the available fonts. The filter uses the aspect ratio specified by the `SetMapperFlags` member function.  
   
-##  <a name="getbkcolor"></a>CDC::GetBkColor  
- 傳回目前的背景色彩。  
+##  <a name="getbkcolor"></a>  CDC::GetBkColor  
+ Returns the current background color.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- RGB 色彩值。  
+### <a name="return-value"></a>Return Value  
+ An RGB color value.  
   
-### <a name="remarks"></a>備註  
- 如果背景模式為**不透明**，系統會使用背景色彩填滿樣式的行中出現間距、 筆刷影線的行中的字元儲存格的背景的間隙。 轉換點陣圖之間色彩及單色裝置內容時，系統也會使用背景色彩。  
+### <a name="remarks"></a>Remarks  
+ If the background mode is **OPAQUE**, the system uses the background color to fill the gaps in styled lines, the gaps between hatched lines in brushes, and the background in character cells. The system also uses the background color when converting bitmaps between color and monochrome device contexts.  
   
-##  <a name="getbkmode"></a>CDC::GetBkMode  
- 傳回背景模式。  
+##  <a name="getbkmode"></a>  CDC::GetBkMode  
+ Returns the background mode.  
   
 ```  
 int GetBkMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前背景模式中，它可以是**不透明**或**透明**。  
+### <a name="return-value"></a>Return Value  
+ The current background mode, which can be **OPAQUE** or **TRANSPARENT**.  
   
-### <a name="remarks"></a>備註  
- 背景模式會定義系統是否會繪製文字、 影線的筆刷或不是實線任何筆樣式之前移除現有的背景色彩的繪圖介面上。  
+### <a name="remarks"></a>Remarks  
+ The background mode defines whether the system removes existing background colors on the drawing surface before drawing text, hatched brushes, or any pen style that is not a solid line.  
   
-##  <a name="getboundsrect"></a>CDC::GetBoundsRect  
- 傳回指定之裝置內容的目前累積週框矩形。  
+##  <a name="getboundsrect"></a>  CDC::GetBoundsRect  
+ Returns the current accumulated bounding rectangle for the specified device context.  
   
 ```  
 UINT GetBoundsRect(
@@ -2305,43 +2496,43 @@ UINT GetBoundsRect(
     UINT flags);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRectBounds`  
- 指出緩衝區將會接收目前週框。 矩形就會傳回邏輯座標。  
+ Points to a buffer that will receive the current bounding rectangle. The rectangle is returned in logical coordinates.  
   
  `flags`  
- 指定週框矩形是否傳回前加以清除。 此參數應為零，或設為下列值︰  
+ Specifies whether the bounding rectangle is to be cleared after it is returned. This parameter should be  zero or set to the following value:  
   
-- **DCB_RESET**強制傳回前要清除之周框。  
+- **DCB_RESET** Forces the bounding rectangle to be cleared after it is returned.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，請指定目前的狀態，這個周框。 它可以是下列值的組合︰  
+### <a name="return-value"></a>Return Value  
+ Specifies the current state of the bounding rectangle if the function is successful. It can be a combination of the following values:  
   
-- **DCB_ACCUMULATE**週框矩形累積發生。  
+- **DCB_ACCUMULATE** Bounding rectangle accumulation is occurring.  
   
-- **DCB_RESET**是空的週框。  
+- **DCB_RESET** Bounding rectangle is empty.  
   
-- **DCB_SET**不是空的週框。  
+- **DCB_SET** Bounding rectangle is not empty.  
   
-- **DCB_ENABLE**週框累積為開啟。  
+- **DCB_ENABLE** Bounding accumulation is on.  
   
-- **DCB_DISABLE**週框累積為關閉。  
+- **DCB_DISABLE** Bounding accumulation is off.  
   
-##  <a name="getbrushorg"></a>CDC::GetBrushOrg  
- 擷取目前選取之裝置內容的筆刷的原點 （以裝置為單位）。  
+##  <a name="getbrushorg"></a>  CDC::GetBrushOrg  
+ Retrieves the origin (in device units) of the brush currently selected for the device context.  
   
 ```  
 CPoint GetBrushOrg() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前 （以裝置單位表示） 做為筆刷的原點[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ The current origin of the brush (in device units) as a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 初始的筆刷的原點位於 (0，0) 的工作區。 傳回值會指定此點裝置單位，相對於來源的桌面視窗中。  
+### <a name="remarks"></a>Remarks  
+ The initial brush origin is at (0,0) of the client area. The return value specifies this point in device units relative to the origin of the desktop window.  
   
-##  <a name="getcharacterplacement"></a>CDC::GetCharacterPlacement  
- 擷取各種類型的字元字串的詳細資訊。  
+##  <a name="getcharacterplacement"></a>  CDC::GetCharacterPlacement  
+ Retrieves various types of information on a character string.  
   
 ```  
 DWORD GetCharacterPlacement(
@@ -2358,35 +2549,35 @@ DWORD GetCharacterPlacement(
     DWORD dwFlags) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpString`  
- 要處理的字元字串指標。  
+ A pointer to the character string to process.  
   
  `nCount`  
- 指定字串的長度。 ANSI 版中，它是位元組計數和 Unicode 函數對於字數統計。 如需詳細資訊，請參閱[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)。  
+ Specifies the length of the string. For the ANSI version, it is a BYTE count and for the Unicode function it is a WORD count. For more information, see [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx).  
   
  `nMaxExtent`  
- 指定最大範圍 （以邏輯單位表示） 來處理字串。 如果處理，則會超過此範圍的字元會被忽略。 計算的任何必要的排序或圖像陣列僅適用於包含的字元。 GCP_MAXEXTENT 值中指定時才使用這個參數`dwFlags`參數。 當函式會處理輸入的字串，每個字元，其範圍是輸出、 範圍，以及其他陣列才加入總範圍尚未尚未超過最大值。 一旦達到限制時，將會停止處理。  
+ Specifies the maximum extent (in logical units) to which the string is processed. Characters that, if processed, would exceed this extent are ignored. Computations for any required ordering or glyph arrays apply only to the included characters. This parameter is used only if the GCP_MAXEXTENT value is specified in the `dwFlags` parameter. As the function processes the input string, each character and its extent is added to the output, extent, and other arrays only if the total extent has not yet exceeded the maximum. Once the limit is reached, processing will stop.  
   
  lpResults  
- 指標[GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx)接收函式的結果的結構。  
+ Pointer to a [GCP_Results](http://msdn.microsoft.com/library/windows/desktop/dd144842\(v=vs.85\).aspx) structure that receives the results of the function.  
   
  `dwFlags`  
- 指定如何處理字串到必要的陣列。 這個參數可以是其中一個或多個值中所列`dwFlags`區段[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)主題。  
+ Specifies how to process the string into the required arrays. This parameter can be one or more of the values listed in the `dwFlags` section of the [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx) topic.  
   
  `str`  
- 指標[CString](../../atl-mfc-shared/reference/cstringt-class.md)至處理序的物件。  
+ A pointer to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object to process.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，傳回值是以邏輯單位表示字串的高度與寬度。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is the width and height of the string in logical units.  
   
- 如果此函式失敗，則傳回值為零。  
+ If the function fails, the return value is zero.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the function [GetCharacterPlacement](http://msdn.microsoft.com/library/windows/desktop/dd144860\(v=vs.85\).aspx), as described in the Windows SDK.  
   
-##  <a name="getcharabcwidths"></a>CDC::GetCharABCWidths  
- 擷取指定範圍內的連續字元的寬度，從目前的 TrueType 字型。  
+##  <a name="getcharabcwidths"></a>  CDC::GetCharABCWidths  
+ Retrieves the widths of consecutive characters in a specified range from the current TrueType font.  
   
 ```  
 BOOL GetCharABCWidths(
@@ -2400,37 +2591,37 @@ BOOL GetCharABCWidths(
     LPABCFLOAT lpABCF) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nFirstChar`  
- 指定的字元寬度傳回的目前字型的字元範圍中的第一個字元。  
+ Specifies the first character in the range of characters from the current font for which character widths are returned.  
   
  `nLastChar`  
- 指定的字元寬度傳回的目前字型的字元範圍中的最後一個字元。  
+ Specifies the last character in the range of characters from the current font for which character widths are returned.  
   
  `lpabc`  
- 指向陣列[ABC](../../mfc/reference/abc-structure.md)接收字元寬度，當函式傳回的結構。 這個陣列必須包含至少會為許多**ABC**做中所指定的範圍有字元結構`nFirstChar`和`nLastChar`參數。  
+ Points to an array of [ABC](../../mfc/reference/abc-structure.md) structures that receive the character widths when the function returns. This array must contain at least as many **ABC** structures as there are characters in the range specified by the `nFirstChar` and `nLastChar` parameters.  
   
  *lpABCF*  
- 應用程式所提供的緩衝區的陣列會指向[ABCFLOAT](../../mfc/reference/abcfloat-structure.md)結構函式傳回時，接收字元寬度。 此函數所傳回的寬，IEEE 浮點格式。  
+ Points to an application-supplied buffer with an array of [ABCFLOAT](../../mfc/reference/abcfloat-structure.md) structures to receive the character widths when the function returns. The widths returned by this function are in the IEEE floating-point format.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 寬度會傳回以邏輯單位表示。 此函式會成功，只能使用 TrueType 字型。  
+### <a name="remarks"></a>Remarks  
+ The widths are returned in logical units. This function succeeds only with TrueType fonts.  
   
- 已選取的特定點大小之後，TrueType 轉譯器會提供"ABC"字元的間距。 "A"間距是前面放置圖像 （glyph） 加入至目前位置的距離。 "B"間距是黑色圖像部分的寬度。 "C"間距會加入至目前的位置，以便圖像右邊空白字元的帳戶。 進階寬度總計有由 A + B + c。  
+ The TrueType rasterizer provides "ABC" character spacing after a specific point size has been selected. "A" spacing is the distance that is added to the current position before placing the glyph. "B" spacing is the width of the black part of the glyph. "C" spacing is added to the current position to account for the white space to the right of the glyph. The total advanced width is given by A + B + C.  
   
- 當`GetCharABCWidths`成員函式會擷取負數"A"或"C"寬字元，該字元包括 underhangs 或突出部分。  
+ When the `GetCharABCWidths` member function retrieves negative "A" or "C" widths for a character, that character includes underhangs or overhangs.  
   
- 若要將 ABC 寬度為字型設計單位，應用程式應該建立字型的高度 (中所指定**lfHeight**隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構) 中儲存的值等於**ntmSizeEM**隸屬[NEWTEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162741)結構。 (值**ntmSizeEM**成員可以藉由呼叫擷取[EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) Windows 函式。)  
+ To convert the ABC widths to font design units, an application should create a font whose height (as specified in the **lfHeight** member of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure) is equal to the value stored in the **ntmSizeEM** member of the [NEWTEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162741) structure. (The value of the **ntmSizeEM** member can be retrieved by calling the [EnumFontFamilies](http://msdn.microsoft.com/library/windows/desktop/dd162619) Windows function.)  
   
- ABC 寬度的預設字元用於目前選取字型的範圍以外的字元。  
+ The ABC widths of the default character are used for characters that are outside the range of the currently selected font.  
   
- 若要擷取非 TrueType 字型中的字元寬度，應用程式應該使用[GetCharWidth](http://msdn.microsoft.com/library/windows/desktop/dd144861) Windows 函式。  
+ To retrieve the widths of characters in non-TrueType fonts, applications should use the [GetCharWidth](http://msdn.microsoft.com/library/windows/desktop/dd144861) Windows function.  
   
-##  <a name="getcharabcwidthsi"></a>CDC::GetCharABCWidthsI  
- 擷取的寬度，以邏輯單位，從目前的 TrueType 字型在指定範圍中的連續圖像索引。  
+##  <a name="getcharabcwidthsi"></a>  CDC::GetCharABCWidthsI  
+ Retrieves the widths, in logical units, of consecutive glyph indices in a specified range from the current TrueType font.  
   
 ```  
 BOOL GetCharABCWidthsI(
@@ -2440,27 +2631,27 @@ BOOL GetCharABCWidthsI(
     LPABC lpabc) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `giFirst`  
- 指定第一個圖像 （glyph） 索引群組中的所有連續的圖像索引，從目前的字型。 若此參數只會用於`pgi`參數是**NULL**。  
+ Specifies the first glyph index in the group of consecutive glyph indices from the current font. This parameter is only used if the `pgi` parameter is **NULL**.  
   
  `cgi`  
- 指定圖像索引的數目。  
+ Specifies the number of glyph indices.  
   
  `pgi`  
- 包含圖像索引的陣列指標。 如果值為**NULL**、`giFirst`改為使用參數。 `cgi`參數會指定此陣列中的圖像索引鍵的數目。  
+ A pointer to an array containing glyph indices. If the value is **NULL**, the `giFirst` parameter is used instead. The `cgi` parameter specifies the number of glyph indices in this array.  
   
  `lpabc`  
- 陣列的指標[ABC](http://msdn.microsoft.com/library/windows/desktop/dd162454)結構接收字元寬度。 這個陣列必須包含至少會為許多**ABC**做有 glyph 索引所指定的結構`cgi`參數。  
+ Pointer to an array of [ABC](http://msdn.microsoft.com/library/windows/desktop/dd162454) structures receiving the character widths. This array must contain at least as many **ABC** structures as there are glyph indices specified by the `cgi` parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetCharABCWidthsI](http://msdn.microsoft.com/library/windows/desktop/dd144859)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the function [GetCharABCWidthsI](http://msdn.microsoft.com/library/windows/desktop/dd144859), as described in the Windows SDK.  
   
-##  <a name="getcharwidth"></a>CDC::GetCharWidth  
- 擷取從目前的字型，連續的字元群組中的個別字元寬度使用`m_hAttribDC`，輸入的裝置內容。  
+##  <a name="getcharwidth"></a>  CDC::GetCharWidth  
+ Retrieves the widths of individual characters in a consecutive group of characters from the current font, using `m_hAttribDC`, the input device context.  
   
 ```  
 BOOL GetCharWidth(
@@ -2474,31 +2665,31 @@ BOOL GetCharWidth(
     float* lpFloatBuffer) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nFirstChar`  
- 指定連續的目前字型中的字元群組中的第一個字元。  
+ Specifies the first character in a consecutive group of characters in the current font.  
   
  `nLastChar`  
- 指定連續的目前字型中的字元群組中的最後一個字元。  
+ Specifies the last character in a consecutive group of characters in the current font.  
   
  `lpBuffer`  
- 指出緩衝區中目前的字型中將會接收一組連續字元的寬度值。  
+ Points to a buffer that will receive the width values for a consecutive group of characters in the current font.  
   
  *lpFloatBuffer*  
- 指出緩衝區接收字元寬度。 傳回的寬度會以 32 位元 IEEE 浮點格式。 （寬度會測量基底線條的字元）。  
+ Points to a buffer to receive the character widths. The returned widths are in the 32-bit IEEE floating-point format. (The widths are measured along the base line of the characters.)  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 例如，如果`nFirstChar`識別字母 'a' 和`nLastChar`識別字母 'a'-'z'、 函式擷取所有小寫字元的寬度。  
+### <a name="remarks"></a>Remarks  
+ For example, if `nFirstChar` identifies the letter 'a' and `nLastChar` identifies the letter 'z', the function retrieves the widths of all lowercase characters.  
   
- 此函式所指向之緩衝區中儲存值`lpBuffer`。 這個緩衝區必須夠大，無法保存所有的寬度。 也就是必須有至少 26 項目中指定的範例。  
+ The function stores the values in the buffer pointed to by `lpBuffer`. This buffer must be large enough to hold all of the widths. That is, there must be at least 26 entries in the example given.  
   
- 如果連續的字元群組中的字元不存在於特定字型，則會指派預設字元寬度值。  
+ If a character in the consecutive group of characters does not exist in a particular font, it will be assigned the width value of the default character.  
   
-##  <a name="getcharwidthi"></a>CDC::GetCharWidthI  
- 擷取的寬度，以邏輯座標，從目前的字型的指定範圍內的連續圖像索引。  
+##  <a name="getcharwidthi"></a>  CDC::GetCharWidthI  
+ Retrieves the widths, in logical coordinates, of consecutive glyph indices in a specified range from the current font.  
   
 ```  
 BOOL GetCharWidthI(
@@ -2508,191 +2699,191 @@ BOOL GetCharWidthI(
     LPINT lpBuffer) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `giFirst`  
- 指定第一個圖像 （glyph） 索引群組中的所有連續的圖像索引，從目前的字型。 若此參數只會用於`pgi`參數是**NULL**。  
+ Specifies the first glyph index in the group of consecutive glyph indices from the current font. This parameter is only used if the `pgi` parameter is **NULL**.  
   
  `cgi`  
- 指定圖像索引的數目。  
+ Specifies the number of glyph indices.  
   
  `pgi`  
- 包含圖像索引的陣列指標。 如果值為**NULL**、`giFirst`改為使用參數。 `cgi`參數會指定此陣列中的圖像索引鍵的數目。  
+ A pointer to an array containing glyph indices. If the value is **NULL**, the `giFirst` parameter is used instead. The `cgi` parameter specifies the number of glyph indices in this array.  
   
  `lpBuffer`  
- 接收寬度緩衝區的指標。  
+ A pointer to a buffer that receives the widths.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetCharWidthI](http://msdn.microsoft.com/library/windows/desktop/dd144864)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the function [GetCharWidthI](http://msdn.microsoft.com/library/windows/desktop/dd144864), as described in the Windows SDK.  
   
-##  <a name="getclipbox"></a>CDC::GetClipBox  
- 擷取目前裁剪邊界周圍 tightest 週框矩形的維度。  
+##  <a name="getclipbox"></a>  CDC::GetClipBox  
+ Retrieves the dimensions of the tightest bounding rectangle around the current clipping boundary.  
   
 ```  
 virtual int GetClipBox(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)所接收的矩形維度物件。  
+ Points to the [RECT](../../mfc/reference/rect-structure1.md) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that is to receive the rectangle dimensions.  
   
-### <a name="return-value"></a>傳回值  
- 裁剪區域的類型。 它可以是下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ The clipping region's type. It can be any of the following values:  
   
-- **COMPLEXREGION**裁剪區域具有重疊的框線。  
+- **COMPLEXREGION** Clipping region has overlapping borders.  
   
-- **錯誤**裝置內容不正確。  
+- **ERROR** Device context is not valid.  
   
-- **NULLREGION**裁剪區域是空的。  
+- **NULLREGION** Clipping region is empty.  
   
-- **SIMPLEREGION**裁剪區域有任何重疊的框線。  
+- **SIMPLEREGION** Clipping region has no overlapping borders.  
   
-### <a name="remarks"></a>備註  
- 維度會複製到所指向的緩衝區`lpRect`。  
+### <a name="remarks"></a>Remarks  
+ The dimensions are copied to the buffer pointed to by `lpRect`.  
   
-##  <a name="getcoloradjustment"></a>CDC::GetColorAdjustment  
- 擷取裝置內容的色彩調整值。  
+##  <a name="getcoloradjustment"></a>  CDC::GetColorAdjustment  
+ Retrieves the color adjustment values for the device context.  
   
 ```  
 BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpColorAdjust`  
- 指向[COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md)接收色彩調整值的資料結構。  
+ Points to a [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) data structure to receive the color adjustment values.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-##  <a name="getcurrentbitmap"></a>CDC::GetCurrentBitmap  
- 讓指標回到目前所選`CBitmap`物件。  
+##  <a name="getcurrentbitmap"></a>  CDC::GetCurrentBitmap  
+ Returns a pointer to the currently selected `CBitmap` object.  
   
 ```  
 CBitmap* GetCurrentBitmap() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CBitmap`物件，如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a `CBitmap` object, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式可能會傳回暫存物件。  
+### <a name="remarks"></a>Remarks  
+ This member function may return temporary objects.  
   
-##  <a name="getcurrentbrush"></a>CDC::GetCurrentBrush  
- 讓指標回到目前所選`CBrush`物件。  
+##  <a name="getcurrentbrush"></a>  CDC::GetCurrentBrush  
+ Returns a pointer to the currently selected `CBrush` object.  
   
 ```  
 CBrush* GetCurrentBrush() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CBrush`物件，如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a `CBrush` object, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式可能會傳回暫存物件。  
+### <a name="remarks"></a>Remarks  
+ This member function may return temporary objects.  
   
-##  <a name="getcurrentfont"></a>CDC::GetCurrentFont  
- 讓指標回到目前所選`CFont`物件。  
+##  <a name="getcurrentfont"></a>  CDC::GetCurrentFont  
+ Returns a pointer to the currently selected `CFont` object.  
   
 ```  
 CFont* GetCurrentFont() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CFont`物件，如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a `CFont` object, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式可能會傳回暫存物件。  
+### <a name="remarks"></a>Remarks  
+ This member function may return temporary objects.  
   
-##  <a name="getcurrentpalette"></a>CDC::GetCurrentPalette  
- 讓指標回到目前所選`CPalette`物件。  
+##  <a name="getcurrentpalette"></a>  CDC::GetCurrentPalette  
+ Returns a pointer to the currently selected `CPalette` object.  
   
 ```  
 CPalette* GetCurrentPalette() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CPalette`物件，如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a `CPalette` object, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式可能會傳回暫存物件。  
+### <a name="remarks"></a>Remarks  
+ This member function may return temporary objects.  
   
-##  <a name="getcurrentpen"></a>CDC::GetCurrentPen  
- 讓指標回到目前所選`CPen`物件。  
+##  <a name="getcurrentpen"></a>  CDC::GetCurrentPen  
+ Returns a pointer to the currently selected `CPen` object.  
   
 ```  
 CPen* GetCurrentPen() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CPen`物件，如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a `CPen` object, if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式可能會傳回暫存物件。  
+### <a name="remarks"></a>Remarks  
+ This member function may return temporary objects.  
   
-##  <a name="getcurrentposition"></a>CDC::GetCurrentPosition  
- 擷取目前的位置 （以邏輯座標表示）。  
+##  <a name="getcurrentposition"></a>  CDC::GetCurrentPosition  
+ Retrieves the current position (in logical coordinates).  
   
 ```  
 CPoint GetCurrentPosition() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的位置，以`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The current position as a `CPoint` object.  
   
-### <a name="remarks"></a>備註  
- 目前的位置可以設定與`MoveTo`成員函式。  
+### <a name="remarks"></a>Remarks  
+ The current position can be set with the `MoveTo` member function.  
   
-##  <a name="getdcbrushcolor"></a>CDC::GetDCBrushColor  
- 擷取目前的筆刷色彩。  
+##  <a name="getdcbrushcolor"></a>  CDC::GetDCBrushColor  
+ Retrieves the current brush color.  
   
 ```  
 COLORREF GetDCBrushColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，傳回值是[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)目前的筆刷色彩值。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is the [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value for the current brush color.  
   
- 如果函式失敗，傳回值是**CLR_INVALID**。  
+ If the function fails, the return value is **CLR_INVALID**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd144872)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the function [GetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd144872), as described in the Windows SDK.  
   
-##  <a name="getdcpencolor"></a>CDC::GetDCPenColor  
- 擷取目前的畫筆顏色。  
+##  <a name="getdcpencolor"></a>  CDC::GetDCPenColor  
+ Retrieves the current pen color.  
   
 ```  
 COLORREF GetDCPenColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，傳回值是[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)值目前的畫筆顏色。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is the [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value for the current pen color.  
   
- 如果函式失敗，傳回值是**CLR_INVALID**。  
+ If the function fails, the return value is **CLR_INVALID**.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會利用 Win32 函式[GetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd144875)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function utilizes the Win32 function [GetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd144875), as described in the Windows SDK.  
   
-##  <a name="getdevicecaps"></a>Rastercaps  
- 擷取各種不同的顯示裝置的裝置特定資訊。  
+##  <a name="getdevicecaps"></a>  CDC::GetDeviceCaps  
+ Retrieves a wide range of device-specific information about the display device.  
   
 ```  
 int GetDeviceCaps(int nIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定要傳回資訊的類型。 請參閱[GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如值的清單。  
+ Specifies the type of information to return. See [GetDeviceCaps](http://msdn.microsoft.com/library/windows/desktop/dd144877) in the Windows SDK for a list of values.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功要求功能的值。  
+### <a name="return-value"></a>Return Value  
+ The value of the requested capability if the function is successful.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CPrintDialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults)。  
+### <a name="example"></a>Example  
+  See the example for [CPrintDialog::GetDefaults](../../mfc/reference/cprintdialog-class.md#getdefaults).  
   
-##  <a name="getfontdata"></a>CDC::GetFontData  
- 擷取可調式字型檔案中的字型度量資訊。  
+##  <a name="getfontdata"></a>  CDC::GetFontData  
+ Retrieves font-metric information from a scalable font file.  
   
 ```  
 DWORD GetFontData(
@@ -2702,46 +2893,46 @@ DWORD GetFontData(
     DWORD cbData) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwTable`  
- 指定要傳回之度量資料表的名稱。 這個參數可以是 Microsoft Corporation 所發行的 TrueType 字型檔案規格所述的度量資料表。 如果這個參數是 0，字型檔的開頭擷取的資訊。  
+ Specifies the name of the metric table to be returned. This parameter can be one of the metric tables documented in the TrueType Font Files specification published by Microsoft Corporation. If this parameter is 0, the information is retrieved starting at the beginning of the font file.  
   
  `dwOffset`  
- 指定從資料表中要開始擷取資訊的開始位移。 如果這個參數是 0，擷取資訊從指定的資料表開頭`dwTable`參數。 如果這個值是大於或等於大小的表格，`GetFontData`傳回 0。  
+ Specifies the offset from the beginning of the table at which to begin retrieving information. If this parameter is 0, the information is retrieved starting at the beginning of the table specified by the `dwTable` parameter. If this value is greater than or equal to the size of the table, `GetFontData` returns 0.  
   
  `lpData`  
- 字型資訊中將會接收之緩衝區的點。 如果此值為**NULL**，此函數會傳回在指定的字型資料所需的緩衝區大小`dwTable`參數。  
+ Points to a buffer that will receive the font information. If this value is **NULL**, the function returns the size of the buffer required for the font data specified in the `dwTable` parameter.  
   
  `cbData`  
- 指定長度，以位元組為單位的要擷取的資訊。 如果這個參數是 0，`GetFontData`會傳回在指定的資料大小`dwTable`參數。  
+ Specifies the length, in bytes, of the information to be retrieved. If this parameter is 0, `GetFontData` returns the size of the data specified in the `dwTable` parameter.  
   
-### <a name="return-value"></a>傳回值  
- 指定傳回中所指向之緩衝區的位元組數目`lpData`如果函式成功; 否則為-1。  
+### <a name="return-value"></a>Return Value  
+ Specifies the number of bytes returned in the buffer pointed to by `lpData` if the function is successful; otherwise -1.  
   
-### <a name="remarks"></a>備註  
- 指定位移至字型檔案，以及要傳回的資訊來識別要擷取之資訊。  
+### <a name="remarks"></a>Remarks  
+ The information to retrieve is identified by specifying an offset into the font file and the length of the information to return.  
   
- 應用程式有時也可以使用`GetFontData`TrueType 字型儲存的文件的成員函式。 若要這樣做，應用程式會決定是否字型可以內嵌，，然後擷取整個字型檔案，可以指定 0 代表`dwTable`， `dwOffset`，和`cbData`參數。  
+ An application can sometimes use the `GetFontData` member function to save a TrueType font with a document. To do this, the application determines whether the font can be embedded and then retrieves the entire font file, specifying 0 for the `dwTable`, `dwOffset`, and `cbData` parameters.  
   
- 應用程式可以決定是否可以藉由檢查中內嵌字型**otmfsType**隸屬[OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755)結構。 如果位元 1 **otmfsType**設定內嵌字型不允許。 如果已清除的位元 1，就可以內嵌字型。 如果設定位元 2，內嵌為唯讀。  
+ Applications can determine whether a font can be embedded by checking the **otmfsType** member of the [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) structure. If bit 1 of **otmfsType** is set, embedding is not permitted for the font. If bit 1 is clear, the font can be embedded. If bit 2 is set, the embedding is read only.  
   
- 如果應用程式嘗試使用這個函數來擷取資訊，對於非 TrueType 字型`GetFontData`成員函式會傳回-1。  
+ If an application attempts to use this function to retrieve information for a non-TrueType font, the `GetFontData` member function returns -1.  
   
-##  <a name="getfontlanguageinfo"></a>CDC::GetFontLanguageInfo  
- 傳回指定的顯示內容的目前選取字型的相關資訊。  
+##  <a name="getfontlanguageinfo"></a>  CDC::GetFontLanguageInfo  
+ Returns information about the currently selected font for the specified display context.  
   
 ```  
 DWORD GetFontLanguageInfo() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回值會指出目前選取的字型特性。 如需可能值的完整清單，請參閱[GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886)。  
+### <a name="return-value"></a>Return Value  
+ The return value identifies characteristics of the currently selected font. For a complete listing of possible values, see [GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886).  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the function [GetFontLanguageInfo](http://msdn.microsoft.com/library/windows/desktop/dd144886), as described in the Windows SDK.  
   
-##  <a name="getglyphoutline"></a>CDC::GetGlyphOutline  
- 擷取大綱曲線或點陣圖的外框字元，在目前的字型。  
+##  <a name="getglyphoutline"></a>  CDC::GetGlyphOutline  
+ Retrieves the outline curve or bitmap for an outline character in the current font.  
   
 ```  
 DWORD GetGlyphOutline(
@@ -2753,74 +2944,74 @@ DWORD GetGlyphOutline(
     const MAT2* lpmat2) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nChar`  
- 指定要傳回資訊的字元。  
+ Specifies the character for which information is to be returned.  
   
  `nFormat`  
- 指定的功能為傳回資訊的格式。 它可以是下列值之一或 0:  
+ Specifies the format in which the function is to return information. It can be one of the following values, or 0:  
   
-|值|意義|  
+|Value|Meaning|  
 |-----------|-------------|  
-|**GGO_BITMAP**|傳回圖像點陣圖。 當函式傳回時，所指向的緩衝區`lpBuffer`包含其資料列開始 doubleword 界限的 1 位元-每個像素點陣圖。|  
-|**GGO_NATIVE**|傳回資料點的曲線，轉譯器的原生格式，使用裝置單位。 當指定這個值時，在中指定任何轉換`lpmat2`會被忽略。|  
+|**GGO_BITMAP**|Returns the glyph bitmap. When the function returns, the buffer pointed to by `lpBuffer` contains a 1-bit-per-pixel bitmap whose rows start on doubleword boundaries.|  
+|**GGO_NATIVE**|Returns the curve data points in the rasterizer's native format, using device units. When this value is specified, any transformation specified in `lpmat2` is ignored.|  
   
- 當值`nFormat`是 0，則此函式會填入[GLYPHMETRICS](http://msdn.microsoft.com/library/windows/desktop/dd144955)結構但未傳回字符外框的資料。  
+ When the value of `nFormat` is 0, the function fills in a [GLYPHMETRICS](http://msdn.microsoft.com/library/windows/desktop/dd144955) structure but does not return glyph-outline data.  
   
  *lpgm*  
- 指向**GLYPHMETRICS**結構描述的字元儲存格的字符的位置。  
+ Points to a **GLYPHMETRICS** structure that describes the placement of the glyph in the character cell.  
   
  `cbBuffer`  
- 指定函式會大綱字元的相關資訊複製到其中的緩衝區的大小。 如果此值為 0 和`nFormat`參數為**GGO_BITMAP**或**GGO_NATIVE**值，此函數會傳回緩衝區的所需的大小。  
+ Specifies the size of the buffer into which the function copies information about the outline character. If this value is 0 and the `nFormat` parameter is either the **GGO_BITMAP** or **GGO_NATIVE** values, the function returns the required size of the buffer.  
   
  `lpBuffer`  
- 指向函式會大綱字元的相關資訊複製到其中的緩衝區。 如果`nFormat`指定**GGO_NATIVE**值，資訊會的形式複製**TTPOLYGONHEADER**和**TTPOLYCURVE**結構。 如果此值為**NULL**和`nFormat`是**GGO_BITMAP**或**GGO_NATIVE**值，函式會傳回緩衝區的所需的大小。  
+ Points to a buffer into which the function copies information about the outline character. If `nFormat` specifies the **GGO_NATIVE** value, the information is copied in the form of **TTPOLYGONHEADER** and **TTPOLYCURVE** structures. If this value is **NULL** and `nFormat` is either the **GGO_BITMAP** or **GGO_NATIVE** value, the function returns the required size of the buffer.  
   
  `lpmat2`  
- 指向[MAT2](http://msdn.microsoft.com/library/windows/desktop/dd145048)結構，其中包含轉換矩陣的字元。 此參數不得為**NULL**，即使**GGO_NATIVE**指定值`nFormat`。  
+ Points to a [MAT2](http://msdn.microsoft.com/library/windows/desktop/dd145048) structure that contains a transformation matrix for the character. This parameter cannot be **NULL**, even when the **GGO_NATIVE** value is specified for `nFormat`.  
   
-### <a name="return-value"></a>傳回值  
- 大小 （位元組），如果擷取的資訊所需的緩衝區`cbBuffer`為 0 或`lpBuffer`是**NULL**。 否則，它是正數值函式如果成功，則為-1，如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ The size, in bytes, of the buffer required for the retrieved information if `cbBuffer` is 0 or `lpBuffer` is **NULL**. Otherwise, it is a positive value if the function is successful, or -1 if there is an error.  
   
-### <a name="remarks"></a>備註  
- 應用程式可以旋轉點陣圖格式擷取藉由指定 2-2 的轉換矩陣所指向的結構中的字元數`lpmat2`。  
+### <a name="remarks"></a>Remarks  
+ An application can rotate characters retrieved in bitmap format by specifying a 2-by-2 transformation matrix in the structure pointed to by `lpmat2`.  
   
- 字符外框會傳回為一系列的分佈。 每個分佈由定義[TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158)結構後面加上最大數量**TTPOLYCURVE**做，描述所需的結構。 所有資料點會以傳回[POINTFX](http://msdn.microsoft.com/library/windows/desktop/dd162806)結構，而且代表絕對位置，而非相對的移動。 開始點給定**pfxStart**隸屬[TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158)結構是分佈的外框的開始點。 [TTPOLYCURVE](http://msdn.microsoft.com/library/windows/desktop/dd145157)記錄聚合線條或曲線記錄，可以遵循的結構。 聚合線條的記錄是一系列的點。點之間繪製的直線說明外框的字元。 曲線記錄代表 TrueType （也就是二次方 b-曲線） 所使用的二次方曲線。  
+ A glyph outline is returned as a series of contours. Each contour is defined by a [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) structure followed by as many **TTPOLYCURVE** structures as are required to describe it. All points are returned as [POINTFX](http://msdn.microsoft.com/library/windows/desktop/dd162806) structures and represent absolute positions, not relative moves. The starting point given by the **pfxStart** member of the [TTPOLYGONHEADER](http://msdn.microsoft.com/library/windows/desktop/dd145158) structure is the point at which the outline for a contour begins. The [TTPOLYCURVE](http://msdn.microsoft.com/library/windows/desktop/dd145157) structures that follow can be either polyline records or spline records. Polyline records are a series of points; lines drawn between the points describe the outline of the character. Spline records represent the quadratic curves used by TrueType (that is, quadratic b-splines).  
   
-##  <a name="getgraphicsmode"></a>CDC::GetGraphicsMode  
- 擷取指定之裝置內容的目前圖形模式。  
+##  <a name="getgraphicsmode"></a>  CDC::GetGraphicsMode  
+ Retrieves the current graphics mode for the specified device context.  
   
 ```  
 int GetGraphicsMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 成功時傳回目前的圖形模式。 如需這個方法可以傳回的值，請參閱[GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892)。  
+### <a name="return-value"></a>Return Value  
+ Returns the current graphics mode on success. For a list of the values that this method can return, see [GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892).  
   
- 在失敗時傳回 0。  
+ Returns 0 on failure.  
   
- 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>備註  
- 這個方法會包裝 Windows GDI 函式[GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892)。  
+### <a name="remarks"></a>Remarks  
+ This method wraps the Windows GDI function [GetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd144892).  
   
-##  <a name="gethalftonebrush"></a>CDC::GetHalftoneBrush  
- 呼叫此成員函式可擷取半色調筆刷。  
+##  <a name="gethalftonebrush"></a>  CDC::GetHalftoneBrush  
+ Call this member function to retrieve a halftone brush.  
   
 ```  
 static CBrush* PASCAL GetHalftoneBrush();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CBrush`物件，如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CBrush` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 半色調筆刷顯示或者是建立為遞色的圖樣的前景和背景色彩的像素為單位。 以下是由 半色調筆刷為遞色圖樣的範例。  
+### <a name="remarks"></a>Remarks  
+ A halftone brush shows pixels that are alternately foreground and background colors to create a dithered pattern. The following is an example of a dithered pattern created by a halftone brush.  
   
- ![遞色的畫筆筆劃的詳細資料](../../mfc/reference/media/vc318s1.gif "vc318s1")  
+ ![Detail of a dithered pen stroke](../../mfc/reference/media/vc318s1.gif "vc318s1")  
   
-##  <a name="getkerningpairs"></a>CDC::GetKerningPairs  
- 擷取的字元間距組指定的裝置內容中目前選取的字型。  
+##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs  
+ Retrieves the character kerning pairs for the font that is currently selected in the specified device context.  
   
 ```  
 int GetKerningPairs(
@@ -2828,77 +3019,77 @@ int GetKerningPairs(
     LPKERNINGPAIR lpkrnpair) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPairs`  
- 指定的數目[KERNINGPAIR](http://msdn.microsoft.com/library/windows/desktop/dd145024)結構所指`lpkrnpair`。 此函式將不會複製超過所指定的多個 kerning 組`nPairs`。  
+ Specifies the number of [KERNINGPAIR](http://msdn.microsoft.com/library/windows/desktop/dd145024) structures pointed to by `lpkrnpair`. The function will not copy more kerning pairs than specified by `nPairs`.  
   
  `lpkrnpair`  
- 指向陣列**KERNINGPAIR**接收字元間距調整的結構組函式傳回時。 這個陣列必須包含所指定的數目，至少結構`nPairs`。 如果這個參數是**NULL**，此函數會傳回的字元間距調整字型組總數。  
+ Points to an array of **KERNINGPAIR** structures that receive the kerning pairs when the function returns. This array must contain at least as many structures as specified by `nPairs`. If this parameter is **NULL**, the function returns the total number of kerning pairs for the font.  
   
-### <a name="return-value"></a>傳回值  
- 指定的字元間距調整組擷取數或總數間距字型中的組，如果函式成功。 如果函式失敗，或沒有 kerning 成對的字型，則會傳回零。  
+### <a name="return-value"></a>Return Value  
+ Specifies the number of kerning pairs retrieved or the total number of kerning pairs in the font, if the function is successful. Zero is returned if the function fails or there are no kerning pairs for the font.  
   
-##  <a name="getlayout"></a>CDC::GetLayout  
- 呼叫此成員函式，來決定文字和圖形裝置內容，例如印表機或中繼檔的配置。  
+##  <a name="getlayout"></a>  CDC::GetLayout  
+ Call this member function to determine the layout of the text and graphics for a device context, such as a printer or a metafile.  
   
 ```  
 DWORD GetLayout() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功的話，版面配置旗標目前的裝置內容。 否則， **GDI_ERROR**。 取得延伸的錯誤資訊，呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。 如需版面配置旗標的清單，請參閱[CDC::SetLayout](#setlayout)。  
+### <a name="return-value"></a>Return Value  
+ If successful, the layout flags for the current device context. Otherwise, **GDI_ERROR**. For extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360). For a list of the layout flags, see [CDC::SetLayout](#setlayout).  
   
-### <a name="remarks"></a>備註  
- 預設版面配置是由左到右。  
+### <a name="remarks"></a>Remarks  
+ The default layout is left to right.  
   
-##  <a name="getmapmode"></a>CDC::GetMapMode  
- 擷取目前的對應模式。  
+##  <a name="getmapmode"></a>  CDC::GetMapMode  
+ Retrieves the current mapping mode.  
   
 ```  
 int GetMapMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 此對應模式。  
+### <a name="return-value"></a>Return Value  
+ The mapping mode.  
   
-### <a name="remarks"></a>備註  
- 如需對應模式的說明，請參閱`SetMapMode`成員函式。  
+### <a name="remarks"></a>Remarks  
+ For a description of the mapping modes, see the `SetMapMode` member function.  
   
 > [!NOTE]
->  如果您呼叫[SetLayout](#setlayout) DC 變成由右至左配置**SetLayout**會自動變更的對應模式`MM_ISOTROPIC`。 因此，任何後續呼叫`GetMapMode`會傳回`MM_ISOTROPIC`。  
+>  If you call [SetLayout](#setlayout) to change the DC to right-to-left layout, **SetLayout** automatically changes the mapping mode to `MM_ISOTROPIC`. Consequently, any subsequent call to `GetMapMode` will return `MM_ISOTROPIC`.  
   
-##  <a name="getmiterlimit"></a>CDC::GetMiterLimit  
- 傳回裝置內容的斜接角限制。  
+##  <a name="getmiterlimit"></a>  CDC::GetMiterLimit  
+ Returns the miter limit for the device context.  
   
 ```  
 float GetMiterLimit() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 包含繪製幾何行儀表聯結時，會使用斜接角限制。  
+### <a name="remarks"></a>Remarks  
+ The miter limit is used when drawing geometric lines that have miter joins.  
   
-##  <a name="getnearestcolor"></a>CDC::GetNearestColor  
- 傳回最符合指定的邏輯色彩的純色。  
+##  <a name="getnearestcolor"></a>  CDC::GetNearestColor  
+ Returns the solid color that best matches a specified logical color.  
   
 ```  
 COLORREF GetNearestColor(COLORREF crColor) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 指定要比對的色彩。  
+ Specifies the color to be matched.  
   
-### <a name="return-value"></a>傳回值  
- 定義實線 RGB （紅色、 綠色、 藍色） 的色彩值色彩最接近`crColor`裝置可以表示的值。  
+### <a name="return-value"></a>Return Value  
+ An RGB (red, green, blue) color value that defines the solid color closest to the `crColor` value that the device can represent.  
   
-### <a name="remarks"></a>備註  
- 指定的裝置必須能夠代表這個色彩。  
+### <a name="remarks"></a>Remarks  
+ The given device must be able to represent this color.  
   
-##  <a name="getoutlinetextmetrics"></a>CDC::GetOutlineTextMetrics  
- 擷取 TrueType 字型度量資訊。  
+##  <a name="getoutlinetextmetrics"></a>  CDC::GetOutlineTextMetrics  
+ Retrieves metric information for TrueType fonts.  
   
 ```  
 UINT GetOutlineTextMetrics(
@@ -2906,24 +3097,24 @@ UINT GetOutlineTextMetrics(
     LPOUTLINETEXTMETRIC lpotm) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpotm`  
- 指向陣列[OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755)結構。 如果這個參數是**NULL**，此函數會傳回所需的擷取衡量標準資料緩衝區的大小。  
+ Points to an array of [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) structures. If this parameter is **NULL**, the function returns the size of the buffer required for the retrieved metric data.  
   
  `cbData`  
- 指定的大小，以位元組為單位傳回資訊的緩衝區。  
+ Specifies the size, in bytes, of the buffer to which information is returned.  
   
  `lpotm`  
- 指向**OUTLINETEXTMETRIC**結構。 如果這個參數是**NULL**，此函數會傳回所擷取的度量資訊所需的緩衝區大小。  
+ Points to an **OUTLINETEXTMETRIC** structure. If this parameter is **NULL**, the function returns the size of the buffer required for the retrieved metric information.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755)結構包含大部分的 TrueType 格式時，所提供的字型度量資訊包括[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)結構。 最後四個成員**OUTLINETEXTMETRIC**結構都是字串指標。 應用程式應該針對這些字串，除了其他成員所需的空間配置空間。 因為沒有任何系統加諸限制為字串的大小，配置記憶體的最簡單方法是藉由指定擷取所需的大小**NULL**如`lpotm`中的第一個呼叫`GetOutlineTextMetrics`函式。  
+### <a name="remarks"></a>Remarks  
+ The [OUTLINETEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd162755) structure contains most of the font metric information provided with the TrueType format, including a [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) structure. The last four members of the **OUTLINETEXTMETRIC** structure are pointers to strings. Applications should allocate space for these strings in addition to the space required for the other members. Because there is no system-imposed limit to the size of the strings, the simplest method for allocating memory is to retrieve the required size by specifying **NULL** for `lpotm` in the first call to the `GetOutlineTextMetrics` function.  
   
-##  <a name="getoutputcharwidth"></a>CDC::GetOutputCharWidth  
- 會使用輸出裝置內容中， `m_hDC`，並擷取從目前的字型顯示連續的字元群組中個別字元的寬度。  
+##  <a name="getoutputcharwidth"></a>  CDC::GetOutputCharWidth  
+ Uses the output device context, `m_hDC`, and retrieves the widths of individual characters in a consecutive group of characters from the current font.  
   
 ```  
 BOOL GetOutputCharWidth(
@@ -2932,28 +3123,28 @@ BOOL GetOutputCharWidth(
     LPINT lpBuffer) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nFirstChar`  
- 指定連續的目前字型中的字元群組中的第一個字元。  
+ Specifies the first character in a consecutive group of characters in the current font.  
   
  `nLastChar`  
- 指定連續的目前字型中的字元群組中的最後一個字元。  
+ Specifies the last character in a consecutive group of characters in the current font.  
   
  `lpBuffer`  
- 指出緩衝區中目前的字型中將會接收一組連續字元的寬度值。  
+ Points to a buffer that will receive the width values for a consecutive group of characters in the current font.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 例如，如果`nFirstChar`識別字母 'a' 和`nLastChar`識別字母 'a'-'z'、 函式擷取所有小寫字元的寬度。  
+### <a name="remarks"></a>Remarks  
+ For example, if `nFirstChar` identifies the letter 'a' and `nLastChar` identifies the letter 'z', the function retrieves the widths of all lowercase characters.  
   
- 此函式所指向之緩衝區中儲存值`lpBuffer`。 這個緩衝區必須夠大，無法保存所有的寬度。也就是必須有至少 26 項目中指定的範例。  
+ The function stores the values in the buffer pointed to by `lpBuffer`. This buffer must be large enough to hold all of the widths; that is, there must be at least 26 entries in the example given.  
   
- 如果連續的字元群組中的字元不存在於特定字型，則會指派預設字元寬度值。  
+ If a character in the consecutive group of characters does not exist in a particular font, it will be assigned the width value of the default character.  
   
-##  <a name="getoutputtabbedtextextent"></a>CDC::GetOutputTabbedTextExtent  
- 呼叫此成員函式，來計算的寬度和高度的字元字串使用[m_hDC](#m_hdc)，輸出裝置內容。  
+##  <a name="getoutputtabbedtextextent"></a>  CDC::GetOutputTabbedTextExtent  
+ Call this member function to compute the width and height of a character string using [m_hDC](#m_hdc), the output device context.  
   
 ```  
 CSize GetOutputTabbedTextExtent(
@@ -2968,36 +3159,36 @@ CSize GetOutputTabbedTextExtent(
     LPINT lpnTabStopPositions) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- 指向要測量的字元字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)這個參數的物件。  
+ Points to a character string to be measured. You can also pass a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object for this parameter.  
   
  `nCount`  
- 指定字串中的字元數。 如果`nCount`為-1，長度會計算。  
+ Specifies the number of characters in the string. If `nCount` is -1, the length is calculated.  
   
  `nTabPositions`  
- 指定所指陣列中的定位停駐點位置數`lpnTabStopPositions`。  
+ Specifies the number of tab-stop positions in the array pointed to by `lpnTabStopPositions`.  
   
  `lpnTabStopPositions`  
- 指向陣列包含的邏輯單元的定位停駐點位置的整數。 必須排序定位停駐點，以遞增順序排列;最小的 x 值應該在陣列中的第一個項目。 不允許背景索引標籤。  
+ Points to an array of integers containing the tab-stop positions in logical units. The tab stops must be sorted in increasing order; the smallest x-value should be the first item in the array. Back tabs are not allowed.  
   
  `str`  
- A`CString`物件，其中包含要測量指定的字元。  
+ A `CString` object that contains the specified characters to be measured.  
   
-### <a name="return-value"></a>傳回值  
- 中的字串 （以邏輯單位表示） 的維度[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ The dimensions of the string (in logical units) in a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 如果字串包含一個或多個 tab 字元，字串的寬度根據所指定的定位停駐點`lpnTabStopPositions`。 函式會使用目前選取的字型，計算字串的維度。  
+### <a name="remarks"></a>Remarks  
+ If the string contains one or more tab characters, the width of the string is based upon the tab stops specified by `lpnTabStopPositions`. The function uses the currently selected font to compute the dimensions of the string.  
   
- 為目前裁剪區域不位移所傳回的高度與寬度`GetOutputTabbedTextExtent`函式。  
+ The current clipping region does not offset the width and height returned by the `GetOutputTabbedTextExtent` function.  
   
- 因為某些裝置並將字元放在規則資料格陣列中 （也就是它們微調字元），將字串中字元的範圍的總和可能不等於字串的範圍。  
+ Since some devices do not place characters in regular cell arrays (that is, they kern the characters), the sum of the extents of the characters in a string may not be equal to the extent of the string.  
   
- 如果`nTabPositions`為 0 和`lpnTabStopPositions`是**NULL**，索引標籤會展開成八個平均字元寬度。 如果`nTabPositions`為 1，第一個值的陣列中所指定的距離會分開定位停駐點`lpnTabStopPositions`點。 如果`lpnTabStopPositions`到多個單一值的點，每個值最多指定的數字陣列中設定定位停駐點`nTabPositions`。  
+ If `nTabPositions` is 0 and `lpnTabStopPositions` is **NULL**, tabs are expanded to eight average character widths. If `nTabPositions` is 1, the tab stops will be separated by the distance specified by the first value in the array to which `lpnTabStopPositions` points. If `lpnTabStopPositions` points to more than a single value, a tab stop is set for each value in the array, up to the number specified by `nTabPositions`.  
   
-##  <a name="getoutputtextextent"></a>CDC::GetOutputTextExtent  
- 呼叫此成員函式，來使用輸出裝置內容中， [m_hDC](#m_hdc)，並計算行的文字，使用目前的字型的高度與寬度。  
+##  <a name="getoutputtextextent"></a>  CDC::GetOutputTextExtent  
+ Call this member function to use the output device context, [m_hDC](#m_hdc), and compute the width and height of a line of text, using the current font.  
   
 ```  
 CSize GetOutputTextExtent(
@@ -3007,40 +3198,40 @@ CSize GetOutputTextExtent(
 CSize GetOutputTextExtent(const CString& str) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- 指向字元的字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)這個參數的物件。  
+ Points to a string of characters. You can also pass a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object for this parameter.  
   
  `nCount`  
- 指定字串中的字元數。 如果`nCount`為-1，長度會計算。  
+ Specifies the number of characters in the string. If `nCount` is -1, the length is calculated.  
   
  `str`  
- A`CString`物件，其中包含要測量指定的字元。  
+ A `CString` object that contains the specified characters to be measured.  
   
-### <a name="return-value"></a>傳回值  
- 傳回的字串 （以邏輯單位表示） 的維度[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ The dimensions of the string (in logical units) returned in a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 為目前裁剪區域不會影響所傳回的高度與寬度`GetOutputTextExtent`。  
+### <a name="remarks"></a>Remarks  
+ The current clipping region does not affect the width and height returned by `GetOutputTextExtent`.  
   
- 因為某些裝置並將字元放在規則資料格陣列中 （也就是它們執行字元間距調整），請將字串中字元的範圍的總和可能不等於字串的範圍。  
+ Since some devices do not place characters in regular cell arrays (that is, they carry out kerning), the sum of the extents of the characters in a string may not be equal to the extent of the string.  
   
-##  <a name="getoutputtextmetrics"></a>CDC::GetOutputTextMetrics  
- 擷取目前的字型使用的度量`m_hDC`，輸出裝置內容。  
+##  <a name="getoutputtextmetrics"></a>  CDC::GetOutputTextMetrics  
+ Retrieves the metrics for the current font using `m_hDC`, the output device context.  
   
 ```  
 BOOL GetOutputTextMetrics(LPTEXTMETRIC lpMetrics) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpMetrics`  
- 指向[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)接收度量的結構。  
+ Points to the [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) structure that receives the metrics.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-##  <a name="getpath"></a>CDC::GetPath  
- 擷取定義的線條端點和的曲線選入裝置內容的路徑中找到的控點的座標。  
+##  <a name="getpath"></a>  CDC::GetPath  
+ Retrieves the coordinates defining the endpoints of lines and the control points of curves found in the path that is selected into the device context.  
   
 ```  
 int GetPath(
@@ -3049,39 +3240,39 @@ int GetPath(
     int nCount) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列[點](../../mfc/reference/point-structure1.md)資料結構或`CPoint`的線條端點和曲線控制點的物件。  
+ Points to an array of [POINT](../../mfc/reference/point-structure1.md) data structures or `CPoint` objects where the line endpoints and curve control points are placed.  
   
  `lpTypes`  
- 指向陣列的位元組頂點類型放置的位置。 值可以是下列其中一項︰  
+ Points to an array of bytes where the vertex types are placed. Values are one of the following:  
   
-- **PT_MOVETO**對應點中的指定`lpPoints`開始脫離的圖形。  
+- **PT_MOVETO** Specifies that the corresponding point in `lpPoints` starts a disjoint figure.  
   
-- **PT_LINETO**先前的點與對應端點的指定`lpPoints`線條的端點。  
+- **PT_LINETO** Specifies that the previous point and the corresponding point in `lpPoints` are the endpoints of a line.  
   
-- **PT_BEZIERTO**對應點中的指定`lpPoints`控制點或 Bzier 曲線的結束點。  
+- **PT_BEZIERTO** Specifies that the corresponding point in `lpPoints` is a control point or ending point for a Bzier curve.  
   
- **PT_BEZIERTO**類型一律出現三個的集合。 緊接在其之前的路徑中的點定義 Bzier 曲線的開始點。 前兩個**PT_BEZIERTO**點是第三個控制點， **PT_BEZIERTO**點是結束點 (如果硬式編碼)。  
+ **PT_BEZIERTO** types always occur in sets of three. The point in the path immediately preceding them defines the starting point for the Bzier curve. The first two **PT_BEZIERTO** points are the control points, and the third **PT_BEZIERTO** point is the end point (if hard-coded).  
   
-     A **PT_LINETO**或**PT_BEZIERTO**類型可能會結合下列的旗標 (使用位元運算子`OR`) 來表示對應的點是圖表中的最後一個點及應該先關閉圖︰  
+     A **PT_LINETO** or **PT_BEZIERTO** type may be combined with the following flag (by using the bitwise operator `OR`) to indicate that the corresponding point is the last point in a figure and that the figure should be closed:  
   
-- **PT_CLOSEFIGURE**指定對應的行之後，會自動關閉圖或繪製曲線。 繪製一條線從線條或曲線端點對應到最後一個點關閉圖**PT_MOVETO**。  
+- **PT_CLOSEFIGURE** Specifies that the figure is automatically closed after the corresponding line or curve is drawn. The figure is closed by drawing a line from the line or curve endpoint to the point corresponding to the last **PT_MOVETO**.  
   
  `nCount`  
- 指定的總數[點](../../mfc/reference/point-structure1.md)資料結構，可能會放置於`lpPoints`陣列。 這個值必須是相同的位元組數目，顯示可能會放置於`lpTypes`陣列。  
+ Specifies the total number of [POINT](../../mfc/reference/point-structure1.md) data structures that may be placed in the `lpPoints` array. This value must be the same as the number of bytes that may be placed in the `lpTypes` array.  
   
-### <a name="return-value"></a>傳回值  
- 如果`nCount`參數不是零，點列舉數目。 如果`nCount`為 0，在路徑中的點總數 (與`GetPath`緩衝區寫入 nothing)。 如果`nCount`為非零值，而且小於點的數目在路徑中，傳回的值為-1。  
+### <a name="return-value"></a>Return Value  
+ If the `nCount` parameter is nonzero, the number of points enumerated. If `nCount` is 0, the total number of points in the path (and `GetPath` writes nothing to the buffers). If `nCount` is nonzero and is less than the number of points in the path, the return value is -1.  
   
-### <a name="remarks"></a>備註  
- 裝置內容必須包含已關閉的路徑。 邏輯座標中，會傳回路徑的點。 因此儲存在裝置座標中的路徑點`GetPath`使用反目前轉換為邏輯座標變更點從裝置座標。 `FlattenPath`之前，可能呼叫成員函式`GetPath`，以在路徑中所有的曲線轉換成直線線段。  
+### <a name="remarks"></a>Remarks  
+ The device context must contain a closed path. The points of the path are returned in logical coordinates. Points are stored in the path in device coordinates, so `GetPath` changes the points from device coordinates to logical coordinates by using the inverse of the current transformation. The `FlattenPath` member function may be called before `GetPath`, to convert all curves in the path into line segments.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[cdc:: beginpath](#beginpath)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::BeginPath](#beginpath).  
   
-##  <a name="getpixel"></a>CDC::GetPixel  
- 擷取所指定的點像素的 RGB 色彩值*x*和*y*。  
+##  <a name="getpixel"></a>  CDC::GetPixel  
+ Retrieves the RGB color value of the pixel at the point specified by *x* and *y*.  
   
 ```  
 COLORREF GetPixel(
@@ -3091,82 +3282,82 @@ COLORREF GetPixel(
 COLORREF GetPixel(POINT point) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定要檢查點的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the point to be examined.  
   
  *y*  
- 指定要檢查點的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the point to be examined.  
   
  `point`  
- 指定邏輯 x 和 y 座標的檢查點。  
+ Specifies the logical x- and y-coordinates of the point to be examined.  
   
-### <a name="return-value"></a>傳回值  
- 函式，指定點的色彩的 RGB 色彩值的任一版本。 如果座標的裁剪區域中未指定的點，它會為-1。  
+### <a name="return-value"></a>Return Value  
+ For either version of the function, an RGB color value for the color of the given point. It is -1 if the coordinates do not specify a point in the clipping region.  
   
-### <a name="remarks"></a>備註  
- 裁剪區域必須是點。 如果沒有點的裁剪區域中，函式沒有任何作用，並傳回-1。  
+### <a name="remarks"></a>Remarks  
+ The point must be in the clipping region. If the point is not in the clipping region, the function has no effect and returns -1.  
   
- 並非所有裝置都支援**GetPixel**函式。 如需詳細資訊，請參閱**RC_BITBLT**點陣功能底下[GetDeviceCaps](#getdevicecaps)成員函式。  
+ Not all devices support the **GetPixel** function. For more information, see the **RC_BITBLT** raster capability under the [GetDeviceCaps](#getdevicecaps) member function.  
   
- **GetPixel**成員函式有兩種形式。 第一個會採用兩個座標的值;第二個會接受[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
+ The **GetPixel** member function has two forms. The first takes two coordinate values; the second takes either a [POINT](../../mfc/reference/point-structure1.md) structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object.  
   
-##  <a name="getpolyfillmode"></a>CDC::GetPolyFillMode  
- 擷取目前的多邊形填滿模式。  
+##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode  
+ Retrieves the current polygon-filling mode.  
   
 ```  
 int GetPolyFillMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 目前的多邊形填滿模式，**替代**或**捲繞**，如果函式成功。  
+### <a name="return-value"></a>Return Value  
+ The current polygon-filled mode, **ALTERNATE** or **WINDING**, if the function is successful.  
   
-### <a name="remarks"></a>備註  
- 請參閱`SetPolyFillMode`的多邊形填滿模式描述的成員函式。  
+### <a name="remarks"></a>Remarks  
+ See the `SetPolyFillMode` member function for a description of the polygon-filling modes.  
   
-##  <a name="getrop2"></a>CDC::GetROP2  
- 擷取目前的繪圖模式。  
+##  <a name="getrop2"></a>  CDC::GetROP2  
+ Retrieves the current drawing mode.  
   
 ```  
 int GetROP2() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 繪圖模式。 如需繪圖模式值的清單，請參閱`SetROP2`成員函式。  
+### <a name="return-value"></a>Return Value  
+ The drawing mode. For a list of the drawing mode values, see the `SetROP2` member function.  
   
-### <a name="remarks"></a>備註  
- 繪圖模式指定如何結合的畫筆色彩和填滿物件的內部使用的色彩顯示表面上已經存在。  
+### <a name="remarks"></a>Remarks  
+ The drawing mode specifies how the colors of the pen and the interior of filled objects are combined with the color already on the display surface.  
   
-##  <a name="getsafehdc"></a>CDC::GetSafeHdc  
- 呼叫此成員函式可取得[m_hDC](#m_hdc)，輸出裝置內容。  
+##  <a name="getsafehdc"></a>  CDC::GetSafeHdc  
+ Call this member function to get [m_hDC](#m_hdc), the output device context.  
   
 ```  
 HDC GetSafeHdc() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 裝置內容控制代碼。  
+### <a name="return-value"></a>Return Value  
+ A device context handle.  
   
-### <a name="remarks"></a>備註  
- 此成員函式也可以搭配 null 指標。  
+### <a name="remarks"></a>Remarks  
+ This member function also works with null pointers.  
   
-##  <a name="getstretchbltmode"></a>CDC::GetStretchBltMode  
- 擷取目前的點陣圖自動縮放模式。  
+##  <a name="getstretchbltmode"></a>  CDC::GetStretchBltMode  
+ Retrieves the current bitmap-stretching mode.  
   
 ```  
 int GetStretchBltMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 傳回值會指定目前的點陣圖自動縮放模式 — **STRETCH_ANDSCANS**， **STRETCH_DELETESCANS**，或**STRETCH_ORSCANS** — 如果函式成功。  
+### <a name="return-value"></a>Return Value  
+ The return value specifies the current bitmap-stretching mode — **STRETCH_ANDSCANS**, **STRETCH_DELETESCANS**, or **STRETCH_ORSCANS** — if the function is successful.  
   
-### <a name="remarks"></a>備註  
- 點陣圖縮放模式可讓您定義資訊從延伸或壓縮點陣圖的移除方式`StretchBlt`成員函式。  
+### <a name="remarks"></a>Remarks  
+ The bitmap-stretching mode defines how information is removed from bitmaps that are stretched or compressed by the `StretchBlt` member function.  
   
- **STRETCH_ANDSCANS**和**STRETCH_ORSCANS**模式通常用來保留前景單色點陣圖的像素。 **STRETCH_DELETESCANS**模式通常用來保留彩色點陣圖中的色彩。  
+ The **STRETCH_ANDSCANS** and **STRETCH_ORSCANS** modes are typically used to preserve foreground pixels in monochrome bitmaps. The **STRETCH_DELETESCANS** mode is typically used to preserve color in color bitmaps.  
   
-##  <a name="gettabbedtextextent"></a>CDC::GetTabbedTextExtent  
- 呼叫此成員函式，來計算的寬度和高度的字元字串使用[m_hAttribDC](#m_hattribdc)，屬性的裝置內容。  
+##  <a name="gettabbedtextextent"></a>  CDC::GetTabbedTextExtent  
+ Call this member function to compute the width and height of a character string using [m_hAttribDC](#m_hattribdc), the attribute device context.  
   
 ```  
 CSize GetTabbedTextExtent(
@@ -3181,105 +3372,105 @@ CSize GetTabbedTextExtent(
     LPINT lpnTabStopPositions) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- 指向字元字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)這個參數的物件。  
+ Points to a character string. You can also pass a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object for this parameter.  
   
  `nCount`  
- 指定字串中的字元數。 如果`nCount`為-1，長度會計算。  
+ Specifies the number of characters in the string. If `nCount` is -1, the length is calculated.  
   
  `nTabPositions`  
- 指定所指陣列中的定位停駐點位置數`lpnTabStopPositions`。  
+ Specifies the number of tab-stop positions in the array pointed to by `lpnTabStopPositions`.  
   
  `lpnTabStopPositions`  
- 指向陣列包含的邏輯單元的定位停駐點位置的整數。 必須排序定位停駐點，以遞增順序排列;最小的 x 值應該在陣列中的第一個項目。 不允許背景索引標籤。  
+ Points to an array of integers containing the tab-stop positions in logical units. The tab stops must be sorted in increasing order; the smallest x-value should be the first item in the array. Back tabs are not allowed.  
   
  `str`  
- A`CString`物件，其中包含要繪製指定的字元。  
+ A `CString` object that contains the specified characters to be drawn.  
   
-### <a name="return-value"></a>傳回值  
- 中的字串 （以邏輯單位表示） 的維度[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ The dimensions of the string (in logical units) in a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 如果字串包含一個或多個 tab 字元，字串的寬度根據所指定的定位停駐點`lpnTabStopPositions`。 函式會使用目前選取的字型，計算字串的維度。  
+### <a name="remarks"></a>Remarks  
+ If the string contains one or more tab characters, the width of the string is based upon the tab stops specified by `lpnTabStopPositions`. The function uses the currently selected font to compute the dimensions of the string.  
   
- 為目前裁剪區域不位移所傳回的高度與寬度`GetTabbedTextExtent`函式。  
+ The current clipping region does not offset the width and height returned by the `GetTabbedTextExtent` function.  
   
- 因為某些裝置並將字元放在規則資料格陣列中 （也就是它們微調字元），將字串中字元的範圍的總和可能不等於字串的範圍。  
+ Since some devices do not place characters in regular cell arrays (that is, they kern the characters), the sum of the extents of the characters in a string may not be equal to the extent of the string.  
   
- 如果`nTabPositions`為 0 和`lpnTabStopPositions`是**NULL**，索引標籤會展開成八次的平均字元寬度。 如果`nTabPositions`為 1，第一個值的陣列中所指定的距離會分開定位停駐點`lpnTabStopPositions`點。 如果`lpnTabStopPositions`到多個單一值的點，每個值最多指定的數字陣列中設定定位停駐點`nTabPositions`。  
+ If `nTabPositions` is 0 and `lpnTabStopPositions` is **NULL**, tabs are expanded to eight times the average character width. If `nTabPositions` is 1, the tab stops will be separated by the distance specified by the first value in the array to which `lpnTabStopPositions` points. If `lpnTabStopPositions` points to more than a single value, a tab stop is set for each value in the array, up to the number specified by `nTabPositions`.  
   
-##  <a name="gettextalign"></a>CDC::GetTextAlign  
- 擷取裝置內容的文字對齊旗標狀態。  
+##  <a name="gettextalign"></a>  CDC::GetTextAlign  
+ Retrieves the status of the text-alignment flags for the device context.  
   
 ```  
 UINT GetTextAlign() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 文字對齊方式的旗標的狀態。 傳回值是一或多個下列值︰  
+### <a name="return-value"></a>Return Value  
+ The status of the text-alignment flags. The return value is one or more of the following values:  
   
-- **TA_BASELINE**指定對齊 x 軸和字型的週框矩形內的基準線。  
+- **TA_BASELINE** Specifies alignment of the x-axis and the baseline of the chosen font within the bounding rectangle.  
   
-- **TA_BOTTOM**指定對齊 x 軸和週框矩形的底部。  
+- **TA_BOTTOM** Specifies alignment of the x-axis and the bottom of the bounding rectangle.  
   
-- **TA_CENTER**指定週框的中間和 y 軸的對齊方式。  
+- **TA_CENTER** Specifies alignment of the y-axis and the center of the bounding rectangle.  
   
-- **TA_LEFT**指定 y 軸，這個周框左邊的對齊方式。  
+- **TA_LEFT** Specifies alignment of the y-axis and the left side of the bounding rectangle.  
   
-- **TA_NOUPDATECP**指定不會更新目前的位置。  
+- **TA_NOUPDATECP** Specifies that the current position is not updated.  
   
-- **TA_RIGHT**指定 y 軸的對齊方式及週框的右側。  
+- **TA_RIGHT** Specifies alignment of the y-axis and the right side of the bounding rectangle.  
   
-- **TA_TOP**指定 x 軸和週框矩形頂端對齊。  
+- **TA_TOP** Specifies alignment of the x-axis and the top of the bounding rectangle.  
   
-- **TA_UPDATECP**指定目前位置進行更新。  
+- **TA_UPDATECP** Specifies that the current position is updated.  
   
-### <a name="remarks"></a>備註  
- 文字對齊方式的旗標決定如何`TextOut`和`ExtTextOut`成員函式對齊關於字串的起始點的文字字串。 文字對齊方式的旗標不一定是單一位元旗標，且可能是等於 0。 若要測試是否已設定旗標，應用程式應該遵循下列步驟︰  
+### <a name="remarks"></a>Remarks  
+ The text-alignment flags determine how the `TextOut` and `ExtTextOut` member functions align a string of text in relation to the string's starting point. The text-alignment flags are not necessarily single-bit flags and may be equal to 0. To test whether a flag is set, an application should follow these steps:  
   
-1.  將位元 OR 運算子套用至旗標和其相關的旗標，組成群組，如下所示︰  
+1.  Apply the bitwise OR operator to the flag and its related flags, grouped as follows:  
   
-    - **TA_LEFT**， **TA_CENTER**，和**TA_RIGHT**  
+    - **TA_LEFT**, **TA_CENTER**, and **TA_RIGHT**  
   
-    - **TA_BASELINE**， **TA_BOTTOM**，和**TA_TOP**  
+    - **TA_BASELINE**, **TA_BOTTOM**, and **TA_TOP**  
   
-    - **TA_NOUPDATECP**和**TA_UPDATECP**  
+    - **TA_NOUPDATECP** and **TA_UPDATECP**  
   
-2.  適用於位元-和運算子的結果並傳回值`GetTextAlign`。  
+2.  Apply the bitwise-AND operator to the result and the return value of `GetTextAlign`.  
   
-3.  測試結果和旗標相等。  
+3.  Test for the equality of this result and the flag.  
   
-##  <a name="gettextcharacterextra"></a>CDC::GetTextCharacterExtra  
- 擷取 intercharacter 距離的目前設定。  
+##  <a name="gettextcharacterextra"></a>  CDC::GetTextCharacterExtra  
+ Retrieves the current setting for the amount of intercharacter spacing.  
   
 ```  
 int GetTextCharacterExtra() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- Intercharacter 的間距數量。  
+### <a name="return-value"></a>Return Value  
+ The amount of the intercharacter spacing.  
   
-### <a name="remarks"></a>備註  
- GDI 新增這個間距，包括分行符號字元，當它將一行文字寫入至裝置內容的每個字元。  
+### <a name="remarks"></a>Remarks  
+ GDI adds this spacing to each character, including break characters, when it writes a line of text to the device context.  
   
- Intercharacter 間距所需的預設值為 0。  
+ The default value for the amount of intercharacter spacing is 0.  
   
-##  <a name="gettextcolor"></a>CDC::GetTextColor  
- 擷取目前的文字色彩。  
+##  <a name="gettextcolor"></a>  CDC::GetTextColor  
+ Retrieves the current text color.  
   
 ```  
 COLORREF GetTextColor() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- RGB 色彩值為目前的文字色彩。  
+### <a name="return-value"></a>Return Value  
+ The current text color as an RGB color value.  
   
-### <a name="remarks"></a>備註  
- 文字色彩就是使用 GDI 文字輸出成員函式來繪製的字元的前景色彩[TextOut](#textout)， [ExtTextOut](#exttextout)，和[TabbedTextOut](#tabbedtextout)。  
+### <a name="remarks"></a>Remarks  
+ The text color is the foreground color of characters drawn by using the GDI text-output member functions [TextOut](#textout), [ExtTextOut](#exttextout), and [TabbedTextOut](#tabbedtextout).  
   
-##  <a name="gettextextent"></a>CDC::GetTextExtent  
- 呼叫此成員函式的一行文字決定維度使用目前的字型高度與寬度計算。  
+##  <a name="gettextextent"></a>  CDC::GetTextExtent  
+ Call this member function to compute the width and height of a line of text using the current font to determine the dimensions.  
   
 ```  
 CSize GetTextExtent(
@@ -3289,30 +3480,30 @@ CSize GetTextExtent(
 CSize GetTextExtent(const CString& str) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpszString`  
- 指向字元的字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)這個參數的物件。  
+ Points to a string of characters. You can also pass a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object for this parameter.  
   
  `nCount`  
- 指定字串中的字元數。  
+ Specifies the number of characters in the string.  
   
  `str`  
- A`CString`物件，其中包含指定的字元。  
+ A `CString` object that contains the specified characters.  
   
-### <a name="return-value"></a>傳回值  
- 中的字串 （以邏輯單位表示） 的維度[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ The dimensions of the string (in logical units) in a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 從擷取的資訊[m_hAttribDC](#m_hattribdc)，屬性的裝置內容。  
+### <a name="remarks"></a>Remarks  
+ The information is retrieved from [m_hAttribDC](#m_hattribdc), the attribute device context.  
   
- 根據預設，`GetTextExtent`假設沿著水平列設定它會擷取維度的文字 （也就是斜度為 0）。 如果您建立指定非零斜度字型，您必須轉換明確地取得維度的字串文字的角度。  
+ By default, `GetTextExtent` assumes the text for which it retrieves the dimension is set along a horizontal line (that is, the escapement is 0). If you create a font specifying a non-zero escapement, you must convert the angle of the text explicitly to get the dimensions of the string.  
   
- 為目前裁剪區域不會影響所傳回的高度與寬度`GetTextExtent`。  
+ The current clipping region does not affect the width and height returned by `GetTextExtent`.  
   
- 因為某些裝置並將字元放在規則資料格陣列中 （也就是它們執行字元間距調整），請將字串中字元的範圍的總和可能不等於字串的範圍。  
+ Since some devices do not place characters in regular cell arrays (that is, they carry out kerning), the sum of the extents of the characters in a string may not be equal to the extent of the string.  
   
-##  <a name="gettextextentexpointi"></a>CDC::GetTextExtentExPointI  
- 擷取指定的空間可容納和陣列填入每個字元的文字範圍的指定字串中的字元數目。  
+##  <a name="gettextextentexpointi"></a>  CDC::GetTextExtentExPointI  
+ Retrieves the number of characters in a specified string that will fit within a specified space and fills an array with the text extent for each of those characters.  
   
 ```  
 BOOL GetTextExtentExPointI(
@@ -3324,33 +3515,33 @@ BOOL GetTextExtentExPointI(
     LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pgiIn`  
- 要擷取範圍的圖像索引的陣列指標。  
+ A pointer to an array of glyph indices for which extents are to be retrieved.  
   
  `cgi`  
- 所指陣列中指定的圖像數目`pgiIn`。  
+ Specifies the number of glyphs in the array pointed to by `pgiIn`.  
   
  `nMaxExtent`  
- 指定的最大可允許的寬度，以邏輯單位，表示的格式化字串。  
+ Specifies the maximum allowable width, in logical units, of the formatted string.  
   
  `lpnFit`  
- 接收的最大所指定的空間容納的字元數計數的整數指標`nMaxExtent`。 當`lpnFit`是**NULL**，`nMaxExtent`會被忽略。  
+ A pointer to an integer that receives a count of the maximum number of characters that will fit in the space specified by `nMaxExtent`. When `lpnFit` is **NULL**, `nMaxExtent` is ignored.  
   
  *alpDx*  
- 接收部分圖像範圍整數的陣列指標。 陣列中的每個項目提供的距離，以邏輯單位，表示圖像索引陣列的開頭與符合所指定的空間中的圖像`nMaxExtent`。 雖然這個陣列應該有至少多的項目，為所指定的圖像索引`cgi`，函式會填滿陣列所使用最多圖像索引時所指定的範圍`lpnFit`。 如果*lpnDx*是**NULL**，函式不會計算部分字串的寬度。  
+ A pointer to an array of integers that receives partial glyph extents. Each element in the array gives the distance, in logical units, between the beginning of the glyph indices array and one of the glyphs that fits in the space specified by `nMaxExtent`. Although this array should have at least as many elements as glyph indices specified by `cgi`, the function fills the array with extents only for as many glyph indices as are specified by `lpnFit`. If *lpnDx* is **NULL**, the function does not compute partial string widths.  
   
  `lpSize`  
- 指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)以邏輯單位表示收到的圖像索引陣列維度的結構。 這個值不能**NULL**。  
+ Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that receives the dimensions of the glyph indices array, in logical units. This value cannot be **NULL**.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetTextExtentExPointI](http://msdn.microsoft.com/library/windows/desktop/dd144936)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the function [GetTextExtentExPointI](http://msdn.microsoft.com/library/windows/desktop/dd144936), as described in the Windows SDK.  
   
-##  <a name="gettextextentpointi"></a>CDC::GetTextExtentPointI  
- 擷取指定之圖像索引陣列的高度與寬度。  
+##  <a name="gettextextentpointi"></a>  CDC::GetTextExtentPointI  
+ Retrieves the width and height of the specified array of glyph indices.  
   
 ```  
 BOOL GetTextExtentPointI(
@@ -3359,24 +3550,24 @@ BOOL GetTextExtentPointI(
     LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pgiIn`  
- 要擷取範圍的圖像索引的陣列指標。  
+ A pointer to an array of glyph indices for which extents are to be retrieved.  
   
  `cgi`  
- 所指陣列中指定的圖像數目`pgiIn`。  
+ Specifies the number of glyphs in the array pointed to by `pgiIn`.  
   
  `lpSize`  
- 指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)以邏輯單位表示收到的圖像索引陣列維度的結構。 這個值不能**NULL**。  
+ Pointer to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure that receives the dimensions of the glyph indices array, in logical units. This value cannot be **NULL**.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式模擬函式的功能[GetTextExtentPointI](http://msdn.microsoft.com/library/windows/desktop/dd144939)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the function [GetTextExtentPointI](http://msdn.microsoft.com/library/windows/desktop/dd144939), as described in the Windows SDK.  
   
-##  <a name="gettextface"></a>CDC::GetTextFace  
- 呼叫此成員函式複製到緩衝區的目前字型的字樣名稱。  
+##  <a name="gettextface"></a>  CDC::GetTextFace  
+ Call this member function to copy the typeface name of the current font into a buffer.  
   
 ```  
 int GetTextFace(
@@ -3386,112 +3577,112 @@ int GetTextFace(
 int GetTextFace(CString& rString) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nCount`  
- 指定緩衝區的大小 （以位元組為單位）。 如果超過此參數所指定的位元組數目的字樣名稱，名稱將會被截斷。  
+ Specifies the size of the buffer (in bytes). If the typeface name is longer than the number of bytes specified by this parameter, the name is truncated.  
   
  *lpszFacename*  
- 指向的字樣名稱的緩衝區。  
+ Points to the buffer for the typeface name.  
   
  `rString`  
- 若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)物件。  
+ A reference to a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object.  
   
-### <a name="return-value"></a>傳回值  
- 複製到緩衝區，不包括結束的 null 字元的位元組數目。 如果發生錯誤，它可以是 0。  
+### <a name="return-value"></a>Return Value  
+ The number of bytes copied to the buffer, not including the terminating null character. It is 0 if an error occurs.  
   
-### <a name="remarks"></a>備註  
- 以 null 結束的字串複製的字樣名稱。  
+### <a name="remarks"></a>Remarks  
+ The typeface name is copied as a null-terminated string.  
   
-##  <a name="gettextmetrics"></a>CDC::GetTextMetrics  
- 擷取目前使用屬性的裝置內容的字型度量資訊。  
+##  <a name="gettextmetrics"></a>  CDC::GetTextMetrics  
+ Retrieves the metrics for the current font using the attribute device context.  
   
 ```  
 BOOL GetTextMetrics(LPTEXTMETRIC lpMetrics) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpMetrics`  
- 指向[TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132)接收度量的結構。  
+ Points to the [TEXTMETRIC](http://msdn.microsoft.com/library/windows/desktop/dd145132) structure that receives the metrics.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-##  <a name="getviewportext"></a>CDC::GetViewportExt  
- 擷取，x-與 y-範圍的裝置內容的檢視區。  
+##  <a name="getviewportext"></a>  CDC::GetViewportExt  
+ Retrieves the x- and y-extents of the device context's viewport.  
   
 ```  
 CSize GetViewportExt() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- X-與 y-範圍 （以裝置為單位） 為`CSize`物件。  
+### <a name="return-value"></a>Return Value  
+ The x- and y-extents (in device units) as a `CSize` object.  
   
-##  <a name="getviewportorg"></a>CDC::GetViewportOrg  
- 擷取裝置內容相關聯的檢視區原點 x 和 y 座標。  
+##  <a name="getviewportorg"></a>  CDC::GetViewportOrg  
+ Retrieves the x- and y-coordinates of the origin of the viewport associated with the device context.  
   
 ```  
 CPoint GetViewportOrg() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- （以裝置座標表示） 做為檢視區原點`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The origin of the viewport (in device coordinates) as a `CPoint` object.  
   
-##  <a name="getwindow"></a>CDC::GetWindow  
- 傳回顯示裝置內容相關聯的視窗。  
+##  <a name="getwindow"></a>  CDC::GetWindow  
+ Returns the window associated with the display device context.  
   
 ```  
 CWnd* GetWindow() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CWnd`物件，如果成功，否則**NULL**。  
+### <a name="return-value"></a>Return Value  
+ Pointer to a `CWnd` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>備註  
- 這是進階函式。 例如，此成員函式可能不會傳回 [檢視] 視窗，列印時，或在預覽列印中。 它一律會傳回與 output 相關聯的視窗。 使用指定的 DC 的輸出函式會繪製到這個視窗。  
+### <a name="remarks"></a>Remarks  
+ This is an advanced function. For example, this member function may not return the view window when printing or in print preview. It always returns the window associated with output. Output functions that use the given DC draw into this window.  
   
-##  <a name="getwindowext"></a>CDC::GetWindowExt  
- 擷取，x-與 y-範圍相關聯的裝置內容的視窗。  
+##  <a name="getwindowext"></a>  CDC::GetWindowExt  
+ Retrieves the x- and y-extents of the window associated with the device context.  
   
 ```  
 CSize GetWindowExt() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- X-與 y-範圍 （以邏輯單位表示） 做為`CSize`物件。  
+### <a name="return-value"></a>Return Value  
+ The x- and y-extents (in logical units) as a `CSize` object.  
   
-##  <a name="getwindoworg"></a>CDC::GetWindowOrg  
- 擷取裝置內容相關聯的視窗原點 x 和 y 座標。  
+##  <a name="getwindoworg"></a>  CDC::GetWindowOrg  
+ Retrieves the x- and y-coordinates of the origin of the window associated with the device context.  
   
 ```  
 CPoint GetWindowOrg() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 間隔 （以邏輯座標） 做為來源`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The origin of the window (in logical coordinates) as a `CPoint` object.  
   
-##  <a name="getworldtransform"></a>CDC::GetWorldTransform  
- 擷取目前分頁空間轉換到全球的空間。  
+##  <a name="getworldtransform"></a>  CDC::GetWorldTransform  
+ Retrieves the current world-space to page-space transformation.  
   
 ```  
 BOOL GetWorldTransform(XFORM& rXform) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rXform`  
- 若要參考[XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228)接收目前世界空間分頁空間轉換的結構。  
+ Reference to an [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) structure that receives the current world-space to page-space transformation.  
   
-### <a name="return-value"></a>傳回值  
- 成功時傳回非零值。  
+### <a name="return-value"></a>Return Value  
+ Returns a nonzero value on success.  
   
- 在失敗時傳回 0。  
+ Returns 0 on failure.  
   
- 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>備註  
- 這個方法會包裝 Windows GDI 函式[GetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd144953)。  
+### <a name="remarks"></a>Remarks  
+ This method wraps the Windows GDI function [GetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd144953).  
   
-##  <a name="gradientfill"></a>CDC::GradientFill  
- 呼叫此成員函式以順暢其他淡從一端的色彩填滿的矩形和三角形的結構。  
+##  <a name="gradientfill"></a>  CDC::GradientFill  
+ Call this member function to fill rectangle and triangle structures with color that smoothly fades from one side to the other.  
   
 ```  
 BOOL GradientFill(
@@ -3502,30 +3693,30 @@ BOOL GradientFill(
     DWORD dwMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *pVertices*  
- 陣列的指標[TRIVERTEX](http://msdn.microsoft.com/library/windows/desktop/dd145142)結構，每個會定義一個三角形的頂點。  
+ Pointer to an array of [TRIVERTEX](http://msdn.microsoft.com/library/windows/desktop/dd145142) structures that each define a triangle vertex.  
   
  *nVertices*  
- 頂點數目。  
+ The number of vertices.  
   
  `pMesh`  
- 陣列[GRADIENT_TRIANGLE](http://msdn.microsoft.com/library/windows/desktop/dd144959)三角形模式或陣列中的結構[GRADIENT_RECT](http://msdn.microsoft.com/library/windows/desktop/dd144958)矩形模式中的結構。  
+ Array of [GRADIENT_TRIANGLE](http://msdn.microsoft.com/library/windows/desktop/dd144959) structures in triangle mode, or an array of [GRADIENT_RECT](http://msdn.microsoft.com/library/windows/desktop/dd144958) structures in rectangle mode.  
   
  *nMeshElements*  
- 中的元素數目 （三角形或矩形） `pMesh`。  
+ The number of elements (triangles or rectangles) in `pMesh`.  
   
  `dwMode`  
- 指定漸層填滿模式。 如需可能的值，請參閱[GradientFill](http://msdn.microsoft.com/library/windows/desktop/dd144957)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Specifies gradient fill mode. For a list of possible values, see [GradientFill](http://msdn.microsoft.com/library/windows/desktop/dd144957) in the Windows SDK.  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**如果成功，否則**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if successful; otherwise **FALSE**.  
   
-### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱`GradientFill`中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ For more information, see `GradientFill` in the Windows SDK.  
   
-##  <a name="graystring"></a>Cdc:: graystring  
- 繪製寫入記憶體點陣圖中的文字、 變暗的點陣圖，並再將點陣圖複製到顯示灰色 （灰色） 在指定位置的文字。  
+##  <a name="graystring"></a>  CDC::GrayString  
+ Draws dimmed (gray) text at the given location by writing the text in a memory bitmap, dimming the bitmap, and then copying the bitmap to the display.  
   
 ```  
 virtual BOOL GrayString(
@@ -3542,79 +3733,79 @@ virtual BOOL GrayString(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pBrush`  
- 識別要用於變暗 （對於） 筆刷。  
+ Identifies the brush to be used for dimming (graying).  
   
  `lpfnOutput`  
- 指定字串，會繪製應用程式所提供的回呼函式的程序執行個體的位址。 如需詳細資訊，請參閱 Windows 說明**OutputFunc** [回呼函式](../../mfc/reference/callback-function-for-cdc-graystring.md)。 如果這個參數是**NULL**，系統會使用 Windows`TextOut`繪製字串的函式和`lpData`假設為輸出的字元字串的長指標。  
+ Specifies the procedure-instance address of the application-supplied callback function that will draw the string. For more information, see the description of the Windows **OutputFunc** [callback function](../../mfc/reference/callback-function-for-cdc-graystring.md). If this parameter is **NULL**, the system uses the Windows `TextOut` function to draw the string, and `lpData` is assumed to be a long pointer to the character string to be output.  
   
  `lpData`  
- 指定要傳遞給輸出函式資料的遠端指標。 如果`lpfnOutput`是**NULL**，`lpData`必須是指向要輸出字串的長度。  
+ Specifies a far pointer to data to be passed to the output function. If `lpfnOutput` is **NULL**, `lpData` must be a long pointer to the string to be output.  
   
  `nCount`  
- 指定要輸出的字元數。 如果這個參數是 0，`GrayString`計算字串的長度 (假設`lpData`是字串的指標)。 如果`nCount`為-1，且所指向之函式`lpfnOutput`傳回 0 時，映像時顯示，但是未呈現灰色。  
+ Specifies the number of characters to be output. If this parameter is 0, `GrayString` calculates the length of the string (assuming that `lpData` is a pointer to the string). If `nCount` is -1 and the function pointed to by `lpfnOutput` returns 0, the image is shown but not dimmed.  
   
  *x*  
- 指定包圍字串的矩形的開始位置的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the starting position of the rectangle that encloses the string.  
   
  *y*  
- 指定包圍字串的矩形的開始位置的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the starting position of the rectangle that encloses the string.  
   
  `nWidth`  
- 指定包圍字串的矩形的寬度 （以邏輯單位表示）。 如果`nWidth`為 0，`GrayString`計算寬度，假設`lpData`是字串的指標。  
+ Specifies the width (in logical units) of the rectangle that encloses the string. If `nWidth` is 0, `GrayString` calculates the width of the area, assuming `lpData` is a pointer to the string.  
   
  `nHeight`  
- 指定包圍字串的矩形的高度 （以邏輯單位表示）。 如果`nHeight`為 0，`GrayString`計算區域的高度假設`lpData`是字串的指標。  
+ Specifies the height (in logical units) of the rectangle that encloses the string. If `nHeight` is 0, `GrayString` calculates the height of the area, assuming `lpData` is a pointer to the string.  
   
-### <a name="return-value"></a>傳回值  
- 如果在繪製字串時，則為非零或 0，如果有任一個`TextOut`函式或應用程式所提供的輸出函式傳回 0，或如果沒有記憶體不足，無法建立變暗的記憶體點陣圖。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the string is drawn, or 0 if either the `TextOut` function or the application-supplied output function returned 0, or if there was insufficient memory to create a memory bitmap for dimming.  
   
-### <a name="remarks"></a>備註  
- 此函式變暗的文字，不論所選的筆刷和背景。 `GrayString`成員函式會使用目前選取的字型。 `MM_TEXT`必須選擇對應模式，才能使用這個函式。  
+### <a name="remarks"></a>Remarks  
+ The function dims the text regardless of the selected brush and background. The `GrayString` member function uses the currently selected font. The `MM_TEXT` mapping mode must be selected before using this function.  
   
- 應用程式可以支援全灰色而不需呼叫的裝置上繪製呈現暗灰色 （灰色） 字串`GrayString`成員函式。 系統色彩**COLOR_GRAYTEXT**為用來繪製已停用的文字的實線灰色系統色彩。 應用程式可以呼叫**GetSysColor** Windows 函式可擷取的色彩值**COLOR_GRAYTEXT**。 如果 color 是 0 （黑色） 以外，應用程式可以呼叫`SetTextColor`成員函式來設定文字色彩的色彩值，然後直接繪製的字串。 如果擷取的色彩為黑色，應用程式必須呼叫`GrayString`變暗的方法 （灰色） 文字。  
+ An application can draw dimmed (grayed) strings on devices that support a solid gray color without calling the `GrayString` member function. The system color **COLOR_GRAYTEXT** is the solid-gray system color used to draw disabled text. The application can call the **GetSysColor** Windows function to retrieve the color value of **COLOR_GRAYTEXT**. If the color is other than 0 (black), the application can call the `SetTextColor` member function to set the text color to the color value and then draw the string directly. If the retrieved color is black, the application must call `GrayString` to dim (gray) the text.  
   
- 如果`lpfnOutput`是**NULL**，GDI 會使用 Windows [TextOut](http://msdn.microsoft.com/library/windows/desktop/dd145133)函式，和`lpData`假設為輸出字元的遠端指標。 如果要輸出的字元不能由處理`TextOut`成員函式 （例如，字串會儲存為點陣圖，） 應用程式必須提供自己的輸出函式。  
+ If `lpfnOutput` is **NULL**, GDI uses the Windows [TextOut](http://msdn.microsoft.com/library/windows/desktop/dd145133) function, and `lpData` is assumed to be a far pointer to the character to be output. If the characters to be output cannot be handled by the `TextOut` member function (for example, the string is stored as a bitmap), the application must supply its own output function.  
   
- 也請注意所有的回呼函式必須再傳回給 Windows，，因為無法跨回呼界限擲回例外狀況設陷 Mfc 例外狀況。 例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。  
+ Also note that all callback functions must trap Microsoft Foundation exceptions before returning to Windows, since exceptions cannot be thrown across callback boundaries. For more information about exceptions, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
- 回呼函式傳遞至`GrayString`必須使用`__stdcall`呼叫慣例，而且必須與匯出`__declspec`。  
+ The callback function passed to `GrayString` must use the `__stdcall` calling convention and must be exported with `__declspec`.  
   
- 當架構處於預覽模式，請呼叫`GrayString`成員函式會轉譯為`TextOut`呼叫和回呼函式未呼叫。  
+ When the framework is in preview mode, a call to the `GrayString` member function is translated to a `TextOut` call, and the callback function is not called.  
   
-##  <a name="himetrictodp"></a>CDC::HIMETRICtoDP  
- 使用此函式，當您轉換**HIMETRIC** OLE 像素為單位的大小。  
+##  <a name="himetrictodp"></a>  CDC::HIMETRICtoDP  
+ Use this function when you convert **HIMETRIC** sizes from OLE to pixels.  
   
 ```  
 void HIMETRICtoDP(LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpSize`  
- 指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ Points to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure or [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 裝置內容物件的對應模式是否`MM_LOENGLISH`， `MM_HIENGLISH`，`MM_LOMETRIC`或`MM_HIMETRIC`，則轉換會根據實體英吋的像素數目。 如果對應模式是一種其他非限制模式 (例如`MM_TEXT`)，然後轉換為基礎的邏輯英吋的像素數目。  
+### <a name="remarks"></a>Remarks  
+ If the mapping mode of the device context object is `MM_LOENGLISH`, `MM_HIENGLISH`, `MM_LOMETRIC` or `MM_HIMETRIC`, then the conversion is based on the number of pixels in the physical inch. If the mapping mode is one of the other non-constrained modes (e.g., `MM_TEXT`), then the conversion is based on the number of pixels in the logical inch.  
   
-##  <a name="himetrictolp"></a>CDC::HIMETRICtoLP  
- 呼叫此函式可將轉換**HIMETRIC**成邏輯單元的單位。  
+##  <a name="himetrictolp"></a>  CDC::HIMETRICtoLP  
+ Call this function to convert **HIMETRIC** units into logical units.  
   
 ```  
 void HIMETRICtoLP(LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpSize`  
- 指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ Points to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure or [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 使用此函式，當您取得**HIMETRIC**大小為 OLE 和想要將它們轉換成應用程式的自然對應模式。  
+### <a name="remarks"></a>Remarks  
+ Use this function when you get **HIMETRIC** sizes from OLE and wish to convert them to your application's natural mapping mode.  
   
- 轉換透過第一個轉換**HIMETRIC**單位為像素為單位，然後再將這些單位轉換成使用裝置內容的目前對應單位的邏輯單元。 請注意的裝置 視窗和檢視區的範圍，會影響結果。  
+ The conversion is accomplished by first converting the **HIMETRIC** units into pixels and then converting these units into logical units using the device context's current mapping units. Note that the extents of the device's window and viewport will affect the result.  
   
-##  <a name="intersectcliprect"></a>CDC::IntersectClipRect  
- 建立新的裁剪區域所形成的目前地區和所指定的矩形的交集`x1`， `y1`， `x2`，和`y2`。  
+##  <a name="intersectcliprect"></a>  CDC::IntersectClipRect  
+ Creates a new clipping region by forming the intersection of the current region and the rectangle specified by `x1`, `y1`, `x2`, and `y2`.  
   
 ```  
 int IntersectClipRect(
@@ -3626,84 +3817,84 @@ int IntersectClipRect(
 int IntersectClipRect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定邏輯之矩形左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the rectangle.  
   
  `y1`  
- 指定矩形左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the rectangle.  
   
  `x2`  
- 指定矩形右下角的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the lower-right corner of the rectangle.  
   
  `y2`  
- 指定矩形右下角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the lower-right corner of the rectangle.  
   
  `lpRect`  
- 指定的矩形。 您可以傳遞`CRect`物件或指標`RECT`結構為此參數。  
+ Specifies the rectangle. You can pass either a `CRect` object or a pointer to a `RECT` structure for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 新的裁剪區域類型。 它可以是下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ The new clipping region's type. It can be any one of the following values:  
   
-- **COMPLEXREGION**新裁剪區域具有重疊的框線。  
+- **COMPLEXREGION** New clipping region has overlapping borders.  
   
-- **錯誤**裝置內容不正確。  
+- **ERROR** Device context is not valid.  
   
-- **NULLREGION**新裁剪區域是空的。  
+- **NULLREGION** New clipping region is empty.  
   
-- **SIMPLEREGION**新裁剪區域有任何重疊的框線。  
+- **SIMPLEREGION** New clipping region has no overlapping borders.  
   
-### <a name="remarks"></a>備註  
- GDI 裁剪以符合新的界限內所有後續的輸出。 寬度和高度不得超過 32767。  
+### <a name="remarks"></a>Remarks  
+ GDI clips all subsequent output to fit within the new boundary. The width and height must not exceed 32,767.  
   
-##  <a name="invertrect"></a>CDC::InvertRect  
- 反轉指定的矩形的內容。  
+##  <a name="invertrect"></a>  CDC::InvertRect  
+ Inverts the contents of the given rectangle.  
   
 ```  
 void InvertRect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向`RECT`，其中包含要反轉矩形的邏輯座標。 您也可以傳遞`CRect`這個參數的物件。  
+ Points to a `RECT` that contains the logical coordinates of the rectangle to be inverted. You can also pass a `CRect` object for this parameter.  
   
-### <a name="remarks"></a>備註  
- 反轉是邏輯作業，並是翻轉的每個像素的位元。 在單色顯示器，此函式對於白色像素的黑色和黑色的像素白色。 色彩的顯示中，在反轉取決於如何產生色彩的顯示。 呼叫`InvertRect`兩次以相同的矩形會顯示還原至其先前的色彩。  
+### <a name="remarks"></a>Remarks  
+ Inversion is a logical NOT operation and flips the bits of each pixel. On monochrome displays, the function makes white pixels black and black pixels white. On color displays, the inversion depends on how colors are generated for the display. Calling `InvertRect` twice with the same rectangle restores the display to its previous colors.  
   
- 如果是空的矩形，不繪製任何內容。  
+ If the rectangle is empty, nothing is drawn.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 36](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#36](../../mfc/codesnippet/cpp/cdc-class_8.cpp)]  
   
-##  <a name="invertrgn"></a>CDC::InvertRgn  
- 反轉所指定的區域中的色彩`pRgn`。  
+##  <a name="invertrgn"></a>  CDC::InvertRgn  
+ Inverts the colors in the region specified by `pRgn`.  
   
 ```  
 BOOL InvertRgn(CRgn* pRgn);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- 識別要反轉的區域。 以邏輯單位表示指定的區域的座標。  
+ Identifies the region to be inverted. The coordinates for the region are specified in logical units.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 在單色顯示器，此函式對於白色像素的黑色和黑色的像素白色。 色彩的顯示中，在反轉取決於如何顯示產生的色彩。  
+### <a name="remarks"></a>Remarks  
+ On monochrome displays, the function makes white pixels black and black pixels white. On color displays, the inversion depends on how the colors are generated for the display.  
   
-##  <a name="isprinting"></a>CDC::IsPrinting  
- 決定是否正在使用的裝置內容進行列印。  
+##  <a name="isprinting"></a>  CDC::IsPrinting  
+ Determines whether the device context is being used for printing.  
   
 ```  
 BOOL IsPrinting() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果`CDC`物件是印表機 DC; 否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CDC` object is a printer DC; otherwise 0.  
   
-##  <a name="lineto"></a>CDC::LineTo  
- 從目前的位置，但不是包括，所指定的點繪製一條線*x*和*y* (或`point`)。  
+##  <a name="lineto"></a>  CDC::LineTo  
+ Draws a line from the current position up to, but not including, the point specified by *x* and *y* (or `point`).  
   
 ```  
 BOOL LineTo(
@@ -3713,27 +3904,27 @@ BOOL LineTo(
 BOOL LineTo(POINT point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定線條的端點的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the endpoint for the line.  
   
  *y*  
- 指定線條的端點的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the endpoint for the line.  
   
  `point`  
- 指定線條的端點。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the endpoint for the line. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果繪製線條。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the line is drawn; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用所選畫筆繪製線條。 目前的位置會設定為*x*， *y*或`point`。  
+### <a name="remarks"></a>Remarks  
+ The line is drawn with the selected pen. The current position is set to *x*, *y* or to `point`.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)。  
+### <a name="example"></a>Example  
+  See the example for [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).  
   
-##  <a name="lptodp"></a>CDC::LPtoDP  
- 將邏輯單元轉換成裝置單位。  
+##  <a name="lptodp"></a>  CDC::LPtoDP  
+ Converts logical units into device units.  
   
 ```  
 void LPtoDP(
@@ -3744,62 +3935,62 @@ void LPtoDP(LPRECT lpRect) const;
 void LPtoDP(LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列的點。 陣列中的每個點都[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。  
+ Points to an array of points. Each point in the array is a [POINT](../../mfc/reference/point-structure1.md) structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object.  
   
  `nCount`  
- 陣列中的點數目。  
+ The number of points in the array.  
   
  `lpRect`  
- 指向[RECT](../../mfc/reference/rect-structure1.md)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。 使用這個參數是對應到裝置單位從邏輯矩形的常見案例。  
+ Points to a [RECT](../../mfc/reference/rect-structure1.md) structure or a [CRect](../../atl-mfc-shared/reference/crect-class.md) object. This parameter is used for the common case of mapping a rectangle from logical to device units.  
   
  `lpSize`  
- 指向[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。  
+ Points to a [SIZE](http://msdn.microsoft.com/library/windows/desktop/dd145106) structure or a [CSize](../../atl-mfc-shared/reference/csize-class.md) object.  
   
-### <a name="remarks"></a>備註  
- 此函式會在每個點的座標或維度大小，從裝置座標系統的 GDI 邏輯座標系統的對應。 轉換取決於目前的對應模式和來源的設定和裝置的視窗和檢視區的範圍。  
+### <a name="remarks"></a>Remarks  
+ The function maps the coordinates of each point, or dimensions of a size, from GDI's logical coordinate system into a device coordinate system. The conversion depends on the current mapping mode and the settings of the origins and extents of the device's window and viewport.  
   
- X 和 y 座標的點是範圍-32,768 到 32,767 的 2 位元組帶正負號的整數。 在其中的對應模式會產生值大於這些限制的情況下，系統會將值設-32,768 璅 32,767，分別。  
+ The x- and y-coordinates of points are 2-byte signed integers in the range -32,768 through 32,767. In cases where the mapping mode would result in values larger than these limits, the system sets the values to -32,768 and 32,767, respectively.  
   
-##  <a name="lptohimetric"></a>CDC::LPtoHIMETRIC  
- 呼叫此函式可將轉換成邏輯單元**HIMETRIC**單位。  
+##  <a name="lptohimetric"></a>  CDC::LPtoHIMETRIC  
+ Call this function to convert logical units into **HIMETRIC** units.  
   
 ```  
 void LPtoHIMETRIC(LPSIZE lpSize) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpSize`  
- 指向**大小**結構或`CSize`物件。  
+ Points to a **SIZE** structure or a `CSize` object.  
   
-### <a name="remarks"></a>備註  
- 使用此函式，當您授與**HIMETRIC**至 OLE，從您的應用程式的自然對應模式轉換的大小。 請注意的裝置 視窗和檢視區的範圍，會影響結果。  
+### <a name="remarks"></a>Remarks  
+ Use this function when you give **HIMETRIC** sizes to OLE, converting from your application's natural mapping mode. Note that the extents of the device's window and viewport will affect the result.  
   
- 轉換透過第一個轉換邏輯單位為像素使用裝置內容的目前對應單位，然後將轉換成這些單位**HIMETRIC**單位。  
+ The conversion is accomplished by first converting the logical units into pixels using the device context's current mapping units and then converting these units into **HIMETRIC** units.  
   
-##  <a name="m_hattribdc"></a>CDC::m_hAttribDC  
- 這個屬性的裝置內容`CDC`物件。  
+##  <a name="m_hattribdc"></a>  CDC::m_hAttribDC  
+ The attribute device context for this `CDC` object.  
   
 ```  
 HDC m_hAttribDC;  
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，這個裝置內容等於`m_hDC`。 一般情況下， `CDC` GDI 呼叫要求資訊從裝置內容會被導向至`m_hAttribDC`。 請參閱[CDC](../../mfc/reference/cdc-class.md)類別描述如需有關使用這些兩個裝置內容。  
+### <a name="remarks"></a>Remarks  
+ By default, this device context is equal to `m_hDC`. In general, `CDC` GDI calls that request information from the device context are directed to `m_hAttribDC`. See the [CDC](../../mfc/reference/cdc-class.md) class description for more on the use of these two device contexts.  
   
-##  <a name="m_hdc"></a>CDC::m_hDC  
- 輸出裝置內容，這個`CDC`物件。  
+##  <a name="m_hdc"></a>  CDC::m_hDC  
+ The output device context for this `CDC` object.  
   
 ```  
 HDC m_hDC;  
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，`m_hDC`等於`m_hAttribDC`，其他所包裝的裝置內容`CDC`。 一般情況下，`CDC`建立輸出的 GDI 呼叫移至`m_hDC`裝置內容。 您可以初始化`m_hDC`和`m_hAttribDC`指向不同的裝置。 請參閱[CDC](../../mfc/reference/cdc-class.md)類別描述如需有關使用這些兩個裝置內容。  
+### <a name="remarks"></a>Remarks  
+ By default, `m_hDC` is equal to `m_hAttribDC`, the other device context wrapped by `CDC`. In general, `CDC` GDI calls that create output go to the `m_hDC` device context. You can initialize `m_hDC` and `m_hAttribDC` to point to different devices. See the [CDC](../../mfc/reference/cdc-class.md) class description for more on the use of these two device contexts.  
   
-##  <a name="maskblt"></a>CDC::MaskBlt  
- 結合使用給定的遮罩和點陣作業的來源和目的地點陣圖的色彩資料。  
+##  <a name="maskblt"></a>  CDC::MaskBlt  
+ Combines the color data for the source and destination bitmaps using the given mask and raster operation.  
   
 ```  
 BOOL MaskBlt(
@@ -3816,52 +4007,52 @@ BOOL MaskBlt(
     DWORD dwRop);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定目的地矩形的左上角的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the destination rectangle.  
   
  *y*  
- 指定目的地矩形的左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the destination rectangle.  
   
  `nWidth`  
- 指定邏輯單元，目的地矩形和來源點陣圖的寬度。  
+ Specifies the width, in logical units, of the destination rectangle and source bitmap.  
   
  `nHeight`  
- 指定邏輯單元，目的地矩形和來源點陣圖的高度。  
+ Specifies the height, in logical units, of the destination rectangle and source bitmap.  
   
  `pSrcDC`  
- 識別裝置內容的複製來源點陣圖。 它必須是零如果*dwRop*參數會指定不包含來源的點陣作業。  
+ Identifies the device context from which the bitmap is to be copied. It must be zero if the *dwRop* parameter specifies a raster operation that does not include a source.  
   
  `xSrc`  
- 指定邏輯來源點陣圖的左上角的 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the source bitmap.  
   
  `ySrc`  
- 指定的來源點陣圖的左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the source bitmap.  
   
  `maskBitmap`  
- 識別結合色彩的點陣圖，來源裝置內容中的遮罩單色點陣圖。  
+ Identifies the monochrome mask bitmap combined with the color bitmap in the source device context.  
   
  `xMask`  
- 指定所指定的遮罩點陣圖的像素水平位移`maskBitmap`參數。  
+ Specifies the horizontal pixel offset for the mask bitmap specified by the `maskBitmap` parameter.  
   
  `yMask`  
- 指定所指定的遮罩點陣圖的垂直的像素位移`maskBitmap`參數。  
+ Specifies the vertical pixel offset for the mask bitmap specified by the `maskBitmap` parameter.  
   
  *dwRop*  
- 指定前景和背景三元點陣作業程式碼，用來控制的來源和目的地資料組合的函式。 背景的點陣作業程式碼儲存在此值; 高字其高位元前景點陣作業程式碼儲存在高的字組，此值; 的低位元組低序位文字這個值會被忽略，而且必須為零。 巨集**MAKEROP4**點陣作業程式碼會建立這類的前景和背景的組合。 請參閱 < 備註 > 一節討論的前景和背景，此函式的內容中。 請參閱`BitBlt`成員函式，如需常見的點陣作業程式碼的清單。  
+ Specifies both foreground and background ternary raster operation codes, which the function uses to control the combination of source and destination data. The background raster operation code is stored in the high byte of the high word of this value; the foreground raster operation code is stored in the low byte of the high word of this value; the low word of this value is ignored, and should be zero. The macro **MAKEROP4** creates such combinations of foreground and background raster operation codes. See the Remarks section for a discussion of foreground and background in the context of this function. See the `BitBlt` member function for a list of common raster operation codes.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 值為 1 中所指定的遮罩`maskBitmap`表示前景點陣作業程式碼會指定由*dwRop*應該套用在該位置。 遮罩中的 0 值表示所指定背景的點陣作業程式碼*dwRop*應該套用在該位置。 點陣作業需要來源，遮罩矩形必須涵蓋來源矩形。 如果不存在，此函式會失敗。 點陣作業則不需要為來源，遮罩矩形必須涵蓋滿目的矩形。 如果不存在，此函式會失敗。  
+### <a name="remarks"></a>Remarks  
+ A value of 1 in the mask specified by `maskBitmap` indicates that the foreground raster operation code specified by *dwRop* should be applied at that location. A value of 0 in the mask indicates that the background raster operation code specified by *dwRop* should be applied at that location. If the raster operations require a source, the mask rectangle must cover the source rectangle. If it does not, the function will fail. If the raster operations do not require a source, the mask rectangle must cover the destination rectangle. If it does not, the function will fail.  
   
- 如果旋轉或傾斜轉換是作用中來源裝置內容中，呼叫此函式時，就會發生錯誤。 不過，允許其他類型的轉換。  
+ If a rotation or shear transformation is in effect for the source device context when this function is called, an error occurs. However, other types of transformations are allowed.  
   
- 如果來源、 模式和目的地點陣圖的色彩格式不同，此函式會將轉換模式或來源格式，或兩者，以符合目的格式。 如果遮罩點陣圖不是單色點陣圖，就會發生錯誤。 當記錄的增強型中繼檔時，發生錯誤 （和函式會傳回 0） 如果來源裝置內容找出的增強型中繼檔裝置內容。 並非所有裝置都支援`MaskBlt`。 應用程式應該呼叫`GetDeviceCaps`來判斷裝置是否支援此函式。 如果沒有提供任何遮罩點陣圖，此函式的行為完全一樣`BitBlt`，使用前景點陣作業程式碼。 來源裝置內容的點陣圖中的點 (0，0) 的遮罩點陣圖對應中位移的像素。 這適用於包含一組遮罩; 之遮罩點陣圖的情況下應用程式可以輕鬆地套用其中任何一個遮罩單色工作藉由調整像素偏移和矩形大小傳送至`MaskBlt`。  
+ If the color formats of the source, pattern, and destination bitmaps differ, this function converts the pattern or source format, or both, to match the destination format. If the mask bitmap is not a monochrome bitmap, an error occurs. When an enhanced metafile is being recorded, an error occurs (and the function returns 0) if the source device context identifies an enhanced-metafile device context. Not all devices support `MaskBlt`. An application should call `GetDeviceCaps` to determine whether a device supports this function. If no mask bitmap is supplied, this function behaves exactly like `BitBlt`, using the foreground raster operation code. The pixel offsets in the mask bitmap map to the point (0,0) in the source device context's bitmap. This is useful for cases in which a mask bitmap contains a set of masks; an application can easily apply any one of them to a mask-blitting task by adjusting the pixel offsets and rectangle sizes sent to `MaskBlt`.  
   
-##  <a name="modifyworldtransform"></a>CDC::ModifyWorldTransform  
- 變更裝置內容中使用指定的模式的自然轉換。  
+##  <a name="modifyworldtransform"></a>  CDC::ModifyWorldTransform  
+ Changes the world transformation for a device context using the specified mode.  
   
 ```  
 BOOL ModifyWorldTransform(
@@ -3869,25 +4060,25 @@ BOOL ModifyWorldTransform(
     DWORD iMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rXform`  
- 若要參考[XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228)用來修改給定的裝置內容的自然轉換的結構。  
+ Reference to an [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) structure used to modify the world transformation for the given device context.  
   
  `iMode`  
- 指定轉換資料修改目前的自然變換的方式。 如需這個參數可以接受的值，請參閱[ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060)。  
+ Specifies how the transformation data modifies the current world transformation. For a list of the values that this parameter can take, see [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060).  
   
-### <a name="return-value"></a>傳回值  
- 成功時傳回非零值。  
+### <a name="return-value"></a>Return Value  
+ Returns a nonzero value on success.  
   
- 在失敗時傳回 0。  
+ Returns 0 on failure.  
   
- 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>備註  
- 這個方法會包裝 Windows GDI 函式[ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060)。  
+### <a name="remarks"></a>Remarks  
+ This method wraps the Windows GDI function [ModifyWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145060).  
   
-##  <a name="moveto"></a>CDC::MoveTo  
- 目前的位置移至指定的點*x*和*y* (或由`point`)。  
+##  <a name="moveto"></a>  CDC::MoveTo  
+ Moves the current position to the point specified by *x* and *y* (or by `point`).  
   
 ```  
 CPoint MoveTo(
@@ -3897,24 +4088,24 @@ CPoint MoveTo(
 CPoint MoveTo(POINT point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定新位置的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the new position.  
   
  *y*  
- 指定新位置的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the new position.  
   
  `point`  
- 指定新位置。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the new position. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 先前的位置，以 x 和 y 座標`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The x- and y-coordinates of the previous position as a `CPoint` object.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint)。  
+### <a name="example"></a>Example  
+  See the example for [CRect::CenterPoint](../../atl-mfc-shared/reference/crect-class.md#centerpoint).  
   
-##  <a name="offsetcliprgn"></a>CDC::OffsetClipRgn  
- 將指定的位移移動裝置內容的裁剪區域。  
+##  <a name="offsetcliprgn"></a>  CDC::OffsetClipRgn  
+ Moves the clipping region of the device context by the specified offsets.  
   
 ```  
 int OffsetClipRgn(
@@ -3924,32 +4115,32 @@ int OffsetClipRgn(
 int OffsetClipRgn(SIZE size);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定要向左移動或向右的邏輯單元數目。  
+ Specifies the number of logical units to move left or right.  
   
  *y*  
- 指定要上移或下移的邏輯單元數目。  
+ Specifies the number of logical units to move up or down.  
   
  `size`  
- 指定的位移數量。  
+ Specifies the amount to offset.  
   
-### <a name="return-value"></a>傳回值  
- 新的區域類型。 它可以是下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ The new region's type. It can be any one of the following values:  
   
-- **COMPLEXREGION**裁剪區域具有重疊的框線。  
+- **COMPLEXREGION** Clipping region has overlapping borders.  
   
-- **錯誤**裝置內容不正確。  
+- **ERROR** Device context is not valid.  
   
-- **NULLREGION**裁剪區域是空的。  
+- **NULLREGION** Clipping region is empty.  
   
-- **SIMPLEREGION**裁剪區域有任何重疊的框線。  
+- **SIMPLEREGION** Clipping region has no overlapping borders.  
   
-### <a name="remarks"></a>備註  
- 此函式移動區域*x*沿著 x 軸單位並*y*沿著 y 軸的單位。  
+### <a name="remarks"></a>Remarks  
+ The function moves the region *x* units along the x-axis and *y* units along the y-axis.  
   
-##  <a name="offsetviewportorg"></a>CDC::OffsetViewportOrg  
- 修改檢視區原點，相對於目前的檢視區原點座標的座標。  
+##  <a name="offsetviewportorg"></a>  CDC::OffsetViewportOrg  
+ Modifies the coordinates of the viewport origin relative to the coordinates of the current viewport origin.  
   
 ```  
 virtual CPoint OffsetViewportOrg(
@@ -3957,18 +4148,18 @@ virtual CPoint OffsetViewportOrg(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- 指定將新增至目前的原點的 x 座標的裝置單位數目。  
+ Specifies the number of device units to add to the current origin's x-coordinate.  
   
  `nHeight`  
- 指定將新增至目前的原點的 y 座標的裝置單位數目。  
+ Specifies the number of device units to add to the current origin's y-coordinate.  
   
-### <a name="return-value"></a>傳回值  
- 前一個檢視區的原點 （以裝置座標表示） 做為`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The previous viewport origin (in device coordinates) as a `CPoint` object.  
   
-##  <a name="offsetwindoworg"></a>CDC::OffsetWindowOrg  
- 修改視窗原點，相對於目前視窗原點座標的座標。  
+##  <a name="offsetwindoworg"></a>  CDC::OffsetWindowOrg  
+ Modifies the coordinates of the window origin relative to the coordinates of the current window origin.  
   
 ```  
 CPoint OffsetWindowOrg(
@@ -3976,45 +4167,45 @@ CPoint OffsetWindowOrg(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nWidth`  
- 指定將新增至目前的原點的 x 座標的邏輯單元數目。  
+ Specifies the number of logical units to add to the current origin's x-coordinate.  
   
  `nHeight`  
- 指定將新增至目前的原點的 y 座標的邏輯單元數目。  
+ Specifies the number of logical units to add to the current origin's y-coordinate.  
   
-### <a name="return-value"></a>傳回值  
- 前一個視窗原點 （以邏輯座標表示） 做為`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The previous window origin (in logical coordinates) as a `CPoint` object.  
   
-##  <a name="operator_hdc"></a>CDC::operator HDC  
- 使用此運算子來擷取裝置內容控制代碼的`CDC`物件。  
+##  <a name="operator_hdc"></a>  CDC::operator HDC  
+ Use this operator to retrieve the device context handle of the `CDC` object.  
   
 ```  
 operator HDC() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，裝置內容物件; 的控制代碼否則， **NULL**。  
+### <a name="return-value"></a>Return Value  
+ If successful, the handle of the device context object; otherwise, **NULL**.  
   
-### <a name="remarks"></a>備註  
- 您可以直接呼叫 Windows Api 中使用控制代碼。  
+### <a name="remarks"></a>Remarks  
+ You can use the handle to call Windows APIs directly.  
   
-##  <a name="paintrgn"></a>CDC::PaintRgn  
- 所指定的區域填滿`pRgn`使用目前的筆刷。  
+##  <a name="paintrgn"></a>  CDC::PaintRgn  
+ Fills the region specified by `pRgn` using the current brush.  
   
 ```  
 BOOL PaintRgn(CRgn* pRgn);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- 識別要填滿區域。 以邏輯單位表示指定的給定區域座標。  
+ Identifies the region to be filled. The coordinates for the given region are specified in logical units.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-##  <a name="patblt"></a>CDC::PatBlt  
- 裝置上建立的位元模式。  
+##  <a name="patblt"></a>  CDC::PatBlt  
+ Creates a bit pattern on the device.  
   
 ```  
 BOOL PatBlt(
@@ -4025,42 +4216,42 @@ BOOL PatBlt(
     DWORD dwRop);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定要接收模式矩形左上角的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the upper-left corner of the rectangle that is to receive the pattern.  
   
  *y*  
- 指定要接收模式矩形左上角的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the upper-left corner of the rectangle that is to receive the pattern.  
   
  `nWidth`  
- 指定要接收模式的矩形的寬度 （以邏輯單位表示）。  
+ Specifies the width (in logical units) of the rectangle that is to receive the pattern.  
   
  `nHeight`  
- 指定要接收模式的矩形的高度 （以邏輯單位表示）。  
+ Specifies the height (in logical units) of the rectangle that is to receive the pattern.  
   
  *dwRop*  
- 指定的點陣作業程式碼。 點陣作業程式碼 (ROPs) 定義 GDI 結合在輸出作業牽涉到目前的筆刷、 可能的來源點陣圖和目的地點陣圖中色彩的方式。 這個參數可以是下列值之一︰  
+ Specifies the raster-operation code. Raster-operation codes (ROPs) define how GDI combines colors in output operations that involve a current brush, a possible source bitmap, and a destination bitmap. This parameter can be one of the following values:  
   
-- **PATCOPY**複製到目的地點陣圖的模式。  
+- **PATCOPY** Copies pattern to destination bitmap.  
   
-- **PATINVERT**模式使用布林值 XOR 運算子合併目的地點陣圖。  
+- **PATINVERT** Combines destination bitmap with pattern using the Boolean XOR operator.  
   
-- **DSTINVERT**反轉目的地點陣圖。  
+- **DSTINVERT** Inverts the destination bitmap.  
   
-- **BLACKNESS**所有將輸出的變成黑色。  
+- **BLACKNESS** Turns all output black.  
   
-- **WHITENESS**所有將輸出的變成白色。  
+- **WHITENESS** Turns all output white.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 模式是選取的筆刷和已在裝置上的模式的組合。 所指定的點陣作業程式碼*dwRop*定義模式的組合方式。 這個函式所列的點陣作業會完整 256 三元的點陣作業程式碼中的有限的子集特別是，是指來源的點陣作業程式碼不能使用。  
+### <a name="remarks"></a>Remarks  
+ The pattern is a combination of the selected brush and the pattern already on the device. The raster-operation code specified by *dwRop* defines how the patterns are to be combined. The raster operations listed for this function are a limited subset of the full 256 ternary raster-operation codes; in particular, a raster-operation code that refers to a source cannot be used.  
   
- 並非所有的裝置內容支援`PatBlt`函式。 若要判斷裝置內容是否支援`PatBlt`，呼叫`GetDeviceCaps`成員函式**cdc:: GETDEVICECAPS**索引並檢查傳回值，如**RC_BITBLT**旗標。  
+ Not all device contexts support the `PatBlt` function. To determine whether a device context supports `PatBlt`, call the `GetDeviceCaps` member function with the **RASTERCAPS** index and check the return value for the **RC_BITBLT** flag.  
   
-##  <a name="pie"></a>CDC::Pie  
- 藉由繪製橢圓形弧線的置中與兩個端點會聯結線條繪製派形的楔形。  
+##  <a name="pie"></a>  CDC::Pie  
+ Draws a pie-shaped wedge by drawing an elliptical arc whose center and two endpoints are joined by lines.  
   
 ```  
 BOOL Pie(
@@ -4080,55 +4271,55 @@ BOOL Pie(
     POINT ptEnd);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定 （以邏輯單位表示），這個周框左上角的 x 座標。  
+ Specifies the x-coordinate of the upper-left corner of the bounding rectangle (in logical units).  
   
  `y1`  
- 指定 （以邏輯單位表示），這個周框左上角的 y 座標。  
+ Specifies the y-coordinate of the upper-left corner of the bounding rectangle (in logical units).  
   
  `x2`  
- 指定 （以邏輯單位表示），這個周框的右下角的 x 座標。  
+ Specifies the x-coordinate of the lower-right corner of the bounding rectangle (in logical units).  
   
  `y2`  
- 指定 （以邏輯單位表示），這個周框的右下角的 y 座標。  
+ Specifies the y-coordinate of the lower-right corner of the bounding rectangle (in logical units).  
   
  *x3*  
- 指定的弧度 （以邏輯單位表示） 的起始點的 x 座標。 此時沒有完全位於弧線。  
+ Specifies the x-coordinate of the arc's starting point (in logical units). This point does not have to lie exactly on the arc.  
   
  `y3`  
- 指定的弧度 （以邏輯單位表示） 的起始點的 y 座標。 此時沒有完全位於弧線。  
+ Specifies the y-coordinate of the arc's starting point (in logical units). This point does not have to lie exactly on the arc.  
   
  `x4`  
- 指定弧線的端點 （在邏輯單位表示） 的 x 座標。 此時沒有完全位於弧線。  
+ Specifies the x-coordinate of the arc's endpoint (in logical units). This point does not have to lie exactly on the arc.  
   
  `y4`  
- 指定弧線的端點 （在邏輯單位表示） 的 y 座標。 此時沒有完全位於弧線。  
+ Specifies the y-coordinate of the arc's endpoint (in logical units). This point does not have to lie exactly on the arc.  
   
  `lpRect`  
- 指定的周框。 您可以傳遞`CRect`物件或指標`RECT`結構為此參數。  
+ Specifies the bounding rectangle. You can pass either a `CRect` object or a pointer to a `RECT` structure for this parameter.  
   
  `ptStart`  
- 指定弧線的起點。 此時沒有完全位於弧線。 您可以傳遞[點](../../mfc/reference/point-structure1.md)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)這個參數的物件。  
+ Specifies the starting point of the arc. This point does not have to lie exactly on the arc. You can pass either a [POINT](../../mfc/reference/point-structure1.md) structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object for this parameter.  
   
  `ptEnd`  
- 指定弧線的端點。 此時沒有完全位於弧線。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the endpoint of the arc. This point does not have to lie exactly on the arc. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 弧線的中心是所指定的週框矩形的中心`x1`， `y1`， `x2`，和`y2`(或由`lpRect`)。 所指定的開始和結束點弧線*x3*， `y3`， `x4`，和`y4`(或由`ptStart`和`ptEnd`)。  
+### <a name="remarks"></a>Remarks  
+ The center of the arc is the center of the bounding rectangle specified by `x1`, `y1`, `x2`, and `y2` (or by `lpRect`). The starting and ending points of the arc are specified by *x3*, `y3`, `x4`, and `y4` (or by `ptStart` and `ptEnd`).  
   
- 使用選取的畫筆，移動以逆時針方向繪製弧形。 兩個額外的線條會繪製弧線的中心從每個端點。 目前的筆刷填滿的派形區域。 如果*x3*等於`x4`和`y3`等於`y4`，結果是以單行從橢圓形的中心點的橢圓形 ( *x3*， `y3`) 或 ( `x4`， `y4`)。  
+ The arc is drawn with the selected pen, moving in a counterclockwise direction. Two additional lines are drawn from each endpoint to the arc's center. The pie-shaped area is filled with the current brush. If *x3* equals `x4` and `y3` equals `y4`, the result is an ellipse with a single line from the center of the ellipse to the point ( *x3*, `y3`) or ( `x4`, `y4`).  
   
- 此函式所繪製的圖最多延伸，但不包含右側和底部的座標。 這表示圖的高度是`y2`  -  `y1`圖的寬度，且`x2`  -  `x1`。 週框的高度和寬度必須大於 2 的單位和小於 32,767 個單位。  
+ The figure drawn by this function extends up to but does not include the right and bottom coordinates. This means that the height of the figure is `y2` - `y1` and the width of the figure is `x2` - `x1`. Both the width and the height of the bounding rectangle must be greater than 2 units and less than 32,767 units.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 37](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#37](../../mfc/codesnippet/cpp/cdc-class_9.cpp)]  
   
-##  <a name="playmetafile"></a>CDC::PlayMetaFile  
- 播放裝置內容上的指定中繼檔的內容。  
+##  <a name="playmetafile"></a>  CDC::PlayMetaFile  
+ Plays the contents of the specified metafile on the device context.  
   
 ```  
 BOOL PlayMetaFile(HMETAFILE hMF);
@@ -4139,30 +4330,30 @@ BOOL PlayMetaFile(
     LPCRECT lpBounds);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *hMF*  
- 識別要播放的中繼檔。  
+ Identifies the metafile to be played.  
   
  *hEnhMetaFile*  
- 識別增強型中繼檔。  
+ Identifies the enhanced metafile.  
   
  `lpBounds`  
- 指向`RECT`結構或`CRect`物件，其中包含用來顯示圖片，這個周框的座標。 以邏輯單位表示指定的座標。  
+ Points to a `RECT` structure or a `CRect` object that contains the coordinates of the bounding rectangle used to display the picture. The coordinates are specified in logical units.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 中繼檔就可以播放次數。  
+### <a name="remarks"></a>Remarks  
+ The metafile can be played any number of times.  
   
- 第二個版本`PlayMetaFile`顯示儲存在給定的格式增強型中繼檔中的圖片。 當應用程式呼叫第二個版本`PlayMetaFile`，Windows 使用增強型中繼檔標頭中對應到所指向的矩形圖片相框`lpBounds`參數。 (這張圖片可能修剪或藉由設定全局轉換中的輸出裝置，然後再呼叫旋轉`PlayMetaFile`。)矩形的邊緣點包含在圖片中。 藉由定義輸出裝置中的裁剪區域，然後再播放增強型中繼檔，也可裁剪增強型中繼檔圖片。  
+ The second version of `PlayMetaFile` displays the picture stored in the given enhanced-format metafile. When an application calls the second version of `PlayMetaFile`, Windows uses the picture frame in the enhanced-metafile header to map the picture onto the rectangle pointed to by the `lpBounds` parameter. (This picture may be sheared or rotated by setting the world transform in the output device before calling `PlayMetaFile`.) Points along the edges of the rectangle are included in the picture. An enhanced-metafile picture can be clipped by defining the clipping region in the output device before playing the enhanced metafile.  
   
- 增強型中繼檔包含選擇性的調色盤，如果應用程式可以藉由設定色彩調色盤上的輸出裝置，然後再呼叫第二個版本達到一致的色彩`PlayMetaFile`。 若要擷取的選擇性的調色盤，請使用**GetEnhMetaFilePaletteEntries** Windows 函式。 增強型中繼檔可以內嵌在新建立的增強型中繼檔中，藉由呼叫第二個版本`PlayMetaFile`和播放放入裝置內容的來源增強型中繼檔，新的增強型中繼檔。  
+ If an enhanced metafile contains an optional palette, an application can achieve consistent colors by setting up a color palette on the output device before calling the second version of `PlayMetaFile`. To retrieve the optional palette, use the **GetEnhMetaFilePaletteEntries** Windows function. An enhanced metafile can be embedded in a newly created enhanced metafile by calling the second version of `PlayMetaFile` and playing the source enhanced metafile into the device context for the new enhanced metafile.  
   
- 輸出裝置內容的狀態會保留此函式。 此函式會刪除任何物件建立，但不是會刪除增強型中繼檔中。 若要停止此函式，呼叫應用程式可以**CancelDC** Windows 函式，從另一個執行緒終止作業。 在此情況下，函數會傳回零。  
+ The states of the output device context are preserved by this function. Any object created but not deleted in the enhanced metafile is deleted by this function. To stop this function, an application can call the **CancelDC** Windows function from another thread to terminate the operation. In this case, the function returns zero.  
   
-##  <a name="plgblt"></a>CDC::PlgBlt  
- 在來源裝置內容中指定的矩形的色彩資料位元的位元區塊傳輸，執行至指定的裝置內容中指定的平行四邊形中。  
+##  <a name="plgblt"></a>  CDC::PlgBlt  
+ Performs a bit-block transfer of the bits of color data from the specified rectangle in the source device context to the specified parallelogram in the given device context.  
   
 ```  
 BOOL PlgBlt(
@@ -4177,54 +4368,54 @@ BOOL PlgBlt(
     int yMask);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoint`  
- 指向陣列識別目的地平行四邊形的三個角落的邏輯空間中的三個點。 來源矩形左上角會對應到這個陣列、 右上角，以在這個陣列中的第二個點和第三個點的左下角中的第一個點。 來源矩形的右下角會對應至的平行四邊形中隱含的第四個點。  
+ Points to an array of three points in logical space that identifies three corners of the destination parallelogram. The upper-left corner of the source rectangle is mapped to the first point in this array, the upper-right corner to the second point in this array, and the lower-left corner to the third point. The lower-right corner of the source rectangle is mapped to the implicit fourth point in the parallelogram.  
   
  `pSrcDC`  
- 識別來源裝置內容。  
+ Identifies the source device context.  
   
  `xSrc`  
- 指定邏輯單元，來源矩形左上角的 x 軸座標。  
+ Specifies the x-coordinate, in logical units, of the upper-left corner of the source rectangle.  
   
  `ySrc`  
- 指定邏輯單元，來源矩形左上角的 y 座標。  
+ Specifies the y-coordinate, in logical units, of the upper-left corner of the source rectangle.  
   
  `nWidth`  
- 指定邏輯單元，來源矩形的寬度。  
+ Specifies the width, in logical units, of the source rectangle.  
   
  `nHeight`  
- 指定邏輯單元，來源矩形的高度。  
+ Specifies the height, in logical units, of the source rectangle.  
   
  `maskBitmap`  
- 識別用來遮罩來源矩形的色彩選擇性單色點陣圖。  
+ Identifies an optional monochrome bitmap that is used to mask the colors of the source rectangle.  
   
  `xMask`  
- 指定單色點陣圖左上角的 x 座標。  
+ Specifies the x-coordinate of the upper-left corner of the monochrome bitmap.  
   
  `yMask`  
- 指定單色點陣圖左上角的 y 座標。  
+ Specifies the y-coordinate of the upper-left corner of the monochrome bitmap.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果指定的位元遮罩的控制代碼識別有效的單色點陣圖，此函數會使用此點陣圖遮罩從來源矩形的色彩資料位元。  
+### <a name="remarks"></a>Remarks  
+ If the given bitmask handle identifies a valid monochrome bitmap, the function uses this bitmap to mask the bits of color data from the source rectangle.  
   
- 定義平行四邊形 (D) 的第四個頂點藉由將前三個點 （A、 B 和 C） 做為向量和運算 D = B + C-a。  
+ The fourth vertex of the parallelogram (D) is defined by treating the first three points (A, B, and C) as vectors and computing D = B + C - A.  
   
- 如果存在位元遮罩，1 遮罩中的值會指出來源像素色彩的應該複製到目的地。 遮罩中的 0 值表示目的地的像素色彩不會變更。  
+ If the bitmask exists, a value of 1 in the mask indicates that the source pixel color should be copied to the destination. A value of 0 in the mask indicates that the destination pixel color is not to be changed.  
   
- 如果遮罩矩形小於來源和目的矩形，函式會將複寫的遮罩模式。  
+ If the mask rectangle is smaller than the source and destination rectangles, the function replicates the mask pattern.  
   
- 在 來源裝置內容中; 允許縮放、 轉移和反映轉換不過，旋轉及傾斜轉換不。 如果遮罩點陣圖不是單色點陣圖，就會發生錯誤。 目的地裝置內容的縮放模式用來判斷如何縮放或壓縮的像素為單位，這是必要。 當記錄的增強型中繼檔時，如果來源裝置內容中識別的增強型中繼檔裝置內容，就會發生錯誤。  
+ Scaling, translation, and reflection transformations are allowed in the source device context; however, rotation and shear transformations are not. If the mask bitmap is not a monochrome bitmap, an error occurs. The stretching mode for the destination device context is used to determine how to stretch or compress the pixels, if that is necessary. When an enhanced metafile is being recorded, an error occurs if the source device context identifies an enhanced-metafile device context.  
   
- 目的地座標會根據目的地裝置內容而轉換；來源座標會根據來源裝置內容而轉換。 如果來源轉換旋轉或傾斜，則會傳回錯誤。 如果目的地和來源矩形沒有相同的色彩格式`PlgBlt`轉換來源矩形以符合目的地矩形。 並非所有裝置都支援`PlgBlt`。 如需詳細資訊，請參閱描述**RC_BITBLT**點陣功能`CDC::GetDeviceCaps`成員函式。  
+ The destination coordinates are transformed according to the destination device context; the source coordinates are transformed according to the source device context. If the source transformation has a rotation or shear, an error is returned. If the destination and source rectangles do not have the same color format, `PlgBlt` converts the source rectangle to match the destination rectangle. Not all devices support `PlgBlt`. For more information, see the description of the **RC_BITBLT** raster capability in the `CDC::GetDeviceCaps` member function.  
   
- 如果來源和目的地裝置內容代表不相容的裝置，`PlgBlt`會傳回錯誤。  
+ If the source and destination device contexts represent incompatible devices, `PlgBlt` returns an error.  
   
-##  <a name="polybezier"></a>CDC::PolyBezier  
- 繪製一或多個 Bzier 曲線。  
+##  <a name="polybezier"></a>  CDC::PolyBezier  
+ Draws one or more Bzier splines.  
   
 ```  
 BOOL PolyBezier(
@@ -4232,23 +4423,23 @@ BOOL PolyBezier(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列[點](../../mfc/reference/point-structure1.md)資料結構，包含端點以及 spline(s) 點。  
+ Points to an array of [POINT](../../mfc/reference/point-structure1.md) data structures that contain the endpoints and control points of the spline(s).  
   
  `nCount`  
- 指定的中點數目`lpPoints`陣列。 此值必須是其中一個曲線要繪製的數目超過三次，因為每個 Bzier 曲線需要兩個控制點，以及初始曲線需要額外的起點。  
+ Specifies the number of points in the `lpPoints` array. This value must be one more than three times the number of splines to be drawn, because each Bzier spline requires two control points and an endpoint, and the initial spline requires an additional starting point.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式使用的端點和所指定的控制點繪製三次方 Bzier 曲線`lpPoints`參數。 第一個曲線會繪製從第一個點的第四個點所使用的第二個和第三個點做為控制點。 每個後續的曲線順序必須正好是三個的多個點︰ 上一個曲線的結束點是做為起點，序列中的下面兩個點是控點，而且第三個結束點。  
+### <a name="remarks"></a>Remarks  
+ This function draws cubic Bzier splines by using the endpoints and control points specified by the `lpPoints` parameter. The first spline is drawn from the first point to the fourth point by using the second and third points as control points. Each subsequent spline in the sequence needs exactly three more points: the end point of the previous spline is used as the starting point, the next two points in the sequence are control points, and the third is the end point.  
   
- 目前的位置是使用都由更新`PolyBezier`函式。 此圖不會填滿。 此函式會使用目前的畫筆繪製線條。  
+ The current position is neither used nor updated by the `PolyBezier` function. The figure is not filled. This function draws lines by using the current pen.  
   
-##  <a name="polybezierto"></a>CDC::PolyBezierTo  
- 繪製一或多個 Bzier 曲線。  
+##  <a name="polybezierto"></a>  CDC::PolyBezierTo  
+ Draws one or more Bzier splines.  
   
 ```  
 BOOL PolyBezierTo(
@@ -4256,24 +4447,24 @@ BOOL PolyBezierTo(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列[點](../../mfc/reference/point-structure1.md)點包含端點和控制項的資料結構。  
+ Points to an array of [POINT](../../mfc/reference/point-structure1.md) data structures that contains the endpoints and control points.  
   
  `nCount`  
- 指定的中點數目`lpPoints`陣列。 此值必須是三次曲線要繪製的數目，因為每個 Bzier 曲線需要兩個控點和結束點。  
+ Specifies the number of points in the `lpPoints` array. This value must be three times the number of splines to be drawn, because each Bzier spline requires two control points and an end point.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式使用所指定的控制點繪製三次方 Bzier 曲線`lpPoints`參數。 第一個曲線會繪製從目前位置的第三個點所使用的前兩個點做為控制點。 針對每個後續的曲線，函數需要正好是三個點，並做為起點的上一個曲線的結束點用於下一步。 `PolyBezierTo`將目前位置移至最後一個 Bzier 曲線結束點。 此圖不會填滿。 此函式會使用目前的畫筆繪製線條。  
+### <a name="remarks"></a>Remarks  
+ This function draws cubic Bzier splines by using the control points specified by the `lpPoints` parameter. The first spline is drawn from the current position to the third point by using the first two points as control points. For each subsequent spline, the function needs exactly three more points, and uses the end point of the previous spline as the starting point for the next. `PolyBezierTo` moves the current position to the end point of the last Bzier spline. The figure is not filled. This function draws lines by using the current pen.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[cdc:: beginpath](#beginpath)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::BeginPath](#beginpath).  
   
-##  <a name="polydraw"></a>CDC::PolyDraw  
- 繪製一組直線線段和 Bzier 曲線。  
+##  <a name="polydraw"></a>  CDC::PolyDraw  
+ Draws a set of line segments and Bzier splines.  
   
 ```  
 BOOL PolyDraw(
@@ -4282,41 +4473,41 @@ BOOL PolyDraw(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列[點](../../mfc/reference/point-structure1.md)資料結構所包含的端點，每個直線線段與端點，並控制每個 Bzier 曲線的點。  
+ Points to an array of [POINT](../../mfc/reference/point-structure1.md) data structures that contains the endpoints for each line segment and the endpoints and control points for each Bzier spline.  
   
  `lpTypes`  
- 指向陣列，指定如何在每個點中`lpPoints`用陣列。 值可以是下列其中一項︰  
+ Points to an array that specifies how each point in the `lpPoints` array is used. Values can be one of the following:  
   
-- **PT_MOVETO**指定此點開始脫離的圖形。 這點就會成為新的目前位置。  
+- **PT_MOVETO** Specifies that this point starts a disjoint figure. This point becomes the new current position.  
   
-- **PT_LINETO**指定要從目前位置到這個點，就會變成新的目前位置繪製一條線。  
+- **PT_LINETO** Specifies that a line is to be drawn from the current position to this point, which then becomes the new current position.  
   
-- **PT_BEZIERTO**指定此點是一個控制點或 Bzier 曲線的結束點。  
+- **PT_BEZIERTO** Specifies that this point is a control point or ending point for a Bzier spline.  
   
- **PT_BEZIERTO**類型一律出現三個的集合。 目前的位置定義 Bzier 曲線的開始點。 前兩個**PT_BEZIERTO**點是第三個控制點， **PT_BEZIERTO**點是結束點。 結束點會成為新的目前位置。 如果沒有三個連續**PT_BEZIERTO**點、 錯誤結果。  
+ **PT_BEZIERTO** types always occur in sets of three. The current position defines the starting point for the Bzier spline. The first two **PT_BEZIERTO** points are the control points, and the third **PT_BEZIERTO** point is the ending point. The ending point becomes the new current position. If there are not three consecutive **PT_BEZIERTO** points, an error results.  
   
-     A **PT_LINETO**或**PT_BEZIERTO**類型可以結合下列常數使用位元運算子，或關閉來指出對應的點圖及圖中的最後一個點︰  
+     A **PT_LINETO** or **PT_BEZIERTO** type can be combined with the following constant by using the bitwise operator OR to indicate that the corresponding point is the last point in a figure and the figure is closed:  
   
-- **PT_CLOSEFIGURE**後自動關閉此圖中的指定**PT_LINETO**或**PT_BEZIERTO**輸入完成此點。 從這個點繪製線條最新**PT_MOVETO**或`MoveTo`點。  
+- **PT_CLOSEFIGURE** Specifies that the figure is automatically closed after the **PT_LINETO** or **PT_BEZIERTO** type for this point is done. A line is drawn from this point to the most recent **PT_MOVETO** or `MoveTo` point.  
   
-     這個旗標會結合**PT_LINETO**類型的線條，或使用**PT_BEZIERTO**類型使用的位元結束點 Bzier 曲線，`OR`運算子。 目前的位置設定為終點的結尾行。  
+     This flag is combined with the **PT_LINETO** type for a line, or with the **PT_BEZIERTO** type of ending point for a Bzier spline, by using the bitwise `OR` operator. The current position is set to the ending point of the closing line.  
   
  `nCount`  
- 指定的中點總數`lpPoints`陣列中的位元組數目相同`lpTypes`陣列。  
+ Specifies the total number of points in the `lpPoints` array, the same as the number of bytes in the `lpTypes` array.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式可以用來繪製不相鄰的數字取代連續呼叫`CDC::MoveTo`， `CDC::LineTo`，和`CDC::PolyBezierTo`成員函式。 線條和曲線會使用目前的畫筆繪製和圖表並沒有填滿。 如果沒有使用中的路徑，藉由呼叫啟動`CDC::BeginPath`成員函式，`PolyDraw`將加入路徑。 中所包含的點`lpPoints`陣列和`lpTypes`表示每個點是否屬於`CDC::MoveTo`、 `CDC::LineTo`，或**CDC::BezierTo**作業。 它也可關閉圖表。 此函式會更新目前的位置。  
+### <a name="remarks"></a>Remarks  
+ This function can be used to draw disjoint figures in place of consecutive calls to `CDC::MoveTo`, `CDC::LineTo`, and `CDC::PolyBezierTo` member functions. The lines and splines are drawn using the current pen, and figures are not filled. If there is an active path started by calling the `CDC::BeginPath` member function, `PolyDraw` adds to the path. The points contained in the `lpPoints` array and in `lpTypes` indicate whether each point is part of a `CDC::MoveTo`, a `CDC::LineTo`, or a **CDC::BezierTo** operation. It is also possible to close figures. This function updates the current position.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[cdc:: beginpath](#beginpath)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::BeginPath](#beginpath).  
   
-##  <a name="polygon"></a>CDC::Polygon  
- 繪製多邊形，其包含兩個或多個點 （端點） 透過線路連線，使用目前的畫筆。  
+##  <a name="polygon"></a>  CDC::Polygon  
+ Draws a polygon consisting of two or more points (vertices) connected by lines, using the current pen.  
   
 ```  
 BOOL Polygon(
@@ -4324,26 +4515,26 @@ BOOL Polygon(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列的指定多邊形的頂點的點。 陣列中的每個點都**點**結構或`CPoint`物件。  
+ Points to an array of points that specifies the vertices of the polygon. Each point in the array is a **POINT** structure or a `CPoint` object.  
   
  `nCount`  
- 陣列中指定頂點的數目。  
+ Specifies the number of vertices in the array.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 系統多邊形會自動關閉，如有必要，藉由從最後一個頂點繪製一條線，第一個。  
+### <a name="remarks"></a>Remarks  
+ The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first.  
   
- 目前的多邊形填滿模式可擷取或設定使用`GetPolyFillMode`和`SetPolyFillMode`成員函式。  
+ The current polygon-filling mode can be retrieved or set by using the `GetPolyFillMode` and `SetPolyFillMode` member functions.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 38](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#38](../../mfc/codesnippet/cpp/cdc-class_10.cpp)]  
   
-##  <a name="polyline"></a>CDC::Polyline  
- 繪製連接所指定的點之直線線段的一組`lpPoints`。  
+##  <a name="polyline"></a>  CDC::Polyline  
+ Draws a set of line segments connecting the points specified by `lpPoints`.  
   
 ```  
 BOOL Polyline(
@@ -4351,23 +4542,23 @@ BOOL Polyline(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列**點**結構或`CPoint`連接物件。  
+ Points to an array of **POINT** structures or `CPoint` objects to be connected.  
   
  `nCount`  
- 陣列中指定的點數。 此值必須至少為 2。  
+ Specifies the number of points in the array. This value must be at least 2.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 線條會繪製從透過使用目前的畫筆的後續點的第一個點。 不同於`LineTo`成員函式，`Polyline`函式不會使用，也不會更新目前的位置。  
+### <a name="remarks"></a>Remarks  
+ The lines are drawn from the first point through subsequent points using the current pen. Unlike the `LineTo` member function, the `Polyline` function neither uses nor updates the current position.  
   
- 如需詳細資訊，請參閱[聚合線條](http://msdn.microsoft.com/library/windows/desktop/dd162815)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [PolyLine](http://msdn.microsoft.com/library/windows/desktop/dd162815) in the Windows SDK.  
   
-##  <a name="polylineto"></a>CDC::PolylineTo  
- 繪製一或多個直線。  
+##  <a name="polylineto"></a>  CDC::PolylineTo  
+ Draws one or more straight lines.  
   
 ```  
 BOOL PolylineTo(
@@ -4375,21 +4566,21 @@ BOOL PolylineTo(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列[點](../../mfc/reference/point-structure1.md)包含線條的頂點的資料結構。  
+ Points to an array of [POINT](../../mfc/reference/point-structure1.md) data structures that contains the vertices of the line.  
   
  `nCount`  
- 陣列中指定的點數。  
+ Specifies the number of points in the array.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 從目前的位置繪製線條所指定的第一個點`lpPoints`參數使用目前的畫筆。 每一個額外的行，函式用來繪製之結束點的上一行從所指定的下一個指標`lpPoints`。 `PolylineTo`將目前位置移至之結束點的最後一行。 如果這個函式所繪製之直線線段形成封閉的圖表，此圖不會填滿。  
+### <a name="remarks"></a>Remarks  
+ A line is drawn from the current position to the first point specified by the `lpPoints` parameter by using the current pen. For each additional line, the function draws from the ending point of the previous line to the next point specified by `lpPoints`. `PolylineTo` moves the current position to the ending point of the last line. If the line segments drawn by this function form a closed figure, the figure is not filled.  
   
-##  <a name="polypolygon"></a>CDC::PolyPolygon  
- 建立兩個或多個使用目前的多邊形填滿模式會填滿的多邊形。  
+##  <a name="polypolygon"></a>  CDC::PolyPolygon  
+ Creates two or more polygons that are filled using the current polygon-filling mode.  
   
 ```  
 BOOL PolyPolygon(
@@ -4398,30 +4589,30 @@ BOOL PolyPolygon(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列**點**結構或`CPoint`定義的多邊形頂點的物件。  
+ Points to an array of **POINT** structures or `CPoint` objects that define the vertices of the polygons.  
   
  `lpPolyCounts`  
- 指向陣列的整數，其中每個指定的點數內之多邊形的其中一個`lpPoints`陣列。  
+ Points to an array of integers, each of which specifies the number of points in one of the polygons in the `lpPoints` array.  
   
  `nCount`  
- 中的項目數`lpPolyCounts`陣列。 此數字會指定要繪製多邊形的數目。 此值必須至少為 2。  
+ The number of entries in the `lpPolyCounts` array. This number specifies the number of polygons to be drawn. This value must be at least 2.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 脫離或重疊，則可能是多邊形。  
+### <a name="remarks"></a>Remarks  
+ The polygons may be disjoint or overlapping.  
   
- 每個呼叫中指定的多邊形`PolyPolygon`函式必須先關閉。 不同於所建立的多邊形**多邊形**成員函式，所建立之多邊形`PolyPolygon`不會自動關閉。  
+ Each polygon specified in a call to the `PolyPolygon` function must be closed. Unlike polygons created by the **Polygon** member function, the polygons created by `PolyPolygon` are not closed automatically.  
   
- 函式會建立兩個或多個多邊形。 若要建立單一的多邊形，應用程式應該使用**多邊形**成員函式。  
+ The function creates two or more polygons. To create a single polygon, an application should use the **Polygon** member function.  
   
- 目前的多邊形填滿模式可擷取或設定使用`GetPolyFillMode`和`SetPolyFillMode`成員函式。  
+ The current polygon-filling mode can be retrieved or set by using the `GetPolyFillMode` and `SetPolyFillMode` member functions.  
   
-##  <a name="polypolyline"></a>CDC::PolyPolyline  
- 繪製連接的直線線段的多個數列。  
+##  <a name="polypolyline"></a>  CDC::PolyPolyline  
+ Draws multiple series of connected line segments.  
   
 ```  
 BOOL PolyPolyline(
@@ -4430,24 +4621,24 @@ BOOL PolyPolyline(
     int nCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- 指向陣列的結構，其中包含聚合線條的端點。 聚合線條會指定連續。  
+ Points to an array of structures that contains the vertices of the polylines. The polylines are specified consecutively.  
   
  `lpPolyPoints`  
- 指向指定的點數中的變數陣列`lpPoints`對應之多邊形的陣列。 每個項目必須是大於或等於 2。  
+ Points to an array of variables specifying the number of points in the `lpPoints` array for the corresponding polygon. Each entry must be greater than or equal to 2.  
   
  `nCount`  
- 指定總數中計數的`lpPolyPoints`陣列。  
+ Specifies the total number of counts in the `lpPolyPoints` array.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 使用目前的畫筆繪製之直線線段。 區段所形成的數字不會填滿。 目前的位置是使用都更新此函式。  
+### <a name="remarks"></a>Remarks  
+ The line segments are drawn by using the current pen. The figures formed by the segments are not filled. The current position is neither used nor updated by this function.  
   
-##  <a name="ptvisible"></a>CDC::PtVisible  
- 判斷指定的點是否在裝置內容的裁剪區域中。  
+##  <a name="ptvisible"></a>  CDC::PtVisible  
+ Determines whether the given point is within the clipping region of the device context.  
   
 ```  
 virtual BOOL PtVisible(
@@ -4457,48 +4648,48 @@ virtual BOOL PtVisible(
 BOOL PtVisible(POINT point) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定點的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the point.  
   
  *y*  
- 指定點的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the point.  
   
  `point`  
- 指定要檢查的邏輯座標的點。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the point to check in logical coordinates. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果指定的點中的裁剪區域; 非零，否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified point is within the clipping region; otherwise 0.  
   
-##  <a name="queryabort"></a>CDC::QueryAbort  
- 所安裝的中止函式會呼叫[SetAbortProc](#setabortproc)是否應該終止列印成員函式列印的應用程式和查詢。  
+##  <a name="queryabort"></a>  CDC::QueryAbort  
+ Calls the abort function installed by the [SetAbortProc](#setabortproc) member function for a printing application and queries whether the printing should be terminated.  
   
 ```  
 BOOL QueryAbort() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果應該繼續列印，或沒有中止程序則為非零的傳回值。 如果應終止列印工作，它會為 0。 Abort 函式提供傳回值。  
+### <a name="return-value"></a>Return Value  
+ The return value is nonzero if printing should continue or if there is no abort procedure. It is 0 if the print job should be terminated. The return value is supplied by the abort function.  
   
-##  <a name="realizepalette"></a>CDC::RealizePalette  
- 將對應從目前的邏輯色板到系統調色盤項目。  
+##  <a name="realizepalette"></a>  CDC::RealizePalette  
+ Maps entries from the current logical palette to the system palette.  
   
 ```  
 UINT RealizePalette();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 表示邏輯調色盤中的項目數量已對應至不同系統調色盤中的項目。 這代表此函式對應，以配合系統調色盤中的變更，因為邏輯色板上次倍的項目數。  
+### <a name="return-value"></a>Return Value  
+ Indicates how many entries in the logical palette were mapped to different entries in the system palette. This represents the number of entries that this function remapped to accommodate changes in the system palette since the logical palette was last realized.  
   
-### <a name="remarks"></a>備註  
- 邏輯色板作用是緩衝區大量色彩的應用程式和系統，可讓應用程式使用許多視需要而不妨礙處理自己的色彩顯示色彩之間或與其他視窗所顯示的色彩。  
+### <a name="remarks"></a>Remarks  
+ A logical color palette acts as a buffer between color-intensive applications and the system, allowing an application to use as many colors as needed without interfering with its own displayed colors or with colors displayed by other windows.  
   
- 當視窗具有輸入的焦點時，呼叫`RealizePalette`，Windows 會確保此視窗會顯示所有要求的色彩，最多同時在螢幕上可用的最大數目。 Windows 也會顯示找不到視窗的調色盤中的其比對時可用的色彩的色彩。  
+ When a window has the input focus and calls `RealizePalette`, Windows ensures that the window will display all the requested colors, up to the maximum number simultaneously available on the screen. Windows also displays colors not found in the window's palette by matching them to available colors.  
   
- 此外，Windows 會比對非使用中視窗的可用色彩儘可能密集地呼叫的函式所要求的色彩。 這會大幅降低不需要變更在非使用中視窗中顯示的色彩。  
+ In addition, Windows matches the colors requested by inactive windows that call the function as closely as possible to the available colors. This significantly reduces undesirable changes in the colors displayed in inactive windows.  
   
-##  <a name="rectangle"></a>CDC::Rectangle  
- 繪製矩形，使用目前的畫筆。  
+##  <a name="rectangle"></a>  CDC::Rectangle  
+ Draws a rectangle using the current pen.  
   
 ```  
 BOOL Rectangle(
@@ -4510,111 +4701,111 @@ BOOL Rectangle(
 BOOL Rectangle(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定 （以邏輯單位表示） 的矩形的左上角的 x 座標。  
+ Specifies the x-coordinate of the upper-left corner of the rectangle (in logical units).  
   
  `y1`  
- 指定 （以邏輯單位表示） 的矩形的左上角的 y 座標。  
+ Specifies the y-coordinate of the upper-left corner of the rectangle (in logical units).  
   
  `x2`  
- 指定 （以邏輯單位表示） 的矩形右下角的 x 座標。  
+ Specifies the x-coordinate of the lower-right corner of the rectangle (in logical units).  
   
  `y2`  
- 指定 （以邏輯單位表示） 的矩形右下角的 y 座標。  
+ Specifies the y-coordinate of the lower-right corner of the rectangle (in logical units).  
   
  `lpRect`  
- 以邏輯單位表示指定的矩形。 您可以傳遞`CRect`物件或指標`RECT`結構為此參數。  
+ Specifies the rectangle in logical units. You can pass either a `CRect` object or a pointer to a `RECT` structure for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 矩形的內部會使用目前的筆刷填滿。  
+### <a name="remarks"></a>Remarks  
+ The interior of the rectangle is filled using the current brush.  
   
- 矩形會擴充最多至但不包含，右側和底部的座標。 這表示的矩形的高度是`y2`  -  `y1`矩形的寬度，且`x2`  -  `x1`。 矩形的高度和寬度必須大於 2 的單位和小於 32,767 個單位。  
+ The rectangle extends up to, but does not include, the right and bottom coordinates. This means that the height of the rectangle is `y2` - `y1` and the width of the rectangle is `x2` - `x1`. Both the width and the height of a rectangle must be greater than 2 units and less than 32,767 units.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 39](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#39](../../mfc/codesnippet/cpp/cdc-class_11.cpp)]  
   
-##  <a name="rectvisible"></a>CDC::RectVisible  
- 判斷指定的任何的矩形部分是否之內顯示內容的裁剪區域。  
+##  <a name="rectvisible"></a>  CDC::RectVisible  
+ Determines whether any part of the given rectangle lies within the clipping region of the display context.  
   
 ```  
 virtual BOOL RectVisible(LPCRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- 指向`RECT`結構或`CRect`物件，其中包含指定的矩形的邏輯座標。  
+ Points to a `RECT` structure or a `CRect` object that contains the logical coordinates of the specified rectangle.  
   
-### <a name="return-value"></a>傳回值  
- 如果有任何非零，部分給定矩形之內的裁剪區域。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if any portion of the given rectangle lies within the clipping region; otherwise 0.  
   
-##  <a name="releaseattribdc"></a>CDC::ReleaseAttribDC  
- 呼叫此成員函式設定`m_hAttribDC`至**NULL**。  
+##  <a name="releaseattribdc"></a>  CDC::ReleaseAttribDC  
+ Call this member function to set `m_hAttribDC` to **NULL**.  
   
 ```  
 virtual void ReleaseAttribDC();
 ```  
   
-### <a name="remarks"></a>備註  
- 這不會造成**卸離**發生。 只有輸出裝置內容會附加至`CDC`物件中，並只可卸離。  
+### <a name="remarks"></a>Remarks  
+ This does not cause a **Detach** to occur. Only the output device context is attached to the `CDC` object, and only it can be detached.  
   
-##  <a name="releaseoutputdc"></a>CDC::ReleaseOutputDC  
- 呼叫此成員函式設定`m_hDC`成員**NULL**。  
+##  <a name="releaseoutputdc"></a>  CDC::ReleaseOutputDC  
+ Call this member function to set the `m_hDC` member to **NULL**.  
   
 ```  
 virtual void ReleaseOutputDC();
 ```  
   
-### <a name="remarks"></a>備註  
- 無法呼叫此成員函式的輸出裝置內容會附加至`CDC`物件。 使用**卸離**成員函式來卸離輸出裝置內容。  
+### <a name="remarks"></a>Remarks  
+ This member function cannot be called when the output device context is attached to the `CDC` object. Use the **Detach** member function to detach the output device context.  
   
-##  <a name="resetdc"></a>CDC::ResetDC  
- 呼叫此成員函式，以更新裝置內容所包裝`CDC`物件。  
+##  <a name="resetdc"></a>  CDC::ResetDC  
+ Call this member function to update the device context wrapped by the `CDC` object.  
   
 ```  
 BOOL ResetDC(const DEVMODE* lpDevMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpDevMode*  
- Windows 的指標`DEVMODE`結構。  
+ A pointer to a Windows `DEVMODE` structure.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 裝置內容會從指定的 Windows 中的資訊更新`DEVMODE`結構。 此成員函式只會重設屬性裝置內容。  
+### <a name="remarks"></a>Remarks  
+ The device context is updated from the information specified in the Windows `DEVMODE` structure. This member function only resets the attribute device context.  
   
- 應用程式通常會使用`ResetDC`成員函式，當視窗處理`WM_DEVMODECHANGE`訊息。 您也可以使用此成員函式，若要變更紙張方向或紙張紙匣列印文件時。  
+ An application will typically use the `ResetDC` member function when a window processes a `WM_DEVMODECHANGE` message. You can also use this member function to change the paper orientation or paper bins while printing a document.  
   
- 若要變更的驅動程式名稱、 裝置名稱，或輸出連接埠，您無法使用此成員函式。 當使用者變更的連接埠連線或裝置名稱時，您必須刪除原始的裝置內容，並以新的資訊建立新的裝置內容。  
+ You cannot use this member function to change the driver name, device name, or output port. When the user changes the port connection or device name, you must delete the original device context and create a new device context with the new information.  
   
- 呼叫此成員函式之前，您必須確定時，已選取 （非內建物件） 放入裝置內容已被選取的所有物件。  
+ Before you call this member function, you must ensure that all objects (other than stock objects) that had been selected into the device context have been selected out.  
   
-##  <a name="restoredc"></a>CDC::RestoreDC  
- 還原至先前的狀態所識別的裝置內容`nSavedDC`。  
+##  <a name="restoredc"></a>  CDC::RestoreDC  
+ Restores the device context to the previous state identified by `nSavedDC`.  
   
 ```  
 virtual BOOL RestoreDC(int nSavedDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nSavedDC`  
- 指定要還原的裝置內容。 它可以是先前傳回的值`SaveDC`函式呼叫。 如果`nSavedDC`為-1，最新儲存為還原裝置內容。  
+ Specifies the device context to be restored. It can be a value returned by a previous `SaveDC` function call. If `nSavedDC` is -1, the most recently saved device context is restored.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果還原指定的內容。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified context was restored; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `RestoreDC`還原裝置內容取出堆疊，以先前呼叫所建立的狀態資訊`SaveDC`成員函式。  
+### <a name="remarks"></a>Remarks  
+ `RestoreDC` restores the device context by popping state information off a stack created by earlier calls to the `SaveDC` member function.  
   
- 堆疊可以包含數種裝置內容的狀態資訊。 如果所指定內容`nSavedDC`不是在堆疊頂端`RestoreDC`刪除所指定的裝置內容之間的所有狀態資訊`nSavedDC`和堆疊的頂端。 已刪除的資訊都會遺失。  
+ The stack can contain the state information for several device contexts. If the context specified by `nSavedDC` is not at the top of the stack, `RestoreDC` deletes all state information between the device context specified by `nSavedDC` and the top of the stack. The deleted information is lost.  
   
-##  <a name="roundrect"></a>CDC::RoundRect  
- 具有圓角使用目前的畫筆繪製矩形。  
+##  <a name="roundrect"></a>  CDC::RoundRect  
+ Draws a rectangle with rounded corners using the current pen.  
   
 ```  
 BOOL RoundRect(
@@ -4631,59 +4822,59 @@ BOOL RoundRect(
     POINT point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `x1`  
- 指定 （以邏輯單位表示） 的矩形的左上角的 x 座標。  
+ Specifies the x-coordinate of the upper-left corner of the rectangle (in logical units).  
   
  `y1`  
- 指定 （以邏輯單位表示） 的矩形的左上角的 y 座標。  
+ Specifies the y-coordinate of the upper-left corner of the rectangle (in logical units).  
   
  `x2`  
- 指定 （以邏輯單位表示） 的矩形右下角的 x 座標。  
+ Specifies the x-coordinate of the lower-right corner of the rectangle (in logical units).  
   
  `y2`  
- 指定 （以邏輯單位表示） 的矩形右下角的 y 座標。  
+ Specifies the y-coordinate of the lower-right corner of the rectangle (in logical units).  
   
  *x3*  
- 指定用來繪製圓弧角的半徑 （以邏輯單位表示） 的橢圓形的寬度。  
+ Specifies the width of the ellipse used to draw the rounded corners (in logical units).  
   
  `y3`  
- 指定要繪製圓的角 （以邏輯單位表示） 時所用橢圓形的高度。  
+ Specifies the height of the ellipse used to draw the rounded corners (in logical units).  
   
  `lpRect`  
- 以邏輯單位表示指定的周框。 您可以傳遞`CRect`物件或指標`RECT`結構為此參數。  
+ Specifies the bounding rectangle in logical units. You can pass either a `CRect` object or a pointer to a `RECT` structure for this parameter.  
   
  `point`  
- X 軸座標`point`指定橢圓形的寬度 （以邏輯單位表示） 繪製圓的角。 Y 座標`point`指定的高度 （以邏輯單位表示） 繪製圓的角橢圓形。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ The x-coordinate of `point` specifies the width of the ellipse to draw the rounded corners (in logical units). The y-coordinate of `point` specifies the height of the ellipse to draw the rounded corners (in logical units). You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 矩形的內部會使用目前的筆刷填滿。  
+### <a name="remarks"></a>Remarks  
+ The interior of the rectangle is filled using the current brush.  
   
- 此圖中繪製此函式最多延伸，但不包含右邊緣和下座標。 這表示圖的高度是`y2`  -  `y1`圖的寬度，且`x2`  -  `x1`。 週框矩形的寬度和高度必須大於 2 的單位和小於 32,767 個單位。  
+ The figure this function draws extends up to but does not include the right and bottom coordinates. This means that the height of the figure is `y2` - `y1` and the width of the figure is `x2` - `x1`. Both the height and the width of the bounding rectangle must be greater than 2 units and less than 32,767 units.  
   
-### <a name="example"></a>範例  
- [!code-cpp[NVC_MFCDocView # 40](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#40](../../mfc/codesnippet/cpp/cdc-class_12.cpp)]  
   
-##  <a name="savedc"></a>CDC::SaveDC  
- 藉由複製 （例如裁剪區域中，選取的物件和對應模式） 的狀態資訊將由 Windows 維護內容堆疊裝置內容的目前狀態。  
+##  <a name="savedc"></a>  CDC::SaveDC  
+ Saves the current state of the device context by copying state information (such as clipping region, selected objects, and mapping mode) to a context stack maintained by Windows.  
   
 ```  
 virtual int SaveDC();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 識別已儲存的裝置內容的整數。 如果發生錯誤，它可以是 0。 這會傳回值可以用來還原裝置內容呼叫`RestoreDC`。  
+### <a name="return-value"></a>Return Value  
+ An integer identifying the saved device context. It is 0 if an error occurs. This return value can be used to restore the device context by calling `RestoreDC`.  
   
-### <a name="remarks"></a>備註  
- 儲存的裝置內容可以稍後使用還原`RestoreDC`。  
+### <a name="remarks"></a>Remarks  
+ The saved device context can later be restored by using `RestoreDC`.  
   
- `SaveDC`可以是用來儲存任何數目的裝置內容狀態的任意數目的時間。  
+ `SaveDC` can be used any number of times to save any number of device-context states.  
   
-##  <a name="scaleviewportext"></a>CDC::ScaleViewportExt  
- 修改檢視區範圍相對於目前的值。  
+##  <a name="scaleviewportext"></a>  CDC::ScaleViewportExt  
+ Modifies the viewport extents relative to the current values.  
   
 ```  
 virtual CSize ScaleViewportExt(
@@ -4693,33 +4884,33 @@ virtual CSize ScaleViewportExt(
     int yDenom);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `xNum`  
- 指定所要乘以 x 目前範圍。  
+ Specifies the amount by which to multiply the current x-extent.  
   
  `xDenom`  
- 指定要除以的值相乘 x 目前範圍的量`xNum`參數。  
+ Specifies the amount by which to divide the result of multiplying the current x-extent by the value of the `xNum` parameter.  
   
  `yNum`  
- 指定所要乘以 y 目前範圍。  
+ Specifies the amount by which to multiply the current y-extent.  
   
  `yDenom`  
- 指定要除以的值相乘 y 目前範圍的量`yNum`參數。  
+ Specifies the amount by which to divide the result of multiplying the current y-extent by the value of the `yNum` parameter.  
   
-### <a name="return-value"></a>傳回值  
- 前一個檢視區中的範圍 （裝置單位） 為`CSize`物件。  
+### <a name="return-value"></a>Return Value  
+ The previous viewport extents (in device units) as a `CSize` object.  
   
-### <a name="remarks"></a>備註  
- 公式會寫入，如下所示︰  
+### <a name="remarks"></a>Remarks  
+ The formulas are written as follows:  
   
  `xNewVE = ( xOldVE * xNum ) / xDenom`  
   
  `yNewVE = ( yOldVE * yNum ) / yDenom`  
   
- 新的檢視區範圍會計算的乘以指定分子中目前的範圍，然後除以指定的分母。  
+ The new viewport extents are calculated by multiplying the current extents by the given numerator and then dividing by the given denominator.  
   
-##  <a name="scalewindowext"></a>CDC::ScaleWindowExt  
- 修改視窗範圍相對於目前的值。  
+##  <a name="scalewindowext"></a>  CDC::ScaleWindowExt  
+ Modifies the window extents relative to the current values.  
   
 ```  
 virtual CSize ScaleWindowExt(
@@ -4729,33 +4920,33 @@ virtual CSize ScaleWindowExt(
     int yDenom);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `xNum`  
- 指定所要乘以 x 目前範圍。  
+ Specifies the amount by which to multiply the current x-extent.  
   
  `xDenom`  
- 指定要除以的值相乘 x 目前範圍的量`xNum`參數。  
+ Specifies the amount by which to divide the result of multiplying the current x-extent by the value of the `xNum` parameter.  
   
  `yNum`  
- 指定所要乘以 y 目前範圍。  
+ Specifies the amount by which to multiply the current y-extent.  
   
  `yDenom`  
- 指定要除以的值相乘 y 目前範圍的量`yNum`參數。  
+ Specifies the amount by which to divide the result of multiplying the current y-extent by the value of the `yNum` parameter.  
   
-### <a name="return-value"></a>傳回值  
- 前一個視窗中的範圍 （邏輯單位表示） 做為`CSize`物件。  
+### <a name="return-value"></a>Return Value  
+ The previous window extents (in logical units) as a `CSize` object.  
   
-### <a name="remarks"></a>備註  
- 公式會寫入，如下所示︰  
+### <a name="remarks"></a>Remarks  
+ The formulas are written as follows:  
   
  `xNewWE = ( xOldWE * xNum ) / xDenom`  
   
  `yNewWE = ( yOldWE * yNum ) / yDenom`  
   
- 新的視窗範圍會計算的乘以指定分子中目前的範圍，然後除以指定的分母。  
+ The new window extents are calculated by multiplying the current extents by the given numerator and then dividing by the given denominator.  
   
-##  <a name="scrolldc"></a>CDC::ScrollDC  
- 水平和垂直捲動的位元的矩形。  
+##  <a name="scrolldc"></a>  CDC::ScrollDC  
+ Scrolls a rectangle of bits horizontally and vertically.  
   
 ```  
 BOOL ScrollDC(
@@ -4767,62 +4958,62 @@ BOOL ScrollDC(
     LPRECT lpRectUpdate);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dx`  
- 指定水平捲動單位數目。  
+ Specifies the number of horizontal scroll units.  
   
  *dy*  
- 指定垂直捲軸的單位數目。  
+ Specifies the number of vertical scroll units.  
   
  `lpRectScroll`  
- 指向`RECT`結構或`CRect`物件，其中包含捲動矩形的座標。  
+ Points to the `RECT` structure or `CRect` object that contains the coordinates of the scrolling rectangle.  
   
  `lpRectClip`  
- 指向`RECT`結構或`CRect`物件，其中包含裁剪矩形的座標。 當這個矩形小於其中所指的原始`lpRectScroll`，捲動只會發生在較小的矩形。  
+ Points to the `RECT` structure or `CRect` object that contains the coordinates of the clipping rectangle. When this rectangle is smaller than the original one pointed to by `lpRectScroll`, scrolling occurs only in the smaller rectangle.  
   
  `pRgnUpdate`  
- 識別捲動程序所發現的區域。 `ScrollDC`函式會定義此區域; 它不一定是一個矩形。  
+ Identifies the region uncovered by the scrolling process. The `ScrollDC` function defines this region; it is not necessarily a rectangle.  
   
  `lpRectUpdate`  
- 指向`RECT`結構或`CRect`接收框住捲軸的更新區域的矩形座標的物件。 這是最大需要重新繪製的矩形區域。 結構或函式會傳回的物件中的值是在用戶端座標，不論指定之裝置內容的對應模式。  
+ Points to the `RECT` structure or `CRect` object that receives the coordinates of the rectangle that bounds the scrolling update region. This is the largest rectangular area that requires repainting. The values in the structure or object when the function returns are in client coordinates, regardless of the mapping mode for the given device context.  
   
-### <a name="return-value"></a>傳回值  
- 為非零，如果執行捲動。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if scrolling is executed; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 如果`lpRectUpdate`是**NULL**，Windows 不會計算更新矩形。 如果兩個`pRgnUpdate`和`lpRectUpdate`是**NULL**，Windows 不會計算更新區域。 如果`pRgnUpdate`不**NULL**，Windows 會假設它包含有效的指標捲動程序所發現的區域 (定義`ScrollDC`成員函式)。 更新區域中傳回`lpRectUpdate`可以傳遞至`CWnd::InvalidateRgn`必要。  
+### <a name="remarks"></a>Remarks  
+ If `lpRectUpdate` is **NULL**, Windows does not compute the update rectangle. If both `pRgnUpdate` and `lpRectUpdate` are **NULL**, Windows does not compute the update region. If `pRgnUpdate` is not **NULL**, Windows assumes that it contains a valid pointer to the region uncovered by the scrolling process (defined by the `ScrollDC` member function). The update region returned in `lpRectUpdate` can be passed to `CWnd::InvalidateRgn` if required.  
   
- 應用程式應該使用`ScrollWindow`類別成員函式`CWnd`時需要捲動視窗的整個工作區。 否則，它應該使用`ScrollDC`。  
+ An application should use the `ScrollWindow` member function of class `CWnd` when it is necessary to scroll the entire client area of a window. Otherwise, it should use `ScrollDC`.  
   
-##  <a name="selectclippath"></a>CDC::SelectClipPath  
- 選取目前的路徑做為裝置內容中，使用指定的模式結合具有任何現有的裁剪區域的新區域的裁剪區域。  
+##  <a name="selectclippath"></a>  CDC::SelectClipPath  
+ Selects the current path as a clipping region for the device context, combining the new region with any existing clipping region by using the specified mode.  
   
 ```  
 BOOL SelectClipPath(int nMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nMode`  
- 指定的方式使用的路徑。 允許下列值︰  
+ Specifies the way to use the path. The following values are allowed:  
   
-- **RGN_AND**新裁剪區域包含 （重疊的區域） 的目前裁剪區域和目前路徑的交集。  
+- **RGN_AND** The new clipping region includes the intersection (overlapping areas) of the current clipping region and the current path.  
   
-- **RGN_COPY**新裁剪區域是目前的路徑。  
+- **RGN_COPY** The new clipping region is the current path.  
   
-- **RGN_DIFF**新裁剪區域包含目前裁剪區域的區域，並與目前的路徑排除。  
+- **RGN_DIFF** The new clipping region includes the areas of the current clipping region, and those of the current path are excluded.  
   
-- **RGN_OR**新裁剪區域包含目前裁剪區域和目前路徑的聯集 （結合區域）。  
+- **RGN_OR** The new clipping region includes the union (combined areas) of the current clipping region and the current path.  
   
-- **RGN_XOR**新裁剪區域包含聯集為目前裁剪區域和目前的路徑，但不包含重疊的區域。  
+- **RGN_XOR** The new clipping region includes the union of the current clipping region and the current path, but without the overlapping areas.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 識別的裝置內容必須包含已關閉的路徑。  
+### <a name="remarks"></a>Remarks  
+ The device context identified must contain a closed path.  
   
-##  <a name="selectcliprgn"></a>CDC::SelectClipRgn  
- 選取指定的地區做為目前裁剪區域之裝置內容。  
+##  <a name="selectcliprgn"></a>  CDC::SelectClipRgn  
+ Selects the given region as the current clipping region for the device context.  
   
 ```  
 int SelectClipRgn(CRgn* pRgn);
@@ -4833,47 +5024,47 @@ int SelectClipRgn(
     int nMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- 識別要選取的區域。  
+ Identifies the region to be selected.  
   
--   此函式，如果此值為第一個版本**NULL**、 整個工作區已選取，而且輸出仍裁剪至視窗。  
+-   For the first version of this function, if this value is **NULL**, the entire client area is selected and output is still clipped to the window.  
   
--   此函式的第二個版本，此控制代碼可以是**NULL**時，才**RGN_COPY**指定模式。  
+-   For the second version of this function, this handle can be **NULL** only when the **RGN_COPY** mode is specified.  
   
  `nMode`  
- 指定要執行的作業。 它必須是下列值之一︰  
+ Specifies the operation to be performed. It must be one of the following values:  
   
-- **RGN_AND**新裁剪區域結合了目前裁剪區域和所識別之區域的重疊區域`pRgn`。  
+- **RGN_AND** The new clipping region combines the overlapping areas of the current clipping region and the region identified by `pRgn`.  
   
-- **RGN_COPY**新裁剪區域是一份所識別之區域`pRgn`。 這是功能等同於第一個版本`SelectClipRgn`。 如果所識別之區域`pRgn`是**NULL**，新的裁剪區域會變成預設裁剪區域 （空值區）。  
+- **RGN_COPY** The new clipping region is a copy of the region identified by `pRgn`. This is functionality is identical to the first version of `SelectClipRgn`. If the region identified by `pRgn` is **NULL**, the new clipping region becomes the default clipping region (a null region).  
   
-- **RGN_DIFF**新裁剪區域結合了目前裁剪區域的區域，以排除所識別之區域的區域`pRgn`。  
+- **RGN_DIFF** The new clipping region combines the areas of the current clipping region with those areas excluded from the region identified by `pRgn`.  
   
-- **RGN_OR**新裁剪區域結合了目前裁剪區域和所識別之區域`pRgn`。  
+- **RGN_OR** The new clipping region combines the current clipping region and the region identified by `pRgn`.  
   
-- **RGN_XOR**新裁剪區域結合了目前裁剪區域和所識別之區域`pRgn`但會排除任何重疊的區域。  
+- **RGN_XOR** The new clipping region combines the current clipping region and the region identified by `pRgn` but excludes any overlapping areas.  
   
-### <a name="return-value"></a>傳回值  
- 區域的類型。 它可以是下列值之一︰  
+### <a name="return-value"></a>Return Value  
+ The region's type. It can be any of the following values:  
   
-- **COMPLEXREGION**新裁剪區域具有重疊的框線。  
+- **COMPLEXREGION** New clipping region has overlapping borders.  
   
-- **錯誤**裝置內容或區域無效。  
+- **ERROR** Device context or region is not valid.  
   
-- **NULLREGION**新裁剪區域是空的。  
+- **NULLREGION** New clipping region is empty.  
   
-- **SIMPLEREGION**新裁剪區域有任何重疊的框線。  
+- **SIMPLEREGION** New clipping region has no overlapping borders.  
   
-### <a name="remarks"></a>備註  
- 用於所選區域的複本。 選取本身的區域來代表任何數目的其他裝置內容中，或刪除它。  
+### <a name="remarks"></a>Remarks  
+ Only a copy of the selected region is used. The region itself can be selected for any number of other device contexts, or it can be deleted.  
   
- 函式會假設裝置單位中指定的特定區域的座標。 某些印表機裝置支援比圖形輸出才能保留 express 文字度量所需的有效位數更高的解析度的文字輸出。 這些裝置報告更高解析度裝置單位也就是以文字為單位。 這些裝置以便數個只有 1 個圖形單位來報告裝置單位對應，然後調整圖形的座標。 您應該一律呼叫`SelectClipRgn`函式使用的文字單元。  
+ The function assumes that the coordinates for the given region are specified in device units. Some printer devices support text output at a higher resolution than graphics output in order to retain the precision needed to express text metrics. These devices report device units at the higher resolution, that is, in text units. These devices then scale coordinates for graphics so that several reported device units map to only 1 graphic unit. You should always call the `SelectClipRgn` function using text units.  
   
- 必須採取 GDI 中的圖形物件的縮放比例的應用程式可以使用**GETSCALINGFACTOR**印表機來決定縮放比例的逸出。 此縮放因數會影響裁剪。 如果區域用來裁剪圖形，GDI 會除以縮放比例的座標。 如果區域用來裁剪文字，GDI 會使無縮放比例調整。 縮放比例為 1 會使要除以 2; 座標為 2 的縮放比例會導致除以 4; 座標等等。  
+ Applications that must take the scaling of graphics objects in the GDI can use the **GETSCALINGFACTOR** printer escape to determine the scaling factor. This scaling factor affects clipping. If a region is used to clip graphics, GDI divides the coordinates by the scaling factor. If the region is used to clip text, GDI makes no scaling adjustment. A scaling factor of 1 causes the coordinates to be divided by 2; a scaling factor of 2 causes the coordinates to be divided by 4; and so on.  
   
-##  <a name="selectobject"></a>Cdc:: selectobject  
- 選取的物件放入裝置內容。  
+##  <a name="selectobject"></a>  CDC::SelectObject  
+ Selects an object into the device context.  
   
 ```  
 CPen* SelectObject(CPen* pPen);  
@@ -4884,47 +5075,47 @@ int SelectObject(CRgn* pRgn);
 CGdiObject* SelectObject(CGdiObject* pObject);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *pPen*  
- 指標[CPen](../../mfc/reference/cpen-class.md)要選取的物件。  
+ A pointer to a [CPen](../../mfc/reference/cpen-class.md) object to be selected.  
   
  `pBrush`  
- 指標[CBrush](../../mfc/reference/cbrush-class.md)要選取的物件。  
+ A pointer to a [CBrush](../../mfc/reference/cbrush-class.md) object to be selected.  
   
  `pFont`  
- 指標[CFont](../../mfc/reference/cfont-class.md)要選取的物件。  
+ A pointer to a [CFont](../../mfc/reference/cfont-class.md) object to be selected.  
   
  `pBitmap`  
- 指標[CBitmap](../../mfc/reference/cbitmap-class.md)要選取的物件。  
+ A pointer to a [CBitmap](../../mfc/reference/cbitmap-class.md) object to be selected.  
   
  `pRgn`  
- 指標[CRgn](../../mfc/reference/crgn-class.md)要選取的物件。  
+ A pointer to a [CRgn](../../mfc/reference/crgn-class.md) object to be selected.  
   
  `pObject`  
- 指標[CGdiObject](../../mfc/reference/cgdiobject-class.md)要選取的物件。  
+ A pointer to a [CGdiObject](../../mfc/reference/cgdiobject-class.md) object to be selected.  
   
-### <a name="return-value"></a>傳回值  
- 要取代的物件指標。 這是其中一個衍生自的類別物件的指標`CGdiObject`，例如`CPen`，視使用的函式的版本。 傳回值是**NULL**如果發生錯誤。 此函式可能是暫存物件中傳回的指標。 此暫存物件是唯一一個 Windows 訊息處理期間有效。 如需詳細資訊，請參閱`CGdiObject::FromHandle`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the object being replaced. This is a pointer to an object of one of the classes derived from `CGdiObject`, such as `CPen`, depending on which version of the function is used. The return value is **NULL** if there is an error. This function may return a pointer to a temporary object. This temporary object is only valid during the processing of one Windows message. For more information, see `CGdiObject::FromHandle`.  
   
- 採用區域參數的成員函式版本會執行相同的工作`SelectClipRgn`成員函式。 它的傳回值可以是下列其中一項︰  
+ The version of the member function that takes a region parameter performs the same task as the `SelectClipRgn` member function. Its return value can be any of the following:  
   
-- **COMPLEXREGION**新裁剪區域具有重疊的框線。  
+- **COMPLEXREGION** New clipping region has overlapping borders.  
   
-- **錯誤**裝置內容或區域無效。  
+- **ERROR** Device context or region is not valid.  
   
-- **NULLREGION**新裁剪區域是空的。  
+- **NULLREGION** New clipping region is empty.  
   
-- **SIMPLEREGION**新裁剪區域有任何重疊的框線。  
+- **SIMPLEREGION** New clipping region has no overlapping borders.  
   
-### <a name="remarks"></a>備註  
- 類別`CDC`提供五個版本的特製化針對特定類型的 GDI 物件，包括畫筆、 筆刷、 字型、 點陣圖、 圖示和區域。 新選取的物件會取代相同類型的上一個物件。 例如，如果`pObject`一般版本的`SelectObject`指向[CPen](../../mfc/reference/cpen-class.md)物件，此函式所指定的畫筆以取代目前的畫筆`pObject`。  
+### <a name="remarks"></a>Remarks  
+ Class `CDC` provides five versions specialized for particular kinds of GDI objects, including pens, brushes, fonts, bitmaps, and regions. The newly selected object replaces the previous object of the same type. For example, if `pObject` of the general version of `SelectObject` points to a [CPen](../../mfc/reference/cpen-class.md) object, the function replaces the current pen with the pen specified by `pObject`.  
   
- 應用程式只能選取一個點陣圖到記憶體裝置內容及到只有一個記憶體裝置內容一次。 點陣圖的格式必須是單色或相容的裝置內容。如果不是，`SelectObject`會傳回錯誤。  
+ An application can select a bitmap into memory device contexts only and into only one memory device context at a time. The format of the bitmap must either be monochrome or compatible with the device context; if it is not, `SelectObject` returns an error.  
   
- Windows 3.1 和更新版本、`SelectObject`函式會傳回相同的值，不管或不使用中繼檔中。 在舊版的 Windows，`SelectObject`傳回成功則為非零值以 0 代表失敗時使用中繼檔中。  
+ For Windows 3.1 and later, the `SelectObject` function returns the same value whether it is used in a metafile or not. Under previous versions of Windows, `SelectObject` returned a nonzero value for success and 0 for failure when it was used in a metafile.  
   
-##  <a name="selectpalette"></a>CDC::SelectPalette  
- 選取所指定的邏輯色板`pPalette`裝置內容的所選的調色盤物件形式。  
+##  <a name="selectpalette"></a>  CDC::SelectPalette  
+ Selects the logical palette that is specified by `pPalette` as the selected palette object of the device context.  
   
 ```  
 CPalette* SelectPalette(
@@ -4932,192 +5123,192 @@ CPalette* SelectPalette(
     BOOL bForceBackground);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pPalette`  
- 識別要選取的邏輯調色盤。 這個調色盤必須已經建立具有`CPalette`成員函式[CreatePalette](../../mfc/reference/cpalette-class.md#createpalette)。  
+ Identifies the logical palette to be selected. This palette must already have been created with the `CPalette` member function [CreatePalette](../../mfc/reference/cpalette-class.md#createpalette).  
   
  `bForceBackground`  
- 指定是否強制邏輯色板是背景調色盤。 如果`bForceBackground`為非零，選取的調色盤永遠是背景調色盤，不論視窗是否擁有輸入的焦點。 如果`bForceBackground`是 0，而且裝置內容附加至視窗，邏輯色板時前景調色盤視窗具有輸入的焦點。  
+ Specifies whether the logical palette is forced to be a background palette. If `bForceBackground` is nonzero, the selected palette is always a background palette, regardless of whether the window has the input focus. If `bForceBackground` is 0 and the device context is attached to a window, the logical palette is a foreground palette when the window has the input focus.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CPalette`物件，可識別取代所指定的調色盤邏輯色板`pPalette`。 它是**NULL**如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CPalette` object identifying the logical palette replaced by the palette specified by `pPalette`. It is **NULL** if there is an error.  
   
-### <a name="remarks"></a>備註  
- 新的調色盤會成為 GDI 用來顯示在裝置內容中的控制項色彩調色盤物件，並取代先前的調色盤。  
+### <a name="remarks"></a>Remarks  
+ The new palette becomes the palette object used by GDI to control colors displayed in the device context and replaces the previous palette.  
   
- 應用程式可以放入一個以上的裝置內容中選取邏輯色板。 但是，邏輯色板的變更會影響所有的裝置內容，它會選取。 如果應用程式選取放入一個以上的裝置內容的調色盤，裝置內容必須全部屬於相同的實體裝置。  
+ An application can select a logical palette into more than one device context. However, changes to a logical palette will affect all device contexts for which it is selected. If an application selects a palette into more than one device context, the device contexts must all belong to the same physical device.  
   
-##  <a name="selectstockobject"></a>CDC::SelectStockObject  
- 選取[CGdiObject](../../mfc/reference/cgdiobject-class.md)對應至其中一個預先定義的內建畫筆、 筆刷或字型的物件。  
+##  <a name="selectstockobject"></a>  CDC::SelectStockObject  
+ Selects a [CGdiObject](../../mfc/reference/cgdiobject-class.md) object that corresponds to one of the predefined stock pens, brushes, or fonts.  
   
 ```  
 virtual CGdiObject* SelectStockObject(int nIndex);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- 指定需要的內建物件種類。 它可以是下列值之一︰  
+ Specifies the kind of stock object desired. It can be one of the following values:  
   
-- **BLACK_BRUSH**黑色筆刷。  
+- **BLACK_BRUSH** Black brush.  
   
-- **DKGRAY_BRUSH**暗灰色的筆刷。  
+- **DKGRAY_BRUSH** Dark gray brush.  
   
-- **GRAY_BRUSH**灰色筆刷。  
+- **GRAY_BRUSH** Gray brush.  
   
-- **HOLLOW_BRUSH**中空筆刷。  
+- **HOLLOW_BRUSH** Hollow brush.  
   
-- **LTGRAY_BRUSH**淺灰色的筆刷。  
+- **LTGRAY_BRUSH** Light gray brush.  
   
-- **NULL_BRUSH** Null 筆刷。  
+- **NULL_BRUSH** Null brush.  
   
-- **WHITE_BRUSH**白色筆刷。  
+- **WHITE_BRUSH** White brush.  
   
-- **BLACK_PEN**黑色畫筆。  
+- **BLACK_PEN** Black pen.  
   
-- **NULL_PEN** Null 畫筆。  
+- **NULL_PEN** Null pen.  
   
-- **WHITE_PEN**白色畫筆。  
+- **WHITE_PEN** White pen.  
   
-- **ANSI_FIXED_FONT** ANSI 固定的系統字型。  
+- **ANSI_FIXED_FONT** ANSI fixed system font.  
   
-- **ANSI_VAR_FONT** ANSI 變數系統字型。  
+- **ANSI_VAR_FONT** ANSI variable system font.  
   
-- **DEVICE_DEFAULT_FONT**裝置而異的字型。  
+- **DEVICE_DEFAULT_FONT** Device-dependent font.  
   
-- **OEM_FIXED_FONT** OEM 相依固定字型。  
+- **OEM_FIXED_FONT** OEM-dependent fixed font.  
   
-- **SYSTEM_FONT**系統字型。 根據預設，Windows 會使用系統字型來繪製功能表、 對話方塊控制項和其他文字。 它是最佳方法，不過，不依賴 SYSTEM_FONT 取得對話方塊和視窗所使用的字型。 請改用`SystemParametersInfo`SPI_GETNONCLIENTMETRICS 參數，以擷取目前的字型函式。 `SystemParametersInfo`會考量目前的佈景主題，並提供字型資訊的標題、 功能表和訊息對話方塊。  
+- **SYSTEM_FONT** The system font. By default, Windows uses the system font to draw menus, dialog-box controls, and other text. It is best, however, not to rely on SYSTEM_FONT to obtain the font used by dialogs and windows. Instead, use the `SystemParametersInfo` function with the SPI_GETNONCLIENTMETRICS parameter to retrieve the current font. `SystemParametersInfo` takes into account the current theme and provides font information for captions, menus, and message dialogs.  
   
-- **SYSTEM_FIXED_FONT** 3.0 版之前的視窗中所使用的固定寬度系統字型。 這個物件是供與舊版的 Windows 相容性。  
+- **SYSTEM_FIXED_FONT** The fixed-width system font used in Windows prior to version 3.0. This object is available for compatibility with earlier versions of Windows.  
   
-- **DEFAULT_PALETTE**預設色彩調色盤。 這個調色盤包含 20 靜態中系統調色盤色彩。  
+- **DEFAULT_PALETTE** Default color palette. This palette consists of the 20 static colors in the system palette.  
   
-### <a name="return-value"></a>傳回值  
- 指標`CGdiObject`如果函式成功，已被取代的物件。 指向實際的物件是[CPen](../../mfc/reference/cpen-class.md)， [CBrush](../../mfc/reference/cbrush-class.md)，或[CFont](../../mfc/reference/cfont-class.md)物件。 如果呼叫不成功，傳回值是**NULL**。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `CGdiObject` object that was replaced if the function is successful. The actual object pointed to is a [CPen](../../mfc/reference/cpen-class.md), [CBrush](../../mfc/reference/cbrush-class.md), or [CFont](../../mfc/reference/cfont-class.md) object. If the call is unsuccessful, the return value is **NULL**.  
   
-##  <a name="setabortproc"></a>Cdc:: setabortproc  
- 安裝列印工作的中止程序。  
+##  <a name="setabortproc"></a>  CDC::SetAbortProc  
+ Installs the abort procedure for the print job.  
   
 ```  
 int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpfn`  
- 若要安裝與中止程序中止函式的指標。 如需詳細資訊的回呼函式，請參閱[:: setabortproc 的回呼函式](../../mfc/reference/callback-function-for-cdc-setabortproc.md)。  
+ A pointer to the abort function to install as the abort procedure. For more about the callback function, see [Callback Function for CDC::SetAbortProc](../../mfc/reference/callback-function-for-cdc-setabortproc.md).  
   
-### <a name="return-value"></a>傳回值  
- 指定結果的`SetAbortProc`函式。 下列值的某些更可能比其他項目，但所有都可能。  
+### <a name="return-value"></a>Return Value  
+ Specifies the outcome of the `SetAbortProc` function. Some of the following values are more probable than others, but all are possible.  
   
-- **SP_ERROR**一般錯誤。  
+- **SP_ERROR** General error.  
   
-- **SP_OUTOFDISK**足夠的磁碟空間是目前可供多工緩衝處理，且沒有更多的空間會變成可用。  
+- **SP_OUTOFDISK** Not enough disk space is currently available for spooling, and no more space will become available.  
   
-- **SP_OUTOFMEMORY**沒有足夠的記憶體可用於多工緩衝處理。  
+- **SP_OUTOFMEMORY** Not enough memory is available for spooling.  
   
-- **SP_USERABORT**使用者結束透過列印管理員工作。  
+- **SP_USERABORT** User ended the job through the Print Manager.  
   
-### <a name="remarks"></a>備註  
- 如果應用程式可讓多工緩衝處理期間取消列印工作時，它就必須設定中止函式，列印工作開始使用之前，先[Cdc](#startdoc)成員函式。 列印管理員允許應用程式取消列印工作，或處理不足的磁碟空間條件的多工緩衝處理期間呼叫的中止函式。 如果沒有中止函式設定，列印工作將會失敗，如果多工緩衝處理的磁碟空間不足。  
+### <a name="remarks"></a>Remarks  
+ If an application is to allow the print job to be canceled during spooling, it must set the abort function before the print job is started with the [StartDoc](#startdoc) member function. The Print Manager calls the abort function during spooling to allow the application to cancel the print job or to process out-of-disk-space conditions. If no abort function is set, the print job will fail if there is not enough disk space for spooling.  
   
- 請注意 Microsoft Visual c + + 功能簡化傳遞至回呼函式建立`SetAbortProc`。 位址傳遞至`EnumObjects`成員函式是使用匯出的函式的指標**__declspec （dllexport)**與`__stdcall`呼叫慣例。  
+ Note that the features of Microsoft Visual C++ simplify the creation of the callback function passed to `SetAbortProc`. The address passed to the `EnumObjects` member function is a pointer to a function exported with **__declspec(dllexport)** and with the `__stdcall` calling convention.  
   
- 您也沒有要匯出函式名稱中的**匯出**應用程式的模組定義檔中的陳述式。 您可以改為使用**匯出**函式中的修飾詞，  
+ You also do not have to export the function name in an **EXPORTS** statement in your application's module-definition file. You can instead use the **EXPORT** function modifier, as in  
   
- **BOOL 回呼匯出**AFunction ( **HDC**， `int` **);**  
+ **BOOL CALLBACK EXPORT** AFunction( **HDC**, `int`**);**  
   
- 導致編譯器發出不含別名名稱所匯出的適當匯出記錄。 這適用於大部分的需求。 如需某些特殊情況下，例如匯出的函式依序數或別名匯出，您仍需要使用**匯出**模組定義檔中的陳述式。  
+ to cause the compiler to emit the proper export record for export by name without aliasing. This works for most needs. For some special cases, such as exporting a function by ordinal or aliasing the export, you still need to use an **EXPORTS** statement in a module-definition file.  
   
- 回呼註冊介面現在是型別安全 （您必須指向正確類型的特定回呼函式的函式指標傳遞）。  
+ Callback registration interfaces are now type-safe (you must pass in a function pointer that points to the right kind of function for the specific callback).  
   
- 也請注意所有的回呼函式必須再傳回給 Windows，，因為無法跨回呼界限擲回例外狀況設陷 Mfc 例外狀況。 例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。  
+ Also note that all callback functions must trap Microsoft Foundation exceptions before returning to Windows, since exceptions cannot be thrown across callback boundaries. For more information about exceptions, see the article [Exceptions](../../mfc/exception-handling-in-mfc.md).  
   
-##  <a name="setarcdirection"></a>CDC::SetArcDirection  
- 設定要用於弧線和矩形函式的繪圖方向。  
+##  <a name="setarcdirection"></a>  CDC::SetArcDirection  
+ Sets the drawing direction to be used for arc and rectangle functions.  
   
 ```  
 int SetArcDirection(int nArcDirection);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *nArcDirection*  
- 指定新的弧形方向。 這個參數可以是下列值之一︰  
+ Specifies the new arc direction. This parameter can be either of the following values:  
   
-- **AD_COUNTERCLOCKWISE**以逆時針方向繪製的圖表。  
+- **AD_COUNTERCLOCKWISE** Figures drawn counterclockwise.  
   
-- **AD_CLOCKWISE**朝順時針方向繪製的圖表。  
+- **AD_CLOCKWISE** Figures drawn clockwise.  
   
-### <a name="return-value"></a>傳回值  
- 指定舊的弧形方向，如果登錄成功。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ Specifies the old arc direction, if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 預設方向是以逆時針算起。 `SetArcDirection`函式指定下列函式繪製的方向︰  
+### <a name="remarks"></a>Remarks  
+ The default direction is counterclockwise. The `SetArcDirection` function specifies the direction in which the following functions draw:  
   
-|Arc|圓形圖|  
+|Arc|Pie|  
 |---------|---------|  
-|`ArcTo`|**矩形**|  
+|`ArcTo`|**Rectangle**|  
 |`Chord`|`RoundRect`|  
-|**橢圓形**||  
+|**Ellipse**||  
   
-##  <a name="setattribdc"></a>CDC::SetAttribDC  
- 呼叫此函式來設定屬性的裝置內容， `m_hAttribDC`。  
+##  <a name="setattribdc"></a>  CDC::SetAttribDC  
+ Call this function to set the attribute device context, `m_hAttribDC`.  
   
 ```  
 virtual void SetAttribDC(HDC hDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- Windows 裝置內容。  
+ A Windows device context.  
   
-### <a name="remarks"></a>備註  
- 此成員函式不會附加的裝置內容`CDC`物件。 只有輸出裝置內容會附加至`CDC`物件。  
+### <a name="remarks"></a>Remarks  
+ This member function does not attach the device context to the `CDC` object. Only the output device context is attached to a `CDC` object.  
   
-##  <a name="setbkcolor"></a>CDC::SetBkColor  
- 將目前的背景色彩設定為指定的色彩。  
+##  <a name="setbkcolor"></a>  CDC::SetBkColor  
+ Sets the current background color to the specified color.  
   
 ```  
 virtual COLORREF SetBkColor(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 指定新的背景色彩。  
+ Specifies the new background color.  
   
-### <a name="return-value"></a>傳回值  
- RGB 色彩值為先前的背景色彩。 如果發生錯誤，則傳回的值會為 0x80000000。  
+### <a name="return-value"></a>Return Value  
+ The previous background color as an RGB color value. If an error occurs, the return value is 0x80000000.  
   
-### <a name="remarks"></a>備註  
- 如果背景模式為**不透明**，系統會使用背景色彩填滿樣式的行中出現間距、 筆刷影線的行中的字元儲存格的背景的間隙。 轉換點陣圖之間色彩及單色裝置內容時，系統也會使用背景色彩。  
+### <a name="remarks"></a>Remarks  
+ If the background mode is **OPAQUE**, the system uses the background color to fill the gaps in styled lines, the gaps between hatched lines in brushes, and the background in character cells. The system also uses the background color when converting bitmaps between color and monochrome device contexts.  
   
- 如果裝置無法顯示指定的色彩，系統就會設定為最接近的實體色彩的背景色彩。  
+ If the device cannot display the specified color, the system sets the background color to the nearest physical color.  
   
-##  <a name="setbkmode"></a>CDC::SetBkMode  
- 設定背景模式。  
+##  <a name="setbkmode"></a>  CDC::SetBkMode  
+ Sets the background mode.  
   
 ```  
 int SetBkMode(int nBkMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *nBkMode*  
- 指定要設定的模式。 這個參數可以是下列值之一︰  
+ Specifies the mode to be set. This parameter can be either of the following values:  
   
-- **不透明**背景填滿之前的文字，包含陰影的筆刷，目前的背景色彩或畫筆會繪製。 這是預設背景模式。  
+- **OPAQUE** Background is filled with the current background color before the text, hatched brush, or pen is drawn. This is the default background mode.  
   
-- **透明**背景則不會繪製前變更。  
+- **TRANSPARENT** Background is not changed before drawing.  
   
-### <a name="return-value"></a>傳回值  
- 先前的背景模式。  
+### <a name="return-value"></a>Return Value  
+ The previous background mode.  
   
-### <a name="remarks"></a>備註  
- 背景模式會定義系統是否會繪製文字、 影線的筆刷或不是實線任何筆樣式之前移除現有的背景色彩的繪圖介面上。  
+### <a name="remarks"></a>Remarks  
+ The background mode defines whether the system removes existing background colors on the drawing surface before drawing text, hatched brushes, or any pen style that is not a solid line.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).  
   
-##  <a name="setboundsrect"></a>CDC::SetBoundsRect  
- 控制累積的週框矩形指定之裝置內容的資訊。  
+##  <a name="setboundsrect"></a>  CDC::SetBoundsRect  
+ Controls the accumulation of bounding-rectangle information for the specified device context.  
   
 ```  
 UINT SetBoundsRect(
@@ -5125,33 +5316,33 @@ UINT SetBoundsRect(
     UINT flags);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpRectBounds`  
- 指向`RECT`結構或`CRect`物件，用來設定週框矩形。 矩形的維度都指定在邏輯座標。 這個參數可以是**NULL**。  
+ Points to a `RECT` structure or `CRect` object that is used to set the bounding rectangle. Rectangle dimensions are given in logical coordinates. This parameter can be **NULL**.  
   
  `flags`  
- 指定新的矩形累積矩形的組合方式。 這個參數可以是下列值的組合︰  
+ Specifies how the new rectangle will be combined with the accumulated rectangle. This parameter can be a combination of the following values:  
   
-- **DCB_ACCUMULATE**加入所指定的矩形`lpRectBounds`週框矩形中 （使用矩形 union 作業）。  
+- **DCB_ACCUMULATE** Add the rectangle specified by `lpRectBounds` to the bounding rectangle (using a rectangle-union operation).  
   
-- **DCB_DISABLE**關閉界限累積。  
+- **DCB_DISABLE** Turn off bounds accumulation.  
   
-- **DCB_ENABLE**開啟界限累積。 （界限累積的預設值是停用）。  
+- **DCB_ENABLE** Turn on bounds accumulation. (The default setting for bounds accumulation is disabled.)  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，這個周框的目前狀態。 像`flags`，傳回值可以是組合的**DCB_**值︰  
+### <a name="return-value"></a>Return Value  
+ The current state of the bounding rectangle, if the function is successful. Like `flags`, the return value can be a combination of **DCB_** values:  
   
-- **DCB_ACCUMULATE**不是空的這個周框。 這個值一定會設定。  
+- **DCB_ACCUMULATE** The bounding rectangle is not empty. This value will always be set.  
   
-- **DCB_DISABLE**界限累積為關閉。  
+- **DCB_DISABLE** Bounds accumulation is off.  
   
-- **DCB_ENABLE**界限累積為開啟。  
+- **DCB_ENABLE** Bounds accumulation is on.  
   
-### <a name="remarks"></a>備註  
- Windows 可以維護所有繪圖作業的周框。 可以查詢這個矩形，並將它重設應用程式中。 繪製界限可用於讓點陣圖快取失效。  
+### <a name="remarks"></a>Remarks  
+ Windows can maintain a bounding rectangle for all drawing operations. This rectangle can be queried and reset by the application. The drawing bounds are useful for invalidating bitmap caches.  
   
-##  <a name="setbrushorg"></a>CDC::SetBrushOrg  
- 指定的 GDI 會指派至下一個應用程式便可選取的裝置內容的筆刷的原點。  
+##  <a name="setbrushorg"></a>  CDC::SetBrushOrg  
+ Specifies the origin that GDI will assign to the next brush that the application selects into the device context.  
   
 ```  
 CPoint SetBrushOrg(
@@ -5161,222 +5352,222 @@ CPoint SetBrushOrg(
 CPoint SetBrushOrg(POINT point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定新的原點的 x 座標 （以裝置為單位）。 此值必須是範圍 0-7。  
+ Specifies the x-coordinate (in device units) of the new origin. This value must be in the range 0-7.  
   
  *y*  
- 指定新原點的 y 座標 （以裝置為單位）。 此值必須是範圍 0-7。  
+ Specifies the y-coordinate (in device units) of the new origin. This value must be in the range 0-7.  
   
  `point`  
- 指定新原點的 x 和 y 座標。 每個值必須是範圍 0-7。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the x- and y-coordinates of the new origin. Each value must be in the range 0-7. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 前一個裝置單位的筆刷的原點。  
+### <a name="return-value"></a>Return Value  
+ The previous origin of the brush in device units.  
   
-### <a name="remarks"></a>備註  
- 預設的筆刷的原點的座標為 （0，0）。 若要變更筆刷的原點，呼叫`UnrealizeObject`函式`CBrush`物件，呼叫`SetBrushOrg`，然後呼叫`SelectObject`成員函式來選取放入裝置內容的筆刷。  
+### <a name="remarks"></a>Remarks  
+ The default coordinates for the brush origin are (0, 0). To alter the origin of a brush, call the `UnrealizeObject` function for the `CBrush` object, call `SetBrushOrg`, and then call the `SelectObject` member function to select the brush into the device context.  
   
- 請勿使用`SetBrushOrg`與庫存`CBrush`物件。  
+ Do not use `SetBrushOrg` with stock `CBrush` objects.  
   
-##  <a name="setcoloradjustment"></a>CDC::SetColorAdjustment  
- 設定彩色調整值之裝置內容，使用指定的值。  
+##  <a name="setcoloradjustment"></a>  CDC::SetColorAdjustment  
+ Sets the color adjustment values for the device context using the specified values.  
   
 ```  
 BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpColorAdjust`  
- 指向[COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md)資料結構，包含色彩調整值。  
+ Points to a [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) data structure containing the color adjustment values.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功則為非零；否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 色彩調整值可用來調整輸入的呼叫來源點陣圖的色彩`CDC::StretchBlt`成員函式時**半色調**模式設定。  
+### <a name="remarks"></a>Remarks  
+ The color adjustment values are used to adjust the input color of the source bitmap for calls to the `CDC::StretchBlt` member function when **HALFTONE** mode is set.  
   
-##  <a name="setdcbrushcolor"></a>CDC::SetDCBrushColor  
- 將目前的裝置內容 (DC) 筆刷色彩設定為指定的色彩值。  
+##  <a name="setdcbrushcolor"></a>  CDC::SetDCBrushColor  
+ Sets the current device context (DC) brush color to the specified color value.  
   
 ```  
 COLORREF SetDCBrushColor(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 指定新的筆刷色彩。  
+ Specifies the new brush color.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功，傳回值會指定與先前的 DC 筆刷色彩`COLORREF`值。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value specifies the previous DC brush color as a `COLORREF` value.  
   
- 如果函式失敗，傳回值是`CLR_INVALID`。  
+ If the function fails, the return value is `CLR_INVALID`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會模擬函式的功能[SetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd162969)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This method emulates the functionality of the function [SetDCBrushColor](http://msdn.microsoft.com/library/windows/desktop/dd162969), as described in the Windows SDK.  
   
-##  <a name="setdcpencolor"></a>CDC::SetDCPenColor  
- 將目前的裝置內容 (DC) 畫筆顏色設定為指定的色彩值。  
+##  <a name="setdcpencolor"></a>  CDC::SetDCPenColor  
+ Sets the current device context (DC) pen color to the specified color value.  
   
 ```  
 COLORREF SetDCPenColor(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 指定新的畫筆顏色。  
+ Specifies the new pen color.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會利用 Win32 函式[SetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd162970)中所述， [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+### <a name="remarks"></a>Remarks  
+ This member function utilizes the Win32 function [SetDCPenColor](http://msdn.microsoft.com/library/windows/desktop/dd162970), as described in the Windows SDK.  
   
-##  <a name="setgraphicsmode"></a>CDC::SetGraphicsMode  
- 設定指定之裝置內容的圖形模式。  
+##  <a name="setgraphicsmode"></a>  CDC::SetGraphicsMode  
+ Sets the graphics mode for the specified device context.  
   
 ```  
 int SetGraphicsMode(int iMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `iMode`  
- 指定的圖形模式。 如需這個參數可以接受的值，請參閱[SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977)。  
+ Specifies the graphics mode. For a list of the values that this parameter can take, see [SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977).  
   
-### <a name="return-value"></a>傳回值  
- 如果成功傳回舊的圖形模式。  
+### <a name="return-value"></a>Return Value  
+ Returns the old graphics mode on success.  
   
- 在失敗時傳回 0。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ Returns 0 on failure. To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>備註  
- 這個方法會包裝 Windows GDI 函式[SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977)。  
+### <a name="remarks"></a>Remarks  
+ This method wraps the Windows GDI function [SetGraphicsMode](http://msdn.microsoft.com/library/windows/desktop/dd162977).  
   
-##  <a name="setlayout"></a>CDC::SetLayout  
- 呼叫此成員函式可將文字和圖形裝置內容的配置變更為 右到左、 文化特性而有所不同，如阿拉伯文與希伯來文的標準版面配置。  
+##  <a name="setlayout"></a>  CDC::SetLayout  
+ Call this member function to change the layout of the text and graphics for a device context to right to left, the standard layout for cultures such as Arabic and Hebrew.  
   
 ```  
 DWORD SetLayout(DWORD dwLayout);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwLayout`  
- 裝置內容的配置和點陣圖控制旗標。 它可以是下列值的組合。  
+ Device context layout and bitmap control flags. It can be a combination of the following values.  
   
-|值|意義|  
+|Value|Meaning|  
 |-----------|-------------|  
-|LAYOUT_BITMAPORIENTATIONPRESERVED|停用呼叫的任何反映[cdc:: bitblt](#bitblt)和[CDC::StretchBlt](#stretchblt)。|  
-|LAYOUT_RTL|設定預設的水平配置是由右至左。|  
-|LAYOUT_LTR|設定要由左到右的預設配置。|  
+|LAYOUT_BITMAPORIENTATIONPRESERVED|Disables any reflection for calls to [CDC::BitBlt](#bitblt) and [CDC::StretchBlt](#stretchblt).|  
+|LAYOUT_RTL|Sets the default horizontal layout to be right to left.|  
+|LAYOUT_LTR|Sets the default layout to be left to right.|  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，裝置內容的先前的版面配置。  
+### <a name="return-value"></a>Return Value  
+ If successful, the previous layout of the device context.  
   
- 如果不成功， **GDI_ERROR**。 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ If unsuccessful, **GDI_ERROR**. To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>備註  
- 一般來說，您不會呼叫**SetLayout**視窗。 相反地，您從右至左配置，在視窗中的設定控制[延伸視窗樣式](../../mfc/reference/extended-window-styles.md)例如**WS_EX_RTLREADING**。 裝置內容，例如印表機或中繼檔，不會繼承這個版面配置。 若要從右至左配置是藉由呼叫設定裝置內容的唯一方式**SetLayout**。  
+### <a name="remarks"></a>Remarks  
+ Normally, you would not call **SetLayout** for a window. Rather, you control the right-to-left layout in a window by setting the [extended window styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) such as **WS_EX_RTLREADING**. A device context, such as a printer or a metafile, does not inherit this layout. The only way to set the device context for a right-to-left layout is by calling **SetLayout**.  
   
- 如果您呼叫**SetLayout (LAYOUT_RTL** )， **SetLayout**會自動變更的對應模式`MM_ISOTROPIC`。 如此一來，後續呼叫[GetMapMode](#getmapmode)會傳回**MM_ISOTROPIC**而不是`MM_TEXT`。  
+ If you call **SetLayout(LAYOUT_RTL** ), **SetLayout** automatically changes the mapping mode to `MM_ISOTROPIC`. As a result, a subsequent call to [GetMapMode](#getmapmode) will return **MM_ISOTROPIC** instead of `MM_TEXT`.  
   
- 在某些情況下，例如與許多點陣圖，您可能想要保留左到右配置。 在這些情況下，呈現影像藉由呼叫`BitBlt`或`StretchBlt`，然後設定 點陣圖控制旗標，如`dwLayout`至**LAYOUT_BITMAPORIENTATIONPRESERVED**。  
+ In some cases, such as with many bitmaps, you may want to preserve the left-to-right layout. In these cases, render the image by calling `BitBlt` or `StretchBlt`, then set the bitmap control flag for `dwLayout` to **LAYOUT_BITMAPORIENTATIONPRESERVED**.  
   
- 一旦變更版面配置與**LAYOUT_RTL**旗標，通常指定權限的旗標或左邊會反轉。 為了避免混淆，您可能想要定義標準的旗標的替代名稱。 如需建議替代的旗標名稱的清單，請參閱[SetLayout](http://msdn.microsoft.com/library/windows/desktop/dd162979)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ Once you change the layout with the **LAYOUT_RTL** flag, the flags normally specifying right or left are reversed. To avoid confusion, you may want to define alternate names for the standard flags. For a list of suggested alternate flag names, see [SetLayout](http://msdn.microsoft.com/library/windows/desktop/dd162979) in the Windows SDK.  
   
-##  <a name="setmapmode"></a>CDC::SetMapMode  
- 設定對應模式。  
+##  <a name="setmapmode"></a>  CDC::SetMapMode  
+ Sets the mapping mode.  
   
 ```  
 virtual int SetMapMode(int nMapMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nMapMode`  
- 指定新的對應模式。 它可以是下列值之一︰  
+ Specifies the new mapping mode. It can be any one of the following values:  
   
-- `MM_ANISOTROPIC`邏輯單元具有任意縮放軸轉換為任意的單位。 若要設定的對應模式`MM_ANISOTROPIC`不會變更目前的視窗或檢視區設定。 若要變更單位，方向與縮放比例，呼叫[SetWindowExt](#setwindowext)和[SetViewportExt](#setviewportext)成員函式。  
+- `MM_ANISOTROPIC` Logical units are converted to arbitrary units with arbitrarily scaled axes. Setting the mapping mode to `MM_ANISOTROPIC` does not change the current window or viewport settings. To change the units, orientation, and scaling, call the [SetWindowExt](#setwindowext) and [SetViewportExt](#setviewportext) member functions.  
   
-- `MM_HIENGLISH`每個邏輯單元會轉換為 0.001 英吋。 正數 x 是右邊。正數 y 已啟動。  
+- `MM_HIENGLISH` Each logical unit is converted to 0.001 inch. Positive x is to the right; positive y is up.  
   
-- `MM_HIMETRIC`每個邏輯單元會轉換為 0.01 公釐。 正數 x 是右邊。正數 y 已啟動。  
+- `MM_HIMETRIC` Each logical unit is converted to 0.01 millimeter. Positive x is to the right; positive y is up.  
   
-- `MM_ISOTROPIC`邏輯單元時，會轉換成任意單位上，具有同樣縮放軸。也就是 1 個單位沿著 x 軸會等於 1 個單位沿著 y 軸。 使用`SetWindowExt`和`SetViewportExt`成員函式以指定的所需的單位，以及這兩個軸的方向。 GDI 會視需要調整 x 和 y，確認單位維持相同大小。  
+- `MM_ISOTROPIC` Logical units are converted to arbitrary units with equally scaled axes; that is, 1 unit along the x-axis is equal to 1 unit along the y-axis. Use the `SetWindowExt` and `SetViewportExt` member functions to specify the desired units and the orientation of the axes. GDI makes adjustments as necessary to ensure that the x and y units remain the same size.  
   
-- `MM_LOENGLISH`每個邏輯單元會轉換成 0.01 英吋。 正數 x 是右邊。正數 y 已啟動。  
+- `MM_LOENGLISH` Each logical unit is converted to 0.01 inch. Positive x is to the right; positive y is up.  
   
-- `MM_LOMETRIC`每個邏輯單元會轉換成 0.1 公釐。 正數 x 是右邊。正數 y 已啟動。  
+- `MM_LOMETRIC` Each logical unit is converted to 0.1 millimeter. Positive x is to the right; positive y is up.  
   
-- `MM_TEXT`每個邏輯單元會轉換成 1 部裝置像素。 正數 x 是右邊。正數 y 已關閉。  
+- `MM_TEXT` Each logical unit is converted to 1 device pixel. Positive x is to the right; positive y is down.  
   
-- `MM_TWIPS`每個邏輯單元會轉換成 1/20 的點。 （「 點 」 是 1/72 英吋，因為 twip 是 1/1440年英吋）。正數 x 是右邊。正數 y 已啟動。  
+- `MM_TWIPS` Each logical unit is converted to 1/20 of a point. (Because a point is 1/72 inch, a twip is 1/1440 inch.) Positive x is to the right; positive y is up.  
   
-### <a name="return-value"></a>傳回值  
- 先前的對應模式。  
+### <a name="return-value"></a>Return Value  
+ The previous mapping mode.  
   
-### <a name="remarks"></a>備註  
- 對應模式會定義用來將邏輯單元轉換成裝置單位; 量值的單位它也會定義裝置的 x 軸和 y 軸的方向。 GDI 邏輯座標轉換為適當的裝置座標使用的對應模式。 `MM_TEXT`模式可讓應用程式運作中裝置像素為單位，其中 1 個單位等於 1 像素。 像素的實體大小而異的裝置。  
+### <a name="remarks"></a>Remarks  
+ The mapping mode defines the unit of measure used to convert logical units to device units; it also defines the orientation of the device's x- and y-axes. GDI uses the mapping mode to convert logical coordinates into the appropriate device coordinates. The `MM_TEXT` mode allows applications to work in device pixels, where 1 unit is equal to 1 pixel. The physical size of a pixel varies from device to device.  
   
- `MM_HIENGLISH`， `MM_HIMETRIC`， `MM_LOENGLISH`， `MM_LOMETRIC`，和`MM_TWIPS`模式都適用於應用程式必須繪製實際有意義的單位 （例如英吋或公釐為單位）。 `MM_ISOTROPIC`模式可確保 1:1 的外觀比例，請務必保留影像的確切形狀時，會很有用。 `MM_ANISOTROPIC`模式可讓 x 和 y 座標分別調整。  
+ The `MM_HIENGLISH`, `MM_HIMETRIC`, `MM_LOENGLISH`, `MM_LOMETRIC`, and `MM_TWIPS` modes are useful for applications that must draw in physically meaningful units (such as inches or millimeters). The `MM_ISOTROPIC` mode ensures a 1:1 aspect ratio, which is useful when it is important to preserve the exact shape of an image. The `MM_ANISOTROPIC` mode allows the x- and y-coordinates to be adjusted independently.  
   
 > [!NOTE]
->  如果您呼叫[SetLayout](#setlayout) DC （裝置內容） 變更為從右至左配置**SetLayout**會自動變更的對應模式`MM_ISOTROPIC`。  
+>  If you call [SetLayout](#setlayout) to change the DC (device context) to right-to-left layout, **SetLayout** automatically changes the mapping mode to `MM_ISOTROPIC`.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
+### <a name="example"></a>Example  
+  See the example for [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="setmapperflags"></a>CDC::SetMapperFlags  
- 變更時它會轉換成實體字型的邏輯字型的字型對應程式所使用的方法。  
+##  <a name="setmapperflags"></a>  CDC::SetMapperFlags  
+ Changes the method used by the font mapper when it converts a logical font to a physical font.  
   
 ```  
 DWORD SetMapperFlags(DWORD dwFlag);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `dwFlag`  
- 指定是否字型對應工具會嘗試比對字型的長寬高度和寬度，以裝置。 當這個值是**ASPECT_FILTERING**、 對應工具僅字型選取其 x 外觀和 y 外觀完全符合指定的裝置。  
+ Specifies whether the font mapper attempts to match a font's aspect height and width to the device. When this value is **ASPECT_FILTERING**, the mapper selects only fonts whose x-aspect and y-aspect exactly match those of the specified device.  
   
-### <a name="return-value"></a>傳回值  
- 先前的字型對應程式旗標值。  
+### <a name="return-value"></a>Return Value  
+ The previous value of the font-mapper flag.  
   
-### <a name="remarks"></a>備註  
- 應用程式可以使用`SetMapperFlags`導致嘗試選擇只有完全符合指定的裝置比例實體字型的字型對應程式。  
+### <a name="remarks"></a>Remarks  
+ An application can use `SetMapperFlags` to cause the font mapper to attempt to choose only a physical font that exactly matches the aspect ratio of the specified device.  
   
- 使用僅點陣字型的應用程式可以使用`SetMapperFlags`函式，以確保所選取的字型對應程式的字型吸引人也可在指定的裝置上讀取。 應用程式通常使用可擴充的 (TrueType) 字型，請勿使用`SetMapperFlags`。  
+ An application that uses only raster fonts can use the `SetMapperFlags` function to ensure that the font selected by the font mapper is attractive and readable on the specified device. Applications that use scalable (TrueType) fonts typically do not use `SetMapperFlags`.  
   
- 如果沒有實體的字型已符合中的邏輯字型規格長寬比，GDI 選擇新的長寬比，並選取符合這個新的長寬比的字型。  
+ If no physical font has an aspect ratio that matches the specification in the logical font, GDI chooses a new aspect ratio and selects a font that matches this new aspect ratio.  
   
-##  <a name="setmiterlimit"></a>CDC::SetMiterLimit  
- 設定斜接角聯結之裝置內容的長度限制。  
+##  <a name="setmiterlimit"></a>  CDC::SetMiterLimit  
+ Sets the limit for the length of miter joins for the device context.  
   
 ```  
 BOOL SetMiterLimit(float fMiterLimit);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *fMiterLimit*  
- 指定裝置內容的新斜接角限制。  
+ Specifies the new miter limit for the device context.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 斜接角長度定義為內部聯結線牆面交集直線牆上的外部聯結的交集的距離。 斜接角限制為最大允許的行寬斜接角長度的比例。 預設斜接角限制為 10.0。  
+### <a name="remarks"></a>Remarks  
+ The miter length is defined as the distance from the intersection of the line walls on the inside of the join to the intersection of the line walls on the outside of the join. The miter limit is the maximum allowed ratio of the miter length to the line width. The default miter limit is 10.0.  
   
-##  <a name="setoutputdc"></a>CDC::SetOutputDC  
- 呼叫此成員函式，來設定輸出裝置內容， `m_hDC`。  
+##  <a name="setoutputdc"></a>  CDC::SetOutputDC  
+ Call this member function to set the output device context, `m_hDC`.  
   
 ```  
 virtual void SetOutputDC(HDC hDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `hDC`  
- Windows 裝置內容。  
+ A Windows device context.  
   
-### <a name="remarks"></a>備註  
- 此成員函式只能呼叫，裝置內容未附加至`CDC`物件。 此成員函式會將`m_hDC`但不會附加的裝置內容`CDC`物件。  
+### <a name="remarks"></a>Remarks  
+ This member function can only be called when a device context has not been attached to the `CDC` object. This member function sets `m_hDC` but does not attach the device context to the `CDC` object.  
   
-##  <a name="setpixel"></a>CDC::SetPixel  
- 設定像素色彩所指定的最接近的近似值至指定的點`crColor`。  
+##  <a name="setpixel"></a>  CDC::SetPixel  
+ Sets the pixel at the point specified to the closest approximation of the color specified by `crColor`.  
   
 ```  
 COLORREF SetPixel(
@@ -5390,29 +5581,29 @@ COLORREF SetPixel(
     COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定要設定點的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the point to be set.  
   
  *y*  
- 指定要設定點的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the point to be set.  
   
  `crColor`  
- A **COLORREF** RGB 值，指定用來繪製點的色彩。 請參閱[COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]此值的描述。  
+ A **COLORREF** RGB value that specifies the color used to paint the point. See [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in the Windows SDK for a description of this value.  
   
  `point`  
- 指定邏輯 x 和 y 座標的點，會設定。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the logical x- and y-coordinates of the point to be set. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 實際繪製 點色彩的 RGB 值。 這個值可以不同於所指定`crColor`如果使用該色彩的近似值。 如果函式會失敗 （如果點裁剪區域外），則傳回值為-1。  
+### <a name="return-value"></a>Return Value  
+ An RGB value for the color that the point is actually painted. This value can be different from that specified by `crColor` if an approximation of that color is used. If the function fails (if the point is outside the clipping region), the return value is -1.  
   
-### <a name="remarks"></a>備註  
- 裁剪區域必須是點。 如果沒有點的裁剪區域中，函式沒有任何作用。  
+### <a name="remarks"></a>Remarks  
+ The point must be in the clipping region. If the point is not in the clipping region, the function does nothing.  
   
- 並非所有的裝置皆支援 `SetPixel` 函式。 若要判斷裝置是否支援`SetPixel`，呼叫`GetDeviceCaps`成員函式**cdc:: GETDEVICECAPS**索引並檢查傳回值，如**RC_BITBLT**旗標。  
+ Not all devices support the `SetPixel` function. To determine whether a device supports `SetPixel`, call the `GetDeviceCaps` member function with the **RASTERCAPS** index and check the return value for the **RC_BITBLT** flag.  
   
-##  <a name="setpixelv"></a>CDC::SetPixelV  
- 以指定的色彩最接近的指定座標上設定像素。  
+##  <a name="setpixelv"></a>  CDC::SetPixelV  
+ Sets the pixel at the specified coordinates to the closest approximation of the specified color.  
   
 ```  
 BOOL SetPixelV(
@@ -5426,210 +5617,210 @@ BOOL SetPixelV(
     COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定 x 軸座標，以邏輯單位，表示要設定的點。  
+ Specifies the x-coordinate, in logical units, of the point to be set.  
   
  *y*  
- 指定以邏輯單位，表示要設定點的 y 座標。  
+ Specifies the y-coordinate, in logical units, of the point to be set.  
   
  `crColor`  
- 指定要用來繪製點的色彩。  
+ Specifies the color to be used to paint the point.  
   
  `point`  
- 指定邏輯 x 和 y 座標的點，會設定。 您可以傳遞[點](../../mfc/reference/point-structure1.md)資料結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)這個參數的物件。  
+ Specifies the logical x- and y-coordinates of the point to be set. You can pass either a [POINT](../../mfc/reference/point-structure1.md) data structure or a [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 裁剪區域和裝置介面的可見部分必須是點。 並非所有裝置都支援此成員函式。 如需詳細資訊，請參閱**RC_BITBLT**功能`CDC::GetDeviceCaps`成員函式。 `SetPixelV`速度比`SetPixel`因為不需要傳回實際繪製點的色彩值。  
+### <a name="remarks"></a>Remarks  
+ The point must be in both the clipping region and the visible part of the device surface. Not all devices support the member function. For more information, see the **RC_BITBLT** capability in the `CDC::GetDeviceCaps` member function. `SetPixelV` is faster than `SetPixel` because it does not need to return the color value of the point actually painted.  
   
-##  <a name="setpolyfillmode"></a>CDC::SetPolyFillMode  
- 將多邊形填滿模式設定。  
+##  <a name="setpolyfillmode"></a>  CDC::SetPolyFillMode  
+ Sets the polygon-filling mode.  
   
 ```  
 int SetPolyFillMode(int nPolyFillMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nPolyFillMode`  
- 指定新的填滿模式。 這個值可以是**替代**或**捲繞**。 在 Windows 中設定的預設模式是**替代**。  
+ Specifies the new filling mode. This value may be either **ALTERNATE** or **WINDING**. The default mode set in Windows is **ALTERNATE**.  
   
-### <a name="return-value"></a>傳回值  
- 前一個填滿模式中，如果登錄成功。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ The previous filling mode, if successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 多邊形填滿模式時**替代**，系統會掃描一行奇數和偶數多邊形側邊之間的區域填滿。 也就是說，系統會填滿區域之間的第一個和第二個邊，等第三個和第四個側邊之間。 這個模式是預設值。  
+### <a name="remarks"></a>Remarks  
+ When the polygon-filling mode is **ALTERNATE**, the system fills the area between odd-numbered and even-numbered polygon sides on each scan line. That is, the system fills the area between the first and second side, between the third and fourth side, and so on. This mode is the default.  
   
- 多邊形填滿模式時**捲繞**，系統會用來判斷是否要填滿區域已繪製圖形的方向。 順時針或逆時針方向會繪製多邊形中的每個直線線段。 每當取自括住的區域圖外面虛數行通過順時針旋轉的直線線段的計數會遞增。 當行通過逆時針算起的直線線段時，計數會遞減。 如果行達到圖的外面時計數則為非零，則會填滿區域。  
+ When the polygon-filling mode is **WINDING**, the system uses the direction in which a figure was drawn to determine whether to fill an area. Each line segment in a polygon is drawn in either a clockwise or a counterclockwise direction. Whenever an imaginary line drawn from an enclosed area to the outside of a figure passes through a clockwise line segment, a count is incremented. When the line passes through a counterclockwise line segment, the count is decremented. The area is filled if the count is nonzero when the line reaches the outside of the figure.  
   
-##  <a name="setrop2"></a>CDC::SetROP2  
- 設定目前的繪圖模式。  
+##  <a name="setrop2"></a>  CDC::SetROP2  
+ Sets the current drawing mode.  
   
 ```  
 int SetROP2(int nDrawMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nDrawMode`  
- 指定新的繪圖模式。 它可以是下列值之一︰  
+ Specifies the new drawing mode. It can be any of the following values:  
   
-- **R2_BLACK**像素永遠都是黑色。  
+- **R2_BLACK** Pixel is always black.  
   
-- **R2_WHITE**一律為白色像素。  
+- **R2_WHITE** Pixel is always white.  
   
-- **R2_NOP**像素維持不變。  
+- **R2_NOP** Pixel remains unchanged.  
   
-- **R2_NOT**像素是螢幕色彩的反轉。  
+- **R2_NOT** Pixel is the inverse of the screen color.  
   
-- **R2_COPYPEN**像素為畫筆顏色。  
+- **R2_COPYPEN** Pixel is the pen color.  
   
-- **R2_NOTCOPYPEN**像素是反向的畫筆顏色。  
+- **R2_NOTCOPYPEN** Pixel is the inverse of the pen color.  
   
-- **R2_MERGEPENNOT**的畫筆色彩組合和螢幕色彩的反轉像素都是 (最後一個像素 = （不是螢幕像素），或畫筆)。  
+- **R2_MERGEPENNOT** Pixel is a combination of the pen color and the inverse of the screen color (final pixel = (NOT screen pixel) OR pen).  
   
-- **R2_MASKPENNOT**像素是通用的同時畫筆色彩組合和螢幕的反向 (最後一個像素 = （不是螢幕像素），而且畫筆)。  
+- **R2_MASKPENNOT** Pixel is a combination of the colors common to both the pen and the inverse of the screen (final pixel = (NOT screen pixel) AND pen).  
   
-- **R2_MERGENOTPEN**像素是反向的畫筆顏色及螢幕色彩組合 (最後一個像素 = （不是畫筆） 或畫面像素)。  
+- **R2_MERGENOTPEN** Pixel is a combination of the screen color and the inverse of the pen color (final pixel = (NOT pen) OR screen pixel).  
   
-- **R2_MASKNOTPEN**像素是反向的畫筆及通用同時螢幕色彩組合 (最後一個像素 = （不是畫筆） 和螢幕像素)。  
+- **R2_MASKNOTPEN** Pixel is a combination of the colors common to both the screen and the inverse of the pen (final pixel = (NOT pen) AND screen pixel).  
   
-- **R2_MERGEPEN**像素為畫筆顏色和螢幕色彩的組合 (最後一個像素 = 畫筆 OR 螢幕的像素)。  
+- **R2_MERGEPEN** Pixel is a combination of the pen color and the screen color (final pixel = pen OR screen pixel).  
   
-- **R2_NOTMERGEPEN**像素是反向**R2_MERGEPEN**色彩 (最後一個像素 = 未 （畫筆 OR 螢幕的像素）)。  
+- **R2_NOTMERGEPEN** Pixel is the inverse of the **R2_MERGEPEN** color (final pixel = NOT(pen OR screen pixel)).  
   
-- **R2_MASKPEN**像素是通用的畫筆和畫面色彩的組合 (最後一個像素 = 畫筆 AND 螢幕的像素)。  
+- **R2_MASKPEN** Pixel is a combination of the colors common to both the pen and the screen (final pixel = pen AND screen pixel).  
   
-- **R2_NOTMASKPEN**像素是反向**R2_MASKPEN**色彩 (最後一個像素 = 未 （畫筆 AND 螢幕的像素）)。  
+- **R2_NOTMASKPEN** Pixel is the inverse of the **R2_MASKPEN** color (final pixel = NOT(pen AND screen pixel)).  
   
-- **R2_XORPEN**像素是色彩的畫筆或在畫面中，但不是在兩者的組合 (最後一個像素 = 畫筆 XOR 螢幕的像素)。  
+- **R2_XORPEN** Pixel is a combination of the colors that are in the pen or in the screen, but not in both (final pixel = pen XOR screen pixel).  
   
-- **R2_NOTXORPEN**像素是反向**R2_XORPEN**色彩 (最後一個像素 = 未 （畫筆 XOR 螢幕像素）)。  
+- **R2_NOTXORPEN** Pixel is the inverse of the **R2_XORPEN** color (final pixel = NOT(pen XOR screen pixel)).  
   
-### <a name="return-value"></a>傳回值  
- 先前的繪圖模式。  
+### <a name="return-value"></a>Return Value  
+ The previous drawing mode.  
   
- 它可以是任何值中指定的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ It can be any of the values given in the Windows SDK.  
   
-### <a name="remarks"></a>備註  
- 繪圖模式指定如何結合的畫筆色彩和填滿物件的內部使用的色彩顯示表面上已經存在。  
+### <a name="remarks"></a>Remarks  
+ The drawing mode specifies how the colors of the pen and the interior of filled objects are combined with the color already on the display surface.  
   
- 繪圖模式適用於僅限; 點陣裝置它不適用於向量裝置。 繪圖模式會代表所有可能的布林值組合的兩個變數，不使用二元運算子 AND、 OR 和 XOR (排除 OR)，一元運算的二進位的點陣作業程式碼。  
+ The drawing mode is for raster devices only; it does not apply to vector devices. Drawing modes are binary raster-operation codes representing all possible Boolean combinations of two variables, using the binary operators AND, OR, and XOR (exclusive OR), and the unary operation NOT.  
   
-##  <a name="setstretchbltmode"></a>CDC::SetStretchBltMode  
- 設定點陣圖自動縮放模式`StretchBlt`成員函式。  
+##  <a name="setstretchbltmode"></a>  CDC::SetStretchBltMode  
+ Sets the bitmap-stretching mode for the `StretchBlt` member function.  
   
 ```  
 int SetStretchBltMode(int nStretchMode);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *nStretchMode*  
- 指定的縮放模式。 它可以是下列值之一︰  
+ Specifies the stretching mode. It can be any of the following values:  
   
-|值|描述|  
+|Value|Description|  
 |-----------|-----------------|  
-|**BLACKONWHITE**|執行已排除的和現有的像素中使用的色彩值的布林值 AND 運算。 如果點陣圖是單色點陣圖，此模式會保留黑色的像素，但會犧牲白色像素為單位。|  
-|**COLORONCOLOR**|刪除像素為單位。 此模式中刪除所有已排除像素為單位的行，但不會嘗試保留他們的資訊。|  
-|**半色調**|會從來源矩形的像素對應至目的矩形中的像素的區塊。 透過像素為單位的目標區塊的平均色彩近似於來源像素色彩。|  
-||設定之後**半色調**延展模式時，應用程式必須呼叫 Win32 函式[SetBrushOrgEx](http://msdn.microsoft.com/library/windows/desktop/dd162967)設定筆刷的原點。 如果它無法這樣做，就會發生筆刷對齊錯誤。|  
-|**STRETCH_ANDSCANS**|**Windows 95/98**︰ 相同**BLACKONWHITE**|  
-|**STRETCH_DELETESCANS**|**Windows 95/98**︰ 相同**COLORONCOLOR**|  
-|**STRETCH_HALFTONE**|**Windows 95/98**︰ 相同**半色調**。|  
-|**STRETCH_ORSCANS**|**Windows 95/98**︰ 相同**WHITEONBLACK**|  
-|**WHITEONBLACK**|執行布林值 OR 運算，使用已排除的和現有的像素的色彩值。 如果點陣圖是單色點陣圖，此模式會保留白色像素，但會犧牲黑色的像素為單位。|  
+|**BLACKONWHITE**|Performs a Boolean AND operation using the color values for the eliminated and existing pixels. If the bitmap is a monochrome bitmap, this mode preserves black pixels at the expense of white pixels.|  
+|**COLORONCOLOR**|Deletes the pixels. This mode deletes all eliminated lines of pixels without trying to preserve their information.|  
+|**HALFTONE**|Maps pixels from the source rectangle into blocks of pixels in the destination rectangle. The average color over the destination block of pixels approximates the color of the source pixels.|  
+||After setting the **HALFTONE** stretching mode, an application must call the Win32 function [SetBrushOrgEx](http://msdn.microsoft.com/library/windows/desktop/dd162967) to set the brush origin. If it fails to do so, brush misalignment occurs.|  
+|**STRETCH_ANDSCANS**|**Windows 95/98**: Same as **BLACKONWHITE**|  
+|**STRETCH_DELETESCANS**|**Windows 95/98**: Same as **COLORONCOLOR**|  
+|**STRETCH_HALFTONE**|**Windows 95/98**: Same as **HALFTONE**.|  
+|**STRETCH_ORSCANS**|**Windows 95/98**: Same as **WHITEONBLACK**|  
+|**WHITEONBLACK**|Performs a Boolean OR operation using the color values for the eliminated and existing pixels. If the bitmap is a monochrome bitmap, this mode preserves white pixels at the expense of black pixels.|  
   
-### <a name="return-value"></a>傳回值  
- 先前的自動縮放模式。 它可以是**STRETCH_ANDSCANS**， **STRETCH_DELETESCANS**，或**STRETCH_ORSCANS**。  
+### <a name="return-value"></a>Return Value  
+ The previous stretching mode. It can be **STRETCH_ANDSCANS**, **STRETCH_DELETESCANS**, or **STRETCH_ORSCANS**.  
   
-### <a name="remarks"></a>備註  
- 點陣圖縮放模式會定義如何從使用此函數就會進行壓縮的點陣圖中移除資訊。  
+### <a name="remarks"></a>Remarks  
+ The bitmap-stretching mode defines how information is removed from bitmaps that are compressed by using the function.  
   
- **BLACKONWHITE** ( **STRETCH_ANDSCANS**) 和**WHITEONBLACK** ( **STRETCH_ORSCANS**) 模式通常用來保留前景單色點陣圖的像素。 **COLORONCOLOR** ( **STRETCH_DELETESCANS**) 模式通常用來保留彩色點陣圖中的色彩。  
+ The **BLACKONWHITE** ( **STRETCH_ANDSCANS**) and **WHITEONBLACK** ( **STRETCH_ORSCANS**) modes are typically used to preserve foreground pixels in monochrome bitmaps. The **COLORONCOLOR** ( **STRETCH_DELETESCANS**) mode is typically used to preserve color in color bitmaps.  
   
- **半色調**模式需要更多的來源映像處理比其他三個模式; 低於其他人，但會產生高品質影像。 也請注意， **SetBrushOrgEx**必須呼叫之後設定**半色調**模式，以避免筆刷對齊錯誤。  
+ The **HALFTONE** mode requires more processing of the source image than the other three modes; it is slower than the others, but produces higher quality images. Also note that **SetBrushOrgEx** must be called after setting the **HALFTONE** mode to avoid brush misalignment.  
   
- 可能也會根據裝置驅動程式的功能提供額外的自動縮放模式。  
+ Additional stretching modes might also be available depending on the capabilities of the device driver.  
   
-##  <a name="settextalign"></a>CDC::SetTextAlign  
- 設定文字對齊方式的旗標。  
+##  <a name="settextalign"></a>  CDC::SetTextAlign  
+ Sets the text-alignment flags.  
   
 ```  
 UINT SetTextAlign(UINT nFlags);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nFlags`  
- 指定文字對齊方式的旗標。 旗標指定點與界限文字的矩形之間的關聯性。 點可以是目前的位置或文字輸出函式所指定的座標。 相鄰的字元儲存格的文字字串中所定義的矩形框住的文字。 `nFlags`參數可以是下列三個類別的一個或多個旗標。 從每個類別目錄中，選擇只有一個旗標。 第一個類別會影響在 x 方向的文字對齊方式︰  
+ Specifies text-alignment flags. The flags specify the relationship between a point and a rectangle that bounds the text. The point can be either the current position or coordinates specified by a text-output function. The rectangle that bounds the text is defined by the adjacent character cells in the text string. The `nFlags` parameter can be one or more flags from the following three categories. Choose only one flag from each category. The first category affects text alignment in the x-direction:  
   
-- **TA_CENTER**對齊水平中央的點，這個周框。  
+- **TA_CENTER** Aligns the point with the horizontal center of the bounding rectangle.  
   
-- **TA_LEFT**對齊，這個周框左邊的點。 這是預設設定。  
+- **TA_LEFT** Aligns the point with the left side of the bounding rectangle. This is the default setting.  
   
-- **TA_RIGHT**對齊右邊的點，這個周框。  
+- **TA_RIGHT** Aligns the point with the right side of the bounding rectangle.  
   
- 第二個類別會影響在 y 方向的文字對齊方式︰  
+ The second category affects text alignment in the y-direction:  
   
-- **TA_BASELINE**對齊字型與基準線的點。  
+- **TA_BASELINE** Aligns the point with the base line of the chosen font.  
   
-- **TA_BOTTOM**對齊具有週框矩形的底部的點。  
+- **TA_BOTTOM** Aligns the point with the bottom of the bounding rectangle.  
   
-- **TA_TOP**對齊點的週框矩形的頂端。 這是預設設定。  
+- **TA_TOP** Aligns the point with the top of the bounding rectangle. This is the default setting.  
   
- 第三個類別目錄會決定是否要在寫入文字時，更新目前的位置︰  
+ The third category determines whether the current position is updated when text is written:  
   
-- **TA_NOUPDATECP**不會更新目前的位置之後的文字輸出函式每次呼叫。 這是預設設定。  
+- **TA_NOUPDATECP** Does not update the current position after each call to a text-output function. This is the default setting.  
   
-- **TA_UPDATECP**之後每個呼叫的文字輸出函式會更新目前的 x 位置。 新的位置是在右側的文字，這個周框。 當這個旗標設定時，呼叫中指定的座標`TextOut`成員函式會被忽略。  
+- **TA_UPDATECP** Updates the current x-position after each call to a text-output function. The new position is at the right side of the bounding rectangle for the text. When this flag is set, the coordinates specified in calls to the `TextOut` member function are ignored.  
   
-### <a name="return-value"></a>傳回值  
- 先前文字對齊方式的設定，如果成功的話。 低序位位元組包含水平的設定，高序位位元組包含垂直的設定。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ The previous text-alignment setting, if successful. The low-order byte contains the horizontal setting and the high-order byte contains the vertical setting; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- `TextOut`和`ExtTextOut`定位的顯示或裝置上的文字字串時，成員函式會使用這些旗標。 旗標指定的特定點與界限文字的矩形之間的關聯性。 此點的座標會當做參數傳遞給`TextOut`成員函式。 矩形會框住的文字是相鄰的字元儲存格的文字字串中所構成。  
+### <a name="remarks"></a>Remarks  
+ The `TextOut` and `ExtTextOut` member functions use these flags when positioning a string of text on a display or device. The flags specify the relationship between a specific point and a rectangle that bounds the text. The coordinates of this point are passed as parameters to the `TextOut` member function. The rectangle that bounds the text is formed by the adjacent character cells in the text string.  
   
-##  <a name="settextcharacterextra"></a>CDC::SetTextCharacterExtra  
- 設定 intercharacter 的間距數量。  
+##  <a name="settextcharacterextra"></a>  CDC::SetTextCharacterExtra  
+ Sets the amount of intercharacter spacing.  
   
 ```  
 int SetTextCharacterExtra(int nCharExtra);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nCharExtra`  
- 指定要加入至每個字元的 （以邏輯單位表示） 的額外空間數量。 如果不是目前的對應模式`MM_TEXT`，`nCharExtra`是轉換與捨入到最接近像素。  
+ Specifies the amount of extra space (in logical units) to be added to each character. If the current mapping mode is not `MM_TEXT`, `nCharExtra` is transformed and rounded to the nearest pixel.  
   
-### <a name="return-value"></a>傳回值  
- 先前的 intercharacter 間距數量。  
+### <a name="return-value"></a>Return Value  
+ The amount of the previous intercharacter spacing.  
   
-### <a name="remarks"></a>備註  
- GDI 新增這個間距，包括分行符號字元，當它將一行文字寫入至裝置內容的每個字元。 Intercharacter 間距所需的預設值為 0。  
+### <a name="remarks"></a>Remarks  
+ GDI adds this spacing to each character, including break characters, when it writes a line of text to the device context. The default value for the amount of intercharacter spacing is 0.  
   
-##  <a name="settextcolor"></a>CDC::SetTextColor  
- 為指定的色彩設定的文字色彩。  
+##  <a name="settextcolor"></a>  CDC::SetTextColor  
+ Sets the text color to the specified color.  
   
 ```  
 virtual COLORREF SetTextColor(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- 指定文字的色彩為 RGB 色彩值。  
+ Specifies the color of the text as an RGB color value.  
   
-### <a name="return-value"></a>傳回值  
- 先前的文字色彩的 RGB 值。  
+### <a name="return-value"></a>Return Value  
+ An RGB value for the previous text color.  
   
-### <a name="remarks"></a>備註  
- 將文字寫入至這個裝置內容也之間的轉換點陣圖的色彩和單色裝置內容時，系統會使用此文字色彩。  
+### <a name="remarks"></a>Remarks  
+ The system will use this text color when writing text to this device context and also when converting bitmaps between color and monochrome device contexts.  
   
- 如果裝置無法表示指定的色彩，系統就會設定為最接近的實體色彩的文字色彩。 所指定字元的背景色彩`SetBkColor`和`SetBkMode`成員函式。  
+ If the device cannot represent the specified color, the system sets the text color to the nearest physical color. The background color for a character is specified by the `SetBkColor` and `SetBkMode` member functions.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor)。  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnCtlColor](../../mfc/reference/cwnd-class.md#onctlcolor).  
   
-##  <a name="settextjustification"></a>CDC::SetTextJustification  
- 分行符號字元，在字串中加上空格。  
+##  <a name="settextjustification"></a>  CDC::SetTextJustification  
+ Adds space to the break characters in a string.  
   
 ```  
 int SetTextJustification(
@@ -5637,31 +5828,31 @@ int SetTextJustification(
     int nBreakCount);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `nBreakExtra`  
- 指定要加入至 （以邏輯單位表示） 的文字行的總額外空間。 如果不是目前的對應模式`MM_TEXT`，此參數所指定的值轉換成目前的對應模式，四捨五入為最接近的裝置單位。  
+ Specifies the total extra space to be added to the line of text (in logical units). If the current mapping mode is not `MM_TEXT`, the value given by this parameter is converted to the current mapping mode and rounded to the nearest device unit.  
   
  *nBreakCount*  
- 行中指定符號字元的數。  
+ Specifies the number of break characters in the line.  
   
-### <a name="return-value"></a>傳回值  
- 其中一個函式是否成功。否則便是 0。  
+### <a name="return-value"></a>Return Value  
+ One if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 應用程式可以使用`GetTextMetrics`擷取字型的成員函式中斷字元。  
+### <a name="remarks"></a>Remarks  
+ An application can use the `GetTextMetrics` member functions to retrieve a font's break character.  
   
- 之後`SetTextJustification`成員函式呼叫時，呼叫文字輸出函式 (例如`TextOut`) 將指定的額外空間之間指定的符號字元數，平均分散。 分行符號字元通常是空格字元 (ASCII 32)，但可能會當做其他某些字元字型來定義。  
+ After the `SetTextJustification` member function is called, a call to a text-output function (such as `TextOut`) distributes the specified extra space evenly among the specified number of break characters. The break character is usually the space character (ASCII 32), but may be defined by a font as some other character.  
   
- 成員函式`GetTextExtent`通常會與搭配`SetTextJustification`。 `GetTextExtent`計算在對齊之前指定行的寬度。 應用程式就可以判斷多少空間，以指定在`nBreakExtra`參數所傳回的值減掉`GetTextExtent`從寬度之後對齊的字串。  
+ The member function `GetTextExtent` is typically used with `SetTextJustification`. `GetTextExtent` computes the width of a given line before alignment. An application can determine how much space to specify in the `nBreakExtra` parameter by subtracting the value returned by `GetTextExtent` from the width of the string after alignment.  
   
- `SetTextJustification`函式可以用來對齊包含不同的字型中的多個回合的那一行。 在此情況下，必須分次建立列藉由對齊，並分別撰寫每次執行。  
+ The `SetTextJustification` function can be used to align a line that contains multiple runs in different fonts. In this case, the line must be created piecemeal by aligning and writing each run separately.  
   
- 對齊期間可能會發生捨入錯誤，因為系統會保留定義目前錯誤的執行錯誤詞彙。 對齊線，其中包含多個回合，當`GetTextExtent`會自動使用它會計算下一次執行的範圍。 這個錯誤詞彙。 這可讓文字輸出函式融合新的執行錯誤。  
+ Because rounding errors can occur during alignment, the system keeps a running error term that defines the current error. When aligning a line that contains multiple runs, `GetTextExtent` automatically uses this error term when it computes the extent of the next run. This allows the text-output function to blend the error into the new run.  
   
- 已對齊每一行之後，必須清除這個錯誤的詞彙，以防止它被合併至下一行。 您可以清除一詞，藉由呼叫`SetTextJustification`與`nBreakExtra`設為 0。  
+ After each line has been aligned, this error term must be cleared to prevent it from being incorporated into the next line. The term can be cleared by calling `SetTextJustification` with `nBreakExtra` set to 0.  
   
-##  <a name="setviewportext"></a>CDC::SetViewportExt  
- 設定 x-與 y-範圍的裝置內容的檢視區。  
+##  <a name="setviewportext"></a>  CDC::SetViewportExt  
+ Sets the x- and y-extents of the viewport of the device context.  
   
 ```  
 virtual CSize SetViewportExt(
@@ -5671,36 +5862,36 @@ virtual CSize SetViewportExt(
 CSize SetViewportExt(SIZE size);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cx`  
- 指定檢視區 （以裝置為單位） 的 x 程度。  
+ Specifies the x-extent of the viewport (in device units).  
   
  `cy`  
- 指定的檢視區 （以裝置單位表示） y 範圍。  
+ Specifies the y-extent of the viewport (in device units).  
   
  `size`  
- 指定 x-與 y-範圍的檢視區 （以裝置為單位）。  
+ Specifies the x- and y-extents of the viewport (in device units).  
   
-### <a name="return-value"></a>傳回值  
- 做為檢視區的前一個範圍[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。 當錯誤發生時，x 和 y 座標的傳回`CSize`物件都設定為 0。  
+### <a name="return-value"></a>Return Value  
+ The previous extents of the viewport as a [CSize](../../atl-mfc-shared/reference/csize-class.md) object. When an error occurs, the x- and y-coordinates of the returned `CSize` object are both set to 0.  
   
-### <a name="remarks"></a>備註  
- 檢視區，以及裝置內容 視窗中，定義 GDI 在實際裝置之點的座標系統中所對應的邏輯座標系統中的點。 也就是說，它們會定義 GDI 如何將邏輯座標轉換成裝置座標。  
+### <a name="remarks"></a>Remarks  
+ The viewport, along with the device-context window, defines how GDI maps points in the logical coordinate system to points in the coordinate system of the actual device. In other words, they define how GDI converts logical coordinates into device coordinates.  
   
- 當設定下列的對應模式時，呼叫`SetWindowExt`和`SetViewportExt`都會被忽略︰  
+ When the following mapping modes are set, calls to `SetWindowExt` and `SetViewportExt` are ignored:  
   
 |MM_HIENGLISH|MM_LOMETRIC|  
 |-------------------|------------------|  
 |`MM_HIMETRIC`|`MM_TEXT`|  
 |`MM_LOENGLISH`|`MM_TWIPS`|  
   
- 當`MM_ISOTROPIC`模式設定，應用程式必須呼叫`SetWindowExt`成員函式呼叫之前`SetViewportExt`。  
+ When `MM_ISOTROPIC` mode is set, an application must call the `SetWindowExt` member function before it calls `SetViewportExt`.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
+### <a name="example"></a>Example  
+  See the example for [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="setviewportorg"></a>CDC::SetViewportOrg  
- 設定裝置內容的檢視區的原點。  
+##  <a name="setviewportorg"></a>  CDC::SetViewportOrg  
+ Sets the viewport origin of the device context.  
   
 ```  
 virtual CPoint SetViewportOrg(
@@ -5710,29 +5901,29 @@ virtual CPoint SetViewportOrg(
 CPoint SetViewportOrg(POINT point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定的檢視區原點的 x 座標 （以裝置為單位）。 值必須是裝置座標系統的範圍內。  
+ Specifies the x-coordinate (in device units) of the origin of the viewport. The value must be within the range of the device coordinate system.  
   
  *y*  
- 指定的檢視區原點的 y 座標 （以裝置為單位）。 值必須是裝置座標系統的範圍內。  
+ Specifies the y-coordinate (in device units) of the origin of the viewport. The value must be within the range of the device coordinate system.  
   
  `point`  
- 指定檢視區的來源。 值必須是裝置座標系統的範圍內。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the origin of the viewport. The values must be within the range of the device coordinate system. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 先前的 （以裝置座標表示） 做為檢視區原點`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The previous origin of the viewport (in device coordinates) as a `CPoint` object.  
   
-### <a name="remarks"></a>備註  
- 檢視區，以及裝置內容 視窗中，定義 GDI 在實際裝置之點的座標系統中所對應的邏輯座標系統中的點。 也就是說，它們會定義 GDI 如何將邏輯座標轉換成裝置座標。  
+### <a name="remarks"></a>Remarks  
+ The viewport, along with the device-context window, defines how GDI maps points in the logical coordinate system to points in the coordinate system of the actual device. In other words, they define how GDI converts logical coordinates into device coordinates.  
   
- 檢視區原點標示 GDI 對應視窗原點的點，在邏輯座標系統中所指定裝置座標系統中的點**SetWindowOrg**成員函式。 GDI 會對應所有其他點將視窗原點對應到檢視區原點所需的程序相同。 比方說，繞著視窗原點的點的圓形中的所有點都會在檢視區原點的點周圍的圓形。 同樣地，通過視窗原點的列的所有點都都通過捲動檢視區原點的列。  
+ The viewport origin marks the point in the device coordinate system to which GDI maps the window origin, a point in the logical coordinate system specified by the **SetWindowOrg** member function. GDI maps all other points by following the same process required to map the window origin to the viewport origin. For example, all points in a circle around the point at the window origin will be in a circle around the point at the viewport origin. Similarly, all points in a line that passes through the window origin will be in a line that passes through the viewport origin.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
+### <a name="example"></a>Example  
+  See the example for [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="setwindowext"></a>CDC::SetWindowExt  
- 設定 x-與 y-範圍相關聯的裝置內容的視窗。  
+##  <a name="setwindowext"></a>  CDC::SetWindowExt  
+ Sets the x- and y-extents of the window associated with the device context.  
   
 ```  
 virtual CSize SetWindowExt(
@@ -5742,23 +5933,23 @@ virtual CSize SetWindowExt(
 CSize SetWindowExt(SIZE size);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `cx`  
- 指定的 x-程度 （以邏輯單位表示） 的視窗。  
+ Specifies the x-extent (in logical units) of the window.  
   
  `cy`  
- 指定的 y-程度 （以邏輯單位表示） 的視窗。  
+ Specifies the y-extent (in logical units) of the window.  
   
  `size`  
- 指定 x-與 y-範圍 （以邏輯單位表示） 的視窗。  
+ Specifies the x- and y-extents (in logical units) of the window.  
   
-### <a name="return-value"></a>傳回值  
- 間隔 （以邏輯單位表示） 做為前一個範圍`CSize`物件。 如果發生錯誤，x 和 y 座標的傳回`CSize`物件都設定為 0。  
+### <a name="return-value"></a>Return Value  
+ The previous extents of the window (in logical units) as a `CSize` object. If an error occurs, the x- and y-coordinates of the returned `CSize` object are both set to 0.  
   
-### <a name="remarks"></a>備註  
- 視窗中的，裝置內容檢視區，以及定義 GDI 裝置座標系統中的點所對應的邏輯座標系統中的點。  
+### <a name="remarks"></a>Remarks  
+ The window, along with the device-context viewport, defines how GDI maps points in the logical coordinate system to points in the device coordinate system.  
   
- 當設定下列的對應模式時，呼叫`SetWindowExt`和`SetViewportExt`函式會被忽略︰  
+ When the following mapping modes are set, calls to `SetWindowExt` and `SetViewportExt` functions are ignored:  
   
 - `MM_HIENGLISH`  
   
@@ -5772,13 +5963,13 @@ CSize SetWindowExt(SIZE size);
   
 - `MM_TWIPS`  
   
- 當`MM_ISOTROPIC`模式設定，應用程式必須呼叫`SetWindowExt`成員函式，然後再呼叫`SetViewportExt`。  
+ When `MM_ISOTROPIC` mode is set, an application must call the `SetWindowExt` member function before calling `SetViewportExt`.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)。  
+### <a name="example"></a>Example  
+  See the example for [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc).  
   
-##  <a name="setwindoworg"></a>CDC::SetWindowOrg  
- 設定裝置內容的視窗原點。  
+##  <a name="setwindoworg"></a>  CDC::SetWindowOrg  
+ Sets the window origin of the device context.  
   
 ```  
 CPoint SetWindowOrg(
@@ -5788,99 +5979,99 @@ CPoint SetWindowOrg(
 CPoint SetWindowOrg(POINT point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定新的視窗原點的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the new origin of the window.  
   
  *y*  
- 指定新的視窗原點的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the new origin of the window.  
   
  `point`  
- 指定新的來源視窗的邏輯座標。 您可以傳遞**點**結構或`CPoint`這個參數的物件。  
+ Specifies the logical coordinates of the new origin of the window. You can pass either a **POINT** structure or a `CPoint` object for this parameter.  
   
-### <a name="return-value"></a>傳回值  
- 為視窗的上一個原點`CPoint`物件。  
+### <a name="return-value"></a>Return Value  
+ The previous origin of the window as a `CPoint` object.  
   
-### <a name="remarks"></a>備註  
- 視窗中的，裝置內容檢視區，以及定義 GDI 裝置座標系統中的點所對應的邏輯座標系統中的點。  
+### <a name="remarks"></a>Remarks  
+ The window, along with the device-context viewport, defines how GDI maps points in the logical coordinate system to points in the device coordinate system.  
   
- 視窗原點標示 GDI 將檢視區原點，在裝置座標系統中所指定的點對應的邏輯座標系統中的點**SetWindowOrg**函式。 GDI 會對應所有其他點將視窗原點對應到檢視區原點所需的程序相同。 比方說，繞著視窗原點的點的圓形中的所有點都會在檢視區原點的點周圍的圓形。 同樣地，通過視窗原點的列的所有點都都通過捲動檢視區原點的列。  
+ The window origin marks the point in the logical coordinate system from which GDI maps the viewport origin, a point in the device coordinate system specified by the **SetWindowOrg** function. GDI maps all other points by following the same process required to map the window origin to the viewport origin. For example, all points in a circle around the point at the window origin will be in a circle around the point at the viewport origin. Similarly, all points in a line that passes through the window origin will be in a line that passes through the viewport origin.  
   
-##  <a name="setworldtransform"></a>CDC::SetWorldTransform  
- 設定二維線性世界空間與指定之裝置內容的分頁空間之間轉換。 此轉換可用來縮放、 旋轉、 傾斜或轉譯圖形輸出。  
+##  <a name="setworldtransform"></a>  CDC::SetWorldTransform  
+ Sets a two-dimensional linear transformation between world space and page space for the specified device context. This transformation can be used to scale, rotate, shear, or translate graphics output.  
   
 ```  
 BOOL SetWorldTransform(const XFORM& rXform);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `rXform`  
- 若要參考[XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228)結構，其中包含轉換資料。  
+ Reference to an [XFORM](http://msdn.microsoft.com/library/windows/desktop/dd145228) structure that contains the transformation data.  
   
-### <a name="return-value"></a>傳回值  
- 成功時傳回非零值。  
+### <a name="return-value"></a>Return Value  
+ Returns a nonzero value on success.  
   
- 在失敗時傳回 0。  
+ Returns 0 on failure.  
   
- 若要取得延伸錯誤資訊，請呼叫[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)。  
+ To get extended error information, call [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360).  
   
-### <a name="remarks"></a>備註  
- 這個方法會包裝 Windows GDI 函式[SetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145104)。  
+### <a name="remarks"></a>Remarks  
+ This method wraps the Windows GDI function [SetWorldTransform](http://msdn.microsoft.com/library/windows/desktop/dd145104).  
   
-##  <a name="startdoc"></a>CDC::StartDoc  
- 通知正在啟動新的列印工作的裝置驅動程式，所有後續`StartPage`和`EndPage`呼叫應該在相同的作業，直到多工緩衝`EndDoc`呼叫，就會發生。  
+##  <a name="startdoc"></a>  CDC::StartDoc  
+ Informs the device driver that a new print job is starting and that all subsequent `StartPage` and `EndPage` calls should be spooled under the same job until an `EndDoc` call occurs.  
   
 ```  
 int StartDoc(LPDOCINFO lpDocInfo);  
 int StartDoc(LPCTSTR lpszDocName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *lpDocInfo*  
- 指向[DOCINFO](http://msdn.microsoft.com/library/windows/desktop/dd183574)結構，其中包含文件檔案的名稱和輸出檔的名稱。  
+ Points to a [DOCINFO](http://msdn.microsoft.com/library/windows/desktop/dd183574) structure containing the name of the document file and the name of the output file.  
   
  *lpszDocName*  
- 包含文件檔案名稱的字串指標。  
+ Pointer to a string containing the name of the document file.  
   
-### <a name="return-value"></a>傳回值  
- 函式成功，傳回的值小於或等於零。 這個值會是文件的列印工作識別項。  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, the return value is greater than zero. This value is the print job identifier for the document.  
   
- 如果函式失敗，傳回的值小於或等於零。  
+ If the function fails, the return value is less than or equal to zero.  
   
-### <a name="remarks"></a>備註  
- 這可確保不會與其他工作顛倒文件的長度大於一頁。  
+### <a name="remarks"></a>Remarks  
+ This ensures that documents longer than one page will not be interspersed with other jobs.  
   
- 對於 Windows 3.1 和更新版本的版本，此函數會取代**CDC**印表機逸出。 使用此函式，可確保包含多個頁面的文件不會穿插其他列印工作。  
+ For Windows versions 3.1 and later, this function replaces the **STARTDOC** printer escape. Using this function ensures that documents containing more than one page are not interspersed with other print jobs.  
   
- `StartDoc`不應該使用內部中繼檔。  
+ `StartDoc` should not be used inside metafiles.  
   
-### <a name="example"></a>範例  
- 此程式碼片段會取得預設印表機、 列印工作，就會開啟和多工緩衝處理"Hello World ！"的單一頁面 它。 這段程式碼所列印的文字不調整到印表機的邏輯單元，因為輸出文字可能無法以這類小寫字母的結果是無法讀取。 調整函式，例如 CDC `SetMapMode`， `SetViewportOrg`，和`SetWindowExt`，可用來修正縮放比例。  
+### <a name="example"></a>Example  
+ This code fragment gets the default printer, opens a print job, and spools one page with "Hello, World!" on it. Because the text printed by this code isn't scaled to the printer's logical units, the output text may be in such small letters that the result is unreadable. The CDC scaling functions, such as `SetMapMode`, `SetViewportOrg`, and `SetWindowExt`, can be used to fix the scaling.  
   
- [!code-cpp[NVC_MFCDocView # 41](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]  
+ [!code-cpp[NVC_MFCDocView#41](../../mfc/codesnippet/cpp/cdc-class_13.cpp)]  
   
-##  <a name="startpage"></a>CDC::StartPage  
- 呼叫此成員函式，以準備印表機驅動程式接收資料。  
+##  <a name="startpage"></a>  CDC::StartPage  
+ Call this member function to prepare the printer driver to receive data.  
   
 ```  
 int StartPage();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 大於或等於 0，如果函式成功或負數值，如果發生錯誤。  
+### <a name="return-value"></a>Return Value  
+ Greater than or equal to 0 if the function is successful, or a negative value if an error occurred.  
   
-### <a name="remarks"></a>備註  
- `StartPage`取代**NEWFRAME**和**BANDINFO**逸出。  
+### <a name="remarks"></a>Remarks  
+ `StartPage` supersedes the **NEWFRAME** and **BANDINFO** escapes.  
   
- 如需列印的呼叫順序的概觀，請參閱[Cdc](#startdoc)成員函式。  
+ For an overview of the sequence of printing calls, see the [StartDoc](#startdoc) member function.  
   
- 系統會停用`ResetDC`成員函式呼叫之間`StartPage`和`EndPage`。  
+ The system disables the `ResetDC` member function between calls to `StartPage` and `EndPage`.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[CDC::StartDoc](#startdoc)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::StartDoc](#startdoc).  
   
-##  <a name="stretchblt"></a>CDC::StretchBlt  
- 將來源矩形的點陣圖複製到目的地矩形，必要時可延伸或壓縮點陣圖，使其符合目的地矩形的維度。  
+##  <a name="stretchblt"></a>  CDC::StretchBlt  
+ Copies a bitmap from a source rectangle into a destination rectangle, stretching or compressing the bitmap if necessary to fit the dimensions of the destination rectangle.  
   
 ```  
 BOOL StretchBlt(
@@ -5896,113 +6087,113 @@ BOOL StretchBlt(
     DWORD dwRop);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定目的地矩形左上角的 X 座標 (以邏輯單位表示)。  
+ Specifies the x-coordinate (in logical units) of the upper-left corner of the destination rectangle.  
   
  *y*  
- 指定目的地矩形左上角的 Y 座標 (以邏輯單位表示)。  
+ Specifies the y-coordinate (in logical units) of the upper-left corner of the destination rectangle.  
   
  `nWidth`  
- 指定目的地矩形的寬度 (以邏輯單位表示)。  
+ Specifies the width (in logical units) of the destination rectangle.  
   
  `nHeight`  
- 指定目的地矩形的高度 (以邏輯單位表示)。  
+ Specifies the height (in logical units) of the destination rectangle.  
   
  `pSrcDC`  
- 指定來源裝置內容。  
+ Specifies the source device context.  
   
  `xSrc`  
- 指定來源矩形左上角的 X 座標 (以邏輯單位表示)。  
+ Specifies the x-coordinate (in logical units) of the upper-left corner of the source rectangle.  
   
  `ySrc`  
- 指定來源矩形左上角的 Y 座標 (以邏輯單位表示)。  
+ Specifies the y-coordinate (in logical units) of the upper-left corner of the source rectangle.  
   
  `nSrcWidth`  
- 指定來源矩形的寬度 (以邏輯單位表示)。  
+ Specifies the width (in logical units) of the source rectangle.  
   
  `nSrcHeight`  
- 指定來源矩形的高度 (以邏輯單位表示)。  
+ Specifies the height (in logical units) of the source rectangle.  
   
  *dwRop*  
- 指定待執行的點陣作業。 點陣作業程式碼定義 GDI 在輸出作業中結合色彩的方式；該輸出作業與目前的筆刷、可能的來源點陣圖和目的地點陣圖相關。 這個參數可以是下列其中一個值：  
+ Specifies the raster operation to be performed. Raster operation codes define how GDI combines colors in output operations that involve a current brush, a possible source bitmap, and a destination bitmap. This parameter may be one of the following values:  
   
-- **BLACKNESS**所有將輸出的變成黑色。  
+- **BLACKNESS** Turns all output black.  
   
-- **DSTINVERT**反轉目的地點陣圖。  
+- **DSTINVERT** Inverts the destination bitmap.  
   
-- **MERGECOPY**合併模式和來源點陣圖使用布林值 AND 運算子。  
+- **MERGECOPY** Combines the pattern and the source bitmap using the Boolean AND operator.  
   
-- **MERGEPAINT**合併反轉的來源點陣圖和目的地點陣圖使用布林值 OR 運算子。  
+- **MERGEPAINT** Combines the inverted source bitmap with the destination bitmap using the Boolean OR operator.  
   
-- **NOTSRCCOPY**將反轉的來源點陣圖複製到目的地。  
+- **NOTSRCCOPY** Copies the inverted source bitmap to the destination.  
   
-- **NOTSRCERASE**反轉合併目的地點陣圖和來源點陣圖使用布林值 OR 運算子的結果。  
+- **NOTSRCERASE** Inverts the result of combining the destination and source bitmaps using the Boolean OR operator.  
   
-- **PATCOPY**將模式複製到目的地點陣圖。  
+- **PATCOPY** Copies the pattern to the destination bitmap.  
   
-- **PATINVERT**模式使用布林值 XOR 運算子合併目的地點陣圖。  
+- **PATINVERT** Combines the destination bitmap with the pattern using the Boolean XOR operator.  
   
-- **PATPAINT**模式使用布林值 OR 運算子合併反轉的來源點陣圖。 使用布林值 OR 運算子合併此作業的結果與目的地點陣圖。  
+- **PATPAINT** Combines the inverted source bitmap with the pattern using the Boolean OR operator. Combines the result of this operation with the destination bitmap using the Boolean OR operator.  
   
-- **SRCAND**合併使用布林值 AND 運算子的目的地和來源點陣圖的像素。  
+- **SRCAND** Combines pixels of the destination and source bitmaps using the Boolean AND operator.  
   
-- **SRCCOPY**將來源點陣圖複製到目的地點陣圖。  
+- **SRCCOPY** Copies the source bitmap to the destination bitmap.  
   
-- **SRCERASE**反轉目的地點陣圖，並將結果與使用布林值 AND 運算子的來源點陣圖。  
+- **SRCERASE** Inverts the destination bitmap and combines the result with the source bitmap using the Boolean AND operator.  
   
-- **SRCINVERT**合併使用布林值 XOR 運算子的目的地和來源點陣圖的像素。  
+- **SRCINVERT** Combines pixels of the destination and source bitmaps using the Boolean XOR operator.  
   
-- **SRCPAINT**合併使用布林值 OR 運算子的目的地和來源點陣圖的像素。  
+- **SRCPAINT** Combines pixels of the destination and source bitmaps using the Boolean OR operator.  
   
-- **WHITENESS**所有將輸出的變成白色。  
+- **WHITENESS** Turns all output white.  
   
-### <a name="return-value"></a>傳回值  
- 如果繪製了點陣圖即為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the bitmap is drawn; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式使用目的地裝置內容 (以 `SetStretchBltMode` 設定) 的縮放模式判斷如何縮放或壓縮點陣圖。  
+### <a name="remarks"></a>Remarks  
+ The function uses the stretching mode of the destination device context (set by `SetStretchBltMode`) to determine how to stretch or compress the bitmap.  
   
- `StretchBlt` 函式會將點陣圖從 `pSrcDC` 指定的來源裝置移到裝置內容物件代表的目的地裝置 (此物件的成員函式會被呼叫)。 `xSrc`、`ySrc`、`nSrcWidth` 和 `nSrcHeight` 參數定義來源矩形的左上角和維度。 *x*， *y*， `nWidth`，和`nHeight`左上角和目的地矩形的維度，提供給參數。 所指定的點陣作業*dwRop*定義如何合併來源點陣圖和已在目的地裝置上的位元。  
+ The `StretchBlt` function moves the bitmap from the source device given by `pSrcDC` to the destination device represented by the device-context object whose member function is being called. The `xSrc`, `ySrc`, `nSrcWidth`, and `nSrcHeight` parameters define the upper-left corner and dimensions of the source rectangle. The *x*, *y*, `nWidth`, and `nHeight` parameters give the upper-left corner and dimensions of the destination rectangle. The raster operation specified by *dwRop* defines how the source bitmap and the bits already on the destination device are combined.  
   
- 如果 `StretchBlt` 和 `nSrcWidth` 或 `nWidth` 和 `nSrcHeight` 參數的符號不同，`nHeight` 函式會建立點陣圖的鏡像。 如果 `nSrcWidth` and `nWidth` 的符號不同，函式會沿著 X 軸建立點陣圖的鏡像。 如果 `nSrcHeight` and `nHeight` 的符號不同，函式會沿著 Y 軸建立點陣圖的鏡像。  
+ The `StretchBlt` function creates a mirror image of a bitmap if the signs of the `nSrcWidth` and `nWidth` or `nSrcHeight` and `nHeight` parameters differ. If `nSrcWidth` and `nWidth` have different signs, the function creates a mirror image of the bitmap along the x-axis. If `nSrcHeight` and `nHeight` have different signs, the function creates a mirror image of the bitmap along the y-axis.  
   
- `StretchBlt` 函式會延伸或壓縮記憶體中的來源點陣圖，然後將結果複製到目的地。 如果要合併模式和結果，除非將延伸的來源點陣圖複製到目的地，否則不會進行合併。 如果使用筆刷，會使用在目的地裝置內容中選取的筆刷。 目的地座標會根據目的地裝置內容而轉換；來源座標會根據來源裝置內容而轉換。  
+ The `StretchBlt` function stretches or compresses the source bitmap in memory and then copies the result to the destination. If a pattern is to be merged with the result, it is not merged until the stretched source bitmap is copied to the destination. If a brush is used, it is the selected brush in the destination device context. The destination coordinates are transformed according to the destination device context; the source coordinates are transformed according to the source device context.  
   
- 如果目的地、來源和模式點陣圖的色彩格式不同，`StretchBlt` 會轉換來源和模式點陣圖以符合目的地點陣圖。 轉換中會使用目的地裝置内容的前景和背景色彩。  
+ If the destination, source, and pattern bitmaps do not have the same color format, `StretchBlt` converts the source and pattern bitmaps to match the destination bitmaps. The foreground and background colors of the destination device context are used in the conversion.  
   
- 如果 `StretchBlt` 必須將單色點陣圖轉換為彩色，會將白色位元 (1) 設為背景色彩，並將黑色位元 (0) 設為前景色彩。 若要將彩色轉換為單色，則會將符合背景色彩的像素轉換成白色 (1)，並將其他所有像素設為黑色 (0)。 會使用彩色裝置內容的前景和背景色彩。  
+ If `StretchBlt` must convert a monochrome bitmap to color, it sets white bits (1) to the background color and black bits (0) to the foreground color. To convert color to monochrome, it sets pixels that match the background color to white (1) and sets all other pixels to black (0). The foreground and background colors of the device context with color are used.  
   
- 並非所有的裝置皆支援 `StretchBlt` 函式。 若要判斷裝置是否支援`StretchBlt`，呼叫`GetDeviceCaps`成員函式**cdc:: GETDEVICECAPS**索引並檢查傳回值，如**RC_STRETCHBLT**旗標。  
+ Not all devices support the `StretchBlt` function. To determine whether a device supports `StretchBlt`, call the `GetDeviceCaps` member function with the **RASTERCAPS** index and check the return value for the **RC_STRETCHBLT** flag.  
   
-##  <a name="strokeandfillpath"></a>CDC::StrokeAndFillPath  
- 關閉任何開啟的圖形路徑中，使用目前的畫筆 strokes 外框的路徑並填滿其內部使用目前的筆刷。  
+##  <a name="strokeandfillpath"></a>  CDC::StrokeAndFillPath  
+ Closes any open figures in a path, strokes the outline of the path by using the current pen, and fills its interior by using the current brush.  
   
 ```  
 BOOL StrokeAndFillPath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 裝置內容必須包含已關閉的路徑。 `StrokeAndFillPath`成員函式具有相同的效果關閉所有開啟的圖表，在路徑中，而且繪製，並分別填入路徑，不同之處在於填滿的區域將不會重疊繪製的區域即使畫筆寬度僅能。  
+### <a name="remarks"></a>Remarks  
+ The device context must contain a closed path. The `StrokeAndFillPath` member function has the same effect as closing all the open figures in the path, and stroking and filling the path separately, except that the filled region will not overlap the stroked region even if the pen is wide.  
   
-##  <a name="strokepath"></a>CDC::StrokePath  
- 使用目前的畫筆來呈現指定的路徑。  
+##  <a name="strokepath"></a>  CDC::StrokePath  
+ Renders the specified path by using the current pen.  
   
 ```  
 BOOL StrokePath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 裝置內容必須包含已關閉的路徑。  
+### <a name="remarks"></a>Remarks  
+ The device context must contain a closed path.  
   
-##  <a name="tabbedtextout"></a>CDC::TabbedTextOut  
- 呼叫此成員函式可寫入的字元字串，在指定的位置，展開索引標籤的定位停駐點位置陣列中指定的值。  
+##  <a name="tabbedtextout"></a>  CDC::TabbedTextOut  
+ Call this member function to write a character string at the specified location, expanding tabs to the values specified in the array of tab-stop positions.  
   
 ```  
 virtual CSize TabbedTextOut(
@@ -6024,43 +6215,43 @@ CSize TabbedTextOut(
     int nTabOrigin);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定字串的起始點的邏輯 x 座標。  
+ Specifies the logical x-coordinate of the starting point of the string.  
   
  *y*  
- 指定字串的起始點的邏輯 y 座標。  
+ Specifies the logical y-coordinate of the starting point of the string.  
   
  `lpszString`  
- 指向要繪製的字元字串。 您可以將指標傳遞至字元陣列或[CString](../../atl-mfc-shared/reference/cstringt-class.md)這個參數的物件。  
+ Points to the character string to draw. You can pass either a pointer to an array of characters or a [CString](../../atl-mfc-shared/reference/cstringt-class.md) object for this parameter.  
   
  `nCount`  
- 指定字串中的字元數。 如果`nCount`為-1，長度會計算。  
+ Specifies the number of characters in the string. If `nCount` is -1, the length is calculated.  
   
  `nTabPositions`  
- 指定陣列中的定位停駐點位置的值數目。  
+ Specifies the number of values in the array of tab-stop positions.  
   
  `lpnTabStopPositions`  
- 指向陣列，其中包含定位停駐點位置 （以邏輯單位表示）。 必須排序定位停駐點，以遞增順序排列;最小的 x 值應該在陣列中的第一個項目。  
+ Points to an array containing the tab-stop positions (in logical units). The tab stops must be sorted in increasing order; the smallest x-value should be the first item in the array.  
   
  `nTabOrigin`  
- 指定要從中索引標籤會展開 （以邏輯單位表示） 的開始位置的 x 座標。  
+ Specifies the x-coordinate of the starting position from which tabs are expanded (in logical units).  
   
  `str`  
- A`CString`物件，其中包含指定的字元。  
+ A `CString` object that contains the specified characters.  
   
-### <a name="return-value"></a>傳回值  
- 形式的字串 （以邏輯單位表示） 的維度`CSize`物件。  
+### <a name="return-value"></a>Return Value  
+ The dimensions of the string (in logical units) as a `CSize` object.  
   
-### <a name="remarks"></a>備註  
- 文字是撰寫目前選取的字型。 如果`nTabPositions`為 0 和`lpnTabStopPositions`是**NULL**，索引標籤會展開成八次的平均字元寬度。  
+### <a name="remarks"></a>Remarks  
+ Text is written in the currently selected font. If `nTabPositions` is 0 and `lpnTabStopPositions` is **NULL**, tabs are expanded to eight times the average character width.  
   
- 如果`nTabPositions`為 1，[] 索引標籤中的第一個值所指定的距離相隔停駐點`lpnTabStopPositions`陣列。 如果`lpnTabStopPositions`陣列包含多個值、 定位點設定為最多指定的數字陣列中每個值`nTabPositions`。 `nTabOrigin`參數可讓應用程式呼叫`TabbedTextOut`函式數次的單一行。 如果應用程式會呼叫此函式一次以上與`nTabOrigin`每次設定為相同的值，函式會展開所有索引標籤相對於所指定的位置`nTabOrigin`。  
+ If `nTabPositions` is 1, the tab stops are separated by the distance specified by the first value in the `lpnTabStopPositions` array. If the `lpnTabStopPositions` array contains more than one value, a tab stop is set for each value in the array, up to the number specified by `nTabPositions`. The `nTabOrigin` parameter allows an application to call the `TabbedTextOut` function several times for a single line. If the application calls the function more than once with the `nTabOrigin` set to the same value each time, the function expands all tabs relative to the position specified by `nTabOrigin`.  
   
- 根據預設，函式不會使用或更新目前的位置。 如果應用程式需要更新目前的位置，它會呼叫此函式時，應用程式可以呼叫[SetTextAlign](#settextalign)成員函式`nFlags`設**TA_UPDATECP**。 當設定這個旗標時，Windows 會略過*x*和*y*參數在後續呼叫`TabbedTextOut`，改為使用目前的位置。  
+ By default, the current position is not used or updated by the function. If an application needs to update the current position when it calls the function, the application can call the [SetTextAlign](#settextalign) member function with `nFlags` set to **TA_UPDATECP**. When this flag is set, Windows ignores the *x* and *y* parameters on subsequent calls to `TabbedTextOut`, using the current position instead.  
   
-##  <a name="textout"></a>CDC::TextOut  
- 使用目前選取的字型，在指定的位置寫入字元字串。  
+##  <a name="textout"></a>  CDC::TextOut  
+ Writes a character string at the specified location using the currently selected font.  
   
 ```  
 virtual BOOL TextOut(
@@ -6076,35 +6267,35 @@ BOOL TextOut(
     const CString& str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *x*  
- 指定文字起點的邏輯 X 座標。  
+ Specifies the logical x-coordinate of the starting point of the text.  
   
  *y*  
- 指定文字起點的邏輯 Y 座標。  
+ Specifies the logical y-coordinate of the starting point of the text.  
   
  `lpszString`  
- 指向要繪製的字元字串。  
+ Points to the character string to be drawn.  
   
  `nCount`  
- 指定字串中的字元數。  
+ Specifies the number of characters in the string.  
   
  `str`  
- `CString` 物件，其中包含要繪製的字元。  
+ A `CString` object that contains the characters to be drawn.  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 字元原點在字元儲存格的左上角。 根據預設，函式不會使用或更新目前的位置。  
+### <a name="remarks"></a>Remarks  
+ Character origins are at the upper-left corner of the character cell. By default, the current position is not used or updated by the function.  
   
- 如果應用程式需要更新目前的位置時，它會呼叫`TextOut`，應用程式可以呼叫`SetTextAlign`成員函式`nFlags`設**TA_UPDATECP**。 當設定這個旗標時，Windows 會略過*x*和*y*參數在後續呼叫`TextOut`，改為使用目前的位置。  
+ If an application needs to update the current position when it calls `TextOut`, the application can call the `SetTextAlign` member function with `nFlags` set to **TA_UPDATECP**. When this flag is set, Windows ignores the *x* and *y* parameters on subsequent calls to `TextOut`, using the current position instead.  
   
-### <a name="example"></a>範例  
-  請參閱範例的[cdc:: beginpath](#beginpath)。  
+### <a name="example"></a>Example  
+  See the example for [CDC::BeginPath](#beginpath).  
   
-##  <a name="transparentblt"></a>CDC::TransparentBlt  
- 呼叫此成員函式，將對應從指定的來源裝置內容中，放入目的地裝置內容中的像素矩形的色彩資料位元區塊。  
+##  <a name="transparentblt"></a>  CDC::TransparentBlt  
+ Call this member function to transfer a bit-block of the color data, which corresponds to a rectangle of pixels from the specified source device context, into a destination device context.  
   
 ```  
 BOOL TransparentBlt(
@@ -6120,77 +6311,77 @@ BOOL TransparentBlt(
     UINT clrTransparent);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `xDest`  
- 指定邏輯的單位，目的地矩形左上角的 x 軸座標。  
+ Specifies the x-coordinate, in logical units, of the upper-left corner of the destination rectangle.  
   
  `yDest`  
- 指定邏輯的單位，目的地矩形左上角的 y 軸座標。  
+ Specifies the y-coordinate, in logical units, of the upper-left corner of the destination rectangle.  
   
  `nDestWidth`  
- 指定邏輯單元，目的矩形的寬度。  
+ Specifies the width, in logical units, of the destination rectangle.  
   
  `nDestHeight`  
- 指定邏輯單元，目的矩形的高度。  
+ Specifies the height, in logical units, of the destination rectangle.  
   
  `pSrcDC`  
- 來源裝置內容的指標。  
+ Pointer to the source device context.  
   
  `xSrc`  
- 指定 x 軸座標，以來源矩形的邏輯單位。  
+ Specifies the x-coordinate, in logical units, of the source rectangle.  
   
  `ySrc`  
- 指定 y 軸座標，以來源矩形的邏輯單位。  
+ Specifies the y-coordinate, in logical units, of the source rectangle.  
   
  `nSrcWidth`  
- 指定邏輯單元，來源矩形的寬度。  
+ Specifies the width, in logical units, of the source rectangle.  
   
  `nSrcHeight`  
- 指定邏輯單元，來源矩形的高度。  
+ Specifies the height, in logical units, of the source rectangle.  
   
  `clrTransparent`  
- 中要視為透明的來源點陣圖的 RGB 色彩。  
+ The RGB color in the source bitmap to treat as transparent.  
   
-### <a name="return-value"></a>傳回值  
- **TRUE**如果成功，否則**FALSE**。  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if successful; otherwise **FALSE**.  
   
-### <a name="remarks"></a>備註  
- `TransparentBlt`可讓透明度。也就是 RGB 色彩由`clrTransparent`呈現透明的傳輸。  
+### <a name="remarks"></a>Remarks  
+ `TransparentBlt` allows for transparency; that is, the RGB color indicated by `clrTransparent` is rendered transparent for the transfer.  
   
- 如需詳細資訊，請參閱[TransparentBlt](http://msdn.microsoft.com/library/windows/desktop/dd145141)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information, see [TransparentBlt](http://msdn.microsoft.com/library/windows/desktop/dd145141) in the Windows SDK.  
   
-##  <a name="updatecolors"></a>CDC::UpdateColors  
- 更新裝置內容比對目前的工作區中工作區，以像素 x 像素為基礎的系統調色盤的色彩。  
+##  <a name="updatecolors"></a>  CDC::UpdateColors  
+ Updates the client area of the device context by matching the current colors in the client area to the system palette on a pixel-by-pixel basis.  
   
 ```  
 void UpdateColors();
 ```  
   
-### <a name="remarks"></a>備註  
- 可能會呼叫非作用中視窗，以實現的邏輯色板`UpdateColors`作為系統調色盤變更時，重繪其工作區的替代方案。  
+### <a name="remarks"></a>Remarks  
+ An inactive window with a realized logical palette may call `UpdateColors` as an alternative to redrawing its client area when the system palette changes.  
   
- 如需使用色彩調色盤的詳細資訊，請參閱[UpdateColors](http://msdn.microsoft.com/library/windows/desktop/dd145166)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ For more information about using color palettes, see [UpdateColors](http://msdn.microsoft.com/library/windows/desktop/dd145166) in the Windows SDK.  
   
- `UpdateColors`成員函式通常會更新用戶端區域速度重新繪製區域。 不過，由於函式會執行系統調色盤變更之前，根據每個像素色彩的色彩轉譯，每次呼叫此函式就會導致某些色彩精確度遺失。  
+ The `UpdateColors` member function typically updates a client area faster than redrawing the area. However, because the function performs the color translation based on the color of each pixel before the system palette changed, each call to this function results in the loss of some color accuracy.  
   
-##  <a name="widenpath"></a>CDC::WidenPath  
- 如果路徑圖案使用目前選取的裝置內容到畫筆會繪製的區域來重新定義的目前路徑。  
+##  <a name="widenpath"></a>  CDC::WidenPath  
+ Redefines the current path as the area that would be painted if the path were stroked using the pen currently selected into the device context.  
   
 ```  
 BOOL WidenPath();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果函式成功則為非零，否則為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>備註  
- 此函式是成功，只有當目前的畫筆的第二個版本所建立的幾何畫筆`CreatePen`成員函式，或如果第一個版本建立畫筆`CreatePen`和裝置單位，大於 1 的寬度。 裝置內容必須包含已關閉的路徑。 在路徑中的任何 Bzier 曲線轉換成直線將逼近擴大的曲線的序列。 因此，沒有 Bzier 曲線保留在後面的路徑`WidenPath`呼叫。  
+### <a name="remarks"></a>Remarks  
+ This function is successful only if the current pen is a geometric pen created by the second version of `CreatePen` member function, or if the pen is created with the first version of `CreatePen` and has a width, in device units, of greater than 1. The device context must contain a closed path. Any Bzier curves in the path are converted to sequences of straight lines approximating the widened curves. As such, no Bzier curves remain in the path after `WidenPath` is called.  
   
-## <a name="see-also"></a>另請參閱  
- [CObject 類別](../../mfc/reference/cobject-class.md)   
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [CPaintDC 類別](../../mfc/reference/cpaintdc-class.md)   
- [CWindowDC 類別](../../mfc/reference/cwindowdc-class.md)   
- [CClientDC 類別](../../mfc/reference/cclientdc-class.md)   
- [CMetaFileDC 類別](../../mfc/reference/cmetafiledc-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CPaintDC Class](../../mfc/reference/cpaintdc-class.md)   
+ [CWindowDC Class](../../mfc/reference/cwindowdc-class.md)   
+ [CClientDC Class](../../mfc/reference/cclientdc-class.md)   
+ [CMetaFileDC Class](../../mfc/reference/cmetafiledc-class.md)
 

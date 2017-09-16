@@ -1,5 +1,5 @@
 ---
-title: "time_get_byname 類別 | Microsoft Docs"
+title: time_get_byname Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_get_byname
 - xloctime/std::time_get_byname
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 609bf85c8d56172f9498997e83740cf9620798dc
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 4179ade157e45c6ba746a6c7cccaaa8ae44310fc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timegetbyname-class"></a>time_get_byname 類別
-衍生的樣板類別描述可做為類型 `time_get`\<CharType, InputIterator> 的地區設定 facet 的物件。  
+# <a name="timegetbyname-class"></a>time_get_byname Class
+The derived template class describes an object that can serve as a locale facet of type `time_get`\<CharType, InputIterator>.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Elem, class InputIterator =
@@ -65,23 +64,23 @@ protected:
 };
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `_Locname`  
- 具名地區設定。  
+ A named locale.  
   
  `_Refs`  
- 初始參考計數。  
+ An initial reference count.  
   
-## <a name="requirements"></a>需求  
- 其行為取決於具名地區設定 `_Locname`。 每個建構函式會以 [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`) 初始化其基底物件。  
+## <a name="requirements"></a>Requirements  
+ Its behavior is determined by the named locale `_Locname`. Each constructor initializes its base object with [time_get](../standard-library/time-get-class.md#time_get)\<CharType, InputIterator>( `_Refs`).  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
- [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

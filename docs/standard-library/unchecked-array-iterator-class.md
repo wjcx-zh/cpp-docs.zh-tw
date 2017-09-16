@@ -1,5 +1,5 @@
 ---
-title: "unchecked_array_iterator 類別 | Microsoft Docs"
+title: unchecked_array_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unchecked_array_iterator
 - stdext::unchecked_array_iterator
 dev_langs:
 - C++
@@ -32,39 +31,39 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 850f1eced3ef5354a382d392c83b8180a18b4dfb
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2af98eeb1937f8494ef18a859518585d4c6337a5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator 類別
-`unchecked_array_iterator` 類別可讓您將陣列或指標包裝在未檢查的迭代器中。 使用這個類別做為原始指標或陣列的包裝函式 (使用 [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) 函式)，做為管理未檢查指標警告的目標方式，而非全域的關閉這些警告訊息。 如果可能，請優先使用這個類別的已檢查版本 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。  
+# <a name="uncheckedarrayiterator-class"></a>unchecked_array_iterator Class
+The `unchecked_array_iterator` class allows you to wrap an array or pointer into an unchecked iterator. Use this class as a wrapper (using the [make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator) function) for raw pointers or arrays as a targeted way to manage unchecked pointer warnings instead of globally silencing these warnings. If possible, prefer the checked version of this class, [checked_array_iterator](../standard-library/checked-array-iterator-class.md).  
   
 > [!NOTE]
->  這個類別是 C++ 標準程式庫的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。  
+>  This class is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Iterator>  
 class unchecked_array_iterator;
 ```  
   
-## <a name="remarks"></a>備註  
- 這個類別是在 [stdext](../standard-library/stdext-namespace.md) 命名空間中定義的。  
+## <a name="remarks"></a>Remarks  
+ This class is defined in the [stdext](../standard-library/stdext-namespace.md) namespace.  
   
- 這是 [checked_array_iterator 類別](../standard-library/checked-array-iterator-class.md)的未檢查版本，並支援所有相同的多載和成員。 如需已檢查的迭代器功能的詳細資訊和程式碼範例，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
+ This is the unchecked version of the [checked_array_iterator Class](../standard-library/checked-array-iterator-class.md) and supports all the same overloads and members. For more information on the checked iterator feature with code examples, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<iterator>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
   
- **命名空間：** stdext  
+ **Namespace:** stdext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

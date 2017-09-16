@@ -1,5 +1,5 @@
 ---
-title: "space_info 結構 | Microsoft Docs"
+title: space_info Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,20 +31,20 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: e8573fab6f0d1a1ad43a9be2e3be1ddd8f556748
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bd6c8f5e4107c785e1283c028dfcf4e3f7f5e1ef
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="spaceinfo-structure"></a>space_info 結構
-保留磁碟區的相關資訊。  
+# <a name="spaceinfo-structure"></a>space_info Structure
+Holds information about a volume.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
-struct space_info    {
+struct space_info   {
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
@@ -53,23 +53,23 @@ struct space_info    {
   
 ## <a name="members"></a>Members  
   
-### <a name="public-data-members"></a>公用資料成員  
+### <a name="public-data-members"></a>Public Data Members  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|`unsigned long long available`|表示可用來代表磁碟區資料的位元組數目。|  
-|`unsigned long long capacity`|表示磁碟區可以表示的總位元組數目。|  
-|`unsigned long long free`|表示不用來代表磁碟區資料的位元組數目。|  
+|`unsigned long long available`|Represents the number of bytes that are available to represent data on the volume.|  
+|`unsigned long long capacity`|Represents the total number of bytes that the volume can represent.|  
+|`unsigned long long free`|Represents the number of bytes that are not used to represent data on the volume.|  
   
-## <a name="requirements"></a>需求  
- **標頭︰** \<filesystem >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<filesystem>  
   
- **命名空間：**std::experimental::filesystem  
+ **Namespace:** std::experimental::filesystem  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
- [空間](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
- [檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)
+ [space](http://msdn.microsoft.com/en-us/7fce0b0e-523b-4598-b218-47245d0204ca)   
+ [File System Navigation (C++)](../standard-library/file-system-navigation.md)
 
 

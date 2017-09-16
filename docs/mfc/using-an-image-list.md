@@ -1,42 +1,61 @@
 ---
-title: "使用影像清單 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList 類別, 使用"
-  - "影像清單 [C++]"
-  - "清單 [C++], 影像"
+title: Using an Image List | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- lists [MFC], image
+- CImageList class [MFC], using
+- image lists [MFC]
 ms.assetid: e0aed188-a1e6-400e-9f51-033d61c5541f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 使用影像清單
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 28533532f589e58307ca6e5624a3faf758d24e06
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-影像清單的一般使用方式會遵循下列模式:  
+---
+# <a name="using-an-image-list"></a>Using an Image List
+Typical usage of an image list follows the pattern below:  
   
--   [CImageList](../mfc/reference/cimagelist-class.md) 建構物件並呼叫其中一個 [建立](../Topic/CImageList::Create.md) 的函式多載建立影像清單並附加至 `CImageList` 物件。  
+-   Construct a [CImageList](../mfc/reference/cimagelist-class.md) object and call one of the overloads of its [Create](../mfc/reference/cimagelist-class.md#create) function to create an image list and attach it to the `CImageList` object.  
   
--   如果您沒有將影像，當您建立影像清單中的，對影像清單中的影像會藉由呼叫 [加入](../Topic/CImageList::Add.md) 或 [讀取](../Topic/CImageList::Read.md) 成員函式。  
+-   If you didn't add images when you created the image list, add images to the image list by calling the [Add](../mfc/reference/cimagelist-class.md#add) or [Read](../mfc/reference/cimagelist-class.md#read) member function.  
   
--   使用影像清單的 [繪製](../Topic/CImageList::Draw.md) 成員函式，使影像清單的控制項會呼叫該控制項的適當的成員函式或從影像清單中繪製影像。  
+-   Associate the image list with a control by calling the appropriate member function of that control, or draw images from the image list yourself using the image list's [Draw](../mfc/reference/cimagelist-class.md#draw) member function.  
   
--   使用影像清單的內建支援拖曳，或許可以讓使用者將影像。  
+-   Perhaps allow the user to drag an image, using the image list's built-in support for dragging.  
   
 > [!NOTE]
->  如果影像清單建立 **new** 運算子，您必須在終結 `CImageList` 物件，當您變更時。  
+>  If the image list was created with the **new** operator, you must destroy the `CImageList` object when you are done with it.  
   
-## 請參閱  
- [使用 CImageList](../mfc/using-cimagelist.md)   
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

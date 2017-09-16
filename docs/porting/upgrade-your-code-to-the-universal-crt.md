@@ -1,7 +1,7 @@
 ---
-title: "將程式碼升級至通用 CRT | Microsoft Docs"
+title: Upgrade your code to the Universal CRT | Microsoft Docs
 ms.custom: 
-ms.date: 1/19/2017
+ms.date: 03/31/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -11,46 +11,52 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 65776206add29c817f78573379bed959a008f6e6
-ms.lasthandoff: 04/01/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 0f8742396a9ebe3780cb2c235238c9ce63986dc4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
-在 Visual Studio 2015 中，已重構 Microsoft C 執行階段程式庫 (CRT)。 標準 C 程式庫、POSIX 延伸模組以及 Microsoft 特定函式、巨集和全域變數都已移至新的程式庫：通用 C 執行階段程式庫 (通用 CRT 或 UCRT)。 CRT 的編譯器特有元件已移至新的 vcruntime 程式庫。  
-  
-UCRT 現在是 Windows 元件，而且隨附於 Windows 10。 UCRT 根據 C 呼叫慣例來支援穩定 ABI，並且緊密符合 ISO C99 標準，而且只有幾個例外狀況。 它不再繫結至特定編譯器版本。 您可以在 Visual Studio 2015 或 Visual Studio 2017 支援的任何 Windows 版本上使用 UCRT。 優點是每次升級 Visual Studio 時，您不再需要更新組建以將目標設為 CRT 的新版本。  
-  
-使用這項重構，許多 CRT 標頭檔、程式庫檔案和可轉散發套件的名稱和位置以及您程式碼所需的部署方法都已變更。 此外，UCRT 中的許多函式和巨集都已新增或變更，以改善標準一致性。 若要利用這些變更，必須更新您現有的程式碼和專案建置系統。  
-  
-## <a name="where-to-find-the-universal-crt-files"></a>找到通用 CRT 檔案的位置
-作為 Windows 元件，UCRT 程式庫檔案和標頭現在是 Windows 軟體開發套件 (SDK) 的一部分。 當您安裝 Visual Studio 時，也會安裝使用 UCRT 所需的一部分 Windows SDK。 Visual Studio 安裝程式會將 UCRT 標頭、程式庫和 DLL 檔案的位置新增至 Visual Studio 專案建置系統所使用的預設路徑。 當您更新 Visual C++ 專案時，如果它們使用預設專案設定，則 IDE 會自動尋找標頭檔的新位置，而且連結器會自動使用新的預設 UCRT 和 vcruntime 程式庫。 同樣地，如果您使用開發人員命令提示字元執行命令列建置，則會更新包含標頭和程式庫路徑的環境變數，同時自動運作。  
-  
-標準 C 程式庫標頭檔現在位於 Windows SDK 之 include 資料夾的 SDK 版本特定目錄中。 標頭檔的一般位置是在 Windows Kits\\10\\Include\\_sdk 版本_\\ucrt 的 Program Files 或 Program Files (x86) 目錄中，其中 _sdk 版本_對應至 Windows 版本或更新，例如，10.0.14393.0 表示 Windows 10 年度更新版。   
-  
-UCRT 靜態程式庫和動態連結虛設常式程式庫位於 Windows Kits\\10\\Lib\\_sdk 版本_\\ucrt\\_architecture_ 的 Program Files 或 Program Files (x86) 目錄中，其中 _architecture_ 是 ARM、x86 或 X64。 零售和偵錯靜態程式庫是 libucrt.lib 和 libucrtd.lib，而 UCRT DLL 的程式庫是 ucrt.lib 和 ucrtd.lib。  
-  
-零售和偵錯 UCRT DLL 位於不同的位置中。 零售 DLL 為可轉散發，並且位於 Windows Kits\\10\\Redist\\ucrt\\DLLs\\_architecture_\. 的 Program Files 或 Program Files (x86) 目錄中。偵錯 UCRT 程式庫為不可轉散發，並且位於 Windows Kits\\10\\bin\\_architecture_\\ucrt 資料夾的 Program Files 或 Program Files (x86) 目錄中。   
+# <a name="upgrade-your-code-to-the-universal-crt"></a>Upgrade your code to the Universal CRT
 
-C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援程式啟動所需的程式碼以及例外狀況處理和內建函式這類功能。 程式庫和其標頭檔仍然位於 Program Files 或 Program files (x86) 目錄的版本特定 Microsoft Visual Studio 資料夾中。 在 Visual Studio 2017 中，標頭位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_lib 版本_\\include 下，而且連結程式庫位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_li b版本_\\lib\\_architecture_ 下，其中_版本_是已安裝的 Visual Studio 版本、_lib 版本_是程式庫的版本，而 _architecture_ 是處理器架構。 OneCore 和 Store 的連結程式庫也可以位於 libraries 資料夾中。 靜態程式庫的零售和偵錯版本是 libvcruntime.lib 和 libvcruntimed.lib。 動態連結零售和偵錯虛設常式程式庫分別是 vcruntime.lib 和 vcruntimed.lib。  
+In Visual Studio 2015, the Microsoft C Runtime Library (CRT) was refactored. The Standard C Library, POSIX extensions and Microsoft-specific functions, macros, and global variables were moved into a new library, the Universal C Runtime Library (Universal CRT or UCRT). The compiler-specific components of the CRT were moved into a new vcruntime library.  
   
-當您更新 Visual C++ 專案時，如果您已將專案的 [連結器] 屬性 [忽略所有預設程式庫] 設定為 [是]，或在命令列上使用 /NODEFAULTLIB 連結器選項，則必須更新要包含新已重構程式庫的程式庫清單。 請將舊的 CRT 程式庫 (例如，libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib) 取代為對等的重構程式庫。 如需要使用之特定程式庫的相關資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。  
+The UCRT is now a Windows component, and ships as part of Windows 10. The UCRT supports a stable ABI based on C calling conventions, and it conforms closely to the ISO C99 standard, with only a few exceptions. It is no longer tied to a specific version of the compiler. You can use the UCRT on any version of Windows supported by Visual Studio 2015 or Visual Studio 2017. The benefit is that you no longer need to update your builds to target a new version of the CRT with every upgrade of Visual Studio.  
   
-## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和轉散發  
-因為 UCRT 現在是 Microsoft Windows 作業系統元件，所以是 Windows 10 中作業系統的一部分，並可透過 Windows Vista 到 Windows 8.1 的較舊作業系統的 Windows Update 取得。 Windows XP 具有可轉散發版本。 作為作業系統元件，不管 Visual Studio 和 Visual C++ 編譯器版本為何，Windows Update 都會管理 UCRT 更新和服務。 因為 UCRT 是 Windows 元件，所以基於更新的安全性和簡易性，以及較小的影像大小，強烈建議集中部署您應用程式的 UCRT。  
+With this refactoring, the names or locations of many CRT header files, library files, and redistributables, and the deployment methods required for your code have changed. In addition, many functions and macros in the UCRT were added or changed to improve standards conformance. To take advantage of these changes, your existing code and project build systems must be updated.  
   
-您可以在 Visual Studio 2015 或 Visual Studio 2017 支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 套件進行轉散發。 vcredist 套件包括 UCRT 元件，並將它們自動安裝在預設未安裝它們的 Windows 作業系統上。 如需詳細資訊，請參閱[轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)。  
+## <a name="where-to-find-the-universal-crt-files"></a>Where to find the Universal CRT files
+
+As a Windows component, the UCRT library files and headers are now part of the Windows software development kit (SDK). When you install Visual Studio, the parts of the Windows SDK required to use the UCRT are also installed. The Visual Studio installer adds the locations of the UCRT headers, libraries and DLL files to the default paths used by the Visual Studio project build system. When you update your Visual C++ projects, if they use the default project settings, the IDE automatically finds the new locations for header files, and the linker automatically uses the new default UCRT and vcruntime libraries. Similarly, if you use a Developer command prompt to do command-line builds, the environment variables that contain paths for headers and libraries are updated and work automatically as well.  
   
-支援 UCRT 的應用程式本機部署，但基於效能和安全性原因不建議使用。 進行應用程式本機部署的 DLL 隨附為 Windows SDK 的一部分，且位於 **redist** 子目錄下。 所需的 DLL 包括 ucrtbase.dll 和一組名為 api-ms-win-_subset_.dll 的 **APISet forwarder** DLL。 每個作業系統上所需的這組 DLL 都會不同，因此建議您在使用應用程式本機部署時包括所有 DLL。 如需應用程式本機部署的其他詳細資料和注意事項，請參閱 [Visual C++ 中的部署](../ide/deployment-in-visual-cpp.md)。  
+The Standard C Library header files are now found in the Windows SDK in an include folder in an SDK version-specific directory. A typical location for the header files is in the Program Files or Program Files (x86) directory under Windows Kits\\10\\Include\\_sdk-version_\\ucrt, where _sdk-version_ corresponds to a Windows version or update, for example, 10.0.14393.0 for the Anniversary Update of Windows 10.   
   
-## <a name="changes-to-the-universal-crt-functions-and-macros"></a>通用 CRT 函式和巨集的變更  
-已在 UCRT 中新增或更新許多函式，可改善 ISO C99 一致性，以及解決程式碼品質和安全性問題。 在某些情況下，這需要程式庫的重大變更。 如果您的程式碼在使用舊版 CRT 時能夠正確編譯，但在使用 UCRT 編譯時中斷，則必須變更程式碼才能利用這些更新和功能。 如需通用 CRT 中找到之 CRT 的詳細重大變更和更新清單，請參閱 Visual C++ 變更歷程記錄的 [C 執行階段程式庫 (CRT)](visual-cpp-change-history-2003-2015.md#BK_CRT) 區段。 它包括受影響標頭和函式的清單，可用來識別您程式碼中所需的變更。  
+The UCRT static libraries and dynamic link stub libraries are found in the Program Files or Program Files (x86) directory under Windows Kits\\10\\Lib\\_sdk-version_\\ucrt\\_architecture_, where _architecture_ is ARM, x86, or X64. The retail and debug static libraries are libucrt.lib and libucrtd.lib, and the libraries for the UCRT DLLs are ucrt.lib and ucrtd.lib.  
   
-## <a name="see-also"></a>另請參閱  
-[Visual C++ 移植和升級指南](visual-cpp-porting-and-upgrading-guide.md)  
-[潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)  
-[Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)  
+The retail and debug UCRT DLLs are found in separate locations. The retail DLLs are redistributable, and can be found in the Program Files or Program Files (x86) directory under Windows Kits\\10\\Redist\\ucrt\\DLLs\\_architecture_\. Debug UCRT libraries are not redistributable, and can be found in the Program Files or Program Files (x86) directory under Windows Kits\\10\\bin\\_architecture_\\ucrt folder.   
+
+The C and C++ compiler-specific runtime support library, **vcruntime**, contains the code required to support program startup and features such as exception handling and intrinsics. The library and its header files are still found in the version-specific Microsoft Visual Studio folder in your Program Files or Program files (x86) directory. In Visual Studio 2017, the headers are found under Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\include and the link libraries are found under Microsoft Visual Studio\\2017\\_edition_\\VC\\Tools\\MSVC\\_lib-version_\\lib\\_architecture_, where _edition_ is the edition of Visual Studio installed, _lib-version_ is the version of the libraries, and _architecture_ is the processor architecture. Link libraries for OneCore and Store are also found in the libraries folder. The retail and debug versions of the static library are libvcruntime.lib and libvcruntimed.lib. The dynamic link retail and debug stub libraries are vcruntime.lib and vcruntimed.lib, respectively.  
+  
+When you update your Visual C++ projects, if you have set the project's **Linker** property **Ignore All Default Libraries** to **Yes** or if you use the /NODEFAULTLIB linker option on the command line, then you must update your list of libraries to include the new, refactored libraries. Replace the old CRT library, for example, libcmt.lib, libcmtd.lib, msvcrt.lib, or msvcrtd.lib, with the equivalent refactored libraries. For information on the specific libraries to use, see [CRT Library Features](../c-runtime-library/crt-library-features.md).  
+  
+## <a name="deployment-and-redistribution-of-the-universal-crt"></a>Deployment and redistribution of the Universal CRT
+  
+Because the UCRT is now a Microsoft Windows operating system component, it is included as part of the operating system in Windows 10 and is available through Windows Update for older operating systems, Windows Vista through Windows 8.1. A redistributable version is available for Windows XP. As an operating system component, UCRT updates and servicing are managed by Windows Update independently of Visual Studio and Visual C++ compiler versions. Because the UCRT is a Windows component, for security and ease of updates, and a smaller image size, we strongly recommend central deployment of the UCRT for your app.  
+  
+You can use the UCRT on any version of Windows supported by Visual Studio 2015 or Visual Studio 2017. You can redistribute it using a vcredist package for supported versions of Windows other than Windows 10. The vcredist packages include the UCRT components and automatically install them on Windows operating systems that do not have them installed by default. For more information, see [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
+  
+App-local deployment of the UCRT is supported, though not recommended for both performance and security reasons. The DLLs for app-local deployment are included as part of the Windows SDK, under the **redist** subdirectory. The DLLs required include ucrtbase.dll and a set of **APISet forwarder** DLLs named api-ms-win-_subset_.dll. The set of DLLs required on each operating system varies, so we recommended that you include all of the DLLs when you use app-local deployment. For additional details and caveats about app-local deployment, see [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).  
+  
+## <a name="changes-to-the-universal-crt-functions-and-macros"></a>Changes to the Universal CRT functions and macros  
+
+Many functions were added or updated in the UCRT to improve ISO C99 conformance, and to address code quality and security issues. In some cases, this required breaking changes to the library. If your code compiled cleanly when using an older version of the CRT but breaks when compiled using the UCRT, you must change your code to take advantage of these updates and features. For a detailed listing of the breaking changes and updates to the CRT found in the Universal CRT, see the [C Runtime Library (CRT)](visual-cpp-change-history-2003-2015.md#BK_CRT) section of the Visual C++ change history. It includes a list of affected headers and functions that you can use to identify the changes needed in your code.  
+  
+## <a name="see-also"></a>See Also  
+
+[Visual C++ Porting and Upgrading Guide](visual-cpp-porting-and-upgrading-guide.md)  
+[Overview of potential upgrade issues (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Upgrading Projects from Earlier Versions of Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md)  
+[C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md)  
 

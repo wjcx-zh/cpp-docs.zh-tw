@@ -1,5 +1,5 @@
 ---
-title: "regex_traits 類別 | Microsoft Docs"
+title: regex_traits Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- regex_traits
 - regex/std::regex_traits
 - regex/std::regex_traits::char_type
 - regex/std::regex_traits::size_type
@@ -30,7 +29,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- regex_traits class
+- std::regex_traits [C++]
+- std::regex_traits [C++], char_type
+- std::regex_traits [C++], size_type
+- std::regex_traits [C++], string_type
+- std::regex_traits [C++], locale_type
+- std::regex_traits [C++], char_class_type
+- std::regex_traits [C++], length
+- std::regex_traits [C++], translate
+- std::regex_traits [C++], translate_nocase
+- std::regex_traits [C++], transform
+- std::regex_traits [C++], transform_primary
+- std::regex_traits [C++], lookup_classname
+- std::regex_traits [C++], lookup_collatename
+- std::regex_traits [C++], isctype
+- std::regex_traits [C++], value
+- std::regex_traits [C++], imbue
+- std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 caps.latest.revision: 19
 author: corob-msft
@@ -50,17 +65,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b7a7b0cfe5614cb87d82634e6d17643f5509ae13
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2ba77d9656a41d5046d1bd98221d235d8db04f3f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="regextraits-class"></a>regex_traits 類別
-描述進行比對的元素特性。  
+# <a name="regextraits-class"></a>regex_traits Class
+Describes characteristics of elements for matching.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class Elem>
 class regex_traits {  
@@ -89,31 +104,31 @@ public:
    locale_type getloc() const;
 };  
  ``` 
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- 要描述的字元項目類型。  
+ The character element type to describe.  
   
-## <a name="remarks"></a>備註  
- 範本類別會描述類型 `Elem`的各種規則運算式特性。 範本類別 [basic_regex 類別](../standard-library/basic-regex-class.md)會使用此資訊來管理 `Elem` 類型的項目。  
+## <a name="remarks"></a>Remarks  
+ The template class describes various regular expression traits for type `Elem`. The template class [basic_regex Class](../standard-library/basic-regex-class.md) uses this information to manipulate elements of type `Elem`.  
   
- 每個 `regex_traits` 物件都擁有一個類型 `regex_traits::locale` 的物件，這種類型可為其部分成員函式使用。 預設的地區設定是 `regex_traits::locale()`的複本。 成員函式 `imbue` 取代了地區設定物件，而成員函式 `getloc` 會傳回地區設定物件的複本。  
+ Each `regex_traits` object holds an object of type `regex_traits::locale` which is used by some of its member functions. The default locale is a copy of `regex_traits::locale()`. The member function `imbue` replaces the locale object, and the member function `getloc` returns a copy of the locale object.  
   
-## <a name="requirements"></a>需求  
- **標頭︰**\<regex>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<regex>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
 ##  <a name="char_class_type"></a>  regex_traits::char_class_type  
- 字元類別指示項的類型。  
+ The type of character class designators.  
   
 ```  
 typedef T8 char_class_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此類型是指定字元類別之未指定類型的同義字。 這個類型的值可以透過 `|` 運算子來結合，以指定做為運算元所指定之類別聯集的字元類別。  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for an unspecified type that designates character classes. Values of this type can be combined using the `|` operator to designate character classes that are the union of the classes designated by the operands.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_char_class_type.cpp   
@@ -185,16 +200,16 @@ hex C == 12
 ```  
   
 ##  <a name="char_type"></a>  regex_traits::char_type  
- 元素的類型。  
+ The type of an element.  
   
 ```  
 typedef Elem char_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- typedef 是範本引數 `Elem`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for the template argument `Elem`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_char_type.cpp   
@@ -266,16 +281,16 @@ hex C == 12
 ```  
   
 ##  <a name="getloc"></a>  regex_traits::getloc  
- 傳回儲存的地區設定物件。  
+ Returns the stored locale object.  
   
 ```  
 locale_type getloc() const;
 ```  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回儲存的 `locale` 物件。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the stored `locale` object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_getloc.cpp   
@@ -347,20 +362,20 @@ hex C == 12
 ```  
   
 ##  <a name="imbue"></a>  regex_traits::imbue  
- 修改儲存的地區設定物件。  
+ Alters the stored locale object.  
   
 ```  
 locale_type imbue(locale_type loc);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `loc`  
- 要儲存的地區設定物件。  
+ The locale object to store.  
   
-### <a name="remarks"></a>備註  
- 成員函式會將 `loc` 複製到儲存的 `locale` 物件，並傳回已儲存 `locale` 物件之先前值的複本。  
+### <a name="remarks"></a>Remarks  
+ The member function copies `loc` to the stored `locale` object and returns a copy of the previous value of the stored `locale` object.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_imbue.cpp   
@@ -432,23 +447,23 @@ hex C == 12
 ```  
   
 ##  <a name="isctype"></a>  regex_traits::isctype  
- 測試是否有類別成員資格。  
+ Tests for class membership.  
   
 ```  
 bool isctype(char_type ch, char_class_type cls) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 待測試的項目。  
+ The element to test.  
   
  `cls`  
- 做為測試對象的類別。  
+ The classes to test for.  
   
-### <a name="remarks"></a>備註  
- 只有在字元 `ch` 位於 `cls`所指定的字元類別時，此成員函式才會傳回 true。  
+### <a name="remarks"></a>Remarks  
+ The member function returns true only if the character `ch` is in the character class designated by `cls`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_isctype.cpp   
@@ -520,20 +535,20 @@ hex C == 12
 ```  
   
 ##  <a name="length"></a>  regex_traits::length  
- 傳回 nul-terminated 序列的長度。  
+ Returns the length of a nul-terminated sequence.  
   
 ```  
 static size_type length(const char_type *str);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `str`  
- nul-terminated 序列。  
+ The nul-terminated sequence.  
   
-### <a name="remarks"></a>備註  
- 此靜態成員函式傳回 `std::char_traits<char_type>::length(str)`。  
+### <a name="remarks"></a>Remarks  
+ The static member function returns `std::char_traits<char_type>::length(str)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_length.cpp   
@@ -605,16 +620,16 @@ hex C == 12
 ```  
   
 ##  <a name="locale_type"></a>  regex_traits::locale_type  
- 儲存的地區設定物件類型。  
+ The type of the stored locale object.  
   
 ```  
 typedef T7 locale_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- Typedef 是封裝地區設定之類型的同義字。 在特製化 `regex_traits<char>` 和 `regex_traits<wchar_t>` 時，此為 `std::locale`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for a type that encapsulates locales. In the specializations `regex_traits<char>` and `regex_traits<wchar_t>` it is a synonym for `std::locale`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_locale_type.cpp   
@@ -686,28 +701,28 @@ hex C == 12
 ```  
   
 ##  <a name="lookup_classname"></a>  regex_traits::lookup_classname  
- 將序列對應至字元類別。  
+ Maps a sequence to a character class.  
   
 ```  
 template <class FwdIt>  
 char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `first`  
- 要查閱之序列的開頭。  
+ Beginning of sequence to look up.  
   
  `last`  
- 要查閱之序列的結尾。  
+ End of sequence to look up.  
   
-### <a name="remarks"></a>備註  
- 成員函式會傳回一個值，指定由字元序列命名、依引數指向的字元類別。 此值不依存於序列中字元的大小寫。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a value that designates the character class named by the character sequence pointed to by its arguments. The value does not depend on the case of the characters in the sequence.  
   
- 特製化 `regex_traits<char>` 會辨識名稱 `"d"`、`"s"`、`"w"`、`"alnum"`、`"alpha"`、`"blank"`、`"cntrl"`、`"digit"`、`"graph"`、`"lower"`、`"print"`、`"punct"`、`"space"`、`"upper"` 和 `"xdigit"`，且完全不考量大小寫。  
+ The specialization `regex_traits<char>` recognizes the names `"d"`, `"s"`, `"w"`, `"alnum"`, `"alpha"`, `"blank"`, `"cntrl"`, `"digit"`, `"graph"`, `"lower"`, `"print"`, `"punct"`, `"space"`, `"upper"`, and `"xdigit"`, all without regard to case.  
   
- 特製化 `regex_traits<wchar_t>` 會辨識名稱 `L"d"`、`L"s"`、`L"w"`、`L"alnum"`、`L"alpha"`、`L"blank"`、`L"cntrl"`、`L"digit"`、`L"graph"`、`L"lower"`、`L"print"`、`L"punct"`、`L"space"`、`L"upper"` 和 `L"xdigit"`，且完全不考量大小寫。  
+ The specialization `regex_traits<wchar_t>` recognizes the names `L"d"`, `L"s"`, `L"w"`, `L"alnum"`, `L"alpha"`, `L"blank"`, `L"cntrl"`, `L"digit"`, `L"graph"`, `L"lower"`, `L"print"`, `L"punct"`, `L"space"`, `L"upper"`, and `L"xdigit"`, all without regard to case.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_lookup_classname.cpp   
@@ -779,24 +794,24 @@ hex C == 12
 ```  
   
 ##  <a name="lookup_collatename"></a>  regex_traits::lookup_collatename  
- 將序列對應至定序項目。  
+ Maps a sequence to a collating element.  
   
 ```  
 template <class FwdIt>  
 string_type lookup_collatename(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `first`  
- 要查閱之序列的開頭。  
+ Beginning of sequence to look up.  
   
  `last`  
- 要查閱之序列的結尾。  
+ End of sequence to look up.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回含有對應至序列 `[first, last)`之定序項目的字串物件；如果序列不是有效的定序項目，則傳回空字串。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a string object containing the collating element corresponding to the sequence `[first, last)`, or an empty string if the sequence is not a valid collating element.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_lookup_collatename.cpp   
@@ -868,16 +883,16 @@ hex C == 12
 ```  
   
 ##  <a name="regex_traits"></a>  regex_traits::regex_traits  
- 建構物件。  
+ Constructs the object.  
   
 ```  
 regex_traits();
 ```  
   
-### <a name="remarks"></a>備註  
- 建構函式會建構已儲存的 `locale` 物件初始化為預設地區設定的物件。  
+### <a name="remarks"></a>Remarks  
+ The constructor constructs an object whose stored `locale` object is initialized to the default locale.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_construct.cpp   
@@ -949,18 +964,18 @@ hex C == 12
 ```  
   
 ##  <a name="size_type"></a>  regex_traits::size_type  
- 序列長度的類型。  
+ The type of a sequence length.  
   
 ```  
 typedef T6 size_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此 typedef 是不帶正負號之整數類型的同義字。 在特製化 `regex_traits<char>` 和 `regex_traits<wchar_t>` 時，此為 `std::size_t` 的同義字。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for an unsigned integral type. In the specializations `regex_traits<char>` and `regex_traits<wchar_t>` it is a synonym for `std::size_t`.  
   
- 此 typedef 是 `std::size_t` 的同義字。  
+ The typedef is a synonym for `std::size_t`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_size_type.cpp   
@@ -1032,16 +1047,16 @@ hex C == 12
 ```  
   
 ##  <a name="string_type"></a>  regex_traits::string_type  
- 元素字串的類型。  
+ The type of a string of elements.  
   
 ```  
 typedef basic_string<Elem> string_type;  
 ```  
   
-### <a name="remarks"></a>備註  
- 此 typedef 是 `basic_string<Elem>`的同義字。  
+### <a name="remarks"></a>Remarks  
+ The typedef is a synonym for `basic_string<Elem>`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_string_type.cpp   
@@ -1113,24 +1128,24 @@ hex C == 12
 ```  
   
 ##  <a name="transform"></a>  regex_traits::transform  
- 轉換成相等的已排序序列。  
+ Converts to equivalent ordered sequence.  
   
 ```  
 template <class FwdIt>  
 string_type transform(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `first`  
- 要轉換之序列的開頭。  
+ Beginning of sequence to transform.  
   
  `last`  
- 要轉換之序列的結尾。  
+ End of sequence to transform.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回根據儲存的 `locale` 物件，使用轉換規則所產生的字串。 至於迭代器範圍 `[first1, last1)` 和 `[first2, last2)`所指定的兩個字元序列，如果迭代器範圍 `transform(first1, last1) < transform(first2, last2)` 所指定的字元序列排在迭代器範圍 `[first1, last1)` 所指定的字元序列前面，則 `[first2, last2)`。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a string that it generates by using a transformation rule that depends on the stored `locale` object. For two character sequences designated by the iterator ranges `[first1, last1)` and `[first2, last2)`, `transform(first1, last1) < transform(first2, last2)` if the character sequence designated by the iterator range `[first1, last1)` sorts before the character sequence designated by the iterator range `[first2, last2)`.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_transform.cpp   
@@ -1202,24 +1217,24 @@ hex C == 12
 ```  
   
 ##  <a name="transform_primary"></a>  regex_traits::transform_primary  
- 轉換成相等且不區分大小寫的已排序序列。  
+ Converts to equivalent caseless ordered sequence.  
   
 ```  
 template <class FwdIt>  
 string_type transform_primary(FwdIt first, FwdIt last) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `first`  
- 要轉換之序列的開頭。  
+ Beginning of sequence to transform.  
   
  `last`  
- 要轉換之序列的結尾。  
+ End of sequence to transform.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回根據儲存的 `locale` 物件，使用轉換規則所產生的字串。 至於迭代器範圍 `[first1, last1)` 和 `[first2, last2)`所指定的兩個字元序列，如果迭代器範圍 `transform_primary(first1, last1) < transform_primary(first2, last2)` 所指定的字元序列排在迭代器範圍 `[first1, last1)` 所指定的字元序列前面，則 `[first2, last2)` ，而不必考慮大小寫或腔調字。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a string that it generates by using a transformation rule that depends on the stored `locale` object. For two character sequences designated by the iterator ranges `[first1, last1)` and `[first2, last2)`, `transform_primary(first1, last1) < transform_primary(first2, last2)` if the character sequence designated by the iterator range `[first1, last1)` sorts before the character sequence designated by the iterator range `[first2, last2)` without regard for case or accents.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_transform_primary.cpp   
@@ -1291,20 +1306,20 @@ hex C == 12
 ```  
   
 ##  <a name="translate"></a>  regex_traits::translate  
- 轉換成相等的相符元素。  
+ Converts to equivalent matching element.  
   
 ```  
 char_type translate(char_type ch) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 要轉換的項目。  
+ The element to convert.  
   
-### <a name="remarks"></a>備註  
- 使用取決於預存 `locale` 物件的轉換規則，成員函式會傳回它產生的字元。 至於兩個 `char_type` 物件 `ch1` 和 `ch2`，唯有 `translate(ch1) == translate(ch2)` 和 `ch1` 符合這個情況：一個發生在規則運算式定義，另一個發生在區分地區設定相符項目之目標序列的對應位置時，才會是 `ch2` 。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a character that it generates by using a transformation rule that depends on the stored `locale` object. For two `char_type` objects `ch1` and `ch2`, `translate(ch1) == translate(ch2)` only if `ch1` and `ch2` should match when one occurs in the regular expression definition and the other occurs at a corresponding position in the target sequence for a locale-sensitive match.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_translate.cpp   
@@ -1376,20 +1391,20 @@ hex C == 12
 ```  
   
 ##  <a name="translate_nocase"></a>  regex_traits::translate_nocase  
- 轉換成相等且不區分大小寫的相符項目。  
+ Converts to equivalent caseless matching element.  
   
 ```  
 char_type translate_nocase(char_type ch) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 要轉換的項目。  
+ The element to convert.  
   
-### <a name="remarks"></a>備註  
- 使用取決於預存 `locale` 物件的轉換規則，成員函式會傳回它產生的字元。 至於兩個 `char_type` 物件 `ch1` 和 `ch2`，唯有 `translate_nocase(ch1) == translate_nocase(ch2)` 和 `ch1` 符合這個情況：一個發生在規則運算式定義，另一個發生在區分大小寫相符項目之目標序列的對應位置時，才會是 `ch2` 。  
+### <a name="remarks"></a>Remarks  
+ The member function returns a character that it generates by using a transformation rule that depends on the stored `locale` object. For two `char_type` objects `ch1` and `ch2`, `translate_nocase(ch1) == translate_nocase(ch2)` only if `ch1` and `ch2` should match when one occurs in the regular expression definition and the other occurs at a corresponding position in the target sequence for a case-insensitive match.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_translate_nocase.cpp   
@@ -1461,23 +1476,23 @@ hex C == 12
 ```  
   
 ##  <a name="value"></a>  regex_traits::value  
- 將項目轉換成數值。  
+ Converts an element to a digit value.  
   
 ```  
 int value(Elem ch, int radix) const;
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `ch`  
- 要轉換的項目。  
+ The element to convert.  
   
  `radix`  
- 要使用的算術基底。  
+ The arithmetic base to use.  
   
-### <a name="remarks"></a>備註  
- 此成員函式會傳回以基底 `ch` 中字元 `radix`表示的值；如果 `ch` 不是基底 `radix`中的有效數字，則傳回 -1。 此函式只會透過 8，10 或 16 的 `radix` 引數進行呼叫。  
+### <a name="remarks"></a>Remarks  
+ The member function returns the value represented by the character `ch` in the base `radix`, or -1 if `ch` is not a valid digit in the base `radix`. The function will only be called with a `radix` argument of 8, 10, or 16.  
   
-### <a name="example"></a>範例  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__regex__regex_traits_value.cpp   
@@ -1548,16 +1563,16 @@ class digit == d == true
 hex C == 12  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
 [\<regex>](../standard-library/regex.md)  
-[regex_constants 類別](../standard-library/regex-constants-class.md)  
-[regex_error 類別](../standard-library/regex-error-class.md)  
-[\<regex> 函式](../standard-library/regex-functions.md)  
-[regex_iterator 類別](../standard-library/regex-iterator-class.md)  
-[\<regex> 運算子](../standard-library/regex-operators.md)  
-[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
- [regex_traits\<char> 類別](../standard-library/regex-traits-char-class.md)   
- [regex_traits\<wchar_t> 類別](../standard-library/regex-traits-wchar-t-class.md)
+ [regex_traits\<char> Class](../standard-library/regex-traits-char-class.md)   
+ [regex_traits\<wchar_t> Class](../standard-library/regex-traits-wchar-t-class.md)
 
 

@@ -1,84 +1,102 @@
 ---
-title: "容器：進階功能 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "容器/伺服器應用程式 [C++]"
-  - "容器 [C++], 進階功能"
-  - "容器 [C++], 容器應用程式"
-  - "容器 [C++], 內嵌 OLE 物件的連結"
-  - "內嵌物件 [C++]"
-  - "連結 [C++], 內嵌 OLE 物件的"
-  - "OLE 容器, 進階功能"
-  - "OLE 控制項, 容器"
-  - "伺服器/容器應用程式"
+title: 'Containers: Advanced Features | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- links [MFC], to embedded OLE objects
+- containers [MFC], links to embedded OLE objects
+- containers [MFC], advanced features
+- container/server applications [MFC]
+- embedded objects [MFC]
+- OLE controls [MFC], containers
+- OLE containers [MFC], advanced features
+- server/container applications [MFC]
+- containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 容器：進階功能
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c598d96f64dc309cbd80797879c3810bdd21d235
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明的必要步驟合併任意進階功能加入至現有的容器應用程式中。  這些特性包括：  
+---
+# <a name="containers-advanced-features"></a>Containers: Advanced Features
+This article describes the steps necessary to incorporate optional advanced features into existing container applications. These features are:  
   
--   [為容器和伺服器的應用程式](#_core_creating_a_container.2f.server_application)  
+-   [An application that is both a container and a server](#_core_creating_a_container_server_application)  
   
--   [內嵌物件的一個 OLE 連結。](#_core_links_to_embedded_objects)  
+-   [An OLE link to an embedded object](#_core_links_to_embedded_objects)  
   
-##  <a name="_core_creating_a_container.2f.server_application"></a> 建立容器\/伺服器應用程式。  
- 容器\/伺服器應用程式為容器和伺服器的應用程式。  視窗的 Microsoft Word 是這樣的範例。  您可以在其他應用程式中嵌入文件視窗的文字，然後，您也可以在 Windows 文件的文字內嵌項目。  修改您的容器應用程式處理序是容器和全伺服器 \(您無法建立組合容器\/miniserver 應用程式\) 類似於建立的完整伺服器處理序。  
+##  <a name="_core_creating_a_container_server_application"></a> Creating a Container/Server Application  
+ A container/server application is an application that acts as both a container and a server. Microsoft Word for Windows is an example of this. You can embed Word for Windows documents in other applications, and you can also embed items in Word for Windows documents. The process for modifying your container application to be both a container and a full server (you cannot create a combination container/miniserver application) is similar to the process for creating a full server.  
   
- 這篇文章 [伺服器:實作伺服器](../mfc/servers-implementing-a-server.md) 列出需要的工作實作伺服器應用程式。  如果轉換容器應用程式到容器\/伺服器應用程式，則您必須執行一些相同的工作，將程式碼加入至容器。  以下列出重要的考量:  
+ The article [Servers: Implementing a Server](../mfc/servers-implementing-a-server.md) lists a number of tasks required to implement a server application. If you convert a container application to a container/server application, then you need to perform some of those same tasks, adding code to the container. The following lists the important things to consider:  
   
--   容器程式碼由應用程式精靈建立已經初始化 OLE 子系統。  您不需要變更或加入該支援。  
+-   The container code created by the application wizard already initializes the OLE subsystem. You will not need to change or add anything for that support.  
   
--   文件類別的基底類別是 `COleDocument`，變更基底類別加入至 `COleServerDoc`。  
+-   Wherever the base class of a document class is `COleDocument`, change the base class to `COleServerDoc`.  
   
--   當伺服器使用就地編輯時，請覆寫 `COleClientItem::CanActivate` 避免編輯項目。  
+-   Override `COleClientItem::CanActivate` to avoid editing items in place while the server itself is being used to edit in place.  
   
-     例如， MFC OLE 範例 [OCLIENT](../top/visual-cpp-samples.md) 內嵌了容器\/伺服器應用程式建立項目。  您開啟 OCLIENT 應用程式，而且該項目由您的容器\/伺服器應用程式建立的就地編輯。  當編輯應用程式的項目時，您決定要內嵌 MFC OLE 範例[HIERSVR](../top/visual-cpp-samples.md)建立的項目。  若要這樣做，您無法使用就地啟動。  您必須完全開啟 HIERSVR 啟動這個項目。  因為 MFC 程式庫不支援這個 OLE 功能，覆寫 `COleClientItem::CanActivate` 可讓您檢查條件並防止在應用程式中可能的執行階段錯誤。  
+     For example, the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) has embedded an item created by your container/server application. You open the OCLIENT application and in-place edit the item created by your container/server application. While editing your application's item, you decide you want to embed an item created by the MFC OLE sample [HIERSVR](../visual-cpp-samples.md). To do this, you cannot use in-place activation. You must fully open HIERSVR to activate this item. Because the Microsoft Foundation Class Library does not support this OLE feature, overriding `COleClientItem::CanActivate` allows you to check for this situation and prevent a possible run-time error in your application.  
   
- 如果您建立新的應用程式並想要它當做容器\/伺服器應用程式，請選取 OLE 選項對話方塊的選項在應用程式精靈和這個支援將會自動建立。  如需詳細資訊，請參閱文件 [概觀:建立 ActiveX 控制項容器](../mfc/reference/creating-an-mfc-activex-control-container.md)。  如需 MFC 範例的詳細資訊，請參閱 MFC 範例。  
+ If you are creating a new application and want it to function as a container/server application, choose that option in the OLE Options dialog box in the application wizard and this support will be created automatically. For more information, see the article [Overview: Creating an ActiveX Control Container](../mfc/reference/creating-an-mfc-activex-control-container.md). For information about MFC samples, see MFC Samples.  
   
- 請注意您無法插入 MDI 應用程式至本身。  為容器\/伺服器的應用程式不能插入至本身，除非它是 SDI 應用程式。  
+ Note that you cannot insert an MDI application into itself. An application that is a container/server cannot be inserted into itself unless it is an SDI application.  
   
-##  <a name="_core_links_to_embedded_objects"></a> 內嵌物件的連結  
- 內嵌物件功能的連結可讓使用者建立一個 OLE 連結的資料加入至容器應用程式內的內嵌物件。  例如，建立包含內嵌報表的文書處理器的文件。  如果您的內嵌物件，它的應用程式支援連結可能貼上連結至文書處理器之資料的報表。  這項功能可讓您的應用程式使用報表中包含的資訊，而不需要知道放置初始取得的文書處理器。  
+##  <a name="_core_links_to_embedded_objects"></a> Links to Embedded Objects  
+ The Links to Embedded Objects feature enables a user to create a document with an OLE link to an embedded object inside your container application. For example, create a document in a word processor containing an embedded spreadsheet. If your application supports links to embedded objects, it could paste a link to the spreadsheet contained in the word processor's document. This feature allows your application to use the information contained in the spreadsheet without knowing where the word processor originally got it.  
   
-#### 在應用程式的內嵌物件連接  
+#### <a name="to-link-to-embedded-objects-in-your-application"></a>To link to embedded objects in your application  
   
-1.  從 `COleLinkingDoc` 衍生您自己的文件類別而不是 `COleDocument`。  
+1.  Derive your document class from `COleLinkingDoc` instead of `COleDocument`.  
   
-2.  建立 OLE 類別 ID \(**CLSID**\) 應用程式中使用類別 ID 產生器隨附 OLE 開發工具。  
+2.  Create an OLE class ID (**CLSID**) for your application by using the Class ID Generator included with the OLE Development Tools.  
   
-3.  註冊 OLE 的應用程式。  
+3.  Register the application with OLE.  
   
-4.  建立 `COleTemplateServer` 物件做為應用程式類別的成員。  
+4.  Create a `COleTemplateServer` object as a member of your application class.  
   
-5.  在您的應用程式類別的 `InitInstance` 成員函式，請執行下列步驟:  
+5.  In your application class's `InitInstance` member function, do the following:  
   
-    -   藉由呼叫物件的 `ConnectTemplate` 成員函式連接至您的文件範本的 `COleTemplateServer` 物件。  
+    -   Connect your `COleTemplateServer` object to your document templates by calling the object's `ConnectTemplate` member function.  
   
-    -   呼叫 **COleTemplateServer::RegisterAll** 成員函式來註冊這個 OLE 系統的所有類別物件。  
+    -   Call the **COleTemplateServer::RegisterAll** member function to register all class objects with the OLE system.  
   
-    -   請呼叫 `COleTemplateServer::UpdateRegistry`。  如果應用程式未啟動與「\/Embedded」參數，對 `UpdateRegistry` 的唯一參數應該是 `OAT_CONTAINER` 。  這個註冊應用程式做為可以支援連接至內嵌物件的容器。  
+    -   Call `COleTemplateServer::UpdateRegistry`. The only parameter to `UpdateRegistry` should be `OAT_CONTAINER` if the application is not launched with the "/Embedded" switch. This registers the application as a container that can support links to embedded objects.  
   
-         如果應用程式用「\/Embedded」參數啟動，不應該顯示它的主視窗，類似於伺服器應用程式。  
+         If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.  
   
- MFC OLE 範例 [OCLIENT](../top/visual-cpp-samples.md) 實作這個功能。  如需有關如何進行的範例，請在這個範例應用程式 OCLIENT.CPP 檔案的 `InitInstance` 函式。  
+ The MFC OLE sample [OCLIENT](../visual-cpp-samples.md) implements this feature. For an example of how this is done, see the `InitInstance` function in the OCLIENT.CPP file of this sample application.  
   
-## 請參閱  
- [容器](../mfc/containers.md)   
- [伺服器](../mfc/servers.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Servers](../mfc/servers.md)
+
+

@@ -1,54 +1,73 @@
 ---
-title: "建立及使用控制項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "通用控制項 [C++], 關於通用控制項"
-  - "控制項 [MFC], 為對話方塊建立"
-  - "Windows 通用控制項 [C++], 關於通用控制項"
+title: Making and Using Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], creating for dialog boxes
+- Windows common controls [MFC], about common controls
+- common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 建立及使用控制項
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65301b0ebc21425ec60ff0b51789f5c469942c8c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-您在對話方塊的大部分控制項在 Visual C\+\+ [對話方塊編輯器](../mfc/dialog-editor.md)。  但是，您也可以在任何對話方塊或視窗中的控制項。  
+---
+# <a name="making-and-using-controls"></a>Making and Using Controls
+You make most controls for dialog boxes in the Visual C++ [dialog editor](../windows/dialog-editor.md). But you can also create controls in any dialog box or window.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [在對話方塊中使用通用控制項](../mfc/using-common-controls-in-a-dialog-box.md)  
+-   [Using common controls in a dialog box](../mfc/using-common-controls-in-a-dialog-box.md)  
   
--   [使用對話方塊編輯器加入控制項](../mfc/using-the-dialog-editor-to-add-controls.md)  
+-   [Using the dialog editor to add controls](../mfc/using-the-dialog-editor-to-add-controls.md)  
   
--   [手動加入控制項](../mfc/adding-controls-by-hand.md) \(沒有對話方塊編輯器\)  
+-   [Adding controls by hand](../mfc/adding-controls-by-hand.md) (without the dialog editor)  
   
--   [從標準控制項衍生控制項](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Deriving controls from a standard control](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [將通用控制項做為子視窗使用](../mfc/using-a-common-control-as-a-child-window.md)  
+-   [Using a common control as a child window](../mfc/using-a-common-control-as-a-child-window.md)  
   
--   [從通用控制項接收告知](../mfc/receiving-notification-from-common-controls.md)  
+-   [Receiving notification from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [使用程式碼精靈的控制項類型安全存取](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
+-   [Type-Safe Access to Controls With Code Wizards](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
   
--   個別控制項:為連結參閱 [控制項](../mfc/controls-mfc.md) 到所有通用控制項  
+-   Individual controls: see [Controls](../mfc/controls-mfc.md) for links to all common controls  
   
--   [對話方塊](../mfc/dialog-boxes.md)  
+-   [Dialog boxes](../mfc/dialog-boxes.md)  
   
--   [對話方塊列](../mfc/dialog-bars.md)  
+-   [Dialog bars](../mfc/dialog-bars.md)  
   
-## 請參閱  
- [控制項](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

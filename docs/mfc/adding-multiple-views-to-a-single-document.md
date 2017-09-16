@@ -1,105 +1,124 @@
 ---
-title: "將多個檢視加入至單一文件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件, 多重檢視"
-  - "多重檢視, SDI 應用程式"
-  - "單一文件介面 (SDI), 加入檢視"
-  - "檢視, SDI 應用程式"
+title: Adding Multiple Views to a Single Document | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- multiple views [MFC], SDI applications
+- documents [MFC], multiple views
+- single document interface (SDI), adding views
+- views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 將多個檢視加入至單一文件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3fc5518d9212f5b22d13cb72da270c24cbc47e70
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在單一文件介面 \(SDI\) \(SDI\) 應用程式建立與 Microsoft Foundation Class \(MFC\) 程式庫，每個資料型別與單一檢視型別。  在某些情況下，可以交換的文件的目前檢視有新的檢視是適當的。  
+---
+# <a name="adding-multiple-views-to-a-single-document"></a>Adding Multiple Views to a Single Document
+In a single-document interface (SDI) application created with the Microsoft Foundation Class (MFC) Library, each document type is associated with a single view type. In some cases, it is desirable to have the ability to switch the current view of a document with a new view.  
   
 > [!TIP]
->  如需實作多個檢視的其他程序單一文件，請參閱 [CDocument::AddView](../Topic/CDocument::AddView.md) 和 [收集](../top/visual-cpp-samples.md) MFC 範例。  
+>  For additional procedures on implementing multiple views for a single document, see [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) and the [COLLECT](../visual-cpp-samples.md) MFC sample.  
   
- 您可以將新的 `CView`實作這項功能衍生類別和其他程式碼動態切換的檢視現有的 MFC 應用程式。  
+ You can implement this functionality by adding a new `CView`-derived class and additional code for switching the views dynamically to an existing MFC application.  
   
- 步驟如下：  
+ The steps are as follows:  
   
--   [修改現有的應用程式類別](#vcconmodifyexistingapplicationa1)  
+-   [Modify the Existing Application Class](#vcconmodifyexistingapplicationa1)  
   
--   [建立和修改新的檢視類別。](#vcconnewviewclassa2)  
+-   [Create and Modify the New View Class](#vcconnewviewclassa2)  
   
--   [建立和附加新的檢視。](#vcconattachnewviewa3)  
+-   [Create and Attach the New View](#vcconattachnewviewa3)  
   
--   [實作切換函式](#vcconswitchingfunctiona4)  
+-   [Implement the Switching Function](#vcconswitchingfunctiona4)  
   
--   [加入對切換檢視](#vcconswitchingtheviewa5)  
+-   [Add Support for Switching the View](#vcconswitchingtheviewa5)  
   
- 本主題的其餘部分會假設下列項目:  
+ The remainder of this topic assumes the following:  
   
--   `CWinApp`的名稱衍生物件為，則為 `CMyWinApp`，且 `CMyWinApp` 在 MYWINAPP.H 和 MYWINAPP.CPP 宣告和定義。  
+-   The name of the `CWinApp`-derived object is `CMyWinApp`, and `CMyWinApp` is declared and defined in MYWINAPP.H and MYWINAPP.CPP.  
   
--   `CNewView` 是新的 `CView`名稱衍生物件和 `CNewView` 在 NEWVIEW.H 和 NEWVIEW.CPP 宣告和定義。  
+-   `CNewView` is the name of the new `CView`-derived object, and `CNewView` is declared and defined in NEWVIEW.H and NEWVIEW.CPP.  
   
-##  <a name="vcconmodifyexistingapplicationa1"></a> 修改現有的應用程式類別  
- 對於應用程式切換檢視之間，您需要將成員變數儲存檢視和方法修改應用程式類別交換它們。  
+##  <a name="vcconmodifyexistingapplicationa1"></a> Modify the Existing Application Class  
+ For the application to switch between views, you need to modify the application class by adding member variables to store the views and a method to switch them.  
   
- 將下列程式碼加入至 `CMyWinApp` 類別，放在 MYWINAPP.H 宣告之後：  
+ Add the following code to the declaration of `CMyWinApp` in MYWINAPP.H:  
   
- [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/CPP/adding-multiple-views-to-a-single-document_1.h)]  
+ [!code-cpp[NVC_MFCDocViewSDI#1](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_1.h)]  
   
- 新的成員變數、 `m_pOldView` 和 `m_pNewView`，指向目前檢視和新建立一個。  新的方法 \(`SwitchView`\) 切換檢視時，要求使用者。  方法的主體會在 [實作切換函式](#vcconswitchingfunctiona4)的本主題稍後會討論。  
+ The new member variables, `m_pOldView` and `m_pNewView`, point to the current view and the newly created one. The new method (`SwitchView`) switches the views when requested by the user. The body of the method is discussed later in this topic in [Implement the Switching Function](#vcconswitchingfunctiona4).  
   
- 對應用程式類別的上次修改要求包括定義用來開啟或關閉函數的 Windows 訊息的新標頭檔 \(**WM\_INITIALUPDATE**\)  
+ The last modification to the application class requires including a new header file that defines a Windows message (**WM_INITIALUPDATE**) that is used in the switching function.  
   
- 下行程式碼插入 MYWINAPP.CPP 的相關部分:  
+ Insert the following line in the include section of MYWINAPP.CPP:  
   
- [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/CPP/adding-multiple-views-to-a-single-document_2.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#2](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_2.cpp)]  
   
- 儲存變更並繼續進行下一個步驟。  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconnewviewclassa2"></a> 建立和修改新的檢視類別。  
- 建立新的檢視類別檢視可讓您輕鬆地使用 **New Class** 可用的命令。  這個類別的唯一要求是衍生自 `CView`。  將這個新的類別加入至應用程式。  如需加入新類別的特定資訊加入至專案，請參閱 [加入類別](../ide/adding-a-class-visual-cpp.md)。  
+##  <a name="vcconnewviewclassa2"></a> Create and Modify the New View Class  
+ Creating the new view class is made easy by using the **New Class** command available from Class View. The only requirement for this class is that it derives from `CView`. Add this new class to the application. For specific information on adding a new class to the project, see [Adding a Class](../ide/adding-a-class-visual-cpp.md).  
   
- 一旦您將類別加入至專案，您必須變更某些檢視類別成員的存取範圍。  
+ Once you have added the class to the project, you need to change the accessibility of some view class members.  
   
- 藉由變更存取規範修改 NEWVIEW.H 從 `protected` 加入建構函式和解構函式的 **public** 。  其為可見之前，允許類別會動態建立和終結這和修改檢視外觀。  
+ Modify NEWVIEW.H by changing the access specifier from `protected` to **public** for the constructor and destructor. This allows the class to be created and destroyed dynamically and to modify the view appearance before it is visible.  
   
- 儲存變更並繼續進行下一個步驟。  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconattachnewviewa3"></a> 建立和附加新的檢視。  
- 若要建立和附加新的檢視，您必須修改應用程式類別的 `InitInstance` 函式。  修改將建立一個新的檢視物件。然後初始化 `m_pOldView` 和 `m_pNewView` 與現有檢視應用程式的新程式碼。  
+##  <a name="vcconattachnewviewa3"></a> Create and Attach the New View  
+ To create and attach the new view, you need to modify the `InitInstance` function of your application class. The modification adds new code that creates a new view object and then initializes both `m_pOldView` and `m_pNewView` with the two existing view objects.  
   
- 由於新的檢視在 `InitInstance` 函式中，建立新的和現有的檢視為應用程式的存留期間保存。  然而，應用程式可以輕鬆地動態建立新檢視。  
+ Because the new view is created within the `InitInstance` function, both the new and existing views persist for the lifetime of the application. However, the application could just as easily create the new view dynamically.  
   
- 在呼叫後插入下列程式碼至 `ProcessShellCommand`:  
+ Insert this code after the call to `ProcessShellCommand`:  
   
- [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/CPP/adding-multiple-views-to-a-single-document_3.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#3](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_3.cpp)]  
   
- 儲存變更並繼續進行下一個步驟。  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconswitchingfunctiona4"></a> 實作切換函式  
- 在上一個步驟中，您將建立和初始化新的檢視物件的程式碼。  最後一個主要部分是執行切換方法，則為 `SwitchView`。  
+##  <a name="vcconswitchingfunctiona4"></a> Implement the Switching Function  
+ In the previous step, you added code that created and initialized a new view object. The last major piece is to implement the switching method, `SwitchView`.  
   
- 在您的應用程式類別 \(MYWINAPP.CPP\) 實作檔案結尾，加入下列方法定義:  
+ At the end of the implementation file for your application class (MYWINAPP.CPP), add the following method definition:  
   
- [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/CPP/adding-multiple-views-to-a-single-document_4.cpp)]  
+ [!code-cpp[NVC_MFCDocViewSDI#4](../mfc/codesnippet/cpp/adding-multiple-views-to-a-single-document_4.cpp)]  
   
- 儲存變更並繼續進行下一個步驟。  
+ Save your changes and continue to the next step.  
   
-##  <a name="vcconswitchingtheviewa5"></a> 加入對切換檢視  
- 最後一個步驟是將呼叫 `SwitchView` 方法的程式碼，當應用程式需要切換檢視之間切換時。  這可以使用幾種方式:透過內部使用者加入新的功能表項目可選取或切換檢視，在特定條件。  
+##  <a name="vcconswitchingtheviewa5"></a> Add Support for Switching the View  
+ The final step involves adding code that calls the `SwitchView` method when the application needs to switch between views. This can be done in several ways: by either adding a new menu item for the user to choose or switching the views internally when certain conditions are met.  
   
- 如需加入新的功能表項目和命令處理常式函式的詳細資訊，請參閱 [命令和控制項通知的處理常式。](../mfc/handlers-for-commands-and-control-notifications.md)。  
+ For more information on adding new menu items and command handler functions, see [Handlers for Commands and Control Notifications](../mfc/handlers-for-commands-and-control-notifications.md).  
   
-## 請參閱  
- [文件\/檢視架構](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

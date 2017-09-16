@@ -1,60 +1,78 @@
 ---
-title: "精靈和資源編輯器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式精靈 [C++], 與 MFC"
-  - "類別檢視工具, 管理 Windows 訊息"
-  - "編輯器, 資源"
-  - "MFC [C++], 資源編輯器"
-  - "MFC [C++], 精靈"
-  - "MFC 應用程式精靈"
-  - "資源編輯器, MFC"
-  - "精靈 [C++], MFC 程式設計"
-  - "精靈 [MFC]"
+title: Wizards and the Resource Editors | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- application wizards [MFC], and MFC
+- MFC, resource editors
+- resource editors, MFC
+- MFC Application Wizard
+- editors [MFC], resource
+- wizards [MFC]
+- wizards [MFC], MFC programming
+- MFC, wizards
+- Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 精靈和資源編輯器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0fc43b45dbdcf2af4fa71fe6b10b8956f943daa9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-在 Visual C\+\+ 程式設計，與許多等位資源編輯器搭配 MFC 包括數個精靈可供使用。  對於程式設計的 ActiveX 控制項， [ActiveX 控制項精靈](../mfc/reference/mfc-activex-control-wizard.md) 符合目的很像 MFC 應用程式精靈。  當您撰寫 MFC 應用程式，而不用大部分工具時，工具大幅簡化並加速您的工作。  
+---
+# <a name="wizards-and-the-resource-editors"></a>Wizards and the Resource Editors
+Visual C++ includes several wizards for use in MFC programming, along with many integrated resource editors. For ActiveX controls programming, the [ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md) serves a purpose much like that of the MFC Application Wizard. While you can write MFC applications without most of these tools, the tools greatly simplify and speed your work.  
   
-##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> 使用 MFC 應用程式精靈建立 MFC 應用程式  
- 使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md) 建立 Visual C\+\+ 的 MFC 專案，可能包含 OLE 和資料庫支援。  在專案的檔案包含您的應用程式、文件、檢視和框架視窗類別;標準資源，包括功能表和選擇性工具列;其他必要的 Windows 檔案;並選擇性 .rtf 檔包含您可以修改並擴大為程式建立說明檔的標準 Windows 說明主題。  
+##  <a name="_core_use_appwizard_to_create_an_mfc_application"></a> Use the MFC Application Wizard to Create an MFC Application  
+ Use the [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md) to create an MFC project in Visual C++, which can include OLE and database support. Files in the project contain your application, document, view, and frame-window classes; standard resources, including menus and an optional toolbar; other required Windows files; and optional .rtf files containing standard Windows Help topics that you can revise and augment to create your program's help file.  
   
-##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> 使用類別檢視處理類別和 Windows 訊息  
- 類別檢視可以協助您建立視窗訊息的處理常式函式和命令，建立和管理類別，建立類別成員變數，建立自動化方法和屬性，建立資料庫類別等等。  
+##  <a name="_core_use_classwizard_to_manage_classes_and_windows_messages"></a> Use Class View to Manage Classes and Windows Messages  
+ Class View helps you create handler functions for Windows messages and commands, create and manage classes, create class member variables, create Automation methods and properties, create database classes, and more.  
   
 > [!NOTE]
->  也類別檢視說明覆寫 MFC 的虛擬函式進行分類。  選取類別和虛擬函式覆寫。  處理序的其餘部分類似訊息處理常式，如以下各節所述。  
+>  Class View also helps you to override virtual functions in the MFC classes. Select the class and the virtual function to override. The rest of the process is similar to message handling, as described in the following paragraphs.  
   
- 在 Windows 下的應用程式是 [所巡覽的訊息](../mfc/message-handling-and-mapping.md)。  在循序程式原因視窗就會傳送訊息至程式視窗的使用者動作和其他事件。  例如，在中，如果使用者按一下視窗上方時， Windows 會將 `WM_LBUTTONDOWN` 傳送資訊，並按下滑鼠左鍵和 `WM_LBUTTONUP` 訊息時，放開按鈕。  當使用者選取命令從功能表列時，視窗也會傳送 **WM\_COMMAND** 資訊。  
+ Applications running under Windows are [message driven](../mfc/message-handling-and-mapping.md). User actions and other events that occur in the running program cause Windows to send messages to the windows in the program. For example, if the user clicks the mouse in a window, Windows sends a `WM_LBUTTONDOWN` message when the left mouse button is pressed and a `WM_LBUTTONUP` message when the button is released. Windows also sends **WM_COMMAND** messages when the user selects commands from the menu bar.  
   
- 在 MFC 架構，各種物件，例如文件，檢視，框架視窗，文件範本和應用程式物件，可能已處理訊息。  這類物件的「處理常式函式」做為其成員函式之一，因此，架構會將傳入訊息傳送至其處理常式。  
+ In the MFC framework, various objects, such as documents, views, frame windows, document templates, and the application object, can "handle" messages. Such an object provides a "handler function" as one of its member functions, and the framework maps the incoming message to its handler.  
   
- 對應的訊息至的物件來實作該對應您的程式設計工作的一個主要選取。  若要這麼做，您可以使用類別檢視和屬性視窗。  
+ A large part of your programming task is choosing which messages to map to which objects and then implementing that mapping. To do so, you use Class View and the Properties window.  
   
- 屬性視窗會建立空的訊息處理常式成員函式，因此，您使用原始程式碼編輯器實作處理常式的主體。  您也可以建立或編輯類別 \(從 MFC 類別，不是衍生的包含類別\) 及其有類別檢視的成員。  如需使用類別檢視的詳細資訊以及與精靈會在專案中加入程式碼，請參閱 [將與程式碼精靈的功能](../ide/adding-functionality-with-code-wizards-cpp.md)。  
+ The Properties window will create empty message-handler member functions, and you use the source code editor to implement the body of the handler. You can also create or edit classes (including classes of your own, not derived from MFC classes) and their members with Class View. For more information on using Class View and about wizards that add code to a project, see [Adding Functionality with Code Wizards](../ide/adding-functionality-with-code-wizards-cpp.md).  
   
-##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> 使用資源編輯器建立和編輯資源  
- 使用 Visual C\+\+ [資源編輯器](../mfc/resource-editors.md) 來建立和編輯功能表、對話方塊、自訂控制項、快速鍵、點陣圖、圖示、游標、字串和釋放資源。  根據 Visual C\+\+ 4.0 版，工具列編輯器讓建立工具列更加容易。  
+##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> Use the Resource Editors to Create and Edit Resources  
+ Use the Visual C++ [resource editors](../windows/resource-editors.md) to create and edit menus, dialog boxes, custom controls, accelerator keys, bitmaps, icons, cursors, strings, and version resources. As of Visual C++ version 4.0, a toolbar editor makes creating toolbars much easier.  
   
- 為了協助您， MFC 程式庫提供呼叫 COMMON.RES 的檔案，包含「美工圖案」資源可以從 COMMON.RES 和貼上複製到您的資源檔。  COMMON.RES 包括工具列按鈕、通用資料指標，圖示等。  您可以在應用程式中使用，修改和轉散發這些資源。  如需 COMMON.RES 的詳細資訊，請參閱 [Clipart 範例](../top/visual-cpp-samples.md)。  
+ To help you even more, the Microsoft Foundation Class Library provides a file called COMMON.RES, which contains "clip art" resources that you can copy from COMMON.RES and paste into your own resource file. COMMON.RES includes toolbar buttons, common cursors, icons, and more. You can use, modify, and redistribute these resources in your application. For more information about COMMON.RES, see the [Clipart sample](../visual-cpp-samples.md).  
   
- MFC 應用程式精靈、Visual C\+\+ 精靈、資源編輯器和 MFC 架構會執行大量工作並使管理您的程式碼更容易。  大部分應用程式專屬的程式碼在文件和檢視類別。  
+ The MFC Application Wizard, the Visual C++ wizards, resource editors, and the MFC framework do a lot of work for you and make managing your code much easier. The bulk of your application-specific code is in your document and view classes.  
   
-## 請參閱  
- [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using the Classes to Write Applications for Windows](../mfc/using-the-classes-to-write-applications-for-windows.md)
+

@@ -1,70 +1,89 @@
 ---
-title: "介面項目 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "架構 [C++], MFC 功能套件"
-  - "MFC 功能套件, 架構"
+title: Interface Elements | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- architecture [MFC], MFC Feature Pack
+- MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
 caps.latest.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
----
-# 介面項目
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19599bd4aa299b60034a2bffa9cd0dafaaeb3107
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文件說明在 [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1 引入的介面項目，以及描述與舊版程式庫的差異。  
+---
+# <a name="interface-elements"></a>Interface Elements
+This document describes interface elements that were introduced in [!INCLUDE[vs_orcas_long](../atl/reference/includes/vs_orcas_long_md.md)] SP1, and also describes differences with the earlier version of the library.  
   
- 下圖顯示使用新的介面項目，以建立的應用程式。  
+ The following illustration shows an application that was built by using the new interface elements.  
   
- ![MFC 功能套件範例應用程式](../mfc/media/mfc_featurepack.png "MFC\_FeaturePack")  
+ ![MFC Feature Pack example application](../mfc/media/mfc_featurepack.png "mfc_featurepack")  
   
-## 視窗停駐  
- 視窗停駐功能類似 [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] 圖形使用者介面使用的視窗停駐。  
+## <a name="window-docking"></a>Window Docking  
+ Window docking functionality resembles the window docking that the [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] graphical user interface uses.  
   
-## 控制列現在是窗格  
- 控制列現在稱為窗格和衍生自 [CBasePane Class](../mfc/reference/cbasepane-class.md)。  在 MFC 舊版，控制項的基底類別是 `CControlBar`。  
+## <a name="control-bars-are-now-panes"></a>Control Bars are Now Panes  
+ Control bars are now known as panes and are derived from [CBasePane Class](../mfc/reference/cbasepane-class.md). In earlier versions of MFC, the base class of control bars was `CControlBar`.  
   
- 應用程式主框架視窗 \(由 [CFrameWndEx Class](../mfc/reference/cframewndex-class.md) 或 [CMDIFrameWndEx 類別](../mfc/reference/cmdiframewndex-class.md)通常表示。  主框架呼叫 *停駐位置*。  窗格可能已有三種類型之一:停駐網站、停駐列或小型框架視窗。  
+ The application main frame window is usually represented by the [CFrameWndEx Class](../mfc/reference/cframewndex-class.md) or the [CMDIFrameWndEx Class](../mfc/reference/cmdiframewndex-class.md). The main frame is called the *dock site*. Panes can have one of three types of parents: a dock site, a dock bar, or a mini-frame window.  
   
- 取得窗格的兩種型別:不可調整大小和可調整大小。  使用分隔器或滑桿，可調整大小的窗格，例如狀態列和工具列，可以調整大小。  可調整大小的窗格會形成容器 \(一個窗格可以停駐在其他窗格，在它們之間的分隔器\)。  不過，可調整大小的窗格無法附加 \(固定\) 內建列。  
+ There are two types of panes: non-resizable and resizable. Resizable panes, such as status bars and toolbars, can be resized by using splitters or sliders. Resizable panes can form containers (one pane can be docked to another pane, creating a splitter between them). However, resizable panes cannot be attached (docked) to dock bars.  
   
- 如果您的應用程式使用不可調整大小的窗格中，從 [CPane Class](../mfc/reference/cpane-class.md)衍生它們。如果您的應用程式使用可調整大小的窗格中，從 [CDockablePane Class](../mfc/reference/cdockablepane-class.md)衍生它們。  
+ If your application uses non-resizable panes, derive them from [CPane Class](../mfc/reference/cpane-class.md).  If your application uses resizable panes, derive them from [CDockablePane Class](../mfc/reference/cdockablepane-class.md)  
   
-## 固定網站  
- 停駐位置 \(或主框架視窗\) 擁有所有窗格和小型框架視窗在應用程式。  停駐網站包含一個 [CDockingManager](../mfc/reference/cdockingmanager-class.md) 成員。  這個成員維護屬於停駐窗格所有網站的清單。  清單指令，以便建立窗格停駐在網站的外框在清單的開頭位置。  當架構重繪停駐網站時，會執行迴圈在這份清單並調整每個窗格配置包括停駐在網站的目前周框矩形。  您可以呼叫 `AdjustDockingLayout` 或 `RecalcLayout` ，在必須調整停駐配置時，因此，架構會將此呼叫重新導向至停駐管理員。  
+## <a name="dock-site"></a>Dock Site  
+ The dock site (or main frame window) owns all panes and mini-frame windows in an application. The dock site contains a [CDockingManager](../mfc/reference/cdockingmanager-class.md) member. This member maintains a list of all panes that belong to the dock site. The list is ordered so that the panes created at the outer edges of the dock site are positioned at the start of the list. When the framework redraws the dock site, it loops over this list and adjusts the layout of each pane to include the current bounding rectangle of the dock site. You can call `AdjustDockingLayout` or `RecalcLayout` when you have to adjust the docking layout, and the framework redirects this call to the docking manager.  
   
-## 停駐列  
- 每個主框架視窗可以沿著邊界的停駐 *列* 。  停駐列是屬於 [CDockSite Class](../mfc/reference/cdocksite-class.md)的窗格。  停駐列可以接受衍生自 [CPane](../mfc/reference/cpane-class.md)的物件，例如工具列。  若要建立停駐列，當主框架視窗初始化時，請呼叫 `EnableDocking`。  若要啟用自動隱藏列，請呼叫 `EnableAutoHideBars`。  `EnableAutoHideBars` 建立 [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) 物件，並在每個停駐列旁邊放置。  
+## <a name="dock-bars"></a>Dock Bars  
+ Each main frame window can position *dock bars* along its borders. A dock bar is a pane that belongs to a [CDockSite Class](../mfc/reference/cdocksite-class.md). Dock bars can accept objects derived from [CPane](../mfc/reference/cpane-class.md), such as toolbars. To create dock bars when the main frame window is initialized, call `EnableDocking`. To enable auto hide bars, call `EnableAutoHideBars`. `EnableAutoHideBars` creates [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md) objects, and positions them next to each dock bar.  
   
- 每個停駐列分成停駐行為。  停駐行以 [CDockingPanesRow Class](../mfc/reference/cdockingpanesrow-class.md)表示。  每個資料行包含停駐工具列清單。  如果使用者停駐工具列或從一行移動工具列到另一個在同一個停駐列內，架構來建立新的資料列並據以調整停駐列，或是在現有資料列將工具列。  
+ Each dock bar is divided into dock rows. Dock rows are represented by the [CDockingPanesRow Class](../mfc/reference/cdockingpanesrow-class.md). Each dock row contains a list of toolbars. If a user docks a toolbar or moves the toolbar from one row to another within the same dock bar, the framework either creates a new row and resizes the dock bar accordingly, or it positions the toolbar on an existing row.  
   
-## 小型框架視窗  
- 浮動窗格位於小型框架視窗。  小型框架視窗由兩個類別代表:只能包含一個窗格\) 可以包含數個窗格\) 的 [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md) 和 [CMultiPaneFrameWnd Class](../mfc/reference/cmultipaneframewnd-class.md) 。  若要在一個窗格在程式碼中，呼叫 [CBasePane::FloatPane](../Topic/CBasePane::FloatPane.md)。  在窗格之後浮動，架構會自動建立小型框架視窗，而且小型框架視窗變成浮動窗格的父。  當浮動窗格停駐時，架構會重設其父代，，而且浮動窗格變成停駐列 \(為工具列停駐\) 或網站 \(為可調整大小的窗格\)。  
+## <a name="mini-frame-windows"></a>Mini-frame Windows  
+ A floating pane resides in a mini-frame window. Mini-frame windows are represented by two classes: [CMDITabInfo Class](../mfc/reference/cmditabinfo-class.md) (which can contain only one pane) and [CMultiPaneFrameWnd Class](../mfc/reference/cmultipaneframewnd-class.md) (which can contain several panes). To float a pane in your code, call [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). After a pane floats, the framework automatically creates a mini-frame window and that mini-frame window becomes the floating pane's parent. When the floating pane docks, the framework resets its parent, and the floating pane becomes a dock bar (for toolbars) or a dock site (for resizable panes).  
   
-## 窗格分割線  
- 窗格分割線 \(也稱為滑桿或分隔器\) 以 [CPaneDivider Class](../mfc/reference/cpanedivider-class.md)表示。  當使用者停駐窗格時，這個架構窗格分割線，不論窗格是否停駐在停駐網站或另一個窗格。  當窗格停駐在停駐網站時，窗格分割線呼叫 *預設窗格分割線*。  預設窗格分割線對所有停駐窗格設定負責在停駐位置。  停駐管理員會維護預設窗格分割線清單和窗格清單。  停駐管理員負責所有停駐窗格配置。  
+## <a name="pane-dividers"></a>Pane Dividers  
+ Pane dividers (also named sliders or splitters) are represented by the [CPaneDivider Class](../mfc/reference/cpanedivider-class.md). When a user docks a pane, the framework creates pane dividers, regardless of whether the pane is docked at the dock site or at another pane. When a pane docks to the dock site, the pane divider is called the *default pane divider*. The default pane divider is responsible for the layout of all the docking panes in the dock site. The dock manager maintains a list of default pane dividers, and a list of panes. Dock managers are responsible for the layout of all the docking panes.  
   
-## 容器  
- 任何可調整大小的窗格，，當互相停駐，在容器中維護。  容器以 [CPaneContainer Class](../mfc/reference/cpanecontainer-class.md)表示。  每個容器有指標到其左窗格、右窗格、左子容器、正確的子容器和分隔器左右在組件之間。\(*左右* 未參考的實體，而識別樹狀結構的分支\)。在我們可以建置窗格和分隔器樹狀結構也可以達到一起調整窗格的複雜配置。  `CPaneContainer` 類別維護容器樹狀結構;在這個樹狀結構的同時維護窗格兩份清單和滑桿。  窗格容器管理員通常會內嵌到傳送多窗格的預設滑桿和小型框架視窗。  
+## <a name="containers"></a>Containers  
+ All resizable panes, when docked to each other, are maintained in containers. Containers are represented by the [CPaneContainer Class](../mfc/reference/cpanecontainer-class.md). Each container has pointers to its left pane, right pane, left sub-container, right sub-container, and the splitter between the left and right parts. (*Left* and *right* do not refer to physical sides but rather identify the branches of a tree structure.) In this manner we can build a tree of panes and splitters and therefore achieve complex layouts of panes that can be resized together. The `CPaneContainer` class maintains the tree of containers; it also maintains two lists of panes and sliders that reside in this tree. Pane container managers are usually embedded into default sliders and mini-frame windows that carry multiple panes.  
   
-## 自動隱藏控制項。  
- 根據預設，每個 `CDockablePane` 支援自動隱藏功能。  當使用者在 `CDockablePane`的標頭時按一下連接按鈕，架構會切換窗格自動隱藏模式。  想要處理按一下，架構建立 [CMFCAutoHideBar Class](../mfc/reference/cmfcautohidebar-class.md) 和 [CMFCAutoHideButton Class](../mfc/reference/cmfcautohidebutton-class.md) 相關聯的 `CMFCAutoHideBar` 物件。  架構在 [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md)將新的 `CMFCAutoHideBar` 。  此架構也將 `CMFCAutoHideButton` 附加至工具列。  [CDockingManager Class](../mfc/reference/cdockingmanager-class.md) 維護 `CDockablePane`。  
+## <a name="auto-hide-control-bars"></a>Auto-hide Control Bars  
+ By default, each `CDockablePane` supports the auto-hide feature. When a user clicks the pin button on the caption of the `CDockablePane`, the framework switches the pane to auto-hide mode. To handle the click, the framework creates a [CMFCAutoHideBar Class](../mfc/reference/cmfcautohidebar-class.md) and a [CMFCAutoHideButton Class](../mfc/reference/cmfcautohidebutton-class.md) associated with the `CMFCAutoHideBar` object. The framework puts the new `CMFCAutoHideBar` on the [CAutoHideDockSite](../mfc/reference/cautohidedocksite-class.md). The framework also attaches the `CMFCAutoHideButton` to the toolbar. The [CDockingManager Class](../mfc/reference/cdockingmanager-class.md) maintains the `CDockablePane`.  
   
-## 索引標籤式控制列和 Outlook 功能區  
- [CMFCBaseTabCtrl Class](../mfc/reference/cmfcbasetabctrl-class.md) 實作成索引標籤式視窗的基本功能。可拆的選項。  若要使用 `CMFCBaseTabCtrl` 物件，請使用應用程式的 [CBaseTabbedPane 類別](../mfc/reference/cbasetabbedpane-class.md) 。  `CBaseTabbedPane` 衍生自 `CDockablePane` 並維護指標到 `CMFCBaseTabCtrl` 物件。  `CBaseTabbedPane` 可讓使用者修正和調整定位的控制列。  使用 [CDockablePane::AttachToTabWnd](../Topic/CDockablePane::AttachToTabWnd.md) 動態建立固定和定位的控制列。  
+## <a name="tabbed-control-bars-and-outlook-bars"></a>Tabbed Control Bars and Outlook Bars  
+ The [CMFCBaseTabCtrl Class](../mfc/reference/cmfcbasetabctrl-class.md) implements the base functionality of a tabbed window with detachable tabs. To use a `CMFCBaseTabCtrl` object, initialize a [CBaseTabbedPane Class](../mfc/reference/cbasetabbedpane-class.md) in your application. `CBaseTabbedPane` is derived from `CDockablePane` and maintains a pointer to a `CMFCBaseTabCtrl` object. The `CBaseTabbedPane` enables users to dock and resize tabbed control bars. Use [CDockablePane::AttachToTabWnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd) to dynamically create control bars that are docked and tabbed.  
   
- Outlook 功能區控制項依據定位的列也。  [CMFCOutlookBar 類別](../mfc/reference/cmfcoutlookbar-class.md) 衍生自 `CBaseTabbedPane`。  如需如何使用 Outlook 功能區的詳細資訊，請參閱 [CMFCOutlookBar 類別](../mfc/reference/cmfcoutlookbar-class.md)。  
+ The Outlook bar control is also based on tabbed bars. The [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md) is derived from `CBaseTabbedPane`. For more information about how to use Outlook bar, see [CMFCOutlookBar Class](../mfc/reference/cmfcoutlookbar-class.md).  
   
-## 請參閱  
- [概念](../mfc/mfc-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)
+
+

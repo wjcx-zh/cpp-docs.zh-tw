@@ -1,5 +1,5 @@
 ---
-title: "編輯訊息處理常式 |Microsoft 文件"
+title: Editing a Message Handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,8 +13,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- message handlers
-- message handling, editing handlers
+- message handlers [MFC]
+- message handling [MFC], editing handlers
 ms.assetid: 7babb496-1f14-43b1-a14d-2e54402a92e2
 caps.latest.revision: 9
 author: mikeblome
@@ -34,27 +34,27 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: e9befbe9bf05623b3ecd05248985dd74f2526b43
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 54747ba6d51f200f674e47afea41d3482c33b107
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="editing-a-message-handler"></a>編輯訊息處理常式
-一旦您已定義的訊息處理常式，您可以移至 新增或修改程式碼的成員函式的定義。  
+# <a name="editing-a-message-handler"></a>Editing a Message Handler
+Once you have defined a message handler, you can go to the member function's definition to add or modify code.  
   
- 若要跳至從成員函式定義[對話方塊編輯器](../../windows/dialog-editor.md)，按兩下的控制項，已經定義處理常式。 這會瀏覽您選取之的控制項的訊息處理常式定義所在的檔案。  
+ To jump to a member function definition from the [dialog editor](../../windows/dialog-editor.md), double-click a control for which a handler is already defined. This navigates you to the file in which the selected control's message handler is defined.  
   
- 若要跳至從成員函式定義[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)，連按兩下 類別檢視中的函式名稱。  
+ To jump to a member function definition from [Class View](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), double-click the function name in Class View.  
   
-## <a name="see-also"></a>另請參閱  
- [將訊息對應到函式](../../mfc/reference/mapping-messages-to-functions.md)   
- [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [加入類別](../../ide/adding-a-class-visual-cpp.md)   
- [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   
- [加入成員變數](../../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [Mapping Messages to Functions](../../mfc/reference/mapping-messages-to-functions.md)   
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [MFC Message Handler](../../mfc/reference/adding-an-mfc-message-handler.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)
 

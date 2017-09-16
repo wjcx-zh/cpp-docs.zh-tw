@@ -1,5 +1,5 @@
 ---
-title: "CMFCRibbonComboBox 類別 |Microsoft 文件"
+title: CMFCRibbonComboBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -31,7 +31,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonComboBox class
+- CMFCRibbonComboBox [MFC], CMFCRibbonComboBox
+- CMFCRibbonComboBox [MFC], AddItem
+- CMFCRibbonComboBox [MFC], DeleteItem
+- CMFCRibbonComboBox [MFC], EnableDropDownListResize
+- CMFCRibbonComboBox [MFC], FindItem
+- CMFCRibbonComboBox [MFC], GetCount
+- CMFCRibbonComboBox [MFC], GetCurSel
+- CMFCRibbonComboBox [MFC], GetDropDownHeight
+- CMFCRibbonComboBox [MFC], GetIntermediateSize
+- CMFCRibbonComboBox [MFC], GetItem
+- CMFCRibbonComboBox [MFC], GetItemData
+- CMFCRibbonComboBox [MFC], HasEditBox
+- CMFCRibbonComboBox [MFC], IsResizeDropDownList
+- CMFCRibbonComboBox [MFC], OnSelectItem
+- CMFCRibbonComboBox [MFC], RemoveAllItems
+- CMFCRibbonComboBox [MFC], SelectItem
+- CMFCRibbonComboBox [MFC], SetDropDownHeight
 ms.assetid: 9b29a6a4-cf17-4152-9b13-0bf90784b30d
 caps.latest.revision: 35
 author: mikeblome
@@ -51,17 +67,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 747006ee66445eb312c22d658706e5fe81d2a958
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a11273bf776f9a8a0ea1b0870f0244b759c4eb80
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox 類別
-`CMFCRibbonComboBox`類別會實作可以加入功能區列、 功能區面板或功能區快顯功能表的下拉式方塊控制項。  
+# <a name="cmfcribboncombobox-class"></a>CMFCRibbonComboBox Class
+The `CMFCRibbonComboBox` class implements a combo box control that you can add to a ribbon bar, a ribbon panel, or a ribbon popup menu.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonComboBox : public CMFCRibbonEdit  
@@ -69,42 +85,42 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
 ## <a name="members"></a>Members  
   
-### <a name="constructors"></a>建構函式  
+### <a name="constructors"></a>Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|建構 CMFCRibbonComboBox 物件。|  
+|[CMFCRibbonComboBox::CMFCRibbonComboBox](#cmfcribboncombobox)|Constructs a CMFCRibbonComboBox object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonComboBox::AddItem](#additem)|將唯一的項目附加至清單方塊。|  
-|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|從清單方塊中刪除指定的項目。|  
-|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|指定當它向下，清單方塊是否可以變更大小。|  
-|[CMFCRibbonComboBox::FindItem](#finditem)|傳回符合指定的字串的清單方塊中的第一個項目的索引。|  
-|[CMFCRibbonComboBox::GetCount](#getcount)|清單方塊中，傳回的項目數。|  
-|[CMFCRibbonComboBox::GetCurSel](#getcursel)|清單方塊中，取得目前選取項目的索引。|  
-|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|下拉式清單方塊時，取得清單方塊的高度。|  
-|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|傳回中繼模式中顯示下拉式方塊的大小。|  
-|[CMFCRibbonComboBox::GetItem](#getitem)|傳回與清單方塊中的指定索引處的項目關聯的字串。|  
-|[CMFCRibbonComboBox::GetItemData](#getitemdata)|傳回與清單方塊中的指定索引處的項目相關聯的資料。|  
-|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|指出控制項是否包含編輯方塊。|  
-|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|指出可以調整大小的清單方塊。|  
-|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|當使用者選取項目在清單方塊中，由架構呼叫。|  
-|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|刪除所有項目從清單方塊，並清除 [編輯] 方塊。|  
-|[CMFCRibbonComboBox::SelectItem](#selectitem)|清單方塊中選取項目。|  
-|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|向下拖曳時，請設定清單方塊的高度。|  
+|[CMFCRibbonComboBox::AddItem](#additem)|Appends a unique item to the list box.|  
+|[CMFCRibbonComboBox::DeleteItem](#deleteitem)|Deletes a specified item from the list box.|  
+|[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)|Specifies whether the list box can change size when it drops down.|  
+|[CMFCRibbonComboBox::FindItem](#finditem)|Returns the index of the first item in the list box that matches a specified string.|  
+|[CMFCRibbonComboBox::GetCount](#getcount)|Returns the number of items in the list box.|  
+|[CMFCRibbonComboBox::GetCurSel](#getcursel)|Gets the index of the currently selected item in the list box.|  
+|[CMFCRibbonComboBox::GetDropDownHeight](#getdropdownheight)|Gets the height of the list box when the list box is dropped down.|  
+|[CMFCRibbonComboBox::GetIntermediateSize](#getintermediatesize)|Returns the size of the combo box as displayed in intermediate mode.|  
+|[CMFCRibbonComboBox::GetItem](#getitem)|Returns the string associated with an item at a specified index in the list box.|  
+|[CMFCRibbonComboBox::GetItemData](#getitemdata)|Returns the data associated with an item at a specified index in the list box.|  
+|[CMFCRibbonComboBox::HasEditBox](#haseditbox)|Indicates whether the control contains an edit box.|  
+|[CMFCRibbonComboBox::IsResizeDropDownList](#isresizedropdownlist)|Indicates whether or not the list box can be resized.|  
+|[CMFCRibbonComboBox::OnSelectItem](#onselectitem)|Called by the framework when the user selects an item in the list box.|  
+|[CMFCRibbonComboBox::RemoveAllItems](#removeallitems)|Deletes all items from the list box and clears the edit box.|  
+|[CMFCRibbonComboBox::SelectItem](#selectitem)|Selects an item in the list box.|  
+|[CMFCRibbonComboBox::SetDropDownHeight](#setdropdownheight)|Sets the height of the list box when it is dropped down.|  
   
-## <a name="remarks"></a>備註  
- 功能區下拉式方塊清單方塊，加上靜態標籤或使用者可以編輯的標籤所組成。 您必須指定當您建立您的功能區下拉式方塊，您需要哪種的類型。  
+## <a name="remarks"></a>Remarks  
+ The ribbon combo box consists of a list box combined with either a static label or label that can be edited by the user. You must specify which type you want when you create your ribbon combo box.  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCRibbonComboBox`類別、 新增項目至下拉式方塊、 下拉式方塊中選取的項目並將下拉式方塊加入至面板。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonComboBox` class, add an item to the combo box, select an item in the combo box, and add a combo box to a panel.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&11;](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#11](../../mfc/reference/codesnippet/cpp/cmfcribboncombobox-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -115,11 +131,11 @@ class CMFCRibbonComboBox : public CMFCRibbonEdit
   
  [CMFCRibbonComboBox](../../mfc/reference/cmfcribboncombobox-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxribboncombobox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribboncombobox.h  
   
-##  <a name="additem"></a>CMFCRibbonComboBox::AddItem  
- 將唯一的項目附加至清單方塊。  
+##  <a name="additem"></a>  CMFCRibbonComboBox::AddItem  
+ Appends a unique item to the list box.  
   
 ```  
 virtual INT_PTR AddItem(
@@ -127,18 +143,18 @@ virtual INT_PTR AddItem(
     DWORD_PTR dwData=0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszItem`  
- 要加入之項目的字串。  
+ The string of the item to add.  
   
  [in] `dwData`  
- 若要新增的項目相關聯的資料。  
+ The data associated with the item to add.  
   
-### <a name="return-value"></a>傳回值  
- 附加的項目以零為起始的索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the appended item.  
   
-##  <a name="cmfcribboncombobox"></a>CMFCRibbonComboBox::CMFCRibbonComboBox  
- 建構 `CMFCRibbonComboBox` 物件。  
+##  <a name="cmfcribboncombobox"></a>  CMFCRibbonComboBox::CMFCRibbonComboBox  
+ Constructs a `CMFCRibbonComboBox` object.  
   
 ```  
 public:  
@@ -153,27 +169,27 @@ protected:
 CMFCRibbonComboBox();
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- 下拉式方塊的識別碼。  
+ The ID of the combo box.  
   
  [in] `bHasEditBox`  
- `TRUE`如果您想編輯方塊控制項。`FALSE`否則。  
+ `TRUE` if you want an edit box within the control; `FALSE` otherwise.  
   
  [in] `nWidth`  
- 像素為單位; 下拉式方塊的寬度或-1 的預設寬度。  
+ Width of the combo box in pixels; or -1 for the default width.  
   
  [in] `lpszLabel`  
- 下拉式方塊的顯示標籤。  
+ The display label of the combo box.  
   
  [in] `nImage`  
- 下拉式方塊的小型影像索引。  
+ The small image index of the combo box.  
   
-### <a name="remarks"></a>備註  
- 預設寬度是 108 像素為單位。  
+### <a name="remarks"></a>Remarks  
+ The default width is 108 pixels.  
   
-##  <a name="deleteitem"></a>CMFCRibbonComboBox::DeleteItem  
- 從清單方塊中刪除指定的項目。  
+##  <a name="deleteitem"></a>  CMFCRibbonComboBox::DeleteItem  
+ Deletes a specified item from the list box.  
   
 ```  
 BOOL DeleteItem(int iIndex);
@@ -182,182 +198,182 @@ BOOL DeleteItem(DWORD_PTR dwData);
 BOOL DeleteItem(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 要刪除的項目以零為起始的索引。  
+ The zero-based index of the item to be deleted.  
   
  [in] `dwData`  
- 要刪除的項目與相關的資料。  
+ The data associated with the item to be deleted.  
   
  [in] `lpszText`  
- 要刪除之項目的字串。 如果有多個項目使用相同的字串，則會刪除第一個項目。  
+ The string of the item to be deleted. If there are multiple items with the same string, the first item is deleted.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果指定的項目已被刪除。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified item has been deleted; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enabledropdownlistresize"></a>CMFCRibbonComboBox::EnableDropDownListResize  
- 指定當它向下，清單方塊是否可以變更大小。  
+##  <a name="enabledropdownlistresize"></a>  CMFCRibbonComboBox::EnableDropDownListResize  
+ Specifies whether the list box can change size when it drops down.  
   
 ```  
 void EnableDropDownListResize(BOOL bEnable=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用調整大小;`FALSE`停用調整大小。  
+ `TRUE` to enable resizing; `FALSE` to disable resizing.  
   
-### <a name="remarks"></a>備註  
- 調整啟用時，清單方塊會變更大小，以符合其所顯示的項目。  
+### <a name="remarks"></a>Remarks  
+ When resizing is enabled, the list box will change size to fit the items it displays.  
   
-##  <a name="finditem"></a>CMFCRibbonComboBox::FindItem  
- 傳回符合指定的字串的清單方塊中的第一個項目的索引。  
+##  <a name="finditem"></a>  CMFCRibbonComboBox::FindItem  
+ Returns the index of the first item in the list box that matches a specified string.  
   
 ```  
 int FindItem(LPCTSTR lpszText) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- 清單方塊中項目的字串。  
+ The string of an item in the list box.  
   
-### <a name="return-value"></a>傳回值  
- 以零起始的索引的項目。或是-1，如果找不到項目。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the item; or -1 if the item is not found.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcount"></a>CMFCRibbonComboBox::GetCount  
- 清單方塊中，傳回的項目數。  
+##  <a name="getcount"></a>  CMFCRibbonComboBox::GetCount  
+ Returns the number of items in the list box.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在清單方塊中或 0，表示清單方塊不包含任何項目中的項目數目。  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list box, or 0 if the list box contains no items.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcursel"></a>CMFCRibbonComboBox::GetCurSel  
- 清單方塊中，取得目前選取項目的索引。  
+##  <a name="getcursel"></a>  CMFCRibbonComboBox::GetCurSel  
+ Gets the index of the currently selected item in the list box.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 清單方塊中目前選取項目的以零起始的索引則為-1 會選取任何項目。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the currently selected item in the list box; or -1 if no item is selected.  
   
-##  <a name="getdropdownheight"></a>CMFCRibbonComboBox::GetDropDownHeight  
- 下拉式清單方塊時，取得清單方塊的高度。  
+##  <a name="getdropdownheight"></a>  CMFCRibbonComboBox::GetDropDownHeight  
+ Gets the height of the list box when the list box is dropped down.  
   
 ```  
 int GetDropDownHeight();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 像素為單位，清單方塊的高度。  
+### <a name="return-value"></a>Return Value  
+ The height, in pixels, of the list box.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonComboBox::GetIntermediateSize  
- 傳回中繼模式中顯示下拉式方塊的大小。  
+##  <a name="getintermediatesize"></a>  CMFCRibbonComboBox::GetIntermediateSize  
+ Returns the size of the combo box as displayed in intermediate mode.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 下拉式方塊的裝置內容的指標。  
+ Pointer to a device context for the combo box.  
   
-### <a name="return-value"></a>傳回值  
- 下拉式方塊的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of the combo box.  
   
-### <a name="remarks"></a>備註  
- 顯示小型影像時，傳回的大小根據下拉式方塊的大小。  
+### <a name="remarks"></a>Remarks  
+ The size returned is based on the size of the combo box when it displays small images.  
   
-##  <a name="getitem"></a>CMFCRibbonComboBox::GetItem  
- 傳回與清單方塊中的指定索引處的項目關聯的字串。  
+##  <a name="getitem"></a>  CMFCRibbonComboBox::GetItem  
+ Returns the string associated with an item at a specified index in the list box.  
   
 ```  
 LPCTSTR GetItem(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 清單方塊中的項目以零為起始的索引。  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>傳回值  
- 項目; 相關聯字串的指標否則，`NULL`如果索引參數無效，或者索引參數是-1，下拉式方塊中選取任何項目。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the string that is associated with the item; otherwise, `NULL` if the index parameter is invalid, or if the index parameter is -1 and there is no item selected in the combo box.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getitemdata"></a>CMFCRibbonComboBox::GetItemData  
- 傳回與清單方塊中的指定索引處的項目相關聯的資料。  
+##  <a name="getitemdata"></a>  CMFCRibbonComboBox::GetItemData  
+ Returns the data associated with an item at a specified index in the list box.  
   
 ```  
 DWORD_PTR GetItemData(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 清單方塊中的項目以零為起始的索引。  
+ The zero-based index of an item in the list box.  
   
-### <a name="return-value"></a>傳回值  
- 與項目; 相關聯的資料0 或如果項目不存在，或者索引參數是-1，清單方塊中沒有選取項目。  
+### <a name="return-value"></a>Return Value  
+ The data associated with the item; or 0 if the item does not exist, or if the index parameter is -1 and there is no selected item in the list box.  
   
-##  <a name="haseditbox"></a>CMFCRibbonComboBox::HasEditBox  
- 指出控制項是否包含編輯方塊。  
+##  <a name="haseditbox"></a>  CMFCRibbonComboBox::HasEditBox  
+ Indicates whether the control contains an edit box.  
   
 ```  
 BOOL HasEditBox() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果控制項包含編輯方塊。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the control contains an edit box; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isresizedropdownlist"></a>CMFCRibbonComboBox::IsResizeDropDownList  
- 指出可以調整大小的清單方塊。  
+##  <a name="isresizedropdownlist"></a>  CMFCRibbonComboBox::IsResizeDropDownList  
+ Indicates whether or not the list box can be resized.  
   
 ```  
 BOOL IsResizeDropDownList() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以調整清單方塊。否則`FALSE`。 [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the list box can be resized; otherwise `FALSE`. [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)  
   
-### <a name="remarks"></a>備註  
- 您可以使用調整大小的清單方塊來啟用[CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize)方法。  
+### <a name="remarks"></a>Remarks  
+ You can enable list box resizing by using the [CMFCRibbonComboBox::EnableDropDownListResize](#enabledropdownlistresize) method.  
   
-##  <a name="onselectitem"></a>CMFCRibbonComboBox::OnSelectItem  
- 當使用者選取項目在清單方塊中，由架構呼叫。  
+##  <a name="onselectitem"></a>  CMFCRibbonComboBox::OnSelectItem  
+ Called by the framework when a user selects an item in the list box.  
   
 ```  
 virtual void OnSelectItem(int nItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nItem`  
- 選取的項目索引。  
+ The index of the selected item.  
   
-### <a name="remarks"></a>備註  
- 如果您想要處理使用者輸入選取範圍，請覆寫這個方法。  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want to process a user input selection.  
   
-##  <a name="removeallitems"></a>CMFCRibbonComboBox::RemoveAllItems  
- 刪除所有項目從清單方塊，並清除 [編輯] 方塊。  
+##  <a name="removeallitems"></a>  CMFCRibbonComboBox::RemoveAllItems  
+ Deletes all items from the list box and clears the edit box.  
   
 ```  
 void RemoveAllItems();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectitem"></a>CMFCRibbonComboBox::SelectItem  
- 清單方塊中選取項目。  
+##  <a name="selectitem"></a>  CMFCRibbonComboBox::SelectItem  
+ Selects an item in the list box.  
   
 ```  
 BOOL SelectItem(int iIndex);
@@ -366,37 +382,37 @@ BOOL SelectItem(DWORD_PTR dwData);
 BOOL SelectItem(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- 清單方塊中的項目以零為起始的索引。  
+ The zero-based index of an item in the list box.  
   
  [in] `dwData`  
- 清單方塊中的項目與相關的資料。  
+ The data associated with an item in the list box.  
   
  [in] `lpszText`  
- 清單方塊中項目的字串。  
+ The string of an item in the list box.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdropdownheight"></a>CMFCRibbonComboBox::SetDropDownHeight  
- 向下拖曳時，請設定清單方塊的高度。  
+##  <a name="setdropdownheight"></a>  CMFCRibbonComboBox::SetDropDownHeight  
+ Sets the height of the list box when it is dropped down.  
   
 ```  
 void SetDropDownHeight(int nHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nHeight`  
- 像素為單位，清單方塊的高度。  
+ The height, in pixels, of the list box.  
   
-### <a name="remarks"></a>備註  
- 預設高度為 150 像素。  
+### <a name="remarks"></a>Remarks  
+ The default height is 150 pixels.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCRibbonEdit 類別](../../mfc/reference/cmfcribbonedit-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonEdit Class](../../mfc/reference/cmfcribbonedit-class.md)
 

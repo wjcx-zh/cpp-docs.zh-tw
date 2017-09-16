@@ -1,159 +1,177 @@
 ---
-title: "MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LPPICTUREDISP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnDraw 方法，MFC ActiveX 控制項"
-  - "MFC ActiveX 控制項，圖片"
-  - "OnDraw 方法"
-  - "OnResetState 方法"
-  - "CLSID_CPicturePropPage"
+title: 'MFC ActiveX Controls: Using Pictures in an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LPPICTUREDISP
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnDraw method, MFC ActiveX controls
+- MFC ActiveX controls [MFC], pictures
+- OnDraw method [MFC]
+- OnResetState method [MFC]
+- CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# MFC ActiveX 控制項：在 ActiveX 控制項中使用圖片
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0de8bb1cf7a43aa993712cbdb81664e3ba5afe03
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明常見圖片類型和如何在 ActiveX 控制項中實作。 主題包括：  
+---
+# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX Controls: Using Pictures in an ActiveX Control
+This article describes the common Picture type and how to implement it in your ActiveX control. Topics include:  
   
--   [自訂圖片屬性的概觀](#_core_overview_of_custom_picture_properties)  
+-   [Overview of Custom Picture Properties](#_core_overview_of_custom_picture_properties)  
   
--   [在 ActiveX 控制項中實作自訂圖片屬性](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
+-   [Implementing a Custom Picture Property in Your ActiveX Control](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
   
--   [於控制項專案中加入項目](#_core_additions_to_your_control_project)  
+-   [Additions to Your Control Project](#_core_additions_to_your_control_project)  
   
-##  <a name="_core_overview_of_custom_picture_properties"></a> 自訂圖片屬性的概觀  
- 圖片類型在某些 ActiveX 控制項群組中是很常見的一種類型。 圖片類型可以處理中繼檔、點陣圖或圖示，並且讓使用者指定要在 ActiveX 控制項中顯示的圖片。 自訂圖片屬性是以圖片物件和允許控制項使用者存取圖片屬性的 Get\/Set 函式來進行實作。 控制項使用者可利用內建圖片屬性頁來存取自訂圖片屬性。  
+##  <a name="_core_overview_of_custom_picture_properties"></a> Overview of Custom Picture Properties  
+ A Picture type is one of a group of types common to some ActiveX controls. The Picture type handles metafiles, bitmaps, or icons and allows the user to specify a picture to be displayed in an ActiveX control. Custom Picture properties are implemented using a picture object and Get/Set functions that allow the control user access to the Picture property. Control users access the custom Picture property using the stock Picture property page.  
   
- 除了標準圖片類型，尚可使用字型和色彩類型。 如需在 ActiveX 控制項中使用標準 Font 類型的詳細資訊，請參閱 [MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)一文。  
+ In addition to the standard Picture type, Font and Color types are also available. For more information on using the standard Font type in your ActiveX control, see the article [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md).  
   
- ActiveX 控制項類別提供許多您可以用來在控制項內實作圖片屬性的元件。 這些元件包括：  
+ The ActiveX control classes provide several components you can use to implement the Picture property within the control. These components include:  
   
--   [CPictureHolder](../mfc/reference/cpictureholder-class.md) 類別。  
+-   The [CPictureHolder](../mfc/reference/cpictureholder-class.md) class.  
   
-     這個類別提供簡易存取圖片物件及自訂圖片屬性所顯示之項目的功能。  
+     This class provides easy access to the picture object and functionality for the item displayed by the custom Picture property.  
   
--   支援 **LPPICTUREDISP** 類型屬性，此由 Get\/Set 函式完成實作。  
+-   Support for properties of type **LPPICTUREDISP**, implemented with Get/Set functions.  
   
-     您可以使用 \[類別檢視\] 快速加入一個支援圖片類型的自訂屬性或屬性。 如需使用 \[類別檢視\] 加入 ActiveX 控制項屬性的詳細資訊，請參閱 [MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)一文。  
+     Using Class View you can quickly add a custom property, or properties, that supports the Picture type. For more information on adding ActiveX control properties with Class View, see the article [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md).  
   
--   操作控制項圖片屬性的屬性頁。  
+-   A property page that manipulates a control's Picture property or properties.  
   
-     這個屬性頁是 ActiveX 控制項可以使用的內建屬性頁的一部分。 如需 ActiveX 控制項屬性頁的詳細資訊，請參閱 [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)一文。  
+     This property page is part of a group of stock property pages available to ActiveX controls. For more information on ActiveX control property pages, see the article [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> 在 ActiveX 控制項中實作自訂圖片屬性  
- 當您完成本章節所列步驟之後，控制項便可以顯示由使用者所選定的圖片。 使用者可以在顯示目前圖片的屬性頁上更改已顯示的圖片，該屬性頁中也有一個瀏覽按鈕，以供使用者選取不同的圖片。  
+##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementing a Custom Picture Property in Your ActiveX Control  
+ When you have completed the steps outlined in this section, the control can display pictures chosen by its user. The user can change the displayed picture using a property page that shows the current picture and has a Browse button that allows the user to the select different pictures.  
   
- 自訂圖片屬性的實作程序與其他屬性的程序相似，主要差異是在此種自訂屬性必須支援圖片類型。 因為圖片屬性的項目必須由 ActiveX 控制項繪製，因此必須針對屬性進行加入和修改才能完整實作屬性。  
+ A custom Picture property is implemented using a process similar to that used for implementing other properties, the main difference being that the custom property must support a Picture type. Because the item of the Picture property must be drawn by the ActiveX control, a number of additions and modifications must be made to the property before it can be fully implemented.  
   
- 若要實作自訂圖片屬性，您必須執行下列動作：  
+ To implement a custom Picture property, you must do the following:  
   
--   [在控制項專案中加入程式碼](#_core_additions_to_your_control_project)。  
+-   [Add code to your control project](#_core_additions_to_your_control_project).  
   
-     必須加入一個標準圖片屬性頁 ID、一個 `CPictureHolder` 類型資料成員，和具 Get\/Set 實作之 **LPPICTUREDISP** 類型的自訂屬性。  
+     A standard Picture property page ID, a data member of type `CPictureHolder`, and a custom property of type **LPPICTUREDISP** with a Get/Set implementation must be added.  
   
--   [在控制項類別中修改幾種函式](#_core_modifications_to_your_control_project)。  
+-   [Modify several functions in your control class](#_core_modifications_to_your_control_project).  
   
-     這些修改主要是針對負責 ActiveX 控制項繪製的若干函式。  
+     These modifications will be made to several functions that are responsible for the drawing of your ActiveX control.  
   
-##  <a name="_core_additions_to_your_control_project"></a> 於控制項專案中加入項目  
- 若要為標準圖片屬性頁加入屬性頁 ID，請在控制項實作檔 \(.CPP\) 中的 `BEGIN_PROPPAGEIDS` 巨集之後插入下列這行程式碼：  
+##  <a name="_core_additions_to_your_control_project"></a> Additions to Your Control Project  
+ To add the property page ID for the standard Picture property page, insert the following line after the `BEGIN_PROPPAGEIDS` macro in the control implementation file (.CPP):  
   
- [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- 您也必須將 `BEGIN_PROPPAGEIDS` 巨集的計數參數設成以 1 遞增。 下面這行程式碼可說明這點：  
+ You must also increment the count parameter of your `BEGIN_PROPPAGEIDS` macro by one. The following line illustrates this:  
   
- [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
- 若要對控制項類別加入 `CPictureHolder` 資料成員，請在控制項標頭檔 \(.H\) 裡的控制項類別宣告保護區段中插入下列這行程式碼：  
+ To add the `CPictureHolder` data member to the control class, insert the following line under the protected section of the control class declaration in the control header file (.H):  
   
- [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
+ [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- 您不一定要將資料成員命名為 `m_pic`；任何名稱都可以使用。  
+ It is not necessary to name your data member `m_pic`; any name will suffice.  
   
- 接著，加入一個支援圖片類型的自訂屬性：  
+ Next, add a custom property that supports a Picture type:  
   
-#### 若要使用 \[加入屬性精靈\] 來加入自訂圖片屬性  
+#### <a name="to-add-a-custom-picture-property-using-the-add-property-wizard"></a>To add a custom picture property using the Add Property Wizard  
   
-1.  載入控制項專案。  
+1.  Load your control's project.  
   
-2.  在 \[類別檢視\] 中，展開控制項的程式庫節點。  
+2.  In Class View, expand the library node of your control.  
   
-3.  在控制項的介面節點 \(程式庫節點的第二個節點\) 上按一下滑鼠右鍵，開啟捷徑功能表。  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  從捷徑功能表選擇 \[加入\]，然後選擇 \[加入屬性\]。  
+4.  From the shortcut menu, choose **Add** and then **Add Property**.  
   
-5.  在 \[屬性名稱\] 方塊中，輸入屬性名稱。 為達示範目的，這個程序中將會使用 `ControlPicture`。  
+5.  In the **Property Name** box, type the property name. For example purposes, `ControlPicture` is used in this procedure.  
   
-6.  在 \[屬性類型\] 方塊中，為屬性類型選擇 **IPictureDisp\***。  
+6.  In the **Property Type** box, select **IPictureDisp\*** for the property type.  
   
-7.  在 \[實作類型\] 中，按一下 \[Get\/Set 方法\]。  
+7.  For **Implementation Type**, click **Get/Set Methods**.  
   
-8.  為 Get 和 Set 函式輸入唯一名稱，或接受預設名稱  \(在這個範例中，會使用預設名稱 `GetControlPicture` 和 `SetControlPicture`\)。  
+8.  Type unique names for your Get and Set Functions or accept the default names. (In this example, the default names `GetControlPicture` and `SetControlPicture` are used.)  
   
-9. 按一下 \[**完成**\]。  
+9. Click **Finish**.  
   
- \[加入屬性精靈\] 會在控制項標頭檔 \(.H\) 的分派對應註解之間加入下列這行程式碼：  
+ The Add Property Wizard adds the following code between the dispatch map comments in the control header (.H) file:  
   
- [!code-cpp[NVC_MFC_AxPic#4](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_4.h)]  
+ [!code-cpp[NVC_MFC_AxPic#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_4.h)]  
   
- 除此之外，下列這段程式碼也會插入至控制項實作檔 \(.CPP\) 的分派對應中：  
+ In addition, the following code was inserted in the dispatch map of the control implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxPic#5](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_5.cpp)]  
   
- \[加入屬性精靈\] 也會在控制項實作檔中加入下列這兩個 Stub 函式：  
+ The Add Property Wizard also adds the following two stub functions in the control implementation file:  
   
- [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]  
-  
-> [!NOTE]
->  控制項類別和函式名稱可能會與上述範例不同。  
-  
-###  <a name="_core_modifications_to_your_control_project"></a> 於控制項專案中修改項目  
- 當您已經在控制項專案中加入了必要的項目之後，您需要修改幾種會影響 ActiveX 控制項轉譯的函式。 這些函式，即 `OnResetState`、`OnDraw` 和自訂圖片屬性的 Get\/Set 函式位於控制項實作檔中。 請注意，在這個範例中，控制項類別名稱為 `CSampleCtrl`，`CPictureHolder` 資料成員名稱為 `m_pic`，而自訂圖片屬性名稱是 `ControlPicture`。  
-  
- 在 `OnResetState` 控制項函式中，將下列這行選擇性的程式碼加到 `COleControl::OnResetState` 呼叫之後：  
-  
- [!code-cpp[NVC_MFC_AxPic#7](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_7.cpp)]  
-  
- 如此便會將控制項圖片設成空白圖片。  
-  
- 若要適當地繪製圖片，請呼叫在 `OnDraw` 控制項函式中的 [CPictureHolder::Render](../Topic/CPictureHolder::Render.md)。 將函式修改成類似下面範例中的函式：  
-  
- [!code-cpp[NVC_MFC_AxPic#8](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_8.cpp)]  
-  
- 在控制項自訂圖片屬性的 Get 函式中，加入下列這行程式碼：  
-  
- [!code-cpp[NVC_MFC_AxPic#9](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_9.cpp)]  
-  
- 在控制項自訂圖片屬性的 Set 函式中，加入下列這行程式碼：  
-  
- [!code-cpp[NVC_MFC_AxPic#10](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_10.cpp)]  
-  
- 圖片屬性必須設定成具有持續性，這樣在設計階段所加入的資料才會於執行階段顯示。 將下列這行程序碼加入 `COleControl` 衍生類別的 `DoPropExchange` 函式中：  
-  
- [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]  
   
 > [!NOTE]
->  類別和函式名稱可能與上述範例中的不同。  
+>  Your control class and function names might differ from the example above.  
   
- 在您完成修改之後，請重建專案以納入自訂圖片屬性的新功能，並且使用測試容器來測試新屬性。 如需測試容器存取方法的詳細資訊，請參閱[以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)。  
+###  <a name="_core_modifications_to_your_control_project"></a> Modifications to Your Control Project  
+ After you have made the necessary additions to your control project, you need to modify several functions that affect the rendering of your ActiveX control. These functions, `OnResetState`, `OnDraw`, and the Get/Set functions of a custom Picture property, are located in the control implementation file. (Note that in this example the control class is called `CSampleCtrl`, the `CPictureHolder` data member is called `m_pic`, and the custom picture property name is `ControlPicture`.)  
   
-## 請參閱  
- [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)   
- [MFC ActiveX 控制項：使用字型](../mfc/mfc-activex-controls-using-fonts.md)   
- [MFC ActiveX 控制項：屬性頁](../mfc/mfc-activex-controls-property-pages.md)
+ In the control `OnResetState` function, add the following optional line after the call to `COleControl::OnResetState`:  
+  
+ [!code-cpp[NVC_MFC_AxPic#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_7.cpp)]  
+  
+ This sets the control's picture to a blank picture.  
+  
+ To draw the picture properly, make a call to [CPictureHolder::Render](../mfc/reference/cpictureholder-class.md#render) in the control `OnDraw` function. Modify your function to resemble the following example:  
+  
+ [!code-cpp[NVC_MFC_AxPic#8](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_8.cpp)]  
+  
+ In the Get function of the control's custom picture property, add the following line:  
+  
+ [!code-cpp[NVC_MFC_AxPic#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_9.cpp)]  
+  
+ In the Set function of the control's custom Picture property, add the following lines:  
+  
+ [!code-cpp[NVC_MFC_AxPic#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_10.cpp)]  
+  
+ The picture property must be made persistent so that information added at design time will show up at run time. Add the following line to the `COleControl`-derived class's `DoPropExchange` function:  
+  
+ [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]  
+  
+> [!NOTE]
+>  Your class and function names might differ from the example above.  
+  
+ After you complete the modifications, rebuild your project to incorporate the new functionality of the custom Picture property and use Test Container to test the new property. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md)   
+ [MFC ActiveX Controls: Property Pages](../mfc/mfc-activex-controls-property-pages.md)
+
+

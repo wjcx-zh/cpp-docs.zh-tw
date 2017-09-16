@@ -1,5 +1,5 @@
 ---
-title: "CMFCKeyMapDialog 類別 |Microsoft 文件"
+title: CMFCKeyMapDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCKeyMapDialog class
+- CMFCKeyMapDialog [MFC], CMFCKeyMapDialog
+- CMFCKeyMapDialog [MFC], DoModal
+- CMFCKeyMapDialog [MFC], FormatItem
+- CMFCKeyMapDialog [MFC], GetCommandKeys
+- CMFCKeyMapDialog [MFC], OnInsertItem
+- CMFCKeyMapDialog [MFC], OnPrintHeader
+- CMFCKeyMapDialog [MFC], OnPrintItem
+- CMFCKeyMapDialog [MFC], OnSetColumns
+- CMFCKeyMapDialog [MFC], PrintKeyMap
+- CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
 caps.latest.revision: 26
 author: mikeblome
@@ -44,17 +53,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 6599f5c3cda6eb407f4545d42528c1c68950b94c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 53142cc9536fdea778e9725378415e2c44be3042
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog 類別
-`CMFCKeyMapDialog`類別支援將命令對應至鍵盤按鍵的控制項。  
+# <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog Class
+The `CMFCKeyMapDialog` class supports a control that maps commands to keys on the keyboard.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCKeyMapDialog : public CDialogEx  
@@ -62,37 +71,37 @@ class CMFCKeyMapDialog : public CDialogEx
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|建構 `CMFCKeyMapDialog` 物件。|  
+|[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Constructs a `CMFCKeyMapDialog` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::DoModal](#domodal)|顯示鍵盤對應 對話方塊。|  
+|[CMFCKeyMapDialog::DoModal](#domodal)|Displays a keyboard mapping dialog box.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|若要建置描述的索引鍵對應的字串架構呼叫。 根據預設，字串會包含命令名稱、 使用的快速鍵和快顯重要描述。|  
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|擷取字串，包含與指定的命令相關聯的快速鍵的清單。|  
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|架構支援鍵盤對應控制項的內部清單控制項中插入新項目之前呼叫。|  
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|新的頁面上列印的鍵盤對應的標頭的架構所呼叫。|  
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|若要列印的鍵盤對應項目架構呼叫。|  
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|若要設定支援鍵盤對應控制項的內部清單控制項中的資料行標題架構呼叫。|  
-|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|當使用者按一下時，由框架呼叫**列印** 按鈕。|  
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|若要設定支援鍵盤對應控制項的內部清單控制項中的資料行的寬度架構呼叫。|  
+|[CMFCKeyMapDialog::FormatItem](#formatitem)|Called by the framework to build a string that describes a key mapping. By default, the string contains the command name, the shortcut keys used, and the shortcut key description.|  
+|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Retrieves a string that contains a list of shortcut keys associated with the specified command.|  
+|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Called by the framework before a new item is inserted into the internal list control that supports the keyboard mapping control.|  
+|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Called by the framework to print the header for the keyboard map on a new page.|  
+|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Called by the framework to print a keyboard mapping item.|  
+|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Called by the framework to set captions for the columns in the internal list control that supports the keyboard mapping control.|  
+|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Called by the framework when a user clicks the **Print** button.|  
+|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Called by the framework to set the width of the columns in the internal list control that supports the keyboard mapping control.|  
   
-## <a name="remarks"></a>備註  
- 使用`CMFCKeyMapDialog`類別來實作可調整大小的鍵盤對應 對話方塊。 對話方塊中會使用清單檢視控制項來顯示鍵盤快速鍵和其相關聯的命令。  
+## <a name="remarks"></a>Remarks  
+ Use the `CMFCKeyMapDialog` class to implement a resizable keyboard mapping dialog box. The dialog box uses a list view control to display keyboard shortcuts and their associated commands.  
   
- 若要使用`CMFCKeyMapDialog`類別在應用程式中，做為參數傳遞指標到主框架視窗`CMFCKeyMapDialog`建構函式。 然後呼叫`DoModal`方法，以啟動強制回應對話方塊。  
+ To use the `CMFCKeyMapDialog` class in an application, pass in a pointer to the main frame window as a parameter to the `CMFCKeyMapDialog` constructor. Then call the `DoModal` method to start a modal dialog box.  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -105,11 +114,11 @@ class CMFCKeyMapDialog : public CDialogEx
   
  [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxkeymapdialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxkeymapdialog.h  
   
-##  <a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog  
- 建構 `CMFCKeyMapDialog` 物件。  
+##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog  
+ Constructs a `CMFCKeyMapDialog` object.  
   
 ```  
 CMFCKeyMapDialog(
@@ -117,67 +126,67 @@ CMFCKeyMapDialog(
     BOOL bEnablePrint=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParentFrame`  
- 父視窗的指標`CMFCKeyMapDialog`物件。  
+ A pointer to the parent window of the `CMFCKeyMapDialog` object.  
   
  [in] `bEnablePrint`  
- `TRUE`如果可以列印快速鍵的清單。，否則， `FALSE`。 預設為 `FALSE`。  
+ `TRUE` if the list of accelerator keys can be printed; otherwise, `FALSE`. The default is `FALSE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-### <a name="example"></a>範例  
- 下列範例示範如何建構的物件`CMFCKeyMapDialog`類別。 這個範例是屬於[Visual Studio 示範範例](../../visual-cpp-samples.md)。  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCKeyMapDialog` class. This example is part of the [Visual Studio Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_VisualStudioDemo #&21;](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]  
   
-##  <a name="domodal"></a>CMFCKeyMapDialog::DoModal  
- 顯示鍵盤對應 對話方塊。  
+##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal  
+ Displays a keyboard mapping dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 帶正負號的整數，例如`IDOK`或`IDCANCEL`，也就是傳遞至[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)方法。 方法接著會關閉對話方塊。 如需詳細資訊，請參閱[CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)。  
+### <a name="return-value"></a>Return Value  
+ A signed integer, such as `IDOK` or `IDCANCEL`, that is passed to the [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) method. The method, in turn, closes the dialog box. For more information, see [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).  
   
-### <a name="remarks"></a>備註  
- 鍵盤對應 對話方塊可讓您選取，並將快速鍵指派給各種類別目錄的命令。 此外，您可以將所選的快速鍵，以及其描述複製到剪貼簿。  
+### <a name="remarks"></a>Remarks  
+ The keyboard mapping dialog box enables you to select and assign accelerator keys to various categories of commands. In addition, you can copy the selected accelerator keys and their description to the clipboard.  
   
-##  <a name="formatitem"></a>CMFCKeyMapDialog::FormatItem  
- 若要建置描述的索引鍵對應的字串架構呼叫。 根據預設，字串會包含命令名稱、 使用的快速鍵和快顯重要描述。  
+##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem  
+ Called by the framework to build a string that describes a key mapping. By default, the string contains the command name, the shortcut keys used, and the shortcut key description.  
   
 ```  
 virtual CString FormatItem(int nItem) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nItem`  
- 索引鍵對應的內部清單中項目的以零為起始的索引。  
+ The zero-based index of an item in the internal list of key mappings.  
   
-### <a name="return-value"></a>傳回值  
- A`CString`物件，其中包含已格式化的項目文字。  
+### <a name="return-value"></a>Return Value  
+ A `CString` object that contains the formatted item text.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys  
- 擷取字串值。 字串包含指定的命令相關聯的快速鍵的清單。  
+##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys  
+ Retrieves a string value. The string contains a list of shortcut keys that are associated with a specified command.  
   
 ```  
 virtual CString GetCommandKeys(UINT uiCmdID) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- 命令 id。  
+ A command ID.  
   
-### <a name="return-value"></a>傳回值  
- 以分號分隔 （';'） 的快速鍵清單與指定的命令相關聯。  
+### <a name="return-value"></a>Return Value  
+ A semicolon-delimited (';') list of shortcut keys that is associated with the specified command.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem  
- 架構支援鍵盤對應控制項的內部清單控制項插入新項目之前呼叫。  
+##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem  
+ Called by the framework before a new item is inserted into an internal list control that supports the keyboard mapping control.  
   
 ```  
 virtual void OnInsertItem(
@@ -185,17 +194,17 @@ virtual void OnInsertItem(
     int nItem);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pButton`  
- 指標用來對應的鍵盤快速鍵命令名稱和描述的工具列按鈕。 索引鍵對應項目會儲存在內部清單控制項。  
+ A pointer to a toolbar button that is used to map a keyboard key combination to a command name and description. The key map item is stored in an internal list control.  
   
  [in] `nItem`  
- 以零為起始的索引，指定要插入新的索引鍵對應項目內部清單控制項中的位置。  
+ A zero-based index that specifies where to insert the new key map item in the internal list control.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader  
- 新的頁面上列印的鍵盤對應的標頭的架構所呼叫。  
+##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader  
+ Called by the framework to print the header for the keyboard map on a new page.  
   
 ```  
 virtual int OnPrintHeader(
@@ -204,24 +213,24 @@ virtual int OnPrintHeader(
     int cx) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dc`  
- 印表機裝置內容。  
+ The device context for the printer.  
   
  [in] `nPage`  
- 若要列印的頁碼。  
+ The page number to print.  
   
  [in] `cx`  
- 標頭，單位為像素水平位移。  
+ The horizontal offset of the header, in pixels.  
   
-### <a name="return-value"></a>傳回值  
- 如果成功，印刷文字的高度。 如需詳細資訊，請參閱 > 一節會傳回值[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)。  
+### <a name="return-value"></a>Return Value  
+ If successful, the height of the printed text. For more information, see the Return Value section of [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).  
   
-### <a name="remarks"></a>備註  
- 架構會使用這個方法列印鍵盤對應。 根據預設，這個方法會列印的頁面數目、 應用程式名稱和對話方塊的標題。  
+### <a name="remarks"></a>Remarks  
+ The framework uses this method to print the keyboard map. By default, this method prints the page number, application name, and dialog box title.  
   
-##  <a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem  
- 若要列印的鍵盤對應項目架構呼叫。  
+##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem  
+ Called by the framework to print a keyboard mapping item.  
   
 ```  
 virtual int OnPrintItem(
@@ -232,60 +241,60 @@ virtual int OnPrintItem(
     BOOL bCalcHeight) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dc`  
- 印表機裝置內容。  
+ The device context of the printer.  
   
  [in] `nItem`  
- 若要列印的項目以零為起始的索引。  
+ The zero-based index of the item to print.  
   
  [in] `y`  
- 頁面頂端和項目的位置之間的垂直位移。  
+ The vertical offset between the top of the page and the position of the item.  
   
  [in] `cx`  
- 頁面的左邊和位置的項目之間的水平位移。  
+ The horizontal offset between the left of the page and the position of the item.  
   
  [in] `bCalcHeight`  
- `TRUE`計算最佳的高度，列印的項目。`FALSE`截斷列印項目，使其符合預設的空間。  
+ `TRUE` to calculate the best height for the print item; `FALSE` to truncate the print item so that it fits the default space.  
   
-### <a name="return-value"></a>傳回值  
- 列印項目的高度。  
+### <a name="return-value"></a>Return Value  
+ The height of the printed item.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，以列印索引鍵對應對話方塊項目。 根據預設，這個方法會列印項目的命令名稱、 快速鍵和命令的描述。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to print a key map dialog box item. By default, this method prints the item's command name, shortcut keys, and command description.  
   
-##  <a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns  
- 若要設定支援鍵盤對應控制項的內部清單控制項中的資料行標題架構呼叫。  
+##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns  
+ Called by the framework to set captions for the columns in the internal list control that supports the keyboard mapping control.  
   
 ```  
 virtual void OnSetColumns();
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，這個方法會從三個資源取得的資料行的標題。 命令資料行標題是來自 IDS_AFXBARRES_COMMAND、 索引鍵資料行標題是從 IDS_AFXBARRES_KEYS，且描述資料行標題是從 IDS_AFXBARRES_DESCRIPTION。  
+### <a name="remarks"></a>Remarks  
+ By default, this method obtains the captions for the columns from three resources. The command column caption is from IDS_AFXBARRES_COMMAND, the key column caption is from IDS_AFXBARRES_KEYS, and the description column caption is from IDS_AFXBARRES_DESCRIPTION.  
   
-##  <a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap  
- 當使用者按一下時，由框架呼叫**列印** 按鈕。  
+##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap  
+ Called by the framework when a user clicks the **Print** button.  
   
 ```  
 virtual void PrintKeyMap();
 ```  
   
-### <a name="remarks"></a>備註  
- `PrintKeyMap`方法會列印索引鍵的對應。 它會初始化一個新的列印工作，然後重複呼叫[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)和[CMFCKeyMapDialog::OnPrintItem](#onprintitem)方法，直到所有索引鍵的對應時，會列印。  
+### <a name="remarks"></a>Remarks  
+ The `PrintKeyMap` method prints the key map. It initiates a new print job and then repeatedly calls the [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) and [CMFCKeyMapDialog::OnPrintItem](#onprintitem) methods until all the key mappings are printed.  
   
-##  <a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth  
- 若要設定支援鍵盤對應控制項的內部清單控制項中的資料行的寬度架構呼叫。  
+##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth  
+ Called by the framework to set the width of the columns in the internal list control that supports the keyboard mapping control.  
   
 ```  
 virtual void SetColumnsWidth();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會將設定內部清單控制項的資料行預設寬度。 首先，會計算捷徑索引鍵資料行的寬度。 然後的剩餘寬度的三分之一會配置到命令資料行，而且其餘的三分之二配置給描述資料行。  
+### <a name="remarks"></a>Remarks  
+ This method sets the internal list control's columns to default widths. First, the width of the shortcut keys column is calculated. Then one-third of the remaining width is allocated to the command column and the remaining two-thirds is allocated to the description column.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md)
 

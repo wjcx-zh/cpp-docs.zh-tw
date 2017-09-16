@@ -1,45 +1,64 @@
 ---
-title: "處理套用按鈕 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "屬性工作表中的套用按鈕"
-  - "屬性工作表, 套用按鈕"
+title: Handling the Apply Button | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Apply button in property sheet
+- property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 處理套用按鈕
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 96feedc375f1430ae99851baf90aca49c7f6a296
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-屬性工作表具有標準對話方塊不的功能:它們可讓使用者將變更他們在關閉屬性工作表之前完成。  使用應用程式按鈕，來完成。  本文將討論您可以使用正確實作這項功能的方法。  
+---
+# <a name="handling-the-apply-button"></a>Handling the Apply Button
+Property sheets have a capability that standard dialog boxes do not: They allow the user to apply changes they have made before closing the property sheet. This is done using the Apply button. This article discusses methods you can use to implement this feature properly.  
   
- 當使用者按一下確定關閉對話方塊時，強制回應對話方塊通常將設定套用至外部物件。  這也適用於屬性工作表:當使用者按一下確定時，在屬性工作表的新設定生效。  
+ Modal dialog boxes usually apply the settings to an external object when the user clicks OK to close the dialog box. The same is true for a property sheet: When the user clicks OK, the new settings in the property sheet take effect.  
   
- 不過，您可能想要讓使用者儲存設定，而不需關閉屬性工作表對話方塊。  這是新應用程式的函式。  狀態的新應用程式所有頁面的目前設定屬性頁對外部物件，其中含有目前作用中的網頁的目前設定相對。  
+ However, you may want to allow the user to save settings without having to close the property sheet dialog box. This is the function of the Apply button. The Apply button applies the current settings in all of the property pages to the external object, as opposed to applying only the current settings of the currently active page.  
   
- 根據預設，應用程式按鈕永遠都會停用。  您必須撰寫程式碼以啟用應用程式按鈕在適當的時間，因此，您必須撰寫程式碼實作應用程式的角色，如下所述。  
+ By default, the Apply button is always disabled. You must write code to enable the Apply button at the appropriate times, and you must write code to implement the effect of Apply, as explained below.  
   
- 如果您不想為使用者提供應用程式功能，移除應用程式按鈕是不必要的。  您可以將它停用，在視窗未來的版本使用標準屬性工作表支援可用的應用程式中常見的。  
+ If you do not wish to offer the Apply functionality to the user, it is not necessary to remove the Apply button. You can leave it disabled, as will be common among applications that use standard property sheet support available in future versions of Windows.  
   
- 報告頁面中修改和啟用應用按鈕，呼叫 **CPropertyPage::SetModified\( TRUE \)**。  如果任何網頁報告被修改，應用按鈕會保持啟用，不論是否已修改目前作用中的網頁。  
+ To report a page as being modified and enable the Apply button, call **CPropertyPage::SetModified( TRUE )**. If any of the pages report being modified, the Apply button will remain enabled, regardless of whether the currently active page has been modified.  
   
- 您應該呼叫 [CPropertyPage::SetModified](../Topic/CPropertyPage::SetModified.md) ，每當使用者變更網頁上的任何設定。  一種偵測使用者何時變更網頁的設定將實作變更每個告知處理常式在屬性頁的控制項，例如 **EN\_CHANGE** 和 **BN\_CLICKED**。  
+ You should call [CPropertyPage::SetModified](../mfc/reference/cpropertypage-class.md#setmodified) whenever the user changes any settings in the page. One way to detect when a user changes a setting in the page is to implement change notification handlers for each of the controls in the property page, such as **EN_CHANGE** or **BN_CLICKED**.  
   
- 若要實作新應用程式的角色，屬性工作表必須呼叫它的擁有人，或者其他外部物件在應用程式，則會使用目前設定屬性頁。  同時，屬性工作表也應該呼叫套用到外部物件的修改的所有網頁的 **CPropertyPage::SetModified\( FALSE \)** 停用應用程式按鈕。  
+ To implement the effect of the Apply button, the property sheet must tell its owner, or some other external object in the application, to apply the current settings in the property pages. At the same time, the property sheet should disable the Apply button by calling **CPropertyPage::SetModified( FALSE )** for all pages that applied their modifications to the external object.  
   
- 如需這個程序的範例，請參閱 MFC 一般 [PROPDLG](../top/visual-cpp-samples.md)範例。  
+ For an example of this process, see the MFC General sample [PROPDLG](../visual-cpp-samples.md).  
   
-## 請參閱  
- [屬性工作表](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

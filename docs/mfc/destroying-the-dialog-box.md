@@ -1,36 +1,55 @@
 ---
-title: "終結對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "解構, 對話方塊"
-  - "對話方塊, 刪除"
-  - "對話方塊, 終結"
-  - "對話方塊, 移除"
-  - "MFC 對話方塊, 終結"
-  - "強制回應對話方塊, 終結"
-  - "非強制回應對話方塊, 終結"
+title: Destroying the Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], deleting
+- destruction, dialog box
+- dialog boxes [MFC], destroying
+- dialog boxes [MFC], removing
+- modeless dialog boxes [MFC], destroying
+- MFC dialog boxes [MFC], destroying
+- modal dialog boxes [MFC], destroying
 ms.assetid: dabceee7-3639-4d85-bf34-73515441b3d0
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 終結對話方塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f076adca6c694d6f0a1656ce554238a80c4e7b9d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-強制回應對話方塊時在堆疊框架通常建立和終結以結尾的函式。  當物件超出範圍時，對話方塊物件的解構函式。  
+---
+# <a name="destroying-the-dialog-box"></a>Destroying the Dialog Box
+Modal dialog boxes are normally created on the stack frame and destroyed when the function that created them ends. The dialog object's destructor is called when the object goes out of scope.  
   
- 非強制回應對話方塊的父檢視通常會建立和擁有或框架視窗—應用程式的主框架視窗或文件框架視窗。  預設的 [OnClose](../Topic/CWnd::OnClose.md) 處理常式呼叫 [DestroyWindow](../Topic/CWnd::DestroyWindow.md)，終結對話方塊視窗。  如果對話方塊個別代表，所以它或其他特殊擁有權語意的指標，您應該覆寫 [PostNcDestroy](../Topic/CWnd::PostNcDestroy.md) 終結 C\+\+ 對話物件。  您也應該覆寫 [OnCancel](../Topic/CDialog::OnCancel.md) 和呼叫 `DestroyWindow` 從其內部。  當不再需要時，則為，否則為對話方塊的擁有人應終結 C\+\+ 物件。  
+ Modeless dialog boxes are normally created and owned by a parent view or frame window — the application's main frame window or a document frame window. The default [OnClose](../mfc/reference/cwnd-class.md#onclose) handler calls [DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow), which destroys the dialog-box window. If the dialog box stands alone, with no pointers to it or other special ownership semantics, you should override [PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) to destroy the C++ dialog object. You should also override [OnCancel](../mfc/reference/cdialog-class.md#oncancel) and call `DestroyWindow` from within it. If not, the owner of the dialog box should destroy the C++ object when it is no longer necessary.  
   
-## 請參閱  
- [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

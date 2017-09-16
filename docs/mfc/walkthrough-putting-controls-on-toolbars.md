@@ -1,110 +1,128 @@
 ---
-title: "逐步解說：將控制項放在工具列上 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "自訂對話方塊, 加入控制項"
-  - "工具列, 加入控制項"
+title: 'Walkthrough: Putting Controls On Toolbars | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Customize dialog box, adding controls
+- toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
----
-# 逐步解說：將控制項放在工具列上
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c79b45a2e33653cab514460395c4a7130997d687
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本主題說明如何將包含視窗控制項的工具列按鈕加入至工具列。  在 MFC 中，工具列按鈕必須是 [CMFCToolBarButton Class](../mfc/reference/cmfctoolbarbutton-class.md)衍生類別，例如 [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)、 [CMFCToolBarEditBoxButton Class](../mfc/reference/cmfctoolbareditboxbutton-class.md)、 [CMFCDropDownToolbarButton Class](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)或 [CMFCToolBarMenuButton Class](../mfc/reference/cmfctoolbarmenubutton-class.md)。  
+---
+# <a name="walkthrough-putting-controls-on-toolbars"></a>Walkthrough: Putting Controls On Toolbars
+This topic describes how to add a toolbar button that contains a Windows control to a toolbar. In MFC, a toolbar button must be a [CMFCToolBarButton Class](../mfc/reference/cmfctoolbarbutton-class.md)-derived class, for example [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md), [CMFCToolBarEditBoxButton Class](../mfc/reference/cmfctoolbareditboxbutton-class.md), [CMFCDropDownToolbarButton Class](../mfc/reference/cmfcdropdowntoolbarbutton-class.md), or [CMFCToolBarMenuButton Class](../mfc/reference/cmfctoolbarmenubutton-class.md).  
   
-## 將控制項加入至工具列  
- 若要將控制項加入至工具列，請依照下列步驟執行:  
+## <a name="adding-controls-to-toolbars"></a>Adding Controls to Toolbars  
+ To add a control to a toolbar, follow these steps:  
   
-1.  為在父工具列資源的按鈕保留假的資源 ID 。  如需如何利用 Visual Studio 的工具列編輯器建立按鈕的詳細資訊，請參閱 [Toolbar Editor](../mfc/toolbar-editor.md) 主題。  
+1.  Reserve a dummy resource ID for the button in the parent toolbar resource. For more information about how to create buttons by using the Toolbar Editor in Visual Studio, see the [Toolbar Editor](../windows/toolbar-editor.md) topic.  
   
-2.  為在父工具列的所有點陣圖之按鈕保留工具列按鈕影像 \(按鈕圖示\)。  
+2.  Reserve a toolbar image (button icon) for the button in all bitmaps of the parent toolbar.  
   
-3.  在處理 `AFX_WM_RESETTOOLBAR` 訊息的訊息處理常式，請執行下列步驟:  
+3.  In the message handler that processes the `AFX_WM_RESETTOOLBAR` message, do the following:  
   
-    1.  使用 `CMFCToolbarButton` 衍生類別建構按鈕控制項。  
+    1.  Construct the button control by using a `CMFCToolbarButton`-derived class.  
   
-    2.  使用 [CMFCToolBar::ReplaceButton](../Topic/CMFCToolBar::ReplaceButton.md) 以新的控制項取代假的按鈕。  因為 `ReplaceButton` 複製按鈕物件並維護複本，您可以在堆疊上的建構按鈕物件。  
+    2.  Replace the dummy button with the new control by using [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton). You can construct the button object on the stack, because `ReplaceButton` copies the button object and maintains the copy.  
   
 > [!NOTE]
->  如果您啟用應用程式的自訂，您可能必須使用 \[**自訂**\] 對話方塊的 \[**工具列**\] 索引標籤上之 \[**重設**\] 按鈕重設工具列以看到在重新編譯之後出現在應用程式中更新後的控制項。  工具列狀態在 Windows 登錄中被儲存，且 `ReplaceButton` 方法在啟動期間執行後，註冊資訊會被載入並套用在應用程式。  
+>  If you enabled customization in your application, you may have to reset the toolbar by using the **Reset** button on the **Toolbars** tab of the **Customize** dialog box to see the updated control in your application after recompiling. The toolbar state is saved in the Windows registry, and the registry information is loaded and applied after the `ReplaceButton` method is executed during application startup.  
   
-## 工具列控制項和自訂  
- \[**自訂**\] 對話方塊的 \[**命令**\] 索引標籤包含可在應用程式取得的命令清單。  根據預設，\[**自訂**\] 對話方塊在每個功能表類別來管理應用程式選單並建立標準工具列按鈕的清單。  若要保留工具列控制項提供的擴充功能，您必須在 \[**自訂**\] 對話方塊以自訂控制項取代標準工具列按鈕。  
+## <a name="toolbar-controls-and-customization"></a>Toolbar Controls and Customization  
+ The **Commands** tab of the **Customize** dialog box contains a list of commands that are available in the application. By default, the **Customize** dialog box processes the application menus and builds a list of standard toolbar buttons in each menu category. To retain the extended functionality that the toolbar controls provide, you must replace the standard toolbar button with the custom control in the **Customize** dialog box.  
   
- 當您啟用自訂時，便會使用 [CMFCToolBarsCustomizeDialog Class](../mfc/reference/cmfctoolbarscustomizedialog-class.md) 類別建立自訂處理常式的 `OnViewCustomize` \[**自訂**\] 對話方塊。  在您呼叫 [CMFCToolBarsCustomizeDialog::Create](../Topic/CMFCToolBarsCustomizeDialog::Create.md)以顯示 \[**自訂**\] 對話方塊之前，呼叫 [CMFCToolBarsCustomizeDialog::ReplaceButton](../Topic/CMFCToolBarsCustomizeDialog::ReplaceButton.md) 以新的控制項取代標準按鈕。  
+ When you enable customization, you create the **Customize** dialog box in the customization handler `OnViewCustomize` by using the [CMFCToolBarsCustomizeDialog Class](../mfc/reference/cmfctoolbarscustomizedialog-class.md) class. Before you display the **Customize** dialog box by calling [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), call [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) to replace the standard button with the new control.  
   
-## 範例：建立搜尋下拉式方塊  
- 本節說明如何建立會顯示在工具列並包含最近使用的搜尋字串之 `Find` 下拉式方塊控制項。  使用者可以在控制項中輸入字串然後按 ENTER 鍵搜尋檔案，或按 Esc 鍵將焦點移到主框架。  這個範例假設文件會顯示在 [CEditView Class](../mfc/reference/ceditview-class.md)的衍生檢視。  
+## <a name="example-creating-a-find-combo-box"></a>Example: Creating a Find Combo Box  
+ This section describes how to create a `Find` combo box control that appears on a toolbar and contains recently-used search strings. The user can type a string in the control and then press the enter key to search a document, or press the escape key to return the focus to the main frame. This example assumes that the document is displayed in a [CEditView Class](../mfc/reference/ceditview-class.md)-derived view.  
   
-### 建立搜尋控制項  
- 首先，請建立 `Find` 下拉式方塊控制項：  
+### <a name="creating-the-find-control"></a>Creating the Find Control  
+ First, create the `Find` combo box control:  
   
-1.  將按鈕和其命令加入至應用程式資源：  
+1.  Add the button and its commands to the application resources:  
   
-    1.  在應用程式資源中，將具有 `ID_EDIT_FIND` 命令 ID 的新按鈕加入至應用程式的工具列與任何和工具列相關的點陣圖。  
+    1.  In the application resources, add a new button with an `ID_EDIT_FIND` command ID to a toolbar in your application and to any bitmaps associated with the toolbar.  
   
-    2.  建立一個具有 ID\_EDIT\_FIND 命令 ID 之新的功能表項目。  
+    2.  Create a new menu item with the ID_EDIT_FIND command ID.  
   
-    3.  將新的字串「Find the text\\nFind」加入至字串資料表並將`ID_EDIT_FIND_COMBO` 命令 ID 指派給它。  這個 ID 將當做 `Find` 下拉式方塊按鈕的命令 ID。  
+    3.  Add a new string "Find the text\nFind" to the string table and assign it an `ID_EDIT_FIND_COMBO` command ID. This ID will be used as the command ID of the `Find` combo box button.  
   
         > [!NOTE]
-        >  因為 `ID_EDIT_FIND` 是由 `CEditView` 管理的標準命令，您不需要為實作這個命令的特殊處理常式。不過，您必須實作新命令 `ID_EDIT_FIND_COMBO` 的處理常式。  
+        >  Because `ID_EDIT_FIND` is a standard command that is processed by `CEditView`, you are not required to implement a special handler for this command.  However, you must implement a handler for the new command `ID_EDIT_FIND_COMBO`.  
   
-2.  建立一個衍生自 [CComboBox Class](../mfc/reference/ccombobox-class.md) 的新類別：`CFindComboBox`。  
+2.  Create a new class, `CFindComboBox`, derived from [CComboBox Class](../mfc/reference/ccombobox-class.md).  
   
-3.  在 `CFindComboBox`類別中，覆寫 `PreTranslateMessage` 虛擬方法。  這個方法會啟用下拉式方塊處理 [WM\_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) 訊息。  如果使用者點擊 Esc 鍵 \(`VK_ESCAPE`\)，會將焦點移回主框架視窗。  如果使用者點擊 ENTER 鍵 \(`VK_ENTER`\)，會將包含 `ID_EDIT_FIND_COMBO` 命令 ID 的 `WM_COMMAND` 訊息張貼到主框架視窗內。  
+3.  In the `CFindComboBox` class, override the `PreTranslateMessage` virtual method. This method will enable the combo box to process the [WM_KEYDOWN](http://msdn.microsoft.com/library/windows/desktop/ms646280) message. If the user hits the escape key (`VK_ESCAPE`), return the focus to the main frame window. If the user hits the Enter key (`VK_ENTER`), post to the main frame window a `WM_COMMAND` message that contains the `ID_EDIT_FIND_COMBO` command ID.  
   
-4.  為 `Find` 下拉式方塊按鈕建立類別，衍生自 [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。  在此範例中，它的名稱是 `CFindComboButton`。  
+4.  Create a class for the `Find` combo box button, derived from [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). In this example, it is named `CFindComboButton`.  
   
-5.  `CMFCToolbarComboBoxButton` 的建構函式接受三個參數：按鈕的命令 ID、按鈕影像索引和下拉式方塊樣式。  設定這些參數如下：  
+5.  The constructor of `CMFCToolbarComboBoxButton` takes three parameters: the command ID of the button, the button image index, and the style of the combo box. Set these parameters as follows:  
   
-    1.  傳遞 `ID_EDIT_FIND_COMBO` 做為命令 ID。  
+    1.  Pass the `ID_EDIT_FIND_COMBO` as the command ID.  
   
-    2.  使用 [CCommandManager::GetCmdImage](http://msdn.microsoft.com/zh-tw/4094d08e-de74-4398-a483-76d27a742dca) 和 `ID_EDIT_FIND` 取得影像索引。  
+    2.  Use [CCommandManager::GetCmdImage](http://msdn.microsoft.com/en-us/4094d08e-de74-4398-a483-76d27a742dca) with `ID_EDIT_FIND` to obtain the image index.  
   
-    3.  如需可用下拉式方塊樣式的清單，請參閱 [下拉式方塊樣式](../mfc/reference/combo-box-styles.md)。  
+    3.  For a list of available combo box styles, see [Combo-Box Styles](../mfc/reference/styles-used-by-mfc.md#combo-box-styles).  
   
-6.  在 `CFindComboButton` 類別中，覆寫 `CMFCToolbarComboBoxButton::CreateCombo` 方法。  您應該建立 `CFindComboButton` 物件並將其指標傳回給它。  
+6.  In the `CFindComboButton` class, override the `CMFCToolbarComboBoxButton::CreateCombo` method. Here you should create the `CFindComboButton` object and return a pointer to it.  
   
-7.  使用 [IMPLEMENT\_SERIAL](../Topic/IMPLEMENT_SERIAL.md) 巨集讓下拉式按鈕永存。  工作區管理員會自動載入並保存在 Windows 登錄中的按鈕之狀態。  
+7.  Use the [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) macro to make the combo button persistent. The workspace manager automatically loads and saves the button's state in the Windows registry.  
   
-8.  實作您的文件檢視中的 `ID_EDIT_FIND_COMBO` 處理常式。  使用 [CMFCToolBar::GetCommandButtons](../Topic/CMFCToolBar::GetCommandButtons.md) 和 `ID_EDIT_FIND_COMBO` 擷取所有 `Find` 下拉式方塊按鈕。  由於自訂，一個具有相同命令 ID 的按鈕可以有許多複本。  
+8.  Implement the `ID_EDIT_FIND_COMBO` handler in your document view. Use [CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons) with `ID_EDIT_FIND_COMBO` to retrieve all `Find` combo box buttons. There can be several copies of a button with the same command ID because of customization.  
   
-9. 在 ID\_EDIT\_FIND 訊息處理常式 `OnFind`，請使用 [CMFCToolBar::IsLastCommandFromButton](../Topic/CMFCToolBar::IsLastCommandFromButton.md) 來判斷尋找命令是否從 `Find` 下拉式方塊按鈕傳送。  如果是，請尋找文字並將搜尋字串加入至下拉式方塊。  
+9. In the ID_EDIT_FIND message handler `OnFind`, use [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton) to determine whether the find command was sent from the `Find` combo box button. If so, find the text and add the search string to the combo box.  
   
-### 將尋找控制項加入至主要工具列  
- 若要將下拉式方塊按鈕加入至工具列，請依照下列步驟執行：  
+### <a name="adding-the-find-control-to-the-main-toolbar"></a>Adding the Find Control to the Main Toolbar  
+ To add the combo box button to the toolbar, follow these steps:  
   
-1.  實作主框架視窗的 `AFX_WM_RESETTOOLBAR` 訊息處理常式 `OnToolbarReset` 。  
-  
-    > [!NOTE]
-    >  在應用程式啟動期間工具列初始化時，或當工具列自訂期間重設時，架構會傳送訊息至主框架視窗。  無論如何，您必須以自訂 `Find` 下拉式方塊按鈕取代標準工具列按鈕。  
-  
-2.  在 `AFX_WM_RESETTOOLBAR` 處理常式，請檢查工具列 ID，也就是 `AFX_WM_RESETTOOLBAR` 訊息的 `WPARAM` 。  如果工具列 ID 與包含 `Find` 下拉式方塊按鈕的工具列相同，請呼叫 [CMFCToolBar::ReplaceButton](../Topic/CMFCToolBar::ReplaceButton.md) 以取代 `Find` 按鈕 \(即按鈕具有 `CFindComboButton` 物件的命令 ID  `ID_EDIT_FIND)` 。  
+1.  Implement the `AFX_WM_RESETTOOLBAR` message handler `OnToolbarReset` in the main frame window.  
   
     > [!NOTE]
-    >  因為 `ReplaceButton` 複製按鈕物件並維護複本，您可以在堆疊上建構 `CFindComboBox` 物件。  
+    >  The framework sends this message to the main frame window when a toolbar is initialized during application startup, or when a toolbar is reset during customization. In either case, you must replace the standard toolbar button with the custom `Find` combo box button.  
   
-### 將尋找控制項加入至自訂對話方塊  
- 在自訂處理常式 `OnViewCustomize`，呼叫 [CMFCToolBarsCustomizeDialog::ReplaceButton](../Topic/CMFCToolBarsCustomizeDialog::ReplaceButton.md) 以 `CFindComboButton` 物件取代 `Find` 按鈕 \(即按鈕具有命令 ID `ID_EDIT_FIND)`。  
+2.  In the `AFX_WM_RESETTOOLBAR` handler, examine the toolbar ID, that is, the `WPARAM` of the `AFX_WM_RESETTOOLBAR` message. If the toolbar ID is equal to that of the toolbar that contains the `Find` combo box button, call [CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton) to replace the `Find` button (that is, the button with the command ID `ID_EDIT_FIND)` with a `CFindComboButton` object.  
   
-## 請參閱  
- [階層架構圖表](../mfc/hierarchy-chart.md)   
- [類別](../mfc/reference/mfc-classes.md)   
+    > [!NOTE]
+    >  You can construct a `CFindComboBox` object on the stack, because `ReplaceButton` copies the button object and maintains the copy.  
+  
+### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>Adding the Find Control to the Customize Dialog Box  
+ In the customization handler `OnViewCustomize`, call [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) to replace the `Find` button (that is, the button with the command ID `ID_EDIT_FIND)` with a `CFindComboButton` object.  
+  
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../mfc/hierarchy-chart.md)   
+ [Classes](../mfc/reference/mfc-classes.md)   
  [CMFCToolBar Class](../mfc/reference/cmfctoolbar-class.md)   
  [CMFCToolBarButton Class](../mfc/reference/cmfctoolbarbutton-class.md)   
  [CMFCToolBarComboBoxButton Class](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)   
  [CMFCToolBarsCustomizeDialog Class](../mfc/reference/cmfctoolbarscustomizedialog-class.md)
+

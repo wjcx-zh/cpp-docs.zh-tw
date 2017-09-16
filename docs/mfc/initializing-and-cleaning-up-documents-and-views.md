@@ -1,62 +1,81 @@
 ---
-title: "初始化及清除文件和檢視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件物件, 的生命週期"
-  - "文件, 清除"
-  - "文件, 初始化"
-  - "初始化文件"
-  - "初始化物件, 文件物件"
-  - "初始化檢視"
-  - "檢視, 清除"
-  - "檢視, 初始化"
+title: Initializing and Cleaning Up Documents and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing documents [MFC]
+- views [MFC], cleaning up
+- documents [MFC], initializing
+- documents [MFC], cleaning up
+- views [MFC], initializing
+- initializing objects [MFC], document objects
+- document objects [MFC], life cycle of
+- initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 初始化及清除文件和檢視
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e08b862b32a58c545fb1f3265ec6a5110b920724
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-用於初始化和清除使用下列方針，在文件和檢視之後:  
+---
+# <a name="initializing-and-cleaning-up-documents-and-views"></a>Initializing and Cleaning Up Documents and Views
+Use the following guidelines for initializing and cleaning up after your documents and views:  
   
--   MFC 架構使用文件和檢視;在初始化所有資料加入至它們。  
+-   The MFC framework initializes documents and views; you initialize any data you add to them.  
   
--   架構清除文件和檢視關閉;您必須解除配置在堆積上配置從這些文件和檢視的成員函式內的所有記憶體。  
+-   The framework cleans up as documents and views close; you must deallocate any memory that you allocated on the heap from within the member functions of those documents and views.  
   
 > [!NOTE]
->  前面說過整個應用程式的初始化最適合在您的類別 `CWinApp`的 [InitInstance](../Topic/CWinApp::InitInstance.md) 成員函式的覆寫完成，因此，整個應用程式的清除最適合在您的 `CWinApp` 成員函式 [ExitInstance](../Topic/CWinApp::ExitInstance.md)的覆寫完成。  
+>  Recall that initialization for the whole application is best done in your override of the [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) member function of class `CWinApp`, and cleanup for the whole application is best done in your override of the `CWinApp` member function [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).  
   
- 一個文件的生命週期 \(及其框架視窗檢視或檢視\) 在 MDI 應用程式如下:  
+ The life cycle of a document (and its frame window and view or views) in an MDI application is as follows:  
   
-1.  在動態建立時，文件會呼叫建構函式。  
+1.  During dynamic creation, the document constructor is called.  
   
-2.  對於每個新文件，文件中的 [OnNewDocument](../Topic/CDocument::OnNewDocument.md) 或 [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) 呼叫。  
+2.  For each new document, the document's [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) or [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) is called.  
   
-3.  使用者與文件互動在其存留期。  通常，當使用者在文件資料會透過這個檢視中，選取和編輯資料，就會發生這種情況。  這個檢視傳遞變更儲存和更新的其他檢視文件。  在這個階段文件和檢視可處理命令。  
+3.  The user interacts with the document throughout its lifetime. Typically this happens as the user works on document data through the view, selecting and editing the data. The view passes changes on to the document for storage and updating other views. During this time both the document and the view might handle commands.  
   
-4.  這個框架呼叫 [DeleteContents](../Topic/CDocument::DeleteContents.md) 刪除資料特有的資料。  
+4.  The framework calls [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) to delete data specific to a document.  
   
-5.  文件的解構函式。  
+5.  The document's destructor is called.  
   
- 在 SDI 應用程式，，當文件在第一次建立時，步驟 1 執行一次。  然後，每次開啟，步驟 2 至 4 會重複執行一個新的文件。  新文件重複使用現有的資料物件。  最後，，當應用程式結束時，第 5 步驟執行。  
+ In an SDI application, step 1 is performed once, when the document is first created. Then steps 2 through 4 are performed repeatedly each time a new document is opened. The new document reuses the existing document object. Finally, step 5 is performed when the application ends.  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [初始化文件和檢視](../mfc/initializing-documents-and-views.md)  
+-   [Initializing Documents and Views](../mfc/initializing-documents-and-views.md)  
   
--   [清除文件和檢視](../mfc/cleaning-up-documents-and-views.md)  
+-   [Cleaning Up Documents and Views](../mfc/cleaning-up-documents-and-views.md)  
   
-## 請參閱  
- [文件\/檢視架構](../mfc/document-view-architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

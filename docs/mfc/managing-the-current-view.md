@@ -1,39 +1,58 @@
 ---
-title: "管理目前的檢視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "框架視窗中目前的檢視"
-  - "停用檢視"
-  - "框架視窗, 目前檢視"
-  - "OnActivateView 方法"
-  - "檢視, 啟動"
-  - "檢視, 和 OnActivateView 方法"
-  - "檢視, 目前的"
-  - "檢視, 停用"
+title: Managing the Current View | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- views [MFC], and OnActivateView method [MFC]
+- views [MFC], deactivating
+- views [MFC], activating
+- frame windows [MFC], current view
+- OnActivateView method [MFC]
+- views [MFC], current
+- deactivating views [MFC]
+- current view in frame window [MFC]
 ms.assetid: 0a1cc22d-d646-4536-9ad2-3cb6d7092e4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 管理目前的檢視
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fbdd5ed9ba0935fd224f2b62796ea005593b77b9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-做為框架視窗的預設實作中，框架視窗記錄一個目前作用中的檢視。  如果框架視窗包含一個以上的檢視，例如在分隔視窗，目前檢視是這個最近檢視在使用中。  現用檢視表是使用中視窗的獨立在視窗或目前輸入焦點。  
+---
+# <a name="managing-the-current-view"></a>Managing the Current View
+As part of the default implementation of frame windows, a frame window keeps track of a currently active view. If the frame window contains more than one view, as for example in a splitter window, the current view is the most recent view in use. The active view is independent of the active window in Windows or the current input focus.  
   
- 當現用檢視變更時，架構會呼叫它的 [OnActivateView](../Topic/CView::OnActivateView.md) 成員函式告知目前的檢視。  您可以判斷是否啟動或檢查 `OnActivateView` `bActivate` 參數停用檢視。  根據預設， `OnActivateView` 將焦點設定在啟動的目前檢視。  您可以覆寫 `OnActivateView` 執行任何特殊處理時停用檢視或重新啟動。  例如，您可能想要提供特殊視覺提示與其他差異現用檢視表，非現用檢視表。  
+ When the active view changes, the framework notifies the current view by calling its [OnActivateView](../mfc/reference/cview-class.md#onactivateview) member function. You can tell whether the view is being activated or deactivated by examining `OnActivateView`'s `bActivate` parameter. By default, `OnActivateView` sets the focus to the current view on activation. You can override `OnActivateView` to perform any special processing when the view is deactivated or reactivated. For example, you might want to provide special visual cues to distinguish the active view from other, inactive views.  
   
- 框架視窗傳送命令給它的目前\(使用中 \) 做為標準命令路由中檢視，如 [命令路由](../mfc/command-routing.md)中所述。  
+ A frame window forwards commands to its current (active) view, as described in [Command Routing](../mfc/command-routing.md), as part of the standard command routing.  
   
-## 請參閱  
- [使用框架視窗](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

@@ -1,45 +1,63 @@
 ---
-title: "在一般 FTP 用戶端應用程式中刪除檔案的步驟 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FTP (檔案傳輸通訊協定), 用戶端應用程式"
-  - "網際網路應用程式, FTP 用戶端應用程式"
-  - "網際網路用戶端應用程式, FTP 刪除"
-  - "WinInet 類別, FTP"
+title: Steps in a Typical FTP Client Application to Delete a File | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet client applications [MFC], FTP delete
+- WinInet classes [MFC], FTP
+- FTP (File Transfer Protocol) [MFC], client applications
+- Internet applications [MFC], FTP client applications
 ms.assetid: 2c347a96-c0a4-4827-98fe-668406e552bc
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 在一般 FTP 用戶端應用程式中刪除檔案的步驟
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b83a50e9d0c7e88d638514a1573272fb3ab861bf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-下表顯示您在典型 FTP 用戶端應用程式可能會執行刪除檔案的步驟。  
+---
+# <a name="steps-in-a-typical-ftp-client-application-to-delete-a-file"></a>Steps in a Typical FTP Client Application to Delete a File
+The following table shows the steps you might perform in a typical FTP client application that deletes a file.  
   
-|您的目標|您要採取的動作|效果|  
-|----------|-------------|--------|  
-|啟動 FTP 工作階段。|建立 [CInternetSession](../mfc/reference/cinternetsession-class.md) 物件。|初始化 WinInet 並連接到伺服器。|  
-|連接到 FTP。|使用 [CInternetSession::GetFtpConnection](../Topic/CInternetSession::GetFtpConnection.md)。|這個屬性會傳回 [CFtpConnection](../mfc/reference/cftpconnection-class.md) 物件。|  
-|請檢查以確定您是在 FTP 伺服器的正確目錄。|使用 [CFtpConnection::GetCurrentDirectory](../Topic/CFtpConnection::GetCurrentDirectory.md) 或 [CFtpConnection::GetCurrentDirectoryAsURL](../Topic/CFtpConnection::GetCurrentDirectoryAsURL.md)。|根據選取的成員函式傳回您目前連接到目錄伺服器的名稱或 URL。|  
-|切換到伺服器上新的FTP目錄。|使用 [CFtpConnection::SetCurrentDirectory](../Topic/CFtpConnection::SetCurrentDirectory.md)。|變更您目前連接至伺服器上的目錄。|  
-|尋找在 FTP 目錄的第一個檔案。|使用 [CFtpFileFind::FindFile](../Topic/CFtpFileFind::FindFile.md)。|尋找第一個檔案。  如果找不到檔案則回傳 false。|  
-|尋找在 FTP 目錄的下一個檔案。|使用 [CFtpFileFind::FindNextFile](../Topic/CFtpFileFind::FindNextFile.md)。|尋找下一個檔案。  如果找不到檔案，則傳回 FALSE。|  
-|刪除 **FindFile** 或 `FindNextFile`找到的檔案。|使用 [CFtpConnection::Remove](../Topic/CFtpConnection::Remove.md)，或使用 **FindFile** `FindNextFile`傳回的檔案名稱。|刪除伺服器上的檔案以讀取或寫入。|  
-|處理例外狀況。|使用 [CInternetException](../mfc/reference/cinternetexception-class.md) 類別。|處理所有通用網際網路例外狀況型別。|  
-|結束FTP工作階段。|處理 [CInternetSession](../mfc/reference/cinternetsession-class.md) 物件。|自動清除開啟檔案控制代碼和連接。|  
+|Your goal|Actions you take|Effects|  
+|---------------|----------------------|-------------|  
+|Begin an FTP session.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Initializes WinInet and connects to server.|  
+|Connect to an FTP server.|Use [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection).|Returns a [CFtpConnection](../mfc/reference/cftpconnection-class.md) object.|  
+|Check to make sure you're in the right directory on the FTP server.|Use [CFtpConnection::GetCurrentDirectory](../mfc/reference/cftpconnection-class.md#getcurrentdirectory) or [CFtpConnection::GetCurrentDirectoryAsURL](../mfc/reference/cftpconnection-class.md#getcurrentdirectoryasurl).|Returns the name or URL of the directory you are currently connected to on the server, depending on the member function selected.|  
+|Change to a new FTP directory on the server.|Use [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Changes the directory you are currently connected to on the server.|  
+|Find the first file in the FTP directory.|Use [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Finds the first file. Returns FALSE if no files are found.|  
+|Find the next file in the FTP directory.|Use [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Finds the next file. Returns FALSE if the file is not found.|  
+|Delete the file found by **FindFile** or `FindNextFile`.|Use [CFtpConnection::Remove](../mfc/reference/cftpconnection-class.md#remove), using the file name returned by **FindFile** or `FindNextFile`.|Deletes the file on the server for reading or writing.|  
+|Handle exceptions.|Use the [CInternetException](../mfc/reference/cinternetexception-class.md) class.|Handles all common Internet exception types.|  
+|End the FTP session.|Dispose of the [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Automatically cleans up open file handles and connections.|  
   
-## 請參閱  
- [Win32 網際網路擴充功能 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [網際網路用戶端類別的必要條件](../mfc/prerequisites-for-internet-client-classes.md)   
- [使用 MFC WinInet 類別建立網際網路用戶端應用程式](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

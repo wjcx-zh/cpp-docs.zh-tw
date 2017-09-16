@@ -1,5 +1,5 @@
 ---
-title: "CMFCTasksPane 類別 |Microsoft 文件"
+title: CMFCTasksPane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -108,7 +108,100 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTasksPane class
+- CMFCTasksPane [MFC], CMFCTasksPane
+- CMFCTasksPane [MFC], AddGroup
+- CMFCTasksPane [MFC], AddLabel
+- CMFCTasksPane [MFC], AddMRUFilesList
+- CMFCTasksPane [MFC], AddPage
+- CMFCTasksPane [MFC], AddSeparator
+- CMFCTasksPane [MFC], AddTask
+- CMFCTasksPane [MFC], AddWindow
+- CMFCTasksPane [MFC], CollapseAllGroups
+- CMFCTasksPane [MFC], CollapseGroup
+- CMFCTasksPane [MFC], CreateDefaultMiniframe
+- CMFCTasksPane [MFC], CreateMenu
+- CMFCTasksPane [MFC], EnableAnimation
+- CMFCTasksPane [MFC], EnableGroupCollapse
+- CMFCTasksPane [MFC], EnableHistoryMenuButtons
+- CMFCTasksPane [MFC], EnableNavigationToolbar
+- CMFCTasksPane [MFC], EnableOffsetCustomControls
+- CMFCTasksPane [MFC], EnableScrollButtons
+- CMFCTasksPane [MFC], EnableWrapLabels
+- CMFCTasksPane [MFC], EnableWrapTasks
+- CMFCTasksPane [MFC], GetActivePage
+- CMFCTasksPane [MFC], GetGroupCaptionHeight
+- CMFCTasksPane [MFC], GetGroupCaptionHorzOffset
+- CMFCTasksPane [MFC], GetGroupCaptionVertOffset
+- CMFCTasksPane [MFC], GetGroupCount
+- CMFCTasksPane [MFC], GetGroupLocation
+- CMFCTasksPane [MFC], GetGroupVertOffset
+- CMFCTasksPane [MFC], GetHorzMargin
+- CMFCTasksPane [MFC], GetNextPages
+- CMFCTasksPane [MFC], GetPageByGroup
+- CMFCTasksPane [MFC], GetPagesCount
+- CMFCTasksPane [MFC], GetPreviousPages
+- CMFCTasksPane [MFC], GetScrollBarCtrl
+- CMFCTasksPane [MFC], GetTask
+- CMFCTasksPane [MFC], GetTaskCount
+- CMFCTasksPane [MFC], GetTaskGroup
+- CMFCTasksPane [MFC], GetTaskLocation
+- CMFCTasksPane [MFC], GetTasksHorzOffset
+- CMFCTasksPane [MFC], GetTasksIconHorzOffset
+- CMFCTasksPane [MFC], GetTasksIconVertOffset
+- CMFCTasksPane [MFC], GetVertMargin
+- CMFCTasksPane [MFC], IsAccessibilityCompatible
+- CMFCTasksPane [MFC], IsAnimationEnabled
+- CMFCTasksPane [MFC], IsBackButtonEnabled
+- CMFCTasksPane [MFC], IsForwardButtonEnabled
+- CMFCTasksPane [MFC], IsGroupCollapseEnabled
+- CMFCTasksPane [MFC], IsHistoryMenuButtonsEnabled
+- CMFCTasksPane [MFC], IsNavigationToolbarEnabled
+- CMFCTasksPane [MFC], IsToolBox
+- CMFCTasksPane [MFC], IsWrapLabelsEnabled
+- CMFCTasksPane [MFC], IsWrapTasksEnabled
+- CMFCTasksPane [MFC], LoadState
+- CMFCTasksPane [MFC], OnCancel
+- CMFCTasksPane [MFC], OnClickTask
+- CMFCTasksPane [MFC], OnOK
+- CMFCTasksPane [MFC], OnPressBackButton
+- CMFCTasksPane [MFC], OnPressForwardButton
+- CMFCTasksPane [MFC], OnPressHomeButton
+- CMFCTasksPane [MFC], OnPressOtherButton
+- CMFCTasksPane [MFC], OnSetAccData
+- CMFCTasksPane [MFC], OnUpdateCmdUI
+- CMFCTasksPane [MFC], PreTranslateMessage
+- CMFCTasksPane [MFC], RecalcLayout
+- CMFCTasksPane [MFC], RemoveAllGroups
+- CMFCTasksPane [MFC], RemoveAllPages
+- CMFCTasksPane [MFC], RemoveAllTasks
+- CMFCTasksPane [MFC], RemoveGroup
+- CMFCTasksPane [MFC], RemovePage
+- CMFCTasksPane [MFC], RemoveTask
+- CMFCTasksPane [MFC], SaveState
+- CMFCTasksPane [MFC], Serialize
+- CMFCTasksPane [MFC], SetActivePage
+- CMFCTasksPane [MFC], SetCaption
+- CMFCTasksPane [MFC], SetGroupCaptionHeight
+- CMFCTasksPane [MFC], SetGroupCaptionHorzOffset
+- CMFCTasksPane [MFC], SetGroupCaptionVertOffset
+- CMFCTasksPane [MFC], SetGroupName
+- CMFCTasksPane [MFC], SetGroupTextColor
+- CMFCTasksPane [MFC], SetGroupVertOffset
+- CMFCTasksPane [MFC], SetHorzMargin
+- CMFCTasksPane [MFC], SetIconsList
+- CMFCTasksPane [MFC], SetPageCaption
+- CMFCTasksPane [MFC], SetTaskName
+- CMFCTasksPane [MFC], SetTasksIconHorzOffset
+- CMFCTasksPane [MFC], SetTasksIconVertOffset
+- CMFCTasksPane [MFC], SetTaskTextColor
+- CMFCTasksPane [MFC], SetTasksHorzOffset
+- CMFCTasksPane [MFC], SetVertMargin
+- CMFCTasksPane [MFC], SetWindowHeight
+- CMFCTasksPane [MFC], ShowCommandMessageString
+- CMFCTasksPane [MFC], ShowTask
+- CMFCTasksPane [MFC], ShowTaskByCmdId
+- CMFCTasksPane [MFC], Update
+- CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
 caps.latest.revision: 26
 author: mikeblome
@@ -128,19 +221,19 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 2eb41c24b60bcaea7eadc361c23d5c2273217919
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63bf4615c51cbee4bad758d0dc7219a350bb5e96
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
+# <a name="cmfctaskspane-class"></a>CMFCTasksPane Class
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
- `CMFCTasksPane` 類別會實作可點選式項目 (工作) 清單。  
+ The `CMFCTasksPane` class implements a list of clickable items (tasks).  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTasksPane : public CDockablePane  
@@ -148,163 +241,163 @@ class CMFCTasksPane : public CDockablePane
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|建構 `CMFCTasksPane` 物件。|  
+|[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|Constructs a `CMFCTasksPane` object.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPane::AddGroup](#addgroup)|將新的工作群組加入至工作窗格控制項。|  
-|[CMFCTasksPane::AddLabel](#addlabel)|將新的靜態標籤加入至指定的工作群組。|  
-|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|將最近使用的 (MRU) 檔案清單所指定的工作加入到群組。|  
-|[CMFCTasksPane::AddPage](#addpage)|將新頁面加入工作窗格。|  
+|[CMFCTasksPane::AddGroup](#addgroup)|Adds a new group of tasks to the task pane control.|  
+|[CMFCTasksPane::AddLabel](#addlabel)|Adds a new static label into the specified task group.|  
+|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|Adds tasks specified by a Most Recently Used (MRU) file list into a group.|  
+|[CMFCTasksPane::AddPage](#addpage)|Adds a new page to the task pane.|  
 |[CMFCTasksPane::AddSeparator](#addseparator)||  
-|[CMFCTasksPane::AddTask](#addtask)|將新工作加入至指定的工作群組。|  
-|[CMFCTasksPane::AddWindow](#addwindow)|將子視窗加入工作窗格。|  
+|[CMFCTasksPane::AddTask](#addtask)|Adds a new task to the specified task group.|  
+|[CMFCTasksPane::AddWindow](#addwindow)|Adds a child window to the task pane.|  
 |[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||  
-|[CMFCTasksPane::CollapseGroup](#collapsegroup)|以程式設計方式摺疊群組。|  
-|[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(覆寫[CPane::CreateDefaultMiniframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)。)|  
-|[CMFCTasksPane::CreateMenu](#createmenu)|若要建立的功能表架構呼叫**其他工作窗格**功能表按鈕。|  
-|[CMFCTasksPane::EnableAnimation](#enableanimation)|啟用或停用摺疊或展開工作群組時的動畫。|  
-|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|指定是否可以摺疊工作群組。|  
-|[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|啟用或停用下拉式清單中的功能表**下一步**和**上一步**瀏覽按鈕。|  
-|[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|啟用或停用導覽工具列。|  
+|[CMFCTasksPane::CollapseGroup](#collapsegroup)|Programmatically collapses a group.|  
+|[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(Overrides [CPane::CreateDefaultMiniframe](../../mfc/reference/cpane-class.md#createdefaultminiframe).)|  
+|[CMFCTasksPane::CreateMenu](#createmenu)|Called by the framework to create a menu for the **Other Tasks Panes** menu button.|  
+|[CMFCTasksPane::EnableAnimation](#enableanimation)|Enables or disables animation while collapsing or expanding task groups.|  
+|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|Specifies whether tasks groups can be collapsed.|  
+|[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|Enables or disables drop-down menus in **Next** and **Previous** navigation buttons.|  
+|[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|Enables or disables the navigation toolbar.|  
 |[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||  
-|[CMFCTasksPane::EnableScrollButtons](#enablescrollbuttons)|啟用捲動按鈕而非捲軸。|  
-|[CMFCTasksPane::EnableWrapLabels](#enablewraplabels)|啟用或停用標籤的自動換行。|  
-|[CMFCTasksPane::EnableWrapTasks](#enablewraptasks)|啟用或停用工作的自動換行。|  
-|[CMFCTasksPane::GetActivePage](#getactivepage)|傳回使用中頁面以零為基底的索引。|  
-|[CMFCTasksPane::GetGroupCaptionHeight](#getgroupcaptionheight)|傳回群組標題的高度。|  
-|[CMFCTasksPane::GetGroupCaptionHorzOffset](#getgroupcaptionhorzoffset)|傳回群組標題距離工作窗格的左邊緣和右邊緣的目前位移。|  
-|[CMFCTasksPane::GetGroupCaptionVertOffset](#getgroupcaptionvertoffset)|傳回群組標題距離工作窗格的上邊緣和下邊緣的目前位移。|  
-|[CMFCTasksPane::GetGroupCount](#getgroupcount)|傳回群組總數。|  
-|[CMFCTasksPane::GetGroupLocation](#getgrouplocation)|傳回特定群組的內部群組索引。|  
-|[CMFCTasksPane::GetGroupVertOffset](#getgroupvertoffset)|傳回群組的垂直位移。|  
-|[CMFCTasksPane::GetHorzMargin](#gethorzmargin)|傳回工作窗格與用戶端區域邊緣之間的水平間距。|  
+|[CMFCTasksPane::EnableScrollButtons](#enablescrollbuttons)|Enables scroll buttons instead of a scrollbar.|  
+|[CMFCTasksPane::EnableWrapLabels](#enablewraplabels)|Enables or disables word wrapping for labels.|  
+|[CMFCTasksPane::EnableWrapTasks](#enablewraptasks)|Enables or disables word wrapping for tasks.|  
+|[CMFCTasksPane::GetActivePage](#getactivepage)|Returns the zero-based index for the active page.|  
+|[CMFCTasksPane::GetGroupCaptionHeight](#getgroupcaptionheight)|Returns the height of the group captions.|  
+|[CMFCTasksPane::GetGroupCaptionHorzOffset](#getgroupcaptionhorzoffset)|Returns the current offset of a group caption from the left and right edges of the task pane.|  
+|[CMFCTasksPane::GetGroupCaptionVertOffset](#getgroupcaptionvertoffset)|Returns the current offset of a group caption from the top and bottom edges of the task pane.|  
+|[CMFCTasksPane::GetGroupCount](#getgroupcount)|Returns the total number of groups.|  
+|[CMFCTasksPane::GetGroupLocation](#getgrouplocation)|Returns the internal group index for a given group.|  
+|[CMFCTasksPane::GetGroupVertOffset](#getgroupvertoffset)|Returns the vertical offset of a group.|  
+|[CMFCTasksPane::GetHorzMargin](#gethorzmargin)|Returns the horizontal spacing between a task pane and the edges of the client area.|  
 |[CMFCTasksPane::GetNextPages](#getnextpages)||  
-|[CMFCTasksPane::GetPageByGroup](#getpagebygroup)|擷取指定之群組的頁面索引。|  
-|[CMFCTasksPane::GetPagesCount](#getpagescount)|傳回頁數。|  
+|[CMFCTasksPane::GetPageByGroup](#getpagebygroup)|Retrieves the page index for a specified group.|  
+|[CMFCTasksPane::GetPagesCount](#getpagescount)|Returns the number of pages.|  
 |[CMFCTasksPane::GetPreviousPages](#getpreviouspages)||  
-|[CMFCTasksPane::GetScrollBarCtrl](#getscrollbarctrl)|(覆寫[CWnd::GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl)。)|  
-|[CMFCTasksPane::GetTask](#gettask)|擷取工作。|  
-|[CMFCTasksPane::GetTaskCount](#gettaskcount)|傳回指定群組中工作項目的數目。|  
-|[CMFCTasksPane::GetTaskGroup](#gettaskgroup)|傳回給定之群組索引的工作群組。|  
-|[CMFCTasksPane::GetTaskLocation](#gettasklocation)|傳回特定工作的群組與索引。|  
-|[CMFCTasksPane::GetTasksHorzOffset](#gettaskshorzoffset)|傳回工作距離其父群組的左邊緣和右邊緣的水平位移。|  
+|[CMFCTasksPane::GetScrollBarCtrl](#getscrollbarctrl)|(Overrides [CWnd::GetScrollBarCtrl](../../mfc/reference/cwnd-class.md#getscrollbarctrl).)|  
+|[CMFCTasksPane::GetTask](#gettask)|Retrieves a task.|  
+|[CMFCTasksPane::GetTaskCount](#gettaskcount)|Returns the number of task items in a specified group.|  
+|[CMFCTasksPane::GetTaskGroup](#gettaskgroup)|Returns a task group for a given group index.|  
+|[CMFCTasksPane::GetTaskLocation](#gettasklocation)|Returns the group and the index for a given task.|  
+|[CMFCTasksPane::GetTasksHorzOffset](#gettaskshorzoffset)|Returns the horizontal offset of tasks from the left and right edges of their parent groups.|  
 |[CMFCTasksPane::GetTasksIconHorzOffset](#gettasksiconhorzoffset)||  
 |[CMFCTasksPane::GetTasksIconVertOffset](#gettasksiconvertoffset)||  
-|[CMFCTasksPane::GetVertMargin](#getvertmargin)|傳回工作窗格與用戶端區域邊緣之間的垂直間距。|  
-|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|(覆寫 `CDockablePane::IsAccessibilityCompatible`。)|  
-|[CMFCTasksPane::IsAnimationEnabled](#isanimationenabled)|指出是否啟用動畫。|  
-|[CMFCTasksPane::IsBackButtonEnabled](#isbackbuttonenabled)|指出是否啟用上一頁按鈕。|  
-|[CMFCTasksPane::IsForwardButtonEnabled](#isforwardbuttonenabled)|指出是否啟用下一頁按鈕。|  
+|[CMFCTasksPane::GetVertMargin](#getvertmargin)|Returns the vertical spacing between a task pane and the edges of the client area.|  
+|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|(Overrides `CDockablePane::IsAccessibilityCompatible`.)|  
+|[CMFCTasksPane::IsAnimationEnabled](#isanimationenabled)|Indicates whether animation is enabled.|  
+|[CMFCTasksPane::IsBackButtonEnabled](#isbackbuttonenabled)|Indicates whether the back button is enabled.|  
+|[CMFCTasksPane::IsForwardButtonEnabled](#isforwardbuttonenabled)|Indicates whether the forward button is enabled.|  
 |[CMFCTasksPane::IsGroupCollapseEnabled](#isgroupcollapseenabled)||  
-|[CMFCTasksPane::IsHistoryMenuButtonsEnabled](#ishistorymenubuttonsenabled)|指出是否**下一步**和**上一步**瀏覽按鈕都有下拉式功能表。|  
-|[CMFCTasksPane::IsNavigationToolbarEnabled](#isnavigationtoolbarenabled)|指出是否啟用導覽工具列。|  
+|[CMFCTasksPane::IsHistoryMenuButtonsEnabled](#ishistorymenubuttonsenabled)|Indicates whether the **Next** and **Previous** navigation buttons have drop-down menus.|  
+|[CMFCTasksPane::IsNavigationToolbarEnabled](#isnavigationtoolbarenabled)|Indicates whether the navigation toolbar is enabled.|  
 |[CMFCTasksPane::IsToolBox](#istoolbox)||  
-|[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|指出工作窗格的標籤中是否自動換行。|  
-|[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|指出工作窗格的工作中是否自動換行。|  
-|[CMFCTasksPane::LoadState](#loadstate)|(覆寫[CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
+|[CMFCTasksPane::IsWrapLabelsEnabled](#iswraplabelsenabled)|Indicates whether the task pane wraps words in labels.|  
+|[CMFCTasksPane::IsWrapTasksEnabled](#iswraptasksenabled)|Indicates whether the task pane wraps words in tasks.|  
+|[CMFCTasksPane::LoadState](#loadstate)|(Overrides [CDockablePane::LoadState](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917).)|  
 |[CMFCTasksPane::OnCancel](#oncancel)||  
-|[CMFCTasksPane::OnClickTask](#onclicktask)|使用者按一下工作窗格中的項目時由架構呼叫。|  
+|[CMFCTasksPane::OnClickTask](#onclicktask)|Called by the framework when the user clicks an item in the task pane.|  
 |[CMFCTasksPane::OnOK](#onok)||  
-|[CMFCTasksPane::OnPressBackButton](#onpressbackbutton)|使用者按一下上一頁按鈕時由架構呼叫。|  
-|[CMFCTasksPane::OnPressForwardButton](#onpressforwardbutton)|使用者按一下上一步瀏覽按鈕時由架構呼叫。|  
-|[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|使用者按一下首頁瀏覽按鈕時由架構呼叫|  
+|[CMFCTasksPane::OnPressBackButton](#onpressbackbutton)|Called by the framework when the user clicks the back button.|  
+|[CMFCTasksPane::OnPressForwardButton](#onpressforwardbutton)|Called by the framework when the user clicks the forward navigation button.|  
+|[CMFCTasksPane::OnPressHomeButton](#onpresshomebutton)|Called by the framework when the user clicks the home navigation button|  
 |[CMFCTasksPane::OnPressOtherButton](#onpressotherbutton)||  
-|[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(覆寫[CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata)。)|  
-|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(覆寫[CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0)。)|  
-|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(覆寫[CDockablePane::PreTranslateMessage](http://msdn.microsoft.com/en-us/49a242cc-b158-400e-9e01-0345ec9c3ffd)。)|  
-|[CMFCTasksPane::RecalcLayout](#recalclayout)|(覆寫[CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout)。)|  
-|[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|移除指定之頁面上的所有群組。|  
-|[CMFCTasksPane::RemoveAllPages](#removeallpages)|從工作窗格中移除所有頁面，預設 (第一頁) 頁面除外。|  
-|[CMFCTasksPane::RemoveAllTasks](#removealltasks)|從群組中移除所有工作。|  
-|[CMFCTasksPane::RemoveGroup](#removegroup)|移除群組。|  
-|[CMFCTasksPane::RemovePage](#removepage)|從工作窗格移除指定的頁面。|  
-|[CMFCTasksPane::RemoveTask](#removetask)|從工作群組中移除工作。|  
-|[CMFCTasksPane::SaveState](#savestate)|(覆寫[CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db)。)|  
-|[CMFCTasksPane::Serialize](#serialize)|(覆寫[CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6)。)|  
-|[CMFCTasksPane::SetActivePage](#setactivepage)|啟動工作窗格中指定的頁面。|  
-|[CMFCTasksPane::SetCaption](#setcaption)|設定工作窗格的標題名稱。|  
-|[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|設定群組標題的高度。|  
-|[CMFCTasksPane::SetGroupCaptionHorzOffset](#setgroupcaptionhorzoffset)|設定群組標題的水平位移。|  
-|[CMFCTasksPane::SetGroupCaptionVertOffset](#setgroupcaptionvertoffset)|設定群組標題的垂直位移。|  
-|[CMFCTasksPane::SetGroupName](#setgroupname)|設定群組名稱。|  
-|[CMFCTasksPane::SetGroupTextColor](#setgrouptextcolor)|設定群組標題的文字色彩。|  
-|[CMFCTasksPane::SetGroupVertOffset](#setgroupvertoffset)|設定群組的垂直位移。|  
-|[CMFCTasksPane::SetHorzMargin](#sethorzmargin)|設定工作窗格與用戶端區域邊緣之間的水平間距。|  
-|[CMFCTasksPane::SetIconsList](#seticonslist)|設定與工作相關聯的影像清單。|  
-|[CMFCTasksPane::SetPageCaption](#setpagecaption)|設定工作窗格頁面的標題文字。|  
-|[CMFCTasksPane::SetTaskName](#settaskname)|設定工作的名稱。|  
+|[CMFCTasksPane::OnSetAccData](#onsetaccdata)|(Overrides [CBasePane::OnSetAccData](../../mfc/reference/cbasepane-class.md#onsetaccdata).)|  
+|[CMFCTasksPane::OnUpdateCmdUI](#onupdatecmdui)|(Overrides [CDockablePane::OnUpdateCmdUI](http://msdn.microsoft.com/en-us/5dd61606-1c12-40d4-b024-f3839aa5e2e0).)|  
+|[CMFCTasksPane::PreTranslateMessage](#pretranslatemessage)|(Overrides [CDockablePane::PreTranslateMessage](http://msdn.microsoft.com/en-us/49a242cc-b158-400e-9e01-0345ec9c3ffd).)|  
+|[CMFCTasksPane::RecalcLayout](#recalclayout)|(Overrides [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
+|[CMFCTasksPane::RemoveAllGroups](#removeallgroups)|Removes all groups on the specified page.|  
+|[CMFCTasksPane::RemoveAllPages](#removeallpages)|Removes all pages from the task pane except the default (first) page.|  
+|[CMFCTasksPane::RemoveAllTasks](#removealltasks)|Removes all tasks from the group.|  
+|[CMFCTasksPane::RemoveGroup](#removegroup)|Removes a group.|  
+|[CMFCTasksPane::RemovePage](#removepage)|Removes a specified page from the task pane.|  
+|[CMFCTasksPane::RemoveTask](#removetask)|Removes a task from a task group.|  
+|[CMFCTasksPane::SaveState](#savestate)|(Overrides [CDockablePane::SaveState](http://msdn.microsoft.com/en-us/c5c24249-8d0d-46cb-96d9-9f5c6dc191db).)|  
+|[CMFCTasksPane::Serialize](#serialize)|(Overrides [CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|[CMFCTasksPane::SetActivePage](#setactivepage)|Activates a specified page in the task pane.|  
+|[CMFCTasksPane::SetCaption](#setcaption)|Sets the caption name of a task pane.|  
+|[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|Sets the height of a group caption.|  
+|[CMFCTasksPane::SetGroupCaptionHorzOffset](#setgroupcaptionhorzoffset)|Sets the horizontal offset of a group caption.|  
+|[CMFCTasksPane::SetGroupCaptionVertOffset](#setgroupcaptionvertoffset)|Sets the vertical offset of a group caption.|  
+|[CMFCTasksPane::SetGroupName](#setgroupname)|Sets a group name.|  
+|[CMFCTasksPane::SetGroupTextColor](#setgrouptextcolor)|Sets the text color for a group caption.|  
+|[CMFCTasksPane::SetGroupVertOffset](#setgroupvertoffset)|Sets the vertical offset for a group.|  
+|[CMFCTasksPane::SetHorzMargin](#sethorzmargin)|Sets the horizontal spacing between a task pane and the edges of the client area.|  
+|[CMFCTasksPane::SetIconsList](#seticonslist)|Sets the image list associated with tasks.|  
+|[CMFCTasksPane::SetPageCaption](#setpagecaption)|Sets the caption text for a task pane page.|  
+|[CMFCTasksPane::SetTaskName](#settaskname)|Sets the name for a task.|  
 |[CMFCTasksPane::SetTasksIconHorzOffset](#settasksiconhorzoffset)||  
 |[CMFCTasksPane::SetTasksIconVertOffset](#settasksiconvertoffset)||  
-|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|設定工作的文字色彩。|  
-|[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|設定工作距離其父群組的左邊緣和右邊緣的水平位移。|  
-|[CMFCTasksPane::SetVertMargin](#setvertmargin)|設定工作窗格與用戶端區域邊緣之間的垂直間距。|  
-|[CMFCTasksPane::SetWindowHeight](#setwindowheight)|設定視窗的高度。|  
+|[CMFCTasksPane::SetTaskTextColor](#settasktextcolor)|Sets the text color for a task.|  
+|[CMFCTasksPane::SetTasksHorzOffset](#settaskshorzoffset)|Sets the horizontal offset of tasks from the left and right edges of their parent groups.|  
+|[CMFCTasksPane::SetVertMargin](#setvertmargin)|Sets the vertical spacing between a task pane and the edges of the client area.|  
+|[CMFCTasksPane::SetWindowHeight](#setwindowheight)|Sets the height for a window.|  
 |[CMFCTasksPane::ShowCommandMessageString](#showcommandmessagestring)||  
-|[CMFCTasksPane::ShowTask](#showtask)|顯示或隱藏工作。|  
-|[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)|根據其命令識別碼顯示或隱藏工作。|  
-|[CMFCTasksPane::Update](#update)|更新屬於工作窗格的 GUI 項目。|  
+|[CMFCTasksPane::ShowTask](#showtask)|Shows or hides a task.|  
+|[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)|Shows or hides a task based on its command ID.|  
+|[CMFCTasksPane::Update](#update)|Updates the GUI elements that belong to a task pane.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|啟動新工作窗格頁面時，由架構呼叫。|  
+|[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|Called by the framework when a new task pane page is activated.|  
   
-## <a name="remarks"></a>備註  
- `CMFCTasksPane` 類別會實作下列功能：  
+## <a name="remarks"></a>Remarks  
+ The `CMFCTasksPane` class implements the following functionality:  
   
--   項目可以組成群組，而且每個項目群組可以有相關聯的標題。  
+-   Items can be grouped and each item grouping can have an associated caption.  
   
--   可摺疊或展開項目群組。  
+-   Item groupings can be collapsed or expanded.  
   
--   圖示可以指派給工作窗格中的每個項目。  
+-   An icon can be assigned to each item in the task pane.  
   
--   個別項目可以與使用者按一下項目時執行的命令識別碼相關聯。 按一下發生時，`WM_COMMAND` 訊息會傳送至工作窗格控制項的擁有者。  
+-   Individual items can be associated with a command ID which executes when a user clicks the item. When the click occurs, the `WM_COMMAND` message is sent to the owner of the task pane control.  
   
- 若要在您的應用程式中使用 `CMFCTasksPane` 控制項，請遵循下列步驟：  
+ To use the `CMFCTasksPane` control in your application, follow these steps:  
   
-1.  內嵌 `CMFCTasksPane` 物件到主框架視窗類別。  
+1.  Embed a `CMFCTasksPane` object into the main frame window class.  
   
-2.  處理 `WM_CREATE` 訊息資訊時，呼叫 `Create` 方法。 您可以使用一般[CControlBar](../../mfc/reference/ccontrolbar-class.md)樣式。 如需詳細資訊，請參閱`CControlBar::Create`。  
+2.  When processing the `WM_CREATE` message, call the `Create` method. You can use the regular [CControlBar](../../mfc/reference/ccontrolbar-class.md) styles. For more information, see `CControlBar::Create`.  
   
-3.  呼叫[CMFCTasksPane::AddGroup](#addgroup)方法來加入不同的群組。  
+3.  Call the [CMFCTasksPane::AddGroup](#addgroup) method to add various groups.  
   
-4.  呼叫[CMFCTasksPane::AddTask](#addtask)， [CMFCTasksPane::AddLabel](#addlabel)或[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)新增項目 （工作），每個群組的成員函式。  
+4.  Call the [CMFCTasksPane::AddTask](#addtask), [CMFCTasksPane::AddLabel](#addlabel) or [CMFCTasksPane::AddMRUFilesList](#addmrufileslist) member functions to add new items (tasks) to each group.  
   
-5.  呼叫[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)來指定是否可以摺疊項目群組。  
+5.  Call [CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse) to specify whether item groups can collapse.  
   
- 下圖顯示典型的工作窗格控制項。 第一個群組是*特殊*群組和它的標題是較深的色彩。 第三個群組會摺疊。 最後一個群組會與工作窗格的底端對齊，並且沒有標題，而群組中的最後一個工作是簡單的標籤：  
+ The following illustration shows a typical task pane control. The first group is a *special* group and its caption is a darker color. The third group is collapsed. The last group is aligned to the bottom of the task pane and has no caption, and the last task in the group is a simple label:  
   
- ![工作窗格範例](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")  
+ ![Example of Task Pane](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")  
   
- 您可以藉由調整各種邊界和位移來自訂工作窗格的外觀。 下圖將釐清這些變數的意義：  
+ You can customize the appearance of the task pane by adjusting various margins and offsets. The following illustration clarifies the meaning of these variables:  
   
- ![自訂工作群組](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")  
+ ![Custom task group](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")  
   
-## <a name="example"></a>範例  
- 下列範例示範如何建構 `CMFCTasksPane` 物件，以及使用 `CMFCTasksPane` 類別中的各種方法。 此範例示範如何啟用 [摺疊的工作群組、 允許下拉式功能表上**下一步**和**上一步**啟用而不是捲軸的捲動按鈕瀏覽按鈕中，啟用 word 中的標籤文字換行，請設定工作] 窗格的標題名稱、 設定群組標題的文字色彩以及設定水平及垂直邊界。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCTasksPane` object and use various methods in the `CMFCTasksPane` class. The example shows how to enable the collapsing of task groups, enable the drop-down menus on the **Next** and **Previous** navigation buttons, enable the scroll buttons instead of a scroll bar, enable the word wrapping for the text in labels, set the caption name of the task pane, set the text color for a group caption, and set the horizontal and vertical margins.  
   
- [!code-cpp[NVC_MFC_RibbonApp #&28;](../../mfc/reference/codesnippet/cpp/cmfctaskspane-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#28](../../mfc/reference/codesnippet/cpp/cmfctaskspane-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md) [CCmdTarget](../../mfc/reference/ccmdtarget-class.md) [CWnd](../../mfc/reference/cwnd-class.md)  
   
  [CBasePane](../../mfc/reference/cbasepane-class.md) [CPane](../../mfc/reference/cpane-class.md) [CDockablePane](../../mfc/reference/cdockablepane-class.md)  
   
  `CMFCTasksPane`  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxTasksPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTasksPane.h  
   
-##  <a name="addgroup"></a>CMFCTasksPane::AddGroup  
- 將新的工作群組加入至工作窗格控制項。  
+##  <a name="addgroup"></a>  CMFCTasksPane::AddGroup  
+ Adds a new group of tasks to the task pane control.  
   
 ```  
 int AddGroup(
@@ -322,32 +415,32 @@ int AddGroup(
     HICON hIcon = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nPageIdx`  
- 指定的以零為起始頁的索引。  
+ Specifies the zero-based page index.  
   
  [in] `lpszGroupName`  
- 指定群組名稱。  
+ Specifies the group name.  
   
  [in] `bBottomLocation`  
- `TRUE`若要建立群組底部的 工作窗格控制項。否則， `FALSE`。  
+ `TRUE` to create the group at the bottom of the task pane control; otherwise, `FALSE`.  
   
  [in] `bSpecial`  
- `TRUE`將此群組中的*特殊*群組，否則`FALSE`。 如需特殊群組的詳細資訊，請參閱的 < 備註 > 一節`CMFCTasksPane`。  
+ `TRUE` to mark this group as a *special* group; otherwise, `FALSE`. For more information about special groups, see the Remarks section of `CMFCTasksPane`.  
   
  [in] `hIcon`  
- 指定要顯示群組標題中的圖示。  
+ Specifies the icon to display in the group caption.  
   
-### <a name="return-value"></a>傳回值  
- 類別會維護的群組內部清單中的群組以零為起始的索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the group in the internal list of groups that the class maintains.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法建立的工作群組，並將該群組新增至工作窗格控制項。  
+### <a name="remarks"></a>Remarks  
+ Call this method to create a group of tasks and to add that group to the task pane control.  
   
- 在工作窗格控制項的頂端或底部，架構會顯示工作群組。 架構可以顯示只有一個群組下方。最後必須加入此群組。  
+ The framework displays task groups at the top of the task pane control or at the bottom. The framework can display only one group at the bottom; this group must be added last.  
   
-##  <a name="addlabel"></a>CMFCTasksPane::AddLabel  
- 將標籤加入至指定的工作群組。  
+##  <a name="addlabel"></a>  CMFCTasksPane::AddLabel  
+ Adds a label to the specified task group.  
   
 ```  
 int AddLabel(
@@ -357,27 +450,27 @@ int AddLabel(
     BOOL bIsBold = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定的索引標籤就會加入其中的群組。  
+ Specifies the index of the group where the label is added.  
   
  [in] `lpszLabelName`  
- 指定標籤的名稱。  
+ Specifies the name of the label.  
   
  [in] `nTaskIcon`  
- 指定要顯示標籤旁的圖示。 架構會在映像清單中儲存的圖示。 這個參數是該清單中的索引。  
+ Specifies the icon to display next to the label. The framework stores icons in a list of images. This parameter is an index into that list.  
   
  [in] `bIsBold`  
- `TRUE`若要以粗體文字; 顯示標籤否則， `FALSE`。  
+ `TRUE` to display the label in bold text; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- 起始的索引標籤已新增的群組，則為-1 所指定的群組`nGroup`不存在。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the group where the label was added, or -1 if the group specified by `nGroup` does not exist.  
   
-### <a name="remarks"></a>備註  
- 架構會以不同方式處理工作和標籤。 當使用者按一下工作時，架構就會執行命令。 當使用者按一下標籤時，會不執行任何命令。 如需詳細資訊，請參閱[CMFCTasksPane::AddTask](#addtask)。  
+### <a name="remarks"></a>Remarks  
+ The framework handles tasks and labels differently. When a user clicks on a task, the framework executes a command. When a user clicks on a label, no command is executed. For more information, see [CMFCTasksPane::AddTask](#addtask).  
   
-##  <a name="addmrufileslist"></a>CMFCTasksPane::AddMRUFilesList  
- 將每個檔案組成一個群組儲存在最近使用的 (MRU) 檔案清單中的工作。  
+##  <a name="addmrufileslist"></a>  CMFCTasksPane::AddMRUFilesList  
+ Adds a task for each file stored in a Most Recently Used (MRU) files list into a group.  
   
 ```  
 int AddMRUFilesList(
@@ -385,46 +478,46 @@ int AddMRUFilesList(
     int nMaxFiles = 4);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組的索引。 這個方法會將最近一次使用檔案清單，此參數所指定的群組。  
+ Specifies the index of a group. This method adds the MRU files list to the group specified by this parameter.  
   
  [in] `nMaxFiles`  
- 指定要顯示在最近一次使用檔案清單中的檔案數目。  
+ Specifies the number of files to display in the MRU files list.  
   
-### <a name="return-value"></a>傳回值  
- 最近一次使用檔案清單加入其中，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the group where the MRU files list was added, or -1 if the group specified by `nGroup` does not exist.  
   
-##  <a name="addpage"></a>CMFCTasksPane::AddPage  
- 將頁面加入至工作窗格。  
+##  <a name="addpage"></a>  CMFCTasksPane::AddPage  
+ Adds a page to the task pane.  
   
 ```  
 int AddPage(LPCTSTR lpszPageLabel);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszPageLabel`  
- 指定頁面的標籤。  
+ Specifies the label for the page.  
   
-### <a name="return-value"></a>傳回值  
- 新網頁的以零為起始的索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the new page.  
   
-##  <a name="addseparator"></a>CMFCTasksPane::AddSeparator  
+##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator  
 
   
 ```  
 int AddSeparator(int nGroup);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="addtask"></a>CMFCTasksPane::AddTask  
- 將工作加入至指定的工作群組。  
+##  <a name="addtask"></a>  CMFCTasksPane::AddTask  
+ Adds a task to the specified task group.  
   
 ```  
 int AddTask(
@@ -435,27 +528,27 @@ int AddTask(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組索引就新增工作。  
+ Specifies the group index where the task is added.  
   
  [in] `lpszTaskName`  
- 指定工作的名稱。  
+ Specifies the name of the task.  
   
  [in] `nTaskIcon`  
- 指定要顯示工作旁邊的圖示。 架構會在映像清單中儲存的圖示。 這個參數是該清單中的索引。  
+ Specifies the icon to display next to the task. The framework stores icons in a list of images. This parameter is an index into that list.  
   
  [in] `uiCommandID`  
- 指定當使用者按一下工作時執行命令的命令 ID。 此工作會被視為標籤如果`uiCommandID`為 0。  
+ Specifies the command ID of the command to execute when the user clicks the task. The task is treated as a label if `uiCommandID` is 0.  
   
  [in] `dwUserData`  
- 指定要與工作相關聯的使用者定義資料。  
+ Specifies the user-defined data to be associated with the task.  
   
-### <a name="return-value"></a>傳回值  
- 工作已加入其中，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the group where the task was added, or -1 if the group specified by `nGroup` does not exist.  
   
-##  <a name="addwindow"></a>CMFCTasksPane::AddWindow  
- 將子視窗加入工作窗格。  
+##  <a name="addwindow"></a>  CMFCTasksPane::AddWindow  
+ Adds a child window to the task pane.  
   
 ```  
 int AddWindow(
@@ -466,36 +559,36 @@ int AddWindow(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組加入之索引視窗。  
+ Specifies the group index where the window is added.  
   
  [in] `hwndTask`  
- 指定要加入的視窗控制代碼。  
+ Specifies the handle of the window to add.  
   
  [in] `nWndHeight`  
- 指定視窗的高度。  
+ Specifies the height of the window.  
   
  [in] `bAutoDestroyWindow`  
- `TRUE`當移除工作時，終結視窗否則， `FALSE`。  
+ `TRUE` to destroy the window when the task is removed; otherwise, `FALSE`.  
   
  [in] `dwUserData`  
- 指定與工作相關聯的使用者定義資料。  
+ Specifies the user-defined data associated with the task.  
   
-### <a name="return-value"></a>傳回值  
- 視窗加入其中，群組的以零為起始的索引則為-1 所指定的群組`nGroup`不存在。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the group where the window was added, or -1 if the group specified by `nGroup` does not exist.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法，以將控制項加入至工作窗格。 例如，您可以加入編輯控制項的功能，例如搜尋列。  
+### <a name="remarks"></a>Remarks  
+ Call this method to add a control to a task pane. For example, you can add an edit control that functions like a search bar.  
   
-##  <a name="cmfctaskspane"></a>CMFCTasksPane::CMFCTasksPane  
- 建構[CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)物件。  
+##  <a name="cmfctaskspane"></a>  CMFCTasksPane::CMFCTasksPane  
+ Constructs a [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) object.  
   
 ```  
 CMFCTasksPane();
 ```  
   
-##  <a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups  
+##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups  
 
   
 ```  
@@ -507,14 +600,14 @@ void CollapseAllGroups(
     BOOL bCollapse);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bCollapse`  
  [in] `nPageIdx`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="collapsegroup"></a>CMFCTasksPane::CollapseGroup  
- 摺疊或展開群組。  
+##  <a name="collapsegroup"></a>  CMFCTasksPane::CollapseGroup  
+ Collapses or expands a group.  
   
 ```  
 BOOL CollapseGroup(
@@ -527,97 +620,97 @@ BOOL CollapseGroup(
     BOOL bCollapse = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pGroup`  
- 指定要摺疊的群組。  
+ Specifies the group to collapse.  
   
  [in] `bCollapse`  
- `TRUE`若要摺疊群組。`FALSE`展開群組。  
+ `TRUE` to collapse the group; `FALSE` to expand the group.  
   
  [in] `nGroup`  
- 指定群組的內部清單中摺疊群組的以零為起始的索引。  
+ Specifies the zero-based index of the group to collapse in the internal list of groups.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果群組摺疊或展開順利啟動。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the group collapses or expands successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 摺疊的群組顯示只在群組標題。隱藏的工作清單。  
+### <a name="remarks"></a>Remarks  
+ A collapsed group shows only the group caption; the list of tasks is hidden.  
   
-##  <a name="createdefaultminiframe"></a>CMFCTasksPane::CreateDefaultMiniframe  
+##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe  
 
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rectInitial`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="createmenu"></a>CMFCTasksPane::CreateMenu  
- 建立當使用者按一下出現的功能表**其他工作窗格**功能表按鈕。  
+##  <a name="createmenu"></a>  CMFCTasksPane::CreateMenu  
+ Creates a menu that appears when a user clicks the **Other Tasks Panes** menu button.  
   
 ```  
 HMENU CreateMenu() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 新功能表的控制代碼。  
+### <a name="return-value"></a>Return Value  
+ A handle to the new menu.  
   
-### <a name="remarks"></a>備註  
- 若要自訂工作窗格的功能表在衍生類別中，這個方法會覆寫。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to customize the menu for a task pane.  
   
- 這個方法會建立快顯功能表包含 [工作] 窗格中的頁面清單。 功能表會顯示使用中頁面旁邊的核取記號。  
+ The pop-up menu  that this method creates contains the list of pages in the task pane. The menu displays a check mark next to the active page.  
   
-##  <a name="enableanimation"></a>CMFCTasksPane::EnableAnimation  
- 啟用或停用工作群組展開或摺疊時所發生的動畫。  
+##  <a name="enableanimation"></a>  CMFCTasksPane::EnableAnimation  
+ Enables or disables the animation that occurs when a task group expands or collapses.  
   
 ```  
 void EnableAnimation(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用工作時所發生的動畫，群組展開或摺疊。否則， `FALSE`。  
+ `TRUE` to enable the animation that occurs when a task group expands or collapses; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，會啟用工作群組展開或摺疊時所發生的動畫。  
+### <a name="remarks"></a>Remarks  
+ By default, the animation that occurs when a task group expands or collapses is enabled.  
   
-##  <a name="enablegroupcollapse"></a>CMFCTasksPane::EnableGroupCollapse  
- 指定使用者是否可以摺疊工作群組。  
+##  <a name="enablegroupcollapse"></a>  CMFCTasksPane::EnableGroupCollapse  
+ Specifies whether a user can collapse task groups.  
   
 ```  
 void EnableGroupCollapse(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`如果使用者可以摺疊工作群組。否則， `FALSE`。  
+ `TRUE` if users can collapse task groups; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 摺疊的工作群組會顯示只在群組標題。隱藏的工作清單。  
+### <a name="remarks"></a>Remarks  
+ A task group that is collapsed displays only the group caption; the list of tasks is hidden.  
   
-##  <a name="enablehistorymenubuttons"></a>CMFCTasksPane::EnableHistoryMenuButtons  
- 啟用下拉式功能表上**下一步**和**上一步**瀏覽按鈕。  
+##  <a name="enablehistorymenubuttons"></a>  CMFCTasksPane::EnableHistoryMenuButtons  
+ Enables drop-down menus on the **Next** and **Previous** navigation buttons.  
   
 ```  
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用下拉式功能表上**下一步**和**上一步**瀏覽按鈕，否則`FALSE`。  
+ `TRUE` to enable drop-down menus on the **Next** and **Previous** navigation buttons; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，在下拉式功能表**下一步**和**上一步**按鈕會停用。  
+### <a name="remarks"></a>Remarks  
+ By default, the drop-down menus on the **Next** and **Previous** buttons are disabled.  
   
- 功能表包含使用者所用的工作頁面的歷程記錄。  
+ The menus contain the history of tasks pages that the user used.  
   
-##  <a name="enablenavigationtoolbar"></a>CMFCTasksPane::EnableNavigationToolbar  
- 啟用或停用導覽工具列。  
+##  <a name="enablenavigationtoolbar"></a>  CMFCTasksPane::EnableNavigationToolbar  
+ Enables or disables the navigation toolbar.  
   
 ```  
 void EnableNavigationToolbar(
@@ -629,133 +722,133 @@ void EnableNavigationToolbar(
     0));
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用瀏覽工具列中。否則， `FALSE`。  
+ `TRUE` to enable the navigation toolbar; otherwise, `FALSE`.  
   
  [in] `uiToolbarBmpRes`  
- 指定包含要在工具列上顯示的影像的點陣圖的資源識別碼。  
+ Specifies the resource ID of the bitmap that contains the images to display on the toolbar.  
   
  [in] `sizeToolbarImage`  
- 指定的工具列按鈕影像的大小。  
+ Specifies the size of a toolbar image.  
   
  [in] `sizeToolbarButton`  
- 指定的工具列按鈕的大小。  
+ Specifies the size of a toolbar button.  
   
-### <a name="remarks"></a>備註  
- 瀏覽工具列是 framework 顯示在 [工作] 窗格頂端的工具列。 瀏覽工具列包含**回**，**向前**，和**首頁**瀏覽按鈕和功能表按鈕包含可用分頁的清單。  
+### <a name="remarks"></a>Remarks  
+ The navigation toolbar is a toolbar that the framework displays at the top of the task pane. The navigation toolbar contains the **Back**, **Forward**, and **Home** navigation buttons and a menu button that contains the list of available pages.  
   
- 根據預設，此架構不會顯示瀏覽工具列。 如果未顯示 [導覽] 工具列，瀏覽按鈕位於標題的停駐列。  
+ By default, the framework does not display the navigation toolbar. If the navigation toolbar is not displayed, the navigation buttons are located on the caption of the docking bar.  
   
-##  <a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls  
+##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls  
 
   
 ```  
 void EnableOffsetCustomControls(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablescrollbuttons"></a>CMFCTasksPane::EnableScrollButtons  
- 可捲動按鈕，而非捲軸。  
+##  <a name="enablescrollbuttons"></a>  CMFCTasksPane::EnableScrollButtons  
+ Enables scroll buttons instead of a scroll bar.  
   
 ```  
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要在捲軸，而 [工作] 窗格中顯示捲軸按鈕否則， `FALSE`。  
+ `TRUE` to display scroll buttons in the task pane instead of a scroll bar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，架構會在工作窗格中顯示捲軸按鈕。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework displays scroll buttons in the task pane.  
   
-##  <a name="enablewraplabels"></a>CMFCTasksPane::EnableWrapLabels  
- 啟用或停用的標籤中文字的文字換行。  
+##  <a name="enablewraplabels"></a>  CMFCTasksPane::EnableWrapLabels  
+ Enables or disables word wrapping for the text in labels.  
   
 ```  
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要出現在 [工作] 窗格; 的標籤中的文字換行否則， `FALSE`。  
+ `TRUE` to wrap the text in labels that appear on the task pane; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，架構不會在標籤中包裝文字。 啟用自動換行時，標籤中的文字可以出現在多行程式碼。 標籤可以包含分行標記例如`\n`和底線標記`&`。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework does not wrap the text in labels. When word wrapping is enabled, the text in labels can appear in multiple lines. The label can include line breaking markers such as `\n` and the underline marker `&`.  
   
-##  <a name="enablewraptasks"></a>CMFCTasksPane::EnableWrapTasks  
- 啟用或停用自動換行文字的工作。  
+##  <a name="enablewraptasks"></a>  CMFCTasksPane::EnableWrapTasks  
+ Enables or disables word wrapping for the text in tasks.  
   
 ```  
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要將工作包裝在工作窗格。否則， `FALSE`。  
+ `TRUE` to wrap tasks in the task pane; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 根據預設，會停用工作的自動換行。  
+### <a name="remarks"></a>Remarks  
+ By default, word wrapping for tasks is disabled.  
   
-##  <a name="getactivepage"></a>CMFCTasksPane::GetActivePage  
- 傳回使用中頁面以零為基底的索引。  
+##  <a name="getactivepage"></a>  CMFCTasksPane::GetActivePage  
+ Returns the zero-based index for the active page.  
   
 ```  
 int GetActivePage() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 使用中頁面的以零為起始的索引。  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the active page.  
   
-##  <a name="getgroupcaptionheight"></a>CMFCTasksPane::GetGroupCaptionHeight  
- 傳回群組標題的高度。  
+##  <a name="getgroupcaptionheight"></a>  CMFCTasksPane::GetGroupCaptionHeight  
+ Returns the height of the group caption.  
   
 ```  
 int GetGroupCaptionHeight() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在群組標題，單位為像素的高度。  
+### <a name="return-value"></a>Return Value  
+ The height of the group caption, in pixels.  
   
-##  <a name="getgroupcaptionhorzoffset"></a>CMFCTasksPane::GetGroupCaptionHorzOffset  
- 傳回群組標題的水平位移。  
+##  <a name="getgroupcaptionhorzoffset"></a>  CMFCTasksPane::GetGroupCaptionHorzOffset  
+ Returns the horizontal offset of a group caption.  
   
 ```  
 int GetGroupCaptionHorzOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 群組標題水平位移。 水平位移是像素為單位，從 [工作] 窗格的左或右邊緣的距離。  
+### <a name="return-value"></a>Return Value  
+ The horizontal offset of a group caption. The horizontal offset is the distance in pixels from the left or right edge of the task pane.  
   
-##  <a name="getgroupcaptionvertoffset"></a>CMFCTasksPane::GetGroupCaptionVertOffset  
- 傳回群組標題的垂直位移。  
+##  <a name="getgroupcaptionvertoffset"></a>  CMFCTasksPane::GetGroupCaptionVertOffset  
+ Returns the vertical offset of a group caption.  
   
 ```  
 int GetGroupCaptionVertOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 群組標題，從 [工作] 窗格的頂端和底端邊緣的垂直位移。  
+### <a name="return-value"></a>Return Value  
+ The vertical offset of a group caption from the top and bottom edges of the task pane.  
   
-### <a name="remarks"></a>備註  
- 垂直位移的預設值是 7 個像素。  
+### <a name="remarks"></a>Remarks  
+ The default value for the vertical offset is 7 pixels.  
   
-##  <a name="getgroupcount"></a>CMFCTasksPane::GetGroupCount  
- 傳回群組總數。  
+##  <a name="getgroupcount"></a>  CMFCTasksPane::GetGroupCount  
+ Returns the total number of groups.  
   
 ```  
 int GetGroupCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在 [工作] 窗格中的群組總數。  
+### <a name="return-value"></a>Return Value  
+ The total number of groups in the task pane.  
   
-##  <a name="getgrouplocation"></a>CMFCTasksPane::GetGroupLocation  
- 傳回指定之群組的內部群組索引。  
+##  <a name="getgrouplocation"></a>  CMFCTasksPane::GetGroupLocation  
+ Returns the internal group index for the specified group.  
   
 ```  
 BOOL GetGroupLocation(
@@ -763,53 +856,53 @@ BOOL GetGroupLocation(
     int& nGroup) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pGroup`  
- 指定工作群組中，擷取其位置。  
+ Specifies the task group whose location is retrieved.  
   
- [輸出] `nGroup`  
- 包含工作群組的以零為起始的索引。  
+ [out] `nGroup`  
+ Contains the zero-based index of the task group.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果找不到工作群組。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the task group was found; otherwise, `FALSE`.  
   
-##  <a name="getgroupvertoffset"></a>CMFCTasksPane::GetGroupVertOffset  
- 傳回群組的垂直位移。  
+##  <a name="getgroupvertoffset"></a>  CMFCTasksPane::GetGroupVertOffset  
+ Returns the vertical offset of a group.  
   
 ```  
 int GetGroupVertOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 群組，單位為像素的垂直位移。  
+### <a name="return-value"></a>Return Value  
+ The vertical offset of a group, in pixels.  
   
-##  <a name="gethorzmargin"></a>CMFCTasksPane::GetHorzMargin  
- 傳回的工作窗格和用戶端區域的邊緣之間的水平間距。  
+##  <a name="gethorzmargin"></a>  CMFCTasksPane::GetHorzMargin  
+ Returns the horizontal spacing between a task pane and the edge of the client area.  
   
 ```  
 int GetHorzMargin() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 工作窗格與用戶端區域的邊緣之間的水平間距。  
+### <a name="return-value"></a>Return Value  
+ The horizontal spacing between a task pane and the edge of the client area.  
   
-### <a name="remarks"></a>備註  
- 工作窗格和用戶端區域的邊緣之間的預設間距是 12 個像素。  
+### <a name="remarks"></a>Remarks  
+ The default spacing between a task pane and the edge of the client area is 12 pixels.  
   
-##  <a name="getnextpages"></a>CMFCTasksPane::GetNextPages  
+##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages  
 
   
 ```  
 void GetNextPages(CStringList& lstNextPages) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lstNextPages`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getpagebygroup"></a>CMFCTasksPane::GetPageByGroup  
- 擷取指定之群組的頁面索引。  
+##  <a name="getpagebygroup"></a>  CMFCTasksPane::GetPageByGroup  
+ Retrieves the page index for a specified group.  
   
 ```  
 BOOL GetPageByGroup(
@@ -817,54 +910,54 @@ BOOL GetPageByGroup(
     int& nPage) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定工作群組的以零為起始的索引。  
+ Specifies the zero-based index of the task group.  
   
- [輸出] `nPage`  
- 包含指定的群組的頁面索引。 如果工作群組僅包含預設的網頁，則傳回的值為 0。  
+ [out] `nPage`  
+ Contains the page index for the specified group. If the task group only contains a default page, the returned value is 0.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果群組`nGroup`存在，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the group `nGroup` exists; otherwise, `FALSE`.  
   
-##  <a name="getpagescount"></a>CMFCTasksPane::GetPagesCount  
- 傳回頁數。  
+##  <a name="getpagescount"></a>  CMFCTasksPane::GetPagesCount  
+ Returns the number of pages.  
   
 ```  
 int GetPagesCount() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 在 [工作] 窗格中的分頁數目。  
+### <a name="return-value"></a>Return Value  
+ The number of pages in the task pane.  
   
-##  <a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages  
+##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages  
 
   
 ```  
 void GetPreviousPages(CStringList& lstPrevPages) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lstPrevPages`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getscrollbarctrl"></a>CMFCTasksPane::GetScrollBarCtrl  
+##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl  
 
   
 ```  
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nBar`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettask"></a>CMFCTasksPane::GetTask  
- 擷取工作。  
+##  <a name="gettask"></a>  CMFCTasksPane::GetTask  
+ Retrieves a task.  
   
 ```  
 CMFCTasksPaneTask* GetTask(
@@ -872,46 +965,46 @@ CMFCTasksPaneTask* GetTask(
     int nTask) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定包含工作群組的以零為起始的索引。  
+ Specifies the zero-based index of the group that contains the task.  
   
  [in] `nTask`  
- 指定工作的以零為起始的索引中所指定的清單`nGroup`。  
+ Specifies the zero-based index of the task in the list specified by `nGroup`.  
   
-### <a name="return-value"></a>傳回值  
- 指定索引處的工作。  
+### <a name="return-value"></a>Return Value  
+ The task at the specified index.  
   
-##  <a name="gettaskcount"></a>CMFCTasksPane::GetTaskCount  
- 傳回指定之群組中的工作數目。  
+##  <a name="gettaskcount"></a>  CMFCTasksPane::GetTaskCount  
+ Returns the number of tasks in a specified group.  
   
 ```  
 int GetTaskCount(int nGroup) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定工作群組的索引。  
+ Specifies the index of the task group.  
   
-### <a name="return-value"></a>傳回值  
- 在指定的群組或 0 的工作數目`nGroup`不正確。  
+### <a name="return-value"></a>Return Value  
+ The number of tasks in the specified group, or 0 if `nGroup` is invalid.  
   
-##  <a name="gettaskgroup"></a>CMFCTasksPane::GetTaskGroup  
- 傳回指定的群組索引的工作群組。  
+##  <a name="gettaskgroup"></a>  CMFCTasksPane::GetTaskGroup  
+ Returns a task group for a specified group index.  
   
 ```  
 CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定要擷取之群組的以零為起始的索引。  
+ Specifies the zero-based index of the group to retrieve.  
   
-### <a name="return-value"></a>傳回值  
- 工作群組中指定索引處。  
+### <a name="return-value"></a>Return Value  
+ The task group at the specified index.  
   
-##  <a name="gettasklocation"></a>CMFCTasksPane::GetTaskLocation  
- 傳回的群組與指定之工作的索引。  
+##  <a name="gettasklocation"></a>  CMFCTasksPane::GetTaskLocation  
+ Returns the group and the index for a specified task.  
   
 ```  
 BOOL GetTaskLocation(
@@ -930,189 +1023,189 @@ BOOL GetTaskLocation(
     int& nTask) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCommandID`  
- 指定要尋找工作的命令 ID。  
+ Specifies the command ID of the task to find.  
   
- [輸出] `nGroup`  
- 包含工作的群組索引。  
+ [out] `nGroup`  
+ Contains the group index of the task.  
   
- [輸出] `nTask`  
- 包含工作群組中工作的索引。  
+ [out] `nTask`  
+ Contains the index of the task in the task group.  
   
  [in] `hwndTask`  
- 指定與工作關聯的視窗。  
+ Specifies the window associated with the task.  
   
  [in] `pTask`  
- 指定要尋找工作。  
+ Specifies the task to find.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果找不到工作位置。`FALSE`如果指定的工作不存在。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the task location was found; `FALSE` if the specified task does not exist.  
   
-### <a name="remarks"></a>備註  
- 這個方法會擷取指定之工作的工作索引與群組索引。 如果此方法會傳回`FALSE`，`nGroup`和`nTask`設定為-1。  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the group index and task index for the specified task. If the method returns `FALSE`, `nGroup` and `nTask` are set to -1.  
   
-##  <a name="gettaskshorzoffset"></a>CMFCTasksPane::GetTasksHorzOffset  
- 傳回工作的水平位移。  
+##  <a name="gettaskshorzoffset"></a>  CMFCTasksPane::GetTasksHorzOffset  
+ Returns the horizontal offset of tasks.  
   
 ```  
 int GetTasksHorzOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 從其父群組的左側和右側邊緣工作水平位移。  
+### <a name="return-value"></a>Return Value  
+ The horizontal offset of tasks from the left and right edges of their parent groups.  
   
-### <a name="remarks"></a>備註  
- 工作的預設水平位移是 12 個像素。  
+### <a name="remarks"></a>Remarks  
+ The default horizontal offset of tasks is 12 pixels.  
   
-##  <a name="gettasksiconhorzoffset"></a>CMFCTasksPane::GetTasksIconHorzOffset  
+##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset  
 
   
 ```  
 int GetTasksIconHorzOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gettasksiconvertoffset"></a>CMFCTasksPane::GetTasksIconVertOffset  
+##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset  
 
   
 ```  
 int GetTasksIconVertOffset() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getvertmargin"></a>CMFCTasksPane::GetVertMargin  
- 傳回工作窗格和用戶端區域的邊緣之間的垂直邊界。  
+##  <a name="getvertmargin"></a>  CMFCTasksPane::GetVertMargin  
+ Returns the vertical margin between a task pane and the edges of the client area.  
   
 ```  
 int GetVertMargin() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 工作窗格和工作區邊緣之間的垂直邊界。  
+### <a name="return-value"></a>Return Value  
+ The vertical margin between a task pane and the edges of the client area.  
   
-### <a name="remarks"></a>備註  
- 垂直邊界是工作窗格和工作區邊緣之間的間距。 垂直邊界的預設值為 12 個像素。  
+### <a name="remarks"></a>Remarks  
+ The vertical margin is the space between a task pane and the edges of the client area. The default value of the vertical margin is 12 pixels.  
   
-##  <a name="isaccessibilitycompatible"></a>CMFCTasksPane::IsAccessibilityCompatible  
+##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible  
 
   
 ```  
 virtual BOOL IsAccessibilityCompatible();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isanimationenabled"></a>CMFCTasksPane::IsAnimationEnabled  
- 指出是否啟用動畫。  
+##  <a name="isanimationenabled"></a>  CMFCTasksPane::IsAnimationEnabled  
+ Indicates whether animation is enabled.  
   
 ```  
 BOOL IsAnimationEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用使用者展開或摺疊群組時所發生的動畫。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the animation that occurs when a user expands or collapses a group is enabled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCTasksPane::EnableAnimation](#enableanimation)啟用或停用動畫。  
+### <a name="remarks"></a>Remarks  
+ Call [CMFCTasksPane::EnableAnimation](#enableanimation) to enable or disable animation.  
   
-##  <a name="isbackbuttonenabled"></a>CMFCTasksPane::IsBackButtonEnabled  
- 指出是否啟用上一頁按鈕。  
+##  <a name="isbackbuttonenabled"></a>  CMFCTasksPane::IsBackButtonEnabled  
+ Indicates whether the back button is enabled.  
   
 ```  
 BOOL IsBackButtonEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用 [上一頁] 按鈕。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the back button is enabled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 當使用者按一下 [上一頁] 按鈕時，架構會顯示先前的 [工作] 頁面。  
+### <a name="remarks"></a>Remarks  
+ When a user clicks the back button, the framework displays the previous task page.  
   
-##  <a name="isforwardbuttonenabled"></a>CMFCTasksPane::IsForwardButtonEnabled  
- 指出是否啟用下一頁按鈕。  
+##  <a name="isforwardbuttonenabled"></a>  CMFCTasksPane::IsForwardButtonEnabled  
+ Indicates whether the forward button is enabled.  
   
 ```  
 BOOL IsForwardButtonEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已啟用 [下一頁] 按鈕。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the forward button is enabled; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- [下一頁] 按鈕可讓您向前巡覽歷程記錄中的工作頁面。  
+### <a name="remarks"></a>Remarks  
+ The forward button enables forward navigation in the history of task pages.  
   
-##  <a name="isgroupcollapseenabled"></a>CMFCTasksPane::IsGroupCollapseEnabled  
+##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled  
 
   
 ```  
 BOOL IsGroupCollapseEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ishistorymenubuttonsenabled"></a>CMFCTasksPane::IsHistoryMenuButtonsEnabled  
- 指出是否**下一步**和**上一步**瀏覽按鈕都有下拉式功能表。  
+##  <a name="ishistorymenubuttonsenabled"></a>  CMFCTasksPane::IsHistoryMenuButtonsEnabled  
+ Indicates whether the **Next** and **Previous** navigation buttons have drop-down menus.  
   
 ```  
 BOOL IsHistoryMenuButtonsEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果**下一步**和**上一步**瀏覽按鈕都有下拉式清單，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the **Next** and **Previous** navigation buttons have drop-down menus; otherwise, `FALSE`.  
   
-##  <a name="isnavigationtoolbarenabled"></a>CMFCTasksPane::IsNavigationToolbarEnabled  
- 指出是否啟用導覽工具列。  
+##  <a name="isnavigationtoolbarenabled"></a>  CMFCTasksPane::IsNavigationToolbarEnabled  
+ Indicates whether the navigation toolbar is enabled.  
   
 ```  
 BOOL IsNavigationToolbarEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果未啟用瀏覽工具列。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the navigation toolbar is enabled; otherwise, `FALSE`.  
   
-##  <a name="istoolbox"></a>CMFCTasksPane::IsToolBox  
+##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox  
 
   
 ```  
 virtual BOOL IsToolBox() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iswraplabelsenabled"></a>CMFCTasksPane::IsWrapLabelsEnabled  
- 指出工作窗格的標籤中是否自動換行。  
+##  <a name="iswraplabelsenabled"></a>  CMFCTasksPane::IsWrapLabelsEnabled  
+ Indicates whether the task pane wraps words in labels.  
   
 ```  
 BOOL IsWrapLabelsEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果在標籤文字換行;，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if words in labels are wrapped; otherwise, `FALSE`.  
   
-##  <a name="iswraptasksenabled"></a>CMFCTasksPane::IsWrapTasksEnabled  
- 指定是否在 framework 換工作字串。  
+##  <a name="iswraptasksenabled"></a>  CMFCTasksPane::IsWrapTasksEnabled  
+ Specifies whether the framework wraps the task string.  
   
 ```  
 BOOL IsWrapTasksEnabled() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工作字串換行。，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the task string is wrapped; otherwise, `FALSE`.  
   
-##  <a name="loadstate"></a>CMFCTasksPane::LoadState  
+##  <a name="loadstate"></a>  CMFCTasksPane::LoadState  
 
   
 ```  
@@ -1122,36 +1215,36 @@ virtual BOOL LoadState(
     UINT uiID = (UINT) -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
  [in] `nIndex`  
  [in] `uiID`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onactivatetaskspanepage"></a>CMFCTasksPane::OnActivateTasksPanePage  
- 由架構呼叫，當它建立作用中工作窗格 頁面。  
+##  <a name="onactivatetaskspanepage"></a>  CMFCTasksPane::OnActivateTasksPanePage  
+ Called by the framework when it makes a task pane page active.  
   
 ```  
 virtual void OnActivateTasksPanePage();
 ```  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法在衍生類別到自訂工作窗格 頁面的外觀。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to customize the appearance of the task pane page.  
   
-##  <a name="oncancel"></a>CMFCTasksPane::OnCancel  
+##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel  
 
   
 ```  
 virtual void OnCancel();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onclicktask"></a>CMFCTasksPane::OnClickTask  
- 使用者按一下工作窗格中的項目時由架構呼叫。  
+##  <a name="onclicktask"></a>  CMFCTasksPane::OnClickTask  
+ Called by the framework when the user clicks an item in the task pane.  
   
 ```  
 virtual void OnClickTask(
@@ -1161,70 +1254,70 @@ virtual void OnClickTask(
     DWORD dwUserData);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroupNumber`  
- 指定包含已按下的工作群組的以零為起始的索引。  
+ Specifies the zero-based index of the group that contains the clicked task.  
   
  [in] `nTaskNumber`  
- 指定已按下工作的以零為起始的索引。  
+ Specifies the zero-based index of the clicked task.  
   
  [in] `uiCommandID`  
- 指定與工作相關聯的命令 ID。  
+ Specifies the command ID associated with the task.  
   
  [in] `dwUserData`  
- 包含與按下的工作相關聯的使用者定義資料。  
+ Contains user-defined data associated with the clicked task.  
   
-### <a name="remarks"></a>備註  
- 當使用者按一下工作，架構會呼叫這個方法。 根據預設，架構會檢查與按下的工作相關聯的命令 ID，如果不是零，就會傳送`WM_COMMAND`工作窗格控制項的擁有者的訊息。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a user clicks a task. By default, the framework checks the command ID associated with the clicked task and, if it is not zero, sends the `WM_COMMAND` message to the owner of the task pane control.  
   
- 在衍生類別時按下工作時執行自訂程式碼中的，這個方法會覆寫。  
+ Override this method in a derived class to execute custom code when a task is clicked.  
   
-##  <a name="onok"></a>CMFCTasksPane::OnOK  
+##  <a name="onok"></a>  CMFCTasksPane::OnOK  
 
   
 ```  
 virtual void OnOK();
 ```  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onpressbackbutton"></a>CMFCTasksPane::OnPressBackButton  
- 使用者按一下上一頁按鈕時由架構呼叫。  
+##  <a name="onpressbackbutton"></a>  CMFCTasksPane::OnPressBackButton  
+ Called by the framework when the user clicks the back button.  
   
 ```  
 virtual void OnPressBackButton();
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，架構會顯示先前檢視的頁面。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework displays the previously viewed page.  
   
- 覆寫這個方法在衍生類別來執行自訂程式碼，當使用者按一下 [上一頁] 按鈕。  
+ Override this method in a derived class to execute custom code when the user clicks the back button.  
   
-##  <a name="onpressforwardbutton"></a>CMFCTasksPane::OnPressForwardButton  
- 使用者按一下上一步瀏覽按鈕時由架構呼叫。  
+##  <a name="onpressforwardbutton"></a>  CMFCTasksPane::OnPressForwardButton  
+ Called by the framework when the user clicks the forward navigation button.  
   
 ```  
 virtual void OnPressForwardButton();
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，架構會顯示使用者檢視後，再按一下頁面**回** 按鈕。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework displays the page that the user viewed before clicking the **Back** button.  
   
- 覆寫這個方法在衍生類別來執行自訂程式碼，當使用者按一下 [轉寄] 按鈕。  
+ Override this method in a derived class to execute custom code when the user clicks the forward button.  
   
-##  <a name="onpresshomebutton"></a>CMFCTasksPane::OnPressHomeButton  
- 當使用者按一下主瀏覽 按鈕時，由架構呼叫。  
+##  <a name="onpresshomebutton"></a>  CMFCTasksPane::OnPressHomeButton  
+ Called by the framework when the user clicks the home navigation button.  
   
 ```  
 virtual void OnPressHomeButton();
 ```  
   
-### <a name="remarks"></a>備註  
- 根據預設，架構會顯示為工作群組的預設頁面。  
+### <a name="remarks"></a>Remarks  
+ By default, the framework displays the default page for the task group.  
   
- 覆寫這個方法在衍生類別來執行自訂程式碼，當使用者按一下主瀏覽 按鈕。  
+ Override this method in a derived class to execute custom code when the user clicks the home navigation button.  
   
-##  <a name="onpressotherbutton"></a>CMFCTasksPane::OnPressOtherButton  
+##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton  
 
   
 ```  
@@ -1233,27 +1326,27 @@ virtual void OnPressOtherButton(
     CWnd* pWndOwner);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pbtn`  
  [in] `pWndOwner`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onsetaccdata"></a>CMFCTasksPane::OnSetAccData  
+##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData  
 
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lVal`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onupdatecmdui"></a>CMFCTasksPane::OnUpdateCmdUI  
+##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI  
 
   
 ```  
@@ -1262,99 +1355,99 @@ virtual void OnUpdateCmdUI(
     BOOL bDisableIfNoHndler);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pTarget`  
  [in] `bDisableIfNoHndler`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="pretranslatemessage"></a>CMFCTasksPane::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage  
 
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="recalclayout"></a>CMFCTasksPane::RecalcLayout  
+##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout  
 
   
 ```  
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bRedraw`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeallgroups"></a>CMFCTasksPane::RemoveAllGroups  
- 移除指定之頁面上的所有群組。  
+##  <a name="removeallgroups"></a>  CMFCTasksPane::RemoveAllGroups  
+ Removes all groups on the specified page.  
   
 ```  
 void RemoveAllGroups(int nPageIdx = 0);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nPageIdx`  
- 指定頁面的以零為起始的索引。  
+ Specifies the zero-based index of the page.  
   
-### <a name="remarks"></a>備註  
- 移除指定的頁面上的所有群組`nPageIdx`，或如果沒有預設網頁的所有群組。  
+### <a name="remarks"></a>Remarks  
+ Removes all groups on the page specified by `nPageIdx`, or all groups if there is only a default page.  
   
-##  <a name="removeallpages"></a>CMFCTasksPane::RemoveAllPages  
- 從工作窗格中移除所有頁面，預設 (第一頁) 頁面除外。  
+##  <a name="removeallpages"></a>  CMFCTasksPane::RemoveAllPages  
+ Removes all pages from the task pane except the default (first) page.  
   
 ```  
 void RemoveAllPages();
 ```  
   
-##  <a name="removealltasks"></a>CMFCTasksPane::RemoveAllTasks  
- 從指定的群組中移除所有工作。  
+##  <a name="removealltasks"></a>  CMFCTasksPane::RemoveAllTasks  
+ Removes all tasks from the specified group.  
   
 ```  
 void RemoveAllTasks(int nGroup);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組的以零為起始的索引。  
+ Specifies the zero-based index of the group.  
   
-##  <a name="removegroup"></a>CMFCTasksPane::RemoveGroup  
- 移除群組。  
+##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup  
+ Removes a group.  
   
 ```  
 void RemoveGroup(int nGroup);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定要移除之群組的以零為起始的索引。  
+ Specifies the zero-based index of the group to remove.  
   
-### <a name="remarks"></a>備註  
- 這個方法會移除單一群組。 若要移除所有群組，請呼叫[CMFCTasksPane::RemoveAllGroups](#removeallgroups)改。  
+### <a name="remarks"></a>Remarks  
+ This method removes a single group. To remove all groups, call [CMFCTasksPane::RemoveAllGroups](#removeallgroups) instead.  
   
- 架構會移除群組，會終結所有工作和與其相關聯的 windows 使用者。  
+ When the framework removes a group, all tasks and user windows associated with it are destroyed.  
   
-##  <a name="removepage"></a>CMFCTasksPane::RemovePage  
- 從工作窗格移除指定的頁面。  
+##  <a name="removepage"></a>  CMFCTasksPane::RemovePage  
+ Removes a specified page from the task pane.  
   
 ```  
 void RemovePage(int nPageIdx);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nPageIdx`  
- 指定要移除之頁面的以零為起始的索引。  
+ Specifies the zero-based index of the page to remove.  
   
-##  <a name="removetask"></a>CMFCTasksPane::RemoveTask  
- 從工作群組中移除工作。  
+##  <a name="removetask"></a>  CMFCTasksPane::RemoveTask  
+ Removes a task from a task group.  
   
 ```  
 BOOL RemoveTask(
@@ -1363,20 +1456,20 @@ BOOL RemoveTask(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定包含要移除之工作的工作群組的以零為起始的索引。  
+ Specifies the zero-based index of the task group that contains the task to remove.  
   
  [in] `nTask`  
- 指定的工作，以移除以零為起始的索引。  
+ Specifies the zero-based index of the task to remove.  
   
  [in] `bRedraw`  
- `TRUE`若要重繪其工作窗格。否則， `FALSE`。  
+ `TRUE` to redraw the task pane; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果函式成功。`FALSE`如果`nGroup`或`nTask`不正確。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the function succeeds; `FALSE` if `nGroup` or `nTask` is invalid.  
   
-##  <a name="savestate"></a>CMFCTasksPane::SaveState  
+##  <a name="savestate"></a>  CMFCTasksPane::SaveState  
 
   
 ```  
@@ -1386,95 +1479,95 @@ virtual BOOL SaveState(
     UINT uiID = (UINT) -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
  [in] `nIndex`  
  [in] `uiID`  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="serialize"></a>CMFCTasksPane::Serialize  
+##  <a name="serialize"></a>  CMFCTasksPane::Serialize  
 
   
 ```  
 virtual void Serialize(CArchive& ar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `ar`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setactivepage"></a>CMFCTasksPane::SetActivePage  
- 讓指定的頁面中的 [工作] 窗格作用中。  
+##  <a name="setactivepage"></a>  CMFCTasksPane::SetActivePage  
+ Makes the specified page in the task pane active.  
   
 ```  
 void SetActivePage(int nPageIdx);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nPageIdx`  
- 指定要顯示之頁面的以零為起始的索引。  
+ Specifies the zero-based index of the page to display.  
   
-### <a name="remarks"></a>備註  
- 這個方法會判斷提示，如果`nPageIdx`不正確。  
+### <a name="remarks"></a>Remarks  
+ This method asserts if the `nPageIdx` is invalid.  
   
-##  <a name="setcaption"></a>CMFCTasksPane::SetCaption  
- 設定工作窗格的標題名稱。  
+##  <a name="setcaption"></a>  CMFCTasksPane::SetCaption  
+ Sets the caption name of a task pane.  
   
 ```  
 void SetCaption(LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- 指定的標題名稱。  
+ Specifies the caption name.  
   
-### <a name="remarks"></a>備註  
- 如果工作窗格中有多個頁面，預設頁面具有使用此函式所設定的標題。  
+### <a name="remarks"></a>Remarks  
+ If a task pane has multiple pages, the default page has the caption that was set by using this function.  
   
-##  <a name="setgroupcaptionheight"></a>CMFCTasksPane::SetGroupCaptionHeight  
- 設定群組標題的高度。  
+##  <a name="setgroupcaptionheight"></a>  CMFCTasksPane::SetGroupCaptionHeight  
+ Sets the height of a group caption.  
   
 ```  
 void SetGroupCaptionHeight(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- 指定的標題高度。  
+ Specifies the caption height.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以自訂工作窗格中項目的邊界。  
+### <a name="remarks"></a>Remarks  
+ Call this method to customize the margins of the task pane elements.  
   
- 如果`n`為-1，架構決定使用視覺管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`)。 預設的標題高度為 25 像素。  
+ If `n` is -1, the framework determines the margin value by using the visual manager ( `CMFCVisualManager::GetTasksPaneGroupCaptionHeight`). The default caption height is 25 pixels.  
   
-##  <a name="setgroupcaptionhorzoffset"></a>CMFCTasksPane::SetGroupCaptionHorzOffset  
- 設定群組標題的水平位移。  
+##  <a name="setgroupcaptionhorzoffset"></a>  CMFCTasksPane::SetGroupCaptionHorzOffset  
+ Sets the horizontal offset of a group caption.  
   
 ```  
 void SetGroupCaptionHorzOffset(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- 指定在群組標題的水平位移。  
+ Specifies the horizontal offset of the group caption.  
   
-##  <a name="setgroupcaptionvertoffset"></a>CMFCTasksPane::SetGroupCaptionVertOffset  
- 設定群組標題的垂直位移。  
+##  <a name="setgroupcaptionvertoffset"></a>  CMFCTasksPane::SetGroupCaptionVertOffset  
+ Sets the vertical offset of a group caption.  
   
 ```  
 void SetGroupCaptionVertOffset(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- 指定像素為單位的群組標題的垂直位移。  
+ Specifies the vertical offset, in pixels, of the group caption.  
   
-##  <a name="setgroupname"></a>CMFCTasksPane::SetGroupName  
- 設定群組名稱。  
+##  <a name="setgroupname"></a>  CMFCTasksPane::SetGroupName  
+ Sets a group name.  
   
 ```  
 BOOL SetGroupName(
@@ -1482,18 +1575,18 @@ BOOL SetGroupName(
     LPCTSTR lpszGroupName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組的以零為起始的索引。  
+ Specifies the zero-based index of the group.  
   
  [in] `lpszGroupName`  
- 指定群組的名稱。  
+ Specifies the name of the group.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果成功設定群組名稱。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the group name was successfully set; otherwise, `FALSE`.  
   
-##  <a name="setgrouptextcolor"></a>CMFCTasksPane::SetGroupTextColor  
- 設定群組標題的文字色彩。  
+##  <a name="setgrouptextcolor"></a>  CMFCTasksPane::SetGroupTextColor  
+ Sets the text color for a group caption.  
   
 ```  
 BOOL SetGroupTextColor(
@@ -1502,53 +1595,53 @@ BOOL SetGroupTextColor(
     COLORREF colorHot = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組的以零為起始的索引。  
+ Specifies the zero-based index of the group.  
   
  [in] `color`  
- 指定的文字色彩。  
+ Specifies the text color.  
   
  [in] `colorHot`  
- 指定文字的色彩反白顯示的群組。 如果為-1，則會使用預設醒目提示色彩。  
+ Specifies the text color for the highlighted group. If -1, the default highlight color is used.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功變更群組文字色彩。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the group text color was successfully changed; otherwise, `FALSE`.  
   
-##  <a name="setgroupvertoffset"></a>CMFCTasksPane::SetGroupVertOffset  
- 設定群組的垂直位移。  
+##  <a name="setgroupvertoffset"></a>  CMFCTasksPane::SetGroupVertOffset  
+ Sets the vertical offset for a group.  
   
 ```  
 void SetGroupVertOffset(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- 指定垂直位移。  
+ Specifies the vertical offset.  
   
-### <a name="remarks"></a>備註  
- 垂直位移是工作群組的 [工作] 窗格框線之間的距離。  
+### <a name="remarks"></a>Remarks  
+ The vertical offset is the distance between a task group and the border of the task pane.  
   
- 呼叫此方法以自訂工作窗格中的項目邊界。 如果`n`為-1，架構決定使用視覺管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`)。 預設位移為 15 像素。  
+ Call this method to customize the margins of task pane elements. If `n` is -1, the framework determines the margin value by using the visual manager ( `CMFCVisualManager::GetTasksPaneGroupVertOffset`). The default offset is 15 pixels.  
   
-##  <a name="sethorzmargin"></a>CMFCTasksPane::SetHorzMargin  
- 設定水平的邊界。  
+##  <a name="sethorzmargin"></a>  CMFCTasksPane::SetHorzMargin  
+ Sets the horizontal margin.  
   
 ```  
 void SetHorzMargin(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- 指定單位為像素的邊界。  
+ Specifies the margin, in pixels.  
   
-### <a name="remarks"></a>備註  
- 水平邊界是工作窗格和用戶端區域的邊緣或下邊緣之間的距離。  
+### <a name="remarks"></a>Remarks  
+ The horizontal margin is the distance between a task pane and the top or bottom edge of the client area.  
   
- 如果 n 為-1，而且架構，以使用視覺管理員決定的邊界值 ( `CMFCVisualManager::GetTasksPaneHorzMargin`)。 預設的水平邊界是 12 個像素。  
+ If n is -1, and the framework determines the margin value by using the visual manager ( `CMFCVisualManager::GetTasksPaneHorzMargin`). The default horizontal margin is 12 pixels.  
   
-##  <a name="seticonslist"></a>CMFCTasksPane::SetIconsList  
- 設定影像清單。  
+##  <a name="seticonslist"></a>  CMFCTasksPane::SetIconsList  
+ Sets the image list.  
   
 ```  
 BOOL SetIconsList(
@@ -1559,26 +1652,26 @@ BOOL SetIconsList(
 void SetIconsList(HIMAGELIST hIcons);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiImageListResID`  
- 指定映像清單中的資源識別碼。  
+ Specifies the resource ID of the image list.  
   
  [in] `cx`  
- 影像清單中指定圖示的大小。  
+ Specifies the size of icons in the image list.  
   
  [in] `clrTransparent`  
- 指定透明色彩。  
+ Specifies the transparent color.  
   
  [in] `hIcons`  
- 指定包含的工作窗格圖示的影像清單。  
+ Specifies the image list that contains the icons for the task pane.  
   
-### <a name="remarks"></a>備註  
- 架構會將影像清單中的圖示。 工作是儲存在該清單中的圖示相關聯。  
+### <a name="remarks"></a>Remarks  
+ The framework stores icons in an image list. Tasks are associated with icons that are stored in that list.  
   
- 這個方法會將影像清單與工作窗格控制項產生關聯。 若要設定工作的圖示，當您呼叫[CMFCTasksPane::AddTask](#addtask)，請將`nTaskIcon`此映像清單中適當的以零為起始索引。  
+ This method associates an image list with the task pane control. To set the icon for a task when you call [CMFCTasksPane::AddTask](#addtask), set `nTaskIcon` to the appropriate zero-based index in this image list.  
   
-##  <a name="setpagecaption"></a>CMFCTasksPane::SetPageCaption  
- 設定工作窗格頁面的標題文字。  
+##  <a name="setpagecaption"></a>  CMFCTasksPane::SetPageCaption  
+ Sets the caption text for a task pane page.  
   
 ```  
 void SetPageCaption(
@@ -1586,18 +1679,18 @@ void SetPageCaption(
     LPCTSTR lpszName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nPageIdx`  
- 指定頁面的以零為起始的索引。  
+ Specifies the zero-based index of the page.  
   
  [in] `lpszName`  
- 指定要顯示在頁面上的標題文字。  
+ Specifies the caption text to display on the page.  
   
-### <a name="remarks"></a>備註  
- 如果工作窗格中有多個頁面，預設頁面具有使用此方法所設定的標題。  
+### <a name="remarks"></a>Remarks  
+ If a task pane has multiple pages, the default page has the caption that was set by using this method.  
   
-##  <a name="settaskname"></a>CMFCTasksPane::SetTaskName  
- 設定工作的名稱。  
+##  <a name="settaskname"></a>  CMFCTasksPane::SetTaskName  
+ Sets the name for a task.  
   
 ```  
 BOOL SetTaskName(
@@ -1606,63 +1699,63 @@ BOOL SetTaskName(
     LPCTSTR lpszTaskName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定工作群組的以零為起始的索引。  
+ Specifies the zero-based index of the task group.  
   
  [in] `nTask`  
- 指定工作的以零為起始的索引。  
+ Specifies the zero-based index of the task.  
   
  [in] `lpszTaskName`  
- 指定工作名稱。  
+ Specifies the task name.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果成功設定工作名稱。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the task name was successfully set; otherwise, `FALSE`.  
   
-##  <a name="settaskshorzoffset"></a>CMFCTasksPane::SetTasksHorzOffset  
- 設定工作的水平位移。  
+##  <a name="settaskshorzoffset"></a>  CMFCTasksPane::SetTasksHorzOffset  
+ Sets the horizontal offset for tasks.  
   
 ```  
 void SetTasksHorzOffset(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- 指定水平位移。  
+ Specifies the horizontal offset.  
   
-### <a name="remarks"></a>備註  
- 水平位移是像素為單位，從一組左右邊緣的距離。  
+### <a name="remarks"></a>Remarks  
+ The horizontal offset is the distance in pixels from the left and right edges of a group.  
   
- 如果`n`為-1，這個方法所傳回的值會設定水平位移`CMFCVisualManager::GetTasksPaneTaskHorzOffset`方法。  
+ If `n` is -1, this method sets the horizontal offset to the value returned by the `CMFCVisualManager::GetTasksPaneTaskHorzOffset` method.  
   
- 預設的水平位移是 12 個像素。  
+ The default horizontal offset is 12 pixels.  
   
-##  <a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset  
+##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset  
 
   
 ```  
 void SetTasksIconHorzOffset(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset  
+##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset  
 
   
 ```  
 void SetTasksIconVertOffset(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settasktextcolor"></a>CMFCTasksPane::SetTaskTextColor  
- 設定工作的文字色彩。  
+##  <a name="settasktextcolor"></a>  CMFCTasksPane::SetTaskTextColor  
+ Sets the text color for a task.  
   
 ```  
 BOOL SetTaskTextColor(
@@ -1672,40 +1765,40 @@ BOOL SetTaskTextColor(
     COLORREF colorHot = (COLORREF)-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定包含工作的工作群組的以零為起始的索引。  
+ Specifies the zero-based index of the task group that contains the task.  
   
  [in] `nTask`  
- 指定工作的以零為起始的索引。  
+ Specifies the zero-based index of the task.  
   
  [in] `color`  
- 指定工作的文字色彩。  
+ Specifies the text color for the task.  
   
  [in] `colorHot`  
- 指定文字的色彩反白顯示的群組。 -1，如果此方法會使用預設醒目提示色彩。  
+ Specifies the text color for the highlighted group. If -1, this method uses the default highlight color.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果成功設定工作的文字色彩。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the text color for the task was successfully set; otherwise, `FALSE`.  
   
-##  <a name="setvertmargin"></a>CMFCTasksPane::SetVertMargin  
- 將垂直邊界設定。  
+##  <a name="setvertmargin"></a>  CMFCTasksPane::SetVertMargin  
+ Sets the vertical margin.  
   
 ```  
 void SetVertMargin(int n = -1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `n`  
- 指定垂直邊界來設定。  
+ Specifies the vertical margin to set.  
   
-### <a name="remarks"></a>備註  
- 垂直邊界是工作窗格和工作區的垂直邊緣之間的距離。  
+### <a name="remarks"></a>Remarks  
+ The vertical margin is the distance between a task pane and the vertical edges of the client area.  
   
- 如果`n`為-1，架構決定使用視覺管理員的邊界值 ( `CMFCVisualManager::GetTasksPaneVertMargin`)。 預設邊界是 12 個像素。  
+ If `n` is -1, the framework determines the margin value by using  the visual manager ( `CMFCVisualManager::GetTasksPaneVertMargin`). The default margin is 12 pixels.  
   
-##  <a name="setwindowheight"></a>CMFCTasksPane::SetWindowHeight  
- 設定視窗控制項的高度。  
+##  <a name="setwindowheight"></a>  CMFCTasksPane::SetWindowHeight  
+ Sets the height for a window control.  
   
 ```  
 BOOL SetWindowHeight(
@@ -1719,36 +1812,36 @@ BOOL SetWindowHeight(
     int nWndHeight);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組，其中包含視窗控制項的以零為起始的索引。  
+ Specifies the zero-based index of the group that contains the window control.  
   
  [in] `hwndTask`  
- 指定視窗控制項的控制代碼。  
+ Specifies the handle to the window control.  
   
  [in] `nWndHeight`  
- 指定設定的高度。  
+ Specifies the height to set.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果成功設定視窗控制項的高度。`FALSE`如果`nGroup`無效或者`hwndTask`不存在。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the height of the window control was successfully set; `FALSE` if `nGroup` is invalid or if `hwndTask` does not exist.  
   
-### <a name="remarks"></a>備註  
- 呼叫[CMFCTasksPane::AddWindow](#addwindow)新增工作 視窗的控制項。  
+### <a name="remarks"></a>Remarks  
+ Call [CMFCTasksPane::AddWindow](#addwindow) to add tasks with window controls.  
   
-##  <a name="showcommandmessagestring"></a>CMFCTasksPane::ShowCommandMessageString  
+##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString  
 
   
 ```  
 virtual void ShowCommandMessageString(UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="showtask"></a>CMFCTasksPane::ShowTask  
- 顯示或隱藏工作。  
+##  <a name="showtask"></a>  CMFCTasksPane::ShowTask  
+ Shows or hides a task.  
   
 ```  
 BOOL ShowTask(
@@ -1758,27 +1851,27 @@ BOOL ShowTask(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nGroup`  
- 指定群組的以零為起始的索引。  
+ Specifies the zero-based index of the group.  
   
  [in] `nTask`  
- 指定要顯示或隱藏工作的以零為起始的索引。  
+ Specifies the zero-based index of the task to show or hide.  
   
  [in] `bShow`  
- `TRUE`若要顯示的工作。`FALSE`隱藏工作。  
+ `TRUE` to show the task; `FALSE` to hide the task.  
   
  [in] `bRedraw`  
- `TRUE`若要重繪其工作窗格。否則， `FALSE`。  
+ `TRUE` to redraw the task pane; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工作成功地顯示或隱藏。，`FALSE`如果指定的群組或工作不存在。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the task was successfully shown or hidden; `FALSE` if the specified group or task does not exist.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid)以顯示或隱藏工作，根據其命令 id。  
+### <a name="remarks"></a>Remarks  
+ Use [CMFCTasksPane::ShowTaskByCmdId](#showtaskbycmdid) to show or hide a task based on its command ID.  
   
-##  <a name="showtaskbycmdid"></a>CMFCTasksPane::ShowTaskByCmdId  
- 根據其命令識別碼顯示或隱藏工作。  
+##  <a name="showtaskbycmdid"></a>  CMFCTasksPane::ShowTaskByCmdId  
+ Shows or hides a task based on its command ID.  
   
 ```  
 BOOL ShowTaskByCmdId(
@@ -1787,39 +1880,39 @@ BOOL ShowTaskByCmdId(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `uiCommandID`  
- 指定要顯示或隱藏工作的命令識別碼。  
+ Specifies the command ID of the task to show or hide.  
   
  [in] `bShow`  
- `TRUE`若要顯示的工作。`FALSE`隱藏工作。  
+ `TRUE` to show the task; `FALSE` to hide the task.  
   
  [in] `bRedraw`  
- `TRUE`若要重繪其工作窗格。否則， `FALSE`。  
+ `TRUE` to redraw the task pane; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果工作成功地顯示或隱藏。，`FALSE`如果指定的命令 ID 的工作不存在。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the task was successfully shown or hidden; `FALSE` if a task with the specified command ID does not exist.  
   
-### <a name="remarks"></a>備註  
- 使用[CMFCTasksPane::ShowTask](#showtask)以顯示或隱藏工作，根據其命令 id。  
+### <a name="remarks"></a>Remarks  
+ Use [CMFCTasksPane::ShowTask](#showtask) to show or hide a task based on its command ID.  
   
-##  <a name="update"></a>CMFCTasksPane::Update  
- 重新整理所有工作 窗格中的控制項。  
+##  <a name="update"></a>  CMFCTasksPane::Update  
+ Refreshes all of the controls in a task pane.  
   
 ```  
 virtual void Update();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法更新工作窗格標題、 調整捲軸、 所有工作，重新調整都位置並重新繪製的所有工作窗格控制項。  
+### <a name="remarks"></a>Remarks  
+ This method updates the task pane caption, adjusts the scroll bar, repositions all tasks, and redraws all of the task pane controls.  
   
- 在衍生類別時所要執行自訂程式碼架構會重新整理 [工作] 窗格中的，這個方法會覆寫。  
+ Override this method in a derived class to execute custom code when the framework refreshes the task pane.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
- [CMFCTasksPaneTaskGroup 類別](../../mfc/reference/cmfctaskspanetaskgroup-class.md)   
- [CMFCTasksPaneTask 類別](../../mfc/reference/cmfctaskspanetask-class.md)   
- [CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)   
- [CMFCVisualManager 類別](../../mfc/reference/cmfcvisualmanager-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCTasksPaneTaskGroup Class](../../mfc/reference/cmfctaskspanetaskgroup-class.md)   
+ [CMFCTasksPaneTask Class](../../mfc/reference/cmfctaskspanetask-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)   
+ [CMFCVisualManager Class](../../mfc/reference/cmfcvisualmanager-class.md)
 

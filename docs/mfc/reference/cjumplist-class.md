@@ -1,5 +1,5 @@
 ---
-title: "CJumpList 類別 |Microsoft 文件"
+title: CJumpList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,7 +29,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CJumpList class
+- CJumpList [MFC], CJumpList
+- CJumpList [MFC], AbortList
+- CJumpList [MFC], AddDestination
+- CJumpList [MFC], AddKnownCategory
+- CJumpList [MFC], AddTask
+- CJumpList [MFC], AddTasks
+- CJumpList [MFC], AddTaskSeparator
+- CJumpList [MFC], ClearAll
+- CJumpList [MFC], ClearAllDestinations
+- CJumpList [MFC], CommitList
+- CJumpList [MFC], GetDestinationList
+- CJumpList [MFC], GetMaxSlots
+- CJumpList [MFC], GetRemovedItems
+- CJumpList [MFC], InitializeList
+- CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
 caps.latest.revision: 15
 author: mikeblome
@@ -49,17 +63,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b3662bd00f7c757df3a77f5920c48389bbd749fb
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 025d9a2d80e12318cc4438a4ba2c365d41c41fb1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cjumplist-class"></a>CJumpList 類別
-A`CJumpList`是當您以滑鼠右鍵按一下工作列中的圖示時所顯示的快速鍵的清單。  
+# <a name="cjumplist-class"></a>CJumpList Class
+A `CJumpList` is the list of shortcuts revealed when you right click on an icon in the task bar.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CJumpList;  
@@ -67,55 +81,55 @@ class CJumpList;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CJumpList::CJumpList](#cjumplist)|建構 `CJumpList` 物件。|  
-|[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|終結 `CJumpList` 物件。|  
+|[CJumpList::CJumpList](#cjumplist)|Constructs a `CJumpList` object.|  
+|[CJumpList::~CJumpList](#cjumplist__~cjumplist)|Destroys a `CJumpList` object.|  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CJumpList::AbortList](#abortlist)|中止清單建置交易不認可。|  
-|[CJumpList::AddDestination](#adddestination)|多載。 將目的地加入至清單。|  
-|[CJumpList::AddKnownCategory](#addknowncategory)|將已知的類別附加至清單。|  
-|[CJumpList::AddTask](#addtask)|多載。 將項目加入至標準工作分類。|  
-|[CJumpList::AddTasks](#addtasks)|將項目加入至標準工作分類。|  
-|[CJumpList::AddTaskSeparator](#addtaskseparator)|新增工作之間的分隔符號。|  
-|[CJumpList::ClearAll](#clearall)|移除所有的工作和已加入至目前的執行個體的目的地`CJumpList`為止。|  
-|[CJumpList::ClearAllDestinations](#clearalldestinations)|移除已加入至目前的執行個體的所有目的地`CJumpList`為止。|  
-|[CJumpList::CommitList](#commitlist)|結束清單建置異動，並將報告的清單認可至相關聯的儲存區 （在此情況下登錄。）|  
-|[CJumpList::GetDestinationList](#getdestinationlist)|擷取目的地清單的介面指標。|  
-|[CJumpList::GetMaxSlots](#getmaxslots)|擷取項目，包括可以在呼叫應用程式的 [目的地] 功能表中顯示的類別標頭的最大數目。|  
-|[CJumpList::GetRemovedItems](#getremoveditems)|傳回陣列，表示項目移除目的地。|  
-|[CJumpList::InitializeList](#initializelist)|開始清單建立交易。|  
-|[CJumpList::SetAppID](#setappid)|設定清單，將建置的應用程式使用者模型識別碼。|  
+|[CJumpList::AbortList](#abortlist)|Aborts a list-building transaction without committing.|  
+|[CJumpList::AddDestination](#adddestination)|Overloaded. Adds destination to the list.|  
+|[CJumpList::AddKnownCategory](#addknowncategory)|Appends a Known Category to the list.|  
+|[CJumpList::AddTask](#addtask)|Overloaded. Adds items to the canonical Tasks category.|  
+|[CJumpList::AddTasks](#addtasks)|Adds items to the canonical Tasks category.|  
+|[CJumpList::AddTaskSeparator](#addtaskseparator)|Adds a separator between tasks.|  
+|[CJumpList::ClearAll](#clearall)|Removes all tasks and destinations that have been added to the current instance of `CJumpList` so far.|  
+|[CJumpList::ClearAllDestinations](#clearalldestinations)|Removes all destinations that have been added to the current instance of `CJumpList` so far.|  
+|[CJumpList::CommitList](#commitlist)|Ends a list-building transaction and commits the reported list to the associated store (the registry in this case.)|  
+|[CJumpList::GetDestinationList](#getdestinationlist)|Retrieves an interface pointer to destination list.|  
+|[CJumpList::GetMaxSlots](#getmaxslots)|Retrieves the maximum number of items, including category headers that can display in the calling application's destination menu.|  
+|[CJumpList::GetRemovedItems](#getremoveditems)|Returns array of items that represent removed destinations.|  
+|[CJumpList::InitializeList](#initializelist)|Begins a list-building transaction.|  
+|[CJumpList::SetAppID](#setappid)|Sets the Application User Model ID for the list that will be built.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CJumpList](../../mfc/reference/cjumplist-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxadv.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxadv.h  
   
-##  <a name="_dtorcjumplist"></a>CJumpList:: ~ CJumpList  
- 終結 `CJumpList` 物件。  
+##  <a name="_dtorcjumplist"></a>  CJumpList::~CJumpList  
+ Destroys a `CJumpList` object.  
   
 ```  
 ~CJumpList();
 ```  
   
-##  <a name="abortlist"></a>CJumpList::AbortList  
- 中止清單建置交易不認可。  
+##  <a name="abortlist"></a>  CJumpList::AbortList  
+ Aborts a list-building transaction without committing.  
   
 ```  
 void AbortList();
 ```  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法有相同的效果終結`CJumpList`而不需呼叫`CommitList`。  
+### <a name="remarks"></a>Remarks  
+ Calling this method has the same effect as destroying `CJumpList` without calling `CommitList`.  
   
-##  <a name="adddestination"></a>CJumpList::AddDestination  
- 將目的地加入至清單。  
+##  <a name="adddestination"></a>  CJumpList::AddDestination  
+ Adds destination to the list.  
   
 ```  
 BOOL AddDestination(
@@ -133,45 +147,45 @@ BOOL AddDestination(
     IShellLink* pShellLink);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `lpcszCategoryName`  
- 指定類別名稱。 如果指定的類別目錄不存在，就會建立。  
+ Specifies a category name. If the specified category does not exist, it will be created.  
   
  `strDestinationPath`  
- 指定目的地檔案的路徑。  
+ Specifies a path to destination file.  
   
  `strCategoryName`  
- 指定類別名稱。 如果指定的類別目錄不存在，就會建立。  
+ Specifies a category name. If the specified category does not exist, it will be created.  
   
  `pShellItem`  
- 指定代表要加入目的地的殼層項目。  
+ Specifies a Shell Item representing the destination being added.  
   
  `pShellLink`  
- 指定代表要加入目的地的殼層連結。  
+ Specifies a Shell Link representing the destination being added.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 執行個體`CJumpList`內部彙總加入的目的地，並再認可在`CommitList`。  
+### <a name="remarks"></a>Remarks  
+ The instance of `CJumpList` internally accumulates added destinations and then commits them in `CommitList`.  
   
-##  <a name="addknowncategory"></a>CJumpList::AddKnownCategory  
- 將已知的類別附加至清單。  
+##  <a name="addknowncategory"></a>  CJumpList::AddKnownCategory  
+ Appends a Known Category to the list.  
   
 ```  
 BOOL AddKnownCategory(KNOWNDESTCATEGORY category);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `category`  
- 指定已知的類別類型。 可以是`KDC_RECENT`，或`KDC_KNOWN`。  
+ Specifies a known category type. Can be either `KDC_RECENT`, or `KDC_KNOWN`.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 知道類別是經常] 和 [最近使用分類，我們會自動計算每個應用程式會利用`SHAddToRecentDocs`（或間接使用該介面會替應用程式在某些情況下呼叫它）。  
+### <a name="remarks"></a>Remarks  
+ Known Categories are the Frequent and Recent categories that we will automatically calculate for every application that utilizes `SHAddToRecentDocs` (or indirectly uses it as the shell will call it on the application's behalf in some scenarios).  
   
-##  <a name="addtask"></a>CJumpList::AddTask  
- 將項目加入至標準工作分類。  
+##  <a name="addtask"></a>  CJumpList::AddTask  
+ Adds items to the canonical Tasks category.  
   
 ```  
 BOOL AddTask(
@@ -184,158 +198,158 @@ BOOL AddTask(
 BOOL AddTask(IShellLink* pShellLink);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `strTargetExecutablePath`  
- 指定的目標工作路徑。  
+ Specifies the target task path.  
   
  `strCommandLineArgs`  
- 指定可執行檔 strTargetExecutablePath 所指定的命令列引數。  
+ Specifies command line arguments of the executable specified by strTargetExecutablePath.  
   
  `strTitle`  
- 將目的地清單中顯示的工作名稱。  
+ Task name that will be displayed in the Destination List.  
   
  `strIconLocation`  
- 將標題和目的地清單中顯示的圖示的位置。  
+ Location of icon that will be displayed in the Destination List along with the title.  
   
  `iIconIndex`  
- 圖示的索引。  
+ Icon index.  
   
  `pShellLink`  
- 表示要加入工作的 shell 連結。  
+ Shell Link that represents a task to be added.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 執行個體`CJumpList`彙總指定的工作，並將它們新增至目的地清單期間`CommitList`。 工作項目會出現在應用程式的目的地 功能表底部的類別。 此類別的優先順序高於所有其他類別目錄報告 UI 中。  
+### <a name="remarks"></a>Remarks  
+ The instance of `CJumpList` accumulates specified tasks and adds them to the Destination List during `CommitList`. Task items will appear in a category at the bottom of the application's destination menu. This category takes precedence over all other categories when it is filled in the UI.  
   
-##  <a name="addtasks"></a>CJumpList::AddTasks  
- 將項目加入至標準工作分類。  
+##  <a name="addtasks"></a>  CJumpList::AddTasks  
+ Adds items to the canonical Tasks category.  
   
 ```  
 BOOL AddTasks(IObjectArray* pObjectCollection);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pObjectCollection`  
- 要加入的工作的集合。  
+ A collection of tasks to be added.  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- CJumpList 的執行個體彙總指定的工作，並將它們新增至目的地清單期間`CommitList`。 工作項目會出現在應用程式的目的地 功能表底部的類別。 此類別的優先順序高於所有其他類別目錄報告 UI 中。  
+### <a name="remarks"></a>Remarks  
+ The instance of CJumpList accumulates specified tasks and adds them to the Destination List during `CommitList`. Task items will appear in a category at the bottom of the application's destination menu. This category takes precedence over all other categories when it is filled in the UI.  
   
-##  <a name="addtaskseparator"></a>CJumpList::AddTaskSeparator  
- 新增工作之間的分隔符號。  
+##  <a name="addtaskseparator"></a>  CJumpList::AddTaskSeparator  
+ Adds a separator between tasks.  
   
 ```  
 BOOL AddTaskSeparator();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 非零，如果成功，則不為 0。  
+### <a name="return-value"></a>Return Value  
+ Nonzero if it is successful, 0 if it is not.  
   
-##  <a name="cjumplist"></a>CJumpList::CJumpList  
- 建構 `CJumpList` 物件。  
+##  <a name="cjumplist"></a>  CJumpList::CJumpList  
+ Constructs a `CJumpList` object.  
   
 ```  
 CJumpList(BOOL bAutoCommit = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bAutoCommit`  
- 如果這個參數是 FALSE 清單不會自動認可解構函式中。  
+ If this parameter is FALSE the list is not automatically committed in  destructor.  
   
-##  <a name="clearall"></a>CJumpList::ClearAll  
- 移除所有的工作和已加入至目前的執行個體的目的地`CJumpList`為止。  
+##  <a name="clearall"></a>  CJumpList::ClearAll  
+ Removes all tasks and destinations that have been added to the current instance of `CJumpList` so far.  
   
 ```  
 void ClearAll();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法會清除並釋放所有資料和內部介面。  
+### <a name="remarks"></a>Remarks  
+ This method clears and releases all data and internal interfaces.  
   
-##  <a name="clearalldestinations"></a>CJumpList::ClearAllDestinations  
- 移除已加入至目前的執行個體的 CJumpList 到目前為止的所有目的地。  
+##  <a name="clearalldestinations"></a>  CJumpList::ClearAllDestinations  
+ Removes all destinations that have been added to the current instance of CJumpList so far.  
   
 ```  
 void ClearAllDestinations();
 ```  
   
-### <a name="remarks"></a>備註  
- 如果您要移除所有目的地已經新增到目前為止的目的地清單建置目前的工作階段，並再次新增其他目的地，請呼叫此函式。 如果內部`ICustomDestinationList`已初始化，它就保持運作。  
+### <a name="remarks"></a>Remarks  
+ Call this function if you need to remove all destinations that have been added so far in the current session of destination list building and add other destinations again. If the internal `ICustomDestinationList` has been initialized, it's left alive.  
   
-##  <a name="commitlist"></a>CJumpList::CommitList  
- 結束清單建立交易，並認可至相關聯的存放區 （在此情況下登錄） 的報告的清單。  
+##  <a name="commitlist"></a>  CJumpList::CommitList  
+ Ends a list-building transaction and commits the reported list to the associated store (the registry in this case).  
   
 ```  
 BOOL CommitList();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- Commit 就是不可部分完成的。 如果認可失敗，則會傳回錯誤。  當`CommitList`呼叫時，目前已移除的項目清單將會清除。 呼叫這個方法，使它並沒有使用中的清單建立交易，會重設物件。 若要更新的清單，`BeginList`需要被呼叫一次。  
+### <a name="remarks"></a>Remarks  
+ The commit is atomic. An error will be returned if the commit fails.  When `CommitList` is called, the current list of removed items will be cleaned up. Calling this method resets the object so that it does not have an active list-building transaction. To update the list, `BeginList` needs to be called again.  
   
-##  <a name="getdestinationlist"></a>CJumpList::GetDestinationList  
- 擷取目的地清單的介面指標。  
+##  <a name="getdestinationlist"></a>  CJumpList::GetDestinationList  
+ Retrieves an interface pointer to destination list.  
   
 ```  
 ICustomDestinationList* GetDestinationList();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 如果跳躍清單尚未初始化，或已認可或中止，傳回的值將是`NULL`。  
+### <a name="remarks"></a>Remarks  
+ If the jump list has not been initialized, or has been committed or aborted, the returned value will be `NULL`.  
   
-##  <a name="getmaxslots"></a>CJumpList::GetMaxSlots  
- 擷取項目，包括可以在呼叫應用程式的 [目的地] 功能表中顯示的類別標頭的最大數目。  
+##  <a name="getmaxslots"></a>  CJumpList::GetMaxSlots  
+ Retrieves the maximum number of items, including category headers that can display in the calling application's destination menu.  
   
 ```  
 UINT GetMaxSlots() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 應用程式可能只會報告許多項目和類別標頭結合到此值。 如果呼叫`AppendCategory`， `AppendKnownCategory`，或`AddUserTasks`超過此數目時，它們就會傳回失敗。  
+### <a name="remarks"></a>Remarks  
+ Applications may only report a number of items and category headers combined up to this value. If calls to `AppendCategory`, `AppendKnownCategory`, or `AddUserTasks` exceed this number, they will return failure.  
   
-##  <a name="getremoveditems"></a>CJumpList::GetRemovedItems  
- 傳回陣列，表示項目移除目的地。  
+##  <a name="getremoveditems"></a>  CJumpList::GetRemovedItems  
+ Returns array of items that represent removed destinations.  
   
 ```  
 IObjectArray* GetRemovedItems();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 移除的目的地的捷徑清單初始化期間擷取。 時產生新的目的地清單，應用程式都必須先處理移除的目的地清單中，清除其追蹤資料，移除的清單的列舉值所傳回的任何項目。 如果應用程式會嘗試提供只在呼叫目前交易中移除的項目`BeginList`啟動，重新新增該項目方法呼叫將會失敗，以確保應用程式會尊重移除的清單。  
+### <a name="remarks"></a>Remarks  
+ The removed destinations are retrieved during initialization of jump list. When generating a new destination list, applications are expected to first process the removed destinations list, clearing their tracking data for any item returned by the removed list enumerator. If an application attempts to provide an item that was just removed in the transaction that the current call to `BeginList` started, the method call that re-added that item will fail, to ensure that applications are respecting the removed list.  
   
-##  <a name="initializelist"></a>CJumpList::InitializeList  
- 開始清單建立交易。  
+##  <a name="initializelist"></a>  CJumpList::InitializeList  
+ Begins a list-building transaction.  
   
 ```  
 BOOL InitializeList();
 ```  
   
-### <a name="return-value"></a>傳回值  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>備註  
- 您不需要明確呼叫這個方法，除非您想要擷取的指標`ICustomDestinationList`使用`GetDestinationList`，使用的可用插槽數目`GetMaxSlots`，或使用移除的項目清單`GetRemovedItems`。  
+### <a name="remarks"></a>Remarks  
+ You don't need to call this method explicitly unless you wish to retrieve a pointer to `ICustomDestinationList` using `GetDestinationList`, the number of available slots using `GetMaxSlots`, or list of removed items using `GetRemovedItems`.  
   
-##  <a name="setappid"></a>CJumpList::SetAppID  
- 設定清單，將建置的應用程式使用者模型識別碼。  
+##  <a name="setappid"></a>  CJumpList::SetAppID  
+ Sets the Application User Model ID for the list that will be built.  
   
 ```  
 void SetAppID(LPCTSTR strAppID);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `strAppID`  
- 字串，指定應用程式使用者的模型識別碼。  
+ A string that specifies the Application User Model ID.  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

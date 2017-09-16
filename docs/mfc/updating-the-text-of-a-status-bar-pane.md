@@ -1,88 +1,105 @@
 ---
-title: "更新狀態列窗格的文字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBar 類別, 更新"
-  - "ON_UPDATE_COMMAND_UI 巨集"
-  - "窗格, 狀態列"
-  - "SetText 方法"
-  - "狀態列, 更新"
-  - "文字, 狀態列"
-  - "更新使用者介面物件"
-  - "使用者介面物件, 更新"
+title: Updating the Text of a Status-Bar Pane | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- updating user interface objects [MFC]
+- ON_UPDATE_COMMAND_UI macro [MFC]
+- user interface objects [MFC], updating
+- text, status bar
+- CStatusBar class [MFC], updating
+- SetText method [MFC]
+- panes, status bar
+- status bars [MFC], updating
 ms.assetid: 4984a3f4-9905-4d8c-a927-dca19781053b
 caps.latest.revision: 11
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 更新狀態列窗格的文字
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8a935d43a026259ecfacf44785c784e1a52534ae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-本文說明如何變更出現在 MFC 狀態列窗格的文字。  狀態列—類別 [CStatusBar](../mfc/reference/cstatusbar-class.md) 視窗物件—包含數個「Pane」。每一個窗格可用來顯示資訊狀態列的矩形區域。  例如，許多應用程式顯示 CAPS LOCK、NUM LOCK 和其他型別的狀況最右邊的窗格。  應用程式通常也會顯示在窗格 \(0\) 的資訊文字，有時稱為訊息窗格最左邊窗格」。例如，預設 MFC 狀態列使用訊息窗格顯示說明目前選取的功能表項目或工具列按鈕的字串。  在 [狀態列](../mfc/status-bar-implementation-in-mfc.md) 的圖表會顯示從應用程式精靈建立的 MFC 應用程式中的狀態列。  
+---
+# <a name="updating-the-text-of-a-status-bar-pane"></a>Updating the Text of a Status-Bar Pane
+This article explains how to change the text that appears in an MFC status bar pane. A status bar — a window object of class [CStatusBar](../mfc/reference/cstatusbar-class.md) — contains several "panes." Each pane is a rectangular area of the status bar that you can use to display information. For example, many applications display the status of the CAPS LOCK, NUM LOCK, and other keys in the rightmost panes. Applications also often display informative text in the leftmost pane (pane 0), sometimes called the "message pane." For example, the default MFC status bar uses the message pane to display a string explaining the currently selected menu item or toolbar button. The figure in [Status Bars](../mfc/status-bar-implementation-in-mfc.md) shows a status bar from an Application Wizard-created MFC application.  
   
- 根據預設，在建立窗格時， MFC 並未啟用 `CStatusBar` 窗格中。  若要啟動窗格，您必須在狀態列的每一個窗格使用 `ON_UPDATE_COMMAND_UI` 巨集和更新窗格。  由於窗格不傳送 **WM\_COMMAND** 資訊 \(而不是像工具列按鈕\)，您必須手動輸入程式碼。  
+ By default, MFC does not enable a `CStatusBar` pane when it creates the pane. To activate a pane, you must use the `ON_UPDATE_COMMAND_UI` macro for each pane on the status bar and update the panes. Because panes do not send **WM_COMMAND** messages (they aren't like toolbar buttons), you must type the code manually.  
   
- 例如，假設有一個窗格 `ID_INDICATOR_PAGE` 做為它的命令識別項，並且在文件中目前的頁碼。  下列程序描述如何在狀態列的新的窗格。  
+ For example, suppose one pane has `ID_INDICATOR_PAGE` as its command identifier and that it contains the current page number in a document. The following procedure describes how to create a new pane in the status bar.  
   
-### 將新的窗格  
+### <a name="to-make-a-new-pane"></a>To make a new pane  
   
-1.  定義窗格的命令 ID.  
+1.  Define the pane's command ID.  
   
-     在 \[**檢視**\] 功能表上按一下 \[**資源檢視**\]。  以滑鼠右鍵按一下專案資源，然後按一下 \[**資源符號**\]。  在資源符號對話方塊中，選擇 `New`。  輸入命令 ID 名稱:例如， `ID_INDICATOR_PAGE`。  為指定 ID 值或接受資源符號對話方塊的建議值。  例如，對於 `ID_INDICATOR_PAGE`，請接受預設值。  關閉資源符號對話方塊。  
+     On the **View** menu, click **Resource View**. Right-click the project resource and click **Resource Symbols**. In the Resource Symbols dialog box, click `New`. Type a command ID name: for example, `ID_INDICATOR_PAGE`. Specify a value for the ID, or accept the value suggested by the Resource Symbols dialog box. For example, for `ID_INDICATOR_PAGE`, accept the default value. Close the Resource Symbols dialog box.  
   
-2.  定義預設字串顯示在窗格。  
+2.  Define a default string to display in the pane.  
   
-     資源檢視中開啟，按兩下列出應用程式的資源類型視窗的 **String Table** 。  開啟 **String Table** 的編輯器，從 **Insert** 功能表選擇 **New String** 。  在字串屬性視窗中，選取您的窗格的命令 ID \(例如 `ID_INDICATOR_PAGE`\)，並輸入一個預設字串值，例如「Page」。  關閉字串編輯器。\(您需要預設字串避免編譯器錯誤\)。  
+     With Resource View open, double-click **String Table** in the window that lists resource types for your application. With the **String Table** editor open, choose **New String** from the **Insert** menu. In the String Properties window, select your pane's command ID (for example, `ID_INDICATOR_PAGE`) and type a default string value, such as "Page   ". Close the string editor. (You need a default string to avoid a compiler error.)  
   
-3.  將窗格加入 **indicators** 陣列。  
+3.  Add the pane to the **indicators** array.  
   
-     在檔案 MAINFRM.CPP，找出 **indicators** 陣列。  這個陣列清單由左至右排列任何的 ID 狀態列的指示器，順序。  在陣列中的適當\]，請輸入您的窗格的命令 ID，如下所示為 `ID_INDICATOR_PAGE`:  
+     In file MAINFRM.CPP, locate the **indicators** array. This array lists command IDs for all of the status bar's indicators, in order from left to right. At the appropriate point in the array, enter your pane's command ID, as shown here for `ID_INDICATOR_PAGE`:  
   
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_1.cpp)]  
+     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]  
   
- 這個建議的方式顯示在窗格的文字會呼叫類別的 `CCmdUI` **SetText** 成員函式以更新處理函式的窗格中。  例如，您可以將包含這個目前的頁碼和使用 **SetText** 設定窗格文字到該數字字串版本的整數變數的 `m_nPage` 。  
+ The recommended way to display text in a pane is to call the **SetText** member function of class `CCmdUI` in an update handler function for the pane. For example, you might want to set up an integer variable `m_nPage` that contains the current page number and use **SetText** to set the pane's text to a string version of that number.  
   
 > [!NOTE]
->  建議 **SetText** 方法。  執行這項工作在稍微較低層級都可以透過呼叫 `CStatusBar` 成員函式 `SetPaneText`。  即使如此，您還是必須更新處理常式。  沒有窗格的這種處理常式， MFC 會自動停用窗格，清除其內容。  
+>  The **SetText** approach is recommended. It is possible to perform this task at a slightly lower level by calling the `CStatusBar` member function `SetPaneText`. Even so, you still need an update handler. Without such a handler for the pane, MFC automatically disables the pane, erasing its content.  
   
- 下列程序示範如何使用 Update 處理函式顯示在窗格中的文字。  
+ The following procedure shows how to use an update handler function to display text in a pane.  
   
-#### 執行窗格中顯示文字  
+#### <a name="to-make-a-pane-display-text"></a>To make a pane display text  
   
-1.  加入命令的命令的處理常式。  
+1.  Add a command update handler for the command.  
   
-     請手動加入處理常式的原型，如下所示為 `ID_INDICATOR_PAGE` \(在 MAINFRM.H\):  
+     Manually add a prototype for the handler, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.H):  
   
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_2.h)]  
+     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]  
   
-2.  在適當的 .CPP 檔案中，加入處理常式的定義，如下所示為 `ID_INDICATOR_PAGE` \(在 MAINFRM.CPP\):  
+2.  In the appropriate .CPP file, add the handler's definition, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.CPP):  
   
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_3.cpp)]  
+     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]  
   
-     這個處理常式最後三行是顯示文字的程式碼。  
+     The last three lines of this handler are the code that displays your text.  
   
-3.  在適當的訊息對應，請將 `ON_UPDATE_COMMAND_UI` 巨集，如下所示為 `ID_INDICATOR_PAGE` \(在 MAINFRM.CPP\):  
+3.  In the appropriate message map, add the `ON_UPDATE_COMMAND_UI` macro, as shown here for `ID_INDICATOR_PAGE` (in MAINFRM.CPP):  
   
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/CPP/updating-the-text-of-a-status-bar-pane_4.cpp)]  
+     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]  
   
- 一旦定義了 `m_nPage` 成員變數的值 \( `CMainFrame`類別\)，這項技術原因出現的頁碼窗格類似於在處理的延遲期間應用程式更新其他指示器。  如果 `m_nPage` 變更時，在下閒置迴圈時，會顯示變更。  
+ Once you define the value of the `m_nPage` member variable (of class `CMainFrame`), this technique causes the page number to appear in the pane during idle processing in the same manner that the application updates other indicators. If `m_nPage` changes, the display changes during the next idle loop.  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [更新使用者介面物件 \(如何更新工具列按鈕和功能表項目為程式條件變更\)](../mfc/how-to-update-user-interface-objects.md)  
+-   [Updating user-interface objects (how to update toolbar buttons and menu items as program conditions change)](../mfc/how-to-update-user-interface-objects.md)  
   
-## 請參閱  
- [MFC 中的狀態列實作](../mfc/status-bar-implementation-in-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Status Bar Implementation in MFC](../mfc/status-bar-implementation-in-mfc.md)   
  [CStatusBar Class](../mfc/reference/cstatusbar-class.md)
+

@@ -1,46 +1,63 @@
 ---
-title: "一般 HTTP 用戶端應用程式中的步驟 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式 [MFC], HTTP 用戶端"
-  - "用戶端應用程式 [C++], HTTP"
-  - "HTTP 用戶端應用程式"
-  - "網際網路應用程式 [C++], HTTP 用戶端應用程式"
-  - "網際網路用戶端應用程式 [C++], HTTP 表格"
-  - "WinInet 類別, HTTP"
+title: Steps in a Typical HTTP Client Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- HTTP client applications [MFC]
+- client applications [MFC], HTTP
+- Internet applications [MFC], HTTP client applications
+- applications [MFC], HTTP client
+- Internet client applications [MFC], HTTP table
+- WinInet classes [MFC], HTTP
 ms.assetid: f86552e8-8acd-4b23-bdc5-0c3a247ebd74
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 一般 HTTP 用戶端應用程式中的步驟
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 472d91112d59a849aa3442bc17a9ea78367e2de7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-下表顯示您在一般 HTTP 用戶端應用程式可以執行的步驟:  
+---
+# <a name="steps-in-a-typical-http-client-application"></a>Steps in a Typical HTTP Client Application
+The following table shows the steps you might perform in a typical HTTP client application:  
   
-|您的目標|您要採取的動作。|效果|  
-|----------|--------------|--------|  
-|啟動 HTTP 工作階段。|建立 [CInternetSession](../mfc/reference/cinternetsession-class.md) 物件。|初始化 WinInet 並連接到伺服器。|  
-|連接至 HTTP 伺服器。|使用 [CInternetSession::GetHttpConnection](../Topic/CInternetSession::GetHttpConnection.md)。|傳回 [CHttpConnection](../mfc/reference/chttpconnection-class.md) 物件。|  
-|開啟 HTTP 要求。|使用 [CHttpConnection::OpenRequest](../Topic/CHttpConnection::OpenRequest.md)。|傳回 [CHttpFile](../mfc/reference/chttpfile-class.md) 物件。|  
-|傳送 HTTP 要求。|使用 [CHttpFile::AddRequestHeaders](../Topic/CHttpFile::AddRequestHeaders.md) 和 [CHttpFile::SendRequest](../Topic/CHttpFile::SendRequest.md)。|尋找檔案。  如果找不到檔案，則傳回 FALSE。|  
-|從檔案讀取。|使用 [CHttpFile](../mfc/reference/chttpfile-class.md)。|將指定的位元組數使用您所提供的緩衝區。|  
-|處理例外狀況。|使用 [CInternetException](../mfc/reference/cinternetexception-class.md) 類別。|處理所有通用網際網路例外狀況型別。|  
-|結束 HTTP 工作階段。|處理 [CInternetSession](../mfc/reference/cinternetsession-class.md) 物件。|自動清除開啟檔案控制代碼和連接。|  
+|Your goal|Actions you take|Effects|  
+|---------------|----------------------|-------------|  
+|Begin an HTTP session.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Initializes WinInet and connects to server.|  
+|Connect to an HTTP server.|Use [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection).|Returns a [CHttpConnection](../mfc/reference/chttpconnection-class.md) object.|  
+|Open an HTTP request.|Use [CHttpConnection::OpenRequest](../mfc/reference/chttpconnection-class.md#openrequest).|Returns a [CHttpFile](../mfc/reference/chttpfile-class.md) object.|  
+|Send an HTTP request.|Use [CHttpFile::AddRequestHeaders](../mfc/reference/chttpfile-class.md#addrequestheaders) and [CHttpFile::SendRequest](../mfc/reference/chttpfile-class.md#sendrequest).|Finds the file. Returns FALSE if the file is not found.|  
+|Read from the file.|Use [CHttpFile](../mfc/reference/chttpfile-class.md).|Reads the specified number of bytes using a buffer you supply.|  
+|Handle exceptions.|Use the [CInternetException](../mfc/reference/cinternetexception-class.md) class.|Handles all common Internet exception types.|  
+|End the HTTP session.|Dispose of the [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Automatically cleans up open file handles and connections.|  
   
-## 請參閱  
- [Win32 網際網路擴充功能 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [網際網路用戶端類別的必要條件](../mfc/prerequisites-for-internet-client-classes.md)   
- [使用 MFC WinInet 類別建立網際網路用戶端應用程式](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

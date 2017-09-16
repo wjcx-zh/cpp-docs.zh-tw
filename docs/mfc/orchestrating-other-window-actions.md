@@ -1,34 +1,52 @@
 ---
-title: "協調其他視窗動作 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "即時線上說明"
-  - "即時線上說明, 框架視窗"
-  - "框架視窗, 即時線上說明"
-  - "框架視窗, 預覽列印"
-  - "框架視窗, 半強制回應狀態"
-  - "預覽列印, 和框架視窗"
+title: Orchestrating Other Window Actions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- frame windows [MFC], print preview
+- context-sensitive Help [MFC], frame windows
+- print preview [MFC], and frame windows
+- frame windows [MFC], context-sensitive Help
+- frame windows [MFC], semimodal states
+- context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 協調其他視窗動作
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f9cd9333a69ca981c2b4fb0c884d397f75a7d17
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/12/2017
 
-框架視窗組織 semimodal 狀態如即時線上說明和預覽列印。  如需框架視窗在預覽列印的效果描述，請參閱 [列印和預覽](../mfc/printing-and-print-preview.md)。  
+---
+# <a name="orchestrating-other-window-actions"></a>Orchestrating Other Window Actions
+The frame window orchestrates semimodal states such as context-sensitive help and print preview. For a description of the frame window's role in print preview, see [Printing and Print Preview](../mfc/printing-and-print-preview.md).  
   
-## 請參閱  
- [使用框架視窗](../mfc/using-frame-windows.md)
+## <a name="see-also"></a>See Also  
+ [Using Frame Windows](../mfc/using-frame-windows.md)
+
+

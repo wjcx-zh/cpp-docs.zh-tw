@@ -1,5 +1,5 @@
 ---
-title: "屬性頁 (MFC) |Microsoft 文件"
+title: Property Pages (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
-- property pages, global MFC functions
+- property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
 caps.latest.revision: 14
 author: mikeblome
@@ -34,47 +34,47 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 50888697fe01d3a84d9aa4c6f5f92926e4681535
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3f8c11b8b59c2de16180173251b81e5f8fbbf35f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="property-pages-mfc"></a>屬性頁 (MFC)
-屬性頁檢視和編輯支援對話資料交換 (DDX) 為基礎的資料對應機制的可自訂的圖形化介面中顯示 OLE 控制項的特定屬性的目前值。  
+# <a name="property-pages-mfc"></a>Property Pages (MFC)
+Property pages display the current values of specific OLE control properties in a customizable, graphical interface for viewing and editing by supporting a data-mapping mechanism based on dialog data exchange (DDX).  
   
- 這項資料對應機制會對應至個別的 OLE 控制項屬性的屬性頁面控制項。 控制項屬性的值反映的狀態或屬性頁控制項的內容。 屬性頁控制項和屬性之間的對應由**DDP_**屬性頁中的函數呼叫`DoDataExchange`成員函式。 下列是一份**DDP_**交換使用屬性頁，控制項的輸入資料的函式︰  
+ This data-mapping mechanism maps property page controls to the individual properties of the OLE control. The value of the control property reflects the status or content of the property page control. The mapping between property page controls and properties is specified by **DDP_** function calls in the property page's `DoDataExchange` member function. The following is a list of **DDP_** functions that exchange data entered using the property page of your control:  
   
-### <a name="property-page-data-transfer"></a>屬性頁資料傳輸  
-  
-|||  
-|-|-|  
-|[DDP_CBIndex](#ddp_cbindex)|連結控制項的屬性與下拉式方塊中選取的字串的索引。|  
-|[DDP_CBString](#ddp_cbstring)|連結控制項的屬性與下拉式方塊中選取的字串。 選取的字串都可以使用做為屬性值的相同字母開頭，但不需要一定要完全符合。|  
-|[DDP_CBStringExact](#ddp_cbstringexact)|連結控制項的屬性與下拉式方塊中選取的字串。 選取的字串和屬性的字串值必須完全相符。|  
-|[DDP_Check](#ddp_check)|核取方塊控制項的屬性與控制項的屬性頁中的連結。|  
-|[DDP_LBIndex](#ddp_lbindex)|連結與控制項的屬性清單方塊中選取的字串的索引。|  
-|[DDP_LBString](#ddp_lbstring)|連結與控制項的屬性清單方塊中選取的字串。 選取的字串都可以使用做為屬性值的相同字母開頭，但需要完全符合它。|  
-|[DDP_LBStringExact](#ddp_lbstringexact)|連結與控制項的屬性清單方塊中選取的字串。 選取的字串和屬性的字串值必須完全相符。|  
-|[DDP_PostProcessing](#ddp_postprocessing)|完成從控制項傳送的屬性值。|  
-|[DDP_Radio](#ddp_radio)|與控制項屬性的控制項的屬性頁中的選項按鈕群組的連結。|  
-|[DDP_Text](#ddp_text)|與控制項屬性的控制項的屬性頁中的控制項的連結。 此函式會處理許多不同類型的屬性，例如**雙**，**簡短**， `BSTR`，和**長**。|  
-  
- 如需詳細資訊`DoDataExchange`函式和屬性頁，請參閱文章[ActiveX 控制項︰ 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。  
-  
- 下列是用來建立及管理 OLE 控制項的屬性頁的巨集的清單︰  
-  
-### <a name="property-pages"></a>屬性頁  
+### <a name="property-page-data-transfer"></a>Property Page Data Transfer  
   
 |||  
 |-|-|  
-|[BEGIN_PROPPAGEIDS](#begin_proppageids)|開始屬性頁 Id 的清單。|  
-|[END_PROPPAGEIDS](#end_proppageids)|結束屬性頁 Id 的清單。|  
-|[PROPPAGEID](#proppageid)|宣告屬性頁的控制項類別。|  
+|[DDP_CBIndex](#ddp_cbindex)|Links the selected string's index in a combo box with a control's property.|  
+|[DDP_CBString](#ddp_cbstring)|Links the selected string in a combo box with a control's property. The selected string can begin with the same letters as the property's value but does not need to match it fully.|  
+|[DDP_CBStringExact](#ddp_cbstringexact)|Links the selected string in a combo box with a control's property. The selected string and the property's string value must match exactly.|  
+|[DDP_Check](#ddp_check)|Links a check box in the control's property page with a control's property.|  
+|[DDP_LBIndex](#ddp_lbindex)|Links the selected string's index in a list box with a control's property.|  
+|[DDP_LBString](#ddp_lbstring)|Links the selected string in a list box with a control's property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|[DDP_LBStringExact](#ddp_lbstringexact)|Links the selected string in a list box with a control's property. The selected string and the property's string value must match exactly.|  
+|[DDP_PostProcessing](#ddp_postprocessing)|Finishes the transfer of property values from your control.|  
+|[DDP_Radio](#ddp_radio)|Links a radio button group in the control's property page with a control's property.|  
+|[DDP_Text](#ddp_text)|Links a control in the control's property page with a control's property. This function handles several different types of properties, such as **double**, **short**, `BSTR`, and **long**.|  
   
-##  <a name="ddp_cbindex"></a>DDP_CBIndex  
- 呼叫您屬性頁的 `DoDataExchange` 函式中的這個函式，來同步處理整數屬性的值與在屬性頁中下拉式方塊裡目前選取範圍的索引。  
+ For more information about the `DoDataExchange` function and property pages, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
+  
+ The following is a list of macros used to create and manage property pages for an OLE control:  
+  
+### <a name="property-pages"></a>Property Pages  
+  
+|||  
+|-|-|  
+|[BEGIN_PROPPAGEIDS](#begin_proppageids)|Begins the list of property page IDs.|  
+|[END_PROPPAGEIDS](#end_proppageids)|Ends the list of property page IDs.|  
+|[PROPPAGEID](#proppageid)|Declares a property page of the control class.|  
+  
+##  <a name="ddp_cbindex"></a>  DDP_CBIndex  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of an integer property with the index of the current selection in a combo box on the property page.  
   
 ```   
 void AFXAPI DDP_CBIndex(
@@ -84,27 +84,27 @@ void AFXAPI DDP_CBIndex(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 與 `pszPropName` 指定的控制項屬性相關聯的下拉式方塊控制項的資源 ID。  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 要與 `id` 指定的下拉式方塊控制項交換的控制項屬性的屬性名稱。  
+ The property name of the control property to be exchanged with the combo box control specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_CBIndex` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBIndex` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_cbstring"></a>DDP_CBString  
- 呼叫此函式在屬性頁的`DoDataExchange`屬性頁上的下拉式方塊目前的選取範圍與同步處理的字串屬性值的函式。  
+##  <a name="ddp_cbstring"></a>  DDP_CBString  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property with the current selection in a combo box on the property page.  
   
 ```  
 void AFXAPI DDP_CBString(
@@ -114,27 +114,27 @@ void AFXAPI DDP_CBString(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 與 `pszPropName` 指定的控制項屬性相關聯的下拉式方塊控制項的資源 ID。  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 與下拉式方塊中指定的字串以交換的控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the combo box string specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_CBString` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBString` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_cbstringexact"></a>DDP_CBStringExact  
- 呼叫此函式在屬性頁的`DoDataExchange`函式來同步處理完全符合目前的選取範圍，在 [屬性] 頁面上的下拉式方塊中為字串屬性的值。  
+##  <a name="ddp_cbstringexact"></a>  DDP_CBStringExact  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property that exactly matches the current selection in a combo box on the property page.  
   
 ```  
 void AFXAPI DDP_CBStringExact(
@@ -144,27 +144,27 @@ void AFXAPI DDP_CBStringExact(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 與 `pszPropName` 指定的控制項屬性相關聯的下拉式方塊控制項的資源 ID。  
+ The resource ID of the combo box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 與下拉式方塊中指定的字串以交換的控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the combo box string specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_CBStringExact` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_CBStringExact` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_check"></a>DDP_Check  
- 呼叫此函式在屬性頁的`DoDataExchange`函式相關聯的屬性頁 核取方塊控制項與同步處理屬性的值。  
+##  <a name="ddp_check"></a>  DDP_Check  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of the property with the associated property page check box control.  
   
 ```   
 void AFXAPI DDP_Check(
@@ -174,27 +174,27 @@ void AFXAPI DDP_Check(
     LPCSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 與所指定的控制項屬性相關聯的核取方塊控制項的資源識別碼`pszPropName`。  
+ The resource ID of the check box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 與所指定的核取方塊控制項交換的控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the check box control specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_Check` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Check` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbindex"></a>DDP_LBIndex  
- 呼叫此函式在屬性頁的`DoDataExchange`函式來同步處理整數屬性的值與目前的選取範圍，在 [屬性] 頁面上的清單方塊中的索引。  
+##  <a name="ddp_lbindex"></a>  DDP_LBIndex  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of an integer property with the index of the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBIndex(
@@ -204,27 +204,27 @@ void AFXAPI DDP_LBIndex(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 資源的清單方塊控制項的 ID 與所指定的控制項屬性相關聯`pszPropName`。  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 要與清單方塊中指定的字串以交換之控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_LBIndex` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBIndex` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbstring"></a>DDP_LBString  
- 呼叫此函式在屬性頁的`DoDataExchange`屬性頁上的清單方塊中目前的選取與同步處理的字串屬性值的函式。  
+##  <a name="ddp_lbstring"></a>  DDP_LBString  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property with the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBString(
@@ -234,27 +234,27 @@ void AFXAPI DDP_LBString(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 資源的清單方塊控制項的 ID 與所指定的控制項屬性相關聯`pszPropName`。  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 要與清單方塊中指定的字串以交換之控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_LBString` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBString` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_lbstringexact"></a>DDP_LBStringExact  
- 呼叫此函式在屬性頁的`DoDataExchange`函式來同步處理完全符合目前的選取範圍，在 [屬性] 頁面上的清單方塊中為字串屬性的值。  
+##  <a name="ddp_lbstringexact"></a>  DDP_LBStringExact  
+ Call this function in your property page's `DoDataExchange` function to synchronize the value of a string property that exactly matches the current selection in a list box on the property page.  
   
 ```   
 void AFXAPI DDP_LBStringExact(
@@ -264,46 +264,46 @@ void AFXAPI DDP_LBStringExact(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 資源的清單方塊控制項的 ID 與所指定的控制項屬性相關聯`pszPropName`。  
+ The resource ID of the list box control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 要與清單方塊中指定的字串以交換之控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the list box string specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_LBStringExact` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_LBStringExact` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_postprocessing"></a>DDP_PostProcessing  
- 呼叫此函式在屬性頁的`DoDataExchange`函式完成時儲存屬性值的屬性值可從 [屬性] 頁面上傳送到您的控制項。  
+##  <a name="ddp_postprocessing"></a>  DDP_PostProcessing  
+ Call this function in your property page's `DoDataExchange` function, to finish the transfer of property values from the property page to your control when property values are being saved.  
   
 ```   
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
-### <a name="remarks"></a>備註  
- 所有的資料交換函式完成後，應該呼叫此函式。 例如:   
+### <a name="remarks"></a>Remarks  
+ This function should be called after all data exchange functions are completed. For example:  
   
- [!code-cpp[NVC_MFCAxCtl #&15;](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]  
+ [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_radio"></a>DDP_Radio  
- 呼叫此函式在控制項的`DoPropExchange`同步處理相關聯的屬性頁面的選項按鈕控制項的屬性值的函式。  
+##  <a name="ddp_radio"></a>  DDP_Radio  
+ Call this function in your control's `DoPropExchange` function to synchronize the value of the property with the associated property page radio button control.  
   
 ```   
 void AFXAPI DDP_Radio(
@@ -313,27 +313,27 @@ void AFXAPI DDP_Radio(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 資源識別碼的選項按鈕控制項所指定的控制項屬性相關聯`pszPropName`。  
+ The resource ID of the radio button control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 與所指定的選項按鈕控制項交換的控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the radio button control specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_Radio` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Radio` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="ddp_text"></a>DDP_Text  
- 呼叫此函式在控制項的`DoDataExchange`函式相關聯的屬性頁控制項與同步處理屬性的值。  
+##  <a name="ddp_text"></a>  DDP_Text  
+ Call this function in your control's `DoDataExchange` function to synchronize the value of the property with the associated property page control.  
   
 ```   
 void AFXAPI DDP_Text(
@@ -385,78 +385,78 @@ void AFXAPI DDP_Text(
     LPCTSTR pszPropName);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- 指向 `CDataExchange` 物件的指標。 架構會提供此物件來建立資料交換的內容，包括其方向。  
+ Pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `id`  
- 控制項所指定的控制項屬性相關聯的資源識別碼`pszPropName`。  
+ The resource ID of the control associated with the control property specified by `pszPropName`.  
   
  `member`  
- 與 `id` 指定的屬性頁控制項和 `pszPropName` 指定的屬性相關聯的成員變數。  
+ The member variable associated with the property page control specified by `id` and the property specified by `pszPropName`.  
   
  `pszPropName`  
- 所指定的控制項與交換的控制項屬性的屬性名稱`id`。  
+ The property name of the control property to be exchanged with the control specified by `id`.  
   
-### <a name="remarks"></a>備註  
- 應該在對應的 `DDX_Text` 函式呼叫之前呼叫此函式。  
+### <a name="remarks"></a>Remarks  
+ This function should be called before the corresponding `DDX_Text` function call.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="begin_proppageids"></a>BEGIN_PROPPAGEIDS  
- 開始您的控制項屬性頁 Id 清單的定義。  
+##  <a name="begin_proppageids"></a>  BEGIN_PROPPAGEIDS  
+ Begins the definition of your control's list of property page IDs.  
   
 ```   
 BEGIN_PROPPAGEIDS(class_name,  count)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 為屬性指定頁的控制項類別的名稱。  
+ The name of the control class for which property pages are being specified.  
   
  *count*  
- Control 類別所使用的屬性頁數目。  
+ The number of property pages used by the control class.  
   
-### <a name="remarks"></a>備註  
- 在定義類別成員函式的實作 (.cpp) 檔案，啟動 屬性頁清單與`BEGIN_PROPPAGEIDS`巨集，然後針對每個屬性頁中，新增巨集項目，並完成屬性頁面清單與`END_PROPPAGEIDS`巨集。  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the property page list with the `BEGIN_PROPPAGEIDS` macro, then add macro entries for each of your property pages, and complete the property page list with the `END_PROPPAGEIDS` macro.  
   
- 如需有關屬性頁的詳細資訊，請參閱文章[ActiveX 控制項︰ 屬性頁](../../mfc/mfc-activex-controls-property-pages.md)。  
+ For more information on property pages, see the article [ActiveX Controls: Property Pages](../../mfc/mfc-activex-controls-property-pages.md).  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="end_proppageids"></a>END_PROPPAGEIDS  
- 定義屬性頁面識別碼清單的結尾。  
+##  <a name="end_proppageids"></a>  END_PROPPAGEIDS  
+ Ends the definition of your property page ID list.  
   
 ```   
 END_PROPPAGEIDS(class_name)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- 擁有 [屬性] 頁面上的控制項類別的名稱。  
+ The name of the control class that owns the property page.  
   
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
   
-##  <a name="proppageid"></a>PROPPAGEID  
- 將您的 OLE 控制項使用的屬性頁。  
+##  <a name="proppageid"></a>  PROPPAGEID  
+ Adds a property page for use by your OLE control.  
   
 ```   
 PROPPAGEID(clsid)   
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `clsid`  
- 屬性頁的唯一類別 ID。  
+ The unique class ID of a property page.  
   
-### <a name="remarks"></a>備註  
- 所有`PROPPAGEID`巨集必須位於`BEGIN_PROPPAGEIDS`和`END_PROPPAGEIDS`您的控制項實作檔中的巨集。  
+### <a name="remarks"></a>Remarks  
+ All `PROPPAGEID` macros must be placed between the `BEGIN_PROPPAGEIDS` and `END_PROPPAGEIDS` macros in your control's implementation file.  
 
-### <a name="requirements"></a>需求  
-  **標頭**afxctl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxctl.h  
     
-## <a name="see-also"></a>另請參閱  
- [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

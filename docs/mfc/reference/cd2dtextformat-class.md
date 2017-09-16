@@ -1,5 +1,5 @@
 ---
-title: "CD2DTextFormat 類別 |Microsoft 文件"
+title: CD2DTextFormat Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DTextFormat class
+- CD2DTextFormat [MFC], CD2DTextFormat
+- CD2DTextFormat [MFC], Create
+- CD2DTextFormat [MFC], Destroy
+- CD2DTextFormat [MFC], Get
+- CD2DTextFormat [MFC], GetFontFamilyName
+- CD2DTextFormat [MFC], GetLocaleName
+- CD2DTextFormat [MFC], IsValid
+- CD2DTextFormat [MFC], ReCreate
+- CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
 caps.latest.revision: 16
 author: mikeblome
@@ -43,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f7347dbbad8290bfdc800cbacaf21400583a392
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec537322ff432d83edd742076cc8f4c53a228e43
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dtextformat-class"></a>CD2DTextFormat 類別
-IDWriteTextFormat 包裝函式。  
+# <a name="cd2dtextformat-class"></a>CD2DTextFormat Class
+A wrapper for IDWriteTextFormat.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DTextFormat : public CD2DResource;  
@@ -61,56 +69,56 @@ class CD2DTextFormat : public CD2DResource;
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|建構 CD2DTextFormat 物件。|  
-|[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|解構函式。 D2D 文字格式化物件終結時呼叫。|  
+|[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Constructs a CD2DTextFormat object.|  
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|The destructor. Called when a D2D text format object is being destroyed.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::Create](#create)|建立 CD2DTextFormat。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
-|[CD2DTextFormat::Destroy](#destroy)|終結 CD2DTextFormat 物件。 (覆寫[CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy)。)|  
-|[CD2DTextFormat::Get](#get)|傳回 IDWriteTextFormat 介面|  
-|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|取得字型家族名稱的複本。|  
-|[CD2DTextFormat::GetLocaleName](#getlocalename)|取得地區設定名稱的複本。|  
-|[CD2DTextFormat::IsValid](#isvalid)|檢查資源的有效性 (覆寫[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|  
-|[CD2DTextFormat::ReCreate](#recreate)|重新建立 CD2DTextFormat。 (覆寫[CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate)。)|  
+|[CD2DTextFormat::Create](#create)|Creates a CD2DTextFormat. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DTextFormat::Destroy](#destroy)|Destroys a CD2DTextFormat object. (Overrides [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|  
+|[CD2DTextFormat::Get](#get)|Returns IDWriteTextFormat interface|  
+|[CD2DTextFormat::GetFontFamilyName](#getfontfamilyname)|Gets a copy of the font family name.|  
+|[CD2DTextFormat::GetLocaleName](#getlocalename)|Gets a copy of the locale name.|  
+|[CD2DTextFormat::IsValid](#isvalid)|Checks resource validity (Overrides [CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid).)|  
+|[CD2DTextFormat::ReCreate](#recreate)|Re-creates a CD2DTextFormat. (Overrides [CD2DResource::ReCreate](../../mfc/reference/cd2dresource-class.md#recreate).)|  
   
-### <a name="public-operators"></a>公用運算子  
+### <a name="public-operators"></a>Public Operators  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|傳回 IDWriteTextFormat 介面|  
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Returns IDWriteTextFormat interface|  
   
-### <a name="protected-data-members"></a>受保護的資料成員  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|IDWriteTextFormat 指標。|  
+|[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|A pointer to an IDWriteTextFormat.|  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
   
  [CD2DTextFormat](../../mfc/reference/cd2dtextformat-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dtextformat"></a>CD2DTextFormat:: ~ CD2DTextFormat  
- 解構函式。 D2D 文字格式化物件終結時呼叫。  
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat  
+ The destructor. Called when a D2D text format object is being destroyed.  
   
 ```  
 virtual ~CD2DTextFormat();
 ```  
   
-##  <a name="cd2dtextformat"></a>CD2DTextFormat::CD2DTextFormat  
- 建構 CD2DTextFormat 物件。  
+##  <a name="cd2dtextformat"></a>  CD2DTextFormat::CD2DTextFormat  
+ Constructs a CD2DTextFormat object.  
   
 ```  
 CD2DTextFormat(
@@ -125,118 +133,118 @@ CD2DTextFormat(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- 呈現目標指標。  
+ A pointer to the render target.  
   
  `strFontFamilyName`  
- CString 物件，其中包含字型家族的名稱。  
+ A CString object that contains the name of the font family.  
   
  `fontSize`  
- DIP （」 與裝置無關像素 」） 單位中的字型的邏輯大小。 DIPequals 1/96 英吋。  
+ The logical size of the font in DIP ("device-independent pixel") units. A DIPequals 1/96 inch.  
   
  `fontWeight`  
- 值，指出文字物件的字型粗細。  
+ A value that indicates the font weight for the text object.  
   
  `fontStyle`  
- 值，指出文字物件的字型樣式。  
+ A value that indicates the font style for the text object.  
   
  `fontStretch`  
- 值，指出文字物件的字型縮放。  
+ A value that indicates the font stretch for the text object.  
   
  `strFontLocale`  
- CString 物件所在的地區設定名稱。  
+ A CString object that contains the locale name.  
   
  `pFontCollection`  
- 字型集合物件的指標。 當這是 NULL 時，表示系統字型集合。  
+ A pointer to a font collection object. When this is NULL, indicates the system font collection.  
   
  `bAutoDestroy`  
- 指出由擁有者 (pParentTarget) 將會終結物件。  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
-##  <a name="create"></a>CD2DTextFormat::Create  
- 建立 CD2DTextFormat。  
+##  <a name="create"></a>  CD2DTextFormat::Create  
+ Creates a CD2DTextFormat.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DTextFormat::Destroy  
- 終結 CD2DTextFormat 物件。  
+##  <a name="destroy"></a>  CD2DTextFormat::Destroy  
+ Destroys a CD2DTextFormat object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="get"></a>CD2DTextFormat::Get  
- 傳回 IDWriteTextFormat 介面  
+##  <a name="get"></a>  CD2DTextFormat::Get  
+ Returns IDWriteTextFormat interface  
   
 ```  
 IDWriteTextFormat* Get();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 IDWriteTextFormat 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextFormat interface or NULL if object is not initialized yet.  
   
-##  <a name="getfontfamilyname"></a>CD2DTextFormat::GetFontFamilyName  
- 取得字型家族名稱的複本。  
+##  <a name="getfontfamilyname"></a>  CD2DTextFormat::GetFontFamilyName  
+ Gets a copy of the font family name.  
   
 ```  
 CString GetFontFamilyName() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- CString 物件，其中包含目前的字型家族名稱。  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current font family name.  
   
-##  <a name="getlocalename"></a>CD2DTextFormat::GetLocaleName  
- 取得地區設定名稱的複本。  
+##  <a name="getlocalename"></a>  CD2DTextFormat::GetLocaleName  
+ Gets a copy of the locale name.  
   
 ```  
 CString GetLocaleName() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- CString 物件，其中包含目前地區設定名稱。  
+### <a name="return-value"></a>Return Value  
+ CString object that contains the current locale name.  
   
-##  <a name="isvalid"></a>CD2DTextFormat::IsValid  
- 檢查資源的有效性  
+##  <a name="isvalid"></a>  CD2DTextFormat::IsValid  
+ Checks resource validity  
   
 ```  
 virtual BOOL IsValid() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果資源無效，則為 TRUE否則為 FALSE。  
+### <a name="return-value"></a>Return Value  
+ TRUE if resource is valid; otherwise FALSE.  
   
-##  <a name="m_ptextformat"></a>CD2DTextFormat::m_pTextFormat  
- IDWriteTextFormat 指標。  
+##  <a name="m_ptextformat"></a>  CD2DTextFormat::m_pTextFormat  
+ A pointer to an IDWriteTextFormat.  
   
 ```  
 IDWriteTextFormat* m_pTextFormat;  
 ```  
   
-##  <a name="operator_idwritetextformat_star"></a>CD2DTextFormat::operator IDWriteTextFormat *  
- 傳回 IDWriteTextFormat 介面  
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*  
+ Returns IDWriteTextFormat interface  
   
 ```  
 operator IDWriteTextFormat*();
 ```   
   
-### <a name="return-value"></a>傳回值  
- 如果物件尚未初始化為 NULL 的 IDWriteTextFormat 介面的指標。  
+### <a name="return-value"></a>Return Value  
+ Pointer to an IDWriteTextFormat interface or NULL if object is not initialized yet.  
   
-##  <a name="recreate"></a>CD2DTextFormat::ReCreate  
- 重新建立 CD2DTextFormat。  
+##  <a name="recreate"></a>  CD2DTextFormat::ReCreate  
+ Re-creates a CD2DTextFormat.  
   
 ```  
 virtual HRESULT ReCreate(CRenderTarget* */);
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-## <a name="see-also"></a>另請參閱  
- [類別](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "CBasePane 類別 |Microsoft 文件"
+title: CBasePane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -94,24 +94,86 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- get_accState method
-- get_accHelp method
-- CBasePane class
-- accLocation method
-- accHitTest method
-- get_accDescription method
-- get_accDefaultAction method
-- get_accName method
-- get_accFocus method
-- get_accRole method
-- get_accValue method
-- get_accChild method
-- accSelect method
-- get_accKeyboardShortcut method
-- get_accChildCount method
-- Serialize method
-- PreTranslateMessage method
-- get_accParent method
+- CBasePane [MFC], AccNotifyObjectFocusEvent
+- CBasePane [MFC], AddPane
+- CBasePane [MFC], AdjustDockingLayout
+- CBasePane [MFC], AdjustLayout
+- CBasePane [MFC], CalcFixedLayout
+- CBasePane [MFC], CanAcceptPane
+- CBasePane [MFC], CanAutoHide
+- CBasePane [MFC], CanBeAttached
+- CBasePane [MFC], CanBeClosed
+- CBasePane [MFC], CanBeDocked
+- CBasePane [MFC], CanBeResized
+- CBasePane [MFC], CanBeTabbedDocument
+- CBasePane [MFC], CanFloat
+- CBasePane [MFC], CanFocus
+- CBasePane [MFC], CopyState
+- CBasePane [MFC], CreateDefaultMiniframe
+- CBasePane [MFC], CreateEx
+- CBasePane [MFC], DockPane
+- CBasePane [MFC], DockPaneUsingRTTI
+- CBasePane [MFC], DockToFrameWindow
+- CBasePane [MFC], DoesAllowDynInsertBefore
+- CBasePane [MFC], EnableDocking
+- CBasePane [MFC], EnableGripper
+- CBasePane [MFC], FloatPane
+- CBasePane [MFC], get_accHelpTopic
+- CBasePane [MFC], get_accSelection
+- CBasePane [MFC], GetCaptionHeight
+- CBasePane [MFC], GetControlBarStyle
+- CBasePane [MFC], GetCurrentAlignment
+- CBasePane [MFC], GetDockingMode
+- CBasePane [MFC], GetDockSiteFrameWnd
+- CBasePane [MFC], GetEnabledAlignment
+- CBasePane [MFC], GetMFCStyle
+- CBasePane [MFC], GetPaneIcon
+- CBasePane [MFC], GetPaneRow
+- CBasePane [MFC], GetPaneStyle
+- CBasePane [MFC], GetParentDockSite
+- CBasePane [MFC], GetParentMiniFrame
+- CBasePane [MFC], GetParentTabbedPane
+- CBasePane [MFC], GetParentTabWnd
+- CBasePane [MFC], GetRecentVisibleState
+- CBasePane [MFC], HideInPrintPreviewMode
+- CBasePane [MFC], InsertPane
+- CBasePane [MFC], IsAccessibilityCompatible
+- CBasePane [MFC], IsAutoHideMode
+- CBasePane [MFC], IsDialogControl
+- CBasePane [MFC], IsDocked
+- CBasePane [MFC], IsFloating
+- CBasePane [MFC], IsHorizontal
+- CBasePane [MFC], IsInFloatingMultiPaneFrameWnd
+- CBasePane [MFC], IsMDITabbed
+- CBasePane [MFC], IsPaneVisible
+- CBasePane [MFC], IsPointNearDockSite
+- CBasePane [MFC], IsResizable
+- CBasePane [MFC], IsRestoredFromRegistry
+- CBasePane [MFC], IsTabbed
+- CBasePane [MFC], IsVisible
+- CBasePane [MFC], LoadState
+- CBasePane [MFC], MoveWindow
+- CBasePane [MFC], OnAfterChangeParent
+- CBasePane [MFC], OnBeforeChangeParent
+- CBasePane [MFC], OnDrawCaption
+- CBasePane [MFC], OnMovePaneDivider
+- CBasePane [MFC], OnPaneContextMenu
+- CBasePane [MFC], OnRemoveFromMiniFrame
+- CBasePane [MFC], OnSetAccData
+- CBasePane [MFC], PaneFromPoint
+- CBasePane [MFC], RecalcLayout
+- CBasePane [MFC], RemovePaneFromDockManager
+- CBasePane [MFC], SaveState
+- CBasePane [MFC], SelectDefaultFont
+- CBasePane [MFC], SetControlBarStyle
+- CBasePane [MFC], SetDockingMode
+- CBasePane [MFC], SetPaneAlignment
+- CBasePane [MFC], SetPaneStyle
+- CBasePane [MFC], SetWindowPos
+- CBasePane [MFC], ShowPane
+- CBasePane [MFC], StretchPane
+- CBasePane [MFC], UndockPane
+- CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 caps.latest.revision: 43
 author: mikeblome
@@ -131,17 +193,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0444c0647d83a1e9b431dd0c5bdb369da213b91b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 34c41581873ca8374b9ee3b66eb28a0d18d2de6a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasepane-class"></a>CBasePane 類別
-在 MFC 中的所有窗格的基底類別。  
+# <a name="cbasepane-class"></a>CBasePane Class
+Base class for all panes in MFC.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBasePane : public CWnd  
@@ -149,165 +211,165 @@ class CBasePane : public CWnd
   
 ## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>公用建構函式  
+### <a name="public-constructors"></a>Public Constructors  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CBasePane::CBasePane`|預設建構函式。|  
-|`CBasePane::~CBasePane`|解構函式。|  
+|`CBasePane::CBasePane`|Default constructor.|  
+|`CBasePane::~CBasePane`|Destructor.|  
   
-### <a name="public-methods"></a>公用方法  
+### <a name="public-methods"></a>Public Methods  
   
-|名稱|說明|  
+|Name|Description|  
 |----------|-----------------|  
-|`CBasePane::accHitTest`|由架構呼叫以擷取畫面中給定點的子項目或子物件。 (覆寫[CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest)。)|  
-|`CBasePane::accLocation`|擷取目前畫面位置指定的物件架構呼叫。 (覆寫[CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation)。)|  
-|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane`不使用這個方法。|  
-|`CBasePane::accSelect`|由架構呼叫以修改選取或移動指定物件的鍵盤焦點。 (覆寫[CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect)。)|  
-|[CBasePane::AddPane](#addpane)|將連接管理員 窗格。|  
-|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|重新導向停駐管理員呼叫，以調整停駐配置。|  
-|[CBasePane::AdjustLayout](#adjustlayout)|當窗格應該調整其內部的版面配置時，由架構呼叫。|  
-|[CBasePane::CalcFixedLayout](#calcfixedlayout)|計算將一種控制列的水平大小。|  
-|[CBasePane::CanAcceptPane](#canacceptpane)|決定是否另一個窗格可以停駐窗格。|  
-|[CBasePane::CanAutoHide](#canautohide)|判斷窗格是否支援自動隱藏模式。|  
-|[CBasePane::CanBeAttached](#canbeattached)|判斷是否可以到另一個窗格停駐窗格。|  
-|[CBasePane::CanBeClosed](#canbeclosed)|判斷是否可以關閉窗格。|  
-|[CBasePane::CanBeDocked](#canbedocked)|判斷是否可以到另一個窗格停駐窗格。|  
-|[CBasePane::CanBeResized](#canberesized)|判斷是否可以調整窗格的大小。|  
-|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|指定窗格是否可轉換為 MDI 索引標籤式文件。|  
-|[CBasePane::CanFloat](#canfloat)|判斷是否可以浮動窗格。|  
-|[CBasePane::CanFocus](#canfocus)|指定是否窗格可以接收焦點。|  
-|[CBasePane::CopyState](#copystate)|將複製給定 窗格的狀態。|  
-|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|如果可以浮動窗格，會建立的迷你框架視窗。|  
-|[CBasePane::CreateEx](#createex)|建立窗格控制項。|  
-|[CBasePane::DockPane](#dockpane)|另一個窗格或框架視窗停駐窗格。|  
-|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|停駐窗格在使用執行階段類型資訊。|  
-|[CBasePane::DockToFrameWindow](#docktoframewindow)|可停駐窗格停駐於框架。|  
-|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|判斷是否可以此窗格與父框架間動態插入另一個窗格。|  
-|[CBasePane::EnableDocking](#enabledocking)|啟用停駐窗格的主框架。|  
-|[CBasePane::EnableGripper](#enablegripper)|啟用或停用移駐夾。 如果已啟用的移駐夾，使用者可以將它拖曳至窗格中重新調整位置。|  
-|`CBasePane::FillWindowRect`|在內部使用。|  
-|[CBasePane::FloatPane](#floatpane)|浮動窗格。|  
-|`CBasePane::get_accChild`|由架構呼叫以擷取指定子系的 `IDispatch` 介面位址。 (覆寫[CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild)。)|  
-|`CBasePane::get_accChildCount`|若要擷取此物件所屬的子系數目架構呼叫。 (覆寫[CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount)。)|  
-|`CBasePane::get_accDefaultAction`|擷取字串，描述物件的預設動作的架構所呼叫。 (覆寫[CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction)。)|  
-|`CBasePane::get_accDescription`|由架構呼叫以擷取含有指定物件的視覺外觀描述的字串。 (覆寫[CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription)。)|  
-|`CBasePane::get_accFocus`|由架構呼叫以擷取具有鍵盤焦點的物件。 (覆寫[CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus)。)|  
-|`CBasePane::get_accHelp`|要擷取之物件的說明屬性字串架構呼叫。 (覆寫[CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp)。)|  
-|[CBasePane::get_accHelpTopic](#get_acchelptopic)|擷取與指定之物件相關聯的 WinHelp 檔案的完整路徑和檔案中的適當主題的識別項的架構所呼叫。 (覆寫[CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic)。)|  
-|`CBasePane::get_accKeyboardShortcut`|若要擷取的物件指定的快速鍵架構呼叫。 (覆寫[CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut)。)|  
-|`CBasePane::get_accName`|由架構呼叫以擷取指定物件的名稱。 (覆寫[CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname)。)|  
-|`CBasePane::get_accParent`|要擷取架構呼叫`IDispatch`介面物件的父系。 (覆寫[CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent)。)|  
-|`CBasePane::get_accRole`|由架構呼叫以擷取含有指定物件的角色描述資訊。 (覆寫[CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole)。)|  
-|[CBasePane::get_accSelection](#get_accselection)|由架構呼叫以擷取此物件的選取子物件。 (覆寫[CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection)。)|  
-|`CBasePane::get_accState`|由架構呼叫以擷取指定物件的目前狀態。 (覆寫[CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate)。)|  
-|`CBasePane::get_accValue`|由架構呼叫以擷取指定物件的值。 (覆寫[CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue)。)|  
-|[CBasePane::GetCaptionHeight](#getcaptionheight)|傳回標題高度。|  
-|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|傳回的控制列的樣式。|  
-|[CBasePane::GetCurrentAlignment](#getcurrentalignment)|傳回目前窗格對齊方式。|  
-|[CBasePane::GetDockingMode](#getdockingmode)|傳回目前停駐窗格的模式。|  
-|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|傳回的視窗窗格的停駐位置的指標。|  
-|[CBasePane::GetEnabledAlignment](#getenabledalignment)|傳回套用至 「 窗格 CBRS_ALIGN_ 樣式。|  
-|[CBasePane::GetMFCStyle](#getmfcstyle)|傳回特定的窗格中的樣式至 MFC。|  
-|[CBasePane::GetPaneIcon](#getpaneicon)|傳回窗格圖示的控制代碼。|  
-|`CBasePane::GetPaneRect`|在內部使用。|  
-|[CBasePane::GetPaneRow](#getpanerow)|傳回的指標[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)物件在停駐窗格。|  
-|[CBasePane::GetPaneStyle](#getpanestyle)|傳回的窗格中的樣式。|  
-|[CBasePane::GetParentDockSite](#getparentdocksite)|傳回父停駐位置的指標。|  
-|[CBasePane::GetParentMiniFrame](#getparentminiframe)|傳回父迷你框架視窗的指標。|  
-|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|傳回父索引標籤式窗格的指標。|  
-|[CBasePane::GetParentTabWnd](#getparenttabwnd)|傳回的索引標籤內的父視窗的指標。|  
-|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|從封存還原窗格時，架構會呼叫這個方法。|  
-|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|指定是否在預覽列印中隱藏窗格。|  
-|[CBasePane::InsertPane](#insertpane)|連接管理員會向指定的窗格。|  
-|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|指定窗格是否支援使用中的協助工具。|  
-|[CBasePane::IsAutoHideMode](#isautohidemode)|決定是否自動隱藏模式中的窗格。|  
-|[CBasePane::IsDialogControl](#isdialogcontrol)|指定的窗格是否對話方塊控制項。|  
-|[CBasePane::IsDocked](#isdocked)|決定是否要停駐窗格。|  
-|[CBasePane::IsFloating](#isfloating)|決定是否浮動窗格。|  
-|[CBasePane::IsHorizontal](#ishorizontal)|決定是否要水平固定窗格。|  
-|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|指定是否在多窗格框架視窗窗格。|  
-|[CBasePane::IsMDITabbed](#ismditabbed)|判斷是否已加入 MDI 子視窗做為索引標籤式文件 窗格。|  
-|[CBasePane::IsPaneVisible](#ispanevisible)|指定是否`WS_VISIBLE`旗標設定窗格。|  
-|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|判斷指定的點是否停駐位置附近。|  
-|[CBasePane::IsResizable](#isresizable)|判斷是否可以調整窗格的大小。|  
-|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|決定是否從登錄還原窗格。|  
-|[CBasePane::IsTabbed](#istabbed)|判斷是否已插入的索引標籤式視窗索引標籤控制項 窗格。|  
-|`CBasePane::IsTooltipTopmost`|在內部使用。|  
-|[CBasePane::IsVisible](#isvisible)|決定窗格是否可見。|  
-|[CBasePane::LoadState](#loadstate)|從登錄載入窗格狀態。|  
-|[CBasePane::MoveWindow](#movewindow)|移動 [] 窗格。|  
-|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|在變更窗格的父代時，由架構呼叫。|  
-|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|窗格會變更其父視窗之前，由架構呼叫。|  
-|[CBasePane::OnDrawCaption](#ondrawcaption)|繪製標題時，架構會呼叫這個方法。|  
-|[CBasePane::OnMovePaneDivider](#onmovepanedivider)|目前未使用這個方法。|  
-|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|建置功能表具有窗格的清單時，由架構呼叫。|  
-|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|從其父迷你框架視窗中移除一個窗格時，由架構呼叫。|  
-|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane`不使用這個方法。|  
-|`CBasePane::OnUpdateCmdUI`|在內部使用。|  
-|[CBasePane::PaneFromPoint](#panefrompoint)|傳回包含指定的點的窗格。|  
-|`CBasePane::PreTranslateMessage`|類別所使用的[CWinApp](../../mfc/reference/cwinapp-class.md)轉譯視窗訊息，再分派給[TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955)和[DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows 函式。 (覆寫[CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|  
-|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane`不使用這個方法。|  
-|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊 窗格，並將它從連接管理員清單移除。|  
-|[CBasePane::SaveState](#savestate)|將窗格的狀態儲存至登錄。|  
-|[CBasePane::SelectDefaultFont](#selectdefaultfont)|選取指定的裝置內容的預設字型。|  
-|`CBasePane::Serialize`|從封存中讀取或寫入此物件。 (覆寫[CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|  
-|[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|設定控制項的列樣式。|  
-|[CBasePane::SetDockingMode](#setdockingmode)|設定停駐窗格的模式。|  
-|`CBasePane::SetMDITabbed`|在內部使用。|  
-|[CBasePane::SetPaneAlignment](#setpanealignment)|設定 [] 窗格中的對齊方式。|  
-|`CBasePane::SetPaneRect`|在內部使用。|  
-|[CBasePane::SetPaneStyle](#setpanestyle)|設定窗格的樣式。|  
-|`CBasePane::SetRestoredFromRegistry`|在內部使用。|  
-|[CBasePane::SetWindowPos](#setwindowpos)|變更大小、 位置和疊置順序的窗格。|  
-|[CBasePane::ShowPane](#showpane)|顯示或隱藏窗格。|  
-|[CBasePane::StretchPane](#stretchpane)|垂直或水平伸展窗格。|  
-|[CBasePane::UndockPane](#undockpane)|移除停駐位置、 預設滑桿或目前固定的迷你框架視窗的窗格。|  
+|`CBasePane::accHitTest`|Called by the framework to retrieve the child element or child object at a given point on the screen. (Overrides [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
+|`CBasePane::accLocation`|Called by the framework to retrieve the current screen location for the specified object. (Overrides [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
+|[CBasePane::AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` does not use this method.|  
+|`CBasePane::accSelect`|Called by the framework to modify the selection or move the keyboard focus of the specified object. (Overrides [CWnd::accSelect](../../mfc/reference/cwnd-class.md#accselect).)|  
+|[CBasePane::AddPane](#addpane)|Adds a pane to the docking manager.|  
+|[CBasePane::AdjustDockingLayout](#adjustdockinglayout)|Redirects a call to the docking manager to adjust the docking layout.|  
+|[CBasePane::AdjustLayout](#adjustlayout)|Called by the framework when the pane should adjust its internal layout.|  
+|[CBasePane::CalcFixedLayout](#calcfixedlayout)|Calculates the horizontal size of a control bar.|  
+|[CBasePane::CanAcceptPane](#canacceptpane)|Determines whether another pane can be docked to the pane.|  
+|[CBasePane::CanAutoHide](#canautohide)|Determines whether the pane supports auto-hide mode.|  
+|[CBasePane::CanBeAttached](#canbeattached)|Determines whether the pane can be docked to another pane.|  
+|[CBasePane::CanBeClosed](#canbeclosed)|Determines whether the pane can be closed.|  
+|[CBasePane::CanBeDocked](#canbedocked)|Determines whether the pane can be docked to another pane.|  
+|[CBasePane::CanBeResized](#canberesized)|Determines whether the pane can be resized.|  
+|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Specifies whether the pane can be converted to an MDI tabbed document.|  
+|[CBasePane::CanFloat](#canfloat)|Determines whether the pane can float.|  
+|[CBasePane::CanFocus](#canfocus)|Specifies whether the pane can receive focus.|  
+|[CBasePane::CopyState](#copystate)|Copies the state of a given pane.|  
+|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|If the pane can float, creates a mini-frame window.|  
+|[CBasePane::CreateEx](#createex)|Creates the pane control.|  
+|[CBasePane::DockPane](#dockpane)|Docks a pane to another pane or to a frame window.|  
+|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Docks the pane by using run-time type information.|  
+|[CBasePane::DockToFrameWindow](#docktoframewindow)|Docks a dockable pane to a frame.|  
+|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Determines whether another pane can be dynamically inserted between this pane and the parent frame.|  
+|[CBasePane::EnableDocking](#enabledocking)|Enables docking of the pane to the main frame.|  
+|[CBasePane::EnableGripper](#enablegripper)|Enables or disables the gripper. If the gripper is enabled, the user can drag it to reposition the pane.|  
+|`CBasePane::FillWindowRect`|Used internally.|  
+|[CBasePane::FloatPane](#floatpane)|Floats the pane.|  
+|`CBasePane::get_accChild`|Called by the framework to retrieve the address of an `IDispatch` interface for the specified child. (Overrides [CWnd::get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|  
+|`CBasePane::get_accChildCount`|Called by the framework to retrieve the number of children that belong to this object. (Overrides [CWnd::get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|  
+|`CBasePane::get_accDefaultAction`|Called by the framework to retrieve a string that describes the default action for the object. (Overrides [CWnd::get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|  
+|`CBasePane::get_accDescription`|Called by framework to retrieve a string that describes the visual appearance of the specified object. (Overrides [CWnd::get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|  
+|`CBasePane::get_accFocus`|Called by the framework to retrieve the object that has the keyboard focus. (Overrides [CWnd::get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|  
+|`CBasePane::get_accHelp`|Called by the framework to retrieve a  Help property string for the object. (Overrides [CWnd::get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|  
+|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Called by the framework to retrieve the full path of the WinHelp file that is associated with the specified object and the identifier of the appropriate topic in that file. (Overrides [CWnd::get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|  
+|`CBasePane::get_accKeyboardShortcut`|Called by the framework to retrieve the specified shortcut key for the object. (Overrides [CWnd::get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|  
+|`CBasePane::get_accName`|Called by the framework to retrieve the name of the specified object. (Overrides [CWnd::get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|  
+|`CBasePane::get_accParent`|Called by the framework to retrieve the `IDispatch` interface for the parent of the object. (Overrides [CWnd::get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|  
+|`CBasePane::get_accRole`|Called by the framework to retrieve information that describes the role of the specified object. (Overrides [CWnd::get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|  
+|[CBasePane::get_accSelection](#get_accselection)|Called by the framework to retrieve the selected children of this object. (Overrides [CWnd::get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|  
+|`CBasePane::get_accState`|Called by the framework to retrieve the current state of the specified object. (Overrides [CWnd::get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|  
+|`CBasePane::get_accValue`|Called by the framework to retrieve the value of the specified object. (Overrides [CWnd::get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|  
+|[CBasePane::GetCaptionHeight](#getcaptionheight)|Returns the caption height.|  
+|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Returns the control bar style.|  
+|[CBasePane::GetCurrentAlignment](#getcurrentalignment)|Returns the current pane alignment.|  
+|[CBasePane::GetDockingMode](#getdockingmode)|Returns the current docking mode for the pane.|  
+|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Returns a pointer to the window that is the dock site for the pane.|  
+|[CBasePane::GetEnabledAlignment](#getenabledalignment)|Returns the CBRS_ALIGN_ styles that are applied to the pane.|  
+|[CBasePane::GetMFCStyle](#getmfcstyle)|Returns the pane styles specific to MFC.|  
+|[CBasePane::GetPaneIcon](#getpaneicon)|Returns a handle to the pane icon.|  
+|`CBasePane::GetPaneRect`|Used internally.|  
+|[CBasePane::GetPaneRow](#getpanerow)|Returns a pointer to the [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)object where the pane is docked.|  
+|[CBasePane::GetPaneStyle](#getpanestyle)|Returns the pane style.|  
+|[CBasePane::GetParentDockSite](#getparentdocksite)|Returns a pointer to the parent dock site.|  
+|[CBasePane::GetParentMiniFrame](#getparentminiframe)|Returns a pointer to the parent mini-frame window.|  
+|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Returns a pointer to the parent tabbed pane.|  
+|[CBasePane::GetParentTabWnd](#getparenttabwnd)|Returns a pointer to the parent window that is inside a tab.|  
+|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|The framework calls this method when a pane is restored from an archive.|  
+|[CBasePane::HideInPrintPreviewMode](#hideinprintpreviewmode)|Specifies whether the pane is hidden in print preview.|  
+|[CBasePane::InsertPane](#insertpane)|Registers the specified pane with the docking manager.|  
+|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Specifies whether the pane supports Active Accessibility.|  
+|[CBasePane::IsAutoHideMode](#isautohidemode)|Determines whether a pane is in auto-hide mode.|  
+|[CBasePane::IsDialogControl](#isdialogcontrol)|Specifies whether the pane is a dialog control.|  
+|[CBasePane::IsDocked](#isdocked)|Determines whether the pane is docked.|  
+|[CBasePane::IsFloating](#isfloating)|Determines whether the pane is floating.|  
+|[CBasePane::IsHorizontal](#ishorizontal)|Determines whether the pane is docked horizontally.|  
+|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Specifies whether the pane is in a multi-pane frame window.|  
+|[CBasePane::IsMDITabbed](#ismditabbed)|Determines whether the pane has been added to an MDI child window as a tabbed document.|  
+|[CBasePane::IsPaneVisible](#ispanevisible)|Specifies whether the `WS_VISIBLE` flag is set for the pane.|  
+|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Determines whether a specified point is near the dock site.|  
+|[CBasePane::IsResizable](#isresizable)|Determines whether the pane can be resized.|  
+|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Determines whether the pane is restored from the registry.|  
+|[CBasePane::IsTabbed](#istabbed)|Determines whether the pane has been inserted in the tab control of a tabbed window.|  
+|`CBasePane::IsTooltipTopmost`|Used internally.|  
+|[CBasePane::IsVisible](#isvisible)|Determines whether the pane is visible.|  
+|[CBasePane::LoadState](#loadstate)|Loads the pane state from the registry.|  
+|[CBasePane::MoveWindow](#movewindow)|Moves the pane.|  
+|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Called by the framework when the pane's parent has been changed.|  
+|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Called by the framework just before the pane changes its parent window.|  
+|[CBasePane::OnDrawCaption](#ondrawcaption)|The framework calls this method when the caption is drawn.|  
+|[CBasePane::OnMovePaneDivider](#onmovepanedivider)|This method is currently not used.|  
+|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Called by the framework when it builds a menu that has a list of panes.|  
+|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Called by the framework when a pane is removed from its parent mini frame window.|  
+|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` does not use this method.|  
+|`CBasePane::OnUpdateCmdUI`|Used internally.|  
+|[CBasePane::PaneFromPoint](#panefrompoint)|Returns the pane that contains the given point.|  
+|`CBasePane::PreTranslateMessage`|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` does not use this method.|  
+|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Unregisters a pane and removes it from the list in the docking manager.|  
+|[CBasePane::SaveState](#savestate)|Saves the pane's state to the registry.|  
+|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Selects the default font for a given device context.|  
+|`CBasePane::Serialize`|Reads or writes this object from or to an archive. (Overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|  
+|[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|Sets the control bar style.|  
+|[CBasePane::SetDockingMode](#setdockingmode)|Sets the docking mode for the pane.|  
+|`CBasePane::SetMDITabbed`|Used internally.|  
+|[CBasePane::SetPaneAlignment](#setpanealignment)|Sets the alignment for the pane.|  
+|`CBasePane::SetPaneRect`|Used internally.|  
+|[CBasePane::SetPaneStyle](#setpanestyle)|Sets the style of the pane.|  
+|`CBasePane::SetRestoredFromRegistry`|Used internally.|  
+|[CBasePane::SetWindowPos](#setwindowpos)|Changes the size, position, and Z-order of a pane.|  
+|[CBasePane::ShowPane](#showpane)|Shows or hides the pane.|  
+|[CBasePane::StretchPane](#stretchpane)|Stretches a pane vertically or horizontally.|  
+|[CBasePane::UndockPane](#undockpane)|Removes the pane from the dock site, default slider, or mini-frame window where it is currently docked.|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>Protected Methods  
   
-|名稱|描述|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBasePane::DoPaint](#dopaint)|填滿 窗格的背景。|  
+|[CBasePane::DoPaint](#dopaint)|Fills the background of the pane.|  
   
-## <a name="remarks"></a>備註  
- 如果您想要建立支援的 MFC 中的可用的擴充停駐功能窗格類別，您必須衍生從`CBasePane`或[CPane 類別](../../mfc/reference/cpane-class.md)。  
+## <a name="remarks"></a>Remarks  
+ If you want to create a pane class that supports the extended docking features available in MFC, you must derive it from `CBasePane` or from [CPane Class](../../mfc/reference/cpane-class.md).  
   
-## <a name="customization-tips"></a>自訂秘訣  
- 下列自訂秘訣屬於`CBasePane Class`以及任何從它繼承的類別︰  
+## <a name="customization-tips"></a>Customization Tips  
+ The following customization tips pertain to the `CBasePane Class` and any classes that inherit from it:  
   
--   當您建立一個窗格時，您可以套用數個新的樣式︰  
+-   When you create a pane, you can apply several new styles:  
   
-    - `AFX_CBRS_FLOAT`可讓窗格浮點數。  
+    - `AFX_CBRS_FLOAT` makes the pane float.  
   
-    - `AFX_CBRS_AUTOHIDE`啟用自動隱藏模式。  
+    - `AFX_CBRS_AUTOHIDE` enables auto-hide mode.  
   
-    - `AFX_CBRS_CLOSE`啟用 [關閉 （隱藏）] 窗格。  
+    - `AFX_CBRS_CLOSE` enables the pane to be closed (hidden).  
   
-     這些是您可以結合的位元 OR 運算的旗標。  
+     These are flags that you can combine with a bitwise-OR operation.  
   
- `CBasePane`會實作下列虛擬布林方法，以反映這些旗標︰ [CBasePane::CanBeClosed](#canbeclosed)， [CBasePane::CanAutoHide](#canautohide)， [CBasePane::CanFloat](#canfloat)。 您可以在來自訂其行為的衍生類別中覆寫這些程式。  
+ `CBasePane` implements the following virtual Boolean methods to reflect these flags: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). You can override them in derived classes to customize their behavior.  
   
--   您可以藉由覆寫自訂停駐行為[CBasePane::CanAcceptPane](#canacceptpane)。 傳回您窗格`FALSE`從這個方法，以防止停駐到另一個窗格。  
+-   You can customize docking behavior by overriding [CBasePane::CanAcceptPane](#canacceptpane). Have your pane return `FALSE` from this method to prevent another pane from docking to it.  
   
--   如果您想要建立靜態，不能浮動，這樣可防止任何其他窗格之前停駐的窗格 （類似於 outlook 功能區中 OutlookDemo 範例），其建立為非浮點數，並覆寫[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)傳回`FALSE`。 預設實作會傳回`FALSE`如果窗格建立不含`AFX_CBRS_FLOAT`樣式。  
+-   If you want to create a static pane that cannot float and that prevents any other pane from docking before it (similar to the Outlook bar in the OutlookDemo example), create it as non-floating and override [CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore) to return `FALSE`. The default implementation returns `FALSE` if the pane is created without the `AFX_CBRS_FLOAT` style.  
   
--   建立識別碼為-1 以外所有窗格。  
+-   Create all panes with IDs other than -1.  
   
--   若要判斷窗格可見性，請使用[CBasePane::IsVisible](#isvisible)。 它可正確處理的可見性狀態中的索引標籤，自動隱藏模式。  
+-   To determine pane visibility, use [CBasePane::IsVisible](#isvisible). It correctly handles the visibility state in tabbed and auto-hide modes.  
   
--   如果您想要建立非浮點數的可調整大小 窗格中，建立不`AFX_CBRS_FLOAT`樣式和呼叫[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)。  
+-   If you want to create a non-floating resizable pane, create it without the `AFX_CBRS_FLOAT` style and call [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).  
   
--   若要排除配置停駐窗格或從其停駐列移除工具列，呼叫[CBasePane::UndockPane](#undockpane)。 請勿呼叫這個方法，自動隱藏模式窗格或存放在索引標籤式視窗索引標籤的窗格。  
+-   To exclude a pane from a docking layout or to remove a toolbar from its dock bar, call [CBasePane::UndockPane](#undockpane). Do not call this method for panes in auto-hide mode or for panes that reside in tabs of tabbed windows.  
   
--   如果您想要 float 或取消停駐窗格自動隱藏模式中，您必須呼叫[CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode)與`FALSE`做為第一個引數，才能呼叫[CBasePane::FloatPane](#floatpane)或[CBasePane::UndockPane](#undockpane)。  
+-   If you want to float or undock a pane that is in auto-hide mode, you must call [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) with `FALSE` as the first argument before you call [CBasePane::FloatPane](#floatpane) or [CBasePane::UndockPane](#undockpane).  
   
-## <a name="example"></a>範例  
- 下列範例示範如何使用各種方法的`CBasePane`類別。 此範例示範如何擷取從窗格`CFrameWndEx`類別以及如何設定停駐模式、 窗格對齊和窗格樣式。 程式碼是由[字板範例](../../visual-cpp-samples.md)。  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CBasePane` class. The example demonstrates how to retrieve a pane from the `CFrameWndEx` class and how to set the docking mode, the pane alignment, and the pane style. The code is from the [Word Pad sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_WordPad #&2;](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>繼承階層  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -316,64 +378,64 @@ class CBasePane : public CWnd
   
  [CBasePane](../../mfc/reference/cbasepane-class.md)  
   
-## <a name="requirements"></a>需求  
- **標頭︰** afxbasepane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbasepane.h  
   
-##  <a name="accnotifyobjectfocusevent"></a>CBasePane::AccNotifyObjectFocusEvent  
- `CBasePane`不使用這個方法。  
+##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent  
+ `CBasePane` does not use this method.  
   
 ```  
 virtual void AccNotifyObjectFocusEvent(int);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `int`  
- 未使用。  
+ Not used.  
   
-##  <a name="addpane"></a>CBasePane::AddPane  
- 將連接管理員 窗格。  
+##  <a name="addpane"></a>  CBasePane::AddPane  
+ Adds a pane to the docking manager.  
   
 ```  
 void AddPane(CBasePane* pBar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 窗格中，將指標。  
+ A pointer to a pane to add.  
   
-### <a name="remarks"></a>備註  
- 這是很便利的方法，將窗格加入至停駐的管理員。 使用此方法，讓您不必撰寫程式碼，以分析父框架的類型。  
+### <a name="remarks"></a>Remarks  
+ This is a convenience method that adds a pane to a docking manager. By using this method, you do not have to write code that analyzes the type of the parent frame.  
   
- 如需詳細資訊，請參閱[CDockingManager 類別](../../mfc/reference/cdockingmanager-class.md)和[CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane)。  
+ For more information, see [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) and [CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).  
   
-##  <a name="adjustdockinglayout"></a>CBasePane::AdjustDockingLayout  
- 重新導向停駐管理員呼叫，以調整停駐配置。  
+##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout  
+ Redirects a call to the docking manager to adjust the docking layout.  
   
 ```  
 virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `hdwp`  
- 此結構包含多個視窗位置控制代碼。  
+### <a name="parameters"></a>Parameters  
+ [out] `hdwp`  
+ A handle to a structure containing multiple window positions.  
   
-### <a name="remarks"></a>備註  
- 這是很便利的方法可調整的停駐配置。 使用此方法，讓您不必撰寫程式碼，以分析父框架的類型。  
+### <a name="remarks"></a>Remarks  
+ This is a convenience method that adjusts the docking layout. By using this method, you do not have to write code that analyzes the type of the parent frame.  
   
- 如需詳細資訊，請參閱[CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)  
+ For more information, see [CDockingManager::AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)  
   
-##  <a name="adjustlayout"></a>CBasePane::AdjustLayout  
- 若要調整窗格的內部配置架構呼叫。  
+##  <a name="adjustlayout"></a>  CBasePane::AdjustLayout  
+ Called by the framework to adjust the internal layout of a pane.  
   
 ```  
 virtual void AdjustLayout();
 ```  
   
-### <a name="remarks"></a>備註  
- 必須調整其內部的版面配置 窗格時，架構會呼叫這個方法。 基底實作，就沒有作用。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a pane has to adjust its internal layout. The base implementation does nothing.  
   
-##  <a name="calcfixedlayout"></a>CBasePane::CalcFixedLayout  
- 計算將一種控制列的水平大小。  
+##  <a name="calcfixedlayout"></a>  CBasePane::CalcFixedLayout  
+ Calculates the horizontal size of a control bar.  
   
 ```  
 virtual CSize CalcFixedLayout(
@@ -381,204 +443,204 @@ virtual CSize CalcFixedLayout(
     BOOL bHorz);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bStretch`  
- 指出軸是否應該自動縮放成框架的大小。 `bStretch`列 （不適用於停駐） 的停駐列並不是 0 停駐或浮動時 （適用於停駐） 時，參數為非零值。  
+ Indicates whether the bar should be stretched to the size of the frame. The `bStretch` parameter is nonzero when the bar is not a docking bar (not available for docking) and is 0 when it is docked or floating (available for docking).  
   
  [in] `bHorz`  
- 指出軸是水平或垂直方向。 `bHorz`參數為非零，如果列是水平方向，而是 0，如果它是垂直方向。  
+ Indicates that the bar is horizontally or vertically oriented. The `bHorz` parameter is nonzero if the bar is horizontally oriented and is 0 if it is vertically oriented.  
   
-### <a name="return-value"></a>傳回值  
- 控制列的大小，單位為像素的`CSize`物件。  
+### <a name="return-value"></a>Return Value  
+ The control bar size, in pixels, of a `CSize` object.  
   
-### <a name="remarks"></a>備註  
- 請參閱 < 備註 > 一節中[CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
+### <a name="remarks"></a>Remarks  
+ See the remarks section in [CControlBar::CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)  
   
-##  <a name="canacceptpane"></a>CBasePane::CanAcceptPane  
- 決定是否另一個窗格可以停駐窗格。  
+##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane  
+ Determines whether another pane can be docked to the pane.  
   
 ```  
 virtual BOOL CanAcceptPane(const CBasePane* pBar) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 若要停駐窗格的指標。  
+ A pointer to the pane to dock.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以接受另一個窗格。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if another pane can be accepted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法之前所指定窗格停駐於`pBar`到目前的窗格。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method before it docks the pane specified by `pBar` to the current pane.  
   
- 使用這個方法和[CBasePane::CanBeDocked](#canbedocked)方法，以控制窗格將應用程式中的其他窗格的停駐。  
+ Use this method and the [CBasePane::CanBeDocked](#canbedocked) method to control how panes dock to other panes in your application.  
   
- 預設實作會傳回 `FALSE`。  
+ The default implementation returns `FALSE`.  
   
-##  <a name="canautohide"></a>CBasePane::CanAutoHide  
- 判斷窗格是否支援自動隱藏模式。  
+##  <a name="canautohide"></a>  CBasePane::CanAutoHide  
+ Determines whether the pane supports auto-hide mode.  
   
 ```  
 virtual BOOL CanAutoHide() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此窗格支援自動隱藏模式;否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this pane supports auto-hide mode; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫此函式可判斷窗格是否支援自動隱藏模式。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function to determine whether the pane supports auto-hide mode.  
   
- 在建構期間，您可以設定這項功能，藉由傳遞`AFX_CBRS_AUTOHIDE`旗標設為[CBasePane::CreateEx](#createex)。  
+ During construction, you can set this ability by passing the `AFX_CBRS_AUTOHIDE` flag to [CBasePane::CreateEx](#createex).  
   
- 預設實作會檢查`AFX_CBRS_AUTOHIDE`旗標。 若要自訂此行為在衍生類別中的，這個方法會覆寫。  
+ The default implementation checks for the `AFX_CBRS_AUTOHIDE` flag. Override this method in a derived class to customize this behavior.  
   
-##  <a name="canbeattached"></a>CBasePane::CanBeAttached  
- 判斷是否可以到另一個窗格或框架視窗停駐窗格。  
+##  <a name="canbeattached"></a>  CBasePane::CanBeAttached  
+ Determines whether the pane can be docked to another pane or frame window.  
   
 ```  
 virtual BOOL CanBeAttached() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果另一個窗格或框架視窗，停駐窗格，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be docked to another pane or frame window; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 預設實作會傳回 `FALSE`。 這個方法來啟用或停用的功能，而不需呼叫停駐在衍生類別中覆寫[CBasePane::EnableDocking](#enabledocking)。  
+### <a name="remarks"></a>Remarks  
+ The default implementation returns `FALSE`. Override this method in a derived class to enable or disable the ability to dock without calling [CBasePane::EnableDocking](#enabledocking).  
   
-##  <a name="canbeclosed"></a>CBasePane::CanBeClosed  
- 判斷是否可以關閉窗格。  
+##  <a name="canbeclosed"></a>  CBasePane::CanBeClosed  
+ Determines whether the pane can be closed.  
   
 ```  
 virtual BOOL CanBeClosed() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以關閉窗格。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be closed; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來判斷是否可以關閉窗格。 如果此方法會傳回`TRUE`、**關閉**窗格的標題列中加入按鈕或 [] 窗格浮動窗格，窗格的 [自] 視窗的標題列。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether the pane can be closed. If the method returns `TRUE`, a **Close** button is added to the pane's title bar or, if the pane is floating, to the title bar of the pane's miniframe window.  
   
- 在建構期間，您可以設定這項功能，藉由傳遞`AFX_CBRS_CLOSE`旗標設為[CBasePane::CreateEx](#createex)。  
+ During construction, you can set this ability by passing the `AFX_CBRS_CLOSE` flag to [CBasePane::CreateEx](#createex).  
   
- 預設實作會檢查`AFX_CBRS_CLOSE`旗標。  
+ The default implementation checks for the `AFX_CBRS_CLOSE` flag.  
   
-##  <a name="canbedocked"></a>CBasePane::CanBeDocked  
- 判斷是否可以到另一個窗格停駐窗格。  
+##  <a name="canbedocked"></a>  CBasePane::CanBeDocked  
+ Determines whether the pane can be docked to another pane.  
   
 ```  
 virtual BOOL CanBeDocked(CBasePane* pDockBar) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDockBar`  
- 指標，另一個窗格。  
+ A pointer to another pane.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此窗格可停駐到另一個窗格。，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this pane can be docked to another pane; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法之前所指定窗格停駐於`pDockBar`到目前的窗格。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method before it docks the pane specified by `pDockBar` to the current pane.  
   
- 使用這個方法和[CBasePane::CanAcceptPane](#canacceptpane)方法，以控制窗格將應用程式中的其他窗格的停駐。  
+ Use this method and the [CBasePane::CanAcceptPane](#canacceptpane) method to control how panes dock to other panes in your application.  
   
- 預設實作會傳回 `FALSE`。  
+ The default implementation returns `FALSE`.  
   
-##  <a name="canberesized"></a>CBasePane::CanBeResized  
- 判斷是否可以調整窗格的大小。  
+##  <a name="canberesized"></a>  CBasePane::CanBeResized  
+ Determines whether the pane can be resized.  
   
 ```  
 virtual BOOL CanBeResized() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以調整窗格的大小;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be resized; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法會檢查`AFX_CBRS_RESIZE`旗標，指定預設`CBasePane::OnCreate`。 如果未指定這個旗標，停駐 manager 旗標，在內部為不可，而不是讓它停駐窗格。  
+### <a name="remarks"></a>Remarks  
+ This method checks for the `AFX_CBRS_RESIZE` flag, which is specified by default in `CBasePane::OnCreate`. If this flag is not specified, the docking manager flags the pane internally as immovable instead of docking it.  
   
-##  <a name="canbetabbeddocument"></a>CBasePane::CanBeTabbedDocument  
- 指定窗格是否可轉換為 MDI 索引標籤式文件。  
+##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument  
+ Specifies whether the pane can be converted to an MDI tabbed document.  
   
 ```  
 virtual BOOL CanBeTabbedDocument() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格可以轉換為索引標籤式文件。否則， `FALSE`。 `CBasePane::CanBeTabbedDocument` 永遠傳回 `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be converted to a tabbed document; otherwise, `FALSE`. `CBasePane::CanBeTabbedDocument` always returns `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 只有物件特定的`CBasePane`-衍生型別，例如[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)，可以轉換為索引標籤式文件。  
+### <a name="remarks"></a>Remarks  
+ Only objects of certain `CBasePane`-derived types, such as the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md), can be converted to tabbed documents.  
   
-##  <a name="canfloat"></a>CBasePane::CanFloat  
- 判斷是否可以浮動窗格。  
+##  <a name="canfloat"></a>  CBasePane::CanFloat  
+ Determines whether the pane can float.  
   
 ```  
 virtual BOOL CanFloat() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果可以浮動窗格。，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can float; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來判斷是否可以浮動窗格。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether the pane can float.  
   
- 在建構期間，您可以設定這項功能，藉由傳遞`AFX_CBRS_FLOAT`旗標設為[CBasePane::CreateEx](#createex)。  
+ During construction, you can set this ability by passing the `AFX_CBRS_FLOAT` flag to [CBasePane::CreateEx](#createex).  
   
 > [!NOTE]
->  架構會假設及非浮動窗格為靜態，且無法變更其停駐狀態。 因此，架構就不會儲存非浮動窗格的停駐狀態。  
+>  The framework assumes that non-floating panes are static and that their docking state cannot change. Therefore, the framework does not save the docking state of non-floating panes.  
   
- 預設實作會檢查`AFX_CBRS_FLOAT`樣式。  
+ The default implementation checks for the `AFX_CBRS_FLOAT` style.  
   
-##  <a name="canfocus"></a>CBasePane::CanFocus  
- 指定是否窗格可以接收焦點。  
+##  <a name="canfocus"></a>  CBasePane::CanFocus  
+ Specifies whether the pane can receive focus.  
   
 ```  
 virtual BOOL CanFocus() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格可以接收焦點。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can receive focus; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 覆寫這個方法來控制焦點在衍生類別中。 例如，工具列不會收到焦點，因為這個方法會傳回`FALSE`當工具列物件上呼叫它。  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to control focus. For example, because toolbars cannot receive focus, this method returns `FALSE` when it is called on toolbar objects.  
   
- 架構會嘗試將輸入的焦點時停駐或浮動窗格。  
+ The framework tries to set the input focus when a pane is docked or floated.  
   
-##  <a name="copystate"></a>CBasePane::CopyState  
- 將複製給定 窗格的狀態。  
+##  <a name="copystate"></a>  CBasePane::CopyState  
+ Copies the state of a given pane.  
   
 ```  
 virtual void CopyState(CBasePane* pOrgBar);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pOrgBar`  
- 指標，另一個窗格。  
+ A pointer to another pane.  
   
-### <a name="remarks"></a>備註  
- 這個方法會複製狀態從`pOrgBar`到這個窗格。  
+### <a name="remarks"></a>Remarks  
+ This method copies the state from `pOrgBar` to this pane.  
   
-##  <a name="createdefaultminiframe"></a>CBasePane::CreateDefaultMiniframe  
- 如果可以浮動窗格，這個方法會為其建立的迷你框架視窗。  
+##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe  
+ If the pane can float, this method creates a mini-frame window for it.  
   
 ```  
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rectInitial`  
- 指定迷你框架視窗的初始的座標。  
+ Specifies the initial coordinates of the mini-frame window.  
   
-### <a name="return-value"></a>傳回值  
- 新的迷你框架視窗的指標或`NULL`如果建立失敗。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the new mini-frame window or `NULL` if the creation failed.  
   
-### <a name="remarks"></a>備註  
- 當窗格切換為浮動狀態時，架構會呼叫這個方法。 方法會建立一個迷你框架視窗，並附加到這個視窗窗格。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a pane switches to a floating state. The method creates a mini-frame window and attaches the pane to this window.  
   
- 預設實作會傳回 `NULL`。  
+ The default implementation returns `NULL`.  
   
-##  <a name="createex"></a>CBasePane::CreateEx  
- 建立窗格控制項。  
+##  <a name="createex"></a>  CBasePane::CreateEx  
+ Creates the pane control.  
   
 ```  
 virtual BOOL CreateEx(
@@ -593,58 +655,58 @@ virtual BOOL CreateEx(
     CCreateContext* pContext=NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwStyleEx`  
- 延伸的樣式 (請參閱[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)如需詳細資訊)。  
+ The extended styles (see [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex) for more information).  
   
  [in] `lpszClassName`  
- 視窗類別名稱。  
+ The window class name.  
   
  [in] `lpszWindowName`  
- 視窗名稱。  
+ The window name.  
   
  [in] `dwStyle`  
- 視窗樣式 (請參閱[CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex))。  
+ The window style (see [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).  
   
  [in] `rect`  
- 初始的矩形。  
+ The initial rectangle.  
   
  [in] `pParentWnd`  
- 父視窗的指標。  
+ A pointer to the parent window.  
   
  [in] `nID`  
- 指定窗格識別碼。 必須是唯一的。  
+ Specifies the pane ID. Must be unique.  
   
  [in] `dwControlBarStyle`  
- 窗格的樣式旗標。  
+ Style flags for panes.  
   
  [in] `pContext`  
- 指標`CcreateContext`  
+ A pointer to `CcreateContext`  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果成功; 建立窗格否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is created successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 建立類別的視窗`lpszClassName`。 如果您指定`WS_CAPTION`，這個方法會清除`WS_CAPTION`樣式位元和集合`CBasePane::m_bHasCaption`至`TRUE`，因為程式庫不支援有標題的窗格。  
+### <a name="remarks"></a>Remarks  
+ Creates a window of class `lpszClassName`. If you specify `WS_CAPTION`, this method clears the `WS_CAPTION` style bit and sets `CBasePane::m_bHasCaption` to `TRUE`, because the library does not support panes with captions.  
   
- 您可以使用任何子視窗的樣式和 MFC 控制列 (CBRS_) 樣式的組合。  
+ You can use any combination of child window styles and MFC control bar (CBRS_) styles.  
   
- 程式庫新增了數種新樣式 窗格。 下表說明新的樣式︰  
+ The library adds several new styles for panes. The following table describes the new styles:  
   
-|樣式|描述|  
+|Style|Description|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|浮動窗格。|  
-|`AFX_CBRS_AUTOHIDE`|[] 窗格支援自動隱藏模式|  
-|`AFX_CBRS_RESIZE`|可以調整窗格的大小。 **重要事項︰**未實作此樣式。|  
-|`AFX_CBRS_CLOSE`|可以關閉窗格。|  
-|`AFX_CBRS_AUTO_ROLLUP`|當它會浮動窗格可彙總。|  
-|`AFX_CBRS_REGULAR_TABS`|當一個窗格停駐於具有此樣式時的另一個窗格時，會建立一般的索引標籤式的視窗。 (如需詳細資訊，請參閱[CTabbedPane 類別](../../mfc/reference/ctabbedpane-class.md)。)|  
-|`AFX_CBRS_OUTLOOK_TABS`|當一個窗格停駐於具有此樣式時的另一個窗格時，會建立 Outlook 樣式索引標籤式的視窗。 (如需詳細資訊，請參閱[CMFCOutlookBar 類別](../../mfc/reference/cmfcoutlookbar-class.md)。)|  
+|`AFX_CBRS_FLOAT`|The pane can float.|  
+|`AFX_CBRS_AUTOHIDE`|The pane supports auto-hide mode|  
+|`AFX_CBRS_RESIZE`|The pane can be resized. **Important:**  This style is not implemented.|  
+|`AFX_CBRS_CLOSE`|The pane can be closed.|  
+|`AFX_CBRS_AUTO_ROLLUP`|The pane can be rolled up when it floats.|  
+|`AFX_CBRS_REGULAR_TABS`|When one pane docks to another pane that has this style, a regular tabbed window is created. (For more information, see [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md).)|  
+|`AFX_CBRS_OUTLOOK_TABS`|When one pane docks to another pane that has this style, an Outlook-style tabbed window is created. (For more information, see [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).)|  
   
- 若要使用新的樣式，指定在`dwControlBarStyle`。  
+ To use the new styles, specify them in `dwControlBarStyle`.  
   
-##  <a name="dockpane"></a>CBasePane::DockPane  
- 另一個窗格或框架視窗停駐窗格。  
+##  <a name="dockpane"></a>  CBasePane::DockPane  
+ Docks a pane to another pane or to a frame window.  
   
 ```  
 virtual BOOL DockPane(
@@ -653,37 +715,37 @@ virtual BOOL DockPane(
     AFX_DOCK_METHOD dockMethod);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDockBar`  
- 指標，另一個窗格。  
+ A pointer to another pane.  
   
  [in] `lpRect`  
- 指定目的地矩形。  
+ Specifies the destination rectangle.  
   
  [in] `dockMethod`  
- 指定的停駐的方法。  
+ Specifies the docking method.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 停駐控制列，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the control bar was docked successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可停駐窗格，另一個窗格或 停駐列 ( [CDockSite 類別](../../mfc/reference/cdocksite-class.md)) 所指定`pDockBar`，或主要畫面格如果`pDockBar`是`NULL`。  
+### <a name="remarks"></a>Remarks  
+ Call this function to dock a pane to another pane or a dock bar ( [CDockSite Class](../../mfc/reference/cdocksite-class.md)) that is specified by `pDockBar`, or to a main frame if `pDockBar` is `NULL`.  
   
- `dockMethod`指定如何停駐窗格。 請參閱[CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane)的可能值的清單。  
+ `dockMethod` specifies how the pane is docked. See [CPane::DockPane](../../mfc/reference/cpane-class.md#dockpane) for a list of possible values.  
   
-##  <a name="dockpaneusingrtti"></a>CBasePane::DockPaneUsingRTTI  
- 停駐窗格在使用執行階段類型資訊。  
+##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI  
+ Docks the pane by using run-time type information.  
   
 ```  
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bUseDockSite`  
- 如果`TRUE`，停駐到銜接站台。 如果`FALSE`，停駐於父框架。  
+ If `TRUE`, dock to the docking site. If `FALSE`, dock to the parent frame.  
   
-##  <a name="docktoframewindow"></a>CBasePane::DockToFrameWindow  
- 可停駐窗格停駐於框架。  
+##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow  
+ Docks a dockable pane to a frame.  
   
 ```  
 virtual BOOL DockToFrameWindow(
@@ -695,98 +757,98 @@ virtual BOOL DockToFrameWindow(
     BOOL bOuterEdge = FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwAlignment`  
- 您想要停駐窗格的父框架端。  
+ The side of the parent frame that you want to dock the pane to.  
   
  [in] `lpRect`  
- 所需的大小。  
+ The desired size.  
   
  [in] `dwDockFlags`  
- 忽略。  
+ Ignored.  
   
  [in] `pRelativeBar`  
- 忽略。  
+ Ignored.  
   
  [in] `nRelativeIndex`  
- 忽略。  
+ Ignored.  
   
  [in] `bOuterEdge`  
- 如果`TRUE`和指定的側邊有其他可停駐窗格`dwAlignment`，窗格即停駐以外其他窗格，接近的父框架邊緣。 如果`FALSE`，窗格停駐在接近用戶端區域的中央。  
+ If `TRUE` and there are other dockable panes at the side specified by `dwAlignment`, the pane is docked outside the other panes, closer to the edge of the parent frame. If `FALSE`, the pane is docked closer to the center of the client area.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果此方法成功。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method was successful; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 如果窗格分割線 ( [CPaneDivider 類別](../../mfc/reference/cpanedivider-class.md)) 無法建立。 否則，它一律傳回`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ This method fails if a pane divider ( [CPaneDivider Class](../../mfc/reference/cpanedivider-class.md)) cannot be created. Otherwise, it always returns `TRUE`.  
   
-##  <a name="doesallowdyninsertbefore"></a>CBasePane::DoesAllowDynInsertBefore  
- 判斷是否可以此窗格與父框架間動態插入另一個窗格。  
+##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore  
+ Determines whether another pane can be dynamically inserted between this pane and the parent frame.  
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者可以插入另一個窗格。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if a user can insert another pane; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來判斷使用者是否可以動態插入此窗格前的一個窗格。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine whether a user can dynamically insert a pane before this pane.  
   
- 例如，假設您的應用程式，建立停駐在框架 （例如 outlook 功能區） 的左側的窗格。 若要防止使用者在停駐的第一個窗格左邊的另一個窗格，覆寫這個方法，並傳回`FALSE`。  
+ For example, suppose your application creates a pane docked at the left side of the frame (such as the Outlook bar). To prevent the user from docking another pane to the left of the first pane, override this method and return `FALSE`.  
   
- 我們建議您覆寫這個方法，並傳回`FALSE`非浮動窗格衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。  
+ We recommend that you override this method and return `FALSE` for non-floating panes derived from [CDockablePane Class](../../mfc/reference/cdockablepane-class.md).  
   
- 預設實作會傳回 `TRUE`。  
+ The default implementation returns `TRUE`.  
   
-##  <a name="dopaint"></a>CBasePane::DoPaint  
- 填滿 窗格的背景。  
+##  <a name="dopaint"></a>  CBasePane::DoPaint  
+ Fills the background of the pane.  
   
 ```  
 virtual void DoPaint(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容的指標。  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>備註  
- 預設實作會呼叫目前的視覺管理員背景填滿 ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground))。  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the current visual manager to fill the background ( [CMFCVisualManager::OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).  
   
-##  <a name="enabledocking"></a>CBasePane::EnableDocking  
- 啟用停駐窗格的主框架。  
+##  <a name="enabledocking"></a>  CBasePane::EnableDocking  
+ Enables docking of the pane to the main frame.  
   
 ```  
 virtual void EnableDocking(DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwAlignment`  
- 指定要啟用的停駐對齊。  
+ Specifies the docking alignment to enable.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來啟用停駐於主框架的對齊方式。 您可以傳遞多種`CBRS_ALIGN_`旗標 (如需詳細資訊，請參閱[CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking))。  
+### <a name="remarks"></a>Remarks  
+ Call this method to enable docking alignment to the main frame. You can pass a combination of `CBRS_ALIGN_` flags (for more information, see [CControlBar::EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).  
   
- `EnableDocking`設定內部旗標`CBasePane::m_dwEnabledAlignment`和停駐窗格時，架構會檢查此旗標。  
+ `EnableDocking` sets the internal flag `CBasePane::m_dwEnabledAlignment` and the framework checks this flag when a pane is docked.  
   
- 呼叫[CBasePane::GetEnabledAlignment](#getenabledalignment)判斷窗格的停駐對齊方式。  
+ Call [CBasePane::GetEnabledAlignment](#getenabledalignment) to determine the docking alignment for a pane.  
   
-##  <a name="enablegripper"></a>CBasePane::EnableGripper  
- 啟用或停用移駐夾。 如果已啟用的移駐夾，使用者可以將它拖曳至窗格中重新調整位置。  
+##  <a name="enablegripper"></a>  CBasePane::EnableGripper  
+ Enables or disables the gripper. If the gripper is enabled, the user can drag it to reposition the pane.  
   
 ```  
 virtual void EnableGripper(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`若要啟用移駐夾;`FALSE`停用它。  
+ `TRUE` to enable the gripper; `FALSE` to disable it.  
   
-### <a name="remarks"></a>備註  
- 架構會使用這個方法來啟用移駐夾，而不是使用`WS_CAPTION`樣式。  
+### <a name="remarks"></a>Remarks  
+ The framework uses this method to enable a gripper instead of using the `WS_CAPTION` style.  
   
-##  <a name="floatpane"></a>CBasePane::FloatPane  
- 浮動窗格。  
+##  <a name="floatpane"></a>  CBasePane::FloatPane  
+ Floats the pane.  
   
 ```  
 virtual BOOL FloatPane(
@@ -795,24 +857,24 @@ virtual BOOL FloatPane(
     bool bShow=true);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rectFloat`  
- 指定螢幕座標浮動窗格顯示的位置。  
+ Specifies the screen coordinates where the floating pane appears.  
   
  [in] `dockMethod`  
- 指定要用於浮動窗格的停駐方法。  
+ Specifies the dock method to use to float the pane.  
   
  [in] `bShow`  
- 指定浮動窗格是否可見 ( `TRUE`) 或隱藏 ( `FALSE`)。  
+ Specifies whether the floating pane is visible ( `TRUE`) or hidden ( `FALSE`).  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 浮動窗格否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was floated successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 呼叫此方法以浮動窗格，以在所指定的螢幕位置`rectFloat`。  
+### <a name="remarks"></a>Remarks  
+ Call this method to float a pane at the screen position specified by `rectFloat`.  
   
-##  <a name="get_acchelptopic"></a>CBasePane::get_accHelpTopic  
- 架構會呼叫這個方法，以擷取的完整路徑`WinHelp`與指定的物件和該檔案中的適當主題的識別項相關聯的檔案。  
+##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic  
+ The framework calls this method to retrieve the full path of the `WinHelp` file that is associated with the specified object and the identifier of the appropriate topic in that file.  
   
 ```  
 virtual HRESULT get_accHelpTopic(
@@ -821,270 +883,270 @@ virtual HRESULT get_accHelpTopic(
     long* pidTopic);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pszHelpFile`  
- 位址`BSTR`接收的完整路徑`WinHelp`相關聯檔案，以指定的物件，如果有的話。  
+ Address of a `BSTR` that receives the full path of the `WinHelp` file that is associated with the specified object, if any.  
   
  [in] `varChild`  
- 指定是否要擷取的 [說明] 主題的物件或其中一個物件的子元素。 這個參數可以是`CHILDID_SELF`（若要取得 [說明] 主題的物件） 或子識別碼 （若要取得 [說明] 主題的其中一個子物件的項目）。  
+ Specifies whether the Help topic to be retrieved is that of the object or one of the child elements of the object. This parameter can be either `CHILDID_SELF` (to obtain a Help topic for the object) or a child ID (to obtain a Help topic for one of the child elements of the object).  
   
  [in] `pidTopic`  
- 識別`Help`檔主題與指定的物件相關聯。  
+ Identifies the `Help` file topic that is associated with the specified object.  
   
-### <a name="return-value"></a>傳回值  
- `CBasePane`不會實作這個方法。 因此，`CBasePane::get_accHelpTopic`一律會傳回`S_FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `CBasePane` does not implement this method. Therefore, `CBasePane::get_accHelpTopic` always returns `S_FALSE`.  
   
-### <a name="remarks"></a>備註  
- 此函式是在 MFC 中的使用中的協助工具支援的一部分。 覆寫這個函式在衍生類別提供物件的相關說明資訊。  
+### <a name="remarks"></a>Remarks  
+ This function is part of the Active Accessibility support in MFC. Override this function in a derived class to provide help information about your object.  
   
-##  <a name="get_accselection"></a>CBasePane::get_accSelection  
- 架構會呼叫這個方法來擷取此物件的所選子系。  
+##  <a name="get_accselection"></a>  CBasePane::get_accSelection  
+ The framework calls this method to retrieve the selected children of this object.  
   
 ```  
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pvarChildren`  
- 接收識別所選的子系的資訊。  
+ Receives information that identifies the selected children.  
   
-### <a name="return-value"></a>傳回值  
- `CBasePane`不會實作這個方法。 如果 `pvarChildren` 為 `NULL`，這個方法會傳回 `E_INVALIDARG`。 否則，這個方法會傳回`DISP_E_MEMBERNOTFOUND`。  
+### <a name="return-value"></a>Return Value  
+ `CBasePane` does not implement this method. If `pvarChildren` is `NULL`, this method returns `E_INVALIDARG`. Otherwise, this method returns `DISP_E_MEMBERNOTFOUND`.  
   
-### <a name="remarks"></a>備註  
- 此函式是在 MFC 中的使用中的協助工具支援的一部分。 如果您有無視窗的 ActiveX 控制項以外的非視窗型使用者介面項目，請覆寫這個函式在衍生類別中。  
+### <a name="remarks"></a>Remarks  
+ This function is part of the Active Accessibility support in MFC. Override this function in a derived class if you have non-windowed user interface elements other than windowless ActiveX controls.  
   
-##  <a name="getcaptionheight"></a>CBasePane::GetCaptionHeight  
- 傳回標題高度。  
+##  <a name="getcaptionheight"></a>  CBasePane::GetCaptionHeight  
+ Returns the caption height.  
   
 ```  
 virtual int GetCaptionHeight() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 標題高度。  
+### <a name="return-value"></a>Return Value  
+ The caption height.  
   
-##  <a name="getcontrolbarstyle"></a>CBasePane::GetControlBarStyle  
- 傳回的控制列的樣式。  
+##  <a name="getcontrolbarstyle"></a>  CBasePane::GetControlBarStyle  
+ Returns the control bar style.  
   
 ```  
 virtual DWORD GetControlBarStyle() const 
 ```  
   
-### <a name="return-value"></a>傳回值  
- AFX_CBRS_ 旗標的位元 OR 組合。  
+### <a name="return-value"></a>Return Value  
+ A bitwise-OR combination of AFX_CBRS_ flags.  
   
-### <a name="remarks"></a>備註  
- 傳回值是以下的可能值的組合。  
+### <a name="remarks"></a>Remarks  
+ The return value is a combination of the following possible values.  
   
-|樣式|說明|  
+|Style|Description|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|可控制列浮點數。|  
-|`AFX_CBRS_AUTOHIDE`|啟用自動隱藏模式。|  
-|`AFX_CBRS_RESIZE`|可調整大小的控制列。 當設定這個旗標時，控制列可以放置在可停駐窗格。|  
-|`AFX_CBRS_CLOSE`|啟用隱藏的控制列。|  
+|`AFX_CBRS_FLOAT`|Makes the control bar float.|  
+|`AFX_CBRS_AUTOHIDE`|Enables auto-hide mode.|  
+|`AFX_CBRS_RESIZE`|Enables resizing of the control bar. When this flag is set, the control bar can be placed in a dockable pane.|  
+|`AFX_CBRS_CLOSE`|Enables hiding of the control bar.|  
   
-##  <a name="getcurrentalignment"></a>CBasePane::GetCurrentAlignment  
- 傳回目前窗格對齊方式。  
+##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment  
+ Returns the current pane alignment.  
   
 ```  
 virtual DWORD GetCurrentAlignment() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 控制列目前的對齊方式。 下表顯示可能的值︰  
+### <a name="return-value"></a>Return Value  
+ The current alignment of the control bar. The following table shows the possible values:  
   
-|值|對齊|  
+|Value|Alignment|  
 |-----------|---------------|  
-|`CBRS_ALIGN_LEFT`|靠左的對齊。|  
-|`CBRS_ALIGN_RIGHT`|靠右對齊。|  
-|`CBRS_ALIGN_TOP`|靠上對齊。|  
-|`CBRS_ALIGN_BOTTOM`|靠下對齊。|  
+|`CBRS_ALIGN_LEFT`|Left alignment.|  
+|`CBRS_ALIGN_RIGHT`|Right alignment.|  
+|`CBRS_ALIGN_TOP`|Top alignment.|  
+|`CBRS_ALIGN_BOTTOM`|Bottom alignment.|  
   
-##  <a name="getdockingmode"></a>CBasePane::GetDockingMode  
- 傳回目前停駐窗格的模式。  
+##  <a name="getdockingmode"></a>  CBasePane::GetDockingMode  
+ Returns the current docking mode for the pane.  
   
 ```  
 virtual AFX_DOCK_TYPE GetDockingMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果拖曳窗格 DT_STANDARD 會以在螢幕上拖曳矩形。 DT_IMMEDIATE 如果拖曳窗格的內容。  
+### <a name="return-value"></a>Return Value  
+ DT_STANDARD if dragging the pane is indicated on the screen by a drag rectangle. DT_IMMEDIATE if the contents of the pane are dragged.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法來判斷目前停駐窗格的模式。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to determine the current docking mode of the pane.  
   
- 如果`CBasePane::m_dockMode`是未定義 (DT_UNDEFINED)，然後停駐模式取自全域停駐模式 ( `AFX_GLOBAL_DATA::m_dockModeGlobal`)。  
+ If `CBasePane::m_dockMode` is undefined (DT_UNDEFINED), then the docking mode is taken from the global docking mode ( `AFX_GLOBAL_DATA::m_dockModeGlobal`).  
   
- 藉由設定`m_dockMode`或覆寫`GetDockingMode`您可以控制每個窗格的停駐模式。  
+ By setting `m_dockMode` or overriding `GetDockingMode` you can control the docking mode for each pane.  
   
-##  <a name="getdocksiteframewnd"></a>CBasePane::GetDockSiteFrameWnd  
- 傳回的指標[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)物件在停駐窗格。  
+##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd  
+ Returns a pointer to the [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)object where the pane is docked.  
   
 ```  
 virtual CWnd* GetDockSiteFrameWnd() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 窗格的停駐位置指標。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the dock site of the pane.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來擷取窗格的停駐位置的指標。 如果窗格浮動窗格停駐於主框架中，如果主框架視窗或迷你框架視窗可以是停駐位置。  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve a pointer to the dock site of the pane. The dock site can be either a main frame window if the pane is docked to the main frame, or a mini-frame window if the pane is floating.  
   
-##  <a name="getenabledalignment"></a>CBasePane::GetEnabledAlignment  
- 傳回套用至 「 窗格 CBRS_ALIGN_ 樣式。  
+##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment  
+ Returns the CBRS_ALIGN_ styles that are applied to the pane.  
   
 ```  
 virtual DWORD GetEnabledAlignment() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- CBRS_ALIGN_ 樣式的組合。 下表顯示可能的樣式︰  
+### <a name="return-value"></a>Return Value  
+ A combination of CBRS_ALIGN_ styles. The following table shows the possible styles:  
   
-|旗標|已啟用的對齊方式|  
+|Flag|Enabled alignment|  
 |----------|-----------------------|  
-|`CBRS_ALIGN_LEFT`|左。|  
-|`CBRS_ALIGN_RIGHT`|權限。|  
-|`CBRS_ALIGN_TOP`|最上方。|  
-|`CBRS_ALIGN_BOTTOM`|下方。|  
-|`CBRS_ALIGN_ANY`|所有的旗標的組合。|  
+|`CBRS_ALIGN_LEFT`|Left.|  
+|`CBRS_ALIGN_RIGHT`|Right.|  
+|`CBRS_ALIGN_TOP`|Top.|  
+|`CBRS_ALIGN_BOTTOM`|Bottom.|  
+|`CBRS_ALIGN_ANY`|Combination of all flags.|  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來判斷窗格的已啟用對齊方式。 已啟用的對齊表示側邊窗格停駐於主框架視窗。  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine the enabled alignment for the pane. Enabled alignment means the sides of the main frame window that a pane can be docked to.  
   
- 使用啟用停駐對齊[CBasePane::EnableDocking](#enabledocking)。  
+ Enable docking alignment by using [CBasePane::EnableDocking](#enabledocking).  
   
-##  <a name="getmfcstyle"></a>CBasePane::GetMFCStyle  
- 傳回特定 MFC 的窗格樣式。  
+##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle  
+ Returns the pane styles that are specific to MFC.  
   
 ```  
 virtual DWORD GetMFCStyle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 特定的程式庫 (AFX_CBRS_) 窗格樣式的組合。  
+### <a name="return-value"></a>Return Value  
+ A combination of library-specific (AFX_CBRS_) pane styles.  
   
-##  <a name="getpaneicon"></a>CBasePane::GetPaneIcon  
- 傳回窗格圖示的控制代碼。  
+##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon  
+ Returns a handle to the pane icon.  
   
 ```  
 virtual HICON GetPaneIcon(BOOL bBigIcon);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bBigIcon`  
- 指定 32 像素 32 像素圖示，如果`TRUE`; 指定 16 像素 16 像素圖示，如果`FALSE`。  
+ Specifies a 32 pixel by 32 pixel icon if `TRUE`; specifies a 16 pixel by 16 pixel icon if `FALSE`.  
   
-### <a name="return-value"></a>傳回值  
- 窗格圖示的控制代碼。 如果不成功，傳回`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A handle to the pane icon. If unsuccessful, returns `NULL`.  
   
-### <a name="remarks"></a>備註  
- 預設實作會呼叫[CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon)。  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls [CWnd::GetIcon](../../mfc/reference/cwnd-class.md#geticon).  
   
-##  <a name="getpanerow"></a>CBasePane::GetPaneRow  
- 傳回的指標[CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)物件在停駐窗格。  
+##  <a name="getpanerow"></a>  CBasePane::GetPaneRow  
+ Returns a pointer to the [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)object where the pane is docked.  
   
 ```  
 CDockingPanesRow* GetPaneRow();
 ```  
   
-### <a name="return-value"></a>傳回值  
- 指標`CDockingPanesRow`停駐窗格中，如果或`NULL`如果它浮動窗格。  
+### <a name="return-value"></a>Return Value  
+ A pointer to `CDockingPanesRow` if the pane is docked, or `NULL` if it is floating.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來存取資料列會在停駐窗格。 例如，若要排列窗格中的特定資料列，呼叫`GetPaneRow`，然後呼叫[CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes)。  
+### <a name="remarks"></a>Remarks  
+ Call this method to access the row where a pane is docked. For example, to arrange the panes in a particular row, call `GetPaneRow` and then call [CDockingPanesRow::ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).  
   
-##  <a name="getpanestyle"></a>CBasePane::GetPaneStyle  
- 傳回的窗格中的樣式。  
+##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle  
+ Returns the pane style.  
   
 ```  
 virtual DWORD GetPaneStyle() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 控制列的樣式 （包括 CBRS_ 樣式） 所設定的組合[CBasePane::SetPaneStyle](#setpanestyle)在建立時的方法。  
+### <a name="return-value"></a>Return Value  
+ A combination of control bar styles (including CBRS_ styles) that was set by the [CBasePane::SetPaneStyle](#setpanestyle) method at creation time.  
   
-##  <a name="getparentdocksite"></a>CBasePane::GetParentDockSite  
- 傳回父停駐位置的指標。  
+##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite  
+ Returns a pointer to the parent dock site.  
   
 ```  
 virtual CDockSite* GetParentDockSite() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 父停駐站台。  
+### <a name="return-value"></a>Return Value  
+ The parent dock site.  
   
-##  <a name="getparentminiframe"></a>CBasePane::GetParentMiniFrame  
- 傳回父迷你框架視窗的指標。  
+##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame  
+ Returns a pointer to the parent mini-frame window.  
   
 ```  
 virtual CPaneFrameWnd* GetParentMiniFrame(BOOL bNoAssert=FALSE) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bNoAssert`  
- 如果`TRUE`，這個方法不會檢查非有效的指標。 如果您在應用程式結束時呼叫這個方法，將此參數設定為`TRUE`。  
+ If `TRUE`, this method does not check for non-valid pointers. If you call this method when your application exits, set this parameter to `TRUE`.  
   
-### <a name="return-value"></a>傳回值  
- 父迷你框架視窗窗格浮動窗格; 如果有效的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to the parent mini-frame window if the pane is floating; otherwise `NULL`.  
   
-### <a name="remarks"></a>備註  
- 呼叫此函式可擷取父迷你框架視窗的指標。 這個方法逐一查看所有父系，並檢查物件衍生自[CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)。  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve a pointer to the parent mini-frame window. This method iterates through all parents and checks for an object derived from [CPaneFrameWnd Class](../../mfc/reference/cpaneframewnd-class.md).  
   
- 使用`GetParentMiniFrame`來判斷是否浮動窗格。  
+ Use `GetParentMiniFrame` to determine whether the pane is floating.  
   
-##  <a name="getparenttabbedpane"></a>CBasePane::GetParentTabbedPane  
- 傳回父索引標籤式窗格的指標。  
+##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane  
+ Returns a pointer to the parent tabbed pane.  
   
 ```  
 CBaseTabbedPane* GetParentTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- 如果有的話，父索引標籤式窗格的指標否則`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent tabbed pane if it exists; otherwise `NULL`.  
   
-##  <a name="getparenttabwnd"></a>CBasePane::GetParentTabWnd  
- 傳回的索引標籤內的父視窗的指標。  
+##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd  
+ Returns a pointer to the parent window that is inside a tab.  
   
 ```  
 CMFCBaseTabCtrl* GetParentTabWnd(HWND& hWndTab) const;  
 ```  
   
-### <a name="parameters"></a>參數  
- [輸出] `hWndTab`  
- 如果傳回的值不是`NULL`，這個參數會包含父索引標籤式視窗的控制代碼。  
+### <a name="parameters"></a>Parameters  
+ [out] `hWndTab`  
+ If the return value is not `NULL`, this parameter contains the handle to the parent tabbed window.  
   
-### <a name="return-value"></a>傳回值  
- 父代的有效指標的索引標籤式視窗或`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to the parent tabbed window or `NULL`.  
   
-### <a name="remarks"></a>備註  
- 您可以使用此函式來擷取父索引標籤式視窗的指標。 有時並不足夠呼叫`GetParent`，因為窗格可能會在停駐的包裝函式 ( [CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)) 或內部窗格配接器 ( [CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md))。 使用`GetParentTabWnd`能夠擷取有效的指標，在這些情況下 （假設父代索引標籤式的視窗）。  
+### <a name="remarks"></a>Remarks  
+ Use this function to retrieve a pointer to the parent tabbed window. Sometimes it is not enough to call `GetParent`, because a pane may be inside a docking wrapper ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)) or inside a pane adapter ( [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md)). By using `GetParentTabWnd` you will be able to retrieve a valid pointer in those cases (assuming that the parent is a tabbed window).  
   
-##  <a name="getrecentvisiblestate"></a>CBasePane::GetRecentVisibleState  
- 從封存還原窗格時，架構會呼叫這個方法。  
+##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState  
+ The framework calls this method when a pane is restored from an archive.  
   
 ```  
 virtual BOOL GetRecentVisibleState() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- A`BOOL`指定最近的可見狀態。 如果`TRUE`，窗格會是可見時，序列化，而且應該是可見時還原。 如果`FALSE`，當序列化和還原時，應該隱藏時，已隱藏窗格。  
+### <a name="return-value"></a>Return Value  
+ A `BOOL` that specifies the recent visible state. If `TRUE`, the pane was visible when serialized and should be visible when restored. If `FALSE`, the pane was hidden when serialized and should be hidden when restored.  
   
-##  <a name="hideinprintpreviewmode"></a>CBasePane::HideInPrintPreviewMode  
- 指定是否在預覽列印中隱藏窗格。  
+##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode  
+ Specifies whether the pane is hidden in print preview.  
   
 ```  
 virtual BOOL HideInPrintPreviewMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格不會顯示在預覽列印。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is not shown in print preview; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 基底窗格不會顯示在預覽列印中。 因此，這個方法一律會傳回`TRUE`。  
+### <a name="remarks"></a>Remarks  
+ Base panes are not shown in print preview. Therefore, this method always returns `TRUE`.  
   
-##  <a name="insertpane"></a>CBasePane::InsertPane  
- 連接管理員會向指定的窗格。  
+##  <a name="insertpane"></a>  CBasePane::InsertPane  
+ Registers the specified pane with the docking manager.  
   
 ```  
 BOOL InsertPane(
@@ -1093,129 +1155,129 @@ BOOL InsertPane(
     BOOL bAfter = TRUE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pControlBar`  
- 要插入窗格指標。  
+ A pointer to the pane to insert.  
   
  [in] `pTarget`  
- 指標，相鄰的窗格。  
+ A pointer to the adjacent pane.  
   
  [in] `bAfter`  
- 如果`TRUE`，`pControlBar`後面插入`pTarget`。 如果`FALSE`，`pControlBar`之前，插入`pTarget`。  
+ If `TRUE`, `pControlBar` is inserted after `pTarget`. If `FALSE`, `pControlBar` is inserted before `pTarget`.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果方法成功，`FALSE`否則。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the method succeeds, `FALSE` otherwise.  
   
-##  <a name="isaccessibilitycompatible"></a>CBasePane::IsAccessibilityCompatible  
- 指定窗格是否支援使用中的協助工具。  
+##  <a name="isaccessibilitycompatible"></a>  CBasePane::IsAccessibilityCompatible  
+ Specifies whether the pane supports Active Accessibility.  
   
 ```  
 virtual BOOL IsAccessibilityCompatible();
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格支援使用中的存取範圍;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane supports Active Accessibility; otherwise, `FALSE`.  
   
-##  <a name="isautohidemode"></a>CBasePane::IsAutoHideMode  
- 決定是否自動隱藏模式中的窗格。  
+##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode  
+ Determines whether a pane is in auto-hide mode.  
   
 ```  
 virtual BOOL IsAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格處於自動隱藏模式;否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is in auto-hide mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 基底窗格無法自動隱藏。 這個方法一律會傳回 `FALSE`。  
+### <a name="remarks"></a>Remarks  
+ Base panes cannot auto-hide. This method always returns `FALSE`.  
   
-##  <a name="isdialogcontrol"></a>CBasePane::IsDialogControl  
- 指定的窗格是否對話方塊控制項。  
+##  <a name="isdialogcontrol"></a>  CBasePane::IsDialogControl  
+ Specifies whether the pane is a dialog box control.  
   
 ```  
 BOOL IsDialogControl() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格對話方塊控制項。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is a dialog box control; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會使用這個方法，以確保所有窗格的版面配置一致性。  
+### <a name="remarks"></a>Remarks  
+ The framework uses this method to ensure layout consistency for all panes.  
   
-##  <a name="isdocked"></a>CBasePane::IsDocked  
- 決定是否要停駐窗格。  
+##  <a name="isdocked"></a>  CBasePane::IsDocked  
+ Determines whether the pane is docked.  
   
 ```  
 virtual BOOL IsDocked() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格的父系不是迷你框架，或與另一個窗格; 的迷你框架中 窗格浮動否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the parent of the pane is not a mini-frame or if the pane is floating in a mini-frame with another pane; otherwise, `FALSE`.  
   
-##  <a name="isfloating"></a>CBasePane::IsFloating  
- 決定是否浮動窗格。  
+##  <a name="isfloating"></a>  CBasePane::IsFloating  
+ Determines whether the pane is floating.  
   
 ```  
 virtual BOOL IsFloating() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果浮動窗格;，否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is floating; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法傳回的相反值[CBasePane::IsDocked](#isdocked)。  
+### <a name="remarks"></a>Remarks  
+ This method returns the opposite value of [CBasePane::IsDocked](#isdocked).  
   
-##  <a name="ishorizontal"></a>CBasePane::IsHorizontal  
- 決定是否要水平固定窗格。  
+##  <a name="ishorizontal"></a>  CBasePane::IsHorizontal  
+ Determines whether the pane is docked horizontally.  
   
 ```  
 virtual BOOL IsHorizontal() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格即停駐水平空間。，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is docked horizontally; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 預設實作會檢查目前的停駐對齊的`CBRS_ORIENT_HORZ`。  
+### <a name="remarks"></a>Remarks  
+ The default implementation checks the current docking alignment for `CBRS_ORIENT_HORZ`.  
   
-##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane::IsInFloatingMultiPaneFrameWnd  
- 指定是否在多窗格框架視窗窗格 ( [CMultiPaneFrameWnd 類別](../../mfc/reference/cmultipaneframewnd-class.md))。  
+##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd  
+ Specifies whether the pane is in a multi-pane frame window ( [CMultiPaneFrameWnd Class](../../mfc/reference/cmultipaneframewnd-class.md)).  
   
 ```  
 virtual BOOL IsInFloatingMultiPaneFrameWnd() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格中的多窗格框架視窗。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is in a multi-pane frame window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 多窗格在框架視窗中浮動只可停駐窗格。 因此，`CBasePane::IsInFloatingMultiPaneFrameWnd`一律會傳回`FALSE`。  
+### <a name="remarks"></a>Remarks  
+ Only dockable panes can float in a multi-pane frame window. Therefore, `CBasePane::IsInFloatingMultiPaneFrameWnd` always returns `FALSE`.  
   
-##  <a name="ismditabbed"></a>CBasePane::IsMDITabbed  
- 判斷是否已加入 MDI 子視窗做為索引標籤式文件 窗格。  
+##  <a name="ismditabbed"></a>  CBasePane::IsMDITabbed  
+ Determines whether the pane has been added to an MDI child window as a tabbed document.  
   
 ```  
 virtual BOOL IsMDITabbed() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格加入至 MDI 子視窗做為索引標籤式文件。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was added to an MDI child window as a tabbed document; otherwise, `FALSE`.  
   
-##  <a name="ispanevisible"></a>CBasePane::IsPaneVisible  
- 指定是否`WS_VISIBLE`旗標設定窗格。  
+##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible  
+ Specifies whether the `WS_VISIBLE` flag is set for the pane.  
   
 ```  
 BOOL IsPaneVisible() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果`WS_VISIBLE`設定，否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if `WS_VISIBLE` is set; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用[CBasePane::IsVisible](#isvisible)以判斷窗格可見性。  
+### <a name="remarks"></a>Remarks  
+ Use [CBasePane::IsVisible](#isvisible) to determine pane visibility.  
   
-##  <a name="ispointneardocksite"></a>CBasePane::IsPointNearDockSite  
- 判斷指定的點是否停駐位置附近。  
+##  <a name="ispointneardocksite"></a>  CBasePane::IsPointNearDockSite  
+ Determines whether a specified point is near the dock site.  
   
 ```  
 BOOL IsPointNearDockSite(
@@ -1224,77 +1286,77 @@ BOOL IsPointNearDockSite(
     BOOL& bOuterEdge) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 指定的點。  
+ The specified point.  
   
- [輸出] `dwBarAlignment`  
- 指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，並`CBRS_ALIGN_BOTTOM`  
+ [out] `dwBarAlignment`  
+ Specifies which edge the point is near. Possible values are `CBRS_ALIGN_LEFT`, `CBRS_ALIGN_RIGHT`, `CBRS_ALIGN_TOP`, and `CBRS_ALIGN_BOTTOM`  
   
- [輸出] `bOuterEdge`  
- `TRUE`如果點很近外框的停駐位置。`FALSE`否則。  
+ [out] `bOuterEdge`  
+ `TRUE` if the point is near the outer border of the dock site; `FALSE` otherwise.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果點附近的停駐位置。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the point is near the dock site; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 重點是停駐位置附近時中設定連接管理員中的敏感度。 預設區分大小寫為 15 像素。  
+### <a name="remarks"></a>Remarks  
+ The point is near the dock site when it is within the sensitivity set in the docking manager. The default sensitivity is 15 pixels.  
   
-##  <a name="isresizable"></a>CBasePane::IsResizable  
- 判斷是否可以調整窗格的大小。  
+##  <a name="isresizable"></a>  CBasePane::IsResizable  
+ Determines whether the pane can be resized.  
   
 ```  
 virtual BOOL IsResizable() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果使用者，可以調整窗格的大小否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be resized by the user; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 窗格[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)可調整大小。  
+### <a name="remarks"></a>Remarks  
+ Panes of [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) can be resized.  
   
- 狀態列 ( [CMFCStatusBar 類別](../../mfc/reference/cmfcstatusbar-class.md)) 和停駐列 ( [CDockSite 類別](../../mfc/reference/cdocksite-class.md)) 無法調整大小。  
+ The status bar ( [CMFCStatusBar Class](../../mfc/reference/cmfcstatusbar-class.md)) and the dock bar ( [CDockSite Class](../../mfc/reference/cdocksite-class.md)) cannot be resized.  
   
-##  <a name="isrestoredfromregistry"></a>CBasePane::IsRestoredFromRegistry  
- 決定是否從登錄還原窗格。  
+##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry  
+ Determines whether the pane is restored from the registry.  
   
 ```  
 virtual BOOL IsRestoredFromRegistry() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格還原登錄。否則， `FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is restored from the registry; otherwise, `FALSE`.  
   
-##  <a name="istabbed"></a>CBasePane::IsTabbed  
- 判斷是否已插入的索引標籤式視窗索引標籤控制項 窗格。  
+##  <a name="istabbed"></a>  CBasePane::IsTabbed  
+ Determines whether the pane has been inserted in the tab control of a tabbed window.  
   
 ```  
 virtual BOOL IsTabbed() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果控制列插入的索引標籤式視窗中，索引標籤否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the control bar is inserted in a tab of a tabbed window; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 這個方法擷取直屬父的指標，並判斷是否在父系的執行階段類別[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。  
+### <a name="remarks"></a>Remarks  
+ This method retrieves a pointer to the immediate parent and determines if the parent's runtime class is [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md).  
   
-##  <a name="isvisible"></a>CBasePane::IsVisible  
- 決定窗格是否可見。  
+##  <a name="isvisible"></a>  CBasePane::IsVisible  
+ Determines whether the pane is visible.  
   
 ```  
 virtual BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果窗格是可見的。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane is visible; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 使用這個方法，以判斷窗格的可見性。 請勿使用`::IsWindowVisible`。  
+### <a name="remarks"></a>Remarks  
+ Use this method to determine the visibility of a pane. Do not use `::IsWindowVisible`.  
   
- 如果不索引標籤式窗格 (請參閱[CBasePane::IsTabbed](#istabbed))，這個方法會檢查`WS_VISIBLE`樣式。 如果索引標籤式窗格中，這個方法會檢查父索引標籤式視窗的可見性。 如果父視窗為可見，函式會檢查窗格 索引標籤使用的可見性[CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)。  
+ If the pane is not tabbed (see [CBasePane::IsTabbed](#istabbed)), this method checks for the `WS_VISIBLE` style. If the pane is tabbed, this method checks the visibility of the parent tabbed window. If the parent window is visible, the function checks the visibility of the pane tab using [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).  
   
-##  <a name="loadstate"></a>CBasePane::LoadState  
- 從登錄載入窗格的狀態。  
+##  <a name="loadstate"></a>  CBasePane::LoadState  
+ Loads the pane's state from the registry.  
   
 ```  
 virtual BOOL LoadState(
@@ -1303,24 +1365,24 @@ virtual BOOL LoadState(
     UINT uiID=(UINT)-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 設定檔名稱。  
+ Profile name.  
   
  [in] `nIndex`  
- 設定檔的索引。  
+ Profile index.  
   
  [in] `uiID`  
- 窗格的識別碼。  
+ Pane ID.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果已成功; 載入窗格狀態否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane state was loaded successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 架構會呼叫這個方法，以從登錄載入窗格狀態。 若要載入儲存的其他資訊在衍生類別中覆寫它[CBasePane::SaveState](#savestate)。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method to load the pane state from the registry. Override it in a derived class to load additional information saved by [CBasePane::SaveState](#savestate).  
   
-##  <a name="movewindow"></a>CBasePane::MoveWindow  
- 移動 [] 窗格。  
+##  <a name="movewindow"></a>  CBasePane::MoveWindow  
+ Moves the pane.  
   
 ```  
 virtual HDWP MoveWindow(
@@ -1329,40 +1391,40 @@ virtual HDWP MoveWindow(
     HDWP hdwp = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- 指定新的位置和大小 窗格的矩形。  
+ A rectangle specifying the new location and size of the pane.  
   
  [in] `bRepaint`  
- 如果`TRUE`，窗格會重新繪製。 如果`FALSE`，不會重新繪製的窗格。  
+ If `TRUE`, the pane is repainted. If `FALSE`, the pane is not repainted.  
   
  [in] `hdwp`  
- 延後的視窗位置結構的控制代碼。  
+ Handle to a deferred window position structure.  
   
-### <a name="return-value"></a>傳回值  
- 延後的視窗位置結構的控制代碼或`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A handle to a deferred window position structure, or `NULL`.  
   
-### <a name="remarks"></a>備註  
- 如果您傳遞`NULL`為`hdwp`參數，這個方法通常移動的視窗。 如果您傳遞的控制代碼，這個方法會執行延遲的視窗移動。 您可以藉由呼叫中取得控制代碼[BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672)或儲存的先前呼叫這個方法傳回的值。  
+### <a name="remarks"></a>Remarks  
+ If you pass `NULL` as the `hdwp` parameter, this method moves the window normally. If you pass a handle, this method performs a deferred window move. You can obtain a handle by calling [BeginDeferWindowPos](http://msdn.microsoft.com/library/windows/desktop/ms632672) or by storing the return value of a previous call to this method.  
   
-##  <a name="onafterchangeparent"></a>CBasePane::OnAfterChangeParent  
- 窗格的父變更之後，由框架呼叫。  
+##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent  
+ Called by the framework after the pane's parent changes.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndOldParent`  
- 先前的父代指標。  
+ A pointer to the previous parent.  
   
-### <a name="remarks"></a>備註  
- 窗格的父項目變更，通常是因為停駐或浮動作業之後，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method after the pane's parent changes, usually because of a docking or floating operation.  
   
- 預設實作不做任何動作。  
+ The default implementation does nothing.  
   
-##  <a name="onbeforechangeparent"></a>CBasePane::OnBeforeChangeParent  
- 窗格會變更其父視窗之前，由架構呼叫。  
+##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent  
+ Called by the framework just before the pane changes its parent window.  
   
 ```  
 virtual void OnBeforeChangeParent(
@@ -1370,41 +1432,41 @@ virtual void OnBeforeChangeParent(
     BOOL bDelay=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndNewParent`  
- 新的父視窗的指標。  
+ A pointer to a new parent window.  
   
  [in] `bDelay`  
- 指定是否必須延遲版面配置調整。  
+ Specifies whether layout adjustments must be delayed.  
   
-### <a name="remarks"></a>備註  
- 架構之前呼叫這個方法只是窗格的父代的變更，通常是因為停駐、 浮動或自動隱藏 作業。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method just before the pane's parent changes, usually because of a docking, floating, or auto-hide operation.  
   
- 預設實作不做任何動作。  
+ The default implementation does nothing.  
   
-##  <a name="ondrawcaption"></a>CBasePane::OnDrawCaption  
- 繪製標題時，架構會呼叫這個方法。  
+##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption  
+ The framework calls this method when the caption is drawn.  
   
 ```  
 virtual void OnDrawCaption();
 ```  
   
-### <a name="remarks"></a>備註  
- 這個方法沒有任何功能，如`CBasePane`類別。  
+### <a name="remarks"></a>Remarks  
+ This method has no functionality for the `CBasePane` class.  
   
-##  <a name="onmovepanedivider"></a>CBasePane::OnMovePaneDivider  
- 目前未使用這個方法。  
+##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider  
+ This method is currently not used.  
   
 ```  
 virtual void OnMovePaneDivider(CPaneDivider*);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `CPaneDivider*`  
- 未使用。  
+ Not used.  
   
-##  <a name="onpanecontextmenu"></a>CBasePane::OnPaneContextMenu  
- 建置功能表具有窗格的清單時，由架構呼叫。  
+##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu  
+ Called by the framework when it builds a menu that has a list of panes.  
   
 ```  
 virtual void OnPaneContextMenu(
@@ -1412,52 +1474,52 @@ virtual void OnPaneContextMenu(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pParentFrame`  
- 父框架指標。  
+ A pointer to the parent frame.  
   
  [in] `point`  
- 指定的快顯功能表的位置。  
+ Specifies the location of the shortcut menu.  
   
-### <a name="remarks"></a>備註  
- `OnPaneContextMenu`呼叫停駐的管理員會維護屬於目前的框架視窗的窗格的清單。 這個方法將窗格的名稱加入至快顯功能表，並顯示它。 功能表命令顯示或隱藏個別的窗格。  
+### <a name="remarks"></a>Remarks  
+ `OnPaneContextMenu` calls the docking manager, which maintains the list of panes that belong to the current frame window. This method adds the names of the panes to a shortcut menu and displays it. The commands on the menu show or hide individual panes.  
   
- 覆寫這個方法，以自訂此行為。  
+ Override this method to customize this behavior.  
   
-##  <a name="onremovefromminiframe"></a>CBasePane::OnRemoveFromMiniFrame  
- 從其父迷你框架視窗中移除一個窗格時，由架構呼叫。  
+##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame  
+ Called by the framework when a pane is removed from its parent mini frame window.  
   
 ```  
 virtual void OnRemoveFromMiniFrame(CPaneFrameWnd* pMiniFrame);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pMiniFrame`  
- 移除 [] 窗格的迷你框架視窗的指標。  
+ A pointer to a mini-frame window from which the pane is removed.  
   
-### <a name="remarks"></a>備註  
- 從父迷你框架視窗 （因為停駐，比方說） 移除窗格時，架構會呼叫這個方法。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a pane is removed from its parent mini-frame window (as a result of docking, for example).  
   
- 預設實作不做任何動作。  
+ The default implementation does nothing.  
   
-##  <a name="onsetaccdata"></a>CBasePane::OnSetAccData  
- `CBasePane`不使用這個方法。  
+##  <a name="onsetaccdata"></a>  CBasePane::OnSetAccData  
+ `CBasePane` does not use this method.  
   
 ```  
 virtual BOOL OnSetAccData(long lVal);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lVal`  
- 未使用。  
+ Not used.  
   
-### <a name="return-value"></a>傳回值  
- 這個方法一律會傳回 `TRUE`。  
+### <a name="return-value"></a>Return Value  
+ This method always returns `TRUE`.  
   
-### <a name="remarks"></a>備註  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="panefrompoint"></a>CBasePane::PaneFromPoint  
- 傳回包含指定的點的窗格。  
+##  <a name="panefrompoint"></a>  CBasePane::PaneFromPoint  
+ Returns the pane that contains the given point.  
   
 ```  
 CBasePane* PaneFromPoint(
@@ -1467,31 +1529,31 @@ CBasePane* PaneFromPoint(
     CRuntimeClass* pRTCBarType = NULL) const;  
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- 若要檢查的螢幕座標中指定點。  
+ Specifies the point, in screen coordinates, to check.  
   
  [in] `nSensitivity`  
- 搜尋區域增加此數量。 如果指定的點落在增加區域中，窗格並符合搜尋準則。  
+ Increase the search area by this amount. A pane will satisfy the search criteria if the given point falls in the increased area.  
   
  [in] `bExactBar`  
- `TRUE`若要忽略`nSensitivity`參數，否則`FALSE`。  
+ `TRUE` to ignore the `nSensitivity` parameter; otherwise, `FALSE`.  
   
  [in] `pRTCBarType`  
- 如果不是`NULL`，該方法會搜尋窗格指定的型別。  
+ If not `NULL`, the method searches only panes of the specified type.  
   
-### <a name="return-value"></a>傳回值  
- `CBasePane`-衍生物件，其中包含指定的點或`NULL`如果找不到任何窗格。  
+### <a name="return-value"></a>Return Value  
+ The `CBasePane`-derived object that contains the given point, or `NULL` if no pane was found.  
   
-##  <a name="recalclayout"></a>CBasePane::RecalcLayout  
- `CBasePane`不使用這個方法。  
+##  <a name="recalclayout"></a>  CBasePane::RecalcLayout  
+ `CBasePane` does not use this method.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-##  <a name="removepanefromdockmanager"></a>CBasePane::RemovePaneFromDockManager  
- 取消註冊 窗格，並將它從連接管理員清單移除。  
+##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager  
+ Unregisters a pane and removes it from the list in the docking manager.  
   
 ```  
 void RemovePaneFromDockManager(
@@ -1502,24 +1564,24 @@ void RemovePaneFromDockManager(
     CBasePane* pBarReplacement = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- 要移除的窗格指標。  
+ A pointer to a pane to be removed.  
   
  [in] `bDestroy`  
- 如果`TRUE`，終結已移除的窗格。  
+ If `TRUE`, the removed pane is destroyed.  
   
  [in] `bAdjustLayout`  
- 如果`TRUE`，立即調整停駐配置。  
+ If `TRUE`, adjust the docking layout immediately.  
   
  [in] `bAutoHide`  
- 如果`TRUE`，停駐配置相關的自動隱藏列清單。 如果`FALSE`，停駐配置與一般窗格的清單。  
+ If `TRUE`, the docking layout is related to the list of autohide bars. If `FALSE`, the docking layout is related to the list of regular panes.  
   
  [in] `pBarReplacement`  
- 指標，會取代 [移除] 窗格的窗格。  
+ A pointer to a pane that replaces the removed pane.  
   
-##  <a name="savestate"></a>CBasePane::SaveState  
- 將窗格的狀態儲存至登錄。  
+##  <a name="savestate"></a>  CBasePane::SaveState  
+ Saves the pane's state to the registry.  
   
 ```  
 virtual BOOL SaveState(
@@ -1528,113 +1590,113 @@ virtual BOOL SaveState(
     UINT uiID=(UINT)-1);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `lpszProfileName`  
- 設定檔名稱。  
+ Profile name.  
   
  [in] `nIndex`  
- 設定檔的索引。  
+ Profile index.  
   
  [in] `uiID`  
- 窗格的識別碼。  
+ Pane ID.  
   
-### <a name="return-value"></a>傳回值  
- `TRUE`如果儲存的狀態已順利啟動。否則`FALSE`。  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the state was saved successfully; otherwise `FALSE`.  
   
-### <a name="remarks"></a>備註  
- 窗格的狀態儲存至登錄時，架構會呼叫這個方法。 覆寫`SaveState`儲存其他資訊在衍生類別中。  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it saves the pane's state to the registry. Override `SaveState` in a derived class to store additional information.  
   
-##  <a name="selectdefaultfont"></a>CBasePane::SelectDefaultFont  
- 選取指定的裝置內容的預設字型。  
+##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont  
+ Selects the default font for a given device context.  
   
 ```  
 CFont* SelectDefaultFont(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- 裝置內容。  
+ A device context.  
   
-### <a name="return-value"></a>傳回值  
- 預設值的指標[CFont 類別](../../mfc/reference/cfont-class.md)物件。  
+### <a name="return-value"></a>Return Value  
+ A pointer to the default [CFont Class](../../mfc/reference/cfont-class.md) object.  
   
-##  <a name="setcontrolbarstyle"></a>CBasePane::SetControlBarStyle  
- 設定控制項的列樣式。  
+##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle  
+ Sets the control bar style.  
   
 ```  
 virtual void SetControlBarStyle(DWORD dwNewStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwNewStyle`  
- 以下的可能值的位元 OR 組合。  
+ A bitwise-OR combination of the following possible values.  
   
-|樣式|說明|  
+|Style|Description|  
 |-----------|-----------------|  
-|`AFX_CBRS_FLOAT`|可控制列浮點數。|  
-|`AFX_CBRS_AUTOHIDE`|啟用自動隱藏模式。|  
-|`AFX_CBRS_RESIZE`|可調整大小的控制列。 當設定這個旗標時，控制列可以放置在可停駐窗格。|  
-|`AFX_CBRS_CLOSE`|啟用隱藏的控制列。|  
+|`AFX_CBRS_FLOAT`|Makes the control bar float.|  
+|`AFX_CBRS_AUTOHIDE`|Enables auto-hide mode.|  
+|`AFX_CBRS_RESIZE`|Enables resizing of the control bar. When this flag is set, the control bar can be placed in a dockable pane.|  
+|`AFX_CBRS_CLOSE`|Enables hiding of the control bar.|  
   
-##  <a name="setdockingmode"></a>CBasePane::SetDockingMode  
- 設定停駐窗格的模式。  
+##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode  
+ Sets the docking mode for the pane.  
   
 ```  
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dockModeNew`  
- 指定新的停駐模式的窗格。  
+ Specifies the new docking mode for the pane.  
   
-### <a name="remarks"></a>備註  
- 架構支援兩種停駐模式︰ 標準和即時運算。  
+### <a name="remarks"></a>Remarks  
+ The framework supports two docking modes: standard and immediate.  
   
- 在標準停駐模式中，窗格和迷你框架視窗移動使用拖曳矩形。 在即時的停駐模式、 控制列和迷你框架視窗一起移動立即其內容。  
+ In the standard docking mode, panes and mini-frame windows are moved around using a drag rectangle. In the immediate docking mode, control bars and mini-frame windows are moved immediately with their context.  
   
- 一開始，停駐模式由全域定義[CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal)。 您可以設定個別使用每個窗格的停駐模式`SetDockingMode`方法。  
+ Initially, the docking mode is defined globally by [CDockingManager::m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). You can set the docking mode for each pane individually using the `SetDockingMode` method.  
   
-##  <a name="setpanealignment"></a>CBasePane::SetPaneAlignment  
- 設定 [] 窗格中的對齊方式。  
+##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment  
+ Sets the alignment for the pane.  
   
 ```  
 virtual void SetPaneAlignment(DWORD dwAlignment);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwAlignment`  
- 指定新的對齊方式。  
+ Specifies the new alignment.  
   
-### <a name="remarks"></a>備註  
- 通常，架構會呼叫這個方法窗格主框架的一端從停駐到另一個時。  
+### <a name="remarks"></a>Remarks  
+ Usually, the framework calls this method when a pane is docked from one side of the main frame to another.  
   
- 下表顯示可能的值為`dwAlignment`:  
+ The following table shows the possible values for `dwAlignment`:  
   
-|值|對齊|  
+|Value|Alignment|  
 |-----------|---------------|  
-|`CBRS_ALIGN_LEFT`|靠左的對齊。|  
-|`CBRS_ALIGN_RIGHT`|靠右對齊。|  
-|`CBRS_ALIGN_TOP`|靠上對齊。|  
-|`CBRS_ALIGN_BOTTOM`|靠下對齊。|  
+|`CBRS_ALIGN_LEFT`|Left alignment.|  
+|`CBRS_ALIGN_RIGHT`|Right alignment.|  
+|`CBRS_ALIGN_TOP`|Top alignment.|  
+|`CBRS_ALIGN_BOTTOM`|Bottom alignment.|  
   
-##  <a name="setpanestyle"></a>CBasePane::SetPaneStyle  
- 設定窗格的樣式。  
+##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle  
+ Sets the style of the pane.  
   
 ```  
 virtual void SetPaneStyle(DWORD dwNewStyle);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `dwNewStyle`  
- 指定要設定的新樣式。  
+ Specifies the new style to set.  
   
-### <a name="remarks"></a>備註  
- 這個方法可以用來設定任何在 afxres.h 中定義的 CBRS_ 樣式。 因為窗格樣式和窗格對齊方式儲存在一起，設定新的樣式結合目前的對齊，如下所示。  
+### <a name="remarks"></a>Remarks  
+ This method can be used to set any of the CBRS_ styles that are defined in afxres.h. Because pane style and pane alignment are stored together, set the new style by combining it with the current alignment as follows.  
   
  `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`  
   
-##  <a name="setwindowpos"></a>CBasePane::SetWindowPos  
- 變更大小、 位置和疊置順序的窗格。  
+##  <a name="setwindowpos"></a>  CBasePane::SetWindowPos  
+ Changes the size, position, and Z-order of a pane.  
   
 ```  
 virtual HDWP SetWindowPos(
@@ -1647,36 +1709,36 @@ virtual HDWP SetWindowPos(
     HDWP hdwp = NULL);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `pWndInsertAfter`  
- 識別`CWnd`物件前面這`CWnd`疊置順序的物件。 如需詳細資訊，請參閱[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)。  
+ Identifies the `CWnd` object that comes before this `CWnd` object in the Z-order. For more information, see [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
  [in] `x`  
- 指定視窗的左側位置。  
+ Specifies the position of the left side of the window.  
   
  [in] `y`  
- 指定視窗頂端的位置。  
+ Specifies the position of the top of the window.  
   
  [in] `cx`  
- 指定視窗的寬度。  
+ Specifies the width of the window.  
   
  [in] `cy`  
- 指定視窗的高度。  
+ Specifies the height of the window.  
   
  [in] `nFlags`  
- 指定的大小和位置選項。 如需詳細資訊，請參閱[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)。  
+ Specifies size and position options. For more information, see [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).  
   
  [in] `hdwp`  
- 包含一個或多個視窗的大小和位置資訊的結構的控制代碼。  
+ Handle to a structure that contains size and position information for one or more windows.  
   
-### <a name="return-value"></a>傳回值  
- 更新後延後的視窗位置結構的控制代碼或`NULL`。  
+### <a name="return-value"></a>Return Value  
+ A handle to an updated deferred window position structure, or `NULL`.  
   
-### <a name="remarks"></a>備註  
- 如果`pWndInsertAfter`是`NULL`，這個方法會呼叫[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)。 如果`pWndInsertAfter`是非`NULL`，這個方法會呼叫`DeferWindowPos`。  
+### <a name="remarks"></a>Remarks  
+ If `pWndInsertAfter` is `NULL`, this method calls [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). If `pWndInsertAfter` is non- `NULL`, this method calls `DeferWindowPos`.  
   
-##  <a name="showpane"></a>CBasePane::ShowPane  
- 顯示或隱藏窗格。  
+##  <a name="showpane"></a>  CBasePane::ShowPane  
+ Shows or hides the pane.  
   
 ```  
 virtual void ShowPane(
@@ -1685,23 +1747,23 @@ virtual void ShowPane(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- 指定是否要顯示 ( `TRUE`) 或隱藏 ( `FALSE`) 窗格。  
+ Specifies whether to show ( `TRUE`) or hide ( `FALSE`) a pane.  
   
  [in] `bDelay`  
- 如果`TRUE`，重新計算停駐配置會延遲。  
+ If `TRUE`, recalculating the docking layout is delayed.  
   
  [in] `bActivate`  
- 如果`TRUE`，窗格為作用中時顯示。  
+ If `TRUE`, the pane is active when shown.  
   
-### <a name="remarks"></a>備註  
- 這個方法會顯示或隱藏窗格。 使用這個方法，而不是`ShowWindow`因為這個方法會通知相關的停駐管理員相關的變更窗格的可見性。  
+### <a name="remarks"></a>Remarks  
+ This method shows or hides a pane. Use this method instead of `ShowWindow` because this method notifies the relevant docking managers about changes in the pane's visibility.  
   
- 使用[CBasePane::IsVisible](#isvisible)以判斷目前的可見性 窗格。  
+ Use [CBasePane::IsVisible](#isvisible) to determine the current visibility of a pane.  
   
-##  <a name="stretchpane"></a>CBasePane::StretchPane  
- 垂直或水平伸展窗格。  
+##  <a name="stretchpane"></a>  CBasePane::StretchPane  
+ Stretches a pane vertically or horizontally.  
   
 ```  
 virtual CSize StretchPane(
@@ -1709,35 +1771,35 @@ virtual CSize StretchPane(
     BOOL bVert);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  [in] `nLength`  
- 用來拉長窗格長度。  
+ The length by which to stretch the pane.  
   
  [in] `bVert`  
- 如果`TRUE`，垂直延伸 窗格。 如果`FALSE`，水平縮放的窗格。  
+ If `TRUE`, stretch the pane vertically. If `FALSE`, stretch the pane horizontally.  
   
-### <a name="return-value"></a>傳回值  
- [延伸] 窗格的大小。  
+### <a name="return-value"></a>Return Value  
+ The size of the stretched pane.  
   
-##  <a name="undockpane"></a>CBasePane::UndockPane  
- 移除停駐位置、 預設滑桿或目前固定的迷你框架視窗的窗格。  
+##  <a name="undockpane"></a>  CBasePane::UndockPane  
+ Removes the pane from the dock site, default slider, or mini-frame window where it is currently docked.  
   
 ```  
 virtual void UndockPane(BOOL bDelay=FALSE);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `bDelay`  
- 如果為 TRUE，停駐配置時不會重新計算立即。  
+ If TRUE, the docking layout is not recalculated immediately.  
   
-### <a name="remarks"></a>備註  
- 呼叫這個方法來操作窗格狀態，或排除的停駐配置的窗格。  
+### <a name="remarks"></a>Remarks  
+ Call this method to manipulate the pane state or exclude the pane from the docking layout.  
   
- 如果您想要繼續使用此窗格中，呼叫[CBasePane::DockPane](#dockpane)或[CBasePane::FloatPane](#floatpane)之前呼叫這個方法。  
+ If you want to continue to use this pane, call either [CBasePane::DockPane](#dockpane) or [CBasePane::FloatPane](#floatpane) before calling this method.  
   
-## <a name="see-also"></a>另請參閱  
- [階層架構圖表](../../mfc/hierarchy-chart.md)   
- [類別](../../mfc/reference/mfc-classes.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
  [CPane](../../mfc/reference/cbasepane-class.md)   
- [CWnd 類別](../../mfc/reference/cwnd-class.md)
+ [CWnd Class](../../mfc/reference/cwnd-class.md)
 

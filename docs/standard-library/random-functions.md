@@ -1,48 +1,52 @@
 ---
-title: "&lt;random&gt; 函式 | Microsoft Docs"
+title: '&lt;random&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
+helpviewer_keywords:
+- std::generate_canonical
 caps.latest.revision: 10
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3aebef535acb59046fab53d49051df16bd362c3c
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0929e7c6749af19065f42f10ee6c15ab4d4a3e88
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltrandomgt-functions"></a>&lt;random&gt; 函式
+# <a name="ltrandomgt-functions"></a>&lt;random&gt; functions
   
 ##  <a name="generate_canonical"></a>  generate_canonical  
- 從隨機序列傳回浮點值。  
+ Returns a floating-point value from a random sequence.  
   
 > [!NOTE]
->  ISO C++ 標準規定此函式應傳回範圍 [`0`, `1`) 中的值。 Visual Studio 尚未與此條件約束相容。 作為在此範圍中產生值的解決辦法，請使用 [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)。  
+>  The ISO C++ Standard states that this function should return values in the range [ `0`, `1`). Visual Studio is not yet compliant with this constraint. As a workaround to generate values in this range, use [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md).  
   
 ```  
 template <class RealType, size_t Bits, class Generator>  
 RealType generate_canonical(Generator& Gen);
 ```  
   
-### <a name="parameters"></a>參數  
+### <a name="parameters"></a>Parameters  
  `RealType`  
- 浮點整數類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。  
+ The floating point integral type. For possible types, see [\<random>](../standard-library/random.md).  
   
  `Bits`  
- 亂數產生器。  
+ The random number generator.  
   
  `Gen`  
- 亂數產生器。  
+ The random number generator.  
   
-### <a name="remarks"></a>備註  
- 範本函式會重複呼叫 `operator()` 的 `Gen`，並將傳回的值封裝到類型 `x` 的浮點值 `RealType` 中，直到其在 `x` 中收集到指定的尾數位元數為止。 指定的數是 `Bits` (其必須為非零值) 的較小值，以及 `RealType` 中尾數位元的完整數。 第一次呼叫會提供最低位位元數。 函式會傳回 `x`。  
+### <a name="remarks"></a>Remarks  
+ The template function calls `operator()` of `Gen` repeatedly and packs the returned values into a floating-point value `x` of type `RealType` until it has gathered the specified number of mantissa bits in `x`. The specified number is the smaller of `Bits` (which must be nonzero) and the full number of mantissa bits in `RealType`. The first call supplies the lowest-order bits. The function returns `x`.  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

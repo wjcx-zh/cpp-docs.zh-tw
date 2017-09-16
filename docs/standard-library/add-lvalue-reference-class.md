@@ -1,5 +1,5 @@
 ---
-title: "add_lvalue_reference 類別 | Microsoft Docs"
+title: add_lvalue_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_lvalue_reference
 - type_traits/std::add_lvalue_reference
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: a201572ed85d5bcf15435743ac0f8db8f08ede4b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: ce215e667d5a36671a3513a3bbba3b7b1ed70665
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="addlvaluereference-class"></a>add_lvalue_reference Class
-從類型建立類型的參考。  
+Makes reference to type from type.  
   
-## <a name="syntax"></a>語法  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -54,14 +53,14 @@ template <class T>
 using add_lvalue_reference_t = typename add_lvalue_reference<T>::type;  
 ```  
   
-#### <a name="parameters"></a>參數  
+#### <a name="parameters"></a>Parameters  
  `T`  
- 要修改的類型。  
+ The type to modify.  
   
-## <a name="remarks"></a>備註  
- 如果 `T` 是 lvalue 參考，則類型修飾詞的執行個體為修改類型 `T`，否則為 `T&`。  
+## <a name="remarks"></a>Remarks  
+ An instance of the type modifier holds a modified-type that is `T` if `T` is an lvalue reference, otherwise `T&`.  
   
-## <a name="example"></a>範例  
+## <a name="example"></a>Example  
   
 ```cpp  
 #include <type_traits>   
@@ -84,12 +83,12 @@ int main()
 add_lvalue_reference_t<int> == int  
 ```  
   
-## <a name="requirements"></a>需求  
- **標頭：**\<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **命名空間：** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [remove_reference 類別](../standard-library/remove-reference-class.md)
+ [remove_reference Class](../standard-library/remove-reference-class.md)
 

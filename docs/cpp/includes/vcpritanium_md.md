@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9d245749a437213ba08c63e4ce7873809c6b08cb
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 470567843fc883cfcc68533c39f99d57af470e07
 ms.contentlocale: zh-tw
 
 ---
-Windows SDK
+Itanium

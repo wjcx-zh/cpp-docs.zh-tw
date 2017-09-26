@@ -24,6 +24,19 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
+helpviewer_keywords:
+- std::getline [C++]
+- std::stod [C++]
+- std::stof [C++]
+- std::stoi [C++]
+- std::stol [C++]
+- std::stold [C++]
+- std::stoll [C++]
+- std::stoul [C++]
+- std::stoull [C++]
+- std::swap [C++]
+- std::to_string [C++]
+- std::to_wstring [C++]
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
 ms.openlocfilehash: 41a8dd5345b1e857abbd1cd5586a1fabd400eca4

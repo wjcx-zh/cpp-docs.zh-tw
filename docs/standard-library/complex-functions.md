@@ -7,27 +7,48 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- complex/std::abs
-- complex/std::arg
-- complex/std::conj
-- complex/std::cos
-- complex/std::cosh
-- complex/std::exp
-- complex/std::imag
-- complex/std::log
-- complex/std::log10
-- complex/std::norm
-- complex/std::polar
-- complex/std::pow
-- complex/std::real
-- complex/std::sin
-- complex/std::sinh
-- complex/std::sqrt
-- complex/std::tan
-- complex/std::tanh
+- xcomplex/std::abs
+- xcomplex/std::acos
+- xcomplex/std::acosh
+- xcomplex/std::arg
+- xcomplex/std::conj
+- xcomplex/std::cos
+- xcomplex/std::cosh
+- xcomplex/std::exp
+- xxcomplex/std::imag
+- xcomplex/std::log
+- xcomplex/std::log10
+- xcomplex/std::norm
+- xcomplex/std::polar
+- xcomplex/std::pow
+- xxcomplex/std::real
+- xcomplex/std::sin
+- xcomplex/std::sinh
+- xcomplex/std::sqrt
+- xcomplex/std::tan
+- xcomplex/std::tanh
 ms.assetid: 58b14e94-0e0c-493e-8237-8b4d685904a2
 caps.latest.revision: 14
 manager: ghogen
+helpviewer_keywords:
+- std::abs [C++]
+- std::arg [C++]
+- std::conj [C++]
+- std::cos [C++]
+- std::cosh [C++]
+- std::exp [C++]
+- std::imag [C++]
+- std::log [C++]
+- std::log10
+- std::norm [C++]
+- std::polar [C++]
+- std::pow [C++]
+- std::real [C++]
+- std::sin [C++]
+- std::sinh [C++]
+- std::sqrt [C++]
+- std::tan [C++]
+- std::tanh [C++]
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
 ms.openlocfilehash: 928ed213f4605ea1b39d2d5cf92673bc055aaf4a

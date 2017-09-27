@@ -1,88 +1,104 @@
 ---
-title: "乘法類運算子和模數運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "%"
-  - "/"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "% 運算子"
-  - "* 運算子"
-  - "算術運算子 [C++], 乘法運算子"
-  - "除法運算子"
-  - "除法運算子, 乘法運算子"
-  - "模數運算子, C+"
-  - "乘法運算子 [C++], 乘法運算子"
-  - "乘法類運算子 [C++]"
-  - "運算子 [C++], 乘法類"
+title: "乘法類運算子和模數運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '%'
+- /
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], multiplicative
+- arithmetic operators [C++], multiplicative operators
+- modulus operator, C+
+- '* operator'
+- division operator, multiplicative operators
+- '% operator'
+- multiplication operator [C++], multiplicative operators
+- multiplicative operators [C++]
+- division operator
 ms.assetid: b53ea5da-d0b4-40dc-98f3-0aa52d548293
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 乘法類運算子和模數運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b63a36817bb0366d21fba11c5e1e4eccbcc6951f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法類運算子和模數運算子
+## <a name="syntax"></a>語法  
   
 ```  
-expression * expression   
-expression / expression   
+expression * expression   
+expression / expression   
 expression % expression  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  乘法類運算子包括：  
   
--   乘法 \(**\***\)  
+-   乘法 (**\***)  
   
--   除法 \(**\/**\)  
+-   除法 (**/**)  
   
--   模數 \(除法的餘數\) \(`%`\)  
+-   模數 (除法的餘數) (`%`)  
   
  這些二進位運算子具有由左至右的順序關聯性。  
   
- 乘法類運算子接受算術類型的運算元。  模數運算子 \(`%`\) 具有較嚴格的要求，其運算元必須為整數類資料類型 \(若要取得浮點除法的餘數，請使用執行階段函式 [fmod](../c-runtime-library/reference/fmod-fmodf.md)\)。[算術轉換](../misc/arithmetic-conversions.md)中涵蓋的轉換適用於運算元，結果會是轉換後的類型。  
+ 乘法類運算子接受算術類型的運算元。 模數運算子 (`%`) 具有較嚴格的要求，其運算元必須為整數類資料類型  (若要取得浮點除法的餘數，請使用執行階段函式[fmod](../c-runtime-library/reference/fmod-fmodf.md)。)中涵蓋的轉換[標準轉換](standard-conversions.md)適用於運算元，結果會是轉換後的類型。  
   
  乘法運算子會產生第一個運算元與第二個運算元相乘的結果。  
   
  除法運算子會產生第一個運算元除以第二個運算元的結果。  
   
- 模數運算子會產生下列運算式所得出的餘數，其中 *e1* 是第一個運算元且 *e2* 是第二個運算元：*e1* – \(*e1* \/ *e2*\) \* *e2*，其中兩個運算元都是整數類資料類型。  
+ 模數運算子會產生下列運算式中，所提供的其餘部分其中*e1*是第一個運算元和*e2*是第二個： *e1* -(*e1* /  *e2*) \* *e2*，其中兩個運算元都是整數類資料類型。  
   
- 在除法或模數運算式中除以 0 並未定義，而且會產生執行階段錯誤。  因此，下列運算式會產生未定義的錯誤結果：  
+ 在除法或模數運算式中除以 0 並未定義，而且會產生執行階段錯誤。 因此，下列運算式會產生未定義的錯誤結果：  
   
 ```  
 i % 0  
 f / 0.0  
 ```  
   
- 如果乘法、除法或模數運算式的兩個運算元有相同的正負號，則結果為正數。  否則，結果為負數。  模數運算結果的正負號是由實作所定義。  
+ 如果乘法、除法或模數運算式的兩個運算元有相同的正負號，則結果為正數。 否則，結果為負數。 模數運算結果的正負號是由實作所定義。  
   
 > [!NOTE]
 >  由於乘法類運算子所執行的轉換不提供溢位或反向溢位條件，因此，如果乘法類運算的結果無法以轉換後的運算元類型表示，則資訊可能會遺失。  
   
-## Microsoft 特定的  
- 在 Microsoft C\+\+ 中，模數運算式的結果一律與第一個運算元的正負號相同。  
+## <a name="microsoft-specific"></a>Microsoft 特定的  
+ 在 Microsoft C++ 中，模數運算式的結果一律與第一個運算元的正負號相同。  
   
-## END Microsoft 特定的  
- 如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 \(範圍內，忽略正負號\)。  例如，–11 \/ 3 計算的值為 –3.666666666。  該整數除法的結果為 –3。  
+**END Microsoft 特定的**  
+ 如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如，計算的值的-11 / 3 是-3.666666666。 該整數除法的結果是-3。  
   
- 乘法類運算子之間的關聯性是由識別所指定 \(*e1* \/ *e2*\) \* *e2* \+ *e1* % *e2* \=\= *e1*。  
+ 乘法類運算子之間的關聯性由身分識別提供 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
   
-## 範例  
- 下列程式將示範乘法類運算子。  請注意，`10 / 3` 的任一個運算元必須明確轉型為 `float` 類型避免發生截斷，如此在進行除法之前，兩個運算元都會是 `float` 類型。  
+## <a name="example"></a>範例  
+ 下列程式將示範乘法類運算子。 請注意的任一個運算元`10 / 3`必須明確轉換為類型`float`避免發生截斷，如此這兩個運算元都是類型`float`除法之前。  
   
 ```  
 // expre_Multiplicative_Operators.cpp  
@@ -98,8 +114,7 @@ int main() {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 乘法類運算子](../c-language/c-multiplicative-operators.md)

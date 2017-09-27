@@ -1,77 +1,92 @@
 ---
-title: "函式呼叫運算子：() | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "( ) 函式呼叫運算子"
-  - "() 函式呼叫運算子"
-  - "函式呼叫運算子 ()"
-  - "函式呼叫, C++ 函式"
-  - "函式呼叫, operator"
-  - "函式 [C++], 函式呼叫運算子"
-  - "後置運算子"
+title: "函式呼叫運算子: （) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- ( ) function call operator
+- function calls, C++ functions
+- () function call operator
+- postfix operators
+- function calls, operator
+- functions [C++], function-call operator
+- function call operator ( )
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 函式呼叫運算子：()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-函式呼叫運算子後面的後置運算式 **\( \)** 用於指定函式呼叫。  
+---
+# <a name="function-call-operator-"></a>函式呼叫運算子：()
+函式呼叫運算子，後面是後置運算式**（)**，指定函式呼叫。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
 postfix-expression   
 ( [argument-expression-list ] )  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  函式呼叫運算子的引數是以逗號分隔的零或多個運算式，即函式的實際引數。  
   
- *postfix\-expression* 必須評估為函式位址 \(例如，函式識別項或函式指標的值\)，而 *argument\-expression\-list* 是運算式的清單 \(以逗號分隔\)，其值 \(「引數」\) 會傳遞至函式。  *argument\-expression\-list* 引數可以是空的。  
+ *後置運算式*必須評估為函式位址 （例如，函式識別項或函式指標的值） 和*引數運算式清單*是一份 （分隔的運算式以逗號分隔） 的值 （引數） 會傳遞至函式。 *argument-expression-list* 引數可以是空的。  
   
- *postfix\-expression* 必須是下列其中一種類型：  
+ *後置運算式*必須是其中一種類型：  
   
--   傳回類型 `T` 的函式。  如以下範例宣告所示  
+-   傳回類型 `T` 的函式。 如以下範例宣告所示  
   
     ```  
     T func( int i )  
     ```  
   
--   傳回類型 `T` 之函式的指標。  如以下範例宣告所示  
+-   傳回類型 `T` 之函式的指標。 如以下範例宣告所示  
   
     ```  
     T (*func)( int i )  
     ```  
   
--   傳回類型 `T` 之函式的參考。  如以下範例宣告所示  
+-   傳回類型 `T` 之函式的參考。 如以下範例宣告所示  
   
     ```  
     T (&func)(int i)  
     ```  
   
--   傳回類型 `T` 的成員指標函式取值 \(Dereference\)。  函式呼叫的範例如下  
+-   傳回類型 `T` 的成員指標函式取值 (Dereference)。 函式呼叫的範例如下  
   
     ```  
     (pObject->*pmf)();  
     (Object.*pmf)();  
     ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例呼叫具有三個引數的標準程式庫函式 `strcat_s`：  
   
 ```  
@@ -81,7 +96,7 @@ postfix-expression
 #include <iostream>  
 #include <string>  
   
-// STL name space  
+// C++ Standard Library name space  
 using namespace std;  
   
 int main()  
@@ -100,9 +115,12 @@ int main()
 }  
 ```  
   
-  **Welcome to C\+\+**   
-## 函式呼叫結果  
- 除非函式宣告為參考類型，否則函式呼叫會判斷值為右值。  具有參考傳回類型的函式會評估為左值，而且可以在指派陳述式的左邊使用，如下所示：  
+```Output  
+Welcome to C++  
+```  
+  
+## <a name="function-call-results"></a>函式呼叫結果  
+ 除非函式宣告為參考類型，否則函式呼叫會判斷值為右值。 具有參考傳回型別的函式會評估為左值，而且可以在指派陳述式的左邊使用，如下所示：  
   
 ```  
 // expre_Function_Call_Results.cpp  
@@ -134,9 +152,9 @@ int main()
 }  
 ```  
   
- 上述程式碼會定義稱為 `Point` 的類別，其中包含表示 *x* 和 *y* 座標的私用資料物件。  這些資料物件必須經過修改，而且必須擷取其值。  這個程式只是這種類別的數項設計之一，使用 `GetX` 和 `SetX` 或 `GetY` 和 `SetY` 則是另一種可能的設計方式。  
+ 上述程式碼定義類別，稱為`Point`，其中包含私用資料物件來代表*x*和*y*座標。 這些資料物件必須經過修改，而且必須擷取其值。 這個程式只是這種類別的數項設計之一，使用 `GetX` 和 `SetX` 或 `GetY` 和 `SetY` 則是另一種可能的設計方式。  
   
- 傳回類別類型、類別類型的指標或類別類型的參考之函式可以做為成員選擇運算子的左運算元使用。  因此，下列程式碼是合法的：  
+ 傳回類別類型、類別類型的指標或類別類型的參考之函式可以做為成員選擇運算子的左運算元使用。 因此，下列程式碼是合法的：  
   
 ```  
 // expre_Function_Results2.cpp  
@@ -179,11 +197,10 @@ int main() {
 }  
 ```  
   
- 函式可以透過遞迴方式呼叫。  如需函式宣告的詳細資訊，請參閱[函式規範](../misc/function-specifiers.md)和[成員函式](../misc/member-functions-cpp.md)。  相關資料位於[程式和連結](../cpp/program-and-linkage-cpp.md)中。  
+ 函式可以透過遞迴方式呼叫。 如需函式宣告的詳細資訊，請參閱[函式](functions-cpp.md)。 相關的資料位於[程式和連結](../cpp/program-and-linkage-cpp.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [後置運算式](../cpp/postfix-expressions.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [函式呼叫](../c-language/function-call-c.md)   
- [\(NOTINBUILD\) Function Declarations](http://msdn.microsoft.com/zh-tw/3f9b4e14-60d2-47c1-acd8-4fa8fc988be7)
+

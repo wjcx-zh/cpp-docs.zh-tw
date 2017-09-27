@@ -1,52 +1,69 @@
 ---
-title: "剖析 C++ 命令列引數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引號，命令列引數"
-  - "雙引號"
-  - "命令列剖析"
-  - "剖析命令列引數"
-  - "啟始程式碼剖析命令列引數"
+title: "剖析 c + + 命令列引數 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 剖析 C++ 命令列引數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="parsing-c-command-line-arguments"></a>剖析 C++ 命令列引數
 **Microsoft 特定的**  
   
- Microsoft C/c + + 啟始程式碼在解譯作業系統命令列上指定的引數時會使用下列規則︰  
+ Microsoft C/c + + 啟始程式碼在解譯作業系統命令列上指定的引數時會使用下列規則：  
   
 -   引數會以空白或定位鍵的泛空白字元 (White Space) 進行分隔。  
   
--   插入號字元 (^) 無法辨識為逸出字元或分隔符號。 字元由完全在作業系統中的命令列剖析再傳遞給 `argv` 程式中的陣列。  
+-   插入號字元 (^) 不會被辨識為逸出字元或分隔符號。 字元由完整作業系統中的命令列剖析器才能傳遞至`argv`程式中的陣列。  
   
--   以雙引號括住的字串 ("*字串*」) 會解譯為單一引數，不論其內是否包含泛空白字元。 有引號的字串可以內嵌到引數中。  
+-   以雙引號括住的字串 ("*字串*」) 會解譯為單一引數，不論內包含空白字元。 有引號的字串可以內嵌到引數中。  
   
--   雙引號前面有反斜線 (\\」) 會解譯為常值雙引號字元 （"）。  
+-   前面有反斜線 (\\") 的雙引號會解譯為常值雙引號字元 (")。  
   
 -   反斜線會逐字解譯，除非後面緊接著雙引號。  
   
--   如果偶數數目的反斜線後面接著雙引號，有一個反斜線會置於 `argv` 陣列中的每一對反斜線，並將雙引號解譯為字串分隔符號。  
+-   如果雙引號後面反斜線為偶數，一個反斜線會置於`argv`一對反斜線，和雙引號的陣列會被解譯為字串分隔符號。  
   
--   如果奇數數目的反斜線後面接著雙引號，有一個反斜線會置於 `argv` 陣列中的每一對反斜線，並將雙引號 「 逸出 」 所剩餘的反斜線，導致常值雙引號 （"），放在 `argv`。  
+-   如果雙引號後面奇數個反斜線，有一個反斜線會置於`argv`一對反斜線，和雙引號的陣列會 「 由逸出"剩餘的反斜線，導致常值雙引號 (") 放入`argv`。  
   
 ## <a name="example"></a>範例  
- 下列程式將示範如何在命令列引數會傳遞︰  
+ 下列程式會示範如何在命令列引數會傳遞：  
   
 ```  
 // command_line_arguments.cpp  
@@ -72,14 +89,14 @@ int main( int argc,      // Number of strings in array argv
   
 ### <a name="results-of-parsing-command-lines"></a>剖析命令列的結果  
   
-|命令列輸入|argv[1]|argv [2]|argv [3]|  
+|命令列輸入|argv[1]|argv[2]|argv[3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## <a name="end-microsoft-specific"></a>END Microsoft 特定的  
+**END Microsoft 特定的**  
   
 ## <a name="see-also"></a>另請參閱  
- [main︰ 程式啟動](../cpp/main-program-startup.md)
+ [main：程式啟動](../cpp/main-program-startup.md)

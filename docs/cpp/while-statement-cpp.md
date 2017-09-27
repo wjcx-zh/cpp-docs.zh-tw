@@ -1,48 +1,64 @@
 ---
-title: "while 陳述式 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "while 關鍵字 [C++]"
-  - "while 關鍵字 [C++], 語法"
+title: "while 陳述式 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- while_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- while keyword [C++]
+- while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# while 陳述式 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-重複執行 *陳述式* 直到 *運算式* 為零。  
+---
+# <a name="while-statement-c"></a>while 陳述式 (C++)
+執行*陳述式*重複直到*運算式*判斷值為零。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
       while ( expression )  
-   statement  
+   statement  
 ```  
   
-## 備註  
- *陳述式*的測試會在每個迴圈執行之前運算; 因此一個 `while` 迴圈會執行零次或一次以上。  *運算式* 必須是整數類別的資料型別、指標型別或一個類別型別且具有明確轉換為整數型別或指標型別。  
+## <a name="remarks"></a>備註  
+ 測試*運算式*將之前每次執行迴圈; 因此，`while`迴圈會執行零次以上。 *運算式*必須是整數類型、 指標類型，或類別類型，可明確轉換為整數或指標類型。  
   
- 當[break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), 或是 [return](../cpp/return-statement-cpp.md)在陳述式被執行時，一個`while`迴圈也可能終止。  使用 [continue](../cpp/continue-statement-cpp.md) 結束正在執行的陳述式，但不需要結束 `while` 迴圈。  **continue** 傳遞控制項到下一階段的`while`迴圈。  
+ A`while`迴圈可以也會終止時[中斷](../cpp/break-statement-cpp.md)， [goto](../cpp/goto-statement-cpp.md)，或[傳回](../cpp/return-statement-cpp.md)主體就會執行的陳述式中。 使用[繼續](../cpp/continue-statement-cpp.md)終止目前的反覆項目，但不結束`while`迴圈。 **繼續**將控制項傳遞至下一個反覆運算`while`迴圈。  
   
- 下列程式碼使用 `while` 迴圈調整多出來的字串結尾底線:  
+ 下列程式碼使用 `while` 迴圈修剪字串中的結尾底線：  
   
 ```  
 // while_statement.cpp  
@@ -71,11 +87,11 @@ int main()
 }  
 ```  
   
- 終止條件的成立與否位在迴圈的最上方。  如果沒有多出來的底線，則此迴圈不會被執行。  
+ 終止條件在迴圈頂端進行評估。 如果沒有結尾底線，此迴圈絕不會執行。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
- [do\-while 陳述式 \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [for 陳述式 \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [以範圍為基礎的 for 陳述式 \(C\+\+\)](../cpp/range-based-for-statement-cpp.md)
+ [關鍵字](../cpp/keywords-cpp.md)   
+ [do-while 陳述式 (C++)](../cpp/do-while-statement-cpp.md)   
+ [for 陳述式 (C++)](../cpp/for-statement-cpp.md)   
+ [以範圍為基礎的 for 陳述式 (C++)](../cpp/range-based-for-statement-cpp.md)

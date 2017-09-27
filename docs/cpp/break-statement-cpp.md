@@ -1,50 +1,66 @@
 ---
-title: "break 陳述式 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "break_cpp"
-  - "break"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "break 關鍵字 [C++]"
+title: "break 陳述式 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- break_cpp
+- break
+dev_langs:
+- C++
+helpviewer_keywords:
+- break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# break 陳述式 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2e016ccc90ef53ca5f269a73d3f5b7ed3185f550
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-`break` 陳述式會在最接近的封閉式迴圈或條件陳述式出現的位置結束執行。  控制會傳遞至陳述式結尾之後的陳述式 \(如果有的話\)。  
+---
+# <a name="break-statement-c"></a>break 陳述式 (C++)
+`break` 陳述式會在最接近的封閉式迴圈或條件陳述式出現的位置結束執行。 控制會傳遞至陳述式結尾之後的陳述式 (如果有的話)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 break;  
 ```  
   
-## 備註  
- `break` 陳述式用於搭配條件式 [switch](../cpp/switch-statement-cpp.md) 陳述式和 [do](../cpp/do-while-statement-cpp.md)、[for](../cpp/for-statement-cpp.md) 及 [while](../cpp/while-statement-cpp.md) 迴圈陳述式。  
+## <a name="remarks"></a>備註  
+ `break`陳述式搭配條件式[切換](../cpp/switch-statement-cpp.md)陳述式與[不要](../cpp/do-while-statement-cpp.md)，[如](../cpp/for-statement-cpp.md)，和[時](../cpp/while-statement-cpp.md)迴圈陳述式。  
   
- 在 `switch` 陳述式中，`break` 陳述式會使程式執行 `switch` 陳述式以外的下一個陳述式。  若沒有 `break` 陳述式，則會執行相符之 `switch` 標籤到 `case` 陳述式結尾之間的每一個陳述式，包含 `default` 子句。  
+ 在 `switch` 陳述式中，`break` 陳述式會使程式執行 `switch` 陳述式以外的下一個陳述式。 若沒有 `break` 陳述式，則會執行相符之 `case` 標籤到 `switch` 陳述式結尾之間的每一個陳述式，包含 `default` 子句。  
   
- 在迴圈中，`break` 陳述式會結束最接近的封閉式 `do`、`for` 或 `while` 陳述式的執行。  控制會傳遞到已結束之陳述式的下一個陳述式 \(如果有的話\)。  
+ 在迴圈中，`break` 陳述式會結束最接近的封閉式 `do`、`for` 或 `while` 陳述式的執行。 控制會傳遞到已結束之陳述式的下一個陳述式 (如果有的話)。  
   
- 在巢狀陳述式中，`break` 陳述式只會結束 `do`、`for`、`switch` 或立即將它封閉的 `while` 陳述式。  您可以使用 `return` 或 `goto` 陳述式從結構更複雜的巢狀結構轉移控制權。  
+ 在巢狀陳述式中，`break` 陳述式只會結束 `do`、`for`、`switch` 或立即將它封閉的 `while` 陳述式。 您可以使用 `return` 或 `goto` 陳述式從結構更複雜的巢狀結構轉移控制權。  
   
-## 範例  
- 下列程式碼示範如何在 `for` 迴圈中使用 `break` 陳述式。  
+## <a name="example"></a>範例  
+ 下列程式碼示範如何在 `break` 迴圈中使用 `for` 陳述式。  
   
 ```cpp  
 #include <iostream>  
@@ -72,13 +88,16 @@ int nums []{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 }  
 ```  
   
-  **在每種情況下：**  
-**1**  
-**2**  
-**3** 下列程式碼示範如何在 `while` 迴圈和 `do` 迴圈中使用 `break`。  
+```Output  
+In each case:   
+1  
+2  
+3  
+```  
+  
+ 下列程式碼示範如何在 `break` 迴圈和 `while` 迴圈中使用 `do`。  
   
 ```cpp  
-  
 #include <iostream>  
 using namespace std;  
   
@@ -104,11 +123,12 @@ int main() {
 }  
 ```  
   
-  **在每種情況下：**  
-**0**  
-**1**  
-**2**  
-**3** 下列程式碼示範如何在 switch 陳述式中使用 `break`。  如果您想要個別處理每一個案例，每次都必須使用 `break`；如果不使用 `break`，程式碼執行繼續進行下一個案例。  
+```Output  
+In each case:  
+0123  
+```  
+  
+ 下列程式碼示範如何在 switch 陳述式中使用 `break`。 如果您想要個別處理每一個案例，每次都必須使用 `break`；如果不使用 `break`，程式碼執行繼續進行下一個案例。  
   
 ```cpp  
 #include <iostream>  
@@ -155,7 +175,7 @@ int main() {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [跳躍陳述式](../cpp/jump-statements-cpp.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
+ [關鍵字](../cpp/keywords-cpp.md)   
  [continue 陳述式](../cpp/continue-statement-cpp.md)

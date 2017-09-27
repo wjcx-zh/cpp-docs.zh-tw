@@ -1,45 +1,60 @@
 ---
-title: "typename | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "typename"
-  - "typename_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "typename 樣板規範"
+title: "類型名稱 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- typename
+- typename_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# typename
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 95283efc5d3b92a461ba6507e669f6f3e2af2689
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-告知編譯器未知的識別項是一種類型。  
+---
+# <a name="typename"></a>typename
+在樣板定義中提供提示給編譯器未知的識別項是型別。 在樣板參數清單中，用來指定的型別參數上。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 typename identifier;  
 ```  
   
-## 備註  
- 請只在樣板定義中使用此關鍵字。  
+## <a name="remarks"></a>備註  
+ 如果樣板定義中的名稱是完整的名稱是取決於樣板引數，則必須使用這個關鍵字如果限定的名稱不是相依，它是選擇性的。 如需詳細資訊，請參閱[樣板和名稱解析](../cpp/templates-and-name-resolution.md)。  
   
- 如果名稱是取決於樣板引數的限定名稱，則必須使用這個關鍵字，如果限定名稱不具相依性，則可以選擇性使用此關鍵字。  如需詳細資訊，請參閱[範本和名稱解析](../cpp/templates-and-name-resolution.md)。  
-  
- **typename** 只可以由樣板宣告或定義中的任何類型使用。  除非是做為範本基底類別的樣板引數，否則不允許出現在基底類別清單中。  
+ **typename**可供樣板宣告或定義中的任何類型。 除非是做為範本基底類別的樣板引數，否則不允許出現在基底類別清單中。  
   
 ```  
 template <class T>  
@@ -50,14 +65,14 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};  
 ```  
   
- **typename** 關鍵字也可以在樣板參數清單的 **class** 位置中使用。  例如，以下為相同的陳述式：  
+ **Typename**關鍵字也可取代**類別**在樣板參數清單。 例如，下列陳述式是語意上相等的：  
   
 ```  
 template<class T1, class T2>...  
 template<typename T1, typename T2>...  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // typename.cpp  
@@ -71,6 +86,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [樣板](../cpp/templates-cpp.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [範本](../cpp/templates-cpp.md)   
+ [關鍵字](../cpp/keywords-cpp.md)

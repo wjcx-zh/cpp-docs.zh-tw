@@ -1,32 +1,49 @@
 ---
-title: "呼叫範例：函式原型和呼叫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "呼叫慣例, 範例 [C++]"
-  - "範例 [C++], 呼叫慣例"
+title: "呼叫範例： 函式原型和呼叫 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- calling conventions, examples [C++]
+- examples [C++], calling conventions
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 呼叫範例：函式原型和呼叫
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 897771dbe2d769744bd5dc119083c9db243d56c0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## Microsoft 特定的  
+---
+# <a name="calling-example-function-prototype-and-call"></a>呼叫範例：函式原型和呼叫
+## <a name="microsoft-specific"></a>Microsoft 特定的  
  下列範例示範使用各種呼叫慣例執行函式呼叫的結果。  
   
- 這個範例是以下列函式架構為基礎。  以適當的呼叫慣例取代 `calltype`。  
+ 這個範例是以下列函式架構為基礎。 以適當的呼叫慣例取代 `calltype`。  
   
 ```  
 void    calltype MyFunc( char c, short s, int i, double f );  
@@ -47,7 +64,7 @@ MyFunc ('x', 12, 8192, 2.7183);
   
  如需詳細資訊，請參閱[呼叫結果範例](../cpp/results-of-calling-example.md)。  
   
-## END Microsoft 特定的  
+**END Microsoft 特定的**  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [呼叫慣例](../cpp/calling-conventions.md)

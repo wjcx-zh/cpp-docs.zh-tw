@@ -1,59 +1,77 @@
 ---
-title: "引數定義 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argc 引數"
-  - "引數 [C++], main 函式的"
-  - "argv 引數"
-  - "envp 引數"
-  - "main 函式, 引數"
+title: "引數定義 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- envp argument
+- main function, arguments
+- arguments [C++], for main function
+- argv argument
+- argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 引數定義
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="argument-definitions"></a>引數定義
 原型中的引數  
   
 ```  
   
-int main( int argc[ , char *argv[ ] [, char *envp[ ] ] ] ); int wmain( int argc[ , wchar_t *argv[ ] [, wchar_t *envp[ ] ] ] );  
+int main( int  
+argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar_t*envp[] ] ] );  
 ```  
   
- 允許使用方便命令列剖析的引數，同時可選擇性地存取環境變數。  引數定義如下：  
+ 允許使用方便命令列剖析的引數，同時可選擇性地存取環境變數。 引數定義如下：  
   
  `argc`  
- 包含 `argv` 之後引數的計數。  `argc` 參數永遠會大於或等於 1。  
+ 包含 `argv` 之後引數的計數。 `argc` 參數永遠會大於或等於 1。  
   
  `argv`  
- 以 null 終止之字串的陣列，表示由程式的使用者所輸入的命令列引數。  依照慣例，`argv`**\[0\]** 是對程式叫用的命令，`argv`**\[1\]** 是第一個命令列引數，依此類推，直到 `argv`**\[**`argc`**\]**，其永遠為 **NULL**。  如需隱藏命令列處理的詳細資訊，請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)。  
+ 以 null 終止之字串的陣列，表示由程式的使用者所輸入的命令列引數。 依照慣例， `argv` **[0]**是叫用程式用的命令`argv` **[1]**是第一個命令列引數，並依此類推，直到`argv` **[**`argc`**]**，一律**NULL**。 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)如需隱藏命令列處理的資訊。  
   
- 第一個命令列引數一定是 `argv`**\[1\]**，而最後一個會是 `argv`**\[**`argc` – 1**\]**。  
+ 第一個命令列引數一定是`argv` **[1]**並會在最後一個`argv` **[** `argc` -1**]**。  
   
 > [!NOTE]
->  依照慣例，`argv`**\[0\]** 是對程式叫用的命令。不過，您可以使用 [CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197) 繁衍 \(Spawn\) 處理序，而如果您同時使用第一個和第二個引數 \(`lpApplicationName` 和 `lpCommandLine`\)，`argv`**\[0\]** 可能不是可執行檔名稱，請使用 [GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197) 擷取可執行檔名稱及其完整檔案路徑。  
+>  依照慣例，`argv`**[0]** 是對程式叫用的命令。  不過，它可能是繁衍 （spawn） 程序，使用[CreateProcess](http://msdn.microsoft.com/library/windows/desktop/ms683197)如果您使用第一個和第二個引數 (`lpApplicationName`和`lpCommandLine`)， `argv` **[0]**可能不是可執行檔的名稱。使用[GetModuleFileName](http://msdn.microsoft.com/library/windows/desktop/ms683197)擷取可執行檔名稱，而其完整路徑。  
   
-## Microsoft 特定的  
+## <a name="microsoft-specific"></a>Microsoft 特定的  
  `envp`  
- `envp` 陣列 \(許多 UNIX 系統中常見的擴充功能\) 可用於 Microsoft C\+\+。  它是一個字串的陣列，表示在使用者的環境中設定的變數。  這個陣列由 **NULL** 項目終止。  它可以宣告為 **char \(char** \*envp\[ \]**\)** 的指標陣列，或宣告為 **char \(char** \*\*envp**\)** 指標的指標。  如果您的程式使用 **wmain** 而非 **main**，請使用 `wchar_t` 資料類型而不是 `char`。  傳遞至 **main** 和 **wmain** 的環境區塊是目前環境的「凍結」複本。  如果您後續透過呼叫 **putenv** 或 `_wputenv` 變更環境，則目前環境 \(如 `getenv`\/`_wgetenv` 和 `_environ`\/ `_wenviron` 變數所傳回\) 將會變更，不過 envp 所指向的區塊不會變更。  如需隱藏環境處理的詳細資訊，請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)。  此引數在 C 中可與 ANSI 相容，但是在 C\+\+ 中則不相容。  
+ `envp` 陣列 (許多 UNIX 系統中常見的擴充功能) 可用於 Microsoft C++。 它是一個字串的陣列，表示在使用者的環境中設定的變數。 這個陣列會以結尾**NULL**項目。 它可以宣告為陣列的指標**char (char** \*envp []**)**或作為指標的指標**char (char** \* \*envp**)**。 如果您的程式使用**wmain**而不是**主要**，使用`wchar_t`資料類型，而不是`char`。 環境區塊傳遞至**主要**和**wmain**目前環境的 「 凍結 」 複本。 如果您後續又變更環境中的，透過呼叫**putenv**或`_wputenv`，目前的環境 (傳回`getenv` / `_wgetenv`和`_environ` /  `_wenviron`變數) 變更，不過 envp 所指向的區塊將不會變更。 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)如需隱藏環境處理的資訊。 此引數在 C 中可與 ANSI 相容，但是在 C++ 中則不相容。  
   
-## END Microsoft 特定的  
+**END Microsoft 特定的**  
   
-## 範例  
- 下列範例顯示如何使用 **main** 的 `argc`、`argv` 和 `envp` 引數：  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用`argc`， `argv`，和`envp`引數**主要**:  
   
 ```  
 // argument_definitions.cpp  
@@ -79,5 +97,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [main：程式啟動](../cpp/main-program-startup.md)

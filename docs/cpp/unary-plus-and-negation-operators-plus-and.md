@@ -1,36 +1,52 @@
 ---
-title: "一元正和負運算子：+ 和 - | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "+"
-  - "-"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "- 運算子"
-  - "+ 運算子"
-  - "+ 運算子, 一元運算子"
-  - "negation 運算子"
-  - "一元運算子, plus"
+title: "一元正和負運算子: + 和-|Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- +
+- '-'
+dev_langs:
+- C++
+helpviewer_keywords:
+- unary operators, plus
+- '- operator'
+- negation operator
+- + operator, unary operators
+- + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 一元正和負運算子：+ 和 -
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9c664cd382685693da7ab12ba85891bc2ab0d7e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="unary-plus-and-negation-operators--and--"></a>一元正和負運算子：+ 和 -
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -40,23 +56,21 @@ manager: "ghogen"
 ```  
   
 - cast-expression  
-  
 ```  
   
-## \+ 運算子  
- 一元加法運算子 \(**\+**\) 的結果是其運算元的值。  一元加法運算子的運算元必須屬於算術類型。  
+## <a name="-operator"></a>+ 運算子  
+ 一元加法運算子的結果 (**+**) 是其運算元的值。 一元加法運算子的運算元必須屬於算術類型。  
   
- 整數提升會在整數運算元上執行。  結果類型會是運算元提升後的類型。  因此，運算式 `+ch` \(其中 `ch` 的類型為 `char`\) 會得到 `int` 類型，且值未經修改。  如需如何執行提升的詳細資訊，請參閱[整數提升](../misc/integral-promotions.md)。  
+ 整數提升會在整數運算元上執行。 結果類型會是運算元提升後的類型。 因此，運算式 `+ch` (其中 `ch` 的類型為 `char`) 會得到 `int` 類型，且值未經修改。 請參閱[標準轉換](standard-conversions.md)如需有關如何進行升級。  
   
-## \- 運算子  
- 一元負運算子 \(**–**\) 會產生其運算元的負數。  一元負運算子的運算元必須是算術類型。  
+## <a name="--operator"></a>- 運算子  
+ 一元負運算子 (**-**) 會產生其運算元的負數。 一元負運算子的運算元必須是算術類型。  
   
- 整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。  如需如何執行提升的詳細資訊，請參閱[整數提升](../misc/integral-promotions.md)。  
+ 整數運算元上會執行整數提升，且結果類型是運算元提升後的類型。 請參閱[標準轉換](standard-conversions.md)如需如何執行提升的詳細資訊。  
   
-## Microsoft 專有的  
- 不帶正負號數量的一元否定執行方式是 2^n 減去運算元的值，其中 n 是指定不帶正負號類型之物件的位元數   \(Microsoft C\+\+ 執行於運用二補數算術的處理器。  在其他處理器上，否定的演算法可能不同\)。  
+## <a name="microsoft-specific"></a>Microsoft 專有的  
+ 不帶正負號數量的一元否定執行方式是 2^n 減去運算元的值，其中 n 是指定不帶正負號類型之物件的位元數  (Microsoft C++ 執行於運用二補數算術的處理器。 在其他處理器上，否定的演算法可能不同)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+ [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)

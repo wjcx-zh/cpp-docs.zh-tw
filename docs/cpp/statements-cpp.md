@@ -1,29 +1,45 @@
 ---
-title: "陳述式 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陳述式, C++"
+title: "陳述式 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- statements, C++
 ms.assetid: 7028fddf-0d47-469a-a7df-f8576423e066
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 陳述式 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: fe9bff3b9705e560d61f2a64a931c79f9ccc8602
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-C\+\+ 陳述式是控制物件如何以及以什麼順序進行操作的程式設計項目。  本章節包括：  
+---
+# <a name="statements-c"></a>陳述式 (C++)
+C++ 陳述式是控制物件如何以及以什麼順序進行操作的程式項目。 本節包括：  
   
 -   [概觀](../cpp/overview-of-cpp-statements.md)  
   
@@ -31,21 +47,21 @@ C\+\+ 陳述式是控制物件如何以及以什麼順序進行操作的程式�
   
 -   陳述式分類  
   
-    -   [運算陳述式](../cpp/expression-statement.md) 這些陳述式評估其運算式之副作用或傳回值。  
+    -   [運算陳述式](../cpp/expression-statement.md)。 這些陳述式評估運算式以取得其副作用或傳回值。  
   
-    -   [Null 陳述式](../cpp/null-statement.md) 這些陳述式可以提供在 C\+\+ 語法中需要陳述式但動作不會被採取的地方。  
+    -   [Null 陳述式](../cpp/null-statement.md)。 在 C++ 語法中需要陳述式但不會採取動作的地方，可以提供這些陳述式。  
   
-    -   [複合陳述式](../cpp/compound-statements-blocks.md) 這些陳述式是以大括號括住的陳述式群組 \({ }\)。  他們可以被使用在任何可以使用單一陳述式的位置。  
+    -   [複合陳述式](../cpp/compound-statements-blocks.md)。 這些陳述式是以大括號 ({ }) 括住的陳述式群組。 在任何可以使用單一陳述式的位置，可以使用它們。  
   
-    -   [選擇陳述式](../cpp/selection-statements-cpp.md) 這些陳述式執行測試；若測試評估為 true \(非零\)，則執行程式碼的一部分。  如果測試評估為 false，它們可能執行程式碼的其他部分。  
+    -   [選擇陳述式](../cpp/selection-statements-cpp.md)。 這些陳述式執行測試；若測試判斷值為 true (非零)，則執行一個程式碼區段。 如果測試判斷值為 false，它們可能執行另一個程式碼區段。  
   
-    -   [反覆運算陳述式](../cpp/iteration-statements-cpp.md) 這些陳述式重複執行一個程式碼區塊直到符合指定的終止準則。  
+    -   [反覆運算陳述式](../cpp/iteration-statements-cpp.md)。 這些陳述式可供重複執行一個程式碼區塊，直到符合指定的終止準則。  
   
-    -   [跳躍陳述式](../cpp/jump-statements-cpp.md) 這些陳述式會立刻將控制項轉移到函式中另一個位置或將控制項從函式傳回。  
+    -   [跳躍陳述式](../cpp/jump-statements-cpp.md)。 這些陳述式會立刻將控制權轉移到函式中另一個位置或將控制權從函式傳回。  
   
-    -   [宣告陳述式](http://msdn.microsoft.com/zh-tw/14538558-356f-450e-9e1e-3cd62ba952b9) 宣告會將一個名稱引入程式碼。\([宣告](../misc/declarations.md) 提供更多關於宣告的詳細資訊。\)  
+    -   [宣告陳述式](http://msdn.microsoft.com/en-us/14538558-356f-450e-9e1e-3cd62ba952b9)。 宣告會將名稱引入程式中  ([宣告和定義](declarations-and-definitions-cpp.md)提供更詳細的宣告的相關資訊。)  
   
- 如需例外狀況處理陳述式的詳細資訊請參閱 [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。  
+ 如需例外狀況處理陳述式的詳細資訊，請參閱[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。  
   
-## 請參閱  
- [C\+\+ 語言參考](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 語言參考](../cpp/cpp-language-reference.md)

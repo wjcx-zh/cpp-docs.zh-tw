@@ -1,52 +1,70 @@
 ---
-title: "呼叫範例的結果 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "範例 [C++], 呼叫的結果"
-  - "結果, __cdecl 呼叫"
-  - "結果, __fastcall 關鍵字呼叫"
-  - "結果, __stdcall 呼叫"
-  - "結果, thiscall 呼叫"
+title: "呼叫範例的結果 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- examples [C++], results of calling
+- results, thiscall call
+- results, __fastcall keyword call
+- results, __cdecl call
+- results, __stdcall call
 ms.assetid: aa70a7cb-ba1d-4aa6-bd0a-ba783da2e642
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 呼叫範例的結果
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5a1d6bf1c1d3cf2a57a74b7994766e940488a8e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## Microsoft 特定的  
+---
+# <a name="results-of-calling-example"></a>呼叫範例的結果
+## <a name="microsoft-specific"></a>Microsoft 特定的  
   
-## \_\_cdecl  
- C 裝飾函式名稱為 "\_MyFunc"。  
+## <a name="cdecl"></a>__cdecl  
+ C 裝飾函式名稱為 "_MyFunc"。  
   
- ![CDECL 呼叫慣例](../cpp/media/vc37i01.png "vc37I01")  
-\_\_cdecl 呼叫慣例  
+ ![CDECL 呼叫慣例](../cpp/media/vc37i01.gif "vc37I01")  
+__cdecl 呼叫慣例  
   
-## \_\_stdcall 和 thiscall  
- C 裝飾名稱 \(`__stdcall`\) 為 "\_MyFunc@20"。C\+\+ 裝飾名稱為機密。  
+## <a name="stdcall-and-thiscall"></a>__stdcall 和 thiscall  
+ C 裝飾名稱 (`__stdcall`) 是 「_MyFunc@20。 」 C++ 裝飾名稱為機密。  
   
- ![&#95;&#95;stdcall 和 thiscall 呼叫慣例](../cpp/media/vc37i02.png "vc37I02")  
-\_\_stdcall 和 thiscall 呼叫慣例  
+ ![&#95; &#95; stdcall 和 thiscall 呼叫慣例](../cpp/media/vc37i02.gif "vc37I02")  
+__stdcall 和 thiscall 呼叫慣例  
   
-## \_\_fastcall  
- C 裝飾名稱 \(`__fastcall`\) 為 "@MyFunc@20"。C\+\+ 裝飾名稱為機密。  
+## <a name="fastcall"></a>__fastcall  
+ C 裝飾名稱 (`__fastcall`) 是 「@MyFunc@20。 」 C++ 裝飾名稱為機密。  
   
- ![&#95;&#95;fastcall 呼叫慣例](../cpp/media/vc37i03.png "vc37I03")  
-\_\_fastcall 呼叫慣例  
+ ![呼叫慣例 &#95; &#95; fastcall](../cpp/media/vc37i03.gif "vc37I03")  
+__fastcall 呼叫慣例  
   
-### END Microsoft 特定的  
+**END Microsoft 特定的**  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [呼叫範例：函式原型和呼叫](../cpp/calling-example-function-prototype-and-call.md)

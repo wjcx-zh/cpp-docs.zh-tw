@@ -1,33 +1,50 @@
 ---
-title: "const_cast 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "const_cast"
-  - "const_cast_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_cast 關鍵字 [C++]"
+title: "const_cast 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- const_cast
+- const_cast_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- const_cast keyword [C++]
 ms.assetid: 4d8bb203-ef33-4a10-9f9f-c64d4fbc1687
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# const_cast 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8f72367cb4970b2ce0121efc43b79691155808df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-從類別移除 **const**、`volatile` 和 **\_\_unaligned** 屬性。  
+---
+# <a name="constcast-operator"></a>const_cast 運算子
+移除**const**， `volatile`，和**__unaligned**自類別的屬性。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,14 +56,14 @@ expression
   
 ```  
   
-## 備註  
- 除了 **const**、`volatile` 和 **\_\_unaligned** 限定詞之外，任何物件類型的指標或資料成員的指標都可以明確地轉換為相同的類型。  對於指標和參考，其結果會參考原始物件。  對於資料成員的指標，則結果會參考與資料成員的原始 \(未轉型\) 指標相同的成員。  根據所參考物件的類型，透過產生的指標、參考或資料成員的指標進行寫入作業，可能會產生未定義的行為。  
+## <a name="remarks"></a>備註  
+ 任何物件類型的指標或資料成員的指標可以明確地轉換成類型不相同，除了**const**， `volatile`，和**__unaligned**限定詞。 對於指標和參考，其結果會參考原始物件。 對於資料成員的指標，則結果會參考與資料成員的原始 (未轉型) 指標相同的成員。 根據所參考物件的類型，透過產生的指標、參考或資料成員的指標進行寫入作業，可能會產生未定義的行為。  
   
  您不能使用 `const_cast` 運算子直接覆寫常數變數的常數狀態。  
   
  `const_cast` 運算子會將 null 指標值轉換為目的類型的 null 指標值。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // expre_const_cast_Operator.cpp  
@@ -77,8 +94,8 @@ int main() {
 }  
 ```  
   
- 在包含 `const_cast` 的程式碼行上，`this` 指標的資料類型為 `const CCTest *`。  `const_cast` 運算子會將 `this` 指標的資料類型變更為 `CCTest *`，允許修改成員 `number`。  轉換只會在其出現之陳述式的其餘部分中持續進行。  
+ 在包含 `const_cast` 的程式碼行上，`this` 指標的資料類型為 `const CCTest *`。 `const_cast` 運算子會將 `this` 指標的資料類型變更為 `CCTest *`，允許修改成員 `number`。 轉換只會在其出現之陳述式的其餘部分中持續進行。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [轉型運算子](../cpp/casting-operators.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+ [關鍵字](../cpp/keywords-cpp.md)

@@ -1,47 +1,63 @@
 ---
-title: "編譯器限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe 編譯器, 語言建構的限制"
+title: "編譯器限制 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, limits for language constructs
 ms.assetid: f1fa59c6-55b4-414b-80c5-3df72952160d
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 編譯器限制
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 986a158ea74e56a0e52c1ffff77f83b8ede71ef5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-C\+\+ 標準會建議各種語言的建構限制。  下列是 Visual C\+\+ 編譯器未實作所建議之限制的案例。  第一個數字是 ISO C\+\+ 11 標準 \(INCITS\/ISO\/IEC 14882\-2011\[2012\], Annex B\) 所建立的限制，第二個數字是 Visual C\+\+ 所實作的限制：  
+---
+# <a name="compiler-limits"></a>編譯器限制
+C++ 標準會建議各種語言的建構限制。 下列是 Visual C++ 編譯器未實作所建議之限制的案例。 第一個數字是 ISO C++ 11 標準 (INCITS/ISO/IEC 14882-2011[2012], Annex B) 所建立的限制，第二個數字是 Visual C++ 所實作的限制：  
   
--   複合陳述式、反覆項目控制結構及選取控制結構的巢狀層次 \[C\+\+ 標準：256\] \(Visual C\+\+ 編譯器：視陳述式的巢狀組合而定，但通常介於 100 和 110 之間\)。  
+-   巢狀層級的複合陳述式、 反覆項目控制結構和選取控制項結構的 c + + 標準： 256，Visual c + + 編譯器： 視陳述式的巢狀，但通常介於 100 和 110 之間的組合。  
   
--   單一巨集定義中的參數 \[C\+\+ 標準：256\] \(Visual C\+\+ 編譯器：127\)。  
+-   參數單一巨集定義中的 c + + 標準： 256，Visual c + + 編譯器： 127。  
   
--   單一巨集引動過程中的引數 \[C\+\+ 標準：256\] \(Visual C\+\+ 編譯器：127\)。  
+-   引數，在一個巨集引動過程-c + + 標準： 256，Visual c + + 編譯器： 127。  
   
--   字元字串常值或寬字串常值中的字元 \(串連之後\) \[C\+\+ 標準：65536\] \(Visual C\+\+ 編譯器：65535 個單一位元組字元 \(包括 `null` 結束字元\) 及 32767 個雙位元組字元 \(包括 `null` 結束字元\)。  
+-   中字元的字元字串常值或寬字串常值 （串連之後）-c + + 標準： 65536，Visual c + + 編譯器： 65535 的單一位元組字元，包括`null`結束字元和 32767 雙位元組字元，包括`null`結束字元。  
   
--   單一 `struct-declaration-list` 中的巢狀類別、結構或等位定義層次 \[C\+\+ 標準：256\] \(Visual C\+\+ 編譯器：16\)。  
+-   層級的巢狀的類別、 結構或等位定義在單一`struct-declaration-list`-c + + 標準： 256，Visual c + + 編譯器： 16。  
   
--   建構函式定義中的成員初始設定式 \[C\+\+ 標準：6144\] \(Visual C\+\+ 編譯器：至少 6144\)。  
+-   成員初始設定式中建構函式定義為 c + + 標準： 6144，Visual c + + 編譯器： 至少 6144。  
   
--   單一識別項的範圍限定性條件 \[C\+\+ 標準：256\] \(Visual C\+\+ 編譯器：127\)。  
+-   範圍限定性條件的識別碼-c + + 標準： 256，Visual c + + 編譯器： 127。  
   
--   巢狀 `extern` 規格 \[C\+\+ 標準：1024\] \(Visual C\+\+ 編譯器：9 \(全域範圍內的隱含 `extern` 規格不列入計數，如果將全域範圍內的隱含 `extern` 規格列入計數，則為 10\)。  
+-   巢狀`extern`規格的 c + + 標準： 1024，Visual c + + 編譯器： 9 (不計算隱含`extern`規格在全域範圍或 10，如果您計算隱含`extern`在全域範圍內的規格..  
   
--   樣板宣告中的樣板引數 \[C\+\+ 標準：1024\] \(Visual C\+\+ 編譯器：2046\)。  
+-   樣板引數的樣板宣告-c + + 標準： 1024，Visual c + + 編譯器： 2046年。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [非標準行為](../cpp/nonstandard-behavior.md)

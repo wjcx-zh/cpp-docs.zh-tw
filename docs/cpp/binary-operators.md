@@ -1,83 +1,99 @@
 ---
-title: "二元運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "二元運算子"
-  - "成員選取運算子"
-  - "運算子 [C++], 二進位"
+title: "二元運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- member-selection operators
+- operators [C++], binary
+- binary operators
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 二元運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 384ac135c7ecb63b864160723984ef5d271e1395
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="binary-operators"></a>二元運算子
 下表顯示可以多載的運算子清單。  
   
-### 可重新定義的二元運算子  
+### <a name="redefinable-binary-operators"></a>可重新定義的二元運算子  
   
 |運算子|名稱|  
-|---------|--------|  
-|**,**|逗號|  
+|--------------|----------|  
+|**、**|逗號|  
 |`!=`|不等|  
 |`%`|模數|  
-|`%=`|模數\/指派|  
+|`%=`|模數/指派|  
 |**&**|位元 AND|  
 |**&&**|邏輯 AND|  
-|**&\=**|位元 AND\/指派|  
+|**&=**|位元 AND/指派|  
 |**\***|乘法|  
-|**\*\=**|乘法\/指派|  
-|**\+**|加入|  
-|`+=`|加法\/指派|  
-|**–**|減法|  
-|**–\=**|減法\/指派|  
-|**–\>**|成員選取|  
-|**–\>\***|成員指標選取|  
-|**\/**|除法|  
-|`/=`|除法\/指派|  
-|**\<**|小於|  
-|**\<\<**|左移|  
-|**\<\<\=**|左移\/指派|  
-|**\<\=**|小於或等於|  
-|**\=**|指派|  
+|**\*=**|乘法/指派|  
+|**+**|加入|  
+|`+=`|加法/指派|  
+|**-**|減法|  
+|**-=**|減法/指派|  
+|**->**|成員選取|  
+|**->\***|成員指標選取|  
+|**/**|除號|  
+|`/=`|除法/指派|  
+|**<**|小於|  
+|**<<**|左移|  
+|**<<=**|左移/指派|  
+|**<=**|小於或等於|  
+|**=**|指派|  
 |`==`|相等|  
-|**\>**|大於|  
-|**\>\=**|大於或等於|  
-|**\>\>**|右移|  
-|**\>\>\=**|右移\/指派|  
+|**>**|大於|  
+|**>=**|大於或等於|  
+|**>>**|右移|  
+|**>>=**|右移/指派|  
 |**^**|互斥 OR|  
-|`^=`|互斥 OR\/指派|  
+|`^=`|互斥 OR/指派|  
 |**&#124;**|位元包含 OR|  
-|`&#124;=`|位元包含 OR\/指派|  
+|`&#124;=`|位元包含 OR/指派|  
 |`&#124;&#124;`|邏輯 OR|  
   
  若要將二元運算子函式宣告為非靜態成員，您必須以此格式進行宣告：  
   
- *ret\-type* **operator**`op`**\(** `arg` **\)**  
+ *ret 類型***運算子**`op`**(** `arg` **)**  
   
- 其中 *ret\-type*為傳回類型，`op` 是上表中所列的其中一個運算子，而 `arg` 是任何類型的引數。  
+ 其中*ret 類型*的傳回型別，`op`是其中一個列在上表中，運算子和`arg`是任何類型的引數。  
   
  若要將二元運算子函式宣告為全域函式，您必須以此格式進行宣告：  
   
- *ret\-type* **operator**`op`**\(** `arg1`**,** `arg2` **\)**  
+ *ret 類型***運算子**`op`**(** `arg1` **，** `arg2` **)**  
   
- 其中 *ret\-type* 和 `op` 是成員運算子函式，而 `arg1` 和 `arg2` 是引數。  至少要有一個引數是類別類型。  
+ 其中*ret 類型*和`op`成員運算子函式所述，`arg1`和`arg2`引數。 至少要有一個引數是類別類型。  
   
 > [!NOTE]
->  二元運算子的傳回類型不受限制；不過，大部分使用者定義的二元運算子會傳回類別類型或類別類型的參考。  
+>  二元運算子的傳回型別不受限制；不過，大部分使用者定義的二元運算子會傳回類別類型或類別類型的參考。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算子多載](../cpp/operator-overloading.md)

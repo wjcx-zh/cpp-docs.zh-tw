@@ -1,42 +1,59 @@
 ---
-title: "函式樣板的明確特製化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宣告函式, 函式樣板的特製化"
-  - "函式樣板的明確特製化"
-  - "函式樣板, 特製化"
-  - "覆寫, 函式"
-  - "函式樣板的特製化"
+title: "函式樣板的明確特製化 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- overriding, functions
+- function templates, specialization
+- explicit specialization of function templates
+- declaring functions, specialization of function template
+- specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 函式樣板的明確特製化
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: c5caabae41383edbdc92806249026ce8a0daa5d5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-透過函式樣板，您可以提供該類型的明確特製化 \(覆寫\) 函式樣板，來定義該特定類型的特殊行為。  例如：  
+---
+# <a name="explicit-specialization-of-function-templates"></a>函式樣板的明確特製化
+透過函式樣板，您可以提供該類型的明確特製化 (覆寫) 函式樣板，來定義該特定類型的特殊行為。 例如:   
   
-```  
+```cpp
 template<> void MySwap(double a, double b);  
 ```  
   
- 這個宣告可讓您為 **double** 變數定義不同的函式。  如同非樣板函式，會套用標準類型轉換 \(例如將 **float** 類型的變數提升為 **double**\)。  
+ 這個宣告可讓您定義不同的函式**double**變數。 像非樣板函式，標準類型轉換 (例如類型的變數提升**float**至**double**) 會套用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp
 // explicit_specialization.cpp  
 template<class T> void f(T t)  
 {  
@@ -60,5 +77,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式樣板](../cpp/function-templates.md)
+

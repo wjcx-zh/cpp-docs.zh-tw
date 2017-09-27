@@ -1,36 +1,52 @@
 ---
-title: "_com_error::_com_error | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error._com_error"
-  - "_com_error::_com_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_com_error 方法"
+title: "_com_error::_com_error |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error._com_error
+- _com_error::_com_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- _com_error method
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _com_error::_com_error
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 81efabf796d8d596326629af999f1932501befb5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="comerrorcomerror"></a>_com_error::_com_error
 **Microsoft 特定的**  
   
  建構 `_com_error` 物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -44,21 +60,21 @@ _com_error(
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `hr`  
  `HRESULT` 資訊。  
   
  `perrinfo`  
- **IErrorInfo** 物件。  
+ **IErrorInfo**物件。  
   
- **bool fAddRef\=false**  
- 導致建構函式在某個非 Null 的 **IErrorInfo** 介面上呼叫 AddRef。  如此可在將介面的擁有權傳入 `_com_error` 物件的一般情況下，提供正確的參考計數，例如：  
+ **bool fAddRef = false**  
+ 導致建構函式，以在非 null 值上呼叫 AddRef **IErrorInfo**介面。 如此可在將介面的擁有權傳入 `_com_error` 物件的一般情況下，提供正確的參考計數，例如：  
   
 ```  
 throw _com_error(hr, perrinfo);  
 ```  
   
- 如果您不想讓程式碼將擁有權傳送至 `_com_error` 物件，而在 `_com_error` 解構函式中需要使用 `AddRef` 來位移 **Release**，請依下列方式建構物件：  
+ 如果您不想要傳送擁有權，以您的程式碼`_com_error`物件，而`AddRef`才能位移**發行**中`_com_error`解構函式建構物件，如下所示：  
   
 ```  
 _com_error err(hr, perrinfo, true);  
@@ -67,10 +83,10 @@ _com_error err(hr, perrinfo, true);
  `that`  
  現有的 `_com_error` 物件。  
   
-## 備註  
- 第一個建構函式會建立新的物件，其中會指定 `HRESULT` 和並選擇性指定 **IErrorInfo** 物件。  第二個方法會建立現有 `_com_error` 物件的複本。  
+## <a name="remarks"></a>備註  
+ 第一個建構函式會建立新的物件，指定`HRESULT`和選擇性**IErrorInfo**物件。 第二個方法會建立現有 `_com_error` 物件的複本。  
   
  **END Microsoft 特定的**  
   
-## 請參閱  
- [\_com\_error 類別](../cpp/com-error-class.md)
+## <a name="see-also"></a>另請參閱  
+ [_com_error 類別](../cpp/com-error-class.md)

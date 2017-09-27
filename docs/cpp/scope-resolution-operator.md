@@ -1,45 +1,65 @@
 ---
-title: "範圍解析運算子：:: | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "::"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ":: 運算子"
-  - "運算子 [C++], 範圍解析"
-  - "範圍解析運算子"
-  - "範圍, 範圍解析運算子"
+title: "範圍解析運算子::: |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '::'
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 範圍解析運算子：::
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-範圍解析運算子 `::` 可用來識別及區分不同範圍內使用的識別項。  如需範圍的詳細資訊，請參閱 [範圍](../cpp/scope-visual-cpp.md)。  
+---
+# <a name="scope-resolution-operator-"></a>範圍解析運算子：::
+範圍解析運算子 `::` 可用來識別及區分不同範圍內使用的識別項。 如需範圍的詳細資訊，請參閱[範圍](../cpp/scope-visual-cpp.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-:: identifier class-name :: identifier namespace :: identifier enum class :: identifier enum struct :: identifier  
+:: identifier  
+class-name :: identifier  
+namespace :: identifier  
+enum class :: identifier  
+enum struct :: identifier  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `identifier` 可以是變數、函式或列舉值。  
   
-## 搭配類別和命名空間  
+## <a name="with-classes-and-namespaces"></a>搭配類別和命名空間  
  下列範例顯示範圍解析運算子如何與命名空間和類別搭配使用：  
   
 ```cpp  
@@ -86,7 +106,7 @@ int main() {
 }  
 ```  
   
- 您可以使用範圍解析運算子來識別命名空間的成員，或識別在使用指示詞中指定成員命名空間的命名空間。  在下面的範例中，即使已在命名空間 `NamespaceB` 中宣告 `ClassB`，您還是可以使用 `NamespaceC` 來限定 `ClassB`，因為使用指示詞已在 `NamespaceC` 中指定 `NamespaceB`。  
+ 您可以使用範圍解析運算子來識別命名空間的成員，或識別在使用指示詞中指定成員命名空間的命名空間。 在下面的範例中，即使已在命名空間 `NamespaceC` 中宣告 `ClassB`，您還是可以使用 `ClassB` 來限定 `NamespaceB`，因為使用指示詞已在 `NamespaceB` 中指定 `NamespaceC`。  
   
 ```cpp  
 namespace NamespaceB {  
@@ -110,7 +130,7 @@ int main() {
   
 ```  
   
- 您可以使用範圍解析運算子的鏈結。  在下列範例中，`NamespaceD::NamespaceD1` 會識別巢狀命名空間 `NamespaceD1`，而 `NamespaceE::ClassE::ClassE1` 會識別巢狀類別 `ClassE1`。  
+ 您可以使用範圍解析運算子的鏈結。 在下列範例中，`NamespaceD::NamespaceD1` 會識別巢狀命名空間 `NamespaceD1`，而 `NamespaceE::ClassE::ClassE1` 會識別巢狀類別 `ClassE1`。  
   
 ```cpp  
 namespace NamespaceD{  
@@ -138,7 +158,7 @@ int main() {
   
 ```  
   
-## 搭配靜態成員  
+## <a name="with-static-members"></a>搭配靜態成員  
  您必須使用範圍解析運算子來呼叫類別的靜態成員。  
   
 ```cpp  
@@ -158,8 +178,8 @@ int main() {
   
 ```  
   
-## 搭配限定範圍的列舉  
- 範圍解析運算子也可以與限定範圍的列舉值[列舉宣告](../cpp/enumerations-cpp.md)搭配使用，如下列範例所示：  
+## <a name="with-scoped-enumerations"></a>搭配限定範圍的列舉  
+ 範圍的解析運算子也可以搭配限定範圍列舉值[列舉宣告](../cpp/enumerations-cpp.md)，如下列範例所示：  
   
 ```cpp  
 enum class EnumA{  
@@ -175,7 +195,6 @@ int main() {
   
 ```  
   
-## 請參閱  
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>另請參閱  
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [命名空間](../cpp/namespaces-cpp.md)   
- [名稱和限定名稱](../misc/names-and-qualified-names.md)

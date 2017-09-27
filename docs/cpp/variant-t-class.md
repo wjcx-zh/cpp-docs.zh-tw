@@ -1,69 +1,85 @@
 ---
-title: "_variant_t 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Variant"
-  - "_variant_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_variant_t 類別"
-  - "_variant_t 類別, 成員函式"
-  - "_variant_t 類別, 運算子"
-  - "VARIANT 物件"
-  - "VARIANT 物件, COM 封裝"
+title: "_variant_t 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Variant
+- _variant_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- _variant_t class, operators
+- _variant_t class
+- _variant_t class, member functions
+- VARIANT object
+- VARIANT object, COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _variant_t 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3c074061955adbb1682bb7d96345a31fcf8f04e7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-**Microsoft 專有的**  
+---
+# <a name="variantt-class"></a>_variant_t 類別
+**Microsoft 特定的**  
   
- `_variant_t` 物件封裝 `VARIANT` 資料類型。  這個類別處理資源配置和解除配置，並對 **VariantInit** 和 **VariantClear** 進行適當的函示呼叫。  
+ A`_variant_t`物件封裝`VARIANT`資料型別。 管理資源配置和解除配置的類別並函式呼叫**VariantInit**和**Vvalue**依適當情況。  
   
-### 建構  
-  
-|||  
-|-|-|  
-|[\_variant\_t](../cpp/variant-t-variant-t.md)|建構 `_variant_t` 物件。|  
-  
-### 作業  
+### <a name="construction"></a>建構  
   
 |||  
 |-|-|  
-|[附加](../cpp/variant-t-attach.md)|將**VARIANT** 物件附加至 `_variant_t` 物件。|  
-|[Clear](../cpp/variant-t-clear.md)|清除封裝的 **VARIANT** 物件。|  
-|[ChangeType](../cpp/variant-t-changetype.md)|變更 `_variant_t` 物件的型別至指定的 **VARTYPE**。|  
-|[Detach](../cpp/variant-t-detach.md)|自 `_variant_t` 物件中斷封裝的 **VARIANT** 物件。|  
-|[SetString](../cpp/variant-t-setstring.md)|指派字串至這個 `_variant_t` 物件。|  
+|[_variant_t](../cpp/variant-t-variant-t.md)|建構 `_variant_t` 物件。|  
   
-### 運算子  
+### <a name="operations"></a>作業  
   
 |||  
 |-|-|  
-|[運算子 \=](../cpp/variant-t-operator-equal.md)|將新值指派給現有的 `_variant_t` 物件。|  
-|[運算子 \=\= 及 \!\=](../cpp/variant-t-relational-operators.md)|比較兩個 `_variant_t` 物件相等或不相等。|  
-|[擷取器（Extractors）](../cpp/variant-t-extractors.md)|從封裝 **VARIANT** 物件擷取資料。|  
+|[Attach](../cpp/variant-t-attach.md)|附加**VARIANT**物件插入`_variant_t`物件。|  
+|[清除](../cpp/variant-t-clear.md)|清除封裝**VARIANT**物件。|  
+|[ChangeType](../cpp/variant-t-changetype.md)|類型變更`_variant_t`物件指定**VARTYPE**。|  
+|[Detach](../cpp/variant-t-detach.md)|中斷連結封裝**VARIANT**物件與這個`_variant_t`物件。|  
+|[SetString](../cpp/variant-t-setstring.md)|將字串指派給這個 `_variant_t` 物件。|  
   
-## END Microsoft 專有  
+### <a name="operators"></a>運算子  
   
-## 需求  
- **標頭：**comutil.h  
+|||  
+|-|-|  
+|[運算子 =](../cpp/variant-t-operator-equal.md)|將新值指派給現有的 `_variant_t` 物件。|  
+|[運算子 = =、 ！ =](../cpp/variant-t-relational-operators.md)|比較兩個 `_variant_t` 物件是否相等或不等。|  
+|[擷取器](../cpp/variant-t-extractors.md)|從封裝擷取資料**VARIANT**物件。|  
   
- **Lib:** comsuppw.lib or comsuppwd.lib \(如需詳細資訊，請參閱 [\/Zc:wchar\_t \(wchar\_t 是原生類型\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)\)  
+**END Microsoft 特定的**  
   
-## 請參閱  
+## <a name="requirements"></a>需求  
+ **標頭：** comutil.h  
+  
+ **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
+  
+## <a name="see-also"></a>另請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)

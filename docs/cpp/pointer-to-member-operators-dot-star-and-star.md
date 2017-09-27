@@ -1,45 +1,60 @@
 ---
-title: "成員指標運算子：.* 和 -&gt;* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - ".*"
-  - "->*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".* 運算子"
-  - "->* 運算子"
-  - "運算式 [C++], 運算子"
-  - "運算式 [C++], 指標"
-  - "成員指標運算子"
+title: "成員指標運算子:。 * 和-&gt;* |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- .*
+- ->*
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], pointer
+- pointer-to-member operators
+- .* operator
+- expressions [C++], operators
+- ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 成員指標運算子：.* 和 -&gt;*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1dad74e99612df6ef868b4cd1f0b2ca5abb9c506
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="pointer-to-member-operators--and--gt"></a>成員指標運算子:。 * 和-&gt;*
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      expression .* expression  
-expression –>* expression  
+expression .* expression  
+expression ->* expression  
 ```  
   
-## 備註  
- 成員指標運算子 .\* 和 –\>\* 會針對運算式左邊指定的物件傳回特定類別成員的值。右邊則必須指定類別的成員。以下範例會示範如何使用這些運算子：  
+## <a name="remarks"></a>備註  
+ 成員指標運算子。 * and->\*，傳回指定運算式的左側的物件的特定類別成員的值。  右邊則必須指定類別的成員。  以下範例會示範如何使用這些運算子：  
   
 ```  
 // expre_Expressions_with_Pointer_Member_Operators.cpp  
@@ -79,7 +94,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 m_func1  
@@ -88,17 +103,17 @@ m_func1
 2  
 ```  
   
- 在上述範例中，成員 `pmfn` 的指標會在叫用成員函式 `m_func1` 時使用。  另一個成員 `pmd` 的指標會在存取 `m_num` 成員時使用。  
+ 在上述範例中，成員 `pmfn` 的指標會在叫用成員函式 `m_func1` 時使用。 另一個成員 `pmd` 的指標會在存取 `m_num` 成員時使用。  
   
- 二元運算子 .\* 會將其第一個運算元 \(該運算元必須是類別類型的物件\) 與其第二個運算元 \(該運算元必須是成員指標類型\) 結合。  
+ 二元運算子 .* 會將其第一個運算元 (該運算元必須是類別類型的物件) 與其第二個運算元 (該運算元必須是成員指標類型) 結合。  
   
- 二元運算子 –\>\* 會將其第一個運算元 \(該運算元必須是類別類型物件的指標\) 與其第二個運算元 \(該運算元必須是成員指標類型\) 結合。  
+ 二元運算子-> * 結合其第一個運算元必須是類別類型的物件的指標與第二個運算元必須是成員指標類型。  
   
- 在包含 .\* 運算子的運算式中，第一個運算元必須是第二個運算元中所指定成員指標本身所屬且可存取的類別類型，或是該類別所明確衍生且可存取的類型。  
+ 在包含 .* 運算子的運算式中，第一個運算元必須是第二個運算元中所指定成員指標本身所屬且可存取的類別類型，或是該類別所明確衍生且可存取的類型。  
   
- 在包含 –\>\* 運算子的運算式中，第一個運算元必須是第二個運算元中所指定類型的「類別類型指標」類型，或者必須是該類別所明確衍生的類型。  
+ 在運算式中包含-> * 運算子的第一個運算元必須類型的 「 類別類型指標 」 類型指定在第二個運算元，或它必須類型的明確衍生自該類別。  
   
-## 範例  
+## <a name="example"></a>範例  
  以下列類別和程式碼片段為例：  
   
 ```  
@@ -137,11 +152,12 @@ int main() {
 }  
 ```  
   
- .\* 或 –\>\* 成員指標運算子的結果是成員指標的宣告中所指定類型的物件或函式。  因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。  如果第二個運算元是左值，則這個結果會是左值。  
+ 結果。 * 或->\*成員指標運算子是物件或函式的成員指標宣告中指定的型別。 因此，在上述範例中，`ADerived.*pmfnFunc1()` 運算式的結果會是傳回 void 的函式指標。 如果第二個運算元是左值，則這個結果會是左值。  
   
 > [!NOTE]
 >  如果其中一個成員指標運算子的結果是函式，則結果只能做為函式呼叫運算子的運算元使用。  
   
-## 請參閱  
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
+
+

@@ -1,31 +1,48 @@
 ---
-title: "標記陳述式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "goto"
-  - "case"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "labeled 陳述式"
-  - "陳述式, 已標記"
+title: "標記陳述式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- goto
+- case
+dev_langs:
+- C++
+helpviewer_keywords:
+- labeled statement
+- statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 標記陳述式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9011728bf6b8eac5a8ce13ebca2301fc36ad633a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="labeled-statements"></a>標記陳述式
 標籤可用來將程式控制權直接轉移給指定的陳述式。  
   
 ```  
@@ -36,8 +53,8 @@ default :  statement
   
  標籤的範圍宣告該標籤所在的整個函式。  
   
-## 備註  
- 標記陳述式可分三種類型。  這三種類型全都使用冒號分隔某種類型的標籤與陳述式。  case 和 default 標籤為 case 陳述式所特有。  
+## <a name="remarks"></a>備註  
+ 標記陳述式可分三種類型。 這三種類型全都使用冒號分隔某種類型的標籤與陳述式。 case 和 default 標籤為 case 陳述式所特有。  
   
 ```cpp  
 #include <iostream>   
@@ -66,13 +83,13 @@ int main() {
   
 ```  
   
- **goto 陳述式**  
+ **Goto 陳述式**  
   
- 在原始程式中出現的 *identifier* 標籤會宣告一個標籤。  只有 [goto](../cpp/goto-statement-cpp.md) 陳述式可以將制權轉移到 *identifier* 標籤。  下列程式碼片段說明 `goto` 陳述式和 *identifier* 標籤的使用：  
+ 外觀*識別碼*原始程式中的標籤會宣告一個標籤。 只有[goto](../cpp/goto-statement-cpp.md)陳述式可以將控制權轉移到*識別碼*標籤。 下列程式碼片段說明如何使用`goto`陳述式和*識別碼*標籤：  
   
- 標籤不會單獨顯示，而是必須附加至陳述式。  如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。  
+ 標籤不會單獨顯示，而是必須附加至陳述式。 如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。  
   
- 標籤具有函式範圍，而且不能在函式中宣告。  然而，在不同的函式中可以使用相同名稱做為標籤。  
+ 標籤具有函式範圍，而且不能在函式中宣告。 然而，在不同的函式中可以使用相同名稱做為標籤。  
   
 ```  
 // labels_with_goto.cpp  
@@ -91,9 +108,9 @@ int main() {
 //Output: At Test2 label.  
 ```  
   
- **case 陳述式**  
+ **Case 陳述式**  
   
- 出現在 **case** 關鍵字後面的標籤，不可同時出現在 `switch` 陳述式之外   \(這項限制也適用於 **default** 關鍵字\)。 下列程式碼片段將示範 **case** 標籤的正確用法：  
+ 之後出現的標籤**案例**關鍵字也不能出現之外`switch`陳述式。 (這項限制也適用於**預設**關鍵字。)下列程式碼片段示範如何正確使用**案例**標籤：  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -121,8 +138,8 @@ switch( msg )
 }  
 ```  
   
-## case 陳述式中的標籤  
- 出現在 **case** 關鍵字後面的標籤，不可同時出現在 `switch` 陳述式之外   \(這項限制也適用於 **default** 關鍵字\)。 下列程式碼片段將示範 **case** 標籤的正確用法：  
+## <a name="labels-in-the-case-statement"></a>case 陳述式中的標籤  
+ 之後出現的標籤**案例**關鍵字也不能出現之外`switch`陳述式。 (這項限制也適用於**預設**關鍵字。)下列程式碼片段示範如何正確使用**案例**標籤：  
   
 ```  
 // Sample Microsoft Windows message processing loop.  
@@ -165,12 +182,12 @@ switch( msg )
 }  
 ```  
   
-## goto 陳述式中的標籤  
- 在原始程式中出現的 *identifier* 標籤會宣告一個標籤。  只有 [goto](../cpp/goto-statement-cpp.md) 陳述式才能將控制權轉移到 *identifier* 標籤。  下列程式碼片段說明 `goto` 陳述式和 *identifier* 標籤的使用：  
+## <a name="labels-in-the-goto-statement"></a>goto 陳述式中的標籤  
+ 外觀*識別碼*原始程式中的標籤會宣告一個標籤。 只有[goto](../cpp/goto-statement-cpp.md)陳述式可以將控制權轉移到*識別碼*標籤。 下列程式碼片段說明如何使用`goto`陳述式和*識別碼*標籤：  
   
- 標籤不會單獨顯示，而是必須附加至陳述式。  如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。  
+ 標籤不會單獨顯示，而是必須附加至陳述式。 如果需要單獨使用標籤，請在標籤之後放置一個 null 陳述式。  
   
- 標籤具有函式範圍，而且不能在函式中宣告。  然而，在不同的函式中可以使用相同名稱做為標籤。  
+ 標籤具有函式範圍，而且不能在函式中宣告。 然而，在不同的函式中可以使用相同名稱做為標籤。  
   
 ```  
 // labels_with_goto.cpp  
@@ -189,6 +206,6 @@ int main() {
   
 ```  
   
-## 請參閱  
- [C\+\+ 陳述式概觀](../cpp/overview-of-cpp-statements.md)   
- [switch 陳述式 \(C\+\+\)](../cpp/switch-statement-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [C + + 陳述式概觀](../cpp/overview-of-cpp-statements.md)   
+ [switch 陳述式 (C++)](../cpp/switch-statement-cpp.md)

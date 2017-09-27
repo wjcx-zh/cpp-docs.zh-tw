@@ -1,33 +1,49 @@
 ---
-title: "protected (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "protected"
-  - "protected_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "protected 關鍵字 [C++]"
-  - "protected 關鍵字 [C++], 成員存取"
+title: "受保護 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- protected
+- protected_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- protected keyword [C++], member access
+- protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# protected (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b65c73c7ecc3419f4a2a40e4bf693049226bd8b7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="protected-c"></a>protected (C++)
+## <a name="syntax"></a>語法  
   
 ```  
 protected:  
@@ -35,8 +51,8 @@ protected:
 protected base-class  
 ```  
   
-## 備註  
- `protected` 關鍵字會指定 *member\-list* 中，到下一個存取指定名稱 \(**public** 或 `private`\) 或類別定義結束之前的類別成員存取。  宣告為 `protected` 的類別成員只能用於下列各項：  
+## <a name="remarks"></a>備註  
+ `protected`關鍵字會指定在類別成員的存取權*成員清單*到下一個存取規範 (**公用**或`private`) 或類別定義結尾。 宣告為 `protected` 的類別成員只能用於下列各項：  
   
 -   原本宣告這些成員之類別的成員函式。  
   
@@ -48,21 +64,21 @@ protected base-class
   
  `protected` 關鍵字加在基底類別的名稱前面時，會將基底類別的 public 和 protected 成員指定為其衍生類別的 protected 成員。  
   
- Protected 成員不像 `private` 成員一樣為私用，只有其宣告所在類別中的成員才能存取，而且也不像 **public** 成員一樣為公用，可在所有函式中存取。  
+ 受保護的成員是不一樣為私用`private`成員，只有其宣告，但這些不是做為公用類別的成員才能存取**公用**會員，也就是在任何函式中存取。  
   
- 同時宣告為 **static** 的 protected 成員可供衍生類別的任何 friend 或成員函式存取。  未宣告為 **static** 的 protected 成員，只能透過衍生類別的指標、參考或物件供 friend 和成員函式在衍生類別中存取。  
+ 受保護的成員也宣告為**靜態**可存取衍生任何的類別 friend 或成員函式。 受保護的成員不是宣告為**靜態**friend 和成員函式只能透過指標、 參考或衍生類別的物件在衍生類別中存取。  
   
- 如需相關資訊，請參閱 [friend](../cpp/friend-cpp.md)、[public](../cpp/public-cpp.md)、[private](../cpp/private-cpp.md) 和[控制對類別成員的存取](../misc/controlling-access-to-class-members.md)中的成員存取表。  
+ 如需相關資訊，請參閱[friend](../cpp/friend-cpp.md)，[公用](../cpp/public-cpp.md)，[私人](../cpp/private-cpp.md)，和中的成員存取表[控制對類別成員存取](member-access-control-cpp.md).  
   
-## \/clr 專屬資訊  
- 在 CLR 類型中，C\+\+ 存取指定名稱關鍵字 \(**public**、`private` 和 `protected`\) 可能會影響類型和方法在組件方面的可視性。  如需詳細資訊，請參閱[類型和成員可視性](../misc/type-and-member-visibility.md)。  
+## <a name="clr-specific"></a>/clr 專屬資訊  
+ 在 CLR 類型中，c + + 存取規範關鍵字 (**公用**， `private`，和`protected`) 可能會影響的可見性的型別和組件方面的方法。 如需詳細資訊，請參閱[成員存取控制](member-access-control-cpp.md)。  
   
 > [!NOTE]
->  以 [\/LN](../build/reference/ln-create-msil-module.md) 編譯的檔案不受這個行為影響。  在這種情況下，所有 Managed 類別 \(public 或 private\) 都會是可見。  
+>  與已編譯的檔案[/LN](../build/reference/ln-create-msil-module.md)不會受到這個行為。 在這種情況下，所有 Managed 類別 (public 或 private) 都會是可見。  
   
-## \/clr 專屬資訊結束  
+## <a name="end-clr-specific"></a>/clr 專屬資訊結束  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // keyword_protected.cpp  
@@ -96,6 +112,6 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [控制對類別成員的存取](../misc/controlling-access-to-class-members.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [控制對類別成員存取](member-access-control-cpp.md)   
+ [關鍵字](../cpp/keywords-cpp.md)

@@ -1,31 +1,47 @@
 ---
-title: "移動建構函式和移動指派運算子 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "移動建構函式"
+title: "移動建構函式和移動指派運算子 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- move constructor
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 移動建構函式和移動指派運算子 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 07debd120c7757c049d1e3d23dfe1bb065a3cc17
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-本主題說明如何撰寫 C\+\+ 類別的「*移動建構函式*」\(move constructor\) 和移動指派運算子。  移動建構函式可讓您實作移動語意，大幅改善應用程式的效能。  如需移動語意的詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+---
+# <a name="move-constructors-and-move-assignment-operators-c"></a>移動建構函式和移動指派運算子 (C++)
+本主題說明如何撰寫*移動建構函式*和移動指派運算子的 c + + 類別。 移動建構函式可讓您實作移動語意，大幅改善應用程式的效能。 如需移動語意的詳細資訊，請參閱[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
- 這個主題是以下列管理記憶體緩衝區的 C\+\+ 類別 `MemoryBlock` 為基礎。  
+ 這個主題是以下列管理記憶體緩衝區的 C++ 類別 `MemoryBlock` 為基礎。  
   
 ```cpp  
 // MemoryBlock.h  
@@ -103,9 +119,9 @@ private:
 };  
 ```  
   
- 下列程序說明如何撰寫 C\+\+ 類別的移動建構函式和移動指派運算子。  
+ 下列程序說明如何撰寫 C++ 類別的移動建構函式和移動指派運算子。  
   
-### 建立 C\+\+ 類別的移動建構函式  
+### <a name="to-create-a-move-constructor-for-a-c-class"></a>建立 C++ 類別的移動建構函式  
   
 1.  定義空的建構函式方法，該方法會接受以類別類型的右值參考做為其參數，如下列範例所示範：  
   
@@ -124,14 +140,14 @@ private:
     _length = other._length;  
     ```  
   
-3.  將來源物件的資料成員指派為預設值。  這樣可防止解構函式多次釋放資源 \(例如記憶體\)：  
+3.  將來源物件的資料成員指派為預設值。 這樣可防止解構函式多次釋放資源 (例如記憶體)：  
   
     ```cpp  
     other._data = nullptr;  
     other._length = 0;  
     ```  
   
-### 建立 C\+\+ 類別的移動指派運算子  
+### <a name="to-create-a-move-assignment-operator-for-a-c-class"></a>建立 C++ 類別的移動指派運算子  
   
 1.  定義空的指派運算子，該運算子會接受以類別類型的右值參考做為其參數，並傳回對類別類型的參考，如下列範例所示範：  
   
@@ -149,7 +165,7 @@ private:
     }  
     ```  
   
-3.  在條件陳述式中，從所指派的物件釋放所有資源 \(例如記憶體\)。  
+3.  在條件陳述式中，從所指派的物件釋放所有資源 (例如記憶體)。  
   
      下列範例會從所指派的物件釋放 `_data` 成員：  
   
@@ -178,7 +194,7 @@ private:
     return *this;  
     ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例示範 `MemoryBlock` 類別的完整移動建構函式和移動指派運算子：  
   
 ```cpp  
@@ -226,8 +242,8 @@ MemoryBlock& operator=(MemoryBlock&& other)
 }  
 ```  
   
-## 範例  
- 下列範例示範移動語意如何改善應用程式的效能。  此範例會在向量物件中加入兩個元素，然後在兩個現有元素之間插入新的元素。  在 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 中，`vector` 類別會使用移動語意，透過移動向量元素而非複製向量元素的方式，有效率地執行插入作業。  
+## <a name="example"></a>範例  
+ 下列範例示範移動語意如何改善應用程式的效能。 此範例會在向量物件中加入兩個元素，然後在兩個現有元素之間插入新的元素。 在 Visual c + + 2010、`vector`類別會使用移動語意，以有效率地執行插入作業，藉由移動而非複製向量的元素。  
   
 ```cpp  
 // rvalue-references-move-semantics.cpp  
@@ -272,7 +288,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.  
 ```  
   
- 在 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 之前，這個範例會產生下列輸出：  
+ Visual c + + 2010 之前, 這個範例會產生下列輸出：  
   
 ```  
 In MemoryBlock(size_t). length = 25.  
@@ -297,12 +313,12 @@ In ~MemoryBlock(). length = 75. Deleting resource.
   
  這個使用移動語意的範例版本比不使用移動語意的版本更有效率，因為前者執行較少的複製、記憶體配置和記憶體解除配置作業。  
   
-## 穩固程式設計  
- 為避免資源流失，請一律釋放移動指派運算子中的資源 \(例如記憶體、檔案控制代碼和通訊端\)。  
+## <a name="robust-programming"></a>穩固程式設計  
+ 為避免資源流失，請一律釋放移動指派運算子中的資源 (例如記憶體、檔案控制代碼和通訊端)。  
   
  為避免解構資源後無法復原，請適當地處理移動指派運算子中的自我指派。  
   
- 如果您同時為類別提供移動建構函式和移動指派運算子，可以撰寫移動建構函式來呼叫移動指派運算子，藉此去除冗餘碼。  下列範例示範呼叫移動指派運算子的修訂版移動建構函式。  
+ 如果您同時為類別提供移動建構函式和移動指派運算子，可以撰寫移動建構函式來呼叫移動指派運算子，藉此去除冗餘碼。 下列範例示範呼叫移動指派運算子的修訂版移動建構函式。  
   
 ```  
 // Move constructor.  
@@ -314,8 +330,8 @@ MemoryBlock(MemoryBlock&& other)
 }  
 ```  
   
- [std::move](../Topic/move.md) 函式會保留 `other` 參數的右值屬性。  
+ [Std:: move](../standard-library/utility-functions.md#move)函式會保留的右值屬性`other`參數。  
   
-## 請參閱  
- [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)   
- [\<utility\> move](http://msdn.microsoft.com/zh-tw/abef7e85-9dd6-4724-85da-d7f7fe95dca9)
+## <a name="see-also"></a>另請參閱  
+ [右值參考宣告子： & （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)   
+ [\<公用程式 > 移動](http://msdn.microsoft.com/en-us/abef7e85-9dd6-4724-85da-d7f7fe95dca9)

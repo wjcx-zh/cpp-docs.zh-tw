@@ -1,84 +1,100 @@
 ---
-title: "volatile (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "volatile_cpp"
-  - "volatile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "中斷處理常式和 volatile 關鍵字"
-  - "物件 [C++], volatile"
-  - "volatile 關鍵字 [C++]"
-  - "volatile 物件"
+title: "volatile （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- volatile_cpp
+- volatile
+dev_langs:
+- C++
+helpviewer_keywords:
+- interrupt handlers and volatile keyword
+- volatile keyword [C++]
+- volatile objects
+- objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
 caps.latest.revision: 43
-caps.handback.revision: 43
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# volatile (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1bbbceaa8f170ad8c75173d60d38e5dd3df1fbdd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-您可以用來宣告一個物件可以在程式被硬體修改的一個型別限定詞。  
+---
+# <a name="volatile-c"></a>volatile (C++)
+類型限定詞，可以用來宣告程式中的物件可以由硬體修改。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 volatile declarator ;  
 ```  
   
-## 備註  
- 您可以使用 [\/暫時的](../build/reference/volatile-volatile-keyword-interpretation.md) 編譯器切換並修改它如何詮釋這些關鍵字。  
+## <a name="remarks"></a>備註  
+ 您可以使用[/volatile](../build/reference/volatile-volatile-keyword-interpretation.md)編譯器參數，修改編譯器如何解譯這個關鍵字。  
   
- Visual Studio 會根據目標架構，對同一個`volatile` 關鍵字做不一樣的解釋。  對於 ARM 系統來說，如果 **\/volatile** 編譯器選項都沒有指定，編譯器就會以預設執行 **\/volatile:iso** 。  對於除了 ARM 以外的內部結構，如果 **\/volatile** 編譯器選項都沒有指定，編譯器會執行 **\/volatile:ms** ; 因此當您處理跨執行緒的共用記憶體時，我們強烈建議您指定 **\/volatile:iso**，並使用明確的同步處理原始物件和內建編譯器。  
+ Visual Studio 會根據目標架構，對`volatile` 關鍵字做不一樣的解譯。 若是 ARM、 如果有任何**/volatile**指定編譯器選項時，編譯器會執行如同**/volatile:iso**所指定。 針對 ARM，如果沒有以外的架構**/volatile**指定編譯器選項時，編譯器會執行如同**/volatile: ms**指定; 因此，對於架構以外 ARM 我們強烈建議您指定**/volatile:iso**，並在處理跨執行緒共用的記憶體時使用明確的同步處理原始類型和編譯器內建函式。  
   
- 您可以使用 `volatile` 限定詞存取非同步處理序的記憶體位置，例如中斷處理常式。  
+ 您可以使用 `volatile` 限定詞存取非同步處理序 (例如中斷處理常式) 所用的記憶體位置。  
   
- 當 `volatile` 被含有 [\_\_限制](../cpp/extension-restrict.md) 關鍵字的變數使用時， `volatile` 會取得優先權。  
+ 當`volatile`上也有變數使用[__restrict](../cpp/extension-restrict.md)關鍵字，`volatile`優先。  
   
- 如果 `struct` 的成員被標記為 `volatile`，則 `volatile` 會傳遞至整個結構。  如果結構用單一指令卻沒有足夠的長度可以複製目前的結構， `volatile` 在該結構可能會遺失。  
+ 如果 `struct` 成員被標記為 `volatile`，則 `volatile` 會傳播至整個結構。 如果結構沒有足夠的長度，可透過單一指令複製到目前的架構，`volatile` 在該結構上可能會完全遺失。  
   
- 如果符合下列任一狀況， `volatile` 關鍵字可能會對欄位無效:  
+ 如果下列其中一個條件成立，`volatile` 關鍵字可能對欄位無效：  
   
--   暫時的欄位長度超過對大值，此最大值為用一個指令可以複製的目前結構。  
+-   volatile 欄位長度超過可透過單一指令複製到目前架構的大小上限。  
   
--   最外層包含 `struct`的長度，或者是可以有巢狀 `struct` 的成員—超過可以只用一個指令就能被複製在目前結構的最大值。  
+-   最外層包含 `struct` 的長度，或者如果是可能巢狀 `struct` 的成員，超過可透過單一指令複製到目前架構的大小上限。  
   
- 雖然這個處理器不重新排列非快取記憶體存取，非快取變數必須被標記成 `volatile` 確保編譯器不重新排列記憶體存取。  
+ 雖然處理器不會重新排列不可快取的記憶體存取，不可快取的變數必須標記成 `volatile` 以確保編譯器不會重新排列記憶體存取。  
   
- 被宣告成 `volatile` 的物件不適用於某些最佳化，因為它們的值會隨時變更。即使先前指示要求相同物件的值，系統一定會讀取暫時物件目前的值。此外，物件的值會在工作中立即被寫入。  
+ 宣告成 `volatile` 的物件不用於某些最佳化，因為它們的值可能隨時會變更。  即使先前指令要求相同物件的值，再次被要求時，系統一定會讀取暫時性物件目前的值。  此外，物件的值會在指派時立即被寫入。  
   
-## ISO\-Compliant \- ISO 相容  
- 如果您熟悉 [C\# volatile](../Topic/volatile%20\(C%23%20Reference\).md) 關鍵字或在舊版的 Visual C\+\+熟悉 `volatile` 的行為，請注意 C\+\+11 ISO 標準 `volatile` 關鍵字是不同的且當 [\/volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md) 編譯器選項被指定時，亦支援 Visual Studio。\(對於 ARM 系統來說，它的指定為預設的\)。  `volatile` 關鍵字在 C\+\+11 ISO 標準程式碼中是只針對硬體存取;不要使用它來做內部執行緒的溝通。  如需內部執行緒溝通，請使用機制像是 [C\+\+ 標準樣板程式庫的](../standard-library/cpp-standard-library-reference.md) [std::atomic\<T\>](../standard-library/atomic.md) 。  
+## <a name="iso-compliant"></a>符合 ISO 標準  
+ 如果您是熟悉 C# volatile 關鍵字或熟悉的行為`volatile`在舊版的 Visual c + + 中，請注意，C + + 11 ISO 標準`volatile`關鍵字是不同，適用於 Visual Studio 時[//volatile: iso](../build/reference/volatile-volatile-keyword-interpretation.md)編譯器選項已指定。 (對於 ARM 系統來說，預設為指定)。 `volatile` 關鍵字在 C++11 ISO 標準程式碼中只用於硬體存取；請勿將它用於執行緒間通訊。 用於執行緒間通訊使用機制如[std::atomic\<T >](../standard-library/atomic.md)從[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。  
   
-## ISO 標準的結尾  
+## <a name="end-of-iso-compliant"></a>符合 ISO 標準結尾  
   
-## Microsoft 專有的  
- 當 **\/volatile:ms** 編譯器選項預設是由 ARM以外的結構使用時，編譯器產生額外的程式碼維持參考對暫時物件的順序也維持參考對其他全域物件的順序。  特別之處在於：  
+## <a name="microsoft-specific"></a>Microsoft 特定的  
+ 時**/volatile: ms**編譯器選項使用 — ARM 以外的架構做為目標時，根據預設，編譯器會產生額外的程式碼維護除了維護暫時性物件參考的順序其他全域物件參考的順序。 特別之處在於：  
   
--   暫時物件 \(也稱為 Volatile 寫入\) 的寫入在語義上為釋放;即為對全域或靜態物件的參考在寫入至靜態物件之前的指令序列會發生在暫時寫入到二進位編譯之前。  
+-   暫時性物件的寫入 (也稱為暫時性寫入) 有 Release 語義，也就是說，在指令序列中暫時性物件寫入之前的全域或靜態物件參考，會在已編譯二進位檔中的暫時性寫入之前發生。  
   
--   暫時物件 \(也稱為讀取 Volatile\) 的讀取在語義上為取得;即為對全域或靜態物件的參考在讀取揮發性記憶體至靜態物件之前的指令序列會發生在暫時讀取到二進位編譯之後。  
+-   暫時性物件的讀取 (也稱為暫時性讀取) 有 Acquire 語義，也就是說，在指令序列中揮發性記憶體讀取之後的全域或靜態物件參考，會在已編譯二進位檔中的暫時性讀取之後發生。  
   
- 這可讓暫時物件在多執行緒應用程式為記憶體鎖定和記憶體釋放的使用。  
+ 這可讓暫時性物件用於多執行緒應用程式的記憶體鎖定和記憶體釋放。  
   
 > [!NOTE]
->  當它依靠 **\/volatile:ms** 編譯器選項被使用且更多確保時 ，程式碼就不可移植了。  
+>  當它是倚賴時具有所提供的增強型保證**/volatile: ms**編譯器選項時，程式碼是不可移植。  
   
-## 結束 Microsoft 專有  
+**END Microsoft 特定的**  
   
-## 請參閱  
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>另請參閱  
+ [關鍵字](../cpp/keywords-cpp.md)   
  [const](../cpp/const-cpp.md)   
  [const 和 volatile 指標](../cpp/const-and-volatile-pointers.md)

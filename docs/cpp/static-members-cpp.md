@@ -1,40 +1,56 @@
 ---
-title: "靜態成員 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別執行個體 [C++], 共用成員"
-  - "類別執行個體 [C++], 靜態成員"
-  - "類別成員 [C++], 共用"
-  - "類別成員 [C++], static"
-  - "資料成員 [C++], 靜態資料成員"
-  - "執行個體建構函式, 共用成員"
-  - "執行個體建構函式, 靜態成員"
-  - "成員 [C++], 靜態資料成員"
-  - "靜態資料成員 [C++]"
-  - "靜態成員 [C++], 資料成員"
+title: "靜態成員 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- class members [C++], static
+- instance constructors, static members
+- class members [C++], shared
+- members [C++], static data members
+- static members [C++], data members
+- static data members [C++]
+- data members [C++], static data members
+- class instances [C++], shared members
+- instance constructors, shared members
+- class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 靜態成員 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 568ceedfcc3cd470cdd9003dfb41c691f9986f25
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-類別可以包含靜態資料成員和成員函式。  當資料成員宣告為 **static** 時，只維護該類別所有物件的一份資料複本   \(如需詳細資訊，請參閱[靜態成員函式](../misc/static-member-functions.md)\)。  
+---
+# <a name="static-members-c"></a>靜態成員 (C++)
+類別可以包含靜態資料成員和成員函式。 當資料成員宣告為**靜態**，只能有一個複本的資料會保留類別的所有物件。
   
- 靜態資料成員不是特定類別類型之物件的一部分。  因此，靜態資料成員的宣告不視為定義。  資料成員是在類別範圍中宣告的，不過，定義是在檔案範圍執行。  這些靜態成員具有外部連結。  下面這個範例可說明這點：  
+ 靜態資料成員不是特定類別類型之物件的一部分。 因此，靜態資料成員的宣告不視為定義。 資料成員是在類別範圍中宣告的，不過，定義是在檔案範圍執行。 這些靜態成員具有外部連結。 下面這個範例可說明這點：  
   
 ```  
 // static_data_members.cpp  
@@ -67,13 +83,13 @@ int main()
   
  在上述程式碼中，成員 `bytecount` 是在類別 `BufferedOutput` 中宣告，但必須在類別宣告之外加以定義。  
   
- 靜態資料成員可以在不參考類別類型物件的情況下參考。  使用 `BufferedOutput` 物件撰寫的位元組數目可以如下取得：  
+ 靜態資料成員可以在不參考類別類型物件的情況下參考。 使用 `BufferedOutput` 物件撰寫的位元組數目可以如下取得：  
   
 ```  
 long nBytes = BufferedOutput::bytecount;  
 ```  
   
- 若要靜態成員存在，不需要有類別類型的物件存在。  靜態成員也可以透過成員選取 \(**.** 和 **–\>**\) 運算子存取。  例如:  
+ 若要靜態成員存在，不需要有類別類型的物件存在。 靜態成員也可以存取使用成員選取 (**。** 和** -> **) 運算子。 例如:   
   
 ```  
 BufferedOutput Console;  
@@ -81,11 +97,11 @@ BufferedOutput Console;
 long nBytes = Console.bytecount;  
 ```  
   
- 在上述情況中，不會評估物件 \(`Console`\) 的參考；傳回值是靜態物件 `bytecount` 的傳回值。  
+ 在上述情況中，不會評估物件 (`Console`) 的參考；傳回值是靜態物件 `bytecount` 的傳回值。  
   
- 靜態資料成員是受類別成員存取規則規範，因此，只有類別成員函式和 friend 才能進行靜態資料成員的私用存取。  這些規則會在[成員存取控制項](../cpp/member-access-control-cpp.md)中加以說明。  例外狀況是不管其存取限制，靜態資料成員必須在檔案範圍中定義。  如果資料成員將明確初始化，定義中必須提供初始設定式。  
+ 靜態資料成員是受類別成員存取規則規範，因此，只有類別成員函式和 friend 才能進行靜態資料成員的私用存取。 這些規則所述[成員存取控制](../cpp/member-access-control-cpp.md)。 例外狀況是不管其存取限制，靜態資料成員必須在檔案範圍中定義。 如果資料成員將明確初始化，定義中必須提供初始設定式。  
   
- 靜態成員的類型未以類別名稱限定。  因此，`BufferedOutput::bytecount` 的類型是 `long`。  
+ 靜態成員的類型未以類別名稱限定。 因此，`BufferedOutput::bytecount` 的類型是 `long`。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

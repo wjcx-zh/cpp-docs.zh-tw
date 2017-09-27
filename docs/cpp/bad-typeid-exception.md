@@ -1,41 +1,58 @@
 ---
-title: "bad_typeid 例外狀況 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bad_typeid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bad_typeid 例外狀況"
-  - "例外狀況, bad_typeid"
+title: "bad_typeid 例外狀況 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bad_typeid
+dev_langs:
+- C++
+helpviewer_keywords:
+- bad_typeid exception
+- exceptions, bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# bad_typeid 例外狀況
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ea7dc85862622180038cf520ef92b752b65eba84
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-當 `typeid` 的運算元為 NULL 指標時，會由 [typeid 運算子](../cpp/typeid-operator.md)擲回 `bad_typeid` 例外狀況。  
+---
+# <a name="badtypeid-exception"></a>bad_typeid 例外狀況
+`bad_typeid`所擲回例外狀況[typeid 運算子](../cpp/typeid-operator.md)時的運算元`typeid`為 NULL 指標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
       catch (bad_typeid)  
-   statement  
+   statement  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `bad_typeid` 的介面為：  
   
 ```  
@@ -48,7 +65,7 @@ public:
 };  
 ```  
   
- 下列範例顯示擲回 `bad_typeid` 例外狀況的 `typeid`。  
+ 下列範例顯示擲回 `typeid` 例外狀況的 `bad_typeid`。  
   
 ```  
 // expre_bad_typeid.cpp  
@@ -76,12 +93,12 @@ catch (bad_typeid){
 }  
 ```  
   
-## 輸出  
+## <a name="output"></a>輸出  
   
 ```  
 Object is NULL  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [執行階段類型資訊](../cpp/run-time-type-information.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+ [關鍵字](../cpp/keywords-cpp.md)

@@ -1,37 +1,54 @@
 ---
-title: "類別樣板的部分特製化 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別樣板的部分特製化"
+title: "樣板特製化 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- partial specialization of class templates
 ms.assetid: f3c67c0b-3875-434a-b8d8-bb47e99cf4f0
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 類別樣板的部分特製化 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 6e6cf3d4ad48a50d6f4cdffa81cd4ca330ed33a9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-類別樣板可以部分特製化，而產生的類別仍然是樣板。  部分特製化可以視情況針對特定類型部分自訂樣板程式碼，例如：  
+---
+# <a name="template-specialization-c"></a>樣板特製化 （c + +）
+
+類別樣板可以部分特製化，而產生的類別仍然是樣板。 部分特製化可以視情況針對特定類型部分自訂樣板程式碼，例如：  
   
--   樣板可以有多個類型，只需特製化其中一部分。  結果是在其他類型參數化的樣板。  
+-   樣板可以有多個類型，只需特製化其中一部分。 結果是在其他類型參數化的樣板。  
   
--   一個樣板只能有一個類型，不過，指標、參考、成員指標或函式指標類型都需要特製化。  特製化本身仍然是指向類型或參考類型的樣板。  
+-   一個樣板只能有一個類型，不過，指標、參考、成員指標或函式指標類型都需要特製化。 特製化本身仍然是指向類型或參考類型的樣板。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp
 // partial_specialization_of_class_templates.cpp  
 template <class T> struct PTS {  
    enum {  
@@ -72,13 +89,17 @@ int main() {
 }  
 ```  
   
-  **PTS\<S\>::IsPointer \=\= 0 PTS\<S\>::IsPointerToDataMember \=\= 0**  
-**PTS\<S\*\>::IsPointer \=\= 1 PTS\<S\*\>::IsPointerToDataMember \=\=0**  
-**PTS\<int S::\*\>::IsPointer \=\= 0 PTS\<int S::\*\>::IsPointerToDataMember \=\= 1**   
-## 範例  
- 如果您的樣板集合類別接受任何類型 **T**，您可以建立接受任何指標類型 **T\*** 的部分特製化。  下列程式碼示範集合類別樣板 `Bag` 和指標類型的部分特製化，其中該集合會在將指標類型複製到陣列之前取值指標類型。  然後，該集合會儲存指向的值。  若使用原始樣板，只能將指標本身儲存在集合中，因此資料容易遭到刪除或修改。  在這種特殊指標版本的集合中，會在 `add` 方法中新增檢查 null 指標的程式碼。  
-  
+```Output  
+PTS<S>::IsPointer == 0 PTS<S>::IsPointerToDataMember == 0  
+PTS<S*>::IsPointer == 1 PTS<S*>::IsPointerToDataMember ==0  
+PTS<int S::*>::IsPointer == 0 PTS<int S::*>::IsPointerToDataMember == 1  
 ```  
+  
+## <a name="example"></a>範例
+
+ 如果您有接受任何類型的樣板集合類別**T**，您可以建立接受任何指標類型的部分特製化**T***。 下列程式碼示範集合類別樣板 `Bag` 和指標類型的部分特製化，其中該集合會在將指標類型複製到陣列之前取值指標類型。 然後，該集合會儲存指向的值。 若使用原始樣板，只能將指標本身儲存在集合中，因此資料容易遭到刪除或修改。 在這種特殊指標版本的集合中，會在 `add` 方法中新增檢查 null 指標的程式碼。  
+  
+```cpp
 // partial_specialization_of_class_templates2.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -179,14 +200,18 @@ int main() {
 }  
 ```  
   
-  **10 9 8**  
-**a b c**  
-**Null pointer\!**  
-**3 87 8 100**   
-## 範例  
- 下列範例定義的樣板類別接受任何兩種類型的組合，然後將該樣板類別的部分特製化定義為特製化，使得其中一個類型為 `int`。  特製化會額外定義排序方法，這個方法會根據整數實作簡單的反昇排序。  
-  
+```Output  
+10 9 8   
+a b c   
+Null pointer!  
+3 87 8 100   
 ```  
+  
+## <a name="example"></a>範例
+
+ 下列範例定義的樣板類別接受任何兩種類型的組合，然後將該樣板類別的部分特製化定義為特製化，使得其中一個類型為 `int`。 特製化會額外定義排序方法，這個方法會根據整數實作簡單的反昇排序。  
+  
+```cpp
 // partial_specialization_of_class_templates3.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -315,17 +340,19 @@ int main() {
 }  
 ```  
   
-  **{apple, fruit}**  
-**{banana, fruit}**  
-**{dog, animal}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**  
-**{89, cat}**  
-**Sorted list:**  
-**{89, cat}**  
-**{100, apple}**  
-**{101, banana}**  
-**{103, dog}**   
-## 請參閱  
- [類別樣板的明確特製化](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)
+```Output  
+{apple, fruit}  
+{banana, fruit}  
+{dog, animal}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+{89, cat}  
+  
+Sorted list:  
+{89, cat}  
+{100, apple}  
+{101, banana}  
+{103, dog}  
+```  
+

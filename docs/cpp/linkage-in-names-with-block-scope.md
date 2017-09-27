@@ -1,36 +1,53 @@
 ---
-title: "區塊範圍的名稱連結 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "區塊範圍 [C++]"
-  - "外部連結, 範圍連結規則"
-  - "連結 [C++], 範圍連結規則"
-  - "名稱 [C++], 範圍連結規則"
-  - "範圍 [C++], 連結規則"
+title: "區塊範圍的名稱連結 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- block scope [C++]
+- external linkage, scope linkage rules
 ms.assetid: 73efa91a-f761-47f7-bbd9-9f9e3508e218
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 區塊範圍的名稱連結
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: de093c90e0da4a906d8aefebfb7048733c1a1f1d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-下列連結規則適用於具有區塊範圍的名稱 \(區域名稱\)：  
+---
+# <a name="linkage-in-names-with-block-scope"></a>區塊範圍的名稱連結
+下列連結規則適用於具有區塊範圍的名稱 (區域名稱)：  
   
--   除非先前已宣告為 `extern`static，否則宣告為  **的名稱會具有外部連結。**  
+-   名稱宣告為`extern`除非先前已宣告為具有外部連結**靜態**。  
   
 -   具有區塊範圍的所有其他名稱都不具有連結。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式和連結](../cpp/program-and-linkage-cpp.md)

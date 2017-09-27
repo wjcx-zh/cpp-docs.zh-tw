@@ -1,59 +1,76 @@
 ---
-title: "__stdcall | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__stdcall_cpp"
-  - "__stdcall"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__stdcall 關鍵字 [C++]"
+title: "__stdcall |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __stdcall_cpp
+- __stdcall
+dev_langs:
+- C++
+helpviewer_keywords:
+- __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# __stdcall
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6c4998d3f53a76246545a6290e735f52206d70ad
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="stdcall"></a>__stdcall
 **Microsoft 特定的**  
   
- `__stdcall` 呼叫慣例用於呼叫 Win32 API 函式。  被呼叫端會清除堆疊，因此編譯器會建立 **vararg** 函式 `__cdecl`。  使用這個呼叫慣例的函式需要函式原型。  
+ `__stdcall` 呼叫慣例用於呼叫 Win32 API 函式。 被呼叫端會清除堆疊，因此編譯器會建立**vararg**函式`__cdecl`。 使用這個呼叫慣例的函式需要函式原型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 return-type __stdcall function-name[(argument-list)]  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  下列清單會顯示這個呼叫慣例的實作。  
   
-|元素|實作|  
-|--------|--------|  
+|項目|實作|  
+|-------------|--------------------|  
 |引數傳遞順序|由右至左。|  
 |引數傳遞慣例|以傳值方式，除非傳遞指標或參考類型。|  
 |堆疊維護責任|被呼叫函式會從堆疊快顯其本身的引數。|  
-|名稱裝飾慣例|名稱前面會加底線 \(\_\)。  名稱後面加上 @ 符號，再接著引數清單中的位元組數目 \(十進位\)。  因此，宣告為 `int func( int a, double b )` 的函式會裝飾為如下：`_func@12`|  
+|名稱裝飾慣例|名稱前面會加底線 (_)。 名稱後面加上 @ 符號，再接著引數清單中的位元組數目 (十進位)。 因此，宣告為 `int func( int a, double b )` 的函式會裝飾為如下：`_func@12`|  
 |大小寫轉譯慣例|無|  
   
- [\/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md) 編譯器選項會為所有未以不同呼叫慣例明確宣告的函式指定 `__stdcall`。  
+ [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)編譯器選項會指定`__stdcall`所有未以不同呼叫慣例明確宣告的函式。  
   
- 使用 `__stdcall` 修飾詞宣告的函式傳回值的方式與使用 [\_\_cdecl](../cpp/cdecl.md) 宣告的函式相同。  
+ 使用宣告的函式`__stdcall`修飾詞的傳回值做為使用宣告的函式的相同方式[__cdecl](../cpp/cdecl.md)。  
   
  在 ARM 和 x64 處理器上，編譯器會接受並忽略 `__stdcall` 關鍵字；在 ARM 和 x64 結構上，依照慣例，引數會盡可能在暫存器中傳遞，而後續引數會在堆疊上傳遞。  
   
- 對於非靜態類別函式，如果函式是以非正規的方式定義，則不需要在非正規定義上指定呼叫慣例修飾詞。  也就是說，對於類別非靜態成員方法而言，宣告時所指定的呼叫慣例是在定義時假設。  如果已指定此類別定義，  
+ 對於非靜態類別函式，如果函式是以非正規的方式定義，則不需要在非正規定義上指定呼叫慣例修飾詞。 也就是說，對於類別非靜態成員方法而言，宣告時所指定的呼叫慣例是在定義時假設。 如果已指定此類別定義，  
   
 ```cpp  
 struct CMyClass {  
@@ -73,16 +90,16 @@ void CMyClass::mymethod() { return; }
 void __stdcall CMyClass::mymethod() { return; }  
 ```  
   
-## 範例  
- 在下列範例中，使用 \_\_**stdcall** 會導致將所有 `WINAPI` 函式類型被當成標準呼叫處理：  
+## <a name="example"></a>範例  
+ 在下列範例中，使用 __**stdcall**會導致所有`WINAPI`函式類型被當成標準呼叫處理：  
   
-```c  
+```cpp  
 // Example of the __stdcall keyword  
 #define WINAPI __stdcall  
 // Example of the __stdcall keyword on function pointer  
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+ [關鍵字](../cpp/keywords-cpp.md)

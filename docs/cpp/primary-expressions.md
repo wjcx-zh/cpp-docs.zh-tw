@@ -1,48 +1,62 @@
 ---
-title: "主要運算式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "運算式 [C++], 常值"
-  - "運算式 [C++], name"
-  - "運算式 [C++], 主要"
-  - "運算式 [C++], 完整名稱"
-  - "主要運算式"
+title: "主要運算式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- primary expressions
+- expressions [C++], name
+- expressions [C++], literal
+- expressions [C++], primary
+- expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 主要運算式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-主要運算式為更複雜運算式的建置組塊。  它們是常值、名稱，以及範圍解析運算子 \(`::`\) 所限定的名稱。主要運算式可以具有下列任何形式：  
+---
+# <a name="primary-expressions"></a>主要運算式
+主要運算式為更複雜運算式的建置組塊。 它們是常值、名稱，以及範圍解析運算子 (`::`) 所限定的名稱。  主要運算式可以具有下列任何形式：  
   
 ```  
   
-        literal  
-this  
-:: name  
-name   
-( expression )  
+      literal  
+      this  
+:: namename( expression )  
 ```  
   
- *literal* 是常數主要運算式。  它的類型取決於其規格形式。  如需有關指定常值的完整資訊，請參閱[常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)。  
+ A*常值*是常數主要運算式。 它的類型取決於其規格形式。 請參閱[常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)有關指定常值的完整資訊。  
   
- **this** 關鍵字是類別物件的指標。  它可在非靜態成員函式中使用，並且指向針對其叫用函式的類別執行個體。  **this** 關鍵字無法在類別成員函式的主體之外使用。  
+ **這**關鍵字是類別物件的指標。 它可在非靜態成員函式中使用，並且指向針對其叫用函式的類別執行個體。 **這**關鍵字不能用在類別成員函式主體之外。  
   
- **this** 指標的類型在未具體修改 **this** 指標的函式內為 `type` **\*const** \(其中 `type` 是類別名稱\)。  下列範例將示範成員函式宣告和 **this** 的類型：  
+ 型別**這**指標`type` ** \*const** (其中`type`是類別名稱) 未特別修改函式內**此**指標。 下列範例會示範成員函式宣告和類型的**這**:  
   
 ```  
 // expre_Primary_Expressions.cpp  
@@ -56,13 +70,13 @@ public:
 };  
 ```  
   
- 如需修改 **this** 指標類型的詳細資訊，請參閱 [this 指標的類型](../misc/type-of-this-pointer.md)。  
+ 請參閱[this 指標](this-pointer.md)如需有關修改的類型**這**指標。  
   
- 後面接的名稱的範圍解析運算子 \(`::`\) 會構成主要運算式。這類名稱必須是全域範圍的名稱，而不是成員名稱。這個運算式的類型是由名稱的宣告所決定。  如果宣告名稱是左值，它就是左值 \(也就是說，它可以出現在指派運算子運算式左邊\)。  範圍解析運算子允許參考全域名稱，即使該名稱在目前範圍中為隱藏狀態。  如需如何使用範圍解析運算子的範例，請參閱[範圍](../cpp/scope-visual-cpp.md)。  
+ 後面接的名稱的範圍解析運算子 (`::`) 會構成主要運算式。  這類名稱必須是全域範圍的名稱，而不是成員名稱。  這個運算式的類型是由名稱的宣告所決定。 如果宣告名稱是左值，它就是左值 (也就是說，它可以出現在指派運算子運算式左邊)。 範圍解析運算子允許參考全域名稱，即使該名稱在目前範圍中為隱藏狀態。 請參閱[範圍](../cpp/scope-visual-cpp.md)如需如何使用範圍解析運算子的範例。  
   
- 以括號括住的運算式為主要運算式，其類型和值與未以括號括住之運算式的類型和值相同。  如果未以括號括住的運算式為左值，它就是左值。  
+ 以括號括住的運算式為主要運算式，其類型和值與未以括號括住之運算式的類型和值相同。 如果未以括號括住的運算式為左值，它就是左值。  
   
- 在上述主要運算式語法的內容中，*name* 表示語法中任何針對[名稱](http://msdn.microsoft.com/zh-tw/1c49cc24-08d5-4884-b170-ba8ed42d80db)描述的項目，不過，在名稱前面使用範圍解析運算子時，則不允許只能在類別中出現的名稱類型。這類名稱包括使用者定義的轉換函式名稱和解構函式名稱。  
+ 主要運算式語法，上面所列的內容中*名稱*表示任何項目中所述的語法[名稱](http://msdn.microsoft.com/en-us/1c49cc24-08d5-4884-b170-ba8ed42d80db)，不過，當使用名稱型別名稱前面的範圍解析運算子只能在類別中不允許。  這類名稱包括使用者定義的轉換函式名稱和解構函式名稱。  
   
  主要運算式的範例包括：  
   
@@ -76,7 +90,7 @@ this // in a member function, a pointer to the class instance
 ( i + 1 ) // a parenthesized expression  
 ```  
   
- 以下範例全都會視為各種形式的 *name*，也因此為主要運算式：  
+ 下列範例會將被視為*名稱*，並因此為主要運算式中各種形式：  
   
 ```  
 MyClass // a identifier  
@@ -88,5 +102,5 @@ A::B   // a qualified name
 A<int> // a template id  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式的類型](../cpp/types-of-expressions.md)

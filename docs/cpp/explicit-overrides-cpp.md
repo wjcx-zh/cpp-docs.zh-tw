@@ -1,41 +1,57 @@
 ---
-title: "明確覆寫 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "衍生類別, 虛擬函式"
-  - "虛擬函式的明確覆寫"
-  - "明確虛擬函式覆寫"
-  - "覆寫, 函式"
-  - "虛擬函式, 明確覆寫"
+title: "明確覆寫 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding, functions
+- derived classes, virtual functions
+- explicit virtual function overrides
+- explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 明確覆寫 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ee79034ca7c74094753094cce29fc4a11b044ff
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="explicit-overrides-c"></a>明確覆寫 (C++)
 **Microsoft 特定的**  
   
- 如果在兩個或多個[介面](../cpp/interface.md)中宣告同一個虛擬函式，且若類別衍生自這些介面，您可以明確覆寫每個虛擬函式。  
+ 如果要將相同的虛擬函式宣告在兩個或多個[介面](../cpp/interface.md)，如果類別衍生自這些介面，您可以明確覆寫每個虛擬函式。  
   
- 如需深入了解使用新 Managed 語法的 Managed 程式碼中的明確覆寫，請參閱[明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 使用新 managed 的語法的 managed 程式碼中的覆寫明確的詳細資訊，請參閱[明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)。  
   
  **END Microsoft 特定的**  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例示範如何使用明確覆寫：  
   
 ```  
@@ -113,17 +129,20 @@ int main() {
   
    // Cast to a CMyClass pointer so that the destructor gets called  
       CMyClass *p = dynamic_cast<CMyClass *>(pIMyInt1);  
-      delete p;  
+      delete p;  
 }  
 ```  
   
-  **在 CMyClass::IMyInt1::mf1\(\)**  
-**在 CMyClass::IMyInt1::mf1\(int\)**  
-**在 CMyClass::IMyInt1::mf2\(\)**  
-**在 CMyClass::IMyInt1::mf2\(int\)**  
-**在 CMyClass::IMyInt2::mf1\(\)**  
-**在 CMyClass::IMyInt2::mf1\(int\)**  
-**在 CMyClass::IMyInt2::mf2\(\)**  
-**在 CMyClass::IMyInt2::mf2\(int\)**   
-## 請參閱  
+```Output  
+In CMyClass::IMyInt1::mf1()  
+In CMyClass::IMyInt1::mf1(int)  
+In CMyClass::IMyInt1::mf2()  
+In CMyClass::IMyInt1::mf2(int)  
+In CMyClass::IMyInt2::mf1()  
+In CMyClass::IMyInt2::mf1(int)  
+In CMyClass::IMyInt2::mf2()  
+In CMyClass::IMyInt2::mf2(int)  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [繼承](../cpp/inheritance-cpp.md)

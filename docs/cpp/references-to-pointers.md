@@ -1,34 +1,50 @@
 ---
-title: "指標的參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "參考, 指標的"
+title: "指標的參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 指標的參考
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf7a3fe930e8b862578286908598c9152943f134
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-指標的參考可以透過與物件的參考類似的方式來宣告。  宣告指標的參考會產生一個可修改的值，其使用方式就像一般的指標。  
+---
+# <a name="references-to-pointers"></a>指標的參考
+指標的參考可以透過與物件的參考類似的方式來宣告。 宣告指標的參考會產生一個可修改的值，其使用方式就像一般的指標。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼說明使用指標的指標以及指標的參考之間的不同處。  
   
- 函式 `Add1` 和 `Add2` 的功能相同 \(雖然不是以相同的方式呼叫\)。  其差別在於 `Add1` 是使用兩次間接取值 \(Indirection\)，而 `Add2` 則是利用指標參考的便利性。  
+ 函式 `Add1` 和 `Add2` 的功能相同 (雖然不是以相同的方式呼叫)。 其差別在於 `Add1` 是使用兩次間接取值 (Indirection)，而 `Add2` 則是利用指標參考的便利性。  
   
 ```  
 // references_to_pointers.cpp  
@@ -37,7 +53,7 @@ manager: "ghogen"
 #include <iostream>  
 #include <string>  
   
-// STL namespace  
+// C++ Standard Library namespace  
 using namespace std;  
   
 enum {  
@@ -158,9 +174,15 @@ int Add2( BTree*& Root, char *szToAdd ) {
 }  
 ```  
   
-  **使用方式：Refptr \[1 &#124; 2\]**  
-**其中：**  
-**1 使用兩次間接取值 \(Indirection\)**  
-**2 使用指標參考。  輸入是來自 stdin。**    
-## 請參閱  
+```Output  
+Usage: Refptr [1 | 2]  
+  
+where:  
+1 uses double indirection  
+2 uses a reference to a pointer.  
+  
+Input is from stdin.  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [參考](../cpp/references-cpp.md)

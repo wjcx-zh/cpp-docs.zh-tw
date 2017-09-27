@@ -1,33 +1,50 @@
 ---
-title: "__interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__interface"
-  - "__interface_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__interface 關鍵字 [C++]"
+title: "__interface |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __interface
+- __interface_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# __interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e502574b9d55238d6f9aed33949e06db3ec6349d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="interface"></a>__interface
 **Microsoft 特定的**  
   
- Visual C\+\+ 介面可定義為如下：  
+ Visual C++ 介面可定義為如下：  
   
 -   能夠繼承自零個或多個基底介面。  
   
@@ -41,7 +58,7 @@ caps.handback.revision: 8
   
 -   不能包含資料成員；可以使用屬性。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -49,8 +66,8 @@ modifier
  __interface interface-name {interface-definition};  
 ```  
   
-## 備註  
- 可以使用這些規則實作 C\+\+ [類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)，但 `__interface` 會強制執行這些規則。  
+## <a name="remarks"></a>備註  
+ C + +[類別](../cpp/class-cpp.md)或[結構](../cpp/struct-cpp.md)無法實作與上述規則，但`__interface`強制套用這些。  
   
  例如，以下是介面定義範例：  
   
@@ -61,17 +78,17 @@ __interface IMyInterface {
 };  
 ```  
   
- 如需 Managed 介面的詳細資訊，請參閱[介面類別](../windows/interface-class-cpp-component-extensions.md)。  
+ 如需 managed 介面的資訊，請參閱[介面類別](../windows/interface-class-cpp-component-extensions.md)。  
   
- 請注意，您不需要明確表明 `CommitX` 和 `get_X` 函式是純虛擬函式。  第一個函式的同等宣告如下：  
+ 請注意，您不需要明確表明 `CommitX` 和 `get_X` 函式是純虛擬函式。 第一個函式的同等宣告如下：  
   
 ```  
 virtual HRESULT CommitX() = 0;  
 ```  
   
- `__interface` 表示 [novtable](../cpp/novtable.md) `__declspec` 修飾詞。  
+ `__interface`表示[novtable](../cpp/novtable.md) `__declspec`修飾詞。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例示範如何使用在介面中宣告的屬性。  
   
 ```  
@@ -147,10 +164,13 @@ int main()
 }  
 ```  
   
-  **p\-\>int\_data \= 100**  
-**bstr\_data \= Testing**   
-## END Microsoft 特定的  
+```Output  
+p->int_data = 100  
+bstr_data = Testing  
+```  
   
-## 請參閱  
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
- [Interface Attributes](../windows/interface-attributes.md)
+**END Microsoft 特定的**  
+  
+## <a name="see-also"></a>另請參閱  
+ [關鍵字](../cpp/keywords-cpp.md)   
+ [介面屬性](../windows/interface-attributes.md)

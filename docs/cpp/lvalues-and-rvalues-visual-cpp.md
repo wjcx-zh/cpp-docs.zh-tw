@@ -1,45 +1,65 @@
 ---
-title: "Lvalues 和 Rvalues | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "左值"
-  - "右值"
+title: "值的類別： Lvalues 和 Rvalues （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- R-values
+- L-values
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Lvalues 和 Rvalues
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a3d230d3374a7be5aa57d965a451235d40cbee12
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-每個 C\+\+ 運算式不是左值就是右值。  左值是指保存在單一運算式之外的物件。  您可以將左值當做具有名稱的物件。  所有變數都是左值，包括不可修改的 \(`const`\) 變數。  右值是暫存值，不會在使用它的運算式之外保存。  若要更加了解左值和右值之間的差異，請參考下列範例：  
-  
-```  
-// lvalues_and_rvalues1.cpp  
-// compile with: /EHsc  
-#include <iostream>  
-using namespace std;  
-int main()  
-{  
-   int x = 3 + 4;  
-   cout << x << endl;  
-}  
-```  
-  
- 在這個範例中，`x` 是左值，因為它會在定義它的運算式之外保存。  `3 + 4` 運算式是右值，因為它會判斷值為暫存值，而且不會在定義它的運算式之外保存。  
-  
+---
+# <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues （Visual c + +）
+每個 c + + 運算式具有類型，並屬於*值類別*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。 
+
+ C + + 17 標準會定義運算式值的類別，如下所示：
+
+- A *glvalue*是的運算式的評估判斷物件、 位元欄位或函式的識別。 
+- A *prvalue*是的運算式的評估初始化物件或位元欄位，或計算運算子的運算元的值，請在它出現內容所指定。 
+- *Xvalue*是 glvalue 代表物件或位元欄位 （通常是因為它是其存留期結尾附近），可以重複使用的資源。 [範例： 特定種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如傳回型別是右值參考的函式呼叫或轉型為右值參考類型。 ] 
+- *左值*是不是 xvalue glvalue。 
+- *右值*prvalue 或 xvalue。 
+
+下圖說明兩個類別之間的關聯性：
+
+ ![C + + 運算式值分類](media/value_categories.png "c + + 運算式值類別")  
+ 
+ 左值會有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括`const`變數陣列元素中，函式會傳回左值參考，位元欄位、 等位和類別成員的呼叫。 
+ 
+ Prvalue 運算式有沒有可存取您的程式的位址。 Prvalue 運算式的範例包括常值、 函式呼叫傳回非參考類型，並只能由編譯器建立運算式評估期間，但可存取的暫存物件。 
+
+ Xvalue 運算式沒有位址，但是可以用來初始化為右值參考，可讓您存取運算式。 範例包括傳回右值參考，陣列註標、 成員和指標成員運算式的陣列或物件是右值參考的函式呼叫。 
+ 
  下列範例將示範數種正確和不正確的左值和右值用法：  
   
 ```  
@@ -48,10 +68,10 @@ int main()
 {  
    int i, j, *p;  
   
-   // Correct usage: the variable i is an lvalue.  
+   // Correct usage: the variable i is an lvalue and the literal 7 is a prvalue.  
    i = 7;  
   
-   // Incorrect usage: The left operand must be an lvalue (C2106).  
+   // Incorrect usage: The left operand must be an lvalue (C2106).  `j * 4` is a prvalue.
    7 = i; // C2106  
    j * 4 = 7; // C2106  
   
@@ -68,11 +88,12 @@ int main()
 ```  
   
 > [!NOTE]
->  本主題中的範例將說明運算子未多載時的正確和不正確用法。  藉由多載運算子，您就可以讓像是 `j * 4` 這樣的運算式變成左值。  
+>  本主題中的範例將說明運算子未多載時的正確和不正確用法。 藉由多載運算子，您就可以讓像是 `j * 4` 這樣的運算式變成左值。  
+
   
- 當您提到物件參考時，會經常用到「*左值*」\(lvalue\) 和「*右值*」\(rvalue\) 這兩個詞彙。  如需有關參考的詳細資訊，請參閱[左值參考宣告子：&](../cpp/lvalue-reference-declarator-amp.md) 和[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
+ 條款*左值*和*右值*經常參考的物件參考時。 多個參考的詳細資訊，請參閱[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)和[右值參考宣告子: （& s) （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [基本概念](../cpp/basic-concepts-cpp.md)   
- [左值參考宣告子：&](../cpp/lvalue-reference-declarator-amp.md)   
+ [左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)   
  [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

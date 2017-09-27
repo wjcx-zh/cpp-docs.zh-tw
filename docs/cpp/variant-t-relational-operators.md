@@ -1,45 +1,62 @@
 ---
-title: "_variant_t 關係運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t::operator=="
-  - "_variant_t.operator!="
-  - "_variant_t::operator!="
-  - "_variant_t.operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "!= 運算子"
-  - "== 運算子, 使用特定 Visual C++ 物件"
-  - "運算子 !=, 關係運算子"
-  - "運算子 !=, variant"
-  - "運算子 ==, variant"
-  - "operator!=, 關係運算子"
-  - "operator!=, variant"
-  - "operator==, variant"
-  - "關係運算子, _variant_t 類別"
+title: "_variant_t 關係運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t::operator==
+- _variant_t.operator!=
+- _variant_t::operator!=
+- _variant_t.operator==
+dev_langs:
+- C++
+helpviewer_keywords:
+- '!= operator'
+- relational operators, _variant_t class
+- operator!=, variant
+- operator!=, relational operators
+- operator !=, variant
+- operator ==, variant
+- operator==, variant
+- operator !=, relational operators
+- == operator, with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _variant_t 關係運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d8bcf9550e3e3f8af1836aa3f6e8747089837142
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="variantt-relational-operators"></a>_variant_t 關係運算子
 **Microsoft 特定的**  
   
  比較兩個 `_variant_t` 物件是否相等或不等。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -57,20 +74,20 @@ bool operator!=(
 ) const;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *varSrc*  
- 要與 `_variant_t` 比較的 **VARIANT**。  
+ A **VARIANT**與比較`_variant_t`物件。  
   
  `pSrc`  
- 要與 `_variant_t` 比較的 **VARIANT** 指標。  
+ 指標**VARIANT**與比較`_variant_t`物件。  
   
-## 傳回值  
- 如果對等成立則傳回 **true**，否則便傳回 **false**。  
+## <a name="return-value"></a>傳回值  
+ 傳回**true**比較保留，如果**false**如果不是。  
   
-## 備註  
- 將 `_variant_t` 物件與 **VARIANT** 比較，測試是否相等或不等。  
+## <a name="remarks"></a>備註  
+ 比較`_variant_t`物件**VARIANT**、 測試是否相等或不等比較。  
   
  **END Microsoft 特定的**  
   
-## 請參閱  
- [\_variant\_t 類別](../cpp/variant-t-class.md)
+## <a name="see-also"></a>另請參閱  
+ [_variant_t 類別](../cpp/variant-t-class.md)

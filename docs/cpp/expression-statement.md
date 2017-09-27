@@ -1,40 +1,57 @@
 ---
-title: "運算陳述式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "運算陳述式"
-  - "陳述式, 運算式"
+title: "運算陳述式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- statements, expression
+- expression statements
 ms.assetid: 547d7f7a-58be-4ffc-a4b3-d64c7ae7538c
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 運算陳述式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b48bf6d0dfd1c1ce29d1d116a77d3445bd5e1e30
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-運算陳述式會造成對於運算式的評估。  運算陳述式不會發生控制權轉移或反覆項目的情形。  
+---
+# <a name="expression-statement"></a>運算陳述式
+運算陳述式會造成對於運算式的評估。 運算陳述式不會發生控制權轉移或反覆項目的情形。  
   
  運算陳述式的語法很簡單  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 [expression ] ;  
 ```  
   
-## 備註  
- 在下一個陳述式執行之前，會完成運算陳述式中所有運算式的評估，以及所有副作用。  最常見的運算陳述式是指派和函式呼叫。由於運算式是選擇性的，單獨的分號會視為是空的運算陳述式，稱為 [null](../cpp/null-statement.md) 陳述式。  
+## <a name="remarks"></a>備註  
+ 在下一個陳述式執行之前，會完成運算陳述式中所有運算式的評估，以及所有副作用。 最常見的運算陳述式是指派和函式呼叫。  由於運算式是選擇性的單獨的分號會視為空白運算式陳述式，稱為[null](../cpp/null-statement.md)陳述式。  
   
-## 請參閱  
- [C\+\+ 陳述式概觀](../cpp/overview-of-cpp-statements.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)

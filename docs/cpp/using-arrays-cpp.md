@@ -1,29 +1,45 @@
 ---
-title: "使用陣列 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++]"
+title: "使用陣列 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++]
 ms.assetid: 7818a7fe-7e82-4881-a3d1-7d25162b7fc7
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 使用陣列 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 31402e2f113deb89fce6d2d8b6c3633f06a944be
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-使用陣列註標運算子 \(`[ ]`\)，您可以存取陣列的個別項目。  如果一維陣列用於沒有註標的運算式，陣列名稱評估為陣列中第一個項目的指標。  
+---
+# <a name="using-arrays-c"></a>使用陣列 (C++)
+使用陣列註標運算子 (`[ ]`)，您可以存取陣列的個別項目。 如果一維陣列用於沒有註標的運算式，陣列名稱判斷值為陣列中第一個項目的指標。  
   
 ```  
 // using_arrays.cpp  
@@ -56,7 +72,7 @@ int main() {
 }  
 ```  
   
- 在上述程式碼中， `multi` 是一個 `double`型別的三維陣列。  `p2multi` 指標指向大小為三的 `double` 型別。  在此範例中，陣列使用一、二和三個註標。  雖然更常見的是指定所有註標\(如在 `cout` 陳述式中\)，但有時選取陣列中特定的元素子集是很有用的\(如 `cout`之後的陳述式所示\)。  
+ 在上述程式碼中，`multi` 是 `double` 類型的三維陣列。 `p2multi` 指標指向大小為三的 `double` 類型陣列。 在此範例中，陣列搭配使用的註標有一個、兩個和三個。 雖然更常見的是指定所有註標 (如在 `cout` 陳述式中)，但有時選取陣列元素的特定子集是很有用的 (如 `cout` 之後的陳述式所示)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [陣列](../cpp/arrays-cpp.md)

@@ -1,32 +1,49 @@
 ---
-title: "初始設定式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列元素初始設定式"
-  - "陣列 [C++], 陣列元素初始設定式"
-  - "宣告子, 做為初始設定式"
-  - "初始設定式, 陣列項目"
-  - "初始化陣列, 初始設定式"
+title: "初始設定式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- array-element initializers
+- initializing arrays, initializers
+- arrays [C++], array-element initializers
+- declarators, as initializers
+- initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 初始設定式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-初始設定式指定變數的初始值。  您可以初始化下列內容中的變數：  
+---
+# <a name="initializers"></a>初始設定式
+初始設定式指定變數的初始值。 您可以初始化下列內容中的變數：  
   
 -   變數的定義中：  
   
@@ -51,7 +68,7 @@ caps.handback.revision: 9
   
  初始設定式可能會有下列格式：  
   
--   以括號刮住的運算式 \(或逗號分隔的運算式清單\)：  
+-   以括號刮住的運算式 (或逗號分隔的運算式清單)：  
   
     ```cpp  
     Point p1(1, 2);  
@@ -63,7 +80,7 @@ caps.handback.revision: 9
     string s = "hello";  
     ```  
   
--   以大括號括住的初始設定式清單。  該清單可能是空的，也可能包含一組清單 \(如下列範例所示\)：  
+-   以大括號括住的初始設定式清單。 該清單可能是空的，也可能包含一組清單 (如下列範例所示)：  
   
     ```cpp  
     struct Point{  
@@ -83,23 +100,23 @@ caps.handback.revision: 9
     }  
     ```  
   
-## 初始化的類型  
- 初始化分為數種類型，可能會在程式執行的不同時期發生。  不同類型的初始化不會互斥，例如清單初始化可以觸發值初始化，而在其他情況下，則可觸發彙總初始化。  
+## <a name="kinds-of-initialization"></a>初始化的類型  
+ 初始化分為數種類型，可能會在程式執行的不同時期發生。 不同類型的初始化不會互斥，例如清單初始化可以觸發值初始化，而在其他情況下，則可觸發彙總初始化。  
   
-### 零初始化  
+### <a name="zero-initialization"></a>零初始化  
  零初始化是將變數設為隱含轉換為類型的零值：  
   
--   數值變數初始化為 0 \(或 0.0、0.0000000000 等\)。  
+-   數值變數初始化為 0 (或 0.0、0.0000000000 等)。  
   
--   Char 變數初始化為 ‘\\0’。  
+-   Char 變數初始化為`'\0'`。  
   
 -   指標初始化為 `nullptr`。  
   
--   [POD](../standard-library/is-pod-class.md) 類別、結構和等位的成員一定會初始化為零值。  
+-   陣列， [POD](../standard-library/is-pod-class.md)類別、 結構和等位成員一定會初始化為零的值。  
   
  零初始化在不同時期執行：  
   
--   在程式啟動時，對象是具有靜態期間的所有具名變數。  之後可以再次初始化這些變數。  
+-   在程式啟動時，對象是具有靜態期間的所有具名變數。 之後可以再次初始化這些變數。  
   
 -   在初始化值期間，對象是純量類型和使用空括號初始化的 POD 類別類型。  
   
@@ -124,8 +141,8 @@ int main() {
 }  
 ```  
   
-### 預設初始化  
- 類別、結構和等位的預設初始化是使用預設建構函式的初始化。  可以呼叫沒有初始化運算式或具有 `new` 關鍵字的預設建構函式：  
+### <a name="default_initialization"></a>預設值初始化  
+ 類別、結構和等位的預設初始化是使用預設建構函式的初始化。 可以呼叫沒有初始化運算式或具有 `new` 關鍵字的預設建構函式：  
   
 ```cpp  
 MyClass mc1;  
@@ -134,7 +151,7 @@ MyClass* mc3 = new MyClass;
   
  如果類別、結構或等位沒有預設建構函式，則編譯器會發出錯誤。  
   
- 定義純量變數時若未使用初始化運算式，則預設會初始化。  這些變數都具有不定值。  
+ 定義純量變數時若未使用初始化運算式，則預設會初始化。 這些變數都具有不定值。  
   
 ```cpp  
 int i1;  
@@ -142,7 +159,7 @@ float f;
 char c;  
 ```  
   
- 定義陣列時若未使用初始化運算式，則預設會初始化。  預設初始化陣列時，預設會初始化其成員，且其成員具有下列不定值 \(如下列範例所示\)：  
+ 定義陣列時若未使用初始化運算式，則預設會初始化。 預設初始化陣列時，預設會初始化其成員，且其成員具有下列不定值 (如下列範例所示)：  
   
 ```cpp  
 int int_arr[3];  
@@ -150,8 +167,8 @@ int int_arr[3];
   
  如果陣列成員沒有預設建構函式，則編譯器會發出錯誤。  
   
-#### 常數變數的預設初始化  
- 宣告常數變數時必須搭配使用初始設定式。  如果常數變數是純量類型，則會引發編譯器錯誤，如果是具有預設建構函式的類別類型，則會引發警告：  
+#### <a name="default-initialization-of-constant-variables"></a>常數變數的預設初始化  
+ 宣告常數變數時必須搭配使用初始設定式。 如果常數變數是純量類型，則會引發編譯器錯誤，如果是具有預設建構函式的類別類型，則會引發警告：  
   
 ```cpp  
 class MyClass{};  
@@ -162,8 +179,8 @@ int main() {
 }  
 ```  
   
-#### 靜態變數的預設初始化  
- 未使用初始設定式宣告的靜態變數會初始化為 0 \(隱含地轉換為類型\)。  
+#### <a name="default-initialization-of-static-variables"></a>靜態變數的預設初始化  
+ 未使用初始設定式宣告的靜態變數會初始化為 0 (隱含地轉換為類型)。  
   
 ```cpp  
 class MyClass {     
@@ -182,7 +199,7 @@ int main() {
   
  如需全域靜態物件初始化的詳細資訊，請參閱[其他啟動考量](../cpp/additional-startup-considerations.md)。  
   
-### 值初始化  
+### <a name="value-initialization"></a>值初始化  
  在下列情況下，會發生值初始化：  
   
 -   使用空大括號初始設定初始化具名的值。  
@@ -217,8 +234,8 @@ int main() {
   
 ```  
   
-### 複製初始化  
- 複製初始化是使用不同的物件初始化同一個物件。  在下列情況下，會發生這類初始化：  
+### <a name="copy-initialization"></a>複製初始化  
+ 複製初始化是使用不同的物件初始化同一個物件。 在下列情況下，會發生這類初始化：  
   
 -   使用等號初始化變數  
   
@@ -230,7 +247,7 @@ int main() {
   
 -   使用等號初始化非靜態資料成員  
   
--   複製初始化會在彙總初始化期間初始化類別、結構和等位成員。  如需範例，請參閱[彙總初始化](../cpp/initializers.md#INIT_AggInit)。  
+-   複製初始化會在彙總初始化期間初始化類別、結構和等位成員。 請參閱[彙總初始化](#agginit)範例。  
   
  下列程式碼示範數個複製初始化範例：  
   
@@ -272,10 +289,10 @@ regex r = "a.*b"; // the constructor is explicit; same error
 shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error  
 ```  
   
- 在某些情況下，若刪除或無法存取類別的複製建構函式，複製初始化會引發編譯器錯誤。  如需詳細資訊，請參閱[\(NOTINBUILD\) Explicit Initialization](http://msdn.microsoft.com/zh-tw/c89724f8-ddd3-4d77-b86d-77fcd8bd8595)。  
+ 在某些情況下，若刪除或無法存取類別的複製建構函式，複製初始化會引發編譯器錯誤。 
   
-### 直接初始化  
- 直接初始化是使用 \(非空白\) 大括號或括號的初始化。  直接初始化可以叫用明確建構函式，這點與複製初始化不同。  在下列情況下，會發生這類初始化：  
+### <a name="direct-initialization"></a>直接初始化  
+ 直接初始化是使用 (非空白) 大括號或括號的初始化。 直接初始化可以叫用明確建構函式，這點與複製初始化不同。 在下列情況下，會發生這類初始化：  
   
 -   使用非空白大括號或括號初始化變數。  
   
@@ -316,8 +333,8 @@ int main(){
 }  
 ```  
   
-### 清單初始化  
- 使用以大括號括住的初始設定式清單初始化變數時，會發生清單初始化。  在下列情況下，可以使用以大括號括住的初始設定式清單：  
+### <a name="list-initialization"></a>清單初始化  
+ 使用以大括號括住的初始設定式清單初始化變數時，會發生清單初始化。 在下列情況下，可以使用以大括號括住的初始設定式清單：  
   
 -   初始化變數  
   
@@ -335,7 +352,7 @@ int main(){
   
  下列程式碼示範一些清單初始化範例：  
   
-```vb  
+```cpp  
 class MyClass {  
 public:  
     MyClass(int myInt, char myChar) {}    
@@ -366,20 +383,21 @@ int main() {
 }  
 ```  
   
-### 彙總初始化  
- 彙總初始化是陣列或類別類型 \(通常是結構或等位\) 的清單初始化表單，這些陣列或類別類型具有：  
+### <a name="agginit"></a>彙總初始化  
+ 彙總初始化是陣列或類別類型 (通常是結構或等位) 的清單初始化表單，這些陣列或類別類型具有：  
   
 -   非 private 成員或 protected 成員  
   
--   沒有使用者提供的建構函式 \(明確預設或已刪除的建構函式除外\)  
+-   沒有使用者提供的建構函式 (明確預設或已刪除的建構函式除外)  
   
 -   沒有基底類別  
   
 -   沒有虛擬成員函式  
   
--   非靜態成員沒有大括號或等號初始設定式  
+> [!NOTE]
+>  <!--conformance note-->In Visual Studio 2015 and earlier, an aggregate is not allowed to have  brace-or-equal initializers for non-static members. This restriction was removed in the C++14 standard and implemented in Visual Studio 2017. 
   
- 彙總初始設定式包含以大括號括住的初始化清單 \(包含或不含等號\) \(如下列範例所示\)：  
+ 彙總初始設定式包含以大括號括住的初始化清單 (包含或不含等號) (如下列範例所示)：  
   
 ```cpp  
 #include <iostream>  
@@ -424,10 +442,10 @@ myArr3: 8 9 10 0 0
 ```  
   
 > [!IMPORTANT]
->  彙總初始化期間宣告但未明確初始化的陣列成員會初始化為零 \(如上面的 `myArr3` 中所示\)。  
+>  陣列成員已宣告但未明確初始化彙總初始化期間為零，像是`myArr3`上方。  
   
-#### 初始化等位和結構  
- 如果等位沒有建構函式，則可以使用單一值 \(或使用等位的另一個執行個體\) 將它初始化。  該值用於初始化第一個非靜態欄位。  此初始化與結構初始化不同，後者會使用初始化設定式中的第一個值初始化第一個欄位、第二個值初始化第二個欄位，依此類推。  比較下列範例中的等位初始化和結構初始化：  
+#### <a name="initializing-unions-and-structs"></a>初始化等位和結構  
+ 如果等位沒有建構函式，則可以使用單一值 (或使用等位的另一個執行個體) 將它初始化。 該值用於初始化第一個非靜態欄位。 此初始化與結構初始化不同，後者會使用初始化設定式中的第一個值初始化第一個欄位、第二個值初始化第二個欄位，依此類推。 比較下列範例中的等位初始化和結構初始化：  
   
 ```cpp  
 struct MyStruct {  
@@ -458,8 +476,8 @@ int main() {
 }  
 ```  
   
-#### 初始化包含彙總的彙總  
- 彙總類型可以包含其他彙總類型 \(例如陣列、結構陣列等\)。  這些類型均使用巢狀大括號集進行初始化，例如：  
+#### <a name="initializing-aggregates-that-contain-aggregates"></a>初始化包含彙總的彙總  
+ 彙總類型可以包含其他彙總類型 (例如陣列、結構陣列等)。 這些類型均使用巢狀大括號集進行初始化，例如：  
   
 ```cpp  
 struct MyStruct {  
@@ -473,8 +491,8 @@ int main() {
 }  
 ```  
   
-### 參考初始化  
- 若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。  例如:  
+### <a name="reference-initialization"></a>參考初始化  
+ 若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如:  
   
 ```  
 // initializing_references.cppint   
@@ -489,33 +507,33 @@ int main()
    LongRef3 = 11L;   // C3892}  
 ```  
   
- 使用暫存物件初始化參考的唯一方式是初始化常數暫存物件。  初始化之後，參考類型變數一律會指向相同物件；不能將此變數修改為指向另一個物件。  
+ 使用暫存物件初始化參考的唯一方式是初始化常數暫存物件。 初始化之後，參考類型變數一律會指向相同物件；不能將此變數修改為指向另一個物件。  
   
- 雖然語法可能相同，但初始化參考類型變數和指派參考類型變數，在語意上是不同的。  在上述範例中，變更 `iVar` 和 `lVar` 的指派就初始化而言看似相似，但兩者的作用不同。  初始化會指定參考類型變數所指向的物件；指派則會透過參考指派被參考的物件。  
+ 雖然語法可能相同，但初始化參考類型變數和指派參考類型變數，在語意上是不同的。 在上述範例中，變更 `iVar` 和 `lVar` 的指派就初始化而言看似相似，但兩者的作用不同。 初始化會指定參考類型變數所指向的物件；指派則會透過參考指派被參考的物件。  
   
  由於將參考類型的引數傳遞至函式以及從函式傳回參考類型的值都是初始化，因此可以正確地初始化參考所傳回的函式型式引數。  
   
  只有在下列情況下，可以不使用初始設定式宣告參考類型變數：  
   
--   函式宣告 \(原型\)。  例如:  
+-   函式宣告 (原型)。 例如:  
   
     ```  
     int func( int& );  
     ```  
   
--   函式傳回類型宣告。  例如:  
+-   函式傳回類型宣告。 例如:  
   
     ```  
     int& func( int& );  
     ```  
   
--   宣告函式類型類別成員。  例如:  
+-   宣告函式類型類別成員。 例如:  
   
     ```  
     class c {public:   int& i;};  
     ```  
   
--   宣告明確指定為 `extern` 的變數。  例如:  
+-   宣告明確指定為 `extern` 的變數。 例如:  
   
     ```  
     extern int& iVal;  
@@ -523,15 +541,14 @@ int main()
   
  初始化參考類型變數時，編譯器會使用下圖所示的決策圖，在建立物件參考或建立參考指向之暫存物件之間做選擇。  
   
- ![初始化參考類型的決策圖形](../cpp/media/vc38s71.png "vc38S71")  
+ ![初始化參考類型決策圖形](../cpp/media/vc38s71.gif "vc38S71")  
 初始化參考類型決策圖  
   
- 若要初始化 `volatile` 類型 \(宣告為 `volatile` *typename***&** *identifier*\) 的參考，可以使用相同類型的 `volatile` 物件，或者使用尚未宣告為 `volatile` 的物件。  不過，不能以該類型的 **const** 物件初始化。  同樣地，若要初始化 **const** 類型 \(宣告為 **const** *typename***&** *identifier*\) 的參考，可以使用相同類型的 **const** 物件 \(或者使用可轉換為該類型的物件或尚未宣告為 **const** 的物件\)。  不過，不能以該類型的 `volatile` 物件初始化。  
+ 參考`volatile`類型 (宣告為`volatile` *typename* ** & ** *識別碼*) 可以使用初始化`volatile`物件類型相同，或者使用尚未宣告為`volatile`。 不過，以初始化**const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename* ** & ** *識別碼*) 可以使用初始化**const**相同類型的物件 (或任何項目已轉換成該類型，或者使用尚未宣告為**const**)。 不過，不能以該類型的 `volatile` 物件初始化。  
   
- 若要初始化未以 **const** 或 `volatile` 關鍵字限定的參考，只能使用不是宣告為 **const** 或 `volatile` 的物件。  
+ 使用未限定參考**const**或`volatile`關鍵字可以初始化只能搭配物件宣告為**const**也`volatile`。  
   
-### 外部變數的初始化  
- 自動、暫存器、靜態和外部變數的宣告可以包含初始設定式。  不過，只有在不將變數宣告為 `extern` 時，外部變數宣告才能包含初始設定式。  如需詳細資訊，請參閱[外部](../misc/external.md)。  
+### <a name="initialization-of-external-variables"></a>外部變數的初始化  
+ 自動 （靜態） 和外部變數的宣告可以包含初始設定式。 不過，只有在不將變數宣告為 `extern` 時，外部變數宣告才能包含初始設定式。
   
-## 請參閱  
- [\(NOTINBUILD\)Declarators](http://msdn.microsoft.com/zh-tw/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)
+

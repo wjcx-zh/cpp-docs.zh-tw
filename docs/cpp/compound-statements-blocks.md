@@ -1,42 +1,59 @@
 ---
-title: "複合陳述式 (區塊) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "}"
-  - "{"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "區塊, 關於區塊"
-  - "複合陳述式"
+title: "複合陳述式 （區塊） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '}'
+- '{'
+dev_langs:
+- C++
+helpviewer_keywords:
+- blocks, about blocks
+- compound statements
 ms.assetid: 23855939-7430-498e-8936-0c70055ea701
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 複合陳述式 (區塊)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9dc28fde0ab2cf5b21771347554d0c664b7f462d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-複合陳述式是由包含在大括號 \(**{ }**\) 內的零個或多個陳述式所組成。  複合陳述式可以在必須有陳述式的任何位置使用。  複合陳述式通常稱為「區塊」\(Block\)。  
+---
+# <a name="compound-statements-blocks"></a>複合陳述式 (區塊)
+複合陳述式包含大括號括住的零或多個陳述式 (**{}**)。 複合陳述式可以在必須有陳述式的任何位置使用。 複合陳述式通常稱為「區塊」(Block)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 { [ statement-list ] }  
 ```  
   
-## 備註  
- 下列範例會使用複合陳述式做為 **if** 陳述式的 *statement* 部分 \(如需有關此語法的詳細資訊，請參閱 [if 陳述式](../cpp/if-else-statement-cpp.md)\)：  
+## <a name="remarks"></a>備註  
+ 下列範例使用複合陳述式為*陳述式*屬於**如果**陳述式 (請參閱[if 陳述式](../cpp/if-else-statement-cpp.md)語法的詳細資料):  
   
 ```  
 if( Amount > 100 )  
@@ -45,11 +62,13 @@ if( Amount > 100 )
     Alert();  
 }  
 else  
+{
     Balance -= Amount;  
+}
 ```  
   
 > [!NOTE]
->  由於宣告是陳述式，因此宣告可以是 *statement\-list* 中的其中一個陳述式。  因此，在複合陳述式內宣告，但未明確宣告為靜態的名稱，會具有區域範圍和 \(為物件時\) 存留期。  如需如何處理具有區域範圍之名稱的詳細資訊，請參閱[範圍](../cpp/scope-visual-cpp.md)。  
+>  由於宣告是陳述式，宣告可以是其中一個陳述式中*陳述式清單*。 因此，在複合陳述式內宣告，但未明確宣告為靜態的名稱，會具有區域範圍和 (為物件時) 存留期。 請參閱[範圍](../cpp/scope-visual-cpp.md)具有本機領域名稱的處理方式的詳細資料。  
   
-## 請參閱  
- [C\+\+ 陳述式概觀](../cpp/overview-of-cpp-statements.md)
+## <a name="see-also"></a>另請參閱  
+ [C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)

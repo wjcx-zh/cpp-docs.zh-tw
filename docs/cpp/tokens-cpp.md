@@ -1,34 +1,51 @@
 ---
-title: "C++ 語彙基元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剖析, C++ 語彙基元"
-  - "語彙基元"
-  - "轉譯單位"
-  - "空白字元, 在 C++ 語彙基元中"
+title: "語彙基元 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- tokens
+- parsing, C++ tokens
+- translation units
+- white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 語彙基元
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 041750d86f12f82e0f905c65f0a75d6a32f37cdf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-語彙基元是 C\+\+ 程式中對編譯器有意義的最小項目。 C\+\+ 剖析器可辨識下列語彙基元類型：識別項、關鍵字、常值、運算子、標點符號和任何其他分隔符號。 這些語彙基元資料流組成轉譯單位。  
+---
+# <a name="tokens-c"></a>語彙基元 （c + +）
+語彙基元是 C++ 程式中對編譯器有意義的最小項目。 C++ 剖析器可辨識下列語彙基元類型：識別項、關鍵字、常值、運算子、標點符號和任何其他分隔符號。 這些語彙基元資料流組成轉譯單位。  
   
- 語彙基元通常由*「空白字元」*\(White Space\) 分隔。 空白字元可以是下列一項或多項：  
+ 語彙基元通常由 *「空白字元」*(White Space) 分隔。 空白字元可以是下列一項或多項：  
   
 -   空白  
   
@@ -40,7 +57,7 @@ manager: "ghogen"
   
 -   註解  
   
- 剖析器可辨識關鍵字、識別項、常值、運算子和標點符號。 如需特定語彙基元類型的相關資訊，請參閱[關鍵字](../cpp/keywords-cpp.md)、[識別項](../cpp/identifiers-cpp.md)、[數值、布林值和指標常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)、[字串和字元常值](../cpp/string-and-character-literals-cpp.md)、[使用者定義常值](../cpp/user-defined-literals-cpp.md)、[C\+\+ 內建運算子、優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)，以及[標點符號](../cpp/punctuators-cpp.md)。 除了分隔語彙基元所需的空白字元之外，其他空白字元都會予以忽略。  
+ 剖析器可辨識關鍵字、識別項、常值、運算子和標點符號。 如需特定語彙基元類型的相關資訊，請參閱 [關鍵字](../cpp/keywords-cpp.md)、 [識別項](../cpp/identifiers-cpp.md)、 [數值、布林值和指標常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)、 [字串和字元常值](../cpp/string-and-character-literals-cpp.md)、 [使用者定義常值](../cpp/user-defined-literals-cpp.md)、 [C++ 內建運算子、優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)，以及 [標點符號](../cpp/punctuators-cpp.md)。 除了分隔語彙基元所需的空白字元之外，其他空白字元都會予以忽略。  
   
  前置處理語彙基元會用於前置處理階段中，以產生傳遞至編譯器的語彙基元資料流。 前置處理語彙基元分類包括標頭名稱、識別項、前置處理數值、字元常值、字串常值、前置處理運算子和標點符號，以及不符合其他任何一個分類的單一非空白字元。 字元和字串常值可以是使用者定義常值。 前置處理語彙基元可以用空白字元或註解來分隔。  
   
@@ -53,10 +70,12 @@ a = i+++j;
  撰寫程式碼的程式設計人員可能想要這兩個陳述式之一：  
   
 ```  
-a = i + (++j) a = (i++) + j  
+a = i + (++j)  
+  
+a = (i++) + j  
 ```  
   
- 由於剖析器從輸入資料流建立可能的最長語彙基元，它選擇第二個解譯，產生語彙基元 `i++`、`+` 和 `j`。  
+ 由於剖析器從輸入資料流建立可能的最長語彙基元，它選擇第二個解譯，產生語彙基元 `i++`、 `+`和 `j`。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

@@ -1,58 +1,74 @@
 ---
-title: "try-except 陳述式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_abnormal_termination_cpp"
-  - "_exception_code_cpp"
-  - "EXCEPTION_CONTINUE_SEARCH"
-  - "_exception_info"
-  - "__except"
-  - "EXCEPTION_CONTINUE_EXECUTION"
-  - "_exception_code"
-  - "__except_cpp"
-  - "_exception_info_cpp"
-  - "EXCEPTION_EXECUTE_HANDLER"
-  - "_abnormal_termination"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__try 關鍵字 [C++]"
-  - "_abnormal_termination 關鍵字 [C++]"
-  - "_exception_code 關鍵字 [C++]"
-  - "_exception_info 關鍵字 [C++]"
-  - "EXCEPTION_CONTINUE_EXECUTION 巨集"
-  - "EXCEPTION_CONTINUE_SEARCH 巨集"
-  - "EXCEPTION_EXECUTE_HANDLER 巨集"
-  - "GetExceptionCode 函式"
-  - "try-catch 關鍵字 [C++], try-except 關鍵字 [C++]"
-  - "try-except 關鍵字 [C++]"
+title: "再試一次-try-except 陳述式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _abnormal_termination_cpp
+- _exception_code_cpp
+- EXCEPTION_CONTINUE_SEARCH
+- _exception_info
+- __except
+- EXCEPTION_CONTINUE_EXECUTION
+- _exception_code
+- __except_cpp
+- _exception_info_cpp
+- EXCEPTION_EXECUTE_HANDLER
+- _abnormal_termination
+dev_langs:
+- C++
+helpviewer_keywords:
+- __try keyword [C++]
+- EXCEPTION_CONTINUE_EXECUTION macro
+- EXCEPTION_CONTINUE_SEARCH macro
+- EXCEPTION_EXECUTE_HANDLER macro
+- GetExceptionCode function
+- try-catch keyword [C++], try-except keyword [C++]
+- _exception_code keyword [C++]
+- try-except keyword [C++]
+- _exception_info keyword [C++]
+- _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# try-except 陳述式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: e7a9b4aebd0ae60feeedc64644d3e50b8859f7cf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="try-except-statement"></a>try-except 陳述式
 **Microsoft 特定的**  
   
- 下列語法描述 try\-except 陳述式：  
+ 下列語法描述 try-except 陳述式：  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      __try   
+      __try   
 {  
    // guarded code  
 }  
@@ -62,49 +78,49 @@ __except ( expression )
 }  
 ```  
   
-## 備註  
- **try\-except** 陳述式是 Microsoft C 和 C\+\+ 語言擴充功能，可讓目標應用程式在發生通常會終止程式執行的事件時取得控制。  這類事件稱為例外狀況，而處理例外狀況的機制稱為結構化例外狀況處理。  
+## <a name="remarks"></a>備註  
+ **再試一次-除了**陳述式是 Microsoft 擴充功能的 C 和 c + + 語言，可讓目標應用程式來取得控制發生的事件通常會終止程式執行時。 這類事件稱為例外狀況，而處理例外狀況的機制稱為結構化例外狀況處理。  
   
- 如需相關資訊，請參閱 [try\-finally 陳述式](../cpp/try-finally-statement.md)。  
+ 如需相關資訊，請參閱[try-finally 陳述式](../cpp/try-finally-statement.md)。  
   
- 例外狀況可能以硬體或軟體為主。  即使應用程式無法從硬體或軟體例外狀況完全復原，結構化例外狀況處理仍可顯示錯誤資訊，並且對應用程式的內部狀態設陷，以協助診斷問題。  這在處理無法輕易重現的間歇性問題時特別有用。  
+ 例外狀況可能以硬體或軟體為主。 即使應用程式無法從硬體或軟體例外狀況完全復原，結構化例外狀況處理仍可顯示錯誤資訊，並且對應用程式的內部狀態設陷，以協助診斷問題。 這在處理無法輕易重現的間歇性問題時特別有用。  
   
 > [!NOTE]
->  結構化例外狀況處理可搭配 Win32 處理 C 和 C\+\+ 原始程式檔。  不過，它不是專為 C\+\+ 所設計。  使用 C\+\+ 例外狀況處理可確保您的程式碼更具可移植性。  此外，C\+\+ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。  針對 C\+\+ 程式，建議您使用 C\+\+ 例外狀況處理機制 \([try、catch 和 throw 陳述式](../cpp/try-throw-and-catch-statements-cpp.md)\)。  
+>  結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 對於 c + + 程式，建議您使用 c + + 例外狀況處理機制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)陳述式)。  
   
- `__try` 子句後面的複合陳述式是主體或保護的區段。  `__except` 子句後面的複合陳述式則是例外狀況處理常式。  如果在執行保護區段的主體時引發例外狀況，則處理常式會指定要採取的一組動作。  執行程序如下所示：  
+ `__try` 子句後面的複合陳述式是主體或保護的區段。 `__except` 子句後面的複合陳述式則是例外狀況處理常式。 如果在執行保護區段的主體時引發例外狀況，則處理常式會指定要採取的一組動作。 執行程序如下所示：  
   
 1.  執行保護的區段。  
   
 2.  如果執行保護的區段時未發生例外狀況，則會在 `__except` 子句之後的陳述式繼續執行。  
   
-3.  如果執行保護的區段時或是在保護的區段所呼叫的任何常式中發生例外狀況，則會求出 `__except` *expression* \(稱為 *filter* 運算式\) 的值，而得到的值會決定例外狀況的處理方式。  共有三個值：  
+3.  如果執行保護區段期間發生例外狀況或的任何常式中的保護的區段呼叫， `__except` *運算式*(稱為*篩選*運算式) 會評估和值決定如何處理例外狀況。 共有三個值：  
   
-     **EXCEPTION\_CONTINUE\_EXECUTION \(–1\)**：例外狀況已解除。  在例外狀況發生的位置繼續執行。  
+     **EXCEPTION_CONTINUE_EXECUTION (-1)**例外狀況已解除。 在例外狀況發生的位置繼續執行。  
   
-     **EXCEPTION\_CONTINUE\_SEARCH \(0\)**：例外狀況無法辨識。  繼續搜尋堆疊中的處理常式，首先搜尋包含 **try\-except** 陳述式，然後是具有次高優先順序的處理常式。  
+     **EXCEPTION_CONTINUE_SEARCH (0)**無法辨識例外狀況。 繼續搜尋堆疊中的處理常式，首先搜尋包含 **try-except** 陳述式，然後是具有次高優先順序的處理常式。  
   
-     **EXCEPTION\_EXECUTE\_HANDLER \(1\)**：例外狀況已辨識。  執行 `__except` 複合陳述式將控制項傳送至例外狀況處理常式，然後在 `__except` 區塊之後繼續執行。  
+     **EXCEPTION_EXECUTE_HANDLER (1)**辨識例外狀況。 執行 `__except` 複合陳述式將控制項傳送至例外狀況處理常式，然後在 `__except` 區塊之後繼續執行。  
   
- 由於 **\_\_except** 運算式會以 C 運算式求值，因此限於單一值、條件運算式運算子或逗號運算子。  如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。  
+ 因為 __**除了**運算式會以 C 運算式求值，因此限於單一值、 條件運算式運算子或逗號運算子。 如果需要更廣泛的處理，運算式可以呼叫常式，傳回上面所列三個值的其中一個。  
   
  每個應用程式都有自己的例外狀況處理常式。  
   
- 雖然不可跳入 `__try` 陳述式，但是可以從這類陳述式跳出。  如果處理序在執行 **try\-except** 陳述式的過程中終止，則不會呼叫例外狀況處理常式。  
+ 雖然不可跳入 `__try` 陳述式，但是可以從這類陳述式跳出。 中間執行終止處理程序時，不會呼叫例外狀況處理常式**再試一次-除了**陳述式。  
   
- 如需詳細資訊，請參閱知識庫文件 Q315937：＜如何：對 Visual C\+\+ 應用程式中的堆疊溢位設陷＞\(機器譯文\)。  
+ 如需詳細資訊，請參閱知識庫文件 Q315937：＜如何：對 Visual C++ 應用程式中的堆疊溢位設陷＞(機器譯文)。  
   
-## \_\_leave 關鍵字  
- `__leave` 關鍵字只有在 `try-except` 陳述式的保護區段內才有效，而其作用是跳至保護區段的結尾。  然後在例外狀況處理常式之後的第一個陳述式繼續執行。  
+## <a name="the-leave-keyword"></a>__leave 關鍵字  
+ `__leave` 關鍵字只有在 `try-except` 陳述式的保護區段內才有效，而其作用是跳至保護區段的結尾。 然後在例外狀況處理常式之後的第一個陳述式繼續執行。  
   
- `goto` 陳述式也可以跳出保護的區段，而且不會像在 `try-finally` 陳述式中一樣降低效能，因為堆疊回溯不會發生。  不過，建議您使用 `__leave` 關鍵字而不要使用 `goto` 陳述式，因為這樣在處理大型或複雜的保護區域時，比較不會發生程式設計錯誤。  
+ `goto` 陳述式也可以跳出保護的區段，而且不會像在 `try-finally` 陳述式中一樣降低效能，因為堆疊回溯不會發生。 不過，建議您使用 `__leave` 關鍵字而不要使用 `goto` 陳述式，因為這樣在處理大型或複雜的保護區域時，比較不會發生程式設計錯誤。  
   
-### 結構化例外狀況處理內建函式  
- 結構化例外狀況處理提供兩種內建函式，可搭配 **try\-except** 陳述式使用：**GetExceptionCode** 和 **GetExceptionInformation**。  
+### <a name="structured-exception-handling-intrinsic-functions"></a>結構化例外狀況處理內建函式  
+ 結構化例外狀況處理提供兩個內建函式，皆可使用**再試一次-除了**陳述式： **GetExceptionCode**和**GetExceptionInformation**.  
   
- **GetExceptionCode** 會傳回例外狀況代碼 \(32 位元整數\)。  
+ **GetExceptionCode**傳回例外狀況代碼 （32 位元整數）。  
   
- 內建函式 **GetExceptionInformation** 會傳回結構的指標，其中包含有關例外狀況的其他資訊。  透過這個指標就可以存取發生硬體例外狀況當時的電腦狀態。  結構如下所示：  
+ 內建函式**GetExceptionInformation**傳回的指標，此結構包含其他例外狀況的相關資訊。 透過這個指標就可以存取發生硬體例外狀況當時的電腦狀態。 結構如下所示：  
   
 ```  
 struct _EXCEPTION_POINTERS {  
@@ -112,21 +128,21 @@ struct _EXCEPTION_POINTERS {
       CONTEXT *ContextRecord }  
 ```  
   
- 指標類型 \_**EXCEPTION\_RECORD** 和 \_**CONTEXT** 是在 Include 檔案 EXCPT.H 中定義。  
+ 指標類型 _**EXCEPTIONRECORD**和\_**內容**EXCPT include 檔案中所定義。H.  
   
- 您可以在例外狀況處理常式內使用 **GetExceptionCode**。  不過，**GetExceptionInformation** 只能在例外狀況篩選條件運算式內使用。  它所指向的資訊通常位於堆疊上，而且在控制項傳送至例外狀況處理常式之後就不再提供。  
+ 您可以使用**GetExceptionCode**例外狀況處理常式內。 不過，您可以使用**GetExceptionInformation**只能在例外狀況篩選條件運算式內。 它所指向的資訊通常位於堆疊上，而且在控制項傳送至例外狀況處理常式之後就不再提供。  
   
- 內建函式 **AbnormalTermination** 是在終止處理常式內提供。  如果 `try-finally` 陳述式的主體循序終止，上述函式就會傳回 0。  在所有其他情況下，它會傳回 1。  
+ 內建函式**AbnormalTermination**終止處理常式內可供使用。 如果 `try-finally` 陳述式的主體循序終止，上述函式就會傳回 0。 在所有其他情況下，它會傳回 1。  
   
  EXCPT.H 會為這些內建定義一些替代名稱：  
   
- **GetExceptionCode** 相當於 \_exception\_code  
+ **GetExceptionCode**相當於 _exception_code  
   
- **GetExceptionInformation** 相當於 \_exception\_info  
+ **GetExceptionInformation**相當於 _exception_info  
   
- **AbnormalTermination** 相當於 \_abnormal\_termination  
+ **AbnormalTermination**相當於 _abnormal_termination  
   
-## 範例  
+## <a name="example"></a>範例  
  `// exceptions_try_except_Statement.cpp`  
   
  `// Example of try-except and try-finally statements`  
@@ -163,7 +179,7 @@ struct _EXCEPTION_POINTERS {
   
  `{`  
   
- `int* p = 0x00000000;   // pointer to NULL`  
+ `int* p = 0x00000000;   // pointer to NULL`  
   
  `puts("hello");`  
   
@@ -175,7 +191,7 @@ struct _EXCEPTION_POINTERS {
   
  `puts("in try");`  
   
- `*p = 13;    // causes an access violation exception;`  
+ `*p = 13;    // causes an access violation exception;`  
   
  `}__finally{`  
   
@@ -195,7 +211,7 @@ struct _EXCEPTION_POINTERS {
   
  `}`  
   
-## 輸出  
+## <a name="output"></a>輸出  
   
 ```  
 hello  
@@ -211,7 +227,7 @@ world
   
  **END Microsoft 特定的**  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
- [結構化例外狀況處理](../cpp/structured-exception-handling-c-cpp.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+ [結構化的例外處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   
+ [關鍵字](../cpp/keywords-cpp.md)

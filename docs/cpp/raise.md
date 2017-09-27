@@ -1,33 +1,50 @@
 ---
-title: "__raise | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__raise"
-  - "__raise_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__raise 關鍵字 [C++]"
+title: "__raise |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __raise
+- __raise_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# __raise
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0303198f352b97cf84a97d63dce18055e63622b1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="raise"></a>__raise
 強調事件的呼叫位置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,15 +54,15 @@ method-declarator
   
 ```  
   
-## 備註  
- 在 Managed 程式碼中，只能從已定義的類別內引發事件。  如需詳細資訊，請參閱[event](../windows/event-cpp-component-extensions.md)。  
+## <a name="remarks"></a>備註  
+ 在 Managed 程式碼中，只能從已定義的類別內引發事件。 請參閱[事件](../windows/event-cpp-component-extensions.md)如需詳細資訊。  
   
  如果您呼叫的不是事件，則關鍵字 `__raise` 會導致錯誤發出。  
   
 > [!NOTE]
 >  樣板類別或結構不能包含事件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // EventHandlingRef_raise.cpp  
@@ -71,7 +88,7 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>另請參閱  
+ [關鍵字](../cpp/keywords-cpp.md)   
  [事件處理](../cpp/event-handling.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

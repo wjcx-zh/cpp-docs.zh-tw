@@ -1,41 +1,58 @@
 ---
-title: "override 規範 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "override 識別項"
+title: "覆寫規範 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# override 規範
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 54c3b0de90ef3455af31c49592c6b405c345b0e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="override-specifier"></a>override 規範
 您可以使用 `override` 關鍵字指定可覆寫基底類別中之虛擬函式的成員函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 function-declaration override;  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `override` 具有內容相關性，而且只有在成員函式宣告之後使用時才具有特殊意義，否則不是保留的關鍵字。  
   
-## 範例  
- 使用 `override` 有助於防止程式碼中發生意外的繼承行為。  下列範例將示範在不使用 `override` 的情況下，衍生類別可能產生的非預期成員函式行為。  編譯器不會對這個程式碼發出任何錯誤。  
+## <a name="example"></a>範例  
+ 使用 `override` 有助於防止程式碼中發生意外的繼承行為。 下列範例將示範在不使用 `override` 的情況下，衍生類別可能產生的非預期成員函式行為。 編譯器不會對這個程式碼發出任何錯誤。  
   
 ```cpp  
 class BaseClass  
@@ -89,9 +106,9 @@ class DerivedClass: public BaseClass
   
 ```  
   
- 若要指定無法覆寫函式且無法繼承類別，請使用 [final](../cpp/final-specifier.md) 關鍵字。  
+ 若要指定無法覆寫函式和類別無法被繼承，請使用[最終](../cpp/final-specifier.md)關鍵字。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [final 規範](../cpp/final-specifier.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
- [\(NOTINBUILD\) C\+\+ Type Names](http://msdn.microsoft.com/zh-tw/b53ba470-e583-4e5c-b634-6018f6110674)
+ [關鍵字](../cpp/keywords-cpp.md)   
+ 

@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- valarray
 - valarray/std::valarray
 - valarray/std::valarray::value_type
 - valarray/std::valarray::apply
@@ -25,7 +24,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- valarray class
+- std::valarray [C++]
+- std::valarray [C++], value_type
+- std::valarray [C++], apply
+- std::valarray [C++], cshift
+- std::valarray [C++], free
+- std::valarray [C++], max
+- std::valarray [C++], min
+- std::valarray [C++], resize
+- std::valarray [C++], shift
+- std::valarray [C++], size
+- std::valarray [C++], sum
+- std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 caps.latest.revision: 23
 author: corob-msft
@@ -45,11 +55,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: b54bd0f6ca1dcd2efba32817c9c732045775cd8c
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: 171b30710f6135a6aee13a12c035b957ec038bbb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="valarray-class"></a>valarray 類別

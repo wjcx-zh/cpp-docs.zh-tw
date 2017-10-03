@@ -49,11 +49,11 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 928ed213f4605ea1b39d2d5cf92673bc055aaf4a
+ms.translationtype: MT
+ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
+ms.openlocfilehash: 14fed0ac2d0714989e78459a74b48fd8173c7632
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函式
@@ -1084,7 +1084,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 ### <a name="remarks"></a>備註  
  定義複變正弦的恆等式如下：  
   
- sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )  
+ sin ( *z*) = (1/2*我*)\*(exp ( *iz 會分別*)-exp (- *iz 會分別*))  
   
  sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)  
   
@@ -1171,7 +1171,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 ### <a name="remarks"></a>備註  
  定義複變雙曲正弦的恆等式如下：  
   
- sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )  
+ sinh ( *z*) = (1/2)\*(exp ( *z*)-exp (- *z*))  
   
  sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)  
   
@@ -1331,7 +1331,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 ### <a name="remarks"></a>備註  
  定義複變餘切的恆等式如下：  
   
- tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )  
+ tan ( *z*) = sin ( *z*) / cos ( *z*) = (exp ( *iz 會分別*)-exp (- *iz 會分別*)) / *i*(exp ( *iz 會分別*) + exp (- *iz 會分別*))  
   
 ### <a name="example"></a>範例  
   
@@ -1416,7 +1416,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 ### <a name="remarks"></a>備註  
  定義複變雙曲餘切的恆等式如下：  
   
- tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )  
+ tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = (exp ( *z*)-exp (- *z*)) / (exp ( *z*)+ exp (- *z*))  
   
 ### <a name="example"></a>範例  
   

@@ -1,32 +1,49 @@
 ---
-title: "函式上的引數相依名稱 (Koenig) 查閱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引數相依查閱 [C++]"
-  - "Koenig 查閱"
+title: "函式上的引數相依名稱 (Koenig) 查閱 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Koenig lookup
+- argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 函式上的引數相依名稱 (Koenig) 查閱
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a27b75a8be6b250e27a667a8aebf4e399fdd3f1f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-編譯器可以使用與引數相關的名稱查閱來尋找不合格的函式呼叫的定義。  與引數相關的名稱查閱也稱為 Koenig 查閱。  函式呼叫中每個引數的類型都是在命名空間、類別、結構、等位或範本階層內定義。  當您指定不合格的 [postfix](../cpp/postfix-expressions.md) 函式呼叫時，編譯器就會在與每個引數類型相關的階層架構中搜尋函式定義。  
+---
+# <a name="argument-dependent-name-koenig-lookup-on-functions"></a>函式上的引數相依名稱 (Koenig) 查閱
+編譯器可以使用與引數相關的名稱查閱來尋找不合格的函式呼叫的定義。 與引數相關的名稱查閱也稱為 Koenig 查閱。 函式呼叫中每個引數的類型都是在命名空間、類別、結構、等位或範本階層內定義。 當您指定不合格[後置](../cpp/postfix-expressions.md)函式呼叫，編譯器會搜尋與每個引數類型相關聯的階層中的函式定義。  
   
-## 範例  
- 在這個範例中，編譯器會注意到 `f()` 函式接受 `x` 引數。  引數 `x` 的類型是 `A::X`，而該類型是在命名空間 `A` 中定義的。  編譯器會搜尋命名空間 `A` 並尋找 `f()` 函式的定義，且此定義接受類型為 `A::X` 的引數。  
+## <a name="example"></a>範例  
+ 在這個範例中，編譯器會注意到 `f()` 函式接受 `x` 引數。 引數 `x` 的類型是 `A::X`，而該類型是在命名空間 `A` 中定義的。 編譯器會搜尋命名空間 `A` 並尋找 `f()` 函式的定義，且此定義接受類型為 `A::X` 的引數。  
   
 ```  
 // argument_dependent_name_koenig_lookup_on_functions.cpp  
@@ -47,6 +64,4 @@ int main()
    f(x);     
 }  
 ```  
-  
-## 請參閱  
- [Visual C\+\+ .NET 2003 增強型編譯器一致性](../misc/visual-cpp-dotnet-2003-enhanced-compiler-conformance.md)
+

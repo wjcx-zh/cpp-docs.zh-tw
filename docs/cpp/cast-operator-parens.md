@@ -1,32 +1,48 @@
 ---
-title: "轉型運算子：() | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "() 轉型運算子"
-  - "轉型運算子"
+title: "轉型運算子: （) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- cast operators
+- () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 轉型運算子：()
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bf8299fb0992f42fabe49bbbbffe0693fc93d961
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="cast-operator-"></a>轉型運算子：()
 類型轉換提供了一個明確的轉換方法，可在特定情況下轉換物件的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,12 +50,12 @@ manager: "ghogen"
 ( type-name ) cast-expression  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  所有一元運算式皆會視為 Cast 運算式。  
   
- 在類型轉換完成後，編譯器會將 *cast\-expression* 視為 *type\-name* 類型。  轉型可用來將任何純量類型的物件與任何其他純量類型的物件來回轉換。  明確類型轉換受到與判斷隱含轉換效果的相同規則所限制。  對轉型的其他限制可能來自特定類型的實際大小或表示。  
+ 在類型轉換完成後，編譯器會將 *cast-expression* 視為 *type-name* 類型。 轉型可用來將任何純量類型的物件與任何其他純量類型的物件來回轉換。 明確類型轉換受到與判斷隱含轉換效果的相同規則所限制。 對轉型的其他限制可能來自特定類型的實際大小或表示。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // expre_CastOperator.cpp  
@@ -59,7 +75,7 @@ int main()
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // expre_CastOperator2.cpp  
@@ -122,14 +138,16 @@ int main()
 }  
 ```  
   
-  **RawBytes truncated to 10 chars:   Exciting\!\!**  
-**Casted Bytes:   Exciting**  
-**Note that the cast changed the raw internal string**  
-**Raw Bytes after cast:   Exciting**   
-## 請參閱  
+```Output  
+RawBytes truncated to 10 chars:   Exciting!!  
+Casted Bytes:   Exciting  
+Note that the cast changed the raw internal string  
+Raw Bytes after cast:   Exciting  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [明確類型轉換運算子：\(\)](../cpp/explicit-type-conversion-operator-parens.md)   
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [明確類型轉換運算子: （)](../cpp/explicit-type-conversion-operator-parens.md)   
  [轉型運算子](../cpp/casting-operators.md)   
  [轉型運算子](../c-language/cast-operators.md)

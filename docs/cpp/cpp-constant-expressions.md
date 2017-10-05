@@ -1,33 +1,49 @@
 ---
-title: "C++ 常數運算式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "常數運算式"
-  - "常數運算式, 語法"
-  - "運算式 [C++], 常數"
+title: "C + + 常數運算式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constant expressions, syntax
+- constant expressions
+- expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 常數運算式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8333b761aa51de44c8225e5ace97885eaaed56da
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-*「常數」*\(Constant\) 值是不會變更的值。  C\+\+ 提供兩個關鍵字，以讓您表示不要修改物件的意圖，以及施行該意圖。  
+---
+# <a name="c-constant-expressions"></a>C++ 常數運算式
+A*常數*值是指不會變更。 C++ 提供兩個關鍵字，以讓您表示不要修改物件的意圖，以及施行該意圖。  
   
- C\+\+ 需要常數運算式 \(也就是評估為常數的運算式\) 才能宣告下列各項：  
+ C++ 需要常數運算式 (也就是評估為常數的運算式) 才能宣告下列各項：  
   
 -   陣列界限  
   
@@ -47,7 +63,7 @@ manager: "ghogen"
   
 -   `sizeof` 運算式  
   
- 非整數常數必須轉換成整數類資料類型 \(明確或隱含\)，在常數運算式中才會是合法的。  因此，下列程式碼是合法的：  
+ 非整數常數必須轉換成整數類資料類型 (明確或隱含)，在常數運算式中才會是合法的。 因此，下列程式碼是合法的：  
   
 ```  
 const double Size = 11.0;  
@@ -58,5 +74,5 @@ char chArray[(int)Size];
   
  逗號運算子和指派運算子不能在常數運算式中使用。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算式的類型](../cpp/types-of-expressions.md)

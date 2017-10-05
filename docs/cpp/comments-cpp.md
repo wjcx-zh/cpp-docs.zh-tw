@@ -1,40 +1,56 @@
 ---
-title: "C++ 註解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "程式碼註解, C++"
-  - "註解, C++ 程式碼"
-  - "註解, 撰寫程式碼"
-  - "空白字元, C++ 註解"
+title: "註解 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- code comments, C++
+- comments, documenting code
+- comments, C++ code
+- white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 註解
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c6c97e27ff4019eec3ee3f63f2b4ed06db6af317
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-註解是會被編譯器忽略的文字，但對程式設計人員而言很有用。  註解通常用來註解程式碼供未來參考。  編譯器會將它們視為空白字元。  您可以在測試中使用註解讓特定的程式碼無法作用；不過， `#if`\/`#endif` 前置處理器指示詞可以更好運作，因為您可以放在包含註解的程式碼外圍，但是您無法巢狀註解。  
+---
+# <a name="comments-c"></a>註解 （c + +）
+註解是會被編譯器忽略，但對程式設計人員而言很有用的文字。 註解通常用來標註程式碼供未來參考。 編譯器會將它們視為空白字元。 您可以使用在測試中的註解，讓特定的程式碼行未啟用;不過， `#if` / `#endif`效果更好，前置處理器指示詞，因為您可以圍繞包含註解的程式碼，但是您無法巢狀註解。  
   
- C \+\+ 是註解以下列其中一種方式撰寫；  
+ C++ 註解以下列其中一種方式撰寫：  
   
--   `/*` \(斜線，星號\) 字元，後面接著任何字元序列 \(包括新行\)，後面接著 `*/` 字元。  這語法與 ANSI C 相同。  
+-   `/*` (斜線、星號) 字元，後面接著任何字元序列 (包括新行)，後面接著 `*/` 字元。 這語法與 ANSI C 相同。  
   
--   `//` \(兩個斜線\) 字元，後面接著任何字元序列。  一個沒有前置反斜線的新行會終止這種形式的註解。  因此，它通常稱為「單行註解」。  
+-   `//` (兩個斜線) 字元，後面接著任何字元序列。 一個沒有前置反斜線的新行會終止這種形式的註解。 因此，它通常稱為「單行註解」。  
   
- 註解字元 \(`/*`、 `*/`和 `//`\) 在字元常數、字串常值、註解中沒有特殊意義。  因此，使用第一種語法的註解不可以是巢狀。  
+ 註解字元 (`/*`、`*/` 和 `//`) 在字元常數、字串常值或註解中沒有特殊意義。 因此，使用第一種語法的註解不可以是巢狀。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

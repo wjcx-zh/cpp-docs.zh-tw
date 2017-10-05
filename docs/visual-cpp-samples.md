@@ -30,31 +30,31 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
-ms.openlocfilehash: c5de7e4f11b2e1aa87eab408c5e85e08632a42f2
+ms.translationtype: HT
+ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
+ms.openlocfilehash: d35603be262e21e2570e21bb72ff2bc40c3d6d76
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="visual-c-samples"></a>Visual C++ 範例
 下面列出的 Visual C++ 範例示範涵蓋多種技術的不同功能。  
   
- [Visual Studio samples](http://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B) (Visual Studio 範例)  
+ [Visual Studio 範例](http://code.msdn.microsoft.com/vstudio/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B)  
   
  [Windows 市集應用程式範例](http://code.msdn.microsoft.com/windowsapps/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
   
- [The All-In-One code framework](http://1code.codeplex.com/) (全方位程式碼架構)  
+ [全方位程式碼架構](http://1code.codeplex.com/)  
   
- [Windows Desktop code samples](http://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B) (Windows 桌面版程式碼範例)  
+ [Windows 桌面程式碼範例](http://code.msdn.microsoft.com/windowsdesktop/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B)  
   
  [MFC 範例](http://code.msdn.microsoft.com/site/search?query=mfc&f%5B0%5D.Value=mfc&f%5B0%5D.Type=SearchText&ac=4)  
   
- [CodePlex samples](http://www.codeplex.com/site/search?query=C%2B%2B&ac=4) (CodePlex 範例)  
+ [CodePlex 範例](http://www.codeplex.com/site/search?query=C%2B%2B&ac=4)  
   
- [MFC samples on CodePlex](http://www.codeplex.com/site/search?query=mfc&ac=4) (CodePlex 上的 MFC 範例)  
+ [CodePlex 上的 MFC 範例](http://www.codeplex.com/site/search?query=mfc&ac=4)  
   
- [ADO code samples](http://msdn.microsoft.com/library/windows/desktop/ms677563\(v=vs.85\).aspx) (ADO 程式碼範例)  
+ [ADO 程式碼範例](http://msdn.microsoft.com/library/windows/desktop/ms677563\(v=vs.85\).aspx)  
   
  [Windows Hardware development samples](http://code.msdn.microsoft.com/windowshardware/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%2B%2B&f%5B0%5D.Text=C%2B%2B) (Windows 硬體開發範例)  
   

@@ -1,36 +1,52 @@
 ---
-title: "註標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 註標"
-  - "運算子多載, 範例"
-  - "運算子 [C++], 多載"
-  - "註標運算子"
-  - "註標運算子, 多載"
-  - "註標"
+title: "Subscripting |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- subscript operator, overloaded
+- arrays [C++], subscripting
+- subscripting
+- operators [C++], overloading
+- operator overloading, examples
+- subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
 caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 註標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 82feaa68724e36c7ac7e739397d8a11a18e970a0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-註標運算子 \(**\[ \]**\) 和函式呼叫運算子一樣，屬於二元運算子。  註標運算子必須是使用單一引數的非靜態成員函式。  這個引數可以是任何類型，並且指定所需的陣列註標。  
+---
+# <a name="subscripting"></a>下標
+註標運算子 (**[]**)、 like 函式呼叫運算子是二元運算子。 註標運算子必須是使用單一引數的非靜態成員函式。 這個引數可以是任何類型，並且指定所需的陣列註標。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例示範如何建立屬於 `int` 類型且會實作繫結檢查的向量：  
   
 ```  
@@ -82,23 +98,26 @@ int main() {
 }  
 ```  
   
-  **Array bounds violation.**  
-**Element: \[0\] \= 0**  
-**Element: \[1\] \= 1**  
-**Element: \[2\] \= 2**  
-**Element: \[3\] \= 9**  
-**Element: \[4\] \= 4**  
-**Element: \[5\] \= 5**  
-**Element: \[6\] \= 6**  
-**Element: \[7\] \= 7**  
-**Element: \[8\] \= 8**  
-**Element: \[9\] \= 9**  
-**Array bounds violation.**  
-**Element: \[10\] \= 10**   
-## 註解  
+```Output  
+Array bounds violation.  
+Element: [0] = 0  
+Element: [1] = 1  
+Element: [2] = 2  
+Element: [3] = 9  
+Element: [4] = 4  
+Element: [5] = 5  
+Element: [6] = 6  
+Element: [7] = 7  
+Element: [8] = 8  
+Element: [9] = 9  
+Array bounds violation.  
+Element: [10] = 10  
+```  
+  
+## <a name="comments"></a>註解  
  當 `i` 在前一個程式達到 10 時，`operator[]` 會偵測到正在使用超出範圍的註標並發出錯誤訊息。  
   
- 請注意，`operator[]` 函式會傳回參考類型。  這會使它變成左值，讓您能夠在指派運算子的任一端使用註標運算式。  
+ 請注意，`operator[]` 函式會傳回參考類型。 這會使它變成左值，讓您能夠在指派運算子的任一端使用註標運算式。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算子多載](../cpp/operator-overloading.md)

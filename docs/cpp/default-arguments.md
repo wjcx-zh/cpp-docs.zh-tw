@@ -1,34 +1,51 @@
 ---
-title: "預設引數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "引數 [C++], 預設"
-  - "引數 [C++], 函式"
-  - "宣告函式, 宣告子"
-  - "預設引數"
-  - "預設值 [C++], 引數"
-  - "函式宣告子"
-  - "函式 [C++], 預設引數"
+title: "預設引數 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arguments [C++], function
+- function declarators
+- functions [C++], default arguments
+- declaring functions, declarators
+- default arguments
+- arguments [C++], default
+- defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 預設引數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b14cd3b6ff1386ab2484b8a424c6ef2ceee1cd85
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-在許多情況下，函式的引數不常使用，因此使用預設值即已足夠。  為解決此問題，預設引數機能只能用於指定在特定呼叫中具有意義之函式的這些引數。  為了說明這個概念，請參考[函式多載](../cpp/function-overloading.md)中的範例。  
+---
+# <a name="default-arguments"></a>預設引數
+在許多情況下，函式的引數不常使用，因此使用預設值即已足夠。 為解決此問題，預設引數機能只能用於指定在特定呼叫中具有意義之函式的這些引數。 為了說明這個概念，請考慮中的範例[函式多載](../cpp/function-overloading.md)。  
   
 ```  
 // Prototype three print functions.  
@@ -47,7 +64,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.  
 ```  
   
- 稍微變更 `print` 函式的實作，以反映 **double** 類型只能有一個此類函式存在的事實：  
+ 實作`print`函式會稍有變更以反映類型只能有一個這類函式存在事實**double**:  
   
 ```  
 // default_arguments.cpp  
@@ -90,13 +107,13 @@ print( d, 0 ); // Override default argument to achieve other
   
  使用預設引數時請注意下列重點：  
   
--   預設引數僅用於忽略結尾引數的函式呼叫，這些引數必須是最後的引數。  因此，下列程式碼是不合法的：  
+-   預設引數僅用於忽略結尾引數的函式呼叫，這些引數必須是最後的引數。 因此，下列程式碼是不合法的：  
   
     ```  
     int print( double dvalue = 0.0, int prec );  
     ```  
   
--   即使重新定義與原始定義完全相同，之後宣告時也不能重新定義預設引數。  因此，下列程式碼會產生錯誤：  
+-   即使重新定義與原始定義完全相同，之後宣告時也不能重新定義預設引數。 因此，下列程式碼會產生錯誤：  
   
     ```  
     // Prototype for print function.  
@@ -115,11 +132,11 @@ print( d, 0 ); // Override default argument to achieve other
   
 -   您可以利用之後的宣告加入其他預設引數。  
   
--   可以對函式指標提供預設引數。  例如:  
+-   可以對函式指標提供預設引數。 例如:   
   
     ```  
     int (*pShowIntVal)( int i = 0 );  
     ```  
   
-## 請參閱  
- [C\+\+ 抽象宣告子](http://msdn.microsoft.com/zh-tw/e7e18c18-0cad-4450-942b-d27e1d4dd088)
+## <a name="see-also"></a>另請參閱  
+ 

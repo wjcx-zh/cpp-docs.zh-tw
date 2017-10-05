@@ -1,38 +1,54 @@
 ---
-title: "遞增和遞減運算子多載 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "遞減運算子"
-  - "遞減運算子, 類型"
-  - "遞增運算子"
-  - "遞增運算子, 類型"
+title: "遞增和遞減運算子多載 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- increment operators
+- increment operators, types of
+- decrement operators
+- decrement operators, types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 遞增和遞減運算子多載 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 432863fd2d1600ff0e82a69813c0513a32c56612
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="increment-and-decrement-operator-overloading-c"></a>遞增和遞減運算子多載 (C++)
 遞增和遞減運算子屬於特殊的分類，因為每個運算子都有兩種變數：  
   
 -   前置遞增和後置遞增  
   
 -   前置遞減和後置遞減  
   
- 當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。  若要區別這兩者，請遵守下列規則：運算子的前置格式宣告方式就和其他一元運算子完全相同，後置格式可接受類型為 `int` 的其他引數。  
+ 當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。 若要區別這兩者，請遵守下列規則：運算子的前置格式宣告方式就和其他一元運算子完全相同，後置格式可接受類型為 `int` 的其他引數。  
   
 > [!NOTE]
 >  為多載運算子指定遞增或遞減運算子的後置格式時，其他引數必須為 `int` 類型，指定其他類型會產生錯誤。  
@@ -98,7 +114,7 @@ int main()
 }  
 ```  
   
- 相同的運算子可以在檔案範圍 \(全域\) 中使用下列函式標頭加以定義：  
+ 相同的運算子可以在檔案範圍 (全域) 中使用下列函式標頭加以定義：  
   
 ```  
 friend Point& operator++( Point& )      // Prefix increment  
@@ -107,7 +123,7 @@ friend Point& operator--( Point& )      // Prefix decrement
 friend Point& operator--( Point&, int ) // Postfix decrement  
 ```  
   
- 用於表示遞增或遞減運算子之後置格式的類型 `int` 引數，通常不會用於傳遞引數。  它通常包含值 0。  不過，可以依如下的方式使用：  
+ 用於表示遞增或遞減運算子之後置格式的類型 `int` 引數，通常不會用於傳遞引數。 它通常包含值 0。 不過，可以依如下的方式使用：  
   
 ```  
 // increment_and_decrement2.cpp  
@@ -134,7 +150,7 @@ int main()
 }  
 ```  
   
- 除了明確的引動過程之外，沒有其他語法會使用遞增或遞減運算子來傳遞這些值，如上述程式碼所示。  實作這項功能較簡單的方式是多載加法\/指派運算子 \(`+=`\)。  
+ 除了明確的引動過程之外，沒有其他語法會使用遞增或遞減運算子來傳遞這些值，如上述程式碼所示。 實作這項功能較簡單的方式是多載加法/指派運算子 (`+=`)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [運算子多載](../cpp/operator-overloading.md)

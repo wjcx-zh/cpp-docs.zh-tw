@@ -1,47 +1,75 @@
 ---
-title: "using 宣告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "using 宣告"
-  - "宣告命名空間，命名空間中的不合格名稱"
-  - "宣告 [C++]，using 宣告"
-  - "命名空間 [C++]，不合格的名稱"
-  - "using 關鍵字 [C++]"
-  - "宣告 [C++]，命名空間"
+title: "using 宣告 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- using declaration
+- declaring namespaces, unqualified names in namespaces
+- declarations [C++], using-declaration
+- namespaces [C++], unqualified names in
+- using keyword [C++]
+- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# using 宣告
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c55abac758c636bce596b0613e0ad5671fc9c430
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-`using` 的宣告引入一個名稱至 `using` 宣告的區域。  
+---
+# <a name="using-declaration"></a>using 宣告
+Using 宣告引入宣告式所在區域名稱 using 宣告會出現。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      using [typename][::] nested-name-specifier unqualified-id  
-using :: unqualified-id  
+using [typename] nested-name-specifier unqualified-id ;  
+using declarator-list ;  
 ```  
   
-## 備註  
- 名稱會變成其他位置宣告的實體同義字。  它允許從特定命名空間使一個 *個別* 名稱被使用，卻不用 [明確描述](../misc/explicit-qualification.md)。  與 `using` 指示詞相反，它允許 *所有*在命名空間的名稱被使用而不用加以描述。  請參閱 [using 指示詞](../misc/using-directive-cpp.md)以得到更多資訊。  這個關鍵字也被 [輸入別名](../cpp/aliases-and-typedefs-cpp.md)使用。  
+### <a name="parameters"></a>參數
   
-## 範例  
- using 的宣告的可用於類別定義。  
+*巢狀命名規範*  
+    範圍解析運算子所終止的命名空間、 類別或列舉型別名稱和範圍解析運算子 （:）、 序列。 單一的範圍解析運算子可能用於全域命名空間中導入的名稱。 關鍵字`typename`是選擇性的而且可用來解析相依時引入從基底類別的類別樣板的名稱。  
+  
+*非限定識別碼*  
+    不合格的識別碼的運算式，這可能是識別項、 多載的運算子名稱、 使用者定義常值運算子或轉換函式名稱、 類別解構函式名稱或範本名稱和引數清單。  
+  
+*宣告子清單*  
+    以逗號分隔清單的 [`typename`]*巢狀命名規範**不合格識別碼*宣告子，後面接選擇省略符號。
+    
+## <a name="remarks"></a>備註  
+A using 宣告實體的同義字形式引進了非限定的名稱宣告其他位置。 它可讓單一從特定命名空間沒有明確宣告區域出現的位置中的限定名稱。 這是相對於[using 指示詞](../cpp/namespaces-cpp.md#using_directives)，可讓*所有*無限制使用的命名空間中的名稱。 `using`關鍵字也用於[輸入別名](../cpp/aliases-and-typedefs-cpp.md)。  
+  
+## <a name="example"></a>範例  
+ A 可以使用 using 宣告的類別定義中。  
   
 ```cpp  
 // using_declaration1.cpp  
@@ -59,16 +87,16 @@ public:
   
 class D : B {  
 public:  
-   using B::f;  
-   using B::g;  
+   using B::f;    // B::f(char) is now visible as D::f(char)  
+   using B::g;    // B::g(char) is now visible as D::g(char)  
    void f(int) {  
       printf_s("In D::f()\n");  
-      f('c');  
+      f('c');     // Invokes B::f(char) instead of recursing  
    }  
   
    void g(int) {  
       printf_s("In D::g()\n");  
-      g('c');  
+      g('c');     // Invokes B::g(char) instead of recursing  
    }  
 };  
   
@@ -79,11 +107,14 @@ int main() {
 }  
 ```  
   
-  **在 D::f\(\)**  
-**在 B::f\(\)**  
-**在 B::g\(\)**   
-## 範例  
- 當用來宣告成員，using 的宣告中必須參考基底類別的成員。  
+```Output  
+In D::f()  
+In B::f()  
+In B::g()  
+```  
+  
+## <a name="example"></a>範例  
+當用來宣告成員，使用宣告必須參考的基底類別成員。  
   
 ```cpp  
 // using_declaration2.cpp  
@@ -117,9 +148,12 @@ int main() {
 }  
 ```  
   
-  **在 B::f\(\)**   
-## 範例  
- 成員被宣告成一個 using，則可以用詳盡的描述被參考。  `::` 前置詞則會參考全域命名空間。  
+```Output  
+In B::f()  
+```  
+  
+## <a name="example"></a>範例  
+成員宣告使用 using 宣告可透過明確限定參考。 `::`前置詞是指全域命名空間。  
   
 ```cpp  
 // using_declaration3.cpp  
@@ -136,8 +170,8 @@ namespace A {
 }  
   
 namespace X {  
-   using ::f;   // global f  
-   using A::g;   // A's g  
+   using ::f;   // global f is also visible as X::f  
+   using A::g;   // A's g is now visible as X::g 
 }  
   
 void h() {  
@@ -151,13 +185,16 @@ int main() {
 }  
 ```  
   
-  **在 h 中**  
-**在 f 中**  
-**在 A::g 中**   
-## 範例  
- 當 using 宣告出現時，宣告建立的同義資料表參考只有在 using 的宣告定義是有效時創建。  定義加入至命名空間中，當 using 宣告不再是有效的同義資料表。  
+```Output  
+In h  
+In f  
+In A::g  
+```  
   
- 一個被 using 宣告所定義的名稱是它原本名稱的別名。  它不會影響型別、連接或原始宣告的其他屬性。  
+## <a name="example"></a>範例  
+使用時進行宣告，宣告所建立的同義字只是指在使用有效的定義宣告。 定義使用之後新增到命名空間宣告不是有效的同義字。  
+  
+所定義的名稱`using`宣告為其原始名稱的別名。 它不會影響類型、 連結或其他原始宣告的屬性。  
   
 ```cpp  
 // post_declaration_namespace_additions.cpp  
@@ -182,8 +219,8 @@ void b() {
 }  
 ```  
   
-## 範例  
- 關於命名空間中的函式，如果一組區域宣告和單一名稱的 using 宣告被賦予在宣告區域，則它們必須參考相同的實體，否則他們必須全部參考函式。  
+## <a name="example"></a>範例  
+命名空間，如果本機宣告的一組中的函式而言，使用單一名稱所指定的宣告式區域中，它們必須全部參考相同的實體，或它們必須所有參考函式的宣告。  
   
 ```cpp  
 // functions_in_namespaces1.cpp  
@@ -202,10 +239,10 @@ void g() {
 }  
 ```  
   
- 在上面的範例中， `using B::i` 陳述式在 `g()` 函式造成第二個 `int i` 的宣告。  因為 `B::f` 引入的函式名稱具有不同的參數型別， `using B::f` 陳述式和`f(char)`函式不衝突。  
+ 在上述範例`using B::i`陳述式會導致第二個`int i`中宣告`g()`函式。 `using B::f`陳述式未與衝突`f(char)`運作，因為所導入的函式名稱`B::f`有不同的參數型別。  
   
-## 範例  
- 當一個函式以 using 宣告引進時，區域函式宣告不能有相同的名稱和型別。  例如：  
+## <a name="example"></a>範例  
+ 區域函式宣告不能有相同的名稱和型別，由 using 宣告引入的函式。 例如:   
   
 ```cpp  
 // functions_in_namespaces2.cpp  
@@ -230,8 +267,8 @@ void h() {
 }  
 ```  
   
-## 範例  
- 關於繼承，當 using 宣告引進一個基底類別名稱至衍生類別範圍時，在衍生類別的成員函式會覆寫在基底類別成員函式中相同名稱和引數的函式。  
+## <a name="example"></a>範例  
+ 相對於繼承時 using, 宣告引入名稱從基底類別衍生的類別範圍，在衍生的類別覆寫虛擬成員函式中相同的名稱和引數型別，基底類別中的成員函式。  
   
 ```cpp  
 // using_declaration_inheritance1.cpp  
@@ -268,9 +305,9 @@ struct D : B {
 };  
   
 void f(D* pd) {  
-   pd->f(1);   // calls D::f(int)  
+   pd->f(1);     // calls D::f(int)  
    pd->f('a');   // calls B::f(char)  
-   pd->g(1);   // calls B::g(int)  
+   pd->g(1);     // calls B::g(int)  
    pd->g('a');   // calls D::g(char)  
 }  
   
@@ -280,14 +317,17 @@ int main() {
 }  
 ```  
   
-  **在 D::f \(int\) 中**  
-**在 B::f \(char\) 中**  
-**在 B::g\(\) 中**  
-**在 D::g \(char\) 中**   
-## 範例  
- 所有在 using 宣告中被使用的參數均需是可使用的。  特別是，如果衍生類別使用 using 宣告存取基底類別的成員，成員名稱必須是可存取的。  如果名稱是多載的成員函式，則所有功能名稱必須是可存取的。  
+```Output  
+In D::f(int)  
+In B::f(char)  
+In B::g  
+In D::g(char)  
+```  
   
- 如需成員的存取範圍的詳細資訊，請參閱 [Member\-Access Control](../cpp/member-access-control-cpp.md)。  
+## <a name="example"></a>範例  
+所有執行個體名稱中使用所述的宣告必須是可存取。 特別是，如果衍生的類別可讓您使用的 using 宣告，以存取基底類別成員名稱的成員必須是可存取。 如果名稱就是多載的成員函式，則所有函式必須是可存取。  
+  
+如需協助工具成員的詳細資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。  
   
 ```cpp  
 // using_declaration_inheritance2.cpp  
@@ -308,6 +348,6 @@ public:
 };  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [命名空間](../cpp/namespaces-cpp.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+ [關鍵字](../cpp/keywords-cpp.md)

@@ -1,85 +1,101 @@
 ---
-title: "new 運算子 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "new 關鍵字 [C++]"
+title: "new 運算子 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# new 運算子 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a7386d45f5188e7217ebfd4c235c0763bfd70044
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-從可用存放區針對 *type\-name* 的物件或物件陣列配置記憶體，並傳回適用類型、非零物件指標。  
+---
+# <a name="new-operator-c"></a>new 運算子 (C++)
+為物件或物件的陣列配置記憶體*型別名稱*從可用存放區，並傳回具適當類型，則為非零的指標物件。  
   
 > [!NOTE]
->  Microsoft C\+\+ 元件擴充功能會提供對 `new` 關鍵字的支援以加入 vtable 位置項目。  如需詳細資訊，請參閱 [new \(new slot in vtable\)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)。  
+>  Microsoft C++ 元件擴充功能會提供對 `new` 關鍵字的支援以加入 vtable 位置項目。 如需詳細資訊，請參閱[new （新位置 vtable 中的）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 [::] new [placement] new-type-name [new-initializer]  
 [::] new [placement] ( type-name ) [new-initializer]  
 ```  
   
-## 備註  
- 如果不成功，**new** 會傳回零或擲回例外狀況；請參閱 [new 和 delete 運算子](../cpp/new-and-delete-operators.md)以取得詳細資訊。  您可以變更這個預設行為，作法是撰寫自訂例外狀況處理常式，並將您的函式名稱當做引數來呼叫 [\_set\_new\_handler](../c-runtime-library/reference/set-new-handler.md) 執行階段程式庫函式。  
+## <a name="remarks"></a>備註  
+ 如果不成功，**新**傳回零或擲回例外狀況，請參閱 <<c4> [ 新和 delete 運算子](../cpp/new-and-delete-operators.md)如需詳細資訊。 您可以變更此預設行為，方法是撰寫自訂例外狀況處理常式，並呼叫[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)執行階段程式庫函式，以您為其引數的函式名稱。  
   
- 如需如何在 Managed 堆積上建立物件的詳細資訊，請參閱 [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
+ 如需如何為 managed 堆積上建立物件的資訊，請參閱[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)。  
   
- 當使用 **new** 來配置 C\+\+ 類別物件的記憶體時，會在配置記憶體之後呼叫物件的建構函式。  
+ 當**新**是用來配置記憶體給 c + + 類別物件，物件的建構函式呼叫後已配置的記憶體。  
   
- 使用 [delete](../cpp/delete-operator-cpp.md) 運算子解除配置以 **new** 運算子配置的記憶體。  
+ 使用[刪除](../cpp/delete-operator-cpp.md)運算子，取消配置的記憶體配置與**新**運算子。  
   
- 下列範例會先配置然後再釋放大小為 `dim` 乘以 10 個字元的二維陣列。  配置多維陣列時，第一個維度以外的所有維度都必須是判斷值為正值的常數運算式；最左邊的陣列維度可以是任何判斷值為正值的運算式。  使用 **new** 運算子配置陣列時，第一個維度可以是零 \(**new** 運算子會傳回唯一指標\)。  
+ 下列範例會先配置然後再釋放大小為 `dim` 乘以 10 個字元的二維陣列。 配置多維陣列時，第一個維度以外的所有維度都必須是判斷值為正值的常數運算式；最左邊的陣列維度可以是任何判斷值為正值的運算式。 配置陣列使用時**新**運算子，第一個維度可以是零，**新**運算子會傳回唯一指標。  
   
 ```  
 char (*pchar)[10] = new char[dim][10];  
 delete [] pchar;  
 ```  
   
- *type\-name* 不能包含 **const**、`volatile`、類別宣告或列舉宣告。  因此，下列運算式是不合法的：  
+ *型別名稱*不能包含**const**， `volatile`，類別宣告或列舉型別宣告。 因此，下列運算式是不合法的：  
   
 ```  
 volatile char *vch = new volatile char[20];  
 ```  
   
- **new** 運算子無法配置參考類型，因為這些類型不是物件。  
+ **新**運算子無法配置參考類型，因為它們不是物件。  
   
- **new** 運算子無法用來配置函式，但是可以用來配置函式的指標。  下列範例會配置然後再釋放含七個傳回整數之函式指標的陣列。  
+ **新**運算子不能用來配置函式，但它可以用來配置函式的指標。 下列範例會配置然後再釋放含七個傳回整數之函式指標的陣列。  
   
 ```  
 int (**p) () = new (int (*[7]) ());  
 delete *p;  
 ```  
   
- 如果您沒有搭配任何額外的引數使用運算子 **new**，並使用 [\/GX](../build/reference/gx-enable-exception-handling.md)、[\/EHa](../build/reference/eh-exception-handling-model.md) 或 [\/EHs](../build/reference/eh-exception-handling-model.md) 選項進行編譯，當建構函式擲回例外狀況時，編譯器將會產生程式碼以呼叫運算子 **delete**。  
+ 如果您使用運算子**新**而不需要任何額外的引數，並與編譯[/GX](../build/reference/gx-enable-exception-handling.md)， [/EHa](../build/reference/eh-exception-handling-model.md)，或[/EHs](../build/reference/eh-exception-handling-model.md)選項，編譯器會將產生程式碼以呼叫運算子**刪除**如果建構函式擲回例外狀況。  
   
- 下列清單說明 **new** 的文法項目：  
+ 下列清單描述的文法項目**新**:  
   
- *placement*  
- 如果您多載 **new**，可提供您一個傳遞其他引數的方式。  
+ *放置*  
+ 提供一個方式來傳遞其他引數，如果您多載**新**。  
   
- *type\-name*  
- 指定要配置的類型；它可以是內建或使用者定義的類型。  如果類型規格是複雜的，請以括號括住類型規格以強制繫結的順序。  
+ *型別名稱*  
+ 指定要配置的類型；它可以是內建或使用者定義的類型。 如果類型規格是複雜的，請以括號括住類型規格以強制繫結的順序。  
   
  *initializer*  
- 提供初始化物件的值。  初始設定式無法指定給陣列。  **new** 運算子只有在類別具有預設建構函式時，才會建立物件的陣列。  
+ 提供初始化物件的值。 初始設定式無法指定給陣列。 **新**運算子只會建立物件的陣列類別有預設建構函式。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼範例會配置一個字元陣列和一個 `CName` 類別物件，然後加以釋放。  
   
 ```  
@@ -123,8 +139,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果您使用 **new** 運算子的新位置形式 \(即除了配置大小之外，還有其他引數的形式\)，則編譯器不支援可在建構函式擲回例外狀況時使用的位置形式 **delete** 運算子。  例如:  
+## <a name="example"></a>範例  
+ 如果您使用的新位置形式**新**運算子，除了大小的引數的形式的配置，編譯器不支援的位置形式**刪除**運算子如果建構函式會擲回例外狀況。 例如:   
   
 ```  
 // expre_new_Operator2.cpp  
@@ -158,8 +174,8 @@ int main() {
 }  
 ```  
   
-## 初始化以 new 所配置的物件  
- 選擇性的 *initializer* 欄位會包含在 **new** 運算子的文法中。  這樣就可讓您以使用者定義的建構函式初始化新物件。  如需如何執行初始化的詳細資訊，請參閱[初始設定式](../cpp/initializers.md)。  下列範例將示範如何使用具有 **new** 運算子的初始化運算式：  
+## <a name="initializing-object-allocated-with-new"></a>初始化以 new 所配置的物件  
+ 選擇性*初始設定式*的文法中包括欄位**新**運算子。 這樣就可讓您以使用者定義的建構函式初始化新物件。 如需有關如何執行初始化的詳細資訊，請參閱[初始設定式](../cpp/initializers.md)。 下列範例說明如何使用初始化運算式與**新**運算子：  
   
 ```  
 // expre_Initializing_Objects_Allocated_with_new.cpp  
@@ -183,24 +199,22 @@ int main()
 }  
 ```  
   
- 在這個範例中，`CheckingAcct` 是使用 **new** 運算子所配置，但是未指定預設初始化。  因此會呼叫 `Acct()` 類別的預設建構函式。  然後以相同方式配置 `SavingsAcct` 物件，不過它會明確初始化為 34.98。  由於 34.98 屬於 **double** 類型，因此會呼叫接受該類型引數的建構函式處理初始化。  最後，非類別類型 `HowMuch` 會初始化為 43.0。  
+ 在此範例中，物件`CheckingAcct`使用配置**新**指定運算子，但沒有預設值初始化。 因此會呼叫 `Acct()` 類別的預設建構函式。 然後以相同方式配置 `SavingsAcct` 物件，不過它會明確初始化為 34.98。 由於 34.98 屬於型別**double**，會呼叫接受該型別引數的建構函式處理初始化。 最後，非類別類型 `HowMuch` 會初始化為 43.0。  
   
- 如果物件為類別類型且該類別具有建構函式 \(如上述範例\)，則只有在符合下列其中一項條件時，物件才可以由 **new** 運算子初始化：  
+ 如果是類別類型的物件，該類別具有建構函式 （如上述範例中），可以透過初始化物件**新**運算子只有當其中一個條件成立：  
   
 -   在初始設定式中提供的引數與建構函式中的引數一致。  
   
--   類別有預設建構函式 \(可以在沒有引數的情況下呼叫的建構函式\)。  
+-   類別有預設建構函式 (可以在沒有引數的情況下呼叫的建構函式)。  
   
- 存取控制和語意模糊控制是根據`operator new`語意模糊和[使用特殊成員函式初始化](http://msdn.microsoft.com/zh-tw/0b399cab-40a7-4e79-9278-05f40139a0e1)中訂定的規則，在 [和建構函式上執行。](http://msdn.microsoft.com/zh-tw/82223d73-64cb-4923-b678-78f9568ff3ca)  
+ 使用配置陣列時，就可以完成任何明確的每個元素初始化**新**運算子; 只有預設建構函式，如果有的話，會呼叫。 請參閱[預設引數](../cpp/default-arguments.md)如需詳細資訊。  
   
- 使用 **new** 運算子配置陣列時，不可明確執行每個元素的初始化，而只會呼叫預設建構函式 \(如果有的話\)。  如需詳細資訊，請參閱[預設引數](../cpp/default-arguments.md)。  
+ 如果記憶體配置失敗 (`operator new` 傳回值為 0)，則不會執行初始化。 這樣可防止嘗試初始化不存在的資料。  
   
- 如果記憶體配置失敗 \(`operator new` 傳回值為 0\)，則不會執行初始化。  這樣可防止嘗試初始化不存在的資料。  
+ 就像函式呼叫一般，不會定義初始化運算式的評估順序。 此外，您不應依賴這些運算式會在執行記憶體配置之前完全評估。 如果記憶體配置失敗而**新**運算子傳回零，初始設定式中的某些運算式可能不會完全評估。  
   
- 就像函式呼叫一般，不會定義初始化運算式的評估順序。  此外，您不應依賴這些運算式會在執行記憶體配置之前完全評估。  如果記憶體配置失敗，而且 **new** 運算子傳回零，則初始設定式中的某些運算式可能不會完全評估。  
-  
-## 以 new 所配置物件的存留期  
- 使用 **new** 運算子配置的物件不會在其所在的定義範圍結束時終結。  由於 **new** 運算子會傳回其所配置物件的指標，因此程式必須為指標定義適當的範圍，才能存取這些物件。  例如:  
+## <a name="lifetime-of-objects-allocated-with-new"></a>以 new 所配置物件的存留期  
+ 配置與物件**新**定義所在的範圍結束時，不會終結運算子。 因為**新**運算子傳回其所配置的物件的指標，該程式必須定義適當的範圍，才能存取這些物件的指標。 例如:   
   
 ```  
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp  
@@ -227,28 +241,28 @@ int main()
   
  一旦指標 `AnotherArray` 超出範例中的範圍，就無法刪除物件。  
   
-## new 運作方式  
- *allocation\-expression* \(包含 **new** 運算子的運算式\) 會執行下列三種功能：  
+## <a name="how-new-works"></a>new 運作方式  
+ *配置運算式*— 包含運算式**新**運算子 — 進行三項操作：  
   
--   為要配置的物件找出並保留存放區。  這個階段完成時會配置正確數量的存放區，但還不是物件。  
+-   為要配置的物件找出並保留存放區。 這個階段完成時會配置正確數量的存放區，但還不是物件。  
   
--   將物件初始化。  初始化完成後，就會出現使配置存放區成為物件的足夠資訊。  
+-   將物件初始化。 初始化完成後，就會出現使配置存放區成為物件的足夠資訊。  
   
--   將指標傳回物件，此物件的指標類型衍生自 *new\-type\-name* 或 *type\-name*。  程式會使用此指標來存取新配置的物件。  
+-   傳回指標類型的物件的指標衍生自*新類型名稱*或*型別名稱*。 程式會使用此指標來存取新配置的物件。  
   
- **new** 運算子會叫用 `operator new` 函式。  針對任何類型的陣列，以及不屬於 **class**、`struct` 或 **union** 類型的物件，會呼叫全域函式 **::operator new** 來配置存放區。  類別類型的物件可以根據類別定義各自的 `operator new` 靜態成員函式。  
+ **新**運算子會叫用函式`operator new`。 任何類型的陣列和物件不屬於**類別**， `struct`，或**union**類型、 全域函式， **:: 運算子 new**，呼叫以將存放裝置配置。 類別類型的物件可以根據類別定義各自的 `operator new` 靜態成員函式。  
   
- 當編譯器遇到 **new** 運算子以配置類型為 `type` 的物件時，就會呼叫 `type`**::operator new\( sizeof\(** `type` **\) \)**，如果未定義使用者定義的 `operator new`，則會呼叫 **::operator new\( sizeof\(** `type` **\) \)**。  因此，**new** 運算子可以配置物件所需正確數量的記憶體。  
-  
-> [!NOTE]
->  `operator new` 的引數類型為 **size\_t**。  此類型是在 DIRECT.H、MALLOC.H、MEMORY.H、SEARCH.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H 和 TIME.H 中定義。  
-  
- 文法中的選項允許指定 *placement* \(請參閱 [new 運算子](../cpp/new-operator-cpp.md)的文法\)。  *placement* 參數只能用於使用者定義的 `operator new` 實作；它可用於將額外的資訊傳遞至 `operator new`。  如果類別 T 的成員運算子是 new，*placement* 欄位的運算式 \(例如 `T *TObject = new ( 0x0040 ) T;`\) 會被轉譯為 `T *TObject = T::operator new( sizeof( T ), 0x0040 );`，否則會轉譯為 `T *TObject = ::operator new( sizeof( T ), 0x0040 );`。  
-  
- *placement* 欄位的原始用途是允許在使用者指定的位址配置與硬體相關的物件。  
+ 當編譯器遇到**新**運算子配置類型的物件`type`，就會發出呼叫`type` **:: 運算子 new (sizeof (** `type` **))**或，如果不是使用者定義`operator new`定義， **:: 運算子 new (sizeof (** `type` **))**。 因此，**新**運算子可以配置給物件的正確的記憶體數量。  
   
 > [!NOTE]
->  雖然上述範例只示範 *placement* 欄位中的一個引數，但利用這種方式可額外傳遞到 `operator new` 的引數數量不受限制。  
+>  引數`operator new`的型別**size_t**。 此類型是在 DIRECT.H、MALLOC.H、MEMORY.H、SEARCH.H、STDDEF.H、STDIO.H、STDLIB.H、STRING.H 和 TIME.H 中定義。  
+  
+ 在文法中的選項允許指定*放置*(請參閱的文法[new 運算子](../cpp/new-operator-cpp.md))。 *放置*參數只能用於使用者定義的實作`operator new`; 它可讓額外的資訊傳遞給`operator new`。 使用運算式*放置*欄位，例如`T *TObject = new ( 0x0040 ) T;`轉譯成`T *TObject = T::operator new( sizeof( T ), 0x0040 );`如果類別 T 的成員運算子是 new，否則要`T *TObject = ::operator new( sizeof( T ), 0x0040 );`。  
+  
+ 原本*放置*欄位是要讓硬體相關的物件會在使用者指定的位址配置。  
+  
+> [!NOTE]
+>  雖然上述範例顯示中的只有一個引數*放置*欄位上多少的額外引數可以傳遞至不受限制`operator new`這種方式。  
   
  即使已定義類別類型的 `operator new`，也可以此範例的格式使用全域運算子：  
   
@@ -256,9 +270,9 @@ int main()
 T *TObject =::new TObject;  
 ```  
   
- 範圍解析運算子 \(`::`\) 會強制使用全域 **new** 運算子。  
+ 範圍解析運算子 (`::`) 會強制使用全域**新**運算子。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
- [operator new 函式](../misc/operator-new-function.md)
+ [關鍵字](../cpp/keywords-cpp.md)   
+ [新和 delete 運算子](../cpp/new-and-delete-operators.md)

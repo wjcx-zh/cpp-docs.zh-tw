@@ -1,37 +1,53 @@
 ---
-title: "_bstr_t::operator +=、+ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::operator+"
-  - "_bstr_t::operator+="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "+ 運算子, _bstr_t 物件"
-  - "+= 運算子, 附加字串"
+title: "_bstr_t:: operator + =，+ |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::operator+
+- _bstr_t::operator+=
+dev_langs:
+- C++
+helpviewer_keywords:
+- += operator, appending strings
+- + operator, _bstr_t objects
 ms.assetid: d28316ce-c2c8-4a38-bdb3-44fa4e582c44
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _bstr_t::operator +=、+
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0ba8936df56359523a76992866642521f899af69
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="bstrtoperator--"></a>_bstr_t::operator +=、+
 **Microsoft 特定的**  
   
  將字元附加至 `_bstr_t` 物件的結尾或串連兩個字串。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -51,7 +67,7 @@ friend _bstr_t operator+(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *s1*  
  `_bstr_t` 物件。  
   
@@ -61,18 +77,18 @@ friend _bstr_t operator+(
  `s3`  
  Unicode 字串。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  這些運算子會執行字串串連：  
   
--   **operator\+\=\(**  *s1*  **\)**：將 *s1* 的封裝 `BSTR` 中的字元附加至物件的封裝 `BSTR` 的結尾。  
+-   **運算子 + = (***s1***)**將附加至封裝中的字元`BSTR`的*s1*到這個物件封裝結尾`BSTR`.      
   
--   **operator\+\(**  *s1*  **\)**：傳回新的 `_bstr_t`，這是由串連此物件及 *s1* 的 `BSTR` 組成。  
+-   **operator + (***s1***)**傳回新`_bstr_t`，藉由串連此物件的正確`BSTR`與*s1*。      
   
--   **operator\+\(**  *s2*  **&#124;**  *s1*  **\)**：傳回新的 `_bstr_t`，這是由串連多位元組字串 *s2* \(已轉換為 Unicode\) 及封裝在 *s1* 中的 `BSTR` 組成。  
+-   **operator + (***s2***&#124;***s1***)**傳回新`_bstr_t`，藉由串連的多位元組字串構成*s2*，轉換成 Unicode，與`BSTR`封裝在*s1*。          
   
--   **operator\+\(**  `s3` **,**  *s1*  **\)**：傳回新的 `_bstr_t`，這是由串連 Unicode 字串 `s3` 和封裝在 *s1* 中的 `BSTR` 組成。  
+-   **operator + (** `s3` **，***s1***)**傳回新`_bstr_t`Unicode 字串的串連，形成`s3`與`BSTR`封裝在*s1*。        
   
  **END Microsoft 特定的**  
   
-## 請參閱  
- [\_bstr\_t 類別](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>另請參閱  
+ [_bstr_t 類別](../cpp/bstr-t-class.md)

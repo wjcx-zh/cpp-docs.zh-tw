@@ -1,63 +1,81 @@
 ---
-title: "明確初始化 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "範本，執行個體化"
-  - "明確初始化"
-  - "執行個體化，明確"
+title: "明確具現化 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- templates, instantiation
+- explicit instantiation
+- instantiation, explicit
 ms.assetid: 8b0d4e32-45a6-49d5-8041-1ebdd674410e
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 明確初始化
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ecd8f8c893abab10699a0bd43f368356335c6e10
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-您可以使用明確具現化建立樣板類別或函式的執行個體化，而不用實際在程式碼中使用它。  由於當您建立用於發行範本的程式庫 \(.lib\) 檔案是有用的，未執行個體化的樣板定義不會進入目的檔 \(.obj\)。  
+---
+# <a name="explicit-instantiation"></a>明確初始化
+您可以使用明確具現化，建立樣板化類別或函式的具現化，而在程式碼中實際使用它。 由於當您建立使用樣板散發的程式庫 (.lib) 檔案時，這樣做很有用的，未具現化的樣板定義不會進入目的檔 (.obj)。  
   
- 這個程式碼明確具現化 `int` 變數和六個項目 `MyStack` :  
+ 這個程式碼明確具現化 `MyStack` 變數和六個項目的 `int`：  
   
 ```cpp  
 template class MyStack<int, 6>;  
 ```  
   
- 這個陳述式建立 `MyStack` 的執行個體化沒有保留物件的任何儲存區。  程式碼為所有成員產生。  
+ 這個陳述式建立 `MyStack` 的具現化，沒有保留物件的任何儲存區。 程式碼為所有成員產生。  
   
- 下一行明確具現化只有建構函式成員函式:  
+ 下一行只明確具現化建構函式成員函式：  
   
 ```cpp  
 template MyStack<int, 6>::MyStack( void );  
 ```  
   
- 如同 [函式樣板具現化](../cpp/function-template-instantiation.md)，的範例所示。您可以明確具現化的函式樣板使用特定型別引數重新宣告它們。  
+ 您可以明確具現化函式樣板中的範例所示，使用特定的型別引數來重新宣告變數，[函式樣板具現化](../cpp/function-template-instantiation.md)。  
   
- 您可以使用 `extern` 關鍵字防止成員的自動執行個體化。  例如：  
+ 您可以使用 `extern` 關鍵字防止成員自動具現化。 例如：  
   
 ```cpp  
 extern template class MyStack<int, 6>;  
 ```  
   
- 同樣地，您可以將特定成員為外部和不具現化:  
+ 同樣地，您可以將特定成員標記為外部和未具現化：  
   
 ```cpp  
 extern template MyStack<int, 6>::MyStack( void );  
 ```  
   
- 您可以在多個物件模組可以使用 `extern` 關鍵字將會產生相同的具現化程式碼的編譯器。  如果函式被呼叫，您必須使用在至少一個已連結之模組的指定的明確樣板參數在具現化樣板函式中，否則當程式建立時會發生連結器錯誤。  
+ 您可以使用 `extern` 關鍵字，防止編譯器在多個物件模組中產生相同的具現化程式碼。 如果函式被呼叫，您必須在至少一個連結模組中使用指定的明確樣板參數，來具現化樣板函式，否則當程式建立時會發生連結器錯誤。  
   
 > [!NOTE]
->  在特製化的 `extern` 關鍵字只適用於成員函式中定義於類別的主體之外。  函式中定義於類別宣告內被視為內嵌函式和永遠執行個體化。  
+>  在特製化的 `extern` 關鍵字只適用於類別主體之外定義的成員函式。 類別宣告內定義的函式被視為內嵌函式，永遠會具現化。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [函式樣板](../cpp/function-templates.md)

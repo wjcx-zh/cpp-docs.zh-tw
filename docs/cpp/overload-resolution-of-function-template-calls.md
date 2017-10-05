@@ -1,33 +1,51 @@
 ---
-title: "函式樣板呼叫的多載解析 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "函式樣板多載解析"
+title: "函式樣板呼叫的多載解析 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 函式樣板呼叫的多載解析
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: f5c4a8e6392bc5b4338738b56099adac268e7af1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-函式樣板可以多載相同名稱的非樣板函式。  在這種情節中，函式呼叫會先使用樣板引數推算解析，以具現化具有唯一特製化的函式樣板。  如果樣板引數推算失敗，才會考慮使用其他函式多載解析呼叫。  這些其他多載也稱為候選集合，包括非樣板函式和其他具現化的函式樣板。  如果樣板引數推算成功，則會依照多載解析的規則將產生的函式與其他函式進行比較，以判斷最符合的項目。  如需詳細資訊，請參閱[多載](../misc/overloading-cpp.md)和[引數比對](../misc/argument-matching.md)。  
+---
+# <a name="overload-resolution-of-function-template-calls"></a>函式樣板呼叫的多載解析
+函式樣板可以多載相同名稱的非樣板函式。 在這種情節中，函式呼叫會先使用樣板引數推算解析，以具現化具有唯一特製化的函式樣板。 如果樣板引數推算失敗，才會考慮使用其他函式多載解析呼叫。 這些其他多載也稱為候選集合，包括非樣板函式和其他具現化的函式樣板。 如果樣板引數推算成功，則會依照多載解析的規則將產生的函式與其他函式進行比較，以判斷最符合的項目。 如需詳細資訊，請參閱[函式多載](function-overloading.md)。  
   
-## 範例  
- 如果非樣板函式是與樣板函式一樣理想的相符項目，則會選擇非樣板函式 \(除非明確指定樣板引數\)，如同下列範例中的呼叫 `f(1, 1)`。  
+## <a name="example"></a>範例
+
+ 如果非樣板函式是與樣板函式一樣理想的相符項目，則會選擇非樣板函式 (除非明確指定樣板引數)，如同下列範例中的呼叫 `f(1, 1)`。  
   
-```  
+```cpp
 // template_name_resolution9.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -50,13 +68,17 @@ int main()
 }  
 ```  
   
-  **f\(int, int\)**  
-**void f\(T1, T2\)**  
-**void f\(T1, T2\)**   
-## 範例  
+```Output  
+f(int, int)  
+void f(T1, T2)  
+void f(T1, T2)  
+```  
+  
+## <a name="example"></a>範例
+
  下一個範例將說明，如果非樣板函式需要轉換，則建議您使用完全相符的樣板函式。  
   
-```  
+```cpp
 // template_name_resolution10.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -80,8 +102,13 @@ int main()
 }  
 ```  
   
-  **void f\(T1, T2\)**   
-## 請參閱  
+```Output  
+void f(T1, T2)  
+```  
+  
+## <a name="see-also"></a>另請參閱
+
  [名稱解析](../cpp/templates-and-name-resolution.md)   
  [typename](../cpp/typename.md)   
- [樣板引數推斷](../Topic/Template%20Argument%20Deduction.md)
+ 
+

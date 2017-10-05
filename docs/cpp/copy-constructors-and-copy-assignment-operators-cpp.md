@@ -1,40 +1,56 @@
 ---
-title: "複製建構函式和複製指派運算子 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= 運算子, 複製物件"
-  - "指派值以複製物件"
-  - "指派運算子, 複製物件的"
-  - "指派陳述式, 複製物件"
-  - "複製物件"
-  - "初始化物件, 透過複製物件"
-  - "物件 [C++], 複製"
+title: "複製建構函式和複製指派運算子 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- = operator, copying objects
+- assignment statements, copying objects
+- assignment operators, for copying objects
+- objects [C++], copying
+- initializing objects, by copying objects
+- copying objects
+- assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 複製建構函式和複製指派運算子 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="copy-constructors-and-copy-assignment-operators-c"></a>複製建構函式和複製指派運算子 (C++)
 > [!NOTE]
->  從 C\+\+11 開始，語言支援兩種指派：*「複製指派」*\(Copy Assignment\) 和*「移動指派」*\(Move Assignment\)。  在本文中，除非明確指定，否則「指派」表示複製指派。  如需移動指派的詳細資訊，請參閱[移動建構函式和移動指派運算子 \(C\+\+\)](http://msdn.microsoft.com/zh-tw/1442de5f-37a5-42a1-83a6-ec9cfe0414db)。  
+>  從 C + + 11 開始，兩種指派支援的語言：*複製指派*和*移動指派*。 在本文中，除非明確指定，否則「指派」表示複製指派。 如需移動指派，請參閱[移動建構函式和移動指派運算子 （c + +）](http://msdn.microsoft.com/en-us/1442de5f-37a5-42a1-83a6-ec9cfe0414db)。  
 >   
 >  指派作業和初始化作業都會導致複製物件。  
   
--   **指派**：將某一個物件的值指派給另一個物件時，第一個物件會複製到第二個物件。  因此，  
+-   **指派**： 當一個物件的值指派到另一個物件時，第一個物件會複製到第二個物件。 因此，  
   
     ```cpp  
     Point a, b;  
@@ -44,9 +60,9 @@ manager: "ghogen"
   
      會導致 `b` 的值複製到 `a`。  
   
--   **初始化**：初始化是在宣告新物件、引數以傳值方式傳遞至函式，或是以傳值方式從函式傳回值時發生。  
+-   **初始化**： 在宣告新物件、 引數會傳遞至函式，依據值或傳值方式從函式傳回值時，會進行初始化。  
   
- 您可以定義類別類型物件的「複製」語意。  例如，請參考這個程式碼：  
+ 您可以定義類別類型物件的「複製」語意。 例如，請參考這個程式碼：  
   
 ```cpp  
 TextFile a, b;  
@@ -59,13 +75,11 @@ b = a;
   
 -   將指派運算子 `operator=` 與類別類型的參考一起做為傳回類型和 `const` 所傳遞的參數使用，例如 `ClassName& operator=(const ClassName& x);`。  
   
--   使用複製建構函式。  如需複製建構函式的詳細資訊，請參閱[宣告建構函式的規則](../misc/rules-for-declaring-constructors.md)。  
+-   使用複製建構函式。   
   
- 如果您未宣告複製建構函式，則編譯器會產生一個成員複製建構函式。  如果您未宣告複製指派建構函式，則編譯器會產生一個成員複製指派運算子。 宣告複製建構函式不會隱藏編譯器產生的複製指派運算子，反之亦然。  如果您實作任一種，建議您一併實作另一種，如此程式碼的意義才會明確。  
-  
- 成員指派將在[\(NOTINBUILD\) Memberwise Assignment and Initialization](http://msdn.microsoft.com/zh-tw/94048213-8b49-4416-8069-b1b7a6f271f9)中詳細說明。  
-  
- 複製建構函式接受類型 *class\-name***&** 的引數，其中 *class\-name* 是為其定義建構函式的類別名稱。  例如:  
+ 如果您未宣告複製建構函式，則編譯器會產生一個成員複製建構函式。  如果您未宣告複製指派建構函式，則編譯器會產生一個成員複製指派運算子。 宣告複製建構函式不會隱藏編譯器產生的複製指派運算子，反之亦然。 如果您實作任一種，建議您一併實作另一種，如此程式碼的意義才會明確。  
+   
+ 複製建構函式接受類型引數*類別名稱***&**，其中*類別名稱*是為其定義建構函式的類別名稱。 例如:   
   
 ```cpp  
 // spec1_copying_class_objects.cpp  
@@ -82,21 +96,20 @@ int main()
 ```  
   
 > [!NOTE]
->  盡可能讓複製建構函式引數的類型為 *const class\-name***&**。  這樣可避免複製建構函式意外變更做為複製來源的物件。  另外也可以從 **const** 物件複製。  
+>  請複製建構函式的引數的型別*常數的類別名稱*** & **盡可能。 這樣可避免複製建構函式意外變更做為複製來源的物件。 它也可讓複製**const**物件。  
   
-## 編譯器產生的複製建構函式  
- 編譯器產生的複製建構函式 \(像是使用者定義的複製建構函式\) 具有「*class\-name* 參考」類型的單一引數。 但是當所有基底類別和成員類別將複製建構函式宣告為接受 **const** *class\-name***&** 類型的單一引數時例外。  在這種情況下，編譯器產生之複製建構函式的引數也會是 **const**。  
+## <a name="compiler-generated-copy-constructors"></a>編譯器產生的複製建構函式  
+ 編譯器產生的複製建構函式，像是使用者定義的複製建構函式中，有類型的單一引數 」 參考*類別名稱*。 」 例外狀況是當所有的基底類別和成員類別將複製建構函式宣告為接受單一引數的型別**const** *類別名稱***&**。 在這種情況下，編譯器產生的複製建構函式的引數也是**const**。  
   
- 當複製建構函式的引數類型不是 **const** 時，藉由複製 **const** 物件進行初始化就會產生錯誤。  反向執行則不成立：如果引數為 **const**，您可以藉由複製不是 **const** 的物件進行初始化。  
+ 當複製建構函式的引數類型不**const**，藉由複製初始化**const**物件會產生錯誤。 反向執行則不成立： 如果引數是**const**，您可以藉由複製不是物件初始化**const**。  
   
- 編譯器產生的指派運算子在 **const** 方面會遵循相同的模式。 除非所有基底和成員類別中的指派運算子都接受 **const** *class\-name&* 類型的引數，否則這類運算子會接受 *class\-name***&** 類型的單一引數。 在這種情況下，類別產生的指派運算子會接受 **const** 引數。  
+ 編譯器產生的指派運算子遵循相同的模式與**const。** 則會接受單一引數的型別*類別名稱*** & **除非所有基底和成員類別中的指派運算子的型別引數**const** *類別名稱 （& s)。* 在此情況下，類別產生的指派運算子會接受**const**引數。  
   
 > [!NOTE]
 >  虛擬基底類別是由複製建構函式進行初始化、由編譯器所產生或使用者所定義時，只會在建構時初始化一次。  
   
- 這些影響類似複製建構函式的影響。  如果引數的類型不是 **const**，從 **const** 物件指派就會產生錯誤。  反向執行則不成立：如果將 **const** 值指派至不是 **const** 的值，指派會成功。  
+ 這些影響類似複製建構函式的影響。 當引數類型不是**const**，指派從**const**物件會產生錯誤。 反向執行則不成立： 如果**const**值指派給值不是**const**，指派會成功。  
   
- 如需多載指派運算子的詳細資訊，請參閱[指派](../cpp/assignment.md)。  
+ 如需有關多載的指派運算子的詳細資訊，請參閱[指派](../cpp/assignment.md)。  
   
-## 請參閱  
- [特殊成員函式](../misc/special-member-functions-cpp.md)
+

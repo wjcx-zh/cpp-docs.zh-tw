@@ -1,51 +1,67 @@
 ---
-title: "try、throw 和 catch 陳述式 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "catch_cpp"
-  - "throw"
-  - "try_cpp"
-  - "try"
-  - "throw_cpp"
-  - "catch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "catch 關鍵字 [C++]"
-  - "關鍵字 [c + +] 例外狀況處理"
-  - "C + + 例外狀況處理陳述式語法"
-  - "try-catch 關鍵字 [c + +]，關於 try-catch 例外狀況處理"
-  - "throw 關鍵字 [C++]"
-  - "try-catch 關鍵字 [C++]"
-  - "try-catch 關鍵字 [c + +] 例外狀況處理"
-  - "throw 陳述式擲回的例外狀況"
-  - "try-catch 關鍵字 [c + +]、 throw 關鍵字 [c + +] s"
-  - "擲回例外狀況，實作 c + + 例外狀況處理"
-  - "擲回例外狀況"
-  - "throw 關鍵字 [c + +] throw （） 和 throw （...）"
+title: "再試一次、 throw 和 catch 陳述式 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- catch_cpp
+- throw
+- try_cpp
+- try
+- throw_cpp
+- catch
+dev_langs:
+- C++
+helpviewer_keywords:
+- catch keyword [C++]
+- keywords [C++], exception handling
+- C++ exception handling, statement syntax
+- try-catch keyword [C++], about try-catch exception handling
+- throw keyword [C++]
+- try-catch keyword [C++]
+- try-catch keyword [C++], exception handling
+- throwing exceptions, throw keyword
+- try-catch keyword [C++], throw keyword [C++]s
+- throwing exceptions, implementing C++ exception handling
+- throwing exceptions
+- throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
 caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# try、throw 和 catch 陳述式 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 89db418a92239460379d1ea41d2d49a8073095c2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 陳述式 (C++)
 若要在 C++ 中實作例外狀況處理，您可以使用 `try`、`throw` 和 `catch` 運算式。  
   
  首先，使用 `try` 區塊包含一個或多個可能會擲回例外狀況的陳述式。  
   
- `throw` 運算式會發出 `try` 區塊發生例外狀況的訊號 (通常是錯誤)。 您可以將任何類型的物件當成 `throw` 運算式的運算元使用。 這個物件通常用來傳達與錯誤有關的資訊。 在大部分情況下，我們建議您使用 [std:: exception](../standard-library/exception-class1.md) 類別或其中一個標準程式庫中定義的衍生類別。 如果有任何不適用的類別，建議您從 `std::exception` 自行衍生例外狀況類別。  
+ `throw` 運算式會發出 `try` 區塊發生例外狀況的訊號 (通常是錯誤)。 您可以將任何類型的物件當成 `throw` 運算式的運算元使用。 這個物件通常用來傳達與錯誤有關的資訊。 在大部分情況下，我們建議您使用[std:: exception](../standard-library/exception-class.md)類別或其中一個標準程式庫中定義的衍生類別。 如果有任何不適用的類別，建議您從 `std::exception` 自行衍生例外狀況類別。  
   
  若要處理可能擲回的例外狀況，請在 `catch` 區塊之後緊接著實作一個或多個 `try` 區塊。 每個 `catch` 區塊皆會指定可處理的例外狀況類型。  
   
@@ -87,7 +103,7 @@ MyData GetNetworkResource()
 ```  
   
 ## <a name="remarks"></a>備註  
- `try` 子句之後的程式碼是程式碼的保護區段。  `throw` 運算式 *會擲回*— 也就是引發 — 例外狀況。 `catch` 子句之後的程式碼區塊是例外狀況處理常式。 這個處理常式， *攔截* ，則會擲回的例外狀況中的型別 `throw` 和 `catch` 運算式都相容。 如需管理中的型別符合規則的清單 `catch` 區塊，請參閱 [評估如何 Catch 區塊的](../cpp/how-catch-blocks-are-evaluated-cpp.md)。 如果 `catch` 陳述式指定省略符號 (...) 而不是類型，則 `catch` 區塊會處理例外狀況的每一種類型。 當您編譯與 [/EHa](../build/reference/eh-exception-handling-model.md) 選項，這些可能包括 C 結構化例外狀況，以及系統產生或應用程式所產生的非同步例外，例如記憶體保護、 除數為零，以及浮點數違規。 由於會按照程式順序處理 `catch` 區塊，以尋找相符的類型，因此省略符號處理常式必須是相關聯的 `try` 區塊中的最後一個處理常式。 使用 `catch(...)` 時請小心；除非 catch 區塊知道如何處理所攔截到的特定例外狀況，否則不可允許程式繼續執行。 通常，`catch(...)` 區塊的用途是在程式停止執行之前記錄錯誤和執行特殊清除。  
+ `try` 子句之後的程式碼是程式碼的保護區段。 `throw`運算式*會擲回*— 也就是引發 — 例外狀況。 `catch` 子句之後的程式碼區塊是例外狀況處理常式。 這是此處理常式，*攔截*則會擲回的例外狀況中的型別`throw`和`catch`運算式都相容。 如需管理中的型別符合規則的清單`catch`區塊，請參閱[評估如何 Catch 區塊的](../cpp/how-catch-blocks-are-evaluated-cpp.md)。 如果 `catch` 陳述式指定省略符號 (...) 而不是類型，則 `catch` 區塊會處理例外狀況的每一種類型。 當您編譯與[/EHa](../build/reference/eh-exception-handling-model.md)選項，其中可以包括 C 結構化例外狀況，例如記憶體保護，除數為零，以及浮點數違規的系統產生，或應用程式產生非同步例外狀況. 由於會按照程式順序處理 `catch` 區塊，以尋找相符的類型，因此省略符號處理常式必須是相關聯的 `try` 區塊中的最後一個處理常式。 使用 `catch(...)` 時請小心；除非 catch 區塊知道如何處理所攔截到的特定例外狀況，否則不可允許程式繼續執行。 通常，`catch(...)` 區塊的用途是在程式停止執行之前記錄錯誤和執行特殊清除。  
   
  不含運算元的 `throw` 運算式會重新擲回目前正在處理的例外狀況。 重新擲回例外狀況時，建議使用此表單，因為其中保留了原始例外狀況的多型類型資訊。 這類運算式只能在 `catch` 處理常式中或從 `catch` 處理常式內部呼叫的函式中使用。 重新擲回的例外狀況物件是原始的例外狀況物件，而不是複本。  
   
@@ -96,7 +112,7 @@ try {
    throw CSomeOtherException();  
 }  
 catch(...) {  
-   // Catch all exceptions – dangerous!!!  
+   // Catch all exceptions - dangerous!!!  
    // Respond (perhaps only partially) to the exception, then  
    // re-throw to pass the exception to some other handler  
    // ...  

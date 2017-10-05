@@ -1,44 +1,60 @@
 ---
-title: "間接取值運算子：* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "* 運算子"
-  - "間接取值運算子"
-  - "間接取值運算子, 語法"
-  - "運算子 [C++], 間接取值 (Indirection)"
+title: "間接取值運算子: * |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- '* operator'
+- indirection operator
+- operators [C++], indirection
+- indirection operator, syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 間接取值運算子：*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="indirection-operator-"></a>間接取值運算子：*
+## <a name="syntax"></a>語法  
   
 ```  
   
 * cast-expression  
 ```  
   
-## 備註  
- 一元間接運算子 \(**\***\) 會取值指標；也就是會將指標值轉換為左值。  間接運算子的運算元必須是類型指標。  間接運算式的結果是類型，指標類型即衍生自此。  在此內容中使用 **\*** 運算子與使用該運算子為二元運算子不同，後者是乘法。  
+## <a name="remarks"></a>備註  
+ 一元間接運算子 (**\***) 會取值指標; 也就是說，它將指標值轉換為左值。 間接運算子的運算元必須是類型指標。 間接運算式的結果是類型，指標類型即衍生自此。 使用** \* **運算子，在此內容中的是不同運算子為二元運算子，後者是乘法。  
   
- 如果運算元指向某個函式，則結果為函式指示項。  如果運算元指向某個儲存位置，則結果為指定儲存位置的左值。  
+ 如果運算元指向某個函式，則結果為函式指示項。 如果運算元指向某個儲存位置，則結果為指定儲存位置的左值。  
   
- 間接運算子可以累計用於將指標取值成為指標。  例如：  
+ 間接運算子可以累計用於將指標取值成為指標。 例如：  
   
 ```  
 // expre_Indirection_Operator.cpp  
@@ -60,7 +76,7 @@ int main() {
 }  
 ```  
   
- 如果指標值無效，則結果會是未定義的。  下列清單包含最常見的一些使指標值無效的情況。  
+ 如果指標值無效，則結果會是未定義的。 下列清單包含最常見的一些使指標值無效的情況。  
   
 -   指標是一個 null 指標。  
   
@@ -70,9 +86,8 @@ int main() {
   
 -   指標指定了執行中程式未使用的位址。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
- [傳址運算子：&](../cpp/address-of-operator-amp.md)   
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [傳址運算子: （& s)](../cpp/address-of-operator-amp.md)   
  [間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)

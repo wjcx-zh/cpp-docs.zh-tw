@@ -1,52 +1,66 @@
 ---
-title: "auto 關鍵字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "auto"
-  - "auto_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto 關鍵字"
-  - "自動儲存類別, auto 關鍵字"
+title: "auto 關鍵字 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- auto
+- auto_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- automatic storage class, auto keyword
+- auto keyword
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# auto 關鍵字
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0413fd47b486cf1613b7c249b93e6a3507a5577c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-`auto` 關鍵字是一個宣告指定名稱。  不過，C\+\+ 標準為此關鍵字定義了原始和修訂的意義。  在 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 以前，`auto` 關鍵字會在「*自動*」\(Automatic\) 儲存類別中宣告變數，也就是具有區域存留期的變數。  從 [!INCLUDE[cpp_dev10_long](../build/includes/cpp_dev10_long_md.md)] 開始，`auto` 關鍵字則會宣告從其宣告的初始化運算式推算類型的變數。  [\/Zc:auto&#91;\-&#93;](../build/reference/zc-auto-deduce-variable-type.md) 編譯器選項可控制 `auto` 關鍵字的意義。  
+---
+# <a name="auto-keyword"></a>auto 關鍵字
+`auto` 關鍵字是一個宣告指定名稱。 不過，C++ 標準為此關鍵字定義了原始和修訂的意義。 Visual c + + 2010 之前,`auto`關鍵字會宣告中的變數*自動*儲存類別，也就是具有區域存留期的變數。 從 Visual c + + 2010，開始`auto`關鍵字宣告的型別推算其宣告中的初始化運算式的變數。 [/Zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md)編譯器選項可控制的意義`auto`關鍵字。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 auto declarator ;  
 auto declarator initializer;  
 ```  
   
-## 備註  
- `auto` 關鍵字的定義在 C\+\+ 程式語言中已經改變，但是，在 C 程式設計語言中則未改變。  
+## <a name="remarks"></a>備註  
+ `auto` 關鍵字的定義在 C++ 程式語言中已經改變，但是，在 C 程式設計語言中則未改變。  
   
  下列主題描述 `auto` 關鍵字和對應的編譯器選項：  
   
--   [auto](../cpp/auto-cpp.md) 描述 `auto` 關鍵字的新定義。  
+-   [自動](../cpp/auto-cpp.md)說明的新定義`auto`關鍵字。  
   
--   [\(NOTINBUILD\)auto Keyword \(Storage\-Class Specifier\)](http://msdn.microsoft.com/zh-tw/c7d0cecf-393d-4058-a6e6-b39e31d9edb0) 描述 `auto` 關鍵字的原始定義。  
   
--   [\/Zc:auto \(推算變數類型\)](../build/reference/zc-auto-deduce-variable-type.md) 描述告知編譯器要使用哪個 `auto` 關鍵字之定義的編譯器選項。  
+-   [/Zc: auto （推算變數類型）](../build/reference/zc-auto-deduce-variable-type.md)描述編譯器選項會告訴編譯器的定義`auto`来使用的關鍵字。  
   
-## 請參閱  
- [\(NOTINBUILD\)Storage\-Class Specifiers](http://msdn.microsoft.com/zh-tw/10b3d22d-cb40-450b-994b-08cf9a211b6c)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [關鍵字](../cpp/keywords-cpp.md)

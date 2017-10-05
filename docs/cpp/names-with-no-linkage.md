@@ -1,40 +1,57 @@
 ---
-title: "沒有連結的名稱 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "列舉程式 [C++], 連結"
-  - "函式參數 [C++]"
-  - "函式 [C++], 參數"
-  - "名稱 [C++], 沒有連結"
-  - "typedef 名稱, 連結"
+title: "沒有連結的名稱 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- functions [C++], parameters
+- typedef names, linkage
+- enumerators [C++], linkage
+- names [C++], with no linkage
+- function parameters [C++]
 ms.assetid: 7174c500-12d2-4572-8c16-63c27c758fb1
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 沒有連結的名稱
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 161698d01e9cc9aeaac8f2b9bdc491343555880d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="names-with-no-linkage"></a>沒有連結的名稱
 唯一沒有連結的名稱為：  
   
 -   函式參數。  
   
--   未宣告為 `extern` 或 **static** 的區塊範圍名稱。  
+-   區塊範圍名稱不可以宣告為`extern`或**靜態**。  
   
 -   列舉程式。  
   
--   在 `typedef` 陳述式中宣告的名稱。  當 `typedef` 陳述式是用來為未命名的類別類型提供名稱時例外。  如果類別具有外部連結，其名稱可能也會有外部連結。  下列範例顯示 `typedef` 名稱有外部連結的情況：  
+-   在 `typedef` 陳述式中宣告的名稱。 當 `typedef` 陳述式是用來為未命名的類別類型提供名稱時例外。 如果類別具有外部連結，其名稱可能也會有外部連結。 下列範例顯示 `typedef` 名稱有外部連結的情況：  
   
     ```  
     // names_with_no_linkage.cpp  
@@ -51,9 +68,9 @@ caps.handback.revision: 7
     }  
     ```  
   
-     `typedef` 名稱 `POINT` 會成為未命名結構的類別名稱。  接著會使用它來宣告具有外部連結的函式。  
+     `typedef` 名稱 `POINT` 會成為未命名結構的類別名稱。 接著會使用它來宣告具有外部連結的函式。  
   
- 由於 `typedef` 名稱沒有連結，其在轉譯單位之間可能會有不同的定義。  由於是分開進行編譯，所以編譯器無法偵測這些差異。  因此，這類錯誤直到連結時才會偵測到。  請考慮下列情況：  
+ 由於 `typedef` 名稱沒有連結，其在轉譯單位之間可能會有不同的定義。 由於是分開進行編譯，所以編譯器無法偵測這些差異。 因此，這類錯誤直到連結時才會偵測到。 請考慮下列情況：  
   
 ```  
 // Translation unit 1  
@@ -71,8 +88,8 @@ extern INT myInt;
   
  上述程式碼在連結時會產生「未解析的外部」錯誤。  
   
-## 範例  
- C\+\+ 函式只能在檔案或類別範圍內進行定義。  下列範例說明如何定義函式並顯示一個錯誤的函式定義：  
+## <a name="example"></a>範例  
+ C++ 函式只能在檔案或類別範圍內進行定義。 下列範例說明如何定義函式並顯示一個錯誤的函式定義：  
   
 ```  
 // function_definitions.cpp  
@@ -111,5 +128,5 @@ void GoodFuncDef( char ch )  // Define GoodFuncDef
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [程式和連結](../cpp/program-and-linkage-cpp.md)

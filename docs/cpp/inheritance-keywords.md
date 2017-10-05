@@ -1,74 +1,91 @@
 ---
-title: "繼承關鍵字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__multiple_inheritance"
-  - "__single_inheritance_cpp"
-  - "__virtual_inheritance_cpp"
-  - "__virtual_inheritance"
-  - "__multiple_inheritance_cpp"
-  - "__single_inheritance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__multiple_inheritance 關鍵字 [C++]"
-  - "__single_inheritance 關鍵字 [C++]"
-  - "__virtual_inheritance 關鍵字 [C++]"
-  - "宣告衍生類別"
-  - "衍生類別, 宣告"
-  - "繼承, 宣告衍生類別"
-  - "繼承, 關鍵字"
-  - "關鍵字 [C++], 繼承關鍵字"
+title: "繼承關鍵字 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __multiple_inheritance
+- __single_inheritance_cpp
+- __virtual_inheritance_cpp
+- __virtual_inheritance
+- __multiple_inheritance_cpp
+- __single_inheritance
+dev_langs:
+- C++
+helpviewer_keywords:
+- __single_inheritance keyword [C++]
+- declaring derived classes
+- keywords [C++], inheritance keywords
+- __multiple_inheritance keyword [C++]
+- __virtual_inheritance keyword [C++]
+- inheritance, declaring derived classes
+- derived classes, declaring
+- inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 繼承關鍵字
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6286d8e3082f0a4a3ce3e00fb3de1ad4ca41589a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="inheritance-keywords"></a>繼承關鍵字
 **Microsoft 特定的**  
   
 ```  
   
-class [__single_inheritance] class-name; class [__multiple_inheritance] class-name; class [__virtual_inheritance] class-name;  
+class [__single_inheritance] class-name;class [__multiple_inheritance] class-name;class [__virtual_inheritance] class-name;  
 ```  
   
  其中：  
   
- *class\-name*  
+ *類別名稱*  
  所要宣告類別的名稱。  
   
- C\+\+ 可讓您在定義類別之前宣告類別成員的指標。  例如：  
+ C++ 可讓您在定義類別之前宣告類別成員的指標。 例如:   
   
 ```  
 class S;  
 int S::*p;  
 ```  
   
- 在上述程式碼中，`p` 會宣告為類別 S 的整數成員指標。  不過，`class S` 尚未在這個程式碼中定義，僅宣告而已。  當編譯器遇到這類指標時，必須將指標的表示法一般化。  表示法的大小取決於指定的繼承模型。  有四種方式可將繼承模型指定至編譯器：  
+ 在上述程式碼中`p`宣告為類別 s 的整數成員指標。不過，`class S`具有尚未定義在此程式碼; 它僅宣告而已。 當編譯器遇到這類指標時，必須將指標的表示法一般化。 表示法的大小取決於指定的繼承模型。 有四種方式可將繼承模型指定至編譯器：  
   
--   在 IDE 中的 \[**成員指標表示法**\] 底下  
+-   在 IDE 中**成員指標表示法**  
   
--   在命令列中使用 [\/vmg](../build/reference/vmb-vmg-representation-method.md) 參數  
+-   在命令列使用[/vmg](../build/reference/vmb-vmg-representation-method.md)切換  
   
--   使用 [pointers\_to\_members](../preprocessor/pointers-to-members.md) pragma  
+-   使用[pointers_to_members](../preprocessor/pointers-to-members.md) pragma  
   
--   使用繼承關鍵字 `__single_inheritance`、`__multiple_inheritance` 和 `__virtual_inheritance`。  這項技術能夠以每個類別為基礎控制繼承模型。  
+-   使用繼承關鍵字 `__single_inheritance`、`__multiple_inheritance` 和 `__virtual_inheritance`。 這項技術能夠以每個類別為基礎控制繼承模型。  
   
     > [!NOTE]
     >  如果您總是在定義類別之後宣告類別成員的指標，就不需要使用上述任何選項。  
   
- 在類別定義之前宣告類別成員的指標，會影響所產生可執行檔的大小和速度。  類別使用的繼承越複雜，用來表示類別成員指標所需的位元組數目就越多，而且用來解譯指標的程式碼也會越大。  單一繼承最不複雜，而虛擬繼承最為複雜。  
+ 在類別定義之前宣告類別成員的指標，會影響所產生可執行檔的大小和速度。 類別使用的繼承越複雜，用來表示類別成員指標所需的位元組數目就越多，而且用來解譯指標的程式碼也會越大。 單一繼承最不複雜，而虛擬繼承最為複雜。  
   
  如果上述範例變更為：  
   
@@ -84,5 +101,5 @@ int S::*p;
   
  **END Microsoft 特定的**  
   
-## 請參閱  
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [關鍵字](../cpp/keywords-cpp.md)

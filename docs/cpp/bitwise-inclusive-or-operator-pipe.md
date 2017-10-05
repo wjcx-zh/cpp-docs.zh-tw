@@ -1,35 +1,51 @@
 ---
-title: "位元非互斥 OR 運算子：| | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bitor"
-  - "|"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "| 運算子"
-  - "位元運算子, OR 運算子"
-  - "非互斥 OR 運算子"
-  - "OR 運算子, 位元非互斥"
+title: "位元包含 OR 運算子: | |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bitor
+- '|'
+dev_langs:
+- C++
+helpviewer_keywords:
+- OR operator, bitwise inclusive
+- bitwise operators, OR operator
+- inclusive OR operator
+- '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 位元非互斥 OR 運算子：|
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bb2fcc7c85e112b80929b2a8392f0e6c19ab97f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="bitwise-inclusive-or-operator-"></a>位元非互斥 OR 運算子：|
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,15 +55,15 @@ expression
   
 ```  
   
-## 備註  
- 位元包含 OR 運算子 \(         **&#124;** \) 會比較其第一個運算元的每個位元，以及第二個運算元的對應位元。  如果任一位元為 1，則對應結果位元會設為 1。  否則，對應結果位元會設為 0。  
+## <a name="remarks"></a>備註  
+ 位元包含 OR 運算子 (**&#124;**) 會比較其第二個運算元的對應位元的第一個運算元的每個位元。 如果任一位元為 1，則對應結果位元會設為 1。 否則，對應結果位元會設為 0。  
   
- 位元包含 OR 運算子的兩個運算元都必須為整數類資料類型。  [算術轉換](../misc/arithmetic-conversions.md)中涵蓋的一般算術轉換適用於這些運算元。  
+ 位元包含 OR 運算子的兩個運算元都必須為整數類資料類型。 中涵蓋的一般算術轉換[標準轉換](standard-conversions.md)適用於這些運算元。  
   
-## &#124; 的運算子關鍵字  
- `bitor` 運算子是下列運算子的文字對等用法：             **&#124;** .  有兩種方式可存取您程式中的 `bitor` 運算子：包含標頭檔 `iso646.h`，或是使用 [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(停用語言擴充功能\) 編譯器選項進行編譯。  
+## <a name="operator-keyword-for-124"></a>運算子關鍵字 &#124;  
+ `bitor`運算子相當於文字的**&#124;**。 有兩種方式來存取`bitor`您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // expre_Bitwise_Inclusive_OR_Operator.cpp  
@@ -64,8 +80,8 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [C\+\+ 位元運算子](../misc/cpp-bitwise-operators.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>另請參閱  
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 位元運算子](../c-language/c-bitwise-operators.md)
+
+

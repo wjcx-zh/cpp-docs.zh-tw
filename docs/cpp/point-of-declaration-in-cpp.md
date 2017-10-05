@@ -1,29 +1,45 @@
 ---
-title: "C++ 中的宣告點 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宣告點"
+title: "C + + 中宣告點 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- point of declaration
 ms.assetid: 92ea8707-80cb-497c-b479-f907b8401859
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# C++ 中的宣告點
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 77f66182052cc2a031b7f1f8db8018f49b36801d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-名稱會視為在緊接著它的宣告子之後、但是在它的 \(選擇性\) 初始設定式之前宣告   \(如需宣告子的詳細資訊，請參閱[宣告子](http://msdn.microsoft.com/zh-tw/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)\)。  
+---
+# <a name="point-of-declaration-in-c"></a>C++ 中的宣告點
+名稱會視為在緊接著它的宣告子之後、但是在它的 (選擇性) 初始設定式之前宣告  (如需宣告子的詳細資訊，請參閱[宣告和定義](declarations-and-definitions-cpp.md)。)  
   
  請考量以下範例：  
   
@@ -37,7 +53,7 @@ int main()
 }  
 ```  
   
- 如果宣告的點是在初始化「之後」，則區域 `dVar` 會初始化為 7.0，也就是全域變數 `dVar` 的值。  不過，由於並不是這種情況，因此 `dVar` 會初始化為未定義的值。  
+ 如果宣告點*之後*初始化，則本機`dVar`會初始化為 7.0，全域變數的值`dVar`。 不過，由於並不是這種情況，因此 `dVar` 會初始化為未定義的值。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [範圍](../cpp/scope-visual-cpp.md)

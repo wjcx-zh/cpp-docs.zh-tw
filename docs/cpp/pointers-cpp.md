@@ -1,55 +1,71 @@
 ---
-title: "指標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宣告, 指標"
-  - "宣告子, 指標"
-  - "指標"
-  - "指標, 宣告"
+title: "指標 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 指標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>指標 （c + +）
 指標是使用下列序列宣告。  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
- 其中可能會使用 `declarator` 的任何有效的指標宣告子。簡單指標宣告子的語法如下：  
+ 其中可能會使用 `declarator` 的任何有效的指標宣告子。  簡單指標宣告子的語法如下：  
   
 ```  
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  宣告指定名稱：  
+ 1. 宣告指定名稱：  
   
--   選擇性的儲存類別規範。  如需詳細資訊，請參閱[指定名稱](../cpp/specifiers.md)。  
+-   選擇性的儲存類別規範。 如需詳細資訊，請參閱[規範](../cpp/specifiers.md)。  
   
 -   選擇性套用至將指向之物件類型的 `const` 或 `volatile` 關鍵字。  
   
 -   類型指定名稱：表示將指向之物件類型的類型名稱。  
   
- 2.  宣告子：  
+ 2. 宣告子：  
   
--   選擇性的 Microsoft 專有修飾詞。  如需詳細資訊，請參閱 [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
+-   選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱[Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。  
   
 -   `*` 運算子。  
   
@@ -72,8 +88,6 @@ manager: "ghogen"
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   不過，指標宣告子更為複雜。  如需詳細資訊，請參閱[宣告子](http://msdn.microsoft.com/zh-tw/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
-  
 -   多個宣告子及其初始設定式可以一起出現在逗號分隔清單的單一宣告中，其後為宣告指定名稱。  
   
  指標宣告的簡單範例如下：  
@@ -90,7 +104,7 @@ char *pch;
 static unsigned int * const ptr;  
 ```  
   
- 上述宣告將 `ptr` 指定為常數指標，以指向具有靜態儲存期的 `unsigned` `int` 類型物件。  
+ 上述宣告中指定`ptr`為常數指標類型的物件`unsigned``int`有靜態儲存期。  
   
  下列範例顯示如何宣告及初始化多個指標：  
   
@@ -98,9 +112,9 @@ static unsigned int * const ptr;
 static int *p = &i, *q = &j;  
 ```  
   
- 上述範例中，指標 p 和 q 皆指向類型為 `int` 的物件，並分別初始化為 i 和 j 的位址。兩個指標皆會套用儲存類別指定名稱 `static`。  
+ 上述範例中，指標 p 和 q 皆指向類型為 `int` 的物件，並分別初始化為 i 和 j 的位址。  兩個指標皆會套用儲存類別指定名稱 `static`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // pointer.cpp  
@@ -176,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j is 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## 範例  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>範例  
  另一個範例示範如何在資料結構中使用指標，此例中為連結清單。  
   
 ```  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**enter a number:**  
-**a \(add node\)  d \(display list\)  q \(quit\)**  
-**node 1 \= 45**  
-**node 2 \= 789**  
-**a \(add node\)  d \(display list\)  q \(quit\)**   
-## 請參閱  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/zh-tw/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [指標類型的加法運算](../misc/addition-of-pointer-types.md)   
- [間接取值運算子：\*](../cpp/indirection-operator-star.md)   
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [間接取值運算子：*](../cpp/indirection-operator-star.md)   
  [傳址運算子：&](../cpp/address-of-operator-amp.md)

@@ -1,30 +1,47 @@
 ---
-title: "tile_static 關鍵字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "tile_static_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tile_static 關鍵字"
+title: "tile_static 關鍵字 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- tile_static_CPP
+dev_langs:
+- C++
+helpviewer_keywords:
+- tile_static keyword
 ms.assetid: d78384d4-65d9-45cf-b3df-7e904f489d06
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# tile_static 關鍵字
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 499aa37bb082636dd2947fa6f64a5ecc3cdd5e10
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-`tile_static` 關鍵字用於宣告可供執行緒磚中所有執行緒存取的變數。  變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。  如需使用磚塊的詳細資訊，請參閱[使用磚](../parallel/amp/using-tiles.md)。  
+---
+# <a name="tilestatic-keyword"></a>tile_static 關鍵字
+`tile_static` 關鍵字用於宣告可供執行緒磚中所有執行緒存取的變數。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需有關如何使用圖格的詳細資訊，請參閱[使用磚](../parallel/amp/using-tiles.md)。  
   
  `tile_static` 關鍵字具有下列限制：  
   
@@ -32,17 +49,16 @@ caps.handback.revision: 12
   
 -   不可用於屬於指標或參考類型的變數。  
   
--   `tile_static` 變數不能有初始設定式。  不會自動叫用預設建構函式和解構函式。  
+-   `tile_static` 變數不能有初始設定式。 不會自動叫用預設建構函式和解構函式。  
   
 -   未初始化 `tile_static` 變數的值並未定義。  
   
 -   如果在呼叫圖形中宣告 `tile_static` 變數，且該呼叫圖形是以對 `parallel_for_each` 的非磚式呼叫為根本，則會產生警告，並且該變數的行為未定義。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例顯示如何使用 `tile_static` 變數跨磚狀顯示的數個執行緒累積資料。  
   
 ```cpp  
-  
 // Sample data:  
 int sampledata[] = {  
     2, 2, 9, 7, 1, 4,  
@@ -154,8 +170,8 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)   
- [C\+\+ AMP 概觀](../parallel/amp/cpp-amp-overview.md)   
- [parallel\_for\_each 函式 \(C\+\+ AMP\)](../Topic/parallel_for_each%20Function%20\(C++%20AMP\).md)   
+ [C + + AMP 概觀](../parallel/amp/cpp-amp-overview.md)   
+ [parallel_for_each 函式 (c + + AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   
  [逐步解說：矩陣乘法](../parallel/amp/walkthrough-matrix-multiplication.md)

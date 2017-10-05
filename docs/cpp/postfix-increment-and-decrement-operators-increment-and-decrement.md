@@ -1,65 +1,79 @@
 ---
-title: "後置遞增和遞減運算子：++ 和 -- | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "--"
-  - "++"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "-- 運算子, 後置遞減運算子"
-  - "++ 運算子, 後置遞增運算子"
-  - "遞減運算子"
-  - "遞減運算子, 語法"
-  - "遞增運算子, 語法"
-  - "成員選取運算子"
-  - "運算子 [C++], 後置"
-  - "後置運算子"
+title: "後置遞增和遞減運算子: + + 和-|Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- --
+- ++
+dev_langs:
+- C++
+helpviewer_keywords:
+- increment operators, syntax
+- member-selection operators
+- -- operator, postfix decrement operators
+- postfix operators
+- ++ operator, postfix increment operators
+- decrement operators, syntax
+- operators [C++], postfix
+- decrement operators
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 後置遞增和遞減運算子：++ 和 --
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
+## <a name="syntax"></a>語法  
   
 ```  
-  
-      postfix-expression   
-      ++  
-postfix-expression ––  
+postfix-expression ++  
+postfix-expression --  
 ```  
   
-## 備註  
- C\+\+ 提供前置和後置遞增及遞減運算子，本節只說明後置遞增和遞減運算子。\(如需詳細資訊，請參閱[前置遞增和遞減運算子](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)\)。兩者的不同之處是，在後置標記法中，運算子會出現在 *postfix\-expression* 之後，而在前置標記法中，運算子會出現在 *expression* 之前。下列範例顯示後置遞增運算子：  
+## <a name="remarks"></a>備註  
+ C++ 提供前置和後置遞增及遞減運算子，本節只說明後置遞增和遞減運算子。 (如需詳細資訊，請參閱[前置遞增和遞減運算子](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)。)兩者之間的差異是在後置標記法中，會出現在運算子*後置運算式*，而在前置標記法中，運算子會出現之前*運算式。* 下列範例顯示後置遞增運算子：  
   
 ```  
 i++;  
 ```  
   
- 套用後置遞增運算子 \(`++`\) 的作用是運算元的值會增加一個單位的適當類型。  同樣地，套用後置遞減運算子 \(**––**\) 的作用是運算元的值會減少一個單位的適當類型。  
+ 套用後置遞增運算子 (`++`) 的作用是運算元的值會增加一個單位的適當類型。 同樣地，套用後置遞減運算子的效果 (**--**) 是運算元的值會減少一個單位的適當類型。  
   
- 請務必注意，後置遞增或遞減運算式會在運用個別運算子**之前**，先求出運算式的值。  遞增或遞減運算會在求出運算元的值**之後**進行。  此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。  
+ 請務必注意後, 置遞增或遞減運算式會評估運算式的值為**之前**個別運算子的應用程式。 遞增或遞減作業，就會發生**之後**則會評估運算元。 此問題只有在較大運算式的內容中進行後置遞增或遞減運算時發生。  
   
- 使用後置運算子當做函式的引數時，引數的值在傳遞至函式之前不保證會遞增或遞減。如需詳細資訊，請參閱 C\+\+ 標準中的 1.9.17 一節。  
+ 使用後置運算子當做函式的引數時，引數的值在傳遞至函式之前不保證會遞增或遞減。  如需詳細資訊，請參閱 C++ 標準中的 1.9.17 一節。  
   
- 將後置遞增運算子套用至 **long** 類型的物件陣列指標時，其實是新增四個內部指標表示。  這個行為會導致指標 \(先前參考陣列的第 *n* 個項目\) 參考到第 *n\+1* 個項目。  
+ 將後置遞增運算子套用至類型的物件陣列的指標**長**實際上是新增四個指標的內部表示法。 這個行為會導致指標先前參考* n *th 項目來參考陣列的 (*n*+ 1) 個項目。  
   
- 後置遞增和後置遞減運算子的運算元必須是算術或指標類型的可修改 \(不是 **const**\) 左值。  這個結果的類型與 *postfix\-expression* 相同，不過它不再是左值。  
+ 後置遞增和後置遞減運算子的運算元必須是可修改 (不**const**) 是算術或指標類型的左值。 結果型別是屬於相同*後置運算式*，但已不再是左值。  
   
- 在求出運算元的值後並將其設定為 **true** 的情況下，後置遞增運算子的運算元也可能是 `bool` 類型。  後置遞減運算子的運算元不能為 `bool` 類型。  
+**Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 運算元的後置遞增或遞減運算子可能不是型別`bool`。
   
  下列程式碼示範後置遞增運算子：  
   
@@ -84,8 +98,7 @@ Compass myCompass;
 for( myCompass = North; myCompass != West; myCompass++ ) // Error  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [後置運算式](../cpp/postfix-expressions.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 後置遞增和遞減運算子](../c-language/c-postfix-increment-and-decrement-operators.md)

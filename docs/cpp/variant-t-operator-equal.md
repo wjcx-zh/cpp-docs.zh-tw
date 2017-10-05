@@ -1,36 +1,52 @@
 ---
-title: "_variant_t::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t.operator="
-  - "_variant_t::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= 運算子, 使用特定 Visual C++ 物件"
-  - "operator =, variant"
-  - "operator=, variant"
+title: "_variant_t::operator = |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t.operator=
+- _variant_t::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator=, variant
+- operator =, variant
+- = operator, with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _variant_t::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 850562235442ef8fed4f7b130948a5e92b15a1fb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="varianttoperator-"></a>_variant_t::operator =
 **Microsoft 特定的**  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -127,42 +143,42 @@ _variant_t& operator=(
 );  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  將新值指派給 `_variant_t` 物件的運算子：  
   
--   **operator\=\(**  *varSrc*  **\)**：將現有的 **VARIANT** 指派給 `_variant_t` 物件。  
+-   **運算子 = (***varSrc***)**指派現有**VARIANT**至`_variant_t`物件。      
   
--   **operator\=\(**  *pVarSrc*  **\)**：將現有的 **VARIANT** 指派給 `_variant_t` 物件。  
+-   **運算子 = (***pVarSrc***)**指派現有**VARIANT**至`_variant_t`物件。      
   
--   **operator\=\(**  *var\_t\_Src*  **\)**：將現有的 `_variant_t` 物件指派給 `_variant_t` 物件。  
+-   **運算子 = (***var_t_Src***)**指派現有`_variant_t`物件`_variant_t`物件。      
   
--   **operator\=\(**  *sSrc*  **\)**：將 **short** 整數值指派給 `_variant_t` 物件。  
+-   **運算子 = (***sSrc***)**指派**簡短**的整數值`_variant_t`物件。      
   
--   **operator\=\(**  `lSrc`  **\)**：將 **long** 整數值指派給 `_variant_t` 物件。  
+-   **運算子 = (**`lSrc`**)**指派**長**的整數值`_variant_t`物件。      
   
--   **operator\=\(**  *fltSrc*  **\)**：將 **float** 數值指派給 `_variant_t` 物件。  
+-   **運算子 = (***fltSrc***)**指派**float**數值`_variant_t`物件。      
   
--   **operator\=\(**  *dblSrc*  **\)**：將 **double** 數值指派給 `_variant_t` 物件。  
+-   **運算子 = (***dblSrc***)**指派**double**數值`_variant_t`物件。      
   
--   **operator\=\(**  *cySrc*  **\)**：將 **CY** 物件指派給 `_variant_t` 物件。  
+-   **運算子 = (***cySrc***)**指派**CY**物件`_variant_t`物件。      
   
--   **operator\=\(**  *bstrSrc*  **\)**：將 `BSTR` 物件指派給 `_variant_t` 物件。  
+-   **運算子 = (***bstrSrc***)**指派`BSTR`物件`_variant_t`物件。      
   
--   **operator\=\(**  *wstrSrc*  **\)**：將 Unicode 字串指派給 `_variant_t` 物件。  
+-   **運算子 = (***wstrSrc***)**會指派 Unicode 字串，將`_variant_t`物件。      
   
--   **operator\=\(**  `strSrc`  **\)**：將多位元組字串指派給 `_variant_t` 物件。  
+-   **運算子 = (**`strSrc`**)**指派的多位元組字串`_variant_t`物件。      
   
--   **operator\=\(**  `bSrc` **\)**：將 `bool` 值指派給 `_variant_t` 物件。  
+-   **運算子 = (** `bSrc` **)**指派`bool`值設定為`_variant_t`物件。    
   
--   **operator\=\(**  *pDispSrc*  **\)**：將 **VT\_DISPATCH** 物件指派給 `_variant_t` 物件。  
+-   **運算子 = (***pDispSrc***)**指派**VT_DISPATCH**物件`_variant_t`物件。      
   
--   **operator\=\(**  *pIUnknownSrc*  **\)** ：將 **VT\_UNKNOWN** 物件指派給 `_variant_t` 物件。  
+-   **運算子 = (***pIUnknownSrc***)**指派**VT_UNKNOWN**物件`_variant_t`物件。      
   
--   **operator\=\(**  *decSrc*  **\)**：將 **DECIMAL** 值指派給 `_variant_t` 物件。  
+-   **運算子 = (***decSrc***)**指派**十進位**值設定為`_variant_t`物件。      
   
--   **operator\=\(**  `bSrc` **\)**：將 **BYTE** 值指派給 `_variant_t` 物件。  
+-   **運算子 = (** `bSrc` **)**指派**位元組**值設定為`_variant_t`物件。    
   
  **END Microsoft 特定的**  
   
-## 請參閱  
- [\_variant\_t 類別](../cpp/variant-t-class.md)
+## <a name="see-also"></a>另請參閱  
+ [_variant_t 類別](../cpp/variant-t-class.md)

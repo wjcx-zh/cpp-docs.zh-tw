@@ -1,40 +1,57 @@
 ---
-title: "運算式中的陣列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 在運算式中"
-  - "運算式 [C++], 其中的陣列"
+title: "運算式中的陣列 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- expressions [C++], arrays in
+- arrays [C++], in expressions
 ms.assetid: 6e5a795b-d6bd-4e39-b313-6a20d47c4d4b
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 運算式中的陣列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: ec97fba837ffae0a03ff8d4fc3d85c4011aa59c6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-當陣列類型的識別項出現在 `sizeof`、傳址 \(**&**\)，或是參考的初始化中時，會將它轉換成第一個陣列元素的指標。  例如：  
+---
+# <a name="arrays-in-expressions"></a>運算式中的陣列
+當陣列型別的識別項會出現在運算式中以外`sizeof`，傳址 (**&**)，或初始化的參考，它會轉換成第一個陣列元素的指標。 例如:   
   
 ```  
 char szError1[] = "Error: Disk drive not ready.";  
 char *psz = szError1;  
 ```  
   
- 指標 `psz` 會指向陣列 `szError1` 的第一個元素。  請注意，陣列 \(和指標不同\) 不是可修改的左值。  因此，下列指派是不合法的：  
+ 指標 `psz` 會指向陣列 `szError1` 的第一個元素。 請注意，陣列 (和指標不同) 不是可修改的左值。 因此，下列指派是不合法的：  
   
 ```  
 szError1 = psz;  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [陣列](../cpp/arrays-cpp.md)

@@ -1,62 +1,78 @@
 ---
-title: "規範 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "宣告規範"
-  - "宣告, 規範"
-  - "規範, 宣告中的"
+title: "規範 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declaration specifiers
+- declarations, specifiers
+- specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 規範
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c67ae6ce353ee48635df1b3be6b124344cdd4e91
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-本主題將描述 [宣告](../misc/declarations.md)的 *decl\-specifiers* \(宣告規範\) 元件。  
+---
+# <a name="specifiers"></a>規範
+本主題描述*decl 規範*（宣告規範） 元件[宣告](declarations-and-definitions-cpp.md)。  
   
  下列預留位置和語言關鍵字為宣告指定名稱：  
   
- *storage\-class\-specifier*  
+ *儲存類別規範*  
   
- *type\-specifier*  
+ *類型規範*  
   
- *function\-specifier*  
+ *函式規範*  
   
  [friend](../cpp/friend-cpp.md)  
   
- [typedef](http://msdn.microsoft.com/zh-tw/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
+ [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1)  
   
- [\_\_declspec](../cpp/declspec.md) `(` *extended\-decl\-modifier\-seq* `)`  
+ [__declspec](../cpp/declspec.md) `(` *擴充-decl-修飾詞-seq*`)`  
   
-## 備註  
- 宣告的 *decl\-specifiers* 部分是用來表示類型名稱時可接受的最長 *decl\-specifiers* 序列，但不包括指標或參考修飾詞。  宣告的其餘部分為 *declarator*，包括引入的名稱。  
+## <a name="remarks"></a>備註  
+ *Decl 規範*宣告的一部分是最長串*decl 規範*，就可以採取來表示類型名稱，不包括指標或參考修飾詞。 宣告的其餘部分是*宣告子*，包括導入之名稱。  
   
- 下表列出四個宣告，然後分別列出每個宣告的 *decl\-specifers* 和 *declarator* 元件。  
+ 下表列出四個宣告，並列出每個宣告*decl 規範*和*宣告子*元件分開。  
   
-|宣告|*decl\-specifiers*|`declarator`|  
-|--------|------------------------|------------------|  
+|宣告|*decl 指定名稱*|`declarator`|  
+|-----------------|------------------------|------------------|  
 |`char *lpszAppName;`|`char`|`*lpszAppName`|  
 |`typedef char * LPSTR;`|`char`|`*LPSTR`|  
 |`const int func1();`|`const int`|`func1`|  
 |`volatile void *pvvObj;`|`volatile void`|`*pvvObj`|  
   
- 由於 `signed`、`unsigned`、`long` 和 `short` 全都表示 `int`，因此接在其中一個關鍵字後面的 `typedef` 名稱會視為 *declarator\-list* 的成員，而不是 *decl\-specifiers* 的成員。  
+ 因為`signed`， `unsigned`， `long`，和`short`全都表示`int`、`typedef`命名為下列其中一個這些關鍵字會被視為屬於*宣告子清單*不屬於*decl 規範*。  
   
 > [!NOTE]
->  由於名稱可以重新宣告，因此其解譯會受到目前範圍中最新的宣告所限制。  重新宣告可能會影響編譯器解譯名稱的方式，尤其是 `typedef` 名稱。  
+>  由於名稱可以重新宣告，因此其解譯會受到目前範圍中最新的宣告所限制。 重新宣告可能會影響編譯器解譯名稱的方式，尤其是 `typedef` 名稱。  
   
-## 請參閱  
- [宣告](../misc/declarations.md)
+## <a name="see-also"></a>另請參閱  
+ [宣告和定義](declarations-and-definitions-cpp.md)

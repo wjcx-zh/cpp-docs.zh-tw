@@ -1,58 +1,75 @@
 ---
-title: "const 和 volatile 指標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const 關鍵字 [C++], volatile 指標"
-  - "指標, 和 const"
-  - "指標, 和 volatile"
-  - "volatile 關鍵字 [C++], 和指標"
+title: "const 和 volatile 指標 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- volatile keyword [C++], and pointers
+- pointers, and const
+- pointers, and volatile
+- const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# const 和 volatile 指標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bebd757f304de2377ab2337e5b41a577a2b492b6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-[const](../cpp/const-cpp.md) 和 [volatile](../cpp/volatile-cpp.md) 關鍵字會改變指標的處理方式。  **const** 關鍵字會指定指標在初始化之後無法加以修改；因此指標此後可受到保護而不會遭到修改。  
+---
+# <a name="const-and-volatile-pointers"></a>const 和 volatile 指標
+[Const](../cpp/const-cpp.md)和[volatile](../cpp/volatile-cpp.md)關鍵字會改變指標的處理方式。 **Const**關鍵字會指定在初始化之後，無法修改指標; 指標受到保護以避免之後修改。  
   
- `volatile` 關鍵字指定與其後的名稱相關聯的值，可以透過使用者應用程式以外的動作進行修改。  因此，若是要在可由多個程序或全域資料區域存取的共用記憶體中宣告物件，以便與中斷服務常式進行通訊，`volatile` 關鍵字會非常有用。  
+ `volatile` 關鍵字指定與其後的名稱相關聯的值，可以透過使用者應用程式以外的動作進行修改。 因此，若是要在可由多個程序或全域資料區域存取的共用記憶體中宣告物件，以便與中斷服務常式進行通訊，`volatile` 關鍵字會非常有用。  
   
- 當名稱宣告為 `volatile` 時，編譯器會在程式每次存取時，從記憶體重新載入值。  這將可大幅減少進行最佳化的次數。  不過，當物件的狀態可能遭到意外變更時，它仍是確保可預測程式效能的唯一方式。  
+ 當名稱宣告為 `volatile` 時，編譯器會在程式每次存取時，從記憶體重新載入值。 這將可大幅減少進行最佳化的次數。 不過，當物件的狀態可能遭到意外變更時，它仍是確保可預測程式效能的唯一方式。  
   
- 若要將由指標所指的物件宣告為 **const** 或 `volatile`，請使用下列格式進行宣告：  
+ 若要宣告為指標所指向的物件**const**或`volatile`，使用表單的宣告：  
   
 ```  
 const char *cpch;  
 volatile char *vpch;  
 ```  
   
- 若要將指標的值 \(也就是指標中儲存的實際位址\) 宣告為**const** 或 `volatile`，請使用下列格式進行宣告：  
+ 若要宣告指標的值 — 也就是儲存在指標的實際位址，做為**const**或`volatile`，使用表單的宣告：  
   
 ```  
 char * const pchc;  
 char * volatile pchv;  
 ```  
   
- C\+\+ 語言會避免允許修改物件或宣告為 **const** 之指標的任何指派。  這類指派會移除用來宣告物件或指標的資訊，因此違反了原始宣告的用意。  請考慮下列宣告：  
+ C + + 語言會防止指派，允許修改物件或指標宣告為**const**。 這類指派會移除用來宣告物件或指標的資訊，因此違反了原始宣告的用意。 請考慮下列宣告：  
   
 ```  
 const char cch = 'A';  
 char ch = 'B';  
 ```  
   
- 對於上述宣告中的兩個物件 \(類型為 **const char** 的 `cch`，以及類型為 **char** 的 `ch`\)，下列宣告\/初始化是有效的：  
+ 以上述兩個物件的宣告 (`cch`，型別**const char**，和`ch`，型別**char)**，下列宣告/初始化是有效：  
   
 ```  
 const char *pch1 = &cch;  
@@ -63,16 +80,16 @@ char *const pch7 = &ch;
 const char *const pch8 = &ch;  
 ```  
   
- 下列宣告\/初始化是錯誤的。  
+ 下列宣告/初始化是錯誤的。  
   
 ```  
 char *pch2 = &cch;   // Error  
 char *const pch3 = &cch;   // Error  
 ```  
   
- `pch2` 的宣告會宣告一項指標，但是常數物件可能會透過該指標而遭到修改，因此不允許此宣告。  `pch3` 的宣告中將 `pointer` 指定為常數而非物件，因此基於相同原因，也不允許 `pch2` 宣告。  
+ `pch2` 的宣告會宣告一項指標，但是常數物件可能會透過該指標而遭到修改，因此不允許此宣告。 `pch3` 的宣告中將 `pointer` 指定為常數而非物件，因此基於相同原因，也不允許 `pch2` 宣告。  
   
- 下列八個指派顯示透過指標進行的指派，以及變更上述宣告的指標值；現在，我們可以假設透過 `pch8` 進行 `pch1` 的初始化是正確的。  
+ 下列八個指派顯示透過指標進行的指派，以及變更上述宣告的指標值；現在，我們可以假設透過 `pch1` 進行 `pch8` 的初始化是正確的。  
   
 ```  
 *pch1 = 'A';  // Error: object declared const  
@@ -85,20 +102,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const  
 ```  
   
- 宣告為 `volatile`，或者宣告為混合 **const** 和 `volatile` 的指標會遵守相同的規則。  
+ 指標宣告為`volatile`，或為混合**const**和`volatile`，遵守相同的規則。  
   
- **const** 物件的指標通常會在函式宣告中使用，如下所示：  
+ 指標**const**物件通常用在函式宣告，如下所示：  
   
 ```  
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );  
 ```  
   
- 上述陳述式宣告了一個函式 [strcpy\_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中三個引數中有兩個引數為 `char` 類型的指標。  由於引數是經由傳址方式而不是傳值方式傳遞，因此若 `strSource` 不是宣告為 **const**，則可允許函式修改 `strDestination` 和 `strSource`。  `strSource` 宣告為 **const**，確保呼叫端 `strSource` 無法藉由所呼叫的函式加以變更。  
+ 上述陳述式會宣告函式， [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中有兩的三個引數的類型指標`char`。 因為引數傳址方式傳遞而不依據值、 函式會是可用來修改這兩`strDestination`和`strSource`如果`strSource`未宣告為**const**。 宣告`strSource`為**const**確保呼叫端`strSource`式呼叫的函式不能變更。  
   
 > [!NOTE]
->  由於已進行從 *typename* **\*** 轉換為 **const** *typename* **\*** 的標準轉換，因此它可以將類型 **char \*** 的引數傳遞至 [strcpy\_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。  不過，反向操作則不可行，因為其中並不存在將 **const** 屬性從物件或指標移除的隱含轉換。  
+>  因為沒有標準轉換轉換*typename* ** \* **至**const** *typename* ** \***，它是合法的類型引數傳遞**char \* **至[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 不過，反向並不成立沒有隱含轉換存在移除**const**從物件或指標的屬性。  
   
- 已指定類型的 **const** 指標可以指派給相同類型的指標。  不過，不是 **const** 的指標不可以指派給 **const** 指標。  下列程式碼顯示正確和不正確的指派：  
+ A **const**給定類型的指標可以指派給相同類型的指標。 不過，指標的不是**const**無法指派給**const**指標。 下列程式碼顯示正確和不正確的指派：  
   
 ```  
 // const_pointer.cpp  
@@ -133,5 +150,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [指標](../cpp/pointers-cpp.md)

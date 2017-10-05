@@ -1,30 +1,47 @@
 ---
-title: "關係函式樣板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "關係函式樣板"
+title: "關係函式樣板 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- relational function templates
 ms.assetid: 57893a51-9adb-41fc-941d-2ca97687db2a
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 關係函式樣板
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a57668b849d5ec87c8c50ae2c8eac8cf4e4b0c47
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="relational-function-templates"></a>關係函式樣板
 **Microsoft 特定的**  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -84,17 +101,17 @@ template<typename _Interface,
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *i*  
  原始的介面指標。  
   
  `p`  
  智慧型指標。  
   
-## 備註  
- 這些函式樣板可以與比較運算子右側的智慧型指標進行比較。  這些都不是 `_com_ptr_t` 的成員函式。  
+## <a name="remarks"></a>備註  
+ 這些函式樣板可以與比較運算子右側的智慧型指標進行比較。 這些都不是 `_com_ptr_t` 的成員函式。  
   
  **END Microsoft 特定的**  
   
-## 請參閱  
- [\_com\_ptr\_t 類別](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>另請參閱  
+ [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

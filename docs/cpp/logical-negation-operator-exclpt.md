@@ -1,49 +1,65 @@
 ---
 title: "邏輯負運算子：! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "!"
-  - "Not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "! 運算子"
-  - "邏輯否定"
-  - "NOT 運算子"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '!'
+- Not
+dev_langs:
+- C++
+helpviewer_keywords:
+- '! operator'
+- NOT operator
+- logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# 邏輯負運算子：!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 42d6135ab442a6f158fddd4ebfec1ef669fdecfd
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## 語法  
+---
+# <a name="logical-negation-operator-"></a>邏輯負運算子：!
+## <a name="syntax"></a>語法  
   
 ```  
   
 ! cast-expression  
 ```  
   
-## 備註  
- 邏輯負運算子 \(**\!**\) 會反轉其運算元的意義。  運算元必須是算術或指標類型 \(或判斷值為算術或指標類型的運算式\)。  運算元會隱含轉換成 `bool` 類型。  如果轉換的運算元為 **false**，則結果是 **true**，如果轉換的運算元為 **true**，則結果會是 **false**。  其結果會是 `bool` 類型。  
+## <a name="remarks"></a>備註  
+ 邏輯負運算子 (**！**) 會反轉其運算元的意義。 運算元必須是算術或指標類型 (或判斷值為算術或指標類型的運算式)。 運算元會隱含轉換成 `bool` 類型。 結果是**true**如果轉換的運算元**false**; 結果是**false**如果轉換的運算元**true**。 其結果會是 `bool` 類型。  
   
- 對於運算式 *e*，一元運算式 **\!***e* 等同於運算式 **\(***e* `==` 0\)，不同的是其中會包含多載的運算子。  
+ 運算式*e*，一元運算式**！***e* 相當於運算式**(***e* `==` 0)，除了多載的運算子是與相關。  
   
-## \! 的運算子關鍵字  
- **not** 運算子是 **\!** 的文字對等用法。  有兩種方式可存取您程式中的 **not** 運算子：包含標頭檔 `iso646.h`，或是使用 [\/Za](../build/reference/za-ze-disable-language-extensions.md) \(停用語言擴充功能\) 編譯器選項進行編譯。  
+## <a name="operator-keyword-for-"></a>! 的運算子關鍵字  
+ **不**運算子相當於文字的**！**。 有兩種方式來存取**不**您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // expre_Logical_NOT_Operator.cpp  
@@ -58,8 +74,7 @@ int main() {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
- [C\+\+ 運算子](../misc/cpp-operators.md)   
- [C\+\+ 運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+ [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [一元算術運算子](../c-language/unary-arithmetic-operators.md)

@@ -1,50 +1,67 @@
 ---
-title: "__declspec | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__declspec_cpp"
-  - "__declspec"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec 關鍵字 [C++]"
+title: "__declspec |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __declspec_cpp
+- __declspec
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++]
 ms.assetid: 832db681-e8e1-41ca-b78c-cd9d265cdb87
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# __declspec
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: b29b6243611f1ca59a579869469c803d3735f9df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 09/25/2017
 
-## Microsoft 特定的  
- 用於指定儲存類別資訊的擴充屬性語法是使用 `__declspec` 關鍵字，這會指定特定類型的執行個體要與以下所列的 Microsoft 專有儲存類別屬性儲存在一起。  其他儲存類別修飾詞的範例包括 `static` 和 `extern` 關鍵字。  不過，這些關鍵字是 C 和 C\+\+ 語言的 ANSI 規格的一部分，因此擴充屬性語法未涵蓋它們。  擴充屬性語法可簡化並標準化 Microsoft 專有的 C 和 C\+\+ 語言擴充功能。  
+---
+# <a name="declspec"></a>__declspec
+## <a name="microsoft-specific"></a>Microsoft 特定的  
+ 用於指定儲存類別資訊的擴充屬性語法是使用 `__declspec` 關鍵字，這會指定特定類型的執行個體要與以下所列的 Microsoft 專有儲存類別屬性儲存在一起。 其他儲存類別修飾詞的範例包括 `static` 和 `extern` 關鍵字。 不過，這些關鍵字是 C 和 C++ 語言的 ANSI 規格的一部分，因此擴充屬性語法未涵蓋它們。 擴充屬性語法可簡化並標準化 Microsoft 專有的 C 和 C++ 語言擴充功能。  
   
-## 文法  
- *decl\-specifier*:  
- `__declspec (`  *extended\-decl\-modifier\-seq*  `)`  
+## <a name="grammar"></a>文法  
+ *宣告規範*:  
+ `__declspec (`  *擴充-decl-修飾詞-seq*  `)`  
   
- *extended\-decl\-modifier\-seq*:  
- *extended\-decl\-modifier* opt  
+ *extended-decl-modifier-seq*:  
+ *extended-decl-modifier*opt  
   
- *extended\-decl\-modifier extended\-decl\-modifier\-seq*  
+ *擴充 decl 修飾詞擴充-decl-修飾詞-seq*  
   
- *extended\-decl\-modifier*:  
- `align(` *\#* `)`  
+ *extended-decl-modifier*:  
+ `align(` *#* `)`  
   
- `allocate("` *segname* `")`  
+ `allocate("`*segname*`")`  
   
  `appdomain`  
   
- `code_seg("` *segname* `")`  
+ `code_seg("`*segname*`")`  
   
  `deprecated`  
   
@@ -68,7 +85,7 @@ caps.handback.revision: 12
   
  `process`  
   
- `property(`{`get=`*get\_func\_name*&#124;`,put=`*put\_func\_name*}`)`  
+ `property(`{`get=`*get_func_name*&#124;`,put=`*put_func_name*}`)`  
   
  `restrict`  
   
@@ -78,23 +95,23 @@ caps.handback.revision: 12
   
  `thread`  
   
- `uuid("` *ComObjectGUID* `")`  
+ `uuid("`*ComObjectGUID*`")`  
   
- 空白字元會分隔宣告修飾詞序列。  範例會在後面的章節中顯示。  
+ 空白字元會分隔宣告修飾詞序列。 範例會在後面的章節中顯示。  
   
- 擴充屬性文法支援下列 Microsoft 特定的儲存類別屬性：[align](../cpp/align-cpp.md)、[allocate](../cpp/allocate.md)、[appdomain](../cpp/appdomain.md)、[code\_seg](../cpp/code-seg-declspec.md)、[deprecated](../cpp/deprecated-cpp.md)、[dllexport](../cpp/dllexport-dllimport.md)、[dllimport](../cpp/dllexport-dllimport.md)、[jitintrinsic](../cpp/jitintrinsic.md)、[naked](../cpp/naked-cpp.md)、[noalias](../cpp/noalias.md)、[noinline](../cpp/noinline.md)、[noreturn](../cpp/noreturn.md)、[nothrow](../cpp/nothrow-cpp.md)、[novtable](../cpp/novtable.md)、[process](../cpp/process.md)、[restrict](../cpp/restrict.md)、[safebuffers](../cpp/safebuffers.md)、[selectany](../cpp/selectany.md) 和 [thread](../cpp/thread.md)。  它也支援這些 COM 物件屬性：[property](../cpp/property-cpp.md) 和 [uuid](../cpp/uuid-cpp.md)。  
+ 擴充的屬性文法支援這些 Microsoft 專有儲存類別屬性：[對齊](../cpp/align-cpp.md)，[配置](../cpp/allocate.md)， [appdomain](../cpp/appdomain.md)， [code_seg](../cpp/code-seg-declspec.md)，[取代](../cpp/deprecated-cpp.md)， [dllexport](../cpp/dllexport-dllimport.md)， [dllimport](../cpp/dllexport-dllimport.md)， [jitintrinsic](../cpp/jitintrinsic.md)， [naked](../cpp/naked-cpp.md)， [noalias](../cpp/noalias.md)， [noinline](../cpp/noinline.md)， [noreturn](../cpp/noreturn.md)， [nothrow](../cpp/nothrow-cpp.md)， [novtable](../cpp/novtable.md)[程序](../cpp/process.md)，[限制](../cpp/restrict.md)， [safebuffers](../cpp/safebuffers.md)， [selectany](../cpp/selectany.md)，和[執行緒](../cpp/thread.md)。 它也支援這些 COM 物件屬性：[屬性](../cpp/property-cpp.md)和[uuid](../cpp/uuid-cpp.md)。  
   
- `code_seg`、`dllexport`、`dllimport`、`naked`、`noalias`、`nothrow`、`property`、`restrict`、`selectany`、`thread` 和 `uuid` 儲存類別屬性 \(屬性\) 只是物件宣告或套用這些屬性 \(attribute\) 之函式宣告的屬性 \(property\)。  `thread` 屬性只會影響資料和物件。  `naked` 屬性只會影響函式。  `dllimport` 和 `dllexport` 屬性會影響函式、資料和物件。  `property`、`selectany` 和 `uuid` 屬性會影響 COM 物件。  
+ `code_seg`、`dllexport`、`dllimport`、`naked`、`noalias`、`nothrow`、`property`、`restrict`、`selectany`、`thread` 和 `uuid` 儲存類別屬性 (屬性) 只是物件宣告或套用這些屬性 (attribute) 之函式宣告的屬性 (property)。 `thread` 屬性只會影響資料和物件。 `naked` 屬性只會影響函式。 `dllimport` 和 `dllexport` 屬性會影響函式、資料和物件。 `property`、`selectany` 和 `uuid` 屬性會影響 COM 物件。  
   
- `__declspec` 關鍵字應該放置在簡單宣告的開頭。  編譯器會忽略位在宣告中 \* 或 & 後面的任何 `__declspec` 關鍵字，以及位在宣告中變數識別項前面的這類關鍵字，不顯示警告。  
+ `__declspec` 關鍵字應該放置在簡單宣告的開頭。 編譯器會忽略位在宣告中 * 或 & 後面的任何 `__declspec` 關鍵字，以及位在宣告中變數識別項前面的這類關鍵字，不顯示警告。  
   
- 使用者定義類型宣告開頭所指定的 `__declspec` 屬性會套用至該類型的變數。  例如：  
+ 使用者定義類型宣告開頭所指定的 `__declspec` 屬性會套用至該類型的變數。 例如：  
   
 ```  
 __declspec(dllimport) class X {} varX;  
 ```  
   
- 在本案例中，屬性會套用至 `varX`。  `__declspec` 屬性會放在 `class` 或 `struct` 關鍵字後面，適用於使用者定義類型。  例如：  
+ 在本案例中，屬性會套用至 `varX`。 `__declspec` 屬性會放在 `class` 或 `struct` 關鍵字後面，適用於使用者定義類型。 例如：  
   
 ```  
 class __declspec(dllimport) X {};  
@@ -106,10 +123,11 @@ class __declspec(dllimport) X {};
   
 ```  
   
-decl-specifier-seq declarator-list;  
+decl-specifier-seq  
+declarator-list;  
 ```  
   
- 此外，*decl\-specifier\-seq* 必須包含基底類型 \(例如，  `int`、`float`、`typedef` 或類別名稱\)、儲存類別 \(例如，  `static`、`extern`\) 或 `__declspec` 擴充功能。  此外，*init\-declarator\-list* 必須包含宣告的指標部分。  例如：  
+ *Decl-規範 seq*應該包含在其他方面，基底類型 (例如`int`， `float`、 `typedef`，或類別名稱)，儲存類別 (例如`static`， `extern`)，或`__declspec`延伸模組。 *Init 宣告子清單*應該包含在其他方面，宣告的指標部分。 例如:   
   
 ```  
 __declspec(selectany) int * pi1 = 0;   //OK, selectany & int both part of decl-specifier  
@@ -124,8 +142,8 @@ int * __declspec(selectany) pi3 = 0;   //ERROR, selectany is not part of a decla
 __declspec( thread ) int tls_i = 1;  
 ```  
   
-## END Microsoft 特定的  
+**END Microsoft 特定的**  
   
-## 請參閱  
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
+## <a name="see-also"></a>另請參閱  
+ [關鍵字](../cpp/keywords-cpp.md)   
  [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

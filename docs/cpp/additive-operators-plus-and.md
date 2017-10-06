@@ -10,6 +10,7 @@ ms.tgt_pltfrm:
 ms.topic: language-reference
 f1_keywords:
 - '-'
+- +
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -139,3 +140,4 @@ for( int i = 0; i < 10; ++i )
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 加法類運算子](../c-language/c-additive-operators.md)
+

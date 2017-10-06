@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
-- do-while_cpp
-- do-while
-- do
-- while_cpp
 - do_cpp
-- while
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -54,10 +49,9 @@ ms.lasthandoff: 09/25/2017
 ## <a name="syntax"></a>語法  
   
 ```  
-  
-      do  
+do  
    statement  
-   while ( expression ) ;  
+while ( expression ) ;  
 ```  
   
 ## <a name="remarks"></a>備註  

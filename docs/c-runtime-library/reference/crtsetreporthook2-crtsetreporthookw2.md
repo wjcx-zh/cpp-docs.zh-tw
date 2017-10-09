@@ -1,53 +1,56 @@
 ---
 title: "_CrtSetReportHook2、_CrtSetReportHookW2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_CrtSetReportHook2"
-  - "_CrtSetReportHookW2"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "CrtSetReportHookW2"
-  - "CrtSetReportHook2"
-  - "_CrtSetReportHookW2"
-  - "_CrtSetReportHook2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CrtSetReportHook2 函式"
-  - "_CrtSetReportHook2 函式"
-  - "_CrtSetReportHookW2 函式"
-  - "CrtSetReportHookW2 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _CrtSetReportHook2
+- _CrtSetReportHookW2
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- CrtSetReportHookW2
+- CrtSetReportHook2
+- _CrtSetReportHookW2
+- _CrtSetReportHook2
+dev_langs:
+- C++
+helpviewer_keywords:
+- CrtSetReportHook2 function
+- _CrtSetReportHook2 function
+- _CrtSetReportHookW2 function
+- CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _CrtSetReportHook2、_CrtSetReportHookW2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f449a335eebc54fbfaf18ab94c853bb93a87cea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-您可以安裝或移除一個客戶定義報告函示，藉由將它安裝在 C 執行時間偵錯報告階段 \(僅偵錯版本\) 上。  
+---
+# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
+將用戶端定義的報告函式連結到 C 執行階段偵錯報告處理序，以進行安裝或解除安裝 (僅限偵錯版本)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -61,56 +64,56 @@ int _CrtSetReportHookW2(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `mode`  
  要採取的動作：`_CRT_RPTHOOK_INSTALL` 或 `_CRT_RPTHOOK_REMOVE`。  
   
  `pfnNewHook`  
- 報告攔截安裝或移除此函式窄字元版本。  
+ 要在此函式的窄字元版本中安裝或移除的報表攔截程序。  
   
  `pfnNewHook`  
- 報告攔截安裝或移除此函式寬字元版本。  
+ 要在此函式的寬字元版本中安裝或移除的報表攔截程序。  
   
-## 傳回值  
- 如果發生錯誤為 \-1，與 `EINVAL` 或 `ENOMEM` 設定；否則在呼叫之後傳回參考 `pfnNewHook` 的計數。  
+## <a name="return-value"></a>傳回值  
+ 如果發現錯誤，則為 -1，並會設定 `EINVAL` 或 `ENOMEM`；否則會在呼叫後傳回 `pfnNewHook` 的參考計數。  
   
-## 備註  
- `_CrtSetReportHook2` 和 `_CrtSetReportHookW2`  可讓您安裝或解除包裝函式，而 [\_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md) 只讓您攔截函式。  
+## <a name="remarks"></a>備註  
+ `_CrtSetReportHook2` 和 `_CrtSetReportHookW2` 可讓您連結或解除連結函式，而 [_CrtSetReportHook](../../c-runtime-library/reference/crtsetreporthook.md) 只能讓您連結函式。  
   
- 應該使用`_CrtSetReportHook2` 或 `_CrtSetReportHookW2` 而非 `_CrtSetReportHook` ，當攔截呼叫在 DLL 時呼叫，而且當多個 DLL 可能是載入和設定自己的攔截函式。  在這種情況下，DLL 可以按照不同的順序進行解除安裝比它們載入並攔截函式，可以卸載 DLL。  如果攔截函式加入與 `_CrtSetReportHook` 一起，任何偵錯輸出損毀處理序。  
+ 在 DLL 中進行攔截呼叫，且可能會有多個 DLL 載入並設定自己的攔截函式時，應使用 `_CrtSetReportHook2` 或 `_CrtSetReportHookW2`，而不是 `_CrtSetReportHook`。 在此情況下，可依載入 DLL 時的不同順序來卸載 DLL，並可保留攔截函式以指向未卸載的 DLL。 如果使用 `_CrtSetReportHook` 新增攔截函式，任何偵錯輸出都會損毀處理序。  
   
- 如果沒有攔截函式具有 `_CrtSetReportHook2` 或 `_CrtSetReportHookW2` ，所有攔截函式會呼叫 `_CrtSetReportHook` ，或者如果所有攔截函式具有 `_CrtSetReportHook2` 和 `_CrtSetReportHookW2` 會傳回 `FALSE`。  
+ 如果沒有使用 `_CrtSetReportHook2` 或 `_CrtSetReportHookW2` 新增的攔截函式，或如果使用 `_CrtSetReportHook2` 和 `_CrtSetReportHookW2` 新增的所有攔截函式都傳回 `FALSE`，則會呼叫使用 `_CrtSetReportHook` 新增的任何攔截函式。  
   
- 這個函式的寬字元版本可用。  報告攔截函式採用型別的字串 \(寬度或窄字元\) 必須符合所使用之函式的版本。  為報告攔截使用下列函式原型搭配此函式寬字元版本：  
+ 此函式有寬字元版本可用。 報表攔截函式採用的字串類型 (寬或窄字元) 必須符合此函式所使用的版本。 針對此函式的寬字元版本搭配使用的報表攔截程序，使用下列函式原型：  
   
 ```  
 int YourReportHook( int reportType, wchar_t *message, int *returnValue );  
 ```  
   
- 為窄字元報告攔截使用下列原型：  
+ 針對窄字元報表攔截程序，使用下列原型：  
   
 ```  
 int YourReportHook( int reportType, char *message, int *returnValue );  
 ```  
   
- 這些函式會驗證它們的參數。  如果 `mode` 或 `pfnNewNook` 是無效的，則這些函示叫用無效參數處理常式，如 [參數驗證](../../c-runtime-library/parameter-validation.md) 中所述。  如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 \-1。  
+ 這些函式會驗證它們的參數。 如果 `mode` 或 `pfnNewNook` 無效，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設定為 `EINVAL` ，並傳回 -1。  
   
 > [!NOTE]
->  如果您的應用程式是 `/clr` 編譯的，並在應用程式結束主要函式之後回報函式呼叫， CLR 將會擲回例外狀況，如果報告函式呼叫任何 CRT 函式。  
+>  如果您的應用程式是以 `/clr` 編譯，而且在應用程式結束 main 之後呼叫報告函式，CLR 將會在報告函式呼叫任何 CRT 函式時擲回例外狀況。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|選擇性標頭|  
-|--------|-----------|-----------|  
-|`_CrtSetReportHook2`|\<crtdbg.h\>|\<errno.h\>|  
-|`_CrtSetReportHookW2`|\<crtdbg.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_CrtSetReportHook2`|\<crtdbg.h>|\<errno.h>|  
+|`_CrtSetReportHookW2`|\<crtdbg.h>|\<errno.h>|  
   
- 如需更多關於相容性的資訊，請參閱入門介紹中的 [相容性 \(Compatibility\)](../../c-runtime-library/compatibility.md) 。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C run\-time libraries](../../c-runtime-library/crt-library-features.md) 版本的偵錯  
+## <a name="libraries"></a>程式庫  
+ 僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_setreporthook2.c  
@@ -244,7 +247,7 @@ int   main(int argc, char* argv[])
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 _CrtSetReportHook2(_CRT_RPTHOOK_INSTALL, TestHook1) returned 0  
@@ -258,5 +261,5 @@ _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook2) returned 0
 _CrtSetReportHook2(_CRT_RPTHOOK_REMOVE, TestHook1) returned 0  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

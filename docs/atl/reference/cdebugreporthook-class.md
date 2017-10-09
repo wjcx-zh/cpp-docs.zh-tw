@@ -26,25 +26,11 @@ caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1de883341e0a53a1520fa44d99e7907ee1fe10b6
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 72790fca5fbfb2856d4da780f276b9cfdc53a26a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook 類別
@@ -60,14 +46,14 @@ class CDebugReportHook
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|呼叫[SetPipeName](#setpipename)， [SetTimeout](#settimeout)，和[SetHook](#sethook)。|  
 |[CDebugReportHook:: ~ CDebugReportHook](#dtor)|呼叫[CDebugReportHook::RemoveHook](#removehook)。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|（靜態）連接到 C 執行階段的自訂報告函式偵錯報表的處理序。|  
 |[CDebugReportHook::RemoveHook](#removehook)|呼叫這個方法，以停止偵錯報表傳送到的具名管道，並還原先前的報告攔截。|  
@@ -83,7 +69,7 @@ class CDebugReportHook
  請注意，偵錯報表傳送使用基礎的安全性內容的執行緒。 暫時停用模擬，以便在其中的低權限的使用者進行模擬，例如在 web 應用程式的情況下，可以檢視偵錯報告。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlutil.h  
+ **標頭：** atlutil.h  
   
 ##  <a name="cdebugreporthook"></a>CDebugReportHook::CDebugReportHook  
  呼叫[SetPipeName](#setpipename)， [SetTimeout](#settimeout)，和[SetHook](#sethook)。  

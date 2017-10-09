@@ -1,46 +1,51 @@
 ---
-title: "介面, ATL 控制項精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.codewiz.class.atl.control.interfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 控制項精靈, 介面"
+title: "介面，ATL 控制項精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- vc.codewiz.class.atl.control.interfaces
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 介面, ATL 控制項精靈
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: d3d93dc4e80178b1bdd90a6fe86e4a6f051f77f4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-此精靈頁面可識別控制項支援的介面。  根據預設，支援的介面通常是多數容器使用的介面。  
+---
+# <a name="interfaces-atl-control-wizard"></a>介面, ATL 控制項精靈
+在精靈的此頁面會識別此控制項支援的介面。 根據預設，支援的介面是通常使用的大部分的容器。  
   
 > [!NOTE]
->  如果您在[選項](../../atl/reference/options-atl-control-wizard.md)索引標籤選取 \[最小控制項\]，則根據預設 \[支援\] 清單方塊中不會出現任何介面。  
+>  如果您選取**最小控制項**上[選項](../../atl/reference/options-atl-control-wizard.md)索引標籤上，依預設會出現任何介面**支援**清單方塊。  
   
  **不支援**  
- 表示目前控制項不支援的可用介面。  
+ 表示可用目前不支援控制項的介面。  
   
- **支援項目**  
- 表示目前控制項支援的介面。  
+ **支援**  
+ 表示控制項目前支援的介面。  
   
-|傳送按鈕|描述|  
-|----------|--------|  
-|**\>**|將目前在 \[未支援\] 清單中選取的介面名稱加入至 \[已支援\] 清單。|  
-|**\>\>**|將 \[未支援\] 清單中所有介面名稱加入至 \[已支援\] 清單。|  
-|**\<**|移除目前在 \[已支援\] 清單中選取的介面名稱。|  
-|**\<\<**|移除列在 \[已支援\] 清單中的所有介面名稱。|  
+|傳送按鈕|說明|  
+|---------------------|-----------------|  
+|**>**|將加入至**支援**中目前選取的介面名稱**不支援**清單。|  
+|**>>**|將加入至**支援**清單中可用的所有介面名稱**不支援**都清單。|  
+|**<**|移除在目前選取的介面名稱**支援**清單。|  
+|**<<**|移除所有介面目前所列的名稱**支援**清單。|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)
+
+

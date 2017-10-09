@@ -35,25 +35,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3522cd33098484194fec8158b26577b9e01dfe62
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 724acaed1c99aa2507c33010e97f3f993e1b6de6
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
@@ -72,7 +58,7 @@ void _aligned_free_dbg(
  傳回 `_aligned_malloc` 或 `_aligned_offset_malloc` 函式之記憶體區塊的指標。  
   
 ## <a name="remarks"></a>備註  
- `_aligned_free_dbg` 函式是 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 函式的偵錯版本。 當 [_DEBUG](../../c-runtime-library/debug.md) 未定義時，每個 `_aligned_free_dbg` 的呼叫會降至 `_aligned_free` 的呼叫。 同時`_aligned_free`和`_aligned_free_dbg`釋放記憶體區塊，在基底堆積中，但`_aligned_free_dbg`還容納偵錯功能︰ 釋放區塊保留在堆積的連結清單中，以模擬低記憶體狀況。  
+ `_aligned_free_dbg` 函式是 [_aligned_free](../../c-runtime-library/reference/aligned-free.md) 函式的偵錯版本。 當 [_DEBUG](../../c-runtime-library/debug.md) 未定義時，每個 `_aligned_free_dbg` 的呼叫會降至 `_aligned_free` 的呼叫。 同時`_aligned_free`和`_aligned_free_dbg`釋放記憶體區塊，在基底堆積中，但`_aligned_free_dbg`還容納偵錯功能： 釋放區塊保留在堆積的連結清單中，以模擬低記憶體狀況。  
   
  `_aligned_free_dbg` 會先對所有指定檔案和區塊位置執行有效性檢查，再執行釋放作業。 應用程式不需要提供此資訊。 釋放記憶體區塊時，偵錯堆積管理員會自動檢查使用者部分每一端的緩衝區完整性，並在發生覆寫時發出錯誤報表。 如果設定 [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md) 旗標的 `_CRTDBG_DELAY_FREE_MEM_DF` 位元欄位，會以值 0xDD 填入釋放的區塊，並獲指派 `_FREE_BLOCK` 區塊類型，而且會保留在堆積的已連結記憶體區塊清單中。  
   
@@ -86,7 +72,7 @@ void _aligned_free_dbg(
 |-------------|---------------------|  
 |`_aligned_free_dbg`|\<crtdbg.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

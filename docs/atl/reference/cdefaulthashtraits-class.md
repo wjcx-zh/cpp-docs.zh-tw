@@ -21,25 +21,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits 類別
@@ -65,12 +51,12 @@ class CDefaultHashTraits
 |[CDefaultHashTraits::Hash](#hash)|（靜態）呼叫此函式來計算雜湊值的指定項目。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別包含單一靜態函式會傳回指定項目的雜湊值。 這個類別利用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。  
+ 這個類別包含單一的靜態函式，傳回指定之項目的雜湊值。 這個類別使用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。  
   
  如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcoll.h  
+ **標頭：** atlcoll.h  
   
 ##  <a name="hash"></a>CDefaultHashTraits::Hash  
  呼叫此函式來計算雜湊值的指定項目。  
@@ -87,7 +73,7 @@ static ULONG Hash(const T& element) throw();
  傳回雜湊值。  
   
 ### <a name="remarks"></a>備註  
- 雜湊演算法的預設值是非常簡單︰ 傳回的值是項目數目。 如果需要更複雜的演算法，則會覆寫這個函式。  
+ 預設雜湊演算法是非常簡單： 傳回的值是項目數目。 如果需要更複雜的演算法，則會覆寫這個函式。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

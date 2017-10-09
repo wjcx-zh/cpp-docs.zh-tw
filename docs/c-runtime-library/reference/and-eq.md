@@ -1,46 +1,49 @@
 ---
-title: "and_eq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "and_eq"
-  - "std.and_eq"
-  - "std::and_eq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "and_eq 巨集"
+title: and_eq | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- and_eq
+- std.and_eq
+- std::and_eq
+dev_langs:
+- C++
+helpviewer_keywords:
+- and_eq macro
 ms.assetid: 11091772-e359-4c2b-95c6-00841ac04354
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# and_eq
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 9314242e8251c1cecb246fa7ee9f47e270b7a97c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-&\= 運算子的替代項目。  
+---
+# <a name="andeq"></a>and_eq
+&= 運算子的替代項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -48,10 +51,10 @@ caps.handback.revision: 12
   
 ```  
   
-## 備註  
- 巨集會產生 &\= 運算子。  
+## <a name="remarks"></a>備註  
+ 巨集會產生 &= 運算子。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // iso646_and_eq.cpp  
@@ -72,7 +75,10 @@ int main( )
 }  
 ```  
   
-  **2**  
-**2**   
-## 需求  
- **標頭：** \<iso646.h\>
+```Output  
+2  
+2  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：**\<iso646.h>

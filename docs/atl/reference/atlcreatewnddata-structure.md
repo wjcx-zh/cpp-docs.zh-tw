@@ -1,57 +1,65 @@
 ---
-title: "_AtlCreateWndData Structure | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::_AtlCreateWndData"
-  - "ATL._AtlCreateWndData"
-  - "_AtlCreateWndData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AtlCreateWndData structure"
-  - "AtlCreateWndData structure"
+title: "_AtlCreateWndData 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::_AtlCreateWndData
+- ATL._AtlCreateWndData
+- _AtlCreateWndData
+dev_langs:
+- C++
+helpviewer_keywords:
+- _AtlCreateWndData structure
+- AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
 caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# _AtlCreateWndData Structure
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: a5b0811e88188bb29ef3153f739804cbdac66083
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-這個結構包含類別執行個體資料是在 ATL 的 Windowing 程式碼。  
+---
+# <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 結構
+此結構包含在 ATL 中的視窗化程式碼中的類別執行個體資料  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
+```
+    struct _AtlCreateWndData{
+    void* m_pThis;
+    DWORD m_dwThreadID;
+    _AtlCreateWndData* m_pNext;
+};
 ```  
   
-      struct _AtlCreateWndData{  
-   void* m_pThis;  
-   DWORD m_dwThreadID;  
-   _AtlCreateWndData* m_pNext;  
-};  
-```  
-  
-## Members  
- **m\_pThis**  
- 用來 **this** 指標取得對類別執行個體上的視窗程序。  
+## <a name="members"></a>成員  
+ **m_pThis**  
+ **這**用來取得存取權的類別執行個體視窗程序中的指標。  
   
  `m_dwThreadID`  
- 目前類別執行個體的執行緒 ID。  
+ 目前的類別執行個體的執行緒 ID。  
   
- **m\_pNext**  
- 會將設定為下一 `_AtlCreateWndData` 物件的指標。  
+ **m_pNext**  
+ 下一個指標`_AtlCreateWndData`物件。  
   
-## 需求  
- **Header:** atlbase.h  
+## <a name="requirements"></a>需求  
+ **標頭：** atlbase.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [結構](../../atl/reference/atl-structures.md)
+
+
+
+
+
+

@@ -22,25 +22,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1d1253b7a7d69024465627cc9fb37fcd2afba693
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 410d34d59da33b6d929abbe2af0798a6cf46238b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 類別
@@ -63,19 +49,19 @@ class CDefaultCompareTraits
   
 |名稱|說明|  
 |----------|-----------------|  
-|[CDefaultCompareTraits::CompareElements](#compareelements)|（靜態）呼叫此函式來比較兩個項目相等。|  
-|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式可判斷更高和較少的項目。|  
+|[CDefaultCompareTraits::CompareElements](#compareelements)|（靜態）呼叫此函式可比較兩個項目相等。|  
+|[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式可判斷大於且較少的項目。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別包含兩個靜態函式來比較項目儲存在集合類別物件。 這個類別利用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。  
+ 這個類別包含兩個靜態函式來比較項目儲存在集合類別物件。 這個類別使用[CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)。  
   
  如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcoll.h  
+ **標頭：** atlcoll.h  
   
 ##  <a name="compareelements"></a>CDefaultCompareTraits::CompareElements  
- 呼叫此函式來比較兩個項目相等。  
+ 呼叫此函式可比較兩個項目相等。  
   
 ```
 static bool CompareElements(const T& element1, const T& element2);
@@ -92,10 +78,10 @@ static bool CompareElements(const T& element1, const T& element2);
  如果項目相等，false 否則，就會傳回 true。  
   
 ### <a name="remarks"></a>備註  
- 此函式的預設實作是等號 ( `==`) 運算子。 物件的簡單資料型別以外，此函式可能需要覆寫。  
+ 此函式的預設實作是等號比較 ( `==`) 運算子。 物件的簡單資料類型以外，此函式可能需要覆寫。  
   
 ##  <a name="compareelementsordered"></a>CDefaultCompareTraits::CompareElementsOrdered  
- 呼叫此函式可判斷更高和較少的項目。  
+ 呼叫此函式可判斷大於且較少的項目。  
   
 ```
 static int CompareElementsOrdered(const T& element1, const T& element2);
@@ -109,7 +95,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
  第二個項目中。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回整數，根據下表︰  
+ 傳回整數，根據下表：  
   
 |條件|傳回值|  
 |---------------|------------------|  
@@ -118,7 +104,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 |`element1` > `element2`|>0|  
   
 ### <a name="remarks"></a>備註  
- 此函式的預設實作會使用`==`， ** \< **，和** > **運算子。 物件的簡單資料型別以外，此函式可能需要覆寫。  
+ 此函式的預設實作會使用`==`，  **\<** ，和 **>** 運算子。 物件的簡單資料類型以外，此函式可能需要覆寫。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

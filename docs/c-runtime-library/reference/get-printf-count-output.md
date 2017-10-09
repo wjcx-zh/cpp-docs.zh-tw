@@ -37,25 +37,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 2645201f1c5dfd7c8f23e86b43ef360ef5cb6e91
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 4373fc075e46110cbcef411b283b8566bf74508c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
@@ -71,7 +57,7 @@ int _get_printf_count_output();
  如果支援 `%n` 則為非零，如果 `%n` 不受支援則為 0。  
   
 ## <a name="remarks"></a>備註  
- 如果 `%n` 不受支援 (預設值)，在任何 `printf` 函式的格式字串中遭遇 `%n` 時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`已啟用支援 (請參閱[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然後`%n`中所述的行為[格式規格語法︰ printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 如果 `%n` 不受支援 (預設值)，在任何 `printf` 函式的格式字串中遭遇 `%n` 時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果`%n`已啟用支援 (請參閱[_set_printf_count_output](../../c-runtime-library/reference/set-printf-count-output.md)) 然後`%n`中所述的行為[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="requirements"></a>需求  
   

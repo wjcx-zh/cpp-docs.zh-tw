@@ -1,43 +1,44 @@
 ---
-title: "umask | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "umask"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "umask"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "umask 函式"
+title: umask | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- umask
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- umask
+dev_langs:
+- C++
+helpviewer_keywords:
+- umask function
 ms.assetid: d2f697fc-08d5-4b70-9dd5-df3f5bb8b754
 caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# umask
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d6fc7dde496560fbb0af97f34d0e49f3e2d369b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-這個 POSIX 函式已不建議使用。  使用 ISO C\+\+ 符合 [\_umask](../../c-runtime-library/reference/umask.md) 或安全性增強的 [\_umask\_s](../../c-runtime-library/reference/umask-s.md) 。
+---
+# <a name="umask"></a>umask
+此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_umask](../../c-runtime-library/reference/umask.md) 或增強安全性的 [_umask_s](../../c-runtime-library/reference/umask-s.md)。

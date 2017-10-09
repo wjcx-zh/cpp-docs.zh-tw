@@ -22,30 +22,15 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: f7c0a5c34c4e103f830a029f58cdfa00dcb58a32
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ef6563166c658506a33ffa21da285207fbf5275
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID 類別
-這個類別會提供包裝函式的**CreateWindow**和**CreateWindowEx**。  
+這個類別會提供包裝函式**CreateWindow**和**CreateWindowEx**。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -71,25 +56,25 @@ class _U_MENUorID
 |[_U_MENUorID::m_hMenu](#_u_menuorid__m_hmenu)|功能表的控點。|  
   
 ## <a name="remarks"></a>備註  
- 這個引數的配接器類別可讓任一 Id ( **UINT**s) 或功能表的控制代碼 ( `HMENU`s) 傳遞至函式，而不需要呼叫端的組件上的明確轉型。  
+ 這個引數的介面卡類別可讓任一識別碼 ( **UINT**s) 或功能表的控制代碼 ( `HMENU`s) 要傳遞給函式，而不需要呼叫端的組件上的明確轉換。  
   
- 這個類別主要用來實作包裝函式以 Windows API，尤其是[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函式，這兩種接受`HMENU`可能是子視窗識別項的引數 ( **UINT**) 而不是功能表控制代碼。 例如，您所見中使用這個類別做為參數[CWindowImpl::Create](cwindowimpl-class.md#create)。  
+ 這個類別主要用來實作包裝函式以 Windows API 中，尤其是[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)和[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)函式，這兩種接受`HMENU`可以是子工作的引數視窗識別項 ( **UINT**) 而不是功能表的控制代碼。 比方說，您可以看到在使用這個類別當做參數[CWindowImpl::Create](cwindowimpl-class.md#create)。  
 
   
- 類別會定義兩個建構函式多載︰ 其中一個接受**UINT**引數，而另一個接受`HMENU`引數。 **UINT**引數只會轉換成`HMENU`建構函式和結果儲存在該類別的單一資料成員， [m_hMenu](#_u_menuorid__m_hmenu)。 引數`HMENU`建構函式會儲存直接而無需轉換。  
+ 類別會定義兩個建構函式多載： 其中一個接受**UINT**引數，而另一個接受`HMENU`引數。 **UINT**引數只會轉換成`HMENU`中建構函式和結果儲存在該類別的單一資料成員， [m_hMenu](#_u_menuorid__m_hmenu)。 引數`HMENU`建構函式會以無轉換直接儲存。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="_u_menuorid__m_hmenu"></a>_U_MENUorID::m_hMenu  
- 類別會保存的值傳遞至其中一個建構函式為公用`HMENU`資料成員。  
+ 類別會保存的值傳遞給其建構函式之一，作為公用`HMENU`資料成員。  
   
 ```
 HMENU m_hMenu;
 ```  
   
 ##  <a name="_u_menuorid___u_menuorid"></a>_U_MENUorID::_U_MENUorID  
- **UINT**引數只會轉換成`HMENU`建構函式和結果儲存在該類別的單一資料成員， [m_hMenu](#_u_menuorid__m_hmenu)。  
+ **UINT**引數只會轉換成`HMENU`中建構函式和結果儲存在該類別的單一資料成員， [m_hMenu](#_u_menuorid__m_hmenu)。  
   
 ```
 _U_MENUorID(UINT nID);  
@@ -101,10 +86,10 @@ _U_MENUorID(HMENU hMenu);
  子視窗的識別項。  
   
  `hMenu`  
- 功能表控制代碼。  
+ 功能表的控制代碼。  
   
 ### <a name="remarks"></a>備註  
- 引數`HMENU`建構函式會儲存直接而無需轉換。  
+ 引數`HMENU`建構函式會以無轉換直接儲存。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

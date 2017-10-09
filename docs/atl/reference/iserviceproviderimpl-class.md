@@ -22,25 +22,11 @@ caps.latest.revision: 22
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1742929a31e244e853b426324894e5c8666ebf99
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: ac66d9158466037751566a2fb6de458001503ab0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="iserviceproviderimpl-class"></a>IServiceProviderImpl 類別
@@ -61,18 +47,18 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[IServiceProviderImpl::QueryService](#queryservice)|建立或存取指定的服務，並將介面指標傳回指定服務的介面。|  
   
 ## <a name="remarks"></a>備註  
  `IServiceProvider`介面找出其 GUID 所指定的服務，並在服務上傳回所要求介面的介面指標。 類別`IServiceProviderImpl`提供此介面的預設實作。  
   
- **IServiceProviderImpl**指定其中一種方法︰ [QueryService](#queryservice)，建立或存取指定的服務，並將介面指標傳回指定服務的介面。  
+ **IServiceProviderImpl**指定其中一種方法： [QueryService](#queryservice)，建立或存取指定的服務，並將介面指標傳回指定服務的介面。  
   
  `IServiceProviderImpl`使用服務對應，開頭[BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map)結束[END_SERVICE_MAP](service-map-macros.md#end_service_map)。  
   
- 服務對應包含兩個項目︰ [SERVICE_ENTRY](service-map-macros.md#service_entry)，表示支援的物件，指定的服務識別碼 (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，而它會呼叫`QueryService`鏈結至另一個物件。  
+ 服務對應包含兩個項目： [SERVICE_ENTRY](service-map-macros.md#service_entry)，表示支援的物件，指定的服務識別碼 (SID) 和[SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain)，而它會呼叫`QueryService`鏈結至另一個物件。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IServiceProvider`  
@@ -80,7 +66,7 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
  `IServiceProviderImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="queryservice"></a>IServiceProviderImpl::QueryService  
  建立或存取指定的服務，並將介面指標傳回指定服務的介面。  
@@ -103,7 +89,7 @@ STDMETHOD(QueryService)(
  所要求介面的間接指標。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回`HRESULT`值可以是下列其中之一︰  
+ 傳回`HRESULT`值可以是下列其中之一：  
   
 |傳回值|意義|  
 |------------------|-------------|  

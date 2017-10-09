@@ -20,35 +20,21 @@ caps.latest.revision: 14
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d1c3defb1cda8a14ab5557595a28d3d0280fc7ac
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atl-structures"></a>ATL 結構
 
 
-Active Template Library 包含下列的結構。  
+Active Template Library 包含下列結構。  
   
 ## <a name="in-this-section"></a>本章節內容  
  [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
- 包含用於不同的目標，例如印表機、 中繼檔或 ActiveX 控制項的呈現的資訊。  
+ 包含用於轉譯為各種目標，例如印表機、 中繼檔或 ActiveX 控制項的資訊。  
   
  [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)  
  包含在 ATL 中的視窗化程式碼中的類別執行個體資料  
@@ -57,13 +43,13 @@ Active Template Library 包含下列的結構。
  使用 ATL 任何專案使用的  
   
  [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)  
- ATL 中的 COM 相關程式碼使用  
+ 使用 COM 相關 ATL 中的程式碼  
   
  [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)  
- 包含用來描述分配介面上的方法或屬性的型別資訊。  
+ 包含用來描述上的分配介面的方法或屬性的型別資訊。  
   
  [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)  
- 包含每一個 ATL 模組所使用的資料。  
+ 包含每個 ATL 模組所使用的資料。  
   
  [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)  
  ATL 中的視窗化程式碼使用  
@@ -73,17 +59,17 @@ Active Template Library 包含下列的結構。
  提供 ATL 程式庫的參考資料，ATL 程式庫是簡化 COM 物件程式設計之樣板架構 C++ 類別的集合。  
   
  [ATL 函式](../../atl/reference/atl-functions.md)  
- 提供依照字母順序排列的全域函式的參考資料。 包含主題組織成類別目錄的函式。  
+ 提供參考資料上依照字母順序排列的全域函式。 包含主題組織成類別目錄的函式。  
   
  [ATL 全域變數](../../atl/reference/atl-global-variables.md)  
- 提供依照字母順序排列的全域變數的參考資料。  
+ 提供參考資料上依照字母順序排列的全域變數。  
   
  [ATL 巨集](../../atl/reference/atl-macros.md)  
- 提供依照字母順序排列的巨集的參考資料。 包含巨集組織成類別目錄的主題。  
+ 提供參考資料上依照字母順序排列的巨集。 包含組成各種分類組織巨集的主題。  
   
  [ATL Typedef](../../atl/reference/atl-typedefs.md)  
  依照字母順序排列的 typedef 上提供的參考資料  
   
  [ATL 類別](../../atl/reference/atl-classes.md)  
- 依照字母順序排列的類別提供參考資料。
+ 依照字母順序排列的類別上提供的參考資料。
 

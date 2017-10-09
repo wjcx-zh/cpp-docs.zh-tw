@@ -37,25 +37,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: aadbf7d2c6fece48ab29c1b818995464a790c38b
-ms.openlocfilehash: 11f0dbe2a4bb67992dd307aea62f79ca8f6b5f73
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 8229146184b4d4d0cfbccd60f6c4209356db5f8f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/07/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="setprintfcountoutput"></a>_set_printf_count_output
@@ -77,7 +63,7 @@ int _set_printf_count_output(
  呼叫這個函式之前的 `%n` 支援狀態：如果啟用 `%n` 支援，則為非零，如果予以停用，則為 0。  
   
 ## <a name="remarks"></a>備註  
- 基於安全性原因，預設會停用 `printf` 中 `%n` 格式指定名稱和其所有變體的支援。 如果在 `printf` 格式規格中遇到 `%n`，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 呼叫`_set_printf_count_output`具有非零引數會導致`printf`-系列的函式，來解譯`%n`中所述[格式規格語法︰ printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 基於安全性原因，預設會停用 `printf` 中 `%n` 格式指定名稱和其所有變體的支援。 如果在 `printf` 格式規格中遇到 `%n`，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 呼叫`_set_printf_count_output`具有非零引數會導致`printf`-系列的函式，來解譯`%n`中所述[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="requirements"></a>需求  
   

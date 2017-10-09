@@ -1,41 +1,44 @@
 ---
-title: "編譯器錯誤 C2001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2001"
+title: "編譯器錯誤 C2001 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2001
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aedba438451089aa2d71e06da7ce189ab97d4190
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-常數中包含新行字元  
+---
+# <a name="compiler-error-c2001"></a>編譯器錯誤 C2001
+常數中的新行  
   
- 您必須依照下列方式才能使字串常數繼續到第二行：  
+ 字串常數，無法繼續第二行，除非您執行下列作業：  
   
--   利用反斜線結束第一行。  
+-   結尾的第一行以反斜線。  
   
--   利用雙引號來結束第一行的字串，然後利用另一個雙引號來開啟下一行的字串。  
+-   關閉第一個列中利用雙引號字串並在下一行的字串以開啟另一個雙引號。  
   
- 使用 \\n 並無法結束第一行。  
+ 結束 \n 的第一行是不夠的。  
   
-## 範例  
- 下列範例會產生 C2001：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C2001:  
   
 ```  
 // C2001.cpp  
@@ -51,8 +54,8 @@ int main()
 }  
 ```  
   
-## 範例  
- 行接續字元 \(Line\-Continuation Character\) 後的下一行起始空白將會包含於字串常數內。  上述範例中沒有一個會將新行字元 \(Newline Character，\\n\) 嵌入於字串常數。  您可依下列範例來嵌入新行字元：  
+## <a name="example"></a>範例  
+ 行接續符號字元之後的下一行的開頭的空格會包含在字串常數。 無如上所示的範例會將新行字元嵌入字串常數。 您可以將內嵌的新行字元，如下所示：  
   
 ```  
 // C2001b.cpp  

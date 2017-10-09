@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 類別
-這個類別會提供預設複製和移動集合類別的方法。  
+這個類別會提供預設複製並移動的集合類別的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,26 +51,26 @@ class CElementTraitsBase
   
 |名稱|說明|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|若要使用項目加入集合類別物件的資料型別。|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|要用來擷取項目從集合類別物件的資料類型。|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|呼叫這個方法來複製集合類別物件中儲存項目。|  
-|[CElementTraitsBase::RelocateElements](#relocateelements)|呼叫這個方法重新定位項目儲存在集合類別物件。|  
+|[CElementTraitsBase::CopyElements](#copyelements)|呼叫此方法以複製項目儲存在集合類別物件。|  
+|[CElementTraitsBase::RelocateElements](#relocateelements)|呼叫這個方法，即可重新定位項目儲存在集合類別物件。|  
   
 ## <a name="remarks"></a>備註  
- 這個基底類別會定義方法複製和重新配置的集合類別中的項目。 類別使用[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)， [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)，和[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
+ 這個基底類別會定義用於複製和重新定位項目中的集合類別的方法。 利用由類別[CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)， [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)，和[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)。  
   
  如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcoll.h  
+ **標頭：** atlcoll.h  
   
 ##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
- 呼叫這個方法來複製集合類別物件中儲存項目。  
+ 呼叫此方法以複製項目儲存在集合類別物件。  
   
 ```
 static void CopyElements(
@@ -95,7 +81,7 @@ static void CopyElements(
   
 ### <a name="parameters"></a>參數  
  `pDest`  
- 接收複製的資料的第一個元素的指標。  
+ 將接收複製的資料的第一個元素的指標。  
   
  `pSrc`  
  若要複製的第一個元素的指標。  
@@ -114,14 +100,14 @@ typedef const T& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
- 要用來從集合擷取項目資料型別。  
+ 用來從集合擷取項目的資料類型。  
   
 ```
 typedef T& OUTARGTYPE;
 ```  
   
 ##  <a name="relocateelements"></a>CElementTraitsBase::RelocateElements  
- 呼叫這個方法重新定位項目儲存在集合類別物件。  
+ 呼叫這個方法，即可重新定位項目儲存在集合類別物件。  
   
 ```
 static void RelocateElements(
@@ -135,13 +121,13 @@ static void RelocateElements(
  將會收到重新配置的資料的第一個元素的指標。  
   
  `pSrc`  
- 若要重新配置的第一個元素的指標。  
+ 第一個項目，即可重新定位指標。  
   
  `nElements`  
- 重新定位項目數目。  
+ 重新定位的項目數目。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大部分的資料類型。 如果要移動的物件包含它們自己的成員的指標，此方法必須覆寫。  
+ 這個方法會呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大多數的資料類型。 如果要移動的物件包含它們自己的成員的指標，必須覆寫這個方法。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

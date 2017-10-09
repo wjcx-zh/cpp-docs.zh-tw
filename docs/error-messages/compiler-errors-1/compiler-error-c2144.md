@@ -1,41 +1,43 @@
 ---
-title: "編譯器錯誤 C2144 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2144"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2144"
+title: "編譯器錯誤 C2144 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2144
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2144
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f541465009dcc137b8853351d10ceb9d5db4d05
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-語法錯誤 : 'type' 必須在 'token' 之後  
+---
+# <a name="compiler-error-c2144"></a>編譯器錯誤 C2144
+語法錯誤: 'type' 前面必須有 'token'  
   
- 編譯器預期會有 `token`，但卻找到 `type`。  
+ 編譯器預期`token`找到`type`改為。  
   
- 這項錯誤可能是因為遺漏右邊的大括號、右括號，或分號而產生。  
+ 這個錯誤可能被因遺漏右大括號、 右括號或分號。  
   
- 嘗試從包含泛空白字元的 CLR 關鍵字建立巨集時，也可能會發生 C2144。  
+ 當您嘗試從包含泛空白字元的 CLR 關鍵字建立巨集時，也會發生 C2144。  
   
- 如果您正嘗試要做型別轉送，也可以參閱 C2144。  如需詳細資訊，請參閱[Type Forwarding \(C\+\+\/CLI\)](../../windows/type-forwarding-cpp-cli.md)。  
+ 如果您嘗試進行類型轉送，您也可以參閱 C2144。 請參閱[類型轉送 (C + + /CLI)](../../windows/type-forwarding-cpp-cli.md)如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2144。  
   
 ```  
@@ -49,7 +51,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2144。  
   
 ```  

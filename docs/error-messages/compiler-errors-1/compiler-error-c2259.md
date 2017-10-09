@@ -19,26 +19,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0837d8f5e48ccf0de0ba8630801667da2ddb6bfa
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 865eea3ed69ea817aafea011e81033f2bd4ca5f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2259"></a>編譯器錯誤 C2259
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
  程式碼會宣告一個抽象類別或結構的執行個體。  
   
- 您無法執行個體化的類別或結構與一或多個純虛擬函式。 若要具現化衍生類別的物件，衍生的類別必須覆寫每個純虛擬函式。  
+ 您無法執行個體化的類別或結構具有一個或多個純虛擬函式。 若要具現化衍生類別的物件，衍生的類別必須覆寫每個純虛擬函式。  
   
  如需詳細資訊，請參閱[隱含抽象類別](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)。  
   
@@ -69,15 +54,15 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()  
 ```  
   
- 當您從介面衍生並實作介面方法衍生類別中具有非公用的存取權限時，您可能會收到 C2259。  這是因為編譯器會預期有公用存取的衍生類別中實作的介面方法。 當您實作的介面，以更具限制性的存取權限的成員函式時，編譯器不會考慮它們都是介面，因此可將衍生的類別的抽象類別中定義的介面方法的實作。  
+ 每當您衍生介面，並且使用非公用存取權限在衍生類別中實作介面方法，您可能會收到 C2259。  這是因為編譯器會預期有公用存取的衍生類別中實作的介面方法。 當您實作的介面，以更具限制性的存取權限的成員函式時，編譯器不會考慮它們反而能夠讓衍生的類別的抽象類別的介面中定義的介面方法的實作。  
   
- 有兩個可能的因應措施的問題︰  
+ 有兩個可能的因應措施的問題：  
   
--   將存取權限已實作的方法公開。  
+-   請實作方法的公用存取權限。  
   
--   使用衍生類別中實作的介面方法的範圍解析運算子限定實作的方法名稱的介面名稱。  
+-   在衍生類別中實作的介面方法中使用範圍解析運算子來限定實作的方法名稱的介面名稱中。  
   
- C2259 也會導致在 Visual c + + 2005 中，已完成一致性處理**/zc: wchar_t**現在預設為開啟。 在此情況下，C2599 可以解析使用由編譯**/Zc:wchar_t-**，以取得此行為，從先前的版本，或最好是藉由更新您的型別，因此它們彼此相容。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+ C2259 在 Visual c + + 2005 中已完成之一致性工作，也會發生**/zc: wchar_t**現在預設為開啟。 在此情況下，C2599 可以解析使用由編譯**/Zc:wchar_t-**，若要取得的行為，從較舊的版本，或者最好是藉由更新您的型別，因此它們彼此相容。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
   
  下列範例會產生 C2259:  
   

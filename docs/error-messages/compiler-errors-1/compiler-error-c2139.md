@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C2139 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2139"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2139"
+title: "編譯器錯誤 C2139 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2139
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C2139
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4cbd836061fc87be1ab1be8bfab395132cfc03e8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'type' : 未定義的類別不允許做為編譯器內建的型別特性 'trait' 的引數  
+---
+# <a name="compiler-error-c2139"></a>編譯器錯誤 C2139
+'type': 未定義的類別不允許做為編譯器內建類型特性 '特性' 的引數  
   
- 傳遞給型別特性的引數無效。  
+ 無效的引數傳遞給類型特性。  
   
- 如需詳細資訊，請參閱[Compiler Support for Type Traits](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 如需詳細資訊，請參閱[類型特性的編譯器支援](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2139。  
   
 ```  

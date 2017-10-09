@@ -1,35 +1,38 @@
 ---
-title: "編譯器錯誤 C2148 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2148"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2148"
+title: "編譯器錯誤 C2148 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2148
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2148
 ms.assetid: e510c2c9-7b57-4ce8-be03-ba363e2cc5d9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C2148
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2d98197ed8043af05fd27239ca10aa3a0d06e3c0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-陣列的總大小不能超過 0x7fffffff 位元組  
+---
+# <a name="compiler-error-c2148"></a>編譯器錯誤 C2148
+陣列的總大小不可以超過 0x7fffffff 位元組  
   
- 陣列超過限制。  請減少陣列的大小。  
+ 陣列超過限制。 減少陣列的大小。  
   
-## 範例  
- 下列範例會產生 C2148：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C2148:  
   
 ```  
 // C2148.cpp  

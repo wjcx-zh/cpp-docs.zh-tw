@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2203 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2203"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2203"
+title: "編譯器錯誤 C2203 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2203
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2203
 ms.assetid: 5497df43-86f6-43d5-b6cb-723c4c589b10
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2203
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebb6260cbf41ffcd48ef60a1bd183e27db17e16a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-刪除運算子無法指定陣列的界限  
+---
+# <a name="compiler-error-c2203"></a>編譯器錯誤 C2203
+刪除操作員無法指定陣列的界限  
   
- 指定 **\/Za** \(ANSI\) 選項時，`delete` 運算子可刪除整個陣列，但不能刪除陣列的部分或特定成員。  
+ 與**/Za** (ANSI) 選項`delete`運算子可以刪除整個陣列，但不是組件或陣列的特定成員。  
   
- 下列範例會產生 C2203：  
+ 下列範例會產生 C2203:  
   
 ```  
 // C2203.cpp  

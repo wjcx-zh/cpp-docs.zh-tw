@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C2140 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2140"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2140"
+title: "編譯器錯誤 C2140 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2140
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 編譯器錯誤 C2140
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cee9861b991ae853443a49e158634c7578dcb913
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'type' : 取決於泛型型別參數的型別，不允許做為編譯器內建的型別特性 'trait' 的引數  
+---
+# <a name="compiler-error-c2140"></a>編譯器錯誤 C2140
+'type': 取決於泛型類型參數的類型不允許做為編譯器內建類型特性 '特性' 的引數  
   
- 傳遞給型別特性的型別規範無效。  
+ 無效的類型規範已傳遞給類型特性。  
   
- 如需詳細資訊，請參閱[Compiler Support for Type Traits](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 如需詳細資訊，請參閱[類型特性的編譯器支援](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2140。  
   
 ```  

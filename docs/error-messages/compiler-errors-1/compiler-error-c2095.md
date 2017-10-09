@@ -1,31 +1,34 @@
 ---
-title: "編譯器錯誤 C2095 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2095"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2095"
+title: "編譯器錯誤 C2095 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2095
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2095
 ms.assetid: 44f8ada1-974f-4e81-a408-33ac6695aa53
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C2095
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f9b1ebad5c18bd1d48f4741cc1a14d620cb3aec
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'function' : 實質參數具有型別 'void' : 參數 'number'  
+---
+# <a name="compiler-error-c2095"></a>編譯器錯誤 C2095
+'function': 實質參數具有類型 'void': 參數 'number'  
   
- 傳至函式的參數為型別 `void`，這是不合法的。  請改用 void 指標 \( `void *`\)。  
+ 傳遞至函式的參數是型別`void`，這不允許。 使用 void 的指標 ( `void *`) 改為。  
   
- `number` 指出哪個參數為 `void`。
+ `number`指出哪一個參數為`void`。

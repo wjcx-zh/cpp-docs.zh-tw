@@ -1,29 +1,32 @@
 ---
-title: "編譯器錯誤 C2138 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2138"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2138"
+title: "編譯器錯誤 C2138 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2138
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2138
 ms.assetid: 59fd1a58-3605-45dd-b9c1-0981e8aab26d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C2138
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f862964c5e088f97472e9fc88b6e90be372c96a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-沒有使用任何成員來定義列舉型別是不合法的  
+---
+# <a name="compiler-error-c2138"></a>編譯器錯誤 C2138
+若要定義列舉型別沒有任何成員不合法  
   
- 當選取 \/Za \(停用 Microsoft 擴充功能\) 時，列舉型別至少要擁有一個成員。
+ 列舉型別都必須有至少一個成員時 /Za （停用 Microsoft 擴充功能） 已選取。

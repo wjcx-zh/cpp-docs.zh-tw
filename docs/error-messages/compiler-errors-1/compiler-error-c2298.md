@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2298 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2298"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2298"
+title: "編譯器錯誤 C2298 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2298
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2298
 ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2298
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3bd426fb1351577a1cfc42c78daa77826705341f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'operation' : 成員指標函式運算式的作業不合法  
+---
+# <a name="compiler-error-c2298"></a>編譯器錯誤 C2298
+'operation': 成員函式運算式的指標不合法的操作  
   
- 指向成員函式運算式的指標必須呼叫成員函式。  
+ 成員函式運算式的指標必須呼叫成員函式。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2298。  
   
 ```  
@@ -64,7 +66,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2298。  
   
 ```  
@@ -75,9 +77,9 @@ void F() {}
 class Measure {  
 public:  
    void SetTrackingFunction(void (Measure::*fnc)()) {  
-      TrackingFunction = this->*fnc;   // C2298  
-      TrackingFunction = fnc;   // OK  
-      GlobalTracker = F;   // OK  
+      TrackingFunction = this->*fnc;   // C2298  
+      TrackingFunction = fnc;   // OK  
+      GlobalTracker = F;   // OK  
    }  
 private:  
    void (Measure::*TrackingFunction)(void);  

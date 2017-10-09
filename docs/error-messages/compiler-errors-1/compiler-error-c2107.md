@@ -1,35 +1,38 @@
 ---
-title: "編譯器錯誤 C2107 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2107"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2107"
+title: "編譯器錯誤 C2107 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2107
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2107
 ms.assetid: 2866a121-884e-4bb5-8613-36de5817000e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2107
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72ae821ce05d978f2f520b86f5a63b2e4569aabc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2107"></a>編譯器錯誤 C2107
 不合法的索引，不允許間接取值  
   
- 註標 \(Subscript\) 套用至未評估為指標的運算式。  
+ 註標會套用至運算式，不會評估為指標。  
   
-## 範例  
- 如果不正確使用值型別的 `this` 指標，存取型別的預設索引子，就可能會發生 C2107。  如需詳細資訊，請參閱 [這個指標的語意。](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。  
+## <a name="example"></a>範例  
+ 如果您不當使用，可能會發生 C2107`this`存取類型的預設索引子的實值類型的指標。 如需詳細資訊，請參閱[語意的 this 指標](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)。  
   
  下列範例會產生 C2107。  
   

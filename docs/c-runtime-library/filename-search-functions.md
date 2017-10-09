@@ -30,26 +30,11 @@ caps.latest.revision: 26
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c802f99eab05ea59971c69c53f999f1b8f12240f
+ms.translationtype: HT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="filename-search-functions"></a>檔案名稱搜尋函式
@@ -108,17 +93,17 @@ ms.lasthandoff: 04/04/2017
  `_A_SYSTEM`  
  系統檔案。 除非使用了 **/A** 或 **/A:S** 選項，否則使用 **DIR** 命令時並不常見。 值：0x04。  
   
- 如果有符合稍早 `_findfirst` 呼叫中所指定 `filespec` 引數的名稱，`_findnext` 便會往下搜尋。 `fileinfo` 引數應該會指向由先前 `_findfirst`呼叫所初始化的結構。 如果找到相符名稱， `fileinfo` 結構內容便會如上述方式變更。 否則會維持不變。 `_findclose` 會關閉指定的搜尋控制代碼，並為 `_findfirst` 和 `_findnext` 同時釋出相關聯的資源。 由 `_findfirst` 或 `_findnext` 之一所傳回的控制代碼必須先傳遞到 `_findclose`，然後才能在組成其傳遞路徑的目錄上執行修改作業，例如刪除。  
+ 如果有符合稍早`_findnext` 呼叫中所指定 `filespec` 引數的名稱， `_findfirst`便會往下搜尋。 `fileinfo` 引數應該會指向由先前 `_findfirst`呼叫所初始化的結構。 如果找到相符名稱， `fileinfo` 結構內容便會如上述方式變更。 否則會維持不變。 `_findclose` 會關閉指定的搜尋控制代碼，並為 `_findfirst` 和 `_findnext`同時釋出相關聯的資源。 由 `_findfirst` 或 `_findnext` 之一所傳回的控制代碼必須先傳遞到 `_findclose`，然後才能在組成其傳遞路徑的目錄上執行修改作業，例如刪除。  
   
  您可以將 `_find` 函式巢狀化。 例如，如果 `_findfirst` 或 `_findnext` 的呼叫發現是子目錄的檔案，就可以另外使用 `_findfirst` 或 `_findnext`呼叫來啟始新的搜尋。  
   
  `_wfindfirst` 和 `_wfindnext` 是寬字元版本的 `_findfirst` 和 `_findnext`。 寬字元版本的結構引數具有 `_wfinddata_t` 定義於 IO.h 和 Wchar.h 的資料類型。 此資料類型的欄位與 `_finddata_t` 資料類型的欄位相同，除了在 `_wfinddata_t` 中，名稱欄位屬於類型 `wchar_t` 而非類型 `char`。 否則 `_wfindfirst` 和 `_wfindnext` 的行為與 `_findfirst` 和 `_findnext`相同。  
   
- `_findnext` 和 `_findfirst` 皆使用 64 位元時間類型。 如果您必須使用舊的 32 位元時間類型，則可以定義 `_USE_32BIT_TIME_T`。 名稱中包含 `32` 後置詞的這些函式版本皆使用 32 位元時間類型，而具有 `64` 的後置詞則使用 64 位元時間類型。  
+ `_findfirst` 和 `_findnext` 皆使用 64 位元時間類型。 如果您必須使用舊的 32 位元時間類型，則可以定義 `_USE_32BIT_TIME_T`。 名稱中包含 `32` 後置詞的這些函式版本皆使用 32 位元時間類型，而具有 `64` 的後置詞則使用 64 位元時間類型。  
   
- 函式 `_findfirst32i64`、 `_findnext32i64`、 `_wfindfirst32i64`和 `_wfindnext32i64` 的行為也與這些函式版本的 32 位元時間類型相同，除非這些函式使用並傳回 64 位元的檔案長度。 函式 `_findfirst64i32`、`_findnext64i32`、`_wfindfirst64i32` 和 `_wfindnext64i32` 會使用 64 位元時間類型，但使用 32 位元檔案長度。 這些函式皆使用適當的 `_finddata_t` 類型變化，此類型中的欄位類型針對時間和檔案大小會有所不同。  
+ 函式 `_findfirst32i64`、 `_findnext32i64`、 `_wfindfirst32i64`和 `_wfindnext32i64` 的行為也與這些函式版本的 32 位元時間類型相同，除非這些函式使用並傳回 64 位元的檔案長度。 函式 `_findfirst64i32`、 `_findnext64i32`、 `_wfindfirst64i32`和 `_wfindnext64i32` 使用 64 位元時間類型，但使用 32 位元檔案長度。 這些函式皆使用適當的 `_finddata_t` 類型變化，此類型中的欄位類型針對時間和檔案大小會有所不同。  
   
- `_finddata_t` 事實上是評估為 `_finddata64i32_t` (或 `_USE_32BIT_TIME_T` 遭拒則為 `_finddata32_t`) 的巨集。 下表摘要說明 `_finddata_t`的各種版本：  
+ `_finddata_t` 事實上是評估 `_finddata64i32_t` (或 `_finddata32_t` 遭拒則為 `_USE_32BIT_TIME_T` ) 的巨集。 下表摘要說明 `_finddata_t`的各種版本：  
   
 |結構|時間類型|檔案大小類型|  
 |---------------|---------------|--------------------|  

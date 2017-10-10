@@ -1,32 +1,34 @@
 ---
-title: "編譯器錯誤 C2542 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2542"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2542"
+title: "編譯器錯誤 C2542 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2542
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2542
 ms.assetid: a984520d-f835-4cac-ac0e-7f1d5f5c6278
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2542
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7cb622a6fc94250c7139452ca06c0e2e89413db6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 類別物件沒有初始化所需的建構函式  
+---
+# <a name="compiler-error-c2542"></a>編譯器錯誤 C2542
+'identifier': 類別物件已初始化沒有建構函式  
   
- 沒有具有參數清單的建構函式符合此初始化。  
+ 沒有任何建構函式的參數清單，符合此初始化。  
   
- 這項錯誤可能是因初始化中不正確函式而造成。
+ 這個錯誤可能被因不正確的參數，初始化。

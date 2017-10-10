@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2752 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2752"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2752"
+title: "編譯器錯誤 C2752 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2752
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2752
 ms.assetid: ae42b3ec-84a9-4e9d-8d59-3d208132d0b2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2752
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9ec3809b4826cf336391e561839840af44593cb6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'template' : 有一個以上的部分特製化符合樣板引數清單  
+---
+# <a name="compiler-error-c2752"></a>編譯器錯誤 C2752
+'template': 一個以上的部分特製化符合樣板引數清單  
   
- 具現化 \(Instantiation\) 是模稜兩可的。  
+ 具現化模稜兩可。  
   
- 下列範例會產生 C2752：  
+ 下列範例會產生 C2752:  
   
 ```  
 // C2752.cpp  

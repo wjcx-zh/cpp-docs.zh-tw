@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2743"></a>編譯器錯誤 C2743
-'type': 無法攔截 __clrcall 解構函式或複製建構函式的原生型別  
+'type': 無法攔截原生類型具有 __clrcall 解構函式或複製建構函式  
   
- 使用編譯的模組**/clr**嘗試攔截例外狀況的原生型別，並使用該類型的解構函式或複製建構函式`__clrcall`呼叫慣例。  
+ 使用編譯的模組**/clr**嘗試攔截例外狀況的原生類型和類型的解構函式或複製建構函式的使用位置`__clrcall`呼叫慣例。  
   
- 編譯時**/clr**，例外狀況處理預期要讓原生類型中的成員函式[__cdecl](../../cpp/cdecl.md)而非[__clrcall](../../cpp/clrcall.md)。 原生型別搭配使用的成員函式`__clrcall`無法攔截以編譯的模組中的呼叫慣例**/clr**。  
+ 編譯時**/clr**，例外狀況處理為原生類型中預期的成員函式[__cdecl](../../cpp/cdecl.md)而非[__clrcall](../../cpp/clrcall.md)。 原生類型與成員函式使用`__clrcall`無法攔截在編譯的模組中的呼叫慣例**/clr**。  
   
  如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。  
   

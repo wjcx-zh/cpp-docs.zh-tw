@@ -1,38 +1,41 @@
 ---
-title: "編譯器錯誤 C2571 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2571"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2571"
+title: "編譯器錯誤 C2571 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2571
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2571
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8bfb4f9af849efea2fa3aa8a84a57f1cfb4cd502
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 虛擬函式不可以在等位 'union' 中  
+---
+# <a name="compiler-error-c2571"></a>編譯器錯誤 C2571
+'function': 虛擬函式不能在等位 'union' 中  
   
- 等位使用虛擬函式宣告。  虛擬函式只能宣告在類別或結構中。可能的解決方案：  
+ 等位是以虛擬函式宣告。 您可以宣告只能在類別或結構中的虛擬函式。  可能的解決方式：  
   
-1.  將等位變更為類別或結構。  
+1.  變更類別或結構的聯集。  
   
-2.  使函式成為非虛擬。  
+2.  進行非虛擬函式。  
   
- 下列範例會產生 C2571：  
+ 下列範例會產生 C2571:  
   
 ```  
 // C2571.cpp  

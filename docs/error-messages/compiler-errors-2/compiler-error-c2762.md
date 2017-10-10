@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2762 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2762"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2762"
+title: "編譯器錯誤 C2762 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2762
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2762
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e121ab82b8e49fb1727e626eea7d060e8def2b8c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'class' : 當做 'argument' 樣板引數的運算式無效  
+---
+# <a name="compiler-error-c2762"></a>編譯器錯誤 C2762
+'class': 'argument' 的樣板引數為無效的運算式  
   
- 當使用 [\/Za](../../build/reference/za-ze-disable-language-extensions.md) 時，編譯器不會將整數轉換成指標。  
+ 當使用[/Za](../../build/reference/za-ze-disable-language-extensions.md)，編譯器不會將整數轉換成指標。  
   
- 下列範例會產生 C2762：  
+ 下列範例會產生 C2762:  
   
 ```  
 // C2762.cpp  

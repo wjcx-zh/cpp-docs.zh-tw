@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2711"
+title: "編譯器錯誤 C2711 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2711
 ms.assetid: 9df9f808-7419-4e63-abdd-e6538ff0871f
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C2711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a58a4497e007203119a376e38de82dd91030dfbc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 這個函式無法編譯為 Managed，請考慮使用 \#pragma unmanaged  
+---
+# <a name="compiler-error-c2711"></a>編譯器錯誤 C2711
+'function': 這個函式不可以編譯為 managed，請考慮使用 #pragma unmanaged  
   
- 有些指令會阻止編譯器為封入函式產生 MSIL。  
+ 某些指示會防止編譯器產生 MSIL 的封入函式。  
   
- 下列範例會產生 C2711：  
+ 下列範例會產生 C2711:  
   
 ```  
 // C2711.cpp  

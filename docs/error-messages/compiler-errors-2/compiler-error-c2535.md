@@ -1,38 +1,41 @@
 ---
-title: "編譯器錯誤 C2535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2535"
+title: "編譯器錯誤 C2535 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2535
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2535
 ms.assetid: a958f83e-e2bf-4a59-b44b-d406ec325d7e
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C2535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0af3ce8f0f3fe89d8e2f120f1b9b16383f11ef6a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 已經定義或宣告成員函式  
+---
+# <a name="compiler-error-c2535"></a>編譯器錯誤 C2535
+'identifier': 已經定義或宣告的成員函式  
   
- 這項錯誤可能是由於在多載函式的多個定義或宣告中，使用了相同的型式參數清單 \(Formal Parameter List\) 所引起。  
+ 這個錯誤可能被因使用一個以上的定義或宣告的多載函式中相同的型式參數清單。  
   
- 如果因處理函示而接到 C2535 錯誤訊息，請參閱 [解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) 以取得詳細資訊。  
+ 如果您因 c2535 Dispose 函式，請參閱[解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)如需詳細資訊。  
   
- 如果您打算編譯 ATL 專案，請參閱知識庫 \(Knowledge Base\) 文件 Q241852。  
+ 如果您正在編譯 ATL 專案，請參閱知識庫文章 Q241852。  
   
- 下列範例會產生 C2535：  
+ 下列範例會產生 C2535:  
   
 ```  
 // C2535.cpp  

@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2754 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2754"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2754"
+title: "編譯器錯誤 C2754 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2754
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2754
 ms.assetid: 1cab66c5-da9d-4b81-b7fb-9cdc48ff1ccc
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2754
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5d6b6b3089f0fc345442777d1d254aeb20c08cb9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'specialization' : 部分特製化不能具有相依的非型別樣板參數  
+---
+# <a name="compiler-error-c2754"></a>編譯器錯誤 C2754
+'specialization': 部分特製化不能有相依的非類型樣板參數  
   
- 嘗試對具有相依非型別樣板參數的樣板類別，進行部分特製化。  這是不允許的。  
+ 您嘗試部分特製化樣板類別具有相依的非類型樣板參數。 這是不允許的。  
   
- 下列範例會產生 C2754：  
+ 下列範例會產生 C2754:  
   
 ```  
 // C2754.cpp  

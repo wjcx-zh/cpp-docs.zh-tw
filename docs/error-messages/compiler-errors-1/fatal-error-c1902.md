@@ -19,30 +19,16 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 79987719614dfa3075f9a9090ca1d97f6546ceb3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 89354565f67c8704eee8c8b5f9dcb94523800c63
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1902"></a>嚴重錯誤 C1902
-程式資料庫管理員不相符。請檢查您的安裝  
+程式資料庫管理員不相符;請檢查您的安裝  
   
-程式資料庫檔 (.pdb) 建立使用較新版的 mspdb*XXX*.dll 與您的系統上找到的編譯器。 此錯誤通常表示 mspdbsrv.exe 或 mspdbcore.dll 遺失或有不同的版本與 mspdb*XXX*.dll。 ( *XXX*預留位置 mspdb*XXX*.dll 檔案名稱變更，每個產品版本。 例如，Visual Studio 2015 中的檔案名稱是 mspdb140.dll）。  
+程式資料庫 (.pdb) 檔案建立使用較新版的 mspdb*XXX*.dll 比編譯器發現您的系統上。 此錯誤通常表示 mspdbsrv.exe 或 mspdbcore.dll 遺漏，或有不同的版本比 mspdb*XXX*.dll。 ( *XXX* mspdb 中的預留位置*XXX*.dll 檔案名稱變更，每個產品版本。 例如，在 Visual Studio 2015 中，檔案名稱是 mspdb140.dll）。  
   
-請確定版本相符的 mspdbsrv.exe、 mspdbcore.dll 和 mspdb*XXX*.dll 安裝在您的系統上。 請確定版本不相符，尚未複製到目錄，其中包含您的目標平台編譯器和連結的工具。 例如，您可能已複製檔案叫用的編譯器或連結的工具，從命令提示字元，如果沒有設定**路徑**環境變數據此。
+請確定 mspdbsrv.exe mspdbcore.dll 及 mspdb 的相符版本*XXX*.dll 安裝在您的系統上。 確定版本不相符，尚未複製到包含您的目標平台編譯器和連結工具的目錄。 例如，您可能已複製之檔案叫用的編譯器或連結的工具，從命令提示字元，如果沒有設定**路徑**環境變數據此。

@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2698 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2698"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2698"
+title: "編譯器錯誤 C2698 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2698
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2698
 ms.assetid: 3ebfe395-c20b-4c56-9980-ca9ed8653382
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2698
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 654367e882b16c18cc4bd58c339d61c653dc68e9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'declaration 1' 的 using 宣告不能與 'declaration 2' 的 using 宣告同時存在  
+---
+# <a name="compiler-error-c2698"></a>編譯器錯誤 C2698
+using 宣告為 '宣告 1' 不能同時存在與 using 宣告為' 宣告 2'  
   
- 一旦某個資料成員使用 [using 宣告](../../cpp/using-declaration.md)，則同一個範圍內使用相同名稱的任何 using 宣告不被允許，同樣地只有函式能夠被多載。  
+ 一旦[using 宣告](../../cpp/using-declaration.md)資料成員，任何使用不允許使用相同的名稱和相同範圍中宣告，因為只有函式可以多載。  
   
- 下列範例會產生 C2698：  
+ 下列範例會產生 C2698:  
   
 ```  
 // C2698.cpp  

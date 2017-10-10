@@ -1,37 +1,39 @@
 ---
-title: "編譯器錯誤 C2514 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2514"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2514"
+title: "編譯器錯誤 C2514 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2514
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2514
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f91dfffe27127cfbff20d7b2e67d097b65cae358
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'class' : 類別沒有建構函式  
+---
+# <a name="compiler-error-c2514"></a>編譯器錯誤 C2514
+'class': 類別有任何建構函式  
   
- 類別、結構或等位沒有建構函式，其參數清單和用來執行個體化的參數相符。  
+ 類別、 結構或等位有沒有建構函式，以符合用來具現化之參數的參數清單。  
   
  類別必須完整宣告，才能具現化。  
   
- 下列範例會產生 C2514：  
+ 下列範例會產生 C2514:  
   
 ```  
 // C2514.cpp  

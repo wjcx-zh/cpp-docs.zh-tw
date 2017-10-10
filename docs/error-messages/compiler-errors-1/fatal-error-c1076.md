@@ -1,38 +1,41 @@
 ---
-title: "嚴重錯誤 C1076 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1076"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1076"
+title: "嚴重錯誤 C1076 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1076
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 嚴重錯誤 C1076
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e912cc4910ab1362719d94f374f145e90747e69
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-編譯器限制：已達到內部堆積限制；請使用 \/Zm 以指定更高的限制  
+---
+# <a name="fatal-error-c1076"></a>嚴重錯誤 C1076
+編譯器限制：已達到內部堆積限制；請使用 /Zm 以指定更高的限制  
   
  這項錯誤可能會因為符號太多或樣板具現化太多而產生。  
   
  若要解決這個錯誤：  
   
-1.  使用 [\/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) 選項將編譯器記憶體限制設定為 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) 錯誤訊息中指定的值。  如需包含如何在 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 中設定此值的詳細資訊，請參閱 [\/Zm \(指定先行編譯標頭檔的記憶體配置上限\)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) 中的＜備註＞一節。  
+1.  使用[/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)編譯器記憶體限制設定中指定的值選項[C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)錯誤訊息。 如需詳細資訊，包括如何設定這個值[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]，請參閱 < 備註 > 一節中的[/Zm （指定先行編譯標頭的記憶體配置上限）](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md)。  
   
-2.  如果您是在 64 位元作業系統上使用 32 位元裝載的編譯器，請改用 64 位元裝載的編譯器。  如需詳細資訊，請參閱 [如何：在命令列啟用 64 位元 Visual C\+\+ 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。  
+2.  如果您是在 64 位元作業系統上使用 32 位元裝載的編譯器，請改用 64 位元裝載的編譯器。 如需詳細資訊，請參閱[How to： 啟用在命令列上的 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。  
   
 3.  排除不必要的包含檔案。  
   
@@ -46,4 +49,4 @@ caps.handback.revision: 12
   
 8.  將目前的檔案分割成較小的檔案。  
   
- 如果建置開始之後馬上出現 C1076 錯誤，可能是 **\/Zm** 所指定的值對程式而言太高了。  請降低 **\/Zm** 值。
+ 如果組建啟動之後，為指定的值馬上出現 c1076 **/Zm**可能是為您的程式太高。 減少**/Zm**值。

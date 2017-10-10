@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2059 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2059"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2059"
+title: "編譯器錯誤 C2059 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2059
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 編譯器錯誤 C2059
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dbf80ab803eaaacc29ac82657af130194417f1c7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2059"></a>編譯器錯誤 C2059
 語法錯誤: 'token'  
   
- 此語彙基元 \(Token\) 導致語法錯誤。  
+ 語彙基元會導致語法錯誤。  
   
- 下列範例會針對宣告 `j` 的程式碼行產生錯誤訊息。  
+ 下列範例會產生錯誤訊息之線條的宣告`j`。  
   
 ```  
 // C2059e.cpp  
@@ -38,11 +41,11 @@ caps.handback.revision: 22
    int j*; // C2059   
 ```  
   
- 若要判斷錯誤原因，您不只需要檢查錯誤訊息列出的那一行，還需要檢查之前的幾行。  如果檢查這幾行後仍找不到問題的線索，試著註解錯誤訊息中所列出的該行程式碼以及前幾行。  
+ 檢查來判定錯誤的原因，而不是只是列在錯誤訊息中的一行上面的程式行。 如果檢查行產生不會知道這個問題，請嘗試標記為註解的錯誤訊息中所列的一行，並可能有數個行上面。  
   
- 如果該錯誤訊息緊接地出現在跟在 `typedef` 變數之後的符號，請確認該變數是否定義於原始程式碼之中。  
+ 如果錯誤訊息就會發生緊接在後面的符號上`typedef`變數，請確定會在原始程式碼中定義變數。  
   
- 如果符號沒有評估，則可能會發生 C2059，就像使用 **\/D**`symbol`**\=** 進行編譯時，也可能會發生 C2059。  
+ 如果您收到 C2059 符號評估為 nothing，可能是因為當**/D** `symbol`  **=** 用來編譯。  
   
 ```  
 // C2059a.cpp  
@@ -58,9 +61,9 @@ int main() {
 }  
 ```  
   
- 另一個發生 C2059 錯誤的情況是，在您編譯一個指定結構為某函式預設引數 \(Argument\) 的應用程式時。  引數的預設值必須為運算式。  而初始設定式清單 \(例如，用來初始化結構\) 並不是一個運算式。解決方式是定義一個建構函式 \(Constructor\) 來執行必要的初始化。  
+ C2059 可能會發生另一種情況是當您編譯的應用程式，預設引數的函式中指定的結構。 引數的預設值必須是運算式。 初始設定式清單-例如，一個用來初始化結構 — 不是運算式。  若要解決這個問題，請定義的建構函式來執行必要的初始化。  
   
- 下列範例會產生 C2059：  
+ 下列範例會產生 C2059:  
   
 ```  
 // C2059b.cpp  
@@ -76,11 +79,11 @@ void func(ag_type arg = {5, 7.0});   // C2059
 void func(ag_type arg = ag_type(5, 7.0));   // OK  
 ```  
   
- 您可能也會在類別外定義成員樣板類別 \(Template Class\) 或函式時收到 C2059。  如需詳細資訊，請參閱[知識庫文件 241949](http://support.microsoft.com/kb/241949)。  
+ 如果您定義成員樣板類別或函式類別之外，您也可以取得 C2059。 如需資訊，請參閱[Knowledge Base 文章 241949](http://support.microsoft.com/kb/241949)。  
   
- 所有格式不正確的轉型也都可能會發生 C2059。  
+ 格式不正確的轉型可能會發生 C2059。  
   
- 下列範例會產生 C2059：  
+ 下列範例會產生 C2059:  
   
 ```  
 // C2059c.cpp  
@@ -96,9 +99,9 @@ int main() {
 }  
 ```  
   
- 如果您嘗試建立包含句號的命名空間名稱，也可能會發生 C2059。  
+ 如果您嘗試建立命名空間的名稱包含句點，也可能會發生 C2059。  
   
- 下列範例會產生 C2059：  
+ 下列範例會產生 C2059:  
   
 ```  
 // C2059d.cpp  
@@ -111,7 +114,7 @@ namespace A  {
 }  
 ```  
   
- C2059 也可能會發生在可以限定名稱的運算子 \(`::`、 `->`和 `.`\) 後面都必須接著關鍵字 `template`，如下列範例所示：  
+ 可以限定名稱的運算子時，可能會發生 C2059 (`::`， `->`，和`.`) 必須接著關鍵字`template`，在此範例所示：  
   
 ```cpp  
 template <typename T> struct Allocator {  
@@ -126,7 +129,7 @@ template <typename X, typename AY> struct Container {
   
 ```  
   
- 根據預設， C\+\+ 假設`AY::Rebind` 不是範本；因此下列 `<` 會解譯成小於的符號。您必須明確地呼叫編譯器 `Rebind` 為樣板，以便它可以正確地解析角括弧。  若要更正這個錯誤，請在相依型別名稱使用 `template` 關鍵字，如下所示：  
+ 根據預設，C++ 假設 `AY::Rebind` 不是範本；因此下列 `<` 會解譯成小於符號。  您必須明確地告知編譯器 `Rebind` 為範本，以便它可以正確地剖析角括號。 若要更正這個錯誤，請在相依類型名稱上使用 `template` 關鍵字，如下所示：  
   
 ```cpp  
 template <typename T> struct Allocator {  

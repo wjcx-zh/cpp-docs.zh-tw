@@ -1,43 +1,46 @@
 ---
-title: "編譯器錯誤 C2054 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2054"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2054"
+title: "編譯器錯誤 C2054 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2054
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2054
 ms.assetid: 37f7c612-0d7d-4728-9e67-ac4160555f48
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C2054
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ab12a8395f3587f0fbdca5ad821cd9ec2241d25
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-在 'identifier' 之後必須是 '\('  
+---
+# <a name="compiler-error-c2054"></a>編譯器錯誤 C2054
+必須是 ' (' 遵循 'identifier'  
   
- 函式識別項被用在後面需要括弧的內容中。  
+ 需要尾端的括號內容中，所用的函式識別項。  
   
- 這項錯誤可能會因為在複雜初始設定上省略等號 \(\=\) 而產生。  
+ 這個錯誤可能被因省略複雜初始化等號 （=）。  
   
- 下列範例會產生 C2054：  
+ 下列範例會產生 C2054:  
   
 ```  
 // C2054.c  
 int array1[] { 1, 2, 3 };   // C2054, missing =  
 ```  
   
- 可能的解決方案：  
+ 可能的解決方式：  
   
 ```  
 // C2054b.c  

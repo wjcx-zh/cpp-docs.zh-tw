@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2496 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2496"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2496"
+title: "編譯器錯誤 C2496 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2496
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2496
 ms.assetid: 9a25237d-5bbb-4112-98f3-29cd99d3f89f
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2496
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 35caa51076bbd1f176c9509c80dd3586eb3d385c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 'selectany' 只能套用至具外部連結的資料項目  
+---
+# <a name="compiler-error-c2496"></a>編譯器錯誤 C2496
+'identifier': 'selectany' 只能套用至具有外部連結的資料項目  
   
- [selectany](../../cpp/selectany.md) 屬性只能套用至外部可見和全域的資料項目。  
+ [Selectany](../../cpp/selectany.md)屬性可以套用到外部可見和全域資料的項目。  
   
- 下列範例會產生 C2496：  
+ 下列範例會產生 C2496:  
   
 ```  
 // C2496.cpp  

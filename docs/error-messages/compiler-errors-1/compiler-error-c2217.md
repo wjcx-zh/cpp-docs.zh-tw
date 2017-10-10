@@ -1,41 +1,44 @@
 ---
-title: "編譯器錯誤 C2217 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2217"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2217"
+title: "編譯器錯誤 C2217 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2217
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2217
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f1795534af1332859fd1a33a137573df82643b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'attribute1' 需要有 'attribute2'  
+---
+# <a name="compiler-error-c2217"></a>編譯器錯誤 C2217
+'attribute1' 需要 'attribute2'  
   
  第一個函式屬性需要第二個屬性。  
   
-### 若要修正，請檢查下列可能原因  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
   
-1.  插斷 \(`__interrupt`\) 函式宣告為 `near`。  插斷函式必須為 `far`。  
+1.  插斷 (`__interrupt`) 函式宣告為`near`。 插斷函式必須是`far`。  
   
-2.  插斷函式以 `__stdcall` 或 `__fastcall` 來宣告。  插斷函式必須使用 C 呼叫慣例 \(Calling Convention\)。  
+2.  中斷與宣告的函式`__stdcall`，或`__fastcall`。 插斷函式必須使用 C 呼叫慣例。  
   
-## 範例  
- 如果您嘗試將委派繫結至可接受變動數目之引數的 CLR 函式，也可能會發生 C2217。  如果此函式也有 e param 陣列多載，請改用此陣列多載。  下列範例會產生 C2217。  
+## <a name="example"></a>範例  
+ 如果您嘗試將委派繫結的 CLR 函式接受可變數目的引數，也會發生 C2217。 如果函式也有 e param 陣列的多載，改用該複本。 下列範例會產生 C2217。  
   
 ```  
 // C2217.cpp  

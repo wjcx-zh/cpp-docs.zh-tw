@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 1cba1d5ea85b4eb97fb1b1b9091b1710a2a59490
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 05955990b1df5d2e64215a96a5da205d45539bc0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1310"></a>嚴重錯誤 C1310
 特性指引最佳化不適用於 OpenMP  
   
- 您不能使用連結[/ltcg: pgi](../../build/reference/ltcg-link-time-code-generation.md)編譯任何模組[/GL](../../build/reference/gl-whole-program-optimization.md)。  
+ 您不能使用 [/LTCG:PGI](../../build/reference/ltcg-link-time-code-generation.md) 連結任何以 [/GL](../../build/reference/gl-whole-program-optimization.md)編譯的模組。  
   
  下列範例會產生 C1310：  
   

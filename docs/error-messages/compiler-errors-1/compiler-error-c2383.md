@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: faa2aa2c29ea34009f0812a3796d450a6877ca48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f6fa7626541f5fcd06bc2c2c513f52ec443ba4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2383"></a>編譯器錯誤 C2383
@@ -48,7 +34,7 @@ ms.lasthandoff: 04/12/2017
  此程式碼在 Visual Studio 2005 之前的版本，Visual c + + 編譯器已接受，但現在會產生錯誤。 適用於所有版本的 Visual c + + 的程式碼，請勿函式指標的引數指派預設值。  
   
 ## <a name="example"></a>範例  
- 下列範例會產生 C2383，並顯示可能的解決方案︰  
+ 下列範例會產生 C2383，並顯示可能的解決方案：  
   
 ```cpp  
 // C2383.cpp  

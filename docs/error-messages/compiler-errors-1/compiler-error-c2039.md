@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2039"
+title: "編譯器錯誤 C2039 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2039
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 caps.latest.revision: 19
-caps.handback.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0a2fc962926a4a4d12232a9f785e7254fbcdb3f1
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'identifier1' : 不是 'identifier2' 的成員  
+---
+# <a name="compiler-error-c2039"></a>編譯器錯誤 C2039
+'identifier1': 不是 'identifier2' 的成員  
   
- 程式碼不正確地呼叫或參考結構、類別或等位的成員。  
+ 在程式碼不正確地呼叫或參考的結構、 類別或等位成員。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2039。  
   
 ```  
@@ -44,7 +46,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2039。  
   
 ```  
@@ -58,7 +60,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2039。  
   
 ```  
@@ -75,8 +77,8 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK  
 ```  
   
-## 範例  
- 如果嘗試不正確地存取索引子 \(Indexer\)，也可能會發生 C2039。  下列範例會定義在 C\# 中設計的元件。  
+## <a name="example"></a>範例  
+ 如果您嘗試存取的預設索引子不正確，也會發生 C2039。 下列範例會定義以 C# 撰寫的元件。  
   
 ```  
 // C2039_d.cs  
@@ -91,7 +93,7 @@ public class B {
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2039。  
   
 ```  
@@ -109,8 +111,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果使用泛型，也可能會發生 C2039。  下列範例會產生 C2039。  
+## <a name="example"></a>範例  
+ 如果您使用泛型時，也會發生 C2039。 下列範例會產生 C2039。  
   
 ```  
 // C2039_f.cpp  
@@ -133,8 +135,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 當您嘗試釋放 Managed 或 Unmanaged 資源時，就會發生 C2039。  如需詳細資訊，請參閱 [解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
+## <a name="example"></a>範例  
+ 當您嘗試釋放 managed 或 unmanaged 資源時，可能會發生 C2039。 如需詳細資訊，請參閱[解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
   
  下列範例會產生 C2039。  
   

@@ -19,36 +19,22 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 65aac590a3282f2fd71c460d14927f5695fcdc5a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 954ef1f8db47c5cd9c420e8099cc3060ebb8a32b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2434"></a>編譯器錯誤 C2434
-'symbol': __declspec(process) 以宣告的符號不動態初始化在 /clr: pure 模式  
+'symbol': 以 __declspec （process） 宣告的符號無法以動態方式初始化在 /clr: pure 模式  
   
- **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
+ **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
- 不可能以動態方式來初始化每個處理序變數下的**/clr: pure**。 如需詳細資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)和[程序](../../cpp/process.md)。  
+ 不可能以動態方式初始化處理序專屬變數下的**/clr: pure**。 如需詳細資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)和[程序](../../cpp/process.md)。  
   
 ## <a name="example"></a>範例  
- 下列範例會產生 c2434:。  
+ 下列範例會產生 C2434。  
   
 ```  
 // C2434.cpp  

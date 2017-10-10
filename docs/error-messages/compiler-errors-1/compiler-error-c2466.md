@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2466 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2466"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2466"
+title: "編譯器錯誤 C2466 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2466
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2466
 ms.assetid: 75b251d1-7d0b-4a86-afca-26adedf74486
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2466
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3c3ad19ce37aa51bd6b670da6e857d7eccce04ca
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2466"></a>編譯器錯誤 C2466
 無法配置常數大小為 0 的陣列  
   
- 配置或宣告一個大小為零的陣列。  陣列大小的常數運算式必須是大於零的整數。  註標 \(Subscript\) 為零的陣列宣告只能用於類別、結構或等位的成員，並只能在具有 Microsoft 擴充功能 \([\/Ze](../../build/reference/za-ze-disable-language-extensions.md)\) 時使用。  
+ 配置陣列，或宣告大小為零。 陣列大小的常數運算式必須是大於零的整數。 陣列宣告使用零註標是合法的只有類別、 結構或等位成員，只能搭配 Microsoft 擴充功能 ([/Ze](../../build/reference/za-ze-disable-language-extensions.md))。  
   
- 下列範例會產生 C2466：  
+ 下列範例會產生 C2466:  
   
 ```  
 // C2466.cpp  

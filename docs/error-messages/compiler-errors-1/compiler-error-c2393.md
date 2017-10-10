@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 078454c9824a734863796ab5810056147d17879c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a2c4f8d31fb6ddb6eaa9472dc7537edbcdc29054
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2393"></a>編譯器錯誤 C2393
-'symbol': 無法配置每個 appdomain 符號 '區段' 區段  
+'symbol': per-appdomain 符號不可配置在區段 'segment'  
   
- **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
+ **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
- 使用[appdomain](../../cpp/appdomain.md)變數表示您使用編譯**/clr: pure**或**/clr: safe**，安全或純粹的映像不能包含資料區段。  
+ 使用[appdomain](../../cpp/appdomain.md)變數表示您使用編譯**/clr: pure**或**/clr: safe**，和安全或純粹的映像不能包含的資料區段。  
   
  請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。  
   

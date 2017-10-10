@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: f3abd56aebdf7e83bbab10b6083ad6fc14987fbd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0756ef40282f9a9bffb21788ea1b396600e50362
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1210"></a>嚴重錯誤 C1210
 所安裝的執行階段版本不支援 /clr:pure 和 /clr:safe  
   
- **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
+ **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
  如果您有目前版本的編譯器，但 Common Language Runtime 來自舊版本，就會發生 C1210。  
   

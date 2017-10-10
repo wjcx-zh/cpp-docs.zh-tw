@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2062 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2062"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2062"
+title: "編譯器錯誤 C2062 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2062
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2062
 ms.assetid: 6cc98353-2ddf-43ab-88a2-9cc91cdd6033
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2062
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 775923345052aba99b05f708c417b8bed267119b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-未預期的型別 'type'  
+---
+# <a name="compiler-error-c2062"></a>編譯器錯誤 C2062
+類型 'type' 未預期  
   
- 編譯器 \(Compiler\) 未預期一個型別名稱。  
+ 編譯器未預期的型別名稱。  
   
- 下列範例會產生 C2062：  
+ 下列範例會產生 C2062:  
   
 ```  
 // C2062.cpp  
@@ -37,4 +40,4 @@ struct A {  : int l; };   // C2062
 struct B { private: int l; };   // OK  
 ```  
   
- C2062 也可能會由於編譯器處理建構函式的參數清單中未定義型別的方式而發生。  如果編譯器遭遇未定義 \(拼字錯誤?\) 型別，會假設建構函式是運算式，而發出 C2062。  若要解決此問題，請使用建構函式參數清單中已定義的型別。
+ C2062 也可能是因為編譯器的方式建構函式的參數清單中的控制代碼未定義的類型。 如果編譯器遇到未定義 （拼字錯誤？） 的型別，則會假設建構函式是一個運算式，並發出 C2062。 若要解決，只使用定義的型別建構函式參數清單中。

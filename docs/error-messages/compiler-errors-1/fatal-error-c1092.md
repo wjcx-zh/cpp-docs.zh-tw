@@ -19,37 +19,23 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 6d93fd662b638126e21d5f5f034138c0e6f0e0ad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fac0a5218e1faf16d3db459567c36775acd9bb12
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1092"></a>嚴重錯誤 C1092
 編輯後繼續不支援對資料類型的變更; 需要先進行建置  
   
- 變更或新增的最後一個成功組建後的資料型別。  
+ 您已變更，或上次成功組建之後加入的資料類型。  
   
--   編輯後繼續 不支援變更現有的資料類型，包括類別、 結構或列舉的定義。 您必須停止偵錯，並建置應用程式。  
+-   編輯後繼續不支援變更現有的資料類型，包括類別、 結構或列舉的定義。 您必須停止偵錯，並建置應用程式。  
   
--   編輯後繼續 不支援附加新資料型別如果程式資料庫檔案，例如 vc*x*0.pdb (其中*x*是使用中的主要版本的 Visual c + +) 是唯讀的。 若要加入資料型別，編譯器必須在寫入模式中開啟的.pdb 檔。  
+-   編輯後繼續不支援附加新資料型別如果程式資料庫檔案，例如 vc*x*0 pdb (其中*x*是使用中的主要版本的 Visual c + +) 是唯讀的。 若要加入的資料類型，編譯器必須在寫入模式開啟的.pdb 檔案。  
   
-### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>若要移除此錯誤，而不需要結束目前的偵錯工作階段  
+### <a name="to-remove-this-error-without-ending-the-current-debug-session"></a>若要移除這個錯誤，而不需要結束目前的偵錯工作階段  
   
 1.  請將資料類型改回錯誤之前的狀態。  
   
@@ -61,4 +47,4 @@ ms.lasthandoff: 02/24/2017
   
 2.  從 [建置]  功能表選擇 [建置] 。  
   
- 如需詳細資訊，請參閱[支援的程式碼變更](/visualstudio/debugger/supported-code-changes-cpp)。
+ 如需詳細資訊，請參閱 [支援的程式碼變更](/visualstudio/debugger/supported-code-changes-cpp)。

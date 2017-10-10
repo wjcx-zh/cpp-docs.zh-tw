@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2364 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2364"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2364"
+title: "編譯器錯誤 C2364 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2364
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2364
 ms.assetid: 4f550571-94b5-42ca-84cb-663fecbead44
 caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2364
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d7c5042d4b5984a87b52cefafd1f591ec662ab48
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type': 自訂屬性的型別不合法  
+---
+# <a name="compiler-error-c2364"></a>編譯器錯誤 C2364
+'type': 自訂屬性的類型不合法  
   
- 自訂屬性的具名引數僅限於編譯時期常數。  例如，整數類資料型別 \(Integral Type，如 int、char 等\)、System::TYpe^ 和 System::Object^。  
+ 自訂屬性的具名引數的上限為編譯時間常數。 例如，整數類資料類型 （int、 char 等）、 system:: type ^，和 system:: object ^。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2364。  
   
 ```  

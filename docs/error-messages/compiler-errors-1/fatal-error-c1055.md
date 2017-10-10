@@ -1,37 +1,40 @@
 ---
-title: "嚴重錯誤 C1055 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1055"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1055"
+title: "嚴重錯誤 C1055 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1055
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1055
 ms.assetid: a9fb9190-d7eb-4d5f-b1a2-a41e584a28c1
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 嚴重錯誤 C1055
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 68b9dc5ac8a574111a678086a03e2760941e766f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-編譯器限制：索引鍵不足  
+---
+# <a name="fatal-error-c1055"></a>嚴重錯誤 C1055
+編譯器限制： 索引鍵不足  
   
- 原始程式檔包含的符號太多。  編譯器用完了符號表的雜湊機碼。  
+ 來源檔案包含太多符號。 編譯器已用完符號表的雜湊索引鍵。  
   
-### 若要採用下列可能解決方式以進行修正  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正  
   
-1.  將原始程式檔分割成較小的檔案。  
+1.  將來源檔案分割成較小的檔案。  
   
-2.  排除不必要的標頭檔 \(Header File\)。  
+2.  消除不必要的標頭檔。  
   
-3.  重複使用暫存和全域變數，而不要建立新的變數。
+3.  重複使用暫存和全域變數，而不必建立新的。

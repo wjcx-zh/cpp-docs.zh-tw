@@ -1,41 +1,43 @@
 ---
-title: "編譯器錯誤 C2660 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2660"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2660"
+title: "編譯器錯誤 C2660 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2660
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2660
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1a93046493897b69e4b557607d823566d82070f5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 函式不使用數字參數  
+---
+# <a name="compiler-error-c2660"></a>編譯器錯誤 C2660
+'function': 函式不接受數字參數  
   
- 這個函式使用不正確的參數編號呼叫。  
+ 呼叫函式的參數數目不正確。  
   
- 如果不小心呼叫 Windows API 函式，而不是相同名稱的 MFC 成員函式，可能會生 C2660。  若要解決這個問題：  
+ 如果您不小心呼叫 Windows API 函式，而不是相同名稱的 MFC 成員函式，可能會發生 C2660。 若要解決此問題：  
   
--   將函式呼叫 \(Function Call\) 調整成與成員函式呼叫的格式一致。  
+-   調整函式呼叫，以符合成員函式呼叫的格式。  
   
--   使用範圍解析 \(Scope Resolution\) 運算子 \(`::`\) 來告知編譯器，在全域命名空間內搜尋此函式名稱。  
+-   使用範圍解析運算子 (`::`) 以告訴編譯器来搜尋的通用命名空間中的函數名稱。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2660。  
   
 ```  
@@ -48,8 +50,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果您嘗試直接呼叫 Managed 型別的 Dispose 方法，也可能會發生 C2660。  如需詳細資訊，請參閱 [解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  下列範例會產生 C2660。  
+## <a name="example"></a>範例  
+ 如果您嘗試直接呼叫 managed 類型的 Dispose 方法，也會發生 C2660。 如需詳細資訊，請參閱[解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。 下列範例會產生 C2660。  
   
 ```  
 // C2660_a.cpp  
@@ -69,8 +71,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果衍生類別隱藏了函式，就會發生 C2660。  
+## <a name="example"></a>範例  
+ 如果在衍生的類別會隱藏函式，會發生 C2660。  
   
 ```  
 // C2660b.cpp  
@@ -99,8 +101,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果叫用索引屬性的方式不正確，可能會發生 C2660。  
+## <a name="example"></a>範例  
+ 如果您叫用的索引的屬性不正確，可能會發生 C2660。  
   
 ```  
 // C2660c.cpp  
@@ -123,8 +125,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果叫用索引屬性的方式不正確，可能會發生 C2660。  
+## <a name="example"></a>範例  
+ 如果您叫用的索引的屬性不正確，可能會發生 C2660。  
   
 ```  
 // C2660d.cpp  
@@ -145,8 +147,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果您在樣板類別中定義新運算子，但新運算子在其中建立型別非封入型別 \(Enclosing Type\) 的物件，則可能會發生 C2660。  
+## <a name="example"></a>範例  
+ 如果您在樣板類別，定義新的運算子，但在新的運算子會建立的物件，其類型為封入類型以外，可能會發生 C2660。  
   
 ```  
 // C2660e.cpp  

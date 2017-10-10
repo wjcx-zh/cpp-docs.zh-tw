@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C3073 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3073"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3073"
+title: "編譯器錯誤 C3073 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3073
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3073
 ms.assetid: b24b9b8b-f9fb-4c3c-a1a0-97fad2081bfc
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C3073
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 860cc8fccb545a8c66a8a5724b9854e9547deb10
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type' : ref 類別沒有使用者定義的複製建構函式  
+---
+# <a name="compiler-error-c3073"></a>編譯器錯誤 C3073
+'type': ref 類別沒有使用者定義的複製建構函式  
   
- 在 [\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md) 編譯中，編譯器不會產生參考型別的複製建構函式。  在任何 **\/clr** 編譯中，如果必須要複製型別的執行個體，您都必須自行定義參考型別的複製建構函式。  
+ 在[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)編譯時，編譯器不會產生參考類型的複製建構函式。 在任何**/clr**編譯時，您必須定義您自己的複製建構函式是參考型別，如果您預期要複製類型的執行個體。  
   
- 如需詳細資訊，請參閱[參考類型的 C\+\+ 堆疊語意](../../dotnet/cpp-stack-semantics-for-reference-types.md)。  
+ 如需詳細資訊，請參閱[參考類型的 c + + 堆疊語意](../../dotnet/cpp-stack-semantics-for-reference-types.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3073。  
   
 ```  

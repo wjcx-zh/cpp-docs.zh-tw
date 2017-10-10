@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 07b7fd0668eef1137f81d435dd89fefe314ad64e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 313b5d1d6b0d8204d4d4716d0671e8093f4978d5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3044"></a>編譯器錯誤 C3044
 'section' : 只允許以巢狀方式直接放在 OpenMP 'sections' 指示詞之下  
   
- 編譯器發現 `section` 指示詞的使用方式錯誤。 如需詳細資訊，請參閱[區段](../../parallel/openmp/reference/sections-openmp.md)。  
+ 編譯器發現 `section` 指示詞的使用方式錯誤。 如需詳細資訊，請參閱 [章節](../../parallel/openmp/reference/sections-openmp.md)。  
   
  下列範例會產生 C3044：  
   

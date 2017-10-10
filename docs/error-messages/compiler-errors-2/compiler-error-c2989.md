@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C2989 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2989"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2989"
+title: "編譯器錯誤 C2989 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2989
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2989
 ms.assetid: 936303d8-eb3b-4746-82ec-2f18020a6f64
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 編譯器錯誤 C2989
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 447d7d21cfc1ed95c9851ef310a4cb15bcdaf53e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'class' : 類別 type 已宣告為非類別 type  
+---
+# <a name="compiler-error-c2989"></a>編譯器錯誤 C2989
+'class': 類別類型已經宣告為非類別類型  
   
- 類別泛型或樣板重複定義非泛型或非樣板類別。  請檢查標頭檔是否有衝突。  
+ 泛型類別或範本會重新定義非泛型或非樣板類別。 請檢查衝突的標頭檔。  
   
- 如果您使用類別樣板部分特製化，請參閱知識庫 \(Knowledge Base\) 文件 Q240866。  
+ 如果您使用類別樣板的部分特製化，請參閱知識庫文件 Q240866。  
   
- 下列範例會產生 C2989：  
+ 下列範例會產生 C2989:  
   
 ```  
 // C2989.cpp  
@@ -42,7 +45,7 @@ class C{};  // C2989
 class C2{};  
 ```  
   
- 使用 Generics 時也可能發生 C2989：  
+ 使用泛型時，也會發生 C2989:  
   
 ```  
 // C2989b.cpp  

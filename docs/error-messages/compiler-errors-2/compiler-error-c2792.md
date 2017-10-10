@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2792 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2792"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2792"
+title: "編譯器錯誤 C2792 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2792
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2792
 ms.assetid: 392cf748-4f5e-4e62-a364-3118d5658408
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2792
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 16a07fcc43ffde40a4ac540d3e5dbaa8891ea48e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'super' : 此關鍵字之後必須跟隨 '::'  
+---
+# <a name="compiler-error-c2792"></a>編譯器錯誤 C2792
+'super': 此關鍵字後面必須接著 ':: '  
   
- 唯一可以跟隨在 `__super` 關鍵字之後的語彙基元 \(Token\) 是 `::`。  
+ 只有語彙基元時可遵循關鍵字`__super`是`::`。  
   
- 下列範例會產生 C2792：  
+ 下列範例會產生 C2792:  
   
 ```  
 // C2792.cpp  

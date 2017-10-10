@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d29b7a2f9a618639b934a32d92d2655766f094ba
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ee25c25fd1c808ece4a6ef7f8538b83216c4b180
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2890"></a>編譯器錯誤 C2890
-'class': ref 類別只能有一個非介面的基底類別  
+'class': ref 類別只能有一個非介面基底類別  
   
  參考類別只能有一個基底類別。  
   

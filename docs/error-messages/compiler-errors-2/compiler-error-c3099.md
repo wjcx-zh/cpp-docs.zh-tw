@@ -1,36 +1,39 @@
 ---
-title: "Compiler Error C3099 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3099"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3099"
+title: "編譯器錯誤 C3099 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3099
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Compiler Error C3099
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b0303ef909d6f18cb54c70bc64ab06d415e96da5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'keyword': 對 Managed 屬性使用 \[System::AttributeUsageAttribute\]；對 WinRT 屬性使用 \[Windows::Foundation::Metadata::AttributeUsageAttribute\]  
+---
+# <a name="compiler-error-c3099"></a>編譯器錯誤 C3099
+'keyword': 對 Managed 屬性使用 [System::AttributeUsageAttribute]；對 WinRT 屬性使用 [Windows::Foundation::Metadata::AttributeUsageAttribute]  
   
- 使用 <xref:System.AttributeUsageAttribute> 宣告 **\/clr** 屬性。  使用 `Windows::Foundation::Metadata::AttributeUsageAttribute` 宣告 Windows 執行階段屬性。  
+ 使用<xref:System.AttributeUsageAttribute>宣告**/clr**屬性。 使用 `Windows::Foundation::Metadata::AttributeUsageAttribute` 宣告 Windows 執行階段屬性。  
   
- 如需 \/CLR 屬性的詳細資訊，請參閱[User\-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)。  如需 Windows 執行階段中支援的屬性，請參閱 [Windows.Foundation.Metadata 命名空間](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
+ 如需 /CLR 屬性的詳細資訊，請參閱[使用者定義的屬性](../../windows/user-defined-attributes-cpp-component-extensions.md)。 支援 Windows 執行階段中的屬性，請參閱[Windows.Foundation.Metadata 命名空間](http://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3099，並示範如何修正此問題。  
   
 ```  

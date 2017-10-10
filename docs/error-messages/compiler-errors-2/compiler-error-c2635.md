@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2635 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2635"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2635"
+title: "編譯器錯誤 C2635 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2635
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2635
 ms.assetid: 9deca2a8-2d61-42eb-9783-6578132ee3fb
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2635
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a8ff1361a312c8d2abf7e07de3add2dbd3254ca
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-無法將 'identifier1\*' 轉換成 'identifier2\*'; 虛擬基底類別是隱含轉換  
+---
+# <a name="compiler-error-c2635"></a>編譯器錯誤 C2635
+無法轉換成 'identifier1 *'' identifier2\*'; 隱含轉換，從虛擬基底類別  
   
- 不允許需要從 `virtual` 基底類別轉換為衍生類別的轉換。  
+ 轉換需要轉換從`virtual`基底類別衍生的類別，這不允許。  
   
- 下列範例會產生 C2635：  
+ 下列範例會產生 C2635:  
   
 ```  
 // C2635.cpp  

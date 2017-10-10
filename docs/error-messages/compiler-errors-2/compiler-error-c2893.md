@@ -1,37 +1,40 @@
 ---
-title: "編譯器錯誤 C2893 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2893"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2893"
+title: "編譯器錯誤 C2893 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2893
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2893
 ms.assetid: ec0cbe43-005d-45da-8742-aaeb9b81d28e
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C2893
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6ad558968720a13b95fecc6860df5826b47874aa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-特製化函式樣板 'template name' 失敗  
+---
+# <a name="compiler-error-c2893"></a>編譯器錯誤 C2893
+無法特製化函式樣板 '範本名稱'  
   
- 編譯器未能特製化函式樣板。  造成此項錯誤的原因有許多。  
+ 編譯器無法特製化函式樣板。 可以有許多原因造成此錯誤。  
   
- 一般來說，解決 C2893 錯誤的方法是檢閱函式的簽章，並確定您可以具現化每一個型別。  
+ 一般情況下，若要解決 C2893 錯誤的方式是檢閱函式的簽章，並請確定您可以具現化每個型別。  
   
-## 範例  
- 造成 C2893 的原因可能是：`f` 的樣板參數 `T` 是推算為 `std::map<int,int>`，但 `std::map<int,int>` 沒有任何成員 `data_type` \(`T::data_type` 不能以 `T = std::map<int,int>` 具現化\)。  下列範例會產生 C2893：  
+## <a name="example"></a>範例  
+ C2893 發生是因為`f`的樣板參數`T`推算出是`std::map<int,int>`，但`std::map<int,int>`沒有成員`data_type`(`T::data_type`不具現化與`T = std::map<int,int>`。)。 下列範例會產生 C2893。  
   
 ```  
 // C2893.cpp  

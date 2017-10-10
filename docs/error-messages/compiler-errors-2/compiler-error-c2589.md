@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C2589 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2589"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2589"
+title: "編譯器錯誤 C2589 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2589
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2589
 ms.assetid: 1d7942c7-8a81-4bb4-b272-76a0019e8513
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2589
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5301caf0b52e61000a804e1d73b76343a8b7b2eb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : '::' 右邊的語彙基元不合法  
+---
+# <a name="compiler-error-c2589"></a>編譯器錯誤 C2589
+'identifier': 不合法的語彙基元，在右邊 ':: '  
   
- 如果範圍解析運算子 \(兩個冒號\) 的左側出現類別、結構或等位名稱，則其右側的語彙基元 \(Token\) 必須是類別、結構或等位成員。  要不然，任何全域識別項會出現在右側。  
+ 如果類別、 結構或等位名稱會顯示在左邊的範圍解析運算子 （雙冒號），在右邊的語彙基元必須是類別、 結構或等位成員。 否則，任何全域識別項可以出現在右邊。  
   
- 範圍解析 \(Scope Resolution\) 運算子不可多載。  
+ 範圍解析運算子無法多載。  
   
- 下列範例會產生 C2589：  
+ 下列範例會產生 C2589:  
   
 ```  
 // C2589.cpp  

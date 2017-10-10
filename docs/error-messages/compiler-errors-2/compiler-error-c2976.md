@@ -19,33 +19,19 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: d691eba50403819e1a468b850995f4ae55a3731f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 49250abe3cef048b15f7af87f643002640fe6bf5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2976"></a>編譯器錯誤 C2976
-'identifier': 類型引數太少  
+'identifier': 型別引數太少  
   
- 泛型或樣板缺少一或多個實際的引數。 請檢查泛型或樣板宣告，以找出正確的參數數目。  
+ 泛型或樣板遺漏一個或多個實際引數。 請檢查泛型或樣板宣告，以找出正確的參數數目。  
   
- 此錯誤可能被因遺漏 c + + 標準程式庫元件中的樣板引數。  
+ 這個錯誤可能被因遺漏 c + + 標準程式庫元件中的樣板引數。  
   
  下列範例會產生 C2976:  
   

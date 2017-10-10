@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: d6e26077e9ced646615681c1472661145939887a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0fe35a4021cca6ac1e3dd9846a3c165f50797f4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3042"></a>編譯器錯誤 C3042
 'copyprivate' 和 'nowait' 子句不可以同時出現在 OpenMP 'directive' 指示詞中  
   
- [Copyprivate](../../parallel/openmp/reference/copyprivate.md)和[nowait](../../parallel/openmp/reference/nowait.md)子句互斥上指定的指示詞。 若要修正這個錯誤，請移除 `copyprivate` 及/或 `nowait` 子句。  
+ 在指定的指示詞上， [copyprivate](../../parallel/openmp/reference/copyprivate.md) 與 [nowait](../../parallel/openmp/reference/nowait.md) 子句互斥。 若要修正這個錯誤，請移除 `copyprivate` 及/或 `nowait` 子句。  
   
  下列範例會產生 C3042：  
   

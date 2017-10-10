@@ -1,49 +1,51 @@
 ---
-title: "編譯器錯誤 C2664 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2664"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2664"
+title: "編譯器錯誤 C2664 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2664
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
 caps.latest.revision: 28
-caps.handback.revision: 28
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2664
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 933ef66a4f4fabea46c3f1ebaede1ea51429141c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2664"></a>編譯器錯誤 C2664
 'function': 無法將引數 n 從 'type1' 轉換成 'type2'  
   
- 如果您建立了類別的執行個體，並嘗試在標記了 `explicit` 關鍵字的建構函式上進行隱含轉換，則可能會發生這個參數轉換問題。  如需明確轉換的詳細資訊，請參閱[轉換](../../cpp/user-defined-type-conversions-cpp.md)。  
+ 如果您建立了類別的執行個體，並嘗試在標記了 `explicit` 關鍵字的建構函式上進行隱含轉換，則可能會發生這個參數轉換問題。 如需明確轉換的詳細資訊，請參閱[使用者定義型別轉換](../../cpp/user-defined-type-conversions-cpp.md)。  
   
  如果將暫存物件傳遞至採用物件參考做為參數的函式，則該參考必須是 `const` 參考。  
   
- 如果函式收到的參數不屬於函式預期的類型，則會使用適當的建構函式建立暫存物件。  之後，會將此暫存物件傳遞至函式上。  在這種情形，此暫存物件被用來初始化參考。  在舊版的語言中，所有參考都可以由暫存物件進行初始化。  
+ 如果函式收到的參數不屬於函式預期的類型，則會使用適當的建構函式建立暫存物件。 之後，會將此暫存物件傳遞至函式上。 在這種情形，此暫存物件被用來初始化參考。 在舊版的語言中，所有參考都可以由暫存物件進行初始化。  
   
  若要修正 C2664，  
   
--   重新檢查給定函式的原型 \(Prototype\)，並修正錯誤訊息中所指出的引數。  
+-   重新檢查給定函式的原型 (Prototype)，並修正錯誤訊息中所指出的引數。  
   
 -   若有必要，請提供一明確轉換。  
   
  如果類別將成員隱藏在它的基底類別其中一個之內，也可能會產生 C2664。  
   
- 如需詳細資訊，請參閱[如何：將 System::String 轉換為 wchar\_t\* 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。  
+ 如需詳細資訊，請參閱[How to： 將 system:: string 轉換 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2664，並示範如何修正此問題。  
   
 ```  
@@ -66,7 +68,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  此範例也會產生 C2664，並示範如何修正此問題。  
   
 ```  
@@ -84,8 +86,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下一個範例將使用字串常值呼叫 `Test` 來示範 C2664，並示範如何修正此問題。  因為參數是 `szString` 參考，所以必須經由適當的建構函式來建立物件。  產生的結果是一個無法被用來初始化參考的暫存物件。  
+## <a name="example"></a>範例  
+ 下一個範例將使用字串常值呼叫 `Test` 來示範 C2664，並示範如何修正此問題。 因為參數是 `szString` 參考，所以必須經由適當的建構函式來建立物件。 產生的結果是一個無法被用來初始化參考的暫存物件。  
   
 ```  
 // C2664c.cpp  
@@ -124,8 +126,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 編譯器會強制執行套用 `const` 的 C\+\+ 標準需求。  此範例會產生 C2664：  
+## <a name="example"></a>範例  
+ 編譯器會強制執行套用 `const` 的 C++ 標準需求。 此範例會產生 C2664：  
   
 ```  
 // C2664d.cpp  
@@ -148,7 +150,7 @@ int main()
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  以下是一個會產生 C2664 的比較複雜狀況，包含其修正指示：  
   
 ```  
@@ -192,8 +194,8 @@ int main( ) {
 }  
 ```  
   
-## 範例  
- 列舉變數未轉換為其基礎類型，而得以滿足函式呼叫。  如需詳細資訊，請參閱 [enum class](../../windows/enum-class-cpp-component-extensions.md)。  下列範例會產生 C2664，並示範如何修正此問題。  
+## <a name="example"></a>範例  
+ 列舉變數未轉換為其基礎類型，而得以滿足函式呼叫。 如需詳細資訊，請參閱[列舉類別](../../windows/enum-class-cpp-component-extensions.md)。 下列範例會產生 C2664，並示範如何修正此問題。  
   
 ```  
 // C2664f.cpp  
@@ -213,8 +215,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- midl 編譯器中的 Bug 會造成將 wchar\_t 類型做為類型程式庫中不帶正負號的短整數發出。  若要解決這項錯誤，請轉換 C\+\+ 原始程式碼中的類型，或是將類型定義為 idl 檔中的字串。  
+## <a name="example"></a>範例  
+ midl 編譯器中的 Bug 會造成將 wchar_t 類型做為類型程式庫中不帶正負號的短整數發出。 若要解決這項錯誤，請轉換 C++ 原始程式碼中的類型，或是將類型定義為 idl 檔中的字串。  
   
 ```  
 // C2664g.idl  
@@ -235,9 +237,9 @@ library myproj1 {
 }  
 ```  
   
- 從 Visual C\+\+ 6.0 將程式碼移植到以後版本時，也會使用 `wchar_t` 引發 C2664。  在 Visual C\+\+ 6.0 \(含\) 以前版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此可隱含轉換為該類型。  在 Visual C\+\+ 6.0 之後，`wchar_t` 是它本身的內建類型，如同 C\+\+ 標準中所指定，而且不再能夠隱含轉換為 `unsigned short`。  請參閱 [\/Zc:wchar\_t \(wchar\_t 是原生類型\)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
+ 從 Visual C++ 6.0 將程式碼移植到以後版本時，也會使用 `wchar_t` 引發 C2664。 在 Visual C++ 6.0 (含) 以前版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此可隱含轉換為該類型。 在 Visual C++ 6.0 之後，`wchar_t` 是它本身的內建類型，如同 C++ 標準中所指定，而且不再能夠隱含轉換為 `unsigned short`。 請參閱[/zc: wchar_t （wchar_t 是原生類型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2664，並示範如何修正此問題。  
   
 ```  
@@ -258,7 +260,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  如果編譯器無法減少樣板引數，也會造成 C2664。  
   
 ```  

@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 32a63dcc218d7319b74a4b6941b2b25d6910e4a5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3ddd3aaface0e500dc92778333cd3672398909da
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3038"></a>編譯器錯誤 C3038
 'var': 'private' 子句中的變數在封入內容中不可為削減變數  
   
- 變數出現在[減少](../../parallel/openmp/reference/reduction.md)平行指示詞子句中不能指定[私人](../../parallel/openmp/reference/private-openmp.md)繫結至平行建構工作共用指示詞上的子句。  
+ 在平行指示詞的 [reduction](../../parallel/openmp/reference/reduction.md) 子句中出現的變數，不能指定於繫結至平行建構之工作共用指示詞的 [private](../../parallel/openmp/reference/private-openmp.md) 子句中。  
   
  下列範例會產生 C3038：  
   

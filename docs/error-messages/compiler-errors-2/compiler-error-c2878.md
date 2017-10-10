@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2878 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2878"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2878"
+title: "編譯器錯誤 C2878 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2878
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2878
 ms.assetid: 83ee3de1-f554-49e8-a840-1f550cee7f69
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2878
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ac362394345e144cfb3d50d7886ae8f4aef29c3d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'name' : 此名稱的命名空間或類別不存在  
+---
+# <a name="compiler-error-c2878"></a>編譯器錯誤 C2878
+'name': 命名空間或類別，此名稱不存在  
   
- 您參考至未定義的命名空間或類別。  
+ 您所做的命名空間或未定義的類別的參考。  
   
- 下列範例會產生 C2878：  
+ 下列範例會產生 C2878:  
   
 ```  
 // C2878.cpp  

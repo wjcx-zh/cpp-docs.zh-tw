@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: c48d0f5017fa22b0ecb725278fdc6818ecebf405
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e51938cbea3b2ab1e65cf97dc515bb7f420cf272
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3059"></a>編譯器錯誤 C3059
 'var': 'threadprivate' 符號不可使用在 'clause' 子句  
   
- A [threadprivate](../../parallel/openmp/reference/threadprivate.md)子句中使用符號。  
+ 子句中使用了 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 符號。  
   
  下列範例會產生 C3059：  
   

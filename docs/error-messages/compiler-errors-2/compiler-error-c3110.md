@@ -1,32 +1,35 @@
 ---
-title: "編譯器錯誤 C3110 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3110"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3110"
+title: "編譯器錯誤 C3110 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3110
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3110
 ms.assetid: 821dc71f-896e-4b2d-af0e-aa9932934b7b
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C3110
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573b7bbbe40929d291c10426e7826293e8dfd4bc
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function\_name' ：您無法多載 COM 介面方法  
+---
+# <a name="compiler-error-c3110"></a>編譯器錯誤 C3110
+'function_name': 無法多載 COM 介面方法  
   
- 如果介面的前端有介面屬性，例如  
+ 介面的開頭處會有介面屬性，例如：  
   
 -   [自訂](../../windows/custom-cpp.md)  
   
@@ -36,7 +39,7 @@ caps.handback.revision: 7
   
 -   [object](../../windows/object-cpp.md)  
   
- 則無法被多載。  例如：  
+ 無法多載。 例如：  
   
 ```  
 // C3110.cpp  

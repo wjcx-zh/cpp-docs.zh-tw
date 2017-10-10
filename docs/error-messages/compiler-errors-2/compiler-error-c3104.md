@@ -19,35 +19,21 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3104"></a>編譯器錯誤 C3104
 不合法的屬性引數  
   
- 您指定無效的引數的屬性。  
+ 您已指定無效的引數的屬性。  
   
  請參閱[屬性參數類型](../../windows/attribute-parameter-types-cpp-component-extensions.md)如需詳細資訊。  
   
- 此錯誤可能會產生編譯器一致性工作讓 Visual c + + 2005 所完成之︰ 時將 managed 的陣列傳遞至自訂屬性，從彙總初始化清單不會再推算的類型陣列。 編譯器現在會要求您指定的陣列，以及初始設定式清單型別。  
+ 針對 Visual c + + 2005年所進行的編譯器一致性工作可能會導致這個錯誤： 當受管理的陣列傳遞至自訂屬性，從彙總初始設定清單不會再推算陣列的型別。 編譯器現在會要求您指定的陣列，以及初始設定式清單的類型。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C3104。  

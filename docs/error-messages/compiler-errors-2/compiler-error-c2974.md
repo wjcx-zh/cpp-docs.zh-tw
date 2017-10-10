@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2974 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2974"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2974"
+title: "編譯器錯誤 C2974 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2974
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C2974
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e24e25816ac646bcf26099abbfa8e681fdd72a6e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-無效型別引數 'number'，型別必須是  
+---
+# <a name="compiler-error-c2974"></a>編譯器錯誤 C2974
+無效的型別引數 'number'、 預期的類型  
   
- 泛型或樣板引數與泛型或樣板宣告不相符。  型別應該出現在角括弧內。  請檢查泛型或樣板定義，以找出正確的型別。  
+ 泛型或樣板引數不符合泛型或樣板宣告。 型別應該會出現在角括弧內。 檢查泛型或樣板定義，以找出正確的型別。  
   
- 下列範例會產生 C2974：  
+ 下列範例會產生 C2974:  
   
 ```  
 // C2974.cpp  
@@ -49,7 +52,7 @@ int main() {
 }  
 ```  
   
- 使用 Generics 時也可能發生 C2974：  
+ 使用泛型時，也會發生 C2974:  
   
 ```  
 // C2974b.cpp  

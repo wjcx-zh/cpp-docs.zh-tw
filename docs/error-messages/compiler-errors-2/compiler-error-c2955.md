@@ -19,25 +19,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 1d2d589ad29896cda2657888c616388e50cc397a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af3f53545aa70e738f14c902a7a75afc48275b57
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2955"></a>編譯器錯誤 C2955

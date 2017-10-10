@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3115 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3115"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3115"
+title: "編譯器錯誤 C3115 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3115
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 編譯器錯誤 C3115
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b50cf777b061f97e2243d32362c0c19247e2c97c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'attribute': 'construct' 上不允許這個屬性  
+---
+# <a name="compiler-error-c3115"></a>編譯器錯誤 C3115
+'attribute': 這個屬性不允許 'construct' 上  
   
- 屬性套用到不是原來要用的建構函式。如需詳細資訊，請參閱[Attributes by Usage](../../windows/attributes-by-usage.md)。  
+ 屬性已套用至不適合的建構。  請參閱[屬性的用法](../../windows/attributes-by-usage.md)如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3115。  
   
 ```  

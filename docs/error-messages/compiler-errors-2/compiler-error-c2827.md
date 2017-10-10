@@ -1,35 +1,38 @@
 ---
-title: "編譯器錯誤 C2827 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2827"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2827"
+title: "編譯器錯誤 C2827 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2827
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C2827
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e061c619ca936afaefe392fb808a22c1a19a27ba
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'operator operator' 不可以使用一元形式進行全域覆寫  
+---
+# <a name="compiler-error-c2827"></a>編譯器錯誤 C2827
+'operator operator' 不是全域覆寫使用一元形式  
   
- 物件外的運算子不能有一元型式。  
+ 運算子不能有一元表單外部物件。  
   
-### 若要採用下列可能解決方式以進行修正  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正  
   
-1.  使多載運算子成為物件的區域成員。  
+1.  對物件進行多載的運算子本機。  
   
-2.  選擇適當的一元運算子來多載。
+2.  選擇適當的一元運算子多載。

@@ -1,47 +1,50 @@
 ---
-title: "編譯器錯誤 C3068 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3068"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3068"
+title: "編譯器錯誤 C3068 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3068
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C3068
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 413376428e33cbc703b3371589777ba4fed0c1f7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 'naked' 函式不可包含必須在發生 C\+\+ 例外狀況時回溯的物件  
+---
+# <a name="compiler-error-c3068"></a>編譯器錯誤 C3068
+'function': 'naked' 函式不能包含需要的物件會回溯發生 c + + 例外狀況  
   
- 編譯器無法在其中建立了暫存物件而擲回例外狀況，並指定了 C\+\+ 例外處理 \([\/EHsc](../../build/reference/eh-exception-handling-model.md)\) 的 [naked](../../cpp/naked-cpp.md) 函式上執行堆疊回溯。  
+ 編譯器無法執行上的堆疊回溯[naked](../../cpp/naked-cpp.md)函式擲回例外狀況，因為暫存物件建立在函式和 c + + 例外狀況處理 ([/EHsc](../../build/reference/eh-exception-handling-model.md)) 指定。  
   
- 若要解決這個錯誤，請至少執行下列一種方法：  
+ 若要解決這個錯誤，請執行至少下列其中一種動作：  
   
--   不要使用 \/EHsc 編譯。  
+-   不使用 /EHsc 編譯。  
   
--   不要將函式標記為 `naked`。  
+-   不會標示為函式`naked`。  
   
--   不要在函式中建立暫存物件。  
+-   Do 在函式中建立暫存物件。  
   
- 如果函式在堆疊上建立了暫存物件，如果函式擲回例外狀況，而且如果啟用了 C\+\+ 例外處理，若擲回例外狀況，編譯器會清除堆疊。  
+ 如果函式會建立暫存物件在堆疊上，如果函式會擲回的例外狀況，而且如果啟用 c + + 例外狀況處理，編譯器將會清除堆疊發生例外狀況。  
   
- 擲回例外狀況時，編譯器會產生程式碼，呼叫初構 \(prolog\) 和終解 \(Epilog\) 程式碼，兩者都不在 naked 函式中，而是從函式中執行。  
+ 當擲回例外狀況、 編譯器產生的程式碼，呼叫的初構和終解但不會出現在 naked 函式時，會執行函式。  
   
-## 範例  
- 下列範例會產生 C3068：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3068:  
   
 ```  
 // C3068.cpp  

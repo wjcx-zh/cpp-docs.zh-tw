@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2652 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2652"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2652"
+title: "編譯器錯誤 C2652 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2652
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2652
 ms.assetid: 6e3d1a90-a989-4088-8afd-dc82f6a2d66f
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2652
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 56cfdf52ec3a6947a6a82774f551fc1a6880c959
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 複製建構函式不合法: 第一個參數不能是 'identifier'  
+---
+# <a name="compiler-error-c2652"></a>編譯器錯誤 C2652
+'identifier': 不合法的複製建構函式： 第一個參數不得為 'identifier'  
   
- 複製建構函式中的第一個參數，其型別和定義它的類別、結構或等位的型別相同。  第一個參數可以是型別的參考，但不能是型別本身。  
+ 複製建構函式的第一個參數具有相同的類別、 結構或等位為其定義的型別。 第一個參數可以是參考的類型，但不是類型本身。  
   
- 下列範例會產生 C2651：  
+ 下列範例會產生 C2651:  
   
 ```  
 // C2652.cpp  

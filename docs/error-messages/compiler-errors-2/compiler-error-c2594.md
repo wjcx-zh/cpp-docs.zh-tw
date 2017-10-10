@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2594 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2594"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2594"
+title: "編譯器錯誤 C2594 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2594
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2594
 ms.assetid: 68cd708f-266e-44b0-a211-3e3ab63b11bf
 caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2594
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6a73e5202b90a0bc436d93be142162531c6d204
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'operator' : 從 'type1' 至 'type2' 的轉換模稜兩可  
+---
+# <a name="compiler-error-c2594"></a>編譯器錯誤 C2594
+'operator': 從 'type1' 模稜兩可的轉換成 'type2'  
   
- 沒有比從 *type1* 至 *type2* 的轉換有其他任何更直接的轉換。  建議您可以使用兩種可能的解決方式來從 *type1* 轉換至 *type2*。  第一個選項是定義從 *type1* 至 *type2* 的直接轉換，第二個選項則是指定從 *type1* 至 *type2* 的轉換序列。  
+ 沒有從轉換*type1*至*type2*比其他更直接的。 我們建議兩種可能的解決方案從轉換*type1*至*type2*。 第一個選項是定義從直接轉換*type1*至*type2*，且第二個選項來指定從轉換的序列*type1*至*type2*。  
   
- 下列範例會產生 C2594。  此錯誤的建議解決方式是使用轉換序列：  
+ 下列範例會產生 C2594。 錯誤的建議解決方法是一串轉換：  
   
 ```  
 // C2594.cpp  

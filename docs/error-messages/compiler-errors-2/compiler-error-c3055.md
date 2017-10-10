@@ -19,32 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f5c657322e901da8658e5d7d99e3d28c3392b579
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b85138c6183598c8db2ab89099aa66940f60e8cd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3055"></a>編譯器錯誤 C3055
 'symbol' : 符號必須先使用在 'threadprivate' 指示詞中，然後才能夠被參考  
   
- 符號已被參考並接著用於[threadprivate](../../parallel/openmp/reference/threadprivate.md)子句，這不允許。  
+ 符號已被參考並接著用於 [threadprivate](../../parallel/openmp/reference/threadprivate.md) 子句中，這不是允許的做法。  
   
  下列範例會產生 C3055：  
   

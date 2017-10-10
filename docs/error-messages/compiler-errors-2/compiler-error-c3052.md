@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 65c77919d980d574c0dacb27e9fc33f94d80391f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59686a585f66092fbf059cc5e84f7da493134b7f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3052"></a>編譯器錯誤 C3052
 'var' : 變數未出現在 default(none) 子句下的資料共用子句中  
   
- 如果[default （none)](../../parallel/openmp/reference/default-openmp.md)是使用，在結構化區塊中使用任何變數必須明確指定為[共用](../../parallel/openmp/reference/shared-openmp.md)或[私人](../../parallel/openmp/reference/private-openmp.md)。  
+ 如果使用了 [default(none)](../../parallel/openmp/reference/default-openmp.md) ，任何用在結構化區塊中的變數都必須明確地指定為 [shared](../../parallel/openmp/reference/shared-openmp.md) 或 [private](../../parallel/openmp/reference/private-openmp.md)。  
   
  下列範例會產生 C3052：  
   

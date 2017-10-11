@@ -19,32 +19,17 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 017e0f42e4e29b07600b5502362b4a60bdf906d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a1cc7f831a1071e19f7009037e142c385904ea7f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3248"></a>編譯器錯誤 C3248
 'function1': 宣告為 '__sealed' 的函式不可被 'function2' 覆寫  
   
-在衍生的類別會嘗試覆寫**__sealed**虛擬方法。  
+衍生類別已嘗試覆寫 **__sealed** 虛擬方法。  
   
 C3248 才可使用過時的編譯器選項**/clr:oldSyntax**。  
 

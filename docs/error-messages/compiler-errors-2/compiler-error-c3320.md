@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 4b4acfe97e38cf13e336b7c58ffc868c69cf7a09
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fbc375682bb42070d49dd08b711926462c17f32b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3320"></a>編譯器錯誤 C3320
 'type': 類型不可擁有與模組 'name' 屬性相同的名稱  
   
-匯出的使用者定義的型別 (UDT)，這可能是結構、 類別、 列舉或等位，不能有相同的名稱作為參數傳遞至[模組](../../windows/module-cpp.md)屬性的名稱屬性。  
+匯出的使用者定義的型別 (UDT)，這可能是結構、 類別、 列舉或等位，不能有相同的名稱，為參數傳遞至[模組](../../windows/module-cpp.md)屬性的名稱屬性。  
   
 ## <a name="example"></a>範例  
 下列範例會產生 C3320：  

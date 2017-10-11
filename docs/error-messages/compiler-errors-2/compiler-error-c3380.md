@@ -19,34 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: fbc75caa22d3c46b5a7a487662119a43b27eaf2b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b06f57795cea7dda7b3ba2797f7c57026a9acf60
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3380"></a>編譯器錯誤 C3380
 'class' : 組件存取規範無效 - 只能使用 'public' 或 'private'  
   
- 套用至受管理的類別或結構時[公用](../../cpp/public-cpp.md)和[私人](../../cpp/private-cpp.md)關鍵字指出是否會透過組件中繼資料中公開的類別。 只有`public`或`private`可以套用至編譯的程式中的類別[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 套用至 Managed 類別或結構時， [public](../../cpp/public-cpp.md) 和 [private](../../cpp/private-cpp.md) 關鍵字會指出類別是否將透過組件中繼資料公開。 只有 `public` 或 `private` 能夠套用至以 [/clr](../../build/reference/clr-common-language-runtime-compilation.md)所編譯程式中的類別。  
   
- `ref`和`value`關鍵字，搭配使用時[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，表示為 managed 類別 (請參閱[類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md))。  
+ `ref`和`value`關鍵字搭配使用時[/clr](../../build/reference/clr-common-language-runtime-compilation.md)，指出類別 managed (請參閱[類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md))。  
   
  下列範例會產生 C3380：  
   

@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3203 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3203"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3203"
+title: "編譯器錯誤 C3203 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3203
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C3203
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb8a9272a62080bd567989d90502d0ca2d003a57
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3203"></a>編譯器錯誤 C3203
 'type'：特製化的類別樣板或泛型，無法做為樣板或泛型參數 'param' 的樣板或泛型引數，必須是實數類型  
   
- 傳遞至類別樣板或泛型的引數無效。  類別樣板或泛型預期將類型做為參數。  
+ 傳遞至類別樣板或泛型的引數無效。 類別樣板或泛型預期將類型做為參數。  
   
- 針對 Visual C\+\+ 2005 所完成之編譯器一致性工作可能會產生此錯誤：無法將非特製化的類別樣板做為基底類別清單中的樣板引數。  若要解決 C3203，必須在將它做為基底類別清單中的樣板參數時，將樣板類型參數明確加入至樣板類別名稱。  
+ 針對 Visual C++ 2005 所完成之編譯器一致性工作可能會產生此錯誤：無法將非特製化的類別樣板做為基底類別清單中的樣板引數。 若要解決 C3203，必須在將它做為基底類別清單中的樣板參數時，將樣板類型參數明確加入至樣板類別名稱。  
   
 ```  
 // C3203.cpp  

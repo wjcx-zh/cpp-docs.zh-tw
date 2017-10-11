@@ -1,39 +1,42 @@
 ---
-title: "Compiler Error C3498 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3498"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3498"
+title: "編譯器錯誤 C3498 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3498
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3498
 ms.assetid: 0a5a7817-0872-4119-83bf-980a19113374
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Compiler Error C3498
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0429b9d21829f772596b6d0fd2c51d72b0924e26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'var'：您無法擷取有 managed 或 WinRT 類型的變數  
+---
+# <a name="compiler-error-c3498"></a>編譯器錯誤 C3498
+'var': 您無法擷取的變數，其中包含 managed 或 WinRTtype  
   
  您無法擷取在 lambda 中有 managed 類型或 Windows 執行階段類型的變數。  
   
-### 更正這個錯誤  
+### <a name="to-correct-this-error"></a>更正這個錯誤  
   
--   將 managed 或 Windows 執行階段變數傳遞至 lambda 運算式的參數清單。  
+-   將 managed 或 Windows 執行階段變數傳遞至 Lambda 運算式的參數清單。  
   
-## 範例  
- 下列範例會產生 C3498，因為具有 managed 類型的變數會出現在 lambda 運算式的擷取清單中：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3498，因為具有 managed 類型的變數會出現在 Lambda 運算式的擷取清單中：  
   
 ```  
 // C3498a.cpp  
@@ -48,7 +51,7 @@ int main()
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會藉由將傳遞 managed 變數 `s` 至 lambda 運算式的擷取清單中，以解析 C3498：  
   
 ```  
@@ -64,5 +67,5 @@ int main()
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

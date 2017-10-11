@@ -1,32 +1,34 @@
 ---
-title: "編譯器錯誤 C3173 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3173"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3173"
+title: "編譯器錯誤 C3173 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3173
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3173
 ms.assetid: edf79e10-e8cf-4f76-8d33-ab9d05e974e9
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3173
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6f900c598749611f33b63853fa63213d38a03902
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-在 idl 合併中版本不相符  
+---
+# <a name="compiler-error-c3173"></a>編譯器錯誤 C3173
+在 idl 合併中版本不符  
   
- 當目的檔 \(Object File\) 包含用前一版編譯器產生的內嵌 idl 時，會出現此錯誤。  編譯器會編入版本編號，以確保用來產生 idl 內容 \(內嵌於 .obj 檔\) 的編譯器與用來合併內嵌 idl 的是同一個編譯器。  
+ 當物件檔案包含與先前版本的編譯器產生的內嵌的 idl 時，就會發生此錯誤。 編譯器會將編碼的版本號碼，以確保用來產生.obj 檔中內嵌 idl 內容的相同編譯器也是用來合併內嵌的 idl 的相同編譯器。  
   
- 請更新您的 Visual C\+\+ 安裝，以確保使用最新版本的工具。
+ 更新您的 Visual c + + 安裝，使所有工具都都從最新版本。

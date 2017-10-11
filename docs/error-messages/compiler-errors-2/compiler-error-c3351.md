@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: d95ead1fb57c0835180e5623af6ef84646e3dc15
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6a449d904e0b5122ec1a8d2ae9734a6dd3f8b00
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3351"></a>編譯器錯誤 C3351
 'object': 委派建構函式：第二個引數必須是靜態成員函式或全域函式的位址  
   
- 編譯器必須宣告的函式的位址`static`。  
+ 編譯器必須有宣告為 `static`之函式的位址。  
   
  下列範例會產生 C3351：  
   

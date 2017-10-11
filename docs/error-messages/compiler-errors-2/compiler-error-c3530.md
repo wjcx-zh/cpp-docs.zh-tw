@@ -1,39 +1,42 @@
 ---
-title: "編譯器錯誤 C3530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3530"
+title: "編譯器錯誤 C3530 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3530
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 編譯器錯誤 C3530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d66e76fc3e44a037f52aa6e217fae848f1338d2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'auto' 無法與任何其他型別規範合併使用  
+---
+# <a name="compiler-error-c3530"></a>編譯器錯誤 C3530
+'auto' 無法與任何其他類型規範結合  
   
- 有某個型別規範與 `auto` 關鍵字搭配使用。  
+ 類型規範搭配`auto`關鍵字。  
   
-### 更正這個錯誤  
+### <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  不要在使用 `auto` 關鍵字的變數宣告中使用型別規範。  
+1.  請勿使用型別規範中使用的變數宣告`auto`關鍵字。  
   
-## 範例  
- 下列範例會產生 C3530 錯誤，因為使用了 `auto` 關鍵字及 `int` 型別來宣告變數 `x`，而且是使用 **\/Zc:auto** 來編譯。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3530，因為變數`x`宣告同時`auto`關鍵字和類型`int`，而且因為此範例會使用編譯**/zc: auto**。  
   
 ```  
 // C3530.cpp  
@@ -45,5 +48,5 @@ int main()
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)

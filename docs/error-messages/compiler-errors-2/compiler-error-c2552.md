@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+title: "編譯器錯誤 C2552 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e001837ca3d9ea9e5c5db1770188d030e21d7d9
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2552"></a>編譯器錯誤 C2552
 'identifier'：非彙總無法以初始設定式清單初始化  
   
  彙總識別項未經正確初始化。  
   
- [彙總](../../c-language/initializing-aggregate-types.md)的定義如下：  
+ [彙總](../../c-language/initializing-aggregate-types.md)定義為：  
   
 -   陣列  
   
@@ -43,7 +45,7 @@ manager: "ghogen"
   
     -   虛擬函式  
   
- 此外，Visual C\+\+ 不允許彙總中包含建構函式的資料類型。  
+ 此外，Visual C++ 不允許彙總中包含建構函式的資料類型。  
   
  在下列類型嘗試進行彙總初始化時，有可能會引發 C2552：  
   
@@ -57,7 +59,7 @@ manager: "ghogen"
   
 -   該類型是一種 ref 類別或 CLR 介面。  
   
--   該類型具有其項目包含解構函式的非固定維度陣列 \(零陣列\)。  
+-   該類型具有其項目包含解構函式的非固定維度陣列 (零陣列)。  
   
  下列範例會產生 C2552：  
   

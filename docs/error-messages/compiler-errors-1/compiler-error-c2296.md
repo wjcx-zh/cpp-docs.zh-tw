@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C2296 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2296"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2296"
+title: "編譯器錯誤 C2296 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2296
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2296
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e915df8a0ab9a9baa5b314f850434e41087be8b5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'operator' : 左運算元不正確  
+---
+# <a name="compiler-error-c2296"></a>編譯器錯誤 C2296
+'operator': 不正確的左的運算元  
   
- 用於 `operator` 左側的運算元無效。  
+ 左的運算元搭配使用`operator`無效。  
   
- 例如，編譯器可能會在您本來要執行函式呼叫處看到宣告。  
+ 例如，編譯器可能會看到宣告您想要的函式呼叫。  
   
- 下列範例會產生 C2296：  
+ 下列範例會產生 C2296:  
   
 ```  
 // C2296.cpp  

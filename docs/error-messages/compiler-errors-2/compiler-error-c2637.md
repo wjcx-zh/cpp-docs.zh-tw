@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2637 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2637"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2637"
+title: "編譯器錯誤 C2637 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2637
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2637
 ms.assetid: 58d94447-eb96-4d8f-a690-dd78d322462e
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2637
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f676205e2850e411ddb5e5b996114c00c65087f2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 無法修飾指向資料成員的指標  
+---
+# <a name="compiler-error-c2637"></a>編譯器錯誤 C2637
+'identifier': 無法修飾指向資料成員的指標  
   
- 指向資料成員的指標不能有呼叫慣例。  若要解決這個問題，請移除呼叫慣例或宣告指向成員函式的指標。  
+ 資料成員的指標不能呼叫慣例。 若要解決，請移除的呼叫慣例，或宣告成員函式的指標。  
   
- 下列範例會產生 C2637：  
+ 下列範例會產生 C2637:  
   
 ```  
 // C2637.cpp  

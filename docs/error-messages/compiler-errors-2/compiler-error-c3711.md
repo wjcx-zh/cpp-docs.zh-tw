@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3711"
+title: "編譯器錯誤 C3711 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'method' : Unmanaged 事件來源方法必須傳回 void 或整數類資料型別  
+---
+# <a name="compiler-error-c3711"></a>編譯器錯誤 C3711
+'method': unmanaged 事件來源方法必須傳回 void 或整數型別  
   
- 您在沒有傳回虛值或整數類資料型別 \(Integral Type\) 的事件來源中定義方法。  若要修復此錯誤，請讓事件和事件處理常式具有 `void` 的傳回型別，或是 `int` 和 `long` 之類的整數類資料型別。  
+ 您之事件來源的未傳回 void 或整數型別中定義的方法。 若要修正這個錯誤，讓事件和事件處理常式具有傳回類型為`void`或整數類資料類型，例如`int`或`long`。  
   
- 下列範例會產生 C3711：  
+ 下列範例會產生 C3711:  
   
 ```  
 // C3711.cpp  

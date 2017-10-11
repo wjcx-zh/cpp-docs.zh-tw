@@ -15,14 +15,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 5c6fbfc8699d7d66c40b0458972d8b6ef0dcc705
 ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
+ms.contentlocale: zh-tw
+ms.lasthandoff: 02/24/2017
 
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset"></a>如何回報 Visual C++ 工具組問題
@@ -40,7 +37,7 @@ ms.openlocfilehash: 2ea129ac94cb1ddc7486ba69280dc0390896e088
   
  您的報表對我們和您這類其他開發人員而言十分重要。 感謝您協助我們改善 Visual C++！  
   
-##  <a name="a-namepreparea-how-to-prepare-your-report"></a><a name="prepare"></a> 如何準備報表  
+##  <a name="prepare"></a> 如何準備報表  
  因為沒有完整資訊很難在我們自己的電腦上重現您遇到的問題，所以建立高品質報表十分重要。 您的報表越好，我們就越能更有效率地重新建立並診斷問題。  
   
  您的報表最少應該包含：  
@@ -144,7 +141,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
     Help menu, or open the Technical Support help file for more information   
 ```  
   
-####  <a name="a-namebackendcrasha-backend-code-generation-crash"></a><a name="backend_crash"></a> 後端 (程式碼產生) 損毀  
+####  <a name="backend_crash"></a> 後端 (程式碼產生) 損毀  
  後端損毀是在編譯器的程式碼產生階段期間發生。 編譯器通常會發出[嚴重錯誤 C1001](error-messages/compiler-errors-1/fatal-error-c1001.md)，但可能未參考與問題相關聯的原始程式碼檔和行號；它通常會提及 compiler\utc\src\p2\main.c 檔案，但您可以忽略此詳細資料。  
   
  針對這種損毀，如果您正在使用連結時間產生程式碼 (LTCG)，請提供[連結重現](#link_repro)否則，請提供[前置處理過的重現](#preprocessed_repro)。 LTGC 是由 cl.exe 的 `/GL` 命令列引數所啟用。  
@@ -217,7 +214,7 @@ CONTEXT:
   
  針對這種損毀，如果您正在使用連結時間產生程式碼 (LTCG)，請提供[連結重現](#link_repro)否則，請提供[前置處理過的重現](#preprocessed_repro)。 LTGC 是由 cl.exe 的 `/GL` 命令列引數所啟用。  
   
-##  <a name="a-namesenda-ways-to-send-your-report"></a><a name="send"></a> 報表的傳送方式  
+##  <a name="send"></a> 報表的傳送方式  
  有幾種方式可以將您的報表送給我們。 您可以在 Microsoft Connect 提報 Bug、寄送電子郵件給我們，或使用 Visual Studio 內建回報問題工具。 報表的最佳選擇取決於您所遇到的問題類型、想要如何與調查您報表的工程師互動，以及是要追蹤其進度還是與社群分享您的報表。  
   
 > [!NOTE]
@@ -268,7 +265,7 @@ Source code and repro steps:
 > [!TIP]
 >  針對您可能會在 Visual Studio 中遇到與工具組無關的其他問題類型 (例如，UI 問題、中斷的 IDE 功能或一般當機)，回報問題工具可能是特別不錯的選擇，原因是其螢幕擷取畫面功能以及記錄導致您所遇到問題之 UI 動作的能力。 Microsoft Connect 也可以是回報這些其他類型之錯誤的不錯選項，但缺少回報問題工具的其他功能。 您應該永遠不透過寄送電子郵件至 compilercrash@microsoft.com 來回報這些其他類型的錯誤。  
   
-##  <a name="a-namegeneratea-generating-repros"></a><a name="generate"></a> 產生重現  
+##  <a name="generate"></a> 產生重現  
  重現是一個完整獨立程式碼範例，可示範您要回報的問題。 重現**不**是程式碼片段，它必須是建置並執行的完整範例 (或您所回報問題所產生的錯誤例外)。 它應該包含所有必要 #include 指示詞，即使針對標準標頭也是一樣。  
   
  甚至，好的重現為  
@@ -285,7 +282,7 @@ Source code and repro steps:
   
  以下是產生用來回報不同問題類型之各種重現類型的指示。  
   
-###  <a name="a-namepreprocessedreproa-preprocessed-repos"></a><a name="preprocessed_repro"></a> 前置處理過的重現  
+###  <a name="preprocessed_repro"></a> 前置處理過的重現  
  前置處理過的重現是單一原始程式檔，可示範問題，並透過處理原始程式檔以從 C 前置處理器輸出產生。 此程序內嵌包含的標頭來移除與其他來源和標頭檔的相依性，也會解析巨集、#ifdefs 以及其他取決於本機環境的前置處理器命令。  
   
 > [!NOTE]
@@ -313,7 +310,7 @@ Source code and repro steps:
   
  最後，將此重現附加到報表。  
   
-###  <a name="a-namelinkreproa-link-repros"></a><a name="link_repro"></a> 連結重現  
+###  <a name="link_repro"></a> 連結重現  
  連結重現是包含組建成品的單一目錄，可共同示範連結時發生的問題，例如涉及連結時產生程式碼 (LTCG) 的後端損毀或連結器損毀；包含的組建成品就是連結器輸入所需的組建成品，以重現問題。 使用連結器所提供的功能，可以輕鬆地建立連結重現。  
   
 ##### <a name="to-generate-a-link-repro"></a>產生連結重現：  
@@ -332,12 +329,7 @@ Source code and repro steps:
   
  最後，將整個目錄壓縮成 .zip 檔案或類似檔案來封裝重現，並將它附加到報表。  
   
-###  <a name="a-nameotherreprosa-other-repros"></a><a name="other_repros"></a> 其他重現  
+###  <a name="other_repros"></a> 其他重現  
  如果您無法將問題減少為單一原始程式檔或前置處理過的重現，而且問題不需要連結重現，則我們可以調查 IDE 專案。 專案內的程式碼應該仍為最少，而且這份文件的所有指引都依然適用。  
   
  將重現建立為最少 IDE 專案，然後將整個目錄結構壓縮成 .zip 檔案或類似檔案以進行封裝，並將其附加至報表。
-
-
-<!--HONumber=Feb17_HO4-->
-
-

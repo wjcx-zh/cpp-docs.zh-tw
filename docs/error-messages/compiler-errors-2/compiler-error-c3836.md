@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 0708b8c9bf59e1c2ea3751fbb91192d6b873d8ec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43f7972efc5e8b930811817f5cef9c415a60cb5d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3836"></a>編譯器錯誤 C3836
-靜態建構函式不允許有成員初始設定式清單  
+靜態建構函式不可以有成員初始設定式清單  
   
- Managed 的類別不能有靜態建構函式也具有成員初始設定清單。 靜態類別建構函式會呼叫 common language runtime 執行類別初始設定，初始化靜態資料成員。  
+ Managed 的類別不能有靜態的建構函式也有成員初始設定清單。 靜態類別建構函式會呼叫 common language runtime 不要類別初始設定，初始化靜態資料成員。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C3836:  

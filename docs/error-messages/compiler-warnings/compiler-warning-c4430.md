@@ -1,37 +1,39 @@
 ---
-title: "編譯器警告 C4430 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4430"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4430"
+title: "編譯器警告 C4430 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4430
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器警告 C4430
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4455419ab6ce8a98dfb26bdb6575cc229d364c0f
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-遺漏類型規範 \- 假設為 int。請注意：C\+\+ 不支援 default\-int  
+---
+# <a name="compiler-warning-c4430"></a>編譯器警告 C4430
+遺漏類型規範 - 假設為 int。 注意： C + + 不支援 default-int  
   
- 這項錯誤可能是因為針對 Visual C\+\+ 2005 完成之編譯器一致性工作的結果所產生：所有宣告都必須明確指定型別；已不再假設為 int。  
+ 針對 Visual c + + 2005年所進行的編譯器一致性工作可能會導致這個錯誤： 所有宣告必須明確都指定型別。不會再假設為 int。  
   
- C4430 永遠視同錯誤。您可以使用 `#pragma warning` 或 **\/wd** 關閉這個警告。如需詳細資訊，請參閱 [warning](../../preprocessor/warning.md) 或 [\/w、\/Wn、\/WX、\/Wall、\/wln、\/wdn、\/wen、\/won \(警告層級\)](../../build/reference/compiler-option-warning-level.md)。  
+ C4430 永遠視為錯誤。  您可以關閉包含此警告`#pragma warning`或**/wd**; 請參閱[警告](../../preprocessor/warning.md)或[/w、 /W0、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd，/ /wo，我們 /Wv，/WX （警告等級）](../../build/reference/compiler-option-warning-level.md)如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4430。  
   
 ```  

@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2400 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2400"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2400"
+title: "編譯器錯誤 C2400 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2400
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2400
 ms.assetid: 1ba441ee-73f9-42a5-bfe9-fbeab93808eb
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2400
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b819c81a3475a541fb672094bbdfa62b2fcfe6d6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-在 'context' 的 'token' 發生內嵌組合語言語法錯誤  
+---
+# <a name="compiler-error-c2400"></a>編譯器錯誤 C2400
+內嵌組譯工具的語法錯誤 'context';找到 'token'  
   
- 語彙基元 \(Token\) 在指定的內容中產生一個語法錯誤。  
+ 語彙基元會導致語法錯誤，在指定的內容。  
   
- 下列範例會產生 C2400：  
+ 下列範例會產生 C2400:  
   
 ```  
 // C2400.cpp  

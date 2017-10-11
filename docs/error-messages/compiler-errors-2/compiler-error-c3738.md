@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3738 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3738"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3738"
+title: "編譯器錯誤 C3738 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3738
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3738
 ms.assetid: dd3ee011-e204-4264-bf3a-da32c4ef7038
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C3738
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c143168981ed269a7bf830b4d5f345c1a063c425
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'calling\_convention': 明確具現化的呼叫慣例，必須符合所要具現化的樣板的呼叫慣例  
+---
+# <a name="compiler-error-c3738"></a>編譯器錯誤 C3738
+'calling_convention': 明確具現化的呼叫慣例，必須符合要具現化的範本  
   
- 建議您，不要在明確具現化上指定呼叫慣例。  但如果非指定不可，呼叫慣例必須相符。  
+ 建議您不要明確具現化指定呼叫慣例。 如果您必須，不過，必須符合呼叫慣例。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3738。  
   
 ```  

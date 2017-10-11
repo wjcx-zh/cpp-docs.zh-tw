@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2807 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2807"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2807"
+title: "編譯器錯誤 C2807 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2807
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2807
 ms.assetid: bd7a207a-f379-4de6-8ee8-c7cab78b3480
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2807
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5fbea2518dabf2851ff6d620095c898f7a2a35c6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2807"></a>編譯器錯誤 C2807
 後置 'operator operator' 的第二個型式參數必須是 'int'  
   
- 後置運算子的第二個參數的型別錯誤。  
+ 後置運算子的第二個參數的類型錯誤。  
   
- 下列範例會產生 C2807：  
+ 下列範例會產生 C2807:  
   
 ```  
 // C2807.cpp  

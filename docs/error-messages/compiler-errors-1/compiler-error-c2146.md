@@ -1,40 +1,43 @@
 ---
-title: "編譯器錯誤 C2146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2146"
+title: "編譯器錯誤 C2146 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2146
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# 編譯器錯誤 C2146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 92e94ae29c1a7a3fc6adfdc0b3e82f5ce4dfcaf0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-語法錯誤 : 遺漏 'token' \(在識別項 'identifier' 之前\)  
+---
+# <a name="compiler-error-c2146"></a>編譯器錯誤 C2146
+語法錯誤： 遺漏 'token' 之前識別項 'identifier'  
   
- 編譯器必須要有 `token`，但卻找到 `identifier`。可能的原因：  
+ 編譯器預期`token`找到`identifier`改為。  可能的原因：  
   
 1.  拼字或大小寫錯誤。  
   
-2.  識別項的宣告中遺漏型別規範。  
+2.  識別項的宣告中遺漏類型規範。  
   
- 這項錯誤可能是因為排印錯誤而造成。  錯誤 [C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md) 通常出現在此錯誤之前。  
+ 這個錯誤可能被因拼字錯誤。 錯誤[C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md)通常前面出現此錯誤。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2146。  
   
 ```  
@@ -52,10 +55,10 @@ int main() {
 }  
 ```  
   
-## 範例  
- 對 Visual Studio .NET 2003 的編譯器完成一致性處理後也可能會產生這種錯誤：遺漏 `typename` 關鍵字。  
+## <a name="example"></a>範例  
+ 也可以針對 Visual Studio.NET 2003年所進行的編譯器一致性工作產生這個錯誤： 遺漏`typename`關鍵字。  
   
- 下列範例可在 Visual Studio .NET 2002 中編譯，但在 Visual Studio .NET 2003 中會失敗：  
+ 下列範例會在 Visual Studio.NET 2002年中編譯，但 Visual Studio.NET 2003年中將會失敗：  
   
 ```  
 // C2146b.cpp  
@@ -76,12 +79,12 @@ template <typename T>
 typename X<T>::Y func() { }  
 ```  
   
-## 範例  
- 對 Visual Studio .NET 2003 的編譯器完成符合標準處理後也會出現這個錯誤：明確特製化不再從主要樣板中尋找樣板參數。  
+## <a name="example"></a>範例  
+ 您也會看到這個錯誤，因為針對 Visual Studio.NET 2003年所進行的編譯器一致性處理而： 明確特製化不會再尋找主要樣板的樣板參數。  
   
- 明確特製化中不允許從主要樣板使用 `T`。  若要使程式碼在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本中都有效，請以明確指定的型別，取代特製化中樣板參數的所有執行個體。  
+ 使用`T`從主要範本中不允許明確特製化。 針對 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中都有效的程式碼，取代明確特製化的型別在特製化的範本參數的所有執行個體。  
   
- 下列範例可在 Visual Studio .NET 中編譯，但在 Visual Studio .NET 2003 中會失敗：  
+ 下列範例會在 Visual Studio.NET 中編譯，但 Visual Studio.NET 2003年中將會失敗：  
   
 ```  
 // C2146_c.cpp  

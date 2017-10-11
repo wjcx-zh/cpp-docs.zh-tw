@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2436"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2436"
+title: "編譯器錯誤 C2436 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2436
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2436
 ms.assetid: ca4cc813-bc1d-4c0a-9a2c-3a5fe673d084
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C2436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ca7f9a160675009e1462b1e7c5c1b110180e10c5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 在建構函式初始設定式清單中的成員函式或巢狀類別  
+---
+# <a name="compiler-error-c2436"></a>編譯器錯誤 C2436
+'identifier': 成員函式或建構函式初始設定式清單中的巢狀的類別  
   
- 建構函式初始化清單 \(Constructor Initializer List\) 內的成員函式 \(Member Function\) 或區域類別 \(Local Class\) 無法初始化。  
+ 無法初始化成員函式或建構函式初始設定式清單中的本機類別。  
   
- 下列範例會產生 C2436：  
+ 下列範例會產生 C2436:  
   
 ```  
 // C2436.cpp  

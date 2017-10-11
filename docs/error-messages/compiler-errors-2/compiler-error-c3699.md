@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3699 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3699"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3699"
+title: "編譯器錯誤 C3699 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3699
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3699
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: caabe5d8d9e956081211ef23546f0d720ecdcbd6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'operator' : 不能在型別 'type' 上使用這個間接取值  
+---
+# <a name="compiler-error-c3699"></a>編譯器錯誤 C3699
+'operator': 無法在類型 'type' 上使用這個間接取值  
   
- 嘗試要使用 `type` 上不允許的間接取值。  
+ 嘗試使用不允許的間接取值`type`。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3699。  
   
 ```  
@@ -43,8 +45,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- trivial 屬性不能具有參考型別。  如需詳細資訊，請參閱[property](../../windows/property-cpp-component-extensions.md)。  下列範例會產生 C3699。  
+## <a name="example"></a>範例  
+ Trivial 屬性不能有參考類型。 如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md) 。 下列範例會產生 C3699。  
   
 ```  
 // C3699_b.cpp  
@@ -55,8 +57,8 @@ ref struct C {
 };  
 ```  
   
-## 範例  
- 相當於「指標到指標」的語法是追蹤參考的控點。  下列範例會產生 C3699。  
+## <a name="example"></a>範例  
+ 「 指標的指標 」 語法相當追蹤參考的控制代碼。 下列範例會產生 C3699。  
   
 ```  
 // C3699_c.cpp  

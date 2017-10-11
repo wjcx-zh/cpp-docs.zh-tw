@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3713 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3713"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3713"
+title: "編譯器錯誤 C3713 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3713
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3713
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13387629ab4dda3965bc8b835e2e092ef29ef880
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'method' : 事件處理常式方法必須與來源 'method' 有相同的函式參數  
+---
+# <a name="compiler-error-c3713"></a>編譯器錯誤 C3713
+'method': 事件處理常式方法必須有相同的函式參數做為來源 'method'  
   
- 您定義了與來源事件方法使用不同參數的事件處理常式方法。  若要修復此錯誤，請提供事件處理常式方法與來源事件方法相同的參數。  
+ 您已定義未使用相同的參數做為來源事件方法的事件處理常式方法。 若要修正這個錯誤，讓事件處理常式方法的相同參數的來源事件方法。  
   
- 下列範例會產生 C3713：  
+ 下列範例會產生 C3713:  
   
 ```  
 // C3713.cpp  

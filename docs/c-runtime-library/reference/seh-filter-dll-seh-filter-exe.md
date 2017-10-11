@@ -1,57 +1,60 @@
 ---
 title: "_seh_filter_dll、_seh_filter_exe | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_XcptFilter"
-  - "_seh_filter_dll"
-  - "_seh_filter_exe"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "XcptFilter"
-  - "_XcptFilter"
-  - "_seh_filter_dll"
-  - "_seh_filter_exe"
-  - "corecrt_startup/_seh_filter_exe"
-  - "corecrt_startup/_seh_filter_dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "XcptFilter 函式"
-  - "_XcptFilter 函式"
-  - "_seh_filter_dll 函式"
-  - "_seh_filter_exe 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _XcptFilter
+- _seh_filter_dll
+- _seh_filter_exe
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- XcptFilter
+- _XcptFilter
+- _seh_filter_dll
+- _seh_filter_exe
+- corecrt_startup/_seh_filter_exe
+- corecrt_startup/_seh_filter_dll
+dev_langs:
+- C++
+helpviewer_keywords:
+- XcptFilter function
+- _XcptFilter function
+- _seh_filter_dll function
+- _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# _seh_filter_dll、_seh_filter_exe
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 677e203e552dfa2f057cb0631d73c9f48349c4b4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll、_seh_filter_exe
 識別例外狀況及要採取的相關動作。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int __cdecl _seh_filter_dll(  
@@ -64,34 +67,34 @@ int __cdecl _seh_filter_exe(
 );  
 ```  
   
-#### 參數  
- \[in\] `_ExceptionNum`  
+#### <a name="parameters"></a>參數  
+ [in] `_ExceptionNum`  
  例外狀況的識別項。  
   
- \[in\] `_ExceptionPtr`  
+ [in] `_ExceptionPtr`  
  例外狀況資訊的指標。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  一個整數，表示根據例外狀況處理結果所要採取的動作。  
   
-## 備註  
- 這些方法會由 [try\-except 陳述式](../../cpp/try-except-statement.md) 的例外狀況篩選條件運算式呼叫。 此方法會參考常數內部資料表，以識別例外狀況並判斷適當的動作，如下所示。 例外狀況編號會在 winnt.h 中定義，而訊號編號會在 signal.h 中定義。  
+## <a name="remarks"></a>備註  
+ 這些方法會由 [try-except 陳述式](../../cpp/try-except-statement.md)的例外狀況篩選運算式呼叫。 此方法會參考常數內部資料表，以識別例外狀況並判斷適當的動作，如下所示。 例外狀況編號會在 winnt.h 中定義，而訊號編號會在 signal.h 中定義。  
   
-|例外狀況編號 \(unsigned long\)|訊號編號|  
-|------------------------------|----------|  
-|STATUS\_ACCESS\_VIOLATION|SIGSEGV|  
-|STATUS\_ILLEGAL\_INSTRUCTION|SIGILL|  
-|STATUS\_PRIVILEGED\_INSTRUCTION|SIGILL|  
-|STATUS\_FLOAT\_DENORMAL\_OPERAND|SIGFPE|  
-|STATUS\_FLOAT\_DIVIDE\_BY\_ZERO|SIGFPE|  
-|STATUS\_FLOAT\_INEXACT\_RESULT|SIGFPE|  
-|STATUS\_FLOAT\_INVALID\_OPERATION|SIGFPE|  
-|STATUS\_FLOAT\_OVERFLOW|SIGFPE|  
-|STATUS\_FLOAT\_STACK\_CHECK|SIGFPE|  
-|STATUS\_FLOAT\_UNDERFLOW|SIGFPE|  
+|例外狀況編號 (unsigned long)|訊號編號|  
+|----------------------------------------|-------------------|  
+|STATUS_ACCESS_VIOLATION|SIGSEGV|  
+|STATUS_ILLEGAL_INSTRUCTION|SIGILL|  
+|STATUS_PRIVILEGED_INSTRUCTION|SIGILL|  
+|STATUS_FLOAT_DENORMAL_OPERAND|SIGFPE|  
+|STATUS_FLOAT_DIVIDE_BY_ZERO|SIGFPE|  
+|STATUS_FLOAT_INEXACT_RESULT|SIGFPE|  
+|STATUS_FLOAT_INVALID_OPERATION|SIGFPE|  
+|STATUS_FLOAT_OVERFLOW|SIGFPE|  
+|STATUS_FLOAT_STACK_CHECK|SIGFPE|  
+|STATUS_FLOAT_UNDERFLOW|SIGFPE|  
   
-## 需求  
- **標頭：**corecrt\_startup.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corecrt_startup.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

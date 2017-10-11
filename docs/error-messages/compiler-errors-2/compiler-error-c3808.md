@@ -19,33 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 989f17e8f59afc6a04ed4101204053fc971c6a62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d6a255bebeccc0c63ba621a7c5886fd318ffd5f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3808"></a>編譯器錯誤 C3808
-'type': 具有 ComImport 屬性的類別不能定義成員 'member'，只有抽象或允許 dllimport 函式  
+'type': 具有 ComImport 屬性的類別不可定義成員 'member'，只抽象或 dllimport 函式允許  
   
- 衍生自型別<xref:System.Runtime.InteropServices.ComImportAttribute>無法定義`member`。</xref:System.Runtime.InteropServices.ComImportAttribute>  
+ 衍生自型別<xref:System.Runtime.InteropServices.ComImportAttribute>無法定義`member`。  
   
- **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
+ **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C3808。  

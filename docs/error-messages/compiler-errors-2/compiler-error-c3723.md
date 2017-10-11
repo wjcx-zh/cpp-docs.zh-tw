@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3723 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3723"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3723"
+title: "編譯器錯誤 C3723 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3723
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3723
 ms.assetid: ef0fb1ff-3f9a-4093-a6b6-894d1ab0c4b9
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3723
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6406d664cea17b75fa9ff703ae15e26d7baf042c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 無法解析事件  
+---
+# <a name="compiler-error-c3723"></a>編譯器錯誤 C3723
+'function': 無法解析事件  
   
- `function` 無法解析要呼叫的事件。  
+ `function`無法解析要呼叫哪一個事件。  
   
- 下列範例會產生 C3723：  
+ 下列範例會產生 C3723:  
   
 ```  
 // C3723.cpp  
@@ -52,9 +54,9 @@ int main() {
 }  
 ```  
   
- `__hook` 和 `__unhook` 與 \/clr 程式設計不相容。請改用 \+\= 和 \-\= 運算子。  
+ `__hook`和`__unhook`/clr 程式設計與不相容。  請改用 + = 和-= 運算子。  
   
- 下列範例會產生 C3723：  
+ 下列範例會產生 C3723:  
   
 ```  
 // C3723b.cpp  

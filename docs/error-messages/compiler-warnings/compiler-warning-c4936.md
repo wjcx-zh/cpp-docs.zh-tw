@@ -19,26 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 58d702067c186eeeea94768a03836b64577961ca
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4342c749c5db4d66f206209a146ad7d7aef7041
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4936"></a>編譯器警告 C4936
@@ -46,11 +31,11 @@ ms.lasthandoff: 02/24/2017
   
  **/Clr: pure** Visual Studio 2015 中的編譯器選項已被取代。  
   
- A `__declspec` ，但不使用修飾詞`__declspec`修飾詞只適用於以其中一個來編譯時[/clr](../../build/reference/clr-common-language-runtime-compilation.md)選項。  
+ 已使用 `__declspec` 修飾詞，但該 `__declspec` 修飾詞僅有在以 [/clr](../../build/reference/clr-common-language-runtime-compilation.md) 選項之一來編譯時才有效。  
   
- 如需詳細資訊，請參閱[appdomain](../../cpp/appdomain.md)和[程序](../../cpp/process.md)。  
+ 如需詳細資訊，請參閱 [appdomain](../../cpp/appdomain.md) 和 [處理序](../../cpp/process.md)。  
   
- C4936 總是發出錯誤。  您可以停用與 C4936[警告](../../preprocessor/warning.md)pragma。  
+ C4936 總是發出錯誤。  您可以使用 [warning](../../preprocessor/warning.md) pragma 來停用 C4936。  
   
  下列範例會產生 C4936：  
   

@@ -24,25 +24,11 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f6ee8d14046a8d114316527cebfc4b75fd667614
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: b1c2debc93f6503bf7928ed789345a50c281804d
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 類別
@@ -130,7 +116,7 @@ STDMETHOD(getcount) (長時間 * pcount);
  This method returns the specified item from the collection.  
   
 ```
-STDMETHOD(get_Item) (長 Index、 ItemType * pvar);
+STDMETHOD(get_Item) （長索引，ItemType * pvar）;
 ```  
   
 ### Parameters  

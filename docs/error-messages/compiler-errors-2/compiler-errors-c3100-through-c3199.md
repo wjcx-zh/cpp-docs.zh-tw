@@ -79,32 +79,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: ef3728a46e1a9b10814b994c21fbae3de0d0bc04
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7060d03845cf81aeaedc5eff48db3aec59716112
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>編譯器錯誤 C3100 透過 C3199
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -118,10 +104,10 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3105|'*符號*': 不能用做為屬性|  
 |[編譯器錯誤 C3106](compiler-error-c3106.md)|'*屬性*': 未具名引數必須在具名引數之前|  
 |編譯器錯誤 C3107|'*屬性*': 無法定義原生屬性的成員函式|  
-|編譯器錯誤 C3108|因為初始設定式清單不是運算式，所以無法推算類型。|  
+|編譯器錯誤 C3108|無法在初始設定式清單不是運算式，推算的類型|  
 |編譯器錯誤 C3109|'*識別碼*': 介面方法必須使用 '__stdcall' 或 '__cdecl' 呼叫慣例|  
 |[編譯器錯誤 C3110](compiler-error-c3110.md)|'*函式*': 無法多載 COM 介面方法|  
-|編譯器錯誤 C3111|初始設定式清單不得用為範本參數的預設引數|  
+|編譯器錯誤 C3111|初始設定式清單不可為樣板參數的預設引數|  
 |編譯器錯誤 C3112|'*介面*': 介面只可以宣告在全域或命名空間範圍|  
 |[編譯器錯誤 C3113](compiler-error-c3113.md)|'介面/enum' 不可為範本/泛型|  
 |[編譯器錯誤 C3114](compiler-error-c3114.md)|'*識別碼*': 不是有效的具名屬性引數|  
@@ -129,7 +115,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3116](compiler-error-c3116.md)|'*規範*': 介面方法的儲存類別無效|  
 |[編譯器錯誤 C3117](compiler-error-c3117.md)|'*介面*': 介面只可以有一個基底類別|  
 |[編譯器錯誤 C3118](compiler-error-c3118.md)|'*介面*': 介面不支援虛擬繼承|  
-|編譯器錯誤 C3119|不可使用 alignas(void)|  
+|編譯器錯誤 C3119|不允許 alignas(void)|  
 |[編譯器錯誤 C3120](compiler-error-c3120.md)|'*識別碼*': 介面方法無法使用變數引數清單|  
 |[編譯器錯誤 C3121](compiler-error-c3121.md)|無法變更類別的 GUID*類別*'|  
 |編譯器錯誤 C3122|'*介面*': WinRT 泛型介面不能有 GUID|  
@@ -140,17 +126,17 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3127|'*類型*':'*特性*' 特性只能用於 WinRT ref 類別上|  
 |編譯器錯誤 C3128|'*類型*'沒有由引入的 vtable'*類型*'|  
 |編譯器錯誤 C3129|'*類型*': __default_vptr_for_base 只能在本機定義的多型型別和基底|  
-|[編譯器錯誤 C3130](compiler-error-c3130.md)|編譯器內部錯誤: 無法寫入插入程式碼區塊至 PDB|  
-|[編譯器錯誤 C3131](compiler-error-c3131.md)|專案必須擁有 'module' 屬性搭配 'name' 屬性|  
+|[編譯器錯誤 C3130](compiler-error-c3130.md)|編譯器內部錯誤： 無法寫入插入程式碼區塊至 PDB|  
+|[編譯器錯誤 C3131](compiler-error-c3131.md)|專案必須要有 'name' 屬性為 'module' 屬性|  
 |[編譯器錯誤 C3132](compiler-error-c3132.md)|'*參數*': 參數陣列只能套用至型別 'WinRT 受管理的一維陣列' 的型式引數|  
-|[編譯器錯誤 C3133](compiler-error-c3133.md)|屬性不可套用至 C++ varargs|  
+|[編譯器錯誤 C3133](compiler-error-c3133.md)|無法將屬性套用至 c + + varargs|  
 |[編譯器錯誤 C3134](compiler-error-c3134.md)|'*值*': 屬性引數的值'*引數*'不是有效的類型'*類型*'|  
 |[編譯器錯誤 C3135](compiler-error-c3135.md)|'*識別碼*': 屬性不能有 'const' 或 'volatile' 類型|  
 |[編譯器錯誤 C3136](compiler-error-c3136.md)|'*介面*': COM 介面只可以繼承自其他 COM 介面，'*介面*' 不是 COM 介面|  
 |[編譯器錯誤 C3137](compiler-error-c3137.md)|'*識別碼*': 無法初始化屬性|  
 |[編譯器錯誤 C3138](compiler-error-c3138.md)|'*識別碼*':'*屬性*' 介面必須繼承自 IDispatch，或是從 IDispatch 繼承的介面|  
 |[編譯器錯誤 C3139](compiler-error-c3139.md)|'*類型*': 無法匯出 UDT 沒有成員|  
-|[編譯器錯誤 C3140](compiler-error-c3140.md)|無法在相同編譯單位擁有多個 'module' 屬性|  
+|[編譯器錯誤 C3140](compiler-error-c3140.md)|在相同編譯單位中不能有多個 'module' 屬性|  
 |[編譯器錯誤 C3141](compiler-error-c3141.md)|'*介面*': 介面只支援公用繼承|  
 |[編譯器錯誤 C3142](compiler-error-c3142.md)|'*屬性*': 您無法取得屬性的位址|  
 |編譯器錯誤 C3143|'*引數*': 屬性引數不能有多個值|  
@@ -165,9 +151,9 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3152](compiler-error-c3152.md)|'*函式*':'*關鍵字*' 只可以套用至類別、 結構或虛擬成員函式|  
 |[編譯器錯誤 C3153](compiler-error-c3153.md)|'*介面*': 您無法建立介面的執行個體|  
 |[編譯器錯誤 C3154](compiler-error-c3154.md)|必須是 '、' 之前省略符號。 非逗號分隔的省略符號參數陣列函式上不支援。|  
-|[編譯器錯誤 C3155](compiler-error-c3155.md)|屬性索引子中不允許有屬性|  
+|[編譯器錯誤 C3155](compiler-error-c3155.md)|屬性索引子中不允許屬性|  
 |[編譯器錯誤 C3156](compiler-error-c3156.md)|'*類別*': 不能有區域定義的 managed/WinRT 類型|  
-|[編譯器錯誤 C3157](compiler-error-c3157.md)|ParamArray 屬性只可套用至最後一個參數|  
+|[編譯器錯誤 C3157](compiler-error-c3157.md)|ParamArray 屬性只能套用至最後一個參數|  
 |編譯器錯誤 C3158|'*函式*':'*關鍵字*' 只可以套用至虛擬成員函式|  
 |[編譯器錯誤 C3159](compiler-error-c3159.md)|'*識別碼*': 實值型別指標的陣列不可以宣告|  
 |[編譯器錯誤 C3160](compiler-error-c3160.md)|'*類型*': managed WinRT 類別的資料成員不能有這種類型|  
@@ -177,13 +163,13 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3164|已過時。|  
 |編譯器錯誤 C3165|'*值*': 無法轉換為整數或浮點數的值|  
 |[編譯器錯誤 C3166](compiler-error-c3166.md)|已過時。 '*類型*': managed WinRT 類別的資料成員不能有類型'*pointer_type*為內部*managed_pointer_type*'|  
-|[編譯器錯誤 C3167](compiler-error-c3167.md)|無法初始化 .NET Framework: 請確定已經安裝|  
+|[編譯器錯誤 C3167](compiler-error-c3167.md)|無法初始化.NET Framework： 請確定它已安裝|  
 |[編譯器錯誤 C3168](compiler-error-c3168.md)|'*類型*': 不合法的基礎類型列舉|  
 |編譯器錯誤 C3169|'*類型*': 無法推算 'auto' 的類型從'*類型*'|  
-|[編譯器錯誤 C3170](compiler-error-c3170.md)|每個專案中只能指定一個模組屬性，不能有多個模組識別項|  
+|[編譯器錯誤 C3170](compiler-error-c3170.md)|無法在專案中有不同的模組識別項|  
 |[編譯器錯誤 C3171](compiler-error-c3171.md)|'*模組*': 無法在專案中指定不同的模組屬性|  
 |[編譯器錯誤 C3172](compiler-error-c3172.md)|'*識別碼*': 無法在專案中指定不同的 idl_module 屬性|  
-|[編譯器錯誤 C3173](compiler-error-c3173.md)|在 idl 合併中版本不相符|  
+|[編譯器錯誤 C3173](compiler-error-c3173.md)|在 idl 合併中版本不符|  
 |[編譯器錯誤 C3174](compiler-error-c3174.md)|未指定模組屬性|  
 |[編譯器錯誤 C3175](compiler-error-c3175.md)|'*函式*': 無法從 unmanaged 函式呼叫 managed 類型的方法'*函式*'|  
 |[編譯器錯誤 C3176](compiler-error-c3176.md)|'*類型*': 無法宣告區域實值類型|  
@@ -202,12 +188,12 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3189](compiler-error-c3189.md)|' typeid <*宣告子*>': 這個語法已不再支援，typeid< 代替|  
 |[編譯器錯誤 C3190](compiler-error-c3190.md)|'*宣告子*'提供的範本引數不是任何成員函式的明確具現化'*類型*'|  
 |編譯器錯誤 C3191|已過時。|  
-|[編譯器錯誤 C3192](compiler-error-c3192.md)|語法錯誤: '^' 不是前置運算子 (您是不是指 '*'?|  
+|[編譯器錯誤 C3192](compiler-error-c3192.md)|語法錯誤: '^' 不是前置運算子 (您是否是指' *'？)|  
 |編譯器錯誤 C3193|'*建構*': 需要' / clr' 或 ' / ZW' 命令列選項|  
 |[編譯器錯誤 C3194](compiler-error-c3194.md)|'*類型*': 實值類型不能有指派運算子|  
 |[編譯器錯誤 C3195](compiler-error-c3195.md)|'*關鍵字*': 已保留，不能當做 ref 類別或實值類型的成員。 您必須使用 'operator' 關鍵字定義 CLR/WinRT 運算子|  
 |[編譯器錯誤 C3196](compiler-error-c3196.md)|'*識別碼*': 使用超過一次|  
 |[編譯器錯誤 C3197](compiler-error-c3197.md)|'*關鍵字*': 只能用於定義|  
-|[編譯器錯誤 C3198](compiler-error-c3198.md)|浮點 pragma 使用方式無效: fenv_access pragma 只能在精確模式運作|  
-|[編譯器錯誤 C3199](compiler-error-c3199.md)|浮點 pragma 使用方式無效: 非精確模式不支援例外狀況|  
+|[編譯器錯誤 C3198](compiler-error-c3198.md)|無效的浮點 pragma 使用方式： fenv_access pragma 只能在精確模式的運作|  
+|[編譯器錯誤 C3199](compiler-error-c3199.md)|無效的浮點 pragma 使用方式： 非精確模式不支援例外狀況|  
 

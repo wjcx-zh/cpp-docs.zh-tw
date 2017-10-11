@@ -1,41 +1,44 @@
 ---
-title: "編譯器錯誤 C3532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3532"
+title: "編譯器錯誤 C3532 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3532
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3532
 ms.assetid: 51067853-eda8-4f59-86e8-8924e16d3a95
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e78db21d00ea93378358a1147163276fb12bdfd5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3532"></a>編譯器錯誤 C3532
 'type': 'auto' 的使用方式不正確  
   
- 指定的型別無法以 `auto` 關鍵字宣告。  例如，您無法使用 `auto` 關鍵字來宣告陣列或方法傳回型別。  
+ 指定的類型不可以宣告與`auto`關鍵字。 例如，您不能使用`auto`關鍵字來宣告陣列或方法的傳回型別。  
   
-### 更正這個錯誤  
+### <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  確定初始化運算式產生有效的型別。  
+1.  請確定初始化運算式會產生有效的型別。  
   
-2.  確定您不會宣告陣列或方法傳回型別。  
+2.  請不要宣告陣列或方法的傳回型別。  
   
-## 範例  
- 下列範例會產生 C3532 錯誤，因為 `auto` 關鍵字無法宣告方法傳回型別。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3532 因為`auto`關鍵字不能宣告方法的傳回型別。  
   
 ```  
 // C3532a.cpp  
@@ -43,8 +46,8 @@ caps.handback.revision: 6
 auto f(){}   // C3532  
 ```  
   
-## 範例  
- 下列範例會產生 C3532 錯誤，因為 `auto` 關鍵字無法宣告陣列。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3532 因為`auto`關鍵字不能宣告陣列。  
   
 ```  
 // C3532b.cpp  
@@ -61,5 +64,5 @@ int main()
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)

@@ -29,29 +29,15 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomapartment-class"></a>CComApartment 類別
-這個類別提供支援管理 apartment 執行緒集區的 EXE 模組中。  
+這個類別會提供用於管理執行緒集區的 EXE 模組中 appartment 支援。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -66,16 +52,16 @@ class CComApartment
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComApartment::CComApartment](#ccomapartment)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[CComApartment::Apartment](#apartment)|標記的執行緒起始位址。|  
-|[CComApartment::GetLockCount](#getlockcount)|傳回的執行緒目前的鎖定計數。|  
+|[CComApartment::Apartment](#apartment)|將標示執行緒的起始位址。|  
+|[CComApartment::GetLockCount](#getlockcount)|傳回執行緒的目前鎖定計數。|  
 |[CComApartment::Lock](#lock)|執行緒的鎖定計數遞增。|  
 |[CComApartment::Unlock](#unlock)|執行緒的鎖定計數遞減。|  
   
@@ -88,13 +74,13 @@ class CComApartment
 |[CComApartment::m_nLockCnt](#m_nlockcnt)|包含執行緒的目前鎖定計數。|  
   
 ## <a name="remarks"></a>備註  
- `CComApartment`使用[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)管理 apartment 執行緒集區的 EXE 模組中。 `CComApartment`提供方法來遞增和遞減鎖定計數的執行緒上。  
+ `CComApartment`正由[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)管理 apartment 執行緒集區的 EXE 模組中。 `CComApartment`提供執行緒計數遞增和遞減鎖定的方法。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ##  <a name="apartment"></a>CComApartment::Apartment  
- 標記的執行緒起始位址。  
+ 將標示執行緒的起始位址。  
   
 ```
 DWORD Apartment();
@@ -104,7 +90,7 @@ DWORD Apartment();
  永遠為 0。  
   
 ### <a name="remarks"></a>備註  
- 期間自動設定[CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init)。  
+ 自動設定期間[CComAutoThreadModule::Init](../../atl/reference/ccomautothreadmodule-class.md#init)。  
   
 ##  <a name="ccomapartment"></a>CComApartment::CComApartment  
  建構函式。  
@@ -117,7 +103,7 @@ CComApartment();
  初始化`CComApartment`資料成員[m_nLockCnt](#m_nlockcnt)和[m_hThread](#m_hthread)。  
   
 ##  <a name="getlockcount"></a>CComApartment::GetLockCount  
- 傳回的執行緒目前的鎖定計數。  
+ 傳回執行緒的目前鎖定計數。  
   
 ```
 LONG GetLockCount();
@@ -139,7 +125,7 @@ LONG Lock();
 ### <a name="remarks"></a>備註  
  由呼叫[CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)。  
   
- 在執行緒上的鎖定計數用於統計用途。  
+ 在執行緒上的鎖定計數是基於統計目的使用。  
   
 ##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  包含執行緒的識別項。  
@@ -175,7 +161,7 @@ LONG Unlock();
 ### <a name="remarks"></a>備註  
  由呼叫[CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock)。  
   
- 在執行緒上的鎖定計數用於統計用途。  
+ 在執行緒上的鎖定計數是基於統計目的使用。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

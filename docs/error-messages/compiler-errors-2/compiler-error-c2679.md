@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2679 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2679"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2679"
+title: "編譯器錯誤 C2679 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2679
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2679
 ms.assetid: 1a5f9d00-9190-4aa6-bc72-949f68ec136f
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2679
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7b2eb3e0e55442ad4525dea266d4f1ebc4f87039
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-二元運算子 'operator' : 找不到使用右方運算元型別 'type' 的運算子 \(或是沒有可接受的轉換\)  
+---
+# <a name="compiler-error-c2679"></a>編譯器錯誤 C2679
+二元 'operator': 找不到運算子的使用右方運算元類型 'type' （或沒有可接受的轉換）  
   
- 若要使用此運算子，您必須將此運算子對指定的型別加以多載，或定義一個此運算子已定義型別的轉換。  
+ 若要使用運算子，您必須針對指定類型進行多載，或針對已定義運算子的類型定義轉換。  
   
- 下列範例會產生 C2679：  
+ 下列範例會產生 C2679:  
   
 ```  
 // C2679.cpp  

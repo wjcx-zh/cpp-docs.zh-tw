@@ -1,38 +1,41 @@
 ---
-title: "編譯器警告 C4368 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4368"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4368"
+title: "編譯器警告 C4368 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4368
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4368
 ms.assetid: cb85bcee-fd3d-4aa5-b626-2324f07a4f1b
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# 編譯器警告 C4368
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fd66d8fb6d30a960c659345910242ec5a1a2e11
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-無法將 'member' 定義為 Managed 'type' 的成員: 不支援混合型別  
+---
+# <a name="compiler-warning-c4368"></a>編譯器警告 C4368
+無法定義 managed 'type' 的成員 'member': 不支援混合的類型  
   
- 您不能將原生資料成員嵌入 CLR 型別中。  
+ 您無法內嵌原生資料成員中的 CLR 型別。  
   
- 不過您可以宣告原生型別的指標，並控制指標在建構函式和解構函式，以及 Managed 類別中的存留期 。  如需詳細資訊請參閱 [解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
+ 不過您可以宣告原生類型的指標，並控制指標在 Managed 類別建構函式和解構函式與完成項中的存留期。 如需詳細資訊，請參閱[解構函式與完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
   
- 這項警告一律都以錯誤發出。  請使用 [warning](../../preprocessor/warning.md) Pragma 暫止 C4368。  
+ 為錯誤，永遠會發出這個警告。 使用[警告](../../preprocessor/warning.md)pragma 來停用 C4368。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4368。  
   
 ```  

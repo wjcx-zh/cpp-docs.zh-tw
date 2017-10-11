@@ -19,26 +19,11 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 39bbed326de5fc0a367e9b7693d3975b766e9bfc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6960d2a34a6a68925e04e0812730025d1ce2ff92
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2228"></a>編譯器錯誤 C2228
@@ -67,6 +52,6 @@ int main() {
   
  如果使用 Managed Extensions 時用了不正確的語法，您也會看到這個錯誤。 至於其他 Visual Studio 語言，您可以使用點運算子來存取 Managed 類別的成員，C++ 中的物件指標表示您必須使用 -> 運算子來存取成員：  
   
- 錯誤︰`String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
+ 錯誤： `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
   
- 權限︰`String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
+ 正確： `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`

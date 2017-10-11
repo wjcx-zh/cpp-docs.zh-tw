@@ -22,29 +22,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 01ff8a7205418583606cbfdb1c028d7097501e00
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6d0e8c0a8ec941c7a7980b81fcd95df08298ea28
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>IAxWinHostWindowLic 介面
-這個介面會提供管理已授權的控制項和其主應用程式物件的方法。  
+這個介面會提供管理授權的控制項和其主機物件的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -52,19 +38,19 @@ ms.lasthandoff: 02/24/2017
 interface IAxWinHostWindowLic : IAxWinHostWindow
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[CreateControlLic](#createcontrollic)|建立授權的控制項，並將它附加至主應用程式物件。|  
-|[CreateControlLicEx](#createcontrollicex)|建立授權的控制項、 將它連接至主機的物件，並選擇性地設定事件處理常式。|  
+|[CreateControlLic](#createcontrollic)|建立授權的控制項，並將其附加到主機的物件。|  
+|[CreateControlLicEx](#createcontrollicex)|建立授權的控制項，將其附加至主機物件，並且選擇性地設定事件處理常式。|  
   
 ## <a name="remarks"></a>備註  
- `IAxWinHostWindowLic`繼承自[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) ，並將支援的授權的控制項建立的方法。  
+ `IAxWinHostWindowLic`繼承自[IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) ，並將支援的授權控制項建立的方法。  
   
- 請參閱[裝載 ActiveX 控制項使用 ATL 類別](../../atl/hosting-activex-controls-using-atl-axhost.md)範例中使用此介面的成員。  
+ 請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)的範例會使用此介面的成員。  
   
 ## <a name="requirements"></a>需求  
  此介面的定義可做為 IDL 或 c + +，如下所示。  
@@ -75,7 +61,7 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |C++|ATLIFace.h （也包含在 ATLBase.h）|  
   
 ##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
- 建立授權的控制項、 將它初始化，以及裝載於所識別的視窗`hWnd`。  
+ 建立授權的控制項、 初始化，然後將它裝載於視窗所識別`hWnd`。  
   
 ```
 STDMETHOD(CreateControlLic)(
@@ -90,15 +76,15 @@ STDMETHOD(CreateControlLic)(
  [in]包含控制項的授權金鑰 BSTR。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)其餘參數和傳回值的說明。  
+ 請參閱[IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)其餘的參數和傳回值的說明。  
   
- 呼叫這個方法就相當於呼叫[IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
+ 呼叫這個方法相當於呼叫[IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
   
 ### <a name="example"></a>範例  
- 請參閱[裝載 ActiveX 控制項使用 ATL 類別](../../atl/hosting-activex-controls-using-atl-axhost.md)如需使用範例`IAxWinHostWindowLic::CreateControlLic`。  
+ 請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如使用的範例`IAxWinHostWindowLic::CreateControlLic`。  
   
 ##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
- 建立授權的 ActiveX 控制項、 將它初始化，以及裝載於指定的視窗，類似於[IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。  
+ 建立授權的 ActiveX 控制項、 初始化，然後將它裝載於指定的視窗，類似於[IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol)。  
   
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -116,10 +102,10 @@ STDMETHOD(CreateControlLicEx)(
  [in]包含控制項的授權金鑰 BSTR。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex)其餘參數和傳回值的說明。  
+ 請參閱[IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex)其餘的參數和傳回值的說明。  
   
 ### <a name="example"></a>範例  
- 請參閱[裝載 ActiveX 控制項使用 ATL 類別](../../atl/hosting-activex-controls-using-atl-axhost.md)如需使用範例`IAxWinHostWindowLic::CreateControlLicEx`。
+ 請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如使用的範例`IAxWinHostWindowLic::CreateControlLicEx`。
 
 
 

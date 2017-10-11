@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3509 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3509"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3509"
+title: "編譯器錯誤 C3509 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3509
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3509
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bb8fcb4c51ce0a7e69154e77ac5990898275ba16
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type': 無效的 Automation 傳回型別; 當參數標記為 'retval' 時，傳回型別必須是 'void'、'HRESULT' 或 'SCODE'  
+---
+# <a name="compiler-error-c3509"></a>編譯器錯誤 C3509
+'type': 無效的 Automation 傳回類型。當參數標示為 'retval'，傳回型別必須是 'void'、 'HRESULT' 或 'SCODE'  
   
- COM 介面中的方法必須傳回虛值 \(Void\) 或 HRESULT。  
+ 中的 COM 介面的方法必須傳回 void 或的 HRESULT。  
   
- 下列範例會產生 C3509：  
+ 下列範例會產生 C3509:  
   
 ```  
 // C3509.cpp  

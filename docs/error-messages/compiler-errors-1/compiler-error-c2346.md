@@ -1,42 +1,45 @@
 ---
-title: "編譯器錯誤 C2346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2346"
+title: "編譯器錯誤 C2346 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2346
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C2346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bf0133aba65b8477bd949cd90b51edbd407bcda7
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' 無法編譯為原生: 原因  
+---
+# <a name="compiler-error-c2346"></a>編譯器錯誤 C2346
+'function' 無法編譯為原生： 原因  
   
- 編譯器無法將函式編譯為 MSIL。  
+ 編譯器無法編譯為 MSIL 函式。  
   
- 如需詳細資訊，請參閱[managed、unmanaged](../../preprocessor/managed-unmanaged.md)與[\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 如需詳細資訊，請參閱[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)和[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
-### 更正這個錯誤  
+### <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  移除無法編譯為 MSIL 之函式中的程式碼。  
+1.  無法編譯為 MSIL 函式中移除的程式碼。  
   
-2.  不要使用 **\/clr** 編譯模組，或將函式用 Unmanaged pragma 標示為 Unmanaged。  
+2.  可能不會編譯之模組的**/clr**，或將標記為使用未受管理的 pragma unmanaged 函式。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2346。  
   
 ```  

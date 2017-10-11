@@ -1,38 +1,41 @@
 ---
-title: "編譯器錯誤 C2261 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2261"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2261"
+title: "編譯器錯誤 C2261 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2261
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2261
 ms.assetid: 60969482-9e83-49b5-9631-a04bc844da12
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2261
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8269b891ed899501625973b81c1823d4db2d56c8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'string' : 組件參考無效且無法解析  
+---
+# <a name="compiler-error-c2261"></a>編譯器錯誤 C2261
+'string': 組件參考無效，無法解析  
   
- 值無效。  
+ 值不是有效的。  
   
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 是用來指定 friend 組件。  例如，如果 a.dll 要指定 b.dll 做為 friend 組件，則您要指定 \(在 a.dll 中\)：InternalsVisibleTo\("b"\)。  然後執行階段就會允許 b.dll 存取 a.dll 中的所有項目 \(只有私用型別除外\)。  
+ <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>用來指定 friend 組件。 例如，如果 a.dll 想要指定 b.dll 做為 friend 組件，您會指定 （以 a.dll): InternalsVisibleTo("b")。 然後，執行階段可讓 b.dll 存取 a.dll （除了私用類型） 中的所有項目。  
   
- 如需在指定 Friend 組件時的正確語法之詳細資訊，請參閱 [Friend 組件 \(C\+\+\)](../../dotnet/friend-assemblies-cpp.md)。  
+ 如需指定 friend 組件時的正確語法的詳細資訊，請參閱[Friend 組件 （c + +）](../../dotnet/friend-assemblies-cpp.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2261。  
   
 ```  

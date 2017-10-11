@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: ac8458487d9ed500420f2e687f8eb7c37bf053da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 262dc8bde5dcb4c12909c69bce3fa867685245eb
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3246"></a>編譯器錯誤 C3246
 'class': 無法繼承自 'type'，因為它已經宣告為 'sealed'  
   
-標示為類別[密封](../../windows/sealed-cpp-component-extensions.md)不能針對任何其他類別的基底類別。  
+標示為 [sealed](../../windows/sealed-cpp-component-extensions.md) 的類別不能當成任何其他類別的基底類別。  
   
 下列範例會產生 C3246：  
   

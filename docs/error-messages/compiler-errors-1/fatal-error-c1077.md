@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 2bd78b1118cb0476f386bb196aa53361b292160a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a08d0592bb50edf57124a034d2397e10262009b4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1077"></a>嚴重錯誤 C1077
@@ -46,4 +31,4 @@ ms.lasthandoff: 04/12/2017
   
  命令列選項的數目超過內部限制。  
   
- 可能有太多符號定義[/D](../../build/reference/d-preprocessor-definitions.md)。 (請改為將定義放在標頭檔。)
+ 可能使用 [/D](../../build/reference/d-preprocessor-definitions.md)定義了太多符號。 (請改為將定義放在標頭檔。)

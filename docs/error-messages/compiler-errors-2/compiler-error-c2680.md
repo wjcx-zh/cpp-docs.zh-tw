@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2680"
+title: "編譯器錯誤 C2680 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2680
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 編譯器錯誤 C2680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3a7d58aa7eb126392a0484ce28753c477d6137c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type' : name 的目標型別無效  
+---
+# <a name="compiler-error-c2680"></a>編譯器錯誤 C2680
+'type': 無效的目標類型名稱  
   
- 轉型 \(Casting\) 運算子嘗試轉換成不是指標或參考的型別。  [dynamic\_cast](../../cpp/dynamic-cast-operator.md) 運算子只供指標或參考使用。  
+ 轉換成類型的指標或參考不被嘗試轉型運算子。 [Dynamic_cast](../../cpp/dynamic-cast-operator.md)運算子可以只能用於指標或參考。  
   
- 下列範例會產生 C2680：  
+ 下列範例會產生 C2680:  
   
 ```  
 // C2680.cpp  
@@ -43,7 +46,7 @@ void g(B b) {
 }  
 ```  
   
- 未定義目標時，也可能會發生 C2680。  
+ 未定義的目標時，也會發生 C2680:  
   
 ```  
 // C2680b.cpp  

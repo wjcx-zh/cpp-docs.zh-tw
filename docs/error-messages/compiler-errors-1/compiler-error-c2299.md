@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C2299 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2299"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2299"
+title: "編譯器錯誤 C2299 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2299
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2299
 ms.assetid: d001c2bc-f6fd-47aa-8e42-0eb824d6441d
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# 編譯器錯誤 C2299
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4c0b18818ac45dea56d94b6046c8772710f02f56
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'function' : 行為變更: 明確特製化不能是複製建構函式或複製指派運算子  
+---
+# <a name="compiler-error-c2299"></a>編譯器錯誤 C2299
+'function': 行為變更： 明確特製化不能複製建構函式或複製指派運算子  
   
- 對 Visual C\+\+ 2005 的編譯器完成一致性處理後也可能會發生這項錯誤：舊版 Visual C\+\+ 允許將複製建構函式或複製指派運算子明確特製化。  
+ 也可以針對 Visual c + + 2005年所進行的編譯器一致性工作產生這個錯誤： 舊版 Visual c + + 允許複製建構函式或複製指派運算子的明確特製化。  
   
- 若要解決 C2299 的問題，請不要讓複製建構函式或指派運算子成為樣板函式，而要讓非樣板函式採用類別型別。  透過明確指定樣板引數呼叫複製建構函式或指派運算子的任何程式碼都需要移除樣板引數。  
+ 若要解決 C2299，請勿複製建構函式或指派運算子的樣板函式，而非樣板函式接受類別型別。 透過明確指定樣板引數呼叫複製建構函式或指派運算子的任何程式碼需要移除的樣板引數。  
   
- 下列範例會產生 C2299：  
+ 下列範例會產生 C2299:  
   
 ```  
 // C2299.cpp  

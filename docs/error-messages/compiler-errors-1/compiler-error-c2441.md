@@ -19,35 +19,21 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 1b98c85df0db4e947ceb5722715f5d020e1ecbec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6868feadda4c0c0f3d65a86c77a403b8965fded5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2441"></a>編譯器錯誤 C2441
-'variable': __declspec(process) 以宣告的符號都必須是在 /clr: pure 模式  
+'variable': 以 __declspec （process） 宣告的符號必須是 const 在 /clr: pure 模式  
   
- **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
+ **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
- 根據預設，變數會以每個在應用程式定義域**/clr: pure**。 變數標示`__declspec(process)`下**/clr: pure**容易發生錯誤，如果一個應用程式定義域中進行修改，但在另一個讀取。  
+ 根據預設，變數是每個應用程式網域下**/clr: pure**。 變數標示`__declspec(process)`下**/clr: pure**容易發生錯誤，如果在一個應用程式定義域中修改和讀取在另一個。  
   
- 因此，編譯器會強制每個處理序變數是`const`下**/clr︰ 純**，使它們讀取只在所有應用程式定義域中的。  
+ 因此，編譯器，將每個變數是程序會強制執行`const`下**/clr: pure**，只在所有應用程式定義域中的進行這些讀取。  
   
  如需詳細資訊，請參閱[程序](../../cpp/process.md)和[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。  
   

@@ -19,25 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 7d77c7fa0c8035f8bb3a9ef732880bce4253c25b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bd852023fe4e8cf9b1845ed1a4d53f937b039211
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2753"></a>編譯器錯誤 C2753
@@ -46,7 +32,7 @@ ms.lasthandoff: 04/24/2017
  如果樣板引數清單符合參數清單，則編譯器會將它視為相同的範本。 不允許兩次定義相同的範本。  
   
 ## <a name="example"></a>範例
- 下列範例會產生 C2753，並示範如何修正此問題︰  
+ 下列範例會產生 C2753，並示範如何修正此問題：  
   
 ```cpp  
 // C2753.cpp  

@@ -1,31 +1,34 @@
 ---
-title: "嚴重錯誤 C1305 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1305"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1305"
+title: "嚴重錯誤 C1305 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1305
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1305
 ms.assetid: 1629c850-e2db-4678-83d8-9bfc85323bc5
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 嚴重錯誤 C1305
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cf4a9025b8d441ae42b7de7605594fda60dc5603
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-分析資料庫 'pgd\_file' 是供不同的架構使用  
+---
+# <a name="fatal-error-c1305"></a>嚴重錯誤 C1305
+分析資料庫 'pgd_file' 是針對不同的架構  
   
- 從另一個平台的 \/LTCG:PGINSTRUMENT 作業產生之.pgd 檔案已傳遞給 [\/LTCG:PGOPTIMIZE](../../build/reference/ltcg-link-time-code-generation.md)。  [特性指引最佳化](../../build/reference/profile-guided-optimizations.md) 皆可用於 x86平台 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 平台。  但是以一個平台的 \/LTCG:PGINSTRUMENT 作業產生的 .pgd 檔案對不同平台的 \/LTCG:PGOPTIMIZE 不是有效的輸入。  
+ 針對另一個平台已傳遞至 /ltcg: pginstrument 作業所產生的.pgd 檔[/ltcg: pgoptimize](../../build/reference/ltcg-link-time-code-generation.md) 。 [特性指引最佳化](../../build/reference/profile-guided-optimizations.md)可供 x86 和[!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]平台。 不過，與 /ltcg: pginstrument 運算平台所產生的.pgd 檔無效，無法做為輸入至 /ltcg: pgoptimize 不同平台。  
   
- 若要解除這項錯誤，只需傳遞用 \/LTCG:PGINSTRUMENT 建立的 .pgd 檔案給相同平台上的 \/LTCG:PGOPTIMIZE 即可。
+ 若要解決這個錯誤，只傳遞使用 /ltcg: pginstrument 至 /ltcg: pgoptimize 相同平台上建立的.pgd 檔。

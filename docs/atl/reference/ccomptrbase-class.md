@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
@@ -75,7 +61,7 @@ class CComPtrBase
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComPtrBase::Advise](#advise)|呼叫此方法以之間建立連線`CComPtrBase`的連接點與用戶端的接收器。|  
 |[CComPtrBase::Attach](#attach)|呼叫此方法以取得現有的指標的擁有權。|  
@@ -93,15 +79,15 @@ class CComPtrBase
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|轉型運算子。|  
 |[CComPtrBase::operator ！](#operator_not)|NOT 運算子。|  
-|[CComPtrBase::operator &](#operator_amp)|& 運算子。|  
+|[CComPtrBase::operator （& s)](#operator_amp)|& 運算子。|  
 |[CComPtrBase::operator *](#operator_star)|* 運算子。|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|小於-than 運算子。|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|小於-than 運算子。|  
 |[CComPtrBase::operator = =](#operator_eq_eq)|等號比較運算子。|  
-|[-> CComPtrBase::operator](#operator_ptr)|指標至成員運算子。|  
+|[CComPtrBase::operator->](#operator_ptr)|指標至成員運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComPtrBase::p](#p)|指標的資料成員變數。|  
   
@@ -109,7 +95,7 @@ class CComPtrBase
  這個類別提供的基礎使用 COM 記憶體管理常式，例如其他智慧型指標[CComQIPtr](../../atl/reference/ccomqiptr-class.md)和[CComPtr](../../atl/reference/ccomptr-class.md)。 衍生的類別加入自己的建構函式和運算子，但會根據所提供的方法`CComPtrBase`。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcomcli.h  
+ **標頭：** atlcomcli.h  
   
 ##  <a name="advise"></a>CComPtrBase::Advise  
  呼叫此方法以之間建立連線`CComPtrBase`的連接點與用戶端的接收器。  
@@ -190,7 +176,7 @@ HRESULT CoCreateInstance(
  將用來建立物件的程式碼與資料相關聯的 CLSID。  
   
 ### <a name="return-value"></a>傳回值  
- 在成功時，或 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE 失敗會傳回 S_OK。 請參閱[CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)和[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)這些錯誤的描述。  
+ 在成功時，或 REGDB_E_CLASSNOTREG、 CLASS_E_NOAGGREGATION、 CO_E_CLASSSTRING 或 E_NOINTERFACE 失敗會傳回 S_OK。 請參閱[CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)和[CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)如需這些錯誤的描述。  
   
 ### <a name="remarks"></a>備註  
  如果在呼叫方法的第一個表單， [CLSIDFromProgID](http://msdn.microsoft.com/library/windows/desktop/ms688386)用來復原的 CLSID。 然後呼叫這兩種形式[CoCreateClassInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>參數  
  `pOther`  
- **IUnknown \***比較。  
+ **IUnknown \*** 比較。  
   
 ### <a name="return-value"></a>傳回值  
  如果物件是完全相同，則為 false，則傳回 true。  

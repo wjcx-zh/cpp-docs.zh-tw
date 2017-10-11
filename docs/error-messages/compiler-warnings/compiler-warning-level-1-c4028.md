@@ -1,36 +1,39 @@
 ---
-title: "編譯器警告 (層級 1) C4028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4028"
+title: "編譯器警告 （層級 1） C4028 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4028
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4028
 ms.assetid: c3e8b70b-e870-416c-a285-bba5f71dbfc6
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# 編譯器警告 (層級 1) C4028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0041d795ed5afce50592f21f41986d3f32c71fe3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-型式參數 'number' 與來自宣告的不同  
+---
+# <a name="compiler-warning-level-1-c4028"></a>編譯器警告 （層級 1） C4028
+型式參數 'number' 與宣告不同  
   
- 型式參數的型別與宣告中相對應的參數不符合。  會使用原始宣告中的型別。  
+ 型式參數的型別對應的參數宣告中不一致。 會使用原始宣告中的類型。  
   
- 這種警告僅會出現在 C 原始程式碼。  
+ 這個警告只適用於 C 原始程式碼。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4028。  
   
 ```  

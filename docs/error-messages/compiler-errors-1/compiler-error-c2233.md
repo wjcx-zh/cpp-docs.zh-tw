@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2233 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2233"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2233"
+title: "編譯器錯誤 C2233 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2233
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2233
 ms.assetid: 236bdf0b-9607-4f26-a249-d8def0b1333c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2233
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 532199b3df2aaa1c81b23797bfb379c3ed828cd4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-'identifier' : 物件陣列不可包含大小為零的陣列  
+---
+# <a name="compiler-error-c2233"></a>編譯器錯誤 C2233
+'identifier': 包含大小為零的陣列物件的陣列不合法  
   
- 陣列中的每個物件至少都需包含一個元素。  
+ 陣列中的每個物件必須包含至少一個項目。  
   
- 下列範例會產生 C2233：  
+ 下列範例會產生 C2233:  
   
 ```  
 // C2233.cpp  

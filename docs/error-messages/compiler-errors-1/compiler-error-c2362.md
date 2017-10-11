@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2362 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2362"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2362"
+title: "編譯器錯誤 C2362 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2362
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2362
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e3a921084d696e6cf7abebc75d02d403cbcda2be
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' 的初始化已由 'goto label' 略過  
+---
+# <a name="compiler-error-c2362"></a>編譯器錯誤 C2362
+'identifier' 的初始化會略過 'goto 標籤'  
   
- 在以 [\/Za](../../build/reference/za-ze-disable-language-extensions.md) 編譯時，跳到某標記將導致識別項無法進行初始化。  
+ 編譯時[/Za](../../build/reference/za-ze-disable-language-extensions.md)，跳至標籤將導致無法進行初始化識別項。  
   
- 您不能跳過包含初始設定式的宣告，除非該宣告包含在不會進入的區塊內，或是變數已經被初始化。  
+ 除非放在不輸入，區塊中宣告，不能跳過的初始設定式宣告或變數尚未初始化。  
   
  下列範例會產生 C2326：  
   
@@ -42,7 +45,7 @@ label1:;
 }  
 ```  
   
- 可能的解決方案：  
+ 可能的解決方式：  
   
 ```  
 // C2362b.cpp  

@@ -19,25 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: c429f81c64b7710b7edc2b8540d98e8c790e4062
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 97937579c12730fecfa89c69d9e7cf51229b5c6c
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2026"></a>編譯器錯誤 C2026
@@ -45,11 +31,11 @@ ms.lasthandoff: 02/24/2017
   
  字串的長度超過 16380 單一位元組字元的限制。  
   
- 再進行串連相鄰的字串，字串長度不可超過 16380 單一位元組字元。  
+ 串連相鄰的字串之前, 的字串長度不能超過 16380 單一位元組字元。  
   
- 這個長度大約一半的 Unicode 字串也會產生此錯誤。  
+ 此長度大約一半的 Unicode 字串也會產生此錯誤。  
   
- 如果您有定義，如下所示的字串，將會產生 C2026:  
+ 如果您有定義，如下所示的字串，它會產生 C2026:  
   
 ```  
 char sz[] =  
@@ -59,7 +45,7 @@ long string here\
 ";  
 ```  
   
- 您無法分解，如下所示︰  
+ 您可能會破壞它，如下所示：  
   
 ```  
 char sz[] =  
@@ -69,4 +55,4 @@ imagine a really, really "
 ";  
 ```  
   
- 您可以自訂資源或外部檔案中儲存特別大的字串常值 （32k 以上）。 請參閱[建立新的自訂或資料資源](../../windows/creating-a-new-custom-or-data-resource.md)如需詳細資訊。
+ 您可能想要儲存特別大的字串常值 （32k 或以上） 自訂資源或外部檔案中。 請參閱[建立新的自訂或資料資源](../../windows/creating-a-new-custom-or-data-resource.md)如需詳細資訊。

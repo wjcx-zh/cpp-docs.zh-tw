@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b790beb88de009e1c7161f3c9af6b3e21c22fd8e
-ms.openlocfilehash: 196074fe2ad14ae0ab86fea19b707ee575a0c8a4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e131d44a3a5ffbab2874f8e524d0f57ddc77faa2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3066"></a>編譯器錯誤 C3066
-有多種方式可以用這些引數呼叫這種類型的物件  
+有多種方法，就可以呼叫此類型的物件具備這些引數  
   
  編譯器偵測到涉及 surrogate 的模稜兩可的函式呼叫。  
   

@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 29a09917ab80eb536050885a3c2cd9984f82a59a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 38ac7b0aa76a16516652bfc1736826072ad473dd
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2268"></a>編譯器錯誤 C2268
 'function' 是編譯器預先定義的程式庫 Helper。 /GL 不支援程式庫 Helper，請不要使用 /GL 來編譯目的檔 'file' 。  
   
- 原始程式碼中所定義的函式與內部編譯器函式同名。 包含函數而不需要將模組編譯[/GL](../../build/reference/gl-whole-program-optimization.md)。  
+ 原始程式碼中所定義的函式與內部編譯器函式同名。 在沒有 [/GL](../../build/reference/gl-whole-program-optimization.md)的情況下，編譯包含函式的模組。  
   
  下列範例會產生 C2268：  
   

@@ -1,37 +1,40 @@
 ---
-title: "嚴重錯誤 C1197 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1197"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1197"
+title: "嚴重錯誤 C1197 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1197
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1197
 ms.assetid: 22b801b7-e792-41f6-a461-973c03c69f25
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 嚴重錯誤 C1197
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0eb3ab152e9299d47210a6d2c1eb58e3f92a925
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-無法參考 'mscorlib.dll\_1'，因為程式已經參考了 'mscorlib.dll\_2'  
+---
+# <a name="fatal-error-c1197"></a>嚴重錯誤 C1197
+無法參考 'mscorlib.dll_1'，因為程式已經參考 'mscorlib.dll_2'  
   
- 該編譯器符合某一個版本的 Common Language Runtime，但是卻嘗試從舊版參考此版本 Common Language Runtime 的檔案。  
+ 編譯器會對應至 common language runtime 的版本。  不過，嘗試參考來自較舊版本的通用語言執行階段檔案的版本。  
   
- 若要修正這項錯誤，只能夠參考您用來進行編譯之 Visual C\+\+ 版本所隨附的 Common Language Runtime 版本的檔案。  
+ 若要解決這個錯誤，只能參考來自隨附的 common language runtime 的版本，與您使用編譯的 Visual c + + 版本的檔案。  
   
-## 範例  
- 下列範例會產生 C1197：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C1197:  
   
 ```  
 // C1197.cpp  

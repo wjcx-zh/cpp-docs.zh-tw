@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 3dfd76788c55e74625172dedf2ceb5b8bdfaa061
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7af33bd1854525bebd5d0cb423558d6077366431
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3182"></a>編譯器錯誤 C3182
-'class': 成員使用宣告或存取宣告是不合法的 managed 或 WinRTtype 內  
+'class': using 宣告或存取宣告的成員是在 managed 或 WinRTtype 不合法  
   
- A[使用](../../cpp/using-declaration.md)宣告 managed 類別的所有表單中無效。  
+ A[使用](../../cpp/using-declaration.md)宣告是無效的 managed 類別的所有表單中。  
   
  下列範例會產生 C3182，並說明如何加以修正。  
   

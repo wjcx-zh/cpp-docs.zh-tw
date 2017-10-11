@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3020"
+title: "編譯器錯誤 C3020 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3020
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C3020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4da505740eba9b291d8c4139cf9cd6fded70fdfa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'var' : OpenMP 'for' 迴圈的索引變數不可在迴圈主體內修改  
+---
+# <a name="compiler-error-c3020"></a>編譯器錯誤 C3020
+'var': OpenMP 'for' 迴圈索引變數不可修改迴圈主體中  
   
- OpenMP `for` 迴圈不可以修改 `for` 迴圈主體中的索引 \(迴圈計數器\)。  
+ OpenMP`for`迴圈也許不能修改的本文中的索引 （迴圈計數器）`for`迴圈。  
   
- 下列範例會產生 C3020：  
+ 下列範例會產生 C3020:  
   
 ```  
 // C3020.cpp  
@@ -47,9 +50,9 @@ int main() {
 }  
 ```  
   
- 以 [lastprivate](../../parallel/openmp/reference/lastprivate.md) 宣告的變數不可以用來當做並列迴圈之內的索引。  
+ 宣告變數[lastprivate](../../parallel/openmp/reference/lastprivate.md)不能當做平行化迴圈內的索引。  
   
- 下列範例為第二個 lastprivate 提供 C3020，因為該 lastprivate 會將觸發寫入至迴圈最外面之內的 idx\_a 中。  第一個 lastprivate 不會產生錯誤，因為 lastprivate 會觸發寫入至迴圈最外面之外的 idx\_a \(就技術上而言，是在最後反覆運算法的最尾端\)。  下列範例會產生 C3020。  
+ 下列範例會提供 C3020 的第二個 lastprivate，因為該 lastprivate 將會觸發寫入 idx_a 內最外層迴圈。 第一個 lastprivate 不會產生錯誤，因為該 lastprivate 觸發寫入外部最外層 idx_a for 迴圈 （技術上來說，在最後一個反覆項目的結尾）。 下列範例會產生 C3020。  
   
 ```  
 // C3020b.cpp  

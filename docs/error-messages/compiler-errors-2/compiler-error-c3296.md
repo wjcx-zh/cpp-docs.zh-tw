@@ -19,26 +19,11 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 75facf4bbc92481db12c3254e2035a39b7310a6b
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 734f4e1e337833e26c60d4239a465818d8601ae5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3296"></a>編譯器錯誤 C3296
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  編譯器遇到具有相同名稱的多個屬性。 類型中的每個屬性都必須具有唯一的名稱。  
   
- 如需詳細資訊，請參閱[屬性](../../windows/property-cpp-component-extensions.md)。  
+ 如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C3296。  

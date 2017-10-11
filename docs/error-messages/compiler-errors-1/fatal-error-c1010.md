@@ -1,43 +1,46 @@
 ---
-title: "嚴重錯誤 C1010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1010"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1010"
+title: "嚴重錯誤 C1010 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1010
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 嚴重錯誤 C1010
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 65a1842e8f7c920e053b3cdbcd41ea09583133b8
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-尋找先行編譯標頭檔時找到未預期的檔案結尾。您的原始檔中是否忘了加上 '\#include name'?  
+---
+# <a name="fatal-error-c1010"></a>嚴重錯誤 C1010
+尋找先行編譯的標頭時出現非預期的檔案結尾。 您忘記新增 '#include 名稱' 到您的來源？  
   
- 使用 [\/Yu](../../build/reference/yu-use-precompiled-header-file.md) 指定的包含檔案沒有列於原始程式檔。這個選項在大部分 Visual C\+\+ 專案中是預設為啟用，而且 "stdafx.h" 是由這個選項指定的預設 include 檔。  
+ 使用指定的包含檔案[/Yu](../../build/reference/yu-use-precompiled-header-file.md)未列在原始程式檔。  在大部分的 Visual c + + 專案類型的預設會啟用此選項，「 stdafx.h 」 是預設值，包含這個選項所指定的檔案。  
   
- 在 Visual Studio 環境中，請使用下列方法解決這項錯誤：  
+ 在 Visual Studio 環境中，使用下列方法之一來解決這個錯誤：  
   
--   如果您在專案中不使用先行編譯標頭檔，請將原始程式檔的 \[建立\/使用先行編譯標頭\] 屬性設定為 \[**未使用先行編譯標頭檔**\]。  若要設定這個編譯器選項，請執行下列步驟：  
+-   如果您未使用先行編譯標頭中您的專案，設定**建立/使用先行編譯標頭**屬性的原始程式檔以便**未使用先行編譯標頭**。 若要設定這個編譯器選項，請遵循下列步驟：  
   
-    1.  在專案的 \[方案總管\] 窗格中，用右鍵按一下專案名稱，然後按一下 \[**屬性**\]。  
+    1.  在專案的方案總管 窗格中，以滑鼠右鍵按一下專案名稱，然後**屬性**。  
   
-    2.  在左邊的窗格中，按一下 \[C\/C\+\+\] 資料夾。  
+    2.  在左窗格中，按一下  **C/c + +**資料夾。  
   
-    3.  按一下 \[先行編譯標頭\] 節點。  
+    3.  按一下**先行編譯標頭**節點。  
   
-    4.  在右窗格中，按一下 \[建立\/使用先行編譯標頭\]，然後按一下 \[**未使用先行編譯標頭檔**\]。  
+    4.  在右窗格中，按一下 **建立/使用先行編譯標頭**，然後按一下**未使用先行編譯標頭**。  
   
--   請確定您沒有不小心從目前專案中刪除、重新命名或移除標頭檔 \(預設值為 stdafx.h\)。  必須先將這個檔案包括在內，才能讓原始程式檔中的任何其他程式碼使用 **\#include "stdafx.h"** \(這個標頭檔是指定為 \[透過檔案建立\/使用 PCH\] 專案屬性\)。
+-   請確定您有不小心刪除、 重新命名或移除標頭檔 (根據預設，stdafx.h) 從目前的專案。 這個檔案也必須包含使用原始程式檔中的任何其他程式碼之前**#include"stdafx.h"**。 (此標頭檔指定為**透過檔案建立/使用 PCH**專案屬性)

@@ -1,31 +1,34 @@
 ---
-title: "嚴重錯誤 C1126 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1126"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1126"
+title: "嚴重錯誤 C1126 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1126
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1126
 ms.assetid: f22b26a6-8ad7-47cf-a237-196c8ea60aca
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 嚴重錯誤 C1126
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f5346a3adb5535242207ebc3a3c9b2fcffa7a40
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-自動配置超過 size  
+---
+# <a name="fatal-error-c1126"></a>嚴重錯誤 C1126
+'identifier': 自動配置超過大小  
   
- 函式的本機變數之配置空間 \(加上編譯器所使用的有限空間，例如，用於可切換函式的額外 20 個位元組\) 超過了限制值。  
+ 空間配置的本機變數之函式 （加上的編譯器，例如額外的 20 個位元組，可切換函式所使用的空間有限） 超過限制。  
   
- 若要修正這項錯誤，請使用 `malloc` 或 `new`，以配置大量資料。
+ 若要更正這個錯誤，請使用`malloc`或`new`配置大量的資料。

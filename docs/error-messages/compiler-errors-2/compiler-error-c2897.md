@@ -1,37 +1,39 @@
 ---
-title: "編譯器錯誤 C2897 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2897"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2897"
+title: "編譯器錯誤 C2897 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2897
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2897
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d3aa9ae6c79d3320104d9689f82b894cf2b76d9c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-destructor\/finalizer 不可為函式樣板  
+---
+# <a name="compiler-error-c2897"></a>編譯器錯誤 C2897
+解構函式/完成項不可為函式樣板  
   
- 解構函式或完成項不能進行多載，因此不允許將解構函式宣告為樣板 \(可能會定義一組解構函式\)。  
+ 解構函式或完成項無法多載，因此不允許解構函式宣告為樣板 （其會定義一組的解構函式）。  
   
- 下列範例會產生 C2897：  
+ 下列範例會產生 C2897:  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2897。  
   
 ```  
@@ -43,7 +45,7 @@ public:
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C2897。  
   
 ```  

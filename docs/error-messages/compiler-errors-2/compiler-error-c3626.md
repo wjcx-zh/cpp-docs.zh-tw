@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3626 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3626"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3626"
+title: "編譯器錯誤 C3626 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3626
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3626
 ms.assetid: 43926e2b-1ba9-4a43-9343-c58449cbb336
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3626
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9acd9c4e08c082d27fbc564031c515ca2a680d30
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'keyword': '\_\_event' 關鍵字只能使用在本身是委派指標的 COM 介面、成員函式和資料成員上  
+---
+# <a name="compiler-error-c3626"></a>編譯器錯誤 C3626
+'keyword': '__event' 關鍵字只能用於 COM 介面、 成員函式和是委派指標的資料成員  
   
- 關鍵字使用不正確。  
+ 關鍵字的使用方式錯誤。  
   
- 下列範例會產生 C3626：  
+ 下列範例會產生 C3626:  
   
 ```  
 // C3626.cpp  

@@ -1,49 +1,50 @@
 ---
-title: "towctrans | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "towctrans"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-string-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "towctrans"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "towctrans 函式"
+title: towctrans | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- towctrans
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-string-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- towctrans
+dev_langs:
+- C++
+helpviewer_keywords:
+- towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# towctrans
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: fcd97b3af0bb7e469db18b1a7ff8290af5df1bc4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="towctrans"></a>towctrans
 轉換字元。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 wint_t towctrans(  
@@ -52,29 +53,29 @@ wint_t towctrans(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
- 要轉換的字元。  
+ 您想要轉換的字元。  
   
  `category`  
- 包含 [wctrans](../../c-runtime-library/reference/wctrans.md) 傳回值之的識別項。  
+ 識別碼，包含 [wctrans](../../c-runtime-library/reference/wctrans.md) 的傳回值。  
   
-## 傳回值  
- 在 `towctrans` 之後的字元則為 `c`，在 `category`使用的轉換規則。  
+## <a name="return-value"></a>傳回值  
+ 字元 `c`，在 `towctrans` 使用 `category` 中的轉換規則之後。  
   
-## 備註  
- 必須由 [wctrans](../../c-runtime-library/reference/wctrans.md)的較早的成功呼叫 `category` 所傳回的值。  
+## <a name="remarks"></a>備註  
+ 先前成功的 [wctrans](../../c-runtime-library/reference/wctrans.md) 呼叫必須傳回值 `category`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`towctrans`|\<wctype.h\>|  
+|-------------|---------------------|  
+|`towctrans`|\<wctype.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
- 如需使用 `towctrans`的範例，請參閱 `wctrans` 。  
+## <a name="example"></a>範例  
+ 請參閱 `wctrans` 以取得使用 `towctrans` 的範例。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)

@@ -1,38 +1,41 @@
 ---
-title: "編譯器錯誤 C2786 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2786"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2786"
+title: "編譯器錯誤 C2786 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2786
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2786
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d78b5664fa2853a3fe8f7934cba9ce5b8b3f782a
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type' : \_\_uuidof 的運算元無效  
+---
+# <a name="compiler-error-c2786"></a>編譯器錯誤 C2786
+'type': __uuidof 的運算元無效  
   
- [\_\_uuidof](../../cpp/uuidof-operator.md) 運算子接受附加 GUID 的使用者定義型別，或此種使用者定義型別的物件。可能的原因：  
+ [__Uuidof](../../cpp/uuidof-operator.md)運算子採用的使用者定義型別與附加的 GUID 或這類使用者定義型別的物件。  可能的原因：  
   
-1.  引數不是一個使用者定義型別。  
+1.  引數不是使用者定義型別。  
   
-2.  `__uuidof` 無法從引數上擷取 GUID。  
+2.  `__uuidof`無法擷取從引數的 GUID。  
   
- 下列範例會產生 C2786：  
+ 下列範例會產生 C2786:  
   
 ```  
 // C2786.cpp  

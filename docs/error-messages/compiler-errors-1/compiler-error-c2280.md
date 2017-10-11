@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bec93f1ee238184cbb4eed0d98921fb28e94e222
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af19f0a0c347ab0f898a3a3d72b8cca5cb07dad8
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2280"></a>編譯器錯誤 C2280  
@@ -47,7 +32,7 @@ ms.lasthandoff: 04/29/2017
   
 編譯器偵測到嘗試參考`deleted`函式。 這個錯誤可能因呼叫成員函式已被明確標示為`= deleted`的原始程式碼中。 這項錯誤也可能因結構或類別，會自動宣告並標示為隱含的特殊成員函式呼叫`deleted`編譯器。 如需有關當編譯器自動產生`default`或`deleted`特殊成員函式，請參閱[特殊成員函式](../../cpp/special-member-functions.md)。  
   
-## <a name="example-explicitly-deleted-functions"></a>範例︰ 明確刪除函式  
+## <a name="example-explicitly-deleted-functions"></a>範例： 明確刪除函式  
 
 呼叫明確`deleted`函式會造成這個錯誤。 明確`deleted`成員函式，表示類別或結構故意設計來防止其使用，因此若要修正此問題，您應該變更程式碼以避免它。  
   
@@ -70,7 +55,7 @@ void f() {
 }
 ```  
   
-## <a name="example-uninitialized-data-members"></a>範例︰ 未初始化的資料成員  
+## <a name="example-uninitialized-data-members"></a>範例： 未初始化的資料成員  
   
 未初始化的參考型別資料成員或`const`資料成員會造成編譯器隱含地宣告`deleted`預設建構函式。 若要修正此問題，在宣告時初始化資料成員。  
   
@@ -86,7 +71,7 @@ struct A {
 } a;    // C2280
 ```  
   
-## <a name="example-reference-and-const-data-members"></a>範例︰ 參考和常數的資料成員  
+## <a name="example-reference-and-const-data-members"></a>範例： 參考和常數的資料成員  
   
 A`const`或參考類型的資料成員會造成編譯器宣告`deleted`複製指派運算子。 一旦初始化，這些成員無法指派給，因此無法運作的簡單複製或移動。 若要修正此問題，我們建議您變更程式邏輯，以移除造成錯誤的指派作業。  
   
@@ -107,7 +92,7 @@ void f() {
 }
 ```  
   
-## <a name="example-movable-deletes-implicit-copy"></a>範例︰ 可移動刪除隱含複製  
+## <a name="example-movable-deletes-implicit-copy"></a>範例： 可移動刪除隱含複製  
   
 如果在類別宣告移動建構函式或移動指派運算子，但未明確宣告複製建構函式，編譯器隱含地宣告複製建構函式和其定義為`deleted`。 同樣地，如果在類別宣告移動建構函式或移動指派運算子，但未明確宣告複製指派運算子，編譯器隱含地宣告複製指派運算子和其定義為`deleted`。 若要修正此問題，您必須明確宣告這些成員。  
  
@@ -136,7 +121,7 @@ void copy(base *p)
 }  
 ```  
 
-## <a name="example-variant-and-volatile-members"></a>範例︰ Variant 和動態成員  
+## <a name="example-variant-and-volatile-members"></a>範例： Variant 和動態成員  
   
 Visual Studio 2015 Update 2 之前的編譯器版本已不合格和產生預設建構函式和解構函式的匿名等位。 這些會立即以隱含方式宣告為`deleted`。 這些版本也允許不合格的隱含定義`default`複製和移動建構函式和`default`複製和移動指派運算子中類別和結構具有`volatile`成員變數。 編譯器現在會考量這些具有非一般建構函式和指派運算子，並不會產生`default`實作。 這種類別時是等位或在類別內的匿名等位的成員，複製和移動建構函式和等位或類別的複製和移動指派運算子隱含定義為`deleted`。 若要修正此問題，您必須明確宣告的所需的特殊成員函式。  
   
@@ -165,11 +150,11 @@ int main() {
 }
 ```  
   
-## <a name="example-indirect-base-members-deleted"></a>間接範例︰ 刪除基底成員  
+## <a name="example-indirect-base-members-deleted"></a>間接範例： 刪除基底成員  
   
 Visual Studio 2015 Update 2 之前的編譯器版本已不合格，並允許衍生的類別呼叫特殊成員函式的間接衍生`private virtual`基底類別。 編譯器現在會發出編譯器錯誤 C2280 時進行這類呼叫。  
   
-在此範例中，類別`top`間接衍生自私用虛擬`base`。 這可讓合格的程式碼中的成員`base`存取`top`; 物件類型的`top`無法預設建構或終結。 若要依賴舊的編譯器行為的程式碼中修正此問題，變更 可用的中繼類別`protected virtual`衍生或變更`top`使用直接衍生的類別︰  
+在此範例中，類別`top`間接衍生自私用虛擬`base`。 這可讓合格的程式碼中的成員`base`存取`top`; 物件類型的`top`無法預設建構或終結。 若要依賴舊的編譯器行為的程式碼中修正此問題，變更 可用的中繼類別`protected virtual`衍生或變更`top`使用直接衍生的類別：  
 
 ```cpp  
 // C2280_indirect.cpp

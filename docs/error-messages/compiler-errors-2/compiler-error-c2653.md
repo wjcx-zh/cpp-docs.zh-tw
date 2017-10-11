@@ -19,25 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: eb0c1bf407d1478451c246cf615d031ef6c45bf9
-ms.openlocfilehash: 2203cf8a09dbb05f6145ed238ab9fc03e458aaa5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cc7990614283a20e9d07f52187258dbccad7c075
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2653"></a>編譯器錯誤 C2653
@@ -58,7 +44,7 @@ void xx::func1(int m) {}   // C2653
 void yy::func1(int m) {}   // OK  
 ```  
   
-您也可以，如果您嘗試定義 C2653*複合的命名空間*，當您使用 Visual c + +，Visual Studio 2015 Update 3 之前的版本包含一或多個範圍巢狀命名空間名稱的命名空間。 複合命名空間定義 c + + 中不允許在 C + +&17; 之前。 從 Visual c + + 2015 Update 3 開始，編譯器支援複合的命名空間定義當[/std:c + + 最新](../../build/reference/std-specify-language-standard-version.md)編譯器選項指定︰  
+您也可以，如果您嘗試定義 C2653*複合命名空間*，當您使用 Visual c + + 在 Visual Studio 2015 Update 3 之前的版本包含一或多個範圍巢狀命名空間名稱的命名空間。 複合定義中不允許使用 c + + 在 C + + 17 之前的命名空間。 從 Visual c + + 2015 Update 3 開始，編譯器支援複合的命名空間定義當[/std:c + + 最新](../../build/reference/std-specify-language-standard-version.md)編譯器選項指定：  
 ```cpp  
 // C2653b.cpp  
 namespace a::b {int i;}   // C2653 prior to Visual C++ 2015 Update 3,  

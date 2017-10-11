@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2888 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2888"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2888"
+title: "編譯器錯誤 C2888 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2888
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2888
 ms.assetid: 244f593e-ff25-4dad-b31f-84dafa3bc84a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C2888
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1d2d24f81bb658ab298998507dcb967bcef6644c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 無法在命名空間 'namespace' 中定義符號  
+---
+# <a name="compiler-error-c2888"></a>編譯器錯誤 C2888
+'identifier': 無法在命名空間 'namespace' 中定義符號  
   
- 屬於命名空間 A 的符號必須定義在封入 A 的命名空間內。  
+ 屬於命名空間的符號必須定義在命名空間中含括 a。  
   
- 下列範例會產生 C2888：  
+ 下列範例會產生 C2888:  
   
 ```  
 // C2888.cpp  

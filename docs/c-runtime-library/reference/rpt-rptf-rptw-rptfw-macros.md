@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 巨集
-產生偵錯報表，以追蹤應用程式進度 (僅限偵錯版本)。 請注意，*n* 指定 `args` 中的引數數目，而且可以是 0、1、2、3、4 或 5。  
+產生偵錯報表，以追蹤應用程式進度 (僅限偵錯版本)。 請注意，  *n* 指定之引數中`args`而且可以是 0、 1、 2、 3、 4 或 5。  
   
 ## <a name="syntax"></a>語法  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  `_RPTW` 和 `_RPTFW` 巨集是這些巨集的寬字元版本。 它們與 `wprintf` 類似，並接受寬字元字串作為引數。  
   
- `_RPT` 巨集會呼叫 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函式來產生含使用者訊息的偵錯報表。 `_RPTW` 巨集會呼叫 `_CrtDbgReportW` 函式來產生具有寬字元的相同報表。 除了使用者訊息之外，`_RPTF` 和 `_RPTFW` 巨集還會建立內含呼叫報表巨集之原始程式檔和行號的偵錯報表。 使用 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 函式所定義的相同規則，透過將 `arg`[*n*] 引數取代為 `format` 字串，來建立使用者訊息。  
+ `_RPT` 巨集會呼叫 [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 函式來產生含使用者訊息的偵錯報表。 `_RPTW` 巨集會呼叫 `_CrtDbgReportW` 函式來產生具有寬字元的相同報表。 除了使用者訊息之外，`_RPTF` 和 `_RPTFW` 巨集還會建立內含呼叫報表巨集之原始程式檔和行號的偵錯報表。 使用者訊息由取代`arg`[*n*] 引數到`format`字串所定義的相同規則[printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)函式。  
   
  `_CrtDbgReport` 或 `_CrtDbgReportW` 會根據目前報表模式以及針對 `reportType` 所定義的檔案來產生偵錯報表，並判斷其目的地。 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 和 [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) 函式可用於定義每個報表類型的目的地。  
   

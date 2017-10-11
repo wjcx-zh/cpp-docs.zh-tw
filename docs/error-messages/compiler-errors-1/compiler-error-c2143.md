@@ -19,38 +19,23 @@ caps.latest.revision: 23
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: faa9361da0091ec86628af19a03eadb133ea43cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31ea645b9dd22fd15bbf4695935482d899a13386
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2143"></a>編譯器錯誤 C2143
-語法錯誤︰ 遺漏 'token1' 'token2' 之前  
+語法錯誤： 遺漏 'token1'，'token2' 之前  
   
- 編譯器會預期特定的權杖 （也就是空白字元以外的語言元素），而是找到另一個權杖。  
+ 編譯器會預期特定的權杖 （也就是空白字元以外的語言元素），而是找到另一個語彙基元。  
   
- 有關此錯誤時使用的函式 try 區塊時，請參閱[知識庫文件 241706](http://support.microsoft.com/kb/241706)。  
+ 如需有關此錯誤的資訊時使用函式 try 區塊時，它就會發生，請參閱[Knowledge Base 文章 241706](http://support.microsoft.com/kb/241706)。  
   
- 檢查[c + + 語言參考](../../cpp/cpp-language-reference.md)判斷程式碼的語法不正確的位置。 因為遇到造成問題的那一行之後，編譯器可能會報告此錯誤，請檢查幾行程式碼之前的錯誤。  
+ 請檢查[c + + 語言參考](../../cpp/cpp-language-reference.md)判斷程式碼的語法不正確的位置。 因為編譯器可能會在遇到造成問題的行之後，報告這個錯誤，檢查幾行程式碼之前的錯誤。  
   
- 在不同的情況下，C2143 就會發生。  
+ 在不同情況下，C2143 就會發生。  
   
  這個錯誤可能會發生在可以限定名稱的運算子 (`::`、`->` 和 `.`) 後面必須接著關鍵字 `template`，如下列範例所示：  
   
@@ -78,7 +63,7 @@ class MyClass
   
 ```  
   
- C2143 就會發生時**/clr**用和`using`指示詞發生語法錯誤︰  
+ C2143 就會發生時**/clr**用和`using`指示詞發生語法錯誤：  
   
 ```cpp  
 // C2143a.cpp  
@@ -87,7 +72,7 @@ using namespace System.Reflection;   // C2143
 using namespace System::Reflection;  
 ```  
   
- 它也可能發生在您嘗試使用不含也使用 CLR 語法編譯原始程式碼檔**/clr**:  
+ 它可以也可能發生於您嘗試使用而不需要也使用 CLR 語法編譯原始程式碼檔**/clr**:  
   
 ```cpp  
 // C2143b.cpp  
@@ -101,7 +86,7 @@ int main() {
 }  
 ```  
   
- 接在 `if` 陳述式後面的第一個非空白字元必須為左括號。 編譯器無法轉譯任何其他項目︰  
+ 接在 `if` 陳述式後面的第一個非空白字元必須為左括號。 編譯器無法轉譯任何其他項目：  
   
 ```cpp  
 // C2143c.cpp  
@@ -139,7 +124,7 @@ class + {};   // C2143 + is an invalid tag name
 class ValidName {};   // OK  
 ```  
   
- 或當標記未附加至陳述式。 如果您必須將標籤本身，例如，結尾的複合陳述式，將它附加到 null 陳述式︰  
+ 或當標記未附加至陳述式。 如果單獨使用時，您必須將標籤，例如，在複合陳述式，結尾處附加至 null 陳述式：  
   
 ```cpp  
 // C2143f.cpp  
@@ -153,7 +138,7 @@ void func1() {
 }  
 ```  
   
- 不合格的呼叫對 c + + 標準程式庫中的型別時，會發生錯誤︰  
+ 不合格的呼叫對 c + + 標準程式庫中的型別時，可能會發生錯誤：  
   
 ```cpp  
 // C2143g.cpp  
@@ -195,7 +180,7 @@ template void PrintType(float i, float j){}   // C2143
 template void PrintType(float i, float j);   // OK  
 ```  
   
- 在 C 程式中，必須在函式的開頭宣告變數，它們不能宣告之後執行此函式的非宣告的指示。  
+ 在 C 程式中，變數必須宣告在函式的開頭，它們不能宣告之後執行此函式的非宣告的指示。  
   
 ```C  
 // C2143j.c  

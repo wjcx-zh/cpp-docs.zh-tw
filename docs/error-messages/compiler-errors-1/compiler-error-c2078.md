@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2078"
+title: "編譯器錯誤 C2078 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2078
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2078
 ms.assetid: 9bead850-4123-46cf-a634-5c77ba974b2b
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C2078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6ae181d68f0487f663febfbe38fa42af8670b28
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2078"></a>編譯器錯誤 C2078
 初始設定式太多  
   
  初始設定式數目超過要初始化的物件數目。  
   
- 從初始設定式清單中省略內部大括號時，編譯器可以推算正確指派給物件和內部物件的初始設定式。  使用完整括號也能避免模稜兩可，產生正確的指派。  使用局部括號會造成 C2078，因為指派給初始設定式給物件時會模稜兩可。  
+ 從初始設定式清單中省略內部大括號時，編譯器可以推算正確指派給物件和內部物件的初始設定式。 使用完整括號也能避免模稜兩可，產生正確的指派。 使用局部括號會造成 C2078，因為指派給初始設定式給物件時會模稜兩可。  
   
  下列範例會產生 C2078，並示範如何修正此問題：  
   

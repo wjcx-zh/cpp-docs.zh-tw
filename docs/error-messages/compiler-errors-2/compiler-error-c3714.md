@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3714 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3714"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3714"
+title: "編譯器錯誤 C3714 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3714
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C3714
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7d58e06d99975fd4ccff9ea4bace755ff1d758cb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'method' : 事件常式處理方法必須與來源 'method' 有相同的呼叫慣例  
+---
+# <a name="compiler-error-c3714"></a>編譯器錯誤 C3714
+'method': 事件處理常式方法必須有相同的呼叫慣例做為來源 'method'  
   
- 您定義了與來源事件方法使用不同呼叫慣例的事件處理常式方法。  若要修復此錯誤，請提供事件處理常式方法與來源事件方法相同的呼叫慣例。  例如，在下列程式碼中，讓 `handler1` 與 `event1` 的呼叫慣例相符 \([\_\_cdecl](../../cpp/cdecl.md) 或 [\_\_stdcall](../../cpp/stdcall.md) 或其他\)。  同時從兩個宣告移除呼叫慣例關鍵字也可以解決此問題，而且讓 `event1` 和 `handler1` 預設值為 [thiscall](../../cpp/thiscall.md) 呼叫慣例。  如需詳細資訊，請參閱[Calling Conventions](../../cpp/calling-conventions.md)。  
+ 您已定義未使用相同的呼叫慣例做為來源事件方法的事件處理常式方法。 若要修正這個錯誤，讓事件處理常式方法相同的來源事件方法的呼叫慣例。 例如，下列程式碼，進行的呼叫慣例`handler1`和`event1`比對 ([__cdecl](../../cpp/cdecl.md)或[__stdcall](../../cpp/stdcall.md)或其他人)。 移除從兩個宣告呼叫慣例關鍵字也會解決問題，並會導致`event1`和`handler1`預設為[thiscall](../../cpp/thiscall.md)呼叫慣例。 請參閱[呼叫慣例](../../cpp/calling-conventions.md)如需詳細資訊。  
   
- 下列範例會產生 C3714：  
+ 下列範例會產生 C3714:  
   
 ```  
 // C3714.cpp  

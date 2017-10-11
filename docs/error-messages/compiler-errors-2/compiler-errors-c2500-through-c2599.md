@@ -65,32 +65,18 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: a41480c57b281c7a4fbb1e7697d11b5057b5da48
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31df41ea122c762428e153fe406efba1175c64f2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2500-through-c2599"></a>編譯器錯誤 C2500 至 C2599
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -140,16 +126,16 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2541](compiler-error-C2541.md)|'*識別碼*': 無法刪除不是指標的物件|  
 |[編譯器錯誤 C2542](compiler-error-C2542.md)|'*識別碼*': 類別物件已初始化沒有建構函式|  
 |[編譯器錯誤 C2543](compiler-error-C2543.md)|必須是 ']' 的運算子 '[]'|  
-|[編譯器錯誤 C2544](compiler-error-C2544.md)|運算子 '()' 必須有 ')'|  
+|[編譯器錯誤 C2544](compiler-error-C2544.md)|必須是 ')' 的運算子 '（）'|  
 |[編譯器錯誤 C2545](compiler-error-C2545.md)|'*運算子*': 找不到多載運算子|  
 |編譯器錯誤 C2546|'*識別碼*': 當 PIA 和非 PIA 必須先參考 PIA 中定義的類型|  
 |編譯器錯誤 C2547|'*識別碼*': 已發行方法的所有參數必須明確都命名的宣告上|  
 |[編譯器錯誤 C2548](compiler-error-C2548.md)|'*函式*': 遺漏參數的預設參數*參數*|  
-|[編譯器錯誤 C2549](compiler-error-C2549.md)|使用者定義轉換不可以指定傳回類型|  
+|[編譯器錯誤 C2549](compiler-error-C2549.md)|使用者定義的轉換不能指定傳回型別|  
 |[編譯器錯誤 C2550](compiler-error-C2550.md)|'*識別碼*': 建構函式初始設定式清單只允許在建構函式定義|  
 |[編譯器錯誤 C2551](compiler-error-C2551.md)|'void *' 類型需要明確轉換|  
 |[編譯器錯誤 C2552](compiler-error-C2552.md)|'*識別碼*': 無法以初始設定式清單初始化非彙總|  
-|[編譯器錯誤 C2553](compiler-error-C2553.md)|'*類型* *derived_class*::*函式*': 覆寫虛擬函式傳回型別不同於'*類型* *base_class*::*函式*'|  
+|[編譯器錯誤 C2553](compiler-error-C2553.md)|'*類型* *derived_class*::*函式*': 覆寫虛擬函式傳回型別不同於'*類型* *base_類別*::*函式*'|  
 |[編譯器錯誤 C2555](compiler-error-C2555.md)|'*derived_class*::*函式*': 覆寫虛擬函式傳回類型不同，而且不是從 covariant'*base_class*::*函式*'|  
 |[編譯器錯誤 C2556](compiler-error-C2556.md)|'*type1* *類別*::*函式*': 多載函式只有不同傳回類型從'*type2* *類別*::*函式*'|  
 |[編譯器錯誤 C2557](compiler-error-C2557.md)|'*識別碼*': 沒有建構函式無法初始化 private 和 protected 成員|  
@@ -158,16 +144,16 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C2560|'*識別碼*': 無法多載成員函式具有 ref 限定詞 ref-qualifier 的成員函式|  
 |[編譯器錯誤 C2561](compiler-error-C2561.md)|'*函式*': 函式必須傳回值|  
 |[編譯器錯誤 C2562](compiler-error-C2562.md)|'*函式*': 'void' 傳回值的函式|  
-|[編譯器錯誤 C2563](compiler-error-C2563.md)|在型式參數清單中不相符|  
+|[編譯器錯誤 C2563](compiler-error-C2563.md)|型式參數清單中的不符|  
 |編譯器錯誤 C2564|已過時。|  
 |編譯器錯誤 C2565|'*識別碼*': ref 限定詞不合法的建構函式/解構函式|  
-|[編譯器錯誤 C2566](compiler-error-C2566.md)|在條件運算式中的多載函式|  
+|[編譯器錯誤 C2566](compiler-error-C2566.md)|條件運算式中的多載函式|  
 |[編譯器錯誤 C2567](compiler-error-C2567.md)|無法開啟中繼資料中的 '*filename*'， *possible_reason*|  
 |[編譯器錯誤 C2568](compiler-error-C2568.md)|'*識別碼*': 無法解析函式多載|  
 |[編譯器錯誤 C2569](compiler-error-C2569.md)|'*識別碼*': 列舉/等位不能當做基底類別|  
 |[編譯器錯誤 C2570](compiler-error-C2570.md)|'*識別碼*': 等位不能有基底類別|  
 |[編譯器錯誤 C2571](compiler-error-C2571.md)|'*識別碼*': 虛擬函式不能在等位中'*union*'|  
-|[編譯器錯誤 C2572](compiler-error-C2572.md)|'*函式*': 重複定義的預設引數︰ 參數*數目*|  
+|[編譯器錯誤 C2572](compiler-error-C2572.md)|'*函式*': 重複定義的預設引數： 參數*數目*|  
 |[編譯器錯誤 C2573](compiler-error-C2573.md)|'*類別*': 無法刪除指向此類型物件的指標類別具有 'operator delete' 沒有任何未定位多載。 使用:: 刪除或加入類別中的 '運算子 delete'|  
 |[編譯器錯誤 C2574](compiler-error-C2574.md)|'*解構函式*': 無法宣告為 static|  
 |[編譯器錯誤 C2575](compiler-error-C2575.md)|'*識別碼*': 只有成員函式和基底可以是虛擬|  
@@ -181,7 +167,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2583](compiler-error-C2583.md)|'*識別碼*':' const/volatile ' 'this' 指標不合法的建構函式/解構函式|  
 |[編譯器錯誤 C2584](compiler-error-C2584.md)|'*類別*': 直接基底'*base_class2*'無法存取; 的基底'*base_class1*'|  
 |[編譯器錯誤 C2585](compiler-error-C2585.md)|明確轉換成 '*類型*' 模稜兩可|  
-|[編譯器錯誤 C2586](compiler-error-C2586.md)|不正確的使用者定義轉換語法: 間接取值不合法|  
+|[編譯器錯誤 C2586](compiler-error-C2586.md)|不正確的使用者定義轉換語法： 間接取值不合法|  
 |[編譯器錯誤 C2587](compiler-error-C2587.md)|'*識別碼*': 不合法使用的區域變數當做預設參數|  
 |[編譯器錯誤 C2588](compiler-error-C2588.md)|':: ~*識別碼*': 不合法的全域解構函式/完成|  
 |[編譯器錯誤 C2589](compiler-error-C2589.md)|'*識別碼*': 不合法的語彙基元，在右邊 ':: '|  
@@ -193,5 +179,5 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C2595|'*識別碼*' WinRT 屬性類型必須密封|  
 |編譯器錯誤 C2596|'*識別碼*' WinRT 屬性欄位只能是 'public enum class'、 'int'、 'unsigned 的 int'、 'bool'、 'Platform:: type'、 'Platform:: string' 或 ' Windows:: Foundation:: HResult'|  
 |[編譯器錯誤 C2597](compiler-error-C2597.md)|參考非靜態成員不合法 '*識別碼*'|  
-|[編譯器錯誤 C2598](compiler-error-C2598.md)|連結規格必須在全域範圍內|  
+|[編譯器錯誤 C2598](compiler-error-C2598.md)|連結規格必須在全域範圍|  
 |[編譯器錯誤 C2599](compiler-error-C2599.md)|'*識別碼*': 不允許的 managed/WinRT 列舉的向前宣告|  

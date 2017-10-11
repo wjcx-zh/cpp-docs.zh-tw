@@ -19,34 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: aeb26c5a3b1add0f3b8ec3eb9ba9ae2c20fb094e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a03e0dbb61dc6f57b1a6fe3cd345d46f78b05a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3415"></a>編譯器錯誤 C3415
 發現多個 'section_name' 區段有不同的屬性 ('value')  
   
- 中所指定的值衝突[區段](../../preprocessor/section.md)pragma。  
+ 在 [section](../../preprocessor/section.md) pragma 中指定了相衝突的值。  
   
- `value`是 ntimage.h 中所指定之區段的目前設定。 例如:   
+ `value` 是 ntimage.h 中所指定之區段的目前設定。 例如:  
   
 ```  
 // Section contains extended relocations.  

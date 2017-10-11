@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2464 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2464"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2464"
+title: "編譯器錯誤 C2464 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2464
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2464
 ms.assetid: ace953d6-b414-49ee-bfef-90578a8da00c
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2464
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7e2600608ae490363d9042ad72ad91bf7cfe32d2
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 無法使用 'new' 來配置參考  
+---
+# <a name="compiler-error-c2464"></a>編譯器錯誤 C2464
+'identifier': 無法使用 'new' 來配置參考  
   
- 參考識別項是以 `new` 運算子配置。  參考並非記憶體物件，因此 `new` 無法傳回它們的指標。  請使用標準的變數宣告語法來宣告參考。  
+ 參考識別碼配置與`new`運算子。 參考不是記憶體物件，因此`new`無法傳回指標給它們。 使用標準的變數宣告語法來宣告參考。  
   
- 下列範例會產生 C2464：  
+ 下列範例會產生 C2464:  
   
 ```  
 // C2464.cpp  

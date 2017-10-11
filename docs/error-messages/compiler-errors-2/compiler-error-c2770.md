@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2770 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2770"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2770"
+title: "編譯器錯誤 C2770 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2770
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2770
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 81179a10cc58c1b22f974b4367d471dde87bdc65
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'template' 的無效明確 template\_or\_generic 引數  
+---
+# <a name="compiler-error-c2770"></a>編譯器錯誤 C2770
+'template' 的無效的明確 template_or_generic 引數  
   
- 具有明確樣板或泛型引數的函式候選樣板，產生不允許的函式型別。  
+ 候選函式樣板與明確的樣板或泛型引數會導致不允許函式類型。  
   
- 下列範例會產生 C2770：  
+ 下列範例會產生 C2770:  
   
 ```  
 // C2770.cpp  

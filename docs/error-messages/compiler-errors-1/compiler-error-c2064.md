@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2064 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2064"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2064"
+title: "編譯器錯誤 C2064 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2064
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2064
 ms.assetid: 6cda05da-f437-4f50-9813-ae69538713a3
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2064
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e0c82ae2de90a6e4e6e7e66648d84c2b55a9c2b0
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="compiler-error-c2064"></a>編譯器錯誤 C2064
 詞彙不等於使用 N 引數的函式  
   
- 透過運算式對函式進行呼叫。  運算式不等於使用所指定引數數目之函式的指標。  
+ 透過運算式對函式進行呼叫。 運算式不等於使用所指定引數數目之函式的指標。  
   
- 在此範例中，程式碼嘗試呼叫非函式做為函式。  下列範例會產生 C2064：  
+ 在此範例中，程式碼嘗試呼叫非函式做為函式。 下列範例會產生 C2064：  
   
 ```  
 // C2064.cpp  
@@ -40,7 +43,7 @@ void func() {
 }  
 ```  
   
- 您必須從物件執行個體的內容呼叫非靜態成員函式的指標。  下列範例會產生 C2064，並顯示如何修正它。  
+ 您必須從物件執行個體的內容呼叫非靜態成員函式的指標。 下列範例會產生 C2064，並顯示如何修正它。  
   
 ```  
 // C2064b.cpp  
@@ -60,7 +63,7 @@ int main() {
   
 ```  
   
- 在類別內，成員函式指標也必須指出呼叫物件內容。  下列範例會產生 C2064，並顯示如何修正它。  
+ 在類別內，成員函式指標也必須指出呼叫物件內容。 下列範例會產生 C2064，並顯示如何修正它。  
   
 ```  
 // C2064d.cpp  

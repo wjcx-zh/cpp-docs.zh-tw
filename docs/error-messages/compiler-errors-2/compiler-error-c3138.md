@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3138 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3138"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3138"
+title: "編譯器錯誤 C3138 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3138
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3138
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ba06bed1ce02c8a3030720152892e0e35760afa
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'interface' : 'attribute' 介面必須繼承自 IDispatch，或從 IDispatch 繼承的介面  
+---
+# <a name="compiler-error-c3138"></a>編譯器錯誤 C3138
+'interface': 'attribute' 介面必須繼承自 IDispatch，或是從 IDispatch 繼承的介面  
   
- 具有 [dual](../../windows/dual.md) 或 [dispinterface](../../windows/dispinterface.md) 屬性的介面沒有 `IDispatch` 做為直接或間接的基底介面。  
+ 具有介面[雙重](../../windows/dual.md)或[dispinterface](../../windows/dispinterface.md)屬性並沒有`IDispatch`為直接或間接基底介面。  
   
- 下列範例會產生 C3138：  
+ 下列範例會產生 C3138:  
   
 ```  
 // C3138.cpp  

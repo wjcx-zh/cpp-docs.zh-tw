@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: fba4f70add3b92f2bbde8d5f1ad742a35f7d5bb6
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af179d622ffe8354352cc6b87ab009b825e55b36
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3737"></a>編譯器錯誤 C3737
-委派': 委派可能沒有明確呼叫慣例  
+'delegate': 委派不能宣告明確的呼叫慣例  
   
- 您不能指定[呼叫慣例](../../cpp/calling-conventions.md)的`delegate`。  
+ 您無法指定[呼叫慣例](../../cpp/calling-conventions.md)如`delegate`。  
   
 ## <a name="example"></a>範例  
 下列範例會產生 C3737:  

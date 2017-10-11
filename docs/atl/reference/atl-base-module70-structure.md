@@ -22,25 +22,11 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
-ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlbasemodule70-structure"></a>_ATL_BASE_MODULE70 結構
@@ -61,36 +47,36 @@ struct _ATL_BASE_MODULE70 {
 };
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
  `cbSize`  
- 使用版本控制的結構大小。  
+ 用來進行版本控制的結構大小。  
   
  `m_hInst`  
- **HInstance**這個模組 （exe 或 dll）。  
+ **HInstance**針對此模組 （exe 或 dll）。  
   
  `m_hInstResource`  
  預設執行個體資源控制代碼。  
   
  **m_bNT5orWin98**  
- 作業系統版本資訊。 在內部使用 ATL  
+ 作業系統版本資訊。 供內部使用 atl。  
   
  **dwAtlBuildVer**  
- 將 ATL 版本 目前 0x0700。  
+ 儲存 ATL 版本 目前 0x0700。  
   
  **pguidVer**  
  ATL 的內部的 GUID。  
   
  **m_csResource**  
- 用來同步存取**m_rgResourceInstance**陣列。 在內部使用 ATL  
+ 用來同步處理存取具備**m_rgResourceInstance**陣列。 供內部使用 atl。  
   
  **m_rgResourceInstance**  
- 用來搜尋資源的 ATL 是知道的所有資源執行個體中的陣列。 在內部使用 ATL  
+ 用來搜尋資源的 ATL 會感知的所有資源執行個體中的陣列。 供內部使用 atl。  
   
 ## <a name="remarks"></a>備註  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)定義為 typedef 的`_ATL_BASE_MODULE70`。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcore.h  
+ **標頭：** atlcore.h  
   
 ## <a name="see-also"></a>另請參閱  
  [結構](../../atl/reference/atl-structures.md)

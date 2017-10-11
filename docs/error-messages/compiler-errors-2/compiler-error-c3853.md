@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3853 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3853"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3853"
+title: "編譯器錯誤 C3853 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3853
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3853
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54a05062cfc3f0871e16b500c8a3c4b6c3787b15
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'\=' : 透過函式參考重新初始化參考或指派是不合法的  
+---
+# <a name="compiler-error-c3853"></a>編譯器錯誤 C3853
+'=': 重新初始化參考或透過函式參考的指派是不合法  
   
- 無法透過函式指定給參考，因為函式不是左值。  
+ 無法指派給透過函式的參考，因為函式都不是左值。  
   
- 下列範例會產生 C3853：  
+ 下列範例會產生 C3853:  
   
 ```  
 // C3853.cpp  

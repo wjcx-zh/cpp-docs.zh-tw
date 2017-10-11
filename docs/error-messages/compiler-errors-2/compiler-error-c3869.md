@@ -1,35 +1,38 @@
 ---
-title: "編譯器錯誤 C3869 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3869"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3869"
+title: "編譯器錯誤 C3869 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3869
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3869
 ms.assetid: 85b2ad72-95c1-4ed6-9761-6ef66c3802b7
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# 編譯器錯誤 C3869
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 902786dcce2a9bc8b959eb42b037c7476fad0738
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-gcnew 條件約束遺漏空參數清單 '\(\)'  
+---
+# <a name="compiler-error-c3869"></a>編譯器錯誤 C3869
+gcnew 條件約束遺漏空參數清單 '（）'  
   
- 在沒有空參數清單的情況下指定 `gcnew` 特殊條件約束。  如需詳細資訊，請參閱[Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)。  
+ `gcnew`指定特殊條件約束時未有空參數清單。 請參閱[泛型型別參數的條件約束 (C + + /CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)如需詳細資訊。  
   
-## 範例  
- 下列範例會產生 C3869：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3869。  
   
 ```  
 // C3869.cpp  

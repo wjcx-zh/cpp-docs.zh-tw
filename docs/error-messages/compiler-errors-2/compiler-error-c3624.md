@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: b7862590432e2aaa5c41126abb1ebd92ebeb05a3
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8ce571a05b801361f8e0a5f21c9dba1c159bbf88
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3624"></a>編譯器錯誤 C3624
-'type': 使用這個型別需要參考組件 'assembly'  
+'type': 使用這個型別需要組件 'assembly' 的參考  
   
- 未指定編譯您的程式碼所需的組件 （參考）;傳遞的組件[#using](../../preprocessor/hash-using-directive-cpp.md)指示詞。  
+ 未指定編譯程式碼所需的組件 （參考）。傳遞的組件[#using](../../preprocessor/hash-using-directive-cpp.md)指示詞。  
   
 ## <a name="example"></a>範例  
 下列範例會產生 C3624:  

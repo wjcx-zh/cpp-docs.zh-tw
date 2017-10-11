@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2459 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2459"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2459"
+title: "編譯器錯誤 C2459 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2459
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2459
 ms.assetid: 81e29f4c-5b60-40fb-9557-1cdc630d77e8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2459
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 78d92952b53c15d6170b32a711848111a4b6fd28
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 已經定義; 無法以匿名成員加入  
+---
+# <a name="compiler-error-c2459"></a>編譯器錯誤 C2459
+'identifier': 已被定義無法以匿名成員加入  
   
- 類別、結構或等位透過匿名等位的成員，重新定義於自己的範圍 \(Scope\) 內。  
+ 類別、 結構或等位中重新定義自己的範圍匿名等位的成員。  
   
- 下列範例會產生 C2459：  
+ 下列範例會產生 C2459:  
   
 ```  
 // C2459.cpp  

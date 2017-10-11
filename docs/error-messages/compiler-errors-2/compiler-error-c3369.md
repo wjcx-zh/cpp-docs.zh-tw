@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a8e195a4dba4964d0ed487ad4ebd189190467155
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 62cd3de9bca4e695d051e150c7dfa45dca28936a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3369"></a>編譯器錯誤 C3369
 'module name': 已定義 idl_module  
   
- [Idl_module](../../windows/idl-module.md)您用來定義 DLL 的使用方式可以只能出現一次在程式中。  
+ 定義 DLL 的 [idl_module](../../windows/idl-module.md) 用法只能在程式中出現一次。  
   
  下列範例會產生 C3369：  
   

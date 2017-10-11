@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3254"
+title: "編譯器錯誤 C3254 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3254
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3254
 ms.assetid: 93427b10-fa72-4e43-80d1-1a6e122f9f40
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 104ee89c45d8a1134611535ab6aa9c62f09e139c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'explicit override' : 雖然在類別中已含有明確覆寫 'override'，但不是從含有函式宣告的介面衍生而來  
+---
+# <a name="compiler-error-c3254"></a>編譯器錯誤 C3254
+'明確覆寫': 類別包含明確覆寫 'override'，但不是衍生自包含函式宣告的介面  
   
- 當您[明確覆寫](../../cpp/explicit-overrides-cpp.md)方法時，包含覆寫的類別必須直接或間接衍生自包含您所覆寫的函式之型別。  
+ 當您[明確覆寫](../../cpp/explicit-overrides-cpp.md)方法，包含覆寫的類別必須衍生，直接或間接、 包含函式的型別從您正在覆寫。  
   
- 下列範例會產生 C3254：  
+ 下列範例會產生 C3254:  
   
 ```  
 // C3254.cpp  

@@ -22,25 +22,11 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: 383384c8f08b98592f92b5d38850137c1c0c6d54
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 7f521b418b7d179eb506a5e9df2887addec059ef
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlwinmodule70-structure"></a>_ATL_WIN_MODULE70 結構
@@ -57,24 +43,24 @@ struct _ATL_WIN_MODULE70 {
 };
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
  `cbSize`  
- 使用版本控制的結構大小。  
+ 用來進行版本控制的結構大小。  
   
  `m_csWindowCreate`  
- 用來序列化視窗註冊程式碼存取。 在內部使用 ATL  
+ 用來序列化視窗註冊程式碼存取。 供內部使用 atl。  
   
  **m_pCreateWndList**  
- 用來將 windows 繫結至其物件。 在內部使用 ATL  
+ 用來將 windows 繫結至其物件。 供內部使用 atl。  
   
  **m_rgWindowClassAtoms**  
- 用來追蹤視窗類別註冊，讓它們可以適當地移除註冊在終止。 在內部使用 ATL  
+ 用來追蹤視窗類別註冊，讓它們可以適當地取消註冊，在終止。 供內部使用 atl。  
   
 ## <a name="remarks"></a>備註  
  [_ATL_WIN_MODULE](atl-typedefs.md#_atl_win_module)定義為 typedef 的`_ATL_WIN_MODULE70`。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ## <a name="see-also"></a>另請參閱  
  [結構](../../atl/reference/atl-structures.md)

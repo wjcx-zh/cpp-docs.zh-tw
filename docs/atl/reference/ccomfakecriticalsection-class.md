@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6232a3e8b6c392361a1e57681e9ba4dff66d6aa4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 類別
-這個類別會提供與相同的方法[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) ，但不提供關鍵區段。  
+這個類別會提供相同的方法， [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)但並不會提供重要區段。  
   
 ## <a name="syntax"></a>語法  
   
@@ -58,23 +44,23 @@ class CComFakeCriticalSection
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[CComFakeCriticalSection::Init](#init)|沒有什麼作用，因為沒有任何重要區段。|  
-|[CComFakeCriticalSection::Lock](#lock)|沒有什麼作用，因為沒有任何重要區段。|  
-|[CComFakeCriticalSection::Term](#term)|沒有什麼作用，因為沒有任何重要區段。|  
-|[CComFakeCriticalSection::Unlock](#unlock)|沒有什麼作用，因為沒有任何重要區段。|  
+|[CComFakeCriticalSection::Init](#init)|沒有任何作用，因為沒有任何重要的區段。|  
+|[CComFakeCriticalSection::Lock](#lock)|沒有任何作用，因為沒有任何重要的區段。|  
+|[CComFakeCriticalSection::Term](#term)|沒有任何作用，因為沒有任何重要的區段。|  
+|[CComFakeCriticalSection::Unlock](#unlock)|沒有任何作用，因為沒有任何重要的區段。|  
   
 ## <a name="remarks"></a>備註  
- `CComFakeCriticalSection`鏡像中找到的方法[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 不過，`CComFakeCriticalSection`不提供關鍵區段; 因此，它的方法不執行任何動作。  
+ `CComFakeCriticalSection`反映的方法中找到[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。 不過，`CComFakeCriticalSection`不提供重要的區段中; 因此，其方法不執行任何動作。  
   
- 您通常會使用`CComFakeCriticalSection`透過`typedef`名稱，或是`AutoCriticalSection`或`CriticalSection`。 當使用[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，這兩種`typedef`名稱參考`CComFakeCriticalSection`。 當使用[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，它們會參考[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)和`CComCriticalSection`分別。  
+ 通常，您會使用`CComFakeCriticalSection`透過`typedef`命名時，可能是`AutoCriticalSection`或`CriticalSection`。 當使用[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，這兩種`typedef`名稱參考`CComFakeCriticalSection`。 當使用[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，其參考[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)和`CComCriticalSection`分別。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcore.h  
+ **標頭：** atlcore.h  
   
 ##  <a name="init"></a>CComFakeCriticalSection::Init  
- 沒有什麼作用，因為沒有任何重要區段。  
+ 沒有任何作用，因為沒有任何重要的區段。  
   
 ```
 HRESULT Init() throw();
@@ -84,7 +70,7 @@ HRESULT Init() throw();
  傳回 S_OK。  
   
 ##  <a name="lock"></a>CComFakeCriticalSection::Lock  
- 沒有什麼作用，因為沒有任何重要區段。  
+ 沒有任何作用，因為沒有任何重要的區段。  
   
 ```
 HRESULT Lock() throw();
@@ -94,7 +80,7 @@ HRESULT Lock() throw();
  傳回 S_OK。  
   
 ##  <a name="term"></a>CComFakeCriticalSection::Term  
- 沒有什麼作用，因為沒有任何重要區段。  
+ 沒有任何作用，因為沒有任何重要的區段。  
   
 ```
 HRESULT Term() throw();
@@ -104,7 +90,7 @@ HRESULT Term() throw();
  傳回 S_OK。  
   
 ##  <a name="unlock"></a>CComFakeCriticalSection::Unlock  
- 沒有什麼作用，因為沒有任何重要區段。  
+ 沒有任何作用，因為沒有任何重要的區段。  
   
 ```
 HRESULT Unlock() throw();

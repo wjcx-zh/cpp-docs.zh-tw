@@ -1,29 +1,32 @@
 ---
-title: "編譯器錯誤 C2517 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2517"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2517"
+title: "編譯器錯誤 C2517 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2517
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2517
 ms.assetid: d79348d5-e271-4aad-b973-8264515f8e90
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C2517
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ffea60522817fe9e1942b1c622f19bdc135f0a45
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : '::' 的右邊未定義  
+---
+# <a name="compiler-error-c2517"></a>編譯器錯誤 C2517
+'identifier': 右邊 ':: ' 未定義  
   
- 範圍解析運算子 \(`::`\) 右側的識別項，必須是左側類別、結構或等位的已定義成員。  如果未命名類別、結構或等位，則位於右側的識別項必須以全域範圍 \(Scope\) 宣告。
+ 範圍解析運算子右邊的識別項 (`::`) 必須是類別、 結構或等位在左側的已定義的成員。 如果不為任何類別、 結構或等位，在右邊的識別項必須宣告具有全域領域。

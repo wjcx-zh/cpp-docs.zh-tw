@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2628 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2628"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2628"
+title: "編譯器錯誤 C2628 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2628
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2628
 ms.assetid: 19a25e77-d5be-4107-88d5-0745b6281f98
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2628
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 60fd4e45b19423e32b7a5973b8bdfad34b75bcc6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type1' 之後接 'type2' 不合法 \(您是否遺忘 ';'?\)  
+---
+# <a name="compiler-error-c2628"></a>編譯器錯誤 C2628
+'type1' 後面接著 'type2' 是不合法 (是否忘記 ';'？)  
   
- 可能是遺漏分號。  
+ 分號可能會遺失。  
   
- 下列範例會產生 C2628：  
+ 下列範例會產生 C2628:  
   
 ```  
 // C2628.cpp  
@@ -37,7 +39,7 @@ class CMyClass {}
 int main(){}   // C2628 error  
 ```  
   
- 可能的解決方案：  
+ 可能的解決方式：  
   
 ```  
 // C2628b.cpp  

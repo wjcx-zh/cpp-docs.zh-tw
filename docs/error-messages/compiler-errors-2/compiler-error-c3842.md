@@ -1,33 +1,35 @@
 ---
-title: "編譯器錯誤 C3842 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3842"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3842"
+title: "編譯器錯誤 C3842 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3842
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3842
 ms.assetid: 41a1a44a-c618-40a2-8d26-7da27d14095d
 caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3842
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d9fe94a50939af6d28f9dc29eb1eb7aa91a7d47c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3842"></a>編譯器錯誤 C3842
 'function'：不支援 WinRT 或 Managed 類型的成員函式上的 'const' 和 'volatile' 限定詞  
   
- 不支援 Windows 執行階段或 Managed 類型的成員函式上的 [const](../../cpp/const-cpp.md) 和 [volatile](../../cpp/volatile-cpp.md)。  
+ [const](../../cpp/const-cpp.md)和[volatile](../../cpp/volatile-cpp.md)不支援 Windows 執行階段或 managed 的類型的成員函式。  
   
  下列範例會產生 C3842：  
   
@@ -40,5 +42,4 @@ public ref struct A {
   
    void f() {}  
 };  
-  
 ```

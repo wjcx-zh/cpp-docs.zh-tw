@@ -19,26 +19,11 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 15bb9910d689cd9b8f05ed6df306f3bdf1f79195
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bb1e3512074b2767977367b30ac5d01dc5758b0
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-level-1-c4002"></a>編譯器警告 (層級 1) C4002
@@ -46,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
  巨集中的實際參數數目超出巨集定義中的正式參數數目。 前置處理器會收集額外的參數，但會在巨集展開期間忽略這些巨集。  
   
- 不正確地使用時，會發生 C4002 [Variadic 巨集](../../preprocessor/variadic-macros.md)。  
+ 不正確地使用 [Variadic Macros](../../preprocessor/variadic-macros.md)時，會發生 C4002。  
   
  下列範例會產生 C4002：  
   

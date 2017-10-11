@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+title: "編譯器錯誤 C3849 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-對型別 'type' 運算式的函式樣式呼叫會放棄 const 和\/或 volatile 限定詞 \(針對所有的 number 可用運算子多載\)  
+---
+# <a name="compiler-error-c3849"></a>編譯器錯誤 C3849
+運算式的類型 'type' 的函式樣式呼叫會失去所有數字可用運算子多載的 const 及/或 volatile 限定詞  
   
- 具有指定的 const\-volatile 型別的變數，僅能呼叫使用相同或更多 const\-volatile 限制所定義的成員函式。  
+ 指定的 const-volatile 限定類型的變數只可以呼叫成員函式定義使用相同或更高的 const-volatile 限定性條件。  
   
- 若要修正此錯誤，請提供適當的成員函式。  當轉換導致遺失限定詞時，您無法對符合 const 或 volatile 限制的物件執行轉換。  所以，您可以取得限定詞，但不得在轉換中遺失限定詞。  
+ 若要修正這個錯誤，請提供適當的成員函式。 當轉換導致遺失限定性條件時，無法 const 或 volatile 限定的物件上執行轉換。 您可以取得限定詞，但您不能遺失限定詞在轉換中。  
   
- 下列範例會產生 C3849：  
+ 下列範例會產生 C3849:  
   
 ```  
 // C3849.cpp  

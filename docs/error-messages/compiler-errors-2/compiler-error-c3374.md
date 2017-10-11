@@ -1,30 +1,32 @@
 ---
-title: "編譯器錯誤 C3374 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3374"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3374"
+title: "編譯器錯誤 C3374 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3374
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3374
 ms.assetid: 41431299-bd20-47d4-a0c8-1334dd79018b
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3374
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 16c857cf431462abd2acc21cf7444ec0aad2d075
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3374"></a>編譯器錯誤 C3374
 無法取得 'function' 的位址，除非建立委派執行個體  
   
  除了建立委派執行個體之外，已在內容中取得函式的位址。  
@@ -52,5 +54,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [如何：定義和使用委派](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+## <a name="see-also"></a>另請參閱  
+ [如何：定義和使用委派 (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)

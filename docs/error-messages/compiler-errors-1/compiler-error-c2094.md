@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6fe065a9cefe7a01942aa3f5411167f8a5f38985
-ms.openlocfilehash: a33bc40cd39494a304652ff8b20d40a6f3fdd099
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f20930a38a429aba3e3959f57f937bbfa9962da9
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2094"></a>編譯器錯誤 C2094
 標籤 'identifier' 未定義  
   
-所使用的標籤[goto](../../cpp/goto-statement-cpp.md)函式中沒有陳述式。  
+函式中沒有 [goto](../../cpp/goto-statement-cpp.md) 陳述式所使用的標籤。  
   
 ## <a name="example"></a>範例  
 下列範例會產生 C2094：  

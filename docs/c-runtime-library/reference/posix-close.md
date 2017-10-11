@@ -1,43 +1,44 @@
 ---
-title: "關閉 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "close"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "close"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "close 函式"
+title: close | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- close
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- close
+dev_langs:
+- C++
+helpviewer_keywords:
+- close function
 ms.assetid: c79689f4-9c86-4a4a-a256-d22e3498f55d
 caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 關閉
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d56a1fef4c1223445b8968495768a1bcf714a28c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-這個 POSIX 函式已被取代。  使用 ISO C\+\+ 一致性的考量外[\_close](../../c-runtime-library/reference/close.md)相反。
+---
+# <a name="close"></a>關閉
+此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_close](../../c-runtime-library/reference/close.md)。

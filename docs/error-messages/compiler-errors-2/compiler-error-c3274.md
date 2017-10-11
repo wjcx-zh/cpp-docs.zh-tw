@@ -19,32 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: fa97b32bb88adf056ee32289fa2eb11fd0579a28
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6fc2149b3aac1e3575500ed4ac6c3c1b283f1db4
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3274"></a>編譯器錯誤 C3274
 __finally/finally 缺少對應的 try  
   
- A [__finally](../../cpp/try-finally-statement.md)或[最後](../../dotnet/finally.md)找到陳述式，但沒有相符`try`。 若要解決這個問題，請刪除 `__finally` 陳述式，或為 `try` 加入 `__finally`陳述式。  
+ 找到缺少對應之 [的](../../cpp/try-finally-statement.md) __finally [或](../../dotnet/finally.md) finally `try`陳述式。 若要解決這個問題，請刪除 `__finally` 陳述式，或為 `try` 加入 `__finally`陳述式。  
   
  下列範例會產生 C3274：  
   

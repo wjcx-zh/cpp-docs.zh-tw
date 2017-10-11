@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2896 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2896"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2896"
+title: "編譯器錯誤 C2896 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2896
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C2896
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b60848dcaa06bb41ec290e3fb91a65fda025a8df
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function1' : 不能用函式樣板 'function2' 做為引數  
+---
+# <a name="compiler-error-c2896"></a>編譯器錯誤 C2896
+'function1': 不能使用做為引數的函式樣板 'function2'  
   
- 函式樣板不能是另一個函式樣板的引數。  
+ 函式樣板不可為另一個函式樣板的引數。  
   
- 下列範例會產生 C2896：  
+ 下列範例會產生 C2896:  
   
 ```  
 // C2896.cpp  
@@ -40,7 +43,7 @@ int main() {
 }  
 ```  
   
- 使用泛型時也可能會發生 C2896：  
+ 當您使用泛型時，也會發生 C2896:  
   
 ```  
 // C2896b.cpp  

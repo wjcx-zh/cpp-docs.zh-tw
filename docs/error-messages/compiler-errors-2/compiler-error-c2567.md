@@ -1,35 +1,38 @@
 ---
-title: "編譯器錯誤 C2567 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2567"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2567"
+title: "編譯器錯誤 C2567 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2567
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2567
 ms.assetid: 9c140ac9-7059-47e6-9ba1-e7939c8c0dc3
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 編譯器錯誤 C2567
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bbdc535f75230da05a92eb0498176da40e918ea
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-在 'file' 中無法開啟中繼資料，檔案已刪除或移動  
+---
+# <a name="compiler-error-c2567"></a>編譯器錯誤 C2567
+無法開啟 'file' 中的中繼資料，檔案可能已刪除或移動  
   
- 在與編譯器後端處理序及與編譯器前端處理序相同的目錄中，找不到在原始程式碼中 \(用 `#using`\) 參考的中繼資料檔。  如需詳細資訊，請參閱[\#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)。  
+ 已在來源中參考的中繼資料檔案 (與`#using`) 找不到相同的目錄中由編譯器後端處理序的編譯器前端程序。 請參閱[#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)如需詳細資訊。  
   
- 如果您以 **\/c** 在一部電腦上編譯，然後嘗試要在另一部電腦上執行連結時間產生程式碼，可能會產生 C2567。  如需詳細資訊，請參閱[\/LTCG \(連結時間產生程式碼\)](../../build/reference/ltcg-link-time-code-generation.md)。  
+ 如果您使用編譯時，可能造成 C2567 **/c**上一個機器，然後在另一部電腦上的連結時間程式碼產生。 如需詳細資訊，請參閱[/LTCG （連結時間程式碼產生）](../../build/reference/ltcg-link-time-code-generation.md))。  
   
- 它也可能表示您的電腦已經沒有記憶體了。  
+ 它也可能表示您的電腦已經沒有多餘的記憶體。  
   
- 若要更正這項錯誤，則務必要確定中繼資料檔在建置程序的所有階段都位於相同的目錄位置。
+ 若要更正這個錯誤，請確定中繼資料檔案是在相同的目錄位置的所有階段建置程序。

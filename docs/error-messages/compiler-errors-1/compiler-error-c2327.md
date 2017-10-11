@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 62834115e3ad9c9733326a1bc94e5fa51209f485
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2eefd1e3fb4f23087b0f08bf6a9ff55593d9a961
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2327"></a>編譯器錯誤 C2327
-'symbol': 不是型別名稱、 靜態、 或列舉值  
+'symbol': 不是型別名稱、 靜態或列舉值  
   
- 巢狀類別內的程式碼會嘗試存取不是型別名稱、 靜態成員或列舉值的封入類別的成員。  
+ 巢狀類別內的程式碼嘗試存取不是型別名稱、 靜態成員或列舉值的封入類別的成員。  
   
- 進行編譯時**/clr**，引發 C2327 的常見原因是具有相同名稱的屬性類型的屬性。  
+ 編譯時**/clr**，C2327 的常見原因是具有相同名稱的屬性類型的屬性。  
   
  下列範例會產生 C2327:  
   
@@ -66,7 +52,7 @@ public:
 };  
 ```  
   
- 如果型別名稱隱藏的成員名稱，也會發生 C2327:  
+ 如果型別名稱會隱藏成員的名稱，也會發生 C2327:  
   
 ```  
 // C2327b.cpp  
@@ -80,7 +66,7 @@ class S {
 };  
 ```  
   
- 在此情況下，您需要完整指定參數的資料型別，也可以引發 C2327:  
+ 在此情況下，您要完整指定參數的資料類型，也可能引發 C2327:  
   
 ```  
 // C2327c.cpp  
@@ -129,7 +115,7 @@ namespace NA {
 }  
 ```  
   
-下列範例會示範 C2327 時，會發生相同的屬性型別名稱︰  
+下列範例會示範 C2327 當屬性具有相同名稱的屬性類型：  
   
 ```  
 // C2327f.cpp  

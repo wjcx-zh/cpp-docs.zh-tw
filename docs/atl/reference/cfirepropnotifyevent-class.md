@@ -24,29 +24,15 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1511a9e9ba287d12aade7c393887c6b5f8880b96
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1fb22263b877aaff3e30e56efff2a005bc024f2e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 類別
-這個類別提供方法來通知有關控制項的屬性變更容器的接收器。  
+這個類別會提供方法來通知控制項屬性變更有關的容器接收。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -64,20 +50,20 @@ class CFirePropNotifyEvent
 |名稱|說明|  
 |----------|-----------------|  
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|（靜態）通知容器接收已變更的控制項屬性。|  
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|（靜態）通知即將變更的控制項屬性的容器的接收器。|  
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|（靜態）通知控制項屬性即將變更容器的接收。|  
   
 ## <a name="remarks"></a>備註  
- `CFirePropNotifyEvent`有兩種方法，通知的控制項屬性已變更，或將變更容器的接收器。  
+ `CFirePropNotifyEvent`有兩種方法來通知控制項屬性已變更，或將變更容器的接收器。  
   
- 如果實作控制項的類別衍生自`IPropertyNotifySink`、`CFirePropNotifyEvent`方法叫用，當您呼叫`FireOnRequestEdit`或`FireOnChanged`。 如果您的控制項類別不衍生自`IPropertyNotifySink`，這些函式呼叫會傳回`S_OK`。  
+ 如果實作控制項的類別衍生自`IPropertyNotifySink`、`CFirePropNotifyEvent`方法叫用，當您呼叫`FireOnRequestEdit`或`FireOnChanged`。 如果您的控制項類別不衍生自`IPropertyNotifySink`，這些函式的呼叫傳回`S_OK`。  
   
- 如需有關如何建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。  
+ 如需有關建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlctl.h  
+ **標頭：** atlctl.h  
   
 ##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged  
- 通知所有連線[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 上指定的物件屬性已變更的介面。  
+ 通知所有連接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 上指定的物件屬性變更的介面。  
   
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -97,7 +83,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
  此函式是安全地呼叫，即使您的控制項不支援連接點。  
   
 ##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit  
- 通知所有連線[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 上指定的物件屬性即將變更的介面。  
+ 通知所有連接[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) （在每個物件的連接點） 上指定的物件屬性即將變更的介面。  
   
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -108,7 +94,7 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
  [in]指標**IUnknown**傳送通知的物件。  
   
  *dispID*  
- [in]若要變更之屬性的識別碼。  
+ [in]若要變更之屬性的識別項。  
   
 ### <a name="return-value"></a>傳回值  
  其中一個標準`HRESULT`值。  

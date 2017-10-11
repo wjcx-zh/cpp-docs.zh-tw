@@ -41,32 +41,18 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: bd3572d2941f911f10c067a24dd4e7323c3c3f8c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-errors-c2400-through-c2499"></a>編譯器錯誤 C2400 至 C2499
+# <a name="compiler-errors-c2400-through-c2499"></a>編譯器錯誤 C2400 到 C2499
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -77,7 +63,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2402](compiler-error-c2402.md)|'*識別碼*': 暫存器必須是中的索引'*內容*'|  
 |[編譯器錯誤 C2403](compiler-error-c2403.md)|'*識別碼*': 暫存器必須是基底/索引鍵中'*內容*'|  
 |[編譯器錯誤 C2404](compiler-error-c2404.md)|'*識別碼*': 暫存器中的不合法'*內容*'|  
-|[編譯器錯誤 C2405](compiler-error-c2405.md)|具有位移 (offset) 的 short 向前參考不合法|  
+|[編譯器錯誤 C2405](compiler-error-c2405.md)|具有位移的 short 向前參考不合法|  
 |[編譯器錯誤 C2406](compiler-error-c2406.md)|'*識別碼*': 名稱中未定義'*內容*'|  
 |[編譯器錯誤 C2407](compiler-error-c2407.md)|不合法 'float' 暫存器中 '*內容*'|  
 |[編譯器錯誤 C2408](compiler-error-c2408.md)|中 PTR 運算子的類型不合法 '*內容*'|  
@@ -86,11 +72,11 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2411](compiler-error-c2411.md)|'*識別碼*': 不合法的結構/等位成員在'*內容*'|  
 |[編譯器錯誤 C2412](compiler-error-c2412.md)|'*標籤*': 已重新定義不區分大小寫的標籤|  
 |[編譯器錯誤 C2413](compiler-error-c2413.md)|'*識別碼*': 不合法的 align 大小|  
-|[編譯器錯誤 C2414](compiler-error-c2414.md)|運算元的數目不合法|  
+|[編譯器錯誤 C2414](compiler-error-c2414.md)|不合法的運算元數目|  
 |[編譯器錯誤 C2415](compiler-error-c2415.md)|不適當的運算元類型|  
 |編譯器錯誤 C2416|屬性 '*屬性*' 無法套用在此內容中|  
 |[編譯器錯誤 C2417](compiler-error-c2417.md)|除以零 '*內容*'|  
-|[編譯器錯誤 C2418](compiler-error-c2418.md)|無法刪除瀏覽器檔案︰*檔名*|  
+|[編譯器錯誤 C2418](compiler-error-c2418.md)|無法刪除瀏覽器檔案：*檔名*|  
 |[編譯器錯誤 C2419](compiler-error-c2419.md)|中的零 mod '*內容*'|  
 |[編譯器錯誤 C2420](compiler-error-c2420.md)|'*識別碼*': 符號不合法的*內容*|  
 |[編譯器錯誤 C2421](compiler-error-c2421.md)|PTR 運算子與暫存器中使用 '*內容*'|  
@@ -120,7 +106,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2446](compiler-error-c2446.md)|'*運算子*': 沒有從轉換'*type_1*'to'*type_2*'|  
 |[編譯器錯誤 C2447](compiler-error-c2447.md)|' {': 遺漏函式標頭 （舊樣式型式清單？）|  
 |[編譯器錯誤 C2448](compiler-error-c2448.md)|'*識別碼*': 函式樣式初始設定式似乎是函式定義|  
-|[編譯器錯誤 C2449](compiler-error-c2449.md)|於檔案範圍找到 '{' (遺漏函式標頭?|  
+|[編譯器錯誤 C2449](compiler-error-c2449.md)|找到 ' {' 在檔案範圍 （遺漏函式標頭嗎？）|  
 |[編譯器錯誤 C2450](compiler-error-c2450.md)|switch 運算式的型別 '*類型*' 是不合法|  
 |[編譯器錯誤 C2451](compiler-error-c2451.md)|條件運算式的型別 '*類型*' 是不合法|  
 |[編譯器錯誤 C2452](compiler-error-c2452.md)|'*類型*': 對 safe_cast 無效的來源類型|  
@@ -136,10 +122,10 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2462](compiler-error-c2462.md)|'*識別碼*': 無法在' new-expression ' 中定義的型別|  
 |[編譯器錯誤 C2464](compiler-error-c2464.md)|'*類型*': 無法使用 'new' 來配置參考|  
 |[編譯器錯誤 C2465](compiler-error-c2465.md)|不能在括號運算式內定義匿名類型|  
-|[編譯器錯誤 C2466](compiler-error-c2466.md)|無法配置常數大小為 0 的陣列，常數必須為大於 0 的整數|  
+|[編譯器錯誤 C2466](compiler-error-c2466.md)|無法配置常數大小為 0 的陣列|  
 |[編譯器錯誤 C2467](compiler-error-c2467.md)|匿名的宣告不合法 '*user_defined_type*'|  
 |編譯器錯誤 C2468|無法在類別或結構，且具有虛擬基底類別中的 ' constexpr' 建構函式。|  
-|[編譯器錯誤 C2469](compiler-error-c2469.md)|'new': 無法配置 'void' 物件|  
+|[編譯器錯誤 C2469](compiler-error-c2469.md)|'new': 無法配置 'void' 的物件|  
 |[編譯器錯誤 C2470](compiler-error-c2470.md)|'*函式*': 類似函式定義，但沒有參數清單; 略過程式主體|  
 |[編譯器錯誤 C2471](compiler-error-c2471.md)|無法更新程式資料庫 '*filename*'|  
 |[編譯器錯誤 C2472](compiler-error-c2472.md)|'*函式*' 無法在 managed 程式碼產生: '*訊息*'; 以 /clr 編譯以便產生混合的影像|  
@@ -154,7 +140,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2482](compiler-error-c2482.md)|'*識別碼*': WINRT managed 程式碼中不允許的執行緒區域資料的動態初始化|  
 |[編譯器錯誤 C2483](compiler-error-c2483.md)|'*識別碼*': 具有解構函式或非彙總類型的物件不在 WINRT managed 程式碼中宣告具有執行緒儲存期|  
 |[編譯器錯誤 C2485](compiler-error-c2485.md)|'*識別碼*': 無法辨認的擴充的屬性|  
-|[編譯器錯誤 C2486](compiler-error-c2486.md)|'__LOCAL_SIZE' 只能在具有 'naked' 屬性的函式中使用|  
+|[編譯器錯誤 C2486](compiler-error-c2486.md)|' __LOCAL_SIZE' 只能在具有 'naked' 屬性的函式|  
 |[編譯器錯誤 C2487](compiler-error-c2487.md)|'*識別碼*': dll 介面類別的成員可能無法以 dll 介面宣告|  
 |[編譯器錯誤 C2488](compiler-error-c2488.md)|'*識別碼*': 'naked' 只能套用至非成員函式定義|  
 |[編譯器錯誤 C2489](compiler-error-c2489.md)|'*識別碼*': 'naked' 函式中不允許在函式範圍的自動或暫存器變數的初始化|  

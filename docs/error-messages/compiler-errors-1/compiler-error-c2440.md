@@ -19,25 +19,11 @@ caps.latest.revision: 27
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 0789875fee672856dbc0eff429d2363a43963940
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23d6666e2b8e61a8761454729f4f7444a9800cbe
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2440"></a>編譯器錯誤 C2440
@@ -187,7 +173,7 @@ int main() {
 ```  
   
 ## <a name="example"></a>範例  
- 如果您嘗試建立 Visual c + + 陣列，其型別都是<xref:System.Array>.</xref:System.Array>的執行個體也會發生 C2440  如需詳細資訊，請參閱[陣列](../../windows/arrays-cpp-component-extensions.md)。  下一個範例會產生 C2440:  
+ 如果您嘗試建立其型別是 Visual c + + 陣列的執行個體也會發生 C2440 <xref:System.Array>。  如需詳細資訊，請參閱[陣列](../../windows/arrays-cpp-component-extensions.md)。  下一個範例會產生 C2440:  
   
 ```cpp  
 // C2440e.cpp  
@@ -261,7 +247,7 @@ This error can appear in ATL code that uses the SINK_ENTRY_INFO macro defined in
 ## <a name="example"></a>範例  
 ### <a name="copy-list-initialization"></a>Copy-list-initialization
 
-2017 和更新版本的 visual Studio 正確引發編譯器錯誤來使用 Visual Studio 2015 中未被攔截，可能會導致損毀的初始設定式清單的物件建立相關或未定義的執行階段行為。 在 C + + 17 複製-清單初始化，編譯器需要考慮的多載解析的明確建構函式，但如果實際上選擇該多載，則必須引發錯誤。
+2017 和更新版本的 visual Studio 正確引發編譯器錯誤與使用 Visual Studio 2015 中未被攔截，可能會導致損毀的初始設定式清單的物件建立相關或未定義的執行階段行為。 在 C + + 17 複製-清單初始化，編譯器需要考慮的多載解析的明確建構函式，但如果實際上選擇該多載，則必須引發錯誤。
 
 下列範例會在 Visual Studio 2015 中，但不是在 Visual Studio 2017 編譯。
 
@@ -299,7 +285,7 @@ int main()
 ## <a name="example"></a>範例
 ### <a name="cv-qualifiers-in-class-construction"></a>類別建構中的 cv 限定詞
 
-在 Visual Studio 2015 中，透過建構函式呼叫來產生類別物件時，編譯器有時會錯誤地忽略 cv 限定詞。 這可能會導致當機或意外執行階段行為。 下列範例會在 Visual Studio 2015 中編譯，但會引發編譯器錯誤在 Visual Studio 2017 和更新版本︰
+在 Visual Studio 2015 中，透過建構函式呼叫來產生類別物件時，編譯器有時會錯誤地忽略 cv 限定詞。 這可能會導致當機或意外執行階段行為。 下列範例會在 Visual Studio 2015 中編譯，但會引發編譯器錯誤在 Visual Studio 2017 和更新版本：
 
 ```cpp
 struct S 

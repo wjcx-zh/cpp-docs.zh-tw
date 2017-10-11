@@ -1,38 +1,41 @@
 ---
-title: "編譯器警告 C4485 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4485"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4485"
+title: "編譯器警告 C4485 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4485
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器警告 C4485
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 435e49a857e3c448ac7e5f7ef00bb9032320aa25
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'override\_function' : 符合基底 ref 類別方法 'base\_class\_function'，但是未標記為 'new' 或 'override'; 假設為 'new' \(且為 'virtual'\)  
+---
+# <a name="compiler-warning-c4485"></a>編譯器警告 C4485
+'override_function': 符合基底 ref 類別方法 'base_class_function'，但不是標示為 'new' override';'new' （和 'virtual'） 會假設  
   
- 存取子會覆寫 \(不管有沒有 `virtual` 關鍵字\) 基底類別存取子函式，但 `override` 或 `new` 規範不是覆寫函式簽章的一部分。  加入 `new` 或 `override` 規範，以解除這項警告。  
+ 存取子會覆寫，不論`virtual`關鍵字、 基底類別存取子函式，但`override`或`new`規範不是覆寫的函式簽章的一部分。 新增`new`或`override`規範，以解決這個警告。  
   
- 如需詳細資訊，請參閱 [override](../../windows/override-cpp-component-extensions.md) 和 [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)。  
+ 請參閱[覆寫](../../windows/override-cpp-component-extensions.md)和[新 (新 vtable 中的位置）](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)如需詳細資訊。  
   
- C4485 永遠視同錯誤。  請使用 [warning](../../preprocessor/warning.md) Pragma 隱藏 C4485。  
+ C4485 永遠視為錯誤。 使用[警告](../../preprocessor/warning.md)隱藏 C4485 pragma。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4485  
   
 ```  

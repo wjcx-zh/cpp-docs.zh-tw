@@ -22,29 +22,15 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlmodule70-structure"></a>_ATL_MODULE70 結構
-包含每一個 ATL 模組所使用的資料。  
+包含每個 ATL 模組所使用的資料。  
   
 ## <a name="syntax"></a>語法  
   
@@ -57,24 +43,24 @@ struct _ATL_MODULE70 {
 };
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
  `cbSize`  
- 使用版本控制的結構大小。  
+ 用來進行版本控制的結構大小。  
   
  `m_nLockCnt`  
- 參考計數來決定多久模組應該保持作用中。  
+ 參考計數決定多久模組應該保持作用中。  
   
  **m_pTermFuncs**  
- 追蹤已登錄為 ATL 關機時呼叫的函式。  
+ 已登錄為 ATL 關閉時呼叫的追蹤函式。  
   
  **m_csStaticDataInitAndTypeInfo**  
- 用來協調多執行緒情況中的內部資料的存取權。  
+ 用來協調在多執行緒的情況下的內部資料的存取權。  
   
 ## <a name="remarks"></a>備註  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)定義為 typedef 的`_ATL_MODULE70`。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ## <a name="see-also"></a>另請參閱  
  [結構](../../atl/reference/atl-structures.md)

@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C2486 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2486"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2486"
+title: "編譯器錯誤 C2486 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2486
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2486
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b7f54417beefb9bd2c82763464d0e76ed81bf7ed
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'\_\_LOCAL\_SIZE' 只能在具有 'naked' 屬性的函式中使用  
+---
+# <a name="compiler-error-c2486"></a>編譯器錯誤 C2486
+' __LOCAL_SIZE' 只能在具有 'naked' 屬性的函式  
   
- 在內嵌組譯碼函式中，`__LOCAL_SIZE` 名稱是保留給使用 [naked](../../cpp/naked-cpp.md) 屬性宣告的函式。  
+ 在內嵌組件函式，則名稱`__LOCAL_SIZE`會保留供函式宣告與[naked](../../cpp/naked-cpp.md)屬性。  
   
- 下列範例會產生 C2486：  
+ 下列範例會產生 C2486:  
   
 ```  
 // C2486.cpp  

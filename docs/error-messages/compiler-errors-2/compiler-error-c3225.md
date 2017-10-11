@@ -1,37 +1,40 @@
 ---
-title: "編譯器錯誤 C3225 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3225"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3225"
+title: "編譯器錯誤 C3225 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3225
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# 編譯器錯誤 C3225
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4cf62ba7b0c3b95f22c27172546ccdd253ed9279
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'arg' 的泛型型別引數不可為 'type'，它必須是實值型別或控制代碼型別  
+---
+# <a name="compiler-error-c3225"></a>編譯器錯誤 C3225
+'arg' 的泛型型別引數不可為 'type'，它必須是實值類型或控制代碼類型  
   
- 泛型型別引數不是正確型別。  
+ 泛型型別引數不是正確的型別。  
   
- 如需詳細資訊，請參閱[Generics](../../windows/generics-cpp-component-extensions.md)。  
+ 如需詳細資訊，請參閱[泛型](../../windows/generics-cpp-component-extensions.md)。  
   
-## 範例  
- 您不能以原生型別具現化泛型型別。  下列範例會產生 C3225。  
+## <a name="example"></a>範例  
+ 您無法具現化具有原生類型的泛型型別。 下列範例會產生 C3225。  
   
 ```  
 // C3225.cpp  
@@ -49,8 +52,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列範例會使用 C\# 建立元件。  請注意，條件約束指定泛型型別只能以實值型別具現化。  
+## <a name="example"></a>範例  
+ 下列範例會建立元件使用 C#。 請注意，條件約束指定泛型型別只產生使用實值類型。  
   
 ```  
 // C3225_b.cs  
@@ -59,8 +62,8 @@ int main() {
 public class MyList<T> where T: struct {}  
 ```  
   
-## 範例  
- 這個範例使用了 C\# 設計的元件，而違反了在 <xref:System.Nullable> 之外，MyList 只能以實值型別具現化的條件約束。  下列範例會產生 C3225。  
+## <a name="example"></a>範例  
+ 這個範例會使用來自 C#-撰寫的元件，且違反 MyList 只能是條件約束以外的實值類型執行個體化<xref:System.Nullable>。 下列範例會產生 C3225。  
   
 ```  
 // C3225_c.cpp  

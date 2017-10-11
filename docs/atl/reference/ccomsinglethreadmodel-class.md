@@ -27,29 +27,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: ff5d8d2ced1d6fe0196888d8c746844ace8307f8
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: e7fe0d3ea0b8fc5b42546f12c17d890250752260
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel 類別
-這個類別提供方法遞增和遞減的變數值。  
+這個類別提供方法遞增和遞減之變數的值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -72,25 +58,25 @@ class CComSingleThreadModel
 |名稱|說明|  
 |----------|-----------------|  
 |[CComSingleThreadModel::Decrement](#decrement)|遞減特定變數的值。 這個實作不是安全執行緒。|  
-|[CComSingleThreadModel::Increment](#increment)|會指定變數的值。 這個實作不是安全執行緒。|  
+|[CComSingleThreadModel::Increment](#increment)|遞增特定變數的值。 這個實作不是安全執行緒。|  
   
 ## <a name="remarks"></a>備註  
- `CComSingleThreadModel`提供方法來遞增和遞減的變數值。 不同於[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，這些方法都不具備執行緒安全。  
+ `CComSingleThreadModel`提供方法來遞增和遞減之變數的值。 不同於[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)，這些方法不是安全執行緒。  
 
- 您通常會使用`CComSingleThreadModel`透過其中兩個`typedef`名稱，或是[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。 每個參考類別`typedef`取決於使用的執行緒模型下, 表所示︰  
+ 通常，您會使用`CComSingleThreadModel`透過下列其中兩個`typedef`名稱，或是[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。 每個參考類別`typedef`取決於使用的執行緒模型下, 表所示：  
 
   
-|typedef|單一執行緒模型|Apartment 執行緒模型|免費的執行緒模型|  
+|typedef|單一執行緒模型|Apartment 執行緒模型|可用的執行緒模型|  
 |-------------|----------------------------|-------------------------------|--------------------------|  
 |`CComObjectThreadModel`|S|S|M|  
 |`CComGlobalsThreadModel`|S|M|M|  
   
- S= `CComSingleThreadModel`;M =`CComMultiThreadModel`  
+ S = `CComSingleThreadModel`;M =`CComMultiThreadModel`  
   
- `CComSingleThreadModel`本身會定義三個`typedef`名稱。 `ThreadModelNoCS`參考`CComSingleThreadModel`。 `AutoCriticalSection`和`CriticalSection`參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)，它會提供空的方法，取得和釋放重要區段的擁有權相關聯。  
+ `CComSingleThreadModel`本身定義三個`typedef`名稱。 `ThreadModelNoCS`參考`CComSingleThreadModel`。 `AutoCriticalSection`和`CriticalSection`參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)，這樣會提供與取得和釋放關鍵區段的擁有權相關聯的空白方法。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ##  <a name="autocriticalsection"></a>CComSingleThreadModel::AutoCriticalSection  
  當使用`CComSingleThreadModel`、`typedef`名稱`AutoCriticalSection`參考類別[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)。  
@@ -100,7 +86,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 ```  
   
 ### <a name="remarks"></a>備註  
- 因為`CComFakeCriticalSection`不會提供重要區段，其方法不會執行任何動作。  
+ 因為`CComFakeCriticalSection`不提供重要的區段，其方法會執行任何動作。  
   
  [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含定義`AutoCriticalSection`。 下表顯示執行緒模型類別所參考的重要區段類別之間的關聯性`AutoCriticalSection`:  
   
@@ -110,7 +96,7 @@ typedef CComFakeCriticalSection AutoCriticalSection;
 |`CComMultiThreadModel`|`CComAutoCriticalSection`|  
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|  
   
- 除了`AutoCriticalSection`，您可以使用`typedef`名稱[CriticalSection](#criticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要刪除的 CRT 啟始程式碼中。  
+ 除了`AutoCriticalSection`，您可以使用`typedef`名稱[CriticalSection](#criticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要排除 CRT 啟始程式碼中。  
   
 ### <a name="example"></a>範例  
  請參閱[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。  
@@ -123,7 +109,7 @@ typedef CComFakeCriticalSection CriticalSection;
 ```  
   
 ### <a name="remarks"></a>備註  
- 因為`CComFakeCriticalSection`不會提供重要區段，其方法不會執行任何動作。  
+ 因為`CComFakeCriticalSection`不提供重要的區段，其方法會執行任何動作。  
   
  [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含定義`CriticalSection`。 下表顯示執行緒模型類別所參考的重要區段類別之間的關聯性`CriticalSection`:  
   
@@ -133,13 +119,13 @@ typedef CComFakeCriticalSection CriticalSection;
 |`CComMultiThreadModel`|`CComCriticalSection`|  
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|  
   
- 除了`CriticalSection`，您可以使用`typedef`名稱[AutoCriticalSection](#autocriticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要刪除的 CRT 啟始程式碼中。  
+ 除了`CriticalSection`，您可以使用`typedef`名稱[AutoCriticalSection](#autocriticalsection)。 您不應該指定`AutoCriticalSection`全域物件或靜態類別成員，如果您想要排除 CRT 啟始程式碼中。  
   
 ### <a name="example"></a>範例  
  請參閱[CComMultiThreadModel::AutoCriticalSection](../../atl/reference/ccommultithreadmodel-class.md#autocriticalsection)。  
   
 ##  <a name="decrement"></a>CComSingleThreadModel::Decrement  
- 這個靜態函式會遞減變數的值所指`p`。  
+ 此靜態函式遞減變數的值所指向`p`。  
   
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -153,7 +139,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
  遞減的結果。  
   
 ##  <a name="increment"></a>CComSingleThreadModel::Increment  
- 這個靜態函式會遞減變數的值所指`p`。  
+ 此靜態函式遞減變數的值所指向`p`。  
   
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();
@@ -164,7 +150,7 @@ static ULONG WINAPI Increment(LPLONG p) throw();
  [in]要遞增之變數的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 遞增的結果。  
+ 增量的結果。  
   
 ##  <a name="threadmodelnocs"></a>CComSingleThreadModel::ThreadModelNoCS  
  當使用`CComSingleThreadModel`、`typedef`名稱`ThreadModelNoCS`只是參考`CComSingleThreadModel`。  
@@ -174,7 +160,7 @@ typedef CComSingleThreadModel ThreadModelNoCS;
 ```  
   
 ### <a name="remarks"></a>備註  
- [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含定義`ThreadModelNoCS`。 下表顯示執行緒模型類別與所參考的類別之間的關聯性`ThreadModelNoCS`:  
+ [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)和[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)包含定義`ThreadModelNoCS`。 下表顯示執行緒模型類別所參考類別之間的關聯性`ThreadModelNoCS`:  
   
 |在定義類別|參考類別|  
 |----------------------|----------------------|  

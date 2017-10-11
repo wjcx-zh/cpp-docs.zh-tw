@@ -1,56 +1,59 @@
 ---
 title: "_initterm、_initterm_e | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_initterm_e"
-  - "_initterm"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_initterm_e"
-  - "initterm"
-  - "_initterm"
-  - "initterm_e"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "initterm 函式"
-  - "initterm_e 函式"
-  - "_initterm 函式"
-  - "_initterm_e 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _initterm_e
+- _initterm
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _initterm_e
+- initterm
+- _initterm
+- initterm_e
+dev_langs:
+- C++
+helpviewer_keywords:
+- initterm function
+- initterm_e function
+- _initterm function
+- _initterm_e function
 ms.assetid: 85131efe-c747-429a-8897-bcdedb000172
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _initterm、_initterm_e
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 377f8e19268a643b0237da66ba14a82fc7b6685b
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/09/2017
 
-查核函式指標資料表並初始化其內部方法。  
+---
+# <a name="initterm-initterme"></a>_initterm、_initterm_e
+查核函式指標的資料表，並將它們初始化的內部方法。  
   
- 首指標起始位置是在資料表中，第二個指標是結束位置。  
+ 第一個指標是在資料表中的起始位置，而第二個指標是結束位置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void __cdecl _initterm(  
@@ -64,13 +67,13 @@ int __cdecl _initterm_e(
 );  
 ```  
   
-## 傳回值  
- 非零的錯誤碼，如果初始化失敗並擲回錯誤;0，如果沒有錯誤發生。  
+## <a name="return-value"></a>傳回值  
+ 如果初始化失敗並擲回錯誤，則傳回非零錯誤碼；若未發生錯誤則為 0。  
   
-## 備註  
- 這些方法在內部 C \+\+. 程式初始化時才呼叫。  不要在呼叫程式中的這些方法。  
+## <a name="remarks"></a>備註  
+ 這些方法只會在 C++ 程式初始化期間由內部呼叫。 請勿在程式中呼叫這些方法。  
   
- 當這些方法查核行程函式輸入資料表，則會略過 `NULL` 輸入並繼續。  
+ 當這些方法查核函式項目資料表時，會略過 `NULL` 項目並繼續。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

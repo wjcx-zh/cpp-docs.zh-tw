@@ -19,26 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0aa7af12e49f152256c2efe7d16d02e1f1c45f68
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fb6c45ad153a428d090d05c8fa24c05eef024607
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2666"></a>編譯器錯誤 C2666
@@ -62,13 +47,13 @@ int main() {
 }  
 ```  
   
- 這項錯誤也會導致針對 Visual Studio.NET 2003年所進行的編譯器一致性工作︰  
+ 這項錯誤也會導致針對 Visual Studio.NET 2003年所進行的編譯器一致性工作：  
   
 -   二元運算子，以及使用者定義的指標類型轉換  
   
 -   限定性條件轉換不是身分識別轉換相同  
   
- 以二元運算子\<，>， \<=、 和 > =、 傳入參數現在就隱含地轉換成運算元的類型如果參數的型別定義使用者定義轉換運算子，將轉換成運算元的類型。 沒有現在可能模稜兩可。  
+ 以二元運算子\<，>， \<= 和 > =、 傳遞參數現在就隱含地轉換成運算元的類型如果參數的型別定義使用者定義轉換運算子，將轉換成運算元的類型。 沒有現在可能模稜兩可。  
   
  針對 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的程式碼，呼叫類別運算子，明確地使用函式語法。  
   

@@ -51,32 +51,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 16d0f336ec66329d0a92a151e1bc224433b0b03a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59ac61f0ae50f3a6b1d7170ea0b965c3bb8d0fe2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3000-through-c3099"></a>編譯器錯誤 C3000 透過 C3099
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -101,12 +87,12 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3016](compiler-error-c3016.md)|'*識別碼*': 在 OpenMP 'for' 陳述式的索引變數必須具有帶正負號整數類資料類型|  
 |[編譯器錯誤 C3017](compiler-error-c3017.md)|OpenMP 'for' 陳述式中的終止測試格式不當|  
 |[編譯器錯誤 C3018](compiler-error-c3018.md)|'*識別碼*': OpenMP 'for' 測試或增量必須使用索引變數'*變數*'|  
-|[編譯器錯誤 C3019](compiler-error-c3019.md)|OpenMP 'for' 陳述式中的增量格式不當|  
+|[編譯器錯誤 C3019](compiler-error-c3019.md)|在 OpenMP 'for' 陳述式的遞增值具有格式不正確|  
 |[編譯器錯誤 C3020](compiler-error-c3020.md)|'*變數*': OpenMP 'for' 迴圈索引變數不可修改迴圈主體中|  
 |[編譯器錯誤 C3021](compiler-error-c3021.md)|'*引數*': 引數是空的 OpenMP'*指示詞*' 指示詞|  
 |[編譯器錯誤 C3022](compiler-error-c3022.md)|'*指示詞*': 無效的排程類型的'*指示詞*'在 OpenMP'*指示詞*' 指示詞|  
 |[編譯器錯誤 C3023](compiler-error-c3023.md)|'*引數*': OpenMP 引數中發生未預期的 token'*指示詞*' 子句|  
-|[編譯器錯誤 C3024](compiler-error-c3024.md)|'schedule(runtime)': 不允許 chunk_size 運算式|  
+|[編譯器錯誤 C3024](compiler-error-c3024.md)|'schedule （runtime)': 不允許 chunk_size 運算式|  
 |[編譯器錯誤 C3025](compiler-error-c3025.md)|'*子句*': 需要整數運算式|  
 |[編譯器錯誤 C3026](compiler-error-c3026.md)|'*子句*': 常數運算式必須是正數|  
 |[編譯器錯誤 C3027](compiler-error-c3027.md)|'*子句*': 需要算術或指標運算式|  
@@ -126,7 +112,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3041](compiler-error-c3041.md)|'*識別碼*': 'copyprivate' 子句中的變數必須是私用，封入內容中|  
 |[編譯器錯誤 C3042](compiler-error-c3042.md)|'copyprivate' 和 'nowait' 子句不能同時出現在 OpenMP '*指示詞*' 指示詞|  
 |[編譯器錯誤 C3043](compiler-error-c3043.md)|OpenMP 'critical' 指示詞不能以巢狀方式置於相同名稱的 'critical' 指示詞中|  
-|[編譯器錯誤 C3044](compiler-error-c3044.md)|'section': 只允許以巢狀方式直接放在 OpenMP 'sections' 指示詞之下|  
+|[編譯器錯誤 C3044](compiler-error-c3044.md)|'section': 只允許直接以巢狀在 OpenMP 'sections' 指示詞之下|  
 |[編譯器錯誤 C3045](compiler-error-c3045.md)|OpenMP 'sections' 指示詞後面必須是複合陳述式。 遺漏 '{'|  
 |[編譯器錯誤 C3046](compiler-error-c3046.md)|OpenMP '#pragma omp sections' 區域中遺漏結構化區塊|  
 |[編譯器錯誤 C3047](compiler-error-c3047.md)|OpenMP 'sections' 區域中的結構化區塊，前面必須是 '#pragma omp section'|  
@@ -148,7 +134,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3063](compiler-error-c3063.md)|運算子 '*運算子*': 所有運算元必須都具有相同的列舉類型|  
 |編譯器錯誤 C3064|'*識別碼*': 必須是簡單類型，或者可解析|  
 |[編譯器錯誤 C3065](compiler-error-c3065.md)|在非類別範圍不允許屬性宣告|  
-|[編譯器錯誤 C3066](compiler-error-c3066.md)|有多種方式可以用這些引數呼叫這種類型的物件|  
+|[編譯器錯誤 C3066](compiler-error-c3066.md)|有多種方法，就可以呼叫此類型的物件具備這些引數|  
 |編譯器錯誤 C3067|初始設定式清單不能與內建運算子]|  
 |[編譯器錯誤 C3068](compiler-error-c3068.md)|'*識別碼*': 'naked' 函式不能包含需要的物件會回溯發生 c + + 例外狀況|  
 |[編譯器錯誤 C3069](compiler-error-c3069.md)|運算子 '*運算子*': 不允許列舉類型|  
@@ -156,19 +142,19 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3071](compiler-error-c3071.md)|運算子 '*運算子*' 只可以套用至 ref 類別或實值類型的執行個體|  
 |[編譯器錯誤 C3072](compiler-error-c3072.md)|運算子 '*運算子*' 無法套用至 ref 類別使用一元 '%' 運算子將 ref 的執行個體類別控制代碼類型的執行個體|  
 |[編譯器錯誤 C3073](compiler-error-c3073.md)|'*識別碼*': ref 類別沒有使用者定義的複製建構函式|  
-|編譯器錯誤 C3074|無法使用括以括號的初始設定式來初始化陣列|  
+|編譯器錯誤 C3074|無法使用括號括住的初始設定式初始化陣列|  
 |[編譯器錯誤 C3075](compiler-error-c3075.md)|'*識別碼*': 您無法內嵌執行個體的參考類型，'*類型*'，在實值類型|  
 |[編譯器錯誤 C3076](compiler-error-c3076.md)|'*識別碼*': 您無法內嵌執行個體的參考類型，'*類型*'，原生類型中|  
 |[編譯器錯誤 C3077](compiler-error-c3077.md)|'*識別碼*': 完成項只能是參考類型的成員|  
 |編譯器錯誤 C3078|新的運算式中必須指定陣列大小|  
-|編譯器錯誤 C3079|初始設定式清單不得用為此指派運算子的右運算元|  
+|編譯器錯誤 C3079|初始設定式清單不能做為此指派運算子的右運算元|  
 |[編譯器錯誤 C3080](compiler-error-c3080.md)|'*finalizer*': 完成項不能有儲存類別規範|  
 |編譯器錯誤 C3081|已過時。|  
 |編譯器錯誤 C3082|已過時。|  
 |[編譯器錯誤 C3083](compiler-error-c3083.md)|'*識別碼*': 左邊的符號 '::' 必須是類型|  
 |[編譯器錯誤 C3084](compiler-error-c3084.md)|'*識別碼*': 解構函式/完成項不可為'*關鍵字*'|  
 |[編譯器錯誤 C3085](compiler-error-c3085.md)|'*識別碼*': 建構函式不能是'*關鍵字*'|  
-|編譯器錯誤 C3086|找不到 'std::initializer_list': 您需要 #include <initializer_list>|  
+|編譯器錯誤 C3086|找不到 'std:: initializer_list': 您需要 #include < initializer_list >|  
 |[編譯器錯誤 C3087](compiler-error-c3087.md)|'*識別碼*': 呼叫的'*宣告*' 已將此成員初始化|  
 |編譯器錯誤 C3088|'*類別*': 屬性建構函式必須有具名型式引數|  
 |編譯器錯誤 C3089|'*識別碼*': 參數名稱不符合任何資料成員的名稱|  

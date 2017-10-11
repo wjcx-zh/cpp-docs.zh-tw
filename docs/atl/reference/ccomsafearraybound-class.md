@@ -26,25 +26,11 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 1cc2adef85c902b7ad12b152b35a7ef68e6abacb
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 01198e8de5f2eb1cbe0787bd287820d222875c20
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound 類別
@@ -56,18 +42,18 @@ ms.lasthandoff: 02/24/2017
 class CComSafeArrayBound : public SAFEARRAYBOUND
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
 |[CComSafeArrayBound](#ccomsafearraybound)|建構函式。|  
-|[GetCount](#getcount)|呼叫這個方法傳回的項目數。|  
+|[GetCount](#getcount)|呼叫此方法以傳回的項目數。|  
 |[GetLowerBound](#getlowerbound)|呼叫此方法以傳回下限。|  
 |[GetUpperBound](#getupperbound)|呼叫此方法以傳回上限。|  
-|[SetCount](#setcount)|呼叫這個方法來設定項目數目。|  
-|[SetLowerBound](#setlowerbound)|呼叫這個方法來設定下限。|  
+|[SetCount](#setcount)|呼叫此方法以設定項目數目。|  
+|[SetLowerBound](#setlowerbound)|呼叫此方法以設定下限。|  
   
 ### <a name="operators"></a>運算子  
   
@@ -76,7 +62,7 @@ class CComSafeArrayBound : public SAFEARRAYBOUND
 |[運算子 =](#operator_eq)|設定`CComSafeArrayBound`為新值。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別是包裝函式**SAFEARRAYBOUND**所用結構[ccomsafearray 的 Safearray](../../atl/reference/ccomsafearray-class.md)。 它提供方法來查詢及設定的上限和下限之間的單一維度的`CComSafeArray`物件和它所包含的元素數目。 多維度`CComSafeArray`物件會使用陣列`CComSafeArrayBound`物件、 一個用於每個維度。 因此，當您使用下列方法[GetCount](#getcount)，請注意，這個方法不會傳回項目總數多維陣列中。  
+ 這個類別是包裝函式**SAFEARRAYBOUND**所使用的結構[CComSafeArray](../../atl/reference/ccomsafearray-class.md)。 它提供方法的查詢及設定的單一維度的上限和下限範圍`CComSafeArray`物件和它所包含的元素數目。 多維度`CComSafeArray`物件使用的陣列`CComSafeArrayBound`物件、 一個用於每個維度。 因此，當您使用下列方法[GetCount](#getcount)，注意此方法將多維陣列中傳回項目總數。  
   
  **標頭︰** atlsafe.h  
   
@@ -98,10 +84,10 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
  從已編號的陣列的下限。  
   
 ### <a name="remarks"></a>備註  
- 如果陣列是從 Visual c + + 程式存取，建議的最小值定義為 0。 您可能偏好使用不同的下限值，如果陣列是以用於其他語言，例如 Visual Basic 的。  
+ 如果陣列是從 Visual c + + 程式存取，建議下限定義為 0。 您可能偏好使用不同的下限值，如果陣列是以用於 Visual Basic 等其他語言的。  
   
 ##  <a name="getcount"></a>CComSafeArrayBound::GetCount  
- 呼叫這個方法傳回的項目數。  
+ 呼叫此方法以傳回的項目數。  
   
 ```
 ULONG GetCount() const throw();
@@ -134,7 +120,7 @@ LONG GetUpperBound() const throw();
  傳回上限`CComSafeArrayBound`物件。  
   
 ### <a name="remarks"></a>備註  
- 上限取決於項目和下限值的數目。 例如，如果下限為 0，而項目數目為 10，上限將自動設為 9。  
+ 上限取決於項目和下限值的數量。 例如，如果下限為 0，而項目數目為 10，上限將自動設 9。  
   
 ##  <a name="operator_eq"></a>CComSafeArrayBound::operator =  
  設定`CComSafeArrayBound`為新值。  
@@ -152,13 +138,13 @@ CComSafeArrayBound& operator= (ULONG ulCount) throw();
  元素數。  
   
 ### <a name="return-value"></a>傳回值  
- 若要將指標傳回`CComSafeArrayBound`物件。  
+ 將指標傳回至`CComSafeArrayBound`物件。  
   
 ### <a name="remarks"></a>備註  
- `CComSafeArrayBound`物件可以使用現有指派`CComSafeArrayBound`，或提供項目，以案例下限設定為 0 預設數目。  
+ `CComSafeArrayBound`物件可以使用現有指派`CComSafeArrayBound`，或提供的項目數，所在案例下限預設設定為 0。  
   
 ##  <a name="setcount"></a>CComSafeArrayBound::SetCount  
- 呼叫這個方法來設定項目數目。  
+ 呼叫此方法以設定項目數目。  
   
 ```
 ULONG SetCount(ULONG ulCount) throw();
@@ -172,7 +158,7 @@ ULONG SetCount(ULONG ulCount) throw();
  傳回數字中的項目`CComSafeArrayBound`物件。  
   
 ##  <a name="setlowerbound"></a>CComSafeArrayBound::SetLowerBound  
- 呼叫這個方法來設定下限。  
+ 呼叫此方法以設定下限。  
   
 ```
 LONG SetLowerBound(LONG lLowerBound) throw();
@@ -186,9 +172,9 @@ LONG SetLowerBound(LONG lLowerBound) throw();
  傳回新的下限的`CComSafeArrayBound`物件。  
   
 ### <a name="remarks"></a>備註  
- 如果陣列是從 Visual c + + 程式存取，建議的最小值定義為 0。 您可能偏好使用不同的下限值，如果陣列是以用於其他語言，例如 Visual Basic 的。  
+ 如果陣列是從 Visual c + + 程式存取，建議下限定義為 0。 您可能偏好使用不同的下限值，如果陣列是以用於 Visual Basic 等其他語言的。  
   
- 上限取決於項目和下限值的數目。 例如，如果下限為 0，而項目數目為 10，上限將自動設為 9。  
+ 上限取決於項目和下限值的數量。 例如，如果下限為 0，而項目數目為 10，上限將自動設 9。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

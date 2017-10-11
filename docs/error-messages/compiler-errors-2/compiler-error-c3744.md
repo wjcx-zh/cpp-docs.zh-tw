@@ -19,31 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: f6cd256454b51a103d9c4249b050c8c05781bc78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87df3fd92ac3fcad9b3e87f02f16b8151e678b77
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3744"></a>編譯器錯誤 C3744
-__unhook 對 Managed 事件至少必須有 3 個引數  
+__unhook 必須有至少 3 的引數，對 managed 事件  
   
- [__Unhook](../../cpp/unhook.md)函式必須接受三個參數，用於編譯 Managed Extensions for c + + 程式時。  
+ [__Unhook](../../cpp/unhook.md)函式必須接受三個參數，用於針對 Managed Extensions for c + + 編譯的程式時。  
   
  `__hook`和`__unhook`/clr 程式設計與不相容。 請改用 + = 和-= 運算子。  
   

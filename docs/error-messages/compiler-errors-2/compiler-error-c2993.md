@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2993 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2993"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2993"
+title: "編譯器錯誤 C2993 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2993
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2993
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a6306b2c3c632d25ee6b37a025516f759cc126a6
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'identifier' : 非型別樣板參數 'parameter' 的不合法型別  
+---
+# <a name="compiler-error-c2993"></a>編譯器錯誤 C2993
+'identifier': 非類型樣板參數 'parameter' 的類型不合法  
   
- 您不能以結構或等位引數宣告樣板。  請使用指標當做樣板參數傳遞結構和等位。  
+ 您無法宣告結構或等位的引數的範本。 使用指標做為範本參數，傳遞結構和等位。  
   
- 下列範例會產生 C2993：  
+ 下列範例會產生 C2993:  
   
 ```  
 // C2993.cpp  
@@ -45,9 +48,9 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};  
 ```  
   
- 對 Visual Studio .NET 2003 的編譯器完成符合標準處理後也會出現這個錯誤：已不再允許使用浮點非型別樣板參數。  C\+\+ 標準不允許使用浮點非型別樣板參數。  
+ 在 Visual Studio.NET 2003年所完成之編譯器一致性工作也會產生此錯誤： 浮點非類型樣板參數不能再使用。 C + + 標準不允許浮點非類型樣板參數。  
   
- 如果是函式樣板，請使用函式引數來傳入浮點非型別樣板參數 \(這個程式碼在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C\+\+ 中是有效的\)。  如果是類別樣板，則沒有簡單的解決方法。  
+ 如果函式樣板，傳入浮點函式引數使用點 （此程式碼是有效的 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中） 的非類型樣板參數。 如果是類別樣板，沒有簡單的解決方法。  
   
 ```  
 // C2993b.cpp  

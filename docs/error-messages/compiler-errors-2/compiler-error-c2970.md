@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C2970 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2970"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2970"
+title: "編譯器錯誤 C2970 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2970
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C2970
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc125b400a718805af2ee0829100c056fffa29a3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'class' : 樣板參數 'param' : 'arg' : 運算式中包含具有內部連結的物件，不能當做非型別引數  
+---
+# <a name="compiler-error-c2970"></a>編譯器錯誤 C2970
+'class': 樣板參數 'param': 'arg': 運算式包含具有內部連結的物件不能當做非類型引數  
   
- 您不能將靜態變數的名稱或位址當做樣板引數使用。  該樣板類別必須是一個可以在編譯期間被評估的常數值。  
+ 您無法使用的名稱或位址的靜態變數作為範本引數。 此範本類別必須要有一個可以在編譯時期評估的常數值。  
   
- 下列範例會產生 C2970：  
+ 下列範例會產生 C2970:  
   
 ```  
 // C2970.cpp  

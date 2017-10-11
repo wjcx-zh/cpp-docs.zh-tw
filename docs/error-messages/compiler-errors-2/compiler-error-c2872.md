@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c81fc315c4bb893b96876b7b67b42806a3246583
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 03bfb79a424b1272239826abf3056a8ab6228eec
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2872"></a>編譯器錯誤 C2872
@@ -47,10 +33,10 @@ ms.lasthandoff: 04/29/2017
   
 如果包含的標頭檔，就會發生 C2872 [using 指示詞](../../cpp/namespaces-cpp.md#using_directives)，並在後續的標頭檔中包含其中包含的型別，也在指定的命名空間`using`指示詞。 指定`using`指示詞只是在標頭檔所指定的所有之後`#include`。  
   
- 如需 C2872 的詳細資訊，請參閱知識庫文章[PRB︰ 編譯器錯誤當您使用 #import Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和["錯誤 C2872: 'Platform': 模稜兩可的符號"Visual Studio 2013 中使用 Windows::Foundation::Metadata 命名空間時，會產生錯誤訊息。](https://support.microsoft.com/kb/2890859)。  
+ 如需 C2872 的詳細資訊，請參閱知識庫文章[PRB： 編譯器錯誤當您使用 #import Visual c + +.NET 中的 XML](http://support.microsoft.com/kb/316317)和["錯誤 C2872: 'Platform': 模稜兩可的符號"使用時，會產生錯誤訊息。在 Visual Studio 2013 Windows::Foundation::Metadata 命名空間](https://support.microsoft.com/kb/2890859)。  
   
 ## <a name="example"></a>範例  
- 下列範例會產生 C2872，因為模稜兩可的參考對名為的變數`i`; 兩個具有相同名稱的變數是在範圍內︰  
+ 下列範例會產生 C2872，因為模稜兩可的參考對名為的變數`i`; 兩個具有相同名稱的變數是在範圍內：  
   
 ```cpp  
 // C2872.cpp  

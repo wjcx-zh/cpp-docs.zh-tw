@@ -1,37 +1,39 @@
 ---
-title: "編譯器錯誤 C2683 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2683"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2683"
+title: "編譯器錯誤 C2683 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2683
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C2683
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b3e79c1a05ac0d1fab713e2dfa97c9da740088bb
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'cast' : 'type' 不是多型型別  
+---
+# <a name="compiler-error-c2683"></a>編譯器錯誤 C2683
+'cast': 'type' 不是多型類型  
   
- 您不能使用 [dynamic\_cast](../../cpp/dynamic-cast-operator.md) 來轉換非多型類別 \(具有虛擬函式 \(Virtual Function\) 的類別\)。  
+ 您無法使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)轉換非多型類別 （沒有虛擬函式的類別）。  
   
- 您可以使用 [static\_cast](../../cpp/static-cast-operator.md) 來執行非多型型別的轉換。  然而，`static_cast` 並不執行執行階段檢查。  
+ 您可以使用[static_cast](../../cpp/static-cast-operator.md)執行非多型類型的轉換。 不過，`static_cast`不會執行執行階段檢查。  
   
- 下列範例會產生 C2683：  
+ 下列範例會產生 C2683:  
   
 ```  
 // C2683.cpp  

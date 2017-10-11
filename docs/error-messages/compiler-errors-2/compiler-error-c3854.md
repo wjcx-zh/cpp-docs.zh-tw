@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3854 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3854"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3854"
+title: "編譯器錯誤 C3854 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3854
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3854
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 34285e8de195b2b7c516cf665f3b2cbf37039e6d
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'\=' 左方的運算式判定為函式。無法指定給函式 \(函式不是 l 值\)  
+---
+# <a name="compiler-error-c3854"></a>編譯器錯誤 C3854
+'=' 左方的運算式評估的函式。 無法指派給函式 （函式不是左值）  
   
- 無法重新初始化參考。  若是解除對函式的參考，會產生函式，而這便是右值；您無法指定給此函式。  因此，您無法透過參考指定給函式。  
+ 無法重新初始化的參考。 取值函式的參考會產生函式，也就是右值，您無法將指派。 因此，您無法指派到函式的參考。  
   
- 下列範例會產生 C3854：  
+ 下列範例會產生 C3854:  
   
 ```  
 // C3854.cpp  

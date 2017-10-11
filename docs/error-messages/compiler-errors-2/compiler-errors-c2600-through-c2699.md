@@ -67,33 +67,18 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 78e2d8ed0100bfa0ea39d0e4b2347d65153a4136
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ec696a2a1fa323850210ba87c637c07dd5577ea1
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2600-through-c2699"></a>編譯器錯誤 C2600 到 C2699
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -144,14 +129,14 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C2642|已過時。|  
 |編譯器錯誤 C2643|已過時。|  
 |編譯器錯誤 C2644|已過時。|  
-|[編譯器錯誤 C2645](compiler-error-c2645.md)|成員指標沒有限定名稱 (找到 ': *')|  
+|[編譯器錯誤 C2645](compiler-error-c2645.md)|成員指標沒有限定的名稱 (找到 ':: *')|  
 |[編譯器錯誤 C2646](compiler-error-c2646.md)|在全域匿名結構/等位或命名空間範圍必須宣告為 static|  
 |[編譯器錯誤 C2647](compiler-error-c2647.md)|'*運算子*': 無法取值 （dereference)'*type1*'上'*type2*'|  
 |[編譯器錯誤 C2648](compiler-error-c2648.md)|'*識別碼*': 做為成員的預設參數必須是靜態成員|  
 |[編譯器錯誤 C2649](compiler-error-c2649.md)|'*識別碼*': 不是' 類別/結構/等位 '|  
 |[編譯器錯誤 C2650](compiler-error-c2650.md)|'*運算子*': 不可為虛擬函式|  
 |[編譯器錯誤 C2651](compiler-error-c2651.md)|'*類型*': 左的 '::' 必須是類別、 結構或等位|  
-|[編譯器錯誤 C2652](compiler-error-c2652.md)|'*識別碼*': 不合法的複製建構函式︰ 第一個參數必須不是'*類型*'|  
+|[編譯器錯誤 C2652](compiler-error-c2652.md)|'*識別碼*': 不合法的複製建構函式： 第一個參數必須不是'*類型*'|  
 |[編譯器錯誤 C2653](compiler-error-c2653.md)|'*識別碼*': 不是類別或命名空間名稱|  
 |[編譯器錯誤 C2654](compiler-error-c2654.md)|'*識別碼*': 嘗試在成員函式之外存取成員|  
 |[編譯器錯誤 C2655](compiler-error-c2655.md)|'*識別碼*': 目前範圍中不合法的宣告或定義|  
@@ -168,12 +153,12 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2666](compiler-error-c2666.md)|'*函式*':*數目*多載具有類似的轉換|  
 |[編譯器錯誤 C2667](compiler-error-c2667.md)|'*函式*': 沒有任何*數目*多載具有最佳轉換|  
 |[編譯器錯誤 C2668](compiler-error-c2668.md)|'*函式*': 模稜兩可的呼叫多載函式|  
-|[編譯器錯誤 C2669](compiler-error-c2669.md)|在匿名等位中不允許成員函式|  
+|[編譯器錯誤 C2669](compiler-error-c2669.md)|匿名等位中不允許的成員函式|  
 |[編譯器錯誤 C2670](compiler-error-c2670.md)|'*函式*': 函式樣板無法轉換參數*數目*從類型'*類型*'|  
 |[編譯器錯誤 C2671](compiler-error-c2671.md)|'*函式*': 靜態成員函式沒有 'this' 指標|  
 |編譯器錯誤 C2672|'*函式*': 沒有相符的多載找到函式|  
 |[編譯器錯誤 C2673](compiler-error-c2673.md)|'*函式*': 全域函式沒有 'this' 指標|  
-|[編譯器錯誤 C2674](compiler-error-c2674.md)|在這裡不能有泛型宣告|  
+|[編譯器錯誤 C2674](compiler-error-c2674.md)|此內容中不允許泛型宣告|  
 |[編譯器錯誤 C2675](compiler-error-c2675.md)|一元 '*運算子*':'*類型*' 不會預先定義的運算子未定義此運算子或轉換為可接受的類型|  
 |[編譯器錯誤 C2676](compiler-error-c2676.md)|二進位 '*運算子*':'*類型*' 不會預先定義的運算子未定義此運算子或轉換為可接受的類型|  
 |[編譯器錯誤 C2677](compiler-error-c2677.md)|二進位 '*運算子*': 沒有全域運算子找到其可接受型別'*類型*' （或沒有可接受的轉換）|  

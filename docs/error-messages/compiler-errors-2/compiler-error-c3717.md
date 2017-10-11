@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3717 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3717"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3717"
+title: "編譯器錯誤 C3717 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3717
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3717
 ms.assetid: ae4fceb1-2583-4577-b2f1-40971a017055
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C3717
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f7256762ef4cf9c3850bd95bb09d23394c2e64f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'method' : 無法定義引發事件的方法  
+---
+# <a name="compiler-error-c3717"></a>編譯器錯誤 C3717
+'method': 無法定義引發事件的方法  
   
- 您宣告了包含實作的事件方法。  [\_\_event](../../cpp/event.md) 方法宣告不能擁有定義。  若要修復此錯誤，請確保事件方法宣告都沒有定義。  例如，在下列程式碼中，請自 `event1` 宣告移除函式主體，如註解所示。  
+ 您宣告事件的方法，其中包含實作。 [__Event](../../cpp/event.md)方法宣告不能有定義。 若要修正這個錯誤，請確定沒有事件的方法宣告有定義。 例如，下列程式碼，移除函式主體從`event1`註解所示的宣告。  
   
- 下列範例會產生 C3717：  
+ 下列範例會產生 C3717:  
   
 ```  
 // C3717.cpp  

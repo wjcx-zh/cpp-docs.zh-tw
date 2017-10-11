@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3712 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3712"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3712"
+title: "編譯器錯誤 C3712 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3712
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C3712
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69f23d7192bc72f5f287a3a5b84b7840f9d25310
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'method' : 事件處理常式方法必須與來源 'method' 傳回相同的型別  
+---
+# <a name="compiler-error-c3712"></a>編譯器錯誤 C3712
+'method': 事件處理常式方法必須傳回相同的類型做為來源 'method'  
   
- 您定義了與來源事件方法傳回不同型別的事件處理常式方法。  若要修復此錯誤，請提供事件處理常式方法與來源事件方法相同的傳回型別。  
+ 您已定義事件處理常式方法不會傳回來源事件方法相同的型別。 若要修正這個錯誤，讓事件處理常式方法相同的來源事件方法的傳回類型。  
   
- 下列範例會產生 C3712：  
+ 下列範例會產生 C3712:  
   
 ```  
 // C3712.cpp  

@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 970a3f032ac367ec24cb5b036e3f3723732da754
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f2f821b1ba6dc523ba3a664fb9c8b658dee1c78f
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3830"></a>編譯器錯誤 C3830
-'type1': 無法繼承自 'type2'，值型別只可以繼承自介面類別  
+'type1': 無法繼承自 'type2'，值類型只能繼承自介面類別  
   
- 實值型別無法繼承的基底類別。  如需詳細資訊，請參閱[類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md)。  
+ 實值類型無法繼承的基底類別。  如需詳細資訊，請參閱[類別和結構](../../windows/classes-and-structs-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C3830:  

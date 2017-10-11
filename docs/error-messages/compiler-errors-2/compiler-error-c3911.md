@@ -1,37 +1,39 @@
 ---
-title: "編譯器錯誤 C3911 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3911"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3911"
+title: "編譯器錯誤 C3911 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3911
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3911
 ms.assetid: b786da59-0e99-479d-bc0d-551126e940f2
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3911
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4869cf6d5a1619aa692f3076de3e3c7d00bc7c16
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'event\_accessor\_method': 函式必須有型別 'signature'  
+---
+# <a name="compiler-error-c3911"></a>編譯器錯誤 C3911
+'event_accessor_method': 函式必須有類型 '簽章'  
   
- 事件存取子方法未適當宣告。  
+ 未正確宣告事件的存取子方法。  
   
  如需詳細資訊，請參閱[事件](../../windows/event-cpp-component-extensions.md)。  
   
- 下列範例會產生 C3911：  
+ 下列範例會產生 C3911:  
   
 ```  
 // C3911.cpp  

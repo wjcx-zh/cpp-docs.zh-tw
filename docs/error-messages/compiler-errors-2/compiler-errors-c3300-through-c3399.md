@@ -113,32 +113,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: cd62452e19eb25e4b5911a44cc3558a3fd154c6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f9d6de7b350a4d03f0f938d459bcd50c390ca2
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3300-through-c3399"></a>編譯器錯誤 C3300 透過 C3399
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -155,7 +141,7 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3308|'*函式*': 不支援透過匯入的類別呼叫直接|  
 |[編譯器錯誤 C3309](compiler-error-c3309.md)|'*巨集*/*關鍵字*': 模組名稱不可為巨集或關鍵字|  
 |編譯器錯誤 C3310|'*識別碼*': 模組名稱衝突|  
-|編譯器錯誤 C3311|必須在全域範圍中定義模組屬性|  
+|編譯器錯誤 C3311|模組屬性必須定義在全域範圍|  
 |編譯器錯誤 C3312|無法呼叫 '*識別碼*'函式找到類型'*類型*'|  
 |編譯器錯誤 C3313|'*識別碼*': 變數不能有類型'*類型*'|  
 |編譯器錯誤 C3314|'*符號*': 不是支援的 IDL 模組類型|  
@@ -165,25 +151,25 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3318|'*類型*': 陣列不能包含 'auto' 的項目型別|  
 |編譯器錯誤 C3319|已過時。|  
 |[編譯器錯誤 C3320](compiler-error-c3320.md)|'*類型*': 類型不可擁有與模組 'name' 屬性相同的名稱|  
-|編譯器錯誤 C3321|此內容不得包含初始設定式清單|  
+|編譯器錯誤 C3321|初始設定式清單不是預期在此內容中|  
 |[編譯器錯誤 C3322](compiler-error-c3322.md)|'*屬性*': 不是有效的屬性，屬性'*屬性*'|  
-|編譯器錯誤 C3323|函式宣告中不能有 'alignas' 和 '__declspec(align)'|  
+|編譯器錯誤 C3323|函式宣告上不允許 'alignas' 和 '有'|  
 |編譯器錯誤 C3324|'*屬性*': 屬性出現一次以上屬性'*屬性*'|  
 |編譯器錯誤 C3325|'*屬性*': 屬性有太多引數|  
 |編譯器錯誤 C3326|'*值*': 不是有效的值，屬性'*屬性*'的屬性'*屬性*'|  
 |編譯器錯誤 C3327|'*屬性*': 必須指定屬性的屬性值'*屬性*'|  
 |編譯器錯誤 C3328|'*屬性*': 屬性沒有足夠的引數|  
-|編譯器錯誤 C3329|語法錯誤︰ 必須是 '*token1*'not'*token2*'|  
+|編譯器錯誤 C3329|語法錯誤： 必須是 '*token1*'not'*token2*'|  
 |編譯器錯誤 C3330|'*函式*': 函式無法傳回陣列'*類型*'|  
 |編譯器錯誤 C3331|'*識別碼*': 屬性在參數上的只允許在 COM 介面和 coclass|  
 |編譯器錯誤 C3332|'*屬性*': 文法不一致，屬性'*屬性*' 是兩者所需，且具有預設值|  
-|[編譯器錯誤 C3333](compiler-error-c3333.md)|'*文件庫*': 無法 #import 已損毀的型別程式庫|  
+|[編譯器錯誤 C3333](compiler-error-c3333.md)|'*文件庫*': 無法 #import 損毀的型別程式庫|  
 |[編譯器錯誤 C3334](compiler-error-c3334.md)|#import 陳述式中的類型程式庫損毀，無法執行作業|  
 |編譯器錯誤 C3335|'*識別碼*': 有最多可達一個預設介面的 coclass'*類別*'|  
-|編譯器錯誤 C3336|此作業必須在類別範圍內執行|  
+|編譯器錯誤 C3336|必須在類別範圍執行這項作業|  
 |編譯器錯誤 C3337|'*識別碼*': defaultvtable 必須是事件來源 coclass'*類別*'|  
 |編譯器錯誤 C3338|'*識別碼*': 有最多可達一個預設介面，同時也是事件來源 coclass'*類別*'|  
-|編譯器錯誤 C3339|範本參數在參數清單後面需要有 'class' 或 'typename'|  
+|編譯器錯誤 C3339|樣板類樣板參數在參數清單後面需要 'class' 或 'typename'|  
 |[編譯器錯誤 C3340](compiler-error-c3340.md)|'*識別碼*': 介面不可以 'restricted' 和 'default' 在 coclass'*類別*'|  
 |編譯器錯誤 C3341|'*介面*': defaultvtable 介面必須是 'dual' 或 'custom'|  
 |[編譯器錯誤 C3342](compiler-error-c3342.md)|'*識別碼*': 模稜兩可的屬性|  
@@ -221,7 +207,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3374](compiler-error-c3374.md)|無法取得位址 '*函式*' 除非建立委派執行個體|  
 |[編譯器錯誤 C3375](compiler-error-c3375.md)|'*函式*': 模稜兩可的委派函式|  
 |編譯器錯誤 C3376|'*範本*': 允許靜態資料成員範本|  
-|編譯器錯誤 C3377|新的運算式中不可使用 'decltype(auto)'|  
+|編譯器錯誤 C3377|新運算式中不允許 'decltype （auto）'|  
 |編譯器錯誤 C3378|宣告可以只從模組介面單位匯出|  
 |[編譯器錯誤 C3379](compiler-error-c3379.md)|'*類別*': 巢狀的類別不能有當做其宣告的一部分的組件存取規範|  
 |[編譯器錯誤 C3380](compiler-error-c3380.md)|'*規範*': 無效的組件存取規範-只允許 'public' 或 'private'|  
@@ -238,9 +224,9 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3391](compiler-error-c3391.md)|'*類型*': 對泛型參數的無效的型別引數'*參數*'屬於泛型'*generic_type*'，必須是不可為 null 的實值型別|  
 |[編譯器錯誤 C3392](compiler-error-c3392.md)|'*類型*': 對泛型參數的無效的型別引數'*參數*'屬於泛型'*generic_type*'，必須有公用的無參數建構函式|  
 |[編譯器錯誤 C3393](compiler-error-c3393.md)|條件約束子句中的語法錯誤: '*識別碼*' 不是型別|  
-|[編譯器錯誤 C3394](compiler-error-c3394.md)|條件約束子句中的語法錯誤︰ 找到 '*符號*' 必須是型別|  
+|[編譯器錯誤 C3394](compiler-error-c3394.md)|條件約束子句中的語法錯誤： 找到 '*符號*' 必須是型別|  
 |[編譯器錯誤 C3395](compiler-error-c3395.md)|'*函式*': __declspec （dllexport） 無法套用至函式具有 __clrcall 呼叫慣例|  
-|[編譯器錯誤 C3396](compiler-error-c3396.md)|'*class*.*成員*': 中找不到自訂屬性 '*命名空間*'|  
+|[編譯器錯誤 C3396](compiler-error-c3396.md)|'*類別*。*成員*': 中找不到自訂屬性 '*命名空間*'|  
 |[編譯器錯誤 C3397](compiler-error-c3397.md)|預設引數中不允許彙總初始設定|  
 |[編譯器錯誤 C3398](compiler-error-c3398.md)|'*運算子*': 無法從轉換'*類型*'to'*類型*'。 來源運算式必須是函式符號|  
 |[編譯器錯誤 C3399](compiler-error-c3399.md)|'*類型*': 建立泛型參數的執行個體時，無法提供引數|  

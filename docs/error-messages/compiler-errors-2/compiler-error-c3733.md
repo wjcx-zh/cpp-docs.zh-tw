@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3733 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3733"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3733"
+title: "編譯器錯誤 C3733 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3733
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3733
 ms.assetid: 0cc1a9fe-1400-4be3-b35a-16435cba7a5a
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3733
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dedd36afd3b0211148c61ee3279d77eb25273c50
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'event' : 指定 COM 事件的不適當語法；是否缺少 '\_\_interface'？  
+---
+# <a name="compiler-error-c3733"></a>編譯器錯誤 C3733
+'event': 不適當的語法指定 COM 事件。您是否忘記 '__interface'？  
   
- COM 事件使用了錯誤的語法。  若要修正此錯誤，請變更事件型別或改正語法，以遵守 COM 事件規則。  
+ 錯誤的語法用於 COM 事件。 若要修正這個錯誤，變更的事件類型，或更正語法，以遵守 COM 事件規則。  
   
- 下列範例會產生 C3733：  
+ 下列範例會產生 C3733:  
   
 ```  
 #define _ATL_ATTRIBUTES 1  

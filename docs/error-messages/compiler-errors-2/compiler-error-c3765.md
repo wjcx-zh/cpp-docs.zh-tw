@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3765 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3765"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3765"
+title: "編譯器錯誤 C3765 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3765
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3765
 ms.assetid: feadee7a-fcfb-402c-af2f-0e656f814a13
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3765
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 44311ab210a85b05d86eb48aebe8294c95bfb5ab
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'event' : 無法在標示為 event\_receiver 的類別\/結構 'type' 中定義事件  
+---
+# <a name="compiler-error-c3765"></a>編譯器錯誤 C3765
+'event': 無法在 'type' 標記為 event_receiver 的類別/結構中定義事件  
   
- 如果類別是以 [event\_receiver](../../windows/event-receiver.md) 屬性標記的，則該類別不可包含 [\_\_event](../../cpp/event.md) 宣告。  
+ 如果類別標示為[event_receiver](../../windows/event-receiver.md)屬性，此類別不能包含[__event](../../cpp/event.md)宣告。  
   
- 下列範例會產生 C3765：  
+ 下列範例會產生 C3765:  
   
 ```  
 // C3765.cpp  

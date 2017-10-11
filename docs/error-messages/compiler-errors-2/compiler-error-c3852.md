@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3852 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3852"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3852"
+title: "編譯器錯誤 C3852 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3852
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器錯誤 C3852
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1aef83942bb84908cd032ae9f23a7492e299e7e5
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'member' \(擁有型別 'type'\)：彙總初始化無法初始化這個成員  
+---
+# <a name="compiler-error-c3852"></a>編譯器錯誤 C3852
+'member' 具有類型 'type': 彙總初始化無法初始化這個成員  
   
- 已嘗試將預設的初始化 \(為彙總初始化的一部分\) 指定給無法在彙總初始化中接收預設初始化的資料成員。  
+ 嘗試彙總初始化過程中將無法在彙總初始化期間接收預設初始化的資料成員的預設初始化。  
   
- 下列範例會產生 C3852：  
+ 下列範例會產生 C3852:  
   
 ```  
 // C3852.cpp  

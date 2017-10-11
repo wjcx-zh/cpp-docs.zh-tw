@@ -19,26 +19,11 @@ caps.latest.revision: 15
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 8eb7283942a8a89fc3322983c41c68082b6c5cee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c43ddf0e336d9964d08939bb7c1dd145caf6c848
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4957"></a>編譯器警告 C4957
@@ -46,11 +31,11 @@ ms.lasthandoff: 04/12/2017
   
  轉換會產生無法驗證的影像。  
   
- 部分轉換是安全的 (例如，觸發使用者定義轉換的 `static_cast` 以及 `const_cast`)。 A [safe_cast](../../windows/safe-cast-cpp-component-extensions.md)保證能夠產生可驗證程式碼。  
+ 部分轉換是安全的 (例如，觸發使用者定義轉換的 `static_cast` 以及 `const_cast`)。 [safe_cast](../../windows/safe-cast-cpp-component-extensions.md) 保證會產生可驗證的程式碼。  
   
  如需詳細資訊，請參閱[純粹的和可驗證程式碼 (C + + /CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   
- 這個警告就會發出為錯誤，而且可以停用與[警告](../../preprocessor/warning.md)pragma 或[/wd](../../build/reference/compiler-option-warning-level.md)編譯器選項。  
+ 發出這個警告即表示發生錯誤，而且可以使用 [warning](../../preprocessor/warning.md) pragma 或 [/wd](../../build/reference/compiler-option-warning-level.md) 編譯器選項予以停用。  
   
  下列範例會產生 C4957：  
   

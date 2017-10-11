@@ -19,33 +19,19 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 48dbae62c367616a437db0607d84fa89e8006021
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af959252ce5b404d8646ad61e02c5e480b41ed83
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3862"></a>編譯器錯誤 C3862
 'function': 無法編譯 unmanaged 函式以 /clr: pure 或 /clr: safe  
   
- **/Clr: pure**和**/clr: safe** Visual Studio 2015 中的編譯器選項已被取代。  
+ **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
- 使用編譯**/clr: pure**或**/clr: safe**會產生 MSIL 唯一映像、 映像沒有原生 (unmanaged) 程式碼。  因此，您無法使用`unmanaged`pragma 在**/clr: pure**或**/clr: safe**編譯。  
+ 編譯**/clr: pure**或**/clr: safe**會產生 MSIL 僅映像，沒有原生 (unmanaged) 程式碼的映像。  因此，您無法使用`unmanaged`pragma 中的**/clr: pure**或**/clr: safe**編譯。  
   
  如需詳細資訊，請參閱[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)和[managed、 unmanaged](../../preprocessor/managed-unmanaged.md)。  
   

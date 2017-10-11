@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3670 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3670"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3670"
+title: "編譯器錯誤 C3670 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3670
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# 編譯器錯誤 C3670
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 773ee85df3e19245b665521be8d65055ffe3bf17
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'override' : 不能覆寫無法存取的基底類別方法 'method'  
+---
+# <a name="compiler-error-c3670"></a>編譯器錯誤 C3670
+'override': 無法覆寫無法存取基底類別方法 'method'  
   
- 如要在某個函式上進行覆寫，該函式的存取層級必須能夠在衍生型別中使用。  如需詳細資訊，請參閱[明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 覆寫只會在其存取層級讓衍生類型中的函式。 如需詳細資訊，請參閱[明確覆寫](../../windows/explicit-overrides-cpp-component-extensions.md)。  
   
- 下列範例會產生 C3670：  
+ 下列範例會產生 C3670:  
   
 ```  
 // C3670.cpp  

@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 5f6719ade94bdbca9659405995fe09bfade57230
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87ff4bde3b37e630f4d6a4a64f12039cf98ff2be
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3917"></a>編譯器錯誤 C3917
@@ -45,7 +31,7 @@ ms.lasthandoff: 04/12/2017
   
 屬性或事件定義中使用語法從 Visual Studio 2005 之前的版本。  
   
-如需詳細資訊，請參閱[屬性](../../windows/property-cpp-component-extensions.md)。  
+如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>範例  
   

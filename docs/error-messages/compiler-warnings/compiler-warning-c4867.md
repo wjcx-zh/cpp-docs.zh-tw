@@ -19,25 +19,11 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: a052194893db90177b88eea8f80435777ae37773
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 352b38744d83b3dc163125ff5ec8d80165f60c9a
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4867"></a>編譯器警告 C4867
@@ -45,9 +31,9 @@ ms.lasthandoff: 04/12/2017
   
  成員函式的指標未正確初始化。  
   
- 針對 Visual c + + 2005年所進行的編譯器一致性工作可能會產生這個警告︰ 增強的指標對成員一致性。  Visual c + + 2005年之前編譯的程式碼現在會產生 C4867。  
+ 針對 Visual c + + 2005年所進行的編譯器一致性工作可能會產生這個警告： 增強的指標對成員一致性。  Visual c + + 2005年之前編譯的程式碼現在會產生 C4867。  
   
- 為錯誤，永遠會發出這個警告。 使用[警告](../../preprocessor/warning.md)pragma 來停用這個警告。 如需 C4867 和 MFC/ATL 的詳細資訊，請參閱[_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)。  
+ 為錯誤，永遠會發出這個警告。 請使用 [warning](../../preprocessor/warning.md) pragma 來停用這個警告。 如需 C4867 和 MFC/ATL 的詳細資訊，請參閱[_ATL_ENABLE_PTM_WARNING](../../atl/reference/compiler-options-macros.md#_atl_enable_ptm_warning)。  
   
 ## <a name="example"></a>範例  
  下列範例會產生 C4867。  

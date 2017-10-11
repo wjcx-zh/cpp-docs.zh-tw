@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3704 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3704"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3704"
+title: "編譯器錯誤 C3704 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3704
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3704
 ms.assetid: ee40ea35-a214-4dec-9489-d7f155dd0ac2
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C3704
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ae48bc886aab0211063cc7a9c2e73f3c7bbdd368
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : vararg 方法無法引發事件  
+---
+# <a name="compiler-error-c3704"></a>編譯器錯誤 C3704
+'function': vararg 方法無法引發事件  
   
- 您嘗試在 Vararg 方法上使用 [\_\_event](../../cpp/event.md)。  若要修正此錯誤，請以 `fireEvent(int i, ...)` 呼叫取代 `fireEvent(int i)` 呼叫，如下列程式碼範例所示。  
+ 您嘗試使用[__event](../../cpp/event.md) vararg 方法上。 若要修正這個錯誤，取代`fireEvent(int i, ...)`呼叫`fireEvent(int i)`呼叫，如下列程式碼範例所示。  
   
- 下列範例會產生 C3704：  
+ 下列範例會產生 C3704:  
   
 ```  
 // C3704.cpp  

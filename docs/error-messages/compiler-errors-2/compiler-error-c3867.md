@@ -1,37 +1,40 @@
 ---
-title: "編譯器錯誤 C3867 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3867"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3867"
+title: "編譯器錯誤 C3867 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3867
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
----
-# 編譯器錯誤 C3867
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4f8e4612dc12274c689ec0d4e9406dea74c608f4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3867"></a>編譯器錯誤 C3867
 'func': 函式呼叫遺漏引數清單，請用 '&func' 建立成員的指標  
   
  您嘗試取得成員函式的位址，而未使用其類別名稱和傳址運算子來限定成員函式。  
   
- 針對 Visual C\+\+ 2005 所進行的編譯器一致性工作，也可能會導致這個錯誤：增強的指標對成員一致性。  在 Visual C\+\+ 2005 之前編譯的程式碼現在會產生 C3867。  
+ 針對 Visual C++ 2005 所進行的編譯器一致性工作，也可能會導致這個錯誤：增強的指標對成員一致性。 在 Visual C++ 2005 之前編譯的程式碼現在會產生 C3867。  
   
-## 範例  
- 使用誤導的建議解決方法，即可從編譯器發出 C3867。  若可能，請使用最新衍生的類別。  
+## <a name="example"></a>範例  
+ 使用誤導的建議解決方法，即可從編譯器發出 C3867。 若可能，請使用最新衍生的類別。  
   
  下列範例會產生 C3867，並示範如何修正此問題。  
   
@@ -53,7 +56,7 @@ void Derived::Bar() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3867，並示範如何修正此問題。  
   
 ```  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3867，並示範如何修正此問題。  
   
 ```  
@@ -102,7 +105,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3867。  
   
 ```  
@@ -125,7 +128,7 @@ public:
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3867。  
   
 ```  

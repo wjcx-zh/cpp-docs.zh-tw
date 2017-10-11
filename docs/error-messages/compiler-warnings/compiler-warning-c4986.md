@@ -1,36 +1,39 @@
 ---
-title: "編譯器警告 C4986 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4986"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4986"
+title: "編譯器警告 C4986 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4986
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4986
 ms.assetid: a3a7b008-29dd-4203-85f3-7740ab6790bb
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# 編譯器警告 C4986
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 67e4ad3f5170b4f7dc0e938e7b7830dacbde0e26
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function'︰例外狀況規格不符合上一個宣告  
+---
+# <a name="compiler-warning-c4986"></a>編譯器警告 C4986
+'function'：例外狀況規格與上一個宣告不符  
   
- 當在一個宣告中而不是其他宣告有例外狀況規格時，可能會產生這項警告。  
+ 當一個宣告中有例外狀況規格，而另一個宣告沒有時，可能會產生這項警告。  
   
- C4986 預設為關閉。  如需詳細資訊，請參閱[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ C4986 預設為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4986。  
   
 ```cpp  
@@ -40,11 +43,10 @@ void f1() throw (X*);
 void f1()  
 {  
     // ...  
-}  
-  
+}    
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例程式碼會消除這則警告。  
   
 ```cpp  
@@ -54,6 +56,5 @@ void f1() throw (X*);
 void f1() throw (X*)  
 {  
     // ...  
-}  
-  
+}    
 ```

@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+title: "編譯器錯誤 C3899 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# 編譯器錯誤 C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'var' : initonly 資料成員不允許直接在類別 'class' 平行區域之內使用 l\-value  
+---
+# <a name="compiler-error-c3899"></a>編譯器錯誤 C3899
+'var': initonly 資料成員的左值使用不允許直接放在類別 'class' 中的平行區域內  
   
- [initonly](../../dotnet/initonly-cpp-cli.md) 資料成員無法在 [parallel](../../parallel/openmp/reference/parallel.md) 區域中的建構函式部分內進行初始設定。這是因為編譯器進行該程式碼的內部重新配置，而有效地使得它不再是建構函式的一部分。  
+ [Initonly (C + + /CLI)](../../dotnet/initonly-cpp-cli.md)無法初始化資料成員，該部分所用的建構函式內[平行](../../parallel/openmp/reference/parallel.md)區域。  這是因為編譯器會內部的重新配置，該程式碼，使它不再有效的建構函式的一部分。  
   
- 若要解決，請初始設定建構函式中的 initonly 資料成員，但是在平行區域之外。  
+ 若要解決，初始化建構函式，但在平行區域外的 initonly 資料成員。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3899。  
   
 ```  

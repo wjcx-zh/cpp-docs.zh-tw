@@ -85,32 +85,18 @@ caps.latest.revision: 16
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 6ef55aa655692e6ecbd1550bb1ace2eca01bdbad
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>編譯器錯誤 C2900 透過 C2999
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -140,8 +126,8 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2921](compiler-error-c2921.md)|重複定義: '*類型*': 類別範本/泛型正重新宣告為*宣告*'|  
 |編譯器錯誤 C2922|'*介面*': WinRT 介面不能包含靜態成員|  
 |[編譯器錯誤 C2923](compiler-error-c2923.md)|'*類型*':'*識別碼*'不是有效的範本/泛型型別引數的參數'*參數*'|  
-|編譯器錯誤 C2924|__declspec(interrupt) 常式引數不在 R2 中|  
-|編譯器錯誤 C2925|__declspec(interrupt) 常式不可使用浮點|  
+|編譯器錯誤 C2924|__declspec （interrupt） 常式引數不在 R2 中|  
+|編譯器錯誤 C2925|__declspec （interrupt） 常式不可使用浮點|  
 |編譯器錯誤 C2926|'*識別碼*': 等位內匿名結構的成員不允許的預設成員初始設定式|  
 |[編譯器錯誤 C2927](compiler-error-c2927.md)|'*識別碼*': 呼叫函式樣板必須有至少一個引數|  
 |[編譯器錯誤 C2928](compiler-error-c2928.md)|明確具現化;'*識別碼*'不是函式或樣板類別的靜態資料成員'*類別*'|  
@@ -165,17 +151,17 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2946](compiler-error-c2946.md)|明確具現化;'*類型*' 不是樣板類別特製化|  
 |[編譯器錯誤 C2947](compiler-error-c2947.md)|必須是 '>' 結束樣板引數，找到'*語彙基元*'|  
 |[編譯器錯誤 C2948](compiler-error-c2948.md)|明確具現化;儲存類別規範 '*規範*' 特製化上不允許|  
-|編譯器錯誤 C2949|/kernel 不支援使用 thread_local|  
+|編譯器錯誤 C2949|thread_local 不支援 /kernel|  
 |編譯器錯誤 C2950|已過時。|  
 |[編譯器錯誤 C2951](compiler-error-c2951.md)|只允許在全域命名空間，或類別範圍使用範本/泛型宣告|  
 |[編譯器錯誤 C2952](compiler-error-c2952.md)|'*宣告*': 遺漏範本/泛型參數清單的範本/泛型宣告|  
 |[編譯器錯誤 C2953](compiler-error-c2953.md)|'*類型*': 類別樣板已經定義|  
-|編譯器錯誤 C2954|指令文字引數不在範圍中|  
+|編譯器錯誤 C2954|範圍中找不到指令文字引數|  
 |[編譯器錯誤 C2955](compiler-error-c2955.md)|'*類型*': 使用類別範本/泛型需要範本/泛型引數清單|  
 |編譯器錯誤 C2956|可調整大小解除配置函式 'operator delete （void *，size_t）' 會被選為位置解除配置函式。|  
-|[編譯器錯誤 C2957](compiler-error-c2957.md)|'*語彙基元*': 左分隔符號無效︰ 必須是' <'|  
+|[編譯器錯誤 C2957](compiler-error-c2957.md)|'*語彙基元*': 左分隔符號無效： 必須是' <'|  
 |[編譯器錯誤 C2958](compiler-error-c2958.md)|左邊*分隔符號*位於 '*檔案*(*line_number*)' 沒有正確對應|  
-|[編譯器錯誤 C2959](compiler-error-c2959.md)|泛型類別或函式不可為樣板的成員|  
+|[編譯器錯誤 C2959](compiler-error-c2959.md)|泛型類別或函式可能不是樣板的成員|  
 |編譯器錯誤 C2960|已過時。|  
 |編譯器錯誤 C2961|'*函式*': 不一致的明確具現化，先前的明確具現化未指定'*引數*'|  
 |[編譯器錯誤 C2962](compiler-error-c2962.md)|語法錯誤: '*語彙基元*': 樣板類別成員函式定義的結尾必須是 '}'|  
@@ -194,11 +180,11 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2975](compiler-error-c2975.md)|'*類型*': 無效的樣板引數'*參數*'，必須是編譯時期常數運算式|  
 |[編譯器錯誤 C2976](compiler-error-c2976.md)|'*類型*': 範本/泛型引數太少|  
 |[編譯器錯誤 C2977](compiler-error-c2977.md)|'*類型*': 範本/泛型引數太多|  
-|[編譯器錯誤 C2978](compiler-error-c2978.md)|語法錯誤︰ 必須是 '*keyword1*'*keyword2*'; 找到的型別'*類型*' 非類型; 泛型中不支援參數|  
+|[編譯器錯誤 C2978](compiler-error-c2978.md)|語法錯誤： 必須是 '*keyword1*'*keyword2*'; 找到的型別'*類型*' 非類型; 泛型中不支援參數|  
 |[編譯器錯誤 C2979](compiler-error-c2979.md)|不支援在泛型中進行明確特製化|  
-|編譯器錯誤 C2980|C++ 例外狀況處理不支援 /kernel|  
+|編譯器錯誤 C2980|C + + 例外狀況處理不支援 /kernel|  
 |編譯器錯誤 C2981|動態表單 '*關鍵字*' 不支援 /kernel|  
-|編譯器錯誤 C2982|'*宣告*': 使用不同 __declspec(code_seg(...))︰ 已'*identifier1*「 現在 」*identifier2*'|  
+|編譯器錯誤 C2982|'*宣告*': 使用不同 __declspec(code_seg(...))： 已'*identifier1*「 現在 」*identifier2*'|  
 |編譯器錯誤 C2983|'*宣告*': 所有宣告必須都有相同的 __declspec(code_seg(...))|  
 |編譯器錯誤 C2984|已過時。|  
 |編譯器錯誤 C2985|'*引數*': __declspec(code_seg(...)) 引數必須是文字區段|  

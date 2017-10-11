@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: e64ccfba0345a5efe37d431b02bfb8225ae3726f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: aceeae92ee2efa180ba46c913f1c30d436d9f21b
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3632"></a>編譯器錯誤 C3632
-'event': 不合法的樣式的建構事件  
+'event': 不合法的建構事件樣式  
   
- [__event](../../cpp/event.md)宣告不適用於所有建構。  
+ [__event](../../cpp/event.md)不是有效的所有建構的宣告。  
   
  C3632 才可使用過時的編譯器選項**/clr:oldSyntax**。  
 

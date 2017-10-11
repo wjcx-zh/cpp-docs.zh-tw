@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3709 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3709"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3709"
+title: "編譯器錯誤 C3709 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3709
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3709
 ms.assetid: d5576b04-2f93-420a-8f3e-8b8e987e8dab
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C3709
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d56a4c18543ad71e524a4cc08eecd35ab6e7e2e
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 在 \_\_hook\/\_\_unhook 中指定事件時使用了不適當的語法  
+---
+# <a name="compiler-error-c3709"></a>編譯器錯誤 C3709
+'function': 不適當的語法指定事件在 __hook /\__unhook  
   
- 當您以 [\_\_hook](../../cpp/hook.md) 或 [\_\_unhook](../../cpp/unhook.md) 指定事件來源時，第一個參數必須是有效的事件方法，第二個參數必須是有效的事件來源物件 \(不是方法\)。  
+ 當您指定的事件來源[__hook](../../cpp/hook.md)或[__unhook](../../cpp/unhook.md)、 第一個參數必須是有效的事件方法和第二個參數必須是有效的事件來源物件 （而非方法）。  
   
- 下列範例會產生 C3709：  
+ 下列範例會產生 C3709:  
   
 ```  
 // C3709.cpp  

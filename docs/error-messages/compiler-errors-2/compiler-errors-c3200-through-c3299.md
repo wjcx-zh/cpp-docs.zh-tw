@@ -47,32 +47,18 @@ caps.latest.revision: 1
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1d63e4faaafe9ba208e17857a8ac60723c6c5cf5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 87910db946d51d740c93134b7085e5af7d3ccadc
 ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-errors-c3200-through-c3299"></a>編譯器錯誤 C3200 透過 c3299:
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -127,7 +113,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3246](compiler-error-c3246.md)|'*類別*': 無法繼承自'*base_class*'因為它已經宣告為'*繼承*'|  
 |[編譯器錯誤 C3247](compiler-error-c3247.md)|'*coclass*': coclass 無法繼承自其他 coclass'*base_class*'|  
 |[編譯器錯誤 C3248](compiler-error-c3248.md)|已過時。 '*函式*': 函式宣告為 'sealed' 無法覆寫'*函式*'|  
-|編譯器錯誤 C3249|'constexpr' 函式的陳述式或子運算式不合法|  
+|編譯器錯誤 C3249|不合法的陳述式或子運算式 'constexpr' 函式|  
 |編譯器錯誤 C3250|'*宣告*': 不允許 'constexpr' 函式主體的宣告|  
 |[編譯器錯誤 C3251](compiler-error-c3251.md)|無法在實值類型執行個體上叫用基底類別方法|  
 |[編譯器錯誤 C3252](compiler-error-c3252.md)|'*函式*': 無法縮小 managed/WinRT 類型中的虛擬方法的存取範圍|  
@@ -140,7 +126,7 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3259|'constexpr' 函式只能有一個傳回陳述式|  
 |編譯器錯誤 C3260|'*語彙基元*': 略過 lambda 主體之前未預期的語彙基元|  
 |編譯器錯誤 C3261|函式傳回的 managed/WinRT 陣列必須有陣列括號，在宣告的結尾: '*識別碼*（...）[]'|  
-|[編譯器錯誤 C3262](compiler-error-c3262.md)|無效的陣列檢索︰*數目*已被指定成*數目*-維 '*類型*'|  
+|[編譯器錯誤 C3262](compiler-error-c3262.md)|無效的陣列檢索：*數目*已被指定成*數目*-維 '*類型*'|  
 |編譯器錯誤 C3263|已過時。|  
 |[編譯器錯誤 C3264](compiler-error-c3264.md)|'*識別碼*': 類別建構函式不能有傳回型別|  
 |[編譯器錯誤 C3265](compiler-error-c3265.md)|不能宣告 managed '*managed_construct*'in unmanaged'*unmanaged_construct*'|  
@@ -169,13 +155,13 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3288](compiler-error-c3288.md)|'*類型*': 不合法取值 （dereference) 的控制代碼類型|  
 |[編譯器錯誤 C3289](compiler-error-c3289.md)|'*識別碼*': trivial 屬性不可索引|  
 |[編譯器錯誤 C3290](compiler-error-c3290.md)|'*類型*': trivial 屬性不能有參考類型|  
-|[編譯器錯誤 C3291](compiler-error-c3291.md)|'default': trivial 屬性不能使用這個名稱|  
+|[編譯器錯誤 C3291](compiler-error-c3291.md)|'default': 不能 trivial 屬性名稱|  
 |[編譯器錯誤 C3292](compiler-error-c3292.md)|無法重新開啟 cli 命名空間|  
 |[編譯器錯誤 C3293](compiler-error-c3293.md)|'*識別碼*': 用 'default' 存取類別的預設屬性 （索引子）*類別*'|  
 |編譯器錯誤 C3294|已過時。|  
 |[編譯器錯誤 C3295](compiler-error-c3295.md)|'#pragma*規範*' 只可用在全域或命名空間範圍|  
 |[編譯器錯誤 C3296](compiler-error-c3296.md)|'*識別碼*': 已經有同名的屬性|  
 |[編譯器錯誤 C3297](compiler-error-c3297.md)|' *constraint2*': 不能使用' *constraint1*'做為條件約束因為' *constraint1*' 有值條件約束|  
-|[編譯器錯誤 C3298](compiler-error-c3298.md)|' *constraint1*': 不能使用' *constraint2*'做為條件約束因為' *constraint2*'具有 ref 條件約束和' *constraint1*' 有值條件約束|  
+|[編譯器錯誤 C3298](compiler-error-c3298.md)|' *constraint1*': 不能使用' *constraint2*'做為條件約束因為' *constraint2*'具有 ref 條件約束和' *constraint1*'具有值條件約束|  
 |[編譯器錯誤 C3299](compiler-error-c3299.md)|'*函式*': 無法指定條件約束，它們繼承自基底方法|  
 

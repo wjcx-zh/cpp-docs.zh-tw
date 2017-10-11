@@ -19,31 +19,17 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 76b98ae31e8d8416360415fd5989975533d6fb66
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 982075cdaa72ddd5b1a4fdafdeaaf433b27bcf77
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3633"></a>編譯器錯誤 C3633
-無法定義受管理的 'type' 的成員 'member'  
+無法將 'member' 定義為 managed 'type' 的成員  
   
-CLR 參考類別資料成員不能非 POD c + + 類型。  您可以只具現化 POD 原生型別中的 CLR 型別。  例如，POD 型別不能包含複製建構函式或指派運算子。  
+CLR 參考類別資料成員不可為非 POD c + + 類型。  您可以只執行個體化 POD 原生類型中的 CLR 型別。  例如，POD 類型不能包含複製建構函式或指派運算子。  
   
 ## <a name="example"></a>範例  
 下列範例會產生 C3633。  

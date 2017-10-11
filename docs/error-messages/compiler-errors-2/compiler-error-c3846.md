@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 04807182611beed23bf388d1f42a4fba0a3acea7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58ffd3f240505d173014f1f9b358b4957a41eaf5
 ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3846"></a>編譯器錯誤 C3846
-'symbol': 無法匯入來自 '2' 的符號: 'symbol' 已匯入從另一個組件 'y '&1;  
+'symbol': 無法匯入來自 'assembly2' 的符號： 因為 'symbol' 已從另一個組件 'assembly1' 匯入  
   
  不能從參考組件匯符號，因為它先前從參考組件匯入。  
   
@@ -56,7 +42,7 @@ public ref struct G
 };  
 ```  
   
- 然後編譯這個︰  
+ 然後編譯這個：  
   
 ```  
 // C3846b.cpp  

@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3763 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3763"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3763"
+title: "編譯器錯誤 C3763 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3763
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C3763
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type' : 'retval' 和 'out' 只能出現於資料指標的型別中  
+---
+# <a name="compiler-error-c3763"></a>編譯器錯誤 C3763
+'type': 'retval' 和 'out' 只能出現在資料指標類型  
   
- [out](../../windows/out-cpp.md) 或 [retval](../../windows/retval.md) 屬性只能出現在型別指標的參數上。  移除該屬性或建立型別指標的參數。  
+ [出](../../windows/out-cpp.md)或[retval](../../windows/retval.md)屬性只能出現在參數類型的指標。 請移除屬性，或將參數類型的指標。  
   
- 下列範例會產生 C3763：  
+ 下列範例會產生 C3763:  
   
 ```  
 // C3763.cpp  

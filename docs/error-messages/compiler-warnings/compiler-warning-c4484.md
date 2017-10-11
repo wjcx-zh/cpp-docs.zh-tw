@@ -1,44 +1,47 @@
 ---
-title: "編譯器警告 C4484 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4484"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4484"
+title: "編譯器警告 C4484 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4484
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器警告 C4484
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06246c811c59ff126cd61d5c10d0d30a68857c2c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'override\_function' : 符合基底 ref 類別方法 'base\_class\_function'，但是未標記為 'virtual'、'new' 或 'override'; 假設為 'new' \(而非 'virtual'\)  
+---
+# <a name="compiler-warning-c4484"></a>編譯器警告 C4484
+'override_function': 符合基底 ref 類別方法 'base_class_function'，但未標記為 'virtual'、 ' new' override';'new' （而非 'virtual'） 會假設  
   
- 使用 **\/clr** 編譯時，編譯器不會以隱含方式覆寫基底類別函式，也就是說，函式將在 vtable 中取得新位置。  若要解決這個問題，請明確指定函式是否為多載。  
+ 編譯時**/clr**，編譯器不會隱含地覆寫基底類別函式，這表示函式會取得在 vtable 中的新位置。 若要解決，請明確指定函式是否覆寫。  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱:  
   
--   [\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)  
+-   [/clr （common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)  
   
 -   [override](../../windows/override-cpp-component-extensions.md)  
   
--   [new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [new （新位置 vtable 中）](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
- C4484 永遠視同錯誤。  請使用 [warning](../../preprocessor/warning.md) Pragma 隱藏 C4484。  
+ C4484 永遠視為錯誤。 使用[警告](../../preprocessor/warning.md)隱藏 C4484 pragma。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4484。  
   
 ```  

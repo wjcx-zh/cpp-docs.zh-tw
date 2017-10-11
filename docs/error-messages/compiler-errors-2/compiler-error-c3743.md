@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3743"
+title: "編譯器錯誤 C3743 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3743
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3743
 ms.assetid: 7ca9a76e-7b60-46d1-ab8b-18600cf1a306
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# 編譯器錯誤 C3743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 71e35535a7e6c9916c6dd6ac563cfd5bdf76fbce
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-當 event\_receiver 的 'layout\_dependent' 參數為 true 時，僅能攔截\/取消攔截整個介面  
+---
+# <a name="compiler-error-c3743"></a>編譯器錯誤 C3743
+可以只攔截/取消攔截整個介面當 event_receiver 的 'layout_dependent' 參數為 true 時  
   
- [\_\_unhook](../../cpp/unhook.md) 函式的參數個數會根據傳遞至 [event\_receiver](../../windows/event-receiver.md) 類別中之 `layout_dependent` 參數的值而有所不同。  
+ [__Unhook](../../cpp/unhook.md)函式而有所不同，它會使用根據傳遞給的值的參數數目`layout_dependent`中的參數[event_receiver](../../windows/event-receiver.md)類別。  
   
- 下列範例會產生 C3743：  
+ 下列範例會產生 C3743:  
   
 ```  
 // C3743.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "編譯器錯誤 C3915 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3915"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3915"
+title: "編譯器錯誤 C3915 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3915
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# 編譯器錯誤 C3915
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type' 沒有預設索引的屬性 \(類別索引子\)  
+---
+# <a name="compiler-error-c3915"></a>編譯器錯誤 C3915
+'type' 已沒有預設索引屬性 （類別索引子）  
   
- 型別沒有預設索引的屬性。  
+ 類型沒有預設值，索引的屬性。  
   
- 如需詳細資訊，請參閱[屬性](../../windows/property-cpp-component-extensions.md)。  
+ 如需詳細資訊，請參閱 [property](../../windows/property-cpp-component-extensions.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3915。  
   
 ```  
@@ -54,8 +57,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 如果您嘗試在用 <xref:System.Reflection.DefaultMemberAttribute> 定義索引子的編譯中使用預設索引子，也可能會發生 C3915。  
+## <a name="example"></a>範例  
+ 如果您嘗試使用預設索引子定義與所在的相同編譯中也會發生 C3915 <xref:System.Reflection.DefaultMemberAttribute>。  
   
  下列範例會產生 C3915。  
   

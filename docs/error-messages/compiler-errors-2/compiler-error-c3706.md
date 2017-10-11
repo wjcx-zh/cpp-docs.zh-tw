@@ -1,39 +1,41 @@
 ---
-title: "編譯器錯誤 C3706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3706"
+title: "編譯器錯誤 C3706 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f7e14d22e1994213624d88ccab098844aa6ac4
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 必須是 COM 介面來引發 COM 事件  
+---
+# <a name="compiler-error-c3706"></a>編譯器錯誤 C3706
+'function': 必須是 COM 介面來引發 COM 事件  
   
- 您用來引發 COM 事件的事件介面必須是 COM 介面。  在此情況下，介面應該使用 Visual C\+\+ 屬性定義，或是使用 [\#import](../../preprocessor/hash-import-directive-cpp.md) 從型別程式庫以 \#import 的 embedded\_idl 屬性匯入。  
+ 您用來引發 COM 事件的事件介面必須是 COM 介面。 在此情況下，介面應該使用 Visual c + + 屬性會定義或匯入使用[#import](../../preprocessor/hash-import-directive-cpp.md)從 #import 的 embedded_idl 屬性的型別程式庫。  
   
- 請注意，若要使用 COM 事件，如下列範例中 ATL 標頭檔之 `#include` 行是必要的。  若要修正此錯誤，請將下列屬性的其中一個套用至介面定義：[object](../../windows/object-cpp.md)、[dual](../../windows/dual.md) 或 [dispinterface](../../windows/dispinterface.md)，讓 `IEvents` \(事件介面\) 成為 COM 介面：  
+ 請注意，`#include`行下面範例所示的 ATL 標頭檔所需使用 COM 事件。 若要修正這個錯誤，請`IEvents`（事件介面） 的 COM 介面，藉由套用下列屬性至介面定義：[物件](../../windows/object-cpp.md)，[雙重](../../windows/dual.md)，或[dispinterface](../../windows/dispinterface.md)。  
   
- 如果介面是來自 MIDL 所產生的標頭檔，編譯器會無法將它識別為 COM 介面。  
+ 如果介面是由 MIDL 產生的標頭檔來自，編譯器會將其辨識為 COM 介面。  
   
- 下列範例會產生 C3706：  
+ 下列範例會產生 C3706:  
   
 ```  
 // C3706.cpp  

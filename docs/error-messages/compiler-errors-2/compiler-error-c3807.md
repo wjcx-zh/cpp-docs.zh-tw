@@ -1,34 +1,37 @@
 ---
-title: "編譯器錯誤 C3807 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3807"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3807"
+title: "編譯器錯誤 C3807 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3807
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# 編譯器錯誤 C3807
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc8e760d295cc0a4c2482449038ea09e89547425
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'type' : 具有 ComImport 屬性的類別不可衍生自 'type2'，只允許介面實作  
+---
+# <a name="compiler-error-c3807"></a>編譯器錯誤 C3807
+'type': 具有 ComImport 屬性的類別不可衍生自 'type2'，允許只介面實作  
   
- 衍生自 <xref:System.Runtime.InteropServices.ComImportAttribute> 的型別只能實作介面。  
+ 衍生自型別<xref:System.Runtime.InteropServices.ComImportAttribute>只能實作介面。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C3807。  
   
 ```  

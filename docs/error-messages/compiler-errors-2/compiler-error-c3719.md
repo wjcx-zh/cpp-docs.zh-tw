@@ -1,35 +1,37 @@
 ---
-title: "編譯器錯誤 C3719 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3719"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3719"
+title: "編譯器錯誤 C3719 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3719
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
----
-# 編譯器錯誤 C3719
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06cdce1925470ce8af8df78e50f069763addb150
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'interface' : 介面基底事件來源只能用於 COM 事件  
+---
+# <a name="compiler-error-c3719"></a>編譯器錯誤 C3719
+'interface': 介面基底的事件來源只能用於 COM 事件  
   
- 您在非 COM 內容中宣告介面。  
+ 您已宣告非 COM 內容中的介面。  
   
- 下列範例會產生 C3719：  
+ 下列範例會產生 C3719:  
   
 ```  
 // C3719a.cpp  
@@ -56,7 +58,7 @@ int main() {
 }  
 ```  
   
- 若要修復此錯誤，請適當套用 [object](../../windows/object-cpp.md)、[coclass](../../windows/coclass.md)、[event\_source](../../windows/event-source.md) 和 [event\_receiver](../../windows/event-receiver.md) 屬性，使您正在使用介面的類別成為 COM 類別。  例如：  
+ 若要修正這個錯誤，套用[物件](../../windows/object-cpp.md)， [coclass](../../windows/coclass.md)， [event_source](../../windows/event-source.md)，和[event_receiver](../../windows/event-receiver.md)進行適當的屬性您使用的介面 COM 類別的類別。 例如:   
   
 ```  
 // C3719b.cpp  

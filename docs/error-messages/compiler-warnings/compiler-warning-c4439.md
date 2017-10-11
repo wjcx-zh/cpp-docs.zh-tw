@@ -1,36 +1,39 @@
 ---
-title: "編譯器警告 C4439 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4439"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4439"
+title: "編譯器警告 C4439 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4439
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# 編譯器警告 C4439
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eec228922a6f5796587243fe2d1f2c6cc1cf6b1c
+ms.contentlocale: zh-tw
+ms.lasthandoff: 10/10/2017
 
-'function' : 簽章中有 Managed 型別的函式定義必須有 \_\_clrcall 呼叫慣例  
+---
+# <a name="compiler-warning-c4439"></a>編譯器警告 C4439
+'function': 函式簽章中有 managed 類型的定義必須有 __clrcall 呼叫慣例  
   
- 編譯器以隱含方式用 [\_\_clrcall](../../cpp/clrcall.md) 取代了呼叫慣例。  若要解除這項警告，請移除 `__cdecl` 或 `__stdcall` 呼叫慣例。  
+ 編譯器會隱含地取代與呼叫慣例[__clrcall](../../cpp/clrcall.md)。 若要解決這個警告，請移除`__cdecl`或`__stdcall`呼叫慣例。  
   
- C4439 永遠視同錯誤。  您可以使用 `#pragma warning` 或 **\/wd** 關閉這個警告。如需詳細資訊，請參閱 [warning](../../preprocessor/warning.md) 或 [\/w、\/Wn、\/WX、\/Wall、\/wln、\/wdn、\/wen、\/won \(警告層級\)](../../build/reference/compiler-option-warning-level.md)。  
+ C4439 永遠視為錯誤。 您可以關閉包含此警告`#pragma warning`或**/wd**; 請參閱[警告](../../preprocessor/warning.md)或[/w、 /W0、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd，/ /wo，我們 /Wv，/WX （警告等級）](../../build/reference/compiler-option-warning-level.md)如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4439。  
   
 ```  

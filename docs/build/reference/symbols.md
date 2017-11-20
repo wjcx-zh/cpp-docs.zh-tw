@@ -1,44 +1,43 @@
 ---
-title: "/SYMBOLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/symbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SYMBOLS dumpbin 選項"
-  - "公用符號"
-  - "符號表"
-  - "SYMBOLS dumpbin 選項"
-  - "-SYMBOLS dumpbin 選項"
-  - "符號, 顯示 COFF 符號表"
-  - "符號, 傾印"
+title: "-SYMBOLS |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /symbols
+dev_langs: C++
+helpviewer_keywords:
+- symbols, dumping
+- public symbols
+- symbols, displaying COFF symbol table
+- symbol tables
+- SYMBOLS dumpbin option
+- /SYMBOLS dumpbin option
+- -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 360f26de5043eae7f5cdb4688612f95b96be8fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /SYMBOLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="symbols"></a>/SYMBOLS
 ```  
 /SYMBOLS  
 ```  
   
- 這個選項顯示 COFF 符號表。  所有的目的檔中都有符號表存在。  COFF 符號表只有在使用 \/DEBUG 連結時才會出現在影像檔中。  
+ 此選項會顯示 COFF 符號表。 符號表存在於所有目的檔中。 COFF 符號表中才會出現映像檔使用 /debug 進行連結。  
   
- 以下是 \/SYMBOLS 輸出的說明。  如需 \/SYMBOLS 輸出之意義的其他資訊，請參閱 winnt.h \(IMAGE\_SYMBOL 和 IMAGE\_AUX\_SYMBOL\) 或 COFF 文件。  
+ 下列是輸出 /SYMBOLS 的描述。 在 winnt.h （IMAGE_SYMBOL 和 IMAGE_AUX_SYMBOL） 或 COFF 文件中尋找找 /SYMBOLS 輸出的意義上的其他資訊。  
   
- 進行下列範例傾印：  
+ 假設下列範例的傾印：  
   
 ```  
 Dump of file main.obj  
@@ -63,18 +62,18 @@ Summary
       23 .text  
 ```  
   
-## 備註  
- 以下內容 \(針對以符號編號開頭的程式碼行\) 說明載有使用者相關資訊的直欄：  
+## <a name="remarks"></a>備註  
+ 下列說明，以符號數字開頭的程式碼行說明具有使用者的相關資訊的資料行：  
   
--   第一組三位數數字是符號索引 \/ 編號。  
+-   第三個位數的數字是符號索引/編號。  
   
--   如果第三個資料行包含 SECT*x*，則表示該符號是定義於目的檔中的該區段。  但如果出現 UNDEF，則表示它不是在該物件中定義，必須在其他處另行解析。  
+-   如果第三個資料行包含區段*x*，該區段的目的檔中定義的符號。 但是如果出現 UNDEF，該物件中未定義，必須先解決其他位置。  
   
--   第五個直欄 \(Static、External\) 表示該符號是只能在該物件內看到或是它是公用符號 \(在外部可見\)。  靜態符號 \_sym 將不會連結到公用符號 \_sym；這些是名稱為 \_sym 之函式的兩個不同的執行個體。  
+-   第五個資料行 （「 靜態 」、 「 外部 」） 會告知符號是否顯示只在該物件，或是否為公用 (可見外部)。 靜態符號 _sym 不會連結到公用符號 _sym;這些是兩個名為 _sym 函式的不同執行個體。  
   
- 在具編號的行中，最後一個直欄是裝飾 \(Decorated\) 和未裝飾 \(Undecorated\) 的符號名稱。  
+ 編號的行中的最後一個資料行的符號名稱，兩者裝飾和未裝飾。  
   
- 只有 [\/HEADERS](../../build/reference/headers.md) DUMPBIN 選項可用在以 [\/GL](../../build/reference/gl-whole-program-optimization.md) 編譯器選項所產生的檔案上。  
+ 只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)

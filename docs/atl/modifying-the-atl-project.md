@@ -1,36 +1,36 @@
 ---
-title: "Modifying the ATL Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "複合控制項, 加入控制項"
-  - "控制項 [ATL], adding to composite controls"
-  - "對話方塊編輯器, working with composite controls"
+title: "修改 ATL 專案 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [ATL], adding to composite controls
+- Dialog editor, working with composite controls
+- composite controls, adding controls
 ms.assetid: 59984518-748f-4b8b-875f-3e97d22d0b0f
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0385903a0580d06c03d3973e697e7a7fc88bbd1e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Modifying the ATL Project
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此時，您的複合控制項專案實作您的複合控制項的必要的物件。  下一步是將複合控制項會包含並處理任何必要的事件中的所有控制項。  
+# <a name="modifying-the-atl-project"></a>修改 ATL 專案
+此時，複合控制項專案實作複合控制項所需的物件。 下一個步驟是加入任何控制項將會包含複合控制項，並處理任何必要的事件。  
   
- 若要加入其他 ActiveX 控制項或視窗中，將新的資源指令碼再使用對話方塊編輯器。  如需將控制項的詳細資訊 \(及相關的工作\)，請參閱 [對話方塊編輯器](../mfc/dialog-editor.md)。  
+ 若要新增其他的 ActiveX 或 Windows 控制項，新增新的資源指令碼，然後使用對話方塊編輯器。 如需有關如何加入控制項 （及相關的工作） 的詳細資訊，請參閱[對話方塊編輯器](../windows/dialog-editor.md)。  
   
- 若要處理來自 ActiveX 控制項的所有必要的事件，請參閱 [將功能加入至複合控制項](../atl/adding-functionality-to-the-composite-control.md)。  
+ 若要處理任何必要的事件從 ActiveX 控制項，請參閱[加入至複合控制項的功能](../atl/adding-functionality-to-the-composite-control.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [複合控制項基本概念](../atl/atl-composite-control-fundamentals.md)   
- [How to: Create a Resource Script File](../windows/how-to-create-a-resource-script-file.md)
+ [如何：建立資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)
+

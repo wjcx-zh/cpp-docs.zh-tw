@@ -4,39 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>偵錯和錯誤報告巨集
 這些巨集提供有用的偵錯和追蹤功能。  
@@ -59,7 +48,7 @@ ms.lasthandoff: 03/31/2017
 ```  
   
 ### <a name="remarks"></a>備註  
- 追蹤輸出會出現如下所示︰  
+ 追蹤輸出會出現如下所示：  
   
  `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`  
   
@@ -71,7 +60,7 @@ ms.lasthandoff: 03/31/2017
   
  追蹤資訊的最後一段是物件，而且會影響的介面名稱`AddRef`或**發行**呼叫。  
   
- 任何介面伺服器關閉時偵測到遺漏和`_Module.Term`呼叫將會記錄如下︰  
+ 任何介面伺服器關閉時偵測到遺漏和`_Module.Term`呼叫將會記錄如下：  
   
  `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`  
   
@@ -88,7 +77,7 @@ ms.lasthandoff: 03/31/2017
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果呼叫`QueryInterface`失敗，[輸出] 視窗會顯示︰  
+ 如果呼叫`QueryInterface`失敗，[輸出] 視窗會顯示：  
   
  *介面名稱* - `failed`  
   
@@ -107,7 +96,7 @@ ATLASSERT(booleanExpression);
  在偵錯組建`ATLASSERT`評估`booleanExpression`結果為 false 時，產生偵錯報表。  
 
 ## <a name="requirements"></a>需求  
- **標頭︰** atldef.h  
+ **標頭：** atldef.h  
     
 ##  <a name="atlensure"></a>ATLENSURE  
  這個巨集用來驗證傳遞至函式的參數。  
@@ -136,7 +125,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  之間的差異**ATLENSURE**和`ATLASSERT`在於**ATLENSURE**會擲回版本中的例外狀況以及建置與偵錯組建。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>需求  
  **標頭：** afx.h  
@@ -156,10 +145,10 @@ ATLTRACENOTIMPL(funcname);
  在發行組建中只會傳回**E_NOTIMPL**。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atltrace.h 
+ **標頭：** atltrace.h 
 
 ##  <a name="atltrace"></a>ATLTRACE
  輸出裝置，例如偵錯工具視窗中，根據指定的旗標和層級的報告警告。 包含為了回溯相容性。  
@@ -221,7 +210,7 @@ ATLTRACE2(
   
 ### <a name="atl-trace-flags"></a>ATL 追蹤旗標  
   
-|ATL 類別|描述|  
+|ATL 類別|說明|  
 |------------------|-----------------|  
 |`atlTraceGeneral`|報告所有的 ATL 應用程式。 預設值。|  
 |`atlTraceCOM`|報告 COM 方法。|  
@@ -239,7 +228,7 @@ ATLTRACE2(
   
 ### <a name="mfc-trace-flags"></a>MFC 追蹤旗標  
   
-|MFC 類別|描述|  
+|MFC 類別|說明|  
 |------------------|-----------------|  
 |**traceAppMsg**|一般用途，MFC 訊息。 一律建議。|  
 |**traceDumpContext**|從訊息[CDumpContext](../../mfc/reference/cdumpcontext-class.md)。|  
@@ -252,15 +241,15 @@ ATLTRACE2(
 |**traceDatabase**|從 MFC 資料庫支援的訊息。|  
 |**traceInternet**|從 MFC 的網際網路支援的訊息。|  
   
- 若要宣告自訂追蹤類別，宣告的全域執行個體`CTraceCategory`類別，如下所示︰  
+ 若要宣告自訂追蹤類別，宣告的全域執行個體`CTraceCategory`類別，如下所示：  
   
- [!code-cpp[NVC_ATL_Utilities # 109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  分類名稱`MY_CATEGORY`在此範例中，是您指定的名稱`category`參數。 第一個參數是類別目錄名稱會出現在 ATL/MFC 追蹤工具。 第二個參數是預設的追蹤層級。 這個參數是選擇性，而且預設追蹤層級為 0。  
   
- 若要使用的使用者定義類別目錄︰  
+ 若要使用的使用者定義類別目錄：  
   
- [!code-cpp[NVC_ATL_Utilities # 110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  若要指定您想要篩選追蹤訊息，插入這些巨集的定義之前 Stdafx.h`#include <atlbase.h>`陳述式。  
   
@@ -275,9 +264,8 @@ ATLTRACE2(
  **ATLTRACE**和`ATLTRACE2`有相同的行為， **ATLTRACE**是為了與舊版相容。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>另請參閱  
  [巨集](../../atl/reference/atl-macros.md)   
  [偵錯和錯誤報告全域函式](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

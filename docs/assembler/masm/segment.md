@@ -1,32 +1,30 @@
 ---
-title: "SEGMENT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SEGMENT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SEGMENT directive"
+title: "區段 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SEGMENT
+dev_langs: C++
+helpviewer_keywords: SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8648005f26e334ae8d184aa437aef68b0318eed6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# SEGMENT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-定義程式區段稱為*名稱*具有區段屬性  
+# <a name="segment"></a>SEGMENT
+定義程式區段，稱為*名稱*區段屬性  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,42 +33,42 @@ statements
 name ENDS  
 ```  
   
-#### 參數  
- *對齊*  
- 可以從中選取段落的起始位址的記憶體位址範圍。  對齊型別可以是下列其中一項動作：  
+#### <a name="parameters"></a>參數  
+ *align*  
+ 可以從中選取的區段的起始位址的記憶體位址範圍。 對齊類型可以是下列其中一項動作：  
   
 |對齊類型|起始位址|  
-|----------|----------|  
-|**BYTE**|下一個可用的位元組的位址。|  
-|**WORD**|下一個可用的 word 位址 \(每個字的 2 位元組\)。|  
-|**DWORD**|下一個可用的雙字位址 \(每個雙字的 4 個位元組\)。|  
-|**選取一個段落**|下一個可用的段落位址 \(每個段落的 16 位元組\)。|  
-|**頁面**|下一個可用的網頁位址 \(每頁的 256 個位元組\)。|  
-|**ALIGN**\(*n*\)|下一個可用 *n*第位元組的位址。  如需詳細資訊請參閱 ＜ 備註 ＞ 一節。|  
+|----------------|----------------------|  
+|**BYTE**|下一個可用的位元組位址。|  
+|**WORD**|下一個可用的字位址 （每個字的 2 位元組）。|  
+|**DWORD**|下一個可用的雙字組位址 （每個雙字組 4 個位元組）。|  
+|**PARA**|下一個可用的段落位址 （每個段落的 16 位元組）。|  
+|**PAGE**|下一個可用的頁面位址 （每一頁的 256 個位元組）。|  
+|**對齊**(*n*)|下一個可用 *n*個位元組的位址。 如需詳細資訊，請參閱 < 備註 > 一節。|  
   
- 如果未指定此參數， **段落**由預設值。  
+ 如果未指定這個參數， **PARA**預設會使用。  
   
- *結合*  
- **PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT***address*, **PRIVATE**  
+ *combine*  
+ **公用**，**堆疊**，**常見**，**記憶體**，**在***位址*， **私用**  
   
  *使用*  
- **USE16**, **USE32**, **FLAT**  
+ **USE16**， **USE32**，**一般**  
   
  `characteristics`  
- **INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**  
+ **資訊**，**讀取**，**寫入**， **EXECUTE**，**共用**， **NOPAGE**， **NOCACHE**，和**捨棄**  
   
- 這些都只支援 \(coff\)，並對應至 COFF 區段的特性相似的名稱 \(例如，  **SHARED** 會對應到 IMAGE\_SCN\_MEM\_SHARED\)。  讀取設定 IMAGE\_SCN\_MEM\_READ 旗標。  過時的唯讀旗標會導致清除 IMG\_SCN\_MEM\_WRITE 旗標的區段。  如果有任何`characteristics`設定，不會使用預設的特性，並只程式設計人員所指定的標幟才會生效。  
+ 這些只支援 COFF，而對應至名稱類似的 COFF 區段特性 (例如，**共用**對應至 IMAGE_SCN_MEM_SHARED)。 讀取設定 IMAGE_SCN_MEM_READ 旗標。 過時的唯讀旗標會引起清除 IMG_SCN_MEM_WRITE 旗標 > 一節。 如果有任何`characteristics`設定，不會使用預設特性，而且只有程式設計人員指定旗標作用中。  
   
  `ALIAS(` `string` `)`  
- 此字串用為發出 COFF 物件中的區段名稱。  建立具有相同的外部名稱，以不同的 MASM 區段名稱的多個節。  
+ 這個字串會作為發出 COFF 物件中的區段名稱。  建立多個區段具有相同的外部名稱，以不同的 MASM 區段名稱。  
   
- 不支援以**\/omf**。  
+ 不支援與**/omf**。  
   
  `class`  
- 指定應該如何結合而排列組合的檔案中的區段。  Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and`'STACK'`  
+ 指定應該如何結合並排序組合檔案中區段。 典型值為， `'DATA'`， `'CODE'`，`'CONST'`和`'STACK'`  
   
-## 備註  
- For `ALIGN(``n``)`, `n` may be any power of 2 from 1 to 8192; 不支援**\/omf**。  
+## <a name="remarks"></a>備註  
+ 如`ALIGN(n)`，`n`可能是任何 2 的乘冪從 1 到 8192; 不支援**/omf**。  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

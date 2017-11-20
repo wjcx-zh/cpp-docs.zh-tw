@@ -1,64 +1,57 @@
 ---
-title: "ATL 編碼方式參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "編碼"
-  - "編碼, 函式"
+title: "ATL 編碼方式參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- encoding
+- encoding, functions
 ms.assetid: 82d4fdf3-3c4a-4fe2-b297-8ffb4714406f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd0f4b448de3fcaabe33822c0d8b1ee834260609
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ATL 編碼方式參考
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在一般網際網路標準範圍的編碼方式 \(例如 uuencode、十六進位和 UTF8 由 atlenc.h 中所找到的程式碼支援。  
+# <a name="atl-encoding-reference"></a>ATL 編碼方式參考
+在一般的網際網路標準，例如 uuencode 十六進位、 範圍和 UTF8 編碼方式會受到 atlenc.h 中找到的程式碼。  
   
-### 功能  
+### <a name="functions"></a>函式  
   
 |||  
 |-|-|  
-|[AtlGetHexValue](../Topic/AtlGetHexValue.md)|呼叫此函式來取得十六進位數字的數值。|  
-|[AtlHexDecode](../Topic/AtlHexDecode.md)|解碼已編碼為十六進位文字 \(例如 \[ [AtlHexEncode](../Topic/AtlHexEncode.md)\) 的呼叫資料的字串。|  
-|[AtlHexDecodeGetRequiredLength](../Topic/AtlHexDecodeGetRequiredLength.md)|呼叫此函式來取得大小可以包含從所指定長度的十六進位編碼字串解碼的資料緩衝區中的位元組數。|  
-|[AtlHexEncode](../Topic/AtlHexEncode.md)|呼叫這個函式進入某些資料以十六進位的文字字串。|  
-|[AtlHexEncodeGetRequiredLength](../Topic/AtlHexEncodeGetRequiredLength.md)|呼叫此函式來取得可包含從所指定大小的資料輸入之字串緩衝區的大小。|  
-|[AtlUnicodeToUTF8](../Topic/AtlUnicodeToUTF8.md)|呼叫此函式將 Unicode 字串轉換為 UTF\-8。|  
-|[BEncode](../Topic/BEncode.md)|使用「B」編碼方式，呼叫這個函式轉換一些資料。|  
-|[BEncodeGetRequiredLength](../Topic/BEncodeGetRequiredLength.md)|呼叫此函式來取得可包含從所指定大小的資料輸入之字串緩衝區的大小。|  
-|[EscapeXML](../Topic/EscapeXML.md)|呼叫這個函式會轉換為 unsafe 用於 XML 為其安全對等的字元。|  
-|[GetExtendedChars](../Topic/GetExtendedChars.md)|呼叫此函式來取得擴充字元數目的字串。|  
-|[IsExtendedChar](../Topic/IsExtendedChar.md)|呼叫這個函式會發現，如果指定的字元是否為擴充字元 \(小於 32\)，大於 126，而非定位字元、換行字元、歸位字元 \(Carriage Return\)|  
-|[QEncode](../Topic/QEncode.md)|使用「Q」編碼方式，呼叫這個函式轉換一些資料。|  
-|[QEncodeGetRequiredLength](../Topic/QEncodeGetRequiredLength.md)|呼叫此函式來取得可包含從所指定大小的資料輸入之字串緩衝區的大小。|  
-|[QPDecode](../Topic/QPDecode.md)|將引號可列印的格式輸入 [QPEncode](../Topic/QPEncode.md)等\) 的呼叫資料的字串。|  
-|[QPDecodeGetRequiredLength](../Topic/QPDecodeGetRequiredLength.md)|呼叫此函式來取得大小可以包含從所指定長度的引號可列印編碼字串解碼的資料緩衝區中的位元組數。|  
-|[QPEncode](../Topic/QPEncode.md)|呼叫這個函式會在引號可列印之格式的資料。|  
-|[QPEncodeGetRequiredLength](../Topic/QPEncodeGetRequiredLength.md)|呼叫此函式來取得可包含從所指定大小的資料輸入之字串緩衝區的大小。|  
-|[UUDecode](../Topic/UUDecode.md)|解碼 uuencoded 等 [UUEncode](../Topic/UUEncode.md)\) 的呼叫資料的字串。|  
-|[UUDecodeGetRequiredLength](../Topic/UUDecodeGetRequiredLength.md)|呼叫此函式來取得大小可以包含從所指定長度的字串 uuencoded 解密資料緩衝區中的位元組數。|  
-|[UUEncode](../Topic/UUEncode.md)|呼叫這個函式會 uuencode 一些資料。|  
-|[UUEncodeGetRequiredLength](../Topic/UUEncodeGetRequiredLength.md)|呼叫此函式來取得可包含從所指定大小的資料輸入之字串緩衝區的大小。|  
+|[AtlGetHexValue](reference/atl-text-encoding-functions.md#atlgethexvalue)|呼叫此函式可取得十六進位的數值。|  
+|[AtlHexDecode](reference/atl-text-encoding-functions.md#atlhexdecode)|將已由先前呼叫這類的十六進位文字編碼的資料字串解碼， [AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)。|  
+|[AtlHexDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexdecodegetrequiredlength)|呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的十六進位編碼字串解碼的資料。|  
+|[AtlHexEncode](reference/atl-text-encoding-functions.md#atlhexencode)|呼叫此函式可將一些資料編碼為十六進位文字字串。|  
+|[AtlHexEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#atlhexencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|  
+|[AtlUnicodeToUTF8](reference/atl-text-encoding-functions.md#atlunicodetoutf8)|呼叫此函式可將 Unicode 字串轉換為 UTF-8。|  
+|[BEncode](reference/atl-text-encoding-functions.md#bencode)|呼叫此函式可使用 "B" 編碼方式轉換部分資料。|  
+|[BEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#bencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|  
+|[EscapeXML](reference/atl-text-encoding-functions.md#escapexml)|呼叫此函式可將無法在 XML 中安全使用的字元轉換成安全的對等字元。|  
+|[GetExtendedChars](reference/atl-text-encoding-functions.md#getextendedchars)|呼叫此函式可取得字串中的擴充字元數目。|  
+|[IsExtendedChar](reference/atl-text-encoding-functions.md#isextendedchar)|呼叫此函式，了解所指字元是否為擴充字元 (小於 32、大於 126，而且不是定位字元、換行字元或歸位字元)|  
+|[QEncode](reference/atl-text-encoding-functions.md#qencode)|呼叫此函式可使用 "Q" 編碼方式轉換部分資料。|  
+|[QEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|  
+|[QPDecode](reference/atl-text-encoding-functions.md#qpdecode)|將已編碼的加上引號的可列印格式，例如由先前呼叫的資料字串解碼， [QPEncode](reference/atl-text-encoding-functions.md#qpencode)。|  
+|[QPDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpdecodegetrequiredlength)|呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的加上引號可列印編碼字串解碼的資料。|  
+|[QPEncode](reference/atl-text-encoding-functions.md#qpencode)|呼叫此函式可採用加上引號的可列印格式對一些資料進行編碼。|  
+|[QPEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#qpencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|  
+|[UUDecode](reference/atl-text-encoding-functions.md#uudecode)|將已使用 uuencode 編碼例如由先前呼叫的資料字串解碼， [UUEncode](reference/atl-text-encoding-functions.md#uuencode)。|  
+|[UUDecodeGetRequiredLength](reference/atl-text-encoding-functions.md#uudecodegetrequiredlength)|呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的 UUENCODE 編碼字串解碼的資料。|  
+|[UUEncode](reference/atl-text-encoding-functions.md#uuencode)|呼叫此函式可對一些資料進行 UUENCODE 編碼。|  
+|[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|  
   
-### 巨集  
-  
-|||  
-|-|-|  
-|[ATL\_ESC 旗標。](../Topic/ATL_ESC%20Flags.md)|這些旗標可用來控制 [EscapeXML](../Topic/EscapeXML.md)行為。|  
-|[ATLSMTP\_QPENCODE 旗標。](../Topic/ATLSMTP_QPENCODE%20Flags.md)|這些旗標描述引號可列印的編碼方式。 [QPEncode](../Topic/QPEncode.md)執行。|  
-|[ATLSMTP\_UUENCODE 旗標。](../Topic/ATLSMTP_UUENCODE%20Flags.md)|這些旗標的描述 uuencoding 方式。 [UUEncode](../Topic/UUEncode.md)執行。|  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
- [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)
+ [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)
+

@@ -1,37 +1,37 @@
 ---
-title: "匯出 C 函式以用於 C 或 C++ 語言可執行檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__cplusplus 巨集"
-  - "匯出 DLL [C++], C++ 可執行檔中的 C 函式"
-  - "匯出函式 [C++], C++ 可執行檔中的 C 函式"
-  - "函式 [C], C 或 C++ 可執行檔和"
-  - "函式 [C], 匯出"
+title: "匯出 C 函式以用於 C 或 c + + 語言可執行檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C], exporting
+- functions [C], C or C++ executables and
+- __cplusplus macro
+- exporting DLLs [C++], C functions in C++ executables
+- exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e92ef965372d1bf0b0272b5a962091ff0ae88e1e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 匯出 C 函式以用於 C 或 C++ 語言可執行檔
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果 DLL 中有使用 C 撰寫且要從 C 語言或 C\+\+ 語言模組存取的函式，則您應該使用 **\_\_cplusplus** 前置處理器巨集，判斷要編譯哪種語言，接著如果要從 C\+\+ 語言模組使用，則用 C 連結來宣告這些函式。  如果您在您的 DLL 使用了這個技術並提供標頭檔，那麼就可以不用變更這些函式來提供 C 和 C\+\+ 使用者。  
+# <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>匯出 C 函式以用於 C 或 C++ 語言可執行檔  
   
- 下列程式碼顯示了 C 和 C\+\+ 用戶端應用程式可以使用的標頭檔：  
+如果您在以 C 撰寫，您想要存取從 C 語言或 c + + 語言的模組，您應該使用的 DLL 函式**__cplusplus**前置處理器巨集來判斷哪一種語言編譯，，，然後將這些宣告如果 c + + 語言模組中使用 C 連結函式。 如果您使用這項技術，並提供您的 DLL 的標頭檔，這些函式可供 C 和 c + + 的使用者，且不會變更。  
   
-```  
+下列程式碼會顯示可供 C 和 c + + 的用戶端應用程式的標頭檔：  
+  
+```h  
 // MyCFuncs.h  
 #ifdef __cplusplus  
 extern "C" {  // only need to export C interface if  
@@ -46,33 +46,33 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif  
 ```  
   
- 如果您需要將 C 函式連結至 C\+\+ 可執行檔，而且函式宣告標頭檔尚未使用上述技術，請在 C\+\+ 原始程式檔中執行下列程式碼來避免編譯器裝飾 C 函式名稱：  
+如果您要連結至 c + + 可執行的 C 函式的函式宣告的標頭檔具有不使用上述的技巧，c + + 原始程式檔中，執行下列命令以防止編譯器裝飾的 C 函式名稱：  
   
-```  
+```cpp  
 extern "C" {  
 #include "MyCHeader.h"  
 }  
 ```  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [使用 .def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
+-   [使用.def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [使用 \_\_declspec\(dllexport\) 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [使用 __declspec （dllexport） 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [使用 AFX\_EXT\_CLASS 匯出和匯入](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [匯出和匯入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [判斷要使用哪一種匯出方法](../build/determining-which-exporting-method-to-use.md)  
+-   [決定要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)  
   
--   [使用 \_\_declspec\(dllimport\) 匯入至應用程式](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [匯入應用程式使用 __declspec （dllimport）](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [初始化 DLL](../build/initializing-a-dll.md)  
+-   [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
--   [裝飾名稱](../build/reference/decorated-names.md)  
+-   [裝飾的名稱](../build/reference/decorated-names.md)  
   
--   [連結規格](http://msdn.microsoft.com/zh-tw/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)  
+-   [使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 DLL 匯出](../build/exporting-from-a-dll.md)

@@ -1,33 +1,30 @@
 ---
-title: ".DOSSEG | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".DOSSEG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".DOSSEG directive"
+title: ".DOSSEG |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .DOSSEG
+dev_langs: C++
+helpviewer_keywords: .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4d2156161686583ba00d357c1dbca2e2e2867e9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# .DOSSEG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-排序依據以 MS\-DOS 的區段慣例區段： 程式碼第一次，然後區段不在 DGROUP，然後區段在 DGROUP 中。  
+# <a name="dosseg"></a>.DOSSEG
+排序依據 MS-DOS 區段慣例區段： 程式碼第一次，然後區段不在 DGROUP，和在 DGROUP 然後區段。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,8 +32,8 @@ manager: "ghogen"
   
 ```  
   
-## 備註  
- DGROUP 中的區段，請依照下列順序： 區段未在 BSS 或堆疊，然後 BSS 區段，並最後堆疊區段。  主要用於確保在 MASM 獨立程式的可檢視程式碼支援。  相同的 [DOSSEG](../../assembler/masm/dosseg.md)。  
+## <a name="remarks"></a>備註  
+ DGROUP 中的區段，請遵循此順序： 區段不在 BSS 或堆疊，BSS 區段，然後按一下最後堆疊區段。 主要用來確定可持續 MASM 獨立程式中的 CodeView 支援。 與相同[DOSSEG](../../assembler/masm/dosseg.md)。  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

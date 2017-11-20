@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactory
 - ATLCOM/ATL::CComClassFactory::CreateInstance
 - ATLCOM/ATL::CComClassFactory::LockServer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactory class
+dev_langs: C++
+helpviewer_keywords: CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: a0c1c115bfffa1de9a2a8c91c5268de66c68e7cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 832563b99d33fe56542fcc48a7ca144124c81e53
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 類別
 這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面。  
@@ -66,13 +48,13 @@ class CComClassFactory
 ## <a name="remarks"></a>備註  
  `CComClassFactory`實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，其中包含用於建立特定的 CLSID 的物件，以及鎖定以允許更快速地建立新物件的記憶體中的 class factory 方法。 **IClassFactory**必須針對您在系統登錄中，並為您指派為 CLSID 註冊每個類別中實作。  
   
- ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要覆寫此預設值，指定的其中一個`DECLARE_CLASSFACTORY` *XXX*類別定義中的巨集。 例如， [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)巨集的 class factory 中用於指定的類別︰  
+ ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要覆寫此預設值，指定的其中一個`DECLARE_CLASSFACTORY` *XXX*類別定義中的巨集。 例如， [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex)巨集的 class factory 中用於指定的類別：  
   
- [!code-cpp[NVC_ATL_COM #8](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]  
   
  上述類別定義指定**CMyClassFactory**將使用做為物件的預設 class factory。 **CMyClassFactory**必須衍生自`CComClassFactory`並覆寫`CreateInstance`。  
   
- ATL 提供三個其他宣告 class factory 的巨集︰  
+ ATL 提供三個其他宣告 class factory 的巨集：  
   
 - [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)使用[CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)，這會控制透過授權建立。  
   
@@ -81,7 +63,7 @@ class CComClassFactory
 - [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)使用[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)，這會建構一個[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)物件。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactory::CreateInstance  
  建立指定的 CLSID 的物件，並擷取這個物件的介面指標。  
@@ -126,4 +108,3 @@ STDMETHOD(LockServer)(BOOL fLock);
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [類別概觀](../../atl/atl-class-overview.md)
-

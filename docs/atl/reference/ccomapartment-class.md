@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,22 +18,20 @@ f1_keywords:
 - ATLBASE/ATL::CComApartment::m_dwThreadID
 - ATLBASE/ATL::CComApartment::m_hThread
 - ATLBASE/ATL::CComApartment::m_nLockCnt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 0a7e7fce463e7aabe6b27cb9e5fb3dbb36fd8983
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomapartment-class"></a>CComApartment 類別
 這個類別會提供用於管理執行緒集區的 EXE 模組中 appartment 支援。  
@@ -165,4 +162,3 @@ LONG Unlock();
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

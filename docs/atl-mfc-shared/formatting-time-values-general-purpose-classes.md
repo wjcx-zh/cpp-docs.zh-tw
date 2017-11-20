@@ -1,45 +1,46 @@
 ---
-title: "Formatting Time Values: General-Purpose Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "日期, calculating intervals"
-  - "已耗用時間, string representation"
-  - "formatting [C++], 時間"
-  - "time [C++], 格式化"
+title: "格式化時間值： 一般用途類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- dates, calculating intervals
+- elapsed time, string representation
+- time [C++], formatting
+- formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4d1f8369de82db15af3e9c64b0c24e900b0c030f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Formatting Time Values: General-Purpose Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="formatting-time-values-general-purpose-classes"></a>格式化時間值： 一般用途類別
 下列程序示範如何格式化時間值。  
   
-#### 格式化頁面或已耗用時間的字串表示。  
+#### <a name="to-format-a-string-representation-of-a-time-or-elapsed-time"></a>若要格式化的時間與經過時間的字串表示  
   
-1.  使用從 [CTime](../atl-mfc-shared/reference/ctime-class.md) 或 [CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md) 類別的 **格式** 成員函式建立時間的字串表示或已耗用時間，如下列範例所示。  
+1.  使用**格式**成員函式，從[CTime](../atl-mfc-shared/reference/ctime-class.md)或[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)類別來建立一個字元的字串表示的時間或經過時間所示下列範例。  
   
-     [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/CPP/formatting-time-values-general-purpose-classes_1.cpp)]  
+     [!code-cpp[NVC_ATLMFC_Utilities#175](../atl-mfc-shared/codesnippet/cpp/formatting-time-values-general-purpose-classes_1.cpp)]  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您要更多詳細資訊  
   
--   [一般程式設計在 MFC 中的日期和時間。](../atl-mfc-shared/date-and-time.md)  
+-   [一般日期與時間程式設計，在 MFC 中](../atl-mfc-shared/date-and-time.md)  
   
--   [與一起使用 SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
+-   [使用 SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)  
   
--   [Automation 支援日期和時間程式設計](../atl-mfc-shared/date-and-time-automation-support.md)  
+-   [日期與時間程式設計的自動化支援](../atl-mfc-shared/date-and-time-automation-support.md)  
   
-## 請參閱  
- [Date and Time: General\-Purpose Classes](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+## <a name="see-also"></a>另請參閱  
+ [日期和時間：一般用途類別](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
+

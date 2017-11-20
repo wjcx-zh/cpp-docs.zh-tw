@@ -1,92 +1,91 @@
 ---
-title: "Supporting IDispEventImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, IDispEventImpl support in COM objects"
-  - "BEGIN_SINK_MAP macro"
-  - "event sink maps, 宣告"
-  - "IDispEventImpl class, advising and unadvising"
-  - "IDispEventImpl class, 宣告"
-  - "SINK_ENTRY macro"
-  - "型別程式庫, 匯入"
+title: "支援 IDispEventImpl |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventImpl
+dev_langs: C++
+helpviewer_keywords:
+- event sink maps, declaring
+- IDispEventImpl class, advising and unadvising
+- SINK_ENTRY macro
+- type libraries, importing
+- ATL, IDispEventImpl support in COM objects
+- BEGIN_SINK_MAP macro
+- IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 81976652c14693c54980f6e0901f5db5576fbbe8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Supporting IDispEventImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別 [IDispEventImpl](../atl/reference/idispeventimpl-class.md) 可以用來在您的 ATL 類別的連接點接收的支援。  從外部 COM 物件可讓您的類別中處理事件所引發的連接點接收。  這些連接點接收對應事件接收對應，例如，假設您的類別。  
+# <a name="supporting-idispeventimpl"></a>支援 IDispEventImpl
+此範本類別[IDispEventImpl](../atl/reference/idispeventimpl-class.md)可用來對 ATL 類別中的連接點接收提供支援。 連接點接收可讓您的類別來處理從外部 COM 物件引發的事件。 這些連接點接收對應的事件接收對應，您的類別所提供。  
   
- 適當地實作自己的類別的連接點接收，必須完成下列步驟:  
+ 若要正確地實作連接點接收為您的類別，您必須完成下列步驟：  
   
--   匯入外部元件的型別程式庫。  
+-   匯入的每個外部物件的類型程式庫  
   
--   宣告 `IDispEventImpl` 介面  
+-   宣告`IDispEventImpl`介面  
   
 -   宣告事件接收對應  
   
--   建議和 unadvise 連接點  
+-   通知與取消通知的連接點  
   
- 在實作連接點接收有關的步驟都透過修改只有標頭檔 \(.h\) 完成您的類別。  
+ 實作連接點接收所需的步驟是藉由修改僅標頭檔 (.h) 的類別來完成。  
   
-## 匯入型別程式庫。  
- 對於您要處理的事件，您必須匯入型別程式庫的外部元件。  這個步驟會定義能夠處理的事件，並提供使用在宣告事件接收對應時的資訊。  [\#import](../preprocessor/hash-import-directive-cpp.md) 指示詞來完成這項工作。  將您要支援加入至標頭檔的每個分派介面上的必要 `#import` 指示詞線條 \(.h\) 的類別。  
+## <a name="importing-the-type-libraries"></a>匯入類型程式庫  
+ 每個外部物件您想要處理的事件，您必須匯入類型程式庫。 此步驟定義可以處理的事件，並提供使用當您宣告事件接收對應的資訊。 [#Import](../preprocessor/hash-import-directive-cpp.md)指示詞可用來完成這項作業。 加入必要`#import`行指示詞，您將支援標頭檔 (.h) 類別的每個分派介面。  
   
- 下列範例會匯入外部 COM 伺服器 \(`MSCAL.Calendar.7`\) 的型別程式庫:  
+ 下列範例會匯入外部 COM 伺服器的類型程式庫 (`MSCAL.Calendar.7`):  
   
- [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/CPP/supporting-idispeventimpl_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#141](../atl/codesnippet/cpp/supporting-idispeventimpl_1.h)]  
   
 > [!NOTE]
->  您必須針對每個外部型別會支援的程式庫不同的 `#import` 陳述式。  
+>  您必須擁有個別`#import`陳述式將會支援每個外部型別程式庫。  
   
-## 宣告 IDispEventImpl 介面  
- 現在您已匯入每個分派的型別程式庫連結，您需要宣告外部元件分派介面上的個別 `IDispEventImpl` 介面。  將外部元件的 `IDispEventImpl` 介面宣告修改您的類別中宣告。  如需參數的詳細資訊，請參閱 [IDispEventImpl](../atl/reference/idispeventimpl-class.md)。  
+## <a name="declaring-the-idispeventimpl-interfaces"></a>宣告 IDispEventImpl 介面  
+ 既然您已匯入的每個分派介面的類型程式庫，您需要宣告個別`IDispEventImpl`每個外部分派介面的介面。 修改類別的宣告，藉由新增`IDispEventImpl`介面宣告的每個外部物件。 如需有關參數的詳細資訊，請參閱[IDispEventImpl](../atl/reference/idispeventimpl-class.md)。  
   
- 下列程式碼會宣告兩個連接點接收， `DCalendarEvents` 介面的，但是，為了類別實作的 COM 物件 `CMyCompositCtrl2`:  
+ 下列程式碼宣告兩個連接點接收，`DCalendarEvents`介面，由類別實作的 COM 物件`CMyCompositCtrl2`:  
   
- [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/CPP/supporting-idispeventimpl_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#142](../atl/codesnippet/cpp/supporting-idispeventimpl_2.h)]  
   
-## 宣告事件接收對應  
- 以適當的函式可以處理的事件通知，類別必須傳送每個事件給其正確的處理常式。  這是透過宣告事件接收對應達成。  
+## <a name="declaring-an-event-sink-map"></a>宣告事件接收對應  
+ 為了讓由適當的函式來處理的事件通知，您的類別必須將每個事件路由至正確的處理常式。 藉由宣告事件接收對應可達到此目的。  
   
- ATL 提供幾個巨集、 [BEGIN\_SINK\_MAP](../Topic/BEGIN_SINK_MAP.md)、 [END\_SINK\_MAP](../Topic/END_SINK_MAP.md)和 [SINK\_ENTRY\_EX](../Topic/SINK_ENTRY.md)，讓此對應更為容易。  標準格式如下:  
+ ATL 提供數個巨集， [BEGIN_SINK_MAP](reference/composite-control-macros.md#begin_sink_map)， [END_SINK_MAP](reference/composite-control-macros.md#end_sink_map)，和[SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex)，可讓此對應更容易。 標準格式如下所示：  
   
  `BEGIN_SINK_MAP(comClass)`  
   
  `SINK_ENTRY_EX(id, iid, dispid, func)`  
   
- `.  .  .  //additional external event entries`  
+ `. . . //additional external event entries`  
   
  `END_SINK_MAP()`  
   
- 下列範例會宣告兩個事件處理常式的事件接收對應:  
+ 下列範例會宣告事件接收對應具有兩個事件處理常式：  
   
- [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/CPP/supporting-idispeventimpl_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#136](../atl/codesnippet/cpp/supporting-idispeventimpl_3.h)]  
   
- 實作已接近完成。  最後一個步驟相關建議和 unadvising 外部介面。  
+ 實作已幾乎完成。 最後一個步驟是有關通知及外部介面的取消通知。  
   
-## 建議 Unadvising IDispEventImpl 和介面  
- 最後步驟執行時會通知的方法 \(或\) 所有 unadvise 連接點在適當的時間。  必須在外部用戶端與您的物件之間的通訊之前進行建議的這可能發生。  在您的物件變成可見之前，您的物件所支援的外部元件分派介面為輸出介面進行查詢。  建立連接，並將輸出介面的參考來處理物件的事件。  這個程序稱為「說明」。  
+## <a name="advising-and-unadvising-the-idispeventimpl-interfaces"></a>通知和取消通知 IDispEventImpl 介面  
+ 最後一個步驟是實作的方法，將會通知 （或取消通知） 的所有連線點在適當時機。 外部用戶端與物件之間的通訊發生之前，必須完成此通知。 您的物件顯示之前，您物件支援的每個外部分派介面會查詢的輸出介面。 建立連接，並輸出介面的參考用來處理事件的物件。 此程序稱為 「 通知 」。  
   
- 在物件完成與外部介面之後，應該通知輸出介面進行類別不再使用它們。  這個程序稱為「unadvising」。  
+ 物件結束外部介面之後，應該類別不再使用這些通知的外寄的介面。 此程序稱為 「 取消通知 」。  
   
- 由於 COM 物件的唯一的本質，此程序變更，詳細、執行，在實作之間。  這些詳細資料不在本主題範圍內並沒有位址。  
+ COM 物件的唯一特性，因為此程序各有不同，在詳細資料和執行，不同的實作。 已超出本主題的範圍和不解決這些詳細資料。  
   
-## 請參閱  
- [Fundamentals of ATL COM Objects](../atl/fundamentals-of-atl-com-objects.md)
+## <a name="see-also"></a>另請參閱  
+ [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)
+

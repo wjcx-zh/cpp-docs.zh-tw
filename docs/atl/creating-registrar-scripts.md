@@ -1,48 +1,49 @@
 ---
-title: "Creating Registrar Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 登錄"
-  - "registrar scripts [ATL]"
-  - "指令碼, registry scripting"
-  - "指令碼, 建立"
-  - "指令碼, Registrar scripts"
+title: "建立指令碼的 ATL 登錄器 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, registry scripting
+- ATL, registry
+- registrar scripts [ATL]
+- scripts, Registrar scripts
+- scripts, creating
 ms.assetid: cbd5024b-8061-4a71-be65-7fee90374a35
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5142d0f5e3ede3a7cdd51af0fc54964b1cecec14
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Creating Registrar Scripts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-登錄器指令碼提供資料驅動型，而不是 API，導向至系統登錄的存取。  因為它只會在指令碼中兩行加入機碼，註冊資料驅動型存取通常會比較有效率。  
+# <a name="creating-registrar-scripts"></a>Creating Registrar Scripts
+登錄器指令碼會提供資料驅動，而不是驅動應用程式開發介面存取系統登錄。 由於指令碼新增至登錄機碼中只需要一個或兩個線條通常更有效率的資料驅動的存取。  
   
- [ATL 控制項精靈](../atl/reference/atl-control-wizard.md) 自動產生 COM 伺服器的系統管理員指令碼。  您可以在 .rgs 檔案中執行此指令碼與物件相關聯。  
+ [ATL 控制項精靈](../atl/reference/atl-control-wizard.md)自動產生您的 COM 伺服器的登錄器指令碼。 您可以與您的物件相關聯的.rgs 檔中找到此指令碼。  
   
- ATL 管理員的指令碼引擎處理您的管理員指令碼在執行階段。  在伺服器上安裝期間， ATL 會自動叫用指令碼引擎。  
+ ATL 登錄器的指令碼引擎會處理您的登錄器指令碼在執行階段。 ATL 自動將指令碼引擎叫用伺服器安裝期間。  
   
- 本文件包含下列主題使用登錄器指令碼相關:  
+ 本文涵蓋登錄器指令碼相關的下列主題：  
   
--   [了解 Backus Nauer 表單 \(BNF\) 語法](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
+-   [了解 Backus Nauer Form (BNF) 語法](../atl/understanding-backus-nauer-form-bnf-syntax.md)  
   
--   [了解剖析樹狀結構](../atl/understanding-parse-trees.md)  
+-   [了解剖析樹狀目錄](../atl/understanding-parse-trees.md)  
   
--   [註冊指令碼的範例](../atl/registry-scripting-examples.md)  
+-   [登錄指令碼範例](../atl/registry-scripting-examples.md)  
   
--   [使用可取代的參數 \(管理員的前置處理器\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
+-   [使用可置換的參數 (登錄器的前置處理器)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)  
   
 -   [叫用指令碼](../atl/invoking-scripts.md)  
   
-## 請參閱  
- [登錄元件 \(登錄器\)](../atl/atl-registry-component-registrar.md)
+## <a name="see-also"></a>另請參閱  
+ [登錄元件 （登錄器）](../atl/atl-registry-component-registrar.md)
+

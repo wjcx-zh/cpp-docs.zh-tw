@@ -1,39 +1,38 @@
 ---
-title: "Composite Controls Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.controls.composite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "composite controls classes"
-  - "複合控制項, C++"
+title: "複合控制項類別 (ATL) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.controls.composite
+dev_langs: C++
+helpviewer_keywords:
+- composite controls, C++
+- composite controls classes
 ms.assetid: 9e8d65c4-d631-4500-a28b-6d42c35aba26
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 848a2fbf6ef5a20f966093a73eeb22e619650f71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Composite Controls Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="composite-controls-classes"></a>複合控制項類別
+下列類別會提供支援建立複合控制項  
+  
+-   [CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX 控制項衍生自`CComCompositeControl`所裝載的標準對話方塊。 這些類型的控制項稱為複合控制項，因為它們是能夠裝載其他控制項 （原生的 Windows 控制項和 ActiveX 控制項）。  
+  
+## <a name="related-articles"></a>相關文章  
+ [複合控制項基本概念](../atl/atl-composite-control-fundamentals.md)  
+  
+## <a name="see-also"></a>另請參閱  
+ [類別概觀](../atl/atl-class-overview.md)   
+ [複合控制項巨集](../atl/reference/composite-control-macros.md)   
+ [複合控制項全域函式](../atl/reference/composite-control-global-functions.md)
 
-下列類別會建立複合控制項的支援。  
-  
--   從 `CComCompositeControl` 衍生的[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md) ActiveX 控制項是標準的對話方塊中裝載。  控制項使用這些型別稱為"複合控制項，因為它們可以裝載其他控制項 \(原生 Windows 控制項和 ActiveX 控制項\)。  
-  
-## 相關文件  
- [複合控制項的基本概念](../atl/atl-composite-control-fundamentals.md)  
-  
-## 請參閱  
- [Class Overview](../atl/atl-class-overview.md)   
- [Composite Control Macros](../atl/reference/composite-control-macros.md)   
- [Composite Control Global Functions](../atl/reference/composite-control-global-functions.md)

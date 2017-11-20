@@ -1,53 +1,53 @@
 ---
-title: "DCOMCNFG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DCOMCNFG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DCOM, configuring in ATL"
-  - "DCOMCNFG utility"
+title: "DCOMCNFG |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DCOMCNFG
+dev_langs: C++
+helpviewer_keywords:
+- DCOMCNFG utility
+- DCOM, configuring in ATL
 ms.assetid: 5a8126e9-ef27-40fb-a66e-9dce8d1a7e80
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bffed7658232d11dd7741900d6eca14de341e855
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# DCOMCNFG
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**DCOMCNFG** 是可讓您設定登錄中的各種 DCOM 特定設定的 Windows NT 4.0 公用程式。  **DCOMCNFG** 視窗有三個頁面上:預設安全性、預設屬性和應用程式。  在 Windows 2000 下第四個頁面上，預設通訊協定，存在。  
+# <a name="dcomcnfg"></a>DCOMCNFG
+**DCOMCNFG**是 Windows NT 4.0 公用程式，可讓您在登錄中設定特定的 DCOM 的各種設定。 **DCOMCNFG**視窗有三頁： 預設安全性、 預設的內容和應用程式。 在 Windows 2000 第四個頁面上，預設的通訊協定，會出現。  
   
-## 預設安全性頁  
- 您可以使用預設安全性頁指定物件的預設使用權限在系統上。  預設安全性頁具有三個部分:存取、啟動及設定。  若要變更區段的預設值，請按一下對應的 **Edit Default** 按鈕。  這些預設安全性設定在 `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`底下之登錄中。  
+## <a name="default-security-page"></a>預設安全性頁面  
+ 您可以使用預設安全性 頁面來指定系統上的預設物件的權限。 預設安全性頁面有三個區段： 存取、 啟動和組態。 若要變更區段的預設值，請按一下 [對應**編輯預設值**] 按鈕。 這些預設安全性設定會儲存在登錄中`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE`。  
   
-## 預設通訊協定頁面  
- 本頁列出組網路通訊協定可供在這部電腦的 DCOM。  這個命令會反映它們所使用的優先權;第一個項目清單具有最高優先權。  通訊協定可從這個頁面加入或刪除。  
+## <a name="default-protocols-page"></a>預設通訊協定 頁面  
+ 此頁面列出可由 DCOM 使用這部電腦上的網路通訊協定的集合。 順序會反映在他們將使用; 的優先順序在清單中的第一個具有最高優先權。 通訊協定可以加入或刪除從這個頁面。  
   
-## 預設屬性頁  
- 在預設屬性，如果您想要在其他電腦上的用戶端存取在這部電腦上，網頁的 COM 物件，您必須選取 **Enable Distributed COM on this computer** 核取方塊。  選取這個選項設定 `HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM` 值組 `Y`。  
+## <a name="default-properties-page"></a>預設屬性頁面  
+ 在預設內容 頁面上，您必須選取**這台電腦上啟用分散式 COM**核取方塊，如果您想在這部電腦上執行的存取 COM 物件的其他電腦上的用戶端。 選取這個選項會設定`HKEY_LOCAL_MACHINE\Software\Microsoft\OLE\EnableDCOM`值設定為`Y`。  
   
-## 應用程式頁面  
- 您變更特定物件的設定與應用程式頁面。  選取應用程式並按一下 \[**屬性**\] 按鈕。  屬性視窗有五個網頁:  
+## <a name="applications-page"></a>應用程式 頁面  
+ 您變更之特定物件的應用程式 頁面設定。 只要從清單中選取應用程式，並按一下**屬性** 按鈕。 [屬性] 視窗有五個頁面：  
   
--   一般網頁檢查您所使用的應用程式。  
+-   [一般] 頁面會確認您正在使用的應用程式。  
   
--   位置頁可讓您指定應用程式應該在哪裡。執行時，用戶端會在相關的 CLSID 時的 `CoCreateInstance` 。  如果您選取 **Run application on the following computer** 核取方塊並輸入電腦名稱，則 `RemoteServerName` 值加入到該應用程式的 AppID 之下。  **Run application on this computer** 清除核取方塊。 `LocalService` 值重新命名為，並 `_LocalService` ，因此。  
+-   [位置] 頁面可讓您指定應在何處應用程式執行時用戶端呼叫`CoCreateInstance`上相關的 CLSID。 如果您選取**下列電腦上執行應用程式**核取方塊並輸入電腦名稱，則`RemoteServerName`值隨即新增至該應用程式的 AppID。 清除**這台電腦上執行應用程式**核取方塊重新命名`LocalService`值設定為`_LocalService`，藉此停用。  
   
--   安全性網頁類似於 **DCOMCNFG** 視窗中的預設安全性\] 頁面，不過，這些設定只會套用至目前的應用程式。  同樣地，設定儲存在該物件的 AppID 之下。  
+-   [安全性] 頁面是預設的安全性頁面中找到類似**DCOMCNFG**視窗中，不同之處在於這些設定僅適用於目前的應用程式。 同樣地，設定會儲存在該物件的 AppID。  
   
--   識別網頁識別哪一個使用者用來執行應用程式。  
+-   身分識別 頁面會識別哪些使用者用來執行應用程式。  
   
--   端點頁列出組通訊協定和端點提供替代的 DCOM 伺服器的用戶端使用。  
+-   [端點] 頁面會列出通訊協定和適用於所選的 DCOM 伺服器的用戶端端點的集合。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務](../atl/atl-services.md)
+

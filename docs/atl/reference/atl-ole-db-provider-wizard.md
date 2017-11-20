@@ -4,50 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.provider.overview
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.provider.overview
+dev_langs: C++
 helpviewer_keywords:
 - ATL OLE DB Provider Wizard
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: a28a47d9af89470c63903ccc338c680361b1cada
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 170f10d06112969d9147c37b20572f0888140d0a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供者精靈
 此精靈會建立撰寫 OLE DB 提供者的類別。  
   
 ## <a name="remarks"></a>備註  
- 開頭為[!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)]，此精靈所產生註冊指令碼會登錄其下的 COM 元件**HKEY_CURRENT_USER**而不是**HKEY_LOCAL_MACHINE**。 若要修改這個行為，請設定**註冊元件的所有使用者**ATL 精靈的選項。  
+ 從 Visual Studio 2008 開始，此精靈所產生註冊指令碼會登錄其下的 COM 元件**HKEY_CURRENT_USER**而不是**HKEY_LOCAL_MACHINE**。 若要修改這個行為，請設定**註冊元件的所有使用者**ATL 精靈的選項。  
   
- 下表描述 ATL OLE DB 提供者精靈的選項︰  
+ 下表描述 ATL OLE DB 提供者精靈的選項：  
   
  **簡短名稱**  
  輸入要建立的提供者的簡短名稱。 自動填入精靈中的其他編輯方塊，將會根據您在此處輸入。 如果您想要您可以編輯其他名稱方塊。  
@@ -95,5 +77,4 @@ ms.lasthandoff: 04/04/2017
   
 ## <a name="see-also"></a>另請參閱  
  [ATL OLE DB 提供者](../../atl/reference/adding-an-atl-ole-db-provider.md)
-
 

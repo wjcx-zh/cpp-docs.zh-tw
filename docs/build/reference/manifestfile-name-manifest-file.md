@@ -1,56 +1,55 @@
 ---
-title: "/MANIFESTFILE (為資訊清單檔案命名) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ManifestFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MANIFESTFILE 連結器選項"
-  - "MANIFESTFILE 連結器選項"
-  - "-MANIFESTFILE 連結器選項"
+title: "-MANIFESTFILE （名稱資訊清單檔案） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.ManifestFile
+dev_langs: C++
+helpviewer_keywords:
+- MANIFESTFILE linker option
+- -MANIFESTFILE linker option
+- /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 77b0f83d928970f56ed24487762fb4c40965b49e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFESTFILE (為資訊清單檔案命名)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (為資訊清單檔案命名)
 ```  
 /MANIFESTFILE:filename  
 ```  
   
-## 備註  
- \/MANIFESTFILE 可讓您變更資訊清單檔的預設名稱。資訊清單的預設名稱是副檔名為 .manifest 的檔案名稱。  
+## <a name="remarks"></a>備註  
+ /MANIFESTFILE 可讓您變更資訊清單檔案的預設名稱。  資訊清單檔案的預設名稱是為.manifest 的檔案名稱。  
   
- 如果不同時以 [\/MANIFEST](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) 連結，\/MANIFESTFILE 將沒有效用。  
+ /MANIFESTFILE 會有任何作用，如果您沒有也連結[/資訊清單](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  展開 \[**組態屬性**\] 節點。  
+2.  展開**組態屬性**節點。  
   
-3.  展開 **\[連結器\]** 節點。  
+3.  展開**連結器**節點。  
   
-4.  請選取 \[**資訊清單檔案**\] 屬性頁。  
+4.  選取**資訊清單檔案**屬性頁。  
   
-5.  修改 \[**資訊清單檔案**\] 屬性。  
+5.  修改**資訊清單檔案**屬性。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 1.  請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ManifestFile%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

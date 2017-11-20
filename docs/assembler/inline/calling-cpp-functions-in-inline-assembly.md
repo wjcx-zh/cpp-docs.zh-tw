@@ -1,39 +1,38 @@
 ---
-title: "在內嵌組譯碼中呼叫 C++ 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 關鍵字 [C++], 呼叫函式"
-  - "函式呼叫, C++ 函式"
-  - "函式呼叫, 在內嵌組譯碼中"
-  - "函式 [C++], 在內嵌組譯碼中呼叫"
-  - "內嵌組譯碼, 呼叫函式"
-  - "Visual C++, 函式"
+title: "在內嵌組譯碼中呼叫 c + + 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], calling in inline assembly
+- function calls, C++ functions
+- function calls, in inline assembly
+- Visual C++, functions
+- inline assembly, calling functions
+- __asm keyword [C++], calling functions
 ms.assetid: 1f0d1eb3-54cf-45d5-838d-958188616b38
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0c91829eac3247255d8fe3cb966a61fca5319f94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 在內嵌組譯碼中呼叫 C++ 函式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 特定的  
- `__asm` 區塊只能呼叫未多載的全域 C\+\+ 函式。  如果您呼叫多載的全域 C\+\+ 函式或 C \+\+ 成員函式，編譯器會發出錯誤。  
+# <a name="calling-c-functions-in-inline-assembly"></a>在內嵌組譯碼中呼叫 C++ 函式
+## <a name="microsoft-specific"></a>Microsoft 特定的  
+ `__asm` 區塊只能呼叫未多載的全域 C++ 函式。 如果您呼叫多載的全域 C++ 函式或 C ++ 成員函式，編譯器會發出錯誤。  
   
- 您也可以呼叫所有以 **extern "C"** 連結宣告的函式。  由於所有的標準標頭檔都會宣告程式庫函式擁有 **extern "C"** 連結，因此這樣就可以讓 C\+\+ 程式內的 `__asm` 區塊呼叫 C 程式庫函式。  
+ 您也可以呼叫任何以宣告的函式**extern"C"**連結。 這可讓`__asm`區塊內呼叫 C 程式庫函式，因為所有標準標頭檔宣告具有程式庫函式的 c + + 程式**extern"C"**連結。  
   
  **END Microsoft 特定的**  
   
-## 請參閱  
- [內嵌組譯工具](../../assembler/inline/inline-assembler.md)
+## <a name="see-also"></a>另請參閱  
+ [內嵌組合語言](../../assembler/inline/inline-assembler.md)

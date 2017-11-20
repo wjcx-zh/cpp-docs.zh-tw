@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,38 +14,21 @@ f1_keywords:
 - ATLCOM/ATL::IObjectWithSiteImpl::SetChildSite
 - ATLCOM/ATL::IObjectWithSiteImpl::SetSite
 - ATLCOM/ATL::IObjectWithSiteImpl::m_spUnkSite
-dev_langs:
-- C++
-helpviewer_keywords:
-- IObjectWithSiteImpl class
+dev_langs: C++
+helpviewer_keywords: IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 49c52810417650c3d80fe4d0c09ccb2b67208ad4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a591e7970aa21e6846700570cdf27cefececa1c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iobjectwithsiteimpl-class"></a>IObjectWithSiteImpl 類別
-這個類別會提供方法讓其站台通訊的物件。  
+這個類別會提供讓物件與其站台通訊的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -64,7 +46,7 @@ template <class T>
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[IObjectWithSiteImpl::GetSite](#getsite)|查詢的介面指標的站台。|  
 |[IObjectWithSiteImpl::SetChildSite](#setchildsite)|提供的物件與站台的**IUnknown**指標。|  
@@ -72,16 +54,16 @@ template <class T>
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|管理站台的**IUnknown**指標。|  
   
 ## <a name="remarks"></a>備註  
- [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)介面可讓其站台通訊的物件。 類別`IObjectWithSiteImpl`提供此介面的預設實作，並且實作**IUnknown**傳送資訊給傾印裝置在偵錯組建。  
+ [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765)介面讓物件與其站台通訊。 類別`IObjectWithSiteImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
   
- `IObjectWithSiteImpl`指定兩個方法。 用戶端會先呼叫`SetSite`，傳遞站台的**IUnknown**指標。 這個指標會儲存在物件中，並稍後可以透過呼叫擷取`GetSite`。  
+ `IObjectWithSiteImpl`指定兩種方法。 用戶端會先呼叫`SetSite`，傳遞站台的**IUnknown**指標。 此指標會儲存在物件內，稍後可以透過呼叫擷取`GetSite`。  
   
- 一般而言，您衍生您的類別，從`IObjectWithSiteImpl`當您建立物件，並不是控制項。 對控制項而言，衍生您的類別，從[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)，這也會提供站台的指標。 不會同時從衍生類別`IObjectWithSiteImpl`和`IOleObjectImpl`。  
+ 一般而言，衍生您的類別從`IObjectWithSiteImpl`當您建立的物件，不是控制項。 控制項，衍生您的類別從[IOleObjectImpl](../../atl/reference/ioleobjectimpl-class.md)，這樣也會提供站台的指標。 不是您的類別衍生自`IObjectWithSiteImpl`和`IOleObjectImpl`。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `IObjectWithSite`  
@@ -89,7 +71,7 @@ template <class T>
  `IObjectWithSiteImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰**於 atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="getsite"></a>IObjectWithSiteImpl::GetSite  
  查詢所識別的介面指標的站台`riid`。  
@@ -101,9 +83,9 @@ STDMETHOD(GetSite)(
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果站台支援此介面，會透過傳回指標`ppvSite`。 否則，`ppvSite`設為**NULL**。  
+ 如果站台支援這個介面，指標會傳回透過`ppvSite`。 否則，`ppvSite`設**NULL**。  
   
- 請參閱[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IObjectWithSite::GetSite](http://msdn.microsoft.com/library/windows/desktop/ms694452) Windows SDK 中。  
   
 ##  <a name="m_spunksite"></a>IObjectWithSiteImpl::m_spUnkSite  
  管理站台的**IUnknown**指標。  
@@ -124,7 +106,7 @@ HRESULT SetChildSite(IUnknown* pUnkSite);
   
 ### <a name="parameters"></a>參數  
  *pUnkSite*  
- [in]指標**IUnknown**管理此物件的站台的介面指標。 如果是 NULL，物件應該呼叫`IUnknown::Release`任何時間點的物件不再知道其站台的現有站台上。  
+ [in]指標**IUnknown**管理此物件的站台的介面指標。 如果是 NULL，應該呼叫物件`IUnknown::Release`任何時間點的物件不會再知道其站台的現有站台上。  
   
 ### <a name="return-value"></a>傳回值  
  傳回 `S_OK`。  
@@ -137,8 +119,7 @@ STDMETHOD(SetSite)(IUnknown* pUnkSite);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

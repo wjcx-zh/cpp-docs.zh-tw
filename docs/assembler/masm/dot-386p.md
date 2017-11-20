@@ -1,33 +1,30 @@
 ---
-title: ".386P | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".386P"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".386P directive"
+title: ".386P |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .386P
+dev_langs: C++
+helpviewer_keywords: .386P directive
 ms.assetid: 15199091-3bb7-4270-bb9b-878c1c2f2146
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2d8921a4dd3498c6705323071d00aafe1ae99424
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# .386P
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可讓組件的所有指令 \(包括有權限\) 80386 處理器 ； 停用指令有較新的處理器導入的組的件。  
+# <a name="386p"></a>.386P
+可讓組件的所有指示 （包括特殊權限） 80386 處理器;停用組件的指示所導入的更新版本的處理器。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,8 +32,8 @@ manager: "ghogen"
   
 ```  
   
-## 備註  
- 也可以讓 80387 的指示進行。  
+## <a name="remarks"></a>備註  
+ 也可讓 80387 指示。  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

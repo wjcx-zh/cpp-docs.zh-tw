@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCONV/ATL::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::m_psz
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2CAEX class
+dev_langs: C++
+helpviewer_keywords: CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9185bc18981898d699aa3f3eeb490c76bf5138fb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 0ae0db059d092feb1a24a3c7c635817250f2813b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ca2caex-class"></a>CA2CAEX 類別
 這個類別由字串轉換巨集`CA2CTEX`和`CT2CAEX`，和 typedef **CA2CA**。  
@@ -64,7 +46,7 @@ class CA2CAEX
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CA2CAEX::CA2CAEX](#ca2caex)|建構函式。|  
 |[CA2CAEX:: ~ CA2CAEX](#dtor)|解構函式。|  
@@ -77,7 +59,7 @@ class CA2CAEX
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CA2CAEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
   
@@ -86,13 +68,13 @@ class CA2CAEX
   
  這個類別是安全地在迴圈中使用，而且不會產生堆疊溢位。 根據預設，ATL 轉換類別及巨集將使用目前的執行緒 ANSI 字碼頁，來進行轉換。  
   
- 下列巨集根據此類別︰  
+ 下列巨集根據此類別：  
   
 - `CA2CTEX`  
   
 - `CT2CAEX`  
   
- 下列 typedef 根據此類別︰  
+ 下列 typedef 根據此類別：  
   
 - **CA2CA**  
   
@@ -102,7 +84,7 @@ class CA2CAEX
  請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlconv.h  
+ **標頭：** atlconv.h  
   
 ##  <a name="ca2caex"></a>CA2CAEX::CA2CAEX  
  建構函式。  
@@ -156,4 +138,3 @@ operator LPCSTR() const throw();
  [CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX 類別](../../atl/reference/cw2wex-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

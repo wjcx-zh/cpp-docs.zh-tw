@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLBASE/ATL::CAtlComModule::RegisterTypeLib
 - ATLBASE/ATL::CAtlComModule::UnregisterServer
 - ATLBASE/ATL::CAtlComModule::UnRegisterTypeLib
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlComModule class
+dev_langs: C++
+helpviewer_keywords: CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 02381d00226f40c5c84b2d957dfee6881742febb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: f8a0d0e240e1c830763b5b7781fb3a1e536d4672
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 類別
 這個類別會實作 COM 伺服器模組。  
@@ -66,7 +48,7 @@ class CAtlComModule : public _ATL_COM_MODULE
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CAtlComModule::RegisterServer](#registerserver)|呼叫這個方法來更新系統登錄的物件對應中每個物件。|  
 |[CAtlComModule::RegisterTypeLib](#registertypelib)|呼叫這個方法來註冊類型程式庫。|  
@@ -84,7 +66,7 @@ class CAtlComModule : public _ATL_COM_MODULE
  `CAtlComModule`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ##  <a name="catlcommodule"></a>CAtlComModule::CAtlComModule  
  建構函式。  
@@ -187,4 +169,3 @@ HRESULT UnRegisterTypeLib();
 ## <a name="see-also"></a>另請參閱  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
  [類別概觀](../../atl/atl-class-overview.md)
-

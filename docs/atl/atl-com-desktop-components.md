@@ -1,71 +1,71 @@
 ---
-title: "ATL COM Desktop Components | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 關於 ATL"
-  - "ATL, 參考"
+title: "ATL COM 桌面元件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, reference
+- ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-caps.latest.revision: 14
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d27371a994f13ebe8c91452d44645c5d3f5eac29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ATL COM Desktop Components
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL 參考文件 Active Template Library \(ATL\)，簡化元件物件模型 \(COM\) \(COM\) 的一組樣板架構的 C\+\+ 類別物件。  充分利用 ATL，對 COM 的操作熟悉仍強烈建議的。  
+# <a name="atl-com-desktop-components"></a>ATL COM 桌面元件
+ATL 參考文件 Active Template Library (ATL)，一組樣板架構 c + + 類別，可簡化程式設計的元件物件模型 (COM) 物件。 若要充分利用 ATL，強烈建議 COM 工作熟悉。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [ATL 類別概觀](../atl/atl-class-overview.md)  
- 提供連結和分類來組織的 ATL 類別的簡短說明。  
+ 提供的連結和依類別目錄組織，ATL 類別的簡短描述。  
   
  [ATL 類別](../atl/reference/atl-classes.md)  
- 以字母組織的類別的參考資料。  
+ 依照字母順序排列的類別上提供的參考資料。  
   
  [ATL 函式](../atl/reference/atl-functions.md)  
- 以字母組織的全域函式的參考資料。  包含組織函式的主題分類。  
+ 提供參考資料上依照字母順序排列的全域函式。 包含主題組織成類別目錄的函式。  
   
- [ATL 全域變數。](../atl/reference/atl-global-variables.md)  
- 以字母組織的全域變數的相關參考資料。  
+ [ATL 全域變數](../atl/reference/atl-global-variables.md)  
+ 提供參考資料上依照字母順序排列的全域變數。  
   
  [ATL 巨集](../atl/reference/atl-macros.md)  
- 以字母組織的巨集的參考資料。  包含組織巨集的主題分類。  
+ 提供參考資料上依照字母順序排列的巨集。 包含組成各種分類組織巨集的主題。  
   
- [ATL 架構](../atl/reference/atl-structures.md)  
- 以字母組織結構提供參考資料。  
+ [ATL 結構](../atl/reference/atl-structures.md)  
+ 提供參考資料上依照字母順序排列的結構。  
   
- [ATL Typedefs](../atl/reference/atl-typedefs.md)  
- 以字母組織的 typedef 也提供參考資料  
+ [ATL Typedef](../atl/reference/atl-typedefs.md)  
+ 依照字母順序排列的 typedef 上提供的參考資料  
   
  [Archetypes](../atl/reference/atl-archetypes.md)  
- 提供連結至 ATL 原型，是假設類別提供方法、資料成員、靜態函式、typedef，或其他功能的集合，依字母順序排列。  
+ 提供 ATL archetypes，也就是理論上提供的方法、 資料成員、 靜態函式、 typedef 或其他功能，依字母順序列出集合的類別連結。  
   
- [過時的 ATL 主題](http://msdn.microsoft.com/zh-tw/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
- 在或取代過時的類別、巨集和函式的參考資料。  
+ [過時的 ATL 主題](http://msdn.microsoft.com/en-us/7af0223d-148e-4a4c-bf9c-3e916a3b67ec)  
+ 提供類別、 巨集，以及為過時或已被取代的函式的參考資料。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 使用 Active Template Library \(ATL\)，提供的連結主題會說明程式設計。  
+ 主題提供如何使用 Active Template Library (ATL) 程式設計。  
   
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
- 引導您建立控制項，並在處理時示範一些 ATL 基本概念。  
+ 將引導您完成建立控制項，並示範一些程序中的 ATL 基本概念。  
   
- [ATL 範例](../top/visual-cpp-samples.md)  
- 這個範例顯示如何使用 ATL 將 COM 物件的程式碼。  
+ [ATL 範例](../visual-cpp-samples.md)  
+ 示範如何使用 ATL 撰寫 COM 物件的範例程式碼。  
   
- [OLE DB 樣板](../data/oledb/ole-db-templates.md)  
- 提供 OLE DB 消費者和提供者樣板的參考資料，是一組實作許多常用 OLE DB 介面的樣板類別。  
+ [OLE DB 範本](../data/oledb/ole-db-templates.md)  
+ 提供 OLE DB 取用者和提供者範本的參考資料，包含一組範本類別，其中實作許多常用的 OLE DB 介面。  
   
- [Visual C\+\+ 程式庫](http://msdn.microsoft.com/zh-tw/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- 提供各種程式庫、Visual C\+\+，包括 ATL、MFC、OLE DB 樣板、C 執行階段程式庫和 Standard C\+\+ 程式庫。
+ [Visual C++ 程式庫](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ 提供 Visual C++ 隨附之各種程式庫的連結，這些程式庫包括 ATL、MFC、OLE DB 樣板、C 執行階段程式庫和 C++ 標準程式庫。
+

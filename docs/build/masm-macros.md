@@ -1,44 +1,44 @@
 ---
-title: "MASM 巨集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "MASM 巨集 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 21410432-72fc-4795-bc93-e78123f9f14f
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e42bbe4f724f711f407072c12a61ae9abbaca07d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# MASM 巨集
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-為了要簡化 [未經處理的虛擬作業](../build/raw-pseudo-operations.md) 的使用方式，ksamd64.inc 中定義了一組巨集，可以用來建立典型的程序初構 \(Prologue\) 和終解 \(Epilogue\)。  
+# <a name="masm-macros"></a>MASM 巨集
+為了簡化使用[未經處理的虛擬作業](../build/raw-pseudo-operations.md)，有一組巨集，ksamd64.inc，可用來建立一般的程序序言和結尾中定義。  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
 |巨集|描述|  
-|--------|--------|  
-|alloc\_stack\(n\)|配置 n 個位元組的堆疊框架 \(使用 sub rsp, n\)，並發出適當的回溯資訊 \(.allocstack n\)|  
-|save\_reg reg, loc|將堆疊上的靜態 \(Nonvolatile\) 暫存器 reg 儲存到 RSP 位移 loc，並發出適當的回溯資訊  \(.savereg reg, loc\)|  
-|push\_reg reg|推入堆疊上的靜態暫存器 reg，並發出適當的回溯資訊  \(.pushreg reg\)|  
-|rex\_push\_reg reg|使用 2 位元組推入，儲存為靜態暫存器堆疊，，並發出適當的回溯資訊 \(.pushreg reg\) 應該使用這個，則推入是函式中的第一個指令確保函式為作用中 patchable。|  
-|save\_xmm128 reg, loc|將堆疊上的靜態 XMM 暫存器 reg 儲存到 RSP 位移 loc，並發出適當的回溯資訊 \(.savexmm128 reg, loc\)|  
-|set\_frame reg, offset|將框架暫存器 reg 設定為 RSP \+ 位移 \(使用 mov 或 lea\)，並發出適當的回溯資訊 \(.set\_frame reg, offset\)|  
-|push\_eflags|使用 pushfq 指令推入 eflags，並發出適當的回溯資訊 \(.alloc\_stack 8\)|  
+|-----------|-----------------|  
+|alloc_stack(n)|配置堆疊框架的 n 個位元組 （使用 n 的 sub rsp），並會發出適當的回溯資訊 (.allocstack n)|  
+|save_reg reg 當地語系化|儲存靜態暫存器 reg RSP 位移位置，在堆疊上，並會發出適當的回溯資訊。 (.savereg reg，loc)|  
+|push_reg reg|將靜態暫存器 reg 推送至堆疊，並發出適當的回溯資訊。 (.pushreg reg)|  
+|rex_push_reg reg|使用 2 位元組推入堆疊上儲存靜態暫存器，並會發出適當的回溯函式中的第一個指令以確保函式是熱-可修補發送是否應使用此資訊 (.pushreg reg)。|  
+|save_xmm128 reg 當地語系化|儲存靜態 xmm 暫存器 RSP 位移位置，在堆疊上的登錄，並會發出適當的回溯資訊 （.savexmm128 reg、 loc）|  
+|set_frame reg 位移|設定框架暫存器 reg，到能 RSP + 位移 （使用 mov、 或 lea），並發出適當的回溯資訊 （.set_frame reg、 位移）|  
+|push_eflags|與 pushfq 指示 eflags 推播通知，並發出適當的回溯資訊 (.alloc_stack 8)|  
   
- 以下是函式初構的範例，其中具有巨集的正確用法：  
+ 以下是範例函式初構具有適當的使用方式的巨集：  
   
 ```  
 SkFrame struct   
-Fill    dq ?; fill to 8 mod 16   
+Fill    dq ?; fill to 8 mod 16   
 SavedRdi dq ?; saved register RDI   
 SavedRsi dq ?; saved register RSI   
 SkFrame ends  
@@ -67,5 +67,5 @@ ret
 sample2 ENDP  
 ```  
   
-## 請參閱  
- [MASM 的回溯 Helper](../build/unwind-helpers-for-masm.md)
+## <a name="see-also"></a>另請參閱  
+ [MASM 的回溯協助程式](../build/unwind-helpers-for-masm.md)

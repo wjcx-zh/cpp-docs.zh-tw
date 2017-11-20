@@ -1,36 +1,35 @@
 ---
-title: "CDynamicAccessor::GetBlobHandling | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetBlobHandling"
-  - "CDynamicAccessor::GetBlobHandling"
-  - "ATL::CDynamicAccessor::GetBlobHandling"
-  - "GetBlobHandling"
-  - "CDynamicAccessor.GetBlobHandling"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBlobHandling 方法"
+title: "Cdynamicaccessor:: Getblobhandling |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetBlobHandling
+- CDynamicAccessor::GetBlobHandling
+- ATL::CDynamicAccessor::GetBlobHandling
+- GetBlobHandling
+- CDynamicAccessor.GetBlobHandling
+dev_langs: C++
+helpviewer_keywords: GetBlobHandling method
 ms.assetid: bbc6dda6-e132-42a3-980d-24e455cbe456
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b9bac84019f408c7a68cf6afbffe94572be44c46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetBlobHandling
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-擷取處理序目前行的 BLOB 值。  
+# <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
+擷取 BLOB 處理目前的資料列的值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -38,11 +37,11 @@ const DBBLOBHANDLINGENUM GetBlobHandling( ) const;
   
 ```  
   
-## 備註  
- 傳回處理值 `eBlobHandling` 的 BLOB 做為集合由 [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。  
+## <a name="remarks"></a>備註  
+ 傳回處理值的 BLOB`eBlobHandling`為設定由[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

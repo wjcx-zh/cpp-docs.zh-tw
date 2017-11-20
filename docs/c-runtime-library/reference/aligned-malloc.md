@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _aligned_malloc
+apiname: _aligned_malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,22 +24,20 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_malloc
 - alligned_malloc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: e81ecad3276abc34243f18a8df367d82122a1064
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 針對指定的對齊界限配置記憶體。  

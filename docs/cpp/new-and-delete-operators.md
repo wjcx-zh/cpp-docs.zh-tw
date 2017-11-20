@@ -4,36 +4,33 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - delete_cpp
 - new
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - new keyword [C++], dynamic allocation of objects
 - nothrownew.obj
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 88f91e113ef47dc44ec0a300a99051cfaed3f08c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: df873b168c4257f9bfa05c9a382c4412627fe4bb
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
 C + + 支援動態配置和解除配置的物件使用[新](../cpp/new-operator-cpp.md)和[刪除](../cpp/delete-operator-cpp.md)運算子。 這些運算子會從稱為可用儲存區的集區配置物件的記憶體。 `new`運算子會呼叫特殊函式[運算子 new](../cpp/new-operator-cpp.md)，而`delete`運算子會呼叫特殊函式[運算子 delete](../cpp/delete-operator-cpp.md)。  
   
- 在 Visual c + +.NET 2002 中， `new` c + + 標準程式庫中的函式會支援 c + + 標準，也就是記憶體配置失敗時擲回 std:: bad_alloc 例外狀況中所指定的行為。 如果您仍然希望非擲回版本`new`，連結您的程式與 nothrownew.obj 連結。不過，當您連結 nothrownew.obj 時，預設值`operator new`c + + 標準程式庫中無法再運作。  
+ `new` C + + 標準程式庫中的函式支援 c + + 標準，也就是記憶體配置失敗時擲回 std:: bad_alloc 例外狀況中所指定的行為。 如果您仍然希望非擲回版本`new`，連結您的程式與 nothrownew.obj 連結。不過，當您連結 nothrownew.obj 時，預設值`operator new`c + + 標準程式庫中無法再運作。  
   
  如需組成 C 執行階段程式庫和 c + + 標準程式庫的程式庫檔案的清單，請參閱[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。  
   
@@ -58,7 +55,7 @@ char *pch = new char[BUFFER_SIZE];
 |**:: new 運算子**|Global|  
 |*類別名稱* **:: new 運算子**|類別|  
   
- 第一個引數**運算子 new**必須是型別**size_t** （STDDEF 中定義的類型。H） 和傳回型別一定是**void \* **。  
+ 第一個引數**運算子 new**必須是型別**size_t** （STDDEF 中定義的類型。H） 和傳回型別一定是**void \*** 。  
   
  全域**運算子 new**函式時，會呼叫**新**運算子用於配置內建類型的物件、 類別類型的物件不包含使用者定義**運算子 new**函式和任何類型的陣列。 當**新**運算子用於配置的類別類型的物件其中**new 運算子**定義，該類別的**運算子 new**稱為。  
   
@@ -155,7 +152,7 @@ void operator delete( void * );
 void operator delete( void *, size_t );  
 ```  
   
- 只有其中一個上述兩種形式可以表示特定類別。 第一種形式接受單一引數的型別**void \* **，其中包含要解除配置物件的指標。 第二種形式，調整大小解除配置，會採用兩個引數，其中第一個是解除配置記憶體區塊指標，且第二個是要解除配置的位元組數目。 這兩種形式的傳回型別是`void`(**運算子 delete**無法傳回值)。  
+ 只有其中一個上述兩種形式可以表示特定類別。 第一種形式接受單一引數的型別**void \*** ，其中包含要解除配置物件的指標。 第二種形式，調整大小解除配置，會採用兩個引數，其中第一個是解除配置記憶體區塊指標，且第二個是要解除配置的位元組數目。 這兩種形式的傳回型別是`void`(**運算子 delete**無法傳回值)。  
   
  第二種形式的目的是加速要刪除、 物件的正確大小類別目錄搜尋通常不儲存在本身的配置附近並可能取消快取。第二個表單時特別有用**運算子 delete**函式的基底類別用來刪除衍生類別的物件。  
   
@@ -232,5 +229,4 @@ void f() {
    delete [] pX;  
 }  
 ```  
-
 

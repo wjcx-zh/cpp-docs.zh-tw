@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,35 +22,18 @@ f1_keywords:
 - AMP/Concurrency::tiled_index::tile_dim2
 - AMP/Concurrency::tiled_index::tile_origin
 - AMP/Concurrency::tiled_index::tile_extent
-dev_langs:
-- C++
-helpviewer_keywords:
-- tiled_index class
+dev_langs: C++
+helpviewer_keywords: tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3a436635b456bd196a863ac5e9e8a5c10b679644
-ms.openlocfilehash: ed5c024e47eb8a822115822ae83e0e02fd8cf111
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/21/2017
-
+ms.openlocfilehash: 4acda08cac0e67559db48525e634cd21cdf5a8f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 提供的索引[tiled_extent](tiled-extent-class.md)物件。 此類別具有存取項目相對於本機的並排顯示來源和相對於來源通用的屬性。 如需並排顯示空間的詳細資訊，請參閱[使用磚](../../../parallel/amp/using-tiles.md)。  
@@ -179,7 +161,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|名稱|描述|  
+|名稱|說明|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|初始化的新執行個體`tile_index`類別從索引的磚全域座標和座標的磚中的相對位置。 `_Global`和`_Tile_origin`參數都計算。|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|初始化的新執行個體`tile_index`藉由複製指定的類別`tiled_index`物件。|  
 
@@ -285,4 +267,3 @@ __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

@@ -1,33 +1,30 @@
 ---
-title: "operator!= (stack) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!= 成員 [STL/CLR]"
+title: "運算子 ！ = （堆疊） (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: d28aca6a-685c-4d3d-bc97-de80d75ccd60
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e2583c89028f64e0739309f2cf78d8726d489782
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# operator!= (stack) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="operator-stack-stlclr"></a>operator!= (stack) (STL/CLR)
 堆疊不相等比較。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value,  
@@ -36,17 +33,17 @@ template<typename Value,
         stack<Value, Container>% right);  
 ```  
   
-#### 參數  
- left  
- 要比較的左邊容器。  
+#### <a name="parameters"></a>參數  
+ 左  
+ 要比較的左容器。  
   
- right  
- 要比較的正確的容器。  
+ 向右  
+ 要比較的右容器。  
   
-## 備註  
- 運算子函式會傳回 `!(``left``==``right``)`。  您會用它來測試 `left` 是否未排序與 `right` 相同，這兩個堆疊是比較項目由項目時。  
+## <a name="remarks"></a>備註  
+ 運算子函式會傳回`!(left == right)`。 使用它來測試是否`left`未經過排序相同`right`的兩個堆疊時項目所比較的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_operator_ne.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **b d**  
-**\[b c\]\! \= b " \[\] 為 false**  
-**\[b c\]\! \= b d \[\] 為 true**   
-## 需求  
- **標題:** \<cliext\/堆疊\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)   
- [operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)   
- [operator\>\= \(stack\)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
- [operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)   
- [operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [運算子 = = （堆疊） (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)   
+ [運算子\<（堆疊） (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)   
+ [運算子 > = （堆疊） (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
+ [運算子 > （堆疊） (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)   
+ [operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)

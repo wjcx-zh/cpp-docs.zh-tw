@@ -1,42 +1,39 @@
 ---
-title: "stack::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 成員 [STL/CLR]"
+title: "stack:: size_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 713ba8c5-41e5-422a-a334-cfeab16b4496
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 75d26ff5b656b7a710fe695d55af563012aef3c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# stack::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stacksizetype-stlclr"></a>stack::size_type (STL/CLR)
 兩個項目之間的帶正負號距離的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 備註  
- 描述非負數項目計數的型別。  
+## <a name="remarks"></a>備註  
+ 此類型描述負的項目計數。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_size_type.cpp   
@@ -67,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**size difference \= 2**   
-## 需求  
- **標頭：** \<cliext\/stack\>  
+```Output  
+ a b c  
+size difference = 2  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [stack::empty](../dotnet/stack-empty-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)

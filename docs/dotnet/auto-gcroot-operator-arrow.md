@@ -1,45 +1,43 @@
 ---
-title: "auto_gcroot::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator->"
-  - "msclr::auto_gcroot::operator->"
-  - "auto_gcroot::operator->"
-  - "msclr.auto_gcroot.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator->"
+title: "auto_gcroot::operator-&gt; |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator->
+- msclr::auto_gcroot::operator->
+- auto_gcroot::operator->
+- msclr.auto_gcroot.operator->
+dev_langs: C++
+helpviewer_keywords: operator->
 ms.assetid: 2c77bc53-5f77-4544-9485-c950cd8e0bb1
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab60b6cdb0d1718784a9ad3c3c47f3d60909af5c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autogcrootoperator-gt"></a>auto_gcroot::operator-&gt;
 成員存取運算子。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _element_type operator->() const;  
 ```  
   
-## 傳回值  
- `auto_gcroot` 所包裝的物件。  
+## <a name="return-value"></a>傳回值  
+ 包裝的物件`auto_gcroot`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_op_arrow.cpp  
@@ -71,13 +69,16 @@ int main() {
 }  
 ```  
   
-  **Hello from first A\!**  
-**a\-\>m\_i \= 5**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::get](../dotnet/auto-gcroot-get.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::get](../dotnet/auto-gcroot-get.md)

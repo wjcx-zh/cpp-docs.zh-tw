@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C1047
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1047
+f1_keywords: C1047
+dev_langs: C++
+helpviewer_keywords: C1047
 ms.assetid: e1bbbc6b-a5bc-4c23-8203-488120a0ec78
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: b848f874f382e3d4f944a7eb372db9dcc5011f59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1047"></a>嚴重錯誤 C1047
 物件或程式庫檔案 'file' 是使用比其他物件更舊的編譯器建立的，請重建舊物件和程式庫  

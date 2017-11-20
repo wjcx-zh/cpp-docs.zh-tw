@@ -1,32 +1,30 @@
 ---
-title: "hash_multiset::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator 成員 [STL/CLR]"
+title: "hash_multiset::generic_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 493a4741-800d-412a-9b61-d506f5af9ad7
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6ef251bf272ec42c91689577e8b07cd90b2587f7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-迭代器的型別，適合與容器的泛型介面一起使用。  
+# <a name="hashmultisetgenericiterator-stlclr"></a>hash_multiset::generic_iterator (STL/CLR)
+迭代器使用容器的泛型介面型別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## 備註  
- 描述泛型迭代器的型別，其適合與此樣本容器類別的泛型介面一起使用。  
+## <a name="remarks"></a>備註  
+ 此類型所描述泛型的迭代器，可以搭配這個範本容器類別的泛型介面。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_generic_iterator.cpp   
@@ -72,14 +70,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::generic\_container](../dotnet/hash-multiset-generic-container-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::generic_container (STL/CLR)](../dotnet/hash-multiset-generic-container-stl-clr.md)

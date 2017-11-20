@@ -1,37 +1,35 @@
 ---
-title: "IRowsetImpl::m_bReset | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetImpl.m_bReset"
-  - "IRowsetImpl.m_bReset"
-  - "m_bReset"
-  - "IRowsetImpl::m_bReset"
-  - "ATL::IRowsetImpl::m_bReset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bReset"
+title: "Irowsetimpl:: M_breset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetImpl.m_bReset
+- IRowsetImpl.m_bReset
+- m_bReset
+- IRowsetImpl::m_bReset
+- ATL::IRowsetImpl::m_bReset
+dev_langs: C++
+helpviewer_keywords: m_bReset
 ms.assetid: d423f9f3-4d48-4d0c-b152-684c81a0b34e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4323d92398ea4d47410a2b5a3aad08972628634d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::m_bReset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-用於的位元旗標決定游標位置是否定義資料列集的。  
+# <a name="irowsetimplmbreset"></a>IRowsetImpl::m_bReset
+用來判斷是否資料列集上定義資料指標位置的位元旗標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,11 +37,11 @@ unsigned m_bReset:1;
   
 ```  
   
-## 備註  
- 如果消費者呼叫 [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) 和負 `lOffset` 或 *烏鴉* 和 `m_bReset` 為 true 時，將 `GetNextRows` 移至資料列集的結尾。  如果 `m_bReset` 為 false，消費者符合 OLE DB 規格收到錯誤碼，。  `m_bReset` 旗標集合 **true** ，當資料列集初次建立時，而且，當消費者呼叫 [IRowsetImpl::RestartPosition](../../data/oledb/irowsetimpl-restartposition.md)時。  在呼叫 `GetNextRows`時，會有集合 **false** 。  
+## <a name="remarks"></a>備註  
+ 如果取用者呼叫[GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)具有負`lOffset`或*cRows*和`m_bReset`為 true，`GetNextRows`移動至資料列集結尾。 如果`m_bReset`為 false，取用者收到的錯誤代碼，依照 OLE DB 規格。 `m_bReset`旗標會設成**true**先建立資料列集時，當取用者呼叫[irowsetimpl:: Restartposition](../../data/oledb/irowsetimpl-restartposition.md)。 它會設成**false**當您呼叫`GetNextRows`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetImpl 類別](../../data/oledb/irowsetimpl-class.md)

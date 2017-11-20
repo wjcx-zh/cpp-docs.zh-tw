@@ -1,74 +1,74 @@
 ---
-title: "CConstraintTableUsage、CConstraintTableUsageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CConstraintTableUsageInfo"
-  - "CONSTRAINT_TABLE_USAGE"
-  - "m_szTableSchema"
-  - "m_szConstraintCatalog"
-  - "CONSTRAINT_NAME"
-  - "m_szTableCatalog"
-  - "m_szConstraintSchema"
-  - "m_szTableName"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_SCHEMA"
-  - "CConstraintTableUsage"
-  - "m_szConstraintName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CConstraintTableUsage typedef 類別"
-  - "CConstraintTableUsageInfo 參數類別"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "CONSTRAINT_TABLE_USAGE"
-  - "m_szConstraintCatalog"
-  - "m_szConstraintName"
-  - "m_szConstraintSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CConstraintTableUsage、 CConstraintTableUsageInfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CConstraintTableUsageInfo
+- CONSTRAINT_TABLE_USAGE
+- m_szTableSchema
+- m_szConstraintCatalog
+- CONSTRAINT_NAME
+- m_szTableCatalog
+- m_szConstraintSchema
+- m_szTableName
+- CONSTRAINT_CATALOG
+- CONSTRAINT_SCHEMA
+- CConstraintTableUsage
+- m_szConstraintName
+dev_langs: C++
+helpviewer_keywords:
+- CConstraintTableUsage typedef class
+- m_szConstraintCatalog
+- CONSTRAINT_CATALOG
+- m_szTableSchema
+- CConstraintTableUsageInfo parameter class
+- TABLE_CATALOG
+- CONSTRAINT_TABLE_USAGE
+- TABLE_NAME
+- CONSTRAINT_NAME
+- CONSTRAINT_SCHEMA
+- TABLE_SCHEMA
+- m_szTableCatalog
+- m_szConstraintName
+- m_szTableName
+- m_szConstraintSchema
 ms.assetid: 666b44de-3922-4c5e-ad17-d5ea27120174
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 86884f18b9cba30f05b67a2b2dc2046858f54216
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CConstraintTableUsage、CConstraintTableUsageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 typedef 類別 **CConstraintTableUsage** 實作它的參數類別 **CConstraintTableUsageInfo**。  
+# <a name="cconstrainttableusage-cconstrainttableusageinfo"></a>CConstraintTableUsage、CConstraintTableUsageInfo
+呼叫 typedef 類別**CConstraintTableUsage**來實作其參數類別**CConstraintTableUsageInfo**。  
   
-## 備註  
- 如需使用 typedef 類別的詳細資訊，請參閱 [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。  
+## <a name="remarks"></a>備註  
+ 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別辨認被參考條件約束、唯一條件約束、檢查條件約束和判斷提示所使用的資料表 \(定義在資料庫目錄中，並且由指定使用者所擁有\)。  
+ 這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束，以及判斷提示所使用、 目錄中定義且由指定使用者所擁有的資料表。  
   
- 下表列出類別資料成員和其對應的 OLE DB 資料行。  請參閱《 *OLE DB 程式設計人員參考*》的[CONSTRAINT\_TABLE\_USAGE Rowset](https://msdn.microsoft.com/en-us/library/ms724522.aspx) 有關結構描述和資料列的詳細資訊。  
+ 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_TABLE_USAGE 資料列集](https://msdn.microsoft.com/en-us/library/ms724522.aspx)中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
-|----------|----------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szConstraintCatalog|CONSTRAINT\_CATALOG|  
-|m\_szConstraintSchema|CONSTRAINT\_SCHEMA|  
-|m\_szConstraintName|CONSTRAINT\_NAME|  
+|------------------|--------------------|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szConstraintCatalog|CONSTRAINT_CATALOG|  
+|m_szConstraintSchema|CONSTRAINT_SCHEMA|  
+|m_szConstraintName|CONSTRAINT_NAME|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handlers [MFC], ActiveX controls
 - ActiveX control containers [MFC], event sinks
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
-ms.openlocfilehash: a8fb283d8b5b8afbf3b06e27495ccc957e0099ad
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 3b73fd6d6dbebe764960a7a20c00ddb91aa0b24f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控制項容器：從 ActiveX 控制項中處理事件
 本文說明如何使用 [屬性] 視窗在 ActiveX 控制項容器中安裝 ActiveX 控制項的事件處理常式。 事件處理常式可用來接收通知 （控制項） 的特定事件並在回應中執行某些動作。 此通知會呼叫 「 引發 」 事件。  
@@ -77,5 +74,4 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="see-also"></a>另請參閱  
  [ActiveX 控制項容器](../mfc/activex-control-containers.md)
-
 

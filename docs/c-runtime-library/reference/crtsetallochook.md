@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetAllocHook
+apiname: _CrtSetAllocHook
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fa03fb135907d9f516544f5f4b202c9f4e779fc3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: a614e37c8fe106289d1530a9dac01daee8b8a88a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtsetallochook"></a>_CrtSetAllocHook
 將用戶端定義的配置函式連結到 C 執行階段偵錯記憶體配置處理序，以進行安裝 (僅限偵錯版本)。  
@@ -99,7 +80,7 @@ lineNumber);
  如需如何搭配其他記憶體管理函式使用 `_CrtSetAllocHook`，以及如何撰寫您自己的用戶端定義攔截函式的詳細資訊，請參閱[撰寫偵錯攔截函式](/visualstudio/debugger/debug-hook-function-writing)。  
   
 > [!NOTE]
-> `/clr:pure` 下不支援  `_CrtSetAllocHook`。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
+>  `/clr:pure` 下不支援 `_CrtSetAllocHook`。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
 ## <a name="requirements"></a>需求  
   

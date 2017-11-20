@@ -1,57 +1,57 @@
 ---
-title: "部署概念 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "應用程式部署 [C++], 關於應用程式部署"
-  - "相依性 [C++], 應用程式部署和"
-  - "部署應用程式 [C++], 關於部署應用程式"
-  - "程式庫 [C++], 應用程式部署問題"
-  - "Windows Installer [C++]"
+title: "部署概念 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows Installer [C++]
+- dependencies [C++], application deployment and
+- application deployment [C++], about application deployment
+- deploying applications [C++], about deploying applications
+- libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b3aaf970e51f867d36cae288e8d025730093937
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 部署概念
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本章節討論部署 C\+\+ 應用程式的主要考量。  
+# <a name="deployment-concepts"></a>部署概念
+本章節將討論部署 c + + 應用程式的主要考量。  
   
-## C\+\+ 中的 Windows Installer 部署  
- Visual C\+\+ 專案通常會使用傳統的 Windows Installer 安裝程式做為部署工具。  若要準備 Windows Installer 部署，您需要將應用程式封裝到 setup.exe 檔中，並將該檔與安裝程式套件 \(.msi\) 一起散發。  然後，使用者會執行 setup.exe 來安裝應用程式。  
+## <a name="windows-installer-deployment-in-c"></a>C + + 中的 Windows Installer 部署  
+ Visual c + + 專案通常會使用傳統的 Windows Installer 安裝程式進行部署。 若要準備的 Windows Installer 部署，您封裝應用程式中的 setup.exe 檔案，並發佈該程式檔連同的安裝程式套件 (.msi)。 然後執行 setup.exe 來安裝應用程式的使用者。  
   
- 您可以將安裝專案加入到方案中，以封裝應用程式；當建置時，它會建立散發給使用者的安裝和安裝程式套件檔案。  如需詳細資訊，請參閱[選擇部署方法](../ide/choosing-a-deployment-method.md)。  
+ 將應用程式封裝將安裝專案加入至您的方案;建置時，它會建立安裝程式和安裝程式散發給使用者的套件檔案。 如需詳細資訊，請參閱[選擇部署方法](../ide/choosing-a-deployment-method.md)。  
   
-## 程式庫相依性  
- 當使用 Visual C\+\+ 程式庫所提供的功能來建置 C\/C\+\+ 應用程式時，它會在執行階段依賴這些程式庫的存在。  為了要讓應用程式執行，它必須以靜態或動態方式連結到所需的 Visual C\+\+ 程式庫。  如果應用程式動態連結到 Visual C\+\+ 程式庫，則當它執行時，該程式庫必須存在，才能將其載入。  另一方面，如果應用程式靜態連結到 Visual C\+\+ 程式庫，則它不需要對應的 DLL 存在於使用者的電腦上。  但是，靜態連結有一些負面的作用，例如增加應用程式檔案的大小，以及可能會讓維護作業變得更困難。  如需詳細資訊，請參閱[使用 DLL 的優點](../build/advantages-of-using-dlls.md)。  
+## <a name="library-dependencies"></a>程式庫相依性  
+ C/c + + 應用程式建置時使用的 Visual c + + 程式庫所提供的功能，將會依存於這些程式庫，在執行階段存在。 為了讓應用程式執行，它必須連結，靜態或動態至必要的 Visual c + + 程式庫。 如果應用程式動態連結至 Visual c + + 程式庫，然後執行該程式庫時必須存在，載入它。 相反地，如果應用程式以靜態方式連結到 Visual c + + 程式庫，就不需要使用者的電腦上必須有對應的 Dll。 靜態連結中，不過，有部分負面的影響，例如增加應用程式檔案的大小和進行維護可能更困難。 如需詳細資訊，請參閱[使用 Dll 的優點](../build/dlls-in-visual-cpp.md#advantages-of-using-dlls)。  
   
-## 封裝和轉散發  
- Visual C\+\+ 程式庫會封裝為 DLL，且 C\/C\+\+ 應用程式的所有必要程式庫會由 Visual Studio 安裝在開發人員的電腦上。  然而，將應用程式部署至使用者時，在大部分的情況下，不太可能為了要執行您的應用程式就要求他們安裝 Visual Studio。  很重要的一點是，只能轉散發應用程式所需的 Visual C\+\+ 部分，才能正確執行。  
+## <a name="packaging-and-redistributing"></a>封裝和轉散發  
+ Visual c + + 程式庫會封裝為 Dll，並由 Visual Studio 開發人員的電腦上安裝所有必要的程式庫的 C/c + + 應用程式。 不過，在部署您的應用程式到您的使用者，不可行，在大部分情況下，要求他們來安裝 Visual Studio，才能執行您的應用程式。 請務必要能夠轉散佈剛才的部分 Visual c + + 所需的應用程式正確執行。  
   
  如需有關封裝和轉散發的詳細資訊，請參閱下列主題：  
   
--   [決定要轉散發哪些 DLL](../ide/determining-which-dlls-to-redistribute.md).  
+-   [判斷要轉散發哪些 Dll](../ide/determining-which-dlls-to-redistribute.md)。  
   
--   [選擇部署方法](../ide/choosing-a-deployment-method.md).  
+-   [選擇部署方法](../ide/choosing-a-deployment-method.md)。  
   
- 如需部署範例和疑難排解的建議，請參閱：  
+ 部署範例及有關疑難排解的建議，請參閱：  
   
--   [部署範例](../ide/deployment-examples.md).  
+-   [部署範例](../ide/deployment-examples.md)。  
   
--   [疑難排解](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
+-   [疑難排解 C/c + + 隔離應用程式和-並存組件](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)   
- [了解 Visual C\+\+ 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)   
- [Windows Installer Deployment](http://msdn.microsoft.com/zh-tw/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [了解 Visual c + + 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)   
+ [Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)

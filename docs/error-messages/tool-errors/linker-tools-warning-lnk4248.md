@@ -1,47 +1,45 @@
 ---
-title: "連結器工具警告 LNK4248 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4248"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4248"
+title: "連結器工具警告 LNK4248 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4248
+dev_langs: C++
+helpviewer_keywords: LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: dc49b42a0a75505cb8a89246e187aac4f4a0e4e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具警告 LNK4248
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-無法解析的 typeref 語彙基元 \(token\) \(對 'type' 而言\)，映像可能無法執行  
+# <a name="linker-tools-warning-lnk4248"></a>連結器工具警告 LNK4248
+無法解析的 typeref 語彙基元 (token) 的 'type';映像可能無法執行  
   
- 型別在 MSIL 中繼資料內沒有定義。  
+ 類型沒有定義 MSIL 中繼資料中。  
   
- LNK4248 可能發生的原因是：當 MSIL 模組 \(以 **\/clr** 編譯\) 中只有型別的轉送宣告時，而型別是在 MSIL 模組中參考，而且 MSIL 模組是與有型別定義的原生模組連結。  
+ 向前宣告 MSIL 模組中的型別時，可能會發生 LNK4248 (編譯**/clr**)，將會在 MSIL 模組中，參考的型別，而其中 MSIL 模組與原生模組已定義的連結型別。  
   
- 在此情況下，連結器將提供 MSIL 中繼資料內的原生型別定義，這樣可能會提供正確行為。  
+ 在此情況下，連結器會提供 MSIL 中繼資料的原生型別定義，這可能會提供正確的行為。  
   
- 但是如果轉送型別宣告是 CLR 型別，則連結器的原生型別定義可能不會正確。  
+ 不過，如果 CLR 型別轉送類型宣告，然後連結器的原生類型定義可能不正確  
   
- 如需詳細資訊，請參閱[\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
-### 更正這個錯誤  
+### <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  提供 MSIL 模組中的型別定義。  
+1.  提供的 MSIL 模組的類型定義。  
   
-## 範例  
- 下列範例會產生 LNK4248。  定義結構 A，解決問題。  
+## <a name="example"></a>範例  
+ 下列範例會產生 LNK4248。 定義結構 A，解決問題。  
   
 ```  
 // LNK4248.cpp  
@@ -55,8 +53,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列範例有型別的轉送定義。  
+## <a name="example"></a>範例  
+ 下列範例已轉送的類型定義。  
   
 ```  
 // LNK4248_2.cpp  
@@ -71,7 +69,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 LNK4248。  
   
 ```  

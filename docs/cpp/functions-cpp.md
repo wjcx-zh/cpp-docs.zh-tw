@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - defaults, arguments
 - function definitions
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4196abd9d33595c59ae291ea4eba9e8806cce984
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e5794cd9ec0eb5afc879507bcf8942d6481ebca4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="functions-c"></a>函式 (C++)
 函式是執行某項作業的程式碼區塊。 函式可以選擇性地定義輸入參數，以讓呼叫端將引數傳遞給函式。 函式可以選擇性地傳回值做為輸出。 函式適用於將一般作業封裝在單一可重複使用的區塊中，而且其名稱最好可清楚描述該函式的作用。 下列函式接受呼叫端的兩個整數並傳回其總和;`a`和`b`是*參數*型別的`int`。  

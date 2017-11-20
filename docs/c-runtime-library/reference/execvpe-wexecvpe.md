@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,44 +28,28 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: fc5a0df49b31f77874e6a75ff39ed9650386c58f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 7d9a7edb225afeba4b7d091db9a7a25103361913
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe、_wexecvpe
 載入並執行新的子處理序。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   

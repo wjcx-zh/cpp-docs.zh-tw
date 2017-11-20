@@ -1,39 +1,38 @@
 ---
-title: "/LOADCONFIG | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/loadconfig"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LOADCONFIG dumpbin 選項"
-  - "LOADCONFIG dumpbin 選項"
-  - "-LOADCONFIG dumpbin 選項"
+title: "-LOADCONFIG |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /loadconfig
+dev_langs: C++
+helpviewer_keywords:
+- LOADCONFIG dumpbin option
+- -LOADCONFIG dumpbin option
+- /LOADCONFIG dumpbin option
 ms.assetid: 24667afe-9bee-4f6e-ae72-f534c0050428
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4742c3c84ba7f6421bf7976544fa06106b441775
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /LOADCONFIG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="loadconfig"></a>/LOADCONFIG
 ```  
 /LOADCONFIG  
 ```  
   
-## 備註  
- 這個選項會傾印 IMAGE\_LOAD\_CONFIG\_DIRECTORY 結構，此結構為 Windows NT 載入器所使用的選擇性結構，定義於 WINNT.H 中。  
+## <a name="remarks"></a>備註  
+ 此選項傾印的 IMAGE_LOAD_CONFIG_DIRECTORY 結構，使用 Windows NT 載入器和 WINNT 中定義的選擇性結構。H.  
   
- 只有 [\/HEADERS](../../build/reference/headers.md) DUMPBIN 選項可用在以 [\/GL](../../build/reference/gl-whole-program-optimization.md) 編譯器選項所產生的檔案上。  
+ 只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)

@@ -1,40 +1,40 @@
 ---
-title: "ODBC 類別和執行緒 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC 類別, 和執行緒"
-  - "ODBC, 多執行緒應用程式"
-  - "執行緒 [MFC], ODBC 支援"
+title: "ODBC 類別和執行緒 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC classes, and threads
+- ODBC, multithreaded applications
+- threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c71005e4cce6f62ca4dceb1c618f2ffd18b2bbab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ODBC 類別和執行緒
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-從 MFC 4.2 版以後便具有對 MFC ODBC 類別的多執行緒 \(Multithread\) 支援。  請注意，MFC 並未提供 DAO 類別的多執行緒支援。  
+# <a name="odbc-classes-and-threads"></a>ODBC 類別和執行緒
+從 MFC 4.2 開始，沒有多執行緒 MFC ODBC 類別的支援。 不過請注意，MFC 不提供多執行緒支援適用於 DAO 類別。  
   
- ODBC 類別的多執行緒支援具有某些限制。  由於這些類別包裝了 ODBC API，因此他們已被限制在建立此多執行緒支援的元件上。  例如，許多 ODBC 驅動程式並不是安全執行緒 \(Thread\-Safe\)，所以如果您使用了其中一種驅動程式，MFC ODBC 類別就不會是安全執行緒。  您應該驗證您的特定驅動程式是否為安全執行緒。  
+ ODBC 類別的多執行緒支援有一些限制。 這些類別會包裝 ODBC API，因為它們會限制為元件建立所在的多執行緒的支援。 比方說，許多 ODBC 驅動程式不是安全執行緒，因此，MFC ODBC 類別不具備執行緒安全如果您使用它們其中一個驅動程式。 您應該確認您的特定驅動程式是否具備執行緒安全。  
   
- 您應該在建立一個多執行緒應用程式時，非常小心地使用多執行緒來操作相同的物件。  例如，在兩個執行緒中使用相同的 `CRecordset` 物件可能會在擷取資料時造成問題，其中一個執行緒的擷取作業可能會覆寫另一個執行緒所擷取的資料。  在不同執行緒中使用 MFC ODBC 類別的常見方式，是在跨執行緒中共用一個開啟的 `CDatabase` 物件，以便讓每個執行緒的個別 `CRecordset` 物件使用相同的 ODBC 連接。  請注意，不要將一個未開啟的 `CDatabase` 物件傳遞到另一個執行緒中的 `CRecordset` 物件。  
+ 在建立多執行緒應用程式時，您應該非常小心使用多執行緒管理相同物件中。 例如，使用相同`CRecordset`兩個執行緒中的物件可能會造成問題，擷取資料時，提取作業在一個執行緒可能會覆寫另一個執行緒所提取的資料。 MFC ODBC 類別不同的執行緒中的常見用法是共用開啟`CDatabase`多個相同的 ODBC 連接使用個別執行緒物件`CRecordset`中每個執行緒的物件。 請注意，您應該傳遞未開啟`CDatabase`物件`CRecordset`另一個執行緒的物件。  
   
 > [!NOTE]
->  如果您一定要使用多執行緒來操作相同物件，就應該實作適當的同步處理機制 \(Synchronization Mechanism\)，例如關鍵區段 \(Critical Section\)。  請確認某些特定作業 \(例如 **Open**\) 並未受到保護。  您應該確定這些作業不會同時被不同的執行緒呼叫。  
+>  如果您必須擁有管理相同物件的多個執行緒，則應該實作適當的同步處理機制，例如關鍵區段。 請注意，某些作業，例如**開啟**，未受保護。 您應該確定這些作業將不會同時從呼叫個別的執行緒。  
   
- 如需建立多執行緒的詳細資訊，請參閱[多執行緒主題](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
+ 如需有關建立多執行緒應用程式的詳細資訊，請參閱[多執行緒主題](../../parallel/multithreading-support-for-older-code-visual-cpp.md)。  
   
-## 請參閱  
- [開放式資料庫連接 \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)   
- [Data Access Programming \(MFC\/ATL\)](../../data/data-access-programming-mfc-atl.md)
+## <a name="see-also"></a>另請參閱  
+ [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
+ [資料存取程式設計 (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

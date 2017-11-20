@@ -1,34 +1,33 @@
 ---
-title: "如何：將 char * 字串轉換為 System::Byte 陣列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 字元"
-  - "字元陣列, 轉換為 System::Byte 陣列"
-  - "範例 [C++], 陣列"
-  - "範例 [C++], 字串"
+title: "如何： 轉換 char * 字串為 system:: byte 陣列 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- examples [C++], strings
+- arrays [C++], character
+- character arrays, converting to System::Byte arrays
+- examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4d0750884c9d7d5bfb1b9566b26cdce5c8c1962c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：將 char * 字串轉換為 System::Byte 陣列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將 `char *` 字串轉換為 <xref:System.Byte> 陣列最有效率的方式是使用 <xref:System.Runtime.InteropServices.Marshal> 類別。  
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>如何：將 char * 字串轉換為 System::Byte 陣列
+要轉換的最有效方式`char *`字串至<xref:System.Byte>陣列是使用<xref:System.Runtime.InteropServices.Marshal>類別。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // convert_native_string_to_Byte_array.cpp  
@@ -60,5 +59,5 @@ int main() {
 Native String  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

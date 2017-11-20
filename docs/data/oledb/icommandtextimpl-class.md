@@ -1,32 +1,30 @@
 ---
-title: "ICommandTextImpl 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandText 類別"
+title: "ICommandTextImpl 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ICommandText
+dev_langs: C++
+helpviewer_keywords: ICommandText class
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7c3567a16981d4abb16ace70cc2d0509bf9c886e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandTextImpl 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-提供[ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx)介面的實作。  
+# <a name="icommandtextimpl-class"></a>ICommandTextImpl 類別
+提供的實作[ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx)介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <class T >  
@@ -34,31 +32,31 @@ class ATL_NO_VTABLE ICommandTextImpl
    : public ICommandImpl<T, ICommandText>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 從 **ICommandTextImpl**衍生的命令類別。  
+ 命令類別衍生自**ICommandTextImpl**。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 介面方法  
-  
-|||  
-|-|-|  
-|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|由最後一個呼叫傳回文字命令設定為 [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。|  
-|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|設定命令的文字，取代現有的命令文字。|  
-  
-### 資料成員  
+### <a name="interface-methods"></a>介面方法  
   
 |||  
 |-|-|  
-|[m\_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|存放區命令文字。|  
+|[GetCommandText](../../data/oledb/icommandtextimpl-getcommandtext.md)|傳回上次呼叫所設定的文字命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。|  
+|[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)|設定命令文字，取代現有的命令文字。|  
   
-## 備註  
- 在命令中需要的介面。  
+### <a name="data-members"></a>資料成員  
   
-## 需求  
- **Header:** altdb.h  
+|||  
+|-|-|  
+|[m_strCommandText](../../data/oledb/icommandtextimpl-m-strcommandtext.md)|儲存命令文字。|  
   
-## 請參閱  
+## <a name="remarks"></a>備註  
+ 在命令中的強制介面。  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** altdb.h  
+  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)
+ [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

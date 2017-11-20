@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbrtowc
+apiname: mbrtowc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbrtowc
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbrtowc function
+f1_keywords: mbrtowc
+dev_langs: C++
+helpviewer_keywords: mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 481d67e2b2ccbc768b9afdbb4ede620dc237be43
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: afbc17fbe93fdead069ca89ebbaf0eee400cd746
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbrtowc"></a>mbrtowc
 將目前地區設定的多位元組字元轉換成對等的寬字元，並提供在多位元組字元中間重新啟動的功能。  

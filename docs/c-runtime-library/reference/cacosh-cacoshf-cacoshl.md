@@ -33,37 +33,21 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 240b5f0806072e608667cedeb20525367e3847fa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: d1d726f9a2c5176a110f1c7b8f282fc237c59772
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 擷取複數的反雙曲餘弦值，而且實際軸中有值小於 1 的分支部分。 。  

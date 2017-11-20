@@ -1,45 +1,43 @@
 ---
-title: "hash_multiset::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 成員 [STL/CLR]"
+title: "hash_multiset:: equal_range (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: a4141d7e-4964-4c78-8989-ae1d1258b50a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 78ce8e988f6731040299333148679fe57634ec9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定索引鍵的範圍。  
+# <a name="hashmultisetequalrange-stlclr"></a>hash_multiset::equal_range (STL/CLR)
+尋找符合指定之索引鍵的範圍。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 要搜尋的索引值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式傳回一組迭代器 `cliext::pair<iterator, iterator>(` [hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)`(``key``),` [hash\_multiset::upper\_bound](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(``key``))`。  您可用它來判斷目前在受控制序列中，符合指定索引鍵的項目範圍。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回迭代器的一組`cliext::pair<iterator, iterator>(` [hash_multiset:: lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md) `(key),` [hash_multiset:: upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)`(key))`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目範圍。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_equal_range.cpp   
@@ -75,17 +73,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**equal\_range\(L'x'\) empty \= True**  
- **b**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+equal_range(L'x') empty = True  
+ b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::count](../dotnet/hash-multiset-count-stl-clr.md)   
- [hash\_multiset::find](../dotnet/hash-multiset-find-stl-clr.md)   
- [hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)   
- [hash\_multiset::upper\_bound](../dotnet/hash-multiset-upper-bound-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)   
+ [hash_multiset:: find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)   
+ [hash_multiset:: lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)   
+ [hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)

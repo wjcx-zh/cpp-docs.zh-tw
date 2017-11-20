@@ -1,36 +1,35 @@
 ---
-title: "運算式評估工具錯誤 CXX0052 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0052"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0052"
-  - "CXX0052"
+title: "運算式評估工具錯誤 CXX0052 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0052
+dev_langs: C++
+helpviewer_keywords:
+- CXX0052
+- CAN0052
 ms.assetid: 5060d479-d0a4-4682-b858-c8b9a4f324e6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0725d117f6481d2bdc218089a7599502c0f5213d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 運算式評估工具錯誤 CXX0052
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-沒有顯示成員函式  
+# <a name="expression-evaluator-error-cxx0052"></a>運算式評估工具錯誤 CXX0052
+成員函式不存在  
   
- 將成員函式指定為中斷點，但是找不到此成員函式。  將中斷點設定在內嵌 \(Inline\) 的函式可能會造成此錯誤。  
+ 成員函式為中斷點指定了，但找不到。 在已內嵌函式設定中斷點可能會造成這個錯誤。  
   
- 強制關閉內嵌 \(\/Ob0\) 將中斷點設定在此函式，重新編譯程式。  
+ 重新編譯的檔案與內嵌強制關閉 (/ Ob0) 在此函式中設定中斷點。  
   
- 運算式呼叫的函式未定義。  
+ 未定義的函式呼叫運算式。  
   
- 此錯誤與 CAN0052 相同。
+ 這個錯誤是與 can0052 相同。

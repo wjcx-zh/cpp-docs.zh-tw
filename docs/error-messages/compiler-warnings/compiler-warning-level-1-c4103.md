@@ -1,36 +1,34 @@
 ---
-title: "編譯器警告 (層級 1) C4103 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4103"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4103"
+title: "編譯器警告 （層級 1） C4103 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4103
+dev_langs: C++
+helpviewer_keywords: C4103
 ms.assetid: 9021b514-375e-4d62-b261-ccb06f299e8e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1ac53a33d64bede8351d3b981b9c2a7e324e3f1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4103
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'filename' : 記憶體對齊在包含標頭之後變更了，可能是遺漏了 \#pragma pack\(pop\)  
+# <a name="compiler-warning-level-1-c4103"></a>編譯器警告 （層級 1） C4103
+'filename': 對齊之後包含標頭，變更可能是因為缺少 #pragma pack(pop)  
   
- 封裝會影響類別的配置，而且通常，如果封裝在跨標頭檔時變更，就可能會出問題。  
+ 封裝會影響的類別、 配置和常見的是，如果封裝標頭檔之間的變更，可能有問題。  
   
- 結束標頭檔之前，使用 \#pragma [pack](../../preprocessor/pack.md)\(pop\) 解除這項警告。  
+ 使用 #pragma[套件](../../preprocessor/pack.md)(pop) 前結束標頭檔，若要解決這個警告。  
   
- 下列範例會產生 C4103：  
+ 下列範例會產生 C4103:  
   
 ```  
 // C4103.h  

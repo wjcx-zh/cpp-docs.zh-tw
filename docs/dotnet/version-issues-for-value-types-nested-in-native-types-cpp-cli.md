@@ -1,35 +1,34 @@
 ---
-title: "在原生類型中巢狀化之實值類型的版本問題 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nogc 類型宣告"
-  - "__value 關鍵字, 使用巢狀結構時的問題"
+title: "原生類型中的巢狀之實值類型的版本問題 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __nogc type declarations
+- __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a16b6fd7d166b7a997257bfd6cb741b82911c5bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 在原生類型中巢狀化之實值類型的版本問題 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-假設有一個用來建置 \(Build\) 用戶端組件的已簽署 \(強式名稱\) 組件元件。  此元件包含了實值型別 \(Value Type\)，在用戶端可當做原生等位成員、類別或陣列的型別。  如果此元件的未來版本變更了該實值型別的大小或配置，就必須重新編譯用戶端。  
+# <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>在原生類型中巢狀化之實值類型的版本問題 (C++/CLI)
+請考慮用來建置用戶端組件的帶正負號 （強式名稱） 組件元件。 元件包含在用戶端當做類型使用的原生的等位、 類別或陣列成員的實值類型。 如果未來版本的元件變更的大小或實值類型的配置，用戶端必須重新編譯。  
   
- 使用 [sn.exe](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) 建立金鑰檔 \(`sn -k mykey.snk`\)。  
+ 建立與 keyfile [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`)。  
   
-## 範例  
- 下列是元件的範例：  
+## <a name="example"></a>範例  
+ 下列範例是的元件。  
   
 ```  
 // nested_value_types.cpp  
@@ -46,8 +45,8 @@ public value struct S {
 };  
 ```  
   
-## 範例  
- 下列是用戶端的範例：  
+## <a name="example"></a>範例  
+ 這個範例是用戶端：  
   
 ```  
 // nested_value_types_2.cpp  
@@ -72,7 +71,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 S.i = 5  
@@ -81,8 +80,8 @@ S.i = 10
 S.i = 11  
 ```  
   
-### 註解  
- 但是，如果您在 nested\_value\_types.cpp 中為 `struct S` 加入另一個成員 \(例如 `double d;`\)，而且只重新編譯元件，未重新編譯用戶端，則結果將會產生型別為 <xref:System.IO.FileLoadException?displayProperty=fullName>\) 之未處理的例外狀況。  
+### <a name="comments"></a>註解  
+ 不過，如果您將加入另一個成員`struct S`中 nested_value_types.cpp，(比方說， `double d;`) 和重新編譯此元件不需要重新編譯用戶端，結果是未處理的例外狀況 (型別<xref:System.IO.FileLoadException?displayProperty=fullName>)。  
   
-## 請參閱  
- [Managed 類型](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>另請參閱  
+ [Managed 類型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

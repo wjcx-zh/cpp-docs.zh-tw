@@ -1,53 +1,51 @@
 ---
-title: "numeric (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/numeric>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/numeric> 標頭 [STL/CLR]"
-  - "<numeric> 標頭 [STL/CLR]"
-  - "numeric 函式 [STL/CLR]"
+title: "數值 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/numeric>
+dev_langs: C++
+helpviewer_keywords:
+- numeric functions [STL/CLR]
+- <cliext/numeric> header [STL/CLR]
+- <numeric> header [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99cac71e9de9e4022b6d3f005dff2ff6520b99e2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# numeric (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-定義容器樣板函式執行演算法提供的數值處理。  
+# <a name="numeric-stlclr"></a>numeric (STL/CLR)
+定義容器樣板函式執行數值處理提供的演算法。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #include <cliext/numeric>  
 ```  
   
-## 函式  
+## <a name="functions"></a>函式  
   
-|功能|說明|  
-|--------|--------|  
-|[accumulate](../dotnet/accumulate-stl-clr.md)|透過計算後繼元素的部分總和以計算在一定範圍內包含一些初始值的所有元素總和，或是計算部分後繼結果由同樣地使用不同於加總的指定二進位運算得出。|  
-|[adjacent\_difference](../dotnet/adjacent-difference-stl-clr.md)|計算每個項目及其前置項之間執行區分輸入範圍並將結果輸出至目的範圍或計算差異作業由另一個取代通用程序，指定的二進位運算的結果。|  
-|[inner\_product](../dotnet/inner-product-stl-clr.md)|計算兩個範圍的元素產品的總和並將它加入至指定的初始值計算總和產品二進位運算由其他指定的二進位運算取代通用程序的結果。|  
-|[partial\_sum](../dotnet/partial-sum-stl-clr.md)|透過 `i`th 項目在 `i`目的範圍的 th 項目計算輸入範圍的一系列的總和從第一個項目並儲存每個這類總和的結果或計算總和作業由另一個指定的二進位運算取代通用程序的結果。|  
+|函式|說明|  
+|--------------|-----------------|  
+|[accumulate (STL/CLR)](../dotnet/accumulate-stl-clr.md)|藉由計算連續的部分總和來計算指定範圍內所有元素 (包括某個初始值) 的總和，或是計算連續部分結果 (同樣是使用指定的二進位運算而非加總來計算出) 的結果。|  
+|[adjacent_difference (STL/CLR)](../dotnet/adjacent-difference-stl-clr.md)|計算在輸入範圍中每個項目及其前置項之間的後續差異並將結果輸出至目的範圍，或計算一般化程序的結果，其中由另一個指定的二進位運算取代差異作業。|  
+|[inner_product (STL/CLR)](../dotnet/inner-product-stl-clr.md)|計算兩個範圍的元素乘積總和並將它加到指定的初始值，或計算一般化程序的結果，其中總和及乘積二進位運算會由其他指定的二進位運算取代。|  
+|[partial_sum (STL/CLR)](../dotnet/partial-sum-stl-clr.md)|計算一系列中的第一個項目，透過輸入範圍內的總和`i`th 項目，並將每個總和的結果`i`個元素的目的範圍，或計算一般化程序的結果，其中總和運算由另一個指定的二進位運算取代。|  
   
-## 需求  
- **標頭：** \<cliext\/numeric\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/數字 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

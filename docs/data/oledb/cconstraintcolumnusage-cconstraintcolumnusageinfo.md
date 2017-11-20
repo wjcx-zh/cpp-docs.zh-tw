@@ -1,88 +1,88 @@
 ---
-title: "CConstraintColumnUsage、CConstraintColumnUsageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_szConstraintCatalog"
-  - "CConstraintColumnUsage"
-  - "m_nColumnPropID"
-  - "COLUMN_GUID"
-  - "CONSTRAINT_NAME"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "m_szConstraintSchema"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "CONSTRAINT_COLUMN_USAGE"
-  - "m_szTableName"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_SCHEMA"
-  - "CConstraintColumnUsageInfo"
-  - "m_szConstraintName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CConstraintColumnUsage typedef 類別"
-  - "CConstraintColumnUsageInfo 參數類別"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PROPID"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_COLUMN_USAGE"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_szColumnName"
-  - "m_szConstraintCatalog"
-  - "m_szConstraintName"
-  - "m_szConstraintSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CConstraintColumnUsage、 CConstraintColumnUsageInfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_szConstraintCatalog
+- CConstraintColumnUsage
+- m_nColumnPropID
+- COLUMN_GUID
+- CONSTRAINT_NAME
+- m_szColumnName
+- m_szTableCatalog
+- m_szConstraintSchema
+- COLUMN_PROPID
+- m_guidColumn
+- CONSTRAINT_COLUMN_USAGE
+- m_szTableName
+- CONSTRAINT_CATALOG
+- CONSTRAINT_SCHEMA
+- CConstraintColumnUsageInfo
+- m_szConstraintName
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- m_szConstraintCatalog
+- CONSTRAINT_COLUMN_USAGE
+- CONSTRAINT_CATALOG
+- CConstraintColumnUsageInfo parameter class
+- m_szTableSchema
+- TABLE_CATALOG
+- TABLE_NAME
+- CONSTRAINT_NAME
+- CConstraintColumnUsage typedef class
+- m_nColumnPropID
+- CONSTRAINT_SCHEMA
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szTableCatalog
+- m_szConstraintName
+- m_szTableName
+- m_szConstraintSchema
+- COLUMN_GUID
+- m_guidColumn
 ms.assetid: 7d4d94e8-2025-4fcc-a176-c9b231eca77b
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fbdfba3e1db3ead852c3c083faf2c0adfafff8e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CConstraintColumnUsage、CConstraintColumnUsageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 typedef 類別 **CConstraintColumnUsage** 實作它的參數類別 **CConstraintColumnUsageInfo**。  
+# <a name="cconstraintcolumnusage-cconstraintcolumnusageinfo"></a>CConstraintColumnUsage、CConstraintColumnUsageInfo
+呼叫 typedef 類別**CConstraintColumnUsage**來實作其參數類別**CConstraintColumnUsageInfo**。  
   
-## 備註  
- 請參閱 [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。如需使用 typedef 類別的詳細資訊。  
+## <a name="remarks"></a>備註  
+ 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 類別辨認被參考條件約束、唯一條件約束、檢查條件約束和判斷提示所使用的資料行 \(定義在資料庫目錄中，並且由指定使用者所擁有\)。  
+ 這個類別會識別參考條件約束、 唯一條件約束、 check 條件約束，以及判斷提示所使用、 目錄中定義且由指定使用者所擁有的資料行。  
   
- 下表列出類別資料成員和其對應的 OLE DB 資料行。  請參閱《 *OLE DB 程式設計人員參考*》的[CONSTRAINT\_COLUMN\_USAGE 資料](https://msdn.microsoft.com/en-us/library/ms724522.aspx) 有關結構描述和資料列的詳細資訊。  
+ 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CONSTRAINT_COLUMN_USAGE 資料列集](https://msdn.microsoft.com/en-us/library/ms724522.aspx)中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
-|----------|----------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_szConstraintCatalog|CONSTRAINT\_CATALOG|  
-|m\_szConstraintSchema|CONSTRAINT\_SCHEMA|  
-|m\_szConstraintName|CONSTRAINT\_NAME|  
+|------------------|--------------------|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_szConstraintCatalog|CONSTRAINT_CATALOG|  
+|m_szConstraintSchema|CONSTRAINT_SCHEMA|  
+|m_szConstraintName|CONSTRAINT_NAME|  
   
-## 需求  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>需求  
+ **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

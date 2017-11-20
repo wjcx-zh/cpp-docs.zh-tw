@@ -1,46 +1,43 @@
 ---
-title: "map::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound 成員 [STL/CLR]"
+title: "map:: upper_bound (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: d772b4a8-d0dc-439a-8b5b-3c91836d9256
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cc82213acbc0fa2e6871b9a08119b37186652628
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# map::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-符合指定之索引鍵的範圍中尋找結尾。  
+# <a name="mapupperbound-stlclr"></a>map::upper_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
+#### <a name="parameters"></a>參數  
+ key  
  要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式來判斷在相同 Bucket 的項目為 `key`之受控制序列的最後一個項目的 `X` 。  如果沒有這類項目，則為，如果 `X` 是在受控制序列的最後一個項目，則會傳回 [map::end](../dotnet/map-end-stl-clr.md)`()`;否則會指定在 `X`之外的第一個項目的 Iterator 傳回它。  您可以使用它目前所在項目的結尾符合指定索引鍵受控制序列。  
+## <a name="remarks"></a>備註  
+ 成員函式決定的最後一個項目`X`具有對等順序，來控制序列中`key`。 如果沒有這類元素存在，或如果`X`是最後一個項目，在受控制序列中，它會傳回[map:: end (STL/CLR)](../dotnet/map-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定之外的第一個項目`X`. 您可以使用它來目前受控制序列之符合指定之索引鍵中尋找的項目序列的結尾。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_upper_bound.cpp   
@@ -74,18 +71,21 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**upper\_bound \(L'x\) \=\=end \(\) \= true**  
-**\*upper\_bound \(L'a\) \= \[b 2\]**  
-**\*upper\_bound \(L'b\) \= \[c 3\]**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::count](../dotnet/map-count-stl-clr.md)   
- [map::equal\_range](../dotnet/map-equal-range-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
+ [map:: equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)   
+ [map:: find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)

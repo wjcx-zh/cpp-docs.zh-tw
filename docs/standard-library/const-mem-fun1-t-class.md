@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::const_mem_fun1_t
-- const_mem_fun1_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- const_mem_fun1_t class
+f1_keywords: xfunctional/std::const_mem_fun1_t
+dev_langs: C++
+helpviewer_keywords: const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 2a4fbafae9c5b446c818f2bbf151b69510b1bb9c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: 090cb48b2b104321c35fd25cbaed8acfc9939b1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t 類別
 配接器類別，這個類別可在使用指標引數初始化 **const** 成員函式 (其接受單一引數) 時，將其當作二元函式物件來呼叫。  
@@ -83,7 +63,6 @@ class const_mem_fun1_t
 ## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

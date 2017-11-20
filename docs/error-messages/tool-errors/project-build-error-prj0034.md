@@ -1,31 +1,29 @@
 ---
-title: "專案建置錯誤 PRJ0034 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0034"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0034"
+title: "專案建置錯誤 PRJ0034 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0034
+dev_langs: C++
+helpviewer_keywords: PRJ0034
 ms.assetid: 1da4a55b-231b-4476-8545-6997628fbc00
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b96edfdabeaf4ae31f4eaabb334f56bf29c99c70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 專案建置錯誤 PRJ0034
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-專案層級自訂建置步驟的 'Additional Dependencies' 屬性所含的 'macro' 計算結果為 'macro\_expansion'。  
+# <a name="project-build-error-prj0034"></a>專案建置錯誤 PRJ0034
+'其他相依性' 屬性的專案層級自訂建置步驟包含 '巨集' 會評估成 'macro_expansion'。  
   
- 檔案的自訂建置步驟可能由於巨集評估問題，而使它的額外相依性中包含錯誤。  此錯誤也可能表示檔案路徑的格式錯誤，其檔案路徑中包含不正確的字元或字元組合。  
+ 在專案上的自訂建置步驟包含它的其他相依性巨集評估問題可能是因為發生錯誤。 這項錯誤也可能表示的格式不正確的路徑，是包含字元或檔案路徑中不合法的字元的組合。  
   
- 若要解決此問題，請修正巨集或修正路徑規格。  評估的路徑是專案目錄的絕對路徑。
+ 若要解決這個錯誤，請修正巨集，或修正路徑規格。 評估的路徑是從專案目錄的絕對路徑。

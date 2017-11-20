@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -47,30 +45,15 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 53291ede13fdd83a531052743ae22ef8bb146b0f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: b13ccda9dd613b0150276d8471f2a5330016e95e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 計算 `x` 的反正切值 (`atan`、`atanf` 和 `atanl`) 或 `y`/`x` 的反正切值 (`atan2`、`atan2f` 和 `atan2l`)。  

@@ -1,39 +1,38 @@
 ---
-title: "相依的搜尋路徑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "相依性, NMAKE"
-  - "NMAKE 程式, 相依性"
+title: "相依的搜尋路徑 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, dependents
+- dependents, NMAKE
 ms.assetid: bf998e47-da74-48b5-891d-d3d8ce57264b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cf777c89c78ab844b61138c30a5a9a25ca6b91d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 相依的搜尋路徑
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-每一個相依都有選擇性的搜尋路徑，指定如下所示：  
+# <a name="search-paths-for-dependents"></a>相依的搜尋路徑
+每個相依都有選擇性的搜尋路徑，指定方式如下：  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 {directory[;directory...]}dependent  
 ```  
   
-## 備註  
- NMAKE 會尋找在目前目錄中的第一個相依，然後按照所指定的順序在目錄中尋找。  巨集可以指定部分或所有的搜尋路徑。  以括號 \({ }\) 括住目錄名稱；如果有多個目錄，請使用分號 \(;\) 分隔。  不可以使用空格或定位字元。  
+## <a name="remarks"></a>備註  
+ NMAKE 會尋找第一次在目前目錄中，然後在目錄中指定的順序相依性。 部分或全部的搜尋路徑，可以指定巨集。 將目錄名稱括在大括號 （{}）;以分號 （;） 分隔多個目錄。 不允許任何空格或定位字元。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [相依性](../build/dependents.md)

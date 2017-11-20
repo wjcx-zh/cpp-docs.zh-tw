@@ -1,31 +1,29 @@
 ---
-title: "連結器工具警告 LNK4044 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4044"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4044"
+title: "連結器工具警告 LNK4044 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4044
+dev_langs: C++
+helpviewer_keywords: LNK4044
 ms.assetid: f3a67a15-98c0-42ed-afcb-f5f9540e2671
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cdf4676e53d91052a19a29154be89ae770fe5dd0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具警告 LNK4044
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-無法辨認的選項 'option'；已忽略  
+# <a name="linker-tools-warning-lnk4044"></a>連結器工具警告 LNK4044
+無法辨認的選項 'option';忽略  
   
- 指定的選項不是工具的有效選項。  工具已忽略該選項。  
+ 將指定的選項不是有效的選項，這項工具。 此工具會忽略選項。  
   
- 若要檢視有效選項的清單，請在沒有引數或選項的狀態下執行該工具。
+ 若要查看有效的選項清單，請執行不含引數或選項的工具。

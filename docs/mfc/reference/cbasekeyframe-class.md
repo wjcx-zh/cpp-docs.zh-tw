@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bAdded
 - AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_bIsKeyframeAtOffset
 - AFXANIMATIONCONTROLLER/CBaseKeyFrame::m_keyframe
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBaseKeyFrame [MFC], CBaseKeyFrame
 - CBaseKeyFrame [MFC], AddToStoryboard
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: ae23fabc33d744265677e395310ba1f14dcb64ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 33c964dac3541df90fea98f71a13e9b99d85a232
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame 類別
 實作主要畫面格的基本功能。  
@@ -178,4 +175,3 @@ UI_ANIMATION_KEYFRAME m_keyframe;
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

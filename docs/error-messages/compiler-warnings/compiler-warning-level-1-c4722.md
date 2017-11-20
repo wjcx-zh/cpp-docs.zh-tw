@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4722
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4722
+f1_keywords: C4722
+dev_langs: C++
+helpviewer_keywords: C4722
 ms.assetid: d8660710-f67b-4f59-a5fd-59259475529e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: a88d734f0f17437efe3b4a60a3439135b7feec4e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 8616fe9834b0f73445bbcb8ffea4d35af3895b12
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4722"></a>編譯器警告 (層級 1) C4722
 'function' : 解構函式從未返回，可能有記憶體遺漏  

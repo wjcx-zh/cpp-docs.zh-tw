@@ -1,57 +1,58 @@
 ---
-title: "nearbyint、 nearbyintf、 nearbyintl1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nerabyintl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nearbyintl"
-  - "math/nearbyint"
-  - "math/narbyintf"
-  - "math/narbyintl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nearbyint 函式"
-  - "nearbyintf 函式"
-  - "nearbyintl 函式"
+title: "nearbyint、nearbyintf、nearbyintl1 | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nearbyint
+- nearbyintf
+- nerabyintl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nearbyint
+- nearbyintf
+- nearbyintl
+- math/nearbyint
+- math/narbyintf
+- math/narbyintl
+dev_langs: C++
+helpviewer_keywords:
+- nearbyint function
+- nearbyintf function
+- nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# nearbyint、 nearbyintf、 nearbyintl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定浮點數四捨五入成整數，並會將該值傳回浮點格式。  
+# <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
+將指定的浮點值四捨五入成整數，並以浮點數格式傳回該值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double nearbyint(  
@@ -76,33 +77,33 @@ long double nearbyintl(
   
 ```  
   
-#### 參數  
- \[in\] `x`  
+#### <a name="parameters"></a>參數  
+ [in] `x`  
  要捨入的值。  
   
-## 傳回值  
- 如果成功，傳回 `x`, ，四捨五入至最接近的整數，目前的捨入格式使用 fegetround 所定義。 否則，函式可能會傳回下列值之一︰  
+## <a name="return-value"></a>傳回值  
+ 如果成功，則傳回使用 fegetround 所定義之目前進位格式四捨五入成最接近整數的 `x`。 否則，此函式可能會傳回下列其中一個值：  
   
 |問題|返回|  
-|--------|--------|  
-|`x` ±INFINITY \=|±INFINITY 修改|  
-|`x` \= ±0|±0 修改|  
-|`x` \= NaN|NaN|  
+|-----------|------------|  
+|`x` = ±INFINITY|±INFINITY，未修改|  
+|`x` = ±0|±0，未修改|  
+|`x` = NAN|NaN|  
   
- 透過將不會報告錯誤 [\_matherr](../../c-runtime-library/reference/matherr.md); 尤其是，此函式不會報告任何 FE\_INEXACT 例外狀況。  
+ 錯誤不會透過 [_matherr](../../c-runtime-library/reference/matherr.md) 回報；具體來說，此函式不會回報任何 FE_INEXACT 例外狀況。  
   
-## 備註  
- 此函式的主要差異和 `rint` 是此函式不會產生不精確的浮動點例外狀況。  
+## <a name="remarks"></a>備註  
+ 此函式和 `rint` 之間的主要差異，即在於此函式不會引發不精確的浮點例外狀況。  
   
- 因為浮點數的最大值是正確的整數，這個函式將永不溢位來啦 ！相反地，輸出可能溢位的傳回值，在您使用函式的版本而定。  
+ 因為最大浮點值是精確的整數，所以此函式自身永遠不會溢位；相反地，根據您使用的函式版本，輸出可能會造成傳回值溢位。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C\+\+ 標頭|  
-|--------|----------|--------------|  
-|`nearbyint`, `nearbyintf`,  `nearbyintl`|\<math.h\>|\<cmath\>|  
+|函式|C 標頭|C++ 標頭|  
+|--------------|--------------|------------------|  
+|`nearbyint`,                `nearbyintf`,  `nearbyintl`|\<math.h>|\<cmath>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

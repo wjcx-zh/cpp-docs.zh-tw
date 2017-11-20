@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1601
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1601
+f1_keywords: C1601
+dev_langs: C++
+helpviewer_keywords: C1601
 ms.assetid: 25797c39-f085-4d75-9eab-159ecd36ef49
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 926c2c89307bdb2da15c5ecc580485ef6634c59a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1601"></a>嚴重錯誤 C1601
 不支援內嵌組譯碼的 opcode  

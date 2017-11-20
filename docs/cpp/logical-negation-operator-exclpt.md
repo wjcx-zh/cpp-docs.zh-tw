@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '!'
 - Not
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '! operator'
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 42d6135ab442a6f158fddd4ebfec1ef669fdecfd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cd8169d2281f1cbd77063eddc312fa93655b99dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="logical-negation-operator-"></a>邏輯負運算子：!
 ## <a name="syntax"></a>語法  

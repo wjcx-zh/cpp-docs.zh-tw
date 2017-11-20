@@ -1,47 +1,47 @@
 ---
-title: "偵錯提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "偵錯 [C++], 提供者"
-  - "OLE DB 提供者, 偵錯"
-  - "Visual C++ 偵錯工具"
-  - "Visual C++ 偵錯工具, 偵錯提供者"
+title: "偵錯您的提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [C++], providers
+- OLE DB providers, debugging
+- Visual C++ debugger, debugging providers
+- Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 03f8ebdf74dfcf8962b4308c467984d0a63c7968
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 偵錯提供者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-偵錯提供者有下列兩種方式：  
+# <a name="debugging-your-provider"></a>偵錯提供者
+有兩種方式可以偵錯您的提供者：  
   
--   由於提供者會在處理中建立，您可使用 OLE DB 消費者樣板來建立一些消費者程式碼，並正常地逐步執行提供者。  
+-   因為提供者會建立程序中，您可以建立某些通常使用的 OLE DB 消費者樣板和逐步執行提供者的取用者程式碼。  
   
--   您可使用隨附於 Visual C\+\+ 的 ITEST 公用程式。  
+-   您可以使用隨附於 Visual c + + ITEST 公用程式。  
   
-### 若要使用 ITEST 公用程式  
+### <a name="to-use-the-itest-utility"></a>若要使用 ITEST 公用程式  
   
-1.  開啟提供者專案。  
+1.  開啟提供者的專案。  
   
-2.  請在 \[專案\] 功能表上按一下 \[**設定**\]。  
+2.  在**專案**功能表上，按一下 **設定**。  
   
-3.  在 \[**屬性頁**\] 對話方塊中，按一下 \[偵錯\] 索引標籤。  
+3.  在**屬性頁**對話方塊中，按一下 [**偵錯**] 索引標籤。  
   
-4.  在 \[偵錯作業的執行檔\] 方塊內選取 ITEST 應用程式。  
+4.  在**偵錯工作階段的可執行檔**方塊中，選取 ITEST 應用程式。  
   
-5.  設定中斷點，然後按照平常方式進行偵錯。  
+5.  設定中斷點、，然後如常進行偵錯。  
   
-## 請參閱  
- [使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

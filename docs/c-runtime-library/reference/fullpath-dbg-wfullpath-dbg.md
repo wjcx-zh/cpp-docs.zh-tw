@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -38,30 +36,15 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: d4a89e5599823bb60d65f0845044185fbbe560dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
 使用 `malloc` 之偵錯版本來配置記憶體的 [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md) 版本。  
@@ -110,7 +93,7 @@ wchar_t *_wfullpath_dbg(
  每個函式會傳回包含絕對路徑名稱之緩衝區的指標 (`absPath`)。 若有錯誤 (例如，傳入 `relPath` 的值包含的磁碟機代號無效或是找不到，或是建立的絕對路徑名稱 (`absPath`) 的長度大於 `maxLength`)，函式會傳回 `NULL`。  
   
 ## <a name="remarks"></a>備註  
- `_fullpath_dbg`和`_wfullpath_dbg`函式完全相同`_fullpath`和`_wfullpath`不同之處在於，當`_DEBUG`是定義，這些函式使用的偵錯版本`malloc`，`_malloc_dbg`來配置記憶體，如果 NULL 當做第一個參數傳遞。 如需 `_malloc_dbg` 之偵錯版本的詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
+ `_fullpath_dbg`和`_wfullpath_dbg`函式完全相同`_fullpath`和`_wfullpath`不同之處在於，當`_DEBUG`是定義，這些函式使用的偵錯版本`malloc`，`_malloc_dbg`來配置記憶體，如果是 NULL當做第一個參數傳遞。 如需 `_malloc_dbg` 之偵錯版本的詳細資訊，請參閱 [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)。  
   
  在大多數情況中，您不需要明確地呼叫這些函式。 但您可以定義 `_CRTDBG_MAP_ALLOC` 旗標。 定義 `_CRTDBG_MAP_ALLOC` 時，呼叫 `_fullpath` 和 `_wfullpath` 會分別重新對應至 `_fullpath_dbg` 和 `_wfullpath_dbg`，且 `blockType` 會設為 `_NORMAL_BLOCK`。 因此，您不需要呼叫這些函式，除非您想要將堆積區塊標示為 `_CLIENT_BLOCK`。 如需詳細資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。  
   
@@ -127,7 +110,7 @@ wchar_t *_wfullpath_dbg(
 |`_fullpath_dbg`|\<crtdbg.h>|  
 |`_wfullpath_dbg`|\<crtdbg.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   

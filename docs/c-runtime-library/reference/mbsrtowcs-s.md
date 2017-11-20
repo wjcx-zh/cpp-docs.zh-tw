@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- mbsrtowcs_s
+apiname: mbsrtowcs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,37 +21,19 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbsrtowcs_s
-dev_langs:
-- C++
-helpviewer_keywords:
-- mbsrtowcs_s function
+f1_keywords: mbsrtowcs_s
+dev_langs: C++
+helpviewer_keywords: mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 920af1d0e06c7af71c3a98bf07f451f4d50f2659
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72489315ad23bf65086105c5d76da1edea48674d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 將目前的地區設定的多位元組字元字串，轉換為寬字元字串的表示。 這是 [mbsrtowcs](../../c-runtime-library/reference/mbsrtowcs.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -124,13 +104,13 @@ errno_t mbsrtowcs_s(
   
  如果 `count` 是特殊值 [_TRUNCATE](../../c-runtime-library/truncate.md)，則 `mbsrtowcs_s` 會盡量轉換符合目的緩衝區的字串量，同時仍留出空間給 Null 結束字元。  
   
- 如果 `mbsrtowcs_s` 成功轉換來源字串，則會將轉換後的字串大小 (寬字元) 和 null 結束字元，放入 `*``pReturnValue` (假設 `pReturnValue` 不是 null 指標)。 即使 `wcstr` 引數是 null 指標，且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果 `wcstr` 為 null 指標，`count` 會被忽略。  
+ 如果 `mbsrtowcs_s` 成功轉換來源字串，則會將轉換後的字串大小 (寬字元) 和 null 結束字元，放入 `*pReturnValue` (假設 `pReturnValue` 不是 null 指標)。 即使 `wcstr` 引數是 null 指標，且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果 `wcstr` 為 null 指標，`count` 會被忽略。  
   
  如果 `wcstr` 不是 null 指標，並由於達到結束的 null 字元而停止轉換，則會將 null 指標指派給 `mbstr` 所指向的指標物件。 否則會將超過已轉換之最後一個多位元組字元的位址指派給該物件 (如果有的話)。 這可讓後續的函式呼叫，從此呼叫的停止處重新啟動轉換。  
   
  如果 `mbstate` 為 null 指標，會使用程式庫內部 `mbstate_t` 轉換狀態靜態物件。 由於此內部靜態物件不是安全執行緒，我們建議您傳遞您自己的 `mbstate` 值。  
   
- 如果 `mbsrtowcs_s` 遇到不是目前地區設定中的有效多位元組字元，則會將 -1 放入 `*``pReturnValue`，將目的緩衝區 `wcstr` 設為空字串，將 `errno` 設為 `EILSEQ`，並傳回 `EILSEQ`。  
+ 如果 `mbsrtowcs_s` 遇到不是目前地區設定中的有效多位元組字元，則會將 -1 放入 `*pReturnValue`，將目的緩衝區 `wcstr` 設為空字串，將 `errno` 設為 `EILSEQ`，並傳回 `EILSEQ`。  
   
  如果 `mbstr` 和 `wcstr` 所指向的序列重疊，`mbsrtowcs_s` 的行為不明。 `mbsrtowcs_s` 會被目前地區設定的 LC_TYPE 分類影響。  
   

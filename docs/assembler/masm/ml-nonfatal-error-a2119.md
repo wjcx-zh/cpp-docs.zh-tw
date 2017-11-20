@@ -1,35 +1,32 @@
 ---
-title: "ML Nonfatal Error A2119 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2119"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2119"
+title: "ML 非嚴重錯誤 A2119 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2119
+dev_langs: C++
+helpviewer_keywords: A2119
 ms.assetid: 4d4ee6da-3a58-495c-a1da-c3a405c4c18d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4a55e1bcd66cb010e2ade8329a17b8ab8b118a2a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2119
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ml-nonfatal-error-a2119"></a>ML 非嚴重錯誤 A2119
 **必須指定語言類型**  
   
- 程序定義或原型未指定語言類型。  
+ 程序定義或原型未指定語言的型別。  
   
- 語言型別必須宣告每個程序定義或原型中，如果沒有指定預設的語言類型。  使用其中一個設定為預設語言型別的 [。模型](../../assembler/masm/dot-model.md) 指示詞， **選項蘭城**，或毫升命令列選項  **\/Gc** 或 **\/Gd**。  
+ 如果未指定預設語言類型，必須每個程序定義或原型中宣告語言類型。 使用設為預設語言型別的[。模型](../../assembler/masm/dot-model.md)指示詞，**選項 LANG**，ML 命令列選項或**/Gc**或**/Gd**。  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>另請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

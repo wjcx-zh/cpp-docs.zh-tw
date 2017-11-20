@@ -4,47 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4947
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4947
+f1_keywords: C4947
+dev_langs: C++
+helpviewer_keywords: C4947
 ms.assetid: 5a1d484e-b4c7-4de2-a145-d8dcfc2fc1d2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 08eb5385924ee4a01a942274b8c4ec10060b12c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9e0f02401fc9af9d9337b939b8acc33f290252d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4947"></a>編譯器警告 (層級 1) C4947
 'type_or_member' : 標記為過時  
   
-成員或型別已標示為過時的<xref:System.ObsoleteAttribute>類別。</xref:System.ObsoleteAttribute>  
+成員或類型已用 <xref:System.ObsoleteAttribute> 類別標記為過時。  
   
 ## <a name="example"></a>範例  
 下列範例會產生 C4947：  

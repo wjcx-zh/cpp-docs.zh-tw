@@ -1,46 +1,43 @@
 ---
-title: "num_threads | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "num_threads"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "num_threads OpenMP clause"
+title: "num_threads |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: num_threads
+dev_langs: C++
+helpviewer_keywords: num_threads OpenMP clause
 ms.assetid: 09a56fc8-25c7-43e4-bbb5-71cb955d0b93
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d07c2f59572b5e771013d5162f974d865ed97880
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# num_threads
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-設定執行緒小組中的執行緒數目。  
+# <a name="numthreads"></a>num_threads
+在執行緒小組設定執行緒的數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 num_threads(num)  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
  `num`  
  執行緒的數目  
   
-## 備註  
- `num_threads`子句有相同的功能[omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函式。  
+## <a name="remarks"></a>備註  
+ `num_threads`子句具有與相同的功能[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)函式。  
   
  `num_threads`適用於下列指示詞：  
   
@@ -48,12 +45,12 @@ num_threads(num)
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 如需詳細資訊，請參閱 [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md)。  
+ 如需詳細資訊，請參閱[2.3 parallel 建構](../../../parallel/openmp/2-3-parallel-construct.md)。  
   
-## 範例  
- 請參閱[parallel](../../../parallel/openmp/reference/parallel.md)的使用範例， `num_threads`子句。  
+## <a name="example"></a>範例  
+ 請參閱[平行](../../../parallel/openmp/reference/parallel.md)的使用範例`num_threads`子句。  
   
-## 請參閱  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>另請參閱  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

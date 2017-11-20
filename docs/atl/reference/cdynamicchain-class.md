@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,37 +14,21 @@ f1_keywords:
 - ATLWIN/ATL::CDynamicChain::CallChain
 - ATLWIN/ATL::CDynamicChain::RemoveChainEntry
 - ATLWIN/ATL::CDynamicChain::SetChainEntry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - message maps, chaining
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 54137760f2c1ee0f93fd8ad21238710f4b6a4a56
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: e66984fc7a7be45ea80dc894fcf0d11cc8febd45
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 類別
 這個類別會提供支援動態鏈結的訊息對應的方法。  
@@ -63,7 +46,7 @@ class CDynamicChain
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|建構函式。|  
 |[CDynamicChain:: ~ CDynamicChain](#dtor)|解構函式。|  
@@ -79,7 +62,7 @@ class CDynamicChain
 ## <a name="remarks"></a>備註  
  `CDynamicChain`管理訊息對應，啟用 Windows 訊息導向，在執行階段，加入另一個物件的訊息對應的集合。  
   
- 若要加入支援的訊息對應的動態鏈結，執行下列作業︰  
+ 若要加入支援的訊息對應的動態鏈結，執行下列作業：  
   
 -   衍生您的類別從`CDynamicChain`。 在訊息對應中，指定[CHAIN_MSG_MAP_DYNAMIC](message-map-macros-atl.md#chain_msg_map_dynamic)鏈結至另一個物件的預設訊息對應巨集。  
   
@@ -87,20 +70,20 @@ class CDynamicChain
   
 -   呼叫`CDynamicChain::SetChainEntry`來識別物件和訊息對應您要鏈結。  
   
- 例如，假設您的類別定義，如下所示︰  
+ 例如，假設您的類別定義，如下所示：  
   
- [!code-cpp[NVC_ATL_Windowing # 88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
  用戶端會接著呼叫`CMyWindow::SetChainEntry`:  
   
- [!code-cpp[NVC_ATL_Windowing # 89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
  其中`chainedObj`是鏈結的物件，而且是衍生自類別的執行個體`CMessageMap`。 現在，如果`myCtl`收到的訊息，不會處理`OnPaint`或`OnSetFocus`，視窗程序會指示訊息`chainedObj`的預設訊息對應。  
   
  如需訊息對應鏈結的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)本文 < ATL 視窗類別 >。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="callchain"></a>CDynamicChain::CallChain  
  Windows 會將訊息導向至另一個物件的訊息對應。  
@@ -202,4 +185,3 @@ BOOL SetChainEntry(
 ## <a name="see-also"></a>另請參閱  
  [CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

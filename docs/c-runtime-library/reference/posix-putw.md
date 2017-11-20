@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- putw
+apiname: putw
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,23 +20,19 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- putw
-dev_langs:
-- C++
-helpviewer_keywords:
-- putw function
+f1_keywords: putw
+dev_langs: C++
+helpviewer_keywords: putw function
 ms.assetid: a004fbb6-7643-4f3f-9ee1-87a23154d49a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: f0019cd078c60c933d2b1a22d0898e90b930f700
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="putw"></a>putw
 此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_putw](../../c-runtime-library/reference/putw.md)。

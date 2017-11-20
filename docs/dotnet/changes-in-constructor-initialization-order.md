@@ -1,49 +1,48 @@
 ---
-title: "建構函式初始設定順序的變更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "建構函式, C++"
+title: "建構函式初始設定順序變更 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: constructors, C++
 ms.assetid: 8892c38d-6bf7-4cf7-ac8f-15e052135a79
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bdcfea2339bfe7aac93192e88a6ec39ce919c596
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 建構函式初始設定順序的變更
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，類別建構函式的初始設定順序已變更。  
+# <a name="changes-in-constructor-initialization-order"></a>建構函式初始設定順序的變更
+類別建構函式的初始化順序已從 Managed Extensions for c + + Visual c + +。  
   
-## 建構函式初始設定順序的比較  
- 在 Managed Extensions for C\+\+ 中，建構函式初始設定的進行順序如下：  
+## <a name="comparison-of-constructor-initialization-order"></a>建構函式初始設定順序的比較  
+ 在 Managed Extensions for c + +，建構函式初始化發生順序如下：  
   
-1.  叫用基底類別的建構函式 \(如果有的話\)。  
+1.  建構函式的基底類別中，如果有的話，會叫用。  
   
-2.  評估類別的初始設定清單。  
+2.  會評估初始化清單中的類別。  
   
-3.  執行類別建構函式的程式碼主體。  
+3.  執行程式碼主體的類別建構函式。  
   
- 這個執行順序與原生 C\+\+ 程式設計遵循相同的慣例。  新的 Visual C\+\+ 語言規定 CLR 類別的執行順序如下：  
+ 執行此順序會遵循相同的慣例，與原生 c + + 程式設計。 新的 Visual c + + 語言所給定之下列的執行順序的 CLR 類別：  
   
-1.  評估類別的初始設定清單。  
+1.  會評估初始化清單中的類別。  
   
-2.  叫用基底類別的建構函式 \(如果有的話\)。  
+2.  建構函式的基底類別中，如果有的話，會叫用。  
   
-3.  執行類別建構函式的程式碼主體。  
+3.  執行程式碼主體的類別建構函式。  
   
- 請注意，這項變更只適用於 CLR 類別，[!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 中的原生類別仍然遵循以前的慣例。  不論兩者哪一種狀況，這些規則都會向上串聯，處理指定類別的整個階層鏈結。  
+ 請注意這項變更只適用於 CLR 類別。Visual c + + 中的原生類別仍然會遵照先前的慣例。 在這兩種情況下，這些規則都會向上串聯整個階層的鏈結提供的類別。  
   
- 請看看下列使用 Managed Extensions for C\+\+ 的程式碼範例：  
+ 請考慮下列程式碼範例使用 Managed Extensions for c + +:  
   
 ```  
 __gc class A  
@@ -68,15 +67,15 @@ private:
 };  
 ```  
   
- 遵循上述規定的建構函式初始設定順序，在建立 `B` 的新執行個體時，執行順序應該如下：  
+ 上述建構函式初始化順序規定，我們應該會看到下列順序執行時是新的類別的執行個體`B`建構：  
   
-1.  叫用基底類別 `A` 的建構函式。  `_n` 成員會初始化成為 `1`。  
+1.  基底類別的建構函式`A`叫用。 `_n`成員初始化為`1`。  
   
-2.  評估類別 `B` 的初始設定清單。  `_m` 成員會初始化成為 `1`。  
+2.  類別初始設定清單`B`評估。 `_m`成員初始化為`1`。  
   
-3.  執行類別 `B` 的程式碼主體。  
+3.  類別的程式碼主體`B`執行。  
   
- 現在看看使用新 Visual C\+\+ 語法的同一個程式碼：  
+ 現在請考慮在新的 Visual c + + 語法相同的程式碼：  
   
 ```  
 ref class A  
@@ -101,20 +100,20 @@ private:
 };  
 ```  
   
- 在新語法下，建構類別 `B` 之新執行個體時的執行順序：  
+ 當新的執行順序類別的執行個體`B`建構在新語法是：  
   
-1.  評估類別 `B` 的初始設定清單。  `_m` 成員會初始化成為 `0` \(`0` 是 `_m` 類別成員未初始化的值\)。  
+1.  類別初始設定清單`B`評估。 `_m`成員初始化為`0`(`0`是未初始化的值`_m`類別成員)。  
   
-2.  叫用基底類別 `A` 的建構函式。  `_n` 成員會初始化成為 `1`。  
+2.  基底類別的建構函式`A`叫用。 `_n`成員初始化為`1`。  
   
-3.  執行類別 `B` 的程式碼主體。  
+3.  類別的程式碼主體`B`執行。  
   
- 請注意，這些程式碼範例的語法雖類似，卻產生出不同的結果。  類別 `B` 的建構函式須依靠基底類別 `A` 的值來初始化它的成員，  但是類別 `A` 的建構函式卻尚未叫用。  當繼承類別取決於基底類別建構函式中即將進行的記憶體或資源配置時，這樣的相依性可能特別危險。  
+ 請注意類似的語法會產生不同的結果，如下列程式碼範例。 類別建構函式`B`取決於基底類別的值`A`初始化其成員。 不過，類別的建構函式`A`有尚未被叫用。 繼承的類別取決於基底類別建構函式中發生的記憶體或資源配置時，這類相依性可能會特別危險。  
   
-## 從 Managed Extensions for C\+\+ 移至 Visual C\+\+ 2010 的意義  
- 在許多情況下，程式設計師應該不會察覺類別建構函式執行順序的變更，因為基底類別並不了解繼承類別的行為。  但是如這些程式碼範例所示，當繼承類別的初始設定清單取決於基底類別成員的值時，繼承類別的建構函式可能受到嚴重影響。  當您將程式碼從 Managed Extensions for C\+\+ 移到新語法時，請考慮將這類建構函式移到類別建構函式主體中，就可以保證它的執行會最後發生。  
+## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>此意義從 Managed Extensions for c + + 移至 Visual c + + 2010年  
+ 在許多情況下類別建構函式的執行順序的變更應該是透明程式設計人員因為基底類別有沒有繼承的類別行為的概念。 不過，如下列程式碼範例所示，繼承類別的建構函式可能會大幅影響時的初始設定清單的值相依於基底類別成員。 當您移動您的程式碼從 Managed Extensions for c + + 的新語法時，請考慮將這類建構移至類別建構函式主體執行都一定時間。  
   
-## 請參閱  
- [Managed 類型 \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
+## <a name="see-also"></a>另請參閱  
+ [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [建構函式](../cpp/constructors-cpp.md)   
- [建構函式初始設定式](../misc/constructor-initializers.md)
+ 

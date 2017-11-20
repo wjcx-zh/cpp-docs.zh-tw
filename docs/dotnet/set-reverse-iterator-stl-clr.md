@@ -1,41 +1,39 @@
 ---
-title: "set::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator 成員 [STL/CLR]"
+title: "set:: reverse_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 40337a62-991c-424e-9559-a9040c07657a
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4bf8051e6b4c11a1995296f85ab08a52d91135be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# set::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用於受控制序列的反向迭代器類型。  
+# <a name="setreverseiterator-stlclr"></a>set::reverse_iterator (STL/CLR)
+受控制序列的反向迭代器類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## 備註  
- 此型別描述其可以為此控制序列當做反向迭代器之未指定型別 `T3` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型 `T3` 的物件，其可用作受控制序列的反向迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_reverse_iterator.cpp   
@@ -60,14 +58,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::const\_iterator](../dotnet/set-const-iterator-stl-clr.md)   
- [set::const\_reverse\_iterator](../dotnet/set-const-reverse-iterator-stl-clr.md)   
- [set::iterator](../dotnet/set-iterator-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: const_iterator (STL/CLR)](../dotnet/set-const-iterator-stl-clr.md)   
+ [set:: const_reverse_iterator (STL/CLR)](../dotnet/set-const-reverse-iterator-stl-clr.md)   
+ [set::iterator (STL/CLR)](../dotnet/set-iterator-stl-clr.md)

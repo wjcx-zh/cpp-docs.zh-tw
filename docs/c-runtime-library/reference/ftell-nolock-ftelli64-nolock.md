@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -38,30 +36,15 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4d0e042dc3d8bb7a5b956aeb834e51887e1b0138
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: df67b3dbacd4cf8fcc7652b55643371c5e59c025
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
 取得檔案指標的目前位置，而不需要鎖定執行緒。  

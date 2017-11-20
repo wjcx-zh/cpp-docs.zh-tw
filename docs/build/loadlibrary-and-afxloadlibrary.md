@@ -1,61 +1,60 @@
 ---
-title: "LoadLibrary 和 AfxLoadLibrary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LoadLibrary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxLoadLibrary 方法"
-  - "DLL [C++], AfxLoadLibrary"
-  - "DLL [C++], LoadLibrary"
-  - "明確連結 [C++]"
-  - "LoadLibrary 方法"
+title: "LoadLibrary 和 AfxLoadLibrary |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: LoadLibrary
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], AfxLoadLibrary
+- DLLs [C++], LoadLibrary
+- AfxLoadLibrary method
+- LoadLibrary method
+- explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7de79303e414691df7b069b55b82b2ba39f6ea1e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# LoadLibrary 和 AfxLoadLibrary
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-處理序會呼叫 [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) \(或 [AfxLoadLibrary](../Topic/AfxLoadLibrary.md)\) 來明確連結至 DLL。  如果函式成功，就會將指定的 DLL 對應到呼叫處理序的位址空間，並將控制代碼傳回給其他明確連結的函式 \(例如 `GetProcAddress` 和 `FreeLibrary`\) 所使用到的 DLL。  
+# <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
+處理呼叫[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 明確地連結到 DLL。 如果函式成功，它對應指定的 DLL 呼叫處理序的位址空間，並將控制代碼傳回至可與其他函式中明確連結的 DLL — 比方說，`GetProcAddress`和`FreeLibrary`。  
   
- `LoadLibrary` 會嘗試依照和隱含連結所用的相同搜尋順序來找出 DLL。  如果系統無法找出 DLL 或者如果進入點函式傳回 FALSE，`LoadLibrary` 就會傳回 NULL。  如果對 `LoadLibrary` 的呼叫指定已經對應到呼叫處理序位址空間中的 DLL 模組，則函式只會傳回 DLL 的控制代碼，並遞增模組的參考計數。  
+ `LoadLibrary`嘗試找出使用相同的搜尋順序用於隱含連結的 DLL。 如果系統找不到 DLL 或進入點函式會傳回 FALSE，`LoadLibrary`傳回 NULL。 如果呼叫`LoadLibrary`指定 DLL 模組已對應至呼叫的處理序的位址空間，此函數會傳回 DLL 並遞增的控制代碼之模組的參考計數。  
   
- 作業系統會在 DLL 擁有進入點函式時，呼叫執行緒內容中名為 `LoadLibrary` 的函式。  如果 DLL 已經連結至處理序，就不會呼叫進入點函式，因為先前對 `LoadLibrary` 的呼叫並沒有包含 `FreeLibrary` 函式的對應呼叫。  
+ 如果 DLL 進入點函式，作業系統會呼叫此函式呼叫的執行緒內容中`LoadLibrary`。 如果 DLL 已附加至處理序因為先前呼叫的進入點函式不會呼叫`LoadLibrary`具有對應呼叫`FreeLibrary`函式。  
   
- 對於會載入擴充 DLL 的 MFC 應用程式，我們建議您使用 `AfxLoadLibrary` 而不要使用 `LoadLibrary`。  `AfxLoadLibrary` 可在您呼叫 `LoadLibrary` 之前處理執行緒同步處理。  `AfxLoadLibrary` 的介面 \(函式原型\) 與 `LoadLibrary` 相同。  
+ 載入 MFC 擴充 Dll 的 MFC 應用程式，我們建議您使用`AfxLoadLibrary`而不是`LoadLibrary`。 `AfxLoadLibrary`處理執行緒的同步處理，才能呼叫`LoadLibrary`。 介面 （函式原型） 來`AfxLoadLibrary`相同`LoadLibrary`。  
   
- 如果 Windows 無法載入 DLL，處理序可以嘗試從錯誤復原。  例如，處理序將錯誤告知使用者，並且要求使用者指定 DLL 的另一個路徑。  
+ 如果 Windows 無法載入 DLL，處理程序可以嘗試從錯誤中復原。 例如，處理程序無法通知錯誤的使用者，並要求使用者指定的 DLL 的另一個路徑。  
   
 > [!IMPORTANT]
->  如果程式碼要在 Windows NT 4、Windows 2000 或 Windows XP \(SP1 以前的版本\) 下執行，請務必指定所有 DLL 的完整路徑。  在這些作業系統上，載入檔案時會先搜尋目前的目錄。  如果您不限定檔案的路徑，則可能會載入非預期的檔案。  
+>  如果程式碼是 Windows NT 4、 Windows 2000 或 Windows XP （SP1 之前的版本） 下執行，請確定指定的任何 Dll 的完整路徑。 在這些作業系統上，載入檔案時，會先搜尋目前的目錄。 如果不符合檔案的路徑，可能會載入並不是預期的檔案。  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [隱含連結](../build/linking-implicitly.md)  
+-   [如何以隱含方式連結到 DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [判斷要使用哪一個連結方法](../build/determining-which-linking-method-to-use.md)  
+-   [決定要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
--   [Windows 用來找出 DLL 的搜尋路徑](../build/search-path-used-by-windows-to-locate-a-dll.md)  
+-   [可由 Windows 來找出 DLL 的搜尋路徑](../build/search-path-used-by-windows-to-locate-a-dll.md)  
   
 -   [FreeLibrary 和 AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)  
   
 -   [GetProcAddress](../build/getprocaddress.md)  
   
-## 請參閱  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>另請參閱  
+ [Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)   
  [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187)   
- [AfxLoadLibrary](../Topic/AfxLoadLibrary.md)
+ [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

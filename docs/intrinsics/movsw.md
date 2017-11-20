@@ -1,70 +1,68 @@
 ---
-title: "__movsw | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsw 指令"
-  - "rep movsw 指令"
-  - "__movsw 內建"
+title: "__movsw |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsw
+dev_langs: C++
+helpviewer_keywords:
+- movsw instruction
+- rep movsw instruction
+- __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 23c2a1674795701b13b4cd28daf6c21160e90c2e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# __movsw
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="movsw"></a>__movsw
+**Microsoft 特定的**  
   
- 產生移動的字串 \(`rep movsw`\) 的指令。  
+ 產生的移動字串 (`rep movsw`) 指令。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-void __movsw(   
-   unsigned short* Dest,   
-   unsigned short* Source,   
-   size_t Count   
+void __movsw(   
+   unsigned short* Dest,   
+   unsigned short* Source,   
+   size_t Count   
 );  
 ```  
   
-#### 參數  
- \[out\] `Dest`  
+#### <a name="parameters"></a>參數  
+ [輸出] `Dest`  
  作業的目的地。  
   
- \[in\] `Source`  
+ [in] `Source`  
  作業的來源。  
   
- \[in\] `Count`  
- 要複製的文字數。  
+ [in] `Count`  
+ 若要複製的字組數目。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__movsw`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__movsw`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 結果會是第一個`Count`所指的單字`Source`會被複製到`Dest`字串。  
+## <a name="remarks"></a>備註  
+ 結果是第一個`Count`所指單字`Source`複製到`Dest`字串。  
   
- 只有使用與內建這個常式。  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // movsw.cpp  
@@ -86,8 +84,11 @@ int main()
 }  
 ```  
   
-  **0 1 2 3 4 5 6 7 8 9**   
-## 結束 Microsoft 特定  
+```Output  
+0 1 2 3 4 5 6 7 8 9   
+```  
   
-## 請參閱  
+**END Microsoft 特定的**  
+  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

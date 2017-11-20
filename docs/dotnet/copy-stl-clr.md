@@ -1,46 +1,43 @@
 ---
-title: "copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copy 函式 [STL/CLR]"
+title: "複製 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::copy
+dev_langs: C++
+helpviewer_keywords: copy function [STL/CLR]
 ms.assetid: f6738535-fde6-446e-a797-bf2b457c2bff
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 525d7c0499c0cdacfdc7b2b12b64d8d099de3197
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定從來源範圍的到目的範圍，逐一查看項目來源序列並將這些值的方向是往前項目值的新位置。  
+# <a name="copy-stlclr"></a>copy (STL/CLR)
+從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以正向方向指派它們新位置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _InIt, class _OutIt> inline  
     _OutIt copy(_InIt _First, _InIt _Last, _OutIt _Dest);  
 ```  
   
-## 備註  
- 這個函式產生相同的行為做為 STL 函式的 `copy`。  如需詳細資訊，請參閱[copy](../Topic/copy.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`copy`。 如需詳細資訊，請參閱[複製](http://msdn.microsoft.com/Library/f1fec7da-e01b-40f1-b5bd-6b81e304cae1)。  
   
-## 需求  
- **標題:** \<cliext\/演算法\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
- **命名空間:** cliext  
+ **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

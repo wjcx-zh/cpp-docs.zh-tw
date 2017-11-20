@@ -1,35 +1,34 @@
 ---
-title: "變更大綱 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "變更大綱 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: c0bbbd6b-c5c4-44cf-a6ca-c1010c377e9d
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a17ad8aca031d6345f3ded4839dbb543c1edf133
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 變更大綱 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個大綱顯示從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，語言中一些變更的範例。  如需詳細資訊，請遵循每個項目隨附的連結。  
+# <a name="outline-of-changes-ccli"></a>變更大綱 (C++/CLI)
+此外框會顯示某些變更的範例中的語言，從 Managed Extensions for c + +，Visual c + +。 請遵循隨附的每個項目，如需詳細資訊的連結。  
   
-## 無雙底線關鍵字  
- 所有關鍵字前面的雙底線都已移除，只有一個例外。  所以，`__value` 變成 `value`，而 `__interface` 變成 `interface` 等等。  若要避免使用者程式碼中的關鍵字與識別項之間出現名稱衝突，就要先將關鍵字視為內容。  
+## <a name="no-double-underscore-keywords"></a>沒有雙底線關鍵字  
+ 已移除所有關鍵字前面兩個底線，有一個例外狀況。 因此，`__value`變成`value`，和`__interface`變成`interface`，依此類推。 若要避免名稱衝突之間關鍵字和使用者程式碼中的識別項，關鍵字是主要視為內容。  
   
- 如需詳細資訊，請參閱[語言關鍵字 \(C\+\+\/CLI\)](../dotnet/language-keywords-cpp-cli.md)。  
+ 請參閱[語言關鍵字 (C + + /CLI)](../dotnet/language-keywords-cpp-cli.md)如需詳細資訊。  
   
-## 類別宣告  
- Managed Extensions 語法：  
+## <a name="class-declarations"></a>類別宣告  
+ 受管理的擴充功能語法：  
   
 ```  
 __gc class Block {};                           // reference class  
@@ -49,10 +48,10 @@ ref class Shape abstract {};       // abstract class
 ref class Shape2D sealed: Shape{}; // derived class  
 ```  
   
- 如需詳細資訊，請參閱[Managed 類型 \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)。  
+ 請參閱[Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)如需詳細資訊。  
   
-## 物件宣告  
- Managed Extensions 語法：  
+## <a name="object-declaration"></a>物件宣告  
+ 受管理的擴充功能語法：  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -75,10 +74,10 @@ public ref class Form1 : System::Windows::Forms::Form {
 };  
 ```  
   
- 如需詳細資訊，請參閱[CLR 參考類別物件的宣告](../dotnet/declaration-of-a-clr-reference-class-object.md)。  
+ 請參閱[CLR 參考類別物件的宣告](../dotnet/declaration-of-a-clr-reference-class-object.md)如需詳細資訊。  
   
-### Managed 堆積配置  
- Managed Extensions 語法：  
+### <a name="managed-heap-allocation"></a>Managed 的堆積配置  
+ 受管理的擴充功能語法：  
   
 ```  
 Button* button1 = new Button; // managed heap  
@@ -94,10 +93,10 @@ int * pi1 = new int;                   // native heap
 Int32^ pi2 = gcnew Int32;              // managed heap  
 ```  
   
- 如需詳細資訊，請參閱[CLR 參考類別物件的宣告](../dotnet/declaration-of-a-clr-reference-class-object.md)。  
+ 請參閱[CLR 參考類別物件的宣告](../dotnet/declaration-of-a-clr-reference-class-object.md)如需詳細資訊。  
   
-### No 物件的追蹤參考  
- Managed Extensions 語法：  
+### <a name="a-tracking-reference-to-no-object"></a>沒有物件的追蹤參考  
+ 受管理的擴充功能語法：  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -123,45 +122,45 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- 如需詳細資訊，請參閱[CLR 參考類別物件的宣告](../dotnet/declaration-of-a-clr-reference-class-object.md)。  
+ 請參閱[CLR 參考類別物件的宣告](../dotnet/declaration-of-a-clr-reference-class-object.md)如需詳細資訊。  
   
-## 陣列宣告  
- CLR 陣列已重新設計。  它類似 stl `vector` 範本集合，但是會對應至基礎 `System::Array` 類別，也就是說，它不是範本實作。  
+## <a name="array-declaration"></a>陣列宣告  
+ CLR 陣列已經重新設計。 類似於 stl`vector`範本集合，但對應至基礎`System::Array`類別-也就是它不是樣板實作。  
   
- 如需詳細資訊，請參閱[CLR 陣列的宣告](../dotnet/declaration-of-a-clr-array.md)。  
+ 請參閱[CLR 陣列的宣告](../dotnet/declaration-of-a-clr-array.md)如需詳細資訊。  
   
-### 將陣列當做參數  
- Managed Extensions 陣列語法：  
+### <a name="array-as-parameter"></a>做為參數陣列  
+ 受管理的擴充功能陣列語法：  
   
 ```  
 void PrintValues( Object* myArr __gc[]);   
 void PrintValues( int myArr __gc[,,]);   
 ```  
   
- 新的陣列語法：  
+ 新陣列語法：  
   
 ```  
 void PrintValues( array<Object^>^ myArr );  
 void PrintValues( array<int,3>^ myArr );  
 ```  
   
-### 將陣列當做傳回型別  
- Managed Extensions 陣列語法：  
+### <a name="array-as-return-type"></a>將陣列當做傳回型別  
+ 受管理的擴充功能陣列語法：  
   
 ```  
 Int32 f() [];   
 int GetArray() __gc[];  
 ```  
   
- 新的陣列語法：  
+ 新陣列語法：  
   
 ```  
 array<Int32>^ f();  
 array<int>^ GetArray();  
 ```  
   
-### 本機 CLR 陣列的縮寫初始化  
- Managed Extensions 陣列語法：  
+### <a name="shorthand-initialization-of-local-clr-array"></a>本機 CLR 陣列的縮寫初始化  
+ 受管理的擴充功能陣列語法：  
   
 ```  
 int GetArray() __gc[] {  
@@ -173,7 +172,7 @@ int GetArray() __gc[] {
 }  
 ```  
   
- 新的陣列語法：  
+ 新陣列語法：  
   
 ```  
 array<int>^ GetArray() {  
@@ -184,22 +183,22 @@ array<int>^ GetArray() {
 }  
 ```  
   
-### 明確的 CLR 陣列宣告  
- Managed Extensions 陣列語法：  
+### <a name="explicit-clr-array-declaration"></a>明確的 CLR 陣列宣告  
+ 受管理的擴充功能陣列語法：  
   
 ```  
 Object* myArray[] = new Object*[2];  
 String* myMat[,] = new String*[4,4];  
 ```  
   
- 新的陣列語法：  
+ 新陣列語法：  
   
 ```  
 array<Object^>^ myArray = gcnew array<Object^>(2);  
 array<String^,2>^ myMat = gcnew array<String^,2>(4,4);  
 ```  
   
- 新加入語言：在 gcnew 之後的明確陣列初始化  
+ 語言的新手： 後面 gcnew 明確的陣列初始設定  
   
 ```  
 // explicit initialization list follow gcnew   
@@ -208,8 +207,8 @@ array<Object^>^ myArray =
    gcnew array<Object^>(4){ 1, 1, 2, 3 };  
 ```  
   
-## 純量屬性  
- Managed Extensions 屬性語法：  
+## <a name="scalar-properties"></a>純量屬性  
+ 受管理的擴充屬性語法：  
   
 ```  
 public __gc __sealed class Vector {  
@@ -232,11 +231,11 @@ public:
    {  
       double get()             { return _x; }  
       void   set( double newx ){ _x = newx; }  
-   } // Note: no semi-colon …  
+   } // Note: no semi-colon  
 };  
 ```  
   
- 新加入語言：trivial 屬性  
+ 語言的新手： trivial 屬性  
   
 ```  
 public ref class Vector sealed {   
@@ -247,10 +246,10 @@ public:
 };  
 ```  
   
- 如需詳細資訊，請參閱[屬性宣告](../dotnet/property-declaration.md)。  
+ 請參閱[屬性宣告](../dotnet/property-declaration.md)如需詳細資訊。  
   
-## 索引屬性  
- Managed Extensions 索引屬性語法：  
+## <a name="indexed-properties"></a>索引屬性  
+ Managed 的 Extensions 編製索引的屬性語法：  
   
 ```  
 public __gc class Matrix {  
@@ -262,7 +261,7 @@ public:
 };  
 ```  
   
- 新的索引屬性語法：  
+ 新的索引的屬性語法：  
   
 ```  
 public ref class Matrix {  
@@ -276,7 +275,7 @@ public:
 };  
 ```  
   
- 新加入語言：類別層級索引屬性  
+ 語言的新手： 類別層級索引的屬性  
   
 ```  
 public ref class Matrix {  
@@ -296,10 +295,10 @@ public:
 };  
 ```  
   
- 如需詳細資訊，請參閱[屬性索引宣告](../dotnet/property-index-declaration.md)。  
+ 請參閱[屬性索引宣告](../dotnet/property-index-declaration.md)如需詳細資訊。  
   
-## 多載運算子  
- Managed Extensions 運算子多載語法：  
+## <a name="overloaded-operators"></a>多載運算子  
+ 受管理的擴充功能運算子多載語法：  
   
 ```  
 public __gc __sealed class Vector {  
@@ -342,10 +341,10 @@ int main() {
 }  
 ```  
   
- 如需詳細資訊，請參閱[多載運算子](../dotnet/overloaded-operators.md)。  
+ 請參閱[多載運算子](../dotnet/overloaded-operators.md)如需詳細資訊。  
   
-## 轉換運算子  
- Managed Extensions 轉換運算子語法：  
+## <a name="conversion-operators"></a>轉換運算子  
+ 受管理的擴充功能轉換運算子語法：  
   
 ```  
 __gc struct MyDouble {  
@@ -366,10 +365,10 @@ public:
 };  
 ```  
   
- 如需詳細資訊，請參閱[轉換運算子的變更](../dotnet/changes-to-conversion-operators.md)。  
+ 請參閱[變更為轉換運算子](../dotnet/changes-to-conversion-operators.md)如需詳細資訊。  
   
-## 介面成員的明確覆寫  
- Managed Extensions 明確覆寫語法：  
+## <a name="explicit-override-of-an-interface-member"></a>介面成員的明確覆寫  
+ Managed 的 Extensions 明確覆寫語法：  
   
 ```  
 public __gc class R : public ICloneable {  
@@ -393,10 +392,10 @@ public ref class R : public ICloneable {
 };  
 ```  
   
- 如需詳細資訊，請參閱[介面成員的明確覆寫](../dotnet/explicit-override-of-an-interface-member.md)。  
+ 請參閱[介面成員的明確覆寫](../dotnet/explicit-override-of-an-interface-member.md)如需詳細資訊。  
   
-## 私用虛擬函式  
- Managed Extensions 私用虛擬函式語法：  
+## <a name="private-virtual-functions"></a>私用虛擬函式  
+ 受管理的擴充功能私用虛擬函式語法：  
   
 ```  
 __gc class Base {  
@@ -428,10 +427,10 @@ public:
 };  
 ```  
   
- 如需詳細資訊，請參閱[私用虛擬函式](../dotnet/private-virtual-functions.md)。  
+ 請參閱[私用虛擬函式](../dotnet/private-virtual-functions.md)如需詳細資訊。  
   
-## CLR 列舉型別  
- Managed Extensions 列舉語法：  
+## <a name="clr-enum-type"></a>CLR 列舉類型  
+ 受管理的擴充功能列舉語法：  
   
 ```  
 __value enum e1 { fail, pass };  
@@ -451,33 +450,33 @@ public enum class e2 : unsigned short {
 };  
 ```  
   
- 除了這個小小的語法變更以外，CLR 列舉型別的行為在不同方面也有所變更：  
+ 這個小語法變更，除了 CLR 列舉型別的行為已變更在數種方式：  
   
 -   不再支援 CLR 列舉的向前宣告。  
   
--   內建算術型別和 Object 類別階層之間的多載解析，已於 Managed Extensions 和 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之間回復。  副作用是，CLR 列舉無法再隱含地轉換成算術型別。  
+-   內建算術類型和物件的類別階層架構之間的多載解析已反轉之間受管理的擴充功能和 Visual c + +。 副作用，CLR 列舉會不再隱含轉換成算術類型。  
   
--   在新語法中，CLR 列舉會維護本身的範圍，但在 Managed Extensions 則不是如此。  先前，列舉值在列舉的包含範圍中是可見的；而現在，列舉值在列舉範圍內是封裝的。  
+-   在新語法中，CLR 列舉會維持其本身的範圍，這不是這樣，在 Managed Extensions。 列舉值之前，在包含列舉; 的範圍內為可見現在，列舉值會封裝在列舉的範圍內。  
   
- 如需詳細資訊，請參閱[CLR 列舉類型](../dotnet/clr-enum-type.md)。  
+ 請參閱[CLR 列舉型別](../dotnet/clr-enum-type.md)如需詳細資訊。  
   
-## 移除 \_\_box 關鍵字  
- Managed Extensions Boxing 語法：  
+## <a name="removal-of-box-keyword"></a>移除的 __box 關鍵字  
+ Boxing 語法的 managed 擴充功能：  
   
 ```  
 Object *o = __box( 1024 ); // explicit boxing  
 ```  
   
- 新的 Boxing 語法：  
+ 新的 boxing 語法：  
   
 ```  
 Object ^o = 1024; // implicit boxing  
 ```  
   
- 如需詳細資訊，請參閱[Boxed 值的追蹤控制代碼](../dotnet/a-tracking-handle-to-a-boxed-value.md)。  
+ 請參閱[追蹤處理為 Boxed 值](../dotnet/a-tracking-handle-to-a-boxed-value.md)如需詳細資訊。  
   
-## Pin 指標  
- Managed Extensions Pin 指標語法：  
+## <a name="pinning-pointer"></a>Pin 指標  
+ Pin 指標語法的 managed 擴充功能：  
   
 ```  
 __gc struct H { int j; };  
@@ -488,7 +487,7 @@ int main() {
 };  
 ```  
   
- 新的 Pin 指標語法：  
+ 新的 pin 指標語法：  
   
 ```  
 ref struct H { int j; };  
@@ -499,10 +498,10 @@ int main() {
 }  
 ```  
   
- 如需詳細資訊，請參閱[實值類型語意](../dotnet/value-type-semantics.md)。  
+ 請參閱[實值類型語意](../dotnet/value-type-semantics.md)如需詳細資訊。  
   
-## \_\_typeof 關鍵字變成 typeid  
- Managed Extensions typeof 語法：  
+## <a name="typeof-keyword-becomes-typeid"></a>__typeof 關鍵字會變成 typeid  
+ 受管理的擴充功能 typeof 語法：  
   
 ```  
 Array* myIntArray =   
@@ -516,9 +515,10 @@ Array^ myIntArray =
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
- 如需詳細資訊，請參閱[typeof 變成 T::typeid](../dotnet/typeof-goes-to-t-typeid.md)。  
+ 請參閱[typeof 變成 t:: typeid](../dotnet/typeof-goes-to-t-typeid.md)如需詳細資訊。  
   
-## 請參閱  
- [C\+\+\/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)   
- [\(NOTINBUILD\)Managed Extensions for C\+\+ Syntax Upgrade Checklist](http://msdn.microsoft.com/zh-tw/edbded88-7ef3-4757-bd9d-b8f48ac2aada)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>另請參閱  
+ [C + + /CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)   
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
+
+

@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- R
-dev_langs:
-- C++
+f1_keywords: R
+dev_langs: C++
 helpviewer_keywords:
 - L constant
 - escape sequences
@@ -25,16 +22,15 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c7254d4cc8dcbbaa0916a77ee6c52da05dc8ec9c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  

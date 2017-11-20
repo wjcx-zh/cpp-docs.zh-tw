@@ -1,41 +1,39 @@
 ---
-title: "hash_map::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type 成員 [STL/CLR]"
+title: "hash_map:: difference_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 7c85c347-245d-4d2c-a507-e13599fbeff8
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6d9c484c97c28092668b6efa1d3e92afee000e86
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapdifferencetype-stlclr"></a>hash_map::difference_type (STL/CLR)
 兩個項目之間的帶正負號距離的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## 備註  
- 型別描述可能為負數的項目計數。  
+## <a name="remarks"></a>備註  
+ 此類型描述負可能是項目計數。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_difference_type.cpp   
@@ -71,14 +69,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**end\(\)\-begin\(\) \= 3**  
-**begin\(\)\-end\(\) \= \-3**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::size\_type](../dotnet/hash-map-size-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::size_type (STL/CLR)](../dotnet/hash-map-size-type-stl-clr.md)

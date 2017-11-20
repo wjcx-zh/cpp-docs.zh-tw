@@ -1,66 +1,64 @@
 ---
-title: "實作介面精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.impl.interface.overview"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "實作介面精靈 [C++]"
+title: "實作介面精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.impl.interface.overview
+dev_langs: C++
+helpviewer_keywords: Implement Interface Wizard [C++]
 ms.assetid: 947c329e-0815-4ca7-835e-c41dfeb75f9e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2c2179d3745f42164ef8cf70162ed560b331d783
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 實作介面精靈
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個精靈可實作 COM 物件的介面。  許多介面的實作都包含在 Visual Studio 和 Windows 提供的 COM 程式庫中。  當建立了物件的執行個體時，介面實作就和物件產生關聯，同時提供物件所提供的服務。  
+# <a name="implement-interface-wizard"></a>實作介面精靈
+此精靈會實作 COM 物件的介面。 許多介面的實作會包含在 Visual Studio 和 Windows 中提供的 COM 程式庫。 時建立該物件的執行個體，並提供物件所提供的服務與物件相關聯的介面實作。  
   
- 如需介面和實作的討論，請參閱 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] 中的[介面和介面實作](http://msdn.microsoft.com/library/windows/desktop/ms694356)。  
+ 如需的介面和實作的討論，請參閱[介面及介面實作](http://msdn.microsoft.com/library/windows/desktop/ms694356)Windows SDK 中。  
   
- **實作介面來源**  
- 指定建立該介面的型別程式庫位置。  
+ **從實作介面**  
+ 指定的位置建立該介面的類型程式庫。  
   
-|選項|描述|  
-|--------|--------|  
-|**專案**|型別程式庫為專案一部分。|  
-|**登錄**|型別程式庫已登錄於系統中。  \[可用的型別程式庫\] 中會列出已登錄的型別程式庫|  
-|**檔案**|當型別程式庫包含在一個檔案中時便不一定要在系統中登錄，  您必須在 \[位置\] 中提供該檔案的位置|  
+|選項|說明|  
+|------------|-----------------|  
+|**Project**|類型程式庫是專案的一部分。|  
+|**登錄**|類型程式庫會在系統中註冊。 已註冊型別程式庫中所列**可用的型別程式庫**。|  
+|**檔案**|類型程式庫不一定登錄在系統中，但是包含在檔案中。 您必須提供中的檔案位置**位置**。|  
   
  **可用的型別程式庫**  
- 顯示可用的型別程式庫，其中包含可實作的介面定義。  如果您按一下 \[實作介面來源\] 下的 \[檔案\]，便無法變更這個方塊。  
+ 顯示可用的型別程式庫，其中包含您可以實作的介面定義。 如果您按一下**檔案**下**實作介面從**，此方塊，便無法變更。  
   
- **Location**  
- 顯示目前在 \[可用的型別程式庫\] 清單中選取的型別程式庫位置。  如果您選取了 \[實作介面來源\] 下的 \[檔案\]，請按一下省略按鈕，以找尋包含要使用之型別程式庫的檔案。  
+ **位置**  
+ 顯示的類型程式庫中目前選取位置**可用的型別程式庫**清單。 如果您選取**檔案**下**實作介面從**，按一下省略符號按鈕找出包含使用類型程式庫的檔案。  
   
  **介面**  
- 顯示介面，而介面的定義包含在 \[可用的型別程式庫\] 方塊目前所選取的型別程式庫中。  
+ 顯示的介面的定義包含類型程式庫中目前選取**可用的型別程式庫**方塊。  
   
 > [!NOTE]
->  和所選取物件已實作之介面同名的介面不會顯示在 \[介面\] 方塊中。  
+>  因為已實作所選取的物件不會顯示在具有相同名稱的介面**介面**方塊。  
   
-|傳送按鈕|描述|  
-|----------|--------|  
-|**\>**|將目前在 \[介面\] 清單中選取的介面名稱加入至 \[實作介面\] 清單。|  
-|**\>\>**|將 \[介面\] 清單中所有可用介面名稱加入至 \[實作介面\] 清單。|  
-|**\<**|移除目前在 \[實作介面\] 清單中選取的介面名稱。|  
-|**\<\<**|移除列在 \[實作介面\] 清單中的所有介面名稱。|  
+|傳送按鈕|說明|  
+|---------------------|-----------------|  
+|**>**|將加入至**實作介面**中目前選取的介面名稱**介面**清單。|  
+|**>>**|將加入至**實作介面**清單中可用的所有介面名稱**介面**都清單。|  
+|**<**|移除在目前選取的介面名稱**實作介面**清單。|  
+|**<\<**|移除所有介面目前所列的名稱**實作介面**清單。|  
   
  **實作介面**  
- 顯示要在物件上實作的已選取介面名稱。  
+ 會顯示您已選取要在物件上實作的介面名稱。  
   
 > [!NOTE]
->  如果包含一個以上衍生自 `IDispatch` 的介面，或是如果您嘗試實作的介面是衍生自已經在您的類別上的其他介面，則必須清楚區分 COM\_MAP 項目。  如需詳細資訊，請參閱 [COM\_INTERFACE\_ENTRY2](../Topic/COM_INTERFACE_ENTRY2.md)。  
+>  如果您包含多個介面衍生自`IDispatch`，或者如果您嘗試實作的介面，衍生自另一個介面上您的類別，則您必須區分 COM_MAP 項目。 請參閱[COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2)如需詳細資訊。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [實作介面](../ide/implementing-an-interface-visual-cpp.md)

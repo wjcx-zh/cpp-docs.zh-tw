@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DGradientBrush::m_colorInterpolationGamma
 - AFXRENDERTARGET/CD2DGradientBrush::m_extendMode
 - AFXRENDERTARGET/CD2DGradientBrush::m_pGradientStops
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DGradientBrush [MFC], CD2DGradientBrush
 - CD2DGradientBrush [MFC], Destroy
@@ -27,16 +25,15 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 96d916467c524d54f58a9bdd1095e1d58d7ca0a3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0fdfbf838b8c0e294c8ddbd550a982c89b129df2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 類別
 CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 類別的基底類別。  
@@ -163,4 +160,3 @@ ID2D1GradientStopCollection* m_pGradientStops;
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

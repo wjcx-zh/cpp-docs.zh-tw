@@ -1,54 +1,54 @@
 ---
-title: "如何：使用 PInvoke 封送處理結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料封送處理 [C++], 結構"
-  - "Interop [C++], 結構"
-  - "封送處理 [C++], 結構"
-  - "平台叫用 [C++], 結構"
+title: "如何： 使用 PInvoke 封送處理結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], structures
+- platform invoke [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-caps.latest.revision: 30
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 28
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 52fa9aece3f31cf20029e58352d459f91bb56526
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 PInvoke 封送處理結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文件將說明如何使用 P\/Invoke，從提供 <xref:System.String> 執行個體的 Managed 函式來呼叫接受 C\-Style 字串的原生函式。  雖然通常建議您使用 C\+\+ Interop 功能而不是 P\/Invoke \(因為 P\/Invoke 只提供很少的編譯時期錯誤報告、不具型別安全，且實作繁瑣\)，但如果 Unmanaged API 是封裝成 DLL，而且沒有原始程式碼可用，則 P\/Invoke 是唯一選擇。  否則請參閱下列文件：  
+# <a name="how-to-marshal-structures-using-pinvoke"></a>如何：使用 PInvoke 封送處理結構
+本文件說明如何在原生函式接受 C 樣式字串可以從提供的執行個體的 managed 函式呼叫<xref:System.String>使用 P/Invoke。 雖然我們建議您使用 c + + Interop 功能，而不是 P/Invoke P/Invoke 提供極少的編譯時間錯誤報告，因為不是類型安全，就必須等待冗長當 unmanaged 應用程式開發介面會封裝為 DLL，而且不是原始碼實作可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：  
   
--   [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [How to: Marshal Structures Using PInvoke](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
+-   [如何：使用 PInvoke 封送處理結構](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
   
- 根據預設，原生和 Managed 結構是以不同的方式配置在記憶體中，因此，若要順利將結構傳遞過 Managed\/Unmanaged 的界限，必須執行額外的步驟以保持資料完整性。  
+ 根據預設，原生和 managed 結構配置以不同的方式在記憶體中，因此已成功傳遞結構的 managed/unmanaged 的界限之間需要額外的步驟，以保留資料完整性。  
   
- 本文件將說明定義原生結構的 Managed 對應項所需的步驟，以及如何將產生的結構傳遞至 Unmanaged 函式。  這份文件假設使用簡單的結構，即不包含字串或指標的結構。  如需非 Blittable 互通性的詳細資訊，請參閱[使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  P\/Invoke 不能以非 Blittable 型別做為傳回值。  在 Managed 和 Unmanaged 程式碼中，Blittable 型別具有相同的表示法。  如需詳細資訊，請參閱[Blittable 和非 Blittable 類型](../Topic/Blittable%20and%20Non-Blittable%20Types.md)。  
+ 本文件說明來定義原生結構，和如何產生結構可以傳遞至 unmanaged 函式的 managed 對等項目所需的步驟。 本文件假設簡單結構 — 那些不包含字串或指標，會使用。 如需非 blittable 互通性資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能有非 blittable 類型當做傳回值。 Blittable 類型在 managed 和 unmanaged 程式碼中有相同的表示法。 如需詳細資訊，請參閱[Blittable 和非 Blittable 類型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)。  
   
- 若要在 Managed\/Unmanaged 界限之間封送處理 \(Marshaling\) 簡單的 Blittable 結構，每一個原生結構的 Managed 版本都必須先行定義。  這些結構可以具有任何合法的名稱；除了資料配置之外，這兩個結構的原生和 Managed 版本並沒有任何關聯性 \(Relationship\)。  因此，Managed 版本所包含欄位的大小和順序，都必須與原生版本中的欄位相同，這一點非常重要的\(由於沒有機制能夠確保結構的 Managed 和原生版本完全相等，因此到了執行階段，不相容的情形會變得很明顯。  程式設計人員必須負責確保兩個結構具有相同的資料配置\)。  
+ 封送處理簡單，blittable 結構的 managed/unmanaged 的界限之間需要先定義受管理的每個原生結構的版本。 這些結構可以具有任何合法的名稱。兩個結構以外的資料版面配置的原生和 managed 版本之間沒有任何關聯性。 因此，很重要的受管理的版本包含欄位都會使用相同的大小和原生版本的順序相同。 （沒有任何機制可確保該結構的 managed 和原生版本完全相等，因此不相容的情況會明顯直到執行階段。 它是程式設計人員的責任在於確保兩個結構有相同的資料配置。）  
   
- 由於 Managed 結構的成員有時會為了效能而重新整理，因此，這時候必須使用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性，以指示結構是循序配置的。  明確地將結構封裝 \(Packing\) 設定設為與原生結構所使用的設定相同，也是不錯的做法\(雖然 Visual C\+\+ 預設會在這兩種 Managed 程式碼中使用 8 個位元組結構封裝\)。  
+ 因為 managed 結構的成員就會有時重新排列，基於效能的目的，是為了使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性來指出此結構依序配置。 它也是個不錯的主意明確設定 封裝設定成原生結構使用相同的結構。 （雖然根據預設，Visual c + + 使用 managed 程式碼封裝的 8 位元組結構）。  
   
-1.  接下來，請使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 宣告對應到接受此結構之任何 Unmanaged 函式的進入點 \(Entry Point\)，但在函式簽章 \(Signature\) 中，請使用此結構的 Managed 版本，因為如果此結構的兩種版本都使用相同的名稱，就會是假設 \(Moot\) 點。  
+1.  接下來，使用<xref:System.Runtime.InteropServices.DllImportAttribute>宣告對應至接受結構的任何 unmanaged 函式的進入點，但使用的函式簽章中的結構為想法，如果您使用相同的名稱，這兩個版本的受管理的版本結構。  
   
-2.  現在，Managed 程式碼可以將結構的 Managed 版本當做真的 Managed 函式一般，傳遞到 Unmanaged 函式。  這些結構可以利用傳值 \(By Value\) 或傳址 \(By Reference\) 的方式傳遞，如下列範例所示。  
+2.  現在 managed 程式碼可以傳遞結構的 managed 的版本給 unmanaged 函式就好像它們是實際 managed 函式。 這些結構可以傳遞值或參考，如下列範例所示。  
   
-## 範例  
- 下列程式碼由 Unmanaged 和 Managed 的模組所組成。  Unmanaged 模組是一個 DLL，定義了名為 Location 的結構和名為 GetDistance 的函式，該函式會接受 Location 結構的兩個執行個體。  第二個模組是 Managed 命令列應用程式，它會匯入 GetDistance 函式，但是會依照 Location 結構的 Managed 對等項 \(MLocation\) 來定義該函式。  實際上，結構的兩個版本可能會使用同一個名稱；但是，在這裡使用不同的名稱，以示範依 Managed 版本定義 DllImport 原型 \(Prototype\)。  
+## <a name="example"></a>範例  
+ 下列程式碼是由 unmanaged 和 managed 的模組所組成。 Unmanaged 的模組會定義結構位置和呼叫可接受兩個執行個體的位置結構 GetDistance 函式呼叫的 DLL。 第二個模組是受管理的命令列應用程式匯入 GetDistance 函式，但定義根據對等位置結構 （MLocation） 的受管理項目。 在實務上相同的名稱可能用於兩個版本的結構。不過，不同的名稱是此處用來示範 DllImport 原型的定義是根據受管理的版本。  
   
- Managed 模組是使用 \/clr 編譯的，但是 \/clr:pure 也一樣可以執行。  
+ 受管理的模組使用 /clr，但 /clr: pure 的運作方式。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
- 請注意，DLL 的任何部分不會都公開給使用傳統 \#include 指示詞的 Managed 程式碼。  事實上 DLL 只會在執行階段存取，因此，如果以 DllImport 匯入的函式發生問題，在編譯時期並不會偵測出來。  
+ 請注意，DLL 的任何部分公開給 managed 程式碼使用的傳統 #include 指示詞。 事實上，DLL 會在執行階段存取，因此將不會在編譯時期偵測函式使用 DllImport 匯入的問題。  
   
 ```  
 // TraditionalDll3.cpp  
@@ -94,7 +94,7 @@ void InitLocation(Location* lp) {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // MarshalStruct_pi.cpp  
@@ -133,9 +133,12 @@ int main() {
 }  
 ```  
   
-  **\[unmanaged\] loc1\(0,0\) loc2\(100,100\)**  
-**\[managed\] distance \= 141.42135623731**  
-**\[unmanaged\] 正在初始化 location...**  
-**\[managed\] x\=50 y\=50**   
-## 請參閱  
- [在 C\+\+ 中使用明確的 PInvoke \(DllImport 屬性\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+```Output  
+[unmanaged] loc1(0,0) loc2(100,100)  
+[managed] distance = 141.42135623731  
+[unmanaged] Initializing location...  
+[managed] x=50 y=50  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

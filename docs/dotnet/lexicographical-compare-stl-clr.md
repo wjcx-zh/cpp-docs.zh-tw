@@ -1,32 +1,30 @@
 ---
-title: "lexicographical_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::lexicographical_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lexicographical_compare 函式 [STL/CLR]"
+title: "lexicographical_compare (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::lexicographical_compare
+dev_langs: C++
+helpviewer_keywords: lexicographical_compare function [STL/CLR]
 ms.assetid: 9ec217f3-5523-4f90-a0cc-8fb7dbe4946b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4991994ddd7dc6ea5205434aada4c513593be9f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# lexicographical_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-由兩個序列之間的項目比較項目判斷較小者兩者。  
+# <a name="lexicographicalcompare-stlclr"></a>lexicographical_compare (STL/CLR)
+逐一比較兩個序列之間的每個項目，判斷兩者較小者。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _InIt1, class _InIt2> inline  
@@ -37,13 +35,13 @@ template<class _InIt1, class _InIt2, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式的行為與 STL 函式 `lexicographical_compare` 相同。  如需詳細資訊，請參閱[lexicographical\_compare](../Topic/lexicographical_compare.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`lexicographical_compare`。 如需詳細資訊，請參閱[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)。  
   
-## 需求  
- **標頭：** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

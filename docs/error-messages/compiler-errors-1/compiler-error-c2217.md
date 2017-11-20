@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2217
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2217
+f1_keywords: C2217
+dev_langs: C++
+helpviewer_keywords: C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 0f1795534af1332859fd1a33a137573df82643b4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2217"></a>編譯器錯誤 C2217
 'attribute1' 需要 'attribute2'  

@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr
 - ATLBASE/ATL::CComHeapPtr::CComHeapPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComHeapPtr class
+dev_langs: C++
+helpviewer_keywords: CComHeapPtr class
 ms.assetid: bd08b53d-da2b-43ab-a79c-e7c8dbbc5994
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 0e5196a98b8fd76b2e7e791fd2cd9549099a1cc9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: d851e2c6fb4892bd65cf26ea747a6b99a8006cee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr 類別
 用來管理堆積指標的智慧型指標類別。  
@@ -65,7 +47,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|建構函式。|  
   
 ## <a name="remarks"></a>備註  
- `CComHeapPtr`衍生自`CHeapPtr`，但使用[CComAllocator](../../atl/reference/ccomallocator-class.md)配置的記憶體使用 COM 常式。 請參閱[CHeapPtr](../../atl/reference/cheapptr-class.md)和[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)可用的方法。  
+ `CComHeapPtr`衍生自`CHeapPtr`，但是會使用[CComAllocator](../../atl/reference/ccomallocator-class.md)配置的記憶體使用 COM 常式。 請參閱[CHeapPtr](../../atl/reference/cheapptr-class.md)和[CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)可用的方法。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CHeapPtrBase](../../atl/reference/cheapptrbase-class.md)  
@@ -75,7 +57,7 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
  `CComHeapPtr`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ##  <a name="ccomheapptr"></a>CComHeapPtr::CComHeapPtr  
  建構函式。  
@@ -90,11 +72,10 @@ explicit CComHeapPtr(T* pData) throw();
  現有的 `CComHeapPtr` 物件。  
   
 ### <a name="remarks"></a>備註  
- 堆積的指標可以選擇性地建立使用現有`CComHeapPtr`物件。 如果是的話，新`CComHeapPtr`物件負責管理新的指標和資源。  
+ 堆積指標可以選擇性地建立使用現有`CComHeapPtr`物件。 如果是的話，新`CComHeapPtr`物件負責管理新的指標和資源。  
   
 ## <a name="see-also"></a>另請參閱  
  [CHeapPtr 類別](../../atl/reference/cheapptr-class.md)   
  [CHeapPtrBase 類別](../../atl/reference/cheapptrbase-class.md)   
  [CComAllocator 類別](../../atl/reference/ccomallocator-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

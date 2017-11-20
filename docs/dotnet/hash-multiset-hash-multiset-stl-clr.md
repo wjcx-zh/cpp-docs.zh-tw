@@ -1,32 +1,30 @@
 ---
-title: "hash_multiset::hash_multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::hash_multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multiset 成員 [STL/CLR]"
+title: "hash_multiset:: hash_multiset (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::hash_multiset
+dev_langs: C++
+helpviewer_keywords: hash_multiset member [STL/CLR]
 ms.assetid: 1b224c60-b714-4ed5-9234-79b61b92a953
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f6345e94ff115d14ae7e94d0243682ed8b27b28b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::hash_multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構一個容器物件。  
+# <a name="hashmultisethashmultiset-stlclr"></a>hash_multiset::hash_multiset (STL/CLR)
+建構容器物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 hash_multiset();  
@@ -49,106 +47,92 @@ hash_multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### 參數  
- first  
- 要插入的範圍開頭。  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要插入範圍的開頭。  
   
  hashfn  
- 對應的金鑰雜湊函式到 Bucket。  
+ 雜湊值區的對應索引鍵的函式。  
   
  last  
- 要插入的範圍結尾。  
+ 要插入範圍的結尾。  
   
  pred  
- 為控制序列預先定義的述詞。  
+ 排序受控制序列的述詞。  
   
- right  
- 要插入的物件或範圍 。  
+ 向右  
+ 要插入的物件或範圍。  
   
-## 備註  
- 建構函式:  
+## <a name="remarks"></a>備註  
+ 建構函式：  
   
  `hash_multiset();`  
   
- 初始化受控制序列中沒有項目，使用預設定序述詞 `key_compare()`以及預設的雜湊函式。  您會用它來指定一個空的初始控制序列，與預設定序述詞和雜湊函數。  
+ 使用預設排序述詞，初始化受控制的序列的任何項目， `key_compare()`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，使用預設排序述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
  `explicit hash_multiset(key_compare^ pred);`  
   
- 初始化受控制序列中沒有項目，使用預設定序述詞 `pred`以及預設的雜湊函式。  您會用它來指定一個空的初始控制序列，與指定定序述詞和預設雜湊函數。  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和預設雜湊函數。  
   
- 建構函式:  
+ 建構函式：  
   
  `hash_multiset(key_compare^ pred, hasher^ hashfn);`  
   
- 初始化受控制序列中沒有項目，使用預設定序述詞 `pred`以及雜湊函式`hashfn`。  您會用它來指定一個空的初始控制序列，與指定定序述詞和雜湊函數。  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
  `hash_multiset(hash_multiset<Key>% right);`  
   
- 初始化受控制序列中沒有項目，使用序列 `[``right``.`[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` `right``.`[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())`，使用預設定序述詞以及預設的雜湊函式。  您會用它來指定為由雜湊組合物件 `right`控制的序列的拷貝的初始控制序列，以及預設定序述詞和雜湊函式。  
+ 初始化受控制的序列與順序 [`right.begin()`， `right.end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_multiset 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
  `hash_multiset(hash_multiset<Key>^ right);`  
   
- 初始化受控制序列中沒有項目，使用序列 `[``right``->`[hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)`(),` `right``->`[hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`())`，使用預設定序述詞以及預設的雜湊函式。  您會用它來指定為由雜湊組合物件 `right`控制的序列的拷貝的初始控制序列，以及預設定序述詞和雜湊函式。  
+ 初始化受控制的序列與順序 [`right->begin()`， `right->end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_multiset 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multiset(InIter first, InIter last);`  
   
- `hash_multiset(InIter first, InIter last);`  
+ 初始化受控制的序列與順序 [`first`， `last`)、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來製作受控制的序列的其他順序，排序述詞和雜湊函式的預設值。  
   
- 初始化受控制序列中沒有項目，使用序列 `[``first``,` `last``)`，使用預設定序述詞以及預設的雜湊函式。  您會用它來做受控制序列複製另一個序列，與預設定序述詞和雜湊函式。  
+ 建構函式：  
   
- 建構函式:  
+ `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和預設雜湊函數。  
   
- `hash_multiset(InIter first, InIter last,`  
+ 建構函式：  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_multiset(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- 初始化受控制序列中沒有項目，使用序列 `[``first``,` `last``)``pred`，使用預設定序述詞以及預設的雜湊函式。  您會用它來做受控制序列複製另一個序列，與指定定序述詞和預設雜湊函式。  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和雜湊函式。  
   
- 建構函式:  
-  
- `template<typename InIter>`  
-  
- `hash_multiset(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- 初始化受控制序列中沒有項目，使用序列 `[``first``,` `last``)``pred`，使用預設定序述詞以及預設的雜湊函式`hashfn`。  您會用它來做受控制序列複製另一個序列，與指定定序述詞和雜湊函式。  
-  
- 建構函式:  
+ 建構函式：  
   
  `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 初始化控制序列與列舉值所指定的 `right`序列，與預設定序述詞以及預設的雜湊函式。  您會用它加上預設定序述詞來作為列舉值所描述的另一個序列複製的控制序列和雜湊函式。  
+ 初始化受控制的序列的列舉值所指定的順序與`right`、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來進行受控制的序列排序述詞和雜湊函式的預設值所列舉值，描述的另一個序列的複本。  
   
- 建構函式:  
+ 建構函式：  
   
- `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和預設雜湊函式與所描述的另一個序列的複本。  
   
- 初始化控制序列與列舉值所指定的 `right`序列，與預設定序述詞`pred`以及預設的雜湊函式。  您會用它加上指定序述詞來作為列舉值所描述的另一個序列複製的控制序列和預設雜湊函式。  
+ 建構函式：  
   
- 建構函式:  
+ `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和雜湊函式與所描述的另一個序列的複本。  
   
- `key_compare^ pred, hasher^ hashfn);`  
+## <a name="example"></a>範例  
   
- 初始化控制序列與列舉值所指定的 `right`序列，與預設定序述詞`pred`以及預設的雜湊函式`hashfn`。  您會用它加上指定定序述詞來作為列舉值所描述的另一個序列複製的控制序列和雜湊函式。  
-  
-## 範例  
-  
-```  
+```cpp  
 // cliext_hash_multiset_construct.cpp   
 // compile with: /clr   
 #include <cliext/hash_set>   
@@ -255,26 +239,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**  
- **c b a**  
- **a b c**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+ c b a  
+  
+ a b c  
+ a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::generic\_container](../dotnet/hash-multiset-generic-container-stl-clr.md)   
- [hash\_multiset::operator\=](../dotnet/hash-multiset-operator-assign-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::generic_container (STL/CLR)](../dotnet/hash-multiset-generic-container-stl-clr.md)   
+ [hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)

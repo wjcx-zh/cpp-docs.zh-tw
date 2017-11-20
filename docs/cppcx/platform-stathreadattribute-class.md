@@ -1,59 +1,123 @@
 ---
-title: "Platform::STAThreadAttribute 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::STAThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::STAThreadAttribute 類別"
+title: "Platform:: stathreadattribute 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- COLLECTION/Platform::Platform
+- COLLECTION/Platform::Platform::STAThreadAttribute constructor 1
+- COLLECTION/Platform::Platform::STAThreadAttribute::Equals
+- COLLECTION/Platform::Platform::STAThreadAttribute::GetHashCode
+- COLLECTION/Platform::Platform::STAThreadAttribute::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::STAThreadAttribute Class
 ms.assetid: f97960fc-e673-4d9e-910a-54c8415411c4
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 54e4b7621879252b14fa0fe71c837439da147df5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::STAThreadAttribute 類別
-指出應用程式的執行緒模型為單一執行緒 Apartment \(STA\)。  
+# <a name="platformstathreadattribute-class"></a>Platform::STAThreadAttribute 類別
+指出應用程式的執行緒模型為單一執行緒 Apartment (STA)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 public ref class STAThreadAttribute sealed : Attribute  
 ```  
   
-## Members  
+### <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[STAThreadAttribute 建構函式](../cppcx/stathreadattribute-constructor-1.md)|初始化類別的新執行個體。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[STAThreadAttribute 建構函式 1](#ctor)|初始化類別的新執行個體。|  
   
-### 公用方法  
- STAThreadAttribute 屬性繼承自 [Platform::Object 類別](../cppcx/platform-object-class.md)。 STAThreadAttribute 也會多載或具有下列成員：  
+### <a name="public-methods"></a>公用方法  
+ STAThreadAttribute 屬性繼承自[platform:: object 類別](../cppcx/platform-object-class.md)。 STAThreadAttribute 也會多載或具有下列成員：  
   
-|名稱|描述|  
-|--------|--------|  
-|[STAThreadAttribute::Equals](../cppcx/stathreadattribute-equals.md)|判斷指定的物件是否等於目前的物件。|  
-|[STAThreadAttribute::GetHashCode](../cppcx/stathreadattribute-gethashcode.md)|傳回這個執行個體的雜湊碼。|  
-|[STAThreadAttribute::ToString](../cppcx/stathreadattribute-tostring.md)|傳回代表目前物件的字串。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[STAThreadAttribute::Equals](#equals)|判斷指定的物件是否等於目前的物件。|  
+|[STAThreadAttribute::GetHashCode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
+|[STAThreadAttribute::ToString](#tostring)|傳回代表目前物件的字串。|  
   
-## 繼承階層  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `Platform`  
   
-## 需求  
- **標頭：**collection.h  
+### <a name="requirements"></a>需求  
+ **標頭：** collection.h  
   
- **命名空間：**Platform  
+ **命名空間：** Platform  
+
+
+
+## <a name="ctor"></a> STAThreadAttribute constructor
+初始化 STAThreadAttribute 類別的新執行個體。  
   
-## 請參閱  
- [\(NOTINBUILD\) Platform 命名空間](http://msdn.microsoft.com/zh-tw/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>語法  
+  
+```cpp  
+public:STAThreadAttribute()  
+```  
+  
+
+
+## <a name="equals"></a>STAThreadAttribute::Equals
+判斷指定的物件是否等於目前的物件。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp  
+public:virtual override bool Equals(  Object^ obj)  
+```  
+  
+### <a name="parameters"></a>參數  
+ obj  
+ 要比較的物件。  
+  
+### <a name="return-value"></a>傳回值  
+ 如果物件相等則為 `true`，否則為 `false`。  
+  
+
+
+## <a name="gethashcode"></a>STAThreadAttribute::GetHashCode
+傳回這個執行個體的雜湊碼。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp  
+public:int GetHashCode()  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 這個執行個體的雜湊碼。  
+  
+
+
+## <a name="tostring"></a>STAThreadAttribute::ToString
+傳回代表目前物件的字串。  
+  
+### <a name="syntax"></a>語法  
+  
+```cpp  
+public:String^ ToString()  
+```  
+  
+### <a name="return-value"></a>傳回值  
+ 表示目前物件的字串。  
+  
+
+  
+## <a name="see-also"></a>另請參閱  
+ [Platform 命名空間](platform-namespace-c-cx.md)

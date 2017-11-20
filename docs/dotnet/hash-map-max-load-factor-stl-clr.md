@@ -1,49 +1,46 @@
 ---
-title: "hash_map::max_load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::max_load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_load_factor 成員 [STL/CLR]"
+title: "hash_map::max_load_factor (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::max_load_factor
+dev_langs: C++
+helpviewer_keywords: max_load_factor member [STL/CLR]
 ms.assetid: 7c0773c9-a918-4e61-ae95-e45148f1ff24
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e9dab1452d736d85bdf029608516465fefef7997
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::max_load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取得或設定最大元素每個 Bucket。  
+# <a name="hashmapmaxloadfactor-stlclr"></a>hash_map::max_load_factor (STL/CLR)
+取得或設定每個 Bucket 最大項目數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
-#### 參數  
- new\_factor  
- 要儲存的新的最大的負載荷因素。  
+#### <a name="parameters"></a>參數  
+ new_factor  
+ 新的最大載入因數來儲存。  
   
-## 備註  
- 第一成員函式傳回目前儲存的最大的負載荷因素。  您會用它來判斷最大平均 Bucket 大小。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式會傳回目前儲存的最大載入因數。 您可以使用它來判斷最大平均貯體大小。  
   
- 第二個成成員函式以 `new_factor`取代存放的最大的負載荷因素。  自動重新雜湊不會發生在後續插入之前。  
+ 第二個成員函式會取代使用存放區的最大載入因數`new_factor`。 沒有自動重新後續插入之前發生。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_max_load_factor.cpp   
@@ -89,23 +86,28 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0.0234375**  
-**max\_load\_factor\(\) \= 0.25**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::bucket\_count](../dotnet/hash-map-bucket-count-stl-clr.md)   
- [hash\_map::load\_factor](../dotnet/hash-map-load-factor-stl-clr.md)   
- [hash\_map::rehash](../dotnet/hash-map-rehash-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)   
+ [hash_map::load_factor (STL/CLR)](../dotnet/hash-map-load-factor-stl-clr.md)   
+ [hash_map::rehash (STL/CLR)](../dotnet/hash-map-rehash-stl-clr.md)

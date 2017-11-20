@@ -1,41 +1,39 @@
 ---
-title: "hash_set::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator 成員 [STL/CLR]"
+title: "hash_set:: reverse_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 24180a51-7426-4319-9e59-65a5957de54e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3e3204dff0adc4a2879a2ab5807171529548f27f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用於受控制序列的反向迭代器類型。  
+# <a name="hashsetreverseiterator-stlclr"></a>hash_set::reverse_iterator (STL/CLR)
+受控制序列的反向迭代器類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## 備註  
- 此型別描述其可以為此控制序列當做反向迭代器之未指定型別 `T3` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型 `T3` 的物件，其可用作受控制序列的反向迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_reverse_iterator.cpp   
@@ -60,14 +58,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::const\_iterator](../dotnet/hash-set-const-iterator-stl-clr.md)   
- [hash\_set::const\_reverse\_iterator](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)   
- [hash\_set::iterator](../dotnet/hash-set-iterator-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: const_iterator (STL/CLR)](../dotnet/hash-set-const-iterator-stl-clr.md)   
+ [hash_set:: const_reverse_iterator (STL/CLR)](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)   
+ [hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)

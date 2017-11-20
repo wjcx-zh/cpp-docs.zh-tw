@@ -1,68 +1,66 @@
 ---
-title: "CDBErrorInfo::GetErrorRecords | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBErrorInfo.GetErrorRecords"
-  - "ATL.CDBErrorInfo.GetErrorRecords"
-  - "ATL::CDBErrorInfo::GetErrorRecords"
-  - "GetErrorRecords"
-  - "CDBErrorInfo::GetErrorRecords"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetErrorRecords 方法"
+title: "Cdberrorinfo:: Geterrorrecords |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBErrorInfo.GetErrorRecords
+- ATL.CDBErrorInfo.GetErrorRecords
+- ATL::CDBErrorInfo::GetErrorRecords
+- GetErrorRecords
+- CDBErrorInfo::GetErrorRecords
+dev_langs: C++
+helpviewer_keywords: GetErrorRecords method
 ms.assetid: 07746774-bcca-4833-8f55-a619e9777c17
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 584915a27a6f980933cd9aa71f67f6a223f743be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CDBErrorInfo::GetErrorRecords
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdberrorinfogeterrorrecords"></a>CDBErrorInfo::GetErrorRecords
 取得指定之物件的錯誤記錄。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT GetErrorRecords(   
-   IUnknown* pUnk,   
-   const IID& iid,   
-   ULONG* pcRecords    
+      HRESULT GetErrorRecords(   
+   IUnknown* pUnk,   
+   const IID& iid,   
+   ULONG* pcRecords    
 ) throw( );  
-HRESULT GetErrorRecords(   
-   ULONG* pcRecords    
+HRESULT GetErrorRecords(   
+   ULONG* pcRecords    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *pUnk*  
- \[in\] 連結至可以取得錯誤記錄的物件。  
+ [in]要取得的錯誤記錄物件的介面。  
   
  `iid`  
- \[in\] 介面的 IID 與錯誤。  
+ [in]與錯誤相關聯之介面的 IID。  
   
  *pcRecords*  
- \[out\] \(以一為起始\) 計數的指標錯誤記錄。  
+ [out]指標 （一個為基礎） 之錯誤記錄的計數。  
   
-## 傳回值  
- 標準版 `HRESULT`  
+## <a name="return-value"></a>傳回值  
+ 標準 `HRESULT`。  
   
-## 備註  
- 使用函式的第一個要檢查衍生錯誤資訊的介面。  否則，請使用第二個表單。  
+## <a name="remarks"></a>備註  
+ 如果您想要檢查的介面，以取得錯誤資訊，請使用第一種形式的函式。 否則，請使用第二種形式。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDBErrorInfo 類別](../../data/oledb/cdberrorinfo-class.md)

@@ -1,40 +1,39 @@
 ---
-title: "使用 ODBC 和驅動程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC 驅動程式, 使用"
+title: "使用 ODBC 和驅動程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: ODBC drivers, using
 ms.assetid: ae1bf357-4ca4-4748-9336-8fc317f294ab
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7256f202e5e3b2e974f736875be18c8952884b64
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 使用 ODBC 和驅動程式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ODBC 允許您撰寫獨立於單一資料庫管理系統 \(DBMS\) 的應用程式。  您可撰寫可在多種資料庫管理系統 \(ODBC\) 上運作的應用程式 \(只要使用者擁有正確的特定 DBMS 之 ODBC 驅動程式\)。  
+# <a name="work-with-odbc-and-drivers"></a>使用 ODBC 和驅動程式
+ODBC，可讓您撰寫不依賴只有一個資料庫管理系統 (DBMS) 的應用程式。 您可以撰寫一個應用程式可操作您的使用者具有正確的 DBMS 專屬的 ODBC 驅動程式的多個 dbms。  
   
-## 本章節內容  
+## <a name="in-this-section"></a>本章節內容  
   
--   [在執行階段決定 ODBC 資料來源的結構描述](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
+-   [在執行階段決定的 ODBC 資料來源的結構描述](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
   
--   [使用 ODBC 管理員取得驅動程式說明](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+-   [取得驅動程式描述使用 ODBC 管理員](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [取得 ODBC 驅動程式的線上說明](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
+-   [取得線上說明 ODBC 驅動程式](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)  
   
--   [以程式設計方式建立 ODBC 資料來源資料表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
+-   [以程式設計方式建立 ODBC 資料來源中的資料表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)  
   
--   [在 MFC 中直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
+-   [MFC 中的直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## 請參閱  
- [開放式資料庫連接 \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>另請參閱  
+ [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

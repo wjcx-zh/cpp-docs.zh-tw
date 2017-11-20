@@ -1,67 +1,65 @@
 ---
-title: "參考類型的 C++ 堆疊語意 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "參考類型, 的 C++ 堆疊語意"
+title: "參考類型的 c + + 堆疊語意 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 182478ffdd0175fc2b5f80b4a534b85bb97190a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 參考類型的 C++ 堆疊語意
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用 `new` 運算子，在 Visual C\+\+ 2005 以前，參考型別的執行個體只能建立，會在記憶體回收堆積上的物件。  不過，您現在可以建立參考型別的執行個體使用您用來建立原生型別執行個體在堆疊上的語法相同。  因此，您不需要使用 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 建立參考型別的物件。  然後，當物件超出範圍時，編譯器會呼叫物件的解構函式。  
+# <a name="c-stack-semantics-for-reference-types"></a>參考類型的 C++ 堆疊語意
+Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個體，這麼做會在記憶體回收堆積上建立物件。 不過，您現在可以使用與您用來在堆疊上建立原生類型之執行個體相同的語法建立參考類型的執行個體。 因此，您不需要使用[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)建立參考類型的物件。 然後，當物件超出範圍時，編譯器會呼叫物件的解構函式。  
   
-## 備註  
- 使用堆疊語意時，就會參考型別的執行個體，則編譯器會在內部建立在記憶體回收堆積的執行個體 \(使用 `gcnew`\)。  
+## <a name="remarks"></a>備註  
+ 當您使用堆疊語意建立參考類型的執行個體時，編譯器會在內部的記憶體回收堆積上建立執行個體 (使用 `gcnew`)。  
   
- 當函式的簽章或傳回型別是由值參考型別的執行個體，則函式會在中繼資料中標記為需要特殊處理 \(與 modreq\)。  這個特殊處理由 Visual C\+\+ 用戶端目前只提供;其他語言目前不支援使用參考型別建立搭配使用的消耗的函式或資料。  
+ 當函式的簽章或傳回類型是一個傳值參考類型的執行個體時，函式在中繼資料中會被標記為需要進行特殊處理 (使用 modreq)。 這項特殊處理目前只提供給 Visual C++ 用戶端使用，其他語言目前不支援使用以堆疊語意建立之參考類型的函式或資料。  
   
- 其中一個理由使用 `gcnew` \(動態配置\) 而不是堆疊語意為，但如果該型別沒有解構函式。  此外，除了 Visual C\+\+ 之外，如果您想要讓函式由語言使用參考型別會以函式簽章的堆疊語意是不可能的。  
+ 其中一個使用 `gcnew` (動態配置) 而不使用堆疊語意的理由是該類型沒有解構函式。 此外，如果想要讓 Visual C++ 以外的語言使用函式，則無法在函式簽章中使用以堆疊語意建立的參考類型。  
   
- 編譯器不會產生參考型別的複製建構函式。  因此，如果您在簽章使用由值參考型別的函式，您必須定義參考型別的複製建構函式。  參考型別的複製建構函式有下列形式的簽章: `R(R%){}`。  
+ 編譯器不會為參考類型產生複製建構函式。 因此，如果您在簽章中定義了一個使用傳值參考類型的函式，則必須定義參考類型的複製建構函式。 參考類型的複製建構函式具有下列形式的簽章：`R(R%){}`。  
   
- 編譯器不會產生參考型別的預設指派運算子。  指派運算子可讓您建立物件使用堆疊語意並以使用堆疊語意建立的現有物件。  參考型別的指派運算子有下列形式的簽章: `void operator=( R% ){}`。  
+ 編譯器不會為參考類型產生預設指派運算子。 指派運算子可讓您建立使用堆疊語意的物件，並以使用堆疊語意建立的現有物件對其進行初始化。 參考類型的指派運算子具有下列形式的簽章：`void operator=( R% ){}`。  
   
- 如果型別的解構函式版本重要資源和您為參考型別使用堆疊語意，您不需要明確呼叫解構函式 \(或呼叫 `delete`\)。  如需參考型別中可為解構函式的型別之詳細資訊，請參閱[Visual C\+\+ 中的解構函式和完成項](../misc/destructors-and-finalizers-in-visual-cpp.md)。  
+ 如果類型的解構函式會釋放重要的資源，而您使用參考類型的堆疊語意，則不需要明確呼叫解構函式 (或呼叫 `delete`)。 如需有關解構函式中參考類型的詳細資訊，請參閱[解構函式與完成項中如何： 定義和使用類別和結構 (C + + CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。  
   
- 由編譯器產生的指派運算子會遵循通常 Standard C\+\+ 規則與下列動作:  
+ 由編譯器產生的指派運算子會遵循一般的標準 C++ 規則，並提供下列新增功能：  
   
--   型別為控制代碼參考型別的任何非靜態資料成員是淺層複製 \(視為型別是指標\) 的非靜態資料成員。  
+-   類型為參考類型之控制代碼的任何非靜態資料成員將會進行淺層複製 (視為指標類型的非靜態資料成員)。  
   
--   如果型別為實值型別的非靜態資料成員是淺層複製。  
+-   類型為實值類型的任何非靜態資料成員都會進行淺層複製。  
   
--   型別是參考型別的執行個體的非靜態資料成員會叫用呼叫參考型別的複製建構函式。  
+-   類型為參考類型之執行個體的任何非靜態資料成員都會叫用參考類型之複製建構函式的呼叫。  
   
- 編譯器也會提供 `%` 一元運算子轉換使用堆疊語意建立的參考型別的執行個體返回其基礎控制代碼的型別。  
+ 編譯器也提供 `%` 一元運算子，可將使用堆疊語意建立之參考類型的執行個體轉換為其基礎控制代碼類型。  
   
- 下列參考型別不能為與搭配使用的使用:  
+ 下列參考類型不能與堆疊語意搭配使用：  
   
--   [delegate](../windows/delegate-cpp-component-extensions.md)  
+-   [delegate (C++ 元件延伸模組)](../windows/delegate-cpp-component-extensions.md)  
   
--   [Arrays](../windows/arrays-cpp-component-extensions.md)  
+-   [陣列](../windows/arrays-cpp-component-extensions.md)  
   
 -   <xref:System.String>  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 下列程式碼範例示範如何宣告參考型別的執行個體搭配使用的，指派運算子和複製建構函式如何運作以及如何初始化使用堆疊語意建立的參考型別的追蹤參考。  
+### <a name="description"></a>描述  
+ 下列程式碼範例說明如何使用堆疊語意宣告參考類型的執行個體、指派運算子和複製建構函式的運作方式，以及如何初始化使用堆疊語意建立之參考類型的追蹤參考。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // stack_semantics_for_reference_types.cpp  
@@ -109,7 +107,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 98  
@@ -119,5 +117,5 @@ int main() {
 13  
 ```  
   
-## 請參閱  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+## <a name="see-also"></a>另請參閱  
+ [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

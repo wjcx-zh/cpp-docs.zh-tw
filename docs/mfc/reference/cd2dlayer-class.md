@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DLayer::GetSize
 - AFXRENDERTARGET/CD2DLayer::IsValid
 - AFXRENDERTARGET/CD2DLayer::m_pLayer
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DLayer [MFC], CD2DLayer
 - CD2DLayer [MFC], Attach
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 3a977e6270c9f879ca434c9e71c3438013062ccd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: cdb6cfe624b0b3ba22d91ab30998aebf5bc96820
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer 類別
 ID2D1Layer 包裝函式。  
@@ -210,4 +207,3 @@ operator ID2D1Layer* ();
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

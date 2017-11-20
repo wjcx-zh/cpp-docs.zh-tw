@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_ptr_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- _com_ptr_t class
+f1_keywords: _com_ptr_t
+dev_langs: C++
+helpviewer_keywords: _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3979a33f095092c5cbaac91793c501e31304a6d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d395b6981e167bf759e0e26577dca962632a22c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 類別
 **Microsoft 特定的**  

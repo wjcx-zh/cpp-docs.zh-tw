@@ -1,36 +1,34 @@
 ---
-title: "編譯器警告 (層級 4) C4706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4706"
+title: "編譯器警告 （層級 4） C4706 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4706
+dev_langs: C++
+helpviewer_keywords: C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b128a60ce35bc6ec7cce7e10c257fe63d926fa46
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 4) C4706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在條件運算式中使用指派運算子  
+# <a name="compiler-warning-level-4-c4706"></a>編譯器警告 (層級 4) C4706
+條件運算式中使用指派運算子  
   
- 條件運算式中的測試值是指派的結果。  
+ 條件運算式中的測試值已指派的結果。  
   
- 指派中有一值 \(在指派左側的值\) 可以合法使用在其他運算式中，包括測試運算式。  
+ 指派的值 （指派左邊的值），可用於另一個運算式，包括測試運算式的合法。  
   
- 下列範例會產生 C4706：  
+ 下列範例會產生 C4706:  
   
 ```  
 // C4706a.cpp  
@@ -44,7 +42,7 @@ int main()
 }  
 ```  
   
- 即使您為測試條件加上兩層括弧，還是會發生此警告：  
+ 即使您按兩下測試條件前後的括號，就會發生此警告：  
   
 ```  
 // C4706b.cpp  
@@ -58,7 +56,7 @@ int main()
 }  
 ```  
   
- 如果您是要測試關聯，而不是要指派，請使用 `==` 運算子。  例如，下列程式行會測試 a 和 b 是否相等：  
+ 如果您是要測試關聯，而不進行指派，請使用`==`運算子。 例如，下列程式行會測試是否且 b 相等：  
   
 ```  
 // C4706c.cpp  
@@ -72,7 +70,7 @@ int main()
 }  
 ```  
   
- 如果您想要將測試值設為指派的結果，請進行測試以確保指派是非零或不是 Null。  例如，下列程式碼就不會產生此警告：  
+ 如果您想要將測試值的作業結果，測試以確保指派為非零，或不是 null。 例如，下列程式碼將不會產生這個警告：  
   
 ```  
 // C4706d.cpp  

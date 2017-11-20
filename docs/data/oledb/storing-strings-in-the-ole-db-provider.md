@@ -1,28 +1,27 @@
 ---
-title: "將字串儲存於 OLE DB 提供者內 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "使用者資料錄, 編輯"
+title: "將字串儲存在 OLE DB 提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: de8fdb6583f175505fc6a77070e30412aee38ae8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 將字串儲存於 OLE DB 提供者內
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在 MyProviderRS.h 中，ATL OLE DB 提供者精靈會建立名為 `CWindowsFile` 的預設使用者資料錄。  若要處理這兩個字串，您可修改 `CWindowsFile` 或加入自己的使用者資料錄，程式碼如下所示：  
+# <a name="storing-strings-in-the-ole-db-provider"></a>將字串儲存於 OLE DB 提供者內
+MyProviderRS.h，在 ATL OLE DB 提供者精靈會建立稱為 「 預設使用者記錄`CWindowsFile`。 若要處理的兩個字串，請修改`CWindowsFile`或加入您自己的使用者記錄，如下列程式碼所示：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -49,11 +48,11 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- 資料成員 `szCommand` 和 `szText` 代表兩個字串，若有需要，`szCommand2` 和 `szText2` 亦將提供其他的資料行。  這個簡單唯讀提供者並不需要 `dwBookmark` 資料成員，不過稍後在加入 `IRowsetLocate` 介面時將會使用到，請參閱[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  `==` 運算子可比較執行個體 \(是否實作此運算子是選擇性的\)。  
+ 資料成員`szCommand`和`szText`兩個字串，代表與`szCommand2`和`szText2`必要時提供額外的資料行。 資料成員`dwBookmark`不需要使用這個簡單唯讀提供者，但稍後用來新增`IRowsetLocate`介面，請參閱 <<c4> [ 增強簡單唯讀只提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。 `==`運算子會比較執行個體 （實作這個運算子是選擇性的）。  
   
- 完成之後，提供者即可開始編譯和執行。  若要測試提供者，您需要具有功能相符的消費者。  [實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)會說明如何建立這類的測試消費者。  同時執行測試消費者和提供者。  當您按一下 \[測試消費者\] 對話方塊中的 \[執行\] 按鈕時，會驗證測試消費者可從提供者內擷取正確的字串。  
+ 完成此動作後，您的提供者應該準備好要編譯及執行。 若要測試提供者，您需要取用者的比對功能。 [實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)示範如何建立這類測試取用者。 提供者執行測試的取用者。 驗證，測試取用者正確的字串從提供者擷取當您按一下**執行**按鈕**測試消費者** 對話方塊。  
   
- 當您已成功測試提供者後，可能會想藉由實作其他介面來增強功能。  範例顯示在[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)中。  
+ 當您已成功測試您的提供者時，您可以藉由實作額外的介面增強其功能。 範例所示[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [實作簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)

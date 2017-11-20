@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - getdcwd_dbg
 - _wgetdcwd_dbg
 - wgetdcwd_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - working directory
 - _getdcwd_dbg function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - _wgetdcwd_dbg function
 - directories [C++], current working
 ms.assetid: 266bf6f0-0417-497f-963d-2e0f306d9385
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9131d9769d96d7668db180c5c9595ea786770e8b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 8afa6156185ac1d375834bdc22df35f2a94638fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg、_wgetdcwd_dbg
 偵錯版本的 [_getdcwd、_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md) 函式 (僅於偵錯期間可供使用)。  
@@ -128,7 +111,7 @@ wchar_t *_wgetdcwd_dbg(
 |`_getdcwd_dbg`|\<crtdbg.h>|  
 |`_wgetdcwd_dbg`|\<crtdbg.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="see-also"></a>另請參閱  
  [_getdcwd、_wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md)   

@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2f1e30ce63374a3b8fddb52f7d2afa3f219287d4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="temporary-objects"></a>暫存物件
 在某些情況下，編譯器必須建立暫存物件。 可能需要建立這些暫存物件的原因如下：  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/25/2017
 |運算式評估結果|因為運算式評估而建立的所有暫存物件，都會在運算式陳述式結束時 (也就是於分號處)，或是在 `for`、`if`、`while`、`do` 和 `switch` 陳述式的控制運算式結束時終結。|  
 |初始化 `const` 參考|如果初始設定式不是與所要初始化的參考相同類型的左值，則會建立基礎物件類型的暫存，並且使用初始化運算式進行初始化。 這個暫存物件會在其所繫結的參考物件終結時立即終結。|  
   
-

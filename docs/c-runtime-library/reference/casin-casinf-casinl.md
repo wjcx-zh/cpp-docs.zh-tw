@@ -33,37 +33,21 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: dd48583e157389f23f9912d08f00abd80daca745
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 5a059d34110e064a6e945d02bf83d39e6b5af637
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="casin-casinf-casinl"></a>casin、casinf、casinl
 擷取與實際的軸間隔 [-1，+ 1] 以外的分支剪下複數的反正弦值。  

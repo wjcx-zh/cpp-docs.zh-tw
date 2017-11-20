@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0ae13c64b6385fab6f41ba402737c7af3b24795a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 9261cf2573a5494a49f2f544772738afcdbbb0c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="character-sets"></a>字元集
 C++ 程式的文字會儲存在使用特定字元編碼方式的原始程式檔中。 C++ 標準指定原始程式檔的基本來源字元集，以及編譯檔的基本執行字元集。 Visual C++ 允許在原始程式檔和編譯檔中使用一組額外的地區設定特定字元。  

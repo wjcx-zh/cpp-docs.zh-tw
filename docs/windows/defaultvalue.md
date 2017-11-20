@@ -1,47 +1,45 @@
 ---
-title: "defaultvalue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvalue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvalue attribute"
+title: "defaultvalue |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvalue
+dev_langs: C++
+helpviewer_keywords: defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 16f75743010087eb13ab38186b6326b4bcc38688
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# defaultvalue
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-容許指定型別的選擇性參數的預設值。  
+# <a name="defaultvalue"></a>defaultvalue
+允許指定具類型的選擇性參數的預設值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 [ defaultvalue= value ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *value*  
  參數的預設值。  
   
-## 備註  
- **預設值\]** C\+\+ 屬性具有相同的功能，為[預設值\]](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Defaultvalue** c + + 屬性具有相同的功能[defaultvalue](http://msdn.microsoft.com/library/windows/desktop/aa366793) MIDL 屬性。  
   
-## 範例  
- 下列程式碼會顯示介面方法使用**預設值\]** 屬性：  
+## <a name="example"></a>範例  
+ 下列程式碼會顯示介面的方法使用**defaultvalue**屬性：  
   
 ```  
 // cpp_attr_ref_defaultvalue.cpp  
@@ -65,25 +63,24 @@ __interface IFireTabCtrl : IDispatch {
       version="1.0", helpstring="ATLFire 1.0 Type Library") ];  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|介面參數|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [參數屬性](../windows/parameter-attributes.md)   
  [out](../windows/out-cpp.md)   
  [retval](../windows/retval.md)   
  [in](../windows/in-cpp.md)   
- [pointer\_default](../windows/pointer-default.md)   
+ [pointer_default](../windows/pointer-default.md)   
  [unique](../windows/unique-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

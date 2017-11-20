@@ -1,32 +1,30 @@
 ---
-title: "call_in_appdomain 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "call_in_appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_in_appdomain 函式"
+title: "call_in_appdomain 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: call_in_appdomain
+dev_langs: C++
+helpviewer_keywords: call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 648dda2bf13e6e1193ffbd90613253c6d763a89d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# call_in_appdomain 函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-執行指定的應用程式定義域的函式。  
+# <a name="callinappdomain-function"></a>call_in_appdomain 函式
+指定應用程式定義域中執行的函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <typename ArgType1, ...typename ArgTypeN>  
@@ -47,26 +45,26 @@ RetType call_in_appdomain(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `appdomainId`  
- appdomain 呼叫的函式。  
+ Appdomain 中用來呼叫此函式。  
   
  `voidFunc`  
- 對採用 N 參數的 `void` 函式的指標 \(0 \<\= N \<\= 15\)。  
+ 指標`void`N 參數的函式 (0 < = N < = 15)。  
   
  `nonvoidFunc`  
- 對採用 N 參數的 非`void` 函式的指標 \(0 \<\= N \<\= 15\)。  
+ 非指標`void`N 參數的函式 (0 < = N < = 15)。  
   
  `arg1...argN`  
- 將傳遞的零到 15 參數設定為 `voidFunc` 或 `nonvoidFunc` 在另一個 appdomain。  
+ 0 到 15 個參數傳遞給`voidFunc`或`nonvoidFunc`其他 appdomain 中。  
   
-## 傳回值  
- 實作 `voidFunc` 或 `nonvoidFunc` 的結果到指定的應用程式定義域。  
+## <a name="return-value"></a>傳回值  
+ 執行結果`voidFunc`或`nonvoidFunc`指定的應用程式網域中。  
   
-## 備註  
- 函式的引數傳遞給 `call_in_appdomain` 不能是 CLR 型別。  
+## <a name="remarks"></a>備註  
+ 函式的引數傳遞至`call_in_appdomain`必須不是 CLR 型別。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_call_in_appdomain.cpp  
@@ -112,7 +110,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 default appdomain: msl_call_in_appdomain.exe  
@@ -121,7 +119,7 @@ default appdomain id = 1
 appDomain1 id = 2  
 ```  
   
-## 需求  
- **標頭檔**\<msclr \\ appdomain.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\appdomain.h >  
   
- **命名空間** msclr
+ **命名空間**msclr

@@ -1,32 +1,30 @@
 ---
-title: "binder1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st 函式 [STL/CLR]"
+title: "binder1st (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st function [STL/CLR]
 ms.assetid: a989c9cc-a485-45d9-bd19-519018e6974b
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae786f50700d59c5f4a24ed0ec7de1c11718f352
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# binder1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別描述單一引數功能，當他呼叫時，會傳回與第一個引數一同呼叫的已儲存兩個引數功能和提供的第二個引數。  您會用它來指定函式物件根據其儲存的運算元。  
+# <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
+此範本類別描述一個引數函式，呼叫時，傳回其預存的雙引數仿函式呼叫的預存的第一個引數與提供的第二個引數。 您可以使用它指定根據其預存函式的函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Fun>  
@@ -49,35 +47,35 @@ public:
     };  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  Fun  
- 儲存功能子型別。  
+ 預存仿函式的類型。  
   
-## 成員函式  
+## <a name="member-functions"></a>成員函式  
   
-|型別定義|說明|  
-|----------|--------|  
-|delegate\_type|泛型委派的型別。|  
-|first\_argument\_type|功能子的第一個引數的型別。|  
-|result\_type|功能子結果的型別。|  
-|second\_argument\_type|功能子的第二個引數的型別。|  
-|stored\_function\_type|功能子的型別。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|delegate_type|泛型委派類型。|  
+|first_argument_type|仿函式的第一個引數型別。|  
+|result_type|仿函式結果的型別。|  
+|second_argument_type|仿函式的第二個引數的型別。|  
+|stored_function_type|仿函式的類型。|  
   
-|成員|說明|  
-|--------|--------|  
-|binder1st|建構功能子。|  
+|成員|描述|  
+|------------|-----------------|  
+|binder1st|建構仿函式。|  
   
-|運算子|說明|  
-|---------|--------|  
-|operator\(\)|計算所需的函式。|  
-|運算子 delegate\_type^\(\)|轉換功能子給委派。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|operator()|計算所需的函數。|  
+|運算子 delegate_type^()|會轉換成委派仿函式。|  
   
-## 備註  
- 樣板類別描述儲存雙引數功能的一個引數及第一個引數。  它定義成員運算子 `operator()` ，如此一來，當物件做函式呼叫時，它會回傳已儲存的功能及已儲存的第一個引數和提供的第二個引數的呼叫結果。  
+## <a name="remarks"></a>備註  
+ 此範本類別描述一個引數函式，其中儲存兩個引數函式與第一個引數。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回呼叫預存仿函式的預存的第一個引數而提供的第二個引數的結果。  
   
- 您也可以將物件當作型別為 `delegate_type^` 的函式引數來傳遞，它會適當地轉換。  
+ 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_binder1st.cpp   
@@ -120,13 +118,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [bind1st](../dotnet/bind1st-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)

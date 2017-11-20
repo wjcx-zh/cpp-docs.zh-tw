@@ -1,35 +1,35 @@
 ---
-title: "委派和事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__delegate 關鍵字"
-  - "__event 關鍵字 [C++]"
-  - "delegate 關鍵字 [C++]"
-  - "委派 [C++], 從 Managed Extensions for C++ 升級"
-  - "event 關鍵字 [C++]"
-  - "事件 [C++], 從 Managed Extensions for C++ 升級"
+title: "委派和事件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __event keyword [C++]
+- delegate keyword [C++]
+- delegates [C++], upgrading from Managed Extensions for C++
+- __delegate keyword
+- events [C++], upgrading from Managed Extensions for C++
+- event keyword [C++]
 ms.assetid: 3505c626-7e5f-4492-a947-0e2248f7b84a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28abb6daf5d778cf2cc7c904440808fd7ca7e48e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 委派和事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，宣告委派和事件的方式已變更。  
+# <a name="delegates-and-events"></a>委派和事件
+宣告委派和事件的方法已從 Managed Extensions for c + + Visual c + +。  
   
- 不再需要雙底線，如下列範例所示。  以下是採用 Managed Extensions 的範例程式碼：  
+ 不再需要雙底線，如下列範例所示。 此處的範例程式碼，在 Managed Extensions:  
   
 ```  
 __delegate void ClickEventHandler(int, double);  
@@ -41,7 +41,7 @@ __gc class EventSource {
 };  
 ```  
   
- 同一個程式碼採用新語法時看起來如下：  
+ 在新語法中相同的程式碼看起來如下：  
   
 ```  
 delegate void ClickEventHandler( int, double );  
@@ -53,9 +53,9 @@ ref class EventSource {
 };  
 ```  
   
- 事件 \(和委派\) 是參考型別，它們在新語法中因為使用帽型符號 \(`^`\) 而相當清楚。事件同時支援明確宣告語法和上述程式碼中所示的一般格式。  在明確的格式中，使用者會指定 `add`、`raise` 和 `remove` 方法和事件產生關聯 \(只有 `add` 和 `remove` 方法為必要項目，`raise` 方法則為選擇性項目\)。  
+ 事件 （和委派） 是參考型別，這是在新語法清除因為使用了在 hat (`^`)。  事件支援明確宣告語法和一般表單前面的程式碼所示。 在明確的表單中，指定使用者`add`， `raise`，和`remove`與事件相關聯的方法。 (只有`add`和`remove`方法所需;`raise`方法是選擇性的。)  
   
- 在 Managed Extensions 中，如果您提供這些方法，並不必提供明確的事件宣告，但您必須決定未顯示的事件名稱。  每個方法會以 `add_EventName`、`raise_EventName` 和 `remove_EventName` 的格式指定，如下列從 Managed Extensions 規格所取出的範例所示：  
+ 管理擴充功能下，如果您提供這些方法，也未提供明確的事件宣告，但您必須決定事件不存在的名稱。 每個方法在表單中指定`add_EventName`， `raise_EventName`，和`remove_EventName`，如下列範例取自 Managed Extensions 規格：  
   
 ```  
 // explicit implementations of add, remove, raise  
@@ -88,7 +88,7 @@ protected:
 };  
 ```  
   
- 新語法簡化了宣告，如下列轉譯示範所示。  一個事件會指定兩個或三個方法，將它們括在一組大括號中，並放在緊接事件宣告及其相關委派型別宣告之後，如下所示：  
+ 新的語法會簡化宣告，如下列轉譯示範。 事件會指定兩個或三個方法一對括號括住，和事件及其關聯的委派類型，在宣告之後立即放置，如下所示：  
   
 ```  
 public delegate void f( int );  
@@ -130,7 +130,7 @@ public:
 };  
 ```  
   
-## 請參閱  
- [在類別或介面中的成員宣告 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [delegate](../windows/delegate-cpp-component-extensions.md)   
+## <a name="see-also"></a>另請參閱  
+ [在類別或介面中的成員宣告 (C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [delegate （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)   
  [event](../windows/event-cpp-component-extensions.md)

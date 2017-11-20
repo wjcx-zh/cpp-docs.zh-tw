@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -84,35 +83,18 @@ f1_keywords:
 - ATLCTL/ATL::CComControlBase::m_spDataAdviseHolder
 - ATLCTL/ATL::CComControlBase::m_spInPlaceSite
 - ATLCTL/ATL::CComControlBase::m_spOleAdviseHolder
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComControlBase class
+dev_langs: C++
+helpviewer_keywords: CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7ad253d42c916ec957ef1e6f5067027696103c79
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 8e7e3ab049a7fc7935b9027746fc4cdebb3428cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 類別
 這個類別會提供方法來建立及管理 ATL 的控制項。  
@@ -136,26 +118,26 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|建構函式。|  
 |[CComControlBase:: ~ CComControlBase](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|擷取所要求介面的指標。|  
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|檢查`iVerb`所使用的參數`IOleObjectImpl::DoVerb`是啟動控制項的使用者介面 (`iVerb`等於`OLEIVERB_UIACTIVATE`)，定義當使用者按兩下控制項時所採取的動作 (`iVerb`等於`OLEIVERB_PRIMARY`)，顯示控制項 (`iVerb`等於`OLEIVERB_SHOW`)，或啟動控制項 (`iVerb`等於**OLEIVERB_INPLACEACTIVATE**)。|  
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|檢查`iVerb`所使用的參數`IOleObjectImpl::DoVerb`會啟用控制項的使用者介面，並傳回**TRUE**。|  
 |[CComControlBase::DoVerbProperties](#doverbproperties)|顯示控制項的屬性頁。|  
 |[CComControlBase::FireViewChange](#fireviewchange)|呼叫此方法以告知容器來進行重繪控制項，或已變更控制項的檢視已註冊的通知接收的通知。|  
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|擷取**DISPID_AMBIENT_APPEARANCE**，目前設定控制項的外觀︰ 一般和 3d 1 0。|  
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|擷取**DISPID_AMBIENT_APPEARANCE**，目前設定控制項的外觀： 一般和 3d 1 0。|  
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|擷取**DISPID_AMBIENT_AUTOCLIP**、 旗標，指出容器是否支援自動裁剪控制項顯示區域。|  
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|擷取**DISPID_AMBIENT_BACKCOLOR**，容器所定義的所有控制項的環境背景色彩。|  
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|擷取**DISPID_AMBIENT_CHARSET**，該環境的字集容器所定義的所有控制項。|  
 |[CComControlBase::GetAmbientCodePage](#getambientcodepage)|擷取**DISPID_AMBIENT_CODEPAGE**，該環境的字集容器所定義的所有控制項。|  
-|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|擷取**DISPID_AMBIENT_DISPLAYASDEFAULT**的旗標**TRUE**如果容器已標示為預設按鈕，此站台中的控制項，因此將按鈕控制項應該繪製本身具有較粗的框架。|  
+|[CComControlBase::GetAmbientDisplayAsDefault](#getambientdisplayasdefault)|擷取**DISPID_AMBIENT_DISPLAYASDEFAULT**的旗標**TRUE**如果容器已標示為預設按鈕，此站台中的控制項，因此按鈕控制項應繪製本身會向粗框架。|  
 |[CComControlBase::GetAmbientDisplayName](#getambientdisplayname)|擷取**DISPID_AMBIENT_DISPLAYNAME**，容器已提供給控制項的名稱。|  
 |[CComControlBase::GetAmbientFont](#getambientfont)|擷取容器的指標的環境`IFont`介面。|  
 |[CComControlBase::GetAmbientFontDisp](#getambientfontdisp)|擷取容器的指標的環境**IFontDisp**分派介面。|  
@@ -169,7 +151,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|擷取**DISPID_AMBIENT_SHOWGRABHANDLES**、 旗標，指出容器是否允許控制項本身現用時顯示抓取控點。|  
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|擷取**DISPID_AMBIENT_SHOWHATCHING**、 旗標，指出容器是否允許控制項本身顯示影線圖樣，UI 是作用中時。|  
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|擷取**DISPID_AMBIENT_SUPPORTSMNEMONICS**、 旗標，指出容器是否支援鍵盤助憶鍵。|  
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|擷取**DISPID_AMBIENT_TEXTALIGN**，容器所慣用的文字對齊方式︰ 0 代表一般對齊 （數字右邊，文字靠左對齊），1 表示靠左對齊、 置中對齊的 2，3 靠右對齊。|  
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|擷取**DISPID_AMBIENT_TEXTALIGN**，容器所慣用的文字對齊方式： 0 代表一般對齊 （數字右邊，文字靠左對齊），1 表示靠左對齊、 置中對齊的 2，3 靠右對齊。|  
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|擷取**DISPID_AMBIENT_TOPTOBOTTOM**，容器所顯示內容的方向。|  
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|擷取**DISPID_AMBIENT_UIDEAD**、 旗標，指出容器是否想要回應使用者介面動作的控制項。|  
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|擷取**DISPID_AMBIENT_USERMODE**、 旗標，指出容器是否處於執行模式 ( **TRUE**) 或設計模式 ( **FALSE**)。|  
@@ -194,7 +176,7 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComControlBase::m_bAutoSize](#m_bautosize)|表示控制項的任何其他大小不能為旗標。|  
 |[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|旗標指出`IDataObjectImpl::GetData`和`CComControlBase::GetZoomInfo`應該設定中的控制項大小`m_sizeNatural`而不是從`m_sizeExtent`。|  
@@ -225,10 +207,10 @@ class ATL_NO_VTABLE CComControlBase
 ## <a name="remarks"></a>備註  
  這個類別會提供方法來建立及管理 ATL 的控制項。 [CComControl 類別](../../atl/reference/ccomcontrol-class.md)衍生自`CComControlBase`。 當您建立標準控制項或 DHTML 控制項，使用 ATL 控制項精靈時，精靈會自動衍生您的類別，從`CComControlBase`。  
   
- 如需建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。 如需 ATL 專案精靈的詳細資訊，請參閱文章[ATL 專案建立](../../atl/reference/creating-an-atl-project.md)。  
+ 如需有關建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。 如需 ATL 專案精靈的詳細資訊，請參閱文章[ATL 專案建立](../../atl/reference/creating-an-atl-project.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlctl.h  
+ **標頭：** atlctl.h  
   
 ##  <a name="appearancetype"></a>CComControlBase::AppearanceType  
  如果覆寫您**m_nAppearance**內建屬性的類型不**簡短**。  
@@ -283,7 +265,7 @@ virtual HRESULT ControlQueryInterface(const IID& iid,
  只處理 COM 對應表格中的介面。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrolbase-class_1.cpp)]  
   
 ##  <a name="doesverbactivate"></a>CComControlBase::DoesVerbActivate  
  檢查`iVerb`所使用的參數`IOleObjectImpl::DoVerb`是啟動控制項的使用者介面 (`iVerb`等於`OLEIVERB_UIACTIVATE`)，定義當使用者按兩下控制項時所採取的動作 (`iVerb`等於`OLEIVERB_PRIMARY`)，顯示控制項 (`iVerb`等於`OLEIVERB_SHOW`)，或啟動控制項 (`iVerb`等於**OLEIVERB_INPLACEACTIVATE**)。  
@@ -297,7 +279,7 @@ BOOL DoesVerbActivate(LONG iVerb);
  值，指出要執行的動作`DoVerb`。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**如果`iVerb`等於`OLEIVERB_UIACTIVATE`， `OLEIVERB_PRIMARY`， `OLEIVERB_SHOW`，或**OLEIVERB_INPLACEACTIVATE**; 否則傳回**FALSE**。  
+ 傳回**TRUE**如果`iVerb`等於`OLEIVERB_UIACTIVATE`， `OLEIVERB_PRIMARY`， `OLEIVERB_SHOW`，或**OLEIVERB_INPLACEACTIVATE**; 否則傳回**FALSE**.  
   
 ### <a name="remarks"></a>備註  
  您可以覆寫這個方法，以定義您自己的啟用指令動詞。  
@@ -334,9 +316,9 @@ HRESULT DoVerbProperties(LPCRECT /* prcPosRect */, HWND hwndParent);
  其中一個標準的 HRESULT 值。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#19](../../atl/codesnippet/cpp/ccomcontrolbase-class_2.cpp)]  
   
- [!code-cpp[NVC_ATL_COM #20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
+ [!code-cpp[NVC_ATL_COM#20](../../atl/codesnippet/cpp/ccomcontrolbase-class_3.h)]  
   
 ##  <a name="fireviewchange"></a>CComControlBase::FireViewChange  
  呼叫此方法以告知容器來進行重繪控制項，或已變更控制項的檢視已註冊的通知接收的通知。  
@@ -352,10 +334,10 @@ HRESULT FireViewChange();
  控制是否在作用中 (控制項的類別資料成員[CComControlBase::m_bInPlaceActive](#m_binplaceactive)是**TRUE**)，通知您想要重新繪製整個控制項的容器。 如果控制項處於非使用中，會通知控制項的登錄通知接收 (透過控制項的類別資料成員[CComControlBase::m_spAdviseSink](#m_spadvisesink)) 控制項的檢視已變更。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_COM#21](../../atl/codesnippet/cpp/ccomcontrolbase-class_4.cpp)]  
   
 ##  <a name="getambientappearance"></a>CComControlBase::GetAmbientAppearance  
- 擷取**DISPID_AMBIENT_APPEARANCE**，目前設定控制項的外觀︰ 一般和 3d 1 0。  
+ 擷取**DISPID_AMBIENT_APPEARANCE**，目前設定控制項的外觀： 一般和 3d 1 0。  
   
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -369,7 +351,7 @@ HRESULT GetAmbientAppearance(short& nAppearance);
  其中一個標準的 HRESULT 值。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
+ [!code-cpp[NVC_ATL_COM#22](../../atl/codesnippet/cpp/ccomcontrolbase-class_5.h)]  
   
 ##  <a name="getambientautoclip"></a>CComControlBase::GetAmbientAutoClip  
  擷取**DISPID_AMBIENT_AUTOCLIP**、 旗標，指出容器是否支援自動裁剪控制項顯示區域。  
@@ -428,7 +410,7 @@ HRESULT GetAmbientCodePage(ULONG& ulCodePage);
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ##  <a name="getambientdisplayasdefault"></a>CComControlBase::GetAmbientDisplayAsDefault  
- 擷取**DISPID_AMBIENT_DISPLAYASDEFAULT**的旗標**TRUE**如果容器已標示為預設按鈕，此站台中的控制項，因此將按鈕控制項應該繪製本身具有較粗的框架。  
+ 擷取**DISPID_AMBIENT_DISPLAYASDEFAULT**的旗標**TRUE**如果容器已標示為預設按鈕，此站台中的控制項，因此按鈕控制項應繪製本身會向粗框架。  
   
 ```
 HRESULT GetAmbientDisplayAsDefault(BOOL& bDisplayAsDefault);
@@ -639,7 +621,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
  其中一個標準的 HRESULT 值。  
   
 ##  <a name="getambienttextalign"></a>CComControlBase::GetAmbientTextAlign  
- 擷取**DISPID_AMBIENT_TEXTALIGN**，容器所慣用的文字對齊方式︰ 0 代表一般對齊 （數字右邊，文字靠左對齊），1 表示靠左對齊、 置中對齊的 2，3 靠右對齊。  
+ 擷取**DISPID_AMBIENT_TEXTALIGN**，容器所慣用的文字對齊方式： 0 代表一般對齊 （數字右邊，文字靠左對齊），1 表示靠左對齊、 置中對齊的 2，3 靠右對齊。  
   
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
@@ -779,7 +761,7 @@ unsigned m_bAutoSize:1;
 > [!NOTE]
 >  若要使用此控制類別內的資料成員，您必須將它宣告為資料成員在控制項類別中。 因為它宣告為基底類別中的等位內控制項類別不會從基底類別繼承此資料成員。  
   
- 如果您將加入**自動調整大小的**選項[內建屬性](../../atl/reference/stock-properties-atl-control-wizard.md) 索引標籤的 ATL 控制項精靈，精靈會自動在您的控制項類別中建立此資料成員、 建立放入並取得屬性，以及支援的方法[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)屬性變更時自動通知容器。  
+ 如果您將加入**自動調整大小的**選項[內建屬性](../../atl/reference/stock-properties-atl-control-wizard.md) 索引標籤的 ATL 控制項精靈，精靈會自動在您的控制項類別中建立此資料成員、 建立 put 並取得屬性的方法並支援[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)屬性變更時自動通知容器。  
   
 ##  <a name="m_bdrawfromnatural"></a>CComControlBase::m_bDrawFromNatural  
  旗標指出`IDataObjectImpl::GetData`和`CComControlBase::GetZoomInfo`應該設定中的控制項大小`m_sizeNatural`而不是從`m_sizeExtent`。  
@@ -1094,7 +1076,7 @@ CComPtr<IOleInPlaceSiteWindowless>
   
  `m_spInPlaceSite`指標無效才[m_bNegotiatedWnd](#m_bnegotiatedwnd)旗標是**TRUE**。  
   
- 下表顯示如何`m_spInPlaceSite`指標類型取決於[m_bWndLess](#m_bwndless)和[m_bInPlaceSiteEx](#m_binplacesiteex)資料成員的旗標︰  
+ 下表顯示如何`m_spInPlaceSite`指標類型取決於[m_bWndLess](#m_bwndless)和[m_bInPlaceSiteEx](#m_binplacesiteex)資料成員的旗標：  
   
 |m_spInPlaceSite 類型|m_bWndLess 值|m_bInPlaceSiteEx 值|  
 |---------------------------|-----------------------|-----------------------------|  
@@ -1397,4 +1379,3 @@ void SetDirty(BOOL bDirty);
 ## <a name="see-also"></a>另請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

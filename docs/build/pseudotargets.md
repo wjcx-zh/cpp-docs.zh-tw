@@ -1,35 +1,34 @@
 ---
-title: "虛擬目標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Makefile, 虛擬目標"
-  - "NMAKE 程式, 虛擬目標"
-  - "NMAKE 程式, 目標"
-  - "虛擬目標與 NMAKE"
-  - "時間戳記, makefile 虛擬目標"
+title: "虛擬目標 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- makefiles, pseudotargets
+- pseudotargets and NMAKE
+- NMAKE program, pseudotargets
+- timestamps, makefile pseudotargets
+- NMAKE program, targets
 ms.assetid: c8c479dc-0129-4186-8366-bc6251f2b494
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b018cd586e48f344b93b31571ba60ae9982ad4fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 虛擬目標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-虛擬目標是個標籤，用來取代在相依性行中的檔名。  會將它解譯成不存在而且過時的檔案。  NMAKE 會假設虛擬目標的時間戳記是所有相依性中最新的時間戳記。  如果沒有相依性，就會假設為目前的時間。  如果虛擬目標是用來當做目標，就會永遠執行它的命令。  用來當做相依性的虛擬目標必須在另一個相依性中顯示為目標。  不過，相依性不需要具有命令區塊。  
+# <a name="pseudotargets"></a>虛擬目標
+虛擬目標是用來取代在相依的檔案名稱的標籤。 將它解譯為不存在，且為已過期的檔案。 NMAKE 假設虛擬目標的時間戳記是最新的所有相依性。 如果不有任何相依項目，則會假設目前的時間。 如果虛擬目標做為目標，一律執行它的命令。 虛擬目標做為相依性也必須出現為其他相依性中的目標。 不過，該相依性不需要有命令區塊。  
   
- 虛擬目標名稱會依照目標的檔名語法規則。  然而，如果名稱沒有副檔名 \(也就是說不含英文句號\)，就可以超過檔案名稱的 8 字元限制，最長可為 256 個字元。  
+ 虛擬目標名稱遵循目標檔名語法規則。 不過，如果名稱未具備擴充功能 （亦即，不包含句號），它可以超過 8 個字元限制的檔名，而且可以是最多 256 個字元。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [目標](../build/targets.md)

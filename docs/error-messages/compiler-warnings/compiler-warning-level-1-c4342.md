@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4342
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4342
+f1_keywords: C4342
+dev_langs: C++
+helpviewer_keywords: C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: c4a2afbc3ced186b0db63b22b3cc5c2b27204c71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: faea23fcfa1e323ec28d81aa5abeb27f3c87cef1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4342"></a>編譯器警告 (層級 1) C4342
 行為變更: '*函式*' 呼叫，但在舊版中被呼叫的是成員運算子  
@@ -49,7 +30,7 @@ ms.lasthandoff: 04/12/2017
   
  在您成功地移植程式碼，以最新版本之後，應該停用這個警告。  編譯器可能會誤報，產生這個警告的程式碼在沒有任何行為變更。  
   
- 此警告預設為關閉。 如需詳細資訊，請參閱[編譯器警告為關閉的預設](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 此警告預設為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
   
  下列範例會產生 C4342:  
   

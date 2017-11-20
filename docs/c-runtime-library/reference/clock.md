@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- clock
+apiname: clock
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- clock
-dev_langs:
-- C++
+f1_keywords: clock
+dev_langs: C++
 helpviewer_keywords:
 - processor time used, calculating
 - time, calculating processor
@@ -34,30 +30,15 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3a226377499df1747a022325b762b3cdfdd35ea6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 32b0f1bdd4e7db4f870aa23919ab426335d3f446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="clock"></a>時鐘
 計算所呼叫的處理序使用的時鐘時間。  

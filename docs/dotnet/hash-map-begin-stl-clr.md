@@ -1,41 +1,39 @@
 ---
-title: "hash_map::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin 成員 [STL/CLR]"
+title: "hash_map:: begin (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: b2ff4605-ac37-4456-8299-b3bcccdbe45a
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dc84169f037bc5fd6879c8dfd6edef0f167a249
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapbegin-stlclr"></a>hash_map::begin (STL/CLR)
 指定受控制序列的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator begin();  
 ```  
   
-## 備註  
- 指定受控制序列的第一個項目的成員函式傳回雙向 Iterator，或只是超出空序列的結尾。  您要用它來取得的 Iterator 可指定受控制序列之 `current` 開頭，但是，如果受控制序列的長度變更，它的狀態也可以變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回指定的受控制序列中，或空序列結尾之外的第一個元素的雙向迭代器。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列中，但其狀態的開頭。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_begin.cpp   
@@ -67,14 +65,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**\*begin \(\) \= \[以 1\]**  
-**\*\+\+begin \(\) \= \[b 2\]**   
-## 需求  
- **標題:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*begin() = [a 1]  
+*++begin() = [b 2]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)

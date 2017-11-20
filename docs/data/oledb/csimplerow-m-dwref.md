@@ -1,33 +1,32 @@
 ---
-title: "CSimpleRow::m_dwRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSimpleRow.m_dwRef"
-  - "CSimpleRow::m_dwRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_dwRef"
+title: "Csimplerow:: M_dwref |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSimpleRow.m_dwRef
+- CSimpleRow::m_dwRef
+dev_langs: C++
+helpviewer_keywords: m_dwRef
 ms.assetid: 895f4141-280e-4190-b7df-14ed828e1498
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9f681f7db329ac186dcfa2e2e7796d2979f7a3d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CSimpleRow::m_dwRef
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-參考次數 \(Reference Count\) 現有的資料列控制代碼。  
+# <a name="csimplerowmdwref"></a>CSimpleRow::m_dwRef
+現有的資料列控制代碼的參考計數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,10 +34,10 @@ DWORD m_dwRef;
   
 ```  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSimpleRow 類別](../../data/oledb/csimplerow-class.md)   
- [CSimpleRow::AddRefRow](../../data/oledb/csimplerow-addrefrow.md)   
+ [Csimplerow:: Addrefrow](../../data/oledb/csimplerow-addrefrow.md)   
  [CSimpleRow::ReleaseRow](../../data/oledb/csimplerow-releaserow.md)

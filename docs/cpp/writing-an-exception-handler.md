@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], exception handlers
 - exception handling [C++], exception handlers
 ms.assetid: 71473fee-f773-4a34-bf12-82a3af79579c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5f3f81ff6ea954cda7270ff32650d5744280d918
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 68836230c731130a6bb710d2c29a2f6b1d5f3f8c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="writing-an-exception-handler"></a>撰寫例外狀況處理常式
 例外狀況處理常式通常用來回應特定錯誤。 除了知道如何處理的項目之外，您可以使用例外狀況處理語法篩選出所有例外狀況。 其他例外狀況應該傳遞給為了尋找這些特定例外狀況所撰寫的其他處理常式 (可能位於執行階段程式庫或作業系統中)。  

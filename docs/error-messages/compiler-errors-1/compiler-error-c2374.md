@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2374
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2374
+f1_keywords: C2374
+dev_langs: C++
+helpviewer_keywords: C2374
 ms.assetid: 73b51965-e91c-4e21-9732-f71c1449d22e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 018f2924aeb59ae58975d41d9147fdfd60c8ee59
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2374"></a>編譯器錯誤 C2374
 'identifier' : 重複定義; 多個初始設定  

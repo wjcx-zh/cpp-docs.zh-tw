@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::reset"
-  - "auto_gcroot::reset"
-  - "msclr.auto_gcroot.reset"
-  - "auto_gcroot.reset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reset 方法"
+title: "auto_gcroot::reset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::reset
+- auto_gcroot::reset
+- msclr.auto_gcroot.reset
+- auto_gcroot.reset
+dev_langs: C++
+helpviewer_keywords: reset method
 ms.assetid: dd58467f-3885-4a15-99fb-ed6dd5d19622
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 066ebb82b8a583351cb8a902750ec14071f0612b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::reset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-終結目前擁有的物件和選擇性佔用一個新的物件。  
+# <a name="autogcrootreset"></a>auto_gcroot::reset
+終結目前擁有的物件，並選擇性地採取擁有新的物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void reset(  
@@ -37,11 +36,11 @@ void reset(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_new_ptr`  
- \(選擇性\) 新的物件。  
+ （選擇性）新的物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_reset.cpp  
@@ -81,19 +80,22 @@ int main()
 }  
 ```  
   
-  **ClassA 建構函式:首先**  
-**Hello 首先從 A\!**  
-**ClassA 建構函式:其次**  
-**ClassA 解構函式:首先**  
-**Hello 從第二個 A\!**  
-**ClassA 解構函式:其次**  
-**done**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+ClassA constructor: first  
+Hello from first A!  
+ClassA constructor: second  
+ClassA destructor: first  
+Hello from second A!  
+ClassA destructor: second  
+done  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::release](../dotnet/auto-gcroot-release.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::release](../dotnet/auto-gcroot-release.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

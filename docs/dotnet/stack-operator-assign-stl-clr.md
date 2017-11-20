@@ -1,46 +1,43 @@
 ---
-title: "stack::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成員 [STL/CLR]"
+title: "stack:: operator = (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 6f23b5fc-667e-4c6c-b43a-88b30da2ecac
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 56f3e07774c443779a3ba8d1cf8bc284fc742b48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# stack::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取代受控制序列。  
+# <a name="stackoperator-stlclr"></a>stack::operator= (STL/CLR)
+取代受控制的序列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 stack <Value, Container>% operator=(stack <Value, Container>% right);  
 ```  
   
-#### 參數  
- right  
- 複製的容器配接器。  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 若要複製容器配接器。  
   
-## 備註  
- 成員運算子複製 `right` 到物件後，再傳回 `*this`。  您會用它將受控制序列取代為它在 `right`的副本。  
+## <a name="remarks"></a>備註  
+ 成員運算子複製`right`物件，然後傳回`*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_operator_as.cpp   
@@ -71,13 +68,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/stack\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)

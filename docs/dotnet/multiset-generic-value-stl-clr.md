@@ -1,42 +1,39 @@
 ---
-title: "multiset::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value 成員 [STL/CLR]"
+title: "multiset::generic_value (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: 4b77b5f8-1e69-48b3-b523-c92ab538a29f
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0d24566b6a95be13da160dd03709291edd14ebcf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-項目的型別為具有泛型介面的容器使用的。  
+# <a name="multisetgenericvalue-stlclr"></a>multiset::generic_value (STL/CLR)
+使用容器的泛型介面的項目類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## 備註  
- 型別描述儲存的項目值為與泛型介面來使用這個樣板容器類別的型別 `GValue` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型所描述型別的物件`GValue`描述使用的預存的項目值與此範本容器類別的泛型介面。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multiset_generic_value.cpp   
@@ -71,16 +68,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::generic\_container](../dotnet/multiset-generic-container-stl-clr.md)   
- [multiset::generic\_iterator](../dotnet/multiset-generic-iterator-stl-clr.md)   
- [multiset::generic\_reverse\_iterator](../dotnet/multiset-generic-reverse-iterator-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)   
+ [multiset::generic_iterator (STL/CLR)](../dotnet/multiset-generic-iterator-stl-clr.md)   
+ [multiset::generic_reverse_iterator (STL/CLR)](../dotnet/multiset-generic-reverse-iterator-stl-clr.md)

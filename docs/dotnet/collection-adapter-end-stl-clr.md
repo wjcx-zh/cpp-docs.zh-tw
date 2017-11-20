@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 成員 [STL/CLR]"
+title: "collection_adapter::end (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: f953a734-2f17-4b68-9ca4-34f980d08887
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c08a9c08ed4fc1ae6501a5c935e769995644eebd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapterend-stlclr"></a>collection_adapter::end (STL/CLR)
 指定受控制序列的結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator end();  
 ```  
   
-## 備註  
- 成員函式傳回在受控制序列之結尾點的輸入 Iterator。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回輸入迭代器，指向受控制序列的結尾之外。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_collection_adapter_end.cpp   
@@ -63,12 +61,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標題:** \<cliext\/配接器\>  
+```Output  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<配接器 cliext/>  
   
-## 請參閱  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::begin](../dotnet/collection-adapter-begin-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::begin (STL/CLR)](../dotnet/collection-adapter-begin-stl-clr.md)

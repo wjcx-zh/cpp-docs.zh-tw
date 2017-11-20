@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- const_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- const keyword [C++]
+f1_keywords: const_cpp
+dev_langs: C++
+helpviewer_keywords: const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 8a6a238f28ec8f84cd127b4af88a84edb26506ee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8290b9c73dbab2c3cc3ab63cfbff10f587e46d7b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="const-c"></a>const (C++)
 修改資料宣告時**const**關鍵字指定物件或變數不是可修改。  

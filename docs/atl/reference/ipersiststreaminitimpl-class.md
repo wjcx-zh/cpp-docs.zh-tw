@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,43 +16,27 @@ f1_keywords:
 - ATLCOM/ATL::IPersistStreamInitImpl::IsDirty
 - ATLCOM/ATL::IPersistStreamInitImpl::Load
 - ATLCOM/ATL::IPersistStreamInitImpl::Save
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - IPersistStreamInit ATL implementation
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: aa8427a891ac8d8e18ec7794a12e838a55bc23c8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 34208bb376f374f72bf3eb88ead6e10b2f1a7c20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 類別
-這個類別會實作**IUnknown** ，並提供的預設實作[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
+這個類別會實作**IUnknown**和提供的預設實作[IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面。  
   
 > [!IMPORTANT]
->  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,17 +54,17 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[IPersistStreamInitImpl::GetClassID](#getclassid)|擷取物件的 CLSID。|  
 |[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|擷取儲存物件的資料所需的資料流的大小。 ATL 實作會傳回**E_NOTIMPL**。|  
 |[IPersistStreamInitImpl::InitNew](#initnew)|初始化新建立的物件。|  
 |[IPersistStreamInitImpl::IsDirty](#isdirty)|檢查自上次儲存後，是否已變更物件的資料。|  
 |[IPersistStreamInitImpl::Load](#load)|從指定的資料流載入物件的屬性。|  
-|[IPersistStreamInitImpl::Save](#save)|將指定的資料流物件的屬性。|  
+|[IPersistStreamInitImpl::Save](#save)|將物件的屬性儲存至指定的資料流。|  
   
 ## <a name="remarks"></a>備註  
- [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面可讓用戶端要求載入您的物件，並將持續性資料儲存至單一資料流。 類別`IPersistStreamInitImpl`提供此介面的預設實作，並且實作**IUnknown**傳送資訊給傾印裝置在偵錯組建。  
+ [IPersistStreamInit](http://msdn.microsoft.com/library/windows/desktop/ms682273)介面可讓用戶端要求載入您的物件，並將其永續性資料儲存至單一資料流。 類別`IPersistStreamInitImpl`提供此介面的預設實作，並實作**IUnknown**資訊傳送給傾印裝置在偵錯組建。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -91,7 +74,7 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
  `IPersistStreamInitImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰**於 atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="getclassid"></a>IPersistStreamInitImpl::GetClassID  
  擷取物件的 CLSID。  
@@ -101,7 +84,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[ipersist:: Getclassid](http://msdn.microsoft.com/library/windows/desktop/ms688664) Windows SDK 中。  
   
 ##  <a name="getsizemax"></a>IPersistStreamInitImpl::GetSizeMax  
  擷取儲存物件的資料所需的資料流的大小。  
@@ -114,7 +97,7 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
  傳回**E_NOTIMPL**。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IPersistStreamInit::GetSizeMax](http://msdn.microsoft.com/library/windows/desktop/ms687287) Windows SDK 中。  
   
 ##  <a name="initnew"></a>IPersistStreamInitImpl::InitNew  
  初始化新建立的物件。  
@@ -124,7 +107,7 @@ STDMETHOD(InitNew)();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IPersistStreamInit::InitNew](http://msdn.microsoft.com/library/windows/desktop/ms690234) Windows SDK 中。  
   
 ##  <a name="isdirty"></a>IPersistStreamInitImpl::IsDirty  
  檢查自上次儲存後，是否已變更物件的資料。  
@@ -134,7 +117,7 @@ STDMETHOD(IsDirty)();
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IPersistStreamInit::IsDirty](http://msdn.microsoft.com/library/windows/desktop/ms680092) Windows SDK 中。  
   
 ##  <a name="load"></a>IPersistStreamInitImpl::Load  
  從指定的資料流載入物件的屬性。  
@@ -144,23 +127,22 @@ STDMETHOD(Load)(LPSTREAM pStm);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 使用物件的屬性對應，來擷取這項資訊。  
+ ATL 會使用物件的屬性對應，來擷取這項資訊。  
   
- 請參閱[IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IPersistStreamInit::Load](http://msdn.microsoft.com/library/windows/desktop/ms680730) Windows SDK 中。  
   
 ##  <a name="save"></a>IPersistStreamInitImpl::Save  
- 將指定的資料流物件的屬性。  
+ 將物件的屬性儲存至指定的資料流。  
   
 ```
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 ```  
   
 ### <a name="remarks"></a>備註  
- ATL 使用物件的屬性對應來儲存此資訊。  
+ ATL 會使用物件的屬性對應儲存這項資訊。  
   
- 請參閱[IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IPersistStreamInit::Save](http://msdn.microsoft.com/library/windows/desktop/ms694439) Windows SDK 中。  
   
 ## <a name="see-also"></a>另請參閱  
  [儲存體和資料流](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
  [類別概觀](../../atl/atl-class-overview.md)
-

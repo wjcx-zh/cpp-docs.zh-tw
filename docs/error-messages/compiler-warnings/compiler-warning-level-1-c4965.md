@@ -1,36 +1,34 @@
 ---
-title: "編譯器警告 (層級 1) C4965 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4965"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4965"
+title: "編譯器警告 （層級 1） C4965 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4965
+dev_langs: C++
+helpviewer_keywords: C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cde1b35dc183065461d1a2e59c77089256774ab4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4965
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-整數 0 的隱含 Box，請使用 nullptr 或明確轉型  
+# <a name="compiler-warning-level-1-c4965"></a>編譯器警告 (層級 1) C4965
+隱含 box 的整數 0;請使用 nullptr 或明確轉換  
   
- Visual C\+\+ 具備實值型別的隱含 boxing。  使用 Managed Extensions for C\+\+ 執行 null 指派而產生的指令現在變成指派至 boxed int。  
+ Visual c + + 功能隱含 boxing 實值類型。 在 null 指派現在使用 Managed Extensions for c + + 中產生的指令會變成指派至 boxed int。  
   
  如需詳細資訊，請參閱[Boxing](../../windows/boxing-cpp-component-extensions.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4965。  
   
 ```  

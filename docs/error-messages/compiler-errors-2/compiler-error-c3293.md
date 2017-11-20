@@ -1,53 +1,35 @@
 ---
 title: "編譯器錯誤 C3293 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 07/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3293
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3293
+f1_keywords: C3293
+dev_langs: C++
+helpviewer_keywords: C3293
 ms.assetid: b772cf98-52e0-4e24-be23-1f5d87d999ac
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 43695cc21fa63403f9aa2b8dd83af27c00d483de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7bfa8c58bec79558f3d71868e9464242b9da9ea8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3293"></a>編譯器錯誤 C3293
 'accessor': 請用 'default' 存取類別 'type' 的預設屬性 (索引子)  
   
- 不正確地存取索引屬性。  請參閱[How to︰ 使用屬性，在 C + + /cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)如需詳細資訊。  
+ 不正確地存取索引屬性。  請參閱[How to： 使用內容，在 C + + CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)如需詳細資訊。  
+
+ **2017 和更新版本的 visual Studio**： 在 Visual Studio 2015 及更早版本，在某些情況下，編譯器 misidentified 為預設索引子的預設屬性。 使用 "default" 識別碼存取屬性，即可解決問題。 在 C++11 中將 default 引進為關鍵字之後，因應措施本身會變成問題。 因此，在 Visual Studio 2017 中，已修正需要因應措施的 Bug，而且編譯器現在會在使用 "default" 來存取類別的預設屬性時引發錯誤。
   
 ## <a name="example"></a>範例  
- 下列範例會產生 C3293。  
+ 下列範例會產生 C3293 在 Visual Studio 2015 及更早版本。  
   
 ```  
 // C3293.cpp  
@@ -64,12 +46,12 @@ public:
   
 int main() {  
    IndexerClass ^ ic = gcnew IndexerClass;  
-   ic->Item[0] = 21;   // C3293  
-   ic->default[0] = 21;   // OK  
+   ic->Item[0] = 21;   // C3293 in VS2015 OK in VS2017
+   ic->default[0] = 21;   // OK in VS2015 and earlier
   
    String ^s = "Hello";  
-   wchar_t wc = s->Chars[0];   // C3293  
-   wchar_t wc2 = s->default[0];   // OK  
+   wchar_t wc = s->Chars[0];   // C3293 in VS2015 OK in VS2017
+   wchar_t wc2 = s->default[0];   // OK in VS2015 and earlier  
    Console::WriteLine(wc2);  
 }  
 ```

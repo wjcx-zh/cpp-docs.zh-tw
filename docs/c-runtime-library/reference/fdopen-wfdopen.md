@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _wfdopen
 - wfdopen
 - tfdopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wfdopen function
 - _fdopen function
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - _tfdopen function
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3efc15f9d9fa6544ad7af2c3809ee6562b7f36e0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: bacc1decd25c5c7291295a9e97eeacb35d55662c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen、_wfdopen
 將資料流與先前針對低層級 I/O 開啟的檔案建立關聯。  
@@ -124,7 +107,7 @@ FILE *_wfdopen(
  `"a+"`  
  開啟以進行讀取和附加。 如果檔案不存在時，建立檔案。  
   
- 使用 `"a"` 或 `"a+"` 存取類型開啟檔案時，所有寫入作業都會在檔案結尾進行。 檔案指標可以使用 `fseek` 或 `rewind` 重新調整位置，但是在執行任何寫入作業之前，永遠會移回至檔案結尾。 因此，無法覆寫現有資料。 指定 `"r+"`、`"w+"` 或 `"a+"` 存取類型時，同時允許讀取和寫入 (表示檔案是要開啟以供「更新」之用)。 不過，當您在讀取和寫入之間切換時，必須有中間的 `fflush`、`fsetpos`、`fseek` 或 `rewind` 作業。 您可以視需要指定 `fsetpos` 或 `fseek` 作業的目前位置。  
+ 使用 `"a"` 或 `"a+"` 存取類型開啟檔案時，所有寫入作業都會在檔案結尾進行。 檔案指標可以使用 `fseek` 或 `rewind` 重新調整位置，但是在執行任何寫入作業之前，永遠會移回至檔案結尾。因此，無法覆寫現有資料。 指定 `"r+"`、`"w+"` 或 `"a+"` 存取類型時，同時允許讀取和寫入 (表示檔案是要開啟以供「更新」之用)。 不過，當您在讀取和寫入之間切換時，必須有中間的 `fflush`、`fsetpos`、`fseek` 或 `rewind` 作業。 您可以視需要指定 `fsetpos` 或 `fseek` 作業的目前位置。  
   
  除了上面的值之外，還可以將下列字元包含在 `mode`，指定新行字元的轉譯模式。  
   
@@ -138,7 +121,7 @@ FILE *_wfdopen(
  啟用關聯 `filename` 的認可旗標，以便在呼叫 `fflush` 或 `_flushall` 時，將檔案緩衝區的內容直接寫入磁碟。  
   
  `n`  
- 將關聯 `filename` 的認可旗標重設為 "no-commit"。 這是預設值。 如果將程式與 Commode.obj 連結，也會覆寫全域認可旗標。 除非您明確將程式與 Commode.obj 連結，否則全域認可旗標預設值為 "no-commit"。  
+ 將關聯 `filename` 的認可旗標重設為 "no-commit"。 這是預設值。 如果將程式與 Commode.obj 連結，也會覆寫全域認可旗標。除非您明確將程式與 Commode.obj 連結，否則全域認可旗標預設值為 "no-commit"。  
   
  `t`、`c` 和 `n` `mode` 選項是 `fopen` 和 `_fdopen` 的 Microsoft 延伸模組。 如果您想要保留 ANSI 可攜性，請勿使用它們。  
   
@@ -152,8 +135,8 @@ FILE *_wfdopen(
 |`a+`|`_O_RDWR &#124; _O_APPEND` (通常為 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(通常為 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (通常為 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|無|  

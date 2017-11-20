@@ -1,89 +1,89 @@
 ---
-title: "建立可更新的提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "告知, 提供者中的支援"
-  - "OLE DB 提供者, 建立"
-  - "OLE DB 提供者, 可更新的"
+title: "建立可更新的提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, updatable
+- notifications, support in providers
+- OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9360e9446d4e42e6e6c08c97694743e14d2e0d14
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2017
 ---
-# 建立可更新的提供者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 6.0 只能支援唯讀的提供者 \(Provider\)。  Visual C\+\+ .NET 能支援可更新的提供者，或可更新 \(寫入\) 資料存放區的提供者。  本主題將討論如何使用 OLE DB 樣板來建立可更新的提供者。  
+# <a name="creating-an-updatable-provider"></a>建立可更新的提供者
+Visual c + + 支援可更新的提供者或可更新的提供者 （寫入） 資料存放區。 本主題討論如何建立可更新的提供者使用 OLE DB 樣板。  
   
- 本主題假設您從可用提供者開始建立。  建立可更新的提供者需要兩個步驟。  您必須先決定提供者變更資料存放區的方式，更明確地說就是，需要立即進行變更，或延後直到發出更新命令時。  [使提供者可更新](#vchowmakingprovidersupdatable)章節內容將說明需在提供者程式碼內進行的變更和設定。  
+ 本主題假設您要啟動與可用的提供者。 有兩個步驟以建立可更新的提供者。 您必須先決定如何提供者時，將資料存放區; 進行變更具體來說，變更會立即進行還是延後，直到發出 update 命令時。 一節 「[讓提供者可更新](#vchowmakingprovidersupdatable)」 描述的變更和設定您需要在提供者程式碼中進行處理。  
   
- 接著，您必須確認提供者包含所有可支援消費者可能要求的功能。  如果消費者想要更新資料存放區，提供者就必須包含可讓資料保存於資料存放區的程式碼。  例如，您可使用 C 執行階段程式庫或 MFC 在資料來源上執行這類作業。  [寫入至資料來源](#vchowwritingtothedatasource)章節內容說明如何寫入至資料來源、處理 **NULL** 和預設值，以及設定資料行旗標。  
+ 接下來，您必須確定您的提供者會包含所有用來支援取用者可能會要求它的任何功能。 如果取用者想要更新資料存放區，提供者必須包含保存到資料存放區資料的程式碼。 比方說，您可能會使用 MFC 的 C 執行階段程式庫來執行這類資料來源上的作業。 一節 「[寫入資料來源](#vchowwritingtothedatasource)」 說明如何寫入資料來源、 處理**NULL**預設值，並將設定資料行旗標。  
   
 > [!NOTE]
->  UpdatePV 是可更新提供者的範例。  UpdatePV 和 MyProv 相同，但增加了可更新支援。  
+>  UpdatePV 是可更新的提供者的範例。 為 MyProv，但具有可更新的支援 UpdatePV 都是相同的。  
   
-##  <a name="vchowmakingprovidersupdatable"></a> 使提供者可更新  
- 讓提供者可更新的關鍵，在於了解您希望提供者在資料存放區上執行什麼作業，以及希望提供者如何執行這些作業。  更明確地說，主要問題是資料存放區上的更新是要立即執行，或是延後 \(批次\) 直到更新命令發出時再執行。  
+##  <a name="vchowmakingprovidersupdatable"></a>讓提供者可更新  
+ 讓提供者可更新的索引鍵了解您想要您的提供者在資料存放區和方式想要執行這些作業的提供者上執行哪些的作業。 具體來說，主要的問題是是否要立即完成或延後更新資料存放區 （批次處理） 直到發出 update 命令。  
   
- 您必須先決定是否繼承自資料列集類別的 `IRowsetChangeImpl` 或 `IRowsetUpdateImpl`。  根據您選擇實作的項目，以下三個方法的功能將受到影響：`SetData`、**InsertRows** 和 `DeleteRows`。  
+ 您必須先決定是否要繼承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`在您的資料列集類別。 其中您選擇實作，根據三種方法的功能會受到影響： `SetData`， **InsertRows**，和`DeleteRows`。  
   
--   如果您從 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md) 繼承，立即呼叫這三個方法便會變更資料存放區。  
+-   如果您繼承自[IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)，立即呼叫這三個方法會變更資料存放區。  
   
--   如果您繼承自 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)，這些方法會延後您對資料存放區所做的變更，直到您呼叫 **Update**、`GetOriginalData` 或 **Undo**。  如果更新牽涉到多處變更，這些變更將會以批次模式執行 \(請注意，批次變更會增加大量的記憶體過載\)。  
+-   如果您繼承自[IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)，直到您呼叫到資料存放區變更延後的方法**更新**， `GetOriginalData`，或**復原**。 如果更新包括數項變更，它們會在批次模式執行 （請注意，批次變更可以加入相當多的記憶體負擔）。  
   
- 請注意，`IRowsetUpdateImpl` 是由 `IRowsetChangeImpl` 衍生。  因此，`IRowsetUpdateImpl` 賦予您變更功能以及批次功能。  
+ 請注意，`IRowsetUpdateImpl`衍生自`IRowsetChangeImpl`。 因此，`IRowsetUpdateImpl`可讓您變更功能加上批次功能。  
   
-#### 若要在提供者內支援變更性  
+#### <a name="to-support-updatability-in-your-provider"></a>在您的提供者支援更新的能力  
   
-1.  在您的資料列集類別內，繼承自 `IRowsetChangeImpl` 或 `IRowsetUpdateImpl`。  這些類別提供適當的介面來變更資料存放區：  
+1.  在您的資料列集類別繼承自`IRowsetChangeImpl`或`IRowsetUpdateImpl`。 這些類別會提供適當的介面，來變更資料存放區：  
   
      **加入 IRowsetChange**  
   
-     使用下列方式，將 `IRowsetChangeImpl` 加入至繼承 \(Inheritance\) 鏈結內：  
+     新增`IRowsetChangeImpl`您使用這種形式的繼承鏈結：  
   
     ```  
     IRowsetChangeImpl< rowset-name, storage-name >  
     ```  
   
-     同時將 `COM_INTERFACE_ENTRY(IRowsetChange)` 加入至資料列集類別的 `BEGIN_COM_MAP` 區段。  
+     也新增`COM_INTERFACE_ENTRY(IRowsetChange)`至`BEGIN_COM_MAP`> 一節，在您的資料列集類別。  
   
      **加入 IRowsetUpdate**  
   
-     使用下列形式，將 `IRowsetUpdate` 加入繼承鏈結內：  
+     新增`IRowsetUpdate`您使用這種形式的繼承鏈結：  
   
     ```  
     IRowsetUpdateImpl< rowset-name, storage>  
     ```  
   
     > [!NOTE]
-    >  您應移除在繼承鏈結的 `IRowsetChangeImpl` 行。  這個對於先前所述的指示詞特例必須包含 `IRowsetChangeImpl` 程式碼。  
+    >  您應該移除`IRowsetChangeImpl`繼承鏈結中的行。 先前所述的指示詞這個一個例外狀況必須包含的程式碼`IRowsetChangeImpl`。  
   
-2.  將下列項目加入至 COM 對應 \(**BEGIN\_COM\_MAP ...END\_COM\_MAP**\):  
+2.  加入下列到 COM 對應 (**BEGIN_COM_MAP...END_COM_MAP**):  
   
-    |如果您實作|請加入至 COM 對應|  
-    |-----------|-----------------|  
+    |如果您實作|將新增到 COM 對應|  
+    |----------------------|--------------------|  
     |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|  
     |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|  
   
-3.  在您的命令中加入下列項目至屬性集 \(Property Set\) 對應 \(**BEGIN\_PROPSET\_MAP ...END\_PROPSET\_MAP**\)：  
+3.  在命令中，加入下列屬性集對應 (**BEGIN_PROPSET_MAP...END_PROPSET_MAP**):  
   
-    |如果您實作|請加入至屬性集對應|  
-    |-----------|---------------|  
+    |如果您實作|加入至屬性集對應|  
+    |----------------------|-----------------------------|  
     |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|  
     |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|  
   
-4.  您也應該在屬性集對應內，包含下列所有設定：  
+4.  在屬性集對應，您也應該包括下列設定的所有下面所列：  
   
     ```  
     PROPERTY_INFO_ENTRY_VALUE(UPDATABILITY, DBPROPVAL_UP_CHANGE |   
@@ -103,93 +103,93 @@ Visual C\+\+ 6.0 只能支援唯讀的提供者 \(Provider\)。  Visual C\+\+ .N
       DBPROPFLAGS_READ, VARIANT_FALSE, 0)  
     ```  
   
-     您可以尋找 Atldb.h 中的屬性 ID 和數值，找出這些巨集呼叫所使用的數值 \(如果 Atldb.h 與線上文件不同，Atldb.h 將取代文件\)。  
+     您可以找到這些巨集呼叫中使用的屬性識別碼和值為 atldb 中尋找的值 （如果為 atldb 不同於線上文件，為 atldb 取代文件）。  
   
     > [!NOTE]
-    >  OLE DB 樣板需要許多 **VARIANT\_FALSE** 和 `VARIANT_TRUE` 設定，OLE DB 規格提到它們可被讀取\/寫入，但是 OLE DB 樣板只支援一個值。  
+    >  許多**VARIANT_FALSE**和`VARIANT_TRUE`設定所需的 OLE DB 範本; 它們可以是讀/寫，但 OLE DB 樣板只能支援一個值，指出 OLE DB 規格。  
   
-     **如果要實作 IRowsetChangeImpl**  
+     **如果您實作 IRowsetChangeImpl**  
   
-     如果您要實作 `IRowsetChangeImpl`，必須在提供者內設定下列屬性。  這些屬性主要用於透過 **ICommandProperties::SetProperties** 來要求介面。  
+     如果您實作`IRowsetChangeImpl`，您必須在您的提供者上設定下列屬性。 這些屬性主要是用來要求介面透過**icommandproperties:: Setproperties**。  
   
-    -   `DBPROP_IRowsetChange`：設定這個屬性就會自動設定 **DBPROP\_IRowsetChange**。  
+    -   `DBPROP_IRowsetChange`： 設定就會自動設定**DBPROP_IRowsetChange**。  
   
-    -   `DBPROP_UPDATABILITY`：指定 `IRowsetChange`: `SetData`、`DeleteRows` 或 `InsertRow` 支援方法的位元遮罩。  
+    -   `DBPROP_UPDATABILITY`： 指定支援的方法位元遮罩`IRowsetChange`: `SetData`， `DeleteRows`，或`InsertRow`。  
   
-    -   `DBPROP_CHANGEINSERTEDROWS`：消費者可為新插入的資料列呼叫 **IRowsetChange::DeleteRows** 或 `SetData`。  
+    -   `DBPROP_CHANGEINSERTEDROWS`： 取用者可以呼叫**irowsetchange:: Deleterows**或`SetData`新插入的資料列。  
   
-    -   `DBPROP_IMMOBILEROWS`：資料列集無法重新排列插入或更新的資料列。  
+    -   `DBPROP_IMMOBILEROWS`： 資料列集不會重新排列插入或更新資料列。  
   
      **如果您實作 IRowsetUpdateImpl**  
   
-     若您實作 `IRowsetUpdateImpl`，除了設定先前所列的 `IRowsetChangeImpl` 所有屬性外，還必須在提供者上設定下列屬性：  
+     如果您實作`IRowsetUpdateImpl`，您必須設定下列屬性上您的提供者，除了要設定的所有屬性`IRowsetChangeImpl`先前所列：  
   
     -   `DBPROP_IRowsetUpdate`.  
   
-    -   `DBPROP_OWNINSERT`：必須是 READ\_ONLY AND VARIANT\_TRUE。  
+    -   `DBPROP_OWNINSERT`： 必須是 READ_ONLY 和 VARIANT_TRUE。  
   
-    -   `DBPROP_OWNUPDATEDELETE`：必須是 READ\_ONLY AND VARIANT\_TRUE。  
+    -   `DBPROP_OWNUPDATEDELETE`： 必須是 READ_ONLY 和 VARIANT_TRUE。  
   
-    -   `DBPROP_OTHERINSERT`：必須是 READ\_ONLY AND VARIANT\_TRUE。  
+    -   `DBPROP_OTHERINSERT`： 必須是 READ_ONLY 和 VARIANT_TRUE。  
   
-    -   `DBPROP_OTHERUPDATEDELETE`：必須是 READ\_ONLY AND VARIANT\_TRUE。  
+    -   `DBPROP_OTHERUPDATEDELETE`： 必須是 READ_ONLY 和 VARIANT_TRUE。  
   
-    -   `DBPROP_REMOVEDELETED`：必須是 READ\_ONLY AND VARIANT\_TRUE。  
+    -   `DBPROP_REMOVEDELETED`： 必須是 READ_ONLY 和 VARIANT_TRUE。  
   
     -   `DBPROP_MAXPENDINGROWS`.  
   
         > [!NOTE]
-        >  如果您支援告知，您可能也會有其他某些屬性，請參閱 `IRowsetNotifyCP` 中的章節以取得清單。  
+        >  如果您支援通知，您可能還有其他屬性。請參閱節`IRowsetNotifyCP`這個清單。  
   
-     如需如何設定屬性的範例，請參閱 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 的 **CUpdateCommand** \(在 Rowset.h 內\) 屬性集設定對應。  
+     比方說的內容的設定方式，請參閱這個屬性中設定地圖**CUpdateCommand** （在 Rowset.h) 中[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)。  
   
-##  <a name="vchowwritingtothedatasource"></a> 寫入至資料來源  
- 若要讀取資料來源，請呼叫 **Execute** 函式。  若要寫入至資料來源，請呼叫 `FlushData` 函式 \(就一般含意而言，flush 意味將您對資料表或索引所做的修改儲存至磁碟\)。  
+##  <a name="vchowwritingtothedatasource"></a>寫入資料來源  
+ 若要從資料來源讀取，呼叫**Execute**函式。 若要寫入的資料來源，請呼叫`FlushData`函式。 （一般的意義而言，排清方法來儲存您對資料表或索引到磁碟的修改）。  
   
 ```  
 FlushData(HROW, HACCESSOR);  
 ```  
   
- 資料列控制代碼 \(*HROW*\) 和存取子控制代碼 \(*HACCESSOR*\) 引數可讓您指定要寫入的區域。  通常您會一次寫入一個資料欄位。  
+ 資料列控制代碼 (*HROW*) 和存取子控制代碼 (*HACCESSOR*) 引數可讓您指定要寫入的區域。 一般而言，您一次寫入單一資料欄位。  
   
- `FlushData` 方法會以資料原本儲存的格式來寫入資料。  如果您沒有覆寫這個函式，提供者將可正常運作，但是變更並不會清除至資料存放區。  
+ `FlushData`方法會將資料寫入所在它一開始儲存的格式。 如果您不會覆寫這個函式，您的提供者將會正確運作，但變更並不會清除資料存放區。  
   
-### 何時儲存  
- 提供者樣板會在需要將資料寫入資料存放區的任何時候，呼叫 `FlushData`；通常這會發生在 \(但並不總是\) 下列函式呼叫產生結果時：  
+### <a name="when-to-flush"></a>排清的時機  
+ 提供者範本呼叫`FlushData`每當資料以供需要寫到資料存放區，這通常 （但並非一定） 會發生下列函式呼叫的結果：  
   
--   **IRowsetChange::DeleteRows**  
+-   **Irowsetchange:: Deleterows**  
   
--   **IRowsetChange::SetData**  
+-   **Irowsetchange:: Setdata**  
   
--   **IRowsetChange::InsertRows** \(如果有新資料插入至資料列\)  
+-   **IRowsetChange::InsertRows** （如果沒有要插入資料列中的新資料）  
   
--   **IRowsetUpdate::Update**  
+-   **Irowsetupdate:: Update**  
   
-### 如何運作  
- 消費者執行需要儲存變更 \(例如 **Update**\) 的呼叫，而這個呼叫會傳遞至一直執行下列工作的提供者：  
+### <a name="how-it-works"></a>它的運作方式  
+ 取用者會呼叫需要排清 (例如**更新**) 和這個呼叫會傳遞給提供者，一律會進行下列作業：  
   
--   在您每次擁有繫結狀態值時呼叫 `SetDBStatus` \(請參閱《OLE DB 程式設計人員參考》第六章＜資料部分：狀態＞\)。  
+-   呼叫`SetDBStatus`即表示已繫結的狀態值 (請參閱*OLE DB 程式設計人員參考*，第 6 章*資料組件： 狀態*)。  
   
 -   檢查資料行旗標。  
   
 -   呼叫 `IsUpdateAllowed`。  
   
- 這三個步驟有助於提供安全性。  接著提供者將呼叫 `FlushData`。  
+ 這三個步驟會協助提供安全性。 接著，提供者會呼叫`FlushData`。  
   
-### 如何實作 FlushData  
- 若要實作 `FlushData`，您需要考慮一些問題：  
+### <a name="how-to-implement-flushdata"></a>如何實作 FlushData  
+ 若要實作`FlushData`，您需要考慮的幾個問題：  
   
--   確認資料存放區可處理變更。  
+-   確定資料存放區可處理變更。  
   
--   處理 **NULL** 值。  
+-   處理**NULL**值。  
   
 -   處理預設值。  
   
- 若要實作自己的 `FlushData` 方法，您需要：  
+ 若要實作您自己`FlushData`方法，您需要：  
   
--   移至資料列集類別。  
+-   移至您的資料列集類別。  
   
--   在資料列集類別內放置下列宣告：  
+-   在資料列集類別會將宣告：  
   
 ```  
 HRESULT FlushData(HROW, HACCESSOR)  
@@ -198,21 +198,21 @@ HRESULT FlushData(HROW, HACCESSOR)
 }  
 ```  
   
--   提供 `FlushData` 的實作。  
+-   提供的實作`FlushData`。  
   
- 良好的 `FlushData` 實作只會儲存實際完成更新的資料列和資料行。  您可使用 *HROW* 和 *HACCESSOR* 參數來決定目前儲存的資料列和資料行，以進行最佳化。  
+ 良好實作`FlushData`儲存只有資料列和實際更新的資料行。 您可以使用*HROW*和*HACCESSOR*參數，以判斷目前的資料列和資料行的儲存最佳化。  
   
- 通常，最大的挑戰是使用您自己的原生資料存放區。  可能的話，請嘗試：  
+ 通常，最大的挑戰使用原生資料存放區。 可能的話，請嘗試：  
   
--   盡可能簡化寫入資料存放區的方法。  
+-   保留寫入資料存放區越簡單越好的方法。  
   
--   處理 **NULL** 值 \(選擇項，但建議使用\)。  
+-   處理**NULL** values （選擇性但建議使用）。  
   
--   處理預設值 \(選擇項，但建議使用\)。  
+-   處理預設值 （選擇性但建議使用）。  
   
- 最佳作法是使資料存放區的 **NULL** 和預設值都有實際的指定值。  若您能推斷 \(Extrapolate\) 此資料，那就更好了。  若不能，則建議您不使用 **NULL** 和預設值。  
+ 最佳做法是讓實際的指定的值的資料存放區中**NULL**和預設值。 最好是如果可以推斷這項資料。 如果沒有，建議您在不允許**NULL**和預設值。  
   
- 下面範例會說明在 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 範例中 \(請參閱範例程式碼的 Rowset.h\)，`FlushData` 如何在 `RUpdateRowset` 類別內實作：  
+ 下列範例會示範如何`FlushData`中實作`RUpdateRowset`類別[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例 （在範例程式碼，請參閱 Rowset.h）：  
   
 ```  
 ///////////////////////////////////////////////////////////////////////////  
@@ -294,24 +294,24 @@ HRESULT FlushData(HROW, HACCESSOR)
 }  
 ```  
   
-### 處理變更  
- 為了讓提供者能處理變更，您需要先確認資料存放區 \(例如文字檔或視訊檔\) 擁有可讓您進行變更的設施。  如果沒有，您應該建立不同於提供者 \(Provider\) 專案的程式碼。  
+### <a name="handling-changes"></a>處理變更  
+ 針對您的提供者來處理的變更，您必須先以確定您的資料存放區 （例如文字檔案或視訊檔案中） 有可讓您對它進行變更的功能。 如果不存在，您應該在個別從提供者專案中建立該程式碼。  
   
-### 處理 NULL 資料  
- 使用者可能傳送 **NULL** 資料。  當您將 **NULL** 值寫入資料來源欄位時，可能存有潛在的問題。  試想，有一個可接受縣市和郵遞區號值的訂單處理應用程式；它可接受其中一個值或兩個值，但不能都沒有值，因為那樣不可能進行傳送。  因此您必須針對應用程式的實際需要，在欄位中限制某些 **NULL** 值的組合。  
+### <a name="handling-null-data"></a>處理 NULL 的資料  
+ 很可能會傳送使用者**NULL**資料。 當您撰寫**NULL**值到資料來源中的欄位，可以是潛在的問題。 假設訂單處理應用程式可接受值縣市和郵遞區號。它可以接受或這兩個值，但無法兩者皆否，因為在此情況下將無法傳遞。 因此，您必須限制的特定組合**NULL**對您的應用程式有意義的欄位中的值。  
   
- 身為提供者開發人員，您必須考慮如何儲存該資料、如何從資料存放區讀取資料以及如何將它指定給使用者。  明確地說，您必須考量如何變更資料來源中資料列集資料的資料狀態 \(例如，DataStatus \= **NULL**\)。  您要決定當消費者存取包含 **NULL** 值的欄位時，需傳回何數值。  
+ 提供者開發人員，您必須考慮如何儲存該資料、 如何從資料存放區讀取資料以及如何將它指定給使用者。 具體來說，您必須考慮如何變更資料來源中的資料列集資料的資料狀態 (例如，DataStatus = **NULL**)。 您決定何值時取用者存取欄位，包含要傳回**NULL**值。  
   
- 檢視 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 範例的程式碼；此程式碼將說明提供者如何處理 **NULL** 資料。  在 UpdatePV，提供者會將字串 NULL 寫入資料存放區來儲存 **NULL** 資料。  當它從資料來源讀取 **NULL** 資料時，一看到是該字串，就會清空緩衝區，建立一個 **NULL** 字串。  它也有一個 `IRowsetImpl::GetDBStatus` 覆寫，在此覆寫中，若該資料值是空的，它就會傳回 **DBSTATUS\_S\_ISNULL**。  
+ 查看中的程式碼[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例; 它會說明如何處理提供者**NULL**資料。 在 UpdatePV，提供者會儲存**NULL**資料存放區中寫入字串"NULL"的資料。 當讀取**NULL**資料從資料存放區，則會看見該字串，並清空緩衝區中，建立**NULL**字串。 它也會有的覆寫`IRowsetImpl::GetDBStatus`中傳回的**DBSTATUS_S_ISNULL**如果該資料值是空的。  
   
-### 標記 Null 設定資料行  
- 如果您也實作結構描述 \(Schema\) 資料列集 \(請參閱 `IDBSchemaRowsetImpl`\)，您的實作 \(Implementation\) 應指定於資料行為 Null 設定的 **DBSCHEMA\_COLUMNS** 資料列集 \(通常以 **C***xxx***SchemaColSchemaRowset** 的形式標記於您的提供者內\)。  
+### <a name="marking-nullable-columns"></a>標示可為 Null 的資料行  
+ 如果您也可以實作結構描述資料列集 (請參閱`IDBSchemaRowsetImpl`)，您的實作應該指定在**DBSCHEMA_COLUMNS**資料列集 (通常標示為您的提供者中**C***xxx***SchemaColSchemaRowset**) 的資料行是可為 null。  
   
- 您也需要指定，在 `GetColumnInfo` 版本內，所有的 Null 設定資料行都包含 **DBCOLUMNFLAGS\_ISNULLABLE** 值。  
+ 您也需要指定可為 null 的所有資料行包含**DBCOLUMNFLAGS_ISNULLABLE**的版本中的值`GetColumnInfo`。  
   
- 在 OLE DB 樣板實作中，如果您沒有將資料行標記成可為 Null，提供者就會假設它們必須包含值且不允許消費者傳送 null 值給它。  
+ 在 OLE DB 範本實作中，如果您無法標記為可為 null，資料行的提供者會假設他們都必須包含值，而且不允許取用者將它傳送 null 值。  
   
- 下列範例說明在 UpdatePV 中，**CommonGetColInfo** 函式如何實作於 **CUpdateCommand** \(請參閱 UpProvRS.cpp\)。  請注意，Null 設定的資料行如何擁有 **DBCOLUMNFLAGS\_ISNULLABLE**。  
+ 下列範例會示範如何**CommonGetColInfo**函式中實作**CUpdateCommand** （請參閱 UpProvRS.cpp） UpdatePV 中。 請注意如何的資料行具有這**DBCOLUMNFLAGS_ISNULLABLE**可為 null 的資料行。  
   
 ```  
 /////////////////////////////////////////////////////////////////////////////  
@@ -366,12 +366,12 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
 }  
 ```  
   
-### 預設值  
- 和 **NULL** 資料一樣，您必須負責變更預設值。  
+### <a name="default-values"></a>預設值  
+ 如同**NULL**資料，您必須將變更預設值。  
   
- `FlushData` 和 **Execute** 預設為傳回 `S_OK`。  因此，如果您沒有覆寫這個函式，變更看起來似乎是成功了 \(傳回 `S_OK`\)，但事實上它們不會傳給資料存放區。  
+ 預設值是`FlushData`和**Execute**會傳回`S_OK`。 因此，如果您不會覆寫這個函式，會顯示變更才會成功 (`S_OK`將傳回)，但不是會傳輸至資料存放區。  
   
- 在 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 範例中 \(在 Rowset.h 內\)，`SetDBStatus` 方法將依下列方式處理預設值：  
+ 在[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例 （在 Rowset.h)`SetDBStatus`方法會處理預設值，如下所示：  
   
 ```  
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -408,12 +408,12 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 }  
 ```  
   
-### 資料行旗標  
- 如果支援在資料行的預設值，使用在 **\<***提供者類別***\>SchemaRowset** 類別，的中繼資料必須設定它。  設定 *m\_bColumnHasDefault* \= `VARIANT_TRUE`。  
+### <a name="column-flags"></a>資料行旗標  
+ 如果您在您的資料行上支援預設值，您需要設定它使用中繼資料中的 **\<** *提供者類別***> SchemaRowset**類別。 設定*m_bColumnHasDefault* = `VARIANT_TRUE`。  
   
- 您也要負責設定資料行旗標，它是透過 **DBCOLUMNFLAGS** 列舉型別來指定的。  資料行旗標描述了資料行特性。  
+ 您也可以設定資料行旗標，會使用指定的責任**DBCOLUMNFLAGS**列舉型別。 資料行旗標描述資料行的特性。  
   
- 例如，在 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) \(在 Session.h 中\) 的 `CUpdateSessionColSchemaRowset` 類別內，第一個資料行會依照下列方式來設定：  
+ 例如，在`CUpdateSessionColSchemaRowset`類別[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f) （在 Session.h)，第一個資料行設定這種方式：  
   
 ```  
 // Set up column 1  
@@ -428,7 +428,7 @@ lstrcpyW(trData[0].m_szColumnDefault, OLESTR("0"));
 m_rgRowData.Add(trData[0]);  
 ```  
   
- 這段程式碼指定了該資料行可支援預設值 0、是可寫入的，以及資料行中的所有資料都具有相同長度等特性。  若您希望資料行的資料具有可變的長度，您就不應設定這個旗標。  
+ 此程式碼指定在其他方面，資料行支援預設值是 0，可寫入的與資料行中的所有資料都具有相同的長度。 如果您想要具有可變長度的資料行中的資料，您就不會設定這個旗標。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)

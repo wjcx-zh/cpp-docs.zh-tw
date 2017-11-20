@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -72,19 +71,17 @@ helpviewer_keywords:
 - C3188
 - C3191
 - C3193
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 7060d03845cf81aeaedc5eff48db3aec59716112
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>編譯器錯誤 C3100 透過 C3199
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
@@ -196,4 +193,3 @@ ms.lasthandoff: 10/10/2017
 |[編譯器錯誤 C3197](compiler-error-c3197.md)|'*關鍵字*': 只能用於定義|  
 |[編譯器錯誤 C3198](compiler-error-c3198.md)|無效的浮點 pragma 使用方式： fenv_access pragma 只能在精確模式的運作|  
 |[編譯器錯誤 C3199](compiler-error-c3199.md)|無效的浮點 pragma 使用方式： 非精確模式不支援例外狀況|  
-

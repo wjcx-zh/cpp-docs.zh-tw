@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -14,36 +13,20 @@ f1_keywords:
 - C5021
 - C5001
 - C5012
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 5c466510a00079f04ee5871b41364fff552ecf70
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 5ce85d60f0a3dc7f7ec88e480fb17289aaaf9fa1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>向量化工具和平行化工具訊息
-您可以使用 Visual c + + 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設定[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)為輸出原因代碼和活動相關的告知性訊息。 本文說明原因代碼和訊息。  
+您可以使用 Visual c + + 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設定[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)輸出原因代碼和參考活動相關的訊息。 本文說明原因代碼和訊息。  
   
 -   [告知性訊息](#BKMK_InformationalMessages)  
   

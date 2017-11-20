@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -39,41 +38,24 @@ f1_keywords:
 - No header/ATL::put_MessageReflect
 - No header/ATL::put_OptionKeyPath
 - No header/ATL::put_UserMode
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinAmbientDispatch interface
+dev_langs: C++
+helpviewer_keywords: IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 3dd34ffec68e4503aebe7b8d0e72ec1f711dca03
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: c4886ff3c3e4a635e390774d21afea407b4d8077
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch 介面
 這個介面會提供方法來指定裝載的控制項或容器的特性。  
   
 > [!IMPORTANT]
->  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -81,7 +63,7 @@ ms.lasthandoff: 03/31/2017
 interface IAxWinAmbientDispatch : IDispatch
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -123,7 +105,7 @@ interface IAxWinAmbientDispatch : IDispatch
   
  如果您要連結至 ATL90.dll， **AXHost**會從型別程式庫 DLL 中載入的型別資訊。  
   
- 請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)以取得詳細資料。  
+ 請參閱[裝載 ActiveX 控制項使用 ATL AXHost](../../atl/hosting-activex-controls-using-atl-axhost.md)如需詳細資訊。  
   
 ## <a name="requirements"></a>需求  
  下表所示使用數種格式，此介面的定義。  
@@ -611,7 +593,6 @@ STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
  [IAxWinHostWindow 介面](../../atl/reference/iaxwinhostwindow-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

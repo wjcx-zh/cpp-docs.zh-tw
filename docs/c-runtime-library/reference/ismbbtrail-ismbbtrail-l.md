@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,22 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 125b35ecc01c58808fab939649f9b71f5c4ca85f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 8b99e318e95644b327f3629658ac5100f08c05d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail、_ismbbtrail_l
 判斷位元組是否為多位元組字元的尾端位元組。  
@@ -99,7 +82,7 @@ int _ismbbtrail_l(
   
  \* 針對此測試條件的資訊清單常數。  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   

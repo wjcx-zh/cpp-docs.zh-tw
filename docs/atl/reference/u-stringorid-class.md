@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
 - ATL::_U_STRINGorID
 - _U_STRINGorID
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: b02d539ae2a067c015988a847407bf631b6e8c1a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID 類別
 這個引數的介面卡類別可讓任一資源名稱 ( `LPCTSTR`s) 或資源識別碼 ( **UINT**s) 而不需要將 ID 為字串，使用呼叫端傳遞至函式**MAKEINTRESOURCE**巨集。  
@@ -90,4 +87,3 @@ _U_STRINGorID(LPCTSTR lpString);
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _RTC_SetErrorType
+apiname: _RTC_SetErrorType
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 78f056e65523a39477bf138e6bd1664e0945a899
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: f695cb018a09725f23fb0943f9acbef83a338314
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 關聯的執行階段錯誤檢查 (RTC) 所偵測到的錯誤與類型。 錯誤處理常式會處理如何輸出指定類型的錯誤。  

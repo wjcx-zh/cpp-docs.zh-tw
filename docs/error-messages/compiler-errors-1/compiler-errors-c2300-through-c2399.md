@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -62,39 +61,23 @@ helpviewer_keywords:
 - C2367
 - C2398
 - C2399
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 8d8925a68ffbb7ba607e37be8db5eca33300ef23
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: f8e1dcf350c974f5be96b971d3d70e69b95ebc9e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2300-through-c2399"></a>編譯器錯誤s C2300 Through C2399
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -108,13 +91,13 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C2305|'*檔案*' 不包含此模組的偵錯資訊|  
 |編譯器錯誤 C2306|'*檔案*' 不包含此模組最新的偵錯資訊|  
 |[編譯器錯誤 C2307](compiler-error-c2307.md)|pragma*指示詞*必須移動函式以外中，如果已啟用累加編譯|  
-|[編譯器錯誤 C2308](compiler-error-c2308.md)|指定要結合的字串彼此不相符，無法執行|  
-|[編譯器錯誤 C2309](compiler-error-c2309.md)|catch 處理常式必須使用括號括住例外狀況的宣告|  
+|[編譯器錯誤 C2308](compiler-error-c2308.md)|串連不相符的字串|  
+|[編譯器錯誤 C2309](compiler-error-c2309.md)|catch 處理常式必須括號括住例外狀況宣告|  
 |[編譯器錯誤 C2310](compiler-error-c2310.md)|catch 處理常式必須指定一個類型|  
-|[編譯器錯誤 C2311](compiler-error-c2311.md)|'*類型*': 被 '...' 攔截 在行*數目*|  
+|[編譯器錯誤 C2311](compiler-error-c2311.md)|'*類型*': 被 '...' 在行*數目*|  
 |[編譯器錯誤 C2312](compiler-error-c2312.md)|'*type1*': 被攔截'*type2*' 在行*數目*|  
 |[編譯器錯誤 C2313](compiler-error-c2313.md)|'*type1*': 被參考 ('*type2*') 的一行*數目*|  
-|編譯器錯誤 C2314|關鍵字 '*keyword1*' 已被取代︰ 使用 '*keyword2*' 改為|  
+|編譯器錯誤 C2314|關鍵字 '*keyword1*' 已被取代： 使用 '*keyword2*' 改為|  
 |[編譯器錯誤 C2315](compiler-error-c2315.md)|'*type1*': 參考被攔截'*type2*' 在行*數目*|  
 |[編譯器錯誤 C2316](compiler-error-c2316.md)|'*類型*': 無法攔截，因為解構函式及/或複製建構函式無法存取或已刪除|  
 |[編譯器錯誤 C2317](compiler-error-c2317.md)|'try' 區塊開始於行 '*數目*' 沒有 catch 處理常式|  
@@ -130,7 +113,7 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2327](compiler-error-c2327.md)|'*識別碼*': 不是型別名稱、 靜態或列舉值|  
 |編譯器錯誤 C2328|'*關鍵字*': 不支援關鍵字|  
 |編譯器錯誤 C2329|'*識別碼*': 沒有可用的函式的指標 __ptr64|  
-|編譯器錯誤 C2330|'implementation_key( )' 只在由 #pragma start_map_region/stop_map_region 界限的區域中有效|  
+|編譯器錯誤 C2330|'implementation_key （）' 只適用於由 #pragma start_map_region/stop_map_region 界限的區域中|  
 |編譯器錯誤 C2331|若要存取 '*識別碼*'現在已經定義為'*accessibility1*'、 先前定義為'*accessibility2*'|  
 |[編譯器錯誤 C2332](compiler-error-c2332.md)|'*typedef*': 遺漏標記名稱|  
 |[編譯器錯誤 C2333](compiler-error-c2333.md)|'*函式*': 函式宣告中的錯誤; 略過函式主體|  
@@ -142,7 +125,7 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C2339|'*識別碼*': 內嵌 IDL 中不合法的類型|  
 |編譯器錯誤 C2340|'*識別碼*': 'static' 只可用在類別定義中|  
 |[編譯器錯誤 C2341](compiler-error-c2341.md)|'*區段*': 您必須使用 #pragma data_seg、 code_seg 或前一個區段用於定義區段|  
-|編譯器錯誤 C2342|語法錯誤: 衝突的類型限定詞|  
+|編譯器錯誤 C2342|語法錯誤： 衝突的類型限定詞|  
 |編譯器錯誤 C2343|'*區段*': 衝突的區段屬性|  
 |[編譯器錯誤 C2344](compiler-error-c2344.md)|對齊 (*數目*): 對齊必須是 2 的乘冪|  
 |[編譯器錯誤 C2345](compiler-error-c2345.md)|對齊 (*數目*): 不合法的 align 值|  
@@ -151,12 +134,12 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2348](compiler-error-c2348.md)|'*類型*': 不是 c-style 彙總，無法在內嵌 IDL 中匯出|  
 |[編譯器錯誤 C2349](compiler-error-c2349.md)|'*函式*' 無法編譯為 managed: '*說明*'; 使用 #pragma unmanaged|  
 |[編譯器錯誤 C2350](compiler-error-c2350.md)|'*識別碼*' 不是靜態成員|  
-|[編譯器錯誤 C2351](compiler-error-c2351.md)|過時的 C++ 建構函式初始化語法|  
+|[編譯器錯誤 C2351](compiler-error-c2351.md)|過時的 c + + 建構函式初始化語法|  
 |[編譯器錯誤 C2352](compiler-error-c2352.md)|'*識別碼*': 非靜態成員函式的呼叫不合法|  
-|[編譯器錯誤 C2353](compiler-error-c2353.md)|不能使用例外狀況規格|  
+|[編譯器錯誤 C2353](compiler-error-c2353.md)|不允許例外狀況規格|  
 |編譯器錯誤 C2354|已過時。|  
 |[編譯器錯誤 C2355](compiler-error-c2355.md)|'this': 只能在非靜態成員函式或非靜態資料成員初始設定式內部參考|  
-|[編譯器錯誤 C2356](compiler-error-c2356.md)|在轉譯單位中不需要變更初始化區段|  
+|[編譯器錯誤 C2356](compiler-error-c2356.md)|在轉譯單位不得變更初始化區段|  
 |[編譯器錯誤 C2357](compiler-error-c2357.md)|'*識別碼*': 必須是類型的函式'*類型*'|  
 |編譯器錯誤 C2358|'*識別碼*': 靜態屬性不能定義在類別定義之外|  
 |編譯器錯誤 C2359|已過時。|  
@@ -200,4 +183,3 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C2397](compiler-error-c2397.md)|從轉換 '*type1*'to'*type2*' 必須是縮小轉換|  
 |編譯器錯誤 C2398|元素 '*數目*': 從'*type1*'to'*type2*' 必須是縮小轉換|  
 |編譯器錯誤 C2399|已過時。|  
-

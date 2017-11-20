@@ -1,34 +1,32 @@
 ---
-title: "編譯器警告 (層級 4) C4400 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4400"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4400"
+title: "編譯器警告 （層級 4） C4400 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4400
+dev_langs: C++
+helpviewer_keywords: C4400
 ms.assetid: f135fe98-4f92-4e07-9d71-2621b36ee755
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 975127c09a44448c5589edfd3b63323caa23f942
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 4) C4400
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'type' : 不支援這種型別上的 const\/volatile 限定詞  
+# <a name="compiler-warning-level-4-c4400"></a>編譯器警告 (層級 4) C4400
+'type': 不支援此類型的 const/volatile 限定詞  
   
- [const](../../cpp/const-cpp.md) 和 [volatile](../../cpp/volatile-cpp.md) 限定詞將不會配合 Common Language Runtime 型別的變數運作。  
+ [Const](../../cpp/const-cpp.md)和[volatile](../../cpp/volatile-cpp.md)限定詞不適用於 common language runtime 類型的變數。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4400。  
   
 ```  

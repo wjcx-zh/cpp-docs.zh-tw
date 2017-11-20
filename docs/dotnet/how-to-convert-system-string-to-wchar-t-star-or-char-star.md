@@ -1,35 +1,34 @@
 ---
-title: "如何：將 System::String 轉換為 wchar_t* 或 char* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "char 資料類型, 轉換 System::String 為"
-  - "PtrToStringChars 方法"
-  - "System::String"
-  - "System::String, 轉換為 char 或 wchar_t"
-  - "wchart 類型, System::String"
+title: "如何： 將 system:: string 轉換為 wchar_t * 或 char * |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- System::String, converting to char or wchar_t
+- PtrToStringChars method
+- System::String
+- wchart type, converting System::String
+- char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d0616e76985a06f9525a300c318fe1518cd6a70c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：將 System::String 轉換為 wchar_t* 或 char*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可以使用 Vcclr.h 中的 `PtrToStringChars`，將 <xref:System.String> 轉換為原生 \(Native\) `wchar_t *` 或 `char *`。這一定會傳回寬 Unicode 字串指標，因為內部的 CLR 字串即為 Unicode。  接著，您可以轉換寬指標，如下列範例所示。  
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>如何：將 System::String 轉換為 wchar_t* 或 char*
+您可以使用`PtrToStringChars`中要轉換的 Vcclr.h<xref:System.String>到原生`wchar_t *`或`char *`。  這一律傳回寬的 Unicode 字串指標，因為 CLR 字串在內部是 unicode 資料類型。 您可以再轉換寬如下列範例所示。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // convert_string_to_wchar.cpp  
@@ -68,7 +67,10 @@ int main() {
 }  
 ```  
   
-  **Hello**  
-**Hello**   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+Hello  
+Hello  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

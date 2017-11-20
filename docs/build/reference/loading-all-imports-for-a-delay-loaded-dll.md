@@ -1,36 +1,35 @@
 ---
-title: "載入延遲載入 DLL 的所有匯入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__HrLoadAllImportsForDll 連結器選項"
+title: "載入延遲載入 DLL 的所有匯入 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: __HrLoadAllImportsForDll linker option
 ms.assetid: 975fcd97-1a56-4a16-9698-e1a249d2d592
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 842b23afe7aec4d66eaf0787976d8e0c5d9a7320
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 載入延遲載入 DLL 的所有匯入
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在 delayhlp.cpp 中定義的 **\_\_HrLoadAllImportsForDll** 函式會告訴連結器從以 [\/delayload](../../build/reference/delayload-delay-load-import.md) 連結器選項指定的 DLL 載入所有匯入。  
+# <a name="loading-all-imports-for-a-delay-loaded-dll"></a>載入延遲載入 DLL 的所有匯入
+**__HrLoadAllImportsForDll**函式，以定義在 delayhlp.cpp，指示連結器從所指定的 DLL 載入所有匯入[/delayload](../../build/reference/delayload-delay-load-import.md)連結器選項。  
   
- 載入所有匯入允許您將錯誤處理置於您程式碼中的一個地方，而不需要在實際呼叫匯入的附近使用例外狀況處理 \(Exception Handling\)。  它也避免了因為 Helper 程式碼載入匯入失敗，而造成應用程式在執行過程中部分失敗的情況。  
+ 載入所有匯入可讓您使程式碼中的一個位置中的錯誤處理，並不需要使用例外狀況處理的匯入實際的呼叫周圍。 它也可避免透過程序因為無法載入匯入的協助程式程式碼部分失敗應用程式的情況。  
   
- 呼叫 **\_\_HrLoadAllImportsForDll** 並不會改變攔截 \(Hook\) 的行為和錯誤處理；如需詳細資訊，請參閱[錯誤處理和告知](../../build/reference/error-handling-and-notification.md)。  
+ 呼叫**__HrLoadAllImportsForDll**不會變更行為的攔截程序和錯誤處理，請參閱[錯誤處理和通知](../../build/reference/error-handling-and-notification.md)如需詳細資訊。  
   
- 傳遞給 **\_\_HrLoadAllImportsForDll** 的 DLL 名稱會與 DLL 本身內部儲存的名稱進行比較，並且區分大小寫。  
+ DLL 名稱傳遞給**__HrLoadAllImportsForDll**會比較儲存在 DLL 本身的名稱，並會區分大小寫。  
   
- 下列範例顯示如何呼叫 **\_\_HrLoadAllImportsForDll**：  
+ 下列範例示範如何呼叫**__HrLoadAllImportsForDll**:  
   
 ```  
 if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {  
@@ -39,5 +38,5 @@ if (FAILED(__HrLoadAllImportsForDll("delay1.dll"))) {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [延遲載入 DLL 的連結器支援](../../build/reference/linker-support-for-delay-loaded-dlls.md)

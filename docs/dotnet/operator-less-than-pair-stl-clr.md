@@ -1,33 +1,30 @@
 ---
-title: "operator&lt; (pair) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator< 成員 [STL/CLR]"
+title: "運算子&lt;（組） (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: e7061b29-1289-4ea9-ae69-feea8abbfb25
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7e15c99ef1de1fb0776365429c374b71279b8331
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# operator&lt; (pair) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-為小於比較。  
+# <a name="operatorlt-pair-stlclr"></a>運算子&lt;（組） (STL/CLR)
+配對小於比較。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value1,  
@@ -36,17 +33,17 @@ template<typename Value1,
         pair<Value1, Value2>% right);  
 ```  
   
-#### 參數  
- left  
- 要比較的左邊。  
+#### <a name="parameters"></a>參數  
+ 左  
+ 要比較的左的組。  
   
- right  
- 要比較的物件。  
+ 向右  
+ 要比較的右組。  
   
-## 備註  
- 運算子函式會傳回 `left``.first <``right``.first || !(``right``.first <``left``.first &&``left``.second <``right``.second`。  您會用它來測試 `left` 是否為已排序的 `right` 中之前，當兩個所要比較的項目由項目時。  
+## <a name="remarks"></a>備註  
+ 運算子函式會傳回`left.first <` `right.first || !(right.first <` `left.first &&` `left.second <` `right.second`。 使用它來測試是否`left`排序之前`right`兩組時項目所比較的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_pair_operator_lt.cpp   
@@ -69,19 +66,22 @@ int main()
   
 ```  
   
-  **\[x 3\]，**  
-**\[x 4\]，**  
-**\[x 3\] \< \[3\] x 為 false**  
-**\[x 3\] \< \[4\] x 為 true**   
-## 需求  
- **標題:** \<cliext\/公用程式\>  
+```Output  
+[x, 3]  
+[x, 4]  
+[x 3] < [x 3] is False  
+[x 3] < [x 4] is True  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/公用程式 >  
   
-## 請參閱  
- [pair](../dotnet/pair-stl-clr.md)   
- [operator\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)   
- [operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)   
- [operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
- [operator\> \(pair\)](../dotnet/operator-greater-than-pair-stl-clr.md)   
- [operator\<\= \(pair\)](../dotnet/operator-less-or-equal-pair-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [配對 (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [運算子 = = （組） (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)   
+ [運算子 ！ = （組） (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)   
+ [運算子 > = （組） (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
+ [運算子 > （組） (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)   
+ [operator<= (pair) (STL/CLR)](../dotnet/operator-less-or-equal-pair-stl-clr.md)

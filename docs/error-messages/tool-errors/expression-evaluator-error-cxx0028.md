@@ -1,34 +1,33 @@
 ---
-title: "運算式評估工具錯誤 CXX0028 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0028"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0028"
-  - "CXX0028"
+title: "運算式評估工具錯誤 CXX0028 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0028
+dev_langs: C++
+helpviewer_keywords:
+- CAN0028
+- CXX0028
 ms.assetid: 172eb81f-c0b0-43b1-b418-766f35f1a561
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7a23af2ad5bca04ba9929408e9f5172a8eaa2074
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 運算式評估工具錯誤 CXX0028
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-不是 struct\/union 項目  
+# <a name="expression-evaluator-error-cxx0028"></a>運算式評估工具錯誤 CXX0028
+不 struct/union 項目  
   
- 指定了 "Struct.Member" 或 "pStruct\-\>Member" 形式的運算式，但是 \<member\> 並不是該結構的項目。  
+ 指定表單 'Struct.Member' 或 'Pstruct->member-成員 >' 的運算式，但\<成員 > 不是結構的項目。  
   
- 運算式的括號可能不正確。  
+ 運算式可能不正確括號括住。  
   
- 此錯誤與 CAN0028 相同。
+ 這個錯誤是與 can0028 相同。

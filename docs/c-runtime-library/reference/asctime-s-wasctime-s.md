@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - asctime_s
 - _wasctime_s
 - _tasctime_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tasctime_s function
 - _tasctime_s function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4d4b2bf3c4fb4180b6da1d39ca26bfe819971f31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 4b72b82e1b8c7ae2d036d35b00e8a49b7516d64b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s、_wasctime_s
 將 `tm` 時間結構轉換成字元字串。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md) 版本。  

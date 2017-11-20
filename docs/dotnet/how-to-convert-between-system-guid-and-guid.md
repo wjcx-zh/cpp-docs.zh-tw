@@ -1,32 +1,32 @@
 ---
-title: "如何：在 System::Guid 和 _GUID 之間轉換 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GUID, 轉換為 System::GUID"
-  - "System::GUID"
-  - "System::GUID, 轉換為 GUID"
+title: "如何： guid 和 _GUID 之間轉換 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- System::GUID
+- GUID, converting to System::GUID
+- System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 31a3857169ad27ad75ed3ef38022048420d1bf0f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 System::Guid 和 _GUID 之間轉換
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會示範如何在 <xref:System.Guid> 和 `_GUID` 之間進行轉換。  
+# <a name="how-to-convert-between-systemguid-and-guid"></a>如何：在 System::Guid 和 _GUID 之間轉換
+下列程式碼範例示範如何將轉換之間<xref:System.Guid>和`_GUID`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // convert_guids.cpp  
@@ -68,7 +68,10 @@ int main() {
 }  
 ```  
   
-  **11111111\-2222\-3333\-4455\-555555555555**  
-**11111111\-2222\-3333\-4455\-555555555555**   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+11111111-2222-3333-4455-555555555555  
+11111111-2222-3333-4455-555555555555  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

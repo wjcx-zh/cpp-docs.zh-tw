@@ -1,39 +1,39 @@
 ---
-title: "增強簡單唯讀提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetLocate 類別"
-  - "IRowsetLocate 類別, 加入至 OLE DB 樣板提供者"
-  - "唯讀提供者 [C++]"
-  - "簡單唯讀提供者 [C++]"
+title: "增強簡單唯讀提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- read-only poviders [C++]
+- IRowsetLocate class
+- IRowsetLocate class, adding to OLE DB template providers
+- simple read-only poviders [C++]
 ms.assetid: cba0e09f-44c1-41c1-9456-332aa13dc158
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30b87ecae6f479c912c937fb2ce23e1f9dc98da3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 增強簡單唯讀提供者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本章節示範如何增強在前一章節所建立的[簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)。  `IRowsetLocateImpl` 會建立 `IRowsetLocate` 介面的實作，並為您加入書籤支援。  
+# <a name="enhancing-the-simple-read-only-provider"></a>增強簡單唯讀提供者
+本節說明如何增強[簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)在上一節中建立。 `IRowsetLocateImpl`建立實作`IRowsetLocate`介面，並加入您的書籤支援。  
   
- 當您擁有可運作的提供者之後，可能會想增強它，以便進行更新提供者、處理交易，或增強資料列擷取演算法的效能。  大多數的提供者增強都牽涉到將介面加入至現有的 COM 物件內。  
+ 當您有運作的提供者時，您可以增強，使更新提供者、 處理交易，或增強的資料列擷取演算法的效能。 大部分的提供者增強功能包括將介面加入至現有的 COM 物件。  
   
- 下列主題的範例透過將 `IRowsetLocate` 介面加入至 `CAgentRowset` 來增強資料列擷取機制。  本主題說明其作法：  
+ 下列主題中的範例，以增強的資料列擷取機制加入`IRowsetLocate`介面`CAgentRowset`。 本主題說明如何以：  
   
--   [讓 RMyProviderRowset 繼承自 IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)。  
+-   [請 RMyProviderRowset 的繼承自 IRowsetLocate](../../data/oledb/modifying-the-inheritance-of-rmyproviderrowset.md)。  
   
--   [動態決定傳回給消費者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
+-   [動態決定傳回給取用者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [建立簡單唯讀提供者](../../data/oledb/creating-a-simple-read-only-provider.md)

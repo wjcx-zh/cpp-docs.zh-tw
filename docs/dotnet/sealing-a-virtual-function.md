@@ -1,34 +1,33 @@
 ---
-title: "密封虛擬函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__sealed 關鍵字"
-  - "衍生類別, 虛擬函式"
-  - "sealed 關鍵字 [C++]"
-  - "虛擬函式, 密封"
+title: "密封虛擬函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sealed keyword [C++]
+- derived classes, virtual functions
+- virtual functions, sealing
+- __sealed keyword
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 500e5b5e6014b7141c000a4e453341ceb5e822d0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 密封虛擬函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，密封虛擬函式 \(Virtual Function\) 的語法已變更。  
+# <a name="sealing-a-virtual-function"></a>密封虛擬函式
+密封虛擬函式的語法已從 Managed Extensions for c + + Visual c + +。  
   
- 在 Managed Extensions 中，`__sealed` 關鍵字是用來修改參考型別 \(Reference Type\)，使其後續無法衍生 \(請參閱 [Managed 類別類型的宣告](../dotnet/declaration-of-a-managed-class-type.md)\)，或是用來修改虛擬函式，使其後續無法在衍生類別中覆寫方法。  例如：  
+ `__sealed`關鍵字用以管理擴充功能中修改任何參考類型，不允許後續從它衍生 (請參閱[的受管理的類別類型宣告](../dotnet/declaration-of-a-managed-class-type.md))，或修改虛擬函式，不允許後續的覆寫衍生類別中的方法。 例如:   
   
 ```  
 __gc class base { public: virtual void f(); };  
@@ -38,9 +37,9 @@ public:
 };  
 ```  
   
- 在此範例中，`derived::f()` 會根據是否與函式原型 \(Function Prototype\) 完全相符來覆寫 `base::f()` 執行個體。  `__sealed` 關鍵字表示從衍生類別繼承而來的後續類別無法提供 `derived::f()` 的覆寫。  
+ 在此範例中，`derived::f()`會覆寫`base::f()`根據函式原型完全相符的執行個體。 `__sealed`關鍵字表示後續的類別繼承自衍生類別不能提供的覆寫`derived::f()`。  
   
- 在新的語法中，`sealed` 必須放在簽章 \(Signature\) 的後面，而不是像先前所允許的可以出現在實際函式原型之前的任何位置。  此外，使用 `sealed` 時也必須明確使用 `virtual` 關鍵字。  換句話說，上述 `derived` 的正確轉譯結果應該如下：  
+ 在新語法中，`sealed`放之後簽章，而不是可實際函式原型之前，如先前允許任何位置出現。 此外，使用`sealed`需要明確使用`virtual`以及關鍵字。 也就是正確的翻譯`derived`、 以上版本，如下所示：  
   
 ```  
 ref class derived: public base {  
@@ -49,18 +48,18 @@ public:
 };  
 ```  
   
- 如果這個執行個體中沒有出現 `virtual` 關鍵字，將會發生錯誤。  在新的語法中，可以用內容關鍵字 `abstract` 取代 `=0`，以表示純虛擬函式 \(Pure Virtual Function\)。  在 Managed Extensions 中不支援這種方式。  例如：  
+ 如果沒有`virtual`這個執行個體中的關鍵字會導致錯誤。 在新語法，也就是內容關鍵字`abstract`可用取代`=0`表示純虛擬函式。 這不是支援 Managed Extensions。 例如：  
   
 ```  
 __gc class base { public: virtual void f()=0; };  
 ```  
   
- 可以重新改寫為：  
+ 可以重寫為  
   
 ```  
 ref class base { public: virtual void f() abstract; };  
 ```  
   
-## 請參閱  
- [在類別或介面中的成員宣告 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+## <a name="see-also"></a>另請參閱  
+ [在類別或介面中的成員宣告 (C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [sealed](../windows/sealed-cpp-component-extensions.md)

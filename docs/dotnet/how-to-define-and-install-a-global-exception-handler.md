@@ -1,32 +1,31 @@
 ---
-title: "如何：定義與安裝全域例外狀況處理常式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "處理常式, 全域"
+title: "如何： 定義與安裝全域例外狀況處理常式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 970ecd355b42c83102c034c4639f152b1971dae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：定義與安裝全域例外狀況處理常式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例示範未處理的例外狀況如何擷取。  範例表單包含，，當按下，執行 null 參考的按鈕，導致擲回例外狀況。  這項功能表示一般程式碼失敗。  發生的例外狀況是由主函式安裝的應用程式例外處理常式攔截。  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>如何：定義與安裝全域例外狀況處理常式
+下列程式碼範例示範如何處理的例外狀況可以擷取。 範例表單包含一個按鈕，按下時，會執行 null 參考，導致系統擲回例外狀況。 這項功能代表一般的程式碼失敗。 Main 函式會安裝應用程式層級例外狀況處理常式會攔截產生的例外狀況。  
   
- 這是透過繫結 <xref:System.Windows.Forms.Application.ThreadException> 事件的委派。  在這種情況下，後續例外狀況就會傳送至 `App::OnUnhandled` 方法。  
+ 這會透過繫結的委派<xref:System.Windows.Forms.Application.ThreadException>事件。 在此情況下，後續的例外狀況會再傳送至`App::OnUnhandled`方法。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +79,5 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+## <a name="see-also"></a>另請參閱  
+ [例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)

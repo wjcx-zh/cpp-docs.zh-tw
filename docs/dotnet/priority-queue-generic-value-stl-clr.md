@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value 成員 [STL/CLR]"
+title: "priority_queue::generic_value (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: d534e95b-7939-4fb4-bb71-2164e2b97c4f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5470a1fda4cd44575744218a8e0363c0cc9cd7e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-項目的型別為具有泛型介面的容器使用的。  
+# <a name="priorityqueuegenericvalue-stlclr"></a>priority_queue::generic_value (STL/CLR)
+使用容器的泛型介面的項目類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## 備註  
- 型別描述儲存的項目值為與泛型介面來使用這個樣板容器類別的型別 `GValue` 的物件。\(`GValue` 是 `value_type` 或 `value_type^` ，如果 `value_type` 為參考型別\)。  
+## <a name="remarks"></a>備註  
+ 此類型所描述型別的物件`GValue`描述使用的預存的項目值與此範本容器類別的泛型介面。 (`GValue`是`value_type`或`value_type^`如果`value_type`ref 型別。)  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_priority_queue_generic_value.cpp   
@@ -74,15 +72,18 @@ int main()
   
 ```  
   
-  **c b**  
- **c b**  
- **c b。**   
-## 需求  
- **標題:** \<cliext\/佇列\>  
+```Output  
+c a b  
+c a b  
+c b a  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
-## 請參閱  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::value\_type](../dotnet/priority-queue-value-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)

@@ -1,36 +1,36 @@
 ---
-title: "如何：在 /clr 編譯中使用原生類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 編譯器選項 [C++], 使用原生類型"
-  - "編譯, /clr 中的原生類型"
+title: "如何： 使用 clr 編譯的原生類型 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- compilation, native types in /clr
+- /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2b79e8038b95d6d60332301d0c744b50ea852f82
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 /clr 編譯中使用原生類型
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可以在 **\/clr** 編譯中定義原生型別，而且在組件內任意使用該原生型別都是有效的。  但是，無法從參考的中繼資料 \(Metadata\) 使用原生型別。  
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>如何：在 /clr 編譯中使用原生類型
+您可以定義中的原生類型**/clr**編譯和使用組件中的原生類型的任何無效。 不過，原生類型不會從參考的中繼資料的使用。  
   
- 每個組件都必須包含將使用之每個原生型別的定義。  
+ 每個組件必須包含它會使用每個原生類型的定義。  
   
- 如需詳細資訊，請參閱[\/clr \(Common Language Runtime 編譯\)](../build/reference/clr-common-language-runtime-compilation.md)。  
+ 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 範例  
- 本範例會建立定義及使用原生型別的元件。  
+## <a name="example"></a>範例  
+ 這個範例會建立定義及使用原生類型的元件。  
   
 ```  
 // use_native_type_in_clr.cpp  
@@ -47,8 +47,8 @@ public ref struct ManagedClass {
 };  
 ```  
   
-## 範例  
- 本範例會定義使用元件的用戶端。  請注意，除非已在編譯單位 \(Compiland\) 中定義原生型別，否則存取該原生型別時會發生錯誤。  
+## <a name="example"></a>範例  
+ 這個範例會定義的用戶端所使用的元件。 請注意，它會存取原生類型中，發生錯誤，除非它在編譯模組中定義。  
   
 ```  
 // use_native_type_in_clr_2.cpp  
@@ -67,5 +67,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: be3af57862b41a2de398869f11d0a9559dbe9c76
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="transfers-of-control"></a>控制權轉移
 您可以使用`goto`陳述式或**案例**中加上標籤`switch`陳述式來指定分支過去的初始設定式的程式。 除非包含初始設定式的宣告所在區塊是由跳躍陳述式發生的區塊所包圍，否則這類程式碼是不合法的。  
@@ -64,4 +61,3 @@ int main()
   
  物件`total`和`ch`做為區塊中宣告*陳述式*的`while`陳述式中，使用結束該區塊時，會終結`break`陳述式。  
   
-

@@ -1,63 +1,62 @@
 ---
-title: "/PDBPATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pdb 檔案, 路徑"
-  - "/PDBPATH dumpbin 選項"
-  - "PDB 檔案, 路徑"
-  - "PDBPATH dumpbin 選項"
-  - "-PDBPATH dumpbin 選項"
+title: "-PDBPATH |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /pdbpath
+dev_langs: C++
+helpviewer_keywords:
+- .pdb files, path
+- -PDBPATH dumpbin option
+- /PDBPATH dumpbin option
+- PDBPATH dumpbin option
+- PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 024e6bae368a171b4bd35434d99261155947d4ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /PDBPATH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbpath"></a>/PDBPATH
 ```  
 /PDBPATH[:VERBOSE] filename  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  其中：  
   
  *filename*  
- 您要尋找相符的 .pdb 檔之 .dll 或 .exe 檔的名稱。  
+ 您要尋找相符的.pdb 檔案的.dll 或.exe 檔案的名稱。  
   
- VERBOSE \(選擇項\)  
- 報告已在其中嘗試尋找 .pdb 檔的所有目錄。  
+ （選擇性） 的詳細資訊  
+ 報告所有嘗試已對找到.pdb 檔案的目錄。  
   
-## 備註  
- \/PDBPATH 會根據偵錯工具搜尋 .pdb 檔的相同路徑來搜尋您的電腦，並回報對應於 *filename* 指定之檔案的 .pdb 檔 \(如果有的話\)。  
+## <a name="remarks"></a>備註  
+ / 搜尋電腦依循的相同路徑偵錯工具會搜尋.pdb 檔案，而且會將報告的如果有的話，.pdb 檔案會對應至指定的檔案 PDBPATH *filename*。  
   
- 在使用 Visual Studio 偵錯工具時，由於偵錯工具使用的 .pdb 檔和您偵錯的檔案版本不同，因此您可能會遇到問題。  
+ 當使用 Visual Studio 偵錯工具時，您可能會遇到的問題，因為，偵錯工具使用不同版本的檔案進行偵錯的.pdb 檔案。  
   
- \/PDBPATH 將會根據下列路徑搜尋 .pdb 檔：  
+ /PDBPATH 會搜尋.pdb 檔案，依照下列路徑：  
   
--   檢查可執行檔所在的位置。  
+-   請檢查可執行檔所在的位置。  
   
--   檢查寫入可執行檔之 PDB 的位置。  這個位置通常是影像檔連結時的位置。  
+-   檢查 PDB 寫入可執行檔的位置。 這通常是在映像已連結的位置。  
   
--   根據 Visual Studio IDE 中設定的搜尋路徑檢查。  
+-   檢查 Visual Studio IDE 中設定在搜尋路徑。  
   
--   根據 \_NT\_SYMBOL\_PATH 和 \_NT\_ALT\_SYMBOL\_PATH 環境變數 \(Environment Variable\) 中的路徑檢查。  
+-   沿著路徑的 _NT_SYMBOL_PATH 和 _NT_ALT_SYMBOL_PATH 檢查環境變數。  
   
--   檢查 Windows 目錄。  
+-   請檢查 Windows 目錄中。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)   
- [\/PDBALTPATH \(使用替代 PDB 路徑\)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+ [/PDBALTPATH （使用替代 PDB 路徑）](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)

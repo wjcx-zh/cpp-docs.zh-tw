@@ -1,32 +1,31 @@
 ---
-title: "計算需要的值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Helper 函式, 計算必要的值"
+title: "計算需要的值 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6351de62aa9141d98c5afabe1425d4586ca54371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 計算需要的值
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-有兩項必須由延遲 Helper 常式計算的關鍵資訊，  為此，delayhlp.cpp 中有兩個計算這項資訊的內嵌 \(Inline\) 函式。  
+# <a name="calculating-necessary-values"></a>計算需要的值
+計算方式是延遲 helper 常式需要兩項重要的資訊。 為了這個目的，有兩個內嵌函式 delayhlp.cpp 計算這項資訊。  
   
--   第一個函式會計算目前匯入三個不同表格 \(匯入位址表 \(IAT\)、繫結匯入位址表 \(BIAT\) 和未繫結匯入位址表 \(UIAT\)\) 的索引。  
+-   第一個計算目前匯入 （匯入位址表 (IAT)、 繫結的匯入位址資料表 (BIAT) 和未繫結的匯入位址資料表 (UIAT)） 的三個不同資料表的索引。  
   
--   第二個會函式計算有效 IAT 中的匯入數量。  
+-   第二個計算中有效的 IAT 的匯入的數目。  
   
 ```  
 // utility function for calculating the index of the current import  
@@ -50,5 +49,5 @@ CountOfImports(PCImgThunkData pitdBase) {
     }  
 ```  
   
-## 請參閱  
- [Understanding the Helper Function](http://msdn.microsoft.com/zh-tw/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>另請參閱  
+ [了解協助協助程式函式](understanding-the-helper-function.md)

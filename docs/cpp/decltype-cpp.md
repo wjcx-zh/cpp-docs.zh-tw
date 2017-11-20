@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- decltype_cpp
-dev_langs:
-- C++
+f1_keywords: decltype_cpp
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], decltype
 - decltype operator
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f07590275ca6e2b65d6f3d58bcea825acc71f73
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 472b09b268fe9f493a4df025950a3565fd6c944c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="decltype--c"></a>decltype （c + +）
 `decltype` 類型規範會產生指定之運算式的類型。 `decltype`搭配類型規範， [auto 關鍵字](../cpp/auto-cpp.md)，適合主要用於開發人員撰寫樣板程式庫。 使用 `auto` 和 `decltype` 來宣告其傳回類型視樣板引數而定的樣板函式。 或是使用 `auto` 和 `decltype` 來宣告包裝對其他函式的呼叫，再傳回所包裝函式之類型的樣板函式。  
@@ -90,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  下列原型說明替代函式宣告的語法。 請注意，`const`和`volatile`限定詞和`throw`[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)是選擇性的。 *Function_body*預留位置代表指定函式的作用的複合陳述式。 以程式設計方式，是最佳*運算式*中的預留位置`decltype`陳述式應該符合所指定的運算式`return`陳述式，如果有的話，在*function_body*。  
   
- **自動** *function_name* **(** *參數*<sub>選擇</sub> **)** **const**<sub>選擇</sub> **volatile**<sub>選擇</sub> ** -> ** **decltype (***運算式* **)** **擲回**<sub>選擇</sub> **{** *function_body***};**  
+ **自動** *function_name* **(** *參數*<sub>選擇</sub> **)** **const**<sub>選擇</sub> **volatile**<sub>選擇</sub>  **->**  **decltype (***運算式* **)** **擲回**<sub>選擇</sub> **{** *function_body***};**  
   
  下列程式碼範例中，`myFunc` 樣板函式的晚期指定傳回類型由 `t` 和 `u` 樣板引數的類型決定。 基於最佳編碼作法，程式碼範例也使用右值參考和`forward`函式樣板，其支援*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
@@ -214,4 +210,3 @@ static_assert(test2, "PASS2");
   
  `decltype(auto)`需要 Visual Studio 2015 或更新版本。  
   
-

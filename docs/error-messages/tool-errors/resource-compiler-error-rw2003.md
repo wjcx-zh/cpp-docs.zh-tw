@@ -1,69 +1,67 @@
 ---
-title: "資源編譯器錯誤 RW2003 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW2003"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW2003"
+title: "資源編譯器錯誤 RW2003 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW2003
+dev_langs: C++
+helpviewer_keywords: RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 12fbbdcec638109be7cc6d0f707aaef633e7c016
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 資源編譯器錯誤 RW2003
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-產生錯誤  
+# <a name="resource-compiler-error-rw2003"></a>資源編譯器錯誤 RW2003
+產生的錯誤  
   
-### 若要修正，請檢查下列可能原因  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
   
-1.  **錯誤：點陣圖檔資源 \- 檔案不是 3.00 的格式**  
+1.  **錯誤： 點陣圖資源檔案不是 3.00 格式**  
   
-     使用 Windows 2.x 版本格式的點陣圖無法使用在 3.x 版的資源檔。  必須重繪點陣圖，或將其轉換成 3.x 格式。  
+     使用 Windows 2.x 版格式的點陣圖不能用於 3.x 版資源檔。 必須重繪點陣圖，或轉換成 3.x 格式。  
   
-2.  **錯誤：資源名稱中有舊的 DIB。  透過 SDKPAINT 傳遞**  
+2.  **錯誤： 舊的 DIB 在資源名稱。透過 SDKPAINT 傳遞它**  
   
-     指定資源中的裝置獨立式點陣圖 \(DIB\) 與 Windows 3.0 格式不相容。  必須重繪點陣圖，或將其轉換成 3.x 格式。  
+     無法與 Windows 3.0 格式相容裝置獨立點陣圖 (DIB) 中指定的資源。 必須重繪點陣圖，或轉換成 3.x 格式。  
   
-3.  **錯誤：資源檔的資源名稱不是 3.00 格式**  
+3.  **錯誤： 資源檔的資源名稱不是 3.00 格式**  
   
-     指定資源中的圖示或游標使用了前一版 Windows 的格式。  必須重繪圖示或游標，或將其轉換成 3.x 格式。  
+     圖示或游標置於指定的資源使用的格式從舊版的 Windows。 必須重繪或轉換成 3.x 格式圖示或游標。  
   
 4.  **未知的 DIB 標頭格式**  
   
-     點陣圖標頭不是 BITMAPCOREHEADER 或 BITMAPINFOHEADER 結構。  
+     點陣圖標頭不 BITMAPCOREHEADER 或 BITMAPINFOHEADER 結構。  
   
 5.  **無法初始化符號資訊**  
   
-     這項錯誤只發生在 Visual C\+\+。  可能的原因是您開啟太多檔案，或是您無法開啟或寫入 Visual C\+\+ 將符號匯入指令碼時所需的資料檔案。  如果沒有特別指定，Visual C\+\+ 會嘗試在 **TMP** 環境變數所指定的目錄中或目前的目錄中來建立這些檔案。  
+     只能在 Visual c + + 中，會發生這個錯誤。 可能的原因是有太多開啟的檔案，否則您無法開啟或寫入資料檔案所需的 Visual c + + 符號匯入您的指令碼。 Visual c + + 嘗試在所指定的目錄中建立這些檔案**TMP**環境變數或如果未指定目前的目錄。  
   
 6.  **無法儲存符號資訊**  
   
-     這項錯誤只發生在 Visual C\+\+。  可能的原因是您開啟太多檔案，或是您無法關閉或寫入 Visual C\+\+ 將符號匯入指令碼時所需的資料檔案。  如果沒有特別指定，Visual C\+\+ 會嘗試使用 **TMP** 環境變數所指定的目錄或目前目錄中的這些檔案。  
+     只能在 Visual c + + 中，會發生這個錯誤。 可能的原因是有太多開啟的檔案，否則您無法關閉，或寫入資料檔案所需的 Visual c + + 符號匯入您的指令碼。 Visual c + + 會嘗試使用指定的目錄中的檔案**TMP**環境變數或如果未指定目前的目錄。  
   
-7.  **點陣圖檔的資源檔名不是 2.03 的格式**  
+7.  **點陣圖檔的資源檔不是 2.03 格式**  
   
-     點陣圖使用了 2.03 版之前版本的格式。  必須利用 3.00 版或以後版本的格式來轉換或重繪點陣圖。  
+     點陣圖使用的是 2.03 版之前的格式。 必須使用 3.00 版或更新版本的格式來轉換或重繪點陣圖。  
   
 8.  **資源太大**  
   
-     在 Windows 3.1 中，資源不能超過約 65000 個位元組。  若超過此上限，您將無法利用 Visual C\+\+ 或命令列資源編譯器來進行編譯。  此上限不適用於游標、圖示、點陣圖或是其他以檔案為基礎的資源。  
+     Windows 3.1 資源不能超過約 65000 個位元組。 如果您的資源，然後您將無法使用 Visual c + + 或命令列資源編譯器進行編譯。 這項限制不適用於資料指標、圖示、點陣圖或其他檔案型資源。  
   
-9. **資源檔不是 3.00 的格式**  
+9. **資源檔不是 3.00 格式**  
   
-     游標或圖示使用了 3.00 版之前版本的格式。  必須利用 3.00 版或以後版本的格式來轉換或重繪資源。  
+     資料指標或圖示使用 3.00 版之前的格式。 資源必須轉換或重繪格式使用 3.00 版或更新版本。  
   
-10. **無法開啟暫存檔**  
+10. **無法開啟暫存檔案**  
   
-     資源編譯器 \/Visual C\+\+ 無法開啟暫存檔。  這可能是因為您未擁有此目錄的寫入許可，或是此目錄不存在。  如果沒有特別指定，資源編譯器 \/Visual C\+\+ 會嘗試使用 **TMP** 環境變數所指定的目錄或目前目錄中的檔案。
+     資源編譯器/Visual C++ 無法開啟暫存檔。 可能的原因是您沒有寫入權限的目錄或目錄不存在。 資源編譯器/Visual C++ 嘗試在 **TMP** 環境變數所指定的目錄或目前的目錄 (如果未指定) 中使用這些檔案。

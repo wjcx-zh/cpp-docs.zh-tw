@@ -1,41 +1,40 @@
 ---
-title: "如何：從 STL/CLR 容器轉換為 .NET 集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "STL/CLR 容器 [STL/CLR]"
-  - "STL/CLR, 轉換為 .NET 集合"
+title: "如何： 從 STL/CLR 容器轉換為.NET 集合 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR Containers [STL/CLR]
+- STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 817f04af0f6d2c24296b5775a9863b8c34dccd30
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：從 STL/CLR 容器轉換為 .NET 集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題顯示如何轉換 STL\/CLR 容器升級為對等的 .NET 集合。  例如，我們示範如何轉換 STL\/CLR [vector](../dotnet/vector-stl-clr.md) 至 .NET <xref:System.Collections.Generic.ICollection%601> 以及如何轉換 STL\/CLR [map](../dotnet/map-stl-clr.md) 至 .NET，<xref:System.Collections.Generic.IDictionary%602>，但是程序為所有集合和容器是類似的。  
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：從 STL/CLR 容器轉換為 .NET 集合
+本主題示範如何將 STL/CLR 容器轉換成其對等的.NET 集合。 例如，我們會示範如何將轉換 STL/CLR[向量](../dotnet/vector-stl-clr.md)的.net<xref:System.Collections.Generic.ICollection%601>以及如何轉換 STL/CLR[對應](../dotnet/map-stl-clr.md)的.net <xref:System.Collections.Generic.IDictionary%602>，但程序是類似的所有集合和容器。  
   
-### 建立從容器的集合  
+### <a name="to-create-a-collection-from-a-container"></a>若要從容器中建立集合  
   
-1.  請使用下列一種方法：  
+1.  使用下列方法之一：  
   
-    -   若要轉換一部分的容器，請呼叫 [make\_collection](../dotnet/make-collection-stl-clr.md) 函式來啟動 Iterator 和結尾將複製的 STL\/CLR 容器的 Iterator 為 .NET 集合。  這個樣板函式會採用 STL\/CLR Iterator 當做樣板引數使用。  第一個範例示範這個方法。  
+    -   若要將容器的一部分，呼叫[make_collection](../dotnet/make-collection-stl-clr.md)函式，並傳遞要複製到.NET 集合的迭代器，開始和結尾迭代器的 STL/CLR 容器。 這個範本函式會採用 STL/CLR 迭代器做為樣板引數。 第一個範例會示範這個方法。  
   
-    -   若要轉換整個容器，請轉換容器包含適當的 .NET 集合介面或介面集合。  第二個範例示範這個方法。  
+    -   若要轉換的整個容器，轉換到適當的.NET 集合介面或介面的集合容器。 第二個範例會示範這個方法。  
   
-## 範例  
- 在此範例中，我們建立 STL\/CLR `vector` 並將 5 個項目加入其中。  然後，會呼叫 `make_collection` 函式建立 .NET 集合。  最後，會顯示新建立之集合的內容。  
+## <a name="example"></a>範例  
+ 在此範例中，我們會建立 STL/CLR`vector`和 5 的項目加入。 接著，我們建立為.NET 集合藉由呼叫`make_collection`函式。 最後，我們會顯示新建立的集合的內容。  
   
 ```  
 // cliext_convert_vector_to_icollection.cpp  
@@ -70,12 +69,15 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **System::Collections::Generic::ICollection 的內容如下:**  
-**3**  
-**5**  
-**7**   
-## 範例  
- 在此範例中，我們建立 STL\/CLR `map` 並將 5 個項目加入其中。  然後，我們建立 .NET <xref:System.Collections.Generic.IDictionary%602> 並且將 `map` 直接指派給它。  最後，會顯示新建立之集合的內容。  
+```Output  
+The contents of the System::Collections::Generic::ICollection are:  
+3  
+5  
+7  
+```  
+  
+## <a name="example"></a>範例  
+ 在此範例中，我們會建立 STL/CLR`map`和 5 的項目加入。 接著，我們建立.NET<xref:System.Collections.Generic.IDictionary%602>並指派`map`直接。 最後，我們會顯示新建立的集合的內容。  
   
 ```  
 // cliext_convert_map_to_idictionary.cpp  
@@ -107,13 +109,16 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **IDictionary 的內容如下:**  
-**機碼: 0.00 值: 0**  
-**機碼: 13.00 值: 13**  
-**機碼: 22.00 值: 22**  
-**機碼: 42.00 值: 42**  
-**機碼: 74.00 值: 74**   
-## 請參閱  
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)   
- [如何：從 .NET 集合轉換為 STL\/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+```Output  
+The contents of the IDictionary are:  
+Key: 0.00 Value: 0  
+Key: 13.00 Value: 13  
+Key: 22.00 Value: 22  
+Key: 42.00 Value: 42  
+Key: 74.00 Value: 74  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)   
+ [如何： 從.NET 集合轉換為 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

@@ -1,34 +1,32 @@
 ---
-title: "collection_adapter::collection_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter"
-  - "cliext::collection_adapter::collection_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection_adapter 成員 [STL/CLR]"
+title: "collection_adapter::collection_adapter (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::collection_adapter
+- cliext::collection_adapter::collection_adapter
+dev_langs: C++
+helpviewer_keywords: collection_adapter member [STL/CLR]
 ms.assetid: 7e2bb75b-d735-4135-9523-719683e06fe9
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b7f913ffb323bcfdb61d9d181f71297ec119e1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::collection_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構配接器物件。  
+# <a name="collectionadaptercollectionadapter-stlclr"></a>collection_adapter::collection_adapter (STL/CLR)
+建構的配置器物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 collection_adapter();  
@@ -37,39 +35,39 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  集合  
- 包裝的 BCL 控制代碼。  
+ BCL 換行控制代碼。  
   
- right  
+ 向右  
  要複製的物件。  
   
-## 備註  
- 建構函式:  
+## <a name="remarks"></a>備註  
+ 建構函式：  
   
  `collection_adapter();`  
   
- 初始化具有 `nullptr`儲存的控制代碼。  
+ 初始化具有預存的控制代碼`nullptr`。  
   
- 建構函式:  
+ 建構函式：  
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- 初始化具有 `right``.`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()` 儲存的控制代碼。  
+ 初始化具有預存的控制代碼`right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`。  
   
- 建構函式:  
+ 建構函式：  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- 初始化具有 `right``->`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()` 儲存的控制代碼。  
+ 初始化具有預存的控制代碼`right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`。  
   
- 建構函式:  
+ 建構函式：  
   
  `collection_adapter(Coll^ collection);`  
   
- 初始化具有 `collection`儲存的控制代碼。  
+ 初始化具有預存的控制代碼`collection`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_collection_adapter_construct.cpp   
@@ -110,15 +108,18 @@ int main()
   
 ```  
   
-  **base\(\) null \= True**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## 需求  
- **標頭:** \<cliext\/adapter\>  
+```Output  
+base() null = True  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<配接器 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

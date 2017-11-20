@@ -1,28 +1,27 @@
 ---
-title: "發出參數型查詢 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "參數查詢, 使用 CCommand 類別執行"
+title: "發出參數型的查詢 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 發出參數型查詢
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列範例會發出簡單的參數型查詢，該查詢會從 Microsoft Access 資料庫的資料表內擷取具有年齡欄位 \(大於 30\) 的資料錄。  若要支援此參數，使用者資料錄必須具有其他的對應。  下列位於 ATL 專案中的程式碼會以 `CCommand` 類別來取代先前[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)範例中所使用的 `CTable` 類別。  
+# <a name="issuing-a-parameterized-query"></a>發出參數型查詢
+下列範例會發出簡單參數化的查詢，以便從 Microsoft Access 資料庫中的資料表擷取時間欄位 （亦即超過 30） 的記錄。 若要支援此參數，使用者資料錄必須擁有其他的對應。 下列程式碼，在 ATL 專案中，使用`CCommand`類別而不是`CTable`中前一個範例中，使用類別[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)。  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +49,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- `CArtists` 使用者資料錄看起來像是這樣：  
+ 使用者資料錄`CArtists`，看起來像這樣：  
   
 ```  
 class CArtists  
@@ -76,5 +75,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## 請參閱  
- [使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

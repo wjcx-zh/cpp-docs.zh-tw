@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - mbsnbcat_l
 - _mbsnbcat
 - _mbsnbcat_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcsncat_l function
 - _tcsncat function
@@ -41,30 +39,15 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: d19a16635f3e7d0469b8be8244c3484e733ef94c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
 最多將某個多位元組字元字串的前 `n` 個位元組附加到另一個多位元組字元字串。 這些函式已有更安全的版本可用，請參閱 [_mbsnbcat_s、_mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)。  
@@ -126,7 +109,7 @@ unsigned char *_mbsnbcat_l(
   
  如果 `dest` 或 `src` 為 `NULL`，此函式會產生無效的參數錯誤，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果已處理此錯誤，則此函式會傳回 `EINVAL`，並將 `errno` 設定為 `EINVAL`。  
   
- 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   

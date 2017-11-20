@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.codewiz.class.atl.control.stockprops
-dev_langs:
-- C++
+f1_keywords: vc.codewiz.class.atl.control.stockprops
+dev_langs: C++
 ms.assetid: b27b0e60-08a6-43f4-ba6e-0a4e45147693
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 內建屬性, ATL 控制項精靈
+# <a name="stock-properties-atl-control-wizard"></a>內建屬性, ATL 控制項精靈
 在精靈的此頁面會識別內建控制項支援的屬性。 根據預設，會識別沒有屬性。  
   
  **不支援**  
@@ -40,7 +36,6 @@ ms.lasthandoff: 10/09/2017
 |**<**|移除在目前選取的屬性名稱**支援**清單。|  
 |**<<**|移除所有列中的屬性名稱**支援**清單。|  
   
-## 另請參閱  
+## <a name="see-also"></a>另請參閱  
  [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)
-
 

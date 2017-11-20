@@ -1,72 +1,71 @@
 ---
-title: "OLE DB 提供者樣板 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料庫 [C++], OLE DB 樣板"
-  - "OLE DB 提供者樣板 (C++), 關於 OLE DB 提供者樣板"
-  - "OLE DB 提供者 [C++], 關於提供者"
-  - "範本 [C++], OLE DB"
+title: "OLE DB 提供者樣板 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers [C++], about providers
+- databases [C++], OLE DB templates
+- OLE DB provider templates [C++], about OLE DB provider templates
+- templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: def429b9a284b7e440bd4bd4e6fc6f6ba7d3bcb9
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2017
 ---
-# OLE DB 提供者樣板 (C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 是 Microsoft 通用資料存取策略的重要部分。  OLE DB 設計可讓您對任何資料來源進行高效能資料存取。  任何表格式資料都可透過 OLE DB 來檢視，而不管它是否來自資料庫。  這種彈性提供您極大的使用能力。  
+# <a name="ole-db-provider-templates-c"></a>OLE DB 提供者樣板 (C++)
+OLE DB 是 Microsoft 通用資料存取策略中很重要的一部分。 OLE DB 設計可讓您從任何資料來源的高效能資料存取。 可透過 OLE DB 不論它是否來自資料庫檢視任何表格式資料。 這種彈性提供極大的電源。  
   
- 如同 [OLE DB 消費者和提供者](../../data/oledb/ole-db-consumers-and-providers.md)內所述說明，OLE DB 會使用消費者和提供者 \(Provider\) 的概念。  消費者可提出資料要求；而提供者則以表格形式將資料傳回給消費者。  從程式設計觀點而言，這種模型最重要的內涵是提供者必須實作消費者可能發出的任何呼叫。  
+ 中所述[OLE DB 消費者和提供者](../../data/oledb/ole-db-consumers-and-providers.md)，OLE DB 使用消費者和提供者的概念。 取用者會要求資料。提供者取用者以表格式格式傳回資料。 程式設計的觀點而言，這個模型的最重要的用意是提供者必須實作可讓取用者的任何呼叫。  
   
-## 什麼是提供者呢？  
- OLE DB 提供者 \(Provider\) 是一組可為來自消費者物件介面呼叫服務的 COM 物件，並以表格形式將資料從持久性來源 \(稱為資料存放區\) 傳輸至消費者。  
+## <a name="what-is-a-provider"></a>什麼是提供者？  
+ OLE DB 提供者是一組服務取用者物件的介面呼叫的 COM 物件，從持久的來源 （稱為資料存放區） 的表格式格式的資料傳送給取用者。  
   
- 提供者可以是簡單或複雜的。  提供者可支援最少量功能，或可實作更多介面的全功能生產品質之提供者。  提供者可傳回資料表，允許用戶端決定該資料表的格式，且提供者可在該資料上執行作業。  
+ 提供者可以很簡單或很複雜。 提供者可以支援最少量的功能或完全成熟的實際執行品質提供者藉由實作多個介面。 提供者可以傳回資料表，允許用戶端，以判斷該資料表的格式並對該資料執行作業。  
   
- 每個提供者都會實作一組標準 COM 物件來處理用戶端要求，具有任何 OLE DB 消費者都可以從任何提供者 \(無論是哪種語言，例如 C\+\+ 和 Basic\) 存取資料的標準意義。  
+ 每個提供者會實作一組標準的 COM 物件來處理要求用戶端，以標準任何 OLE DB 取用者可以從任何提供者，不論語言 （例如 c + + 和基本） 存取資料。  
   
- 每個 COM 物件都包含多個介面，有些是必要的，有些則是選擇性 \(Optional\) 的。  透過實作強制的介面，提供者可保證提供任何用戶端都可使用的基本程度的功能 \(稱為相容性\)。  提供者可實作選擇性介面來提供其他功能。  如需這些介面的詳細資訊，請參閱 [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)。  用戶端應該永遠呼叫 `QueryInterface` 來判斷提供者是否支援指定的介面。  
+ 每個 COM 物件會包含數個介面，其中有些是必要，而其中有些是選擇性。 藉由實作必要的介面，提供者可確保任何用戶端應該能夠使用的功能 （稱為相容性） 的最低層級。 提供者可實作以提供其他功能的選擇性介面。 [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)這些介面的詳細資料。 用戶端應該一律呼叫`QueryInterface`決定提供者是否支援指定的介面。  
   
-## OLE DB 規格層級支援  
- OLE DB 提供者樣板可支援 OLE DB 2.7 版規格。  透過使用 OLE DB 提供者樣板，您可實作層級 0 的相容提供者   例如，提供者範例會使用樣板實作執行 DOS DIR 命令以查詢檔案系統的非 SQL \(MS\-DOS\) 命令伺服器。  Provider 範例將以資料列集 \(Rowset\) 來傳回目錄資訊，這是傳送表格式資料的標準 OLE DB 機制。  
+## <a name="ole-db-specification-level-support"></a>OLE DB 規格的層級支援  
+ OLE DB 提供者範本支援的 OLE DB 版本 2.7 規格。 使用 OLE DB 提供者範本，您可以實作層級 0 相容的提供者。 提供者範例中，例如，會使用範本來實作 non-MS-DOS 命令的伺服器執行 DOS DIR 命令來查詢檔案系統。 提供者範例會傳回目錄資訊的資料列集，這是標準 OLE DB 機制傳回表格式資料中。  
   
- OLE DB 樣板支援的最簡單提供者類型為不含命令的唯讀提供者。  具有命令的提供者也受支援，以及書籤和讀取 \/ 寫入功能。  您可編寫其他程式碼來實作讀取\/寫入提供者。  目前版本並不支援動態的資料列集和交易，不過您仍可視需要加入它們。  
+ 最簡單的 OLE DB 範本所支援的提供者的類型是唯讀的提供者，使用任何命令。 也支援使用命令的提供者，以及建立書籤和讀取/寫入功能。 您可以撰寫額外的程式碼來實作讀取/寫入提供者。 動態資料列集和交易不支援最新版本，但如果您要新增它們。  
   
-## 何時需要建立 OLE DB 提供者？  
- 您不需要一直建立自己的提供者，Microsoft 在 Visual C\+\+ 的 \[**資料連結屬性**\] 對話方塊中提供了數個預先封裝的標準提供者。  建立 OLE DB 提供者主要是為了運用通用資料存取策略。  採用這種做法的優點是：  
+## <a name="when-do-you-need-to-create-an-ole-db-provider"></a>您需要時建立的 OLE DB 提供者？  
+ 您不一定需要建立自己的提供者。Microsoft 提供數個預先封裝的標準提供者，在**資料連結屬性**Visual c + + 中的對話方塊。 若要建立 OLE DB 提供者的主要原因是利用通用資料存取策略。 這麼做的優點，包括：  
   
--   透過任何語言像是 C\+\+、Basic 和 Visual Basic Scripting Edition 來存取資料。  這點可使組織內不同的程式設計人員在不管使用哪種語言的情況下，都可使用相同的方式存取相同的資料。  
+-   透過任何語言，例如 c + +、 Basic 和 Visual Basic Scripting Edition 中存取資料。 它可讓您組織中不同的程式設計人員存取相同的資料相同的方式，不論使用哪種語言。  
   
--   將您的資料公開給其他資料來源，例如 SQL Server、Microsoft Excel 和 Access。  這點在您要以不同格式傳送資料時非常實用。  
+-   公開您的資料與其他資料來源 SQL Server、 Excel 和 Access 等。 這可以是非常有用，如果您想要不同的格式之間傳送資料。  
   
--   參與跨資料來源 \(異質性\) 作業。  這是非常有效率的資料倉儲方式。  您可透過使用 OLE DB 提供者，讓資料保持其原型格式，並仍可使用簡單作業存取。  
+-   參與跨資料來源 （異質性） 作業。 這可以是非常有效的資料倉儲的方法。 藉由使用 OLE DB 提供者，您可以將資料保存在原生格式，並仍然能夠存取在簡單的作業。  
   
--   將其他功能加入至您的資料，例如查詢處理。  
+-   將額外的功能加入至您的資料，例如查詢處理。  
   
--   增加存取資料的效能 \(透過控制資料操作方式\)。  
+-   增加所控制的操作方式存取資料的效能。  
   
--   增加強固性。  如果您的資料格式僅可由一位程式設計人員存取，這將會造成危險。  透過使用 OLE DB 提供者，您可將該專有格式開放給所有的程式設計人員。  
+-   增加強固性。 如果您有專屬的資料格式，只有一個程式設計師可以存取，您有風險。 使用 OLE DB 提供者，可以開啟該專屬格式，您的程式設計人員。  
   
-## 唯讀和可更新提供者  
- 提供者在複雜性和功能上有很大的差異。  將提供者分成唯讀提供者和可更新提供者兩類將會很有用：  
+## <a name="read-only-and-updatable-providers"></a>唯讀和可更新的提供者  
+ 提供者有極大的複雜性和功能。 它可用於分類成唯讀提供者和可更新的提供者的提供者：  
   
--   Visual C\+\+ 6.0 只能支援唯讀的提供者 \(Provider\)。  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)將討論如何建立唯讀提供者。  
+-   Visual c + + 6.0 支援只有唯讀提供者。 [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)討論如何建立唯讀提供者。  
   
--   Visual C\+\+ .NET 支援可更新的提供者，此類提供者可更新 \(寫入\) 資料存放區。  如需可更新提供者的詳細資訊，請參閱[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md)，而 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 範例是可更新提供者的範例。  
+-   Visual c + + 支援可更新的提供者，這可以更新 （寫入） 資料存放區。 可更新的提供者的相關資訊，請參閱[建立可更新的提供者](../../data/oledb/creating-an-updatable-provider.md); [UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例是可更新的提供者的範例。  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱:  
   
 -   [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)  
   
@@ -74,7 +73,7 @@ OLE DB 是 Microsoft 通用資料存取策略的重要部分。  OLE DB 設計�
   
 -   [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)  
   
-## 請參閱  
- [資料存取](../Topic/Data%20Access%20in%20Visual%20C++.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料存取](../data-access-in-cpp.md)   
  [OLE DB SDK 文件](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   
  [OLE DB 程式設計人員參考](https://msdn.microsoft.com/en-us/library/ms713643.aspx)

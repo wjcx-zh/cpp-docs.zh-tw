@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - gmtime
 - _gmtime32
 - _gmtime64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - gmtime32 function
 - _gmtime64 function
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - gmtime64 function
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: d6acd03622ffd309e394fc076c2922492ac2475b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 0b7c3342550a65941c84b7902d7ed3e3ff11b3e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="gmtime-gmtime32-gmtime64"></a>gmtime、_gmtime32、_gmtime64
 將時間值轉換成結構。 這些函式有更安全的版本可供使用；請參閱 [gmtime_s、_gmtime32_s、_gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)。  

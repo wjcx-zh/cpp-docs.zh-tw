@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _fpieee_flt
+apiname: _fpieee_flt
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,39 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - fpieee_flt
 - _fpieee_flt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fpieee_flt function
 - exception handling, floating-point
 - floating-point exception handling
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c2e9f909f3e7e778845d8fefebe5d8b1604af489
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: f2e3f91d2baca3829538d199ce000d56a7be24d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 針對 IEEE 浮點例外狀況叫用使用者定義的設陷處理常式。  

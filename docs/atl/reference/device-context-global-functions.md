@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- atlwin/ATL::AtlCreateTargetDC
-dev_langs:
-- C++
+f1_keywords: atlwin/ATL::AtlCreateTargetDC
+dev_langs: C++
 ms.assetid: 08ec28f6-daff-4882-9544-e8a4639d05c4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: d2560043bc97c384846696b76d8e38b459ae4a34
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="device-context-global-functions"></a>裝置內容的全域函式
 此函式會建立指定裝置的裝置內容。  
@@ -58,4 +54,3 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
    
 ## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)
-

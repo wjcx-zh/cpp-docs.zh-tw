@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -46,36 +44,21 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 940983d8bb5795d44a78f9049c351941db41afb7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 466565dcb957e98efccc9f2037f98c869775e36f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy、wcscpy、_mbscpy
 複製字串。 這些函式已有更安全的版本可用，請參閱 [strcpy_s、wcscpy_s、_mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。  
   
 > [!IMPORTANT]
-> 不可在於  `_mbscpy` 中執行的應用程式中使用 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbscpy`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -127,7 +110,7 @@ unsigned char *_mbscpy(
   
  `wcscpy` 和 `_mbscpy` 分別是 `strcpy` 的寬字元版本和多位元組字元版本。 `wcscpy` 的引數和傳回值是寬字元字串；`_mbscpy` 的引數則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
- 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   

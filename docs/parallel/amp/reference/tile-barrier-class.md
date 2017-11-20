@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_all_memory_fence
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_global_memory_fence
 - AMP/Concurrency::tile_barrier::tile_barrier::wait_with_tile_static_memory_fence
-dev_langs:
-- C++
-helpviewer_keywords:
-- tile_barrier class
+dev_langs: C++
+helpviewer_keywords: tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4bacc84c4e267ffca14290186750ae1d3bdf899f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 3d6dff1e32f513007f9b99ced4000043ad27607f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 類別
 同步處理的使用中執行緒群組 （磚） 執行的執行緒執行`wait`方法。 執行階段可以具現化這個類別。  
@@ -59,7 +41,7 @@ class tile_barrier;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[tile_barrier 建構函式](#ctor)|初始化 `tile_barrier` 類別的新執行個體。|  
   
@@ -133,4 +115,3 @@ void wait_with_tile_static_memory_fence() const restrict(amp);
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

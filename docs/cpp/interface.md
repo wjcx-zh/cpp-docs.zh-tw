@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __interface_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __interface keyword [C++]
+f1_keywords: __interface_cpp
+dev_langs: C++
+helpviewer_keywords: __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e502574b9d55238d6f9aed33949e06db3ec6349d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 806efafab617dfcf9779deceff79dba64e8408c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="interface"></a>__interface
 **Microsoft 特定的**  

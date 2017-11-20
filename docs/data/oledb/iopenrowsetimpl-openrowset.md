@@ -1,34 +1,33 @@
 ---
-title: "IOpenRowsetImpl::OpenRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OpenRowset"
-  - "IOpenRowsetImpl::OpenRowset"
-  - "IOpenRowsetImpl.OpenRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenRowset 方法"
+title: "Iopenrowsetimpl:: Openrowset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OpenRowset
+- IOpenRowsetImpl::OpenRowset
+- IOpenRowsetImpl.OpenRowset
+dev_langs: C++
+helpviewer_keywords: OpenRowset method
 ms.assetid: 2ece8d6c-d165-4f1d-b155-8609bbb60eb6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 168b9a8e73ea1c9c365ba87b2b8900e710de8bcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IOpenRowsetImpl::OpenRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-開啟並傳回含有來自單一基底資料表或索引的所有資料行的資料列集。  
+# <a name="iopenrowsetimplopenrowset"></a>IOpenRowsetImpl::OpenRowset
+開啟並傳回包含單一基底資料表或索引的所有資料列的資料列集。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -43,14 +42,14 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
- 如需詳細資訊，請參閱  *OLE DB 程式設計人員參考* 中的 [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)。  
+#### <a name="parameters"></a>參數  
+ 請參閱[iopenrowset:: Openrowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 備註  
- 這個方法是在 ATLDB.H. 中找不到。  當您建立提供者時，它會由 ATL 物件精靈所建立。  
+## <a name="remarks"></a>備註  
+ ATLDB 中找不到這個方法。H. 當您建立的提供者會建立 ATL 物件精靈。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IOpenRowsetImpl 類別](../../data/oledb/iopenrowsetimpl-class.md)

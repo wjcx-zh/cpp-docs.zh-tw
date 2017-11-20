@@ -1,34 +1,32 @@
 ---
-title: "編譯器警告 (層級 1) C4395 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4395"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4395"
+title: "編譯器警告 （層級 1） C4395 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4395
+dev_langs: C++
+helpviewer_keywords: C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b45c77951e64f3ce0182f756ba2077ce49b5bd50
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4395
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 成員函式將會在 initonly 資料成員 'member' 的複本上叫用  
+# <a name="compiler-warning-level-1-c4395"></a>編譯器警告 (層級 1) C4395
+'function': initonly 資料成員 'member' 的複本將會叫用成員函式  
   
- 在 [initonly](../../dotnet/initonly-cpp-cli.md) 資料成員上呼叫了成員函式。C4395 是警告 **initonly** 資料成員不能由函式加以修改。  
+ 成員函式上呼叫[initonly (C + + /CLI)](../../dotnet/initonly-cpp-cli.md)資料成員。  C4395 會發出警告， **initonly**函式，無法修改資料成員。  
   
- 下列範例會產生 C4395：  
+ 下列範例會產生 C4395:  
   
 ```  
 // C4395.cpp  

@@ -1,33 +1,30 @@
 ---
-title: "編譯器警告 (層級 1) C4829 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4829"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4829"
+title: "編譯器警告 （層級 1） C4829 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4829
+dev_langs: C++
+helpviewer_keywords: C4829
 ms.assetid: 4ffabe2b-2ddc-4c52-8564-d1355c93cfa6
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2a7fe8de7fd47b16397972a054c18cd266f8c588
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4829
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-函式 main 的參數可能不正確。請考慮 'int main\(Platform::Array\<Platform::String^\>^ argv\)'  
+# <a name="compiler-warning-level-1-c4829"></a>編譯器警告 (層級 1) C4829
+函式 main 的參數可能不正確。 請考慮 ' intmain (platform:: array\<platform:: string ^ > ^ argv)'  
   
- 特定函數 \(例如 main\) 無法取得參考類型參數。  繼續編譯時，產生的映像可能不會執行。  
+ 特定函數 (例如 main) 無法取得參考型別參數。 繼續編譯時，產生的映像可能不會執行。  
   
  下列範例會產生 C4829：  
   

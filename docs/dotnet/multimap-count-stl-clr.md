@@ -1,45 +1,43 @@
 ---
-title: "multimap::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count 成員 [STL/CLR]"
+title: "multimap:: count (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: f8e3700c-b968-4ab0-86f1-d4ae7d9e0093
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e9e614f698b8ee36b595339d0bbf0f01974dcbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapcount-stlclr"></a>multimap::count (STL/CLR)
 尋找符合指定索引鍵的項目數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
+#### <a name="parameters"></a>參數  
+ key  
  要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式傳回具有與 `key`相等排序的項目數目超過受控制序列的。  您會用它來判斷目前在受控制序列中，符合指定之索引鍵的項目數目。  
+## <a name="remarks"></a>備註  
+ 成員函式具有對等順序，與受控制序列中傳回的項目數`key`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目數目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multimap_count.cpp   
@@ -67,15 +65,18 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**計算 \(L'A\) \= 0**  
-**計算 \(L'b\) \= 1**  
-**計算 \(L'C\) \= 0**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)

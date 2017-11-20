@@ -1,40 +1,38 @@
 ---
-title: "ML Nonfatal Error A2050 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2050"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2050"
+title: "ML 非嚴重錯誤 A2050 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2050
+dev_langs: C++
+helpviewer_keywords: A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b06c7374303b606ddf7929f2b7c6d774c55c829c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2050
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**真實或不允許的 BCD 數字**  
+# <a name="ml-nonfatal-error-a2050"></a>ML 非嚴重錯誤 A2050
+**實數或不允許的 BCD 數字**  
   
- 浮點數 \(實際\) 的數字或二進位檔 coded 小數 \(BCD\) 常數而非用作為資料的初始設定式。  
+ 浮點數 （實際） 的數字或二進位檔 (BCD) 的自動程式化十進位常數使用為資料的初始設定式。  
   
  發生下列其中一項：  
   
 -   在運算式中使用實數或 BCD。  
   
--   實數用來初始化一個指示詞，而非 [DWORD](../../assembler/masm/dword.md)，  [QWORD](../../assembler/masm/qword.md)，或  [TBYTE](../../assembler/masm/tbyte.md)。  
+-   實際數字用來初始化指示詞以外[DWORD](../../assembler/masm/dword.md)， [QWORD](../../assembler/masm/qword.md)，或[TBYTE](../../assembler/masm/tbyte.md)。  
   
--   初始化一個指示詞，而非使用 BCD `TBYTE`。  
+-   BCD 用來初始化指示詞以外`TBYTE`。  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>另請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

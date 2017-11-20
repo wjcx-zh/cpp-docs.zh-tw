@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - thread_local_cpp
 - external_cpp
 - static_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- storage classes [C++], basic concepts
+dev_langs: C++
+helpviewer_keywords: storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: db5a6c23d11f8cdf144e42aee4880ee1ac26066a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)  
   
@@ -329,4 +325,3 @@ Destroying: Static I3
 ## <a name="see-also"></a>另請參閱  
   
  [宣告和定義](../cpp/declarations-and-definitions-cpp.md)
-

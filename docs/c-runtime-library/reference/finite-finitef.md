@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,37 +30,21 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 90eff10a00ecfdfd772acc7caa624ff35dd392d7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: cb08c6a525222e8c1bb886f87aa55b2996cd3846
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="finite-finitef"></a>_finite、_finitef
 判斷指定的浮點數值是否有限。  
@@ -95,7 +78,7 @@ int _finitef(
 |`_finite`|\<float.h> 或 \<math.h>|\<float.h>、\<math.h>、\<cfloat> 或 \<cmath>|  
 |`_finitef`|\<math.h>|\<math.h> 或 \<cmath>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   

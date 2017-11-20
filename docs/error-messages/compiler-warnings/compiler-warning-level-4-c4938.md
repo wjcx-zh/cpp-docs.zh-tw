@@ -4,47 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4938
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4938
+f1_keywords: C4938
+dev_langs: C++
+helpviewer_keywords: C4938
 ms.assetid: 6acac81a-9d23-465e-b700-ed4b6e8edcd0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: f4e3184d1833da65c73149eb89ab1be8b2249b4e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: f7e981f84dd54a8b44ba7bf0608d13db217cee35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4938"></a>編譯器警告 (層級 4) C4938
 'var': 浮點削減變數在 /fp:strict 或 #pragma fenv_access 之下可能會造成不一致的結果  
   
- 您不應該使用[/fp: strict](../../build/reference/fp-specify-floating-point-behavior.md)或[fenv_access](../../preprocessor/fenv-access.md)與 OpenMP 浮點削減，因為以不同的順序計算總和。 因此，結果可能會與沒有 /openmp 的結果不同。  
+ 您不應該搭配使用 [/fp:strict](../../build/reference/fp-specify-floating-point-behavior.md) 或 [fenv_access](../../preprocessor/fenv-access.md) 與 OpenMP 浮點削減，因為是以不同的順序計算總和。 因此，結果可能會與沒有 /openmp 的結果不同。  
   
  下列範例會產生 C4938：  
   

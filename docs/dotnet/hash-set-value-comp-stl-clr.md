@@ -1,42 +1,39 @@
 ---
-title: "hash_set::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_comp 成員 [STL/CLR]"
+title: "hash_set:: value_comp (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: 7ef381ea-438b-48ce-b0cb-96d844ea5df7
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 31488cce5c45901e7d15698aeb2339f47bf48a6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製兩個項目值的排序委派。  
+# <a name="hashsetvaluecomp-stlclr"></a>hash_set::value_comp (STL/CLR)
+將複製兩個項目值的順序委派。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## 備註  
- 成員函式傳回用於排序受控制序列的順序委派。  您會用它來比較兩個項目值。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個項目值。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_value_comp.cpp   
@@ -61,15 +58,18 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= True**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::value\_compare](../dotnet/hash-set-value-compare-stl-clr.md)   
- [hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: value_compare (STL/CLR)](../dotnet/hash-set-value-compare-stl-clr.md)   
+ [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

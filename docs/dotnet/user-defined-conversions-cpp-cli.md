@@ -1,36 +1,34 @@
 ---
-title: "使用者定義轉換 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "使用者定義轉換 [C++]"
+title: "使用者定義轉換 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3515b9da7513080e825457d98aa06bccb63a1029
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 使用者定義轉換 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在其中一個型別轉換為實值型別 \(Value Type\) 或參考型別的參考或執行個體時，這個章節將討論使用者定義的轉換 \(UDC\)。  
+# <a name="user-defined-conversions-ccli"></a>使用者定義轉換 (C++/CLI)
+項目中的型別轉換為參考或值類型或參考類型的執行個體時，本節會討論使用者定義轉換 (UDC)。  
   
-## 隱含和明確轉換  
- 使用者定義的轉換可能是隱含或明確的。如果轉換不會造成資訊遺失， UDC 應該是隱含的。  否則會定義明確 UDC。  
+## <a name="implicit-and-explicit-conversions"></a>隱含和明確轉換  
+ 使用者定義的轉換可以是隱含或明確。  UDC 應該隱含如果轉換不會導致遺失資訊。 否則不應定義明確的 UDC。  
   
- 原生類別的建構函式可以用來轉換參考或實值型別的原生類別。  
+ 原生類別的建構函式可以用來將參考或值類型轉換成原生類別。  
   
- 如需有關轉換的詳細資訊，請參閱[Boxing](../windows/boxing-cpp-component-extensions.md) 和[標準轉換](../cpp/standard-conversions.md)。  
+ 如需有關轉換的詳細資訊，請參閱[Boxing](../windows/boxing-cpp-component-extensions.md)和[標準轉換](../cpp/standard-conversions.md)。  
   
 ```  
 // mcpp_User_Defined_Conversions.cpp  
@@ -78,28 +76,31 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **在 N::N**  
-**在 N::N**   
-## 轉換來源運算子  
- 轉換從運算子建立運算子從其他類別定義物件之類別的物件。  
+```Output  
+in N::N  
+in N::N  
+```  
   
- Standard C\+\+ 轉換不從運算子支援;Standard C\+\+ 用於這個建構函式。  不過，當使用 CLR 型別時， Visual C\+\+ 提供轉換從運算子的呼叫的語法支援。  
+## <a name="convert-from-operators"></a>轉換來源運算子  
+ 轉換來源運算子會從其他類別的物件建立定義運算子之類別的物件。  
   
- 與其他符合 CLS 標準的語言都要很好互通，您可能會想要將特定類別的每個使用者定義之一元的建構函式具有對應轉換從運算子。  
+ Standard c + + 不支援轉換來源運算子;standard c + + 針對此用途使用建構函式。 不過，使用 CLR 類型時，Visual c + + 支援語法呼叫轉換來源運算子。  
   
- 轉換來源運算子  
+ 也與其他符合 CLS 標準的語言交互操作，您可能想要換行以對應轉換來源運算子的特定類別的每個使用者定義一元建構函式。  
   
--   將定義為靜態函式。  
+ 轉換來源運算子：  
   
--   可以是隱含 \(不會失去精確度，例如縮短為 int\) 的轉換或明確，雖然有精確度時遺失。  
+-   應該定義為靜態函式。  
   
--   會傳回包含類別的物件。  
+-   可以是 （適用於不會遺失有效位數，例如簡短-int 的轉換） 明確或隱含時可能會遺失有效位數。  
   
--   將具有「從」型別為單一參數型別。  
+-   應該會傳回包含類別的物件。  
   
- 下列範例顯示隱含和明確「變更成」，從使用者定義的轉換 \(UDC\) 運算子。  
+-   必須有唯一的參數類型為"from"類型。  
+  
+ 下列範例示範隱含和明確 」 轉換來源 」、 使用者定義轉換 (UDC) 運算子。  
   
 ```  
 // clr_udc_convert_from.cpp  
@@ -138,14 +139,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **in 運算子**  
-**在建構函式中**  
-**10**  
-**1**   
-## 轉換目標運算子  
- 轉換為運算子的轉換運算子定義為其他物件類別的物件。  下列範例顯示隱含，將值轉換成，使用者定義的轉換運算子:  
+```Output  
+in operator  
+in constructor  
+10  
+1  
+```  
+  
+## <a name="convert-to-operators"></a>轉換目標運算子  
+ 轉換目標運算子轉換某個其他物件定義運算子之類別的物件。 下列範例將示範隱含的轉換目標，使用者定義轉換運算子：  
   
 ```  
 // clr_udc_convert_to.cpp  
@@ -169,9 +173,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **10** 明確的使用者定義轉換為轉換運算子為可能會以某種方式遺失資料的轉換為適當的。  若要叫用明確轉換為運算子，則必須使用轉型。  
+```Output  
+10  
+```  
+  
+ 明確使用者定義轉換目標轉換運算子是適用於可能會遺失資料，在某些方面的轉換。 要叫用明確的轉換目標運算子，就必須使用轉型。  
   
 ```  
 // clr_udc_convert_to_2.cpp  
@@ -194,12 +202,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **10.3**  
-**10**   
-## 轉換泛型類別  
- 您可以將泛型類別至 T。  
+```Output  
+10.3  
+10  
+```  
+  
+## <a name="to-convert-generic-classes"></a>要轉換泛型類別  
+ 您可以將泛型類別轉換成 t。  
   
 ```  
 // clr_udc_generics.cpp  
@@ -225,9 +236,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **True** 已轉換的建構函式接受型別來建立物件。已轉換的建構函式呼叫與只有直接初始化;轉換不會叫用轉換建構函式。  根據預設，轉換建構函式為 CLR 型別是明確的。  
+```Output  
+True  
+```  
+  
+ 轉換建構函式會採用型別，並使用它來建立物件。  轉換建構函式呼叫時所使用; 僅限直接初始化轉換 （cast） 不會叫用轉換建構函式。 根據預設，轉換建構函式會明確的 CLR 型別。  
   
 ```  
 // clr_udc_converting_constructors.cpp  
@@ -256,10 +271,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **5**  
-**R** 在這個程式碼範例，隱含靜態轉換函式進行和明確轉換建構函式相同。  
+```Output  
+5  
+R  
+```  
+  
+ 在此程式碼範例中，隱含的靜態轉換函式會明確轉換建構函式相同的動作。  
   
 ```  
 public value struct V {  
@@ -295,11 +314,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **13**  
-**12**  
-**500**  
-**2000**   
-## 請參閱  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+13  
+12  
+500  
+2000  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

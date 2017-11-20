@@ -1,54 +1,54 @@
 ---
-title: "/Zl (省略預設程式庫名稱) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/zi"
-  - "VC.Project.VCCLCompilerTool.OmitDefaultLibName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zl 編譯器選項 [C++]"
-  - "預設程式庫, 省略名稱"
-  - "省略預設程式庫名稱編譯器選項"
-  - "ZI 編譯器選項"
-  - "-Zl 編譯器選項 [C++]"
+title: "-Zl （省略預設程式庫名稱） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /zi
+- VC.Project.VCCLCompilerTool.OmitDefaultLibName
+dev_langs: C++
+helpviewer_keywords:
+- -Zl compiler option [C++]
+- ZI compiler option
+- Omit Default Library Name compiler option
+- /Zl compiler option [C++]
+- default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b0d4f865d060ceaf99a808d87574cb6d088f139
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /Zl (省略預設程式庫名稱)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在 .obj 檔中省略預設的 C 執行階段程式庫名稱。  編譯器是預設為將程式庫名稱置入 .obj 檔案中，以便指引連結器到正確的程式庫。  
+# <a name="zl-omit-default-library-name"></a>/Zl (省略預設程式庫名稱)
+省略預設 C 執行階段程式庫名稱，從.obj 檔案。 根據預設，編譯器會將程式庫名稱置入 .obj 檔案中，以將連結器導向至正確的程式庫。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /Zl  
 ```  
   
-## 備註  
- 如需有關預設程式庫的詳細資訊，請參閱[使用 Run\-Time 程式庫](../../build/reference/md-mt-ld-use-run-time-library.md)。  
+## <a name="remarks"></a>備註  
+ 如需有關預設程式庫的詳細資訊，請參閱[使用執行階段程式庫](../../build/reference/md-mt-ld-use-run-time-library.md)。  
   
- 您可以使用 **\/Zl** 編譯您打算置入程式庫的 .obj 檔案。  雖然對於單一 .obj 檔案省略程式庫名稱只能節省很少量的空間，但是對於含有許多物件模組的程式庫，總計節省下來的空間就相當可觀了。  
+ 您可以使用**/Zl**編譯您打算將放入程式庫.obj 檔案。 雖然省略文件庫名稱儲存只有少量的空間可供單一.obj 檔案，儲存的總空間程式庫包含許多物件模組中並明顯。  
   
- 這是進階的選項。  設定這個選項會移除您的應用程式可能需要的特定 C 執行階段程式庫支援，如果您的應用程式依賴這項支援，結果就會造成連結時間錯誤。  如果您使用這個選項，則必須以其他方式提供所需的元件。  
+ 這個選項是進階的選項。 設定此選項會移除可能需要您的應用程式，導致連結時間錯誤，如果您的應用程式相依於這項支援的特定 C 執行階段程式庫支援。 如果您使用此選項，您必須提供必要的元件，以其他方法。  
   
- 請使用[\/NODEFAULTLIB \(忽略程式庫\)](../../build/reference/nodefaultlib-ignore-libraries.md)指引連結器忽略所有 .obj 檔案中的程式庫參考。  
+ 使用[/NODEFAULTLIB （忽略程式庫）](../../build/reference/nodefaultlib-ignore-libraries.md)。 若要直接連結器，以略過所有.obj 檔中的程式庫參考。  
   
- 如需詳細資訊，請參閱[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
+ 如需詳細資訊，請參閱 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
- 以 **\/Zl** 編譯時，會定義 `_VC_NODEFAULTLIB`。例如：  
+ 編譯時**/Zl**，`_VC_NODEFAULTLIB`定義。  例如:   
   
 ```  
 // vc_nodefaultlib.cpp  
@@ -62,20 +62,20 @@ void Test() {
 }  
 ```  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**進階**\] 屬性頁。  
+3.  按一下**進階**屬性頁。  
   
-4.  修改 \[**省略預設程式庫名稱**\] 屬性。  
+4.  修改**省略預設程式庫名稱**屬性。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.OmitDefaultLibName%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

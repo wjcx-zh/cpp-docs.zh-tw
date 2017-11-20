@@ -1,34 +1,33 @@
 ---
-title: "開發您自己的 Helper 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Helper 函式"
+title: "開發您自己的 Helper 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: helper functions
 ms.assetid: a845429d-68b1-4e14-aa88-f3f5343bd490
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3a2683fbc259cbac3551840f9ebe6e7c651430bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 開發您自己的 Helper 函式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-您可能會希望提供自己的常式版本，根據 DLL 或匯入的名稱來進行特定的處理。  有兩種方法可以完成這項工作：根據提供的程式碼自己編寫程式，或是使用之前說明的告知攔截來攔截所提供的版本。  
+# <a name="developing-your-own-helper-function"></a>開發您自己的 Helper 函式
+若要提供您自己進行匯入之 DLL 的名稱為基礎的特定處理常式的版本。 這麼做的兩種方法： 程式碼撰寫您自己，可能會根據提供的程式碼，或攔截所提供的版本，使用先前說明的告知攔截。  
   
- 自己編寫程式  
- 由於本質上您可以利用提供的程式碼做為新常式的方針，因此這是相當簡單的方法。  當然，它必須遵守呼叫慣例；如果它會返回連結器產生的 Thunk，也必須傳回適當的函式指標。  在您的程式碼中，可以執行任何希望執行的動作來滿足呼叫或離開呼叫。  
+ 程式碼自己  
+ 這是相當簡單，因為您實際上可以使用當做指導方針提供的程式碼，新的。 當然，它必須遵守的呼叫慣例，而且如果它傳回至連結器產生的 thunk，它必須傳回適當的函式指標。 一次在您的程式碼中，您可以執行幾乎任何您想要以滿足呼叫或者跳離呼叫。  
   
  使用啟動處理告知攔截  
- 最簡單的方法可能是只提供新指標給使用者提供的告知攔截函式，此函式接收與 dliStartProcessing 告知中的預設 Helper 相同的值。  此時，攔截函式本質上已經變成新的 Helper 函式，成功地回到預設的 Helper 將會忽略預設 Helper 中所有的進一步的處理。  
+ 它可能會直接提供新的指標，以接收通知 dliStartProcessing 上預設協助專家為相同值的使用者提供的通知攔截函式最簡單的方式。 此時，攔截函式基本上會形成新的協助程式函式，是因為成功傳回預設協助程式將會略過所有其他以預設協助程式處理。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [延遲載入 DLL 的連結器支援](../../build/reference/linker-support-for-delay-loaded-dlls.md)

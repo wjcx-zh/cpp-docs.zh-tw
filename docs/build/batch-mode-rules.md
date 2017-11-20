@@ -1,46 +1,46 @@
 ---
-title: "批次模式規則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE 中的批次模式推斷規則"
-  - "NMAKE 中的推斷規則"
-  - "NMAKE 程式, 推斷規則"
+title: "批次模式規則 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inference rules in NMAKE
+- NMAKE program, inference rules
+- batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be8c00009e285ec84f42ae6f53c578a3084432de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 批次模式規則
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="batch-mode-rules"></a>批次模式規則
 ```  
 {frompath}.fromext{topath}.toext::  
    commands  
 ```  
   
- 當 N 命令通過這個推斷規則時，批次模式推斷規則只提供一個推斷規則的引動過程。  沒有批次模式推斷規則的話，叫用時會需要 N 命令。  N 是觸發推斷規則的相依性數目。  
+ 當 N 命令通過此推斷規則時，批次模式推斷規則提供推斷規則只有一個引動的過程。 沒有批次模式推斷規則，將會要求 N 叫用的命令。 N 是推斷規則觸發程序的相依項目數目。  
   
- 包含批次模式推斷規則的 Makefile 必須使用 NMAKE 1.62 版或更新的版本。  若要檢查 NMAKE 版本，請執行 NMAKE 1.62 版或更新版本所提供的 \_NMAKE\_VER 巨集。  這個巨集會傳回表示 Visual C\+\+ 產品版本的字串。  
+ 包含批次模式推斷規則的 Makefile 必須使用 NMAKE 1.62 或更高版本。 若要檢查 NMAKE 版本，請執行可用 _NMAKE_VER 巨集與 NMAKE 版本，1.62 或更高版本。 這個巨集會傳回字串，代表 Visual c + + 的產品版本。  
   
- 與標準的推斷規則之間唯一的語法差異在於，批次模式推斷規則是以雙冒號 \(::\) 結束。  
+ 之間唯一的語法差異的標準的推斷規則是以雙冒號 （:），終止批次模式推斷規則。  
   
 > [!NOTE]
->  叫用的工具必須要能處理多個檔案。  批次模式推斷規則必須將 `$<` 當做巨集使用，以便存取相依檔案。  
+>  所叫用的工具必須能夠處理多個檔案。 必須使用批次模式推斷規則`$<`為巨集來存取相依的檔案。  
   
- 批次模式推斷規則可以加速建置程序。  提供檔案給批次中的編譯器比較快速，因為只會叫用編譯器驅動程式一次。  例如，C 和 C\+\+ 編譯器在處理一組檔案時會執行得更好，因為編譯器可以在過程中保留記憶體常駐。  
+ 批次模式推斷規則可以加快建置程序。 會比提供檔案給編譯器的批次，因為編譯器驅動程式會叫用一次。 例如，C 和 c + + 編譯器會執行更好時處理一組檔案，因為它可以保留記憶體常駐在程序期間。  
   
- 下列範例示範如何使用批次模式推斷規則：  
+ 下列範例會示範如何使用批次模式推斷規則：  
   
 ```  
 #  
@@ -65,7 +65,7 @@ $(Objs) :
 #end of makefile  
 ```  
   
- NMAKE 產生下列沒有批次模式推斷規則的輸出：  
+ NMAKE 會產生下列輸出沒有批次模式推斷規則：  
   
 ```  
 E:\tmp> nmake -f test.mak -a NOBatch=1  
@@ -82,7 +82,7 @@ foo3.cpp
 foo4.cpp  
 ```  
   
- NMAKE 產生下列具有批次模式推斷規則的結果：  
+ NMAKE 會產生下列結果與批次模式推斷規則：  
   
 ```  
 E:\tmp> nmake -f test.mak -a  
@@ -98,5 +98,5 @@ foo4.cpp
 Generating Code...  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [推斷規則](../build/inference-rules.md)

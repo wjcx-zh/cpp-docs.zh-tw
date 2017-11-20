@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3350
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3350
+f1_keywords: C3350
+dev_langs: C++
+helpviewer_keywords: C3350
 ms.assetid: cfbbc338-92b5-4f34-999e-aa2d2376bc70
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 3ec6d0823fe29b51a002f6c46f728f0c526c6169
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3350"></a>編譯器錯誤 C3350
 'delegate': 委派建構函式必須有 <數字> 個引數  
@@ -51,4 +46,3 @@ int main() {
    SumDelegate ^ pSD2 = gcnew SumDelegate(&X::F2);  
 }  
 ```  
-

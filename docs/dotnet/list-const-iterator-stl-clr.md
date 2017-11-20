@@ -1,41 +1,39 @@
 ---
-title: "list::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator 成員 [STL/CLR]"
+title: "list:: const_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 24e19077-02d2-456e-a3f1-7caaf0b6c974
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 76e59007b1ed45e01310795f7ada35576a57bb60
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# list::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listconstiterator-stlclr"></a>list::const_iterator (STL/CLR)
 用於受控制序列的常數迭代器類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## 備註  
- 此型別描述其可以為此控制序列當做常數隨機讀取迭代器之未指定型別 `T2` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T2`，可做為受控制序列的常數隨機存取迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_const_iterator.cpp   
@@ -59,12 +57,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::iterator](../dotnet/list-iterator-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)

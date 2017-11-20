@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- explicit_cpp
-dev_langs:
-- C++
+f1_keywords: explicit_cpp
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++], and constants
 - conversion functions [C++]
@@ -31,16 +28,15 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 778c5a659755b5c79f79e9b846441c3e0665995e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 155afe7c785b111a49a19545e47d175a9b22f7d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="user-defined-type-conversions-c"></a>使用者定義類型轉換 (C++)
 A*轉換*產生的值從某種類型的不同類型的新值。 *標準轉換*其內建類型，而且您可以建立 c + + 語言與支援內建*使用者定義轉換*執行至、 或使用者定義型別之間的轉換。  
@@ -234,4 +230,3 @@ void display_balance(const Money balance)
   
  這裡的轉換函式 `operator double` 已設為明確，並已在函式 `double` 中引進為類型 `display_balance` 的明確轉型，以執行轉換。 如果省略此轉型，編譯器會找不到適合類型 `<<` 的資料流插入運算子 `Money`，並且會發生錯誤。  
   
-

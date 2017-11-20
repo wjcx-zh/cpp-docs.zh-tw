@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- event handling [C++], Visual C++
+dev_langs: C++
+helpviewer_keywords: event handling [C++], Visual C++
 ms.assetid: e4b9219a-15d8-42fb-83c8-6d2e4e087c8d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0ff5032966cb44ff8d14dd6e0a33fb5f8cf56ed7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2c404caf0090381af1697516d25358daa29c70d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="event-handling-in-native-c"></a>原生 C++ 中的事件處理
 在原生 c + + 事件處理中，您將使用的事件來源和事件接收器設定[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = `native`. 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。  

@@ -1,45 +1,43 @@
 ---
-title: "hash_map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator[] 成員 [STL/CLR]"
+title: "hash_map::operator(STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::operator[]
+dev_langs: C++
+helpviewer_keywords: operator[] member [STL/CLR]
 ms.assetid: b0b8c1bd-4250-447d-9c69-3f8c34e9b6af
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae7a414f08a0bc40ab39c3835084a4456e02b685
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將索引鍵對應至其關聯的對應值。  
+# <a name="hashmapoperatorstlclr"></a>hash_map::operator(STL/CLR)
+將索引鍵對應至其相關聯的對應值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 要搜尋的索引值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
   
-## 備註  
- 這個成員函式努力尋找與 `key` 相等排序的項目。  如果有找到，它會傳回關聯的對應值;否則，它會插入 `value_type(``key``, mapped_type())` 並傳回關聯的 \(預設\) 對應值。  您會用它來搜尋指定相關索引鍵的對應值，或者確保索引鍵的輸入存在，如果找不到的話。  
+## <a name="remarks"></a>備註  
+ 此成員函式以尋找具有對等順序的項目努力時`key`。 如果找到，它會傳回相關聯的對應的值。否則，它會插入`value_type(key, mapped_type())`並傳回相關聯 （預設值） 的對應值。 您使用它來查閱對應值，指定其相關聯的金鑰，或如果找不到任何索引鍵存在一個項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_operator_sub.cpp   
@@ -80,17 +78,20 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**c1\[A\] \= 0**  
-**c1\[b\] \= 2**  
- **\[a 1\] \[A 0\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[A 10\] \[b 2\] \[c 13\]**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [a 1] [A 0] [b 2] [c 3]  
+ [a 1] [A 10] [b 2] [c 13]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::insert](../dotnet/hash-map-insert-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)

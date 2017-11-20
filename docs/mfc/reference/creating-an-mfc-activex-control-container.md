@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.appwiz.activex.container
-dev_langs:
-- C++
+f1_keywords: vc.appwiz.activex.container
+dev_langs: C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], containers
 - ActiveX control containers [MFC], creating
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: c9ac70acd706237cfeb40e709d2562883263c687
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>建立 MFC ActiveX 控制項容器
 ActiveX 控制項容器是父程式，提供 ActiveX (先前稱為 OLE) 控制項執行環境。 您可以建立應用程式能夠包含 ActiveX 控制項，不論 MFC，但更容易使用 MFC 進行。  
@@ -48,5 +44,4 @@ ActiveX 控制項容器是父程式，提供 ActiveX (先前稱為 OLE) 控制�
   
 ## <a name="see-also"></a>另請參閱  
  [Visual C++ 專案類型](../../ide/visual-cpp-project-types.md)
-
 

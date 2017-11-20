@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblAcceleration
 - AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CParabolicTransitionFromAcceleration::m_dblFinalVelocity
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], CParabolicTransitionFromAcceleration
 - CParabolicTransitionFromAcceleration [MFC], Create
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: bb4ac9cb8ad6921297a99cad79a2b83c7f142b25
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d8d4c25cc3f5f5b133bbf3fa5301508a387d1fa6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration 類別
 封裝拋物線加速轉換。  
@@ -139,4 +136,3 @@ DOUBLE m_dblFinalVelocity;
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2993
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2993
+f1_keywords: C2993
+dev_langs: C++
+helpviewer_keywords: C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: a6306b2c3c632d25ee6b37a025516f759cc126a6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2993"></a>編譯器錯誤 C2993
 'identifier': 非類型樣板參數 'parameter' 的類型不合法  

@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
 - ++
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators [C++], syntax
 - member-selection operators [C++]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cbf22e57abaefc7b14be9c4eab404f7c20cb9359
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
 ## <a name="syntax"></a>語法  
@@ -55,7 +52,7 @@ i++;
   
  使用後置運算子當做函式的引數時，引數的值在傳遞至函式之前不保證會遞增或遞減。  如需詳細資訊，請參閱 C++ 標準中的 1.9.17 一節。  
   
- 將後置遞增運算子套用至類型的物件陣列的指標**長**實際上是新增四個指標的內部表示法。 這個行為會導致指標先前參考* n *th 項目來參考陣列的 (*n*+ 1) 個項目。  
+ 將後置遞增運算子套用至類型的物件陣列的指標**長**實際上是新增四個指標的內部表示法。 這個行為會導致指標先前參考 *n* th 項目來參考陣列的 (*n*+ 1) 個項目。  
   
  後置遞增和後置遞減運算子的運算元必須是可修改 (不**const**) 是算術或指標類型的左值。 結果型別是屬於相同*後置運算式*，但已不再是左值。  
   

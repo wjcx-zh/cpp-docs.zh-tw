@@ -1,33 +1,30 @@
 ---
-title: "hash_multimap::hash_multimap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::hash_multimap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "hash_multimap 成員 [STL/CLR]"
+title: "hash_multimap:: hash_multimap (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::hash_multimap
+dev_langs: C++
+helpviewer_keywords: hash_multimap member [STL/CLR]
 ms.assetid: a1d576a7-5dc7-4ad9-abef-ee7a13caaec3
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d09f0fd54625d5f6df87305771991c65340309f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::hash_multimap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構一個容器物件。  
+# <a name="hashmultimaphashmultimap-stlclr"></a>hash_multimap::hash_multimap (STL/CLR)
+建構容器物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 hash_multimap();  
@@ -50,104 +47,90 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred, hasher^ hashfn);  
 ```  
   
-#### 參數  
- first  
- 要插入的範圍開頭。  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要插入範圍的開頭。  
   
  hashfn  
- 對應的金鑰雜湊函式到 Bucket。  
+ 雜湊值區的對應索引鍵的函式。  
   
  last  
- 要插入的範圍結尾。  
+ 要插入範圍的結尾。  
   
  pred  
- 為控制序列預先定義的述詞。  
+ 排序受控制序列的述詞。  
   
- right  
- 要插入的物件或範圍 。  
+ 向右  
+ 要插入的物件或範圍。  
   
-## 備註  
- 建構函式:  
+## <a name="remarks"></a>備註  
+ 建構函式：  
   
  `hash_multimap();`  
   
- 初始化受控制序列中沒有項目，使用預設定序述詞 `key_compare()`以及預設的雜湊函式。  您會用它來指定一個空的初始控制序列，與預設定序述詞和雜湊函數。  
+ 使用預設排序述詞，初始化受控制的序列的任何項目， `key_compare()`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，使用預設排序述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
  `explicit hash_multimap(key_compare^ pred);`  
   
- 初始化受控制序列中沒有項目，使用預設定序述詞 `pred`以及預設的雜湊函式。  您會用它來指定一個空的初始控制序列，與指定定序述詞和預設雜湊函數。  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和預設雜湊函數。  
   
- 建構函式:  
+ 建構函式：  
   
  `hash_multimap(key_compare^ pred, hasher^ hashfn);`  
   
- 初始化受控制序列中沒有項目，使用預設定序述詞 `pred`以及雜湊函式`hashfn`。  您會用它來指定一個空的初始控制序列，與指定定序述詞和雜湊函數。  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
  `hash_multimap(hash_multimap<Key, Mapped>% right);`  
   
- 初始化受控制序列中沒有項目，使用序列 `[``right``.`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``.`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`，使用預設定序述詞以及預設的雜湊函式。  您會用它來指定為由雜湊multimap物件 `right`控制的序列的拷貝的初始控制序列，以及預設定序述詞和雜湊函式。  
+ 初始化受控制的序列與順序 [`right.begin()`， `right.end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_multimap 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
  `hash_multimap(hash_multimap<Key, Mapped>^ right);`  
   
- 初始化受控制序列中沒有項目，使用序列 `[``right``->`[hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` `right``->`[hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`，使用預設定序述詞以及預設的雜湊函式。  您會用它來指定為由雜湊multimap物件 `right`控制的序列的拷貝的初始控制序列，以及預設定序述詞和雜湊函式。  
+ 初始化受控制的序列與順序 [`right->begin()`， `right->end()`)、 排序的述詞，預設值和預設雜湊函式。 您用它來指定 hash_multimap 物件所控制之序列的複本初始受控制的序列`right`使用預設排序述詞和雜湊函式。  
   
- 建構函式:  
+ 建構函式：  
   
- `template<typename InIter>`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last);`  
   
- `hash_multimap(InIter first, InIter last);`  
+ 初始化受控制的序列與順序 [`first`， `last`)、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來製作受控制的序列的其他順序，排序述詞和雜湊函式的預設值。  
   
- 初始化受控制序列中沒有項目，使用序列 `[``first``,` `last``)`，使用預設定序述詞以及預設的雜湊函式。  您會用它來做受控制序列複製另一個序列，與預設定序述詞和雜湊函式。  
+ 建構函式：  
   
- 建構函式:  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和預設雜湊函數。  
   
- `hash_multimap(InIter first, InIter last,`  
+ 建構函式：  
   
- `key_compare^ pred);`  
+ `template<typename InIter> hash_multimap(InIter first, InIter last, key_compare^ pred, hasher^ hashfn);`  
   
- 初始化受控制序列中沒有項目，使用序列 `[``first``,` `last``)``pred`，使用預設定序述詞以及預設的雜湊函式。  您會用它來做受控制序列複製另一個序列，與指定定序述詞和預設雜湊函式。  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來製作受控制的序列的另一個序列，以指定順序的述詞和雜湊函式。  
   
- 建構函式:  
-  
- `template<typename InIter>`  
-  
- `hash_multimap(InIter first, InIter last,`  
-  
- `key_compare^ pred, hasher^ hashfn);`  
-  
- 初始化受控制序列中沒有項目，使用序列 `[``first``,` `last``)``pred`，使用預設定序述詞以及預設的雜湊函式`hashfn`。  您會用它來做受控制序列複製另一個序列，與指定定序述詞和雜湊函式。  
-  
- 建構函式:  
+ 建構函式：  
   
  `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 初始化控制序列與列舉值所指定的 `right`序列，與預設定序述詞以及預設的雜湊函式。  您會用它加上預設定序述詞來作為列舉值所描述的另一個序列複製的控制序列和雜湊函式。  
+ 初始化受控制的序列的列舉值所指定的順序與`right`、 排序的述詞，預設值和預設雜湊函式。 您可以使用它來進行受控制的序列排序述詞和雜湊函式的預設值所列舉值，描述的另一個序列的複本。  
   
- 建構函式:  
+ 建構函式：  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，並使用預設雜湊函式。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和預設雜湊函式與所描述的另一個序列的複本。  
   
- 初始化控制序列與列舉值所指定的 `right`序列，與預設定序述詞`pred`以及預設的雜湊函式。  您會用它加上指定序述詞來作為列舉值所描述的另一個序列複製的控制序列和預設雜湊函式。  
+ 建構函式：  
   
- 建構函式:  
+ `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred, hasher^ hashfn);`  
   
- `hash_multimap(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`，與雜湊函式`hashfn`。 您可以使用它來進行受控制的序列的列舉值，指定排序述詞和雜湊函式與所描述的另一個序列的複本。  
   
- `key_compare^ pred, hasher^ hashfn);`  
-  
- 初始化控制序列與列舉值所指定的 `right`序列，與預設定序述詞`pred`以及預設的雜湊函式`hashfn`。  您會用它加上指定定序述詞來作為列舉值所描述的另一個序列複製的控制序列和雜湊函式。  
-  
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multimap_construct.cpp   
@@ -259,26 +242,32 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\] \[b 2\] \[a 1\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+ [c 3] [b 2] [a 1]  
+  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::generic\_container](../dotnet/hash-multimap-generic-container-stl-clr.md)   
- [hash\_multimap::operator\=](../dotnet/hash-multimap-operator-assign-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::generic_container (STL/CLR)](../dotnet/hash-multimap-generic-container-stl-clr.md)   
+ [hash_multimap::operator= (STL/CLR)](../dotnet/hash-multimap-operator-assign-stl-clr.md)

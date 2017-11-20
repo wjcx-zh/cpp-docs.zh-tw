@@ -1,41 +1,39 @@
 ---
-title: "hash_map::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成員 [STL/CLR]"
+title: "hash_map:: empty (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 2a145e16-a48a-4304-8fa6-5b2361693083
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0fc23e13e04604bfb1f63349140dcca23332e0d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-測試是否不存在項目。  
+# <a name="hashmapempty-stlclr"></a>hash_map::empty (STL/CLR)
+測試項目是否不存在。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool empty();  
 ```  
   
-## 備註  
- 成員函式傳回 true 表示一個空的控制順序。  它就相當於 [hash\_map::size](../dotnet/hash-map-size-stl-clr.md)`() == 0`。  您會用它來測試 hash\_map 是否是空的。  
+## <a name="remarks"></a>備註  
+ 成員函式會對空的受控制序列傳回 true。 它相當於[hash_map:: size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否 hash_map 是空的。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::size](../dotnet/hash-map-size-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::size (STL/CLR)](../dotnet/hash-map-size-stl-clr.md)

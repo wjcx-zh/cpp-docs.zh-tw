@@ -1,30 +1,30 @@
 ---
-title: "begin 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Windows::Foundation::Collections::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin 函式"
+title: "begin 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 01/22/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: collection/Windows::Foundation::Collections::begin
+dev_langs: C++
+helpviewer_keywords: begin Function
 ms.assetid: 5a44fb33-e247-49fd-b7a1-4a5b42e9e1e4
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 4bd4d94d2e65a4ad285a1a87c211169482cee1a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# begin 函式
+# <a name="begin-function"></a>begin 函式
 傳回迭代器，指向指定的介面參數所存取之集合的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -46,28 +46,28 @@ template <typename T>
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
  樣板類型參數。  
   
  `v`  
- IVector\<T\> 或 IVectorView\<T\> 介面所存取的 Vector\<T\> 或 VectorView\<T\> 物件集合。  
+ 向量的集合\<T > 或 VectorView\<T > 物件存取透過 Ivector<platform\<T > 或 IVectorView\<T > 介面。  
   
  `i`  
- IIterable\<T\> 介面所存取的任意 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]物件集合。  
+ IIterable 所存取的任意 Windows 執行階段物件的集合\<T > 介面。  
   
-## 傳回值  
+### <a name="return-value"></a>傳回值  
  指向集合開頭的迭代器。  
   
-## 備註  
+### <a name="remarks"></a>備註  
  前兩個樣板函式會傳回迭代器，第三個樣板函式會傳回輸入迭代器。  
   
- begin 傳回的 VectorIterator 物件是會儲存類型為 VectorProxy\<T\> 的 Proxy 迭代器。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱[集合 \(C\+\+\/CX\)](../cppcx/collections-c-cx.md)。  
+ 所傳回的物件開始的 VectorIterator 是 proxy 迭代器可以儲存的型別 VectorProxy 元素\<T >。 不過，對使用者程式碼來說，Proxy 物件永遠都像是不存在一樣。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
-## 需求  
- **標頭：**collection.h  
+### <a name="requirements"></a>需求  
+ **標頭：** collection.h  
   
- **命名空間：**Windows::Foundation::Collections  
+ **命名空間：** Windows::Foundation::Collections  
   
-## 請參閱  
- [Windows::Foundation::Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+## <a name="see-also"></a>另請參閱  
+ [Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

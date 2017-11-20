@@ -1,33 +1,30 @@
 ---
-title: "equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 函式 [STL/CLR]"
+title: "equal_range (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range function [STL/CLR]
 ms.assetid: 1b2e76c3-6b52-486d-9785-2639b54277fd
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b94388f233c8ffb6577d88e137245475c3656de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找一組已排序的範圍、第一個小於或等於的位置設定為指定的項目和第二個大於的位置項目的位置，其中會使用等價或定序感覺建立序列中的位置可能由二進位述詞指定。  
+# <a name="equalrange-stlclr"></a>equal_range (STL/CLR)
+在已排序的範圍中尋找一對位置，第一個位置小於或等於指定項目的位置，第二個位置大於該項目的位置，其中用於建立序列中位置的等價或順序意義可由二元述詞指定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -38,13 +35,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式的行為與 STL 函式 `equal_range` 相同。  如需詳細資訊，請參閱[equal\_range](../Topic/equal_range.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`equal_range`。 如需詳細資訊，請參閱[equal_range](../standard-library/algorithm-functions.md#equal_range)。  
   
-## 需求  
- **標頭：** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

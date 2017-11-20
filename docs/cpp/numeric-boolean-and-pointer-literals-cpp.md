@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>數值、 布林值和指標常值 （c + +）
 常值是直接代表值的程式項目。 本文涵蓋整數、浮點、布林值和指標類型的常值。 字串和字元常值的相關資訊，請參閱[字串和字元常值 （c + +）](../cpp/string-and-character-literals-cpp.md)。 您也可以定義任何分類，根據您自己常值如需詳細資訊，請參閱[使用者定義常值 （c + +）](../cpp/user-defined-literals-cpp.md)  

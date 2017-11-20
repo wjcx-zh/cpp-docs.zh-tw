@@ -1,73 +1,73 @@
 ---
-title: "CViews、CViewInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "m_bCheckOption"
-  - "CViews"
-  - "CHECK_OPTION"
-  - "CViewInfo"
-  - "m_szTableCatalog"
-  - "IS_UPDATABLE"
-  - "m_szDefinition"
-  - "m_szTableName"
-  - "m_bIsUpdatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHECK_OPTION"
-  - "CViewInfo 參數類別"
-  - "CViews typedef 類別"
-  - "DESCRIPTION 類別資料成員"
-  - "IS_UPDATABLE"
-  - "m_bCheckOption"
-  - "m_bIsUpdatable"
-  - "m_szDefinition"
-  - "m_szDescription"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CViews、 CViewInfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- m_bCheckOption
+- CViews
+- CHECK_OPTION
+- CViewInfo
+- m_szTableCatalog
+- IS_UPDATABLE
+- m_szDefinition
+- m_szTableName
+- m_bIsUpdatable
+dev_langs: C++
+helpviewer_keywords:
+- DESCRIPTION class data member
+- CHECK_OPTION
+- m_szTableSchema
+- TABLE_CATALOG
+- TABLE_NAME
+- m_bCheckOption
+- TABLE_SCHEMA
+- m_szTableCatalog
+- m_szDescription
+- m_szDefinition
+- m_szTableName
+- CViewInfo parameter class
+- m_bIsUpdatable
+- IS_UPDATABLE
+- CViews typedef class
 ms.assetid: ad864181-4fab-4919-b0fd-45df5da230d9
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d724ce89deadc6900f3d622763ce1895109af230
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CViews、CViewInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 typedef 類別 **CViews** 以實作它的參數類別 **CViewInfo**。  
+# <a name="cviews-cviewinfo"></a>CViews、CViewInfo
+呼叫 typedef 類別**CViews**來實作其參數類別**CViewInfo**。  
   
-## 備註  
- 如需使用 typedef 類別的詳細資訊，請參閱 [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。  
+## <a name="remarks"></a>備註  
+ 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 此類別會識別定義在由指定使用者所擁有資料庫目錄中的資料表，為相依的資料表。  
+ 這個類別識別的資料表上的檢視類別目錄中定義的資料表，而且所指定的使用者擁有相依。  
   
- 下表列出類別資料成員和其對應的 OLE DB 資料行。  有關結構描述和資料列的詳細資訊請參閱《 *OLE DB 程式設計人員參考*》的[VIEWS Rowset](https://msdn.microsoft.com/en-us/library/ms723122.aspx)  
+ 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[檢視資料列集](https://msdn.microsoft.com/en-us/library/ms723122.aspx)中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
-|----------|----------------|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szDefinition|VIEW\_DEFINITION|  
-|m\_bCheckOption|CHECK\_OPTION|  
-|m\_bIsUpdatable|IS\_UPDATABLE|  
-|m\_szDescription|DESCRIPTION|  
+|------------------|--------------------|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szDefinition|VIEW_DEFINITION|  
+|m_bCheckOption|CHECK_OPTION|  
+|m_bIsUpdatable|IS_UPDATABLE|  
+|m_szDescription|DESCRIPTION|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

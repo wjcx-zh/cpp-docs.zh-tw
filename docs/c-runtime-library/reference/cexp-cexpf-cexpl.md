@@ -1,57 +1,58 @@
 ---
 title: "cexp、cexpf、cexpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cexp"
-  - "cexpf"
-  - "cexpl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cexp"
-  - "cexpf"
-  - "cexpl"
-  - "complex/cepx"
-  - "complex/cexpf"
-  - "complex/cexpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cexp 函式"
-  - "cexpl 函式"
-  - "cexpf 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cexp
+- cexpf
+- cexpl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cexp
+- cexpf
+- cexpl
+- complex/cepx
+- complex/cexpf
+- complex/cexpl
+dev_langs: C++
+helpviewer_keywords:
+- cexp function
+- cexpl function
+- cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6fb1a26b4e461e0d542794425008ec81191000b8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# cexp、cexpf、cexpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cexp-cexpf-cexpl"></a>cexp、cexpf、cexpl
 計算底數為 e 之複數的指數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _Dcomplex cexp(   
@@ -71,26 +72,26 @@ _Lcomplex cexpl(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `z`  
  代表指數的複數。  
   
-## 傳回值  
- `e` 的值為 `z` 的乘冪。  
+## <a name="return-value"></a>傳回值  
+ `e` 的值為 `z`的乘冪。  
   
-## 備註  
- 因為 C\+\+ 允許多載，所以您可以呼叫採用並傳回 `cexp` 和 `_Fcomplex` 值的 `_Lcomplex` 的多載。 在 C 程式中，`cexp` 會一律採用及傳回 `_Dcomplex`。  
+## <a name="remarks"></a>備註  
+ 因為 C++ 允許多載，所以您可以呼叫採用並傳回 `cexp` 和 `_Fcomplex` 值的 `_Lcomplex` 的多載。 在 C 程式中， `cexp` 會一律採用及傳回 `_Dcomplex` 。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|常式|C 標頭|C\+\+ 標頭|  
-|--------|----------|--------------|  
-|`cexp`, `cexpf`, `cexpl`|\<complex.h\>|\<complex.h\>|  
+|常式|C 標頭|C++ 標頭|  
+|-------------|--------------|------------------|  
+|`cexp`,               `cexpf`, `cexpl`|\<complex.h>|\<complex.h>|  
   
  如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [cpow cpowf cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
- [clog10 clog10f clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   
- [clog、 clogf、 clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)
+ [cpow、cpowf、cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
+ [clog10、clog10f、clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   
+ [clog、clogf、clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)

@@ -1,147 +1,146 @@
 ---
-title: "OLE DB 消費者樣板參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-attr.db_param"
-  - "vc-attr.db_column"
-  - "vc-attr.db_accessor"
-  - "vc-attr.db_command"
-  - "vc-attr.db_table"
-  - "vc.templates.ole"
-  - "vc-attr.db_source"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 消費者樣板, 類別"
+title: "OLE DB 消費者樣板參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-attr.db_param
+- vc-attr.db_column
+- vc-attr.db_accessor
+- vc-attr.db_command
+- vc-attr.db_table
+- vc.templates.ole
+- vc-attr.db_source
+dev_langs: C++
+helpviewer_keywords: OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c401cebf9fd09686a532031322793fd9bedac50
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 消費者樣板參考
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 消費者樣板包含下列類別。  參考資料也包含在 [OLE DB 消費者樣板的巨集](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)主題。  
+# <a name="ole-db-consumer-templates-reference"></a>OLE DB 消費者樣板參考
+OLE DB 消費者樣板包含下列類別。 參考資料也包含在主題[OLE DB 消費者樣板的巨集](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   
-## 工作階段類別  
+## <a name="session-classes"></a>工作階段類別  
  [CDataConnection](../../data/oledb/cdataconnection-class.md)  
- 管理與資料來源的連接。  這是建立用戶端一個有用的類別，因為它封裝必要的必須完成，連接到資料來源的物件 \(資料來源和工作階段\) 和某些工作。  
+ 管理與資料來源的連線。 這是工作的有用的類別來建立用戶端，因為它封裝所需的物件 （資料來源和工作階段） 和一些您需要連接到資料來源時執行。  
   
  [CDataSource](../../data/oledb/cdatasource-class.md)  
- 會對應至 OLE DB 資料來源物件，表示連接是透過提供者和資料來源。  一或多個資料庫工作階段，為 `CSession` 物件中的每一個，在單一連結可能在執行。  
+ 對應至 OLE DB 資料來源物件，表示透過提供者連接到資料來源。 一或多個資料庫工作階段，每個由`CSession`物件，便可以在單一連接上執行。  
   
  [CEnumerator](../../data/oledb/cenumerator-class.md)  
- 會對應至 OLE DB 列舉程式物件，以擷取可用資料來源的資料列集資訊。  
+ 對應至 OLE DB 列舉值物件，擷取可用的資料來源的資料列集資訊。  
   
  [CEnumeratorAccessor](../../data/oledb/cenumeratoraccessor-class.md)  
- 由 `CEnumerator` 列舉資料存取資料。  此資料列集包括資料來源和列舉值顯示從目前的列舉值。  
+ 使用`CEnumerator`來存取資料列集列舉值的資料。 此資料列集是由資料來源和顯示從目前的列舉值的列舉值所組成。  
   
  [CSession](../../data/oledb/csession-class.md)  
- 表示單一資料庫存取工作階段。  一或多個工作階段可以與每個 `CDataSource` 物件。  
+ 代表單一資料庫存取工作階段。 一或多個工作階段可與每個相關聯`CDataSource`物件。  
   
-## 存取子類別  
+## <a name="accessor-classes"></a>存取子類別  
  [CAccessor](../../data/oledb/caccessor-class.md)  
- 使用以靜態方式繫結至資料來源的資料錄。  當您知道資料來源的結構時，請使用這個存取子類別。  
+ 用於以靜態方式繫結至資料來源的記錄。 當您知道資料來源的結構時，請使用這個存取子類別。  
   
  [CAccessorBase](../../data/oledb/caccessorbase-class.md)  
  所有存取子類別的基底類別。  
   
  [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)  
- 可以在執行階段建立存取子，根據資料列集的資料行資訊。  如果您不知道資料來源的結構，請使用這個類別擷取資料。  
+ 存取子，可建立在執行階段，根據資料列集的資料行資訊。 使用此類別來擷取資料，如果您不知道資料來源的結構。  
   
  [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)  
- 可以使用的存取子，當命令類型不明。  藉由呼叫 `ICommandWithParameters` 介面取得參數資訊，因此，如果提供者支援介面。  
+ 命令類型未知時，可以使用存取子。 取得參數資訊，藉由呼叫`ICommandWithParameters`介面，提供者支援介面。  
   
  [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)  
- 在不知道資料庫的基礎結構時，可讓您存取資料來源。  
+ 可讓您存取資料來源，當您在不知道資料庫的基礎結構。  
   
  [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)  
- 類似於從資料存放區，但這個類別會要求資料存取的 `CDynamicStringAccessor` 當做 ANSI 字串資料。  
+ 類似於`CDynamicStringAccessor`不同之處在於此類別會要求存取資料存放區為 ANSI 字串資料的資料。  
   
  [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)  
- 類似於從資料存放區，但這個類別會要求資料存取的 `CDynamicStringAccessor` 為 UNICODE 字串資料。  
+ 類似於`CDynamicStringAccessor`不同之處在於此類別會要求存取資料存放區做為 UNICODE 字串資料的資料。  
   
  [CManualAccessor](../../data/oledb/cmanualaccessor-class.md)  
- 會處理資料行和命令參數的方法存取子。  這個類別，只要，提供者可以轉換成型別，您可以使用任何資料型別。  
+ 存取子方法來處理資料行和命令參數。 與這個類別中，您可以使用任何資料類型，只要提供者可以將類型轉換。  
   
  [CNoAccessor](../../data/oledb/cnoaccessor-class.md)  
- 當您不要類別支援參數或輸出資料行時，可以使用做為樣板引數。  
+ 可用來當做範本引數，當您不想要支援的參數或輸出資料行的類別。  
   
  [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)  
- 類似於從資料存放區，但這個類別會將所有資料存取的 `CDynamicStringAccessor` 做為 XML 格式 \(標記\) 資料。  
+ 類似於`CDynamicStringAccessor`不同之處在於此類別會轉換成資料存放區做為 XML 格式 （標記） 的資料存取的所有資料。  
   
-## 資料列集類別  
+## <a name="rowset-classes"></a>資料列集類別  
  [CAccessorRowset](../../data/oledb/caccessorrowset-class.md)  
- 封裝資料列集及其關聯的存取子。  
+ 封裝資料列集，以及其相關聯的存取子。  
   
  [CArrayRowset](../../data/oledb/carrayrowset-class.md)  
- 使用陣列語法，用來存取資料列集的項目。  
+ 用來存取使用陣列語法的資料列集的項目。  
   
  [CBulkRowset](../../data/oledb/cbulkrowset-class.md)  
- 用來藉由擷取具有單一呼叫的多行控制代碼擷取和操作執行大量。  
+ 用來擷取和管理大量的資料列所擷取的單一呼叫的多個資料列控制代碼。  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
- 如果命令不傳回資料列集，可當做樣板引數。  
+ 可用來當做範本引數，如果命令未傳回資料列集。  
   
  [CRestrictions](../../data/oledb/crestrictions-class.md)  
- 用於結構描述資料列集指定限制。  
+ 用來指定結構描述資料列的限制。  
   
  [CRowset](../../data/oledb/crowset-class.md)  
- 用來管理，設定和擷取資料列集資料。  
+ 用來管理、 設定和擷取資料列集資料。  
   
  [CStreamRowset](../../data/oledb/cstreamrowset-class.md)  
- 傳回 `ISequentialStream` 物件 \(而不是資料列集;然後使用 **Read** 方法以擷取 XML 格式的資料。\(SQL Server 2000 進行格式化;請注意這個功能只和 SQL Server 2000 一起使用\)。  
+ 傳回`ISequentialStream`而不是資料列集物件，然後使用**讀取**方法來擷取 XML 格式的資料。 （SQL Server 2000 會格式化，請注意這項功能只能搭配 SQL Server 2000）。  
   
  [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)  
- 提供 `IRowsetNotify`的假的實作，以 `IRowsetNotify` 方法的 `OnFieldChange`、 `OnRowChange`和 `OnRowsetChange`空函式。  
+ 提供的虛擬實作`IRowsetNotify`，空函式與`IRowsetNotify`方法`OnFieldChange`， `OnRowChange`，和`OnRowsetChange`。  
   
- [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)  
+ [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)  
   
- OLE DB 樣板提供您對應至 OLE DB 結構描述資料列集的類別。  
+ OLE DB 樣板提供一組對應的 OLE DB 結構描述資料列集的類別。  
   
-## 命令類別  
+## <a name="command-classes"></a>命令類別  
  [CCommand](../../data/oledb/ccommand-class.md)  
- 用來設定和執行以參數的 OLE DB 命令。  只開啟簡單資料列集，請使用 `CTable` 。  
+ 用來設定和執行參數型的 OLE DB 命令。 若要只是開啟簡單的資料列集，請使用`CTable`改為。  
   
  [CMultipleResults](../../data/oledb/cmultipleresults-class.md)  
- 當做樣板引數為 `CCommand` 範本，當您想要命令時處理多個結果集。  
+ 當做範本引數使用`CCommand`範本，當您想要處理多個結果集的命令。  
   
  [CNoAccessor](../../data/oledb/cnoaccessor-class.md)  
- 當做樣板引數為樣板類別，例如 `CCommand` 和 `CTable`，並存取子類別引數。  如果不要類別支援參數或輸出行，請使用 `CNoAccessor` 。  
+ 做為樣板引數的樣板類別，例如`CCommand`和`CTable`，採用引數存取子類別。 使用`CNoAccessor`如果您不想要支援的參數或輸出資料行的類別。  
   
  [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)  
- 當做樣板引數為 `CCommand` 範本，當您想要命令處理單一資料列集。  `CNoMultipleResults` 是樣板引數的預設值。  
+ 當做範本引數使用`CCommand`範本，當您想要處理的單一資料列集的命令。 `CNoMultipleResults`範本引數的預設值。  
   
  [CNoRowset](../../data/oledb/cnorowset-class.md)  
- 當做樣板引數為 `CCommand` 或 `CTable` ，如果命令或資料表不傳回資料列集。  
+ 當做範本引數使用`CCommand`或`CTable`如果命令或資料表不會傳回一個資料列集。  
   
  [CTable](../../data/oledb/ctable-class.md)  
- 用來存取簡單資料列集沒有參數。  
+ 用來存取不含任何參數的簡單資料列集。  
   
-## 屬性類別  
+## <a name="property-classes"></a>屬性類別  
  [CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)  
- 用來藉由陣列消費者想要屬性資訊的屬性 ID。  屬性所屬的屬性集合。  
+ 用來傳遞取用者想要的屬性資訊的屬性識別碼的陣列。 屬性會屬於一個屬性集。  
   
  [CDBPropSet](../../data/oledb/cdbpropset-class.md)  
  用來設定提供者的屬性。  
   
-## 書籤類別  
+## <a name="bookmark-class"></a>書籤類別  
  [CBookmark](../../data/oledb/cbookmark-class.md)  
- 做為索引以存取資料列集。  
+ 用做為索引來存取資料列集中的資料。  
   
-## 錯誤類別  
+## <a name="error-class"></a>錯誤類別  
  [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)  
  用來擷取 OLE DB 錯誤資訊。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)   
- [OLE DB 樣板](../../data/oledb/ole-db-templates.md)
+ [OLE DB 範本](../../data/oledb/ole-db-templates.md)

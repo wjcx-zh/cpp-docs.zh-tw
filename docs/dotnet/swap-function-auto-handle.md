@@ -1,33 +1,32 @@
 ---
-title: "swap 函式 (auto_handle) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::swap"
-  - "msclr.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 函式"
+title: "swap 函式 (auto_handle) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::swap
+- msclr.swap
+dev_langs: C++
+helpviewer_keywords: swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dfa449e16e6f2f28a857150220b4b710f7a75bc9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# swap 函式 (auto_handle)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 `auto_handle` 之間交換物件。  
+# <a name="swap-function-autohandle"></a>swap 函式 (auto_handle)
+交換物件之間一個`auto_handle`和另一個。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename _element_type>  
@@ -37,14 +36,14 @@ void swap(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_left`  
  `auto_handle`。  
   
  `_right`  
- 另一個 `auto_handle`。  
+ 另一個`auto_handle`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_swap_auto_handle.cpp  
@@ -66,13 +65,16 @@ int main() {
 }  
 ```  
   
-  **s1 \= 「字串一」， s2 \= 「字串二」**  
-**s1 \= 「字串二」， s2 \= 「字串一」**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_handle.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_handle.h >  
   
-## 請參閱  
- [auto\_handle](../dotnet/auto-handle.md)   
- [auto\_handle::swap](../dotnet/auto-handle-swap.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_handle](../dotnet/auto-handle.md)   
+ [auto_handle::swap](../dotnet/auto-handle-swap.md)

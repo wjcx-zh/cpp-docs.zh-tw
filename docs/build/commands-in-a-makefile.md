@@ -1,45 +1,44 @@
 ---
-title: "Makefile 中的命令 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令, Makefile"
+title: "Makefile 中的命令 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: commands, makefiles
 ms.assetid: 8085517e-42f4-493b-b8f8-44311fc08c64
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c20707f2fc36790fc1b90e9a9df295bcd25f7af3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Makefile 中的命令
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果相依性已過時，描述區塊或推斷規則就會指定要執行的命令區塊。  NMAKE 會先顯示每個命令之後才執行，除非使用 \/S、**.SILENT**、**\!CMDSWITCHES**，或 @。  如果描述區塊後面沒有跟隨著命令區塊，NMAKE 就會尋找相符的推斷規則。  
+# <a name="commands-in-a-makefile"></a>Makefile 中的命令
+描述區塊或推斷規則指定一段命令執行的相依性已過時。 NMAKE 會顯示每個命令之前執行，除非 /S， **。無訊息**， **！CMDSWITCHES**，或使用 @。 如果描述區塊後面沒有接命令區塊，NMAKE 會尋找相符的推斷規則。  
   
- 命令區塊包含一個或多個命令，每個命令都位於本身那一行。  在相依性或規則與命令區塊之間，不能出現空白行。  但是，可以出現只包含空格或定位字元的行，此行會被解譯為 null 命令，而不會發生錯誤。  在命令列之間允許出現空白行。  
+ 命令區塊包含一個或多個命令，每個的那一行。 相依性或規則與命令區塊之間都沒有空行。 不過，可以顯示包含只有空格或定位點的資料行;這一行會解譯為 null 的命令，並不會發生錯誤。 命令列之間不允許有空白的行。  
   
- 命令列以一個或多個空格或定位字元開頭。  反斜線 \(\\\) 後面跟隨新行字元會被解譯為命令中的空挌，請在行的結尾處使用反斜線，以便命令由下一行繼續。  如果任何其他字元 \(包括空格或定位字元\) 跟隨在反斜線之後，NMAKE 會將反斜線解譯為常值。  
+ 命令列的一個或多個空格或定位點開頭。 反斜線 (\) 後面接著新行字元會解譯為命令; 中的空間使用線條結尾的反斜線，繼續到下一行的命令。 NMAKE 會逐字解譯反斜線如果任何其他字元，包括空格或索引標籤上，在反斜線。  
   
- 無論命令區塊是否緊接其後，由分號 \(;\) 開頭的命令都可以出現在相依性行或推斷規則中：  
+ 命令加上分號 （;） 可能會出現在相依性線條或推斷規則，不論命令區塊後面：  
   
 ```  
 project.obj : project.c project.h ; cl /c project.c  
 ```  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
  [命令修飾詞](../build/command-modifiers.md)  
   
  [檔名部分語法](../build/filename-parts-syntax.md)  
   
  [Makefile 中的內嵌檔](../build/inline-files-in-a-makefile.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [NMAKE 參考](../build/nmake-reference.md)

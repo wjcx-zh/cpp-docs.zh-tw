@@ -1,34 +1,33 @@
 ---
-title: "CUtlProps::OnPropertyChanged | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OnPropertyChanged"
-  - "CUtlProps.OnPropertyChanged"
-  - "CUtlProps::OnPropertyChanged"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnPropertyChanged 方法"
+title: "Cutlprops:: Onpropertychanged |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- OnPropertyChanged
+- CUtlProps.OnPropertyChanged
+- CUtlProps::OnPropertyChanged
+dev_langs: C++
+helpviewer_keywords: OnPropertyChanged method
 ms.assetid: c5924210-b685-46c4-87f8-1b81e5bd3378
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b517bfe6ef3cc93b6edf647d137491ef78c0f716
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CUtlProps::OnPropertyChanged
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-會在設定屬性之後的繫結屬性。  
+# <a name="cutlpropsonpropertychanged"></a>CUtlProps::OnPropertyChanged
+設定屬性，以處理鏈結的內容之後呼叫。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -38,26 +37,26 @@ caps.handback.revision: 10
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `iCurSet`  
- 索引屬性集合陣列中;零，如果只有一個屬性集合。  
+ 屬性集陣列; 中的索引零，如果只有一個屬性集。  
   
  `pDBProp`  
- 屬性 ID 和新的值在 [DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx) 結構。  
+ 內容識別碼和新值[DBPROP](https://msdn.microsoft.com/en-us/library/ms717970.aspx)結構。  
   
-## 傳回值  
- 標準 `HRESULT`。  預設傳回值為 `S_OK`。  
+## <a name="return-value"></a>傳回值  
+ 標準 `HRESULT`。 預設會傳回值為`S_OK`。  
   
-## 備註  
- 如果您要處理繫結的屬性，例如值取決於其他屬性值的書籤或更新，您應該覆寫這個函式。  
+## <a name="remarks"></a>備註  
+ 如果您想要處理鏈結的屬性，例如書籤或更新其值會相依於另一個屬性的值，您應該覆寫這個函式。  
   
-## 範例  
- 在這個函式，使用者從 `DBPROP*` 參數取得屬性 ID。  現在，對屬性比較 ID 與鏈結是可能的。  當找到屬性時， `SetProperties` 會使用與另一個屬性搭配現在要設定的屬性。  在這種情況下，，則會取得 `DBPROP_IRowsetLocate`、 `DBPROP_LITERALBOOKMARKS`或 `DBPROP_ORDEREDBOOKMARKS` 屬性，則可以設定 `DBPROP_BOOKMARKS` 屬性。  
+## <a name="example"></a>範例  
+ 在這個函式，使用者取得的屬性識別碼`DBPROP*`參數。 現在，很可能比較針對要鏈結的內容識別碼。 當找到屬性時，`SetProperties`稱為現在會搭配其他內容設定的屬性。 在此情況下，如果其中一個取得`DBPROP_IRowsetLocate`， `DBPROP_LITERALBOOKMARKS`，或`DBPROP_ORDEREDBOOKMARKS`屬性，其中一個可以設定`DBPROP_BOOKMARKS`屬性。  
   
- [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/CPP/cutlprops-onpropertychanged_1.h)]  
+ [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CUtlProps 類別](../../data/oledb/cutlprops-class.md)

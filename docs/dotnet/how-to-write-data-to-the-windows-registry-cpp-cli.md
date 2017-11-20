@@ -1,34 +1,33 @@
 ---
-title: "如何：將資料寫入至 Windows 登錄 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "登錄, 寫入至"
-  - "Visual C++, 寫入至 Windows 登錄"
+title: "如何： 將資料寫入至 Windows 登錄 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- registry, writing to
+- Visual C++, writing to Windows Registry
 ms.assetid: 3d40b978-4baa-4779-bfe3-47e2917b757f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8bb95ab9a70fd0144256f85d3fae6ccc3c034c1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：將資料寫入至 Windows 登錄 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會使用 <xref:Microsoft.Win32.Registry.CurrentUser> 金鑰，以建立對應至 **Software** 金鑰之 <xref:Microsoft.Win32.RegistryKey> 類別的可寫入執行個體。  然後，再使用 <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> 方法建立新的金鑰，並將它加入金鑰\/值組中。  
+# <a name="how-to-write-data-to-the-windows-registry-ccli"></a>如何：將資料寫入至 Windows 登錄 (C++/CLI)
+下列程式碼範例使用<xref:Microsoft.Win32.Registry.CurrentUser>要建立可寫入的執行個體的索引鍵<xref:Microsoft.Win32.RegistryKey>類別對應至**軟體**索引鍵。 <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A>方法可用來建立新的金鑰和加入 索引鍵/值組。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // registry_write.cpp  
@@ -74,9 +73,9 @@ int main()
 }  
 ```  
   
-## 備註  
- 您可以使用 .NET Framework 存取具有 <xref:Microsoft.Win32.Registry> 和 [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) 類別的登錄，這兩個類別都是在 <xref:Microsoft.Win32> 命名空間中定義。  **Registry** 類別是 <xref:Microsoft.Win32.RegistryKey> 類別之靜態執行個體的容器。  每個執行個體表示一個根目錄登錄節點。  這些執行個體為 <xref:Microsoft.Win32.Registry.ClassesRoot>、<xref:Microsoft.Win32.Registry.CurrentConfig>、<xref:Microsoft.Win32.Registry.CurrentUser>、<xref:Microsoft.Win32.Registry.LocalMachine> 和 <xref:Microsoft.Win32.Registry.Users>。  
+## <a name="remarks"></a>備註  
+ 您可以使用.NET Framework 來存取登錄中的以<xref:Microsoft.Win32.Registry>和[RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx)中定義的類別，兩者都<xref:Microsoft.Win32>命名空間。 **登錄**類別是靜態的執行個體的容器<xref:Microsoft.Win32.RegistryKey>類別。 每個執行個體表示登錄根節點。 執行個體<xref:Microsoft.Win32.Registry.ClassesRoot>， <xref:Microsoft.Win32.Registry.CurrentConfig>， <xref:Microsoft.Win32.Registry.CurrentUser>， <xref:Microsoft.Win32.Registry.LocalMachine>，和<xref:Microsoft.Win32.Registry.Users>。  
   
-## 請參閱  
- [如何：從 Windows 登錄讀取資料](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [如何： 從 Windows 登錄讀取資料 (C + + /CLI)](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

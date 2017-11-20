@@ -1,41 +1,39 @@
 ---
-title: "vector::back_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::back_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back_item 成員 [STL/CLR]"
+title: "vector::back_item (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::back_item
+dev_langs: C++
+helpviewer_keywords: back_item member [STL/CLR]
 ms.assetid: 9658ffa8-7bde-4242-9ed9-ca42be0d1433
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: faa773ed77014792ef5e3af37b254a1e84c0a0b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# vector::back_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorbackitem-stlclr"></a>vector::back_item (STL/CLR)
 存取最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 property value_type back_item;  
 ```  
   
-## 備註  
- 屬性存取受控制序列的最後一個項目，此序列不能為空序列。  當您知道它存在時，您可用它來讀取或寫入最後一個項目。  
+## <a name="remarks"></a>備註  
+ 屬性存取受控制的序列必須為非空白的最後一個元素。 您可以使用它來讀取或寫入的最後一個項目，當您知道它存在。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_back_item.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\_item \= c**  
- **a b x**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+ a b c  
+back_item = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::back](../dotnet/vector-back-stl-clr.md)   
- [vector::front](../dotnet/vector-front-stl-clr.md)   
- [vector::front\_item](../dotnet/vector-front-item-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: back (STL/CLR)](../dotnet/vector-back-stl-clr.md)   
+ [vector:: front (STL/CLR)](../dotnet/vector-front-stl-clr.md)   
+ [vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)

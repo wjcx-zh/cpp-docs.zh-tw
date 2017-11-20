@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,37 +28,21 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 4648fb28d20951b045abde39d0238de81a133f0c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 7e21b07685943559bace8b8e2b0fbdebdb3a870c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 計算反雙曲正切。  

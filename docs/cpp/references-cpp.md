@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], referencing
 - references [C++]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: fb208f61d2da9e7daa7a53ac68fdcdfcdf1acab4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4178d9d6a48e10510bb739bc2e1a55ecbe2714e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="references-c"></a>參考 (C++)
 參考 (例如指標) 會儲存位在記憶體中其他位置之物件的位址。 與指標不同，參考在初始化之後不能參照不同的物件，或設為 null。 有兩種類型的參考： 左值參考參照具名變數，右值參考參照[暫存物件](../cpp/temporary-objects.md)。 & 運算子表示左值參考，而 && 運算子根據內容會表示右值參考或通用參考 (右值或左值)。  
@@ -126,4 +123,3 @@ int main() {
   
 -   [指標的參考](../cpp/references-to-pointers.md)  
   
-

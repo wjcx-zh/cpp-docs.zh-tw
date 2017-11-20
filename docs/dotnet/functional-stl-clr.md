@@ -1,81 +1,80 @@
 ---
-title: "functional (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/functional>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/functional> 標頭 [STL/CLR]"
-  - "<functional> 標頭 [STL/CLR]"
-  - "functional 函式 [STL/CLR]"
+title: "功能 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/functional>
+dev_langs: C++
+helpviewer_keywords:
+- <functional> header [STL/CLR]
+- <cliext/functional> header [STL/CLR]
+- functional functions [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df7e80a97ca54dae725a31e9d203ecd4710a4c2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# functional (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-包含 STL\/CLR 標頭 `<cliext/functional>` 定義多個樣板類別和相關範本委派和函式。  
+# <a name="functional-stlclr"></a>functional (STL/CLR)
+包括 STL/CLR 標頭`<cliext/functional>`來定義範本類別和相關的範本委派函式的數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #include <functional>  
 ```  
   
-## 宣告  
+## <a name="declarations"></a>宣告  
   
 |委派|說明|  
-|--------|--------|  
-|[binary\_delegate](../dotnet/binary-delegate-stl-clr.md)|兩個引數的委派。|  
-|[binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)|傳回 `void`的兩個引數的委派。|  
-|[unary\_delegate](../dotnet/unary-delegate-stl-clr.md)|單一引數委派。|  
-|[unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)|傳回 `void`的一個引數的委派。|  
+|--------------|-----------------|  
+|[binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)|兩個引數的委派。|  
+|[binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)|傳回兩個引數委派`void`。|  
+|[unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)|其中一個引數的委派。|  
+|[unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)|傳回的單一引數委派`void`。|  
   
 |類別|說明|  
-|--------|--------|  
-|[binary\_negate](../dotnet/binary-negate-stl-clr.md)|否定兩個引數功能中的功能\)。|  
-|[binder1st](../dotnet/binder1st-stl-clr.md)|繫結至第一個引數的功能會對兩個引數的功能。|  
-|[binder2nd](../dotnet/binder2nd-stl-clr.md)|繫結至第二個引數的功能會對兩個引數的功能。|  
-|[divides](../dotnet/divides-stl-clr.md)|刪除功能。|  
-|[equal\_to](../dotnet/equal-to-stl-clr.md)|相等比較子功能。|  
-|[greater](../dotnet/greater-stl-clr.md)|較大的比較子功能。|  
-|[greater\_equal](../dotnet/greater-equal-stl-clr.md)|大於或等於比較子功能。|  
-|[less](../dotnet/less-stl-clr.md)|較少比較子功能。|  
-|[less\_equal](../dotnet/less-equal-stl-clr.md)|小於或等於比較子功能。|  
-|[logical\_and](../dotnet/logical-and-stl-clr.md)|邏輯 AND 功能。|  
-|[logical\_not](../dotnet/logical-not-stl-clr.md)|邏輯 NOT 功能。|  
-|[logical\_or](../dotnet/logical-or-stl-clr.md)|邏輯功能 OR 工具。|  
-|[minus](../dotnet/minus-stl-clr.md)|減去的功能。|  
-|[模數](../dotnet/modulus-stl-clr.md)|模數功能。|  
-|[multiplies](../dotnet/multiplies-stl-clr.md)|乘功能。|  
-|[negate](../dotnet/negate-stl-clr.md)|傳回其引數的功能的相反。|  
-|[not\_equal\_to](../dotnet/not-equal-to-stl-clr.md)|不相等比較子功能。|  
-|[plus](../dotnet/plus-stl-clr.md)|新增功能。|  
-|[unary\_negate](../dotnet/unary-negate-stl-clr.md)|否定一個引數功能中的功能。|  
+|-----------|-----------------|  
+|[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)|要變換正負號的雙引數函式的函式。|  
+|[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)|若要將第一個引數繫結至兩個引數函式的函式。|  
+|[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)|第二個引數繫結至兩個引數函式的函式。|  
+|[divides (STL/CLR)](../dotnet/divides-stl-clr.md)|將多個函式。|  
+|[equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)|相等比較函式。|  
+|[greater (STL/CLR)](../dotnet/greater-stl-clr.md)|大於比較仿函式。|  
+|[greater_equal (STL/CLR)](../dotnet/greater-equal-stl-clr.md)|大於或等於比較仿函式。|  
+|[less (STL/CLR)](../dotnet/less-stl-clr.md)|較少的比較函式。|  
+|[less_equal (STL/CLR)](../dotnet/less-equal-stl-clr.md)|小於或等於比較仿函式。|  
+|[logical_and (STL/CLR)](../dotnet/logical-and-stl-clr.md)|邏輯 AND 仿函式。|  
+|[logical_not (STL/CLR)](../dotnet/logical-not-stl-clr.md)|邏輯不仿函式。|  
+|[logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)|邏輯 OR 仿函式。|  
+|[minus (STL/CLR)](../dotnet/minus-stl-clr.md)|減去仿函式。|  
+|[modulus (STL/CLR)](../dotnet/modulus-stl-clr.md)|模數仿函式。|  
+|[multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)|乘以仿函式。|  
+|[negate (STL/CLR)](../dotnet/negate-stl-clr.md)|傳回否定其引數的函式。|  
+|[not_equal_to (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)|不等於比較仿函式。|  
+|[plus (STL/CLR)](../dotnet/plus-stl-clr.md)|新增仿函式。|  
+|[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)|要變換正負號的單一引數函式的函式。|  
   
-|功能|說明|  
-|--------|--------|  
-|[bind1st](../dotnet/bind1st-stl-clr.md)|產生給引數和功能子的 binder1st 。|  
-|[bind2nd](../dotnet/bind2nd-stl-clr.md)|產生給引數和功能子的 binder2nd 。|  
-|[not1](../dotnet/not1-stl-clr.md)|產生功能工具的 unary\_negate。|  
-|[not1](../dotnet/not1-stl-clr.md)|產生功能工具的 binary\_negate。|  
+|函式|說明|  
+|--------------|-----------------|  
+|[bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)|會產生 binder1st 引數和函式。|  
+|[bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)|會產生 binder2nd 引數和函式。|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|會產生 unary_negate 函式的。|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|會產生 binary_negate 函式的。|  
   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

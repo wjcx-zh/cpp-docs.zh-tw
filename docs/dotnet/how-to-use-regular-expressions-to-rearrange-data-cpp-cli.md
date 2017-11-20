@@ -1,34 +1,33 @@
 ---
-title: "如何：使用規則運算式重新整理資料 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料 [C++], 重新排列"
-  - "規則運算式 [C++], 重新排列資料"
+title: "如何： 使用規則運算式重新整理資料 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular expressions [C++], rearranging data
+- data [C++], rearranging
 ms.assetid: 5f91e777-9471-424e-ba75-dca3d1b49e42
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用規則運算式重新整理資料 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會示範如何使用 .NET Framework 規則運算式支援，將資料重新排列或重新格式化。  下列程式碼範例會使用 <xref:System.Text.RegularExpressions.Regex> 和 <xref:System.Text.RegularExpressions.Match> 類別，將名和姓從字串中擷取出來，並以相反順序顯示這些姓名項目。  
+# <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>如何：使用規則運算式重新整理資料 (C++/CLI)
+下列程式碼範例示範如何使用.NET Framework 規則運算式支援，以重新排列或重新格式化資料。 下列程式碼範例使用<xref:System.Text.RegularExpressions.Regex>和<xref:System.Text.RegularExpressions.Match>類別以從字串中擷取姓氏和名字，並以反向順序顯示這些名稱項目。  
   
- 範例會使用 <xref:System.Text.RegularExpressions.Regex> 類別建構描述資料目前格式的規則運算式。  姓和名則假設以逗號分隔，逗號的前後可以有任意數量的空白。  接著會使用 <xref:System.Text.RegularExpressions.Match> 方法來分析每個字串。  如果成功，則會從 <xref:System.Text.RegularExpressions.Match> 物件中擷取名和姓並顯示。  
+ <xref:System.Text.RegularExpressions.Regex>類別用來建構描述目前的資料格式的規則運算式。 兩個名稱會假設為以逗號分隔，而且可以使用任何數量的逗點周圍的空白。 <xref:System.Text.RegularExpressions.Match>方法可用來分析每個字串。 如果成功，第一個和最後一個名稱從擷取<xref:System.Text.RegularExpressions.Match>物件，並顯示。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // regex_reorder.cpp  
@@ -66,6 +65,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [.NET Framework 規則運算式](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [.NET Framework 規則運算式](/dotnet/standard/base-types/regular-expressions)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

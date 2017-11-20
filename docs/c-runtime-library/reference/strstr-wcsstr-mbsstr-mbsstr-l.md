@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - wcsstr
 - _mbsstr
 - _tcsstr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], searching
 - mbsstr function
@@ -52,36 +50,21 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: dee742e53a8ac9243503011b827a008879af6428
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 5699f3771e75016e0e7db636416a31eb1e6a8957
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 傳回字串中第一次出現的搜尋字串指標。  
   
 > [!IMPORTANT]
-> 不可在於  `_mbsstr` 中執行的應用程式中使用 `_mbsstr_l` 和 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsstr` 和 `_mbsstr_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -158,7 +141,7 @@ const unsigned char *_mbsstr_l(
 > [!IMPORTANT]
 >  這些函式可能帶來因緩衝區滿溢問題引發的威脅。 緩衝區滿溢問題可用來攻擊系統，因為它們允許執行任意程式碼，這會造成非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
- 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 如果這些函式的 `const` 和非`const` 版本都可以使用，即會定義巨集 _CONST_CORRECT_OVERLOADS。 如果兩個 C++ 多載都需要非 `const` 行為，請定義符號 _CONST_RETURN。  
+ 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 巨集`_CRT_CONST_CORRECT_OVERLOADS`如果兩個定義`const`和非-`const`這些函式的版本可供使用。 如果您需要非`const`行為對於這兩個 c + + 多載中，定義符號`_CONST_RETURN`。  
   
  輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本，會針對此地區設定的相關行為使用目前的地區設定，而具有 `_l` 尾碼的函式與其相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
   
@@ -226,4 +209,3 @@ lazy found at position 36
  [strrchr、wcsrchr、_mbsrchr、_mbsrchr_l](../../c-runtime-library/reference/strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)   
  [strspn、wcsspn、_mbsspn、_mbsspn_l](../../c-runtime-library/reference/strspn-wcsspn-mbsspn-mbsspn-l.md)   
  [basic_string::find](../../standard-library/basic-string-class.md#find)  
-

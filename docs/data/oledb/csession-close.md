@@ -1,35 +1,34 @@
 ---
-title: "CSession::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSession::Close"
-  - "ATL.CSession.Close"
-  - "CSession.Close"
-  - "ATL::CSession::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close 方法"
+title: "Csession:: Close |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession::Close
+- ATL.CSession.Close
+- CSession.Close
+- ATL::CSession::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: dc36c4c0-e588-4c0b-91d1-fc7dc5c8e7f4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70016d94916bbd3479e0daa7d42c7a1f4a8785c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CSession::Close
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-結束工作階段， [CSession::Open](../../data/oledb/csession-open.md)開始。  
+# <a name="csessionclose"></a>CSession::Close
+關閉工作階段，由開啟[csession:: Open](../../data/oledb/csession-open.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,11 +36,11 @@ void Close( ) throw( );
   
 ```  
   
-## 備註  
- 釋放 **m\_spOpenRowset** 指標。  
+## <a name="remarks"></a>備註  
+ 版本**m_spOpenRowset**指標。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CSession 類別](../../data/oledb/csession-class.md)

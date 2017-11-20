@@ -1,33 +1,30 @@
 ---
-title: "ActivationFactory::QueryInterface 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface 方法"
+title: "Activationfactory:: Queryinterface 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 2a9b71aa-61c0-43f7-aa35-00f0ee0af031
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34c11ad9b70f1669bec623f017b08c0deeeab3ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ActivationFactory::QueryInterface 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-擷取指向指定介面的指標。  
+# <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface 方法
+擷取指定之介面的指標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 STDMETHOD(  
@@ -35,20 +32,20 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `riid`  
- 介面 ID。  
+ 介面識別碼。  
   
  `ppvObject`  
- 當這個作業完成時，此介面的指標 `riid`由參數指定的。  
+ 當這項作業完成時，參數所指定介面的指標`riid`。  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則即為描述失敗的 HRESULT。  
+## <a name="return-value"></a>傳回值  
+ 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ActivationFactory 類別](../windows/activationfactory-class.md)

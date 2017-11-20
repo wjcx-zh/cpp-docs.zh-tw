@@ -1,63 +1,63 @@
 ---
-title: "訊息傳遞函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "訊息傳遞函式"
+title: "訊息傳遞函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 23
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4139068c8871fe69f43168fe925011a48411a74b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 訊息傳遞函式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-非同步代理程式程式庫提供數個可讓您在元件之間傳遞訊息的函式。  
+# <a name="message-passing-functions"></a>訊息傳遞函式
+非同步代理程式程式庫提供幾個函式可讓您傳遞元件之間的訊息。  
   
- 這些訊息傳遞函式可搭配各種不同的訊息區塊類型使用。  如需並行執行階段所定義之訊息區塊類型的詳細資訊，請參閱[非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)。  
+ 這些訊息傳遞函式會與不同的訊息區塊類型使用。 如需有關並行執行階段所定義的訊息區塊類型的詳細資訊，請參閱[非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)。  
   
 ##  <a name="top"></a> 章節  
- 本主題說明下列訊息傳遞函式：  
+ 本主題描述下列的訊息傳遞函式：  
   
--   [send 和 asend](#send)  
+-   [傳送和 asend](#send)  
   
--   [receive 和 try\_receive](#receive)  
+-   [接收和 try_receive](#receive)  
   
 -   [範例](#examples)  
   
-##  <a name="send"></a> send 和 asend  
- [concurrency::send](../Topic/send%20Function.md) 函式會以同步方式將訊息傳送至指定的目標，而 [concurrency::asend](../Topic/asend%20Function.md) 函式會以非同步方式將訊息傳送至指定的目標。  `send` 和 `asend` 函式都會等候目標表示終於接受或拒絕訊息。  
+##  <a name="send"></a>傳送和 asend  
+
+ [Concurrency:: send](reference/concurrency-namespace-functions.md#send)函式將訊息傳送至指定的目標以同步方式和[concurrency:: asend](reference/concurrency-namespace-functions.md#asend)函式將訊息傳送至指定的目標以非同步的方式。 同時`send`和`asend`函式等候直到目標指出，它最終會接受或拒絕該訊息。  
   
- `send` 函式會等到目標接受或拒絕訊息再傳回。  如果已傳遞訊息，則 `send` 函式會傳回 `true`，否則會傳回 `false`。  因為 `send` 函式是以同步方式運作，所以 `send` 函式會等到目標收到訊息再傳回。  
+ `send`函式會等候直到目標接受或拒絕該訊息，再傳回。 `send`函式會傳回`true`如果訊息已傳遞和`false`否則。 因為`send`函式以同步方式執行，`send`函式會等候接收訊息，再傳回目標。  
   
- 相反地，`asend` 函式並不會等到目標接受或拒絕訊息才傳回。  如果目標接受訊息，而且最後會採用它，則 `asend` 函式會傳回 `true`。  否則，`asend` 會傳回 `false`，表示目標已拒絕訊息，或是以後才要決定是否採用訊息。  
+ 相反地，`asend`函式不會等候目標接受或拒絕訊息，再傳回。 相反地，`asend`函式會傳回`true`如果目標接受該訊息，而且最終會將此。 否則，`asend`傳回`false`來指出目標拒絕該訊息或延後是否要使訊息的決策。  
   
- \[[上方](#top)\]  
+ [[靠上](#top)]  
   
-##  <a name="receive"></a> receive 和 try\_receive  
- [concurrency::receive](../Topic/receive%20Function.md) 和 [concurrency::try\_receive](../Topic/try_receive%20Function.md) 函式會從指定的來源讀取資料。  `receive` 函式會等到有資料可用時才傳回，而 `try_receive` 函式則會立即傳回。  
+##  <a name="receive"></a>接收和 try_receive  
+
+ [Concurrency:: receive](reference/concurrency-namespace-functions.md#receive)和[concurrency:: try_receive](reference/concurrency-namespace-functions.md#try_receive)函式會從指定的來源讀取資料。 `receive`函式會等候資料變成可用，而`try_receive`函式會立即傳回。  
   
- 當您必須要有資料才能繼續時，請使用 `receive` 函式。  如果您絕對不能封鎖目前的內容，或是沒有資料也可以繼續，請使用 `try_receive` 函式。  
+ 使用`receive`函式時，您必須擁有資料以繼續執行。 使用`try_receive`函式必須不會封鎖目前的內容，或您沒有將資料以繼續執行。  
   
- \[[上方](#top)\]  
+ [[靠上](#top)]  
   
 ##  <a name="examples"></a> 範例  
- 如需使用 `send`、`asend` 和 `receive` 函式的範例，請參閱下列主題：  
+ 如需範例，使用`send`和`asend`，和`receive`函式，請參閱下列主題：  
   
 -   [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [如何：實作各種生產者\-消費者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+-   [如何：實作各種生產者-消費者模式](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
   
 -   [如何：為呼叫和轉換程式類別提供工作函式](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
   
@@ -69,12 +69,14 @@ manager: "ghogen"
   
 -   [如何：使用訊息區篩選條件](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
- \[[上方](#top)\]  
+ [[靠上](#top)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)   
- [send 函式](../Topic/send%20Function.md)   
- [asend 函式](../Topic/asend%20Function.md)   
- [receive 函式](../Topic/receive%20Function.md)   
- [try\_receive 函式](../Topic/try_receive%20Function.md)
+ [send 函式](reference/concurrency-namespace-functions.md#send)   
+ [asend 函式](reference/concurrency-namespace-functions.md#asend)   
+ [接收函式](reference/concurrency-namespace-functions.md#receive)   
+ [try_receive 函式](reference/concurrency-namespace-functions.md#try_receive)
+
+

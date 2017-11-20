@@ -1,33 +1,32 @@
 ---
-title: "CMyProviderCommand (MyProviderRS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyprovidercommand"
-  - ""myproviderrs.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MyProviderRS.H 中的 CMyProviderCommand 類別"
-  - "OLE DB 提供者, 精靈產生的檔案"
+title: "CMyProviderCommand (MyProviderRS.H) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyprovidercommand
+- myproviderrs.h
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 68846352d3e6b407a4ec7ef6b7993969371a89de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CMyProviderCommand (MyProviderRS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`CMyProviderCommand` 類別是提供者命令物件的實作。  此類別提供 `IAccessor`、`ICommandText` 和 **ICommandProperties** 介面的實作。  `IAccessor` 介面和資料列集 \(Rowset\) 內的介面相同。  命令物件會使用存取子 \(Accessor\) 來指定參數的繫結。  資料列集物件會使用這些存取子來指定輸出資料行的繫結。  `ICommandText` 介面是以文字指定命令的有用方式。  此範例稍後在加入自訂程式碼時，會使用 `ICommandText` 介面，它也會覆寫 `ICommand::Execute` 方法。  **ICommandProperties** 介面可處理命令和資料列集物件的所有屬性。  
+# <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+`CMyProviderCommand`類別是提供者命令物件的實作。 它提供的實作`IAccessor`， `ICommandText`，和**ICommandProperties**介面。 `IAccessor`介面是一個資料列集相同。 命令物件會使用存取子，指定繫結參數。 資料列集物件會使用它們來指定繫結的輸出資料行。 `ICommandText`介面是有用的方式，指定的命令加 1。 這個範例會使用`ICommandText`稍後介面時，它會加入自訂程式碼; 它也會覆寫`ICommand::Execute`方法。 **ICommandProperties**介面會處理所有命令和資料列集物件的屬性。  
   
 ```  
 // CMyProviderCommand  
@@ -42,11 +41,11 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- `IAccessor` 介面可管理命令和資料列集所使用的所有繫結。  消費者會以 **DBBINDING** 結構的陣列來呼叫 **IAccessor::CreateAccessor**。  每個 **DBBINDING** 結構都包含應該如何處理資料行繫結的資訊 \(例如型別和長度\)。  提供者接收結構，然後決定資料應如何傳送，以及是否需做任何轉換。  `IAccessor` 介面將用於命令物件中，以處理命令內的任何參數。  
+ `IAccessor`介面會管理使用中命令和資料列集的所有繫結。 取用者可以呼叫**iaccessor:: Createaccessor**的陣列**DBBINDING**結構。 每個**DBBINDING**結構包含資料行繫結應該如何處理 （例如類型和長度） 的相關資訊。 提供者會接收此結構，並接著會判斷應該傳送之資料的方式，以及是否需要任何轉換。 `IAccessor`命令物件中使用介面來處理命令中的任何參數。  
   
- 命令物件也提供 `IColumnsInfo` 的實作。  OLE DB 需要 `IColumnsInfo` 介面。  此介面可讓消費者從命令擷取參數的相關資訊。  資料列集物件使用 `IColumnsInfo` 介面將輸出資料行的相關資訊傳回給提供者。  
+ 命令物件也會提供的實作`IColumnsInfo`。 OLE DB 需要`IColumnsInfo`介面。 介面可讓取用者來擷取命令的參數的相關資訊。 資料列集物件會使用`IColumnsInfo`介面，以提供者傳回的輸出資料行的相關資訊。  
   
- 提供者也包含了一個名為 `IObjectWithSite` 的介面。  `IObjectWithSite` 介面是以 ATL 2.0 來實作，並允許實作器將它本身的資訊傳給其子系。  命令物件使用 `IObjectWithSite` 資訊來讓任何產生的資料列集物件知道是誰建立它們。  
+ 提供者也包含稱為介面`IObjectWithSite`。 `IObjectWithSite`介面 ATL 2.0 中已實作，並可讓實作器決定將與其本身相關的資訊傳遞給它的子系。 命令物件會使用`IObjectWithSite`資訊來判斷任何產生資料列集物件，關於建立者是誰。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)

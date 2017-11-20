@@ -1,52 +1,50 @@
 ---
-title: "ptr::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.operator->"
-  - "ptr.operator->"
-  - "ptr::operator->"
-  - "msclr::com::ptr::operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator->"
+title: "ptr::operator-&gt; |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.operator->
+- ptr.operator->
+- ptr::operator->
+- msclr::com::ptr::operator->
+dev_langs: C++
+helpviewer_keywords: ptr::operator->
 ms.assetid: e752b549-74ed-430d-9a60-6c8e0e441998
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3f8cf68815d5c3ad21767b721b2b3570bbb7119
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-成員存取運算子，用來在主控 COM 物件的呼叫方法。  
+# <a name="ptroperator-gt"></a>ptr::operator-&gt;
+成員存取運算子，用來在擁有的 COM 物件上呼叫方法。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _detail::smart_com_ptr<_interface_type> operator->();  
 ```  
   
-## 傳回值  
- 對 COM 物件的 `smart_com_ptr` 。  
+## <a name="return-value"></a>傳回值  
+ A `smart_com_ptr` COM 物件。  
   
-## 例外狀況  
- 在內部，呼叫 `QueryInterface` 所擁有的 COM 物件，以及任何錯誤的 `HRESULT` 轉換為例外狀況的 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
+## <a name="exceptions"></a>例外狀況  
+ 就內部而言，`QueryInterface`上擁有的 COM 物件和任何錯誤呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
   
-## 備註  
- 這個運算子可讓您呼叫擁有的 COM 物件的方法。  自動處理它的 `AddRef` 和 `Release`會傳回暫存 `smart_com_ptr` 。  
+## <a name="remarks"></a>備註  
+ 這個運算子可讓您呼叫擁有的 COM 物件的方法。 它會傳回暫存`smart_com_ptr`可自動處理自己`AddRef`和`Release`。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。  `WriteDocument` 函式會使用 `operator->` 呼叫資料物件的 `get_firstChild` 成員。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `WriteDocument`函式會使用`operator->`呼叫`get_firstChild`文件物件的成員。  
   
 ```  
 // comptr_op_member.cpp  
@@ -162,11 +160,14 @@ int main() {
 }  
 ```  
   
-  **\<wordpersnickety\>\<\/文字\>**   
-## 需求  
- **標頭檔** \<msclr \\ com \\ ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **命名空間** msclr::com  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
-## 請參閱  
+ **命名空間**msclr::com  
+  
+## <a name="see-also"></a>另請參閱  
  [ptr 成員](../dotnet/ptr-members.md)

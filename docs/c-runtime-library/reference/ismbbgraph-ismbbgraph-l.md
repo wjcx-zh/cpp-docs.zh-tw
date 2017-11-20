@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,22 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 99ab02233eed70ab92e1aabcf567d9cfc244c101
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 3638740d4a62e42da71a7b076e636443e0530cdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph、_ismbbgraph_l
 判斷某個多位元組字元是否為圖形字元。  

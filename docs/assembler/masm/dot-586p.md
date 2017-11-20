@@ -1,33 +1,30 @@
 ---
-title: ".586P | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".586P"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".586P directive"
+title: ".586P |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .586P
+dev_langs: C++
+helpviewer_keywords: .586P directive
 ms.assetid: 90da2a7d-66f4-4073-b1a9-874de6e8f05d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 05b19f12358b26f6afd82c64a636e367e9fcd7d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# .586P
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可讓所有的指令 \(包括有權限\) Pentium 處理器的組件。  
+# <a name="586p"></a>.586P
+可讓組件的所有指示 （包括特殊權限） Pentium 處理器。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,5 +32,5 @@ manager: "ghogen"
   
 ```  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

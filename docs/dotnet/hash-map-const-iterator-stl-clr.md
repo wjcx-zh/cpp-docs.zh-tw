@@ -1,41 +1,39 @@
 ---
-title: "hash_map::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator 成員 [STL/CLR]"
+title: "hash_map:: const_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: a1750775-a657-4c9f-8194-c2af938e39ff
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d0591a1ec7fd5e69ff5f974f18a69f4266bc74d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapconstiterator-stlclr"></a>hash_map::const_iterator (STL/CLR)
 用於受控制序列的常數迭代器類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## 備註  
- 此型別描述未指定型別 `T2` 的物件，其可以在控制序列中作為常數隨機讀取迭代器。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T2`，可做為受控制序列的常數的雙向迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_const_iterator.cpp   
@@ -60,12 +58,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::iterator](../dotnet/hash-map-iterator-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::iterator (STL/CLR)](../dotnet/hash-map-iterator-stl-clr.md)

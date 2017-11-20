@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ece3414dbc7f4d362fa7dcc6f060e408b50e54e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 建構函式是一種初始化其類別執行個體的成員函式。 建構函式的名稱與類別的名稱相同，但沒有傳回值。 建構函式可以有任意數目的參數，而類別可以有任意數目的多載建構函式。 建構函式可能有任何協助工具、公用、受保護或私用。 如果您未定義任何建構函式，則編譯器會產生不接受任何參數的預設建構函式；將預設建構函式宣告為已刪除，即可覆寫這個行為。  
@@ -613,7 +610,7 @@ class Derived : T {
   
  編譯器產生的複製建構函式會設定新物件，並且執行所要複製之物件內容的成員複本。 如果基底類別或成員建構函式存在，則會呼叫它們，否則會執行位元複製。  
   
- 如果所有類別的基底和成員類別`type`具有複製建構函式接受**const**引數，編譯器產生的複製建構函式會接受單一引數的型別**const** `type`**&**. 否則，編譯器產生的複製建構函式會接受單一引數的型別`type` ** & **。  
+ 如果所有類別的基底和成員類別`type`具有複製建構函式接受**const**引數，編譯器產生的複製建構函式會接受單一引數的型別**const** `type`**&**. 否則，編譯器產生的複製建構函式會接受單一引數的型別`type`  **&** 。  
   
  您可以使用建構函式來初始化**const**或`volatile`物件，但在建構函式本身不能宣告為**const**或`volatile`。 只有合法儲存類別的建構函式是**內嵌**; 使用其他儲存類別修飾詞，包括`__declspec`關鍵字，建構函式都會造成編譯器錯誤。  
   
@@ -699,4 +696,3 @@ int main()
   
  `Base::Base` 會呼叫屬於虛擬函式的 `f` 函式。 通常會呼叫 `Derived::f` 是因為物件 `d` 的類型是 `Derived`。 因為 `Base::Base` 函式是建構函式，因此物件的類型還不是 `Derived`，而且會呼叫 `Base::f`。  
   
-

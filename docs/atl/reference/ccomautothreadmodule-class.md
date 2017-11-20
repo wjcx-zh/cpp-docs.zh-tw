@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,39 +19,23 @@ f1_keywords:
 - ATLBASE/ATL::m_Allocator
 - ATLBASE/ATL::m_nThreads
 - ATLBASE/ATL::m_pApartments
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 8e3ad5333d684daff5d8baf462ae805ef8b4b51d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: d07a29ff12edcd590379f9bb30cdc122806a83c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 類別
-為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -68,7 +51,7 @@ class CComAutoThreadModule : public CComModule
  `ThreadAllocator`  
  [in]管理執行緒的選取項目類別。 預設值是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -102,7 +85,7 @@ class CComAutoThreadModule : public CComModule
   
  根據預設，ATL COM AppWizard （ATL 專案精靈 Visual Studio.NET 中） 會衍生您的模組，從`CComModule`。 若要使用`CComAutoThreadModule`，修改的類別定義。 例如:   
   
- [!code-cpp[NVC_ATL_AxHost # 2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [_ATL_MODULE](atl-typedefs.md#_atl_module)  
@@ -120,10 +103,10 @@ class CComAutoThreadModule : public CComModule
  `CComAutoThreadModule`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ##  <a name="createinstance"></a>CComAutoThreadModule::CreateInstance  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 HRESULT CreateInstance(
@@ -149,7 +132,7 @@ HRESULT CreateInstance(
  選取一個執行緒，然後在相關聯的 apartment 中建立的物件。  
   
 ##  <a name="dwthreadid"></a>CComAutoThreadModule::dwThreadID  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 DWORD dwThreadID;
@@ -159,7 +142,7 @@ DWORD dwThreadID;
  包含目前執行緒的識別項。  
   
 ##  <a name="getdefaultthreads"></a>CComAutoThreadModule::GetDefaultThreads  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 static int GetDefaultThreads();
@@ -172,7 +155,7 @@ static int GetDefaultThreads();
  此靜態函式會動態計算 EXE 模組，根據處理器數目的執行緒的數目上限。 根據預設，這個傳回值傳遞至[Init](#init)方法來建立執行緒。  
   
 ##  <a name="init"></a>CComAutoThreadModule::Init  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 HRESULT Init(
@@ -199,7 +182,7 @@ HRESULT Init(
  初始化資料成員，並建立所指定的執行緒數目`nThreads`。  
   
 ##  <a name="lock"></a>CComAutoThreadModule::Lock  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 LONG Lock();
@@ -212,7 +195,7 @@ LONG Lock();
  執行不可部分完成的增量模組與目前執行緒的鎖定計數。 `CComAutoThreadModule`若要判斷任何用戶端是否正在存取模組使用模組鎖定計數。 目前的執行緒上的鎖定計數是基於統計目的使用。  
   
 ##  <a name="m_allocator"></a>CComAutoThreadModule::m_Allocator  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 ThreadAllocator  m_Allocator;
@@ -222,7 +205,7 @@ ThreadAllocator  m_Allocator;
  管理執行緒的選取範圍的物件。 根據預設，`ThreadAllocator`類別樣板參數是[CComSimpleThreadAllocator](../../atl/reference/ccomsimplethreadallocator-class.md)。  
   
 ##  <a name="m_nthreads"></a>CComAutoThreadModule::m_nThreads  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 int m_nThreads;
@@ -232,7 +215,7 @@ int m_nThreads;
  包含 EXE 模組中的執行緒的數目。 當[Init](#init)呼叫時，`m_nThreads`設`nThreads`參數值。 每個執行緒相關聯的 apartment 受[CComApartment](../../atl/reference/ccomapartment-class.md)物件。  
   
 ##  <a name="m_papartments"></a>CComAutoThreadModule::m_pApartments  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 CComApartment* m_pApartments;
@@ -242,7 +225,7 @@ CComApartment* m_pApartments;
  指向陣列[CComApartment](../../atl/reference/ccomapartment-class.md)物件，其中每個管理模組中的 apartment。 陣列中的項目數目根據[m_nThreads](#m_nthreads)成員。  
   
 ##  <a name="unlock"></a>CComAutoThreadModule::Unlock  
- 為準，ATL 7.0`CComAutoThreadModule`已過時︰ 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
+ 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
   
 ```
 LONG Unlock();
@@ -259,4 +242,3 @@ LONG Unlock();
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [模組類別](../../atl/atl-module-classes.md)
-

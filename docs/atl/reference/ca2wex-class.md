@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,36 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CA2WEX::CA2WEX
 - ATLCONV/ATL::CA2WEX::m_psz
 - ATLCONV/ATL::CA2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CA2WEX class
+dev_langs: C++
+helpviewer_keywords: CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 93f3fdbd9c728dcaea0262cb774fe5891e6a9838
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 5483b6eff89b95a29d2f348347a02b7664e75e7b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ca2wex-class"></a>CA2WEX 類別
 這個類別由字串轉換巨集`CA2TEX`， `CA2CTEX`， `CT2WEX`，和`CT2CWEX`，和 typedef **CA2W**。  
@@ -79,7 +60,7 @@ class CA2WEX
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CA2WEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
 |[CA2WEX::m_szBuffer](#m_szbuffer)|靜態緩衝區，用來儲存已轉換的字串。|  
@@ -93,7 +74,7 @@ class CA2WEX
   
  根據預設，ATL 轉換類別和巨集使用目前的執行緒 ANSI 字碼頁來進行轉換。 如果您想要覆寫特定轉換的行為，請為類別的建構函式的第二個參數指定的字碼頁。  
   
- 下列巨集根據此類別︰  
+ 下列巨集根據此類別：  
   
 - `CA2TEX`  
   
@@ -103,17 +84,17 @@ class CA2WEX
   
 - `CT2CWEX`  
   
- 下列 typedef 根據此類別︰  
+ 下列 typedef 根據此類別：  
   
 - **CA2W**  
   
- 這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
+ 如需這些文字轉換巨集的討論，請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。  
   
 ## <a name="example"></a>範例  
  請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlconv.h  
+ **標頭：** atlconv.h  
   
 ##  <a name="ca2wex"></a>CA2WEX::CA2WEX  
  建構函式。  
@@ -128,7 +109,7 @@ CA2WEX(LPCSTR psz) throw(...);
  要轉換的文字字串。  
   
  `nCodePage`  
- 若要執行轉換所用的字碼頁。 請參閱程式碼頁參數的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]函式[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)如需詳細資訊。  
+ 若要執行轉換所用的字碼頁。 請參閱 Windows SDK 函式的程式碼頁面參數討論[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)如需詳細資訊。  
   
 ### <a name="remarks"></a>備註  
  配置轉譯程序中使用的緩衝區。  
@@ -174,4 +155,3 @@ operator LPWSTR() const throw();
  [CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX 類別](../../atl/reference/cw2wex-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

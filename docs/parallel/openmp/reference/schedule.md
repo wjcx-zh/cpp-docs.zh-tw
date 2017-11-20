@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- schedule
-dev_langs:
-- C++
-helpviewer_keywords:
-- schedule OpenMP clause
+f1_keywords: schedule
+dev_langs: C++
+helpviewer_keywords: schedule OpenMP clause
 ms.assetid: 286f1fc3-6598-4837-b4c8-8b1fa3193965
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9f39e46f38c09967c6109470f7ed8f4f15135ff8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 30023c9e994300b9dcdb09509e7d0c2218aa26f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedule"></a>排程
-適用於[的](../../../parallel/openmp/reference/for-openmp.md)指示詞。  
+適用於[如](../../../parallel/openmp/reference/for-openmp.md)指示詞。  
   
 ## <a name="syntax"></a>語法  
   
@@ -51,7 +32,7 @@ schedule(type[,size])
   
 #### <a name="parameters"></a>參數  
  `type`  
- 排程的種類︰  
+ 排程的類型：  
   
 -   `dynamic`  
   

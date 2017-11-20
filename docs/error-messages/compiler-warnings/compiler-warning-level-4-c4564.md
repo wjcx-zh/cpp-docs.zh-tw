@@ -1,35 +1,32 @@
 ---
-title: "編譯器警告 (層級 4) C4564 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4564"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4564"
+title: "編譯器警告 （層級 4） C4564 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4564
+dev_langs: C++
+helpviewer_keywords: C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 43462a2ea15ea50306b346d02a149a185cee902f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 4) C4564
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-方法 'method' \(屬於 class 'class'\) 定義了不支援的預設參數 'parameter'  
+# <a name="compiler-warning-level-4-c4564"></a>編譯器警告 (層級 4) C4564
+方法 'method' 的類別 'class' 定義了不支援的預設參數 'parameter'  
   
- 編譯器偵測到方法有一個或更多有預設值的參數。  叫用該方法時，這些參數的預設值會被忽略；請明確指定這些參數的值。  如果您不明確指定這些參數的值，C\+\+ 編譯器會產生錯誤。  
+ 編譯器偵測到具有一或多個參數具有預設值的方法。 叫用方法時，將忽略參數的預設值明確指定這些參數的值。 如果未明確指定這些參數的值，c + + 編譯器會產生錯誤。  
   
- 下列用 Visual Basic 建立的 .dll 可允許方法引數上的預設參數：  
+ 使用 Visual Basic 中建立下列.dll 的情況下，指定允許預設參數方法引數：  
   
 ```  
 ' C4564.vb  
@@ -41,7 +38,7 @@ Public class TestClass
 End class  
 ```  
   
- 及下列會使用 Visual Basic 建立的 .dll 之 C\+\+ 範例。  
+ 和使用 Visual Basic 中，以建立此.dll 檔的下列 c + + 範例  
   
 ```  
 // C4564.cpp  

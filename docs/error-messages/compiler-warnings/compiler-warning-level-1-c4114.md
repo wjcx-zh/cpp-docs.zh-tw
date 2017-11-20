@@ -1,34 +1,32 @@
 ---
-title: "編譯器警告 (層級 1) C4114 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4114"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4114"
+title: "編譯器警告 （層級 1） C4114 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4114
+dev_langs: C++
+helpviewer_keywords: C4114
 ms.assetid: 3983e1c6-e8bb-46dc-8894-e1827db48797
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 44f58eeda59295b77a663f033695d00c0d36a1ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4114
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-相同型別的限定詞已經使用多次  
+# <a name="compiler-warning-level-1-c4114"></a>編譯器警告 （層級 1） C4114
+相同類型的限定詞已經使用多次  
   
- 型別宣告 \(Type Declaration\) 或定義使用了某個型別限定詞 \(**const**、`volatile`、**signed** 或 `unsigned`\) 一次以上。  在 Microsoft Extensions \(\/Ze\) 中這將產生一個警告，在 ANSI 相容性 \(\/Za\) 之中則會產生一個錯誤。  
+ 型別宣告或定義使用類型限定詞 (**const**， `volatile`，**簽署**，或`unsigned`) 一次以上。 這會導致警告，以搭配 Microsoft 擴充功能 (/Ze) 而在 ANSI 相容性 (/Za) 錯誤。  
   
- 下列範例會產生 C4114：  
+ 下列範例會產生 C4114:  
   
 ```  
 // C4114.cpp  
@@ -36,7 +34,7 @@ caps.handback.revision: 6
 volatile volatile int i;   // C4114  
 ```  
   
- 下列範例會產生 C4114：  
+ 下列範例會產生 C4114:  
   
 ```  
 // C4114_b.cpp  

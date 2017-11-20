@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXRENDERTARGET/CHwndRenderTarget::ReCreate
 - AFXRENDERTARGET/CHwndRenderTarget::Resize
 - AFXRENDERTARGET/CHwndRenderTarget::m_pHwndRenderTarget
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CHwndRenderTarget [MFC], CHwndRenderTarget
 - CHwndRenderTarget [MFC], Attach
@@ -35,16 +33,15 @@ helpviewer_keywords:
 - CHwndRenderTarget [MFC], Resize
 - CHwndRenderTarget [MFC], m_pHwndRenderTarget
 ms.assetid: aa65b69f-7202-46ea-af81-ef325da0b840
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 7576d1a5635cf30084c1f36b4ec14ad2a9f9b74d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a870794027d35ed317937dc2e97b51ddc92ecc27
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 類別
 ID2D1HwndRenderTarget 包裝函式。  
@@ -221,4 +218,3 @@ BOOL Resize(const CD2DSizeU& size);
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

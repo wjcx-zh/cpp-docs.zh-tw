@@ -1,40 +1,38 @@
 ---
-title: "連結器工具錯誤 LNK2033 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2033"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2033"
+title: "連結器工具錯誤 LNK2033 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2033
+dev_langs: C++
+helpviewer_keywords: LNK2033
 ms.assetid: d61db467-9328-4788-bf54-e2a20537f13f
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 41bba79acaca7a83e4103d7d146831dc60c2c2ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具錯誤 LNK2033
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-無法解析的 typeref 語彙基元 \(token\) \(對 'type' 而言\)  
+# <a name="linker-tools-error-lnk2033"></a>連結器工具錯誤 LNK2033
+'type' 的無法解析的 typeref 語彙基元 (token)  
   
- 型別在 MSIL 中繼資料內沒有定義。  
+ 類型沒有定義 MSIL 中繼資料中。  
   
- 以 **\/clr:safe** 進行編譯時，可能會發生 LNK2033：在 MSIL 模組中只有型別的轉送宣告，但型別卻在 MSIL 模組中進行參考。  
+ 編譯時，可能會發生 LNK2033 **/clr: safe**以及有向前宣告 MSIL 模組中的型別中 MSIL 模組的參考位置類型。  
   
- 型別必須在 **\/clr:safe** 下加以定義。  
+ 型別，必須定義在**/clr: safe**。  
   
- 如需詳細資訊，請參閱[\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)。  
+ 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 LNK2033。  
   
 ```  

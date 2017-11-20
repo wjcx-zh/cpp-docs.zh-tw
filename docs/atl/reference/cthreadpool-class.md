@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,35 +23,18 @@ f1_keywords:
 - ATLUTIL/ATL::CThreadPool::SetSize
 - ATLUTIL/ATL::CThreadPool::SetTimeout
 - ATLUTIL/ATL::CThreadPool::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CThreadPool class
+dev_langs: C++
+helpviewer_keywords: CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: b3c944958ba73240131fba33db95dbc20ec9bec8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 6c142d9c7dca6c46453317e056ec573cbc960f51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 類別
 這個類別會提供處理的工作項目佇列的背景工作執行緒集區。  
@@ -75,14 +57,14 @@ class CThreadPool : public IThreadPoolConfig
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CThreadPool::CThreadPool](#cthreadpool)|執行緒集區的建構函式。|  
 |[CThreadPool:: ~ CThreadPool](#dtor)|執行緒集區的解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CThreadPool::AddRef](#addref)|實作`IUnknown::AddRef`。|  
 |[CThreadPool::GetNumThreads](#getnumthreads)|呼叫這個方法來取得集區中的執行緒數目。|  
@@ -100,9 +82,9 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>備註  
  執行緒集區中的建立和終結時初始化、 調整大小，或關閉在集區。 類別的執行個體*工作者*將建立的集區中每個工作者執行緒堆疊上。 每個執行個體將會即時為執行緒的存留期間。  
   
- 建立的執行緒之後立即,*工作者*::`Initialize`將與該執行緒相關聯的物件上呼叫。 之前的執行緒，解構*工作者*::`Terminate`將呼叫。 這兩種方法必須接受**void\***引數。 此引數的值會傳遞到執行緒集區，以透過`pvWorkerParam`參數[CThreadPool::Initialize](#initialize)。  
+ 建立的執行緒之後立即,*工作者*::`Initialize`將與該執行緒相關聯的物件上呼叫。 之前的執行緒，解構*工作者*::`Terminate`將呼叫。 這兩種方法必須接受**void\*** 引數。 此引數的值會傳遞到執行緒集區，以透過`pvWorkerParam`參數[CThreadPool::Initialize](#initialize)。  
   
- 工作項目中的佇列和背景工作執行緒可用時的工作，背景工作執行緒將會提取項目關閉的佇列和呼叫**Execute**方法*工作者*該執行緒的物件。 三個項目接著會傳遞至方法︰ 從相同佇列的項目`pvWorkerParam`傳遞至*工作者*::`Initialize`和*工作者*:: `Terminate`，以及一個指向[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) IO 完成連接埠佇列所用的結構。  
+ 工作項目中的佇列和背景工作執行緒可用時的工作，背景工作執行緒將會提取項目關閉的佇列和呼叫**Execute**方法*工作者*該執行緒的物件。 三個項目接著會傳遞至方法： 從相同佇列的項目`pvWorkerParam`傳遞至*工作者*::`Initialize`和*工作者*:: `Terminate`，以及一個指向[OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) IO 完成連接埠佇列所用的結構。  
   
  *工作者*類別宣告的類型，將所提供的 typedef，執行緒集區佇列的項目*工作者*:: `RequestType`。 此類型必須是能夠要轉換的**ULONG_PTR**。  
   
@@ -116,7 +98,7 @@ class CThreadPool : public IThreadPoolConfig
  `CThreadPool`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlutil.h  
+ **標頭：** atlutil.h  
   
 ##  <a name="addref"></a>CThreadPool::AddRef  
  實作`IUnknown::AddRef`。  
@@ -331,4 +313,3 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  [IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [類別](../../atl/reference/atl-classes.md)
-

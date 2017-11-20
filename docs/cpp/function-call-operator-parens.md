@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bcd44b1c33488d4bbe4dac8bfe541dfa04f4709a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b28aa56905271da3e60cdfc08da855b6b4a23cc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="function-call-operator-"></a>函式呼叫運算子：()
 函式呼叫運算子，後面是後置運算式**（)**，指定函式呼叫。  
@@ -189,4 +186,3 @@ int main() {
  [後置運算式](../cpp/postfix-expressions.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [函式呼叫](../c-language/function-call-c.md)   
-

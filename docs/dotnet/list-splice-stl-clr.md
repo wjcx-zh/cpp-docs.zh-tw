@@ -1,32 +1,30 @@
 ---
-title: "list::splice (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::splice"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "splice 成員 [STL/CLR]"
+title: "list:: splice (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::splice
+dev_langs: C++
+helpviewer_keywords: splice member [STL/CLR]
 ms.assetid: ebc424b9-8341-4a88-b101-86d56324f5ac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bbc7517013edd4c7af7c40c3787d8ec7749df32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# list::splice (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-節點之間的 Restitch 連結。  
+# <a name="listsplice-stlclr"></a>list::splice (STL/CLR)
+Restitch 節點之間的連結。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void splice(iterator where, list<Value>% right);  
@@ -36,27 +34,27 @@ void splice(iterator where, list<Value>% right,
     iterator first, iterator last);  
 ```  
   
-#### 參數  
- 首先  
- 不規則範圍開頭。  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 若要連接之範圍的開頭。  
   
  last  
- 不規則範圍結尾。  
+ 若要連接之範圍的結尾。  
   
- right  
- 不規則從容器。  
+ 向右  
+ 要從連接之容器。  
   
- where  
- 只要在先前的容器。  
+ 其中  
+ 在之前所連接之容器中的位置。  
   
-## 備註  
- 第 10% 成員函式在 `where`上的對受控制序列的順序由 `right` 在這個項目之前。  從 `right`中移除所有項目。\(`%``right` 必須不等於 `this`\)。您會用它來接合任何一個清單到另一個。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式會插入所控制的序列`right`指向受控制序列中的項目之前`where`。 它也會移除 `right` 中的所有元素。 (`%right`不得等於`this`。)您可以使用它來 splice 一份清單的所有到另一個。  
   
- 第二 \+ 成成員函式移除項目指向 `first` 位在順序由 `right` 並將這個項目之前在受控制序列中所指向的 `where`。如果 \( `where``==``first``||``where``== ++``first`，不會發生變更\)。您會用它來接合一份清單中的單一項目到另一個。  
+ 第二個成員函式中移除項目由指向`first`所控制的序列中`right`並將它插入之前所指向受控制序列中的項目`where`。 (如果`where` `==` `first` `||` `where` `== ++first`，不會發生變更。)您可以使用它來分離到另一份清單的單一項目。  
   
- 第三 \+ 成成員函式在 `where`上的對受控制序列插入 `[`指定的子`first``,`的`last`從`)` 順序由 `right` 在這個項目之前。  它也會從原始的子範圍順序由 `right`。\(如果 `right`為`==`則為`this`，範圍為 `[``first``,``last``)` 不能包含項目指向 `where`\)。您會用它來接合零個或多個項目 subsequence 從一個清單的到另一個中。  
+ 第三個成員函式會插入所指定的子範圍 [`first`， `last`) 所控制序列中`right`指向受控制序列中的項目之前`where`。 它也會移除 `right` 所控制序列中的原始子範圍 (如果`right` `==` `this`，範圍 [`first`， `last`) 不能包含項目由指向`where`。)您可以使用它來分離到另一個清單中零個或多個項目的序列。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_splice.cpp   
@@ -104,20 +102,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**c1.size \(\) \= 0**  
- **a b c**  
- **a**  
- **b c**  
- **b "。**  
-**c2.size \(\) \= 0**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+ a b c  
+c1.size() = 0  
+ a b c  
+ a  
+ b c  
+ b c a  
+c2.size() = 0  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [list:: insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)   
+ [list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)

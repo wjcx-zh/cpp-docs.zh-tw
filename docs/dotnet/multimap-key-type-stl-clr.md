@@ -1,41 +1,39 @@
 ---
-title: "multimap::key_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::key_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_type 成員 [STL/CLR]"
+title: "multimap:: key_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::key_type
+dev_langs: C++
+helpviewer_keywords: key_type member [STL/CLR]
 ms.assetid: e6de1714-6e68-4f64-a2aa-a2571059bd59
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d6f197b04a7eb95f0b5abf8ac58b975669913ca5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::key_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapkeytype-stlclr"></a>multimap::key_type (STL/CLR)
 排序索引鍵的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Key key_type;  
 ```  
   
-## 備註  
- 這個型別是樣板參數 `Key`的同義字。  
+## <a name="remarks"></a>備註  
+ 此類型是範本參數 `Key`的同義字。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multimap_key_type.cpp   
@@ -63,14 +61,17 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md)   
- [multimap::mapped\_type](../dotnet/multimap-mapped-type-stl-clr.md)   
- [multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
+ [multimap:: mapped_type (STL/CLR)](../dotnet/multimap-mapped-type-stl-clr.md)   
+ [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

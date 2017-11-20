@@ -1,36 +1,36 @@
 ---
-title: "_InterlockedCompareExchange128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedCompareExchange128_cpp"
-  - "_InterlockedCompareExchange128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cmpxchg16b 指令"
-  - "_InterlockedCompareExchange128 內建"
+title: "_InterlockedCompareExchange128 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedCompareExchange128_cpp
+- _InterlockedCompareExchange128
+dev_langs: C++
+helpviewer_keywords:
+- cmpxchg16b instruction
+- _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 62810da5c0f90006fd6024f973d12eb0bc4d29e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# _InterlockedCompareExchange128
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+**Microsoft 特定的**  
   
- 執行 128 位元的連鎖的比較和交換。  
+ 執行 128 位元連鎖的比較和交換。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned char _InterlockedCompareExchange128(  
@@ -41,46 +41,46 @@ unsigned char _InterlockedCompareExchange128(
 );  
 ```  
   
-#### 參數  
- 輸入 \[、 輸出\]`Destination`  
- 為 128 位元欄位會被視為目的地，因為這是兩個 64 位元整數的陣列的指標。  目的資料必須是 16 位元組對齊，以避免一般保護性錯誤。  
+#### <a name="parameters"></a>參數  
+ [in、out] `Destination`  
+ 目的地，也就是兩個 64 位元整數的陣列指標會視為 128 位元欄位。 目的地資料必須是 16 位元組對齊，以避免一般性保護錯誤。  
   
- \[in\] `ExchangeHigh`  
- 64 位元的整數可以交換高可為目的端。  
+ [in] `ExchangeHigh`  
+ 可能會與目的地的較高部份交換 64 位元整數。  
   
- \[in\] `ExchangeLow`  
- 可能會與低部份目的地交換為 64 位元整數。  
+ [in] `ExchangeLow`  
+ 可能會與目的地的較低部份交換 64 位元整數。  
   
- 輸入 \[、 輸出\]`ComparandResult`  
- 指標 \(128 位元欄位被視為\) 的兩個 64 位元整數的陣列，要與目的地進行比較。  在輸出時，這會覆寫目的端的原始值。  
+ [in、out] `ComparandResult`  
+ （被視為與 128 位元欄位） 的兩個 64 位元整數的陣列指標要與目的地比較。  在輸出時，這會覆寫目的地的原始值。  
   
-## 傳回值  
- 1 如果 128 位元 comparand 等於目的端的原始值。  `ExchangeHigh`與`ExchangeLow`覆寫 128 位元的目的地。  
+## <a name="return-value"></a>傳回值  
+ 1，表示 128 位元比較元等於目的端的原始值。 `ExchangeHigh`和`ExchangeLow`覆寫 128 位元的目的地。  
   
- 假如 comparand 未到達目的端的原始值 0。  目的端的值是不變，comparand 的值就會覆寫目的端的值。  
+ 如果目的地的原始值不等於比較元是 0。 目的地的值不變，並比較元的值會覆寫目的地的值。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_InterlockedCompareExchange128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 此內建會產生 `cmpxchg16b`指令 \(與`lock`前置詞\) 進行 128 位元鎖定的比較和交換。  早期版本的 「 AMD 64 位元硬體不支援這個指令。  若要檢查是否有硬體支援`cmpxchg16b` 指令，請打`__cpuid`與內建`InfoType=0x00000001 (standard function 1)`。  位元 13 的`CPUInfo[2]` \(ECX\) 為 1，如果指令受支援。  
+## <a name="remarks"></a>備註  
+ 此內建函式會產生`cmpxchg16b`指示 (使用`lock`前置詞) 來執行的 128 位元鎖定的比較和交換。 AMD 64 位元硬體的早期版本不支援此指示。 若要檢查是否有硬體支援`cmpxchg16b`指示，請呼叫`__cpuid`與內建`InfoType=0x00000001 (standard function 1)`。 位元 13 的`CPUInfo[2]`(ECX) 為 1，指示是否支援。  
   
 > [!NOTE]
->  值為`ComparandResult`一定會覆寫。  後`lock`指令時，此內建會立即將複製的初始值`Destination`到`ComparandResult`。  基於這個理由， `ComparandResult`和`Destination`應該指向不同的記憶體位置，以避免無法預期的行為。  
+>  值`ComparandResult`一定會覆寫。 之後`lock`指令時，此內建物件會立即將複製的初始值`Destination`至`ComparandResult`。 基於這個理由，`ComparandResult`和`Destination`應該指向不同的記憶體位置，以避免非預期的行為。  
   
- 雖然您可以使用`_InterlockedCompareExchange128`低層級的執行緒同步處理，您不需要同步處理超過 128 位元，如果您可以使用較小的同步處理函式 \(例如另`_InterlockedCompareExchange`內建函式\) 相反。  使用`_InterlockedCompareExchange128`如果您想要在記憶體中為 128 位元值不可部分完成的存取。  
+ 雖然您可以使用`_InterlockedCompareExchange128`針對低層級執行緒同步處理，您不需要同步處理超過 128 位元，如果您可以使用較小的同步處理函式 (例如另`_InterlockedCompareExchange`內建函式) 而。 使用`_InterlockedCompareExchange128`如果您想要在記憶體中的 128 位元值不可部分完成的存取。  
   
- 如果您執行的程式碼會使用此內建不支援的硬體上`cmpxchg16b`指令時，結果會發生無法預期。  
+ 如果您執行程式碼會使用此內建物件不支援的硬體上`cmpxchg16b`指令，結果會產生無法預測。  
   
- 使用僅當做內建這個常式。  
+ 這個常式可只做為內建函式。  
   
-## 範例  
- 這個範例會使用`_InterlockedCompareExchange128`高兩個 64 位元整數的陣列中的文字取代它的高、 低字組的總和，並以逐步遞增低位文字。  BigInt.Int 陣列存取是不可部分完成，但本範例使用單一執行緒，並會略過鎖定為了簡單起見。  
+## <a name="example"></a>範例  
+ 這個範例會使用`_InterlockedCompareExchange128`高的兩個 64 位元整數陣列的文字取代其高低字的總和，並遞增低的字。 存取 BigInt.Int 陣列是不可部分完成，但此範例會使用單一執行緒，並忽略為了簡單起見鎖定。  
   
 ```  
 // cmpxchg16b.c  
@@ -124,11 +124,14 @@ int main(void)
 }  
 ```  
   
-  **BigInt.Int\[1\] \= 34，BigInt.Int\[0\] \= 12**   
-## 結束 Microsoft 特定  
- 藉由收益進階微裝置，及版權 2007年.人所有之商標。  重製與收益進階微裝置，及來自的使用權限.  
+```Output  
+BigInt.Int[1] = 34, BigInt.Int[0] = 12  
+```  
   
-## 請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)   
- [\_InterlockedCompareExchange 內建函式](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
+**END Microsoft 特定的**  
+ 進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+  
+## <a name="see-also"></a>另請參閱  
+ [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
+ [_InterlockedCompareExchange 內建函式](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

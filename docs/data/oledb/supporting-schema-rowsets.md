@@ -1,46 +1,46 @@
 ---
-title: "支援結構描述資料列集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 消費者樣板, 結構描述資料列集"
-  - "OLE DB 提供者, 結構描述資料列集"
-  - "OLE DB, 結構描述資料列集"
-  - "結構描述資料列集"
+title: "支援結構描述資料列集 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- schema rowsets
+- OLE DB consumer templates, schema rowsets
+- OLE DB providers, schema rowsets
+- OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3cd1a75df607678546c53b53df134f45eb87026
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 支援結構描述資料列集
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-結構描述 \(Schema\) 資料列集可讓消費者取得資料存放區資訊，而不需知道其基礎結構或是結構描述。  例如，資料存放區可能將資料表組織成使用者定義的架構，因此只有讀取它，才能確定結構描述知識 \(請注意，在另一個範例中 Visual C\+\+ 精靈會使用結構描述資料列集來產生消費者的存取子\)。為了讓消費者達成這個目的，提供者的工作階段物件會在 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 介面顯露方法。  在 Visual C\+\+ 應用程式中，您可使用 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 類別來實作 **IDBSchemaRowset**。  
+# <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
+結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能會不有組織成使用者定義階層，所以會有任何方式可以讀取它確保知識以外的結構描述的資料表。 （另一個範例，請注意，Visual c + + 精靈會產生取用者的存取子使用結構描述資料列）。若要讓取用者，若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作**IDBSchemaRowset**。  
   
- `IDBSchemaRowsetImpl` 支援下列方法：  
+ `IDBSchemaRowsetImpl`支援下列方法：  
   
--   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md) 會根據結構描述資料列集來檢查限制的有效性。  
+-   [CheckRestrictions](../../data/oledb/idbschemarowsetimpl-checkrestrictions.md)檢查限制針對結構描述資料列集的有效性。  
   
--   [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md) 會為樣板參數指定的物件實作一個 COM 物件建立者函式。  
+-   [CreateSchemaRowset](../../data/oledb/idbschemarowsetimpl-createschemarowset.md)實作 COM 物件建立者函式的範本參數所指定的物件。  
   
--   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md) 指定您在特定的結構描述資料列集上支援哪些限制。  
+-   [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)指定您在特定結構描述資料列集支援的限制。  
   
--   [IDBSchemaRowset::GetRowset](../../data/oledb/idbschemarowsetimpl-getrowset.md) 傳回結構描述資料列集 \(繼承自介面\)。  
+-   [Idbschemarowset:: Getrowset](../../data/oledb/idbschemarowsetimpl-getrowset.md)傳回結構描述資料列集 （繼承自介面）。  
   
--   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md) 將傳回可由 `IDBSchemaRowsetImpl::GetRowset` \(繼承自介面\) 存取的結構描述資料列集清單。  
+-   [GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)會傳回一份結構描述資料列可供存取`IDBSchemaRowsetImpl::GetRowset`（繼承自介面）。  
   
-## ATL OLE DB 提供者精靈支援  
- ATL OLE DB 提供者精靈會在工作階段標頭檔 \(Header File\) 內建立三個架構類別：  
+## <a name="atl-ole-db-provider-wizard-support"></a>ATL OLE DB 提供者精靈支援  
+ ATL OLE DB 提供者精靈工作階段標頭檔中建立結構描述的三個類別：  
   
 -   **C** *ShortName* **SessionTRSchemaRowset**  
   
@@ -48,25 +48,25 @@ caps.handback.revision: 11
   
 -   **C** *ShortName* **SessionPTSchemaRowset**  
   
- 這些類別會回應結構描述資訊的消費者要求；請注意，OLE DB 規格要求支援這三個結構描述資料列集：  
+ 這些類別回應取用者要求的結構描述資訊;請注意，OLE DB 規格需要這些三個結構描述資料列集必須支援：  
   
--   **C** *ShortName* **SessionTRSchemaRowset** 會處理資料表資訊的要求 \(`DBSCHEMA_TABLES` 結構描述資料列集\)。  
+-   **C** *ShortName* **SessionTRSchemaRowset**處理資料表資訊的要求 (`DBSCHEMA_TABLES`結構描述資料列)。  
   
--   **C** *ShortName* **SessionColSchemaRowset** 會處理資料行資訊的要求 \(**DBSCHEMA\_COLUMNS** 結構描述資料列集\)。  精靈提供會傳回 DOS 提供者結構描述資訊的類別之範例實作。  
+-   **C** *ShortName* **SessionColSchemaRowset**會處理要求資料行資訊 ( **DBSCHEMA_COLUMNS**結構描述資料列)。 精靈會提供範例實作，這些類別，傳回 DOS 提供者的結構描述資訊。  
   
--   **C** *ShortName* **SessionPTSchemaRowset** 會處理有關提供者類型的結構描述資訊的要求 \(**DBSCHEMA\_PROVIDER\_TYPES** 結構描述資料列集\)。  精靈提供的預設實作會傳回 `S_OK`。  
+-   **C** *ShortName* **SessionPTSchemaRowset**處理提供者類型的結構描述資訊的要求 ( **DBSCHEMA_PROVIDER_TYPES**結構描述資料列）。 精靈所提供的預設實作會傳回`S_OK`。  
   
- 您可根據提供者，適切地自訂這些類別來處理結構描述資訊：  
+ 您可以自訂這些類別來處理您的提供者適用的結構描述資訊：  
   
--   在 **C***ShortName***SessionTRSchemaRowset** 內，您必須填寫資料庫目錄 \(Catalog\)、資料表和描述欄位 \(**trData.m\_szType**、**trData.m\_szTable** 和 **trData.m\_szDesc**\)。  精靈產生的範例只會使用一個資料列 \(資料表\)。  其他提供者可能會傳回一個以上的資料表。  
+-   在**C***ShortName***SessionTRSchemaRowset**，您必須先填寫目錄、 資料表和描述欄位 (**trData.m_szType**，**trData.m_szTable**，和**trData.m_szDesc**)。 精靈產生的範例會使用只有一個資料列 （資料表）。 其他提供者可能會傳回一個以上的資料表。  
   
--   在 **C***ShortName***SessionColSchemaRowset** 中，您可將資料表的名稱以 **DBID** 傳遞。  
+-   在**C***ShortName***SessionColSchemaRowset**，傳遞做為資料表的名稱**DBID**。  
   
-## 設定限制  
- 結構描述資料列集中的重要概念為設定限制，您可透過 `SetRestrictions` 來達到這個目的。  限制可讓消費者只擷取符合的資料列 \(例如，在 "MyTable" 資料表內尋找所有的資料行\)。  限制是選擇性的，在不支援任何限制的狀況下 \(預設值\)，會一直傳回所有資料。  如需的確可支援限制的提供者之範例，請參閱 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 範例。  
+## <a name="setting-restrictions"></a>設定限制  
+ 結構描述資料列集支援中的重要概念設定限制，您不要使用`SetRestrictions`。 限制允許消費者只擷取相符的資料列 (例如在資料表 "MyTable" 中尋找所有資料行)。 限制是選擇性的，在不支援任何限制的情況下 (預設)，一律會傳回所有資料。 如需支援限制的提供者的範例，請參閱[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例。  
   
-## 設定結構描述對應  
- 依照 UpdatePV 的 Session.h 的這段程式碼來設定一個結構描述對應：  
+## <a name="setting-up-the-schema-map"></a>設定結構描述對應  
+ 設定在 UpdatePV Session.h 這種結構描述對應：  
   
 ```  
 BEGIN_SCHEMA_MAP(CUpdateSession)  
@@ -76,9 +76,9 @@ BEGIN_SCHEMA_MAP(CUpdateSession)
 END_SCHEMA_MAP()  
 ```  
   
- 若要支援 **IDBSchemaRowset**，您必須支援 `DBSCHEMA_TABLES`、**DBSCHEMA\_COLUMNS** 和 **DBSCHEMA\_PROVIDER\_TYPES**。  您可以自行決定是否加入其他的結構描述資料列集。  
+ 若要支援**IDBSchemaRowset**，您必須支援`DBSCHEMA_TABLES`， **DBSCHEMA_COLUMNS**，和**DBSCHEMA_PROVIDER_TYPES**。 您可以自行斟酌加入額外的結構描述資料列集。  
   
- 使用類似於 UpdatePV 內的 `CUpdateSessionTRSchemaRowset` 之 `Execute` 方法，宣告結構描述資料列集類別：  
+ 宣告具有的結構描述資料列集類別`Execute`方法，例如`CUpdateSessionTRSchemaRowset`UpdatePV 中：  
   
 ```  
 class CUpdateSessionTRSchemaRowset :   
@@ -90,32 +90,32 @@ class CUpdateSessionTRSchemaRowset :
                     ULONG cRestrictions, const VARIANT* rgRestrictions)  
 ```  
   
- 請注意，`CUpdateSession` 繼承自 `IDBSchemaRowsetImpl`，因此它具有所有的限制處理方法。  使用 `CSchemaRowsetImpl` 來宣告三個子系類別 \(列於上述結構描述對應\)：`CUpdateSessionTRSchemaRowset`、`CUpdateSessionColSchemaRowset` 和 `CUpdateSessionPTSchemaRowset`。  這些子系類別每個都有可處理個別一組限制 \(搜尋條件\) 的 `Execute` 方法。  每種 `Execute` 方法都會比較 `cRestrictions` 和 `rgRestrictions` 的參數值。  如需這些參數說明的詳細資訊，請參閱 [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。  
+ 請注意，`CUpdateSession`繼承自`IDBSchemaRowsetImpl`，所以其處理方法的所有限制。 使用`CSchemaRowsetImpl`，宣告三個子類別 （在上述的結構描述對應中列出）： `CUpdateSessionTRSchemaRowset`， `CUpdateSessionColSchemaRowset`，和`CUpdateSessionPTSchemaRowset`。 這些子類別的每個都有`Execute`處理個別組的限制 （搜尋條件） 的方法。 每個`Execute`方法比較的值`cRestrictions`和`rgRestrictions`參數。 請參閱中的這些參數的描述[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)。  
   
- 如需哪些限制對應至特定結構描述資料列集的詳細資訊，請參閱 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) \(在 [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] 的《OLE DB 程式設計人員參考》中\) 內的結構描述資料列集 GUID 表格。  
+ 了解哪種限制對應至特定結構描述資料列集的詳細資訊，請參閱結構描述資料列集 Guid 的資料表中[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)中*OLE DB 程式設計人員參考*中Windows SDK。  
   
- 例如，如果您支援 `DBSCHEMA_TABLES` 的 **TABLE\_NAME** 限制，便需執行下列步驟：  
+ 例如，如果您支援**TABLE_NAME**限制`DBSCHEMA_TABLES`，您會執行下列動作：  
   
- 首先，請查詢 `DBSCHEMA_TABLES`，並檢視它所支援的四個限制 \(依序\)。  
+ 首先，查閱`DBSCHEMA_TABLES`並查看它是否支援四個的限制 （依順序）。  
   
 |結構描述資料列集限制|限制值|  
-|----------------|---------|  
-|**TABLE\_CATALOG**|0x1 \(二進位 1\)|  
-|**TABLE\_SCHEMA**|0x2 \(二進位 10\)|  
-|**TABLE\_NAME**|0x4 \(二進位 100\)|  
-|**TABLE\_TYPE**|0x8 \(二進位 1000\)|  
+|-------------------------------|-----------------------|  
+|**TABLE_CATALOG 排列**|0x1 (二進位 1)|  
+|**TABLE_SCHEMA**|0x2 (二進位 10)|  
+|**TABLE_NAME**|0x4 (二進位 100)|  
+|**TABLE_TYPE**|0x8 (二進位 1000)|  
   
- 接下來，請注意每個限制都對應一位元。  由於您只要支援 **TABLE\_NAME**，您便可以用 `rgRestrictions` 元件傳回 0x4。  如果您支援 **TABLE\_CATALOG** 和 **TABLE\_NAME**，便可傳回 0x5 \(二進位 101\)。  
+ 接下來，請注意，有一個位元的每個限制。 因為您想要支援**TABLE_NAME** ，您會傳回在 0x4`rgRestrictions`項目。 如果您支援**table_catalog 排列**和**TABLE_NAME**，您將會傳回 0x5 (二進位 101)。  
   
- 預設情況下，實作將為任何要求傳回 0 \(不支援任何限制\)。  UpdatePV 是支援限制的提供者範例。  
+ 根據預設，實作會傳回的 0 （不支援任何限制），針對任何要求。 UpdatePV 是提供者支援限制的範例。  
   
-### 範例  
- 這段程式碼摘自 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 範例。  UpdatePv 支援三個必要的結構描述資料列集：`DBSCHEMA_TABLES`、**DBSCHEMA\_COLUMNS** 和 **DBSCHEMA\_PROVIDER\_TYPES**。  做為在提供者內實作結構描述支援的範例，這個主題會帶您實作 **DBSCHEMA\_TABLE** 資料列集。  
+### <a name="example"></a>範例  
+ 此程式碼取自[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例。 UpdatePv 支援三個必要的結構描述資料列集： `DBSCHEMA_TABLES`， **DBSCHEMA_COLUMNS**，和**DBSCHEMA_PROVIDER_TYPES**。 如何在您的提供者中實作結構描述支援的範例，為這個主題會引導您透過實作**DBSCHEMA_TABLE**資料列集。  
   
 > [!NOTE]
->  範例程式碼可能會與此處所列的有所不同，您應該視範例程式碼為最新的版本。  
+>  從此處; 所列的範例程式碼可能會與不同您應該將範例程式碼視為最新的版本。  
   
- 加入結構描述支援的第一步是決定要支援哪些限制。  若要決定哪些限制可用於結構描述資料列集，請在 OLE DB 規格內檢視 **IDBSchemaRowset** 的定義。  在主要定義之後，您會看到包含結構描述資料列集名稱、限制個數和限制資料行的資料表。  選取想要支援的結構描述資料列集，並記下限制個數和限制資料行。  例如，`DBSCHEMA_TABLES` 可支援四個限制 \(**TABLE\_CATALOG**、**TABLE\_SCHEMA**、**TABLE\_NAME** 和 **TABLE\_TYPE**\)：  
+ 加入結構描述支援的第一個步驟是決定您要支援的限制。 若要判斷哪些限制可供您的結構描述資料列，查看 OLE DB 規格定義的**IDBSchemaRowset**。 下列主要定義，您會看到包含結構描述資料列集名稱、 的限制數目，以及限制資料行的資料表。 選取您想要支援，並記下的數目限制以及限制資料行的結構描述資料列集。 例如，`DBSCHEMA_TABLES`支援四個的限制 (**table_catalog 排列**， **TABLE_SCHEMA**， **TABLE_NAME**，和**TABLE_TYPE**):  
   
 ```  
 void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,   
@@ -134,25 +134,25 @@ void SetRestrictions(ULONG cRestrictions, GUID* rguidSchema,
 }  
 ```  
   
- 一個位元代表每個限制資料行。  如果想要支援某個限制 \(也就是使用限制來查詢\)，請將該位元設定成 1。  如果不想支援某個限制，則將該位元設定成零。  由上述程式碼可知，UpdatePV 會在 `DBSCHEMA_TABLES` 資料列集 \(Rowset\) 中支援 **TABLE\_NAME** 和 **TABLE\_TYPE** 限制。  這些是第三個 \(位元遮罩 100\) 和第四個 \(位元遮罩 1000\) 限制。  因此，UpdatePv 的位元遮罩為 1100 \(或 0x0C\)：  
+ 位元表示每個限制資料行。 如果您想要支援的限制 （也就是說，您可以查詢它），該位元設為 1。 如果您不想支援的限制，請該位元設定為零。 從上述程式碼行，支援 UpdatePV **TABLE_NAME**和**TABLE_TYPE**限制`DBSCHEMA_TABLES`資料列集。 這些是 （位元遮罩 100） 的第三和第四個 （位元遮罩 1000年） 限制。 因此，UpdatePv 之位元遮罩是 1100年 （或 0x0C）：  
   
 ```  
 if (InlineIsEqualGUID(rguidSchema[l], DBSCHEMA_TABLES))  
     rgRestrictions[l] = 0x0C;  
 ```  
   
- 下列的 `Execute` 函式與一般資料列集函式相似。  您擁有三個引數：`pcRowsAffected`、`cRestrictions` 和 `rgRestrictions`。  `pcRowsAffected` 變數是輸出參數，提供者可透過它傳回結構描述資料列集內的資料列數。  `cRestrictions` 參數是輸入參數，裡面包含了消費者傳給提供者的限制個數。  `rgRestrictions` 參數為包含限制值的 **VARIANT** 值陣列。  
+ 下列`Execute`函式是類似於一般的資料列集。 您有三個引數： `pcRowsAffected`， `cRestrictions`，和`rgRestrictions`。 `pcRowsAffected`變數是輸出參數，提供者可以在結構描述資料列中傳回的資料列計數。 `cRestrictions`參數是輸入的參數，其中包含由取用者傳遞給提供者的限制數目。 `rgRestrictions`參數為陣列**VARIANT**包含限制值的值。  
   
 ```  
 HRESULT Execute(DBROWCOUNT* pcRowsAffected, ULONG cRestrictions,   
                 const VARIANT* rgRestrictions)  
 ```  
   
- `cRestrictions` 變數是以結構描述資料列集的限制總數為基礎，無論提供者是否支援它們。  因為 UpdatePv 支援兩個限制 \(第三個和第四個\)，所以程式碼只會尋找大於或等於三的 `cRestrictions` 值。  
+ `cRestrictions`變數根據結構描述資料列，無論是否提供者會支援這些限制的總數。 由於 UpdatePv 支援兩個的限制 （第三和第四個），這段程式碼只會尋找`cRestrictions`值大於或等於三。  
   
- **TABLE\_NAME** 限制的值會儲存於 `rgRestrictions[2]` \(在以零起始陣列中的第三個限制會為 2\)。  您需要檢查該限制是否為 `VT_EMPTY` 以確實支援它。  請注意，**VT\_NULL** 並不等於 `VT_EMPTY`。  **VT\_NULL** 會指定一個有效的限制值。  
+ 值**TABLE_NAME**限制儲存在`rgRestrictions[2]`（同樣地，在以零為起始的陣列中的第三個限制為 2）。 您需要檢查的限制不是`VT_EMPTY`實際上支援它。 請注意， **VT_NULL**不等於`VT_EMPTY`。 **VT_NULL**指定有效的限制值。  
   
- 資料表名稱的 UpdatePv 定義為文字檔的完整路徑名稱。  擷取限制值，然後嘗試開啟檔案，以確定檔案確實存在。  如果檔案不存在，就傳回 `S_OK`。  這看起來似乎有點顛倒步驟，其實程式碼的確會通知消費者該指定名稱並不支援的資料表。  傳回的 `S_OK` 表示該程式碼已正確執行。  
+ UpdatePv 定義的資料表名稱是文字檔案的完整的路徑名稱。 擷取限制值，然後嘗試開啟檔案，以確保檔案實際存在。 如果檔案不存在，傳回`S_OK`。 這看起來似乎有點回溯，而程式碼的確會通知取用者所指定的名稱所不支援的資料表。 `S_OK`傳回表示該程式碼正確執行。  
   
 ```  
 USES_CONVERSION;  
@@ -189,7 +189,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }  
 ```  
   
- 支援第四個限制 \(**TABLE\_TYPE**\) 類似於第三個限制。  請檢查該數值並非 `VT_EMPTY`。  此限制只會傳回資料表類型，**TABLE**。  若要決定 `DBSCHEMA_TABLES` 的有效值，請查閱《OLE DB 程式設計人員》附錄 B 的 **TABLES** 資料列集章節。  
+ 支援的第四個的限制 (**TABLE_TYPE**) 類似於第三個的限制。 請檢查值不是`VT_EMPTY`。 這項限制只會傳回資料表類型**資料表**。 若要判斷正確值`DBSCHEMA_TABLES`，查詢中的 < 附錄 B *OLE DB 程式設計人員參考*中**資料表**資料列集 > 一節。  
   
 ```  
 // TABLE_TYPE restriction:  
@@ -208,7 +208,7 @@ if (cRestrictions >=4 && rgRestrictions[3].vt != VT_EMPTY)
 }  
 ```  
   
- 此處是實際您可為資料列集建立資料列項目的地方。  `trData` 變數會對應至 **CTABLESRow**，這是定義於 OLE DB 提供者樣板的結構。  **CTABLESRow** 會對應至 OLE DB 規格＜附錄 B＞的 **TABLES** 資料列集定義。  您只能加入一個資料列，因為您一次只支援一個資料表。  
+ 這是實際建立的資料列集的資料列項目。 變數`trData`對應至**CTABLESRow**，OLE DB 提供者範本中定義的結構。 **CTABLESRow**對應至**資料表**附錄 B 中的資料列集定義的 OLE DB 規格。 您只能有一個資料列加入，因為您一次只能支援一個資料表。  
   
 ```  
 // Bring over the data:  
@@ -217,7 +217,7 @@ wcspy_s(trData.m_szDesc, OLESTR("The Directory Table"), 19);
 wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());  
 ```  
   
- UpdatePV 只能設定三個資料行：**TABLE\_NAME**、**TABLE\_TYPE** 和 **DESCRIPTION**。  您應該記下傳回資訊的資料行，因為當您實作 `GetDBStatus` 時會需要這個資訊：  
+ 只有三個資料行都將 UpdatePV: **TABLE_NAME**， **TABLE_TYPE**，和**描述**。 您應該記下的資料行，您可以為其傳回的詳細資訊，因為只有在實作時，需要這項資訊`GetDBStatus`:  
   
 ```  
     _ATLTRY  
@@ -235,7 +235,7 @@ wcsncpy_s(trData.m_szTable, T2OLE(szFile), _TRUNCATE());
 }  
 ```  
   
- `GetDBStatus` 函式對於結構描述資料列集的正確操作很重要。  因為不針對 **TABLES** 資料列集的每個資料行傳回資料，所以需要指定哪些資料行要傳回資料以及哪些資料行不要。  
+ `GetDBStatus`函式是非常重要的結構描述資料列的正確運作。 因為您不會傳回每個資料行中的資料**資料表**資料列集，您必須指定哪些資料行傳回的資料，並不這麼做。  
   
 ```  
 virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)  
@@ -256,13 +256,13 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 }  
 ```  
   
- 由於您的 `Execute` 函式會從 **TABLES** 資料列集傳回 **TABLE\_NAME**、**TABLE\_TYPE** 和 **DESCRIPTION** 欄位的資料，您可檢視 OLE DB 規格內的＜附錄 B＞，並決定 \(透過由上而下地計數\) 它們為序數 3、4 和 6。  對於這些資料行的每一個都要傳回 **DBSTATUS\_S\_OK**。  其他所有的資料行則傳回 **DBSTATUS\_S\_ISNULL**。  傳回這個狀態相當重要，因為消費者可能不了解您傳回的值為 **NULL** 或其他資料。  再次提醒，請注意 **NULL** 並不等於空白值。  
+ 因為您`Execute`函式會傳回資料**TABLE_NAME**， **TABLE_TYPE**，和**描述**欄位從**資料表**資料列集，您可以查看附錄 B 的 OLE DB 規格中，並判斷 （由，從上方算起） 它們的序數 3、 4 和 6。 對於每個資料行，傳回**DBSTATUS_S_OK**。 所有其他資料行，傳回**DBSTATUS_S_ISNULL**。 請務必傳回此狀態，因為取用者可能不了解您所傳回的值是**NULL**或其他項目。 同樣地，請注意， **NULL**不相當於空白。  
   
- 如需 OLE DB 結構描述資料列集介面的詳細資訊，請參閱《OLE DB 程式設計人員》的 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) 介面。  
+ 如需 OLE DB 結構描述資料列集介面的詳細資訊，請參閱[IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md) OLE DB 程式設計人員參考中的介面。  
   
- 如需消費者如何使用 **IDBSchemaRowset** 的詳細資訊，請參閱[以結構描述資料列集取得中繼資料](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。  
+ 如需有關如何使用取用者資訊**IDBSchemaRowset**方法，請參閱[取得中繼資料與結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)。  
   
- 如需支援結構描述資料列集的提供者範例，請參閱 [UpdatePV](http://msdn.microsoft.com/zh-tw/c8bed873-223c-4a7d-af55-f90138c6f38f) 範例。  
+ 如需支援結構描述資料列集提供者的範例，請參閱[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 04/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -104,38 +103,23 @@ helpviewer_keywords:
 - C3486
 - C3494
 - C3497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 79b672c07429526ccbf7f5d5f9553956bf1f01e0
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 40bf082b95fd39af44605927189d0977c065a3b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c3400-through-c3499"></a>編譯器錯誤 C3400 C3499
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
   
 > [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
+>  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
   
  您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
   
@@ -144,13 +128,13 @@ ms.lasthandoff: 04/24/2017
 |[編譯器錯誤 C3400](compiler-error-c3400.md)|循環條件約束相依性包括 '*constraint1*'和'*constraint2*'|  
 |編譯器錯誤 C3401|'*規範*': 類別樣板上允許無效的組件存取規範-只能有 'private'|  
 |編譯器錯誤 C3402|'*函式*': 無法解析在目前範圍中的多載除外|  
-|編譯器錯誤 C3403|thread_local 無法與 /clr:pure 或 /clr:safe 一起使用|  
+|編譯器錯誤 C3403|thread_local 不能以 /clr: pure 或 /clr: safe|  
 |編譯器錯誤 C3404|'*建構*': 未預期的語法錯誤|  
 |編譯器錯誤 C3405|'*函式*': 無法解析不完整的描述元的多載|  
 |編譯器錯誤 C3406|'*關鍵字*': 不能用於複雜的類型規範|  
 |編譯器錯誤 C3407|'*類型*' 無法用於此內容|  
 |[編譯器錯誤 C3408](compiler-error-c3408.md)|'*屬性*': 樣板定義上不允許屬性|  
-|[編譯器錯誤 C3409](compiler-error-c3409.md)|不能使用空白的屬性區塊|  
+|[編譯器錯誤 C3409](compiler-error-c3409.md)|不允許空白的屬性區塊|  
 |編譯器錯誤 C3410|'*識別碼*': 明確具現化的型別'*類型*'不符合類型的變數範本'*類型*'|  
 |編譯器錯誤 C3411|'*類型*' 不能作為陣列的大小，因為它不是整數類型|  
 |[編譯器錯誤 C3412](compiler-error-c3412.md)|'*特製化*': 無法特製化目前領域中的範本|  
@@ -171,14 +155,14 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3427|'*內容*':'*關鍵字*' 無法搭配 layout_version (*數目*)|  
 |編譯器錯誤 C3428|'*內容*':'*關鍵字*' 只能套用至類別宣告或定義|  
 |編譯器錯誤 C3429|'*內容*':'*關鍵字*' 無法套用至等位|  
-|編譯器錯誤 C3430|範圍的列舉必須含有名稱|  
+|編譯器錯誤 C3430|名稱必須限定範圍的列舉|  
 |編譯器錯誤 C3431|'*識別碼*': *type1*無法重新宣告為*type2*|  
 |編譯器錯誤 C3432|'*識別碼*': 不限範圍列舉的向前宣告必須含有基礎類型|  
 |編譯器錯誤 C3433|'*識別碼*': 列舉的所有宣告必須具有相同的基礎類型，'*type1*「 現在 」*type2*'|  
 |編譯器錯誤 C3434|'*內容*': 列舉值'*數目*'無法表示為'*類型*'，值為'*數目*'|  
 |編譯器錯誤 C3435|字元集 '*名稱*' 不支援|  
-|編譯器錯誤 C3436|#指定 /source-charset、 /execution-charset 或 /utf-8 時，不支援 pragma setlocale|  
-|編譯器錯誤 C3437|#指定 /source-charset、 /execution-charset 或 /utf-8 時，不支援 pragma execution_character_set|  
+|編譯器錯誤 C3436|指定 /source-charset、 /execution-charset 或 /utf-8 時，不支援 #pragma setlocale|  
+|編譯器錯誤 C3437|指定 /source-charset、 /execution-charset 或 /utf-8 時，不支援 #pragma execution_character_set|  
 |編譯器錯誤 C3438|'*內容*':'*值*' 無法套用至 managed/WinRT 類別|  
 |編譯器錯誤 C3439|layout_version (*數目*): 無效的版本號碼|  
 |編譯器錯誤 C3440|'*宣告*': layout_version (*數目*) 與預先宣告不相容|  
@@ -187,7 +171,7 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3443|預設成員初始設定式 '*類別*' 是遞迴的|  
 |編譯器錯誤 C3444|空的彙總類別*類別*' 必須以 '{}' 初始化|  
 |編譯器錯誤 C3445|複本集的清單初始化 '*類型*' 不能使用明確的建構函式|  
-|編譯器錯誤 C3446|'*類別*': 實值類別的成員不允許的預設成員初始設定式|  
+|[編譯器錯誤 C3446](compiler-error-c3446.md)|'*類別*': 實值類別的成員不允許的預設成員初始設定式|  
 |編譯器錯誤 C3447|已過時。|  
 |編譯器錯誤 C3448|已過時。|  
 |編譯器錯誤 C3449|已過時。|  
@@ -218,28 +202,27 @@ ms.lasthandoff: 04/24/2017
 |編譯器錯誤 C3474|無法開啟輸出檔案 '*filename*'|  
 |編譯器錯誤 C3475|輸入檔中的有語法錯誤 '*filename*'|  
 |編譯器錯誤 C3476|無法開啟檔案 '*filename*' 的輸入|  
-|編譯器錯誤 C3477|Lambda 不能出現在未經過評估的內容中|  
+|編譯器錯誤 C3477|lambda 不能出現在經過評估的內容|  
 |編譯器錯誤 C3478|'*識別碼*': 無法以複製方式擷取陣列|  
-|編譯器錯誤 C3479|不支援 Lambda 上的 SAL 註釋|  
+|編譯器錯誤 C3479|不支援 lambda 上的 SAL 註釋|  
 |[編譯器錯誤 C3480](compiler-error-c3480.md)|'*變數*': lambda 擷取變數必須來自封入函式範圍|  
 |[編譯器錯誤 C3481](compiler-error-c3481.md)|'*識別碼*': 找不到 lambda 擷取變數|  
 |[編譯器錯誤 C3482](compiler-error-c3482.md)|'this' 在非靜態成員函式內只能做為 Lambda 擷取|  
 |[編譯器錯誤 C3483](compiler-error-c3483.md)|'*識別碼*' 已是 lambda 擷取清單的一部分|  
-|[編譯器錯誤 C3484](compiler-error-c3484.md)|語法錯誤: 傳回類型的前面必須是 '->'|  
+|[編譯器錯誤 C3484](compiler-error-c3484.md)|語法錯誤： 必須是 '->' 的傳回類型前面|  
 |[編譯器錯誤 C3485](compiler-error-c3485.md)|Lambda 定義不能有任何 cv 限定詞|  
 |編譯器錯誤 C3486|已過時。|  
-|[編譯器錯誤 C3487](compiler-error-c3487.md)|'*類型*': 所有傳回運算式必須推算為相同的類型︰ 先前是'*類型*'|  
+|[編譯器錯誤 C3487](compiler-error-c3487.md)|'*類型*': 所有傳回運算式必須推算為相同的類型： 先前是'*類型*'|  
 |[編譯器錯誤 C3488](compiler-error-c3488.md)|'&*識別碼*' 的預設擷取模式為傳址方式時，不允許|  
 |[編譯器錯誤 C3489](compiler-error-c3489.md)|'&*識別碼*' 的預設擷取模式為複製時，就需要|  
 |[編譯器錯誤 C3490](compiler-error-c3490.md)|'*識別碼*' 無法修改，因為它正由常數物件存取|  
 |[編譯器錯誤 C3491](compiler-error-c3491.md)|'*識別碼*': 無法在不可變的 lambda 中修改擷取的副本|  
 |[編譯器錯誤 C3492](compiler-error-c3492.md)|'*識別碼*': 您無法擷取匿名等位的成員|  
 |[編譯器錯誤 C3493](compiler-error-c3493.md)|'*識別碼*' 無法以隱含方式擷取，因為尚未指定任何預設擷取模式|  
-|編譯器錯誤 C3494|無法明確地擷取 'this'，因為封入的擷取模式不允許|  
+|編譯器錯誤 C3494|'this' 無法明確擷取，因為封入的擷取模式不允許使用它|  
 |[編譯器錯誤 C3495](compiler-error-c3495.md)|'*識別碼*': 擷取中的識別項必須是 lambda 到達範圍中宣告的自動儲存期的變數|  
 |[編譯器錯誤 C3496](compiler-error-c3496.md)|'this' 一定以傳值方式擷取: 已忽略 '&'|  
-|編譯器錯誤 C3497|您無法建構 Lambda 的執行個體|  
+|編譯器錯誤 C3497|您無法建構 lambda 的執行個體|  
 |[編譯器錯誤 C3498](compiler-error-c3498.md)|'*識別碼*': 您無法擷取有 managed/WinRT 類型的變數|  
 |[編譯器錯誤 C3499](compiler-error-c3499.md)|已被指定為具有 void 傳回類型的 Lambda 無法傳回值|  
-
 

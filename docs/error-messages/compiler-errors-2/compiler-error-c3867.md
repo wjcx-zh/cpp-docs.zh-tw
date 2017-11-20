@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3867
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3867
+f1_keywords: C3867
+dev_langs: C++
+helpviewer_keywords: C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 4f8e4612dc12274c689ec0d4e9406dea74c608f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3867"></a>編譯器錯誤 C3867
 'func': 函式呼叫遺漏引數清單，請用 '&func' 建立成員的指標  

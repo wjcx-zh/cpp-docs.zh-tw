@@ -1,36 +1,34 @@
 ---
-title: "ptr::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.operator="
-  - "msclr.com.ptr.operator="
-  - "msclr::com::ptr::operator="
-  - "ptr::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: "ptr::operator = |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.operator=
+- msclr.com.ptr.operator=
+- msclr::com::ptr::operator=
+- ptr::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 58619910-46c0-4db8-b183-c811b23b2df1
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 89d26c7011c31e5f4aad66589192ac38e2244e1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-附加至 `com::ptr`的 COM 物件。  
+# <a name="ptroperator"></a>ptr::operator=
+將 COM 物件，以附加`com::ptr`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 ptr<_interface_type> % operator=(  
@@ -38,23 +36,23 @@ ptr<_interface_type> % operator=(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_right`  
- COM 介面要附加的指標。  
+ 要附加的 COM 介面指標。  
   
-## 傳回值  
- 在 `com::ptr`的追蹤參考。  
+## <a name="return-value"></a>傳回值  
+ 上的追蹤參考`com::ptr`。  
   
-## 例外狀況  
- 如果 `com::ptr` 已經擁有對 COM 物件的參考， `operator=` 會擲回 <xref:System.InvalidOperationException>。  
+## <a name="exceptions"></a>例外狀況  
+ 如果`com::ptr`已經擁有的 COM 物件，參考`operator=`會擲回<xref:System.InvalidOperationException>。  
   
-## 備註  
- 指派 COM 物件給 `com::ptr` 參考 COM 物件，但是不會釋放它呼叫端的參考。  
+## <a name="remarks"></a>備註  
+ 若要將 COM 物件指派`com::ptr`參考 COM 物件，但不會釋放呼叫者的參考。  
   
- 這個運算子的作用與 `Attach`相同。  
+ 此運算子具有相同的效果`Attach`。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。`ReplaceDocument` 成員函式第一次在任何先前的物件呼叫 `Release`，然後使用 `operator=` 附加新的文件物件。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument`成員函式的第一個呼叫`Release`任何先前擁有物件，然後使用`operator=`附加新的文件物件。  
   
 ```  
 // comptr_op_assign.cpp  
@@ -128,12 +126,12 @@ int main() {
 }  
 ```  
   
-## 需求  
- **標頭檔**\<msclr \\ com \\ ptr.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
- **命名空間** msclr::com  
+ **命名空間**msclr::com  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::Attach](../dotnet/ptr-attach.md)   
  [ptr::Detach](../dotnet/ptr-detach.md)   

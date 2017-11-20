@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,37 +12,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: aa123da5dfb5675a4b44d386224bf17e79df40a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: d4054b95dc4c62c645f4e8e9ba1eb7d64e690784
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 結構
-short_vector_traits 允許擷取基礎向量長度和短向量類型的純量型別或純量型別  
+short_vector_traits 允許擷取基礎向量長度和短向量類型的純量型別或純量類型  
   
 ## <a name="syntax"></a>語法  
   
@@ -105,7 +87,7 @@ struct short_vector_traits<double_4>;
 #### <a name="parameters"></a>參數  
  `T`  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -115,7 +97,7 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[short_vector_traits:: short_vector_traits 建構函式](#ctor)||  
   
@@ -129,9 +111,9 @@ struct short_vector_traits<double_4>;
  `short_vector_traits`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_short_vectors.h  
+ **標頭：** amp_short_vectors.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
   
 ##  <a name="ctor"></a>short_vector_traits:: short_vector_traits 建構函式  
   
@@ -146,5 +128,4 @@ static int const size = 1;
 ```  
   
 ## <a name="see-also"></a>另請參閱  
- [Concurrency:: graphics 命名空間](concurrency-graphics-namespace.md)
-
+ [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

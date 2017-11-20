@@ -1,41 +1,39 @@
 ---
-title: "queue::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成員 [STL/CLR]"
+title: "queue:: empty (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 318ccff9-23eb-4045-8c12-d3ea89159e87
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2240da6f19354144a9b0967fe1e91e9b03d13333
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# queue::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-測試是否不存在項目。  
+# <a name="queueempty-stlclr"></a>queue::empty (STL/CLR)
+測試項目是否不存在。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool empty();  
 ```  
   
-## 備註  
- 成員函式傳回 true 表示一個空的控制順序。  它就相當於 [queue::size](../dotnet/queue-size-stl-clr.md)`() == 0`。  您會用它來測試這個佇列是否為空。  
+## <a name="remarks"></a>備註  
+ 成員函式會對空的受控制序列傳回 true。 它相當於[queue:: size (STL/CLR)](../dotnet/queue-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否佇列是空的。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_queue_empty.cpp   
@@ -68,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::size](../dotnet/queue-size-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::size (STL/CLR)](../dotnet/queue-size-stl-clr.md)

@@ -1,44 +1,41 @@
 ---
-title: "編譯器警告 (層級 1) C4683 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4683"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4683"
+title: "編譯器警告 （層級 1） C4683 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4683
+dev_langs: C++
+helpviewer_keywords: C4683
 ms.assetid: e6e77364-dba1-46dd-ae1d-03da23070bce
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 120da429e4f296b6be1881da806434f7548383ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4683
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4683"></a>編譯器警告 (層級 1) C4683
 **'**   
- ***function* ': 事件來源有 'out' 參數; 當攔截多個事件處理常式時發出警告**  
+ ***函式*': 事件來源有 'out' 的參數; 當攔截多個事件處理常式時警告**  
   
- 如果有一個以上的事件接收 \(Event Sink\) 接聽 \(Listen\) COM 事件來源，out 參數的值可能會被忽略。  
+ 如果一個以上的事件接收器用來接聽以 COM 事件來源，可能會忽略為輸出參數的值。  
   
- 請注意，下列情況將會發生記憶體遺漏 \(Memory Leak\)：  
+ 請注意下列情況會發生記憶體流失：  
   
-1.  如果方法擁有內部配置的 out 參數，例如，BSTR \*。  
+1.  如果方法具有輸出參數，會在內部配置，例如 BSTR *。  
   
-2.  如果該事件擁有一個以上的處理常式 \(即多點傳送事件\)  
+2.  如果事件都有一個以上的處理常式 （是多點傳送的事件）  
   
- 造成遺漏的原因，是因為該 out 參數會由多個處理常式設定，但只由最後一個處理常式傳回至呼叫位置。  
+ 找出遺漏的原因是 out 參數會設定由一個以上的處理常式，但只能由最後一個處理常式傳回至呼叫位置。  
   
- 下列範例會產生 C4683：  
+ 下列範例會產生 C4683:  
   
 ```  
 // C4683.cpp  

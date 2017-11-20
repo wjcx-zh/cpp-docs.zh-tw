@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _pclose
+apiname: _pclose
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 0a6163775f7e8592a48a8011e8d72eea008dd5c7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 13609bbe4dae9b493b8467fd0ac9fe7d1437fa83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pclose"></a>_pclose
 等候新的命令處理程式，然後關閉相關管道上的資料流。  

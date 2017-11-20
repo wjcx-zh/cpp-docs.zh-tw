@@ -1,41 +1,39 @@
 ---
-title: "hash_set::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp 成員 [STL/CLR]"
+title: "hash_set:: key_comp (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: d5dc46c3-c2ee-4591-8f03-d8c9d3df0519
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a76db0965f3f8ef7381d85f1fccdfbeaa69f8b85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製兩個索引鍵的順序委派。  
+# <a name="hashsetkeycomp-stlclr"></a>hash_set::key_comp (STL/CLR)
+將複製兩個索引鍵的順序委派。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## 備註  
- 成員函式所傳回的排序委派用於排序受控制序列。  您會用它來比較兩個索引鍵。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個索引鍵。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_key_comp.cpp   
@@ -71,18 +69,22 @@ int main()
   
 ```  
   
-  **比較 \(L'a， L'a\) \= true**  
-**比較 \(L'a， L'b\) \= true**  
-**比較 \(L'b， L'a\) \= false**  
-**比較 \(L'a， L'a\) \= false**  
-**比較 \(L'a， L'b\) \= false**  
-**比較 \(L'b， L'a\) \= true**   
-## 需求  
- **標題:** \<cliext\/hash\_set\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
   
- **命名空間:** cliext  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::key\_compare](../dotnet/hash-set-key-compare-stl-clr.md)   
- [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md)
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
+  
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)   
+ [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "如何：在 C++/CLI 中使用事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件 [C++], 在介面中存取"
+title: "如何： 使用事件，在 C + + CLI |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5a2d6a1ae0443b7c1ec66f5ca0d0fa057cf9041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中使用事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文說明如何使用事件宣告和函式叫用該事件的介面和實作介面的類別和事件處理常式。  
+# <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
+本文示範如何使用介面中宣告事件和函式來叫用事件，以及實作介面的類別以及事件處理常式。  
   
-## 介面事件  
- 下列程式碼範例會將事件處理常式，叫用事件建立事件處理常式撰寫其名稱主控台再移除事件處理常式的。  
+## <a name="interface-events"></a>介面事件  
+ 下列程式碼範例會加入事件處理常式、 叫用事件，因而導致其名稱寫入主控台的事件處理常式，，然後移除事件處理常式。  
   
 ```  
 // mcppv2_events2.cpp  
@@ -74,11 +72,14 @@ int main () {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **EventReceiver::Handler**   
-## 自訂的存取子方法  
- 下列範例顯示如何定義事件的行為，當處理常式加入或移除時，如此一來，當引發事件時，  
+```Output  
+EventReceiver::Handler  
+```  
+  
+## <a name="custom-accessor-methods"></a>自訂存取子方法  
+ 下列範例會示範如何定義事件的行為，以及事件被引發時新增或移除處理常式。  
   
 ```  
 // mcppv2_events6.cpp  
@@ -161,12 +162,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **在事件處理常式 H1**  
-**在有引數 1 和 2.2 的事件處理常式 H2**   
-## 覆寫以在加入的預設存取，移除，並且會引發存取子  
- 這個範例顯示如何覆寫加入的預設存取，移除和引發事件方法:  
+```Output  
+In event handler H1  
+In event handler H2 with args 1 and 2.2  
+```  
+  
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>覆寫預設權限新增、 移除及引發存取子  
+ 這個範例示範如何覆寫 add、 remove 和引發事件的方法上的預設存取權：  
   
 ```  
 // mcppv2_events3.cpp  
@@ -216,11 +220,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **17**   
-## 多個事件處理常式  
- 事件接收器，或其他用戶端程式碼，可以將一或多個處理常式加入至事件。  
+```Output  
+17  
+```  
+  
+## <a name="multiple-event-handlers"></a>多個事件處理常式  
+ 事件接收器或任何其他用戶端程式碼可以將一個或多個處理常式加入的事件。  
   
 ```  
 // mcppv2_events4.cpp  
@@ -289,13 +296,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **按一下 \(x\=7， y\=3.14159\)**  
-**DblClick s\=System.Char \(\[\]\)**  
-**DblClickAgain s\=System.Char \(\[\]\)**   
-## 靜態事件  
- 下列範例顯示如何定義和使用靜態事件。  
+```Output  
+Click(x=7,y=3.14159)  
+DblClick(s=System.Char[])  
+DblClickAgain(s=System.Char[])  
+```  
+  
+## <a name="static-events"></a>靜態事件  
+ 下列範例會示範如何定義和使用靜態事件。  
   
 ```  
 // mcppv2_events7.cpp  
@@ -374,14 +384,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **在事件處理常式 H1**  
-**在有引數 11 和 11.11 的事件處理常式 H2**  
-**在事件處理常式 H1**  
-**在有引數 22 和 22.22 的事件處理常式 H2**   
-## 虛擬事件  
- 這個範例會實作介面中虛擬， Managed 事件和類別:  
+```Output  
+In event handler H1  
+In event handler H2 with args 11 and 11.11  
+In event handler H1  
+In event handler H2 with args 22 and 22.22  
+```  
+  
+## <a name="virtual-events"></a>虛擬事件  
+ 這個範例會實作 managed 虛擬事件的介面和類別中：  
   
 ```  
 // mcppv2_events5.cpp  
@@ -458,10 +471,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **在處理常式 H1**  
-**在有引數 1 和 2.2 的處理常式 H2** 簡單的事件不能指定覆寫或隱藏基底類別事件。您可以在每個存取子函式必須定義所有事件的存取子函式，然後指定 `new` 或 `override` 關鍵字。  
+```Output  
+In handler H1  
+In handler H2 with args 1 and 2.2  
+```  
+  
+ 簡單事件不能指定來覆寫或隱藏基底類別事件。  您必須定義所有事件存取子函式，並接著指定`new`或`override`上每個存取子函式的關鍵字。  
   
 ```  
 // mcppv2_events5_a.cpp  
@@ -493,8 +510,8 @@ ref struct C : B {
 };  
 ```  
   
-## 抽象事件  
- 下列範例顯示如何實作抽象事件。  
+## <a name="abstract-events"></a>抽象事件  
+ 下列範例會示範如何實作抽象事件。  
   
 ```  
 // mcppv2_events10.cpp  
@@ -570,12 +587,15 @@ int main () {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **hi**  
-**Hello 從 Event2**   
-## 會在不同的組件中定義的事件。  
- 事件和事件處理常式在一個組件中定義和由其他組件使用。  
+```Output  
+hi  
+hello from Event2  
+```  
+  
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>引發在不同的組件中定義的事件  
+ 可定義一組件，並供另一個組件事件和事件處理常式。  
   
 ```  
 // mcppv2_events8.cpp  
@@ -593,7 +613,7 @@ public:
 };  
 ```  
   
- 這種用戶端程式碼會使用事件:  
+ 此用戶端程式碼會使用事件：  
   
 ```  
 // mcppv2_events9.cpp  
@@ -620,9 +640,12 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **hello**  
-**hello**   
-## 請參閱  
+```Output  
+hello  
+hello  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [event](../windows/event-cpp-component-extensions.md)

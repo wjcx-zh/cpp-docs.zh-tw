@@ -1,46 +1,43 @@
 ---
-title: "queue::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成員 [STL/CLR]"
+title: "queue::operator = (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 826c335a-5680-498c-b57d-e7bc93a914be
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 558a96726e8d6ab6921e40847bc6856952c36c7b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# queue::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取代受控制序列。  
+# <a name="queueoperator-stlclr"></a>queue::operator= (STL/CLR)
+取代受控制的序列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 queue <Value, Container>% operator=(queue <Value, Container>% right);  
 ```  
   
-#### 參數  
- right  
- 複製的容器配接器。  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 若要複製容器配接器。  
   
-## 備註  
- 成員運算子複製 `right` 到物件後，再傳回 `*this`。  您會用它將受控制序列取代為它在 `right`的副本。  
+## <a name="remarks"></a>備註  
+ 成員運算子複製`right`物件，然後傳回`*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_queue_operator_as.cpp   
@@ -71,13 +68,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::assign](../dotnet/queue-assign-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)

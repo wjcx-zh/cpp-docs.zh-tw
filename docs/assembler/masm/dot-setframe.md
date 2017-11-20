@@ -1,49 +1,46 @@
 ---
-title: ".SETFRAME | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".SETFRAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".SETFRAME directive"
+title: ".SETFRAME |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SETFRAME
+dev_langs: C++
+helpviewer_keywords: .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8666e0ecfd1b2f81236766a1a32baea7a939cd19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# .SETFRAME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在框架的填滿註冊使用指定的暫存器的回溯資訊中的欄位和位移 \(`reg`\) 和偏移 \(`offset`\)。  位移必須是 16 的倍數，並且小於或等於 240。  這個指示詞也會產生`UWOP_SET_FPREG`回溯程式碼項目，如指定註冊使用目前的初構位移。  
+# <a name="setframe"></a>.SETFRAME
+框架填滿註冊中使用指定的暫存器的回溯資訊的欄位和位移 (`reg`) 和位移 (`offset`)。 位移必須是 16 的倍數，且小於或等於 240。 這個指示詞也會產生`UWOP_SET_FPREG`指定登錄使用的目前位移，序言回溯程式碼項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 .SETFRAME reg, offset  
 ```  
   
-## 備註  
- .SETFRAME 允許 ml64.exe 洏峈會指定如何框架函式回溯時，以及只允許在初構中，從延伸[PROC](../../assembler/masm/proc.md)框架宣告，以[.ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。  這些指示詞並不會產生程式碼路徑。 它們只會產生`.xdata`和`.pdata`。  .SETFRAME 前面必須有實際實作卸載動作的指示進行。  它是很好的作法，以包裝回溯指示詞，並將程式碼是在巨集中的回溯可確保合約。  
+## <a name="remarks"></a>備註  
+ .SETFRAME 允許 ml64.exe 使用者指定框架的函式的回溯時，如何，而且只允許序言，會從延伸內[PROC](../../assembler/masm/proc.md)框架宣告[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼。它們只會產生`.xdata`和`.pdata`。 .SETFRAME 之前應該加實際實作卸載動作的指示。 它是最好的作法是包裝回溯指示詞，以確保協議為了在巨集中的回溯程式碼。  
   
- 如需詳細資訊，請參閱 [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
+ 如需詳細資訊，請參閱[MASM (ml64.exe) x64](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
   
-## 範例  
+## <a name="sample"></a>範例  
   
-### 描述  
- 下列範例會示範如何使用框架指標:  
+### <a name="description"></a>描述  
+ 下列範例會示範如何使用框架指標：  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 ; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE  
@@ -72,5 +69,5 @@ _text ENDS
 END  
 ```  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

@@ -1,35 +1,34 @@
 ---
-title: "CRestrictions::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRestrictions.Open"
-  - "ATL::CRestrictions::Open"
-  - "ATL.CRestrictions.Open"
-  - "CRestrictions::Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open 方法"
+title: "Crestrictions:: Open |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRestrictions.Open
+- ATL::CRestrictions::Open
+- ATL.CRestrictions.Open
+- CRestrictions::Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 0aff0cc3-543a-47d2-8d6b-ebb36926b6db
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 907609807b8e152f1fab737d7d336a4fd999b554
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CRestrictions::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳回根據使用者提供的限制設定的結果。  
+# <a name="crestrictionsopen"></a>CRestrictions::Open
+傳回的結果集根據使用者所提供的限制。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -46,27 +45,27 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `session`  
- \[in\] 指定使用的現有工作階段物件連接至資料來源。  
+ [in]指定用來連接到資料來源的現有工作階段物件。  
   
  *lpszParam*  
- \[in\] 在結構描述資料列集指定限制。  
+ [in]在結構描述資料列上指定的限制。  
   
  `bBind`  
- \[in\] 指定是否自動繫結資料行對應。  預設值為 **true**，導致資料行列對應自動繫結。  設定`bBind`為 **false** 以防止資料行列對應的自動繫結，讓您可以手動繫結。\(手動繫結是特殊的感興趣 OLAP 使用者\)。  
+ [in]指定是否要自動繫結資料行對應。 預設值是**true**，因而導致自動繫結的資料行對應。 設定`bBind`至**false**可防止自動繫結的資料行對應，讓您以手動方式可以繫結。 （手動繫結是 OLAP 使用者的特別感興趣的）。  
   
-## 傳回值  
- 其中一個標準 `HRESULT` 列舉值。  
+## <a name="return-value"></a>傳回值  
+ 其中一個標準`HRESULT`值。  
   
-## 備註  
- 在結構描述資料列集可以指定最多七個限制。  
+## <a name="remarks"></a>備註  
+ 您可以指定最多七個限制的結構描述資料列集。  
   
- 如需每個結構描述資料列集所定義的限制。請參閱 [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 。  
+ 請參閱[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)如每個結構描述資料列集上定義的限制相關資訊。  
   
-## 需求  
- **標頭：**atldbsch.h  
+## <a name="requirements"></a>需求  
+ **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)   
  [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

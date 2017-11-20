@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exceptions [C++], hardware
 - errors [C++], low-level
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a8a6ef05d6cbacc717e3f57735bfb798742c037b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 7a130e60403c9570d647955a6ad2d86f2ba49d1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="hardware-exceptions"></a>硬體例外狀況
 大部分可由作業系統辨識的標準例外狀況是硬體定義的例外狀況。 Windows 可辨識某些低階軟體例外狀況，不過，作業系統通常最適合處理這些例外狀況。  

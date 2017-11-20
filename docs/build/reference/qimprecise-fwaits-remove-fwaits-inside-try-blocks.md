@@ -1,56 +1,55 @@
 ---
-title: "/Qimprecise_fwaits (移除 Try 區域內的 fwaits) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Qimprecise_fwaits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Qimprecise_fwaits 編譯器選項 (C++)"
-  - "-Qimprecise_fwaits 編譯器選項 (C++)"
+title: "-Qimprecise_fwaits （移除內的 fwaits 再試一次） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Qimprecise_fwaits
+dev_langs: C++
+helpviewer_keywords:
+- -Qimprecise_fwaits compiler option (C++)
+- /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9aa09590e1ede80107a085c03528b4c9089885bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /Qimprecise_fwaits (移除 Try 區域內的 fwaits)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用 [\/fp:except](../../build/reference/fp-specify-floating-point-behavior.md) 編譯器選項時，移除 `try` 內部的 `fwait` 命令。  
+# <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (移除 Try 區域內的 fwaits)
+移除`fwait`命令內部`try`，當您使用時封鎖[/fp： 除了](../../build/reference/fp-specify-floating-point-behavior.md)編譯器選項。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /Qimprecise_fwaits  
 ```  
   
-## 備註  
- 當沒有同時指定 **\/fp:except** 時，這個選項沒有作用。  如果指定 **\/fp:except** 選項，編譯器會在 `try` 區塊的每一個程式碼行前後加入 `fwait` 命令。  這樣，編譯器可以識別出產生例外狀況的特定程式碼行。  **\/Qimprecise\_fwaits** 會移除內部的 `fwait` 指令，只留下 `try` 區塊前後的等候。  這樣做會改善效能，但編譯器將只能指出哪個 `try` 區塊造成例外狀況，而非哪一行。  
+## <a name="remarks"></a>備註  
+ 這個選項沒有任何作用，如果**/fp： 除了**也未指定。 如果您指定**/fp： 除了**選項，編譯器會插入`fwait`周圍每一行程式碼中命令`try`區塊。 如此一來，編譯器能夠識別會產生例外狀況的程式碼的特定行。 **/Qimprecise_fwaits**移除內部`fwait`離開等候周圍的指示，`try`區塊。 這樣可改善效能，但編譯器只能說出的`try`區塊會導致例外狀況，而不是哪一行。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中，輸入編譯器選項。  
+4.  在 [其他選項]  方塊中，輸入編譯器選項。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
- [\/Q 選項 \(低階運算\)](../../build/reference/q-options-low-level-operations.md)   
+## <a name="see-also"></a>另請參閱  
+ [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

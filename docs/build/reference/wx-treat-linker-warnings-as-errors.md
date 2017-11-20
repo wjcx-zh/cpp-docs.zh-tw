@@ -1,56 +1,55 @@
 ---
-title: "/WX (將連結器警告視為錯誤) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/WX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/WX 連結器選項"
-  - "WX 連結器選項"
-  - "-WX 連結器選項"
+title: "-WX （連結器警告視為錯誤） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /WX
+dev_langs: C++
+helpviewer_keywords:
+- /WX linker option
+- -WX linker option
+- WX linker option
 ms.assetid: e4ba97c7-93f7-43ae-a4bb-d866790926c9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a4624436ac3109286749d654fb90d4318a837bc0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /WX (將連結器警告視為錯誤)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="wx-treat-linker-warnings-as-errors"></a>/WX (將連結器警告視為錯誤)
 ```  
 /WX[:NO]  
 ```  
   
-## 備註  
- 如果連結器產生警告訊息，\/WX 會導致沒有產生輸出檔。  
+## <a name="remarks"></a>備註  
+ 訊息，/WX 會導致沒有產生連結器產生警告的輸出檔。  
   
- 這類似於編譯器的 **\/WX** \(如需詳細資訊，請參閱 [\/w、\/Wn、\/WX、\/Wall、\/wln、\/wdn、\/wen、\/won \(警告層級\)](../../build/reference/compiler-option-warning-level.md)\)。  不過，指定編譯的 **\/WX** 並不代表 **\/WX** 也會在連結器階段產生作用；您必須明確地替每一項工具指定 **\/WX**。  
+ 這是類似於**/WX**編譯器 (請參閱[/w、 /W0、 /W1、 /W2、 /W3、 /W4、 /w1、 /w2、 /w3、 /w4、 /Wall、 /wd，/ /wo，我們 /Wv，/WX （警告等級）](../../build/reference/compiler-option-warning-level.md)如需詳細資訊)。 但是，指定**/WX**編譯並不表示，如**/WX**也會作用中連結器階段，您必須明確指定**/WX**每個工具。  
   
- **\/WX** 預設為不作用。  若要將連結器警告視為錯誤，請指定 **\/WX**。  **\/WX:NO** 等於沒有指定 **\/WX**。  
+ 根據預設， **/WX**為非作用中。 若要將連結器警告視為錯誤，指定**/WX**。 **/WX:NO**等同於不指定**/WX**。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[連結器\] 資料夾。  
+2.  按一下**連結器**資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中輸入選項。  
+4.  輸入到選項**其他選項**方塊。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 1.  請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

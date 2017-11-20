@@ -1,32 +1,30 @@
 ---
-title: "ML Nonfatal Error A2078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2078"
+title: "ML 非嚴重錯誤 A2078 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2078
+dev_langs: C++
+helpviewer_keywords: A2078
 ms.assetid: 42ac48fd-ac7f-4e74-a11e-20181d443faf
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: db74486e8720703913cac4c052437314d7523477
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ml-nonfatal-error-a2078"></a>ML 非嚴重錯誤 A2078
 **指示不允許遠間接定址**  
   
- 條件式的躍進或迴圈不能使用記憶體的運算元。  必須為它指定相對的地址或標籤。  
+ 條件式跳躍或迴圈不能使用記憶體運算元。 必須為它提供相對位址或標籤。  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>另請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

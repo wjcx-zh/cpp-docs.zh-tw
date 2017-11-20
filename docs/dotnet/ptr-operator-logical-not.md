@@ -1,49 +1,47 @@
 ---
-title: "ptr::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::operator!"
-  - "msclr::com::ptr::operator!"
-  - "ptr.operator!"
-  - "msclr.com.ptr.operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::operator!"
+title: ptr::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::operator!
+- msclr::com::ptr::operator!
+- ptr.operator!
+- msclr.com.ptr.operator!
+dev_langs: C++
+helpviewer_keywords: ptr::operator!
 ms.assetid: 7f4101dc-2045-42e7-abb1-6a30e17147f2
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82ff71586b495e42f7165f3782f41891767d583e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-判斷的運算子所擁有的 COM 物件是否無效。  
+# <a name="ptroperator"></a>ptr::operator!
+若要判斷是否擁有的 COM 物件無效的運算子。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool operator!();  
 ```  
   
-## 傳回值  
- `true` ，如果主控 COM 物件無效;否則為 `false` 。  
+## <a name="return-value"></a>傳回值  
+ `true`如果擁有的 COM 物件無效。`false`否則。  
   
-## 備註  
- 如果它不是 `nullptr`，擁有有效的 COM 物件。  
+## <a name="remarks"></a>備註  
+ 自有的 COM 物件時如果不是有效`nullptr`。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。`CreateInstance` 成員函式使用 `operator!` 判斷資料物件是否已經擁有和建立新的執行個體，如果物件無效。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `CreateInstance`成員函式使用`operator!`，判斷文件物件已擁有，且只會建立的新執行個體的物件無效。  
   
 ```  
 // comptr_op_not.cpp  
@@ -90,12 +88,15 @@ int main() {
 }  
 ```  
   
-  **DOM 文件建立。**   
-## 需求  
- **標頭檔**\<msclr \\ com \\ ptr.h\>  
+```Output  
+DOM Document created.  
+```  
   
- **命名空間** msclr::com  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
-## 請參閱  
+ **命名空間**msclr::com  
+  
+## <a name="see-also"></a>另請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::operator bool](../dotnet/ptr-operator-bool.md)

@@ -1,47 +1,45 @@
 ---
-title: "ptr::~ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.com.ptr.~ptr"
-  - "ptr.~ptr"
-  - "msclr::com.ptr::~ptr"
-  - "~ptr"
-  - "ptr::~ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::~ptr"
+title: "ptr:: ~ ptr |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.com.ptr.~ptr
+- ptr.~ptr
+- msclr::com.ptr::~ptr
+- ~ptr
+- ptr::~ptr
+dev_langs: C++
+helpviewer_keywords: ptr::~ptr
 ms.assetid: 5f644aa5-fe66-4992-a5f8-13ec1292c949
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8633acbb24ccaff19a8e15e78a09d7d6773576b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::~ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-解構 `com::ptr`。  
+# <a name="ptrptr"></a>ptr::~ptr
+Destructs `com::ptr`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 ~ptr();  
 ```  
   
-## 備註  
- 在終結時，`com::ptr` 釋放所有它擁有對其 COM 物件的參考。  假設沒有其他參考會保存至 COM 物件， COM 物件將刪除而且其記憶體要釋放。  
+## <a name="remarks"></a>備註  
+ 在終結時`com::ptr`釋放其擁有它的 COM 物件的所有參考。 假設有沒有其他 COM 物件所持有的參考，將刪除的 COM 物件，並釋放其記憶體。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。在 `main` 函式中，兩個 `XmlDocument` 物件的解構函式將會在他們超出 `try` 區塊範圍時呼叫，造成構成 `com::ptr` 解構函式被呼叫，並釋放所有對 COM 物件的參考。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  在`main`函式，這兩個`XmlDocument`在超出範圍時，就會呼叫物件的解構函式`try`區塊中，造成在基礎`com::ptr`解構函式呼叫，釋出所有已擁有的參考給 COM物件。  
   
 ```  
 // comptr_dtor.cpp  
@@ -102,12 +100,12 @@ int main() {
 }  
 ```  
   
-## 需求  
- **標頭檔** \<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
- **命名空間** msclr::com  
+ **命名空間**msclr::com  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::ptr](../dotnet/ptr-ptr.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)

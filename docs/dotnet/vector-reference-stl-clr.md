@@ -1,41 +1,39 @@
 ---
-title: "vector::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "參考成員 [STL/CLR]"
+title: "vector:: reference (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 6ea0d3b0-d2e6-42c3-856c-a10f5ef7620c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a810b63676a7f4b15d01496f4137699d9dc1791
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# vector::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorreference-stlclr"></a>vector::reference (STL/CLR)
 項目的參考類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## 備註  
- 類型描述項目的參考。  
+## <a name="remarks"></a>備註  
+ 此類型描述項目的參考。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_reference.cpp   
@@ -72,14 +70,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **A B C**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+a b c  
+A B C  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::const\_reference](../dotnet/vector-const-reference-stl-clr.md)   
- [vector::value\_type](../dotnet/vector-value-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)   
+ [vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)

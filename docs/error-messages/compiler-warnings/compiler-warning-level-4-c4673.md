@@ -1,34 +1,32 @@
 ---
-title: "編譯器警告 (層級 4) C4673 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4673"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4673"
+title: "編譯器警告 （層級 4） C4673 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4673
+dev_langs: C++
+helpviewer_keywords: C4673
 ms.assetid: 95626ec6-f05b-43c7-8b9a-a60a6f98dd30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8242a083fbf7a9f94c419c1cf142c7c1ada65009
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 4) C4673
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-throw 'identifier' 時，catch 無法辨識下列型別  
+# <a name="compiler-warning-level-4-c4673"></a>編譯器警告 (層級 4) C4673
+下列類型時擲回 'identifier' 不會考慮使用時，catch  
   
- 無法在 **catch** 區塊處理擲回物件。  每一個無法處理的型別會被列在錯誤中，緊接著此警告之後輸出。  每一個無法處理的型別都有自己的警告。  如需詳細資訊，請參閱個別型別的警告。  
+ 無法在處理擲回物件**攔截**區塊。 無法處理每種類型會列在包含此警告的那一行後面的錯誤輸出。 每個未處理的類型都有自己的警告。 閱讀每個特定的型別，如需詳細資訊的警告。  
   
- 下列範例會產生 C4673：  
+ 下列範例會產生 C4673:  
   
 ```  
 // C4673.cpp  

@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 04/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4471
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4471
+f1_keywords: C4471
+dev_langs: C++
+helpviewer_keywords: C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
-caps.latest.revision: 1
+caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d7d097b399d3681ef523d8787ecc38af472840f6
-ms.openlocfilehash: fc0ddb07ec768804be61185211bbac0ee6fbf2b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/28/2017
-
+ms.openlocfilehash: a1476beca6b34e8afb53058c7961822f0fb48109
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4471"></a>編譯器警告 （層級 4） C4471
 '*列舉*': 不限範圍列舉的向前宣告必須含有基礎類型 (假設為 int)  
@@ -70,7 +51,7 @@ enum Example;    // C4471
 ```  
   
 ## <a name="example"></a>範例  
-在 C + + 11 中，您可以新增明確的類型，不限範圍列舉型別以及其向前宣告。 只有當複雜的標頭包含邏輯會防止使用而不是向前宣告的定義，我們建議此解決方案。 此方案可能會導致維護問題︰ 如果您變更用於列舉型別定義的基礎類型，您也必須變更以符合，向前宣告的所有或您的程式碼中可能有無訊息的錯誤。 您可以將向前宣告放入標頭檔，以減少此問題。  
+在 C + + 11 中，您可以新增明確的類型，不限範圍列舉型別以及其向前宣告。 只有當複雜的標頭包含邏輯會防止使用而不是向前宣告的定義，我們建議此解決方案。 此方案可能會導致維護問題： 如果您變更用於列舉型別定義的基礎類型，您也必須變更以符合，向前宣告的所有或您的程式碼中可能有無訊息的錯誤。 您可以將向前宣告放入標頭檔，以減少此問題。  
   
 ```cpp  
 // C4471c.cpp
@@ -113,4 +94,3 @@ enum class Example { item = 0 };
 // ...
 ```  
   
-

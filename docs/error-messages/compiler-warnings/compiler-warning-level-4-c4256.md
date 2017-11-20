@@ -1,42 +1,40 @@
 ---
-title: "編譯器警告 (層級 4) C4256 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4256"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4256"
+title: "編譯器警告 （層級 4） C4256 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4256
+dev_langs: C++
+helpviewer_keywords: C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3bb16c84a03bddad1eeb7dd5cfc6c652857d83b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 4) C4256
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 具有虛擬基底類別的建構函式有 '...'; 呼叫可能與舊版的 Visual C\+\+ 不相容  
+# <a name="compiler-warning-level-4-c4256"></a>編譯器警告 (層級 4) C4256
+'function': 具有虛擬基底類別建構函式有 '...';可能不相容與舊版本的 Visual c + + 呼叫  
   
  可能不相容。  
   
- 請試想下列程式碼範例。  如果建構函式 S2::S2 \(int i, …\)的定義中使用 Visual C\+\+ 編譯器版本在 7 版之前所編譯，不過下列範例使用目前的版本來編譯，因為特殊大小寫呼叫慣例變更，對建構函式的呼叫 S3 會無法正確運作。  如果兩個都是以 Visual C\+\+ 6.0 編譯的，呼叫也不會正常運作，除非沒有參數傳入省略。  
+ 請參考下列程式碼範例。 如果 S2::S2 建構函式的定義 (int i，...) 使用 Visual c + + 編譯器，第 7 版之前的版本所編譯，但下列範例使用最新版本進行編譯、 S3 建構函式的呼叫會無法正常運作的原因特殊案例的呼叫慣例改變。 如果兩個都是以 Visual C++ 6.0 編譯的，呼叫也不會正常運作，除非沒有傳遞省略符號參數。  
   
- 若要修正這項警告，  
+ 若要修正這個警告，  
   
-1.  不要在建構函式中使用省略。  
+1.  請勿使用建構函式中的省略符號。  
   
-2.  確定專案中所有的元件都是以目前版本 \(包括任何可能定義或參考此類別的程式庫\) 建置的，然後用 [warning](../../preprocessor/warning.md) Pragma 關閉警告。  
+2.  請確定專案中的所有元件都建置與目前的版本 （包括任何可能定義或參考此類別的程式庫），然後停用警告使用[警告](../../preprocessor/warning.md)pragma。  
   
- 下列範例會產生 C4256：  
+ 下列範例會產生 C4256:  
   
 ```  
 // C4256.cpp  

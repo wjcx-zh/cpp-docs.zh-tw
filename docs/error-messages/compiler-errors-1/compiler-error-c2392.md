@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2392
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2392
+f1_keywords: C2392
+dev_langs: C++
+helpviewer_keywords: C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 6fa5164028a622b03eb770e24a91c4b07968c3bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2392"></a>編譯器錯誤 C2392
 'method1': covariant 傳回類型不支援在 managed 或 WinRTtypes，否則 'method2' 將會被覆寫  

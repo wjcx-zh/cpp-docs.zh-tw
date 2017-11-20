@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,36 +33,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2::operator+=
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f37610aa77cb17fa574444cec43465ffc5ba3498
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: ee6c906748be7d784b65144ceee63cf7c4bb53aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="norm2-class"></a>norm_2 類別
-表示兩個一般數字的短向量。  
+代表兩個一般數字的短向量。  
   
 ## <a name="syntax"></a>語法  
   
@@ -81,7 +64,7 @@ class norm_2;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[norm_2 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
@@ -104,7 +87,7 @@ class norm_2;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |norm_2::operator-||  
 |norm_2::operator-||  
@@ -117,7 +100,7 @@ class norm_2;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[大小常數](#norm_2__size)||  
   
@@ -138,9 +121,9 @@ class norm_2;
  `norm_2`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_short_vectors.h  
+ **標頭：** amp_short_vectors.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
   
 ##  <a name="ctor"></a>norm_2 
 
@@ -230,4 +213,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

@@ -1,42 +1,39 @@
 ---
-title: "queue::back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back 成員 [STL/CLR]"
+title: "queue:: back (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::back
+dev_langs: C++
+helpviewer_keywords: back member [STL/CLR]
 ms.assetid: 983a5c0f-0a2f-475f-932b-e7dec9eaffbb
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c6badb225d57295931aac7ba6fe6d6e6ec747f6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# queue::back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queueback-stlclr"></a>queue::back (STL/CLR)
 存取最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reference back();  
 ```  
   
-## 備註  
- 成員函式傳回參考給受控制序列的最後一個項目，此序列不能為空序列。  您會用它來存取，最後一個項目，當您知道它存在。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列必須為非空白的最後一個元素的參考。 您可以使用它來存取最後一個項目中，當您知道它存在。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_queue_back.cpp   
@@ -69,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**上一頁 \(\) \= c**  
- **a b x**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::back\_item](../dotnet/queue-back-item-stl-clr.md)   
- [queue::front](../dotnet/queue-front-stl-clr.md)   
- [queue::front\_item](../dotnet/queue-front-item-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
+ [queue:: front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
+ [queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)

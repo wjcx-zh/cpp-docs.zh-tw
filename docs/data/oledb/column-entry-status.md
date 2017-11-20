@@ -1,32 +1,30 @@
 ---
-title: "COLUMN_ENTRY_STATUS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_STATUS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_ENTRY_STATUS 巨集"
+title: "COLUMN_ENTRY_STATUS |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_STATUS
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_STATUS macro
 ms.assetid: 29ffe8b6-cb1e-438c-813e-2e6d73a5deef
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c4d6ae4bc40ec6e4493e27b6d98673c31ef73015
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# COLUMN_ENTRY_STATUS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-表示資料列集至資料庫的特定資料行之繫結。  
+# <a name="columnentrystatus"></a>COLUMN_ENTRY_STATUS
+表示從資料列集至資料庫的特定資料行的繫結。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -40,43 +38,43 @@ status
   
 ```  
   
-#### 參數  
- 請參閱 *OLE DB 程式設計人員參考* 中的 [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
+#### <a name="parameters"></a>參數  
+ 請參閱[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中*OLE DB 程式設計人員參考*。  
   
  `nOrdinal`  
- \[in\]資料行編號。  
+ [in] 資料行編號。  
   
  `data`  
- \[in\] 使用者資料錄中對應的資料成員。  
+ [in] 使用者記錄中相對應的資料成員。  
   
  *status*  
- \[in\] 要繫結至資料行狀態的變數。  
+ [in] 要繫結至資料行狀態的變數。  
   
-## 備註  
- 這個巨集支援 *狀態* 變數。  這個參數可以用於下列狀況：  
+## <a name="remarks"></a>備註  
+ 這個巨集支援*狀態*變數。 這個參數可以用於下列狀況：  
   
--   在 [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) 和 [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md) 巨集之間。  
+-   之間[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)巨集。  
   
--   在 [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) 和 [END\_ACCESSOR](../../data/oledb/end-accessor.md) 巨集之間。  
+-   之間[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)巨集。  
   
--   在 [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md) 和 [END\_PARAM\_MAP](../../data/oledb/end-param-map.md) 巨集之間。  
+-   之間[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)巨集。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
- [OLE DB 消費者樣板的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)   
- [COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)   
- [COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)   
- [COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
- [COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>另請參閱  
+ [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)   
+ [COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)   
+ [COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)   
+ [COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)   
+ [COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)   
+ [COLUMN_ENTRY_PS_LENGTH_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
+ [COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

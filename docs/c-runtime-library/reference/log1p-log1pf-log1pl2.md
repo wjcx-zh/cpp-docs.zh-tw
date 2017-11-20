@@ -38,30 +38,15 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 99525c8b711d0774fa2b3132505a2cdbb21d5569
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 14d0228b24a97c2b7113cf9ceccf337c15ef904c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 計算 1 加上指定值的自然對數。  

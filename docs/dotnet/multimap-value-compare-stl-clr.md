@@ -1,42 +1,40 @@
 ---
-title: "multimap::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare 成員 [STL/CLR]"
+title: "multimap::value_compare (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: a066968b-df6e-40a7-83fd-b8520b07a1e0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c059ae0e411610f963eb32e5a70ec511faf6bcd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-兩個項目值的排序委派。  
+# <a name="multimapvaluecompare-stlclr"></a>multimap::value_compare (STL/CLR)
+兩個項目值順序的委派。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## 備註  
- 這個型別是用來決定其實值引數順序的委派的同義字。  
+## <a name="remarks"></a>備註  
+ 類型是委派，其值的引數的順序會決定的同義字。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multimap_value_compare.cpp   
@@ -64,16 +62,19 @@ int main()
   
 ```  
   
-  **compare\(\[L'a', 1\], \[L'a', 1\]\) \= False**  
-**compare\(\[L'a', 1\], \[L'b', 2\]\) \= True**  
-**compare\(\[L'b', 2\], \[L'a', 1\]\) \= False**   
-## 需求  
- **標頭：** \<cliext\/map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md)   
- [multimap::value\_comp](../dotnet/multimap-value-comp-stl-clr.md)   
- [multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
+ [multimap:: value_comp (STL/CLR)](../dotnet/multimap-value-comp-stl-clr.md)   
+ [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

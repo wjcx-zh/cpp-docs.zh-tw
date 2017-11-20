@@ -1,36 +1,34 @@
 ---
-title: "編譯器警告 (層級 1) C4508 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4508"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4508"
+title: "編譯器警告 （層級 1） C4508 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4508
+dev_langs: C++
+helpviewer_keywords: C4508
 ms.assetid: c05f113b-b789-4df0-a4ef-78bce4767021
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6d29e821fe29720b065bd9f003e1349c80bbb5c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4508
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 函式應傳回值; 假定 'void' 傳回型別  
+# <a name="compiler-warning-level-1-c4508"></a>編譯器警告 (層級 1) C4508
+'function': 函式應傳回值。'void' 傳回假設的類型  
   
- 函式未指定傳回型別。  在此情況下，也應該會引發 C4430，而編譯器會實作由 C4430 報告的修復 \(預設值為 int\)。  
+ 函式有沒有指定的傳回類型。 在此情況下，也應該引發 C4430 和編譯器實作的 C4430 （預設值是 int） 所報告的修正。  
   
- 若要解除這項警告，請明確宣告函式的傳回型別。  
+ 若要解決這個警告，明確宣告函式的傳回型的別。  
   
- 下列範例會產生 C4508：  
+ 下列範例會產生 C4508:  
   
 ```  
 // C4508.cpp  

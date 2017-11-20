@@ -1,74 +1,73 @@
 ---
-title: "CDataConnection 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDataConnection"
-  - "ATL.CDataConnection"
-  - "CDataConnection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataConnection 類別"
+title: "CDataConnection 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDataConnection
+- ATL.CDataConnection
+- CDataConnection
+dev_langs: C++
+helpviewer_keywords: CDataConnection class
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e7ce953304792e5c04c406025a656c22eb8eee13
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-管理與資料來源的連接。  
+# <a name="cdataconnection-class"></a>CDataConnection 類別
+管理與資料來源的連線。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CDataConnection  
 ```  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 方法  
-  
-|||  
-|-|-|  
-|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|建構函式。  執行個體化及初始化 `CDataConnection` 物件。|  
-|[複製](../../data/oledb/cdataconnection-copy.md)|建立現有資料連接的複本。|  
-|[開啟](../../data/oledb/cdataconnection-open.md)|使用初始化字串，開啟與資料來源的連接。|  
-|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|開始在目前連接的新工作階段。|  
-  
-### 運算子  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[運算子 BOOL](../../data/oledb/cdataconnection-operator-bool.md)|判斷目前工作階段是否已在執行。|  
-|[運算子 bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|判斷目前工作階段是否已在執行。|  
-|[operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|傳回已包含之 `CDataSource` 物件的參考。|  
-|[operator CDataSource\*](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|傳回 `CDataSource` 物件的指標。|  
-|[operator CSession&](../../data/oledb/cdataconnection-operator-csession-amp.md)|傳回已包含之 `CSession` 物件的參考。|  
-|[operator CSession\*](../../data/oledb/cdataconnection-operator-csession-star.md)|傳回 `CSession` 物件的指標。|  
+|[CDataConnection](../../data/oledb/cdataconnection-cdataconnection.md)|建構函式。 執行個體化並初始化`CDataConnection`物件。|  
+|[複製](../../data/oledb/cdataconnection-copy.md)|建立現有的資料連接的複本。|  
+|[開啟](../../data/oledb/cdataconnection-open.md)|開啟使用初始化字串的資料來源的連接。|  
+|[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)|開啟新的工作階段上目前的連接。|  
   
-## 備註  
- `CDataConnection` 是建立用戶端一個有用的類別，因為它封裝必要的必須完成，連接到資料來源的物件 \(資料來源和工作階段\) 和某些工作  
+### <a name="operators"></a>運算子  
   
- 沒有 `CDataConnection`，您必須建立 `CDataSource` 物件，會呼叫 [OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md) 方法，然後建立 [CSession](../../data/oledb/csession-class.md) 物件的執行個體，呼叫物件的 [開啟](../../data/oledb/csession-open.md) 方法，然後建立 [CCommand](../../data/oledb/ccommand-class.md) 物件和呼叫其 **Open**\*方法。  
+|||  
+|-|-|  
+|[運算子 BOOL](../../data/oledb/cdataconnection-operator-bool.md)|判斷目前的工作階段是否為開啟。|  
+|[operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)|判斷目前的工作階段是否為開啟。|  
+|[CDataSource 運算子 （& s)](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)|將參考傳回給包含`CDataSource`物件。|  
+|[運算子 CDataSource *](../../data/oledb/cdataconnection-operator-cdatasource-star.md)|將指標傳回至包含的 `CDataSource` 物件。|  
+|[運算子 Csession& （& s)](../../data/oledb/cdataconnection-operator-csession-amp.md)|將參考傳回給包含`CSession`物件。|  
+|[運算子 CSession *](../../data/oledb/cdataconnection-operator-csession-star.md)|將指標傳回至包含的 `CSession` 物件。|  
   
- `CDataConnection`，您需要建立連接物件，只將初始化字串，然後使用開啟命令的連接。  如果您在重複使用規劃與資料庫的連接，最好能保持連接開啟，因此， `CDataConnection` 提供便利的方式來進行。  
+## <a name="remarks"></a>備註  
+ `CDataConnection`是有用的類別來建立用戶端，因為它封裝所需的物件 （資料來源和工作階段） 和一些您需要連接到資料來源時執行  
+  
+ 不含`CDataConnection`，您必須建立`CDataSource`物件，呼叫其[OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)方法，然後建立的執行個體[CSession](../../data/oledb/csession-class.md)物件，呼叫其[開啟](../../data/oledb/csession-open.md)方法，然後建立[CCommand](../../data/oledb/ccommand-class.md)物件並呼叫其**開啟*** 方法。  
+  
+ 與`CDataConnection`，您只需要建立連線物件，請將它傳遞初始字串，然後使用該連接開啟的命令。 如果您打算重複使用資料庫的連接，則最好讓連線保持開啟，並`CDataConnection`提供便利的方式執行此作業。  
   
 > [!NOTE]
->  如果您建立需要處理多個工作階段的資料庫應用程式，您必須使用 [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。  
+>  如果您要建立需要處理多個工作階段的資料庫應用程式，您必須使用[OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

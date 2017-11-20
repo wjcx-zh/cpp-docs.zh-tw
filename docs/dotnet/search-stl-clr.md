@@ -1,32 +1,30 @@
 ---
-title: "search (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::search"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "search 函式 [STL/CLR]"
+title: "搜尋 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::search
+dev_langs: C++
+helpviewer_keywords: search function [STL/CLR]
 ms.assetid: 3317c7f4-9f47-44b8-a7c7-73948a2f83e1
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b7228bc8c44c9cb6996a65aa4c558d8e4f99e32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# search (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-搜尋序列中目標範圍內，第一次出現「符合指定序列項目」的項目，或是「在指定序列中符合二進位述詞指定」的項目。  
+# <a name="search-stlclr"></a>search (STL/CLR)
+在目標範圍中搜尋第一個序列，其項目等於指定項目序列中的項目，或在二元述詞指定的意義上，其項目相當於指定序列中的項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _FwdIt1, class _FwdIt2> inline  
@@ -37,13 +35,13 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
         _FwdIt2 _First2, _FwdIt2 _Last2, _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式的行為與 STL 函式 `search` 相同。  如需詳細資訊，請參閱[search](../Topic/search.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`search`。 如需詳細資訊，請參閱[搜尋](../standard-library/algorithm-functions.md#search)。  
   
-## 需求  
- **標頭：** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,34 +1,32 @@
 ---
-title: "ML Nonfatal Error A2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2039"
+title: "ML 非嚴重錯誤 A2039 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2039
+dev_langs: C++
+helpviewer_keywords: A2039
 ms.assetid: ad8cdaae-b20d-45f0-acb1-79880979c6b7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d2ca1664f5fc275d303a9db47b34c1bc23cb5a37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**列太長**  
+# <a name="ml-nonfatal-error-a2039"></a>ML 非嚴重錯誤 A2039
+**行太長**  
   
- 原始程式檔行超過 512 個字元的限制。  
+ 來源檔案行超過 512 個字元的限制。  
   
- 多個實體行都串連利用行接續字元 \(\\\)，然後產生邏輯程式敘述行仍然限制在 512 個字元。  
+ 如果使用行接續字元 (\) 串連多個實體的線條，產生邏輯程式敘述行則仍會限制為 512 個字元。  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>另請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

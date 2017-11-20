@@ -1,42 +1,40 @@
 ---
-title: "異動：在一個資料錄集內執行異動 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "異動, 更新資料錄集"
+title: "異動： 執行交易集中的資料錄 (ODBC) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1451775374b94bbefb6396e7afeda2396df84ba4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 異動：在一個資料錄集內執行異動 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本主題說明如何在一個資料錄集內執行交易。  
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>異動：在一個資料錄集內執行異動 (ODBC)
+本主題說明如何在資料錄集執行交易。  
   
 > [!NOTE]
->  只支援單層交易，您不能使用巢狀交易。  
+>  只有一個層級的交易支援。您無法巢狀交易。  
   
-#### 若要在資料錄集內執行交易  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>若要執行交易集中的資料錄  
   
-1.  呼叫 `CDatabase` 物件的 **BeginTrans** 成員函式。  
+1.  呼叫`CDatabase`物件的**BeginTrans**成員函式。  
   
-2.  若您沒有實作大量資料列擷取，則需要多次呼叫相同資料庫內一個或多個資料錄集物件的 **AddNew\/Update**、**Edit\/Update** 和 **Delete** 成員函式。  如需詳細資訊，請參閱[資料錄集：加入、更新和刪除資料錄 \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。  若您有實作大量資料列擷取，您必須撰寫您自己的函式以更新資料來源。  
+2.  如果您未實作大量資料列擷取，呼叫**AddNew/更新**，**編輯/更新**，和**刪除**相同的一或多個資料錄集物件的成員函式資料庫所需的次數。 如需詳細資訊，請參閱[資料錄集： 加入、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)。 如果您已實作大量資料列擷取，您必須撰寫您自己的函式來更新資料來源。  
   
-3.  最後，呼叫 `CDatabase` 物件的 **CommitTrans** 成員函式。  如果其中一個更新發生錯誤，或您決定取消此變更，請呼叫其 **Rollback** 成員函式。  
+3.  最後，呼叫`CDatabase`物件的**CommitTrans**成員函式。 如果其中一個更新中發生錯誤，或您決定要取消的變更，請呼叫其**復原**成員函式。  
   
- 以下的範例使用兩個資料錄集以便從學校的註冊資料庫中刪除學生的入學登記，從所有類別中移除已入學的學生。  因為在兩個資料錄集中的 **Delete** 呼叫都必須成功，所以需要一筆交易。  範例會假設已存在有連結至資料來源的 `CDatabase` 型別的成員變數 \(Member Variable\) `m_dbStudentReg` 以及資料錄類別 `CEnrollmentSet` 和 `CStudentSet`。  `strStudentID` 變數包含自使用者取得的值。  
+ 下列範例會使用兩個資料錄集，一位學生註冊刪除學校註冊資料庫，移除從學生已註冊的所有類別。 因為**刪除**中這兩個資料錄集的呼叫都必須成功，必須指定交易。 此範例假設存在`m_dbStudentReg`，類型的成員變數`CDatabase`已經連接到資料來源和資料錄集類別`CEnrollmentSet`和`CStudentSet`。 `strStudentID`變數包含從使用者取得的值。  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -89,10 +87,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  再次呼叫 **BeginTrans** 卻沒有呼叫 **CommitTrans** 或 **Rollback** 是個錯誤。  
+>  呼叫**BeginTrans**一次而不需呼叫**CommitTrans**或**復原**是錯誤。  
   
-## 請參閱  
- [異動 \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [異動：異動如何影響更新 \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../../mfc/reference/crecordset-class.md)
+## <a name="see-also"></a>另請參閱  
+ [異動 (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [異動： 異動如何影響更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [CDatabase 類別](../../mfc/reference/cdatabase-class.md)   
+ [CRecordset 類別](../../mfc/reference/crecordset-class.md)

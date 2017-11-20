@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4764
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4764
+f1_keywords: C4764
+dev_langs: C++
+helpviewer_keywords: C4764
 ms.assetid: 7bd4296f-966b-484c-bf73-8dbc8e85b4a9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 65478a4784144b2557fdb1a3aa19307e812ec664
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 25f04d579d5f34d78197beacc262df482029b5c5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4764"></a>編譯器警告 (層級 4) C4764
 無法對齊超過 16 位元組的攔截物件  

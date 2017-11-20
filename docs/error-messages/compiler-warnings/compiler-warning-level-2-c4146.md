@@ -1,47 +1,45 @@
 ---
-title: "編譯器警告 (層級 2) C4146 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4146"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4146"
+title: "編譯器警告 （層級 2） C4146 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4146
+dev_langs: C++
+helpviewer_keywords: C4146
 ms.assetid: d6c31ab1-3120-40d5-8d80-32b5f7046e32
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6f88b4e0dde56bc63619257264d46a7d2770fa58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 2) C4146
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-一元減號運算子套用 unsigned 型別，所得的結果也會是 unsigned 型別  
+# <a name="compiler-warning-level-2-c4146"></a>編譯器警告 （層級 2） C4146
+一元減號運算子套用至不帶正負號的類型，所得的結果不帶正負號  
   
- 不帶正負號型別只能保留非負數值，所以一元 \(Unary\) 減號 \(否定\) 套用至不帶正負號型別是沒有意義的動作。  運算元和結果兩者都是非負數的。  
+ 不帶正負號的類型可以保有只非負數值，而使一元減號 （負） 通常是毫無意義，當套用至不帶正負號的類型。 運算元和結果都是非負數。  
   
- 事實上，這種情形發生在程式設計人員試著表示最小整數值 \(\-2147483648\) 時。  這個值不能寫成 \-2147483648，因為運算式以兩階段處理：  
+ 實際上，這是當程式設計人員想要表示的最小整數值，其為-2147483648。 作為-2147483648 無法寫入此值，因為運算式會處理兩個階段：  
   
-1.  計算出 2147483648 數字。  因為它比最大值 2147483647 還要大，所以 2147483648 的型別不是 [int](../../c-language/integer-types.md)，而是 `unsigned int`。  
+1.  數字 2147483648 會加以評估。 因為它大於 2147483647 的最大整數值，2147483648 類型不[int](../../c-language/integer-types.md)，但`unsigned int`。  
   
-2.  一元減號套用至此不帶正負號結果的值，碰巧它也是 2147483648。  
+2.  一元減號會套用到的值，與不帶正負號的結果，也就是 2147483648 也會發生。  
   
- 不帶正負號型別的結果可能導致未預期的行為。  如果該結果會用來比較，那麼便可能使用不帶正負號的比較，例如，當另一個運算元是 `int` 時。  這點說明了為什麼下列的程式範例只會列印一行。  
+ 結果的不帶正負號型別可能會導致非預期的行為。 如果在比較時，使用該結果，則不帶正負號的比較可能會使用，例如，當另一個運算元是`int`。 本節將說明為什麼下列的程式範例只會列印一行。  
   
- 必須要有的第二行 `1 is greater than the most negative int` 並沒有列印出來，因為 `((unsigned int)1) > 2147483648`  是 False。  
+ 預期的第二行`1 is greater than the most negative int`，因為未列印`((unsigned int)1) > 2147483648`為 false。  
   
- 您可以使用 limits.h 的 INT\_MIN \(具有型別 **signed int**\)，避免產生 C4146。  
+ 您可以使用 INT_MIN limits.h，具有類型，以避免 C4146**帶正負號 int**。  
   
-## 範例  
- 下列範例會產生 C4146：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C4146:  
   
 ```  
 // C4146.cpp  

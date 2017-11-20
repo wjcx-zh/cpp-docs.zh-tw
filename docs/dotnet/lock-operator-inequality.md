@@ -1,36 +1,34 @@
 ---
-title: "lock::operator!= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock.operator!="
-  - "msclr.lock.operator!="
-  - "msclr::lock::operator!="
-  - "lock::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::operator!="
+title: "lock::operator ！ = |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock.operator!=
+- msclr.lock.operator!=
+- msclr::lock::operator!=
+- lock::operator!=
+dev_langs: C++
+helpviewer_keywords: lock::operator!=
 ms.assetid: ed1d674e-9ee9-4257-8a7e-2e3567d50222
-caps.latest.revision: 6
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 090d461a8f11d47d25119f5949f9f570093244fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# lock::operator!=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lockoperator"></a>lock::operator!=
 不等比較運算子。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class T> bool operator!=(  
@@ -38,14 +36,14 @@ template<class T> bool operator!=(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `t`  
- 要比較的物件是否不相等。  
+ 要比較不相等的物件。  
   
-## 傳回值  
- 傳回 `true` ，如果 `t` 等於鎖定的物件不同，否則為 `false` 。  
+## <a name="return-value"></a>傳回值  
+ 傳回`true`如果`t`鎖定的物件不同`false`否則。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_lock_op_ineq.cpp  
@@ -66,12 +64,15 @@ int main () {
 }  
 ```  
   
-  **不相等\!**   
-## 需求  
- **標頭檔** \<msclr \\ lock.h\>  
+```Output  
+Inequal!  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\lock.h >  
   
-## 請參閱  
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
  [lock 成員](../dotnet/lock-members.md)   
- [lock::operator\=\=](../dotnet/lock-operator-equality.md)
+ [lock::operator==](../dotnet/lock-operator-equality.md)

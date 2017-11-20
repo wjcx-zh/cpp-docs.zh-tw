@@ -1,35 +1,34 @@
 ---
-title: "如何：在 C++/CLI 中使用屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "屬性 [C++], 簡單"
-  - "簡單屬性"
+title: "如何： 使用屬性在 C + + CLI |Microsoft 文件"
+ms.custom: 
+ms.date: 07/21/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- simple properties
+- properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 70a048669aeba007ee0ca50459f7bbb4b090ea79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中使用屬性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文將 C\+\+\/CLI 將示範如何使用屬性。  
+# <a name="how-to-use-properties-in-ccli"></a>如何：在 C++/CLI 中使用屬性
+本文將說明如何使用屬性在 C + + /CLI。  
   
-## 基底屬性  
- 對於基本屬性那些該只指定及擷取成員您不需要明確定義 get 和 set 存取子函式的私用資料，因為編譯器會自動提供這些屬性，將屬性的資料型別。  這個程式碼會示範基本屬性:  
+## <a name="basic-properties"></a>基本內容  
+ 基本屬性 — 只指派和擷取私用資料成員 — 您不需要明確定義 get 和設定存取子函式，因為編譯器會自動提供這些資料類型的屬性時。 此程式碼示範基本的屬性：  
   
-```  
+```cpp  
 // SimpleProperties.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -46,13 +45,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **C\# 大小\>\= 111**   
-## 靜態屬性  
- 這個程式碼範例示範如何宣告和使用一個靜態屬性。一個靜態屬性只能存取該類別的靜態成員。  
-  
+```Output  
+c->Size = 111  
 ```  
+  
+## <a name="static-properties"></a>靜態屬性  
+ 此程式碼範例示範如何宣告和使用靜態屬性。  靜態屬性只能存取其類別的靜態成員。  
+  
+```cpp  
 // mcppv2_property_3.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,22 +84,21 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **96**  
-**47**   
-## 索引屬性  
- 索引的屬性通常會使用其他的運算子，存取的資料結構。  
-  
- 如果您正在使用預設索引屬性，您可以參考類別名稱存取資料結構，，但是，如果您使用使用者定義的索引屬性，您必須指定屬性名稱存取資料結構。  
-  
- 使用 `this` 指標，如需如何存取預設索引子的詳細資訊，請參閱 [實值類型和參考類型中 this 指標的語意](../misc/semantics-of-the-this-pointer-in-value-and-reference-types.md)。  
-  
- 如需如何使用以 C\# 撰寫的索引子的詳細資訊，請參閱 [如何：使用 C\# 索引子](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。  
-  
- 這個程式碼範例示範如何使用預設和使用者定義的索引屬性:  
-  
+```Output  
+96  
+47  
 ```  
+  
+## <a name="indexed-properties"></a>索引的屬性  
+ 索引的屬性通常會公開使用註標運算子來存取的資料結構。  
+  
+ 如果您使用的預設索引的屬性，您可以存取的資料結構只是藉由參考類別名稱，但如果您使用使用者定義的索引的屬性，您必須指定要存取的資料結構的屬性名稱。  
+  
+ 如需如何使用索引子以 C# 撰寫的資訊，請參閱[How to： 使用 C# 索引子 (C + + /CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)。  
+  
+ 此程式碼範例示範如何使用預設和使用者定義索引的屬性：  
+  
+```cpp  
 // mcppv2_property_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -155,12 +154,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **\[ 0 1 2 3 4 \]**  
-**\[ 0 2 4 6 8 \]** 使用 `this` 指標，下一個範例示範如何呼叫預設索引子。  
-  
+```Output  
+[ 0 1 2 3 4 ]  
+[ 0 2 4 6 8 ]  
 ```  
+  
+ 下一個範例示範如何使用呼叫的預設索引子`this`指標。  
+  
+```cpp  
 // call_default_indexer_through_this_pointer.cpp  
 // compile with: /clr /c  
 value class Position {  
@@ -182,9 +183,9 @@ private:
 };  
 ```  
   
- 這個範例示範如何使用 <xref:System.Reflection.DefaultMemberAttribute> 指定預設索引子:  
+ 這個範例示範如何使用<xref:System.Reflection.DefaultMemberAttribute>指定的預設索引子：  
   
-```  
+```cpp  
 // specify_default_indexer.cpp  
 // compile with: /LD /clr  
 using namespace System;  
@@ -198,9 +199,9 @@ public ref struct Squares {
 };  
 ```  
   
- 在上述範例中建立的下一個範例使用中繼資料。  
+ 下一個範例會使用在上述範例中建立的中繼資料。  
   
-```  
+```cpp  
 // consume_default_indexer.cpp  
 // compile with: /clr  
 #using "specify_default_indexer.dll"  
@@ -210,13 +211,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
- **9**   
-## 虛擬屬性  
- 這個程式碼範例示範如何宣告和使用虛擬屬性:  
-  
+```Output  
+9  
 ```  
+  
+## <a name="virtual-properties"></a>虛擬屬性  
+ 此程式碼範例示範如何宣告和使用虛擬屬性：  
+  
+```cpp  
 // mcppv2_property_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -255,16 +257,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **93**  
-**43**   
-## 抽象和密封屬性  
- 雖然 [abstract](../windows/abstract-cpp-component-extensions.md) 和 [sealed](../windows/sealed-cpp-component-extensions.md) 關鍵字指定，因為在 ECMA C\+\+\/CLI 規格的有效，的 Visual C\+\+ 編譯器，您無法指定它們在一般屬性，也不是一個重要屬性的屬性宣告。  
-  
- 若要宣告密封或抽象屬性，您可以在 get 和 set 存取子函式必須定義一個重要的屬性會指定 `abstract` 或 `sealed` 關鍵字。  
-  
+```Output  
+93  
+43  
 ```  
+  
+## <a name="abstract-and-sealed-properties"></a>抽象和密封屬性  
+ 雖然[抽象](../windows/abstract-cpp-component-extensions.md)和[密封](../windows/sealed-cpp-component-extensions.md)關鍵字會指定為有效的 ECMA C + + CLI 規格，對於 Visual c + + 編譯器，您不能指定它們簡單式屬性，也不在屬性上非簡單式屬性的宣告。  
+  
+ 若要宣告密封或抽象屬性，您必須定義非簡單式屬性，然後指定`abstract`或`sealed`上 get 的關鍵字，並設定存取子函式。  
+  
+```cpp  
 // properties_abstract_sealed.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -320,14 +323,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **86**  
-**87**   
-## 多維屬性  
- 您可以使用多維屬性定義屬性接受非標準數字的存取子方法。  
-  
+```Output  
+86  
+87  
 ```  
+  
+## <a name="multidimensional-properties"></a>多維屬性  
+ 您可以使用多維度的屬性來定義使用非標準的數目的參數的屬性存取子方法。  
+  
+```cpp  
 // mcppv2_property_5.cpp  
 // compile with: /clr  
 ref class X {  
@@ -363,13 +367,14 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **1.1**   
-## 多載化、屬性存取子  
- 下列範例說明如何多載索引屬性。  
-  
+```Output  
+1.1  
 ```  
+  
+## <a name="overloading-property-accessors"></a>多載屬性存取子  
+ 下列範例會示範如何多載索引的屬性。  
+  
+```cpp  
 // mcppv2_property_6.cpp  
 // compile with: /clr  
 ref class X {  
@@ -399,9 +404,10 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+3.4  
+6.8  
+```  
   
-  **3.4**  
-**6.8**   
-## 請參閱  
- [property](../windows/property-cpp-component-extensions.md)
+## <a name="see-also"></a>另請參閱  
+ [屬性](../windows/property-cpp-component-extensions.md)

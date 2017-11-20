@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +12,20 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF::CD2DSizeF
 - AFXRENDERTARGET/CD2DSizeF::IsNull
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 395480259f1ff89408b7ecedba5be111f6b7e41c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a64798f2b89cf43451fffff1ccf18d1981e55b55
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 類別
 D2D1_SIZE_F 包裝函式。  
@@ -113,4 +110,3 @@ operator CSize();
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

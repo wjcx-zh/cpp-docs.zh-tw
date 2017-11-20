@@ -1,41 +1,39 @@
 ---
-title: "stack::top_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::top_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "top_item 成員 [STL/CLR]"
+title: "stack::top_item (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::top_item
+dev_langs: C++
+helpviewer_keywords: top_item member [STL/CLR]
 ms.assetid: 01571acf-4880-44c4-80c4-bd91408a032d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8138ce1d0eb313f5e84c374a35b6e9e0d58ef909
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# stack::top_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stacktopitem-stlclr"></a>stack::top_item (STL/CLR)
 存取最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 property value_type top_item;  
 ```  
   
-## 備註  
- 屬性存取受控制序列的最後一個項目，此序列不能為空序列。  當您知道它存在時，您可用它來讀取或寫入最後一個項目。  
+## <a name="remarks"></a>備註  
+ 屬性存取受控制的序列必須為非空白的最後一個元素。 您可以使用它來讀取或寫入的最後一個項目，當您知道它存在。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_top_item.cpp   
@@ -68,14 +66,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**top\_item \= c**  
- **a b x**   
-## 需求  
- **標頭：** \<cliext\/stack\>  
+```Output  
+ a b c  
+top_item = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [stack::top](../dotnet/stack-top-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)

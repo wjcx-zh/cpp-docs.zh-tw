@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __unaligned_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __unaligned keyword [C++]
+f1_keywords: __unaligned_cpp
+dev_langs: C++
+helpviewer_keywords: __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9f899add9a1306344a10840220f3b7504e917d91
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 1c148803da11ea85857cb77753d2e6af6a6ae22e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unaligned"></a>__unaligned
 當您使用 `__unaligned` 修飾詞宣告指標時，編譯器會假設指標位址資料並未對齊。 因此，對於以 Itanium 處理器系列 (Itanium Processor Family，IPF) 電腦為目標的應用程式，編譯器會產生一次讀取一個未對齊之資料位元組的程式碼。  

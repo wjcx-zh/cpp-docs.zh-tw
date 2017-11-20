@@ -1,45 +1,46 @@
 ---
-title: "ATL 登錄元件 (登錄器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 登錄器"
-  - "ATL, 登錄"
-  - "登錄器指令碼 [ATL]"
-  - "登錄, 存取"
-  - "登錄, 登錄器"
-  - "指令碼, 登錄指令碼"
-  - "指令碼, 登錄器指令碼"
+title: "ATL 登錄元件 （登錄器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, registry scripting
+- ATL, registry
+- registrar scripts [ATL]
+- registry, accessing
+- ATL Registrar
+- scripts, Registrar scripts
+- registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f30254c1c18f49bf7e125fc855a32e9e8d2b8154
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ATL 登錄元件 (登錄器)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ATL 管理員會將自訂介面對系統登錄的最佳化的存取。  管理員無限制執行緒並允許靜態連接 C\+\+ 用戶端的程式碼。  
+# <a name="atl-registry-component-registrar"></a>ATL 登錄元件 (登錄器)
+ATL 登錄器最佳化存取系統登錄的自訂介面。 在註冊機構是 無限制執行緒，可讓靜態連結的程式碼針對 c + + 用戶端。  
   
 > [!NOTE]
->  ATL 管理員的原始程式碼可以在 atlmfc \\ Include \\ atliface.h 找到。  
+>  ATL 登錄器的原始程式碼位於 atlmfc\include\atliface.h。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本章節內容  
  [建立登錄器指令碼](../atl/creating-registrar-scripts.md)  
- 要建立登錄器指令碼的指引。  使用可取代的參數和叫用指令碼，包括在 BNF 文法的主題，剖析樹狀結構，註冊指令碼，範例。  
+ 建立登錄器指令碼時的指南。 包含主題 BNF 語法，剖析樹狀結構、 登錄指令碼範例，使用可置換的參數，並叫用指令碼。  
   
- [設定靜態連結管理員程式碼 \(僅限 C\+\+\)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- 列出步驟設定連結管理員的靜態。  
+ [設定靜態連結的註冊機構的程式碼 （只有 c + +）](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+ 列出的步驟來設定靜態連結至註冊機構。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [ATL](../atl/active-template-library-atl-concepts.md)  
- 使用 Active Template Library，提供概念性主題連結說明如何撰寫程式。
+ 提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。
+

@@ -1,55 +1,54 @@
 ---
-title: "__svm_stgi | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__svm_stgi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__svm_stgi 內建"
-  - "STGI 指令"
+title: "__svm_stgi |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __svm_stgi
+dev_langs: C++
+helpviewer_keywords:
+- __svm_stgi intrinsic
+- STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e76d0cda4dfe1644c590c555d9589c17b67686a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# __svm_stgi
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="svmstgi"></a>__svm_stgi
+**Microsoft 特定的**  
   
- 設定通用的插斷旗標。  
+ 設定全域中斷旗標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void __svm_stgi(void);  
 ```  
   
-## 備註  
- `__svm_stgi`函式相當於`STGI`機器指令。  通用的插斷旗標決定微處理器會略過、 方面會延，或處理事件，例如 I\/O 完成、 硬體溫度警示或偵錯例外受限於插斷。  
+## <a name="remarks"></a>備註  
+ `__svm_stgi`函數即相當於`STGI`機器指令。 全域中斷旗標會判斷微處理器會忽略，延後，或處理等 I/O 完成、 硬體溫度警示或偵錯例外狀況事件，而中斷。  
   
- 這個函式會以來賓作業系統與它的應用程式支援主應用程式的虛擬機器監視器的互動。  如需詳細資訊，搜尋的文件中，"AMD64 架構程式設計人員手動磁碟區 2: 系統程式設計 」 在記錄號碼 24593，修訂 3.11， [AMD 公司](http://go.microsoft.com/fwlink/?LinkId=23746)站台。  
+ 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746)站台。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__svm_stgi`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__svm_stgi`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 結束 Microsoft 特定  
+**END Microsoft 特定的**  
   
-## 請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)   
- [\_\_svm\_clgi](../intrinsics/svm-clgi.md)
+## <a name="see-also"></a>另請參閱  
+ [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
+ [__svm_clgi](../intrinsics/svm-clgi.md)

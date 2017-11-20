@@ -1,40 +1,38 @@
 ---
-title: "CRowset::Delete | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::Delete"
-  - "CRowset.Delete"
-  - "CRowset::Delete"
-  - "ATL.CRowset.Delete"
-  - "ATL::CRowset<TAccessor>::Delete"
-  - "CRowset<TAccessor>.Delete"
-  - "CRowset<TAccessor>::Delete"
-  - "ATL.CRowset<TAccessor>.Delete"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Delete 方法"
+title: "Crowset:: Delete |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::Delete
+- CRowset.Delete
+- CRowset::Delete
+- ATL.CRowset.Delete
+- ATL::CRowset<TAccessor>::Delete
+- CRowset<TAccessor>.Delete
+- CRowset<TAccessor>::Delete
+- ATL.CRowset<TAccessor>.Delete
+dev_langs: C++
+helpviewer_keywords: Delete method
 ms.assetid: 4feb4f7e-139f-489a-b7d5-ea6ec0058e0f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2fd2839c4d6ff552658024e2b75b3ddba3cf1df1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::Delete
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) 從資料列集刪除目前的資料列。  
+# <a name="crowsetdelete"></a>CRowset::Delete
+呼叫[irowsetchange:: Deleterows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)從資料列集刪除目前的資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -42,11 +40,11 @@ HRESULT Delete( ) const throw( );
   
 ```  
   
-## 傳回值  
- 標準版 `HRESULT`  
+## <a name="return-value"></a>傳回值  
+ 標準 `HRESULT`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __clrcall_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __clrcall keyword [C++]
+f1_keywords: __clrcall_cpp
+dev_langs: C++
+helpviewer_keywords: __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 10e0835064298306c4fa53d4d15f59ecc6c73217
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d216e196f4b23deb7916bd4d9255c32d782ababb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="clrcall"></a>__clrcall
 **Microsoft 特定的**  

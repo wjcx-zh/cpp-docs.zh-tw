@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- do_cpp
-dev_langs:
-- C++
+f1_keywords: do_cpp
+dev_langs: C++
 helpviewer_keywords:
 - do keyword [C++], do-while
 - do-while keyword [C++]
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 8c81bbeea9f841a834d59186017b2932f83de862
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b9ef52e04bd855824e709c66693cb989a18b1283
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="do-while-statement-c"></a>do-while 陳述式 (C++)
 執行*陳述式*重複直到指定的終止條件 (*運算式*) 會評估為零。  

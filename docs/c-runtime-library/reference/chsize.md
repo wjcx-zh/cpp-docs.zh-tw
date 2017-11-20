@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _chsize
+apiname: _chsize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _chsize
-dev_langs:
-- C++
+f1_keywords: _chsize
+dev_langs: C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -34,30 +30,15 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: f232929282b8884f1362985d9c9b68bf0fc5a1cf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="chsize"></a>_chsize
 變更檔案大小。 已有更安全的版本可用；請參閱 [_chsize_s](../../c-runtime-library/reference/chsize-s.md)。  
@@ -79,7 +60,7 @@ int _chsize(
  檔案的新長度 (位元組)。  
   
 ## <a name="return-value"></a>傳回值  
- 如果已成功變更檔案大小，則 `_chsize` 會傳回值 0。 傳回值-1 表示錯誤︰`errno`設`EACCES`如果指定的檔案已鎖定，無法存取，為`EBADF`如果指定的檔案是唯讀，或描述項無效，`ENOSPC`如果沒有空間保留在裝置上，或`EINVAL`如果`size`小於零。  
+ 如果已成功變更檔案大小，則 `_chsize` 會傳回值 0。 傳回值-1 表示錯誤：`errno`設`EACCES`如果指定的檔案已鎖定，無法存取，為`EBADF`如果指定的檔案是唯讀，或描述項無效，`ENOSPC`如果沒有空間保留在裝置或`EINVAL`如果`size`小於零。  
   
  如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   

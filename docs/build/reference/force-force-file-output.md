@@ -1,67 +1,66 @@
 ---
-title: "/FORCE (強制檔案輸出) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ForceLink"
-  - "/force"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FORCE 連結器選項"
-  - "連結器中的檔案輸出"
-  - "FORCE 連結器選項"
-  - "-FORCE 連結器選項"
+title: "-FORCE （強制檔案輸出） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ForceLink
+- /force
+dev_langs: C++
+helpviewer_keywords:
+- FORCE linker option
+- file output in linker
+- /FORCE linker option
+- -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2990ff88e896c7cafb3ff8eb2d9acf149d7a90c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /FORCE (強制檔案輸出)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="force-force-file-output"></a>/FORCE (強制檔案輸出)
 ```  
 /FORCE:[MULTIPLE|UNRESOLVED]  
 ```  
   
-## 備註  
- \/FORCE 選項是告訴連結器即使參考到一個未定義或多重定義的符號，也要建立一個有效的 .exe 檔或 DLL。  
+## <a name="remarks"></a>備註  
+ /FORCE 選項會告訴連結器，以建立有效的.exe 檔或 DLL 即使符號參考但未定義或多重定義。  
   
- \/FORCE 選項可以接受選擇性 \(Optional\) 引數：  
+ /FORCE 選項可以接受選擇性引數：  
   
--   不論 LINK 是否找到符號有一個以上的定義，使用 \/FORCE:MULTIPLE 都會建立輸出檔。  
+-   使用 /force: multiple 都會建立輸出檔，不論是否連結找到一個以上的符號定義。  
   
--   不論 LINK 是否找到未定義的符號，使用 \/FORCE:UNRESOLVED 都會建立輸出檔。如果未解析進入點符號，則會忽略 \/FORCE:UNRESOLVED。  
+-   使用 /FORCE： 無法解析的連結會尋找未定義的符號是否建立輸出檔。 / 強制： 無法解析未解析進入點符號是否會被忽略。  
   
- 不加引數的 \/FORCE 意味著符號多次定義和未解析。  
+ / 不使用引數的強制表示這兩個多和未解析。  
   
- 用這個選項所建立的檔案可能無法依預期狀況執行。  指定 \/FORCE 選項時連結器將不會以累加方式連結。  
+ 此選項以建立的檔案可能無法如預期執行。 指定 /FORCE 選項時，連結器會以累加方式連結。  
   
- 如果模組是以 **\/clr** 編譯，**\/FORCE** 將不會建立影像。  
+ 如果使用編譯的模組**/clr**， **/強制**將不會建立映像。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[連結器\] 資料夾。  
+2.  按一下**連結器**資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中輸入選項。  
+4.  輸入到選項**其他選項**方塊。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - float keyword [C++]
 - char keyword [C++]
@@ -44,16 +42,15 @@ helpviewer_keywords:
 - long int keyword [C++]
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 372d65a3d862fee4fddc2c9ba67c94341d1a6c87
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="data-type-ranges"></a>資料類型範圍
 Visual C++ 32 位元和 64 位元編譯器會辨識本文稍後所提供表格中的類型。  

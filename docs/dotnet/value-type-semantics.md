@@ -1,42 +1,42 @@
 ---
-title: "實值類型語意 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__pin 關鍵字"
-  - "繼承, 實值類型"
-  - "interior_ptr 關鍵字 [C++]"
-  - "pin_ptr 關鍵字 [C++]"
-  - "Pin 指標"
-  - "虛擬函式, 實值類型"
+title: "值的類型語意 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- interior_ptr keyword [C++]
+- virtual functions, value types
+- inheritance, value types
+- pinning pointers
+- pin_ptr keyword [C++]
+- __pin keyword
 ms.assetid: 7f065589-ad25-4850-baf1-985142e35e52
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d04f84fa98c61161bc7f03eb5b38004e6d6659cb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 實值類型語意
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，實值型別 \(Value Type\) 語意已變更。  
+# <a name="value-type-semantics"></a>實值類型語意
+實值類型語意已從 Managed Extensions for c + + Visual c + +。  
   
- 下列是在 Managed Extensions for C\+\+ 規格中所使用的標準簡單實值型別：  
+ 以下是用於 Managed Extensions for c + + 規格的標準簡單實值類型：  
   
 ```  
 __value struct V { int i; };  
 __gc struct R { V vr; };  
 ```  
   
- 在 Managed Extensions 中，一種實值型別可以擁有四種語法變數 \(其中形式 2 和 3 的語意相同\)：  
+ 在 Managed Extensions，我們可以有四種語法變化，實值類型 （其中 2 和 3 的表單是相同語意）：  
   
 ```  
 V v = { 0 };       // Form (1)  
@@ -45,54 +45,54 @@ V __gc *pvgc = 0;  // Form (3)
 __box V* pvbx = 0; // Form (4) must be local   
 ```  
   
-## 叫用繼承的虛擬方法  
- `Form (1)` 是標準值物件，而且已獲得適當的充分暸解，但是當某人嘗試叫用如 `ToString()` 之類之繼承的虛擬方法時例外。  例如：  
+## <a name="invoking-inherited-virtual-methods"></a>叫用繼承虛擬方法  
+ `Form (1)`不標準值物件，而且它是合理充分了解，除了當有人嘗試叫用的繼承虛擬方法時，例如`ToString()`。 例如：  
   
 ```  
 v.ToString(); // error!  
 ```  
   
- 如果要叫用此方法，由於並未在 `V` 中覆寫此方法，因此編譯器必須擁有相關基底類別之虛擬資料表的存取權。  因為實值型別是缺少虛擬資料表之相關指標 \(vptr\) 的目前狀態中 \(in\-state\) 儲存體，因此會要求 Box 處理 `v`。  在 Managed Extensions 語言設計中，未支援隱含的 Boxing，但是必須由程式設計人員明確指定，如下所示  
+ 若要叫用此方法，因為它不會在 覆寫`V`，編譯器必須能夠存取基底類別的相關聯的虛擬資料表。 實值型別是沒有相關聯的指標至其虛擬資料表 (vptr) 的狀態中儲存體，因為這需要`v`會進行 boxed 處理。 在 Managed Extensions 語言設計中，隱含 boxing 不支援，但必須明確地指定程式設計人員，在  
   
 ```  
 __box( v )->ToString(); // Managed Extensions: note the arrow  
 ```  
   
- 此設計背後的主要動機具備教學意義：程式設計人員必須能夠看見基礎機制，使其了解不在實值型別中提供執行個體的「代價」。  如果 `V` 包含 `ToString` 的執行個體，就不一定需要 Boxing。  
+ 此設計背後的主要動機是教學： 基礎機制必須顯示程式設計人員，讓其了解的 '成本' 未提供值型別中的執行個體。 已`V`要包含的執行個體`ToString`，boxing 不是必要的。  
   
- 在新語法中，會移除明確 Boxing 物件的語彙複雜性，但不會移除 Boxing 本身的基礎代價：  
+ 明確 boxing 物件，但不是本身，boxing 的基礎成本的語彙複雜度會移除在新語法中：  
   
 ```  
 v.ToString(); // new syntax  
 ```  
   
- 但是至於在 `V` 中未提供 `ToString` 方法的明確執行個體的代價，則是可能會誤導類別設計工具。  慣用隱含 Boxing 的原因在於，通常類別設計工具只有一個，使用者卻有無限多個，如果沒有一個使用者可以自由修改 `V`，就可以消除可能很繁重的明確 Box。  
+ 代價是可能會產生誤解，類別設計工具中未提供明確的執行個體的成本有關`ToString`方法內`V`。 偏好的隱含 boxing 的原因是通常是一個類別設計工具，雖然有無限的數量的使用者，他會沒有自由地修改`V`消除可能很繁重的明確方塊。  
   
- 判定是否在實值類別中提供 `ToString` 之覆寫執行個體的準則，是執行個體的使用頻率和位置。  如果很少呼叫，當然在定義中就沒有什麼優勢。  同樣地，如果在應用程式的非效能區域中呼叫，加入執行個體也不會適當地加入至應用程式的一般效能。  此外，可以將追蹤處理代碼保持為 Boxed 值，則透過該處理代碼所做的呼叫就不需要 Boxing。  
+ 這是要判斷是否要提供的覆寫執行個體的準則`ToString`內值的頻率和它的使用位置，應該是類別。 如果呼叫很少，是當然其定義的好處。 同樣地，如果呼叫非高效能的應用程式區域中，將它加入會也不適當地加入至應用程式的一般效能。 或者，可以保持追蹤控制代碼為 boxed 值，並透過該控制代碼呼叫不會要求 boxing。  
   
-## 不再有實值類別預設建構函式  
- Managed Extensions 和新語法之間的另一項實值型別差異，則是後者已移除預設建構函式的支援。  原因是在執行期間，有時 CLR 可以不需要叫用相關的預設建構函式，就直接建立實值型別的執行個體。  也就是說，在 Managed Extensions 中，嘗試在實值型別中支援預設建構函式實際上無法獲得保證。  如果缺乏保證，那麼徹底刪除支援似乎比在應用程式中不具決定性來好。  
+## <a name="there-is-no-longer-a-value-class-default-constructor"></a>不再值類別預設建構函式  
+ 值型別之間受管理的擴充功能和新語法的另一個差異是支援的預設建構函式中移除。 這是因為有時候可以在其中 CLR 建立之值型別的執行個體而不叫用相關聯的預設建構函式執行期間。 也就是管理擴充功能下嘗試，以支援實值類型中的預設建構函式可能實際上不保證。 指定缺乏保證，它被認為比較適合將一併刪除支援，而不是具決定性其應用程式中。  
   
- 這並不像一開始看到的那麼糟。  這是因為會自動去除實值型別的每個物件 \(亦即每個型別都會初始化為其預設值\)。  因此，一定會定義本機執行個體的成員。  就這點看來，無法定義一般預設建構函式真的一點都不算是損失，而且事實上，當由 CLR 執行時還更有效率。  
+ 這不是一開始可能看起來如下的錯誤。 這是因為實值類型的每個物件會自動去除 （也就是每個型別會初始化為其預設值）。 如此一來，一定會未定義的本機執行個體成員。 就這個意義而言，定義 trivial 預設建構函式的能力遺失其實不會遺失所有-，事實上時由 CLR 執行更有效率。  
   
- 問題是當 Managed Extensions 的使用者定義非一般預設建構函式時。  這一點並未對應至新語法。  建構函式中的程式碼將需要遷移至具名初始化方法，而此方法之後需要由使用者明確叫用。  
+ 此問題時，受管理的擴充功能的使用者定義的非 trivial 預設建構函式。 這對於沒有對應至新語法。 建構函式中的程式碼必須是移轉至必須明確叫用由使用者命名的初始設定方法。  
   
- 新語法中的實值型別物件宣告則未變更。  此項目的缺點是，實值型別基於下列理由並未符合原生型別包裝的要求：  
+ 新語法中的實值類型物件的宣告則未變更。 這個缺點是實值型別並不令人滿意包裝原生類型的原因如下：  
   
--   在實值型別中沒有解構函式 \(Destructor\) 的支援。  也就是說，無法自動化物件存留期結束時所觸發的一組動作。  
+-   沒有任何支援的實值類型內的解構函式。 也就是說，沒有任何方法可以自動化的一組物件的存留期結束時所觸發的動作。  
   
--   原生類別只能當做指標內含於 Managed 型別中，此指標稍後會配置在原生堆積 \(Heap\) 上。  
+-   原生類別可以包含只在 managed 類型，然後會在原生堆積上配置的指標。  
   
- 我們想要將小的原生類別包裝於實值型別而非參考型別中，以避免重複堆積配置：原生堆積是用來存放原生型別，而 CLR 堆積是用來存放 Managed 包裝函式。  將原生類別包裝於實值型別中可以避免 Managed 堆積，但是無法自動化原生堆積記憶體的回收。  參考型別是唯一可在其中包裝非一般原生類別的 Managed 型別。  
+ 我們想要包裝在實值類型，而非參考類型以避免重複堆積配置的小型原生類別： 原生堆積以保存原生型別，與 CLR 堆積來保存 managed 包裝函式。 包裝原生類別實值類型可讓您避免受管理的堆積，但不提供任何方法來自動執行的原生堆積記憶體回收。 參考型別是在其中包裝非一般的原生類別只使其受管理的類型。  
   
-## 內部指標  
- 上述的 `Form (2)` 和 `Form (3)` 幾乎可以處理目前和以後的任何項目 \(亦即任何 Managed 或原生項目\)。  例如，因此在 Managed Extensions 中允許下列所有項目：  
+## <a name="interior-pointers"></a>內部指標  
+ `Form (2)`和`Form (3)`上方可以解決幾乎這個世界或下一個 （也就是任何 managed 或原生） 中任何項目。 因此，比方說，下列所有條件中允許受管理的擴充功能：  
   
 ```  
 __value struct V { int i; };  
 __gc struct R { V vr; };  
   
-V v = { 0 };  // Form (1)  
+V v = { 0 };  // Form (1)  
 V *pv = 0;  // Form (2)  
 V __gc *pvgc = 0;  // Form (3)  
 __box V* pvbx = 0;  // Form (4)  
@@ -107,11 +107,11 @@ pv = &r->vr;        // an interior pointer to value type within a
                     //    reference type on the managed heap  
 ```  
   
- 所以，`V*` 可以處理下列範圍內的位址：在區域區塊 \(因此可以依附\)、在全域範圍、在原生堆積中 \(例如，如果已刪除所處理的物件\)、在 CLR 堆積中 \(如果應該在記憶體回收期間遷移，因此應會追蹤\)，以及在 CLR 堆積的參考物件內部 \(如果呼叫，也會透明地追蹤內部指標\)。  
+ 因此，`V*`可以解決在本機的區塊內的位置，因此可以懸空在全域範圍內原生堆積 （例如，若其定址之物件已刪除），在 CLR 堆積 （且因此將會追蹤是否應該重新放置在記憶體回收期間），並參考 （內部指標，因為這個呼叫時，也會明確地追蹤） 到 CLR 堆積上物件的內部。  
   
- 在 Managed Extensions 中，無法區隔 `V*` 的原生部分，也就是說，將原生部分視為內含物，因而處理在 Managed 堆積上為物件或子物件定址的可能性。  
+ 在 Managed Extensions，沒有任何方法可以區分出的原生的層面`V*`; 也就是說，它會被視為在其內含處理它定址的物件或子物件，在 managed 堆積上的可能性。  
   
- 在新語法中，實值型別指標分成兩種型別：限制在非 CLR 堆積位置的 `V*`，以及允許但是不需要 Managed 堆積中位址的內部指標 `interior_ptr<V>`。  
+ 在新語法中，實值類型指標納入兩種類型： `V*`，這是僅包含非 CLR 堆積位置，以及內部指標， `interior_ptr<V>`，允許但不需要在受管理的堆積內的位址。  
   
 ```  
 // may not address within managed heap   
@@ -121,13 +121,13 @@ V *pv = 0;
 interior_ptr<V> pvgc = nullptr;   
 ```  
   
- Managed Extensions 的 `Form (2)` 和 `Form (3)` 對應至 `interior_ptr<V>`。  `Form (4)` 是追蹤控制代碼。  它會處理已在 Managed 堆積中 Box 的整個物件。  在新語法中會轉譯為 `V^`。  
+ `Form (2)`和`Form (3)`管理延伸模組的對應到`interior_ptr<V>`。 `Form (4)`是追蹤控制代碼。 針對整個 managed 堆積中具有已 box 的物件。 它就會轉譯成新的語法中`V^`，  
   
 ```  
 V^ pvbx = nullptr; // __box V* pvbx = 0;    
 ```  
   
- Managed Extensions 中的下列宣告全部都會對應至新語法中的內部指標 \(這些內部指標是 `System` 命名空間中的實值型別\)。  
+ 所有對應至新的語法中的內部指標的 Managed Extensions 中的下列宣告。 (它們是實值類型內`System`命名空間。)  
   
 ```  
 Int32 *pi;   // => interior_ptr<Int32> pi;  
@@ -135,19 +135,19 @@ Boolean *pb; // => interior_ptr<Boolean> pb;
 E *pe;       // => interior_ptr<E> pe; // Enumeration  
 ```  
   
- 雖然內建型別的確是當做 `System` 命名空間中的型別別名，但卻未被視為 Managed 型別。  因此下列對應會在 Managed Extensions 和新語法之間保持為真：  
+ 內建型別不會考慮 managed 型別，雖然它們執行做為別名中的型別`System`命名空間。 因此下列對應成立之間受管理的擴充功能和新的語法：  
   
 ```  
 int * pi;     // => int* pi;  
 int __gc * pi2; // => interior_ptr<int> pi2;  
 ```  
   
- 轉譯現有程式中的 `V*` 時，最穩健的策略就是永遠將它變成 `interior_ptr<V>`。  這是在 Managed Extensions 中的處理方式。  在新語法中，程式設計人員可以選擇指定 `V*` 而非內部指標，藉此將實值型別限制為 Unmanaged 堆積位址。  如果轉譯程式時，可以為所有程式使用進行轉移終結，並且能夠確定沒有指派位址位於 Managed 堆積中，那麼保留為 `V*` 不會有問題。  
+ 轉譯時`V*`在現有的程式中，最保守的策略是一律將它以`interior_ptr<V>`。 這是如何處理受管理的擴充功能下。 在新語法中，程式設計人員的選項為未受管理的堆積位址限制實值類型，藉由指定`V*`而不是內部指標。 如果轉譯程式，您可以執行所有其使用可轉移結束，並確定沒有指派的位址是 managed 堆積中，然後讓它為`V*`是正常的。  
   
-## Pin 指標  
- 記憶體回收行程可以選擇將常駐於 CLR 堆積中的物件移動至堆積中的其他位置，而這通常是在壓縮階段進行。  這項移動對於追蹤控制代碼、追蹤參考以及透明地更新這些實體的內部指標而言都不是問題。  但是如果在執行階段環境以外，使用者已在 CLR 堆積上傳遞物件位址，這項移動就會造成問題。  在這種情況下，短暫移動物件可能會引起執行階段錯誤。  若要避免移動這類物件，必須針對物件外部使用的範圍，將物件區域性地 Pin 在位置上。  
+## <a name="pinning-pointers"></a>Pin 指標  
+ 記憶體回收行程可能會選擇性地移動通常是在壓縮階段位於堆積內的不同位置到 CLR 堆積的物件。 此移動不追蹤控制代碼，追蹤參考和內部指標以透明的方式更新這些實體的問題。 不過，如果使用者已傳遞物件位址以外的執行階段環境到 CLR 堆積上時，此動作將會有問題。 在此情況下，動態移動物件很可能會導致執行階段失敗。 豁免的物件，例如從正在移動，我們必須在本機將其釘選到其範圍外部使用的位置。  
   
- 在 Managed Extensions 中，會使用 `__pin` 關鍵字限定指標宣告，藉以宣告「*Pin 指標*」\(Pinning Pointer\)。  下列是從 Managed Extensions 規格稍做修改的範例：  
+ 在 Managed Extensions， *pin 指標*宣告限定名稱的指標宣告`__pin`關鍵字。 從 Managed Extensions 規格稍微修改範例如下：  
   
 ```  
 __gc struct H { int j; };  
@@ -157,11 +157,11 @@ int main()
    H * h = new H;  
    int __pin * k = & h -> j;  
   
-   // …  
+   // ...  
 };  
 ```  
   
- 在新的語言設計中，是使用類似內部指標的語法宣告 Pin 指標。  
+ 在新的語言設計中，是以類似的內部指標的語法來宣告 pin 指標。  
   
 ```  
 ref struct H  
@@ -175,15 +175,15 @@ int main()
    H^ h = gcnew H;  
    pin_ptr<int> k = &h->j;  
   
-   // …  
+   // ...  
 }  
 ```  
   
- 新語法中的 Pin 指標是特殊的內部指標。  Pin 指標仍具有原本的條件約束。  例如，不能當做參數使用，也不能當做方法的傳回型別，只能在區域物件 \(Local Object\) 上宣告。  不過在新語法中還增加了一些其他條件約束。  
+ 在新語法的 pin 指標是特殊的內部指標。 仍 pin 指標原始條件約束。 例如，它不能做為參數或方法的傳回型別它可以宣告本機物件上。 一些其他條件約束，不過，已加入新的語法。  
   
- Pin 指標的預設值是 `nullptr`，而不是 `0`。  `pin_ptr<>` 不能被指派或是初始化為 `0`。  需要將現有程式碼中的所有 `0` 的指派都變更為 `nullptr`。  
+ Pin 指標的預設值是`nullptr`，而非`0`。 A`pin_ptr<>`無法初始化或指派`0`。 所有的工作分派`0`現有程式碼中需要變更以`nullptr`。  
   
- Managed Extensions 中的 Pin 指標允許定址完整物件，如下列來自 Managed Extensions 規格的範例所示：  
+ 解決整個物件，如下列範例取自 Managed Extensions 規格允許受管理的擴充功能的 pin 指標：  
   
 ```  
 __gc class G {  
@@ -197,7 +197,7 @@ void f( G * g ) {
 };  
 ```  
   
- 在新語法中，不支援 Pin 由 `new` 運算式所傳回的完整物件。  反而需要 Pin 內部成員的位址。  例如：  
+ 在新語法中，釘選整個物件來傳回`new`不支援運算式。 而是需要釘選內部成員的位址。 例如：  
   
 ```  
 ref class G {  
@@ -214,8 +214,8 @@ void f( G^ g ) {
 }  
 ```  
   
-## 請參閱  
- [實值類型和行為 \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)   
- [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)
+## <a name="see-also"></a>另請參閱  
+ [實值類型和它們的行為 (C + + /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+ [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [interior_ptr (C + + /CLI)](../windows/interior-ptr-cpp-cli.md)   
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

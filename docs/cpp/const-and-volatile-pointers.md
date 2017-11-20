@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bebd757f304de2377ab2337e5b41a577a2b492b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: ebf8d12c7c3b0f9578724fe772f24c0bc8c845ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="const-and-volatile-pointers"></a>const 和 volatile 指標
 [Const](../cpp/const-cpp.md)和[volatile](../cpp/volatile-cpp.md)關鍵字會改變指標的處理方式。 **Const**關鍵字會指定在初始化之後，無法修改指標; 指標受到保護以避免之後修改。  
@@ -99,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  上述陳述式會宣告函式， [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中有兩的三個引數的類型指標`char`。 因為引數傳址方式傳遞而不依據值、 函式會是可用來修改這兩`strDestination`和`strSource`如果`strSource`未宣告為**const**。 宣告`strSource`為**const**確保呼叫端`strSource`式呼叫的函式不能變更。  
   
 > [!NOTE]
->  因為沒有標準轉換轉換*typename* ** \* **至**const** *typename* ** \***，它是合法的類型引數傳遞**char \* **至[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 不過，反向並不成立沒有隱含轉換存在移除**const**從物件或指標的屬性。  
+>  因為沒有標準轉換轉換*typename*  **\*** 至**const** *typename*  **\***，它是合法的類型引數傳遞**char \*** 至[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 不過，反向並不成立沒有隱含轉換存在移除**const**從物件或指標的屬性。  
   
  A **const**給定類型的指標可以指派給相同類型的指標。 不過，指標的不是**const**無法指派給**const**指標。 下列程式碼顯示正確和不正確的指派：  
   

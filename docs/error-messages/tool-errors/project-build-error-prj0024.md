@@ -1,33 +1,31 @@
 ---
-title: "專案建置錯誤 PRJ0024 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0024"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0024"
+title: "專案建置錯誤 PRJ0024 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0024
+dev_langs: C++
+helpviewer_keywords: PRJ0024
 ms.assetid: 8bde6368-6c1b-4e04-bc5e-3c6d0b8fa1d7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cfd51c58fa11ae19c014365dbfbc57c6cd7eb687
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 專案建置錯誤 PRJ0024
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-無法將 Unicode 路徑 'path' 轉譯為使用者的 ANSI 字碼頁。  
+# <a name="project-build-error-prj0024"></a>專案建置錯誤 PRJ0024
+Unicode 路徑 'path' 無法轉譯為使用者 ANSI 字碼頁。  
   
- ***path***  是路徑字串的原始 Unicode 版本。  在有 Unicode 路徑無法直接轉譯為目前系統字碼頁 \(Code Page\) 的 ANSI 的情況下，就會發生這種錯誤。  
+ ***路徑***是原始的 Unicode 版本的路徑字串。 這個錯誤可能的情況下是無法直接轉譯為 ANSI 目前的系統字碼頁的 Unicode 路徑。  
   
- 如果您使用不是在您電腦上之字碼頁的系統所開發的專案，也可能發生這種錯誤。  
+ 如果您正在使用所開發的專案上使用字碼頁不在您的電腦上的系統，可能會發生這個錯誤。  
   
- 針對這個錯誤的解決方法是，更新路徑來使用 ANSI 文字，或在您的電腦上安裝該字碼頁，並將它設為系統預設值。
+ 此錯誤的解決方法是，更新來使用 ANSI 文字，或在電腦上安裝的字碼頁，並將它設定為系統預設值的路徑。

@@ -1,41 +1,39 @@
 ---
-title: "multiset::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "參考成員 [STL/CLR]"
+title: "multiset:: reference (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: fb2bf992-d410-4b93-b087-cf2ac4b12e87
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34fc4ecb92e0d60715bcfa35ed41fc07f8e91574
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetreference-stlclr"></a>multiset::reference (STL/CLR)
 項目的參考類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## 備註  
- 型別描述的項目參考。  
+## <a name="remarks"></a>備註  
+ 此類型描述項目的參考。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multiset_reference.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標題:** \<cliext\/設定\>  
+```Output  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
-## 請參閱  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::const\_reference](../dotnet/multiset-const-reference-stl-clr.md)   
- [multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: const_reference (STL/CLR)](../dotnet/multiset-const-reference-stl-clr.md)   
+ [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

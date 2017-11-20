@@ -1,45 +1,42 @@
 ---
-title: "barrier | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "barrier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "barrier OpenMP directive"
+title: "屏障 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: barrier
+dev_langs: C++
+helpviewer_keywords: barrier OpenMP directive
 ms.assetid: 5c73ad4f-c768-443a-8f9e-4fd8bc2253c7
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4ce85fce6e4f1611381026bd365760b02d3d174f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# barrier
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-同步處理所有的執行緒在小組 ； 在障盾的所有執行緒都暫停，直到所有的執行緒執行的屏障。  
+# <a name="barrier"></a>barrier
+會同步處理所有執行緒在一個小組。在屏障的所有執行緒都暫停，直到所有執行緒都執行屏障。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma omp barrier  
 ```  
   
-## 備註  
- `barrier`指示詞可支援任何 OpenMP 子句。  
+## <a name="remarks"></a>備註  
+ `barrier`指示詞可支援不含 OpenMP 子句。  
   
- 如需詳細資訊，請參閱 [2.6.3 barrier Directive](../../../parallel/openmp/2-6-3-barrier-directive.md)。  
+ 如需詳細資訊，請參閱[2.6.3 barrier 指示詞](../../../parallel/openmp/2-6-3-barrier-directive.md)。  
   
-## 範例  
- 範例中，如何使用`barrier`，請參閱[master](../../../parallel/openmp/reference/master.md)。  
+## <a name="example"></a>範例  
+ 如需使用方式的範例`barrier`，請參閱[主要](../../../parallel/openmp/reference/master.md)。  
   
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

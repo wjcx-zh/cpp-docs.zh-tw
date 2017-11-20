@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - AGENTS/concurrency::message_processor::sync_send
 - AGENTS/concurrency::message_processor::wait
 - AGENTS/concurrency::message_processor::process_incoming_message
-dev_langs:
-- C++
-helpviewer_keywords:
-- message_processor class
+dev_langs: C++
+helpviewer_keywords: message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 9f93763a3d29e19feaa110b336c4cc9bb832539d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="messageprocessor-class"></a>message_processor 類別
 `message_processor` 類別是處理 `message` 物件的抽象基底類別。 訊息順序方面沒有一定的保證。  
@@ -63,7 +45,7 @@ class message_processor;
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |`type`|類型別名`T`。|  
   
@@ -71,15 +53,15 @@ class message_processor;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[async_send](#async_send)|在衍生類別中覆寫，將訊息置於區塊以非同步的方式。|  
-|[sync_send](#sync_send)|在衍生類別中覆寫，將訊息置於區塊以同步方式。|  
-|[等候](#wait)|當在衍生類別中覆寫時，會等到所有非同步作業完成。|  
+|[async_send](#async_send)|在衍生類別中覆寫，放入訊息區塊以非同步的方式。|  
+|[sync_send](#sync_send)|在衍生類別中覆寫，放入訊息區塊以同步方式。|  
+|[等候](#wait)|當在衍生類別中覆寫時，等候所有完成的非同步作業。|  
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|當在衍生類別中覆寫時，會執行到區塊轉寄訊息的處理。 每次新增了新的訊息，並發現佇列是空的呼叫一次。|  
+|[process_incoming_message](#process_incoming_message)|當在衍生類別中覆寫時，會執行到區塊轉送訊息的處理。 每次會加入新的訊息，而且找不到佇列為空白，請呼叫一次。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `message_processor`  
@@ -91,7 +73,7 @@ class message_processor;
   
 ##  <a name="async_send"></a>async_send 
 
- 在衍生類別中覆寫，將訊息置於區塊以非同步的方式。  
+ 在衍生類別中覆寫，放入訊息區塊以非同步的方式。  
   
 ```
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
@@ -106,7 +88,7 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
   
 ##  <a name="process_incoming_message"></a>process_incoming_message 
 
- 當在衍生類別中覆寫時，會執行到區塊轉寄訊息的處理。 每次新增了新的訊息，並發現佇列是空的呼叫一次。  
+ 當在衍生類別中覆寫時，會執行到區塊轉送訊息的處理。 每次會加入新的訊息，而且找不到佇列為空白，請呼叫一次。  
   
 ```
 virtual void process_incoming_message() = 0;
@@ -117,7 +99,7 @@ virtual void process_incoming_message() = 0;
   
 ##  <a name="sync_send"></a>sync_send 
 
- 在衍生類別中覆寫，將訊息置於區塊以同步方式。  
+ 在衍生類別中覆寫，放入訊息區塊以同步方式。  
   
 ```
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
@@ -132,7 +114,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
   
 ##  <a name="wait"></a>等候 
 
- 當在衍生類別中覆寫時，會等到所有非同步作業完成。  
+ 當在衍生類別中覆寫時，等候所有完成的非同步作業。  
   
 ```
 virtual void wait() = 0;
@@ -144,4 +126,3 @@ virtual void wait() = 0;
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [ordered_message_processor 類別](ordered-message-processor-class.md)
-

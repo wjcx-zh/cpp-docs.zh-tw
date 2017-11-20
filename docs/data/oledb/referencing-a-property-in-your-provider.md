@@ -1,40 +1,40 @@
 ---
-title: "在提供者內參考屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供者, 屬性"
-  - "參考, 至提供者中的屬性"
-  - "參考提供者中的屬性"
+title: "您的提供者內參考屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- references, to properties in providers
+- referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ccd06ab229f5bf6643145c03d8396d48c45a303
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 在提供者內參考屬性
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-為您要的屬性尋找屬性群組和屬性 ID。  如需詳細資訊，請參閱《OLE DB 程式設計人員參考》中的 [OLE DB 屬性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)。  
+# <a name="referencing-a-property-in-your-provider"></a>在提供者內參考屬性
+找到想要的內容屬性群組和屬性識別碼。 如需詳細資訊，請參閱[OLE DB 屬性](https://msdn.microsoft.com/en-us/library/ms722734.aspx)中*OLE DB 程式設計人員參考*。  
   
- 以下範例假設您想要從資料列集取得屬性。  使用工作階段或命令的程式碼很類似，不同的是它們使用不同的介面。  
+ 下列範例假設您嘗試從資料列集取得的屬性。 使用工作階段或命令的程式碼很類似，但使用不同的介面。  
   
- 將屬性群組以建構函式 \(Constructor\) 參數方式使用，來建立 [CDBPropSet](../../data/oledb/cdbpropset-class.md) 物件。  例如：  
+ 建立[CDBPropSet](../../data/oledb/cdbpropset-class.md)物件做為參數的建構函式中使用屬性群組。 例如:   
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 ```  
   
- 呼叫 [AddProperty](../../data/oledb/cdbpropset-addproperty.md)，將屬性 ID 和要指定給屬性的數值傳遞給它。  實值型別將視您所使用的屬性而定。  
+ 呼叫[AddProperty](../../data/oledb/cdbpropset-addproperty.md)，將其傳遞的屬性 ID 和要指派給屬性的值。 值的類型取決於您使用的屬性。  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -43,7 +43,7 @@ propset.AddProperty(DBPROP_UPDATABILITY,
 DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
- 使用 `IRowset` 介面來呼叫 **GetProperties**。  將屬性集 \(Property Set\) 以參數方式傳遞。  最後的程式碼如下所列：  
+ 使用`IRowset`介面呼叫**GetProperties**。 傳遞做為參數所設定的屬性。 以下是最後的程式碼：  
   
 ```  
 CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
@@ -72,5 +72,5 @@ if (pPropSet)
 }  
 ```  
   
-## 請參閱  
- [使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

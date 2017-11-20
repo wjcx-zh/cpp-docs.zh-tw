@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _kbhit
+apiname: _kbhit
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,8 +25,7 @@ f1_keywords:
 - _kbhit
 - kbhit
 - conio/_kbhit
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - keyboard input
 - user input, checking for keyboard
@@ -39,16 +36,15 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 6d8beea978bcbd6aaf876c92a2ff80d3b8325b93
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="kbhit"></a>_kbhit
 檢查主控台的鍵盤輸入。  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - _ftcslen
 - strlen
 - _mbslen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcslen function
 - string length, getting
@@ -57,36 +55,21 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b5ed3069aa637faea1a09fdfd12a98abc773f7dc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: faa9a7eee796bddcdfe67e43ced5e2f10c566bd7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 使用目前的地區設定或指定的地區設定取得字串的長度。 這些函式已有更安全的版本可供使用，請參閱 [strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l](../../c-runtime-library/reference/strnlen-strnlen-s.md)。  
   
 > [!IMPORTANT]
-> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbslen`、`_mbslen_l`、`_mbstrlen` 和 `_mbstrlen_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbslen`、`_mbslen_l`、`_mbstrlen` 和 `_mbstrlen_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   

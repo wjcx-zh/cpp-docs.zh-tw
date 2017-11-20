@@ -1,90 +1,90 @@
 ---
-title: "struct UNWIND_INFO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "結構 UNWIND_INFO |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f0aee906-a1b9-44cc-a8ad-463637bd5411
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c306e8920bb058b64133b7fec18f21a243e1f715
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# struct UNWIND_INFO
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-回溯資料資訊結構是用來在堆疊指標上記錄函式的效果，也是靜態暫存器在堆疊上儲存的位置：  
+# <a name="struct-unwindinfo"></a>struct UNWIND_INFO
+回溯資料資訊結構用來記錄的影響函式的堆疊指標和靜態暫存器儲存在堆疊上的位置：  
   
 |||  
 |-|-|  
 |UBYTE: 3|版本|  
 |UBYTE: 5|旗標|  
 |UBYTE|初構的大小|  
-|UBYTE|回溯程式碼的數目|  
+|UBYTE|回溯程式碼的計數|  
 |UBYTE: 4|框架暫存器|  
-|UBYTE: 4|框架暫存器位移 \(已調整\)|  
-|USHORT \* n|回溯程式碼陣列|  
-|variable|可以為以下的形式 \(1\) 或 \(2\)|  
+|UBYTE: 4|框架暫存器位移 （縮放）|  
+|USHORT * n|回溯程式碼陣列|  
+|變數|可以是表單的 （1） 或 （2） 以下版本嗎|  
   
- \(1\) 例外處理常式  
+ （1） 例外狀況處理常式  
   
 |||  
 |-|-|  
 |ULONG|例外狀況處理常式的位址|  
-|variable|語言特定處理常式資料 \(選擇性\)|  
+|變數|將語言特定處理常式資料 （選擇性）|  
   
- \(2\) 鏈結的回溯資訊  
+ （2） 鏈結的回溯資訊  
   
 |||  
 |-|-|  
-|ULONG|函式開始位址|  
+|ULONG|函式的起始位址|  
 |ULONG|函式結束位址|  
 |ULONG|回溯資訊位址|  
   
- UNWIND\_INFO 結構在記憶體中必須對齊 DWORD。  每個欄位的意義如下：  
+ UNWIND_INFO 結構必須是 DWORD 在記憶體中的對齊。 每個欄位的意義如下所示：  
   
  **版本**  
- 回溯資料的版本號碼，目前為 1。  
+ 回溯資料，目前 1 的版本號碼。  
   
  **旗標**  
- 目前定義了三個旗標：  
+ 目前未定義三個旗標：  
   
- UNW\_FLAG\_EHANDLER 函式不應該呼叫，以尋找函式時必須檢查例外狀況的例外處理常式。  
+ UNW_FLAG_EHANDLER 函式會有例外狀況處理常式應該尋找需要檢查例外狀況的函式時呼叫。  
   
- UNW\_FLAG\_UHANDLER 函式不應該呼叫，在回溯例外狀況時的終止處理常式。  
+ UNW_FLAG_UHANDLER 函式具有回溯例外狀況時，應該呼叫終止處理常式。  
   
- 這個回溯資訊結構的 UNW\_FLAG\_CHAININFO 不是主要的程序的。  相反地，鏈結的回溯資訊項目是前一個 RUNTIME\_FUNCTION 項目的內容。  請參閱下列說明文字，了解鏈結的回溯資訊結構。  如果設定這個旗標，則 UNW\_FLAG\_EHANDLER 和 UNW\_FLAG\_UHANDLER 旗標必須清除。  此外，框架暫存器和固定的堆疊配置欄位，必須具有和主要回溯資訊相同的值。  
+ UNW_FLAG_CHAININFO 這回溯資訊結構不是主要的程序。 相反地，鏈結回溯項目就是先前 RUNTIME_FUNCTION 項目內容的資訊。 下列文字的說明，請參閱 < 鏈結的回溯資訊結構。 如果設定此旗標，則必須清除 UNW_FLAG_EHANDLER 和 UNW_FLAG_UHANDLER 旗標。 此外，這些框架登錄 」 以及 「 固定的堆疊配置欄位必須擁有相同的值如同主要回溯資訊。  
   
  **初構的大小**  
- 函式初構的長度，以位元組為單位。  
+ 函式初構以位元組為單位的長度。  
   
- **回溯程式碼的數目**  
- 這是回溯程式碼陣列中位置的數目。  請注意某些回溯程式碼 \(例如 UWOP\_SAVE\_NONVOL\) 會需要陣列中一個以上的位置。  
+ **回溯程式碼的計數**  
+ 這是回溯程式碼陣列中的位置數目。 請注意一些回溯程式碼 (例如，UWOP_SAVE_NONVOL) 需要在陣列中的多個位置。  
   
  **框架暫存器**  
- 如果不為零，則函式會使用框架指標，而這個欄位則是做為框架指標之靜態暫存器的數目，並使用和 UNWIND\_CODE 節點的作業資訊欄位相同的編碼方式。  
+ 如果是非零值，此函數會使用框架指標，然後，此欄位會用作框架指標，使用相同的編碼方式和 UNWIND_CODE 節點的操作資訊欄位之靜態暫存器的數目。  
   
- **框架暫存器位移 \(已調整\)**  
- 如果框架暫存器欄位不為零，則這是在 FP 暫存器建立時套用至 FP 暫存器之已調整的 RSP 位移。  真正的 FP 暫存器會設定為 RSP \+ 16 \* 這個數字，允許從 0 到 240 的位移。  這可以將 FP 暫存器指向區域堆疊配置的中間以提供動態堆疊框架，經由較短的指令達成較佳的程式碼密度 \(較多指令可以使用 8 位元有號位移的形式\)。  
+ **框架註冊位移 （縮放）**  
+ 如果框架暫存器欄位不是零，這是從建立時，會套用至 fp 的 RSP 縮放的位移。 實際的 fp 設 RSP + 16 * 這個數字，允許從 0 到 240 的位移。 這允許 fp 指向動態堆疊框架，更好的程式碼密度，透過較短的指示 （詳細指示可以使用 8 位元帶正負號位移的形式） 的本機堆疊配置的中間。  
   
  **回溯程式碼陣列**  
- 這是項目的陣列，其中的項目會說明初構對靜態暫存器和 RSP 的作用。  如需個別項目的意義，請參閱 UNWIND\_CODE 章節。  基於對齊的目的，這個陣列永遠會有偶數個項目，而最後項目可能不使用 \(此種情況下，陣列的元素會比回溯程式碼數目欄位所表示的還要多一個\)。  
+ 這是靜態暫存器和 RSP 說明的初構影響的項目陣列。 請參閱和 UNWIND_CODE 上的個別項目的意義。 為了對齊時，這個陣列一定會為偶數的項目，可能未使用的最後一個項目 （在此情況下陣列會是其中一個時間超過指定的回溯程式碼欄位計數）。  
   
  **例外狀況處理常式的位址**  
- 這是相對於影像的指標，指向函式的語言特定例外狀況\/終止處理常式 \(如果旗標 UNW\_FLAG\_CHAININFO 已清除且 UNW\_FLAG\_EHANDLER 或 UNW\_FLAG\_UHANDLER 旗標已設定\)。  
+ （如果旗標 UNW_FLAG_CHAININFO 已清除且已設定其中一個 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER 的旗標），這是其中一個函式的特定語言的例外狀況/終止處理常式的映像的相對指標。  
   
- **語言特定處理常式資料**  
- 這是函式的語言特定例外狀況處理常式資料。  這個資料的格式是未指定的，而且完全由使用的特定例外狀況處理常式來決定。  
+ **將語言特定處理常式資料**  
+ 這是函式的語言特定的例外狀況處理常式的資料。 這項資料的格式是未指定，並完全取決於使用中的特定例外狀況處理常式。  
   
  **鏈結的回溯資訊**  
- 如果旗標 UNW\_FLAG\_CHAININFO 已設定，則 UNWIND\_INFO 結構會以三個 UWORD 結束。  這些 UWORD 表示鏈結之回溯的函式之 RUNTIME\_FUNCTION 資訊。  
+ 如果在設定旗標 UNW_FLAG_CHAININFO UNWIND_INFO 結構結尾三個 UWORDs。  這些 UWORDs 代表 RUNTIME_FUNCTION 的資訊函式的鏈結的回溯。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [回溯資料以進行例外狀況處理與偵錯工具支援](../build/unwind-data-for-exception-handling-debugger-support.md)

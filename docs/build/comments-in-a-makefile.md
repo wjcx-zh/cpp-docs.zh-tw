@@ -1,28 +1,27 @@
 ---
-title: "Makefile 中的註解 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Makefile, 註解"
+title: "Makefile 中的註解。 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7edfd0759c91adc75b77b0b320e2469722f5efc7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Makefile 中的註解
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在註解之前必須有數字正負號 \(\#\)。  NMAKE 會忽略從數字正負號到下一個新行字元之間的文字，  例如：  
+# <a name="comments-in-a-makefile"></a>Makefile 中的註解
+在前面的註解以 number sign （#）。 NMAKE 會忽略從數字符號到下一個新行字元的文字。 例如：  
   
 ```  
 # Comment on line by itself  
@@ -42,11 +41,11 @@ my.exe : my.obj ; link my.obj  # Err: cannot comment this
 .obj.exe: ; link $<  # Error: cannot comment this  
 ```  
   
- 若要指定常值數字正負號，前面必須要有插入號 \(**^**\)，如下所示：  
+ 若要指定常值的數字符號，前面加上插入號 (**^**)，如下：  
   
 ```  
 DEF = ^#define  #Macro for a C preprocessing directive  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Makefile 內容](../build/contents-of-a-makefile.md)

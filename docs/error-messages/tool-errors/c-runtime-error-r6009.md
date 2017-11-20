@@ -1,37 +1,45 @@
 ---
-title: "C 執行階段錯誤 R6009 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "R6009"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "R6009"
+title: "C 執行階段錯誤 R6009 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: R6009
+dev_langs: C++
+helpviewer_keywords: R6009
 ms.assetid: edfb1f8b-3807-48f4-a994-318923b747ae
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cec620a3e484b31b3acdfa1b1fd4253a01ef45de
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# C 執行階段錯誤 R6009
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="c-runtime-error-r6009"></a>C 執行階段錯誤 R6009
 環境空間不足  
   
- 有足夠的記憶體可以載入程式，但是沒有足夠的記憶體可以建立 **envp** 陣列。  
+> [!NOTE]
+>  如果您遇到這個錯誤訊息時執行的應用程式時，應用程式已關閉因為它有內部記憶體問題。 有數個可能的原因，此錯誤，但通常非常低記憶體的情況，太多記憶體，由環境變數或在程式中的 bug 所造成。  
+>   
+>  您可以嘗試進行下列步驟來修正這個錯誤：  
+>   
+>  -   關閉其他正在執行的應用程式或重新啟動電腦以釋放記憶體。  
+> -   使用**應用程式和功能**或**程式和功能**頁面**控制台**來修復或重新安裝程式。  
+> -   請檢查**Windows Update**中**控制台**軟體更新。  
+> -   檢查應用程式的更新版本。 如果此問題持續發生，請連絡應用程式廠商。  
   
-### 若要採用下列可能解決方式以進行修正  
+ **程式設計人員的資訊**  
   
-1.  增加程式可使用的記憶體空間。  
+ 時發生記憶體不足，無法載入程式，但沒有足夠的記憶體來建立**envp**陣列。  這可能被造成極低記憶體情況，或非常大的環境變數的使用方式。 請考慮下列解決方案之一：  
   
-2.  減少命令列引數的數目和大小。  
+-   增加可用程式記憶體數量。  
   
-3.  藉由移除不需要的變數來減少環境大小。
+-   減少的數量和大小的命令列引數。  
+  
+-   移除不必要的變數，以減少環境大小。

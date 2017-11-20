@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4456
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4456
+f1_keywords: C4456
+dev_langs: C++
+helpviewer_keywords: C4456
 ms.assetid: 5ab39fc1-0e19-461b-842b-4da80560b044
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 8698c9a430a79bbec1f6e82b8ac58067317c59a1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: 937475e32ce3c57633f0d0c504ce0ca4b7c627c8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4456"></a>編譯器警告 （層級 4） C4456
   
@@ -64,4 +45,3 @@ struct S {
     }
 } s;
 ```  
-

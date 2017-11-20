@@ -1,32 +1,30 @@
 ---
-title: "如何：在 C++/CLI 中定義和使用列舉 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "列舉類別，指定基礎類型"
+title: "如何： 定義和使用列舉，在 C + + CLI |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f4243400f20ae30fe1a2bc3826f052eb534297b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 C++/CLI 中定義和使用列舉
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題將討論 C\+\+\/CLI 列舉。  
+# <a name="how-to-define-and-consume-enums-in-ccli"></a>如何：在 C++/CLI 中定義和使用列舉
+本主題討論列舉，在 C + + /CLI。  
   
-## 指定列舉的基礎型別  
- 根據預設，列舉型別的基礎型別為 `int`。不過，您可以指定要簽署或 `int`、 `short`、 `long`、 `__int32`或 `__int64`不帶正負號的表單。您也可以使用 `char`。  
+## <a name="specifying-the-underlying-type-of-an-enum"></a>指定列舉的基礎類型  
+ 根據預設，會列舉的基礎型別`int`。  不過，您可以指定的類型是帶正負號或不帶正負號的表單`int`， `short`， `long`， `__int32`，或`__int64`。  您也可以使用`char`。  
   
 ```  
 // mcppv2_enum_3.cpp  
@@ -47,14 +45,17 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **凱撒**  
-**0**  
-**1**  
-**2**   
-## 如何將 Managed 和標準列舉之間  
- 不在列舉和整數類資料型別之間的標準轉換;需要轉型。  
+```Output  
+sun  
+0  
+1  
+2  
+```  
+  
+## <a name="how-to-convert-between-managed-and-standard-enumerations"></a>如何將 managed 和標準列舉間轉換  
+ 列舉之間的整數類資料類型; 沒有標準轉換需要轉型。  
   
 ```  
 // mcppv2_enum_4.cpp  
@@ -74,26 +75,29 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **和 day2 相同**   
-## 運算子和列舉  
- 下列運算子適用於以 C\+\+\/CLI 的列舉:  
+```Output  
+a and day2 are the same  
+```  
+  
+## <a name="operators-and-enums"></a>運算子和列舉  
+ 下列的運算子都是有效的列舉，在 C + + CLI:  
   
 |運算子|  
-|---------|  
-|\=\= \!\= \< \> \<\= \>\=|  
-|\+ \-|  
+|--------------|  
+|== != \< > \<= >=|  
+|+ -|  
 |&#124; ^ & ~|  
-|\+\+ \-\-|  
+|++ --|  
 |sizeof|  
   
- 運算子&#124;^ & &#124; \+\+\-\-為列舉型別只能定義與整數基本型別，不包括 bool。兩個運算元必須是列舉型別。  
+ 運算子 &#124;^ & ~ + +-僅適用於列舉型別定義的基礎類型，不包括 bool 的整數類資料類型。  這兩個運算元必須是列舉型別。  
   
- 編譯器無法將靜態或動態檢查列舉作業的結果;作業可能會造成值不是列舉的有效列舉值範圍內。  
+ 編譯器會執行任何靜態或動態檢查結果的列舉作業;作業可能會導致不在列舉的有效列舉值的範圍內的值。  
   
 > [!NOTE]
->  要在 Managed C\+\+\/CLI 的列舉類別相當不同的 C\+\+11 引入 enum 類別輸入 Unmanaged 程式碼。  特別是， C\+\+11 列舉類別型別不支援與 Managed 列舉類別輸入 C\+\+\/CLI 的運算子，因此， C\+\+\/CLI 原始程式碼必須提供 Managed 列舉類別宣告的存取範圍規範為了與 Unmanaged \(C\+\+11\) 列舉類別宣告區分它們。  如需列舉的詳細資訊，以 C\+\+\/CLI C\+\+\/CX 分類，因此， C\+\+11，請參閱 [enum class](../windows/enum-class-cpp-component-extensions.md)。  
+>  C + + 11 引進列舉類別類型在 unmanaged 程式碼中的也就是明顯不同於 managed 的列舉類別，在 C + + /CLI。 特別是，C + + 11 列舉類別類型不支援相同的運算子做為 managed 的列舉類別類型在 C + + /CLI，和 C + + CLI 原始碼必須提供 managed 列舉中的存取範圍規範類別宣告才能加以區別 unmanaged （c + +11） 列舉類別宣告。 如需有關列舉類別，在 C + + CLI，C + + /CX 中，以及 C + + 11 中，請參閱[列舉類別](../windows/enum-class-cpp-component-extensions.md)。  
   
 ```  
 // mcppv2_enum_5.cpp  
@@ -128,10 +132,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **4**  
-**1**  
-**True**   
-## 請參閱  
- [enum class](../windows/enum-class-cpp-component-extensions.md)
+```Output  
+4  
+1  
+True  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [列舉類別](../windows/enum-class-cpp-component-extensions.md)

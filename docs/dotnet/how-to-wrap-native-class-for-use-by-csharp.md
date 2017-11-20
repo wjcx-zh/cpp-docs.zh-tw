@@ -1,31 +1,31 @@
 ---
-title: "如何：包裝原生類別以便讓 C# 使用 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], Visual C# 和"
-  - "機器碼 [C++], Visual C# 和"
+title: "如何： 包裝原生類別以便讓 C# 使用 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native code [C++], Visual C# and
+- classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ff0c2a3700c20c78d3cbbf9b67810a65bb89fc3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：包裝原生類別以便讓 C# 使用
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個範例是示範如何包裝原生 C\+\+ 類別，好讓以 C\# 或其他 .NET 語言撰寫的程式碼可以使用。  
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>如何：包裝原生類別以便讓 C# 使用
+這個範例示範如何在包裝原生 c + + 類別，讓它可供以 C# 或其他.NET 語言撰寫的程式碼。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // wrap_native_class_for_mgd_consumption.cpp  
@@ -75,5 +75,5 @@ private:
 };  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

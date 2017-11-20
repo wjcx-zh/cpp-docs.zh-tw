@@ -1,48 +1,48 @@
 ---
-title: "在提供者內動態繫結資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料行 [C++], 動態資料行繫結"
-  - "動態資料行繫結"
-  - "提供者 [C++], 動態資料行繫結"
+title: "您的提供者內動態繫結資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d942ea203b018e39a98bd731fe2ca9e89b55d3e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 在提供者內動態繫結資料行
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-請確定您真的需要動態資料行繫結。  您可能會需要它，因為：  
+# <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
+請確定您真正需要的是動態的資料行繫結。 因為您可能需要它：  
   
--   您並未在編譯時間定義資料列集資料行  
+-   您的資料列集資料行不是在編譯時期定義。  
   
--   您要支援可加入資料行的項目 \(例如，書籤\)  
+-   您支援書籤等項目可加入資料行。  
   
-### 若要實作動態資料行繫結  
+### <a name="to-implement-dynamic-column-binding"></a>若要實作動態資料行繫結  
   
-1.  移除程式碼中的任何一個 **PROVIDER\_COLUMN\_MAP**。  
+1.  移除任何**PROVIDER_COLUMN_MAP**從您的程式碼。  
   
-2.  在使用者資料錄 \(您的結構\) 中，加入以下宣告：  
+2.  在使用者記錄 （結構） 中，加入下列宣告：  
   
     ```  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  實作 `GetColumnInfo` 函式。  這個函式會安排資訊的儲存方式。  您可能必須取得這個函式的屬性或其他資訊。  您可能想要建立類似 [COLUMN\_ENTRY](../../data/oledb/column-entry.md) 巨集的巨集，以加入自己的資訊。  
+3.  實作`GetColumnInfo`函式。 此函式會配置儲存資訊的方式。 您可能需要取得的屬性或此函式的其他資訊。 您可能想要建立巨集，類似於[COLUMN_ENTRY](../../data/oledb/column-entry.md)巨集，以新增您自己的資訊。  
   
-     下列範例說明一個 `GetColumnInfo` 函式。  
+     下列範例所示`GetColumnInfo`函式。  
   
     ```  
     // Check the property flag for bookmarks, if it is set, set the zero  
@@ -95,5 +95,5 @@ caps.handback.revision: 7
     }  
     ```  
   
-## 請參閱  
- [使用 OLE DB 提供者樣板](../../data/oledb/working-with-ole-db-provider-templates.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4033
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4033
+f1_keywords: C4033
+dev_langs: C++
+helpviewer_keywords: C4033
 ms.assetid: 189a9ec3-ff6d-49dd-b9b2-530b28bbb7c9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: a215fef10e75a3686cbb04121d419cc0861d4a1e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4033"></a>編譯器警告 (層級 1) C4033
 'function' 必須傳回值  

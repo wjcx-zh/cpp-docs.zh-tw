@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- output streams [C++], member functions
+dev_langs: C++
+helpviewer_keywords: output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
 輸出資料流的成員函式有三種類型：相當於操作工具的類型、會執行未格式化寫入作業的類型，以及其他會修改資料流狀態，且沒有對等的操作工具或插入運算子的類型。 對於循序的格式化輸出，您可能僅會使用插入運算子和操作工具。 對於隨機存取二進位磁碟輸出，您會使用其他的成員函式 (無論搭配插入運算子與否)。  
@@ -150,5 +146,4 @@ if(!cout.fail())...
   
 ## <a name="see-also"></a>另請參閱  
  [輸出資料流](../standard-library/output-streams.md)
-
 

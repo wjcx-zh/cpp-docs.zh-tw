@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- align_cpp
-dev_langs:
-- C++
+f1_keywords: align_cpp
+dev_langs: C++
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a805d53a043a4b502cae4490ae01e2ff47a7cdb1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 7872e01516ea7420533cccf0398164d50603dded
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="align-c"></a>align (C++)
 在 Visual Studio 2015 和更新版本中，使用 C + + 11 標準`alignas`控制項的對齊方式的規範。 如需詳細資訊，請參閱[對齊](../cpp/alignment-cpp-declarations.md)。  
@@ -253,4 +249,3 @@ struct S {
  [__declspec](../cpp/declspec.md)   
  [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)   
  [x64 呼叫慣例概觀](../build/overview-of-x64-calling-conventions.md)
-

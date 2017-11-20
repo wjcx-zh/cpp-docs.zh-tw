@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,38 +28,22 @@ f1_keywords:
 - _ismbbprint
 - ismbbprint
 - ismbbprint_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ismbbprint_l function
 - ismbbprint function
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 09187e54126553331a6100fa11c98a730434db12
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 451128fda38e5733cc9650e4783964d8c8aebfdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint、_ismbbprint_l
 判斷指定的多位元組字元是否為列印字元。  

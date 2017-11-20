@@ -1,41 +1,39 @@
 ---
-title: "hash_set::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin 成員 [STL/CLR]"
+title: "hash_set:: begin (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: 1bd02b6b-0e24-4f42-ad13-fd7776f7f811
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b00d17787a3428d7dffd35847912aec35882b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetbegin-stlclr"></a>hash_set::begin (STL/CLR)
 指定受控制序列的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator begin();  
 ```  
   
-## 備註  
- 成員函式傳回雙向迭代器，指定受控制序列的第一個項目，或只是超出空序列的結尾。  您要用它來取得的 Iterator 可指定受控制序列之 `current` 開頭，但是，如果受控制序列的長度變更，它的狀態也可以變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回指定的受控制序列中，或空序列結尾之外的第一個元素的雙向迭代器。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列中，但其狀態的開頭。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_begin.cpp   
@@ -64,14 +62,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= b**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)

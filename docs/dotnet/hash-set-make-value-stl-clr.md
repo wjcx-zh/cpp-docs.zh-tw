@@ -1,45 +1,43 @@
 ---
-title: "hash_set::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value 成員 [STL/CLR]"
+title: "hash_set::make_value (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 19819fee-d3a0-428d-92db-cba7235d37d4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3a34387a274cc1d804c74dcb086f667791f5e16f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構一個值物件。  
+# <a name="hashsetmakevalue-stlclr"></a>hash_set::make_value (STL/CLR)
+建構值物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 static value_type make_value(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 要使用的索引鍵值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 若要使用的金鑰值。  
   
-## 備註  
- 成員函式傳回索引鍵為 `key` 的 `value_type` 物件。  您可用它來撰寫適用於與其他數種成員函式一起使用的物件。  
+## <a name="remarks"></a>備註  
+ 成員函式傳回`value_type`物件的索引鍵是`key`。 您可以使用它來撰寫適用於數個其他成員函式物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_make_value.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md)   
- [hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)   
+ [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

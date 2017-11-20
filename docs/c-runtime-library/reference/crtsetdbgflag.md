@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetDbgFlag
+apiname: _CrtSetDbgFlag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -35,8 +33,7 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -59,30 +56,15 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: ef1773e534c08a15f10fe2048a5036a957c6a1f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 5a159deb22b903351c989ca3e8ec43ab7843dd3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 擷取或修改 **_crtDbgFlag** 旗標的狀態，以控制偵錯堆積管理員的配置行為 (僅限偵錯版本)。  

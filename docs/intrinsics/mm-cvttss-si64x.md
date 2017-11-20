@@ -1,63 +1,62 @@
 ---
-title: "_mm_cvttss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvttss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_mm_cvttss_si64x 內建"
-  - "cvttss2si 指令"
+title: "_mm_cvttss_si64x |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvttss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- _mm_cvttss_si64x intrinsic
+- cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fa5dee3ee67678f561a80042c1dc0aab2403a555
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_cvttss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+**Microsoft 特定的**  
   
- 發出 x64 延伸的版本的截斷的單精確度浮點編號，64 位元整數，與 \[轉換 \(`cvttss2si`\) 的指令。  
+ 發出延伸 x64 版本的 64 位元整數的截斷單精確度浮點號碼轉換 (`cvttss2si`) 指令。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-__int64 _mm_cvttss_si64x(   
-   __m128 value   
+__int64 _mm_cvttss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### 參數  
- \[in\] `value`  
- `__m128`結構包含單精度浮點數值。  
+#### <a name="parameters"></a>參數  
+ [in] `value`  
+ `__m128`結構，其中包含單精確度浮點值。  
   
-## 傳回值  
- 第一個浮點數的值轉換為 64 位元整數的結果。  
+## <a name="return-value"></a>傳回值  
+ 第一個浮點值轉換為 64 位元整數的結果。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_mm_cvttss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 設定不同的內建於`_mm_cvtss_si64x`只有一個不正確的轉換會被截斷趨近於零。  因為`__m128`結構是表示 xmm 暫存器、 產生的指令將資料從 xmm 暫存器移至系統記憶體。  
+## <a name="remarks"></a>備註  
+ 內建函式的不同`_mm_cvtss_si64x`只有一個不正確的轉換會截斷趨近於零。 因為`__m128`結構表示的 XMM 暫存器，產生的指示將資料從 xmm 暫存器移至系統記憶體。  
   
- 只有使用與內建這個常式。  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // _mm_cvttss_si64x.cpp  
@@ -87,9 +86,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## 結束 Microsoft 特定  
+```Output  
+101  
+```  
   
-## 請參閱  
- [\_\_m128](../cpp/m128.md)   
+**END Microsoft 特定的**  
+  
+## <a name="see-also"></a>另請參閱  
+ [__m128](../cpp/m128.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

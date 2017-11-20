@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -24,21 +23,18 @@ f1_keywords:
 - not_eq
 - std::not_eq
 - std.not_eq
-dev_langs:
-- C++
-helpviewer_keywords:
-- not_eq function
+dev_langs: C++
+helpviewer_keywords: not_eq function
 ms.assetid: d87ad299-8b50-4393-a57f-06f70e1f23fb
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 55d31bbb9d7823161bd98d76884298f3cc089f4d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="noteq"></a>not_eq
 != 運算子的替代項目。  

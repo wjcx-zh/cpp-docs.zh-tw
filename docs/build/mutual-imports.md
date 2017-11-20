@@ -1,64 +1,64 @@
 ---
-title: "交互匯入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_AFXEXT 處理器符號"
-  - "AFX_DATA"
-  - "AFX_EXT_CLASS 巨集"
-  - "循環匯入"
-  - "DLL [C++], 匯入"
-  - "可執行檔 [C++], 匯入"
-  - "匯出 DLL [C++], 交互匯入"
-  - "擴充 DLL [C++], 交互匯入"
-  - "匯入 DLL [C++], 交互匯入"
-  - "交互 DLL 匯入 [C++]"
-  - "相互匯入的可執行檔 [C++]"
+title: "交互匯入 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- mutual DLL imports [C++]
+- AFX_DATA
+- importing DLLs [C++], mutual imports
+- mutually importing executable files [C++]
+- AFX_EXT_CLASS macro
+- circular imports
+- _AFXEXT preprocessor symbol
+- DLLs [C++], importing
+- executable files [C++], importing
+- extension DLLs [C++], mutual imports
+- exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 交互匯入
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-匯出或匯入到另一個可執行檔在匯入是交互 \(或循環\) 時，會發生許多併發狀況。  例如，兩個 DLL 彼此匯入符號，類似於交互遞迴的函式。  
+# <a name="mutual-imports"></a>交互匯入
+在匯入是雙向 （或循環），匯出或匯入到另一個可執行檔的檔案將呈現的複雜性。 例如，兩個 Dll 從匯入符號彼此相互遞迴函式類似。  
   
- 交互匯入可執行檔 \(通常是 DLL\) 的問題是兩者在建置之前必須要先建置另外一個。  每一個組建程序都需要其他組建程序所產生的匯入程式庫來當做輸入。  
+ 交互匯入可執行檔 (通常是 Dll) 的問題是兩者都不可以建立不建置其他的第一個。 每個建置程序需要，做為輸入，其他的建置流程所產生的匯入程式庫。  
   
- 解決方法是使用具 \/DEF 選項的 LIB 公用程式，來產生匯入程式庫而不用建置可執行檔。  您可以使用這個公用程式來建置所有需要的匯入程式庫，而不管涉及多少 DLL 或相依性有多複雜。  
+ 解決方案是使用 LIB 公用程式 /DEF 選項時，會產生匯入程式庫，而不需建置可執行檔。 使用此公用程式，您可以建置在需要時，匯入程式庫涉及無論多少 Dll 或複雜的相依性。  
   
- 處理交互匯入一般的解決方法是：  
+ 處理交互匯入的一般解決方法是：  
   
-1.  依序處理每一個 DLL \(可以使用任何順序，雖然有些順序會較佳\)。如果所有需要匯入的程式庫都存在而且是最新的，請執行 LINK 來建置可執行檔 \(DLL\)。  這會產生匯入程式庫。  否則，請執行 LIB 來產生匯入程式庫。  
+1.  依次需要每個 DLL。 （任何順序是可行的雖然有些順序會更接近最佳。）如果所有需要匯入程式庫存在，而且是最新，執行來建置可執行檔 (DLL) 的連結。 這會產生匯入程式庫。 否則，執行 LIB 產生匯入程式庫。  
   
-     執行具有 \/DEF 選項的 LIB 會產生具 .EXP 副檔名的其他檔案。  該 .EXP 檔案稍後必須用來建置可執行檔。  
+     /DEF 選項以執行 LIB 產生與其他檔案。EXP 延伸模組。 。EXP 檔案必須用來建置可執行檔的更新版本。  
   
-2.  使用 LINK 或 LIB 來建置所有的匯入程式庫之後，請返回並執行 LINK 來建置任何在上一步驟沒有建置的可執行檔。  請注意，相對應的 .exp 檔案必須在 LINK 行指定。  
+2.  在使用後連結或 LIB 建置所有匯入程式庫，請返回並執行建置前一個步驟中沒有建置任何可執行檔的連結。 請注意，對應的.exp 檔案您必須指定連結列上。  
   
-     如果您在為 DLL1 產生匯入程式庫之前已經先執行 LIB 公用程式，LIB 也將會產生 DLL1.exp 檔案。  您必須在建置 DLL1.dll 時，使用 DLL1.exp 來當做對 LINK 的輸入。  
+     如果您有執行 LIB 公用程式在稍早針對 DLL1 產生匯入程式庫，LIB 可能產生的檔案 DLL1.exp 以及。 建置 DLL1.dlll 時，您必須使用 DLL1.exp 做為連結的輸入。  
   
- 下列範例將示範兩個相互匯入的 DLL \(DLL1 和 DLL2\) 方案。  步驟 1 是以 \/DEF 選項組在 DLL1 上執行 LIB。  步驟 1 產生 DLL1.lib、匯入程式庫和 DLL1.exp。  在步驟 2 裡，匯入程式庫是用來建置 DLL2，然後它會為 DLL2 的符號產生匯入程式庫。  步驟 3 藉著將 DLL1.exp 和 DLL2.lib 當成輸入，建置 DLL1。  請注意，DLL2 的 .exp 檔不是必須的，因為 LIB 不會用於建置 DLL2 的匯入程式庫。  
+ 下圖將顯示兩個相互匯入 Dll、 DLL1 和 DLL2 的解決方案。 步驟 1 是執行 LIB，與上 DLL1 /DEF 選項集合。 步驟 1 產生 DLL1.lib、 匯入程式庫和 DLL1.exp。在步驟 2 中，匯入程式庫用來建置 DLL2，會產生 DLL2 的符號匯入程式庫。 步驟 3 建立 DLL1，使用 DLL1.exp 和 DLL2.lib 做為輸入。 請注意因為 LIB 不用來建置 DLL2 的匯入程式庫不需要針對 DLL2.exp 檔。  
   
- ![使用交互匯入來連結兩個 DLL](../build/media/vc37yj1.png "vc37YJ1")  
-連結具交互匯入的兩個 DLL  
+ ![使用交互匯入連結兩個 Dll](../build/media/vc37yj1.gif "vc37YJ1")  
+交互匯入與連結的兩個 Dll  
   
-## \_AFXEXT 的限制  
- 只要您沒有多層的擴充 DLL，您就可以為您的擴充 DLL 使用 `_AFXEXT` 前置處理器符號。  如果您的擴充 DLL 呼叫或衍生自您自己之擴充 DLL 裡的類別，接著又衍生自 MFC 類別，您必須使用自己的前置處理器符號來避免模稜兩可 \(Ambiguity\) 的情形。  
+## <a name="limitations-of-afxext"></a>_AFXEXT 的限制  
+ 您可以使用`_AFXEXT`您 MFC 擴充 Dll 只要您不需要多個圖層的 MFC 擴充 Dll 的前置處理器符號。 如果您有 MFC 擴充 Dll 呼叫，或衍生自類別，在您自己的 MFC 擴充 Dll，然後從 MFC 類別衍生，您必須使用您自己的前置處理器符號，以避免模稜兩可。  
   
- 問題是因為您必須在 Win32 中將任何從 DLL 匯出的資料明確地宣告為 **\_\_declspec\(dllexport\)**，而在從 DLL 匯入則宣告為 **\_\_declspec\(dllimport\)**。  當您定義 `_AFXEXT` 時，MFC 標頭檔會確定 **AFX\_EXT\_CLASS** 已正確地定義。  
+ 問題是，在 Win32 中，您必須明確宣告為任何資料**__declspec （dllexport)**是否要從 DLL 匯出和**__declspec （dllimport)**是否要從 DLL 匯入。 當您定義`_AFXEXT`，MFC 標頭，確定**AFX_EXT_CLASS**定義正確。  
   
- 當您有多層時，一個符號是不夠的 \(如 **AFX\_EXT\_CLASS**\)，因為擴充 DLL 可能匯出新類別以及從另一個擴充 DLL 匯入其他類別。  若要解決這個問題，請使用特殊的前置處理器符號，指示您是在建置 DLL 本身而非使用 DLL。  例如，請想像兩個擴充 DLL，A.dll 和 B.dll。  它們各自在 A.h 和 B.h 裡匯出一些類別。  B.dll 會使用 A.dll 的類別。  標頭檔會看起來會類似下列所示：  
+ 當您有多個圖層，一個符號例如**AFX_EXT_CLASS**不足夠，因為 MFC 擴充 DLL 可能會匯出新的類別，以及從另一個 MFC 擴充 DLL 匯入其他類別。 若要解決此問題，請使用特殊的前置處理器符號，指出您要建置 DLL 本身而非使用 DLL。 例如，假設有兩個 MFC 擴充 Dll、 A.dll 和 B.dll。 每個分別匯出 A.h 和 B.h 中的某些類別。 B.dll 會使用 A.dll 類別。 標頭檔看起來可能像這樣：  
   
 ```  
 /* A.H */  
@@ -83,12 +83,12 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...  
 ```  
   
- A.dll 在建置時是以 `/D A_IMPL` 建置，而 B.dll 則是以 `/D B_IMPL` 建置。  因為已經對每一個 DLL 使用不同的符號，所以建置 B.dll 時會匯出 `CExampleB` 且匯入 `CExampleA`。  `CExampleA` 在建置 A.dll 時是匯出，而用於 B.dll \(或其他的一些用戶端\) 時則是匯入。  
+ A.dll 建置時，它內建與`/D A_IMPL`而且 B.dll 建置時，它會根據`/D B_IMPL`。 每個 dll，請使用不同的符號`CExampleB`匯出和`CExampleA`建置 B.dll 時匯入。 `CExampleA`建置 A.dll 時匯出並匯入由 B.dll （或其他用戶端） 時。  
   
- 在使用內建的 **AFX\_EXT\_CLASS** 和 `_AFXEXT` 前置處理器符號時，無法進行這類型的分層。  上述技術可解決這種問題，其不同於 MFC 本身在建置 Active 技術、資料庫和網路擴充 DLL 時所使用的機制。  
+ 使用內建時，無法執行這種類型的分層**AFX_EXT_CLASS**和`_AFXEXT`前置處理器符號。 上述的技巧來解決這個問題，方式沒有不同的是建置其 Active 技術、 資料庫和網路 MFC 擴充 Dll 時，會使用 MFC 的機制。  
   
-## 不要匯出整個類別  
- 您必須在不是匯出整個類別時，確定已正確匯出 MFC 巨集所建立的必要資料項目。  這個部分可以藉由可重新定義 `AFX_DATA` 成為您的特定類別之巨集來完成。  這個工作應該在每次您沒有匯出整個類別時執行。  
+## <a name="not-exporting-the-entire-class"></a>不會匯出整個類別  
+ 當您在不匯出整個類別時，您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 這可藉由來重新定義`AFX_DATA`特定類別的巨集。 這應該在完成任何您不想要匯出整個類別的時間。  
   
  例如：  
   
@@ -114,25 +114,25 @@ class CExampleA : public CObject
 #define AFX_DATA  
 ```  
   
-### 您想要執行甚麼工作？  
+### <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
 -   [從 DLL 匯出](../build/exporting-from-a-dll.md)  
   
--   [使用 .DEF 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
+-   [匯出從 DLL 使用。DEF 檔案](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [使用 \_\_declspec\(dllexport\) 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [使用 __declspec （dllexport） 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [使用 AFX\_EXT\_CLASS 匯出和匯入](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [匯出和匯入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [匯出 C\+\+ 函式以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [匯出 c + + 函式，以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [判斷要使用哪一種匯出方法](../build/determining-which-exporting-method-to-use.md)  
+-   [決定要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)  
   
--   [使用 \_\_declspec\(dllimport\) 匯入至應用程式](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [匯入應用程式使用 __declspec （dllimport）](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
--   [LIB 公用程式和 \/DEF 選項](../build/reference/lib-reference.md)  
+-   [LIB 公用程式和 /DEF 選項](../build/reference/lib-reference.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [匯入和匯出](../build/importing-and-exporting.md)

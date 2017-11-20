@@ -1,63 +1,62 @@
 ---
-title: "__segmentlimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__segmentlimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__segmentlimit 內建"
-  - "lsl 指令"
+title: "__segmentlimit |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __segmentlimit
+dev_langs: C++
+helpviewer_keywords:
+- __segmentlimit intrinsic
+- lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4b23b988069064e938db9f9f87921df901effd1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# __segmentlimit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="segmentlimit"></a>__segmentlimit
+**Microsoft 特定的**  
   
- 會產生`lsl` \(載入區段限制\) 的指令。  
+ 會產生`lsl`（載入區段限制） 指令。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-unsigned long __segmentlimit(   
-   unsigned long a   
+unsigned long __segmentlimit(   
+   unsigned long a   
 );  
 ```  
   
-#### 參數  
- \[in\] `a`  
+#### <a name="parameters"></a>參數  
+ [in] `a`  
  指定的區段選取器的常數。  
   
-## 傳回值  
- 區段的限制所指定的區段選取器`a,` 此處的選擇器 」 是有效且可以看到目前的權限層級。  
+## <a name="return-value"></a>傳回值  
+ 所指定的區段選取器的區段限制`a`，前提是選取器是在目前的權限層級的有效，並為可見。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__segmentlimit`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__segmentlimit`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 如果無法擷取此區段限制，則此指令會失敗。  在失敗時，這個指令清除 ZF 旗標，則傳回值是未定義。  
+## <a name="remarks"></a>備註  
+ 如果無法擷取區段上限，此指示將會失敗。 如果失敗，此指示清除 ZF 旗標，並傳回值會是未定義。  
   
- 只有使用與內建這個常式。  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 #include <stdio.h>  
@@ -104,9 +103,14 @@ int main(void)
 }  
 ```  
   
-  **之前： 區段的限制 \= 0xbaadbabe eflags \= 0x0 之後： 區段限制 \= 0xffffffff eflags \= 0x256 eflags.zf \= 設定成功\!**  
- **sl 已變更**   
-## 結束 Microsoft 特定  
+```Output  
+Before: segment limit =0xbaadbabe eflags =0x0  
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
+Success!  
+sl was changed  
+```  
   
-## 請參閱  
+**END Microsoft 特定的**  
+  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

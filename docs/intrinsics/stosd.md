@@ -1,69 +1,68 @@
 ---
-title: "__stosd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stosd 指令"
-  - "rep stosd 指令"
-  - "內建 __stosd"
+title: "__stosd |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosd
+dev_langs: C++
+helpviewer_keywords:
+- stosd instruction
+- rep stosd instruction
+- __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a489531113ce17cee28414a07662114e58a61341
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# __stosd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="stosd"></a>__stosd
+**Microsoft 特定的**  
   
- 會產生存放字串指示 \(`rep stosd`\)。  
+ 會產生存放區字串指令 (`rep stosd`)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
+void __stosd(   
+   unsigned long* Dest,   
+   unsigned long Data,   
+   size_t Count   
 );  
 ```  
   
-#### 參數  
- \[out\] `Dest`  
+#### <a name="parameters"></a>參數  
+ [輸出] `Dest`  
  作業的目的地。  
   
- \[in\] `Data`  
+ [in] `Data`  
  要儲存的資料。  
   
- \[in\] `Count`  
- 要寫入的 doublewords 的區塊的長度。  
+ [in] `Count`  
+ 要寫入的雙字組區塊的長度。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__stosd`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__stosd`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 結果是 doubleword `Data`會寫入一段內`Count`所指的記憶體位置 doublewords `Dest`。  
+## <a name="remarks"></a>備註  
+ 結果是 doubleword`Data`撰寫成一個區塊`Count`所指向的記憶體位置的雙字組`Dest`。  
   
- 只有使用與內建這個常式。  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // stosd.c  
@@ -88,8 +87,11 @@ printf_s( "%u %u %u %u",
 }  
 ```  
   
-  **0 99999 99999 0**   
-## 結束 Microsoft 特定  
+```Output  
+0 99999 99999 0  
+```  
   
-## 請參閱  
+**END Microsoft 特定的**  
+  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

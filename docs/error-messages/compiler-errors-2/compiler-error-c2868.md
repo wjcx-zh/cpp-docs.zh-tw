@@ -1,37 +1,37 @@
 ---
-title: "編譯器錯誤 C2868 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2868"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2868"
+title: "編譯器錯誤 C2868 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C2868
+dev_langs: C++
+helpviewer_keywords: C2868
 ms.assetid: 6ff5837b-e66d-44d1-9d17-80af35e08d08
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 62c8ea961db2547976e39a8873542a9f85dc4be7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器錯誤 C2868
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'identifier' : using 宣告的不合法語法; 必須是限定名稱  
+# <a name="compiler-error-c2868"></a>編譯器錯誤 C2868  
   
- [using 宣告](../../cpp/using-declaration.md)需要[限定名稱](http://msdn.microsoft.com/zh-tw/3fefb16d-8120-4627-8b3f-3d90fbdcd1df) \(Qualified Name\)。  
+> '*識別碼*': using 宣告不合法語法; 預期的限定名稱  
   
- 下列範例會產生 C2868：  
+A [using 宣告](../../cpp/using-declaration.md)需要*限定的名稱*，範圍運算子 (`::`) 分隔的命名空間、 類別或列舉型別名稱的結尾是識別項名稱的順序。 單一的範圍解析運算子可能用於全域命名空間中導入的名稱。  
   
-```  
+## <a name="example"></a>範例  
+  
+下列範例會產生 C2868，並也會顯示正確的使用方式：  
+  
+```cpp  
 // C2868.cpp  
 class X {  
 public:  

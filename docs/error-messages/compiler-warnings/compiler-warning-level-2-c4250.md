@@ -1,36 +1,34 @@
 ---
-title: "編譯器警告 (層級 2) C4250 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4250"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4250"
+title: "編譯器警告 （層級 2） C4250 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4250
+dev_langs: C++
+helpviewer_keywords: C4250
 ms.assetid: d47f7249-6b5a-414b-b2d4-56e5d246a782
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 123bac1ee6bc50249c272120351281258419bf6c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 2) C4250
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'class1' : 經由支配繼承 'class2::member'  
+# <a name="compiler-warning-level-2-c4250"></a>編譯器警告 (層級 2) C4250
+'class1': 繼承 'class2::member' 透過支配  
   
- 有兩個或更多的成員擁有相同名稱。  `class2` 中的成員會被繼承，是因為它是其他包含此成員的類別之基底類別。  
+ 兩個或多個成員具有相同的名稱。 中的一個`class2`因為它是包含此成員的其他類別的基底類別繼承。  
   
- 若要隱藏 C4250，請使用 [warning](../../preprocessor/warning.md) Pragma。  
+ 若要抑制 C4250，請使用[警告](../../preprocessor/warning.md)pragma。  
   
- 由於虛擬基底類別是在多個衍生類別之間共用，衍生類別中的名稱會支配基底類別中的名稱。  例如，在下列類別階層架構下，有兩個 func 定義是從菱形之內繼承的：透過弱式類別的 vbc::func\(\) 執行個體，以及透過支配類別的 dominant::func\(\)。  透過菱形類別物件進行資格不符的 func\(\) 呼叫時，一律都是呼叫 dominate::func\(\) 執行個體。如果弱式類別要引入 func\(\) 執行個體，兩種定義都不能支配，呼叫會以旗標標示為模稜兩可。  
+ 因為多個衍生的類別之間共用虛擬基底類別，衍生類別中的名稱勝於基底類別中的名稱。 比方說，假設下列類別階層架構，有兩個定義的函式在菱形中繼承： vbc::func() 執行個體，透過弱式的類別，並與基準:: func （） 透過主控項的類別。 透過菱形類別物件，func （） 的不合格的呼叫一律會呼叫 dominate:: func （） 執行個體。  引入 func （） 的執行個體的弱式的類別一樣，都不大要素定義，並呼叫會標示為模稜兩可。  
   
 ```  
 // C4250.cpp  
@@ -54,7 +52,7 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4250。  
   
 ```  
@@ -86,8 +84,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 這個範例示範的是更複雜的情況。  下列範例會產生 C4250。  
+## <a name="example"></a>範例  
+ 這個範例會示範更複雜的情況。 下列範例會產生 C4250。  
   
 ```  
 // C4250_c.cpp  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - fullpath
 - _wfullpath
 - _fullpath
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wfullpath function
 - relative file paths
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7641c3cdc2a437d2c65f964ca6b1220992d11bca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 1a1cc6a80609828d084b56ef4f981c9d03de8070
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 為指定的相對路徑名稱建立絕對路徑或完整路徑名稱。  

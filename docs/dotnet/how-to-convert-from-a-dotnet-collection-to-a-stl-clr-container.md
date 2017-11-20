@@ -1,47 +1,46 @@
 ---
-title: "如何：從 .NET 集合轉換為 STL/CLR 容器 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "STL/CLR 容器 [STL/CLR]"
-  - "STL/CLR, 從 .NET 集合轉換"
+title: "如何： 從.NET 集合轉換為 STL/CLR 容器 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR, converting from .NET collections
+- STL/CLR Containers [STL/CLR]
 ms.assetid: bb927c48-78e8-4150-bd0b-787c651f4a87
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4313aae3af2b269e50953281c655952706b930bd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：從 .NET 集合轉換為 STL/CLR 容器
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題說明如何將 .NET 集合升級為對等的 STL\/CLR 容器。  範例會顯示如何轉換 .NET <xref:System.Collections.Generic.List%601> 到 STL\/CLR [向量](../dotnet/vector-stl-clr.md) 以及如何轉換 .NET <xref:System.Collections.Generic.Dictionary%602> 到 STL\/CLR [導覽](../dotnet/map-stl-clr.md)，不過，程序為所有集合和容器是類似的。  
+# <a name="how-to-convert-from-a-net-collection-to-a-stlclr-container"></a>如何：從 .NET 集合轉換為 STL/CLR 容器
+本主題說明如何將.NET 集合轉換成其對等的 STL/CLR 容器。 我們可以做為範例示範如何將轉換.NET<xref:System.Collections.Generic.List%601>至 STL/CLR[向量](../dotnet/vector-stl-clr.md)以及如何轉換為.NET<xref:System.Collections.Generic.Dictionary%602>至 STL/CLR[對應](../dotnet/map-stl-clr.md)，但程序是類似的所有集合和容器.  
   
-### 會從集合的容器。  
+### <a name="to-create-a-container-from-a-collection"></a>若要從集合中建立容器  
   
-1.  若要轉換整個集合，建立 STL\/CLR 容器並傳遞集合至建構函式。  
+1.  若要將整個集合，建立 STL/CLR 容器並傳遞給建構函式的集合。  
   
-     第一個範例示範這個程序。  
+     第一個範例示範此程序。  
   
- \-或\-  
+ -或-  
   
-1.  藉由建立 [collection\_adapter](../dotnet/collection-adapter-stl-clr.md) 物件建立泛型 STL\/CLR 容器。  這個類別會使用 .NET 集合介面做為引數。  要驗證的介面支援，請參閱 [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)。  
+1.  藉由建立建立泛型 STL/CLR 容器[collection_adapter](../dotnet/collection-adapter-stl-clr.md)物件。 此樣板類別做為引數，採用.NET 集合介面。 若要確認支援的介面，請參閱[collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)。  
   
-2.  複製 .NET 集合的內容加入至容器。  使用 STL\/CLR [演算法](../dotnet/algorithm-stl-clr.md)，這可以完成，或逐一查看 .NET 集合和插入每個項目複製到 STL\/CLR 容器。  
+2.  將.NET 集合的內容複製到容器。 這可以經由使用 STL/CLR[演算法](../dotnet/algorithm-stl-clr.md)，或由反覆查看.NET 集合並將插入 STL/CLR 容器中的每個項目的複本。  
   
-     第二個範例示範這個程序。  
+     第二個範例示範此程序。  
   
-## 範例  
- 在此範例中，我們建立泛型 <xref:System.Collections.Generic.List%601> 並將 5 個項目。  然後，我們建立 `vector` 使用以 <xref:System.Collections.Generic.IEnumerable%601> 做為引數的建構函式。  
+## <a name="example"></a>範例  
+ 在此範例中，我們會建立一般<xref:System.Collections.Generic.List%601>和 5 的項目加入。 接著，我們建立`vector`使用的建構函式<xref:System.Collections.Generic.IEnumerable%601>做為引數。  
   
 ```  
 // cliext_convert_list_to_vector.cpp  
@@ -76,14 +75,17 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **cliext::vector 的內容如下:**  
-**2**  
-**3**  
-**5**  
-**7**  
-**11**   
-## 範例  
- 在此範例中，我們建立泛型 <xref:System.Collections.Generic.Dictionary%602> 並將 5 個項目。  然後，我們建立 `collection_adapter` 包裝 <xref:System.Collections.Generic.Dictionary%602> 做為簡單 STL\/CLR 容器。  最後，我們建立 `map` 和 <xref:System.Collections.Generic.Dictionary%602> 的內容複製至 `map` 逐一查看 `collection_adapter`。  您可以使用 `make_pair` 函式，在這個程序中，我們會建立新的工作，並插入新對直接傳入 `map`。  
+```Output  
+The contents of the cliext::vector are:  
+2  
+3  
+5  
+7  
+11  
+```  
+  
+## <a name="example"></a>範例  
+ 在此範例中，我們會建立一般<xref:System.Collections.Generic.Dictionary%602>和 5 的項目加入。 接著，我們建立`collection_adapter`包裝<xref:System.Collections.Generic.Dictionary%602>為簡單的 STL/CLR 容器。 最後，我們建立`map`複製的內容和<xref:System.Collections.Generic.Dictionary%602>至`map`重複`collection_adapter`。 在此過程中，建立新的組使用`make_pair`函式，並插入直接將新的組`map`。  
   
 ```  
 // cliext_convert_dictionary_to_map.cpp  
@@ -124,13 +126,16 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **cliext::map 的內容如下:**  
-**機碼: 0.00 值: 0**  
-**機碼: 13.00 值: 13**  
-**機碼: 22.00 值: 22**  
-**機碼: 42.00 值: 42**  
-**機碼: 74.00 值: 74**   
-## 請參閱  
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)   
- [adapter](../dotnet/adapter-stl-clr.md)   
- [如何：從 STL\/CLR 容器轉換為 .NET 集合](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)
+```Output  
+The contents of the cliext::map are:  
+Key: 0.00 Value: 0  
+Key: 13.00 Value: 13  
+Key: 22.00 Value: 22  
+Key: 42.00 Value: 42  
+Key: 74.00 Value: 74  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)   
+ [配接器 (STL/CLR)](../dotnet/adapter-stl-clr.md)   
+ [如何：從 STL/CLR 容器轉換為 .NET 集合](../dotnet/how-to-convert-from-a-stl-clr-container-to-a-dotnet-collection.md)

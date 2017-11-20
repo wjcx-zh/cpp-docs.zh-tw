@@ -1,36 +1,35 @@
 ---
-title: "CAccessor 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CAccessor<T>"
-  - "ATL::CAccessor"
-  - "CAccessor"
-  - "ATL::CAccessor<T>"
-  - "ATL.CAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessor 類別"
+title: "CAccessor 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CAccessor<T>
+- ATL::CAccessor
+- CAccessor
+- ATL::CAccessor<T>
+- ATL.CAccessor
+dev_langs: C++
+helpviewer_keywords: CAccessor class
 ms.assetid: b2ba959f-a686-46f3-8837-176248aef748
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 759ea7436124c1806ae26fb6a91a59d56c86d04a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessor 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-表示其中一個存取子型別。  
+# <a name="caccessor-class"></a>CAccessor 類別
+代表其中一個存取子類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -40,20 +39,20 @@ caps.handback.revision: 8
 class CAccessor : public CAccessorBase, public T  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 使用者資料錄類別。  
+ 使用者記錄類別。  
   
-## 備註  
- 同時，請記錄以靜態方式繫結至資料來源時，請使用。  這個記錄包含緩衝區。  這個類別支援資料列集的多重存取子。  
+## <a name="remarks"></a>備註  
+ 記錄以靜態方式繫結至資料來源時使用它。 記錄包含緩衝區。 這個類別支援多個存取子資料列集。  
   
- 當您知道結構和資料庫的型別時，請使用這個存取子型別。  
+ 當您知道結構和資料庫類型時，請使用此存取子類型。  
   
- 如果您的存取子包含指向必須釋放的記憶體的欄位 \(例如 `BSTR` \) 或介面，請呼叫 [CAccessorRowset::FreeRecordMemory](../../data/oledb/caccessorrowset-freerecordmemory.md) 成員函式，在下一個讀取資料錄之前。  
+ 如果您的存取子包含指向記憶體中的欄位 (例如`BSTR`或介面)，必須釋出，呼叫成員函式[caccessorrowset:: Freerecordmemory](../../data/oledb/caccessorrowset-freerecordmemory.md)下一步 再讀取記錄。  
   
-## 需求  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,35 +1,34 @@
 ---
-title: "編譯器警告 (層級 1) C4556 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "xml"
-  - "C4556"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4556"
+title: "編譯器警告 （層級 1） C4556 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- xml
+- C4556
+dev_langs: C++
+helpviewer_keywords: C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4c0a292c75cd367c5e1f5e14e2583f72cab7abd1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4556
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-內建函式直接引數 'value' 的值超出範圍 'lowerbound \- upperbound'  
+# <a name="compiler-warning-level-1-c4556"></a>編譯器警告 (層級 1) C4556
+內建函式直接引數 'value' 的值超出範圍 'lowerbound-upperbound'  
   
- 內建符合硬體指令。  硬體指令有固定的位元數，用來為常數編碼。  如果 ***value*** 超出範圍，就無法正確地編碼。  編譯器會截斷多餘的位元。  
+ 內建函式符合硬體指令。 硬體指令具有固定的數目的編碼常數的位元。 如果***值***是超出範圍，它將不會編碼正確。 編譯器會截斷額外的位元。  
   
- 下列範例會產生 C4556：  
+ 下列範例會產生 C4556:  
   
 ```  
 // C4556.cpp  

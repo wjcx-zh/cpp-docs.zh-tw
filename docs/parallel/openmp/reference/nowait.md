@@ -1,49 +1,47 @@
 ---
-title: "nowait | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "nowait"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nowait OpenMP clause"
+title: "nowait |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: nowait
+dev_langs: C++
+helpviewer_keywords: nowait OpenMP clause
 ms.assetid: 8a74265d-879c-46cf-8071-a1084f24f16e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c5cc3f82334752854300c683b9aa1b02c7e94791
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# nowait
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-會覆寫障盾隱含指示詞。  
+# <a name="nowait"></a>nowait
+指示詞中隱含屏障會覆寫。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 nowait  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  `nowait`適用於下列指示詞：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
 -   [single](../../../parallel/openmp/reference/single.md)  
   
- 如需詳細資訊，請參閱 [2.4.1 for Construct](../../../parallel/openmp/2-4-1-for-construct.md)、[2.4.2 sections Construct](../../../parallel/openmp/2-4-2-sections-construct.md)和[2.4.3 single Construct](../../../parallel/openmp/2-4-3-single-construct.md)。  
+ 如需詳細資訊，請參閱[2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)， [2.4.2 sections 建構](../../../parallel/openmp/2-4-2-sections-construct.md)，和[2.4.3 單一建構](../../../parallel/openmp/2-4-3-single-construct.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_nowait.cpp  
@@ -82,10 +80,13 @@ int main( )
 }  
 ```  
   
-  **0, 0, 0**  
-**1, 1, 0**  
-**2, 4, 1**  
-**3, 9, 1**  
-**4, 16, 2**   
-## 請參閱  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+0, 0, 0  
+1, 1, 0  
+2, 4, 1  
+3, 9, 1  
+4, 16, 2  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

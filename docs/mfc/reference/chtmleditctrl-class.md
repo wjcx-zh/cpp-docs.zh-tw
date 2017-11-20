@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,22 @@ f1_keywords:
 - AFXHTML/CHtmlEditCtrl::Create
 - AFXHTML/CHtmlEditCtrl::GetDHtmlDocument
 - AFXHTML/CHtmlEditCtrl::GetStartDocument
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CHtmlEditCtrl [MFC], CHtmlEditCtrl
 - CHtmlEditCtrl [MFC], Create
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: e18c2b38215e75d6fe12b1c78c93d3d9fe147df9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 8a4cdfd1f11a3420f2d7ec46b1a30bb3eaf20a30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl 類別
 在 MFC 視窗中提供 WebBrowser ActiveX 控制項的功能。  
@@ -139,5 +136,4 @@ virtual LPCTSTR GetStartDocument();
   
 ## <a name="see-also"></a>另請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
-
 

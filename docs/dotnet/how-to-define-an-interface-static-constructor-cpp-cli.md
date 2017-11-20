@@ -1,35 +1,32 @@
 ---
-title: "如何：定義介面靜態建構函式 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "建構函式 [C++]"
-  - "介面靜態建構函式"
-  - "靜態建構函式, interface"
+title: "如何： 定義介面靜態建構函式 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- constructors [C++]
+- static constructors, interface
+- interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9d2df4610cdc0e7b7bcf579c6280cbc00961409f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：定義介面靜態建構函式 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-介面只能有靜態建構函式，可以用來初始化靜態資料成員。第一次靜態介面成員存取，靜態建構函式只會呼叫一次與之前呼叫。  
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>如何：定義介面靜態建構函式 (C++/CLI)
+可具備靜態建構函式的介面，您可用它來初始化靜態資料成員。  靜態建構函式最多只能呼叫一次，而且會在第一次存取靜態介面成員之前呼叫。  
   
- 如需靜態建構函式詳細資訊，請參閱[如何：在類別或結構中定義靜態建構函式](../misc/how-to-define-static-constructors-in-a-class-or-struct.md)。  
-  
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // mcppv2_interface_class2.cpp  
@@ -59,9 +56,12 @@ int main() {
 }  
 ```  
   
-  **in MyInterface static constructor**  
-**99**  
-**99**  
-**99**   
-## 請參閱  
- [interface class](../windows/interface-class-cpp-component-extensions.md)
+```Output  
+in MyInterface static constructor  
+99  
+99  
+99  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [介面類別](../windows/interface-class-cpp-component-extensions.md)

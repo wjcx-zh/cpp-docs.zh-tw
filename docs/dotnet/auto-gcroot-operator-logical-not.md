@@ -1,45 +1,43 @@
 ---
-title: "auto_gcroot::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_gcroot.operator!"
-  - "auto_gcroot.operator!"
-  - "msclr::auto_gcroot::operator!"
-  - "auto_gcroot::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::operator!"
+title: auto_gcroot::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_gcroot.operator!
+- auto_gcroot.operator!
+- msclr::auto_gcroot::operator!
+- auto_gcroot::operator!
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::operator!
 ms.assetid: f9728be3-2e09-4c01-a594-43e0d59d40d3
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9f40c2465e144b25f649cf358a4aa5e3ad3a6902
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-運算子用於 `auto_gcroot` 條件運算式。  
+# <a name="autogcrootoperator"></a>auto_gcroot::operator!
+使用運算子`auto_gcroot`條件運算式中。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool operator!() const;  
 ```  
   
-## 傳回值  
- `true` ，如果包裝的物件無效;否則為 `false` 。  
+## <a name="return-value"></a>傳回值  
+ `true`如果所包裝的物件無效。`false`否則。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_operator_not.cpp  
@@ -62,14 +60,17 @@ int main() {
 }  
 ```  
   
-  **的無效**  
-**現在的有效**  
-**現在的無效**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+s is invalid  
+now s is valid  
+now s is invalid  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::operator bool](../dotnet/auto-gcroot-operator-bool.md)

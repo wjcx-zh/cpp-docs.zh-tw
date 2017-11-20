@@ -1,42 +1,39 @@
 ---
-title: "hash_multiset::bucket_count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::bucket_count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bucket_count 成員 [STL/CLR]"
+title: "hash_multiset::bucket_count (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::bucket_count
+dev_langs: C++
+helpviewer_keywords: bucket_count member [STL/CLR]
 ms.assetid: 18abcdab-ee50-4bb8-88f8-d3cbea9d0fd9
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 94a4bf460f00d9ea011cb3cbb0c86e2840f5f561
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::bucket_count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-計數 Bucket 的數目。  
+# <a name="hashmultisetbucketcount-stlclr"></a>hash_multiset::bucket_count (STL/CLR)
+計算值區數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int bucket_count();  
 ```  
   
-## 備註  
- 這個成員函式傳回目前的 Bucket 數目。  您可用它來判斷雜湊資料表的大小。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回目前的 bucket 數目。 您可以使用它來判斷雜湊資料表的大小。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_bucket_count.cpp   
@@ -82,22 +79,27 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0.0234375**  
-**max\_load\_factor\(\) \= 0.25**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::load\_factor](../dotnet/hash-multiset-load-factor-stl-clr.md)   
- [hash\_multiset::max\_load\_factor](../dotnet/hash-multiset-max-load-factor-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)   
+ [hash_multiset::max_load_factor (STL/CLR)](../dotnet/hash-multiset-max-load-factor-stl-clr.md)

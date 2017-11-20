@@ -1,41 +1,39 @@
 ---
-title: "轉散發 ODBC 元件給您的客戶 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "元件 [C++]"
-  - "元件 [C++], 散發"
-  - "元件 [C++], 轉散發"
-  - "ODBC 管理員"
-  - "ODBC 元件, 轉散發"
-  - "ODBC, 散發元件"
+title: "轉散發 ODBC 元件給您的客戶 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC components, redistributing
+- ODBC, distributing components
+- components [C++], distributing
+- ODBC Administrator
+- components [C++]
+- components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 861eceef234b77b96179c51979cb7d1c0d09eeeb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 轉散發 ODBC 元件給您的客戶
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果您將 ODBC 管理員程式的功能結合至您的應用程式中，就必須也將這些執行程式的檔案散發給您的使用者。  這些 ODBC 檔案是位於 Visual C\+\+ CD\-ROM 中 \\OS\\System 的目錄中。  在相同目錄中的 Redistrb.wri 檔和授權合約包含您可以轉散發 \(Redistribute\) 的 ODBC 檔案清單。  
+# <a name="redistributing-odbc-components-to-your-customers"></a>轉散發 ODBC 元件給您的客戶
+如果您將 ODBC 管理員程式的功能併入您的應用程式時，必須也要散發給您的使用者執行這些程式的檔案。 這些 ODBC 檔案位於 \OS\System 的目錄中的 Visual c + + CD-ROM。 Redistrb.wri 檔案和相同的目錄中的授權合約包含一份您可以重新發佈的 ODBC 檔案。  
   
- 請參閱任何您計劃附隨的 ODBC 驅動程式之相關文件。  您必須決定附隨哪些 DLL 和其他檔案。  
+ 任何想要出貨的 ODBC 驅動程式，請參閱文件。 您需要決定哪些 Dll 和其他檔案，出貨。 您也應該閱讀[轉散發 ODBC 元件給您的客戶](../../data/odbc/redistributing-odbc-components-to-your-customers.md)，其中說明如何轉散發 ODBC 元件。  
   
- 如需 ODBC 元件和驅動程式的詳細資訊，請參閱[安裝資料庫支援](../../data/installing-database-support-mfc-atl.md)，以及說明如何轉散發 ActiveX 控制項的[轉散發控制項](../../data/ado-rdo/redistributing-controls.md)。  
+ 此外，您需要在大部分情況下包含一個其他檔案。 Odbccr32.dll 是 ODBC 資料指標程式庫。 這個程式庫提供的驅動程式層級 1 向前及向後捲動的功能。 它也提供支援快照集的功能。 如需有關 ODBC 資料指標程式庫的詳細資訊，請參閱[ODBC: ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
   
- 除此之外，您還必須在大多數情況中包括另外一個檔案。  Odbccr32.dll 是 ODBC 資料指標程式庫。  這個程式庫提供了層級 1 驅動程式向前和向後捲動的功能。  它也提供了支援快照集的功能。  如需 ODBC 資料指標程式庫的詳細資訊，請參閱 [ODBC：ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)。  
-  
- 下列主題提供使用 ODBC 及資料庫類別的詳細資訊：  
+ 下列主題提供使用 ODBC 資料庫類別的詳細資訊：  
   
 -   [ODBC：ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)  
   
@@ -43,6 +41,6 @@ caps.handback.revision: 7
   
 -   [ODBC：直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## 請參閱  
- [ODBC 的基本概念](../../data/odbc/odbc-basics.md)   
+## <a name="see-also"></a>另請參閱  
+ [ODBC 基本概念](../../data/odbc/odbc-basics.md)   
  [ODBC 管理員](../../data/odbc/odbc-administrator.md)

@@ -1,32 +1,29 @@
 ---
-title: "連結器工具警告 LNK4206 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4206"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4206"
+title: "連結器工具警告 LNK4206 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4206
+dev_langs: C++
+helpviewer_keywords: LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1227cd792065198a3cd7f7a684e51e7c87452e77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具警告 LNK4206
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-找不到先行編譯型別資訊；未連結或覆寫 'filename'；當做沒有偵錯資訊，連結物件  
+# <a name="linker-tools-warning-lnk4206"></a>連結器工具警告 LNK4206
+找不到; 先行編譯的類型資訊未連結或覆寫; ' filename'如同沒有偵錯資訊般連結物件  
   
- 使用 [\/Yc](../../build/reference/yc-create-precompiled-header-file.md) 編譯的指定目的檔未指定於 LINK 命令，或已被覆寫。  
+ 指定的目的檔，以編譯[/Yc](../../build/reference/yc-create-precompiled-header-file.md)、 未指定 LINK 命令中或已被覆寫。  
   
- 這項警告的一般常見案例是：在程式庫中使用 \/Yc 編譯 .obj 檔，而其中沒有您程式碼中 .obj 檔的符號參考。在這種情況下，連結器將不會使用 \(甚至是看不見\) .obj 檔。此時，您應該要重新編譯程式碼，然後對其餘物件 \(也就是，不用 \/Yc 編譯的物件\) 使用 [\/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)。
+ 這個警告的常見案例是.obj 檔以 /Yc 編譯時程式庫，而沒有從您的程式碼.obj 檔的符號參考。  在此情況下，連結器將無法使用 （或甚至看到）.obj 檔案。  在此情況下，您應該重新編譯您的程式碼，並使用[/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md)剩餘的物件 （不使用 /Yc 編譯的物件）。

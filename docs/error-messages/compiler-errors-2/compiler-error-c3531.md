@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3531
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3531
+f1_keywords: C3531
+dev_langs: C++
+helpviewer_keywords: C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 7753e30e305b7b36adc3b4d2b535f755fa455bdd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3531"></a>編譯器錯誤 C3531
 'symbol': 型別包含 'auto' 的符號必須有初始設定式  

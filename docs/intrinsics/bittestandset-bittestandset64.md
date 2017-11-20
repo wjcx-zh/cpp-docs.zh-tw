@@ -1,67 +1,74 @@
 ---
-title: "_bittestandset _bittestandset64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandset_cpp"
-  - "_bittestandset64_cpp"
-  - "_bittestandset64"
-  - "_bittestandset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建的 _bittestandset"
-  - "內建的 _bittestandset64"
-  - "bts 指令"
+title: "_bittestandset，_bittestandset64 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandset_cpp
+- _bittestandset64_cpp
+- _bittestandset64
+- _bittestandset
+dev_langs: C++
+helpviewer_keywords:
+- bts instruction
+- _bittestandset intrinsic
+- _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bfbfecc50a8f6b9f11f67e609e4fe05f4696e005
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# _bittestandset _bittestandset64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 **Microsoft 特定的**  
   
- 產生的指令會檢查位址 `a` 的位元 `b`、傳回其目前值，並將位元設為 1。  
+ 產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元設為 1。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-unsigned char _bittestandset(    long *a,    long b ); unsigned char _bittestandset64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandset(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandset64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### 參數  
- \[in, out\] `a`  
+#### <a name="parameters"></a>參數  
+ [in、out] `a`  
  要檢查的記憶體指標。  
   
- \[in\] `b`  
+ [in] `b`  
  要測試的位元位置。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  位於指定位置的位元。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_bittestandset`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
+## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // bittestandset.cpp  
@@ -137,13 +144,16 @@ int main()
 }  
 ```  
   
-  **Flags: 0x2**  
-**Flags: 0x6**  
-**Flags: 0xe**  
-**Flags: 0x6**  
-**Flags: 0x4**  
-**Flags: 0x0**   
-## END Microsoft 特定的  
+```Output  
+Flags: 0x2  
+Flags: 0x6  
+Flags: 0xe  
+Flags: 0x6  
+Flags: 0x4  
+Flags: 0x0  
+```  
   
-## 請參閱  
+**END Microsoft 特定的**  
+  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

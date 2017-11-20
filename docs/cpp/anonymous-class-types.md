@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class types [C++], anonymous
 - anonymous class types
 ms.assetid: 9ba667b2-8c2a-4c29-82a6-fa120b9233c8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 29313d499f7459175c9dc2331148cdd6401e5e53
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 854f15dcc597f2fc6e32f8385c1e9d27cfb37362
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="anonymous-class-types"></a>匿名類別類型
 您可以為匿名類別 — 也就是它們可以宣告不*識別碼*。 這種用法在您將類別名稱取代為 `typedef` 名稱時很實用，如下所示：  
@@ -105,4 +102,3 @@ int main()
   
 **END Microsoft 特定的**  
   
-

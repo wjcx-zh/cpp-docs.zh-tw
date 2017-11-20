@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactory2::GetLicInfo
 - ATLCOM/ATL::CComClassFactory2::LockServer
 - ATLCOM/ATL::CComClassFactory2::RequestLicKey
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactory2 class
+dev_langs: C++
+helpviewer_keywords: CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 61026044fb5a4da7bebfe8f369c68af4c37ebf44
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ce8588ff1ca3349100b608c8ebf4085d7464a235
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 類別
 這個類別會實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面。  
@@ -60,19 +42,19 @@ class CComClassFactory2 : public IClassFactory2,
   
 #### <a name="parameters"></a>參數  
  *授權*  
- 實作下列靜態函式的類別︰  
+ 實作下列靜態函式的類別：  
   
 - **靜態 BOOL VerifyLicenseKey (BSTR** `bstr` **);**  
   
-- **靜態 BOOL GetLicenseKey (DWORD** `dwReserved` **，BSTR\*** `pBstr` **);**  
+- **靜態 BOOL GetLicenseKey (DWORD** `dwReserved` **，BSTR\***  `pBstr` **);**  
   
 - **靜態 BOOL IsLicenseValid （);**  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CComClassFactory2::CreateInstance](#createinstance)|建立指定的 CLSID 的物件。|  
 |[CComClassFactory2::CreateInstanceLic](#createinstancelic)|指定的授權金鑰，建立指定的 CLSID 的物件。|  
@@ -85,11 +67,11 @@ class CComClassFactory2 : public IClassFactory2,
   
  ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)做為預設 class factory。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)物件的類別定義中的巨集。 例如:   
   
- [!code-cpp[NVC_ATL_COM #2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]  
   
- **CMyLicense**，在樣板參數`CComClassFactory2`，必須實作的靜態函式`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。 以下是簡單的授權類別的範例︰  
+ **CMyLicense**，在樣板參數`CComClassFactory2`，必須實作的靜態函式`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。 以下是簡單的授權類別的範例：  
   
- [!code-cpp[NVC_ATL_COM #3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]  
   
  `CComClassFactory2`衍生自兩者**CComClassFactory2Base**和*授權*。 **CComClassFactory2Base**，又，衍生自**IClassFactory2**和**CComObjectRootEx\< CComGlobalsThreadModel >**。  
   
@@ -105,7 +87,7 @@ class CComClassFactory2 : public IClassFactory2,
  `CComClassFactory2`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactory2::CreateInstance  
  建立指定的 CLSID 的物件，並擷取這個物件的介面指標。  
@@ -210,7 +192,7 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
   
 ### <a name="parameters"></a>參數  
  `dwReserved`  
- [in]未使用。 必須為零。  
+ [in]未使用。 必須是零。  
   
  `pbstrKey`  
  [out]指標的授權金鑰。  
@@ -229,4 +211,3 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [類別概觀](../../atl/atl-class-overview.md)
-

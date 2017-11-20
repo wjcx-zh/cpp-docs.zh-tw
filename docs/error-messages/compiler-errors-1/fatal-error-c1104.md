@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C1104
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1104
+f1_keywords: C1104
+dev_langs: C++
+helpviewer_keywords: C1104
 ms.assetid: 45bd85c4-77d3-4d3c-b167-49c563aefb4d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 7a3f7fbff36f998716bc6639ccb718b1699ccf80
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1104"></a>嚴重錯誤 C1104
 匯入 libid 時發生嚴重錯誤：'message'  

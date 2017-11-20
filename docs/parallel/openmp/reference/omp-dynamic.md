@@ -1,56 +1,54 @@
 ---
-title: "OMP_DYNAMIC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "OMP_DYNAMIC"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OMP_DYNAMIC OpenMP environment variable"
+title: "OMP_DYNAMIC |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: OMP_DYNAMIC
+dev_langs: C++
+helpviewer_keywords: OMP_DYNAMIC OpenMP environment variable
 ms.assetid: e306049d-b644-4b73-8b63-46c835bff98b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5c416919678cd7b0f80bd1299c7682fe159cd19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# OMP_DYNAMIC
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定執行階段 OpenMP 是否可以調整在平行區域中的執行緒數目。  
+# <a name="ompdynamic"></a>OMP_DYNAMIC
+指定執行階段 OpenMP 是否可調整的平行區域中的執行緒數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 set OMP_DYNAMIC[=TRUE | =FALSE]  
 ```  
   
-## 備註  
- `OMP_DYNAMIC`可藉由覆寫環境變數[omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)函式。  
+## <a name="remarks"></a>備註  
+ `OMP_DYNAMIC`環境變數可以覆寫[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)函式。  
   
- 在 Visual C\+\+ 實作 OpenMP 標準的預設值是`OMP_DYNAMIC=FALSE`。  
+ OpenMP 標準的 Visual c + + 實作中的預設值是`OMP_DYNAMIC=FALSE`。  
   
- 如需詳細資訊，請參閱 [4.3 OMP\_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)。  
+ 如需詳細資訊，請參閱[4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)。  
   
-## 範例  
- 下列指令集`OMP_DYNAMIC`設為 TRUE 的環境變數：  
+## <a name="example"></a>範例  
+ 下列命令`OMP_DYNAMIC`環境變數設為 TRUE:  
   
 ```  
 set OMP_DYNAMIC=TRUE  
 ```  
   
- 下列命令會顯示目前設定的`OMP_DYNAMIC`環境變數：  
+ 下列命令會顯示目前的設定`OMP_DYNAMIC`環境變數：  
   
 ```  
 set OMP_DYNAMIC  
 ```  
   
-## 請參閱  
- [Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)
+## <a name="see-also"></a>另請參閱  
+ [環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)

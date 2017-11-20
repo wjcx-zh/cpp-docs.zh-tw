@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,8 +25,7 @@ apitype: DLLExport
 f1_keywords:
 - fseek
 - _fseeki64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fseeki64 function
 - fseeki64 function
@@ -36,30 +34,15 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0d0c0bf620f1b89b9decceed3db9434dae4f9437
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 723dbef32f053bd522dcb25c78d6ed805bce6ee5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 將檔案指標移至指定的位置。  
@@ -108,7 +91,7 @@ int _fseeki64(
   
  檔案因為附加資料而開啟時，目前的檔案位置取決於最後一個 I/O 作業，而不是下一次寫入的位置。 如果開啟以供附加的檔案上尚未發生任何 I/O 作業，該檔案的位置是檔案的開頭。  
   
- 在文字模式中開啟資料流的`fseek`和`_fseeki64`有限使用，因為會造成歸位字元與換行字元傳回翻譯`fseek`和`_fseeki64`來產生非預期的結果。 唯一`fseek`和`_fseeki64`保證可以在文字模式開啟的資料流上運作的作業︰  
+ 在文字模式中開啟資料流的`fseek`和`_fseeki64`有限使用，因為會造成歸位字元與換行字元傳回翻譯`fseek`和`_fseeki64`來產生非預期的結果。 唯一`fseek`和`_fseeki64`保證可以在文字模式開啟的資料流上運作的作業：  
   
 -   相對於任何原點值，位移為 0 的搜尋。  
   

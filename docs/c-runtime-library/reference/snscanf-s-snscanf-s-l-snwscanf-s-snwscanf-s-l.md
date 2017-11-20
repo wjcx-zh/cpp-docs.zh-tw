@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - _sntscanf_s_l
 - _snscanf_s_l
 - sntscanf_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _snscanf_s_l function
 - snwscanf_s function
@@ -57,16 +55,15 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: a6ed79282b1747ee0138553a9ea0a2a9cebf0530
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 從字串讀取所指定長度的格式化資料。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_snscanf、_snscanf_l、_snwscanf、_snwscanf_l](../../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md) 版本。  

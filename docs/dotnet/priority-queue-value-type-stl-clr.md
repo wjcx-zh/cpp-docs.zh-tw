@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type 成員 [STL/CLR]"
+title: "priority_queue:: value_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 0d81ef75-8bd1-44f5-8753-4b42a505d8c3
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b9c1b2966e1ff023fe61fa64e49872a443f00c19
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-項目的類型。  
+# <a name="priorityqueuevaluetype-stlclr"></a>priority_queue::value_type (STL/CLR)
+元素的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Value value_type;  
 ```  
   
-## 備註  
- 此型別是個範本參數 `Value`之同義資料表。  
+## <a name="remarks"></a>備註  
+ 此類型是範本參數 `Value`的同義字。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_priority_queue_value_type.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **c b a**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::const\_reference](../dotnet/priority-queue-const-reference-stl-clr.md)   
- [priority\_queue::reference](../dotnet/priority-queue-reference-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::const_reference (STL/CLR)](../dotnet/priority-queue-const-reference-stl-clr.md)   
+ [priority_queue::reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)

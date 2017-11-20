@@ -1,41 +1,39 @@
 ---
-title: "priority_queue::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type 成員 [STL/CLR]"
+title: "priority_queue::difference_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 4bedce11-244c-428b-b5e2-e6bbf5674803
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3c2a4c78472e03095271d033081b8c837436273
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuedifferencetype-stlclr"></a>priority_queue::difference_type (STL/CLR)
 兩個項目之間的帶正負號距離的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## 備註  
- 描述可能為負數的項目計數之型別。  
+## <a name="remarks"></a>備註  
+ 此類型描述負可能是項目計數。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_priority_queue_difference_type.cpp   
@@ -74,14 +72,17 @@ int main()
   
 ```  
   
-  **c a b**  
-**pushing 2 \= \-2**  
-**popping 3 \= 3**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+ c a b  
+pushing 2 = -2  
+popping 3 = 3  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::size\_type](../dotnet/priority-queue-size-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::size_type (STL/CLR)](../dotnet/priority-queue-size-type-stl-clr.md)

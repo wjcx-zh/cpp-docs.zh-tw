@@ -1,45 +1,43 @@
 ---
-title: "hash_multiset::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound 成員 [STL/CLR]"
+title: "hash_multiset:: upper_bound (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: d5be0d79-ae60-42bb-8a53-051bc374407d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b549538c1147f3d9574c018f7e15c4066dbbb245
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multiset::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-符合指定之索引鍵的範圍中尋找結尾。  
+# <a name="hashmultisetupperbound-stlclr"></a>hash_multiset::upper_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
+#### <a name="parameters"></a>參數  
+ key  
  要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式來判斷在個項目且雜湊至與 `key` 相同 Bucket 的項目 `key`的受控制序列的最後一個項目的 `X` 。  如果沒有這類項目，則為，如果 `X` 是在受控制序列的最後一個項目，則會傳回 [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()`;否則會指定在 `X`之外的第一個項目的 Iterator 傳回它。  您可以使用它目前所在項目的結尾符合指定索引鍵受控制序列。  
+## <a name="remarks"></a>備註  
+ 成員函式決定的最後一個項目`X`雜湊至相同的值區為受控制序列中`key`且具有對等順序，以`key`。 如果沒有這類元素存在，或如果`X`是最後一個項目，在受控制序列中，它會傳回[hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定之外的第一個項目`X`. 您可以使用它來目前受控制序列之符合指定之索引鍵中尋找的項目序列的結尾。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_upper_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**upper\_bound \(L'x\) \=\=end \(\) \= true**  
-**\*upper\_bound \(L'a \= b\)**  
-**\*upper\_bound \(L'b\) \= c**   
-## 需求  
- **標題:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = b  
+*upper_bound(L'b') = c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::count](../dotnet/hash-multiset-count-stl-clr.md)   
- [hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)   
- [hash\_multiset::find](../dotnet/hash-multiset-find-stl-clr.md)   
- [hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: count (STL/CLR)](../dotnet/hash-multiset-count-stl-clr.md)   
+ [hash_multiset:: equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)   
+ [hash_multiset:: find (STL/CLR)](../dotnet/hash-multiset-find-stl-clr.md)   
+ [hash_multiset::lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)

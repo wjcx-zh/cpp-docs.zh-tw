@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _bstr_t
-dev_langs:
-- C++
+f1_keywords: _bstr_t
+dev_langs: C++
 helpviewer_keywords:
 - BSTR object
 - _bstr_t class
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ce63f8243bc46d77116dbacdf82f821333cba785
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 0af38fe5e88540bf7e8947808c49c5283d742a4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bstrt-class"></a>_bstr_t 類別
 **Microsoft 特定的**  

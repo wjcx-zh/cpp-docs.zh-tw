@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -53,35 +52,18 @@ f1_keywords:
 - ATLPATH/ATL::CPathT::StripToRoot
 - ATLPATH/ATL::CPathT::UnquoteSpaces
 - ATLPATH/ATL::CPathT::m_strPath
-dev_langs:
-- C++
-helpviewer_keywords:
-- CPathT class
+dev_langs: C++
+helpviewer_keywords: CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 98b00e3f888d5f6bfb33f6ee24c4af2860bb470f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: c9abb6a20beca39e8224ab3d3724da9664f68702
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cpatht-class"></a>CPathT 類別
 此類別代表的路徑。  
@@ -100,11 +82,11 @@ class CPathT
  `StringType`  
  ATL/MFC 字串類別使用的路徑 (請參閱[CStringT](../../atl-mfc-shared/reference/cstringt-class.md))。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CPathT::PCXSTR](#pcxstr)|常數字串類型。|  
 |[CPathT::PXSTR](#pxstr)|字串類型。|  
@@ -112,13 +94,13 @@ class CPathT
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CPathT::CPathT](#cpatht)|路徑的建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CPathT::AddBackslash](#addbackslash)|呼叫這個方法來建立正確的語法的路徑字串的結尾加入反斜線。|  
 |[CPathT::AddExtension](#addextension)|呼叫此方法，將副檔名新增至的路徑。|  
@@ -160,11 +142,11 @@ class CPathT
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[CPathT::operator const StringType &](#operator_const_stringtype_amp)|這個運算子可以被視為字串的物件。|  
+|[CPathT::operator const StringType （& s)](#operator_const_stringtype_amp)|這個運算子可以被視為字串的物件。|  
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|這個運算子可以被視為字串的物件。|  
-|[CPathT::operator StringType &](#operator_stringtype)|這個運算子可以被視為字串的物件。|  
+|[CPathT::operator StringType （& s)](#operator_stringtype)|這個運算子可以被視為字串的物件。|  
 |[CPathT::operator + =](#operator_add_eq)|這個運算子會將字串附加至路徑。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
@@ -174,7 +156,7 @@ class CPathT
 |[CPathT::m_strPath](#m_strpath)|路徑。|  
   
 ## <a name="remarks"></a>備註  
- `CPath``CPathA`，和`CPathW`是具現化的`CPathT`定義，如下所示︰  
+ `CPath``CPathA`，和`CPathW`是具現化的`CPathT`定義，如下所示：  
   
  `typedef CPathT< CString > CPath;`  
   
@@ -183,7 +165,7 @@ class CPathT
  `typedef CPathT< CStringW > CPathW;`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlpath.h  
+ **標頭：** atlpath.h  
   
 ##  <a name="addbackslash"></a>CPathT::AddBackslash  
  呼叫這個方法來建立正確的語法的路徑字串的結尾加入反斜線。 如果路徑已經有尾端有反斜線，就會不加入任何反斜線。  

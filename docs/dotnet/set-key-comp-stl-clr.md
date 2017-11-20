@@ -1,42 +1,39 @@
 ---
-title: "set::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp 成員 [STL/CLR]"
+title: "set:: key_comp (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 245db5d0-0610-4c68-a708-9bb99e48325c
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: af382d0e8c14ecdc16419604d7cd31346fadcfa9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# set::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製兩個金鑰的排序委派。  
+# <a name="setkeycomp-stlclr"></a>set::key_comp (STL/CLR)
+將複製兩個索引鍵的順序委派。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## 備註  
- 成員函式傳回用於排序受控制序列的順序委派。  您會用它來比較兩個索引鍵。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個索引鍵。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_key_comp.cpp   
@@ -72,18 +69,22 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**  
-**compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= False**  
-**compare\(L'b', L'a'\) \= True**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::key\_compare](../dotnet/set-key-compare-stl-clr.md)   
- [set::key\_type](../dotnet/set-key-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)   
+ [set::key_type (STL/CLR)](../dotnet/set-key-type-stl-clr.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -42,30 +40,15 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3332c33e2d2b79106cf88f143fe99cb91bbce670
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: c42da9004dc5ea63179d94a36335db3932f5d23b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s、_wdupenv_s
 從目前的環境取得值。  

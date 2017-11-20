@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _aligned_offset_realloc_dbg
+apiname: _aligned_offset_realloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,20 @@ apitype: DLLExport
 f1_keywords:
 - aligned_offset_realloc_dbg
 - _aligned_offset_realloc_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aligned_offset_realloc_dbg function
 - _aligned_offset_realloc_dbg function
 ms.assetid: 64e30a12-887e-453b-aea8-aed793fca9d8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 139046ad9114971b2085be02391b8fd2362a4749
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="alignedoffsetreallocdbg"></a>_aligned_offset_realloc_dbg
 變更使用 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 或 [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md) 所配置的記憶體區塊大小 (僅限偵錯版本)。  

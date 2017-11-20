@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - security [CRT]
 - security-enhanced CRT
 - CRT, security enhancements
 ms.assetid: f87e5a01-4cb2-4379-9e8f-d4693828c55a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 95bf81054110b972c7731415a9032a0b42f813ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 0bd0bdcdfd8f7f367c90787cb7ffdf5f888482dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT 函式的安全性增強版本
 執行階段程式庫常式已有更安全的版本可用。 如需 CRT 中安全性增強的進一步資訊，請參閱 [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。  

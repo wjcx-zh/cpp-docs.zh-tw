@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - associativity of operators [C++]
 - precedence [C++], operators
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 38dfcb75db204a501cb3669a5ba292037d7b7759
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順序和評估順序
 C 運算子的優先順序和順序關聯性會影響運算式中運算元的群組和求值。 有其他優先順序更高或更低的運算子存在時，運算子的優先順序才有意義。 具有較高優先順序運算子的運算式會先進行求值。 優先順序也可以用「繫結」(Binding) 這個詞描述。 具有較高優先順序的運算子可視為具有更緊密的繫結。  

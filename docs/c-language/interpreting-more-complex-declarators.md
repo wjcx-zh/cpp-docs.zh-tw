@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - complex declarators
 - interpreting complex declarators
 ms.assetid: dd5b7019-c86d-4645-a5cc-21f834de6f4a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ae753f1a483c05843797268641c4cc0c5d64c52a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="interpreting-more-complex-declarators"></a>解譯更複雜的宣告子
 您可以用括號括住所有宣告子，以指定「複雜宣告子」的特定解譯。 複雜宣告子是以一個以上的陣列、指標或函式修飾詞限定的識別項。 您可以將各種不同的陣列、指標及函式修飾詞組合套用至單一識別項。 通常可使用 `typedef` 簡化宣告。 請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。  

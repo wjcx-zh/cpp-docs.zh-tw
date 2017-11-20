@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - scope, levels
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scope-and-visibility"></a>範圍和可視性
 識別項的「可視性」會判斷程式中可以參考的部分 (其「範圍」)。 識別項只有位在程式中其「範圍」所涵蓋的部分才顯示 (也就是可以使用)，該範圍可能限於該識別項出現的檔案、函式、區塊或函式原型 (依照由低到高增加的限制性)。 識別項的範圍是可以使用名稱的程式部分。 這個範圍有時稱為「語彙範圍」。 範圍可分為四種：函式、檔案、區塊和函式原型。  

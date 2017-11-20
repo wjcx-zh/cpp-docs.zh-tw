@@ -6,25 +6,23 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _set_app_type
-apilocation:
-- api-ms-win-crt-runtime-l1-1-0.dll
+apiname: _set_app_type
+apilocation: api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
 ms.openlocfilehash: 86078a8ff66eadc1cdd6b177ba074abfd1683345
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setapptype"></a>_set_app_type
 在啟動時使用的內部函式會告訴 CRT，應用程式是主控台應用程式或 GUI 應用程式。  
@@ -62,10 +60,4 @@ void __cdecl _set_app_type(
 |常式|必要的標頭|  
 |-------------|---------------------|  
 |_set_app_type|process.h|
-
-
-
-
-<!--HONumber=Feb17_HO4-->
-
 

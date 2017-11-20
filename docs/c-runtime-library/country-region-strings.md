@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
-helpviewer_keywords:
-- country/region strings
+f1_keywords: c.strings
+dev_langs: C++
+helpviewer_keywords: country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 3c250e47688e5fbcb32779d58dd8fe8973cdc96c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 272ce38cee55661a3f4a1eb751c8808b355b59be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="countryregion-strings"></a>Country/Region Strings
 國家/地區字串可以結合語言字串，建立適合 `setlocale`、 `_wsetlocale`、 `_create_locale`和 `_wcreate_locale` 函式的地區設定規格。 如需各種 Windows 作業系統版本所支援的國家/地區清單，請參閱[國家語言支援 (NLS) API 參考](https://www.microsoft.com/resources/msdn/goglobal/default.mspx) \(英文\)。 在該清單中，國家/地區字串可以是 [Locale - Language Country/Region] \(地區設定 - 語言國家/地區\) 欄中的任何國家/地區值，或是 [Country or Region name abbreviation] \(國家或地區名稱縮寫\) 欄中的任何縮寫。 如需依 Windows 作業系統版本分類的其他語言支援資訊，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](http://msdn.microsoft.com/goglobal/bb896001.aspx) \(英文\)  

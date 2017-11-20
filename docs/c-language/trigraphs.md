@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ??) trigraph
 - ??- trigraph
@@ -24,30 +22,15 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: c2c4e7554b6a11e7396627e085d9645a4161ff15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a480a38411536266c8cd4c23f8b29190550d3444
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="trigraphs"></a>三併詞
 來源字元集 C 原始程式內含在 7 位元的 ASCII 字元集中，但是它是 ISO 646-1983 Invariant Code Set 的超集。 三併詞序列允許 C 程式只使用 ISO (國際標準組織) Invariant Code Set 撰寫。 三併詞是三個字元的序列 (由兩個連續的問號引入)，編譯器會以其對應的標點符號字元取代該序列。 如果 C 原始程式檔所用的字元集不含某些標點符號字元的方便圖形表示，您可改為使用三併詞。  

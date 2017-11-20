@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.files
-dev_langs:
-- C++
+f1_keywords: c.files
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], handling
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fde5ffecc3046d181e5a0b6cfcd42ee3115fce97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-handling"></a>檔案處理
 使用這些常式以建立、刪除和管理檔案，並設定和檢查檔案存取權限。  
@@ -52,7 +33,7 @@ ms.lasthandoff: 03/30/2017
   
  這些常式會對檔案描述項所指定的檔案進行操作。  
   
-|常式|用法|  
+|常式|請使用|  
 |-------------|---------|  
 |[_chsize](../c-runtime-library/reference/chsize.md)、[_chsize_s](../c-runtime-library/reference/chsize-s.md)|變更檔案大小|  
 |[_filelength、_filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|取得檔案長度|  
@@ -67,32 +48,32 @@ ms.lasthandoff: 03/30/2017
   
  這些常式會對由路徑或檔名指定的檔案進行操作。  
   
-|常式|用法|  
+|常式|請使用|  
 |-------------|---------|  
-|[_access、_waccess](../c-runtime-library/reference/access-waccess.md) 以及 [_access_s、_waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|檢查檔案權限設定|  
+|[_access, _waccess](../c-runtime-library/reference/access-waccess.md)、 [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|檢查檔案權限設定|  
 |[_chmod、_wchmod](../c-runtime-library/reference/chmod-wchmod.md)|變更檔案權限設定|  
 |[_fullpath、_wfullpath](../c-runtime-library/reference/fullpath-wfullpath.md)|將相對路徑展開為絕對路徑名稱|  
-|[_makepath、_wmakepath](../c-runtime-library/reference/makepath-wmakepath.md) 以及 [_makepath_s、_wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|將路徑元件合併成單一的完整路徑|  
-|[_mktemp、_wmktemp](../c-runtime-library/reference/mktemp-wmktemp.md) 以及 [_mktemp_s、_wmktemp_s](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)|建立唯一的檔名|  
-|[remove、_wremove](../c-runtime-library/reference/remove-wremove.md)|刪除檔案|  
+|[_makepath, _wmakepath](../c-runtime-library/reference/makepath-wmakepath.md)、 [_makepath_s, _wmakepath_s](../c-runtime-library/reference/makepath-s-wmakepath-s.md)|將路徑元件合併成單一的完整路徑|  
+|[_mktemp、 _wmktemp](../c-runtime-library/reference/mktemp-wmktemp.md)、 [_mktemp_s, _wmktemp_s](../c-runtime-library/reference/mktemp-s-wmktemp-s.md)|建立唯一的檔名|  
+|[remove0、_wremove](../c-runtime-library/reference/remove-wremove.md)|刪除檔案|  
 |[rename、_wrename](../c-runtime-library/reference/rename-wrename.md)|重新命名檔案|  
-|[_splitpath、_wsplitpath](../c-runtime-library/reference/splitpath-wsplitpath.md) 以及 [_splitpath_s、_wsplitpath_s](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)|將路徑剖析成元件|  
+|[_splitpath、 _wsplitpath](../c-runtime-library/reference/splitpath-wsplitpath.md)、 [_splitpath_s, _wsplitpath_s](../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)|將路徑剖析成元件|  
 |[_stat、_stat64、_stati64、_wstat、_wstat64、_wstati64](../c-runtime-library/reference/stat-functions.md)|取得有關具名檔案的檔案狀態資訊|  
-|[_umask](../c-runtime-library/reference/umask.md)、[_umask_s](../c-runtime-library/reference/umask-s.md)|將程式建立的新檔案設定為預設權限遮罩|  
+|[_umask](../c-runtime-library/reference/umask.md)、 [_umask_s](../c-runtime-library/reference/umask-s.md)|將程式建立的新檔案設定為預設權限遮罩|  
 |[_unlink、_wunlink](../c-runtime-library/reference/unlink-wunlink.md)|刪除檔案|  
   
 ### <a name="file-handling-routines-open-file"></a>檔案處理常式 (開啟檔案)  
   
  這些常式會開啟檔案。  
   
-|常式|用法|  
+|常式|請使用|  
 |-------------|---------|  
-|[fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) 以及 [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|開啟檔案並傳回此開啟檔案的指標。|  
+|[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)、 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|開啟檔案並傳回此開啟檔案的指標。|  
 |[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|以檔案共用開啟資料流，並傳回此開啟檔案的指標。|  
 |[_open、_wopen](../c-runtime-library/reference/open-wopen.md)|開啟檔案，並傳回檔案描述項至已開啟的檔案。|  
-|[_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md) 以及 [_sopen_s、_wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|以檔案共用開啟檔案，並傳回檔案描述項至該開啟檔案。|  
+|[_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)、 [_sopen_s, _wsopen_s](../c-runtime-library/reference/sopen-s-wsopen-s.md)|以檔案共用開啟檔案，並傳回檔案描述項至該開啟檔案。|  
 |[_pipe](../c-runtime-library/reference/pipe.md)|建立用於讀取和寫入的管道。|  
-|[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md) 以及 [freopen_s、_wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|重新指派檔案指標。|  
+|[freopen, _wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)、 [freopen_s, _wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|重新指派檔案指標。|  
   
  這些常式提供在 `FILE` 結構、檔案描述項和 Win32 檔案控制代碼之間變更檔案表示的方式。  
   
@@ -105,9 +86,9 @@ ms.lasthandoff: 03/30/2017
   
  下列的 Win32 函式也會開啟檔案和管道：  
   
--   [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858.aspx) (CreateFile 函式)  
+-   [CreateFile](http://msdn.microsoft.com/library/windows/desktop/aa363858.aspx)  
   
--   [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx) (CreatePipe 函式)  
+-   [CreatePipe](http://msdn.microsoft.com/library/windows/desktop/aa365152.aspx)  
   
 -   [CreateNamedPipe](http://msdn.microsoft.com/library/windows/desktop/aa365150.aspx) (CreateNamedPipe 函式)  
   

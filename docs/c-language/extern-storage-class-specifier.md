@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C]
 - storage class specifiers, extern
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="extern-storage-class-specifier"></a>extern 儲存類別指定名稱
 使用 `extern` 儲存類別規範宣告的變數是一個變數的參考，其與在任何程式原始程式檔的外部層級定義的變數具有相同名稱。 內部 `extern` 宣告用來使外部層級的變數定義在區塊內可見。 除非另外在外部層次宣告，否則使用 `extern` 關鍵字宣告的變數只有在其宣告的區塊中才可見。  

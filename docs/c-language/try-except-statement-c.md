@@ -4,19 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- __except
-- try
-- __try
-- except
-- __except_cpp
-- __try_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - try-except keyword [C]
 - structured exception handling, try-except
@@ -26,30 +17,15 @@ helpviewer_keywords:
 - __except keyword [C], in try-except
 - try-catch keyword [C], try-except keyword [C]
 ms.assetid: f76db9d1-fc78-417f-b71f-18e545fc01c3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 78ba2330b577aae19110589f99162b4bb9549bb0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: ea7526648d5879a224c3bc1ffd6c76dfc986c0c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="try-except-statement-c"></a>try-except 陳述式 (C)
 **Microsoft 特定的**  
@@ -84,7 +60,7 @@ ms.lasthandoff: 04/04/2017
 >  結構化例外狀況處理可搭配 C 和 C++ 原始程式檔使用。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理機制更有彈性，因為它可以處理任何類型的例外狀況。  
   
 > [!NOTE]
->  若是 C++ 程式，則應該使用 C++ 例外狀況處理，而不是結構化例外狀況處理。 如需詳細資訊，請參閱《C++ 語言參考》中的[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。  
+>  針對 C++ 程式，應該使用 C++ 例外狀況處理，而不是結構化例外狀況處理。 如需詳細資訊，請參閱《C++ 語言參考》中的[例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。  
   
  應用程式中的每個常式都可以有其本身的例外狀況處理常式。 `__except` 運算式會在 `__try` 主體的範圍內執行。 這表示它可以存取在此宣告的任何區域變數。  
   

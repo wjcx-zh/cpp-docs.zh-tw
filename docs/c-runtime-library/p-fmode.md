@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- __p__fmode
+apiname: __p__fmode
 apilocation:
 - msvcr80.dll
 - msvcr120.dll
@@ -19,23 +17,19 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 apitype: DLLExport
-f1_keywords:
-- __p__fmode
-dev_langs:
-- C++
-helpviewer_keywords:
-- __p__fmode
+f1_keywords: __p__fmode
+dev_langs: C++
+helpviewer_keywords: __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 0a563385ecd1e773433e053cffbae24403eab6fc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pfmode"></a>__p__fmode
 指向 `_fmode` 全域變數會指定檔案 I/O 作業的預設「檔案轉譯模式」。  

@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>資料流 I/O
 這些函式會處理不同大小和格式的資料，範圍從單一字元到大型資料結構。 它們也提供緩衝處理，如此可改善效能。 資料流緩衝區的預設大小是 4K。 這些常式只會影響執行階段程式庫常式所建立的緩衝區，而且不會影響作業系統所建立的緩衝區。  
@@ -50,9 +31,9 @@ ms.lasthandoff: 03/30/2017
   
 |常式|用法|  
 |-------------|---------|  
-|[clearerr](../c-runtime-library/reference/clearerr.md)、[clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除資料流的錯誤指標|  
+|[clearerr](../c-runtime-library/reference/clearerr.md)( [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除資料流的錯誤指標|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|關閉資料流|  
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|關閉所有開啟的資料流，但 `stdin`、`stdout` 和 `stderr` 除外|  
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|關閉所有開啟的資料流，但 `stdin`, `stdout`和 `stderr`除外|  
 |[_fdopen、wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|關聯資料流與已開啟檔案的檔案描述項|  
 |[feof](../c-runtime-library/reference/feof.md)|測試資料流上的檔案結尾|  
 |[ferror](../c-runtime-library/reference/ferror.md)|測試資料流上的錯誤|  
@@ -63,13 +44,13 @@ ms.lasthandoff: 03/30/2017
 |[fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)|從資料流讀取字串|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|取得與資料流相關聯的檔案描述項|  
 |[_flushall](../c-runtime-library/reference/flushall.md)|將所有資料流清除至緩衝區或存放裝置|  
-|[fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) 以及 [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|開啟資料流|  
+|[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)、 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|開啟資料流|  
 |[fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)、[fprintf_s、_fprintf_s_l、fwprintf_s、_fwprintf_s_l](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|將格式化資料寫入資料流|  
 |[fputc、fputwc](../c-runtime-library/reference/fputc-fputwc.md)|將字元寫入資料流 ( `putc` 和 `putwc`的函式版本)|  
 |[_fputchar、_fputwchar](../c-runtime-library/reference/fputc-fputwc.md)|將字元寫入 `stdout` ( `putchar` 和 `putwchar`的函式版本)|  
 |[fputs、fputws](../c-runtime-library/reference/fputs-fputws.md)|將字串寫入資料流|  
 |[fread](../c-runtime-library/reference/fread.md)|從資料流讀取未格式化資料|  
-|[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md) 以及 [freopen_s、_wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|將 `FILE` 資料流指標重新指派給新的檔案或裝置|  
+|[freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)( [freopen_s, _wfreopen_s](../c-runtime-library/reference/freopen-s-wfreopen-s.md)|將 `FILE` 資料流指標重新指派給新的檔案或裝置|  
 |[fscanf、fwscanf](../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)、[fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](../c-runtime-library/reference/fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)|從資料流讀取格式化資料|  
 |[fseek、_fseeki64](../c-runtime-library/reference/fseek-fseeki64.md)|將檔案位置移至指定的位置|  
 |[fsetpos](../c-runtime-library/reference/fsetpos.md)|設定資料流的位置指標|  
@@ -92,13 +73,13 @@ ms.lasthandoff: 03/30/2017
 |[setbuf](../c-runtime-library/reference/setbuf.md)|控制資料流緩衝|  
 |[_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)|設定在資料流 I/O 層級同時開啟的檔案數目上限。|  
 |[setvbuf](../c-runtime-library/reference/setvbuf.md)|控制資料流緩衝和緩衝區大小|  
-|[_snprintf、_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)、[_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|將所指定長度的格式化資料寫入字串|  
+|[_snprintf、_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)( [_snprintf_s, _snprintf_s_l, _snwprintf_s, _snwprintf_s_l](../c-runtime-library/reference/snprintf-s-snprintf-s-l-snwprintf-s-snwprintf-s-l.md)|將所指定長度的格式化資料寫入字串|  
 |[_snscanf、_snwscanf](../c-runtime-library/reference/snscanf-snscanf-l-snwscanf-snwscanf-l.md)、[_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l](../c-runtime-library/reference/snscanf-s-snscanf-s-l-snwscanf-s-snwscanf-s-l.md)|從標準輸入資料流讀取所指定長度的格式化資料。|  
 |[sprintf、swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)、[sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|將格式化資料寫入字串|  
 |[sscanf、swscanf](../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)、[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](../c-runtime-library/reference/sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)|從字串讀取格式化資料|  
 |[_tempnam、_wtempnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)|在指定的目錄中產生暫存檔名|  
-|[tmpfile](../c-runtime-library/reference/tmpfile.md)、[tmpfile_s](../c-runtime-library/reference/tmpfile-s.md)|建立暫存檔|  
-|[tmpnam、_wtmpnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)、[tmpnam_s、_wtmpnam_s](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|產生暫存檔名|  
+|[tmpfile](../c-runtime-library/reference/tmpfile.md)( [tmpfile_s](../c-runtime-library/reference/tmpfile-s.md)|建立暫存檔|  
+|[tmpnam、_wtmpnam](../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md)( [tmpnam_s, _wtmpnam_s](../c-runtime-library/reference/tmpnam-s-wtmpnam-s.md)|產生暫存檔名|  
 |[ungetc、ungetwc](../c-runtime-library/reference/ungetc-ungetwc.md)|將字元推送回資料流|  
 |[_vcprintf、_vcwprintf](../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md)、[_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l](../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)|將格式化資料寫入主控台。|  
 |[vfprintf、vfwprintf](../c-runtime-library/reference/vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)、[vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l](../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)|將格式化資料寫入資料流|  
@@ -118,7 +99,7 @@ ms.lasthandoff: 03/30/2017
   
  不論全域認可/不認可旗標的狀態為何，特別使用 `c` 或 `n` 旗標所開啟的任何檔案都是根據旗標所運作。  
   
- 如果您的程式未明確地關閉資料流，則會在程式終止時自動關閉資料流。 不過，您應該在程式完成資料流的處理時關閉資料流，因為一次可以開啟的資料流數目有限。 如需這項限制的相關資訊，請參閱 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md)。  
+ 如果您的程式未明確地關閉資料流，則會在程式終止時自動關閉資料流。 不過，您應該在程式完成資料流的處理時關閉資料流，因為一次可以開啟的資料流數目有限。 如需這項限制的相關資訊，請參閱 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) 。  
   
  只有在具有 `fflush` 或是檔案定位函式 (`fseek`、 `fsetpos`或 `rewind`) 的中間呼叫時，輸入才能直接遵循輸出。 如果輸入作業遇到檔案結尾，則輸出可以遵循輸入，而沒有檔案定位函式的中間呼叫。  
   

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sizeof
-dev_langs:
-- C++
-helpviewer_keywords:
-- sizeof operator
+f1_keywords: sizeof
+dev_langs: C++
+helpviewer_keywords: sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 11fa4acae05c5488ce1d90873ec816744c7e83df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sizeof-operator-c"></a>sizeof 運算子 (C)
 `sizeof` 運算子提供儲存運算元類型之物件所需的儲存空間 (以位元組為單位)。 這個運算子可以避免在您的程式中指定與電腦相關的資料大小。  

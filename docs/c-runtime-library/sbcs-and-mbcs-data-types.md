@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - MBCS
 - SBCS
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - SBCS and MBCS data types
 - data types [C], MBCS and SBCS
 ms.assetid: 4c3ef9da-e397-48d4-800e-49dba36db171
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: ac4c3f7273adf9e373484f24fbb7a56ebea5903a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 和 MBCS 資料類型
 只處理一個多位元組字元或一個位元組多位元組字元的任何 Microsoft `MBCS` 執行階段程式庫常式，都預期 `unsigned int`引數 (其中 0x00 <= 字元值 <= 0xFFFF 和 0x00 <= 位元組值 <= 0xFF )。 在字串內容中處理多位元組位元組或字元的 `MBCS` 常式，預期以 `unsigned char` 指標表示多位元組字元字串。  

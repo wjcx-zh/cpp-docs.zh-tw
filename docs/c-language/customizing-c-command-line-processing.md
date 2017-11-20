@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _spawn functions
 - command line, processing
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - suppressing environment processing
 - _exec function
 ms.assetid: c20fa11d-b35b-4f3e-93b6-2cd5a1c3c993
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 00194acd1aa72db73f75a2cb5aa5700df02be0a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="customizing-c-command-line-processing"></a>自訂 C 命令列處理
 如果您的程式不接受命令列引數，您可以隱藏執行命令列處理的程式庫常式用法，藉此稍微節省空間。 這個常式稱為 **_setargv** (在寬字元環境中則稱為 **_wsetargv**)，如[展開萬用字元引數](../c-language/expanding-wildcard-arguments.md)中所述。 若要隱藏其用途，請在包含 **main** 函式的檔案中定義不執行任何動作的常式，並將此常式命名為 **_setargv** (在寬字元環境中則命名為 **_wsetargv**)。 然後，您的 **_setargv** 或 **_wsetargv** 定義將會達成對 **_setargv** 或 **_wsetargv** 的呼叫，且不會載入程式庫版本。  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code comments, C code
 - comments, documenting code
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - /* */ comment delimiters
 - comments
 ms.assetid: 0f5f2825-e673-49e7-8669-94e2f5294989
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 78c3e97530198b6685e402237bda5cdaf9a0754a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-comments"></a>C 註解
 「註解」是一個以正斜線和星號組合 (<b>/\*</b>) 為開頭的字元序列，編譯器會將其視為一個空白字元或直接忽略。 註解可以包含可表示字元集的任何字元組合，其中包括新行字元，但不包括「結尾註解」分隔符號 (<b>\*/</b>)。 註解可佔用一行以上，但不可以是巢狀。  
@@ -94,4 +91,3 @@ printf( "Hello\n" );  /* Comments can go here */
   
 ## <a name="see-also"></a>另請參閱  
  [C 語彙基元](../c-language/c-tokens.md)
-

@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 76a4bae07fd93a393084b6f108fead3ec32988f1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 在本主題中，您可以找到有關如何移植現有 C++ 程式碼到 Windows 10 應用程式平台 (通用 Windows 平台) 的詳細資訊。 *「通用」* (Universal) 一詞表示您的程式碼可以在任何執行 Windows 10 的裝置上執行，包括桌上型電腦、手機、平板電腦及任何執行 Windows 10 的新款裝置。 您可以建立在執行 Windows 10 之任何裝置上順利運作的單一專案和單一 XAML 使用者介面。 您可以在 XAML 中使用動態配置功能，以允許應用程式的 UI 適應不同的顯示器大小。  
   
- Windows 開發人員中心文件包含如何將 Windows 8.1 應用程式移植到通用 Windows 平台的指南。 請參閱[從 Windows Runtime 8 移至 UWP](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root)。 雖然本指南大部分著重於 C# 程式碼，但大部分的指引也適用於 C++。 下列程序包含更詳細的資訊。  
+ Windows 開發人員中心文件包含如何將 Windows 8.1 應用程式移植到通用 Windows 平台的指南。 請參閱 [從 Windows 執行階段 8 移至 UWP](https://msdn.microsoft.com/windows/uwp/porting/w8x-to-uwp-root)。 雖然本指南大部分著重於 C# 程式碼，但大部分的指引也適用於 C++。 下列程序包含更詳細的資訊。  
   
  本主題包含將程式碼移植到 UWP 的程序，如下所示。  
   
@@ -133,4 +115,3 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
 ## <a name="see-also"></a>另請參閱  
  [Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [開發適用於通用 Windows 平台 (UWP) 的應用程式](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)
-

@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: b118e825ef61d826049a1452ee4275951c0ca440
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: 79efd81177cc3235030600779e70c1e9a2043670
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 本移植案例研究的設計，是為了讓您了解什麼是典型移植專案、您可能遇到的問題類型，並提供一些可用於解決移植問題的一般秘訣和訣竅。 這不是最終移植指南，因為移植專案的體驗主要取決於程式碼的細節。  
@@ -496,7 +479,7 @@ class CTreeListBox : public CListBox
   
 ```  
   
- 這段程式碼是在 Visual C++ 支援內建 bool 類型之前所撰寫。 在這類程式碼中，BOOL 是 int 的 typedef int 類型是帶正負號的類型，而帶正負號 int 的位元表示使用第一個位元做為正負號位元，因此 int 類型的位元欄位可能會解譯為代表 0 或 -1，但這可能不是預期目的。  
+ 這段程式碼是在 Visual C++ 支援內建 bool 類型之前所撰寫。 在這類程式碼中，BOOL 是 int 的 typedefint 類型是帶正負號的類型，而帶正負號 int 的位元表示使用第一個位元做為正負號位元，因此 int 類型的位元欄位可能會解譯為代表 0 或 -1，但這可能不是預期目的。  
   
  光看程式碼，您可能不知道為什麼這是位元欄位。 其用意是為了保持物件很小，還是有任何地方使用了物件的二進位檔配置？ 由於找不出使用位元欄位的任何理由，因此我們將這些欄位變更為一般 BOOL 成員。 使用位元欄位不保證可以保持物件很小。 這取決於編譯器如何配置類型。  
   

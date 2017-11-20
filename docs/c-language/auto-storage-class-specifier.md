@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8e73f57e-aa92-4e41-91ea-5c8ad2a2b332
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 5e80f6057a26ba7655df0a04d75dcaec2c4856ed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="auto-storage-class-specifier"></a>auto 儲存類別指定名稱
 **auto** 儲存類別指定名稱會宣告自動變數，也就是具有本機存留期的變數。 **auto** 變數只能在其宣告所在的區塊中看見。 **auto** 變數的宣告可以包含初始設定式，如[初始化](../c-language/initialization.md)中所述。 由於具有 **auto** 儲存類別的變數不會自動初始化，因此您應該在宣告這些變數時明確地將它們初始化，或者在區塊內的陳述式中為它們指派初始值。 未初始化的 **auto** 變數值為未定義 (如果已指定初始設定式，則 **auto** 或 **register** 儲存類別的區域變數會在每次進入範圍時初始化)。  

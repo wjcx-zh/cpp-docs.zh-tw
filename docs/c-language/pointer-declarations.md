@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - pointer declarations
 - declarations, pointers
 - const keyword [C]
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 02f33a5cd41dbbf45047915e3ad890311eba8cca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: e7d8b351f7cc58d37d4da8bc273d8541aee54446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pointer-declarations"></a>指標宣告
 「指標宣告」用於命名指標變數，並且會指定變數所指向的物件類型。 宣告為指標的變數會保留記憶體位址。  
@@ -142,7 +125,7 @@ struct id
 } record;  
 ```  
   
- 變數 *record* 具有結構類型 *id*。 請注意，*pname* 會宣告為另一個名為 *name* 之結構類型的指標。 這個宣告可以在定義 *name* 類型之前出現。  
+ 變數 *record* 具有結構類型 *id*。請注意，*pname* 會宣告為另一個名為 *name* 之結構類型的指標。 這個宣告可以在定義 *name* 類型之前出現。  
   
 ## <a name="see-also"></a>另請參閱  
  [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

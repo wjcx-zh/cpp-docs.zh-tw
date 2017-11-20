@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - external definitions
 - linkage [C++], external
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - visibility, variables
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部層級宣告的儲存類別指定名稱
 外部變數是指在檔案範圍的變數。 這些變數是在任何函式之外定義，因此可能可供許多函式使用。 由於函式只能在外部層級定義，因此不可為巢狀。 根據預設，對相同名稱之外部變數和函式的所有參考都是相同物件的參考，這表示它們具有「外部連結」 (您可以使用 **static** 關鍵字覆寫此項。 如需有關 **static** 的詳細資訊，請參閱本節稍後的資訊)。  

@@ -4,23 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb057f9d229c659f339f996d1ff38f65fd2e018
-ms.openlocfilehash: d548106a8820c9eea4e6c2956615fff8c6cd514c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/01/2017
-
+ms.openlocfilehash: 274154eb0688bc974a34b511d0aa39d08bb27b61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 本主題提供升級 Visual C++ 程式碼的指南。 其中包括如何讓程式碼能夠在新版工具上正確編譯和執行，以及利用新語言和 Visual Studio 功能。 本主題也包含將舊版應用程式移轉至更新式平台的相關資訊。  
@@ -97,4 +94,3 @@ ms.lasthandoff: 06/01/2017
   
 ## <a name="see-also"></a>另請參閱  
  [Visual C++](../visual-cpp-in-visual-studio.md)
-

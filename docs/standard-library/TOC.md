@@ -631,8 +631,3 @@
 #### [其他單一引數輸出資料流操作工具](other-one-argument-output-stream-manipulators.md)
 ## [規則運算式 (C++)](regular-expressions-cpp.md)
 ## [檔案系統巡覽](file-system-navigation.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - function parameters
@@ -21,30 +19,15 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: 7f596595f8d21df6a0027a3a5ebfdc5beda5e374
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/18/2017
-
+ms.openlocfilehash: 93e3b33e6e5e9eee52ec08eac32c47bf0ae6213f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="parameters"></a>參數
 引數是值的名稱，會由函式呼叫傳遞至函式。 參數是函式預期收到的值。 在函式原型中，函式名稱後面接著的括號會包含函式參數與及類型的完整清單。 參數宣告會指定參數中所儲存值的類型、大小和識別項。  
@@ -93,7 +76,7 @@ void new( double x, double y, double z )
 }  
 ```  
   
- 如果參數清單中至少會有一個參數，則清單可用逗號且後面接著三個英文句號的形式結束 (**, ...**)。 這種建構稱為「省略符號標記法」，表示函式的可變引數數目。 (如需詳細資訊，請參閱[使用可變數目的引數呼叫](../c-language/calls-with-a-variable-number-of-arguments.md))。不過，函式的呼叫中擁有的引數數目，必須至少為最後一個逗號前面的參數數目。  
+ 如果參數清單中至少會有一個參數，則清單可用逗號且後面接著三個英文句號的形式結束 (**, ...**)。這種建構稱為「省略符號標記法」，表示函式的可變引數數目。 (如需詳細資訊，請參閱[使用可變數目的引數呼叫](../c-language/calls-with-a-variable-number-of-arguments.md))。不過，函式的呼叫中擁有的引數數目，必須至少為最後一個逗號前面的參數數目。  
   
  如果沒有要傳遞至函式的引數，則參數清單會以關鍵字 `void` 取代。 這種 `void` 用法與其做為類型指定名稱的用法不同。  
   

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - integral conversions, from signed
 - integers, converting
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - data type conversion [C++], signed and unsigned integers
 - type conversion [C++], signed and unsigned integers
 ms.assetid: 5eea32f8-8b14-413d-acac-c063b3d118d7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>從帶正負號整數類型的轉換
 將帶正負號的整數轉換為大小相等或大小較大的不帶正負號整數時，若帶正負號整數值不為負值，則其值不變。 轉換是透過帶正負號整數的帶正負號擴充方式所進行。 若將帶正負號整數轉換為較短的帶正負號整數，則會截斷高序位的位元。 其結果會解譯為不帶正負號的值，如此範例中所示。  

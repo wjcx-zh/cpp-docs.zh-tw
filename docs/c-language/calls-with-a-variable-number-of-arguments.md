@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - arguments [C++], variable number of
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 10f2eb4597808f726d55c3ece76b99c394d691c3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>引數數目可變的呼叫
 部分參數清單的末端可以用逗號後面接著三個句號 (**, ...**) 的省略符號標記法，來表示可能有更多傳遞至函式的引數，不過未提供這些引數的相關資訊。 類型檢查不會在這類引數上執行。 至少有一個參數前面必須加上省略符號標記法，而且省略符號標記法必須是參數清單中的最後一個語彙基元。 未使用省略符號標記法時，如果函式收到的參數不是參數清單中所宣告的參數，表示函式的行為尚未定義。  

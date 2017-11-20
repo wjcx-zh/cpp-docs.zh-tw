@@ -10,8 +10,7 @@ apiname:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
-apilocation:
-- api-ms-win-crt-runtime-l1-1-0.dll
+apilocation: api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _execute_onexit_table
@@ -20,26 +19,21 @@ f1_keywords:
 - process/_initialize_onexit_table
 - _register_onexit_function
 - process/_register_onexit_function
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _execute_onexit_table function
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d57452bb893ce86a9bddf949a9887eaf38e1cdbd
-
+ms.openlocfilehash: 630b8a5160eaa808c12c16ec8dd45a96a621b7bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 管理要在結束時呼叫的常式。  
@@ -92,8 +86,3 @@ int _execute_onexit_table(
  [atexit](../c-runtime-library/reference/atexit.md)   
  [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)
-
-
-<!--HONumber=Feb17_HO4-->
-
-

@@ -4,37 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 220ecd24c6056737d0338cc584663e4664ac81b1
-ms.openlocfilehash: 053769ee274abf6e29f8d6f2938dc595ad8bd9f3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7288b343563056f6e1daa4f0cb61b43fb263792f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 本主題是介紹 Visual C++ 專案升級程序之幾個主題中的第一個主題，該程序會將在舊版 Visual Studio 中建立的專案升級至 Visual Studio 2017。 這些主題以範例來介紹升級程序，從一個很簡單的專案開始，再移到稍微更複雜的專案。 在本主題中，我們將討論特定專案 MFC Scribble 的升級程序。 它很適合做為 C++ 專案升級程序的基本入門。  
@@ -109,4 +92,3 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ## <a name="see-also"></a>另請參閱  
  [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)   
  [下一個範例：COM Spy](../porting/porting-guide-com-spy.md)
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- multimap
 - map/std::multimap
 - map/std::multimap::allocator_type
 - map/std::multimap::const_iterator
@@ -51,35 +49,59 @@ f1_keywords:
 - map/std::multimap::swap
 - map/std::multimap::upper_bound
 - map/std::multimap::value_comp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- multimap class
+- std::multimap [C++]
+- std::multimap [C++], allocator_type
+- std::multimap [C++], const_iterator
+- std::multimap [C++], const_pointer
+- std::multimap [C++], const_reference
+- std::multimap [C++], const_reverse_iterator
+- std::multimap [C++], difference_type
+- std::multimap [C++], iterator
+- std::multimap [C++], key_compare
+- std::multimap [C++], key_type
+- std::multimap [C++], mapped_type
+- std::multimap [C++], pointer
+- std::multimap [C++], reference
+- std::multimap [C++], reverse_iterator
+- std::multimap [C++], size_type
+- std::multimap [C++], value_type
+- std::multimap [C++], begin
+- std::multimap [C++], cbegin
+- std::multimap [C++], cend
+- std::multimap [C++], clear
+- std::multimap [C++], count
+- std::multimap [C++], crbegin
+- std::multimap [C++], crend
+- std::multimap [C++], emplace
+- std::multimap [C++], emplace_hint
+- std::multimap [C++], empty
+- std::multimap [C++], end
+- std::multimap [C++], equal_range
+- std::multimap [C++], erase
+- std::multimap [C++], find
+- std::multimap [C++], get_allocator
+- std::multimap [C++], insert
+- std::multimap [C++], key_comp
+- std::multimap [C++], lower_bound
+- std::multimap [C++], max_size
+- std::multimap [C++], rbegin
+- std::multimap [C++], rend
+- std::multimap [C++], size
+- std::multimap [C++], swap
+- std::multimap [C++], upper_bound
+- std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fb3454e66d682241b96b02f78e7aae6a0a3cf6b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 0900dae615bfe950655b04cbc501ef32c08f2c9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="multimap-class"></a>multimap 類別
 「C++ 標準程式庫」multimap 類別可用來在集合中儲存及擷取資料，其中集合中的每個元素都成對，同時具有資料值和排序鍵。 索引鍵的值不需要是唯一的，用於自動排序資料。 多重對應中項目的值可以直接變更，但其關聯的索引鍵值不可以直接變更。 相反地，與舊項目相關聯的索引鍵值必須刪除，然後插入與新項目相關聯的新索引鍵值。  
@@ -370,7 +392,7 @@ typedef implementation-defined const_iterator;
   
  multimap 所定義的 `const_iterator` 會指向 [value_type](#value_type) 的物件，value_type 的類型為 `pair`*\<***const Key**, **Type***>*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。  
   
- 若要對指向 multimap 中某個元素的 `const_iterator``cIter` 進行取值，請使用 **->** 運算子。  
+ 取值 （dereference) `const_iterator` `cIter`指向 multimap 中的項目，使用 **->** 運算子。  
   
  若要存取該元素的索引鍵值，請使用 `cIter` -> **first**，這等同於 (\* `cIter`). **first**。 若要存取該元素的已對應資料值，請使用 `cIter` -> **second**，這等同於 (\* `cIter`). **second**。  
   
@@ -450,7 +472,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
   
  multimap 所定義的 `const_reverse_iterator` 會指向 [value_type](#value_type) 的物件，value_type 的類型為 `pair`*\<***const Key**, **Type***>*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。  
   
- 若要對指向 multimap 中某個元素的 `const_reverse_iterator``crIter` 進行取值，請使用 **->** 運算子。  
+ 取值 （dereference) `const_reverse_iterator` `crIter`指向 multimap 中的項目，使用 **->** 運算子。  
   
  若要存取該元素的索引鍵值，請使用 `crIter` -> **first**，這等同於 (\* `crIter`). **first**。 若要存取該元素的已對應資料值，請使用 `crIter` -> **second**，這等同於 (\* `crIter`). **first**。  
   
@@ -626,7 +648,7 @@ typedef typename allocator_type::difference_type difference_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type`通常用來代表範圍中的項目數 [*第一個*，*最後一個*) 迭代器間`first`和`last`，包含項目由指向`first`和項目，但不是包括的範圍，指向元素`last`。  
+ `difference_type` 是透過容器的迭代器減去或遞增時會傳回的類型。 `difference_type`通常用來代表範圍中的項目數 [*第一個*，*最後*) 迭代器間`first`和`last`，包括指向的元素由`first`和項目，但不是包括的範圍，指向元素`last`。  
   
  請注意，儘管 `difference_type` 適用於符合輸入迭代器需求的所有迭代器，其中包括可反轉容器 (例如 set) 所支援的雙向迭代器類別，但只有隨機存取容器 (例如 vector) 所提供的隨機存取迭代器，才支援迭代器之間的減法。  
   
@@ -1996,7 +2018,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
   
  multimap 所定義的 `reverse_iterator` 會指向 [value_type](#value_type) 的物件，value_type 的類型為 `pair`*\<***const Key**, **Type***>*。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。  
   
- 若要對指向 multimap 中某個元素的 `reverse_iterator``rIter` 進行取值，請使用 -> 運算子。  
+ 取值 （dereference) `reverse_iterator` `rIter`指向 multimap 中的項目，使用-> 運算子。  
   
  若要存取該元素的索引鍵值，請使用 `rIter` -> **first**，這等同於 (\* `rIter`). **first**。 若要存取該元素的已對應資料值，請使用 `rIter` -> **second**，這等同於 (\* `rIter`). **first**。  
   
@@ -2329,5 +2351,4 @@ The values of the mapped elements are: 10 20.
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

@@ -1,36 +1,35 @@
 ---
-title: "IRowsetIdentityImpl::IsSameRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IsSameRow"
-  - "IRowsetIdentityImpl.IsSameRow"
-  - "ATL.IRowsetIdentityImpl.IsSameRow"
-  - "IRowsetIdentityImpl::IsSameRow"
-  - "ATL::IRowsetIdentityImpl::IsSameRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsSameRow 方法"
+title: "Irowsetidentityimpl:: Issamerow |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IsSameRow
+- IRowsetIdentityImpl.IsSameRow
+- ATL.IRowsetIdentityImpl.IsSameRow
+- IRowsetIdentityImpl::IsSameRow
+- ATL::IRowsetIdentityImpl::IsSameRow
+dev_langs: C++
+helpviewer_keywords: IsSameRow method
 ms.assetid: e35ad54e-73f1-4dc0-8d8c-9e98202baf0a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: baab48b21ab624d285fecac0e888f8d32e86342b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetIdentityImpl::IsSameRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-比較兩個資料列控制代碼查看它們是否參考相同的資料列。  
+# <a name="irowsetidentityimplissamerow"></a>IRowsetIdentityImpl::IsSameRow
+比較兩個資料列控點，以查看它們是否參考相同的資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -40,14 +39,14 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
- 請參閱《 *OLE DB 程式設計人員參考》的*[IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) 。  
+#### <a name="parameters"></a>參數  
+ 請參閱[IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 備註  
- 要比較的控制代碼，這個方法轉換為 **HROW** 控制代碼給 **RowClass** 成員並在指標的 `memcmp` 。  
+## <a name="remarks"></a>備註  
+ 若要比較資料列控制代碼，這個方法會轉換**HROW**控制代碼對應到**RowClass**成員和呼叫`memcmp`指標上。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetIdentityImpl 類別](../../data/oledb/irowsetidentityimpl-class.md)

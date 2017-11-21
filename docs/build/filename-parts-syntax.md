@@ -1,52 +1,52 @@
 ---
-title: "檔名部分語法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE 中的檔名部分語法"
-  - "NMAKE 程式, 語法"
-  - "語法, 檔名部分"
+title: "檔名部分語法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- syntax, filename-parts
+- filename-parts syntax in NMAKE
+- NMAKE program, syntax
 ms.assetid: 48fe38e0-3f3b-40e6-894c-330ee775a656
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 檔名部分語法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-命令中的檔名部分語法代表第一個相依檔名的元件 \(可能是隱含的相依性\)。  檔名元件是依指定而非存在於磁碟上的檔案磁碟、路徑、主檔名，和副檔名。  使用 **%s** 代表完整的檔名。  使用 **%&#124;**\[*parts*\]**F** \(跟隨在百分比符號之後的 &#124; 字元\) 以代表部分的檔名，在此處 *parts* 可以是下列字母其中的零或多個，順序不限。  
+# <a name="filename-parts-syntax"></a>檔名部分語法
+在命令中的檔名部分語法表示第一個相依檔案名稱 （這可能是隱含的相依性） 的元件。 檔名元件是檔案的磁碟機、 路徑、 基底名稱和副檔名為指定的不存在於磁碟上。 使用**%s**來代表完整的檔名。 使用**%&#124;**[*部分*]**F** (分隔號字元後面的百分比符號) 來代表組件的檔名，其中*部分*可以是零或多個下列的字母，以任何順序。  
   
-|字母|說明|  
-|--------|--------|  
-|無字母|完整名稱 \(與 **%s** 相同\)|  
+|字母|描述|  
+|------------|-----------------|  
+|沒有字母|完整名稱 (與相同**%s**)|  
 |**d**|磁碟機|  
 |**p**|路徑|  
-|**f**|主檔名|  
+|**f**|基底檔案的名稱|  
 |**e**|副檔名|  
   
- 例如，如果檔名是 c:\\prog.exe：  
+ 例如，如果檔案名稱是 c:\prog.exe:  
   
--   %s 將會是 c:\\prog.exe  
+-   將 c:\prog.exe %s。  
   
--   %&#124;F 將會是 c:\\prog.exe  
+-   %&#124;將 c:\prog.exe F。  
   
--   %&#124;dF 將會是 c  
+-   %&#124; dF 會成為 c  
   
--   %&#124;pF 將會是 c:\\  
+-   %&#124; pF 會成為 c:\  
   
--   %&#124;fF 將會是 prog  
+-   %&#124; fF 會成為 prog  
   
--   %&#124;eF 將會是 exe  
+-   %&#124; eF 會成為 exe  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Makefile 中的命令](../build/commands-in-a-makefile.md)

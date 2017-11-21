@@ -1,37 +1,38 @@
 ---
-title: "Specifying the Location and Size of a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes, size"
-  - "dialog boxes, positioning"
+title: "指定的位置和大小 對話方塊的 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, size
+- dialog boxes, positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0dcd2acc4067e62d5cc44ca4e180f591e9fe63b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Specifying the Location and Size of a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-對話方塊的位置和大小，以及內部控制項的位置和大小會以對話方塊單位測量。  當選取控制項和對話方塊時，個別控制項和對話方塊的值會出現在 Visual Studio 狀態列的右下方。  
+# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>指定對話方塊的位置和大小
+位置和一個對話方塊，並將位置和大小的控制項內，會以對話方塊單位測量。 個別控制項和對話方塊中的值會出現在右下角 Visual Studio 狀態列選取它們。  
   
- 可以在[屬性視窗](../Topic/Properties%20Window.md)中設定三個屬性以指定對話方塊會在螢幕何處出現。  Center 屬性是 Boolean；如果您將值設為 True，對話方塊一定會出現在螢幕的中間。  如果設為 False，即可進一步設定 XPos 和 YPos 屬性，明確定義對話方塊會在螢幕何處出現。  位置屬性是從定義為 {X\=0, Y\=0} 的檢視區域的左上角的位移 \(Offset\) 值。  位置也是依據 **Absolute Align** 屬性：如果是 True，座標是相對於螢幕；如果是 False，座標是相對於對話方塊擁有者的視窗。  
+ 有三個屬性，您可以在設定[屬性 視窗](/visualstudio/ide/reference/properties-window)指定對話方塊會出現在螢幕上。 Center 屬性是布林值。如果您將值設為 True 時，對話方塊會一律會出現在螢幕中央。 如果您將它設定為 False，您可以再設定 XPos 和 YPos 屬性明確地定義在畫面上會出現對話方塊。 位置屬性是從左上角的檢視區域中，定義為 {X = 0，Y = 0} 的位移的值。 位置也根據**Absolute Align**屬性： 如果為 True，座標是相對於螢幕; 如果為 False，座標是相對於對話方塊擁有者的視窗。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>另請參閱  
+ [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [控制項](../mfc/controls-mfc.md)
+

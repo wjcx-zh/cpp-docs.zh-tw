@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::lognormal_distribution::param_type::s
 - random/std::lognormal_distribution::param_type::operator==
 - random/std::lognormal_distribution::param_type::operator!=
-- random/std::lognormal_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::lognormal_distribution [C++]
 - std::lognormal_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 53bef5714a90958a36c74e6dea6656f02778e78e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 60289557e00642bfd46cbbf2d23084d148307995
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 類別
 產生對數常態分佈。  
@@ -248,5 +244,4 @@ struct param_type {
   
 ## <a name="see-also"></a>另請參閱  
 [\<random>](../standard-library/random.md)
-
 

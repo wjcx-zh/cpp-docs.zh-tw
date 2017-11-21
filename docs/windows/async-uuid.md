@@ -1,32 +1,30 @@
 ---
-title: "async_uuid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.async_uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "async_uuid attribute"
+title: "async_uuid |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.async_uuid
+dev_langs: C++
+helpviewer_keywords: async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b35791f67b712139210f383a0f9ef605efbacd0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# async_uuid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定指示 MIDL 編譯器，將定義 COM 介面的同步和非同步版本的 UUID。  
+# <a name="asyncuuid"></a>async_uuid
+指定指示 MIDL 編譯器定義 COM 介面的同步和非同步版本的 UUID。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,14 +33,14 @@ caps.handback.revision: 10
 )]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *uuid*  
- UUID，識別介面的版本。  
+ UUID 可識別介面版本。  
   
-## 備註  
- **Async\_uuid** C\+\+ 屬性具有相同的功能，為 [async\_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Async_uuid** c + + 屬性具有相同的功能[async_uuid](http://msdn.microsoft.com/library/windows/desktop/aa366735) MIDL 屬性。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_async_uuid.cpp  
@@ -56,20 +54,19 @@ __interface ICustom {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|`interface`|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|**雙重**， **分配介面**|  
+|**必要屬性**|無|  
+|**無效屬性**|**雙重**，**分配介面**|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [介面屬性](../windows/interface-attributes.md)   

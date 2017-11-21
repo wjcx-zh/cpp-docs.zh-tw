@@ -7,14 +7,14 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: 3d32c24173e803e95fb57938f4a3ab62d43b65e0
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 9cdb12373d93c17258fb615f667d7321e06f6728
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/12/2017
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|呼叫此函式將系統時間轉換成採用適合在 HTTP 標頭中使用之格式的字串。|
 
 ## <a name="requirements"></a>需求  
- **標頭︰** atlutil.h  
+ **標頭：** atlutil.h  
 
 ## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 呼叫此函式可規範化 URL，包括將 Unsafe 字元和空格轉換成逸出序列。  
@@ -53,12 +53,12 @@ inline BOOL AtlCanonicalizeUrl(
  呼叫端配置緩衝區接收正式的 URL。  
   
  `pdwMaxLength`  
- 變數，其中包含以字元為單位的長度指標`szCanonicalized`。 如果函式成功，變數就會收到不包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
+ 變數，其中包含以字元為單位的長度指標`szCanonicalized`。 如果函式成功，變數就會收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
   
  `dwFlags`  
  ATL_URL 旗標控制此函式的行為。 
 
-- `ATL_URL_BROWSER_MODE`不會進行編碼或解碼字元之後"#"或"？"，而不移除尾端空白字元之後"？"。 如果未指定此值，會編碼整個 URL，並移除尾端空白字元。
+- `ATL_URL_BROWSER_MODE`不會進行編碼或解碼字元之後"#"或"？"，並不會移除尾端空白字元之後"？"。 如果未指定此值，會編碼整個 URL，並移除尾端空白字元。
 - `ATL_URL_DECODE`將所有 %xx 序列都轉換成字元，包括逸出序列之前在剖析 URL。
 - `ATL_URL_ENCODE_PERCENT`任何遇到的百分比符號會將編碼。 根據預設，未編碼的百分比符號。
 - `ATL_URL_ENCODE_SPACES_ONLY`空間只會將編碼。
@@ -98,7 +98,7 @@ inline BOOL AtlCombineUrl(
  呼叫端配置緩衝區接收正式的 URL。  
   
  `pdwMaxLength`  
- 變數，其中包含以字元為單位的長度指標`szBuffer`。 如果函式成功，變數就會收到不包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
+ 變數，其中包含以字元為單位的長度指標`szBuffer`。 如果函式成功，變數就會收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
   
  `dwFlags`  
  控制此函式的行為的旗標。 請參閱[AtlCanonicalizeUrl](#atlcanonicalizeurl)。  
@@ -136,7 +136,7 @@ inline BOOL AtlEscapeUrl(
  呼叫端配置的緩衝區，將寫入已轉換的 URL。  
   
  `pdwStrLen`  
- DWORD 變數的指標。 如果函式成功，`pdwStrLen`接收寫入緩衝區，不包括結束的 null 字元的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。 使用此方法的寬字元版本時`pdwStrLen`接收要求的字元數目，不是位元組的數目。  
+ DWORD 變數的指標。 如果函式成功，`pdwStrLen`收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。 使用此方法的寬字元版本時`pdwStrLen`接收要求的字元數目，不是位元組的數目。  
   
  `dwMaxLength`  
  緩衝區的大小`lpszStringOut`。  
@@ -203,7 +203,7 @@ inline BOOL AtlUnescapeUrl(
  呼叫端配置的緩衝區，將寫入已轉換的 URL。  
   
  `pdwStrLen`  
- DWORD 變數的指標。 如果函式成功，變數就會收到不包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
+ DWORD 變數的指標。 如果函式成功，變數就會收到包括結束的 null 字元的緩衝區寫入的字元數。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區，包括結束的 null 字元的空間。  
   
  `dwMaxLength`  
  緩衝區的大小`lpszStringOut`。  
@@ -259,5 +259,4 @@ inline void SystemTimeToHttpDate(
 ## <a name="see-also"></a>另請參閱  
  [概念](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
-
 

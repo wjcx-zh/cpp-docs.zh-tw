@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- function templates, member functions
+dev_langs: C++
+helpviewer_keywords: function templates, member functions
 ms.assetid: 83d51835-6a27-40ed-997c-7d90dc9182d8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: bba7b35c08fbc171ddbb4c572285c0aed2f58a3b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 596f7d0ff2efdfa917996a89cbec6b23412a4bab
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="member-function-templates"></a>成員函式樣板
 
@@ -71,8 +67,6 @@ int main()
 ```  
   
 ## <a name="example"></a>範例
-
- 此外，在 Visual Studio.NET 2003年和更新版本，也可以定義成員樣板類別之外。  
   
 ```cpp
 // defining_member_templates_outside_class.cpp  
@@ -100,7 +94,7 @@ int main()
   
  成員樣板函式不可以是虛擬函式，而且宣告時的名稱與基底類別虛擬函式相同時，不可覆寫來自基底類別的虛擬函式。  
   
- Visual c + +.NET 2003 中引入樣板化的使用者定義轉換的支援。 下列範例依標準所指定，可在 Visual C++ .NET 2003 中運作。  
+下列範例顯示樣板化使用者定義的轉換：  
   
 ```cpp
 // templated_user_defined_conversions.cpp  
@@ -123,4 +117,3 @@ int main()
 ## <a name="see-also"></a>另請參閱
 
  [函式樣板](../cpp/function-templates.md)
-

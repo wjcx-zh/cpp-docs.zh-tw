@@ -1,44 +1,41 @@
 ---
-title: "編譯器錯誤 C3535 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3535"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3535"
+title: "編譯器錯誤 C3535 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3535
+dev_langs: C++
+helpviewer_keywords: C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3ab054ceefa51ab944e2d048996e25559b0c86ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器錯誤 C3535
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-無法從 'type2' 推算 'type1' 的型別  
+# <a name="compiler-error-c3535"></a>編譯器錯誤 C3535
+無法推算 'type1' 從 'type2' 的類型  
   
- 無法從初始化運算式的型別來推算由 `auto` 關鍵字所宣告之變數的型別。  例如，如果初始化運算式評估為不是型別的 `void`，便會發生這個錯誤。  
+ 所宣告變數的型別`auto`無法初始化運算式的類型推算關鍵字。 例如，這個錯誤發生於初始化運算式評估為`void`，不是型別。  
   
-### 更正這個錯誤  
+### <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  確定初始化運算式的型別不是 `void`。  
+1.  請確認初始設定運算式的類型不是`void`。  
   
-2.  確定宣告不是主要資料型別 \(Fundamental Type\) 的指標。  如需詳細資訊，請參閱[基本類型](../../cpp/fundamental-types-cpp.md)。  
+2.  請確認宣告不是基本類型的指標。 如需詳細資訊，請參閱[基本類型](../../cpp/fundamental-types-cpp.md)。  
   
-3.  確定當宣告是型別的指標時，初始化運算式為指標型別。  
+3.  請確定如果宣告類型的指標，初始化運算式是指標類型。  
   
-## 範例  
- 下列範例會產生 C3535 錯誤，因為初始化運算式會評估成 `void`。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3535，因為初始化運算式評估為`void`。  
   
 ```  
 // C3535a.cpp  
@@ -51,8 +48,8 @@ int main()
 }  
 ```  
   
-## 範例  
- 下列範例會產生 C3535 錯誤，因為陳述式將變數 `x` 宣告為所推算型別的指標，但是初始化運算式的型別為 double。  因此，編譯器無法推算變數的型別。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3535，因為陳述式宣告了變數`x`推算的類型，但在初始設定式類型的指標運算式為雙重。 因此，編譯器無法推算變數類型。  
   
 ```  
 // C3535b.cpp  
@@ -64,8 +61,8 @@ int main()
 }  
 ```  
   
-## 範例  
- 下列範例會產生 C3535 錯誤，因為變數 `p` 宣告為所算斷型別的指標，但是初始化運算式不是指標型別。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3535，因為變數`p`宣告指標推算的類型，但初始化運算式不是指標類型。  
   
 ```  
 // C3535c.cpp  
@@ -75,6 +72,6 @@ A x;
 auto *p = x;  // C3535  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)   
  [基本類型](../../cpp/fundamental-types-cpp.md)

@@ -1,32 +1,30 @@
 ---
-title: "max_element (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::max_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_element 函式 [STL/CLR]"
+title: "max_element (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::max_element
+dev_langs: C++
+helpviewer_keywords: max_element function [STL/CLR]
 ms.assetid: c6274bae-1216-4285-b395-254280253dae
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b80aab744d2212a6710d98c5eb93a6665fa85a2e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# max_element (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找最大項目的第一個排序準則可能由二進位述詞指定的所指定的範圍內。  
+# <a name="maxelement-stlclr"></a>max_element (STL/CLR)
+在指定的範圍內尋找第一個最大項目，其中順序準則可由二元述詞指定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _FwdIt> inline  
@@ -35,13 +33,13 @@ template<class _FwdIt, class _Pr> inline
     _FwdIt max_element(_FwdIt _First, _FwdIt _Last, _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式產生相同的行為做為 STL 函式的 `max_element`。  如需詳細資訊，請參閱[max\_element](../Topic/max_element.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`max_element`。 如需詳細資訊，請參閱[max_element](../standard-library/algorithm-functions.md#max_element)。  
   
-## 需求  
- **標題:** \<cliext\/演算法\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
- **命名空間:** cliext  
+ **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

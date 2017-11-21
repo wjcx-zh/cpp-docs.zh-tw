@@ -1,34 +1,34 @@
 ---
-title: "pop_macro | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.pop_macro"
-  - "pop_macro_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_macro pragma"
-  - "Pragma, pop_macro"
+title: "pop_macro |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.pop_macro
+- pop_macro_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pop_macro pragma
+- pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ec14a1ca37c62d2f076315279ae6267adda3b958
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# pop_macro
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將 *macro\_name* 巨集的值設定為這個巨集的堆疊頂端的值。  
+# <a name="popmacro"></a>pop_macro
+設定的值*macro_name*巨集，以這個巨集的堆疊頂端的值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -38,10 +38,10 @@ macro_name
   
 ```  
   
-## 備註  
- 您必須先針對 *macro\_name* 發出 [push\_macro](../preprocessor/push-macro.md)，才能進行 **pop\_macro**。  
+## <a name="remarks"></a>備註  
+ 您必須先發出[push_macro](../preprocessor/push-macro.md)如*macro_name*才能執行**pop_macro**。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // pragma_directives_pop_macro.cpp  
@@ -66,11 +66,14 @@ int main() {
 }  
 ```  
   
-  **1**  
-**2**  
-**1**  
-**2**  
-**1**  
-**3**   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+1  
+2  
+1  
+2  
+1  
+3  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

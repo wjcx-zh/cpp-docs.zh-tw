@@ -1,38 +1,37 @@
 ---
-title: "使用 for each 反覆查看 STL 集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DTL 集合, 反覆"
+title: "使用每個反覆查看 c + + 標準程式庫集合 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f18b4bfdcb1c525e6e05b133e853d09b2dbd0a56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 使用 for each 反覆查看 STL 集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`for each` 關鍵字可用來逐一查看在 Standard C\+\+ 程式庫 \(STL\) 集合。  
+# <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>使用每個反覆查看 c + + 標準程式庫集合
+`for each`關鍵字可以用來反覆查看 c + + 標準程式庫集合。  
   
-## 所有平台  
+## <a name="all-platforms"></a>所有平台  
  **備註**  
   
- 也稱為 STL 集合是 *容器*。  如需詳細資訊，請參閱[STL 容器](../standard-library/stl-containers.md)。  
+ C + + 標準程式庫集合就是所謂*容器*。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。  
   
-## 範例  
+## <a name="examples"></a>範例  
  **範例**  
   
- 下列程式碼範例會使用 `for each` 逐一查看 [\< 對應 \>](../standard-library/map.md)。  
+ 下列程式碼範例使用`for each`來反覆查看[\<對應 >](../standard-library/map.md)。  
   
 ```  
 // for_each_stl.cpp  
@@ -72,11 +71,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **與 30 天的月份 \= 4** **範例**  
+```Output  
+Months with 30 days = 4  
+```  
   
- 下列程式碼範例為與 STL 容器的反覆運算變數使用常數參考 \(`const&`\)。  您可以使用參考 \(`&`\) 做為可宣告為 *T*`&`型別的所有集合的反覆運算變數。  
+ **範例**  
+  
+ 下列程式碼範例會使用 const 的參考 (`const&`) 與 c + + 標準程式庫容器的反覆項目變數。 您可以使用參考 (`&`) 為反覆項目上的變數可以宣告為任何的類型集合*T*`&`。  
   
 ```  
 // for_each_stl_2.cpp  
@@ -100,25 +103,28 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **retval: 60**   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+```Output  
+retval: 60  
+```  
+  
+## <a name="windows-runtime"></a>Windows 執行階段  
  **備註**  
   
- 沒有這項功能的平台特定備註。  
+ 沒有平台特定備註有關這項功能。  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **備註**  
   
- 沒有這項功能的平台特定備註。  
+ 沒有平台特定備註有關這項功能。  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-## 請參閱  
- [for each、in](../dotnet/for-each-in.md)   
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>另請參閱  
+ [針對每個，在](../dotnet/for-each-in.md)   
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

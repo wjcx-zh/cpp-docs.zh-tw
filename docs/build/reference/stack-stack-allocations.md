@@ -1,68 +1,68 @@
 ---
-title: "/STACK (堆疊配置) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.StackReserveSize"
-  - "VC.Project.VCLinkerTool.StackCommitSize"
-  - "/stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "STACK 連結器選項"
-  - "-STACK 連結器選項"
-  - "記憶體配置，堆疊"
-  - "/STACK 連結器選項"
-  - "堆疊，設定大小"
+title: "堆疊 （堆疊配置） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.StackReserveSize
+- VC.Project.VCLinkerTool.StackCommitSize
+- /stack
+dev_langs: C++
+helpviewer_keywords:
+- STACK linker option
+- -STACK linker option
+- memory allocation, stack
+- /STACK linker option
+- stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e44c9920e2725bc70d3b8abe385b94961486e945
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /STACK (堆疊配置)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stack-stack-allocations"></a>/STACK (堆疊配置)
 ```  
 /STACK:reserve[,commit]  
 ```  
   
-## 備註  
- \/STACK 選項會以位元組為單位設定堆疊的大小。  請只在建置 \(Build\) .exe 檔案時使用這個選項。  
+## <a name="remarks"></a>備註  
+ /STACK 選項會設定堆疊的大小，以位元組為單位。 只有當您建置的.exe 檔時，才使用此選項。  
   
- `reserve` 值會指定虛擬記憶體中的總堆疊配置。  若是 ARM，x86 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 電腦，預設堆疊大小是 1 MB。  
+ `reserve`值指定虛擬記憶體中堆疊配置總量。 若是 ARM、x86 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 電腦，預設堆疊大小是 1 MB。  
   
- `commit` 會隨作業系統的解讀而異。  在 Windows NT 中，它是指定一次要配置的實體記憶體數量。  認可的虛擬記憶體會在分頁檔中保留空間。  當應用程式需要較多的堆疊空間時，較高的 `commit` 值可以節省時間，但會增加記憶體需求且可能增加啟動時間。  若是 ARM，x86 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 電腦，預設認可值是 4 KB。  
+ `commit`受限於作業系統所解譯。 在 Windows RT 中，它是指定一次要配置的實體記憶體數量。 已認可的虛擬記憶體會造成要保留在分頁檔的空間。 當應用程式需要較多的堆疊空間時，較高的 `commit` 值可以節省時間，但會增加記憶體需求且可能增加啟動時間。 若是 ARM、x86 和 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 電腦，預設 commit 值是 4 KB。  
   
  以十進位數或 C 語言標記法指定 `reserve` 和 `commit` 值。  
   
- 另外一種設定堆疊大小的方式是在模組定義檔 \(.def\) 中使用 [STACKSIZE](../../build/reference/stacksize.md) 陳述式。  如果兩者都指定了，**STACKSIZE** 將會覆寫堆疊配置 \(\/STACK\) 選項。  您可以在建置 .exe 檔之後使用 [EDITBIN](../../build/reference/editbin-reference.md) 工具變更堆疊大小。  
+ 若要設定堆疊的大小的另一個方法是使用[STACKSIZE](../../build/reference/stacksize.md)模組定義 (.def) 檔中的陳述式。 **STACKSIZE**覆寫堆疊配置 （/ 堆疊） 選項時如果同時指定這兩者。 您可以使用建置的.exe 檔案之後，變更堆疊大小[EDITBIN](../../build/reference/editbin-reference.md)工具。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取 \[**連結器**\] 資料夾。  
+2.  選取**連結器**資料夾。  
   
-3.  按一下 \[**系統**\] 屬性頁。  
+3.  選取**系統**屬性頁。  
   
-4.  修改下列其中一項屬性：  
+4.  修改下列屬性的其中一個：  
   
     -   **堆疊基本配置大小**  
   
     -   **堆疊預留大小**  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 1.  請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackCommitSize%2A> 和 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StackReserveSize%2A> 屬性。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

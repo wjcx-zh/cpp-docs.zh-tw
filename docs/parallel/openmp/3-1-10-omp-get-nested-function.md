@@ -1,31 +1,30 @@
 ---
-title: "3.1.10 omp_get_nested Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.10 omp_get_nested 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 48736a25-5c6e-4e2d-aad0-421087663a3c
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0447fd872a44d2c1eefb751e501eba4df5ec8b8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.10 omp_get_nested Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`omp_get_nested`函式會傳回非零的值，如果巢狀的平行處理原則已啟用，0 停用。  如需有關巢狀的平行處理原則的詳細資訊，請參閱章節 3.1.9 網頁 40。  格式如下：  
+# <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 函式
+`omp_get_nested`函式會傳回非零值，如果已啟用巢狀平行處理原則和 0 已停用。 如需有關巢狀平行處理原則的詳細資訊，請參閱節 3.1.9 在 40 頁面上。 格式如下：  
   
 ```  
 #include <omp.h>  
 int omp_get_nested(void);  
 ```  
   
- 如果實作不實作巢狀的平行處理原則，這個函式一定會傳回 0。
+ 如果實作沒有實作巢狀平行處理原則，此函式一律傳回 0。

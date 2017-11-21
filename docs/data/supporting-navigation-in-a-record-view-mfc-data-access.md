@@ -1,37 +1,35 @@
 ---
-title: "支援記錄檢視的巡覽 (MFC 資料存取) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "巡覽 [C++], 資料錄檢視"
-  - "資料錄檢視, 巡覽"
-  - "資料錄 [C++], 巡覽"
+title: "支援的資料錄檢視 （MFC 資料存取） 巡覽 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records [C++], navigating
+- record views, navigation
+- navigation [C++], in record view
 ms.assetid: 227f2a6d-87c9-4656-807a-8e246965bcce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 485d37c06624ae5ee534480b8f16bb94dad6d94f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 支援記錄檢視的巡覽 (MFC 資料存取)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題將說明如何支援在記錄檢視中從記錄移至記錄，包括下列項目的詳細資訊：  
+# <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支援記錄檢視的巡覽 (MFC 資料存取)
+本主題說明如何支援在記錄間移動您[CRecordView](../mfc/reference/crecordview-class.md)類別，包括下列資訊：  
   
--   記錄捲動命令的[命令處理](../data/command-handlers-for-record-scrolling-mfc-data-access.md)。  
+-   [命令處理](../data/command-handlers-for-record-scrolling-mfc-data-access.md)記錄捲動命令。  
   
--   用於捲動命令的[使用者介面更新處理常式](../data/user-interface-updating-for-record-views-mfc-data-access.md)。  
+-   [使用者介面更新處理常式，如捲動](../data/user-interface-updating-for-record-views-mfc-data-access.md)命令。  
   
- 這些主題中的資訊適用於 [CRecordView](../mfc/reference/crecordview-class.md) \(ODBC\) 和[CDaoRecordView](../mfc/reference/cdaorecordview-class.md) \(DAO\)。  
-  
-## 請參閱  
- [記錄檢視 \(MFC 資料存取\)](../data/record-views-mfc-data-access.md)   
+## <a name="see-also"></a>另請參閱  
+ [資料錄檢視 （MFC 資料存取）](../data/record-views-mfc-data-access.md)   
  [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

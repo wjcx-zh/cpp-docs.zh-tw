@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_set_dynamic
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_set_dynamic OpenMP function
+f1_keywords: omp_set_dynamic
+dev_langs: C++
+helpviewer_keywords: omp_set_dynamic OpenMP function
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b4313bee47101b91186da999f6f04430da5bca23
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: bc9306a7babcd86c96995f4fd464ebd24b138c43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
-表示執行階段可以調整後續平行區域中的可用執行緒數目。  
+指出可以調整的執行階段的後續平行區域中的可用執行緒數目。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,12 +36,12 @@ void omp_set_dynamic(
  其中：  
   
  `val`  
- 值，指出是否可以透過執行階段調整後續平行區域中的可用執行緒數目。  如果是非零值，執行階段可以調整執行緒數目，如果是零，執行階段就不會動態調整執行緒數目。  
+ 值，指出是否可以調整執行階段的後續平行區域中的可用執行緒數目。  如果是非零值，執行階段可以調整執行緒數目，如果是零，執行階段就不會動態調整執行緒數目。  
   
 ## <a name="remarks"></a>備註  
- 執行緒數目絕對不會超過所設定的值[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)。  
+ 執行緒的數目將永遠不會超過所設定的值[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)或[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)。  
   
- 使用[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)以顯示目前的設定`omp_set_dynamic`。  
+ 使用[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)要顯示的目前設定`omp_set_dynamic`。  
   
  設定`omp_set_dynamic`會覆寫的設定[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)環境變數。  
   

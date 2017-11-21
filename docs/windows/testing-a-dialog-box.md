@@ -1,29 +1,29 @@
 ---
-title: "Testing a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Test Dialog command"
-  - "testing, dialog boxes"
-  - "dialog boxes, testing"
+title: "測試對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes, testing
 ms.assetid: 45034ee9-c554-4f4b-8c46-6ddefdee8951
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ca6e6cd8dd9f7d67ba8a000f33143a12c0978a25
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Testing a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="testing-a-dialog-box"></a>測試對話方塊
 當您設計對話方塊時，您可以模擬和測試其執行階段行為，而不用重新編譯程式。 在這個模式下，您可以：  
   
 -   輸入文字、從下拉式方塊清單中選取、開啟或關閉選項，以及選擇命令。  
@@ -39,19 +39,20 @@ caps.handback.revision: 7
   
  當您測試對話方塊時，它通常會在相對於主程式視窗的位置顯示。 如果您已經將對話方塊的 Absolute Align 屬性設為 True，對話方塊會在相對於螢幕左上角的位置顯示。  
   
-### 測試對話方塊  
+### <a name="to-test-a-dialog-box"></a>測試對話方塊  
   
-1.  當對話方塊編輯器是使用中視窗，請在功能表列上，選擇 \[**格式**\]、\[**測試對話方塊**\]。  
+1.  當對話方塊編輯器是使用中視窗，請在功能表列上，選擇 [ **格式**]、[ **測試對話方塊**]。  
   
-2.  如果要結束模擬，按下 Esc 鍵或選取您要測試的對話方塊中的 \[**關閉**\] 按鈕。  
+2.  如果要結束模擬，按下 Esc 鍵或選取您要測試的對話方塊中的 [ **關閉** ] 按鈕。  
   
- 如需如何將資源加入 Managed 專案中的相關資訊，請參閱[桌面應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。  
+ 如需如何將資源加入至 managed 專案的資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)。  
   
  需求  
   
  Win32  
   
-## 請參閱  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Dialog Editor](../mfc/dialog-editor.md)   
- [顯示或隱藏對話方塊編輯器工具列](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md)
+## <a name="see-also"></a>另請參閱  
+ [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
+ [對話方塊編輯器](../windows/dialog-editor.md)   
+ [顯示或隱藏對話方塊編輯器工具列](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+

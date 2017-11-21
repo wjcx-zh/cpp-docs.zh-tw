@@ -1,49 +1,45 @@
 ---
-title: "RoInitializeWrapper::RoInitializeWrapper 建構函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper"
-dev_langs: 
-  - "C++"
+title: "Roinitializewrapper:: Roinitializewrapper 建構函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper
+dev_langs: C++
 ms.assetid: c6f7fb07-14af-4574-9135-cea164607f30
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 88ef0885c49ba7ba28afe40aea25a74eb55d46e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# RoInitializeWrapper::RoInitializeWrapper 建構函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-初始化 RoleInitializeWrapper 類別的新執行個體。  
+# <a name="roinitializewrapperroinitializewrapper-constructor"></a>RoInitializeWrapper::RoInitializeWrapper 建構函式
+初始化 RoInitializeWrapper 類別的新執行個體。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
-RoInitializeWrapper(  
-   RO_INIT_TYPE flags)  
-  
+RoInitializeWrapper(   RO_INIT_TYPE flags)  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `flags`  
- 其中一 RO\_INIT\_TYPE 列舉型別，指定 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]提供的支援。  
+ 其中一個指定的 Windows 執行階段所提供的支援 RO_INIT_TYPE 列舉型別。  
   
-## 備註  
- RoInitializeWrapper 類別叫用 Windows::Foundation::Initialize\(*flags*\)。  
+## <a name="remarks"></a>備註  
+ RoInitializeWrapper 類別叫用 Windows::Foundation::Initialize (*旗標*)。  
   
-## 需求  
- **標頭：**corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [HandleT 類別](../windows/handlet-class.md)

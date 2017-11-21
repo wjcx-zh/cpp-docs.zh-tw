@@ -1,32 +1,30 @@
 ---
-title: "map::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::generic_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_reverse_iterator 成員 [STL/CLR]"
+title: "map::generic_reverse_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::generic_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
 ms.assetid: b1b38fa8-89a7-4f39-9c80-b24eccfe339f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7fa8295ea5557170fb940b0a9a2e446e9f29a533
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# map::generic_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-反向迭代器的型別，適合與容器的泛型介面一起使用。  
+# <a name="mapgenericreverseiterator-stlclr"></a>map::generic_reverse_iterator (STL/CLR)
+反向迭代器使用容器的泛型介面型別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -34,10 +32,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_reverse_iterator;  
 ```  
   
-## 備註  
- 描述泛型反向迭代器的型別，其適合與此樣本容器類別的泛型介面一起使用。  
+## <a name="remarks"></a>備註  
+ 此類型所描述泛型反向迭代器，可以搭配這個範本容器類別的泛型介面。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_generic_reverse_iterator.cpp   
@@ -72,15 +70,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
- **\[a 1\] \[b 2\] \[c 3\]**  
- **\[c 3\]**   
-## 需求  
- **標頭：** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[c 3]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::generic\_container](../dotnet/map-generic-container-stl-clr.md)   
- [map::generic\_iterator](../dotnet/map-generic-iterator-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::generic_container (STL/CLR)](../dotnet/map-generic-container-stl-clr.md)   
+ [map::generic_iterator (STL/CLR)](../dotnet/map-generic-iterator-stl-clr.md)

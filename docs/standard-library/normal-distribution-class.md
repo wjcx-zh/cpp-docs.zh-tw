@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::normal_distribution::param_type::stddev
 - random/std::normal_distribution::param_type::operator==
 - random/std::normal_distribution::param_type::operator!=
-- random/std::normal_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::normal_distribution [C++]
 - std::normal_distribution [C++], reset
@@ -36,16 +33,15 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 0d825affb04f2172ac3d53e632193345725b93b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c93e36a27b14cdd585d1866ad91c7b993746941f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="normaldistribution-class"></a>normal_distribution 類別
 產生常態分佈。  
@@ -253,7 +249,6 @@ struct param_type {
   
 ## <a name="see-also"></a>另請參閱  
  [\<random>](../standard-library/random.md)
-
 
 
 

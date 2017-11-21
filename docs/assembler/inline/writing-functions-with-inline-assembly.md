@@ -1,32 +1,32 @@
 ---
-title: "使用內嵌組譯碼撰寫函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 關鍵字 [C++], 在函式中"
-  - "組譯工具 [C++], 撰寫函式"
-  - "函式 [C++], 內嵌組譯碼"
-  - "內嵌組譯碼 [C++], 撰寫函式"
+title: "使用內嵌組譯碼撰寫函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], inline assembly
+- inline assembly [C++], writing functions
+- assembler [C++], writing functions
+- __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b7abbb7a09f5205ada192cf15d5b7eb3c5c6b33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 使用內嵌組譯碼撰寫函式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## Microsoft 特定  
- 如果您撰寫內嵌組譯程式碼的函式，很容易將引數傳遞至函式，並從其傳回值。  下列範例會比較第一次針對不同的組譯工具寫，然後重寫為內嵌組譯工具的函式。  呼叫的函式 `power2`，會收到兩個參數，乘以 2 的乘冪第二個參數中的第一個參數。  撰寫為分開的組譯工具，函式看起來可能像這樣：  
+# <a name="writing-functions-with-inline-assembly"></a>使用內嵌組譯碼撰寫函式
+## <a name="microsoft-specific"></a>Microsoft 特定的  
+ 如果您撰寫具有內嵌組譯程式碼的函式，很容易就能將引數傳遞至函式，並從函式傳回值。 下列範例將比較原先針對另一個組合語言撰寫，後來針對內嵌組合語言重寫的函式。 稱為 `power2` 的函式會收到兩個參數，並將第一個參數乘以 2 得到第二個參數的乘冪。 針對另一個組合語言撰寫的函式外觀會像這樣：  
   
 ```  
 ; POWER.ASM  
@@ -50,10 +50,10 @@ _TEXT   ENDS
         END  
 ```  
   
- 由於它針對個別的組譯工具撰寫，函式會要求不同的來源檔案和組件與連結步驟。  C 和 c \+ \+ 函式引數通常使用在堆疊上，所以此版本的`power2`函式存取它的引數，依其在堆疊上的位置。  \(請注意， **模型**指示詞，可用於 MASM 和一些其他的組合，也可以讓您依名稱存取堆疊引數和本機堆疊變數。\)  
+ 由於函式是針對另一個組合語言所撰寫，因此需要另一個原始程式檔以及組譯碼和連結步驟。 C 和 C++ 函式引數通常會在堆疊上傳遞，因此這個版本的 `power2` 函式會依據它們在堆疊上的位置存取其引數  (請注意，**模型**指示詞，可在 MASM 和其他組合語言，也可讓您依名稱存取堆疊引數和本機堆疊變數。)  
   
-## 範例  
- 這個程式寫入`power2`內嵌組譯程式碼的函式：  
+## <a name="example"></a>範例  
+ 這個程式會使用內嵌組譯程式碼撰寫 `power2` 函式：  
   
 ```  
 // Power2_inline_asm.c  
@@ -81,11 +81,11 @@ int power2( int num, int power )
 }  
 ```  
   
- 內嵌版本`power2`函式依名稱參照它的引數，並會出現在其他程式時相同的原始程式檔。  這個版本也需要較少的組譯碼指令。  
+ `power2` 函式的內嵌版本會依名稱參考其引數，並且與程式的其他部分出現在相同的原始程式檔。 這個版本需要的組譯碼指令也比較少。  
   
- 因為內嵌版本`power2`不會執行 C  `return`陳述式，它會無害的警告如果您編譯在警告層級 2 或更高。  函式不會傳回一個值，但是編譯器無法分辨，缺乏`return`陳述式。  您可以使用 [\#pragma 警告](../../preprocessor/warning.md)來停用這項警告的產生。  
+ 由於 `power2` 的內嵌版本不會執行 C `return` 陳述式，如果您是在警告層級 2 (含) 更高層級進行編譯，它就會產生無害的警告。 函式確實會傳回值，不過，編譯器在沒有 `return` 陳述式時無法分辨這種情形。 您可以使用[#pragma 警告](../../preprocessor/warning.md)停用產生這個警告。  
   
- **結束 Microsoft 特定**  
+ **END Microsoft 特定的**  
   
-## 請參閱  
- [在 \_\_asm 區塊中使用 C 或 C\+\+](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)
+## <a name="see-also"></a>另請參閱  
+ [在 __asm 區塊中使用 C 或 C++](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

@@ -1,49 +1,48 @@
 ---
-title: "Web 參考屬性頁 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCSDLTool.Output"
-  - "VC.Project.VCWebServiceProxyGeneratorTool.SuppressStartupBanner"
-  - "VC.Project.VCWebServiceProxyGeneratorTool.Output"
-  - "VC.Project.VCWebServiceProxyGeneratorTool.GeneratedProxyLanguage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Web 參考, 屬性"
+title: "Web 參考屬性頁 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCSDLTool.Output
+- VC.Project.VCWebServiceProxyGeneratorTool.SuppressStartupBanner
+- VC.Project.VCWebServiceProxyGeneratorTool.Output
+- VC.Project.VCWebServiceProxyGeneratorTool.GeneratedProxyLanguage
+dev_langs: C++
+helpviewer_keywords: Web references, properties
 ms.assetid: b80f7c77-af88-4551-9943-99748ebacf09
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f5792191a7dcff961b2b5be39c4c15855ca99348
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Web 參考屬性頁
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\[Web 參考\] 屬性頁指定如何產生 XML Web Service Proxy 類別。  如果您將 Web 參考加入至您的專案，則將會產生 XML Web Service Proxy 類別。  如需詳細資訊，請參閱[加入 Web 參考對話方塊](http://msdn.microsoft.com/zh-tw/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)。  
+# <a name="web-references-property-page"></a>Web 參考屬性頁
+**Web 參考**屬性頁可讓您指定的 XML Web 服務 proxy 類別產生的方式。 如果您加入 web 參考加入您的專案，就會產生 XML Web 服務 proxy 類別。 請參閱[加入 Web 參考](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)如需詳細資訊。  
   
- \[Web 參考\] 屬性頁包含下列屬性：  
+ **Web 參考**屬性頁包含下列屬性：  
   
  **輸出檔**  
- 要包含 XML Web Service Proxy 類別的檔名。  
+ 要包含的 XML Web 服務 proxy 類別之檔案的名稱。  
   
  **隱藏程式啟始資訊**  
- 不要顯示 Web 服務描述語言工具 \(Wsdl.exe\) 的程式起始資訊。  
+ 不為 Web 服務描述語言工具 (Wsdl.exe) 會顯示橫幅。  
   
- **命名空間**  
- 指定所產生之 Web Proxy 的名稱。  
+ **Namespace**  
+ 指定產生的 web proxy 的名稱。  
   
- **其他參考**  
- 指定 Proxy DLL 所參考的其他 DLL。  
+ **其他參考資料**  
+ 指定 proxy DLL 所參考的其他 Dll。  
   
- 如需如何存取 \[Web 參考\]  屬性頁的詳細資訊，請參閱 [HOW TO：使用屬性頁指定專案屬性](../misc/how-to-specify-project-properties-with-property-pages.md)。  
+ 如需有關如何存取詳細**Web 參考**屬性頁上，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)

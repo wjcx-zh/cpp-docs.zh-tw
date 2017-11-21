@@ -1,71 +1,71 @@
 ---
-title: "從 DLL 匯出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 匯出 [C++]"
-  - "DLL [C++], 匯出自"
-  - "匯出 DLL [C++]"
-  - "匯出 DLL [C++], 關於自 DLL 匯出"
-  - "匯出函式 [C++], DLL (匯出)"
-  - "匯出表 [C++]"
-  - "函式 [C++], 匯出"
+title: "從 DLL 匯出 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting DLLs [C++], about exporting from DLLs
+- exporting functions [C++], DLLs (exporting from)
+- exporting DLLs [C++]
+- DLLs [C++], exporting from
+- DLL exports [C++]
+- functions [C++], exporting
+- exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a591628d74320dee7868b0c689bd4d61bb19073d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 從 DLL 匯出
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-DLL 檔具有和 .exe 檔非常相似的配置，但是有一個重大的差異：DLL 檔包含匯出表。  匯出表包含每個由 DLL 匯出到其他可執行檔的函式名稱。  這些函式是 DLL 的進入點；只有匯出表格裡的函式可由其他可執行檔存取。  DLL 裡的其他任何函式對 DLL 都是私用的。  可以使用具 \/EXPORTS 選項的 [DUMPBIN](../build/reference/dumpbin-reference.md) 工具來檢視 DLL 的匯出表。  
+# <a name="exporting-from-a-dll"></a>從 DLL 匯出  
+  
+DLL 檔案具有相似的.exe 檔，但有一個重要差異配置 — DLL 檔案包含匯出表。 匯出資料表包含每個函式的 DLL 匯出到其他可執行檔的名稱。 這些函式是 DLL; 的進入點只匯出表中的函數可以透過其他可執行檔。 在 DLL 中的任何其他函式是私用的 dll。 可以使用檢視的 dll 匯出表[DUMPBIN](../build/reference/dumpbin-reference.md)工具搭配 /EXPORTS 選項。  
   
  您可以使用兩種方法從 DLL 匯出函式：  
   
--   建立模組定義 \(.def\) 檔，並在建置 DLL 時使用 .def 檔。  如果您要[根據序數而不是名稱從 DLL 匯出函式](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)，請使用這個方法。  
+-   建立模組定義 (.def) 檔，並建置 DLL 時，使用.def 檔。 如果您想要使用此方法[依序數，而不是依名稱，從您的 DLL 匯出函式](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。  
   
--   在函式的定義裡使用關鍵字 **\_\_declspec\(dllexport\)**。  
+-   使用關鍵字**__declspec （dllexport)**函式的定義中。  
   
- 無論使用任何一種匯出函式方法，都要確定使用 [\_\_stdcall](../cpp/stdcall.md) 呼叫慣例。  
+ 當使用何種方法匯出函式，請務必使用[__stdcall](../cpp/stdcall.md)呼叫慣例。  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [使用 .def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
+-   [使用.def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [使用 \_\_declspec\(dllexport\) 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [使用 __declspec （dllexport） 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [使用 AFX\_EXT\_CLASS 匯出和匯入](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [匯出和匯入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [匯出 C\+\+ 函式以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [匯出 c + + 函式，以用於 C 語言可執行檔](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [匯出 C 函式以用於 C 或 C\+\+ 語言可執行檔](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [根據序數而不是名稱從 DLL 匯出函式](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
+-   [依序數，而不是依名稱從 DLL 匯出函式](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
   
--   [判斷要使用哪一種匯出方法](../build/determining-which-exporting-method-to-use.md)  
+-   [決定要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)  
   
--   [判斷要使用哪一個連結方法](../build/determining-which-linking-method-to-use.md)  
+-   [決定要使用哪一個連結方法](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
--   [初始化 DLL](../build/initializing-a-dll.md)  
+-   [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
--   [匯入至應用程式](../build/importing-into-an-application.md)  
+-   [匯入應用程式](../build/importing-into-an-application.md)  
   
 -   [匯入和匯出內嵌函式](../build/importing-and-exporting-inline-functions.md)  
   
 -   [交互匯入](../build/mutual-imports.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [匯入和匯出](../build/importing-and-exporting.md)

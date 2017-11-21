@@ -1,40 +1,39 @@
 ---
-title: "定義預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, 預存程序"
-  - "預存程序, 定義"
-  - "預存程序, OLE DB"
-  - "預存程序, 語法"
+title: "定義預存程序 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- stored procedures, syntax
+- OLE DB, stored procedures
+- stored procedures, defining
+- stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4faa20642cbd2ddbacc8be1c4dcd56afb8797460
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 定義預存程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-您必須在呼叫預存程序之前，先使用 [DEFINE\_COMMAND](../../data/oledb/define-command.md) 巨集定義它。  當您定義命令時，請以問號 \(?\) 做為參數標記來代表參數：  
+# <a name="defining-stored-procedures"></a>定義預存程序
+然後再呼叫預存程序，您必須先定義，使用[DEFINE_COMMAND](../../data/oledb/define-command.md)巨集。 當您定義命令時，則代表參數以問號 （？） 做為參數標記：  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
- 請注意，這個主題的程式碼範例所使用的語法 \(例如，括號等用法\) 是 SQL Server 專用的。  您在預存程序中所使用的語法可能會根據使用的提供者而有所不同。  
+ 請注意，本主題中的程式碼範例中使用的語法 （使用大括號和等等的） SQL Server 特定的。 您在預存程序中使用的語法可能會根據您所使用的提供者而有所不同。  
   
- 接著，在參數對應中指定您用於命令的參數，並依照參數在命令中出現的順序列出：  
+ 接下來，在參數對應中指定列出的順序出現在命令中的參數，在命令中，使用的參數：  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,20 +44,20 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- 先前的範例會在執行時定義預存程序。  通常，為了有效重複使用程式碼，資料庫會包含一組名為 "Sales by Year" 或 "dt\_adduserobject" 的預先定義的預存程序。您可以使用 SQL Server Enterprise Manager 檢視它們的定義。  您可以依照下列方式來呼叫它們 \('?' 參數的位置會依不同的預存程序介面而有所差異\)：  
+ 前一個範例會定義預存程序，因為它會。 一般而言，有效率地重複使用程式碼，如資料庫包含一組預先定義的預存程序名稱，例如 「 銷售年 」 或 「 dt_adduserobject。 」 您可以檢視其定義，使用 SQL Server Enterprise Manager。 如下所示呼叫 (位置的 '？ ' 參數而定，預存程序的介面):  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  
   
- 接著，宣告命令類別：  
+ 接下來，請在命令類別宣告：  
   
 ```  
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor> >  
 ```  
   
- 最後，請依照下列方式，在 `OpenRowset` 中呼叫預存程序：  
+ 最後，呼叫預存程序中`OpenRowset`，如下所示：  
   
 ```  
 CSession m_session;  
@@ -68,11 +67,11 @@ HRESULT OpenRowset()
 }  
 ```  
   
- 同時請注意，您可以依照下列方式，使用資料庫屬性 [db\_command](../../windows/db-command.md) 定義預存程序：  
+ 也請注意，您可以定義預存程序中使用資料庫屬性[db_command](../../windows/db-command.md) ，如下所示：  
   
 ```  
 db_command("{ ? = CALL dbo.dt_adduserobject }")  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用預存程序](../../data/oledb/using-stored-procedures.md)

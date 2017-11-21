@@ -1,30 +1,29 @@
 ---
-title: "錯誤攔截 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 的延遲載入, 失敗攔截"
+title: "錯誤攔截 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 86f3f27d06b353d0e34a62b636dc7ae0313a462c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 錯誤攔截
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-錯誤攔截以和[告知攔截](../../build/reference/notification-hooks.md)相同的方式啟用。  攔截常式需要傳回適當的值才能繼續處理 \(HINSTANCE 或是 FARPROC\)，或是傳回 0 以表示應擲回例外狀況。  
+# <a name="failure-hooks"></a>錯誤攔截
+錯誤攔截已啟用以相同方式[告知攔截](../../build/reference/notification-hooks.md)。 傳回適當的值，以處理攔截常式需求可以繼續 （HINSTANCE 或 FARPROC） 或 0，表示應該擲回例外狀況。  
   
- 參考使用者定義函式的指標變數為：  
+ 指的是使用者定義函式的指標變數是：  
   
 ```  
 // This is the failure hook, dliNotify = {dliFailLoadLib|dliFailGetProc}  
@@ -32,19 +31,19 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;  
 ```  
   
- **DelayLoadInfo** 結構包含正確報告錯誤所需的所有相關資料，包括來自 `GetLastError` 的值。  
+ **DelayLoadInfo**結構包含的所有相關資料所需的精確報告的錯誤，包括從值`GetLastError`。  
   
- 如果告知是 **dliFailLoadLib**，攔截函式可傳回：  
+ 如果通知，則**dliFailLoadLib**，攔截函式可以傳回：  
   
--   無法處理錯誤時傳回 0  
+-   0，如果它無法處理失敗。  
   
--   如果錯誤攔截已修復問題，並自行載入程式庫則為 HMODULE  
+-   HMODULE，如果失敗攔截修正問題，並載入程式庫本身。  
   
- 如果告知是 **dliFailGetProc**，攔截函式可傳回：  
+ 如果通知，則**dliFailGetProc**，攔截函式可以傳回：  
   
--   無法處理錯誤時傳回 0  
+-   0，如果它無法處理失敗。  
   
--   如果錯誤攔截成功地取得位址則為有效程序位址 \(匯入函式位址\)  
+-   有效的處理序位址 （匯入函式位址），如果錯誤攔截已成功取得位址。  
   
-## 請參閱  
- [錯誤處理和告知](../../build/reference/error-handling-and-notification.md)
+## <a name="see-also"></a>另請參閱  
+ [錯誤處理和通知](../../build/reference/error-handling-and-notification.md)

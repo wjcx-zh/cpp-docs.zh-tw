@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -78,19 +77,17 @@ helpviewer_keywords:
 - C2987
 - C2997
 - C2999
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 535a1d42d9d43022bbf513b72bac18dd5accad82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>編譯器錯誤 C2900 透過 C2999
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
@@ -202,4 +199,3 @@ ms.lasthandoff: 10/10/2017
 |編譯器錯誤 C2997|'*函式*': 無法從預設成員初始設定式推算陣列界限|  
 |[編譯器錯誤 C2998](compiler-error-c2998.md)|'*宣告子*': 不可為樣板定義|  
 |編譯器錯誤 C2999|未知錯誤，請選擇 Visual c + + 說明 功能表上的技術支援 命令或開啟技術支援說明檔，如需詳細資訊|  
-

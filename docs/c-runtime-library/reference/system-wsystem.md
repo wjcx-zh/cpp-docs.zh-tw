@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,8 +26,7 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -38,36 +36,21 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3ce182dd28fa5af0fef9c2c51c14fc54aa5af972
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 85d5f0f745f66aebc526759be192af508510be92
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 執行命令。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] 中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -85,7 +68,7 @@ int _wsystem(
  要執行的命令。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `command` 是 `NULL`，且已找到命令解譯器，則傳回非零的值。 如果找不到該命令解譯器，則會傳回 0，並將 `errno` 設定為 `ENOENT`。 如果 `command` 不是 `NULL`，則 `system` 會傳回命令解譯器所傳回的值。 只有當命令解譯器傳回為 0 的值，它才會傳回為 0 的值。 傳回值為-1 表示錯誤，和`errno`設為下列值之一︰  
+ 如果 `command` 是 `NULL`，且已找到命令解譯器，則傳回非零的值。 如果找不到該命令解譯器，則會傳回 0，並將 `errno` 設定為 `ENOENT`。 如果 `command` 不是 `NULL`，則 `system` 會傳回命令解譯器所傳回的值。 只有當命令解譯器傳回為 0 的值，它才會傳回為 0 的值。 傳回值為-1 表示錯誤，和`errno`設為下列值之一：  
   
  `E2BIG`  
  引數清單 (依系統而定) 太大。  

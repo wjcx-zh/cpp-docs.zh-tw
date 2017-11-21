@@ -1,48 +1,47 @@
 ---
-title: "auto_gcroot::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator bool"
-  - "auto_gcroot::operator bool"
-  - "msclr.auto_gcroot.operator bool"
-  - "msclr::auto_gcroot::operator bool"
-  - "operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bool 運算子"
+title: "auto_gcroot::operator bool |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator bool
+- auto_gcroot::operator bool
+- msclr.auto_gcroot.operator bool
+- msclr::auto_gcroot::operator bool
+- operator bool
+dev_langs: C++
+helpviewer_keywords: bool operator
 ms.assetid: 87d38498-4221-4de8-8d02-c2dd2e6274ec
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 375816231f10545411cfdc359df556163c2c6039
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在條件運算式中用於 `auto_gcroot` 的運算子。  
+# <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
+使用運算子`auto_gcroot`條件運算式中。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 operator bool() const;  
 ```  
   
-## 傳回值  
- 如果包起的物件有效，則為 `true`，否則為 `false`。  
+## <a name="return-value"></a>傳回值  
+ `true`如果所包裝的物件有效，`false`否則。  
   
-## 備註  
- 比 `bool` 安全性的這個運算子實際上會轉換成 `_detail_class::_safe_bool` ，因為它無法轉換為整數型別。  
+## <a name="remarks"></a>備註  
+ 這個運算子實際將轉換成`_detail_class::_safe_bool`即比安全`bool`因為它無法轉換成整數類資料類型。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_operator_bool.cpp  
@@ -65,14 +64,17 @@ int main() {
 }  
 ```  
   
-  **s 無效。**  
-**現在的 s 有效**  
-**現在的 s 無效**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+s is invalid  
+now s is valid  
+now s is invalid  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::operator\!](../dotnet/auto-gcroot-operator-logical-not.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)

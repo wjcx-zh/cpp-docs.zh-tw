@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - system_error/std::error_category::equivalent
 - system_error/std::error_category::message
 - system_error/std::error_category::name
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::error_category
 - std::error_category::value_type
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 40ca15541b9035a82869cdfed7f304eeaeeb2553
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3e1b51db369a5f36b4c7428083d7dde4728642c3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="errorcategory-class"></a>error_category 類別
 表示物件的抽象、通用基底，以描述錯誤碼的分類。  
@@ -220,7 +217,6 @@ typedef int value_type;
   
 ## <a name="see-also"></a>另請參閱  
  [<system_error>](../standard-library/system-error.md)
-
 
 
 

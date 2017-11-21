@@ -1,40 +1,38 @@
 ---
-title: "IRowsetCreatorImpl::SetSite | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetCreatorImpl.SetSite"
-  - "IRowsetCreatorImpl<T>::SetSite"
-  - "IRowsetCreatorImpl::SetSite"
-  - "SetSite"
-  - "ATL.IRowsetCreatorImpl.SetSite"
-  - "ATL::IRowsetCreatorImpl<T>::SetSite"
-  - "ATL::IRowsetCreatorImpl::SetSite"
-  - "ATL.IRowsetCreatorImpl<T>.SetSite"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetSite 方法"
+title: "Irowsetcreatorimpl:: Setsite |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetCreatorImpl.SetSite
+- IRowsetCreatorImpl<T>::SetSite
+- IRowsetCreatorImpl::SetSite
+- SetSite
+- ATL.IRowsetCreatorImpl.SetSite
+- ATL::IRowsetCreatorImpl<T>::SetSite
+- ATL::IRowsetCreatorImpl::SetSite
+- ATL.IRowsetCreatorImpl<T>.SetSite
+dev_langs: C++
+helpviewer_keywords: SetSite method
 ms.assetid: e92e63d5-93e4-4ee0-9ef7-bb6583cc8091
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e2f01a8e65535599f2b7f79ed6f0cb0b06b0866a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetCreatorImpl::SetSite
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-設定包含資料列集物件的網站。  如需詳細資訊，請參閱 [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
+# <a name="irowsetcreatorimplsetsite"></a>IRowsetCreatorImpl::SetSite
+設定站台，其中包含資料列集物件。 如需詳細資訊，請參閱[IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -43,18 +41,18 @@ manager: "ghogen"
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pCreator`  
- \[out 處理資料列集物件的站台的 **IUnknown** 介面指標的指標。  
+ [in]指標**IUnknown**管理資料列集物件的站台的介面指標。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  標準 `HRESULT`。  
   
-## 備註  
- 此外， `IRowsetCreatorImpl::SetSite` 啟用 OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS** 屬性。  
+## <a name="remarks"></a>備註  
+ 此外，`IRowsetCreatorImpl::SetSite`可讓 OLE DB **DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS**屬性。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetCreatorImpl 類別](../../data/oledb/irowsetcreatorimpl-class.md)

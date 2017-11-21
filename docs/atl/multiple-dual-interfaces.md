@@ -1,48 +1,48 @@
 ---
-title: "Multiple Dual Interfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM_INTERFACE_ENTRY_IID macro"
-  - "COM_INTERFACE_ENTRY2 macro"
-  - "雙重介面, exposing multiple"
-  - "IDispatchImpl 類別, multiple dual interfaces"
-  - "multiple dual interfaces"
-  - "multiple dual interfaces, exposing with ATL"
+title: "多個雙重介面 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- multiple dual interfaces
+- COM_INTERFACE_ENTRY2 macro
+- dual interfaces, exposing multiple
+- multiple dual interfaces, exposing with ATL
+- IDispatchImpl class, multiple dual interfaces
+- COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 426109958cf9b34829c23ac0bfd59743f1681e72
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Multiple Dual Interfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="multiple-dual-interfaces"></a>多個雙重介面
+您可能想要合併的雙重介面 （也就是彈性的 vtable 和晚期繫結，因此讓類別可以使用指令碼語言，以及 c + +） 的優點與技術在多重繼承。  
+  
+ 雖然它可公開 （expose） 單一的 COM 物件上的多個雙重介面時，不建議。 如果有多個雙重介面，必須只有一個`IDispatch`公開的介面。 技術可確保案例執行負面影響，例如失去函式或增加的程式碼複雜度。 考慮這種方法的開發人員應該仔細衡量重要的優點和缺點。  
+  
+## <a name="exposing-a-single-idispatch-interface"></a>公開單一的 IDispatch 介面  
+ 可公開多個單一物件上的雙重介面衍生自兩個以上的特製化`IDispatchImpl`。 不過，如果您允許查詢的用戶端`IDispatch`介面，您必須使用[COM_INTERFACE_ENTRY2](reference/com-interface-entry-macros.md#com_interface_entry2)巨集 (或[COM_INTERFACE_ENTRY_IID](reference/com-interface-entry-macros.md#com_interface_entry_iid))) 來指定要用於哪一個基底類別實作`IDispatch`。  
+  
+ [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/cpp/multiple-dual-interfaces_1.h)]  
+  
+ 因為只有一個`IDispatch`公開介面時，用戶端只能存取您的物件，透過`IDispatch`介面不能存取的方法或任何其他介面中的屬性。  
+  
+## <a name="combining-multiple-dual-interfaces-into-a-single-implementation-of-idispatch"></a>將多個雙重介面結合成單一實作 IDispatch  
+ ATL 不提供任何支援的單一實作中結合多個雙重介面`IDispatch`。 不過，有數種已知的方法，來手動合併的介面，例如建立樣板類別，其中包含聯集的個別`IDispatch`介面，建立新物件以執行`QueryInterface`函式，或使用typeinfo 為基礎的巢狀物件，以建立實作`IDispatch`介面。  
+  
+ 這些方法會有命名空間衝突的可能性，以及程式碼複雜度和維護性問題。 不建議您建立多個雙重介面。  
+  
+## <a name="see-also"></a>另請參閱  
+ [雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
 
-您可能希望將雙重介面 \(這也就是彈性的優點 vtable 和晚期繫結，讓類別能夠使用指令碼語言以及 C\+\+\) 具有多重繼承技術。  
-  
- 雖然公開一個 COM 物件的多個雙重介面是可行的，但不建議這樣做。  如果有多個雙重介面，只能有一 `IDispatch` 公開的介面。  可用的方法可確保這種情況會影響 \(例如函式或加入的程式碼複雜度遺失。  請考慮使用這種方法的開發人員應該仔細考量優缺點。  
-  
-## 公開單一 IDispatch 介面  
- 以下列方式公開給單一物件的多個雙重介面能從 `IDispatchImpl`的兩個以上的特製化。  不過，因此，如果您允許用戶端用來 `IDispatch` 介面查詢，您必須使用 [COM\_INTERFACE\_ENTRY2](../Topic/COM_INTERFACE_ENTRY2.md) 巨集 \(或 [COM\_INTERFACE\_ENTRY\_IID](../Topic/COM_INTERFACE_ENTRY_IID.md)\) 指定要使用的基底類別 `IDispatch`的實作。  
-  
- [!code-cpp[NVC_ATL_COM#23](../atl/codesnippet/CPP/multiple-dual-interfaces_1.h)]  
-  
- 由於只有一 `IDispatch` 介面公開，可以 `IDispatch` 介面只存取您物件的用戶端將無法存取方法或屬性在任何其他連接。  
-  
-## 合併多個雙重介面為基礎的唯一實作。  
- ATL 為合併多個雙重介面不提供任何支援加入至 `IDispatch`的唯一實作。  不過，有幾種已知的方法與手動合併介面，例如建立包含，建立新的物件執行 `QueryInterface` 函式 \(或使用巢狀物件以 typeinfo 的實作不同的 `IDispatch` 介面建立關聯 `IDispatch` 介面的樣板類別。  
-  
- 這些方法會有潛在的命名空間衝突的問題，以及程式碼的複雜度和維護性。  不建議您建立多個雙重介面。  
-  
-## 請參閱  
- [Dual Interfaces and ATL](../atl/dual-interfaces-and-atl.md)

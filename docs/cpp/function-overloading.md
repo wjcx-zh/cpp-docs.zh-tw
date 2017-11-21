@@ -4,32 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9076fdd48e466d68d5dcecec2c339a98f39a8bb1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="function-overloading"></a>函式多載
 C++ 允許在相同範圍內指定多個同名的函式。 這些函式稱為多載函式，將在＜多載＞中詳細說明。 多載函式可讓程式設計人員根據引數的類型和數目，為函式提供不同的語意。  
   
- 例如，**列印**函式可接受 string (或**char \* **) 引數執行非常不同工作使用的型別引數的其中一個**double**. 多載允許統一命名，並且可讓程式設計人員不必自創名稱，例如 `print_sz` 或 `print_d`。 下表將說明 C++ 使用函式宣告的哪些部分區分在相同範圍內具有相同名稱的函式群組。  
+ 例如，**列印**函式可接受 string (或**char \*** ) 引數執行非常不同工作使用的型別引數的其中一個**double**. 多載允許統一命名，並且可讓程式設計人員不必自創名稱，例如 `print_sz` 或 `print_d`。 下表將說明 C++ 使用函式宣告的哪些部分區分在相同範圍內具有相同名稱的函式群組。  
   
 ### <a name="overloading-considerations"></a>多載考量  
   
@@ -183,7 +180,7 @@ F1 = Add( 3, 6 );
   
  請注意，這兩個集合的交集為空集合。 因此，編譯器會產生錯誤訊息。  
   
- 比對的函式的引數* n *預設引數會被視為* n *+ 1 個別函式各有不同數目的引數。  
+ 比對的函式的引數 *n* 預設引數會被視為 *n* + 1 個別函式各有不同數目的引數。  
   
  省略符號 (...) 做為萬用字元使用，它會比對任何實質引數。 如果設計多載函式集合時沒有特別小心，這種情況就可能導致許多模稜兩可的集合出現。  
   
@@ -269,19 +266,19 @@ volatile Over&
   
 1.  完全相符。 呼叫函式所使用的類型與函式原型中所宣告的類型之間完全相符的項目，必定是最相符項目。 一般轉換的序列會分類為完全相符項目。 不過，不進行任何這類轉換的序列通常會比轉換的序列更理想：  
   
-    -   從指標指向**const** (`type` ** \* **至**const** `type` ** \* **).  
+    -   從指標指向**const** (`type`  **\*** 至**const** `type`  **\*** ).  
   
-    -   從指標指向`volatile`(`type` ** \* **至`volatile` `type` ** \* **)。  
+    -   從指標指向`volatile`(`type`  **\*** 至`volatile` `type`  **\*** )。  
   
-    -   從參考到**const** (`type` ** & **至**const** `type` ** & **).  
+    -   從參考到**const** (`type`  **&** 至**const** `type`  **&** ).  
   
-    -   從參考到`volatile`(`type` ** & **至`volatile` `type` ** & **)。  
+    -   從參考到`volatile`(`type`  **&** 至`volatile` `type`  **&** )。  
   
 2.  使用提升的相符項目。 未分類為完全相符，只包含整數提升，從轉換的任何序列**float**至**double**，以及一般轉換的分類為使用提升的相符項目。 雖然不如任何完全相符項目一般合適，但是使用提升的相符項目與使用標準轉換的相符項目相比之下仍較為理想。  
   
 3.  使用標準轉換的相符項目。 未分類為完全相符或使用提升的相符項目，而且只包含標準轉換和一般轉換的任何序列，都會分類為使用標準轉換的相符項目。 這個分類適用下列規則：  
   
-    -   從指標轉換成衍生的類別，以直接或間接基底類別的指標，最好轉換成**void \* **或**const void \* **。  
+    -   從指標轉換成衍生的類別，以直接或間接基底類別的指標，最好轉換成**void \*** 或**const void \*** 。  
   
     -   從指標轉換成衍生類別、轉換成基底類別的指標會產生較佳的相符項目，基底類別也會越接近直接基底類別。 假設類別階層架構如下圖所示。  
   
@@ -426,7 +423,7 @@ obj.name
     void Print( PSTR szToPrint );  
     ```  
   
-     上述兩個函式擁有相同的引數清單。 `PSTR`型別同義**char \* **。 在成員範圍內，這個程式碼會產生錯誤。  
+     上述兩個函式擁有相同的引數清單。 `PSTR`型別同義**char \*** 。 在成員範圍內，這個程式碼會產生錯誤。  
   
 -   列舉類型是不同的類型，可以用來區別多載函式。  
   

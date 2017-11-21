@@ -9,19 +9,17 @@ ms.topic: article
 f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
-- concrt/concurrency:[operator&amp;&amp
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 322c95da1774cb0b1d621a46c74125f435ebfbc4
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 54c37f3262c6750bad4330780a4db09f2eef9d49
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空間運算子
 ||||  
@@ -30,7 +28,7 @@ ms.lasthandoff: 03/17/2017
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|  
 |[operator==](#operator_eq_eq)|[operator||](#operator_lor)|  
   
-##  <a name="operator_lor"></a>運算子 | |運算子  
+##  <a name="operator_lor"></a>運算子 &#124; &#124;運算子  
  建立工作，這個工作將會在兩個當做引數提供的任一工作已順利完成時成功完成。  
   
 ```  
@@ -134,13 +132,13 @@ inline bool operator== (
   
 ### <a name="parameters"></a>參數  
  `T`  
- 儲存在並行向量的項目資料型別。  
+ 並行向量中儲存的項目資料類型。  
   
  `A1`  
- 第一個配置器類型`concurrent_vector`物件。  
+ 配置器類型的第一個`concurrent_vector`物件。  
   
  `A2`  
- 第二個配置器類型`concurrent_vector`物件。  
+ 配置器類型，第二個`concurrent_vector`物件。  
   
  `_A`  
  `concurrent_vector` 類型的物件。  
@@ -152,9 +150,9 @@ inline bool operator== (
  `true`如果運算子左邊的並行向量和相等運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
- 如果有相同數目的項目，且個別元素擁有相同的值，兩個並行向量相等。 反之則為不相等。  
+ 兩個的並行向量相等，如果它們有相同數目的項目，而且個別元素擁有相同的值。 反之則為不相等。  
   
- 這個方法不相對於其他方法可以修改其中一個的並行向量的並行安全`_A`或`_B`。  
+ 這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
 ##  <a name="operator_neq"></a>運算子 ！ = 運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否不等於右邊的 `concurrent_vector` 物件。  
@@ -168,13 +166,13 @@ inline bool operator!= (
   
 ### <a name="parameters"></a>參數  
  `T`  
- 儲存在並行向量的項目資料型別。  
+ 並行向量中儲存的項目資料類型。  
   
  `A1`  
- 第一個配置器類型`concurrent_vector`物件。  
+ 配置器類型的第一個`concurrent_vector`物件。  
   
  `A2`  
- 第二個配置器類型`concurrent_vector`物件。  
+ 配置器類型，第二個`concurrent_vector`物件。  
   
  `_A`  
  `concurrent_vector` 類型的物件。  
@@ -186,9 +184,9 @@ inline bool operator!= (
  `true`如果並行向量是否不相等。`false`並行向量是否相等。  
   
 ### <a name="remarks"></a>備註  
- 如果有相同數目的項目，且個別元素擁有相同的值，兩個並行向量相等。 反之則為不相等。  
+ 兩個的並行向量相等，如果它們有相同數目的項目，而且個別元素擁有相同的值。 反之則為不相等。  
   
- 這個方法不相對於其他方法可以修改其中一個的並行向量的並行安全`_A`或`_B`。  
+ 這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
 ##  <a name="operator_lt"></a>運算子&lt;運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否小於右邊的 `concurrent_vector` 物件。  
@@ -202,13 +200,13 @@ inline bool operator<(
   
 ### <a name="parameters"></a>參數  
  `T`  
- 儲存在並行向量的項目資料型別。  
+ 並行向量中儲存的項目資料類型。  
   
  `A1`  
- 第一個配置器類型`concurrent_vector`物件。  
+ 配置器類型的第一個`concurrent_vector`物件。  
   
  `A2`  
- 第二個配置器類型`concurrent_vector`物件。  
+ 配置器類型，第二個`concurrent_vector`物件。  
   
  `_A`  
  `concurrent_vector` 類型的物件。  
@@ -220,9 +218,9 @@ inline bool operator<(
  `true`如果運算子左邊的並行向量小於運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
- 此運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
+ 這個運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
   
- 這個方法不相對於其他方法可以修改其中一個的並行向量的並行安全`_A`或`_B`。  
+ 這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
 ##  <a name="operator_lt_eq"></a>運算子&lt;= 運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否小於或等於右邊的 `concurrent_vector` 物件。  
@@ -236,13 +234,13 @@ inline bool operator<= (
   
 ### <a name="parameters"></a>參數  
  `T`  
- 儲存在並行向量的項目資料型別。  
+ 並行向量中儲存的項目資料類型。  
   
  `A1`  
- 第一個配置器類型`concurrent_vector`物件。  
+ 配置器類型的第一個`concurrent_vector`物件。  
   
  `A2`  
- 第二個配置器類型`concurrent_vector`物件。  
+ 配置器類型，第二個`concurrent_vector`物件。  
   
  `_A`  
  `concurrent_vector` 類型的物件。  
@@ -251,12 +249,12 @@ inline bool operator<= (
  `concurrent_vector` 類型的物件。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果運算子左邊的並行向量是否小於或等於運算子; 右邊的並行向量否則`false`。  
+ `true`如果運算子左邊的並行向量小於或等於運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
- 此運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
+ 這個運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
   
- 這個方法不相對於其他方法可以修改其中一個的並行向量的並行安全`_A`或`_B`。  
+ 這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
 ##  <a name="operator_gt"></a>運算子&gt;運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否大於右邊的 `concurrent_vector` 物件。  
@@ -270,13 +268,13 @@ inline bool operator>(
   
 ### <a name="parameters"></a>參數  
  `T`  
- 儲存在並行向量的項目資料型別。  
+ 並行向量中儲存的項目資料類型。  
   
  `A1`  
- 第一個配置器類型`concurrent_vector`物件。  
+ 配置器類型的第一個`concurrent_vector`物件。  
   
  `A2`  
- 第二個配置器類型`concurrent_vector`物件。  
+ 配置器類型，第二個`concurrent_vector`物件。  
   
  `_A`  
  `concurrent_vector` 類型的物件。  
@@ -288,9 +286,9 @@ inline bool operator>(
  如果運算子左邊的並行向量大於運算子右邊的並行向量，則為 `true`，否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 此運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
+ 這個運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
   
- 這個方法不相對於其他方法可以修改其中一個的並行向量的並行安全`_A`或`_B`。  
+ 這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
 ##  <a name="operator_gt_eq"></a>運算子&gt;= 運算子  
  測試運算子左邊的 `concurrent_vector` 物件是否大於或等於右邊的 `concurrent_vector` 物件。  
@@ -304,13 +302,13 @@ inline bool operator>= (
   
 ### <a name="parameters"></a>參數  
  `T`  
- 儲存在並行向量的項目資料型別。  
+ 並行向量中儲存的項目資料類型。  
   
  `A1`  
- 第一個配置器類型`concurrent_vector`物件。  
+ 配置器類型的第一個`concurrent_vector`物件。  
   
  `A2`  
- 第二個配置器類型`concurrent_vector`物件。  
+ 配置器類型，第二個`concurrent_vector`物件。  
   
  `_A`  
  `concurrent_vector` 類型的物件。  
@@ -322,10 +320,9 @@ inline bool operator>= (
  `true`如果運算子左邊的並行向量大於或等於運算子; 右邊的並行向量否則`false`。  
   
 ### <a name="remarks"></a>備註  
- 此運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
+ 這個運算子的行為等同於對等的運算子，如`vector`類別`std`命名空間。  
   
- 這個方法不相對於其他方法可以修改其中一個的並行向量的並行安全`_A`或`_B`。  
+ 這個方法不是相對於其他方法可以修改其中的並行向量的並行安全`_A`或`_B`。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

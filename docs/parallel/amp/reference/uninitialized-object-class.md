@@ -4,47 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
 - AMPRT/Concurrency::uninitialized_object
-dev_langs:
-- C++
-helpviewer_keywords:
-- uninitialized_object class
+dev_langs: C++
+helpviewer_keywords: uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fc190feb08d9b221cd1cc21a9c91ad567c86c848
-ms.openlocfilehash: 1ff7840ec3ff4ab00b7e13d647c329a892dade42
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7c0e30cefa99a52d0dfbc0725c3274e52f2a76c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 類別
-使用未初始化的物件時，會擲回例外狀況。  
+使用未初始化的物件時就會擲回例外狀況。  
   
 ## <a name="syntax"></a>語法  
   
@@ -69,7 +50,7 @@ class uninitialized_object : public runtime_exception;
  `uninitialized_object`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amprt.h  
+ **標頭：** amprt.h  
   
  **命名空間：** 並行  
 ## <a name="uninitialized_object__ctor"></a>unsupported_feature 
@@ -93,5 +74,4 @@ unsupported_feature() throw();
  `unsupported_feature` 物件。 
 
 ## <a name="see-also"></a>另請參閱  
- [Concurrency 命名空間 (c + + AMP)](concurrency-namespace-cpp-amp.md)
-
+ [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

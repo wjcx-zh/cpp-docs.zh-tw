@@ -1,32 +1,30 @@
 ---
-title: "RuntimeClassBaseT::GetImplementedIIDS 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetImplementedIIDS 方法"
+title: "Runtimeclassbaset:: Getimplementediids 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
+dev_langs: C++
+helpviewer_keywords: GetImplementedIIDS method
 ms.assetid: adae54da-521d-4add-87f5-242fbd85f33b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1f2eb153220c6c0b46948f6d52ebe15857e999c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# RuntimeClassBaseT::GetImplementedIIDS 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS 方法
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<  
@@ -39,29 +37,29 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- `implements` 參數的型別。  
+ `implements` 參數的類型。  
   
  `implements`  
- 指向參數 `T`所指定型別的指標。  
+ 參數所指定型別的指標`T`。  
   
  `iidCount`  
- 介面 ID 要擷取的最大項目數。  
+ 若要擷取的介面識別碼的數目上限。  
   
  `iids`  
- 如果這個作業成功完成，介面 ID 的陣列是由型別 `T`實作。  
+ 如果這項作業已順利完成，介面類型所實作的識別碼陣列`T`。  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則即為描述錯誤的 HRESULT。  
+## <a name="return-value"></a>傳回值  
+ 若成功，則為 S_OK否則，描述錯誤的 HRESULT。  
   
-## 備註  
- 擷取由指定型別所實作的介面 ID 的陣列。  
+## <a name="remarks"></a>備註  
+ 擷取介面指定類型所實作的識別碼陣列。  
   
-## 需求  
- **標題:** implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [RuntimeClassBaseT 結構](../windows/runtimeclassbaset-structure.md)

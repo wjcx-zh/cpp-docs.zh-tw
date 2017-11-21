@@ -1,49 +1,46 @@
 ---
-title: "ArgTraits::args 常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::ArgTraits::args"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "args 常數"
+title: "Argtraits:: Args 常數 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::ArgTraits::args
+dev_langs: C++
+helpviewer_keywords: args constant
 ms.assetid: a68100ab-254b-4571-a0bc-946f1633a46b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28a9ab0661140f59946fadb7ed6492f222429e9d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ArgTraits::args 常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="argtraitsargs-constant"></a>ArgTraits::args 常數
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 static const int args = -1; ;  
 ```  
   
-## 備註  
- 持有委派介面的叫用方法的參數數目的計數。  
+## <a name="remarks"></a>備註  
+ 保留的叫用方法的委派介面上的參數數目的計數。  
   
-## 備註  
- 當`args` 等於\-1時，顯示沒有相符的叫用方法簽章。  
+## <a name="remarks"></a>備註  
+ 當`args`等於-1 表示可以有沒有相符的叫用方法簽章。  
   
-## 需求  
- **標題:** event.h  
+## <a name="requirements"></a>需求  
+ **標頭：** event.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ArgTraits 結構](../windows/argtraits-structure.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

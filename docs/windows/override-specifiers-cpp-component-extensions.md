@@ -1,39 +1,38 @@
 ---
-title: "覆寫規範 (C++ 元件擴充功能) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "覆寫規範, Visual C++"
-  - "覆寫規範"
+title: "覆寫規範 （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- override specifiers, Visual C++
+- override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c314e224bbbc9b7d232ee9e2cb9bbc20ec8ead71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 覆寫規範 (C++ 元件擴充功能)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-「*覆寫規範*」\(Override Specifier\) 會修改繼承型別和繼承型別的成員在衍生型別中的行為方式。  
+# <a name="override-specifiers--c-component-extensions"></a>覆寫規範 (C++ 元件擴充功能)
+*覆寫規範*修改如何繼承的型別和繼承型別的成員在衍生類型中的行為。  
   
-## 所有執行階段  
+## <a name="all-runtimes"></a>所有執行階段  
  **備註**  
   
  如需覆寫規範的詳細資訊，請參閱：  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [new \(vtable 中的新位置\)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [new （新位置 vtable 中）](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
@@ -43,19 +42,19 @@ manager: "ghogen"
   
  `abstract` 和 `sealed` 也適用於型別宣告，而它們不會在其中做為覆寫規範。  
   
- 如需明確覆寫基底類別函式的詳細資訊，請參閱[明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)。  
+ 明確覆寫基底類別函式的相關資訊，請參閱[明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)。  
   
-## Windows 執行階段  
- \(這個語言功能沒有只適用於 Windows 執行階段的備註。\)  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ (這個語言功能沒有只適用於 Windows 執行階段的備註。)  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## Common Language Runtime  
- \(這個語言功能沒有只適用於 Common Language Runtime 的備註。\)  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (這個語言功能沒有只適用於 Common Language Runtime 的備註。)  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>另請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

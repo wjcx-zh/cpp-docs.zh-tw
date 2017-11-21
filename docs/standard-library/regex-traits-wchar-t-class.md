@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- regex/std::regex_traits<wchar_t>
-dev_langs:
-- C++
-helpviewer_keywords:
-- regex_traits<wchar_t> class
+f1_keywords: regex/std::regex_traits<wchar_t>
+dev_langs: C++
+helpviewer_keywords: regex_traits<wchar_t> class
 ms.assetid: 288d6fdb-fb8e-4a4d-904a-53916be7f95b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 9380ada48041a502a4be41fbb9ba8b954fff3ae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 3314514c013a923f85f3d8c8dbe8572f29b86998
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 類別
 regex_traits for wchar_t 的特製化。  
@@ -54,4 +49,3 @@ class regex_traits<wchar_t>
 [regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 類別](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
-

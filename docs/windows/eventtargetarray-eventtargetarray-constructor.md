@@ -1,32 +1,30 @@
 ---
-title: "EventTargetArray::EventTargetArray 建構函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EventTargetArray，建構函式"
+title: "Eventtargetarray:: Eventtargetarray 建構函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
+dev_langs: C++
+helpviewer_keywords: EventTargetArray, constructor
 ms.assetid: 6c6d3737-3cd3-4515-a8f6-d27901bb8ed2
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6dbe316310e04172c659460c08137edd2a401df6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# EventTargetArray::EventTargetArray 建構函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="eventtargetarrayeventtargetarray-constructor"></a>EventTargetArray::EventTargetArray 建構函式
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 EventTargetArray(  
@@ -35,32 +33,32 @@ EventTargetArray(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `hr`  
- 在這個建構函式 \(Constructor\) 作業之後，參數 `hr` 指示陣列的配置是成功還是失敗。  下表列出 `hr` 可能的值。  
+ 這個建構函式作業之後，參數`hr`指出配置陣列的成功或失敗。 下表列出可能的值為`hr`。  
   
- S\_OK  
- 作業已成功。  
+ S_OK  
+ 作業成功。  
   
- E\_OUTOFMEMORY  
- 無法為陣列配置記憶體。  
+ E_OUTOFMEMORY  
+ 陣列，無法配置記憶體。  
   
- S\_FALSE  
- 參數`items` 小於或等於零。  
+ S_FALSE  
+ 參數`items`小於或等於零。  
   
  `items`  
  要配置的陣列元素數目。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  初始化 EventTargetArray 類別的新執行個體。  
   
- EventTargetArray 是用來在 EventSource 物件中保留一組事件處理常式陣列用的。  
+ EventTargetArray 用來保留 EventSource 物件中的事件處理常式的陣列。  
   
-## 需求  
- **標題:** event.h  
+## <a name="requirements"></a>需求  
+ **標頭：** event.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [EventTargetArray 類別](../windows/eventtargetarray-class.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

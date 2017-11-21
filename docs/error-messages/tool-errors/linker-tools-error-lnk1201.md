@@ -1,42 +1,39 @@
 ---
-title: "連結器工具錯誤 LNK1201 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1201"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1201"
+title: "連結器工具錯誤 LNK1201 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1201
+dev_langs: C++
+helpviewer_keywords: LNK1201
 ms.assetid: 64c3f496-a428-4b54-981e-faa82ef9c8a1
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 344f56eb3097bad447d9a0b12a0c5aac6f68b119
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具錯誤 LNK1201
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-寫入程式資料庫 'filename' 時發生錯誤；請檢查磁碟空間是否足夠、路徑是否正確或是否有足夠的權限  
+# <a name="linker-tools-error-lnk1201"></a>連結器工具錯誤 LNK1201
+寫入程式資料庫 'filename'; 時發生錯誤檢查有足夠的磁碟空間、 無效路徑或特殊權限不足  
   
- LINK 無法寫入輸出檔的程式資料庫 \(PDB\)。  
+ 連結無法寫入輸出檔的程式資料庫 (PDB)。  
   
-### 若要修正，請檢查下列可能原因  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
   
-1.  檔案損毀。  請刪除 PDB 檔並重新連結。  
+1.  檔案已損毀。 刪除 PDB 檔案並重新連結。  
   
 2.  磁碟空間不足，無法寫入檔案。  
   
-3.  磁碟無法使用，可能是網路問題所造成。  
+3.  無法使用，可能是因為網路問題的磁碟機。  
   
-4.  偵錯工具正作用於您要連結的程式。  
+4.  您嘗試連結的程式作用中偵錯工具。  
   
-5.  堆積空間不足。如需詳細資訊，請參閱 [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)。
+5.  堆積空間不足。  請參閱[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)如需詳細資訊。

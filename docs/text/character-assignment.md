@@ -1,30 +1,29 @@
 ---
-title: "字元設定 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字元 [C++], 設定"
-  - "MBCS [C++], 字元設定"
+title: "字元指派 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], assignments
+- MBCS [C++], character assignments
 ms.assetid: dcc329cd-92df-4e20-817d-364be62ff28f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: c40e7d0c6861f4815d98ad4388aade8227b43dcb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 字元設定
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-考慮下列範例，其中 `while` 迴圈掃瞄一字串，將除了 "X" 之外的所有字元複製到另一個字串：  
+# <a name="character-assignment"></a>字元設定
+請考慮下列範例中的，在其中`while`迴圈會掃描字串，將 'X' 以外的所有字元都複製到另一個字串：  
   
 ```  
 while( *sz2 )  
@@ -36,7 +35,7 @@ while( *sz2 )
 }  
 ```  
   
- 程式碼複製 `sz2` 的位元組到 `sz1` 所指的位置，然後增量 `sz1` 以接收下一個位元組。  但是如果 `sz2` 內的下一個字元是雙位元組字元，`sz1` 的指派會只複製第一個位元組。  下列程式碼使用可移植的函式來安全的複製字元，並使用另一個函示來正確的增量 `sz1` 和 `sz2`：  
+ 程式碼會複製在位元組`sz2`所指向的位置`sz1`，然後遞增`sz1`接收的下一個位元組。 但是如果中的下一個字元`sz2`是雙位元組字元，指派給`sz1`複製第 1 個位元組。 下列程式碼會使用來安全地複製字元的可攜式函式，而另一個要遞增`sz1`和`sz2`正確：  
   
 ```  
 while( *sz2 )  
@@ -52,6 +51,6 @@ while( *sz2 )
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)   
  [字元比較](../text/character-comparison.md)

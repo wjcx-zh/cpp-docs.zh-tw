@@ -1,46 +1,43 @@
 ---
-title: "hash_set::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound 成員 [STL/CLR]"
+title: "hash_set:: lower_bound (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 54fe8ee5-1977-4192-9cc6-b51e84b03a16
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee6c0cbea5a6e4b2d4730de7bb55564bb8200e85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定索引鍵的項目範圍的開頭。  
+# <a name="hashsetlowerbound-stlclr"></a>hash_set::lower_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 要搜尋的索引值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式指定受控制序列中第一個`X`雜湊至與 `key` 相同 Bucket 的項目，以及與 `key` 相等排序的項目。  如果沒有此類項目存在，便會傳回 [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`()`;否則會指定 `X`的會傳回迭代器。  您可以使用它目前所在項目的開頭符合指定索引鍵受控制序列。  
+## <a name="remarks"></a>備註  
+ 成員函式判斷第一個項目`X`雜湊至相同的值區為受控制序列中`key`且具有對等順序，以`key`。 如果沒有這類元素存在，它會傳回[hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定`X`。 您可以使用它來尋找項目序列的開頭目前受控制序列之符合指定之索引鍵。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_lower_bound.cpp   
@@ -72,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= True**  
-**\*lower\_bound\(L'a'\) \= a**  
-**\*lower\_bound\(L'b'\) \= b**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::count](../dotnet/hash-set-count-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)   
- [hash\_set::find](../dotnet/hash-set-find-stl-clr.md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
+ [hash_set:: equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
+ [hash_set:: find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   
+ [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

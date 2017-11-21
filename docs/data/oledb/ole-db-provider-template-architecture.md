@@ -1,38 +1,38 @@
 ---
-title: "OLE DB 提供者樣板架構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "架構 [C++], OLE DB 提供者"
-  - "OLE DB [C++], 物件模型"
-  - "OLE DB 提供者樣板, 物件模型"
+title: "OLE DB 提供者樣板架構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB [C++], object model
+- architecture [C++], OLE DB Provider
+- OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289d1d5f09f60b829c6dd7d1f1b00c0de3562518
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 提供者樣板架構
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-## 資料來源和工作階段  
- OLE DB 提供者架構包含一個資料來源物件和一或多個工作階段 \(Session\)。  資料來源物件為每個提供者都必須執行個體化的初始物件。  當消費者應用程式需要資料時，它會同時建立資料來源物件來啟動提供者。  該資料來源物件會建立一個讓消費者用來連接至資料來源物件的工作階段物件 \(使用 **IDBCreateSession** 介面\)。  ODBC 程式設計人員可將資料來源物件視同 **HENV**，而將工作階段物件則視為 **HDBC**。  
+# <a name="ole-db-provider-template-architecture"></a>OLE DB 提供者樣板架構
+## <a name="data-sources-and-sessions"></a>資料來源和工作階段  
+ OLE DB 提供者架構包含資料來源物件和一或多個工作階段。 資料來源物件是每個提供者必須具現化的初始物件。 當取用者應用程式需要的資料時，同時會建立啟動提供者資料來源物件。 資料來源物件會建立工作階段物件 (使用**IDBCreateSession**介面) 透過其取用者會連接到資料來源物件。 ODBC 程式設計人員可以將資料來源物件視為相當於**HENV**和工作階段物件，相當於**HDBC**。  
   
- ![提供者架構](../../data/oledb/media/vc4twb1.png "vc4TWB1")  
+ ![提供者架構](../../data/oledb/media/vc4twb1.gif "vc4twb1")  
   
- OLE DB 樣板可搭配 OLE DB 提供者精靈所建立的原始程式檔 \(Source File\)，實作一個資料來源物件。  工作階段是對應至 OLE DB **TSession** 的物件。  
+ OLE DB 提供者精靈 所建立的來源檔案，以及 OLE DB 樣板會實作資料來源物件。 工作階段是對應至 OLE DB 物件**TSession**。  
   
-## 強制項和選擇項介面  
- OLE DB 提供者樣板提供您所有必要介面的預先封裝實作。  OLE DB 會替多個物件類型定義了強制項和選擇項介面：  
+## <a name="mandatory-and-optional-interfaces"></a>必要和選擇性介面  
+ OLE DB 提供者範本可讓您預先封裝實作所有必要的介面。 必要和選擇性介面的定義方式 OLE DB for 幾種類型的物件：  
   
 -   [資料來源](../../data/oledb/data-source-object-interfaces.md)  
   
@@ -44,17 +44,17 @@ caps.handback.revision: 7
   
 -   [異動](../../data/oledb/transaction-object-interfaces.md)  
   
- 請注意，OLE DB 提供者樣板並不會實作資料列和儲存物件 \(Storage Object\)。  
+ 請注意，OLE DB 提供者範本不會實作資料列和儲存體物件。  
   
- 下表根據 [OLE DB 2.6 SDK 文件](https://msdn.microsoft.com/en-us/library/ms722784.aspx)，列出上列物件的強制項和選擇項介面。  
+ 下表列出強制和選擇性的介面，如上面所列的物件根據[OLE DB 2.6 SDK 文件](https://msdn.microsoft.com/en-us/library/ms722784.aspx)。  
   
-|元件|介面|Comment|  
-|--------|--------|-------------|  
-|[資料來源](../../data/oledb/data-source-object-interfaces.md) \([CDataSource](../../data/oledb/cdatasource-class.md)\)|\[強制\] **IDBCreateSession**<br /><br /> \[強制\] **IDBInitialize**<br /><br /> \[強制\] `IDBProperties`<br /><br /> \[強制\] `IPersist`<br /><br /> \[選擇項\] **IConnectionPointContainer**<br /><br /> \[選擇項\] **IDBAsynchStatus**<br /><br /> \[選擇項\] **IDBDataSourceAdmin**<br /><br /> \[選擇項\] **IDBInfo**<br /><br /> \[選擇項\] `IPersistFile`<br /><br /> \[選擇項\] **ISupportErrorInfo**|自消費者連接至提供者。  用來指定連接屬性的物件，例如，使用者 ID、密碼和資料來源名稱 \(Data Source Name\)。  物件也可用來管理資料來源 \(建立、更新、刪除、表格等等\)。|  
-|[工作階段](../../data/oledb/session-object-interfaces.md) \([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md)\)|\[強制\] **IGetDataSource**<br /><br /> \[強制\] `IOpenRowset`<br /><br /> \[強制\] **ISessionProperties**<br /><br /> \[選擇項\] **IAlterIndex**<br /><br /> \[選擇項\] **IAlterTable**<br /><br /> \[選擇項\] **IBindResource**<br /><br /> \[選擇項\] **ICreateRow**<br /><br /> \[選擇項\] **IDBCreateCommand**<br /><br /> \[選擇項\] **IDBSchemaRowset**<br /><br /> \[選擇項\] **IIndexDefinition**<br /><br /> \[選擇項\] **ISupportErrorInfo**<br /><br /> \[選擇項\] **ITableCreation**<br /><br /> \[選擇項\] **ITableDefinition**<br /><br /> \[選擇項\] **ITableDefinitionWithConstraints**<br /><br /> \[選擇項\] **ITransaction**<br /><br /> \[選擇項\] **ITransactionJoin**<br /><br /> \[選擇項\] **ITransactionLocal**<br /><br /> \[選擇項\] **ITransactionObject**|工作階段物件代表消費者和提供者之間的單一轉換。  有點類似 ODBC **HSTMT**，因為可以有很多同時作用的工作階段。<br /><br /> 工作階段物件是取得 OLE DB 功能的主要連結。  若要取得命令、交易或資料列集物件，您可瀏覽一遍工作階段物件。|  
-|[資料列集](../../data/oledb/rowset-object-interfaces.md) \([CRowset](../../data/oledb/crowset-class.md)\)|\[強制\] `IAccessor`<br /><br /> \[強制\] `IColumnsInfo`<br /><br /> \[強制\] **IConvertType**<br /><br /> \[強制\] `IRowset`<br /><br /> \[強制\] `IRowsetInfo`<br /><br /> \[選擇項\] **IChapteredRowset**<br /><br /> \[選擇項\] **IColumnsInfo2**<br /><br /> \[選擇項\] **IColumnsRowset**<br /><br /> \[選擇項\] **IConnectionPointContainer**<br /><br /> \[選擇項\] **IDBAsynchStatus**<br /><br /> \[選擇項\] **IGetRow**<br /><br /> \[選擇項\] `IRowsetChange`<br /><br /> \[選擇項\] **IRowsetChapterMember**<br /><br /> \[選擇項\] **IRowsetCurrentIndex**<br /><br /> \[選擇項\] **IRowsetFind**<br /><br /> \[選擇項\] **IRowsetIdentity**<br /><br /> \[選擇項\] **IRowsetIndex**<br /><br /> \[選擇項\] `IRowsetLocate`<br /><br /> \[選擇項\] **IRowsetRefresh**<br /><br /> \[選擇項\] `IRowsetScroll`<br /><br /> \[選擇項\] `IRowsetUpdate`<br /><br /> \[選擇項\] **IRowsetView**<br /><br /> \[選擇項\] **ISupportErrorInfo**<br /><br /> \[選擇項\] **IRowsetBookmark**|資料列集物件代表來自資料來源的資料。  此物件負責該資料的繫結，和任何的基本資料操作 \(更新、擷取、移動和其他作業\)。  您永遠會有包含和管理資料的資料列集物件。|  
-|[命令](../../data/oledb/command-object-interfaces.md) \([CCommand](http://msdn.microsoft.com/zh-tw/52bef5da-c1a0-4223-b4e6-9e464b6db409)\)|\[強制\] `IAccessor`<br /><br /> \[強制\] `IColumnsInfo`<br /><br /> \[強制\] `ICommand`<br /><br /> \[強制\] **ICommandProperties**<br /><br /> \[強制\] `ICommandText`<br /><br /> \[強制\] **IConvertType**<br /><br /> \[選擇項\] **IColumnsRowset**<br /><br /> \[選擇項\] **ICommandPersist**<br /><br /> \[選擇項\] **ICommandPrepare**<br /><br /> \[選擇項\] `ICommandWithParameters`<br /><br /> \[選擇項\] **ISupportErrorInfo**<br /><br /> \[選擇項\] **ICommandStream**|處理資料作業的命令物件，例如查詢。  它可以處理參數型或非參數型陳述式。<br /><br /> 命令物件也負責處理參數和輸出資料行的繫結。  繫結是一個包含資料列集資料行擷取方式之相關資訊的結構。  它包含了序數、資料型別、長度和狀態的資訊。|  
-|[交易](../../data/oledb/transaction-object-interfaces.md) \(選擇項\)|\[強制\] **IConnectionPointContainer**<br /><br /> \[強制\] **ITransaction**<br /><br /> \[選擇項\] **ISupportErrorInfo**|交易物件定義資料來源內的原子單位，並決定這些工作單位彼此間的關係。  OLE DB 提供者樣板並未直接支援這個物件 \(也就是您建立自己的物件\)。|  
+|元件|介面|註解|  
+|---------------|---------------|-------------|  
+|[資料來源](../../data/oledb/data-source-object-interfaces.md)([CDataSource](../../data/oledb/cdatasource-class.md))|[必要]**IDBCreateSession**<br /><br /> [必要]**IDBInitialize**<br /><br /> [必要]`IDBProperties`<br /><br /> [必要]`IPersist`<br /><br /> [選用]**IConnectionPointContainer**<br /><br /> [選用]**IDBAsynchStatus**<br /><br /> [選用]**IDBDataSourceAdmin**<br /><br /> [選用]**IDBInfo**<br /><br /> [選用]`IPersistFile`<br /><br /> [選用]**ISupportErrorInfo**|提供者從取用者連接。 物件用來連接，例如使用者識別碼、 密碼和資料來源的名稱上指定屬性。 物件也可用來管理資料來源 （建立、 更新、 刪除、 表格和等等）。|  
+|[工作階段](../../data/oledb/session-object-interfaces.md)([CSession](../../data/oledb/cdataconnection-operator-csession-amp.md))|[必要]**IGetDataSource**<br /><br /> [必要]`IOpenRowset`<br /><br /> [必要]**ISessionProperties**<br /><br /> [選用]**IAlterIndex**<br /><br /> [選用]**IAlterTable**<br /><br /> [選用]**IBindResource**<br /><br /> [選用]**ICreateRow**<br /><br /> [選用]**IDBCreateCommand**<br /><br /> [選用]**IDBSchemaRowset**<br /><br /> [選用]**IIndexDefinition**<br /><br /> [選用]**ISupportErrorInfo**<br /><br /> [選用]**ITableCreation**<br /><br /> [選用]**ITableDefinition**<br /><br /> [選用]**ITableDefinitionWithConstraints**<br /><br /> [選用]**Itransaction::**<br /><br /> [選用]**ITransactionJoin**<br /><br /> [選用]**ITransactionLocal**<br /><br /> [選用]**j**|工作階段物件代表消費者和提供者之間的單一交談。 有點類似於 ODBC **HSTMT** ，可以有許多的工作階段使用中。<br /><br /> 工作階段物件是主要的連結，以取得 OLE DB 功能。 若要取得命令、 交易或資料列集物件，您瀏覽工作階段物件。|  
+|[資料列集](../../data/oledb/rowset-object-interfaces.md)([CRowset](../../data/oledb/crowset-class.md))|[必要]`IAccessor`<br /><br /> [必要]`IColumnsInfo`<br /><br /> [必要]**IConvertType**<br /><br /> [必要]`IRowset`<br /><br /> [必要]`IRowsetInfo`<br /><br /> [選用]**IChapteredRowset**<br /><br /> [選用]**IColumnsInfo2**<br /><br /> [選用]**IColumnsRowset**<br /><br /> [選用]**IConnectionPointContainer**<br /><br /> [選用]**IDBAsynchStatus**<br /><br /> [選用]**IGetRow**<br /><br /> [選用]`IRowsetChange`<br /><br /> [選用]**IRowsetChapterMember**<br /><br /> [選用]**IRowsetCurrentIndex**<br /><br /> [選用]**IRowsetFind**<br /><br /> [選用]**IRowsetIdentity**<br /><br /> [選用]**IRowsetIndex**<br /><br /> [選用]`IRowsetLocate`<br /><br /> [選用]**IRowsetRefresh**<br /><br /> [選用]`IRowsetScroll`<br /><br /> [選用]`IRowsetUpdate`<br /><br /> [選用]**IRowsetView**<br /><br /> [選用]**ISupportErrorInfo**<br /><br /> [選用]**IRowsetBookmark**|資料列集物件表示從資料來源的資料。 此物件負責該資料和任何的基本作業 （更新、 fetch、 移動，以及其他） 的資料繫結。 此外，您都有包含，以及操作資料的資料列集物件。|  
+|[命令](../../data/oledb/command-object-interfaces.md)([CCommand](http://msdn.microsoft.com/en-us/52bef5da-c1a0-4223-b4e6-9e464b6db409))|[必要]`IAccessor`<br /><br /> [必要]`IColumnsInfo`<br /><br /> [必要]`ICommand`<br /><br /> [必要]**ICommandProperties**<br /><br /> [必要]`ICommandText`<br /><br /> [必要]**IConvertType**<br /><br /> [選用]**IColumnsRowset**<br /><br /> [選用]**ICommandPersist**<br /><br /> [選用]**m**<br /><br /> [選用]`ICommandWithParameters`<br /><br /> [選用]**ISupportErrorInfo**<br /><br /> [選用]**ICommandStream**|命令物件會處理資料，例如查詢作業。 它可以處理參數化或非參數化陳述式。<br /><br /> 命令物件也會負責處理參數和輸出資料行的繫結。 繫結是結構，其中包含擷取的資料行，在資料列集的方式的相關資訊。 它包含例如序數、 資料類型、 長度和狀態資訊。|  
+|[交易](../../data/oledb/transaction-object-interfaces.md)（選擇性）|[必要]**IConnectionPointContainer**<br /><br /> [必要]**Itransaction::**<br /><br /> [選用]**ISupportErrorInfo**|交易物件上的資料來源定義不可部分完成的工作單位，並判斷這些工作單位如何彼此相關。 此物件不直接支援 OLE DB 提供者樣板 （也就是您建立自己的物件）。|  
   
  如需詳細資訊，請參閱下列主題：  
   
@@ -62,6 +62,6 @@ caps.handback.revision: 7
   
 -   [使用者資料錄](../../data/oledb/user-record.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB Interfaces](https://msdn.microsoft.com/en-us/library/ms709709.aspx)
+ [OLE DB 介面](https://msdn.microsoft.com/en-us/library/ms709709.aspx)

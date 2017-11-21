@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrays-c"></a>陣列 (C++)
 陣列是同類物件的集合。 最簡單的陣列案例就是向量，可以依照下列順序宣告：  
@@ -56,7 +53,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. 選擇性的初始設定式。  請參閱[初始設定式](../cpp/initializers.md)。  
   
- 陣列中元素的數目是由常數運算式提供。 陣列中的第一個項目是第 0 個元素，而最後一個項目 (*n*-1) 項目，其中* n *是陣列可以包含的元素數目。 *常數運算式*必須屬於整數型別，而且必須大於 0。 只有當陣列中的最後一個欄位的大小為零的陣列是合法`struct`或**union**而且已啟用 Microsoft 擴充功能 (/Ze) 時。  
+ 陣列中元素的數目是由常數運算式提供。 陣列中的第一個項目是第 0 個元素，而最後一個項目 (*n*-1) 項目，其中 *n* 是陣列可以包含的元素數目。 *常數運算式*必須屬於整數型別，而且必須大於 0。 只有當陣列中的最後一個欄位的大小為零的陣列是合法`struct`或**union**而且已啟用 Microsoft 擴充功能 (/Ze) 時。  
   
  下列範例將示範如何在執行階段定義陣列：  
   
@@ -91,7 +88,7 @@ int i2[5][7];
   
  它會指定類型為 `int`、在概念上以五列七行的二維矩陣排列的陣列，如下圖所示：  
   
- ![多重 & #45 的概念性配置; 二維陣列](../cpp/media/vc38rc1.gif "vc38RC1")  
+ ![多重 &#45;的概念性配置; 二維陣列](../cpp/media/vc38rc1.gif "vc38RC1")  
 多維陣列的概念性配置  
   
  在宣告中的多維陣列初始設定式清單 (如所述[初始設定式](../cpp/initializers.md))，可以省略指定第一個維度界限的常數運算式。 例如:   

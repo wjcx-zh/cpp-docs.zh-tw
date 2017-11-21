@@ -1,49 +1,47 @@
 ---
-title: "ICommandTextImpl::GetCommandText | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetCommandText"
-  - "ICommandTextImpl.GetCommandText"
-  - "ICommandTextImpl::GetCommandText"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetCommandText 方法"
+title: "Icommandtextimpl:: Getcommandtext |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetCommandText
+- ICommandTextImpl.GetCommandText
+- ICommandTextImpl::GetCommandText
+dev_langs: C++
+helpviewer_keywords: GetCommandText method
 ms.assetid: 0f8da470-b1c3-4573-974f-1acc111e3984
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df72d8d6e5c3c5c85d1216bf321216aef515a1d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandTextImpl::GetCommandText
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-由最後一個呼叫傳回文字命令設定為 [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。  
+# <a name="icommandtextimplgetcommandtext"></a>ICommandTextImpl::GetCommandText
+傳回上次呼叫所設定的文字命令[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      STDMETHOD(GetCommandText)(   
-   GUID * pguidDialect,   
-   LPOLESTR * ppwszCommand    
+      STDMETHOD(GetCommandText)(   
+   GUID * pguidDialect,   
+   LPOLESTR * ppwszCommand    
 );  
 ```  
   
-#### 參數  
- 請參閱 *OLE DB 程式設計人員參考* 中的 [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)。  根據預設 *pguidDialect* 參數被忽略。  
+#### <a name="parameters"></a>參數  
+ 請參閱[ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx)中*OLE DB 程式設計人員參考*。 *PguidDialect*依預設，會忽略參數。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICommandTextImpl 類別](../../data/oledb/icommandtextimpl-class.md)

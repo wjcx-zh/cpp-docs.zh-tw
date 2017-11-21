@@ -1,34 +1,33 @@
 ---
-title: "IOpenRowsetImpl::CreateRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOpenRowsetImpl.CreateRowset"
-  - "IOpenRowsetImpl::CreateRowset"
-  - "CreateRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRowset 方法"
+title: "Iopenrowsetimpl:: Createrowset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IOpenRowsetImpl.CreateRowset
+- IOpenRowsetImpl::CreateRowset
+- CreateRowset
+dev_langs: C++
+helpviewer_keywords: CreateRowset method
 ms.assetid: 69041cf6-7a2f-4409-a26e-6e984c24986e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dc67ec84af8125f92334077dcd3ab3580d31877a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IOpenRowsetImpl::CreateRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-建立一個 rowset 物件。  不會直接由使用者呼叫。  如需詳細資訊，請參閱  *OLE DB 程式設計人員參考* 中的 [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)。  
+# <a name="iopenrowsetimplcreaterowset"></a>IOpenRowsetImpl::CreateRowset
+建立資料列集物件。 並非由使用者直接呼叫。 請參閱[iopenrowset:: Openrowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程式設計人員參考。*  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -47,17 +46,17 @@ HRESULT CreateRowset(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `RowsetClass`  
- 表示使用者的資料列集類別的樣板類別 \(Template\-Class\) 成員。  通常由精靈產生。  
+ 代表使用者的資料列集類別的樣板類別成員。 通常是由精靈產生。  
   
  `pRowsetObj`  
- \[資料列集物件的指標。  一般而言不會使用這個參數，不過，當您必須在傳遞至 COM 物件之前對結構描述資料列集進行更多工作時可以使用它。  `pRowsetObj` 的存留期由 `ppRowset` 約束。  
+ [out]資料列集物件的指標。 通常不使用此參數，但如果您必須從資料列集執行更多工作，才能將它傳遞給 COM 物件才能使用。 存留期`pRowsetObj`受限於`ppRowset`。  
   
- 如需其他參數，請參閱《*OLE DB 程式設計人員參考*》的[IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)。  
+ 其他參數，請參閱[iopenrowset:: Openrowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程式設計人員參考。*  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IOpenRowsetImpl 類別](../../data/oledb/iopenrowsetimpl-class.md)

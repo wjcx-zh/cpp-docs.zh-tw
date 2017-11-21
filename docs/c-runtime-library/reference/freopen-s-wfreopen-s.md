@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - freopen_s
 - _tfreopen_s
 - _wfreopen_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tfreopen_s function
 - _wfreopen_s function
@@ -38,30 +36,15 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: e9500d86661334d59d29496031e8160fbdc99b2d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 6141ed6252bfd196c15cc2e7be4361a840c722d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="freopens-wfreopens"></a>freopen_s、_wfreopen_s
 重新指派檔案指標。 這些版本的 [freopen、_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -110,7 +93,7 @@ errno_t _wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tfreopen_s`|`freopen_s`|`freopen_s`|`_wfreopen_s`|  
   
- `freopen_s` 通常用來將已預先開啟的檔案 `stdin`、`stdout` 和 `stderr` 導向至使用者所指定的檔案。 新的檔案與相關聯`stream`開啟`mode`，這是字元字串，指定對檔案要求的如下所示的存取類型︰  
+ `freopen_s` 通常用來將已預先開啟的檔案 `stdin`、`stdout` 和 `stderr` 導向至使用者所指定的檔案。 新的檔案與相關聯`stream`開啟`mode`，這是字元字串，指定對檔案要求的如下所示的存取類型：  
   
  `"r"`  
  開啟以讀取。 如果檔案不存在或找不到， `freopen_s` 呼叫就會失敗。  
@@ -132,7 +115,7 @@ errno_t _wfreopen(
   
  請小心使用 `"w"` 和 `"w+"` 類型，因為它們可以終結現有的檔案。  
   
- 使用 `"a"` 或 `"a+"` 存取類型開啟檔案時，所有寫入作業都會在檔案結尾進行。 雖然檔案指標可以使用 `fseek` 或 `rewind` 重新調整位置，但是在執行任何寫入作業之前，一律會將此檔案指標移回至檔案結尾。 因此，無法覆寫現有資料。  
+ 使用 `"a"` 或 `"a+"` 存取類型開啟檔案時，所有寫入作業都會在檔案結尾進行。 雖然檔案指標可以使用 `fseek` 或 `rewind` 重新調整位置，但是在執行任何寫入作業之前，一律會將此檔案指標移回至檔案結尾。因此，無法覆寫現有資料。  
   
  在附加到檔案之前，`"a"` 模式不會移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 在附加到檔案之前，`"a+"` 模式會移除 EOF 標記。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 附加至以 CTRL+Z EOF 標記終止的資料流檔案時，需要 `"a+"` 模式。  
   

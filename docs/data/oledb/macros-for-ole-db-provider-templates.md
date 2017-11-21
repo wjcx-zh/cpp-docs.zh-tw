@@ -1,72 +1,71 @@
 ---
-title: "OLE DB 提供者樣板的巨集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "巨集, OLE DB 提供者樣板"
-  - "OLE DB 提供者樣板巨集"
-  - "OLE DB 提供者樣板, 巨集"
-  - "提供者樣板巨集 (OLE DB)"
+title: "OLE DB 提供者樣板的巨集 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB provider templates, macros
+- macros, OLE DB Provider Templates
+- Provider Template macros (OLE DB)
+- OLE DB Provider Template macros
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 11a5ae3d0ba5c3da517a380adf795e579d0dce51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 提供者樣板的巨集
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-OLE DB 提供者樣板巨集提供下列分類的功能:  
+# <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
+OLE DB 樣板提供者巨集提供下列分類中的功能：  
   
-### 屬性集對應  
+### <a name="property-set-map-macros"></a>屬性會設定對應巨集  
   
 |||  
 |-|-|  
-|[BEGIN\_PROPERTY\_SET](../../data/oledb/begin-property-set.md)|標記屬性集合的開頭。|  
-|[BEGIN\_PROPERTY\_SET\_EX](../../data/oledb/begin-property-set-ex.md)|標記屬性集合的開頭。|  
-|[BEGIN\_PROPSET\_MAP](../../data/oledb/begin-propset-map.md)|標記必須在提供者範圍之外，可以隱藏或定義設定的屬性的開頭。|  
-|[CHAIN\_PROPERTY\_SET](../../data/oledb/chain-property-set.md)|鏈結屬性群組。|  
-|[END\_PROPERTY\_SET](../../data/oledb/end-property-set.md)|標記屬性集合的結尾。|  
-|[END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md)|標記屬性地圖的結尾。|  
-|[PROPERTY\_INFO\_ENTRY](../../data/oledb/property-info-entry.md)|在屬性上設定特定屬性設定為預設值。|  
-|[PROPERTY\_INFO\_ENTRY\_EX](../../data/oledb/property-info-entry-ex.md)|在屬性上設定特定屬性設定為您提供的值。  此外也可讓您設定旗標和選項。|  
-|[PROPERTY\_INFO\_ENTRY\_VALUE](../../data/oledb/property-info-entry-value.md)|在屬性上設定特定屬性設定為您提供的值。|  
+|[BEGIN_PROPERTY_SET](../../data/oledb/begin-property-set.md)|標記的屬性集的開頭。|  
+|[BEGIN_PROPERTY_SET_EX](../../data/oledb/begin-property-set-ex.md)|標記的屬性集的開頭。|  
+|[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)|屬性的開頭設定的標記可以隱藏或定義範圍以外的提供者。|  
+|[CHAIN_PROPERTY_SET](../../data/oledb/chain-property-set.md)|鏈結在一起，屬性群組。|  
+|[END_PROPERTY_SET](../../data/oledb/end-property-set.md)|標示屬性集的結尾。|  
+|[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)|結束標記的屬性集對應。|  
+|[PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md)|設定特定的屬性中將屬性設定為預設值。|  
+|[PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md)|設定特定的屬性中將屬性設定為您所提供的值。 也可讓您設定旗標和選項。|  
+|[PROPERTY_INFO_ENTRY_VALUE](../../data/oledb/property-info-entry-value.md)|設定特定的屬性中將屬性設定為您所提供的值。|  
   
-### 資料行對應巨集  
-  
-|||  
-|-|-|  
-|[BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md)|標籤提供者資料行對應項目的開頭。|  
-|[END\_PROVIDER\_COLUMN\_MAP](../../data/oledb/end-provider-column-map.md)|標記提供者對應項目的結尾。|  
-|[PROVIDER\_COLUMN\_ENTRY](../../data/oledb/provider-column-entry.md)|表示提供者支援的特定資料行。|  
-|[PROVIDER\_COLUMN\_ENTRY\_GN](../../data/oledb/provider-column-entry-gn.md)|表示提供者支援的特定資料行。  您可以指定資料行的大小、資料型別、精確度、小數點位數和結構描述資料列集 GUID。|  
-|[PROVIDER\_COLUMN\_ENTRY\_FIXED](../../data/oledb/provider-column-entry-fixed.md)|表示提供者支援的特定資料行。  您可以指定資料行的資料型別。|  
-|[PROVIDER\_COLUMN\_ENTRY\_LENGTH](../../data/oledb/provider-column-entry-length.md)|表示提供者支援的特定資料行。  您可以指定資料行的大小。|  
-|[PROVIDER\_COLUMN\_ENTRY\_STR](../../data/oledb/provider-column-entry-str.md)|表示提供者支援的特定資料行。  它假設資料行型別是字串。|  
-|[PROVIDER\_COLUMN\_ENTRY\_TYPE\_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|表示提供者支援的特定資料行。  與 PROVIDER\_COLUMN\_ENTRY\_LENGTH 類似，但是可讓您指定資料行的資料型別和大小。|  
-|[PROVIDER\_COLUMN\_ENTRY\_WSTR](../../data/oledb/provider-column-entry-wstr.md)|表示提供者支援的特定資料行。  它假設資料行是 Unicode 字串。|  
-  
-### 結構描述資料列集巨集  
+### <a name="column-map-macros"></a>資料行對應巨集  
   
 |||  
 |-|-|  
-|[BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)|標記結構描述對應的開頭。|  
-|[SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)|將GUID與類別的產生關聯。|  
-|[END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)|標記結構描述對應的結尾。|  
+|[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)|標記提供者的資料行對應項目的開頭。|  
+|[END_PROVIDER_COLUMN_MAP](../../data/oledb/end-provider-column-map.md)|提供者的資料行對應項目結束標記。|  
+|[PROVIDER_COLUMN_ENTRY](../../data/oledb/provider-column-entry.md)|表示提供者支援的特定資料行。|  
+|[PROVIDER_COLUMN_ENTRY_GN](../../data/oledb/provider-column-entry-gn.md)|表示提供者支援的特定資料行。 您可以指定資料行的大小、 資料類型、 有效位數、 小數位數和結構描述資料列集 GUID。|  
+|[PROVIDER_COLUMN_ENTRY_FIXED](../../data/oledb/provider-column-entry-fixed.md)|表示提供者支援的特定資料行。 您可以指定資料行資料類型。|  
+|[PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md)|表示提供者支援的特定資料行。 您可以指定資料行大小。|  
+|[PROVIDER_COLUMN_ENTRY_STR](../../data/oledb/provider-column-entry-str.md)|表示提供者支援的特定資料行。 它會假設資料行類型為字串。|  
+|[PROVIDER_COLUMN_ENTRY_TYPE_LENGTH](../../data/oledb/provider-column-entry-type-length.md)|表示提供者支援的特定資料行。 喜歡 PROVIDER_COLUMN_ENTRY_LENGTH，但也可讓您指定資料行的資料類型，以及大小。|  
+|[PROVIDER_COLUMN_ENTRY_WSTR](../../data/oledb/provider-column-entry-wstr.md)|表示提供者支援的特定資料行。 它會假設資料行類型是 Unicode 字元字串。|  
   
-## 請參閱  
+### <a name="schema-rowset-macros"></a>結構描述資料列集巨集  
+  
+|||  
+|-|-|  
+|[BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)|標記結構描述對應的開頭。|  
+|[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|關聯類別的 GUID。|  
+|[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|結束標記的結構描述對應。|  
+  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)   
- [OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)
+ [OLE DB 提供者範本參考](../../data/oledb/ole-db-provider-templates-reference.md)

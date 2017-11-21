@@ -1,76 +1,77 @@
 ---
-title: "Creating a Custom Brush (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colors [C++], brush"
-  - "brushes, colors"
-  - "brushes, creating custom"
-  - "images [C++], creating custom brushes"
-  - "graphics [C++], custom brushes"
-  - "custom brushes"
+title: "建立自訂筆刷 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- colors [C++], brush
+- brushes, colors
+- brushes, creating custom
+- images [C++], creating custom brushes
+- graphics [C++], custom brushes
+- custom brushes
 ms.assetid: 750881aa-6f47-4de9-8ca6-a7a12afc6383
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bbef35e0cfb19cf7bd705e7cf3ba09dabe8092ec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Custom Brush (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="creating-a-custom-brush-image-editor-for-icons"></a>建立自訂筆刷 (圖示影像編輯器)
+自訂筆刷為矩形拾取，並使用類似影像編輯器的備妥的筆刷的映像的一部分。 您可以在選取項目執行的所有作業，您可以都執行以及自訂筆刷。  
+  
+### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>若要從映像的一部分來建立自訂筆刷  
+  
+1.  [選取的映像的一部分](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)您想要使用筆刷。  
+  
+2.  持有**SHIFT**鍵、 按一下 選取範圍中並拖曳影像。  
+  
+     \-或-  
+  
+3.  從**映像**功能表上，選擇**將選取範圍當做筆刷**。  
+  
+     您的選擇會成為自訂筆刷分散映像選取項目中的色彩。 拖曳路徑上也會保留選取項目的複本。 您拖曳的放慢，進行多個複本。  
+  
+     **請注意**按一下**選取做為筆刷**沒有先選取影像的部分會使用整個映像做為筆刷。 使用自訂筆刷的結果也將取決於您是否選取了[不透明或透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
+  
+ 自訂筆刷符合目前的背景色彩的像素通常是透明： 它們不會覆蓋現有的映像。 您可以變更此行為，讓背景色彩的像素繪製在現有的映像。  
+  
+ 您可以使用像是戳記或樣板的自訂筆刷建立各種不同的特殊效果。  
+  
+#### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>若要以背景色彩繪製自訂筆刷形狀  
+  
+1.  [選取的不透明或透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
+  
+2.  [設定背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)要繪製的色彩。  
+  
+3.  將您想要繪製自訂筆刷。  
+  
+4.  按一下滑鼠右鍵。 任何自訂筆刷的不透明區域的背景色彩繪製。  
+  
+#### <a name="to-double-or-halve-the-custom-brush-size"></a>若要按兩下一半自訂筆刷的大小  
+  
+1.  按**加號**(**+**) 筆刷的大小增加兩倍索引鍵或**減號**(**-**) 減半的索引鍵.  
+  
+#### <a name="to-cancel-the-custom-brush"></a>若要取消自訂筆刷  
+  
+1.  按**ESC**或選擇另一個繪圖工具。  
+  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+  
+### <a name="requirements"></a>需求  
+ 無  
+  
+## <a name="see-also"></a>另請參閱  
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
 
-自訂筆刷是您揀選的影像矩形部分，用法如同其中一個影像編輯器備妥的筆刷。  您對選取範圍執行的所有作業也都可對自訂筆刷執行。  
-  
-### 若要從影像的一部分建立自訂筆刷  
-  
-1.  [選取影像的一部分](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md) \(要用於筆刷的部分\)。  
-  
-2.  按住 **SHIFT** 鍵、在選取範圍內按一下，然後將它拖曳穿過影像。  
-  
-     \-或\-  
-  
-3.  自 \[影像\] 功能表選擇 \[將選取範圍當做筆刷使用\]。  
-  
-     您的選取範圍即成為自訂筆刷，將色彩散佈於影像的選取範圍內。  選取範圍的複本會沿著拖曳路徑留存。  拖曳的速度越慢，製作的複本越多。  
-  
-     **注意** 若沒有先選取影像的一部分，就按一下 \[將選取範圍當做筆刷使用\] 選項，將會使用整個影像做為筆刷。  使用自訂筆刷的結果也將視您是否選取了[不透明或透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)而定。  
-  
- 自訂筆刷中符合目前背景色彩的像素通常是透明的：它們不會覆蓋現有的影像。  您可變更這項行為，讓背景色彩像素蓋過現有的影像。  
-  
- 您可使用如同戳記 \(Stamp\) 或模板 \(Stencil\) 般使用自訂筆刷來建立各式各樣的特殊效果。  
-  
-#### 若要以背景色彩繪製自訂筆刷形狀  
-  
-1.  [選取不透明或透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
-  
-2.  [設定背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)為您想繪製的色彩。  
-  
-3.  將自訂筆刷置於要加以繪製的位置。  
-  
-4.  按一下滑鼠右鍵。  自訂筆刷的任何不透明區域都會以背景色彩繪製。  
-  
-#### 若要加倍或減半自訂筆刷大小  
-  
-1.  按加號 \(**\+**\) 鍵來加倍筆刷大小，或按減號 \(**–**\) 鍵來減半大小。  
-  
-#### 若要取消自訂筆刷  
-  
-1.  按 **ESC** 或選擇另一種繪圖工具。  
-  
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
-  
-### 需求  
- None  
-  
-## 請參閱  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)

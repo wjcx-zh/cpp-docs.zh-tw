@@ -1,42 +1,39 @@
 ---
-title: "hash_multimap::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成員 [STL/CLR]"
+title: "hash_multimap::to_array (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: a7fe11ba-5a0b-4152-b24d-8b142450863c
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4be208ba54626e4ad48509163a131c40c157002a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製受控制序列到新陣列。  
+# <a name="hashmultimaptoarray-stlclr"></a>hash_multimap::to_array (STL/CLR)
+將受控制的序列複製到新的陣列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## 備註  
- 成員函式會傳回包含受控制序列的陣列。  您會用它來取得控制序列的陣列形式的複本。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列的陣列。 您可以使用它來取得陣列的形式受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multimap_to_array.cpp   
@@ -68,12 +65,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\] \[d 4\]**  
- **\[a 1\] \[b 2\] \[c 3\]**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)

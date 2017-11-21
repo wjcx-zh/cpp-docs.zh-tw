@@ -1,58 +1,57 @@
 ---
-title: "IRowsetNotifyImpl 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetNotifyImpl"
-  - "ATL::IRowsetNotifyImpl"
-  - "IRowsetNotifyImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IRowsetNotifyImpl 類別"
+title: "IRowsetNotifyImpl 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetNotifyImpl
+- ATL::IRowsetNotifyImpl
+- IRowsetNotifyImpl
+dev_langs: C++
+helpviewer_keywords: IRowsetNotifyImpl class
 ms.assetid: fbfd0cb2-38ff-4b42-899a-8de902f834b8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7473e63c7ca67dff200d5cf96f1774ca9a2d6817
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetNotifyImpl 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-實作和暫存器在消費者 \(也稱為接收」\) [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) ，以便處理通知。  
+# <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl 類別
+實作並註冊[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)上取用者 （也稱為 「 接收 」），好讓它可以處理通知。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify  
 ```  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[OnFieldChange](../../data/oledb/irowsetnotifyimpl-onfieldchange.md)|告知消費者，資料行值的任何變更。|  
-|[OnRowChange](../../data/oledb/irowsetnotifyimpl-onrowchange.md)|告知消費者，資料列的第一個變更或影響整個資料列的任何變更。|  
-|[OnRowsetChange](../../data/oledb/irowsetnotifyimpl-onrowsetchange.md)|告知消費者，影響整個資料列集的任何變更。|  
+|[OnFieldChange](../../data/oledb/irowsetnotifyimpl-onfieldchange.md)|通知的取用者的資料行值的任何變更。|  
+|[OnRowChange](../../data/oledb/irowsetnotifyimpl-onrowchange.md)|告知消費者的資料列的第一個變更或是任何會影響整個資料列的變更。|  
+|[OnRowsetChange](../../data/oledb/irowsetnotifyimpl-onrowsetchange.md)|通知任何變更會影響整個資料列集取用的者。|  
   
-## 備註  
- 如需實作連接點的 [接收通知](../../data/oledb/receiving-notifications.md) 連接在消費者。  
+## <a name="remarks"></a>備註  
+ 請參閱[接收通知](../../data/oledb/receiving-notifications.md)有關上取用者實作連接點介面。  
   
- `IRowsetNotifyImpl` 為 `IRowsetNotify`的空的實作，以 `IRowsetNotify` 方法的 [OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx)、 [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)和 [OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx)空函式。  如果您從這個類別繼承，當您實作 `IRowsetNotify` 介面時，您可以實作需要的方法。  您也必須為其他方法提供空的實作。  
+ `IRowsetNotifyImpl`提供的虛擬實作`IRowsetNotify`，空函式與`IRowsetNotify`方法[OnFieldChange](https://msdn.microsoft.com/en-us/library/ms715961.aspx)， [OnRowChange](https://msdn.microsoft.com/en-us/library/ms722694.aspx)，和[OnRowsetChange](https://msdn.microsoft.com/en-us/library/ms722669.aspx). 如果您繼承自這個類別實作時`IRowsetNotify`介面，您可以實作您所需要的方法。 您也需要自行提供空其他方法的實作。  
   
-## 需求  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)   

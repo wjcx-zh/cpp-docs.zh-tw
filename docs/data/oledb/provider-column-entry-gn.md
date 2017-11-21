@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_GN | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_GN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_GN 巨集"
+title: "PROVIDER_COLUMN_ENTRY_GN |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_GN
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_GN macro
 ms.assetid: be77ba85-634c-4e28-832f-d2fa40413254
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 96c3258da000bfe9da63981b27f2bb22a9dc5a6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_GN
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="providercolumnentrygn"></a>PROVIDER_COLUMN_ENTRY_GN
 表示提供者支援的特定資料行。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,38 +33,38 @@ name
 , ordinal, flags, colSize, dbtype, precision, scale, guid )  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *name*  
- \[資料行名稱。  
+ [in]資料行名稱。  
   
  `ordinal`  
- \[的資料列數目。  除非資料行是書籤資料行，不能為 0。  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
   
  `flags`  
- \[\] 指定資料的方式傳回。  請參閱在 [DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)的 `dwFlags` 描述。  
+ [in]指定如何傳回資料。 請參閱`dwFlags`描述[DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
   
  *colSize*  
- \[資料行大小。  
+ [in]資料行大小。  
   
  `dbtype`  
- \[表示值的資料型別。  請參閱 [DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中的 **wType** 描述。  
+ [in]表示值的資料類型。 請參閱**wType**描述[DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
   
  *precision*  
- \[時表示精確度使用取得資料，則為 `DBTYPE_NUMERIC`*dbType* 或 **DBTYPE\_DECIMAL**。  請參閱 [DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中的 **bPrecision** 描述。  
+ [in]指出如果取得資料時所要使用的有效位數*dbType*是`DBTYPE_NUMERIC`或**DBTYPE_DECIMAL**。 請參閱**bPrecision**描述[DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
   
  `scale`  
- \[時表示縮放使用取得資料，則為 `DBTYPE_NUMERIC` dbType 或 **DBTYPE\_DECIMAL**。  請參閱 [DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中的 **bScale** 描述。  
+ [in]指出如果 dbType 是取得資料時所要使用的小數位`DBTYPE_NUMERIC`或**DBTYPE_DECIMAL**。 請參閱**bScale**描述[DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
   
  `guid`  
- 結構描述資料列集 GUID。  指定結構描述資料列集和它們的 GUID 清單。請參閱《 *OLE DB 程式設計人員參考》的*[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) 。  
+ 結構描述資料列集 GUID。 請參閱[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)中*OLE DB 程式設計人員參考*取得一份結構描述資料列集和其 Guid。  
   
-## 備註  
- 可讓您指定資料行的大小、資料型別、精確度、小數點位數和結構描述資料列集 GUID。  
+## <a name="remarks"></a>備註  
+ 可讓您指定資料行的大小、 資料類型、 有效位數、 小數位數和結構描述資料列集 GUID。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   

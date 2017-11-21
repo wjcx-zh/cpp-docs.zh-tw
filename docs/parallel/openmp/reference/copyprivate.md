@@ -1,49 +1,47 @@
 ---
-title: "copyprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "copyprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copyprivate OpenMP clause"
+title: "copyprivate |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: copyprivate
+dev_langs: C++
+helpviewer_keywords: copyprivate OpenMP clause
 ms.assetid: 02c0209d-abe8-4797-8365-a82b53c3f15d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45b9e6ab273f80c2f19516933e6cac5bf9f1a739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# copyprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定一或多個變數應該分擔所有執行緒。  
+# <a name="copyprivate"></a>copyprivate
+指定一個或多個變數，應該所有執行緒之間共用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 copyprivate(var)  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
  `var`  
- 若要共用的一或多個變數。  如果指定一個以上的變數，請以逗號分隔變數名稱。  
+ 若要共用的一或多個變數。 如果指定了多個變數，請以逗號分隔變數名稱。  
   
-## 備註  
- `copyprivate`適用於[single](../../../parallel/openmp/reference/single.md)指示詞。  
+## <a name="remarks"></a>備註  
+ `copyprivate`適用於[單一](../../../parallel/openmp/reference/single.md)指示詞。  
   
- 如需詳細資訊，請參閱 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。  
+ 如需詳細資訊，請參閱[2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_copyprivate.cpp  
@@ -92,19 +90,22 @@ int main() {
 }  
 ```  
   
-  **從單一執行緒的呼叫 CopyPrivate**  
-**值 \= 1.001000，執行緒 \= 0**  
-**值 \= 1.002000，執行緒 \= 0**  
-**值 \= 1.003000，執行緒 \= 0**  
-**值 \= 1.004000，執行緒 \= 0**  
-**從在平行區域呼叫 CopyPrivate**  
-**值 \= 1.005000，執行緒 \= 0**  
-**值 \= 1.005000，執行緒 \= 1**  
-**值 \= 1.006000，執行緒 \= 0**  
-**值 \= 1.006000，執行緒 \= 1**  
-**值 \= 1.007000，執行緒 \= 0**  
-**值 \= 1.007000，執行緒 \= 1**  
-**值 \= 1.008000，執行緒 \= 0**  
-**值 \= 1.008000，執行緒 \= 1**   
-## 請參閱  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+call CopyPrivate from a single thread  
+Value = 1.001000, thread = 0  
+Value = 1.002000, thread = 0  
+Value = 1.003000, thread = 0  
+Value = 1.004000, thread = 0  
+call CopyPrivate from a parallel region  
+Value = 1.005000, thread = 0  
+Value = 1.005000, thread = 1  
+Value = 1.006000, thread = 0  
+Value = 1.006000, thread = 1  
+Value = 1.007000, thread = 0  
+Value = 1.007000, thread = 1  
+Value = 1.008000, thread = 0  
+Value = 1.008000, thread = 1  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

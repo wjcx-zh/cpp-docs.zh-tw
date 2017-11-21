@@ -1,44 +1,43 @@
 ---
-title: "延遲載入 DLL 的連結器支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 的延遲載入, 連結器支援"
+title: "延遲載入 Dll 的連結器支援 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 延遲載入 DLL 的連結器支援
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 連結器現在能夠支援延遲載入 DLL，  這讓您不需再使用 [!INCLUDE[winsdkshort](../../atl/reference/includes/winsdkshort_md.md)] 的函式 **LoadLibrary** 和 **GetProcAddress** 來實作 DLL 的延遲載入。  
+# <a name="linker-support-for-delay-loaded-dlls"></a>延遲載入 DLL 的連結器支援
+Visual c + + 連結器現在支援 Dll 的延遲的載入。 這讓您使用 Windows SDK 函式需要**LoadLibrary**和**GetProcAddress**來實作延遲載入 DLL。  
   
- 在 Visual C\+\+ 6.0 以前，要於執行階段載入 DLL 的唯一方法就是使用 **LoadLibrary** 和 **GetProcAddress**；在載入使用 DLL 的可執行檔或 DLL 時，作業系統就會載入該 DLL。  
+ 在 Visual c + + 6.0 之前, 在執行階段載入 DLL 的唯一方式是使用**LoadLibrary**和**GetProcAddress**; 系統會載入 DLL 時可執行檔或 DLL 使用載入它。  
   
- 從 Visual C\+\+ 6.0 開始，靜態連結 DLL 時，連結器會提供延遲載入 DLL 的選項，直到程式呼叫該 DLL 中的函式為止。  
+ 從 Visual c + + 6.0 中，以靜態方式連結的 DLL 時，連結器會提供選項，以延遲載入 DLL，直到程式該 DLL 中呼叫的函式。  
   
- 應用程式可以使用 [\/DELAYLOAD \(延遲載入匯入\)](../../build/reference/delayload-delay-load-import.md) 的連結器選項和 Helper 函式 \(Visual C\+\+ 所提供的預設實作環境\) 延遲載入 DLL。  Helper 函式將在執行階段時呼叫 **LoadLibrary** 和 **GetProcAddress** 來載入 DLL。  
+ 應用程式可能會延遲載入 DLL 使用[/DELAYLOAD （延遲載入匯入）](../../build/reference/delayload-delay-load-import.md) helper 函式 （Visual c + + 所提供的預設實作） 使用的連結器選項。 Helper 函式會藉由呼叫在執行階段中載入的 DLL **LoadLibrary**和**GetProcAddress**您。  
   
- 下列情形時，您應該考慮延遲載入 DLL：  
+ 您應該考慮延遲載入 DLL:  
   
--   程式可能不會呼叫在 DLL 中的函式  
+-   您的程式可能不會在 DLL 中呼叫函式。  
   
--   可能要等到程式執行的後期才會呼叫 DLL 中的函式  
+-   在 DLL 中的函式不可以在程式執行的呼叫。  
   
- 建置 .EXE 或 .DLL 專案時，可以指定延遲載入 DLL。  延遲載入一或多個 DLL 的 .DLL 專案不應該自己呼叫 DllMain 中的延遲載入進入點 \(Entry Point\)。  
+ 可以在組建中的其中一個指定 DLL 的延遲的載入。EXE 或。DLL 的專案。 A。DLL 專案的延遲載入的一個或多個 Dll 不應該本身呼叫的延遲載入的進入點位在 Dllmain 中。  
   
- 下列主題說明延遲載入 DLL：  
+ 下列主題將描述延遲載入 Dll:  
   
 -   [指定要延遲載入的 DLL](../../build/reference/specifying-dlls-to-delay-load.md)  
   
@@ -48,16 +47,16 @@ Visual C\+\+ 連結器現在能夠支援延遲載入 DLL，  這讓您不需再�
   
 -   [繫結匯入](../../build/reference/binding-imports.md)  
   
--   [錯誤處理和告知](../../build/reference/error-handling-and-notification.md)  
+-   [錯誤處理和通知](../../build/reference/error-handling-and-notification.md)  
   
 -   [傾印延遲載入的匯入](../../build/reference/dumping-delay-loaded-imports.md)  
   
 -   [延遲載入 DLL 的條件約束](../../build/reference/constraints-of-delay-loading-dlls.md)  
   
--   [了解 Helper 函式](http://msdn.microsoft.com/zh-tw/6279c12c-d908-4967-b0b3-cabfc3e91d3d)  
+-   [了解協助協助程式函式](understanding-the-helper-function.md)  
   
--   [開發您自己的 Helper 函式](../../build/reference/developing-your-own-helper-function.md)  
+-   [開發您自己的協助程式函式](../../build/reference/developing-your-own-helper-function.md)  
   
-## 請參閱  
- [Visual C\+\+ 中的 DLL](../../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>另請參閱  
+ [Visual c + + 中的 Dll](../../build/dlls-in-visual-cpp.md)   
  [連結](../../build/reference/linking.md)

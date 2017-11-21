@@ -1,35 +1,34 @@
 ---
-title: "如何：監視檔案系統變更 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "事件 [C++], 監控"
-  - "範例 [C++], 監視檔案系統變更"
-  - "檔案系統事件 [C++]"
-  - "FileSystemWatcher 類別, 範例"
-  - "監視檔案系統事件"
+title: "如何： 監視檔案系統變更 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- monitoring file system events
+- FileSystemWatcher class, examples
+- examples [C++], monitoring file system changes
+- events [C++], monitoring
+- file system events [C++]
 ms.assetid: 207a3069-e63d-417e-8b56-00ab44f29c52
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b0b75ea559cac35ef764818d3a99162a72cfc62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：監視檔案系統變更 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會使用 <xref:System.IO.FileSystemWatcher> 來註冊對應至要建立、修改、刪除或重新命名之檔案的事件。  您可以使用 <xref:System.IO.FileSystemWatcher> 類別在偵測到變更時引發事件，而不用定期輪詢目錄，查看是否檔案是否變更。  
+# <a name="how-to-monitor-file-system-changes-ccli"></a>如何：監視檔案系統變更 (C++/CLI)
+下列程式碼範例使用<xref:System.IO.FileSystemWatcher>以註冊事件對應至建立、 變更、 刪除或重新命名的檔案。 而不是定期輪詢變更檔案的目錄，您可以使用<xref:System.IO.FileSystemWatcher>類別引發事件時偵測到變更。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // monitor_fs.cpp  
@@ -91,7 +90,7 @@ int main()
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [System.IO 命名空間](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
- [檔案和資料流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ [檔案和資料流 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

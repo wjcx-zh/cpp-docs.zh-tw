@@ -1,34 +1,33 @@
 ---
-title: "SafeIntException::SafeIntException | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeIntException"
-  - "SafeIntException.SafeIntException"
-  - "SafeIntException::SafeIntException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeIntException, 建構函式"
+title: "Safeintexception:: Safeintexception |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- SafeIntException
+- SafeIntException.SafeIntException
+- SafeIntException::SafeIntException
+dev_langs: C++
+helpviewer_keywords: SafeIntException, constructor
 ms.assetid: 8e5a0c24-a56b-4c80-9ee8-876604b1e7dc
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: d9a1e2666aef593cde385f121065397226bad9d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# SafeIntException::SafeIntException
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeintexceptionsafeintexception"></a>SafeIntException::SafeIntException
 建立 `SafeIntException` 物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 SafeIntException();  
@@ -38,12 +37,12 @@ SafeIntException(
 );  
 ```  
   
-#### 參數  
- \[in\] `code`  
- 描述錯誤的列舉資料值。  
+#### <a name="parameters"></a>參數  
+ [in] `code`  
+ 描述發生之錯誤的列舉的資料值。  
   
-## 備註  
- `code` 的可能值在 Safeint.h 檔案中定義。  為了方便起見，可能的值也會列出此。  
+## <a name="remarks"></a>備註  
+ 可能值`code`Safeint.h 檔案中所定義。 為了方便起見，可能的值也會列出以下。  
   
 -   `SafeIntNoError`  
   
@@ -51,12 +50,12 @@ SafeIntException(
   
 -   `SafeIntDivideByZero`  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** safeint.h  
   
- **命名空間:** msl::utilities  
+ **命名空間：** msl::utilities  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeIntException 類別](../windows/safeintexception-class.md)   
  [SafeInt 類別](../windows/safeint-class.md)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - regex/std::regex_error
 - regex/std::regex_error::code
-dev_langs:
-- C++
-helpviewer_keywords:
-- regex_error class
+dev_langs: C++
+helpviewer_keywords: regex_error class
 ms.assetid: 3333a1a3-ca6f-4612-84b2-1b4c7e3db5a4
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 462247056f916178388ec233d7d0b9d3774bb11f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: a0336bce168edc8b4c50639b1e3ace4f82e7c971
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="regexerror-class"></a>regex_error 類別
 回報錯誤的 basic_regex 物件。  
@@ -159,4 +155,3 @@ regex error: unbalanced parentheses
 [regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 類別](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
-

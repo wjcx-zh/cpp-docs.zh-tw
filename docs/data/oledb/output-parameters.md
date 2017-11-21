@@ -1,40 +1,40 @@
 ---
-title: "輸出參數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, 預存程序"
-  - "程序呼叫"
-  - "程序呼叫, 預存程序"
-  - "預存程序, 呼叫"
-  - "預存程序, 參數"
+title: "輸出參數 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, calling
+- stored procedures, parameters
+- procedure calls
+- procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d1f1a4c84c4567b325bb19e3696170f7960b46b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 輸出參數
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫一個預存程序類似於叫用一個 SQL 命令。  兩者的主要差異是，預存程序會使用輸出參數 \(或 "outparameters"\) 和傳回值。  
+# <a name="output-parameters"></a>輸出參數
+呼叫預存程序是類似於叫用 SQL 命令。 主要差異在於預存程序使用輸出參數 （或 「 outparameters"） 和傳回值。  
   
- 在下列預存程序中，第一個 '?' 是傳回值 \(phone\)，第二個 '?' 輸入參數 \(name\)：  
+ 下列預存程序，第一個 '？ '是傳回的值 (phone)，而第二個'？ ' 是輸入的參數 （名稱）：  
   
 ```  
 DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
 ```  
   
- 您可以在參數對應中指定輸入和輸出參數：  
+ 您可以在參數對應中指定 in 和 out 參數：  
   
 ```  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
@@ -45,12 +45,12 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
- 您的應用程式必須處理由預存程序傳回的輸出。  不同的 OLE DB 提供者在結果處理時期，會在不同時間傳回輸出參數和傳回值。  例如，Microsoft OLE DB Provider for SQL Server \(SQLOLEDB\) 會一直到消費者擷取或取消預存程序傳回的結果集時，才提供輸出參數和傳回碼。  輸出會由來自伺服器的最後一個 TDS 封包傳回。  
+ 您的應用程式必須處理從預存程序傳回的輸出。 不同的 OLE DB 提供者傳回輸出參數和傳回值在結果處理期間的不同時間。 比方說，Microsoft OLE DB provider for SQL Server (SQLOLEDB) 不會不提供輸出參數和傳回碼之前，取用者已經擷取或取消預存程序所傳回的結果集之後。 從伺服器傳回的最後一個 TDS 封包的輸出。  
   
-## 資料列數  
- 如果您使用 OLE DB 消費者樣板執行含有 outparameters 的預存程序，就要等到關閉該資料列集後才設定資料列數。  
+## <a name="row-count"></a>資料列計數  
+ 如果您要執行的預存程序具有 outparameters 使用 OLE DB 消費者樣板，直到您關閉資料列集未設定的資料列計數。  
   
- 例如，請參考一個具資料列集和輸出參數的預存程序：  
+ 例如，請考慮使用資料列集和具預存程序：  
   
 ```  
 create procedure sp_test  
@@ -61,7 +61,7 @@ as
 return 0  
 ```  
   
- @\_rowcount outparameter 會報告實際上有多少資料列從測試資料表傳回。  然而，這個預存程序將資料列的數目限制在最多 50 個。  例如，如果測試中有 100 個資料列，資料列數便會是 50 \(因為這段程式碼只會擷取前面的 50 個資料列\)。  如果資料表中只有 30 個資料列，則資料列數會是 30。  您必須在擷取資料表的值之前，呼叫 **Close** 或 **CloseAll** 來填入 outparameter。  
+ @_rowcount具報告測試資料表實際上未傳回資料列數目。 不過，此預存程序最多 50 個資料列數目限制。 例如，如果測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 資料列）。 如果資料表中只是有 30 個資料列，資料列計數就是 30。 您必須呼叫**關閉**或**CloseAll**填入具之前擷取其值。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用預存程序](../../data/oledb/using-stored-procedures.md)

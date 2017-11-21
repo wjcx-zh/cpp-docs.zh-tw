@@ -1,35 +1,34 @@
 ---
-title: "auto_handle::reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.reset"
-  - "msclr::auto_handle::reset"
-  - "auto_handle::reset"
-  - "msclr.auto_handle.reset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::reset"
+title: "auto_handle::reset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.reset
+- msclr::auto_handle::reset
+- auto_handle::reset
+- msclr.auto_handle.reset
+dev_langs: C++
+helpviewer_keywords: auto_handle::reset
 ms.assetid: 32dc3a83-80fd-45c9-8f79-8c4096c30f57
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d40f2ad3192c89856c7cf5c485eb040f525cfd27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::reset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-終結目前擁有的物件並選擇性的佔用一個新的物件。  
+# <a name="autohandlereset"></a>auto_handle::reset
+終結目前擁有的物件，並選擇性地採取擁有新的物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void reset(  
@@ -38,11 +37,11 @@ void reset(
 void reset();  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_new_ptr`  
- \(選擇性\) 新的物件。  
+ （選擇性）新的物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_handle_reset.cpp  
@@ -82,18 +81,21 @@ int main()
 }  
 ```  
   
-  **ClassA constructor: first**  
-**Hello from first A\!**  
-**ClassA constructor: second**  
-**ClassA destructor: first**  
-**Hello from second A\!**  
-**ClassA destructor: second**  
-**done**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_handle.h\>  
+```Output  
+ClassA constructor: first  
+Hello from first A!  
+ClassA constructor: second  
+ClassA destructor: first  
+Hello from second A!  
+ClassA destructor: second  
+done  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_handle.h >  
   
-## 請參閱  
- [auto\_handle 成員](../dotnet/auto-handle-members.md)   
- [auto\_handle::release](../dotnet/auto-handle-release.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_handle 成員](../dotnet/auto-handle-members.md)   
+ [auto_handle::release](../dotnet/auto-handle-release.md)

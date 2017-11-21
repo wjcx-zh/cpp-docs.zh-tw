@@ -1,53 +1,52 @@
 ---
-title: "最佳化 Pragma 和關鍵字 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "關鍵字 [C++], 針對最佳化"
-  - "最佳化, 關鍵字和 Pragma"
-  - "Pragma, 針對最佳化"
+title: "最佳化 Pragma 和關鍵字 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keywords [C++], for optimization
+- pragmas, for optimization
+- optimization, keywords and pragmas
 ms.assetid: 66a94842-ef10-490a-88b3-51d1a568ead5
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39dbce247116b434f9083f19ce23607d2212d2c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 最佳化 Pragma 和關鍵字
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在 C 或 C\+\+ 程式碼中使用下列關鍵字和 Pragma 能夠影響最佳化的結果：  
+# <a name="optimization-pragmas-and-keywords"></a>最佳化 Pragma 和關鍵字
+關鍵字和您在 C 或 c + + 程式碼中使用的 pragma 會影響最佳化：  
   
--   [\_\_asm](../../assembler/inline/asm.md)  
+-   [__asm](../../assembler/inline/asm.md)  
   
--   [\_\_assume](../../intrinsics/assume.md)  
+-   [__assume](../../intrinsics/assume.md)  
   
--   [inline、\_inline，或 \_\_forceinline](../../misc/inline-inline-forceinline.md)  
+-   [內嵌，_inline，或\__forceinline](../../cpp/inline-functions-cpp.md)  
   
--   [\#pragma auto\_inline](../../preprocessor/auto-inline.md)  
+-   [#pragma auto_inline](../../preprocessor/auto-inline.md)  
   
--   [\#pragma check\_stack](../../preprocessor/check-stack.md)  
+-   [#pragma check_stack](../../preprocessor/check-stack.md)  
   
--   [\#pragma function](../../preprocessor/function-c-cpp.md)  
+-   [#pragma 函式](../../preprocessor/function-c-cpp.md)  
   
--   [\#pragma inline\_depth](../../preprocessor/inline-depth.md)  
+-   [#pragma inline_depth](../../preprocessor/inline-depth.md)  
   
--   [\#pragma inline\_recursion](../../preprocessor/inline-recursion.md)  
+-   [#pragma inline_recursion](../../preprocessor/inline-recursion.md)  
   
--   [\#pragma intrinsic](../../preprocessor/intrinsic.md)  
+-   [#pragma 內建函式](../../preprocessor/intrinsic.md)  
   
--   [\#pragma optimize](../../preprocessor/optimize.md)  
+-   [#pragma 最佳化](../../preprocessor/optimize.md)  
   
--   [register 關鍵字](http://msdn.microsoft.com/zh-tw/5b66905a-2f7f-4918-bb55-5e66d4bc50f9)  
+-   [register 關鍵字](../../cpp/storage-classes-cpp.md#register)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [最佳化程式碼](../../build/reference/optimizing-your-code.md)

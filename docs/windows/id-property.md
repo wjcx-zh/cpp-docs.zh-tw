@@ -1,33 +1,31 @@
 ---
-title: "ID Property | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ID property"
+title: "ID 屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: ID property
 ms.assetid: 756ea7ad-d39b-490d-a2ba-163c434577f0
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2e26a36d313e2ddcc0e9a6bd81d5369fb77cd382
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ID Property
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-ID 屬性會參考程式碼中的每個快速鍵 \(Accelerator\) 對應表項目。  這是程式在使用者按下快速鍵或組合鍵時，所收到的命令值。  若要讓快速鍵和功能表項目一樣，請統一它們的 ID \(只要快速鍵對應表的 ID 和功能表資源的 ID 一樣即可\)。  
+# <a name="id-property"></a>ID 屬性
+ID 屬性中參考程式碼中的每個快速鍵對應表項目。 這是程式在使用者按快速鍵或按鍵組合時，所收到的命令值。 若要讓快速鍵與功能表項目相同，讓它們的 Id 相同 （只要快速鍵對應表的識別碼是功能表資源的識別碼相同）。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>另請參閱  
+ [設定快速鍵屬性](../windows/setting-accelerator-properties.md)   
+ [快速鍵編輯器](../windows/accelerator-editor.md)

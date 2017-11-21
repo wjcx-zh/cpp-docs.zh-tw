@@ -1,40 +1,38 @@
 ---
-title: "RoInitializeWrapper::HRESULT() 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::HRESULT"
-dev_langs: 
-  - "C++"
+title: "RoInitializeWrapper::HRESULT() 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::HRESULT
+dev_langs: C++
 ms.assetid: 1d23c9a7-0479-4d5d-931d-2a199879f2b3
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8b8578cc9180c525825ff4dfe641cf118febab84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# RoInitializeWrapper::HRESULT() 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="roinitializewrapperhresult-operator"></a>RoInitializeWrapper::HRESULT() 運算子
 擷取上一個 RoInitializeWrapper 建構函式所產生的 HRESULT 值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 operator HRESULT()  
 ```  
   
-## 需求  
- **標頭：**corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [HandleT 類別](../windows/handlet-class.md)

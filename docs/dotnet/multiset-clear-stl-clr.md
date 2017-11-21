@@ -1,41 +1,39 @@
 ---
-title: "multiset::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 成員 [STL/CLR]"
+title: "multiset:: clear (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 63c21716-fa08-47b9-b457-0b76052c5079
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9879169973987be35b46b363cf903d407d4fea17
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetclear-stlclr"></a>multiset::clear (STL/CLR)
 移除所有項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void clear();  
 ```  
   
-## 備註  
- 成員函式有效地呼叫 [multiset::erase](../dotnet/multiset-erase-stl-clr.md)`(` [multiset::begin](../dotnet/multiset-begin-stl-clr.md)`(),` [multiset::end](../dotnet/multiset-end-stl-clr.md)`())`。  您會用它來確保受控制序列是空的。  
+## <a name="remarks"></a>備註  
+ 成員函式可有效地呼叫[multiset:: erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md) `(` [multiset:: begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md) `(),` [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`())`. 您可以使用它來確定受控制的序列是空白。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multiset_clear.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 0**  
- **a b**  
-**size\(\) \= 0**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::erase](../dotnet/multiset-erase-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "Move 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::Move"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Move 函式"
+title: "Move 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::Move
+dev_langs: C++
+helpviewer_keywords: Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a894ca11eb6b5703c116d3fa3a36a45bb46d4ed3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Move 函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="move-function"></a>Move 函式
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<  
@@ -37,25 +35,25 @@ inline typename RemoveReference<T>::Type&& Move(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
  引數型別。  
   
  `arg`  
- 要移動的引數  
+ 要移動的引數。  
   
-## 傳回值  
- 如果存在，會移除參考或右值參考特性之後的參數 `arg` 。  
+## <a name="return-value"></a>傳回值  
+ 參數`arg`之後參考或右值參考的特性，如果有的話，已移除。  
   
-## 備註  
- 將指定的引數從某個位置移至另一個。  
+## <a name="remarks"></a>備註  
+ 將指定的引數從一個位置移到另一個。  
   
- 如需詳細資訊，請參閱 [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)的 **移動語意** 部分。  
+ 如需詳細資訊，請參閱**移動語意**區段[右值參考宣告子： & （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
-## 需求  
- **標題:** internal.h  
+## <a name="requirements"></a>需求  
+ **標頭：** internal.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

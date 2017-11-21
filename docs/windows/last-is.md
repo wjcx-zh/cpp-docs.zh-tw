@@ -1,32 +1,30 @@
 ---
-title: "last_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.last_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "last_is attribute"
+title: "last_is |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.last_is
+dev_langs: C++
+helpviewer_keywords: last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 54d9aec2595f3b04483ea42739993e5e059920e0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# last_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lastis"></a>last_is
 指定要傳送的最後一個陣列元素的索引。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,35 +33,34 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 參數  
- *expression*  
- 一或多個 c 語言的運算式。  允許空白的引數的介面槽。  
+#### <a name="parameters"></a>參數  
+ *運算式*  
+ 一或多個 C 語言的運算式。 允許空白的引數位置。  
   
-## 備註  
- **Last\_is** C\+\+ 屬性具有相同的功能，為 [last\_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Last_is** c + + 屬性具有相同的功能[last_is](http://msdn.microsoft.com/library/windows/desktop/aa367066) MIDL 屬性。  
   
-## 範例  
- 請參閱 [first\_is](../windows/first-is.md) 如需如何指定陣列中的一個區段的範例。  
+## <a name="example"></a>範例  
+ 請參閱[first_is](../windows/first-is.md)如需如何指定陣列的區段的範例。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|欄位`struct`或**等位**、 參數的介面、 介面方法|  
+|**適用於**|在欄位`struct`或**union**，參數的介面，介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../windows/size-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [參數屬性](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

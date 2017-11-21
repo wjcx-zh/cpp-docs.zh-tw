@@ -1,37 +1,35 @@
 ---
-title: "ICommandImpl::m_bCancel | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::m_bCancel"
-  - "ICommandImpl.m_bCancel"
-  - "m_bCancel"
-  - "ATL::ICommandImpl::m_bCancel"
-  - "ATL.ICommandImpl.m_bCancel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "m_bCancel"
+title: "Icommandimpl:: M_bcancel |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::m_bCancel
+- ICommandImpl.m_bCancel
+- m_bCancel
+- ATL::ICommandImpl::m_bCancel
+- ATL.ICommandImpl.m_bCancel
+dev_langs: C++
+helpviewer_keywords: m_bCancel
 ms.assetid: f3b6fb60-4de4-4d81-a5d2-4052c41be0de
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e19b81818d564b3b6e3f7a1623482ef6458defd5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::m_bCancel
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-表示命令是否已取消。  
+# <a name="icommandimplmbcancel"></a>ICommandImpl::m_bCancel
+指出是否可以取消命令為止。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,12 +37,12 @@ unsigned m_bCancel:1;
   
 ```  
   
-## 備註  
- 您可以擷取在您的命令類別 **Execute** 方法的這個變數和移除屬性。  
+## <a name="remarks"></a>備註  
+ 您可以擷取中的這個變數**Execute**命令類別和 [取消]，視需要的方法。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ICommandImpl 類別](../../data/oledb/icommandimpl-class.md)   
- [ICommandImpl::m\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)
+ [ICommandImpl::m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)

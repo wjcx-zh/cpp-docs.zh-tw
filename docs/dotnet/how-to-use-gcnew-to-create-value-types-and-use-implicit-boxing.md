@@ -1,32 +1,32 @@
 ---
-title: "如何：使用 gcnew 建立實值類型及使用隱含 Boxing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Boxing, 隱含"
-  - "gcnew 關鍵字 [C++], 建立實值類型"
-  - "實值類型, 建立"
+title: "如何： 使用 gcnew 建立實值類型及使用隱含 Boxing |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- gcnew keyword [C++], creating value types
+- boxing, implicit
+- value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db569feb489fc73c7460e2444e3d2340c1a5be13
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 gcnew 建立實值類型及使用隱含 Boxing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用在實值型別的 [請用"](../windows/ref-new-gcnew-cpp-component-extensions.md) 將建立 Boxed 實值型別，在 Managed 可放置，記憶體回收的堆積。  
+# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>如何：使用 gcnew 建立實值類型及使用隱含 Boxing
+使用[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)值類型會建立 boxed 實的值類型，可以接著放置 managed、 記憶體回收堆積。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // vcmcppv2_explicit_boxing4.cpp  
@@ -53,5 +53,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Boxing](../windows/boxing-cpp-component-extensions.md)

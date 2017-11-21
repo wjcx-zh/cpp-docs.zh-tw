@@ -1,64 +1,56 @@
 ---
-title: "back_inserter 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Windows::Foundation::Collections::back_inserter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back_inserter 函式"
+title: "back_inserter 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: collection/Windows::Foundation::Collections::back_inserter
+dev_langs: C++
+helpviewer_keywords: back_inserter Function
 ms.assetid: 91476338-5548-44b7-bc7e-2150f4fbe31a
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: eb2b4925ba1b0c6c9a8728b66c338ea50229d0f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# back_inserter 函式
+# <a name="backinserter-function"></a>back_inserter 函式
 傳回迭代器，用來在指定的集合結尾插入元素。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-template <  
-   typename T  
-   >  
-   ::Platform::BackInsertIterator<T>   
-    back_inserter(  
-                  IVector<T>^ v  
-                 );  
+template <typename T>
+Platform::BackInsertIterator<T>   
+    back_inserter(IVector<T>^ v);  
   
-template <  
-   typename T  
-   >  
-   ::Platform::BackInsertIterator<T>   
-   back_inserter(  
-                IObservableVector<T>^ v  
-                );  
+template<typename T>  
+Platform::BackInsertIterator<T>   
+   back_inserter(IObservableVector<T>^ v);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
  樣板類型參數。  
   
  `v`  
  提供存取基礎集合的介面指標。  
   
-## 傳回值  
+### <a name="return-value"></a>傳回值  
  迭代器。  
   
-## 需求  
- **標頭：**collection.h  
+### <a name="requirements"></a>需求  
+ **標頭：** collection.h  
   
- **命名空間：**Windows::Foundation::Collections  
+ **命名空間：** Windows::Foundation::Collections  
   
-## 請參閱  
- [Windows::Foundation::Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+## <a name="see-also"></a>另請參閱  
+ [Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

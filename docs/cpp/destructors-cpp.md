@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="destructors-c"></a>解構函式 (C++)
 解構函式是會自動叫用當物件超出範圍或明確地被終結由呼叫成員函式`delete`。 解構函式具有相同的名稱為類別，加上波狀符號 (`~`)。 例如，`String` 類別的解構函式宣告為：`~String()`。 如果未定義解構函式，編譯器會提供一個; 預設值許多類別就足夠了。 您只需要定義自訂的解構函式，此類別會儲存需要釋放系統資源的控制代碼時，或擁有記憶體的指標指向。
@@ -232,4 +229,3 @@ ps->~String();     // Virtual call
 ```  
   
  您可以使用明確呼叫解構函式的標註法 (如先前所示)，不論該類型是否定義了解構函式。 這可讓您進行這類明確呼叫，而不需要知道是否已為該類型定義解構函式。 明確呼叫未定義的解構函式不會有任何作用。  
-

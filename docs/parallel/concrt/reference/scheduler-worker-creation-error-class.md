@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error
 - CONCRT/concurrency::scheduler_worker_creation_error::scheduler_worker_creation_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- scheduler_worker_creation_error class
+dev_langs: C++
+helpviewer_keywords: scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: aee9d72447aca692fa25d675bdc5f727fa5b5c15
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 0a628d0ce3d85a2bdcae9c7d25550cbd36386e67
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 類別
 這個類別描述因為無法建立並行執行階段中的背景工作執行內容而擲回的例外狀況。  
@@ -55,7 +37,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[scheduler_worker_creation_error](#ctor)|多載。 建構 `scheduler_worker_creation_error` 物件。|  
   
@@ -70,7 +52,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
  `scheduler_worker_creation_error`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** concrt.h  
+ **標頭：** concrt.h  
   
  **命名空間：** concurrency  
   
@@ -92,8 +74,7 @@ explicit _CRTIMP scheduler_worker_creation_error(
  錯誤的描述性訊息。  
   
  `_Hresult`  
- `HRESULT`造成例外狀況之錯誤的值。  
+ `HRESULT`錯誤造成的例外狀況的值。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

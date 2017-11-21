@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- ATL, class wizards
+dev_langs: C++
+helpviewer_keywords: ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
 ms.openlocfilehash: 4c335d5146e28d3331fac8b0073a6bd6c7d1def5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 精靈和對話方塊
 Active Template Library (ATL) 精靈產生的各種 COM 物件的未定案程式碼。 您可以藉由開啟的專案中的捷徑功能表執行精靈**方案總管 中**，然後選擇**新增**，**類別**。  
@@ -41,5 +37,4 @@ Active Template Library (ATL) 精靈產生的各種 COM 物件的未定案程式
 |[ATL COM + 1.0 元件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|建立基本的 ATL COM + 1.0 元件|  
 |[ATL Active Server Page 元件](../../atl/reference/adding-an-atl-active-server-page-component.md)|建立基本的 ATL Active Server Page 元件。|  
 |[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)|ATL 文件的連結。|
-
 

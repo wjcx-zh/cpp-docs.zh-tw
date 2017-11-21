@@ -1,45 +1,44 @@
 ---
-title: "auto_gcroot::operator auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator auto_gcroot"
-  - "auto_gcroot::operator auto_gcroot"
-  - "msclr.auto_gcroot.operator auto_gcroot"
-  - "msclr::auto_gcroot::operator auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot 運算子"
+title: "auto_gcroot::operator auto_gcroot |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator auto_gcroot
+- auto_gcroot::operator auto_gcroot
+- msclr.auto_gcroot.operator auto_gcroot
+- msclr::auto_gcroot::operator auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot operator
 ms.assetid: 43e3f27a-9f68-444f-9149-a9282a9b935a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 339df92e4b5085dfcfbc1eea1025612106dad6e5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 `auto_gcroot` 和相容型別之間的型別轉換運算子。  
+# <a name="autogcrootoperator-autogcroot"></a>auto_gcroot::operator auto_gcroot
+型別轉型運算子之間`auto_gcroot`和相容的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename _other_type>  
 operator auto_gcroot<_other_type>();  
 ```  
   
-## 傳回值  
- 目前的 `auto_gcroot` 轉換成 `auto_gcroot<_other_type>`。  
+## <a name="return-value"></a>傳回值  
+ 目前`auto_gcroot`轉型為`auto_gcroot<_other_type>`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_op_auto_gcroot.cpp  
@@ -76,12 +75,15 @@ int main() {
 }  
 ```  
   
-  **Hello from first B\!**  
-**Hello from first A\!**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+Hello from first B!  
+Hello from first A!  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)

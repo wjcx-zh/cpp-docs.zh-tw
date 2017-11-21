@@ -4,46 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CSimpleDialog
 - ATLWIN/ATL::CSimpleDialog
 - ATLWIN/ATL::CSimpleDialog::DoModal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CSimpleDialog class
 - CSimpleDialog class, modal dialog boxes in ATL
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2448f2fcd0547e2344dde51392873e3276f2bd09
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 0196d5e0e1516b47936837e1282471161a191365
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 類別
 這個類別會實作基本的強制回應對話方塊。  
@@ -63,11 +46,11 @@ class CSimpleDialog : public CDialogImplBase
  *t_bCenter*  
  **TRUE**對話方塊物件擁有者視窗上置中，否則如果**FALSE**。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CSimpleDialog::DoModal](#domodal)|建立強制回應對話方塊。|  
   
@@ -76,7 +59,7 @@ class CSimpleDialog : public CDialogImplBase
   
  `CSimpleDialog`可讓您建立只能強制回應對話方塊。 `CSimpleDialog`提供對話方塊程序，會使用預設的訊息對應訊息導向適當的處理常式。  
   
- 請參閱[實作對話方塊](../../atl/implementing-a-dialog-box.md)取得更多資訊。  
+ 請參閱[實作對話方塊](../../atl/implementing-a-dialog-box.md)如需詳細資訊。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CDialogImplBase`  
@@ -84,7 +67,7 @@ class CSimpleDialog : public CDialogImplBase
  `CSimpleDialog`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="domodal"></a>CSimpleDialog::DoModal  
  叫用強制回應對話方塊，並傳回完成的對話方塊結果。  
@@ -107,4 +90,3 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

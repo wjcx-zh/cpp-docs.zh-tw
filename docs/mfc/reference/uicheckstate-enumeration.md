@@ -4,29 +4,23 @@ ms.custom:
 ms.date: 04/03/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- afxwinforms/uicheckstate
-dev_langs:
-- C++
-helpviewer_keywords:
-- uicheckstate enumeration [MFC]
+f1_keywords: afxwinforms/uicheckstate
+dev_langs: C++
+helpviewer_keywords: uicheckstate enumeration [MFC]
 ms.assetid: 2ac0098c-20e7-410c-9685-5ead5cb02b63
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: 21b23efdbad9f2b867b104d0a0d9d0bbb4338e5a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="uicheckstate-enumeration"></a>UICheckState 列舉
 描述命令的使用者介面項目核取狀態。  
    
@@ -47,4 +41,3 @@ public enum class
    
 ### <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
-

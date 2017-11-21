@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3030
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3030
+f1_keywords: C3030
+dev_langs: C++
+helpviewer_keywords: C3030
 ms.assetid: de92fd7e-29ba-46e8-b43b-f4b985cd74de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 472ff7495ab0e57f7aa9d03ea060faa813e20228
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3030"></a>編譯器錯誤 C3030
 'var': 'reduction' 子句/指示詞中的變數不能有參考類型  

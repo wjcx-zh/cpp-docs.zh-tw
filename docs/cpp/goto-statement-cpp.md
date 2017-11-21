@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- goto_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- goto keyword [C++]
+f1_keywords: goto_cpp
+dev_langs: C++
+helpviewer_keywords: goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3bdad97f36902762f34816a04a4fc0c5c0c16856
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 467e432f9086198577d76c3624f5cb45562c7283
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="goto-statement-c"></a>goto 陳述式 (C++)
 `goto` 陳述式無條件地將控制項傳送至所指定識別項標記的陳述式。  

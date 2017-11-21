@@ -1,37 +1,36 @@
 ---
-title: "CDataConnection::operator CDataSource* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource*"
-  - "CDataConnection::operatorCDataSource*"
-  - "CDataConnection.operatorCDataSource*"
-  - "operatorCDataSource*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataSource* operator"
-  - "operator * (CDataSource)"
+title: "Cdataconnection:: Operator CDataSource * |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource*
+- CDataConnection::operatorCDataSource*
+- CDataConnection.operatorCDataSource*
+- operatorCDataSource*
+dev_langs: C++
+helpviewer_keywords:
+- CDataSource* operator
+- operator * (CDataSource)
 ms.assetid: 9118e324-e68d-45c5-a791-03f041d420ed
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3010f0774224cd02a35aeaa185bca32f370d5ba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection::operator CDataSource*
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳回 `CDataSource` 物件的指標。  
+# <a name="cdataconnectionoperator-cdatasource"></a>CDataConnection::operator CDataSource*
+將指標傳回至包含的 `CDataSource` 物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,14 +38,14 @@ operator const CDataSource*() throw( );
   
 ```  
   
-## 備註  
- 這個運算子會傳回包含 `CDataSource` 物件的指標，可讓您傳遞 `CDataSource` 指標所需於 `CDataConnection` 物件。  
+## <a name="remarks"></a>備註  
+ 這個運算子會將指標傳回至包含的 `CDataSource` 物件，讓您傳遞需要 `CDataConnection` 指標的 `CDataSource` 物件。  
   
- 使用方式範例請參閱 [運算子 CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) 。  
+ 請參閱[CDataSource 運算子 （& s)](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)如需使用範例。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CDataConnection 類別](../../data/oledb/cdataconnection-class.md)   
  [CDataConnection::operator CDataSource&](../../data/oledb/cdataconnection-operator-cdatasource-amp.md)

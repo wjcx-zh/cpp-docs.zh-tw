@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3539
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3539
+f1_keywords: C3539
+dev_langs: C++
+helpviewer_keywords: C3539
 ms.assetid: 34a33a0f-d1b6-498f-b312-ffad2d4799b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 03283217be6aabbf216e2e60ad47abfc01a961d6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3539"></a>編譯器錯誤 C3539
 'type': 樣板引數不能包含 'auto' 的類型  

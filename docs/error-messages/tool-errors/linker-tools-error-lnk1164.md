@@ -1,31 +1,29 @@
 ---
-title: "連結器工具錯誤 LNK1164 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1164"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1164"
+title: "連結器工具錯誤 LNK1164 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1164
+dev_langs: C++
+helpviewer_keywords: LNK1164
 ms.assetid: da89765c-affa-4f88-b170-6d6b19a577cf
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b8d1e324821d8e4b91bc0f7b404e653a54f03ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具錯誤 LNK1164
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-區段 section 對齊 \(number\) 大於 \/ALIGN 值  
+# <a name="linker-tools-error-lnk1164"></a>連結器工具錯誤 LNK1164
+區段的區段對齊 （數字） 大於 /ALIGN 值  
   
- 目的檔中的指定區段之對齊大小超出 [\/ALIGN](../../build/reference/align-section-alignment.md) 選項指定的值。  **\/ALIGN** 值必須為二次方，且必須等於或大於在目的檔中指定的區段對齊。  
+ 目的檔中的指定區段的對齊方式大小超過指定的值[/對齊](../../build/reference/align-section-alignment.md)選項。 **/對齊**值必須是 2 的乘冪且必須等於或超過目的檔中指定的區段對齊。  
   
- 請重新以較小的區段對齊編譯，或是提高 **\/ALIGN** 的值。
+ 以較小區段記憶體對齊或增加任一 recompile **/對齊**值。

@@ -1,41 +1,39 @@
 ---
-title: "如何：在原生編譯中宣告覆寫指定名稱 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "原生編譯中的覆寫指定名稱，覆寫"
+title: "如何： 宣告覆寫規範 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 07d612e97a6aaf3ff53116415b8eedc7324f78ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在原生編譯中宣告覆寫指定名稱 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[密封](../windows/sealed-cpp-component-extensions.md)、 [摘要](../windows/abstract-cpp-component-extensions.md)和 [覆寫](../windows/override-cpp-component-extensions.md) 可以在不使用 **\/ZW** 或 [\/clr](../build/reference/clr-common-language-runtime-compilation.md)的編輯。  
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>如何：在原生編譯中宣告覆寫指定名稱 (C++/CLI)
+[密封](../windows/sealed-cpp-component-extensions.md)，[抽象](../windows/abstract-cpp-component-extensions.md)，和[覆寫](../windows/override-cpp-component-extensions.md)可用在不使用編譯中**/ZW**或[/clr](../build/reference/clr-common-language-runtime-compilation.md)。  
   
 > [!NOTE]
->  C\+\+11 ISO 標準語言有 [覆寫](../cpp/override-specifier.md) 識別項和 [最後](../cpp/final-specifier.md) 識別項，，和兩個 Visual Studio 支援使用 `final` 而非 `sealed` 會被視為編譯為原生的程式碼。  
+>  ISO C + + 11 標準語言有[覆寫](../cpp/override-specifier.md)識別碼和[最終](../cpp/final-specifier.md)識別項，以及同時支援在 Visual Studio 使用`final`而不是`sealed`旨在的程式碼中編譯為僅限原生。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 下列範例中， `sealed` 是有效原生編譯。  
+### <a name="description"></a>描述  
+ 下列範例會顯示`sealed`在原生編譯中有效。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // sealed_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -56,14 +54,14 @@ public:
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 下面的範例會表示為 `override` ，表示在原生編譯。  
+### <a name="description"></a>描述  
+ 下一個範例顯示`override`在原生編譯中有效。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // override_native_keyword.cpp  
 #include <stdio.h>  
 __interface I1 {  
@@ -77,14 +75,14 @@ public:
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 這個範例中， `abstract` 是有效原生編譯。  
+### <a name="description"></a>描述  
+ 這個範例將示範`abstract`在原生編譯中有效。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
-```  
+```cpp  
 // abstract_native_keyword.cpp  
 class X abstract {};  
   
@@ -93,5 +91,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [覆寫規範](../windows/override-specifiers-cpp-component-extensions.md)

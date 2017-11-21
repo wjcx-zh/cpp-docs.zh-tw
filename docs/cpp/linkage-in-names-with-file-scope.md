@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - scope [C++], linkage rules
 - linkage [C++], scope linkage rules
@@ -21,16 +19,15 @@ helpviewer_keywords:
 - external linkage, scope linkage rules
 - static variables, external declarations
 ms.assetid: 38d3fa5e-1861-466e-a590-84b86f7b184e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c4d33071426eac428cc1728aa13b403953a99389
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: b5896c1c50b6e7d73c259ba19e6e2bbab77e86d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linkage-in-names-with-file-scope"></a>檔案範圍的名稱連結
 下列連結規則適用於具有檔案範圍的名稱 (除了 `typedef` 和列舉程式名稱以外)：  

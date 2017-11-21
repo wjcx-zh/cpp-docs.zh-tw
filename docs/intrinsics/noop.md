@@ -1,38 +1,37 @@
 ---
-title: "__noop | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__noop_cpp"
-  - "__noop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__noop 關鍵字 [C++]"
+title: "__noop |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __noop_cpp
+- __noop
+dev_langs: C++
+helpviewer_keywords: __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7bdd595ac7fb70ef00865485a38e9d11cfd0181c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# __noop
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="noop"></a>__noop
+**Microsoft 特定的**  
   
- `__noop`內建指定函式將忽略和剖析的引數清單，但沒有程式碼會產生引數。  它可能是使用於通用的偵錯函式接受不同數目引數。  
+ `__noop`內建函式指定應該忽略的函式和剖析引數清單，但卻沒有程式碼產生的引數。 它適用於不接受引數數目可變的全域偵錯函式中。  
   
- 編譯器會將轉換`__noop`為 0，在編譯時期內建。  
+ 編譯器會將轉換`__noop`設為 0，在編譯時期內建函式。  
   
-## 範例  
- 下列程式碼會示範如何使用`__noop`。  
+## <a name="example"></a>範例  
+ 下列程式碼將示範如何使用`__noop`。  
   
 ```  
 // compiler_intrinsics__noop.cpp  
@@ -50,6 +49,6 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
+ [關鍵字](../cpp/keywords-cpp.md)

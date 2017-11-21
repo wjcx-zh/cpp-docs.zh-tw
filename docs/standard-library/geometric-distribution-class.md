@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::geometric_distribution::param_type::p
 - random/std::geometric_distribution::param_type::operator==
 - random/std::geometric_distribution::param_type::operator!=
-- random/std::geometric_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::geometric_distribution [C++]
 - std::geometric_distribution [C++], reset
@@ -33,16 +30,15 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 796393b3e931cb1afad31809498d329e1a80ad99
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 21665d4ef570f7451e3c1f9739eafaf067659541
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 類別
 產生幾何分佈。  
@@ -267,6 +263,5 @@ struct param_type {
   
 ## <a name="see-also"></a>另請參閱  
 [\<random>](../standard-library/random.md)
-
 
 

@@ -1,55 +1,53 @@
 ---
-title: "連結器工具警告 LNK4049 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4049"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4049"
+title: "連結器工具警告 LNK4049 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4049
+dev_langs: C++
+helpviewer_keywords: LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 80a9fbeb3609f10f0f10b050b8e59601045396c0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具警告 LNK4049
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本機定義的符號 'symbol' 已匯入  
+# <a name="linker-tools-warning-lnk4049"></a>連結器工具警告 LNK4049
+本機定義的符號 'symbol' 匯入  
   
- 符號同時自程式匯出及匯入程式。  
+ 符號已同時從匯出和匯入程式。  
   
- 當您在一個目的檔 \(Object File\) 中使用 `__declspec(dllexport)` 儲存類別屬性來宣告符號，並在另一個目的檔中使用 `__declspec(dllimport)` 屬性參考該符號時，連結器就會產生這個警告。  
+ 當您使用宣告的符號連結器便會產生這個警告`__declspec(dllexport)`儲存類別屬性一個目的檔中，使用參考`__declspec(dllimport)`中另一個屬性。  
   
- 警告 LNK4049 是[連結器工具警告 LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md) 比較普通的版本。  當連結器無法決定參考匯入符號的來源函式時，就會產生警告 LNK4049。  
+ 警告 LNK4049 是更廣泛版本的[連結器工具警告 LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)。 連結器產生警告 LNK4049 時它無法判斷哪一個函式從參考匯入的符號。  
   
- 會產生 LNK4049，而不是產生 LNK4217 的常見原因如下：  
+ 常見的情況，而不是 LNK4217 產生 LNK4049 的位置如下：  
   
--   使用 [\/INCREMENTAL](../../build/reference/incremental-link-incrementally.md) 選項來執行累加連結。  
+-   執行使用累加連結[/增量](../../build/reference/incremental-link-incrementally.md)選項。  
   
--   使用 [\/LTCG](../../build/reference/ltcg-link-time-code-generation.md) 選項來執行整個程式最佳化。  
+-   使用執行整個程式最佳化[/LTCG](../../build/reference/ltcg-link-time-code-generation.md)選項。  
   
- 若要解決 LNK4049，請嘗試下列任一種方法：  
+ 若要解決 LNK4049，請嘗試下列其中一項：  
   
--   從觸發 LNK4049 之符號的向前宣告中移除 `__declspec(dllimport)` 名稱宣告。  您可以使用 **DUMPBIN** 公用程式，在二進位檔映像中搜尋符號。  **DUMPBIN \/SYMBOLS** 參數會顯示映像的 COFF 系統資料表。  如需 **DUMPBIN** 公用程式的詳細資訊，請參閱 [DUMPBIN 參考](../../build/reference/dumpbin-reference.md)。  
+-   移除`__declspec(dllimport)`觸發 LNK4049 符號的向前宣告從宣告的名稱。 您可以搜尋符號，二進位映像內使用**DUMPBIN**公用程式。 **DUMPBIN/符號**參數顯示 COFF 符號表，映像。 如需有關**DUMPBIN**公用程式，請參閱[DUMPBIN 參考](../../build/reference/dumpbin-reference.md)。  
   
--   暫時停用累加連結和整個程式最佳化。  重新編譯應用程式將會產生警告 LNK4217，其中包含參考匯入符號的來源函式名稱。  將 `__declspec(dllimport)` 宣告從匯入符號中移除，並依需要啟用累加連結或整個程式最佳化。  
+-   暫時停用累加連結和整個程式最佳化。 重新編譯應用程式將會產生警告 LNK4217，其中包含要從中匯入的符號參考的函數的名稱。 移除`__declspec(dllimport)`從匯入的符號和啟用累加連結或整個程式最佳化，視需要的宣告。  
   
- 雖然最後產生的程式碼可以正常運作，但就效率而言，直接呼叫函式會優於所產生用來呼叫匯入函式的程式碼。  使用選項 [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) 進行編譯時，不會出現這個警告。  
+ 雖然最後產生的程式碼會正常運作，呼叫匯入的函式所產生的程式碼會比較沒有效率比直接呼叫函式。 當您使用選項編譯時，不會出現這個警告[/clr](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
- 如需有關匯入和匯出資料宣告的詳細資訊，請參閱 [dllexport、dllimport](../../cpp/dllexport-dllimport.md)。  
+ 如需詳細資訊匯入和匯出資料宣告，請參閱 < [dllexport、 dllimport](../../cpp/dllexport-dllimport.md)。  
   
-## 範例  
- 連結下列兩個模組將會產生 LNK4049。  第一個模組會產生只包含一個匯出函式的目的檔。  
+## <a name="example"></a>範例  
+ 連結下列兩個模組，將會產生 LNK4049。 第一個模組會產生包含單一的匯出函式的物件檔案。  
   
 ```  
 // LNK4049a.cpp  
@@ -61,8 +59,8 @@ __declspec(dllexport) int func()
 }  
 ```  
   
-## 範例  
- 第二個模組所產生的目的檔則會包含對第一個模式中匯出之函式的向前宣告，以及在 `main` 函式中呼叫這個函式的呼叫。  將這個模組與第一個模組連結，將會產生 LNK4049。  移除 `__declspec(dllimport)` 宣告就可以解決這個警告。  
+## <a name="example"></a>範例  
+ 第二個模組會產生包含匯出在第一個模組中，搭配內此函式呼叫之函式的向前宣告的物件檔案`main`函式。 連結的第一個模組使用此模組將會產生 LNK4049。 移除`__declspec(dllimport)`宣告將會解決這個警告。  
   
 ```  
 // LNK4049b.cpp  
@@ -79,6 +77,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [連結器工具警告 LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)   
  [dllexport、dllimport](../../cpp/dllexport-dllimport.md)

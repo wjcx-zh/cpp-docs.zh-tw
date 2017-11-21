@@ -1,34 +1,34 @@
 ---
-title: "定義巨集的位置 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "定義巨集"
-  - "巨集, NMAKE"
-  - "NMAKE 程式, 定義巨集"
+title: "定義巨集的位置 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- defining macros
+- macros, NMAKE
+- NMAKE program, defining macros
 ms.assetid: 0fc59ec5-5f58-4644-b7da-7b021f7001af
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cfb17f531df5c232f1f376cd003acb7bf5a62206
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 定義巨集的位置
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在命令列中、命令檔案、Makefile 或 Tools.ini 檔案中定義巨集。  
+# <a name="where-to-define-macros"></a>定義巨集的位置
+命令列、 指令檔、 makefile 或 Tools.ini 檔案中定義巨集。  
   
- 在 Makefile 或 Tools.ini 檔案中，每一個巨集定義都要出現在不同的行中，並且不能以空格或定位字元開頭。  等號附近的空格或定位字元會予以忽略。  所有[字串字元](../build/defining-an-nmake-macro.md)都是常值，包括前後的引號和空白字元。  
+ Makefile 或 Tools.ini 檔中，每個巨集定義必須出現在不同行，而且不得以空格或定位鍵。會忽略空格或等號前後的索引標籤。 所有[字元的字串](../build/defining-an-nmake-macro.md)是常值，包括周圍的引號和內嵌的空格。  
   
- 在命令列或命令檔案中，空格和定位字元會分隔引數，並且不能置於等號前後。  如果 `string` 有空白字元或定位字元，請將字串本身或整個巨集以雙引號 \(" "\) 括住。  
+ 在命令列或命令檔中，空格和定位點分隔的引數，不可以出現在等號。 如果`string`有內嵌空格或定位點，以雙引號括住字串本身或整個巨集 ("")。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

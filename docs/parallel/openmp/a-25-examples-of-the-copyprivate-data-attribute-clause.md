@@ -1,27 +1,26 @@
 ---
-title: "A.25   Examples of the copyprivate Data Attribute Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Copyprivate Data 屬性子句 A.25 範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7b1cb6a5-5691-4b95-b3ac-d7543ede6405
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d141ec66aa7ed0bac53c8242a87d08e092272eaa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# A.25   Examples of the copyprivate Data Attribute Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**範例 1：** `copyprivate`子句 \([一節 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) 在 32\] 頁面上\) 可以用來廣播由單一執行緒直接於另一個執行緒的私用變數的所有執行個體所取得的值。  
+# <a name="a25---examples-of-the-copyprivate-data-attribute-clause"></a>A.25 copyprivate 資料屬性子句範例
+**範例 1:** `copyprivate`子句 ([區段 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md)在頁面上 32) 可用來廣播由單一執行緒直接私用變數中的其他執行緒的所有執行個體所取得的值。  
   
 ```  
 float x, y;  
@@ -41,9 +40,9 @@ void init( )
 }  
 ```  
   
- 如果例行*初始化*呼叫序列的區域，其行為不會受到指示詞的目前狀態。  若要在呼叫之後 *get\_values* 常式皆執行一個執行緒，沒有執行緒離開之前所指定的私用物件的建構 ，  *b*，  *x*，和  *y* 所有的執行緒中有定義變得有讀取的值。  
+ 如果常式*init*稱為序列的區域，其行為不會受到指示詞是否存在。 若要在呼叫之後*get_values*常式由一個執行緒已執行、 沒有執行緒保留之前所指定的私用物件建構， *b*， *x*，和*y*中所有執行緒變成定義讀取的值。  
   
- **範例 2：** 相對於前一個範例中，假設 \[讀取必須由特定的執行緒，說出的主執行緒。  如此一來， `copyprivate`子句不能用來直接進行廣播，但是它可以用來提供暫時的共用物件的存取權。  
+ **範例 2:**相較於上述範例中，假設讀取必須由特定的執行緒，假設主要執行緒執行。 在此情況下，`copyprivate`子句不能直接執行廣播，但是它可以用來提供存取權是共用的暫存物件。  
   
 ```  
 float read_next( )   
@@ -74,7 +73,7 @@ float read_next( )
 }  
 ```  
   
- **範例 3：** 假設放在平行區域內所需的鎖定物件的數目不容易判斷才能輸入。  `copyprivate`子句可以用來提供該平行區域內所配置的共用的鎖定物件的存取權。  
+ **範例 3:**假設在平行區域內所需的鎖定物件的數目不容易判斷之前輸入它。 `copyprivate`子句可以用來提供共用的鎖定物件所配置的平行區域內的存取權。  
   
 ```  
 #include <omp.h>  

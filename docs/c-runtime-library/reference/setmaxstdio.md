@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _setmaxstdio
+apiname: _setmaxstdio
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,24 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - maximum open files
 - _setmaxstdio function
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 3c18b478c83c57a8a3bfd8238b367dbe4846d025
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 設定在 `stdio` 層級同時開啟的檔案數目上限。  

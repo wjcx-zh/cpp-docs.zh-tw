@@ -1,32 +1,30 @@
 ---
-title: "greater (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::greater"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "greater 函式 [STL/CLR]"
+title: "大於 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::greater
+dev_langs: C++
+helpviewer_keywords: greater function [STL/CLR]
 ms.assetid: a6dfe5e3-b5a5-4ec4-8e53-8dd33a37d10d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 47a2e525158d76182387f8ff82d6d0e08fd003c8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# greater (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別描述當被呼叫，只在第一個引數大於第二個時傳回 true 的功能的函子。  您可用它來根據引數型別指定函式物件。  
+# <a name="greater-stlclr"></a>greater (STL/CLR)
+此範本類別描述函式，呼叫時，則傳回 true 只有第一個引數是大於第二個。 您可以使用它指定其引數類型方面的函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### 參數  
- Arg  
+#### <a name="parameters"></a>參數  
+ 引數  
  引數的型別。  
   
-## 成員函式  
+## <a name="member-functions"></a>成員函式  
   
-|型別定義|說明|  
-|----------|--------|  
-|delegate\_type|泛型委派的型別。|  
-|first\_argument\_type|功能子的第一個引數的型別。|  
-|result\_type|功能子結果的型別。|  
-|second\_argument\_type|功能子的第二個引數的型別。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|delegate_type|泛型委派類型。|  
+|first_argument_type|仿函式的第一個引數型別。|  
+|result_type|仿函式結果的型別。|  
+|second_argument_type|仿函式的第二個引數的型別。|  
   
-|成員|說明|  
-|--------|--------|  
-|greater|建構功能子。|  
+|成員|描述|  
+|------------|-----------------|  
+|greater|建構仿函式。|  
   
-|運算子|說明|  
-|---------|--------|  
-|operator\(\)|計算所需的函式。|  
-|operator delegate\_type^|轉換功能子給委派。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|operator()|計算所需的函數。|  
+|運算子 delegate_type ^|會轉換成委派仿函式。|  
   
-## 備註  
- 這個樣板類別描述兩個引數的功能子。  它定義成員運算子 `operator()` ，如此一來，當物件當做函式呼叫時，它會只在第一個引數大於第二個時傳回 true。  
+## <a name="remarks"></a>備註  
+ 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數是否大於第二個。  
   
- 您也可以將物件當作型別為 `delegate_type^` 的函式引數來傳遞，它會適當地轉換。  
+ 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_greater.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **3 3**  
- **1 0**   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+```Output  
+4 3  
+3 3  
+1 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [less\_equal](../dotnet/less-equal-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [less_equal (STL/CLR)](../dotnet/less-equal-stl-clr.md)

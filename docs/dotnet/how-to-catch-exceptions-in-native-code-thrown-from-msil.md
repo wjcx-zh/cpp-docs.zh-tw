@@ -1,35 +1,35 @@
 ---
-title: "如何：攔截 MSIL 擲回之機器碼的例外狀況 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "攔截例外狀況, 從 MSIL 擲回"
-  - "例外狀況, 攔截"
-  - "MSIL, 攔截機器碼中的例外狀況"
+title: "如何： 攔截 MSIL 擲回之機器碼的例外狀況 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exceptions, catching
+- catching exceptions, thrown from MSIL
+- MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dbb17c9ed16f771f60054bcde1f8ea5145047c35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：攔截 MSIL 擲回之機器碼的例外狀況
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在機器碼中，您可以攔截 MSIL 的原生 C\+\+ 例外狀況。您可以攔截與 `__try` 和 `__except`的 CLR 例外狀況。  
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：攔截 MSIL 擲回之機器碼的例外狀況
+在原生程式碼，您可以攔截從 MSIL 的原生 c + + 例外狀況。  您可以攔截的 CLR 例外狀況`__try`和`__except`。  
   
- 如需詳細資訊，請參閱[結構化例外狀況處理](../cpp/structured-exception-handling-c-cpp.md)與[C\+\+ 例外狀況處理](../cpp/cpp-exception-handling.md)。  
+ 如需詳細資訊，請參閱[結構化例外狀況處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)和[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。  
   
-## 範例  
- 下列範例定義具有兩個函式的，擲回原生例外狀況擲回之例外狀況的和類別的模組。  
+## <a name="example"></a>範例  
+ 下列範例會定義兩個函式，所擲回的原生例外狀況，其中，另一個會擲回例外狀況 MSIL 模組。  
   
 ```  
 // catch_MSIL_in_native.cpp  
@@ -43,8 +43,8 @@ void Test2() {
 }  
 ```  
   
-## 範例  
- 下列範例定義了一個攔截原生和 MSIL 例外狀況中的模組。  
+## <a name="example"></a>範例  
+ 下列範例會定義模組攔截原生和 MSIL 例外狀況。  
   
 ```  
 // catch_MSIL_in_native_2.cpp  
@@ -79,7 +79,10 @@ int main() {
 }  
 ```  
   
-  **錯誤**  
-**攔截到例外狀況。**   
-## 請參閱  
- [Exception Handling](../windows/exception-handling-cpp-component-extensions.md)
+```Output  
+error  
+caught an exception  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)

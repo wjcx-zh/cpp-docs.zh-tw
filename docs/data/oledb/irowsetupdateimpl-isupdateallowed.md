@@ -1,34 +1,33 @@
 ---
-title: "IRowsetUpdateImpl::IsUpdateAllowed | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetUpdateImpl::IsUpdateAllowed"
-  - "IRowsetUpdateImpl.IsUpdateAllowed"
-  - "IsUpdateAllowed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsUpdateAllowed 方法"
+title: "Irowsetupdateimpl:: Isupdateallowed |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetUpdateImpl::IsUpdateAllowed
+- IRowsetUpdateImpl.IsUpdateAllowed
+- IsUpdateAllowed
+dev_langs: C++
+helpviewer_keywords: IsUpdateAllowed method
 ms.assetid: d6daf3b3-a8e0-4275-a67d-897dea01e297
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: feaa5b397989667da62bbf979603391c08eada2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetUpdateImpl::IsUpdateAllowed
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-覆寫這個方法會檢查安全性，完整性等，在更新之前發生。  
+# <a name="irowsetupdateimplisupdateallowed"></a>IRowsetUpdateImpl::IsUpdateAllowed
+覆寫這個方法來檢查安全性，完整性，更新之前，依此類推。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,21 +38,21 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *status*  
- \[暫止的作業已在執行中。  
+ [in]暫止作業的資料列的狀態。  
   
  *hRowUpdate*  
- \[為使用者要更新的資料列中處理。  
+ [in]使用者想要更新的資料列控制代碼。  
   
  *pRowStatus*  
- \[狀態傳回給使用者。  
+ [out]傳回給使用者的狀態。  
   
-## 備註  
- 如果您判斷應該允許更新，則傳回 `S_OK`;否則傳回 **E\_FAIL**。  如果您允許使用者更新，您也需要在 [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) 的 **DBROWSTATUS** 到適當的 [資料列狀態。](https://msdn.microsoft.com/en-us/library/ms722752.aspx)。  
+## <a name="remarks"></a>備註  
+ 如果您判斷允許更新，會傳回`S_OK`; 否則會傳回**E_FAIL**。 如果您允許更新，您也需要設定**DBROWSTATUS**中[irowsetupdateimpl:: Update](../../data/oledb/irowsetupdateimpl-update.md)適當[資料列狀態](https://msdn.microsoft.com/en-us/library/ms722752.aspx)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetUpdateImpl 類別](../../data/oledb/irowsetupdateimpl-class.md)

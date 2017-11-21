@@ -1,32 +1,30 @@
 ---
-title: "library_block | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.library_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "library_block attribute"
+title: "library_block |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.library_block
+dev_langs: C++
+helpviewer_keywords: library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e0255002a8235f4e8a36d4b43df520d6e26865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# library_block
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將放置在 IDL 文件庫區塊中的建構函式。  
+# <a name="libraryblock"></a>library_block
+將放在 IDL 程式庫區塊內的建構。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 10
   
 ```  
   
-## 備註  
- 當您將文件庫區塊內的建構函式時，您確定它會傳遞至型別程式庫，不論是否會參考它。  只有建構修改預設的情況下，  [coclass](../windows/coclass.md)， [分配介面](../windows/dispinterface.md)，以及  [idl\_module](../windows/idl-module.md) 屬性放在文件庫區塊中。  
+## <a name="remarks"></a>備註  
+ 當您將程式庫區塊內的建構時，確定它將會傳遞至類型程式庫，不論是否參考。 根據預設，只有建構會修改由[coclass](../windows/coclass.md)， [dispinterface](../windows/dispinterface.md)，和[idl_module](../windows/idl-module.md)屬性會放在程式庫區塊。  
   
-## 範例  
- 下列程式碼，自訂介面放置於文件庫的區塊。  
+## <a name="example"></a>範例  
+ 下列程式碼，自訂介面位於程式庫區塊內。  
   
 ```  
 // cpp_attr_ref_library_block.cpp  
@@ -51,20 +49,19 @@ __interface IMyInterface {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|全螢幕輸入|  
+|**適用於**|任何位置|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [編譯器屬性](../windows/compiler-attributes.md)   
+ [獨立屬性](../windows/stand-alone-attributes.md)   

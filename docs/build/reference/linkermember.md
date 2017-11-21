@@ -1,39 +1,38 @@
 ---
-title: "/LINKERMEMBER | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/linkermember"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LINKERMEMBER dumpbin 選項"
-  - "LINKERMEMBER dumpbin 選項"
-  - "-LINKERMEMBER dumpbin 選項"
+title: "-LINKERMEMBER |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /linkermember
+dev_langs: C++
+helpviewer_keywords:
+- /LINKERMEMBER dumpbin option
+- LINKERMEMBER dumpbin option
+- -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1af5cf0f3304b77bf731a95f8fc771bf7010dfbc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /LINKERMEMBER
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="linkermember"></a>/LINKERMEMBER
 ```  
 /LINKERMEMBER[:{1|2}]  
 ```  
   
-## 備註  
- 這個選項顯示定義於程式庫的公用符號。  指定引數 1 時，可以物件順序顯示符號與其位移 \(Offset\)。  指定引數 2 時，可顯示物件的位移和索引編號，然後按英文字母順序列出符號以及各個符號的物件索引。  若要顯示這兩項輸出，請指定不帶數字引數的 \/LINKERMEMBER。  
+## <a name="remarks"></a>備註  
+ 此選項會顯示在文件庫中定義的公用符號。 指定 1 個引數以顯示符號順序物件，以及它們的位移。 指定要顯示位移和物件的索引編號 2 的引數，則列出依字母順序，以及每個物件索引的符號。 若要取得的兩個輸出，請指定 /LINKERMEMBER 沒有數字的引數。  
   
- 只有 [\/HEADERS](../../build/reference/headers.md) DUMPBIN 選項可用在以 [\/GL](../../build/reference/gl-whole-program-optimization.md) 編譯器選項所產生的檔案上。  
+ 只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)

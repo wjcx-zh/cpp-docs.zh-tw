@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - .
 - ->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - member access, expressions
 - operators [C++], member access
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - . operator
 - member access
 ms.assetid: f8fc3df9-d728-40c5-b384-276927f5f1b3
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7c4e69727c474cb89f931832da2dbde6e20c16b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 367fcdae26b66cce06fd6086a21d3212c7ac17ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="member-access-operators--and--gt"></a>成員存取運算子:。 和-&gt;
 ## <a name="syntax"></a>語法  
@@ -43,13 +40,13 @@ postfix-expression -> name
 ```  
   
 ## <a name="remarks"></a>備註  
- 成員存取運算子**。** 和** -> **用來參考結構、 等位和類別的成員。 成員存取運算式具有選定成員的值和類型。  
+ 成員存取運算子**。** 和 **->** 用來參考結構、 等位和類別的成員。 成員存取運算式具有選定成員的值和類型。  
   
  成員存取運算式有兩種形式：  
   
 1.  在第一種形式，*後置運算式*代表結構、 類別或等位型別，值和*名稱*指定的結構、 等位或類別的成員命名。 作業的值是*名稱*如果是左值和*後置運算式*是左值。  
   
-2.  在第二個表單中，*後置運算式*結構、 等位或類別，代表的指標和*名稱*指定的結構、 等位或類別的成員命名。 值是*名稱*而且是左值。 ** -> **運算子會取值指標。 因此，運算式*e* ** -> ** `member`和**(\****e***)**.`member` (其中*e*代表的指標) 產生相同的結果 (除非運算子** -> **或** \* **經過多載)。  
+2.  在第二個表單中，*後置運算式*結構、 等位或類別，代表的指標和*名稱*指定的結構、 等位或類別的成員命名。 值是*名稱*而且是左值。 **->** 運算子會取值指標。 因此，運算式*e*  **->**  `member`和**(\****e***)**.`member` (其中*e*代表的指標) 產生相同的結果 (除非運算子 **->** 或 **\*** 經過多載)。  
   
 ## <a name="example"></a>範例  
  下列範例示範成員存取運算子的兩種形式。  

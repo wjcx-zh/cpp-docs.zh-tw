@@ -1,38 +1,37 @@
 ---
-title: "2.7.2.2 firstprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.7.2.2 firstprivate |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ece6ff12-2be1-4e4f-866c-d39345fd87b5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ac868b33e8a53778faa3fba9724974e4af6ffb90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 2.7.2.2 firstprivate
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Firstprivate** 子句提供 \/m 所提供的功能的**私用**子句。  語法 **firstprivate** 子句是，如下所示：  
+# <a name="2722-firstprivate"></a>2.7.2.2 firstprivate
+**Firstprivate**子句提供所提供的功能的超集**私人**子句。 語法**firstprivate**子句如下所示：  
   
 ```  
 firstprivate(variable-list)  
 ```  
   
- 控制台中的變數*變數清單* 有 **私用** 子句語意，如所述 [區段 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) 在 25\] 頁面上。  如同它已執行過一次每個執行緒，要建構的執行緒執行之前，會發生初始設定或建構。  對於 **firstprivate** 上的平行建構函式的子句，新的私用物件的初始值是將遇到的執行緒的平行建構之前存在於原始物件的值。  對於 **firstprivate** 子句的工作共用建構函式上，每個執行緒執行工作共用的建構新的私用物件的初始值是原始物件之前相同的執行緒遇到工作共用的建構的時間點上存在的值。  此外，C\+\+ 物件，新的私用物件，每個執行緒是由原始物件所組成的複本。  
+ 中指定的變數*變數清單*有**私人**子句語意，如中所述[區段 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)在 25 頁面上。 如同它已執行過一次每個執行緒，則建構執行緒的執行前，可發生初始化或建構。 如**firstprivate**平行建構上的子句，新的私用物件的初始值已存在前平行建構之執行緒遇到它的原始物件的值。 如**firstprivate**工作共用建構上的子句，每個執行緒執行的工作共用建構新的私用物件的初始值是時間存在之前的原始物件的值，在相同的執行緒遇到工作共用的建構。 此外，c + + 物件的每個執行緒的新私用物件是複製建構自原始物件。  
   
- 若要限制 **firstprivate** 子句如下：  
+ 若要限制**firstprivate**子句如下：  
   
--   在指定的變數 **firstprivate** 子句必須沒有不完整型別或參考型別。  
+-   中指定的變數**firstprivate**子句必須沒有不完整的類型或參考類型。  
   
--   與指定為類別型別變數 **firstprivate** 必須可存取的、 模稜兩可的複製建構函式。  
+-   指定為類別類型的變數**firstprivate**必須可存取且明確的複製建構函式。  
   
--   變數，都是放在平行區域內私用或中顯示的**降低** 的子句 **平行** 指示詞不能在指定  **firstprivate** 工作共用的指示詞，以便繫結到平行建構函式上的子句。
+-   變數是在平行區域內的私用或會出現在**減少**子句**平行**指示詞中不能指定**firstprivate**上的子句工作共用指示詞繫結至平行建構。

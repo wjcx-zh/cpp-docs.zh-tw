@@ -1,28 +1,28 @@
 ---
-title: "HString::CopyTo 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Hstring:: Copyto 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: a1fd2ef0-e175-4c18-927b-550e02a89e43
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b49031359c2a51f6bdc28c52fb38ca4e29cb3e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# HString::CopyTo 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將目前的 HString 物件複製到 HSTRING 物件。  
+# <a name="hstringcopyto-method"></a>HString::CopyTo 方法
+複製目前 HString HSTRING 物件的物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -31,17 +31,17 @@ HRESULT CopyTo(
    ) const throw();  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `str`  
- 接收複本的 HSTRING。  
+ 接收複製 HSTRING。  
   
-## 備註  
- 這個方法會呼叫 [WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx) 函式。  
+## <a name="remarks"></a>備註  
+ 這個方法會呼叫[WindowsDuplicateString](http://msdn.microsoft.com/library/br224634.aspx)函式。  
   
-## 需求  
- **標題：**corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [HString 類別](../windows/hstring-class.md)

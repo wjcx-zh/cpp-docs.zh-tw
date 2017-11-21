@@ -1,37 +1,37 @@
 ---
-title: "使用文件和檢視 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文件 [C++], MFC"
-  - "MFC [C++], 文件"
-  - "MFC [C++], 檢視"
-  - "檢視 [C++], MFC"
+title: "使用文件和檢視 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], documents
+- MFC [C++], views
+- views [C++], MFC
+- documents [C++], MFC
 ms.assetid: 349b142d-1c5a-4b99-9de4-241e41d3d2f1
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ba9228a92fe74b70494d75027c0e9656db749bdb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 使用文件和檢視
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft Foundation Class \(MFC\) 程式庫會利用文件\/檢視架構執行多種功能。  通常，文件會儲存您的資料，而檢視會在框架視窗的工作區顯示資料並管理使用者與資料間的互動。  檢視可與文件溝通，取得更新資料。  您可以在架構或不在架構中使用資料庫類別。  
+# <a name="working-with-documents-and-views"></a>使用文件和檢視
+Microsoft Foundation Classes (MFC) 程式庫會依賴許多其功能的文件/檢視架構。 一般來說，文件會儲存您的資料，並檢視顯示在框架視窗的工作區中，並管理使用者與資料互動。 檢視會與取得及更新資料的文件通訊。 您可以使用資料庫類別的架構，或未安裝。  
   
- 如需在架構中使用資料庫類別的詳細資訊，請參閱 [MFC：使用具有文件和檢視的資料庫類別](../../data/mfc-using-database-classes-with-documents-and-views.md)。  
+ 如需使用 framework 中的資料庫類別的詳細資訊，請參閱[MFC： 使用具有文件和檢視的資料庫類別](../../data/mfc-using-database-classes-with-documents-and-views.md)。  
   
- 依照預設，MFC 應用程式精靈會建立一個不具資料庫支援的基本架構應用程式 \(Skeleton Application\)。  但是您仍可以選取包含最小資料庫支援，或更完整的表單架構 \(Form\-Based\) 支援的選項。  如需應用程式精靈選項的詳細資訊，請參閱 [MFC 應用程式精靈、資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)。  
+ 依預設，MFC 應用程式精靈建立基本架構應用程式的任何資料庫支援。 不過，您可以選取包含最小的資料庫支援或更完整的表單架構支援的選項。 如需應用程式精靈選項的詳細資訊，請參閱[MFC 應用程式精靈、 資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)。  
   
- 您也可以在不使用完整的文件 \/ 檢視架構情況下使用資料庫類別。  如需詳細資訊，請參閱 [MFC：使用不具文件和檢視的資料庫類別](../../data/mfc-using-database-classes-without-documents-and-views.md)。  
+ 您也可以使用資料庫類別，而不需要使用完整的文件/檢視架構。 如需詳細資訊，請參閱[MFC： 使用資料庫類別不具文件和檢視表](../../data/mfc-using-database-classes-without-documents-and-views.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

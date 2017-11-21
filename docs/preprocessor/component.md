@@ -1,34 +1,34 @@
 ---
-title: "元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.component"
-  - "component_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "component pragma"
-  - "Pragma, 元件"
+title: "元件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.component
+- component_CPP
+dev_langs: C++
+helpviewer_keywords:
+- component pragma
+- pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ba0c7211ad7d859dfaf44a9e7843fa6984ec167a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 元件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="component"></a>元件
 從原始程式檔內部收集瀏覽資訊或相依性資訊的控制項。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,12 +37,12 @@ caps.handback.revision: 6
 #pragma component( mintypeinfo, on | off )  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
-## 瀏覽器  
+## <a name="browser"></a>瀏覽器  
  您可以開啟或關閉收集功能，而且可以指定要在收集的資訊中忽略的特定名稱。  
   
- 使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。  例如：  
+ 使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如：  
   
 ```  
 #pragma component(browser, off)  
@@ -51,9 +51,9 @@ caps.handback.revision: 6
  讓編譯器停止收集瀏覽資訊。  
   
 > [!NOTE]
->  若要使用此 pragma 開啟瀏覽資訊的收集，請參閱[必須先啟用瀏覽資訊](../build/reference/building-browse-information-files-overview.md)。  
+>  若要開啟這個 pragma，瀏覽資訊的收集[必須先啟用瀏覽資訊](../build/reference/building-browse-information-files-overview.md)。  
   
- **references** 選項可以包含或不包含 *name* 引數。  使用不含 *name* 的 **references** 會開啟或關閉參考的收集 \(但是仍繼續收集其他瀏覽資訊\)。  例如：  
+ **參考**選項才能使用，不論*名稱*引數。 使用**參考**沒有*名稱*開啟或關閉參考的收集 （其他瀏覽資訊仍繼續收集，但是）。 例如:   
   
 ```  
 #pragma component(browser, off, references)  
@@ -61,37 +61,37 @@ caps.handback.revision: 6
   
  讓編譯器停止收集參考資訊。  
   
- 使用含有 *name* 和 **off**  的 **references** 可防止 *name*  的參考出現在瀏覽資訊視窗。  使用這個語法會忽略您沒有興趣的名稱和類型，並可減少瀏覽資訊檔的大小。  例如：  
+ 使用**參考**與*名稱*和**關閉**防止參考*名稱*出現在 [瀏覽資訊] 視窗。 使用這個語法會忽略您沒有興趣的名稱和類型，並可減少瀏覽資訊檔的大小。 例如:   
   
 ```  
 #pragma component(browser, off, references, DWORD)  
 ```  
   
- 從該處忽略前方 **DWORD**  的參考。  您可以使用 **on** 重新開啟收集 `DWORD` 的參考：  
+ 會忽略參考**DWORD**從該點之後。 您可以開啟參考的收集`DWORD`使用上一步**上**:  
   
 ```  
 #pragma component(browser, on, references, DWORD)  
 ```  
   
- 這是唯一可以繼續收集 *name* 之參考的方式，您必須明確開啟已關閉的任何 *name* 。  
+ 這是唯一的方式以繼續收集參考*名稱*; 您必須明確開啟任何*名稱*已關閉。  
   
- 若要避免前置處理器擴展 *name* \(例如將 **NULL** 擴展為 **0**\)，請在其前後放置引號：  
+ 若要避免前置處理器展開*名稱*(例如**NULL**至**0**)，其前後放置引號：  
   
 ```  
 #pragma component(browser, off, references, "NULL")  
 ```  
   
-## 最少重建  
- Visual C\+\+ 最少重建功能需要編譯器建立和儲存 C\+\+ 類別相依性資訊，這會佔用磁碟空間。  為了節省磁碟空間，您可以在不需要收集相依性資訊時使用 `#pragma component( minrebuild, off )` ，例如，不會變更的標頭檔。  在不會變更的類別之後插入 `#pragma component(minrebuild, on)` ，可重新開啟相依性集合。  
+## <a name="minimal-rebuild"></a>最少重建  
+ Visual C++ 最少重建功能需要編譯器建立和儲存 C++ 類別相依性資訊，這會佔用磁碟空間。 若要節省磁碟空間，您可以使用`#pragma component( minrebuild, off )`每當您不需要收集相依性資訊，比方說，不會變更的標頭檔中。 插入`#pragma component(minrebuild, on)`上一步 開啟相依性集合的不可變類別之後。  
   
-## 減少類型資訊  
- **mintypeinfo** 選項可減少指定區域的偵錯資訊。  這項資訊的容量相當可觀，會影響到 .pdb 和 .obj 檔案。  您無法在 mintypeinfo 區域中偵錯類別和結構。  使用 mintypeinfo 選項可避免下列警告：  
+## <a name="reduce-type-information"></a>減少類型資訊  
+ **Mintypeinfo**選項可以減少指定區域的偵錯資訊。 這項資訊的容量相當可觀，會影響到 .pdb 和 .obj 檔案。 您無法在 mintypeinfo 區域中偵錯類別和結構。 使用 mintypeinfo 選項可避免下列警告：  
   
 ```  
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information  
 ```  
   
- 如需詳細資訊，請參閱[啟用最少重建](../build/reference/gm-enable-minimal-rebuild.md) \(\/Gm\) 編譯器選項。  
+ 如需詳細資訊，請參閱[啟用最少重建](../build/reference/gm-enable-minimal-rebuild.md)(/ Gm) 編譯器選項。  
   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>另請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - allocators/stdext::max_none::full
 - allocators/stdext::max_none::released
 - allocators/stdext::max_none::saved
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::max_none
 - stdext::max_none [C++], allocated
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 3a1d8f9a133c2ad07fbd46113d7e90d58066993c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: ffa6da15f19d3215080d7a1e5355134409765da5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="maxnone-class"></a>max_none 類別
 描述 [max 類別](../standard-library/allocators-header.md)物件，此物件可將 [freelist](../standard-library/freelist-class.md) 物件的長度上限限制為零。  
@@ -134,7 +131,6 @@ void saved();
   
 ## <a name="see-also"></a>另請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

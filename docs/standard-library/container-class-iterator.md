@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- iterator method
+dev_langs: C++
+helpviewer_keywords: iterator method
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 65d4a32b4b1215c89cfd4bd55e71a15ccf84200e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 3484067ffd35b9f4212dcfe7ee7bd147267e7ffe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="container-classiterator"></a>容器類別::iterator
 > [!NOTE]
@@ -56,4 +38,3 @@ typedef T5 iterator;
   
 ## <a name="see-also"></a>另請參閱  
  [範例容器類別](../standard-library/sample-container-class.md)
-

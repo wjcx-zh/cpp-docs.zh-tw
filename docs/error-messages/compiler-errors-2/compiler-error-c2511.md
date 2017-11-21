@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2511
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2511
+f1_keywords: C2511
+dev_langs: C++
+helpviewer_keywords: C2511
 ms.assetid: df999efe-fe2b-418b-bb55-4af6a0592631
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 1ba01f808fb4dd618291777c1da7490b3b95af3c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2511"></a>編譯器錯誤 C2511
 'identifier': 多載 'class' 中找不到的成員函式  

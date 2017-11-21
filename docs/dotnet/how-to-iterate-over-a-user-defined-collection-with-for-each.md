@@ -1,31 +1,30 @@
 ---
-title: "如何：使用 for each 反覆查看使用者定義的集合 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "集合, 反覆"
+title: "如何： 反覆查看使用者定義集合與每個 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: collections, iterating over
 ms.assetid: 0efd9e3c-d7bb-4f6c-9938-e0e65d191433
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 297d11731a16ecbe69793f2a29944470206acc18
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 for each 反覆查看使用者定義的集合
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-對於 Managed 類別的集合，它需要傳回控制代碼列舉值類別或介面的非私用 GetEnumerator 函式。列舉值類別必須包含非靜態 MoveNext 函式和目前屬性的宣告。  
+# <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>如何：使用 for each 反覆查看使用者定義的集合
+Managed 集合的類別需要一個將控制代碼傳回至列舉值類別或介面的非私用 GetEnumerator 函式。  列舉值類別必須包含非靜態 MoveNext 函式和 Current 屬性的宣告。  
   
-## 範例  
- 與參考型別的簡單使用者定義的集合。  
+## <a name="example"></a>範例  
+ 簡單的使用者定義集合與參考類型。  
   
 ```  
 // for_each_user_defined_collections.cpp  
@@ -99,6 +98,9 @@ int main() {
 }  
 ```  
   
-  **Return Code: 0**   
-## 請參閱  
- [for each、in](../dotnet/for-each-in.md)
+```Output  
+Return Code: 0  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [for each, in](../dotnet/for-each-in.md)

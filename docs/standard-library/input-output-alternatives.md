@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- I/O [C++], alternatives
+dev_langs: C++
+helpviewer_keywords: I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 45cec9f7c4c45ef12c7d22a7c3c311f7ce3f4cb5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: edf17c4524fd42fd0db327aca9de85e9d63eb651
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="inputoutput-alternatives"></a>輸入/輸出替代項目
 Visual C++ 提供數個 I/O 程式設計替代方案：  
@@ -57,5 +39,4 @@ Visual C++ 提供數個 I/O 程式設計替代方案：
   
 ## <a name="see-also"></a>另請參閱  
  [什麼是資料流](../standard-library/what-a-stream-is.md)
-
 

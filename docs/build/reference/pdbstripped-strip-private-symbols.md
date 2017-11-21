@@ -1,79 +1,79 @@
 ---
-title: "/PDBSTRIPPED (移除專用符號) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbstripped"
-  - "VC.Project.VCLinkerTool.StripPrivateSymbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".pdb 檔案, 移除私用符號"
-  - "/PDBSTRIPPED 連結器選項"
-  - "PDB 檔案, 移除私用符號"
-  - "PDBSTRIPPED 連結器選項"
-  - "-PDBSTRIPPED 連結器選項"
+title: "-PDBSTRIPPED （移除專用符號） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /pdbstripped
+- VC.Project.VCLinkerTool.StripPrivateSymbols
+dev_langs: C++
+helpviewer_keywords:
+- /PDBSTRIPPED linker option
+- -PDBSTRIPPED linker option
+- .pdb files, stripping private symbols
+- PDB files, stripping private symbols
+- PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 73288ef6bf6881d946e4ec4bdd94e9b85cc0e81a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /PDBSTRIPPED (移除專用符號)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (移除專用符號)
 ```  
 /PDBSTRIPPED:pdb_file_name  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  其中：  
   
- *pdb\_file\_name*  
- 是使用者對連結器所建立移除專用符號的程式資料庫 \(PDB\) 所指定的名稱。  
+ *pdb_file_name*  
+ 已移除的程式資料庫 (PDB) 連結器建立的使用者指定的名稱。  
   
-## 備註  
- 當您以任何會產生 PDB 檔的編譯器或連結器選項 \([\/DEBUG](../../build/reference/debug-generate-debug-info.md)、[\/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)、\/Zd 或 \/Zi\) 建置程式影像時，\/PDBSTRIPPED 選項會建立第二個程式資料庫 \(PDB\) 檔。  第二個 PDB 檔會省略您不想要出貨給客戶的符號。  第二個 PDB 檔只會包含：  
+## <a name="remarks"></a>備註  
+ 當您建置程式映像與任何編譯器或連結器產生 PDB 檔的選項時，/PDBSTRIPPED 選項會建立第二個程式資料庫 (PDB) 檔案 ([偵錯](../../build/reference/debug-generate-debug-info.md)， [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md)，/Zd 或 /Zi)。 第二個 PDB 檔會省略您不想要出貨給客戶的符號。 只會包含第二個 PDB 檔案：  
   
 -   公用符號  
   
--   目的檔清單以及它們所提供的可執行檔部分  
+-   目的檔和它們所提供的可執行檔的部分清單  
   
--   用來周遊堆疊的框架指標最佳化 \(FPO\) 偵錯記錄  
+-   用來周遊堆疊框架指標最佳化 (FPO) 偵錯記錄  
   
- 移除專用符號的 PDB 不會包含：  
+ 將不會包含已移除的 PDB 檔案：  
   
 -   型別資訊  
   
 -   行號資訊  
   
--   每一目的檔的 CodeView 符號 \(例如函式、區域及靜態資料的符號\)  
+-   每個物件檔案 CodeView 符號，例如用於函式、 區域變數和靜態資料  
   
- 當您使用 \/PDBSTRIPPED 時，仍然會產生完整的 PDB 檔。  
+ 當您使用 /PDBSTRIPPED，仍會產生完整的 PDB 檔案。  
   
- 如果您不建立 PDB 檔，\/PDBSTRIPPED 便會被忽略。  
+ 如果您未建立 PDB 檔案，則會忽略 /PDBSTRIPPED。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[連結器\] 資料夾。  
+2.  按一下**連結器**資料夾。  
   
-3.  按一下 \[偵錯\] 屬性頁。  
+3.  按一下**偵錯**屬性頁。  
   
-4.  修改 \[移除專用符號\] 屬性。  
+4.  修改**移除專用符號**屬性。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

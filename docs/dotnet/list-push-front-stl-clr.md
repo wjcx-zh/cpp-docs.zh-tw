@@ -1,41 +1,39 @@
 ---
-title: "list::push_front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::push_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_front 成員 [STL/CLR]"
+title: "list:: push_front (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::push_front
+dev_langs: C++
+helpviewer_keywords: push_front member [STL/CLR]
 ms.assetid: 47525641-1139-44fc-ac62-bdc04876d9e0
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28c2526b15e0c6049b1f279b76d48455bdc82ac6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# list::push_front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listpushfront-stlclr"></a>list::push_front (STL/CLR)
 加入新的第一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void push_front(value_type val);  
 ```  
   
-## 備註  
- 成員函式在受控制序列開頭插入具有值 `val` 的項目。  您可以使用它在清單加入另一個項目。  
+## <a name="remarks"></a>備註  
+ 成員函式插入值的項目`val`受控制序列的開頭。 您可以使用它前面加上另一個項目清單。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_push_front.cpp   
@@ -58,14 +56,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::pop\_back](../dotnet/list-pop-back-stl-clr.md)   
- [list::pop\_front](../dotnet/list-pop-front-stl-clr.md)   
- [list::push\_back](../dotnet/list-push-back-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
+ [list:: pop_front (STL/CLR)](../dotnet/list-pop-front-stl-clr.md)   
+ [list::push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)

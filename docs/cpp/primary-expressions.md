@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 980be1e393fab633f3417dcc250c1820def3ff90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="primary-expressions"></a>主要運算式
 主要運算式為更複雜運算式的建置組塊。 它們是常值、名稱，以及範圍解析運算子 (`::`) 所限定的名稱。  主要運算式可以具有下列任何形式：  
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/25/2017
   
  **這**關鍵字是類別物件的指標。 它可在非靜態成員函式中使用，並且指向針對其叫用函式的類別執行個體。 **這**關鍵字不能用在類別成員函式主體之外。  
   
- 型別**這**指標`type` ** \*const** (其中`type`是類別名稱) 未特別修改函式內**此**指標。 下列範例會示範成員函式宣告和類型的**這**:  
+ 型別**這**指標`type`  **\*const** (其中`type`是類別名稱) 未特別修改函式內**此**指標。 下列範例會示範成員函式宣告和類型的**這**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

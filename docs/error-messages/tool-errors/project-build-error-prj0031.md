@@ -1,32 +1,29 @@
 ---
-title: "專案建置錯誤 PRJ0031 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0031"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0031"
+title: "專案建置錯誤 PRJ0031 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0031
+dev_langs: C++
+helpviewer_keywords: PRJ0031
 ms.assetid: b42435c6-e570-4f8e-9ad5-12a7ea69ccb2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5aafec3bb4213ec8785cb6f05e0cc5e2ecc72e4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 專案建置錯誤 PRJ0031
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-檔案 'file' 自訂建置步驟的 'Outputs' 屬性所含的 'macro' 計算結果為 'macro\_expansion'。  
+# <a name="project-build-error-prj0031"></a>專案建置錯誤 PRJ0031
+自訂建置的 '輸出' 屬性 'macro_expansion' 跳檔案 'file' 包含 '巨集' 而它評估。  
   
- 檔案的自訂建置步驟可能由於巨集評估問題而造成不良輸出。  此錯誤也可能表示檔案路徑的格式錯誤，其檔案路徑中包含不正確的字元或字元組合。  
+ 自訂建置步驟的檔案有可能是因為巨集評估問題的錯誤輸出。 這項錯誤也可能表示的格式不正確的路徑，是包含字元或檔案路徑中不合法的字元的組合。  
   
- 若要解決此問題，請修正巨集或修正路徑規格。  評估的路徑是專案目錄的絕對路徑。
+ 若要解決這個錯誤，請修正巨集，或修正路徑規格。 評估的路徑是從專案目錄的絕對路徑。

@@ -1,66 +1,65 @@
 ---
-title: "nullptr  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nullptr keyword (C++)"
-  - "nullptr keyword [C++]"
+title: "nullptr （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- __nullptr keyword (C++)
+- nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 114ea9d40c5d4e8e1f271e7b099bd4b4075dbccd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# nullptr  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`nullptr` 關鍵字表示 *null 指標值*。  使用空指標值表示物件控制碼、內部指標或原生指標型別不指向物件。  
+# <a name="nullptr--c-component-extensions"></a>nullptr (C++ 元件擴充功能)
+`nullptr`關鍵字表示*null 指標值*。 使用 null 指標值表示的物件控制代碼、 內部指標或原生指標類型不是指向物件。  
   
- 使用與 Managed 或機器碼的 `nullptr` 。  編譯器發出 Managed 和原生 null 指標值的適當，但不同的指示。  如需使用這個關鍵字 ISO 標準 C\+\+ 版本的詳細資訊，請參閱 [nullptr](../cpp/nullptr.md)。  
+ 使用`nullptr`managed 或原生程式碼。 編譯器會發出 managed 和原生的 null 指標值適用，但不同的指示。 使用此關鍵字的 ISO 標準 c + + 版本的相關資訊，請參閱[nullptr](../cpp/nullptr.md)。  
   
- `__nullptr` 關鍵字與 `nullptr` 相同的 Microsoft 專有的關鍵字有相同的意義，但僅套用至機器碼。  如果您使用與原生 C\/C\+\+ 程式碼的 `nullptr` 會編譯使用 [\/clr](../build/reference/clr-common-language-runtime-compilation.md) 編譯器選項，編譯器無法判斷 `nullptr` 是否表示一個原生或 Managed null 指標值。  若要讓要清除給編譯器，請使用 `nullptr` 指定 Managed 值或 `__nullptr` 指定的值。  
+ `__nullptr`關鍵字是具有相同的意義是 Microsoft 專有關鍵字`nullptr`，但適用於只有原生程式碼。 如果您使用`nullptr`與原生 C/c + + 程式碼，然後再使用編譯[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項，編譯器無法判斷是否`nullptr`指出原生或 managed 的 null 指標值。 若要讓您的意圖清除編譯器，請使用`nullptr`指定受管理的值或`__nullptr`指定原生值。  
   
- `nullptr`關鍵字相當於 Visual Basic 中的 `Nothing` 關鍵字和 C\# 的`null`。  
+ `nullptr`關鍵字相當於`Nothing`在 Visual Basic 和`null`C# 中。  
   
-## 使用方式  
- 可以使用 `nullptr` 關鍵字任何控制代碼，原生指標，或者可以使用函式引數。  
+## <a name="usage"></a>使用方式  
+ `nullptr`關鍵字可以使用任何可使用控制代碼、 原生指標或函式引數位置。  
   
- `nullptr` 關鍵字不是型別且不支援使用:  
+ `nullptr`關鍵字不是型別和不支援搭配使用：  
   
 -   [sizeof](../cpp/sizeof-operator.md)  
   
 -   [typeid](../cpp/typeid-operator.md)  
   
--   `throw nullptr` \(雖然 `throw (Object^)nullptr;` 會運作\)  
+-   `throw nullptr`(雖然`throw (Object^)nullptr;`運作)  
   
- `nullptr` 關鍵字可使用在下列指標型別的初始化:  
+ `nullptr`關鍵字可用於下列指標類型的初始設定：  
   
--   原生指標。  
+-   原生指標  
   
 -   Windows 執行階段控制代碼  
   
--   Managed 控制代碼  
+-   受管理的控制代碼  
   
--   Managed 內部指標  
+-   受管理的內部指標  
   
- `nullptr` 關鍵字可用來測試，如果指標或控制代碼參考是空的，才能使用參考。  
+ `nullptr`關鍵字可用來測試如果之前的參考用的指標或控制代碼的參考為 null。  
   
- 語言中應該正確解譯為錯誤檢查 null 指標值的函式呼叫。  
+ 使用錯誤檢查 null 指標值的語言之間的函式呼叫應該正確解譯。  
   
- 您無法使用控制代碼為零；只能使用 `nullptr` 。  常數 0 指派給物件控制代碼的實際 Boxed `Int32` 和 `Object^` 的轉換。  
+ 您無法初始化的控制代碼為零。只有`nullptr`可用。 常數 0 為物件控制代碼的作業會產生 boxed`Int32`和轉型至`Object^`。  
   
-## 範例  
- 下列程式碼範例示範，可使用 `nullptr` 關鍵字，原生控制代碼指標，或者可以使用函式引數。  然後範例會說明 `nullptr` 關鍵字可用來檢查參考，才能使用它。  
+## <a name="example"></a>範例  
+ 下列程式碼範例會示範`nullptr`關鍵字可用於控制代碼，而原生指標，或可以使用函式引數。 此範例示範和`nullptr`關鍵字可以用來檢查參考，才能使用。  
   
 ```  
 // mcpp_nullptr.cpp  
@@ -87,10 +86,10 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  **範例**  
   
- 下列程式碼範例會顯示包含 `nullptr` 和零在原生指標可以交替使用。  
+ 下列程式碼範例顯示`nullptr`和零可以交換使用原生指標。  
   
 ```  
 // mcpp_nullptr_1.cpp  
@@ -117,16 +116,22 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**  
- **pMyClass \=\= nullptr**  
- **pMyClass \=\= 0**   
-## 範例  
+```Output  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+  
+pMyClass == nullptr  
+  
+pMyClass == 0  
+```  
+  
+## <a name="example"></a>範例  
  **範例**  
   
- 下列程式碼範例中， `nullptr` 會解譯為對任何型別或原生指標的控制代碼以外的任何型別。  在使用控制代碼的函式多載的情況下對不同的型別，區分定義錯誤將會產生。  `nullptr` 必須明確轉型為型別。  
+ 下列程式碼範例顯示`nullptr`會解譯為任何類型的控制代碼或任何類型的原生指標。 如果函式多載與不同類型的控制代碼，會產生模稜兩可錯誤。 `nullptr`必須明確轉換成的型別。  
   
 ```  
 // mcpp_nullptr_2.cpp  
@@ -142,10 +147,10 @@ void f_null() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  **範例**  
   
- 下列程式碼範例表示，轉換為 `nullptr` 允許並傳回指標或控制代碼包含 `nullptr` 值的轉換型別。  
+ 下列程式碼範例會顯示該轉換`nullptr`允許和轉換類型，其中包含要傳回的指標或控點`nullptr`值。  
   
 ```  
 // mcpp_nullptr_3.cpp  
@@ -164,10 +169,10 @@ int main() {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  **範例**  
   
- 下列程式碼範例中， `nullptr` 可做為函式參數。  
+ 下列程式碼範例顯示`nullptr`可用來當作函式參數。  
   
 ```  
 // mcpp_nullptr_4.cpp  
@@ -182,13 +187,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **測試**   
-## 範例  
+```Output  
+test  
+```  
+  
+## <a name="example"></a>範例  
  **範例**  
   
- 下列程式碼範例中示範控制代碼宣告和明確初始化時，它們是預設初始化為 `nullptr`。  
+ 下列程式碼範例示範當宣告控制代碼，而未明確初始化，它們的預設初始化為`nullptr`。  
   
 ```  
 // mcpp_nullptr_5.cpp  
@@ -209,13 +217,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **NULL**   
-## 範例  
+```Output  
+NULL  
+```  
+  
+## <a name="example"></a>範例  
  **範例**  
   
- 下列程式碼範例表示 `nullptr` 可以指派至原生指標，在編譯 **\/clr**時。  
+ 下列程式碼範例顯示`nullptr`可以指派給原生指標中，當您使用編譯**/clr**。  
   
 ```  
 // mcpp_nullptr_6.cpp  
@@ -226,9 +237,9 @@ int main() {
 }  
 ```  
   
-## 需求  
- 編譯器選項:\(不需要；支援任何程式碼產生選項，包括 **\/ZW** 和 **\/clr**\)  
+## <a name="requirements"></a>需求  
+ 編譯器選項: (不需要，則所有的程式碼產生選項，包括支援**/ZW**和**/clr**)  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+## <a name="see-also"></a>另請參閱  
+ [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [nullptr](../cpp/nullptr.md)

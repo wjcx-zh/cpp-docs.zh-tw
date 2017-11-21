@@ -1,56 +1,55 @@
 ---
-title: "Creating a Device Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cursors [C++], creating"
-  - "icons [C++], creating"
-  - "display devices"
-  - "display devices, creating image"
-  - "images [C++], creating for display devices"
-  - "icons [C++], inserting"
+title: "建立裝置影像 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- cursors [C++], creating
+- icons [C++], creating
+- display devices
+- display devices, creating image
+- images [C++], creating for display devices
+- icons [C++], inserting
 ms.assetid: 5a536928-32df-4ace-beb1-1521ce3b871f
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a4f71b2877eaaa7af125918c7fe2b71bb031d39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Creating a Device Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您建立新的圖示或游標資源時，影像編輯器會先以特定的樣式建立影像 \(圖示為 32 × 32、16 色，游標為 32 × 32、單色\)。  然後您可依所需，針對不同的顯示裝置，將不同的大小和樣式的影像加入至初始圖示或游標並編輯每一個附加的影像。  您也可以對現有影像類型或是在圖形程式建立的點陣圖，執行剪貼動作來編輯影像。  如需 Windows 所使用之圖示大小的詳細資訊，請參閱 Windows SDK 文件中的[圖示](_win32_Icons_cpp)。  
+# <a name="creating-a-device-image-image-editor-for-icons"></a>建立裝置影像 (圖示影像編輯器)
+當您建立新的圖示或游標資源時，影像編輯器第一次建立特定的樣式 （32 × 32、 16 個色彩圖示和 32 × 單色 32） 的映像。 您可以將映像不同大小和樣式加入至初始圖示或游標，並視需要編輯每個額外的映像，適用於不同顯示裝置。 您也可以從現有的映像類型，或從圖形程式建立的點陣圖執行剪下和貼上作業，以編輯映像。  
   
- 當您在[影像編輯器](../mfc/image-editor-for-icons.md)中開啟圖示或游標資源時，依預設，會開啟與目前的顯示裝置最相符的影像。  
+ 當您開啟中的圖示或游標資源[影像編輯器](../windows/image-editor-for-icons.md)，預設會開啟大部分十分符合目前的顯示裝置的影像。  
   
-### 若要建立新的圖示或游標  
+### <a name="to-create-a-new-icon-or-cursor"></a>若要建立新的圖示或游標  
   
-1.  在[資源檢視](../windows/resource-view-window.md)中，以滑鼠右鍵按一下您的 .rc 檔，然後從捷徑功能表中選擇 \[**插入資源**\]   \(如果您的 .rc 檔中已經有現有的影像資源 \(例如游標\)，則只要以滑鼠右鍵按一下 \[**游標**\] 資料夾，然後從捷徑功能表中選取 \[**插入游標**\] 即可\)。  
+1.  在[資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇 **插入資源**從捷徑功能表。 (如果您已經有現有的映像資源在.rc 檔案中，例如資料指標中，您可以直接以滑鼠右鍵按一下**游標**資料夾，然後選取**插入游標**從捷徑功能表。)  
   
     > [!NOTE]
-    >  如果您的專案並未包含 .rc 檔案，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
+    >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在[插入資源對話方塊](../windows/add-resource-dialog-box.md)中，選取 \[**圖示**\] 或 \[**游標**\]，然後按一下 \[**新增**\]。  這會針對圖示建立含 32 × 32、16 色圖示的圖示資源。  針對游標則會建立 32 × 32、單色 \(2 色\) 影像。  
+2.  在[插入資源對話方塊](../windows/add-resource-dialog-box.md)，選取**圖示**或**游標**按一下**新增**。 圖示，這會與 32 x 32、 16 色圖示建立圖示資源。 資料指標，32 x 32，會建立單色 （2 色彩） 映像。  
   
-     如果 \[**插入資源**\] 對話方塊中的影像資源類型旁邊出現一個加號 \(**\+**\)，表示有工具列範本可以使用。  按一下加號展開範本清單，選取範本，然後按一下 \[**新增**\]。  
+     如果一個加號 (**+**) 中的影像資源類型旁邊會出現**插入資源**對話方塊中，表示工具列範本可供使用。 按一下加號，展開範本的清單，選取的範本，然後按一下**新增**。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
- **需求**  
+ **Requirements**  
   
- None  
+ 無  
   
-## 請參閱  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>另請參閱  
+ [圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)

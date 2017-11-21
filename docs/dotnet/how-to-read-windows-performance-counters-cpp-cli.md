@@ -1,42 +1,41 @@
 ---
-title: "如何：讀取 Windows 效能計數器 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "計數器, 讀取 Windows 效能計數器"
-  - "效能"
-  - "效能計數器"
-  - "效能計數器, 讀取 Windows 效能計數器"
-  - "效能監視"
-  - "效能監視, Windows 效能計數器"
-  - "效能, 計數器"
+title: "如何： 讀取 Windows 效能計數器 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance counters
+- performance counters, reading Windows performance counters
+- performance monitoring, Windows performance counters
+- performance, counters
+- counters, reading Windows performance counters
+- performance
+- performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3ad77e459d32ed0fc0b3798d2a37b4754d556f20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：讀取 Windows 效能計數器 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-某些應用程式和 Windows 子系統會透過 Windows 效能系統公開 \(Expose\) 效能資料。  這些計數器可以使用 <xref:System.Diagnostics.PerformanceCounterCategory> 和 <xref:System.Diagnostics.PerformanceCounter> 類別 \(Class\) 存取，而類別存在於 <xref:System.Diagnostics?displayProperty=fullName> 命名空間中。  
+# <a name="how-to-read-windows-performance-counters-ccli"></a>如何：讀取 Windows 效能計數器 (C++/CLI)
+某些應用程式和 Windows 子系統公開透過 Windows 的效能系統的效能資料。 這些計數器可以使用存取<xref:System.Diagnostics.PerformanceCounterCategory>和<xref:System.Diagnostics.PerformanceCounter>類別位於<xref:System.Diagnostics?displayProperty=fullName>命名空間。  
   
- 下列程式碼範例會使用這些類別擷取並顯示由 Windows 更新的計數器，以表示處理器忙碌的時間比例。  
+ 下列程式碼範例會擷取並顯示計數器所表示的處理器處於忙碌時間百分比 Windows 更新使用這些類別。  
   
 > [!NOTE]
->  您必須擁有系統管理員權限，才能在 Windows Vista 中執行本範例。  
+>  這個範例需要系統管理權限才能在 Windows Vista 上執行。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // processor_timer.cpp  
@@ -125,7 +124,7 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [Introduction to Monitoring Performance](http://msdn.microsoft.com/zh-tw/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Windows 作業](../dotnet/windows-operations-cpp-cli.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [監視效能簡介](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+ [Windows 作業 (C + + /CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,32 +1,30 @@
 ---
-title: "MakeAllocator 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAllocator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MakeAllocator 類別"
+title: "MakeAllocator 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAllocator
+dev_langs: C++
+helpviewer_keywords: MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0333dec823cb3996a9546bbfa702b3febf711a61
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# MakeAllocator 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="makeallocator-class"></a>MakeAllocator 類別
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -47,43 +45,43 @@ template<
 class MakeAllocator<T, true>;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 型別名稱。  
+ 類型名稱。  
   
  `hasWeakReferenceSupport`  
- `true` 以配置支援弱式參考的物件記憶體; `false` 以配置不支援弱式參考的物件記憶體。  
+ `true`為支援弱式參考; 的物件配置記憶體`false`不支援弱式參考的物件配置記憶體。  
   
-## 備註  
- 配置可啟動類別的記憶體，使用或不使用弱式參考支援。  
+## <a name="remarks"></a>備註  
+ 可啟用類別，或不支援弱式參考，會配置記憶體。  
   
- 覆寫 MakeAllocator 類別來實作一個使用者定義的記憶體配置配置模型。  
+ MakeAllocator 類別來實作使用者定義的記憶體配置模型來覆寫。  
   
- MakeAllocator 通常用於防止記憶體遺漏 \(Memory Leak\)，一旦在建構期間物件被擲回。  
+ MakeAllocator 通常用來避免記憶體流失，如果在建構期間擲回的物件。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
+|名稱|說明|  
+|----------|-----------------|  
 |[MakeAllocator::MakeAllocator 建構函式](../windows/makeallocator-makeallocator-constructor.md)|初始化 MakeAllocator 類別的新執行個體。|  
-|[MakeAllocator::~MakeAllocator 解構函式](../windows/makeallocator-tilde-makeallocator-destructor.md)|取消初始化 MakeAllocator 類別目前的執行個體。|  
+|[MakeAllocator::~MakeAllocator 解構函式](../windows/makeallocator-tilde-makeallocator-destructor.md)|取消初始化 MakeAllocator 類別的目前執行個體。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
-|--------|--------|  
-|[MakeAllocator::Allocate 方法](../windows/makeallocator-allocate-method.md)|配置記憶體並將其與目前 MakeAllocator 物件做關聯。|  
-|[MakeAllocator::Detach 方法](../windows/makeallocator-detach-method.md)|從目前的 MakeAllocator 物件中分隔 [Allocate](../windows/makeallocator-allocate-method.md) 方法所配置的記憶體。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[MakeAllocator::Allocate 方法](../windows/makeallocator-allocate-method.md)|配置記憶體，並將它與目前 MakeAllocator 物件產生關聯。|  
+|[MakeAllocator::Detach 方法](../windows/makeallocator-detach-method.md)|取消關聯所配置的記憶體[配置](../windows/makeallocator-allocate-method.md)從目前 MakeAllocator 物件的方法。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `MakeAllocator`  
   
-## 需求  
- **標題:** implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

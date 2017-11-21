@@ -1,32 +1,30 @@
 ---
-title: "inplace_merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inplace_merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inplace_merge 函式 [STL/CLR]"
+title: "inplace_merge (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inplace_merge
+dev_langs: C++
+helpviewer_keywords: inplace_merge function [STL/CLR]
 ms.assetid: e6948c03-8c5b-4a7c-915c-0a531946a321
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad06f2b7917413617adef6a151e75fb848e8da3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# inplace_merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-合併兩個連續排序範圍內的元素至單一排序的範圍，排序準則可能由二進位述詞指定。  
+# <a name="inplacemerge-stlclr"></a>inplace_merge (STL/CLR)
+將兩個連續排序範圍內的項目結合成單一排序範圍，其中順序準則可由二元述詞指定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _BidIt> inline  
@@ -36,13 +34,13 @@ template<class _BidIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式產生相同的行為做為 STL 函式 `inplace_merge` 。如需詳細資訊，請參閱 [inplace\_merge](../Topic/inplace_merge.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`inplace_merge`如需詳細資訊，請參閱[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)。  
   
-## 需求  
- **標題:** \<cliext\/演算法\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
- **命名空間:** cliext  
+ **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

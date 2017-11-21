@@ -1,129 +1,128 @@
 ---
-title: "變更繪圖程式碼 (ATL 教學課程，第 4 部分) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_MIN_CRT 巨集"
+title: "變更繪圖程式碼 (ATL 教學課程，第 4 部分) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords: _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-caps.latest.revision: 18
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bc0c5ab0a76d77898b2249f63c699f76b10a628b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 變更繪圖程式碼 (ATL 教學課程，第 4 部分)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-根據預設，控制項的繪圖程式碼顯示方形和文字 **PolyCtl**。  在這個步驟中，您會變更程式碼顯示更多的事情。  是包含下列工作的:  
+# <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>變更繪圖程式碼 (ATL 教學課程，第 4 部分)
+根據預設，控制項的繪圖程式碼會顯示與文字**PolyCtl**。 在此步驟中，您將變更的程式碼，以顯示更有趣的東西。 涉及下列工作：  
   
 -   修改標頭檔  
   
--   修改 `OnDraw` 函式  
+-   修改`OnDraw`函式  
   
--   將方法計算多邊形點  
+-   將方法加入計算多邊形點數  
   
--   初始化填滿色彩  
+-   初始化的填滿色彩  
   
-## 修改標頭檔  
- 藉由加入支援開始數學函式 `sin` 和 `cos`，將使用的建立陣列儲存位置計算多邊形、，和。  
+## <a name="modifying-the-header-file"></a>修改標頭檔  
+ 藉由新增數學函式支援啟動`sin`和`cos`，用來計算多邊形的點，並藉由建立陣列來儲存。  
   
-#### 修改標頭檔  
+#### <a name="to-modify-the-header-file"></a>若要修改的標頭檔  
   
-1.  將線條 `#include _<math.h_>` 至 PolyCtl.h 頂端。  在檔案頂端看起來應該如下所示:  
+1.  將行加入`#include <math.h>`PolyCtl.h 的頂端。 檔案最上方看起來應該像這樣：  
   
-     [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]  
   
-2.  一旦多邊形的計算，則會在陣列中儲存型別 `POINT`，所以，請在 `m_nSides` 的定義之後。PolyCtl.h 的將陣列:  
+2.  一旦計算多邊形點，它們會儲存在類型的陣列`POINT`，因此之後的定義中加入陣列`m_nSides`PolyCtl.h 中：  
   
-     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_2.h)]  
+     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_2.h)]  
   
-## 修改 OnDraw 方法  
- 現在您應該修改在 PolyCtl.h 的 `OnDraw` 方法。  程式碼將建立自己的繪製多邊形，然後呼叫 `Ellipse` 和 `Polygon` Win32 API 函式來執行實際繪製的新筆刷的畫筆和筆刷。  
+## <a name="modifying-the-ondraw-method"></a>修改 OnDraw 方法  
+ 現在您應該修改`OnDraw`PolyCtl.h 中的方法。 您將加入的程式碼會建立新的畫筆和筆刷用來繪製您多邊形、，然後呼叫`Ellipse`和`Polygon`Win32 API 函式來執行實際的繪圖。  
   
-#### 修改 OnDraw 函式  
+#### <a name="to-modify-the-ondraw-function"></a>若要修改 OnDraw 函式  
   
-1.  使用下列程式碼取代 PolyCtl.h 的現有 `OnDraw` 方法:  
+1.  取代現有`OnDraw`PolyCtl.h 中以下列程式碼的方法：  
   
-     [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]  
   
-## 將方法計算多邊形點  
- 加入方法，呼叫 `CalcPoints`，會計算點座標組成周邊多邊形。  這些計算視傳遞至函式的變數。  
+## <a name="adding-a-method-to-calculate-the-polygon-points"></a>將方法加入計算多邊形點數  
+ 加入方法，稱為`CalcPoints`，將會計算組成多邊形的外圍的點的座標。 這些計算會根據 RECT 變數傳遞至函式。  
   
-#### 將 CalcPoints 方法  
+#### <a name="to-add-the-calcpoints-method"></a>若要加入 CalcPoints 方法  
   
-1.  將的宣告變更 `CalcPoints``CPolyCtl` 類別的 `IPolyCtl` 公開部分在 PolyCtl.h 的:  
+1.  新增的宣告`CalcPoints`至`IPolyCtl`公用區段`CPolyCtl`PolyCtl.h 中的類別：  
   
-     [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_4.h)]  
+     [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_4.h)]  
   
-     `CPolyCtl` 類別的 public 區段的最後一部分如下所示:  
+     公用區段的最後一部分`CPolyCtl`類別看起來像這樣：  
   
-     [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_5.h)]  
+     [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_5.h)]  
   
-2.  將 `CalcPoints` 函式的實作加入至 PolyCtl.cpp 的結尾:  
+2.  加入這項實作`CalcPoints`PolyCtl.cpp 結尾的函式：  
   
-     [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]  
   
-## 初始化填滿色彩  
- 使用預設色彩的 `m_clrFillColor` 。  
+## <a name="initializing-the-fill-color"></a>初始化的填滿色彩  
+ 初始化`m_clrFillColor`以預設的色彩。  
   
-#### 初始化填滿色彩  
+#### <a name="to-initialize-the-fill-color"></a>若要初始化的填滿色彩  
   
-1.  使用綠色，則預設色彩將這一行程式碼加入至 PolyCtl.h 的 `CPolyCtl` 建構函式:  
+1.  做為綠色的預設色彩加入至這一行`CPolyCtl`PolyCtl.h 中的建構函式：  
   
-     [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_7.h)]  
+     [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_7.h)]  
   
- 建構函式現在看起來就像這樣:  
+ 建構函式現在看起來像這樣：  
   
- [!code-cpp[NVC_ATL_Windowing#54](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_8.h)]  
+ [!code-cpp[NVC_ATL_Windowing#54](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_8.h)]  
   
-## 建置和測試控制項  
- 重新建置控制項。  判斷 PolyCtl.htm 檔案中 \[**建置**\] 功能表關閉，若已開啟，然後按一下 \[**建立多邊形**\] 。  您可以再次檢視控制項從 PolyCtl.htm 網頁，不過，這次使用 ActiveX 控制項測試容器。  
+## <a name="building-and-testing-the-control"></a>建置和測試控制項  
+ 重建控制項。 請確定它是否仍然開啟，請關閉 PolyCtl.htm 檔案，然後按一下**建置多邊形**上**建置**功能表。 您可以檢視控制項再次 PolyCtl.htm 頁面上，但這次使用 ActiveX 控制項測試容器。  
   
-#### 使用 ActiveX 控制項測試容器  
+#### <a name="to-use-the-activex-control-test-container"></a>若要使用 ActiveX 控制項測試容器  
   
-1.  建置並啟動 ActiveX 控制項測試容器。  如需詳細資訊，請參閱 [TSTCON 範例:ActiveX 控制項測試容器](../top/visual-cpp-samples.md)。  
+1.  建置和啟動 ActiveX 控制項測試容器。 如需詳細資訊，請參閱[TSTCON 範例： ActiveX 控制項測試容器](../visual-cpp-samples.md)。  
   
-2.  在測試容器，請在 \[**編輯**\] 功能表上，按一下 \[**插入新的控制項**\]。  
+2.  測試容器中上**編輯**功能表上，按一下 **插入新控制項**。  
   
-3.  找出控制項，會呼叫 `PolyCtl Class`並按一下 \[**確定**\]。  您會在圓圈中有一個綠色三角形。  
+3.  找不到您的控制項，將呼叫`PolyCtl Class`，然後按一下**確定**。 您會看到一個圓圈中綠色的三角形。  
   
- 嘗試變更邊數依照下一個程序。  若要修改在雙重介面的屬性從測試容器的內部，請使用 **Invoke Methods**。  
+ 請遵循下一個程序變更邊數。 若要修改測試容器中的雙重介面上的屬性，請使用**叫用方法**。  
   
-#### 修改控制項的屬性從測試容器內  
+#### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>若要修改從內測試容器的控制項的屬性  
   
-1.  在測試容器，請按一下 \[**叫用方法**\] 在 \[**控制**\] 功能表。  
+1.  在測試容器中，按一下 **叫用方法**上**控制項**功能表。  
   
-     \[**叫用方法**\] 對話方塊隨即顯示。  
+     **叫用方法**對話方塊隨即出現。  
   
-2.  選取 **Sides** 屬性的 **PropPut** 版本從 \[**方法名稱**\] 下拉式清單方塊。  
+2.  選取**PropPut**版本**邊**屬性從**方法名稱**下拉式清單方塊。  
   
-3.  在  方塊中輸入 \[**參數值**\] 的 `5` \[**設定值**\]，按一下 ，然後按一下 \[**叫用**\]。  
+3.  型別`5`中**參數值**方塊中，按一下**設定值**，然後按一下**Invoke**。  
   
- 請注意控制項並不會變更。  雖然您可以設定 `m_nSides` 變數內部變更的邊數，這不會導致控制項重新繪製。  如果您切換至其他應用程式再切換回測試容器，您會發現控制項重新繪製了其中的正確數目的。  
+ 請注意，此控制項不會變更。 雖然您邊數從內部變更設定`m_nSides`變數，這不會造成重新繪製控制項。 如果您切換至另一個應用程式，並再切換回測試容器，您會發現控制項已重新繪製，而且具有正確的側邊的數目。  
   
- 若要修正這個問題，請將呼叫加入至 `FireViewChange` 函式，定義在 `IViewObjectExImpl`，因此，在設定之後的數目。  如果控制項在其視窗內執行， `FireViewChange` 會直接呼叫 `InvalidateRect` 方法。  如果控制項是無視窗 `InvalidateRect` 執行，則將呼叫容器的位置介面。  這會強制控制項重新自我繪製。  
+ 若要修正這個問題，將呼叫加入`FireViewChange`函式，定義於`IViewObjectExImpl`之後設定邊數。 如果控制項在自己的視窗中，執行`FireViewChange`會呼叫`InvalidateRect`直接的方法。 如果控制項正在執行無視窗，`InvalidateRect`將容器的站台介面上呼叫方法。 這會強制重新繪製它自己的控制項。  
   
-#### 將呼叫加入至 FireViewChange  
+#### <a name="to-add-a-call-to-fireviewchange"></a>若要加入 FireViewChange 呼叫  
   
-1.  藉由將呼叫加入至 PolyCtl.cpp 更新 `FireViewChange``put_Sides` 方法。  當您完成時， `put_Sides` 方法看起來應該如下所示:  
+1.  加入呼叫以更新 PolyCtl.cpp`FireViewChange`至`put_Sides`方法。 當您完成時，`put_Sides`方法應該看起來像這樣：  
   
-     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/CPP/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]  
   
- 在加入 `FireViewChange`之後，重新建置並再試一次控制項在 ActiveX 控制項測試容器。  這次，當您變更邊數並按一下 `Invoke`時，應該立即看到控制項的變更。  
+ 在新增之後`FireViewChange`，重建並再試一次在 ActiveX 控制項測試容器中的控制項。 當您變更邊數，並按一下此時間`Invoke`，您應該會看到立即變更的控制項。  
   
- 在下一個步驟中，您會將事件。  
+ 在下一個步驟中，您會加入事件。  
   
- [回到步驟 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124; [在 &#91;步驟 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
+ [回到步驟 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124;[至步驟 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)   
  [使用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)
+

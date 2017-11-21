@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::cancel
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::create_linked_source
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token_source::get_token
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token_source class
+dev_langs: C++
+helpviewer_keywords: cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f41a4a21af5bc37ab612221152b8311a5a91d914
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: d5335b36e9ac80399a965c3717fcc0f5c2bab1fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 類別
 `cancellation_token_source` 類別代表取消某個可取消作業的能力。  
@@ -58,7 +40,7 @@ class cancellation_token_source;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[cancellation_token_source](#ctor)|多載。 建構新的 `cancellation_token_source`。 來源可用於將某個可取消作業的取消加上標幟。|  
 |[~ cancellation_token_source 解構函式](#dtor)||  
@@ -73,7 +55,7 @@ class cancellation_token_source;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)||  
 |[operator=](#operator_eq)||  
@@ -83,7 +65,7 @@ class cancellation_token_source;
  `cancellation_token_source`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** pplcancellation_token.h  
+ **標頭：** pplcancellation_token.h  
   
  **命名空間：** concurrency  
   
@@ -134,10 +116,10 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
  語彙基元，其取消作業將會導致取消傳回的語彙基元來源。 請注意，傳回的語彙基元來源也可以獨立取消，不受此參數包含的來源影響。  
   
  `_Begin`  
- C + + 標準程式庫迭代器的語彙基元範圍的開頭對應於接聽取消之語彙。  
+ C + + 標準程式庫迭代器的語彙基元範圍的開頭對應來接聽取消。  
   
  `_End`  
- C + + 標準程式庫迭代器對應至權杖的範圍結尾接聽取消之語彙。  
+ C + + 標準程式庫迭代器對應的語彙基元範圍的結束接聽取消。  
   
 ### <a name="return-value"></a>傳回值  
  `cancellation_token_source`，其會在 `_Src` 參數提供的語彙基元已取消時取消。  
@@ -190,4 +172,3 @@ bool operator== (const cancellation_token_source& _Src) const;
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

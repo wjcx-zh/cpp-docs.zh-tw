@@ -1,31 +1,31 @@
 ---
-title: "CLR 參考類別物件的宣告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "參考類型, CLR"
-  - "類型 [C++], 參考類型"
+title: "CLR 參考類別物件的宣告 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- types [C++], reference types
+- reference types, CLR
 ms.assetid: 6d64f746-3715-4948-ada3-88859f4150e4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 973500cc276d95e523859a5fcc1b9a5f7a707bb0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CLR 參考類別物件的宣告
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，宣告和產生參考類別型別之物件的語法已變更。  
+# <a name="declaration-of-a-clr-reference-class-object"></a>CLR 參考類別物件的宣告
+語法來宣告和具現化參考類別類型的物件已從 Managed Extensions for c + + Visual c + +。  
   
- 在 Managed Extensions 中，會使用 ISO\-C\+\+ 指標語法宣告參考類別型別物件，而且可以選擇將 `__gc` 關鍵字放在星號 \(`*`\) 左邊。  例如，下列是在 Managed Extensions 語法中的各種參考類別型別物件宣告：  
+ 在 Managed Extensions，參考類別類型物件宣告使用 ISO c + + 指標語法，以選擇性使用`__gc`星形左邊的關鍵字 (`*`)。 例如，以下是參考的各種不同類別類型物件宣告在 Managed Extensions 語法：  
   
 ```  
 public __gc class Form1 : public System::Windows::Forms::Form {  
@@ -45,15 +45,15 @@ private:
 };  
 ```  
   
- 在新語法中，您會使用新的宣告式語彙基元 \(Token\) \(`^`\) 宣告參考類別型別物件。這個語彙基元的正式名稱是「*追蹤控制代碼*」\(Tracking Handle\)，但是通常會非正式地叫做「*帽型符號*」\(Hat\)\(追蹤這個形容詞表示參考型別位於 CLR 堆積中，因此在記憶體回收堆積壓縮期間可以無障礙地移動位置\)。  追蹤控制代碼在執行階段會無障礙地進行更新。  在[實值類型語意](../dotnet/value-type-semantics.md)中會討論下列兩個相似的概念：「*追蹤參考*」\(`%`\) 和「*內部指標*」\(`interior_ptr<>`\)。  
+ 您可以在新語法中，宣告參考類別類型物件來使用新的宣告式語彙基元 (`^`) 稱為正式*追蹤控制代碼*以及非正式地*hat*。 （追蹤形容詞表示參考型別坐落於 CLR 堆積，因此就可以無障礙地移動位置記憶體回收集合堆積的壓縮時。 執行階段期間，會以透明的方式更新追蹤控制代碼。 兩個類似的概念並*追蹤參考*(`%`)，而*內部指標*(`interior_ptr<>`) 中討論[實值類型語意](../dotnet/value-type-semantics.md)。  
   
- 要從重複使用 ISO\-C\+\+ 指標語法中移出宣告式語法，主要的原因如下：  
+ 若要移動的宣告式語法，從 ISO c + + 指標語法重複使用的主要原因如下：  
   
--   使用指標語法不允許將多載運算子直接套用到參考物件。  相反地，您必須使用運算子的內部名稱來呼叫該運算子，例如使用 `rV1->op_Addition(rV2)`，而不是比較容易了解的 `rV1+rV2`。  
+-   使用指標語法不允許直接套用至參考物件的多載的運算子。 相反地，其中一個必須利用它的內部名稱，例如呼叫運算子`rV1->op_Addition(rV2)`而不是更具直覺性`rV1+rV2`。  
   
--   記憶體回收堆積上儲存的物件不允許進行一些指標作業，例如轉型和指標算術。  追蹤控制代碼的概念比較能夠表達 CLR 參考型別的本質。  
+-   不允許記憶體回收上儲存的物件指標作業，例如轉型和指標算術一些收集堆積。 更好的追蹤控制代碼的概念會擷取 CLR 參考類型的本質。  
   
- 不需要而且不支援追蹤控制代碼上的 `__gc` 修飾詞 \(Modifier\)。  物件本身的用法不變，一樣是透過指標成員選取運算子 \(`->`\) 存取成員。  例如，下列是將之前的 Managed Extensions 程式碼範例轉譯成新語法：  
+ `__gc`追蹤控制代碼修飾詞是不必要的而且不支援。 物件本身的使用不會變更。它仍會透過指標成員選取運算子存取成員 (`->`)。 例如，以下是轉譯成新語法的上一個 Managed Extensions 程式碼範例：  
   
 ```  
 public ref class Form1: public System::Windows::Forms::Form {  
@@ -72,8 +72,8 @@ private:
 };  
 ```  
   
-## CLR 堆積上的物件動態配置  
- 在 Managed Extensions 中，是否存在兩個 `new` 運算式以便在原生和 Managed 堆積之間配置，在過去多數是一目了然的。  在幾乎任何情況下，編譯器都能夠利用內容來判斷要從原生或 Managed 堆積配置記憶體。  例如：  
+## <a name="dynamic-allocation-of-an-object-on-the-clr-heap"></a>CLR 堆積上物件的動態配置  
+ 在 Managed Extensions，有兩個`new`運算式之間的原生和 managed 堆積配置已大致。 在幾乎在所有情況下，編譯器就能夠使用內容來判斷是否要從原生或 managed 堆積配置記憶體。 例如：  
   
 ```  
 Button *button1 = new Button; // OK: managed heap  
@@ -81,7 +81,7 @@ int *pi1 = new int;           // OK: native heap
 Int32 *pi2 = new Int32;       // OK: managed heap  
 ```  
   
- 當您不想要內容堆積配置時，您可以用 `__gc` 或 `__nogc` 關鍵字指示編譯器。  在新語法中，會藉由引入 `gcnew` 關鍵字使兩個新運算式的個別本質變成明確。  例如，之前的三種宣告在新語法中看起來如下所示：  
+ 當您不想內容堆積配置時，您無法直接使用編譯器`__gc`或`__nogc`關鍵字。 在新語法中，不同性質的兩個新的運算式會明確的介紹`gcnew`關鍵字。 例如，先前的三個宣告新語法中看起來如下所示：  
   
 ```  
 Button^ button1 = gcnew Button;        // OK: managed heap  
@@ -89,7 +89,7 @@ int * pi1 = new int;                   // OK: native heap
 Int32^ pi2 = gcnew Int32; // OK: managed heap  
 ```  
   
- 下列是在上面區段中宣告的 `Form1` 成員的 Managed Extensions 初始化：  
+ 以下是管理擴充功能的初始化`Form1`上一節中所宣告的成員：  
   
 ```  
 void InitializeComponent() {  
@@ -102,7 +102,7 @@ void InitializeComponent() {
 }  
 ```  
   
- 下列是重新轉型至新語法的相同初始化。  請注意，如果參考型別是 `gcnew` 運算式的目標，則不需要帽型符號。  
+ 以下是相同的初始化重新轉換成新的語法。 請注意，在 hat 並不需要參考型別時，它的目標`gcnew`運算式。  
   
 ```  
 void InitializeComponent() {  
@@ -115,8 +115,8 @@ void InitializeComponent() {
 }  
 ```  
   
-## No 物件的追蹤參考  
- 在新語法中，`0` 不再代表 Null 位址，而被視為整數，與 `1`、`10` 或 `100` 一樣。  新的特殊語彙基元 \(Token\) 代表追蹤參考的 Null 值。  例如，在 Managed Extensions 中，會初始化參考型別而不定址任何物件，如下所示：  
+## <a name="a-tracking-reference-to-no-object"></a>沒有物件的追蹤參考  
+ 在新語法中，`0`不再代表 null 的位址，但會被視為是整數，與相同`1`， `10`，或`100`。 新的特殊 token 代表追蹤參考的 null 值。 例如，在 Managed Extensions，初始化參考類型，來不解決任何物件，如下所示：  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -126,7 +126,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 在新語法中，實值型別的任何初始化或指派至 `Object` 都會產生該實值型別的隱含 Boxing。  在新語法中，`obj` 和 `obj2` 都會初始化，以分別指向值為 0 和 1 的 Boxed Int32 物件。  例如：  
+ 在新語法中，初始化或指派的值輸入至`Object`會導致該實值型別的隱含 boxing。 在新語法中，同時`obj`和`obj2`定址 boxed 的 Int32 物件分別存放值 0 和 1，會初始化。 例如：  
   
 ```  
 // causes the implicit boxing of both 0 and 1  
@@ -134,7 +134,7 @@ Object ^ obj = 0;
 Object ^ obj2 = 1;  
 ```  
   
- 為了執行明確的初始化追蹤控制代碼、指派追蹤控制代碼，以及比較追蹤控制代碼與 Null，因此引入新關鍵字 `nullptr`。原本範例的正確修訂如下所示：  
+ 因此，為了執行明確的初始化、 指派及追蹤控制代碼設為 null 的比較，使用新的關鍵字`nullptr`。  原始範例的正確修訂看起來如下：  
   
 ```  
 // OK: we set obj to refer to no object  
@@ -144,7 +144,7 @@ Object ^ obj = nullptr;
 Object ^ obj2 = 1;  
 ```  
   
- 這樣多少都使得將現有程式碼移植至新語法更為複雜。  例如，請參考下列實值類別宣告：  
+ 這讓事情更加稍微現有程式碼移植到新的語法。 例如，請考慮下列實值類別宣告：  
   
 ```  
 __value struct Holder {  
@@ -163,7 +163,7 @@ private:
 };  
 ```  
   
- 此處，`args` 和 `env` 都是 CLR 參考型別。  在建構函式 \(Constructor\) 中將這兩個成員初始化為 `0`，這樣的做法在轉換至新語法時會不太一樣。  這兩個成員必須變更為 `nullptr`：  
+ 在這裡，兩者`args`和`env`是 CLR 參考類型。 以這兩個成員初始化`0`建構函式中無法維持在轉換至新的語法不變。 相反地，他們必須變更為`nullptr`:  
   
 ```  
 value struct Holder {  
@@ -183,7 +183,7 @@ private:
 };  
 ```  
   
- 同樣地，將那些成員和 `0` 相較以進行測試的做法，也必須變成和 `nullptr` 相較。  下列是 Managed Extensions 語法：  
+ 同樣地，那些成員和其測試`0`也必須要比較的成員變更`nullptr`。 以下是管理擴充功能的語法：  
   
 ```  
 Sexpr * Loop (Sexpr* input) {  
@@ -205,7 +205,7 @@ Sexpr * Loop (Sexpr* input) {
 }  
 ```  
   
- 以下是修訂，其中將出現的每個 `0` 都取代成 `nullptr`。  轉譯工具在這項轉換中助益良多，就算不是針對每次出現但也已經自動化大部分的項目，包括使用 `NULL` 巨集。  
+ 以下是修訂，將每個取代`0`執行個體，其`nullptr`。 藉由自動化許多轉譯工具可協助在這項轉換，如果未使用的所有相符項目，包括`NULL`巨集。  
   
 ```  
 Sexpr ^ Loop (Sexpr^ input) {  
@@ -227,18 +227,18 @@ Sexpr ^ Loop (Sexpr^ input) {
 }  
 ```  
   
- `nullptr` 會轉換為任何指標或追蹤控制代碼型別，但不會提升至整數型別。  例如，在下列初始化設定中，`nullptr` 只能當做前兩個項目的初始值。  
+ `nullptr`轉換成任何指標或追蹤控制代碼類型，但不是會提升為整數類型。 例如，在下列設定中初始化，`nullptr`只能當做初始前兩個值。  
   
 ```  
 // OK: we set obj and pstr to refer to no object  
 Object^ obj = nullptr;  
 char*   pstr = nullptr; // 0 would also work here  
   
-// Error: no conversion of nullptr to 0 …  
+// Error: no conversion of nullptr to 0  
 int ival = nullptr;  
 ```  
   
- 同樣地，指定方法的多載集合，如下所示：  
+ 同樣地，假設組多載的方法，如下所示：  
   
 ```  
 void f( Object^ ); // (1)  
@@ -246,26 +246,26 @@ void f( char* );   // (2)
 void f( int );     // (3)  
 ```  
   
- 使用 `nullptr` 常值 \(Literal\) 的引動過程，如下所示，  
+ 具有引動過程`nullptr`常值，如下所示，  
   
 ```  
 // Error: ambiguous: matches (1) and (2)  
 f(  nullptr );  
 ```  
   
- 為模稜兩可，因為 `nullptr` 同時符合追蹤控制代碼和指標，而且兩種型別的偏好程度相同 \(這種情況會需要明確轉型以解除模稜兩可的情況\)。  
+ 模稜兩可因為`nullptr`符合追蹤控制代碼和指標，而且沒有提供一種類型的其他任何喜好設定。 （這種情況下會需要明確轉型以釐清）。  
   
- 使用 `0` 的引動過程完全符合執行個體 \(3\)：  
+ 具有引動過程`0`完全相符項目執行個體 (3):  
   
 ```  
 // OK: matches (3)  
 f( 0 );  
 ```  
   
- 因為 `0` 屬於整數型別。  如果沒有 `f(int)`，呼叫會透過標準轉換明確地符合 `f(char*)`。  比對規則認定完全相符的優先順序高於標準轉換。  如果缺少完全相符，則標準轉換優於實值型別的隱含 Boxing。  這就是不會模稜兩可的原因。  
+ 因為`0`屬於整數型別。 已`f(int)`不存在，呼叫會明確地符合`f(char*)`透過標準轉換。 比對規則提供完全相符的優先順序高於標準轉換。 如果沒有完全相符，標準轉換會優先於隱含 boxing 實值類型。 這就是為什麼沒有任何模稜兩可。  
   
-## 請參閱  
- [Managed 類型 \(C\+\+\/CL\)](../dotnet/managed-types-cpp-cl.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)   
- [物件控制代碼運算子 \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
+## <a name="see-also"></a>另請參閱  
+ [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
+ [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
+ [物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   
  [nullptr](../windows/nullptr-cpp-component-extensions.md)

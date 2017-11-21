@@ -1,29 +1,27 @@
 ---
-title: "Understanding Parse Trees | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parse trees"
+title: "ATL 登錄器和剖析樹狀結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parse trees
 ms.assetid: 668ce2dd-a1c3-4ca0-8135-b25267cb6a85
-caps.latest.revision: 12
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 091ad40625c85f465e3989dd2dff790c630f6538
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Understanding Parse Trees
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可以定義一或多個以登錄器指令碼的剖析樹狀結構中，每個剖析樹狀結構的形式如下:  
+# <a name="understanding-parse-trees"></a>了解剖析樹狀結構
+您可以定義一個或多個剖析樹狀結構中登錄器指令碼，其中每個剖析樹狀目錄具有下列格式：  
   
 ```  
 <root key>{<registry expression>}+  
@@ -32,15 +30,15 @@ manager: "ghogen"
  其中：  
   
 ```  
-<root key> ::=  HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
-               HKEY_LOCAL_MACHINE | HKEY_USERS |  
-               HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
-               HKEY_CURRENT_CONFIG | HKCR | HKCU |  
-               HKLM | HKU | HKPD | HKDD | HKCC  
+<root key> ::= HKEY_CLASSES_ROOT | HKEY_CURRENT_USER |  
+    HKEY_LOCAL_MACHINE | HKEY_USERS |  
+    HKEY_PERFORMANCE_DATA | HKEY_DYN_DATA |  
+    HKEY_CURRENT_CONFIG | HKCR | HKCU |  
+    HKLM | HKU | HKPD | HKDD | HKCC  
 <registry expression> ::= <Add Key> | <Delete Key>  
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
-              [<Key Value>][{< Add Key>}]  
-<Delete Key> ::=  Delete<Key Name>  
+ [<Key Value>][{<Add Key>}]  
+<Delete Key> ::= Delete<Key Name>  
 <Key Name> ::= '<AlphaNumeric>+'  
 <AlphaNumeric> ::= any character not NULL, i.e. ASCII 0  
 <Key Value> ::== <Key Type><Key Name>  
@@ -49,24 +47,25 @@ manager: "ghogen"
 ```  
   
 > [!NOTE]
->  `HKEY_CLASSES_ROOT` 和 `HKCR` 相等; `HKEY_CURRENT_USER` 和 `HKCU` 相等;等等。  
+> `HKEY_CLASSES_ROOT`和`HKCR`相等`HKEY_CURRENT_USER`和`HKCU`是對等，依此類推。  
   
- 剖析樹狀結構可加入多個索引鍵和子機碼加入 \<root key\>。  在這個案例中，它會保持子機碼的控制代碼開啟，直到剖析器剖析其所有子機碼。  這個方法會一次運作更有效地在單一索引鍵，如以下範例所示:  
+ 剖析樹狀結構可以加入多個索引鍵和子機碼\<根目錄機碼 >。 在此情況下，它將保持子機碼的控制代碼為開啟狀態，直到完成剖析器剖析所有子機碼。 這種方法是更有效率的單一金鑰操作一次，如下列範例所示：  
   
 ```  
 HKEY_CLASSES_ROOT  
 {  
-   'MyVeryOwnKey'  
-   {  
-      'HasASubKey'  
-      {  
-         'PrettyCool?'  
-      }  
-   }  
+ 'MyVeryOwnKey'  
+ {  
+ 'HasASubKey'  
+ {  
+ 'PrettyCool'  
+ }  
+ }  
 }  
 ```  
   
- 在這裡，管理員一開始開啟 \(透過建立\) `HKEY_CLASSES_ROOT\MyVeryOwnKey`。  然後參閱 `MyVeryOwnKey` 有一個子機碼。  不要關閉機碼為 `MyVeryOwnKey`，管理員將控制代碼並開啟 \(\) 會使用這個父控制代碼， `HasASubKey` 。  \(系統登錄可能較慢，當父控制代碼尚未開啟\)。因此，開啟 `HKEY_CLASSES_ROOT\MyVeryOwnKey` 然後開啟 `HasASubKey` 和 `MyVeryOwnKey` 做為父來開啟 `MyVeryOwnKey`，結尾 `MyVeryOwnKey`，然後開啟快速 `MyVeryOwnKey\HasASubKey`。  
+ 在這裡，註冊機構初次開啟 （建立） `HKEY_CLASSES_ROOT\MyVeryOwnKey`。 然後會看到的`MyVeryOwnKey`具有子機碼。 而不是關閉的索引鍵`MyVeryOwnKey`，註冊機構會保留此控制代碼，並開啟 （建立）`HasASubKey`使用此父控制代碼。 （沒有父控制代碼開啟時系統登錄可以是速度較慢）。因此，開啟`HKEY_CLASSES_ROOT\MyVeryOwnKey`，然後開啟`HasASubKey`與`MyVeryOwnKey`為父系的速度比開啟`MyVeryOwnKey`，正在關閉`MyVeryOwnKey`，，然後開啟`MyVeryOwnKey\HasASubKey`。  
   
-## 請參閱  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>另請參閱  
+ [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
+

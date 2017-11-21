@@ -1,68 +1,67 @@
 ---
-title: "告知攔截 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL 的延遲載入, 告知攔截"
+title: "告知攔截 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 156dd4cec32318be008d7c007d02f03495eeae23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 告知攔截
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在 Helper 常式中，告知攔截會在下列動作執行之前被呼叫：  
+# <a name="notification-hooks"></a>告知攔截
+告知攔截稱為之前在 helper 常式會執行下列動作：  
   
--   檢查程式庫中儲存的控制代碼，以確認是否已經載入。  
+-   儲存至程式庫的控制代碼會檢查是否已載入。  
   
--   呼叫 **LoadLibrary** 以試著載入 DLL。  
+-   **LoadLibrary**呼叫以嘗試載入的 dll。  
   
--   呼叫 **GetProcAddress** 以試著取得程序的位址。  
+-   **GetProcAddress**呼叫以嘗試取得程序的位址。  
   
--   傳回延遲匯入載入 Thunk。  
+-   傳回以延遲匯入負載 thunk。  
   
- 告知攔截以下列方法啟用：  
+ 告知攔截會啟用：  
   
--   為指標 **\_\_pfnDliNotifyHook2** 提供新的定義，此指標被初始化為指向您自己接收告知的函式。  
+-   藉由提供新定義的指標**__pfnDliNotifyHook2** ，初始化以指向自己收到通知的函式。  
   
-     \-或\-  
+     -或-  
   
--   藉由在對程式延遲載入的 DLL 進行任何呼叫之前，將指標 **\_\_pfnDliNotifyHook2** 設定為指向攔截函式。  
+-   藉由設定指標**__pfnDliNotifyHook2**來攔截函式之前呼叫任何程式的 DLL 延遲載入。  
   
- 如果告知是 **dliStartProcessing**，攔截函式可傳回：  
+ 如果通知，則**dliStartProcessing**，攔截函式可以傳回：  
   
  NULL  
- 預設 Helper 處理 DLL 的載入。  只有因為資訊目地而呼叫時，才會有效用。  
+ 預設的協助程式處理 DLL 的載入。 這非常有用呼叫只供使用者參考。  
   
  函式指標  
- 略過預設的延遲載入處理。  這讓您可以提供自己的載入處理常式。  
+ 略過預設延遲載入的處理。 這可讓您提供您自己的載入處理常式。  
   
- 如果告知是 **dliNotePreLoadLibrary**，攔截函式可傳回：  
+ 如果通知，則**dliNotePreLoadLibrary**，攔截函式可以傳回：  
   
--   如果它只需要資訊告知則傳回 0。  
+-   0，如果它只想資訊通知。  
   
--   如果它自行載入 DLL 則傳回載入 DLL 的 HMODULE。  
+-   載入 DLL 時，如果它載入該 DLL 本身的 HMODULE。  
   
- 如果告知是 **dliNotePreGetProcAddress**，攔截函式可傳回：  
+ 如果通知，則**dliNotePreGetProcAddress**，攔截函式可以傳回：  
   
--   如果它只需要資訊告知則傳回 0。  
+-   0，如果它只想資訊通知。  
   
--   如果攔截函式自行取得位址，則傳回匯入函式的位址。  
+-   匯入函式的位址，如果攔截函式取得本身的位址。  
   
- 如果告知是 **dliNoteEndProcessing**，攔截函式的傳回值將被忽略。  
+ 如果通知，則**dliNoteEndProcessing**，攔截函式的傳回值會被忽略。  
   
- 如果這個指標已經初始化 \(非零\)，則延遲載入 Helper 將於整個執行期間的特定告知點叫用 \(Invoke\) 函式。  函式指標具有下列定義：  
+ 如果此指標初始化 （非零），延遲載入 helper 會叫用函式在整個執行期間的特定通知點。 函式指標都具有下列定義：  
   
 ```  
 // The "notify hook" gets called for every call to the  
@@ -84,7 +83,7 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;  
 ```  
   
- 告知在 **DelayLoadInfo** 結構中連同告知值傳遞到攔截函式。  這個資料與延遲載入 Helper 常式所使用的資料完全相同。  告知值為[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)中所定義值的其中一個。  
+ 通知傳入**DelayLoadInfo**攔截函式，以及通知值的結構。 此資料是相同的延遲載入 helper 常式所使用。 通知值將會是其中一個定義中的值[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。  
   
-## 請參閱  
- [錯誤處理和告知](../../build/reference/error-handling-and-notification.md)
+## <a name="see-also"></a>另請參閱  
+ [錯誤處理和通知](../../build/reference/error-handling-and-notification.md)

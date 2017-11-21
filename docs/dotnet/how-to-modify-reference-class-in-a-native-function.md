@@ -1,31 +1,31 @@
 ---
-title: "如何：修改原生函式中的參考類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "平台叫用, 參考類別"
-  - "參考類型, 在 C++ 原生函式中修改"
+title: "如何： 修改原生函式中的參考類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke, reference class
+- reference types, modifying in a C++ native function
 ms.assetid: c701145b-62a0-4c4b-b32a-db8d69a59720
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 955de592b5e065164f16a4f78c9faaaffcdd3efb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：修改原生函式中的參考類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可以使用 PInvoke 服務，將具有 CLR 陣列的參考類別傳遞至原生 \(Native\) 函式，並修改此類別。  
+# <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改原生函式中的參考類別
+您可以將參考類別與 CLR 陣列傳遞至原生函式，並修改類別中，使用 PInvoke 服務。  
   
-## 範例  
+## <a name="example"></a>範例  
  編譯下列原生程式庫。  
   
 ```  
@@ -54,7 +54,7 @@ extern "C"  {
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  編譯下列組件。  
   
 ```  
@@ -89,8 +89,11 @@ int main() {
 }  
 ```  
   
-  **str: Hello**  
-**In native: intarr: 100, 200**  
-**In managed: intarr: 300, 400**   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+str: Hello  
+In native: intarr: 100, 200  
+In managed: intarr: 300, 400  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

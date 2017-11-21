@@ -1,44 +1,43 @@
 ---
-title: "一般的語言變更 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "一般的語言變更 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 79a70768-225c-4ae2-84d1-178b20a9b042
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3f9d5a04a5613d9a8ee10fbd115672234034b9dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 一般的語言變更 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，某些 CLR 語言的功能都已變更。  
+# <a name="general-language-changes-ccli"></a>一般的語言變更 (C++/CLI)
+從 Managed Extensions for c + + 變更為 Visual c + + CLR 語言功能的數字。  
   
- 本節所描述的變更算是一種語言雜錄。  內容包含字串常值 \(String Literal\) 處理的變更、省略和 `Param` 屬性之間進行多載解析 \(Overload Resolution\) 的變更、將 `typeof` 改成 `typeid` 的變更、建構函式初始設定式清單呼叫的變更，以及屬於 `safe_cast` 之新轉型標記法的引入。  
+ 本節中所述的變更是一種語言雜錄排序。 變更了字串常值中省略符號之間的多載解析的變更的處理和`Param`屬性，變更`typeof`至`typeid`，建構函式初始設定式清單中，呼叫中的變更，引進新的轉換標記法的`safe_cast`。  
   
  [字串常值](../dotnet/string-literal.md)  
- 討論字串常值的處理如何變更。  
+ 討論如何變更的字串常值處理。  
   
  [Param 陣列和省略](../dotnet/param-array-and-ellipsis.md)  
- 討論當使用變動數目的引數解析函式呼叫 \(Function Call\) 時，`ParamArray` 如何優先於省略符號 \(`…`\)。  
+ 討論如何`ParamArray`現在優於省略符號 (`...`) 來解析不同數字的引數與函式呼叫。  
   
  [typeof 變成 T::typeid](../dotnet/typeof-goes-to-t-typeid.md)  
- 討論已由 `typeid` 取代 `typeof` 運算子的情形。  
+ 討論如何`typeof`運算子具有由已一般`typeid`。  
   
  [初始設定式清單](../dotnet/initializer-lists.md)  
- 討論初始設定式清單的呼叫順序變更。  
+ 討論在初始設定式清單呼叫順序中的變更。  
   
- [safe\_cast\<\> 的轉換通知和簡介](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
- 討論轉換通知的變更，特別是 `safe_cast` 的簡介。  
+ [safe_cast<> 的轉換標記法和簡介](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
+ 討論變更為轉換標記法，尤其是引進的`safe_cast`。  
   
-## 請參閱  
- [C\+\+\/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)
+## <a name="see-also"></a>另請參閱  
+ [C++/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)

@@ -4,43 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlwin/ATL::AtlHiMetricToPixel
+- atlwin/ATL::AtlPixelToHiMetric
+dev_langs: C++
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: efb7e7da896aea4e377225f4c1e2c9948e635705
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9b905631c2375793250248fafc32f1628dba9c28
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 轉換全域函式
-這些函式提供支援的轉換，並與像素和 himetric 為單位。  
+這些函式提供支援來回轉換像素和 himetric 為單位。  
   
 > [!IMPORTANT]
->  下表所列出的函數不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
   
 |||  
 |-|-|  
@@ -65,10 +51,10 @@ extern void AtlHiMetricToPixel(
  [out]物件的大小，單位為像素所要傳回的指標。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM&#49;](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#49](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_1.cpp)]  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric  
  將物件在螢幕裝置上以像素為單位的大小，轉換成以 HIMETRIC 為單位 (每一單位為 0.01 公釐) 的大小。  
@@ -87,11 +73,10 @@ extern void AtlPixelToHiMetric(
  [out]物件的大小，以 himetric 為單位所要傳回的指標。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM&#51;](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#51](../../atl/codesnippet/cpp/pixel-himetric-conversion-global-functions_2.cpp)]  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
 
 ## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)
-

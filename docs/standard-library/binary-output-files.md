@@ -4,41 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8968a47f9d957aa0873b5db78909a6b4ad66ea75
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: da2d0ac01919773492f075f2e2dd6a7d210224fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="binary-output-files"></a>二進位輸出檔案
 資料流最初是針對文字所設計，因此預設輸出模式是文字。 在文字模式下，新行字元 (十六進位 10) 會展開以復-換行 （僅限 16 位元）。 此擴充可能造成問題，如下所示：  
@@ -76,5 +59,4 @@ int main()
   
 ## <a name="see-also"></a>另請參閱  
  [輸出資料流](../standard-library/output-streams.md)
-
 

@@ -1,33 +1,30 @@
 ---
-title: ".SFCOND | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".SFCOND"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".SFCOND directive"
+title: ".SFCOND |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SFCOND
+dev_langs: C++
+helpviewer_keywords: .SFCOND directive
 ms.assetid: 3a1ce2d0-cf18-4f08-b4cf-b72cded4d164
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 35d59aa9f5eedd015f25a99325d7d10c0de1b111
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# .SFCOND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-See [.NOLISTIF](../../assembler/masm/dot-nolistif.md)。  
+# <a name="sfcond"></a>.SFCOND
+請參閱[。NOLISTIF](../../assembler/masm/dot-nolistif.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,5 +32,5 @@ See [.NOLISTIF](../../assembler/masm/dot-nolistif.md)。
   
 ```  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

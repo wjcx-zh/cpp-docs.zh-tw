@@ -1,31 +1,28 @@
 ---
-title: "CVTRES 警告 CVT4001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CVT4001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CVT4001"
+title: "CVTRES 警告 CVT4001 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CVT4001
+dev_langs: C++
+helpviewer_keywords: CVT4001
 ms.assetid: 39c13bc2-92fa-4d79-8171-039b27329dcc
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 22bfb9e3417d7177f99328021f9126c8dc62dfe7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CVTRES 警告 CVT4001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**未指定電腦類型; 假設其類型為**   
+# <a name="cvtres-warning-cvt4001"></a>CVTRES 警告 CVT4001
+**未指定; 的機器類型假設**   
  ***type***  
   
- CVTRES 找不到電腦規格。  它會假設電腦為給定的電腦類型。  如果預設類型不正確，請使用 \/MACHINE 選項重新執行 CVTRES。
+ CVTRES 找不到指定的電腦。 它會假設指定的電腦類型。 如果預設為不正確，然後重新執行 CVTRES 使用 /MACHINE 選項。

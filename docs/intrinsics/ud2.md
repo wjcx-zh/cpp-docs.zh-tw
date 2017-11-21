@@ -1,58 +1,56 @@
 ---
-title: "__ud2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ud2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "UD2 指令"
-  - "內建 __ud2"
+title: "__ud2 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __ud2
+dev_langs: C++
+helpviewer_keywords:
+- UD2 instruction
+- __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-caps.latest.revision: 7
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 699e575d283f830d94c123f7748f7fdaa6272ff5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# __ud2
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="ud2"></a>__ud2
+**Microsoft 特定的**  
   
- 會產生未定義的指令。  
+ 會產生未定義的指示。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void __ud2();  
 ```  
   
-## 備註  
- 如果您執行的未定義的指令，處理器就會造成無效的 opcode 例外狀況。  
+## <a name="remarks"></a>備註  
+ 如果執行未定義的指令，處理器就會產生無效的 opcode 例外狀況。  
   
- `__ud2`函式相當於`UD2`機器指令，並僅適用於核心模式。  如需詳細資訊，搜尋的文件中，"Intel 架構軟體開發人員的手冊，磁碟區 2： 指令集參考，"在[Intel 公司](http://go.microsoft.com/fwlink/?LinkId=127)站台。  
+ `__ud2`函數即相當於`UD2`機器指令，而且只適用於核心模式。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2： 指令集的參考，「 在[Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127)站台。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__ud2`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__ud2`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 結束 Microsoft 特定  
+**END Microsoft 特定的**  
   
-## 範例  
- 下列範例會執行未定義的指令，會引發例外狀況。  例外處理常式接著會從零到其中一個變更傳回的程式碼。  
+## <a name="example"></a>範例  
+ 下列範例會執行的未定義的指令，會引發例外狀況。 然後，例外狀況處理常式會從零到一變更傳回碼。  
   
 ```  
 // __ud2_intrinsic.cpp  
@@ -84,10 +82,11 @@ int main() {
 }  
 ```  
   
-  **之前 \_\_ud2\(\)。**  
- **傳回碼 \= 0。**  
- **在例外狀況處理常式。**  
- **後 \_\_ud2\(\)。**  
- **傳回碼 \= 1。**   
-## 請參閱  
+```Output  
+Before __ud2(). Return code = 0.  
+  In the exception handler.  
+After __ud2().  Return code = 1.  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

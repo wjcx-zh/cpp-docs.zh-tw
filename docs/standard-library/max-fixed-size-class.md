@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - allocators/stdext::max_fixed_size::full
 - allocators/stdext::max_fixed_size::released
 - allocators/stdext::max_fixed_size::saved
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::max_fixed_size
 - stdext::max_fixed_size [C++], allocated
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 4a2e91effe6cf13ce7a03f8e69c6d67d622ebdcd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 50c33d1ea29053ab3c5e76c5c02c22d799e06c6e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="maxfixedsize-class"></a>max_fixed_size 類別
 描述 [max 類別](../standard-library/allocators-header.md)物件，此物件可將 [freelist](../standard-library/freelist-class.md) 物件的長度上限限制為固定值。  
@@ -150,7 +147,6 @@ void saved();
   
 ## <a name="see-also"></a>另請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

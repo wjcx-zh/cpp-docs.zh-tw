@@ -1,32 +1,31 @@
 ---
-title: "如何：從剪貼簿擷取文字 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "剪貼簿, 擷取文字"
-  - "文字, 從剪貼簿擷取"
+title: "如何： 從剪貼簿擷取文字 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- text, retrieving from Clipboard
+- Clipboard, retrieving text
 ms.assetid: 99e77ba0-8573-4030-92d8-de8aa7623ee4
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6517b367e8c3d59538a4e36839ccc7f93d8b1817
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：從剪貼簿擷取文字 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會使用 <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> 成員函式，傳回 <xref:System.Windows.Forms.IDataObject> 介面的指標。  這個介面可以用來查詢資料的格式並用來擷取真正的資料。  
+# <a name="how-to-retrieve-text-from-the-clipboard-ccli"></a>如何：從剪貼簿擷取文字 (C++/CLI)
+下列程式碼範例使用<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>成員函式傳回的指標<xref:System.Windows.Forms.IDataObject>介面。 可以查詢資料的格式為這個介面，然後用來擷取實際的資料。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // read_clipboard.cpp  
@@ -62,6 +61,6 @@ using namespace System::Windows::Forms;
 }  
 ```  
   
-## 請參閱  
- [Windows 作業](../dotnet/windows-operations-cpp-cli.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [Windows 作業 (C + + /CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

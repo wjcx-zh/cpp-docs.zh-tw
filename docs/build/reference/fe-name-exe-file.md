@@ -1,76 +1,75 @@
 ---
-title: "/Fe (命名 EXE 檔案) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fe"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fe 編譯器選項 [C++]"
-  - "可執行檔, 重新命名"
-  - "Fe 編譯器選項 [C++]"
-  - "-Fe 編譯器選項 [C++]"
-  - "重新命名檔案編譯器選項 [C++]"
+title: "-Fe （命名 EXE 檔案） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /fe
+dev_langs: C++
+helpviewer_keywords:
+- -Fe compiler option [C++]
+- executable files, renaming
+- rename file compiler option [C++]
+- /Fe compiler option [C++]
+- Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b66c473c49527dff395d206594a314b527c4f914
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /Fe (命名 EXE 檔案)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定由編譯器所建立 .exe 檔案或 DLL 的名稱和目錄。  
+# <a name="fe-name-exe-file"></a>/Fe (命名 EXE 檔案)
+指定的名稱和.exe 檔或 DLL 編譯器所建立的目錄。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /Fepathname  
 ```  
   
-## 備註  
- 不使用這個選項的話，編譯器會使用第一個原始程式檔或命令列上指定的目的檔的主檔名，再加上副檔名 .exe 或 .dll 來賦予該檔案預設的名稱。  
+## <a name="remarks"></a>備註  
+ 如果沒有這個選項，編譯器會提供檔案的預設名稱，使用命令列的副檔名.exe 或.dll 上指定第一個來源或目的檔的基底名稱。  
   
- 如果您指定 [\/c \(編譯而不連結\)](../../build/reference/c-compile-without-linking.md)，在沒有連結下進行編譯，**\/Fe** 將不會有作用。  
+ 如果您指定[/c （編譯而不連結）](../../build/reference/c-compile-without-linking.md)、 編譯而不連結， **/Fe**沒有任何作用。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[連結器\] 資料夾。  
+2.  按一下**連結器**資料夾。  
   
-3.  按一下 \[**一般**\] 屬性頁。  
+3.  按一下**一般**屬性頁。  
   
-4.  修改 \[**輸出檔**\] 屬性。  
+4.  修改**輸出檔**屬性。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.OutputFile%2A>。  
   
-## 範例  
- 以下命令列會編譯及連結目前目錄中的所有 C 原始程式檔。  產生的可執行檔被命名為 PROCESS.exe 並且會建立在 C:\\BIN 目錄中。  
+## <a name="example"></a>範例  
+ 下列命令列編譯和連結目前的目錄中的所有 C 原始程式檔。 產生可執行檔為 PROCESS.exe，並建立 C:\BIN 目錄中。  
   
 ```  
 CL /FeC:\BIN\PROCESS *.C  
 ```  
   
-## 範例  
- 以下命令列會在 `C:\BIN` 中建立一個主檔名與第一個原始程式檔或目的檔相同的可執行檔：  
+## <a name="example"></a>範例  
+ 下列命令列建立可執行檔中的`C:\BIN`具有相同的基底名稱做為第一個來源或物件檔案：  
   
 ```  
 CL /FeC:\BIN\ *.C  
 ```  
   
-## 請參閱  
- [輸出檔 \(\/F\) 選項](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>另請參閱  
+ [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [指定路徑名稱](../../build/reference/specifying-the-pathname.md)

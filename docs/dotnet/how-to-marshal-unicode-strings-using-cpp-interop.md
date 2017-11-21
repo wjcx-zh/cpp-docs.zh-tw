@@ -1,44 +1,43 @@
 ---
-title: "如何：使用 C++ Interop 封送處理 Unicode 字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, 字串"
-  - "資料封送處理 [C++], 字串"
-  - "Interop [C++], 字串"
-  - "封送處理 [C++], 字串"
-  - "Unicode, 封送處理字串"
+title: "如何： 使用 c + + Interop 封送處理 Unicode 字串 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 80cfc5f13a09eaed93c894e277e870895c812b24
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 C++ Interop 封送處理 Unicode 字串
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題將示範 Visual C\+\+ 互通性的一個 Facet。  如需詳細資訊，請參閱[使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 Unicode 字串
+本主題會示範一個 facet 的 Visual c + + 的互通性。 如需詳細資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
- 在下列範例中，程式碼會使用 [managed、unmanaged](../preprocessor/managed-unmanaged.md) \#pragma 指示詞，在相同的檔案中實作 Managed 和 Unmanaged 函式，這些函式即使在不同的檔案中定義，也會以相同的方式互相溝通。  只包含 Unmanaged 函式的檔案，不需要以 [\/clr \(Common Language Runtime 編譯\)](../build/reference/clr-common-language-runtime-compilation.md) 編譯。  
+ 下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作的方式相同。 檔案，其中包含只在 unmanaged 函式不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
- 本主題會示範如何在 Managed 函式和 Unmanaged 函式之間傳遞 Unicode 字串。  如需與其他字串型別互通的資訊，請參閱下列主題：  
+ 本主題會示範如何 Unicode 字串傳遞從 managed 到 unmanaged 函式，反之亦然。 與其他字串類型間的互通性，請參閱下列主題：  
   
--   [如何：使用 C\+\+ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [如何：使用 C++ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
--   [如何：使用 C\+\+ Interop 封送處理 COM 字串](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
+-   [如何：使用 C++ Interop 封送處理 COM 字串](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)  
   
-## 範例  
- 若要將 Unicode 字串從 Managed 函式傳遞至 Unmanaged 函式，PtrToStringChars 函式 \(在 Vcclr.h 中宣告\) 可以用來存取 Managed 字串在記憶體中儲存的位置。  因為這個位址會傳遞至原生 \(Native\) 函式，您必須使用 [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) 對記憶體進行 Pin 動作，以避免記憶體回收循環在 Unmanaged 函式執行時介入，導致字串資料重新配置。  
+## <a name="example"></a>範例  
+ 若要從受管理的 unmanaged 函式傳遞 Unicode 字串，PtrToStringChars 函式 （宣告於 Vcclr.h） 可用來存取在記憶體中儲存的 managed 的字串。 因為此位址將會傳遞至原生函式，很重要的記憶體會釘選與[pin_ptr (C + + CLI)](../windows/pin-ptr-cpp-cli.md)以防止被重新配置的字串資料，應該在記憶體回收週期發生時unmanaged 函式會執行。  
   
 ```  
 // MarshalUnicode1.cpp  
@@ -69,8 +68,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列範例會示範在 Managed 函式 \(由 Unmanaged 函式所呼叫\) 中存取 Unicode 字串時必要的資料封送處理 \(Marshaling\)。  Managed 函式在收到原生 Unicode 字串時，會使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> 方法將字串轉換為 Managed 字串。  
+## <a name="example"></a>範例  
+ 下列範例會示範資料封送處理，才能存取 unmanaged 函式呼叫 managed 函式中的 Unicode 字串。 Managed 函式中，接收原生的 Unicode 字串，將它轉換成受管理的字串，使用<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>方法。  
   
 ```  
 // MarshalUnicode2.cpp  
@@ -102,5 +101,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -1,60 +1,58 @@
 ---
-title: "CompareStringOrdinal 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal"
-dev_langs: 
-  - "C++"
+title: "CompareStringOrdinal 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::CompareStringOrdinal
+dev_langs: C++
 ms.assetid: ffa997fd-8cd7-40a5-b9e7-f55d40b072f4
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 17415efa6519d8e3538f869168db2040ed6e73dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CompareStringOrdinal 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="comparestringordinal-method"></a>CompareStringOrdinal 方法
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
-  
 inline INT32 CompareStringOrdinal(  
    HSTRING lhs,   
    HSTRING rhs)  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `lhs`  
- 要比較的第一個 HSTRING 字串。  
+ 要比較的第一個 HSTRING。  
   
  `rhs`  
- 要比較的第二個 HSTRING 字串。  
+ 要比較的第二個 HSTRING。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
   
 |值|條件|  
-|-------|--------|  
-|\-1|`lhs` 小於 `rhs`。|  
-|0|`lhs` 等於 `rhs`。|  
+|-----------|---------------|  
+|-1|`lhs` 小於 `rhs`。|  
+|0|`lhs`等於 `rhs`。|  
 |1|`lhs` 大於 `rhs`。|  
   
-## 備註  
- 比較兩個指定的 HSTRING 物件，並傳回一個整數，指出它們在排序順序中的相對位置。  
+## <a name="remarks"></a>備註  
+ 比較兩個指定的 HSTRING 物件，並傳回一個整數，表示兩者在排序順序中的相對位置。  
   
-## 需求  
- **標頭：**corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
  **命名空間：** Microsoft::WRL::Wrappers::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers::Details 命名空間](../windows/microsoft-wrl-wrappers-details-namespace.md)

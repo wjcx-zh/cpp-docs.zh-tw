@@ -1,36 +1,35 @@
 ---
-title: "IRowsetLocateImpl::GetRowsAt | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetRowsAt"
-  - "IRowsetLocateImpl.GetRowsAt"
-  - "ATL::IRowsetLocateImpl::GetRowsAt"
-  - "IRowsetLocateImpl::GetRowsAt"
-  - "ATL.IRowsetLocateImpl.GetRowsAt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRowsAt 方法"
+title: "Irowsetlocateimpl:: Getrowsat |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetRowsAt
+- IRowsetLocateImpl.GetRowsAt
+- ATL::IRowsetLocateImpl::GetRowsAt
+- IRowsetLocateImpl::GetRowsAt
+- ATL.IRowsetLocateImpl.GetRowsAt
+dev_langs: C++
+helpviewer_keywords: GetRowsAt method
 ms.assetid: 6aeb09dc-3aa8-4729-97a8-144dd27063f7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: facb6498d38c05d513b08016b85865438174ed5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::GetRowsAt
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-擷取資料列開始從書籤的位移指定的行。  
+# <a name="irowsetlocateimplgetrowsat"></a>IRowsetLocateImpl::GetRowsAt
+擷取從書籤中位移所指定的資料列開始的資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -46,17 +45,17 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
- 請參閱在 *OLE DB Programmer's Reference* 中的 [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx) 。  
+#### <a name="parameters"></a>參數  
+ 請參閱[irowsetlocate:: Getrowsat](https://msdn.microsoft.com/en-us/library/ms723031.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 備註  
- 請使用 [IRowset::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx) 以從游標位置擷取。  
+## <a name="remarks"></a>備註  
+ 若要改為擷取從游標位置，使用[IRowset::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)。  
   
- `IRowsetLocateImpl::GetRowsAt`不變更資料指標位置。  
+ `IRowsetLocateImpl::GetRowsAt`不會變更游標位置。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetLocateImpl 類別](../../data/oledb/irowsetlocateimpl-class.md)   
  [IRowsetLocateImpl::GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)

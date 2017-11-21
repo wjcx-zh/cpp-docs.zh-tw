@@ -1,47 +1,45 @@
 ---
-title: "連結器工具錯誤 LNK1106 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1106"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1106"
+title: "連結器工具錯誤 LNK1106 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1106
+dev_langs: C++
+helpviewer_keywords: LNK1106
 ms.assetid: 528f7e65-04be-4966-b8af-9276837c7cda
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8b97196ebed51c21e40fa74ab1b80d23f3c49eec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 連結器工具錯誤 LNK1106
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-檔案無效或磁碟已滿: 無法搜尋到 location  
+# <a name="linker-tools-error-lnk1106"></a>連結器工具錯誤 LNK1106
+無效的檔案或磁碟已滿： 無法搜尋到的位置  
   
- 工具無法讀取或寫入至記憶體映射檔中的 `location`。  
+ 此工具無法讀取或寫入`location`記憶體對應檔案中。  
   
-### 若要修正，請檢查下列可能原因  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
   
 1.  磁碟已滿。  
   
-     釋放部分空間並重新連結。  
+     釋放一些磁碟空間並重新連結。  
   
 2.  嘗試透過網路連結。  
   
-     某些網路無法完全支援此連結器所使用的記憶體映射檔。  請嘗試在本機磁碟上進行連結。  
+     某些網路不完全支援連結器所使用的記憶體對應檔案。 嘗試連結您的本機磁碟上。  
   
-3.  磁碟有錯誤區塊。  
+3.  不正確的磁碟區塊。  
   
-     雖然作業系統和磁碟硬體應該會偵測出這種錯誤，我們仍然建議您執行磁碟檢查程式。  
+     雖然的作業系統和磁碟硬體應該已偵測到這類錯誤，您可能想要執行磁碟檢查程式。  
   
 4.  堆積空間不足。  
   
-     如需詳細資訊，請參閱 [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)。
+     請參閱[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)如需詳細資訊。

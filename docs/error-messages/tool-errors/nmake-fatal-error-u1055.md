@@ -1,31 +1,29 @@
 ---
-title: "NMAKE 嚴重錯誤 U1055 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1055"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1055"
+title: "NMAKE 嚴重錯誤 U1055 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1055
+dev_langs: C++
+helpviewer_keywords: U1055
 ms.assetid: 1d453922-ba7e-497f-a795-d8d959c40555
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c38341bca9471889827809d6563d922cc8877eea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# NMAKE 嚴重錯誤 U1055
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nmake-fatal-error-u1055"></a>NMAKE 嚴重錯誤 U1055
 環境空間不足  
   
- 作業系統的環境變數空間不足。  
+ 作業系統已用盡空間的環境變數。  
   
- 增加環境空間或設定較少的環境變數。
+ 請增加環境空間，或設定較少的環境變數。

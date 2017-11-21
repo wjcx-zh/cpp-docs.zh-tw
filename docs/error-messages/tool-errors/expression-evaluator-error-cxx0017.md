@@ -1,42 +1,41 @@
 ---
-title: "運算式評估工具錯誤 CXX0017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0017"
-  - "CXX0017"
+title: "運算式評估工具錯誤 CXX0017 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0017
+dev_langs: C++
+helpviewer_keywords:
+- CAN0017
+- CXX0017
 ms.assetid: af74db02-a64d-49ca-8363-3e044a107580
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2b1e7901f46aacbcac73a7d2b6a3e5f033d1526c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 運算式評估工具錯誤 CXX0017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="expression-evaluator-error-cxx0017"></a>運算式評估工具錯誤 CXX0017
 找不到符號  
   
  找不到運算式中指定的符號。  
   
- 造成此錯誤的原因可能是符號名稱的大小寫不符。  由於 C 和 C\+\+ 是會區分大小寫的語言，符號名稱必須與來源中定義的大小寫完全相同。  
+ 此錯誤的其中一個可能的原因是符號名稱的大小寫不符。 由於 C 和 c + + 會區分大小寫的語言，符號名稱必須是指定它定義在來源中的大小寫完全相符。  
   
- 在偵錯時為監看變數而試著轉換變數的型別時，也會發生此錯誤。  `typedef` 可以宣告型別的新名稱，但是並不會定義新型別。  在偵錯工具中試圖轉換型別時，必須使用已定義的型別名稱。  
+ 嘗試在偵錯期間監看變數類型轉換變數時，會發生此錯誤。 `typedef`宣告的型別，新名稱，但沒有定義新的類型。 試圖在偵錯工具需要有已定義的類型名稱。  
   
- 此錯誤與 CAN0017 相同。  
+ 這個錯誤是與 can0017 相同。  
   
-### 若要採用下列可能解決方式以進行修正  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正  
   
-1.  確定程式中的符號在使用前都已經過宣告。  
+1.  請確定該符號已宣告其中正在使用的程式中的點。  
   
-2.  在偵錯工具中使用真正的型別名稱轉換變數，而不是使用 `typedef` 定義的名稱。
+2.  使用實際的型別名稱，來轉換變數在偵錯工具，而非`typedef`-定義的名稱。

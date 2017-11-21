@@ -1,48 +1,47 @@
 ---
-title: "Boxed 值的追蹤控制代碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Boxed 實值類型, 追蹤控制代碼至"
+title: "Boxed 值的追蹤控制代碼 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxed value types, tracking handle to
 ms.assetid: 16c92048-5b74-47d5-8eca-dfea3d38879a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a986dcea2eec183ae09eb9af275082922257ef76
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Boxed 值的追蹤控制代碼
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，使用追蹤控制代碼 \(Tracking Handle\) 參考實值型別 \(Value Type\) 的方式已變更。  
+# <a name="a-tracking-handle-to-a-boxed-value"></a>Boxed 值的追蹤控制代碼
+參考實值類型的追蹤控制代碼的使用方式已經從 Managed Extensions for c + + Visual c + +。  
   
- Boxing 是 CLR 統一型別系統的一項特性。  實值型別會直接包含其狀態，而參考型別 \(Reference Type\) 則會採用隱含搭配方式：具名實體 \(Named Entity\) 是在 Managed 堆積上配置之未命名物件的控制代碼。  例如，將實值型別初始化或指派給 `Object` 時，必須將實值型別放在 CLR 堆積中 \(即其引發 Boxing 映像的所在位置\)，方式是先配置相關聯的記憶體，接著再複製實值型別的狀態，然後傳回此匿名值\/參考組合的位址。  因此，當使用者在 C\# 中撰寫下列程式碼時：  
+ Boxing 是整合的 CLR 型別系統的審視。 實值類型直接包含其狀態，而參考型別都隱含的配對： 具名的實體是未命名的物件，在 managed 堆積上配置的控制代碼。 初始化或指派值的型別`Object`，例如，需要實值型別置於 CLR 堆積-這是其中 boxing 它的映像，就會發生的第一次配置相關聯的記憶體，則藉由複製值類型的狀態然後傳回此匿名值/參考混合式的位址。 因此，當其中一個寫入 C# 中  
   
 ```  
 object o = 1024; // C# implicit boxing  
 ```  
   
- 雖然程式碼表面看起來很簡單，但實際的執行過程要複雜許多。  C\# 的設計不僅會隱藏實際執行的作業，也會隱藏 Boxing 本身的抽取作業，因此看起來不會那麼複雜。  相反地，Managed Extensions for C\+\+ 因為擔心這會造成使用者對效率的誤解，因此會要求使用者使用明確的指令：  
+ 還有許多看起來由明顯簡化程式碼。 C# 的設計會隱藏複雜度，不僅的哪些作業會發生在幕後，但 boxing 本身抽象。 Managed 而言，這會導致效率的感應，所需要的明確指令來將它放在使用者的字體的 c + +，相反地，擴充：  
   
 ```  
 Object *o = __box( 1024 ); // Managed Extensions explicit boxing  
 ```  
   
- Boxing 在 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 中為隱含：  
+ Boxing 是隱含 Visual c + +:  
   
 ```  
 Object ^o = 1024; // new syntax implicit boxing  
 ```  
   
- 在 Managed Extensions 中，`__box` 關鍵字是做為不可或缺的服務，這是 C\# 和 [!INCLUDE[vbprvb](../Token/vbprvb_md.md)] 等語言在設計時所缺少的服務：它可以提供在 Managed 堆積上直接操作 Boxed 執行個體 \(Instance\) 所需的詞彙和追蹤控制代碼。  例如，以下列這一小段程式為例：  
+ `__box`關鍵字做內管理擴充功能，其中不存在的重要服務所設計，例如 C# 和 Visual Basic 的語言： 它所提供之詞彙 」 和 「 追蹤處理的直接管理 managed 堆積上的已封裝的執行個體。 例如，請考慮下列的小程式：  
   
 ```  
 int main() {  
@@ -59,13 +58,13 @@ int main() {
 }  
 ```  
   
- 針對 `WriteLine` 的三個引動過程所產生的基礎程式碼，會顯示存取 Boxed 實值型別值時的不同負擔 \(感謝 Yves Dolce 指出這些差異\)，其中所指的幾行會分別顯示與各引動過程相關聯的負擔。  
+ 產生的三個引動過程的基礎程式碼`WriteLine`顯示成本的存取的 boxed 實值類型 （這點受惠 Yves Dolce 指出這些差異的)，其中的指示的行顯示每個相關聯的額外負荷引動過程。  
   
 ```  
 // Console::WriteLine( S"result :: {0}", result.ToString() ) ;  
 ldstr      "result :: {0}"  
 ldloca.s   result  // ToString overhead  
-call       instance string  [mscorlib]System.Double::ToString()  // ToString overhead  
+call       instance string  [mscorlib]System.Double::ToString()  // ToString overhead  
 call       void [mscorlib]System.Console::WriteLine(string, object)  
   
 // Console::WriteLine( S"result :: {0}", __box(result) ) ;  
@@ -80,9 +79,9 @@ ldloc.0
 call     void [mscorlib]System.Console::WriteLine(string, object)  
 ```  
   
- 如果將 Boxed 實值型別直接傳遞至 `Console::WriteLine`，就可以排除 Boxing 處理，而且不需要叫用 \(Invoke\) `ToString()` \(當然，之前初始化 `br` 時已有 Boxing 處理，因此除非真的使用 `br`，否則不會有任何作用\)。  
+ Boxed 實的值類型將直接傳遞至`Console::WriteLine`排除的 boxing 和叫用需要`ToString()`。 (當然，沒有舊版的 boxing 初始化`br`，因此我們不除非我們真的將取得的任何項目`br`運作。  
   
- 在新的語法中，Boxed 實值型別的支援更加簡潔，而且已整合到型別系統中，同時保留了原有的功能。  例如，下列就是前面那一小段程式的轉譯結果：  
+ 在新語法中，對 boxed 實的值類型的支援會是更加簡潔，而且型別系統中的整合式同時保留其電源。 例如，以下是舊版的小程式中的轉譯：  
   
 ```  
 int main()  
@@ -98,6 +97,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [實值類型和行為 \(C\+\+\/CLI\)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
+## <a name="see-also"></a>另請參閱  
+ [實值類型和它們的行為 (C + + /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [如何：明確要求 Boxing](../dotnet/how-to-explicitly-request-boxing.md)

@@ -1,47 +1,47 @@
 ---
-title: "如何：呼叫 Windows Form 控制項的屬性和方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "呼叫方法, Windows Form 控制項"
-  - "呼叫屬性"
-  - "呼叫屬性, Windows Form 控制項"
-  - "方法呼叫, Windows Form"
-  - "Windows Form 控制項 [C++], 方法"
-  - "Windows Form 控制項 [C++], 屬性"
+title: "如何： 呼叫屬性和方法的 Windows Form 控制項 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- method calls, Windows Forms
+- calling methods, Windows Forms control
+- calling properties, Windows Forms control
+- Windows Forms controls [C++], methods
+- calling properties
+- Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28e6d025d6c2aa485b5687117d64afeb7e402a79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：呼叫 Windows Form 控制項的屬性和方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-因為 [CWinFormsView::GetControl](../Topic/CWinFormsView::GetControl.md) 傳回 <xref:System.Windows.Forms.Control?displayProperty=fullName> 的指標，而不是傳回 `WindowsControlLibrary1::UserControl1` 的指標，建議加入使用者控制項型別的成員，並在 [IView::OnInitialUpdate](../Topic/IView::OnInitialUpdate.md) 中初始化。  現在，您可以使用 `m_ViewControl` 呼叫方法和屬性。  
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：呼叫 Windows Form 控制項的屬性和方法
+因為[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)將指標傳回至<xref:System.Windows.Forms.Control?displayProperty=fullName>，而非指標和`WindowsControlLibrary1::UserControl1`，建議您在加入使用者控制項類型的成員，並將它在初始化[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). 現在您可以呼叫方法和屬性使用`m_ViewControl`。  
   
- 本主題假設您先前已完成 [如何：建立使用者控制項並裝載至對話方塊中](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和 [如何：建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。  
+ 本主題假設您之前已經完成[How to： 在對話方塊中建立使用者控制項並裝載](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md)和[How to： 建立使用者控制項和主應用程式 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。  
   
-### 若要建立 MFC 主應用程式  
+### <a name="to-create-the-mfc-host-application"></a>若要建立 MFC 主應用程式  
   
-1.  開啟您在 [如何：建立使用者控制項並裝載 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)建立的 MFC 應用程式。  
+1.  開啟您在建立 MFC 應用程式[How to： 建立使用者控制項和主應用程式 MDI 檢視](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md)。  
   
-2.  將下面程式碼行加入到 MFC02View.h 中 `CMFC02View` 類別宣告的 public overrides 區段。  
+2.  將下列行加入至的公用覆寫區段`CMFC02View`類別 MFC02View.h 中的宣告。  
   
      `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`  
   
-3.  加入 OnInitialupdate 的覆寫。  
+3.  加入註冊的覆寫。  
   
-     顯示 \[**屬性**\] 視窗 \(F4\)。  在 \[**類別檢視**\] \(CTRL\+SHIFT\+C\) 中選取 CMFC02View 類別。  在 \[**屬性**\] 視窗中，選取覆寫的圖示。  向下捲動清單，一直到 OnInitialUpdate，  按一下下拉式清單，然後選取 \<加入\>。  在MFC02View.cpp中，確定 OnInitialUpdate 函式的主體如下所示：  
+     顯示**屬性**視窗 (F4)。 在**類別檢視**(CTRL + SHIFT + C)，選取 CMFC02View 類別。 在**屬性**視窗中，選取覆寫的圖示。 要註冊清單中向下 Scoll。 按一下下拉式清單並選取 \<新增 >。 在 MFC02View.cpp。 請確定 OnInitialUpdate 函式的主體，如下所示：  
   
     ```  
     CWinFormsView::OnInitialUpdate();  
@@ -49,13 +49,13 @@ caps.handback.revision: 9
     m_ViewControl->textBox1->Text = gcnew System::String("hi");  
     ```  
   
-4.  建置及執行專案。  
+4.  建置並執行專案。  
   
-     在 \[**建置**\] 功能表上，按一下 \[**建置方案**\]。  
+     在 [ **建置** ] 功能表上，按一下 [ **建置方案**]。  
   
-     在 \[**偵錯**\] 功能表上，按一下 \[**啟動但不偵錯**\]。  
+     在**偵錯**功能表上，按一下 **啟動但不偵錯**。  
   
-     請注意，現在已經將文字方塊初始化。  
+     請注意，文字方塊現在已初始化。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [將 Windows Form 使用者控制項裝載為 MFC 檢視](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

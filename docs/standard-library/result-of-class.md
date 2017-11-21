@@ -13,23 +13,21 @@ f1_keywords:
 - type_traits/std::result_of
 - type_traits/std::result_of_t
 - type_traits/std::result_of::type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::result_of
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 3d48ed78b221217fd132592521481922c15c949d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 08e4fc22725962d06bee35ed1adf63e3c9230ced
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="resultof-class"></a>result_of 類別
 決定採用指定引數類型之可呼叫類型的傳回類型。  
@@ -65,7 +63,6 @@ template<class T>
   
 ## <a name="see-also"></a>另請參閱  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

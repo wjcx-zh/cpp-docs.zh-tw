@@ -1,73 +1,71 @@
 ---
-title: "CRowset::Insert | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>.Insert"
-  - "CRowset.Insert"
-  - "CRowset<TAccessor>.Insert"
-  - "CRowset<TAccessor>::Insert"
-  - "ATL::CRowset<TAccessor>::Insert"
-  - "ATL.CRowset.Insert"
-  - "CRowset::Insert"
-  - "ATL::CRowset::Insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Insert 方法"
+title: "Crowset:: Insert |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>.Insert
+- CRowset.Insert
+- CRowset<TAccessor>.Insert
+- CRowset<TAccessor>::Insert
+- ATL::CRowset<TAccessor>::Insert
+- ATL.CRowset.Insert
+- CRowset::Insert
+- ATL::CRowset::Insert
+dev_langs: C++
+helpviewer_keywords: Insert method
 ms.assetid: 6a64a1c3-10ac-4296-8685-0fd6fe63a13b
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a8cdb6c413cc1a655ace270df632ca501b9b5f3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset::Insert
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用存取的資料建立和初始化一個新的資料列。  
+# <a name="crowsetinsert"></a>CRowset::Insert
+建立並初始化新的資料列，使用存取子中的資料。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT Insert(   
-   int nAccessor = 0,   
-   bool bGetHRow = false    
+      HRESULT Insert(   
+   int nAccessor = 0,   
+   bool bGetHRow = false    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `nAccessor`  
- \[in\]使用存取子的數字為插入資料。  
+ [in]用於插入資料的存取子數目。  
   
  *bGetHRow*  
- \[in\]表示是否已擷取插入資料列的控制代碼。  
+ [in]指出是否要擷取之插入的資料列的控制代碼。  
   
-## 傳回值  
- 標準版 `HRESULT`  
+## <a name="return-value"></a>傳回值  
+ 標準 `HRESULT`。  
   
-## 備註  
- 這個方法要求選擇性 `IRowsetChange` 介面，可能不是所有提供者都支援;如果是這種情況，方法會傳回 **E\_NOINTERFACE**。  在對資料表或是包含資料列集的命令呼叫 **Open** 之前您也必須設定 **DBPROP\_IRowsetChange** 到 `VARIANT_TRUE`。  
+## <a name="remarks"></a>備註  
+ 此方法需要的選擇性介面`IRowsetChange`，這可能不支援所有提供者; 如果這種情況，方法會傳回**E_NOINTERFACE**。 您也必須設定**DBPROP_IRowsetChange**至`VARIANT_TRUE`之前先呼叫**開啟**的資料表上包含資料列集的命令。  
   
- 如果出現一個或多個資料行無法寫入的情形，插入便可能會失敗。  請修改您的資料指標 \(Cursor\) 對應以修正這個問題。  
+ 如果一或多個資料行不是可寫入，插入可能會失敗。 請修改您的資料指標對應以修正這個問題。  
   
-## 範例  
- 下列範例會在該資料列集顯示如何存取資料來源並將資料列集然後插入字串資料表。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何透過資料列集來存取資料來源，然後再插入的字串使用資料表中該資料列集。  
   
- 首先，插入新的 ATL 物件至專案以建立資料表類別。  例如，請以滑鼠右鍵按一下工作區窗格的專案並選擇 **New ATL 物件**。  從 **Data Access** 分類選取 **Consumer**。  建立**Table**型別的消費者物件。\(選取 **Table** 以建立資料列集直接從資料表；選取 **Command** 透過 SQL 命令建立資料列集\)。選取資料來源，指定資料表存取該資料來源。  如果您呼叫您的消費者物件 **CCustomerTable**，您就可以實作自己的插入程式碼如下所示:  
+ 首先，建立資料表類別藉由將您的專案中插入新的 ATL 物件。 例如，以滑鼠右鍵按一下工作區 窗格中的專案，然後選取**新 ATL 物件**。 從**資料存取**類別目錄中，選取**消費者**。 建立取用者物件的型別**資料表**。 (選取**資料表**直接從資料表中建立資料列集; 選取**命令**建立的資料列集，透過 SQL 命令。)選取資料來源，指定資料表，以存取該資料來源。 如果您呼叫取用者物件**CCustomerTable**，接下來您將實作您插入的程式碼，如下所示：  
   
- [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/CPP/crowset-insert_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#10](../../data/oledb/codesnippet/cpp/crowset-insert_1.cpp)]  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)

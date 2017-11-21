@@ -1,46 +1,43 @@
 ---
-title: "ComPtrRef::operator void** 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator void**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator void** 運算子"
+title: "Comptrref:: Operator void * * 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator void**
+dev_langs: C++
+helpviewer_keywords: operator void** operator
 ms.assetid: f020045c-9de4-4392-8783-73f0fc0761c6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f961328444d49bb282b87b4d4670aeab7fe7997
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtrRef::operator void** 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="comptrrefoperator-void-operator"></a>ComPtrRef::operator void** 運算子
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 operator void**() const;  
 ```  
   
-## 備註  
- 刪除目前 ComPtrRef 物件，並將 ComPtrRef 物件代表的指標轉換成指向 `void`的指標的指標，然後傳回轉型指標。  
+## <a name="remarks"></a>備註  
+ 刪除目前的 ComPtrRef 物件，會轉換至已做為指標--指標-將 ComPtrRef 物件所代表的介面指標`void`，然後傳回轉型指標。  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ComPtrRef 類別](../windows/comptrref-class.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

@@ -1,32 +1,30 @@
 ---
-title: "SafeCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeCast 函式"
+title: "SafeCast |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeCast
+dev_langs: C++
+helpviewer_keywords: SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 24b1d0c99ebc4ea543ef9d3fd1bc269d4874f706
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# SafeCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-轉換數字的型別轉換為其他型別的。  
+# <a name="safecast"></a>SafeCast
+會轉換成其他類型的數字的一種類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename T, typename U>  
@@ -36,30 +34,30 @@ inline bool SafeCast (
 );  
 ```  
   
-#### 參數  
- \[in\] `From`  
- 要轉換的來源數目。  這個必須為型別 T。  
+#### <a name="parameters"></a>參數  
+ [in] `From`  
+ 要轉換的來源點數。 這必須為類型 T。  
   
- \[out\] `To`  
- 對新的數字型別的參考。  這個必須為型別 U。  
+ [輸出] `To`  
+ 新的數字類型的參考。 這必須為類型 U。  
   
-## 傳回值  
- 若沒有錯誤發生則為 `true`；若有錯誤發生則為 `false`。  
+## <a name="return-value"></a>傳回值  
+ `true`如果沒有發生錯誤。`false`如果發生錯誤。  
   
-## 備註  
- 這個方法是 [SafeInt 程式庫](../windows/safeint-library.md) 的一部分，為單一轉換運算設計，並且不必建立 [SafeInt 類別](../windows/safeint-class.md) 的執行個體。  
+## <a name="remarks"></a>備註  
+ 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，適用於單一的轉型作業而不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  這個方法只有在當單一運算必須被保護時使用。  如果同時有多個運算，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
+>  必須保護單一作業時，才應該使用這個方法。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需此範本類型 T 與 U 的詳細資訊，請參閱 [SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** safeint.h  
   
  **命名空間：** Microsoft::Utilities  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外狀況規格 （throw、 noexcept） （c + +）
 例外狀況規格是 c + + 語言功能，以指出例外狀況類型的函式進行傳播相關的程式設計人員的目的。 您可以指定函式可能會或可能不會結束例外狀況使用*例外狀況規格*。 編譯器可以使用這項資訊來最佳化呼叫函式，並以結束程式。 如果預期的例外狀況逸出函式。 有兩種類型的例外狀況規格。 *Noexcept 規格*C + + 11 的新功能。 它會指定可能的例外狀況可以逸出函式的集合是否為空白。 *動態例外狀況規格*，或`throw(optional_type_list)`規格，在 C + + 11 中已被取代，僅部分支援 Visual Studio。 此例外狀況規格設計來提供離函式，可以擲回例外狀況的摘要資訊，但實際上它找不到問題。 經過證明有些許用處一個動態例外狀況規格是無條件`throw()`規格。 例如，函式宣告：  

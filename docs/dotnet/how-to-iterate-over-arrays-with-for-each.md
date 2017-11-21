@@ -1,31 +1,30 @@
 ---
-title: "如何：使用 for each 反覆查看陣列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 使用 for each 逐一查看"
+title: "如何： 逐一查看陣列的每個 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 559f2257a12d87eb03e9dbc7aa1493d0ec016b48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 for each 反覆查看陣列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題說明如何使用在陣列中的不同型別的 [for each、in](../dotnet/for-each-in.md) 關鍵字。  
+# <a name="how-to-iterate-over-arrays-with-for-each"></a>如何：使用 for each 反覆查看陣列
+本主題示範如何使用[針對每個，在](../dotnet/for-each-in.md)關鍵字上不同類型的陣列。  
   
-## 範例  
- 這個範例顯示如何使用在陣列的 `for each` 參考型別。請注意，如果多維度陣列的任何維度長度為零， `for each` 迴圈會逐一查看陣列。  
+## <a name="example"></a>範例  
+ 這個範例示範如何使用`for each`參考類型的陣列上。  請注意，如果任何多維度陣列的維度是零，則`for each`迴圈會逐一查看陣列上。  
   
 ```  
 // for_each_arrays.cpp  
@@ -66,14 +65,18 @@ int main() {
 }  
 ```  
   
-  **0 \= 在 MyClass**  
-**1 \= 在 MyClass**  
-**0 \= 在 MyClass2**  
-**1 \= 在 MyClass2**  
-**2 \= 在 MyClass2**  
-**3 \= 在 MyClass2**   
-## 範例  
- 這個範例會逐一查看 <xref:System.Collections.ArrayList>中的每個顯示，實作 <xref:System.Collections.IEnumerable>。  
+```Output  
+0 = in MyClass  
+1 = in MyClass  
+  
+0 = in MyClass2  
+1 = in MyClass2  
+2 = in MyClass2  
+3 = in MyClass2  
+```  
+  
+## <a name="example"></a>範例  
+ 這個範例會顯示每個反覆<xref:System.Collections.ArrayList>，它會實作<xref:System.Collections.IEnumerable>。  
   
 ```  
 // for_each_arrays_2.cpp  
@@ -95,9 +98,12 @@ int main() {
 }  
 ```  
   
-  **60**   
-## 範例  
- 這個範例顯示如何逐一查看陣列。  
+```Output  
+60  
+```  
+  
+## <a name="example"></a>範例  
+ 這個範例示範如何逐一查看陣列的陣列。  
   
 ```  
 // for_each_arrays_3.cpp  
@@ -129,13 +135,17 @@ int main() {
 }  
 ```  
   
-  **IntArray \[0、\= 10**  
-**IntArray \[0、\= 10**  
-**IntArray \[1、\= 11**  
-**IntArray \[1、\= 11**  
-**10**  
-**10**  
-**11**  
-**11**   
-## 請參閱  
- [for each、in](../dotnet/for-each-in.md)
+```Output  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
+  
+10  
+10  
+11  
+11  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [for each, in](../dotnet/for-each-in.md)

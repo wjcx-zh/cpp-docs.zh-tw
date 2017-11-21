@@ -1,58 +1,58 @@
 ---
 title: "_putch、_putwch | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_putwch"
-  - "_putch"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-conio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_putch"
-  - "putwch"
-  - "_putwch"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_putch 函式"
-  - "_putwch 函式"
-  - "字元, 撰寫"
-  - "主控台, 將字元寫入"
-  - "putch 函式"
-  - "putwch 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _putwch
+- _putch
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-conio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _putch
+- putwch
+- _putwch
+dev_langs: C++
+helpviewer_keywords:
+- _putch function
+- characters, writing
+- putwch function
+- _putwch function
+- putch function
+- console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 74a864aba662d17a5b69d6cc0bdaf6f260e15872
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# _putch、_putwch
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-將一個字元寫入控制項。  
+# <a name="putch-putwch"></a>_putch、_putwch
+將字元寫入至主控台。  
   
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於 Windows 執行階段執行的應用程式。  如需詳細資訊，請參閱 [\/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -60,44 +60,44 @@ caps.handback.revision: 19
 int c   
 );  
 wint_t _putwch(  
-   wchar_t c  
+   wchar_t c  
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `c`  
- 待輸出字元。  
+ 要輸出的字元。  
   
-## 傳回值  
- 如果成功，會傳回 `c`。  如果 `_putch` 失敗，則會傳回 `EOF`;如果 **\_putwch** 失敗，則會傳回 **WEOF**。  
+## <a name="return-value"></a>傳回值  
+ 若成功，會傳回 `c`。 如果 `_putch` 失敗，則會傳回 `EOF`；如果 **_putwch** 失敗，則會傳回 **WEOF**。  
   
-## 備註  
- 這些函式會直接寫入`c` 字元到主控台，而不需要緩衝區。  在 Windows NT， **\_putwch** 使用目前主控台地區設定撰寫Unicode 字元。  
+## <a name="remarks"></a>備註  
+ 這些函式會不經緩衝處理就直接將字元 `c` 寫入至主控台。 在 Windows NT 中，**_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。  
   
- 與 **\_nolock** 結尾的版本相同，但不會防止被其他執行緒干擾。  如需詳細資訊，請參閱 `_putch_nolock`、`_putwch_nolock`。  
+ 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 `_putch_nolock`、`_putwch_nolock`。  
   
-### 一般文字常式對應  
+### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
-|Tchar.h 常式|未定義 \_UNICODE and \_MBCS|已定義 \_MBCS|已定義 \_UNICODE|  
-|----------------|------------------------------|----------------|-------------------|  
-|**\_puttch**|`_putch`|`_putch`|**\_putwch**|  
+|Tchar.h 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
+|**_puttch**|`_putch`|`_putch`|**_putwch**|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_putch`|\<conio.h\>|  
-|**\_putwch**|\<conio.h\>|  
+|-------------|---------------------|  
+|`_putch`|\<conio.h>|  
+|**_putwch**|\<conio.h>|  
   
  如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
- [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)的所有版本。  
+## <a name="libraries"></a>程式庫  
+ 所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
- 請參閱 [\_getch](../../c-runtime-library/reference/getch-getwch.md) 的範例。  
+## <a name="example"></a>範例  
+ 請參閱 [_getch](../../c-runtime-library/reference/getch-getwch.md) 的範例。  
   
-## 請參閱  
- [主控台和連接埠 I\/O](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf、\_cprintf\_l、\_cwprintf、\_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [\_getch、\_getwch](../../c-runtime-library/reference/getch-getwch.md)
+## <a name="see-also"></a>另請參閱  
+ [主控台和連接埠 I/O](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [_getch、_getwch](../../c-runtime-library/reference/getch-getwch.md)

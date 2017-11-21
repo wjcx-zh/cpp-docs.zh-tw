@@ -1,44 +1,42 @@
 ---
-title: "CriticalSection::IsValid 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::IsValid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsValid 方法"
+title: "Criticalsection:: Isvalid 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::IsValid
+dev_langs: C++
+helpviewer_keywords: IsValid method
 ms.assetid: 0080106c-925e-4b3b-89d4-f47668e8bce6
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fae598dbe765a6162f183cf5c38cc389f497f2d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CriticalSection::IsValid 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指出目前關鍵區段是否有效。  
+# <a name="criticalsectionisvalid-method"></a>CriticalSection::IsValid 方法
+指出目前的重要區段是否有效。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool IsValid() const;  
 ```  
   
-## 傳回值  
- 根據預設，一定會傳回 `true`。  
+## <a name="return-value"></a>傳回值  
+ 根據預設，永遠會傳回`true`。  
   
-## 需求  
- **標題:** corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CriticalSection 類別](../windows/criticalsection-class.md)

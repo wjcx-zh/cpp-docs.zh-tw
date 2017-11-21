@@ -1,48 +1,49 @@
 ---
-title: "Evening the Spacing Between Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], positioning"
-  - "controls [C++], aligning"
-  - "Space Evenly command"
+title: "均等控制項之間的間距 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], positioning
+- controls [C++], aligning
+- Space Evenly command
 ms.assetid: 97e80fb8-1db5-4e88-8ada-63540b5f2dab
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 64853c19a2eb37899f622fcf2d192201bd3aa195
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Evening the Spacing Between Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-利用 \[對話方塊\] 編輯器，您可以將選取的最外層控制項之間的控制項均勻調整間距。  
+# <a name="evening-the-spacing-between-controls"></a>均等控制項之間的間距
+對話方塊編輯器可讓您選取的最外層控制項之間的平均空間控制項。  
   
-### 若要均等控制項之間的間距  
+### <a name="to-even-the-spacing-between-controls"></a>若要均等控制項之間的間距  
   
-1.  選取您要重新排列的控制項。  
+1.  請選取您想要重新排列的控制項。  
   
-2.  從 \[格式\] 功能表選擇 \[均等空格\]，然後選取下列其中一項間隔對齊方式：  
+2.  從**格式**功能表上，選擇**均等空格**，然後選擇下列間隔對齊方式的其中一個：  
   
-    -   **橫向**：在已選取的最左方控制項和最右方控制項之間均等控制項間的間距。  
+    -   **跨**： 均等控制項間最左邊和右邊的控制項選取。  
   
-    -   **縱向**：在已選取的最上方控制項和最下方控制項之間均等控制項間的間距。  
+    -   **向下**： 均等控制項間最上方和底部的控制項選取的狀態。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  需求  
   
  Win32  
   
-## 請參閱  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>另請參閱  
+ [在對話方塊上的控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [控制項](../mfc/controls-mfc.md)
+

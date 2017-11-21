@@ -6,19 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: 
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 676f3e836082dc3286a45f8d59db83c969964058
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7cc8e24c8fd1524ebaaf6c2a8edaec05ab865733
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 ||||  
@@ -42,7 +40,7 @@ bool operator== (
   
 ### <a name="parameters"></a>參數  
  `_Rank`  
- Tuple 引數的陣序規範。  
+ Tuple 引數的順位。  
   
  `_Lhs`  
  其中一個要比較的 tuple。  
@@ -51,7 +49,7 @@ bool operator== (
  其中一個要比較的 tuple。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果 tuple 是相等。否則， `false`。  
+ `true`如果 tuple 相等;否則， `false`。  
   
 ##  <a name="operator_neq"></a> operator!=   
  判斷指定的引數是否不相等。  
@@ -68,7 +66,7 @@ bool operator!= (
   
 ### <a name="parameters"></a>參數  
  `_Rank`  
- Tuple 引數的陣序規範。  
+ Tuple 引數的順位。  
   
  `_Lhs`  
  其中一個要比較的 tuple。  
@@ -113,20 +111,20 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
   
 ### <a name="parameters"></a>參數  
  `_Rank`  
- Tuple 引數的陣序規範。  
+ Tuple 引數的順位。  
   
  `_Lhs`  
- 其中一個加入的引數。  
+ 要加入引數的其中一個。  
   
  `_Rhs`  
- 其中一個加入的引數。  
+ 要加入引數的其中一個。  
   
 ### <a name="return-value"></a>傳回值  
- Component-wise 指定的引數的總和。  
+ 指定的引數 component-wise 的總和。  
   
 ##  <a name="operator-"></a>  operator-   
 
- 計算指定的引數的 component-wise 差異。  
+ 計算指定的引數之間的 component-wise 差異。  
   
 ```  
 template <
@@ -158,7 +156,7 @@ _Tuple_type<_Rank>   operator-(
   
 ### <a name="parameters"></a>參數  
  `_Rank`  
- Tuple 引數的陣序規範。  
+ Tuple 引數的順位。  
   
  `_Lhs`  
  要減去的引數。  
@@ -194,13 +192,13 @@ _Tuple_type<_Rank>   operator*(
   
 ### <a name="parameters"></a>參數  
  `_Rank`  
- Tuple 引數的陣序規範。  
+ Tuple 引數的順位。  
   
  `_Lhs`  
- 要相乘的 tuple 的其中一個。  
+ 其中一個要相乘的 tuple。  
   
  `_Rhs`  
- 要相乘的 tuple 的其中一個。  
+ 其中一個要相乘的 tuple。  
   
 ### <a name="return-value"></a>傳回值  
  指定的引數 component-wise 產品。  
@@ -230,20 +228,20 @@ _Tuple_type<_Rank>   operator/(
   
 ### <a name="parameters"></a>參數  
  `_Rank`  
- Tuple 引數的陣序規範。  
+ Tuple 引數的順位。  
   
  `_Lhs`  
  要當做被除數 tuple。  
   
  `_Rhs`  
- 要當做除數 tuple。  
+ 做為除數 tuple。  
   
 ### <a name="return-value"></a>傳回值  
  指定的引數 component-wise 的商數。  
   
 ##  <a name="operator_mod"></a>  operator%   
 
- 計算的第一個指定的引數，第二個指定的引數的模數。  
+ 會計算第二個指定的引數的第一個指定的引數的模數。  
   
 ```  
 template <
@@ -266,17 +264,16 @@ _Tuple_type<_Rank>   operator%(
   
 ### <a name="parameters"></a>參數  
  `_Rank`  
- Tuple 引數的陣序規範。  
+ Tuple 引數的順位。  
   
  `_Lhs`  
  從中 tuple 計算模數。  
   
  `_Rhs`  
- Tuple 至模數的。  
+ Tuple 來模數所。  
   
 ### <a name="return-value"></a>傳回值  
  第一個指定的引數模數第二個指定的引數的結果。  
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency 命名空間](concurrency-namespace-cpp-amp.md)
-

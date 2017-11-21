@@ -1,91 +1,91 @@
 ---
-title: "如何：利用 WRL 啟動與使用 Windows 執行階段元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "如何： 啟用和使用 Windows 執行階段元件使用 WRL |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bbf7c85079afe75789a7a20e04573c3d79524940
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：利用 WRL 啟動與使用 Windows 執行階段元件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-此文件顯示如何使用 [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) 初始化 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]，以及如何啟用和使用 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 元件。  
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>如何：利用 WRL 啟動與使用 Windows 執行階段元件
+本文件示範如何初始化 Windows 執行階段使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 以及如何啟用和使用 Windows 執行階段元件。  
   
 > [!NOTE]
->  這個範例會啟動一個內建 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 元件。  若要了解如何建立可以用類似的方式啟動您的元件，請參閱 [逐步解說：建立基本 Windows 執行階段元件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)。  
+>  這個範例會啟用內建的 Windows 執行階段元件。 若要深入了解如何建立自己的元件，您可以啟用以類似的方式，請參閱[逐步解說： 建立基本 Windows 執行階段元件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)。  
   
- 若要使用元件，您必須取得介面指標至由元件所實作的型別。  而且，因為 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 的基礎技術是元件物件模型 \(COM\)，您必須遵循 COM 規則維護這個型別的執行個體。  例如，您必須維護判斷型別何時從記憶體刪除的 *參考計數*。  
+ 若要使用的元件，您必須取得的類型由該元件實作的介面指標。 和 Windows 執行階段的基礎技術是元件物件模型 (COM)，因為您必須遵循 COM 規則，以維護類型的執行個體。 例如，您必須維護*參考計數*，決定何時從記憶體中刪除類型。  
   
- 為了簡化使用 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]， [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] 提供智慧型指標範本， [ComPtr\<T\>](../windows/comptr-class.md)，自動執行的參考計數。  當您宣告變數時，請指定 `ComPtr<`*interface\-name*`>` *identifier*。  若要存取介面成員，請將套用至箭號成員存取運算子 \(`->`\) 至識別項。  
-  
-> [!IMPORTANT]
->  當您呼叫介面函式時，請務必測試 `HRESULT` 傳回值。  
-  
-## 活化和使用的 Windows 執行階段元件  
- 下列步驟將示範如何使用 `Windows::Foundation::IUriRuntimeClass` 介面建立 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 元件的啟用 Factory，建立元件的執行個體，並擷取屬性值。  同時也會說明如何初始化 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]。  完整的程式碼範例如下所示。  
+ 若要簡化的 Windows 執行階段使用，Windows 執行階段 c + + 樣板程式庫提供的智慧型指標範本， [ComPtr\<T >](../windows/comptr-class.md)，自動執行參考計數。 當您宣告變數時，指定`ComPtr<`*介面名稱*`>` *識別碼*。 若要存取介面成員，套用箭號成員存取運算子 (`->`) 識別項。  
   
 > [!IMPORTANT]
->  雖然您通常會在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式中使用 [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] ，這個範例使用主控台應用程式來描述。  例如 `wprintf_s` 函式無法從 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式使用。  如需您可以在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式中使用的型別和函式的詳細資訊，請參閱 [CRT 函式不支援使用 \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) 和 [Win32 和 COM Windows 市集應用程式的](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+>  當您呼叫介面函式時，一定要測試`HRESULT`傳回值。  
   
-#### 啟動與使用 Windows 執行階段元件  
+## <a name="activating-and-using-a-windows-runtime-component"></a>啟用及使用 Windows 執行階段元件  
+ 下列步驟會使用`Windows::Foundation::IUriRuntimeClass`介面，以示範如何建立 Windows 執行階段元件的啟動處理站，建立該元件的執行個體，和擷取屬性值。 它們也會顯示如何初始化 Windows 執行階段。 完整的範例如下。  
   
-1.  包含 \(`#include`\) 所有必要的 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]、 [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]或 Standard C\+\+ 程式庫的標頭。  
+> [!IMPORTANT]
+>  雖然您通常會使用 Windows 執行階段 c + + 樣板程式庫，在通用 Windows 平台應用程式中，此範例會使用主控台應用程式的圖例。 函式，如`wprintf_s`所沒有的通用 Windows 平台應用程式。 多個型別和函式，您可以使用通用 Windows 平台應用程式中的詳細資訊，請參閱[/zw 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)和[Win32 和 COM 適用於 Windows 市集應用程式](http://msdn.microsoft.com/library/windows/apps/br205757.aspx)。  
+  
+#### <a name="to-activate-and-use-a-windows-runtime-component"></a>若要啟用和使用 Windows 執行階段元件  
+  
+1.  包含 (`#include`) 任何必要的 Windows 執行階段、 Windows 執行階段 c + + 樣板程式庫或 c + + 標準程式庫標頭。  
   
      [!code-cpp[wrl-consume-component#2](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]  
   
-     建議您利用您的 .cpp 檔中的 `using namespace` 指示詞讓程式碼更容易讀取。  
+     我們建議您利用`using namespace`指示詞在.cpp 檔案中，讓程式碼更容易閱讀。  
   
-2.  初始化應用程式正在執行的執行緒。  每個應用程式必須使用它的執行緒和執行緒模型。  這個範例會使用 [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) 類別來初始化 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 並指定 [RO\_INIT\_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) 為執行緒模型。  `RoInitializeWrapper` 類別會在建構時呼叫 `Windows::Foundation::Initialize` ，在終結時呼叫 `Windows::Foundation::Uninitialize` 。  
+2.  初始化應用程式執行所在的執行緒。 每個應用程式必須初始化其執行緒和執行緒模型。 這個範例會使用[Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md)初始化 Windows 執行階段類別，並指定[RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx)為執行緒模型。 `RoInitializeWrapper`類別會呼叫`Windows::Foundation::Initialize`在建構，以及`Windows::Foundation::Uninitialize`被終結時。  
   
      [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]  
   
-     在第二個陳述式， [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) 運算子傳回從呼叫中 `HRESULT` 至 `Windows::Foundation::Initialize`。  
+     在第二個陳述式中， [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md)運算子會傳回`HRESULT`呼叫`Windows::Foundation::Initialize`。  
   
-3.  建立 `ABI::Windows::Foundation::IUriRuntimeClassFactory` 介面的啟動 *Factory* 。  
+3.  建立*啟用 factory*如`ABI::Windows::Foundation::IUriRuntimeClassFactory`介面。  
   
      [!code-cpp[wrl-consume-component#4](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]  
   
-     [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 使用完整名稱以識別型別。  `RuntimeClass_Windows_Foundation_Uri` 參數是由 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 提供和包含所需的執行階段類別名稱的字串。  
+     Windows 執行階段會使用完整限定名稱來識別類型。 `RuntimeClass_Windows_Foundation_Uri`參數是由 Windows 執行階段提供，而且包含必要的執行階段類別名稱的字串。  
   
-4.  初始化一 `"http://www.microsoft.com"`URI 的 [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md) 變數。  
+4.  初始化[Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md)表示 URI 變數`"http://www.microsoft.com"`。  
   
      [!code-cpp[wrl-consume-component#6](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]  
   
-     在 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]，您不會配置 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 之字串的記憶體。  相反地， [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 建置在作業維護和使用的緩衝資料的複本，然後將控制代碼傳回給它所建立的緩衝區。  
+     在 Windows 執行階段中，您不會使用 Windows 執行階段的字串配置記憶體。 相反地，Windows 執行階段會建立在緩衝區中，會維護和會使用執行作業，並再將控制代碼傳回至緩衝區，它會建立一份您的字串。  
   
-5.  請使用 `IUriRuntimeClassFactory::CreateUri` factory 方法建立 `ABI::Windows::Foundation::IUriRuntimeClass` 物件。  
+5.  使用`IUriRuntimeClassFactory::CreateUri`factory 方法來建立`ABI::Windows::Foundation::IUriRuntimeClass`物件。  
   
      [!code-cpp[wrl-consume-component#7](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_5.cpp)]  
   
-6.  呼叫 `IUriRuntimeClass::get_Domain` 方法來擷取 `Domain` 屬性的值。  
+6.  呼叫`IUriRuntimeClass::get_Domain`方法來擷取的值`Domain`屬性。  
   
      [!code-cpp[wrl-consume-component#8](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_6.cpp)]  
   
-7.  網域名稱列印到主控台並傳回。  所有 `ComPtr` 和 RAII 物件離開範圍並自動釋放。  
+7.  列印到主控台的網域名稱，並傳回。 所有`ComPtr`和 RAII 物件離開範圍，且會自動釋放。  
   
      [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]  
   
-     [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) 函式擷取 URI 字串的基本 Unicode 格式。  
+     [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx)函式會擷取基礎 Unicode 格式的 URI 字串。  
   
- 這裡有個完整範例:  
+ 以下是完整的範例：  
   
  [!code-cpp[wrl-consume-component#1](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_8.cpp)]  
   
-## 編譯程式碼  
- 若要編譯程式碼，請複製並貼到 Visual Studio 專案或貼在名為 `wrl-consume-component.cpp` 然後在 Visual Studio 命令提示字元視窗中執行下列命令的檔案。  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 若要編譯程式碼，將它複製然後將它貼入 Visual Studio 專案中，或將它貼入名為的檔案中`wrl-consume-component.cpp`，然後在 Visual Studio 命令提示字元視窗中執行下列命令。  
   
- **cl.exe wrl\-consume\-component.cpp runtimeobject.lib**  
+ **cl.exe wrl 取用 component.cpp runtimeobject.lib**  
   
-## 請參閱  
- [Windows Runtime C\+\+ Template Library \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)
+## <a name="see-also"></a>另請參閱  
+ [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

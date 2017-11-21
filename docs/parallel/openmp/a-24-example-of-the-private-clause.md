@@ -1,27 +1,26 @@
 ---
-title: "A.24   Example of the private Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "私用子句的 A.24 範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f90a5b49-81ff-4746-ae03-37bbd33f6c08
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6f0690f06ac51288605ae4bdd7f12b977f77cf58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# A.24   Example of the private Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`private`子句 \([區段 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) 在頁面上 25\) 的平行區域才會生效的語彙範圍的區域，而不是動態區域的範圍。  因此，在範例中所示，任何使用變數的  內`for`在常式中的迴圈 *f* 指的是私用複本的 ，雖然在常式的使用方式 *g* 參考全域 。  
+# <a name="a24---example-of-the-private-clause"></a>A.24 private 指示詞範例
+`private`子句 ([區段 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md)頁面 25 上) 的平行區域才會生效的語彙範圍的區域，而不在區域的動態範圍。  因此，在下列範例中，使用任何變數內`for`常式中的迴圈*f*指的是私用複本的，而在中的使用方式常式*g*參考到全域。  
   
 ```  
 int a;  

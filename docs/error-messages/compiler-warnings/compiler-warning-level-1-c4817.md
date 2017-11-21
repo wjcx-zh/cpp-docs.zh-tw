@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4817
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4817
+f1_keywords: C4817
+dev_langs: C++
+helpviewer_keywords: C4817
 ms.assetid: a68f5486-6940-4934-9f93-bfd4d71f92a9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5a141a631821c7b681bc26857c6b213aeb0f9831
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 58ded9eec07b8c81349cde27580aa320b408adf5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4817"></a>編譯器警告 (層級 1) C4817
 'member': 使用 '.' 存取這個成員的用法不合法; 編譯器已由 '->' 取代  
@@ -59,4 +39,3 @@ int main() {
    Console::WriteLine( a->Length );   // OK  
 }  
 ```  
-

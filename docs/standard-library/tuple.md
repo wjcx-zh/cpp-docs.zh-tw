@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <tuple>
-dev_langs:
-- C++
-helpviewer_keywords:
-- tuple header
+f1_keywords: <tuple>
+dev_langs: C++
+helpviewer_keywords: tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: df03116e230a9cba7721a37701e9b67ac8e8a518
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b84a2094205e3db7935d5768a3f86ba765487685
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 定義樣板 `tuple`，其執行個體會保留各種不同類型的物件。  
@@ -64,5 +59,4 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>另請參閱  
  [\<array>](../standard-library/array.md)
-
 

@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_move_assignable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_move_assignable
+f1_keywords: type_traits/std::is_move_assignable
+dev_langs: C++
+helpviewer_keywords: is_move_assignable
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 1db589d15042a5e94223aa0f711f58cb30da9983
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 52b30e32afeabe83a79bb32f42ca02936b406d17
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ismoveassignable-class"></a>is_move_assignable 類別
 測試是否可對類型進行移動指派。  
@@ -50,7 +45,6 @@ struct is_move_assignable;
   
 ## <a name="see-also"></a>另請參閱  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

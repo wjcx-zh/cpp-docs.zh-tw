@@ -1,36 +1,35 @@
 ---
-title: "deque (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/deque> 標頭 [STL/CLR]"
-  - "<deque> 標頭 [STL/CLR]"
-  - "deque 類別 [STL/CLR]"
+title: "deque (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque
+dev_langs: C++
+helpviewer_keywords:
+- deque class [STL/CLR]
+- <deque> header [STL/CLR]
+- <cliext/deque> header [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-caps.latest.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# deque (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別描述物件控制項有隨機存取項目的變更長度序列。  您使用容器 `deque` 處理看起來像儲存連續區塊，不過，可以放大或縮小在任一端，而不需要複製其餘項目的序列。  因此可以有效地實作 `double-ended queue`。\(因此名稱\)。  
+# <a name="deque-stlclr"></a>deque (STL/CLR)
+此範本類別描述控制不同長度序列的項目具有隨機存取的物件。 使用容器`deque`管理序列的項目看起來像連續區塊存放裝置，但它可以擴張或縮小任一端而不需要複製任何剩餘的項目。 因此它可以有效實作`double-ended queue`。 (因此名稱。)  
   
- 在如下解譯， `GValue` 相當於 `Value` ，除非後面是參考型別，在這種情況下，它是 `Value^`的情況下。  
+ 在以下描述`GValue`相同`Value`後者是 ref 型別，除非在這種情況下很`Value^`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value>  
@@ -46,103 +45,103 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### 參數  
- G 值  
- 項目的泛型型別在受控制序列的。  
+#### <a name="parameters"></a>參數  
+ GValue  
+ 受控制序列中項目的一般類型。  
   
  值  
- 受控制序列中項目的型別。  
+ 受控制序列中項目的類型。  
   
-## 成員  
+## <a name="members"></a>Members  
   
-|型別定義|說明|  
-|----------|--------|  
-|[deque::const\_iterator](../dotnet/deque-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
-|[deque::const\_reference](../dotnet/deque-const-reference-stl-clr.md)|項目的常數參考類型。|  
-|[deque::const\_reverse\_iterator](../dotnet/deque-const-reverse-iterator-stl-clr.md)|常數反向 Iterator 的型別受控制序列的。|  
-|[deque::difference\_type](../dotnet/deque-difference-type-stl-clr.md)|兩個項目之間的帶正負號距離的類型。|  
-|[deque::generic\_container](../dotnet/deque-generic-container-stl-clr.md)|泛型介面的型別的容器。|  
-|[deque::generic\_iterator](../dotnet/deque-generic-iterator-stl-clr.md)|Iterator 的型別泛型介面的容器。|  
-|[deque::generic\_reverse\_iterator](../dotnet/deque-generic-reverse-iterator-stl-clr.md)|反向 Iterator 的型別泛型介面的容器。|  
-|[deque::generic\_value](../dotnet/deque-generic-value-stl-clr.md)|項目的型別泛型介面的容器。|  
-|[deque::iterator](../dotnet/deque-iterator-stl-clr.md)|受控制序列中 iterator 的類型。|  
-|[deque::reference](../dotnet/deque-reference-stl-clr.md)|項目的參考類型。|  
-|[deque::reverse\_iterator](../dotnet/deque-reverse-iterator-stl-clr.md)|反向 Iterator 的型別受控制序列的。|  
-|[deque::size\_type](../dotnet/deque-size-type-stl-clr.md)|兩個項目之間的帶正負號距離的類型。|  
-|[deque::value\_type](../dotnet/deque-value-type-stl-clr.md)|項目的類型。|  
+|類型定義|說明|  
+|---------------------|-----------------|  
+|[deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
+|[deque::const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)|項目的常數參考類型。|  
+|[deque::const_reverse_iterator (STL/CLR)](../dotnet/deque-const-reverse-iterator-stl-clr.md)|用於受控制序列的常數反向迭代器類型。|  
+|[deque::difference_type (STL/CLR)](../dotnet/deque-difference-type-stl-clr.md)|兩個項目之間帶正負號距離的類型。|  
+|[deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)|容器的泛型介面型別。|  
+|[deque::generic_iterator (STL/CLR)](../dotnet/deque-generic-iterator-stl-clr.md)|泛型介面，該容器的迭代器類型。|  
+|[deque::generic_reverse_iterator (STL/CLR)](../dotnet/deque-generic-reverse-iterator-stl-clr.md)|容器的泛型介面的反向迭代器類型。|  
+|[deque::generic_value (STL/CLR)](../dotnet/deque-generic-value-stl-clr.md)|泛型介面的容器項目的類型。|  
+|[deque::iterator (STL/CLR)](../dotnet/deque-iterator-stl-clr.md)|受控制序列之迭代器的類型。|  
+|[deque::reference (STL/CLR)](../dotnet/deque-reference-stl-clr.md)|項目的參考類型。|  
+|[deque::reverse_iterator (STL/CLR)](../dotnet/deque-reverse-iterator-stl-clr.md)|受控制序列的反向迭代器類型。|  
+|[deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)|兩個項目之間帶正負號距離的類型。|  
+|[deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)|元素的類型。|  
   
 |成員函式|說明|  
-|----------|--------|  
-|[deque::assign](../dotnet/deque-assign-stl-clr.md)|取代所有項目。|  
-|[deque::at](../dotnet/deque-at-stl-clr.md)|存取項目在指定的位置。|  
-|[deque::back](../dotnet/deque-back-stl-clr.md)|存取最後一個項目。|  
-|[deque::begin](../dotnet/deque-begin-stl-clr.md)|指定受控制序列的開頭。|  
-|[deque::clear](../dotnet/deque-clear-stl-clr.md)|移除所有項目。|  
-|[deque::deque](../dotnet/deque-deque-stl-clr.md)|建構一個容器物件。|  
-|[deque::empty](../dotnet/deque-empty-stl-clr.md)|測試項目是否不存在。|  
-|[deque::end](../dotnet/deque-end-stl-clr.md)|指定受控制序列的結尾。|  
-|[deque::erase](../dotnet/deque-erase-stl-clr.md)|移除指定位置的項目。|  
-|[deque::front](../dotnet/deque-front-stl-clr.md)|存取第一個項目。|  
-|[deque::insert](../dotnet/deque-insert-stl-clr.md)|將項目在指定的位置。|  
-|[deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)|移除最後一個項目。|  
-|[deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)|移除第一個項目。|  
-|[deque::push\_back](../dotnet/deque-push-back-stl-clr.md)|將新的最後一個項目。|  
-|[deque::push\_front](../dotnet/deque-push-front-stl-clr.md)|將新的第一個項目。|  
-|[deque::rbegin](../dotnet/deque-rbegin-stl-clr.md)|指定已還原的受控制序列開頭。|  
-|[deque::rend](../dotnet/deque-rend-stl-clr.md)|指定已還原的受控制序列結尾。|  
-|[deque::resize](../dotnet/deque-resize-stl-clr.md)|變更項目的數目。|  
-|[deque::size](../dotnet/deque-size-stl-clr.md)|計數項目的數目。|  
-|[deque::swap](../dotnet/deque-swap-stl-clr.md)|交換兩個容器的內容。|  
-|[deque::to\_array](../dotnet/deque-to-array-stl-clr.md)|複製受控制序列的新陣列。|  
+|---------------------|-----------------|  
+|[deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|取代所有項目。|  
+|[deque::at (STL/CLR)](../dotnet/deque-at-stl-clr.md)|存取指定位置的項目。|  
+|[deque::back (STL/CLR)](../dotnet/deque-back-stl-clr.md)|存取最後一個項目。|  
+|[deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md)|指定受控制序列的開頭。|  
+|[deque::clear (STL/CLR)](../dotnet/deque-clear-stl-clr.md)|移除所有項目。|  
+|[deque::deque (STL/CLR)](../dotnet/deque-deque-stl-clr.md)|建構容器物件。|  
+|[deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)|測試項目是否不存在。|  
+|[deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md)|指定受控制序列的結尾。|  
+|[deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)|移除位於指定位置的項目。|  
+|[deque::front (STL/CLR)](../dotnet/deque-front-stl-clr.md)|存取第一個項目。|  
+|[deque::insert (STL/CLR)](../dotnet/deque-insert-stl-clr.md)|將項目加入指定的位置。|  
+|[deque::pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)|移除最後一個項目。|  
+|[deque::pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)|移除第一個項目。|  
+|[deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)|加入新的最後一個項目。|  
+|[deque::push_front (STL/CLR)](../dotnet/deque-push-front-stl-clr.md)|加入新的第一個項目。|  
+|[deque::rbegin (STL/CLR)](../dotnet/deque-rbegin-stl-clr.md)|指定反向受控制序列的開頭。|  
+|[deque::rend (STL/CLR)](../dotnet/deque-rend-stl-clr.md)|指定反向受控制序列的結尾。|  
+|[deque::resize (STL/CLR)](../dotnet/deque-resize-stl-clr.md)|變更項目數目。|  
+|[deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)|計算元素的數目。|  
+|[deque::swap (STL/CLR)](../dotnet/deque-swap-stl-clr.md)|交換兩個容器的內容。|  
+|[deque::to_array (STL/CLR)](../dotnet/deque-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
   
 |屬性|說明|  
-|--------|--------|  
-|[deque::back\_item](../dotnet/deque-back-item-stl-clr.md)|存取最後一個項目。|  
-|[deque::front\_item](../dotnet/deque-front-item-stl-clr.md)|存取第一個項目。|  
+|--------------|-----------------|  
+|[deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)|存取最後一個項目。|  
+|[deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)|存取第一個項目。|  
   
 |運算子|說明|  
-|---------|--------|  
-|[deque::operator\!\=](../dotnet/deque-operator-inequality-stl-clr.md)|判斷兩個 `deque` 物件是否不相等。|  
-|[deque::operator](../dotnet/deque-operator-stl-clr.md)|存取項目在指定的位置。|  
-|[operator\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)|判斷 `deque` 物件是否小於另一個 `deque` 物件。|  
-|[operator\<\= \(deque\)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|判斷 `deque` 物件是否小於或等於另一個 `deque` 物件。|  
-|[operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)|取代受控制序列。|  
-|[operator\=\= \(deque\)](../dotnet/operator-equality-deque-stl-clr.md)|判斷 `deque` 物件是否等於另一個 `deque` 物件。|  
-|[operator\> \(deque\)](../dotnet/operator-greater-than-deque-stl-clr.md)|判斷 `deque` 物件是否大於另一個 `deque` 物件。|  
-|[operator\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|判斷 `deque` 物件是否大於或等於另一個 `deque` 物件。|  
+|--------------|-----------------|  
+|[deque::operator!= (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|判斷兩個`deque`物件不相等。|  
+|[deque::operator (STL/CLR)](../dotnet/deque-operator-stl-clr.md)|存取指定位置的項目。|  
+|[operator< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)|決定如果`deque`物件是否小於另一個`deque`物件。|  
+|[operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)|決定如果`deque`物件是否小於或等於另一個`deque`物件。|  
+|[operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)|取代受控制的序列。|  
+|[operator== (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)|決定如果`deque`物件是否等於另一個`deque`物件。|  
+|[operator> (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)|決定如果`deque`物件是否大於另一個`deque`物件。|  
+|[operator>= (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)|決定如果`deque`物件是否大於或等於另一個`deque`物件。|  
   
-## 介面  
+## <a name="interfaces"></a>介面  
   
 |介面|說明|  
-|--------|--------|  
-|<xref:System.ICloneable>|複製物件。|  
-|<xref:System.Collections.IEnumerable>|序列傳遞項目。|  
-|<xref:System.Collections.ICollection>|維護項目的群組。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|序列傳遞型別項目。|  
-|<xref:System.Collections.Generic.ICollection%601>|維護型別項目的群組。|  
-|<xref:System.Collections.Generic.IList%601>|maintain 排序的型別項目的群組。|  
-|IDequeValue\<\>|維護泛型容器。|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|重複的物件。|  
+|<xref:System.Collections.IEnumerable>|項目順序。|  
+|<xref:System.Collections.ICollection>|維護群組的項目。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的項目順序。|  
+|<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|  
+|<xref:System.Collections.Generic.IList%601>|維護已排序的群組的具類型的項目。|  
+|IDeque < 值\>|維護泛型容器。|  
   
-## 備註  
- 物件配置和未使用的記憶體區域會將儲存的一些控制項指定 `Value` 項目區塊的序列。  陣列成長需求。  成長發生，在這種情況下預先規劃或附加新項目的代價是常數時間，，其餘項目不會干擾。  您也可以移除項目在任一端在常數時間而不干擾其餘項目。  因此，雙向佇列是基礎容器的候選樣板類別 [queue](../dotnet/queue-stl-clr.md) 或樣板類別的 [堆疊](../dotnet/stack-stl-clr.md)。  
+## <a name="remarks"></a>備註  
+ 物件可配置及釋放控制代碼指定的區塊之預存陣列透過它所控制的序列的儲存體`Value`項目。 視會逐漸增加的陣列。 成長，就會發生得前面加上或附加新項目成本是固定的時間，而且會干擾沒有剩餘的項目。 您也可以移除任一端的項目以常數時間，而不干擾其餘項目。 因此，deque 是適合做為基礎的容器樣板類別[佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)或樣板類別[堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)。  
   
- `deque` 物件支援隨機存取 Iterator，這表示您可以參考項目直接寫入其位置數值，計算以零第一個 \(最上層\) 項目，最後 \(後面\) [deque::size](../dotnet/deque-size-stl-clr.md)項目的`() - 1` 。  這也表示雙向佇列是基礎容器的候選樣板類別的 [priority\_queue](../dotnet/priority-queue-stl-clr.md)。  
+ A`deque`物件支援隨機存取迭代器，這表示您可以參考項目直接指定其數值位置，從零的第一個 （前端） 項目計數來[deque:: size (STL/CLR)](../dotnet/deque-size-stl-clr.md) `() - 1`（回復） 的最後一個項目。 這也表示 deque 是適合做為基礎的容器樣板類別[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)。  
   
- 雙向 Iterator 佇列儲存控制代碼關聯的雙向佇列物件，其指定這個項目的偏差。  您只能使用 Iterator 與其關聯的容器物件。  雙向佇列項目的偏差必要是 `not` 與其位置相同。  插入的第一個項目具有不壓縮零，則下附加的項目不會有 1，不過，這個下前面的項目不會有 \-1。  
+ Deque 的迭代器會儲存其相關聯的 deque 物件，以及它所指定的項目偏差的控制代碼。 您可以使用迭代器，只能使用其相關聯的容器物件。 Deque 的項目偏差是`not`一定是相同的位置。 第一個項目插入具有偏差零、 下一個附加的項目偏差 1，但下一個預留的項目有偏差-1。  
   
- 插入或清除項目在任一端做修改 `not` 項目的值會儲存在任何有效的偏差。  插入或清除內部項目，不過， `can` 變更項目值儲存在指定的偏差，因此， Iterator 的值可能也會變更。\(容器可能必須上下複製元素在插入之前先建立空白或在清除之後填滿空白\)。不過，，只要它的偏差指定有效的項目，在佇列中保持有效。  而且，有效 Iterator 保持 dereferencable\-\-您可以使用它所指派它存取或修改項目的值\-\-只要的偏差不等於 `end()`所傳回的 Iterator 的偏差。  
+ 插入或清除任一端的項目會`not`更改的項目儲存在任何有效的偏差值。 插入或刪除一個內部項目，不過，`can`變更儲存在指定的偏差，所以由迭代器指定的值也可以變更的項目值。 （若要複製項目向上或向下建立一個洞之前插入或用來填入暴露在清除之後可能有容器）。不過，deque 的迭代器會保持有效，只要其偏差指定有效的項目。 此外，有效的迭代器會維持 dereferencable-您可用它來存取或修改項目值，它會指定-，只要其偏差值不等於所傳回的迭代器的偏差`end()`。  
   
- 清除或移除元素呼叫它的儲存值的解構函式。  終結容器清除所有項目。  因此，項目型別是 ref 類別的容器確保項目不使用得比容器的。  請注意，然而，容器控制碼做 `not` 終結的項目。  
+ 清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼，並會`not`摧毀其項目。  
   
-## 需求  
- **標題:** \<cliext\/雙向佇列\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
- **命名空間:** cliext  
+ **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [堆疊](../dotnet/stack-stl-clr.md)   
- [向量](../dotnet/vector-stl-clr.md)   
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_info
-dev_langs:
-- C++
+f1_keywords: type_info
+dev_langs: C++
 helpviewer_keywords:
 - class type_info
 - type_info class
 ms.assetid: 894ddda2-7de4-4da3-9404-d2c74e356c16
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b87dec1f3d3a04d984c3bbd96344ebcb0a163f19
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 61e26b60916712e10c1c0fa5b255aa7bf2bc1fd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="typeinfo-class"></a>type_info 類別
 **Type_info**類別描述編譯器所產生的程式中的型別資訊。 這個類別的物件會實際儲存類型的名稱指標。 **Type_info**類別也會儲存編碼的值，適用於比較是否相等的兩個型別或其排序順序。 類型的編碼規則和排序法則不會指定，而且在不同的程式之間也會有所差異。  
@@ -53,12 +49,11 @@ public:
   
  類型的排序順序和繼承關係之間並無連結。 使用**type_info**成員函式來判斷定序順序的型別。 不保證， **type_info**都會產生不同的程式或甚至執行相同程式中相同的結果。 這種方式， **type_info**類似於位址的**(&)**運算子。  
   
- **Type_info:: name**成員函式傳回**const char\* **以 null 終止的字串代表人類看得懂的型別名稱。 所指向的記憶體會加以快取，且絕不可直接取消配置。  
+ **Type_info:: name**成員函式傳回**const char\*** 以 null 終止的字串代表人類看得懂的型別名稱。 所指向的記憶體會加以快取，且絕不可直接取消配置。  
   
- **Type_info:: raw_name**成員函式傳回**const char\* **以 null 終止的字串表示裝飾的名稱的物件類型。 這個名稱實際上是以其裝飾形式儲存，以節省空間。 因此，此函式的速度比**type_info:: name**因為它不需要快速的名稱。 所傳回的字串**type_info:: raw_name**函式是在比較作業中很有用，但不是可讀取。 如果您需要人類看得懂的字串，使用**type_info:: name**函式。  
+ **Type_info:: raw_name**成員函式傳回**const char\*** 以 null 終止的字串表示裝飾的名稱的物件類型。 這個名稱實際上是以其裝飾形式儲存，以節省空間。 因此，此函式的速度比**type_info:: name**因為它不需要快速的名稱。 所傳回的字串**type_info:: raw_name**函式是在比較作業中很有用，但不是可讀取。 如果您需要人類看得懂的字串，使用**type_info:: name**函式。  
   
  多型類別才會產生型別資訊[/GR （啟用執行階段類型資訊）](../build/reference/gr-enable-run-time-type-information.md)編譯器選項已指定。  
   
 ## <a name="see-also"></a>另請參閱  
  [執行階段類型資訊](../cpp/run-time-type-information.md)
-

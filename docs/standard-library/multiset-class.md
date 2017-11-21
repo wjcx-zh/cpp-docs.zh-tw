@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - set/std::multiset
-- multiset
 - set/std::multiset::allocator_type
 - set/std::multiset::const_iterator
 - set/std::multiset::const_pointer
@@ -51,35 +49,59 @@ f1_keywords:
 - set/std::multiset::swap
 - set/std::multiset::upper_bound
 - set/std::multiset::value_comp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- multiset class
+- std::multiset [C++]
+- std::multiset [C++], allocator_type
+- std::multiset [C++], const_iterator
+- std::multiset [C++], const_pointer
+- std::multiset [C++], const_reference
+- std::multiset [C++], const_reverse_iterator
+- std::multiset [C++], difference_type
+- std::multiset [C++], iterator
+- std::multiset [C++], key_compare
+- std::multiset [C++], key_type
+- std::multiset [C++], pointer
+- std::multiset [C++], reference
+- std::multiset [C++], reverse_iterator
+- std::multiset [C++], size_type
+- std::multiset [C++], value_compare
+- std::multiset [C++], value_type
+- std::multiset [C++], begin
+- std::multiset [C++], cbegin
+- std::multiset [C++], cend
+- std::multiset [C++], clear
+- std::multiset [C++], count
+- std::multiset [C++], crbegin
+- std::multiset [C++], crend
+- std::multiset [C++], emplace
+- std::multiset [C++], emplace_hint
+- std::multiset [C++], empty
+- std::multiset [C++], end
+- std::multiset [C++], equal_range
+- std::multiset [C++], erase
+- std::multiset [C++], find
+- std::multiset [C++], get_allocator
+- std::multiset [C++], insert
+- std::multiset [C++], key_comp
+- std::multiset [C++], lower_bound
+- std::multiset [C++], max_size
+- std::multiset [C++], rbegin
+- std::multiset [C++], rend
+- std::multiset [C++], size
+- std::multiset [C++], swap
+- std::multiset [C++], upper_bound
+- std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ff713a2813798c82b42ecc814d433e64ba2a51a6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: ba5b35c7bff46369236bf9be719e351d10a8900d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="multiset-class"></a>multiset 類別
 「C++ 標準程式庫」multiset 類別可用來在集合中儲存及擷取資料，其中集合中所含的元素值不需要是唯一的，而且會作為自動排序資料時所依據的索引鍵值。 多重集中項目的索引鍵值不能直接變更。 相反地，必須刪除舊值，並插入具有新值的項目。  
@@ -2191,5 +2213,4 @@ The multiset has elements: 10 20.
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

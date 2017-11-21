@@ -1,70 +1,70 @@
 ---
-title: "/Gy (啟用函式階層連結) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking"
-  - "/gy"
-  - "VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gy 編譯器選項 [C++]"
-  - "COMDAT 函式"
-  - "啟用函式階層連結編譯器選項 [C++]"
-  - "Gy 編譯器選項 [C++]"
-  - "-Gy 編譯器選項 [C++]"
-  - "封裝函式"
+title: "-Gy （啟用函式階層連結） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking
+- /gy
+- VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking
+dev_langs: C++
+helpviewer_keywords:
+- enable function-level linking compiler option [C++]
+- COMDAT function
+- Gy compiler option [C++]
+- -Gy compiler option [C++]
+- /Gy compiler option [C++]
+- packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e7d83e4409d9c46c926859f39029ea68f2411def
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /Gy (啟用函式階層連結)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-讓編譯器以封裝函式 \(COMDATs\) 的格式封裝個別的函式。  
+# <a name="gy-enable-function-level-linking"></a>/Gy (啟用函式階層連結)
+可讓編譯器以封裝函式 (Comdat) 的格式封裝個別函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /Gy[-]  
 ```  
   
-## 備註  
- 連結器要求各個函式個別地包裝為 COMDAT，以排除或排序 DLL 或 .exe 檔案中的個別函式。  
+## <a name="remarks"></a>備註  
+ 連結器需要函式個別的封裝為 Comdat 來排除或排序的 DLL 或.exe 檔案中的個別函式。  
   
- 您可以使用連結器選項 [\/OPT \(最佳化\)](../../build/reference/opt-optimizations.md)，從 .exe 檔案中排除未參考的封裝函式。  
+ 您可以使用連結器選項[/editandcontinue （最佳化）](../../build/reference/opt-optimizations.md) .exe 檔案中排除未參考的包裝函式。  
   
- 您可以使用連結器選項 [\/ORDER \(依順序置放函式\)](../../build/reference/order-put-functions-in-order.md)，以指定的順序將封裝函式包含在 .exe 檔案中。  
+ 您可以使用連結器選項[/ORDER （Put 函式順序）](../../build/reference/order-put-functions-in-order.md) .exe 檔案中指定的順序包含封裝函式。  
   
- 如果內嵌函式已執行個體化為呼叫 \(發生於內嵌已關閉或您取得函式位址等情況\)，就一定會封裝這些函式。  此外，在類別宣告 \(Class Declaration\) 內定義的 C\+\+ 成員函式也會自動封裝；其他函式則不會，而且必須選取這個選項將它們編譯為封裝函式。  
+ 如果具現化呼叫，必定封裝內嵌函式 (發生，例如，如果內嵌已關閉，或您採取函式位址)。 此外，在類別宣告中定義的 c + + 成員函式會自動封裝;其他函數則不會，並選取此選項需要將它們編譯為包裝函式。  
   
 > [!NOTE]
->  用於 \[編輯後繼續\] 的 [\/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) 選項會自動設定 **\/Gy** 選項。  
+>  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)選項，用於編輯後繼續 」，會自動設定**/Gy**選項。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**程式碼產生**\] 屬性頁。  
+3.  按一下**程式碼產生**屬性頁。  
   
-4.  修改 \[**啟用函式階層連結**\] 屬性。  
+4.  修改**函式層級啟用連結**屬性。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

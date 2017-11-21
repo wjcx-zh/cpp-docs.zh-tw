@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2936
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2936
+f1_keywords: C2936
+dev_langs: C++
+helpviewer_keywords: C2936
 ms.assetid: 5d1ba0fc-0c78-4a37-a83b-1ef8527763be
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: c7949f958a6656c5e29210fcc4533c5730d18e02
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2936"></a>編譯器錯誤 C2936
 'class' : type-class-id 重複定義為全域資料變數  

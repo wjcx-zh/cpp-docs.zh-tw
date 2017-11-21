@@ -1,53 +1,52 @@
 ---
-title: "CXMLAccessor::GetXMLColumnData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CXMLAccessor.GetXMLColumnData"
-  - "CXMLAccessor::GetXMLColumnData"
-  - "CXMLAccessor.GetXMLColumnData"
-  - "ATL::CXMLAccessor::GetXMLColumnData"
-  - "GetXMLColumnData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetXMLColumnData 方法"
+title: "Cxmlaccessor:: Getxmlcolumndata |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CXMLAccessor.GetXMLColumnData
+- CXMLAccessor::GetXMLColumnData
+- CXMLAccessor.GetXMLColumnData
+- ATL::CXMLAccessor::GetXMLColumnData
+- GetXMLColumnData
+dev_langs: C++
+helpviewer_keywords: GetXMLColumnData method
 ms.assetid: 719e8efe-8758-4af7-a855-0e44ea196546
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b0e0d34a9e726912cd631972091df65157de061d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CXMLAccessor::GetXMLColumnData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-由資料列擷取資料表的資料行資訊， XML 格式字串資料。  
+# <a name="cxmlaccessorgetxmlcolumndata"></a>CXMLAccessor::GetXMLColumnData
+依資料行擷取為 XML 格式的字串資料，資料表的資料行型別資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT GetXMLColumnData(   
-   CSimpleStringW& strOutput    
+      HRESULT GetXMLColumnData(   
+   CSimpleStringW& strOutput    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `strOutput`  
- \[out\] 包含資料行資訊的字串緩衝區的參考會被擷取。  字串格式化為 XML 符合資料存放區的資料行名稱的標記名稱。  
+ [out]包含要擷取的資料行型別資訊的字串緩衝區的參考。 比對資料存放區的資料行名稱的 XML 標記名稱以格式化字串。  
   
-## 傳回值  
- 其中一個標準 `HRESULT` 列舉值。  
+## <a name="return-value"></a>傳回值  
+ 其中一個標準`HRESULT`值。  
   
-## 備註  
- 以下顯示資料行資訊如何在 XML 格式化。  `type` 所指定資料行的資料型別。  請注意資料型別是根據資料庫的 OLE DB 資料型別，而不是存取的項目。  
+## <a name="remarks"></a>備註  
+ 下圖顯示在 XML 中格式化的資料行型別資訊的方式。 `type`指定資料行的資料類型。 請注意，資料類型基礎 OLE DB 資料類型，不屬於所存取的資料庫。  
   
  `<columninfo>`  
   
@@ -55,8 +54,8 @@ caps.handback.revision: 9
   
  `</columninfo>`  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CXMLAccessor 類別](../../data/oledb/cxmlaccessor-class.md)

@@ -1,33 +1,33 @@
 ---
-title: "在精靈產生的存取子中的欄位狀態資料成員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 樣板中的欄位狀態"
-  - "OLE DB 消費者樣板, 欄位狀態"
+title: "欄位狀態資料成員，在精靈產生的存取子中 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates, field status
+- field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e3991e2e5cab8814cba4e92882fbd978bdc051eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 在精靈產生的存取子中的欄位狀態資料成員
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-當您使用 ATL OLE DB 消費者精靈建立消費者時，精靈會在使用者資料錄中，為您在資料行對應內指定的每個欄位產生資料成員。  每個資料成員都是 `DWORD` 型別，並包含了對應其個別欄位的狀態值。  
+# <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
+當您使用 ATL OLE DB 消費者精靈 建立消費者時，精靈會在您指定資料行對應中每個欄位的使用者記錄類別中產生的資料成員。 每個資料成員的類型是`DWORD`並包含對應至其個別欄位的狀態值。  
   
- 例如，以 *m\_OwnerID* 資料成員而言，精靈會為欄位狀態 \(*dwOwnerIDStatus*\) 產生其他資料成員，並為欄位長度 \(*dwOwnerIDLength*\) 產生另一個資料成員。  它也會產生有 `COLUMN_ENTRY_LENGTH_STATUS` 項目的資料行對應。  
+ 例如，對於資料成員*m_OwnerID*，精靈會產生額外的資料成員的欄位狀態 (*dwOwnerIDStatus*) 和另一種用於欄位長度 (*dwOwnerIDLength*). 它也會產生一個資料行對應，包含`COLUMN_ENTRY_LENGTH_STATUS`項目。  
   
- 請參考下列程式碼中的示範：  
+ 下列程式碼所示：  
   
 ```  
 [db_source("insert connection string")]  
@@ -78,22 +78,22 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  如果您修改使用者資料錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
+>  如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
   
- 您可以使用狀態值來達到偵錯目的。  如果 ATL OLE DB 消費者精靈產生的程式碼產生編譯錯誤 \(例如，**DB\_S\_ERRORSOCCURRED** 或 **DB\_E\_ERRORSOCCURRED**\)，您應該先查看目前欄位狀態資料成員值。  含有非零值的欄位會對應到衝突的資料行。  
+ 您可以使用 status 值以進行偵錯。 如果 ATL OLE DB 消費者精靈產生的程式碼會產生編譯錯誤例如**DB_S_ERRORSOCCURRED**或**DB_E_ERRORSOCCURRED**，您應該先查看目前的值的欄位狀態資料成員。 具有非零值會對應至衝突的資料行。  
   
- 您也可以使用狀態值，將特定欄位值設定為 NULL。  這樣做對於您想要分辨欄位值是 NULL 而不是零的時候相當有用。  您可以自行決定 NULL 是有效值或是特殊值，並決定應用程式應有的處理方式。  OLE DB 會定義 **DBSTATUS\_S\_ISNULL** 為指定泛用 NULL 值的正確方式。  如果消費者讀取資料而且值是 null，則該狀態欄位會設定為 **DBSTATUS\_S\_ISNULL**。  如果消費者想要設定 NULL 值，則消費者會在呼叫提供者之前將狀態值設定為 **DBSTATUS\_S\_ISNULL**。  
+ 您也可以使用 status 值來設定特定欄位的 NULL 值。 這樣可協助您在您要區分欄位值為 NULL，而不是零的情況下。 這是由您決定 NULL 是否為有效的值或特殊值，並決定您的應用程式應該如何處理它。 OLE DB 定義**DBSTATUS_S_ISNULL**指定泛型的 NULL 值的正確方法。 如果取用者讀取資料，而且值為 null，則 [狀態] 欄位會設定為**DBSTATUS_S_ISNULL**。 如果取用者想要將 NULL 值，取用者會將狀態的值設定為**DBSTATUS_S_ISNULL**之前呼叫提供者。  
   
- 接著，開啟 Oledb.h 並搜尋 **DBSTATUSENUM**。  然後比對非零狀態的數值和 **DBSTATUSENUM** 列舉值。  如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 [OLE DB 程式設計人員參考](http://go.microsoft.com/fwlink/?LinkId=121548)中＜繫結資料值＞一節的＜狀態＞主題 \(英文\)。  這個主題包含在取得或設定資料時，所使用的狀態值資料表。  如需長度值的詳細資訊，請參閱同一節中的＜長度＞主題。  
+ 接下來，開啟 Oledb.h 並搜尋**DBSTATUSENUM**。 您可以再比對針對狀態則為非零的數值**DBSTATUSENUM**列舉值。 如果列舉型別名稱不足夠，告訴您是有什麼問題，請參閱 < 繫結資料值 > 一節中的 「 狀態 」 主題[OLE DB 程式設計人員指南](http://go.microsoft.com/fwlink/?linkid=121548)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的相關資訊，請參閱 「 長度 」 主題，在相同的區段。  
   
-## 擷取資料行的長度或狀態  
- 您可以擷取可變長度資料行的長度或資料行的狀態 \(例如，檢查 **DBSTATUS\_S\_ISNULL**\)：  
+## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取的長度或資料行的狀態  
+ 您可以擷取可變長度資料行的長度或資料行的狀態 (檢查**DBSTATUS_S_ISNULL**，例如):  
   
--   若要取得長度，請使用 `COLUMN_ENTRY_LENGTH` 巨集  
+-   若要取得長度，請使用`COLUMN_ENTRY_LENGTH`巨集。  
   
--   若要取得狀態，請使用 `COLUMN_ENTRY_STATUS` 巨集  
+-   若要取得的狀態，請使用`COLUMN_ENTRY_STATUS`巨集。  
   
--   若要同時取得兩者，請依照下列範例所示使用 `COLUMN_ENTRY_LENGTH_STATUS`  
+-   若要取得這兩種情況，請使用`COLUMN_ENTRY_LENGTH_STATUS`，如下所示。  
   
 ```  
 class CProducts  
@@ -121,7 +121,7 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
- 長度和狀態會在使用 `CDynamicAccessor` 時自動繫結。  若要擷取長度和狀態值，請使用 `GetLength` 和 **GetStatus** 成員函式。  
+ 當您使用`CDynamicAccessor`，長度和狀態會為您會自動繫結。 若要擷取的長度和狀態的值，請使用`GetLength`和**GetStatus**成員函式。  
   
-## 請參閱  
- [使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

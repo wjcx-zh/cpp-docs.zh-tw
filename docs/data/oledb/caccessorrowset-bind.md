@@ -1,34 +1,32 @@
 ---
-title: "CAccessorRowset::Bind | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorRowset.Bind"
-  - "CAccessorRowset::Bind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Bind 方法"
+title: "Caccessorrowset:: Bind |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorRowset.Bind
+- CAccessorRowset::Bind
+dev_langs: C++
+helpviewer_keywords: Bind method
 ms.assetid: 42a1fc86-f570-4e54-9b82-7f7141564214
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b5e744d80e0f95f6938a19ed31f403be5728fd0a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorRowset::Bind
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果您在 [CCommand::Open](../../data/oledb/ccommand-open.md) 中指定 **bBind** 為 false，請建立繫結。  
+# <a name="caccessorrowsetbind"></a>CAccessorRowset::Bind
+建立繫結，如果您指定**bBind**為 false [ccommand:: Open](../../data/oledb/ccommand-open.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,11 +34,11 @@ HRESULT Bind( );
   
 ```  
   
-## 傳回值  
- 標準版 `HRESULT`  
+## <a name="return-value"></a>傳回值  
+ 標準 `HRESULT`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CAccessorRowset 類別](../../data/oledb/caccessorrowset-class.md)

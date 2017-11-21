@@ -1,40 +1,38 @@
 ---
-title: "編譯器警告 (層級 1) C4716 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4716"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4716"
+title: "編譯器警告 （層級 1） C4716 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4716
+dev_langs: C++
+helpviewer_keywords: C4716
 ms.assetid: d95ecfe5-870f-461f-a746-7913af98414b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2d8ded9465251b5c9f0adddbebe1738fa519097c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4716
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 必須傳回值  
+# <a name="compiler-warning-level-1-c4716"></a>編譯器警告 (層級 1) C4716
+'function' 必須傳回值  
   
- 提供的函式未傳回值。  
+ 指定的函式未傳回值。  
   
- 只有具有 void 傳回型別的函式，才能在不指定傳回值的情況下使用傳回命令。  
+ 只有函式傳回類型為 void 可以使用傳回的命令，但不含指定的傳回值。  
   
- 當此函式被呼叫時會傳回未定義的值。  
+ 呼叫此函式時，將會傳回未定義的值。  
   
- 此警告會自動提升為錯誤。  如果您要修改此行為，請使用 [\#pragma warning](../../preprocessor/warning.md)。  
+ 這個警告會自動升級為錯誤。 如果您想要修改此行為，使用[#pragma 警告](../../preprocessor/warning.md)。  
   
- 下列範例會產生 C4716：  
+ 下列範例會產生 C4716:  
   
 ```  
 // C4716.cpp  

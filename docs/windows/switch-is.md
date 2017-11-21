@@ -1,33 +1,30 @@
 ---
-title: "switch_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_is attribute"
+title: "switch_is |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_is
+dev_langs: C++
+helpviewer_keywords: switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5f2f694c03e0aed3e5c5f5072a6fa73365de1fa7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# switch_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定做為選取的聯集的成員聯集判別識別碼的運算式。  
+# <a name="switchis"></a>switch_is
+指定的運算式或做為選取的等位成員的聯集判別識別項。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,27 +32,26 @@ manager: "ghogen"
   
 ```  
   
-## 備註  
- **Switch\_is** C\+\+ 屬性具有相同的功能，為 [switch\_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Switch_is** c + + 屬性具有相同的功能[switch_is](http://msdn.microsoft.com/library/windows/desktop/aa367275) MIDL 屬性。  
   
-## 範例  
- 請參閱[案例](../windows/case-cpp.md) 的範例用法的範例  **switch\_is**。  
+## <a name="example"></a>範例  
+ 請參閱[案例](../windows/case-cpp.md)範例使用範例**switch_is**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|`typedef`|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [switch\_type](../windows/switch-type.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [switch_type](../windows/switch-type.md)   

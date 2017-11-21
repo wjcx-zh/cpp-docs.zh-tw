@@ -1,32 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_LENGTH 巨集"
+title: "PROVIDER_COLUMN_ENTRY_LENGTH |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_LENGTH
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_LENGTH macro
 ms.assetid: b4a67246-c049-4622-bb65-242cc8cae4be
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0a2d976dd079eb0100d4eb7cf56ef7c9dcfd0175
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="providercolumnentrylength"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 表示提供者支援的特定資料行。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,29 +33,29 @@ name
 , ordinal, size, member )  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *name*  
- \[資料行名稱。  
+ [in]資料行名稱。  
   
  `ordinal`  
- \[的資料列數目。  除非資料行是書籤資料行，不能為 0。  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
   
  `size`  
- \[資料列大小 \(以位元組為單位\)。  
+ [in]資料行大小，以位元組為單位。  
   
  `member`  
- \[儲存資料列資料為 `dataClass` 的成員變數。  
+ [in]中的成員變數`dataClass`儲存資料行的資料。  
   
-## 備註  
- 可讓您指定資料列的大小。  
+## <a name="remarks"></a>備註  
+ 可讓您指定資料行大小。  
   
-## 範例  
- 請參閱 [BEGIN\_PROVIDER\_COLUMN\_MAP](../../data/oledb/begin-provider-column-map.md)。  
+## <a name="example"></a>範例  
+ 請參閱[BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   

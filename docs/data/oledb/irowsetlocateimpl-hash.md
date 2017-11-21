@@ -1,34 +1,32 @@
 ---
-title: "IRowsetLocateImpl::Hash | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl::Hash"
-  - "IRowsetLocateImpl.Hash"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Hash 方法"
+title: "Irowsetlocateimpl:: Hash |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetLocateImpl::Hash
+- IRowsetLocateImpl.Hash
+dev_langs: C++
+helpviewer_keywords: Hash method
 ms.assetid: 7df4386d-80fb-4332-a85f-baae98cdc6e0
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1331c3eb64a684ba322978993592aa2946d1f221
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::Hash
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳回指定的書籤有關聯的雜湊值。  
+# <a name="irowsetlocateimplhash"></a>IRowsetLocateImpl::Hash
+傳回雜湊值，指定的書籤。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -42,14 +40,14 @@ manager: "ghogen"
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `hReserved`  
- \[對應於 `hChapter` 參數中 [IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx)。  
+ [in]對應至`hChapter`參數[IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx)。  
   
- 如需其他參數，請參閱《 *OLE DB 程式設計人員參考*》的[IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx) 。  
+ 其他參數，請參閱[IRowsetLocate::Hash](https://msdn.microsoft.com/en-us/library/ms709697.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IRowsetLocateImpl 類別](../../data/oledb/irowsetlocateimpl-class.md)

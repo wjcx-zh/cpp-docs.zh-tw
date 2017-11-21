@@ -1,24 +1,27 @@
 ---
-title: "與其他語言間的互通性 (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "與其他語言間的互通性 (C + + /CX) |Microsoft 文件"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f74db99f-7dbd-421e-99e6-c34bbebf5cea
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: aac27465e486dc4bd02fd5e35b4c037862343a31
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 與其他語言間的互通性 (C++/CX)
-這部分文件內容說明如何使用 [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\) 來撰寫可供其他程式語言和程式庫使用的 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] 元件。 您也可以撰寫所有語言都不能使用的元件。 本節說明當您的 [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] 應用程式與使用 JavaScript、.NET Framework Managed 語言或 [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] C\+\+ 樣板程式庫所撰寫的元件相互溝通時，所需考量的不同層面。  
+# <a name="interoperating-with-other-languages-ccx"></a>與其他語言間的互通性 (C++/CX)
+這一部分的文件描述如何使用 C + + /CX 來撰寫可供其他程式語言和程式庫的 Windows 執行階段元件。 您也可以撰寫所有語言都不能使用的元件。 本章節描述的不同層面時，要考量您 C + + /CX 應用程式，則與使用 JavaScript、.NET Framework managed 語言或 Windows 執行階段 c + + 樣板程式庫所撰寫的元件相互操作。  
   
-## 相關主題  
+## <a name="related-topics"></a>相關主題  
   
 -   [JavaScript 整合](../cppcx/javascript-integration-c-cx.md)  
   
@@ -26,4 +29,4 @@ caps.handback.revision: 7
   
 -   [WRL 整合](../cppcx/wrl-integration-c-cx.md)  
   
--   [Visual C\+\+ 語言參考](../cppcx/visual-c-language-reference-c-cx.md)
+-   [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)

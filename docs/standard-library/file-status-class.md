@@ -4,43 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- file_status
-- filesystem/std::experimental::filesystem::v1::file_status
-- filesystem/std::experimental::filesystem::v1::file_status::operator=
-- filesystem/std::experimental::filesystem::v1::file_status::type
-- filesystem/std::experimental::filesystem::v1::file_status::permissions
-dev_langs:
-- C++
+- filesystem/std::experimental::filesystem::file_status
+- filesystem/std::experimental::filesystem::file_status::operator=
+- filesystem/std::experimental::filesystem::file_status::type
+- filesystem/std::experimental::filesystem::file_status::permissions
+dev_langs: C++
 ms.assetid: 9781840e-ad22-44dd-ad79-0fabaa94bac4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1095fbeeceb33fd9dedf0ad1217eab1a052f5ba1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::experimental::filesystem::file_status
+- std::experimental::filesystem::file_status::operator=
+- std::experimental::filesystem::file_status::type
+- std::experimental::filesystem::file_status::permissions
+ms.openlocfilehash: 625e6212ca4c5e4d271054e16bb12bd1bb881395
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="filestatus-class"></a>file_status 類別
 包裝 [file_type](../standard-library/filesystem-enumerations.md#file_type) 和檔案的 [perms](../standard-library/filesystem-enumerations.md#perms)。  
@@ -95,13 +82,12 @@ void permissions(perms mask) noexcept
  使用 setter 將檔案設成唯讀或移除唯讀屬性。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \<filesystem >  
+ **標頭：** \<filesystem >  
   
- **命名空間︰** std::experimental::filesystem、 std::experimental::filesystem::v1  
+ **命名空間：** std::experimental::filesystem、 std::experimental::filesystem  
   
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)   
  [path 類別](../standard-library/path-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)
-
 

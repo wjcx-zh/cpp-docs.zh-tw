@@ -1,41 +1,41 @@
 ---
-title: "CAtlServiceModuleT::ServiceMain Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ServiceMain"
-  - "CServiceModule::ServiceMain"
-  - "CServiceModule.ServiceMain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ServiceMain method"
+title: "CAtlServiceModuleT::ServiceMain 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ServiceMain
+- CServiceModule::ServiceMain
+- CServiceModule.ServiceMain
+dev_langs: C++
+helpviewer_keywords: ServiceMain method
 ms.assetid: f21408c1-1919-4dec-88d8-bf5b39ac9808
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6abb297f6873c654cf359a63638338f288f45613
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CAtlServiceModuleT::ServiceMain Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您開啟服務控制台應用程式，請選取服務，然後按一下 \[**啟動**\] 時，服務控制管理員 \(SCM\) 呼叫 `ServiceMain` 。  
+# <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain 函式
+服務控制管理員 (SCM) 呼叫`ServiceMain`當您開啟 服務控制台應用程式，選取服務，然後按一下**啟動**。  
   
- 在 `ServiceMain`SCM 呼叫之後，服務必須提供 SCM 處理函式。  這個函式來讓 SCM 取得服務的狀態和傳遞特定指令 \(例如暫停或停止\)。  SCM 則沒有這個函式，當服務傳遞 **\_Handler** Win32 API 函式， [RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054)。  \(**\_Handler** 是呼叫非靜態成員函式。 [處理常式](../atl/catlservicemodulet-handler-function.md)\) 的靜態成員函式  
+ SCM 之後呼叫`ServiceMain`，服務必須提供 SCM 處理常式函式。 此函式可讓 SCM 取得服務的狀態並傳遞 （例如暫停或停止） 的特定指示。 SCM 會取得此函式時，服務則傳遞**_Handler** Win32 API 函式[RegisterServiceCtrlHandler](http://msdn.microsoft.com/library/windows/desktop/ms685054)。 (**_Handler**是靜態成員函式呼叫非靜態成員函式的[處理常式](../atl/reference/catlservicemodulet-class.md#handler)。)  
   
- 在啟動時，服務應告知 SCM 其目前狀態。  它會藉由將 **SERVICE\_START\_PENDING** 給 Win32 API 函式， [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241)。  
+ 在啟動時，服務應該也要通知的 SCM 它目前的狀態。 其做法是傳遞**SERVICE_START_PENDING** Win32 API 函式[SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241)。  
   
- `ServiceMain` 然後呼叫 `CAtlExeModuleT::InitializeCom`，呼叫 Win32 API 函式 [CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)。  根據預設， `InitializeCom` 傳遞 **COINIT\_MULTITHREADED** 旗標才能運作。  這個旗標指示程式是無限制執行緒伺服器。  
+ `ServiceMain`然後呼叫`CAtlExeModuleT::InitializeCom`，呼叫 Win32 API 函式[CoInitializeEx](http://msdn.microsoft.com/library/windows/desktop/ms695279)。 根據預設，`InitializeCom`傳遞**COINIT_MULTITHREADED**函式的旗標。 這個旗標會指出程式是為無限制執行緒的伺服器。  
   
- 現在， `CAtlServiceModuleT::Run` 呼叫執行服務的主要工作。  **執行** 繼續執行，直到服務已停止。  
+ 現在，`CAtlServiceModuleT::Run`呼叫以執行服務的主要工作。 **執行**會繼續執行直到服務已停止。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [服務](../atl/atl-services.md)   
- [CAtlServiceModuleT::ServiceMain](../Topic/CAtlServiceModuleT::ServiceMain.md)
+ [CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
+

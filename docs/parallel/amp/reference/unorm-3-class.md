@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,36 +77,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::set_y
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 14c85a46b8026878c3b5502931f937e2cf6196cd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 73f8b08fce39103936215292c3368f0e77a76017
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unorm3-class"></a>unorm_3 類別
-代表三個不帶正負號的一般數字的短向量。  
+表示短向量的三個不帶正負號的一般數字。  
   
 ## <a name="syntax"></a>語法  
   
@@ -125,13 +108,13 @@ class unorm_3;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[unorm_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |unorm_3::get_x||  
 |unorm_3::get_xy||  
@@ -172,7 +155,7 @@ class unorm_3;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |unorm_3::operator-||  
 |unorm_3::operator * =||  
@@ -227,9 +210,9 @@ class unorm_3;
  `unorm_3`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_short_vectors.h  
+ **標頭：** amp_short_vectors.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
   
 ##  <a name="ctor"></a>unorm_3 
 
@@ -318,4 +301,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

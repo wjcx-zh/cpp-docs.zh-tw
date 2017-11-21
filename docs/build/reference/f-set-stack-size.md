@@ -1,71 +1,69 @@
 ---
-title: "/F (設定堆疊大小) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/F 編譯器選項 [C++]"
-  - "F 編譯器選項 [C++]"
-  - "-F 編譯器選項 [C++]"
-  - "set stack size 編譯器選項"
-  - "堆疊, 設定大小"
+title: "-F （設定堆疊大小） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /f
+dev_langs: C++
+helpviewer_keywords:
+- set stack size compiler option
+- F compiler option [C++]
+- -F compiler option [C++]
+- /F compiler option [C++]
+- stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b75c5c014dfcfa2e90a507d2948c573632e650a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /F (設定堆疊大小)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-以位元組為單位設定程式堆疊大小。  
+# <a name="f-set-stack-size"></a>/F (設定堆疊大小)
+設定程式的堆疊大小 （位元組）。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /F number  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>引數  
  `number`  
- 是以位元組為單位的堆疊大小。  
+ 堆疊大小 （位元組）。  
   
-## 備註  
- 不使用這個選項的話，堆疊大小會預設值為 1 MB。  引數 `number` 可以是十進位或者 C 語言標記法。  引數的範圍可以從 1 一直到連結器能夠接受的最大堆疊大小。  連結器會將指定的值進位至最接近 4 的倍數個位元組。  **\/F** 與 `number` 之間的空格可有可無。  
+## <a name="remarks"></a>備註  
+ 如果沒有這個選項的堆疊大小預設為 1 MB。 `number`引數可以是以十進位數或 C 語言表示法。 引數的範圍可從 1 至連結器接受的最大堆疊大小。 連結器會無條件進位到最接近的 4 個位元組指定的值。 之間的間距**/F**和`number`是選擇性的。  
   
- 如果您的程式產生了堆疊溢位的訊息，您可能需要增加堆疊的大小。  
+ 您可能需要增加的堆疊大小，如果您的程式取得堆疊溢位 」 訊息。  
   
- 您也可以利用下列方式設定堆疊大小：  
+ 您也可以設定堆疊大小：  
   
--   使用 **\/STACK** 連結器選項。  如需詳細資訊，請參閱[\/STACK](../../build/reference/stack.md)。  
+-   使用**/堆疊**連結器選項。 如需詳細資訊，請參閱[/堆疊](../../build/reference/stack.md)。  
   
--   在 .exe 檔案上使用 EDITBIN。  如需詳細資訊，請參閱[EDITBIN 參考](../../build/reference/editbin-reference.md)。  
+-   使用 EDITBIN 的.exe 檔案。 如需詳細資訊，請參閱[EDITBIN 參考](../../build/reference/editbin-reference.md)。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中，輸入編譯器選項。  
+4.  在 [其他選項]  方塊中，輸入編譯器選項。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

@@ -1,39 +1,38 @@
 ---
-title: "模組定義檔案 (.Def) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".def 檔案"
-  - "def 檔案"
-  - "模組定義檔"
+title: "模組定義 (。Def) 檔案 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- def files
+- module definition files
+- .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 15dbdfcd1074b32e2a707616571484db3ced9d2a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 模組定義檔案 (.Def)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-模組定義檔案 \(Module\-Definition File，.def\) 提供連結器 \(Linker\) 有關於匯出、屬性 \(Attribute\) 的資訊，以及其他有關要連結之程式的資訊。  .def 檔案在建置 DLL 時最為有用。  由於可使用[連結器選項](../../build/reference/linker-options.md)取代模組定義陳述式，所以通常不需要 .def 檔。  您也可以使用 [\_\_declspec\(dllexport\)](../../build/exporting-from-a-dll-using-declspec-dllexport.md) 做為指定匯出函式的一種方法。  
+# <a name="module-definition-def-files"></a>模組定義檔案 (.Def)
+模組定義 (.def) 檔會提供連結器匯出、 屬性和連結的程式的其他資訊的相關資訊。 建置 DLL 時，便最有用.def 檔。 因為有[連結器選項](../../build/reference/linker-options.md)可用而不是模組定義陳述式，.def 檔案通常不是必要。 您也可以使用[__declspec （dllexport)](../../build/exporting-from-a-dll-using-declspec-dllexport.md)做為指定的方式匯出的函式。  
   
- 您可以在連結器階段使用 [\/DEF \(指定模組定義檔案\)](../../build/reference/def-specify-module-definition-file.md) 連結器選項叫用 .def 檔。  
+ 您可以使用連結器階段叫用.def 檔[/DEF （指定模組定義檔）](../../build/reference/def-specify-module-definition-file.md)連結器選項。  
   
- 如果您正建置一個沒有匯出的 .exe 檔，那麼使用 .def 檔會讓輸出檔案變大而且載入更慢。  
+ 如果您要建置的.exe 檔案，沒有匯出，則使用.def 檔可以讓輸出檔案較大且更慢載入。  
   
- 如需範例，請參閱 [使用 DEF 檔案從 DLL 匯出](../../build/exporting-from-a-dll-using-def-files.md)。  
+ 如需範例，請參閱[匯出從 DLL 使用.DEF 檔](../../build/exporting-from-a-dll-using-def-files.md)。  
   
- 如需詳細資訊，請參閱下列章節：  
+ 請參閱下列各節，如需詳細資訊：  
   
 -   [模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)  
   
@@ -43,19 +42,18 @@ manager: "ghogen"
   
 -   [LIBRARY](../../build/reference/library.md)  
   
--   [NAME](../../build/reference/name-c-cpp.md)  
+-   [名稱](../../build/reference/name-c-cpp.md)  
   
--   [SECTIONS](../../build/reference/sections-c-cpp.md)  
+-   [區段](../../build/reference/sections-c-cpp.md)  
   
 -   [STACKSIZE](../../build/reference/stacksize.md)  
   
 -   [STUB](../../build/reference/stub.md)  
   
--   [VERSION](../../build/reference/version-c-cpp.md)  
+-   [版本](../../build/reference/version-c-cpp.md)  
   
--   [保留字](../../build/reference/reserved-words.md)  
+-   [保留的字](../../build/reference/reserved-words.md)  
   
-## 請參閱  
- [C\/C\+\+ 建置參考](../../build/reference/c-cpp-building-reference.md)   
- [連結器選項](../../build/reference/linker-options.md)   
- [Frequently Asked Questions on Building](http://msdn.microsoft.com/zh-tw/56a3bb8f-0181-4989-bab4-a07ba950ab08)
+## <a name="see-also"></a>另請參閱  
+ [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
+ [連結器選項](../../build/reference/linker-options.md)  

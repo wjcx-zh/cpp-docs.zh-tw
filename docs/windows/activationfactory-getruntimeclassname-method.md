@@ -1,32 +1,30 @@
 ---
-title: "ActivationFactory::GetRuntimeClassName 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRuntimeClassName 方法"
+title: "Activationfactory:: Getruntimeclassname 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetRuntimeClassName
+dev_langs: C++
+helpviewer_keywords: GetRuntimeClassName method
 ms.assetid: 74e34f0a-9c51-4b40-89f5-45c6c5886ece
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7f3e013212bea46a37654a078f9315533a1ee16
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ActivationFactory::GetRuntimeClassName 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName 方法
 取得目前 ActivationFactory 具現化物件的執行階段類別名稱。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 STDMETHOD(  
@@ -34,17 +32,17 @@ STDMETHOD(
 )(_Out_ HSTRING* runtimeName);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `runtimeName`  
- 這個作業完成時，會包含物件執行階段類別名稱目前 ActivationFactory 具現化之字串的控制代碼。  
+ 這項作業完成時，包含目前 ActivationFactory 具現化物件的執行階段類別名稱的字串的控制代碼。  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則即為描述失敗的 HRESULT。  
+## <a name="return-value"></a>傳回值  
+ 若成功，則為 S_OK，否則會是 HRESULT 指出失敗。  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ActivationFactory 類別](../windows/activationfactory-class.md)

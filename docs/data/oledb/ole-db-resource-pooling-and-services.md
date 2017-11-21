@@ -1,42 +1,41 @@
 ---
-title: "OLE DB 資源集中化和服務 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供者, 資源集中化"
-  - "OLE DB 服務 [OLE DB]"
-  - "OLE DB 服務 [OLE DB], 提供者需求"
-  - "OLE DB, 資源集中化"
-  - "資源集中化 [OLE DB], 提供者需求"
-  - "服務提供者 [OLE DB]"
+title: "OLE DB 資源集中化和服務 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- resource pooling [OLE DB], provider requirements
+- OLE DB, resource pooling
+- service providers [OLE DB]
+- OLE DB services [OLE DB], provider requirements
+- OLE DB services [OLE DB]
+- OLE DB providers, resource pooling
 ms.assetid: 360c36e2-25ae-4caf-8ee7-d4a6b6898f68
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e2b3500c90455c7f180f16eae3c56433f57d0492
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# OLE DB 資源集中化和服務
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-若要妥善地使用 OLE DB 共用或任何一種 OLE DB 服務，您的提供者必須支援所有物件的彙總 \(Aggregation\)。  這是任何 OLE DB 1.5 或更新提供者的需求。  這對於運用服務而言相當重要。  不支援彙總的提供者無法共用，並且沒有提供其他服務。  
+# <a name="ole-db-resource-pooling-and-services"></a>OLE DB 資源集中化和服務
+若要與 OLE DB 共用，或與任何 OLE DB 服務工作，您的提供者必須支援所有物件的彙的總。 這是任何 OLE DB 1.5 或更新版本的提供者的需求。 它是利用服務的關鍵。 不支援彙總的提供者無法共用，而沒有其他服務所提供。  
   
- 若要被共用，提供者必須支援無限制執行緒模型。  資源集區將根據 **DBPROP\_THREADMODEL** 屬性決定提供者的執行緒模型。  
+ 若要共用，提供者必須支援無限制執行緒模型。 資源集區決定提供者的執行緒模型，根據**DBPROP_THREADMODEL**屬性。  
   
- 如果提供者具有的全域連接狀態可能會在資料來源處於初始化狀態時發生變更，它就應該支援新的 **DBPROP\_RESETDATASOURCE** 屬性。  在重複使用連接之前呼叫此屬性，並給予提供者機會在下次使用前先清除狀態。  如果提供者無法清除一些和連接相關的狀態，它可能傳回屬性的 **DBPROPSTATUS\_NOTSETTABLE**，將無法重複使用該連接。  
+ 提供者具有全域連線狀態，可能會變更資料來源初始化的狀態時，它應該支援新**DBPROP_RESETDATASOURCE**屬性。 此屬性稱為之前連線已重複使用，並讓提供者有機會清除下次使用之前的狀態。 如果提供者無法清除與連接相關聯的某種狀態，則可以傳回**使用者**的屬性和連接將不會重複使用。  
   
- 連接至遠端資料庫並可偵測連接是否遺失的提供者，應該支援 **DBPROP\_CONNECTIONSTATUS** 屬性。  這個屬性提供 OLE DB 偵測無作用連接的能力，並確認它們並未傳回至集區的服務。  
+ 連接到遠端資料庫，並可偵測是否應支援連線可能會遺失提供者**DBPROP_CONNECTIONSTATUS**屬性。 這個屬性會讓 OLE DB 服務能夠偵測無作用的連線，並確定它們不會傳回至集區。  
   
- 最後，自動交易登記一般都無法運作，除非它實作的層級和共用發生的層級相同。  支援自動交易登記的提供者本身應可透過顯露 **DBPROP\_INIT\_OLEDBSERVICES** 屬性來支援停用此登記，並且當 **DBPROPVAL\_OS\_TXNENLISTMENT** 取消選取時停用登記。  
+ 最後，自動交易登記通常無法運作除非它共用，就會發生相同的層級實作。 支援自動交易登記自己的提供者應該支援公開停用這個登記**DBPROP_INIT_OLEDBSERVICES**屬性，如果停用登記**DBPROPVAL_OS_TXNENLISTMENT**取消選取。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

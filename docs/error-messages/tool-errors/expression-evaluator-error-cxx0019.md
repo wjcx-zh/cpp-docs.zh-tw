@@ -1,44 +1,43 @@
 ---
-title: "運算式評估工具錯誤 CXX0019 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0019"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0019"
-  - "CXX0019"
+title: "運算式評估工具錯誤 CXX0019 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0019
+dev_langs: C++
+helpviewer_keywords:
+- CXX0019
+- CAN0019
 ms.assetid: 4c6431fd-3310-4a61-934d-58b070b330fe
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 67fbd43280ad6ffcecdf0532819cd80a0d44b479
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 運算式評估工具錯誤 CXX0019
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-型別轉換錯誤  
+# <a name="expression-evaluator-error-cxx0019"></a>運算式評估工具錯誤 CXX0019
+不正確的類型轉換  
   
- C 運算式評估工具無法如所撰寫般地執行型別轉換 \(Type Cast\)。  
+ C 運算式評估工具無法執行轉換所寫的類型。  
   
- 此錯誤與 CAN0019 相同。  
+ 這個錯誤是與 can0019 相同。  
   
-### 若要修正，請檢查下列可能原因  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正  
   
-1.  指定的型別是未知的型別。  
+1.  指定的類型為 unknown。  
   
-2.  指標型別 \(Pointer Type\) 的層級太多。  例如，型別轉換  
+2.  沒有太多層指標類型。 例如，類型轉換  
   
     ```  
     (char **)h_message  
     ```  
   
-     無法由 C 運算式工具評估。
+     無法評估由 C 運算式評估工具。

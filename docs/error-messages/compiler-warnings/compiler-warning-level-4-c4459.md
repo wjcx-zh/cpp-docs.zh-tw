@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4459
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4459
+f1_keywords: C4459
+dev_langs: C++
+helpviewer_keywords: C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 87550474065639f6e1c7521ebfe76792d748ce9b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
-
+ms.openlocfilehash: 11a4122bf58ac5645c4430f8c6a41de7ed19f430
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-4-c4459"></a>編譯器警告 （層級 4） C4459
   
@@ -63,7 +44,7 @@ int main() {
 } 
 ```  
   
-若要修正此問題的一種方式為建立您的全域命名空間，但不是使用`using`指示詞，將該命名空間帶入範圍內，因此所有參考都必須都使用明確限定名稱︰  
+若要修正此問題的一種方式為建立您的全域命名空間，但不是使用`using`指示詞，將該命名空間帶入範圍內，因此所有參考都必須都使用明確限定名稱：  
   
 ```cpp  
 // C4459_namespace.cpp
@@ -78,4 +59,3 @@ int main() {
     globals::global_or_local = 3;
 } 
 ```  
-

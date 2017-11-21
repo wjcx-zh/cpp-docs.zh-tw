@@ -1,51 +1,52 @@
 ---
-title: "Sizing a Control While You Add It | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog box controls, size"
-  - "controls [C++], sizing"
+title: "調整控制項的大小，而您將它加入 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dialog box controls, size
+- controls [C++], sizing
 ms.assetid: 06b1dd2b-0ba1-4e1f-adc3-cb73679f765e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 34ec523254b50f712395297fdb6d06b07142969e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Sizing a Control While You Add It
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 若要在加入控制項時調整它的大小  
+# <a name="sizing-a-control-while-you-add-it"></a>加入控制項時調整它的大小
+### <a name="to-size-a-control-while-you-add-it"></a>若要調整控制項的大小，而您將它加入  
   
-1.  在[工具箱視窗](../Topic/Toolbox.md)中選取控制項。  
+1.  選取的控制項[工具箱視窗](/visualstudio/ide/reference/toolbox)。  
   
-2.  將十字型游標放置在對話方塊中您想要新控制項左上角出現的地方。  
+2.  將游標 （也就為十字） 放在您想要在對話方塊中的新控制項的左上角。  
   
-3.  在對話方塊上，按一下並且按住滑鼠按鈕來錨定控制項的左上角，然後將游標往右下方拖曳直到控制項是您要的大小。  
+3.  按一下並按住滑鼠按鈕，來錨定在對話方塊中，控制項的左上角，然後拖曳游標向右和向下直到控制項是您想要的大小。  
   
     > [!NOTE]
-    >  實際上，您可以錨定正在繪製之控制項的四個角中的任一角。  這個程序只使用左上角當做範例。  
+    >  您實際上可以錨定任何正在繪製之控制項的四個角落。 此程序作為範例的左上角。  
   
-4.  放開滑鼠按鈕。  控制項以您指定的大小置於對話方塊上。  
+4.  放開滑鼠按鈕。 控制項置於對話方塊中，您所指定的大小。  
   
     > [!TIP]
-    >  藉著移動控制項框線上的縮放控點 \(Sizing Handle\)，再將控制項放置於對話方塊之後，您可以調整控制項的大小。  如需詳細資訊，請參閱[調整個別控制項的大小](../mfc/sizing-individual-controls.md)。  
+    >  您可以調整控制項的大小之後將它放在對話方塊中調整大小控點移動控制項的框線。 如需詳細資訊，請參閱[調整個別控制項](../windows/sizing-individual-controls.md)。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  需求  
   
  Win32  
   
-## 請參閱  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
+## <a name="see-also"></a>另請參閱  
+ [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
+ [加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)
+

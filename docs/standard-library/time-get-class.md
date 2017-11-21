@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - xloctime/std::time_get
-- time_get
 - locale/std::time_get::char_type
 - locale/std::time_get::iter_type
 - locale/std::time_get::date_order
@@ -27,35 +25,35 @@ f1_keywords:
 - locale/std::time_get::get_time
 - locale/std::time_get::get_weekday
 - locale/std::time_get::get_year
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- time_get class
+- std::time_get [C++]
+- std::time_get [C++], char_type
+- std::time_get [C++], iter_type
+- std::time_get [C++], date_order
+- std::time_get [C++], do_date_order
+- std::time_get [C++], do_get
+- std::time_get [C++], do_get_date
+- std::time_get [C++], do_get_monthname
+- std::time_get [C++], do_get_time
+- std::time_get [C++], do_get_weekday
+- std::time_get [C++], do_get_year
+- std::time_get [C++], get
+- std::time_get [C++], get_date
+- std::time_get [C++], get_monthname
+- std::time_get [C++], get_time
+- std::time_get [C++], get_weekday
+- std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 10a39553b9747ebe336939b641c54780c653c5d6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 6178c35ff5d9ed0fbe53af7d488cc24cbcf81f2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="timeget-class"></a>time_get 類別
 此樣板類別描述可以做為地區設定 facet 的物件，以控制類型 `CharType` 的序列轉換為時間值。  
@@ -239,7 +237,7 @@ virtual iter_type
  傳回迭代器，該迭代器指定第一個未轉換的項目。 轉換失敗會在 `state` 中設定 `ios_base::failbit` 並傳回 `first`。  
   
 ### <a name="remarks"></a>備註  
- 虛擬成員函式會轉換並略過範圍 `[``first``,` `last``)` 中的一個或多個輸入項目，以決定儲存在 `*pt` 之一個或多個成員中的值。 轉換失敗會在 `state` 中設定 `ios_base::failbit` 並傳回 `first`。 否則，函式會傳回指定第一個未轉換項目的迭代器。  
+ 虛擬成員函式轉換並略過一個或多個輸入範圍的項目 [`first`， `last`) 來判斷儲存在一個或多個成員的值`*pt`。 轉換失敗會在 `state` 中設定 `ios_base::failbit` 並傳回 `first`。 否則，函式會傳回指定第一個未轉換項目的迭代器。  
   
  轉換規範包括：  
   
@@ -992,7 +990,7 @@ explicit time_get(size_t refs = 0);
   
 -   1：物件的存留期必須以手動方式管理。  
   
--   \>1︰ 未定義這些值。  
+-   \>1： 未定義這些值。  
   
  無法提供任何直接範例，因為解構函式受到保護。  
   
@@ -1002,5 +1000,4 @@ explicit time_get(size_t refs = 0);
  [\<locale>](../standard-library/locale.md)   
  [time_base 類別](../standard-library/time-base-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

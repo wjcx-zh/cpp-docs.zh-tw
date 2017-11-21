@@ -1,36 +1,34 @@
 ---
-title: "auto_gcroot::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator="
-  - "msclr::auto_gcroot::operator="
-  - "msclr.auto_gcroot.operator="
-  - "auto_gcroot::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: "auto_gcroot::operator = |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator=
+- msclr::auto_gcroot::operator=
+- msclr.auto_gcroot.operator=
+- auto_gcroot::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 99eba5eb-5a2c-4edf-b3d5-c903f818233d
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cd87111bf28cc758094936b0fb586fce2e475f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autogcrootoperator"></a>auto_gcroot::operator=
 指派運算子。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 auto_gcroot<_element_type> & operator=(  
@@ -45,14 +43,14 @@ auto_gcroot<_element_type> & operator=(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_right`  
- 要指派的物件或 `auto_gcroot` 套用至目前 `auto_gcroot`。  
+ 物件或`auto_gcroot`要指派給目前`auto_gcroot`。  
   
-## 傳回值  
- 目前的 `auto_gcroot`，現在擁有 `_right`。  
+## <a name="return-value"></a>傳回值  
+ 目前`auto_gcroot`，現在擁有`_right`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_operator_equals.cpp  
@@ -105,21 +103,24 @@ int main()
 }  
 ```  
   
-  **in ClassA constructor:first**  
-**Hello from first A\!**  
-**在ClassA constructor: second**  
-**in ClassA destructor:first**  
-**在 ClassA 建構函式: 第三個**  
-**Hello 從第三個 B\!**  
-**在ClassA destructor: second**  
-**Hello 從第三個 A\!**  
-**done**  
-**在 ClassA 解構函式: 第三個**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+in ClassA destructor: first  
+in ClassA constructor: third  
+Hello from third B!  
+in ClassA destructor: second  
+Hello from third A!  
+done  
+in ClassA destructor: third  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

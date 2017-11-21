@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - std.swap
 - std::swap
 - swap
-dev_langs:
-- C++
-helpviewer_keywords:
-- swap function
+dev_langs: C++
+helpviewer_keywords: swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: ff1e01c9c3384f51f08bf59158cd87f708693b2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 0ce29a24271023755ca64a166464b9f937b7098f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;sample container&gt;)
 > [!NOTE]
@@ -45,4 +41,3 @@ void swap(
   
 ## <a name="see-also"></a>另請參閱  
  [\<範例容器>](../standard-library/sample-container.md)
-

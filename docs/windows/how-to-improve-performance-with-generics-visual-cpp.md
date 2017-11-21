@@ -1,43 +1,42 @@
 ---
-title: "How to: Improve Performance with Generics (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "performance, C++"
-  - "Visual C++, performance"
-  - "Visual C++, generics"
-  - "generics [C++], performance"
+title: "如何： 使用泛型 （Visual c + +） 改善效能 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- performance, C++
+- Visual C++, performance
+- Visual C++, generics
+- generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-caps.latest.revision: 7
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 943639ed97798369bd4efa24561fd5b174f81579
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Improve Performance with Generics (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-有了泛型，您也可以根據型別參數建立可重複使用的程式碼。  型別參數的實際型別會由用戶端程式碼延後。  如需泛型的詳細資訊，請參閱 [Generics](../windows/generics-cpp-component-extensions.md)。  
+# <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：使用泛型改善效能 (Visual C++)
+使用泛型可以根據型別參數建立可重複使用的程式碼。 型別參數的實際類型會延後，直到用戶端程式碼呼叫它為止。 如需有關泛型的詳細資訊，請參閱[泛型](../windows/generics-cpp-component-extensions.md)。  
   
- 本文將討論泛型如何協助將使用設定應用程式的效能。  
+ 本文將討論泛型如何協助使用集合的應用程式提升效能。  
   
-## 範例  
- .NET Framework 隨附之 <xref:System.Collections?displayProperty=fullName> 命名空間中的許多集合類別。  大部分集合適用於型別的 <xref:System.Object?displayProperty=fullName>物件。  這可讓集合來儲存任何型別，從任何型別的 .NET Framework，甚至是實值型別，從 <xref:System.Object?displayProperty=fullName>取得。  然而，對這個方法有兩個缺點。  
+## <a name="example"></a>範例  
+ .NET Framework 的 <xref:System.Collections?displayProperty=fullName> 命名空間中隨附了許多集合類別。 這些集合大部分可用於 <xref:System.Object?displayProperty=fullName> 類型的物件。 這可讓集合儲存任何類型，因為 .NET Framework 中的所有類型 (甚至是實值類型) 都是衍生自 <xref:System.Object?displayProperty=fullName>。 然而，這個方法有兩個缺點。  
   
- 首先，如果集合儲存實值型別，例如整數，必須在將 Boxed 值加入至集合之前和 Unboxed，當某個值從集合中擷取。  這些是昂貴的作業。  
+ 一個缺點是，如果集合將實值類型儲存為整數，則該值必須先進行 Boxed 處理，才能加入至集合，而且從集合中擷取值時，要先進行 Unboxed 處理。 這些都是相當耗資源的作業。  
   
- 其次，無法將輸入的控制項可以加入至集合。  它會將整數和字串放在完全合法的同一個集合，因此，即使這可能不是您想要的目的。  因此，您的程式碼可以為型別安全，您必須檢查從集合擷取的型別實際上就是必要的。  
+ 另一個缺點是沒有辦法控制可加入至集合的類型。 將整數和字串加入至相同集合中完全合法，即使這可能不是您想要的結果。 因此，為了讓您的程式碼具備類型安全，您必須檢查從集合擷取的類型是否確實是預期的類型。  
   
- 下列程式碼範例說明在泛型之前的 .NET Framework 集合的兩個主要缺點。  
+ 在泛型之前，下列程式碼範例將先示範 .NET Framework 集合的這兩個主要缺點。  
   
 ```  
 // perf_pre_generics.cpp  
@@ -81,12 +80,15 @@ int main()
 }  
 ```  
   
-  **Popped a String: Seven**  
-**Popped an int: 7**   
-## 範例  
- 新的 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間包含 <xref:System.Collections?displayProperty=fullName> 命名空間中的許多相同的集合，不過，修改它們接受泛型型別參數。  這會排除非泛型集合兩個缺點: 實值型別 Boxing 和 Unboxing 和不可以指定集合中將儲存的型別。  在兩個集合的作業相同；這些屬性只不同於執行個體化。  
+```Output  
+Popped a String: Seven  
+Popped an int: 7  
+```  
   
- 以上寫入的這個範例使用泛型 <xref:System.Collections.Generic.Stack%601> 集合的範例比較。  對於經常存取的大型集合，這個範例將效能明顯大於前一個範例。  
+## <a name="example"></a>範例  
+ 新的 <xref:System.Collections.Generic?displayProperty=fullName> 命名空間包含許多與 <xref:System.Collections?displayProperty=fullName> 命名空間中相同的集合，不過，這些集合已經過修改，可接受泛型類型參數。 這樣就可解決非泛型集合的兩個缺點：實值類型的 Boxing 和 Unboxing，以及無法指定儲存在集合中的類型。 這兩個集合的作業方式相同，只有具現化的方式不同。  
+  
+ 請與這個範例前段使用泛型 <xref:System.Collections.Generic.Stack%601> 集合撰寫的範例做比較。 對於經常存取的大型集合而言，這個範例的效能將明顯高於前一個範例。  
   
 ```  
 // perf_post_generics.cpp  
@@ -124,6 +126,9 @@ int main()
 }  
 ```  
   
-  **14**   
-## 請參閱  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+14  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [泛型](../windows/generics-cpp-component-extensions.md)

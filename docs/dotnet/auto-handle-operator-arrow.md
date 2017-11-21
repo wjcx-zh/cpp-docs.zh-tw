@@ -1,45 +1,43 @@
 ---
-title: "auto_handle::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_handle::operator->"
-  - "auto_handle.operator->"
-  - "auto_handle::operator->"
-  - "msclr.auto_handle.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator->"
+title: "auto_handle::operator-&gt; |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_handle::operator->
+- auto_handle.operator->
+- auto_handle::operator->
+- msclr.auto_handle.operator->
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator->
 ms.assetid: c8c7a771-ea15-41fa-981a-065b8d1162b4
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 06b663caf838c9ee828012fd70f568b5bf456586
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleoperator-gt"></a>auto_handle::operator-&gt;
 成員存取運算子。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _element_type ^ operator->();  
 ```  
   
-## 傳回值  
- `auto_handle` 所包裝的物件。  
+## <a name="return-value"></a>傳回值  
+ 包裝的物件`auto_handle`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_handle_op_arrow.cpp  
@@ -71,13 +69,16 @@ int main() {
 }  
 ```  
   
-  **Hello 首先從 A\!**  
-**\>a\-m\_i \= 5**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_handle.h\>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_handle.h >  
   
-## 請參閱  
- [auto\_handle 成員](../dotnet/auto-handle-members.md)   
- [auto\_handle::get](../dotnet/auto-handle-get.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_handle 成員](../dotnet/auto-handle-members.md)   
+ [auto_handle::get](../dotnet/auto-handle-get.md)

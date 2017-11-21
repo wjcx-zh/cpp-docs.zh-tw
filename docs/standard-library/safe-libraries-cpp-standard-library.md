@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
-dev_langs:
-- C++
+f1_keywords: _SCL_SECURE_NO_DEPRECATE
+dev_langs: C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: b8cc4b94534845901a900a8c0ecff1d89c6bb600
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62c5e582773f534aa046eeaeda439b43358e07c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="safe-libraries-c-standard-library"></a>安全程式庫：C++ 標準程式庫
 Visual C++ 隨附的程式庫 (包括 C++ 標準程式庫) 已做了數項改進，因此更安全。  
@@ -56,5 +52,4 @@ Visual C++ 隨附的程式庫 (包括 C++ 標準程式庫) 已做了數項改進
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
-
 

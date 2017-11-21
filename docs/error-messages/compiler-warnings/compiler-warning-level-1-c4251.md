@@ -4,60 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4251
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4251
+f1_keywords: C4251
+dev_langs: C++
+helpviewer_keywords: C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: b75c3e6c93c0963a692b210b158339ea5e9eacac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7c05983547cb6efb1d569d95c9154db67b76aba4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-1-c4251"></a>編譯器警告 (層級 1) C4251
-'identifier': 類別 'type' 必須有 'type2' 類別的用戶端所使用的 dll 介面  
+'identifier': 類別 'type' 必須有類別 'type2' 的用戶端所使用的 dll 介面  
   
- 若要匯出的類別時，將資料損毀的可能性降至最低[__declspec （dllexport)](../../cpp/dllexport-dllimport.md)，請確認︰  
+ 若要匯出的類別時，將資料損毀的可能性降至最低[__declspec （dllexport)](../../cpp/dllexport-dllimport.md)，請確認：  
   
 -   所有靜態資料是透過從 DLL 匯出的函式的存取。  
   
--   您的類別沒有內嵌的方法可以修改靜態資料。  
+-   沒有內嵌的方法，您的類別可以修改靜態資料。  
   
 -   沒有內嵌的方法，您的類別使用 CRT 函式或其他程式庫函式使用靜態資料 (請參閱[潛在錯誤物件跨 DLL 界限傳遞 CRT](../../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)如需詳細資訊)。  
   
--   沒有類別的方法 (不管內嵌) 可以使用型別上的 EXE 和 DLL 中具現化具有靜態資料的差異。  
+-   您的類別沒有任何方法 (不論內嵌) 可以用來使用在 EXE 和 DLL 中的具現化其中有靜態資料差異的類型。  
   
- 您可以避免匯出類別所定義的 DLL，定義具有虛擬函式、 類別和函式您可以呼叫來具現化和刪除物件的型別。  然後，您就可以再呼叫虛擬函式型別上。  
+ 您可以避免匯出定義的 DLL，定義虛擬函式，類別和函式您可以呼叫來具現化和刪除物件類型的類別。  然後，您就可以再呼叫虛擬函式類型上。  
   
- 如需匯出範本的詳細資訊，請參閱[http://support.microsoft.com/default.aspx?scid=KB;EN-US;&16895;8](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。  
+ 如需有關匯出範本的詳細資訊，請參閱[http://support.microsoft.com/default.aspx?scid=KB;EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)。  
   
- 如果您衍生自 c + + 標準程式庫，編譯偵錯版本中的型別，就可以忽略 C4251 (**/MTd**) 和 _Container_base 其中是指編譯器錯誤訊息。  
+ 如果您衍生自 c + + 標準程式庫、 編譯偵錯版本中的型別，可以略過 C4251 (**/MTd**) 及編譯器錯誤訊息，其中 _Container_base 是指。  
   
 ```  
 // C4251.cpp  

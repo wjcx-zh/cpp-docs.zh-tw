@@ -1,29 +1,28 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.19 範例會顯示不正確的巢狀工作共用指示詞 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1cc5ed3a3a5ddd4117a3332703613a8d525853a8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本章節範例說明了這些指示詞的巢狀規則。  如需有關指示詞的巢狀結構的詳細資訊，請參閱[一節 2.9](../../parallel/openmp/2-9-directive-nesting.md) 在頁面上 33。  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19 巢狀使用工作共用指示詞的錯誤範例
+本節中的範例說明的指示詞的巢狀規則。 如需詳細指示詞的巢狀結構的詳細資訊，請參閱[區段 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 頁面上。  
   
- 下列範例是不相容因為內部和外部`for`指示詞巢狀結構，並繫結至相同`parallel`指示詞：  
+ 下列範例是不符合規定因為內部和外部`for`指示詞為巢狀，並繫結至相同`parallel`指示詞：  
   
 ```  
 void wrong1(int n)  
@@ -41,7 +40,7 @@ void wrong1(int n)
 }  
 ```  
   
- 上述範例中的下列動態巢狀的版本也是不相容的：  
+ 前述範例中的下列動態巢狀的版本也是不相容：  
   
 ```  
 void wrong2(int n)  
@@ -64,7 +63,7 @@ void work1(int i, int n)
 }  
 ```  
   
- 下列範例是不相容因為`for`和`single`指示詞巢狀結構，以及它們所繫結至同一個平行區域：  
+ 下列範例是不符合規定因為`for`和`single`指示詞為巢狀，並繫結到相同的平行區域：  
   
 ```  
 void wrong3(int n)  
@@ -81,7 +80,7 @@ void wrong3(int n)
 }  
 ```  
   
- 下列範例是不相容因為`barrier`指示詞內`for`可能會導致死結：  
+ 下列範例是不符合規定因為`barrier`指示詞內`for`可能會導致死結：  
   
 ```  
 void wrong4(int n)  
@@ -99,7 +98,7 @@ void wrong4(int n)
 }  
 ```  
   
- 下列範例是不相容因為`barrier`因為用一次只能有一個執行緒可以進入重要區段會導致死結：  
+ 下列範例是不符合規定因為`barrier`導致死結，因為用一次只有一個執行緒可以進入關鍵區段：  
   
 ```  
 void wrong5()  
@@ -116,7 +115,7 @@ void wrong5()
 }  
 ```  
   
- 下列範例是不相容因為`barrier`因為之故只能有一個執行緒執行會導致死結`single`一節：  
+ 下列範例是不符合規定因為`barrier`導致死結，因為，只有一個執行緒執行`single`> 一節：  
   
 ```  
 void wrong6()  

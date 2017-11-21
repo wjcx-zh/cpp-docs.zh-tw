@@ -1,47 +1,45 @@
 ---
-title: "HString::Operator= 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator="
-dev_langs: 
-  - "C++"
+title: "Hstring:: Operator = 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator=
+dev_langs: C++
 ms.assetid: 8e68c1ff-bc57-4526-810e-af3c284b4e30
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec8e77d1074b3dbd10d68f205af656d7f33aa334
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# HString::Operator= 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將另一個 HString 物件中的值移至目前 HString 物件。  
+# <a name="hstringoperator-operator"></a>HString::Operator= 運算子
+將另一個 HString 物件的值移至目前 HString 物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 HString& operator=(HString&& other) throw()  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `other`  
- 現有的 HString 物件。  
+ HString 現有的物件。  
   
-## 備註  
- 現有的 `other` 物件的值複製到目前的 HString 物件，然後終結 `other` 物件。  
+## <a name="remarks"></a>備註  
+ 現有的值`other`物件會複製到目前的 HString 物件，然後`other`物件被終結。  
   
-## 需求  
- **標題:** corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [HString 類別](../windows/hstring-class.md)

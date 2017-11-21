@@ -13,7 +13,7 @@ f1_keywords:
 - mutex/std::lock
 - mutex/std::try_to_lock
 ms.assetid: 78ab3c8b-c7db-4226-ac93-e2e78ff8b964
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::adopt_lock [C++]
@@ -21,12 +21,11 @@ helpviewer_keywords:
 - std::defer_lock [C++]
 - std::lock [C++]
 - std::try_to_lock [C++]
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: a81d134a4fb49f9123dbed5b4146976d5c676379
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltmutexgt-functions-and-variables"></a>&lt;mutex&gt; 函式和變數
 ||||  
@@ -92,7 +91,6 @@ const try_to_lock_t try_to_lock;
   
 ## <a name="see-also"></a>另請參閱  
  [\<mutex>](../standard-library/mutex.md)
-
 
 
 

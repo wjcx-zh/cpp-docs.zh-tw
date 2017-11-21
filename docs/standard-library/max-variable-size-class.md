@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - allocators/stdext::max_variable_size::full
 - allocators/stdext::max_variable_size::released
 - allocators/stdext::max_variable_size::saved
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::max_variable_size
 - stdext::max_variable_size [C++], allocated
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 425a93ff12aad138ff2c539765f9afeeb2f22756
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 957f7ce1d5156afeaca7e976678a3954755441d8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size 類別
 描述 [max 類別](../standard-library/allocators-header.md)物件，此物件可將 [freelist](../standard-library/freelist-class.md) 物件的長度上限限制為與已配置的記憶體區塊數目大致成正比。  
@@ -143,7 +140,6 @@ void saved();
   
 ## <a name="see-also"></a>另請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

@@ -1,33 +1,30 @@
 ---
-title: "編譯器警告 (層級 1) C4532 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4532"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4532"
+title: "編譯器警告 （層級 1） C4532 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4532
+dev_langs: C++
+helpviewer_keywords: C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5cec2f70dfa6781c237cc1c08079904c7b48e171
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4532
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'continue' : 跳出 \_\_finally\/finally 區塊在終止處理期間有未定義的行為  
+# <a name="compiler-warning-level-1-c4532"></a>編譯器警告 (層級 1) C4532
+'continue': 跳出 __finally/finally 區塊有未定義的行為在終止處理期間  
   
- 編譯器遇到下列關鍵字之一：  
+ 編譯器遇到下列關鍵字：  
   
 -   [continue](../../cpp/continue-statement-cpp.md)  
   
@@ -35,13 +32,13 @@ manager: "ghogen"
   
 -   [goto](../../cpp/goto-statement-cpp.md)  
   
- 造成在異常終結期間，跳出 [\_\_finally](../../cpp/try-finally-statement.md) 或 [finally](../../dotnet/finally.md) 區塊。  
+ 造成出的跳躍點[__finally](../../cpp/try-finally-statement.md)或[最後](../../dotnet/finally.md)異常終止期間的區塊。  
   
- 如果發生例外狀況，同時堆疊在終結處理常式 \(`__finally` 或 finally 區塊\) 執行期間正進行回溯，而您的程式碼在 `__finally` 區塊結束之前即跳出 `__finally` 區塊，這種行為並未定義。  控制項無法回到復原程式碼，因此例外狀況可能無法正確地處理。  
+ 如果發生例外狀況，且在堆疊回溯終止處理常式執行期間 (`__finally`或 finally 區塊)，和您的程式碼跳出`__finally`之前封鎖`__finally`區塊結束時，行為是未定義。 控制項不會傳回回溯程式碼，因此可能未正確處理例外狀況。  
   
- 如果您必須跳出 **\_\_finally** 區段，請先檢查異常性終止。  
+ 如果您必須跳出**__finally**封鎖，請先檢查異常終止。  
   
- 下列範例會產生 C4532；只要將跳躍陳述式標示為註解即可解決該警告。  
+ 下列範例會產生 C4532;只是標記為註解的跳躍陳述式，以解決的警告。  
   
 ```  
 // C4532.cpp  

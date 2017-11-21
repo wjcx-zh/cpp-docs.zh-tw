@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&&'
-dev_langs:
-- C++
-helpviewer_keywords:
-- '&& rvalue reference declarator'
+f1_keywords: '&&'
+dev_langs: C++
+helpviewer_keywords: '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f34c20b380fe1bef5e57de37b4e239e8ba4eadf9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8d0595078c9515c5c705a1cbfb1ed6b5e55db788
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子：&amp;&amp;
 保留右值運算式的參考。  
@@ -419,4 +414,3 @@ print_type_and_value<string&>(string& t)
  [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   
  [移動建構函式和移動指派運算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)   
-

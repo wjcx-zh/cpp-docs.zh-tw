@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 191b59d21f56ee810a981082806a6775bc6ea40d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-handling-differences"></a>例外狀況處理差異
 結構化例外狀況處理和 C++ 例外狀況處理之間的主要差異，在於 C++ 例外狀況處理模型是處理類型，而 C 結構化例外狀況處理模型則是處理某種類型的例外狀況 (明確地說即 `unsigned int`)。 也就是說，C 例外狀況是以不帶正負號的整數值來識別，而 C++ 例外狀況則是以資料類型來識別。 在 C 中引發例外狀況時，每個可能的處理常式都會執行一個篩選器，以檢查 C 例外狀況內容並判斷應接受該例外狀況、將其傳遞至其他處理常式，或是要予以忽略。 C++ 中擲回例外狀況時，它可能是任何類型。  

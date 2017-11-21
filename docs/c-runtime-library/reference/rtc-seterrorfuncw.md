@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _RTC_SetErrorFuncW
+apiname: _RTC_SetErrorFuncW
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,8 +23,7 @@ apitype: DLLExport
 f1_keywords:
 - _RTC_SetErrorFuncW
 - RTC_SetErrorFuncW
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorFuncW function
@@ -34,30 +31,15 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 9c340310feb94ac181049c01d3ab1efaee2002c3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: b3285e266091a902373f0bfd7b70b9c1123c19f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 指定函式做為報告執行階段錯誤檢查 (RTC) 的處理常式。  

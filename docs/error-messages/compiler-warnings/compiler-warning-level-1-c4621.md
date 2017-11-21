@@ -1,34 +1,32 @@
 ---
-title: "編譯器警告 (層級 1) C4621 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4621"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4621"
+title: "編譯器警告 （層級 1） C4621 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4621
+dev_langs: C++
+helpviewer_keywords: C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a4a9252e615ad0fe1ede02e374294e03db38eca4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4621
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-找不到型別 'type' 後置格式的 '\-\- 運算子'，已改用前置格式  
+# <a name="compiler-warning-level-1-c4621"></a>編譯器警告 (層級 1) C4621
+沒有運算子後置格式 '-' 找到類型 'type'，改用前置格式  
   
- 未定義此提供型別的後置遞減 \(Decrement\) 運算子。  編譯器使用多載的後置運算子。  
+ 針對指定的型別定義沒有後置遞減運算子。 編譯器使用多載的前置運算子。  
   
- 定義後置的 `--` 運算子即可避免此警告。  如下所示建立一個有兩個引數的 `--` 運算子：  
+ 您可以避免這個警告，定義後置`--`運算子。 建立兩個引數版本`--`運算子如下所示：  
   
 ```  
 // C4621.cpp  

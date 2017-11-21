@@ -1,33 +1,30 @@
 ---
-title: "BEGIN_PROVIDER_COLUMN_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PROVIDER_COLUMN_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PROVIDER_COLUMN_MAP 巨集"
+title: "BEGIN_PROVIDER_COLUMN_MAP |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PROVIDER_COLUMN_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PROVIDER_COLUMN_MAP macro
 ms.assetid: 506b8c0f-6be9-4c97-ba81-c4b7f7d428fa
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6b93a08a709f09010187a1ed46552c291ecbe166
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_PROVIDER_COLUMN_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-標籤提供者資料行對應項目的開頭。  
+# <a name="beginprovidercolumnmap"></a>BEGIN_PROVIDER_COLUMN_MAP
+標記提供者的資料行對應項目的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,19 +34,19 @@ theClass
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `theClass`  
- \[in\] 類別的名稱對應所屬。  
+ [in]此對應所屬的類別名稱。  
   
-## 範例  
- 這個範例提供者資料行對應:  
+## <a name="example"></a>範例  
+ 以下是範例提供者的資料行對應：  
   
- [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/CPP/begin-provider-column-map_1.h)]  
+ [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   

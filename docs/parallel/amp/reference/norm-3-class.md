@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,36 +77,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_yx
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: ca5d8270f04240f99fa6735ea8235c2e077dfa01
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 92d2567a3f4754413c51c75b1c18b0a031e343d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="norm3-class"></a>norm_3 類別
-代表三個一般數字的短向量。  
+表示短向量的三個一般數字。  
   
 ## <a name="syntax"></a>語法  
   
@@ -125,13 +108,13 @@ class norm_3;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[norm_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |norm_3::get_x||  
 |norm_3::get_xy||  
@@ -172,7 +155,7 @@ class norm_3;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |norm_3::operator-||  
 |norm_3::operator-||  
@@ -185,13 +168,13 @@ class norm_3;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[大小常數](#size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |norm_3::b||  
 |norm_3::bg||  
@@ -228,9 +211,9 @@ class norm_3;
  `norm_3`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_short_vectors.h  
+ **標頭：** amp_short_vectors.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
 
 ## <a name="ctor"></a>norm_3 建構函式
 預設建構函式，初始化為 0 的所有項目。  
@@ -305,4 +288,3 @@ static const int size = 3;
  
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

@@ -1,45 +1,43 @@
 ---
-title: "multimap::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 成員 [STL/CLR]"
+title: "multimap:: equal_range (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: f1008d89-7442-429b-9eca-4ef7ee704766
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6a9b4a56825e9cd0cdd4ea7587557ecf5a125e5f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定索引鍵的範圍。  
+# <a name="multimapequalrange-stlclr"></a>multimap::equal_range (STL/CLR)
+尋找符合指定之索引鍵的範圍。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 pair_iter_iter equal_range(key_type _Keyval);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_Keyval`  
  要搜尋的索引鍵值。  
   
-## 備註  
- 方法會傳回一組 Iterator `-`[multimap::lower\_bound](../dotnet/multimap-lower-bound-stl-clr.md)`(``_Keyval``),`[multimap::upper\_bound](../dotnet/multimap-upper-bound-stl-clr.md)`(``_Keyval``)`。  您會用它來決定目前符合指定索引鍵之項目範圍超過受控制序列。  
+## <a name="remarks"></a>備註  
+ 方法會傳回一組迭代`-` [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md) `(_Keyval),` [multimap:: upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)`(_Keyval)`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目範圍。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multimap_equal_range.cpp   
@@ -76,17 +74,20 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**equal\_range \(L'x\) 空 \= true**  
- **\[b 2\]**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::count](../dotnet/multimap-count-stl-clr.md)   
- [multimap::find](../dotnet/multimap-find-stl-clr.md)   
- [multimap::lower\_bound](../dotnet/multimap-lower-bound-stl-clr.md)   
- [multimap::upper\_bound](../dotnet/multimap-upper-bound-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
+ [multimap:: find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)   
+ [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)   
+ [multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)

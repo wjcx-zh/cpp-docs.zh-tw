@@ -1,41 +1,39 @@
 ---
-title: "Module::MethodReleaseNotifier::object_ 資料成員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::MethodReleaseNotifier::object_"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "object_ 資料類型"
+title: "Module::MethodReleaseNotifier::object_ 資料成員 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::MethodReleaseNotifier::object_
+dev_langs: C++
+helpviewer_keywords: object_ data member
 ms.assetid: 502d4a6f-f612-4d4e-9df7-fede288e9501
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1a52bb36b838f9b6b3fab970ac9463371e8b2aac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Module::MethodReleaseNotifier::object_ 資料成員
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-會保留該成員指標函式是目前 Module::MethodReleaseNotifier 物件的事件處理常式的物件。  
+# <a name="modulemethodreleasenotifierobject-data-member"></a>Module::MethodReleaseNotifier::object_ 資料成員
+成員函式是目前的 module:: methodreleasenotifier 物件的事件處理常式的物件會保留指標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 T* object_;  
 ```  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Module::MethodReleaseNotifier 類別](../windows/module-methodreleasenotifier-class.md)

@@ -1,60 +1,59 @@
 ---
-title: "RoInitializeWrapper 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper"
-dev_langs: 
-  - "C++"
+title: "RoInitializeWrapper 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper
+dev_langs: C++
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8b94db5e54089fa91c3b79c185df8b366de07c38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# RoInitializeWrapper 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-初始化 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]。  
+# <a name="roinitializewrapper-class"></a>RoInitializeWrapper 類別
+初始化 Windows 執行階段。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class RoInitializeWrapper  
 ```  
   
-## 備註  
- RoInitializeWrapper 是初始化 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 方便並傳回數值的 HRESULT 作業是否成功。  
+## <a name="remarks"></a>備註  
+ RoInitializeWrapper 為方便起見，初始化 Windows 執行階段，並會傳回 HRESULT，指出作業是否成功。  
   
-## Members  
+## <a name="members"></a>成員  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
-|--------|--------|  
-|[RoInitializeWrapper::RoInitializeWrapper 建構函式](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化 RoleInitializeWrapper 類別的新執行個體。|  
-|[RoInitializeWrapper::~RoInitializeWrapper 解構函式](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|終結 RoInitializeWrapper 類別目前的執行個體。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[RoInitializeWrapper::RoInitializeWrapper 建構函式](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化 RoInitializeWrapper 類別的新執行個體。|  
+|[RoInitializeWrapper::~RoInitializeWrapper 解構函式](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|終結 RoInitializeWrapper 類別的目前執行個體。|  
   
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
-|--------|--------|  
-|[RoInitializeWrapper::HRESULT\(\) 運算子](../windows/roinitializewrapper-hresult-parens-operator.md)|擷取 RoInitializeWrapper 建構函式產生的 HRESULT。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[RoInitializeWrapper::HRESULT() 運算子](../windows/roinitializewrapper-hresult-parens-operator.md)|擷取 RoInitializeWrapper 建構函式所產生的 HRESULT。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `RoInitializeWrapper`  
   
-## 需求  
- **標題:** corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

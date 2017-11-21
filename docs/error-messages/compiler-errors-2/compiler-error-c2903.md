@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2903
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2903
+f1_keywords: C2903
+dev_langs: C++
+helpviewer_keywords: C2903
 ms.assetid: bf6b223f-4921-48c7-82b9-ff318b42c801
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 2241d4421c2fcee89b06bf176cfab9bb788693d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c2903"></a>編譯器錯誤 C2903
 'identifier': 符號不是類別樣板，也不是函式樣板  

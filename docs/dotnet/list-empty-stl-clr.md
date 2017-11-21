@@ -1,41 +1,39 @@
 ---
-title: "list::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成員 [STL/CLR]"
+title: "list:: empty (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: f45edf8a-927d-41ff-9c09-cb0fba4f08b8
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 388a7ffd665652626dc48d4278a57e38c34e91b0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# list::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listempty-stlclr"></a>list::empty (STL/CLR)
 測試項目是否不存在。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool empty();  
 ```  
   
-## 備註  
- 成員函式傳回 true 表示一個空的控制順序。  它與 [list::size](../dotnet/list-size-stl-clr.md)`() == 0`。  您會用它來測試清單是空的。  
+## <a name="remarks"></a>備註  
+ 成員函式會對空的受控制序列傳回 true。 它相當於[list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否是空的清單。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_empty.cpp   
@@ -65,16 +63,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**大小 \(\) \= 3**  
-**空白 \(\) \= false**  
-**大小 \(\) \= 0**  
-**空白 \(\) \= true**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::size](../dotnet/list-size-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)

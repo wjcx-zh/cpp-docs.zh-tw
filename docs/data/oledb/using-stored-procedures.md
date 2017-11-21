@@ -1,48 +1,48 @@
 ---
-title: "使用預存程序 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供者樣板, 預存程序"
-  - "OLE DB, 預存程序"
-  - "預存程序, 關於預存程序"
-  - "預存程序, OLE DB"
-  - "預存程序, Visual C++"
+title: "使用預存程序 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB, stored procedures
+- stored procedures, Visual C++
+- stored procedures, about stored procedures
+- OLE DB provider templates, stored procedures
+- stored procedures, OLE DB
 ms.assetid: 90507e4c-eca2-46c9-ad8c-07e10dc1d41b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b7707234d0a1bf8abd37ae6751060ed7c7109fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 使用預存程序
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-預存程序 \(Stored Procedure\) 是一種儲存在資料庫中的可執行物件。  呼叫一個預存程序類似於叫用一個 SQL 命令。  在資料來源上使用預存程序 \(而不是在用戶端應用程式執行或準備陳述式\) 可提供數個優點，包括：提高效能、減少網路負擔，以及改善一致性和準確性。  
+# <a name="using-stored-procedures"></a>使用預存程序
+預存程序是儲存在資料庫中的可執行物件。 呼叫預存程序是類似於叫用 SQL 命令。 可以使用預存程序 （而不是執行或準備用戶端應用程式中的陳述式） 的資料來源上提供幾項優點，包括較高的效能、 降低的網路負荷，並改善的一致性和精確度。  
   
- 預存程序可以具有任何數目 \(包括零\) 的輸入或輸出參數，而且可以傳遞傳回值。  您可以將參數值硬式編碼成特定資料值，或使用參數標記 \(問號 '?'\)。  
+ 預存程序可以有任意數目的 （包括零） 輸入或輸出參數，也可以傳遞傳回值。 您可以在特定資料值，或使用參數標記的參數值可能是硬 (問號 '？ ')。  
   
 > [!NOTE]
->  使用 Visual C\+\+ 所建立的 CLR SQL Server 預存程序在編譯時必須使用 **\/clr:safe** 編譯器選項。  
+>  使用 Visual c + + 所建立的預存程序必須使用編譯的 CLR SQL Server **/clr: safe**編譯器選項。  
   
- OLE DB Provider for SQL Server \(SQLOLEDB\) 可以支援下列預存程序用來傳回資料的機制：  
+ OLE DB provider for SQL Server (SQLOLEDB) 支援預存程序傳回的資料會使用下列機制：  
   
--   程序中的每個 SELECT 陳述式都會產生一個結果集 \(Result Set\)。  
+-   程序中的每個 SELECT 陳述式會產生結果集。  
   
--   程序可以透過輸出參數傳回資料。  
+-   此程序可以傳回輸出參數的資料。  
   
--   程序可以有一個整數的傳回碼 \(Return Code\)。  
+-   程序可以有整數傳回碼。  
   
 > [!NOTE]
->  您不能將預存程序與 OLE DB Provider for Jet 一起使用，因為該提供者並不支援預存程序，查詢字串中只能使用常數。  
+>  您無法使用預存程序與 OLE DB provider for Jet 因為該提供者不支援預存程序。只允許常數查詢字串中。  
   
-## 請參閱  
- [使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

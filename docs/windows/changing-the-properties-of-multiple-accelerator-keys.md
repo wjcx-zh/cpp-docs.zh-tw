@@ -1,49 +1,48 @@
 ---
-title: "Changing the Properties of Multiple Accelerator Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "keyboard shortcuts [C++], property changing"
-  - "accelerator tables [C++], changing properties"
+title: "變更多個快速鍵屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keyboard shortcuts [C++], property changing
+- accelerator tables [C++], changing properties
 ms.assetid: b55c9bd6-b430-48bb-b942-0e6f21d7abf9
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f85c83ad9ef582b918139863e0fdcca44817e800
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Changing the Properties of Multiple Accelerator Keys
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 若要變更多個快速鍵屬性  
+# <a name="changing-the-properties-of-multiple-accelerator-keys"></a>變更多個快速鍵屬性
+### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>若要變更多個快速鍵屬性  
   
-1.  按兩下[資源檢視](../windows/resource-view-window.md)內的快速鍵對應表圖示來開啟快速鍵對應表。  
+1.  它在圖示上按兩下開啟快速鍵對應表[資源檢視](../windows/resource-view-window.md)。  
   
     > [!NOTE]
-    >  如果您的專案並未包含 .rc 檔案，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
+    >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在按下每個快速鍵時，按住 **CTRL** 鍵以選取您要變更的快速鍵。  
+2.  選取您想要變更按住的快速鍵**CTRL**鍵，並按一下每個。  
   
-3.  移至[屬性視窗](../Topic/Properties%20Window.md)，並輸入您希望所有選取快速鍵能共用的值。  
+3.  移至[屬性 視窗](/visualstudio/ide/reference/properties-window) 並輸入您想要將所有選取的加速器共用的值。  
   
     > [!NOTE]
-    >  \[屬性\] 視窗內的每個輔助按鍵值都會顯示成布林 \(Boolean\) 屬性。  如果您變更 \[屬性\] 視窗內的[輔助按鍵](../windows/accelerator-modifier-property.md)值，則快速鍵對應表會將新的輔助按鍵加入任何之前設定的輔助按鍵中。  因此，如果您設定了任何輔助按鍵值，就需要為所有的輔助按鍵來進行設定，以確定每個快速鍵都是共用相同的 \[輔助按鍵\] 設定。  
+    >  每個修飾詞值會顯示為 [屬性] 視窗中的布林值屬性。 如果您變更[修飾詞](../windows/accelerator-modifier-property.md)[屬性] 視窗快速鍵對應表中的值視為先前有任何修飾詞的額外功能的新修飾詞。 因為這個緣故，如果您設定任何修飾詞的值，您必須將它們，以確保每個快速鍵都共用相同的修飾詞設定所有設定。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
- **需求**  
+ **Requirements**  
   
  Win32  
   
-## 請參閱  
- [Editing Accelerator Tables](../windows/editing-accelerator-tables.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>另請參閱  
+ [編輯快速鍵對應表](../windows/editing-accelerator-tables.md)   
+ [快速鍵編輯器](../windows/accelerator-editor.md)

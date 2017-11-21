@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3020
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3020
+f1_keywords: C3020
+dev_langs: C++
+helpviewer_keywords: C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 4da505740eba9b291d8c4139cf9cd6fded70fdfa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3020"></a>編譯器錯誤 C3020
 'var': OpenMP 'for' 迴圈索引變數不可修改迴圈主體中  

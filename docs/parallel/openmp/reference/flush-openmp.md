@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Flush
-dev_langs:
-- C++
-helpviewer_keywords:
-- flush OpenMP directive
+f1_keywords: Flush
+dev_langs: C++
+helpviewer_keywords: flush OpenMP directive
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 30a713da7c1096043b3e48db2453b647717cb163
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 2892a260ae7982741fcda2944683b0d6957824ce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="flush-openmp"></a>flush (OpenMP)
-指定所有執行緒都有相同檢視所有的共用物件的記憶體。  
+指定所有執行緒都有相同檢視的所有共用物件的記憶體。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,7 +34,7 @@ ms.lasthandoff: 02/24/2017
  其中：  
   
  `var` (選擇性)  
- 代表您要同步處理的物件變數以逗號分隔清單。 如果`var`未指定，會排清所有記憶體。  
+ 代表您想要同步處理的物件變數以逗號分隔清單。 如果`var`未指定，會排清所有記憶體。  
   
 ## <a name="remarks"></a>備註  
  **排清**指示詞可支援不含 OpenMP 子句。  

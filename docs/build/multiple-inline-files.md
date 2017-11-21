@@ -1,32 +1,32 @@
 ---
-title: "多重內嵌檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內嵌檔, 多重 NMAKE"
-  - "多重內嵌檔"
-  - "NMAKE 程式, 內嵌檔"
+title: "多重內嵌檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, multiple NMAKE
+- multiple inline files
+- NMAKE program, inline files
 ms.assetid: 6d381dcf-0ed8-45d1-8df3-b4598d860b99
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8bdba2afcc7bc17cb0609e95764b06d83d4cc91e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 多重內嵌檔
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-命令能建立一個以上的內嵌檔。  
+# <a name="multiple-inline-files"></a>多重內嵌檔
+命令可以建立多個內嵌檔案。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,8 +37,8 @@ inlinetext
 <<[KEEP | NOKEEP]  
 ```  
   
-## 備註  
- 為每個檔案指定一或多行內嵌文字，文字後跟隨包含分隔符號的結尾行。  從第一個檔案分隔行的下一行，開始第二個檔案的文字。  
+## <a name="remarks"></a>備註  
+ 為每個檔案，指定一或多個行內嵌的文字，後面接著包含分隔符號的結尾行。 開始在第一個檔案的分隔列下一行的第二個檔案的文字。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Makefile 中的內嵌檔](../build/inline-files-in-a-makefile.md)

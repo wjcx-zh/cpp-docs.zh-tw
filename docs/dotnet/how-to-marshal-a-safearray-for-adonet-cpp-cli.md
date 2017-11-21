@@ -1,37 +1,36 @@
 ---
-title: "如何：封送處理 ADO.NET 的 SAFEARRAY (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET [C++], 封送處理 SAFEARRAY 類型"
-  - "SAFEARRAY, 封送處理"
+title: "如何： 封送處理 ADO.NET 的 SAFEARRAY (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- SAFEARRAY, marshaling
+- ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: 1034b9d7-ecf1-40f7-a9ee-53180e87a58c
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: abf3df95a41fe3e2ebc0eb15bb4ee9bc0787e96c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：封送處理 ADO.NET 的 SAFEARRAY (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本節將示範如何在資料庫中加入原生 `SAFEARRAY`，以及如何將資料庫中的 Managed 陣列封送處理至原生 `SAFEARRAY`。  
+# <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>如何：封送處理 ADO.NET 的 SAFEARRAY (C++/CLI)
+示範如何將原生`SAFEARRAY`到資料庫及如何封送處理為原生資料庫從 managed 的陣列`SAFEARRAY`。  
   
-## 範例  
- 在此範例中，會建立類別 DatabaseClass，使其與 ADO.NET <xref:System.Data.DataTable> 物件互動。  請注意，這個類別是原生 C\+\+ `class` \(相較於 `ref class` 或 `value class` 而言\)。  因為要從機器碼使用此類別，而且無法在機器碼中使用 Managed 型別，所以這點是必要的。  如類別宣告之前的 `#pragma managed` 指示詞所表示，這個類別將會編譯成以 CLR 為目標。  如需這個指示詞的詳細資訊，請參閱 [managed、unmanaged](../preprocessor/managed-unmanaged.md)。  
+## <a name="example"></a>範例  
+ 在此範例中，必須將類別 DatabaseClass 建立 ADO.NET 與互動<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較之下`ref class`或`value class`)。 這是必要的因為我們想要從原生程式碼，使用此類別，而且您無法在原生程式碼中使用 managed 型別。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱[managed、 unmanaged](../preprocessor/managed-unmanaged.md)。  
   
- 請注意 DatabaseClass 類別的私用成員：`gcroot<DataTable ^> table`。  由於原生型別不能包含 Managed 型別，所以 `gcroot` 關鍵字是必要的。  如需 `gcroot` 的詳細資訊，請參閱 [如何：以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。  
+ 請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 原生類型不能包含 managed 型別，因為`gcroot`是必要的關鍵字。 如需有關`gcroot`，請參閱[How to： 在原生類型中宣告處理](../dotnet/how-to-declare-handles-in-native-types.md)。  
   
- 如同 `main` 之前的 `#pragma unmanaged` 指示詞所表示的，此範例中的其餘程式碼都是原生 C\+\+ 程式碼。  在此範例中，會建立 DatabaseClass 的新執行個體並呼叫它的方法，以建立資料表，並在此資料表中填入一些資料列。  請注意，原生 `SAFEARRAY` 型別是當做資料庫資料行 ArrayIntsCol 的值傳遞。  在 DatabaseClass 內，會使用在 <xref:System.Runtime.InteropServices?displayProperty=fullName> 命名空間中找到的封送處理 \(Marshaling\) 功能，將這些 `SAFEARRAY` 型別封送處理至 Managed 物件。  明確地說，<xref:System.Runtime.InteropServices.Marshal.Copy%2A> 方法是用來將 `SAFEARRAY` 封送處理至 Managed 整數陣列，而 <xref:System.Runtime.InteropServices.Marshal.Copy%2A> 方法則是用來將 Managed 整數陣列封送處理至 `SAFEARRAY`。  
+ 在此範例中的程式碼的其餘部分是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生`SAFEARRAY`類型做為值的資料庫資料行 ArrayIntsCol 正在傳遞。 內部 DatabaseClass，這些`SAFEARRAY`類型會封送處理至 managed 物件使用中的封送處理功能<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體而言，此方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用以封送處理`SAFEARRAY`到 managed 陣列的整數，與方法的<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用來封送處理至整數的 managed 的陣列`SAFEARRAY`。  
   
 ```  
 // adonet_marshal_safearray.cpp  
@@ -162,21 +161,24 @@ int main()
 }  
 ```  
   
-  **0 1 2 3 4 5 6 7 8 9**   
-## 編譯程式碼  
+```Output  
+0 1 2 3 4 5 6 7 8 9   
+```  
   
--   若要從命令列編譯程式碼，請將程式碼範例儲存在名稱為 adonet\_marshal\_safearray.cpp 的檔案中，然後輸入下列陳述式 \(Statement\)：  
+## <a name="compiling-the-code"></a>編譯程式碼  
+  
+-   若要從命令列將程式碼編譯、 adonet_marshal_safearray.cpp 檔案中儲存的程式碼範例，並輸入下列陳述式：  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_safearray.cpp  
     ```  
   
-## .NET Framework 安全性  
- 如需與 ADO.NET 有關的安全性問題之詳細資訊，請參閱[保護 ADO.NET 應用程式](../Topic/Securing%20ADO.NET%20Applications.md)。  
+## <a name="net-framework-security"></a>.NET Framework 安全性  
+ 包含 ADO.NET 的安全性問題的資訊，請參閱[保護 ADO.NET 應用程式](/dotnet/framework/data/adonet/securing-ado-net-applications)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  <xref:System.Runtime.InteropServices>   
- [資料存取](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](http://msdn.microsoft.com/zh-tw/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [使用 ADO.NET 資料存取 (C + + /CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [互通性](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
  [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

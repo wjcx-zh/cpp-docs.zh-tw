@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3465
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3465
+f1_keywords: C3465
+dev_langs: C++
+helpviewer_keywords: C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 716eb175d03cc97389c84b9fa382ac92153071f5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3465"></a>編譯器錯誤 C3465
 若要使用類型 'type'，您必須參考組件 'assembly'  

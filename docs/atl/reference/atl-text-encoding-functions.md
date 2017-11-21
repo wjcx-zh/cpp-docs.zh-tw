@@ -5,14 +5,37 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
+f1_keywords:
+- atlbase/ATL::AtlGetHexValue
+- atlbase/ATL::AtlGetVersion
+- atlenc/ATL::AtlHexDecode
+- atlenc/ATL::AtlHexDecodeGetRequiredLength
+- atlenc/ATL::AtlHexEncode
+- atlenc/ATL::AtlHexEncodeGetRequiredLength
+- atlenc/ATL::AtlHexValue
+- atlenc/ATL::BEncode
+- atlenc/ATL::BEncodeGetRequiredLength
+- atlenc/ATL::EscapeXML
+- atlenc/ATL::GetExtendedChars
+- atlenc/ATL::IsExtendedChar
+- atlenc/ATL::QEncode
+- atlenc/ATL::QEncodeGetRequiredLength
+- atlenc/ATL::QPDecode
+- atlenc/ATL::QPDecodeGetRequiredLength
+- atlenc/ATL::QPEncode
+- atlenc/ATL::QPEncodeGetRequiredLength
+- atlenc/ATL::UUDecode
+- atlenc/ATL::UUDecodeGetRequiredLength
+- atlenc/ATL::UUEncode
+- atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-caps.latest.revision: 3
-translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: a7d4572f34a88192723c574e1b749947f76d819a
-ms.lasthandoff: 03/31/2017
-
+caps.latest.revision: "3"
+ms.openlocfilehash: d92ce766ea0fff11f104ae4f6d260d44faf85292
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="atl-text-encoding-functions"></a>ATL 文字編碼函式
 這些函式支援編碼和解碼的文字。
@@ -44,7 +67,7 @@ ms.lasthandoff: 03/31/2017
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|
 
 ## <a name="requirements"></a>需求  
- **標頭︰** atlenc.h  
+ **標頭：** atlenc.h  
  
 ## <a name="atlgethexvalue"></a>AtlGetHexValue
 呼叫此函式可取得十六進位的數值。  
@@ -77,10 +100,10 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 ## <a name="example"></a>範例  
  此函式應該呼叫，如下所示。  
   
- [!code-cpp[NVC_ATL_Utilities # 95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]  
   
 ### <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
 
 ## <a name="atlhexdecode"></a>AtlHexDecode
 將已由先前呼叫這類的十六進位文字編碼的資料字串解碼， [AtlHexEncode](#atlhexencode)。  
@@ -107,7 +130,7 @@ inline BOOL AtlHexDecode(
  變數，其中包含以位元組為單位的長度指標`pbDest`。 如果函式成功，則變數會收到寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**上失敗。  
+ 傳回**TRUE**成功時， **FALSE**失敗。  
   
 ## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
 呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的十六進位編碼字串解碼的資料。  
@@ -148,7 +171,7 @@ int * pnDestLen) throw();
  變數，其中包含以字元為單位的長度指標`szDest`。 如果函式成功，則變數會收到寫入緩衝區的字元數。 如果函式失敗，變數會收到所需的長度，以字元為單位的緩衝區。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**上失敗。  
+ 傳回**TRUE**成功時， **FALSE**失敗。  
   
 ### <a name="remarks"></a>備註  
  來源資料的每個位元組會編碼為十六進位的 2 個字元。  
@@ -240,7 +263,7 @@ inline BOOL BEncode(
  設定為使用轉換的字元。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**上失敗。  
+ 傳回**TRUE**成功時， **FALSE**失敗。  
   
 ### <a name="remarks"></a>備註  
  "B"編碼配置述 RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。  
@@ -302,7 +325,7 @@ inline int EscapeXML(
  以字元為單位的已轉換的字串長度。  
   
 ### <a name="remarks"></a>備註  
- 此函式所執行的可能轉換為表所示︰  
+ 此函式所執行的可能轉換為表所示：  
   
 |來源|目的地|  
 |------------|-----------------|  
@@ -376,7 +399,7 @@ inline BOOL QEncode(
  緩衝區的指標，此變數會在傳回時包含已轉換的 unsafe 字元數目。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**上失敗。  
+ 傳回**TRUE**成功時， **FALSE**失敗。  
   
 ### <a name="remarks"></a>備註  
  "Q"編碼配置述 RFC 2047 ([http://www.ietf.org/rfc/rfc2047.txt](http://www.ietf.org/rfc/rfc2047.txt))。  
@@ -485,7 +508,7 @@ inline BOOL QPEncode(
 加上引號的可列印編碼配置述[RFC 2045](http://www.ietf.org/rfc/rfc2045.txt)。
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**上失敗。  
+ 傳回**TRUE**成功時， **FALSE**失敗。  
   
 ### <a name="remarks"></a>備註  
  加上引號的可列印編碼配置述 RFC 2045 ([http://www.ietf.org/rfc/rfc2045.txt](http://www.ietf.org/rfc/rfc2045.txt))。  
@@ -532,7 +555,7 @@ inline BOOL UUDecode(
  變數，其中包含以位元組為單位的長度指標`pbDest`。 如果函式成功，則變數會收到寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**上失敗。  
+ 傳回**TRUE**成功時， **FALSE**失敗。  
   
 ### <a name="remarks"></a>備註  
  這個 uuencoding 實作遵循 POSIX P1003.2b/D11 規格。  
@@ -590,7 +613,7 @@ inline BOOL UUEncode(
 - `ATLSMTP_UUENCODE_DOT`將執行資料載滿。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**TRUE**成功時， **FALSE**上失敗。  
+ 傳回**TRUE**成功時， **FALSE**失敗。  
   
 ### <a name="remarks"></a>備註  
  這個 uuencoding 實作遵循 POSIX P1003.2b/D11 規格。  

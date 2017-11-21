@@ -1,32 +1,30 @@
 ---
-title: "binary_delegate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_delegate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_delegate 函式 [STL/CLR]"
+title: "binary_delegate (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_delegate
+dev_langs: C++
+helpviewer_keywords: binary_delegate function [STL/CLR]
 ms.assetid: 52a9291a-e354-4b9e-a035-78dac1179ec5
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 46faf7218486d6c1016a15ab832a902a0b76009a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# binary_delegate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-genereic 類別會描述兩個引數的委派。  您會用它來指定委派根據它的引數和傳回型別。  
+# <a name="binarydelegate-stlclr"></a>binary_delegate (STL/CLR)
+Genereic 類別描述兩個引數的委派。 您可以使用它指定的委派，以其引數和傳回型別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 generic<typename Arg1,  
@@ -35,34 +33,34 @@ generic<typename Arg1,
     delegate Result binary_delegate(Arg1, Arg2);  
 ```  
   
-#### 參數  
- Arg1  
- 第一個引數的型別。  
+#### <a name="parameters"></a>參數  
+ arg1  
+ 第一個引數型別。  
   
- Arg2  
+ arg2  
  第二個引數的型別。  
   
  結果  
- 傳回類型。  
+ 傳回型別。  
   
-## 備註  
- genereic 委派描述一或兩個引數的函式。  
+## <a name="remarks"></a>備註  
+ Genereic 委派說明的兩個引數函式。  
   
- 請注意，下列：  
+ 請注意，如：  
   
  `binary_delegate<int, int, int> Fun1;`  
   
  `binary_delegate<int, int, int> Fun2;`  
   
- 型別 `Fun1` 和 `Fun2` 是同義字，而下列：  
+ 型別`Fun1`和`Fun2`是同義字，而為：  
   
  `delegate int Fun1(int, int);`  
   
  `delegate int Fun2(int, int);`  
   
- 它們不是相同型別。  
+ 它們不是相同的類型。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_binary_delegate.cpp   
@@ -91,15 +89,18 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)   
- [unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
+ [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

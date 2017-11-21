@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _spawnve
 - _wspawnve
 - spawnve
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _spawnve function
 - spawnve function
@@ -40,30 +38,15 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: 26d1713d-b551-4f21-a07b-e9891a2ae6cf
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2150c13da721bc3cf3b777351e652e39617070b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: e5b51afde511caedf516e5dbc58a5f7ff6d7fd84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="spawnve-wspawnve"></a>_spawnve、_wspawnve
 建立和執行新處理序。  
@@ -136,7 +119,7 @@ intptr_t _wspawnve(
  如需相容性詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
- 請參閱 [_spawn, _wspawn Functions](../../c-runtime-library/spawn-wspawn-functions.md)中的範例。  
+ 請參閱 [_spawn、_wspawn 函式](../../c-runtime-library/spawn-wspawn-functions.md)中的範例。  
   
 ## <a name="see-also"></a>另請參閱  
  [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   

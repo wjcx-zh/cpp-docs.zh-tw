@@ -1,32 +1,30 @@
 ---
-title: "importidl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.importidl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "importidl attribute"
+title: "importidl |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.importidl
+dev_langs: C++
+helpviewer_keywords: importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8842141b1c6e8159023da9a7cc486e81460ef36b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# importidl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將指定的.idl 檔插入至產生的.idl 檔中。  
+# <a name="importidl"></a>importidl
+將指定的.idl 檔案插入至產生的.idl 檔案。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,16 +33,16 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `idl_file`  
- 識別您想要合併的.idl 檔，就會產生應用程式的.idl 檔的名稱。  
+ 識別您想要與應用程式將會產生.idl 檔案合併的.idl 檔案名稱。  
   
-## 備註  
- **Importidl** C\+\+ 屬性將文件庫區塊外的區段 \(在`idl_file`\) 到您的程式產生的.idl 檔案和程式庫區段 \(在`idl_file`\) 插入媒體櫃一節，您的程式產生的.idl 檔。  
+## <a name="remarks"></a>備註  
+ **Importidl** c + + 屬性會放在程式庫區塊外的區段 (在`idl_file`) 至您的程式產生的.idl 檔案和媒體櫃一節 (在`idl_file`) 到您的程式的程式庫區段產生的.idl 檔案。  
   
- 您可能想要使用 **importidl**，例如，如果您想要使用手動撰寫.idl 檔，產生的.idl 檔。  
+ 您可能想要使用**importidl**，例如，如果您想要使用手動編碼的.idl 檔與產生的.idl 檔案。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_importidl.cpp  
@@ -53,24 +51,23 @@ caps.handback.revision: 10
 [importidl("import.idl")];  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|全螢幕輸入|  
+|**適用於**|任何位置|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>另請參閱  
+ [編譯器屬性](../windows/compiler-attributes.md)   
+ [獨立屬性](../windows/stand-alone-attributes.md)   
+ [匯入](../windows/import.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [包含](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

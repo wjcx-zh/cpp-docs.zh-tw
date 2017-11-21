@@ -1,34 +1,32 @@
 ---
-title: "編譯器警告 (層級 1) C4835 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4835"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4835"
+title: "編譯器警告 （層級 1） C4835 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4835
+dev_langs: C++
+helpviewer_keywords: C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c1b01a84313d2d04e927420d1462dd8d5c2c495b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4835
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'variable' : 所匯出資料的初始設定式，必須等到 Managed 程式碼在主機組件中第一次執行之後才會執行  
+# <a name="compiler-warning-level-1-c4835"></a>編譯器警告 (層級 1) C4835
+'variable': 匯出資料的初始設定式將不會執行，直到主機組件中第一次執行受管理的程式碼  
   
- 在 Managed 元件之間存取資料時，建議您不要使用原生 C\+\+ 匯入和匯出機制。  而要改在 Managed 型別中宣告資料成員，並在用戶端中以 `#using` 參考中繼資料。  如需詳細資訊，請參閱[\#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)。  
+ 當存取受管理的元件之間的資料，建議您不使用原生 c + + 匯入和匯出機制。 相反地，宣告您的 managed 型別內的資料成員和參考中繼資料與`#using`的用戶端中。 如需詳細資訊，請參閱[#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4835。  
   
 ```  
@@ -41,8 +39,8 @@ __declspec(dllexport) int m = f();   // C4835
 __declspec(dllexport) int *p = &n;   // C4835  
 ```  
   
-## 範例  
- 以下範例會使用來自前一個範例中的元件組建，顯示變數的值並非必須有的值。  
+## <a name="example"></a>範例  
+ 下列範例會使用在上一個範例中，顯示變數的值未如預期地建置的元件。  
   
 ```  
 // C4835_b.cpp  
@@ -57,5 +55,7 @@ int main() {
 }  
 ```  
   
-  **0**  
-**268456008**
+```Output  
+0  
+268456008  
+```

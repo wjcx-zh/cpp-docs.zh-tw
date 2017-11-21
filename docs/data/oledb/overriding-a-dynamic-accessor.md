@@ -1,32 +1,32 @@
 ---
-title: "覆寫動態存取子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "存取子 [C++], 動態"
-  - "動態存取子"
-  - "覆寫, 動態存取子"
+title: "覆寫動態存取子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4dcec1f501d2f05018410fcd293a4ed649e607b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 覆寫動態存取子
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-當您使用 `CDynamicAccessor` 這類的動態存取子時，**Open** 命令的方法會自動地為您根據已開啟資料列集的資料行資訊，建立一個存取子。  您可以覆寫動態存取子以便確實地控制資料行的繫結方式。  
+# <a name="overriding-a-dynamic-accessor"></a>覆寫動態存取子
+當您使用動態存取子例如`CDynamicAccessor`，命令**開啟**方法會建立存取子，會自動根據開啟的資料列集的資料行資訊。 您可以覆寫動態存取子，來控制完全資料行的繫結方式。  
   
- 若要覆寫這個動態存取子，請將 **false** 當成最後一個參數傳遞給 `CCommand::Open` 方法。  這樣便可以避免 **Open** 自動建立存取子。  然後您可以為每個要繫結的資料行呼叫 `GetColumnInfo` 和呼叫 `AddBindEntry`。  請參見下列範例程式碼：  
+ 若要覆寫動態存取子，將傳遞**false**作為最後一個參數，以`CCommand::Open`方法。 這可防止**開啟**自動建立存取子。 您可以接著呼叫`GetColumnInfo`呼叫`AddBindEntry`您想要繫結每個資料行。 下列程式碼顯示如何執行它：  
   
 ```  
 USES_CONVERSION;  
@@ -76,5 +76,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

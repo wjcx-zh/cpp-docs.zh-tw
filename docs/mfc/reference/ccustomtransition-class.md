@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CCustomTransition [MFC], CCustomTransition
 - CCustomTransition [MFC], Create
@@ -33,16 +31,15 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 7fdfea22949bf75f43d7181a89fe892812bdbf01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d7db8c2dc1d78fae3aebdecaac689c14695a8acb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccustomtransition-class"></a>CCustomTransition 類別
 實作自訂的轉換。  
@@ -178,4 +175,3 @@ void SetInitialVelocity(DOUBLE initialVelocity);
   
 ## <a name="see-also"></a>另請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

@@ -1,32 +1,30 @@
 ---
-title: "pointer_default | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pointer_default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointer_default attribute"
+title: "pointer_default |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pointer_default
+dev_langs: C++
+helpviewer_keywords: pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5e7eed7dbb4fbd7648e02857897dc4f0c541af7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# pointer_default
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定所有的指標，除了最上層的指標參數清單中所顯示的預設指標屬性。  
+# <a name="pointerdefault"></a>pointer_default
+指定最上層會顯示在參數清單的指標除外的所有指標的指標預設屬性。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,30 +33,29 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *value*  
- 說明指標型別值：  **ptr**， `ref`，或**唯一**。  
+ 描述指標類型的值： **ptr**， `ref`，或**唯一**。  
   
-## 備註  
- **Pointer\_default**  C\+\+ 屬性具有相同的功能，為 [pointer\_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Pointer_default** c + + 屬性具有相同的功能[pointer_default](http://msdn.microsoft.com/library/windows/desktop/aa367141) MIDL 屬性。  
   
-## 範例  
- 請參閱範例的[預設值&#93;](../windows/defaultvalue.md) 的範例使用 **pointer\_default**。  
+## <a name="example"></a>範例  
+ 請參閱範例的[defaultvalue](../windows/defaultvalue.md)的範例使用**pointer_default**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|`interface`|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [介面屬性](../windows/interface-attributes.md)   

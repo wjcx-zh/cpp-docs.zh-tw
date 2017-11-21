@@ -1,66 +1,65 @@
 ---
-title: "Generics and Templates (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], vs. templates"
-  - "templates, C++"
+title: "泛型和樣板 （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generics [C++], vs. templates
+- templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-caps.latest.revision: 19
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0ea175a0f71c412583065eb2df4e04928ffe57ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Generics and Templates (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-泛型和樣板都是支援參數型型別的語言功能。  但是，它們不同而有不同的用途。  本主題將概要說明許多不同。  
+# <a name="generics-and-templates-visual-c"></a>泛型和樣板 (Visual C++)
+泛型和範本都是參數化類型中提供支援這兩種語言功能。 不過，它們不相同，且有不同用途。 本主題提供許多差異的概觀。  
   
- 如需詳細資訊，請參閱[Windows Runtime and Managed Templates](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)與[樣板概觀](../Topic/Templates%20Overview.md)。  
+ 如需詳細資訊，請參閱[Windows 執行階段和 Managed 樣板](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)。  
   
-## 比較範本和泛型  
- 樣板和泛型之間的主要差異  
+## <a name="comparing-templates-and-generics"></a>比較範本和泛型  
+ 泛型和 c + + 範本之間的主要差異：  
   
--   泛型是泛型，直到型別使用它們會在執行階段取代。  樣板特製化在編譯時期，因此它們仍然不是在執行階段的參數型型別  
+-   泛型是泛型，直到類型會取代它們在執行階段。 範本被專門在編譯時期，因此不會在執行階段仍參數化的類型  
   
--   Common Language Runtime 專門支援 MSIL 中的泛型。  由於執行階段知道泛型，特定型別可以是泛型型別會替代，當參考包含泛型型別的組件。  範本，相反地，在編譯時期解析成泛型型別，而且產生的型別不可以是專門用來其他組件。  
+-   通用語言執行平台特別支援 MSIL 泛型。 由於執行階段知道有關泛型，特定類型可以取代為泛型類型，參考包含泛型類型的組件時。 範本，相較之下，將解析成一般類型在編譯時期和結果的型別未進行特製化其他組件中。  
   
--   具有相同型別的引數之兩個不同組件特製化的泛型型別相同。  具有相同型別的引數之兩個不同組件特製化的樣板執行階段視為不同的型別。  
+-   在兩個不同的組件特製化的泛型與相同的型別引數是相同的型別。 樣板特製化中兩個不同的組件使用相同的類型引數會被視為執行階段是不同的類型。  
   
--   泛型會以對所有參考型別引數使用可執行的單一片段程式碼 \(這不適用於實值型別，都有唯一的實作每個實值型別\)。  JIT 編譯器知道使用做為型別引數的泛型且可最佳化參考或實值型別的程式碼。  範本會產生每個特製化的執行階段程式碼。  
+-   泛型會產生為單一的可執行程式碼是用來 （這不適用於有唯一的實作，每個值類型的值類型） 的所有參考型別引數。 JIT 編譯器知道有關泛型，並且可以最佳化程式碼參考或值類型做為型別引數。 範本會產生個別的執行階段程式碼，針對每個特製化。  
   
--   泛型不允許非型別樣板參數，例如 `template <int i> C {}`。  範本允許它們。  
+-   泛型，無法進行非類型樣板參數，例如`template <int i> C {}`。 範本可讓它們。  
   
--   泛型不允許明確特製化\(意即自訂特定型別的樣板實作\)。  範本  
+-   泛型不允許明確特製化 （亦即，自訂實作的特定類型的範本）。 執行範本。  
   
--   泛型不允許部分特製化\(意即自訂型別引數子集的實作\)。  範本  
+-   泛型不允許部分特製化 （自訂實作子集的型別引數）。 執行範本。  
   
--   泛型不允許將型別參數當做泛型型別的基底類別使用。  範本  
+-   泛型不允許型別參數做為泛型類型的基底類別。 執行範本。  
   
--   樣板支援樣板樣板參數 \(如:   `template<template<class T> class X> class MyClass`\)，而不是泛型。  
+-   範本可支援範本範本參數 (例如`template<template<class T> class X> class MyClass`)，但泛型則不行。  
   
-## 結合範本和泛型  
+## <a name="combining-templates-and-generics"></a>結合範本和泛型  
   
--   在泛型的基本差異有合併範本和泛型建置應用程式的影響。  例如，假設您有一個樣板類別要建立泛用包裝函式來公開該範本以其他語言為泛型。  您不能有泛型雖然接受型別的參數則會傳遞至範本，因為範本需要有該型別參數在編譯時期，不過，一般不會解析型別參數在執行階段內。  巢狀於泛型內的範本無法運作，因為無法展開範本就能在執行階段的選擇性泛型型別的編譯時期。  
+-   泛型中的基本差異有建置結合範本和泛型的應用程式的影響。 例如，假設您擁有您想要建立泛型包裝函式公開為泛型該範本向其他語言的範本類別。 您不能有泛型採用型別參數，然後傳遞至範本，因為需要有在編譯時期，該型別參數的範本但一般不會解析型別參數執行階段之前。 巢狀在泛型內的範本將無法運作是因為沒有任何方法可以在編譯時期針對任意無法在執行階段具現化的泛型類型展開範本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 下列範例會顯示一個簡單的範例範本和泛型。  在此範例中，範本類別傳遞其參數為泛型型別。  反轉是不可能的。  
+### <a name="description"></a>描述  
+ 下列範例同時使用範本和泛型的簡單範例。 在此範例中，此範本類別會將透過其參數傳遞給泛型類型。 反向執行則不可能。  
   
- 可使用這個慣用語，當您在與是在 Visual C\+\+ 組件的範本程式碼中現有的泛型應用程式開發介面要建置，或者，當您需要將參數化額外層到泛型型別，利用泛型不支援範本的某些功能。  
+ 無法使用這個慣用語，當您想要在 Visual c + + 組件的本機範本程式碼的現有泛型 API 上建置，或當您需要加入一層額外的參數化泛型類型，若要利用特定功能的範本不 supporte泛型的 d。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // templates_and_generics.cpp  
@@ -95,11 +94,11 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 F  
 ```  
   
-## 請參閱  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>另請參閱  
+ [泛型](../windows/generics-cpp-component-extensions.md)

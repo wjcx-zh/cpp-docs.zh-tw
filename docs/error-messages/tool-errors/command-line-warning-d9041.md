@@ -1,42 +1,40 @@
 ---
-title: "命令列警告 D9041 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "D9041"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "D9041"
+title: "命令列警告 D9041 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: D9041
+dev_langs: C++
+helpviewer_keywords: D9041
 ms.assetid: ada8815f-4246-4e25-b57d-a7f16fa107cc
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9f80de8e9bbbf7c754ac8e13061ef3ae50c4715a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 命令列警告 D9041
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-無效的值 'value' \(對 '\/option' 而言\)，假設為 'value'。指定這項警告時請在命令列加入 '\/analyze'  
+# <a name="command-line-warning-d9041"></a>命令列警告 D9041
+無效的值 'value' 的 '/option';假設 'value';加入 '/analyze' 命令列選項時指定這項警告  
   
- 在 **\/wd**、**\/we**、**\/wo** 或 **\/wl** 命令列選項中加入程式碼分析警告編號，但未同時指定 **\/analyze** 命令列選項。  若要補救這個錯誤，請加入 **\/analyze** 命令列選項，或從適當的 **\/w** 命令列選項中移除無效的警告編號。  
+ 程式碼分析警告數字相加**/wd**， **/we**， **/wo**，或**/wl**未同時指定命令列選項**/ 分析**命令列選項。 若要解決這個錯誤，請新增**/ 分析**命令列選項，或移除無效的警告編號，從適當**/w**命令列選項。  
   
-## 範例  
- 下列命令列範例會產生警告 D9041：  
+## <a name="example"></a>範例  
+ 下列命令列範例會產生警告 D9041:  
   
 ```  
 cl /EHsc /LD /wd6001 filename.cpp  
 ```  
   
- 若要修正這個警告，請加入 **\/analyze** 命令列選項。  如果您的編譯器版本不支援 **\/analyze**，請從 **\/wd** 選項中移除無效的警告編號。  
+ 若要修正警告，加入**/ 分析**命令列選項。 如果**/ 分析**不是支援您的編譯器版本上，移除無效的警告編號，從**/wd**選項。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [命令列錯誤 D8000 至 D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
  [編譯器選項](../../build/reference/compiler-options.md)

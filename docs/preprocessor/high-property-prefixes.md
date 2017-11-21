@@ -1,54 +1,52 @@
 ---
-title: "high_property_prefixes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "high_property_prefixes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "high_property_prefixes 屬性"
+title: "high_property_prefixes |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: high_property_prefixes
+dev_langs: C++
+helpviewer_keywords: high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d7678ee6da96c26090d529f8f4b4bfd9b6a7c1bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# high_property_prefixes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**C\+\+ 專有的**  
+# <a name="highpropertyprefixes"></a>high_property_prefixes
+**C + + 特定的**  
   
  為三個屬性方法指定替代的前置詞。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `GetPrefix`  
- 由 **propget** 方法所使用的前置字元。  
+ 若要使用的前置詞**propget**方法。  
   
  `PutPrefix`  
- 由 **propput** 方法所使用的前置字元。  
+ 若要使用的前置詞**propput**方法。  
   
  `PutRefPrefix`  
- 由 **propputref** 方法所使用的前置字元。  
+ 若要使用的前置詞**propputref**方法。  
   
-## 備註  
- 根據預設，高階錯誤處理 **propget**、**propput** 和 **propputref** 方法是由成員函式 \(分別以 **Get**、`Put` 和 **PutRef** 為前置詞命名\) 所公開。  
+## <a name="remarks"></a>備註  
+ 根據預設，高階錯誤處理**propget**， **propput**，和**propputref**方法由前置詞的成員函式**取得**， `Put`，和**PutRef**分別。  
   
- **END C\+\+ 特定的**  
+ **END c + + 特定的**  
   
-## 請參閱  
- [\#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
- [\#import 指示詞](../preprocessor/hash-import-directive-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
+ [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

@@ -1,53 +1,52 @@
 ---
-title: "如何：診斷和修正組件相容性問題 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "相容性, 組件之間"
-  - "例外狀況, 診斷異常行為"
-  - "版本控制"
-  - "版本控制, 診斷衝突"
+title: "如何： 診斷和修正組件相容性問題 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- versioning, diagnosing conflicts
+- versioning
+- exceptions, diagnosing odd behavior
+- compatibility, between assemblies
 ms.assetid: 297c71e3-04a8-4d24-a5dc-b04a2c5cc6fb
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9968981e8fd06a5c94383e1dee40c9b44169b4ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：診斷和修正組件相容性問題 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題說明當編譯時期所參考的組件版本與執行階段所參考的組件版本不相符時，會發生什麼事以及如何避免這個問題。  
+# <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>如何：診斷和修正組件相容性問題 (C++/CLI)
+本主題說明在編譯時期參考的組件的版本不符合在執行階段，參考的組件版本時，會發生什麼情況以及如何避免發生問題。  
   
- 編譯某個組件時，可能也正透過 `#using` 語法參考其他組件。  在編譯期間，編譯器會存取這些組件。  這些組件中的資訊可以用來達到最佳化決策。  
+ 當編譯組件時，可能會使用參考其他組件`#using`語法。 在編譯期間，這些組件是由編譯器所存取。 這些組件中的資訊用於達到最佳化決策。  
   
- 但是，如果已變更並重新編譯參考的組件，但是並未重新編譯具有相依關係的引用組件，這些組件可能就不相容。  一開始有效的最佳化決策在新組件版本中卻不一定正確。  這些不相容的情況可能會造成各種執行階段錯誤。  在這類情況下並沒有特定的例外狀況。  在執行階段報告錯誤的方式，需視引起錯誤之程式碼變更的本質而定。  
+ 不過，如果參考的組件會變更並重新編譯，且您未重新編譯參考的組件相依於它的這些組件可能不相容。 在有效的最佳化決策第一次可能不是正確的新組件版本。 各種執行階段錯誤可能是因為這些不相容狀況。 沒有在此情況下將不會產生任何特定例外狀況。 會發出失敗報告在執行階段的方式取決於程式碼變更造成問題的性質。  
   
- 一旦針對產品的發行版本重新建置整個應用程式之後，這些錯誤就不應該在最終的正式程式碼中出現。  公開發行的組件會標示正式的版本號碼，這也表示已去除這些問題。  如需詳細資訊，請參閱[組件版本控制](../Topic/Assembly%20Versioning.md)。  
+ 這些錯誤不應該在最後的實際執行程式碼中的問題，只要針對您的產品的發行版本重建整個應用程式。 應該使用正式的版本號碼，如此可確保這些問題得以避免標記的公開發行的組件。 如需詳細資訊，請參閱[組件版本控制](/dotnet/framework/app-domains/assembly-versioning)。  
   
-### 診斷和修正不相容問題  
+### <a name="diagnosing-and-fixing-an-incompatibility-error"></a>診斷和修復不相容錯誤  
   
-1.  如果您在參考另一個組件的程式碼中遇到執行階段例外狀況或發生其他錯誤情況，而且找不到問題起因，那麼可能是您使用的組件已過期。  
+1.  如果您遇到執行階段例外狀況或參考另一個組件，程式碼中發生的其他錯誤狀況，而且找不到問題起因，可能會處理過期的組件。  
   
-2.  首先，隔離並重現例外狀況或其他錯誤情況。  您應該可以重現因過期例外狀況所導致的問題。  
+2.  首先，找出並重現或其他錯誤狀況的例外狀況。 應該可以重現因過時的例外狀況，就會發生的問題。  
   
-3.  檢查在您的應用程式中所參考之任何組件的時間戳記。  
+3.  請檢查您的應用程式中參考的任何組件的時間戳記。  
   
-4.  如果任何參考之組件的時間戳記比應用程式最後一次編譯的時間戳記還晚，就表示應用程式已經過期。  如果發生這種情況，請以最新的組件重新編譯應用程式，並且進行任何必要的程式碼變更。  
+4.  如果時間戳記，任何參考組件的應用程式的最後一個編譯時間戳記比更新版本，您的應用程式已過期。 如果發生這種情況，重新編譯應用程式與最新的組件，並進行所需的任何程式碼變更。  
   
-5.  重新執行應用程式，執行會重現問題的步驟，並確認已不再發生例外狀況。  
+5.  重新執行應用程式中，執行步驟重現問題，並確認不會發生例外狀況。  
   
-## 範例  
- 下列程式會減少方法的存取範圍，然後在不重新編譯的情況下，嘗試直接存取另一個組件中的方法，以說明此問題。  一開始先嘗試編譯 `changeaccess.cpp`。  這是將要進行變更之參考的組件。  接著編譯 `referencing.cpp`。  成功完成編譯。  現在，減少呼叫之方法的存取範圍。  以旗標 `/DCHANGE_ACCESS` 重新編譯 `changeaccess.cpp`。  這樣會使方法變成保護的 \(Protected\) 而非私用的 \(Private\)，因此再也無法合法地呼叫此方法。  不要重新編譯 `referencing.exe`，直接重新執行應用程式。  <xref:System.MethodAccessException> 例外狀況便會發生。  
+## <a name="example"></a>範例  
+ 下列的程式說明問題減少的一種方法，存取範圍，並嘗試存取另一個組件中的該方法不需要重新編譯。 請嘗試編譯`changeaccess.cpp`第一次。 這是會變更參考的組件。 然後編譯`referencing.cpp`。 編譯會成功。 現在，降低呼叫方法的協助工具。 重新編譯`changeaccess.cpp`旗標`/DCHANGE_ACCESS`。 這會讓方法受到保護，而非私用，因此您可以再呼叫合法。 不需要重新編譯`referencing.exe`，重新執行應用程式。 例外狀況<xref:System.MethodAccessException>會產生。  
   
 ```  
 // changeaccess.cpp  
@@ -100,6 +99,6 @@ int main() {
   
 ```  
   
-## 請參閱  
- [\#using 指示詞](../preprocessor/hash-using-directive-cpp.md)   
- [Managed 類型](../dotnet/managed-types-cpp-cli.md)
+## <a name="see-also"></a>另請參閱  
+ [#using 指示詞](../preprocessor/hash-using-directive-cpp.md)   
+ [Managed 類型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

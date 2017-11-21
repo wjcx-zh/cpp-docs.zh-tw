@@ -1,31 +1,30 @@
 ---
-title: "A.31   Thread-Safe Lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.31 安全執行緒的鎖定函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 3ad89eb8-076c-405a-be5e-88d3d707a832
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a7572fd7e112c739119e58cd5403058bb99a4026
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# A.31   Thread-Safe Lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列的 C\+\+ 範例會示範如何藉由使用初始化陣列的鎖定在平行區域`omp_init_lock` \([區段 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) 在 42\] 頁面上\)。  
+# <a name="a31---thread-safe-lock-functions"></a>A.31 安全執行緒鎖定函式
+下列 c + + 範例示範如何初始化在平行區域中的鎖定陣列使用`omp_init_lock`([區段 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) 42 頁面上)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // A_13_omp_init_lock.cpp  

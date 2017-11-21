@@ -1,98 +1,97 @@
 ---
-title: "interface class  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "interface_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "interface class keyword"
-  - "interface struct keyword"
+title: "介面類別 （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: interface_CPP
+dev_langs: C++
+helpviewer_keywords:
+- interface class keyword
+- interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 30
-caps.handback.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b3c6416ebe8b87295499e2a2ba50519d830b59ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# interface class  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-宣告一個介面如需原生介面的詳細資訊，請參閱[\_\_interface](../cpp/interface.md)。  
+# <a name="interface-class--c-component-extensions"></a>interface class (C++ 元件擴充功能)
+宣告介面。  原生介面上的資訊，請參閱[__interface](../cpp/interface.md)。  
   
-## 所有執行階段  
+## <a name="all-runtimes"></a>所有執行階段  
  **語法**  
   
 ```  
   
-        interface_access interface class  name :  inherit_access base_interface {};  
-interface_access interface struct name :  inherit_access base_interface {};  
+interface_access  
+interface class  
+ name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
  **參數**  
   
- *interface\_access*  
- 介面的協助工具在組件之外。可能的值為 **public** 和 `private`。`private` 是預設值。巢狀介面不能有 *interface\_access* 規範。  
+ *interface_access*  
+ 在組件外部介面的存取範圍。  可能的值為**公用**和`private`。  `private` 是預設值。  不能有巢狀的介面*interface_access*規範。  
   
  *name*  
  介面的名稱。  
   
- *inherit\_access*  
- *base\_interface* 的存取範圍。基底介面的唯一允許的協助工具是 `public` \(預設值\)。  
+ *inherit_access*  
+ 存取範圍*base_interface*。  僅允許存取範圍，基底介面為`public`（預設值）。  
   
- *base\_interface* \(選擇性\)  
- 介面 *name*的基底介面。  
+ *base_interface* （選擇性）  
+ 介面的基底介面*名稱*。  
   
  **備註**  
   
- **interface struct** 和 **interface class**相等。  
+ **介面結構**相當於**介面類別**。  
   
- 介面可以包含函式、事件和屬性的宣告。所有介面成員都具有公用存取範圍。  介面也可以包含靜態資料成員、函式、事件和屬性，因此這些靜態成員必須在介面定義。  
+ 介面可以包含宣告的函式、 事件和屬性。  所有介面成員都具有公用存取範圍。 介面也可以包含靜態資料成員、 函式、 事件和屬性，以及必須在介面中定義這些靜態成員。  
   
- 介面定義類別可能會如何實作。  介面不是類別，而類別只能實作介面。  在類別定義在介面中所宣告的函式，函式會實作，不會被覆寫。  因此，名稱搜尋不包括介面成員。  
+ 介面會定義可能實作類別的方式。 介面不是類別和類別只能實作介面。 當類別定義的介面中宣告的函式時，函式實作時，不會被覆寫。 因此，名稱查閱不包含介面的成員。  
   
- 衍生自介面的類別或結構必須實作介面所有的成員。  當實作介面 *名稱* 時也必須實作 `base_interface` 的介面清單。  
+ 類別或衍生自介面的結構必須實作介面的所有成員。 實作介面時*名稱*您也必須實作的介面`base_interface`清單。  
   
- 如需詳細資訊，請參閱：  
+ 如需詳細資訊，請參閱:  
   
 -   [介面靜態建構函式](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
   
--   [Generic Interfaces \(Visual C\+\+\)](../windows/generic-interfaces-visual-cpp.md)  
+-   [泛型介面 (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- 如需其他 CLR 型別的詳細資訊，請參閱 [類別和結構。](../windows/classes-and-structs-cpp-component-extensions.md)。  
+ 如需其他 CLR 類型資訊，請參閱[類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)。  
   
- 您可以在編譯時檢測型別是否有 `__is_interface_class(``type``)`的介面。  如需詳細資訊，請參閱[Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 如果類型的介面，您可以偵測在編譯時期`__is_interface_class(type)`。 如需詳細資訊，請參閱[類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
- 在開發環境中，您可以反白顯示關鍵字 \(例如 `interface class`\) 並按下 F1，來取得這些關鍵字的 F1 說明。  
+ 在開發環境中，您可以取得 F1 說明關鍵字關鍵字，反白顯示 (`interface class`，例如)，然後按 F1。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 執行階段  
  **備註**  
   
- \(這個語言功能沒有只適用於 Windows 執行階段的備註。\)  
+ (這個語言功能沒有只適用於 Windows 執行階段的備註。)  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **備註**  
   
- \(這個語言功能沒有只適用於 Common Language Runtime 的備註。\)  
+ (這個語言功能沒有只適用於 Common Language Runtime 的備註。)  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
- 下列程式碼範例會示範介面如何定義時鐘函式的行為。  
+ 下列程式碼範例示範如何介面可以定義 clock 函式的行為。  
   
 ```  
 // mcppv2_interface_class.cpp  
@@ -184,16 +183,25 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **in Function\_3**  
- **in Function\_2**  
- **in Function\_1**  
- **8**  
- **OnClick：7, 3.14159**  
- **in Function\_1** **範例**  
+```Output  
+in Function_3  
   
- 下列程式碼範例顯示兩種實作多重介面宣告的相同簽章的函式，而類別的地方使用這些介面。  
+in Function_2  
+  
+in Function_1  
+  
+8  
+  
+OnClick: 7, 3.14159  
+  
+in Function_1  
+```  
+  
+ **範例**  
+  
+ 下列程式碼範例示範兩種方式以相同的簽章宣告多個介面中，而且其中一個類別都會使用這些介面實作函式。  
   
 ```  
 // mcppv2_interface_class_2.cpp  
@@ -218,5 +226,5 @@ ref struct R : I, J {
 };  
 ```  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>另請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

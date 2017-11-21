@@ -1,31 +1,30 @@
 ---
-title: "A.23   Examples of the ordered Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "已排序的指示詞 A.23 範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: f8fa761b-7fc5-4447-95f9-8571e9ca31bf
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b1d6f50eed2c4e89576dd4c17c5a87599bf59e4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# A.23   Examples of the ordered Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以有多個已排序的區段與`for`指定具有`ordered`子句。  第一個範例中是不相容，因為 API 會指定下列：  
+# <a name="a23---examples-of-the-ordered-directive"></a>A.23 ordered 指示詞範例
+它是可以有多個已排序的區段，並有`for`指定與`ordered`子句。 第一個範例是不相容，因為下列 API 會指定：  
   
- "的迴圈反覆運算`for`建構必須不會執行相同`ordered`指示詞超過一次，而且它必須不會執行一個以上的`ordered`指示詞。" \(請參閱[一節 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md) 在頁面上 22\)  
+ 「 使用迴圈的反覆項目`for`建構必須執行相同`ordered`指示詞超過一次，而且只能執行一個以上的`ordered`指示詞。 」 (請參閱[區段 2.6.6](../../parallel/openmp/2-6-6-ordered-construct.md)在頁面上 22)  
   
- 在此不相容的範例中，所有反覆項目會執行兩個已排序的區段：  
+ 在此不相容的範例中，所有的反覆項目執行 2 的已排序的區段：  
   
 ```  
 #pragma omp for ordered  
@@ -41,7 +40,7 @@ for (i=0; i<n; i++)
 }  
 ```  
   
- 下列標準的範例所示`for`具有多個已排序的區段：  
+ 下列標準範例所示`for`具有多個排序區段：  
   
 ```  
 #pragma omp for ordered  

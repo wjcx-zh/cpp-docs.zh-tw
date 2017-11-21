@@ -1,33 +1,30 @@
 ---
-title: "helpstringdll | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstringdll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstringdll attribute [C++]"
+title: "helpstringdll |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstringdll
+dev_langs: C++
+helpviewer_keywords: helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c98db43b922571a41139dfe19eddacb56a024729
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# helpstringdll
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定要用來執行文件字串查閱 \(當地語系化\) 之 DLL 的名稱。  
+# <a name="helpstringdll"></a>helpstringdll
+指定用來執行文件字串查閱 （當地語系化） 的 dll 名稱。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,14 +33,14 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `string`  
- 要用來執行文件字串查閱 DLL。  
+ 若要使用文件字串查閱 DLL。  
   
-## 備註  
- **Helpstringdll** C\+\+ 屬性具有相同的功能，為 [helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Helpstringdll** c + + 屬性具有相同的功能[helpstringdll](http://msdn.microsoft.com/library/windows/desktop/aa366860) MIDL 屬性。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_helpstringdll.cpp  
@@ -58,22 +55,21 @@ __interface IMyI
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|**類別**， `interface`，介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [介面屬性](../windows/interface-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   

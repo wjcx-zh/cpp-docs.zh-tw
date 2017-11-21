@@ -4,40 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2fa3ff370330c0f2834124b3bc29bdff479fbf3b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9a4c9d15f5b86aea78ae02837f0b7073189894d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>MFC 精靈和對話方塊
-Microsoft Foundation Class (MFC) 精靈會產生各種元件和物件的未定案程式碼。 您可以開啟快顯功能表中的專案來執行精靈**方案總管 中**，然後選擇**新增**，**類別**。  
+Microsoft Foundation Class (MFC) 精靈會產生各種元件和物件的未定案程式碼。 您可以藉由開啟的專案中的捷徑功能表執行精靈**方案總管 中**，然後選擇**新增**，**類別**。  
   
 ## <a name="related-articles"></a>相關文章  
   
@@ -53,6 +36,5 @@ Microsoft Foundation Class (MFC) 精靈會產生各種元件和物件的未定�
 |[MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)|建立可以和 ODBC 資料庫通訊的元件。|  
 |[MFC 專案中的 ATL 支援](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|建立 Active Template Library (ATL) 所需的標頭和巨集。|  
 |[MFC 類別精靈](../../mfc/reference/mfc-class-wizard.md)|建立 .h 檔案和 .cpp 檔案。|  
-|[MFC 桌面應用程式](../../mfc/mfc-desktop-applications.md)|MFC 文件的連結。|
-
+|[MFC 傳統型應用程式](../../mfc/mfc-desktop-applications.md)|MFC 文件的連結。|
 

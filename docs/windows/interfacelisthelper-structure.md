@@ -1,32 +1,30 @@
 ---
-title: "InterfaceListHelper 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceListHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceListHelper 結構"
+title: "InterfaceListHelper 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceListHelper
+dev_langs: C++
+helpviewer_keywords: InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4465a380d24cbb9607785e958a88801c5de68b15
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# InterfaceListHelper 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="interfacelisthelper-structure"></a>InterfaceListHelper 結構
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <  
@@ -49,57 +47,57 @@ template <
 struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T0`  
- 範本參數是 0，是需要的。  
+ 樣板參數 0，這是必要。  
   
  `T1`  
- 範本參數是 1，依預設是未指定的。  
+ 樣板參數 1，其預設值是 未指定。  
   
  `T2`  
- 範本參數是 2，依預設是未指定的。第三個樣板參數。  
+ 樣板參數 2，其預設值是 未指定。第三個樣板參數。  
   
  `T3`  
- 範本參數是 3，依預設是未指定的。  
+ 樣板參數 3，其預設值是 未指定。  
   
  `T4`  
- 範本參數是 4，依預設是未指定的。  
+ 樣板參數 4，其預設值是 未指定。  
   
  `T5`  
- 範本參數是 5，依預設是未指定的。  
+ 樣板參數 5，其預設值是 未指定。  
   
  `T6`  
- 範本參數是 6，依預設是未指定的。  
+ 樣板參數 6，其預設值是 未指定。  
   
  `T7`  
- 範本參數是 7，依預設是未指定的。  
+ 樣板參數 7，其預設值是 未指定。  
   
  `T8`  
- 範本參數是 8，依預設是未指定的。  
+ 樣板參數 8，其預設值是 未指定。  
   
  `T9`  
- 範本參數是 9，依預設是未指定的。  
+ 樣板參數 9，其預設值是 未指定。  
   
-## 備註  
- 透過遞迴套用指定的樣板參數引數建立 InterfaceList 型別。  
+## <a name="remarks"></a>備註  
+ InterfaceList 型別是以遞迴方式套用指定的範本參數引數。  
   
- InterfaceListHelper 範本使用樣板參數 `T0` 定義 InterfaceList 結構中第一個資料成員，然後以遞迴方式套用 InterfaceListHelper 樣板與其餘的樣板參數。  在沒有其他範本參數， InterfaceListHelper 停止。  
+ InterfaceListHelper 範本使用的樣板參數`T0`定義的第一個資料成員 InterfaceList 結構，然後遞迴地 InterfaceListHelper 範本套用至任何剩餘的範本參數。 沒有剩餘的範本參數，就會停止 InterfaceListHelper。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|描述|  
-|--------|--------|  
-|`TypeT`|型別 InterfaceList 的同義字。|  
+|名稱|說明|  
+|----------|-----------------|  
+|`TypeT`|InterfaceList 類型的同義字。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `InterfaceListHelper`  
   
-## 需求  
- **標題:** implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

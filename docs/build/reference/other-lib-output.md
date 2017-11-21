@@ -1,36 +1,34 @@
 ---
-title: "其他 LIB 輸出 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "輸出檔, LIB"
+title: "其他 LIB 輸出 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: output files, LIB
 ms.assetid: 656864a6-0b7a-4633-8dc6-ee3b1766d836
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 039117b08a3985e1d29f8be50a8869156699b415
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 其他 LIB 輸出
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在預設模式中，您可以使用 \/LIST 選項顯示有關產生之程式庫的資訊。  您可以把這個輸出重新導向至檔案中。  
+# <a name="other-lib-output"></a>其他 LIB 輸出
+在預設模式中，您可以使用 /LIST 選項來顯示結果的程式庫的相關資訊。 您可以將此輸出重新導向至檔案。  
   
- 除非使用了 \/NOLOGO 選項，否則 LIB 會顯示著作權和版本訊息並回應 \(Echo\) 命令檔案。  
+ LIB 顯示著作權和版本的訊息和回應的命令檔，除非使用了 /NOLOGO 選項。  
   
- 當您只輸入 `lib` 而沒有其他輸入，LIB 會顯示摘要其選項的用法說明。  
+ 當您輸入`lib`而沒有其他輸入 LIB 顯示摘要其選項的使用方式陳述式。  
   
- LIB 發出的錯誤和警告訊息具有 LNK*nnnn* 的格式。  LINK、DUMPBIN 和 EDITBIN 工具也使用這個範圍的錯誤訊息。  說明可以經由選取 \[輸出\] 視窗的錯誤訊息並按下 F1 來取得。  
+ 錯誤和警告 LIB 所發出的訊息有表單 LNK*nnnn*。 連結 DUMPBIN，且 EDITBIN 工具也會使用此範圍的錯誤。 說明，請在 [輸出] 視窗中選取錯誤，然後按 F1。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [LIB 概觀](../../build/reference/overview-of-lib.md)

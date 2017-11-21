@@ -1,31 +1,31 @@
 ---
-title: "動態決定傳回給消費者的資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "書籤 [C++], 動態決定資料行"
-  - "動態決定資料行 [C++]"
+title: "動態決定資料行傳回給消費者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bookmarks [C++], dynamically determining columns
+- dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ec9ba16d4d600a06cdc5e4fa3de5bf40a67de8d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 動態決定傳回給消費者的資料行
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-PROVIDER\_COLUMN\_ENTRY 巨集一般會處理 **IColumnsInfo::GetColumnsInfo** 呼叫。  但是，因為消費者可能選擇使用書籤，提供者依據消費者是否要求書籤而定，必須要能變更資料行。  
+# <a name="dynamically-determining-columns-returned-to-the-consumer"></a>動態決定傳回給消費者的資料行
+PROVIDER_COLUMN_ENTRY 巨集通常處理**icolumnsinfo:: Getcolumnsinfo**呼叫。 不過，取用者可能會選擇使用書籤，因為提供者必須是能夠變更傳回根據取用者是否要求書籤的資料行。  
   
- 若要處理 **IColumnsInfo::GetColumnsInfo** 呼叫，請從 MyProviderRS.h 內的 `CAgentMan` 使用者資料錄中，刪除定義 `GetColumnInfo` 函式的 PROVIDER\_COLUMN\_MAP，並以您自己的 `GetColumnInfo` 函式定義來取代它：  
+ 若要處理**icolumnsinfo:: Getcolumnsinfo**呼叫時，刪除 PROVIDER_COLUMN_MAP，定義的函式`GetColumnInfo`，從`CAgentMan`使用者記錄 MyProviderRS.h 中並取代為您自己的定義`GetColumnInfo`函式：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -48,11 +48,11 @@ public:
 };  
 ```  
   
- 接下來，實作 MyProviderRS.cpp 內的 `GetColumnInfo` 函式，如以下的程式碼所示。  
+ 接下來，實作`GetColumnInfo`MyProviderRS.cpp，在函式，如下列程式碼所示。  
   
- `GetColumnInfo` 會先檢查 OLE DB 屬性 **DBPROP\_BOOKMARKS**  是否已設定。  若要取得該屬性，`GetColumnInfo` 會使用資料列集物件的指標 \(`pRowset`\)。  `pThis` 指標代表建立該資料列集的類別，也就是儲存屬性對應的類別。  `GetColumnInfo` 會將 `pThis` 指標的型別轉換成 `RMyProviderRowset` 指標。  
+ `GetColumnInfo`會先檢查，請參閱如果 OLE DB 屬性**DBPROP_BOOKMARKS**設定。 若要取得屬性，`GetColumnInfo`會使用指標 (`pRowset`) 的資料列集物件。 `pThis`指標表示建立資料列集，這是一個類別的屬性對應所在的類別。 `GetColumnInfo`類型轉換`pThis`指標`RMyProviderRowset`指標。  
   
- 若要檢查 **DBPROP\_BOOKMARKS** 屬性，`GetColumnInfo` 會使用 `IRowsetInfo` 介面，而您可呼叫 `pRowset` 介面上的 `QueryInterface` 以取得此介面。  您也可以改用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) 方法來作取代。  
+ 若要檢查**DBPROP_BOOKMARKS**屬性，`GetColumnInfo`使用`IRowsetInfo`介面，您可以藉由呼叫取得`QueryInterface`上`pRowset`介面。 或者，您可以使用 ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md)方法改為。  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -113,7 +113,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- 此範例使用靜態陣列以包含資料行資訊。  如果消費者不要書籤資料行，陣列中的一個項目將不會使用。  若要處理該資訊，可建立兩個陣列巨集，ADD\_COLUMN\_ENTRY 和 ADD\_COLUMN\_ENTRY\_EX。  如果您指定一個書籤資料行，ADD\_COLUMN\_ENTRY\_EX 需要採用額外的參數 `flags`。  
+ 這個範例會使用靜態陣列，包含資料行資訊。 如果取用者不想書籤資料行，在陣列中的一個項目未使用。 若要處理的資訊，您會建立兩個陣列巨集： ADD_COLUMN_ENTRY 和 ADD_COLUMN_ENTRY_EX。 ADD_COLUMN_ENTRY_EX 採用額外的參數， `flags`，也就是如果您指定的書籤資料行需要。  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -146,7 +146,7 @@ precision, scale, guid, dataClass, member, flags) \
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- 在 `GetColumnInfo` 函式中，書籤巨集的使用方式如下所示：  
+ 在`GetColumnInfo`函式，書籤巨集使用像這樣：  
   
 ```  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -154,7 +154,7 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- 您現在可編譯和執行增強的提供者。  若要測試提供者 \(Provider\)，請依[實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)所述修改測試消費者。  同時執行測試消費者和提供者。  當您按一下 \[測試消費者\] 對話方塊中的 \[執行\] 按鈕時，會驗證測試消費者可從提供者內擷取正確的字串。  
+ 您現在可以編譯並執行增強型提供者。 若要測試提供者，請修改測試消費者中所述[實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)。 提供者執行測試的取用者。 驗證，測試取用者正確的字串從提供者擷取當您按一下**執行**按鈕**測試消費者** 對話方塊。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)

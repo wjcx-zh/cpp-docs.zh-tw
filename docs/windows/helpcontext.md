@@ -1,32 +1,30 @@
 ---
-title: "helpcontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpcontext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpcontext attribute"
+title: "helpcontext |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpcontext
+dev_langs: C++
+helpviewer_keywords: helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 46611a2cd25f6154d183f44da0c8333471ea2ae6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# helpcontext
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定的主題代碼，可讓使用者檢視此說明檔中的項目相關的資訊。  
+# <a name="helpcontext"></a>helpcontext
+指定的內容識別碼，可讓使用者檢視的說明檔中此項目有關的資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,35 +33,34 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `id`  
- \[說明\] 主題的內文識別碼。  請參閱[HTML 說明：程式的即時線上說明](../mfc/html-help-context-sensitive-help-for-your-programs.md)如需詳細資訊，用於內文識別碼。  
+ 說明主題的內容識別碼。 請參閱[HTML 說明： 程式的即時線上說明](../mfc/html-help-context-sensitive-help-for-your-programs.md)如需有關內容識別碼。  
   
-## 備註  
- **Helpcontext** C\+\+ 屬性具有相同的功能，為 [helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Helpcontext** c + + 屬性具有相同的功能[helpcontext](http://msdn.microsoft.com/library/windows/desktop/aa366851) MIDL 屬性。  
   
-## 範例  
- 請參閱範例的[預設值&#93;](../windows/defaultvalue.md) 如需如何使用範例 **helpcontext**。  
+## <a name="example"></a>範例  
+ 請參閱範例的[defaultvalue](../windows/defaultvalue.md)如需如何使用的範例**helpcontext**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|`interface` `typedef`， **類別**，方法、 屬性|  
+|**適用於**|`interface``typedef`，**類別**、 方法、 屬性|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../windows/helpfile.md)   
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [介面屬性](../windows/interface-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [說明檔](../windows/helpfile.md)   
  [helpstring](../windows/helpstring.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

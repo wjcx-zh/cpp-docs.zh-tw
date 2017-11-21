@@ -1,60 +1,60 @@
 ---
-title: "/FIXED (固定基底位址) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fixed"
-  - "VC.Project.VCLinkerTool.FixedBaseAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FIXED 連結器選項"
-  - "FIXED 連結器選項"
-  - "-FIXED 連結器選項"
-  - "載入程式的偏好基底位址"
+title: "-FIXED （固定的基底位址） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /fixed
+- VC.Project.VCLinkerTool.FixedBaseAddress
+dev_langs: C++
+helpviewer_keywords:
+- preferred base address for loading program
+- /FIXED linker option
+- -FIXED linker option
+- FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 361a468ee81e54f090f3f715684fa155ceffc332
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /FIXED (固定基底位址)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fixed-fixed-base-address"></a>/FIXED (固定基底位址)
 ```  
 /FIXED[:NO]  
 ```  
   
-## 備註  
- 告知作業系統只將程式載入其慣用的基底位址。  如果慣用的基底位址無法使用，作業系統就不會載入檔案。  如需詳細資訊，請參閱[\/BASE \(基底位址\)](../../build/reference/base-base-address.md)。  
+## <a name="remarks"></a>備註  
+ 告知作業系統只載入位於慣用基底位址的程式。 如果無法使用慣用的基底位址，作業系統就不會載入檔案。 如需詳細資訊，請參閱 [/BASE (基底位址)](../../build/reference/base-base-address.md)。  
   
- 在建置 DLL 時 \/FIXED:NO 為預設值，而 \/FIXED 則是其他專案類型的預設值。  
+ /FIXED:NO 是 DLL 的預設值，而 /FIXED 則是其他專案類型的預設值。  
   
- 指定 \/FIXED 時，LINK 不會在程式中產生重新配置區段。  在執行階段時，如果作業系統無法將程式載入該位址，它便會發出錯誤訊息而且不會載入程式。  
+ /Fixed 則指定時，則連結不會產生重新配置區段的程式。 在執行階段時，如果作業系統無法在指定的位址載入程式，它便會發出錯誤訊息而且不會載入程式。  
   
- 指定 \/FIXED:NO 會在程式中產生一個重新配置區段。  
+ 指定在程式中產生重新配置區段的 /fixed: no。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [使用專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取 \[**連結器**\] 資料夾。  
+2.  選取**連結器**資料夾。  
   
-3.  選取 \[**命令列**\] 屬性頁。  
+3.  選取**命令列**屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中輸入選項名稱和設定。  
+4.  輸入選項名稱，並在設定**其他選項**方塊。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

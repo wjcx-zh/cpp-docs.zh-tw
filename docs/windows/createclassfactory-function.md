@@ -1,35 +1,32 @@
 ---
-title: "CreateClassFactory 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreateClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateClassFactory 函式"
+title: "CreateClassFactory 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreateClassFactory
+dev_langs: C++
+helpviewer_keywords: CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5ac438e233c675b6d650af83354edd36f877602d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CreateClassFactory 函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建立會產生指定類別的執行個體的 Factory。  
+# <a name="createclassfactory-function"></a>CreateClassFactory 函式
+建立會產生指定類別之執行個體的處理站。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
-  
 template<typename Factory>  
 inline HRESULT STDMETHODCALLTYPE CreateClassFactory(  
    _In_ unsigned int *flags,   
@@ -40,29 +37,29 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `flags`  
- 一或多個 [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) 列舉值的組合。  
+ 一或多個組合[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列舉值。  
   
  `entry`  
- 包含初始化和登入資訊有關參數 `riid`至 [CreatorMap](../windows/creatormap-structure.md) 的指標。  
+ 指標[CreatorMap](../windows/creatormap-structure.md) ，其中包含參數的初始化和註冊資訊`riid`。  
   
  `riid`  
- 對介面的參考 ID。.  
+ 參考介面識別碼。  
   
  `ppFactory`  
- 如果這個作業成功完成， Class Factory 的指標。  
+ 如果這項作業已順利完成，class factory 的指標。  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則，表示錯誤的 HRESULT。  
+## <a name="return-value"></a>傳回值  
+ 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
-## 備註  
- 如果樣板參數 `Factory` 不是從 IClassFactory 介面衍生，將會發出 Assert 錯誤。  
+## <a name="remarks"></a>備註  
+ 如果，就會發出 assert 錯誤樣板參數`Factory`不是衍生自 IClassFactory 介面。  
   
-## 需求  
- **標題：** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
  **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Wrappers::Details 命名空間](../windows/microsoft-wrl-wrappers-details-namespace.md)

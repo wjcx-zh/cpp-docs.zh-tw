@@ -1,74 +1,73 @@
 ---
-title: "/NODEFAULTLIB (忽略程式庫) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.IgnoreAllDefaultLibraries"
-  - "VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames"
-  - "/nodefaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NODEFAULTLIB 連結器選項"
-  - "預設程式庫, 移除"
-  - "略過程式庫連結器選項"
-  - "程式庫, 略過"
-  - "NODEFAULTLIB 連結器選項"
-  - "-NODEFAULTLIB 連結器選項"
+title: "-NODEFAULTLIB （忽略程式庫） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
+- VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
+- /nodefaultlib
+dev_langs: C++
+helpviewer_keywords:
+- default libraries, removing
+- -NODEFAULTLIB linker option
+- libraries, ignore
+- NODEFAULTLIB linker option
+- /NODEFAULTLIB linker option
+- ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1172bc3dbed6353e31e34a0f406d2ea688ce78c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /NODEFAULTLIB (忽略程式庫)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (忽略程式庫)
 ```  
 /NODEFAULTLIB[:library]   
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  其中：  
   
- *library*  
- 是您要連結器在解析外部參考時忽略的程式庫。  
+ *程式庫*  
+ 您要連結器解析外部參考時，忽略程式庫。  
   
-## 備註  
- \/NODEFAULTLIB 選項會告訴連結器在解析外部參考時從它搜尋的程式庫清單中移除一或多個預設程式庫。  
+## <a name="remarks"></a>備註  
+ /NODEFAULTLIB 選項會告訴連結器解析外部參考時所搜尋的程式庫的清單中移除一或多個預設程式庫。  
   
- 若要建立不包含預設程式庫參考的 .obj 檔，請使用 [\/Zl \(省略預設程式庫名稱\)](../../build/reference/zl-omit-default-library-name.md)。  
+ 若要建立的.obj 檔案，未包含預設程式庫的參考，請使用[/Zl （省略預設程式庫名稱）](../../build/reference/zl-omit-default-library-name.md)。  
   
- 依預設值，\/NODEFAULTLIB 會在解析外部參考時從它搜尋的程式庫清單中移除所有預設的程式庫。  選擇性參數 *library* 可以讓您在解析外部參考時從它搜尋的程式庫清單中移除一個或多個指定的程式庫。  請針對您要排除的每一程式庫指定一個 \/NODEFAULTLIB 選項。  
+ 根據預設，/NODEFAULTLIB 從解析外部參考時，它會搜尋文件庫清單中移除所有預設程式庫。 選擇性*文件庫*參數可讓您解析外部參考時所搜尋的程式庫的清單中移除指定的程式庫或程式庫。 指定您想要排除的每個程式庫的一個 /NODEFAULTLIB 選項。  
   
- 連結器解析對外部定義參考的方式是首先搜尋您明確指定的程式庫，接著再搜尋以 \/DEFAULTLIB 選項指定的預設程式庫，然後再搜尋 .obj 檔中所命名的預設程式庫。  
+ 連結器解析外部定義的參考之您明確指定，則程式庫 /DEFAULTLIB 選項，以指定的預設程式庫中，然後在名為.obj 檔中的預設程式庫中，請搜尋第一次。  
   
- 當兩者都指定了同樣的 *library* 名稱時，\/NODEFAULTLIB:*library* 會覆寫 [\/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*library*。  
+ /NODEFAULTLIB:*文件庫*會覆寫[/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*文件庫*時相同*文件庫*中同時指定名稱。  
   
- 舉例來說，假設您使用 \/NODEFAULTLIB 建置您的程式而不使用 C 執行階段程式庫，您可能也必須使用 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) 以指定您程式中的進入點 \(函式\)。  如需詳細資訊，請參閱[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
+ 如果您使用 /NODEFAULTLIB，比方說，若要建置您的程式不使用 C 執行階段程式庫中，您可能也使用[/ENTRY](../../build/reference/entry-entry-point-symbol.md)程式中指定的進入點 （函式）。 如需詳細資訊，請參閱 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[連結器\] 資料夾。  
+2.  按一下**連結器**資料夾。  
   
-3.  按一下 \[**輸入**\] 屬性頁。  
+3.  按一下**輸入**屬性頁。  
   
-4.  選取 \[**忽略所有預設程式庫**\] 屬性，或指定您要在 \[**忽略特定程式庫**\] 屬性中忽略的程式庫清單。  \[**命令列**\] 屬性頁會顯示出您在這些屬性上所做變更的效果。  
+4.  選取**忽略所有預設程式庫**屬性指定您想要忽略中的程式庫的清單或**忽略特定程式庫**屬性。 **命令列**屬性頁面會顯示這些屬性所做的變更的效果。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
--   請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A>以及<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>。  
+-   請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A>和<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

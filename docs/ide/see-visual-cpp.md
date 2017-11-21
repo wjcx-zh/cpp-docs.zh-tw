@@ -1,55 +1,54 @@
 ---
-title: "&lt;see&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<see>"
-  - "see"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<see> C++ XML 標記"
-  - "see C++ XML 標記"
+title: "&lt;請參閱&gt;（Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <see>
+- see
+dev_langs: C++
+helpviewer_keywords:
+- <see> C++ XML tag
+- see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 25dc28c993289942d0eafd2f20fb5c849f1658c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;see&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<see\> 標記讓您指定文字中的連結。  使用 [\<seealso\>](../ide/seealso-visual-cpp.md) 指定文字可以同時出現在參閱區段中。  
+# <a name="ltseegt-visual-c"></a>&lt;請參閱&gt;（Visual c + +）
+\<see> 標記可讓您在文字內指定連結。 使用[ \<seealso >](../ide/seealso-visual-cpp.md)表示您可能想要出現在另請參閱 > 一節中的文字。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 <see cref="member"/>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `member`  
- 對可以從目前編譯環境呼叫的成員或欄位的參考。  將名稱加上單引號或雙引號。  
+ 可從目前編譯環境呼叫的成員或欄位參考。  以單引號或雙引號將名稱括起來。  
   
- 編譯器會檢查特定程式碼項目是否存在並解析 `member` 給 XML 輸出檔案中的項目名稱。  編譯器會發出警告 \(如果找不到 `member`。  
+ 編譯器會檢查指定的程式碼項目存在，並解析`member`在輸出 XML 中的項目名稱。  如果編譯器找不到 `member`，它會發出警告。  
   
-## 備註  
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 進行編譯，將文件註解處理為檔案。  
+## <a name="remarks"></a>備註  
+ 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
- 為使用執行個體 \<see\>。請參閱 [\<summary\>](../ide/summary-visual-cpp.md) 。  
+ 請參閱[\<摘要 >](../ide/summary-visual-cpp.md)的使用範例\<看到 >。  
   
- Visual C\+\+ 編譯器會嘗試透過文件註解會剖析傳遞的 cref 參考。  因此，在中，如果使用 C\+\+ 搜尋規則，分隔符號是編譯器找不到參考會被標記為無法解析。  如需詳細資訊，請參閱 [\<seealso\>](../ide/seealso-visual-cpp.md)。  
+ Visual C++ 編譯器會透過文件註解嘗試一次解決 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 請參閱[ \<seealso >](../ide/seealso-visual-cpp.md)如需詳細資訊。  
   
-## 範例  
- 下列範例顯示如何 cref 參考泛型型別，因此，編譯器會解析參考。  
+## <a name="example"></a>範例  
+ 下列範例說明如何進行 cref 參考泛型型別，這樣就表示編譯器將會解析參考。  
   
 ```  
 // xml_see_cref_example.cpp  
@@ -76,5 +75,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - else_cpp
 - if_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 7f6d2a553e34b5f15e53fa142241af83d8e91255
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 32fbc99ab51736b5950ce7982457dd0f2f1bc1b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="if-else-statement-c"></a>if-else 陳述式 (C++)
 控制條件分支。 中的陳述式*if 區塊*才會執行*if 運算式*評估為非零值 (或`true`)。 如果值*運算式*非零， *statement1*區塊中的任何其他陳述式執行和 else 區塊，如果有的話，會略過。 如果值*運算式*為零，則會略過 if 區塊和執行其他的區塊，如果有的話。 評估為非零的運算式

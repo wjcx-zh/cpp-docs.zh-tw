@@ -1,32 +1,30 @@
 ---
-title: "CUtlProps::OnInterfaceRequested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnInterfaceRequested 方法"
+title: "Cutlprops:: Oninterfacerequested |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: OnInterfaceRequested method
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 860870628d8558ad252657c06d90f195fd707eb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CUtlProps::OnInterfaceRequested
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-當消費者呼叫其中一個方法物件建立介面時，處理會要求選擇性介面。  
+# <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
+當取用者呼叫方法的其中一個物件建立介面來處理要求的選擇性的介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,16 +33,16 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `riid`  
- \[in\] 所要求介面的 IID。  如需詳細資訊，請參閱 *OLE DB 程式設計人員參考* \( *MDAC SDK*\) 中 `ICommand::Execute` 的 `riid` 參數的說明。  
+ [in]所要求介面的 IID。 如需詳細資訊，請參閱描述`riid`參數`ICommand::Execute`中*OLE DB 程式設計人員參考*(在*MDAC SDK*)。  
   
-## 備註  
- **OnInterfaceRequested** 處理使用者要求的選擇性介面，當使用者呼叫其中一個方法物件建立介面時 \(例如 **IDBCreateSession**和 **IDBCreateCommand**、 `IOpenRowset`或 `ICommand`\)。  它會設定要求的介面對應的 OLE DB 屬性。  例如，如果消費者要求 **IID\_IRowsetLocate**， **OnInterfaceRequested** 設定 **DBPROP\_IRowsetLocate** 介面。  在資料列集建立期間做維護正確狀態。  
+## <a name="remarks"></a>備註  
+ **OnInterfaceRequested**處理取用者要求選擇性的介面，當取用者呼叫方法的其中一個物件建立介面 (例如**IDBCreateSession**， **IDBCreateCommand**， `IOpenRowset`，或`ICommand`)。 它會設定對應的 OLE DB 屬性所要求介面。 例如，如果取用者要求**IID_IRowsetLocate**， **OnInterfaceRequested**設定**DBPROP_IRowsetLocate**介面。 這樣會維護正確的狀態資料列集建立期間。  
   
- 當消費者呼叫 **IOpenRowset::OpenRowset** 或 `ICommand::Execute`時，會呼叫這個方法。  
+ 當取用者呼叫時，會呼叫這個方法**iopenrowset:: Openrowset**或`ICommand::Execute`。  
   
- 如果消費者開啟物件並要求選擇性介面，提供者會將屬性設定為與該介面的 `VARIANT_TRUE`。  在提供者的 **Execute**呼叫方法之前，要允許特定處理屬性 **OnInterfaceRequested** 呼叫。  根據預設， **OnInterfaceRequested** 處理下列介面:  
+ 如果取用者會開啟物件，並要求選擇性的介面，提供者應該將該介面，相關聯的屬性`VARIANT_TRUE`。 若要允許內容特定處理**OnInterfaceRequested**的提供者之前，會呼叫**Execute**方法呼叫。 根據預設， **OnInterfaceRequested**處理下列介面：  
   
 -   `IRowsetLocate`  
   
@@ -56,10 +54,10 @@ caps.handback.revision: 8
   
 -   `IRowsetScroll`  
   
- 如果您希望處理其他介面，請在這個函式覆寫您的資料來源、工作階段、命令或資料列集類別以處理函式。  您的覆寫應該經歷正常 set\/get 屬性的介面以確保設定屬性會一同設定所有繫結的屬性 \(請參閱 [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)\)。  
+ 如果您想要處理其他介面，覆寫這個函式在資料來源、 工作階段、 命令或資料列集類別到處理程序函式中。 覆寫應透過一般 set/get 屬性介面，以確保，設定屬性也會設定任何鏈結的內容 (請參閱[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md))。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CUtlProps 類別](../../data/oledb/cutlprops-class.md)

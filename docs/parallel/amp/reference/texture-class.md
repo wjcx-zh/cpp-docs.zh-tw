@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,33 +22,17 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7aee3b5135e486474132f455ddceaf86980d3be9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 4a891a03f9b54946060cc41d535c7dfc44fd94e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="texture-class"></a>texture 類別
 紋理是將資料彙總上`accelerator_view`範圍網域中。 它是變數，其中每個項目範圍網域中的集合。 每個變數會保存至 c + + 基本類型對應的值 ( `unsigned int`， `int`， `float`， `double`)、 純量類型 ( `norm`，或`unorm`)，或短向量類型。  
@@ -86,7 +69,7 @@ class texture;
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|複製`texture`物件到目的地時，所進行的深層複本。|  
 |[data](#data)|傳回這個的紋理的未經處理資料的 CPU 指標。|  
@@ -98,7 +81,7 @@ class texture;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[operator （)](#operator_call)|傳回參數所指定的項目值。|  
 |[operator]](#operator_at)|傳回指定索引處的項目。|  
@@ -106,7 +89,7 @@ class texture;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[rank 常數](#rank)|取得的順位`texture`物件。|  
   
@@ -124,9 +107,9 @@ class texture;
  `texture`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_graphics.h  
+ **標頭：** amp_graphics.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
   
 ##  <a name="dtor"></a>~ 紋理 
 
@@ -634,4 +617,3 @@ texture(
   
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

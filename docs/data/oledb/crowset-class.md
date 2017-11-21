@@ -1,88 +1,87 @@
 ---
-title: "CRowset 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset<TAccessor>"
-  - "CRowset"
-  - "ATL::CRowset"
-  - "ATL::CRowset<TAccessor>"
-  - "ATL.CRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CRowset 類別"
+title: "CRowset 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset<TAccessor>
+- CRowset
+- ATL::CRowset
+- ATL::CRowset<TAccessor>
+- ATL.CRowset
+dev_langs: C++
+helpviewer_keywords: CRowset class
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f4e36523d2fffd4f90897daf2fd22c4dba66c8fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CRowset 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-封裝 OLE DB 資料列集物件和數個相關介面且提供資料列集資料操作方法。  
+# <a name="crowset-class"></a>CRowset 類別
+封裝 OLE DB 資料列集物件，以及數個相關的介面，並提供操作的資料列集資料的方法。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <class TAccessor = CAccessorBase>  
 class CRowset  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `TAccessor`  
- 存取子類別  預設為 `CAccessorBase`。  
+ 存取子類別。 預設為 `CAccessorBase`。  
   
-## 成員  
+## <a name="members"></a>Members  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[AddRefRows](../../data/oledb/crowset-addrefrows.md)|增加與目前資料列相關的參考次數 \(Reference Count\)。|  
-|[關閉](../../data/oledb/crowset-close.md)|釋放資料列和目前的 `IRowset` 介面。|  
-|[Compare](../../data/oledb/crowset-compare.md)|使用 [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) 比較兩個書籤。|  
-|[CRowset](../../data/oledb/crowset-crowset.md)|建立新的 `CRowset` 物件以及關連 \(選擇性\) 當做參數提供的 **IRowset** 介面。|  
-|[Delete](../../data/oledb/crowset-delete.md)|使用 [IRowsetChange: DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx) 從資料列集刪除資料行。|  
-|[FindNextRow](../../data/oledb/crowset-findnextrow.md)|尋找下一個符合的資料列，在指定的書籤後。|  
-|[GetApproximatePosition](../../data/oledb/crowset-getapproximateposition.md)|傳回與書籤對應的資料列的大約位置。|  
-|[GetData](../../data/oledb/crowset-getdata.md)|從資料列集的資料列複本擷取資料。|  
-|[GetDataHere](../../data/oledb/crowset-getdatahere.md)|從指定的緩衝區擷取資料。|  
-|[GetOriginalData](../../data/oledb/crowset-getoriginaldata.md)|擷取最近擷取或傳送至資料來源的資料，忽略暫止的變更。|  
-|[GetRowStatus](../../data/oledb/crowset-getrowstatus.md)|傳回所有資料列狀態。|  
-|[Insert](../../data/oledb/crowset-insert.md)|使用 [IRowsetChange: InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx) 建立和插入新資料列。|  
-|[IsSameRow](../../data/oledb/crowset-issamerow.md)|將目前的與指定的資料列相比較。|  
-|[MoveFirst](../../data/oledb/crowset-movefirst.md)|將下一個擷取位置重新放置在其初始位置。|  
-|[MoveLast](../../data/oledb/crowset-movelast.md)|移至最後一個記錄。|  
-|[MoveNext](../../data/oledb/crowset-movenext.md)|從下一個連續行或在下一行之外的指定數字位置擷取資料。|  
-|[MovePrev](../../data/oledb/crowset-moveprev.md)|移至上一個記錄。|  
-|[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)|擷取書籤指示資料列或資料行中的指定位移從該書籤。|  
-|[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|擷取在資料列集的分數位置開始資料列。|  
-|[ReleaseRows](../../data/oledb/crowset-releaserows.md)|呼叫 [IRowset::ReleaseRows](https://msdn.microsoft.com/en-us/library/ms719771.aspx) 以釋放目前資料列控制代碼。|  
-|[SetData](../../data/oledb/crowset-setdata.md)|[CRowset::SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx) 可以在資料列的一個或多個資料行中設定資料值。|  
-|[復原](../../data/oledb/crowset-undo.md)|自上次擷取或 [更新](../../data/oledb/crowset-update.md) 移除所做的任何變更。|  
-|[更新](../../data/oledb/crowset-update.md)|傳送目前資料列自上次擷取或更新呼叫之後任何暫止的變更。|  
-|[UpdateAll](../../data/oledb/crowset-updateall.md)|傳輸自上次擷取或更新對所有的行進行的所有暫止變更。|  
+|[AddRefRows](../../data/oledb/crowset-addrefrows.md)|遞增參考計數相關聯的目前資料列。|  
+|[關閉](../../data/oledb/crowset-close.md)|釋放資料列和目前`IRowset`介面。|  
+|[Compare](../../data/oledb/crowset-compare.md)|比較兩個書籤使用[IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx)。|  
+|[CRowset](../../data/oledb/crowset-crowset.md)|建立新`CRowset`物件，並將它與 （選擇性） 關聯**IRowset**當做參數提供的介面。|  
+|[刪除](../../data/oledb/crowset-delete.md)|刪除的資料列集使用資料列[IRowsetChange:DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)。|  
+|[FindNextRow](../../data/oledb/crowset-findnextrow.md)|尋找指定的書籤之後的下一個相符的資料列。|  
+|[GetApproximatePosition](../../data/oledb/crowset-getapproximateposition.md)|傳回對應至書籤的資料列的大約位置。|  
+|[GetData](../../data/oledb/crowset-getdata.md)|資料擷取的資料列的資料列集的副本。|  
+|[GetDataHere](../../data/oledb/crowset-getdatahere.md)|從指定的緩衝區中擷取資料。|  
+|[GetOriginalData](../../data/oledb/crowset-getoriginaldata.md)|擷取最近擷取從或傳送到資料來源，略過暫止變更的資料。|  
+|[GetRowStatus](../../data/oledb/crowset-getrowstatus.md)|傳回所有資料列的狀態。|  
+|[插入](../../data/oledb/crowset-insert.md)|建立並插入新資料列使用[IRowsetChange:InsertRow](https://msdn.microsoft.com/en-us/library/ms716921.aspx)。|  
+|[IsSameRow](../../data/oledb/crowset-issamerow.md)|比較指定的資料列的目前資料列。|  
+|[MoveFirst](../../data/oledb/crowset-movefirst.md)|會下一個提取位置重新定位至初始位置。|  
+|[MoveLast](../../data/oledb/crowset-movelast.md)|移到最後一個記錄。|  
+|[MoveNext](../../data/oledb/crowset-movenext.md)|擷取資料，從下一個循序資料列或指定的下一個資料列之後的位置數目。|  
+|[MovePrev](../../data/oledb/crowset-moveprev.md)|移至前一筆記錄。|  
+|[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)|提取從該書籤的書籤所標記的資料列或資料列的指定位移。|  
+|[MoveToRatio](../../data/oledb/crowset-movetoratio.md)|提取資料列從資料列集的小數位置開始。|  
+|[ReleaseRows](../../data/oledb/crowset-releaserows.md)|呼叫[irowset:: Releaserows](https://msdn.microsoft.com/en-us/library/ms719771.aspx)釋放目前的資料列控制代碼。|  
+|[SetData](../../data/oledb/crowset-setdata.md)|設定資料值的資料列，使用的一或多個資料行中[IRowsetChange:SetData](https://msdn.microsoft.com/en-us/library/ms721232.aspx)。|  
+|[復原](../../data/oledb/crowset-undo.md)|復原自上次擷取資料列所做的變更或[更新](../../data/oledb/crowset-update.md)。|  
+|[更新](../../data/oledb/crowset-update.md)|傳輸任何暫止的變更與目前資料列自上次擷取或更新。|  
+|[UpdateAll](../../data/oledb/crowset-updateall.md)|將傳送所有擱置中的所有資料列自上次擷取或更新變更。|  
   
-## 備註  
- 在 OLE DB，資料列集是程式用以設定和擷取資料的物件。  
+## <a name="remarks"></a>備註  
+ OLE DB 中的資料列集是透過此程式設定和擷取資料的物件。  
   
- 這個類別不會具現化，而是會當做樣板參數給 `CTable` 或 `CCommand` \(`CRowset` 為預設值\)。  
+ 這個類別不是會具現化，但而是做為範本參數傳遞至`CTable`或`CCommand`(`CRowset`是預設值)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
- [DBViewer 範例](../../top/visual-cpp-samples.md)   
- [MultiRead 範例](../../top/visual-cpp-samples.md)   
- [MultiRead 屬性範例](../../top/visual-cpp-samples.md)   
+## <a name="see-also"></a>另請參閱  
+ [DBViewer 範例](../../visual-cpp-samples.md)   
+ [MultiRead 的範例](../../visual-cpp-samples.md)   
+ [MultiRead 的屬性範例](../../visual-cpp-samples.md)   
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

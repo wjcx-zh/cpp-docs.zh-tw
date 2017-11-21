@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 12/06/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - special member functions [C++]
 - constructors [C++]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - move operators [C++]
 - assignment operators [C++]
 ms.assetid: 017d6817-b012-44f0-b153-f3076c251ea7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 460e6e2ba25566cb4a2295ca4b35590405b51eb3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a254b89d7d3007f639c961371b9f1560b4c5f406
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="special-member-functions"></a>特殊成員函式  
   
@@ -49,4 +46,3 @@ ms.lasthandoff: 09/25/2017
 
 
  
-

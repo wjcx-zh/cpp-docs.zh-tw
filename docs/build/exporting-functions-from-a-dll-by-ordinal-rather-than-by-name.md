@@ -1,42 +1,41 @@
 ---
-title: "根據序數而不是名稱從 DLL 匯出函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NONAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "匯出 DLL [C++], 序數值"
-  - "匯出函式 [C++], 序數值"
-  - "NONAME 屬性"
-  - "序數匯出 [C++]"
+title: "匯出函式從 DLL 依序數，而不是依名稱 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NONAME
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions [C++], ordinal values
+- ordinal exports [C++]
+- exporting DLLs [C++], ordinal values
+- NONAME attribute
 ms.assetid: 679719fd-d965-4df3-9f7a-7d86ad831702
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4d5420a426f0dc1244ede19fc4abddf56469608d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 根據序數而不是名稱從 DLL 匯出函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從您的 DLL 匯出函式最簡單的方法是以名稱匯出。  例如，當您使用 **\_\_declspec\(dllexport\)** 時就會以這種方式匯出。  但是您可以序數匯出函式來取代。  使用這項技巧時，您必須使用 .def 檔而不是 **\_\_declspec\(dllexport\)**。  若要指定函式的序數值，請將它的序數附加到 .def 檔中的函式名稱。  如需指定序數的詳細資訊，請參閱[使用 .def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)。  
+# <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>根據序數而不是名稱從 DLL 匯出函式
+從您的 DLL 匯出函式最簡單的方式是將它們匯出的名稱。 這是當您使用時，會發生什麼事**__declspec （dllexport)**，例如。 但是，您可以依序數匯出函式。 使用這項技巧，您必須使用.def 檔案，而不是**__declspec （dllexport)**。 若要指定函式的序數值，將附加至.def 檔案中的函式名稱的其序數。 指定序數的相關資訊，請參閱[使用.def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)。  
   
 > [!TIP]
->  如果您要最佳化 DLL 檔案大小，請在每個匯出的函式上使用 **NONAME** 屬性 \(Attribute\)。  使用 **NONAME** 屬性，儲存在 DLL 的匯出表的將會是序數而不是函式名稱。  這種方式可以在匯出許多函式時省下許多步驟。  
+>  如果您想要最佳化您的 DLL 檔案的大小，使用**NONAME**上每個匯出的函式的屬性。 與**NONAME**屬性，序數的資料會儲存在 DLL 的匯出資料表，而不是函式名稱。 如果您要匯出的許多功能，這可能會相當大的節省量。  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [使用 .def 檔，這樣我可以依序數匯出](../build/exporting-from-a-dll-using-def-files.md)  
+-   [使用.def 檔，所以我可以匯出依序數](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [使用 \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [使用 __declspec （dllexport）](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [從 DLL 匯出](../build/exporting-from-a-dll.md)

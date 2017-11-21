@@ -1,30 +1,29 @@
 ---
-title: "MakeAndInitialize 函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAndInitialize"
-dev_langs: 
-  - "C++"
+title: "MakeAndInitialize 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAndInitialize
+dev_langs: C++
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a97796fa9b13e95cc446f04d7338dd91350c1c26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# MakeAndInitialize 函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-初始化指定的 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 類別。  使用這個函式例示相同模組中定義的元件。  
+# <a name="makeandinitialize-function"></a>MakeAndInitialize 函式
+初始化指定的 Windows 執行階段類別。 使用此函式來具現化在相同模組中定義的元件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 template <typename T, typename I,   
@@ -36,40 +35,39 @@ typename TArg5,
 typename TArg6,   
 typename TArg7,   
 typename TArg8,   
-typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
-  
+typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppvObject, TArg1 &&arg1, TArg2 &&arg2, TArg3 &&arg3, TArg4 &&arg4, TArg5 &&arg5, TArg6 &&arg6, TArg7 &&arg7, TArg8 &&arg8, TArg9 &&arg9) throw()  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 繼承自 `WRL::RuntimeClass`的使用者特定的類別。  
+ 使用者指定的類別繼承自`WRL::RuntimeClass`。  
   
  `TArg1`  
- 傳遞至指定的執行階段的類別引數 1 的型別。  
+ 傳遞至指定的執行階段類別的引數 1 的類型。  
   
  `TArg2`  
- 傳遞至指定的執行階段的類別引數 2 的型別。  
+ 傳遞至指定的執行階段類別的引數 2 的型別。  
   
  `TArg3`  
- 傳遞至指定的執行階段的類別引數 3 的型別。  
+ 傳遞至指定的執行階段類別的引數 3 的類型。  
   
  `TArg4`  
- 傳遞至指定的執行階段的類別引數 4 的型別。  
+ 傳遞至指定的執行階段類別的引數 4 的類型。  
   
  `TArg5`  
- 傳遞至指定的執行階段的類別引數 5 的型別。  
+ 傳遞至指定的執行階段類別的引數 5 的型別。  
   
  `TArg6`  
- 傳遞至指定的執行階段的類別引數 6 的型別。  
+ 傳遞至指定的執行階段類別的引數 6 種。  
   
  `TArg7`  
- 傳遞至指定的執行階段的類別引數 7 的型別。  
+ 傳遞至指定的執行階段類別的引數 7 的類型。  
   
  `TArg8`  
- 傳遞至指定的執行階段的類別引數 8 的型別。  
+ 傳遞至指定的執行階段類別的引數 8 的型別。  
   
  `TArg9`  
- 傳遞至指定的執行階段的類別引數 9 的型別。  
+ 型別傳遞至指定的執行階段類別的引數 9。  
   
  `arg1`  
  傳遞至指定的執行階段類別的引數 1。  
@@ -98,16 +96,16 @@ typename TArg9> HRESULT MakeAndInitialize(_Outptr_result_nullonfailure_ I** ppv
  `arg9`  
  傳遞至指定的執行階段類別的引數 9。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  `HRESULT` 值。  
   
-## 備註  
- 請參閱 [如何：直接執行個體化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md) 認識這個函式和 [Microsoft::WRL::Make](../windows/make-function.md) 的差異及範例。  
+## <a name="remarks"></a>備註  
+ 請參閱[如何： 直接執行個體化 WRL 元件](../windows/how-to-instantiate-wrl-components-directly.md)若要了解此函式之間的差異和[Microsoft::WRL::Make](../windows/make-function.md)，及範例。  
   
-## 需求  
- **標頭：**implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

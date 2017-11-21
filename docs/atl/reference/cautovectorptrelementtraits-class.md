@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,38 +12,21 @@ f1_keywords:
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits::INARGTYPE
 - ATLCOLL/ATL::CAutoVectorPtrElementTraits::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtrElementTraits class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: d7b7418b713993f539f56e70715296d5af265d28
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 59aaaa19d696099c45d4b25f4c41f1cedf97a255
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits 類別
-這個類別提供方法、 靜態函式和 typedef 建立集合的智慧型指標使用向量 new 和 delete 運算子時很有用。  
+這個類別會提供方法、 靜態函式和建立使用新的向量的智慧型指標的集合和 delete 運算子時非常實用的 typedef。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -67,11 +49,11 @@ class CAutoVectorPtrElementTraits :
   
 |名稱|說明|  
 |----------|-----------------|  
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|若要使用項目加入集合類別物件的資料型別。|  
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|要用來擷取項目從集合類別物件的資料類型。|  
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別提供方法、 靜態函式和 typedef 輔助包含智慧型指標的集合類別物件的建立。 不同於[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)，這個類別會使用新的向量和 delete 運算子。  
+ 這個類別提供方法，靜態函式和 typedef 達到包含智慧型指標集合類別物件的建立。 不同於[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)，這個類別會使用新的向量和 delete 運算子。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CDefaultCompareTraits](../../atl/reference/cdefaultcomparetraits-class.md)  
@@ -85,17 +67,17 @@ class CAutoVectorPtrElementTraits :
  `CAutoVectorPtrElementTraits`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcoll.h  
+ **標頭：** atlcoll.h  
   
 ##  <a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE  
- 若要使用項目加入集合類別物件的資料型別。  
+ 要用來將項目加入至集合的類別物件的資料類型。  
   
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE  
- 要用來擷取項目從集合類別物件的資料類型。  
+ 要用來擷取元素的集合類別物件的資料類型。  
   
 ```
 typedef T*& OUTARGTYPE;
@@ -105,4 +87,3 @@ typedef T*& OUTARGTYPE;
  [CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
  [CAutoVectorPtr 類別](../../atl/reference/cautovectorptr-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

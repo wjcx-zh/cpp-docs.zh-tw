@@ -1,76 +1,76 @@
 ---
-title: "How to: Copy Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.resvw.resource.copying"
-  - "vs.resvw.resource.copying"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resources [Visual Studio], moving between files"
-  - "resources [Visual Studio], copying"
-  - "resource files, copying or moving resources between"
-  - "resource files, tiling"
-  - ".rc files, copying resources between"
-  - "rc files, copying resources between"
+title: "如何： 複製資源 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.resvw.resource.copying
+- vs.resvw.resource.copying
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], moving between files
+- resources [Visual Studio], copying
+- resource files, copying or moving resources between
+- resource files, tiling
+- .rc files, copying resources between
+- rc files, copying resources between
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e3ec6fad52a5f999ada9e4ce6df608098c28399c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# How to: Copy Resources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可以在不變更資源的情況下，將資源從一個檔案複製到另一個檔案，也可以[在複製資源時變更其語言和條件](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)。  
+# <a name="how-to-copy-resources"></a>如何：複製資源
+您可以從一個檔案複製資源，到另一個，而不需要變更它們，或者您可以[變更語言或條件的資源，同時將它複製](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)。  
   
- 您可以輕易地將資源從現有資源檔或可執行檔複製到您目前的資源檔。  若要執行這項作業，請同時開啟這兩個包含資源的檔案，然後將一個檔案的項目拖曳到另一個檔案，或是在兩個檔案之間進行複製和貼上。  這個方法適用於資源指令碼 \(.rc\) 檔和資源範本 \(.rct\) 檔，以及可執行 \(.exe\) 檔。  
+ 您可以輕鬆地將複製資源從現有的資源或可執行檔目前的資源檔。 若要這樣做，請您開啟包含資源，同時這兩個檔案和一個檔案之間拖曳項目或複製並貼兩個檔案之間。 這個方法適用於資源指令碼 (.rc) 檔和資源範本 (.rct) 檔，以及可執行檔 (.exe) 檔案。  
   
 > [!NOTE]
->  Visual C\+\+ 包含可供您用於應用程式的範例資源檔。  如需詳細資訊，請參閱 [CLIPART：通用資源](http://msdn.microsoft.com/zh-tw/9bac2891-b6b3-49ec-a287-cec850c707e0)。  
+>  Visual c + + 包含您可以使用自己的應用程式中的範例資源檔案。 如需詳細資訊，請參閱[美工圖案： 通用資源](http://msdn.microsoft.com/en-us/9bac2891-b6b3-49ec-a287-cec850c707e0)。  
   
- 您可於[在專案外](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)開啟的 .rc 檔間使用此種拖放方法。  
+ 您可以使用拖放方法開啟的.rc 檔之間[專案以外](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
   
-### 若要使用拖放方法在檔案間複製資源  
+### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>若要使用拖放方法的檔案間複製資源  
   
-1.  兩個資源檔都要獨立開啟 \(如需詳細資訊，請參閱[在專案外檢視 .rc 檔資源](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)\)。  例如，開啟 Source1.rc 和 Source2.rc。  
+1.  開啟這兩個獨立的資源檔案 (如需詳細資訊，請參閱[的.rc 檔以外的專案中的 檢視資源](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 例如，開啟 Source1.rc 和 Source2.rc。  
   
-2.  在第一個 .rc 檔內，按一下您希望複製的資源。  例如，在 Source1.rc 中，按一下 IDD\_DIALOG1。  
+2.  在第一個.rc 檔中，按一下您想要複製的資源。 例如，在 Source1.rc，按一下 IDD_DIALOG1。  
   
-3.  按住 CTRL 鍵，並將該資源拖曳到第二個 .rc 檔。  例如，將 IDD\_DIALOG1 從 Source1.rc 拖曳到 Source2.rc。  
-  
-    > [!NOTE]
-    >  如果沒有按住 CTRL 鍵便拖曳資源，就只會移動資源而不是複製資源。  
-  
-### 若要使用複製和貼上複製資源  
-  
-1.  兩個資源檔都要獨立開啟 \(如需詳細資訊，請參閱[在專案外檢視 .rc 檔資源](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)\)。  例如，Source1.rc 和 Source2.rc。  
-  
-2.  在希望從中複製資源的原始程式檔 \(例如，Source1.rc\) 中，在該資源上按一下滑鼠右鍵，然後從捷徑功能表中選擇 \[複製\]。  
-  
-3.  在希望貼入該資源的資源檔 \(例如，Source2.rc\) 上按一下滑鼠右鍵。  從捷徑功能表中選擇 \[貼上\]。  
+3.  按住 CTRL 鍵並拖曳至第二個.rc 檔的資源。 例如，拖曳 Source1.rc 至 Source2.rc IDD_DIALOG1。  
   
     > [!NOTE]
-    >  您無法在專案的資源檔 \(\[資源檢視\]\) 與獨立的 .rc 檔 \(開啟於文件視窗的檔案\) 之間進行拖放、複製、剪下或貼上等作業。  您可本產品舊版中執行這類作業。  
+    >  拖曳資源沒有按住 CTRL 鍵移動資源，而不是複製它。  
+  
+### <a name="to-copy-resources-using-copy-and-paste"></a>複製資源使用複製和貼上  
+  
+1.  開啟這兩個獨立的資源檔案 (如需詳細資訊，請參閱[的.rc 檔以外的專案中的 檢視資源](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 例如，Source1.rc 和 Source2.rc。  
+  
+2.  在來源檔案中您要複製資源 (例如，Source1.rc)，以滑鼠右鍵按一下資源，然後選擇 **複製**從捷徑功能表。  
+  
+3.  以滑鼠右鍵按一下您想要貼上的資源 (例如，Source2.rc) 所在的資源檔。 選擇**貼上**從捷徑功能表。  
   
     > [!NOTE]
-    >  為了避免與現有檔案符號名稱或值發生衝突，Visual C\+\+ 可能會在您將資源複製到新檔案時，變更傳輸的資源符號值或符號名稱和值。  
+    >  您無法拖放、 複製、 剪下、 或專案 （資源檢視） 中的資源檔和獨立的.rc 檔 （其在文件視窗中開啟） 之間貼上。 在舊版產品中，您無法執行這項操作。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+    > [!NOTE]
+    >  若要避免衝突的符號名稱或現有的檔案中的值，Visual c + + 可能會變更傳送的資源的符號值或符號名稱和值時將它複製到新的檔案。  
+  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  需求  
   
  Win32  
   
-## 請參閱  
- [How to: Open a Resource Script File Outside of a Project \(Standalone\)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>另請參閱  
+ [如何： 開啟專案 （獨立） 外的資源指令碼檔案](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [資源檔](../windows/resource-files-visual-studio.md)   
+ [資源編輯器](../windows/resource-editors.md)

@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::auto_gcroot | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::auto_gcroot"
-  - "auto_gcroot::auto_gcroot"
-  - "auto_gcroot.auto_gcroot"
-  - "msclr.auto_gcroot.auto_gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::auto_gcroot"
+title: "auto_gcroot::auto_gcroot |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::auto_gcroot
+- auto_gcroot::auto_gcroot
+- auto_gcroot.auto_gcroot
+- msclr.auto_gcroot.auto_gcroot
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::auto_gcroot
 ms.assetid: 27faa42a-64ea-4d31-836f-073a55145735
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3113ea5c2644c3e06a6435b7f088943ff22a2207
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::auto_gcroot
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用 `auto_gcroot` 建構函式。  
+# <a name="autogcrootautogcroot"></a>auto_gcroot::auto_gcroot
+`auto_gcroot`建構函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 auto_gcroot(  
@@ -44,17 +43,17 @@ auto_gcroot(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_ptr`  
- 要擁有的物件。  
+ 擁有物件。  
   
  `_right`  
  現有的 `auto_gcroot`。  
   
-## 備註  
- 當從現有的 `auto_gcroot`的 `auto_gcroot` ，現有 `auto_gcroot` 在傳送物件的擁有權之前釋放其物件設為新的 `auto_gcroot`。  
+## <a name="remarks"></a>備註  
+ 建構時`auto_gcroot`從現有`auto_gcroot`，現有`auto_gcroot`之前傳送到新物件的擁有權釋放其物件`auto_gcroot`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_auto_gcroot.cpp  
@@ -126,25 +125,28 @@ int main()
 }  
 ```  
   
-  **在 RefClassA 建構函式:未處理**  
-**Hello 從 Unmanaged A\!**  
-**在 RefClassA 解構函式:未處理**  
-**in RefClassA constructor: first**  
-**Hello from first A\!**  
-**in RefClassA destructor: first**  
-**in RefClassA constructor: second**  
-**Hello from second B\!**  
-**Hello from second A\!**  
-**Hello from second A\!**  
-**in RefClassA destructor: second**  
-**done**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+in RefClassA constructor: unmanaged  
+Hello from unmanaged A!  
+in RefClassA destructor: unmanaged  
+in RefClassA constructor: first  
+Hello from first A!  
+in RefClassA destructor: first  
+in RefClassA constructor: second  
+Hello from second B!  
+Hello from second A!  
+Hello from second A!  
+in RefClassA destructor: second  
+done  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)   
- [auto\_gcroot::operator\=](../dotnet/auto-gcroot-operator-assign.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>另請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)   
+ [auto_gcroot::operator =](../dotnet/auto-gcroot-operator-assign.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

@@ -1,64 +1,66 @@
 ---
-title: "_mm_stream_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movnti 指令"
-  - "內建 _mm_stream_si64x"
+title: "_mm_stream_si64x |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_si64x
+dev_langs: C++
+helpviewer_keywords:
+- movnti instruction
+- _mm_stream_si64x intrinsic
 ms.assetid: 114c2cd0-085f-41aa-846e-87bdd56c9ee7
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 93f36c623f8abaa84ed0f9b08250c8f50273ebeb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_stream_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="mmstreamsi64x"></a>_mm_stream_si64x  
   
- 會產生 MOVNTI 指令。  將資料寫入`Source`所指定的記憶體位置`Dest`，而不侵害快取。  
+**Microsoft 特定的**  
   
-## 語法  
+ 會產生 MOVNTI 指令。 將資料寫入`Source`所指定的記憶體位置`Dest`，而不侵害快取。  
+  
+## <a name="syntax"></a>語法  
   
 ```  
-void _mm_stream_si64x(   
-   __int64 * Dest,   
-   __int64 Source   
+void _mm_stream_si64x(   
+   __int64 * Dest,   
+   __int64 Source   
 );  
 ```  
   
-#### 參數  
- \[out\] `Dest`  
- 要寫入至來源資料的位置指標。  
+#### <a name="parameters"></a>參數  
   
- \[in\] `Source`  
+ [輸出] `Dest`  
+ 要寫入之來源資料的位置指標。  
+  
+ [in] `Source`  
  要寫入的資料。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_mm_stream_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 只有使用與內建這個常式。  
+## <a name="remarks"></a>備註  
   
-## 範例  
+ 此常式僅可作為內建常式使用。  
   
-```  
+## <a name="example"></a>範例  
+  
+```C  
 // _mm_stream_si64x.c  
 // processor: x64  
   
@@ -78,9 +80,11 @@ int main()
 }  
 ```  
   
-  **0 的 ffffffffffff 0 0**   
-## 結束 Microsoft 特定  
+```Output  
+0 ffffffffffff 0 0  
+```  
   
-## 請參閱  
- [Cache Support for Streaming SIMD Extensions 2 Integer Operations](http://msdn.microsoft.com/zh-tw/a9c9b42f-de9e-4374-aeb6-5f65bfb669b6)   
+**END Microsoft 特定的**  
+  
+## <a name="see-also"></a>另請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

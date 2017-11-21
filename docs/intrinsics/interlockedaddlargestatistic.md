@@ -1,36 +1,36 @@
 ---
-title: "_InterlockedAddLargeStatistic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedAddLargeStatistic"
-  - "_InterlockedAddLargeStatistic_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建 _InterlockedAddLargeStatistic"
-  - "內建 InterlockedAddLargeStatistic"
+title: "_InterlockedAddLargeStatistic |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedAddLargeStatistic
+- _InterlockedAddLargeStatistic_cpp
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedAddLargeStatistic intrinsic
+- InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7930f1411c419fbf5f47164029fe42dd82455ff8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# _InterlockedAddLargeStatistic
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
+**Microsoft 特定的**  
   
- 執行連鎖的加法裡面第一個運算元是一個 64 位元值。  
+ 執行連鎖的相加的第一個運算元中是 64 位元值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 long _InterlockedAddLargeStatistic(  
@@ -39,31 +39,31 @@ long _InterlockedAddLargeStatistic(
 );  
 ```  
   
-#### 參數  
- 輸入 \[、 輸出\]`Addend`  
- 若要加入作業的第一個運算元變數的指標。  加法的結果就會取代所指到的值。  
+#### <a name="parameters"></a>參數  
+ [in、out] `Addend`  
+ 若要加入作業的第一個運算元指標。 指向的值取代相加的結果。  
   
- \[in\] `Value`  
- 第二個運算元中。 若要新增至第一個運算元的值。  
+ [in] `Value`  
+ 第二個運算元中。若要加入的第一個運算元的值。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  第二個運算元的值。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_InterlockedAddLargeStatistic`|x86|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 此內建不不可部分完成，因為它已依照實施兩個不同的鎖定的指示進行。  發生於另一個執行緒在執行期間內建的不可部分完成 64 位元讀取可能會導致不一致的值，被讀取。  
+## <a name="remarks"></a>備註  
+ 此內建物件不是不可部分完成因為它會執行為兩個不同的鎖定的指示。 不可部分完成的 64 位元讀取另一個執行緒上執行期間發生這個內建函式可能會導致不一致所讀取的值。  
   
- 這個函式具有作用的讀寫的障礙。  如需詳細資訊，請參閱 [\_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。  
+ 此函式的行為為讀寫屏障。 如需詳細資訊，請參閱[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。  
   
-## 結束 Microsoft 特定  
+**END Microsoft 特定的**  
   
-## 請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)   
+## <a name="see-also"></a>另請參閱  
+ [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

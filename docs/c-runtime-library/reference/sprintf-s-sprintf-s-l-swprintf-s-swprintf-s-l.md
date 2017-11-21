@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - stdio/_swprintf_s_l
 - _sprintf_s_l
 - _swprintf_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stprintf_s function
 - stprintf_s_l function
@@ -49,30 +47,15 @@ helpviewer_keywords:
 - _sprintf_s_l function
 - formatted text [C++]
 ms.assetid: 424f0a29-22ef-40e8-b565-969f5f57782f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 06afe4f945413ae1f45ff9249dcec0cb87cab987
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 12b5799c9471ffaf8328d4f8aa6a994319e4f30f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 將格式化資料寫入字串。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) 版本。  
@@ -148,7 +131,7 @@ int swprintf_s(
   
  `sprintf_s` 和 `sprintf` 之間有一個主要差異，即在於 `sprintf_s` 會檢查格式字串中的格式化字元是否有效，而 `sprintf` 只檢查格式字串或緩衝區是否為 `NULL` 指標。 若其中一個檢查失敗，就會叫用無效的參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)所述。 如果允許繼續執行，則函式會傳回 -1 並將 `errno` 設定為 `EINVAL`。  
   
- `sprintf_s` 和 `sprintf` 之間的另一個主要差異在於 `sprintf_s` 接受指定輸出緩衝區大小 (以字元為單位) 的長度參數。 若緩衝區對格式化文字而言太小 (包括結尾的 null)，就會藉由 null 字元放在 `buffer``[0]`，將緩衝區設為空字串，並叫用無效的參數處理常式。 與 `_snprintf`不同的是， `sprintf_s` 保證緩衝區會以 null 結尾 (除非緩衝區大小為零)。  
+ `sprintf_s` 和 `sprintf` 之間的另一個主要差異在於 `sprintf_s` 接受指定輸出緩衝區大小 (以字元為單位) 的長度參數。 若緩衝區對格式化文字而言太小 (包括結尾的 null)，就會藉由 null 字元放在 `buffer[0]`，將緩衝區設為空字串，並叫用無效的參數處理常式。 與 `_snprintf`不同的是， `sprintf_s` 保證緩衝區會以 null 結尾 (除非緩衝區大小為零)。  
   
  `swprintf_s` 是 `sprintf_s`的寬字元版本， `swprintf_s` 的指標引數是寬字元字串。 `swprintf_s` 的編碼錯誤偵測可能不同於 `sprintf_s`。 這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的執行緒地區設定。  
   

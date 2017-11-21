@@ -1,45 +1,43 @@
 ---
-title: "list::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 成員 [STL/CLR]"
+title: "list:: swap (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 188b66c2-0a08-4001-a566-41d0955c89bd
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6c264e8d75b3a8f6fdd50b7f1a8e6bf03bd2d21a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# list::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listswap-stlclr"></a>list::swap (STL/CLR)
 交換兩個容器的內容。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void swap(list<Value>% right);  
 ```  
   
-#### 參數  
- right  
+#### <a name="parameters"></a>參數  
+ 向右  
  要交換內容的容器。  
   
-## 備註  
- 成員函式交換在 `*this` 和 `right`的控制順序。  它在常數時間執行，而且不會擲回例外狀況。  您將它當做一個快速的方法交換兩個容器的內容。  
+## <a name="remarks"></a>備註  
+ 成員函式會交換 `*this` 和 `right`之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_swap.cpp   
@@ -78,16 +76,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **x x x x x**  
- **x x x x x**  
- **a b c**   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+```Output  
+a b c  
+x x x x x  
+x x x x x  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

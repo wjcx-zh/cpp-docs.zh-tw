@@ -10,18 +10,17 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::get_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 63cf872bd5ade28115a0eac92304554f125c8dd5
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 133abec448b92e467b7c8b0469127ec001989f44
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 命名空間函式
 ||||  
@@ -31,7 +30,7 @@ ms.lasthandoff: 03/17/2017
 
  
 ##  <a name="get_sampler"></a>get_sampler  
- Get D3D 取樣器狀態上的介面指定對應檢視，代表指定取樣器物件。  
+ 取得在指定加速器上的 D3D 取樣器狀態介面檢視表示指定的取樣器物件。  
   
 ```  
 IUnknown* get_sampler(
@@ -44,10 +43,10 @@ IUnknown* get_sampler(
  D3D 加速器檢視所建立的 D3D 取樣器狀態。  
   
  `_Sampler`  
- 基礎 D3D 取樣器狀態的介面建立的取樣器物件。  
+ 取樣器物件，基礎 D3D 取樣器狀態的介面建立的。  
   
 ### <a name="return-value"></a>傳回值  
- D3D 取樣器狀態，表示指定的取樣器相對應的 IUnknown 介面指標。  
+ 對應至 D3D 取樣器狀態，表示指定的取樣器 IUnknown 介面指標。  
   
 ##  <a name="get_texture"></a>get_texture  
  取得指定基礎 Direct3D 紋理介面[紋理](texture-class.md)物件。  
@@ -81,19 +80,19 @@ _Ret_ IUnknown *get_texture(
   
 ### <a name="parameters"></a>參數  
  `value_type`  
- 紋理的項目型別。  
+ 紋理的項目類型。  
   
  `_Rank`  
  紋理的陣序規範。  
   
  `_Texture`  
- 紋理或其基礎 Direct3D 紋理介面會傳回 accelerator_view 相關聯的紋理檢視中。  
+ 紋理或其傳回基礎 Direct3D 紋理介面 accelerator_view 與相關聯的紋理檢視中。  
   
 ### <a name="return-value"></a>傳回值  
  對應至基礎紋理 Direct3D 紋理 IUnknown 介面指標。  
   
 ##  <a name="make_sampler"></a>make_sampler  
- 建立樣本中，從 D3D 取樣器狀態的介面指標。  
+ 建立從 D3D 取樣器狀態的介面指標的取樣器。  
   
 ```  
 sampler make_sampler(_In_ IUnknown* _D3D_sampler) restrict(amp);
@@ -128,19 +127,19 @@ texture<value_type, _Rank> make_texture(
  紋理的陣序規範。  
   
  `_Av`  
- D3D 加速器檢視所建立的紋理。  
+ 所建立的紋理 D3D 加速器檢視。  
   
  `_D3D_texture`  
- 若要建立從紋理 D3D 紋理的 IUnknown 介面指標。  
+ 若要建立從紋理的 D3D 紋理的 IUnknown 介面指標。  
   
  `_View_format`  
- 要用來建立從這個紋理檢視的 DXGI 格式。 傳遞格式衍生 _D3D_texture 基礎格式與此範本 value_type DXGI_FORMAT_UNKNOWN （預設值）。 提供的格式必須是相容的 _D3D_texture 基礎的格式。  
+ 要用於建立從這個的紋理檢視的 DXGI 格式。 傳遞要從其中 _D3D_texture 基礎格式和此範本 value_type 格式 DXGI_FORMAT_UNKNOWN （預設值）。 提供的格式必須是與 _D3D_texture 基礎格式相容。  
   
 ### <a name="return-value"></a>傳回值  
  使用提供的 D3D 紋理紋理。  
   
 ##  <a name="msad4"></a>msad4  
- 將 4 位元組參考值取值並且 8 個位元組的來源值的比較，並累積 4 加總的向量。 每個總和會對應至不同位元組對齊的參考值取值並且來源值之間的絕對差異的遮罩的總和。  
+ 比較 4 位元組參考值取值並且 8 個位元組的來源值，並且累積文件 4 加總的向量。 每個總和會對應至遮罩絕對差異不同位元組對齊的參考值取值並且來源值的總和。  
   
 ```  
 inline uint4 msad4(
@@ -154,19 +153,18 @@ inline uint4 msad4(
  參考的 4 位元組陣列中一個 uint 值  
   
  `_Source`  
- 來源向量中的兩個 uint 值的 8 個位元組的陣列。  
+ 來源向量中的兩個 uint 值 8 個位元組的陣列。  
   
  `_Accum`  
- 加入遮罩總和的參考值取值並且來源值之間的絕對差異的不同位元組對齊的 4 個值的向量。  
+ 4 個要新增至遮罩絕對差異不同位元組對齊的參考值取值並且來源值的總和值的向量。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 4 的加總的向量。 每個總和會對應至不同位元組對齊的參考值取值並且來源值之間的絕對差異的遮罩的總和。  
+ 傳回 4 加總的向量。 每個總和會對應至遮罩絕對差異不同位元組對齊的參考值取值並且來源值的總和。  
 
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_graphics.h  
+ **標頭：** amp_graphics.h  
   
- **命名空間︰** Concurrency::graphics::direct3d 
+ **命名空間：** Concurrency::graphics::direct3d 
 
 ## <a name="see-also"></a>另請參閱  
  [Concurrency::graphics::direct3d 命名空間](concurrency-graphics-direct3d-namespace.md)
-

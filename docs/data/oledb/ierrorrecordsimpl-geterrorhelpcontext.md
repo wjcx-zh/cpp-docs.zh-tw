@@ -1,34 +1,33 @@
 ---
-title: "IErrorRecordsImpl::GetErrorHelpContext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetErrorHelpContext"
-  - "IErrorRecordsImpl::GetErrorHelpContext"
-  - "IErrorRecordsImpl.GetErrorHelpContext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetErrorHelpContext 方法"
+title: "Ierrorrecordsimpl:: Geterrorhelpcontext |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetErrorHelpContext
+- IErrorRecordsImpl::GetErrorHelpContext
+- IErrorRecordsImpl.GetErrorHelpContext
+dev_langs: C++
+helpviewer_keywords: GetErrorHelpContext method
 ms.assetid: 53d70239-0d64-482e-9ad4-4e1f4f02d5a3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2167384aca71a8bcd95240b007f84dbea6a498fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IErrorRecordsImpl::GetErrorHelpContext
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-從錯誤記錄取得說明主題代碼。  
+# <a name="ierrorrecordsimplgeterrorhelpcontext"></a>IErrorRecordsImpl::GetErrorHelpContext
+從錯誤記錄中取得的說明內容識別碼。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -37,15 +36,15 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `rCurError`  
- 在 **IErrorInfo** 介面的 `ERRORINFO` 資料錄。  
+ `ERRORINFO`記錄**IErrorInfo**介面。  
   
-## 傳回值  
- 錯誤的說明內容。  
+## <a name="return-value"></a>傳回值  
+ 錯誤的說明內容識別碼。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [IErrorRecordsImpl 類別](../../data/oledb/ierrorrecordsimpl-class.md)

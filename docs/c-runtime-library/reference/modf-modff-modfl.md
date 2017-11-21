@@ -1,57 +1,57 @@
 ---
-title: "modf、 modff modfl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "modff"
-  - "modf"
-  - "modfl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "modff"
-  - "_modfl"
-  - "modf"
-  - "modfl"
-  - "math/modf"
-  - "math/modff"
-  - "math/modfl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modf 函式"
-  - "modff 函式"
-  - "modfl 函式"
+title: "modf、modff、modfl | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- modff
+- modf
+- modfl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- modff
+- _modfl
+- modf
+- modfl
+- math/modf
+- math/modff
+- math/modfl
+dev_langs: C++
+helpviewer_keywords:
+- modf function
+- modff function
+- modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 72568970159c1b334232bb81f0295d829a5221af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# modf、 modff modfl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-分割成小數的浮點值和整數部分。  
+# <a name="modf-modff-modfl"></a>modf、modff、modfl
+將浮點值分割成小數和整數部分。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 double modf(  
@@ -76,35 +76,35 @@ long double modfl(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *x*  
  浮點值。  
   
  `intptr`  
- 預存的整數部分的指標。  
+ 儲存之整數部分的指標。  
   
-## 傳回值  
- 此函式傳回的帶正負號的小數部分的 *x*。 不會傳回錯誤。  
+## <a name="return-value"></a>傳回值  
+ 此函式會傳回 *x* 的帶正負號小數部分。 不會傳回錯誤。  
   
-## 備註  
- `modf` 細分的浮點值的函式 `x` 到小數和整數部分，每一個都有相同的簽章為 `x`。 帶正負號的小數部分的 `x` 會傳回。 整數部分會儲存為浮點值 `intptr.`  
+## <a name="remarks"></a>備註  
+ `modf` 函式會將浮點值 `x` 分解成小數和整數部分，每一部分的正負號都與 `x` 相同。 `x` 的帶正負號小數部分會傳回。 整數部分則儲存為 `intptr.` 的浮點值  
   
- `modf` 有使用 Streaming SIMD Extensions 2 \(SSE2\) 的實作。 請參閱 [\_set\_SSE2\_enable](../../c-runtime-library/reference/set-sse2-enable.md) 資訊和使用 SSE2 實作的限制。  
+ `modf` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
- C \+ \+ 允許多載，因此您可以呼叫的多載 `modf` 採用並傳回 `float` 或 `long double` 參數。 在 C 程式中， `modf` 一律採用兩個雙精度浮點數值並傳回雙精度浮點數值。  
+ C++ 允許多載，因此您可以呼叫採用並傳回 `float` 或 `long double` 參數之 `modf` 的多載。 在 C 程式中，`modf` 會一律採用兩個雙精確度值並傳回一個雙精確度值。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`modf`, `modff`, `modfl`|C: \< h.h \><br /><br /> C \+ \+:、 \< h \> 或 \< h.h \>|  
+|-------------|---------------------|  
+|`modf`, `modff`, `modfl`|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 程式庫  
+## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_modf.c  
@@ -124,13 +124,13 @@ int main( void )
 }  
 ```  
   
-## 輸出  
+## <a name="output"></a>輸出  
   
 ```  
 For -14.876543, the fraction is -0.876543 and the integer is -14  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

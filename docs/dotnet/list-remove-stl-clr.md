@@ -1,45 +1,43 @@
 ---
-title: "list::remove (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::remove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove 成員 [STL/CLR]"
+title: "list:: remove (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::remove
+dev_langs: C++
+helpviewer_keywords: remove member [STL/CLR]
 ms.assetid: eaf598ee-e8fd-4cc0-be69-ca81a80e1d51
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 306c758ba2278fcac9ceb0e6b701d298804e8b6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# list::remove (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除項目與指定的值。  
+# <a name="listremove-stlclr"></a>list::remove (STL/CLR)
+移除具有指定值的項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void remove(value_type val);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  val  
  要移除之項目的值。  
   
-## 備註  
- 成員函式移除 `((System::Object^)``val``)->Equals((System::Object^)x)` 真正的受控制序列的項目 \(如果有的話\)。  您會用它來清除具有指定值的選擇性項目。  
+## <a name="remarks"></a>備註  
+ 成員函式為其在受控制序列中移除的項目`((System::Object^)val)->Equals((System::Object^)x)`為 true （如果有的話）。 您可以使用它來清除具有指定值的任意項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_remove.cpp   
@@ -74,16 +72,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **C\+\+.**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+a b c  
+a b c  
+a c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [list:: erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)

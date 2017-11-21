@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unordered_set
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
 - unordered_set/std::unordered_set::const_iterator
@@ -54,76 +52,104 @@ f1_keywords:
 - unordered_set/std::unordered_set::swap
 - unordered_set/std::unordered_set::unordered_set
 - unordered_set/std::unordered_set::operator=
-- unordered_set/std::unordered_set::allocator_type
-- unordered_set/std::unordered_set::const_iterator
-- unordered_set/std::unordered_set::const_local_iterator
-- unordered_set/std::unordered_set::const_pointer
-- unordered_set/std::unordered_set::const_reference
-- unordered_set/std::unordered_set::difference_type
-- unordered_set/std::unordered_set::hasher
-- unordered_set/std::unordered_set::iterator
-- unordered_set/std::unordered_set::key_equal
-- unordered_set/std::unordered_set::key_type
-- unordered_set/std::unordered_set::local_iterator
-- unordered_set/std::unordered_set::pointer
-- unordered_set/std::unordered_set::reference
-- unordered_set/std::unordered_set::size_type
-- unordered_set/std::unordered_set::value_type
-- unordered_set/std::unordered_set::begin
-- unordered_set/std::unordered_set::bucket
-- unordered_set/std::unordered_set::bucket_count
-- unordered_set/std::unordered_set::bucket_size
-- unordered_set/std::unordered_set::cbegin
-- unordered_set/std::unordered_set::cend
-- unordered_set/std::unordered_set::clear
-- unordered_set/std::unordered_set::count
-- unordered_set/std::unordered_set::emplace
-- unordered_set/std::unordered_set::emplace_hint
-- unordered_set/std::unordered_set::empty
-- unordered_set/std::unordered_set::end
-- unordered_set/std::unordered_set::equal_range
-- unordered_set/std::unordered_set::erase
-- unordered_set/std::unordered_set::find
-- unordered_set/std::unordered_set::get_allocator
 - unordered_set/std::unordered_set::hash_function
-- unordered_set/std::unordered_set::insert
-- unordered_set/std::unordered_set::key_eq
-- unordered_set/std::unordered_set::load_factor
-- unordered_set/std::unordered_set::max_bucket_count
-- unordered_set/std::unordered_set::max_load_factor
-- unordered_set/std::unordered_set::max_size
-- unordered_set/std::unordered_set::rehash
-- unordered_set/std::unordered_set::size
-- unordered_set/std::unordered_set::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- unordered_set class
+- std::unordered_set
+- std::unordered_set::allocator_type
+- std::unordered_set::const_iterator
+- std::unordered_set::const_local_iterator
+- std::unordered_set::const_pointer
+- std::unordered_set::const_reference
+- std::unordered_set::difference_type
+- std::unordered_set::hasher
+- std::unordered_set::iterator
+- std::unordered_set::key_equal
+- std::unordered_set::key_type
+- std::unordered_set::local_iterator
+- std::unordered_set::pointer
+- std::unordered_set::reference
+- std::unordered_set::size_type
+- std::unordered_set::value_type
+- std::unordered_set::begin
+- std::unordered_set::bucket
+- std::unordered_set::bucket_count
+- std::unordered_set::bucket_size
+- std::unordered_set::cbegin
+- std::unordered_set::cend
+- std::unordered_set::clear
+- std::unordered_set::count
+- std::unordered_set::emplace
+- std::unordered_set::emplace_hint
+- std::unordered_set::empty
+- std::unordered_set::end
+- std::unordered_set::equal_range
+- std::unordered_set::erase
+- std::unordered_set::find
+- std::unordered_set::get_allocator
+- std::unordered_set::hash
+- std::unordered_set::insert
+- std::unordered_set::key_eq
+- std::unordered_set::load_factor
+- std::unordered_set::max_bucket_count
+- std::unordered_set::max_load_factor
+- std::unordered_set::max_size
+- std::unordered_set::rehash
+- std::unordered_set::size
+- std::unordered_set::swap
+- std::unordered_set::unordered_set
+- std::unordered_set::operator=
+- std::unordered_set::allocator_type
+- std::unordered_set::const_iterator
+- std::unordered_set::const_local_iterator
+- std::unordered_set::const_pointer
+- std::unordered_set::const_reference
+- std::unordered_set::difference_type
+- std::unordered_set::hasher
+- std::unordered_set::iterator
+- std::unordered_set::key_equal
+- std::unordered_set::key_type
+- std::unordered_set::local_iterator
+- std::unordered_set::pointer
+- std::unordered_set::reference
+- std::unordered_set::size_type
+- std::unordered_set::value_type
+- std::unordered_set::begin
+- std::unordered_set::bucket
+- std::unordered_set::bucket_count
+- std::unordered_set::bucket_size
+- std::unordered_set::cbegin
+- std::unordered_set::cend
+- std::unordered_set::clear
+- std::unordered_set::count
+- std::unordered_set::emplace
+- std::unordered_set::emplace_hint
+- std::unordered_set::empty
+- std::unordered_set::end
+- std::unordered_set::equal_range
+- std::unordered_set::erase
+- std::unordered_set::find
+- std::unordered_set::get_allocator
+- std::unordered_set::hash_function
+- std::unordered_set::insert
+- std::unordered_set::key_eq
+- std::unordered_set::load_factor
+- std::unordered_set::max_bucket_count
+- std::unordered_set::max_load_factor
+- std::unordered_set::max_size
+- std::unordered_set::rehash
+- std::unordered_set::size
+- std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 02540cfa6413f1bb85832fc2720c0d66c3357695
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: dfc07d8cd923b945c04c8fb9a89e7f8ee8af1316
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="unorderedset-class"></a>unordered_set 類別
 此樣板類別描述控制不同長度的 `const Key` 類型項目序列的物件。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。  
@@ -1398,7 +1424,7 @@ void insert(initializer_list<value_type> IList);
 |`IList`|從中複製元素的 [initializer_list](../standard-library/initializer-list.md)。|  
   
 ### <a name="return-value"></a>傳回值  
- 單一元素成員函式 （1） 和 (2)，傳回[組](../standard-library/pair-structure.md)其`bool`元件是如果已插入，則為 true 和 false，若 unordered_set 已包含其中索引鍵具有依順序排列為相等的值的項目。 若 `bool` 元件為 True，傳回值組的迭代器元件會指向最新插入的元素；若 `bool` 元件為 False，則會指向現有元素。  
+ 單一元素成員函式 （1） 和 (2)，傳回[組](../standard-library/pair-structure.md)其`bool`元件是如果已插入，則為 true 和 false，若 unordered_set 已包含其中索引鍵具有相等的值的項目中排序。 若 `bool` 元件為 True，傳回值組的迭代器元件會指向最新插入的元素；若 `bool` 元件為 False，則會指向現有元素。  
   
  具有提示的單一項目成員函式 (3) 及 (4) 會傳回指向位置的迭代器，該位置是新項目插入 unordered_set 中的位置，或者，若對等索引鍵已存在，則指向現有項目。  
   
@@ -2215,7 +2241,7 @@ void swap(unordered_set& right);
  要交換的容器。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果[unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間如此，就會擲回例外狀況只會在結果複製類型的預存的特性物件`Tr`，並會使任何參考、 指標或指定兩個受控制序列中的元素的迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
+ 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果[unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間如此，就會擲回例外狀況只會在結果複製類型的預存的特性物件`Tr`，它則沒有參考時，指標，或如果迭代器指定兩個受控制序列中的項目。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
   
 ### <a name="example"></a>範例  
   
@@ -2396,5 +2422,4 @@ int main()
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

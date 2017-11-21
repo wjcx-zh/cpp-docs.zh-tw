@@ -1,41 +1,38 @@
 ---
-title: "IFDIF] | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IFDIF[[I]]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IFDIF[[I]] 指示詞"
+title: "IFDIF] |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IFDIF[[I]]
+dev_langs: C++
+helpviewer_keywords: IFDIF[[I]] directive
 ms.assetid: b85a553c-9098-4a57-a24f-596456eefa1c
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6adf7ade4674624dd2018298b650002b2587b4bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# IFDIF]
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果文字項目不同的授與組件。  
+# <a name="ifdif"></a>IFDIF]
+如果不同的文字項目授與組件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 IFDIF[[I]] textitem1, textitem2  
 ```  
   
-## 備註  
- 如果**我**時，這個比較是不區分大小寫。  請參閱 [IF](../../assembler/masm/if-masm.md) 如需完整的語法。  
+## <a name="remarks"></a>備註  
+ 如果**我**是假設，比較會區分大小寫。 請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

@@ -1,61 +1,59 @@
 ---
-title: "/bigobj (增加 .Obj 檔中的區段數目) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/bigobj"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/bigobj 編譯器選項 [C++]"
-  - "bigobj 編譯器選項 [C++]"
-  - "-bigobj 編譯器選項 [C++]"
+title: "-bigobj （增加數字中的區段中。Obj 檔） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /bigobj
+dev_langs: C++
+helpviewer_keywords:
+- -bigobj compiler option [C++]
+- /bigobj compiler option [C++]
+- bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 73e6da121b099bdf6e67cdffe4d7d2bd0892d32a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /bigobj (增加 .Obj 檔中的區段數目)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/bigobj** 可增加目的檔能夠包含的區段數目。  
+# <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (增加 .Obj 檔中的區段數目)
+**/bigobj**增加物件檔案可以包含的區段數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /bigobj  
 ```  
   
-## 備註  
- 目的檔預設為最多能夠存放 65,536 \(2^16\) 可定址區段，  這是目標平台指定的大小寫的問題。  **\/bigobj** 將該位址容量增加到 4,294,967,296 \(2^32\)。  
+## <a name="remarks"></a>備註  
+ 根據預設，物件檔案可以儲存最多 65536 (2 ^16) 可定址區段。 無論指定哪個目標平台，都會發生這種情況。 **/bigobj**增加 4294967296 該位址的容量 (2 ^32)。  
   
- 大部分模組永遠都不會產生包含超過 65,536 區段的 .obj 檔。  但電腦產生的程式碼，或是大量使用樣板程式庫的程式碼，可能會需要能夠存放更多區段的 .obj 檔。  因為電腦產生的 XAML 程式碼包含大量標頭，預設**\/bigobj** 在 Windows 市集專案為啟用。  如果您停用 Windows 市集應用程式專案中這個選項可能發生編譯器錯誤 C1128。  
+ 大部分的模組絕不會產生.obj 檔案，其中包含超過 65536 區段。 不過，電腦產生的程式碼，或大量使用樣板程式庫的程式碼可能需要.obj 檔能容納更多的區段。 **/bigobj**因為電腦產生 XAML 程式碼包含大量標頭，根據預設，在 Windows 市集專案上啟用。 如果您在 Windows 市集應用程式專案中停用這個選項，可能會發生編譯器錯誤 C1128。  
   
- 在 Visual C\+\+ 2005 以前隨附的連結器無法讀取透過 **\/bigobj** 產生的 .obj 檔。  
+ 隨附在 Visual c + + 2005年之前的連結器無法讀取與所產生的.obj 檔案**/bigobj**。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中，輸入編譯器選項。  
+4.  在 [其他選項]  方塊中，輸入編譯器選項。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

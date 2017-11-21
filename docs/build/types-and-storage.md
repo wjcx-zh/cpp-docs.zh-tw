@@ -1,29 +1,28 @@
 ---
-title: "類型和儲存區 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "型別和儲存體 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7fe008b2-520f-4b71-8cb5-35fd513146ce
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d112d7d27d798c410cd6873d5e3433cdf92a31eb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 類型和儲存區
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本章節會說明 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 架構之資料型別的列舉和儲存區。  
+# <a name="types-and-storage"></a>類型和儲存區
+本章節描述的列舉型別和儲存體的資料型別[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]架構。  
   
--   [純量型別](../build/scalar-types.md)  
+-   [純量類型](../build/scalar-types.md)  
   
 -   [彙總和等位](../build/aggregates-and-unions.md)  
   
@@ -33,5 +32,5 @@ manager: "ghogen"
   
 -   [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [x64 軟體慣例](../build/x64-software-conventions.md)

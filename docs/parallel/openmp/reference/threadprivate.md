@@ -1,57 +1,55 @@
 ---
-title: "threadprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "threadprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threadprivate OpenMP directive"
+title: "threadprivate |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: threadprivate
+dev_langs: C++
+helpviewer_keywords: threadprivate OpenMP directive
 ms.assetid: 3515aaed-6f9d-4d59-85eb-342378bea2d3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a95212d3774e9befeccbd8f0da3773305041d11c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# threadprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定變數是專屬於一個執行緒。  
+# <a name="threadprivate"></a>threadprivate
+指定在執行緒私用變數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma omp threadprivate(var)  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
  `var`  
- 您想要對執行緒私用變數以逗號分隔清單。  `var`必須是全域或命名空間的範圍變數或靜態區域變數。  
+ 您想要私用對執行緒的變數以逗號分隔清單。 `var`必須是全域或命名空間的範圍變數或靜態區域變數。  
   
-## 備註  
- `threadprivate`指示詞可支援任何 OpenMP 子句。  
+## <a name="remarks"></a>備註  
+ `threadprivate`指示詞可支援不含 OpenMP 子句。  
   
- 如需詳細資訊，請參閱 [2.7.1 threadprivate 指示詞](../../../parallel/openmp/2-7-1-threadprivate-directive.md)。  
+ 如需詳細資訊，請參閱[2.7.1 threadprivate 指示詞](../../../parallel/openmp/2-7-1-threadprivate-directive.md)。  
   
- `threadprivate`指示詞根據[執行緒](../../../cpp/thread.md)`__declspec`屬性。 限制 **\_\_declspec\(thread\)** 適用於`threadprivate`。  
+ `threadprivate`指示詞根據[執行緒](../../../cpp/thread.md)`__declspec`屬性; 限制**__declspec （thread)**套用至`threadprivate`。  
   
- 您不能使用`threadprivate`任何會經由載入的 DLL 中 [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)。  這包括所載入的 Dll [\/DELAYLOAD \(延遲載入匯入\)](../../../build/reference/delayload-delay-load-import.md)，它也會使用 **LoadLibrary**。  
+ 您無法使用`threadprivate`中任何會透過載入的 DLL [LoadLibrary](http://msdn.microsoft.com/library/windows/desktop/ms684175)。  這包括已用載入的 Dll [/DELAYLOAD （延遲載入匯入）](../../../build/reference/delayload-delay-load-import.md)，這也會使用**LoadLibrary**。  
   
- 您可以使用`threadprivate`以靜態方式是在處理序啟動時載入的 DLL 中。  
+ 您可以使用`threadprivate`在處理序啟動時以靜態方式載入的 DLL 中。  
   
- 因為`threadprivate`根據 **\_\_declspec\(thread\)**、 `threadprivate`變數會存在於不只是藉由在平行區域繁衍執行緒小組的一部分的執行緒啟動過程中，在任何執行緒。  這是您可能想要特別注意，因為您可能會發現，比方說，建構函式的實作細節`threadprivate`通常在必須有那麼多個稱為 「 使用者定義型別。  
+ 因為`threadprivate`根據**__declspec （thread)**、`threadprivate`變數會存在於任何啟動程序，不只是由在平行區域產生的執行緒小組的一部分的執行緒的執行緒。  這是要留意，因為您可能會注意到，例如，建構函式的實作詳細資料`threadprivate`呼叫通常則預期更多的使用者定義型別。  
   
- A `threadprivate` destructable 型別的變數則無法保證能呼叫其解構函式。  例如：  
+ A `threadprivate` destructable 類型的變數不能保證具有呼叫其解構函式。  例如：  
   
 ```  
 struct MyType   
@@ -68,10 +66,10 @@ int main()
 }  
 ```  
   
- 使用者有沒有任何控制項，當執行緒從屬平行區域會隨之終止。  如果這些執行緒存在，當處理序結束時，執行緒不會通知程序結束時，而不會呼叫解構函式的`threaded_var`在結束以外的任何執行緒上 \(這裡，呼叫這個方法\)。  讓程式碼與否適當解構時， `threadprivate`變數。  
+ 使用者無權以從屬平行區域的執行緒會終止時控制。  如果當處理序結束時，執行緒將不會知道處理序結束，而不會針對呼叫解構函式，這些執行緒存在於`threaded_var`結束以外的任何執行緒上 （這裡，主執行緒）。  讓程式碼不應倚賴的正確解構`threadprivate`變數。  
   
-## 範例  
- 範例中使用的`threadprivate`，請參閱[私用](../../../parallel/openmp/reference/private-openmp.md)。  
+## <a name="example"></a>範例  
+ 如需使用範例`threadprivate`，請參閱[私人](../../../parallel/openmp/reference/private-openmp.md)。  
   
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="see-also"></a>另請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

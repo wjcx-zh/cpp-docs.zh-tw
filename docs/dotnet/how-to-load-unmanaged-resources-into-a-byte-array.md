@@ -1,33 +1,33 @@
 ---
-title: "如何：將 Unmanaged 資源載入至位元組陣列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "原生資源"
-  - "原生資源, 載入至位元組陣列"
-  - "Unmanaged 資源, 載入至位元組陣列"
+title: "如何： 將 Unmanaged 的資源載入至位元組陣列 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- native resources, loading into Byte array
+- unmanaged resources, loading into Byte array
+- native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 95c6e0655bcb5868a3c8eefa7a990ceea5dc6371
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：將 Unmanaged 資源載入至位元組陣列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題會討論數種將 Unmanaged 資源載入至 <xref:System.Byte> 陣列的方式。  
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：將 Unmanaged 資源載入至位元組陣列
+本主題將討論幾種方式可以載入到 unmanaged 的資源<xref:System.Byte>陣列。  
   
-## 範例  
- 如果您知道 Unmanaged 資源的大小，則您可以預先配置 CLR 陣列，然後使用指向 CLR 陣列之陣列區塊的指標，將資源載入至陣列。  
+## <a name="example"></a>範例  
+ 如果您知道您的 unmanaged 資源的大小，您可以預先配置 CLR 陣列，並接著使用 CLR 陣列的陣列區塊的指標陣列中載入資源。  
   
 ```  
 // load_unmanaged_resources_into_Byte_array.cpp  
@@ -57,9 +57,12 @@ int main() {
 }  
 ```  
   
-  **0123456789**   
-## 範例  
- 這個範例會顯示如何將資料從 Unmanaged 記憶體區塊複製到 Managed 陣列。  
+```Output  
+0123456789  
+```  
+  
+## <a name="example"></a>範例  
+ 這個範例示範如何將資料從 unmanaged 的記憶體區塊複製到 managed 陣列。  
   
 ```  
 // load_unmanaged_resources_into_Byte_array_2.cpp  
@@ -78,5 +81,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>另請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

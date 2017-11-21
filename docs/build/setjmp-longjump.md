@@ -1,28 +1,28 @@
 ---
-title: "setjmp/longjump | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "setjmp longjump |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b0e21902-095d-4198-8f9a-b6326525721a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a3617f70e7c62e1845d8d24e11cebdd7738c507f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# setjmp/longjump
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您包含 setjmpex.h 或 setjmp.h 時，所有的 [setjmp](../c-runtime-library/reference/setjmp.md) 或 [longjmp](../c-runtime-library/reference/longjmp.md) 呼叫會產生叫用解構函式 \(Destructor\) 和 finally 呼叫的回溯。  這和 x86 不同，在 x86 中包含 setjmp.h 會導致不叫用 finally 子句和解構函式。  
+# <a name="setjmplongjump"></a>setjmp/longjump
+當您包含 setjmpex.h 或 setjmp.h 時，所有呼叫[setjmp](../c-runtime-library/reference/setjmp.md)或[longjmp](../c-runtime-library/reference/longjmp.md)會導致叫用解構函式，最後會呼叫回溯。  這不同於 x86、 finally 子句中包括 setjmp.h 結果並不被叫用解構函式所示。  
   
- `setjmp` 呼叫會保留目前的堆疊指標、靜態暫存器和 MxCsr 暫存器。  `longjmp` 呼叫會傳回最近的 `setjmp` 呼叫位置，並將堆疊指標、靜態暫存器和 MxCsr 暫存器重設回最近的 `setjmp` 呼叫所保留的狀態。  
+ 呼叫`setjmp`會保留目前的堆疊指標、 非靜態暫存器，與 MxCsr 暫存器。  呼叫`longjmp`傳回最新`setjmp`呼叫站台重設堆疊指標、 非暫時性暫存器和 MxCsr 暫存器和回到狀態為保留的最新`setjmp`呼叫。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [呼叫慣例](../build/calling-convention.md)

@@ -1,33 +1,30 @@
 ---
-title: "PROVIDER_COLUMN_ENTRY_WSTR | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_WSTR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROVIDER_COLUMN_ENTRY_WSTR 巨集"
+title: "PROVIDER_COLUMN_ENTRY_WSTR |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROVIDER_COLUMN_ENTRY_WSTR
+dev_langs: C++
+helpviewer_keywords: PROVIDER_COLUMN_ENTRY_WSTR macro
 ms.assetid: 70630bd5-d782-473b-9777-aebbbf5321c5
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cee2a21b91a01e73c980bd29902ad3cec85c6e82
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# PROVIDER_COLUMN_ENTRY_WSTR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="providercolumnentrywstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 表示提供者支援的特定資料行。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,23 +33,23 @@ name
 , ordinal, member )  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *name*  
- \[in\] 資料行名稱。  
+ [in]資料行名稱。  
   
  `ordinal`  
- \[in\]資料行編號。  除非資料行是書籤資料行，不然不能為 0。  
+ [in] 資料行編號。 除非資料行是書籤資料行，資料行數目必須為 0。  
   
  `member`  
- \[in\] 資料類別中儲存資料的成員變數。  
+ [in]中儲存資料的資料類別的成員變數。  
   
-## 備註  
- 當資料是以 NULL 結束的 Unicode [DBTYPE\_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx) 字串時 ，使用這個巨集。  
+## <a name="remarks"></a>備註  
+ 當資料行的資料是以 null 結束的 Unicode 字元字串，使用這個巨集[DBTYPE_WSTR](https://msdn.microsoft.com/en-us/library/ms711251.aspx)。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   

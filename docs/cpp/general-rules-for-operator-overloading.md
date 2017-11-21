@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator overloading [C++], rules
+dev_langs: C++
+helpviewer_keywords: operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 92bcbc85a3edf683d00818a4c1da76849dbc29cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>運算子多載的一般規則
 下列規則限制多載運算子的實作方式。 不過，它們不會套用到[新](../cpp/new-operator-cpp.md)和[刪除](../cpp/delete-operator-cpp.md)個別說明的運算子。  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/25/2017
   
 -   宣告為成員函式的二元運算子接受一個引數；如果宣告為全域函式，則會接受兩個引數。  
   
--   如果運算子可用來當做一元或二元運算子 (**&**， ** \* **， ** + **，和** - **)，您可以個別多載每次使用。  
+-   如果運算子可用來當做一元或二元運算子 (**&**，  **\*** ，  **+** ，和 **-** )，您可以個別多載每次使用。  
   
 -   多載運算子不可以有預設引數。  
   

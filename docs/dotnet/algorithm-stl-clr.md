@@ -1,114 +1,113 @@
 ---
-title: "algorithm (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/algorithm>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<algorithm> 標頭 [STL/CLR]"
-  - "<cliext/algorithm> 標頭 [STL/CLR]"
-  - "algorithm 函式 [STL/CLR]"
+title: "演算法 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/algorithm>
+dev_langs: C++
+helpviewer_keywords:
+- algorithm functions [STL/CLR]
+- <algorithm> header [STL/CLR]
+- <cliext/algorithm> header [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a1f598b0aba0f5f697fc6603728e2735f0cd50f6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# algorithm (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-定義 STL\/CLR 容器樣板函式執行演算法。  
+# <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
+定義 STL/CLR 容器樣板函式執行的演算法。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #include <cliext/algorithm>  
 ```  
   
-## 函式  
+## <a name="functions"></a>函式  
   
-|功能|說明|  
-|--------|--------|  
-|[adjacent\_find](../dotnet/adjacent-find-stl-clr.md)|搜尋是相等的兩個相鄰的項目。|  
-|[binary\_search](../dotnet/binary-search-stl-clr.md)|測試的排序序列是否包含特定值。|  
-|[copy](../dotnet/copy-stl-clr.md)|從一個來源範圍的值複製到目的陣列，逐一查看正向。|  
-|[copy\_backward](../dotnet/copy-backward-stl-clr.md)|從一個來源範圍的值複製到目的陣列，逐一查看這個反向。|  
-|[count](../dotnet/count-stl-clr.md)|傳回項目數的值符合指定的範圍。|  
-|[count\_if](../dotnet/count-if-stl-clr.md)|傳回項目數的值符合指定條件的範圍。|  
-|[equal](../dotnet/equal-stl-clr.md)|比較兩個範圍，由項目的項目。|  
-|[equal\_range](../dotnet/equal-range-stl-clr.md)|搜尋值序列並傳回分隔值 subsequence 是所有等於某個項目的兩個位置。|  
-|[填滿](../dotnet/fill-stl-clr.md)|指派相同的新值對中指定範圍內的每個項目。|  
-|[fill\_n](../dotnet/fill-n-stl-clr.md)|指派新值給以特定項目開頭之範圍中的指定項目數。|  
-|[尋找](../dotnet/find-stl-clr.md)|傳回指定值的第一個項目的位置。|  
-|[find\_end](../dotnet/find-end-stl-clr.md)|傳回具有指定之序列相同範圍中的最後一個 subsequence。|  
-|[find\_first\_of](../dotnet/find-first-of-stl-clr.md)|搜尋一個範圍中第一個符合任何一個項目的指定範圍。|  
-|[find\_if](../dotnet/find-if-stl-clr.md)|傳回第一個項目位置在項目中符合指定之條件的值序列。|  
-|[for\_each](../dotnet/for-each-stl-clr.md)|套用至每個項目的指定函式物件在值序列並傳回函式物件。|  
-|[產生](../dotnet/generate-stl-clr.md)|指派給每個項目的函式物件產生的值。值序列。|  
-|[generate\_n](../dotnet/generate-n-stl-clr.md)|指派給項目的指定數目的函式物件產生的值。|  
-|[includes](../dotnet/includes-stl-clr.md)|測試一個人員是否排序範圍包含在第二個排序範圍內的所有項目。|  
-|[inplace\_merge](../dotnet/inplace-merge-stl-clr.md)|合併兩個連續排序範圍內的元素至單一排序的範圍。|  
-|[iter\_swap](../dotnet/iter-swap-stl-clr.md)|交換兩個值由一組指定之 Iterator 所參考的。|  
-|[lexicographical\_compare](../dotnet/lexicographical-compare-stl-clr.md)|比較兩個序列，由序列是較小的兩個元素的元素，識別。|  
-|[lower\_bound](../dotnet/lower-bound-stl-clr.md)|尋找第一個項目位置有值大於或等於指定值的值的序列。|  
-|[make\_heap](../dotnet/make-heap-stl-clr.md)|轉換從指定範圍中的項目在堆積中的第一個項目是最大的堆積。|  
-|[max](../dotnet/max-stl-clr.md)|比較兩個物件並傳回大兩個。|  
-|[max\_element](../dotnet/max-element-stl-clr.md)|尋找在值所指定的最大項目。|  
-|[合併](../dotnet/merge-stl-clr.md)|合併兩個排序的來源範圍的所有項目至單一，排序的目的範圍。|  
-|[min](../dotnet/min-stl-clr.md)|比較兩個物件並傳回較小者兩者。|  
-|[min\_element](../dotnet/min-element-stl-clr.md)|尋找在值所指定的最小的項目。|  
-|[mismatch](../dotnet/mismatch-stl-clr.md)|由項目比較兩個範圍的項目並傳回差異發生的第一個位置。|  
-|[next\_permutation](../dotnet/next-permutation-stl-clr.md)|若要重新排列範圍的項目，讓原始順序由詞傳統的下一個較大的範圍取代，如果有的話。|  
-|[nth\_element](../dotnet/nth-element-stl-clr.md)|分割，正確設定序列的 `n`th 項目序列，以便在它前面的所有項目小於或等於，而且後面的所有項目大於或等於它。|  
-|[partial\_sort](../dotnet/partial-sort-stl-clr.md)|排列較小的項目中所指定的數字範圍中輸入 nondescending 的命令。|  
-|[partial\_sort\_copy](../dotnet/partial-sort-copy-stl-clr.md)|複製來源範圍的項目到目的範圍這類從來源範圍的項目已排序。|  
-|[partition](../dotnet/partition-stl-clr.md)|軸範圍中的項目這類滿足一元的述詞的項目在不符合其那些之前。|  
-|[pop\_heap](../dotnet/pop-heap-stl-clr.md)|從堆積的前面移動的最大項目移動至結束然後形成從其餘項目的新的堆積。|  
-|[prev\_permutation](../dotnet/prev-permutation-stl-clr.md)|重新排列項目序列，讓原始順序由詞傳統的上一個更大的範圍取代，如果有的話。|  
-|[push\_heap](../dotnet/push-heap-stl-clr.md)|將會在範圍的結尾為包含範圍中現有的堆積前置的項目。|  
-|[random\_shuffle](../dotnet/random-shuffle-stl-clr.md)|重新排列 `N` 項目序列範圍中的其中一個 `N`\!隨機選取的排列方式。|  
-|[移除](../dotnet/remove-stl-clr.md)|刪除從指定範圍中的值，而不會干擾其他元素順序並傳回新的範圍結尾沒有指定值。|  
-|[remove\_copy](../dotnet/remove-copy-stl-clr.md)|複製來源範圍的項目到目的範圍，不過，一個指定值的項目不會複製，不會干擾其他項目的順序。|  
-|[remove\_copy\_if](../dotnet/remove-copy-if-stl-clr.md)|複製來源範圍的項目加入至目的範圍，除了滿足述詞的項目，而不會干擾，其餘項目的順序。|  
-|[remove\_if](../dotnet/remove-if-stl-clr.md)|刪除滿足從指定範圍的述詞，而不會干擾其他元素順序的項目。.|  
-|[取代](../dotnet/replace-stl-clr.md)|取代符合指定值為新的值範圍內的元素。|  
-|[replace\_copy](../dotnet/replace-copy-stl-clr.md)|複製來源範圍的項目到目的範圍，取代符合指定值以新值的元素。|  
-|[replace\_copy\_if](../dotnet/replace-copy-if-stl-clr.md)|檢查來源範圍的每個項目並取代它，則滿足指定的述詞，當複製結果載入至新的範圍。|  
-|[replace\_if](../dotnet/replace-if-stl-clr.md)|如果滿足指定的述詞，檢查在範圍內的每個項目並取代它。|  
-|[reverse](../dotnet/reverse-stl-clr.md)|反轉項目的順序在範圍內。|  
-|[reverse\_copy](../dotnet/reverse-copy-stl-clr.md)|反轉項目的順序指定來源的，並將其複製到目的範圍時。|  
-|[rotate](../dotnet/rotate-stl-clr.md)|若要在兩個相鄰範圍的項目。|  
-|[rotate\_copy](../dotnet/rotate-copy-stl-clr.md)|若要在兩個相鄰範圍內的元素指定來源並複製結果到目的範圍。|  
-|[search](../dotnet/search-stl-clr.md)|查詢類似序列中的第一個二進位述詞實際上就相當於指定的項目與相等項目指定序列或項目與項目在指定序列的目標範圍內。|  
-|[search\_n](../dotnet/search-n-stl-clr.md)|搜尋項目指定的數字具有特定的值或與該值依二進位述詞的範圍的第一 subsequence。|  
-|[set\_difference](../dotnet/set-difference-stl-clr.md)|聯集屬於一個排序的來源範圍的所有項目，但是，對第二個排序來源範圍，到單一，排序的目的範圍，排序準則可能由二進位述詞指定。|  
-|[set\_intersection](../dotnet/set-intersection-stl-clr.md)|聯集屬於兩個排序的來源範圍成單一的所有項目，排序的目的範圍，排序準則可能由二進位述詞指定。|  
-|[set\_symmetric\_difference](../dotnet/set-symmetric-difference-stl-clr.md)|聯集屬於其中一個的所有項目，但是，但不能同時指定兩者，排序的來源範圍到單一裡，排序目的範圍，排序準則可能由二進位述詞指定。|  
-|[set\_union](../dotnet/set-union-stl-clr.md)|聯集屬於兩個排序的來源範圍至少有一個輸入唯一的所有項目，排序的目的範圍，排序準則可能由二進位述詞指定。|  
-|[排序](../dotnet/sort-stl-clr.md)|表示在指定範圍內的元素載入至 nondescending 的命令或以二進位述詞指定的排序準則。|  
-|[sort\_heap](../dotnet/sort-heap-stl-clr.md)|轉換堆積至排序的範圍。|  
-|[stable\_partition](../dotnet/stable-partition-stl-clr.md)|分類在範圍中之項目的兩個互斥集，而這些項目符合不符合其那些之前的一元的述詞，保留相等項目的相對順序。|  
-|[stable\_sort](../dotnet/stable-sort-stl-clr.md)|表示在指定範圍內的元素載入至 nondescending 的命令或以二進位述詞指定的排序準則並保留相等項目的相對順序。|  
-|[swap](../dotnet/swap-stl-clr.md)|切換項目的值在物件之間有兩種類型的，將第一個物件加入至物件內容和內容對話方塊的第一個。|  
-|[swap\_ranges](../dotnet/swap-ranges-stl-clr.md)|交換某個範圍的項目與其他項目相等，大小的範圍。|  
-|[transform](../dotnet/transform-stl-clr.md)|將指定的函式物件至來源中的每個項目或對一組從兩個來源範圍的元素複製到函式物件的傳回值到目的範圍。|  
-|[唯一](../dotnet/unique-stl-clr.md)|移除是彼此相鄰中指定範圍內的重複的項目。|  
-|[unique\_copy](../dotnet/unique-copy-stl-clr.md)|複製來源範圍的項目到目的範圍除了是彼此相鄰的重複的項目。|  
-|[upper\_bound](../dotnet/upper-bound-stl-clr.md)|在包含的值大於指定值的已排序範圍中尋找第一個項目的位置，其中排序準則可藉由二元述詞指定。|  
+|函式|說明|  
+|--------------|-----------------|  
+|[adjacent_find (STL/CLR)](../dotnet/adjacent-find-stl-clr.md)|搜尋兩個相鄰的項目相等。|  
+|[binary_search (STL/CLR)](../dotnet/binary-search-stl-clr.md)|測試是否已排序的序列包含指定的值。|  
+|[copy (STL/CLR)](../dotnet/copy-stl-clr.md)|將值從來源範圍複製到目的範圍，逐一查看正向方向。|  
+|[copy_backward (STL/CLR)](../dotnet/copy-backward-stl-clr.md)|將值從來源範圍複製到目的範圍，逐一查看反向方向。|  
+|[count (STL/CLR)](../dotnet/count-stl-clr.md)|傳回範圍中值符合指定值的項目數目。|  
+|[count_if (STL/CLR)](../dotnet/count-if-stl-clr.md)|傳回範圍中值符合指定條件的項目數目。|  
+|[equal (STL/CLR)](../dotnet/equal-stl-clr.md)|比較兩個範圍，逐一元件。|  
+|[equal_range (STL/CLR)](../dotnet/equal-range-stl-clr.md)|搜尋值的排序的順序，並傳回兩個分隔的所有指定的項目相等的值序列的位置。|  
+|[fill (STL/CLR)](../dotnet/fill-stl-clr.md)|將相同的新值指派到指定範圍內的每個項目。|  
+|[fill_n (STL/CLR)](../dotnet/fill-n-stl-clr.md)|將新值指派給範圍中以特定元素開頭的指定元素數目。|  
+|[find (STL/CLR)](../dotnet/find-stl-clr.md)|傳回指定值的第一次出現的位置。|  
+|[find_end (STL/CLR)](../dotnet/find-end-stl-clr.md)|傳回與指定序列相同範圍中的最後一個子序列。|  
+|[find_first_of (STL/CLR)](../dotnet/find-first-of-stl-clr.md)|搜尋第一個出現的任何一個指定的項目範圍的範圍。|  
+|[find_if (STL/CLR)](../dotnet/find-if-stl-clr.md)|傳回值序列中第一個項目的位置，其中的項目符合指定的條件。|  
+|[for_each (STL/CLR)](../dotnet/for-each-stl-clr.md)|適用於每個項目值序列中指定的函式物件，並傳回函式物件。|  
+|[generate (STL/CLR)](../dotnet/generate-stl-clr.md)|指派給每個元素值序列中的函式物件產生的值。|  
+|[generate_n (STL/CLR)](../dotnet/generate-n-stl-clr.md)|指派至指定的項目數函式物件產生的值。|  
+|[includes (STL/CLR)](../dotnet/includes-stl-clr.md)|測試一個排序的範圍是否包含第二個排序範圍內的所有項目。|  
+|[inplace_merge (STL/CLR)](../dotnet/inplace-merge-stl-clr.md)|將兩個連續排序範圍中的項目結合成單一排序範圍中。|  
+|[iter_swap (STL/CLR)](../dotnet/iter-swap-stl-clr.md)|交換由一組指定之迭代器所參考的兩個值。|  
+|[lexicographical_compare (STL/CLR)](../dotnet/lexicographical-compare-stl-clr.md)|比較兩個序列，這項，識別哪些順序兩個較小者。|  
+|[lower_bound (STL/CLR)](../dotnet/lower-bound-stl-clr.md)|已排序序列中值的值大於或等於指定的值中尋找第一個項目的位置。|  
+|[make_heap (STL/CLR)](../dotnet/make-heap-stl-clr.md)|將項目在指定範圍內轉換在堆積上的第一個元素的最大堆積。|  
+|[max (STL/CLR)](../dotnet/max-stl-clr.md)|比較兩個物件，並傳回兩者的較大者。|  
+|[max_element (STL/CLR)](../dotnet/max-element-stl-clr.md)|尋找最大的項目指定序列中的值。|  
+|[merge (STL/CLR)](../dotnet/merge-stl-clr.md)|將兩個排序的來源範圍的所有項目結合成單一排序目的範圍。|  
+|[min (STL/CLR)](../dotnet/min-stl-clr.md)|比較兩個物件，並傳回兩個較小者。|  
+|[min_element (STL/CLR)](../dotnet/min-element-stl-clr.md)|尋找最小項目指定序列中的值。|  
+|[mismatch (STL/CLR)](../dotnet/mismatch-stl-clr.md)|比較兩個範圍的項目並傳回差異發生的第一個位置。|  
+|[next_permutation (STL/CLR)](../dotnet/next-permutation-stl-clr.md)|讓原始順序由語彙方面下一個更大的排列取代如果存在的話，請重新排列範圍中的項目。|  
+|[nth_element (STL/CLR)](../dotnet/nth-element-stl-clr.md)|資料分割序列的項目正確放`n`序列 th 項目，使它前面的所有元素小於或等於它，而它後面的所有項目大於或等於它。|  
+|[partial_sort (STL/CLR)](../dotnet/partial-sort-stl-clr.md)|指定的範圍中較小的項目數目排列成遞減順序。|  
+|[partial_sort_copy (STL/CLR)](../dotnet/partial-sort-copy-stl-clr.md)|複製項目從來源範圍到目的範圍，來排序來源範圍中的項目。|  
+|[partition (STL/CLR)](../dotnet/partition-stl-clr.md)|範圍中的項目排列，以便滿足一元述詞，這些項目之前，這滿足。|  
+|[pop_heap (STL/CLR)](../dotnet/pop-heap-stl-clr.md)|然後 form 其餘項目從新的堆積和從堆積的前面移動最大的項目至結尾。|  
+|[prev_permutation (STL/CLR)](../dotnet/prev-permutation-stl-clr.md)|讓原始順序由辭典編纂順序先前更大的排列取代如果存在的話，請重新排列項目序列。|  
+|[push_heap (STL/CLR)](../dotnet/push-heap-stl-clr.md)|將在範圍結尾的項目加入至由範圍中之前項目所組成的現有堆積。|  
+|[random_shuffle (STL/CLR)](../dotnet/random-shuffle-stl-clr.md)|重新排列一系列`N`的其中一個範圍中的項目`N`！ 排列方式隨機選取的其中一個。|  
+|[remove (STL/CLR)](../dotnet/remove-stl-clr.md)|從指定範圍中刪除指定的值，而不會干擾其餘項目的順序，並傳回指定值的新範圍的結尾。|  
+|[remove_copy (STL/CLR)](../dotnet/remove-copy-stl-clr.md)|項目從來源範圍複製到目的範圍，不同之處在於不複製一個指定值的項目，也不會干擾其餘項目的順序。|  
+|[remove_copy_if (STL/CLR)](../dotnet/remove-copy-if-stl-clr.md)|複製項目從來源範圍到目的範圍，除了滿足述詞，也不會干擾其餘項目的順序。|  
+|[remove_if (STL/CLR)](../dotnet/remove-if-stl-clr.md)|刪除滿足述詞，從指定範圍也不會干擾其餘項目的順序的項目。 。|  
+|[replace (STL/CLR)](../dotnet/replace-stl-clr.md)|取代範圍中符合指定的值，以新值的項目。|  
+|[replace_copy (STL/CLR)](../dotnet/replace-copy-stl-clr.md)|複製項目從來源範圍到目的範圍，取代符合指定的值，以新值的項目。|  
+|[replace_copy_if (STL/CLR)](../dotnet/replace-copy-if-stl-clr.md)|檢查來源範圍內的每個項目，如果滿足指定的述詞則予以取代，同時將結果複製到新目的範圍。|  
+|[replace_if (STL/CLR)](../dotnet/replace-if-stl-clr.md)|檢查範圍內的每個項目，如果滿足指定的述詞則予以取代。|  
+|[reverse (STL/CLR)](../dotnet/reverse-stl-clr.md)|反轉範圍內項目的順序。|  
+|[reverse_copy (STL/CLR)](../dotnet/reverse-copy-stl-clr.md)|反轉來源範圍內項目的順序，將其複製到目的範圍。|  
+|[rotate (STL/CLR)](../dotnet/rotate-stl-clr.md)|交換兩個相鄰範圍的項目。|  
+|[rotate_copy (STL/CLR)](../dotnet/rotate-copy-stl-clr.md)|交換來源範圍內兩個相鄰範圍的項目，並將結果複製到目的範圍。|  
+|[search (STL/CLR)](../dotnet/search-stl-clr.md)|在目標範圍中搜尋第一個序列，其項目等於指定項目序列中的項目，或在二元述詞指定的意義上，其項目相當於指定序列中的項目。|  
+|[search_n (STL/CLR)](../dotnet/search-n-stl-clr.md)|在範圍中搜尋包含指定項目數的第一個子序列，這些項目具有特定值或在二元述詞指定的意義上與該值關聯。|  
+|[set_difference (STL/CLR)](../dotnet/set-difference-stl-clr.md)|將屬於一個排序來源範圍但不屬於第二個排序來源範圍的所有項目聯集為單一排序的目的範圍，其中順序準則可由二元述詞指定。|  
+|[set_intersection (STL/CLR)](../dotnet/set-intersection-stl-clr.md)|將屬於兩個排序來源範圍的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。|  
+|[set_symmetric_difference (STL/CLR)](../dotnet/set-symmetric-difference-stl-clr.md)|將屬於兩個排序來源範圍之一 (但非兩者) 的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。|  
+|[set_union (STL/CLR)](../dotnet/set-union-stl-clr.md)|將至少屬於兩個排序來源範圍之一的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。|  
+|[sort (STL/CLR)](../dotnet/sort-stl-clr.md)|將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則。|  
+|[sort_heap (STL/CLR)](../dotnet/sort-heap-stl-clr.md)|將堆積轉換為排序的範圍。|  
+|[stable_partition (STL/CLR)](../dotnet/stable-partition-stl-clr.md)|將範圍中的項目分類為兩個斷續集合，而滿足一元述詞的項目在無法滿足一元述詞的項目之前，保留對等項目的相對順序。|  
+|[stable_sort (STL/CLR)](../dotnet/stable-sort-stl-clr.md)|將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則，並保留對等項目的相對順序。|  
+|[swap (STL/CLR)](../dotnet/swap-stl-clr.md)|在兩種類型的物件之間交換項目的值，將第一個物件的內容指派給第二個物件，並將第一個物件的內容指派給第一個物件。|  
+|[swap_ranges (STL/CLR)](../dotnet/swap-ranges-stl-clr.md)|將某個範圍的項目與另一個相等大小之範圍的項目交換。|  
+|[transform (STL/CLR)](../dotnet/transform-stl-clr.md)|將指定的函式物件應用至來源範圍中的每個項目，或是一組來自兩個來源範圍的項目，並複製函式物件的傳回值到目的範圍。|  
+|[unique (STL/CLR)](../dotnet/unique-stl-clr.md)|移除在指定範圍內彼此相鄰的重複項目。|  
+|[unique_copy (STL/CLR)](../dotnet/unique-copy-stl-clr.md)|將來源範圍的項目複製到目的範圍，但是彼此相鄰的重複項目除外。|  
+|[upper_bound (STL/CLR)](../dotnet/upper-bound-stl-clr.md)|在已排序範圍中尋找值大於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。|  
   
-## 需求  
- **標題:** \<cliext\/演算法\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
- **命名空間:** cliext  
+ **命名空間：** cliext  
   
-## 請參閱  
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>另請參閱  
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

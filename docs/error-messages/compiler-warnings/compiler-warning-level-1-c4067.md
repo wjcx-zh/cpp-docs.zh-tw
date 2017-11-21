@@ -1,32 +1,30 @@
 ---
-title: "編譯器警告 (層級 1) C4067 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4067"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4067"
+title: "編譯器警告 （層級 1） C4067 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4067
+dev_langs: C++
+helpviewer_keywords: C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 90c29e7bc63096a6e46d4febda9c66d2759bb06a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 編譯器警告 (層級 1) C4067
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-未預期的語彙基元，接著前置處理器指示詞 \- 必須是新行  
+# <a name="compiler-warning-level-1-c4067"></a>編譯器警告 （層級 1） C4067
+未預期的語彙基元下列前置處理器指示詞-必須是新行  
   
- 編譯器找到並忽略前置處理器指示詞之後額外的字元。  這項警告僅出現在 ANSI 相容性 \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) 中。  
+ 編譯器發現，並忽略多餘的字元，前置處理器指示詞後面。 在 ANSI 相容性只會出現這個警告 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。  
   
 ```  
 // C4067a.cpp  
@@ -40,11 +38,11 @@ int main()
 }  
 ```  
   
-### 若要解決這個警告，請嘗試下列步驟：  
+### <a name="to-resolve-this-warning-try-the-following"></a>若要解決這個警告，請嘗試下列各項：  
   
-1.  使用 **\/Ze** 編譯。  
+1.  編譯與**/Ze**。  
   
-2.  使用註解分隔符號 \(Comment Delimiter\)：  
+2.  使用註解分隔符號：  
   
 ```  
 // C4067b.cpp  

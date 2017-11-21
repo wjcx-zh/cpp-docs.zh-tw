@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs_s
+apiname: wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs_s
-dev_langs:
-- C++
+f1_keywords: wcsrtombs_s
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: f8045010875713588fb20a8f05a230717a21a9a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 將寬字元字串轉換為其多位元組字元字串表示法。 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) 版本。  
@@ -124,9 +105,9 @@ errno_t wcsrtombs_s(
   
  如果 `count` 是特殊值 [_TRUNCATE](../../c-runtime-library/truncate.md)，則 `wcsrtombs_s` 會盡量轉換符合目的緩衝區的字串量，同時仍留出空間給 Null 結束字元。  
   
- 如果 `wcsrtombs_s` 成功轉換來源字串，則會將包括 Null 終止字元在內的已轉換字串大小 (以位元組計) 放入 `*``pReturnValue` (假設 `pReturnValue` 不是 `NULL`)。 即使 `mbstr` 引數為 `NULL`，且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果 `mbstr` 為 `NULL`，則略過 `count`。  
+ 如果 `wcsrtombs_s` 成功轉換來源字串，則會將包括 Null 終止字元在內的已轉換字串大小 (以位元組計) 放入 `*pReturnValue` (假設 `pReturnValue` 不是 `NULL`)。 即使 `mbstr` 引數為 `NULL`，且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果 `mbstr` 為 `NULL`，則略過 `count`。  
   
- 如果 `wcsrtombs_s` 遇到它無法轉換成多位元組字元的寬字元，會將 -1 放入 `*``pReturnValue`，再將目的緩衝區設為空字串，續將 `errno` 設為 `EILSEQ`，最後傳回 `EILSEQ`。  
+ 如果 `wcsrtombs_s` 遇到它無法轉換成多位元組字元的寬字元，會將 -1 放入 `*pReturnValue`，再將目的緩衝區設為空字串，續將 `errno` 設為 `EILSEQ`，最後傳回 `EILSEQ`。  
   
  如果 `wcstr` 和 `mbstr` 所指向的序列重疊，`wcsrtombs_s` 的行為不明。 `wcsrtombs_s` 受到目前地區設定之 LC_TYPE 分類的影響。  
   

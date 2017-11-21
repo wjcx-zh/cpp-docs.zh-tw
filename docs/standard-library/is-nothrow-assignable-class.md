@@ -9,23 +9,19 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_nothrow_assignable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_nothrow_assignable
+f1_keywords: type_traits/std::is_nothrow_assignable
+dev_langs: C++
+helpviewer_keywords: is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 5bc98560000cc0f12270a55547aa0ee082d312a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f4e0b1cc873c5b83f7a307e98965ac4891153f60
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="isnothrowassignable-class"></a>is_nothrow_assignable 類別
 測試是否可將 `From` 類型的值指派給 `To` 類型，且該指派已知不會擲回。  
@@ -54,7 +50,6 @@ struct is_nothrow_assignable;
   
 ## <a name="see-also"></a>另請參閱  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

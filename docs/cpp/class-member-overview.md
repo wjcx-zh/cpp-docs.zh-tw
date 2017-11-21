@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="class-member-overview"></a>類別成員概觀
 類別或結構包含其成員。 類別所執行的工作是由其成員函式執行。 它所維護的狀態會儲存在其資料成員中。 初始化成員檢查方式是建構函式，並清除工作，例如釋放的記憶體和資源的釋放是解構函式。 在 C++11 和更新版本中，可以 (且通常應該) 在宣告時初始化資料成員。  
@@ -179,4 +176,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>另請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)
-

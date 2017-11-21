@@ -1,38 +1,37 @@
 ---
-title: "如何：定義和使用委派 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "委派"
+title: "如何： 定義和使用委派 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 22483b1b1e90c406d1a2f6bd1731f15008b58daa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：定義和使用委派 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文說明如何定義和使用 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]的委派。  
+# <a name="how-to-define-and-use-delegates-ccli"></a>如何：定義和使用委派 (C++/CLI)
+本文將說明如何定義和使用委派，在 C + + /CLI。  
   
- 雖然 .NET Framework 提供許多委派，有時您可能必須定義新的委派。  
+ 雖然.NET Framework 提供數個委派，但是有時候您可能必須定義新的委派。  
   
- 下列程式範例定義名為 `MyCallback` 的委派。  呼叫的事件處理程式碼的函式，而這是新的委派時引發必須有 `void` 的傳回型別和採用 <xref:System.String> 參考。  
+ 下列程式碼範例定義名為委派`MyCallback`。 事件處理程式碼，這個新的委派，會引發時所呼叫的函式 — 的傳回型別必須`void`並採取<xref:System.String>參考。  
   
- 主函式使用由 `SomeClass` 定義的具現化 `MyCallback` 委派的靜態方法。  接著委派會變成替代方法呼叫這個函式，如示範透過委派物件傳送字串「string」。  接著， `MyCallback` 的其他執行個體連結在一起以委派物件的呼叫來執行。  
+ Main 函式會使用靜態方法所定義`SomeClass`來具現化`MyCallback`委派。 委派就會變成呼叫此函式的替代方法，傳送至委派物件的 [單一] 字串所示。 接下來，其他的執行個體`MyCallback`會連結在一起，並執行一個呼叫的委派物件。  
   
 ```  
-// use_delegate.cpp  
+  
+      // use_delegate.cpp  
 // compile with: /clr  
 using namespace System;  
   
@@ -83,13 +82,17 @@ int main( )
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **static SomeClass::Func \- single**  
-**static SomeClass::Func \- chained**  
-**static SomeClass::Func \- chained**  
-**OtherClass::Method \- chained, num \= 99**  
-**OtherClass::Method \- chained, num \= 100** 下一個程式碼範例顯示如何關聯委派與實值類別的成員。  
+```Output  
+static SomeClass::Func - single  
+static SomeClass::Func - chained  
+static SomeClass::Func - chained  
+OtherClass::Method - chained, num = 99  
+OtherClass::Method - chained, num = 100  
+```  
+  
+ 下一步的程式碼範例示範如何將委派與實值類別的成員產生關聯。  
   
 ```  
 // mcppv2_del_mem_value_class.cpp  
@@ -114,12 +117,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **測試**  
-**測試**   
-## 如何構築委派  
- `-` 運算子可用來從組合委派中移除某個元件委派。  
+```Output  
+test  
+test  
+```  
+  
+## <a name="how-to-compose-delegates"></a>如何撰寫委派  
+ 您可以使用 「`-`」 運算子，移除元件委派從組成的委派。  
   
 ```  
 // mcppv2_compose_delegates.cpp  
@@ -157,21 +163,24 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **Invoking delegate a:**  
-**Hello, A\!**  
-**Invoking delegate b:**  
- **Goodbye, B\!**  
-**Invoking delegate c:**  
-**Hello, C\!**  
- **Goodbye, C\!**  
-**Invoking delegate d:**  
- **Goodbye, D\!**   
-## 將委派傳遞至預期函式指標的原生函式。  
- 從 Managed 元件可以呼叫函式與原生函式可以呼叫 Managed 元件的委派的成員函式的指標參數的原生函式。  
+```Output  
+Invoking delegate a:  
+Hello, A!  
+Invoking delegate b:  
+  Goodbye, B!  
+Invoking delegate c:  
+Hello, C!  
+  Goodbye, C!  
+Invoking delegate d:  
+  Goodbye, D!  
+```  
   
- 這個範例建立匯出原生函式的 .dll 檔案:  
+## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>將委派 ^ 需要函式指標的原生函式  
+ 從受管理元件可以呼叫函式的原生函式指標參數，原生函式然後可以呼叫成員函式的 managed 的元件的委派。  
+  
+ 這個範例會建立原生函式會將匯出此.dll 檔：  
   
 ```  
 // delegate_to_native_function.cpp  
@@ -185,7 +194,7 @@ extern "C" {
 }  
 ```  
   
- 下一個範例使用此 .dll 並傳遞委派處理至預期函式指標的原生函式。  
+ 下一個範例會耗用此.dll 檔，並將委派控制代碼傳遞給需要函式指標的原生函式。  
   
 ```  
 // delegate_to_native_function_2.cpp  
@@ -211,11 +220,14 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **對 Managed 函式的呼叫**   
-## 要將委派與 Unmanaged 函式產生關聯  
- 若要使委派與原生函式關聯，您必須包裝在 Managed 型別的原生函式和透過 `PInvoke`宣告要叫用的函式。  
+```Output  
+Call to Managed Function  
+```  
+  
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>委派與 unmanaged 函式  
+ 若要與原生函式委派，您必須將原生函式包裝 managed 類型中，並透過叫用函式宣告`PInvoke`。  
   
 ```  
 // mcppv2_del_to_umnangd_func.cpp  
@@ -251,23 +263,26 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **hello**   
-## 使用未繫結的委派  
- 您可以使用未繫結的委派函式傳遞要呼叫型別的執行個體，當委派呼叫時。  
+```Output  
+hello  
+```  
   
- 如果您要使用 [for each、in](../dotnet/for-each-in.md) 關鍵字逐一查看控制項集合，並在每個執行個體呼叫成員函式，則未繫結的委派會特別好用。  
+## <a name="to-use-unbound-delegates"></a>若要使用取消繫結的委派  
+ 您可以使用繫結的委派，將您想要呼叫時，會呼叫委派的函式類型的執行個體。  
   
- 以下說明如何宣告，具現化和呼叫必須和未繫結的委派:  
+ 未繫結的委派是特別有用，如果您想要逐一查看集合中物件 — 使用[針對每個，在](../dotnet/for-each-in.md)關鍵字，在每個執行個體上呼叫成員函式。  
+  
+ 以下是如何宣告，並具現化，並呼叫繫結和繫結委派：  
   
 |動作|繫結委派|取消繫結委派|  
-|--------|----------|------------|  
-|Declare|委派簽章必須符合您要透過委派呼叫函式的簽章。|委派簽章的第一個參數是 `this` 的型別與您希望呼叫的物件。<br /><br /> 在第一個參數之後，委派簽章必須符合您要透過委派呼叫函式的簽章。|  
-|具現化|當您具現化一個委派時，您可以指定執行個體函式或全域或靜態成員函式。<br /><br /> 若要指定執行個體函式，第一個參數是成員函式要呼叫，而第二個參數是函式位址要呼叫型別的執行個體。<br /><br /> 如果您要呼叫全域或靜態成員函式，請透過全域函式的名稱或靜態成員函式的名稱。|當您具現化未繫結的委派時，請將您要呼叫函式的位址。|  
-|Call|當您呼叫一個委派時，請透過委派需要簽章的參數。|和一個委派相同，但是請記住，第一個參數必須是物件的執行個體包含您要呼叫的函式。|  
+|------------|---------------------|-----------------------|  
+|宣告|委派簽章必須符合您想要透過委派呼叫的函式簽章。|委派簽章的第一個參數是種`this`您想要呼叫的物件。<br /><br /> 之後的第一個參數，委派簽章必須符合您想要透過委派呼叫的函式簽章。|  
+|具現化|當您具現化的繫結的委派時，您可以指定執行個體函式或全域或靜態成員函式。<br /><br /> 若要指定執行個體函式，第一個參數是您想要呼叫其成員函式型別的執行個體，第二個參數是您想要呼叫的函式的位址。<br /><br /> 如果您想要呼叫的全域或靜態成員函式，將傳遞的全域函式名稱或靜態成員函式的名稱。|當您具現化未繫結的委派時，將傳遞您想要呼叫的函式的位址。|  
+|呼叫|當您呼叫的繫結的委派時，只傳遞所需的委派簽章的參數。|繫結至相同委派，但請記住第一個參數必須是包含您想要呼叫的函式物件的執行個體。|  
   
- 這個範例會示範如何宣告，具現化和呼叫未繫結的委派:  
+ 這個範例示範如何宣告、 具現化，和呼叫未繫結的委派：  
   
 ```  
 // unbound_delegates.cpp  
@@ -330,18 +345,22 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **2**  
-**3**  
-**2**  
-**3**  
-**2**  
-**7**  
-**8**  
-**7**  
-**8**  
-**7** 下一個範例顯示如何使用未繫結的委派和 [for each、in](../dotnet/for-each-in.md) 關鍵字傳遞集合中的物件逐一查看並在每個執行個體的成員函式。  
+```Output  
+2  
+3  
+2  
+3  
+2  
+7  
+8  
+7  
+8  
+7  
+```  
+  
+ 下一個範例示範如何使用取消繫結的委派和[針對每個，在](../dotnet/for-each-in.md)關鍵字可用來逐一查看集合中的物件，並在每個執行個體上呼叫成員函式。  
   
 ```  
 // unbound_delegates_2.cpp  
@@ -373,7 +392,7 @@ int main() {
 }  
 ```  
   
- 這個範例建立未繫結的委派至屬性的存取子函式:  
+ 這個範例會建立未繫結的屬性存取子函式委派：  
   
 ```  
 // unbound_delegates_3.cpp  
@@ -402,9 +421,13 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **11** 下列範例顯示如何叫用多點傳送委派，一個執行個體是必須的，以及一個執行個體是未繫結的。  
+```Output  
+11  
+```  
+  
+ 下列範例會示範如何叫用多點傳送的委派，其中一個執行個體繫結，而一個執行個體是未繫結。  
   
 ```  
 // unbound_delegates_4.cpp  
@@ -437,10 +460,14 @@ int main() {
 };  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **in f\(R ^ r\)**  
-**in f\(\)** 下一個範例顯示如何建立並呼叫未繫結的泛型委派。  
+```Output  
+in f(R ^ r)  
+in f()  
+```  
+  
+ 下一個範例示範如何建立並呼叫繫結的泛型委派。  
   
 ```  
 // unbound_delegates_5.cpp  
@@ -477,9 +504,12 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **12**  
-**14**   
-## 請參閱  
- [delegate](../windows/delegate-cpp-component-extensions.md)
+```Output  
+12  
+14  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [delegate (C++ 元件延伸模組)](../windows/delegate-cpp-component-extensions.md)

@@ -1,32 +1,30 @@
 ---
-title: "list::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 成員 [STL/CLR]"
+title: "list:: assign (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: c5f2b131-d0e1-4188-9d4b-d617280e4032
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ed13bb97aeceb0918d7b92405c9742a6f9710dc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# list::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listassign-stlclr"></a>list::assign (STL/CLR)
 取代所有項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,30 +33,30 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  count  
- 插入的項目數目。  
+ 要插入的元素數目。  
   
- 首先  
- 要插入的範圍開頭。  
+ 第一  
+ 要插入範圍的開頭。  
   
  last  
- 插入範圍結尾。  
+ 要插入範圍的結尾。  
   
- right  
- 要插入的列舉型別。  
+ 向右  
+ 若要插入的列舉型別。  
   
  val  
- 要插入的元素值。  
+ 要插入之項目的值。  
   
-## 備註  
- 第 10% 成員函式以 `val`值之 `count` 項目的迴圈取代受控制序列。  您可以使用它以項目填滿容器的全部有相同的值。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式取代重複的受控制的序列`count`值的項目`val`。 您使用它來填入項目容器全都具有相同的值。  
   
- 如果 `InIt` 是整數型別，第二 \+ 成成員函式一般作業的 `assign((size_type)``first``, (value_type)``last``)`。  否則，它會以序列 `[``first``,``last``)`取代受控制序列。  您會用它來做受控制序列複製另一個序列。  
+ 如果`InIt`是整數類型，第二個成員函式的行為相同`assign((size_type)first, (value_type)last)`。 否則，它會取代受控制的序列的順序 [`first`， `last`)。 您使用它來進行受控制的序列複製另一個序列。  
   
- 第三 \+ 成成員函式是列舉值所指定的序列取代受控制序列的 `right`。  您會用它來做受控制序列列舉值描述的重複序列。  
+ 第三個成員函式的列舉值所指定的順序，取代受控制的序列`right`。 您可以使用它來製作受控制的序列的序列所描述的列舉值。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_assign.cpp   
@@ -97,14 +95,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **b**  
- **a b c**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

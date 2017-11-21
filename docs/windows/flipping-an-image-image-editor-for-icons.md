@@ -1,58 +1,59 @@
 ---
-title: "Flipping an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], flipping and rotating images"
-  - "images [C++], flipping"
-  - "images [C++], rotating"
+title: "翻轉影像 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], flipping and rotating images
+- images [C++], flipping
+- images [C++], rotating
 ms.assetid: a63d251c-7343-4ad6-9442-1faa04a9a2a1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e8f31e29d955d54231b25d09f79ecfcf73595a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Flipping an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可翻轉或旋轉影像來：  
+# <a name="flipping-an-image-image-editor-for-icons"></a>翻轉影像 (圖示影像編輯器)
+您可以翻轉或旋轉的影像：  
   
--   建立原始影像的鏡像。  
+-   建立原始的鏡像映像。  
   
--   倒置影像。  
+-   倒置映像。  
   
--   一次將影像旋轉成正 90 度。  
+-   右側影像 90 度旋轉一次。  
   
-### 若要水平翻轉影像 \(鏡像\)  
+### <a name="to-flip-the-image-horizontally-mirror-image"></a>若要水平翻轉影像 （鏡像）  
   
-1.  在 \[影像\] 功能表中，選擇 \[水平翻轉\]。  
+1.  從**映像**功能表上，選擇**水平翻轉**。  
   
-### 若要垂直翻轉影像 \(上下倒置\)  
+### <a name="to-flip-the-image-vertically-turn-upside-down"></a>若要垂直翻轉影像 （倒置）  
   
-1.  在 \[影像\] 功能表中，選擇 \[垂直翻轉\]。  
+1.  從**映像**功能表上，選擇**垂直翻轉**。  
   
-### 若要旋轉影像 90 度  
+### <a name="to-rotate-the-image-90-degrees"></a>若要將影像旋轉 90 度  
   
-1.  在 \[影像\] 功能表中，選擇 \[旋轉 90 度\]。  
+1.  從**映像**功能表上，選擇**旋轉 90 度**。  
   
     > [!NOTE]
-    >  您也可以使用這些命令的[快速鍵](../mfc/accelerator-keys-image-editor-for-icons.md)或是從捷徑功能表存取命令 \(在影像編輯器中的影像外按一下\)。  
+    >  您也可以使用[快速鍵 （快速鍵）](../windows/accelerator-keys-image-editor-for-icons.md)這些命令或從快顯功能表 （按一下外部影像編輯器中的映像） 存取命令。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  需求  
   
- None  
+ 無  
   
-## 請參閱  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>另請參閱  
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
+

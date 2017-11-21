@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- set
 - set/std::set
 - set/std::set::allocator_type
 - set/std::set::const_iterator
@@ -51,35 +49,59 @@ f1_keywords:
 - set/std::set::swap
 - set/std::set::upper_bound
 - set/std::set::value_comp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- set class
+- std::set [C++]
+- std::set [C++], allocator_type
+- std::set [C++], const_iterator
+- std::set [C++], const_pointer
+- std::set [C++], const_reference
+- std::set [C++], const_reverse_iterator
+- std::set [C++], difference_type
+- std::set [C++], iterator
+- std::set [C++], key_compare
+- std::set [C++], key_type
+- std::set [C++], pointer
+- std::set [C++], reference
+- std::set [C++], reverse_iterator
+- std::set [C++], size_type
+- std::set [C++], value_compare
+- std::set [C++], value_type
+- std::set [C++], begin
+- std::set [C++], cbegin
+- std::set [C++], cend
+- std::set [C++], clear
+- std::set [C++], count
+- std::set [C++], crbegin
+- std::set [C++], crend
+- std::set [C++], emplace
+- std::set [C++], emplace_hint
+- std::set [C++], empty
+- std::set [C++], end
+- std::set [C++], equal_range
+- std::set [C++], erase
+- std::set [C++], find
+- std::set [C++], get_allocator
+- std::set [C++], insert
+- std::set [C++], key_comp
+- std::set [C++], lower_bound
+- std::set [C++], max_size
+- std::set [C++], rbegin
+- std::set [C++], rend
+- std::set [C++], size
+- std::set [C++], swap
+- std::set [C++], upper_bound
+- std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 43eeea7d80f332e180342bd18460f1750c1b4b44
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: cdc1385f5aafecc3608ced9e3e5ac1e89247f724
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="set-class"></a>set 類別
 C++ 標準程式庫容器類別 set 用於在集合中儲存和擷取資料，集合中包含的項目值是唯一的，並用來做為索引鍵值，據以自動排序資料。 集合中項目的索引鍵值不能直接變更。 相反地，必須刪除舊值，並插入具有新值的項目。  
@@ -1262,7 +1284,7 @@ IList);
   
  在只插入一個元素的期間，若擲出例外狀況，則不會修改容器的狀態。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。  
   
- 若要存取單一項目成員函式所傳回之 `pair``pr` 的迭代器元件，請使用 `pr.first`；若要對所傳回之 pair 內的迭代器進行取值，請使用 `*pr.first` 來提供項目。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
+ 若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
   
  容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而針對 set，`set<V>::value_type` 是 `const V` 類型。  
   
@@ -2358,5 +2380,4 @@ The set has elements: 10 20.
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

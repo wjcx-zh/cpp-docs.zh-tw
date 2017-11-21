@@ -4,14 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 76798022-5886-48e7-a7f2-f99352b15cbf
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
@@ -25,12 +23,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
+ms.openlocfilehash: a9f540aa634dbcb57f6f054a3e091c8b9a879aaa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: d6eb43b2e77b11f4c85f6cf7e563fe743d2a7093
-ms.openlocfilehash: d35603be262e21e2570e21bb72ff2bc40c3d6d76
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-samples"></a>Visual C++ 範例
 下面列出的 Visual C++ 範例示範涵蓋多種技術的不同功能。  

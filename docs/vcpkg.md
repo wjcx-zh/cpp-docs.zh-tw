@@ -5,22 +5,18 @@ keywords: vcpkg
 author: mikeblome
 ms.author: mblome
 ms.date: 05/30/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: windows
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 manager: ghogen
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ed0e4505b68c2ea198e0771b6301e685daa8662e
 ms.openlocfilehash: de5825e64abac210561cb8cbe0dc3320a740cbee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 06/30/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="vcpkg-c-package-manager-for-windows"></a>vcpkg：適用於 Windows 的 C++ 套件管理員 
 vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝協力廠商程式庫的流程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg 公用目錄中的所有程式庫皆已通過 Visual Studio 2015 和 Visual Studio 2017 的相容性測試。 截至 2017 年 5 月，目錄中有超過 238 個程式庫，而且 C++ 社群還持續不斷新增更多的程式庫。
 
@@ -158,4 +154,3 @@ vcpkg 執行個體的內容如下：
   **`--triplet <t>`**指定目標架構 triplet。 (預設：`%VCPKG_DEFAULT_TRIPLET%`，亦請參閱`vcpkg help triplet`)
 
   **`--vcpkg-root <path>`**指定 vcpkg 根目錄 (預設：`%VCPKG_ROOT%`)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -51,8 +50,7 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -63,30 +61,15 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3f208b2937f2f19d87777b7158e5b765b784bb5d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: bd493619bc8117a67670f1c4bc820ed00c7be165
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cimage-class"></a>CImage 類別
 `CImage`提供增強的點陣圖支援，包括載入和儲存 JPEG、 GIF、 BMP、 及可攜式網路圖形 (PNG) 格式的映像的能力。  
@@ -104,13 +87,13 @@ class CImage
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CImage::CImage](#cimage)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CImage::AlphaBlend](#alphablend)|顯示具有透明或半透明的像素的點陣圖。|  
 |[CImage::Attach](#attach)|附加`HBITMAP`至`CImage`物件。 可以搭配非 DIB 區段點陣圖或 DIB 區段點陣圖。|  
@@ -159,7 +142,7 @@ class CImage
 |[HBITMAP CImage::operator](#operator_hbitmap)|傳回附加至的 Windows 控制代碼`CImage`物件。|  
   
 ## <a name="remarks"></a>備註  
- `CImage`會採用點陣圖，可能是裝置獨立點陣圖 (DIB) 區段或不過，您可以使用[建立](#create)或[CImage::Load](#load)只 DIB 章節。 您可以將附加至非 DIB 區段點陣圖`CImage`物件使用[附加](#attach)，但您便無法使用下列`CImage`支援 DIB 區段點陣圖的方法︰  
+ `CImage`會採用點陣圖，可能是裝置獨立點陣圖 (DIB) 區段或不過，您可以使用[建立](#create)或[CImage::Load](#load)只 DIB 章節。 您可以將附加至非 DIB 區段點陣圖`CImage`物件使用[附加](#attach)，但您便無法使用下列`CImage`支援 DIB 區段點陣圖的方法：  
   
 - [GetBits](#getbits)  
   
@@ -195,7 +178,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```  
   
- 當您使用`CImage`在 MFC 專案中，請注意您的專案中的成員函式預期的指標[CBitmap](../../mfc/reference/cbitmap-class.md)物件。 如果您想要使用`CImage`與這類函式，例如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，將它傳遞您`CImage` `HBITMAP`，並使用傳回`CBitmap*`。  
+ 當您使用`CImage`在 MFC 專案中，請注意您的專案中的成員函式預期的指標[CBitmap](../../mfc/reference/cbitmap-class.md)物件。 如果您想要使用`CImage`與這類函式，例如[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)，使用[CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)，將它傳遞您`CImage` `HBITMAP`，並使用傳回的`CBitmap*`.  
 
   
 ## <a name="example"></a>範例  
@@ -216,7 +199,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
  透過`CImage`，您可以存取 DIB 區段的實際位元。 您可以使用`CImage`您先前使用的 Win32 HBITMAP 或 DIB 區段的任何位置物件。  
   
 > [!NOTE]
->  下列`CImage`方法有其用法的限制︰  
+>  下列`CImage`方法有其用法的限制：  
   
 |方法|限制|  
 |------------|----------------|  
@@ -234,7 +217,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 >  同樣地，您必須包含`atlimage.h`您包含之前`atlimpl.cpp`。 若要輕鬆地完成此動作，包含`atlimage.h`中您`stdafx.h`。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlimage.h  
+ **標頭：** atlimage.h  
   
 ##  <a name="alphablend"></a>CImage::AlphaBlend  
  顯示具有透明或半透明的像素的點陣圖。  
@@ -339,7 +322,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
  *eOrientation*  
  指定點陣圖的方向。 可以是下列其中一項：  
   
-- **DIBOR_DEFAULT**點陣圖的方向由作業系統決定。 不過，這可能不一定所要的結果在所有作業系統上。 詳細資訊，請參閱下列知識庫文件 ( **Q186586**): PRB: GetObject() 一律傳回正數高度為 DIB 區段。  
+- **DIBOR_DEFAULT**點陣圖的方向由作業系統決定。 不過，這可能不一定所要的結果在所有作業系統上。 如需詳細資訊，請參閱下列知識庫文件 ( **Q186586**): PRB: GetObject() 一律傳回正數高度的 DIB 區段。  
   
 - **DIBOR_BOTTOMUP**點陣圖的線條會以反向順序。 這會導致[CImage::GetBits](#getbits)傳回接近點陣圖緩衝區結尾的指標和[CImage::GetPitch](#getpitch)傳回負數。  
   
@@ -391,7 +374,7 @@ BOOL BitBlt(
  邏輯 y 座標的目的矩形左上角。  
   
  `dwROP`  
- 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式位元 （所定義的目前選取的筆刷）。 請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]其他點陣作業碼及其描述的清單。  
+ 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式位元 （所定義的目前選取的筆刷）。 請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中針對其他的點陣作業碼及其描述的清單。  
   
  `pointDest`  
  A[點](http://msdn.microsoft.com/library/windows/desktop/dd162805)指出目的地矩形左上的角的結構。  
@@ -418,7 +401,7 @@ BOOL BitBlt(
  如果成功則不為零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 如需詳細資訊，請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中。  
   
 ##  <a name="cimage"></a>CImage::CImage  
  建構 `CImage` 物件。  
@@ -456,7 +439,7 @@ BOOL Create(
  每個點陣圖的像素的位元的數字。 通常是 4、 8、 16、 24、 或 32。 可以是 1，單色點陣圖或遮罩。  
   
  `dwFlags`  
- 指定點陣圖物件是否具有 alpha 色板。 可以是零或多個下列值的組合︰  
+ 指定點陣圖物件是否具有 alpha 色板。 可以是零或多個下列值的組合：  
   
 - **createAlphaChannel**只可用在`nBPP`是 32，和`eCompression`是**BI_RGB**。 如果指定，建立映像會有每個像素，儲存在每個像素 （非英數 32 位元映像中未使用） 的第 4 個位元組的 alpha （投影片） 值。 呼叫時，會自動使用此 alpha 色板[CImage::AlphaBlend](#alphablend)。  
   
@@ -490,17 +473,17 @@ BOOL CreateEx(
  每個點陣圖的像素的位元的數字。 通常是 4、 8、 16、 24、 或 32。 可以是 1，單色點陣圖或遮罩。  
   
  `eCompression`  
- 指定壓縮 （由上而下 Dib 不能壓縮） 由下往上點陣圖的壓縮的類型。 可為下列其中一個值：  
+ 指定壓縮由下而上點陣圖 （Dib 由上而下不能壓縮） 的壓縮的類型。 可為下列其中一個值：  
   
 - **BI_RGB**格式未壓縮。 指定這個值時呼叫`CImage::CreateEx`就相當於呼叫`CImage::Create`。  
   
 - **BI_BITFIELDS**格式未壓縮和 color 資料表包含三個`DWORD`色彩遮罩，指定 [紅色] 綠色，分別和藍色元件，每個像素。 這是在 16 及 32 bpp 點陣圖搭配使用時才有效。  
   
  *pdwBitfields*  
- 只有在`eCompression`設**BI_BITFIELDS**，否則它必須是**NULL**。 三個陣列的指標`DWORD`位元遮罩，指定每個像素的位元用於紅色、 綠色，分別和藍色色彩元件。 限制的位元欄位的資訊，請參閱[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 只有在`eCompression`設**BI_BITFIELDS**，否則它必須是**NULL**。 三個陣列的指標`DWORD`位元遮罩，指定每個像素的位元用於紅色、 綠色，分別和藍色色彩元件。 限制的位元欄位的資訊，請參閱[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。  
   
  `dwFlags`  
- 指定點陣圖物件是否具有 alpha 色板。 可以是零或多個下列值的組合︰  
+ 指定點陣圖物件是否具有 alpha 色板。 可以是零或多個下列值的組合：  
   
 - **createAlphaChannel**只可用在`nBPP`是 32，和`eCompression`是**BI_RGB**。 如果指定，建立映像會有每個像素，儲存在每個像素 （非英數 32 位元映像中未使用） 的第 4 個位元組的 alpha （投影片） 值。 呼叫時，會自動使用此 alpha 色板[CImage::AlphaBlend](#alphablend)。  
   
@@ -651,7 +634,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>備註  
  這個值會決定定義每個像素的位元數目與點陣圖中色彩的數目上限。  
   
- 每個像素的位元通常是 1、 4、 8、 16、 24、 或 32。 請參閱**biBitCount**隸屬[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]如需有關此值。  
+ 每個像素的位元通常是 1、 4、 8、 16、 24、 或 32。 請參閱**biBitCount**隸屬[BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中針對此值的詳細資訊。  
   
 ##  <a name="getcolortable"></a>CImage::GetColorTable  
  擷取 DIB 區段的調色盤中的項目範圍中的紅色、 綠色、 藍色 (RGB) 色彩值。  
@@ -704,7 +687,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  陣列的 Guid，其中每個元素對應到其中一個字串中的檔案類型。 在範例中`pszAllFilesDescription`下列`aguidFileTypes`[0] 是`GUID_NULL`，剩餘的陣列值為目前的作業系統所支援的影像檔案格式。  
   
 > [!NOTE]
->  常數的完整清單，請參閱**影像檔案格式常數**中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+>  如需常數的完整清單，請參閱**影像檔案格式常數**Windows SDK 中。  
   
  `pszAllFilesDescription`  
  如果這個參數不是**NULL**，篩選條件字串會有一個額外的篩選器清單的開頭。 此篩選器的目前值`pszAllFilesDescription`如它的描述，並接受清單中的任何其他匯出工具所支援的任何延伸模組的檔案。  
@@ -721,7 +704,7 @@ CImage::GetExporterFilterString(
 
   
  `dwExclude`  
- 指定要從清單中排除檔案類型的位元旗標組。 允許的旗標如下︰  
+ 指定要從清單中排除檔案類型的位元旗標組。 允許的旗標如下：  
   
 - **excludeGIF** = 0x01 排除 GIF 檔。  
   
@@ -743,7 +726,7 @@ CImage::GetExporterFilterString(
   
 - **excludeDefaultLoad** = 0，所有檔案類型包含預設的負載  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF**儲存，這些檔案會排除，依預設因為他們通常有特殊需求。  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF**儲存，這些檔案會排除，依預設因為他們通常有特殊需求。  
   
  `chSeparator`  
  使用映像格式之間的分隔符號。 請參閱**備註**如需詳細資訊。  
@@ -754,15 +737,15 @@ CImage::GetExporterFilterString(
 ### <a name="remarks"></a>備註  
  您可以將產生的格式字串傳遞至您的 MFC [CFileDialog](../../mfc/reference/cfiledialog-class.md) [另存新檔] 對話方塊中的物件公開可用的映像的檔案副檔名格式。  
   
- 參數*strExporter*格式︰  
+ 參數*strExporter*格式：  
   
- 檔案 description0 |\*.ext0 | filedescription1 |\*.ext1 |...檔案描述*n*|\*。ext *n*||  
+ 檔案 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...檔案描述 *n* &#124;\*。ext  *n* &#124; &#124;  
   
- 在 ' |' 分隔字元所指定`chSeparator`。 例如:   
+ 其中 ' &#124;' 由所指定的分隔字元`chSeparator`。 例如:   
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用預設分隔字元 ' |' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞至通用的儲存檔案對話方塊中，請使用 '\0' 的 null 分隔符號。  
+ 使用預設的分隔符號 ' &#124;' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞至通用的儲存檔案對話方塊中，請使用 '\0' 的 null 分隔符號。  
   
 ##  <a name="getheight"></a>CImage::GetHeight  
  擷取的高度，單位為像素的影像。  
@@ -793,7 +776,7 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  陣列的 Guid，其中每個元素對應到其中一個字串中的檔案類型。 在範例中`pszAllFilesDescription`下列`aguidFileTypes`[0] 是`GUID_NULL`其餘陣列的值為目前的作業系統所支援的影像檔案格式。  
   
 > [!NOTE]
->  常數的完整清單，請參閱**影像檔案格式常數**中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+>  如需常數的完整清單，請參閱**影像檔案格式常數**Windows SDK 中。  
   
  `pszAllFilesDescription`  
  如果這個參數不是**NULL**，篩選條件字串會有一個額外的篩選器清單的開頭。 此篩選器的目前值`pszAllFilesDescription`如它的描述，並接受清單中的任何其他匯出工具所支援的任何延伸模組的檔案。  
@@ -810,7 +793,7 @@ CImage::GetImporterFilterString(
 
   
  `dwExclude`  
- 指定要從清單中排除檔案類型的位元旗標組。 允許的旗標如下︰  
+ 指定要從清單中排除檔案類型的位元旗標組。 允許的旗標如下：  
   
 - **excludeGIF** = 0x01 排除 GIF 檔。  
   
@@ -832,7 +815,7 @@ CImage::GetImporterFilterString(
   
 - **excludeDefaultLoad** = 0，所有檔案類型包含預設的負載  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF**儲存，這些檔案會排除，依預設因為他們通常有特殊需求。  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF**儲存，這些檔案會排除，依預設因為他們通常有特殊需求。  
   
  `chSeparator`  
  使用映像格式之間的分隔符號。 請參閱**備註**如需詳細資訊。  
@@ -840,15 +823,15 @@ CImage::GetImporterFilterString(
 ### <a name="remarks"></a>備註  
  您可以將產生的格式字串傳遞至您的 MFC [CFileDialog](../../mfc/reference/cfiledialog-class.md)內的物件公開可用的映像的檔案副檔名格式**開啟舊檔** 對話方塊。  
   
- 參數*strImporter*格式︰  
+ 參數*strImporter*格式：  
   
- 檔案 description0 |\*.ext0 | filedescription1 |\*.ext1 |...檔案描述*n*|\*。ext *n*||  
+ 檔案 description0 &#124;\*.ext0 &#124; filedescription1 &#124;\*.ext1 &#124;...檔案描述 *n* &#124;\*。ext  *n* &#124; &#124;  
   
- 在 ' |' 分隔字元所指定`chSeparator`。 例如:   
+ 其中 ' &#124;' 由所指定的分隔字元`chSeparator`。 例如:   
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- 使用預設分隔字元 ' |' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞給一般使用的 null 的分隔字元 '\0'**開啟舊檔** 對話方塊。  
+ 使用預設的分隔符號 ' &#124;' 如果您將此字串傳遞給 MFC`CFileDialog`物件。 如果您將此字串傳遞給一般使用的 null 的分隔字元 '\0'**開啟舊檔** 對話方塊。  
   
 ##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  擷取色彩表中的項目的數目上限。  
@@ -951,7 +934,7 @@ bool IsDIBSection() const throw();
  **true**如果附加的點陣圖 DIB 區段。 否則**false**。  
   
 ### <a name="remarks"></a>備註  
- 如果點陣圖不 DIB 區段，您無法使用下列`CImage`支援 DIB 區段點陣圖的方法︰  
+ 如果點陣圖不 DIB 區段，您無法使用下列`CImage`支援 DIB 區段點陣圖的方法：  
   
 - [GetBits](#getbits)  
   
@@ -1129,7 +1112,7 @@ BOOL MaskBlt(
  所指定的遮罩點陣圖的垂直的像素位移`hbmMask`參數。  
   
  `dwROP`  
- 指定前景和背景三元點陣作業程式碼的方法用來控制來源和目的地資料的組合。 背景的點陣作業程式碼儲存在此值; 高序位字組的高序位位元組前景點陣作業程式碼儲存在此值; 高序位字組的低序位位元組此值的低序位字組會被忽略，而且必須為零。 如需前景和背景，這個方法的內容中的討論，請參閱`MaskBlt`中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。 如需常見的點陣作業程式碼的清單，請參閱`BitBlt`中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 指定前景和背景三元點陣作業程式碼的方法用來控制來源和目的地資料的組合。 背景的點陣作業程式碼儲存在此值; 高序位字組的高序位位元組前景點陣作業程式碼儲存在此值; 高序位字組的低序位位元組此值的低序位字組會被忽略，而且必須為零。 如需前景和背景，這個方法的內容中的討論，請參閱`MaskBlt`Windows SDK 中。 如需常見的點陣作業程式碼的清單，請參閱`BitBlt`Windows SDK 中。  
   
  `rectDest`  
  若要參考`RECT`結構，用來識別目的地。  
@@ -1220,7 +1203,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>備註  
  如果`hbmMask`識別有效的單色點陣圖**PlgBit**遮罩從來源矩形的色彩資料位元會使用此點陣圖。  
   
- 這個方法適用於 Windows NT 4.0 及更新版本的版本。 請參閱[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]如需詳細資訊。  
+ 這個方法適用於 Windows NT 4.0 及更新版本的版本。 請參閱[PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804)如需詳細資訊的 Windows SDK 中。  
   
 ##  <a name="releasedc"></a>CImage::ReleaseDC  
  釋放裝置內容。  
@@ -1272,7 +1255,7 @@ HRESULT Save(LPCTSTR pszFileName,
 - **ImageFormatGIF** GIF 壓縮映像。  
   
 > [!NOTE]
->  常數的完整清單，請參閱**影像檔案格式常數**中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+>  如需常數的完整清單，請參閱**影像檔案格式常數**Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT`。  
@@ -1321,7 +1304,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
  您將設定像素色彩。  
   
 ### <a name="remarks"></a>備註  
- 此方法失敗如果像素座標所選的裁剪區域外的圓周。  
+ 如果像素座標所選的裁剪區域外的圓周，這個方法將會失敗。  
   
 ##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
  設定像素色彩的色彩位於`iIndex`調色盤的色彩。  
@@ -1438,7 +1421,7 @@ BOOL StretchBlt(
  以邏輯單位，表示目的矩形的高度。  
   
  `dwROP`  
- 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式位元 （所定義的目前選取的筆刷）。 請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]其他點陣作業碼及其描述的清單。  
+ 要執行的點陣作業。 點陣作業程式碼會定義如何結合以形成目的地的來源、 目的地和模式位元 （所定義的目前選取的筆刷）。 請參閱[BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) Windows SDK 中針對其他的點陣作業碼及其描述的清單。  
   
  `rectDest`  
  若要參考[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，用來識別目的地。  
@@ -1462,7 +1445,7 @@ BOOL StretchBlt(
  如果成功，則為非零，否則為 0。  
   
 ### <a name="remarks"></a>備註  
- 如需詳細資訊，請參閱[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120)中[!INCLUDE[winSDK](./includes/winsdk_md.md)]。  
+ 如需詳細資訊，請參閱[StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) Windows SDK 中。  
   
 ##  <a name="transparentblt"></a>Transparentblt  
  將點陣圖從來源裝置內容複製到這個目前的裝置內容。  
@@ -1580,10 +1563,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
  [SimpleImage 範例](../../visual-cpp-samples.md)   
  [裝置獨立點陣圖](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)
- [裝置獨立點陣圖](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
+ [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)[裝置獨立點陣圖](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
-
 
 
 

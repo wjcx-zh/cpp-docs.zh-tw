@@ -1,33 +1,30 @@
 ---
-title: "usesgetlasterror | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.usesgetlasterror"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "usesgetlasterror attribute"
+title: "usesgetlasterror |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.usesgetlasterror
+dev_langs: C++
+helpviewer_keywords: usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cf3cfd6d1b0e484b31769184b2fae5a6b012a58e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# usesgetlasterror
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-告知呼叫端是否呼叫該函式時，卻發生錯誤，然後呼叫端就可以呼叫`GetLastError`以取得錯誤的程式碼。  
+# <a name="usesgetlasterror"></a>usesgetlasterror
+會告知呼叫端是否有錯誤時呼叫該函式，然後呼叫端就可以再呼叫`GetLastError`擷取錯誤碼。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,25 +32,24 @@ manager: "ghogen"
   
 ```  
   
-## 備註  
- **Usesgetlasterror** C\+\+ 屬性具有相同的功能，為 [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Usesgetlasterror** c + + 屬性具有相同的功能[usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) MIDL 屬性。  
   
-## 範例  
- 請參閱 [idl\_module](../windows/idl-module.md) 範例示範如何使用 **usesgetlasterror**。  
+## <a name="example"></a>範例  
+ 請參閱[idl_module](../windows/idl-module.md)如需範例示範如何使用**usesgetlasterror**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**單元**屬性|  
+|**適用於**|**模組**屬性|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   

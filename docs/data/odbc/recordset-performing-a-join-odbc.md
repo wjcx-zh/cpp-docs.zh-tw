@@ -1,50 +1,50 @@
 ---
-title: "資料錄集：執行聯結 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料繫結 [C++], 資料錄集中的資料行"
-  - "資料繫結 [C++], 資料錄集資料行"
-  - "篩選條件 [C++], 資料錄集的聯結條件"
-  - "聯結 [C++], 在資料錄集中"
-  - "ODBC 資料錄集 [C++], 聯結"
-  - "資料錄集 [C++], 資料繫結"
-  - "資料錄集 [C++], 聯結資料表"
+title: "資料錄集： 執行聯結 (ODBC) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- joins [C++], in recordsets
+- data binding [C++], recordset columns
+- recordsets [C++], binding data
+- data binding [C++], columns in recordsets
+- filters [C++], join conditions for recordsets
+- ODBC recordsets [C++], joins
+- recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5366484ab4e2b08ababd887e0f09c9f97ce6c02f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 資料錄集：執行聯結 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本文件適用於 MFC ODBC 類別。  
+# <a name="recordset-performing-a-join-odbc"></a>資料錄集：執行聯結 (ODBC)
+本主題適用於 MFC ODBC 類別。  
   
-## 什麼是聯結  
- 聯結 \(Join\) 作業是一種常見的資料存取工作，讓您能以單一資料錄集物件來使用一個或更多個資料表的資料錄。  聯結兩個或更多的資料表會產生一個可以包含每個資料表資料行的資料錄集，而在您的應用程式只會看到一份單一資料表。  有時聯結會使用所有資料表內的所有資料行，而有時聯結內的 SQL **SELECT** 子句只使用每個資料表中的某些資料行。  資料錄類別支援唯讀聯結，而不支援可更新的聯結。  
+## <a name="what-a-join-is"></a>什麼是聯結  
+ 聯結作業，常見的資料存取工作，可讓您使用多個使用單一資料錄集物件的資料表中的資料。 聯結兩個或多個資料表會產生可以包含的每個資料表，資料行，但會顯示為您的應用程式的單一資料表的資料錄集。 有時聯結會使用所有的資料行中所有資料表，但有時候 SQL**選取**子句聯結中的只使用某些的每個資料表中的資料行。 資料庫類別支援唯讀的聯結，但不是能更新聯結。  
   
- 若要從聯結資料表中選取包含資料行的資料錄，您需要取得下列項目：  
+ 若要選取包含聯結的資料表中的資料行的記錄，您需要下列項目：  
   
--   一個包含所有聯結的資料表名稱之資料表清單。  
+-   資料表清單，其中包含所要加入的所有資料表的名稱。  
   
--   一個包含所有參與資料行名稱的資料行清單。  比對資料表名稱，取得名稱相同但位於不同資料表內的資料行。  
+-   資料行清單，其中包含所有參與的資料行的名稱。 具有相同名稱但不同資料表中的資料行被限定資料表名稱。  
   
--   用以指定聯結的資料表中資料行之篩選條件 \(SQL **WHERE** 子句\)。  這個篩選條件形式為 Table1.KeyCol \= Table2.KeyCol，並實際地完成聯結。  
+-   篩選 (SQL**其中**子句) 指定的資料表會聯結的資料行。 此篩選條件會採用"Table1.KeyCol = Table2.KeyCol 」 並實際完成聯結。  
   
- 您也可以將多對資料行納入方程式 \(每個配對會以 SQL 關鍵字 **AND** 聯結\)，使用相同方法來聯結兩個以上的資料表。  
+ 您也可以納入方程式多對資料行，每個配對會以 SQL 關鍵字相同的方式加入兩個以上資料表**AND**。  
   
-## 請參閱  
- [資料錄集 \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [資料錄集：宣告預先定義查詢的類別 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [資料錄集：宣告資料表的類別 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [資料錄集：重新查詢資料錄集 \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+## <a name="see-also"></a>另請參閱  
+ [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [資料錄集： 宣告預先定義的查詢 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [資料錄集： 宣告資料表 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

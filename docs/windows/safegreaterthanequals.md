@@ -1,33 +1,30 @@
 ---
-title: "SafeGreaterThanEquals | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeGreaterThanEquals"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeGreaterThanEquals 函式"
+title: "SafeGreaterThanEquals |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeGreaterThanEquals
+dev_langs: C++
+helpviewer_keywords: SafeGreaterThanEquals function
 ms.assetid: 43312fa9-d925-4f9f-a352-a190c02b3005
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 16a13e49cb33698810c536839eb434109557466e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# SafeGreaterThanEquals
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 比較兩個數字。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <typename T, typename U>  
@@ -37,32 +34,32 @@ inline bool SafeGreaterThanEquals (
 ) throw ();  
 ```  
   
-#### 參數  
- \[in\] `t`  
- 要比較的第一個數字。  這個必須為型別 T。  
+#### <a name="parameters"></a>參數  
+ [in] `t`  
+ 要比較的第一個數字。 這必須為類型 T。  
   
- \[in\] `u`  
- 要比較的第二個數字。  這個必須為型別 U。  
+ [in] `u`  
+ 要比較的第二個數字。 這必須為類型 U。  
   
-## 傳回值  
- 如果 `t` 大於或等於 `u` 則為 `true`；否則為 `false`。  
+## <a name="return-value"></a>傳回值  
+ `true`如果`t`大於或等於`u`，否則為`false`。  
   
-## 備註  
- `SafeGreaterThanEquals` 增強了標準比較運算子，讓您可以比較兩個不同型別的數字。  
+## <a name="remarks"></a>備註  
+ `SafeGreaterThanEquals`增強的一般比較運算子，因為它可讓您比較兩個不同類型的數字。  
   
- 這個方法是 [SafeInt 程式庫](../windows/safeint-library.md) 的一部分，為單一比較運算設計，並且不必建立 [SafeInt 類別](../windows/safeint-class.md) 的執行個體。  
+ 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，適用於單一比對作業不需要建立的執行個體[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  這個方法只有在當單一數學運算必須被保護時使用。  如果同時有多個運算，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
+>  此方法應只有在必須保護單一數學作業時才使用。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需此範本類型 T 與 U 的詳細資訊，請參閱 [SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** safeint.h  
   
  **命名空間：** Microsoft::Utilities  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

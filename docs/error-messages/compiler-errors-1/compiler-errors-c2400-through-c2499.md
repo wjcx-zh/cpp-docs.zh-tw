@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -34,19 +33,17 @@ helpviewer_keywords:
 - C2478
 - C2481
 - C2497
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6586dfb0e0c3d63d87d6790f0cbe1bb8a832133e
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c6d0fde64db90c53e5a745551e378000f898fe7e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-errors-c2400-through-c2499"></a>編譯器錯誤 C2400 到 C2499
 這部分文件中的文章包含 Visual C++ 編譯器錯誤的子區段的相關資訊。 您可以在此存取資訊，或是在 Visual Studio 的 [ **輸出** ] 視窗，您可以選取錯誤代碼然後選擇 F1 鍵。  
@@ -148,7 +145,7 @@ ms.lasthandoff: 10/10/2017
 |[編譯器錯誤 C2491](compiler-error-c2491.md)|'*識別碼*': dllimport 定義*函式*不允許|  
 |[編譯器錯誤 C2492](compiler-error-c2492.md)|'*變數*': 具有執行緒儲存期的資料可能不會有 dll 介面|  
 |[編譯器錯誤 C2493](compiler-error-c2493.md)|不合法的 __based 形式|  
-|[編譯器錯誤 C2494](compiler-error-c2494.md)|'*關鍵字*' 不能從篩選條件運算式內呼叫或\_\_最後/finally 區塊|  
+|[編譯器錯誤 C2494](compiler-error-c2494.md)|'*關鍵字*' 不能從篩選條件運算式內呼叫或 &#95; &#95; 最後/finally 區塊|  
 |[編譯器錯誤 C2495](compiler-error-c2495.md)|'*識別碼*': '__declspec(noexcept)' 只能套用至函式宣告或定義|  
 |[編譯器錯誤 C2496](compiler-error-c2496.md)|'*識別碼*': 'selectany' 只能套用至具有外部連結的資料項目|  
 |編譯器錯誤 C2497|'*識別碼*': 'implementation_key' 只能套用至函式宣告|  

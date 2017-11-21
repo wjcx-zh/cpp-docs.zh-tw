@@ -1,60 +1,61 @@
 ---
-title: "Hosting ActiveX Controls Using ATL AXHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActiveX 控制項 [C++], 裝載"
-  - "AXHost method"
-  - "Calendar control (ActiveX)"
-  - "Calendar control (ActiveX), hosting with ATL AXHost"
-  - "CAxWindow2T class"
-  - "裝載 ActiveX 控制項"
+title: "裝載 ActiveX 控制項使用 ATL AXHost |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CAxWindow2T class
+- Calendar control (ActiveX), hosting with ATL AXHost
+- Calendar control (ActiveX)
+- ActiveX controls [C++], hosting
+- hosting ActiveX controls
+- AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb2e7da3ed12b48f82f5769dd8436f0440031226
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Hosting ActiveX Controls Using ATL AXHost
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用各種 ATL 函式，本主題中的範例示範如何建立 AXHost 以及如何裝載 ActiveX 控制項。  它也會示範如何存取控制項和從所裝載控制項接收事件 \(使用 [IDispEventImpl](../atl/reference/idispeventimpl-class.md)\)。  這個範例以裝載 Calendar 控制項已在主視窗或子視窗。  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>裝載 ActiveX 控制項使用 ATL 類別
+本主題中的範例將示範如何建立 AXHost 以及如何裝載 ActiveX 控制項使用不同的 ATL 函式。 它也示範如何存取控制與接收事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 從裝載的控制項。 此範例會裝載子視窗或主視窗中的日曆控制項。  
   
- 請注意 `USE_METHOD` 符號的定義。  您可以變更這個符號的值變更為 1 和 8 之間。.  符號值決定控制項要如何建立:  
+ 請注意的定義`USE_METHOD`符號。 您可以變更此符號介於 1 到 8 之間的值。 符號的值會決定控制項建立的方式：  
   
--   對於建立裝載子類別的 `USE_METHOD`，呼叫的偶數值視窗並將它轉換為輸入控制項裝載。  對於奇數值，程式碼會建立為裝載的子視窗。  
+-   偶數值`USE_METHOD`，來建立主應用程式子類別的視窗呼叫並將它轉換成控制主機。 奇數的值，程式碼會建立做為主機的子視窗。  
   
--   如需 `USE_METHOD` 的值介於 1 和 4 之間，存取控制項和接收事件也會在主應用程式的呼叫中完成。  介於 5 和 8 之間的值會查詢介面的主機並攔截接收。  
+-   中的值`USE_METHOD`介於 1 到 4，存取控制項，以及接收的事件也會建立主應用程式的呼叫中完成。 介於 5 到 8 之間的值查詢介面的主機，並攔截 (hook) 接收。  
   
- 這個摘要:  
+ 摘要如下：  
   
-|USE\_METHOD|主應用程式|控制存取和接收事件。|這個範例所示範的函式|  
-|-----------------|-----------|----------------|----------------|  
-|1|子視窗|進一步|CreateControlLicEx|  
-|2|主視窗|進一步|AtlAxCreateControlLicEx|  
-|3|子視窗|進一步|CreateControlEx|  
-|4|主視窗|進一步|AtlAxCreateControlEx|  
-|5|子視窗|多個步驟。|CreateControlLic|  
-|6|主視窗|多個步驟。|AtlAxCreateControlLic|  
-|7|子視窗|多個步驟。|CreateControl|  
-|8|主視窗|多個步驟。|AtlAxCreateControl|  
+|USE_METHOD|主機|控制存取和事件接收|示範的函式|  
+|-----------------|----------|--------------------------------------|---------------------------|  
+|1|子視窗|其中一個步驟|CreateControlLicEx|  
+|2|主視窗|其中一個步驟|AtlAxCreateControlLicEx|  
+|3|子視窗|其中一個步驟|CreateControlEx|  
+|4|主視窗|其中一個步驟|AtlAxCreateControlEx|  
+|5|子視窗|多個步驟|CreateControlLic|  
+|6|主視窗|多個步驟|AtlAxCreateControlLic|  
+|7|子視窗|多個步驟|CreateControl|  
+|8|主視窗|多個步驟|AtlAxCreateControl|  
   
- [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/CPP/hosting-activex-controls-using-atl-axhost_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [控制項內含項目常見問題集](../atl/atl-control-containment-faq.md)   
- [AtlAxCreateControl](../Topic/AtlAxCreateControl.md)   
- [AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)   
- [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)   
- [AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)   
- [CAxWindow2T Class](../atl/reference/caxwindow2t-class.md)   
- [IAxWinHostWindowLic Interface](../atl/reference/iaxwinhostwindowlic-interface.md)
+ [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
+ [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
+ [AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [CAxWindow2T 類別](../atl/reference/caxwindow2t-class.md)   
+ [IAxWinHostWindowLic 介面](../atl/reference/iaxwinhostwindowlic-interface.md)
+

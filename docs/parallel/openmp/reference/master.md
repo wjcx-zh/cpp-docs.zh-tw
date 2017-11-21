@@ -1,32 +1,30 @@
 ---
-title: "master | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "master"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "master OpenMP directive"
+title: "主要 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: master
+dev_langs: C++
+helpviewer_keywords: master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 405c5f6cfba3ab60abac30fdb8a0ac730f1ab8b7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# master
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定只有主版的 threadshould 執行程式的一個區段。  
+# <a name="master"></a>主要
+指定只有主要 threadshould 執行的程式 > 一節。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma omp master  
@@ -35,14 +33,14 @@ caps.handback.revision: 11
 }  
 ```  
   
-## 備註  
- **主要**指示詞可支援任何 OpenMP 子句。  
+## <a name="remarks"></a>備註  
+ **主要**指示詞可支援不含 OpenMP 子句。  
   
- [single](../../../parallel/openmp/reference/single.md)指示詞可讓您指定一段程式碼應該會在單一執行緒，不一定是主執行緒上執行。  
+ [單一](../../../parallel/openmp/reference/single.md)指示詞可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。  
   
- 如需詳細資訊，請參閱 [2.6.1 master Construct](../../../parallel/openmp/2-6-1-master-construct.md)。  
+ 如需詳細資訊，請參閱[2.6.1 master 建構](../../../parallel/openmp/2-6-1-master-construct.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_master.cpp  
@@ -77,10 +75,13 @@ int main( )
 }  
 ```  
   
-  **\[0\] \= 0**  
-**\[1\] \= 1**  
-**\[2\] \= 4**  
-**\[3\] \= 9**  
-**\[4\] \= 16**   
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+a[0] = 0  
+a[1] = 1  
+a[2] = 4  
+a[3] = 9  
+a[4] = 16  
+```  
+  
+## <a name="see-also"></a>另請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

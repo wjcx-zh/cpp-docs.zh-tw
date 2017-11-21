@@ -1,42 +1,41 @@
 ---
-title: "資料來源：以程式設計方式設定 ODBC 資料來源 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQLConfigDataSource"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "設定 ODBC 資料來源"
-  - "ODBC 連接, 設定"
-  - "ODBC 資料來源, 設定"
-  - "SQLConfigDataSource 方法範例"
+title: "資料來源： 以程式設計方式設定 ODBC 資料來源 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SQLConfigDataSource
+dev_langs: C++
+helpviewer_keywords:
+- ODBC data sources, configuring
+- SQLConfigDataSource method example
+- ODBC connections, configuring
+- configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cd401acedbdfd8928ab3b2b085ce02595bdaa13b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 資料來源：以程式設計方式設定 ODBC 資料來源
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-這個主題會說明如何以程式設計方式設定開放式資料庫連接 \(ODBC\) 資料來源名稱。  這個功能將提供您無須強制使用者明確使用 ODBC 管理員 \(ODBC 管理員\) 或其他程式以指定資料來源名稱，就可存取資料的彈性。  
+# <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>資料來源：以程式設計方式設定 ODBC 資料來源
+本主題說明如何以程式設計方式設定開放式資料庫連接 (ODBC) 資料來源名稱。 這可讓您彈性來存取資料而不未強制使用者明確使用 ODBC 管理員或其他程式來指定資料來源的名稱。  
   
- 通常，使用者會在相關的資料庫管理系統 \(DBMS\) 支援這個作業的情況下，執行 ODBC 管理員來建立資料來源。  
+ 一般而言，使用者執行 ODBC 管理員，才能建立資料來源，如果相關聯的資料庫管理系統 (DBMS) 支援這項作業。  
   
- 您在透過 ODBC 管理員建立 Microsoft Access ODBC 資料來源時，會有兩種選擇：您可以選取現有的 .mdb 檔，或建立新的 .mdb 檔。  您無法以程式設計方式建立 MFC ODBC 應用程式的 .mdb 檔。  因此，如果應用程式需要您將資料放置在 Microsoft Access 資料來源 \(.mdb 檔\)，您可能會很想擁有可以在任何需要情況下使用或複製的空白 .mdb 檔。  
+ 建立 Microsoft 存取 ODBC 資料來源透過 ODBC 管理員，當您有兩個選擇： 您可以選取現有的.mdb 檔案，或您可以建立新的.mdb 檔案。 沒有任何程式設計的方式建立的.mdb 檔案從 MFC ODBC 應用程式。 因此，如果您的應用程式需要將資料放入 Microsoft Access 資料來源 （.mdb 檔案），您很可能會想要有空白的.mdb 檔案，您可以使用或複製需要時。  
   
- 但是有許多 DBMS 允許以程式設計方式建立資料來源。  某些資料來源會為資料庫維護一個目錄規格。  也就是說，目錄便是資料來源，而資料來源中的每個資料表則儲存為個別的檔案 \(若為 dBASE，每個資料表就是一個 .dbf 檔\)。  其他 ODBC 資料庫適用的驅動程式，例如 Microsoft Access 和 SQL Server，則需要在建立資料來源之前先滿足某些特定條件。  例如，您必須在使用 SQL Server ODBC 驅動程式之前，就先建立 SQL Server 電腦。  
+ 不過，有許多 Dbms 允許以程式設計方式的資料來源建立。 某些資料來源會維護資料庫的目錄規格。 也就是目錄的資料來源，而且每個資料來源中的資料表儲存在個別的檔案 （若為 dBASE，每個資料表就是.dbf 檔案）。 其他的 ODBC 資料庫，例如 Microsoft Access 和 SQL Server 驅動程式需要在建立資料來源之前，無法滿足某個特定準則。 例如，當 SQL Server ODBC 驅動程式，您需要建立 SQL Server 電腦。  
   
-##  <a name="_core_sqlconfigdatasource_example"></a> SQLConfigDataSource 範例  
- 下列範例會使用 **::SQLConfigDataSource** ODBC API 函式，建立名為 New Excel Data Source 的新 Excel 資料來源：  
+##  <a name="_core_sqlconfigdatasource_example"></a>SQLConfigDataSource 範例  
+ 下列範例會使用**:: SQLConfigDataSource**呼叫新的 Excel 資料來源建立新的 Excel 資料來源的 ODBC API 函式：  
   
 ```  
 SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",   
@@ -47,78 +46,78 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
                    "MaxScanRows=20\0");  
 ```  
   
- 請注意，該資料來源實際上是一個目錄 \(C:\\EXCELDIR\)；因此必須存在這個目錄。  Excel 驅動程式會把目錄當成資料來源，並且將檔案當成個別資料表來使用 \(每個 .xls 檔為一個資料表\)。  
+ 請注意，資料來源是實際的目錄 (C:\EXCELDIR);此目錄必須存在。 Excel 驅動程式會使用當做其資料來源和檔案當做個別的資料表 （一個資料表，每個.xls 檔案） 目錄。  
   
- 如需建立資料表的詳細資訊，請參閱[資料來源：以程式設計方式建立 ODBC 資料來源資料表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。  
+ 如需有關建立資料表的詳細資訊，請參閱[資料來源： 以程式設計方式建立 ODBC 資料來源中的資料表](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)。  
   
- 下面資訊討論需要傳遞至 **::SQLConfigDataSource** ODBC API 函式的參數。  若要使用 **::SQLConfigDataSource**，您必須包含 Odbcinst.h 標頭檔 \(Header File\)，並使用 Odbcinst.lib 匯入程式庫。  在執行階段，Odbccp32.dll \(或 16 位元的 Odbcinst.dll\) 也必須在路徑中。  
+ 下列資訊將討論所要傳遞至所需的參數**:: SQLConfigDataSource** ODBC API 函式。 若要使用**:: SQLConfigDataSource**，您必須包含 Odbcinst.h 標頭檔，並使用 Odbcinst.lib 匯入程式庫。 此外，Odbccp32.dll 必須在執行的階段 （或 Odbcinst.dll 的 16 位元） 是在路徑中。  
   
- 您可以使用 ODBC 管理員或類似的公用程式，建立 ODBC 資料來源名稱。  但是有時為了取得存取權限，您最好直接從應用程式建立一個資料來源，而不需讓使用者執行一個單獨的公用程式。  
+ 您可以建立使用 ODBC 管理員或類似的公用程式的 ODBC 資料來源名稱。 不過，有時候很想要直接從您的應用程式，以取得存取權，而不需要使用者執行不同的公用程式中建立資料來源名稱。  
   
- ODBC 管理員 \(通常安裝在 \[控制台\]\) 藉由在 Windows 登錄 \(若為 16 位元，則在 Odbc.ini 檔案中\) 放置項目來建立新的資料來源。  ODBC 驅動程式管理員會查詢這個檔案來取得資料來源的必要資訊。  知道登錄內需放置何種資訊是非常重要的，因為您需要在對 **::SQLConfigDataSource** 呼叫時提供這份資訊。  
+ ODBC （通常安裝於控制台） 的系統管理員會建立新的資料來源，方法是將項目放置在 Windows 登錄中 （或的 Odbc.ini 檔案中的 16 位元）。 ODBC 驅動程式管理員會查詢此檔案以取得有關資料來源的必要的資訊。 請務必知道哪些資訊必須放在登錄中，因為您需要提供呼叫**:: SQLConfigDataSource**。  
   
- 儘管這份資訊可以不經 **::SQLConfigDataSource** 就直接寫入登錄，但任何如此處理的應用程式仍需使用目前驅動程式管理員用以維持其資料的技術。  如果有較新版本的 ODBC 驅動程式管理員，使用不同的方式實作保留資料來源的資料錄，則任何使用這項技術的應用程式都會中斷。  如果有提供較新版本，通常會建議使用一個 API 函式的做法。  例如，如果您使用 **::SQLConfigDataSource** 函式，程式碼就可以從 16 位元移植成 32 位元程式碼，因為該函式正確寫入 Odbc.ini 檔案或登錄。  
+ 雖然此資訊無法直接寫入登錄而不使用**:: SQLConfigDataSource**，這樣做的任何應用程式依賴驅動程式管理員會使用來維護其資料的目前技巧。 如果不同的方式保留資料來源的 ODBC 驅動程式管理員實作記錄有較新版本，任何使用這項技術的應用程式已中斷。 時，通常建議使用 API 函數時所提供。 比方說，您的程式碼時從 16 位元移植至 32 位元您使用**:: SQLConfigDataSource**函式，因為函式會正確地寫入至 Odbc.ini 檔案或登錄。  
   
-##  <a name="_core_sqlconfigdatasource_parameters"></a> SQLConfigDataSource 參數  
- 下面將說明 **::SQLConfigDataSource** 函式的參數。  如需詳細資訊，請參閱 1.5 版和更新版本的 Visual C\+\+ 所提供的《ODBC API 程式設計人員參考》。  
+##  <a name="_core_sqlconfigdatasource_parameters"></a>SQLConfigDataSource 參數  
+ 以下說明的參數**:: SQLConfigDataSource**函式。 大部分的資訊取自 ODBC API*程式設計人員參考*提供 Visual c + + 1.5 版及更新版本。  
   
-###  <a name="_core_function_prototype"></a> 函式原型  
+###  <a name="_core_function_prototype"></a>函式原型  
   
 ```  
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);  
 ```  
   
-### 備註  
+### <a name="remarks"></a>備註  
   
-####  <a name="_core_parameters_and_usage"></a> 參數和用法  
+####  <a name="_core_parameters_and_usage"></a>參數和使用方式  
  *hwndParent*  
- 此視窗會被指定成任何由 ODBC 驅動程式管理員或特定 ODBC 驅動程式所建，用來從使用者取得其他新資料來源的相關資訊之對話方塊。  如果 `lpszAttributes` 參數未提供足夠資訊，將會出現一個對話方塊。  *hwndParent* 參數可能是 **NULL**。  
+ 指定為擁有者的任何 ODBC 驅動程式管理員或特定的 ODBC 驅動程式會建立新的資料來源的相關使用者從取得其他資訊的對話方塊視窗。 如果`lpszAttributes`參數沒有提供足夠的資訊，會出現一個對話方塊。 *HwndParent*參數可能為**NULL**。  
   
  `lpszDriver`  
- 驅動程式說明。  這是呈現給使用者的名稱，而非實體的驅動程式名稱 \(即 DLL\)。  
+ 驅動程式的描述。 這是提供給使用者，而不是實體的驅動程式名稱 (DLL) 名稱。  
   
  `lpszAttributes`  
- 以 "keyname\=value" 格式表示的屬性清單。  這些字串會 null 結束字元分隔，在清單結尾會以連續兩個 null 結束字元表示。  這些屬性主要是預設的驅動程式特定項目，其將會成為新資料來源的登錄資料。  ODBC API 參考函式有一個尚未提及的重要關鍵，即可以指定新資料來源名稱的 "DSN" \(即，資料來源名稱\)。  項目的其他部分則專屬於新資料來源的驅動程式。  由於驅動程式會在對話方塊向使用者要求新值，因此通常並不需要提供所有的項目 \(將 *hwndParent* 設為 **NULL** 即可完成\)。您可以明確地提供預設值，如此一來，使用者就不會收到這種提示。  
+ 中表單的屬性清單 」 keyname = 值 」。 這些字串分隔兩個連續的 null 結束字元，清單結尾的 null 結束字元。 這些屬性是主要預設驅動程式特定項目，請移到新的資料來源登錄。 ODBC API 參考，這個函式中未提及的一個重要金鑰是 「 DSN 」 （「 資料來源名稱 」），指定新的資料來源的名稱。 其餘的項目僅適用於新的資料來源的驅動程式。 通常不需要提供所有的項目，因為驅動程式可以提示使用者將新值的對話方塊。 (設定*hwndParent*至**NULL**會造成這。)您可以明確提供預設值，因此不會提示使用者。  
   
-###### 若要決定使用 ODBC 管理員的 lpszDriver 參數驅動程式的說明  
+###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>若要判斷驅動程式使用 ODBC 管理員 lpszDriver 參數的描述  
   
-1.  執行 ODBC 管理員。  
+1.  執行 ODBC 系統管理員。  
   
-2.  按一下 \[**加入**\]。  
+2.  按一下 [加入] 。  
   
- 您會取得已安裝的驅動程式清單和驅動程式的說明。  將這個說明當成 `lpszDriver` 參數使用。  請注意，您需要使用整個說明，例如 "Excel Files \(\*.xls\)"，其中包括了副檔名和可能出現在說明中的括弧。  
+ 這可讓您安裝的驅動程式及其描述的清單。 使用這項描述為`lpszDriver`參數。 請注意，您會使用整個描述，例如 「 Excel 檔案 (*.xls) 」，包括檔案的副檔名和括號，如果有的話描述中。  
   
- 另一種做法是，您可以檢查登錄 \(若為 16 位元，則是在 Odbcinst.ini 檔案中\)，其中包含所有驅動程式項目的清單，和 "ODBC Drivers" 登錄機碼 \(Registry Key\) 下的說明 \(或是 Odbcinst.ini 檔案中的 \[ODBC 驅動程式\] 區段\)。  
+ 或者，您可以檢查登錄 （或 16 位元，Odbcinst.ini 檔案），其中包含驅動程式的所有項目和下登錄機碼 」 的 ODBC 驅動程式 」 的說明 （或在 Odbcinst.ini 中的區段 [ODBC 驅動程式]） 的清單。  
   
- 尋找 `lpszAttributes` 參數的關鍵名稱和值的一種方式，是檢查已完成設定的資料來源 \(可能是由 ODBC 管理員所設定\) 的 Odbc.ini 檔案：  
+ 其中一種方式來尋找 keynames 和值`lpszAttributes`參數是要檢查已設定的資料來源 （也許是一個由 ODBC 系統管理員已設定） 的 Odbc.ini 檔案。  
   
-###### 若要尋找 lpszAttributes 參數的關鍵名稱和值  
+###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>若要尋找 keynames 和 lpszAttributes 參數的值  
   
-1.  執行 Windows 登錄編輯程式 \(若是 16 位元，請開啟 Odbc.ini 檔案\)。  
+1.  執行 Windows 登錄編輯程式 （或者，16 位元，如開啟 Odbc.ini 檔案）。  
   
-2.  使用下列任一方式尋找 ODBC 資料來源資訊：  
+2.  尋找 ODBC 資料來源資訊使用下列其中一項：  
   
-    -   若是 32 位元，請尋找左窗格中的 **HKEY\_CURRENT\_USER\\Software\\ODBC\\ODBC.INI\\ODBC Data Sources** 機碼。  
+    -   32 位元，找到此金鑰**HKEY_CURRENT_USER\Software\ODBC\ODBC。INI\ODBC 資料來源**的左窗格中。  
   
-         右窗格則列出形式項目：pub: REG\_SZ:*\<資料來源名稱\>*，其中 *\<資料來源名稱\>* 是一個以您希望使用的驅動程式之所需設定完成設定的資料來源。  選取您希望使用的資料來源，例如 SQL Server。  接在 pub: 字串後的項目依照順序是，關鍵名稱和用在您的 `lpszAttributes` 參數中的值。  
+         右窗格會列出的項目: 「 pub: REG_SZ:*<data source name>*"，其中 *<data source name>* 與您想要的驅動程式所需的設定已設定為資料來源若要使用。 選取您想，資料來源，例如 SQL Server。 下列字串的項目 」 pub:"都是，順序、 keyname 及值可以使用您`lpszAttributes`參數。  
   
-    -   若是 16 位元，請在 Odbc.ini 檔案中尋找由 \[*\<資料來源名稱\>*\] 所標記的區段。  
+    -   16 位元，找出區段，來標記的 Odbc.ini 檔案中 [*\<資料來源名稱 >*]。  
   
-         跟隨在這行之後的行，格式是 "keyname\=value"。  這些是實際上將用於您的 `lpszAttributes` 參數中的項目。  
+         下列這一行的行屬於表單"keyname = 值 」。 這些是完全使用中的項目您`lpszAttributes`參數。  
   
- 您可能也需要查閱您將使用的特定驅動程式文件。  線上說明中可以找到驅動程式的有用資訊，只要執行 ODBC 管理員即可存取此線上說明。  這些說明檔案在 Windows NT、Windows 3.1 或 Windows 95 上通常是放置在 WINDOWS\\SYSTEM 目錄中。  
+ 您也可以檢查您要使用的特定驅動程式文件。 您可以在驅動程式，您可以藉由執行 ODBC 管理員來存取線上說明中找到有用的資訊。 這些檔案通常位於 WINDOWS\SYSTEM 目錄 Windows NT、 Windows 3.1 或 Windows 95。  
   
-###### 若要取得 ODBC 驅動程式的線上說明  
+###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>若要取得的 ODBC 驅動程式的線上說明  
   
-1.  執行 ODBC 管理員。  
+1.  執行 ODBC 系統管理員。  
   
-2.  按一下 \[**加入**\]。  
+2.  按一下 [加入] 。  
   
-3.  選取驅動程式名稱。  
+3.  選取的驅動程式名稱。  
   
-4.  按一下 \[**確定**\]。  
+4.  按一下 [確定]。  
   
- 請在 ODBC 管理員為建立一個新的資料來源而顯示該特定驅動程式資訊時，按一下 \[說明\]。  如此會開啟特定驅動程式的說明檔案，內容通常包含了使用驅動程式的重要資訊。  
+ 當 ODBC 管理員顯示建立新的資料來源，該特定驅動程式的資訊時，請按一下**協助**。 這會開啟該特定的驅動程式，通常包含有關使用驅動程式的重要資訊的說明檔。  
   
-## 請參閱  
- [資料來源 \(ODBC\)](../../data/odbc/data-source-odbc.md)
+## <a name="see-also"></a>另請參閱  
+ [資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)

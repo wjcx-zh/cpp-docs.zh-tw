@@ -4,50 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3391
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3391
+f1_keywords: C3391
+dev_langs: C++
+helpviewer_keywords: C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: 7b5922ccf353162dc32c99e3818227639d0f5985
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 8501d0a645d656bd0c86f093d1591985f9a3499a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3391"></a>編譯器錯誤 C3391
-'type_arg': 無效的型別引數的泛型參數的泛型 'generic_type'，' 參數必須是不可為 null 的實值型別  
+'type_arg': 對泛型參數 'param' 屬於泛型 'generic_type'，不正確的型別引數必須是不可為 null 的實值型別  
   
-泛型類型未正確地具現化。 請檢查類型定義。 如需詳細資訊，請參閱<xref:System.Nullable>和[泛型](../../windows/generics-cpp-component-extensions.md)。</xref:System.Nullable>  
+泛型類型未正確地具現化。 請檢查類型定義。 如需詳細資訊，請參閱<xref:System.Nullable>和[泛型](../../windows/generics-cpp-component-extensions.md)。  
   
 ## <a name="example"></a>範例  
-下列範例會使用 C# 建立元件，其中包含已撰寫 C + 中的泛型型別時，不支援某些條件約束的泛型型別 + CLI。 如需詳細資訊，請參閱[型別參數的條件約束](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters)。  
+下列範例會使用 C#，建立包含具有 C + 中撰寫泛型類型時，不支援的特定條件約束的泛型類型的元件 + CLI。 如需詳細資訊，請參閱[型別參數的條件約束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。  
   
 ```cs  
 // C3391.cs  
@@ -57,7 +37,7 @@ public class GR<N>
 where N : struct {}  
 ```  
   
-C3391.dll 元件可用時，下列範例會產生 C3391。  
+可用 C3391.dll 元件時，下列範例會產生 C3391。  
   
 ```cpp  
 // C3391_b.cpp  

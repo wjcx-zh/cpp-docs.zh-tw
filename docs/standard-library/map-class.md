@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - map/std::map
-- map
 - map/std::map::allocator_type
 - map/std::map::const_iterator
 - map/std::map::const_pointer
@@ -52,35 +50,60 @@ f1_keywords:
 - map/std::map::swap
 - map/std::map::upper_bound
 - map/std::map::value_comp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- map class
+- std::map [C++]
+- std::map [C++], allocator_type
+- std::map [C++], const_iterator
+- std::map [C++], const_pointer
+- std::map [C++], const_reference
+- std::map [C++], const_reverse_iterator
+- std::map [C++], difference_type
+- std::map [C++], iterator
+- std::map [C++], key_compare
+- std::map [C++], key_type
+- std::map [C++], mapped_type
+- std::map [C++], pointer
+- std::map [C++], reference
+- std::map [C++], reverse_iterator
+- std::map [C++], size_type
+- std::map [C++], value_type
+- std::map [C++], at
+- std::map [C++], begin
+- std::map [C++], cbegin
+- std::map [C++], cend
+- std::map [C++], clear
+- std::map [C++], count
+- std::map [C++], crbegin
+- std::map [C++], crend
+- std::map [C++], emplace
+- std::map [C++], emplace_hint
+- std::map [C++], empty
+- std::map [C++], end
+- std::map [C++], equal_range
+- std::map [C++], erase
+- std::map [C++], find
+- std::map [C++], get_allocator
+- std::map [C++], insert
+- std::map [C++], key_comp
+- std::map [C++], lower_bound
+- std::map [C++], max_size
+- std::map [C++], rbegin
+- std::map [C++], rend
+- std::map [C++], size
+- std::map [C++], swap
+- std::map [C++], upper_bound
+- std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a4fa9aa24f2e6cdf9be4127f38637f57c08e588e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: ce9135d298a0b80cedae87f20d65f4e012502cae
+ms.sourcegitcommit: 0bbc9aac12c926b2b03726ae5b4a09d916e17d6b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="map-class"></a>map 類別
 從每個項目都是資料值與排序鍵組的集合，用於資料儲存和擷取。 索引鍵的值是唯一的，用於自動排序資料。  
@@ -424,7 +447,7 @@ typedef implementation-defined const_iterator;
   
  map 所定義的 `const_iterator` 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 `pair`\< **constKey**, **Type**>，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
   
- 若要對指向 map 中某個元素的 `const_iterator``cIter` 進行取值，請使用 **->** 運算子。  
+ 取值 （dereference) `const_iterator` `cIter`指向對應中的項目，使用 **->** 運算子。  
   
  若要存取該元素的索引鍵值，請使用 `cIter` -> **first**，這等同於 (\* `cIter`). **first**。  
   
@@ -749,7 +772,7 @@ emplace(
 ### <a name="return-value"></a>傳回值  
  如果已進行插入，就會傳回 `bool` 元件為 true 的 [pair](../standard-library/pair-structure.md)，如果 map 已經包含具有對等排序值的元素，則會傳回 false。 若 `bool` 元件為 True，傳回值組的迭代器元件會指向最新插入的元素；若 `bool` 元件為 False，則會指向現有元素。  
   
- 若要存取 `pair``pr` 的迭代器元件，請使用 `pr.first`；若要取其值，請使用 `*pr.first`。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
+ 若要存取的迭代器元件`pair` `pr`，使用`pr.first`; 若要它取值 （dereference），請使用`*pr.first`。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
   
 ### <a name="remarks"></a>備註  
  此函式不會使任何迭代器或參考失效。  
@@ -1363,7 +1386,7 @@ IList);
   
  在只插入一個元素的期間，若擲出例外狀況，則不會修改容器的狀態。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。  
   
- 若要存取單一項目成員函式所傳回之 `pair``pr` 的迭代器元件，請使用 `pr.first`；若要對所傳回之 pair 內的迭代器進行取值，請使用 `*pr.first` 來提供項目。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
+ 若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
   
  容器的 [value_type](#value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
@@ -1903,7 +1926,7 @@ int main( )
 ```  
 Type& operator[](const Key& key);
 
-Type& operator 0-(Key&& key);
+Type& operator[](Key&& key);
 ```  
   
 ### <a name="parameters"></a>參數  
@@ -2288,7 +2311,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
   
  map 所定義的 `reverse_iterator` 會指向作為 [value_type](#value_type) 之物件的元素，value_type 的類型為 `pair`*\<***constKey**, **Type***>*，其第一個成員是元素的索引鍵，而第二個成員是該元素所持有的已對應資料。  
   
- 若要對指向 map 中某個元素的 `reverse_iterator``rIter` 進行取值，請使用 **->** 運算子。  
+ 取值 （dereference) `reverse_iterator` `rIter`指向對應中的項目，使用 **->** 運算子。  
   
  若要存取該元素的索引鍵值，請使用 `rIter` -> **first**，這等同於 (\* `rIter`). **first**。 若要存取該元素的已對應資料值，請使用 `rIter` -> **second**，這等同於 (\* `rIter`). **first**。  
   
@@ -2611,5 +2634,4 @@ int main( )
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

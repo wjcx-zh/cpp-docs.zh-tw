@@ -1,112 +1,105 @@
 ---
-title: "ATL 公用程式參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "ATL 公用程式參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: dd8a2888-34f4-461e-9bf4-834218f9b95b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ATL 公用程式參考
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="atl-utilities-reference"></a>ATL 公用程式參考
+ATL 提供程式碼操作的路徑和 Url 的形式[CPathT](../atl/reference/cpatht-class.md)和[CUrl](../atl/reference/curl-class.md)。 執行緒集區[CThreadPool](../atl/reference/cthreadpool-class.md)，可用於您的應用程式。 Atlpath.h 和 atlutil.h 中可以找到此程式碼。  
+  
+### <a name="classes"></a>類別  
+  
+|||  
+|-|-|  
+|[CPathT 類別](../atl/reference/cpatht-class.md)|此類別代表的路徑。|  
+|[CDebugReportHook 類別](../atl/reference/cdebugreporthook-class.md)|使用此類別將偵錯報表傳送至具名的管道。|  
+|[CNonStatelessWorker 類別](../atl/reference/cnonstatelessworker-class.md)|從執行緒集區接收要求，並將它們傳遞到會建立並終結背景工作物件中，每個要求。|  
+|[CNoWorkerThread 類別](../atl/reference/cnoworkerthread-class.md)|使用此類別做為引數`MonitorClass`樣板參數，如果您想要停用動態快取維護的快取類別。|  
+|[CThreadPool 類別](../atl/reference/cthreadpool-class.md)|這個類別會提供處理的工作項目佇列的背景工作執行緒集區。|  
+|[CUrl 類別](../atl/reference/curl-class.md)|這個類別表示的 URL。 它可讓您操作各自 URL 的每個項目是否剖析現有的 URL 字串，或建置全新的字串。|  
+|[CWorkerThread 類別](../atl/reference/cworkerthread-class.md)|這個類別建立背景工作執行緒或使用現有，等候一或多個核心物件控點，而且其中一個控點會收到信號時，執行指定的用戶端函式。|  
+  
+### <a name="typedefs"></a>Typedefs  
+  
+|||  
+|-|-|  
+|[CPath](../atl/reference/atl-typedefs.md#cpath)|特製化[CPathT](../atl/reference/cpatht-class.md)使用`CString`。|  
+|[CPathA](../atl/reference/atl-typedefs.md#cpatha)|特製化[CPathT](../atl/reference/cpatht-class.md)使用`CStringA`。|  
+|[CPathW](../atl/reference/atl-typedefs.md#cpathw)|特製化[CPathT](../atl/reference/cpatht-class.md)使用`CStringW`。|  
+|[ATL_URL_PORT](../atl/reference/atl-typedefs.md#atl_url_port)|所使用的類型[CUrl](../atl/reference/curl-class.md)來指定連接埠號碼。|  
+  
+### <a name="enums"></a>列舉  
+  
+|||  
+|-|-|  
+|[ATL_URL_SCHEME](../atl/reference/atl-url-scheme-enum.md)|這個列舉的成員提供常數所了解配置[CUrl](../atl/reference/curl-class.md)。|  
+  
+### <a name="functions"></a>函式  
+  
+|||  
+|-|-|  
+|[AtlCanonicalizeUrl](../atl/reference/atl-http-utility-functions.md#atlcanonicalizeurl)|呼叫此函式可規範化 URL，包括將 Unsafe 字元和空格轉換成逸出序列。|  
+|[AtlCombineUrl](../atl/reference/atl-http-utility-functions.md#atlcombineurl)|呼叫此函式可將基底 URL 和相對 URL 結合成單一、標準的 URL。|  
+|[AtlEscapeUrl](../atl/reference/atl-http-utility-functions.md#atlescapeurl)|呼叫此函式會將所有 Unsafe 字元轉換成逸出序列。|  
+|[AtlGetDefaultUrlPort](../atl/reference/atl-http-utility-functions.md#atlgetdefaulturlport)|呼叫此函式可取得與特定網際網路通訊協定或配置相關聯的預設通訊埠編號。|  
+|[AtlHexValue](../atl/reference/atl-text-encoding-functions.md#atlhexvalue)|呼叫此函式可取得十六進位的數值。|  
+|[AtlIsUnsafeUrlChar](../atl/reference/atl-http-utility-functions.md#atlisunsafeurlchar)|呼叫此函式可了解在 URL 中使用某個字元是否安全。|  
+|[AtlUnescapeUrl](../atl/reference/atl-http-utility-functions.md#atlunescapeurl)|呼叫此函式將逸出字元轉換回其原始值。|  
+|[SystemTimeToHttpDate](../atl/reference/atl-http-utility-functions.md#systemtimetohttpdate)|呼叫此函式將系統時間轉換成採用適合在 HTTP 標頭中使用之格式的字串。|  
 
-以 [CPathT](../atl/reference/cpatht-class.md) 和 [卷毛](../atl/reference/curl-class.md)的形式， ATL 提供管理的路徑和 URL 的程式碼。  執行緒集區， [CThreadPool](../atl/reference/cthreadpool-class.md)，可用於應用程式。  這個程式碼可以在類別和函式找到。  
+|[ATLPath::AddBackslash](../atl/reference/atl-path-functions.md#addbackslash)|此函式是多載包裝函式[PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561)。 |  
+|[ATLPath::AddExtension](../atl/reference/atl-path-functions.md#addextension)|此函式是多載包裝函式[PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)。 |  
+|[ATLPath::Append](../atl/reference/atl-path-functions.md#append)|此函式是多載包裝函式[PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)。 |  
+|[ATLPath::BuildRoot](../atl/reference/atl-path-functions.md#buildroot)|此函式是多載包裝函式[PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)。 |  
+|[ATLPath::Canonicalize](../atl/reference/atl-path-functions.md#canonicalize)|此函式是多載包裝函式[PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)。 |  
+|[ATLPath::Combine](../atl/reference/atl-path-functions.md#combine)|此函式是多載包裝函式[PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)。 |  
+|[ATLPath::CommonPrefix](../atl/reference/atl-path-functions.md#commonprefix)|此函式是多載包裝函式[PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)。 |  
+|[ATLPath::CompactPath](../atl/reference/atl-path-functions.md#compactpath)|此函式是多載包裝函式[PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)。 |  
+|[ATLPath::CompactPathEx](../atl/reference/atl-path-functions.md#compactpathex)|此函式是多載包裝函式[PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)。 |  
+|[ATLPath::FileExists](../atl/reference/atl-path-functions.md#fileexists)|此函式是多載包裝函式[PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)。 |  
+|[ATLPath::FindExtension](../atl/reference/atl-path-functions.md#findextension)|此函式是多載包裝函式[PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)。 |  
+|[ATLPath::FindFileName](../atl/reference/atl-path-functions.md#findfilename)|此函式是多載包裝函式[PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)。 |  
+|[ATLPath::GetDriveNumber](../atl/reference/atl-path-functions.md#getdrivenumber)|此函式是多載包裝函式[PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)。 |  
+|[ATLPath::IsDirectory](../atl/reference/atl-path-functions.md#isdirectory)|此函式是多載包裝函式[PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)。 |  
+|[ATLPath::IsFileSpec](../atl/reference/atl-path-functions.md#isfilespec)|此函式是多載包裝函式[PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)。 |  
+|[ATLPath::IsPrefix](../atl/reference/atl-path-functions.md#isprefix)|此函式是多載包裝函式[PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)。 |  
+|[ATLPath::IsRelative](../atl/reference/atl-path-functions.md#isrelative)|此函式是多載包裝函式[PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)。 |  
+|[ATLPath::IsRoot](../atl/reference/atl-path-functions.md#isroot)|此函式是多載包裝函式[PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)。 |  
+|[ATLPath::IsSameRoot](../atl/reference/atl-path-functions.md#issameroot)|此函式是多載包裝函式[PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)。 |  
+|[ATLPath::IsUNC](../atl/reference/atl-path-functions.md#isunc)|此函式是多載包裝函式[PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)。 |  
+|[ATLPath::IsUNCServer](../atl/reference/atl-path-functions.md#isuncserver)|此函式是多載包裝函式[PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)。 |  
+|[ATLPath::IsUNCServerShare](../atl/reference/atl-path-functions.md#isuncservershare)|此函式是多載包裝函式[PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)。 |  
+|[ATLPath::MakePretty](../atl/reference/atl-path-functions.md#makepretty)|此函式是多載包裝函式[PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)。 |  
+|[ATLPath::MatchSpec](../atl/reference/atl-path-functions.md#matchspec)|此函式是多載包裝函式[PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)。 |  
+|[ATLPath::QuoteSpaces](../atl/reference/atl-path-functions.md#quotespaces)|此函式是多載包裝函式[PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)。 |  
+|[ATLPath::RelativePathTo](../atl/reference/atl-path-functions.md#relativepathto)|此函式是多載包裝函式[PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)。 |  
+|[ATLPath::RemoveArgs](../atl/reference/atl-path-functions.md#removeargs)|此函式是多載包裝函式[PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)。 |  
+|[ATLPath::RemoveBackslash](../atl/reference/atl-path-functions.md#removebackslash)|此函式是多載包裝函式[PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)。 |  
+|[ATLPath::RemoveBlanks](../atl/reference/atl-path-functions.md#removeblanks)|此函式是多載包裝函式[PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)。 |  
+|[ATLPath::RemoveExtension](../atl/reference/atl-path-functions.md#removeextension)|此函式是多載包裝函式[PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)。 |  
+|[ATLPath::RemoveFileSpec](../atl/reference/atl-path-functions.md#removefilespec)|此函式是多載包裝函式[PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)。 |  
+|[ATLPath::RenameExtension](../atl/reference/atl-path-functions.md#renameextension)|此函式是多載包裝函式[PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)。 |  
+|[ATLPath::SkipRoot](../atl/reference/atl-path-functions.md#skiproot)|此函式是多載包裝函式[PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)。 |  
+|[ATLPath::StripPath](../atl/reference/atl-path-functions.md#strippath)|此函式是多載包裝函式[PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)。 |  
+|[ATLPath::StripToRoot](../atl/reference/atl-path-functions.md#striptoroot)|此函式是多載包裝函式[PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)。 |  
+|[ATLPath::UnquoteSpaces](../atl/reference/atl-path-functions.md#unquotespaces)|此函式是多載包裝函式[PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)。 |  
   
-### 類別  
-  
-|||  
-|-|-|  
-|[CPathT 類別](../atl/reference/cpatht-class.md)|這個類別表示路徑。|  
-|[CDebugReportHook 類別](../atl/reference/cdebugreporthook-class.md)|使用這個類別會將偵錯回報給具名管道。|  
-|[CNonStatelessWorker 類別](../atl/reference/cnonstatelessworker-class.md)|取得從執行緒集區的要求並傳遞至在每個要求都會建立並終結的工作物件。|  
-|[CNoWorkerThread 類別](../atl/reference/cnoworkerthread-class.md)|如果您想要停用動態快取中維護，請使用這個類別做為引數才能 `MonitorClass` 樣板參數可以快取類別。|  
-|[CThreadPool 類別](../atl/reference/cthreadpool-class.md)|這個類別會提供處理工作項目佇列的背景工作執行緒集區。|  
-|[卷毛類別](../atl/reference/curl-class.md)|這個類別表示 URL。  它是否可以讓您獨立作業 URL 的每個項目會剖析現有的 URL 字串或從頭建置字串。|  
-|[CWorkerThread 類別](../atl/reference/cworkerthread-class.md)|當其中一個控制代碼都收到信號時，這個類別會在一或多個核心物件控制代碼建立背景工作執行緒或使用現有的平台，等待，並執行指定的用戶端函式。|  
-  
-### Typedef  
-  
-|||  
-|-|-|  
-|[CPath](../Topic/CPath.md)|[CPathT](../atl/reference/cpatht-class.md) 的特製化使用 `CString`的。|  
-|[CPathA](../Topic/CPathA.md)|[CPathT](../atl/reference/cpatht-class.md) 的特製化使用 `CStringA`的。|  
-|[CPathW](../Topic/CPathW.md)|[CPathT](../atl/reference/cpatht-class.md) 的特製化使用 `CStringW`的。|  
-|[ATL\_URL\_PORT](../Topic/ATL_URL_PORT.md)|[卷毛](../atl/reference/curl-class.md) 使用的型別用於指定通訊埠編號。|  
-  
-### 列舉  
-  
-|||  
-|-|-|  
-|[ATL\_URL\_SCHEME](../Topic/ATL_URL_SCHEME.md)|這個列舉型別的成員。 [卷毛](../atl/reference/curl-class.md)了解配置提供常數。|  
-  
-### 功能  
-  
-|||  
-|-|-|  
-|[AtlCanonicalizeUrl](../Topic/AtlCanonicalizeUrl.md)|呼叫此函式規範化 URL，包括轉換不安全的字元和空白字元的逸出序列 \(Escape Sequence\)。|  
-|[AtlCombineUrl](../Topic/AtlCombineUrl.md)|呼叫此函式結合基底 URL 和相對 URL 輸入單一，標準 URL。|  
-|[AtlEscapeUrl](../Topic/AtlEscapeUrl.md)|呼叫此函式轉換所有不安全的字元為逸出序列 \(Escape Sequence\)。|  
-|[AtlGetDefaultUrlPort](../Topic/AtlGetDefaultUrlPort.md)|呼叫此函式來取得預設通訊埠編號與特定網際網路通訊協定 \(IP\) 或計劃。|  
-|[AtlHexValue](../Topic/AtlHexValue.md)|呼叫此函式來取得十六進位數字的數值。|  
-|[AtlIsUnsafeUrlChar](../Topic/AtlIsUnsafeUrlChar.md)|呼叫這個函式尋找字元是否可安全地用於 URL。|  
-|[AtlUnescapeUrl](../Topic/AtlUnescapeUrl.md)|呼叫此函式將轉換為逸出字元回其原始值。|  
-|[SystemTimeToHttpDate](../Topic/SystemTimeToHttpDate.md)|呼叫此函式將一種系統時間設為適當的格式字串使用 HTTP 標頭。|  
-|[ATLPath::AddBackslash](../Topic/ATLPath::AddBackslash.md)|這個函式是 [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561)的多載的包裝函式。|  
-|[ATLPath::AddExtension](../Topic/ATLPath::AddExtension.md)|這個函式是 [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563)的多載的包裝函式。|  
-|[ATLPath::Append](../Topic/ATLPath::Append.md)|這個函式是 [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565)的多載的包裝函式。|  
-|[ATLPath::BuildRoot](../Topic/ATLPath::BuildRoot.md)|這個函式是 [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567)的多載的包裝函式。|  
-|[ATLPath::Canonicalize](../Topic/ATLPath::Canonicalize.md)|這個函式是 [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569)的多載的包裝函式。|  
-|[ATLPath::Combine](../Topic/ATLPath::Combine.md)|這個函式是 [PathCombine](http://msdn.microsoft.com/library/windows/desktop/bb773571)的多載的包裝函式。|  
-|[ATLPath::CommonPrefix](../Topic/ATLPath::CommonPrefix.md)|這個函式是 [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574)的多載的包裝函式。|  
-|[ATLPath::CompactPath](../Topic/ATLPath::CompactPath.md)|這個函式是 [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575)的多載的包裝函式。|  
-|[ATLPath::CompactPathEx](../Topic/ATLPath::CompactPathEx.md)|這個函式是 [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578)的多載的包裝函式。|  
-|[ATLPath::FileExists](../Topic/ATLPath::FileExists.md)|這個函式是 [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584)的多載的包裝函式。|  
-|[ATLPath::FindExtension](../Topic/ATLPath::FindExtension.md)|這個函式是 [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587)的多載的包裝函式。|  
-|[ATLPath::FindFileName](../Topic/ATLPath::FindFileName.md)|這個函式是 [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589)的多載的包裝函式。|  
-|[ATLPath::GetDriveNumber](../Topic/ATLPath::GetDriveNumber.md)|這個函式是 [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612)的多載的包裝函式。|  
-|[ATLPath::IsDirectory](../Topic/ATLPath::IsDirectory.md)|這個函式是 [PathIsDirectory](http://msdn.microsoft.com/library/windows/desktop/bb773621)的多載的包裝函式。|  
-|[ATLPath::IsFileSpec](../Topic/ATLPath::IsFileSpec.md)|這個函式是 [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627)的多載的包裝函式。|  
-|[ATLPath::IsPrefix](../Topic/ATLPath::IsPrefix.md)|這個函式是 [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650)的多載的包裝函式。|  
-|[ATLPath::IsRelative](../Topic/ATLPath::IsRelative.md)|這個函式是 [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660)的多載的包裝函式。|  
-|[ATLPath::IsRoot](../Topic/ATLPath::IsRoot.md)|這個函式是 [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674)的多載的包裝函式。|  
-|[ATLPath::IsSameRoot](../Topic/ATLPath::IsSameRoot.md)|這個函式是 [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687)的多載的包裝函式。|  
-|[ATLPath::IsUNC](../Topic/ATLPath::IsUNC.md)|這個函式是 [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712)的多載的包裝函式。|  
-|[ATLPath::IsUNCServer](../Topic/ATLPath::IsUNCServer.md)|這個函式是 [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722)的多載的包裝函式。|  
-|[ATLPath::IsUNCServerShare](../Topic/ATLPath::IsUNCServerShare.md)|這個函式是 [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723)的多載的包裝函式。|  
-|[ATLPath::MakePretty](../Topic/ATLPath::MakePretty.md)|這個函式是 [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725)的多載的包裝函式。|  
-|[ATLPath::MatchSpec](../Topic/ATLPath::MatchSpec.md)|這個函式是 [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727)的多載的包裝函式。|  
-|[ATLPath::QuoteSpaces](../Topic/ATLPath::QuoteSpaces.md)|這個函式是 [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739)的多載的包裝函式。|  
-|[ATLPath::RelativePathTo](../Topic/ATLPath::RelativePathTo.md)|這個函式是 [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740)的多載的包裝函式。|  
-|[ATLPath::RemoveArgs](../Topic/ATLPath::RemoveArgs.md)|這個函式是 [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742)的多載的包裝函式。|  
-|[ATLPath::RemoveBackslash](../Topic/ATLPath::RemoveBackslash.md)|這個函式是 [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743)的多載的包裝函式。|  
-|[ATLPath::RemoveBlanks](../Topic/ATLPath::RemoveBlanks.md)|這個函式是 [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745)的多載的包裝函式。|  
-|[ATLPath::RemoveExtension](../Topic/ATLPath::RemoveExtension.md)|這個函式是 [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746)的多載的包裝函式。|  
-|[ATLPath::RemoveFileSpec](../Topic/ATLPath::RemoveFileSpec.md)|這個函式是 [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748)的多載的包裝函式。|  
-|[ATLPath::RenameExtension](../Topic/ATLPath::RenameExtension.md)|這個函式是 [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749)的多載的包裝函式。|  
-|[ATLPath::SkipRoot](../Topic/ATLPath::SkipRoot.md)|這個函式是 [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754)的多載的包裝函式。|  
-|[ATLPath::StripPath](../Topic/ATLPath::StripPath.md)|這個函式是 [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756)的多載的包裝函式。|  
-|[ATLPath::StripToRoot](../Topic/ATLPath::StripToRoot.md)|這個函式是 [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757)的多載的包裝函式。|  
-|[ATLPath::UnquoteSpaces](../Topic/ATLPath::UnquoteSpaces.md)|這個函式是 [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)的多載的包裝函式。|  
-  
-### 巨集  
-  
-|||  
-|-|-|  
-|[ATL\_URL 旗標。](../Topic/ATL_URL%20Flags.md)|這些旗標修改 [AtlEscapeUrl](../Topic/AtlEscapeUrl.md) 和 [AtlCanonicalizeUrl](../Topic/AtlCanonicalizeUrl.md) 行為。|  
-|[ATL\_WORKER\_THREAD\_WAIT](../Topic/ATL_WORKER_THREAD_WAIT.md)|這個巨集以毫秒定義預設值 [CWorkerThread::Shutdown](../Topic/CWorkerThread::Shutdown.md) 等待背景工作執行緒關閉。|  
-|[ATLS\_DEFAULT\_THREADPOOLSHUTDOWNTIMEOUT](../Topic/ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT.md)|這個巨集以毫秒定義預設時間 [CThreadPool](../atl/reference/cthreadpool-class.md) 會等候執行緒關閉。|  
-|[ATLS\_DEFAULT\_THREADSPERPROC](../Topic/ATLS_DEFAULT_THREADSPERPROC.md)|這個巨集定義執行緒的預設數目每個 [CThreadPool](../atl/reference/cthreadpool-class.md)使用的處理器。|  
-  
-## 請參閱  
+
+## <a name="see-also"></a>另請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
- [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)
+ [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)

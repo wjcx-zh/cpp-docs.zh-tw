@@ -1,33 +1,32 @@
 ---
-title: "BEGIN_ACCESSOR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_ACCESSOR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_ACCESSOR 巨集"
-  - "BEGIN_ACCESSOR 巨集, 語法"
+title: "BEGIN_ACCESSOR |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_ACCESSOR
+dev_langs: C++
+helpviewer_keywords:
+- BEGIN_ACCESSOR macro, syntax
+- BEGIN_ACCESSOR macro
 ms.assetid: 59d0ff3e-7cfd-4ce8-9a1c-d664c0892a52
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74d8d2197553f9fd2b1f5452236b343424d29148
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# BEGIN_ACCESSOR
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-存取子標記項目的開頭。  
+# <a name="beginaccessor"></a>BEGIN_ACCESSOR
+標記存取子項目的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,24 +38,24 @@ bAuto
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *num*  
- \[in\] 對這個存取子對應的存取子的零位移數字。  
+ [in]在此存取子對應中存取子的零位移數。  
   
  *bAuto*  
- \[in\] 指定存取子是否為自動存取子或手動存取子。  如果 **true**，存取子是自動；如果 **false**，存取子是手動的。  一個自動存取子表示資料為您擷取移動作業。  
+ [in]指定此存取子是可自動存取子，還是手動存取子。 如果**true**，存取子是自動; 如果**false**，存取子是手動。 自動存取子會表示為您擷取資料移動作業。  
   
-## 備註  
- 在對於資料列集的多重存取子的情況下，您需要指定 `BEGIN_ACCESSOR_MAP` 和為個別存取子使用 `BEGIN_ACCESSOR` 巨集。  `BEGIN_ACCESSOR` 巨集與 `END_ACCESSOR` 巨集完成。  `BEGIN_ACCESSOR_MAP` 巨集完成與 `END_ACCESSOR_MAP` 巨集。  
+## <a name="remarks"></a>備註  
+ 如果資料列集上的多個存取子，您必須指定`BEGIN_ACCESSOR_MAP`並用`BEGIN_ACCESSOR`巨集的每個個別存取子。 `BEGIN_ACCESSOR` 巨集會以 `END_ACCESSOR` 巨集完成。 `BEGIN_ACCESSOR_MAP`巨集已完成，但`END_ACCESSOR_MAP`巨集。  
   
-## 範例  
- 請參閱 [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)。  
+## <a name="example"></a>範例  
+ 請參閱[BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
- [OLE DB 消費者樣板的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)
+## <a name="see-also"></a>另請參閱  
+ [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)

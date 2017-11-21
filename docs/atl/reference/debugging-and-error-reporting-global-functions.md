@@ -4,39 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- functions [ATL], error reporting
+f1_keywords:
+- atlcomcli/ATL::AtlHresultFromLastError
+- atlcom/ATL::AtlReportError
+- atldef/ATL::AtlThrow
+dev_langs: C++
+helpviewer_keywords: functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 6c328c82c5e2ef5ff6f413d4eb3f1b62e2b693d8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ea41febbb9de28ff70d89bfe4f6fcebc9a452ed2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>偵錯和錯誤報告全域函式
 這些函式提供有用的偵錯和追蹤功能。  
@@ -60,7 +46,7 @@ HRESULT AtlHresultFromLastError();
  `AtlHresultFromLastError`呼叫`GetLastError`取得最後一個錯誤，並將它轉換成 HRESULT 使用之後傳回錯誤**HRESULT_FROM_WIN32**巨集。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlcomcli.h  
+ **標頭：** atlcomcli.h  
 
 ##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32  
  將 Win32 錯誤碼轉換成 HRESULT。  
@@ -80,7 +66,7 @@ AtlHresultFromWin32(DWORD error);
 >  而不是使用**HRESULT_FROM_WIN32(GetLastError())**，使用函數[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlcomcli.h  
+ **標頭：** atlcomcli.h  
 
 ##  <a name="atlreporterror"></a>AtlReportError  
  設定`IErrorInfo`介面，以提供給用戶端物件的資訊時發生錯誤。  
@@ -154,7 +140,7 @@ HRESULT WINAPI AtlReportError(
  [in]路徑和名稱，描述錯誤的說明檔。  
   
  `hInst`  
- [in]資源控制代碼。 根據預設，這個參數是**__AtlBaseModuleModule::GetResourceInstance**，其中**__AtlBaseModuleModule**的全域執行個體[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)或從其衍生的類別。  
+ [in]資源控制代碼。 根據預設，這個參數是**__AtlBaseModuleModule::GetResourceInstance**，其中**__AtlBaseModuleModule**的全域執行個體[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)或類別衍生自它。  
   
 ### <a name="return-value"></a>傳回值  
  如果`hRes`參數為非零，傳回的值`hRes`。 如果`hRes`是零，則前四個新版`AtlReportError`傳回`DISP_E_EXCEPTION`。 最後兩個版本都會傳回巨集的結果**MAKE_HRESULT (1，FACILITY_ITF，** `nID` **)**。  
@@ -163,13 +149,13 @@ HRESULT WINAPI AtlReportError(
  字串*lpszDesc*用做為錯誤的文字描述。 當用戶端收到`hRes`您從傳回`AtlReportError`，用戶端可以存取**IErrorInfo**錯誤的詳細資料的結構。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
   
 > [!CAUTION]
 >  請勿使用`AtlReportError`c + + 中的 catch 處理常式。 這些函式的某些覆寫使用 ATL 字串轉換巨集就內部而言，接著使用`_alloca`函式內部。 使用`AtlReportError`在 c + + catch 處理常式可能會導致在 c + + catch 處理常式中的例外狀況。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
     
 ##  <a name="atlthrow"></a>AtlThrow  
  呼叫此函式可依據 `HRESULT` 狀態碼通知發生錯誤。  
@@ -198,10 +184,10 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
  ATL 專案中，很可能提供您自己的實作，此函式，以供 ATL 失敗。 若要這樣做，請定義您自己的函式具有相同的簽章`AtlThrow`和 #define`AtlThrow`函式的名稱。 這必須包括 atlexcept.h （亦即它必須完成之前因為 atlbase.h 包含 atlexcept.h ATL 標頭加入） 之前完成。 屬性函式`__declspec(noreturn)`避免假性的 SAL 警告。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Windowing # 95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
 
 ## <a name="requirements"></a>需求  
- **標頭︰** atldef.h  
+ **標頭：** atldef.h  
 
 ##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32  
  呼叫此函式可依據 Windows 函式 `GetLastError` 的結果通知發生錯誤。  
@@ -213,20 +199,19 @@ inline void AtlThrowLastWin32();
 ### <a name="remarks"></a>備註  
  此函式追蹤的結果`GetLastError`偵錯工具。  
   
- 如果**_ATL_NO_EXCEPTIONS**未定義在 MFC 專案中，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md)根據所傳回的值`GetLastError`。  
+ 如果**_ATL_NO_EXCEPTIONS**未定義在 MFC 專案中，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md) 所傳回的值為基礎`GetLastError`.  
   
  如果**_ATL_NO_EXCEPTIONS**未定義在 ATL 專案中，則函式會擲回[CAtlException](../../atl/reference/catlexception-class.md)。  
   
  如果**_ATL_NO_EXCEPTIONS**是定義，此函式會造成判斷提示失敗，而不是擲回例外狀況。  
 
 ## <a name="requirements"></a>需求  
- **標頭︰** atldef.h  
+ **標頭：** atldef.h  
    
      
 ## <a name="see-also"></a>另請參閱  
  [函式](../../atl/reference/atl-functions.md)   
  [偵錯和錯誤報告巨集](../../atl/reference/debugging-and-error-reporting-macros.md)
-
 
 
 

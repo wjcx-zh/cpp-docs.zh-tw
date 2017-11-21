@@ -1,48 +1,45 @@
 ---
-title: "omp_lock_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_lock_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_lock_t OpenMP data type"
+title: "omp_lock_t |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_lock_t
+dev_langs: C++
+helpviewer_keywords: omp_lock_t OpenMP data type
 ms.assetid: 51b80629-4ffc-4b8a-95c7-1af048f1f286
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 764ce81ca11a1998914cd6d1ea38612afde28936
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# omp_lock_t
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-保留的鎖定、 鎖定是否可用，或如果執行緒擁有的鎖定狀態的類型。  
+# <a name="omplockt"></a>omp_lock_t
+保存的狀態、 是否可供使用鎖定或鎖定如果執行緒擁有鎖定的類型。  
   
- 下列函式使用 **omp\_lock\_t**：  
+ 下列函式使用**omp_lock_t**:  
   
--   [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)  
+-   [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)  
   
--   [omp\_destroy\_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)  
+-   [omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)  
   
--   [omp\_set\_lock](../../../parallel/openmp/reference/omp-set-lock.md)  
+-   [omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)  
   
--   [omp\_unset\_lock](../../../parallel/openmp/reference/omp-unset-lock.md)  
+-   [omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)  
   
--   [omp\_test\_lock](../../../parallel/openmp/reference/omp-test-lock.md)  
+-   [omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)  
   
- 如需詳細資訊，請參閱 [3.2 Lock Functions](../../../parallel/openmp/3-2-lock-functions.md)。  
+ 如需詳細資訊，請參閱[3.2 鎖定函式](../../../parallel/openmp/3-2-lock-functions.md)。  
   
-## 範例  
- 請參閱[omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)的使用範例，  **omp\_lock\_t**。  
+## <a name="example"></a>範例  
+ 請參閱[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)的使用範例**omp_lock_t**。  
   
-## 請參閱  
- [Data Types](../../../parallel/openmp/reference/openmp-data-types.md)
+## <a name="see-also"></a>另請參閱  
+ [資料類型](../../../parallel/openmp/reference/openmp-data-types.md)

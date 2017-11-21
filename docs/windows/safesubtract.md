@@ -1,32 +1,30 @@
 ---
-title: "SafeSubtract | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeSubtract"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeSubtract 函式"
+title: "SafeSubtract |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeSubtract
+dev_langs: C++
+helpviewer_keywords: SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 98114ebc7baee41970177e9c390f65fa5521544a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# SafeSubtract
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-減去兩個數字以防止溢位的方法。  
+# <a name="safesubtract"></a>SafeSubtract
+兩個數字的方式防止溢位。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename T, typename U>  
@@ -37,33 +35,33 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### 參數  
- \[in\] `t`  
- 相減的第一個數字。  這必須是型別 T。  
+#### <a name="parameters"></a>參數  
+ [in] `t`  
+ 減法運算中的第一個數字。 這必須為類型 T。  
   
- \[in\] `u`  
- 減去的數字 `t`。  這必須是型別 U。  
+ [in] `u`  
+ 要減去的數字`t`。 這必須為類型 U。  
   
- \[out\] `result`  
- 參數 `SafeSubtract` 儲存結果的位置。  
+ [輸出] `result`  
+ 參數所在`SafeSubtract`儲存結果。  
   
-## 傳回值  
- `true` ，如果沒有錯誤發生; `false` ，如果發生錯誤。  
+## <a name="return-value"></a>傳回值  
+ `true`如果沒有發生錯誤。`false`如果發生錯誤。  
   
-## 備註  
- 這個方法是 [SafeInt 程式庫](../windows/safeint-library.md) 的一部分為單一減法運算設計，而不必建立 [SafeInt 類別](../windows/safeint-class.md)的執行個體。  
+## <a name="remarks"></a>備註  
+ 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，而不需要建立的執行個體適用於單一減法運算[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  這個方法，則必須保護時，才應該使用單一數學運算。  如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
+>  此方法應只有在必須保護單一數學作業時才使用。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需範本型別 T 和 U 的詳細資訊，請參閱 [SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
-## 需求  
- **標題:** safeint.h  
+## <a name="requirements"></a>需求  
+ **標頭：** safeint.h  
   
- **命名空間:** Microsoft::Utilities  
+ **命名空間：** Microsoft::Utilities  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

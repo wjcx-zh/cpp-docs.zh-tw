@@ -1,41 +1,39 @@
 ---
-title: "stack::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type 成員 [STL/CLR]"
+title: "stack:: value_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 867ff1a7-c91c-4168-9b85-21fd0dcf4806
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 24e3cc0d992f6c955f2fa4154591b8c679a376f5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# stack::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-項目的類型。  
+# <a name="stackvaluetype-stlclr"></a>stack::value_type (STL/CLR)
+元素的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Value value_type;  
 ```  
   
-## 備註  
- 此型別是個範本參數 `Value`之同義資料表。  
+## <a name="remarks"></a>備註  
+ 此類型是範本參數 `Value`的同義字。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_value_type.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **c b a**   
-## 需求  
- **標頭：** \<cliext\/stack\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [stack::const\_reference](../dotnet/stack-const-reference-stl-clr.md)   
- [stack::reference](../dotnet/stack-reference-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)   
+ [stack::reference (STL/CLR)](../dotnet/stack-reference-stl-clr.md)

@@ -1,95 +1,94 @@
 ---
-title: "/CLRSUPPORTLASTERROR (保留最後的 PInvoke 呼叫錯誤碼) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRSUPPORTLASTERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRSUPPORTLASTERROR 連結器選項"
-  - "-CLRSUPPORTLASTERROR 連結器選項"
+title: "-CLRSUPPORTLASTERROR （保留最後一個錯誤碼的 PInvoke 呼叫） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRSUPPORTLASTERROR
+dev_langs: C++
+helpviewer_keywords:
+- /CLRSUPPORTLASTERROR linker option
+- -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 23f8215e94139417c6bd098b669904783fb88b36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRSUPPORTLASTERROR (保留最後的 PInvoke 呼叫錯誤碼)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/CLRSUPPORTLASTERROR** 預設為開啟，會保留透過 P\/Invoke 機制 \(可以讓您從以 **\/clr** 編譯的程式碼，在 DLL 中呼叫原生函式\) 所呼叫函式的最後錯誤碼。  
+# <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (保留最後的 PInvoke 呼叫錯誤碼)
+**/CLRSUPPORTLASTERROR**、 其預設為開啟，可保留透過 P/Invoke 機制，可讓您從程式碼呼叫 DLL 中的原生函式呼叫的函式的最後一個錯誤碼編譯與**/clr**。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /CLRSUPPORTLASTERROR{:NO | SYSTEMDLL}  
 ```  
   
-## 備註  
- 保留最後的錯誤碼意味著效能的降低。如果您不想要因為保留最後錯誤碼而影響效能的情況發生，請與 **\/CLRSUPPORTLASTERROR:NO** 連結。  
+## <a name="remarks"></a>備註  
+ 保留的最後一個錯誤碼表示效能降低。  如果您不希望帶來的效能影響保留最後一個錯誤碼，以連結**/CLRSUPPORTLASTERROR:NO**。  
   
- 您可以與 **\/CLRSUPPORTLASTERROR:SYSTEMDLL** 連結 \(只會保留系統 DLL 中函式的最後錯誤碼\)，藉此將效能影響降到最低。系統 DLL 會定義下列其中一項：  
+ 您可以最小化的效能影響連結**/CLRSUPPORTLASTERROR:SYSTEMDLL**，只會為函式的最後一個錯誤碼保留在系統 Dll。  系統 DLL 被定義為下列其中一項：  
   
 |||||  
 |-|-|-|-|  
-|ACLUI.DLL|ACTIVEDS.DLL|ADPTIF.DLL|ADVAPI32.DLL|  
-|ASYCFILT.DLL|AUTHZ.DLL|AVICAP32.DLL|AVIFIL32.DLL|  
-|CABINET.DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|  
-|COMSVCS.DLL|CREDUI.DLL|CRYPT32.DLL|CRYPTNET.DLL|  
-|CRYPTUI.DLL|D3D8THK.DLL|DBGENG.DLL|DBGHELP.DLL|  
-|DCIMAN32.DLL|DNSAPI.DLL|DSPROP.DLL|DSUIEXT.DLL|  
-|GDI32.DLL|GLU32.DLL|HLINK.DLL|ICM32.DLL|  
-|IMAGEHLP.DLL|IMM32.DLL|IPHLPAPI.DLL|IPROP.DLL|  
-|KERNEL32.DLL|KSUSER.DLL|LOADPERF.DLL|LZ32.DLL|  
-|MAPI32.DLL|MGMTAPI.DLL|MOBSYNC.DLL|MPR.DLL|  
-|MPRAPI.DLL|MQRT.DLL|MSACM32.DLL|MSCMS.DLL|  
-|MSI.DLL|MSIMG32.DLL|MSRATING.DLL|MSTASK.DLL|  
-|MSVFW32.DLL|MSWSOCK.DLL|MTXEX.DLL|NDDEAPI.DLL|  
-|NETAPI32.DLL|NPPTOOLS.DLL|NTDSAPI.DLL|NTDSBCLI.DLL|  
-|NTMSAPI.DLL|ODBC32.DLL|ODBCBCP.DLL|OLE32.DLL|  
-|OLEACC.DLL|OLEAUT32.DLL|OLEDLG.DLL|OPENGL32.DLL|  
-|PDH.DLL|POWRPROF.DLL|QOSNAME.DLL|QUERY.DLL|  
-|RASAPI32.DLL|RASDLG.DLL|RASSAPI.DLL|RESUTILS.DLL|  
-|RICHED20.DLL|RPCNS4.DLL|RPCRT4.DLL|RTM.DLL|  
-|RTUTILS.DLL|SCARDDLG.DLL|SECUR32.DLL|SENSAPI.DLL|  
-|SETUPAPI.DLL|SFC.DLL|SHELL32.DLL|SHFOLDER.DLL|  
-|SHLWAPI.DLL|SISBKUP.DLL|SNMPAPI.DLL|SRCLIENT.DLL|  
-|STI.DLL|TAPI32.DLL|TRAFFIC.DLL|URL.DLL|  
-|URLMON.DLL|USER32.DLL|USERENV.DLL|USP10.DLL|  
-|UXTHEME.DLL|VDMDBG.DLL|VERSION.DLL|WINFAX.DLL|  
-|WINHTTP.DLL|WININET.DLL|WINMM.DLL|WINSCARD.DLL|  
-|WINTRUST.DLL|WLDAP32.DLL|WOW32.DLL|WS2\_32.DLL|  
-|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP.DLL|  
+|ACLUI。DLL|ACTIVEDS。DLL|ADPTIF。DLL|ADVAPI32。DLL|  
+|ASYCFILT。DLL|AUTHZ。DLL|AVICAP32。DLL|AVIFIL32。DLL|  
+|封包。DLL|CLUSAPI。DLL|COMCTL32。DLL|COMDLG32。DLL|  
+|COMSVCS。DLL|CREDUI。DLL|CRYPT32。DLL|CRYPTNET。DLL|  
+|CRYPTUI。DLL|D3D8THK。DLL|DBGENG。DLL|DBGHELP。DLL|  
+|DCIMAN32。DLL|DNSAPI。DLL|DSPROP。DLL|DSUIEXT。DLL|  
+|GDI32。DLL|GLU32。DLL|HLINK。DLL|ICM32。DLL|  
+|IMAGEHLP。DLL|IMM32。DLL|IPHLPAPI。DLL|IPROP。DLL|  
+|KERNEL32。DLL|KSUSER。DLL|LOADPERF。DLL|LZ32。DLL|  
+|MAPI32。DLL|MGMTAPI。DLL|MOBSYNC。DLL|MPR。DLL|  
+|MPRAPI。DLL|MQRT。DLL|MSACM32。DLL|MSCMS。DLL|  
+|MSI。DLL|MSIMG32。DLL|MSRATING。DLL|MSTASK。DLL|  
+|MSVFW32。DLL|MSWSOCK。DLL|MTXEX。DLL|NDDEAPI。DLL|  
+|NETAPI32。DLL|NPPTOOLS。DLL|NTDSAPI。DLL|NTDSBCLI。DLL|  
+|NTMSAPI。DLL|ODBC32。DLL|ODBCBCP。DLL|OLE32。DLL|  
+|OLEACC。DLL|OLEAUT32。DLL|OLEDLG。DLL|OPENGL32。DLL|  
+|PDH。DLL|POWRPROF。DLL|QOSNAME。DLL|查詢。DLL|  
+|RASAPI32。DLL|RASDLG。DLL|RASSAPI。DLL|RESUTILS。DLL|  
+|RICHED20。DLL|RPCNS4。DLL|RPCRT4。DLL|RTM。DLL|  
+|RTUTILS。DLL|SCARDDLG。DLL|SECUR32。DLL|SENSAPI。DLL|  
+|SETUPAPI。DLL|SFC。DLL|SHELL32。DLL|SHFOLDER。DLL|  
+|SHLWAPI。DLL|SISBKUP。DLL|SNMPAPI。DLL|SRCLIENT。DLL|  
+|STI。DLL|TAPI32。DLL|流量。DLL|URL。DLL|  
+|URLMON。DLL|USER32。DLL|USERENV。DLL|USP10。DLL|  
+|UXTHEME。DLL|VDMDBG。DLL|版本。DLL|傳真。DLL|  
+|WINHTTP。DLL|WININET。DLL|WINMM。DLL|WINSCARD。DLL|  
+|WINTRUST。DLL|WLDAP32。DLL|WOW32。DLL|WS2_32.DLL|  
+|WSNMP32。DLL|WSOCK32.DLL|WTSAPI32。DLL|XOLEHLP。DLL|  
   
 > [!NOTE]
->  相同模組中，CLR 程式碼所使用的 Unmanaged 函式不支援保留最後的錯誤。  
+>  CLR 程式碼，在相同模組中所使用的 unmanaged 函式不支援保留最後一個錯誤。  
   
--   如需詳細資訊，請參閱[\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)。  
+-   如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[連結器\] 資料夾。  
+2.  按一下**連結器**資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中輸入選項。  
+4.  輸入到選項**其他選項**方塊。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## 範例  
- 下面的範例會利用修改最後錯誤的匯出函式定義原生 DLL。  
+## <a name="example"></a>範例  
+ 下列範例會定義與一個匯出的函式會修改上一個錯誤的原生 DLL。  
   
 ```  
 // CLRSUPPORTLASTERROR_dll.cpp  
@@ -104,8 +103,8 @@ __declspec(dllexport) double MySqrt(__int64 n) {
 }  
 ```  
   
-## 範例  
- 下面的範例使用 DLL，示範 **\/CLRSUPPORTLASTERROR** 的使用方法。  
+## <a name="example"></a>範例  
+ 下列範例會使用 DLL，示範如何使用**/CLRSUPPORTLASTERROR**。  
   
 ```  
 // CLRSUPPORTLASTERROR_client.cpp  
@@ -151,8 +150,11 @@ int main() {
 }  
 ```  
   
-  **應用程式呼叫的 GetLastError 失敗 \(127\)。**  
-**系統呼叫的 GetLastError 成功 \(183\)。**   
-## 請參閱  
+```Output  
+GetLastError for application call failed (127).  
+GetLastError for system call succeeded (183).  
+```  
+  
+## <a name="see-also"></a>另請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

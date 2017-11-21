@@ -1,40 +1,34 @@
 ---
-title: "編譯器警告 (層級 2) C4356 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4356"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4356"
+title: "編譯器警告 （層級 2） C4356 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4356
+dev_langs: C++
+helpviewer_keywords: C4356
 ms.assetid: 3af3defe-de33-43b6-bd6c-2c2e09e34f3f
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cd32ad76e83a51ad361b7d0226fa73fd88b58214
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2017
 ---
-# 編譯器警告 (層級 2) C4356
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'member' : 無法透過衍生類別初始化靜態資料成員  
+# <a name="compiler-warning-level-2-c4356"></a>編譯器警告 (層級 2) C4356
+'member': 無法透過衍生類別初始化靜態資料成員  
   
- 靜態資料成員的初始設定其格式錯誤。  編譯器已接受該初始設定。  
+ 初始化靜態資料成員的格式不正確。 編譯器會接受初始化。 若要避免這個警告，初始化透過基底類別成員。  
   
- 這是 Visual C\+\+ .NET 2003 編譯器的重大變更。  
+ 使用[警告](../../preprocessor/warning.md)pragma 可隱藏這個警告。  
   
- 若要使程式碼在所有 Visual C\+\+ 版本中都可運作，請透過基底類別初始化成員。  
-  
- 請使用 [warning](../../preprocessor/warning.md) Pragma 隱藏這個警告。  
-  
- 下列範例會產生 C4356：  
+ 下列範例會產生 C4356:  
   
 ```  
 // C4356.cpp  

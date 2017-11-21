@@ -1,32 +1,30 @@
 ---
-title: "MixIn 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::MixIn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MixIn 結構"
+title: "MixIn 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::MixIn
+dev_langs: C++
+helpviewer_keywords: MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e1df2de0a8c645b957a5c3e93f8c4ebbb3b2fb94
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# MixIn 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-確定執行階段類別從 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 介面衍生，如果有的話，然後一般 COM 介面。  
+# <a name="mixin-structure"></a>MixIn 結構
+確保執行階段類別衍生自 Windows 執行階段介面 (若有的話)，然後才是傳統 COM 介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<  
@@ -38,26 +36,26 @@ template<
 struct MixIn;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `Derived`  
- 從 [實作](../windows/implements-structure.md) 結構衍生的型別。  
+ 型別衍生自[實作](../windows/implements-structure.md)結構。  
   
  `MixInType`  
- 基底型別。  
+ 基底類型。  
   
  `hasImplements`  
- 如果 `MixInType` 是從目前實作的基底型別所衍生，則為`true` ；否則 `false` 。  
+ `true`如果`MixInType`是衍生自目前實作的基底類型。`false`否則。  
   
-## 備註  
- 如果類別衍生自 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 和類別 COM 介面，類別宣告清單必須先列出所有 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 介面接著任何傳統 COM 介面。  MixIn 確定介面以正確的順序指定。  
+## <a name="remarks"></a>備註  
+ 如果類別衍生自 Windows 執行階段和 COM 的類別介面，在類別宣告清單必須先列出的任何 Windows 執行階段介面，然後任何傳統 COM 介面。 MixIn 可確保指定的介面時，會以正確的順序。  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `MixIn`  
   
-## 需求  
- **標題:** implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

@@ -1,72 +1,70 @@
 ---
-title: "擴充 DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "afxdll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AFXDLL 程式庫"
-  - "DLL [C++], 擴充功能"
-  - "擴充 DLL [C++]"
-  - "擴充 DLL [C++], 關於擴充 DLL"
-  - "記憶體 [C++], DLL"
-  - "MFC DLL [C++], 擴充 DLL"
-  - "MFC 擴充 DLL [C++]"
-  - "資源共用 [C++]"
-  - "共用的 DLL 版本 [C++]"
-  - "共用資源 [C++]"
+title: "擴充 Dll |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: afxdll
+dev_langs: C++
+helpviewer_keywords:
+- memory [C++], DLLs
+- MFC extension DLLs [C++]
+- AFXDLL library
+- shared resources [C++]
+- MFC DLLs [C++], MFC extension DLLs
+- DLLs [C++], extension
+- shared DLL versions [C++]
+- resource sharing [C++]
+- extension DLLs [C++]
+- extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f42c738983cb0d2017614279a35ab79ae677fb1b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 擴充 DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-MFC 擴充 DLL 通常是實作衍生自現有 MFC 程式庫類別的重複使用類別之 DLL。  
+# <a name="mfc-extension-dlls"></a>MFC 擴充 Dll
+MFC 擴充 DLL 是通常會實作可重複使用的類別衍生自現有 Mfc 程式庫的 DLL。  
   
- MFC 擴充 DLL 有下列功能和需求：  
+ MFC 擴充 DLL 具有下列功能和需求：  
   
--   用戶端可執行檔必須是在 **\_AFXDLL** 已定義的情況下編譯之 MFC 應用程式。  
+-   用戶端可執行檔必須以編譯 MFC 應用程式`_AFXDLL`定義。  
   
--   擴充 DLL 也可以由動態連結至 MFC 的標準 DLL 來使用。  
+-   MFC 擴充 DLL 也可供動態連結至 MFC 之標準 MFC DLL。  
   
--   擴充 DLL 應該以定義的 `_AFXEXT` 來編譯。  這會強迫定義 **\_AFXDLL**，並確保會從 MFC 標頭檔 \(Header File\) 提取適當的宣告。  這也確保在建置 DLL 時，**AFX\_EXT\_CLASS** 會定義為 **\_\_declspec\(dllexport\)** \(如果您使用這個巨集來宣告擴充 DLL 的類別，就會需要此動作\)。  
+-   MFC 擴充 Dll 必須以編譯`_AFXEXT`定義。 這會強制`_AFXDLL`也定義，並確保適當的宣告提取從 MFC 標頭檔。 它也可以確保`AFX_EXT_CLASS`定義為`__declspec(dllexport)`時建置 DLL，而這是必要，如果您使用這個巨集來宣告在您的 MFC 擴充 DLL 中的類別。  
   
--   擴充 DLL 不應該對於衍生自 `CWinApp` 的類別執行個體化，但是應該要根據用戶端應用程式 \(或 DLL\) 來提供這個物件。  
+-   MFC 擴充 Dll 應該不具現化類別衍生自`CWinApp`，但應該依賴用戶端應用程式 （或 DLL），以提供此物件。  
   
--   然而，擴充 DLL 應該提供 `DllMain` 函式，而且在那裡執行任何所需的初始化。  
+-   不過，應該提供 MFC 擴充 Dll`DllMain`函式，並進行任何必要的初始化發生。  
   
- 擴充 DLL 是使用 MFC 的動態連結程式庫版本 \(也稱為 MFC 的共用版本\) 所建置的。  只有以 MFC 的共用版本所建置的 MFC 可執行檔 \(應用程式或標準 DLL\) 可以使用擴充 DLL。  用戶端應用程式和擴充 DLL 必須使用相同的 MFCx0.DLL 版本。  使用擴充 DLL，您可以從 MFC 衍生新的自訂類別，然後將這個 MFC 的擴充版本提供給呼叫您 DLL 的應用程式。  
+ 擴充 Dll 會使用 MFC （也稱為 MFC 的共用版本） 的動態連結程式庫版本建立。 只有 MFC 可執行檔 （應用程式或 MFC 的標準 Dll） 所建置的 MFC 的共用版本可以使用 MFC 擴充 DLL。 用戶端應用程式和 MFC 擴充 DLL 必須使用相同版本的 MFCx0.dll。 使用 MFC 擴充 DLL，可以從 MFC 衍生新的自訂類別，然後提供這個擴充的版本的 MFC 應用程式呼叫 DLL。  
   
- 擴充 DLL 也可以用來在應用程式和 DLL 之間傳遞 MFC 衍生物件。  與傳遞物件關聯的成員函式存在於建立物件的模組裡。  因為使用共用的 MFC DLL 版本時會適當地匯出這些函式，所以您可以在應用程式和它所載入的擴充 DLL 之間自由地傳遞 MFC 或 MFC 衍生物件指標。  
+ 擴充 Dll 也可以用於應用程式和 DLL 之間傳遞 MFC 衍生的物件。 傳入物件相關聯的成員函式存在於物件建立所在的模組。 因為使用共用的 MFC 的 DLL 版本時，這些函式會正確匯出，您可以自由地傳遞 MFC 或應用程式與 MFC 擴充 Dll 載入之間的 MFC 衍生物件指標。  
   
- MFC 擴充 DLL 使用 MFC 共用版本的方式與應用程式使用 MFC 共用 DLL 版本相同，但仍有一些需要考慮的地方：  
+ MFC 擴充 DLL 使用共用的版本的 MFC 應用程式會使用共用的 MFC 的 DLL 版本，與一些其他考量的方式相同：  
   
--   沒有 `CWinApp` 衍生物件。  這個 DLL 必須與用戶端應用程式的 `CWinApp` 衍生物件一起使用。  這是說用戶端應用程式擁有主要的訊息幫浦、閒置 \(Idle\) 迴圈等等。  
+-   它並沒有`CWinApp`-衍生物件。 必須使用`CWinApp`-衍生的用戶端應用程式的物件。 這表示用戶端應用程式擁有主要訊息幫浦，閒置迴圈，以及等等。  
   
--   它會在其 `DllMain` 函式呼叫 `AfxInitExtensionModule`。  應該要檢查這個函式的傳回值。  如果 `AfxInitExtensionModule` 傳回零值，您的 `DllMain` 函式便會傳回 0。  
+-   它會呼叫`AfxInitExtensionModule`中其`DllMain`函式。 應該檢查此函式的傳回值。 如果為零的值會傳回從`AfxInitExtensionModule`，傳回從 0 您`DllMain`函式。  
   
--   如果擴充 DLL 要將 `CRuntimeClass` 物件或資源匯出至應用程式，則會在初始化時建立 **CDynLinkLibrary** 物件。  
+-   它會建立**CDynLinkLibrary**物件初始化期間，如果 MFC 擴充 DLL 想要匯出`CRuntimeClass`物件或應用程式的資源。  
   
- 4.0 版之前的 MFC 會稱這類型的 DLL 為 AFXDLL。  AFXDLL 可以參考到建置 DLL 時所定義的 **\_AFXDLL** 前置處理器 \(Preprocessor\) 符號。  
+ 4.0 版之前的 MFC，這種類型的 DLL 呼叫 AFXDLL。 AFXDLL 指`_AFXDLL`建置 DLL 時，會定義的前置處理器符號。  
   
- MFC 共用版本的匯入程式庫是根據 [MFC DLL 命名慣例](../build/naming-conventions-for-mfc-dlls.md)中描述的慣例來命名。  Visual C\+\+ 提供 MFC DLL 的預先建置版本，加上您可以使用並且與您的應用程式一起散佈的許多非 MFC DLL。  這些資訊都記錄在 Redist.txt 中，此檔案安裝於 Program Files\\Microsoft Visual Studio 資料夾。  
+ MFC 的共用版本的匯入程式庫會根據中所述的慣例來命名[MFC Dll 命名慣例](../build/naming-conventions-for-mfc-dlls.md)。 Visual c + + 會提供預先建立的版本的 MFC Dll，再加上數字的非 MFC Dll，您可以使用並與您的應用程式一起散發。 這些案例記載 Redist.txt，其會安裝到 Program Files\Microsoft Visual Studio 資料夾中。  
   
- 如果您是使用 .def 檔匯出，請將下列程式碼置於標頭檔的開頭和結尾：  
+ 如果您要匯出使用.def 檔，將下列程式碼放在開頭和結尾的標頭檔：  
   
-```  
+```cpp  
 #undef AFX_DATA  
 #define AFX_DATA AFX_EXT_DATA  
 // <body of your header file>  
@@ -74,29 +72,29 @@ MFC 擴充 DLL 通常是實作衍生自現有 MFC 程式庫類別的重複使用
 #define AFX_DATA  
 ```  
   
- 這四行程式碼會確保您的程式碼正確地編譯為擴充 DLL。  遺漏這四行可能會導致 DLL 不正確編譯或連結。  
+ 這四行，確保您的程式碼正確編譯 MFC 擴充 DLL。 遺漏這些四行可能會導致您編譯或連結不正確的 DLL。  
   
- 如果您需要在 MFC DLL 往返傳遞 MFC 或 MFC 衍生物件指標，這個 DLL 就必須是擴充 DLL。  與傳遞物件關聯的成員函式存在於建立物件的模組裡。  因為使用共用的 MFC DLL 版本時會適當地匯出這些函式，所以您可以在應用程式和它所載入的擴充 DLL 之間自由地傳遞 MFC 或 MFC 衍生物件指標。  
+ 如果您需要將 MFC 或 MFC 衍生的物件指標，或從 MFC DLL，DLL 應該是 MFC 擴充 DLL。 傳入物件相關聯的成員函式存在於物件建立所在的模組。 因為使用共用的 MFC 的 DLL 版本時，這些函式會正確匯出，您可以自由地傳遞 MFC 或應用程式與 MFC 擴充 Dll 載入之間的 MFC 衍生物件指標。  
   
- 由於 C\+\+ 函式名稱改變 \(Name Mangling\) 和匯出問題，擴充 DLL 的匯出清單在相同 DLL 和不同平台之 DLL 的偵錯版本和正式版本之間可能會不同。  正式版本的 MFCx0.DLL 有大約 2,000 個匯出的進入點；偵錯版本的 MFCx0D.DLL 有大約 3,000 個匯出的進入點。  
+ 由於 c + + 名稱修飾 （name-mangling） 和匯出問題，[匯出] 清單，從 MFC 擴充 DLL 可能會不同相同 DLL 的偵錯和零售版本和 Dll 之間不同平台。 零售 MFCx0.dll 有大約 2000 匯出進入點。偵錯 MFCx0D.dll 有大約 3000 匯出的項目點。  
   
-## 記憶體管理  
- 載入至用戶端應用程式位址空間的 MFCx0.dll 和所有的擴充 DLL，會使用相同的記憶體配置器 \(Allocator\)、資源載入以及其他的 MFC 全域狀態，就如同在同一個應用程式中一樣。  因為非 MFC DLL 程式庫和標準 DLL 所做的正好相反，並且讓每個 DLL 配置在它自己的記憶體集區之外，這是很重要的。  
+## <a name="memory-management"></a>記憶體管理  
+ MFCx0.dll 和所有的 MFC 擴充 Dll 載入到用戶端應用程式的位址空間使用相同的記憶體配置器、 資源載入和其他 MFC 全域狀態，如同它們是相同的應用程式中。 因為非 MFC DLL 程式庫和 MFC 的標準 Dll 則完全相反，而且有它自己的記憶體集區超出每個 DLL 配置，這十分重要。  
   
- 如果擴充 DLL 會配置記憶體，則該記憶體便可以自由地與其他應用程式配置的物件相互摻雜。  同時，如果動態連結至 MFC 的應用程式損毀，作業系統的保護會維持共用 DLL 之其他 MFC 應用程式的完整性。  
+ 如果 MFC 擴充 DLL 配置記憶體，記憶體可以自由地混合與其他應用程式配置的物件。 此外，如果動態連結至 MFC 的應用程式失敗，作業系統保護會維護其他任何 MFC 應用程式共用 DLL 的完整性。  
   
- 同樣的，其他的全域 MFC 狀態 \(例如要載入資源的目前可執行檔\)，也會在用戶端應用程式和所有 MFC 擴充 DLL 之間以及 MFCx0.dll 本身中共用。  
+ 同樣地其他全域 MFC 狀態，例如目前的可執行檔載入資源，也會用戶端應用程式和所有 MFC 擴充 Dll，以及 MFCx0.dll 本身之間共用。  
   
-## 共用資源和類別  
- 匯出資源是經由資源清單來完成。  每個應用程式都會包含 **CDynLinkLibrary** 物件的單一連結清單。  尋找資源時，大多數載入資源的標準 MFC 實作會先在目前資源模組 \(`AfxGetResourceHandle`\) 搜尋，並在找不到資源時，瀏覽 **CDynLinkLibrary** 物件的清單來嘗試載入要求的資源。  
+## <a name="sharing-resources-and-classes"></a>共用資源和類別  
+ 匯出資源是透過資源的清單。 每個應用程式包含單向連結的清單**CDynLinkLibrary**物件。 大部分的載入資源的標準 MFC 實作資源時，尋找在目前的資源模組的第一個 (`AfxGetResourceHandle`)，如果資源找不到查核清單**CDynLinkLibrary**物件嘗試載入要求的資源。  
   
- 瀏覽清單時會出現速度略微緩慢和需要管理資源 ID 範圍等缺點。  優點是連結至數個擴充 DLL 的用戶端應用程式可以使用任何 DLL 提供的資源，而不需要指定 DLL 執行個體控制代碼 \(Instance Handle\)。  `AfxFindResourceHandle` 是 API，用來逐一查看資源清單以尋找指定的符合項目。  這個 API 會使用到資源的名稱、類型，並傳回第一次發現時 \(或 NULL\) 的資源控制代碼。  
+ 查核清單有缺點，它會稍微慢一點，而且必須管理資源 ID 範圍。 它的優點是連結到數個 MFC 擴充 Dll 的用戶端應用程式可以使用任何提供 DLL 的資源，而不需要指定 DLL 的執行個體控制代碼。 `AfxFindResourceHandle`API 用查核資源清單來查詢給定的相符項目。 它會使用名稱和資源類型，並傳回其第一次找到的資源控制代碼 （或 NULL）。  
   
- 如果您不要瀏覽清單，並且只要從特定地方載入資源，使用 `AfxGetResourceHandle` 和 `AfxSetResourceHandle` 函式來儲存舊的控制代碼，並且設定新控制代碼。  請確定在傳回用戶端應用程式之前要還原舊的資源控制代碼。  如需使用這種方法來明確載入功能表的範例，請參閱 MFC 範例 [DLLHUSK](http://msdn.microsoft.com/zh-tw/dfcaa6ff-b8e2-4efd-8100-ee3650071f90) 中的 Testdll2.cpp。  
+ 如果您不希望查核清單，並只從特定位置中載入資源，使用函數`AfxGetResourceHandle`和`AfxSetResourceHandle`儲存舊的控制代碼，並將新的控制代碼。 請務必還原舊的資源控制代碼傳回至用戶端應用程式之前。 使用這個方法來明確載入功能表的範例，請參閱 MFC 範例 Testdll2.cpp [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。  
   
- MFC 物件動態建立給定的 MFC 名稱會很相似。  MFC 物件還原序列化 \(Deserialization\) 機制必須登錄所有 `CRuntimeClass` 物件，這樣它就可以動態建立根據先前儲存的所需 C\+\+ 物件型別來進行重建。  
+ 相似的動態建立 MFC 物件授與 MFC 的名稱。 MFC 物件還原序列化機制需要將所有`CRuntimeClass`登錄，讓它可以藉由動態建立 c + + 物件的所需的類型，根據項目先前已儲存重新建構的物件。  
   
- 在 MFC [DLLHUSK](http://msdn.microsoft.com/zh-tw/dfcaa6ff-b8e2-4efd-8100-ee3650071f90) 範例的例子裡，此清單看起來會像這樣：  
+ 在 MFC 範例的情況下[DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)，清單看起來像這樣：  
   
 ```  
 head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE  
@@ -112,31 +110,31 @@ head ->   DLLHUSK.EXE   - or -   DLLHUSK.EXE
             MFCxxD.DLL            MFCxx.DLL  
 ```  
   
- 其中 *xx* 是版本號碼；例如，42 表示 4.2 版。  
+ 其中*xx*是版本號碼; 例如，42 代表 4.2 版。  
   
- MFCxx.dll 通常是在資源和類別清單的最後面。  MFCxx.dll 包含所有的標準 MFC 資源，包括所有標準命令 ID 的提示字串 \(Prompt String\)。  將其置於清單的最後面，可以讓 DLL 和用戶端應用程式不具有自己的標準 MFC 資源複本，而是依賴 MFCxx.dll 的共用資源。  
+ MFCxx.dll 是根據資源和類別清單通常是最後一個項目。 MFCxx.dll 包括所有標準 MFC 資源，包括所有標準命令 Id 的提示字串。 將它放在清單的結尾，可讓 Dll 和用戶端應用程式本身未擁有其自己的標準 MFC 資源的複本，但改為依賴 MFCxx.dll 中的共用資源。  
   
- 將所有 DLL 的資源和類別名稱合併到用戶端應用程式的命名空間，會產生向您要求注意指定的 ID 或名稱的缺點。  
+ 合併入用戶端應用程式的命名空間的資源和類別名稱的所有 Dll 缺點是需要您特別注意 Id 或您選擇的名稱。  
   
- [DLLHUSK](http://msdn.microsoft.com/zh-tw/dfcaa6ff-b8e2-4efd-8100-ee3650071f90) 範例會使用多個標頭檔來管理共用資源命名空間。  
+ [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)範例使用多個標頭檔來管理共用的資源命名空間。  
   
- 如果您的 MFC 擴充 DLL 必須為每一個應用程式維護其他資料，您可以由 **CDynLinkLibrary** 衍生新類別，並且使用 `DllMain` 來建立。  該 DLL 會在執行時檢查 **CDynLinkLibrary** 物件目前的應用程式清單，找出特殊擴充 DLL 的物件。  
+ 如果您的 MFC 擴充 DLL，需要維護額外的資料，每個應用程式，您可以衍生新類別從**CDynLinkLibrary**並建立在`DllMain`。 DLL 執行時，可以檢查目前的應用程式清單**CDynLinkLibrary**来找到該特定 MFC 擴充 DLL 的物件。  
   
-### 您想要執行甚麼工作？  
+### <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [初始化擴充 DLL](../build/initializing-extension-dlls.md)  
+-   [初始化 MFC 擴充 DLL](../build/run-time-library-behavior.md#initializing-extension-dlls)  
   
-### 您還想知道關於哪些方面的詳細資訊？  
+### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
--   [使用共用資源檔的提示](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
+-   [使用共用的資源檔的秘訣](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)  
   
 -   [MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)  
   
--   [靜態連結至 MFC 的標準 DLL](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [以靜態方式連結至 MFC 的標準 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [動態連結至 MFC 的標準 DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [動態連結至 MFC 的標準 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [在標準 DLL 中使用資料庫、OLE 和通訊端擴充 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
+-   [在 MFC DLL 中使用資料庫、OLE 和通訊端 MFC 延伸模組 DLL](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)  
   
-## 請參閱  
- [Visual C\+\+ 中的 DLL](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>另請參閱  
+ [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

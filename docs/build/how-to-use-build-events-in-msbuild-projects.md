@@ -1,54 +1,51 @@
 ---
-title: "如何：在 MSBuild 專案中使用建置事件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "msbuild.cpp.howto.usebuildevents"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "msbuild (c++), 如何：在專案中使用建置事件"
+title: "如何： 在 MSBuild 專案中使用建置事件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: msbuild.cpp.howto.usebuildevents
+dev_langs: C++
+helpviewer_keywords: 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-caps.latest.revision: 23
-caps.handback.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "23"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ebbccf147cc45ce5e3dab512e13a8b059f104cdd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：在 MSBuild 專案中使用建置事件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建置事件就是 [!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)] 在建置流程中的特定階段執行的命令。  *建置前 \(Pre\-Build\)* 事件發生於建置開始前； *連結前* 事件發生於結步驟開始之前；而在 *建置後* 事件發生於建置成功結束之後。  只有在相關聯的建置步驟發生時，會發生建置事件。  例如，若未執行連結步驟，則不會發生連結前事件。  
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 專案中使用建置事件
+建置事件是一個命令，[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]執行建置流程中的特定階段。 *建置前*建置開始前，就會發生事件;*連結前*連結步驟開始; 之前發生的事件和*建置後*組建之後發生的事件已成功結束。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如，連結前事件不會發生連結步驟不會執行。  
   
- 在項目定義群組中，這三個建置事件都會以當 **MSBuild** 執行建置事件時所執行的命令項目 \(`<Command>`\) 和所顯示的訊息項目 \(`<Message>`\) 來表示。  每一個項目都是選擇性項目，若您多次指定相同的項目，則最後一次優先。  
+ 每個組建的三個事件由在項目定義群組 command 元素 (`<Command>`) 執行和訊息項目 (`<Message>`) 也就是顯示時**MSBuild**執行建置事件。 每個項目是選擇性，而且如果您多次指定相同的項目，最後一個出現項目會優先使用。  
   
- 可以在屬性群組中指定選擇性「*在建置中使用*」\(Use\-In\-Build\) 項目 \(`<`*build\-event***UseInBuild**`>`\)，表示是否已執行建置事件。  「*在建置中使用*」\(Use\-In\-Build\) 項目的內容值不是 `true` 就是 `false`。  根據預設，除非建置事件的對應「*在建置中使用*」\(Use\-In\-Build\) 項目已設為 `false`，否則會執行建置事件。  
+ 選擇性*在組建中使用*元素 (`<`*建置事件***UseInBuild**`>`) 指出屬性群組中可以指定是否執行建置事件。 內容的值*在組建中使用*項目是`true`或`false`。 根據預設，建置事件執行，除非其對應*在組建中使用*元素設定為`false`。  
   
- 下表列出每一個建置事件 XML 項目：  
+ 下表列出每個組建事件 XML 項目：  
   
 |XML 項目|說明|  
-|------------|--------|  
-|`PreBuildEvent`|這個事件會在建置開始之前執行。|  
-|`PreLinkEvent`|這個事件會在連結步驟開始之前執行。|  
-|`PostBuildEvent`|這個事件會在建置完成之後執行。|  
+|-----------------|-----------------|  
+|`PreBuildEvent`|在建置開始之前，就會執行此事件。|  
+|`PreLinkEvent`|連結步驟開始之前，就會執行此事件。|  
+|`PostBuildEvent`|組建完成後，就會執行此事件。|  
   
- 下表列出每一個「*在建置中使用*」\(Use\-In\-Build\) 項目：  
+ 下表列出每個*在組建中使用*項目：  
   
 |XML 項目|說明|  
-|------------|--------|  
-|`PreBuildEventUseInBuild`|指定是否要執行「*建置前*」\(Pre\-Build\) 事件。|  
-|`PreLinkEventUseInBuild`|指定是否要執行「*連結前*」\(Pre\-Link\) 事件。|  
-|`PostBuildEventUseInBuild`|指定是否要執行「*建置後*」\(Post\-Build\) 事件。|  
+|-----------------|-----------------|  
+|`PreBuildEventUseInBuild`|指定是否要執行*建置前*事件。|  
+|`PreLinkEventUseInBuild`|指定是否要執行*連結前*事件。|  
+|`PostBuildEventUseInBuild`|指定是否要執行*建置後*事件。|  
   
-## 範例  
- 下列範例可以加入至在[逐步解說：使用 MSBuild 來建立 Visual C\+\+ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)中建立之 myproject.vcxproj 檔的 Project 項目內部。  「*建置前*」\(Pre\-Build\) 事件會建立 main.cpp 的複本，「*連結前*」\(Pre\-Link\) 事件會建立 main.obj 的複本，而「*建置後*」\(Post\-Build\) 事件則會建立 myproject.exe 的複本。  如果使用發行組態建立專案，則會執行建置事件。  如果使用偵錯組態建立專案，則不會執行建置事件。  
+## <a name="example"></a>範例  
+ 下列範例可以 myproject.vcxproj 檔案中建立的專案項目內加入[逐步解說： 使用 MSBuild 來建立 Visual c + + 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件進行的 main.cpp;*連結前*事件可讓一 main.obj; 的複本及*建置後*事件會建立一份 myproject.exe。 如果使用發行組態建置專案時，會執行建置事件。 如果使用的偵錯組態建置專案時，不會執行建置事件。  
   
 ```  
 <ItemDefinitionGroup>  
@@ -79,6 +76,6 @@ manager: "ghogen"
 </PropertyGroup>  
 ```  
   
-## 請參閱  
- [MSBuild \(Visual C\+\+\)](../build/msbuild-visual-cpp.md)   
- [逐步解說：使用 MSBuild 來建立 Visual C\+\+ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+## <a name="see-also"></a>另請參閱  
+ [MSBuild （Visual c + +）](../build/msbuild-visual-cpp.md)   
+ [逐步解說：使用 MSBuild 來建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

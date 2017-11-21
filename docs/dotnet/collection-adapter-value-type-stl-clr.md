@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type 成員 [STL/CLR]"
+title: "collection_adapter::value_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 4a77ec36-6113-4ec3-86a2-ea24d96605c1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8a66c99d4e37021898a90ac7b553d298a40f55e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-項目的類型。  
+# <a name="collectionadaptervaluetype-stlclr"></a>collection_adapter::value_type (STL/CLR)
+元素的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Value value_type;  
 ```  
   
-## 備註  
- 這個型別是樣板參數 `Value`的同義字，在特製化；否則就是 `System::Object^`的同義字。  
+## <a name="remarks"></a>備註  
+ 類型是樣板參數的同義字`Value`，如果出現在特製化; 否則它同義`System::Object^`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_collection_adapter_value_type.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標頭:** \<cliext\/adapter\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<配接器 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::reference](../dotnet/collection-adapter-reference-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::reference (STL/CLR)](../dotnet/collection-adapter-reference-stl-clr.md)

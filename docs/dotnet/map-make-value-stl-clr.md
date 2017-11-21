@@ -1,48 +1,46 @@
 ---
-title: "map::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value 成員 [STL/CLR]"
+title: "map::make_value (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: a0bc4081-b8b7-450e-b041-a49ac42b279f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 639fb391b1feaa86bba1edd05f502d015c46779f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# map::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構一個值物件。  
+# <a name="mapmakevalue-stlclr"></a>map::make_value (STL/CLR)
+建構值物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 使用的索引鍵值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 若要使用的金鑰值。  
   
- 已對應  
- 要進行搜尋的對應值。  
+ 對應  
+ 要搜尋的對應的值。  
   
-## 備註  
- 成員函式傳回索引鍵為 `key` ，並將值為 `mapped`的 `value_type` 物件。  您可用它來撰寫適用於與其他數種成員函式一起使用的物件。  
+## <a name="remarks"></a>備註  
+ 成員函式傳回`value_type`物件的索引鍵是`key`、 其對應的值為`mapped`。 您可以使用它來撰寫適用於數個其他成員函式物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_make_value.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 需求  
- **標頭：** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_type](../dotnet/map-key-type-stl-clr.md)   
- [map::mapped\_type](../dotnet/map-mapped-type-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)   
+ [map:: mapped_type (STL/CLR)](../dotnet/map-mapped-type-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

@@ -1,56 +1,56 @@
 ---
-title: "資料錄集：宣告預先定義查詢的類別 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC 資料錄集, 查詢"
-  - "預先定義的查詢和資料錄集"
-  - "資料錄集, 預先定義的查詢"
-  - "資料錄集, 預存程序"
-  - "預存程序, 和資料錄集"
+title: "資料錄集： 宣告預先定義的查詢 (ODBC) 的類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, queries
+- predefined queries and recordsets
+- stored procedures, and recordsets
+- recordsets, predefined queries
+- recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1d5fdb93880ec29343d38acba7d7d42caf155214
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 資料錄集：宣告預先定義查詢的類別 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本文件適用於 MFC ODBC 類別。  
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>資料錄集：宣告預先定義查詢的類別 (ODBC)
+本主題適用於 MFC ODBC 類別。  
   
- 本主題說明如何建立預先定義查詢的資料錄集類別 \(有時稱為預存程序 \(Stored Procedure\)，例如在 Microsoft SQL Server 中\)。  
+ 本主題說明如何建立預先定義的查詢 （有時稱為預存程序，例如 Microsoft SQL Server） 的資料錄集類別。  
   
 > [!NOTE]
->  本文件適用於未實作大量資料列擷取的 `CRecordset` 衍生物件。  若已實作大量資料列擷取，則此過程會非常相似。  若要了解實作與未實作大量資料列擷取的資料錄集之間的差異，請參閱[資料錄集：擷取大量資料錄 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+>  本主題適用於衍生自物件`CRecordset`的大量資料列中擷取尚未實作。 如果實作大量資料列擷取時，處理程序是非常類似。 若要了解與未實作大量資料列擷取的資料錄集之間的差異，請參閱[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
- 某些資料庫管理系統 \(DBMS\) 可讓您建立預先定義詢，並允許您從應用程式中以函式方式呼叫此查詢。  查詢具有名稱，可能有參數，且有可能會傳回資料錄。  本主題中的程序會說明如何呼叫可傳回資料錄的預先定義查詢 \(且可能接受參數\)。  
+ 某些資料庫管理系統 (Dbms) 可讓您建立預先定義的查詢，並從您的應用程式的函式中呼叫它。 查詢的名稱，可能會接受參數，並可能會傳回記錄。 本主題中的程序描述如何呼叫預先定義的查詢傳回的記錄 （並可能接受參數）。  
   
- 資料庫類別不支援更新預先定義查詢。  快照集預先定義查詢與動態集預先定義查詢間的差異不是在於更新能力，而是在於您的資料錄集可否看到其他人 \(或您的程式中的其他資料錄集\) 所做的變動。  
+ 資料庫類別不支援更新預先定義的查詢。 預先定義的快照集的查詢與動態預先定義的查詢之間的差異不是可更新性，但其他使用者 （或其他程式中的資料錄集） 所做的變更是否顯示在資料錄集。  
   
 > [!TIP]
->  您並不需要資料錄集呼叫不傳回資料錄的預先定義查詢。  依照下列的說明準備 SQL 陳述式，但藉由呼叫 `CDatabase` 的 [ExecuteSQL](../Topic/CDatabase::ExecuteSQL.md) 成員函式來執行。  
+>  您不需要呼叫預先定義的查詢不會傳回記錄的資料錄集。 準備 SQL 陳述式，如下所述但執行藉由呼叫`CDatabase`成員函式[ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)。  
   
- 您可建立單一資料錄集類別來管理預先定義查詢的呼叫，但您必須自己做某些工作。  精靈並不支援特別為這個目的而建立類別。  
+ 您可以建立單一資料錄集類別以管理呼叫預先定義的查詢，但是某些工作必須自行執行。 精靈不支援建立專用於此用途的類別。  
   
-#### 若要建立一個呼叫預先定義查詢 \(預存程序\) 的類別  
+#### <a name="to-create-a-class-for-calling-a-predefined-query-stored-procedure"></a>若要建立的類別呼叫預先定義的查詢 （預存程序）  
   
-1.  使用 \[加入類別\] 的 [MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)，來建立資料表 \(具有查詢所傳回的最多資料行\) 的資料錄集類別。  如此您便可了解開頭出發點。  
+1.  使用[MFC ODBC 消費者精靈](../../mfc/reference/adding-an-mfc-odbc-consumer.md)從**加入類別**建立佔最大查詢所傳回的資料行之資料表的資料錄集類別。 這可讓您開始。  
   
-2.  為任何資料表的任何資料行 \(查詢所傳回的\) 手動加入精靈沒有為您建立的資料成員。  
+2.  手動加入任何資料表，但精靈未不會為您建立查詢所傳回的任何資料行的欄位資料成員。  
   
-     例如，查詢若是傳回三個資料行且每一個都是來自兩個附加的資料表內，就要在類別中加入六個欄位資料成員 \(適當的資料型別\)。  
+     例如，如果查詢傳回三個資料行，從兩個額外的資料表，加入六個欄位資料成員 （適當的資料型別中） 類別。  
   
-3.  在類別的 [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) 成員函式中，手動加入 [RFX](../../data/odbc/record-field-exchange-rfx.md) 函式呼叫，每個加入的欄位資料成員的資料型別都要對應至一個函式呼叫。  
+3.  手動新增[RFX](../../data/odbc/record-field-exchange-rfx.md)函式呼叫[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)類別，其中一個對應到資料類型的每個成員函式加入的欄位資料成員。  
   
     ```  
     Immediately before these RFX calls, call <MSHelp:link keywords="_mfc_CFieldExchange.3a3a.SetFieldType" TABINDEX="0">SetFieldType</MSHelp:link>, as shown here:   
@@ -58,39 +58,39 @@ caps.handback.revision: 8
     ```  
   
     > [!NOTE]
-    >  您必須知道結果集 \(Result Set\) 中傳回的資料型別和資料行順序。  `DoFieldExchange` 內 RFX 函式呼叫的順序必須符合結果集資料行的順序。  
+    >  您必須知道的資料類型和設定，結果中傳回的資料行的順序。 RFX 函式的順序呼叫中`DoFieldExchange`必須符合的結果集資料行的順序。  
   
-4.  在資料錄集類別建構函式中手動加入新欄位資料成員的初始化。  
+4.  手動加入新的欄位資料成員的初始化資料錄集類別建構函式中。  
   
-     您也必須遞增 [m\_nFields](../Topic/CRecordset::m_nFields.md) 資料成員的初始化數值。  精靈雖會編寫初始化，但其只涵蓋其為您加入的欄位資料成員。  例如：  
+     您也必須遞增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)資料成員。 精靈撰寫初始化，但它僅限於它為您加入的欄位資料成員。 例如：  
   
     ```  
     m_nFields += 6;  
     ```  
   
-     某些資料型別不該在這裡初始化，例如 `CLongBinary` 或位元組陣列。  
+     某些資料類型不應該初始化，例如`CLongBinary`或位元組陣列。  
   
-5.  查詢若可接受參數，便要為每個參數加入一個參數資料成員、RFX 函式呼叫和個別的初始化。  
+5.  如果查詢使用參數，加入每個參數，針對每個，RFX 函式呼叫和每個初始化的參數資料成員。  
   
-6.  您必須增加每個加入參數的 `m_nParams`，就如同您在本程序的步驟 4 中，為加入欄位所做的 `m_nFields`。  如需詳細資訊，請參閱[資料錄集：參數化資料錄集 \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。  
+6.  您必須遞增`m_nParams`的每個已加入參數，您可以如同`m_nFields`此程序的步驟 4 中新增欄位。 如需詳細資訊，請參閱[資料錄集： 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。  
   
-7.  依照下列形式，手動編寫一個 SQL 陳述式字串：  
+7.  手動寫入下列形式的 SQL 陳述式字串：  
   
     ```  
     {CALL proc-name [(? [, ?]...)]}  
     ```  
   
-     其中 **CALL** 是一個 ODBC 關鍵字，**proc\-name** 是一個已知在資料來源上的查詢名稱，而 "?" 項目是您在執行階段提供給資料錄集的參數值之替代符號 \(如果有的話\)。  下列範例為一個參數準備一個替代符號：  
+     其中**呼叫**為 ODBC 關鍵字，**程序名稱**是查詢的名稱，因為已知會在資料來源，而 「？ 」 項目都是您提供給資料錄集在執行階段 （如果有的話） 的參數值的預留位置. 下列範例會準備一個參數的預留位置：  
   
     ```  
     CString mySQL = "{CALL Delinquent_Accts (?)}";  
     ```  
   
-8.  在開啟資料錄集的程式碼中，設定資料錄集的參數資料成員值，再呼叫 **Open** 成員函式，然後傳遞 **lpszSQL** 參數的 SQL 字串。  或者取代您的類別中 `GetDefaultSQL` 成員函式所傳回的字串。  
+8.  在開啟資料錄集的程式碼，將設定資料錄集的參數的值資料成員，然後呼叫**開啟**成員函式，傳遞您的 SQL 字串，以進行**lpszSQL**參數。 相反地，取代所傳回的字串或`GetDefaultSQL`在您的類別成員函式。  
   
- 下列範例示範呼叫預先定義查詢 \(名為 `Delinquent_Accts`\) 的程序，此查詢接受一個銷售地區號碼的參數。  這個查詢會傳回三個資料行：`Acct_No`、`L_Name`、`Phone`。  所有的資料行都是來自 Customers 資料表。  
+ 下列範例示範的程序呼叫預先定義的查詢，名為`Delinquent_Accts`，其中的銷售地區數個會接受一個參數。 此查詢會傳回三個資料行： `Acct_No`， `L_Name`， `Phone`。 所有的資料行是從 「 客戶 」 資料表。  
   
- 下面資料錄集為查詢所傳回的資料行指定了欄位資料成員，以及執行階段時要求的銷售地區號碼參數。  
+ 下列資料錄集指定欄位資料成員，則查詢會傳回和參數的銷售地區執行階段要求數目的資料行。  
   
 ```  
 class CDelinquents : public CRecordset  
@@ -104,9 +104,9 @@ class CDelinquents : public CRecordset
 };  
 ```  
   
- 這個類別宣告除了手動加入的 `m_lDistParam` 成員以外，其餘皆與精靈編寫的相同。  其他的成員並未顯示在此。  
+ 這個類別宣告為精靈所撰寫的是，除了`m_lDistParam`手動加入的成員。 此處未顯示其他成員。  
   
- 下一個範例會說明 `CDelinquents` 建構函式內的資料成員初始化。  
+ 下一個範例顯示中之資料成員初始設定`CDelinquents`建構函式。  
   
 ```  
 CDelinquents::CDelinquents(CDatabase* pdb)  
@@ -123,9 +123,9 @@ CDelinquents::CDelinquents(CDatabase* pdb)
 }  
 ```  
   
- 請注意 [m\_nFields](../Topic/CRecordset::m_nFields.md) 和 [m\_nParams](../Topic/CRecordset::m_nParams.md) 的初始化。  精靈會將 `m_nFields` 初始化；您要自己將 `m_nParams` 初始化。  
+ 請注意的初始化[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)和[m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)。 初始化精靈`m_nFields`; 您初始化`m_nParams`。  
   
- 下一個範例會說明 `CDelinquents::DoFieldExchange` 內的 RFX 函式：  
+ 下一個範例顯示 RFX 函式中的`CDelinquents::DoFieldExchange`:  
   
 ```  
 void CDelinquents::DoFieldExchange(CFieldExchange* pFX)  
@@ -139,9 +139,9 @@ void CDelinquents::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- 除了為三個傳回的資料行建立 RFX 呼叫外，此程式碼會管理繫結您在執行階段傳入的參數。  這個參數是 `Dist_No` \(地區號碼\) 資料行的索引鍵。  
+ 除了進行三個傳回的資料行的 RFX 呼叫，此程式碼負責管理您在執行階段傳遞的參數繫結。 參數在鎖`Dist_No`（區域數字） 資料行。  
   
- 下一個範例說明如何設定 SQL 字串和如何使用它來開啟資料錄集。  
+ 下一個範例示範如何設定 SQL 字串以及如何使用它來開啟資料錄集。  
   
 ```  
 // Construct a CDelinquents recordset object  
@@ -154,13 +154,13 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
     // Use the recordset ...  
 ```  
   
- 此程式碼會建構一個快照集，傳遞一個先前從使用者那裡取得的參數並呼叫預先定義查詢。  當查詢執行時，它會為指定的銷售地區傳回資料錄。  每個資料錄包含有帳戶號碼、客戶的姓氏和客戶的電話號碼的資料行。  
+ 此程式碼建構快照集、 將它傳遞為參數，稍早取得的使用者，並呼叫預先定義的查詢。 查詢執行時，它會傳回指定的銷售地區的記錄。 每一筆記錄包含帳戶號碼、 客戶姓氏和客戶的電話號碼的資料行。  
   
 > [!TIP]
->  您可能會想處理來自預存程序的傳回值 \(輸出參數\)。  如需詳細資訊和範例，請參閱 [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md)。  
+>  您可能想要處理從預存程序的傳回值 （輸出參數）。 如需詳細資訊和範例，請參閱[CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)。  
   
-## 請參閱  
- [資料錄集 \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [資料錄集：重新查詢資料錄集 \(ODBC\)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
- [資料錄集：宣告資料表的類別 \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
- [資料錄集：執行聯結 \(ODBC\)](../../data/odbc/recordset-performing-a-join-odbc.md)
+## <a name="see-also"></a>另請參閱  
+ [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [資料錄集： 重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)   
+ [資料錄集： 宣告資料表 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   
+ [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

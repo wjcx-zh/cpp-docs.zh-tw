@@ -1,36 +1,36 @@
 ---
-title: "__ll_lshift | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__ll_lshift_cpp"
-  - "__ll_lshift"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ll_lshift 內建"
-  - "__ll_lshift 內建"
+title: "__ll_lshift |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __ll_lshift_cpp
+- __ll_lshift
+dev_langs: C++
+helpviewer_keywords:
+- ll_lshift intrinsic
+- __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0d827b375cd382ff4f298f2933fc8a3109d2f846
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# __ll_lshift
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="lllshift"></a>__ll_lshift
+**Microsoft 特定的**  
   
- 將所提供的 64 位元值向左移以指定的位元。  
+ 向左移位指定位元數所提供的 64 位元值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned __int64 __ll_lshift(  
@@ -39,30 +39,30 @@ unsigned __int64 __ll_lshift(
 );  
 ```  
   
-#### 參數  
- \[in\] `Mask`  
- 64 位元整數的值，向左移位。  
+#### <a name="parameters"></a>參數  
+ [in] `Mask`  
+ 要向左移位的 64 位元整數值。  
   
- \[in\] `nBit`  
+ [in] `nBit`  
  要移位的位元數。  
   
-## 傳回值  
- 遮罩移位左`nBit`位元。  
+## <a name="return-value"></a>傳回值  
+ 遮罩向左旋轉`nBit`位元。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__ll_lshift`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__ll_lshift`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 如果您編譯您的程式使用 64 位元架構和`nBit`超過 63，要移位的位元數是`nBit`模數 64。  如果您編譯程式，使用 32 位元架構和`nBit`大於 31，要移位的位元數是`nBit`模數 32。  
+## <a name="remarks"></a>備註  
+ 如果您編譯程式，使用 64 位元架構和`nBit`大於 63，要移位的位元數是`nBit`模數 64。 如果您編譯程式，使用 32 位元架構和`nBit`大於 31，要移位的位元數是`nBit`模數 32。  
   
- `ll`在名稱中會指示這是一項作業，在`long long` \(`__int64`\)。  
+ `ll`指出的名稱中的 這是作業，在`long long`(`__int64`)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // ll_lshift.cpp  
@@ -83,17 +83,17 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 10000  
 ```  
   
- **附註** ，則向左的移位運算的無不帶正負號的版本。  這是因為`__ll_lshift`已使用，則為不帶正負號的輸入的參數。  不像右移位中，左移位中，如沒有正負號相依關係，因為結果中的最小顯著性位元會永遠設為零的正負號的位移值而不考慮。  
+ **請注意**沒有左的移位作業的不帶正負號的版本。 這是因為`__ll_lshift`已使用不帶正負號的輸入的參數。 與向右移位，不同的是沒有正負號無關的左移，因為結果中的最小顯著性位元一定會設定為零不論移位的值的正負號。  
   
-### 結束 Microsoft 特定  
+**END Microsoft 特定的**  
   
-## 請參閱  
- [\_\_ll\_rshift](../intrinsics/ll-rshift.md)   
- [\_\_ull\_rshift](../intrinsics/ull-rshift.md)   
+## <a name="see-also"></a>另請參閱  
+ [__ll_rshift](../intrinsics/ll-rshift.md)   
+ [__ull_rshift](../intrinsics/ull-rshift.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -1,33 +1,32 @@
 ---
-title: "靜態 Const 整數連結不再是常值 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "常數, 宣告"
-  - "整數常數運算式"
-  - "literal 屬性 [C++]"
+title: "靜態 Const 整數連結不再是常值 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- literal attribute [C++]
+- constants, declaring
+- integral constant expressions
 ms.assetid: d2a5e3d2-ffb0-4b61-8114-bec5993a1195
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2d4e955df4982ba2077098adc7bd47506b42239
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 靜態 Const 整數連結不再是常值
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，類別的常數成員宣告已變更。  
+# <a name="static-const-int-linkage-is-no-longer-literal"></a>靜態 Const 整數連結不再是常值
+宣告常數成員的類別已從 Managed Extensions for c + + Visual c + +。  
   
- 雖然還是支援 `static const` 整數成員，但它們的連結屬性 \(Attribute\) 已有所變更。  舊的連結屬性現在包含在常值 \(Literal\) 整數成員中。  例如，請考慮下列 Managed Extensions 類別：  
+ 雖然`static const`仍然支援整數類資料成員、 其連結屬性已變更。 其先前的連結屬性現在會執行的常值的整數類資料成員中。 例如，請考慮下列管理延伸模組類別：  
   
 ```  
 public __gc class Constants {  
@@ -36,37 +35,37 @@ public:
 };  
 ```  
   
- 這會為欄位產生下列基礎 CIL 屬性 \(請注意常值屬性\)：  
+ 這會產生下列基礎的 CIL 屬性欄位 （請注意常值的屬性）：  
   
 ```  
 .field public static literal int32   
 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- 仍在新語法底下編譯時：  
+ 雖然這仍會在新語法中編譯：  
   
 ```  
 public ref class Constants {  
 public:  
-   static const int LOG_DEBUG = 4;  
+   static const int LOG_DEBUG = 4;  
 };  
 ```  
   
- 它再也不會發出常值屬性，因此 CLR 執行階段不會將它視為常數：  
+ 它不會發出常值的屬性，並因此不視為常數 CLR 執行階段：  
   
 ```  
 .field public static int32 modopt([Microsoft.VisualC]Microsoft.VisualC.IsConstModifier) STANDARD_CLIENT_PRX = int32(0x00000004)  
 ```  
   
- 若要擁有相同的語言間常值屬性，可以將宣告變更為剛支援的 `literal` 資料成員，如下所示，  
+ 應該有相同的語言間常值的屬性，才能變更宣告以新支援`literal`，如下所示，資料成員  
   
 ```  
 public ref class Constants {  
 public:  
-   literal int LOG_DEBUG = 4;  
+   literal int LOG_DEBUG = 4;  
 };  
 ```  
   
-## 請參閱  
- [在類別或介面中的成員宣告 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [literal](../windows/literal-cpp-component-extensions.md)
+## <a name="see-also"></a>另請參閱  
+ [在類別或介面中的成員宣告 (C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [常值](../windows/literal-cpp-component-extensions.md)

@@ -1,34 +1,35 @@
 ---
-title: "Dual Interfaces and Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "雙重介面, 事件"
-  - "事件 [C++], 雙重介面"
+title: "雙重介面和事件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- events [C++], dual interfaces
+- dual interfaces, events
 ms.assetid: bb382f7c-e885-4274-bf07-83f3602615d2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d18124646f4d4fcb02246234bf74b5870246e7e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Dual Interfaces and Events
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當設計事件介面以雙重時，可能會有許多虛擬設計理由並未這樣做。  這個的主要原因是事件的來源只會引發事件會透過 vtable 或透過 `Invoke`，不能同時指定兩者。  如果事件來源引發事件做為直接 vtable 方法呼叫，永遠不會使用 `IDispatch` 方法，而是實際介面應為純 vtable 介面。  如果事件來源引發事件做為呼叫 `Invoke`，永遠不會使用 vtable 方法，而是實際介面應該是分配介面。  如果您定義了事件連接雙重，您需要用戶端實作永遠不會使用的介面。  
+# <a name="dual-interfaces-and-events"></a>雙重介面和事件
+雖然也可以設計成雙重事件介面，但是有許多良好的設計的理由不這樣做。 基本的原因是事件來源只會引發事件，透過 vtable 或透過`Invoke`，不能同時。 如果事件來源就會引發為直接 vtable 方法呼叫，事件`IDispatch`絕不會使用方法，並明確的介面應該已經純 vtable 介面。 如果事件來源就會引發事件與呼叫`Invoke`、 絕不會使用 vtable 方法，而且很清楚介面已被分配介面。 如果您定義事件介面為雙重介面時，您將會要求用戶端實作絕不會使用介面的一部分。  
   
 > [!NOTE]
->  這個引數不適用於雙重介面，一般而言。  從實作中，雙重是實作針對各種不同的用戶端可以存取的介面或資料，方便和支援的模式。  
+>  這個引數不適用於雙重介面，在一般情況下。 從實作觀點來看，雙重介面是快速、 方便的且格式支援的方式實作都可以存取各種不同的用戶端的介面。  
   
- 會進一步原因避免重複事件介面;Visual Basic 和 Internet Explorer 不支援這些項目。  
+ 還有其他原因，若要避免雙重的事件介面。Visual Basic 和 Internet Explorer 都不支援這些選項。  
   
-## 請參閱  
- [Dual Interfaces and ATL](../atl/dual-interfaces-and-atl.md)
+## <a name="see-also"></a>另請參閱  
+ [雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
+

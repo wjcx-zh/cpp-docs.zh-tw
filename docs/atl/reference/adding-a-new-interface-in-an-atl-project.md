@@ -4,49 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.appwiz.ATL.interface
-dev_langs:
-- C++
+f1_keywords: vc.appwiz.ATL.interface
+dev_langs: C++
 helpviewer_keywords:
 - interfaces, adding to ATL objects
 - Implement Interface ATL wizard
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 10b252047a7bae1bbd54e854445dcd90db06a341
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 21aeda51a917bcb48b16ff8f9c2bc505adc18f1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 專案中加入新的介面
 當您將介面加入物件或控制項時，您會建立介面的附加虛設常式的函式的每個方法。 在物件或控制項，您可以加入目前現有的類型程式庫中找到的介面。 此外，您可以在其中加入介面的類別必須實作[BEGIN_COM_MAP](com-map-macros.md#begin_com_map)巨集或，如果專案屬性，您必須先`coclass`屬性。  
   
- 您可以將新的介面，加入控制項有兩種︰ 手動或使用 類別檢視 中的 程式碼精靈。  
+ 您可以將新的介面，加入控制項有兩種： 手動或使用 類別檢視 中的 程式碼精靈。  
   
 ### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>若要使用類別檢視 中的程式碼精靈加入至現有的物件或控制項的介面  
   
@@ -73,5 +55,4 @@ ms.lasthandoff: 03/31/2017
  [ATL 和 C 執行階段程式碼的程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
  [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
-
 

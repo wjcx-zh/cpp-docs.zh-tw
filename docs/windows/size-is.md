@@ -1,32 +1,30 @@
 ---
-title: "size_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.size_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_is attribute"
+title: "size_is |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.size_is
+dev_langs: C++
+helpviewer_keywords: size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e8b3f6e8df8ff7f493c50f52e1e839f4ca9baa9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# size_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定的記憶體大小配置大小的指標、 調整大小來調整大小的指標，以及單或多維陣列的指標。  
+# <a name="sizeis"></a>size_is
+指定的記憶體大小配置大小的指標，調整大小的指標和單一或多維度陣列的指標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,35 +33,34 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### 參數  
- *expression*  
- 調整大小的指標配置的記憶體大小。  
+#### <a name="parameters"></a>參數  
+ *運算式*  
+ 所配置的記憶體大小調整大小的指標。  
   
-## 備註  
- **Size\_is** C\+\+ 屬性具有相同的功能，為 [size\_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Size_is** c + + 屬性具有相同的功能[size_is](http://msdn.microsoft.com/library/windows/desktop/aa367164) MIDL 屬性。  
   
-## 範例  
- 請參閱範例的 [first\_is](../windows/first-is.md) 的方式來指定陣列中的一個區段的範例。  
+## <a name="example"></a>範例  
+ 請參閱範例的[first_is](../windows/first-is.md)如需如何指定陣列的區段的範例。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|欄位`struct`或**等位**、 參數的介面、 介面方法|  
+|**適用於**|在欄位`struct`或**union**，參數的介面，介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|**max\_is**|  
+|**必要屬性**|無|  
+|**無效屬性**|**max_is**|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [first\_is](../windows/first-is.md)   
- [last\_is](../windows/last-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [參數屬性](../windows/parameter-attributes.md)   
+ [first_is](../windows/first-is.md)   
+ [last_is](../windows/last-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   

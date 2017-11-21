@@ -1,32 +1,30 @@
 ---
-title: "priority_queue::priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "priority_queue 成員 [STL/CLR]"
+title: "priority_queue:: priority_queue (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::priority_queue
+dev_langs: C++
+helpviewer_keywords: priority_queue member [STL/CLR]
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 77486fdadaafe9b98e93998b73a4f5eb42f7865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# priority_queue::priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue (STL/CLR)
 建構容器配接器物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 priority_queue();  
@@ -44,84 +42,74 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);  
 ```  
   
-#### 參數  
- cont  
+#### <a name="parameters"></a>參數  
+ 接續  
  要複製的容器。  
   
- first  
- 要插入的範圍開頭。  
+ 第一  
+ 要插入範圍的開頭。  
   
  last  
- 要插入的範圍結尾。  
+ 要插入範圍的結尾。  
   
  pred  
- 為控制序列預先定義的述詞。  
+ 排序受控制序列的述詞。  
   
- right  
- 要插入的物件或範圍 。  
+ 向右  
+ 要插入的物件或範圍。  
   
-## 備註  
- 建構函式:  
+## <a name="remarks"></a>備註  
+ 建構函式：  
   
  `priority_queue();`  
   
- 建立空的已包裝容器，以及預設定序的述詞。  您會用它來指定一個空的初始控制序列，與預設定序述詞。  
+ 建立空的已包裝的容器，使用預設排序述詞。 您可以使用它來指定空的初始受控制的序列，使用預設排序述詞。  
   
- 建構函式:  
+ 建構函式：  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- 建立為 `right.get_container()`複本的包裝容器，以及有定序述詞的 `right.value_comp()`。  您會用它來指定為由多重集物件 `right`控制的多重集合的拷貝的相同控制序列，以及預設定序述詞。  
+ 建立複本的已包裝的容器`right.get_container()`，順序的述詞`right.value_comp()`。 您用它來指定佇列物件所控制之序列的複本初始受控制的序列`right`，具有相同順序的述詞。  
   
- 建構函式:  
+ 建構函式：  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- 建立為 `right->get_container()`複本的包裝容器，以及有定序述詞的 `right->value_comp()`。  您會用它來指定為由多重集物件 `*right`控制的多重集合的拷貝的相同控制序列，以及預設定序述詞。  
+ 建立複本的已包裝的容器`right->get_container()`，順序的述詞`right->value_comp()`。 您用它來指定佇列物件所控制之序列的複本初始受控制的序列`*right`，具有相同順序的述詞。  
   
- 建構函式:  
+ 建構函式：  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- 建立空的已包裝容器，以及序述詞  `pred`。  您會用它來指定一個空的初始控制序列，與指定序述詞。  
+ 順序的述詞建立一個空的已包裝的容器`pred`。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞。  
   
- 建構函式:  
+ 建構函式：  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- 建立空的包裝容器，有定序述詞的 `pred`，然後推進 `cont` 的所有項目。您用來指定從現有的容器的初始控制序列 ，以及指定的順序述詞。  
+ 順序的述詞建立一個空的已包裝的容器`pred`，接著會將所有項目`cont`您用它來指定受控制的初始序列，從現有的容器，以指定順序的述詞。  
   
- 建構函式:  
+ 建構函式：  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- `priority_queue(InIt first, InIt last);`  
+ 使用預設排序述詞，建立空的已包裝的容器，然後推入序列 [`first`， `last`)。 您可以使用它來指定順序的述詞指定從指定的 eqeuence，初始受控制的序列。  
   
- 建立空的包裝容器，以及預設定序述詞，然後推進序列 `[``first``,` `last``)`。  您會用它來指定從指定的序列的初始控制序列，以及指定的順序述詞。  
+ 建構函式：  
   
- 建構函式:  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- `template<typename InIt>`  
+ 順序的述詞建立一個空的已包裝的容器`pred`，接著會將序列 [`first`， `last`)。 您可以使用它來指定順序的述詞指定從指定的 seqeuence，初始受控制的序列。  
   
- `priority_queue(InIt first, InIt last,`  
+ 建構函式：  
   
- `value_compare^ pred);`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- 建立空的包裝容器，以及定序述詞 `pred`，然後推進序列 `[``first``,` `last``)`。  您會用它來指定從指定的序列的初始控制序列，以及指定的順序述詞。  
+ 順序的述詞建立一個空的已包裝的容器`pred`，接著會將所有項目`cont`再加上順序 [`first`， `last`)。 您可以使用它來指定順序的述詞指定從現有的容器和指定的 seqeuence，初始受控制的序列。  
   
- 建構函式:  
+## <a name="example"></a>範例  
   
- `template<typename InIt>`  
-  
- `priority_queue(InIt first, InIt last,`  
-  
- `value_compare^ pred, container_type% cont);`  
-  
- 建立空的包裝容器，以及定序述詞 `pred`，然後推進 `cont` 的所有元素加上序列 `[``first``,` `last``)`。  您會用它來指定從現有的容器和指定的序列的初始控制序列，以及指定的順序述詞。  
-  
-## 範例  
-  
-```  
+```cpp  
 // cliext_priority_queue_construct.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -204,24 +192,27 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **c a b**  
-**size\(\) \= 0**  
- **a c b**  
- **a c b**  
- **c a b**  
- **a c b**  
- **a a b c c b**  
- **c a b**  
- **c a b**  
- **a c b**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+size() = 0  
+ c a b  
+size() = 0  
+ a c b  
+ a c b  
+ c a b  
+ a c b  
+ a a b c c b  
+ c a b  
+ c a b  
+ a c b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

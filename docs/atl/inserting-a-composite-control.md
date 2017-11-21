@@ -1,34 +1,35 @@
 ---
-title: "Inserting a Composite Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 控制項精靈"
-  - "複合控制項"
-  - "複合控制項, inserting with ATL Object Wizard"
+title: "插入複合控制項 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- composite controls, inserting with ATL Object Wizard
+- composite controls
+- ATL Control Wizard
 ms.assetid: f10b1927-9fc6-40a7-ac29-efdac70584fe
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f58c671860f1e02f28f4b5a406d290df2479e2d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Inserting a Composite Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**加入類別** 對話方塊可讓您將 ATL 物件加入至專案。  以滑鼠右鍵按一下 \[方案總管\] 中的專案名稱存取這個對話方塊，指向 ，然後按一下 **新增**的 **加入類別**。  
+# <a name="inserting-a-composite-control"></a>插入複合控制項
+**加入類別**對話方塊可讓您將 ATL 物件插入至專案。 存取此對話方塊，以滑鼠右鍵按一下專案名稱，在 [方案總管] 中，指向**新增**，然後按一下**加入類別**。  
   
- 在 **加入類別** 對話方塊中，選取 \[**ATL 控制項**\]。  這會啟動 [ATL 控制項精靈](../atl/reference/atl-control-wizard.md)。  若要建立複合控制項，請選取 \[**選項**\] 索引標籤，然後按一下 **複合控制項** 核取方塊。  
+ 在**加入類別**對話方塊方塊中，選擇**ATL 控制項**。 這會啟動[ATL 控制項精靈](../atl/reference/atl-control-wizard.md)。 若要建立複合控制項，請選取**選項**索引標籤，然後按一下**複合控制項**核取方塊。  
   
- 預設 HTML 網頁的檢視控制項會建立。  
+ 預設的 HTML 網頁將會建立檢視控制項。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [複合控制項基本概念](../atl/atl-composite-control-fundamentals.md)
+

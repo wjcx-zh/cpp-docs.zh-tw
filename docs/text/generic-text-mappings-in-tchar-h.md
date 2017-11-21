@@ -1,106 +1,104 @@
 ---
-title: "Tchar.h 中的泛型文字對應 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ""tchar.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字元集 [C++], 泛用文字對應"
-  - "泛用文字對應 [C++]"
-  - "對應泛型文字"
-  - "對應 [C++], TCHAR.H"
-  - "MBCS [C++], 泛用文字對應"
-  - "TCHAR.H 資料類型, 對應"
-  - "Unicode [C++], 泛用文字對應"
+title: "Tchar.h 中的泛用文字對應 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: tchar.h
+dev_langs: C++
+helpviewer_keywords:
+- mapping generic-text
+- generic-text mappings [C++]
+- character sets [C++], generic-text mappings
+- Unicode [C++], generic-text mappings
+- MBCS [C++], generic-text mappings
+- TCHAR.H data types, mapping
+- mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Tchar.h 中的泛型文字對應
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-為了簡化因應國際化用途的傳輸程式碼，[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 執行階段程式庫提供了許多資料型別、常式和其他物件的 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 特定泛用文字對應。  您可以使用這些定義於 Tchar.h 的對應來撰寫泛型程式碼，根據您使用 `#define` 陳述式所定義的資訊清單常數 \(Manifest Constant\)，可為單一位元組、多位元組或 [!INCLUDE[TLA#tla_unicode](../cpp/includes/tlasharptla_unicode_md.md)] 字元集編譯。  泛用文字對應是與 [!INCLUDE[vcpransi](../preprocessor/includes/vcpransi_md.md)] 不相容的 [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] 擴充。  
+# <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的泛型文字對應
+若要簡化國際用於程式碼的傳輸[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]執行階段程式庫提供[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-許多資料類型、 常式與其他物件的特定泛用文字對應。 您可以使用這些對應，Tchar.h，撰寫可針對單一位元組，多位元組，來編譯的泛型程式碼中所定義或[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字元集，根據您定義使用資訊清單常數`#define`陳述式。 泛用文字對應[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]所沒有的擴充功能[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]相容。  
   
- 使用 Tchar.h，您可以從相同的來源建立單一位元組、多位元組字元集 \(MBCS\) 和 [!INCLUDE[TLA#tla_unicode](../cpp/includes/tlasharptla_unicode_md.md)] 應用程式。  Tchar.h 定義字首是 `_tcs` 的巨集，有正確的前置處理器定義，會適當地對應到 `str`、`_mbs` 或 `wcs`。  若要建置 MBCS，請定義 `_MBCS` 符號。  若要建置 [!INCLUDE[TLA#tla_unicode](../cpp/includes/tlasharptla_unicode_md.md)]，請定義 `_UNICODE` 符號。  若要建置單一位元組應用程式，兩者都不定義 \(預設\)。  根據預設，`_MBCS` 是為 MFC 應用程式定義。  
+ 您可以藉由使用 Tchar.h，建置單一位元組，多位元組字元集 (MBCS)，和[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]來源相同的應用程式。 Tchar.h 中定義的巨集 (其中有前置詞`_tcs`) 會使用正確的前置處理器定義對應到`str`， `_mbs`，或`wcs`函式，視需要。 若要建立 MBCS，請定義符號`_MBCS`。 若要建置[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]，定義符號`_UNICODE`。 若要建置單一位元組應用程式，定義兩 （預設值）。 根據預設， `_MBCS` MFC 應用程式的定義。  
   
- `_TCHAR` 資料型別是在 Tchar.h 中以條件限定方式定義。  如果 `_UNICODE` 符號是為您的組建定義，則 `_TCHAR` 會定義成 `wchar_t`，否則對於單一位元組和 MBCS 的組建，它會定義為 `char` \(基本 Unicode 寬字元資料型別 `wchar_t` 是 8 位元帶正負號之 `char` 的 16 位元對應\)。若為國際化應用程式，請使用 `_tcs` 函式家族，以 `_TCHAR` 單位操作，而不是位元組。  例如，`_tcsncpy` 複製 `n` 個 `_TCHARs`，而不是 `n` 個位元組。  
+ `_TCHAR` Tchar.h 中有條件地定義資料類型。 如果符號`_UNICODE`為您的組建定義`_TCHAR`定義為`wchar_t`; 否則它定義為單一位元組和 MBCS 組建， `char`。 (`wchar_t`，基本的 Unicode 寬字元資料類型，是以 8 位元帶正負號的 16 位元對應項目`char`。)國際應用程式，使用`_tcs`系列的函式，在操作`_TCHAR`單位、 不是位元組。 例如，`_tcsncpy`複本`n` `_TCHARs`，而非`n`位元組。  
   
- 因為有些單一位元組字元集 \(SBCS\) 字串處理函式接受 \(帶正負號\) `char*` 參數，所以在定義 `_MBCS` 時，會產生型別不符合的編譯器警告。  有三個方法可以避免這個警告：  
+ 由於某些單一位元組字元設定 (SBCS) 的字串處理函式 （帶正負號） 的 take`char*`參數、 型別不相符編譯器警告結果時`_MBCS`定義。 有三種方式可避免此警告：  
   
-1.  在 Tchar.h 中使用型別安全內嵌 \(Inline\) 函式 Thunk。  這是預設行為。  
+1.  使用 Tchar.h 中的型別安全內嵌函式的 thunk。 這是預設行為。  
   
-2.  藉著在命令列上定義 `_MB_MAP_DIRECT` 來使用 Tchar.h 中的直接巨集。  如果您這樣做，您必須手動對應型別。  這是最快的方法，但並不是型別安全。  
+2.  使用 Tchar.h 中的直接巨集，藉由定義`_MB_MAP_DIRECT`命令列上。 如果這麼做，就必須手動對應類型。 這是最快的方法，但不是類型安全。  
   
-3.  在 Tchar.h 中使用型別安全靜態連結程式庫函式 Thunk。  若要這麼做，請在命令列上定義 `_NO_INLINING` 常數。  這是最慢但型別最安全的方法。  
+3.  使用 Tchar.h 中的型別安全靜態連結程式庫函式的 thunk。 若要這樣做，請在命令列上定義常數 `_NO_INLINING`。 這是最慢、但類型最安全的方法。  
   
-### 泛用文字對應的前置處理器指示詞 \(Preprocessor Directive\)  
+### <a name="preprocessor-directives-for-generic-text-mappings"></a>泛型文字對應的前置處理器指示詞  
   
-|\# define|編譯版本|範例|  
-|---------------|----------|--------|  
-|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../cpp/includes/tlasharptla_unicode_md.md)] \(寬字元\)|`_tcsrev` 對應到 `_wcsrev`|  
+|# 定義|編譯的版本|範例|  
+|---------------|----------------------|-------------|  
+|`_UNICODE`|[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]（寬字元）|`_tcsrev` 對應到 `_wcsrev`|  
 |`_MBCS`|多位元組字元|`_tcsrev` 對應到 `_mbsrev`|  
-|無 \(預設未定義 `_UNICODE` 或 `_MBCS`\)|SBCS \([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)]\)|`_tcsrev` 對應到 `strrev`|  
+|無 (預設值沒有`_UNICODE`也`_MBCS`定義)|SBCS ([!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)])|`_tcsrev` 對應到 `strrev`|  
   
- 例如，定義於 Tchar.h 的泛用文字函式 `_tcsrev`，對應到 `_mbsrev` \(如果您在程式裡定義 `_MBCS`\)，或對應到 `_wcsrev` \(如果您定義 `_UNICODE`\)。  否則，`_tcsrev` 會對應到 `strrev`。  為了程式設計方便，會在 Tchar.h 中提供其他資料型別對應，但 `_TCHAR` 是最有用的。  
+ 例如，泛用文字函數`_tcsrev`，定義於 Tchar.h 中對應至`_mbsrev`如果您定義`_MBCS`在程式中，或`_wcsrev`如果您定義`_UNICODE`。 若兩者皆否，則 `_tcsrev` 會對應至 `strrev`。 為了方便程式設計，Tchar.h 中提供其他資料類型對應但`_TCHAR`最為實用。  
   
-### 泛用文字資料型別對應  
+### <a name="generic-text-data-type-mappings"></a>泛型文字資料類型對應  
   
-|泛型文字<br /><br /> 資料型別名稱|&Unicode<br /><br /> \_MBCS 未定義|\_MBCS<br /><br /> 已定義|\_UNICODE<br /><br /> 已定義|  
-|---------------------|-----------------------------|--------------------|-----------------------|  
+|一般文字<br /><br /> 資料型別名稱|_UNICODE &<br /><br /> _MBCS 未定義|_MBCS<br /><br /> 已定義|_UNICODE<br /><br /> 已定義|  
+|--------------------------------------|----------------------------------------|------------------------|---------------------------|  
 |`_TCHAR`|`char`|`char`|`wchar_t`|  
 |`_TINT`|`int`|`unsigned int`|`wint_t`|  
 |`_TSCHAR`|`signed char`|`signed char`|`wchar_t`|  
 |`_TUCHAR`|`unsigned char`|`unsigned char`|`wchar_t`|  
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
-|`_T` 或 `_TEXT`|沒有作用 \(被前置處理器移除\)|沒有作用 \(被前置處理器移除\)|`L` \(將下列字元或字串轉換成其 [!INCLUDE[TLA#tla_unicode](../cpp/includes/tlasharptla_unicode_md.md)] 的對應\)|  
+|`_T` 或 `_TEXT`|無效果 (已由前置處理器移除)|無效果 (已由前置處理器移除)|`L`(將下列字元或字串轉換其[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]對應項目)|  
   
- 如需常式、變數和其他物件之泛用文字對應的完整清單，請參閱《執行階段程式庫參考》中的[泛型文字對應](../c-runtime-library/generic-text-mappings.md)。  
+ 如需泛型文字對應的常式、 變數和其他物件的清單，請參閱[泛用文字對應](../c-runtime-library/generic-text-mappings.md)在執行階段程式庫參考。  
   
 > [!NOTE]
->  請不要將 `str` 函式家族與 Unicode 字串一起使用，這可能會包含內嵌 null 位元組。  同樣地，不要將 `wcs` 函式家族與 MBCS \(或 SBCS\) 字串一起使用。  
+>  請勿使用`str`系列的函式與 Unicode 字串，它們可能包含內嵌的 null 位元組。 同樣地，請勿使用`wcs`系列的函式使用 MBCS （或 SBCS） 的字串。  
   
- 下列程式碼片段示範 `_TCHAR` 和 `_tcsrev` 對應到 MBCS、[!INCLUDE[TLA#tla_unicode](../cpp/includes/tlasharptla_unicode_md.md)] 和 SBCS 模型的用法。  
+ 下列程式碼片段說明使用`_TCHAR`和`_tcsrev`對應至 MBCS [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]，和 SBCS 模型。  
   
 ```  
 _TCHAR *RetVal, *szString;  
 RetVal = _tcsrev(szString);  
 ```  
   
- 如果 `_MBCS` 已經定義了，前置處理器將這個片段對應到下列程式碼：  
+ 如果`_MBCS`已定義，前置處理器將這個片段對應此程式碼：  
   
 ```  
 char *RetVal, *szString;  
 RetVal = _mbsrev(szString);  
 ```  
   
- 如果 `_UNICODE` 已經定義了，前置處理器將這個片段對應到下列程式碼：  
+ 如果`_UNICODE`已定義，前置處理器將這個片段對應此程式碼：  
   
 ```  
 wchar_t *RetVal, *szString;  
 RetVal = _wcsrev(szString);  
 ```  
   
- 如果 `_MBCS` 或 `_UNICODE` 都沒有被定義，前置處理器會將此片段對應到單一位元組 [!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)] 編碼，如下所示：  
+ 如果沒有`_MBCS`也`_UNICODE`已定義，前置處理器將片段對應至單一位元組[!INCLUDE[TLA#tla_ascii](../text/includes/tlasharptla_ascii_md.md)]，程式碼，如下所示：  
   
 ```  
 char *RetVal, *szString;  
 RetVal = strrev(szString);  
 ```  
   
- 因此您可以撰寫、維護和編譯單一原始程式碼檔，與特定於這三種字元集其中一種的常式一起執行。  
+ 因此，您可以撰寫、 維護及編譯單一原始程式碼檔案，以執行與所特有的三種字元集的常式。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [文字和字串](../text/text-and-strings-in-visual-cpp.md)   
- [使用含有 \_MBCS 程式碼的 TCHAR.H 資料類型](../text/using-tchar-h-data-types-with-mbcs-code.md)
+ [使用含有 _MBCS 程式碼的 TCHAR.H 資料類型](../text/using-tchar-h-data-types-with-mbcs-code.md)

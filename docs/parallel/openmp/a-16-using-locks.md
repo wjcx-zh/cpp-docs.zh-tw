@@ -1,31 +1,30 @@
 ---
-title: "A.16   Using Locks | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用鎖定 A.16 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 873bf32b-6cfe-4ce1-b994-bef80b50f399
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 870895dae8aa6fe4b3720b9319359672fcb576af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# A.16   Using Locks
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在下列範例中，\(如[區段 3.2](../../parallel/openmp/3-2-lock-functions.md) 在頁面上 41\) 鎖定函式的引數必須具有型別附註 `omp_lock_t`，並沒有必要清除它。  鎖定函式會造成執行緒在等待第一的關鍵區段的項目處於閒置狀態，但同時等候第二個項目執行其他工作。  `omp_set_lock`函式區塊，但`omp_test_lock`函式則否，讓工作在 skip\(\) 進行中。  
+# <a name="a16---using-locks"></a>A.16 使用鎖定
+在下列範例中，(如[第 3.2 節](../../parallel/openmp/3-2-lock-functions.md)41 頁面上) 鎖定函式的引數必須有型別附註`omp_lock_t`，以及是否有不需要清除它。  鎖定函式會造成執行緒等候第一個關鍵區段的項目處於閒置狀態，但可以執行其他工作，等待第二個項目。  `omp_set_lock`函式區塊，但`omp_test_lock`函式不存在，完成 skip() 中允許的工作。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // omp_using_locks.c  

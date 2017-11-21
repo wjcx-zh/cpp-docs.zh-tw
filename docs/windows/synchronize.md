@@ -1,33 +1,30 @@
 ---
-title: "synchronize | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.synchronize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "synchronize attribute"
+title: "同步處理 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.synchronize
+dev_langs: C++
+helpviewer_keywords: synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 38898eefcbc2d5bb882186786894e7fb752e28ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# synchronize
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-同步處理對目標方法的存取。  
+# <a name="synchronize"></a>synchronize
+同步處理至目標方法的存取。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,15 +32,15 @@ manager: "ghogen"
   
 ```  
   
-## 備註  
- **同步處理** C\+\+ 屬性實作同步處理物件的目標方法的支援。  同步處理控制目標方法的存取，以允許使用一般的資源 \(例如類別的方法\) 的多個物件。  
+## <a name="remarks"></a>備註  
+ **同步**c + + 屬性實作同步處理物件的目標方法的支援。 同步處理允許多個物件使用的一般資源 （例如類別的方法） 控制目標方法的存取權。  
   
- 這個屬性所插入的程式碼會呼叫適當的`Lock` \(由執行緒模型\) 的目標方法的開頭的方法。  當方法結束時， `Unlock`會自動呼叫。  如需有關這些函式的詳細資訊，請參閱 [CComAutoThreadModule::Lock](../Topic/CComAutoThreadModule::Lock.md)  
+ 這個屬性所插入的程式碼會呼叫適當`Lock`目標方法的開頭 （由執行緒模型） 的方法。 當方法結束時，`Unlock`自動呼叫。 如需這些函式的詳細資訊，請參閱[CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- 這個屬性不能 [coclass](../windows/coclass.md)，  [progid](../windows/progid.md)，或  [vi\_progid](../windows/vi-progid.md) 屬性 \(或另一個屬性，表示其中一種\) 也會套用到相同的項目。  如果使用任何的單一屬性時，會自動套用其他兩個。  比方說，如果 **progid** 被套用的話，  **vi\_progid** 和 **coclass** 也會套用。  
+ 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果套用 **progid** ，則也會套用 **vi_progid** 和 **coclass** 。  
   
-## 範例  
- 下列程式碼提供同步處理`UpdateBalance`方法的`CMyClass`物件。  
+## <a name="example"></a>範例  
+ 下列程式碼提供的同步處理`UpdateBalance`方法`CMyClass`物件。  
   
 ```  
 // cpp_attr_ref_synchronize.cpp  
@@ -70,19 +67,18 @@ class CMyClass {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|類別方法方法|  
 |**可重複**|否|  
-|**必要的屬性**|一或多項動作：  **coclass**，  **progid**，或  **vi\_progid**。|  
-|**無效的屬性**|None|  
+|**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [COM Attributes](../windows/com-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [COM 屬性](../windows/com-attributes.md)   

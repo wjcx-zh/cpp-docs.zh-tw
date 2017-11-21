@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSacl class
+dev_langs: C++
+helpviewer_keywords: CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: bd9ef9932938cfe5ec65965b3a40116da7f43b90
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 72949601269dea510ba7b9078b022a28905349c1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csacl-class"></a>CSacl 類別
 這個類別是 SACL （系統存取控制清單） 結構的包裝函式。  
@@ -85,11 +67,11 @@ class CSacl : public CAcl
 ## <a name="remarks"></a>備註  
  SACL 包含指定的網域控制站的安全性事件記錄檔中產生稽核記錄的存取嘗試類型的存取控制項目 (Ace)。 請注意，SACL 會產生記錄項目只嘗試存取發生所在的網域控制站，而非每個網域控制站，其中包含物件的複本。  
   
- 若要設定或擷取物件的安全性描述元中 SACL，必須啟用 SE_SECURITY_NAME 權限要求之執行緒的存取權杖中。 系統管理員群組已經依預設，授與此權限，它可以授與給其他使用者或群組。 需要權限授與便不需要的所有︰ 在執行特殊權限所定義的作業之前，權限必須在啟用安全性的存取權杖才能生效。 此模型可讓權限可以為僅適用於特定的系統作業，然後在不再需要時停用。 請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)啟用 SE_SECURITY_NAME 的範例。  
+ 若要設定或擷取物件的安全性描述元中 SACL，必須啟用 SE_SECURITY_NAME 權限要求之執行緒的存取權杖中。 系統管理員群組已經依預設，授與此權限，它可以授與給其他使用者或群組。 需要權限授與便不需要的所有： 在執行特殊權限所定義的作業之前，權限必須在啟用安全性的存取權杖才能生效。 此模型可讓權限可以為僅適用於特定的系統作業，然後在不再需要時停用。 請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)啟用 SE_SECURITY_NAME 的範例。  
   
  使用要加入、 移除、 建立和刪除 Ace 從提供的類別方法**SACL**物件。 另請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)。  
   
- 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -97,7 +79,7 @@ class CSacl : public CAcl
  `CSacl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h  
+ **標頭：** atlsecurity.h  
   
 ##  <a name="addauditace"></a>CSacl::AddAuditAce  
  將稽核存取控制項目 (ACE) 加入至`CSacl`物件。  
@@ -229,4 +211,3 @@ void RemoveAllAces() throw();
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)
-

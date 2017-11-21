@@ -1,68 +1,66 @@
 ---
-title: "CreatorMap 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap"
-  - "implements/Microsoft::WRL::Details::CreatorMap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreatorMap 結構"
+title: "CreatorMap 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::Details::CreatorMap
+- implements/Microsoft::WRL::Details::CreatorMap
+dev_langs: C++
+helpviewer_keywords: CreatorMap structure
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c61238a809da49686975acbfb8016996cf5d5c1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CreatorMap 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] 基礎結構，而且不是針對直接從程式碼中使用而設計。  
+# <a name="creatormap-structure"></a>CreatorMap 結構
+支援 Windows 執行階段 c + + 樣板程式庫的基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 struct CreatorMap;  
 ```  
   
-## 備註  
- 包含如何初始化，註冊和移除註冊物件。  
+## <a name="remarks"></a>備註  
+ 包含如何初始化、 註冊及取消註冊物件的相關資訊。  
   
- CreatorMap 包含下列資訊:  
+ CreatorMap 包含下列資訊：  
   
--   如何初始化，註冊和移除註冊物件。  
+-   如何初始化、 註冊及取消註冊物件。  
   
--   如何根據一個一般 COM 或 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] Factory 比較啟動資料。  
+-   比較傳統的 COM 或 Windows 執行階段 factory 根據啟用資料的方式。  
   
--   Factory 快取的資訊和伺服器名稱的介面。  
+-   介面的處理站快取和伺服器名稱的相關資訊。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用資料成員  
+### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
-|--------|--------|  
-|[CreatorMap::activationId 資料成員](../windows/creatormap-activationid-data-member.md)|表示由一般 COM 類別 ID 或 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 名稱所識別的物件 ID。|  
-|[CreatorMap::factoryCache 資料成員](../windows/creatormap-factorycache-data-member.md)|將指標儲存在 CreatorMap 的 factory 快取。|  
-|[CreatorMap::factoryCreator 資料成員](../windows/creatormap-factorycreator-data-member.md)|建立指定之 CreatorMap 的 Factory。|  
+|名稱|說明|  
+|----------|-----------------|  
+|[CreatorMap::activationId 資料成員](../windows/creatormap-activationid-data-member.md)|代表透過傳統的 COM 類別識別碼或 Windows 執行階段名稱識別的物件識別碼。|  
+|[CreatorMap::factoryCache 資料成員](../windows/creatormap-factorycache-data-member.md)|CreatorMap 存放處理站快取的指標。|  
+|[CreatorMap::factoryCreator 資料成員](../windows/creatormap-factorycreator-data-member.md)|建立指定 CreatorMap factory。|  
 |[CreatorMap::serverName 資料成員](../windows/creatormap-servername-data-member.md)|儲存 CreatorMap 的伺服器名稱。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `CreatorMap`  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

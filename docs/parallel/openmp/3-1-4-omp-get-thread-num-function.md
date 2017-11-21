@@ -1,27 +1,26 @@
 ---
-title: "3.1.4 omp_get_thread_num Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.4 omp_get_thread_num 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5220402b-c109-4b1f-ba79-002e93d08617
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9beb9e81d767a11b4ca701725ac44cc19cd3c3e1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.4 omp_get_thread_num Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`omp_get_thread_num`函式會傳回執行緒，火力，raven，內的數執行函式的執行緒。  執行緒數字就是介於 0 和 **omp\_get\_num\_threads\(\)**– 1，\(含\)。  主要是小組的執行緒 0。  
+# <a name="314-ompgetthreadnum-function"></a>3.1.4 omp_get_thread_num 函式
+`omp_get_thread_num`函式會傳回執行緒數目，其小組中，執行此函式的執行緒。 執行緒數字就是介於 0 和**omp_get_num_threads()**-1，（含)。 主要的小組是執行緒 0。  
   
  格式如下：  
   
@@ -30,8 +29,8 @@ manager: "ghogen"
 int omp_get_thread_num(void);  
 ```  
   
- 如果是從一個序列的地區，呼叫`omp_get_thread_num`會傳回 0。  如果是從呼叫已序列化的巢狀的平行區域內，這個函式會傳回 0。  
+ 如果序列的區域中，從呼叫`omp_get_thread_num`傳回 0。 如果從序列化巢狀平行區域內呼叫，此函式會傳回 0。  
   
-## 交互參照：  
+## <a name="cross-references"></a>交叉參考：  
   
--   `omp_get_num_threads`函式，請參閱[一節 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) 在 37\] 頁面上。
+-   `omp_get_num_threads`函式，請參閱[區段 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) 37 頁面上。

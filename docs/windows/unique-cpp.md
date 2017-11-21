@@ -1,33 +1,30 @@
 ---
-title: "unique (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique attribute"
+title: "唯一 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.unique
+dev_langs: C++
+helpviewer_keywords: unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 611879bf73fa7d61276d065a9009d356243f1954
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# unique (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="unique-c"></a>unique (C++)
 指定唯一的指標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,27 +32,26 @@ manager: "ghogen"
   
 ```  
   
-## 備註  
- **唯一** C\+\+ 屬性具有相同的功能，為 [唯一](http://msdn.microsoft.com/library/windows/desktop/aa367294) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **唯一**c + + 屬性具有相同的功能[唯一](http://msdn.microsoft.com/library/windows/desktop/aa367294)MIDL 屬性。  
   
-## 範例  
- 請參閱 [ref](../windows/ref-cpp.md) 的範例用法的範例**唯一**。  
+## <a name="example"></a>範例  
+ 請參閱[ref](../windows/ref-cpp.md)範例使用範例**唯一**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|`typedef` `struct`， **等位**、 參數的介面、 介面方法|  
+|**適用於**|`typedef``struct`， **union**，參數的介面，介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [參數屬性](../windows/parameter-attributes.md)   

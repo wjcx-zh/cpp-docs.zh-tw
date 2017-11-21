@@ -1,48 +1,45 @@
 ---
-title: "ComPtrRefBase::operator IUnknown** 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator IUnknown** 運算子"
+title: "Comptrrefbase:: Operator IUnknown * * 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**
+dev_langs: C++
+helpviewer_keywords: operator IUnknown** operator
 ms.assetid: c2950abf-a7aa-480a-ba41-615703e7f931
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3881dbec0af43f87ff3f880da71299efdf26c64a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ComPtrRefBase::operator IUnknown** 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="comptrrefbaseoperator-iunknown-operator"></a>ComPtrRefBase::operator IUnknown** 運算子
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 operator IUnknown**() const;  
 ```  
   
-## 備註  
- 將目前 [ptr\_](../windows/comptrrefbase-ptr-data-member.md) 資料成員轉型至 IUnknown 介面的指標的指標。  
+## <a name="remarks"></a>備註  
+ 會轉換目前[ptr_](../windows/comptrrefbase-ptr-data-member.md)資料成員指標--a-指標-將 IUnknown 介面。  
   
- 如果目前 ComPtrRefBase 不是衍生自 IUnknown，則會發出一個錯誤。  
+ 如果目前 ComPtrRefBase 不是衍生自 IUnknown，就會發出錯誤。  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ComPtrRefBase 類別](../windows/comptrrefbase-class.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

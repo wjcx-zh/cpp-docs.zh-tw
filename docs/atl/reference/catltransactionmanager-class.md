@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAtlTransactionManager
-- ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
 - ATLTRANSACTIONMANAGER/ATL::CAtlTransactionManager
 - ATLTRANSACTIONMANAGER/ATL::Close
 - ATLTRANSACTIONMANAGER/ATL::Commit
@@ -30,38 +28,21 @@ f1_keywords:
 - ATLTRANSACTIONMANAGER/ATL::SetFileAttributes
 - ATLTRANSACTIONMANAGER/ATL::m_bFallback
 - ATLTRANSACTIONMANAGER/ATL::m_hTransaction
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlTransactionManager class
+dev_langs: C++
+helpviewer_keywords: CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: bc6162eaf1a4c8c3848a32e861019ff50e4f850c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ae0d3c60ee17683a1d46b35caadea7784e167b7e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 類別
-CAtlTransactionManager 類別提供的核心交易管理員 (KTM) 函式的包裝函式。  
+CAtlTransactionManager 類別提供的核心交易管理員 (KTM) 的函式的包裝函式。  
   
 > [!IMPORTANT]
 >  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
@@ -85,26 +66,26 @@ class CAtlTransactionManager;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[關閉](#close)|其中一個關閉交易控制代碼。|  
-|[認可](#commit)|在交易被認可的要求。|  
+|[關閉](#close)|關閉一個交易控制代碼。|  
+|[認可](#commit)|要求交易被認可。|  
 |[建立](#create)|建立交易控制代碼。|  
 |[CreateFile](#createfile) (CreateFile 函式)|建立或開啟檔案、 檔案資料流或與交易的作業目錄。|  
 |[DeleteFile](#deletefile)|為交易的作業會刪除現有的檔案。|  
-|[FindFirstFile](#findfirstfile)|搜尋檔案或子目錄的目錄，做為交易的作業。|  
-|[GetFileAttributes](#getfileattributes)|擷取指定的檔案或目錄的檔案系統屬性做為交易的作業。|  
-|[GetFileAttributesEx](#getfileattributesex)|擷取指定的檔案或目錄的檔案系統屬性做為交易的作業。|  
+|[FindFirstFile](#findfirstfile)|搜尋檔案或子目錄的目錄，以交易的作業。|  
+|[GetFileAttributes](#getfileattributes)|擷取指定的檔案或目錄的檔案系統屬性成為交易的作業。|  
+|[GetFileAttributesEx](#getfileattributesex)|擷取指定的檔案或目錄的檔案系統屬性成為交易的作業。|  
 |[GetHandle](#gethandle)|傳回交易控制代碼。|  
 |[IsFallback](#isfallback)|判斷是否啟用後援的呼叫。|  
-|[MoveFile](#movefile)|移動現有的檔案或目錄，做為交易的作業包括其子系。|  
-|[RegCreateKeyEx](#regcreatekeyex)|建立指定的登錄機碼，並將它與交易產生關聯。 如果索引鍵已經存在，此函式會開啟它。|  
-|[RegDeleteKey](#regdeletekey)|從指定的平台特定的登錄檢視中刪除子機碼和其值為交易的作業。|  
+|[MoveFile](#movefile)|移動現有的檔案或目錄，包括子系，以交易的作業。|  
+|[RegCreateKeyEx](#regcreatekeyex)|建立指定的登錄機碼，並將它與交易產生關聯。 如果金鑰已存在，則此函式會開啟它。|  
+|[RegDeleteKey](#regdeletekey)|從指定的平台特定的登錄檢視中刪除子機碼和其值以交易的作業。|  
 |[RegOpenKeyEx](#regopenkeyex)|開啟指定的登錄機碼，並將它與交易產生關聯。|  
-|[復原](#rollback)|回復交易的要求。|  
+|[復原](#rollback)|交易回復的要求。|  
 |[SetFileAttributes](#setfileattributes)|將檔案或目錄的屬性設定為交易的作業。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|`TRUE`如果支援此後援。`FALSE`否則。|  
 |[m_hTransaction](#m_htransaction)|交易控制代碼。|  
@@ -115,7 +96,7 @@ class CAtlTransactionManager;
  [ATL::CAtlTransactionManager](../../atl/reference/catltransactionmanager-class.md)  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atltransactionmanager.h  
+ **標頭：** atltransactionmanager.h  
   
 ##  <a name="dtor"></a>~ CAtlTransactionManager  
  CAtlTransactionManager 解構函式。  
@@ -125,7 +106,7 @@ virtual ~CAtlTransactionManager();
 ```  
   
 ### <a name="remarks"></a>備註  
- 在正常處理中，會自動認可交易並關閉。 如果例外狀況回溯期間呼叫解構函式時，交易已回復，並關閉。  
+ 在正常處理中，會自動認可交易並關閉。 如果例外狀況回溯期間呼叫解構函式時，交易已回復，且關閉。  
   
 ##  <a name="catltransactionmanager"></a>CAtlTransactionManager  
  CAtlTransactionManager 建構函式。  
@@ -136,10 +117,10 @@ CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE
   
 ### <a name="parameters"></a>參數  
  `bFallback`  
- `TRUE`表示支援後援。 如果交易函式失敗，此類別會自動呼叫 「 非交易式 」 函式。 `FALSE`表示沒有 「 遞補 」 呼叫。  
+ `TRUE`表示支援後援。 如果交易的函式失敗，，類別會自動呼叫 「 非交易式 」 函式。 `FALSE`表示沒有 「 遞補 」 呼叫。  
   
  `bAutoCreateTransaction`  
- `TRUE`表示在建構函式的交易處理常式會自動建立。 `FALSE`表示不是。  
+ `TRUE`指出交易處理常式會自動建立在建構函式。 `FALSE`表示它不是。  
   
 ### <a name="remarks"></a>備註  
   
@@ -154,10 +135,10 @@ inline BOOL Close();
  如果成功，則為 `TRUE`，否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個包裝函式呼叫`CloseHandle`函式。 解構函式中，會自動呼叫方法。  
+ 這個包裝函式呼叫`CloseHandle`函式。 方法會自動呼叫解構函式中。  
   
 ##  <a name="commit"></a>認可  
- 在交易被認可的要求。  
+ 要求交易被認可。  
   
 ```
 inline BOOL Commit();
@@ -167,7 +148,7 @@ inline BOOL Commit();
  如果成功，則為 `TRUE`，否則為 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
- 這個包裝函式呼叫`CommitTransaction`函式。 解構函式中，會自動呼叫方法。  
+ 這個包裝函式呼叫`CommitTransaction`函式。 方法會自動呼叫解構函式中。  
   
 ##  <a name="create"></a>建立  
  建立交易控制代碼。  
@@ -201,22 +182,22 @@ inline HANDLE CreateFile(
  若要建立或開啟物件的名稱。  
   
  `dwDesiredAccess`  
- 存取物件，可摘要為讀取、 寫入、 兩個，或都不要 （零）。 最常使用的值為 GENERIC_READ、 GENERIC_WRITE，或兩者︰ GENERIC_READ |GENERIC_WRITE。  
+ 存取的物件，可摘要如下讀取、 寫入、 兩者皆是或都沒有 （零）。 最常使用的值為 GENERIC_READ、 GENERIC_WRITE，或兩者： GENERIC_READ &#124;GENERIC_WRITE。  
   
  `dwShareMode`  
- 物件，可讀取、 寫入、 兩者，刪除所有的這些項目，或無共用模式︰ 0、 FILE_SHARE_DELETE、 FILE_SHARE_READ、 FILE_SHARE_WRITE。  
+ 物件，該物件可讀取、 寫入、 兩者，刪除所有的這些項目，或沒有任何共用的模式： 0，FILE_SHARE_DELETE、 FILE_SHARE_READ、 FILE_SHARE_WRITE。  
   
  `lpSecurityAttributes`  
- ATTRIBUTES 結構，包含選擇性的安全性描述元，而且也會決定子處理序可以繼承傳回的控制代碼指標。 參數可以是`NULL`。  
+ Security ATTRIBUTES 結構，包含選擇性的安全性描述元，而且也會決定子處理序可以繼承傳回的控制代碼的指標。 這個參數可以是`NULL`。  
   
  `dwCreationDisposition`  
- 存在並不存在的檔案上採取的動作。 這個參數必須是下列值，不能合併︰ CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING 或 TRUNCATE_EXISTING。  
+ 要存在，且不存在的檔案上採取的動作。 這個參數必須是下列值，不能結合的其中一個： CREATE_ALWAYS、 CREATE_NEW、 OPEN_ALWAYS、 OPEN_EXISTING 或 TRUNCATE_EXISTING。  
   
  `dwFlagsAndAttributes`  
- 檔案屬性和旗標。 這個參數可以包含可用的檔案屬性 （FILE_ATTRIBUTE_ *） 的任何組合。 所有其他檔案屬性覆寫 FILE_ATTRIBUTE_NORMAL。 這個參數也可以包含旗標的組合 (FILE_FLAG_\*) 控制緩衝行為，請存取模式和其他特殊用途旗標。 這些組合與任何 FILE_ATTRIBUTE_\*值。  
+ 檔案屬性和旗標。 這個參數可以包含可用的檔案屬性 （FILE_ATTRIBUTE_ *） 的任何組合。 所有其他檔案屬性覆寫 FILE_ATTRIBUTE_NORMAL。 這個參數也可以包含旗標的組合 (FILE_FLAG_\*) 控制的緩衝行為，存取模式和其他特殊用途的旗標。 這些組合與任何 FILE_ATTRIBUTE_\*值。  
   
  `hTemplateFile`  
- 範本檔案 GENERIC_READ 存取權限與有效的控制代碼。 範本檔案提供檔案屬性和擴充的屬性所建立的檔案。 這個參數可以是 `NULL`。  
+ GENERIC_READ 存取權限的範本檔案有效控制代碼。 範本檔案會提供檔案屬性和檔案所建立的擴充的屬性。 這個參數可以是 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
  傳回可以用來存取物件的控制代碼。  
@@ -239,7 +220,7 @@ inline BOOL DeleteFile(LPCTSTR lpFileName);
  這個包裝函式呼叫`DeleteFileTransacted`函式。  
   
 ##  <a name="findfirstfile"></a>FindFirstFile  
- 搜尋檔案或子目錄的目錄，做為交易的作業。  
+ 搜尋檔案或子目錄的目錄，以交易的作業。  
   
 ```
 inline HANDLE FindFirstFile(
@@ -252,16 +233,16 @@ inline HANDLE FindFirstFile(
  目錄或路徑，以及要搜尋的檔案名稱。 這個參數可以包含萬用字元，例如星號 （*） 或問號 （）。  
   
  `pNextInfo`  
- 接收資訊找到的檔案或子目錄 WIN32_FIND_DATA 結構的指標。  
+ 接收有關找到的檔案或子目錄資訊 WIN32_FIND_DATA 結構的指標。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，傳回值是搜尋控制代碼中的後續呼叫使用`FindNextFile`或`FindClose`。 如果函式失敗，或者找不到檔案中的搜尋字串從失敗`lpFileName`參數，則傳回值就是 INVALID_HANDLE_VALUE。  
+ 如果函式成功，傳回值是在後續呼叫中使用的搜尋控制代碼`FindNextFile`或`FindClose`。 如果函式會失敗，或無法找出檔案中的搜尋字串從`lpFileName`參數，則傳回值就是 INVALID_HANDLE_VALUE。  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`FindFirstFileTransacted`函式。  
   
 ##  <a name="getfileattributes"></a>GetFileAttributes  
- 擷取指定的檔案或目錄的檔案系統屬性做為交易的作業。  
+ 擷取指定的檔案或目錄的檔案系統屬性成為交易的作業。  
   
 ```
 inline DWORD GetFileAttributes(LPCTSTR lpFileName);
@@ -275,7 +256,7 @@ inline DWORD GetFileAttributes(LPCTSTR lpFileName);
  這個包裝函式呼叫`GetFileAttributesTransacted`函式。  
   
 ##  <a name="getfileattributesex"></a>GetFileAttributesEx  
- 擷取指定的檔案或目錄的檔案系統屬性做為交易的作業。  
+ 擷取指定的檔案或目錄的檔案系統屬性成為交易的作業。  
   
 ```
 inline BOOL GetFileAttributesEx(
@@ -292,7 +273,7 @@ inline BOOL GetFileAttributesEx(
  要擷取的屬性資訊的層級。  
   
  `lpFileInformation`  
- 接收到的屬性資訊的緩衝區指標。 會儲存到這個緩衝區的屬性資訊的類型取決於值`fInfoLevelId`。 如果`fInfoLevelId`參數是 GetFileExInfoStandard，則此參數指向 WIN32_FILE_ATTRIBUTE_DATA 結構。  
+ 接收屬性資訊的緩衝區指標。 儲存到這個緩衝區的屬性資訊的類型由值`fInfoLevelId`。 如果`fInfoLevelId`參數是 GetFileExInfoStandard，則此參數指向 WIN32_FILE_ATTRIBUTE_DATA 結構。  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`GetFileAttributesTransacted`函式。  
@@ -340,7 +321,7 @@ HANDLE m_hTransaction;
 ### <a name="remarks"></a>備註  
   
 ##  <a name="movefile"></a>MoveFile  
- 移動現有的檔案或目錄，做為交易的作業包括其子系。  
+ 移動現有的檔案或目錄，包括子系，以交易的作業。  
   
 ```
 inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
@@ -348,16 +329,16 @@ inline BOOL MoveFile(LPCTSTR lpOldFileName, LPCTSTR lpNewFileName);
   
 ### <a name="parameters"></a>參數  
  `lpOldFileName`  
- 現有的檔案或目錄，在本機電腦上的目前的名稱。  
+ 目前的現有檔案或本機電腦上的目錄名稱。  
   
  `lpNewFileName`  
- 新檔案或目錄名稱。 此名稱必須尚未存在。 新的檔案可能位於不同的檔案系統或磁碟機。 新的目錄必須位於相同的磁碟機。  
+ 新檔案或目錄名稱。 這個名稱必須存在。 新的檔案可能是不同的檔案系統或磁碟機上。 新的目錄必須位於相同的磁碟機上。  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`MoveFileTransacted`函式。  
   
 ##  <a name="regcreatekeyex"></a>RegCreateKeyEx  
- 建立指定的登錄機碼，並將它與交易產生關聯。 如果索引鍵已經存在，此函式會開啟它。  
+ 建立指定的登錄機碼，並將它與交易產生關聯。 如果金鑰已存在，則此函式會開啟它。  
   
 ```
 inline LSTATUS RegCreateKeyEx(
@@ -377,37 +358,37 @@ inline LSTATUS RegCreateKeyEx(
  開啟登錄機碼的控制代碼。  
   
  `lpSubKey`  
- 此函式會開啟或建立子機碼名稱。  
+ 此函式會開啟或建立一個子機碼名稱。  
   
  `dwReserved`  
- 這個參數已保留，而且必須為零。  
+ 這個參數已保留，而且必須是零。  
   
  `lpClass`  
- 此機碼的使用者定義的類別。 會忽略此參數。 這個參數可以是 NULL。  
+ 此機碼的使用者定義的類別。 可能會忽略這個參數。 這個參數可以是 NULL。  
   
  `dwOptions`  
- 這個參數可以是下列值之一︰ REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。  
+ 這個參數可以是下列值之一： REG_OPTION_BACKUP_RESTORE、 REG_OPTION_NON_VOLATILE 或 REG_OPTION_VOLATILE。  
   
  `samDesired`  
  遮罩，指定索引鍵的存取權限。  
   
  `lpSecurityAttributes`  
- 決定子處理序是否可以繼承傳回的控制代碼的 ATTRIBUTES 結構的指標。 如果`lpSecurityAttributes`是`NULL`，無法繼承控制代碼。  
+ Security ATTRIBUTES 結構，決定子處理序是否可以繼承傳回的控制代碼指標。 如果`lpSecurityAttributes`是`NULL`，無法繼承控制代碼。  
   
  `phkResult`  
- 此變數會接收到已開啟或建立機碼的控制代碼指標。 如果索引鍵不是其中一個預先定義的登錄機碼，呼叫`RegCloseKey`函式在完成使用控制代碼之後。  
+ 此變數會接收到已開啟或建立機碼的控制代碼指標。 如果索引鍵不是其中一個預先定義的登錄機碼，呼叫`RegCloseKey`函式在您完成使用此控制代碼後。  
   
  `lpdwDisposition`  
- 指標，此變數會接收一個下列可能的值︰ REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。  
+ 指標變數會接收下列配置值的其中一個： REG_CREATED_NEW_KEY 或 REG_OPENED_EXISTING_KEY。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，則傳回的值會是 Winerror.h 中定義的非零的錯誤代碼。  
+ 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值會是 Winerror.h 中定義的非零的錯誤代碼。  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`RegCreateKeyTransacted`函式。  
   
 ##  <a name="regdeletekey"></a>RegDeleteKey  
- 從指定的平台特定的登錄檢視中刪除子機碼和其值為交易的作業。  
+ 從指定的平台特定的登錄檢視中刪除子機碼和其值以交易的作業。  
   
 ```
 inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
@@ -418,10 +399,10 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 |參數|說明|  
 |---------------|-----------------|  
 |`hKey`|開啟登錄機碼的控制代碼。|  
-|`lpSubKey`|要刪除的索引鍵名稱。|  
+|`lpSubKey`|要刪除之索引鍵名稱。|  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，則傳回的值會是 Winerror.h 中定義的非零的錯誤代碼。  
+ 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值會是 Winerror.h 中定義的非零的錯誤代碼。  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`RegDeleteKeyTransacted`函式。  
@@ -443,25 +424,25 @@ inline LSTATUS RegOpenKeyEx(
  開啟登錄機碼的控制代碼。  
   
  `lpSubKey`  
- 若要開啟的登錄子機碼名稱。  
+ 若要開啟之登錄子機碼名稱。  
   
  `ulOptions`  
- 這個參數已保留，而且必須為零。  
+ 這個參數已保留，而且必須是零。  
   
  `samDesired`  
  遮罩，指定索引鍵的存取權限。  
   
  `phkResult`  
- 此變數會接收到已開啟或建立機碼的控制代碼指標。 如果索引鍵不是其中一個預先定義的登錄機碼，呼叫`RegCloseKey`函式在完成使用控制代碼之後。  
+ 此變數會接收到已開啟或建立機碼的控制代碼指標。 如果索引鍵不是其中一個預先定義的登錄機碼，呼叫`RegCloseKey`函式在您完成使用此控制代碼後。  
   
 ### <a name="return-value"></a>傳回值  
- 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值是 Winerror.h 中定義的非零的錯誤代碼  
+ 如果函式成功，則傳回的值會是 ERROR_SUCCESS。 如果函式失敗，傳回值是定義於 Winerror.h 中則為非零的錯誤代碼  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`RegOpenKeyTransacted`函式。  
   
 ##  <a name="rollback"></a>復原  
- 回復交易的要求。  
+ 交易回復的要求。  
   
 ```
 inline BOOL Rollback();
@@ -492,4 +473,3 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
   
 ## <a name="see-also"></a>另請參閱  
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)
-

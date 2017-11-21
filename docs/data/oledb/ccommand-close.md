@@ -1,53 +1,52 @@
 ---
-title: "CCommand::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Close"
-  - "CCommand::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close 方法"
+title: "Ccommand:: Close |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Close
+- CCommand::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: 4da9c02c-7082-4e47-a0fa-78b546f0f7d2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51ed32c8c4298198b0d54390151e4a904ebd918d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Close
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-釋放存取子資料列集與命令。  
+# <a name="ccommandclose"></a>CCommand::Close
+釋放與命令相關聯的存取子資料列集。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void Close( );  
 ```  
   
-## 備註  
- 命令使用一個資料列集、結果集存取子和 \(選擇性\) 參數存取子 \(不同於資料表，不支援參數，而且不需要參數存取子\)。  
+## <a name="remarks"></a>備註  
+ 命令會使用資料列集，結果的 set 存取子，以及 （選擇性） （不同於資料表，這些資料表不支援參數，而且不需要是參數存取子） 的參數存取子。  
   
- 當您執行命令時，您應該在命令之後呼叫 `Close` 和 [ReleaseCommand](../../data/oledb/ccommand-releasecommand.md) 。  
+ 當您執行命令時，您應該呼叫兩者`Close`和[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)之後的命令。  
   
- 當您要重複時執行相同的命令，您也應該呼叫 `Close` 以釋放每個結果集存取子在呼叫 `Execute`之前。  本系列的最後，您也應該呼叫 `ReleaseCommand`以釋放參數存取子。  另一個常見案例呼叫具有輸出參數的預存程序。  在許多提供者 \(例如 SQL Server 的 OLE DB 提供者\) 輸出參數值無法存取，直到您關閉結果集的存取子。  呼叫 `Close` 時傳回的資料列集和結果集，存取子，但不是參數存取子，因此可讓您擷取輸出參數的值。  
+ 當您想要重複執行相同的命令時，您應該藉由呼叫釋放每個結果的 set 存取子`Close`之前先呼叫`Execute`。 在數列的結尾，您應該釋放參數存取子，藉由呼叫`ReleaseCommand`。 另一個常見案例呼叫具有輸出參數的預存程序。 許多提供者 （例如 SQL Server 的 OLE DB 提供者） 上的輸出參數值將無法存取您必須先關閉結果的 set 存取子。 呼叫`Close`關閉傳回的資料列集和結果的 set 存取子，但不是參數存取子，因此可讓您擷取輸出參數值。  
   
-## 範例  
- 下列範例顯示當您重複地執行相同的命令時，呼叫 `Close` 和 `ReleaseCommand`。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何呼叫`Close`和`ReleaseCommand`當您重複執行相同的命令。  
   
- [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/CPP/ccommand-close_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#2](../../data/oledb/codesnippet/cpp/ccommand-close_1.cpp)]  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CCommand 類別](../../data/oledb/ccommand-class.md)   
  [CCommand::ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)

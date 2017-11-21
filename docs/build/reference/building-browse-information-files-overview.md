@@ -1,57 +1,57 @@
 ---
-title: "建置瀏覽資訊檔：概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".bsc 檔案, 關於 .bsc 檔案"
-  - "瀏覽資訊檔 (.bsc)"
-  - "瀏覽資訊檔 (.bsc), 建立"
-  - "bsc 檔案, 關於 bsc 檔案"
+title: "建置瀏覽資訊檔： 概觀 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .bsc files, about .bsc files
+- bsc files, about bsc files
+- browse information files (.bsc)
+- browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 51a922e75d0cc7232a7e45472e505440b7b1631c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 建置瀏覽資訊檔：概觀
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-為了建立瀏覽符號用的瀏覽資訊，編譯器會為專案中的每個原始程式檔建立一個 .sbr 檔，接著 BSCMAKE.EXE 會將 .sbr 檔連結成一個 .bsc 檔。  
+# <a name="building-browse-information-files-overview"></a>建置瀏覽資訊檔：概觀
+若要建立的符號瀏覽資訊時，編譯器會建立每個來源檔案的.sbr 檔案在您的專案，然後 BSCMAKE。EXE 會串連成一個.bsc 檔案的.sbr 檔案。  
   
- 產生 .sbr 及 .bsc 檔會需要一些時間，因此預設情形下 Visual C\+\+ 是將這些功能關閉的。  如果您希望瀏覽目前的資訊，必須開啟瀏覽選項並重建您的專案。  
+ 產生.sbr 和.bsc 檔案需要時間，因此 Visual c + + 會關閉這些函式，根據預設。 如果您想要瀏覽目前的資訊，您必須開啟瀏覽選項，並再次建置您的專案。  
   
- 使用 [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) 或 [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)，指示編譯器建立 .sbr 檔。  若要建立 .bsc 檔，您可以從命令列呼叫 [BSCMAKE](../../build/reference/bscmake-command-line.md)。  從命令列使用 BSCMAKE，讓您可以對瀏覽資訊檔的管理擁有更精確的控制。  如需詳細資訊，請參閱 [BSCMAKE 參考](../../build/reference/bscmake-reference.md)。  
+ 使用[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)或[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)告訴編譯器建立的.sbr 檔案。 若要建立.bsc 檔案，您可以呼叫[BSCMAKE](../../build/reference/bscmake-command-line.md)從命令列。 從命令列使用 BSCMAKE，讓您更精確地控制瀏覽資訊檔的操作。 請參閱[BSCMAKE 參考](../../build/reference/bscmake-reference.md)如需詳細資訊。  
   
 > [!TIP]
->  您可以將 .sbr 檔產生功能開啟，但是讓 .bsc 檔產生功能保持關閉，  如此便可快速地進行建置，而且也讓您能夠透過開啟 .bsc 檔產生功能並建置專案，快速地建立全新的 .bsc 檔。  
+>  您可以開啟.sbr 檔案產生，但請勿關閉.bsc 檔產生。 這提供快速建置，但也可讓您快速建立全新的.bsc 檔，所產生的.bsc 檔開啟和建置專案。  
   
- 藉由減少 .bsc 檔的大小，您就可以減少建置 .bsc 檔所需的時間、記憶體和磁碟空間。  
+ 您可以減少時間、 記憶體和磁碟空間才能建置.bsc 檔藉由減少.bsc 檔的大小。  
   
- 如需如何在開發環境中建置瀏覽資訊檔 \(Browser File\) 的詳細資訊，請參閱[一般屬性頁 \(專案\)](../../ide/general-property-page-project.md)。  
+ 請參閱[一般屬性頁 （專案）](../../ide/general-property-page-project.md)如需有關如何建立在開發環境中的瀏覽器檔案資訊。  
   
-### 若要建立較小的 .bsc 檔  
+### <a name="to-create-a-smaller-bsc-file"></a>若要建立較小的.bsc 檔案  
   
-1.  使用 [BSCMAKE 命令列選項](../../build/reference/bscmake-options.md)，從瀏覽資訊檔中排除資訊。  
+1.  使用[BSCMAKE 命令列選項](../../build/reference/bscmake-options.md)排除瀏覽資訊檔的資訊。  
   
-2.  編譯或組譯時，省略一或多個 .sbr 檔中的區域符號。  
+2.  略過一或多個.sbr 檔時編譯，或組合中的本機符號。  
   
-3.  如果目的檔 \(Object File\) 中不包含目前偵錯階段所需的資訊，當您重建瀏覽資訊檔時，可以在 BSCMAKE 命令中省略它的 .sbr 檔。  
+3.  如果物件檔案沒有偵錯的程式目前階段所需的資訊，請省略 BSCMAKE 命令從其.sbr 檔案，當您重建瀏覽資訊檔。  
   
-### 若要將數個專案的瀏覽資訊結合於一個瀏覽資訊檔 \(.bsc\) 中  
+### <a name="to-combine-the-browse-information-from-several-projects-into-one-browser-file-bsc"></a>若要瀏覽資訊結合數個專案成一個瀏覽資訊檔 (.bsc)  
   
-1.  不在專案等級建置 .bsc 檔或是使用 \/n 參數，來防止 .sbr 檔被截斷。  
+1.  請不要建置.bsc 檔，在專案層級，或使用 /n 參數來防止.sbr 檔被截斷。  
   
-2.  在所有專案都已建置後，以所有的 .sbr 檔做為輸入來執行 BSCMAKE。  可以接受萬用字元。  例如，如果您有 C:\\X、C:\\Y 和 C:\\Z 專案目錄，其中都有 .sbr 檔，您希望將這些 .sbr 檔結合到一個 .bsc 檔中，可以使用 BSCMAKE C:\\X\\\*.sbr C:\\Y\\\*.sbr C:\\Z\\\*.sbr \/o c:\\whatever\_directory\\combined.bsc 來建置結合的 .bsc 檔。  
+2.  所有專案都建置後，請與所有.sbr 檔案都執行 BSCMAKE，做為輸入。 使用萬用字元。 比方說，如果您在專案目錄 C:\X、 C:\Y 和 C:\Z 以及您想要將它們合併成一個.bsc 檔所有.sbr 檔案，然後使用 BSCMAKE C:\X\\*.sbr C:\Y\\\*.sbr C:\Z\\\*。sbr /o c:\whatever_directory\combined.bsc 建置結合的.bsc 檔案。  
   
-## 請參閱  
- [C\/C\+\+ 建置工具](../../build/reference/c-cpp-build-tools.md)   
+## <a name="see-also"></a>另請參閱  
+ [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   
  [BSCMAKE 參考](../../build/reference/bscmake-reference.md)

@@ -1,32 +1,30 @@
 ---
-title: "DerefHelper 結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::Details::DerefHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DerefHelper 結構"
+title: "DerefHelper 結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::Details::DerefHelper
+dev_langs: C++
+helpviewer_keywords: DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c97a348b1f979f21edda5faf5b0c77a91ac5950a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# DerefHelper 結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="derefhelper-structure"></a>DerefHelper 結構
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <  
@@ -40,30 +38,30 @@ template <
 struct DerefHelper<T*>;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 一個範本參數。  
+ 樣板參數。  
   
-## 備註  
- 表示已解除參考指標至 `T*` 樣板參數。  
+## <a name="remarks"></a>備註  
+ 代表已取值的指標`T*`樣板參數。  
   
- DerefHelper 用於下列運算式: `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。  
+ DerefHelper 運算式中使用這類： `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`。  
   
-## Members  
+## <a name="members"></a>Members  
   
-### 公用 Typedefs  
+### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|描述|  
-|--------|--------|  
-|`DerefType`|解除參考樣板參數 `T*`的識別項。|  
+|名稱|說明|  
+|----------|-----------------|  
+|`DerefType`|取值的樣板參數的識別項`T*`。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `DerefHelper`  
   
-## 需求  
- **標題:** async.h  
+## <a name="requirements"></a>需求  
+ **標頭：** async.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

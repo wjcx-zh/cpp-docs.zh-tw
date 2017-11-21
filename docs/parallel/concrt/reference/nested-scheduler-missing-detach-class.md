@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach
 - CONCRT/concurrency::nested_scheduler_missing_detach::nested_scheduler_missing_detach
-dev_langs:
-- C++
-helpviewer_keywords:
-- nested_scheduler_missing_detach class
+dev_langs: C++
+helpviewer_keywords: nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7ab8dc3761c6f11529b70ec4d71bbaebdfea0493
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 78939c1146ec00bf2c4723b17caa294ea00c2f84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 類別
 這個類別描述當並行執行階段偵測到您忘了使用 `Scheduler` 物件的 `Attach` 方法在附加到第二個排程器上呼叫 `CurrentScheduler::Detach` 方法時擲出的例外狀況。  
@@ -55,12 +37,12 @@ class nested_scheduler_missing_detach : public std::exception;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[nested_scheduler_missing_detach](#ctor)|多載。 建構 `nested_scheduler_missing_detach` 物件。|  
   
 ## <a name="remarks"></a>備註  
- 當您在已由其他排程器擁有或附加的內容上呼叫 `Attach` 物件的`Scheduler` 方法，將排程器巢狀排列在另一個排程器內時，才會擲回這個例外狀況。 並行執行階段會擲回這個例外狀況 」 時，它可以偵測案例來協助找出問題。 並非每個執行個體上隻字未呼叫`CurrentScheduler::Detach`方法一定會擲回這個例外狀況。  
+ 當您在已由其他排程器擁有或附加的內容上呼叫 `Attach` 物件的`Scheduler` 方法，將排程器巢狀排列在另一個排程器內時，才會擲回這個例外狀況。 並行執行階段會擲回這個例外狀況 」 時，它可以偵測案例來協助找出問題。 並非每個執行個體來呼叫忽略`CurrentScheduler::Detach`方法一定會擲回這個例外狀況。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `exception`  
@@ -68,7 +50,7 @@ class nested_scheduler_missing_detach : public std::exception;
  `nested_scheduler_missing_detach`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** concrt.h  
+ **標頭：** concrt.h  
   
  **命名空間：** concurrency  
   
@@ -89,4 +71,3 @@ nested_scheduler_missing_detach() throw();
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)
-

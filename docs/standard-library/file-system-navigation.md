@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 7ed9a10434f0128de871a426f7e6be46212d4098
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-system-navigation"></a>檔案系統巡覽
 \<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 在 Windows 上一律會傳回 `false` 。   
@@ -231,4 +213,3 @@ Press Enter to exit
 \<filesystem> 標頭提供 [directory_iterator](../standard-library/directory-iterator-class.md) 類型，可反覆查看單一目錄，並提供 [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) 類別，以遞迴方式反覆查看目錄及其子目錄。 當您藉由傳遞 `path` 來建構迭代器之後，迭代器會指向路徑中的第一個 directory_entry。 透過呼叫預設建構函式來建立結尾迭代器。  
   
 當逐一查看目錄時，您可能會遇到幾種項目，包括但不限於目錄、檔案、符號連結和通訊端檔案。 `directory_iterator` 會以 [directory_entry](../standard-library/directory-entry-class.md) 物件形式傳回它的項目。  
-

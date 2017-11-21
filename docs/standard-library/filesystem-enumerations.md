@@ -4,51 +4,35 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- copy_options
-- filesystem::copy_options
 - filesystem/std::filesystem::copy_options
-- experimental::filesystem::copy_options
 - filesystem/std::experimental::filesystem::copy_options
-- directory_options
-- filesystem::directory_options
 - filesystem/std::filesystem::directory_options
-- experimental::filesystem::directory_options
 - filesystem/std::experimental::filesystem::directory_options
-- file_type
-- filesystem::file_type
 - filesystem/std::filesystem::file_type
-- experimental::filesystem::file_type
 - filesystem/std::experimental::filesystem::file_type
-- perms
-- filesystem::perms
 - filesystem/std::filesystem::perms
-- experimental::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 23d69fc4ac64b4364c736ee6bb596d8dcfcce54a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 1220ec0fa20eb285af755a67fae7ae09bd3d4fdf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 本主題說明檔案系統標頭中的列舉。
 
 ## <a name="requirements"></a>需求  
- **標頭：**\<experimental/filesystem>  
-  
+ **標頭：**\<experimental/filesystem>    
  **命名空間：**std::experimental::filesystem  
 
 ##  <a name="copy_options"></a>  copy_options
@@ -105,7 +89,7 @@ enum class directory_options {
 |`follow_directory_symlink`|將目錄的符號連結視為實際的目錄。|  
   
 ##  <a name="file_type"></a>  file_type
-檔案類型的列舉。 支援的值為 regular、directory、not_found 和 unknown。  
+檔案類型的列舉。 支援的值為 regular、 directory、 not_found 和 unknown。  
   
 ### <a name="syntax"></a>語法  
 ```cpp  
@@ -172,5 +156,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)
-
 

@@ -1,100 +1,100 @@
 ---
-title: "集合類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "集合類別"
+title: "ATL 集合類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d2aacc778e6df974f364f2be9da72aa46fed8f4b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 集合類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列類別會提供陣列、清單、對應和特性方法提供支援說明的功能比較和項目存取。  
+# <a name="collection-classes"></a>集合類別
+下列類別提供陣列、 清單、 對應和也特性方法，可幫助的比較與項目存取的支援。  
   
--   [CAtlArray](../atl/reference/catlarray-class.md) 這個類別會實作陣列物件。  
+-   [CAtlArray](../atl/reference/catlarray-class.md)這個類別會實作陣列物件。  
   
--   [CAtlList](../atl/reference/catllist-class.md) 此類別用於建立和管理清單物件的方法。  
+-   [CAtlList](../atl/reference/catllist-class.md)這個類別提供方法來建立和管理清單物件。  
   
--   [CAtlMap](../atl/reference/catlmap-class.md) 此類別用於建立和管理對應物件的方法。  
+-   [CAtlMap](../atl/reference/catlmap-class.md)這個類別提供方法來建立及管理的地圖物件。  
   
--   以建構一個陣列智慧型指標時，[CAutoPtrArray](../atl/reference/cautoptrarray-class.md) 這個類別會提供有用的方法。  
+-   [CAutoPtrArray](../atl/reference/cautoptrarray-class.md)建構智慧型指標的陣列時，這個類別會提供有用的方法。  
   
--   然後，建立智慧型指標集合時，[CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md) 這個類別會提供靜態方法、函式和有用的 Typedef。  
+-   [CAutoPtrElementTraits](../atl/reference/cautoptrelementtraits-class.md)這個類別會提供方法、 靜態函式和 typedef 有用時建立智慧型指標的集合。  
   
--   以建構清單智慧型指標時，[CAutoPtrList](../atl/reference/cautoptrlist-class.md) 這個類別會提供有用的方法。  
+-   [CAutoPtrList](../atl/reference/cautoptrlist-class.md)建構智慧型指標的清單時，這個類別會提供有用的方法。  
   
--   然後，建立智慧型指標使用向量新增和刪除運算子的[CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md) 集合時，這個類別會提供靜態方法、函式和有用的 Typedef。  
+-   [CAutoVectorPtrElementTraits](../atl/reference/cautovectorptrelementtraits-class.md)這個類別提供方法，靜態函式，並建立使用智慧型指標的集合時非常實用的 typedef 向量 new 和 delete 運算子。  
   
--   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md) 這個類別會提供靜態方法、函式和有用的 typedef，在建立集合時的 COM 介面指標。  
+-   [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md)這個類別提供方法，靜態函式，和 typedef 有用時建立集合的 COM 介面指標。  
   
--   [CComSafeArray](../atl/reference/ccomsafearray-class.md) 這個類別是 [SAFEARRAY Data Type](http://msdn.microsoft.com/zh-tw/9ec8025b-4763-4526-ab45-390c5d8b3b1e) 結構的包裝函式。  
+-   [CComSafeArray](../atl/reference/ccomsafearray-class.md)這個類別是包裝函式[SAFEARRAY 資料型別](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)結構。  
   
--   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md) 這個類別是 [SAFEARRAYBOUND](http://msdn.microsoft.com/zh-tw/303a9bdb-71d6-4f14-8747-84cf84936c6d) 結構的包裝函式。  
+-   [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)這個類別是包裝函式[SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d)結構。  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) 此類別會將 **IUnknown** 指標和是設計用來做為參數 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) 樣板類別。  
+-   [CComUnkArray](../atl/reference/ccomunkarray-class.md)這個類別會儲存**IUnknown**指標，並且可當做參數使用[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)範本類別。  
   
--   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md) 這個類別會轉換為大寫和小寫字元之間提供兩個靜態函式。  
+-   [CDefaultCharTraits](../atl/reference/cdefaultchartraits-class.md)這個類別提供兩個靜態函式之間大寫和小寫字元轉換。  
   
--   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md) 這個類別會提供預設項目比較函式。  
+-   [CDefaultCompareTraits](../atl/reference/cdefaultcomparetraits-class.md)這個類別會提供預設的比較函式項目。  
   
--   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md) 這個類別提供預設方法，以及集合的功能分類。  
+-   [CDefaultElementTraits](../atl/reference/cdefaultelementtraits-class.md)這個類別會提供預設的方法和函式的集合類別。  
   
--   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md) 這個類別會計算的雜湊值的靜態函式。  
+-   [CDefaultHashTraits](../atl/reference/cdefaulthashtraits-class.md)這個類別提供靜態函式來計算雜湊值。  
   
--   這個類別的集合類別用來[CElementTraits](../atl/reference/celementtraits-class.md) 進行移動，複製，比較和雜湊的操作方法和函式。  
+-   [CElementTraits](../atl/reference/celementtraits-class.md)集合類別使用這個類別提供方法和函式來移動、 複製、 比較和雜湊作業。  
   
--   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md) 這個類別會提供預設的複本，並移動集合的方法。  
+-   [CElementTraitsBase](../atl/reference/celementtraitsbase-class.md)這個類別會提供預設值的集合類別的複製和移動方法。  
   
--   表示建立堆積指標集合時，[CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md) 這個類別會提供靜態方法、函式和有用的 Typedef。  
+-   [CHeapPtrElementTraits](../atl/reference/cheapptrelementtraits-class.md)這個類別會提供方法、 靜態函式和 typedef 有用時建立堆積的指標的集合。  
   
--   以建構清單堆積指標時，[CHeapPtrList](../atl/reference/cheapptrlist-class.md) 這個類別會提供有用的方法。  
+-   [CHeapPtrList](../atl/reference/cheapptrlist-class.md)建構堆積指標清單時，這個類別會提供有用的方法。  
   
--   以建構一個陣列 COM 介面指標時，[CInterfaceArray](../atl/reference/cinterfacearray-class.md) 這個類別會提供有用的方法。  
+-   [CInterfaceArray](../atl/reference/cinterfacearray-class.md)建構 COM 介面指標的陣列時，這個類別會提供有用的方法。  
   
--   以建構清單 COM 介面指標時，[CInterfaceList](../atl/reference/cinterfacelist-class.md) 這個類別會提供有用的方法。  
+-   [CInterfaceList](../atl/reference/cinterfacelist-class.md)建構 COM 介面指標的清單時，這個類別會提供有用的方法。  
   
--   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md) 這個類別會提供集合類別的預設方法和函式所組成的基本資料型別。  
+-   [CPrimitiveElementTraits](../atl/reference/cprimitiveelementtraits-class.md)這個類別會提供預設的方法和集合類別的函式組成的基本資料類型。  
   
--   使用紅色粗體二進位樹狀目錄，[CRBMap](../atl/reference/crbmap-class.md) 這個類別表示對應結構，。  
+-   [CRBMap](../atl/reference/crbmap-class.md)此類別代表對應結構，使用 紅黑二進位樹狀目錄。  
   
--   使用紅色粗體二進位樹狀目錄，[CRBMultiMap](../atl/reference/crbmultimap-class.md) 這個類別表示允許每個索引鍵與多個值的對應結構，。  
+-   [CRBMultiMap](../atl/reference/crbmultimap-class.md)此類別代表對應的結構，可讓多個值，並使用 紅黑二進位樹狀目錄相關聯的每個索引鍵。  
   
--   [CRBTree](../atl/reference/crbtree-class.md) 這個類別以建立和執行以紅色黑色樹狀結構的方法。  
+-   [CRBTree](../atl/reference/crbtree-class.md)這個類別會提供建立和使用紅黑樹狀結構的方法。  
   
--   [CSimpleArray](../atl/reference/csimplearray-class.md) 這個類別會提供管理簡單陣列的方法。  
+-   [CSimpleArray](../atl/reference/csimplearray-class.md)這個類別會提供管理簡單陣列的方法。  
   
--   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md) [CSimpleArray](../atl/reference/csimplearray-class.md) 這個類別是類別的 Helper。  
+-   [CSimpleArrayEqualHelper](../atl/reference/csimplearrayequalhelper-class.md)這個類別是 helper [CSimpleArray](../atl/reference/csimplearray-class.md)類別。  
   
--   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md) [CSimpleArray](../atl/reference/csimplearray-class.md) 這個類別是類別的 Helper。  
+-   [CSimpleArrayEqualHelperFalse](../atl/reference/csimplearrayequalhelperfalse-class.md)這個類別是 helper [CSimpleArray](../atl/reference/csimplearray-class.md)類別。  
   
--   [CSimpleMap](../atl/reference/csimplemap-class.md) 這個類別會提供一個簡單的對應陣列提供支援。  
+-   [CSimpleMap](../atl/reference/csimplemap-class.md)這個類別會提供簡單對應陣列中的支援。  
   
--   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md) [CSimpleMap](../atl/reference/csimplemap-class.md) 這個類別是類別的 Helper。  
+-   [CSimpleMapEqualHelper](../atl/reference/csimplemapequalhelper-class.md)這個類別是 helper [CSimpleMap](../atl/reference/csimplemap-class.md)類別。  
   
--   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md) [CSimpleMap](../atl/reference/csimplemap-class.md) 這個類別是類別的 Helper。  
+-   [CSimpleMapEqualHelperFalse](../atl/reference/csimplemapequalhelperfalse-class.md)這個類別是 helper [CSimpleMap](../atl/reference/csimplemap-class.md)類別。  
   
--   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md) 這個類別會提供集合類別使用的靜態函式 `CString` 儲存物件。  
+-   [CStringElementTraits](../atl/reference/cstringelementtraits-class.md)這個類別會提供所儲存的集合類別使用的靜態函式`CString`物件。  
   
--   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md) 這個類別會提供靜態函式與集合類別儲存在物件中的資料相關。  它與相似，但 [CStringElementTraits](../atl/reference/cstringelementtraits-class.md)，執行不區分大小寫的比較。  
+-   [CStringElementTraitsI](../atl/reference/cstringelementtraitsi-class.md)這個類別提供靜態函式與儲存在集合類別物件的字串。 類似於[CStringElementTraits](../atl/reference/cstringelementtraits-class.md)，但是執行不區分大小寫的比較。  
   
--   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md) 這個類別會提供靜態函式與集合類別儲存在物件中的資料相關。  字串物件處理做為參考。  
+-   [CStringRefElementTraits](../atl/reference/cstringrefelementtraits-class.md)這個類別提供靜態函式與儲存在集合類別物件的字串。 字串物件做為參考人選。  
   
-## 相關文件  
+## <a name="related-articles"></a>相關文章  
  [ATL 集合類別](../atl/atl-collection-classes.md)  
   
-## 請參閱  
- [Class Overview](../atl/atl-class-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ [類別概觀](../atl/atl-class-overview.md)   
  [集合類別](../atl/atl-collection-classes.md)
+

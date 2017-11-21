@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- regex/std::regex_traits<char>
-dev_langs:
-- C++
-helpviewer_keywords:
-- regex_traits<char> class
+f1_keywords: regex/std::regex_traits<char>
+dev_langs: C++
+helpviewer_keywords: regex_traits<char> class
 ms.assetid: ce95ebcd-3687-4ad5-bf1d-b89fdc633675
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 8340b75c78edabdbc7fa87a15e134ae677468e2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4a0ce2260853a5849210f57c2f35907f52e7f8c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="regextraitsltchargt-class"></a>regex_traits&lt;char&gt; 類別
 regex_traits for char 的特製化。  
@@ -54,4 +49,3 @@ class regex_traits<char>
 [regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 類別](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
-

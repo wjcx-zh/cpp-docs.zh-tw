@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - ATLCONV/ATL::CW2AEX::CW2AEX
 - ATLCONV/ATL::CW2AEX::m_psz
 - ATLCONV/ATL::CW2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2AEX class
+dev_langs: C++
+helpviewer_keywords: CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 007dc4a40f0784984981c9b2741ec79ce6f12d9b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: da63f817ab5e6b867d76d59248f5f887d0a7aea5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cw2aex-class"></a>CW2AEX 類別
 這個類別由字串轉換巨集`CT2AEX`， `CW2TEX`， `CW2CTEX`，和`CT2CAEX`，和 typedef **CW2A**。  
@@ -72,13 +54,13 @@ class CW2AEX
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CW2AEX::operator LPSTR](#operator_lpstr)|轉換運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CW2AEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
 |[CW2AEX::m_szBuffer](#m_szbuffer)|靜態緩衝區，用來儲存已轉換的字串。|  
@@ -88,11 +70,11 @@ class CW2AEX
   
  這個類別包含固定大小的靜態緩衝區可用來儲存轉換的結果。 如果結果太大，不符合靜態緩衝區，則類別會使用 `malloc` 來配置記憶體，當物件超出範圍時，即釋放記憶體。 如此可確保，不同於文字轉換巨集可用在舊版的 ATL，這個類別會安全地在迴圈中使用，而且它將不會產生堆疊溢位。  
   
- 如果類別嘗試配置記憶體堆積和失敗時，它會呼叫`AtlThrow`使用引數**E_OUTOFMEMORY**。  
+ 如果類別嘗試失敗與堆積上配置記憶體，它會呼叫`AtlThrow`使用引數**E_OUTOFMEMORY**。  
   
  根據預設，ATL 轉換類別和巨集使用目前的執行緒 ANSI 字碼頁來進行轉換。 如果您想要覆寫特定轉換的行為，請為類別的建構函式的第二個參數指定的字碼頁。  
   
- 下列巨集根據此類別︰  
+ 下列巨集根據此類別：  
   
 - `CT2AEX`  
   
@@ -102,7 +84,7 @@ class CW2AEX
   
 - `CT2CAEX`  
   
- 下列 typedef 根據此類別︰  
+ 下列 typedef 根據此類別：  
   
 - **CW2A**  
   
@@ -112,7 +94,7 @@ class CW2AEX
  請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlconv.h  
+ **標頭：** atlconv.h  
   
 ##  <a name="cw2aex"></a>CW2AEX::CW2AEX  
  建構函式。  
@@ -127,7 +109,7 @@ CW2AEX(LPCWSTR psz) throw(...);
  要轉換的文字字串。  
   
  `nCodePage`  
- 若要執行轉換所用的字碼頁。 請參閱程式碼頁參數的[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]函式[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)如需詳細資訊。  
+ 若要執行轉換所用的字碼頁。 請參閱 Windows SDK 函式的程式碼頁面參數討論[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)如需詳細資訊。  
   
 ### <a name="remarks"></a>備註  
  配置轉譯程序中使用的緩衝區。  
@@ -173,4 +155,3 @@ operator LPSTR() const throw();
  [CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)   
  [CW2WEX 類別](../../atl/reference/cw2wex-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

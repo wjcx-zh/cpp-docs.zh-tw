@@ -1,41 +1,41 @@
 ---
-title: "未經處理的虛擬作業 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "未經處理的虛擬作業 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4def1a0e-ec28-4736-91fb-fac95fba1f36
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 521714defb8503c5b51b276a6718f9f4f2735048
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 未經處理的虛擬作業
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題列出各種虛擬作業及其概略說明。  
+# <a name="raw-pseudo-operations"></a>未經處理的虛擬作業
+本主題列出的虛擬作業。  
   
-## 備註  
+## <a name="remarks"></a>備註  
   
-|虛擬作業|描述|  
-|----------|--------|  
-|PROC FRAME \[:ehandler\]|使 MASM 在 .pdata 中產生函式表項目並在 .xdata 中產生回溯資訊，供函式的結構化例外狀況處理 \(Structured Exception Handling\) 回溯行為使用。  如果提供 ehandler，則這個程序會輸入至 .xdata 做為語言特定處理常式。<br /><br /> 使用 FRAME 屬性時，之後必須跟隨 .ENDPROLOG 指示詞。  如果函式是分葉函式 \(如[函式類型](../build/function-types.md)所定義\)，則 FRAME 屬性為非必要，其餘的虛擬作業也是如此。|  
-|.PUSHREG reg|使用目前初構的位移，產生指定編號的暫存器 UWOP\_PUSH\_NONVOL 回溯程式碼項目。<br /><br /> 這項作業應該只用於靜態整數暫存器。  對於動態暫存器的推入，請改用 .ALLOCSTACK 8。|  
-|.SETFRAME reg, offset|使用指定的暫存器和位移，在回溯資訊中填入框架暫存器欄位和位移。  位移必須是 16 的倍數，並且小於或等於 240。  這個指示詞也使用目前的初構位移產生指定的暫存器之 UWOP\_SET\_FPREG 回溯程式碼進入點。|  
-|.ALLOCSTACK size|使用指定的大小產生目前初構位移的 UWOP\_ALLOC\_SMALL 或 UWOP\_ALLOC\_LARGE。<br /><br /> size 運算元必須是 8 的倍數。|  
-|.SAVEREG reg, offset|使用目前的初構位移，產生指定的暫存器和位移之 UWOP\_SAVE\_NONVOL 或 UWOP\_SAVE\_NONVOL\_FAR 回溯程式碼進入點。  MASM 會選擇最有效的編碼方式。<br /><br /> 位移必須為正數且為 8 的倍數。  位移為相對於程序框架的基底 \(通常是 RSP，如果使用框架指標，則為未調整的框架指標\)。|  
-|.SAVEXMM128 reg, offset|使用目前的初構位移，產生指定的 XMM 暫存器和位移之 UWOP\_SAVE\_XMM128 或 UWOP\_SAVE\_XMM128\_FAR 回溯程式碼進入點。  MASM 會選擇最有效的編碼方式。<br /><br /> 位移必須為正數且為 16 的倍數。  位移為相對於程序框架的基底 \(通常是 RSP，如果使用框架指標，則為未調整的框架指標\)。|  
-|.PUSHFRAME \[code\]|產生 UWOP\_PUSH\_MACHFRAME 回溯程式碼進入點。  如果指定選擇性的 code，則回溯程式碼進入點的修飾詞為 1，  否則修飾詞為 0。|  
-|.ENDPROLOG|表示初構宣告的結束。  必須在函式的前 255 個位元組中使用。|  
+|虛擬操作|描述|  
+|----------------------|-----------------|  
+|PROC 框架 [: ehandler]|原因要產生的函式的 MASM 表格項目中的.pdata 和回溯.xdata 中的資訊的函式的結構化例外狀況處理回溯行為。  如果 ehandler 存在時，此程序中輸入的.xdata 為語言特定處理常式。<br /><br /> 使用框架屬性時，它必須後面。ENDPROLOG 指示詞。  如果函式的分葉函式 (如中所定義[函式型別](../build/function-types.md)) 框架屬性是不必要的因為這些虛擬作業的其餘部分。|  
+|.PUSHREG reg|產生使用目前在序言中位移的指定暫存器號碼 UWOP_PUSH_NONVOL 回溯程式碼項目。<br /><br /> 這應該只用於靜態整數暫存器。  動態暫存器的推播通知，針對使用。ALLOCSTACK 8，改為|  
+|.SETFRAME reg 位移|框架填滿註冊中使用指定的暫存器和位移的回溯資訊的欄位和位移。 位移必須是 16 的倍數，且小於或等於 240。 這個指示詞也會產生指定的暫存器使用的目前序言位移 UWOP_SET_FPREG 回溯程式碼項目。|  
+|.ALLOCSTACK 大小|在序言中，會產生 UWOP_ALLOC_SMALL 或 UWOP_ALLOC_LARGE 具有指定大小的目前位移。<br /><br /> 大小運算元必須是 8 的倍數。|  
+|.SAVEREG reg 位移|產生 UWOP_SAVE_NONVOL 或指定的暫存器和位移使用目前的序言位移 UWOP_SAVE_NONVOL_FAR 回溯程式碼項目。 MASM 會選擇最有效率的編碼方式。<br /><br /> 位移必須是正數且 8 的倍數。  位移會與基底的程序的範圍內，通常是 RSP，或者，如果使用框架指標，無縮放的框架指標。|  
+|.SAVEXMM128 reg 位移|產生 UWOP_SAVE_XMM128 或指定 xmm 暫存器和位移使用目前的序言位移 UWOP_SAVE_XMM128_FAR 回溯程式碼項目。 MASM 會選擇最有效率的編碼方式。<br /><br /> 位移必須是正數且 16 的倍數。  位移會與基底的程序的範圍內，通常是 RSP，或者，如果使用框架指標，無縮放的框架指標。|  
+|.PUSHFRAME [程式碼]|產生 UWOP_PUSH_MACHFRAME 回溯程式碼項目。 如果指定選擇性的程式碼，則回溯程式碼項目指定為 1 的修飾詞。 否則修飾詞是 0。|  
+|.ENDPROLOG|表示序言宣告的結尾。  必須存在於函式的第一個 255 個位元組。|  
   
- 以下是函式初構範例，含有大多數 opcode 的適當用法：  
+ 以下是範例函式初構與大部分的 opcode 的正確用法：  
   
 ```  
 sample PROC FRAME     
@@ -84,5 +84,5 @@ ret
 sample ENDP  
 ```  
   
-## 請參閱  
- [MASM 的回溯 Helper](../build/unwind-helpers-for-masm.md)
+## <a name="see-also"></a>另請參閱  
+ [MASM 的回溯協助程式](../build/unwind-helpers-for-masm.md)

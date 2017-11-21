@@ -1,43 +1,34 @@
 ---
-title: "Consuming Generics (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generics [C++], consuming from .NET languages"
+title: "使用泛型 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Consuming Generics (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在一個 .NET 語言撰寫泛型可用於其他 .NET 語言。  不同於樣板，在已編譯的組件建立泛型仍然保持泛型。  因此，會比泛型型別定義的組件可能會在不同組件甚至在不同語言執行個體化泛型型別。  
+# <a name="consuming-generics-ccli"></a>使用泛型 (C++/CLI)
+以某一種 .NET 語言撰寫的泛型可以在其他 .NET 語言中使用。 與範本不同的是，泛型在編譯的組件中仍然保持為泛型。 因此，您可以在不同組件中，甚至以與定義泛型類型的組件不同的語言，將泛型類型具現化。  
   
-## 備註  
- 如需詳細資訊，請參閱：  
+## <a name="example"></a>範例  
   
--   [泛型簡介](../Topic/Introduction%20to%20Generics%20\(C%23%20Programming%20Guide\).md)  
+### <a name="description"></a>描述  
+ 這個範例將示範以 C# 定義的泛型類別。  
   
--   [Visual Basic 中的泛型類型](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)  
-  
-## 範例  
-  
-### 說明  
- 這個範例顯示在 C\# 中定義的泛型類別。  
-  
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // consuming_generics_from_other_NET_languages.cs  
@@ -95,12 +86,12 @@ public class CircularList<ItemType> {
 }  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 這個範例使用以 C\# 撰寫的組件。  
+### <a name="description"></a>描述  
+ 這個範例會使用以 C# 撰寫的組件。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // consuming_generics_from_other_NET_languages_2.cpp  
@@ -121,7 +112,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 90  
@@ -134,5 +125,5 @@ int main() {
 10  
 ```  
   
-## 請參閱  
- [Generics](../windows/generics-cpp-component-extensions.md)
+## <a name="see-also"></a>另請參閱  
+ [泛型](../windows/generics-cpp-component-extensions.md)

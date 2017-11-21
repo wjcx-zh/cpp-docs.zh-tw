@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::enable_if
-dev_langs:
-- C++
+f1_keywords: type_traits/std::enable_if
+dev_langs: C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4d01230a1e185ad793f554afa7fa2fe2942b27a6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="enableif-class"></a>enable_if 類別
 有條件地建立類型的執行個體，以進行 SFINAE 多載解析。 只有 `enable_if<Condition,Type>::type` 為 `Type` 時，才會有巢狀 typedef `Condition` (而且是 `true` 的同義字)。  
@@ -147,7 +143,6 @@ func(make_pair("foo", "bar"));
   
 ## <a name="see-also"></a>另請參閱  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

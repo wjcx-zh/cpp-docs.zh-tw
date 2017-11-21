@@ -1,52 +1,51 @@
 ---
-title: "COM Modules Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.COM"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM modules classes"
+title: "COM 模組類別 (ATL) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.COM
+dev_langs: C++
+helpviewer_keywords: COM modules classes
 ms.assetid: 0a8a82dd-a153-47cd-9bbe-1a1ad5d1a6ff
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cee2ebb756ecee09a78207319250832d4dfc14a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# COM Modules Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列類別對 COM 模組的支援:  
+# <a name="com-modules-classes"></a>COM 模組類別
+下列類別提供 COM 模組中的支援：  
   
--   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md) 這個類別會在每個 ATL 專案具現化。  
+-   [CAtlBaseModule](../atl/reference/catlbasemodule-class.md)這個類別具現化每個 ATL 專案中。  
   
--   [CAtlComModule](../atl/reference/catlcommodule-class.md) 這個類別會實作 COM 伺服器模組。  
+-   [CAtlComModule](../atl/reference/catlcommodule-class.md)這個類別會實作 COM 伺服器模組。  
   
--   [CAtlModule](../atl/reference/catlmodule-class.md) 這個類別會提供數個 ATL 模組類別的方法。  
+-   [CAtlModule](../atl/reference/catlmodule-class.md)這個類別會提供數個 ATL 模組類別所使用的方法。  
   
--   [CAtlModuleT](../atl/reference/catlmodulet-class.md) 這個類別會實作 ATL 模組。  
+-   [CAtlModuleT](../atl/reference/catlmodulet-class.md)這個類別會實作 ATL 模組。  
   
--   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md) 這個類別表示應用程式的模組。  
+-   [CAtlExeModuleT](../atl/reference/catlexemodulet-class.md)此類別代表應用程式的模組。  
   
--   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md) 這個類別會實作服務。  
+-   [CAtlServiceModuleT](../atl/reference/catlservicemodulet-class.md)這個類別會實作服務。  
   
--   [CAtlWinModule](../atl/reference/catlwinmodule-class.md) 這個類別提供 ATL Windowing 元件的支援。  
+-   [CAtlWinModule](../atl/reference/catlwinmodule-class.md)這個類別會提供支援 ATL 視窗化元件。  
   
--   [CComModule](../atl/reference/ccommodule-class.md) 這個類別會實作一個 DLL 或 EXE 模組。  ATL 7.0 中已過時。  
+-   [CComModule](../atl/reference/ccommodule-class.md)這個類別會實作 DLL 或 EXE 的模組。 ATL 7.0 中已過時。  
   
--   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md) 這個類別會實作 EXE 模組，可支援多個執行緒集區 Apartment。  ATL 7.0 中已過時。  
+-   [CComAutoThreadModule](../atl/reference/ccomautothreadmodule-class.md)這個類別會實作一個 EXE 模組，請使用支援多個集區執行緒的 apartment。 ATL 7.0 中已過時。  
   
-## 相關文件  
+## <a name="related-articles"></a>相關文章  
  [ATL 模組類別](../atl/atl-module-classes.md)  
   
-## 請參閱  
- [Class Overview](../atl/atl-class-overview.md)   
+## <a name="see-also"></a>另請參閱  
+ [類別概觀](../atl/atl-class-overview.md)   
  [模組類別](../atl/atl-module-classes.md)
+

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,21 +18,18 @@ f1_keywords:
 - ATLCOM/ATL::IEnumOnSTLImpl::m_iter
 - ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
 - ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
-dev_langs:
-- C++
-helpviewer_keywords:
-- IEnumOnSTLImpl class
+dev_langs: C++
+helpviewer_keywords: IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.openlocfilehash: 50cb78893eeca685f0b538fad397aca445502776
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 98fb3d4562abc75f1023201a5bb7939275bb173f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 類別
 這個類別定義根據 c + + 標準程式庫集合的列舉程式介面。  
@@ -214,4 +210,3 @@ STDMETHOD(Skip)(ULONG celt);
   
 ## <a name="see-also"></a>另請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,38 +14,21 @@ f1_keywords:
 - ATLCOLL/ATL::CRBMap::Lookup
 - ATLCOLL/ATL::CRBMap::RemoveKey
 - ATLCOLL/ATL::CRBMap::SetAt
-dev_langs:
-- C++
-helpviewer_keywords:
-- CRBMap class
+dev_langs: C++
+helpviewer_keywords: CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 7b1cd9e54a18746e26929e9768a990bbe0ba6553
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 127f8b0448d141917193d41d11d5ed95576ff482
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="crbmap-class"></a>CRBMap 類別
-此類別代表對應的結構，使用 紅黑二進位樹狀目錄。  
+此類別代表對應結構，使用 紅黑二進位樹狀目錄。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,13 +42,13 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
   
 #### <a name="parameters"></a>參數  
  `K`  
- 索引鍵的項目型別。  
+ 索引鍵的項目類型。  
   
  *V*  
  值的項目型別。  
   
  `KTraits`  
- 若要複製或移動索引鍵的項目使用的程式碼。 請參閱[CElementTraits 類別](../../atl/reference/celementtraits-class.md)如需詳細資訊。  
+ 程式碼，用來複製或移動的索引鍵項目。 請參閱[CElementTraits 類別](../../atl/reference/celementtraits-class.md)如需詳細資訊。  
   
  `VTraits`  
  用於複製或移動的項目值的程式碼。  
@@ -85,21 +67,21 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 |名稱|說明|  
 |----------|-----------------|  
 |[CRBMap::Lookup](#lookup)|呼叫這個方法來查詢索引鍵或值`CRBMap`物件。|  
-|[CRBMap::RemoveKey](#removekey)|呼叫此方法以移除項目從`CRBMap`指定索引鍵的物件。|  
-|[CRBMap::SetAt](#setat)|呼叫這個方法來插入對應的項目組。|  
+|[CRBMap::RemoveKey](#removekey)|呼叫這個方法來移除的項目從`CRBMap`物件，指定的索引鍵。|  
+|[CRBMap::SetAt](#setat)|呼叫這個方法來插入對應中的項目組。|  
   
 ## <a name="remarks"></a>備註  
- `CRBMap`任何指定的型別，管理已排序的陣列的索引鍵的項目和其關聯的值的對應陣列提供支援。 每個金鑰都可以有只有一個相關聯的值。 項目 （包含索引鍵和值） 會儲存在二進位樹狀目錄結構，使用[CRBMap::SetAt](#setat)方法。 可以移除項目，使用[CRBMap::RemoveKey](#removekey)方法，刪除具有指定索引鍵的項目。  
+ `CRBMap`提供任何指定的型別，在管理索引鍵的項目和其關聯的值的已排序的陣列的對應陣列的支援。 每個索引鍵可以有只有一個相關聯的值。 （組成的索引鍵和值） 的項目會儲存在二進位樹狀目錄結構，使用[CRBMap::SetAt](#setat)方法。 可以使用 移除項目[CRBMap::RemoveKey](#removekey)方法，刪除具有指定索引鍵值的項目。  
   
- 周遊樹狀結構可使用方法如[CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition)， [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)，和[CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue)。  
+ 周遊樹狀結構可能.remove 方法，進行這類[CRBTree::GetHeadPosition](../../atl/reference/crbtree-class.md#getheadposition)， [CRBTree::GetNext](../../atl/reference/crbtree-class.md#getnext)，和[CRBTree::GetNextValue](../../atl/reference/crbtree-class.md#getnextvalue)。  
   
- `KTraits`和`VTraits`參數是包含複製或移動的項目所需的任何補充程式碼的特性類別。  
+ `KTraits`和`VTraits`參數是包含複製或移動的項目所需的任何補充程式碼的 traits 類別。  
   
- `CRBMap`衍生自[CRBTree](../../atl/reference/crbtree-class.md)，可用來實作使用紅黑演算法的二進位樹狀結構。 [CRBMultiMap](../../atl/reference/crbmultimap-class.md)是一種變化，可讓每個索引鍵的多個值。 它也衍生自`CRBTree`，並因此共用許多功能與`CRBMap`。  
+ `CRBMap`衍生自[CRBTree](../../atl/reference/crbtree-class.md)，它會實作使用紅黑演算法在二進位樹狀目錄。 [CRBMultiMap](../../atl/reference/crbmultimap-class.md)是一種變化，可讓每個索引鍵的多個值。 它太衍生自`CRBTree`，並因此共用許多功能與`CRBMap`。  
   
- 兩者的替代方案`CRBMap`和`CRBMultiMap`指由[CAtlMap](../../atl/reference/catlmap-class.md)類別。 當只有少數項目都必須儲存時，請考慮使用[CSimpleMap](../../atl/reference/csimplemap-class.md)類別。  
+ 兩者的替代方式`CRBMap`和`CRBMultiMap`提供[CAtlMap](../../atl/reference/catlmap-class.md)類別。 當只有少數的項目都必須儲存時，請考慮使用[CSimpleMap](../../atl/reference/csimplemap-class.md)類別。  
   
- 不同的集合類別及其功能和效能特性的更完整討論，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
+ 如需更完整討論各種不同的集合類別和其功能和效能特性，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CRBTree](../../atl/reference/crbtree-class.md)  
@@ -107,7 +89,7 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
  `CRBMap`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcoll.h  
+ **標頭：** atlcoll.h  
   
 ##  <a name="crbmap"></a>CRBMap::CRBMap  
  建構函式。  
@@ -121,12 +103,12 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
  區塊大小。  
   
 ### <a name="remarks"></a>備註  
- `nBlockSize`參數是配置新的項目時所需的記憶體數量的量值。 較大的區塊大小減少記憶體配置常式，但使用較多資源。 預設會配置空間的 10 個項目一次。  
+ `nBlockSize`參數是配置新的項目時所需的記憶體數量的量值。 較大的區塊大小減少記憶體配置常式，呼叫，但使用較多資源。 預設會配置空間的 10 個項目一次。  
   
- 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
+ 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)提供之其他方法的資訊。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities #&81;](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#81](../../atl/codesnippet/cpp/crbmap-class_1.cpp)]  
   
 ##  <a name="dtor"></a>CRBMap:: ~ CRBMap  
  解構函式。  
@@ -138,7 +120,7 @@ explicit CRBMap(size_t nBlockSize = 10) throw();
 ### <a name="remarks"></a>備註  
  會釋放所有配置的資源。  
   
- 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
+ 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)提供之其他方法的資訊。  
   
 ##  <a name="lookup"></a>CRBMap::Lookup  
  呼叫這個方法來查詢索引鍵或值`CRBMap`物件。  
@@ -154,19 +136,19 @@ CPair* Lookup(KINARGTYPE key) throw();
  指定識別的項目是要查閱的索引鍵。  
   
  *value*  
- 接收查詢最多值的變數。  
+ 收到的查詢上值的變數。  
   
 ### <a name="return-value"></a>傳回值  
- 第一種形式的方法會傳回 true，如果找到索引鍵為，否則為 false。 第二個和第三個表單傳回的指標[CPair](crbtree-class.md#cpair_class)。  
+ 第一種形式的方法會傳回 true，如果找到機碼，否則為 false。 第二個和第三個表單傳回的指標[CPair](crbtree-class.md#cpair_class)。  
   
 ### <a name="remarks"></a>備註  
- 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
+ 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)提供之其他方法的資訊。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities #&82;](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#82](../../atl/codesnippet/cpp/crbmap-class_2.cpp)]  
   
 ##  <a name="removekey"></a>CRBMap::RemoveKey  
- 呼叫此方法以移除項目從`CRBMap`指定索引鍵的物件。  
+ 呼叫這個方法來移除的項目從`CRBMap`物件，指定的索引鍵。  
   
 ```
 bool RemoveKey(KINARGTYPE key) throw();
@@ -180,13 +162,13 @@ bool RemoveKey(KINARGTYPE key) throw();
  如果機碼找到並移除，失敗則為 false，則傳回 true。  
   
 ### <a name="remarks"></a>備註  
- 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
+ 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)提供之其他方法的資訊。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities #&83;](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#83](../../atl/codesnippet/cpp/crbmap-class_3.cpp)]  
   
 ##  <a name="setat"></a>CRBMap::SetAt  
- 呼叫這個方法來插入對應的項目組。  
+ 呼叫這個方法來插入對應中的項目組。  
   
 ```
 POSITION SetAt(
@@ -199,22 +181,21 @@ POSITION SetAt(
  若要加入的索引鍵值`CRBMap`物件。  
   
  *value*  
- 要加入至值`CRBMap`物件。  
+ 要加入值`CRBMap`物件。  
   
 ### <a name="return-value"></a>傳回值  
  傳回的位置中的索引鍵/值項目組`CRBMap`物件。  
   
 ### <a name="remarks"></a>備註  
- `SetAt`如果找到相符的索引鍵，會取代現有的項目。 如果找不到索引鍵，會建立新的索引鍵/值組。  
+ `SetAt`如果找到相符的索引鍵，會取代現有的項目。 如果找不到索引鍵，則會建立新的索引鍵/值組。  
   
- 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)如需可用的其他方法。  
+ 請參閱基底類別的文件[CRBTree](../../atl/reference/crbtree-class.md)提供之其他方法的資訊。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities #&84;](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]  
   
 ## <a name="see-also"></a>另請參閱  
  [CRBTree 類別](../../atl/reference/crbtree-class.md)   
  [CAtlMap 類別](../../atl/reference/catlmap-class.md)   
  [CRBMultiMap 類別](../../atl/reference/crbmultimap-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

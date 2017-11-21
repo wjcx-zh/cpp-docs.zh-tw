@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_move_constructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_move_constructible
+f1_keywords: type_traits/std::is_move_constructible
+dev_langs: C++
+helpviewer_keywords: is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 0bd58dc985a96a334192ea0e84232ccbcfaa986f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 9498029f431b287312583f78effc5197fc097fd6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ismoveconstructible-class"></a>is_move_constructible 類別
 測試類型是否具有移動建構函式。  
@@ -50,7 +45,6 @@ struct is_move_constructible;
   
 ## <a name="see-also"></a>另請參閱  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

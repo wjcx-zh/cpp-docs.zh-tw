@@ -1,30 +1,28 @@
 ---
-title: "EventSource::InvokeAll 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::InvokeAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeAll 方法"
+title: "Eventsource:: Invokeall 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::InvokeAll
+dev_langs: C++
+helpviewer_keywords: InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 279d40bf8da171547e27313c4f1a9a3578d93be2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# EventSource::InvokeAll 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-目前相關聯的每個事件處理常式會呼叫 [EventSource](../windows/eventsource-class.md) 物件使用指定的引數型別和引數。  
+# <a name="eventsourceinvokeall-method"></a>EventSource::InvokeAll 方法
+呼叫目前相關聯的每個事件處理常式[EventSource](../windows/eventsource-class.md)物件使用指定的引數類型和引數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -184,7 +182,7 @@ void InvokeAll(
   
 #### <a name="parameters"></a>參數  
  `T0`  
- 預備事件處理常式的引數的型別。  
+ 第零個事件處理常式的引數的型別。  
   
  `T1`  
  第一個事件處理常式引數型別。  
@@ -208,13 +206,13 @@ void InvokeAll(
  第七個事件處理常式引數的型別。  
   
  `T8`  
- 八個事件處理常式引數型別。  
+ 兩個事件處理常式的引數的型別。  
   
  `T9`  
  第九個事件處理常式引數的型別。  
   
  `arg0`  
- 預備事件處理常式引數。  
+ 第零個事件處理常式引數。  
   
  `arg1`  
  第一個事件處理常式引數。  
@@ -244,7 +242,7 @@ void InvokeAll(
  第九個事件處理常式引數。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** event.h  
+ **標頭：** event.h  
   
  **命名空間：** Microsoft::WRL
  

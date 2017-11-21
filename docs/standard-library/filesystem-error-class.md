@@ -4,39 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- filesystem/std::experimental::filesystem::filesystem_error
-dev_langs:
-- C++
+f1_keywords: filesystem/std::experimental::filesystem::filesystem_error
+dev_langs: C++
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 87ae0515eba774f73ee0d4283a020ce27c3fbe6f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
-
+ms.openlocfilehash: 0012a895dbda27ce26d50ae49b3752d13963a89f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="filesystemerror-class"></a>filesystem_error 類別
 擲回所有例外狀況的基底類別，以報告低階系統溢位。  
@@ -93,7 +75,7 @@ const char *what() const noexcept;
  成員函式會傳回 NTBS 的指標，最好是由 runtime_error::what()、system_error::what()、mymesg、mypval1.native_string() 和 mypval2.native_string() 組成 。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \<filesystem >  
+ **標頭：** \<filesystem >  
   
  **命名空間：**std::experimental::filesystem  
   
@@ -102,5 +84,4 @@ const char *what() const noexcept;
  [system_error 類別](../standard-library/system-error-class.md)   
  [\<filesystem>](../standard-library/filesystem.md)   
  [\<exception>](../standard-library/exception.md)
-
 

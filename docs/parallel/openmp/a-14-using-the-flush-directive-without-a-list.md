@@ -1,31 +1,30 @@
 ---
-title: "A.14   Using the flush Directive without a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "使用排清的指示詞沒有清單 A.14 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9e63141a-d0c6-43a5-ac16-b0bd7c89b871
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb948476b52cdf76e0a114bed5c95f46bb6ba86e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# A.14   Using the flush Directive without a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列範例 \(如[區段 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) 20 頁面上\) 區分出受影響的共用的物件`flush`指示詞不會受到影響的共用物件從任何清單：  
+# <a name="a14---using-the-flush-directive-without-a-list"></a>A.14 使用 flush 指示詞不搭配清單
+下列範例 (如[區段 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md)在 20 頁面上) 區分出受影響的共用的物件`flush`指示詞沒有從共用不受影響的物件清單：  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // omp_flush_without_list.c  

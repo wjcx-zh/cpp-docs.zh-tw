@@ -1,39 +1,37 @@
 ---
-title: "CBulkRowset::MoveToBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBulkRowset<TAccessor>::MoveToBookmark"
-  - "CBulkRowset.MoveToBookmark"
-  - "MoveToBookmark"
-  - "ATL.CBulkRowset.MoveToBookmark"
-  - "CBulkRowset::MoveToBookmark"
-  - "ATL::CBulkRowset<TAccessor>::MoveToBookmark"
-  - "ATL::CBulkRowset::MoveToBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MoveToBookmark 方法"
+title: "Cbulkrowset:: Movetobookmark |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBulkRowset<TAccessor>::MoveToBookmark
+- CBulkRowset.MoveToBookmark
+- MoveToBookmark
+- ATL.CBulkRowset.MoveToBookmark
+- CBulkRowset::MoveToBookmark
+- ATL::CBulkRowset<TAccessor>::MoveToBookmark
+- ATL::CBulkRowset::MoveToBookmark
+dev_langs: C++
+helpviewer_keywords: MoveToBookmark method
 ms.assetid: 76aab025-819e-4ecd-ae0a-d8d3fb2d2099
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1671a0b03b3dbc637d83fd1e0f5125bc4abb1f1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CBulkRowset::MoveToBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-擷取書籤指示資料列或資料行中的指定位移 \(`lSkip`\) 從該書籤。  
+# <a name="cbulkrowsetmovetobookmark"></a>CBulkRowset::MoveToBookmark
+擷取書籤所標記的資料列或從該書籤位移至指定位置 (`lSkip`) 的資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -43,18 +41,18 @@ manager: "ghogen"
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `bookmark`  
- \[表示您要擷取資料之位置的書籤。  
+ [in] 標記您要從中擷取資料之位置的書籤。  
   
  `lSkip`  
- \[數字計數從書籤的行到目標行。  如果 `lSkip` 是零，將擷取的第一行是書籤的行。  如果 `lSkip` 為 1，將擷取的第一個資料行是資料行在書籤的資料列之後。  如果 `lSkip` 為 \-1，將擷取的第一個資料行是資料行在書籤的資料列之前。  
+ [in] 從書籤到目標資料列的資料列計數。 如果 `lSkip` 為零，將擷取的第一個資料列是已標記書籤的資料列。 如果 `lSkip` 為 1，將擷取的第一個資料列是已標記書籤的資料列之後的資料列。 如果`lSkip`為-1，將擷取的第一個資料列是已標記書籤的資料列之前的資料列。  
   
-## 傳回值  
- 請參閱 *OLE DB 程式設計人員參考*中的[oledbirowset\_\_getdata](https://msdn.microsoft.com/en-us/library/ms716988.aspx) 。  
+## <a name="return-value"></a>傳回值  
+ 請參閱[irowset:: Getdata](https://msdn.microsoft.com/en-us/library/ms716988.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CBulkRowset 類別](../../data/oledb/cbulkrowset-class.md)

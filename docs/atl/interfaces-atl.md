@@ -1,37 +1,38 @@
 ---
-title: "Interfaces (ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COM 介面"
-  - "介面, COM"
+title: "介面 (ATL) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM interfaces
+- interfaces, COM
 ms.assetid: de6c8b12-6230-4fdc-af66-a28b91d5ee55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28fb749a705ed01b4c10d22cea0062c2f0d799c7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Interfaces (ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-介面可讓物件將其功能公開給外界的方式。  在 COM 介面指標，為資料表 \(如 vtable 的 . C \+\+\) 物件實作的函式。  資料表表示介面，因此，它所指向的函式是該介面的方法。  在選取物件，可公開介面。  
+# <a name="interfaces-atl"></a>介面 (ATL)
+介面是物件會公開其功能給外界的方式。 在 COM 中，介面是由物件所實作的函式的指標 （例如 c + + vtable) 的資料表。 資料表代表介面，以及它所指向的功能是該介面的方法。 物件可以公開其選擇的介面。  
   
- 每個介面根據基礎 COM 介面， [IUnknown](../atl/iunknown.md)。  **IUnknown** 方法巡覽至物件所公開的其他介面。  
+ 每個介面為基礎的基本的 COM 介面， [IUnknown](../atl/iunknown.md)。 方法的**IUnknown**可瀏覽其他物件所公開的介面。  
   
- 此外，對於每個介面唯一的介面 ID \(IID\)  這個唯一可支援版本的介面。  介面的新版本是新的介面，以新的 IID。  
+ 此外，每個介面會提供唯一的介面識別碼 (IID)。 這個唯一性輕鬆地支援介面版本設定。 新版是介面的只是介面的新的介面，新的 iid。  
   
 > [!NOTE]
->  標準 COM 的 IID 和 OLE 介面預先定義。  
+>  預先定義的標準 COM 和 OLE 介面的 Iid。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
- [COM Objects and Interfaces](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+ [COM 物件與介面](http://msdn.microsoft.com/library/windows/desktop/ms690343)
+

@@ -1,110 +1,111 @@
 ---
-title: "Understanding Backus Nauer Form (BNF) Syntax | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Backus Nauer Form (BNF) syntax"
-  - "BNF notation"
+title: "ATL 登錄器和 Backus-naur Nauer 形成 (BNF) 語法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BNF notation
+- Backus Nauer Form (BNF) syntax
 ms.assetid: 994bbef0-9077-4aa8-bdfe-b7e830af9acc
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6ff141818e05f9b5b36b6d0cfc5a58170fa97ab0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Understanding Backus Nauer Form (BNF) Syntax
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用 BNF 文法， ATL 管理員使用的指令碼會在本主題中所述，使用下表中所示的附註。  
+# <a name="understanding-backus-nauer-form-bnf-syntax"></a>了解 Nauer Backus-naur 格式 (BNF) 語法
+使用 ATL 登錄器指令碼會使用 BNF 語法，使用下表所示的標記法本主題中所述。  
   
-|慣例\/符號|意義|  
-|------------|--------|  
-|`::=`|對等用法|  
-|`&#124;`|OR|  
-|`X+`|一或多個 `X`s。|  
-|`[X]`|`X` 是選擇性的。  任意符號由 `[]`運算式。|  
-|任何 **bold** 文字|字串常值 \(String Literal\)。|  
-|任何使用斜體文字|如何建構字串常值 \(String Literal\)。|  
+|慣例/符號|意義|  
+|------------------------|-------------|  
+|`::=`|對等項目|  
+|`&#124;`|或|  
+|`X+`|一或多個`X`s。|  
+|`[X]`|`X` 是選擇項。 以代表選擇性分隔符號`[]`。|  
+|任何**粗體**文字|字串常值。|  
+|任何*設為斜體*文字|如何建構字串常值。|  
   
- 如上表所示，登錄器指令碼使用字串常值 \(String Literal\)。  這些值是必須出現在您的指令碼的實際文字。  下表說明 ATL 登錄器指令碼的字串常值 \(String Literal\)。  
+ 上表所示，登錄器指令碼會使用字串常值。 這些值是必須出現在您的指令碼中的實際文字。 下表描述 ATL 登錄器指令碼中使用的字串常值。  
   
 |字串常值|動作|  
-|----------|--------|  
-|**ForceRemove**|完全移除的索引鍵 \(如果存在\) 再重新建立。|  
-|**NoRemove**|在移除註冊期間，不會移除的索引鍵。|  
-|**val**|指定 `_<Key Name_>` 實際上是具名值。|  
-|**Delete**|在註冊期間，刪除下的機碼。|  
-|**s**|指定下一個值為字串 \(**REG\_SZ**\)。|  
-|**d**|指定的值為 **DWORD** \(**REG\_DWORD**\)。|  
-|**m**|指定的值為 multistring \(**REG\_MULTI\_SZ**\)。|  
-|**b**|指定下一個值為二進位值 \(**REG\_BINARY**\)。|  
+|--------------------|------------|  
+|**ForceRemove**|完全移除的下一個鍵 （如果有的話），然後重新建立。|  
+|**NoRemove**|取消註冊期間不會移除下一個索引鍵。|  
+|**val**|指定`<Key Name>`實際上是具名的值。|  
+|**刪除**|在登錄期間刪除下一個索引鍵。|  
+|**s**|指定的下一個值是字串 (**REG_SZ**)。|  
+|**d**|指定下一個值為**DWORD** (**REG_DWORD**)。|  
+|**m**|指定的下一個值是在 multistring (**REG_MULTI_SZ**)。|  
+|**b**|指定的下一個值是二進位值 (**REG_BINARY**)。|  
   
-## BNF 語法範例  
- 這可以協助您進行一些語法範例了解附註和字串常值 \(String Literal\) 如何在 ATL 登錄器指令碼運作。  
+## <a name="bnf-syntax-examples"></a>BNF 語法範例  
+ 以下是一些可協助您了解的標記法和字串常值中的 ATL 登錄器指令碼的運作方式的語法範例。  
   
-### 語法範例 1  
+### <a name="syntax-example-1"></a>語法範例 1  
   
 ```  
 <registry expression> ::= <Add Key>  
 ```  
   
- 指定 `registry expression` 與 `Add Key`相當於。  
+ 指定`registry expression`相當於`Add Key`。  
   
-### 語法範例 2  
+### <a name="syntax-example-2"></a>語法範例 2  
   
 ```  
 <registry expression> ::= <Add Key> | <Delete Key>  
 ```  
   
- 指定 `registry expression` 與 `Add Key` 或 `Delete Key`相當於。  
+ 指定`registry expression`相當於`Add Key`或`Delete Key`。  
   
-### 語法範例 3  
+### <a name="syntax-example-3"></a>語法範例 3  
   
 ```  
 <Key Name> ::= '<AlphaNumeric>+'  
 ```  
   
- 指定 `Key Name` 與一或多個 `AlphaNumerics`相當於。  
+ 指定`Key Name`相當於一個或多個`AlphaNumerics`。  
   
-### 語法範例 4  
+### <a name="syntax-example-4"></a>語法範例 4  
   
 ```  
 <Add Key> ::= [ForceRemove | NoRemove | val]<Key Name>  
 ```  
   
- 指定 `Add Key` 與 `Key Name`相等，然後，字串常值 \(String Literal\)， `ForceRemove`、 `NoRemove`和 `val`，是選擇性的。  
+ 指定`Add Key`相當於`Key Name`，且字串常值`ForceRemove`， `NoRemove`，和`val`，是選擇性的。  
   
-### 語法範例 5  
+### <a name="syntax-example-5"></a>語法範例 5  
   
 ```  
 <AlphaNumeric> ::= any character not NULL, that is, ASCII 0  
 ```  
   
- 指定 `AlphaNumeric` 與任何非 null 的字元是一樣的。  
+ 指定`AlphaNumeric`相當至任何非 NULL 字元。  
   
-### 語法範例 6  
+### <a name="syntax-example-6"></a>語法範例 6  
   
 ```  
 val 'testmulti' = m 'String 1\0String 2\0'  
 ```  
   
- 指定索引鍵名稱 `testmulti` 是 multistring 的值所組成的 `String 1` 和 `String 2`。  
+ 指定的索引鍵名稱`testmulti`multistring 值組成`String 1`和`String 2`。  
   
-### 語法範例 7  
+### <a name="syntax-example-7"></a>語法範例 7  
   
 ```  
 val 'testhex' = d '&H55'  
 ```  
   
- 指定索引鍵名稱 `testhex` 是 **DWORD** 值設定為十六進位 55 \(十進位 85\)。  請注意這個格式遵守 **\_&H** 附註 Visual Basic 規格中找到。  
+ 指定的索引鍵名稱`testhex`是**DWORD**值設定為十六進位 55 (十進位 85)。 請注意，此格式符合**& H** Visual Basic 規格中找到的標記法為。  
   
-## 請參閱  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>另請參閱  
+ [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
+

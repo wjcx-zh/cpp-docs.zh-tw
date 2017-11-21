@@ -1,32 +1,30 @@
 ---
-title: "switch_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_type attribute"
+title: "switch_type |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_type
+dev_langs: C++
+helpviewer_keywords: switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99ec139c1ff10456639249c94451877a18cbbf51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# switch_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-識別做為聯合判別變數的型別。  
+# <a name="switchtype"></a>switch_type
+識別做為等位的判別變數的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,14 +34,14 @@ type
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `type`  
- 參數類型而定，可以是整數、 字元、 布林值或列舉型別。  
+ 參數型別可以是整數、 字元、 布林值或列舉類型。  
   
-## 備註  
- **Switch\_type** C\+\+ 屬性具有相同的功能，為 [switch\_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Switch_type** c + + 屬性具有相同的功能[switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) MIDL 屬性。  
   
- C \+ \+ 屬性不支援[封裝的等位](http://msdn.microsoft.com/library/windows/desktop/aa366811)。  [Nonencapsulated 的等位](http://msdn.microsoft.com/library/windows/desktop/aa367119)只支援下列格式：  
+ 不支援 c + + 屬性[封裝等位](http://msdn.microsoft.com/library/windows/desktop/aa366811)。 [Nonencapsulated 等位](http://msdn.microsoft.com/library/windows/desktop/aa367119)僅支援下列格式：  
   
 ```  
 // cpp_attr_ref_switch_type.cpp  
@@ -62,24 +60,23 @@ struct SizedValue2 {
 };  
 ```  
   
-## 範例  
- 請參閱[案例](../windows/case-cpp.md) 的範例用法的範例  **switch\_type**。  
+## <a name="example"></a>範例  
+ 請參閱[案例](../windows/case-cpp.md)範例使用範例**switch_type**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|`typedef`|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

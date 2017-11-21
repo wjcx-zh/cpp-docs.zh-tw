@@ -1,80 +1,89 @@
 ---
-title: "如何：使用 parallel_invoke 執行平行作業 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel_invoke 函式, 範例"
-  - "以平行方式呼叫多個函式 [並行執行階段]"
+title: "如何： 使用 parallel_invoke 執行平行作業 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parallel_invoke function, example
+- calling multiple functions in parallel [Concurrency Runtime]
 ms.assetid: a6aea69b-d647-4b7e-bf3b-e6a6a9880072
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2190d7809791fbc66f6070eb3ae721ec1bc0a04f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 如何：使用 parallel_invoke 執行平行作業
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>如何：使用 parallel_invoke 執行平行作業
+這個範例示範如何使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法，以改善程式執行共用的資料來源上的多個作業的效能。 沒有作業修改的來源，因為它們可以平行執行簡單的方式。  
 
-這個範例示範如何使用 [concurrency::parallel\_invoke](../Topic/parallel_invoke%20Function.md) 演算法，改善對共用資料來源執行多個作業的程式效能。  因為沒有作業會修改來源，因此可以直接平行執行這些作業。  
   
-## 範例  
- 在下列程式碼範例中，會建立 `MyDataType` 型別的變數，呼叫函式以初始化該變數，然後在該資料上執行多個冗長作業。  
+## <a name="example"></a>範例  
+ 請考慮下列程式碼範例會建立類型的變數`MyDataType`、 呼叫的函式來初始化該變數，然後執行 多長時間作業，對該資料。  
   
- [!code-cpp[concrt-parallel-word-mining#1](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-invoke-to-execute-parallel-operations_1.cpp)]  
+ [!code-cpp[concrt-parallel-word-mining#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_1.cpp)]  
   
- 如果 `lengthy_operation1`、`lengthy_operation2` 和 `lengthy_operation3` 函式未修改 `MyDataType` 變數，這些函式可以平行執行，不需要其他修改。  
+ 如果`lengthy_operation1`， `lengthy_operation2`，和`lengthy_operation3`函式不會修改`MyDataType`變數時，這些函式可以平行執行而不需額外修改。  
   
-## 範例  
- 下列範例修改上述範例以平行執行。  `parallel_invoke` 演算法平行執行每項工作，然後在所有工作都完成後傳回。  
+## <a name="example"></a>範例  
+ 下列範例會修改上一個範例，以平行方式執行。 `parallel_invoke`演算法以平行方式執行每項工作，並傳回所有工作都完成之後。  
   
- [!code-cpp[concrt-parallel-word-mining#2](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-invoke-to-execute-parallel-operations_2.cpp)]  
+ [!code-cpp[concrt-parallel-word-mining#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_2.cpp)]  
   
-## 範例  
- 下列範例會從 gutenberg.org 下載荷馬所著的《伊里亞德》\(*The Iliad*\)，然後對該檔案執行多個作業。  此範例會先循序執行這些作業，然後再以平行方式執行相同作業。  
+## <a name="example"></a>範例  
+ 下列範例會下載*The Iliad*由從 gutenberg.org 荷馬並執行該檔案上的多個作業。 此範例會先以序列方式執行這些作業，然後以平行方式執行相同的作業。  
   
- [!code-cpp[concrt-parallel-word-mining#3](../../parallel/concrt/codesnippet/CPP/how-to-use-parallel-invoke-to-execute-parallel-operations_3.cpp)]  
+ [!code-cpp[concrt-parallel-word-mining#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-execute-parallel-operations_3.cpp)]  
   
- 這個範例 \(Example\) 產生下列範例 \(Sample\) 輸出。  
+ 這個範例會產生下列輸出範例。  
   
-  **下載 'The Iliad'...**  
-**執行循序版本… 跑了 953 毫秒。**  
-**執行平行版本... 跑了 656 毫秒。**  
-**有五個或多個字母的最常見的文字是:**  
- **their \(953\)**  
- **shall \(444\)。**  
- **which \(431\)**  
- **great \(398\)**  
- **Hector \(349\)**  
- **Achilles \(309\)**  
- **through \(301\)**  
- **these \(268\)**  
- **chief \(259\)**  
-**有相同的第一個字母文字的最長序列如下:**  
- **through the tempest to the tented**  
-**下列為出現的回文文字:**  
- **spots stops**  
- **speed deeps**  
- **keels sleek** 這個範例使用 `parallel_invoke` 演算法，呼叫多個可作用於相同資料來源的函式。  您可以使用 `parallel_invoke` 演算法，平行呼叫任何一組函式，而不只是作用於相同資料的這些函式。  
+```Output  
+Downloading 'The Iliad'...  
+ 
+Running serial version... took 953 ms.  
+Running parallel version... took 656 ms.  
+ 
+The most common words that have five or more letters are:  
+    their (953)  
+    shall (444)  
+    which (431)  
+    great (398)  
+    Hector (349)  
+    Achilles (309)  
+    through (301)  
+    these (268)  
+    chief (259)  
+The longest sequence of words that have the same first letter is:  
+    through the tempest to the tented  
+The following palindromes appear in the text:  
+    spots stops  
+    speed deeps  
+    keels sleek  
+```  
   
- 因為 `parallel_invoke` 演算法會以平行方式呼叫每個工作函式，所以其效能會受到花費最長時間來完成的函式所限制 \(也就是說，如果執行階段會在個別處理器上處理每個函式的話\)。  如果這個範例以平行方式執行的工作比可用的處理器數目更多，每個處理器可能會執行多項工作。  在此情況下，效能會受到花費最長時間來完成的工作群組所限制。  
+ 這個範例會使用`parallel_invoke`演算法來呼叫多個函式在相同的資料來源上的運作。 您可以使用`parallel_invoke`演算法以平行方式不只包括在相同的資料上呼叫任何函式的組合。  
   
- 因為這個範例平行執行三個作業，在具有三個以上處理器的電腦，您應該不預期效能延展。  若要改善效能，您可以將長時間執行的工作細分為較小的工作並平行執行這些工作。  
+ 因為`parallel_invoke`演算法以平行方式呼叫每個工作函式，其效能會受限於所接受的最長時間才能完成 （亦即，如果執行階段處理不同處理器上的每個函式） 的函式。 這個範例會執行更多的工作，以平行方式比可用的處理器數目，如果多個工作可以執行每個處理器上。 在此情況下，效能會受限於所採用最長的時間才能完成之工作的群組。  
   
- 如果不需要支援取消，請使用 `parallel_invoke` 演算法代替 [concurrency::task\_group](../Topic/task_group%20Class.md) 和 [concurrency::structured\_task\_group](../../parallel/concrt/reference/structured-task-group-class.md) 類別。  如需比較 `parallel_invoke` 演算法與工作群組用法的範例，請參閱[如何：使用 parallel\_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。  
+ 這個範例會以平行方式執行三項工作，因為您不應預期有三個以上處理器的電腦上延展的效能。 若要改善效能的更多，您可以最長執行的工作分成較小的工作，並以平行方式執行這些工作。  
   
-## 編譯程式碼  
- 若要編譯程式碼，請複製該程式碼，然後將它貼入 Visual Studio 專案中，或貼入名為 `parallel-word-mining.cpp` 的檔案，然後在 Visual Studio 的 \[命令提示字元\] 視窗中執行下列命令。  
+ 您可以使用`parallel_invoke`演算法而不是[concurrency:: task_group](reference/task-group-class.md)和[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)類別，如果您不需要支援取消。 如需比較的使用方式的範例`parallel_invoke`演算法與工作群組，請參閱[How to： 使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)。  
   
- **cl.exe \/EHsc \/MD \/DUNICODE \/D\_AFXDLL parallel\-word\-mining.cpp**  
+## <a name="compiling-the-code"></a>編譯程式碼  
+ 若要編譯程式碼，將它複製然後將它貼入 Visual Studio 專案中，或將它貼入名為的檔案中`parallel-word-mining.cpp`，然後在 Visual Studio 命令提示字元視窗中執行下列命令。  
   
-## 請參閱  
+ **cl.exe /EHsc /MD/DUNICODE /D_AFXDLL 平行 word mining.cpp**  
+  
+## <a name="see-also"></a>另請參閱  
  [平行演算法](../../parallel/concrt/parallel-algorithms.md)   
- [parallel\_invoke 函式](../Topic/parallel_invoke%20Function.md)
+ [parallel_invoke 函式](reference/concurrency-namespace-functions.md#parallel_invoke)
+
+

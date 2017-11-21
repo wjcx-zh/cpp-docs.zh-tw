@@ -1,32 +1,30 @@
 ---
-title: "SyncLockWithStatusT::SyncLockWithStatusT 建構函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SyncLockWithStatusT，建構函式"
+title: "Synclockwithstatust:: Synclockwithstatust 建構函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT
+dev_langs: C++
+helpviewer_keywords: SyncLockWithStatusT, constructor
 ms.assetid: 5d2fb820-ae1b-495f-8084-ebb4fecc3104
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 00602992585e496a41a4ecea6d85ed798adac640
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# SyncLockWithStatusT::SyncLockWithStatusT 建構函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="synclockwithstatustsynclockwithstatust-constructor"></a>SyncLockWithStatusT::SyncLockWithStatusT 建構函式
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 SyncLockWithStatusT(  
@@ -39,26 +37,26 @@ explicit SyncLockWithStatusT(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `other`  
- 對其他物件的 SyncLockWithStatusT rvalue 參考。  
+ 右值參考到另一個 SyncLockWithStatusT 物件。  
   
  `sync`  
- 對另一個 SyncLockWithStatusT 物件的參考。  
+ 另一個 SyncLockWithStatusT 物件的參考。  
   
  `status`  
- `other` 參數或 `sync` 參數的 [status\_](../windows/synclockwithstatust-status-data-member.md) 資料成員的值。  
+ 值[status_](../windows/synclockwithstatust-status-data-member.md)資料成員`other`參數或`sync`參數。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  初始化 SyncLockWithStatusT 類別的新執行個體。  
   
- 第一個建構函式會從另一個由`other`參數所指定的 SyncLockWithStatusT 物件初始化至目前的 SyncLockWithStatusT ，然後使另一個 SyncLockWithStatusT 物件失效。  第二個建構函式是 `protected`，並將目前的 SyncLockWithStatusT 物件初始化成為無效狀態。  
+ 第一個建構函式初始化目前 SyncLockWithStatusT 物件從另一個參數所指定的 SyncLockWithStatusT `other`，然後則 SyncLockWithStatusT 物件。 第二個建構函式是`protected`，並將目前 SyncLockWithStatusT 物件初始化為無效的狀態。  
   
-## 需求  
- **標題:** corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
  **命名空間：** Microsoft::WRL::Wrappers::Details  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [SyncLockWithStatusT 類別](../windows/synclockwithstatust-class.md)   
  [SyncLockWithStatusT::GetStatus 方法](../windows/synclockwithstatust-getstatus-method.md)

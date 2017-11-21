@@ -1,35 +1,35 @@
 ---
-title: "OpenMP Library Reference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "OpenMP 程式庫參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 111dd4bd08cda48b0830c000fedf7354a7d7d21e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# OpenMP Library Reference
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-提供連結至 OpenMP API 中所用的建構。  
+# <a name="openmp-library-reference"></a>OpenMP 程式庫參考
+提供建構 OpenMP API 中使用的連結。  
   
- Visual C\+\+ 實作 OpenMP 標準包括下列建構函式。  
+ OpenMP 標準的 Visual c + + 實作會包含下列建構函式。  
   
-|建構|描述|  
-|--------|--------|  
-|[Libraries](../../../parallel/openmp/reference/openmp-libraries.md)|討論 OpenMP run\-time 程式庫，Visual C\+\+ 所構成的.lib 檔案。|  
-|[Data Types](../../../parallel/openmp/reference/openmp-data-types.md)|提供連結至 OpenMP API 所使用的資料型別。|  
-|[Environment Variables](../../../parallel/openmp/reference/openmp-environment-variables.md)|提供用於 OpenMP API 的環境變數的連結。|  
-|[Functions](../../../parallel/openmp/reference/openmp-functions.md)|提供用於 OpenMP API 函式的連結。|  
+|建構|說明|  
+|---------------|-----------------|  
+|[程式庫](../../../parallel/openmp/reference/openmp-libraries.md)|討論在 Visual c + + 中的 OpenMP 執行階段程式庫所組成的.lib 檔案。|  
+|[資料類型](../../../parallel/openmp/reference/openmp-data-types.md)|提供在 OpenMP API 中使用的資料類型的連結。|  
+|[環境變數](../../../parallel/openmp/reference/openmp-environment-variables.md)|提供連結 OpenMP API 中使用的環境變數。|  
+|[函式](../../../parallel/openmp/reference/openmp-functions.md)|提供用於 OpenMP API 函式的連結。|  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)

@@ -1,49 +1,50 @@
 ---
-title: "Changing the Default Class Factory and Aggregation Model | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregation [C++], aggregation models"
-  - "aggregation [C++], 使用 ATL"
-  - "CComClassFactory class, making the default"
-  - "CComCoClass class, default class factory and aggregation model"
-  - "class factories, 變更預設值"
-  - "default class factory"
-  - "default class factory, ATL"
-  - "預設值 [C++], aggregation model in ATL"
-  - "預設值 [C++], class factory"
+title: "變更預設 Class Factory 和彙總模型 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CComClassFactory class, making the default
+- aggregation [C++], using ATL
+- aggregation [C++], aggregation models
+- defaults [C++], aggregation model in ATL
+- default class factory
+- class factories, changing default
+- CComCoClass class, default class factory and aggregation model
+- default class factory, ATL
+- defaults [C++], class factory
 ms.assetid: 6e040e95-0f38-4839-8a8b-c9800dd47e8c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a963c1fba2d3eda9c86fa1e6db74de739bf45182
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Changing the Default Class Factory and Aggregation Model
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="changing-the-default-class-factory-and-aggregation-model"></a>變更預設 Class Factory 和彙總模型
+使用 ATL [CComCoClass](../atl/reference/ccomcoclass-class.md)來定義物件的預設類別處理站和彙總模型。 `CComCoClass`指定下列兩個巨集：  
+  
+-   [DECLARE_CLASSFACTORY](reference/aggregation-and-class-factory-macros.md#declare_classfactory)宣告 class factory 是[CComClassFactory](../atl/reference/ccomclassfactory-class.md)。  
+  
+-   [DECLARE_AGGREGATABLE](reference/aggregation-and-class-factory-macros.md#declare_aggregatable)宣告您的物件可以彙總。  
+  
+ 您可以在類別定義中指定其他巨集來覆寫其中一個這些預設值設定。 例如，若要使用[CComClassFactory2](../atl/reference/ccomclassfactory2-class.md)而不是`CComClassFactory`，指定[DECLARE_CLASSFACTORY2](reference/aggregation-and-class-factory-macros.md#declare_classfactory2)巨集：  
+  
+ [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/cpp/changing-the-default-class-factory-and-aggregation-model_1.h)]  
+  
+ 兩個其他定義的類別處理站的巨集[DECLARE_CLASSFACTORY_AUTO_THREAD](reference/aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)和[DECLARE_CLASSFACTORY_SINGLETON](reference/aggregation-and-class-factory-macros.md#declare_classfactory_singleton)。  
+  
+ 也會使用 ATL`typedef`機制來實作預設行為。 例如，`DECLARE_AGGREGATABLE`巨集使用`typedef`定義類型，稱為**_CreatorClass**，然後參考整個 ATL 在衍生類別中，請注意，`typedef`使用相同名稱的基底類別`typedef`導致 ATL 使用您的定義，並覆寫預設行為。  
+  
+## <a name="see-also"></a>另請參閱  
+ [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)   
+ [彙總和 Class Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)
 
-使用 ATL [CComCoClass](../atl/reference/ccomcoclass-class.md) 定義預設 Class Factory 和您的物件模型中的彙總。  `CComCoClass` 指定下列兩個巨集:  
-  
--   [DECLARE\_CLASSFACTORY](../Topic/DECLARE_CLASSFACTORY.md) 宣告 Class Factory 是 [CComClassFactory](../atl/reference/ccomclassfactory-class.md)。  
-  
--   [DECLARE\_AGGREGATABLE](../Topic/DECLARE_AGGREGATABLE.md) 宣告您的物件可彙總。  
-  
- 您可以指定另一個巨集覆寫這些預設值是在您的類別定義。  例如，使用 [CComClassFactory2](../atl/reference/ccomclassfactory2-class.md) 而不是 `CComClassFactory`，請指定 [DECLARE\_ CLASSFACTORY2](../Topic/DECLARE_CLASSFACTORY2.md) 巨集:  
-  
- [!code-cpp[NVC_ATL_COM#2](../atl/codesnippet/CPP/changing-the-default-class-factory-and-aggregation-model_1.h)]  
-  
- 定義 Class Factory 的其他兩個巨集就 [DECLARE\_CLASSFACTORY\_AUTO\_THREAD](../Topic/DECLARE_CLASSFACTORY_AUTO_THREAD.md) 和 [DECLARE\_CLASSFACTORY\_SINGLETON](../Topic/DECLARE_CLASSFACTORY_SINGLETON.md)。  
-  
- ATL 也使用 `typedef` 機制實作預設行為。  例如， `DECLARE_AGGREGATABLE` 巨集使用 `typedef` 定義呼叫 **\_CreatorClass**的型別，然後參考在 ATL 中。  請注意在衍生類別中，請使用名稱 `typedef` 和 ATL 中的基底類別 \(Base Class\) 的 `typedef` 結果相同使用您的定義以及覆寫預設行為。  
-  
-## 請參閱  
- [Fundamentals of ATL COM Objects](../atl/fundamentals-of-atl-com-objects.md)   
- [Aggregation and Class Factory Macros](../atl/reference/aggregation-and-class-factory-macros.md)

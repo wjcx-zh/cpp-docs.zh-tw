@@ -1,49 +1,45 @@
 ---
-title: "wctype | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "wctype"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "wctype"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "wctype 函式"
-  - "寬字元"
+title: wctype | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: wctype
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords: wctype
+dev_langs: C++
+helpviewer_keywords:
+- wctype function
+- wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: daae662a39d012418b5cd178e26d731dbca1e715
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# wctype
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-判斷寬字元程式碼的排序規則。  
+# <a name="wctype"></a>wctype
+決定寬字元代碼的分類規則。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 wctype_t wctype(  
@@ -51,18 +47,18 @@ wctype_t wctype(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `property`  
- String 屬性  
+ 屬性字串。  
   
-## 傳回值  
- 如果目前地區設定的 `LC_CTYPE` 分類不定義名稱符合 `property`屬性字串的排序規則，函式會傳回零。  否則，會傳回非零值適合做為第二個引數的後續對 [towctrans](../../c-runtime-library/reference/towctrans.md)。  
+## <a name="return-value"></a>傳回值  
+ 如果目前地區設定的 `LC_CTYPE` 類別不會定義名稱符合屬性字串 `property` 的分類規則，則此函數會傳回零。 否則，它會傳回適合用為 [towctrans](../../c-runtime-library/reference/towctrans.md) 後續呼叫的第二個引數的非零值。  
   
-## 備註  
- 函式會判斷寬字元程式碼的排序規則。  下列在所有地區設定的呼叫有相同的行為 \(但實作可以定義其他分類規則是在「C」地區設定\)：  
+## <a name="remarks"></a>備註  
+ 此函式決定寬字元代碼的分類規則。 下列呼叫組合在所有的地區設定中都有一樣的行為 (但實作即使是在 "C" 地區設定中，也可以定義額外的分類規則)︰  
   
-|功能|相同|  
-|--------|--------|  
+|函式|同於|  
+|--------------|-------------|  
 |`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
 |`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
 |`iswcntrl(`  `c`  `)`|`iswctype(`  `c` `, wctype( "cntrl" ) )`|  
@@ -75,14 +71,14 @@ wctype_t wctype(
 |`iswupper(`  `c`  `)`|`iswctype(`  `c` `, wctype( "upper" ) )`|  
 |`iswxdigit(`  `c`  `)`|`iswctype(`  `c` `, wctype( "xdigit" ) )`|  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`wctype`|\<wctype.h\>|  
+|-------------|---------------------|  
+|`wctype`|\<wctype.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
- [setlocale、\_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)
+ [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

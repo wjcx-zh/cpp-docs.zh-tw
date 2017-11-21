@@ -1,59 +1,60 @@
 ---
-title: "Implementing Property Pages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IPropertyPage class"
-  - "IPropertyPage2 class"
-  - "屬性頁, 實作"
+title: "實作屬性頁 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IPropertyPage2 class
+- IPropertyPage class
+- property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 493bd7606dd837199eaa95a2e8abd5536c5f5028
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing Property Pages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-屬性頁是實作 `IPropertyPage` 或 **IPropertyPage2** 介面的 COM 物件。  ATL 提供用於實作屬性頁的支援傳入的 [加入類別對話方塊。](../ide/add-class-dialog-box.md)[ATL 屬性頁精靈](../atl/reference/atl-property-page-wizard.md) 。  
+# <a name="implementing-property-pages"></a>實作屬性頁
+屬性頁可讓您為 COM 物件實作`IPropertyPage`或**IPropertyPage2**介面。 ATL 提供實作透過屬性頁支援[ATL 屬性頁精靈](../atl/reference/atl-property-page-wizard.md)中[加入類別對話方塊](../ide/add-class-dialog-box.md)。  
   
- 使用，建立 ATL 屬性頁:  
+ 若要建立使用 ATL 屬性頁：  
   
--   建立或開啟 ATL 動態連結程式庫 \(DLL\) \(DLL\) 伺服器專案。  
+-   建立或開啟 ATL 動態連結程式庫 (DLL) 的伺服器專案。  
   
--   開啟 [加入類別對話方塊。](../ide/add-class-dialog-box.md) 並選取 **ATL 屬性頁**。  
+-   開啟[加入類別對話方塊](../ide/add-class-dialog-box.md)選取**ATL 屬性頁**。  
   
--   請確定您的屬性頁是執行緒 Apartment \(因為它有使用者介面\)。  
+-   請確定您屬性頁 apartment 執行緒 （因為它有使用者介面）。  
   
--   設定與關聯的標題、描述文件 \(字串\) 和說明檔與您的頁面。  
+-   設定標題、 描述 （文件字串），以及要與頁面相關聯的說明檔。  
   
--   將控制項加入至產生的對話方塊資源做為屬性頁的使用者介面。  
+-   將控制項加入至產生的對話方塊資源做為使用者介面的屬性頁。  
   
--   回應在頁面的使用者介面的變更執行驗證時，更新頁面網站或更新物件與您的頁面。  特別是，呼叫 [IPropertyPageImpl::SetDirty](../Topic/IPropertyPageImpl::SetDirty.md) ，當使用者對屬性頁的變更。  
+-   回應您的頁面使用者介面來執行驗證、 更新頁面的網站，或更新與頁面相關聯的物件中的變更。 特別是，呼叫[IPropertyPageImpl::SetDirty](../atl/reference/ipropertypageimpl-class.md#setdirty)當使用者變更屬性頁。  
   
--   您也可以選擇覆寫方法 `IPropertyPageImpl` 使用下列方針。  
+-   選擇性地覆寫`IPropertyPageImpl`方法使用下列指導方針。  
   
-    |IPropertyPageImpl 方法|覆寫，在您想要…|備註|  
-    |--------------------------|--------------|--------|  
-    |[SetObjects](../Topic/IPropertyPageImpl::SetObjects.md)|對傳遞至其所支援之網頁和介面之物件數目的基本號上清除  核取方塊。|在呼叫基底類別的實作之前執行自己的程式碼。  如果設定的物件不符合您的預期，您應該盡快會使呼叫失敗。|  
-    |[啟動](../Topic/IPropertyPageImpl::Activate.md)|初始化頁面的使用者介面 \(例如，會使用目前屬性值的對話方塊控制項從物件，動態建立控制項或執行其他初始設定\)。|在您的程式碼之前呼叫基底類別實作，讓基底類別有機會建立對話方塊視窗和所有控制項，在您嘗試更新這些檔案。|  
-    |[套用](../Topic/IPropertyPageImpl::Apply.md)|驗證屬性設定為並更新物件。|因為它不會執行任何東西來追蹤超出這個呼叫，不必呼叫基底類別 \(Base Class\) 實作。|  
-    |[停用。](../Topic/IPropertyPageImpl::Deactivate.md)|清除與視窗相關的項目。|基底類別實作終結表示屬性頁的  對話方塊。  如果您需要清除，再終結此對話方塊，您應該在呼叫基底類別的前面加入您的程式碼。|  
+    |IPropertyPageImpl 方法|當您想要覆寫...|注意|  
+    |------------------------------|----------------------------------|-----------|  
+    |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|執行基本的例行性檢查傳遞給您的頁面和它們所支援之介面的物件數目。|執行您自己的程式碼，然後再呼叫基底類別實作。 如果所設定的物件不符合您的預期，您應儘速失敗呼叫。|  
+    |[啟動](../atl/reference/ipropertypageimpl-class.md#activate)|初始化頁面的使用者介面 （例如，從物件設定與目前的屬性值的對話方塊控制項、 控制項，動態建立或執行其他初始設定）。|呼叫基底類別實作您的程式碼之前，讓基底類別有機會建立對話方塊視窗和所有控制項，再重新加以更新。|  
+    |[適用於](../atl/reference/ipropertypageimpl-class.md#apply)|驗證的屬性設定，然後更新的物件。|沒有需要呼叫基底類別實作，因為它只負責追蹤呼叫。|  
+    |[停用](../atl/reference/ipropertypageimpl-class.md#deactivate)|清除與視窗相關項目。|基底類別實作會終結代表屬性頁對話方塊。 如果您需要清除，再終結對話方塊時，您應該加入程式碼，然後再呼叫基底類別。|  
   
- 如需範例屬性頁實作，請參閱 [範例:實作屬性頁](../atl/example-implementing-a-property-page.md)。  
+ 屬性頁面上執行範例，請參閱[範例： 實作屬性頁](../atl/example-implementing-a-property-page.md)。  
   
 > [!NOTE]
->  如果要裝載在屬性頁的 ActiveX 控制項，您將需要變更您的精靈產生之類別的衍生。  在基底類別清單中的 **CAxDialogImpl\<CYourClass\>** 取代 **CDialogImpl\<CYourClass\>** 。  
+>  如果您想要裝載 ActiveX 控制項屬性頁中，您必須變更您精靈產生的類別衍生。 取代**CDialogImpl\<CYourClass >**與**CAxDialogImpl\<CYourClass >**基底類別清單中。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [屬性頁](../atl/atl-com-property-pages.md)   
- [ATLPages 範例](../top/visual-cpp-samples.md)
+ [ATLPages 範例](../visual-cpp-samples.md)
+

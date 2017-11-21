@@ -4,42 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAtlAutoThreadModule
 - atlbase/ATL::CAtlAutoThreadModule
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlAutoThreadModule class
+dev_langs: C++
+helpviewer_keywords: CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 159b2f13dc573262bfab3a2e19209b29e3eaf5a5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ceff548fe53ff317eaca432a5e0c223cdc0a4e6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule 類別
 這個類別會實作在集區執行緒的 apartment model COM 伺服器。  
@@ -71,11 +53,10 @@ class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
  `CAtlAutoThreadModule`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ## <a name="see-also"></a>另請參閱  
  [CAtlAutoThreadModuleT 類別](../../atl/reference/catlautothreadmodulet-class.md)   
  [IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [模組類別](../../atl/atl-module-classes.md)
-

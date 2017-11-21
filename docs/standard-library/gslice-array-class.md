@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- valarray/std::gslice_array
-dev_langs:
-- C++
-helpviewer_keywords:
-- gslice_array class
+f1_keywords: valarray/std::gslice_array
+dev_langs: C++
+helpviewer_keywords: gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: bec570f3a1b0c2ddd8454935b5cfd26e2a217da0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 47dd54524e0a99cb2e725a10b1125c5a022a74d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="gslicearray-class"></a>gslice_array 類別
 可藉由提供 valarray 之一般切割所定義的子集陣列之間的作業，支援一般切割物件的內部、輔助的範本類別。  
@@ -122,5 +117,4 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
   
 ## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

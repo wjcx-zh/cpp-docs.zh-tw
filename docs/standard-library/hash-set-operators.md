@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
+ms.openlocfilehash: e5205240d4f0bbfbf41423ee73a737e7d2bd0667
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62ad48b857b4136f2f8abbdef6ec3b5acddc00d8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 運算子
 ||||  
@@ -116,7 +114,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 ### <a name="remarks"></a>備註  
  hash_set 物件之間的比較是以其元素的成對比較為基礎。 兩個 hash_set 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -181,7 +179,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 ### <a name="remarks"></a>備註  
  hash_multiset 物件之間的比較是以其元素之間的成對比較為基礎。 兩個 hash_multiset 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -246,8 +244,6 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 ### <a name="remarks"></a>備註  
  hash_multiset 物件之間的比較是以其元素的成對比較為基礎。 兩個 hash_multiset 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 請參閱[stdext 命名空間](../standard-library/stdext-namespace.md)如需詳細資訊。  
-  
 ### <a name="example"></a>範例  
   
 ```cpp  
@@ -289,5 +285,4 @@ The hash_multisets s1 and s2 are equal.
   
 ## <a name="see-also"></a>另請參閱  
  [<hash_set>](../standard-library/hash-set.md)
-
 

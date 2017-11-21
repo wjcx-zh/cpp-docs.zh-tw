@@ -1,46 +1,47 @@
 ---
-title: "Window Panes (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.bitmap"
-  - "vc.editors.icon"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "graphics editor [C++]"
-  - "Image editor [C++], panes"
+title: "視窗窗格 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.editors.bitmap
+- vc.editors.icon
+dev_langs: C++
+helpviewer_keywords:
+- graphics editor [C++]
+- Image editor [C++], panes
 ms.assetid: d66ea5b3-e2e2-4fc4-aa99-f50022cc690e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ce9716e810f48c237eabb0ea11b222e3590d795b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Window Panes (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="window-panes-image-editor-for-icons"></a>視窗窗格 (圖示影像編輯器)
+影像編輯器 視窗通常會以分隔列分隔的兩個窗格中顯示的影像。 檢視是實際大小和其他變大時 （預設的放大係數是 6）。 這兩個窗格中的檢視表會自動更新： 一個窗格中的變更會立即顯示在其他。 兩個窗格，方便您處理您的映像，在其中您可以區分個別像素為單位，在相同的時間，觀察您的工作對映像的實際大小 檢視的放大檢視。  
+  
+ 視多空間 （最多數量的一半影像視窗） 以顯示您的映像的 1:1 縮放檢視 （預設值），則會使用左的窗格。 在右窗格會顯示已縮放的影像 （依預設 6:1 縮放比例）。 您可以[變更縮放比例](../windows/changing-the-magnification-factor-image-editor-for-icons.md)中每個窗格使用**放大**工具[影像編輯器工具列](../windows/toolbar-image-editor-for-icons.md)或使用的快速鍵。  
+  
+ 您可以放大影像編輯器 視窗的較小的窗格，並使用兩個窗格顯示大型影像的不同區域。 按一下以選取窗格中。  
+  
+ 您可以分隔列上的定位指標並向右或向左移動分隔列，以變更窗格的相對大小。 如果您想要在只有一個窗格上運作，可以移到任一端分割列。  
+  
+ 如果影像編輯器窗格放大，因數為 4 或更新版本，您可以[顯示像素格線](../windows/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md)，用來分隔個別的像素的映像中。  
+  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+  
+## <a name="requirements"></a>需求  
+ 無  
+  
+## <a name="see-also"></a>另請參閱  
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
 
-\[影像編輯器\] 視窗通常在兩個以分隔列分隔的窗格內顯示影像。  其中一個檢視畫面為實際大小，另一個檢視畫面為放大圖 \(預設放大因數為 6\)。  在這兩個窗格內的檢視畫面會自動更新：您在一個窗格內所做的變更會立即顯示在另一個窗格內。  這兩個窗格讓您可輕易處理經放大的影像檢視，您可在其中區分個別的像素，同時在影像的實際大小檢視上觀察您變更的效果。  
-  
- 左窗格可依需要使用任意大小的空間 \(最大可達影像視窗的一半\) 來顯示影像的 1:1 倍率檢視 \(預設值\)。  右窗格顯示經縮放的影像 \(依預設為 6:1 倍率\)。  您可以在每一個窗格[縮放比例倍數](../mfc/changing-the-magnification-factor-image-editor-for-icons.md)，方法為使用[影像編輯器工具列](../mfc/toolbar-image-editor-for-icons.md)上的**放大**工具或使用快速鍵 \(Accelerator\)。  
-  
- 您可放大 \[影像編輯器\] 視窗的較小窗格，以及使用兩個窗格來顯示大型影像的不同區域。  在窗格內按一下來加以選取。  
-  
- 您可變更窗格的相對大小，方法為將指標置於分隔列上，然後將分隔列移至右邊或左邊。  如果您只想使用一個窗格，分隔列可一路移至任一邊。  
-  
- 如果已經以 4 或更大的因數放大了影像編輯器窗格，您可[顯示像素格線](../mfc/displaying-or-hiding-the-pixel-grid-image-editor-for-icons.md)，來分隔影像中的個別像素。  
-  
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
-  
-## 需求  
- None  
-  
-## 請參閱  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)

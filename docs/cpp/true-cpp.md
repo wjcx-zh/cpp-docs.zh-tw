@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- true_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- true keyword [C++]
+f1_keywords: true_cpp
+dev_langs: C++
+helpviewer_keywords: true keyword [C++]
 ms.assetid: 96be2a70-51c3-4250-9752-874d25a5a11e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b10cf33ff93a01347ee8c8e7fc56bb5be8058f3a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a5d0918d1236f28611c4dd57ee292659eb8f0fce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="true-c"></a>true (C++)
 ## <a name="syntax"></a>語法  

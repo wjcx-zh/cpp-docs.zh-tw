@@ -1,36 +1,34 @@
 ---
-title: "ptr::CreateInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.CreateInstance"
-  - "msclr::com::ptr::CreateInstance"
-  - "msclr.com.ptr.CreateInstance"
-  - "ptr::CreateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::CreateInstance"
+title: "ptr::CreateInstance |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.CreateInstance
+- msclr::com::ptr::CreateInstance
+- msclr.com.ptr.CreateInstance
+- ptr::CreateInstance
+dev_langs: C++
+helpviewer_keywords: ptr::CreateInstance
 ms.assetid: 9e8e4c4c-1651-4839-8829-5857d74470fe
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 00a107d0f502d29d37ae085548e66012d4d585d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::CreateInstance
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用`com::ptr`建立COM物件的執行個體。  
+# <a name="ptrcreateinstance"></a>ptr::CreateInstance
+建立 COM 物件內的執行個體`com::ptr`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void CreateInstance(  
@@ -71,29 +69,29 @@ void CreateInstance(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `progid`  
  `ProgID` 字串。  
   
  `pouter`  
- 對彙總物件的 IUnknown 介面 \(控制項\) 的 IUnknown 指標。  如果`pouter`未指定，就會使用`NULL`。  
+ 彙總物件的 IUnknown 介面 (controlling IUnknown) 指標。 如果`pouter`未指定，`NULL`用。  
   
  `cls_context`  
- 程式碼處理新建立的物件時所執行的內容。  值是取自 `CLSCTX` 列舉。  如果沒有指定`cls_context`，則會使用值 CLSCTX\_ALL。  
+ 管理新建立的物件的程式碼將在其中執行的內容。 值取自`CLSCTX`列舉型別。 如果`cls_context`未指定，則使用 CLSCTX_ALL 值。  
   
  `rclsid`  
- `CLSID`與用來建立物件之資料及程式碼相關聯。  
+ `CLSID`相關聯的資料和將用來建立物件的程式碼。  
   
-## 例外狀況  
- 如果 `com::ptr` 已經擁有對 COM 物件的參考， `CreateInstance` 會擲回 <xref:System.InvalidOperationException>。  
+## <a name="exceptions"></a>例外狀況  
+ 如果`com::ptr`已經擁有的 COM 物件，參考`CreateInstance`會擲回<xref:System.InvalidOperationException>。  
   
- 這個函式呼叫 `CoCreateInstance` 並使用 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> 轉換任何錯誤的 `HRESULT` 至適當的例外狀況。  
+ 此函數會呼叫`CoCreateInstance`並用<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>要轉換的任何錯誤`HRESULT`至適當的例外狀況。  
   
-## 備註  
- `CreateInstance` 使用 `CoCreateInstance` 建立指定之物件的新執行個體，識別與 CLSID 或 ProgID。  `com::ptr` 參考新建立的物件，並自動釋放所有擁有的參考在解構函式。  
+## <a name="remarks"></a>備註  
+ `CreateInstance`使用`CoCreateInstance`建立指定的物件，識別從 ProgID 或 CLSID 的新執行個體。 `com::ptr`參考剛建立的物件，就會自動釋放所有擁有的解構時的參考。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。  類別建構函式會使用 `CreateInstance` 的兩個不同表單建立資料物件從 ProgID 或從 CLSID 加上 CLSCTX。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 類別建構函式使用兩種不同形式的`CreateInstance`從 ProgID 或 CLSID 加上 CLSCTX 建立文件物件。  
   
 ```  
 // comptr_createinstance.cpp  
@@ -142,10 +140,10 @@ int main() {
 }  
 ```  
   
-## 需求  
- **標頭檔**\<msclr \\ com \\ ptr.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
- **命名空間** msclr::com  
+ **命名空間**msclr::com  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [ptr 成員](../dotnet/ptr-members.md)

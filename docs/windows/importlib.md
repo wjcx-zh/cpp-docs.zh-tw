@@ -1,49 +1,47 @@
 ---
-title: "importlib | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.importlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "importlib attribute"
+title: "importlib |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.importlib
+dev_langs: C++
+helpviewer_keywords: importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 27c74785f56d7cb339eff25a645191ece1e14b32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# importlib
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="importlib"></a>importlib
 讓已編譯成其他類型程式庫的類型可供正在建立的類型程式庫使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-        [ importlib(  
+      [ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### 參數  
- *tlb\_file*  
- 您要匯入目前專案之類型程式庫中的 .tlb 檔案名稱 \(加上引號\)。  
+#### <a name="parameters"></a>參數  
+ *tlb_file*  
+ 您要匯入目前專案之類型程式庫中的 .tlb 檔案名稱 (加上引號)。  
   
-## 備註  
- **importlib** C\+\+ 屬性會導致 `importlib` 陳述式置於所產生 .idl 檔案的程式庫區塊中。  **importlib** 屬性具有與 [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 屬性相同的功能。  
+## <a name="remarks"></a>備註  
+ **Importlib** c + + 屬性會造成`importlib`放置產生的.idl 檔案的程式庫區塊中的陳述式。 **Importlib**屬性具有相同的功能[importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) MIDL 屬性。  
   
-## 範例  
- 下列程式碼示範如何使用 **importlib**：  
+## <a name="example"></a>範例  
+ 下列程式碼示範如何使用**importlib**:  
   
 ```  
 // cpp_attr_ref_importlib.cpp  
@@ -52,9 +50,9 @@ caps.handback.revision: 11
 [importlib("importlib.tlb")];  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
@@ -63,12 +61,12 @@ caps.handback.revision: 11
 |**必要屬性**|無|  
 |**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>另請參閱  
+ [編譯器屬性](../windows/compiler-attributes.md)   
+ [獨立屬性](../windows/stand-alone-attributes.md)   
+ [匯入](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [include](../windows/include-cpp.md)   
+ [包含](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

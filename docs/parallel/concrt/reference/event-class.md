@@ -1,11 +1,10 @@
 ---
-title: "事件類別 |Microsoft 文件"
+title: "event 類別 |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs:
-- C++
-helpviewer_keywords:
-- event class
+dev_langs: C++
+helpviewer_keywords: event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 53a49eeeaa6c9fb83b5dc2b96001a2b2097fbe5e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="event-class"></a>event 類別
 其為並行執行階段明確察覺的手動重設事件。  
@@ -59,18 +41,18 @@ class event;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[~ event 解構函式](#dtor)|終結事件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
-|[reset](#reset)|重設為未收到信號狀態的事件。|  
+|[reset](#reset)|事件重設為未收到信號狀態。|  
 |[set](#set)|通知事件。|  
 |[等候](#wait)|等待事件發出訊號。|  
-|[wait_for_multiple](#wait_for_multiple)|等候變成已收到訊號的多個事件。|  
+|[wait_for_multiple](#wait_for_multiple)|等候發出訊號的多個事件。|  
   
 ### <a name="public-constants"></a>公用常數  
   
@@ -85,7 +67,7 @@ class event;
  `event`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** concrt.h  
+ **標頭：** concrt.h  
   
  **命名空間：** concurrency  
   
@@ -108,11 +90,11 @@ _CRTIMP event();
 ```  
   
 ### <a name="remarks"></a>備註  
- 應該沒有執行緒在等候事件時執行解構函式。 允許事件解構仍在等候的執行緒，會導致未定義的行為發生。  
+ 應該沒有執行緒正在等候該事件解構函式執行時。 允許事件解構仍在等候的執行緒，會導致未定義的行為發生。  
   
 ##  <a name="reset"></a>重設 
 
- 重設為未收到信號狀態的事件。  
+ 事件重設為未收到信號狀態。  
   
 ```
 void reset();
@@ -147,17 +129,17 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
   
 ### <a name="parameters"></a>參數  
  `_Timeout`  
- 等候逾時之前，表示毫秒數。 值`COOPERATIVE_TIMEOUT_INFINITE`表示無逾時。  
+ 等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。  
   
 ### <a name="return-value"></a>傳回值  
- 如果滿意等待結果，值`0`會傳回，否則值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時不變得發出信號的事件。  
+ 如果已滿足等候，值`0`會傳回，否則值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時不變得發出信號的事件。  
   
 > [!IMPORTANT]
 >  在 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫在 ASTA 執行緒上的 `wait`，因為這個呼叫可能會封鎖目前的執行緒，而且造成應用程式變成沒有回應。  
   
 ##  <a name="wait_for_multiple"></a>wait_for_multiple 
 
- 等候變成已收到訊號的多個事件。  
+ 等候發出訊號的多個事件。  
   
 ```
 static size_t __cdecl wait_for_multiple(
@@ -169,26 +151,25 @@ static size_t __cdecl wait_for_multiple(
   
 ### <a name="parameters"></a>參數  
  `_PPEvents`  
- 陣列，要等候的事件。 在陣列中的事件數目會以`count`參數。  
+ 陣列，要等候的事件。 陣列中的事件數目會以`count`參數。  
   
  `count`  
- 提供在陣列中的事件計數`_PPEvents`參數。  
+ 中提供的陣列內的事件計數`_PPEvents`參數。  
   
  `_FWaitAll`  
- 如果設定為值`true`，參數會指定陣列中的所有事件都提供在`_PPEvents`參數必須變成收到訊號，以滿足等候。 如果設定為值`false`，它會指定陣列中的任何事件提供在`_PPEvents`參數變成已收到訊號會滿足等候。  
+ 如果設定為值`true`，參數會指定陣列中的所有事件都提供在`_PPEvents`參數必須被通知以滿足等候。 如果設定為值`false`，它會指定陣列中的任何事件提供在`_PPEvents`參數變成有訊號會滿足等候。  
   
  `_Timeout`  
- 等候逾時之前，表示毫秒數。 值`COOPERATIVE_TIMEOUT_INFINITE`表示無逾時。  
+ 等候逾時之前，請指出毫秒的數。值`COOPERATIVE_TIMEOUT_INFINITE`表示沒有逾時。  
   
 ### <a name="return-value"></a>傳回值  
- 如果滿意等待結果，在陣列中的索引所提供`_PPEvents`參數滿足等候條件; 否則值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時沒有所滿足的條件。  
+ 如果已滿足等候，陣列中的索引所提供`_PPEvents`參數滿足等候條件; 否則值`COOPERATIVE_WAIT_TIMEOUT`表示等候逾時沒有滿足條件。  
   
 ### <a name="remarks"></a>備註  
- 如果參數`_FWaitAll`設定為值`true`函數所傳回的索引，表示所有事件必須滿足等候變成收到都訊號，帶有沒有特殊的意義，只是不是值`COOPERATIVE_WAIT_TIMEOUT`。  
+ 如果參數`_FWaitAll`設定為值`true`函數所傳回的索引來指示必須成為所有事件發出都信號，以滿足等候，帶有沒有特殊的意義不是值的事實以外`COOPERATIVE_WAIT_TIMEOUT`。  
   
 > [!IMPORTANT]
 >  在 [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫在 ASTA 執行緒上的 `wait_for_multiple`，因為這個呼叫可能會封鎖目前的執行緒，而且造成應用程式變成沒有回應。  
   
 ## <a name="see-also"></a>另請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

@@ -1,50 +1,50 @@
 ---
-title: "顯示或隱藏色彩視窗 (圖示影像編輯器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "色彩, 色彩視窗"
-  - "色彩視窗, 隱藏色彩"
-  - "顯示色彩視窗命令"
-  - "色彩視窗, 顯示色彩"
+title: "顯示或隱藏色彩視窗 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- colors, Colors window
+- Colors window, hiding colors
+- Show Colors Window command
+- Colors window, displaying colors
 ms.assetid: 43ba728d-2b69-47a1-a23a-94f82d88a26d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8b006f6081d88481bdb697d8209014d8296fbea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 顯示或隱藏色彩視窗 (圖示影像編輯器)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 若要顯示 \[色彩\] 視窗  
+# <a name="displaying-or-hiding-the-colors-window-image-editor-for-icons"></a>顯示或隱藏色彩視窗 (圖示影像編輯器)
+### <a name="to-display-colors-window"></a>若要顯示色彩視窗  
   
-1.  在 \[影像編輯器\] 窗格上按一下滑鼠右鍵，然後從捷徑功能表中選擇 \[顯示色彩視窗\]。  
+1.  以滑鼠右鍵按一下**影像編輯器**窗格，然後選擇 **顯示色彩視窗**從捷徑功能表。  
   
-     \-或\-  
+     \-或-  
   
-2.  在[影像功能表](../mfc/image-menu-image-editor-for-icons.md)上按一下 \[顯示色彩視窗\]。  
+2.  按一下**顯示色彩視窗**上[影像功能表](../windows/image-menu-image-editor-for-icons.md)。  
   
-### 若要隱藏色彩視窗  
+### <a name="to-hide-the-colors-window"></a>若要隱藏色彩視窗  
   
-1.  鬆開視窗。  這樣將可讓視窗在不使用時自動隱藏。  如需詳細資訊，請參閱[排列視窗](../misc/how-to-arrange-and-dock-windows.md)。  
+1.  取消固定的視窗。 不在使用時，這可讓自動隱藏視窗。  
   
- \-或\-  
+ \-或-  
   
--   按一下 \[關閉\] 按鈕。  
+-   按一下**關閉** 按鈕。  
   
  需求  
   
- None  
+ 無  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [色彩視窗](../windows/colors-window-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)

@@ -1,32 +1,30 @@
 ---
-title: "copy_backward (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::copy_backward"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copy_backward 函式 [STL/CLR]"
+title: "copy_backward (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::copy_backward
+dev_langs: C++
+helpviewer_keywords: copy_backward function [STL/CLR]
 ms.assetid: 649db3fd-5a79-44b6-bea9-ecbcbeba1f32
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9d9138ef071acd984826add535bba57f86b00864
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# copy_backward (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定從來源範圍的到目的範圍項目的值，逐一查看項目來源序列並指派它們以反向的新位置。  
+# <a name="copybackward-stlclr"></a>copy_backward (STL/CLR)
+從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以反向方向指派它們新位置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _BidIt1, class _BidIt2> inline  
@@ -34,13 +32,13 @@ template<class _BidIt1, class _BidIt2> inline
         _BidIt2 _Dest);  
 ```  
   
-## 備註  
- 這個函式的行為與 STL 函式 `copy_backward` 相同。  如需詳細資訊，請參閱[copy\_backward](../Topic/copy_backward.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`copy_backward`。 如需詳細資訊，請參閱[copy_backward](../standard-library/algorithm-functions.md#copy_backward)。  
   
-## 需求  
- **標頭：** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>另請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

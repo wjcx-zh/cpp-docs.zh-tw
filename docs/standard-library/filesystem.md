@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,20 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 14d81a2039005e3ab301a865d9834de048a74ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-包含用於存取類別和函式的標頭 \<filesystem>，以操作並擷取路徑、檔案和目錄的相關資訊。  
+包含用於存取類別和函式的標頭 &lt;filesystem>，以操作並擷取路徑、檔案和目錄的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -55,7 +38,7 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  在 Visual Studio 2017 版本中，\<experimental/filesystem> 標頭還不是 C++ 標準。 Visual C++ 2017 實作的是 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的草稿最終版標準。  
+>  Visual Studio 2017，發行\<filesystem > 標頭還不是 c + + 標準。 Visual C++ 2017 實作的是 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的草稿最終版標準。  
   
  這個標頭支援兩個廣泛的主機作業系統類別之一的檔案系統：Microsoft Windows 和 Posix。  
   
@@ -73,15 +56,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   類別路徑物件以原生格式來儲存路徑名稱，但可輕鬆地在這個預存格式和幾個外部格式之間進行轉換：  
   
-    -   以 Null 終止的 char 序列，並採用作業系統偏好的方式進行編碼。  
+-   以 Null 終止的 char 序列，並採用作業系統偏好的方式進行編碼。  
   
-    -   以 Null 終止的 char 序列，並編碼為 UTF-8。  
+-   以 Null 終止的 char 序列，並編碼為 UTF-8。  
   
-    -   以 Null 終止的 wchar_t 序列，並採用作業系統偏好的方式進行編碼。  
+-   以 Null 終止的 wchar_t 序列，並採用作業系統偏好的方式進行編碼。  
   
-    -   以 Null 終止的 char16_t 序列，並編碼為 UTF-16。  
+-   以 Null 終止的 char16_t 序列，並編碼為 UTF-16。  
   
-    -   以 Null 終止的 char32_t 序列，並編碼為 UTF-32。  
+-   以 Null 終止的 char32_t 序列，並編碼為 UTF-32。  
   
  請視需要考慮使用一或多個 `codecvt` Facet，在這些表示法之間進行轉換。 如果未指定特定地區設定物件，則會從全域地區設定取得這些 Facet。  
   
@@ -142,14 +125,13 @@ using namespace std::experimental::filesystem::v1;
   
 |名稱|說明|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) ，並在已存在目的地檔案時決定行為。|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60)，並在已存在目的地檔案時決定行為。|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|  
 |[權限](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|  
   
 ## <a name="see-also"></a>另請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

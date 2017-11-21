@@ -4,43 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::divides
-- divides
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::divides
+dev_langs: C++
 helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: a82ec380e3be786dfdac2b8ebe3b108d5776c3a9
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7e05b4acf06f17813d45b4888a1342b31a424648
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="divides-struct"></a>divides 結構
 在其引數執行除法運算 ( `operator/`) 的預先定義函式物件。  
@@ -75,7 +56,7 @@ struct divides<void>
  除法運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
 ## <a name="return-value"></a>傳回值  
- `Left``/``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator/` 所傳回的類型。  
+ `Left / Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator/` 所傳回的類型。  
   
 ## <a name="example"></a>範例  
   
@@ -141,7 +122,6 @@ The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
 ## <a name="see-also"></a>另請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

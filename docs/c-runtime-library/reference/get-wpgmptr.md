@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _get_wpgmptr
+apiname: _get_wpgmptr
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,24 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - get_wpgmptr
 - _get_wpgmptr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wpgmptr global variable
 - get_wpgmptr function
 - wpgmptr global variable
 - _get_wpgmptr function
 ms.assetid: a77cdd13-2303-4b7c-9a60-8debdbef2011
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: d28d4df533d2c81250f45820f4a230cc45f64257
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getwpgmptr"></a>_get_wpgmptr
 取得 `_wpgmptr` 全域變數的目前值。  

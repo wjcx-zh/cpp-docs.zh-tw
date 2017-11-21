@@ -1,47 +1,48 @@
 ---
-title: "Setting the Width of a Horizontal Scroll Bar | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "list controls, scroll bar width"
-  - "CListBox::SetHorizontalExtent"
-  - "controls [C++], scroll bar"
-  - "scroll bars, displaying in controls"
-  - "horizontal scroll bar width"
-  - "CListBox class, scroll bar width"
-  - "scroll bars, width"
+title: "設定水平捲軸的寬度 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- list controls, scroll bar width
+- CListBox::SetHorizontalExtent
+- controls [C++], scroll bar
+- scroll bars, displaying in controls
+- horizontal scroll bar width
+- CListBox class, scroll bar width
+- scroll bars, width
 ms.assetid: 51dad141-aa0b-46a3-a82c-46b80d603d94
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 97015327803a82161e8dc121e8085e63b791acdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Setting the Width of a Horizontal Scroll Bar
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您使用 MFC 類別將一個具有水平捲軸的清單方塊加入至對話方塊時，捲軸不會自動出現在您的應用程式中。  
+# <a name="setting-the-width-of-a-horizontal-scroll-bar"></a>設定水平捲軸的寬度
+當您使用 MFC 類別的對話方塊中新增具有水平捲軸的清單方塊時，捲軸不會自動出現在您的應用程式。  
   
-### 若使讓捲軸出現  
+### <a name="to-make-the-scroll-bar-appear"></a>若要讓捲軸出現  
   
-1.  在您的程式碼中呼叫 [CListBox::SetHorizontalExtent](../Topic/CListBox::SetHorizontalExtent.md) 來為最寬的項目設定最大寬度。  
+1.  藉由呼叫設定最寬的項目最大寬度[CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent)程式碼中。  
   
-     不設定這個值，捲軸不會出現，即使清單方塊中的項目比方塊寬。  
+     沒有設定這個值，捲軸不會出現，即使當清單方塊中的項目會比方塊寬。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
   
  需求  
   
  MFC  
   
-## 請參閱  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>另請參閱  
+ [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [控制項](../mfc/controls-mfc.md)
+

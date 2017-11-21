@@ -1,41 +1,39 @@
 ---
-title: "deque::front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front 成員 [STL/CLR]"
+title: "deque:: front (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: eb8cb5f2-346d-4d7a-bb7b-cf67fe4318e8
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bcf649af1b9b1b3bbd3442a7d957eab89dc80118
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# deque::front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequefront-stlclr"></a>deque::front (STL/CLR)
 存取第一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reference front();  
 ```  
   
-## 備註  
- 成員函式以傳回受控制序列的第一個項目的參考，必須為非空白。  用來讀取或寫入第一個項目，也就是說，當您知道它時。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列必須為非空白的第一個元素的參考。 您可以使用它來讀取或寫入第一個項目中，當您知道它存在。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_front.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**前面 \(\=\)。**  
- **x b c**   
-## 需求  
- **標題:** \<cliext\/雙向佇列\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::back\_item](../dotnet/deque-back-item-stl-clr.md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

@@ -1,34 +1,33 @@
 ---
-title: "2.4 Work-sharing Constructs | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.4 工作共用建構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 25bb4ded-8466-4daa-a863-766b5a99b995
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5353bc51f6a701201520f700057ef76ce7778191
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4 Work-sharing Constructs
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-工作共用的建構分配相關的陳述式，在發生這個情形的團隊成員間執行。  工作共用的指示詞不會啟動新的執行緒，而且沒有任何默示的障盾到工作共用的建構函式的項目。  
+# <a name="24-work-sharing-constructs"></a>2.4 工作共用的建構
+工作共用建構會發生這個情形的團隊成員之間相關聯的陳述式執行。 工作共用指示詞不會啟動新的執行緒，並在項目到工作共用建構函式沒有隱含的屏障。  
   
- 工作共用的順序會建構及**障盾**發生的指示詞必須是相同的小組中的每一個執行緒。  
+ 序列工作共用建構和**屏障**遇到指示詞必須是相同的小組中每個執行緒。  
   
- OpenMP 定義下列工作共用的結構，並在章節中將會加以說明：  
+ OpenMP 定義下列的工作共用建構，以及這些詳述於以下各節：  
   
--   **對於**指示詞  
+-   **如**指示詞  
   
--   **章節**指示詞  
+-   **區段**指示詞  
   
 -   **單一**指示詞

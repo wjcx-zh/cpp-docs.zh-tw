@@ -1,33 +1,30 @@
 ---
-title: "stack::stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stack 成員 [STL/CLR]"
+title: "stack:: stack (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::stack
+dev_langs: C++
+helpviewer_keywords: stack member [STL/CLR]
 ms.assetid: f1cfb3fe-4d22-41e5-906b-e8faa0bcde9b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e12c704561cd56ac251479861740c7df205f1e37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# stack::stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackstack-stlclr"></a>stack::stack (STL/CLR)
 建構容器配接器物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 stack();  
@@ -36,39 +33,39 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);  
 ```  
   
-#### 參數  
- right  
+#### <a name="parameters"></a>參數  
+ 向右  
  要複製的物件。  
   
- 包裝  
- 使用的包裝的容器。  
+ 換行  
+ 已包裝的容器使用。  
   
-## 備註  
- 建構函式:  
+## <a name="remarks"></a>備註  
+ 建構函式：  
   
  `stack();`  
   
- 建立空包裝的容器。  您會用它來指定一個空的初始控制順序。  
+ 建立空的已包裝的容器。 您可以用它來指定空的初始受控制的序列。  
   
- 建構函式:  
+ 建構函式：  
   
  `stack(stack<Value, Container>% right);`  
   
- 為 `right.get_container()`建立複本的包裝的容器。  您會用它來指定要複製順序由堆疊物件 `right`的初始控制順序。  
+ 建立複本的已包裝的容器`right.get_container()`。 您用它來指定初始受控制的序列的堆疊物件所控制之序列的複本`right`。  
   
- 建構函式:  
+ 建構函式：  
   
  `stack(stack<Value, Container>^ right);`  
   
- 為 `right->get_container()`建立複本的包裝的容器。  您會用它來指定要複製順序由堆疊物件 `*right`的初始控制順序。  
+ 建立複本的已包裝的容器`right->get_container()`。 您用它來指定初始受控制的序列的堆疊物件所控制之序列的複本`*right`。  
   
- 建構函式:  
+ 建構函式：  
   
  `explicit stack(container_type% wrapped);`  
   
- 使用現有的容器 `wrapped` 做為包裝的容器。  用來從現有的容器的堆疊。  
+ 使用現有的容器`wrapped`做為包裝的容器。 您可以使用它來建構從現有容器的堆疊。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_construct.cpp   
@@ -108,17 +105,20 @@ int main()
   
 ```  
   
-  **大小 \(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## 需求  
- **標題:** \<cliext\/堆疊\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [stack::assign](../dotnet/stack-assign-stl-clr.md)   
- [stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>另請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)   
+ [stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

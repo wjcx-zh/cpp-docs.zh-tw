@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CInterfaceList
 - ATLCOLL/ATL::CInterfaceList
 - ATLCOLL/ATL::CInterfaceList::CInterfaceList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CInterfaceList class
+dev_langs: C++
+helpviewer_keywords: CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 50d86163080c5a0d0a7bb9ed6d77a40ac73722e7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 86e92f86896ac7c5a06b73a68e2d6889d10ea87b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 類別
-建構的 COM 介面指標清單時，這個類別會提供有效的方法。  
+建構 COM 介面指標的清單時，這個類別會提供有用的方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,21 +38,21 @@ class CInterfaceList
   
 #### <a name="parameters"></a>參數  
  `I`  
- COM 介面，指定要儲存的指標的類型。  
+ 指定要儲存的指標類型的 COM 介面。  
   
  `piid`  
- 指標的 IID `I`。  
+ 指向 IID 的`I`。  
   
 ## <a name="members"></a>Members  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|描述|  
+|名稱|說明|  
 |----------|-----------------|  
 |[CInterfaceList::CInterfaceList](#cinterfacelist)|建構函式的介面清單。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別提供建構函式和衍生的方法來建立 COM 介面指標的清單。 使用[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)陣列時所需。  
+ 這個類別提供建構函式和衍生的方法來建立 COM 介面指標的清單。 使用[CInterfaceArray](../../atl/reference/cinterfacearray-class.md)何時需要陣列。  
   
  如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
@@ -80,7 +62,7 @@ class CInterfaceList
  `CInterfaceList`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcoll.h  
+ **標頭：** atlcoll.h  
   
 ##  <a name="cinterfacelist"></a>CInterfaceList::CInterfaceList  
  建構函式的介面清單。  
@@ -91,14 +73,13 @@ CInterfaceList(UINT nBlockSize = 10) throw();
   
 ### <a name="parameters"></a>參數  
  `nBlockSize`  
- 區塊大小，預設值為 10。  
+ 區塊大小，預設值是 10。  
   
 ### <a name="remarks"></a>備註  
- 區塊大小是記憶體的一種配置需要新的項目時數量。 較大的區塊大小減少記憶體配置常式，但使用較多資源。  
+ 區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小減少記憶體配置常式，呼叫，但使用較多資源。  
   
 ## <a name="see-also"></a>另請參閱  
  [CAtlList 類別](../../atl/reference/catllist-class.md)   
  [CComQIPtr 類別](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

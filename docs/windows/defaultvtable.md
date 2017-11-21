@@ -1,32 +1,30 @@
 ---
-title: "defaultvtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvtable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvtable attribute"
+title: "defaultvtable |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvtable
+dev_langs: C++
+helpviewer_keywords: defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0753887cef2b169758351be9fafc0ec532bacb05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# defaultvtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-COM 物件的預設 vtable 介面中定義的介面。  
+# <a name="defaultvtable"></a>defaultvtable
+為 COM 物件的預設 vtable 介面定義的介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,15 +33,15 @@ COM 物件的預設 vtable 介面中定義的介面。
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `interface`  
- 您想要有預設 vtable 之 COM 物件的指定的介面。  
+ 您想要在 COM 物件的預設 vtable 指定的介面。  
   
-## 備註  
- **Defaultvtable** C\+\+ 屬性具有相同的功能，為 [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Defaultvtable** c + + 屬性具有相同的功能[defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) MIDL 屬性。  
   
-## 範例  
- 下列程式碼會顯示屬性上使用的類別 **defaultvtable** 來指定預設介面：  
+## <a name="example"></a>範例  
+ 下列程式碼所使用的類別顯示屬性**defaultvtable**指定預設介面：  
   
 ```  
 // cpp_attr_ref_defaultvtable.cpp  
@@ -71,20 +69,19 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**，`struct`|  
+|**適用於**|**class**、 `struct`|  
 |**可重複**|否|  
-|**必要的屬性**|**coclass**|  
-|**無效的屬性**|None|  
+|**必要屬性**|**coclass**|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   

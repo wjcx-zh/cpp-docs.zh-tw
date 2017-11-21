@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,36 +25,20 @@ apitype: DLLExport
 f1_keywords:
 - memchr
 - wmemchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aad3d578cececad6af6a6f4aaf1107460a23d784
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: dd7a16cb35257104b79d0347fe415c5b17cd4bb4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 在緩衝區中尋找字元。  
@@ -111,7 +94,7 @@ const wchar_t *wmemchr(
 ## <a name="remarks"></a>備註  
  `memchr` 和 `wmemchr` 會在 `buf` 的前 `count` 個位元組中尋找第一個出現的 `c`。 當它找到 `c` 或完成前 `count` 個位元組的檢查時，便會停止。  
   
- 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 如果這些函式的 `const` 和非 `const` 版本都可以使用，即會定義巨集 _CONST_CORRECT_OVERLOADS。 如果 C++ 中的兩個 C++ 多載都需要非 `const` 行為，請定義符號 _CONST_RETURN。  
+ 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS`const`和非-`const`這些函式的版本可供使用。 如果 C++ 中的兩個 C++ 多載都需要非 `const` 行為，請定義符號 _CONST_RETURN。  
   
 ## <a name="requirements"></a>需求  
   

@@ -1,49 +1,51 @@
 ---
-title: "Implementing the Event Handling Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 事件處理"
-  - "事件處理, ATL"
-  - "介面, event and event sink"
+title: "實作事件處理介面 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ATL, event handling
+- event handling, ATL
+- interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3ea192e863fe9813a762c0c948cc141b068c3f43
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing the Event Handling Interface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementing-the-event-handling-interface"></a>實作事件處理介面
+ATL 可協助您處理事件所需的全部三個元素： 實作事件介面、 通知事件來源，並取消通知事件來源。 您必須採取的確切步驟取決於事件介面和應用程式的效能需求的型別。  
+  
+ 最常見的使用 ATL 實作介面方法如下：  
+  
+-   直接衍生自自訂介面。  
+  
+-   衍生自[IDispatchImpl](../atl/reference/idispatchimpl-class.md)雙重介面類型程式庫中所述。  
+  
+-   衍生自[IDispEventImpl](../atl/reference/idispeventimpl-class.md)的分配介面類型程式庫中所述。  
+  
+-   衍生自[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)的分配介面未描述的類型程式庫中，或當您想要載入不在執行階段類型資訊來改善效率。  
+  
 
-ATL 協助您對於處理事件所需的全部三個項目的:實作事件介面，通知事件來源和 unadvising 事件來源。  您將需要其他的確切步驟取決於事件介面的類型和應用程式的效能需求。  
+ 如果您實作自訂或雙重介面，您應該藉由呼叫通知事件來源[AtlAdvise](reference/connection-point-global-functions.md#atladvise)或[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)。 您必須追蹤的呼叫所傳回自己的 cookie。 呼叫[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)中斷連線。  
+
   
- 實作使用 ATL 的介面最常見的方式是:  
+ 如果您實作 dispinterface 使用`IDispEventImpl`或`IDispEventSimpleImpl`，您應該藉由呼叫通知事件來源[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)。 呼叫[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)中斷連線。  
   
--   直接衍生自的自訂介面。  
+ 如果您使用`IDispEventImpl`接收對應中列出的事件來源為複合控制項的基底類別，將會建議使用和 unadvised 自動使用[CComCompositeControl::AdviseSinkMap](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)。  
   
--   衍生自之型別描述的雙重介面的 [IDispatchImpl](../atl/reference/idispatchimpl-class.md) 程式庫。  
+ `IDispEventImpl`和`IDispEventSimpleImpl`類別為您管理 cookie。  
   
--   衍生自的型別描述所描述之介面的 [IDispEventImpl](../atl/reference/idispeventimpl-class.md) 程式庫。  
-  
--   衍生自的型別沒有描述的分配介面的 [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) 程式庫，或當您想要將不會載入此型別提升效率特定的資訊。  
-  
- 如果您實作自訂或雙重介面，您也應該呼叫 [AtlAdvise](../Topic/AtlAdvise.md) 或 [CComPtrBase::Advise](../Topic/CComPtrBase::Advise.md)通知事件來源。  您將需要記錄這個呼叫所傳回的 Cookie。  呼叫會中斷連接的 [AtlUnadvise](../Topic/AtlUnadvise.md) 。  
-  
- 使用 `IDispEventImpl` 或 `IDispEventSimpleImpl`，如果您實作分配介面 \(Dispinterface\)，您也應該呼叫 [IDispEventSimpleImpl::DispEventAdvise](../Topic/IDispEventSimpleImpl::DispEventAdvise.md)通知事件來源。  呼叫會中斷連接的 [IDispEventSimpleImpl::DispEventUnadvise](../Topic/IDispEventSimpleImpl::DispEventUnadvise.md) 。  
-  
- 如果您使用 `IDispEventImpl` 為複合控制項的基底類別，在接收對應中的事件來源使用 [CComCompositeControl::AdviseSinkMap](../Topic/CComCompositeControl::AdviseSinkMap.md)會自動通知和輕量的速率。  
-  
- `IDispEventImpl` 和 `IDispEventSimpleImpl` 類別處理您的 Cookie。  
-  
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [事件處理](../atl/event-handling-and-atl.md)
+

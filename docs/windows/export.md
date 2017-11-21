@@ -1,32 +1,30 @@
 ---
-title: "export | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.export"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "export attribute"
+title: "匯出 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.export
+dev_langs: C++
+helpviewer_keywords: export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7a3229b1cc924c0268bf9a79df53bc18ce2684a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# export
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-會造成.idl 檔內放置的資料結構。  
+# <a name="export"></a>匯出
+會導致資料結構，以便放入.idl 檔案。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,16 +32,16 @@ caps.handback.revision: 11
   
 ```  
   
-## 備註  
- **匯出** C\+\+ 屬性會造成一種資料結構放置在.idl 檔，並可以在型別程式庫，以使其可用於任何語言的二進位相容格式。  
+## <a name="remarks"></a>備註  
+ **匯出**c + + 屬性會造成放入.idl 檔案，則是二進位檔相容的格式可搭配任何語言中的類型程式庫中的 可用的資料結構。  
   
- 您無法套用**匯出**屬性至類別，即使此類別只具有公用的成員 \(相當於`struct`\)。  
+ 您不能套用**匯出**屬性的類別，即使此類別只具有公用成員 (相當於`struct`)。  
   
- 如果您匯出 \[未命名`enum`s 或`struct`s，就能指定的名稱開頭的 **\_\_unnamed***x*，其中 *x* 是一個循序編號。  
+ 如果您匯出未命名`enum`s 或`struct`s，將其指定名稱開頭為**__unnamed***x*，其中*x*是連續的數字。  
   
- 檔的 typedef 也適用於匯出基底型別、 結構、 等位、 列舉、 或型別識別項。  請參閱 [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) 如需詳細資訊。  
+ 適用於匯出 typedef 為基底類型、 結構、 等位、 列舉，或輸入識別項。  請參閱[typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287)如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼示範如何使用**匯出**屬性：  
   
 ```  
@@ -57,20 +55,19 @@ struct MyStruct {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**union**, `typedef`, `enum`, `struct`, or`interface`|  
+|**適用於**|**等位**， `typedef`， `enum`， `struct`，或`interface`|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>另請參閱  
+ [編譯器屬性](../windows/compiler-attributes.md)   
+ [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   

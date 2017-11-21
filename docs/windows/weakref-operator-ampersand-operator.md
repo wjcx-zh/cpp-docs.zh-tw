@@ -1,48 +1,45 @@
 ---
-title: "WeakRef::operator&amp; 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::operator&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator& 運算子"
+title: "WeakRef::operator&amp;運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::operator&
+dev_langs: C++
+helpviewer_keywords: operator& operator
 ms.assetid: 900afb73-3801-4d08-9b41-2e6a62011ccd
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c13e025b0a15998a6420b29b0bb23ff65824f14e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# WeakRef::operator&amp; 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-傳回表示目前物件的 WeakRef ComPtrRef 物件。  
+# <a name="weakrefoperatoramp-operator"></a>WeakRef::operator&amp;運算子
+傳回表示目前 WeakRef 物件的 ComPtrRef 物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 Details::ComPtrRef<WeakRef> operator&() throw()  
 ```  
   
-## 傳回值  
- 表示目前物件的 WeakRef ComPtrRef 物件。  
+## <a name="return-value"></a>傳回值  
+ 表示目前的 WeakRef 物件的 ComPtrRef 物件。  
   
-## 備註  
- 這是並不是要用在您的程式碼的內部 Helper 運算子。  
+## <a name="remarks"></a>備註  
+ 這是不是以用於您的程式碼中的內部協助程式運算子。  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [WeakRef 類別](../windows/weakref-class.md)

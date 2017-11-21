@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - locale/std::wstring_convert::to_bytes
 - locale/std::wstring_convert::converted
 - locale/std::wstring_convert::state
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::cvt [C++], wstring_convert
 - std::wstring_convert [C++], byte_string
@@ -31,16 +29,15 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e7a37fd636d376f379503d1dd1b95f05ac1828cd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 926edb3f3e1a362509b0f57ef2ae930faa7321ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 類別
 範本類別 `wstring_convert` 會執行寬字串與位元組字串之間的轉換。  
@@ -241,4 +238,3 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
   
 ### <a name="remarks"></a>備註  
  第一個建構函式會將 *Pcvt_arg* 儲存於[轉換物件](../standard-library/wstring-convert-class.md)中
-

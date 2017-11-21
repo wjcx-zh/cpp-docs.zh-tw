@@ -1,32 +1,30 @@
 ---
-title: "CriticalSectionTraits::Unlock 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unlock 方法"
+title: "Criticalsectiontraits:: Unlock 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock
+dev_langs: C++
+helpviewer_keywords: Unlock method
 ms.assetid: 8fb382f5-6eda-407e-9673-71d77bda4962
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 078ec4a1fa1af6c4660ff1171ab1b671ee9872f4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# CriticalSectionTraits::Unlock 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-特製化 CriticalSection 範本，以便支援釋放指定的關鍵區段物件的擁有權。  
+# <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock 方法
+特製化 CriticalSection 範本，好讓它支援釋放指定之關鍵區段物件擁有權。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 inline static void Unlock(  
@@ -34,19 +32,19 @@ inline static void Unlock(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `cs`  
- 為關鍵區段物件的指標。  
+ 關鍵區段 」 物件的指標。  
   
-## 備註  
- *Type* 修飾詞定義為 `typedef CRITICAL_SECTION* Type;`。  
+## <a name="remarks"></a>備註  
+ *類型*修飾詞定義為`typedef CRITICAL_SECTION* Type;`。  
   
- 如需詳細資訊，請參閱\< LeaveCriticalSection 函式」中的「同步函式」Windows 應用程式開發介面文件的部分。  
+ 如需詳細資訊，請參閱 Windows API 文件的 < 同步處理函數 > 一節中的 「 LeaveCriticalSection 函式 」。  
   
-## 需求  
- **標頭：**corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間:** Microsoft::WRL::Wrappers::HandleTraits  
+ **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [CriticalSectionTraits 結構](../windows/criticalsectiontraits-structure.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,7 +13,6 @@ f1_keywords:
 - ATLCOLL/ATL::Add
 - ATLCOLL/ATL::Append
 - ATLCOLL/ATL::AssertValid
-- ATLCOLL/ATL::CAtlArray
 - ATLCOLL/ATL::Copy
 - ATLCOLL/ATL::FreeExtra
 - ATLCOLL/ATL::GetAt
@@ -30,35 +28,18 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlArray class
+dev_langs: C++
+helpviewer_keywords: CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: c81ee3121ffbb9d89374afd4e09a3a6044c4b70b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlarray-class"></a>CAtlArray 類別
 這個類別會實作陣列物件。  
@@ -106,7 +87,7 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[operator&#91;&#93;](#operator_at)|呼叫以傳回陣列中的項目參考這個運算子。|  
+|[運算子 &#91; &#93;](#operator_at)|呼叫以傳回陣列中的項目參考這個運算子。|  
 
   
 ### <a name="typedefs"></a>Typedefs  
@@ -126,7 +107,7 @@ class CAtlArray
  如需詳細資訊，請參閱[ATL 集合類別](../../atl/atl-collection-classes.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcoll.h  
+ **標頭：** atlcoll.h  
   
 ##  <a name="add"></a>CAtlArray::Add  
  呼叫此方法以將項目加入至陣列物件。  
@@ -147,7 +128,7 @@ size_t Add();
  新的項目會加入至陣列的結尾。 如果沒有任何項目提供，加入空白的項目。也就是說，陣列會增加的大小一樣的實際項目已加入。 如果作業失敗， [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) E_OUTOFMEMORY 引數呼叫。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
 ##  <a name="append"></a>CAtlArray::Append  
  呼叫這個方法，以加入另一個陣列的內容。  
@@ -171,7 +152,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
  偵錯組建 ATLASSERT 就會引發如果`CAtlArray`引數不是有效陣列或`aSrc`指的是相同的物件。 在發行組建中無效的引數可能會導致無法預期的行為。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
 ##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  呼叫這個方法來確認陣列物件有效。  
@@ -184,7 +165,7 @@ void AssertValid() const;
  如果陣列物件不是有效的`ATLASSERT`將會擲回的判斷提示。 這個方法是定義 _DEBUG 時，才可以使用。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
 ##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  建構函式。  
@@ -197,7 +178,7 @@ CAtlArray() throw();
  初始化陣列物件。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
 ##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  解構函式。  
@@ -231,7 +212,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 > `CAtlArray::Copy`不支援使用建立的項目所組成的陣列[CAutoPtr](../../atl/reference/cautoptr-class.md)類別。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
 ##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  呼叫此方法以從陣列中移除任何空的項目。  
@@ -264,7 +245,7 @@ E& GetAt(size_t iElement) throw();
  偵錯組建 ATLASSERT 就會引發如果`iElement`超出陣列中的元素數目。 在發行組建中無效的引數可能會導致無法預期的行為。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
 ##  <a name="getcount"></a>CAtlArray::GetCount  
  呼叫此方法以傳回儲存在陣列中的項目數目。  
@@ -294,7 +275,7 @@ const E* GetData() const throw();
  傳回儲存在陣列中的第一個項目之記憶體位置的指標。 如果有任何項目，則傳回 NULL。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
 ##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  要用來將項目加入至陣列的資料類型。  
@@ -326,7 +307,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 > `CAtlArray::InsertArrayAt`不支援使用建立的項目所組成的陣列[CAutoPtr](../../atl/reference/cautoptr-class.md)類別。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
 ##  <a name="insertat"></a>CAtlArray::InsertAt  
  陣列物件呼叫這個方法來插入新項目 （或多個項目的複本）。  
@@ -351,7 +332,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
  偵錯組建 ATLASSERT 就會引發如果`CAtlArray`物件無效、 可加入的項目數為零，或合併的元素數目的陣列，包含太大。 在零售組建中傳遞無效的參數可能會造成無法預期的結果。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
 ##  <a name="isempty"></a>CAtlArray::IsEmpty  
  呼叫此方法以測試是否是空的陣列。  
@@ -367,7 +348,7 @@ bool IsEmpty() const throw();
  即稱為陣列，如果它沒有包含任何元素是空的。 因此，即使此陣列包含空的元素，它是不空的。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
 ##  <a name="operator_at"></a>CAtlArray::operator]  
  呼叫以傳回陣列中的項目參考這個運算子。  
@@ -431,7 +412,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
  偵錯組建 ATLASSERT 就會引發如果`CAtlArray`物件不是有效的或者如果合併的總計`iElement`和`nCount`超過陣列中的項目總數。 在零售組建中，無效的參數可能會造成無法預期的結果。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
 ##  <a name="setat"></a>CAtlArray::SetAt  
  呼叫此方法以設定項目的值的陣列物件中。  
@@ -496,7 +477,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  取代的項目之索引所指向的值。 如果`iElement`大於目前大小的陣列，陣列會自動增加使用的呼叫[CAtlArray::SetCount](#setcount)。 偵錯組建 ATLASSERT 就會引發如果`CAtlArray`物件無效。 在零售組建中，無效的參數可能會造成無法預期的結果。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
   
 ## <a name="see-also"></a>另請參閱  
  [MMXSwarm 範例](../../visual-cpp-samples.md)   
@@ -505,4 +486,3 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  [跑馬燈範例](../../visual-cpp-samples.md)   
  [CArray 類別](../../mfc/reference/carray-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

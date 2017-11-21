@@ -1,32 +1,32 @@
 ---
-title: "Null 和未定義的巨集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "巨集, Null 和未定義"
-  - "NMAKE 程式, Null 巨集"
-  - "NMAKE 程式, 未定義的巨集"
-  - "NMAKE 中的 Null 巨集"
-  - "undefined 巨集與 NMAKE"
+title: "Null 和未定義的巨集 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, undefined macros
+- Null macros in NMAKE
+- macros, null and undefined
+- undefined macros and NMAKE
+- NMAKE program, null macros
 ms.assetid: 1db4611a-1755-4328-b00f-d35365af8b6c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ee85d6959536d2845d7b6e6ccf7f07924e46143f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# Null 和未定義的巨集
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-null 和未定義的巨集同時展開為 null 字串，但定義成 null 字串的巨集會被視為在前置處理中定義。  若要將巨集定義為 null 字串，在命令列或命令檔案中的等號 \(\=\) 後面，除了空格或定位字元以外，請不要指定字元，並將 null 字串或定義放置在雙引號 \(" "\) 內。  若要未定義巨集，請使用 **\!UNDEF**。如需詳細資訊，請參閱 [Makefile 前置處理指示詞](../build/makefile-preprocessing-directives.md)。  
+# <a name="null-and-undefined-macros"></a>Null 和未定義的巨集
+Null 和未定義的巨集展開為 null 的字串，但巨集定義為 null 的字串會被視為前置處理運算式中定義。 若要定義巨集做為 null 的字串，指定沒有字元除了命令列或命令檔中的等號 （=） 後面的空格或定位字元和雙引號括住的 null 字串或定義 ("")。 若要取消定義巨集，使用**！UNDEF。** 如需詳細資訊，請參閱[Makefile 前置處理指示詞](../build/makefile-preprocessing-directives.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

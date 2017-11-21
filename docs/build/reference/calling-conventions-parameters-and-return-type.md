@@ -1,30 +1,29 @@
 ---
-title: "呼叫慣例、參數和傳回類型 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "呼叫慣例, Helper 函式"
-  - "Helper 函式, 呼叫慣例"
-  - "Helper 函式, 傳回類型"
+title: "呼叫慣例、 參數和傳回型別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- calling conventions, helper functions
+- helper functions, calling conventions
+- helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bdaf30655808d5a43f6866039cc93a3833896921
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# 呼叫慣例、參數和傳回類型
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="calling-conventions-parameters-and-return-type"></a>呼叫慣例、參數和傳回型別
 Helper 常式的原型是：  
   
 ```  
@@ -37,17 +36,17 @@ FARPROC WINAPI __delayLoadHelper2(
  其中：  
   
  `pidd`  
- `const` 指標指向 `ImgDelayDescr` \(請參閱 delayimp.h\)，其中包含各種匯入相關資料的位移、繫結資訊的時間戳記，以及一組提供描述元內容之進一步資訊的屬性。  目前只有一個屬性 `dlattrRva`，它指出描述元中的位址是相對的虛擬位址 \(與虛擬位址相反\)。  
+ `const` 指標指向 `ImgDelayDescr` (請參閱 delayimp.h)，其中包含各種匯入相關資料的位移、繫結資訊的時間戳記，以及一組提供描述元內容之進一步資訊的屬性。 目前只有一個屬性 `dlattrRva`，它指出描述元中的位址是相對的虛擬位址 (與虛擬位址相反)。  
   
- 如需 `PCImgDelayDescr` 結構的定義，請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。  
+ 定義的`PCImgDelayDescr`結構，請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。  
   
  `ppfnIATEntry`  
- 延遲載入匯入位址資料表 \(IAT\) 中的位置指標，要以匯入的函式位址更新。  Helper 常式需要儲存它將傳回此位置的相同值。  
+ 延遲載入匯入位址資料表 (IAT) 中的位置指標，要以匯入的函式位址更新。 Helper 常式需要儲存它將傳回此位置的相同值。  
   
-## 預期的傳回值  
+## <a name="expected-return-values"></a>預期的傳回值  
  如果函式成功，它會傳回匯入函式的位址。  
   
- 如果函式失敗，則會引發例外狀況並傳回 0。  可以引發的例外狀況有三種：  
+ 如果函式失敗，則會引發例外狀況並傳回 0。 可以引發的例外狀況有三種：  
   
 -   參數無效，發生在 `pidd` 中的屬性未正確指定時。  
   
@@ -57,12 +56,12 @@ FARPROC WINAPI __delayLoadHelper2(
   
  您要負責處理這些例外狀況。  
   
-## 備註  
- Helper 函式的呼叫慣例是 `__stdcall`。  傳回值的類型不相關，因此使用 FARPROC。  此函式具有 C 連結。  
+## <a name="remarks"></a>備註  
+ Helper 函式的呼叫慣例是 `__stdcall`。 傳回值的類型不相關，因此使用 FARPROC。 此函式具有 C 連結。  
   
- 延遲載入 Helper 的傳回值需要儲存在傳入的函式指標位置，除非您想要讓 Helper 函式用來作為通知攔截函式。  在那種情況下，您的程式碼要負責尋找適合傳回的函式指標。  連結器產生的 Thunk 程式碼便會以該傳回值作為匯入的真實目標，並直接跳到該處。  
+ 延遲載入 Helper 的傳回值需要儲存在傳入的函式指標位置，除非您想要讓 Helper 函式用來作為通知攔截函式。 在那種情況下，您的程式碼要負責尋找適合傳回的函式指標。 連結器產生的 Thunk 程式碼便會以該傳回值作為匯入的真實目標，並直接跳到該處。  
   
-## 範例  
+## <a name="sample"></a>範例  
  下列程式碼示範如何實作簡單的攔截函式。  
   
 ```  
@@ -142,5 +141,5 @@ PfnDliHook __pfnDliNotifyHook2 = delayHook;
 */  
 ```  
   
-## 請參閱  
- [了解 Helper 函式](../../build/reference/understanding-the-helper-function.md)
+## <a name="see-also"></a>另請參閱  
+ [了解協助協助程式函式](../../build/reference/understanding-the-helper-function.md)

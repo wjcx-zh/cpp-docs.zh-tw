@@ -1,32 +1,30 @@
 ---
-title: "SafeMultiply | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeMultiply"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeMultiply 函式"
+title: "SafeMultiply |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeMultiply
+dev_langs: C++
+helpviewer_keywords: SafeMultiply function
 ms.assetid: 81d988a5-fac7-4930-8c37-c24fa8e2c853
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 27b03278e3f6cdf526f6df4bdded67be640caab0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# SafeMultiply
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-同時將兩個數字以防止溢位的方法。  
+# <a name="safemultiply"></a>SafeMultiply
+兩個數目相乘在一起的方式，防止溢位。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename T, typename U>  
@@ -37,33 +35,33 @@ inline bool SafeMultiply (
 ) throw ();  
 ```  
   
-#### 參數  
- \[in\] `t`  
- 要相乘的第一個數字。  這個必須為型別 T。  
+#### <a name="parameters"></a>參數  
+ [in] `t`  
+ 要相乘的第一個數字。 這必須為類型 T。  
   
- \[in\] `u`  
- 要相乘的第二個數字。  這個必須為型別 U。  
+ [in] `u`  
+ 要相乘的第二個數字。 這必須為類型 U。  
   
- \[out\] `result`  
- 參數 `SafeMultiply` 儲存結果的位置。  
+ [輸出] `result`  
+ 參數所在`SafeMultiply`儲存結果。  
   
-## 傳回值  
- `true` ，如果沒有錯誤發生; `false` ，如果發生錯誤。  
+## <a name="return-value"></a>傳回值  
+ `true`如果沒有發生錯誤。`false`如果發生錯誤。  
   
-## 備註  
- 這個方法是 [SafeInt 程式庫](../windows/safeint-library.md) 的一部分為單一乘法運算設計，而不必建立 [SafeInt 類別](../windows/safeint-class.md)的執行個體。  
+## <a name="remarks"></a>備註  
+ 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，而不需要建立的執行個體適用於單一乘法運算[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  這個方法，則必須保護時，才應該使用單一數學運算。  如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
+>  此方法應只有在必須保護單一數學作業時才使用。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需此範本類型 T 與 U 的詳細資訊，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
-## 需求  
- **標題:** safeint.h  
+## <a name="requirements"></a>需求  
+ **標頭：** safeint.h  
   
- **命名空間:** Microsoft::Utilities  
+ **命名空間：** Microsoft::Utilities  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

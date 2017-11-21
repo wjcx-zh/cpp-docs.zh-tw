@@ -1,32 +1,30 @@
 ---
-title: "FtmBase::GetUnmarshalClass 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetUnmarshalClass 方法"
+title: "Ftmbase:: Getunmarshalclass 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+dev_langs: C++
+helpviewer_keywords: GetUnmarshalClass method
 ms.assetid: 535fc539-5b97-4967-b158-f7568f13d341
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 967c8e8cc397a7f9efdb145bf337049627f24a2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
-# FtmBase::GetUnmarshalClass 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取得 COM 來尋找包含對應之 Proxy 的 DLL 程式碼的 CLSID。  COM 載入此 DLL 建立 Proxy 的未初始化的執行個體。  
+# <a name="ftmbasegetunmarshalclass-method"></a>FtmBase::GetUnmarshalClass 方法
+取得 COM 使用，找出包含對應的 proxy 程式碼的 DLL 的 CLSID。 COM 載入此 DLL 來建立未初始化的執行個體的 proxy。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 STDMETHODIMP GetUnmarshalClass(  
@@ -39,35 +37,35 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `riid`  
- 要封送處理的介面識別項的參考。  
+ 要封送處理介面的識別項參考。  
   
  `pv`  
- 要封送處理介面的指標;如果呼叫端沒有所需的介面指標，則可為 NULL。  
+ 要封送處理; 介面指標如果呼叫端所需的介面沒有指標，可以是 NULL。  
   
  `dwDestContext`  
- 指定的介面要解除封送處理目的端的內容。  
+ 要解除封送處理指定的介面則為其中的目的端內容。  
   
  指定一或多個 MSHCTX 列舉值。  
   
- Unmarshaling 可能發生在目前處理序 \(MSHCTX\_INPROC\) 的另一個 Apartment 或在電腦上其他處理序和目前處理序 \(MSHCTX\_LOCAL\) 相同。  
+ 解封送處理，可能會發生另一個 apartment，目前的處理序 (MSHCTX_INPROC) 或目前的處理序 (MSHCTX_LOCAL) 的同一部電腦上的另一個處理序。  
   
  `pvDestContext`  
- 保留供日後使用，必須是 NULL。  
+ 保留供未來使用。必須是 NULL。  
   
  `mshlflags`  
- 這個作業完成時，會使用 CLSID 的指標會在用戶端處理序中的 Proxy。  
+ 這項作業完成時，用來在用戶端處理序中建立 proxy 的 CLSID 指標。  
   
  `pCid`  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則， S\_FALSE。  
+## <a name="return-value"></a>傳回值  
+ 若成功，則為 S_OK否則，S_FALSE。  
   
-## 需求  
- **標題:** ftm.h  
+## <a name="requirements"></a>需求  
+ **標頭：** ftm.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>另請參閱  
  [FtmBase 類別](../windows/ftmbase-class.md)

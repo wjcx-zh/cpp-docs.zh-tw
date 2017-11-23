@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - visual c++
 - visual c
 - vc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -21,7 +19,7 @@ helpviewer_keywords:
 - Visual C++
 - Visual C++, reference
 ms.assetid: e8dcc44c-a3e2-4ffe-887c-fd15b18dc458
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -35,17 +33,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/15/2017
-
+ms.openlocfilehash: bd4ac59b539b972a50a192e116e536598c03ed63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio 中的 Visual C++
 Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通用 Windows 應用程式、原生傳統型和伺服器應用程式、在 Android 和 iOS 以及 Windows 上執行的跨平台程式庫，以及在 .NET Framework 上執行的 Managed 應用程式。  
@@ -64,8 +56,7 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  [Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)  
  了解 Visual C++ 的新功能。  
 
- [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md) 
- 了解 Visual Studio 2017 中的 C++ 一致性改善。 
+ [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md) 了解 Visual Studio 2017 中有關 C++ 的一致性改善。 
 
  [Visual C++ 語言一致性](visual-cpp-language-conformance.md)  
  Visual C++ 依據功能的一致性狀態清單。
@@ -83,7 +74,7 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  在 Visual Studio 2017 中移植程式碼到 Visual C++ 及將專案升級至 Visual C++ 的指引，包括將 C++ 程式碼移植到 Windows 10 及通用 Windows 平台。  
   
  [Visual C++ Team Blog](http://blogs.msdn.com/b/vcblog/) (Visual C++ 小組部落格)  
- 進一步了解新功能以及 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)] 開發人員提供的最新資訊。  
+ 進一步了解新功能以及 [!INCLUDE[vcprvc](build/includes/vcprvc_md.md)]開發人員提供的最新資訊。  
   
  [Visual Studio 下載](http://go.microsoft.com/fwlink/?LinkId=235233)  
  下載 Visual C++。  
@@ -97,7 +88,7 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  [Visual C++ 範例](visual-cpp-samples.md)  
  有關範例的資訊。  
   
- [Visual Studio Community](http://go.microsoft.com/fwlink/?LinkId=235296)  
+ [Visual Studio 社群](http://go.microsoft.com/fwlink/?LinkId=235296)  
  了解如何取得協助、提報 Bug，以及提供有關 Visual Studio 的建議。  
   
 ## <a name="writing-applications-in-c"></a>使用 C++ 撰寫應用程式  
@@ -129,9 +120,9 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  若要了解如何建立專案、使用原始程式碼檔、連結至程式庫、編譯、偵錯、程式碼剖析、部署等等，請參閱 [IDE 和開發工具](ide/ide-and-tools-for-visual-cpp-development.md)。  
   
 ## <a name="c-language-reference"></a>C++ 語言參考  
- 如需 C++ 語言的資訊，請參閱 [C++ 語言參考](cpp/cpp-language-reference.md)。  
+ 如需 C++ 語言的詳細資訊，請參閱 [C++ Language Reference](cpp/cpp-language-reference.md)。  
   
- 如需 C++ 前置處理器的資訊，請參閱 [C/C++ 前置處理器參考](preprocessor/c-cpp-preprocessor-reference.md)。  
+ 如需 C++ 前置處理器的詳細資訊，請參閱 [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md)。  
   
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio 中的 C++ 程式庫  
  下列各節提供 Visual C++ 所包含的不同 C++ 程式庫的相關資訊。  
@@ -160,7 +151,7 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
  通用語言執行平台 (CLR) 的程式設計。  
   
- 另請參閱 [STL/CLR](dotnet/stl-clr-library-reference.md) 和 [C++ 支援程式庫](dotnet/cpp-support-library.md)的文件。  
+ 另請參閱 [STL/CLR](dotnet/stl-clr-library-reference.md) 與 [C++ Support Library](dotnet/cpp-support-library.md)的說明文件。  
   
 ## <a name="other-c-libraries"></a>其他 C++ 程式庫  
  本節包含未隨附於 Visual Studio 中，但可以下載並搭配 Visual C++ 使用的程式庫連結。  
@@ -185,4 +176,3 @@ Visual Studio 2017 程式設計語言和開發工具可協助您開發原生通�
  [C 語言參考](c-language/c-language-reference.md)   
  [C 執行階段程式庫參考](c-runtime-library/c-run-time-library-reference.md)   
  [編譯器內建和組件語言](intrinsics/compiler-intrinsics-and-assembly-language.md)
-

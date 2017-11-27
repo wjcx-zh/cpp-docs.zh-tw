@@ -1,53 +1,33 @@
 ---
 title: "Visual C++ 語言一致性 | Microsoft Docs"
-ms.custom: 
-ms.date: 3/1/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- cpp-language
-ms.tgt_pltfrm: 
+ms.date: 11/15/2017
+ms.technology: cpp-language
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
+ms.openlocfilehash: 8e9d4d86abd15f59e94ce7e51d40e119f8ebd336
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
 ms.translationtype: HT
-ms.sourcegitcommit: 76cd1737728b60a720c0aa8bbc5218ecb66416f2
-ms.openlocfilehash: 7f5bb05bf5912dafa99877ed7c9ff6bc4393b28f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 08/14/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性 
-本主題摘要說明 Visual Studio 2017 及之前版本的 Visual C++ 編譯器功能和標準程式庫功能，針對 ISO C++03、C++11、C++14、C++17 和 C++20 草案的語言標準一致性。 每個編譯器和標準程式庫功能的名稱皆可連結至說明該項功能的 ISO C++ 標準提案計畫書 (若在發行時有提供該計畫書)。 支援的資料行會列出最先出現該功能支援的 Visual Studio 版本。  
-  
+# <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
+
+本主題摘要說明 Visual Studio 2017 及之前版本的 Visual C++ 編譯器功能和標準程式庫功能，針對 ISO C++03、C++11、C++14、C++17 和 C++20 草案的語言標準一致性。 每個編譯器和標準程式庫功能的名稱皆可連結至說明該項功能的 ISO C++ 標準提案計畫書 (若在發行時有提供該計畫書)。 支援的資料行會列出最先出現該功能支援的 Visual Studio 版本。
+
 如需 Visual Studio 2017 一致性改善及其他變更的詳細資料，請參閱 [Visual Studio 2017 中的 C++ 編譯器一致性改善](cpp-conformance-improvements-2017.md)及 [Visual Studio 2017 中 Visual C++ 的新功能](what-s-new-for-visual-cpp-in-visual-studio.md)。 如需舊版的一致性變更，請參閱 [Visual C++ 變更歷程記錄](porting/visual-cpp-change-history-2003-2015.md)和[從 2003 到 2015 的 Visual C++ 新功能](porting/visual-cpp-what-s-new-2003-through-2015.md)。 如需 C++ 小組發出的最新消息，請瀏覽 [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)。  
 
  > [!NOTE]
  > Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
-  
-## <a name="compiler-features"></a>編譯器功能  
-  
-|功能範圍| |  
-|----|---|  
+
+## <a name="compiler-features"></a>編譯器功能
+
+|功能範圍| |
+|----|---|
 |__C++03/11 核心語言功能__|__支援__|
 |&nbsp;&nbsp;其他所有項目|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;兩階段名稱查詢|部分 <sup>[B](#note_B)</sup>|
@@ -89,15 +69,17 @@ ms.lasthandoff: 08/14/2017
 |&nbsp;&nbsp;[P0217R3 結構化的繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0217r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0292R2 constexpr if 陳述式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0292r2.html)|VS 2017 15.3 <sup>[G](#note_G)</sup>|
 |&nbsp;&nbsp;[P0305R1 使用初始設定式的選取範圍陳述式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0305r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0245R1 Hexfloat 常值](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html)|否|
+|&nbsp;&nbsp;[P0245R1 Hexfloat 常值](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0245r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4268 允許多個非類型範本引數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4295 摺疊運算式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0012R1 新增 noexcept 型別系統](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0035R4 過度對齊的動態記憶體配置](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0035r4.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0386R2 內嵌變數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0522R0 範本 template 參數與相容引數的比對](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0036R0 移除部分空白一元摺疊](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4261 修正限定性條件轉換](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4261.html)|否|
-|&nbsp;&nbsp;[N4268 允許多個非類型範本引數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4268.html)|否|
-|&nbsp;&nbsp;[N4295 摺疊運算式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4295.html)|否|
-|&nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|否|
-|&nbsp;&nbsp;[P0012R1 新增 noexcept 型別系統](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0012r1.html)|否|
 |&nbsp;&nbsp;[P0017R1 擴充的彙總初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|否|
-|&nbsp;&nbsp;[P0035R4 過度對齊的動態記憶體配置](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0035r4.html)|否|
-|&nbsp;&nbsp;[P0036R0 移除部分空白一元摺疊](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0036r0.pdf)|否|
 |&nbsp;&nbsp;[P0091R3 類別範本的範本引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 類別樣板引數推斷問題](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf) \(英文\)|否|
 |&nbsp;&nbsp;[P0127R2 使用 auto 宣告非類型範本參數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|否|
 |&nbsp;&nbsp;[P0135R1 保證的複製省略](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|否 <sup>[H](#note_H)</sup>|
@@ -105,11 +87,9 @@ ms.lasthandoff: 08/14/2017
 |&nbsp;&nbsp;[P0145R3 調整運算式評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 函式引數的評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0195R2 using-declaration 的套件延伸模組](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|否|
 |&nbsp;&nbsp;[P0283R2 略過無法辨認的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|否|
-|&nbsp;&nbsp;[P0386R2 內嵌變數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0386r2.pdf)|否|
-|&nbsp;&nbsp;[P0522R0 範本 template 參數與相容引數的比對](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0522r0.html)|否|
 |&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html) \(英文\)|否|
 |__C++20 核心語言功能__|__支援__|
-|&nbsp;&nbsp;[P0306R4 新增 \_\_VA_OPT\_\_ 以進行逗號省略和逗號刪除](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf) \(英文\)|否|
+|&nbsp;&nbsp;[P0306R4 新增 &#95;&#95;VA_OPT&#95;&#95; 以進行逗號省略和逗號刪除](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|否|
 |&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf) \(英文\)|否|
 |&nbsp;&nbsp;[P0409R2 允許 Lambda 擷取 [=, this]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0428R2 針對泛型 Lambda 的熟悉範本語法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf) \(英文\)|否|
@@ -127,24 +107,24 @@ ms.lasthandoff: 08/14/2017
 |&nbsp;&nbsp;[P0674R1 適用於陣列的 make_shared()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html) \(英文\)|否|
 |__C++17 標準程式庫功能__|__支援__|
 |&nbsp;&nbsp;[P0433R2 將針對類別樣板的樣板推斷整合至標準程式庫](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html) \(英文\)<br />&nbsp;&nbsp;[P0739R0 改善針對標準程式庫的類別樣板引數推斷整合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html) \(英文\)|否|
-|&nbsp;&nbsp;[P0607R0 適用於標準程式庫的內嵌變數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0426R1 char_traits 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|否|
 |&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|否|
-|&nbsp;&nbsp;[P0033R1 改寫 enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|否|
 |&nbsp;&nbsp;[P0220R1 程式庫基本概念 V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|部分 <sup>[J](#note_J)</sup>|
-|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>、shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 修正陣列的 shared_ptr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|否|
-|&nbsp;&nbsp;[P0083R3 接合對應和集合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br />&nbsp;&nbsp;[P0508R0 釐清 insert_return_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|否|
-|&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 not_fn() 的修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|否|
 |&nbsp;&nbsp;[P0067R5 基礎字串轉換](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0067r5.html)|否|
-|&nbsp;&nbsp;[P0618R0 取代 \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html) \(英文\)|否|
-|&nbsp;&nbsp;[P0521R0 取代 shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|否|
-|&nbsp;&nbsp;[P0174R2 取代不必要的程式庫組件](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|否|
-|&nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|否|
-|&nbsp;&nbsp;[P0302R1 移除 std::function 中的配置器支援](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|否|
 |&nbsp;&nbsp;[N4562 程式庫基本概念︰\<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 刪除 polymorphic_allocator 指派](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|否|
 |&nbsp;&nbsp;[P0024R2 平行演算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 重新命名平行執行原則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 針對例外狀況，平行演算法應使用 terminate()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 統一 \<numeric> 平行演算法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0226R1 數學特殊函式](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|否|
 |&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 適用於 Filesystem 的相對路徑](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 針對檔案系統的目錄項目快取](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html) \(英文\)<br />&nbsp;&nbsp;[P0392R0 支援 Filesystem 路徑的 string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 支援非 POSIX 檔案系統](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf) \(英文\)<br />&nbsp;&nbsp;[P0492R2 解決檔案系統的 NB 註解](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html) \(英文\)|否 <sup>[K](#note_K)</sup>|
+|&nbsp;&nbsp;[P0003R5 移除動態例外狀況規格](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 not_fn() 的修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0033R1 改寫 enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0083R3 接合對應和集合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0083r3.pdf)<br />&nbsp;&nbsp;[P0508R0 釐清 insert_return_type](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0508r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0174R2 取代不必要的程式庫組件](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0174r2.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0302R1 移除 std::function 中的配置器支援](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0302r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0414R2 shared_ptr\<T[]>、shared_ptr\<T[N]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0414r2.html)<br />&nbsp;&nbsp;[P0497R0 修正陣列的 shared_ptr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0497r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0521R0 取代 shared_ptr::unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0607R0 適用於標準程式庫的內嵌變數](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html) \(英文\)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0618R0 取代 \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html) \(英文\)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[N4562 程式庫基本概念︰Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 修正搜尋程式傳回型別](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0031R0 \<array> (再次說明) 和 \<iterator> 的 constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0040R3 擴充記憶體管理工具](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
@@ -230,11 +210,12 @@ ms.lasthandoff: 08/14/2017
 |&nbsp;&nbsp;[N3421 透明運算子函式 (less\<> 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3421.htm)|VS 2013|
 |&nbsp;&nbsp;[N3655 適用於 \<type_traits> 的別名範本 (decay_t 等等)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3655.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3656 make_unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3656.htm)|VS 2013|
-|&nbsp;&nbsp;[N3924 不鼓勵使用 rand()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3924.pdf)|N/A|  
-  
-一起提列的報告表示該項功能已表決納入標準，而改善或該擴展功能的一或多項報告也已表決納入標準。 這些功能皆會一起實作。  
-  
-### <a name="supported-values"></a>支援的值  
+|&nbsp;&nbsp;[N3924 不鼓勵使用 rand()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3924.pdf)|N/A|
+
+一起提列的報告表示該項功能已表決納入標準，而改善或該擴展功能的一或多項報告也已表決納入標準。 這些功能皆會一起實作。
+
+### <a name="supported-values"></a>支援的值
+
 __否__：表示尚未實作。  
 __部份__：表示 Visual Studio 2017 的實作不完整。 如需詳細資料，請參閱＜附註＞一節。  
 __N/A__：表示提案報告未描述這些功能。 這些報告已更改標準的語言，但未建立任何實作者的工作。 為求完整性，將它們一併列出。  
@@ -244,8 +225,10 @@ __VS 2015__：表示 Visual Studio 2015 RTM 所支援的功能。
 __VS 2015.2__ 和 __VS 2015.3__：表示 Visual Studio 2015 Update 2 和 Visual Studio 2015 Update 3 分別支援的功能。  
 __VS 2017__：表示 Visual Studio 2017 RTM 所支援的功能。  
 __VS 2017 15.3__：表示 Visual Studio 2017 15.3 版所支援的功能。  
-  
-### <a name="notes"></a>注意  
+__VS 2017 15.5__表示 Visual Studio 2017 15.5 版所支援的功能。
+
+### <a name="notes"></a>注意
+
 <a name="note_A"></a>__A__ 這會略過 C++03 的動態例外狀況規格 (此規格在 C++11 中已被取代)。 我們沒有實作它們的計畫，且預期會在未來的 C++ 標準中受到移除。  
 <a name="note_B"></a>__B__ 編譯器的兩階段名稱查詢支援已經有所改善，但仍未完善。  
 <a name="note_C"></a>__C__ 自 Visual Studio 2015 Update 2 起，編譯器的運算式 SFINAE 支援對標準程式庫而言已足夠，但支援程度仍未完善。  
@@ -263,7 +246,8 @@ __VS 2017 15.3__：表示 Visual Studio 2017 15.3 版所支援的功能。
 <a name="note_C11"></a>__C11__ 通用 CRT 已實作 C++17 所需的 C11 標準程式庫組件，除了 C99 `strftime()` E/O 替代轉換規範、C11 `fopen()` 獨佔模式，以及 C11 `aligned_alloc()`之外。 最後一個項目最有可能尚未實作，因為 C11 指定 `aligned_alloc()` 的方式與 Microsoft 的 `free()` 實作並不相容，亦即 `free()` 必須能夠處理高度對齊的配置。  
 <a name="note_rem"></a>__rem__ 當指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 編譯器選項時，將會移除這些功能。 這些功能具有退出巨集：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`，以及 `_HAS_UNEXPECTED`。
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱
+
 [C++ 語言參考](cpp/cpp-language-reference.md)  
 [C++ 標準程式庫](standard-library/cpp-standard-library-reference.md)   
 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements-2017.md)  
@@ -271,4 +255,3 @@ __VS 2017 15.3__：表示 Visual Studio 2017 15.3 版所支援的功能。
 [從 2003 到 2015 的 Visual C++ 變更歷程記錄](porting/visual-cpp-change-history-2003-2015.md)  
 [從 2003 到 2015 的 Visual C++ 新功能](porting/visual-cpp-what-s-new-2003-through-2015.md)  
 [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)  
-

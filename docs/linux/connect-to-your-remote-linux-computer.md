@@ -1,25 +1,22 @@
 ---
 title: "連線到遠端 Linux 電腦 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 6dce0c1c190854b7927c6e023edd76c9d1cb5645
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: dd817a7d9fad4946cd0aa9f641f9e8f495f1be9a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
-
 # <a name="connect-to-your-remote-linux-computer"></a>連線到遠端 Linux 電腦
 
 建置時，會將 Linux 程式碼複製到遠端 Linux 電腦，然後根據 Visual Studio 中所選擇的設定，在該系統上進行編譯。  設定此遠端連線：

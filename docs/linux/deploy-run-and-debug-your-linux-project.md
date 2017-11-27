@@ -1,35 +1,71 @@
 ---
 title: "部署、執行和偵錯 Linux 專案 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/16/2016
+ms.date: 11/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-linux
+ms.technology: cpp-linux
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-author: BrianPeek
-ms.author: brpeek
+author: corob-msft
+ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 237b6f3dbca8d529362a545f67ee0db4f9770d8d
+ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
 ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 1f36435bbb8238fb6068e7b58f9142eda62bc28c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 11/11/2017
 ---
+# <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 
-# <a name="deploy-run-and-debug-your-project"></a>部署、執行和偵錯專案
-
-現在，建立專案時，您需要連線到 Linux 電腦，也就是會在其中編譯、執行和偵錯程式碼。
-
-1. 如所示，使用 Visual Studio 中的標準下拉式清單來設定遠端目標架構：![遠端架構](media/architecture.png)
+建立 Linux 專案並使用 [Linux 連線管理員](../linux/connect-to-your-remote-linux-computer.md)連線到專案後，即可執行與偵錯專案。 您可以在遠端目標上編譯、執行及偵錯程式碼。
 
 有數種方式可以與 Linux 專案互動，並對其進行偵錯。
 
-* 傳統 Visual Studio 功能 (例如中斷點、監看式視窗，以及暫留變數) 都會如預期般運作，因此您可以如常進行偵錯。
-* 您可以使用 [偵錯] > [Linux 主控台] 功能表項目來開啟特殊 [Linux 主控台] 視窗。
+* 使用中斷點、監看式視窗以及將滑鼠指標停留在變數上等傳統 Visual Studio 功能進行偵錯。 使用這些方法，可讓您以對其他專案類型所使用的一般方式進行偵錯。
+* 在特殊的主控台視窗中檢視目標電腦的輸出。 您也可以使用主控台將輸出傳送到目標電腦。
+
+## <a name="debug-your-linux-project"></a>對 Linux 專案進行偵錯
+
+1. 在 [偵錯] 屬性頁面中選取偵錯模式。
+
+    GDB 用來偵錯在 Linux 上執行的應用程式。  不過，這可以透過兩種不同的模式執行，而您可以從專案 [偵錯] 屬性頁的 [偵錯模式] 選項中進行選取：
+
+    ![GDB 選項](media/settings_debugger.png)
+
+    - 在 **gdbserver** 模式中，GDB 會在本機執行，以連線到在遠端系統上執行的 gdbserver。  請注意，這是 Linux 主控台視窗唯一支援的模式。
+
+    - 在 **gdb** 模式中，Visual Studio 偵錯工具會在遠端系統上驅動 GDB，這在本機與目標電腦上所安裝 GDB 的版本不同時較為相容。 |
+
+    > [!NOTE] 
+    > 若無法在 gdbserver 偵錯模式中叫用中斷電，請嘗試 gdb 模式。 必須先在遠端目標上[安裝](../linux/download-install-and-setup-the-linux-development-workload.md) gdb。
+
+2. 在 Visual Studio 中使用標準 [偵錯] 工具列選取遠端目標。
+
+    當遠端目標可用時，該目標會以名稱或 IP 位址的形式列出。
+
+    ![遠端目標](media/remote_target.png)
+
+    若尚未連線至遠端目標，您會看到使用 [Linux 連線管理員](../linux/connect-to-your-remote-linux-computer.md) 以連線到遠端目標的指示。
+
+    ![遠端架構](media/architecture.png)
+
+3. 在某些您認定會執行之程式碼的左側裝訂邊上按一下，即可設定中斷點。
+
+    在您設定中斷點的程式碼上會顯示紅點。
+
+4. 按一下 **F5** (或 [偵錯] > [開始偵錯]) 以開始偵錯。
+
+    當您開始偵錯時，應用程式會在啟動前於遠端目標上編譯。 任何編譯錯誤都會顯示在 [錯誤清單] 視窗中。
+
+    如果沒有任何錯誤，應用程式就會啟動，而偵錯工具則會在中斷點暫停。
+
+    ![叫用中斷點](media/hit_breakpoint.png)  
+
+    您現在可以和目前狀態下的應用程式互動、檢視變數，以及按下 **F10** 或 **F11** 等命令鍵逐步完成程式碼。
+
+4. 若想使用 Linux 主控台與應用程式互動，請選取 [偵錯] > [Linux 主控台]。
 
   ![Linux 主控台功能表](media/consolemenu.png)
 
@@ -37,20 +73,15 @@ ms.lasthandoff: 10/09/2017
 
   ![Linux 主控台視窗](media/consolewindow.png)
 
+## <a name="configure-other-debugging-options"></a>設定其他偵錯選項
+
 * 使用專案 [偵錯] 屬性頁中的 [程式引數] 項目，即可將命令列引數傳遞至可執行檔。
   
   ![程式引數](media/settings_programarguments.png)
-
-* GDB 用來偵錯在 Linux 上執行的應用程式。  不過，這可以透過兩種不同的模式執行，而您可以從專案 [偵錯] 屬性頁的 [偵錯模式] 選項中進行選取：
-
-  ![GDB 選項](media/settings_debugger.png)
-
-  | 選取範圍 | 說明
-  | --------- | ---
-  | gdbserver | GDB 會在本機執行，以連線到在遠端系統上執行的 gdbserver。  請注意，這是 Linux 主控台視窗唯一支援的模式。 
-  | gdb       | Visual Studio 偵錯工具會在遠端系統上驅動 GDB，如果本機版本的 GDB 與目標電腦上安裝的版本不相符，則這較為相容
 
 * 使用 [其他偵錯工具命令] 項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以使用 **handle** 命令來進行這項作業。  如上所示將下列項目新增至 [其他偵錯工具命令] 項目：
 
   ```handle SIGILL nostop noprint```
 
+## <a name="see-also"></a>請參閱
+[C++ 偵錯工具屬性 (Linux C++)](../linux/prop-pages/debugging-linux.md)。

@@ -186,6 +186,7 @@
 ## [連結器工具警告 LNK4010](linker-tools-warning-lnk4010.md)
 ## [連結器工具警告 LNK4014](linker-tools-warning-lnk4014.md)
 ## [連結器工具警告 LNK4022](linker-tools-warning-lnk4022.md)
+## [連結器工具警告 LNK4037](linker-tools-warning-lnk4037.md)
 ## [連結器工具警告 LNK4039](linker-tools-warning-lnk4039.md)
 ## [連結器工具警告 LNK4044](linker-tools-warning-lnk4044.md)
 ## [連結器工具警告 LNK4049](linker-tools-warning-lnk4049.md)

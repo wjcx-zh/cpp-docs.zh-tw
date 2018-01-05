@@ -12,11 +12,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1304cd827e80328857571552201601f0e453c1dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18fb141ab1000d8befda2370f993a5d5ee06d973
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-ccx"></a>屬性 (C++/CX)
 Windows 執行階段類型將公用資料公開為屬性。 用戶端程式碼可將此屬性視為公用 Datamember 加以存取。 此屬性在內部可實作為包含 get 存取子方法和 (或) set 存取子方法的區塊。 使用存取子方法，可讓您在擷取值之前或之後執行其他動作，例如，您可以引發事件或執行驗證檢查。  
@@ -41,7 +42,7 @@ Windows 執行階段類型將公用資料公開為屬性。 用戶端程式碼�
   
  [!code-cpp[cx_properties#01](../cppcx/codesnippet/CPP/cx_properties/class1.h#01)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

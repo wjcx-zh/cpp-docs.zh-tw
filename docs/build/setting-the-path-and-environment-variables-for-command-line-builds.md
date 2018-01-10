@@ -28,11 +28,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: babca0fb75748f95d36a7afdd3c76be4419abc43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76fa1a14b4fd60f249ab015f6618e386bda7c86f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>設定命令列建置的路徑和環境變數
 
@@ -45,7 +46,7 @@ Visual c + + 命令列工具使用的路徑、 TMP、 INCLUDE、 LIB 及 LIBPATH
 > [!NOTE]
 >  數個命令列工具或工具選項，可能需要系統管理員權限。 如果您有權限問題，當您使用它們時，我們建議您利用開啟開發人員命令提示字元視窗**系統管理員身分執行**選項。 在 Windows 10 上按一下滑鼠右鍵以開啟 命令提示字元 視窗的捷徑功能表，然後選擇 **詳細**，**系統管理員身分執行**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [在命令列上建置 C/c + + 程式碼](../build/building-on-the-command-line.md)   
 [連結](../build/reference/linking.md)   

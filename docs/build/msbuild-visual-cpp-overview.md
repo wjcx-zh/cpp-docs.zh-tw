@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c238aabdfee5de1896e24934edee1ebec135be4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f250443e0e5da2cf399282f19a5fde58c4c4b089
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) 概觀  
   
@@ -77,7 +78,7 @@ MSBuild 系統之前，或另一個目標之後，可以有條件地執行目標
   
 根據預設，主要的 Visual c + + 支援檔案位於下列目錄中。 Microsoft Visual Studio 下的目錄會使用 Visual Studio 2017 和更新版本中，而 Visual Studio 2015 和較早版本所使用 MSBuild 下的目錄。  
   
-|Directory|說明|  
+|Directory|描述|  
 |---------------|-----------------|  
 |*磁碟機*: \Program Files *(x86)*\Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*磁碟機*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp (x86) \v4.0\\*版本*\ |包含主要的目標檔案 (.targets) 和屬性檔案 (.props) 所使用的目標。 根據預設，$(VCTargetsPath) 巨集，請參考此目錄。|  
 |*磁碟機*: \Program Files *(x86)*\Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\平台\\*平台*\ <br /><br />*磁碟機*: \Program Files *(x86)*\MSBuild\Microsoft.Cpp\v4.0\\*版本*\Platforms\\*平台*\ |包含目標和它的上層目錄中的屬性會覆寫特定平台目標和屬性檔案。 這個目錄也會包含 DLL 可定義此目錄中的目標所使用的工作。<br /><br /> *平台*預留位置代表 ARM、 Win32、 或 x64 子目錄。|  
@@ -140,6 +141,6 @@ MSBuild 系統之前，或另一個目標之後，可以有條件地執行目標
 |XdcMake|執行 XML 文件工具 xdcmake.exe。|  
 |Xsd|執行 XML 結構描述定義工具 xsd.exe。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
   
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)

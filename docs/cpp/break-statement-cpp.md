@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89be581f6e10ce5c3c7b0f92c37d165affb28844
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1f9c9a09652eb76511c7d059cc70eae3fb99ffd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="break-statement-c"></a>break 陳述式 (C++)
 `break` 陳述式會在最接近的封閉式迴圈或條件陳述式出現的位置結束執行。 控制會傳遞至陳述式結尾之後的陳述式 (如果有的話)。  
@@ -155,7 +156,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [跳躍陳述式](../cpp/jump-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [continue 陳述式](../cpp/continue-statement-cpp.md)

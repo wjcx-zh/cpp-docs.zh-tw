@@ -1,62 +1,63 @@
 ---
-title: "CBookmark::CBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBookmark<0>.CBookmark<0>"
-  - "CBookmark::CBookmark"
-  - "ATL.CBookmark.CBookmark"
-  - "CBookmark.CBookmark"
-  - "CBookmark"
-  - "ATL::CBookmark<0>::CBookmark<0>"
-  - "ATL.CBookmark<0>.CBookmark<0>"
-  - "CBookmark<0>::CBookmark<0>"
-  - "ATL::CBookmark::CBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CBookmark 類別, 建構函式"
+title: "Cbookmark:: Cbookmark |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBookmark<0>.CBookmark<0>
+- CBookmark::CBookmark
+- ATL.CBookmark.CBookmark
+- CBookmark.CBookmark
+- CBookmark
+- ATL::CBookmark<0>::CBookmark<0>
+- ATL.CBookmark<0>.CBookmark<0>
+- CBookmark<0>::CBookmark<0>
+- ATL::CBookmark::CBookmark
+dev_langs: C++
+helpviewer_keywords: CBookmark class, constructor
 ms.assetid: 84f4ad2b-67d4-4ba3-8b2b-656a66fb6298
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 63d5bef87a50b5027a743e9927f22c84636c1c9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CBookmark::CBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cbookmarkcbookmark"></a>CBookmark::CBookmark
 建構函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      CBookmark( );   
+      CBookmark( );   
 CBookmark(  
    DBLENGTH nSize   
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `nSize`  
- \[in\] 呼叫書籤的大小 \(以位元組為單位\)。  
+ [in] 書籤緩衝區的大小 (以位元組為單位)。  
   
-## 備註  
- 第一個函式會將設定 **NULL** 的緩衝區、緩衝區大小設定為 0。  第二個函式會對 `nSize`的緩衝區大小和至位元組陣列的緩衝區 `nSize` 位元組。  
+## <a name="remarks"></a>備註  
+ 第一個函式會將緩衝區設定為**NULL**和緩衝區大小為 0。 第二個函式會將緩衝區大小設定為 `nSize`，將緩衝區設定為 `nSize` 位元組的位元組陣列。  
   
 > [!NOTE]
->  這個函式只能在 **CBookmark\<0\>**。  
+>  此函式僅供以**CBookmark\<0 >**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CBookmark 類別](../../data/oledb/cbookmark-class.md)

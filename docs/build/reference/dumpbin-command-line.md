@@ -1,42 +1,40 @@
 ---
-title: "DUMPBIN 命令列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "dumpbin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DUMPBIN 程式, 命令列"
+title: "DUMPBIN 命令列 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: dumpbin
+dev_langs: C++
+helpviewer_keywords: DUMPBIN program, command line
 ms.assetid: e6ad17d3-965d-41aa-9dfd-75bb073718d4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cf71e413cbdd505f10e86994811ed7648af86e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# DUMPBIN 命令列
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-若要執行 DUMPBIN，請使用下列語法：  
+# <a name="dumpbin-command-line"></a>DUMPBIN 命令列
+若要執行 DUMPBIN，使用下列語法：  
   
 ```  
 DUMPBIN [options] files...  
 ```  
   
- 指定一個或多個二進位檔案，連同控制資訊所需的任何選項。  DUMPBIN 會將資訊顯示於標準輸出。  您可將它重新導向到檔案或使用 \/OUT 選項來指定輸出的檔名。  
+ 指定一或多個二進位檔，以及任何所需選項來控制的資訊。 DUMPBIN 至標準輸出顯示的資訊。 您可以將它重新導向至檔案，或使用 /OUT 選項指定輸出檔案名稱。  
   
- 當您針對檔案執行 DUMPBIN 時，如果沒有指定任何選項，DUMPBIN 會顯示 \/SUMMARY 輸出。  
+ 當您不指定選項，在檔案上執行 DUMPBIN 時，DUMPBIN 會顯示指定 /SUMMARY 輸出。  
   
- 當您輸入 `dumpbin` 命令，而沒有包括其他任何命令列輸入時，DUMPBIN 會顯示一份摘要其選項的用法說明。  
+ 當您輸入命令`dumpbin`沒有命令列的輸入，DUMPBIN 會顯示摘要其選項的使用方式陳述式。  
   
-## 請參閱  
- [C\/C\+\+ 建置工具](../../build/reference/c-cpp-build-tools.md)   
+## <a name="see-also"></a>請參閱  
+ [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   
  [DUMPBIN 參考](../../build/reference/dumpbin-reference.md)

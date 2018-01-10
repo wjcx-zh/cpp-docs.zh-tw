@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d1564d068f4d69c3190b8bb24a32e7efb01dbef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ab2f021a53e8ae685891863500feb3873e13e2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sections-cc"></a>SECTIONS (C/C++)
 導入了一個或多個區段`definitions`所存取規範，在您的專案輸出檔案中的區段。  
@@ -40,14 +41,14 @@ definitions
   
  其中`.section_name`程式映像中的區段名稱和`specifier`是一或多個下列存取修飾詞：  
   
-|修飾詞|說明|  
+|修飾詞|描述|  
 |--------------|-----------------|  
 |`EXECUTE`|區段，則可執行檔|  
 |`READ`|允許對於資料的讀取的作業|  
 |`SHARED`|共用區段載入影像的所有處理程序|  
 |`WRITE`|允許對於資料的寫入作業|  
   
- 以空格分隔規範的名稱。 例如：  
+ 以空格分隔規範的名稱。 例如:   
   
 ```  
 SECTIONS  
@@ -66,5 +67,5 @@ section [CLASS 'classname'] specifier
   
  若要指定區段屬性對等的方法是使用[/section](../../build/reference/section-specify-section-attributes.md)選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)

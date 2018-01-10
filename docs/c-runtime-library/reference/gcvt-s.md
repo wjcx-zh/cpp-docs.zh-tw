@@ -39,11 +39,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ba9f1a7a77c0f9d23423906c18b05ace5b20ec8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a028431bb324fe634ee30ae81eec6c2d3371441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvts"></a>_gcvt_s
 將浮點值轉換為字串。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_gcvt](../../c-runtime-library/reference/gcvt.md) 版本。  
@@ -69,13 +70,13 @@ errno_t _gcvt_s(
  [輸出] `buffer`  
  儲存轉換結果的緩衝區。  
   
- [in] `sizeInBytes`  
+ [輸入] `sizeInBytes`  
  緩衝區的大小。  
   
- [in] `value`  
+ [輸入] `value`  
  要轉換的值。  
   
- [in] `digits`  
+ [輸入] `digits`  
  儲存的重要數字的數目。  
   
 ## <a name="return-value"></a>傳回值  
@@ -83,11 +84,11 @@ errno_t _gcvt_s(
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|`buffer`|`sizeInBytes`|`value`|`digits`|返回|`buffer` 中的值|  
+|`buffer`|`sizeInBytes`|`value`|`digits`|Return|`buffer` 中的值|  
 |--------------|-------------------|-------------|--------------|------------|-----------------------|  
-|`NULL`|任何|任何|任何|`EINVAL`|未修改。|  
-|非 `NULL` (指向有效的記憶體)|零|any|任何|`EINVAL`|未修改。|  
-|非 `NULL` (指向有效的記憶體)|any|任何|>= `sizeInBytes`|`EINVAL`|未修改。|  
+|`NULL`|any|any|any|`EINVAL`|未修改。|  
+|非 `NULL` (指向有效的記憶體)|零|any|any|`EINVAL`|未修改。|  
+|非 `NULL` (指向有效的記憶體)|any|any|>= `sizeInBytes`|`EINVAL`|未修改。|  
   
  **安全性問題**  
   
@@ -96,17 +97,17 @@ errno_t _gcvt_s(
 ## <a name="remarks"></a>備註  
  `_gcvt_s` 函式會將浮點`value` 轉換為字元字串 (其中包括小數點和可能的正負號位元組)，並將字串儲存在 `buffer` 中。 `buffer` 應該大到足以容納轉換的值加上會自動予以附加的結束 Null 字元。 長度為 `_CVTBUFSIZE` 的緩衝區足可供任何浮點值使用。 如果使用的緩衝區大小為 `digits` + 1 ，則函式不會覆寫緩衝區結尾，因此請務必為這項作業提供足夠的緩衝區。 `_gcvt_s` 嘗試以十進位格式產生 `digits` 個數字。 如果不行，它會以指數格式產生 `digits` 個數字。 可於轉換中隱藏尾端零。  
   
- 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  此函式的偵錯版本會先用 0xFD 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_gcvt_s`|\<stdlib.h>|\<error.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -140,7 +141,7 @@ int main()
 Converted value: 1.2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   

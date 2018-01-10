@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 666f9c5cbb111e90b0902ab6ec0954355e5678dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f5c9fdb17811206732811db4e27006dc5e0ed84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-exit-or-return"></a>結束 exit 或 return
 當您呼叫**結束**或執行`return`陳述式從**主要**，靜態物件會初始化其反向順序終結。 下列範例將示範這類初始化和清除如何運作：  
@@ -77,5 +78,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [其他終止考量](../cpp/additional-termination-considerations.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tfopen
 - corecrt_wstdio/_wfopen
 - stdio/fopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - wfopen function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7d432ab9e8bdb6f386eb6fe4fbb24d218d6a2071
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 01558dfa6b28f10746c1487384bad44768b5877e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 開啟檔案。 這些函式已有更安全的版本可用，並會額外執行參數驗證且傳回錯誤碼；請參閱 [fopen_s、_wfopen_s](../../c-runtime-library/reference/fopen-s-wfopen-s.md)。  
@@ -95,7 +79,7 @@ FILE *_wfopen(
  如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
- `fopen` 函式會開啟 `filename`所指定的檔案。 根據預設，窄的 `filename` 字串會使用 ANSI 字碼頁 (CP_ACP) 解譯。 在 Windows 桌面應用程式中，這可以透過 [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) 函式變更為 OEM 字碼頁 (CP_OEMCP)。 您可以使用 [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) 函式決定要使用 ANSI 或系統預設的 OEM 字碼頁來解譯 `filename` 。 `_wfopen` 是 `fopen`的寬字元版本； `_wfopen` 的引數是寬字元字串。 否則 `_wfopen` 和 `fopen` 的行為相同。 只是使用 `_wfopen` ，對於檔案資料流中使用的編碼字元集沒有作用。  
+ `fopen` 函式會開啟 `filename`所指定的檔案。 根據預設，窄的 `filename` 字串會使用 ANSI 字碼頁 (CP_ACP) 解譯。 在 Windows 桌面應用程式中，這可以透過 [SetFileApisToOEM](https://msdn.microsoft.com/library/windows/desktop/aa365534\(v=vs.85\).aspx) 函式變更為 OEM 字碼頁 (CP_OEMCP)。 您可以使用 [AreFileApisANSI](https://msdn.microsoft.com/library/windows/desktop/aa363781\(v=vs.85\).aspx) 函式決定要使用 ANSI 或系統預設的 OEM 字碼頁來解譯 `filename` 。 `_wfopen` 是 `fopen`的寬字元版本； `_wfopen` 的引數是寬字元字串。 否則 `_wfopen` 和 `fopen` 的行為相同。 只是使用 `_wfopen`，對於檔案資料流中使用的編碼字元集沒有作用。  
   
  `fopen` 接受執行之時在檔案系統上為有效的路徑； `fopen` 接受 UNC 路徑以及包含對應的網路磁碟機的路徑，只要執行程式碼的系統在執行時有權存取共用或對應磁碟機即可。 當您建構 `fopen`的路徑時，請確定磁碟機、路徑或網路共用可以在執行環境中使用。 您可以使用正斜線 (/) 或反斜線 (\\) 作為路徑中的目錄分隔符號。  
   
@@ -207,8 +191,8 @@ FILE *_wfopen(
 |`a+`|`_O_RDWR &#124; _O_APPEND` (通常為 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(通常為 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (通常為 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|無|  
@@ -225,7 +209,7 @@ FILE *_wfopen(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`fopen`|\<stdio.h>|  
 |`_wfopen`|\<stdio.h> 或 \<wchar.h>|  
@@ -343,7 +327,7 @@ int main(int argc, char** argv)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   

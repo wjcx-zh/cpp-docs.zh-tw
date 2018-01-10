@@ -1,53 +1,53 @@
 ---
-title: "LINK 命令檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "命令檔 [C++]"
-  - "命令檔 [C++], LINK"
-  - "LINK 工具 [C++]"
-  - "LINK 工具 [C++], 命令列語法"
-  - "語法, LINK 命令檔"
-  - "文字檔, 將引數傳遞至 LINK"
+title: "LINK 命令檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- syntax, LINK command files
+- command files [C++]
+- LINK tool [C++]
+- text files, passing arguments to LINK
+- LINK tool [C++], command-line syntax
+- command files [C++], LINK
 ms.assetid: 7154511c-32b9-4e5b-a515-3922fa9de48e
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e585fb8fa11d4e3ffe8eff842baacb05f109754c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# LINK 命令檔
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-您可以將命令列引數以命令檔的形式傳遞給 LINK。  若要將命令檔指定給連結器，請使用下列語法：  
+# <a name="link-command-files"></a>LINK 命令檔
+您可以連結的命令檔的形式傳遞命令列引數。 若要指定至連結器的命令檔，請使用下列語法：  
   
 ```  
 LINK @commandfile  
 ```  
   
- `commandfile` 是文字檔的名稱。  在 @ 符號和檔案名稱之間不允許有空格或 Tab 字元。  沒有預設的副檔名；您必須指定完整的檔案名稱，包含副檔名。  這裡不能使用萬用字元。  您可以指定檔名的絕對或相對路徑。  LINK 不使用環境變數來搜尋檔案。  
+ `commandfile`是文字檔案的名稱。 沒有空格或定位點之間允許 at 符號 (@) 和檔案名稱。 沒有任何預設擴充功能。您必須指定完整的檔名，包括任何副檔名。 無法使用萬用字元。 您可以指定為絕對或相對路徑與檔名。 連結不會使用環境變數來搜尋檔案。  
   
- 在命令檔中，引數可以用空格或 Tab 字元 \(像在命令列上一樣\) 以及新行 \(Newline\) 字元來分隔。  
+ 在命令檔中，引數可分隔空格或定位字元 （因為在命令列） 並以新行字元。  
   
- 您可以在命令檔中指定全部或部分的命令列輸入。  您也可以在 LINK 命令中使用一個以上的命令檔。  LINK 會將命令檔輸入視同在命令列上同一位置所指定的命令一樣地接受它。  命令檔不能被巢狀 \(Nest\) 指定。  除非指定了 [\/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md) 選項，否則 LINK 會回應 \(Echo\) 命令檔的內容。  
+ 您可以指定全部或部分的命令列命令檔中。 您可以使用 LINK 命令中的多個命令檔。 連結會接受命令檔輸入，如同它已指定命令列上的位置。 不可為巢狀命令檔。 連結回應命令檔案的內容，除非[/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)指定選項。  
   
-## 範例  
- 下列建置 DLL 的命令會在不同的命令檔中傳遞目的檔 \(Object File\) 和程式庫，並且使用第三個命令檔來記載 \/EXPORTS 選項：  
+## <a name="example"></a>範例  
+ 下列命令以建置 DLL 會傳遞物件的檔案和程式庫的名稱不同的命令檔中，並會使用第三個命令的 /EXPORTS 選項規格的檔案：  
   
 ```  
 link /dll @objlist.txt @liblist.txt @exports.txt  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

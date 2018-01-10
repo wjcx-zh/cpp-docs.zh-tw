@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)  
   
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 注意事項`thread_local`規範：  
+
+- 動態初始化的執行緒區域變數 Dll 中可能無法正確初始化所有呼叫的執行緒上。 如需詳細資訊，請參閱[執行緒](thread.md)。
   
 -  `thread_local`規範可能會與結合`static`或`extern`。  
   
 -  您可以套用`thread_local`至資料宣告和定義;`thread_local`不能在函式宣告或定義。  
-  
--  使用`thread_local`可能會干擾[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)DLL 匯入。 
-  
--  在 XP 系統上`thread_local`可能無法正確運作如果 DLL 使用`thread_local`資料並透過動態載入`LoadLibrary`。  
   
 -  您只能在具有靜態儲存持續時間的資料項目上指定 `thread_local`。 這包括全域資料物件 (同時`static`和`extern`)、 區域靜態物件和類別的靜態資料成員。 任何本機變數宣告`thread_local`是隱含靜態，如果沒有其他儲存類別會提供; 換句話說，在區塊範圍`thread_local`相當於`thread_local static`。 
   
@@ -322,6 +321,6 @@ Destroying: Static I3
   
 - 最後，靜態區域變數 (例如 `I3`) 會在程式執行期間保留其值，不過會在程式終止時終結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
   
  [宣告和定義](../cpp/declarations-and-definitions-cpp.md)

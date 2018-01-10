@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a7e7fce463e7aabe6b27cb9e5fb3dbb36fd8983
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3fecd77e93c0c51a37d7363e6ec1472d157d6d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomapartment-class"></a>CComApartment 類別
 這個類別會提供用於管理執行緒集區的 EXE 模組中 appartment 支援。  
@@ -45,17 +46,17 @@ ms.lasthandoff: 10/24/2017
 class CComApartment
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComApartment::CComApartment](#ccomapartment)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComApartment::Apartment](#apartment)|將標示執行緒的起始位址。|  
 |[CComApartment::GetLockCount](#getlockcount)|傳回執行緒的目前鎖定計數。|  
@@ -64,7 +65,7 @@ class CComApartment
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|包含執行緒的識別項。|  
 |[CComApartment::m_hThread](#m_hthread)|包含執行緒的處理常式。|  
@@ -160,5 +161,5 @@ LONG Unlock();
   
  在執行緒上的鎖定計數是基於統計目的使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

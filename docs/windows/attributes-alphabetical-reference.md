@@ -15,16 +15,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 34019842273aa74fdbc2f891a4b7c9c7bcc5ee17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2420ba0d023272a1e6a66687f567bf881b8af35f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-alphabetical-reference"></a>依字母順序排列的屬性參考
 使用 Visual c + + 中的下列屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |[aggregatable](../windows/aggregatable.md)|表示控制項，可以由另一個控制彙總。|  
 |[aggregates](../windows/aggregates.md)|表示控制項彙總的目標類別。|  
@@ -132,7 +135,7 @@ ms.lasthandoff: 10/24/2017
 |[vi_progid](../windows/vi-progid.md)|指定版本無關的 ProgID 的表單。|  
 |[wire_marshal](../windows/wire-marshal.md)|指定用於傳輸，而不是應用程式特定資料類型的資料類型。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 屬性參考](../windows/cpp-attributes-reference.md)   
  [概念](../windows/attributed-programming-concepts.md)   
  [依群組分類的屬性](../windows/attributes-by-group.md)   

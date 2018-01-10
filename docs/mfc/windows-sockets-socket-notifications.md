@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37a45443efe1ad45e21c5729907135d0e037baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa9fb14dd09ace2d641fa69fa4cf39ccefeb3d01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets：通訊端告知
 本文說明通知中的函式的通訊端類別。 這些成員函式是在架構呼叫以通知您重要事件的通訊端物件的回呼函式。 通知函式會：  
@@ -68,6 +69,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [Windows Sockets：轉換字串](../mfc/windows-sockets-converting-strings.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)
 

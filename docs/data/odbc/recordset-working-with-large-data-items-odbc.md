@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ad1ba9120575840ac833a20061b3e1c5a547412
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bf82e1fabd45e9bccd63e4ba46068b75d2c2a0a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>資料錄集：使用大型的資料項目 (ODBC)
 本主題適用於 MFC ODBC 類別和 MFC DAO 類別。  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/24/2017
 > [!CAUTION]
 >  CLongBinary 物件不能做為函式呼叫中的參數。 此外，他們的實作，其會呼叫**:: SQLGetData**、 一定是可捲動的快照集的捲動效能會變慢。 這可能也會為 true 時使用**:: SQLGetData**自行擷取動態結構描述資料行呼叫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 取得 Sum 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)   
  [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

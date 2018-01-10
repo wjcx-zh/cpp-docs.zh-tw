@@ -16,14 +16,15 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74b3ecb413a80fcf0f6de98ee16b75f2d032b123
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec12e847eef72827e11700be322fd2a2ca309037
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimization-best-practices"></a>最佳化最佳作法
-本文件說明 Visual c + + 最佳化的一些最佳作法。 將會討論下列主題：  
+本文件說明 Visual c + + 最佳化的一些最佳作法。 我們將討論下列主題：  
   
 -   編譯器和連結器選項  
   
@@ -150,5 +151,5 @@ int myFunc() {...}
   
  最後，會擲回例外狀況的例外的情形。 一般的控制流程中使用例外狀況可能會讓效能變差。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [最佳化程式碼](../../build/reference/optimizing-your-code.md)

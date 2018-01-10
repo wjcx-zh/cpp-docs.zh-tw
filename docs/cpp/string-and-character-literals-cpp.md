@@ -26,11 +26,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37e5b86dfdef9c49e0e59c28d36ba4622238eced
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。  
@@ -152,14 +153,14 @@ char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
 wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'  
 ```  
   
- 八進位逸出序列是反斜線，後面接著最多 3 個八進位數字的序列。 可能包含超過三位數的八進位逸出序列，其行為會被視為 3 位數八進位序列，後面跟著的數字視為字元，其結果會令人大出意外。 例如：  
+ 八進位逸出序列是反斜線，後面接著最多 3 個八進位數字的序列。 可能包含超過三位數的八進位逸出序列，其行為會被視為 3 位數八進位序列，後面跟著的數字視為字元，其結果會令人大出意外。 例如:   
   
 ```cpp  
 char c1 = '\100';   // '@'  
 char c2 = '\1000';  // C4305, C4309, truncates to '0'   
 ```  
   
- 可能包含非八進位字元的逸出序列，一直到最後一個八進位的字元都會評估為八進位序列，後面則視為其餘字元。 例如：  
+ 可能包含非八進位字元的逸出序列，一直到最後一個八進位的字元都會評估為八進位序列，後面則視為其餘字元。 例如:   
   
 ```cpp  
 char c3 = '\009';   // '9'  
@@ -186,7 +187,7 @@ wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored  
 ```  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  反斜線字元 (\\) 時它放置在一行的結尾，行接續字元。 如果您想要讓反斜線字元顯示為字元常值，您必須輸入連續的兩個反斜線 (`\\`)。 如需行接續字元的詳細資訊，請參閱 [Phases of Translation](../preprocessor/phases-of-translation.md)。  
   
@@ -247,7 +248,7 @@ auto s4 = U"hello"; // const char32_t*
 ```  
   
 ### <a name="raw-string-literals-c11"></a>原始字串常值 (C++11)  
- 原始字串常值是 null 結束陣列 — 任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 C++11 常見問題集](http://go.microsoft.com/fwlink/?LinkId=401172)。  
+ 原始字串常值是 null 結束陣列 — 任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 C + + 11 常見問題集](http://go.microsoft.com/fwlink/p/?linkid=401172)。  
   
 ```cpp  
 // represents the string: An unescaped \ character  
@@ -398,7 +399,7 @@ const char16_t* s4 = u"😃 = \U0001F603 is :-D";
 const char32_t* s5 = U"😎 = \U0001F60E is B-)";  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Character Sets](../cpp/character-sets2.md)   
  [數值、 布林值和指標常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)   
  [使用者定義常值](../cpp/user-defined-literals-cpp.md)

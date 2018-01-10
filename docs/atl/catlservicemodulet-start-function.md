@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3eb7009e8092184effad5e1874297c8c04b213e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d4ee7899cda213bf8d8cfd529fd7609976e20d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlservicemoduletstart-function"></a>CAtlServiceModuleT::Start 函式
 執行服務時， **_tWinMain**呼叫**CAtlServiceModuleT::WinMain**，接著呼叫`CAtlServiceModuleT::Start`。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  失敗的**StartServiceCtrlDispatcher**連接到服務控制管理員 (SCM) 情況，可能表示不以服務執行程式。 在此情況下，程式會呼叫`CAtlServiceModuleT::Run`直接，讓程式可以做為本機伺服器執行。 如需為本機伺服器執行程式的詳細資訊，請參閱[偵錯秘訣](../atl/debugging-tips.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [服務](../atl/atl-services.md)   
  [CAtlServiceModuleT::Start](../atl/reference/catlservicemodulet-class.md#start)
 

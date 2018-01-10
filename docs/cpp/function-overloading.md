@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2486357766d2dbd9f5d4250e2d0fb38e02ba51bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-overloading"></a>函式多載
 C++ 允許在相同範圍內指定多個同名的函式。 這些函式稱為多載函式，將在＜多載＞中詳細說明。 多載函式可讓程式設計人員根據引數的類型和數目，為函式提供不同的語意。  
@@ -32,13 +33,13 @@ C++ 允許在相同範圍內指定多個同名的函式。 這些函式稱為多
   
 |函式宣告項目|是否用於多載？|  
 |----------------------------------|---------------------------|  
-|函式傳回類型|否|  
-|引數數目|是|  
-|引數類型|是|  
-|省略符號是否存在|是|  
+|函式傳回型別|否|  
+|引數數目|[是]|  
+|引數類型|[是]|  
+|省略符號是否存在|[是]|  
 |是否使用 `typedef` 名稱|否|  
 |未指定的陣列範圍|否|  
-|**const**或`volatile`（請參閱下文）|是|  
+|**const**或`volatile`（請參閱下文）|[是]|  
   
  雖然函式可以依傳回型別加以區別，但無法在這個基礎上多載。  `Const`或`volatile`僅適用於做為基礎如果它們要套用至類別中使用多載**這**類別，而不函式的傳回類型的指標。  換句話說，才適用多載**const**或`volatile`關鍵字接在宣告中函式的引數清單後面。  
   
@@ -341,7 +342,7 @@ LogToFile( udc );
   
  在上述範例中，使用者定義的轉換，**運算子 long**，會叫用來轉換`udc`輸入**長**。 如果沒有使用者定義的轉換輸入**長**已定義，轉換會有繼續進行，如下所示： 型別`UDC`會轉換為類型`int`使用使用者定義的轉換。 然後從類型的標準轉換`int`輸入**長**會套用至符合宣告中的引數。  
   
- 如果比對引數時需要任何使用者定義的轉換，則在評估最符合項目時不會使用標準轉換。 即使是有多個候選函式需要使用者定義轉換的情況也一樣，因為在這類情況下，函式會視為相等。 例如:  
+ 如果比對引數時需要任何使用者定義的轉換，則在評估最符合項目時不會使用標準轉換。 即使是有多個候選函式需要使用者定義轉換的情況也一樣，因為在這類情況下，函式會視為相等。 例如:   
   
 ```  
 // argument_matching2.cpp  
@@ -410,7 +411,7 @@ obj.name
   
  可以多載**new 運算子**單獨在根據傳回型別，特別是，根據指定的記憶體模型修飾詞。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
 -   成員函式無法單獨根據某一個函式為靜態，另一個為非靜態而多載。  
   
@@ -527,5 +528,5 @@ double Account::Deposit( double dAmount, char *szPassword )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式 (C++)](../cpp/functions-cpp.md)

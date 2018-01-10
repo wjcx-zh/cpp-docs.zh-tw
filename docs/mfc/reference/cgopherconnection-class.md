@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7405ec72a046a482f1b9bd8ddbdb806ba0be5e13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d669ebc954b73d848e22dc373704ab3434074274
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection 類別
 管理您與 Gopher 網際網路伺服器的連接。  
@@ -43,17 +44,17 @@ ms.lasthandoff: 10/24/2017
 class CGopherConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CGopherConnection::CGopherConnection](#cgopherconnection)|建構 `CGopherConnection` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CGopherConnection::CreateLocator](#createlocator)|建立[CGopherLocator](../../mfc/reference/cgopherlocator-class.md) gopher 伺服器上尋找檔案的物件。|  
 |[CGopherConnection::GetAttribute](#getattribute)|擷取 gopher 物件的屬性資訊。|  
@@ -229,7 +230,7 @@ CGopherFile* OpenFile(
 ### <a name="remarks"></a>備註  
  覆寫`dwContext`預設可設定的內容識別碼以您選擇的值。 內容識別碼是與這個特定作業的相關聯`CGopherConnection`所建立的物件及其[CInternetSession](../../mfc/reference/cinternetsession-class.md)物件。 若要傳回的值[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)來提供與識別此作業的狀態。 請參閱文章[網際網路第一個步驟： WinInet](../../mfc/wininet-basics.md)如需有關內容識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFtpConnection 類別](../../mfc/reference/cftpconnection-class.md)   

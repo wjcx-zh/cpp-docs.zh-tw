@@ -27,11 +27,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d93a25339802edc4f03b1f5e5cf03be0b2558dda
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd47afe55f1e2625dfe216afd6ef98cbcba7b21f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneyput-class"></a>money_put 類別
 此樣板類別描述可以做為地區設定 facet 的物件，以控制貨幣值轉換為類型 `CharType` 的序列。  
@@ -88,7 +89,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ##  <a name="do_put"></a>  money_put::do_put  
  虛擬函式，呼叫以將數字或字串轉換為代表貨幣值的字元序列。  
@@ -287,7 +288,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 ### <a name="remarks"></a>備註  
  此類型描述 [basic_string](../standard-library/basic-string-class.md) 範本類別的特製化，其中此類別的物件可儲存來自來源序列的元素序列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [facet 類別](../standard-library/locale-class.md#facet_class)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

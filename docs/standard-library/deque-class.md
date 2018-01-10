@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- deque
 - deque/std::deque
 - deque/std::deque::allocator_type
 - deque/std::deque::const_iterator
@@ -52,36 +50,61 @@ f1_keywords:
 - deque/std::deque::shrink_to_fit
 - deque/std::deque::size
 - deque/std::deque::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- deque class, about deque class
-- deque class
+- std::deque [C++]
+- std::deque [C++], allocator_type
+- std::deque [C++], const_iterator
+- std::deque [C++], const_pointer
+- std::deque [C++], const_reference
+- std::deque [C++], const_reverse_iterator
+- std::deque [C++], difference_type
+- std::deque [C++], iterator
+- std::deque [C++], pointer
+- std::deque [C++], reference
+- std::deque [C++], reverse_iterator
+- std::deque [C++], size_type
+- std::deque [C++], value_type
+- std::deque [C++], assign
+- std::deque [C++], at
+- std::deque [C++], back
+- std::deque [C++], begin
+- std::deque [C++], cbegin
+- std::deque [C++], cend
+- std::deque [C++], clear
+- std::deque [C++], crbegin
+- std::deque [C++], crend
+- std::deque [C++], emplace
+- std::deque [C++], emplace_back
+- std::deque [C++], emplace_front
+- std::deque [C++], empty
+- std::deque [C++], end
+- std::deque [C++], erase
+- std::deque [C++], front
+- std::deque [C++], get_allocator
+- std::deque [C++], insert
+- std::deque [C++], max_size
+- std::deque [C++], pop_back
+- std::deque [C++], pop_front
+- std::deque [C++], push_back
+- std::deque [C++], push_front
+- std::deque [C++], rbegin
+- std::deque [C++], rend
+- std::deque [C++], resize
+- std::deque [C++], shrink_to_fit
+- std::deque [C++], size
+- std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6d3f4d5eee3da48a8503b18695f68db91c22d391
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 58f66f264e5586b2cfbc0125329be4dec34298d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-class"></a>deque 類別
 以線性排列方式排列指定類型的項目，並且像向量一樣允許快速隨機存取任何項目，可有效率地在容器背面插入和刪除。 不過，與向量不同的是，`deque` 類別也支援在此容器前面有效率的插入和刪除。  
@@ -1014,7 +1037,7 @@ iterator emplace(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`_Where`|第一個元素插入 [deque](../standard-library/deque-class.md) 的位置。|  
 |`val`|插入 `deque` 的項目值。|  
   
@@ -1077,7 +1100,7 @@ void emplace_back(Type&& val);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|新增至 [deque](../standard-library/deque-class.md) 結尾的元素。|  
   
 ### <a name="example"></a>範例  
@@ -1127,7 +1150,7 @@ void emplace_front(Type&& val);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|新增至 [deque](../standard-library/deque-class.md) 開頭的元素。|  
   
 ### <a name="example"></a>範例  
@@ -1442,7 +1465,7 @@ IList);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Where`|第一個元素插入 deque 的位置。|  
 |`Val`|插入 deque 的元素值。|  
 |`Count`|插入 deque 的元素數目。|  
@@ -1559,7 +1582,7 @@ deque& operator=(deque&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|此 deque 可提供新的內容。|  
   
 ### <a name="remarks"></a>備註  
@@ -1628,7 +1651,7 @@ typedef typename Allocator::pointer pointer;
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。 [迭代器](#iterator)通常用來存取 deque 元素。  
+ **pointer** 類型可用來修改項目的值。 [迭代器](#iterator)通常用來存取 deque 元素。  
   
 ##  <a name="pop_back"></a>  deque::pop_back  
  刪除 deque 結尾的元素。  
@@ -1742,7 +1765,7 @@ void push_front(Type&& val);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|新增至 deque 開頭的元素。|  
   
 ### <a name="remarks"></a>備註  
@@ -2243,8 +2266,7 @@ int main( )
 44  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

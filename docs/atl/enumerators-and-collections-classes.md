@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be97833c43f28edbf07f28ead507dc778f0ab166
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bf13790a6ccd268f5b3d0e9486091ef67f673cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enumerators-and-collections-classes"></a>列舉值和集合類別
 下列類別會提供支援 COM 集合和列舉型別：  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相關文章  
  [ATL 集合和列舉程式](../atl/atl-collections-and-enumerators.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

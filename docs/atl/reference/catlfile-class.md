@@ -30,11 +30,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 557c0451f0c33e13a8fb572f77c387b43daea6f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a66e697a3599e7bfeef0f1d5d147e19b668222ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfile-class"></a>CAtlFile 類別
 這個類別會提供 Windows 的精簡型包裝函式的檔案處理應用程式開發介面。  
@@ -48,17 +49,17 @@ ms.lasthandoff: 10/24/2017
 class CAtlFile : public CHandle
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlFile::CAtlFile](#catlfile)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlFile::Create](#create)|呼叫這個方法來建立或開啟檔案。|  
 |[CAtlFile::Flush](#flush)|呼叫這個方法來清除檔案緩衝區，並造成所有緩衝的資料全部寫入檔案。|  
@@ -74,7 +75,7 @@ class CAtlFile : public CHandle
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlFile::m_pTM](#m_ptm)|指標`CAtlTransactionManager`物件|  
   
@@ -405,7 +406,7 @@ HRESULT Write(
 ### <a name="remarks"></a>備註  
  前三個表單呼叫[WriteFile](http://msdn.microsoft.com/library/windows/desktop/aa365747)，最後一個呼叫[WriteFileEx](http://msdn.microsoft.com/library/windows/desktop/aa365748)將資料寫入檔案。 使用[CAtlFile::Seek](#seek)移動檔案指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [跑馬燈範例](../../visual-cpp-samples.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [CHandle 類別](../../atl/reference/chandle-class.md)

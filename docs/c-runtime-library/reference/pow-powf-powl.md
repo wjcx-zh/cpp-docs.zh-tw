@@ -44,11 +44,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43156626c92160003a5ef0d5364b5a006df5141e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16a0d7beefff97eca04e5f94ab720cda4728935f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 計算自乘至 `y` 的乘冪的 `x`。  
@@ -109,7 +110,7 @@ long double powl(
 ## <a name="remarks"></a>備註  
  `pow` 無法辨識大於 2<sup>64</sup> 的整數浮點值 (例如 `1.0E100`)。  
   
- `pow` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的相關資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
+ `pow` 有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的相關資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
  因為 C++ 允許多載，所以您可以呼叫 `pow` 的各種多載。 在 C 程式中，`pow` 會一律採用兩個雙精確度值並傳回一個雙精確度值。  
   
@@ -117,7 +118,7 @@ long double powl(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`pow`, `powf`, `powl`|\<math.h>|  
   
@@ -149,7 +150,7 @@ int main( void )
 2.0 to the power of 3.0 is 8.0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [exp、 expf，總管](../../c-runtime-library/reference/exp-expf.md)   
  [log、logf、log10、log10f](../../c-runtime-library/reference/log-logf-log10-log10f.md)   

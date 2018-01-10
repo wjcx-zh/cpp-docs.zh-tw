@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb16beb6f2ddb07f57fe9f35c67552348cac56cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b3123a722e0e95119a4b04f5c060bd947b987cdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 之後 DLL 延遲載入 Helper 函式的變更
 如果您電腦上有多個版本的 Visual c + +，或如果您定義自己的 helper 函式，您可能會受到變更 DLL 延遲載入 helper 函式。 例如:   
@@ -59,5 +60,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>載入延遲載入 DLL 的所有匯入  
  連結器可以從您指定要延遲載入 DLL 載入所有匯入。 請參閱[載入延遲載入 dll 的所有匯入](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [了解協助協助程式函式](understanding-the-helper-function.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8be61044a9cc6883eab74eb8093b79ea84aacc60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24b0fbdc5ab68319704fb59746862384198f232b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collection-classes"></a>ATL 集合類別
 ATL 提供許多類別來儲存和存取資料。 您決定使用哪一個類別取決於許多因素，包括：  
@@ -89,8 +90,8 @@ ATL 提供許多類別來儲存和存取資料。 您決定使用哪一個類別
   
 |圖形|排序|編製索引|插入<br /><br /> 項目|搜尋<br /><br /> 指定的項目|重複項目<br /><br /> 項目|  
 |-----------|--------------|--------------|---------------------------|--------------------------------------|-----------------------------|  
-|清單|是|否|Fast （常數時間）|緩慢 o （n）|是|  
-|陣列|是|依 int （常數時間）|但如果在結尾插入，可以在哪一個案例的常數時間緩慢 o （n）|緩慢 o （n）|是|  
+|清單|[是]|否|Fast （常數時間）|緩慢 o （n）|[是]|  
+|陣列|[是]|依 int （常數時間）|但如果在結尾插入，可以在哪一個案例的常數時間緩慢 o （n）|緩慢 o （n）|[是]|  
 |對應|否|依索引鍵 （常數時間）|Fast （常數時間）|Fast （常數時間）|否 (索引鍵) 是 (值)|  
 |紅黑對應|是 （依索引鍵）|依索引鍵 O (記錄 n)|快速 O (記錄 n)|快速 O (記錄 n)|否|  
 |紅黑多重對應|是 （依索引鍵）|依索引鍵 O(log n) （每個索引鍵的多個值）|快速 O (記錄 n)|快速 O (記錄 n)|是 （每個索引鍵的多個值）|  
@@ -125,7 +126,7 @@ ATL 提供許多類別來儲存和存取資料。 您決定使用哪一個類別
   
 -   [跑馬燈範例](../visual-cpp-samples.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [集合類別](../atl/collection-classes.md)
 

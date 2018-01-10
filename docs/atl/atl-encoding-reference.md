@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd0f4b448de3fcaabe33822c0d8b1ee834260609
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a97809fefdc0a5e6e7d90e7b62bbee83f28bfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-encoding-reference"></a>ATL 編碼方式參考
 在一般的網際網路標準，例如 uuencode 十六進位、 範圍和 UTF8 編碼方式會受到 atlenc.h 中找到的程式碼。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
 |[UUEncode](reference/atl-text-encoding-functions.md#uuencode)|呼叫此函式可對一些資料進行 UUENCODE 編碼。|  
 |[UUEncodeGetRequiredLength](reference/atl-text-encoding-functions.md#uuencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)
 

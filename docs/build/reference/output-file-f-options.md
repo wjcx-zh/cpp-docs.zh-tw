@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b3411fd9b8c9da13138f025bbc2a60ce8c73de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa7bdc75bd994b5220d4f6fbbc0d4defeb68c691
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-f-options"></a>輸出檔 (/F) 選項
 輸出檔選項建立，或重新命名輸出檔案。 它們會影響在 CL 環境變數，在命令列，或任何指令檔中指定的所有 C 或 c + + 原始程式檔。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [/Fx （合併插入的程式碼）](../../build/reference/fx-merge-injected-code.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

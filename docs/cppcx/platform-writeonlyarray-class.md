@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 32c3fc0c59f94ca35d80ebfd4f16330517399e72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d7300247c32c5f18190c6a5a1b6469e4c8173be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 類別
 表示一維陣列。當呼叫端傳遞陣列讓方法填滿其中元素時，就會將這個陣列當做輸入參數來傳遞。  
@@ -38,12 +39,12 @@ ms.lasthandoff: 10/24/2017
 private ref class WriteOnlyArray<T, 1>  
 ```  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
  這些方法的存取範圍都是 internal，也就是說，您只能在 C++ 應用程式或元件內存取這些方法。  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 
 |[Writeonlyarray:: Begin](#begin)|指向陣列的第一個元素的迭代器。 |  
@@ -190,6 +191,6 @@ T& set(
  如需如何解譯 HRESULT 值的詳細資訊，請參閱[結構 COM 錯誤碼的](http://go.microsoft.com/fwlink/p/?LinkId=262045)。  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)   
  [在 c + + 中建立 Windows 執行階段元件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)

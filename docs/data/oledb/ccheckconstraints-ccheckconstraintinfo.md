@@ -1,70 +1,73 @@
 ---
-title: "CCheckConstraints、CCheckConstraintInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCheckConstraintInfo"
-  - "CHECK_CONSTRAINTS"
-  - "m_szCatalog"
-  - "CCheckConstraints"
-  - "CONSTRAINT_NAME"
-  - "m_szSchema"
-  - "CHECK_CLAUSE"
-  - "m_szCheckClause"
-  - "m_szName"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_SCHEMA"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCheckConstraintInfo 參數類別"
-  - "CCheckConstraints typedef 類別"
-  - "CHECK_CLAUSE"
-  - "CHECK_CONSTRAINTS"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "DESCRIPTION 類別資料成員"
-  - "m_szCatalog"
-  - "m_szCheckClause"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szSchema"
+title: "CCheckConstraints、 CCheckConstraintInfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCheckConstraintInfo
+- CHECK_CONSTRAINTS
+- m_szCatalog
+- CCheckConstraints
+- CONSTRAINT_NAME
+- m_szSchema
+- CHECK_CLAUSE
+- m_szCheckClause
+- m_szName
+- CONSTRAINT_CATALOG
+- CONSTRAINT_SCHEMA
+dev_langs: C++
+helpviewer_keywords:
+- DESCRIPTION class data member
+- m_szSchema
+- CONSTRAINT_CATALOG
+- m_szCatalog
+- CONSTRAINT_NAME
+- CONSTRAINT_SCHEMA
+- CCheckConstraints typedef class
+- CHECK_CLAUSE
+- m_szName
+- m_szDescription
+- CCheckConstraintInfo parameter class
+- m_szCheckClause
+- CHECK_CONSTRAINTS
 ms.assetid: e53e79a5-01e5-42b7-aa8c-164aec94b011
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0741db31ba0b509a1ed2788bace5d99f8eed4faf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CCheckConstraints、CCheckConstraintInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 typedef 類別 **CCheckConstraints** 實作它的參數類別 **CCheckConstraintInfo**。  
+# <a name="ccheckconstraints-ccheckconstraintinfo"></a>CCheckConstraints、CCheckConstraintInfo
+呼叫 typedef 類別**CCheckConstraints**來實作其參數類別**CCheckConstraintInfo**。  
   
-## 備註  
- 請參閱 [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。如需使用 typedef 類別的詳細資訊。  
+## <a name="remarks"></a>備註  
+ 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會識別檢查條件約束， \(定義在資料庫目錄中，由指定使用者所擁有。  檢查條件約束可指定在資料表中為一或多個資料行所接受的資料值或格式。  
+ 這個類別會識別定義檢查條件約束，在目錄中，指定使用者所擁有。 檢查條件約束指定的資料值或資料表中的一個或多個資料行中可接受的格式。  
   
- 下表列出類別資料成員和其對應的 OLE DB 資料行。  請參閱《 *OLE DB 程式設計人員參考》的*[CHECK\_CONSTRAINTS 資料](https://msdn.microsoft.com/en-us/library/ms712845.aspx) 有關結構描述和資料列的詳細資訊。  
+ 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[CHECK_CONSTRAINTS 資料列集](https://msdn.microsoft.com/en-us/library/ms712845.aspx)中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
-|----------|----------------|  
-|m\_szCatalog|CONSTRAINT\_CATALOG|  
-|m\_szSchema|CONSTRAINT\_SCHEMA|  
-|m\_szName|CONSTRAINT\_NAME|  
-|m\_szCheckClause|CHECK\_CLAUSE|  
-|m\_szDescription|DESCRIPTION|  
+|------------------|--------------------|  
+|m_szCatalog|CONSTRAINT_CATALOG|  
+|m_szSchema|CONSTRAINT_SCHEMA|  
+|m_szName|CONSTRAINT_NAME|  
+|m_szCheckClause|CHECK_CLAUSE|  
+|m_szDescription|DESCRIPTION|  
   
-## 需求  
- **Header:** atldbsch.h  
+## <a name="requirements"></a>需求  
+ **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

@@ -39,17 +39,18 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d9a7edb225afeba4b7d091db9a7a25103361913
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c51e9c4247a77d16fe8621ff98b7f3a50f571e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe、_wexecvpe
 載入並執行新的子處理序。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -79,7 +80,7 @@ intptr_t _wexecvpe(
 ## <a name="return-value"></a>傳回值  
  如果成功的話，這些函式不會傳回呼叫處理序。 傳回值-1 表示錯誤，在此情況下`errno`設定全域變數。  
   
-|`errno` 值|說明|  
+|`errno` 值|描述|  
 |-------------------|-----------------|  
 |`E2BIG`|引數和環境設定所需的空間超過 32 KB。|  
 |`EACCES`|指定的檔案具有鎖定或共用違規。|  
@@ -97,7 +98,7 @@ intptr_t _wexecvpe(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|選擇性標頭|  
+|功能|必要的標頭|選擇性標頭|  
 |--------------|---------------------|---------------------|  
 |`_execvpe`|\<process.h>|\<errno.h>|  
 |`_wexecvpe`|\<process.h> 或 \<wchar.h>|\<errno.h>|  
@@ -107,8 +108,8 @@ intptr_t _wexecvpe(
 ## <a name="example"></a>範例  
  請參閱 [_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)中的範例。  
   
-## <a name="see-also"></a>另請參閱  
- [ 和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>請參閱  
+ [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [atexit](../../c-runtime-library/reference/atexit.md)   

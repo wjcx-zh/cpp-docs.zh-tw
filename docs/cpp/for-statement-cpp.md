@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- for keyword [C++]
+dev_langs: C++
+helpviewer_keywords: for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6b958bba842a5dfdbe61415c6ad81aab7a8b4110
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C++)
 重複執行陳述式，直到條件變成 false。 範圍架構 for 陳述式上的資訊，請參閱[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。  
@@ -41,7 +38,7 @@ for ( init-expression ; cond-expression ; loop-expression )
   
 ### <a name="for-loop-elements"></a>for 迴圈項目  
   
-|語法名稱|何時執行|說明|  
+|語法名稱|何時執行|描述|  
 |-----------------|-------------------|-----------------|  
 |`init-expression`|之前的任何其他項目**如**陳述式，`init-expression`執行一次。 之後就會將控制項傳遞給 `cond-expression`。|通常用來初始迴圈索引。 它可能包含運算式或宣告。|  
 |`cond-expression`|在執行 `statement` 的每個反覆項目之前，包括第一個反覆項目。 除非 `statement` 判斷值為 true (非零)，否則不會執行 `cond-expression`。|判斷值為整數類型的運算式或具有整數類型明確轉換的類別類型。 通常用來測試迴圈終止準則。|  
@@ -74,7 +71,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` 和 `loop-expression` 可以包含以逗號分隔的多個陳述式。 例如：  
+ `init-expression` 和 `loop-expression` 可以包含以逗號分隔的多個陳述式。 例如:   
   
 ```cpp  
 #include <iostream>  
@@ -156,7 +153,7 @@ int main(){
   
  此範例更精確地模擬在 `for` 迴圈中所宣告之變數的標準行為，也就是要求在 `for` 迴圈中宣告的變數於迴圈結束後超出範圍。 若變數是在 `for` 迴圈中宣告的，編譯器會在內部將它升級至 `for` 迴圈封閉範圍中的區域變數，即使已經有相同名稱的區域變數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [反覆運算陳述式](../cpp/iteration-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [while 陳述式 (C++)](../cpp/while-statement-cpp.md)   

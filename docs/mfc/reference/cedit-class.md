@@ -105,11 +105,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b37610531a1c554efa6a8f745730efb8a06e6673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4418f20b267218b761dd6637762df1b420e9ac6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cedit-class"></a>CEdit Class
 提供 Windows 編輯控制項的功能。  
@@ -120,17 +121,17 @@ ms.lasthandoff: 10/24/2017
 class CEdit : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CEdit::CEdit](#cedit)|建構`CEdit`控制項物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CEdit::CanUndo](#canundo)|決定是否可以復原的編輯控制項作業。|  
 |[CEdit::CharFromPos](#charfrompos)|擷取最接近指定位置的字元的行和字元索引。|  
@@ -448,7 +449,7 @@ CString GetCueBanner() const;
  [輸出] `lpszText`  
  包含提示文字的字串指標。  
   
- [in] `cchText`  
+ [輸入] `cchText`  
  可以接受的字元數。 這個數目包括終止`NULL`字元。  
   
 ### <a name="return-value"></a>傳回值  
@@ -917,10 +918,10 @@ BOOL SetCueBanner(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszText`  
+ [輸入] `lpszText`  
  包含要編輯控制項中顯示提示的字串指標。  
   
- [in] `fDrawWhenFocused`  
+ [輸入] `fDrawWhenFocused`  
  如果`false`，當使用者在編輯控制項中按一下，並會將焦點置於控制項不會繪製提示橫幅。  
   
  如果`true`，即使當焦點在控制項繪製提示橫幅。 當使用者開始在控制項中輸入時，就會消失提示橫幅。  
@@ -981,8 +982,8 @@ void SetHighlight(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `ichStart`|要反白顯示的文字範圍的第一個字元的以零為起始的索引。|  
-|[in] `ichEnd`|要反白顯示的文字範圍的最後一個字元的以零為起始的索引。|  
+|[輸入] `ichStart`|要反白顯示的文字範圍的第一個字元的以零為起始的索引。|  
+|[輸入] `ichEnd`|要反白顯示的文字範圍的最後一個字元的以零為起始的索引。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會傳送[EM_SETHILITE](http://msdn.microsoft.com/library/windows/desktop/bb761643) Windows SDK 中所述的訊息。  
@@ -1245,10 +1246,10 @@ BOOL ShowBalloonTip(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pEditBalloonTip`|指標[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)結構描述之氣球提示。|  
-|[in] `lpszTitle`|包含的汽球提示標題的 Unicode 字串指標。|  
-|[in] `lpszText`|包含氣球提示文字的 Unicode 字串指標。|  
-|[in] `ttiIcon`|`INT`指定圖示與氣球提示的型別。 預設值是 `TTI_NONE`。 如需詳細資訊，請參閱`ttiIcon`隸屬[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)結構。|  
+|[輸入] `pEditBalloonTip`|指標[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)結構描述之氣球提示。|  
+|[輸入] `lpszTitle`|包含的汽球提示標題的 Unicode 字串指標。|  
+|[輸入] `lpszText`|包含氣球提示文字的 Unicode 字串指標。|  
+|[輸入] `ttiIcon`|`INT`指定圖示與氣球提示的型別。 預設值是 `TTI_NONE`。 如需詳細資訊，請參閱`ttiIcon`隸屬[EDITBALLOONTIP](http://msdn.microsoft.com/library/windows/desktop/bb775466)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1284,7 +1285,7 @@ BOOL Undo();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CEdit#25](../../mfc/reference/codesnippet/cpp/cedit-class_27.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)   
  [MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

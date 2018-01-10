@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _tasctime
 - asctime
 - _wasctime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - asctime function
 - tasctime function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 91f0ffd5b02f9e8bc34604683c6274ec0f2c28b3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 377b785b2803dc7cce09e55baeb31323bf83b4b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asctime-wasctime"></a>asctime、_wasctime
 將 `tm` 時間結構轉換成字元字串。 這些函式有更安全的版本可用，請參閱 [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)。  
@@ -92,7 +76,7 @@ wchar_t *_wasctime(
   
 |timeptr 成員|值|  
 |--------------------|-----------|  
-|`tm_hour`|小時午夜 (0-23)|  
+|`tm_hour`|午夜 (0-23) 的小時|  
 |`tm_isdst`|若日光節約時間已生效則為正值；如果日光節約時間沒有作用則為 0。如果日光節約時間的狀態是未知，則為負值。 C 執行階段程式庫會在實作日光節約時間 (DST) 的計算時，使用美國的規則。|  
 |`tm_mday`|月份 (1-31) 天數|  
 |`tm_min`|小時 (0-59) 之後的分鐘|  
@@ -102,7 +86,7 @@ wchar_t *_wasctime(
 |`tm_yday`|年 (0 365; 中的日年 1 月 1 = 0)|  
 |`tm_year`|年份 (目前年份減去 1900 年)|  
   
- 已轉換的字元字串也會根據本機時區設定調整。 如需設定本機時間的資訊，請參閱 [time](../../c-runtime-library/reference/time-time32-time64.md)、[_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 函式；如需定義時區環境及全域變數的資訊，請參閱 [_tzset](../../c-runtime-library/reference/tzset.md) 函式。  
+ 已轉換的字元字串也會根據當地時區設定調整。 如需設定本機時間的資訊，請參閱 [time](../../c-runtime-library/reference/time-time32-time64.md)、[_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 函式；如需定義時區環境及全域變數的資訊，請參閱 [_tzset](../../c-runtime-library/reference/tzset.md) 函式。  
   
  `asctime` 所產生的字串結果剛好包含 26 個字元，且具有以下格式 `Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 `asctime` 使用單一的靜態配置緩衝區來容納傳回的字串。 每次呼叫此函式都會導致先前呼叫結果的終結。  
   
@@ -118,7 +102,7 @@ wchar_t *_wasctime(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`asctime`|\<time.h>|  
 |`_wasctime`|\<time.h> 或 \<wchar.h>|  
@@ -154,7 +138,7 @@ int main( void )
 Current date and time: Sun Feb 03 11:38:58 2002  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   
  [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

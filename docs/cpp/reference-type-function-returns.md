@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function return types [C++], reference type
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1cadf01b1af0bac4fb76d0146a51b789b5ddc6e5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a3a5d0b299b2bc38c95420515ab49eabd1268305
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-type-function-returns"></a>參考類型函式傳回
 函式可宣告為傳回參考類型。 進行此類宣告有兩個原因：  
@@ -103,7 +101,7 @@ y = 9
   
 -   類別中的宣告  
   
--   函式引數或函式傳回類型的宣告  
+-   函式引數或函式傳回型別的宣告  
   
 ## <a name="caution-returning-address-of-local"></a>傳回區域變數位址注意事項  
  如果您宣告區域範圍的物件，則會在傳回函式時終結該物件。 如果函式傳回該物件的參考，則呼叫端嘗試使用 null 參考時，該參考可能會在執行階段造成存取違規。  
@@ -120,5 +118,5 @@ Foo& GetFoo()
   
  編譯器會發出警告，以在此情況下： `warning C4172: returning address of local variable or temporary`。 在簡單程式中，如果呼叫端在覆寫記憶體位置之前存取參考，則可能偶爾不會發生存取違規。 這純粹只是幸運。 請留意警告。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [參考](../cpp/references-cpp.md)

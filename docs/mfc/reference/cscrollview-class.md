@@ -39,11 +39,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2fc453acf01b978a7cc9ba7eb569ff1775f6c11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc0ef44371a4ade68e80f3169778b9e867c15b17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cscrollview-class"></a>CScrollView 類別
 A [CView](../../mfc/reference/cview-class.md)具有捲動功能。  
@@ -58,13 +59,13 @@ class CScrollView : public CView
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CScrollView::CScrollView](#cscrollview)|建構 `CScrollView` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CScrollView::CheckScrollBars](#checkscrollbars)|指出捲動檢視是否有水平和垂直捲軸。|  
 |[CScrollView::FillOutsideRect](#filloutsiderect)|填滿區域的捲動區域的外面的檢視。|  
@@ -348,7 +349,7 @@ void SetScrollSizes(
   
  [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 DIBLOOK](../../visual-cpp-samples.md)   
  [CView 類別](../../mfc/reference/cview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5c056907716f95a82fde01847485837fcba96f66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37d77fdc4df7d2e7239b8bba652d8cf8f4bbc997
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-an-import-library-and-export-file"></a>使用匯入程式庫和匯出檔案
 當程式 （可執行檔或 DLL） 將匯出到另一個程式，它也會從匯入，或如果兩個以上的程式來匯出和匯入到彼此，來連結這些程式的命令必須配合循環匯出。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/24/2017
   
  最後，將您開始使用程式的連結。 LINK 命令中，在指定的物件和程式、 程式庫建立程式，以及匯入程式庫的.exp 檔案的程式庫或文件庫的程式所使用的匯出。 若要繼續此範例，ONE.dll 連結命令包含 ONE.exp 和 TWO.lib，以及物件，以及移入 ONE.dll 文件庫。 未指定.def 檔或 /EXPORT 規格中連結的命令。不需要用到這些，因為匯出定義包含.exp 檔案中。 當您使用.exp 檔，連結並不會建立匯入程式庫，因為它會假設一個.exp 檔建立時建立。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [與匯入程式庫和匯出檔案一起使用](../../build/reference/working-with-import-libraries-and-export-files.md)

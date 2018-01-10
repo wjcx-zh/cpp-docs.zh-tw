@@ -1,51 +1,52 @@
 ---
-title: "Platform::Metadata::FlagsAttribute 屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Metadata::FlagsAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Metadata::FlagsAttribute 屬性"
+title: "Platform::Metadata::FlagsAttribute 屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Metadata::FlagsAttribute
+dev_langs: C++
+helpviewer_keywords: Platform::Metadata::FlagsAttribute Attribute
 ms.assetid: 56f4a191-cc81-4742-aff8-bd2219c0735c
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d6679fbf59c279fe7abd4bffb8fca9fcde0b8867
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Metadata::FlagsAttribute 屬性
+# <a name="platformmetadataflagsattribute-attribute"></a>Platform::Metadata::FlagsAttribute 屬性
 指出可將列舉視為位元欄位，也就是一組旗標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
   
 public ref class Flags abstract : Attribute  
 ```  
   
-## 繼承  
- [Platform::Object](../cppcx/object-object-constructor.md)  
+## <a name="inheritance"></a>繼承  
+ [Platform::Object](../cppcx/platform-object-class.md)   
   
  [Platform::Metadata::Attribute](../cppcx/platform-metadata-attribute-attribute.md)  
   
-## 備註  
+### <a name="remarks"></a>備註  
   
-## 需求  
- **最低支援用戶端：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>需求  
+ **最低支援用戶端：** Windows 8  
   
- **最低支援伺服器：** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **最低支援伺服器：** Windows Server 2012  
   
- **命名空間：**Platform::Metadata  
+ **命名空間：** Platform::Metadata  
   
- **中繼資料：**platform.winmd  
+ **中繼資料：** platform.winmd  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform::Metadata 命名空間](../cppcx/platform-metadata-namespace.md)

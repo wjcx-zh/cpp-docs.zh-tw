@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,21 +14,19 @@ f1_keywords:
 - ATLCOM/ATL::ICollectionOnSTLImpl::getcount
 - ATLCOM/ATL::ICollectionOnSTLImpl::get_Item
 - ATLCOM/ATL::ICollectionOnSTLImpl::m_coll
-dev_langs:
-- C++
-helpviewer_keywords:
-- ICollectionOnSTLImpl class
+dev_langs: C++
+helpviewer_keywords: ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 75581c8237dae6bc07ca239ac57ef327cd78e540
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: b1c2debc93f6503bf7928ed789345a50c281804d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl 類別
 這個類別會提供集合類別所使用的方法。  
@@ -159,4 +156,3 @@ CollType m_coll;
 ## See Also  
  [ATLCollections Sample](../../visual-cpp-samples.md)   
  [Class Overview](../../atl/atl-class-overview.md)
-

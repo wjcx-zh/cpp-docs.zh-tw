@@ -1,51 +1,50 @@
 ---
-title: "VCPROFILE_ALLOC_SCALE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VCPROFILE_ALLOC_SCALE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VCPROFILE_ALLOC_SCALE 環境變數"
+title: "VCPROFILE_ALLOC_SCALE |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VCPROFILE_ALLOC_SCALE
+dev_langs: C++
+helpviewer_keywords: VCPROFILE_ALLOC_SCALE environment variable
 ms.assetid: 5cb5ce27-f9b8-489b-b46c-d6e9bcab2d34
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b7b441f41106544633bd691c409fa04c989146f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# VCPROFILE_ALLOC_SCALE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-修改配置給存放分析資料的記憶體量。  
+# <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+修改保留設定檔的資料配置的記憶體的數量。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 VCPROFILE_ALLOC_SCALE=scale_value  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `scale_value`  
- 您要用來執行測試案例之記憶體量的小數位數值。預設值為 1。  
+ 您想要執行測試案例的記憶體容量的小數位數值。  預設為 1。  
   
-## 備註  
- 在極為少見的情形下，執行測試案例時支援收集分析資料的可用記憶體量會有不足。此時，您可以使用 `VCPROFILE_ALLOC_SCALE` 增加記憶體量。  
+## <a name="remarks"></a>備註  
+ 在罕見的情況下，則不會有記憶體不足，無法支援執行測試案例時，收集分析資料。  在這些情況下，您可以增加使用的記憶體數量`VCPROFILE_ALLOC_SCALE`。  
   
- 如果您在測試回合期間接到錯誤訊息，表示您的記憶體量不足，請指定較大的值給 `VCPROFILE_ALLOC_SCALE`，直到測試回合在未發生記憶體不足的錯誤下完成為止。  
+ 如果您收到錯誤訊息表示您有記憶體不足，無法在測試回合期間，較大值指派給`VCPROFILE_ALLOC_SCALE`，直到執行完成，但沒有記憶體不足錯誤測試。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 set VCPROFILE_ALLOC_SCALE=2  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [特性指引最佳化的環境變數](../../build/reference/environment-variables-for-profile-guided-optimizations.md)

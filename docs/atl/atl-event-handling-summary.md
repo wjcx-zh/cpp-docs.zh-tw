@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c4aec5679ae7a880bd5305037e880de9ff7d93a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb863f334c00569ef849167cc39d365e0588f666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-event-handling-summary"></a>ATL 事件處理摘要
 一般情況下，處理 COM 事件是相當簡單的程序。 有三個主要步驟：  
@@ -34,9 +35,9 @@ ms.lasthandoff: 10/24/2017
   
 |衍生自|適用於介面類型|您必須實作所有方法 *|在執行階段需要型別程式庫|  
 |-----------------|---------------------------------|---------------------------------------------|-----------------------------------------|  
-|介面|Vtable|是|否|  
-|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|雙重|是|是|  
-|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|否|是|  
+|介面|Vtable|[是]|否|  
+|[IDispatchImpl](../atl/reference/idispatchimpl-class.md)|雙重|[是]|[是]|  
+|[IDispEventImpl](../atl/reference/idispeventimpl-class.md)|Dispinterface|否|[是]|  
 |[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)|Dispinterface|否|否|  
   
  \*當使用 ATL 支援類別，您永遠不會實作所需**IUnknown**或`IDispatch`方法以手動方式。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
 |[CComCompositeControl::AdviseSinkMap(TRUE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|[CComCompositeControl::AdviseSinkMap(FALSE)](../atl/reference/ccomcompositecontrol-class.md#advisesinkmap)|複合控制項中的 ActiveX 控制項 |否 |`CComCompositeControl::AdviseSinkMap`建議的所有項目在事件接收對應。 相同的函式取消通知的項目。 這個方法就會呼叫自動`CComCompositeControl`類別。 |  
 |[CAxDialogImpl::AdviseSinkMap(TRUE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|[CAxDialogImpl::AdviseSinkMap(FALSE)](../atl/reference/caxdialogimpl-class.md#advisesinkmap)|在對話方塊中的 ActiveX 控制項 |否 |`CAxDialogImpl::AdviseSinkMap`建議和取消通知對話方塊資源中的所有 ActiveX 控制項。 這會為您自動完成。 |  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件處理](../atl/event-handling-and-atl.md)   
  [支援 IDispEventImpl](../atl/supporting-idispeventimpl.md)
 

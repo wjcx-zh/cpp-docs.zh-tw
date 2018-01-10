@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c41ed94dcaee6632c3db7ae8590d570bb0e06c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semantics-of-expressions"></a>運算式的語意
 運算式會根據其運算子的優先順序和群組進行評估。 ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[語彙慣例](../cpp/lexical-conventions.md)，顯示的關聯性的 c + + 運算子加諸於運算式。)  
@@ -121,5 +122,5 @@ func( i, ++i );
   
 -   return 陳述式中的運算式。 會完整評估運算式，且其所有副作用會在控制回到呼叫函式之前完成。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算式](../cpp/expressions-cpp.md)

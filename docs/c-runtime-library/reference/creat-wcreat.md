@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f034e2b80cc1bd3e7b5fc4578a6f5e77a060593c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d8474031a7ba98952c258b4dc4041c7eff57c434
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 建立新檔案。 `_creat` 和 `_wcreat` 已被取代，請改用 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
@@ -93,7 +76,7 @@ int _wcreat(
 ## <a name="return-value"></a>傳回值  
  這些函式若成功，則傳回所建立檔案的檔案描述項。 否則，函式會傳回-1，並設定`errno`下表所示。  
   
-|`errno` 設定|說明|  
+|`errno` 設定|描述|  
 |---------------------|-----------------|  
 |`EACCES`|`filename` 會指定現有的唯讀檔案，或指定目錄而不是檔案。|  
 |`EMFILE`|沒有更多檔案描述項可用。|  
@@ -101,7 +84,7 @@ int _wcreat(
   
  如果 `filename` 為 NULL，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設定為 `EINVAL` ，並傳回 -1。  
   
- 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  `_creat` 函式會建立新的檔案，或開啟並截斷現有的檔案。 `_wcreat` 是寬字元版本的 `_creat`；`filename` 的 `_wcreat` 引數是寬字元字串。 否則，`_wcreat` 和 `_creat` 的行為即會相同。  
@@ -116,7 +99,7 @@ int _wcreat(
   
 |值|定義|  
 |-----------|----------------|  
-|`_S_IWRITE`|允許寫入。|  
+|`_S_IWRITE`|允許寫入|  
 |`_S_IREAD`|允許讀取。|  
 |`_S_IREAD &#124; _S_IWRITE`|允許讀取和寫入。|  
   
@@ -126,12 +109,12 @@ int _wcreat(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_creat`|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
 |`_wcreat`|\<io.h> 或 \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -168,7 +151,7 @@ int main( void )
 Created data file.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_chsize](../../c-runtime-library/reference/chsize.md)   

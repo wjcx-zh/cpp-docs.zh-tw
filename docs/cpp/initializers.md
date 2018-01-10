@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: be05c53e6f41c4df4d62bd4ba1920fcf57c1f0cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializers"></a>初始設定式
 初始設定式指定變數的初始值。 您可以初始化下列內容中的變數：  
@@ -478,7 +476,7 @@ int main() {
 ```  
   
 ### <a name="reference-initialization"></a>參考初始化  
- 若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如:  
+ 若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如:   
   
 ```  
 // initializing_references.cppint   
@@ -501,25 +499,25 @@ int main()
   
  只有在下列情況下，可以不使用初始設定式宣告參考類型變數：  
   
--   函式宣告 (原型)。 例如:  
+-   函式宣告 (原型)。 例如:   
   
     ```  
     int func( int& );  
     ```  
   
--   函式傳回類型宣告。 例如:  
+-   函式傳回類型宣告。 例如:   
   
     ```  
     int& func( int& );  
     ```  
   
--   宣告函式類型類別成員。 例如:  
+-   宣告函式類型類別成員。 例如:   
   
     ```  
     class c {public:   int& i;};  
     ```  
   
--   宣告明確指定為 `extern` 的變數。 例如:  
+-   宣告明確指定為 `extern` 的變數。 例如:   
   
     ```  
     extern int& iVal;  
@@ -530,11 +528,10 @@ int main()
  ![初始化參考類型決策圖形](../cpp/media/vc38s71.gif "vc38S71")  
 初始化參考類型決策圖  
   
- 參考`volatile`類型 (宣告為`volatile` *typename* ** & ** *識別碼*) 可以使用初始化`volatile`物件類型相同，或者使用尚未宣告為`volatile`。 不過，以初始化**const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename* ** & ** *識別碼*) 可以使用初始化**const**相同類型的物件 (或任何項目已轉換成該類型，或者使用尚未宣告為**const**)。 不過，不能以該類型的 `volatile` 物件初始化。  
+ 參考`volatile`類型 (宣告為`volatile` *typename*  **&**  *識別碼*) 可以使用初始化`volatile`物件類型相同，或者使用尚未宣告為`volatile`。 不過，以初始化**const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename*  **&**  *識別碼*) 可以使用初始化**const**相同類型的物件 (或任何項目已轉換成該類型，或者使用尚未宣告為**const**)。 不過，不能以該類型的 `volatile` 物件初始化。  
   
  使用未限定參考**const**或`volatile`關鍵字可以初始化只能搭配物件宣告為**const**也`volatile`。  
   
 ### <a name="initialization-of-external-variables"></a>外部變數的初始化  
  自動 （靜態） 和外部變數的宣告可以包含初始設定式。 不過，只有在不將變數宣告為 `extern` 時，外部變數宣告才能包含初始設定式。
   
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -28,38 +27,23 @@ f1_keywords:
 - ATLSNAP/ATL::CSnapInItemImpl::m_bstrDisplayName
 - ATLSNAP/ATL::CSnapInItemImpl::m_resultDataItem
 - ATLSNAP/ATL::CSnapInItemImpl::m_scopeDataItem
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - snap-ins, data items
 - snap-ins, ATL support for
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 9148ee71ba03a1a0492d390378c64f988e6e0f39
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl 類別
 這個類別會提供實作的嵌入式管理單元節點物件的方法。  
@@ -79,19 +63,19 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  您的類別，衍生自`CSnapInItemImpl`。  
   
  *bIsExtension*  
- **TRUE**的物件是否為嵌入式管理單元延伸; 否則**FALSE**。  
+ **TRUE**如果物件是嵌入式管理單元擴充功能; 否則**FALSE**。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSnapInItemImpl::CSnapInItemImpl](#csnapinitemimpl)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSnapInItemImpl::AddMenuItems](#addmenuitems)|將功能表項目加入至內容功能表。|  
 |[CSnapInItemImpl::Command](#command)|選取自訂功能表項目時，請呼叫主控台。|  
@@ -100,23 +84,23 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 |[CSnapInItemImpl::GetResultPaneInfo](#getresultpaneinfo)|擷取**RESULTDATAITEM**嵌入式管理單元的結構。|  
 |[CSnapInItemImpl::GetResultViewType](#getresultviewtype)|決定檢視結果 窗格所使用的型別。|  
 |[CSnapInItemImpl::GetScopePaneInfo](#getscopepaneinfo)|擷取**SCOPEDATAITEM**嵌入式管理單元的結構。|  
-|[CSnapInItemImpl::Notify](#notify)|由通知嵌入式管理單元中的使用者所採取的動作的主控台呼叫。|  
+|[CSnapInItemImpl::Notify](#notify)|呼叫以通知嵌入式管理單元的使用者所採取的動作主控台。|  
 |[CSnapInItemImpl::QueryPagesFor](#querypagesfor)|呼叫以嵌入式管理單元的節點是否支援屬性頁。|  
-|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|修改功能表插入旗標，嵌入式管理單元的物件。|  
+|[CSnapInItemImpl::SetMenuInsertionFlags](#setmenuinsertionflags)|修改嵌入式管理單元物件的功能表插入旗標。|  
 |[CSnapInItemImpl::SetToolbarButtonInfo](#settoolbarbuttoninfo)|設定指定的工具列按鈕的資訊。|  
-|[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|更新內容功能表項目的狀態。|  
+|[CSnapInItemImpl::UpdateMenuState](#updatemenustate)|更新操作功能表項目的狀態。|  
 |[CSnapInItemImpl::UpdateToolbarButton](#updatetoolbarbutton)|更新指定的工具列按鈕的狀態。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
-|[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|嵌入式管理單元物件的名稱。|  
-|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows **RESULTDATAITEM**所用結構`CSnapInItemImpl`物件。|  
-|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM**所用結構`CSnapInItemImpl`物件。|  
+|[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|嵌入式管理單元之物件的名稱。|  
+|[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows **RESULTDATAITEM**所使用的結構`CSnapInItemImpl`物件。|  
+|[CSnapInItemImpl::m_scopeDataItem](#m_scopedataitem)|Windows **SCOPEDATAITEM**所使用的結構`CSnapInItemImpl`物件。|  
   
 ## <a name="remarks"></a>備註  
- `CSnapInItemImpl`提供基本實作嵌入式管理單元節點物件，例如加入功能表項目和工具列，並轉送至適當的處理常式函式的嵌入式管理單元 節點的命令。 這些功能都使用數個不同的介面實作，並將型別對應。 預設實作會處理通知傳送到節點物件的判斷正確的衍生類別的執行個體，然後將訊息轉送至正確的執行個體。  
+ `CSnapInItemImpl`提供基本實作嵌入式管理單元節點物件，例如加入功能表項目和工具列，以及轉送至適當的處理常式函式的嵌入式管理單元 節點的命令。 這些功能會使用數個不同的介面實作，並將型別對應。 預設實作會處理由判斷正確的執行個體的衍生類別，並再轉送到正確的執行個體訊息傳送至節點物件的通知。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CSnapInItem`  
@@ -124,7 +108,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  `CSnapInItemImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlsnap.h  
+ **標頭：** atlsnap.h  
   
 ##  <a name="addmenuitems"></a>CSnapInItemImpl::AddMenuItems  
  這個方法會實作的 Win32 函式[IExtendContextMenu::AddMenuItems](http://msdn.microsoft.com/library/aa814841)。  
@@ -141,24 +125,24 @@ AddMenuItems(
  [in]指標**IContextMenuCallback** ，可以將項目加入至內容功能表。  
   
  `pInsertionAllowed`  
- [in、 out]識別定義 Microsoft 管理主控台 MMC 功能表項目插入點，可以使用。 這可以是下列旗標的組合︰  
+ [in、 out]識別 Microsoft Management Console MMC 定義功能表項目插入點可用。 這可以是下列旗標的組合：  
   
-- **CCM_INSERTIONALLOWED_TOP**可以在內容功能表頂端插入項目。  
+- **CCM_INSERTIONALLOWED_TOP**可以在內容功能表的頂端插入項目。  
   
 - **CCM_INSERTIONALLOWED_NEW**可以建立新的子功能表中插入項目。  
   
 - **CCM_INSERTIONALLOWED_TASK**可以插入 [工作] 子功能表中的項目。  
   
-- **CCM_INSERTIONALLOWED_VIEW**可在結果窗格的內容功能表中的 [檢視] 子功能表或工具列的 [檢視] 功能表中，插入項目。  
+- **CCM_INSERTIONALLOWED_VIEW**可以在結果窗格的內容功能表中的 [檢視] 子功能表或工具列的 [檢視] 功能表中，插入項目。  
   
  `type`  
- [in]指定物件的類型。 它可以包含下列值之一︰  
+ [in]指定物件的類型。 它可以包含下列值之一：  
   
-- **CCT_SCOPE**範圍窗格內容的資料物件。  
+- **CCT_SCOPE**範圍窗格之內容的資料物件。  
   
-- **CCT_RESULT**結果 窗格內容的資料物件。  
+- **CCT_RESULT**結果窗格之內容的資料物件。  
   
-- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中內容的資料物件。  
+- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中之內容的資料物件。  
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
@@ -171,16 +155,16 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
   
 ### <a name="parameters"></a>參數  
  *lCommandID*  
- [in]指定命令識別碼的功能表項目。  
+ [in]指定功能表項目的命令識別碼。  
   
  `type`  
- [in]指定物件的類型。 它可以包含下列值之一︰  
+ [in]指定物件的類型。 它可以包含下列值之一：  
   
-- **CCT_SCOPE**範圍窗格內容的資料物件。  
+- **CCT_SCOPE**範圍窗格之內容的資料物件。  
   
-- **CCT_RESULT**結果 窗格內容的資料物件。  
+- **CCT_RESULT**結果窗格之內容的資料物件。  
   
-- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中內容的資料物件。  
+- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中之內容的資料物件。  
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
@@ -203,16 +187,16 @@ CreatePropertyPages(
  [in]指定的控制代碼，用來路由**MMCN_PROPERTY_CHANGE**通知訊息至適當的資料類別。  
   
  *pUnk*  
- [in]指標**IExtendPropertySheet**包含節點的相關內容資訊的物件上的介面。  
+ [in]指標**IExtendPropertySheet**包含內容節點的相關資訊的物件上的介面。  
   
  `type`  
- [in]指定物件的類型。 它可以包含下列值之一︰  
+ [in]指定物件的類型。 它可以包含下列值之一：  
   
-- **CCT_SCOPE**範圍窗格內容的資料物件。  
+- **CCT_SCOPE**範圍窗格之內容的資料物件。  
   
-- **CCT_RESULT**結果 窗格內容的資料物件。  
+- **CCT_RESULT**結果窗格之內容的資料物件。  
   
-- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中內容的資料物件。  
+- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中之內容的資料物件。  
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
@@ -224,7 +208,7 @@ CSnapInItemImpl();
 ```  
   
 ##  <a name="filldata"></a>CSnapInItemImpl::FillData  
- 您可以呼叫此函式擷取項目的相關資訊。  
+ 您可以呼叫此函式擷取項目的資訊。  
   
 ```
 FillData(CLIPFORMAT cf, LPSTREAM pStream);
@@ -235,13 +219,13 @@ FillData(CLIPFORMAT cf, LPSTREAM pStream);
  [in]剪貼簿格式 （文字、 豐富的文字或 rtf 文字與 OLE 項目）。  
   
  `pStream`  
- [in]包含物件資料的資料流指標。  
+ [in]包含的物件資料的資料流指標。  
   
 ### <a name="remarks"></a>備註  
- 若要適當地實作此函式，將正確的資訊複製到資料流 ( `pStream`)，取決於所指出的剪貼簿格式`cf`。  
+ 若要正確實作此函式，將正確的資訊複製到資料流 ( `pStream`)，取決於所指出的剪貼簿格式`cf`。  
   
 ##  <a name="getresultviewtype"></a>CSnapInItemImpl::GetResultViewType  
- 呼叫此函式可擷取的嵌入式管理單元物件的 [結果] 窗格的檢視類型。  
+ 呼叫此函式可擷取的嵌入式管理單元之物件的 [結果] 窗格的檢視類型。  
   
 ```
 GetResultViewType(
@@ -254,11 +238,11 @@ GetResultViewType(
  [out]傳回的檢視類型的位址指標。  
   
  *pViewOptions*  
- [out]指標**MMC_VIEW_OPTIONS**列舉型別，提供選項，指定所擁有的嵌入式管理單元主控台。 這個值可以是下列其中一項︰  
+ [out]指標**MMC_VIEW_OPTIONS**列舉型別，提供選項指定的擁有者的嵌入式管理單元主控台。 這個值可以是下列其中一項：  
   
-- **MMC_VIEW_OPTIONS_NOLISTVIEWS** = 0x00000001 告訴主控台，以避免呈現在標準清單檢視選擇**檢視**功能表。 可讓嵌入式管理單元僅在結果檢視 窗格中顯示它自己的自訂檢視。 這是定義在這個階段的唯一選項旗標。  
+- **MMC_VIEW_OPTIONS_NOLISTVIEWS** = 0x00000001 告訴主控台，以避免呈現標準的清單中的檢視選擇**檢視**功能表。 可讓嵌入式管理單元只在結果檢視 窗格中顯示它自己的自訂檢視。 這是定義在這個階段的唯一選項旗標。  
   
-- **MMC_VIEW_OPTIONS_NONE** = 0 允許預設檢視選項。  
+- **MMC_VIEW_OPTIONS_NONE** = 0 允許預設的檢視選項。  
   
 ##  <a name="getscopepaneinfo"></a>CSnapInItemImpl::GetScopePaneInfo  
  呼叫此函式可擷取**SCOPEDATAITEM**嵌入式管理單元的結構。  
@@ -283,21 +267,21 @@ GetResultPaneInfo (RESULTDATAITEM* pResultDataItem);
  [out]指標**RESULTDATAITEM**結構`CSnapInItemImpl`物件。  
   
 ##  <a name="m_bstrdisplayname"></a>CSnapInItemImpl::m_bstrDisplayName  
- 包含節點的項目顯示的字串。  
+ 包含節點的項目所顯示的字串。  
   
 ```
 CComBSTR m_bstrDisplayName;
 ```  
   
 ##  <a name="m_scopedataitem"></a>CSnapInItemImpl::m_scopeDataItem  
- `SCOPEDATAITEM`嵌入式管理單元中的資料物件的結構。  
+ `SCOPEDATAITEM`嵌入式管理單元資料物件的結構。  
   
 ```
 SCOPEDATAITEM m_scopeDataItem;
 ```  
   
 ##  <a name="m_resultdataitem"></a>CSnapInItemImpl::m_resultDataItem  
- [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)嵌入式管理單元中的資料物件的結構。  
+ [RESULTDATAITEM](http://msdn.microsoft.com/library/aa815165)嵌入式管理單元資料物件的結構。  
   
 ```
 RESULTDATAITEM m_resultDataItem;
@@ -318,23 +302,23 @@ STDMETHOD(Notify)(
   
 ### <a name="parameters"></a>參數  
  `event`  
- [in]識別使用者所採取的動作。 下列通知則可能會︰  
+ [in]識別使用者所採取的動作。 下列通知則可能會：  
   
-- **MMCN_ACTIVATE**傳送當視窗為正在啟動及停用。  
+- **MMCN_ACTIVATE** Sent 當視窗是要啟用和停用。  
   
 - **MMCN_ADD_IMAGES**傳送至將影像加入至 [結果] 窗格。  
   
-- **MMCN_BTN_CLICK**傳送當使用者按一下其中一個工具列按鈕。  
+- **MMCN_BTN_CLICK**當使用者按一下其中一個工具列按鈕時傳送。  
   
-- **MMCN_CLICK**傳送使用者按下滑鼠按鈕在清單檢視項目上的時。  
+- **MMCN_CLICK**當使用者按一下滑鼠按鈕在清單檢視項目上的時傳送。  
   
 - **MMCN_DBLCLICK**當使用者按兩下滑鼠按鈕在清單檢視項目上的時傳送。  
   
-- **MMCN_DELETE**傳送通知的嵌入式管理單元物件也會刪除。  
+- **MMCN_DELETE**傳送通知的嵌入式管理單元的物件應該刪除。  
   
-- **MMCN_EXPAND**資料夾需要擴大或縮減時傳送。  
+- **MMCN_EXPAND**資料夾需要展開或收縮時傳送。  
   
-- **MMCN_MINIMIZED**正在降到最低或最大化視窗時，傳送時。  
+- **MMCN_MINIMIZED** Sent 當視窗是在最小化或最大化。  
   
 - **MMCN_PROPERTY_CHANGE**通知即將變更嵌入式管理單元物件檢視的嵌入式管理單元物件傳送。  
   
@@ -344,9 +328,9 @@ STDMETHOD(Notify)(
   
 - **MMCN_SELECT**傳送選取範圍或結果檢視 窗格中的項目時。  
   
-- **MMCN_SHOW**傳送時的範圍項目是選取或取消選取第一次。  
+- **MMCN_SHOW**時範圍項目是選取或取消選取第一次傳送。  
   
-- **MMCN_VIEW_CHANGE**嵌入式管理單元時，可以更新所有的檢視表發生變更時傳送。  
+- **MMCN_VIEW_CHANGE**時嵌入式管理單元可以更新所有的檢視表發生變更時傳送。  
   
  `arg`  
  [in]通知類型而定。  
@@ -355,19 +339,19 @@ STDMETHOD(Notify)(
  [in]通知類型而定。  
   
  *pComponentData*  
- [out]指向物件實作的**IComponentData**。 這個參數是**NULL**如果通知未從轉寄**IComponentData::Notify**。  
+ [out]指標物件實作**IComponentData**。 這個參數是**NULL**如果通知未從轉寄**IComponentData::Notify**。  
   
  *pComponent*  
- [out]實作的物件指標**IComponent**。 這個參數是**NULL**如果通知未從轉寄**IComponent::Notify**。  
+ [out]實作的物件的指標**IComponent**。 這個參數是**NULL**如果通知未從轉寄**IComponent::Notify**。  
   
  `type`  
- [in]指定物件的類型。 它可以包含下列值之一︰  
+ [in]指定物件的類型。 它可以包含下列值之一：  
   
-- **CCT_SCOPE**範圍窗格內容的資料物件。  
+- **CCT_SCOPE**範圍窗格之內容的資料物件。  
   
-- **CCT_RESULT**結果 窗格內容的資料物件。  
+- **CCT_RESULT**結果窗格之內容的資料物件。  
   
-- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中內容的資料物件。  
+- **CCT_SNAPIN_MANAGER**管理員 嵌入式管理單元中之內容的資料物件。  
   
 - **CCT_UNINITIALIZED**資料物件都有無效的類型。  
   
@@ -379,7 +363,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 ```  
   
 ##  <a name="setmenuinsertionflags"></a>CSnapInItemImpl::SetMenuInsertionFlags  
- 呼叫此函式來修改功能表插入旗標所指定`pInsertionAllowed`，嵌入式管理單元的物件。  
+ 呼叫此函式可修改的功能表插入旗標，指定`pInsertionAllowed`，嵌入式管理單元的物件。  
   
 ```
 void SetMenuInsertionFlags(  
@@ -389,26 +373,26 @@ void SetMenuInsertionFlags(
   
 ### <a name="parameters"></a>參數  
  *bBeforeInsertion*  
- [in]如果應該呼叫函式，從內容功能表項目加入之前，非零值。否則為 0。  
+ [in]為非零，如果項目加入至內容功能表; 之前，應該呼叫此函式否則便是 0。  
   
  `pInsertionAllowed`  
- [in、 out]識別定義 Microsoft 管理主控台 MMC 功能表項目插入點，可以使用。 這可以是下列旗標的組合︰  
+ [in、 out]識別 Microsoft Management Console MMC 定義功能表項目插入點可用。 這可以是下列旗標的組合：  
   
-- **CCM_INSERTIONALLOWED_TOP**可以在內容功能表頂端插入項目。  
+- **CCM_INSERTIONALLOWED_TOP**可以在內容功能表的頂端插入項目。  
   
 - **CCM_INSERTIONALLOWED_NEW**可以建立新的子功能表中插入項目。  
   
 - **CCM_INSERTIONALLOWED_TASK**可以插入 [工作] 子功能表中的項目。  
   
-- **CCM_INSERTIONALLOWED_VIEW**可在結果窗格的內容功能表中的 [檢視] 子功能表或工具列的 [檢視] 功能表中，插入項目。  
+- **CCM_INSERTIONALLOWED_VIEW**可以在結果窗格的內容功能表中的 [檢視] 子功能表或工具列的 [檢視] 功能表中，插入項目。  
   
 ### <a name="remarks"></a>備註  
- 如果您正在開發主要的嵌入式管理單元，您可以重設任何插入旗標，這種限制的協力廠商延伸模組可以加入的功能表項目類型。 例如，主要的嵌入式管理單元可以清除**CCM_INSERTIONALLOWED_NEW**旗標，以防止擴充功能加入自己建立新的功能表項目。  
+ 如果您正在開發的主要的嵌入式管理單元，您就可以將任何這種限制的第三方擴充功能可以加入功能表項目類型的插入旗標重設。 例如，主要的嵌入式管理單元可以清除**CCM_INSERTIONALLOWED_NEW**旗標，以防止加入自己建立新的功能表項目延伸。  
   
- 您不應嘗試設定的位元`pInsertionAllowed`，原先已清除。 MMC 的未來版本可能會使用目前未定義，所以您不應該變更目前未定義的位元的位元。  
+ 您不應嘗試設定的位元`pInsertionAllowed`，原先已清除。 MMC 的未來版本可能會使用目前未定義，所以您不應變更目前未定義的位元的位元。  
   
 ##  <a name="settoolbarbuttoninfo"></a>CSnapInItemImpl::SetToolbarButtonInfo  
- 呼叫此函式來修改任何工具列按鈕樣式的嵌入式管理單元物件之前建立的工具列。  
+ 呼叫此函式可修改任何工具列按鈕樣式，將嵌入式管理單元物件的建立工具列之前。  
   
 ```
 void SetToolbarButtonInfo(  
@@ -419,38 +403,38 @@ void SetToolbarButtonInfo(
   
 ### <a name="parameters"></a>參數  
  `id`  
- [in]工具列按鈕，設定識別碼。  
+ [in]工具列按鈕，以設定識別碼。  
   
  `fsState`  
- [in]按鈕的狀態旗標。 可以是下列一或多項動作︰  
+ [in]按鈕的狀態旗標。 可以是下列一或多個項目：  
   
-- `TBSTATE_CHECKED`按鈕的**TBSTYLE_CHECKED**樣式，按下。  
+- `TBSTATE_CHECKED`按鈕的**TBSTYLE_CHECKED**樣式，並按下。  
   
-- `TBSTATE_ENABLED`按鈕接受使用者輸入。 沒有此狀態的按鈕不接受使用者輸入，並呈現灰色。  
+- `TBSTATE_ENABLED`[] 按鈕，接受使用者輸入。 沒有此狀態的按鈕不接受使用者輸入，並會變成灰色。  
   
-- `TBSTATE_HIDDEN`按鈕看不到，而無法接收使用者輸入。  
+- `TBSTATE_HIDDEN`按鈕看不到，並無法接收使用者輸入。  
   
-- `TBSTATE_INDETERMINATE`按鈕會呈現灰色。  
+- `TBSTATE_INDETERMINATE`按鈕會變成灰色。  
   
-- `TBSTATE_PRESSED`按下按鈕。  
+- `TBSTATE_PRESSED`按鈕已按下。  
   
-- `TBSTATE_WRAP`換行符號後面的按鈕。 按鈕也必須`TBSTATE_ENABLED`。  
+- `TBSTATE_WRAP`分行符號會遵循 [] 按鈕。 按鈕還必須`TBSTATE_ENABLED`。  
   
  *fsType*  
- [in]按鈕的狀態旗標。 可以是下列一或多項動作︰  
+ [in]按鈕的狀態旗標。 可以是下列一或多個項目：  
   
-- `TBSTYLE_BUTTON`建立標準按鈕。  
+- `TBSTYLE_BUTTON`建立標準的按鈕。  
   
-- `TBSTYLE_CHECK`建立的按鈕會在每次使用者按一下它的已按下和未按下狀態之間切換。 處於已按下狀態時，按鈕會有不同的背景色彩。  
+- `TBSTYLE_CHECK`建立按下的按鍵和 not 按下狀態每次使用者按一下切換按鈕。 按下狀態時，按鈕會有不同的背景色彩。  
   
-- `TBSTYLE_CHECKGROUP`會建立處於已按下，直到群組中的另一個按鈕按下核取按鈕。  
+- `TBSTYLE_CHECKGROUP`建立核取按鈕保持已按下群組中的另一個按鈕按下為止。  
   
-- `TBSTYLE_GROUP`會建立處於已按下，直到群組中的另一個按鈕按下按鈕。  
+- `TBSTYLE_GROUP`建立直到按下群組中的另一個按鈕是處於已按下按鈕。  
   
 - `TBSTYLE_SEP`建立提供小的缺口按鈕群組之間的分隔符號。 具有此樣式的按鈕不會接收使用者輸入。  
   
 ##  <a name="updatemenustate"></a>CSnapInItemImpl::UpdateMenuState  
- 呼叫此函式來修改之前插入的嵌入式管理單元物件的內容功能表的功能表項目。  
+ 呼叫此函式可修改的功能表項目之前插入的嵌入式管理單元物件的內容功能表。  
   
 ```
 void UpdateMenuState(  
@@ -461,35 +445,35 @@ void UpdateMenuState(
   
 ### <a name="parameters"></a>參數  
  `id`  
- [in]設定功能表項目的識別碼。  
+ [in]若要設定功能表項目的識別碼。  
   
  `pBuf`  
- [in]要更新之功能表項目的字串的指標。  
+ [in]要更新功能表項目的字串指標。  
   
  `flags`  
- [in]指定新的狀態旗標。 這可以是下列旗標的組合︰  
+ [in]指定新的狀態旗標。 這可以是下列旗標的組合：  
   
-- **MF_POPUP**指定內容功能表中的子功能表。 功能表項目插入點，進一步讓子功能表可能會加入至這個子功能表使用其**lCommandID**做為其**IInsertionPointID**。  
+- **MF_POPUP**指定內容功能表中的子功能表。 功能表項目、 插入點，以及進一步的子功能表可能會加入至這個子功能表使用其**lCommandID**做為其**IInsertionPointID**。  
   
-- **MF_BITMAP**和`MF_OWNERDRAW`不允許這些旗標，並傳回值將會導致`E_INVALIDARG`。  
+- **MF_BITMAP**和`MF_OWNERDRAW`不允許使用這些旗標，而會傳回值`E_INVALIDARG`。  
   
-- **MF_SEPARATOR**繪製水平分隔線。 只有**IContextMenuProvider**允許加入功能表項目與**MF_SEPARATOR**設定。  
+- **MF_SEPARATOR**繪製水平分隔線。 只有**IContextMenuProvider**允許加入功能表項目**MF_SEPARATOR**設定。  
   
 - **MF_CHECKED**功能表項目旁的核取記號。  
   
 - **MF_DISABLED**停用功能表項目，因此無法選取它，但是旗標不會不停用它。  
   
-- `MF_ENABLED`可讓功能表項目，因此它可被選取，會從其灰色狀態還原。  
+- `MF_ENABLED`可讓功能表項目，因此也可以選取，會從其呈現灰色的狀態還原。  
   
-- **MF_GRAYED**停用功能表項目，讓它，因此不會選取。  
+- **MF_GRAYED**停用功能表項目，因此不會選取對於它。  
   
-- **MF_MENUBARBREAK**函數一樣**MF_MENUBREAK**功能表列的旗標。 下拉式選單 子功能表，或快顯功能表中，新的資料行以垂直線從舊的資料行分隔。  
+- **MF_MENUBARBREAK**函數一樣**MF_MENUBREAK**功能表列的旗標。 下拉功能表、 子功能表，或快顯功能表中，新的資料行是舊的資料行被分隔垂直線條。  
   
-- **MF_MENUBREAK** （適用於功能表列） 的新行上放置項目或新的資料行 （如下拉式選單 子功能表或快顯功能表中） 而不分隔資料行。  
+- **MF_MENUBREAK**將項目放在新行 （適用於功能表列） 或新的資料行 （適用於下拉功能表、 子功能表或快顯功能表） 而不分隔資料行中。  
   
-- **MF_UNCHECKED**未放置項目 （預設值） 旁的核取記號。  
+- **MF_UNCHECKED**並不會在項目 （預設值） 旁邊的核取記號。  
   
- 下列旗標的群組不能同時使用︰  
+ 不能同時使用旗標的下列群組：  
   
 - **MF_DISABLED**， `MF_ENABLED`，和**MF_GRAYED**。  
   
@@ -498,7 +482,7 @@ void UpdateMenuState(
 - **MF_CHECKED**和**MF_UNCHECKED**。  
   
 ##  <a name="updatetoolbarbutton"></a>CSnapInItemImpl::UpdateToolbarButton  
- 呼叫此函式來修改工具列按鈕，在嵌入式管理單元物件顯示之前。  
+ 呼叫此函式可修改工具列按鈕，將嵌入式管理單元物件的顯示之前。  
   
 ```
 BOOL UpdateToolbarButton(UINT id, BYTE fsState);
@@ -506,21 +490,20 @@ BOOL UpdateToolbarButton(UINT id, BYTE fsState);
   
 ### <a name="parameters"></a>參數  
  `id`  
- 指定工具列按鈕的按鈕的識別碼，會更新。  
+ 指定工具列按鈕的按鈕 ID，更新。  
   
  `fsState`  
- 指定的工具列按鈕的狀態。 如果要設定此狀態，則傳回**TRUE**。 這可以是下列旗標的組合︰  
+ 指定的工具列按鈕的狀態。 如果要設定此狀態，則傳回**TRUE**。 這可以是下列旗標的組合：  
   
-- **啟用**按鈕接受使用者輸入。 沒有此狀態的按鈕不接受使用者輸入，並呈現灰色。  
+- **啟用**按鈕接受使用者輸入。 沒有此狀態的按鈕不接受使用者輸入，並會變成灰色。  
   
-- **檢查**按鈕**檢查**樣式，按下。  
+- **檢查**按鈕具有**檢查**樣式，並按下。  
   
-- **隱藏**按鈕看不到，而無法接收使用者輸入。  
+- **隱藏**按鈕是不可見的無法接收使用者輸入。  
   
-- **不確定**按鈕呈現灰色。  
+- **不定**按鈕會變成灰色。  
   
-- **BUTTONPRESSED**按按鈕。  
+- **BUTTONPRESSED**按鈕按下。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

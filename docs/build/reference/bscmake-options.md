@@ -40,11 +40,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 972ac61ff4e838e1c1bf2ad10db50f3a3d595a5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46c258a5591615bb277823ccc5261fade3c5e2af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-options"></a>BSCMAKE 選項
 本節描述可用來控制 BSCMAKE 選項。 數個選項控制排除或包含特定資訊，以瀏覽資訊檔的內容。 排除選項可以允許 BSCMAKE 執行得比較快，而且可能造成較小的.bsc 檔中。 選項名稱會區分大小寫 (除了**/help**和**/NOLOGO**)。  
@@ -101,5 +102,5 @@ ms.lasthandoff: 10/24/2017
 BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [BSCMAKE 參考](../../build/reference/bscmake-reference.md)

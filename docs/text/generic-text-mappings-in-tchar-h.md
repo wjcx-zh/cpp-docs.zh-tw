@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h 中的泛型文字對應
 若要簡化國際用於程式碼的傳輸[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]執行階段程式庫提供[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-許多資料類型、 常式與其他物件的特定泛用文字對應。 您可以使用這些對應，Tchar.h，撰寫可針對單一位元組，多位元組，來編譯的泛型程式碼中所定義或[!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)]字元集，根據您定義使用資訊清單常數`#define`陳述式。 泛用文字對應[!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]所沒有的擴充功能[!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)]相容。  
@@ -99,6 +100,6 @@ RetVal = strrev(szString);
   
  因此，您可以撰寫、 維護及編譯單一原始程式碼檔案，以執行與所特有的三種字元集的常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [文字和字串](../text/text-and-strings-in-visual-cpp.md)   
  [使用含有 _MBCS 程式碼的 TCHAR.H 資料類型](../text/using-tchar-h-data-types-with-mbcs-code.md)

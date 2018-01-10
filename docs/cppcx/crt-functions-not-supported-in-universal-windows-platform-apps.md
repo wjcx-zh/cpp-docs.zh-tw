@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1550dca016b765278f8f1fe7ed9d95c4bfd3932e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65d058780ee71731559733ac07eef3f614a47784
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>通用 Windows 平台應用程式不支援 CRT 函式
 當您建置通用 Windows 平台 (UWP) 應用程式時，許多 C 執行階段 (CRT) 函式都無法使用。 在某些情況下，因應措施可用---例如，您可以使用 Windows 執行階段或 Win32 Api。 不過，在其他情況下則已禁止使用 CRT 函式，因為 UWP 應用程式無法使用對應至這些函式的功能或支援的 API。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
 |_beep _sleep _seterrormode|這些函式在舊版 CRT 中已過時。 此外，UWP 應用程式沒有對應的 Win32 API。|沒有因應措施。|  
 |chdir _chdrive getcwd|這些函式已過時或不是安全執行緒。|Use _chdir、_getcwd 和相關函式。|  
 |_cgets _cgets_s _cgetws _cgetws_s _cprintf _cprintf_l _cprintf_p _cprintf_p_l _cprintf_s _cprintf_s_l _cputs _cputws _cscanf _cscanf_l _cscanf_s _cscanf_s_l _cwait _cwprintf _cwprintf_l _cwprintf_p _cwprintf_p_l _cwprintf_s _cwprintf_s_l _cwscanf _cwscanf_l _cwscanf_s _cwscanf_s_l _vcprintf _vcprintf_l _vcprintf_p _vcprintf_p_l _vcprintf_s _vcprintf_s_l _vcwprintf _vcwprintf_l _vcwprintf_p _vcwprintf_p_l _vcwprintf_s _vcwprintf_s_l _getch _getch_nolock _getche _getche_nolock _getwch _getwch_nolock _getwche _getwche_nolock _putch _putch_nolock _putwch _putwch_nolock _ungetch _ungetch_nolock _ungetwch _ungetwch_nolock _kbhit kbhit putch cgets cprintf cputs cscanf cwait getch getche ungetch|這些函式可用來從主控台直接讀取或直接寫入至主控台。 UWP 應用程式僅限 GUI，不支援主控台。|沒有因應措施。|  
-|getpid|此函式已被取代。|請使用 _getpid 或 Win32 API `GetCurrentProcessId()`。|  
+|getpid|此函式已過時。|請使用 _getpid 或 Win32 API `GetCurrentProcessId()`。|  
 |_getdiskfree|不適用。|請使用 Win32 API `GetDiskFreeSpaceExW()`。|  
 |_getdrive _getdrives|UWP 應用程式沒有對應的 API。|沒有因應措施。|  
 |_inp _inpd _inpw _outp _outpd _outpw inp inpd inpw outp outpd outpw|UWP 應用程式不支援連接埠 IO。|沒有因應措施。|  

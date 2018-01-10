@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 922fed9dde6e3f38ae1276034ce84a97db9f99be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvts"></a>_fcvt_s
 將浮點數轉換為字串。 這是如 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [_lfind](../../c-runtime-library/reference/fcvt.md) 版本。  
@@ -69,13 +70,13 @@ errno_t _fcvt_s(
  [輸出] `buffer`  
  保留轉換結果之提供的緩衝區。  
   
- [in] `sizeInBytes`  
+ [輸入] `sizeInBytes`  
  以位元組為單位的緩衝區大小。  
   
- [in] `value`  
+ [輸入] `value`  
  要轉換的數字。  
   
- [in] `count`  
+ [輸入] `count`  
  小數點後的小數位數。  
   
  [輸出] `dec`  
@@ -91,12 +92,12 @@ errno_t _fcvt_s(
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|`buffer`|`sizeInBytes`|值|count|dec|Sign|傳回|`buffer` 中的值|  
+|`buffer`|`sizeInBytes`|value|count|dec|Sign|傳回|`buffer` 中的值|  
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
-|`NULL`|任何|任何|任何|任何|任何|`EINVAL`|未修改。|  
-|非 `NULL` (指向有效的記憶體)|<=0|any|任何|任何|任何|`EINVAL`|未修改。|  
-|any|任何|任何|任何|`NULL`|任何|`EINVAL`|未修改。|  
-|any|任何|任何|任何|任何|`NULL`|`EINVAL`|未修改。|  
+|`NULL`|any|any|any|any|any|`EINVAL`|未修改。|  
+|非 `NULL` (指向有效的記憶體)|<=0|any|any|any|any|`EINVAL`|未修改。|  
+|any|any|any|any|`NULL`|any|`EINVAL`|未修改。|  
+|any|any|any|any|any|`NULL`|`EINVAL`|未修改。|  
   
  **安全性問題**  
   
@@ -111,17 +112,17 @@ errno_t _fcvt_s(
   
  `_ecvt_s` 和 `_fcvt_s` 之間的差異位於 `count` 參數解譯中。 `_ecvt_s`解譯`count`做為輸出字串中的位數總數和`_fcvt_s`解譯`count`小數點之後位數的數目。  
   
- 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  此函式的偵錯版本會先用 0xFD 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|選擇性標頭|  
+|功能|必要的標頭|選擇性標頭|  
 |--------------|---------------------|---------------------|  
 |`_fcvt_s`|\<stdlib.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
  **程式庫︰**所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
@@ -158,7 +159,7 @@ int main()
 Converted value: 120000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   

@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 97967ad789fe5491aec2be983f28a08e2c143b95
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 324fa54362098e2b7ffae6fdf368bf590846f9c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-conversions"></a>標準轉換
 C++ 語言定義其基本類型之間的轉換。 同時定義指標、參考及成員指標衍生類型的轉換。 這些轉換稱為「標準轉換」  (如需有關類型、 標準的類型和衍生的類型的詳細資訊，請參閱[類型](http://msdn.microsoft.com/en-us/6882ee83-ea32-4373-8d57-c3efbbc15af0)。)  
@@ -80,11 +78,11 @@ long_num2 = int_num * long_num2;
   
  保留值的提升和保留正負號狀態的提升通常會產生相同的結果。 不過，如果提升的物件是下列其中一項，則兩者可能會產生不同的結果：  
   
--   運算元的** / **， `%`， `/=`， `%=`， ** < **， ** \< = **，** > **，或**>=**  
+-   運算元的 **/** ， `%`， `/=`， `%=`，  **<** ，  **\< =** ， **>** ，或**>=**  
   
      這些運算子需要依據正負號判斷結果。 因此，保留值和保留正負號的提升套用至這些運算元時，會產生不同的結果。  
   
--   左的運算元** >> **或**>>=**  
+-   左的運算元 **>>** 或**>>=**  
   
      執行移位作業時，這些運算子會將帶正負號和不帶正負號的數量視為不同。 對於帶正負號的數量，將數量右移會造成正負號位元傳播至空出的位元位置。 對於不帶正負號的數量，空出的位元位置會以零填滿。  
   
@@ -209,13 +207,13 @@ int main() {
 |----------------------|----------------|-------------------------------------------|  
 |外部 (非類別範圍) 函式|Private|否|  
 ||Protected|否|  
-||Public|是|  
-|B 成員函式 (B 範圍中)|Private|是|  
-||Protected|是|  
-||Public|是|  
+||Public|[是]|  
+|B 成員函式 (B 範圍中)|Private|[是]|  
+||Protected|[是]|  
+||Public|[是]|  
 |C 成員函式 (C 範圍中)|Private|否|  
-||Protected|是|  
-||Public|是|  
+||Protected|[是]|  
+||Public|[是]|  
   
  類別指標可以轉換成基底類別指標的第二種情況，是使用明確類型轉換  (請參閱[使用明確類型轉換的運算式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)如需有關明確類型轉換。)  
   
@@ -253,12 +251,12 @@ int main()
  `pA` 指標是 `A *` 類型，可以解譯為表示「`A` 類型物件的指標」。 成員`bObject``(`例如`BComponent`和`BMemberFunc`) 類型是唯一的`B`，因此無法存取透過`pA`。 `pA` 指標只允許存取 `A` 類別中定義的那些物件特性 (成員函式和資料)。  
   
 ### <a name="pointer-to-function"></a>函式的指標  
- 函式的指標可以轉換為類型**void \* **，如果型別**void \* **夠大，足以容納該指標。  
+ 函式的指標可以轉換為類型**void \*** ，如果型別**void \*** 夠大，足以容納該指標。  
   
 ### <a name="pointer-to-void"></a>void 的指標  
  `void` 類型的指標可以轉換為任何其他類型的指標，但必須使用明確的類型轉換 (不同於 C)  (請參閱[使用明確類型轉換的運算式](http://msdn.microsoft.com/en-us/060ad6b4-9592-4f3e-8509-a20ac84a85ae)如需類型轉換。)任何類型的指標可以隱含地轉換成類型 `void` 的指標。類型不完整之物件的指標可以轉換為 `void` (隱含) 和反向轉換 (明確)。 這類轉換的結果等於原始指標的值。 若物件宣告後，沒有足夠的資訊可用來判斷其大小和基底類別，則會將該物件視為不完整。  
   
- 不是任何物件的指標**const**或`volatile`可以隱含地轉換成類型的指標**void \* **。  
+ 不是任何物件的指標**const**或`volatile`可以隱含地轉換成類型的指標**void \*** 。  
   
 ### <a name="const-and-volatile-pointers"></a>const 和 volatile 指標  
  C + + 不提供標準轉換轉換**const**或`volatile`類型不是型別**const**或`volatile`。 不過，使用明確類型轉型 (包括不安全的轉換) 即可指定任何類型的轉換。  
@@ -329,5 +327,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

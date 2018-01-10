@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 506dac565ef30c44c553301c6669e416a7dd5f8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47fe8c0d7475c67228fd7335b1aa167ced237202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptr-class"></a>CHeapPtr 類別
 用來管理堆積指標的智慧型指標類別。  
@@ -46,24 +47,24 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
  `Allocator`  
  要使用的記憶體配置類別。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHeapPtr::CHeapPtr](#cheapptr)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHeapPtr::Allocate](#allocate)|呼叫這個方法來儲存物件在堆積上配置記憶體。|  
 |[CHeapPtr::Reallocate](#reallocate)|呼叫這個方法來重新配置在堆積上的記憶體。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHeapPtr::operator =](#operator_eq)|指派運算子。|  
   
@@ -152,7 +153,7 @@ bool Reallocate(size_t nElements) throw();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#79](../../atl/codesnippet/cpp/cheapptr-class_4.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CHeapPtrBase 類別](../../atl/reference/cheapptrbase-class.md)   
  [CCRTAllocator 類別](../../atl/reference/ccrtallocator-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

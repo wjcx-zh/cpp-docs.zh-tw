@@ -4,38 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.tables.runtime
-dev_langs:
-- C++
+f1_keywords: vc.tables.runtime
+dev_langs: C++
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 7c3b6c4b5d8c1c479be20e7437441f9fcdba7007
-ms.contentlocale: zh-tw
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6149962694f9ff60a27645d014389d5b3467b7b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-alphabetical-function-reference"></a>CRT 依字母順序排列的函式參考
 C 執行階段 (CRT) 程式庫參考文件是依照常式使用字母順序排序。 若要根據功能尋找 CRT 常式，請參閱[依分類區分的執行階段常式](../../c-runtime-library/run-time-routines-by-category.md)。  
@@ -1015,6 +998,8 @@ C 執行階段 (CRT) 程式庫參考文件是依照常式使用字母順序排�
  [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)  
   
  [_get_errno](../../c-runtime-library/reference/get-errno.md)  
+  
+ [_get_FMA3_enable](../../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)  
   
  [_get_fmode](../../c-runtime-library/reference/get-fmode.md)  
   
@@ -2247,6 +2232,8 @@ C 執行階段 (CRT) 程式庫參考文件是依照常式使用字母順序排�
  [_set_errno](../../c-runtime-library/reference/set-errno.md)  
   
  [_set_error_mode](../../c-runtime-library/reference/set-error-mode.md)  
+  
+ [_set_FMA3_enable](../../c-runtime-library/reference/get-fma3-enable-set-fma3-enable.md)  
   
  [_set_fmode](../../c-runtime-library/reference/set-fmode.md)  
   
@@ -3498,5 +3485,5 @@ C 執行階段 (CRT) 程式庫參考文件是依照常式使用字母順序排�
   
  [yn](../../c-runtime-library/reference/y0-y1-yn.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 執行階段程式庫參考](../../c-runtime-library/c-run-time-library-reference.md)

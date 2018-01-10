@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b08b2a725a5a27451ed83215a7ccd892ecef6b96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e2047b15d245c7c4b8e093e23a9ca6c4f16ac44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-overrides-c"></a>明確覆寫 (C++)
 **Microsoft 特定的**  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
  使用新 managed 的語法的 managed 程式碼中的覆寫明確的詳細資訊，請參閱[明確覆寫](../windows/explicit-overrides-cpp-component-extensions.md)。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
 ## <a name="example"></a>範例  
  下列程式碼範例示範如何使用明確覆寫：  
@@ -127,5 +128,5 @@ In CMyClass::IMyInt2::mf2()
 In CMyClass::IMyInt2::mf2(int)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [繼承](../cpp/inheritance-cpp.md)

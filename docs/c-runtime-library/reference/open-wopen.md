@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wopen
 - _topen
 - _open
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - opening files, for file I/O
 - topen function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - wopen function
 - open function
 ms.assetid: 13f6a0c3-d1aa-450d-a7aa-74abc91b163e
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 82b12ebfbff06c19a863bec7d8be2e6677c0148e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9c53394391c34dc86e3516c54806c9bbd2b62ca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-wopen"></a>_open、_wopen
 開啟檔案。 這些函式已遭取代，因為已經有更安全的版本，請參閱 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
@@ -100,7 +84,7 @@ int _wopen(
  嘗試開啟唯讀檔案以供寫入，檔案的共用模式不允許指定的作業，或是指定的路徑為目錄。  
   
  `EEXIST`  
-指定了  `_O_CREAT` 和 `_O_EXCL` 旗標，但 `filename` 已存在。  
+ 指定了 `_O_CREAT` 和 `_O_EXCL` 旗標，但 `filename` 已存在。  
   
  `EINVAL`  
  無效的 `oflag` 或 `pmode` 引數。  
@@ -164,8 +148,7 @@ int _wopen(
  開啟檔案，並將檔案截斷為零長度；檔案必須具有寫入權限。 指定時無法搭配 `_O_RDONLY`。 `_O_TRUNC` 用於搭配 `_O_CREAT` 以開啟現有檔案或建立檔案。  
   
 > [!NOTE]
->  
-          `_O_TRUNC` 旗標會終結指定檔案的內容。  
+>  `_O_TRUNC` 旗標會終結指定檔案的內容。  
   
  `_O_WRONLY`  
  開啟檔案為僅供寫入。 指定時無法搭配 `_O_RDONLY` 或 `_O_RDWR`。  
@@ -206,12 +189,12 @@ int _wopen(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_open`|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|  
 |`_wopen`|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>|  
   
- `_open` 和 `_wopen` 是 Microsoft 擴充功能。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ `_open` 和 `_wopen` 是 Microsoft 擴充功能。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -264,7 +247,7 @@ Open succeeded on input file
 Open succeeded on output file  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_close](../../c-runtime-library/reference/close.md)   

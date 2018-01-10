@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d7678ee6da96c26090d529f8f4b4bfd9b6a7c1bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed37cdc51c5e08899786ce82a9c3e5e3224f9f9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 **C + + 特定的**  
@@ -47,6 +48,6 @@ high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
   
  **END c + + 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [#import 屬性](../preprocessor/hash-import-attributes-cpp.md)   
  [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

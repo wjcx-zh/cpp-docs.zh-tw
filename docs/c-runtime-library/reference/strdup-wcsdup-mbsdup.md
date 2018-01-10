@@ -53,11 +53,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f4b65bb7c9bd0e309aa5b5c48b36c7a0b466d47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da8d1341e9ce46e2ab2040812622a78d3bd3830d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup、_wcsdup、_mbsdup
 重複字串。  
@@ -89,7 +90,7 @@ unsigned char *_mbsdup(
 ## <a name="remarks"></a>備註  
  `_strdup` 函式呼叫 [malloc](../../c-runtime-library/reference/malloc.md) 來配置 `strSource` 複本的儲存空間，然後將 `strSource` 複製到配置的空間。  
   
- `_wcsdup` 和 `_mbsdup` 是寬字元和多位元組字元版本的 `_strdup`。 `_wcsdup` 的引數和傳回值是寬字元字串； `_mbsdup` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
+ `_wcsdup` 和 `_mbsdup` 是寬字元和多位元組字元版本的 `_strdup`。 `_wcsdup` 的引數和傳回值是寬字元字串；`_mbsdup` 的引數則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -103,13 +104,13 @@ unsigned char *_mbsdup(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_strdup`|\<string.h>|  
 |`_wcsdup`|\<string.h> 或 \<wchar.h>|  
 |`_mbsdup`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -135,7 +136,7 @@ Original: This is the buffer text
 Copy:     This is the buffer text  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [memset、wmemset](../../c-runtime-library/reference/memset-wmemset.md)   
  [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   

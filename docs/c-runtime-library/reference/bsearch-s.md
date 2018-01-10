@@ -31,11 +31,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a31ba82059748d49087546e2812d1f1fd32f4628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19d60e16ee896049318d8722b59ba124aad67a50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bsearchs"></a>bsearch_s
 對已排序陣列執行二進位搜尋。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [bsearch](../../c-runtime-library/reference/bsearch.md) 版本。  
@@ -82,10 +83,10 @@ void *bsearch_s(
 |||||||  
 |-|-|-|-|-|-|  
 |`key`|`base`|`compare`|`num`|`width`|`errno`|  
-|`NULL`|任何|任何|任何|任何|`EINVAL`|  
-|任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
-|任何|任何|任何|任何|= 0|`EINVAL`|  
-|任何|任何|`NULL`|an|任何|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|= 0|`EINVAL`|  
+|any|any|`NULL`|an|任何|`EINVAL`|  
   
 ## <a name="remarks"></a>備註  
  `bsearch_s` 函式會執行 `num` 項目已排序陣列的二進位搜尋，每個的大小為 `width` 個位元組。 `base` 值是要搜尋之陣列的基底指標， `key` 是要搜尋的值。 `compare` 參數是使用者提供的常式指標，這個常式會比較要求的索引鍵與陣列項目，並傳回下列其中一個指定其關聯性的值：  
@@ -100,11 +101,11 @@ void *bsearch_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`bsearch_s`|\<stdlib.h> 和 \<search.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  這個程式會以 [qsort_s](../../c-runtime-library/reference/qsort-s.md)來排序字串陣列，然後使用 bsearch_s 來尋找 cat 這個字。  
@@ -191,7 +192,7 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
  [_lfind](../../c-runtime-library/reference/lfind.md)   
  [_lsearch](../../c-runtime-library/reference/lsearch.md)   

@@ -75,11 +75,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 971d67e75594649851f3c21f7727fe697486be85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 719ee1e0a39cbf3cd7d7721807bb4a9dcf2883d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 類別
 這個類別會提供方法來支援內建屬性值。  
@@ -124,7 +125,7 @@ class ATL_NO_VTABLE CStockPropImpl : public IDispatchImpl<InterfaceName, piid,
  `tihclass`  
  用來管理的類型資訊的類別`T`。 預設值是 `CComTypeInfoHolder`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -998,6 +999,6 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="remarks"></a>備註  
  相同[CStockPropImpl::put_Picture](#put_picture)，但參考計數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)

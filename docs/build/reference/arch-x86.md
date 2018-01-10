@@ -13,11 +13,12 @@ caps.latest.revision: "33"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d1dd4689cf4e2ef4c4f6601396110327c74773b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4905634af75f30c5428f8091d736adbe1b8490d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arch-x86"></a>/arch (x86)
 在 x86 上，為程式碼產生指定架構。 另請參閱[/arch (x64)](../../build/reference/arch-x64.md)和[/arch (ARM)](../../build/reference/arch-arm.md)。  
@@ -85,7 +86,7 @@ r = t + d;     // This should produce the same overall result
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/arch （最小 CPU 架構）](../../build/reference/arch-minimum-cpu-architecture.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

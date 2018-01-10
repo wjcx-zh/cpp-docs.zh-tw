@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7bd035b74988758142fe9d0fedc43946f35c2d58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dea28bd31812449e34bb481d316070f8f21aaede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-combinable-to-improve-performance"></a>如何：使用可組合的類別改善效能
 這個範例示範如何使用[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別來計算中的數字的總和[std:: array](../../standard-library/array-class-stl.md)是質數的物件。 `combinable`類別藉由排除共用的狀態可改善效能。  
@@ -70,7 +71,7 @@ parallel time: 1638 ms
 ## <a name="robust-programming"></a>穩固程式設計  
  如需範例，使用對應並減少作業以產生相同的結果，請參閱[平行演算法](../../parallel/concrt/parallel-algorithms.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)   
  [combinable 類別](../../parallel/concrt/reference/combinable-class.md)   
  [critical_section 類別](../../parallel/concrt/reference/critical-section-class.md)

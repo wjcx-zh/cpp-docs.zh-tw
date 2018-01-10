@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d682e6db093220557ec7caaa4ac6f3cd7ca5f53a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2aex-class"></a>CA2AEX 類別
 這個類別由字串轉換巨集`CA2TEX`和`CT2AEX`，和 typedef **CA2A**。  
@@ -43,24 +44,24 @@ class CA2AEX
  `t_nBufferLength`  
  轉譯程序中使用之緩衝區的大小。 預設長度為 128 個位元組。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CA2AEX::CA2AEX](#ca2aex)|建構函式。|  
 |[CA2AEX:: ~ CA2AEX](#dtor)|解構函式。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CA2AEX::operator LPSTR](#operator_lpstr)|轉換運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CA2AEX::m_psz](#m_psz)|儲存在來源字串的資料成員。|  
 |[CA2AEX::m_szBuffer](#m_szbuffer)|靜態緩衝區，用來儲存已轉換的字串。|  
@@ -144,7 +145,7 @@ operator LPSTR() const throw();
 ### <a name="return-value"></a>傳回值  
  傳回文字字串做為類型**LPSTR**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CA2CAEX 類別](../../atl/reference/ca2caex-class.md)   
  [CA2WEX 類別](../../atl/reference/ca2wex-class.md)   
  [CW2AEX 類別](../../atl/reference/cw2aex-class.md)   

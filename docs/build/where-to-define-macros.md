@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cfb17f531df5c232f1f376cd003acb7bf5a62206
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2e646de4cf67fc249d69fb07789f4c8a3e14bf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-to-define-macros"></a>定義巨集的位置
 命令列、 指令檔、 makefile 或 Tools.ini 檔案中定義巨集。  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/24/2017
   
  在命令列或命令檔中，空格和定位點分隔的引數，不可以出現在等號。 如果`string`有內嵌空格或定位點，以雙引號括住字串本身或整個巨集 ("")。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [定義 NMAKE 巨集](../build/defining-an-nmake-macro.md)

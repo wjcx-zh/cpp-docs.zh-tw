@@ -9,8 +9,7 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- fesetexceptflag
+apiname: fesetexceptflag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -27,35 +26,19 @@ apitype: DLLExport
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
-dev_langs:
-- C++
-helpviewer_keywords:
-- fesetexceptflag function
+dev_langs: C++
+helpviewer_keywords: fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 2283d258a15fb131367d5d24a921c0a84a31e91d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b23c60333bee887366e11f6da29a73e940a36561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 在目前的浮點環境中設定指定的浮點狀態旗標。  
@@ -82,7 +65,7 @@ int fesetexceptflag(
 ## <a name="remarks"></a>備註  
  `fesetexceptflag` 函式會將 `excepts` 指定的浮點例外狀況狀態旗標的狀態，設成 `pstatus` 指向的 `fexcept_t` 物件的對應值。  它不會引發例外狀況。 `pstatus` 指標必須指向有效的 `fexcept_t` 物件，否則不定義後續行為。 `fesetexceptflag` 函式支援這些在 \<fenv.h> 中定義的 `excepts` 例外狀況巨集值︰  
   
-|例外狀況巨集|說明|  
+|例外狀況巨集|描述|  
 |---------------------|-----------------|  
 |FE_DIVBYZERO|在稍早的浮點運算中發生的獨一性或極錯誤，已建立無限大值。|  
 |FE_INEXACT|函式已強制四捨五入稍早的浮點運算預存結果。|  
@@ -97,12 +80,12 @@ int fesetexceptflag(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`fesetexceptflag`|\<fenv.h>|\<cfenv>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fegetexceptflag](../../c-runtime-library/reference/fegetexceptflag2.md)

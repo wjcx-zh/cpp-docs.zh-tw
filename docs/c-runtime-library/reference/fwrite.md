@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 98d965b6a8e12e2f27d1544bec07357c28c3b7ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b830dfd7b0a9dace46336f8f02da14fc268daf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fwrite"></a>fwrite
 將資料寫入資料流。  
@@ -76,7 +77,7 @@ size_t fwrite(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`fwrite`|\<stdio.h>|  
   
@@ -85,7 +86,7 @@ size_t fwrite(
 ## <a name="example"></a>範例  
  請參閱 [fread](../../c-runtime-library/reference/fread.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)   
  [fread](../../c-runtime-library/reference/fread.md)   

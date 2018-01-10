@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _configthreadlocale
+apiname: _configthreadlocale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -35,30 +32,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aacd7b82525ca1b74c3d7a7ab7f8e09497e491ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 設定個別執行緒地區設定選項。  
@@ -90,7 +73,7 @@ int _configthreadlocale(
  `0`  
  擷取這個特定執行緒的目前設定。  
   
- 這些函式會影響行為的`setlocale`， `_tsetlocale`，和`_wsetlocale`。 每個執行緒的地區設定時停用，任何後續呼叫`setlocale`或`_wsetlocale`變更使用全域地區設定的所有執行緒的地區設定。 啟用個別執行緒地區設定時，`setlocale` 或 `_wsetlocale` 只會影響目前執行緒的地區設定。  
+ 這些函式會影響行為的`setlocale`， `_tsetlocale`， `_wsetlocale`，和`_setmbcp`。 當每個執行緒的地區設定是已停用，任何後續呼叫`setlocale`或`_wsetlocale`變更使用全域地區設定的所有執行緒的地區設定。 啟用個別執行緒地區設定時，`setlocale` 或 `_wsetlocale` 只會影響目前執行緒的地區設定。  
   
  如果您使用 `_configurethreadlocale` 啟用個別執行緒地區設定，則建議您呼叫 `setlocale` 或 `_wsetlocale` 立即在該執行緒中設定慣用地區設定。  
   
@@ -98,7 +81,7 @@ int _configthreadlocale(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_configthreadlocale`|\<locale.h>|  
   
@@ -211,9 +194,8 @@ The thread locale is now set to German_Germany.1252.
 The time in German locale is: 'Mittwoch, 12. Mai 2004'  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_beginthread、_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多執行緒和地區設定](../../parallel/multithreading-and-locales.md)  
-

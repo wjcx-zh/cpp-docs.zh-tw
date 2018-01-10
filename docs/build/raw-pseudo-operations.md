@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 521714defb8503c5b51b276a6718f9f4f2735048
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52ce7fb4455f87001bcfe87e1368ed0c09cda6b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raw-pseudo-operations"></a>未經處理的虛擬作業
 本主題列出的虛擬作業。  
@@ -84,5 +85,5 @@ ret
 sample ENDP  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MASM 的回溯協助程式](../build/unwind-helpers-for-masm.md)

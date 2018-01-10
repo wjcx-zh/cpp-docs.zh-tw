@@ -27,11 +27,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daaebc957862b893b130dce28d47d4a166da9d52
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 927dc9312fa7ad9729e4a8ab87d1748f699c8508
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbookmarkgetsize"></a>CBookmark::GetSize
 擷取書籤緩衝區的大小。  
@@ -50,5 +53,5 @@ virtual DBLENGTH GetSize( ) const throw( );
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CBookmark 類別](../../data/oledb/cbookmark-class.md)

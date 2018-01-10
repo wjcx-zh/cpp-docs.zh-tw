@@ -39,11 +39,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 377f8e19268a643b0237da66ba14a82fc7b6685b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95f508b1198cd009abe0cf82cbe9a7aaf553240f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initterm-initterme"></a>_initterm、_initterm_e
 查核函式指標的資料表，並將它們初始化的內部方法。  
@@ -72,5 +73,5 @@ int __cdecl _initterm_e(
   
  當這些方法查核函式項目資料表時，會略過 `NULL` 項目並繼續。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

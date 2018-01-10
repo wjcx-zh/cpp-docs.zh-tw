@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,24 +26,23 @@ apitype: DLLExport
 f1_keywords:
 - _swab
 - stdlib/_swab
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _swab function
 - swapping bytes
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 42515208c2c94e28ee5d6a5fab586d4ab747cc6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: a3043abf425055d8cb21108a30db2e6382e19c1a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="swab"></a>_swab
 交換位元組。  
@@ -78,11 +76,11 @@ void _swab(
  如果 `n` 為偶數，`_swab` 函式會從 `src` 複製 `n` 個位元組、交換每一對相鄰的位元組，然後將結果儲存在 `dest`。 如果 `n` 是奇數，`_swab` 會複製並交換 `src` 的前 `n-1` 個位元組，且不會複製最後一個位元組。 `_swab` 函式通常用來準備要傳輸到使用不同位元組順序之機器的二進位資料。  
   
 ## <a name="requirements"></a>需求  
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_swab`|C: \<stdlib.h> C++: \<cstdlib> 或 \<stdlib.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
 ```C 
@@ -110,5 +108,5 @@ After:  BADCFEHGJILKNMPORQTSVUXWZY
         ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)

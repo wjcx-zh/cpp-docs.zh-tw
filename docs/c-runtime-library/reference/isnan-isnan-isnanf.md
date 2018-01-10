@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 982760deff4c5e2439c8743aa0de736a24faa02a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ea88de83d10699c07dd387a616178c0043e925c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 測試浮點值是否為非數字 (NAN)。  
@@ -87,18 +88,18 @@ bool isnan(
   
  當編譯為 C++ 時，`isnan` 巨集為未定義，並改為定義 `isnan` 範本函式。 它會傳回類型 `bool` 的值，而不是整數。  
   
- `_isnan` 和 `_isnanf` 函式為 Microsoft 特有。 `_isnanf` 函式只適用於 x64 編譯時。  
+ `_isnan` 和 `_isnanf` 函式是 Microsoft 特有的。 `_isnanf` 函式只適用於 x64 編譯時。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭 (C)|必要的標頭 (C++)|  
+|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|  
 |-------------|---------------------------|-------------------------------|  
 |`isnan`, `_isnanf`|\<math.h>|\<math.h> 或 \<cmath>|  
 |`_isnan`|\<float.h>|\<float.h> 或 \<cfloat>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [_finite、_finitef](../../c-runtime-library/reference/finite-finitef.md)   
  [_fpclass、_fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)

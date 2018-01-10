@@ -21,11 +21,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cae8862dd8fc10dd117b07414ab00a34117f5e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3099fbf6b97f3ad18a28c071fcd08ec8280fa24a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-customizing-your-recordsets-sql-statement-odbc"></a>SQL：自訂資料錄集的 SQL 陳述式 (ODBC)
 本主題說明：  
@@ -162,6 +165,6 @@ SELECT CourseID, InstructorID, RoomNo, Schedule, SectionNo
   
  如果預先定義的查詢不會傳回記錄，您可以使用`CDatabase`成員函式`ExecuteSQL`直接。 預先定義的查詢會傳回記錄，您必須也可以手動撰寫呼叫 RFX`DoFieldExchange`程序會傳回任何資料行。 Rfx 必須位於相同的順序，並傳回相同的類型，做為預先定義的查詢。 如需詳細資訊，請參閱[資料錄集： 宣告的類別為預先定義的查詢 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL: SQL 和 c + + 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)   
  [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

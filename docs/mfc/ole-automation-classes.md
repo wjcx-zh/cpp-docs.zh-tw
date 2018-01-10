@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58fce283c43613cc898cd9a4a4a13659bbcb17b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0c8ccbc6181442d2ed95f3fbe15ca2925a36464
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-automation-classes"></a>OLE Automation 類別
 這些類別可支援 automation 用戶端 （控制其他應用程式的應用程式）。 Automation 伺服程式 （可由其他應用程式的應用程式） 支援透過[分派對應](../mfc/reference/dispatch-maps.md)。  
@@ -35,6 +36,6 @@ ms.lasthandoff: 10/24/2017
  [COleDispatchException](../mfc/reference/coledispatchexception-class.md)  
  OLE automation 期間所產生的錯誤例外狀況。 Automation 例外狀況由 Automation 伺服程式擲回，並由 Automation 用戶端攔截。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

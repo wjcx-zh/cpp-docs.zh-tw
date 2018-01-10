@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba0c7211ad7d859dfaf44a9e7843fa6984ec167a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83ba325bf0b08f9b8ebb2cc7f9b0bf0b5eb8f173
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="component"></a>元件
 從原始程式檔內部收集瀏覽資訊或相依性資訊的控制項。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="browser"></a>瀏覽器  
  您可以開啟或關閉收集功能，而且可以指定要在收集的資訊中忽略的特定名稱。  
   
- 使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如：  
+ 使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如:   
   
 ```  
 #pragma component(browser, off)  
@@ -93,5 +94,5 @@ LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subs
   
  如需詳細資訊，請參閱[啟用最少重建](../build/reference/gm-enable-minimal-rebuild.md)(/ Gm) 編譯器選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

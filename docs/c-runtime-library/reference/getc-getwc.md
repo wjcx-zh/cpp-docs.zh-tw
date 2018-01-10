@@ -43,11 +43,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 78a94d954631dfffbdcdc4bcad252599c673f44b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12ddc1fa68f1b27fa96ffb81ef24004fd1fb0a19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getc-getwc"></a>getc、getwc
 從資料流讀取字元。  
@@ -79,7 +80,7 @@ wint_t getwc(
   
  常式特定備註如下。  
   
-|常式|備註|  
+|常式傳回的值|備註|  
 |-------------|-------------|  
 |`getc`|與 `fgetc` 相同，但實作為函式和巨集。|  
 |`getwc`|`getc` 的寬字元版本。 根據是以文字模式還是二進位模式開啟 `stream`，讀取多位元組字元或寬字元。|  
@@ -92,12 +93,12 @@ wint_t getwc(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`getc`|\<stdio.h>|  
 |`getwc`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -149,7 +150,7 @@ Line two.
 Input was: Line one.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fgetc、fgetwc](../../c-runtime-library/reference/fgetc-fgetwc.md)   
  [_getch、_getwch](../../c-runtime-library/reference/getch-getwch.md)   

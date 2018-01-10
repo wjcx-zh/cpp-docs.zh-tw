@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bfbb97f66065efd0a9ef06de0ff427e893610955
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbefa4a8036802599dd97f31d57f18204fd6104f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 簡單物件精靈
 此精靈可將基本的 COM 物件插入至專案。 使用精靈的這個頁面來指定識別的 c + + 類別和物件和它的 COM 功能檔案的名稱。  
@@ -83,6 +84,6 @@ ms.lasthandoff: 10/24/2017
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL 簡單物件](../../atl/reference/adding-an-atl-simple-object.md)
 

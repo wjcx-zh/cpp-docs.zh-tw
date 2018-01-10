@@ -35,11 +35,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7104ed2cee86ceb0fe298bec61a74a0782e0bd00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52f2c1d3defb822f00095a24bfcc87bd07fc8cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 將多位元組字元轉換為對應的寬字元。  
@@ -77,16 +78,16 @@ int _mbtowc_l(
  如果 **mbchar** 不是 **NULL**，且 `mbchar` 所指向的物件會形成有效的多位元組字元，`mbtowc` 會傳回多位元組字元的長度 (以位元組為單位)。 如果 `mbchar` 為 **NULL**，或是它所指向的物件是寬字元的 Null 字元 (L'\0')，此函式會傳回 0。 如果物件的`mbchar`指向不會構成有效的多位元組字元內第一個*計數*字元，則傳回-1。  
   
 ## <a name="remarks"></a>備註  
- 如果 `mbchar` 不是 **NULL**，`mbtowc` 函式會將 `mbchar` 所指向的 *count* 個或更少個位元組，轉換成對應的寬字元。 如果 *wchar* 不是 **NULL**，`mbtowc` 會將產生的寬字元儲存在 *wchar*。 `mbtowc` 不會檢查超過 `MB_CUR_MAX` 的位元組。 `mbtowc` 會針對與地區設定相關的行為使用目前的地區設定；`_mbtowc_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 如果 `mbchar` 不是 **NULL**，`mbtowc` 函式會將 `mbchar` 所指向的 *count* 個或更少個位元組，轉換成對應的寬字元。 如果 *wchar* 不是 **NULL**，`mbtowc` 會將產生的寬字元儲存在 *wchar*。 `mbtowc` 不會檢查超過 `MB_CUR_MAX` 的位元組。 `mbtowc` 會針對與地區設定相關的行為使用目前的地區設定；`_mbtowc_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`mbtowc`|\<stdlib.h>|  
 |**_mbtowc_l**|\<stdlib.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -150,7 +151,7 @@ Attempt to convert a NULL pointer to a wide character:
   Bytes converted: 0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   
  [地區設定](../../c-runtime-library/locale.md)   

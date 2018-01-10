@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - fopen_s
 - _tfopen_s
 - _wfopen_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wfopen_s function
 - opening files, for file I/O
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 168d1cd797f9f7d6080f2da7aefeb8859c7f2232
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3205577627967fa58c3fbc0d1318a48fc5525561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
 開啟檔案。 這些版本的 [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -89,10 +73,10 @@ errno_t _wfopen_s(
  [輸出] `pFile`  
  指向檔案指標 (將接收指向已開啟檔案之指標) 的指標。  
   
- [in] `filename`  
+ [輸入] `filename`  
  檔案名稱。  
   
- [in] `mode`  
+ [輸入] `mode`  
  允許的存取類型。  
   
 ## <a name="return-value"></a>傳回值  
@@ -102,8 +86,8 @@ errno_t _wfopen_s(
   
 |`pFile`|`filename`|`mode`|傳回值|`pFile` 的內容。|  
 |-------------|----------------|------------|------------------|------------------------|  
-|`NULL`|any|任何|`EINVAL`|未變更|  
-|any|`NULL`|任何|`EINVAL`|未變更|  
+|`NULL`|any|any|`EINVAL`|未變更|  
+|any|`NULL`|any|`EINVAL`|未變更|  
 |any|any|NULL|`EINVAL`|未變更|  
   
 ## <a name="remarks"></a>備註  
@@ -221,8 +205,8 @@ errno_t _wfopen_s(
 |`a+`|`_O_RDWR &#124; _O_APPEND` (通常為 `_O_RDWR &#124; _O_APPEND &#124; _O_CREAT` )|  
 |`r`|`_O_RDONLY`|  
 |`r+`|`_O_RDWR`|  
-|`w`|`_O_WRONLY`(通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
-|`w+`|`_O_RDWR`(通常為 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w`|`_O_WRONLY` (通常為 `_O_WRONLY &#124; _O_CREAT &#124; _O_TRUNC`)|  
+|`w+`|`_O_RDWR` (通常為 `_O_RDWR &#124; _O_CREAT &#124; _O_TRUNC`)|  
 |`b`|`_O_BINARY`|  
 |`t`|`_O_TEXT`|  
 |`c`|無|  
@@ -239,12 +223,12 @@ errno_t _wfopen_s(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`fopen_s`|\<stdio.h>|  
 |`_wfopen_s`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -315,7 +299,7 @@ The file 'data2' was opened
 Number of files closed by _fcloseall: 1  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen、_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   

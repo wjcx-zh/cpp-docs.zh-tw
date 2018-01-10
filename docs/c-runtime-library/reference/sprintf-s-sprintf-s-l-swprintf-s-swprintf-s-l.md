@@ -51,11 +51,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 12b5799c9471ffaf8328d4f8aa6a994319e4f30f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1dda25ab045262dffb34085519f4cf8b8bf226c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintfs-sprintfsl-swprintfs-swprintfsl"></a>sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l
 將格式化資料寫入字串。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](../../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md) 版本。  
@@ -119,12 +120,12 @@ int swprintf_s(
  `locale`  
  要使用的地區設定。  
   
- 如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 如需詳細資訊，請參閱 [格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="return-value"></a>傳回值  
  寫入字元數，則為-1，發生錯誤。 如果 `buffer` 或 `format` 為 null 指標、則 `sprintf_s` 和 `swprintf_s` 會傳回 -1，並將 `errno` 設定為 `EINVAL`。  
   
- `sprintf_s` 會傳回儲存在 `buffer`中的位元組數目，不計結束的 null 字元。 `swprintf_s` 會傳回儲存在 `buffer` 中的寬字元數目，不計結束的 null 寬字元。  
+ `sprintf_s` 會傳回儲存在 `buffer`中的位元組數目，不計結束的 null 字元。 `swprintf_s` 會傳回儲存在 `buffer`中的寬字元數目，不計結束的 null 寬字元。  
   
 ## <a name="remarks"></a>備註  
  `sprintf_s` 函式會在 `buffer` 中格式化並儲存一連串字元和值。 每個 `argument` (如果有的話) 是根據 `format`中的對應格式規格進行轉換和輸出。 此格式包含一般字元，與 `format` printf [的](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)引數具有相同的形式和功能。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。  
@@ -148,12 +149,12 @@ int swprintf_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
-|`sprintf_s`, `_sprintf_s_l`|C：\<stdio.h><br /><br /> C++：\<cstdio> 或 \<stdio.h>|  
-|`swprintf_s`, `_swprintf_s_l`|C：\<stdio.h> 或 \<wchar.h><br /><br /> C++：\<cstdio>、\<cwchar>、\<stdio.h> 或 \<wchar.h>|  
+|`sprintf_s`、 `_sprintf_s_l`|C：\<stdio.h><br /><br /> C++：\<cstdio> 或 \<stdio.h>|  
+|`swprintf_s`、 `_swprintf_s_l`|C：\<stdio.h> 或 \<wchar.h><br /><br /> C++：\<cstdio>、\<cwchar>、\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -215,7 +216,7 @@ wrote 11 characters
 wrote -1 characters  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   

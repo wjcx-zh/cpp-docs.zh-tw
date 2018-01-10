@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae0d3c60ee17683a1d46b35caadea7784e167b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager 類別
 CAtlTransactionManager 類別提供的核心交易管理員 (KTM) 的函式的包裝函式。  
@@ -53,18 +54,18 @@ CAtlTransactionManager 類別提供的核心交易管理員 (KTM) 的函式的�
 class CAtlTransactionManager;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[~ CAtlTransactionManager](#dtor)|CAtlTransactionManager 解構函式。|  
 |[CAtlTransactionManager](#catltransactionmanager)|CAtlTransactionManager 建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[關閉](#close)|關閉一個交易控制代碼。|  
 |[認可](#commit)|要求交易被認可。|  
@@ -85,7 +86,7 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|`TRUE`如果支援此後援。`FALSE`否則。|  
 |[m_hTransaction](#m_htransaction)|交易控制代碼。|  
@@ -396,7 +397,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`hKey`|開啟登錄機碼的控制代碼。|  
 |`lpSubKey`|要刪除之索引鍵名稱。|  
@@ -466,10 +467,10 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  檔案或目錄的名稱。  
   
  `dwAttributes`  
- 若要為檔案設定檔案屬性。 如需詳細資訊，請參閱[SetFileAttributesTransacted](http://go.microsoft.com/fwlink/linkid=158699)。  
+ 若要為檔案設定檔案屬性。 如需詳細資訊，請參閱[SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699)。  
   
 ### <a name="remarks"></a>備註  
  這個包裝函式呼叫`SetFileAttributesTransacted`函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)

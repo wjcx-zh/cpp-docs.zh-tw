@@ -50,11 +50,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 741c3045781af5437c456028644678e5811f3378
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8df40232ae7a6a92343e86fc00db5f4f0e571ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsnprintfs-vsnprintfs-vsnprintfsl-vsnwprintfs-vsnwprintfsl"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 使用引數清單的指標，寫入格式化輸出。 這些是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l](../../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 版本。  
@@ -134,18 +135,18 @@ int _vsnwprintf_s(
  `locale`  
  要使用的地區設定。  
   
- 如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 如需詳細資訊，請參閱 [格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="return-value"></a>傳回值  
  `vsnprintf_s`、`_vsnprintf_s` 和 `_vsnwprintf_s` 會傳回寫入的字元數，但不包含終止的 Null，或在發生輸出錯誤時傳回負值。 `vsnprintf_s` 等同於 `_vsnprintf_s` `vsnprintf_s` 包含在內，以符合 ANSI 規範。 `_vnsprintf` 保留以提供回溯相容性。  
   
  如果儲存資料和終止 Null 所需的儲存體超過 `sizeOfBuffer`，則叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述，除非 `count` 是[_TRUNCATE](../../c-runtime-library/truncate.md)，在此情況下會儘可能寫入適合 `buffer` 的字串並傳回 -1。 如果在無效的參數處理常式之後繼續執行，則這些函式會將 `buffer` 設定為空字串、將 `errno` 設定為 `ERANGE`，並傳回 -1。  
   
- 如果 `buffer` 或 `format` 為 `NULL` 指標，或者 `count` 小於或等於零，則會叫用無效的參數處理常式。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 -1。  
+ 如果 `buffer` 或 `format` 為 `NULL` 指標，或者 `count` 小於或等於零，則會叫用無效的參數處理常式。 如果允許繼續執行，這些函式會將 `errno` 設定為 `EINVAL` ，並傳回 -1。  
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|`Condition`|返回|`errno`|  
+|`Condition`|Return|`errno`|  
 |-----------------|------------|-------------|  
 |`buffer` 是 `NULL`|-1|`EINVAL`|  
 |`format` 是 `NULL`|-1|`EINVAL`|  
@@ -165,7 +166,7 @@ int _vsnwprintf_s(
 > [!NOTE]
 >  為確保障終止的 Null 有足夠空間，`count` 絕對要小於緩衝區長度，或使用 `_TRUNCATE`。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -176,7 +177,7 @@ int _vsnwprintf_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|----------------------|  
 |`vsnprintf_s`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
 |`_vsnprintf_s`, `_vsnprintf_s_l`|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|  
@@ -184,7 +185,7 @@ int _vsnwprintf_s(
   
  \* UNIX V 相容性的必要項目。  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -218,7 +219,7 @@ nSize: 9, buff: Hi there!
 nSize: -1, buff: Hi there!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 函式](../../c-runtime-library/vprintf-functions.md)   
  [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   

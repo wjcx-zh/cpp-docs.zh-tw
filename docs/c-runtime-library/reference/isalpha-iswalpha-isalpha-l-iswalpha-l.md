@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -47,30 +45,16 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 6e8a0fce6ad16a34a8c6e51d1810fd7116a79e17
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d7ef7443a37d8d68b40f47f3eacfee8bac2626a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 判斷整數是否代表字母字元。  
@@ -104,7 +88,7 @@ int _iswalpha_l(
 ## <a name="return-value"></a>傳回值  
  如果 `c` 表示特定的字母字元，則這些常式都會傳回非零。 `isalpha`傳回非零值，如果`c`A-Z 或 a-z 的範圍內。 只有針對 `iswupper` 或`iswlower` 為非零值的寬字元，`iswalpha` 才會傳回非零值；也就是說，對於屬於任何實作定義字元集中的寬字元，且 `iswcntrl`、`iswdigit`、`iswpunct`或 `iswspace` 均非為非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
- 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isalpha` 和 `_isalpha_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
   
@@ -117,16 +101,16 @@ int _iswalpha_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`isalpha`|\<ctype.h>|  
 |`iswalpha`|\<ctype.h> 或 \<wchar.h>|  
 |`_isalpha_l`|\<ctype.h>|  
 |`_iswalpha_l`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)

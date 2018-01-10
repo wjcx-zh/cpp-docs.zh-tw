@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,37 +30,22 @@ f1_keywords:
 - ATLBASE/ATL::CComBSTR::ToUpper
 - ATLBASE/ATL::CComBSTR::WriteToStream
 - ATLBASE/ATL::CComBSTR::m_str
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - BSTRs, wrapper
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 4c7ab8630a4793f0363567fa00cecb8a3bc19e3b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 604e3b9841ab628343a48e72612d2e50e85913f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccombstr-class"></a>CComBSTR 類別
 這個類別是包裝函式`BSTR`s。  
@@ -72,7 +56,7 @@ ms.lasthandoff: 03/31/2017
 class CComBSTR
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -106,14 +90,14 @@ class CComBSTR
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComBSTR::operator BSTR](#operator_bstr)|轉型`CComBSTR`物件`BSTR`。|  
 |[CComBSTR::operator ！](#operator_not)|傳回`true`或`false`，取決於是否`m_str`是`NULL`。|  
 |[CComBSTR::operator ！ =](#operator_neq)|比較`CComBSTR`的字串。|  
-|[CComBSTR::operator &](#operator_amp)|傳回的位址`m_str`。|  
+|[CComBSTR::operator （& s)](#operator_amp)|傳回的位址`m_str`。|  
 |[CComBSTR::operator + =](#operator_add_eq)|將附加`CComBSTR`物件。|  
-|[CComBSTR::operator](#operator_lt)|比較`CComBSTR`的字串。|  
+|[CComBSTR::operator <](#operator_lt)|比較`CComBSTR`的字串。|  
 |[CComBSTR::operator =](#operator_eq)|指派將值`m_str`。|  
 |[CComBSTR::operator = =](#operator_eq_eq)|比較`CComBSTR`的字串。|  
 |[CComBSTR::operator >](#operator_gt)|比較`CComBSTR`的字串。|  
@@ -138,7 +122,7 @@ class CComBSTR
  如需使用時的注意事項`CComBSTR`，請參閱[使用 ccombstr 進行程式設計](../../atl/programming-with-ccombstr-atl.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ##  <a name="append"></a>CComBSTR::Append  
  附加 `lpsz`或`BSTR`隸屬`bstrSrc`至[m_str](#m_str)。  
@@ -172,7 +156,7 @@ HRESULT Append(LPCOLESTR lpsz, int nLen) throw();
  為 ANSI 字串會轉換成 Unicode，然後再附加。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 32](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#32](../../atl/codesnippet/cpp/ccombstr-class_1.cpp)]  
   
 ##  <a name="appendbstr"></a>CComBSTR::AppendBSTR  
  將指定的附加`BSTR`至[m_str](#m_str)。  
@@ -192,7 +176,7 @@ HRESULT AppendBSTR(BSTR p) throw();
  不要將一般的寬字元字串傳遞給這個方法。 編譯器無法攔截到錯誤，並在執行的階段會發生錯誤。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#33](../../atl/codesnippet/cpp/ccombstr-class_2.cpp)]  
   
 ##  <a name="appendbytes"></a>CComBSTR::AppendBytes  
  將指定的位元組數附加[m_str](#m_str)不需要轉換。  
@@ -212,7 +196,7 @@ HRESULT AppendBytes(const char* lpsz, int nLen) throw();
  `S_OK`在成功時或任何標準`HRESULT`錯誤值。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 34](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#34](../../atl/codesnippet/cpp/ccombstr-class_3.cpp)]  
   
 ##  <a name="arraytobstr"></a>CComBSTR::ArrayToBSTR  
  釋放保留任何現有字串`CComBSTR`物件，然後建立`BSTR`safearray 中每個元素的第一個字元並將它附加至`CComBSTR`物件。  
@@ -260,7 +244,7 @@ void Attach(BSTR src) throw();
 >  這個方法會判斷提示，如果`m_str`是非**NULL**。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
   
 ##  <a name="bstrtoarray"></a>CComBSTR::BSTRToArray  
  建立以零為起始的一維 safearray，陣列的每個項目所在的一個字元`CComBSTR`物件。  
@@ -290,7 +274,7 @@ unsigned int ByteLength() const throw();
  傳回 0，如果`m_str`是**NULL**。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#36](../../atl/codesnippet/cpp/ccombstr-class_5.cpp)]  
   
 ##  <a name="ccombstr"></a>CComBSTR::CComBSTR  
  建構函式。 預設建構函式集[m_str](#m_str)成員**NULL**。  
@@ -324,7 +308,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
  [in]若要參考**GUID**結構。  
   
 ### <a name="remarks"></a>備註  
- 複製建構函式設定`m_str`的副本`BSTR`隸屬*src*。 **REFGUID**建構函式會將轉換**GUID**字串使用**StringFromGUID2**並儲存結果。  
+ 複製建構函式設定`m_str`的副本`BSTR`隸屬*src*。**REFGUID**建構函式會將轉換**GUID**字串使用**StringFromGUID2**並儲存結果。  
   
  其他建構函式會將 `m_str` 設為所指定字串的複本。 如果您將值傳給 `nSize`，則只會複製 `nSize` 字元，後面接著結束的 null 字元。  
   
@@ -333,7 +317,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
  解構函式會釋放 `m_str` 所指向的字串。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]  
   
 ##  <a name="dtor"></a>CComBSTR:: ~ CComBSTR  
  解構函式。  
@@ -353,10 +337,10 @@ BSTR Copy() const throw();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 一份[m_str](#m_str)成員。 If `m_str` is **NULL**, returns **NULL**.  
+ 一份[m_str](#m_str)成員。 如果`m_str`是**NULL**，傳回**NULL**。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 38](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#38](../../atl/codesnippet/cpp/ccombstr-class_7.cpp)]  
   
 ##  <a name="copyto"></a>CComBSTR::CopyTo  
  配置並傳回一份[m_str](#m_str)透過參數。  
@@ -381,7 +365,7 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
  呼叫這個方法後, **VARIANT**指向`pvarDest`的型別`VT_BSTR`。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 39](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#39](../../atl/codesnippet/cpp/ccombstr-class_8.cpp)]  
   
 ##  <a name="detach"></a>CComBSTR::Detach  
  卸離[m_str](#m_str)從`CComBSTR`物件，然後設定`m_str`至**NULL**。  
@@ -394,7 +378,7 @@ BSTR Detach() throw();
  `BSTR`聯`CComBSTR`物件。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#40](../../atl/codesnippet/cpp/ccombstr-class_9.cpp)]  
   
 ##  <a name="empty"></a>CComBSTR::Empty  
  釋放[m_str](#m_str)成員。  
@@ -404,7 +388,7 @@ void Empty() throw();
 ```  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 41](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#41](../../atl/codesnippet/cpp/ccombstr-class_10.cpp)]  
   
 ##  <a name="length"></a>CComBSTR::Length  
  傳回的字元數`m_str`，但不包括結束的 null 字元。  
@@ -417,7 +401,7 @@ unsigned int Length() const throw();
  長度[m_str](#m_str)成員。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 42](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#42](../../atl/codesnippet/cpp/ccombstr-class_11.cpp)]  
   
 ##  <a name="loadstring"></a>CComBSTR::LoadString  
  載入所指定的字串資源`nID`並將它儲存在這個物件中。  
@@ -428,7 +412,7 @@ bool LoadString(UINT nID) throw();
 ```  
   
 ### <a name="parameters"></a>參數  
- 請參閱[LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[LoadString](http://msdn.microsoft.com/library/windows/desktop/ms647486) Windows SDK 中。  
   
 ### <a name="return-value"></a>傳回值  
  傳回**true**該字串是否已成功載入，否則，傳回**false**。  
@@ -437,7 +421,7 @@ bool LoadString(UINT nID) throw();
  第一個函式會從透過您所識別的模組載入資源`hInst`參數。 第二個函式會從相關聯的資源模組載入資源[CComModule](../../atl/reference/ccommodule-class.md)-衍生此專案中使用的物件。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#43](../../atl/codesnippet/cpp/ccombstr-class_12.cpp)]  
   
 ##  <a name="m_str"></a>CComBSTR::m_str  
  包含`BSTR`聯`CComBSTR`物件。  
@@ -447,7 +431,7 @@ BSTR m_str;
 ```  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#49](../../atl/codesnippet/cpp/ccombstr-class_13.cpp)]  
   
 ##  <a name="operator_bstr"></a>CComBSTR::operator BSTR  
  轉型`CComBSTR`物件`BSTR`。  
@@ -476,7 +460,7 @@ bool operator!() const throw();
  此運算子只會檢查 NULL 值，不能為空字串。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#35](../../atl/codesnippet/cpp/ccombstr-class_4.cpp)]  
   
 ##  <a name="operator_neq"></a>CComBSTR::operator ！ =  
  傳回的相反邏輯[運算子 = =](#operator_eq_eq)。  
@@ -517,9 +501,9 @@ BSTR* operator&() throw();
  預設不啟用這個判斷提示。 定義`ATL_CCOMBSTR_ADDRESS_OF_ASSERT`若要啟用這個判斷提示。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 46](../../atl/codesnippet/cpp/ccombstr-class_14.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#46](../../atl/codesnippet/cpp/ccombstr-class_14.cpp)]  
   
- [!code-cpp[NVC_ATL_Utilities # 47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]  
   
 ##  <a name="operator_add_eq"></a>CComBSTR::operator + =  
  將附加的字串`CComBSTR`物件。  
@@ -540,7 +524,7 @@ CComBSTR& operator+= (const LPCOLESTR pszSrc);
  `CComBSTR`s 會加 1 比較使用者的預設地區設定的內容中。 **LPCOLESTR**進行比較使用`memcmp`中每個字串的未經處理資料。 `LPCSTR`比較執行相同的方式之後暫存 Unicode 副本`pszSrc`已建立。 最後一個比較運算子只會比較所包含的字串和**NULL**。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#48](../../atl/codesnippet/cpp/ccombstr-class_16.cpp)]  
   
 ##  <a name="operator_lt"></a>CComBSTR::operator&lt;  
  比較`CComBSTR`的字串。  
@@ -558,7 +542,7 @@ bool operator<(LPCSTR pszSrc) const throw();
  使用使用者的預設地區設定來進行比較。  
   
 ##  <a name="operator_eq"></a>CComBSTR::operator =  
- 設定[m_str](#m_str)成員複本的`pSrc`或一份`BSTR`隸屬*src*。 移動指派運算子移動`src`無需先行複製它。   
+ 設定[m_str](#m_str)成員複本的`pSrc`或一份`BSTR`隸屬*src*。移動指派運算子移動`src`無需先行複製它。   
   
 ```
 CComBSTR& operator= (const CComBSTR& src);  
@@ -630,7 +614,7 @@ HRESULT ReadFromStream(IStream* pStream) throw();
  **ReadToStream**需要在目前的位置與呼叫寫出的資料格式相容的資料流內容[WriteToStream](#writetostream)。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 44](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#44](../../atl/codesnippet/cpp/ccombstr-class_17.cpp)]  
   
 ##  <a name="tolower"></a>CComBSTR::ToLower  
  將包含的字串轉換成小寫。  
@@ -676,9 +660,8 @@ HRESULT WriteToStream(IStream* pStream) throw();
  您可以重新建立資料流使用的內容從 BSTR [ReadFromStream](#readfromstream)函式。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 45](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#45](../../atl/codesnippet/cpp/ccombstr-class_18.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)
-

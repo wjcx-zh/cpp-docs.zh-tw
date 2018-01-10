@@ -14,16 +14,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7256f202e5e3b2e974f736875be18c8952884b64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 842a09224a9ea61e6c53a6d700435f05176cee55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-odbc-and-drivers"></a>使用 ODBC 和驅動程式
 ODBC，可讓您撰寫不依賴只有一個資料庫管理系統 (DBMS) 的應用程式。 您可以撰寫一個應用程式可操作您的使用者具有正確的 DBMS 專屬的 ODBC 驅動程式的多個 dbms。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [在執行階段決定的 ODBC 資料來源的結構描述](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)  
   
@@ -35,5 +38,5 @@ ODBC，可讓您撰寫不依賴只有一個資料庫管理系統 (DBMS) 的應�
   
 -   [MFC 中的直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

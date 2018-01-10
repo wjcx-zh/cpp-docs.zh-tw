@@ -18,14 +18,15 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd64280ffea287df4f865442e21d126b008c196b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed221cfe695ef04a7759fb0385153029ef9a892d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="date-and-time"></a>日期和時間
-MFC 支援的日期和時間使用數個不同的方式。 這些活動包括：  
+MFC 支援的日期和時間使用數個不同的方式。 它們包括：  
   
 -   一般用途的時間類別。 [CTime](../atl-mfc-shared/reference/ctime-class.md)和[CTimeSpan](../atl-mfc-shared/reference/ctimespan-class.md)類別會封裝大部分的時間中宣告的 ANSI 標準階段程式庫相關聯的功能。H.  
   
@@ -43,7 +44,7 @@ MFC 支援的日期和時間使用數個不同的方式。 這些活動包括：
   
 -   [日期和時間：資料庫支援](../atl-mfc-shared/date-and-time-database-support.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../mfc/mfc-concepts.md)   
  [一般 MFC 主題](../mfc/general-mfc-topics.md)
 

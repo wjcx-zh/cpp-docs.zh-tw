@@ -1,40 +1,39 @@
 ---
-title: "目標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "目標, 在 NMAKE 中指定"
+title: "目標 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: targets, specifying in NMAKE
 ms.assetid: 826ee849-4278-4c6e-97c3-79a2b5fe6463
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a07947dc7de4529d8cef3aa0f104d529d0b95ea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 目標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在相依性行中使用任何有效的檔名、目錄名稱，或[虛擬目標](../build/pseudotargets.md) \(Pseudotarget\)，指定一個或多個目標。  使用一個或多個空格或定位字元分隔多個目標。  目標不區分大小寫。  允許使用檔名做為路徑。  目標不可超過 256 個字元。  如果在冒號之前的目標為單一字元，請使用分隔空格，否則 NMAKE 會將字母冒號的組合解譯為磁碟指定元。  
+# <a name="targets"></a>目標
+在相依性的行中，指定一個或多個目標，使用任何有效的檔名、 目錄名稱，或[虛擬目標](../build/pseudotargets.md)。 使用一或多個空格或定位點分隔多個目標。 目標不區分大小寫。 允許使用路徑與檔名。 目標不能超過 256 個字元。 冒號前面的目標是單一字元，如果使用空格分隔。否則，NMAKE 會解譯為磁碟機代碼字母冒號組合。  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
  [虛擬目標](../build/pseudotargets.md)  
   
- [多重目標](../build/multiple-targets.md)  
+ [多個目標](../build/multiple-targets.md)  
   
  [累計相依性](../build/cumulative-dependencies.md)  
   
- [多重描述區塊中的目標](../build/targets-in-multiple-description-blocks.md)  
+ [多個描述區塊中的目標](../build/targets-in-multiple-description-blocks.md)  
   
  [相依性的副作用](../build/dependency-side-effects.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [描述區塊](../build/description-blocks.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a6ce74fb7f4238f89fe177013b28536f9b27a95e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8974633a19e6f30f552eac4e5e7c3ec3b104c2ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniquelock-class"></a>unique_lock 類別
 表示可以具現化的範本，用來建立管理鎖定和解除鎖定 `mutex` 的物件。  
@@ -35,7 +36,7 @@ class unique_lock;
   
  就內部而言，`unique_lock` 會將指標儲存至相關聯的 `mutex` 物件，以及表示目前的執行緒是否擁有 `mutex` 的 `bool`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -45,14 +46,14 @@ class unique_lock;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[unique_lock](#unique_lock)|建構 `unique_lock` 物件。|  
 |[~unique_lock 解構函式](#dtorunique_lock_destructor)|釋放任何與 `unique_lock` 物件相關聯的資源。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[lock](#lock)|封鎖呼叫的執行緒，直到執行緒取得相關聯 `mutex` 的擁有權。|  
 |[mutex](#mutex)|擷取相關聯 `mutex` 的已儲存指標。|  
@@ -299,7 +300,7 @@ void unlock();
   
  否則，這個方法會在相關聯 `mutex` 上呼叫 `unlock`，並將內部執行緒擁有權旗標設定為 `false`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 

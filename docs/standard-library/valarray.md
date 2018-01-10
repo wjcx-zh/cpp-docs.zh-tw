@@ -4,44 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- std.<valarray>
-- valarray/std::<valarray>
-- std::<valarray>
-- <valarray>
-dev_langs:
-- C++
-helpviewer_keywords:
-- valarray header
+f1_keywords: <valarray>
+dev_langs: C++
+helpviewer_keywords: valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 830078013287ec0efc94d0b7fa3f0adb4ea6c22e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 917dfbf870959b6934eaa49cbaab05e27304fb77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 定義範本類別 valarray 和許多支援的範本類別和函式。  
@@ -119,10 +98,9 @@ ms.lasthandoff: 04/29/2017
 |-|-|  
 |[valarray\<bool> 類別](../standard-library/valarray-bool-class.md)|針對 `bool` 型別項目之樣板類別 valarray\<**Type** 的特製化版本。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

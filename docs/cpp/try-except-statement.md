@@ -36,11 +36,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12aeb14d63f20592c94292b1548a8d3d700fef0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
@@ -190,9 +191,9 @@ in except
 world  
 ```  
 
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
 [結構化的例外處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   

@@ -1,44 +1,47 @@
 ---
-title: "資料錄集：篩選資料錄 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料 [MFC], 篩選"
-  - "篩選資料錄集"
-  - "篩選條件 [C++], recordset 物件"
-  - "ODBC 資料錄集 [C++], 篩選資料錄"
-  - "資料錄集 [C++], 篩選"
+title: "資料錄集： 篩選資料錄 (ODBC) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [MFC], filtering
+- recordsets [C++], filtering
+- filtering recordsets
+- ODBC recordsets [C++], filtering records
+- filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b6d6e8b41e67c9f33d643a2f64c7bdf2d2251eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 資料錄集：篩選資料錄 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本文件適用於 MFC ODBC 類別。  
+# <a name="recordset-filtering-records-odbc"></a>資料錄集：篩選資料錄 (ODBC)
+本主題適用於 MFC ODBC 類別。  
   
- 本主題說明如何篩選資料錄集，以便其僅選取可用資料錄的特定子集。  例如，您可能只想要選取一個諸如 MATH101 之特定課程的班級。  篩選條件是一個由 SQL **WHERE** 子句定義的搜尋條件。  當架構將它附加至資料錄集的 SQL 陳述式時，**WHERE** 子句便會限制選取。  
+ 本主題說明如何篩選資料錄集，使它會選取可用的資料錄對特定子集。 例如，您可以選取只為特定的課程中，例如 MATH101 類別區段。 篩選是由 SQL 的內容定義的搜尋條件**其中**子句。 當架構將它附加至資料錄集的 SQL 陳述式，**其中**子句會限制的選取項目。  
   
- 您必須在建構資料錄集的物件後，於呼叫其 **Open** 成員函式前 \(對於先前已經呼叫 **Open** 成員函式之現有資料錄集物件，則是在呼叫 **Requery** 成員函式前\) 先建立資料錄集的篩選條件。  
+ 建構物件之後但在您呼叫之前，您必須建立資料錄集物件的篩選條件及其**開啟**成員函式 (或在呼叫之前**Requery**現有的資料錄集的成員函式物件，其**開啟**先前呼叫成員函式)。  
   
-#### 若要指定資料錄集物件的篩選條件  
+#### <a name="to-specify-a-filter-for-a-recordset-object"></a>若要指定的篩選資料錄集物件  
   
-1.  建構一個新的資料錄集物件 \(或準備對一個現有物件呼叫 **Requery**\)。  
+1.  建構一個新的資料錄集物件 (或準備呼叫**Requery**現有的物件)。  
   
-2.  設定物件的 [m\_strFilter](../Topic/CRecordset::m_strFilter.md) 資料成員值。  
+2.  設定物件的值[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)資料成員。  
   
-     篩選是 null 結尾字串，包含了 SQL **WHERE** 子具的內容，但不包含關鍵字 **WHERE**。  例如，使用：  
+     篩選器是以 null 結束的字串，包含內容的 SQL**其中**子句，但不是關鍵字**其中**。 例如，使用：  
   
     ```  
     m_pSet->m_strFilter = "CourseID = 'MATH101'";  
@@ -51,19 +54,19 @@ caps.handback.revision: 8
     ```  
   
     > [!NOTE]
-    >  上述所顯示的常值字串 "MATH101" 有單引號。  在 ODBC SQL 規格中，單引號是用來表示一個字元字串常值。  如需您的 DBMS 在此情形時的引號需求之詳細資訊，請參閱您的 ODBC 驅動程式文件。  這個主題的結尾附近也有進一步討論此語法。  
+    >  常值字串"MATH101"會以單引號上方顯示。 在 ODBC SQL 規格中，單引號用來表示字元字串常值。 請檢查您的 ODBC 驅動程式文件，您在此情況下的 DBMS 引號需求。 這個語法也會討論進一步接近本主題的結尾。  
   
-3.  設定任何您需要的其他選項，例如排序順序、鎖定模式或參數。  指定參數尤其有用。  如需參數化篩選的詳細資訊，請參閱[資料錄集：參數化資料錄集 \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。  
+3.  設定需要例如排序次序、 鎖定模式或參數的其他選項。 指定的參數會特別有用。 參數化篩選的相關資訊，請參閱[資料錄集： 參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。  
   
-4.  為新的物件呼叫 **Open** \(或為先前開啟過的物件呼叫 **Requery**\)。  
-  
-> [!TIP]
->  在您的篩選條件中使用參數，可能是最有效率的擷取資料錄方法。  
+4.  呼叫**開啟**新物件 (或**Requery**先前開啟的物件)。  
   
 > [!TIP]
->  在[聯結](../../data/odbc/recordset-performing-a-join-odbc.md)資料表中，以及根據在執行階段時取得或計算來的資訊使用[參數](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)的情況下，資料錄集篩選條件是非常有用的。  
+>  在您的篩選條件中使用參數可能是最有效率的擷取記錄的方式。  
   
- 資料錄集只會選取那些符合您指定之搜尋條件的資料錄。  例如，若要指定上述說明的課程篩選條件 \(假設已設定 `strCourseID` 變數為 "MATH101"\)，請執行下列步驟：  
+> [!TIP]
+>  資料錄集篩選器可用於[聯結](../../data/odbc/recordset-performing-a-join-odbc.md)資料表以及使用[參數](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)取得，或在執行階段計算資訊為基礎。  
+  
+ 資料錄集選取只在符合您指定的搜尋條件的記錄。 例如，若要指定課程篩選上面所述 (假設變數`strCourseID`目前設定，例如，"MATH101")，執行下列動作：  
   
 ```  
 // Using the recordset pointed to by m_pSet  
@@ -77,28 +80,28 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset  
 ```  
   
- 資料錄集包含所有 MATH101 之班級的資料錄。  
+ 資料錄集包含 MATH101 記錄類別的所有章節。  
   
- 請注意上述範例中已經使用字串變數設定了篩選字串。  這是一般的用法。  但假設您想要將課程 ID 指定為常值 100。  下面程式碼示範了使用一個常值來正確設定篩選字串的方式：  
+ 請注意在上述範例使用字串變數如何設定篩選字串。 這是典型的用法。 但假設您想要指定常值 100 課程識別碼。 下列程式碼會示範如何設定正確包含常值的篩選字串：  
   
 ```  
 m_strFilter = "StudentID = '100'";   // correct  
 ```  
   
- 請記得使用單引號字元；若您直接設定篩選字串，篩選字串便**不**會是您預期的結果：  
+ 請注意使用單引號字元。如果您直接設定篩選字串，此篩選條件字串是**不**:  
   
 ```  
 m_strFilter = "StudentID = 100";   // incorrect for some drivers  
 ```  
   
- 上述的引號是遵循 ODBC 規格，但某些 DBMS 可能需要其他的引號字元。  如需詳細資訊，請參閱 [SQL：自訂資料錄集的 SQL 陳述式 \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)。  
+ 用引號括住如上所示符合 ODBC 規格中，但某些 Dbms 可能需要其他的引號字元。 如需詳細資訊，請參閱[SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。  
   
 > [!NOTE]
->  如果您選擇藉由傳遞自己的 SQL 字串給 **Open** 來覆寫資料錄集的預設 SQL 字串，且您自訂的字串中有 **WHERE** 子句時，便不應該設定篩選條件。  如需覆寫預設 SQL 的詳細資訊，請參閱 [SQL：自訂資料錄集的 SQL 陳述式 \(ODBC\)](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)。  
+>  如果您選擇覆寫資料錄集的預設 SQL 字串傳遞您自己的 SQL 字串**開啟**，您不應將篩選條件，如果您的自訂字串具有**其中**子句。 如需覆寫預設 SQL 的詳細資訊，請參閱[SQL： 自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。  
   
-## 請參閱  
- [資料錄集 \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [資料錄集：排序資料錄 \(ODBC\)](../../data/odbc/recordset-sorting-records-odbc.md)   
- [資料錄集：資料錄集選取資料錄的方式 \(ODBC\)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
- [資料錄集：資料錄集更新資料錄的方式 \(ODBC\)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
- [資料錄集：鎖定資料錄 \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>請參閱  
+ [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [資料錄集： 排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)   
+ [資料錄集： 資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
+ [資料錄集： 資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)   
+ [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

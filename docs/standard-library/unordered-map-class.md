@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unordered_map
 - unordered_map/std::unordered_map
 - unordered_map/std::unordered_map::allocator_type
 - unordered_map/std::unordered_map::const_iterator
@@ -55,78 +53,108 @@ f1_keywords:
 - unordered_map/std::unordered_map::size
 - unordered_map/std::unordered_map::swap
 - unordered_map/std::unordered_map::unordered_map
-- unordered_map/std::unordered_map::allocator_type
-- unordered_map/std::unordered_map::const_iterator
-- unordered_map/std::unordered_map::const_local_iterator
-- unordered_map/std::unordered_map::const_pointer
-- unordered_map/std::unordered_map::const_reference
-- unordered_map/std::unordered_map::difference_type
-- unordered_map/std::unordered_map::hasher
-- unordered_map/std::unordered_map::iterator
-- unordered_map/std::unordered_map::key_equal
-- unordered_map/std::unordered_map::key_type
-- unordered_map/std::unordered_map::local_iterator
-- unordered_map/std::unordered_map::mapped_type
-- unordered_map/std::unordered_map::pointer
-- unordered_map/std::unordered_map::reference
-- unordered_map/std::unordered_map::size_type
-- unordered_map/std::unordered_map::value_type
-- unordered_map/std::unordered_map::at
-- unordered_map/std::unordered_map::begin
-- unordered_map/std::unordered_map::bucket
-- unordered_map/std::unordered_map::bucket_count
-- unordered_map/std::unordered_map::bucket_size
-- unordered_map/std::unordered_map::cbegin
-- unordered_map/std::unordered_map::cend
-- unordered_map/std::unordered_map::clear
-- unordered_map/std::unordered_map::count
-- unordered_map/std::unordered_map::emplace
-- unordered_map/std::unordered_map::emplace_hint
-- unordered_map/std::unordered_map::empty
-- unordered_map/std::unordered_map::end
-- unordered_map/std::unordered_map::equal_range
-- unordered_map/std::unordered_map::erase
-- unordered_map/std::unordered_map::find
-- unordered_map/std::unordered_map::get_allocator
 - unordered_map/std::unordered_map::hash_function
-- unordered_map/std::unordered_map::insert
-- unordered_map/std::unordered_map::key_eq
-- unordered_map/std::unordered_map::load_factor
-- unordered_map/std::unordered_map::max_bucket_count
-- unordered_map/std::unordered_map::max_load_factor
-- unordered_map/std::unordered_map::max_size
-- unordered_map/std::unordered_map::rehash
-- unordered_map/std::unordered_map::size
-- unordered_map/std::unordered_map::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- unordered_map class
+- std::unordered_map
+- std::unordered_map::allocator_type
+- std::unordered_map::const_iterator
+- std::unordered_map::const_local_iterator
+- std::unordered_map::const_pointer
+- std::unordered_map::const_reference
+- std::unordered_map::difference_type
+- std::unordered_map::hasher
+- std::unordered_map::iterator
+- std::unordered_map::key_equal
+- std::unordered_map::key_type
+- std::unordered_map::local_iterator
+- std::unordered_map::mapped_type
+- std::unordered_map::pointer
+- std::unordered_map::reference
+- std::unordered_map::size_type
+- std::unordered_map::value_type
+- std::unordered_map::at
+- std::unordered_map::begin
+- std::unordered_map::bucket
+- std::unordered_map::bucket_count
+- std::unordered_map::bucket_size
+- std::unordered_map::cbegin
+- std::unordered_map::cend
+- std::unordered_map::clear
+- std::unordered_map::count
+- std::unordered_map::emplace
+- std::unordered_map::emplace_hint
+- std::unordered_map::empty
+- std::unordered_map::end
+- std::unordered_map::equal_range
+- std::unordered_map::erase
+- std::unordered_map::find
+- std::unordered_map::get_allocator
+- std::unordered_map::hash
+- std::unordered_map::insert
+- std::unordered_map::key_eq
+- std::unordered_map::load_factor
+- std::unordered_map::max_bucket_count
+- std::unordered_map::max_load_factor
+- std::unordered_map::max_size
+- std::unordered_map::rehash
+- std::unordered_map::size
+- std::unordered_map::swap
+- std::unordered_map::unordered_map
+- std::unordered_map::allocator_type
+- std::unordered_map::const_iterator
+- std::unordered_map::const_local_iterator
+- std::unordered_map::const_pointer
+- std::unordered_map::const_reference
+- std::unordered_map::difference_type
+- std::unordered_map::hasher
+- std::unordered_map::iterator
+- std::unordered_map::key_equal
+- std::unordered_map::key_type
+- std::unordered_map::local_iterator
+- std::unordered_map::mapped_type
+- std::unordered_map::pointer
+- std::unordered_map::reference
+- std::unordered_map::size_type
+- std::unordered_map::value_type
+- std::unordered_map::at
+- std::unordered_map::begin
+- std::unordered_map::bucket
+- std::unordered_map::bucket_count
+- std::unordered_map::bucket_size
+- std::unordered_map::cbegin
+- std::unordered_map::cend
+- std::unordered_map::clear
+- std::unordered_map::count
+- std::unordered_map::emplace
+- std::unordered_map::emplace_hint
+- std::unordered_map::empty
+- std::unordered_map::end
+- std::unordered_map::equal_range
+- std::unordered_map::erase
+- std::unordered_map::find
+- std::unordered_map::get_allocator
+- std::unordered_map::hash_function
+- std::unordered_map::insert
+- std::unordered_map::key_eq
+- std::unordered_map::load_factor
+- std::unordered_map::max_bucket_count
+- std::unordered_map::max_load_factor
+- std::unordered_map::max_size
+- std::unordered_map::rehash
+- std::unordered_map::size
+- std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8e32440470dd576757e631ec7c74971dc5338a6c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fbb8b5b30f1666735fc4eebca0c1d0b335c1986b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmap-class"></a>unordered_map 類別
 此樣板類別描述控制不同長度的 `std::pair<const Key, Ty>` 類型項目序列的物件。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目儲存兩個物件：排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。  
@@ -146,18 +174,18 @@ class unordered_map;
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Key`|索引鍵類型。|  
 |`Ty`|對應的類型。|  
 |`Hash`|雜湊函式物件類型。|  
 |`Pred`|相等比較函式物件類型。|  
 |`Alloc`|配置器類別。|  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |||  
 |-|-|  
-|類型定義|說明|  
+|類型定義|描述|  
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|  
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
 |[const_local_iterator](#const_local_iterator)|用於受控制序列的常數 Bucket 迭代器類型。|  
@@ -177,7 +205,7 @@ class unordered_map;
   
 |||  
 |-|-|  
-|成員函式|說明|  
+|成員函式|描述|  
 |[at](#at)|尋找具有指定之索引鍵的項目。|  
 |[begin](#begin)|指定受控制序列的開頭。|  
 |[值區](#bucket)|取得索引鍵值的值區數目。|  
@@ -209,7 +237,7 @@ class unordered_map;
   
 |||  
 |-|-|  
-|運算子|說明|  
+|運算子|描述|  
 |[unordered_map::operator[]](#op_at)|尋找或插入具有指定索引鍵的項目。|  
 |[unordered_map::operator=](#op_eq)|複製雜湊資料表。|  
   
@@ -689,7 +717,7 @@ typedef T1 const_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T1`的同義字。  
+ 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T1`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -731,7 +759,7 @@ typedef T5 const_local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可作為值區之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T5`的同義字。  
+ 此類型說明可作為值區之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T5`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -982,7 +1010,7 @@ pair<iterator, bool>  emplace( Args&&... args);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -998,7 +1026,7 @@ pair<iterator, bool>  emplace( Args&&... args);
  如需程式碼範例，請參閱 [map::emplace](../standard-library/map-class.md#emplace)。  
   
 ##  <a name="emplace_hint"></a>  unordered_map::emplace_hint  
- 插入就地建構元素 (沒有執行複製或移動作業)，其中含位置提示。  
+ 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。  
   
 ```  
 template <class... Args>  
@@ -1201,7 +1229,7 @@ size_type erase(const key_type& Key);
  要移除之項目的索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
- 在前兩個成員函式中，會傳回雙向迭代器，其中指定任何移除的元素之外剩餘的第一個元素，或者如果沒有此類元素，則傳回 map 結尾的元素。  
+ 針對前兩個成員函式，會傳回雙向迭代器，其中指定任何移除之元素後剩餘的第一個元素，或如果沒有這類元素，則傳回 map 結尾的元素。  
   
  在第三個成員函式中，傳回已從 unordered_map 移除的元素數。  
   
@@ -1419,7 +1447,7 @@ IList);
 |-|-|  
 |參數|描述|  
 |`Val`|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_map 中的項目值。|  
-|`Where`|要開始搜尋正確的插入點的地方|  
+|`Where`|要開始搜尋正確的插入點的地方。|  
 |`ValTy`|範本參數，指定 unordered_map 可用於建構 [value_type](../standard-library/map-class.md#value_type) 之元素的引數類型，並將 `Val` 作為引數完美轉送。|  
 |`First`|要複製之第一個元素的位置。|  
 |`Last`|要複製之最一個元素後方的位置。|  
@@ -1434,9 +1462,9 @@ IList);
 ### <a name="remarks"></a>備註  
  此函式不會使任何迭代器、指標或參考無效。  
   
- 在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。  
+ 在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個項目期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。  
   
- 若要存取單一項目成員函式所傳回之 `pair``pr` 的迭代器元件，請使用 `pr.first`；若要對所傳回之 pair 內的迭代器進行取值，請使用 `*pr.first` 來提供項目。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
+ 若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取 `bool` 元件，請使用 `pr.second`。 例如，請參閱本文中稍後的範例程式碼。  
   
  容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
@@ -1716,7 +1744,7 @@ typedef T4 local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為值區之正向迭代器的物件。 在此將其說明為實作定義類型 `T4`的同義字。  
+ 此類型說明可做為值區之正向迭代器的物件。 在此將其描述為已定義實作之 `T4`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -2035,7 +2063,7 @@ Ty& operator[](Key&& keyval);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Keyval`|要尋找或插入的索引鍵值。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -2446,7 +2474,7 @@ void swap(unordered_map& right);
  要交換的容器。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果是 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
+ 成員函式會交換 `*this` 和 `right` 之間受控制的序列。 如果是 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
   
 ### <a name="example"></a>範例  
   
@@ -2763,10 +2791,9 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<unordered_map>](../standard-library/unordered-map.md)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

@@ -42,11 +42,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8523e2f2e0a3550c6b996fa26387b278b6df94ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c4d8c6d8caae8b36f372ce75b4fc91638f9e78e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-waccess"></a>_access、_waccess
 判斷檔案是否為唯讀。 這些函式有更安全的版本可用，請參閱 [_access_s、_waccess_s](../../c-runtime-library/reference/access-s-waccess-s.md)。  
@@ -83,7 +84,7 @@ int _waccess(
  `EINVAL`  
  無效的參數。  
   
- 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  搭配檔案使用時，`_access` 函式會判斷指定的檔案或目錄是否存在，以及是否有 `mode` 值指定的屬性。 搭配目錄使用時，`_access` 只判斷指定的目錄是否存在；在 [!INCLUDE[Win2kFamily](../../c-runtime-library/includes/win2kfamily_md.md)] 及更新的作業系統中，所有目錄都有讀取和寫入存取權。  
@@ -109,7 +110,7 @@ int _waccess(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|----------------------|  
 |`_access`|\<io.h>|\<errno.h>|  
 |`_waccess`|\<wchar.h> 或 \<io.h>|\<errno.h>|  
@@ -147,7 +148,7 @@ File crt_ACCESS.C exists.
 File crt_ACCESS.C does not have write permission.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   
  [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   

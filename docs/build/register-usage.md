@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7394088f4bd3cec21dde9ea82c0573c56d87366a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 705a8fef3043498c041ea7e5490a7b22c1db8e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-usage"></a>暫存器使用方式
 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 架構提供 16 個一般目的的暫存器 (以下稱為整數暫存器)，以及 16 個可供浮點數使用的 XMM/YMM 暫存器。 動態暫存器是臨時暫存器，由呼叫者假設為跨呼叫終結。 需要靜態暫存器才能跨函式呼叫保留其值，且靜態暫存器必須由被呼叫者 (如果使用的話) 儲存。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/24/2017
 |XMM5, YMM5|動態|必須由呼叫者視需要保留；使用 `__vectorcall` 時的第六個向量類型引數|  
 |XMM6:XMM15, YMM6:YMM15|靜態 (XMM)、動態 (YMM 的上半部分)|必須由被呼叫端保留。 YMM 暫存器必須由被呼叫者視需要保留。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x64 軟體慣例](../build/x64-software-conventions.md)   
  [__vectorcall](../cpp/vectorcall.md)

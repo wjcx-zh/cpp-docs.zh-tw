@@ -46,11 +46,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 95a8a46bc060d9434a0546e6ce741abc412f8b5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0233734a829aa091615bb7feff0970e6912d7199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fsopen-wfsopen"></a>_fsopen、_wfsopen
 以檔案共用開啟資料流。  
@@ -132,7 +133,7 @@ FILE *_wfsopen(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|選擇性標頭|  
+|功能|必要的標頭|選擇性標頭|  
 |--------------|---------------------|----------------------|  
 |`_fsopen`|\<stdio.h>|\<share.h><br /><br /> 針對 `shflag` 參數的資訊清單常數。|  
 |`_wfsopen`|\<stdio.h> 或 \<wchar.h>|\<share.h><br /><br /> 針對 `shflag` 參數的資訊清單常數。|  
@@ -169,7 +170,7 @@ int main( void )
 No one else in the network can write to this file until we are done.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen、_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   

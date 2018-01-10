@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,19 @@ f1_keywords:
 - ATLWIN/ATL::m_szAutoName
 - ATLWIN/ATL::m_wc
 - ATLWIN/ATL::pWndProc
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWndClassInfo class
+dev_langs: C++
+helpviewer_keywords: CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 071a6683a459c1b668cfa3eb5e866b461d82ab29
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b07f6b12914e18f3f83abedf59742a8b7c7867b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 類別
 這個類別會提供方法，以註冊視窗類別的資訊。  
@@ -61,7 +44,7 @@ ms.lasthandoff: 03/31/2017
 class CWndClassInfo
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -82,7 +65,7 @@ class CWndClassInfo
 |[pWndProc](#pwndproc)|指向視窗程序的現有視窗類別。|  
   
 ## <a name="remarks"></a>備註  
- `CWndClassInfo`管理視窗類別的資訊。 您通常會使用`CWndClassInfo`透過三個巨集，其中`DECLARE_WND_CLASS`， `DECLARE_WND_CLASS_EX`，或`DECLARE_WND_SUPERCLASS`下, 表中所述︰  
+ `CWndClassInfo`管理視窗類別的資訊。 您通常會使用`CWndClassInfo`透過三個巨集，其中`DECLARE_WND_CLASS`， `DECLARE_WND_CLASS_EX`，或`DECLARE_WND_SUPERCLASS`下, 表中所述：  
   
 |巨集|描述|  
 |-----------|-----------------|  
@@ -94,14 +77,14 @@ class CWndClassInfo
   
  如果您想要建立視窗，根據現有的視窗類別，衍生您的類別從`CWindowImpl`並包含`DECLARE_WND_SUPERCLASS`類別定義中的巨集。 例如:   
   
- [!code-cpp[NVC_ATL_Windowing # 43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]  
   
- 如需有關視窗類別的詳細資訊，請參閱[視窗類別](http://msdn.microsoft.com/library/windows/desktop/ms632596)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如需有關視窗類別的詳細資訊，請參閱[視窗類別](http://msdn.microsoft.com/library/windows/desktop/ms632596)Windows SDK 中。  
   
  如需使用 windows ATL 中的詳細資訊，請參閱文章[ATL 視窗類別](../../atl/atl-window-classes.md)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="m_atom"></a>CWndClassInfo::m_atom  
  包含已註冊的視窗類別的唯一識別碼。  
@@ -162,7 +145,7 @@ WNDCLASSEX m_wc;
 ```  
   
 ### <a name="remarks"></a>備註  
- 如果您已經指定[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (預設值在[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)巨集，`m_wc`包含新的視窗類別的相關資訊。  
+ 如果您已經指定[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) (預設值在[CWindowImpl](../../atl/reference/cwindowimpl-class.md)) 或[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)巨集，`m_wc`包含的相關資訊新的視窗類別。  
   
  如果您已經指定[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)巨集，`m_wc`包含超級類別資訊-現有的類別為基礎，但會使用不同的視窗程序的視窗類別。 [m_lpszOrigName](#m_lpszorigname)和[pWndProc](#pwndproc)分別儲存現有的視窗類別名稱和視窗程序。  
   
@@ -195,6 +178,6 @@ ATOM Register(WNDPROC* pProc);
   
  如果您已經指定[DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)巨集，`Register`註冊超級類別-現有的類別為基礎，但會使用不同的視窗程序的視窗類別。 現有視窗類別的視窗程序會傳回在`pProc`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

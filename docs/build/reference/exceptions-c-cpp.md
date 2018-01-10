@@ -1,41 +1,41 @@
 ---
-title: "例外狀況 (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ERROR_MOD_NOT_FOUND"
-  - "vcppException"
-  - "ERROR_SEVERITY_ERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 例外狀況處理, DLL 的延遲載入"
-  - "DLL 的延遲載入, 例外狀況"
-  - "ERROR_MOD_NOT_FOUND 例外狀況"
-  - "ERROR_SEVERITY_ERROR 例外狀況"
-  - "vcppException"
+title: "例外狀況 （C/c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ERROR_MOD_NOT_FOUND
+- vcppException
+- ERROR_SEVERITY_ERROR
+dev_langs: C++
+helpviewer_keywords:
+- vcppException
+- C++ exception handling, delayed loading of DLLs
+- delayed loading of DLLs, exceptions
+- ERROR_SEVERITY_ERROR exception
+- ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 635e2b1406e9919425a396b6f49fe8eb6efd81eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 例外狀況 (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-如果遇到錯誤，會引發兩個例外狀況代碼：  
+# <a name="exceptions-cc"></a>例外狀況 (C/C++)
+發生失敗時，可能會引發兩個例外狀況代碼：  
   
--   **LoadLibrary** 錯誤的代碼  
+-   如**LoadLibrary**失敗  
   
--   **GetProcAddress** 錯誤的代碼  
+-   如**GetProcAddress**失敗  
   
  以下是例外狀況資訊：  
   
@@ -47,11 +47,11 @@ manager: "ghogen"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- 擲回的例外狀況代碼是標準的 VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_MOD\_NOT\_FOUND\) 和 VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_PROC\_NOT\_FOUND\) 值。  例外狀況會在 [EXCEPTION\_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) 結構的 ExceptionInformation\[0\] 欄位中傳遞 LPDWORD 值 \(指向 **DelayLoadInfo** 結構的指標\)，該值可以透過 **GetExceptionInformation** 來擷取。  
+ 擲回的例外狀況代碼是標準 VcppException （ERROR_SEVERITY_ERROR、 ERROR_MOD_NOT_FOUND） 和 VcppException （ERROR_SEVERITY_ERROR、 ERROR_PROC_NOT_FOUND） 值。 例外狀況會傳遞指標**DelayLoadInfo**結構，可以藉由擷取 LPDWORD 值中的**GetExceptionInformation**中[EXCEPTIONRECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082)結構，ExceptionInformation [0] 欄位。  
   
- 此外，如果 grAttrs 欄位中的位元設定錯誤時，將擲回例外狀況 ERROR\_INVALID\_PARAMETER。  不論任何意圖和目的，這個例外狀況都是嚴重的。  
+ 此外，如果 grAttrs 欄位設定不正確的位元，ERROR_INVALID_PARAMETER 擲回例外狀況。 這個例外狀況是，不管您的目的，嚴重。  
   
- 如需詳細資訊，請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)。  
+ 請參閱[結構和常數定義](../../build/reference/structure-and-constant-definitions.md)如需詳細資訊。  
   
-## 請參閱  
- [錯誤處理和告知](../../build/reference/error-handling-and-notification.md)
+## <a name="see-also"></a>請參閱  
+ [錯誤處理和通知](../../build/reference/error-handling-and-notification.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc0c5ab0a76d77898b2249f63c699f76b10a628b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ccbf7dab7d39a80efa2b0b0b88b615c55cd9e56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>變更繪圖程式碼 (ATL 教學課程，第 4 部分)
 根據預設，控制項的繪圖程式碼會顯示與文字**PolyCtl**。 在此步驟中，您將變更的程式碼，以顯示更有趣的東西。 涉及下列工作：  
@@ -122,7 +123,7 @@ ms.lasthandoff: 10/24/2017
   
  [回到步驟 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md) &#124;[至步驟 5](../atl/adding-an-event-atl-tutorial-part-5.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)   
  [使用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -81,8 +80,7 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -115,30 +113,16 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1c3fc1e6ee3ca15d610d2c25ad38eedb795d0ebf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ed4a232cc5d563a724adf29500e70aa28cf36432
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat、_stat32、_stat64、_stati64、_stat32i64、_stat64i32、_wstat、_wstat32、_wstat64、_wstati64、_wstat32i64、_wstat64i32
 取得檔案的狀態資訊。  
@@ -206,7 +190,7 @@ int _wstat64i32(
 ## <a name="return-value"></a>傳回值  
  上述每個函式會在取得檔案狀態資訊時傳回 0。 傳回值-1 表示錯誤，在此情況下`errno`設`ENOENT`，指出，檔案名稱或路徑找不到。 傳回值 `EINVAL` 表示參數無效，在此情況下也會將 `errno` 設定為 `EINVAL` 。  
   
- 如需這個傳回碼及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這個及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。  
   
  如果是 1970 年 1 月 1 日午夜到 3000 年 12 月 31 日 23:59:59 (UTC) 的檔案，則會在檔案上表示日期戳記；除非您使用 `_stat32` 或 `_wstat32`，或者已定義 `_USE_32BIT_TIME_T`，在此情況下，只能表示 2038 年 1 月 18 日 23:59:59 (UTC) 以前的日期。  
   
@@ -217,7 +201,7 @@ int _wstat64i32(
   
  這些函式的各種版本支援 32 位元或 64 位元時間類型，以及 32 位元或 64 位元檔案長度。 第一個數值後置字元 (`32` 或 `64`) 表示所使用的時間類型大小，第二個後置字元為 `i32` 或 `i64`，表示檔案大小是以 32 位元或 64 位元整數來表示。  
   
- `_stat` 相當於 `_stat64i32`，且 `struct``_stat` 包含 64 位元時間。 This is true unless `_USE_32BIT_TIME_T` is defined, in which case the old behavior is in effect; `_stat` uses a 32-bit time, and `struct``_stat` contains a 32-bit time. 對於 `_stati64`也是如此。  
+ `_stat` 相當於 `_stat64i32`，且 `struct _stat` 包含 64 位元時間。 上述情況只有在定義 `_USE_32BIT_TIME_T` 時才不成立，在此情況下，會採用舊版行為，也就是 `_stat` 使用 32 位元時間，且 `struct _stat` 包含 32 位元時間。 對於 `_stati64`也是如此。  
   
 > [!NOTE]
 >  `_wstat` 不適用於 [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] 符號連結。 在這些情況下， `_wstat` 一律會回報檔案大小為 0。 `_stat` 則適用於符號連結。  
@@ -286,12 +270,12 @@ int _wstat64i32(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|----------------------|  
 |`_stat`, `_stat32`, `_stat64`, `_stati64`, `_stat32i64`, `_stat64i32`|\<sys/types.h>，後面接著 \<sys/stat.h>|\<errno.h>|  
 |`_wstat`, `_wstat32`, `_wstat64`, `_wstati64`, `_wstat32i64`, `_wstat64i32`|\<sys/types.h>，後面接著 \<sys/stat.h> 或 \<wchar.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -356,7 +340,7 @@ Drive         : C:
 Time modified : Thu Feb 07 14:39:36 2002  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
  [_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   

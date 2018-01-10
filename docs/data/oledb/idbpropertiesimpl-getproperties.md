@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6e066e525def0a983d6912774f2e27e2af045a01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ac54b08dba170dd33d2e5e19cae50715aeab4fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbpropertiesimplgetproperties"></a>IDBPropertiesImpl::GetProperties
 傳回目前所設定的資料來源物件或目前設於初始化屬性群組中的屬性值的資料來源、 資料來源資訊，以及初始化屬性群組中的屬性值列舉值。  
@@ -57,7 +60,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDBPropertiesImpl 類別](../../data/oledb/idbpropertiesimpl-class.md)   
  [Idbpropertiesimpl:: Getpropertyinfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)   
  [IDBPropertiesImpl::SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)

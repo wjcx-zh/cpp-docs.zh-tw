@@ -1,32 +1,31 @@
 ---
-title: "建置 C/C++ 隔離應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "隔離的應用程式 [C++]"
+title: "建置 C/c + + 隔離應用程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: isolated applications [C++]
 ms.assetid: 8a2fe4fa-0489-433e-bfc6-495844d8d73a
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 76b0c1fa5b509ae495a12fb63164d7da01f402aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 建置 C/C++ 隔離應用程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-隔離應用程式只依賴並存組件，並使用資訊清單繫結至它的相依檔案。  不需要將應用程式完全隔離，也可以在 Windows 上適當地執行；但是，當您讓應用程式完全隔離時，可以在未來需要服務應用程式時節省時間。  如需讓應用程式完全隔離之優點的詳細資訊，請參閱[隔離應用程式 \[Windows Installer\]](http://msdn.microsoft.com/library/aa375190)。  
+# <a name="building-cc-isolated-applications"></a>建置 C/C++ 隔離應用程式
+隔離的應用程式只依賴-並存組件，並繫結至其使用資訊清單的相依性。 不需要完全隔離，才能執行正確 Windows; 上的應用程式不過，由投資導致完全隔離的應用程式，如果您需要服務應用程式在未來可能節省時間。 讓您完全隔離的應用程式的優點的資訊，請參閱[隔離的應用程式](http://msdn.microsoft.com/library/aa375190)。  
   
- 當您使用 Visual C\+\+ 建置原生 C\/C\+\+ 應用程式時，根據預設，Visual Studio 專案系統會產生一個資訊清單檔，此檔案會描述該應用程式對於 Visual C\+\+ 程式庫的相依性。  如果此應用程式只有這些相依性，那麼您只要以 Visual Studio 重新建置此應用程式，它就會成為隔離應用程式。  如果應用程式在執行階段使用其他程式庫，則可能必須將這些程式庫重新建置為並存組件 \(遵循[建置 C\/C\+\+ 並存組件](../build/building-c-cpp-side-by-side-assemblies.md)中的步驟\)。  
+ 當您建置原生 C/c + + 應用程式使用 Visual c + + 時，根據預設 Visual Studio 專案系統會產生描述您的應用程式相依性，在 Visual c + + 程式庫上的資訊清單檔案。 如果這些相依性只應用程式具有，接著它會變成隔離的應用程式，因為它會重建與 Visual Studio。 如果您的應用程式使用其他程式庫，在執行階段，則您可能需要重建這些程式庫做為-並存組件中所述的步驟[建置 C/c + + 並存組件](../build/building-c-cpp-side-by-side-assemblies.md)。  
   
-## 請參閱  
- [隔離應用程式和並存組件的概念](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
- [建置 C\/C\+\+ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+## <a name="see-also"></a>請參閱  
+ [隔離的應用程式和-並存組件的概念](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)   
+ [建置 C/C++ 隔離應用程式和並存組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

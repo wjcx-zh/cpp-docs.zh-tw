@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: deea4c7db1765665d4ad630ef300ea995c3ef5de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 619216df8c3d51846df203c4e582c0c4dbf698af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endm"></a>ENDM
 終止巨集或重複的區塊。  
@@ -35,5 +36,5 @@ ENDM
 ## <a name="remarks"></a>備註  
  請參閱[巨集](../../assembler/masm/macro.md)，[如](../../assembler/masm/for-masm.md)， [FORC](../../assembler/masm/forc.md)，[重複](../../assembler/masm/repeat.md)，或**時**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

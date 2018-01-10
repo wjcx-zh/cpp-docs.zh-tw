@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,36 +31,19 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 類別
 此類別是 **SAFEARRAY** 結構的包裝函式。  
@@ -77,7 +59,7 @@ class CComSafeArray
  `T`  
  陣列中儲存之資料的類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -94,8 +76,8 @@ class CComSafeArray
 |[CComSafeArray::Attach](#attach)|將 **SAFEARRAY** 結構附加至 `CComSafeArray` 物件。|  
 |[CComSafeArray::CopyFrom](#copyfrom)|將 **SAFEARRAY** 結構的內容複製到 `CComSafeArray` 物件中。|  
 |[CComSafeArray::CopyTo](#copyto)|建立 `CComSafeArray` 物件的複本。|  
-|[Ccomsafearray:: Create](#create)|建立 `CComSafeArray` 物件。|  
-|[Ccomsafearray:: Destroy](#destroy)|終結 `CComSafeArray` 物件。|  
+|[CComSafeArray::Create](#create)|建立 `CComSafeArray` 物件。|  
+|[CComSafeArray::Destroy](#destroy)|終結 `CComSafeArray` 物件。|  
 |[CComSafeArray::Detach](#detach)|從 **物件卸離** SAFEARRAY `CComSafeArray` 。|  
 |[CComSafeArray::GetAt](#getat)|從一維陣列中擷取單一項目。|  
 |[CComSafeArray::GetCount](#getcount)|傳回陣列中的元素數目。|  
@@ -126,13 +108,13 @@ class CComSafeArray
 |[CComSafeArray::m_psa](#m_psa)|此資料成員包含 **SAFEARRAY** 結構的位址。|  
   
 ## <a name="remarks"></a>備註  
- `CComSafeArray`提供的包裝函式[SAFEARRAY 資料型別](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)類別，因此很容易的事來建立及管理幾乎任何支援 VARIANT 類型的單一和多維度陣列。  
+ `CComSafeArray` 提供 [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) 類別的包裝函式，因此可輕鬆地建立及管理由幾乎任何支援 VARIANT 的類型所組成的一維和多維陣列。  
   
  `CComSafeArray` 不僅簡化了在處理序之間傳遞陣列的作業，還藉由針對上下限檢查陣列索引值，來提供額外的安全性。  
   
  `CComSafeArray` 的下限開頭可以是任何使用者定義值；不過，透過 C++ 存取的陣列應該使用下限 0。 Visual Basic 等其他語言可能會使用其他界限值 (例如 -10 到 10)。  
   
- 使用[ccomsafearray:: Create](#create)建立`CComSafeArray`物件，和[ccomsafearray:: Destroy](#destroy)將它刪除。  
+ 使用 [CComSafeArray::Create](#create) 可建立 `CComSafeArray` 物件，而 [CComSafeArray::Destroy](#destroy) 可將它刪除。  
   
  `CComSafeArray` 可包含以下 VARIANT 資料類型的子集︰  
   
@@ -158,7 +140,7 @@ class CComSafeArray
  **標頭︰** atlsafe.h  
   
 ## <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Utilities # 75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  將一或多個項目 (或 **SAFEARRAY** 結構) 加入 `CComSafeArray`。  
@@ -292,7 +274,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>備註  
  這個方法會複製的內容`CComSafeArray`物件插入**SAFEARRAY**結構。  
   
-##  <a name="create"></a>Ccomsafearray:: Create  
+##  <a name="create"></a>  CComSafeArray::Create  
  建立 `CComSafeArray`。  
   
 ```
@@ -319,7 +301,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>備註  
  A`CComSafeArray`物件可以建立從現有**SAFEARRAYBOUND**結構和數字的維度，或藉由在陣列與下限指定的項目數。 如果陣列是從 Visual c + + 存取，而下限應該是 0。 其他語言可能會允許其他值作為下限 （例如，項目，例如-10 到 10 範圍的 Visual 基本支援陣列）。  
   
-##  <a name="destroy"></a>Ccomsafearray:: Destroy  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
  終結 `CComSafeArray` 物件。  
   
 ```
@@ -421,7 +403,7 @@ VARTYPE GetType() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 傳回儲存在陣列中，可能是下列類型的資料類型︰  
+ 傳回儲存在陣列中，可能是下列類型的資料類型：  
   
 |VARTYPE|描述|  
 |-------------|-----------------|  
@@ -605,9 +587,8 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 ### <a name="remarks"></a>備註  
  `bCopy`旗標列入考量時類型的項目`BSTR`或**VARIANT**會加入至陣列。 預設值**TRUE**會確保新的複本是資料的項目加入至陣列時。  
   
-## <a name="see-also"></a>另請參閱  
- [SAFEARRAY 資料類型](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
+## <a name="see-also"></a>請參閱  
+ [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
  [Ccomsafearray:: Create](#create)   
  [Ccomsafearray:: Destroy](#destroy)   
  [類別概觀](../../atl/atl-class-overview.md)
-

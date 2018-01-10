@@ -1,40 +1,38 @@
 ---
-title: "NAME (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "name"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NAME .def 檔案陳述式"
+title: "名稱 （C/C + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: name
+dev_langs: C++
+helpviewer_keywords: NAME .def file statement
 ms.assetid: 5c9b6bd8-9275-46a5-afba-f17a5936dc26
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 33e81f63e7647cbdbdc89b37ffdcb309b79e9340
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# NAME (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="name-cc"></a>NAME (C/C++)
 指定主要輸出檔的名稱。  
   
 ```  
 NAME [application][BASE=address]  
 ```  
   
-## 備註  
- 指定輸出檔名稱的另一種方式是使用 [\/OUT](../../build/reference/out-output-file-name.md) 連結器選項，而設定基底位址的另一種方式是使用 [\/BASE](../../build/reference/base-base-address.md) 連結器選項。  如果兩種方式都有指定，\/OUT 會覆寫 **NAME**。  
+## <a name="remarks"></a>備註  
+ 指定輸出檔案名稱相同的方法是使用[/out](../../build/reference/out-output-file-name.md)連結器選項和設定基底地址的對等方式，都[/基底](../../build/reference/base-base-address.md)連結器選項。 如果同時指定這兩者，/OUT 覆寫**名稱**。  
   
- 如果建置 DLL，NAME 將只會影響 DLL 名稱。  
+ 如果您建立 DLL 時，名稱只會影響 DLL 名稱。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [模組定義陳述式的規則](../../build/reference/rules-for-module-definition-statements.md)

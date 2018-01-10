@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b70a8e3d644389bcfb21b276c5a3bcfad84891a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 111fb83ed0eaae936dfa38d7047b2a0c2fb2443b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="snap-in-object-macros"></a>嵌入式管理單元物件巨集
 這些巨集嵌入式管理單元擴充功能提供支援。  
@@ -165,5 +166,5 @@ SNAPINTOOLBARID_ENTRY( id )
 ### <a name="example"></a>範例  
  請參閱範例的[BEGIN_SNAPINTOOLBARID_MAP](#begin_snapintoolbarid_map)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集](../../atl/reference/atl-macros.md)

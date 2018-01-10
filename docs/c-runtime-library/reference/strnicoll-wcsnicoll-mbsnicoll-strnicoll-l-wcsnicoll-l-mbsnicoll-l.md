@@ -71,11 +71,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6a7c5b22cac52e8bf9494796b5fe7abdbf0f546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2580ab455ead213edf21fa7f3e20307c8d2938b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnicoll-wcsnicoll-mbsnicoll-strnicolll-wcsnicolll-mbsnicolll"></a>_strnicoll、_wcsnicoll、_mbsnicoll、_strnicoll_l、_wcsnicoll_l、_mbsnicoll_l
 使用地區設定特定資訊，以比較字串。  
@@ -157,7 +158,7 @@ int _mbsnicoll_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_strnicoll`, `_strnicoll_l`|\<string.h>|  
 |`_wcsnicoll`, `_wcsnicoll_l`|\<wchar.h> 或 \<string.h>|  
@@ -165,7 +166,7 @@ int _mbsnicoll_l(
   
  如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll 函式](../../c-runtime-library/strcoll-functions.md)   

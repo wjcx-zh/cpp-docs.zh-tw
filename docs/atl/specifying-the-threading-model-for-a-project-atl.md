@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78d126564a736eafed2b51c0216b458844d4567a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4c115b326d2cdfe82a0466461bd378fd1b4be80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-the-threading-model-for-a-project-atl"></a>指定專案的執行緒模型 (ATL)
 下列巨集，可用來指定執行緒模型的 ATL 專案：  
@@ -46,6 +47,6 @@ ms.lasthandoff: 10/24/2017
   
  請參閱[選項，ATL 簡單物件精靈](../atl/reference/options-atl-simple-object-wizard.md)的描述就會忽略執行緒模型 ATL 物件可用的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

@@ -1,121 +1,123 @@
 ---
-title: "Registry Scripting Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "registrar scripts [ATL]"
-  - "登錄, Registrar"
-  - "指令碼, 範例"
-  - "指令碼, Registrar scripts"
+title: "登錄指令碼範例 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, examples
+- registrar scripts [ATL]
+- scripts, Registrar scripts
+- registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1b2a5dfd3bd31674917a5b41174277ef787aff25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Registry Scripting Examples
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題中的指令碼的範例示範如何將機碼加入至系統登錄，註冊 COM 伺服器管理員，，並指定多個剖析樹狀結構。  
+# <a name="registry-scripting-examples"></a>登錄指令碼範例
+本主題中的指令碼範例將示範如何新增到系統登錄機碼、 註冊 COM 註冊機構的伺服器，以及指定多個剖析樹狀結構。  
   
-## 將索引鍵到 HKEY\_CURRENT\_USER  
- 下列剖析樹狀結構說明將單一索引鍵加入到系統登錄的簡單的指令碼。  特別是，指令碼加入索引鍵， `MyVeryOwnKey`，加入 `HKEY_CURRENT_USER`。  它也會產生 `HowGoesIt?` 的預設字串值給新機碼:  
+## <a name="add-a-key-to-hkeycurrentuser"></a>新增 HKEY_CURRENT_USER 機碼  
+ 下列剖析樹狀目錄說明簡單的指令碼，將單一索引鍵加入至系統登錄。 特別是，指令碼會將索引鍵，`MyVeryOwnKey`至`HKEY_CURRENT_USER`。 它也會將指派的預設字串值`HowGoesIt`新機碼：  
   
 ```  
 HKEY_CURRENT_USER  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
 ```  
   
- 這個指令碼可以很容易地擴充定義多個子機碼如下:  
+ 此指令碼可以輕鬆地擴充來定義多個子機碼，如下所示：  
   
 ```  
 HKCU  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
-   {  
-      'HasASubkey'  
-      {  
-         'PrettyCool?' = d '55'  
-         val 'ANameValue' = s 'WithANamedValue'  
-      }  
-   }  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
+ {  
+ 'HasASubkey'  
+ {  
+ 'PrettyCool' = d '55'  
+    val 'ANameValue' = s 'WithANamedValue'  
+ }  
+ }  
 }  
 ```  
   
- 現在，指令碼加入子機碼， `HasASubkey`，加入 `MyVeryOwnKey`。  為這個子機碼，它將 `PrettyCool?` 子機碼 \(使用預設 `DWORD` 值為 55\) 和 \(名稱為\) 的 `ANameValue` 值 \(具有 `WithANamedValue`的字串值\)。  
+ 現在，指令碼會新增子機碼，`HasASubkey`至`MyVeryOwnKey`。 這個子機碼，它將兩者`PrettyCool`子機碼 (預設值`DWORD`55 的值) 和`ANameValue`名稱為 value (具有字串值的`WithANamedValue`)。  
   
-##  <a name="_atl_register_the_registrar_com_server"></a> 註冊 COM 伺服器管理員  
- 下列指令碼管理員註冊 COM 伺服器。  
+##  <a name="_atl_register_the_registrar_com_server"></a>登錄註冊機構 COM 伺服器  
+ 下列指令碼會註冊本身的註冊機構 COM 伺服器。  
   
 ```  
 HKCR  
 {  
-   ATL.Registrar = s 'ATL Registrar Class'  
-   {  
-      CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
-   }  
-   NoRemove CLSID  
-   {  
-      ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} =  
-                   s 'ATL Registrar Class'  
-      {  
-         ProgID = s 'ATL.Registrar'  
-         InprocServer32 = s '%MODULE%'  
-         {  
-            val ThreadingModel = s 'Apartment'  
-         }  
-      }  
-   }  
+    ATL.Registrar = s 'ATL Registrar Class'  
+ {  
+    CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
+ }  
+    NoRemove CLSID  
+ {  
+    ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = 
+    s 'ATL Registrar Class'  
+ {  
+    ProgID = s 'ATL.Registrar'  
+    InprocServer32 = s '%MODULE%'  
+ {  
+    val ThreadingModel = s 'Apartment'  
+ }  
+ }  
+ }  
 }  
 ```  
   
- 在執行階段，這個剖析樹狀結構將 `ATL.Registrar` 索引鍵加入 `HKEY_CLASSES_ROOT`。  為這個新的金鑰，然後:  
+ 在執行階段，將此剖析樹狀目錄`ATL.Registrar`鍵`HKEY_CLASSES_ROOT`。 這個新的索引鍵，然後：  
   
--   指定 `ATL Registrar Class` ，索引鍵的預設字串值。  
+-   指定`ATL Registrar Class`做為索引鍵的預設字串值。  
   
--   將 `CLSID` 做為子機碼。  
+-   新增`CLSID`做為子機碼。  
   
--   為指定 `CLSID``{44EC053A-400F-11D0-9DCD-00A0C90391D3}` 。  \(這個值是管理員的 CLSID 來與 `CoCreateInstance`的使用\)。  
+-   指定`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`如`CLSID`。 (這個值會在註冊機構搭配 CLSID `CoCreateInstance`。)  
   
- 因為 `CLSID` 共用，以移除模式不應該將它移除。  陳述式， `NoRemove CLSID`，以指出可以在暫存器模式應該開啟並忽略 `CLSID` 在 PWA 模式。  
+ 因為`CLSID`是共用的它應該不會移除在取消註冊模式下。 陳述式， `NoRemove CLSID`，做法是，表示`CLSID`應該在註冊模式中開啟並忽略以取消註冊模式。  
   
- `ForceRemove` 陳述式將會移除索引鍵和所有提供環境維護函式及其子機碼中重新建立索引鍵前面。  如果子機碼的名稱已變更，這會很有用。  在這個指令碼的範例中， `ForceRemove` 檢查 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` 是否已經存在。  如果是， `ForceRemove`:  
+ `ForceRemove`陳述式提供環境維護函式，藉由移除再重新建立索引鍵的索引鍵和所有子機碼。 這可以是如果子機碼名稱已變更。 在此指令碼的範例中，`ForceRemove`檢查`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`已經存在。 若是如此， `ForceRemove`:  
   
--   遞迴地刪除 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` 和其所有子機碼。  
+-   以遞迴方式刪除`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`和所有子機碼。  
   
--   重新建立 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。  
+-   重新建立`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。  
   
--   將 `ATL Registrar Class` ， `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`的預設字串值。  
+-   新增`ATL Registrar Class`做為預設字串值`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。  
   
- 剖析樹狀結構會加入兩個新的子機碼至 `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。  第一個索引鍵， `ProgID`，取得 ProgID 的預設字串值。  第二個索引鍵， `InprocServer32`，取得預設字串值， `%MODULE%`，就是一節中說明的前置處理器值， [使用可取代的參數 \(管理員的前置處理器\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)，本文。  `InprocServer32` 也取得具名值， `ThreadingModel`，與 `Apartment`的字串值。  
+ 剖析樹狀結構現在會將兩個新的子機碼以`{44EC053A-400F-11D0-9DCD-00A0C90391D3}`。 第一個索引鍵， `ProgID`，取得 ProgID 的預設字串值。 第二個索引鍵， `InprocServer32`，取得的預設字串值， `%MODULE%`，也就是前置處理器值中，說明[使用可置換的參數 （登錄器的前置處理器）](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)，這篇文章。 `InprocServer32`也會取得一個具名的值， `ThreadingModel`，字串值是`Apartment`。  
   
-## 指定多個剖析樹狀結構  
- 若要指定多個指令碼中剖析樹狀結構，將樹狀結構中的結尾。  例如，下列指令碼加入索引鍵， `MyVeryOwnKey`，加入 `HKEY_CLASSES_ROOT` 和 `HKEY_CURRENT_USER`的剖析樹狀結構:  
+## <a name="specify-multiple-parse-trees"></a>指定多個剖析樹狀結構  
+ 若要在指令碼中指定一個以上的剖析樹狀目錄，只要將一個樹狀結構的另一端。 例如，下列指令碼會將索引鍵， `MyVeryOwnKey`，同時剖析樹狀結構至`HKEY_CLASSES_ROOT`和`HKEY_CURRENT_USER`:  
   
 ```  
 HKCR  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
 HKEY_CURRENT_USER  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
 ```  
   
 > [!NOTE]
->  在登錄器指令碼， 4K 最大語彙基元大小。  \(語彙基元是語法的任何可辨識的項目\)。在上一個指令碼的範例中， `HKCR`、 `HKEY_CURRENT_USER`、 `'MyVeryOwnKey'`和 `'HowGoesIt?'` 是所有語彙基元。  
+>  登錄器指令碼，在 4 K 是語彙基元的大小上限。 （語彙基元是任何可辨識的項目語法中）。在先前的指令碼範例中， `HKCR`， `HKEY_CURRENT_USER`， `'MyVeryOwnKey'`，和`'HowGoesIt'`是所有的語彙基元。  
   
-## 請參閱  
- [Creating Registrar Scripts](../atl/creating-registrar-scripts.md)
+## <a name="see-also"></a>請參閱  
+ [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
+

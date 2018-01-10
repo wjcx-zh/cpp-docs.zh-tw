@@ -1,34 +1,35 @@
 ---
-title: "發行的組建 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "偵錯組建, 轉換至發行組建"
-  - "偵錯 [C++], 發行組建"
-  - "發行組建"
+title: "發行組建 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- debugging [C++], release builds
+- release builds
+- debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 12e81b26cd83214a5d62a42689bfc3a866ef1c10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 發行的組建
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-發行的組建 \(Release Build\) 會採取最佳化；  當您使用最佳化建立發行組建時，編譯器不會產生符號偵錯資訊 \(Symbolic Debugging Information\)。  當沒有符號偵錯資訊，且 TRACE 和 ASSERT 呼叫並未產生程式碼時，表示您的可執行檔已縮小，執行速度將因此而加快。  
+# <a name="release-builds"></a>發行的組建
+發行組建會使用最佳化。 當您使用最佳化來建立發行組建時，編譯器不會產生符號偵錯資訊。 呼叫的符號偵錯資訊的詳細資訊，以及追蹤和判斷提示不產生程式碼的事實不存在，表示可執行檔的大小會減少，並因此將會比較快。  
   
- 本章節提供的資訊說明從偵錯版變更為發行組建的原因和時機。  同時也說明從偵錯版變更為發行組建時可能會遇到的部分問題：  
+ 本節提供有關您為何和何時要將變更從偵錯組建為發行組建資訊。 它也會討論一些您在偵錯從變更的發行組建時可能會遇到的問題：  
   
--   [建立發行的組建](../../build/reference/how-to-create-a-release-build.md)  
+-   [建立發行組建](../../build/reference/how-to-create-a-release-build.md)  
   
 -   [建立發行組建時的常見問題](../../build/reference/common-problems-when-creating-a-release-build.md)  
   
@@ -38,10 +39,10 @@ caps.handback.revision: 7
   
     -   [使用偵錯版檢查記憶體覆寫](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
   
-    -   [偵錯發行的組建](../../build/reference/how-to-debug-a-release-build.md)  
+    -   [偵錯發行組建](../../build/reference/how-to-debug-a-release-build.md)  
   
     -   [檢查記憶體覆寫](../../build/reference/checking-for-memory-overwrites.md)  
   
-## 請參閱  
- [在 Visual Studio 中建置 C\+\+ 專案](../../ide/building-cpp-projects-in-visual-studio.md)   
- [C\/C\+\+ 建置參考](../../build/reference/c-cpp-building-reference.md)
+## <a name="see-also"></a>請參閱  
+ [在 Visual Studio 中建置 c + + 專案](../../ide/building-cpp-projects-in-visual-studio.md)   
+ [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)

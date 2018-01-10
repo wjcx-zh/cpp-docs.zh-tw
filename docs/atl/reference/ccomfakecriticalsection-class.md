@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0619dc44c630ea272531fdf6ef5f5da3a487d65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b9f7b3b56193100d21ef7aebaba0ab6d9ecfd5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection 類別
 這個類別會提供相同的方法， [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)但並不會提供重要區段。  
@@ -36,11 +37,11 @@ ms.lasthandoff: 10/24/2017
 class CComFakeCriticalSection
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComFakeCriticalSection::Init](#init)|沒有任何作用，因為沒有任何重要的區段。|  
 |[CComFakeCriticalSection::Lock](#lock)|沒有任何作用，因為沒有任何重要的區段。|  
@@ -95,5 +96,5 @@ HRESULT Unlock() throw();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

@@ -34,11 +34,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 495460722a72f6002b602336d3a01bff4b9d3af6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c66666d615dc94f74f17736de6011ec05f1eeca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvt"></a>_fcvt
 將浮點數轉換為字串。 這個函式目前有更安全的版本，請參閱 [_fcvt_s](../../c-runtime-library/reference/fcvt-s.md)。  
@@ -77,7 +78,7 @@ char *_fcvt(
   
  字串中只能儲存數字。 呼叫之後，可從 `dec` 和 sign 取得小數點位置和 `value` 的正負號。 `dec` 參數指向整數值，此整數值會提供字串開頭的小數點位置。 零或負整數值表示小數點位於第一位數字的左邊。 參數 `sign` 指向表示 `value` 正負號的整數。 如果 `value` 是正值，則整數設定為 0；如果 `value` 是負值，則整數設定為非零的數字。  
   
- `_ecvt` 和 `_fcvt` 之間的差異位在 `count` 參數解譯中。 `_ecvt` 將 `count` 解譯為輸出字串的位數總數，而 `_fcvt` 將 `count` 解譯為小數點後的位數。  
+ `_ecvt` 和 `_fcvt` 之間的差異位於 `count` 參數解譯中。 `_ecvt` 將 `count` 解譯為輸出字串的位數總數，而 `_fcvt` 將 `count` 解譯為小數點後的位數。  
   
  `_ecvt` 和 `_fcvt` 使用單一靜態配置的緩衝區來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。  
   
@@ -85,11 +86,11 @@ char *_fcvt(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`_fcvt`|\<stdlib.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -120,7 +121,7 @@ int main( void )
 source: 3.1415926535   buffer: '31415927'   decimal: 1   sign: 0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   

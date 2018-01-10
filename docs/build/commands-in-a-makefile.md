@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c20707f2fc36790fc1b90e9a9df295bcd25f7af3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5361012fd388f49d8eb956ec1a4fa1bdd53a2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commands-in-a-makefile"></a>Makefile 中的命令
 描述區塊或推斷規則指定一段命令執行的相依性已過時。 NMAKE 會顯示每個命令之前執行，除非 /S， **。無訊息**， **！CMDSWITCHES**，或使用 @。 如果描述區塊後面沒有接命令區塊，NMAKE 會尋找相符的推斷規則。  
@@ -40,5 +41,5 @@ project.obj : project.c project.h ; cl /c project.c
   
  [Makefile 中的內嵌檔](../build/inline-files-in-a-makefile.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [NMAKE 參考](../build/nmake-reference.md)

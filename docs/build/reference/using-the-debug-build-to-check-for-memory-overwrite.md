@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8fc223a1e4e1162ce99bb3275152c49828aa99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f18a13992e41cd88bc8edec44f16b02da38ad10c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-the-debug-build-to-check-for-memory-overwrite"></a>使用偵錯版檢查記憶體覆寫
 若要使用偵錯版檢查記憶體覆寫，您必須先重建專案，以偵錯。 然後，移至您的應用程式的最前頭`InitInstance`函式，並加入下行：  
@@ -35,7 +36,7 @@ afxMemDF |= checkAlwaysMemDF;
 Damage Occurred! Block=0x5533  
 ```  
   
- 如果您看到其中一個訊息，您需要逐步執行程式碼來判斷發生損毀。 若要找出更精確地說記憶體覆寫發生的位置，您可以進行明確呼叫`AfxCheckMemory`自己。 例如：  
+ 如果您看到其中一個訊息，您需要逐步執行程式碼來判斷發生損毀。 若要找出更精確地說記憶體覆寫發生的位置，您可以進行明確呼叫`AfxCheckMemory`自己。 例如:   
   
 ```  
 ASSERT(AfxCheckMemory());  
@@ -47,5 +48,5 @@ ASSERT(AfxCheckMemory());
   
  根據您的應用程式的本質，您可能會發現`afxMemDF`導致您的程式執行測試的速度太慢。 `afxMemDF`變數會造成`AfxCheckMemory`針對每次呼叫新的呼叫，並刪除。 在此情況下，您應該散佈到呼叫`AfxCheckMemory`（），如上所示，然後再次嘗試找出記憶體覆寫該方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [解決發行組建的問題](../../build/reference/fixing-release-build-problems.md)

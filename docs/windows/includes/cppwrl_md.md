@@ -1,1 +1,1 @@
-Windows 執行階段 C\+\+ 範本庫
+Windows 執行階段 C++ 範本庫

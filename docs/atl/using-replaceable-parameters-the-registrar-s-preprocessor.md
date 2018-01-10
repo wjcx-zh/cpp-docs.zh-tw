@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6909db6a68a9e637ed0cf8513f49ba306007ce6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b06333ba51b74501f3b7cd68248e5fb7e51ca94f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-replaceable-parameters-the-registrar39s-preprocessor"></a>使用可置換的參數 （在註冊機構 &#39; s 前置處理器）
 可置換的參數允許註冊機構的用戶端指定執行階段資料。 若要這樣做，請在註冊機構會維護所在進入指令碼中可置換的參數相關聯的值取代對應。 在註冊機構會讓這些項目，在執行階段。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/24/2017
 >   
 >  建置時將輸出 DLL 的專案，ATL 會不加上引號的路徑名稱如果**%模組 %**或**%module_raw**用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
 

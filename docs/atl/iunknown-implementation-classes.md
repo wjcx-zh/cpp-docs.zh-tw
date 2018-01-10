@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac484e58b585a09eff40d1b058e44dad6b8d394c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34c0b46d8a7d89ca46dc4361fe85469bd64e538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iunknown-implementation-classes"></a>IUnknown 實作類別
 下列類別會實作**IUnknown**和相關的方法：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相關文章  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [彙總與類別的 Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)   
  [COM 對應巨集](../atl/reference/com-map-macros.md)   

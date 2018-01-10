@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6990539ca6f0bc2956822547e3d41c00c841caf8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>將控制項放在網頁上 (ATL 教學課程，第 7 部分)
 現在已完成您的控制項。 若要查看您在真實世界的情況下運作的控制項，請將它放在網頁上。 定義您的控制項時，已建立包含控制項的 HTML 檔。 開啟 PolyCtl.htm 檔案從**方案總管 中**，您可以看到您在網頁上的控制項。  
@@ -77,6 +78,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="next-steps"></a>後續步驟  
  以上總結 ATL 教學課程。 如需連結 ATL 的詳細資訊，請參閱[ATL 起始頁](../atl/active-template-library-atl-concepts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

@@ -1,49 +1,50 @@
 ---
-title: "非 MFC DLL：概觀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL [C++], 非 MFC"
-  - "非 MFC DLL [C++]"
+title: "非 MFC Dll： 概觀 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- non-MFC DLLs [C++]
+- DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce755f88e8a9efaaacd456206d599dd5db75443
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 非 MFC DLL：概觀
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-非 MFC DLL 是指內部沒有使用 MFC 的 DLL，而此種 DLL 的匯出函式可以讓 MFC 或非 MFC 的可執行檔呼叫。  函式通常是由使用標準 C 介面的非 MFC DLL 來匯出。  
+# <a name="non-mfc-dlls-overview"></a>非 MFC DLL：概觀
+非 MFC 的 DLL 會在內部，不會使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以由呼叫 MFC 或非 MFC 可執行檔。 函式通常被匯出從非 MFC DLL 使用標準 C 介面。  
   
- 如需非 MFC DLL 的詳細資訊，請參閱 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] 中的[動態連結程式庫](http://msdn.microsoft.com/library/windows/desktop/ms682589)。  
+ 如需非 MFC Dll 的詳細資訊，請參閱[動態連結程式庫](http://msdn.microsoft.com/library/windows/desktop/ms682589)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [建立 Win32 DLL](../Topic/How%20to:%20Create%20a%20Windows%20Desktop%20Application.md)  
+-   [逐步解說： 建立和使用動態連結程式庫](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)  
   
 -   [從 DLL 匯出](../build/exporting-from-a-dll.md)  
   
 -   [將可執行檔連結至 DLL](../build/linking-an-executable-to-a-dll.md)  
   
--   [初始化 DLL](../build/initializing-a-dll.md)  
+-   [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
--   [靜態連結至 MFC 的標準 DLL](../build/regular-dlls-statically-linked-to-mfc.md)  
+-   [以靜態方式連結至 MFC 的標準 MFC Dll](../build/regular-dlls-statically-linked-to-mfc.md)  
   
--   [動態連結至 MFC 的標準 DLL](../build/regular-dlls-dynamically-linked-to-mfc.md)  
+-   [動態連結至 MFC 的標準 MFC Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)  
   
--   [擴充 DLL：概觀](../build/extension-dlls-overview.md)  
+-   [MFC 延伸模組 DLL：概觀](../build/extension-dlls-overview.md)  
   
-## 請參閱  
- [DLL 的類型](../build/kinds-of-dlls.md)
+## <a name="see-also"></a>請參閱  
+ [DLL 的種類](../build/kinds-of-dlls.md)

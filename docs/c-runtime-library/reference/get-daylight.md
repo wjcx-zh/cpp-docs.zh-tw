@@ -36,11 +36,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6f9143b3a9f458a403fd044194cd79ac5f2388e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0407b18bed459aefaa904e32c39f491af73cba6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdaylight"></a>_get_daylight
 擷取日光節約時間位移 (小時)。  
@@ -64,19 +65,19 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  `_get_daylight` 函式會將日光節約時間的小時數擷取為整數。 若日光節約時間已生效，則預設位移為一小時 (但少數地區是遵循兩小時的位移)。  
   
- 如果`hours`為`NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
+ 如果 `hours` 為 `NULL`，則會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 若允許繼續執行，此函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
   
  建議您使用此函式，而不是使用巨集 `_daylight` 或已遭取代的函式 `__daylight`。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_get_daylight`|\<time.h>|  
   
- 如需詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [errno、_doserrno、_sys_errlist，和_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)   
  [_get_dstbias](../../c-runtime-library/reference/get-dstbias.md)   

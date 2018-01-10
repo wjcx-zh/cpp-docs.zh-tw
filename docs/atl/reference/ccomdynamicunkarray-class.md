@@ -29,11 +29,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51ad16bacf147e2bafc1cc2ad1a9bb835067ee40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5863c224ed47c70ce485bde3cd693c29afbfbc04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray 類別
 這個類別會儲存陣列**IUnknown**指標。  
@@ -44,18 +45,18 @@ ms.lasthandoff: 10/24/2017
 class CComDynamicUnkArray
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|建構函式。 初始化集合值**NULL**和集合大小為零。|  
 |[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComDynamicUnkArray::Add](#add)|呼叫此方法以新增`IUnknown`陣列的指標。|  
 |[CComDynamicUnkArray::begin](#begin)|讓指標回到第一個`IUnknown`指標集合中的。|  
@@ -217,6 +218,6 @@ BOOL Remove(DWORD dwCookie);
 ### <a name="return-value"></a>傳回值  
  如果已移除的指標; 為 true，則傳回否則為 FALSE。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComUnkArray 類別](../../atl/reference/ccomunkarray-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

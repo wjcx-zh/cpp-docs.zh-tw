@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcrtomb_s
+apiname: wcrtomb_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcrtomb_s
-dev_langs:
-- C++
+f1_keywords: wcrtomb_s
+dev_langs: C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb_s function
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d80bcc1bfda2fa5b7495b9ea0fb92a99056494b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 13134a3e6b34be13d6d878cf94f204bb6c87a458
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcrtombs"></a>wcrtomb_s
 將寬字元轉換為其多位元組字元表示法。 這是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [wcrtomb](../../c-runtime-library/reference/wcrtomb.md) 版本。  
@@ -87,13 +69,13 @@ errno_t wcrtomb_s(
  [輸出] `mbchar`  
  產生的多位元組轉換字元。  
   
- [in] `sizeOfmbchar`  
+ [輸入] `sizeOfmbchar`  
  `mbchar` 變數的大小，以位元組為單位。  
   
  [in] `wchar`  
  要轉換的寬字元。  
   
- [in] `mbstate`  
+ [輸入] `mbstate`  
  `mbstate_t` 物件的指標。  
   
 ## <a name="return-value"></a>傳回值  
@@ -106,7 +88,7 @@ errno_t wcrtomb_s(
   
  `wcrtomb_s` 函式因為可以重新開機，而與 [wctomb_s、_wctomb_s_l](../../c-runtime-library/reference/wctomb-s-wctomb-s-l.md) 不同。 針對相同或其他可重新啟動的函式的後續呼叫，轉換狀態會儲存在 `mbstate` 中。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了 `wcsrtombs_s` 的後續呼叫，而不是 `wcstombs_s.`，應用程式應該使用 `wcsrlen`，而不是 `wcslen`。  
   
- C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了此函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="exceptions"></a>例外狀況  
  `wcrtomb_s` 函式是安全多執行緒，但前提是當這個函式執行中、且 `mbstate` 為 Null 時，目前執行緒中沒有任何函式呼叫 `setlocale`。  
@@ -157,11 +139,11 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`wcrtomb_s`|\<wchar.h>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

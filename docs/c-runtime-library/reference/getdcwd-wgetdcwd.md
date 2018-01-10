@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7541bf3135dfcc3734a43fe64277e5b8ea141e9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e314db740322fc3d5e7df5aeb6bd7de747e77695
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 取得指定磁碟機上目前工作目錄的完整路徑。  
@@ -94,7 +95,7 @@ wchar_t *_wgetdcwd(
   
  `_wgetdcwd` 是寬字元版的 `_getdcwd`，且其 `buffer` 參數與傳回值均為寬字元字串。 否則 `_wgetdcwd` 和 `_getdcwd` 的行為相同。  
   
- 這個函式即使相依於本身不是安全執行緒的 **GetFullPathName**，仍是安全執行緒。 不過，如果多執行緒應用程式同時呼叫這個函式和 **GetFullPathName**，您可能會違反執行緒安全。 如需詳細資訊，請前往 [MSDN Library](http://go.microsoft.com/fwlink/?LinkID=150542) ，然後搜尋 **GetFullPathName**。  
+ 這個函式即使相依於本身不是安全執行緒的 **GetFullPathName**，仍是安全執行緒。 不過，如果多執行緒應用程式同時呼叫這個函式和 **GetFullPathName**，您可能會違反執行緒安全。 如需詳細資訊，請前往 [MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542)，然後搜尋 **GetFullPathName**。  
   
  這個函式具有 `_nolock` 尾碼之版本的運作方式會與這個函式完全相同，但該版不是安全執行緒，而且無法防止其他執行緒的干擾。 如需詳細資訊，請參閱 [_getdcwd_nolock, _wgetdcwd_nolock](../../c-runtime-library/reference/getdcwd-nolock-wgetdcwd-nolock.md)。  
   
@@ -108,17 +109,17 @@ wchar_t *_wgetdcwd(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_getdcwd`|\<direct.h>|  
 |`_wgetdcwd`|\<direct.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  請參閱 [_getdrive](../../c-runtime-library/reference/getdrive.md)中的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [目錄控制](../../c-runtime-library/directory-control.md)   
  [_chdir、_wchdir](../../c-runtime-library/reference/chdir-wchdir.md)   
  [_getcwd、_wgetcwd](../../c-runtime-library/reference/getcwd-wgetcwd.md)   

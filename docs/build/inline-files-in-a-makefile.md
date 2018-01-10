@@ -1,34 +1,35 @@
 ---
-title: "Makefile 中的內嵌檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "檔案 [C++], 內嵌"
-  - "內嵌檔 [C++]"
-  - "內嵌檔 [C++], Makefile 中"
-  - "Makefile, 內嵌檔"
-  - "NMAKE 程式, 內嵌檔"
+title: "Makefile 中的內嵌檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files [C++], in makefiles
+- inline files [C++]
+- NMAKE program, inline files
+- makefiles, inline files
+- files [C++], inline
 ms.assetid: ff48a64f-773d-410c-9726-f867ad4c8030
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15c4cbf72b8731a23ef6b7810d34921e21095699
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Makefile 中的內嵌檔
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-內嵌檔含有您在 Makefile 中所指定的文字。  內嵌檔名稱可在命令中當做輸入 \(例如，LINK 命令檔\)，或能夠將命令傳遞至作業系統。  當執行建立檔案的命令時，會在磁碟上建立檔案。  
+# <a name="inline-files-in-a-makefile"></a>Makefile 中的內嵌檔
+內嵌檔包含您指定 makefile 中的文字。 可以在命令中使用其名稱，做為輸入 （例如，LINK 命令檔），或它可以將命令傳遞給作業系統。 建立檔案的命令執行時在磁碟上建立檔案。  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
  [指定內嵌檔](../build/specifying-an-inline-file.md)  
   
  [建立內嵌檔文字](../build/creating-inline-file-text.md)  
@@ -37,5 +38,5 @@ caps.handback.revision: 6
   
  [多重內嵌檔](../build/multiple-inline-files.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Makefile 中的命令](../build/commands-in-a-makefile.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -38,35 +37,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSecurityDesc class
+dev_langs: C++
+helpviewer_keywords: CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 334081ba67c3b034c4b8170b095fcd77d712dda6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 類別
 這個類別是包裝函式**SECURITY_DESCRIPTOR**結構。  
@@ -80,7 +63,7 @@ ms.lasthandoff: 04/04/2017
 class CSecurityDesc
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -91,7 +74,7 @@ class CSecurityDesc
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSecurityDesc::FromString](#fromstring)|將字串格式的安全性描述元轉換成有效、 功能安全性描述元。|  
 |[Csecuritydesc:: Getcontrol](#getcontrol)|擷取控制資訊的安全性描述元。|  
@@ -132,10 +115,10 @@ class CSecurityDesc
   
  應用程式不應修改**SECURITY_DESCRIPTOR**結構直接，並改為應該使用類別提供的方法。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h  
+ **標頭：** atlsecurity.h  
   
 ##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
  建構函式。  
@@ -194,7 +177,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  指標**SECURITY_DESCRIPTOR_CONTROL**接收的安全性描述元控制資訊的結構。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功則為 false 如果失敗，則傳回 true。  
+ 如果此方法成功則為 false 失敗時傳回 true。  
   
 ### <a name="remarks"></a>備註  
  這個方法僅有意義，當使用 Windows 2000 或更新版本，因為它會呼叫[GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647)。  
@@ -220,7 +203,7 @@ bool GetDacl(
  指標的旗標設為 SE_DACL_DEFAULTED 旗標的值**SECURITY_DESCRIPTOR_CONTROL**結構如果判別**ACL**存在的安全性描述元。 如果這個旗標為 true，判別**ACL**擷取預設機制; 如果為 false，判別**ACL**已由使用者明確地指定。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功則為 false 如果失敗，則傳回 true。  
+ 如果此方法成功則為 false 失敗時傳回 true。  
   
 ##  <a name="getgroup"></a>CSecurityDesc::GetGroup  
  擷取的安全性描述元主要群組資訊。  
@@ -239,7 +222,7 @@ bool GetGroup(
  指標的旗標設為 SE_GROUP_DEFAULTED 旗標的值**SECURITY_DESCRIPTOR_CONTROL**結構方法傳回時。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功則為 false 如果失敗，則傳回 true。  
+ 如果此方法成功則為 false 失敗時傳回 true。  
   
 ##  <a name="getowner"></a>CSecurityDesc::GetOwner  
  擷取的安全性描述元擁有者資訊。  
@@ -258,7 +241,7 @@ bool GetOwner(
  指標的旗標設為 SE_OWNER_DEFAULTED 旗標的值**SECURITY_DESCRIPTOR_CONTROL**結構方法傳回時。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功則為 false 如果失敗，則傳回 true。  
+ 如果此方法成功則為 false 失敗時傳回 true。  
   
 ##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  將指標傳回至**SECURITY_DESCRIPTOR**結構。  
@@ -291,7 +274,7 @@ bool GetSacl(
  指標的旗標設為 SE_SACL_DEFAULTED 旗標的值**SECURITY_DESCRIPTOR_CONTROL**結構如果系統**ACL**存在的安全性描述元。  
   
 ### <a name="return-value"></a>傳回值  
- 如果此方法成功則為 false 如果失敗，則傳回 true。  
+ 如果此方法成功則為 false 失敗時傳回 true。  
   
 ##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
  決定是否判別存取控制清單 (DACL) 已設定為支援自動傳播。  
@@ -506,7 +489,7 @@ bool SetControl(
   
 ### <a name="parameters"></a>參數  
  `ControlBitsOfInterest`  
- A **SECURITY_DESCRIPTOR_CONTROL**遮罩，表示若要設定的控制位元。 可以設定之旗標的清單，請參閱[SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。  
+ A **SECURITY_DESCRIPTOR_CONTROL**遮罩，表示若要設定的控制位元。 如需可設定的旗標的清單，請參閱[SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)。  
   
  `ControlBitsToSet`  
  `SECURITY_DESCRIPTOR_CONTROL` 遮罩，表示 `ControlBitsOfInterest` 遮罩所指定控制位元的新值。 此參數可以是針對 `ControlBitsOfInterest` 參數所列出旗標的組合。  
@@ -620,7 +603,7 @@ bool ToString(
 ### <a name="remarks"></a>備註  
  字串格式的安全性描述元之後，可以更輕鬆地儲存或傳輸。 使用`CSecurityDesc::FromString`方法，將字串轉換回的安全性描述元。  
   
- `si`參數可以包含下列 SECURITY_INFORMATION 旗標︰  
+ `si`參數可以包含下列 SECURITY_INFORMATION 旗標：  
   
 |值|意義|  
 |-----------|-------------|  
@@ -631,13 +614,12 @@ bool ToString(
   
  如果 DACL 受到 NULL SE_DACL_PRESENT 控制位元設定輸入的安全性描述元中，方法就會失敗。  
   
- 如果 DACL 受到 NULL 輸入的安全性描述元中未設定 SE_DACL_PRESENT 控制位元，產生的安全性描述元字串中沒有 d︰ 元件。 請參閱[安全性描述元字串格式](http://msdn.microsoft.com/library/windows/desktop/aa379570)以取得詳細資料。  
+ 如果 DACL 受到 NULL 輸入的安全性描述元中未設定 SE_DACL_PRESENT 控制位元，產生的安全性描述元字串中沒有 d： 元件。 請參閱[安全性描述元字串格式](http://msdn.microsoft.com/library/windows/desktop/aa379570)如需詳細資訊。  
   
  這個方法僅可與 Windows 2000 和更新版本，因為它會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)
-

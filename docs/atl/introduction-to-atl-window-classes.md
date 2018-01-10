@@ -1,51 +1,51 @@
 ---
-title: "Introduction to ATL Window Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "window classes"
+title: "ATL 視窗類別簡介 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: window classes
 ms.assetid: 503efc2c-a269-495d-97cf-3fb300d52f3d
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 636fe8aa87b6880f5cda77fb46fc481d99d78a81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Introduction to ATL Window Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列 ATL 類別是設計來實作和管理視窗:  
+# <a name="introduction-to-atl-window-classes"></a>ATL 視窗類別簡介
+下列的 ATL 類別的實作和管理 windows 設計的：  
   
--   [CWindow](../atl/reference/cwindow-class.md) 允許您將視窗控制代碼 `CWindow` 物件。  接著呼叫方法 `CWindow` 操作視窗。  
+-   [CWindow](../atl/reference/cwindow-class.md)可讓您附加的視窗控制代碼`CWindow`物件。 然後呼叫`CWindow`管理視窗的方法。  
   
--   [CWindowImpl](../atl/reference/cwindowimpl-class.md) 可讓您實作新的視窗，並附有訊息的處理訊息對應。  您可以建立以新視窗的視窗類別， Superclass 現有類別或子類別現有視窗。  
+-   [CWindowImpl](../atl/reference/cwindowimpl-class.md)可讓您實作新的視窗，並處理訊息的訊息對應。 您可以建立視窗為基礎的新 Windows 類別、 超級類別現有的類別或子類別現有的視窗。  
   
--   [CDialogImpl](../atl/reference/cdialogimpl-class.md) 可讓您實作強制回應或非強制回應對話方塊並處理訊息的訊息對應。  
+-   [CDialogImpl](../atl/reference/cdialogimpl-class.md)可讓您實作獨佔或非強制回應對話方塊方塊和處理訊息與訊息對應。  
   
--   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md) 是實作 Windows 訊息對應到另一個類別包含預先建置的類別。  使用 `CContainedWindowT` 讓您專注於處理類別的訊息。  
+-   [CContainedWindowT](../atl/reference/ccontainedwindowt-class.md)是預先建立的類別，另一個類別中實作包含其訊息對應的視窗。 使用`CContainedWindowT`可讓您集中管理某一個類別中的訊息處理。  
   
--   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) 可讓您實作對話方塊 \(強制回應或非強制回應\) 裝載 ActiveX 控制項。  
+-   [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)可讓您實作裝載 ActiveX 控制項對話方塊中 （強制或非強制回應）。  
   
--   [CSimpleDialog](../atl/reference/csimpledialog-class.md) 可讓您實作的基本功能的強制回應對話方塊。  
+-   [CSimpleDialog](../atl/reference/csimpledialog-class.md)可讓您實作的基本功能的強制回應對話方塊。  
   
--   [CAxWindow](../atl/reference/caxwindow-class.md) 可讓您實作裝載 ActiveX 控制項的視窗。  
+-   [CAxWindow](../atl/reference/caxwindow-class.md)可讓您實作裝載 ActiveX 控制項的視窗。  
   
--   [CAxWindow2T](../atl/reference/caxwindow2t-class.md) 可讓您實作裝載已授權的 ActiveX 控制項的視窗。  
+-   [CAxWindow2T](../atl/reference/caxwindow2t-class.md)可讓您實作裝載授權的 ActiveX 控制項的視窗。  
   
- 除了特定視窗類別之外， ATL 會提供數個類別可以實作 ATL 視窗物件更容易。  這些屬性如下：  
+ 特定的視窗除了類別之外，ATL 提供許多設計是為了讓您更輕鬆 ATL 視窗物件的實作。 分別為：  
   
--   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md) 處理新的視窗類別的相關資訊。  
+-   [CWndClassInfo](../atl/reference/cwndclassinfo-class.md)管理新的視窗類別資訊。  
   
--   [CWinTraits](../atl/reference/cwintraits-class.md) 和 [CWinTraitsOR](../atl/reference/cwintraitsor-class.md) 提供標準化 ATL 視窗物件特性的簡單方法。  
+-   [CWinTraits](../atl/reference/cwintraits-class.md)和[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)提供標準化的特性，ATL 視窗物件的簡單方法。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [視窗類別](../atl/atl-window-classes.md)
+

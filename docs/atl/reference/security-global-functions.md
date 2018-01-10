@@ -4,47 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlsecurity/ATL::AtlGetDacl
+- atlsecurity/ATL::AtlSetDacl
+- atlsecurity/ATL::AtlGetGroupSid
+- atlsecurity/ATL::AtlSetGroupSid
+- atlsecurity/ATL::AtlGetOwnerSid
+- atlsecurity/ATL::AtlSetOwnerSid
+- atlsecurity/ATL::AtlGetSacl
+- atlsecurity/ATL::AtlSetSacl
+- atlsecurity/ATL::AtlGetSecurityDescriptor
+dev_langs: C++
 helpviewer_keywords:
 - SIDs [C++], modifying SID objects
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ff5afaaf2746d9e07eb9e06a079d34adb2f67109
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c1439fcf15a9359d3a548945edc76c1ddcf8675f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-global-functions"></a>安全性全域函式
 這些函式提供修改 SID 和 ACL 物件的支援。  
   
 > [!IMPORTANT]
->  下表所列出的函數不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
   
 |||  
 |-|-|  
@@ -59,13 +53,13 @@ ms.lasthandoff: 04/04/2017
 |[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|呼叫此函式可擷取所指物件的安全性描述元。|  
 
 ## <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlgetdacl"></a>AtlGetDacl  
  呼叫此函式可擷取所指定物件的判別存取控制清單 (DACL) 資訊。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlGetDacl(
@@ -94,7 +88,7 @@ inline bool AtlGetDacl(
  呼叫此函式可設定所指定物件的判別存取控制清單 (DACL) 資訊。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlSetDacl(
@@ -123,13 +117,13 @@ inline bool AtlSetDacl(
 ### <a name="remarks"></a>備註  
  在偵錯組建，判斷提示就會發生錯誤，如果`hObject`無效，或如果`dwInheritanceFlowControl`不是三個允許值之一。  
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlgetgroupsid"></a>AtlGetGroupSid  
  呼叫此函式可擷取物件的群組安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlGetGroupSid(
@@ -152,13 +146,13 @@ inline bool AtlGetGroupSid(
  如果成功則傳回 true，失敗則傳回 false。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlsetgroupsid"></a>AtlSetGroupSid  
  呼叫此函式可設定物件的群組安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlSetGroupSid(
@@ -181,13 +175,13 @@ inline bool AtlSetGroupSid(
  如果成功則傳回 true，失敗則傳回 false。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlgetownersid"></a>AtlGetOwnerSid  
  呼叫此函式可擷取物件的擁有者安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlGetOwnerSid(
@@ -210,13 +204,13 @@ inline bool AtlGetOwnerSid(
  如果成功則傳回 true，失敗則傳回 false。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlsetownersid"></a>AtlSetOwnerSid  
  呼叫此函式可設定物件的擁有者安全性識別碼 (SID)。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlSetOwnerSid(
@@ -239,13 +233,13 @@ inline bool AtlSetOwnerSid(
  如果成功則傳回 true，失敗則傳回 false。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlgetsacl"></a>AtlGetSacl  
  呼叫此函式可擷取所指定物件的系統存取控制清單 (SACL) 資訊。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlGetSacl(
@@ -275,13 +269,13 @@ inline bool AtlGetSacl(
  如果`AtlGetSacl`將許多不同的物件上呼叫多次會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率`bRequestNeededPrivileges`設為 false。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlsetsacl"></a>AtlSetSacl  
  呼叫此函式可設定所指定物件的系統存取控制清單 (SACL) 資訊。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlSetSacl(
@@ -317,13 +311,13 @@ inline bool AtlSetSacl(
  如果`AtlSetSacl`將許多不同的物件上呼叫多次會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率`bRequestNeededPrivileges`設為 false。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
 
 ##  <a name="atlgetsecuritydescriptor"></a>AtlGetSecurityDescriptor  
  呼叫此函式可擷取所指物件的安全性描述元。  
   
 > [!IMPORTANT]
->  此函式不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  此函式不能在 Windows 執行階段中執行的應用程式。  
   
 ```
 inline bool AtlGetSecurityDescriptor(
@@ -359,8 +353,7 @@ inline bool AtlGetSecurityDescriptor(
  如果`AtlGetSecurityDescriptor`將許多不同的物件上呼叫多次會啟用 SE_SECURITY_NAME 權限後，才能呼叫函式，以更有效率`bRequestNeededPrivileges`設為 false。  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h 
+ **標頭：** atlsecurity.h 
    
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../../atl/reference/atl-functions.md)
-

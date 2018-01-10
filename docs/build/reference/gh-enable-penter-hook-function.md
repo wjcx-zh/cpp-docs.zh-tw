@@ -1,68 +1,67 @@
 ---
-title: "/Gh (啟用 _penter 攔截函式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_penter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gh 編譯器選項 [C++]"
-  - "_penter 函式"
-  - "Gh 編譯器選項 [C++]"
-  - "-Gh 編譯器選項 [C++]"
+title: "-Gh （啟用 _penter 攔截函式） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _penter
+dev_langs: C++
+helpviewer_keywords:
+- /Gh compiler option [C++]
+- Gh compiler option [C++]
+- _penter function
+- -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dec38a8822bb8a330c4dccff9833780ea3a0a45d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /Gh (啟用 _penter 攔截函式)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使得每個方法或函式開始時，都會呼叫 `_penter` 函式。  
+# <a name="gh-enable-penter-hook-function"></a>/Gh (啟用 _penter 攔截函式)
+會呼叫`_penter`函式的每個方法或函式開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /Gh  
 ```  
   
-## 備註  
- `_penter` 函式並非任何程式庫的一部分，必須由您來提供 `_penter` 的定義。  
+## <a name="remarks"></a>備註  
+ `_penter`函式不是任何文件庫的一部分，並由您提供的定義`_penter`。  
   
- 除非您打算明確地呼叫 `_penter`，否則您不需要提供原型。  這個函式必須如同擁有下列原型一樣地出現，而且它必須在進入時推入所有暫存器的內容並且在離開時取出未變更的內容：  
+ 除非您計劃來明確呼叫`_penter`，您不需要提供原型。 此函式必須出現，如同它有下列的原型，和必須在項目上推入的所有暫存器內容和結束時顯示未變更的內容：  
   
 ```  
 void __declspec(naked) _cdecl _penter( void );  
 ```  
   
- 這個宣告不適用於 64 位元專案。  
+ 這個宣告不是適用於 64 位元專案。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中，輸入編譯器選項。  
+4.  在 [其他選項]  方塊中，輸入編譯器選項。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 範例  
- 下列程式碼在使用 **\/Gh** 編譯時，會顯示如何兩次呼叫 `_penter`；一次是在進入函式 `main` 時，另一次是在進入函式 `x` 時。  
+## <a name="example"></a>範例  
+ 下列程式碼，以編譯時**/Gh**，示範如何`_penter`稱為兩次; 一次輸入函式時`main`一次輸入函式時`x`。  
   
 ```  
 // Gh_compiler_option.cpp  
@@ -101,8 +100,11 @@ extern "C" void __declspec(naked) _cdecl _penter( void ) {
 }  
 ```  
   
-  **在函式中！**  
-**在函式中！**   
-## 請參閱  
+```Output  
+In a function!  
+In a function!  
+```  
+  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

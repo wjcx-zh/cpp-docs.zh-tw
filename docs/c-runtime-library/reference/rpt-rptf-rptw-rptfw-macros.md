@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -40,8 +39,7 @@ f1_keywords:
 - _RPTF3
 - RPT2
 - _RPTF1
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _RPTW3 macro
@@ -95,16 +93,16 @@ helpviewer_keywords:
 - RPTFW1 macro
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 453b04174325a7c112105bdef1147e1b7909ccdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 巨集
 產生偵錯報表，以追蹤應用程式進度 (僅限偵錯版本)。 請注意，  *n* 指定之引數中`args`而且可以是 0、 1、 2、 3、 4 或 5。  
@@ -179,7 +177,7 @@ _RPTFWn(
 |`_RPTW` 巨集|\<crtdbg.h>|  
 |`_RPTFW` 巨集|\<crtdbg.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  僅限偵錯版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -189,5 +187,5 @@ _RPTFWn(
 ## <a name="example"></a>範例  
  請參閱 [_ASSERT](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 主題中的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [偵錯常式](../../c-runtime-library/debug-routines.md)

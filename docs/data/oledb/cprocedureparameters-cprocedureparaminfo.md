@@ -1,104 +1,107 @@
 ---
-title: "CProcedureParameters、CProcedureParamInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szDefault"
-  - "CProcedureParameters"
-  - "m_bHasDefault"
-  - "CProcedureParamInfo"
-  - "IS_NULLABLE"
-  - "m_szCatalog"
-  - "ORDINAL_POSITION"
-  - "m_nOrdinalPosition"
-  - "NUMERIC_PRECISION"
-  - "m_nDataType"
-  - "m_szSchema"
-  - "CHARACTER_OCTET_LENGTH"
-  - "NUMERIC_SCALE"
-  - "m_szParameterName"
-  - "m_nMaxLength"
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "m_nPrecision"
-  - "m_szName"
-  - "DATA_TYPE"
-  - "m_nOctetLength"
-  - "m_nType"
-  - "m_bIsNullable"
-  - "m_nScale"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHARACTER_MAXIMUM_LENGTH"
-  - "CHARACTER_OCTET_LENGTH"
-  - "CProcedureParameters typedef 類別"
-  - "CProcedureParamInfo 參數類別"
-  - "DATA_TYPE"
-  - "DESCRIPTION 類別資料成員"
-  - "IS_NULLABLE"
-  - "m_bHasDefault"
-  - "m_bIsNullable"
-  - "m_nDataType"
-  - "m_nMaxLength"
-  - "m_nOctetLength"
-  - "m_nOrdinalPosition"
-  - "m_nPrecision"
-  - "m_nScale"
-  - "m_nType"
-  - "m_szCatalog"
-  - "m_szDefault"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szParameterName"
-  - "m_szSchema"
-  - "NUMERIC_PRECISION"
-  - "NUMERIC_SCALE"
-  - "ORDINAL_POSITION"
+title: "CProcedureParameters、 CProcedureParamInfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szDefault
+- CProcedureParameters
+- m_bHasDefault
+- CProcedureParamInfo
+- IS_NULLABLE
+- m_szCatalog
+- ORDINAL_POSITION
+- m_nOrdinalPosition
+- NUMERIC_PRECISION
+- m_nDataType
+- m_szSchema
+- CHARACTER_OCTET_LENGTH
+- NUMERIC_SCALE
+- m_szParameterName
+- m_nMaxLength
+- CHARACTER_MAXIMUM_LENGTH
+- m_nPrecision
+- m_szName
+- DATA_TYPE
+- m_nOctetLength
+- m_nType
+- m_bIsNullable
+- m_nScale
+dev_langs: C++
+helpviewer_keywords:
+- NUMERIC_PRECISION
+- DATA_TYPE
+- ORDINAL_POSITION
+- m_nMaxLength
+- DESCRIPTION class data member
+- m_szParameterName
+- m_szSchema
+- m_nType
+- m_bHasDefault
+- CHARACTER_OCTET_LENGTH
+- CProcedureParameters typedef class
+- m_szCatalog
+- m_nPrecision
+- m_nOrdinalPosition
+- NUMERIC_SCALE
+- m_nOctetLength
+- IS_NULLABLE
+- m_szName
+- m_bIsNullable
+- CProcedureParamInfo parameter class
+- m_szDescription
+- m_szDefault
+- m_nDataType
+- m_nScale
+- CHARACTER_MAXIMUM_LENGTH
 ms.assetid: 61f8d55a-684a-47a3-b102-068cc3f52d84
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d3f4a28a882a9de9bdb3630ebc2bb7d2adda48c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CProcedureParameters、CProcedureParamInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 typedef 類別 **CProcedureParameters** 實作它的參數類別 **CProcedureParamInfo**。  
+# <a name="cprocedureparameters-cprocedureparaminfo"></a>CProcedureParameters、CProcedureParamInfo
+呼叫 typedef 類別**CProcedureParameters**來實作其參數類別**、 CProcedureParamInfo**。  
   
-## 備註  
- 如需使用 typedef 類別的詳細資訊，請參閱 [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。  
+## <a name="remarks"></a>備註  
+ 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 這個類別會傳回程序的參數和傳回碼 \(Return Code\) 的相關資訊。  
+ 這個類別會傳回參數和傳回碼的程序的相關資訊。  
   
- 下表列出類別資料成員和其對應的 OLE DB 資料行。  有關結構描述和資料列的詳細資訊請參閱《 *OLE DB 程式設計人員參考*》的[PROCEDURE\_PARAMETERS Rowset](https://msdn.microsoft.com/en-us/library/ms713623.aspx)。  
+ 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[PROCEDURE_PARAMETERS 資料列集](https://msdn.microsoft.com/en-us/library/ms713623.aspx)中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
-|----------|----------------|  
-|m\_szCatalog|PROCEDURE\_CATALOG|  
-|m\_szSchema|PROCEDURE\_SCHEMA|  
-|m\_szName|PROCEDURE\_NAME|  
-|m\_szParameterName|PARAMETER\_NAME|  
-|m\_nOrdinalPosition|ORDINAL\_POSITION|  
-|m\_nType|PARAMETER\_TYPE|  
-|m\_bHasDefault|PARAMETER\_HASDEFAULT|  
-|m\_szDefault|PARAMETER\_DEFAULT|  
-|m\_bIsNullable|IS\_NULLABLE|  
-|m\_nDataType|DATA\_TYPE|  
-|m\_nMaxLength|CHARACTER\_MAXIMUM\_LENGTH|  
-|m\_nOctetLength|CHARACTER\_OCTET\_LENGTH|  
-|m\_nPrecision|NUMERIC\_PRECISION|  
-|m\_nScale|NUMERIC\_SCALE|  
-|m\_szDescription|DESCRIPTION|  
+|------------------|--------------------|  
+|m_szCatalog|PROCEDURE_CATALOG|  
+|m_szSchema|PROCEDURE_SCHEMA|  
+|m_szName|PROCEDURE_NAME|  
+|m_szParameterName|PARAMETER_NAME|  
+|m_nOrdinalPosition|ORDINAL_POSITION|  
+|m_nType|PARAMETER_TYPE|  
+|m_bHasDefault|PARAMETER_HASDEFAULT|  
+|m_szDefault|PARAMETER_DEFAULT|  
+|m_bIsNullable|IS_NULLABLE|  
+|m_nDataType|DATA_TYPE|  
+|m_nMaxLength|CHARACTER_MAXIMUM_LENGTH|  
+|m_nOctetLength|CHARACTER_OCTET_LENGTH|  
+|m_nPrecision|NUMERIC_PRECISION|  
+|m_nScale|NUMERIC_SCALE|  
+|m_szDescription|DESCRIPTION|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

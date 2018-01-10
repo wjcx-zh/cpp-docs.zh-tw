@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 078525ab1d26ac025d8cb20e72d620a555586921
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ada09468c52c38311e6cd44c4cde341a0b589e43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="err2"></a>.ERR2
 [.ERR](../../assembler/masm/dot-err.md)區塊上每個組件行程進行評估，如果**選項： SETIF2**是**，則為 TRUE。**  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
 .ERR2 [[message]]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

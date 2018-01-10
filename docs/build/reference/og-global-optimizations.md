@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a48d01437ad72bcc239de0465b62732efb805dd1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 196e89a958ce49bf5e0087d98d2f40ada210cc87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="og-global-optimizations"></a>/Og (全域最佳化)
 
@@ -102,7 +103,7 @@ ms.lasthandoff: 10/24/2017
 
 - 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [/O 選項 （最佳化程式碼）](../../build/reference/o-options-optimize-code.md)
 

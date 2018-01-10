@@ -1,50 +1,51 @@
 ---
-title: "Specifying Property Pages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISpecifyPropertyPages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ISpecifyPropertyPages method"
-  - "屬性頁, 指定"
+title: "指定屬性頁 (ATL) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ISpecifyPropertyPages
+dev_langs: C++
+helpviewer_keywords:
+- ISpecifyPropertyPages method
+- property pages, specifying
 ms.assetid: ee8678cf-c708-49ab-b0ad-fc2db31f1ac3
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8985499c76a7dc65523a5c2904bcb774a4364d41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Specifying Property Pages
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您建立 ActiveX 控制項，您通常會想要與可用於設定控制項的屬性的屬性頁。  容器控制項使用屬性頁來設定控制項的屬性的 **ISpecifyPropertyPages** 介面來探索。  您將需要實作在控制項中的這個介面。  
+# <a name="specifying-property-pages"></a>指定屬性頁
+當您建立 ActiveX 控制項時，您通常要與屬性頁，可以用來設定控制項的屬性產生關聯。 控制容器使用**ISpecifyPropertyPages**介面，以找出哪些屬性頁面可以用來設定控制項的屬性。 您必須實作此介面上您的控制項。  
   
- 使用 ATL，若要實作 **ISpecifyPropertyPages** ，請執行下列步驟:  
+ 若要實作**ISpecifyPropertyPages**使用 ATL，採取下列步驟：  
   
-1.  從 [ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)衍生您的類別。  
+1.  衍生您的類別從[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)。  
   
-2.  將 **ISpecifyPropertyPages** 的項目加入至類別的 COM 對應。  
+2.  新增的項目**ISpecifyPropertyPages**至類別的 COM 對應。  
   
-3.  將 [PROP\_PAGE](../Topic/PROP_PAGE.md) 項目加入至每個頁面的屬性對應與您的控制項。  
+3.  新增[PROP_PAGE](reference/property-map-macros.md#prop_page)與控制項相關聯的每一頁的屬性對應的項目。  
   
 > [!NOTE]
->  當產生標準控制項使用 [ATL 控制項精靈](../atl/reference/atl-control-wizard.md)，您只需要加入到屬性的 `PROP_PAGE` 輸入對應。  精靈會產生其他步驟的必要的程式碼。  
+>  產生標準控制項使用時[ATL 控制項精靈](../atl/reference/atl-control-wizard.md)，您只需新增`PROP_PAGE`的屬性對應的項目。 精靈會產生必要的程式碼的其他步驟。  
   
- 行為良好的容器中顯示指定的屬性頁按鈕與在屬性的 `PROP_PAGE` 輸入對應的順序。  一般而言，您應該在您的自訂頁面項目後面放置標準屬性頁面項目在屬性對應，因此，使用者先參閱頁面專屬的控制項。  
+ 正常運作的容器將會顯示指定的屬性頁中的順序相同`PROP_PAGE`屬性對應中的項目。 一般而言，您應該放入的一般屬性頁面項目之後的項目在屬性對應中，在自訂頁面，讓使用者看到您的控制項特定頁面第一次。  
   
-## 範例  
- 月曆控制項的下列類別使用 **ISpecifyPropertyPages** 介面呼叫容器使用自訂日期網頁和股票色彩頁面，但可設定其屬性。  
+## <a name="example"></a>範例  
+ 控制項使用的行事曆的下列類別**ISpecifyPropertyPages**告知容器可以使用自訂日期頁面和 [內建的色彩] 頁面設定其屬性的介面。  
   
- [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/CPP/specifying-property-pages_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#72](../atl/codesnippet/cpp/specifying-property-pages_1.h)]  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../atl/atl-com-property-pages.md)   
- [ATLPages 範例](../top/visual-cpp-samples.md)
+ [ATLPages 範例](../visual-cpp-samples.md)
+

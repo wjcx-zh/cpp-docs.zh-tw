@@ -40,11 +40,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: af250c88b7c5443529cf4aa9524f3d2e78413e87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4dad9abf8b82cc5c6e876af22a1a2f61a6216ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lseek-lseeki64"></a>_lseek、_lseeki64
 將檔案指標移至指定的位置。  
@@ -78,7 +79,7 @@ __int64 _lseeki64(
 ## <a name="return-value"></a>傳回值  
  `_lseek` 會傳回從檔案開頭到新位置的位移 (以位元組為單位)。 `_lseeki64` 會傳回以 64 位元整數表示的位移。 函數會傳回-1l; 此時表示錯誤。 如果傳遞的參數無效 (例如檔案描述項不正確)、*origin* 的值無效，或是 *offset* 所指定的位置在檔案開頭之前，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設定為 `EBADF` 並傳回 -1L。 在沒有搜尋功能的裝置上 (例如終端機和印表機)，傳回的值未定義。  
   
- 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  `_lseek` 函式會將與 `fd` 相關聯的檔案指標移至從 *origin* 位移 *offset* 個位元組的新位置。 對檔案的下一項作業會在新位置進行。 *origin* 引數必須是定義於 Stdio.h 中的下列其中一個常數。  
@@ -96,12 +97,12 @@ __int64 _lseeki64(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_lseek`|\<io.h>|  
 |`_lseeki64`|\<io.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -176,7 +177,7 @@ Position for current position seek = 10
 Position for end of file seek = 57  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   
  [_tell、_telli64](../../c-runtime-library/reference/tell-telli64.md)

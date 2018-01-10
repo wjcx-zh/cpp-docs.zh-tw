@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6562e9b8da8f12f94c4d71056c8c364900033436
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c66b8be1e3625a8830cb23c0898bbb0abdaed121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 插入來源所提供的來源檔案的程式碼*filename*到目前的原始程式檔，在組件。  
@@ -34,5 +35,5 @@ INCLUDE filename
 ## <a name="remarks"></a>備註  
  *Filename*必須括在角括號中，如果它包含一個反斜線，以分號、 大-符號，小於-比符號、 單引號或雙引號。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

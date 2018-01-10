@@ -9,42 +9,78 @@ ms.tgt_pltfrm:
 ms.topic: reference
 f1_keywords:
 - CStringT
-- No header/ATL::CStringT
-- No header/ATL::CStringT::CStringT
-- No header/ATL::CStringT::AllocSysString
-- No header/ATL::CStringT::AnsiToOem
-- No header/ATL::CStringT::AppendFormat
-- No header/ATL::CStringT::Collate
-- No header/ATL::CStringT::CollateNoCase
-- No header/ATL::CStringT::Compare
-- No header/ATL::CStringT::CompareNoCase
-- No header/ATL::CStringT::Delete
-- No header/ATL::CStringT::Find
-- No header/ATL::CStringT::FindOneOf
-- No header/ATL::CStringT::Format
-- No header/ATL::CStringT::FormatMessage
-- No header/ATL::CStringT::FormatMessageV
-- No header/ATL::CStringT::FormatV
-- No header/ATL::CStringT::GetEnvironmentVariable
-- No header/ATL::CStringT::Insert
-- No header/ATL::CStringT::Left
-- No header/ATL::CStringT::LoadString
-- No header/ATL::CStringT::MakeLower
-- No header/ATL::CStringT::MakeReverse
-- No header/ATL::CStringT::MakeUpper
-- No header/ATL::CStringT::Mid
-- No header/ATL::CStringT::OemToAnsi
-- No header/ATL::CStringT::Remove
-- No header/ATL::CStringT::Replace
-- No header/ATL::CStringT::ReverseFind
-- No header/ATL::CStringT::Right
-- No header/ATL::CStringT::SetSysString
-- No header/ATL::CStringT::SpanExcluding
-- No header/ATL::CStringT::SpanIncluding
-- No header/ATL::CStringT::Tokenize
-- No header/ATL::CStringT::Trim
-- No header/ATL::CStringT::TrimLeft
-- No header/ATL::CStringT::TrimRight
+- ATLSTR/ATL::CStringT
+- ATLSTR/ATL::CStringT::CStringT
+- ATLSTR/ATL::CStringT::AllocSysString
+- ATLSTR/ATL::CStringT::AnsiToOem
+- ATLSTR/ATL::CStringT::AppendFormat
+- ATLSTR/ATL::CStringT::Collate
+- ATLSTR/ATL::CStringT::CollateNoCase
+- ATLSTR/ATL::CStringT::Compare
+- ATLSTR/ATL::CStringT::CompareNoCase
+- ATLSTR/ATL::CStringT::Delete
+- ATLSTR/ATL::CStringT::Find
+- ATLSTR/ATL::CStringT::FindOneOf
+- ATLSTR/ATL::CStringT::Format
+- ATLSTR/ATL::CStringT::FormatMessage
+- ATLSTR/ATL::CStringT::FormatMessageV
+- ATLSTR/ATL::CStringT::FormatV
+- ATLSTR/ATL::CStringT::GetEnvironmentVariable
+- ATLSTR/ATL::CStringT::Insert
+- ATLSTR/ATL::CStringT::Left
+- ATLSTR/ATL::CStringT::LoadString
+- ATLSTR/ATL::CStringT::MakeLower
+- ATLSTR/ATL::CStringT::MakeReverse
+- ATLSTR/ATL::CStringT::MakeUpper
+- ATLSTR/ATL::CStringT::Mid
+- ATLSTR/ATL::CStringT::OemToAnsi
+- ATLSTR/ATL::CStringT::Remove
+- ATLSTR/ATL::CStringT::Replace
+- ATLSTR/ATL::CStringT::ReverseFind
+- ATLSTR/ATL::CStringT::Right
+- ATLSTR/ATL::CStringT::SetSysString
+- ATLSTR/ATL::CStringT::SpanExcluding
+- ATLSTR/ATL::CStringT::SpanIncluding
+- ATLSTR/ATL::CStringT::Tokenize
+- ATLSTR/ATL::CStringT::Trim
+- ATLSTR/ATL::CStringT::TrimLeft
+- ATLSTR/ATL::CStringT::TrimRight
+- CSTRINGT/CStringT
+- CSTRINGT/CStringT::CStringT
+- CSTRINGT/CStringT::AllocSysString
+- CSTRINGT/CStringT::AnsiToOem
+- CSTRINGT/CStringT::AppendFormat
+- CSTRINGT/CStringT::Collate
+- CSTRINGT/CStringT::CollateNoCase
+- CSTRINGT/CStringT::Compare
+- CSTRINGT/CStringT::CompareNoCase
+- CSTRINGT/CStringT::Delete
+- CSTRINGT/CStringT::Find
+- CSTRINGT/CStringT::FindOneOf
+- CSTRINGT/CStringT::Format
+- CSTRINGT/CStringT::FormatMessage
+- CSTRINGT/CStringT::FormatMessageV
+- CSTRINGT/CStringT::FormatV
+- CSTRINGT/CStringT::GetEnvironmentVariable
+- CSTRINGT/CStringT::Insert
+- CSTRINGT/CStringT::Left
+- CSTRINGT/CStringT::LoadString
+- CSTRINGT/CStringT::MakeLower
+- CSTRINGT/CStringT::MakeReverse
+- CSTRINGT/CStringT::MakeUpper
+- CSTRINGT/CStringT::Mid
+- CSTRINGT/CStringT::OemToAnsi
+- CSTRINGT/CStringT::Remove
+- CSTRINGT/CStringT::Replace
+- CSTRINGT/CStringT::ReverseFind
+- CSTRINGT/CStringT::Right
+- CSTRINGT/CStringT::SetSysString
+- CSTRINGT/CStringT::SpanExcluding
+- CSTRINGT/CStringT::SpanIncluding
+- CSTRINGT/CStringT::Tokenize
+- CSTRINGT/CStringT::Trim
+- CSTRINGT/CStringT::TrimLeft
+- CSTRINGT/CStringT::TrimRight
 dev_langs: C++
 helpviewer_keywords:
 - strings [C++], in ATL
@@ -55,11 +91,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c76aaac9d4e8a567d1752f0a836ead5c5f59229
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 2d3b718249603c34d5a9a13eec966b586151f2e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 此類別代表`CStringT`物件。  
@@ -105,18 +142,18 @@ public CSimpleStringT<BaseType,
   
      類別不需要 CRT 支援並使用標準的 MFC 搜尋演算法的資源字串的搜尋。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStringT::CStringT](#cstringt)|建構`CStringT`物件以各種方式。|  
 |[CStringT:: ~ CStringT](#_dtorcstringt)|終結 `CStringT` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStringT::AllocSysString](#allocsysstring)|配置`BSTR`從`CStringT`資料。|  
 |[CStringT::AnsiToOem](#ansitooem)|可讓 OEM 字元集的 ANSI 字元集的就地轉換。|  
@@ -224,7 +261,7 @@ public CSimpleStringT<BaseType,
 ## <a name="cstringt-predefined-types"></a>CStringT 預先定義的類型  
  因為`CStringT`使用非範本引數定義字元類型 (任一[wchar_t](../../c-runtime-library/standard-types.md)或[char](../../c-runtime-library/standard-types.md)) 支援，方法參數的型別可能很複雜情況下。 若要簡化此問題，一組預先定義的型別定義，且使用整個`CStringT`類別。 下表列出各種類型：  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`XCHAR`|單一字元 (請`wchar_t`或`char`) 使用相同的字元類型，做為`CStringT`物件。|  
 |**YCHAR**|單一字元 (請`wchar_t`或`char`) 與相反的字元類型`CStringT`物件。|  
@@ -1509,7 +1546,7 @@ CStringT& TrimRight();
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)   
  [CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)

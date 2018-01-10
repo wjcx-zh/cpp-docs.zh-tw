@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 24c4cc90ed77a57ad053f5608ad5eaf2d1ed62f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fefaaaf6dd6e660c4cda53d28194d6052d1d8bf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 判斷指定值的 gamma 函式。  
@@ -78,7 +79,7 @@ long double tgammal(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `x`  
+ [輸入] `x`  
  要尋找其 gamma 的值。  
   
 ## <a name="return-value"></a>傳回值  
@@ -86,7 +87,7 @@ long double tgammal(
   
  如果 `x` 的量級對資料類型而言太大或太小，可能發生範圍錯誤。 如果 `x` <=0，可能發生網域錯誤或範圍錯誤。  
   
-|問題|返回|  
+|問題|Return|  
 |-----------|------------|  
 |x = ±0|±INFINITY|  
 |x = 負整數|NaN|  
@@ -94,11 +95,11 @@ long double tgammal(
 |x = +INFINITY|+INFINITY|  
 |x = NaN|NaN|  
 |網域錯誤|NaN|  
-|極錯誤|±HUGE_VAL、±HUGE_VALF 或 ±HUGE_VALL|  
-|溢位範圍錯誤|±HUGE_VAL、±HUGE_VALF 或 ±HUGE_VALL|  
+|極錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|  
+|溢位範圍錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|  
 |反向溢位範圍錯誤|正確的值 (四捨五入後)。|  
   
- 錯誤依 [_matherr](../../c-runtime-library/reference/matherr.md) 中的指定回報。  
+ 依 [_matherr](../../c-runtime-library/reference/matherr.md) 中的指定回報錯誤。  
   
 ## <a name="remarks"></a>備註  
  因為 C++ 允許多載，所以您可以呼叫採用並傳回浮點和長雙精度浮點數類型的 tgamma 多載。 在 C 程式中，tgamma 會一律採用並傳回雙精度浮點數。  
@@ -107,12 +108,12 @@ long double tgammal(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`tgamma`,                `tgammaf`,  `tgammal`|\<math.h>|\<cmath>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [lgamma、lgammaf、lgammal](../../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)

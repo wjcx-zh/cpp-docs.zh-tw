@@ -29,11 +29,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30c47c43c5929eb0c10c584e20e485b9bb724e94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc86603127404fe26d6e826d2903733136411c92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank、_ismbbblank_l
 判斷指定的多位元組字元是否為空白字元。  
@@ -61,17 +62,17 @@ int _ismbbblank_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `c` 代表空白 (0x20) 字元、水平索引標籤 (0x09) 字元或用來分隔一行文字中單字的地區設定特定字元，且其 `isspace` 為 true，則`_ismbbblank` 會傳回非零值；否則會傳回 0。 針對任何地區設定相關行為，`_ismbbblank` 會使用目前的地區設定。 `_ismbbblank_l` 完全相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 如果 `c` 代表空白 (0x20) 字元、水平索引標籤 (0x09) 字元或用來分隔一行文字中單字的地區設定特定字元，且其 `isspace` 為 true，則`_ismbbblank` 會傳回非零值；否則會傳回 0。 針對任何地區設定相關行為，`_ismbbblank` 會使用目前的地區設定。 `_ismbbblank_l` 完全相同，但是它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_ismbbblank`|\<mbctype.h>|  
 |`_ismbbblank_l`|\<mbctype.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
  [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

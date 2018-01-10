@@ -1,46 +1,45 @@
 ---
-title: "ML Nonfatal Error A2008 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2008"
+title: "ML 非嚴重錯誤 A2008 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2008
+dev_langs: C++
+helpviewer_keywords: A2008
 ms.assetid: ca24157f-c88a-4678-ae06-3bc3cd956001
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a268fd3f82b96698d8e200486c2091cabfad95ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2008
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**語法錯誤:**  
+# <a name="ml-nonfatal-error-a2008"></a>ML 非嚴重錯誤 A2008
+**語法錯誤：**  
   
- 在目前的位置的語彙基元引起語法錯誤。  
+ 在目前位置的語彙基元會導致語法錯誤。  
   
  可能發生下列其中一項：  
   
--   點的前置詞加入至或指示詞將略過。  
+-   點前置詞已加入或省略指示詞。  
   
--   保留的字 \(例如 **c** 或**大小**\) 用來做為識別項。  
+-   保留的字 (例如**C**或**大小**) 當做識別項。  
   
--   指示使用了無法使用目前的處理器或副處理器選取範圍。  
+-   使用指令無法進行目前的處理器或副處理器選項使用了。  
   
--   比較執行階段運算子 \(例如`==`\) 用於條件式的組件陳述式，而不是關係運算子 \(例如 [EQ](../../assembler/masm/operator-eq.md)\)。  
+-   比較執行階段運算子 (例如`==`) 而不是關聯式運算子的條件式組件陳述式中使用 (例如[EQ](../../assembler/masm/operator-eq.md))。  
   
--   指示詞指定太少的運算元。  
+-   指示詞有太少的運算元。  
   
 -   使用過時的指示詞。  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

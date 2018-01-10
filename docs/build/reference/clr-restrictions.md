@@ -1,107 +1,107 @@
 ---
-title: "/clr 限制 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 編譯器選項 [C++], 限制"
+title: "-clr 限制 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 27
+caps.latest.revision: "27"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /clr 限制
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-請注意下列使用 **\/clr** 的限制：  
+# <a name="clr-restrictions"></a>/clr 限制
+請注意下列限制使用**/clr**:  
   
--   在結構化例外狀況處理常式中，以 **\/clr** 編譯時，使用 `_alloca` 會有限制。  如需詳細資訊，請參閱 [\_alloca](../../c-runtime-library/reference/alloca.md)。  
+-   在結構化例外狀況處理常式中，有一些限制使用`_alloca`編譯時**/clr**。 如需詳細資訊，請參閱[_alloca](../../c-runtime-library/reference/alloca.md)。  
   
--   使用執行階段錯誤檢查，在配合 **\/clr** 使用時無效。  如需詳細資訊，請參閱[執行階段錯誤檢查](../Topic/How%20to:%20Use%20Native%20Run-Time%20Checks.md)。  
+-   不具有有效的執行階段錯誤檢查使用**/clr**。 如需詳細資訊，請參閱[如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。  
   
--   以 **\/clr** 編譯僅使用標準 C\+\+ 語法的程式時，若使用內嵌組譯碼則適用下列方針：  
+-   當**/clr**是用來編譯只會使用標準 c + + 語法的程式，下列指導方針適用於使用內嵌組譯碼：  
   
-    -   如果原生堆疊配置、目前函式以外的呼叫慣例，或其他有關電腦低階資訊這些知識是套用至 Managed 函式的堆疊框架 \(Stack Frame\)，則採用這些知識的內嵌組譯程式碼 \(Inline Assembly Code\) 將會失敗。  含有內嵌組譯程式碼的函式會以 Unmanaged 函式形式產生，就好像這些函式是放置在未使用 **\/clr** 編譯的其他模組中。  
+    -   內嵌組譯碼假設您的原生堆疊配置的知識，呼叫慣例外目前的函式或其他低階電腦的相關資訊可能會失敗如果知識套用至 managed 函式之堆疊框架。 包含內嵌組譯碼的函式會產生為 unmanaged 函式，如同它們被放在個別的模組，將不會編譯**/clr**。  
   
-    -   傳遞以複製建構之函式參數的函式中不支援內嵌組譯程式碼。  
+    -   不支援內嵌組譯程式碼將複製建構函式參數傳遞的函式中。  
   
--   不能從使用 **\/clr** 編譯的程式呼叫 [vprintf 函式](../../c-runtime-library/vprintf-functions.md)。  
+-   [Vprintf 函式](../../c-runtime-library/vprintf-functions.md)無法從編譯的程式呼叫**/clr**。  
   
--   在 \/clr 之下，[naked](../../cpp/naked-cpp.md) [\_\_declspec](../../cpp/declspec.md) 修飾詞 \(Modifier\) 會被忽略。  
+-   [Naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md)在 /clr 下忽略修飾詞。  
   
--   由 [\_set\_se\_translator](../../c-runtime-library/reference/set-se-translator.md) 設定的轉譯器函式只會影響 Unmanaged 程式碼中的快取。  如需詳細資訊，請參閱[Exception Handling](../../windows/exception-handling-cpp-component-extensions.md)。  
+-   翻譯工具函式來設定[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)會影響只攔截 unmanaged 程式碼中的。 請參閱[例外狀況處理](../../windows/exception-handling-cpp-component-extensions.md)如需詳細資訊。  
   
--   在 **\/clr** 之下不允許函式指標的比較。  
+-   在不允許函式指標的比較**/clr**。  
   
--   在 **\/clr** 之下不允許使用非完整原型的函式。  
+-   在不允許使用不完全原型的函式**/clr**。  
   
--   下列編譯器選項在 **\/clr** 下不支援：  
+-   不支援下列編譯器選項**/clr**:  
   
-    -   **\/EHsc** 和 **\/EHs** \(**\/clr** 隱含 **\/EHa** \(請參閱 [\/EH \(例外狀況處理模型\)](../../build/reference/eh-exception-handling-model.md)\)  
+    -   **/ /Ehsc**和**/EHs** (**/clr**意味著**/EHa** (請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md))  
   
-    -   **\/fp:strict** 和 **\/fp:except** \(請參閱 [\/fp \(指定浮點數行為\)](../../build/reference/fp-specify-floating-point-behavior.md)\)  
+    -   **/fp: strict**和**/fp： 除了**(請參閱[/fp （指定浮點行為）](../../build/reference/fp-specify-floating-point-behavior.md))  
   
-    -   [\/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
+    -   [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
-    -   [\/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
+    -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
-    -   [\/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
+    -   [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)  
   
-    -   [\/RTC](../../build/reference/rtc-run-time-error-checks.md)  
+    -   [/RTC](../../build/reference/rtc-run-time-error-checks.md)  
   
-    -   **\/ZI**  
+    -   **/ZI**  
   
--   不支援 `_STATIC_CPPLIB` 前置處理器定義 \(`/D_STATIC_CPPLIB`\) 和 **\/clr** 或 **\/clr:pure** 編譯器選項的組合。  這是因為此定義可能會導致您的應用程式與靜態多執行緒 Standard C\+\+ 程式庫連結，而這是不受支援的。  如需詳細資訊，請參閱[\/MD、\/MT、\/LD \(使用執行階段程式庫\)](../../build/reference/md-mt-ld-use-run-time-library.md)主題。  
+-   組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和**/clr**或**/clr: pure**編譯器選項不支援。 這是，因為定義可能會導致您的應用程式連結到靜態多執行緒 c + + 標準程式庫，不支援。 如需詳細資訊，請參閱[/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)主題。  
   
--   [\/J](../../build/reference/j-default-char-type-is-unsigned.md) 在 **\/clr:safe** 或 **\/clr:pure** 之下不支援。  
+-   [/J](../../build/reference/j-default-char-type-is-unsigned.md)不支援**/clr: safe**或**/clr: pure**。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
--   純模式編譯 \(**\/clr:pure**\) 不支援 ATL 和 MFC 程式庫。  如果您也使用 **\/MD** 或 **\/MDd** 進行編譯，可以使用 **\/clr:pure** 搭配 Standard C\+\+ 程式碼和 CRT。  
+-   ATL 和 MFC 程式庫不會受到純模式編譯 (**/clr: pure**)。 您可以使用**/clr: pure**與 c + + 標準程式庫和 CRT 如果也使用編譯**/MD**或**/MDd**。  
   
--   使用 **\/Zi** 配合 **\/clr** 時，會隱含對效能的影響。  如需詳細資訊，請參閱 [\/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。  
+-   當使用**/Zi**與**/clr**，效能的影響。 如需詳細資訊，請參閱[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)。  
   
--   傳遞萬用字元給 .NET Framework 輸出常式而未同時指定 [\/Zc:wchar\_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)，或未將該字元轉換為 `__wchar_t`，將會造成輸出顯示為 `unsigned short int`。  例如：  
+-   將寬字元傳遞至.NET Framework 未同時指定輸出常式[/zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)或不含轉換的字元`__wchar_t`會導致輸出會顯示為`unsigned short int`。 例如:   
   
     ```  
     Console::WriteLine(L' ')              // Will output 32.  
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   使用 **\/clr** 編譯時，會忽略 [\/GS](../../build/reference/gs-buffer-security-check.md)，除非函式是在 `#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md) 之下，或者函式必須編譯成原生 \(Native\) \(這項作業預設為關閉\)，在這種情況下，編譯器將會產生警告 C4793。  
+-   [/GS](../../build/reference/gs-buffer-security-check.md)編譯時，會忽略**/clr**，除非您的函式是在`#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md)或如果必須為原生編譯的函式，在此情況下，編譯器會產生警告 C4793，預設為關閉。  
   
--   如需 Managed 應用程式的函式簽章需求，請參閱 [\/ENTRY](../../build/reference/entry-entry-point-symbol.md)。  
+-   請參閱[/ENTRY](../../build/reference/entry-entry-point-symbol.md)的受管理的應用程式的函式簽章需求。  
   
--   使用 **\/openmp** 和 **\/clr** 編譯的應用程式僅能在單一 appdomain 處理中執行。如需詳細資訊，請參閱[\/openmp \(啟用 OpenMP 2.0 支援\)](../../build/reference/openmp-enable-openmp-2-0-support.md)。  
+-   使用應用程式編譯**/openmp**和**/clr**只能在單一 appdomain 程序中執行。  請參閱[/openmp （啟用 OpenMP 2.0 支援）](../../build/reference/openmp-enable-openmp-2-0-support.md)如需詳細資訊。  
   
--   採用引數的變數數字 \(varargs\) 之函式，將產生成原生函式。  變數引數位置內的任何 Managed 資料型別將封送至原生型別。  請注意，<xref:System.String?displayProperty=fullName> 型別實際上為寬字元字串，不過它們會封送至單位元組字元字串。  因此若 printf 規範為 %S \(wchar\_t\*\)，它就會改封送至 %s 字串。  
+-   接受可變數目的引數 (varargs) 數的函式將會以原生函式產生。 變數引數位置中的任何 managed 的資料類型會封送處理至原生類型。 請注意，<xref:System.String?displayProperty=fullName>類型實際上的寬字元字串，但它們會封送處理至單一位元組字元字串。 因此如果 printf 規範 %S （wchar_t *），它會封送處理為 %s 字串改為。  
   
--   使用 va\_arg macro 時，如果以 **\/clr:pure** 編譯，您可能會得到意外的結果。如需詳細資訊，請參閱[va\_arg、va\_copy、va\_end、va\_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。  
+-   時使用 va_arg 巨集，您可能會收到非預期的結果以編譯時**/clr: pure**。  如需詳細資訊，請參閱[va_arg、 va_copy、 va_end、 va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。  
   
--   如果您的應用程式將型別 [va\_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) 的引數傳遞至宣告採用 [引數變數數目](../../misc/variable-argument-lists.md)的函式，且您的應用程式是以 **\/clr:pure** 編譯的，CLR 會擲回<xref:System.NotSupportedException>。  如果改用 **\/clr** ，會將受影響的函式編譯為機器碼並正確執行。  如果使用**\/clr:safe**，會發出錯誤診斷。  
+-   如果您的應用程式的型別引數傳遞[va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)函式宣告為接受可變數目的引數，數，且您的應用程式時加以編譯**/clr: pure**，CLR 就會擲回<xref:System.NotSupportedException>。 如果**/clr**用相反地，受影響的函式會編譯成原生程式碼，並正確執行。 如果**/clr: safe**是使用，會發出診斷錯誤。  
   
--   您不可以從 Managed 程式碼呼叫任何進行堆疊查核行程以取得參數資訊 \(函式引數\) 的函式；P\/Invoke 層會導致該項資訊進一步向下堆疊。例如，不要使用 **\/clr** 編譯 proxy\/stub。  
+-   您不應該呼叫，從 managed 程式碼，以便取得參數資訊 （函式引數），堆疊查核行程的任何函式P/Invoke 層可讓該堆疊的深處進一步的資訊。  例如，不會編譯 proxy/stub 與**/clr**。  
   
--   函式將盡可能地編譯成 Managed 程式碼，但並不是所有 C\+\+ 建構都可以轉譯成 Managed 程式碼。這是逐一根據各個函式加以判定。  如果函式有任何部分無法轉換成 Managed 程式碼，則整個函式都會改為轉換成機器碼。  下列各種情形都會阻止編譯器產生 Managed 程式碼。  
+-   函式將會編譯為 managed 程式碼，可能的話，但並非所有的 c + + 建構可以轉譯成 managed 程式碼。  這項判斷是對函式的函式為基礎。 如果函式的任何部分無法轉換成 managed 程式碼中，整個函式將會轉換至原生程式碼。 下列情況下防止編譯器產生 managed 程式碼。  
   
-    -   編譯器產生的 Thunk 或 helper 函式。  原生 Thunk 是為任何透過函式指標呼叫之函式而產生的，包括虛擬函式呼叫在內。  
+    -   編譯器產生的 thunk 或 helper 函式。 所有透過函式指標，包括虛擬函式呼叫的函式呼叫會產生原生的 thunk。  
   
-    -   呼叫 `setjmp` 或 `longjmp` 的函式。  
+    -   函式呼叫`setjmp`或`longjmp`。  
   
-    -   使用特定內建常式，以直接管理電腦資源的函式。  例如，使用 `__enable` 和 `__disable`、`_ReturnAddress` 和 `_AddressOfReturnAddress`，或者多個內建全部都會產生機器碼。  
+    -   特定內建常式使用直接操作 機器資源的函式。 例如，使用`__enable`和`__disable`，`_ReturnAddress`和`_AddressOfReturnAddress`，或多媒體內建函式會在原生程式碼中的所有結果。  
   
-    -   跟隨在 `#pragma unmanaged` 指示詞之後的函式 \(請注意，也支援相反的情況，`#pragma managed`\)。  
+    -   函式後面`#pragma unmanaged`指示詞。 (請注意，反向`#pragma managed`，也支援。)  
   
-    -   包含對齊型別參考的函式，也就是，使用 `__declspec(align(...))` 加以宣告的型別。  
+    -   包含參考的函式對齊類型，也就是使用宣告型別`__declspec(align(...))`。  
   
--   您不能使用 [編譯器 COM 支援](../../cpp/compiler-com-support.md) 類別配合 **\/clr:pure** 或 **\/clr:safe**。  
+-   您無法使用[編譯器 COM 支援](../../cpp/compiler-com-support.md)類別與**/clr: pure**或**/clr: safe**。  
   
-## 請參閱  
- [\/clr \(Common Language Runtime 編譯\)](../../build/reference/clr-common-language-runtime-compilation.md)
+## <a name="see-also"></a>請參閱  
+ [/clr （common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)

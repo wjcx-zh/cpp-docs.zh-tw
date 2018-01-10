@@ -1,44 +1,45 @@
 ---
-title: "Elapsed Time: General-Purpose Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "adding dates"
-  - "calculating dates and times"
-  - "計算, 日期和時間"
-  - "日期, calculating intervals"
-  - "已耗用時間"
-  - "已耗用時間, 計算"
-  - "intervals, 日期和時間"
-  - "時間, elapsed"
+title: "經過時間： 一般用途類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- adding dates
+- calculating dates and times
+- dates, calculating intervals
+- elapsed time, calculating
+- elapsed time
+- time, elapsed
+- intervals, date and time
+- calculations, date and time
 ms.assetid: e5c5d3d2-ce1d-409e-875c-98848434e716
-caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 51eea60669fb7ad35525d65013ffc8420649349b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Elapsed Time: General-Purpose Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="elapsed-time-general-purpose-classes"></a>經過時間： 一般用途類別
+下列程序顯示如何計算兩個之間的差異`CTime`物件和 get`CTimeSpan`結果。  
+  
+#### <a name="to-calculate-elapsed-time"></a>若要計算經過的時間  
+  
+1.  使用`CTime`和`CTimeSpan`物件來計算所經歷的時間，如下所示：  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/cpp/elapsed-time-general-purpose-classes_1.cpp)]  
+  
+     一旦您計算`elapsedTime`，您可以使用的成員函式`CTimeSpan`擷取耗用時間值的元件。  
+  
+## <a name="see-also"></a>請參閱  
+ [日期和時間：一般用途類別](../atl-mfc-shared/date-and-time-general-purpose-classes.md)
 
-下列程序顯示如何計算兩個 `CTime` 物件之間的差異 `CTimeSpan` 並取得結果。  
-  
-#### 計算已耗用時間  
-  
-1.  使用 `CTime` 和 `CTimeSpan` 物件計算已耗用時間，如下所示:  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#174](../atl-mfc-shared/codesnippet/CPP/elapsed-time-general-purpose-classes_1.cpp)]  
-  
-     一旦計算 `elapsedTime`，您可以使用 `CTimeSpan` 的成員函式擷取共用的時間值的元件。  
-  
-## 請參閱  
- [Date and Time: General\-Purpose Classes](../atl-mfc-shared/date-and-time-general-purpose-classes.md)

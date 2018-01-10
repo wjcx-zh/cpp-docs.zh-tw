@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 417dcf3ff0d578c4febcefb5caa6989ed98bb209
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 792c5ff95858936d38d9a87350dd3ca405c5ec66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenum-class"></a>CComEnum 類別
 這個類別會定義 COM 列舉值物件的陣列為基礎。  
@@ -93,7 +94,7 @@ class ATL_NO_VTABLE CComEnum : public CComEnumImpl<Base, piid,
   
  此程式碼建立`typedef`如`CComEnum`可公開的向量**VARIANT**透過 s **IEnumVariant**介面。 **CVariantArrayCollection**類別只會指定**CreateEnumerator**才能使用這個型別和傳遞必要的引數的列舉值物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)   
  [CComEnumImpl 類別](../../atl/reference/ccomenumimpl-class.md)   

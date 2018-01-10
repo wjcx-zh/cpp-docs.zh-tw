@@ -1,4 +1,4 @@
-# <a name="classes-shared-by-mfc-and-atlclasses-shared-by-mfc-and-atlmd"></a>[MFC 和 ATL 所共用的類別](classes-shared-by-mfc-and-atl.md)
+# <a name="classes-shared-by-mfc-and-atlclasses-shared-by-mfc-and-atlmd"></a>[MFC 和 ATL 共用的類別](classes-shared-by-mfc-and-atl.md)
 ## <a name="cfiletime-classcfiletime-classmd"></a>[CFileTime 類別](cfiletime-class.md)
 ## <a name="cfiletimespan-classcfiletimespan-classmd"></a>[CFileTimeSpan 類別](cfiletimespan-class.md)
 ## <a name="cfixedstringt-classcfixedstringt-classmd"></a>[CFixedStringT 類別](cfixedstringt-class.md)

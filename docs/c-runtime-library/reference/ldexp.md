@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ldexp
+apiname: ldexp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - ldexp
 - _ldexpl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - calculating real numbers
 - computing real numbers
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 567098b286ba81f2bdd091706518f812f9d2e128
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2a5e38d9a8df63fd4c2880fda7becec545c9584a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ldexp"></a>ldexp
 將浮點數與 2 的整數冪相乘。  
@@ -106,11 +89,11 @@ long double ldexpl(
   
 ## <a name="requirements"></a>需求  
   
-|常式|C 標頭|C++ 標頭|  
+|常式傳回的值|C 標頭|C++ 標頭|  
 |-------------|--------------|------------------|  
 |`ldexp`, `ldexpf`, `ldexpl`|\<math.h>|\<cmath>|  
   
- 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -136,7 +119,7 @@ int main( void )
 4.0 times two to the power of 3 is 32.0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [modf、modff、modfl](../../c-runtime-library/reference/modf-modff-modfl.md)

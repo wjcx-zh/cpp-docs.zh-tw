@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd8bcd1cf83c134d4a3709329093ba0eeececde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69f085df8b5dadbd0ba9d20596d37cb6313bb3f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-utilities-reference"></a>ATL 公用程式參考
 ATL 提供程式碼操作的路徑和 Url 的形式[CPathT](../atl/reference/cpatht-class.md)和[CUrl](../atl/reference/curl-class.md)。 執行緒集區[CThreadPool](../atl/reference/cthreadpool-class.md)，可用於您的應用程式。 Atlpath.h 和 atlutil.h 中可以找到此程式碼。  
@@ -100,6 +101,6 @@ ATL 提供程式碼操作的路徑和 Url 的形式[CPathT](../atl/reference/cpa
 |[ATLPath::UnquoteSpaces](../atl/reference/atl-path-functions.md#unquotespaces)|此函式是多載包裝函式[PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763)。 |  
   
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../atl/atl-com-desktop-components.md)

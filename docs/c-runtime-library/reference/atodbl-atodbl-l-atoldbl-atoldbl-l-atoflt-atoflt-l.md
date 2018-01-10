@@ -1,75 +1,76 @@
 ---
 title: "_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "_atodbl"
-  - "_atoflt"
-  - "_atoflt_l"
-  - "_atodbl_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_atoflt"
-  - "_atoflt_l"
-  - "atodbl_l"
-  - "atoflt_l"
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "atodbl"
-  - "_atodbl_l"
-  - "atoldbl"
-  - "atoflt"
-  - "atoldbl_l"
-  - "_atodbl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atodbl 函式"
-  - "_atoldbl_l 函式"
-  - "atoflt 函式"
-  - "atoflt_l 函式"
-  - "atoldbl 函式"
-  - "_atoldbl 函式"
-  - "atodbl_l 函式"
-  - "_atoflt_l 函式"
-  - "atoldbl_l 函式"
-  - "atodbl 函式"
-  - "字串轉換，到浮點值"
-  - "_atoflt 函式"
-  - "_atodbl_l 函式"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _atoldbl
+- _atoldbl_l
+- _atodbl
+- _atoflt
+- _atoflt_l
+- _atodbl_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _atoflt
+- _atoflt_l
+- atodbl_l
+- atoflt_l
+- _atoldbl
+- _atoldbl_l
+- atodbl
+- _atodbl_l
+- atoldbl
+- atoflt
+- atoldbl_l
+- _atodbl
+dev_langs: C++
+helpviewer_keywords:
+- _atodbl function
+- _atoldbl_l function
+- atoflt function
+- atoflt_l function
+- atoldbl function
+- _atoldbl function
+- atodbl_l function
+- _atoflt_l function
+- atoldbl_l function
+- atodbl function
+- string conversion, to floating point values
+- _atoflt function
+- _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ea51455d2b02c651aeb8e7bb599cbc3133585c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-將字串轉換為雙精度浮點數 \(`_atodbl`\)、長雙精度浮點數 \(`_atoldbl`\)，或浮點數 \(`_atoflt`\)。  
+# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
+將字串轉換成雙精度浮點數 (`_atodbl`)、長雙精度浮點數 (`_atoldbl`) 或浮點數 (`_atoflt`)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 int _atodbl(  
@@ -101,33 +102,33 @@ int _atoflt_l(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `value`  
- 透過由字串轉換成浮點值而產生的雙精度、長雙精度或浮點數值。  這些值封裝在一個結構中。  
+ 將字串轉換成浮點值所產生的雙精度浮點數、長雙精度浮點數或浮點值。 這些值包裝在結構中。  
   
  `str`  
- 要剖析轉換為浮點值的字串。  
+ 要剖析以轉換成浮點值的字串。  
   
  `locale`  
- 使用的地區設定。  
+ 要使用的地區設定。  
   
-## 傳回值  
- 如果成功則傳回 0。  可能的錯誤碼是 `_UNDERFLOW` 或 `_OVERFLOW`，定義於標頭檔 Math.h 中。  
+## <a name="return-value"></a>傳回值  
+ 如果成功，會傳回 0。 可能的錯誤碼是標頭檔 Math.h 中所定義的 `_UNDERFLOW` 或 `_OVERFLOW`。  
   
-## 備註  
- 這些函式將字串轉換成浮點值。  這些函式和和函式的 `atof` 系列的差異是這些函式不產生浮點程式碼，且不會產生硬體例外狀況。  相反地，錯誤狀況報告為錯誤碼。  
+## <a name="remarks"></a>備註  
+ 這些函式會將字串轉換成浮點值。 這些函式與 `atof` 系列函式之間的差異在於這些函式不會產生浮點碼，而且不會導致硬體例外狀況。 相反地，錯誤狀況會回報為錯誤碼。  
   
- 如果字串沒有有效的解譯如浮點值， `value` 會設定為零，且傳回值為零。  
+ 如果字串無法有效解譯為浮點值，`value` 會設為零，而傳回值為零。  
   
- 有 `_l` 後置字元的函式版本除了使用傳入的地區設定參數 \(而不是目前的地區設定\) 外，其餘與沒有後置字元的函式版本相同。  
+ 這些具有 `_l` 尾碼的函式版本與沒有尾碼的版本相同，不同之處在於使用傳入的地區設定參數，而不是使用目前的執行緒地區設定。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |常式|必要的標頭|  
-|--------|-----------|  
-|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h\>|  
+|--------------|---------------------|  
+|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h>|  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // crt_atodbl.c  
@@ -169,16 +170,22 @@ int main()
 }  
 ```  
   
-  **Double value: 3.141593**  
-**Return value: 0**  
-**Float value: 3.141593**  
-**Return value: 0**  
-**Float value: 0.000000**  
-**Return value: 0**  
-**Float value: 1.\#INF00**  
-**Return value: 3**   
-## 請參閱  
+```Output  
+Double value: 3.141593  
+Return value: 0  
+  
+Float value: 3.141593  
+Return value: 0  
+  
+Float value: 0.000000  
+Return value: 0  
+  
+Float value: 1.#INF00  
+Return value: 3  
+```  
+  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [地區設定](../../c-runtime-library/locale.md)   
- [atof、\_atof\_l、\_wtof、\_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

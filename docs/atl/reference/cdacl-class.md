@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CDacl::GetAceCount
 - ATLSECURITY/ATL::CDacl::RemoveAce
 - ATLSECURITY/ATL::CDacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDacl class
+dev_langs: C++
+helpviewer_keywords: CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 18da3b079cba8bbccba1a5d9655107620fc41eb8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdacl-class"></a>CDacl 類別
 這個類別是 DACL （任意存取控制清單） 結構的包裝函式。  
@@ -59,7 +42,7 @@ ms.lasthandoff: 03/31/2017
 class CDacl : public CAcl
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -91,7 +74,7 @@ class CDacl : public CAcl
   
  使用類別方法，提供建立、 新增、 移除和刪除從 Ace`CDacl`物件。 另請參閱[AtlGetDacl](security-global-functions.md#atlgetdacl)和[AtlSetDacl](security-global-functions.md#atlsetdacl)。  
   
- 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -99,7 +82,7 @@ class CDacl : public CAcl
  `CDacl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h  
+ **標頭：** atlsecurity.h  
   
 ##  <a name="addallowedace"></a>CDacl::AddAllowedAce  
  將允許的 ACE （存取控制的項目） 加入至`CDacl`物件。  
@@ -265,11 +248,10 @@ void RemoveAllAces() throw();
 ### <a name="remarks"></a>備註  
  移除每個**ACE** （存取控制的項目） （如果有的話） 結構中`CDacl`物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
  [CAcl 類別](../../atl/reference/cacl-class.md)   
  [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)
-

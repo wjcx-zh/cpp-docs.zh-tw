@@ -1,68 +1,67 @@
 ---
-title: "/c (編譯而不連結) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/c"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/c 編譯器選項 [C++]"
-  - "c 編譯器選項 [C++]"
-  - "-c 編譯器選項 [C++]"
-  - "cl.exe 編譯器, 編譯而不連結"
-  - "隱藏連結"
+title: "-c （編譯而不連結） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /c
+dev_langs: C++
+helpviewer_keywords:
+- suppress link
+- cl.exe compiler, compiling without linking
+- -c compiler option [C++]
+- c compiler option [C++]
+- /c compiler option [C++]
 ms.assetid: 8017fc3d-e5dd-4668-a1f7-3120daa95d20
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 112e063af9c56ead8ae7e8f59fe88853ff55f7b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /c (編譯而不連結)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-防止自動呼叫 LINK。  
+# <a name="c-compile-without-linking"></a>/c (編譯而不連結)
+可防止自動呼叫連結。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /c  
 ```  
   
-## 備註  
- 使用 **\/c** 編譯只會建立 .obj 檔案。  您可以用適當的檔案和選項明確地呼叫 LINK 來執行組建的連結階段。  
+## <a name="remarks"></a>備註  
+ 編譯**/c**建立僅限.obj 檔案。 您必須明確地呼叫連結，適當的檔案與選項來執行組建的連結階段。  
   
- 在開發環境中建立的任何內部專案都是預設為使用 **\/c** 選項。  
+ 在開發環境中建立的任何內部專案會使用**/c**預設選項。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
--   這個選項在開發環境內無法使用。  
+-   無法在開發環境中使用此選項。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
--   若要用程式設計的方式設定這個編譯器選項，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>。  
+-   若要以程式設計方式設定這個編譯器選項，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileOnly%2A>。  
   
-## 範例  
- 以下命令列會建立目的檔 FIRST.obj 和 SECOND.obj，  THIRD.obj 則會被忽略。  
+## <a name="example"></a>範例  
+ 下列命令列建立 FIRST.obj 和 SECOND.obj 物件檔案。THIRD.obj 會被忽略。  
   
 ```  
 CL /c FIRST.C SECOND.C THIRD.OBJ  
 ```  
   
- 若要建立可執行檔，您必須叫用 LINK：  
+ 若要建立可執行檔，您必須叫用連結：  
   
 ```  
 LINK firsti.obj second.obj third.obj /OUT:filename.exe  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

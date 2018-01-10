@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09ba2ca14a935c9d412fece89099f508dbd32ae3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f316c5fc9209f968219d770a15e6576880b69954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcstrictstrings-disable-string-literal-type-conversion"></a>/Zc:strictStrings (停用字串常值型別轉換)
 指定時，對於使用字串常值初始的指標，編譯器需要嚴格的 `const` 限定一致性。  
@@ -80,5 +81,5 @@ int main() {
   
 4.  修改**其他選項**屬性，以包括`/Zc:strictStrings`，然後選擇 **確定**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/Zc （一致性）](../../build/reference/zc-conformance.md)

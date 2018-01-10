@@ -17,16 +17,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e547f09e303386d3bb28ebd9dab94854ee67599e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373e39461aed7c3aadb7107e61a8aecab1177ee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-project-wizard"></a>ATL 專案精靈
 Active Template Library (ATL) 是一組樣板架構 c + + 類別，可簡化撰寫小又快速的 COM 物件。 ATL 專案精靈建立的專案具有以包含 COM 物件之結構。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  這個精靈頁面說明目前[ATL 專案的應用程式設定](../../atl/reference/application-settings-atl-project-wizard.md)您所建立。 根據預設，專案會具有下列設定：  
   
 -   動態連結程式庫指定您的伺服器是 DLL，因此同處理序伺服器。  
@@ -53,8 +54,8 @@ Active Template Library (ATL) 是一組樣板架構 c + + 類別，可簡化撰�
   
  您可以指定專案屬性 (例如，[是否要以靜態方式連結到該 CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) 中[專案屬性](../../ide/general-property-page-project.md) 頁面上，而且您可以設定[組建組態](/visualstudio/ide/understanding-build-configurations)的ATL 專案。 請參閱[使用專案來建置應用程式](http://msdn.microsoft.com/en-us/3339fa90-bac2-4b95-8361-662a2e0e7dfe)如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
- [建立和管理 Visual c + + 專案](../../ide/creating-and-managing-visual-cpp-projects.md)   
+## <a name="see-also"></a>請參閱  
+ [建立和管理 Visual C++ 專案](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   

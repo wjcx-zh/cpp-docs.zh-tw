@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36edbf47bacd20c06c726451d060dec61bce4e8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef81f58fc2180fcc29e943d0a352d1e6301ca7a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum、_ismbbkalnum_l
 判斷特定多位元組字元是否為非 ASCII 文字符號。  
@@ -68,17 +69,17 @@ int _ismbbkalnum_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果整數 `c` 是標點符號以外的非 ASCII 文字符號，則 `_ismbbkalnum` 會傳回非零值，否則會傳回 0。 針對地區設定相關的字元資訊，`_ismbbkalnum` 會使用目前的地區設定。 `_ismbbkalnum_l` 與 `_ismbbkalnum` 相同，差別在於它接受地區設定做為參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 如果整數 `c` 是標點符號以外的非 ASCII 文字符號，則 `_ismbbkalnum` 會傳回非零值，否則會傳回 0。 針對地區設定相關的字元資訊，`_ismbbkalnum` 會使用目前的地區設定。 `_ismbbkalnum_l` 與 `_ismbbkalnum` 相同，差別在於它接受地區設定做為參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_ismbbkalnum`|\<mbctype.h>|  
 |`_ismbbkalnum_l`|\<mbctype.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
  [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

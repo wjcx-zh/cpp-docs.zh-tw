@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43e34f3c4aba212f373a5c44535533f38f1bf216
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f808faff82e9fcd29040f8d15e6cbaa9e037733
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="long-filenames-in-a-makefile"></a>Makefile 中的長檔名
 將長檔名以雙引號括住，，如下所示：  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/24/2017
 all : "VeryLongFileName.exe"  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Makefile 內容](../build/contents-of-a-makefile.md)

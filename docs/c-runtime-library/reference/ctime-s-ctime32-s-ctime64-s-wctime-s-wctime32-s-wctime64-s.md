@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -38,8 +37,7 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -60,30 +58,16 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 371ca59a6002cd5936771f1ac9cea7c39b192cee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4a2029db9b38ca1edad0e20764278ec77d205c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 將時間值轉換為字串並針對當地時區設定調整。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [ctime、_ctime64、_wctime、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) 版本。  
@@ -145,7 +129,7 @@ errno_t _wctime64_s(
   
 #### <a name="parameters"></a>參數  
  [輸出] `buffer`  
- 必須足以容納 26 個字元。 字元字串結果時，指標或`NULL`如果︰  
+ 必須足以容納 26 個字元。 字元字串結果時，指標或`NULL`如果：  
   
 -   `time` 代表 1970 年 1 月 1 日午夜 (UTC) 以前的日期。  
   
@@ -155,10 +139,10 @@ errno_t _wctime64_s(
   
 -   如果您使用 `_ctime_s` 或 `_wctime_s`，這些函式是先前函式的包裝函式。 請參閱＜備註＞一節。  
   
- [in] `numberOfElements`  
+ [輸入] `numberOfElements`  
  緩衝區的大小。  
   
- [in] `time`  
+ [輸入] `time`  
  預存時間的指標。  
   
 ## <a name="return-value"></a>傳回值  
@@ -166,11 +150,11 @@ errno_t _wctime64_s(
   
 ## <a name="error-conditions"></a>錯誤狀況  
   
-|`buffer`|`numberOfElements`|`time`|返回|`buffer` 中的值|  
+|`buffer`|`numberOfElements`|`time`|Return|`buffer` 中的值|  
 |--------------|------------------------|------------|------------|-----------------------|  
-|`NULL`|任何|任何|`EINVAL`|未修改|  
-|不是 `NULL` (指向有效的記憶體)|0|任何|`EINVAL`|未修改|  
-|不是 `NULL`|0< 大小 < 26|任何|`EINVAL`|空字串|  
+|`NULL`|any|any|`EINVAL`|未修改|  
+|不是 `NULL` (指向有效的記憶體)|0|any|`EINVAL`|未修改|  
+|非 `NULL`|0< 大小 < 26|any|`EINVAL`|空字串|  
 |不是 `NULL`|>= 26|NULL|`EINVAL`|空字串|  
 |不是 `NULL`|>= 26|< 0|`EINVAL`|空字串|  
   
@@ -189,7 +173,7 @@ Wed Jan 02 02:03:55 1980\n\0
   
  `ctime_s` 是評估為 `_ctime64_s` 的內嵌函式，而 `time_t` 相當於 `__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元 `time_t`，您可以定義 `_USE_32BIT_TIME_T`。 如此一來，將導致 `ctime_s` 評估 `_ctime32_s`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。  
   
- C++ 中，使用這些函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -201,12 +185,12 @@ Wed Jan 02 02:03:55 1980\n\0
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`ctime_s`, `_ctime32_s`, `_ctime64_s`|\<time.h>|  
 |`_wctime_s`, `_wctime32_s`, `_wctime64_s`|\<time.h> 或 \<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -248,7 +232,7 @@ int main( void )
 The time is Fri Apr 25 13:03:39 2003  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   

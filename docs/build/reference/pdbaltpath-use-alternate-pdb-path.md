@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a35e83f28a78acf199e74118cc1fef359666cf1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9053bc206a465eb32d8007fb8d58d13d45eb4a0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (使用替代 PDB 路徑)
 ```  
@@ -42,6 +43,6 @@ ms.lasthandoff: 10/24/2017
   
  值*pdb_file_name*可以是任意字串、 環境變數，或**_PDB %**。 連結器會展開環境變數，如**%systemroot%**，其值。 連結器會定義環境變數**_PDB %**和**_EXT %**。 **_PDB %**會展開至實際.pdb 檔案不含任何路徑資訊的檔案名稱和**_EXT %**是產生可執行檔的副檔名。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)   
  [/PDBPATH](../../build/reference/pdbpath.md)

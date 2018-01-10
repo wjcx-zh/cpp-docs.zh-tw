@@ -4,45 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- RegistryDataExchange function, global functions
+f1_keywords:
+- atlbase/ATL::AtlGetPerUserRegistration
+- afxpriv/ATL::AfxRegCreateKey
+- afxpriv/ATL::AfxRegDeleteKey
+- atlbase/ATL::AtlRegisterTypeLib
+- afxpriv/ATL::AfxRegOpenKey
+- afxpriv/ATL::AfxRegOpenKeyEx
+- afxdisp/ATL::AfxUnregisterPreviewHandler
+- atlbase/ATL::AtlSetPerUserRegistration
+- atlbase/ATL::AtlUnRegisterTypeLib
+- atlbase/ATL::AtlLoadTypeLib
+- atlbase/ATL::AtlUpdateRegistryFromResourceD
+- atlbase/ATL::RegistryDataExchange
+dev_langs: C++
+helpviewer_keywords: RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 9f05db468d5d7fffce149d7a92ba29615c3ae7c1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: dbb919cb2fe4d91f5665fbea3dcfd2140d178341
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-and-typelib-global-functions"></a>登錄和 TypeLib 全域函式
 這些函式提供載入及註冊類型程式庫支援。  
   
 > [!IMPORTANT]
->  下表所列出的函數不能在執行中的應用程式[!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。  
+>  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。  
   
 |||  
 |-|-|  
@@ -66,7 +62,7 @@ ms.lasthandoff: 03/31/2017
 |[AtlSetPerUserRegistration](#atlsetperuserregistration)|設定應用程式將登錄存取重新導向是否**HKEY_CURRENT_USER** ( **HKCU**) 節點。|  
 
 ### <a name="requirements"></a>需求  
- **標頭︰** atlbase.h
+ **標頭：** atlbase.h
 
 ## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
 使用此函數來判斷應用程式是否將登錄存取重新導向**HKEY_CURRENT_USER** (**HKCU**) 節點。  
@@ -90,7 +86,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
  重新導向不是全域的。 僅適用的 MFC 和 ATL 架構會受到登錄重新導向。  
   
 ### <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
 
  ## <a name="afxregcreatekey"></a>AfxRegCreateKey
  建立指定的登錄機碼。  
@@ -188,7 +184,7 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 ### <a name="remarks"></a>備註  
  這個 helper 函式使用[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)和[CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib)。  
 ### <a name="requirements"></a>需求  
- **標頭︰** atlbase.h
+ **標頭：** atlbase.h
 
  ## <a name="afxregopenkey"></a>AfxRegOpenKey
  開啟指定的登錄機碼。  
@@ -278,7 +274,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** (**HKCR**)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -289,7 +285,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
   
  重新導向不是全域的。 僅適用的 MFC 和 ATL 架構會受到登錄重新導向。  
 ### <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
 
 ##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib  
  呼叫此函式可解除類型程式庫的註冊。  
@@ -314,7 +310,7 @@ ATLAPI AtlUnRegisterTypeLib(
 ### <a name="remarks"></a>備註  
  這個 helper 函式使用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)和[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)。  
 ### <a name="requirements"></a>需求  
- **標頭︰** atlbase.h
+ **標頭：** atlbase.h
 
 ##  <a name="atlloadtypelib"></a>AtlLoadTypeLib  
  呼叫此函式可載入類型程式庫。  
@@ -383,7 +379,7 @@ HRESULT RegistryDataExchange(
 ### <a name="remarks"></a>備註  
  巨集[BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map)和[END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map)呼叫的函式展開`RegistryDataExchange`。  
   
- 可能的列舉值，指出應執行作業的函式是下表所示︰  
+ 可能的列舉值，指出應執行作業的函式是下表所示：  
   
 |列舉值|運算|  
 |----------------|---------------|  
@@ -392,12 +388,10 @@ HRESULT RegistryDataExchange(
 |eDeleteFromReg|從登錄刪除機碼。|  
   
 ### <a name="requirements"></a>需求  
- **標頭︰** atlbase.h
+ **標頭：** atlbase.h
 
-## <a name="see-also"></a>另請參閱  
- [函式](atl-functions.md)
- [登錄資料交換巨集](registry-data-exchange-macros.md)
-
+## <a name="see-also"></a>請參閱  
+ [函式](atl-functions.md)[登錄資料交換巨集](registry-data-exchange-macros.md)
 
 
 

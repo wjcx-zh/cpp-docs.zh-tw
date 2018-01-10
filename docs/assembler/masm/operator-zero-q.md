@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c882fd2f6dbc94c6cd379ae716314d5af32e6970
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55b61084b5374838a7e75da8623a859e393aa798
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-zero"></a>運算子 ZERO?
 零的旗標的狀態。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，且在執行階段，不是在組件時進行評估。  
@@ -36,5 +37,5 @@ ZERO?
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算子參考](../../assembler/masm/operators-reference.md)

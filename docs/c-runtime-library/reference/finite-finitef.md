@@ -40,11 +40,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb08c6a525222e8c1bb886f87aa55b2996cd3846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b39fbd53baaf861ae7330e03a1b10d71362035ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="finite-finitef"></a>_finite、_finitef
 判斷指定的浮點數值是否有限。  
@@ -69,18 +70,18 @@ int _finitef(
  同時`_finite`和`_finitef`傳回非零值，如果引數*x*為有限; 也就是說，如果-INF < `x` < + INF。 如果引數為無限或 NAN，它會傳回 0。  
   
 ## <a name="remarks"></a>備註  
- `_finite` 和 `_finitef` 函式為 Microsoft 特有。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。  
+ `_finite` 和 `_finitef` 函式是 Microsoft 特有的。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。  
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭 (C)|必要的標頭 (C++)|  
+|功能|必要的標頭 (C)|必要的標頭 (C++)|  
 |--------------|---------------------------|-------------------------------|  
 |`_finite`|\<float.h> 或 \<math.h>|\<float.h>、\<math.h>、\<cfloat> 或 \<cmath>|  
 |`_finitef`|\<math.h>|\<math.h> 或 \<cmath>|  
   
  如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [isnan、_isnan、_isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)   
  [_fpclass、_fpclassf](../../c-runtime-library/reference/fpclass-fpclassf.md)

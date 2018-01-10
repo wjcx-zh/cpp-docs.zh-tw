@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d2eadf67de4a9eb92ee1edb734abc54d7ee2dbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 394e459a46003e3f1baccff7dd4c76f40b73e354
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstring-semantics"></a>CString 語意
 即使[CString](../atl-mfc-shared/reference/cstringt-class.md)物件所能成長的動態物件，它們做為內建基本類型和簡單的類別。 每個`CString`物件都代表唯一的值。 `CString`物件應該想像成實際的字串，而不是字串的指標。  
@@ -32,6 +33,6 @@ ms.lasthandoff: 10/24/2017
   
  此範例中的，請注意，這兩個`CString`物件被視為 「 等於 」，因為它們代表相同的字元字串。 `CString`類別會多載等號比較運算子 (`==`) 比較兩個`CString`物件而不是其身分識別 （位址） 為基礎的值 （內容）。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 

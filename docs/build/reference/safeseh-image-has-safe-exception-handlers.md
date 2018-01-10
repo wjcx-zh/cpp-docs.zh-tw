@@ -1,50 +1,50 @@
 ---
-title: "/SAFESEH (影像擁有安全例外狀況處理常式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/SAFESEH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SAFESEH 連結器選項"
-  - "-SAFESEH 連結器選項"
-  - "SAFESEH 連結器選項"
+title: "-/SAFESEH （影像擁有安全例外狀況處理常式） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /SAFESEH
+dev_langs: C++
+helpviewer_keywords:
+- /SAFESEH linker option
+- -SAFESEH linker option
+- SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1c57a882e3a421d03b2edf97c9fb4bf2f352e5d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /SAFESEH (影像擁有安全例外狀況處理常式)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (影像擁有安全例外狀況處理常式)
 ```  
 /SAFESEH[:NO]  
 ```  
   
- 指定 **\/SAFESEH** 時，若連結器也可產生影像安全例外狀況處理常式的表格，將只會產生一個影像。  這個表格會告訴作業系統，哪個例外狀況處理常式對映像有效。  
+ 當**/SAFESEH**指定，則連結器只會產生一個映像，是否它也可以產生映像的安全例外狀況處理常式的表格。 此資料表會指定哪些例外狀況處理常式都適用於映像的作業系統。  
   
- **\/SAFESEH** 只有在連結 x86 目標時才有效。  **\/SAFESEH** 在已經註明有例外狀況處理常式的平台上不支援 。  例如，在 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 和 ARM 上，所有例外狀況處理常式都已在 PDATA 中註明。  ML64.exe 有支援可加入發出 SEH 資訊 \(XDATA 和 PDATA\) 至影像的附註，可以讓您一直回溯到 ml64 函式。  如需詳細資訊，請參閱[MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
+ **/SAFESEH**適用於 x86 連結時才有效目標。 **/SAFESEH**已經有註明的例外狀況處理常式的平台不支援。 例如，在 [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] 和 ARM 上，所有例外狀況處理常式都已在 PDATA 中註明。 ML64.exe 可支援將發出 SEH 資訊 （XDATA 和 PDATA） 的註解為映像，可讓您透過 ml64 函式回溯。 請參閱[MASM (ml64.exe) x64](../../assembler/masm/masm-for-x64-ml64-exe.md)如需詳細資訊。  
   
- 若未指定 **\/SAFESEH**，則在所有模組都與安全例外狀況處理功能相容時，連結器將會產生包含安全例外狀況處理常式表格的影像。  若有任何模組與安全例外狀況處理功能不相容，產生的影像將不包含安全例外狀況處理常式的表格。  若 [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) 指定 WINDOWSCE 或某個 EFI\_\* 選項，連結器將不會嘗試產生包含安全例外狀況處理常式表格的影像，因為這些子系統都不會使用該資訊。  
+ 如果**/SAFESEH**未指定，如果所有模組都都與安全例外狀況處理功能相容，連結器會產生安全例外狀況處理常式的表格的映像。 如果任何模組不相容於安全例外狀況處理功能，產生的映像不會包含安全例外狀況處理常式的表格。 如果[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) WINDOWSCE 或其中一個 EFI_ * 選項，指定連結器不會嘗試產生一個映像包含表格的安全例外狀況處理常式，兩者的那些子系統可以進行時使用的資訊。  
   
- 若已指定 **\/SAFESEH:NO**，即使所有模組都能與安全例外狀況處理功能相容，連結器也不會產生包含安全例外狀況處理常式表格的影像。  
+ 如果**/SAFESEH:NO**指定，則連結器不會產生安全例外狀況處理常式的表格的映像，即使所有模組都都與安全例外狀況處理功能相容。  
   
- 連結器無法產生影像最常見的原因，是連結器的一個或多個輸入檔 \(模組\) 與安全例外狀況處理常式功能不相容。  模組與安全例外狀況處理常式不相容的原因，通常是因為它是以舊版的 Visual C\+\+ 編譯器建立的。  
+ 連結器無法產生影像的最常見原因是因為一或多個連結器輸入檔 （模組） 無法與安全例外狀況處理常式的功能相容。 模組不相容於安全例外狀況處理常式的一個常見原因是因為它以舊版的 Visual c + + 編譯器建立。  
   
- 您也可以透過使用 [.SAFESEH](../../assembler/masm/dot-safeseh.md)，將函式註冊為結構化例外狀況處理常式。  
+ 您也可以註冊為結構化例外狀況處理常式函式，使用[。SAFESEH](../../assembler/masm/dot-safeseh.md)。  
   
- 現有的二進位都無法標示為有安全例外狀況處理常式 \(或沒有例外狀況處理常式\)；安全例外狀況處理的相關資訊都必須在建置階段加入。  
+ 不可能將標示的現有二進位為具有安全例外狀況處理常式 （或任何例外狀況處理常式）。在建置階段，就必須加入安全例外狀況處理的詳細資訊。  
   
- 連結器建置安全例外狀況處理常式表格的能力，是取決於使用 C Runtime 程式庫的應用程式。  若您以 [\/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) 連結，並且需要安全例外狀況處理常式的表格，就需要提供載入組態結構 \(例如在 loadcfg.c CRT 原始程式檔內可發現的載入組態結構\)，其中包含針對 Visual C\+\+ 定義的所有項目。  例如：  
+ 建置安全例外狀況處理常式的表格的連結器的能力取決於使用 C 執行階段程式庫的應用程式。 如果連結[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)而且您想安全例外狀況處理常式的表格，您需要提供載入組態結構 （例如可以 loadcfg.c CRT 原始程式檔中找到），其中包含 Visual c + + 所定義的所有項目。 例如:   
   
 ```  
 #include <windows.h>  
@@ -105,20 +105,20 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 };  
 ```  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  選取 \[**連結器**\] 資料夾。  
+2.  選取**連結器**資料夾。  
   
-3.  選取 \[**命令列**\] 屬性頁。  
+3.  選取**命令列**屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中輸入選項。  
+4.  輸入到選項**其他選項**方塊。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

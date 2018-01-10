@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 021740039044a43972cb51390ecf5cc1babdafe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad2d707b5dbfc78ec8975471114bc87bf23fe5f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page 元件精靈
 此精靈會插入至專案的 Active Server Pages (ASP) 元件。 Microsoft 網際網路資訊服務 (IIS) 會使用 ASP 元件，其增強的網頁開發架構的一部分。  
@@ -79,6 +80,6 @@ ms.lasthandoff: 10/24/2017
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL Active Server Page 元件](../../atl/reference/adding-an-atl-active-server-page-component.md)
 

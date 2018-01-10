@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb3b9f5a7024f915900beaf93a8b9505ff492b19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 217ddc0ec0f93b727427ee1495d964d51ef37912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-fatal-error-a1009"></a>ML 嚴重錯誤 A1009
 **行太長**  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  如果使用行接續字元 (\) 串連多個實體的線條，產生邏輯程式敘述行則仍會限制為 512 個字元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

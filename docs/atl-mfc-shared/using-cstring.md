@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92992278f0f5395c843ef6623a02e6294786ea24
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3844e10dc12207513e074e76e822e4999fadec7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstring"></a>使用 CString
 本節中的主題會描述如何使用 `CString` 進行程式設計。 如需參考文件`CString`類別，請參閱文件[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。  
@@ -51,7 +52,7 @@ int main() {
 }  
 ```  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [基本 CString 運算](../atl-mfc-shared/basic-cstring-operations.md)  
  描述基本 `CString` 作業，包括從 C 常值字串建立物件，存取 `CString` 中的個別字元，串連兩個物件，以及比較 `CString` 物件。  
   

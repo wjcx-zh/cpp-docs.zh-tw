@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe9c17d03d23d76dfb4a418dcbc2ab1d9b1542e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3066fb5f143cd0466b5247bb5a70520411fcc9f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 宣告結構類型具有指定*fielddeclarations*。 每個欄位必須是有效的資料定義。 與相同[STRUC](../../assembler/masm/struc.md)。  
@@ -33,5 +34,5 @@ fielddeclarations
 name ENDS  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

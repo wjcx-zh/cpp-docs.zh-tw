@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc466f35b06790fd503c3b4684714e84f6ebac6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c97c12c00ec32d4311be811f0c81c34bbdda9e55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equ"></a>EQU
 第一個指示詞指定的數值*運算式*至*名稱*。  
@@ -37,5 +38,5 @@ name EQU <text>
   
  指定第二個指示詞指派*文字*至*名稱*。 *名稱*可以指派不同*文字*更新版本。 請參閱[TEXTEQU](../../assembler/masm/textequ.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d53e09c64aa19b4e843297b64bad132c64a75a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57e5b40785bda57a4d5578bb998c4c97336246be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplearrayequalhelper-class"></a>CSimpleArrayEqualHelper 類別
 這個類別是 helper [CSimpleArray](../../atl/reference/csimplearray-class.md)類別。  
@@ -38,11 +39,11 @@ class CSimpleArrayEqualHelper
  `T`  
  在衍生的類別中。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleArrayEqualHelper::IsEqual](#isequal)|（靜態）測試兩個`CSimpleArray`物件項目是否相等。|  
   
@@ -71,7 +72,7 @@ static bool IsEqual(
 ### <a name="return-value"></a>傳回值  
  如果項目相等，false 否則，就會傳回 true。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CSimpleArray 類別](../../atl/reference/csimplearray-class.md)   
  [CSimpleArrayEqualHelperFalse 類別](../../atl/reference/csimplearrayequalhelperfalse-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

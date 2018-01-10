@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b71ac6c5c89b8c1e256b3f47423e1a897d2942c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 142e0b204ba7b745c6324ad27a0724dea6ab8450
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2034"></a>ML 非嚴重錯誤 A2034
 **必須在區段區塊**  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [組織](../../assembler/masm/org.md)指示詞  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 490814f85199450d4261bf4071184b75b5ea10c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c433abea04ff81c69fe1b73569ea7e043e6e81ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options"></a>編譯器選項
 cl.exe 是工具，可控制 Microsoft C 和 c + + 編譯器和連結器。 cl.exe 可以只在支援 Microsoft Visual Studio 的作業系統上執行。  
@@ -60,7 +61,7 @@ cl.exe 是工具，可控制 Microsoft C 和 c + + 編譯器和連結器。 cl.e
   
  [連結器選項](../../build/reference/linker-options.md)也會影響您的程式的建置方式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [快速編譯](../../build/reference/fast-compilation.md)   

@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1e359b6bcb7ba201991575ab310e0db9b3b4f06a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79ef7fdd5799b01ec115befcd50bbe4625d48bea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbmultimap-class"></a>CRBMultiMap 類別
 此類別代表可讓每個索引鍵可以是多個值，並使用 紅黑二進位樹狀目錄相關聯的對應結構。  
@@ -55,18 +56,18 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
  `VTraits`  
  用於複製或移動的項目值的程式碼。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|建構函式。|  
 |[CRBMultiMap:: ~ CRBMultiMap](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|呼叫這個方法的第一個元素的位置找不到指定的索引鍵。|  
 |[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|呼叫這個方法，取得與指定索引鍵相關聯的值，並更新位置值。|  
@@ -216,7 +217,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
  `key`  
  若要加入的索引鍵值`CRBMultiMap`物件。  
   
- *value*  
+ *值*  
  要加入值`CRBMultiMap`與相關聯的物件`key`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -250,7 +251,7 @@ size_t RemoveKey(KINARGTYPE key) throw();
 ### <a name="example"></a>範例  
  請參閱範例的[CRBMultiMap::CRBMultiMap](#crbmultimap)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRBTree 類別](../../atl/reference/crbtree-class.md)   
  [CAtlMap 類別](../../atl/reference/catlmap-class.md)   
  [CRBMap 類別](../../atl/reference/crbmap-class.md)   

@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66e212b1f8bd2e749bc87fec92b935aa466522b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dde3255997b03eb827ef9e318de73b3badee23c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-messages-macros"></a>Windows 訊息巨集
 這個巨集將轉送視窗訊息。  
@@ -43,7 +44,7 @@ WM_FORWARDMSG
 ### <a name="remarks"></a>備註  
  使用`WM_FORWARDMSG`轉送至另一個視窗，進行處理的視窗所接收的訊息。 LPARAM 和 WPARAM 參數可用，如下所示：  
   
-|參數|使用方式|  
+|參數|使用量|  
 |---------------|-----------|  
 |WPARAM|由使用者定義的資料|  
 |LPARAM|指標`MSG`結構，其中包含訊息的相關資訊|  
@@ -53,5 +54,5 @@ WM_FORWARDMSG
   
  [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集](../../atl/reference/atl-macros.md)

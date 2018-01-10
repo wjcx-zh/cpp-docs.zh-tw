@@ -1,47 +1,48 @@
 ---
-title: "建立提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供者, 建立"
+title: "建立提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6e590461d359c2ab2ee750f0393f6c2f9ec7ac95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 建立提供者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-#### 若要以 ATL OLE DB 提供者精靈建立 OLE DB 提供者  
+# <a name="creating-the-provider"></a>建立提供者
+#### <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>若要使用 ATL OLE DB 提供者精靈建立 OLE DB 提供者  
   
-1.  在該專案上按一下右鍵。  
+1.  以滑鼠右鍵按一下專案。  
   
-2.  在捷徑功能表中按一下 \[加入\]，然後按一下 \[加入類別\]。  
+2.  在捷徑功能表，按一下 **新增**，然後按一下 **加入類別**。  
   
-3.  在 \[加入類別\] 對話方塊中選取 \[ATL OLEDB 提供者\] 圖示，然後按一下 \[開啟\]。  
+3.  在**加入類別**對話方塊中，選取**ATL OLE DB 提供者**圖示，然後再按一下**開啟**。  
   
-4.  在 ATL OLE DB 提供者精靈的 \[**簡短名稱**\] 方塊中輸入提供者的簡短名稱。  下列主題使用簡短名稱 "MyProvider"，但您可使用其他名稱。  其他的名稱方塊則根據您輸入的名稱來填入 \(Populate\)。  
+4.  在 ATL OLE DB 提供者精靈中，輸入您的提供者中的簡短名稱**簡短名稱**方塊。 下列主題會使用簡短名稱"MyProvider"，但您可以使用另一個名稱。 其他名稱方塊中填入根據您輸入的名稱。  
   
-5.  必要時可編輯其他名稱方塊。  您除了物件和檔案名稱，還可編輯下列項目：  
+5.  視需要編輯其他名稱方塊。 除了物件和檔案名稱，您可以編輯下列各項：  
   
-    -   **Coclass**：COM 用來建立提供者的名稱  
+    -   **Coclass**: COM 用來建立提供者的名稱。  
   
-    -   **ProgID**：程式設計識別項，這是可取代 GUID 的文字字串  
+    -   **ProgID**： 是可用來代替 GUID 的文字字串的程式設計識別項。  
   
-    -   **Version**：可與 ProgID 和 coclass 一起使用來產生與版本相關的程式 ID  
+    -   **版本**: coclass ProgID 與用來產生版本相依程式設計識別碼。  
   
-6.  按一下 \[**完成**\]。  
+6.  按一下 [ **完成**]。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)

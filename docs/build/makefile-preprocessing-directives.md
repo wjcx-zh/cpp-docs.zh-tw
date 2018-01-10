@@ -50,11 +50,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 742faea629cb085c203e231c29ab9e512b9c2812
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bc73a86b0772b13731aaf7ac4e2ef0760caa8a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makefile-preprocessing-directives"></a>Makefile 前置處理指示詞
 前置處理器指示詞不區分大小寫。 初始驚嘆號 （！） 必須出現在一行的開頭。 零或多個空格或定位字元可以驚嘆號的縮排的後面出現。  
@@ -100,5 +101,5 @@ ms.lasthandoff: 10/24/2017
  **!UNDEF***巨集名稱*   
  取消定義*巨集名稱*。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Makefile 前置處理](../build/makefile-preprocessing.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce8588ff1ca3349100b608c8ebf4085d7464a235
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5b1626a9ce7ef729416f7e6e1a6d3c60836dbed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 類別
 這個類別會實作[IClassFactory2](http://msdn.microsoft.com/library/windows/desktop/ms692720)介面。  
@@ -54,7 +55,7 @@ class CComClassFactory2 : public IClassFactory2,
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComClassFactory2::CreateInstance](#createinstance)|建立指定的 CLSID 的物件。|  
 |[CComClassFactory2::CreateInstanceLic](#createinstancelic)|指定的授權金鑰，建立指定的 CLSID 的物件。|  
@@ -205,7 +206,7 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
   
  呼叫[GetLicInfo](#getlicinfo)擷取的值`fRuntimeKeyAvail`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComClassFactorySingleton 類別](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   

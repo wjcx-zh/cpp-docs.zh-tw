@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _tzset
+apiname: _tzset
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,45 +21,29 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _tzset
-dev_langs:
-- C++
+f1_keywords: _tzset
+dev_langs: C++
 helpviewer_keywords:
 - _tzset function
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 669b7d41234c21c3fb4e9a1a28f6b8d1a33c036b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f103da7ca67721f6c654c593746b9427954c6930
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tzset"></a>_tzset
 設定時間環境變數。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱                  [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱                  [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -72,7 +54,7 @@ void _tzset( void );
 ## <a name="remarks"></a>備註  
  `_tzset` 函式會使用環境變數 `TZ` 目前的設定，將值指派給下列三個全域變數： `_daylight`、 `_timezone`和 `_tzname`。 [_ftime](../../c-runtime-library/reference/ftime-ftime32-ftime64.md) 和 [localtime](../../c-runtime-library/reference/localtime-localtime32-localtime64.md) 函式會使用這些變數來進行國際標準時間 (UTC) 到本地時間的更正， `time` 函式則會用這些變數進行系統時間到 UTC 的計算。 請使用下列語法來設定 `TZ` 環境變數：  
   
- `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:``mm`[`:``ss`] ][`dzn`]  
+ `set` `TZ`=`tzn`[+ &#124; -]`hh`[`:mm`[`:ss`] ][`dzn`]  
   
  `tzn`  
  三個字母的時區名稱，例如 PST (太平洋標準時間)。 您必須指定從本地時間到 UTC 的正確位移。  
@@ -115,11 +97,11 @@ set TZ=GST-1GDT
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_tzset`|\<time.h>|  
   
- 如需詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -156,7 +138,7 @@ _timezone = 28800
 _tzname[0] = Pacific Standard Time  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

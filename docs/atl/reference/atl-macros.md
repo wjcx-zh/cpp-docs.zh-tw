@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 926340e6f221a561a74dce95ad0bff6de2abcb9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b78ca454112d05f75def6969c25669e52a8b3dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-macros"></a>ATL 巨集
 若要依分類搜尋 ATL 巨集，請參閱下列主題。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/24/2017
  [Windows 訊息巨集](../../atl/reference/windows-messages-macros.md)  
  將視窗訊息的轉送。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
  [函式](../../atl/reference/atl-functions.md)   

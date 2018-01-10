@@ -18,17 +18,18 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e8112adf7164dcfdf0baffb6b0531b1ee84e9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da37d9620212f16f920d228278a387701d2dbee1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-information-classes"></a>錯誤的資訊類別
 下列類別會指出如何處理資訊時發生錯誤：  
   
 -   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md)判斷物件是否支援[IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)介面。 **IErrorInfo**允許傳播回用戶端的資訊時發生錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

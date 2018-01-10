@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b66c473c49527dff395d206594a314b527c4f914
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83965ef2bf64f77dbcb1eb9832e7178c30260d16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fe-name-exe-file"></a>/Fe (命名 EXE 檔案)
 指定的名稱和.exe 檔或 DLL 編譯器所建立的目錄。  
@@ -68,7 +69,7 @@ CL /FeC:\BIN\PROCESS *.C
 CL /FeC:\BIN\ *.C  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

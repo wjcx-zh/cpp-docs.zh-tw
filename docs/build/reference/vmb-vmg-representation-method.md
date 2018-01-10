@@ -1,67 +1,67 @@
 ---
-title: "/vmb、/vmg (表示方法) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/vmb"
-  - "/vmg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/vmb 編譯器選項 [C++]"
-  - "/vmg 編譯器選項 [C++]"
-  - "表示方法編譯器選項 [C++]"
-  - "vmb 編譯器選項 [C++]"
-  - "-vmb 編譯器選項 [C++]"
-  - "vmg 編譯器選項 [C++]"
-  - "-vmg 編譯器選項 [C++]"
+title: "-/vmb、 /vmg （表示方法） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /vmb
+- /vmg
+dev_langs: C++
+helpviewer_keywords:
+- vmb compiler option [C++]
+- -vmg compiler option [C++]
+- vmg compiler option [C++]
+- -vmb compiler option [C++]
+- /vmb compiler option [C++]
+- representation method compiler options [C++]
+- /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4a9d64f8b1035f731adef79356d24eeb3e4f7ee3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /vmb、/vmg (表示方法)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-選取編譯器用來表示類別成員指標的方法。  
+# <a name="vmb-vmg-representation-method"></a>/vmb、/vmg (表示方法)
+選取的方法，供編譯器用來表示類別成員的指標。  
   
- 如果您總是在宣告類別成員指標之前定義類別，請使用 **\/vmb**。  
+ 使用**/vmb**如果您一定是之前定義類別成員的類別中宣告的指標。  
   
- 如果需要在定義類別之前先宣告類別成員指標，請使用 **\/vmg**。  如果您要在兩個彼此參考的不同類別中定義成員，就會有這種需要。  如果是這種交互參考的類別，就必須必須先參考某個類別，然後才能加以定義。  
+ 使用**/vmg**至之前定義類別宣告類別成員的指標。 如果您在定義中互相參考的兩個不同類別的成員，可能會發生這項需求。 這類相互參考的類別定義之前必須參考一個類別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /vmb  
 /vmg  
 ```  
   
-## 備註  
- 您也可以在程式碼中使用 [pointers\_to\_members](../../preprocessor/pointers-to-members.md) 或 [繼承關鍵字](../../cpp/inheritance-keywords.md)，指定指標表示。  
+## <a name="remarks"></a>備註  
+ 您也可以使用[pointers_to_members](../../preprocessor/pointers-to-members.md)或[繼承關鍵字](../../cpp/inheritance-keywords.md)在您的程式碼，以指定的指標表示法。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**命令列**\] 屬性頁。  
+3.  按一下 [命令列]  屬性頁。  
   
-4.  在 \[**其他選項**\] 方塊中，輸入編譯器選項。  
+4.  在 [其他選項]  方塊中，輸入編譯器選項。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

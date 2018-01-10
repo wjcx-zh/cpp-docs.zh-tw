@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - class scope [C++], rules
 - classes [C++], scope
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2e4a728d23dc9a04b62c9852823f359c3a7cb150
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>範圍規則摘要
 使用的名稱在其範圍內不可以模稜兩可 (其位置由多載決定)。 如果名稱表示一個函式，該函式必須明確指定參數的數目和類型。 如果名稱仍然模稜兩可，[成員存取](../cpp/member-access-control-cpp.md)套用規則。  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="qualified-names"></a>限定名稱  
  搭配二進位範圍解析運算子 (`::`) 使用的名稱亦稱為「限定名稱」(Qualified Name)。 在二進位範圍解析運算子後面指定的名稱，必須是運算子左方所指定類別的成員，或是其基底類別的成員。  
   
- 成員選取運算子後面指定的名稱 (**。** 或** -> **) 必須是運算子左方或其基底類別的成員上指定之物件的類別類型的成員。 指定成員選取運算子右邊的名稱 (**->**) 也可以是物件的另一個類別類型，但前提是左邊** -> **是類別物件和類別定義的多載的成員選擇運算子 (**->**) 會判斷值為其他類別類型的指標。 (這項佈建會更詳細地討論[類別成員存取](../cpp/member-access.md)。)  
+ 成員選取運算子後面指定的名稱 (**。** 或 **->** ) 必須是運算子左方或其基底類別的成員上指定之物件的類別類型的成員。 指定成員選取運算子右邊的名稱 (**->**) 也可以是物件的另一個類別類型，但前提是左邊 **->** 是類別物件和類別定義的多載的成員選擇運算子 (**->**) 會判斷值為其他類別類型的指標。 (這項佈建會更詳細地討論[類別成員存取](../cpp/member-access.md)。)  
   
  編譯器會依照下列順序搜尋名稱，並且在找到名稱時停止：  
   
@@ -79,5 +77,5 @@ ms.lasthandoff: 09/25/2017
   
  預設參數會位於其所預設的參數範圍內，如上兩個段落中所述。 但是，它們無法存取區域變數或非靜態類別成員。 預設參數是在函式呼叫時進行評估，但是它們是在函式宣告的原始範圍中進行評估。 因此，成員函式的預設參數一定是在類別範圍中進行評估。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [繼承](../cpp/inheritance-cpp.md)

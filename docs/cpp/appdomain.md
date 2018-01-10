@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- appdomain_cpp
-dev_langs:
-- C++
+f1_keywords: appdomain_cpp
+dev_langs: C++
 helpviewer_keywords:
 - appdomain __declspec keyword
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9d4143fa5bb7b302899207041d38cd355ac31b42
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 677206e37cb4761112f66dc59dc44b2eccbabaf5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appdomain"></a>appdomain
 指定 Managed 應用程式的每個應用程式定義域都應該有自己的特定全域變數或靜態成員變數複本。 請參閱[應用程式定義域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)如需詳細資訊。  
@@ -146,6 +143,6 @@ __declspec(appdomain) CGlobal::~CGlobal destructor
 __declspec(process) CGlobal::~CGlobal destructor  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__declspec](../cpp/declspec.md)   
  [關鍵字](../cpp/keywords-cpp.md)

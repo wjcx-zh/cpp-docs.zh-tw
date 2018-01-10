@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5697fe2a9f8a017b893696856a4bff1e56eb129b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f03dbb72806dde4346cfd8fe53dbc5caf6fc793
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-low"></a>運算子 LOW
 傳回的低 8 位元*運算式*。 MASM 運算式是 64 位元值。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
 LOW expression  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算子參考](../../assembler/masm/operators-reference.md)

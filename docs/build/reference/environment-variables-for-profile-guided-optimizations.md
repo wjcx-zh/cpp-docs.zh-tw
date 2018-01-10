@@ -1,38 +1,37 @@
 ---
-title: "特性指引最佳化的環境變數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "特性指引最佳化, 環境變數"
+title: "特性指引最佳化的環境變數 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: profile-guided optimizations, environment variables
 ms.assetid: f95a6d1e-49a4-4802-a144-092026b600a3
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 745c1b0c0bc522f54913d48adf58e7d7783208ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 特性指引最佳化的環境變數
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本節內容包含有關環境變數的資訊，該變數會影響以 \/LTCG:PGI 建立之映像上的測試案例。  
+# <a name="environment-variables-for-profile-guided-optimizations"></a>特性指引最佳化的環境變數
+本節包含環境變數會影響與 /ltcg: pgi 所建立的影像上的測試案例的相關資訊。  
   
-## 備註  
- 有三個環境變數會影響特性指引最佳化的測試案例：  
+## <a name="remarks"></a>備註  
+ 有三個會影響用於特性指引最佳化測試案例的環境變數：  
   
 -   [PogoSafeMode](../../build/reference/pogosafemode.md)  
   
--   [VCPROFILE\_ALLOC\_SCALE](../../build/reference/vcprofile-alloc-scale.md)  
+-   [VCPROFILE_ALLOC_SCALE](../../build/reference/vcprofile-alloc-scale.md)  
   
--   [VCPROFILE\_PATH](../../build/reference/vcprofile-path.md)  
+-   [VCPROFILE_PATH](../../build/reference/vcprofile-path.md)  
   
-## 請參閱  
- [特性指引最佳化工具](../../build/reference/tools-for-manual-profile-guided-optimization.md)
+## <a name="see-also"></a>請參閱  
+ [手動特性指引最佳化工具](../../build/reference/tools-for-manual-profile-guided-optimization.md)

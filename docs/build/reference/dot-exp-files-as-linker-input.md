@@ -1,37 +1,37 @@
 ---
-title: ".Exp 檔做為連結器輸入 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".exp 檔案 [C++]"
-  - "EXP 檔案"
-  - "匯出資料, 匯出 (.exp) 檔案"
-  - "匯出函式"
-  - "匯出函式, 有關匯出函式的資訊"
-  - "函式 [C++], 匯出"
-  - "匯入程式庫, 連結器檔案"
-  - "連結 [C++], 匯出"
+title: ".Exp 檔案做為連結器輸入 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions
+- import libraries, linker files
+- linking [C++], exports
+- exporting functions, information about exported functions
+- exporting data, export (.exp) files
+- functions [C++], exporting
+- .exp files [C++]
+- EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd6351623b230e3be1e432bd6ee0fb760da5abd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# .Exp 檔做為連結器輸入
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-匯出檔 \(.exp\)  含有關於匯出函式 \(Exported Function\) 及資料項目的資訊。  當 LIB 建立匯入程式庫時，它也會建立一個 .exp 檔。  當您要連結一個同時要對另一個程式匯出及匯入 \(不論是直接或間接\) 的程式時，您必須使用 .exp 檔。  如果您以 .exp 檔案連結，LINK 不會產生匯入程式庫，因為它會假設 LIB 已經建立了一個。  如需有關 .exp 檔及匯入程式庫的詳細資訊，請參閱[使用匯入程式庫和匯出檔案](../../build/reference/working-with-import-libraries-and-export-files.md)。  
+# <a name="exp-files-as-linker-input"></a>.Exp 檔做為連結器輸入
+匯出 (.exp) 檔案包含匯出函式和資料的項目相關資訊。 當 LIB 建立匯入程式庫時，它也會建立.exp 檔。 當您連結至匯出和匯入從另一個程式，直接或間接的程式，您可以使用.exp 檔。 如果您連結.exp 檔，連結不會產生匯入程式庫，因為它會假設 LIB 已經建立一個。 如需有關.exp 檔案和匯入程式庫的詳細資訊，請參閱[使用匯入程式庫和匯出檔案](../../build/reference/working-with-import-libraries-and-export-files.md)。  
   
-## 請參閱  
- [LINK 輸入檔](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>請參閱  
+ [LINK 輸入的檔](../../build/reference/link-input-files.md)   
  [連結器選項](../../build/reference/linker-options.md)

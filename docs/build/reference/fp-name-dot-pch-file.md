@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d00b7a4007229dc545923f0dc89ab7607111c6f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 77ba54705ec4037f1c98a2ae1832dddcc551956e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fp-name-pch-file"></a>/Fp (命名 .Pch 檔案)
 提供的先行編譯標頭，而不是使用預設路徑名稱的路徑名稱。  
@@ -74,7 +75,7 @@ CL /DDEBUG /Zi /Yc /FpDPROG.PCH PROG.CPP
 CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

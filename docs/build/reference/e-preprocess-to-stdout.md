@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3540a2d6d1c32a72d16cdb9bdab19aa18604021
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed083c960421ce17c0ce61036cd05191fc12c797
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (前置處理至 stdout)
 前置處理 C 和 c + + 原始程式檔，並將前置處理過的檔案複製到標準輸出裝置。  
@@ -88,6 +89,6 @@ cl -E test.cpp > test2.cpp
 CL /E /C ADD.C  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

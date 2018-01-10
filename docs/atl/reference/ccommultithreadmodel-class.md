@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7aad1856f28a1d76b53b983e63f36cf5fd4a7cfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96f8c24736309ef1030664ee0fd466537d739496
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel 類別
 `CComMultiThreadModel`提供具備執行緒安全的方法來遞增和遞減變數的值。  
@@ -40,11 +41,11 @@ ms.lasthandoff: 10/24/2017
 class CComMultiThreadModel
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|參考類別[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)。|  
 |[CComMultiThreadModel::CriticalSection](#criticalsection)|參考類別[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)。|  
@@ -52,7 +53,7 @@ class CComMultiThreadModel
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComMultiThreadModel::Decrement](#decrement)|（靜態）遞減以執行緒安全的方式指定變數的值。|  
 |[CComMultiThreadModel::Increment](#increment)|（靜態）以執行緒安全的方式遞增指定變數的值。|  
@@ -212,7 +213,7 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 ### <a name="example"></a>範例  
  請參閱[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComSingleThreadModel 類別](ccomsinglethreadmodel-class.md)   
  [CComAutoCriticalSection 類別](ccomautocriticalsection-class.md)   
  [CComCriticalSection 類別](ccomcriticalsection-class.md)   

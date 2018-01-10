@@ -40,11 +40,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6141ed6252bfd196c15cc2e7be4361a840c722d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2276de6c4539dffe4456c18fdeff88f852a44c2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freopens-wfreopens"></a>freopen_s、_wfreopen_s
 重新指派檔案指標。 這些版本的 [freopen、_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -70,10 +71,10 @@ errno_t _wfreopen(
  [輸出] `pFile`  
  指向要由此呼叫提供的檔案指標之指標。  
   
- [in] `path`  
+ [輸入] `path`  
  新檔案的路徑。  
   
- [in] `mode`  
+ [輸入] `mode`  
  允許的存取類型。  
   
  [in] `stream`  
@@ -127,18 +128,18 @@ errno_t _wfreopen(
  `b`  
  在二進位 (未轉譯) 模式中開啟；會隱藏上述轉譯。  
   
- 如果 `mode` 中未指定 `t` 或 `b`，則預設轉譯模式是透過全域變數 [_fmode](../../c-runtime-library/fmode.md) 所定義。 如果引數前置 `t` 或 `b` ，則函式失敗並傳回 `NULL`。  
+ 如果 `t` 中未指定 `b` 或 `mode`，則預設轉譯模式由全域變數 [_fmode](../../c-runtime-library/fmode.md)定義。 如果引數前置 `t` 或 `b` ，則函式失敗並傳回 `NULL`。  
   
  如需文字和二進位模式的討論，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`freopen_s`|\<stdio.h>|  
 |`_wfreopen_s`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -175,7 +176,7 @@ successfully reassigned
 This will go to the file 'freopen.out'  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [freopen、_wfreopen](../../c-runtime-library/reference/freopen-wfreopen.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   

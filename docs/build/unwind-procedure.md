@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c6ecdc6490b3d5792737eed65661ef7d53c54f14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b8caa2be1528c26cf374637f3d0357847721de9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-procedure"></a>回溯程序
 回溯程式碼陣列是以遞減順序排序。 例外狀況發生時，完整的內容會儲存的內容記錄中的作業系統。 例外狀況分派邏輯然後叫用時，它會重複執行下列步驟，以找出例外狀況處理常式。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
  回溯資料以最小一組為 8 個位元組。 這表示只能配置 128 位元組的堆疊或較少，並可能儲存一個靜態暫存器的函式。 這也是大小鏈結的回溯資訊結構與無回溯程式碼的長度為零初構。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理 (x64)](../build/exception-handling-x64.md)

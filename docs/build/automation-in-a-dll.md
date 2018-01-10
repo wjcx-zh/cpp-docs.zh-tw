@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 69b5d723da2ac67de3c381b6a5bc09645c1f4341
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e3630aab764988ad86e6120301dfff548ad4368
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automation-in-a-dll"></a>DLL 中的 Automation
 當您選擇的 Automation 選項在 MFC DLL 精靈時，精靈會讓您獲得下列：  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [Automation 伺服程式](../mfc/automation-servers.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

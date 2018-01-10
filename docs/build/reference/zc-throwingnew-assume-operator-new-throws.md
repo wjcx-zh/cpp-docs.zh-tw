@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc784af1c23576ff68c8be8b4b400cd10cc8b0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cbcb635cd37a40c2de1599d271658de308e8cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew （假設運算子新會擲回）  
 當`/Zc:throwingNew`指定選項時，編譯器最佳化呼叫`operator new`略過檢查，傳回 null 指標。 此選項會告知編譯器假設所有連結的實作`operator new`並自訂配置器符合 c + + 標準和配置失敗時擲回。 根據預設，在 Visual Studio，編譯器要以保守模式產生 null 檢查 (`/Zc:throwingNew-`) 這些呼叫，因為使用者可以將連結具有非擲回實作的`operator new`或撰寫自訂配置器常式會傳回 null 指標。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
 3.  選取**組態屬性**， **C/c + +**，**命令列**屬性頁。  
 4.  修改**其他選項**屬性，以包括`/Zc:throwingNew`或`/Zc:throwingNew-`，然後選擇 **確定**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [編譯器選項](../../build/reference/compiler-options.md)  
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)  
 [/Zc （一致性）](../../build/reference/zc-conformance.md)  

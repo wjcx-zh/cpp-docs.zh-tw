@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 771685ce7e3ff5c4ffc01cb793be9f4f93e7ee26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cf86ebe45cdb0a70af6eebaaed90690e83e8db7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomheap-class"></a>CComHeap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 COM 記憶體配置函式。  
@@ -39,11 +40,11 @@ ms.lasthandoff: 10/24/2017
 class CComHeap : public IAtlMemMgr
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComHeap::Allocate](#allocate)|呼叫這個方法來配置記憶體區塊。|  
 |[Ccomheap:: Free](#free)|呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。|  
@@ -136,7 +137,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
   
  使用實作[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DynamicConsumer 範例](../../visual-cpp-samples.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [CWin32Heap 類別](../../atl/reference/cwin32heap-class.md)   

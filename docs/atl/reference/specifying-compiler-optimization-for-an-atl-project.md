@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b9b3d6b3fabe2a24a4b296709e835d07a63e441
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6e60f22b7b91567948dfc2efc90935fce266d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>指定 ATL 專案的編譯器最佳化
 根據預設， [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)會產生與 ATL_NO_VTABLE 巨集的新類別，如下所示：  
@@ -61,7 +62,7 @@ class ATL_NO_VTABLE CProjName
   
  在 stdafx.h 之前其他所有的 ATL, 標頭檔都包含在內。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   

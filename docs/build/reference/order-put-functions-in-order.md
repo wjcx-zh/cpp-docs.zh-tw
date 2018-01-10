@@ -1,82 +1,88 @@
 ---
-title: "/ORDER (依順序置放函式) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.FunctionOrder"
-  - "/order"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ORDER 連結器選項"
-  - "LINK 工具 [C++], 程式最佳化"
-  - "LINK 工具 [C++], 交換微調"
-  - "ORDER 連結器選項"
-  - "-ORDER 連結器選項"
-  - "分頁, 最佳化"
+title: "-順序 （依順序置放函式） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.FunctionOrder
+- /order
+dev_langs: C++
+helpviewer_keywords:
+- ORDER linker option
+- -ORDER linker option
+- LINK tool [C++], program optimizing
+- /ORDER linker option
+- LINK tool [C++], swap tuning
+- paging, optimizing
 ms.assetid: ecf5eb3e-e404-4e86-9a91-4e5ec157261a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2264296d288f9105a59c0ac5099c1dedef55ee2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /ORDER (依順序置放函式)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="order-put-functions-in-order"></a>/ORDER (依順序置放函式)
 
-```  
-/ORDER:@filename  
-```  
-  
-## 參數  
- *filename*  
- 是一個指定 COMDAT 函式連結順序的文字檔。  
-  
-## 備註  
- \/ORDER 選項會告訴 LINK 以預先決定的順序將某些 COMDAT 放入映像中，使您的程式最佳化。  LINK 會在映像的每一區段中將這些函式依指定的順序放置。  
-  
- 請在 *filename* 中指定順序，該檔案是一個文字檔 \(回應檔\)，它列出 COMDAT 的方式就是您希望連結它們的順序。  *filename* 中的每一行都包含一個 COMDAT 的名稱。  如果目的檔是以 \/Gy 選項編譯便含有 COMDAT。  函式名稱須區分大小寫。  
-  
- LINK 會使用識別項的裝飾形式。  編譯器會在建立 .obj 檔時裝飾識別項。  當您需要向連結器指定識別項時，請使用 [DUMPBIN](../../build/reference/dumpbin-reference.md) 工具取得識別項的裝飾形式。  如需有關裝飾名稱的詳細資訊，請參閱[裝飾名稱](../../build/reference/decorated-names.md)。  
-  
- 如果使用了一個以上 \/ORDER 規格，只有最後指定的會生效。  
-  
- 利用調整放置順序，您可以將一個函式與該函式所呼叫的函式組成一個群組，進行透過這種交換調整方式，達到程式分頁行為最佳化的結果。  您也可以將經常呼叫的函式群組在一起。  這些技巧可以增加當您需要呼叫某個函式時它就在記憶體中而不需再從磁碟分頁的可能性。  
-  
- 連結器會在每個 *filename* 中的裝飾名稱前面加上底線 \(\_\)，除非該名稱是以問號 \(?\) 或 at 符號 \(@\) 開頭。  例如，假設目的檔含有 `extern "C" int func(int)` 和 `int main(void)`，DUMPBIN [\/SYMBOLS](../../build/reference/symbols.md) 會列出如下的裝飾名稱：  
-  
-```  
-009 00000000 SECT3  notype ()    External     | _func  
-00A 00000008 SECT3  notype ()    External     | _main  
-```  
-  
- 但是，在順序檔中指定的名稱仍然應該是 `func` 和 `main`。  
-  
- \/ORDER 選項會停用累加連結。  
-  
+指定個別封裝 (COMDAT) 函式的連結順序。
+
+## <a name="syntax"></a>語法
+
+>/ 排序: @*檔名*
+
+### <a name="parameters"></a>參數
+
+*filename*  
+指定 COMDAT 函式的連結順序的文字檔。
+
+## <a name="remarks"></a>備註
+
+**/**編譯器選項可讓您將分組，以及它所呼叫之函式的函式最佳化程式的分頁行為。 您也可以將經常被呼叫函式群組在一起。 這些技術，又稱為*交換微調*或*分頁最佳化*，增加了在需要時，不需要從磁碟分頁時，呼叫的函式是在記憶體中的機率。
+
+當您編譯您的程式碼到物件的檔案時，您可以分辨每個函式放在它自己的區段，稱為編譯器*COMDAT*，使用[/Gy （啟用函式階層連結）](../../build/reference/gy-enable-function-level-linking.md)編譯器選項。 **/**連結器選項會告訴連結器將 Comdat 放入可執行映像，您所指定的順序。
+
+若要指定 COMDAT 順序，請建立*回應檔*，依名稱，每一行，連結器放入上的順序列出每個衝突的文字檔。 傳遞做為此檔案的名稱*filename*參數**/**選項。 對於 c + + 函式的 COMDAT 名稱會是函式名稱的裝飾的形式。 使用未裝飾的名稱對於 C 函式， `main`，對於 c + + 函式宣告為`extern "C"`。 函式名稱和裝飾的名稱會區分大小寫。 如需有關裝飾名稱的詳細資訊，請參閱[裝飾名稱](../../build/reference/decorated-names.md)。 
+
+若要尋找您 Comdat 裝飾的名稱，請使用[DUMPBIN](../../build/reference/dumpbin-reference.md)工具的[/ 符號](../../build/reference/symbols.md)物件檔案上的選項。 連結器會自動前面加上底線 (\_) 至函式名稱，以回應檔案除非名稱開頭加上問號 （？） 或 at 符號 (@)。 例如，如果原始程式檔 example.cpp，包含函數`int cpp_func(int)`，`extern "C" int c_func(int)`和`int main(void)`，命令`DUMPBIN /SYMBOLS example.obj`列出這些裝飾的名稱：
+
+```Output
+...
+088 00000000 SECT1A notype ()    External     | ?cpp_func@@YAHH@Z (int __cdecl cpp_func(int))
+089 00000000 SECT22 notype ()    External     | _c_func
+08A 00000000 SECT24 notype ()    External     | _main
+...
+```
+
+在此情況下，指定做為名稱`?cpp_func@@YAHH@Z`， `c_func`，和`main`回應檔中。
+
+如果有一個以上**/**選項出現在連結器選項，指定的最後一個會生效。
+
+**/**選項會停用累加連結。 您可能會看到連結器警告[LNK4075](../../error-messages/tool-errors/linker-tools-warning-lnk4075.md)當您指定這個選項或如果已啟用累加連結，如果您已經指定[/ZI (累加 PDB)](../../build/reference/z7-zi-zi-debug-information-format.md)編譯器選項。 這個警告轉為無回應，您可以使用[/incremental: no](../../build/reference/incremental-link-incrementally.md)連結器選項關閉累加連結，並使用[/Zi (產生 PDB)](../../build/reference/z7-zi-zi-debug-information-format.md)沒有累加連結產生 PDB 編譯器選項。
+
 > [!NOTE]
->  LINK 無法為靜態函式排序，因為靜態函式的名稱並非公用符號名稱。  指定了 \/ORDER 之後，連結器會對順序檔中每一個靜態或找不到的符號發出 LNK4037 警告。  
-  
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
-  
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
-  
-2.  按一下 \[連結器\] 資料夾。  
-  
-3.  按一下 \[最佳化\] 屬性頁。  
-  
-4.  修改 \[函式順序\] 屬性。  
-  
-### 若要以程式設計方式設定這個連結器選項  
-  
--   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>。  
-  
-## 請參閱  
- [設定連結器選項](../../build/reference/setting-linker-options.md)   
- [連結器選項](../../build/reference/linker-options.md)
+> 連結的靜態函式無法排序，因為靜態函式名稱不是公用的符號名稱。 當**/**指定，則連結器警告[LNK4037](../../error-messages/tool-errors/linker-tools-warning-lnk4037.md)產生靜態或找不到順序回應檔案中的每個符號。
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
+
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
+
+1. 在下**組態屬性**，開啟**連結器**，然後選擇 **最佳化**屬性頁。
+
+1. 修改**函式順序**內容包含回應檔案的名稱。
+
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
+
+- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.FunctionOrder%2A>。
+
+## <a name="see-also"></a>請參閱
+
+[設定連結器選項](../../build/reference/setting-linker-options.md)  
+[連結器選項](../../build/reference/linker-options.md)

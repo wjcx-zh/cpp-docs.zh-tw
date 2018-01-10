@@ -30,11 +30,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25023a1bfa0854d628931d5de9a852cae1d88ba5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 864aacbc30d9d50e1d0335d0d74c7ed63119d132
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="longjmp"></a>longjmp
 還原堆疊環境和執行地區設定。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
  `env`  
  儲存環境的變數。  
   
- *value*  
+ *值*  
  要傳回至 `setjmp` 呼叫的值。  
   
 ## <a name="remarks"></a>備註  
@@ -75,11 +76,11 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`longjmp`|\<setjmp.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -87,6 +88,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>範例  
  請參閱 [_fpreset](../../c-runtime-library/reference/fpreset.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [setjmp](../../c-runtime-library/reference/setjmp.md)

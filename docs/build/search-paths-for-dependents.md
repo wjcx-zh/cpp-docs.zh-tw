@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf777c89c78ab844b61138c30a5a9a25ca6b91d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6093db4ac8e0c88dfe6e4b5a5463e5ee8d24349
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-paths-for-dependents"></a>相依的搜尋路徑
 每個相依都有選擇性的搜尋路徑，指定方式如下：  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  NMAKE 會尋找第一次在目前目錄中，然後在目錄中指定的順序相依性。 部分或全部的搜尋路徑，可以指定巨集。 將目錄名稱括在大括號 （{}）;以分號 （;） 分隔多個目錄。 不允許任何空格或定位字元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [相依性](../build/dependents.md)

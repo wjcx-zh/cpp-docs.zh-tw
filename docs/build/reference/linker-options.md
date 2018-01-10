@@ -19,11 +19,12 @@ caps.latest.revision: "37"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44eeffb4305ab997e8f75bbf7c505c65456d9b0d
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: f64f9bb94f6809ecfa189cd012dd0494506a3ca4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-options"></a>連結器選項
 
@@ -139,7 +140,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 
 如需詳細資訊，請參閱 [Compiler-Controlled LINK Options](../../build/reference/compiler-controlled-link-options.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)  
 [設定連結器選項](../../build/reference/setting-linker-options.md)  

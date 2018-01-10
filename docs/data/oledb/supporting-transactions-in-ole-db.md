@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a7b1e937a7fa1ab33ff74d3c4e42856928320fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9be6fb1c86b43f7833818648d84875b1e4c55b59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-transactions-in-ole-db"></a>支援 OLE DB 中的異動
 A[交易](../../data/transactions-mfc-data-access.md)是群組，或批次，一系列的資料來源的更新，讓不是全部成功就無法認可一次就 （如果有任何一個將會失敗） 就無法認可任何的方法和回復整個交易。 此程序可確保資料來源上的結果的完整性。  
@@ -59,5 +62,5 @@ A[交易](../../data/transactions-mfc-data-access.md)是群組，或批次，一
 ## <a name="distributed-transactions"></a>分散式異動  
  分散式的交易是更新分散式的資料; 交易也就是一個以上的網路的電腦系統上的資料。 如果您想要透過分散式系統支援交易，您應該使用.NET Framework，而不是 OLE DB 交易支援。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

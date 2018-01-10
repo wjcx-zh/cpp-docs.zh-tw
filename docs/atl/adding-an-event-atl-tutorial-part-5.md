@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cef973849a9af88cd952be69ce9d33e7a516d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c42befe57bdc7a01da31bd6c4e010458e1d3ba7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>加入事件 (ATL 教學課程，第 5 部分)
 在此步驟中，您將加入`ClickIn`和`ClickOut`ATL 控制項的事件。 您將會引發`ClickIn`如果使用者在多邊形和引發事件`ClickOut`外部使用者。 要加入事件的工作如下所示：  
@@ -132,6 +133,6 @@ ms.lasthandoff: 10/24/2017
   
  [步驟 4 至](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)&#124;[至步驟 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b21557fce0735f23e89fe1594a7025170f5f7e7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80aca6af847a33fd7217d0ad710c928f6d2ca32e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-window-with-cwindowimpl"></a>實作 CWindowImpl 的視窗
 若要實作一個視窗，衍生自`CWindowImpl`。 在衍生類別中，宣告的訊息對應和訊息處理常式函式。 您現在可以使用您的類別，以三個不同的方式：  
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/24/2017
   
  而不是呼叫**建立**，呼叫`SubclassWindow`並傳遞至您想要子類別化現有的視窗控制代碼。 一旦子類別化視窗的是，它會使用`CWindowImpl::WindowProc`（或您的函式會覆寫此方法） 來指示訊息至訊息對應。 若要中斷連結的子類別化的視窗，從您的物件，呼叫`UnsubclassWindow`。 然後將還原視窗的原始視窗程序。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作視窗](../atl/implementing-a-window.md)
 

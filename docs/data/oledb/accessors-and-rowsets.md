@@ -28,11 +28,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0514524c3f96791c05b3d3ae33b8196deb7e554
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessors-and-rowsets"></a>存取子和資料列集
 若要設定及擷取資料，OLE DB 樣板會使用存取子和資料列集，透過[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)類別。 這個類別可以處理不同類型的多個存取子。  
@@ -59,11 +62,11 @@ ms.lasthandoff: 10/24/2017
   
 |存取子類型|動態|處理參數|緩衝區|多個存取子|  
 |-------------------|-------------|--------------------|------------|------------------------|  
-|`CAccessor`|否|是|User|是|  
+|`CAccessor`|否|[是]|使用者|[是]|  
 |`CDynamicAccessor`|是|否|OLE DB 樣板|否|  
-|`CDynamicParameterAccessor`|是|是|OLE DB 樣板|否|  
+|`CDynamicParameterAccessor`|是|[是]|OLE DB 樣板|否|  
 |`CDynamicStringAccessor[A,W]`|是|否|OLE DB 樣板|否|  
-|`CManualAccessor`|是|是|User|是|  
+|`CManualAccessor`|是|[是]|使用者|[是]|  
   
 ## <a name="rowset-types"></a>資料列集類型  
  OLE DB 範本可支援三種類型的資料列集 （請參閱前面的圖中）： 單一資料列集 (藉由[CRowset](../../data/oledb/crowset-class.md))，大量資料列集 (藉由[CBulkRowset](../../data/oledb/cbulkrowset-class.md))，和陣列 （實作的資料列集由[CArrayRowset](../../data/oledb/carrayrowset-class.md))。 單一資料列集提取單一資料列處理時`MoveNext`呼叫。 大量資料列集可以擷取多個資料列控制代碼。 陣列資料列集是可以使用陣列語法來存取的資料列集。  
@@ -75,5 +78,5 @@ ms.lasthandoff: 10/24/2017
   
  [結構描述資料列集](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)執行不存取資料中的資料存放區，但改為存取資料存放區，稱為中繼資料的相關資訊。 通常資料庫結構不在編譯時期已知以及必須在執行階段取得的情況下會使用結構描述資料列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

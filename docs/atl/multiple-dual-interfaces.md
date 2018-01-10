@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 426109958cf9b34829c23ac0bfd59743f1681e72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6f5677392a090a9c894cf4f848d9f74a1504d69c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiple-dual-interfaces"></a>多個雙重介面
 您可能想要合併的雙重介面 （也就是彈性的 vtable 和晚期繫結，因此讓類別可以使用指令碼語言，以及 c + +） 的優點與技術在多重繼承。  
@@ -43,6 +44,6 @@ ms.lasthandoff: 10/24/2017
   
  這些方法會有命名空間衝突的可能性，以及程式碼複雜度和維護性問題。 不建議您建立多個雙重介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
 

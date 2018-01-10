@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4560fb580d3d1b24feccf84dc07bde7dc38458c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 573710ae62384c8674009770b3c4fb29100db446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checking-for-memory-overwrites"></a>檢查記憶體覆寫
 如果您將堆積操作函式的呼叫上取得存取違規，很可能您的程式已損毀堆積。 這種狀況的一般症狀會是：  
@@ -36,5 +37,5 @@ if(_heapchk()!=_HEAPOK)
   
  此函式發生問題時，如果您要找出在哪個點堆積已損毀。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [解決發行組建的問題](../../build/reference/fixing-release-build-problems.md)

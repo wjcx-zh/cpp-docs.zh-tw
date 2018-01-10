@@ -15,16 +15,17 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cdba5255560f220a80a016f17e574721b12f486d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c52c5295108ef01dc23ea9f945850e91a9806d6f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="when-do-i-need-to-call-atlaxwinterm"></a>何時需要呼叫 AtlAxWinTerm？
 [AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)取消註冊**"AtlAxWin80"**視窗類別。 您應該呼叫此函式 （如果您不需要再建立主應用程式視窗） 終結所有現有的主控件 windows。 如果您未呼叫此函式，視窗類別會自動取消註冊處理序終止時。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  何時需要呼叫 AtlAxWinInit  
 [控制項內含項目常見問題集](../atl/atl-control-containment-faq.md)
 

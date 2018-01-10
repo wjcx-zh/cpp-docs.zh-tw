@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6abb297f6873c654cf359a63638338f288f45613
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 633e9bc4689ced93e1c22151b32654f7ae9d7ece
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlservicemoduletservicemain-function"></a>CAtlServiceModuleT::ServiceMain 函式
 服務控制管理員 (SCM) 呼叫`ServiceMain`當您開啟 服務控制台應用程式，選取服務，然後按一下**啟動**。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
  現在，`CAtlServiceModuleT::Run`呼叫以執行服務的主要工作。 **執行**會繼續執行直到服務已停止。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [服務](../atl/atl-services.md)   
  [CAtlServiceModuleT::ServiceMain](../atl/reference/catlservicemodulet-class.md#servicemain)
 

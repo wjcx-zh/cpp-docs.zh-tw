@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CDefaultElementTraits
 - atlcoll/ATL::CDefaultElementTraits
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultElementTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultElementTraits class
 ms.assetid: ac5ee610-7957-4b7c-92b6-38ff72e4118e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bb6731913d10402016f2148e1ae7705a73e98944
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1ddb59d2ac448725de719423d1634f00e568d2c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdefaultelementtraits-class"></a>CDefaultElementTraits 類別
 這個類別會提供預設的方法和函式集合類別。  
@@ -51,6 +48,5 @@ class CDefaultElementTraits : public CElementTraitsBase<T>,
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

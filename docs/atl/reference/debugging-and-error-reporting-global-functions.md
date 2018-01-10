@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea41febbb9de28ff70d89bfe4f6fcebc9a452ed2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b3383efcc78a022fc5131984957d94aa4b47838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>偵錯和錯誤報告全域函式
 這些函式提供有用的偵錯和追蹤功能。  
@@ -209,7 +210,7 @@ inline void AtlThrowLastWin32();
  **標頭：** atldef.h  
    
      
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../../atl/reference/atl-functions.md)   
  [偵錯和錯誤報告巨集](../../atl/reference/debugging-and-error-reporting-macros.md)
 

@@ -35,11 +35,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3285e266091a902373f0bfd7b70b9c1123c19f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cd751c88e5af3fde5c0f5415520a2c634a1958e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
 指定函式做為報告執行階段錯誤檢查 (RTC) 的處理常式。  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_RTC_SetErrorFuncW`|\<rtcapi.h>|  
   
@@ -105,6 +106,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_CrtDbgReport、_CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)   
  [執行階段錯誤檢查](../../c-runtime-library/run-time-error-checking.md)

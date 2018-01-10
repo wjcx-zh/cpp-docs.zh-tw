@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b07e82fe8d7d191dc328645efd99ab3a9a4f6fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="netmodule-files-as-linker-input"></a>.netmodule 檔做為連結器輸入
 link.exe 現在接受 MSIL .obj 或 .netmodule 做為輸入。 連結器產生的輸出檔將是組件或 .netmodule，對連結器的任何輸入 .obj 或 .netmodule 沒有執行階段相依性。  
@@ -105,6 +106,6 @@ class MLinkTest {
 caught non System exception in C++ source code file  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [LINK 輸入的檔](../../build/reference/link-input-files.md)   
  [連結器選項](../../build/reference/linker-options.md)

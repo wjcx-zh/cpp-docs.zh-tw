@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fed68d788403a0c2a822d7e47f50b08d409bbf2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3579d4080b4dba130b58592fa47efd636805ed1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject 類別
 這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)委派給擁有者物件，以**IUnknown**。  
@@ -52,14 +53,14 @@ class CComContainedObject : public Base
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|建構函式。 初始化擁有者物件的成員指標`IUnknown`。|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComContainedObject::AddRef](#addref)|擁有者物件上的參考計數遞增。|  
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|擷取擁有者物件`IUnknown`。|  
@@ -156,5 +157,5 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>傳回值  
  在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

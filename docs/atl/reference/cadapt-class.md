@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37ce02b9493c47a2c93d9e54e14f73b5c980317d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4e565b1e2c20abf31919774d7bc6eb34f4c5f78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cadapt-class"></a>CAdapt 類別
 此範本用來包裝重新定義傳址 (address-of) 運算子的類別，以傳回物件位址以外的內容。  
@@ -43,17 +44,17 @@ class CAdapt
  `T`  
  配接的類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAdapt::CAdapt](#cadapt)|建構函式。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAdapt::operator const T （& s)](#operator_const_t_amp)|傳回 `const` 的 `m_T` 參考。|  
 |[CAdapt::operator T （& s)](#operator_t_amp)|傳回 `m_T` 的參考。|  
@@ -63,7 +64,7 @@ class CAdapt
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAdapt::m_T](#m_t)|要配接的資料。|  
   
@@ -173,5 +174,5 @@ bool operator== (const T& rSrc) const;
 ### <a name="return-value"></a>傳回值  
  之間的比較結果`m_T`和`rSrc`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

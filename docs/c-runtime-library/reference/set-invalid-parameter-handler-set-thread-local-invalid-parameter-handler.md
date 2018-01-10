@@ -1,55 +1,54 @@
 ---
-title: "_set_invalid_parameter_handler _set_thread_local_invalid_parameter_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_invalid_parameter_handler"
-  - "_set_thread_local_invalid_parameter_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "set_invalid_parameter_handler"
-  - "_set_invalid_parameter_handler"
-  - "_set_thread_local_invalid_parameter_handler"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "無效的參數處理常式"
-  - "set_invalid_parameter_handler 函式"
-  - "_set_invalid_parameter_handler 函式"
-  - "_set_thread_local_invalid_parameter_handler 函式"
+title: "_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler | Microsoft Docs"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _set_invalid_parameter_handler
+- _set_thread_local_invalid_parameter_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- set_invalid_parameter_handler
+- _set_invalid_parameter_handler
+- _set_thread_local_invalid_parameter_handler
+dev_langs: C++
+helpviewer_keywords:
+- invalid parameter handler
+- set_invalid_parameter_handler function
+- _set_invalid_parameter_handler function
+- _set_thread_local_invalid_parameter_handler function
 ms.assetid: c0e67934-1a41-4016-ad8e-972828f3ac11
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 336a2f362ac9a67cb8bb176948fbb7b5c83329a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# _set_invalid_parameter_handler _set_thread_local_invalid_parameter_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-設定 CRT 偵測到無效的引數時要呼叫的函式。  
+# <a name="setinvalidparameterhandler-setthreadlocalinvalidparameterhandler"></a>_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler
+設定要在 CRT 偵測到無效引數時呼叫的函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _invalid_parameter_handler _set_invalid_parameter_handler(  
@@ -60,21 +59,21 @@ _invalid_parameter_handler _set_thread_local_invalid_parameter_handler(
 );  
 ```  
   
-#### 參數  
- \[in\] `pNew`  
- 新的無效參數處理常式函式指標。  
+#### <a name="parameters"></a>參數  
+ [輸入] `pNew`  
+ 新無效的參數處理常式的函式指標。  
   
-## 傳回值  
- 無效的參數處理常式的呼叫之前指標。  
+## <a name="return-value"></a>傳回值  
+ 呼叫前的無效的參數處理常式的指標。  
   
-## 備註  
- 許多 C 執行階段函式會檢查引數傳遞給它們的有效性。 如果傳遞了無效的引數，則可以設定的函式 `errno` 錯誤號碼或傳回錯誤碼。 在這種情況下，也稱為無效參數處理常式。 C 執行階段會提供結束程式，並顯示執行階段錯誤訊息的預設全域無效參數處理常式。 您可以使用 `_set_invalid_parameter_handler` 將自己的函式設定為全域的無效參數處理常式。 C 執行階段也支援執行緒區域無效參數處理常式。 如果執行緒區域參數處理常式在執行緒中使用設定的 `_set_thread_local_invalid_parameter_handler`, ，從執行緒中呼叫 C 執行階段函式使用該處理常式，而不是全域的處理常式。 只有一個函式可指定為全域無效的引數的處理常式，一次。 只有一個函式可指定為每個執行緒，此執行緒區域無效的引數處理常式，但不同的執行緒可以有不同的執行緒區域處理常式。 這可讓您變更的處理常式，用於您的程式碼的一部分，而不會影響其他執行緒的行為。  
+## <a name="remarks"></a>備註  
+ 許多 C 執行階段函式都會檢查傳遞給它們之引數的有效性。 如果傳遞無效引數，則此函式可以設定 `errno` 錯誤號碼，或傳回錯誤碼。 在這種情況下，也會呼叫無效的參數處理常式。 C 執行階段會提供預設全域無效的參數處理常式，以終止程式，並顯示執行階段錯誤訊息。 您可以使用 `_set_invalid_parameter_handler`，將您自己的函式設定為全域無效的參數處理常式。 C 執行階段也支援執行緒區域無效的參數處理常式。 如果使用 `_set_thread_local_invalid_parameter_handler` 在執行緒中設定執行緒區域參數處理常式，則從執行緒呼叫的 C 執行階段函式會使用該處理常式，而不是全域處理常式。 一次只有一個函式可以指定為全域無效引數處理常式。 只有一個函式可以指定為一個執行緒的執行緒區域無效引數處理常式，但不同的執行緒可以有不同的執行緒區域處理常式。 這可讓您變更程式碼某個部分所用的處理常式，而不會影響其他執行緒的行為。  
   
- 當執行階段呼叫不正確的參數的函式時，通常表示，發生無法復原的錯誤。 您提供無效參數處理常式函式應該儲存任何資料，它可以並中止。 它不應傳回主函式控制項，除非您確定是復原的錯誤。  
+ 執行階段呼叫無效參數函式時，通常表示發生無法復原的錯誤。 您提供的無效的參數處理常式函式應該會在儲存後中止任何資料。 除非您確定錯誤是可復原的，否則不應該將控制權傳回給主要函式。  
   
  無效的參數處理常式函式必須具有下列原型︰  
   
-```c  
+```  
 void _invalid_parameter(  
    const wchar_t * expression,  
    const wchar_t * function,   
@@ -84,20 +83,20 @@ void _invalid_parameter(
 );  
 ```  
   
- `expression` 引數是寬字串表示的引數運算式引發錯誤。`function` 引數是收到無效的引數的 CRT 函式名稱。`file` 引數是 CRT 原始程式檔包含函式的名稱。`line` 引數是在該檔案中的行號。 保留最後一個引數。 所有參數都具有值 `NULL` 除非使用 CRT 程式庫的偵錯版本。  
+ `expression` 引數是以寬字串表示引發錯誤的引數運算式。 `function` 引數是收到無效引數的 CRT 函式名稱。 `file` 引數是包含函式的 CRT 原始程式檔名稱。 `line` 引數是該檔案中的行號。 最後一個引數會予以保留。 除非使用偵錯版本的 CRT 程式庫，否則參數都會有值 `NULL`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
-|--------|-----------|  
-|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \< stdlib.h \><br /><br /> C \+ \+: \< d l i b \> 或 \< stdlib.h \>|  
+|常式傳回的值|必要的標頭|  
+|-------------|---------------------|  
+|`_set_invalid_parameter_handler`, `_set_thread_local_invalid_parameter_handler`|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|  
   
- `_set_invalid_parameter_handler` 和 `_set_thread_local_invalid_parameter_handler` 函式是 Microsoft 專有的。 相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
+ `_set_invalid_parameter_handler` 和 `_set_thread_local_invalid_parameter_handler` 函式是 Microsoft 特有的。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## 範例  
- 在下列範例中，不正確的參數錯誤處理常式用來列印收到無效的參數和檔案和行 CRT 來源中的函式。 使用偵錯 CRT 程式庫時，不正確的參數錯誤也會引發判斷提示，會停用在此範例使用 [\_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md)。  
+## <a name="example"></a>範例  
+ 在下列範例中，無效的參數錯誤處理常式是用來列印收到無效參數以及 CRT 來源中檔案和行的函式。 使用偵錯 CRT 程式庫時，無效參數錯誤也會引發判斷提示，而在這個範例中使用 [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) 予以停用。  
   
-```c  
+```C  
 // crt_set_invalid_parameter_handler.c  
 // compile with: /Zi /MTd  
 #include <stdio.h>  
@@ -135,10 +134,11 @@ int main( )
 ```  
   
 ```Output  
-在函式 common_vfprintf 中偵測到無效的參數。 檔案︰ minkernel\crts\ucrt\src\appcrt\stdio\output.cpp 行︰ 32 運算式︰ 格式 ！ = nullptr  
+Invalid parameter detected in function common_vfprintf. File: minkernel\crts\ucrt\src\appcrt\stdio\output.cpp Line: 32  
+Expression: format != nullptr  
 ```  
   
-## 請參閱  
- [\_get\_invalid\_parameter\_handler \_get\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
+## <a name="see-also"></a>請參閱  
+ [_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)   
  [CRT 函式的安全性增強版本](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)   
- [errno、\_doserrno、\_sys\_errlist 和 \_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)
+ [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

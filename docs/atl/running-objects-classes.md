@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a62df236672d8efd6cc464041273c47f7952144
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cea13d73fca1fcc8576c55881bbf9a6af7108a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="running-objects-classes"></a>執行物件的類別
 下列類別會提供執行物件的支援：  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="related-articles"></a>相關文章  
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

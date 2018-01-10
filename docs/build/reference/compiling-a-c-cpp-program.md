@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 75a48da1f4b0bf2832b1c82978e739ab01b96ca2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79fe25913f5b86768f60a13d37d188ae8101bf14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiling-a-cc-program"></a>編譯 C/C++ 程式
 
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/24/2017
 
 選擇編譯器主機和目標架構的資訊，請參閱[設定 Visual c + + 64 位元、 x64 的目標](../../build/configuring-programs-for-64-bit-visual-cpp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)

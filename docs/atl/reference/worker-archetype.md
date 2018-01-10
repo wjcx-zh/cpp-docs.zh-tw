@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a408af2ac7de2f71c98467e08c49187c346304e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44f275568df9b4f8200a3fac1d77520bab38e8d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="worker-archetype"></a>背景工作原型
 類別符合*工作者*原型提供程式碼以處理序的工作項目排入佇列的執行緒集區上。  
@@ -27,13 +28,13 @@ ms.lasthandoff: 10/24/2017
   
  若要實作的類別符合這個原型，類別必須提供下列功能：  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
-|[初始化](#initialize)|呼叫以初始化背景工作物件傳遞至任何要求之前[Execute](#execute)。|  
+|[Initialize](#initialize)|呼叫以初始化背景工作物件傳遞至任何要求之前[Execute](#execute)。|  
 |[執行](#execute)|呼叫以處理工作項目。|  
 |[終止](#terminate)|停止背景工作物件初始化之後的所有要求已都傳遞至呼叫[Execute](#execute)。|  
   
-|Typedef|說明|  
+|Typedef|描述|  
 |-------------|-----------------|  
 |[RequestType](#requesttype)|可處理的背景工作類別的工作項目類型的 typedef。|  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  這些類別符合這個原型：  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|收到要求在執行緒集區，並將它們傳遞至背景工作物件，會建立並終結針對每個要求。|  
   
@@ -117,7 +118,7 @@ void Terminate(void* pvParam) throw();
  `pvParam`  
  了解的背景工作類別的自訂參數。 也會傳遞至`WorkerArchetype::Initialize`和`WorkerArchetype::Execute`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Archetypes](../../atl/reference/atl-archetypes.md)   
  [概念](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)

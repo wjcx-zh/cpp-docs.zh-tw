@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97c54a8a07614440e343979f5c2529a3df1b7164
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17fae0cbb16208d5c7e7346f354f3501e4803d96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮點表示
 Microsoft Visual c + + 是 IEEE 數值標準一致。 有三種內部實際數字。 實際\*4 和 real\*8 Visual c + + 中使用。 實際\*4 宣告使用 word **float**。 實際\*使用 word 來宣告 8 **double**。 在 Windows 32 位元程式設計`long double`資料類型會對應至**double**。 沒有，不過，組件語言支援使用真正的計算 * 10 個資料類型。  
@@ -121,5 +122,5 @@ Microsoft Visual c + + 是 IEEE 數值標準一致。 有三種內部實際數�
   
 -   `0  = 1.0 * 2**-128 = all zeros--a special case.`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點數會失去精確度的原因](../../build/reference/why-floating-point-numbers-may-lose-precision.md)

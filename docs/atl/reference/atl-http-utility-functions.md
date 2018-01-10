@@ -10,11 +10,12 @@ ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 9cdb12373d93c17258fb615f667d7321e06f6728
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -72,7 +73,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="remarks"></a>備註  
  行為類似的目前版本[InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342) ，但不需要安裝的 WinInet 或 Internet Explorer。  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
  ## <a name="atlcombineurl"></a>AtlCombineUrl
@@ -256,7 +257,7 @@ inline void SystemTimeToHttpDate(
  *strTime*  
  接收 HTTP 日期時間，如 RFC 2616 中定義的字串變數的參考 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) 和 RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt))。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../../atl/active-template-library-atl-concepts.md)   
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)   
 

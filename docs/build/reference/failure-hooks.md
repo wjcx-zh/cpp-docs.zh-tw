@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86f3f27d06b353d0e34a62b636dc7ae0313a462c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1609b713fef253e8beab270ee2ed048466da6504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="failure-hooks"></a>錯誤攔截
 錯誤攔截已啟用以相同方式[告知攔截](../../build/reference/notification-hooks.md)。 傳回適當的值，以處理攔截常式需求可以繼續 （HINSTANCE 或 FARPROC） 或 0，表示應該擲回例外狀況。  
@@ -45,5 +46,5 @@ PfnDliHook   __pfnDliFailureHook2;
   
 -   有效的處理序位址 （匯入函式位址），如果錯誤攔截已成功取得位址。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [錯誤處理和通知](../../build/reference/error-handling-and-notification.md)

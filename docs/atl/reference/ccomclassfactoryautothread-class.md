@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactoryAutoThread
 - ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
 - ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactoryAutoThread class
+dev_langs: C++
+helpviewer_keywords: CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 88728e6fccc4aea6e8a1f0bbb2811ed299dd4ad9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 916bd22a982e70a7acb50793723be23416516d04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactoryautothread-class"></a>CComClassFactoryAutoThread 類別
 這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面，並允許在多個 apartment 中建立的物件。  
@@ -57,7 +40,7 @@ class CComClassFactoryAutoThread
      public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -71,7 +54,7 @@ class CComClassFactoryAutoThread
   
  ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)做為預設 class factory。 若要使用`CComClassFactoryAutoThread`，指定[DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)物件的類別定義中的巨集。 例如:   
   
- [!code-cpp[NVC_ATL_COM #9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CComObjectRootBase`  
@@ -83,7 +66,7 @@ class CComClassFactoryAutoThread
  `CComClassFactoryAutoThread`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactoryAutoThread::CreateInstance  
  建立指定的 CLSID 的物件，並擷取這個物件的介面指標。  
@@ -130,11 +113,10 @@ STDMETHODIMP LockServer(BOOL fLock);
   
  呼叫`LockServer`允許用戶端保留 class factory，以便可以快速地建立多個物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
  [CComClassFactory2 類別](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactorySingleton 類別](../../atl/reference/ccomclassfactorysingleton-class.md)   
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [類別概觀](../../atl/atl-class-overview.md)
-

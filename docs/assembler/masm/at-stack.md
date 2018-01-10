@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c573070dfe8b06f5789abd598e7685e2ab679ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b152b654c62dfbfa28fdf637a0c72d7b507df47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack"></a>@stack
 如 DGROUP 附近的堆疊或遠堆疊 （文字巨集） 的堆疊。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/24/2017
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [符號參考](../../assembler/masm/symbols-reference.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "72"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c6882732064b002f0c2d4eef03a0fee2f62287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a867203585a66bd07eb9f95e289557e82e0553a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (Common Language Runtime 編譯)
 可讓應用程式和元件使用 Common Language Runtime (CLR) 中的功能。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/24/2017
  在 Visual C++ 2005 以前， **/clr:noAssembly** 需要 **/LD**。 **/LD** 現在是您指定 **/clr:noAssembly**時意指要使用的項目。  
   
  **/clr:initialAppDomain**  
- 可讓 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 應用程式在 CLR 的第 1 版上執行。 如果您使用 **initialAppDomain**，就可能會看到 Microsoft 技術支援網站上 [BUG：使用 Managed Extensions for Visual C++ 元件時的 AppDomainUnloaded 例外狀況](http://go.microsoft.com/fwlink/?LinkID=169465) 所討論的一些問題。  
+ 可讓 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 應用程式在 CLR 的第 1 版上執行。 如果您使用**initialAppDomain**，您可能會看到的一些問題所討論的[BUG： 當您使用時的 AppDomainUnloaded 例外狀況 managed extensions for Visual c + + 元件](http://go.microsoft.com/fwlink/p/?linkid=169465)microsoft支援的網站。  
   
  使用 **initialAppDomain** 編譯的應用程式不應由使用 ASP.NET 的應用程式使用，因為它在 CLR 的第 1 版中不受支援。  
   
@@ -161,6 +162,6 @@ class {} x;
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

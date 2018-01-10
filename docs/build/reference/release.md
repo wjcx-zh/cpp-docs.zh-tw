@@ -1,41 +1,40 @@
 ---
-title: "/RELEASE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/RELEASE editbin 選項"
-  - "總和檢查碼設定"
-  - "RELEASE editbin 選項"
-  - "-RELEASE editbin 選項"
+title: "-RELEASE |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /release
+dev_langs: C++
+helpviewer_keywords:
+- RELEASE editbin option
+- -RELEASE editbin option
+- /RELEASE editbin option
+- checksum setting
 ms.assetid: 183422eb-6b3c-474e-9589-04a0e69dec5d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b3f23094279cba3cddc7dc596ea2fe9b91a0b77e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /RELEASE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="release"></a>/RELEASE
 ```  
 /RELEASE  
 ```  
   
-## 備註  
- 這個選項設定可執行檔之標頭中的總和檢查碼 \(Checksum\)。  
+## <a name="remarks"></a>備註  
+ 這個選項可執行檔的標頭中設定總和檢查碼。  
   
- 作業系統需要裝置驅動程式 \(Device Driver\) 的總和檢查碼。  建議您設定裝置驅動程式發行版本 \(Release Version\) 的總和檢查碼，以確保與將來的作業系統相容。  
+ 作業系統的裝置驅動程式需要總和檢查碼。 我們建議您設定您的裝置驅動程式，才能確保相容於未來的作業系統的發行版本的總和檢查碼。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [EDITBIN 選項](../../build/reference/editbin-options.md)

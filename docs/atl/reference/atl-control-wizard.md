@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b838ac036f6315209b2a4330c120e9c2b7486d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9167153c2b827e1bc2597e830e9b3c82ee31b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-control-wizard"></a>ATL 控制項精靈
 ATL 專案 （或具有 ATL 支援的 MFC 專案） 插入 ATL 控制項。 您可以使用此精靈將控制項的三種：  
@@ -90,7 +91,7 @@ ATL 專案 （或具有 ATL 支援的 MFC 專案） 插入 ATL 控制項。 您�
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。 不會自動填入此欄位。 如果您不會手動填入此欄位，控制項可能無法使用其他工具。 例如，ActiveX 控制項，而不會產生`ProgID`不適用於**插入 ActiveX 控制項** 對話方塊。 如需 對話方塊的詳細資訊，請參閱[插入 ActiveX 控制項對話方塊](../../windows/insert-activex-control-dialog-box.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL 控制項](../../atl/reference/adding-an-atl-control.md)   
  [將功能加入至複合控制項](../../atl/adding-functionality-to-the-composite-control.md)   
  [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - _mbscoll
 - _tcscoll
 - _ftcscoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - mbscoll function
@@ -52,37 +50,22 @@ helpviewer_keywords:
 - strcoll functions
 - strings [C++], comparing by code page
 ms.assetid: 900a7540-c7ec-4c2f-b292-7a85f63e3fe8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 43953fbd9473f491d628fd7389c4b9a62294e2b6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3e65837945b8c28ee0968dbeaded4fbdbf7e79c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcoll-wcscoll-mbscoll-strcolll-wcscolll-mbscolll"></a>strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l
 使用目前的地區設定或指定的 LC_COLLATE 轉換狀態分類來比較字串。  
   
 > [!IMPORTANT]
-> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbscoll` 和 `_mbscoll_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbscoll` 和 `_mbscoll_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -139,7 +122,7 @@ int _mbscoll_l(
   
  這些函式全都會驗證它們的參數。 如果 `string1` 或 `string2` 為 null 指標，或是 `count` 大於 `INT_MAX`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `_NLSCMPERROR`，並將 `errno` 設為 `EINVAL`。  
   
- 這兩個字串的比較是與地區設定相關的作業，因為每個地區設定都有不同的字元排序規則。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前執行緒的地區設定；具有 `_l` 後置字元的版本與沒有後置字元的對應函式相同，只不過它們會使用傳入的地區設定作為參數，而不是使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這兩個字串的比較是與地區設定相關的作業，因為每個地區設定都有不同的字元排序規則。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前執行緒的地區設定；具有 `_l` 後置字元的版本與沒有後置字元的對應函式相同，只不過它們會使用傳入的地區設定作為參數，而不是使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -149,7 +132,7 @@ int _mbscoll_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strcoll`|\<string.h>|  
 |`wcscoll`|\<wchar.h>、\<string.h>|  
@@ -159,7 +142,7 @@ int _mbscoll_l(
   
  如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll 函式](../../c-runtime-library/strcoll-functions.md)   

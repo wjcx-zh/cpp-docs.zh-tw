@@ -14,18 +14,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a4095ae7cccf33110e4f530c533256aba009aa6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbd1b955ae8ed3caf4f67dbcb9aa71419eb620c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-and-atl"></a>事件處理和 ATL
 本節示範如何使用 ATL 接收事件 它涵蓋了 COM 事件處理中的原則以及接收使用 ATL 所提供的支援的事件的細節  
   
  如何引發事件，並實作連接點的資訊，請參閱[ATL 連接點](../atl/atl-connection-points.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [事件處理原則](../atl/event-handling-principles.md)  
  討論所有事件處理的一般步驟。  
   
@@ -45,6 +46,6 @@ ms.lasthandoff: 10/24/2017
  [ATL](../atl/active-template-library-atl-concepts.md)  
  提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

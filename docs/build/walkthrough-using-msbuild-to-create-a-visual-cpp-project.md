@@ -15,11 +15,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1d37e6d19d7185d98a3e58967f27d4663a65b074
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92b954f334517adc22ca17f8324ec1a78819d9f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立 Visual C++ 專案
 本逐步解說示範如何使用[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]建置 Visual c + + 專案，在命令提示字元。 您將學習如何建立 c + + 原始程式檔和 Visual c + + 主控台應用程式以 XML 為基礎的專案檔案。 建置專案之後, 您將學習如何自訂建置程序。  

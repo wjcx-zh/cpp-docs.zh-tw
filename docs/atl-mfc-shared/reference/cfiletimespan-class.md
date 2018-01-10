@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 06a3976149e11b3fa9f4e61f854bd943a0c762b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da47f0113ec2e36f6df4afa32f6aff84d5ee6dfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 類別
 這個類別會提供管理相對日期和時間值與檔案相關聯的方法。  
@@ -37,24 +38,24 @@ ms.lasthandoff: 10/24/2017
 class CFileTimeSpan
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileTimeSpan::CFileTimeSpan](#cfiletimespan)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileTimeSpan::GetTimeSpan](#gettimespan)|呼叫此方法以擷取的時間範圍，從`CFileTimeSpan`物件。|  
 |[CFileTimeSpan::SetTimeSpan](#settimespan)|呼叫此方法以設定的時間範圍內`CFileTimeSpan`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFileTimeSpan::operator-](#operator_-)|在上執行減法`CFileTimeSpan`物件。|  
 |[CFileTimeSpan::operator ！ =](#operator_neq)|比較兩個 `CFileTimeSpan` 物件是否不相等。|  
@@ -271,7 +272,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
  `nSpan`  
  以毫秒為單位的時間範圍的新值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [FILETIME](http://msdn.microsoft.com/library/windows/desktop/ms724284)   
  [CFileTime 類別](../../atl-mfc-shared/reference/cfiletime-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c934ce36ae20727340ea9d2e6bd4d95272c908f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7b4d8dd6f6dced2b4847939b0d7ed560f1d59479
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl 類別
 提供 `IRowset` 介面的實作。  
@@ -52,7 +55,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
  `MapClass`  
  存放裝置的提供者所持有的所有資料列控制代碼。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -85,6 +88,6 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

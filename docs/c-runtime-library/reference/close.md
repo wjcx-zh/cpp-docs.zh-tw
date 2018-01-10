@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f46560346718016af015410730696e766afa5c9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cb1cace610479113c3a4be00daf634b0da75e2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="close"></a>_close
 關閉檔案。  
@@ -65,7 +66,7 @@ int _close(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_close`|\<io.h>|\<errno.h>|  
   
@@ -74,7 +75,7 @@ int _close(
 ## <a name="example"></a>範例  
  請參閱 [_open](../../c-runtime-library/reference/open-wopen.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_chsize](../../c-runtime-library/reference/chsize.md)   
  [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   

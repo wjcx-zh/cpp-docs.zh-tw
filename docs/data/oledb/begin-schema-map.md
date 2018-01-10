@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab6caf2e84f84731439b899b271817b57c550c77
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9682ac8a31ec7c585b1da7b9bc14388413ba56fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginschemamap"></a>BEGIN_SCHEMA_MAP
 表示結構描述對應的開頭。  
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   
  [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)   

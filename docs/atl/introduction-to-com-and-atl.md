@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62266dc46aec68747ba1b5c330f2736b36feb90e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1fe02283fc1f0723d86d9d18991c3af444f54db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-and-atl"></a>COM 和 ATL 簡介
 本節提供 COM 和 ATL 的簡介  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [COM 簡介](../atl/introduction-to-com.md)  
  提供概觀元件物件模型的 (COM) 的基本概念，包括介面**IUnknown**，參考計數， `QueryInterface`，封送處理，並彙總。  
   

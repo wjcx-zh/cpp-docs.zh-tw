@@ -103,11 +103,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f83ed395860033aa35dfedc4713653976a1f2763
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f96e403516d6f85804fa798d7a0c28575482ff43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-macros-for-build-commands-and-properties"></a>建置命令和屬性的一般巨集
 根據您的安裝選項，Visual Studio 可以提供數百個巨集給您。 這些對應 MSBuild 屬性依預設，或.props 或.targets 檔案，或您的專案設定所設定。 您可以在接受字串的專案 [屬性頁]  對話方塊的任何位置使用這些巨集。 這些巨集不區分大小寫。  
@@ -118,10 +119,10 @@ ms.lasthandoff: 10/24/2017
   
  下表描述可用的巨集常用的子集。 此清單未全部列出。 如需如何建立和使用為.props、.targets 和.vcxproj 檔案中的巨集 MSBuild 屬性定義的詳細資訊，請參閱[MSBuild 屬性](/visualstudio/msbuild/msbuild-properties)。  
   
-|巨集|說明|  
+|巨集|描述|  
 |-----------|-----------------|  
 |**$ （remotemachine)**|設定為偵錯屬性頁的 **Remote Machine** 屬性值。 如需詳細資訊，請參閱 [變更 C/C++ 偵錯組態的專案設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration) 。|  
-|**$(Configuration)**|目前的專案組態的名稱，例如"Debug"。|  
+|**$(Configuration)**|目前的專案設定名稱，例如 "Debug"。|  
 |**$(Platform)**|目前專案的平台，例如"Win32"的名稱。|  
 |**$ （parentname)**|(已取代。)包含這個專案項目的項目名稱。 這會是父資料夾名稱或專案名稱。|  
 |**$ （rootnamespace)**|包含應用程式的命名空間 (如果有的話)。|  
@@ -160,5 +161,5 @@ ms.lasthandoff: 10/24/2017
 |**$ （saferootnamespace)**|(已取代。)專案精靈會加入程式碼的命名空間名稱。 這個命名空間名稱只會包含有效 C++ 識別項允許的字元。|  
 |**$ （fxcopdir)**|fxcop.cmd 檔案的路徑。 不是所有 Visual C++ 版本都安裝 fxcop.cmd 檔案。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 Visual Studio 中建置 C++ 專案](../ide/building-cpp-projects-in-visual-studio.md)

@@ -1,60 +1,60 @@
 ---
-title: "&lt;include&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-  - "<include>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<include> C++ XML 標記"
-  - "include C++ XML 標記"
+title: "&lt;包含&gt;（Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+dev_langs: C++
+helpviewer_keywords:
+- include C++ XML tag
+- <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9a6b07ce540d67a44e46a24fb943dac93bb95a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;include&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<include\> 標記讓您參考其他檔案內的註解，這些檔案描述了您原始程式碼中的型別以及成員。  除了將文件註解直接放置在您原始程式碼檔案中，您也可以使用這種方法。  例如，您可以使用 \<include\> 將使用在您的小組或公司中的標準「未定案」註解。  
+# <a name="ltincludegt-visual-c"></a>&lt;包含&gt;（Visual c + +）
+\<include> 標記可讓您參考另一個檔案中描述原始程式碼中類型和成員的註解。 這是將文件註解直接放在原始程式碼檔中的替代方案。  例如，您可以使用\<包括 > 插入您的小組或公司使用的標準 「 重複使用 」 註解。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 <include file='filename' path='tagpath' />  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `filename`  
- 為含有文件的檔案名稱。  可將檔案名稱加上路徑。  將名稱加上單引號或雙引號。  編譯器會發出警告 \(如果找不到 `filename`。  
+ 包含文件的檔案名稱。 檔案名稱可以使用路徑進行限定。  以單引號或雙引號將名稱括起來。  如果編譯器找不到 `filename`，它會發出警告。  
   
  `tagpath`  
- 選取檔案所需的節點集合中包含的有效的 XPath 運算式。  
+ 有效的 XPath 運算式選取檔案中包含所需的節點集。  
   
  `name`  
- 註解前面標記內的名稱規範。`name` 會有一個 `id`。  
+ 標記中位在註解前面的名稱規範；`name` 會有 `id`。  
   
  `id`  
- 註解前面之標記的 ID。  將名稱加上單引號或雙引號。  
+ 位在註解前面的標記識別碼。  以單引號或雙引號將名稱括起來。  
   
-## 備註  
- \<include\> 標記使用了 XML XPath 的語法。  使用 \<include\>，參考方式的 XPath 文件可以自訂。  
+## <a name="remarks"></a>備註  
+ \<include> 標記使用 XML XPath 語法。 請參閱 XPath 的方式使用自訂的文件\<包括 >。  
   
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 進行編譯，將文件註解處理為檔案。  
+ 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
-## 範例  
- 這是多重檔案的範例。  第一個檔案，請使用 \<include\>，包含下列文件註解:  
+## <a name="example"></a>範例  
+ 這是多檔案範例。 第一個檔案，其\<包括 >，包含下列文件註解：  
   
 ```  
 // xml_include_tag.cpp  
@@ -74,7 +74,7 @@ public ref class Test2 {
 };  
 ```  
   
- 第二個檔案 \(xml\_include\_tag.doc\) 包含下列的文件註解。  
+ 第二個檔案 xml_include_tag.doc 包含下列文件註解：  
   
 ```  
 <MyDocs>  
@@ -94,7 +94,7 @@ The summary for this other type.
 </MyDocs>  
 ```  
   
-## 程式輸出  
+## <a name="program-output"></a>程式輸出  
   
 ```  
 <?xml version="1.0"?>  
@@ -117,5 +117,5 @@ The summary for this other type.
 </doc>  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

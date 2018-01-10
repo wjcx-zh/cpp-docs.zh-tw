@@ -1,35 +1,35 @@
 ---
-title: "&lt;list&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "list"
-  - "<list>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<list> C++ XML 標記"
-  - "list C++ XML 標記"
+title: "&lt;清單&gt;（Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- list
+- <list>
+dev_langs: C++
+helpviewer_keywords:
+- list C++ XML tag
+- <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e04fb5f7ff2ba22b53c0fe163455bfdb666f9b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;list&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<listheader\> 區塊用於定義表格或定義清單的標題列。  在定義表格時，您只需要提供一個詞彙項目做為標題。  
+# <a name="ltlistgt-visual-c"></a>&lt;清單&gt;（Visual c + +）
+\<listheader> 區塊用來定義資料表或定義清單的標題資料列。 定義資料表時，您只需要提供標題中詞彙的項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 <list type="bullet" | "number" | "table">  
@@ -44,21 +44,21 @@ manager: "ghogen"
 </list>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `term`  
- 將定義於 `description` 中的詞彙。  
+ 要定義的詞彙，可定義於 `description` 中。  
   
  `description`  
- 為項目符號、編號清單中的項目或 `term` 的定義其中之一。  
+ 項目符號或編號清單中的項目或者 `term` 的定義。  
   
-## 備註  
- 清單中的每個項目都以 \<item\> 區塊來指定。  當建立定義清單時，您必須指定 `term` 和 `description`。  但是對於表格、項目符號清單或編號清單，則只需提供 `description` 的項目。  
+## <a name="remarks"></a>備註  
+ 清單中的每個項目都是使用 \<item> 區塊所指定。 建立定義清單時，您需要同時指定 `term` 和 `description`。 不過，針對資料表、項目符號清單或編號清單，您只需要提供 `description` 的項目。  
   
- 在清單或表格中可以有全部需要的 \<item\> 區塊。  
+ 清單或資料表可以有所需的多個 \<item> 區塊。  
   
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 進行編譯，將文件註解處理為檔案。  
+ 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // xml_list_tag.cpp  
@@ -77,5 +77,5 @@ manager: "ghogen"
 class MyClass {};  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

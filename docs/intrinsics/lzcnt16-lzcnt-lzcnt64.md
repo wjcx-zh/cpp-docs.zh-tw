@@ -1,42 +1,43 @@
 ---
-title: "__lzcnt16，__lzcnt，__lzcnt64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__lzcnt64"
-  - "__lzcnt16"
-  - "__lzcnt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__lzcnt 內建"
-  - "lzcnt 指令"
-  - "lzcnt16 內建"
-  - "lzcnt 內建"
-  - "__lzcnt16 內建"
-  - "lzcnt64 內建"
-  - "__lzcnt64 內建"
+title: "__lzcnt16，__lzcnt，__lzcnt64 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __lzcnt64
+- __lzcnt16
+- __lzcnt
+dev_langs: C++
+helpviewer_keywords:
+- __lzcnt intrinsic
+- lzcnt instruction
+- lzcnt16 intrinsic
+- lzcnt intrinsic
+- __lzcnt16 intrinsic
+- lzcnt64 intrinsic
+- __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5fcd699cd137e6adbb2cf08f5852970d009f745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# __lzcnt16，__lzcnt，__lzcnt64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16，__lzcnt，__lzcnt64
+**Microsoft 特定的**  
   
- 計數的前置字元零 16\-、 32 或 64 位元的整數。  
+ 計數數目的前置零的 16 位、 32 或 64 位元的整數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned short __lzcnt16(  
@@ -50,29 +51,31 @@ unsigned __int64 __lzcnt64(
 );  
 ```  
   
-#### 參數  
- \[in\] `value`  
- 16\-、 32 或 64 位元不帶正負號的整數，若要掃描的以零開始。  
+#### <a name="parameters"></a>參數  
+ [輸入] `value`  
+ 16-、 32 或 64 位元不帶正負號的整數掃描前置零。  
   
-## 傳回值  
- 前置零的位元中的`value`參數。  如果`value`為零，則傳回值是輸入運算元的值 \(16、 32 或 64\) 的大小。  如果最重要的位元的`value`為 1，則傳回值為零。  
+## <a name="return-value"></a>傳回值  
+ 數目的前置零位元中的`value`參數。 如果`value`為零，則傳回值是輸入運算元 （16、 32 或 64） 的大小。 如果最高有效位元`value`，傳回的值為零。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__lzcnt16`|進階的位元操作|  
-|`__lzcnt`|進階的位元操作|  
-|`__lzcnt64`|在 64 位元模式的進階位元操作。|  
+|---------------|------------------|  
+|`__lzcnt16`|AMD： 進階的位元操作 (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt`|AMD： 進階的位元操作 (ABM)<br /><br /> Intel: Haswell|  
+|`__lzcnt64`|AMD： 進階 64 位元模式中的位元操作 (ABM)。<br /><br /> Intel: Haswell|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 每個這些內建函式會產生`lzcnt`指令。  值的大小， `lzcnt`指令會傳回其引數的大小相同。  在 32 位元模式有一般沒有 64 位元用途暫存器，因此沒有 64 位元`lzcnt`。  
+## <a name="remarks"></a>備註  
+ 每個這些內建函式會產生`lzcnt`指令。  值的大小，`lzcnt`指令會傳回等同於其引數的大小。  在 32 位元模式中有沒有 64 位元一般用途的暫存器，因此沒有 64 位元`lzcnt`。  
   
- 若要判斷硬體支援 `lzcnt`指令呼叫`__cpuid`與內建`InfoType=0x80000001` ，並檢查位元 5 的`CPUInfo[2] (ECX)`。  這個位元會支援指令時，若為 1 和 0 否則。  如果您執行的程式碼會使用此內建不支援的硬體上 `lzcnt`指令時，結果會發生無法預期。  
+ 若要判斷硬體支援`lzcnt`指令呼叫`__cpuid`與內建`InfoType=0x80000001`並檢查位元 5 的`CPUInfo[2] (ECX)`。 此位元會支援該指令，則為 1 和 0 否則。 如果您執行程式碼會使用此內建物件不支援的硬體上`lzcnt`指令，結果會產生無法預測。  
   
-## 範例  
+ 不支援的 Intel 處理器上`lzcnt`指令位元組編碼方式為執行指令， `bsr` （位元掃描反向）。 如果程式碼可攜性問題，請考慮使用`_BitScanReverse`內建改為。 如需詳細資訊，請參閱[_BitScanReverse，_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。  
+  
+## <a name="example"></a>範例  
   
 ```  
 // Compile this test with: /EHsc  
@@ -100,9 +103,18 @@ int main()
   
 ```  
   
-  **\_\_lzcnt16\(0x0\) \= 16 \_\_lzcnt16\(0xff\) \= 8 \_\_lzcnt16\(0xffff\) \= 0 的 \_\_lzcnt\(0x0\) \= 32 \_\_lzcnt\(0xff\) \= 24 \_\_lzcnt\(0xffff\) \= 16 \_\_lzcnt\(0xffffffff\) \= 0**   
-## 結束 Microsoft 特定  
- 藉由收益進階微裝置，及版權 2007年.人所有之商標。  重製與收益進階微裝置，及來自的使用權限.  
+```Output  
+__lzcnt16(0x0) = 16  
+__lzcnt16(0xff) = 8  
+__lzcnt16(0xffff) = 0  
+__lzcnt(0x0) = 32  
+__lzcnt(0xff) = 24  
+__lzcnt(0xffff) = 16  
+__lzcnt(0xffffffff) = 0  
+```  
   
-## 請參閱  
+**結束 Microsoft 特定的**  
+ 本文部分內容是由進階微裝置，Inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

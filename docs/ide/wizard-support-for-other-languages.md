@@ -1,49 +1,49 @@
 ---
-title: "其他語言的精靈支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.appwiz.EastAsianLanguages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC 專案的語言支援"
-  - "專案 [C++], 語言支援"
-  - "精靈 [C++], 語言支援"
+title: "其他語言的精靈支援 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.appwiz.EastAsianLanguages
+dev_langs: C++
+helpviewer_keywords:
+- wizards [C++], language support
+- language support for MFC projects
+- projects [C++], language support
 ms.assetid: b653c673-0687-455c-885f-15d7e2f4149d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef95c252621aa7f725098dfcd08c7b5b3620826
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 其他語言的精靈支援
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您安裝 Visual Studio 時，安裝應用程式會偵測列在系統中的地區設定 \(Locale\) 並安裝適合地區設定的語言範本。  例如，安裝程式會為西歐地區設定安裝英文、法文、義大利文、西班牙文及德文。  這些語言會出現在 MFC 應用程式精靈的[應用程式類型](../mfc/reference/application-type-mfc-application-wizard.md)頁面上 \[資源語言\] 清單。  
+# <a name="wizard-support-for-other-languages"></a>其他語言的精靈支援
+當您安裝 Visual Studio 時，安裝應用程式偵測到您的系統中所列的地區設定，並安裝適當的語言或多個樣板的地區設定。 例如，如西歐地區設定，安裝程式會安裝英文、 法文、 義大利文、 西班牙文和德文。 這些語言會出現在**資源語言**清單[應用程式類型](../mfc/reference/application-type-mfc-application-wizard.md)MFC 應用程式精靈頁面。  
   
-## 語言範本  
- 由於範本是以 ANSI 編碼方式為基礎，而且不是所有資源都可以在所有系統上編輯，因此不會在所有系統上安裝所有範本。  例如，依預設您無法在法文系統上編輯日文資源。  
+## <a name="language-templates"></a>語言的範本  
+ 範本是 ANSI 編碼方式為基礎，且並非所有的資源可供編輯所有系統上所有的系統上安裝不是所有範本。 例如，根據預設，您無法編輯法文的系統上的日文資源。  
   
- 如果您使用 Windows 2000 或更新的版本，想要建立其他語言的 MFC 應用程式，則必須從 Visual Studio Installer 媒體 \(光碟 1\) 將適當語言的範本目錄複製到您的系統。  
+ 如果您使用的 Windows 2000 或更新版本，而且您想要建立 MFC 應用程式中另一種語言，則您必須複製適當的語言的範本目錄從 Visual Studio 安裝程式媒體 (磁碟 1) 您的系統。  
   
 > [!NOTE]
->  若要編輯已建立的專案，您必須將系統地區設定 \(locale\) 設定為選取語言的適當地區設定。  
+>  若要編輯建立的專案，您必須設定您的系統地區設定所選取語言的適當地區設定。  
   
- 每個範本在 \\Microsoft Visual Studio .NET 2003\\Vc7\\VCWizards\\mfcappwiz\\templates\\ 目錄中都被指派了一個資料夾，如下表所示。  若要存取需要的語言範本，請將適當的資料夾複製到電腦上的 \\mfcappwiz\\templates\\ 目錄。  一旦複製資料夾，語言就會出現在 MFC 應用程式精靈的 \[**應用程式類型**\] 頁面上的 \[資源語言\] 清單當中。  
+ 此範本是每個指派的資料夾 \Microsoft Visual Studio.NET 2003\Vc7\VCWizards\mfcappwiz\templates\ 目錄中，如下表中所列。 若要存取的所需的語言的範本，將複製到您的電腦上的 \mfcappwiz\templates\ 目錄的適當的資料夾。 一旦複製資料夾的語言會出現在**資源語言**清單**應用程式類型**MFC 應用程式精靈頁面。  
   
-### Visual Studio .NET 中所提供的語言範本  
+### <a name="language-templates-provided-in-visual-studio-net"></a>Visual Studio.NET 中提供的語言範本  
   
-|Language|範本|  
-|--------------|--------|  
-|中文 \(繁體\)|1028|  
-|中文 \(簡體\)|2052|  
+|語言|範本|  
+|--------------|--------------|  
+|和 SharePoint 2010 顯示的|1028|  
+|中文 (簡體)|2052|  
 |英文|1033|  
 |法文|1036|  
 |德文|1031|  
@@ -52,11 +52,11 @@ caps.handback.revision: 10
 |韓文|1042|  
 |西班牙文|3082|  
   
-## Visual C\+\+ 精靈所產生檔案的格式  
- 已安裝的 Visual Studio 語言版本與系統地區設定不符時，Visual C\+\+ 精靈將會產生 Unicode 的專案。  例如，當 Visual Studio 日文版是安裝在地區設定設定為日文以外任何語言的電腦上時，Visual C\+\+ 精靈會產生由 Unicode 檔案所組成的專案。  這在有安裝 Windows Multi\-Language \(MUI\) 封裝的機器上是很常見的。  
+## <a name="format-of-visual-c-wizard-generated-files"></a>Visual c + + 精靈產生的檔案格式  
+ Visual c + + 精靈會以 Unicode 產生專案，Visual Studio 的已安裝的語言版本不相符的系統地區設定時。 例如，已設定為日文以外任何語言的地區設定的電腦上安裝日文版的 Visual Studio 時，則 Visual c + + 精靈會產生專案 Unicode 檔案所組成。 這是常見使用 Windows 多語系 (MUI) 套件設定的電腦上。  
   
- 此行為和系統地區設定與 Visual Studio 語言版本相同之系統的行為不同。  在這種情況下，將以系統字碼頁的 ANSI 建立專案檔。  
+ 此行為不同於系統的系統地區設定是語言版本的 Visual Studio 相同設定。 在此情況下，專案檔將 ANSI 中建立，在系統字碼頁。  
   
-## 請參閱  
- [為 Visual C\+\+ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)   
- [建立和管理 Visual C\+\+ 專案](../ide/creating-and-managing-visual-cpp-projects.md)
+## <a name="see-also"></a>請參閱  
+ [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)   
+ [建立和管理 Visual C++ 專案](../ide/creating-and-managing-visual-cpp-projects.md)

@@ -1,30 +1,32 @@
 ---
-title: "標準轉換和隱含 Boxing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Boxing, 隱含"
+title: "標準轉換和隱含 Boxing |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxing, implicit
 ms.assetid: 33f7fc7d-5674-44a2-a859-0e6a04fae519
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ade776e2d1eab0fe244254a91a2ed3830ffbda6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 標準轉換和隱含 Boxing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在需要 Boxing 的轉換時，編譯器會要求標準轉換。  
+# <a name="standard-conversions-and-implicit-boxing"></a>標準轉換和隱含 Boxing
+在需要進行 Boxing 的轉換時，編譯器會選擇進行標準轉換。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // clr_implicit_boxing_Std_conversion.cpp  
@@ -43,6 +45,9 @@ int main() {
 }  
 ```  
   
- **2**   
-## 請參閱  
+```Output  
+2  
+```  
+  
+## <a name="see-also"></a>請參閱  
  [Boxing](../windows/boxing-cpp-component-extensions.md)

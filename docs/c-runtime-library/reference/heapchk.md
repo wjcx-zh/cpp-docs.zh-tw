@@ -36,11 +36,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9fcbafbb98385878dbc84f300e8d2bf0dac581c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 790d887009137ccc9115484b2ace57302c94d851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapchk"></a>_heapchk
 在堆積上執行一致性檢查。  
@@ -76,7 +77,7 @@ int _heapchk( void );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_heapchk`|\<malloc.h>|\<errno.h>|  
   
@@ -125,7 +126,7 @@ int main( void )
 OK - heap is fine  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   
  [_heapadd](../../c-runtime-library/heapadd.md)   
  [_heapmin](../../c-runtime-library/reference/heapmin.md)   

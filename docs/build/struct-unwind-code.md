@@ -1,27 +1,27 @@
 ---
-title: "struct UNWIND_CODE | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "結構和 UNWIND_CODE |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 104955d8-7e33-4c5a-b0c6-3254648f0af3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 76059ff24b46fd537db0c2670a30cf3f42ee2166
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# struct UNWIND_CODE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-回溯程式碼陣列是用來將影響靜態暫存器和 RSP 的作業序列 \(Sequence\) 記錄到初構 \(Prolog\) 中。  每個程式碼項目都具有下列格式：  
+# <a name="struct-unwindcode"></a>struct UNWIND_CODE
+回溯程式碼陣列用來記錄會影響靜態暫存器和 RSP 初構中的一系列的作業。 每個程式碼項目具有下列格式：  
   
 |||  
 |-|-|  
@@ -29,104 +29,104 @@ manager: "ghogen"
 |UBYTE: 4|回溯作業程式碼|  
 |UBYTE: 4|作業資訊|  
   
- 陣列會依初構中位移的遞減順序來排序。  
+ 陣列的初構中的位移遞減順序來排序。  
   
  **初構中的位移**  
- 從執行此作業的指示結尾之初構開頭位移，加上 1 \(亦即下一個指示之開頭的位移\)。  
+ 從執行這項作業，加上 1 （亦即，位移的下一個指令開始） 的指示結尾的初構開頭的位移。  
   
  **回溯作業程式碼**  
- 注意：部分作業程式碼要求本機堆疊框架 \(Stack Frame\) 中的位移值必須是不帶正負號 \(Unsigned\) 的位移。  這個位移會從固定堆疊配置 \(Stack Allocation\) 的開頭 \(最低位址\) 開始。  如果 UNWIND\_INFO 的 \[框架暫存器\] 欄位為零，表示這個位移從 RSP 開始。  如果 \[框架暫存器\] 欄位為非零值 \(Nonzero\)，表示這是建立 FP 暫存器時 RSP 所在位置的位移。  這等於 FP 暫存器減去 FP 暫存器位移 \(16 \* UNWIND\_INFO 中的數值 \(Scaled\) 框架暫存器位移\)。  如果使用 FP 暫存器，則採用位移的任何回溯程式碼只能在 FP 暫存器已於初構中建立之後使用。  
+ 注意： 特定作業的程式碼需要本機堆疊框架中的值不帶正負號的位移。 此位移為 from 固定的堆疊配置的開頭 （最低位址）。 如果框架暫存器中的欄位 UNWIND_INFO 為零，此位移為 from RSP。 如果框架暫存器的欄位不是零，這是從 RSP 所在 fp 建立時的位移。 此值等於 fp 減 FP reg 位移 (16 * 縮放的框架 UNWIND_INFO 中註冊位移)。 如果使用 fp，然後採用位移任何回溯程式碼只能用於初構中建立的 fp 之後。  
   
- 就 UWOP\_SAVE\_XMM128 和 UWOP\_SAVE\_XMM128\_FAR 以外的所有 opcode 而言，位移一定是 8 的倍數，因為所有相關的堆疊值都是儲存在 8 個位元組界限上 \(堆疊本身一律採用 16 個位元組的對齊方式\)。  如果是使用短位移 \(小於 512 K\) 的作業程式碼，這個程式碼的節點中最終的 USHORT 會存放除以 8 之後的位移。  如果是使用長位移 \(512 K \<\= 位移 \< 4 GB\) 的作業程式碼，這個程式碼的最終兩個 USHORT 節點則會以位元組由小到大的格式存放位移。  
+ 如 UWOP_SAVE_XMM128 和 UWOP_SAVE_XMM128_FAR 以外的所有 opcode，位移一定會 8 的倍數，因為感興趣的所有堆疊的值會都儲存在 8 位元組界限 （堆疊本身為 alwayson 對齊 16 位元組）。 如需簡短的位移 (不超過 512 K) 的作業碼，最終的 USHORT 節點，此程式碼中保存的位移除以 8。 針對長時間的位移的作業程式碼 (512 K < = 位移 < 4 GB)，這段程式碼的最後兩個 USHORT 節點保留位移 （以位元組由小到大格式）。  
   
- 如果是 opcode UWOP\_SAVE\_XMM128 和 UWOP\_SAVE\_XMM128\_FAR，位移一定是 16 的倍數，因為所有的 128 位元 XMM 作業都必須發生在 16 個位元組對齊的記憶體內。  因此，UWOP\_SAVE\_XMM128 會採用 16 這個比例因數，允許小於 1 M 的位移。  
+ 作業碼 UWOP_SAVE_XMM128 和 UWOP_SAVE_XMM128_FAR 位移因為一律為 16 的倍數 128 位元 XMM 的所有作業必須都發生在 16 個位元組對齊的記憶體上。 因此，16 縮放比例就會用於 UWOP_SAVE_XMM128，允許的小於 1 M 位移。  
   
  回溯作業程式碼是下列其中一項：  
   
- UWOP\_PUSH\_NONVOL \(0\)1 節點  
+ UWOP_PUSH_NONVOL (0) 1 節點  
   
- 推入靜態整數暫存器，從 RSP 每次遞減 8。  作業資訊是暫存器的號碼。  請注意，由於終解 \(Epilog\) 的條件約束 \(Constraint\)，UWOP\_PUSH\_NONVOL 回溯程式碼必須先出現在初構，最後出現在回溯程式碼陣列。  這種相對的順序適用於 UWOP\_PUSH\_MACHFRAME 以外的其他所有回溯程式碼。  
+ 推送靜態整數暫存器，遞減 RSP 8。 作業資訊是暫存器的數目。 請注意，終上的條件約束，因為 UWOP_PUSH_NONVOL 回溯程式碼必須先出現在初構中相對的最後一個回溯程式碼陣列中。 此相對順序套用至 UWOP_PUSH_MACHFRAME 以外的所有其他回溯程式碼。  
   
- UWOP\_ALLOC\_LARGE \(1\)2 或 3 節點  
+ UWOP_ALLOC_LARGE (1) 2 或 3 的節點  
   
- 在堆疊上配置大尺寸的區域。  有兩個方式：  如果作業資訊等於 0，就會將除以 8 之後的配置大小記錄到下一個位置 \(Slot\)，以允許配置的上限為 512 K – 8。  如果作業資訊等於 1，便會將配置的未縮放 \(Unscaled\) 大小以位元組由小到大的格式記錄到後面兩個位置，以允許配置的上限為 4 GB – 8。  
+ 配置在堆疊上的大型區域。 有兩種形式。 如果作業資訊等於 0，則除以配置的大小 8 會記錄到下一個位置，允許最多 512 K-8 配置。 如果作業資訊等於 1，則允許配置的位元組由小到大格式的下面兩個插槽中記錄的配置未縮放的大小上限為 4 GB-8。  
   
- UWOP\_ALLOC\_SMALL \(2\)1 節點  
+ UWOP_ALLOC_SMALL (2) 1 節點  
   
- 在堆疊上配置小尺寸的區域。  配置的大小為作業資訊欄位 \* 8 \+ 8，允許從 8 到 128 個位元組的配置大小。  
+ 配置在堆疊上的小型區域。 配置的大小是作業資訊欄位 * 8 + 8，允許 8 到 128 個位元組的配置。  
   
- 堆疊配置的回溯程式碼應該一律採用最短的可能編碼方式：  
+ 堆疊配置的回溯程式碼應該一律使用最短的可能編碼方式：  
   
 |||  
 |-|-|  
 |**配置大小**|**回溯程式碼**|  
-|8 到 128 個位元組|UWOP\_ALLOC\_SMALL|  
-|136 到 512 K\-8 個位元組|UWOP\_ALLOC\_LARGE, operation info \= 0|  
-|512 K 到 4 G–8 個位元組|UWOP\_ALLOC\_LARGE, operation info \= 1|  
+|8 到 128 個位元組|UWOP_ALLOC_SMALL|  
+|136 到 512-8 個位元組|UWOP_ALLOC_LARGE，作業資訊 = 0|  
+|512 K 到 4 G-8 個位元組|UWOP_ALLOC_LARGE，作業資訊 = 1|  
   
- UWOP\_SET\_FPREG \(3\)1 節點  
+ UWOP_SET_FPREG (3) 1 節點  
   
- 藉由將暫存器設定成目前 RSP 的一些位移，以建立框架指標暫存器。  位移等於 UNWIND\_INFO 中 \[框架暫存器\] 位移 \(縮放\) 欄位 \* 16，允許從 0 到 240 範圍的位移。  使用位移能夠建立指向固定堆疊配置中央的框架指標，並藉由允許更多的存取使用簡短的指示形式，有助於提高程式碼的密度。  請注意，作業資訊欄位為保留欄位，不能使用。  
+ 建立的暫存器設為目前 RSP 某些位移的框架指標暫存器。 位移是等於 UNWIND_INFO 註冊框架位移 （已縮放） 欄位 * 16，允許從 0 到 240 的位移。 使用位移允許建立框架指標，指向中間的固定的堆疊配置，藉由使用更多使用簡短的指示表單的存取協助程式碼的密度。 請注意作業資訊欄位已保留，而且不應使用。  
   
- UWOP\_SAVE\_NONVOL \(4\)2 節點  
+ UWOP_SAVE_NONVOL (4) 的 2 個節點  
   
- 使用 MOV \(而非 PUSH\) 將靜態整數暫存器儲存到堆疊上。  這主要用在壓縮包裝 \(Shrink\-Wrapping\)，其中靜態暫存器會儲存到堆疊中先前所配置的位置。  作業資訊是暫存器的號碼。  以 8 為倍數縮放的堆疊位移會記錄在下一個回溯作業程式碼位置上，如前面注意事項所述。  
+ 將靜態整數暫存器儲存使用 MOV 而不推入堆疊上。 這主要用於此處，靜態暫存器儲存在先前配置的位置堆疊的位置。 作業資訊是暫存器的數目。 調整所-8 堆疊位移會記錄在下一個回溯作業程式碼位置，如上述注意事項中所述。  
   
- UWOP\_SAVE\_NONVOL\_FAR \(5\)3 節點  
+ UWOP_SAVE_NONVOL_FAR (5) 3 個節點  
   
- 使用 MOV \(而非 PUSH\)，將靜態整數暫存器以長位移儲存到堆疊上。  這主要用在壓縮包裝 \(Shrink\-Wrapping\)，其中靜態暫存器會儲存到堆疊中先前所配置的位置。  作業資訊是暫存器的號碼。  未縮放的堆疊位移會記錄在後面兩個回溯作業程式碼位置上，如前面注意事項所述。  
+ 將靜態整數暫存器儲存以長位移，而不發送使用 MOV 堆疊上。 這主要用於此處，靜態暫存器儲存在先前配置的位置堆疊的位置。 作業資訊是暫存器的數目。 無縮放的堆疊會記錄在接下來兩個回溯作業程式碼位置，如上述注意事項中所述。  
   
- UWOP\_SAVE\_XMM128 \(8\)2 節點  
+ UWOP_SAVE_XMM128 (8) 的 2 個節點  
   
- 將靜態 XMM 暫存器的全部 128 個位元儲存到堆疊上。  作業資訊是暫存器的號碼。  以 16 為倍數縮放的堆疊位移會記錄到下一個位置。  
+ 將所有的 128 位元的靜態 xmm 暫存器儲存在堆疊上。 作業資訊是暫存器的數目。 調整 x 16 堆疊位移會記錄在下一個位置。  
   
- UWOP\_SAVE\_XMM128\_FAR \(9\)3 節點  
+ UWOP_SAVE_XMM128_FAR (9) 3 個節點  
   
- 將靜態 XMM 暫存器的全部 128 個位元以長位移儲存到堆疊上。  作業資訊是暫存器的號碼。  未縮放的堆疊會記錄到後面兩個位置上。  
+ 將所有的 128 位元的靜態 xmm 暫存器儲存以長位移堆疊上。 作業資訊是暫存器的數目。 無縮放的堆疊位移會記錄在下面兩個位置。  
   
- UWOP\_PUSH\_MACHFRAME \(10\)1 節點  
+ UWOP_PUSH_MACHFRAME (10) 1 節點  
   
- 推入機器框架。  這是用來記錄硬體中斷或例外狀況的影響。  有兩個方式：  如果作業資訊等於 0，表示下列項目已推入堆疊：  
+ 推送機器框架。  這用來記錄硬體插斷或例外狀況的影響。 有兩種形式。 如果作業資訊會等於 0，下列項目已推入堆疊：  
   
 |||  
 |-|-|  
-|RSP\+32|SS|  
-|RSP\+24|舊的 RSP|  
-|RSP\+16|EFLAGS|  
-|RSP\+8|CS|  
-|RSP|RIP|  
+|RSP + 32|SS|  
+|RSP + 24|舊 RSP|  
+|RSP + 16|EFLAGS|  
+|RSP + 8|CS|  
+|RSP|擷取|  
   
  如果作業資訊等於 1，表示改為推入下列項目：  
   
 |||  
 |-|-|  
-|RSP\+40|SS|  
-|RSP\+32|舊的 RSP|  
-|RSP\+24|EFLAGS|  
-|RSP\+16|CS|  
-|RSP\+8|RIP|  
+|RSP + 40|SS|  
+|RSP + 32|舊 RSP|  
+|RSP + 24|EFLAGS|  
+|RSP + 16|CS|  
+|RSP + 8|擷取|  
 |RSP|錯誤碼|  
   
- 這個回溯程式碼將會固定出現在空的初構中，它永遠都不會真的執行，而是會出現在中斷常式的真實進入點 \(Entry Point\)，只為了提供一個位置以模擬推入機器框架的動作而存在。  UWOP\_PUSH\_MACHFRAME 會記錄該項模擬，指出在概念上機器已經完成下列作業：  
+ 這個回溯程式碼一律會出現在空的初構，永遠不會實際執行，但改為顯示之前的插斷常式，實際的進入點和只用來提供一個位置以模擬推入機器框架存在。 UWOP_PUSH_MACHFRAME 會記錄該模擬，這表示電腦已經在概念上完成下列：  
   
- 從 *Temp* 堆疊頂端移除 RIP 傳回位址  
+ RIP 傳回位址從頂端到堆疊中取出*Temp*  
   
  推入 SS  
   
- 推入舊的 RSP  
+ 推入舊 RSP  
   
  推入 EFLAGS  
   
  推入 CS  
   
- 推入 *Temp*  
+ 推播*Temp*  
   
- 推入錯誤碼 \(如果作業資訊等於 1\)  
+ 推入錯誤碼 （如果 op 資訊等於 1）  
   
- 模擬的 UWOP\_PUSH\_MACHFRAME 作業會將 RSP 每次遞減 40 \(作業資訊等於 0\) 或 48 \(作業資訊等於 1\)。  
+ 模擬的 UWOP_PUSH_MACHFRAME 作業遞減 RSP 由 40 （作業資訊會等於 0） 或 48 （op 資訊等於 1）。  
   
  **作業資訊**  
- 這 4 個位元的意義會依作業程式碼而有所不同。  若要替一般用途 \(整數\) 暫存器編碼，請使用下列對應：  
+ 這些 4 個位元的意義取決於作業程式碼。 若要編碼的一般用途 （整數） 暫存器，請使用下列對應：  
   
 |||  
 |-|-|  
@@ -138,7 +138,7 @@ manager: "ghogen"
 |5|RBP|  
 |6|RSI|  
 |7|RDI|  
-|8 至 15|R8 to R15|  
+|8 到 15|若要 R15 R8|  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [回溯資料以進行例外狀況處理與偵錯工具支援](../build/unwind-data-for-exception-handling-debugger-support.md)

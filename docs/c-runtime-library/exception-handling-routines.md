@@ -15,18 +15,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d12410aba4f64f54cbbfcc123d842171441192a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95ecbc69dd9cbd86bd7891c79f115442f659ff94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-routines"></a>例外狀況處理常式
 使用 C++ 例外狀況處理函式在程式執行期間從非預期的事件復原。  
   
 ### <a name="exception-handling-functions"></a>例外狀況處理函式  
   
-|函式|用法|  
+|功能|使用|  
 |--------------|---------|  
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|以 C++ 類型化例外狀況處理 Win32 例外狀況 (C 結構化例外狀況)|  
 |[set_terminate](../c-runtime-library/reference/set-terminate-crt.md)|安裝要由 `terminate` 呼叫的專屬終止常式|  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
 |[terminate](../c-runtime-library/reference/terminate-crt.md)|在擲回例外狀況之後，在某些情況下自動呼叫。 `terminate` 函式會呼叫 `abort` 或您使用 `set_terminate` 指定的函式|  
 |[unexpected](../c-runtime-library/reference/unexpected-crt.md)|呼叫 `terminate` 或您使用 `set_unexpected` 指定的函式。 目前 Microsoft C++ 例外狀況處理實作中未使用 `unexpected`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

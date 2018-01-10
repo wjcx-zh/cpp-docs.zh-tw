@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - code comments, C++
 - comments, documenting code
 - comments, C++ code
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c6c97e27ff4019eec3ee3f63f2b4ed06db6af317
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 482b9f2f3d9917466becff3f2c9bf9fea6f599f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comments-c"></a>註解 （c + +）
 註解是會被編譯器忽略，但對程式設計人員而言很有用的文字。 註解通常用來標註程式碼供未來參考。 編譯器會將它們視為空白字元。 您可以使用在測試中的註解，讓特定的程式碼行未啟用;不過， `#if` / `#endif`效果更好，前置處理器指示詞，因為您可以圍繞包含註解的程式碼，但是您無法巢狀註解。  
@@ -38,5 +36,5 @@ ms.lasthandoff: 09/25/2017
   
  註解字元 (`/*`、`*/` 和 `//`) 在字元常數、字串常值或註解中沒有特殊意義。 因此，使用第一種語法的註解不可以是巢狀。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

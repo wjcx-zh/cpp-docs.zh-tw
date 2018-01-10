@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f326ec0ed43463d0d2ca15103c77bb914a11592
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad7e454af3ff8923d60315cd74d48daf9bd665a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbb-routines"></a>_ismbb 常式
 使用目前的地區設定或指定的 LC_CTYPE 轉換狀態分類，測試指定的整數值 `c` 是否符合特定條件。  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
   
  `_ismbb` 系列中的常式會依照下列方式來測試指定的整數 `c` 。  
   
-|常式|位元組測試條件|  
+|常式傳回的值|位元組測試條件|  
 |-------------|-------------------------|  
 |[_ismbbalnum](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum` &#124;&#124; `_ismbbkalnum`.|  
 |[_ismbbalpha](reference/ismbbalpha-ismbbalpha-l.md)|`isalpha` &#124;&#124; `_ismbbkalnum`.|  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/24/2017
   
  下表顯示撰寫這些常式之測試條件的 ORed 值。 資訊清單常數 `_BLANK`、 `_DIGIT`、 `_LOWER`、 `_PUNCT`和 `_UPPER` 是在 Ctype.h 中所定義。  
   
-|常式|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|非<br /><br /> ASCII<br /><br /> 文字|非<br /><br /> ASCII<br /><br /> punct|  
+|常式傳回的值|_BLANK|_DIGIT|LOWER|_PUNCT|UPPER|非<br /><br /> ASCII<br /><br /> 文字|非<br /><br /> ASCII<br /><br /> punct|  
 |-------------|-------------|-------------|-----------|-------------|-----------|------------------------------|-------------------------------|  
 |`_ismbbalnum`|—|x|x|—|x|x|—|  
 |`_ismbbalpha`|—|—|x|—|x|x|—|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/24/2017
   
  `_ismbb` 常式可當作函式和巨集來實作。 如需如何選擇實作的詳細資訊，請參閱[在函式和巨集之間選擇的建議](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../c-runtime-library/byte-classification.md)   
  [is、isw 常式](../c-runtime-library/is-isw-routines.md)   
  [_mbbtombc、_mbbtombc_l](../c-runtime-library/reference/mbbtombc-mbbtombc-l.md)   

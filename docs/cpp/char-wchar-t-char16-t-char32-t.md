@@ -18,11 +18,12 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4eaccef4253d2b677f01801b680bb94d8a4d3516
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c01d4718bbc1781ea4705945bb90874384e09058
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
 類型 char、wchar_t、char16_t 和 char32_t 是內建類型，代表英數字元，以及非英數字符和非列印字元。 char 的大小是 8 個位元、wchar_t 和 char16_t 的大小是 16 個位元，而 char32_t 是 32 個位元。  

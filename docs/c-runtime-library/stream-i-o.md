@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>資料流 I/O
 這些函式會處理不同大小和格式的資料，範圍從單一字元到大型資料結構。 它們也提供緩衝處理，如此可改善效能。 資料流緩衝區的預設大小是 4K。 這些常式只會影響執行階段程式庫常式所建立的緩衝區，而且不會影響作業系統所建立的緩衝區。  
   
 ### <a name="stream-io-routines"></a>資料流 I/O 常式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md)( [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|清除資料流的錯誤指標|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|關閉資料流|  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
 |[getc、getwc](../c-runtime-library/reference/getc-getwc.md)|從資料流讀取字元 ( `fgetc` 和 `fgetwc`的巨集版本)|  
 |[getchar、getwchar](../c-runtime-library/reference/getc-getwc.md)|從 `stdin` 讀取字元 ( `fgetchar` 和 `fgetwchar`的巨集版本)|  
 |[_getmaxstdio](../c-runtime-library/reference/getmaxstdio.md)|傳回允許在資料流 I/O 層級同時開啟的檔案數目。|  
-|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|從 `stdin` 讀取行|  
+|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|從 `stdin`讀取行|  
 |[_getw](../c-runtime-library/reference/getw.md)|從資料流讀取二進位 `int`|  
 |[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)、[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|將格式化資料寫入 `stdout`|  
 |[putc、putwc](../c-runtime-library/reference/putc-putwc.md)|將字元寫入資料流 ( `fputc` 和 `fputwc`的巨集版本)|  
@@ -103,6 +104,6 @@ ms.lasthandoff: 10/24/2017
   
  只有在具有 `fflush` 或是檔案定位函式 (`fseek`、 `fsetpos`或 `rewind`) 的中間呼叫時，輸入才能直接遵循輸出。 如果輸入作業遇到檔案結尾，則輸出可以遵循輸入，而沒有檔案定位函式的中間呼叫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸入和輸出](../c-runtime-library/input-and-output.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

@@ -47,11 +47,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25207b525ec1c5e4c19d114281a0daff2d38ea1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0c5ee9588635a50ca618a39e919661f9df08a27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 判斷整數是否代表英數字元。  
@@ -85,7 +86,7 @@ int _iswalnum_l(
 ## <a name="return-value"></a>傳回值  
  如果 `c` 表示特定的英數字元，則這些常式都會傳回非零。 `isalnum`傳回非零值，如果`isalpha`或`isdigit`非零代表`c`，也就是如果`c`是在範圍內 A-Z、 a-z 或 0-9。 如果 `iswalpha` 或 `iswdigit` 對於 `c` 為非零，則 `iswalnum` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
- 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isalnum` 和 `_isalnum_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
   
@@ -98,16 +99,16 @@ int _iswalnum_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`isalnum`|\<ctype.h>|  
 |`iswalnum`|\<ctype.h> 或 \<wchar.h>|  
 |`_isalnum_l`|\<ctype.h>|  
 |`_iswalnum_l`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)

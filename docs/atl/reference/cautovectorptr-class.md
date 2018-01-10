@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - ATLBASE/ATL::CAutoVectorPtr::Detach
 - ATLBASE/ATL::CAutoVectorPtr::Free
 - ATLBASE/ATL::CAutoVectorPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 類別
 這個類別表示智慧型指標物件使用向量 new 和 delete 運算子。  
@@ -64,11 +47,11 @@ class CAutoVectorPtr
  `T`  
  指標類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|建構函式。|  
 |[CAutoVectorPtr:: ~ CAutoVectorPtr](#dtor)|解構函式。|  
@@ -84,7 +67,7 @@ class CAutoVectorPtr
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAutoVectorPtr::operator T *](#operator_t__star)|轉型運算子。|  
 |[CAutoVectorPtr::operator =](#operator_eq)|指派運算子。|  
@@ -96,13 +79,13 @@ class CAutoVectorPtr
 |[CAutoVectorPtr::m_p](#m_p)|指標的資料成員變數。|  
   
 ## <a name="remarks"></a>備註  
- 這個類別會提供建立和管理智慧型指標，可協助您藉由自動釋放資源，將會超出範圍時防止記憶體流失的方法。 `CAutoVectorPtr`類似於`CAutoPtr`、 唯一的差異在於，`CAutoVectorPtr`使用[向量新 &#91; &#93;](../../standard-library/new-operators.md#op_new_arr)和[向量 delete &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr)地配置和釋放記憶體，而不使用 c + +**新**和**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合類別`CAutoVectorPtr`所需。  
+ 這個類別會提供建立和管理智慧型指標，可協助您藉由自動釋放資源，將會超出範圍時防止記憶體流失的方法。 `CAutoVectorPtr`類似於`CAutoPtr`、 唯一的差異在於，`CAutoVectorPtr`使用[向量新 &#91; &#93;](../../standard-library/new-operators.md#op_new_arr)和[向量 delete &#91; &#93;](../../standard-library/new-operators.md#op_delete_arr)地配置和釋放記憶體，而不是c + +**新**和**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果的集合類別`CAutoVectorPtr`所需。  
 
   
  請參閱[CAutoPtr](../../atl/reference/cautoptr-class.md)使用智慧型指標類別的範例。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlbase.h  
+ **標頭：** atlbase.h  
   
 ##  <a name="allocate"></a>CAutoVectorPtr::Allocate  
  呼叫這個方法來配置所指向的物件陣列所需的記憶體`CAutoVectorPtr`。  
@@ -130,7 +113,7 @@ void Attach(T* p) throw();
   
 ### <a name="parameters"></a>參數  
  `p`  
- `CAutoVectorPtr`物件需要 this 指標的擁有權。  
+ `CAutoVectorPtr`物件將會採取這個指標的擁有權。  
   
 ### <a name="remarks"></a>備註  
  當`CAutoVectorPtr`物件會使用指標的擁有權，則它會自動刪除的指標與任何已配置的資料離開範圍時。 如果[CAutoVectorPtr::Detach](#detach)是呼叫，程式設計人員一次的釋放任何責任，指定配置的資源。  
@@ -223,7 +206,6 @@ operator T*() const throw();
 ### <a name="remarks"></a>備註  
  傳回在類別樣板中定義的物件資料類型的指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAutoPtr 類別](../../atl/reference/cautoptr-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76a4f2bb14b7878c8843dc89bece4fdd5b2e3c02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14afd27887368f07610fb1315d7b573c09382c49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL：SQL 和 C++ 資料類型 (ODBC)
 > [!NOTE]
@@ -63,6 +66,6 @@ ms.lasthandoff: 10/24/2017
   
  如果您使用 MFC ODBC 資料庫類別和 Microsoft SQL Server ODBC 驅動程式，使用 ODBC 資料指標程式庫**ASSERT**可能會發生連同`CDBException`如果呼叫`CRecordset::Update`呼叫之後`CRecordset::Requery`。 請改為呼叫`CRecordset::Close`和`CRecordset::Open`而不是`CRecordset::Requery`。 另一個解決方案就是不要使用 ODBC 資料指標程式庫，因為 SQL Server 和 SQL Server ODBC 驅動程式提供原生支援資料指標的原生而且不需要 ODBC 資料指標程式庫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SQL](../../data/odbc/sql.md)   
  [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

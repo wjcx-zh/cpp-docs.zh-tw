@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: af9e2e32546d584bd37c0621c38a093fbeb75891
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d90ea90e7aa51f42a9650fce9a9cd19b0745d23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filenames"></a>檔案名稱
 **ANSI 4.9.3**：組成有效檔案名稱的規則  
@@ -26,5 +27,5 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱[命名檔案](http://msdn.microsoft.com/library/windows/desktop/aa365247)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式庫函式](../c-language/library-functions.md)

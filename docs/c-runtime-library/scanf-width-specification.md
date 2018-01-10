@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee2fa7f80f47e2d3379bc4e68aec4496e8f4f01a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scanf-width-specification"></a>scanf 寬度規格
 下列資訊適用於任何 `scanf` 函式系列中的格式字串解譯，包含安全版本，例如 `scanf_s`。 這些函式通常會假設輸入資料流分割成一連串的語彙基元。 語彙基元會以空白字元 (空格、定位字元或新行字元) 分隔，若為數字型別，根據第一個字元無法轉換成數字文字的指示，則以數字資料類型的自然結束分隔。 不過，寬度規格可能會用來造成輸入剖析在語彙基元自然結束之前停止。  
@@ -103,7 +104,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
   
  無論基於任何原因，當 `scanf` 函式停止讀取輸入欄位時，下一個輸入欄位會視為以未讀取的第一個字元開始。 如果有衝突字元，則會視為未讀取，且是下一個輸入欄位的第一個字元，或輸入資料流上後續讀取作業的第一個字元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   
  [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
  [格式規格欄位：scanf 和 wscanf 函式](../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)   

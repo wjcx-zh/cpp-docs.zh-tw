@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2b7abbb7a09f5205ada192cf15d5b7eb3c5c6b33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2fc9e6a1d2c94e74ef8aabf085af8fc4dc0bc28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-functions-with-inline-assembly"></a>使用內嵌組譯碼撰寫函式
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -85,7 +86,7 @@ int power2( int num, int power )
   
  由於 `power2` 的內嵌版本不會執行 C `return` 陳述式，如果您是在警告層級 2 (含) 更高層級進行編譯，它就會產生無害的警告。 函式確實會傳回值，不過，編譯器在沒有 `return` 陳述式時無法分辨這種情形。 您可以使用[#pragma 警告](../../preprocessor/warning.md)停用產生這個警告。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在 __asm 區塊中使用 C 或 C++](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)

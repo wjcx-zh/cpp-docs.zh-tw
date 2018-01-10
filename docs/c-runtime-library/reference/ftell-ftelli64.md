@@ -38,11 +38,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b37db89ca7d9e3facb7de2fbce2dc819cfa03e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df0feee9beb2b2fc5144974f1fc06ff2b8d02b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftell-ftelli64"></a>ftell、_ftelli64
 取得檔案指標的目前位置。  
@@ -78,12 +79,12 @@ __int64 _ftelli64(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|選擇性標頭|  
+|功能|必要的標頭|選擇性標頭|  
 |--------------|---------------------|----------------------|  
 |`ftell`|\<stdio.h>|\<errno.h>|  
 |`_ftelli64`|\<stdio.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -119,7 +120,7 @@ int main( void )
 Position after trying to read 100 bytes: 100  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)   

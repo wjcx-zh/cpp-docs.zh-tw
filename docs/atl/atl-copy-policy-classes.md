@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 667a6c35d979b0fb1da3675efd03e2840285b845
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54ac3c9d53c3b6d2b295643001fd15b1e4c6c46d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-copy-policy-classes"></a>ATL 複製原則類別
 複製原則類別是[公用程式類別](../atl/utility-classes.md)用來初始化、 複製和刪除資料。 複製原則類別可讓您定義的資料，任何類型的複製語意，並定義不同的資料類型之間的轉換。  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[NVC_ATL_COM#31](../atl/codesnippet/cpp/atl-copy-policy-classes_2.h)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作與 c + + 標準程式庫為基礎的集合](../atl/implementing-an-stl-based-collection.md)   
  [ATLCollections 範例](../visual-cpp-samples.md)
 

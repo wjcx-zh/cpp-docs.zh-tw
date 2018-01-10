@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4bbebb6f5bd885c70d9c4fe4903a00c86bb83cf3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23375f8f76e1a58bf29e3e3e269077fea4ae8d61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iolecontrolimpl-class"></a>IOleControlImpl 類別
 這個類別提供的預設實作**IOleControl**介面和實作**IUnknown**。  
@@ -44,11 +45,11 @@ class IOleControlImpl
  `T`  
  您的類別，衍生自`IOleControlImpl`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IOleControlImpl::FreezeEvents](#freezeevents)|指出容器會忽略，或接受來自控制項的事件。|  
 |[IOleControlImpl::GetControlInfo](#getcontrolinfo)|會填滿控制項的鍵盤行為的相關資訊。 ATL 實作會傳回**E_NOTIMPL**。|  
@@ -119,7 +120,7 @@ HRESULT OnMnemonic(LPMSG pMsg);
 ### <a name="remarks"></a>備註  
  請參閱[IOleControl::OnMnemonic](http://msdn.microsoft.com/library/windows/desktop/ms680699) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IOleObjectImpl 類別](../../atl/reference/ioleobjectimpl-class.md)   
  [ActiveX 控制項介面](http://msdn.microsoft.com/library/windows/desktop/ms692724)   
  [類別概觀](../../atl/atl-class-overview.md)

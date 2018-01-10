@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f11d86eda98696ea85899817dbecc276d5533a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2db97c0de9f262936212cf7f38abddf7c91eb5a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl 類別
 這個類別會實作裝載 ActiveX 控制項對話方塊 （強制或非強制回應）。  
@@ -58,7 +59,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAxDialogImpl::AdviseSinkMap](#advisesinkmap)|呼叫這個方法來通知或取消通知在物件接收器對應事件對應中的所有項目。|  
 |[CAxDialogImpl::Create](#create)|呼叫這個方法來建立非強制回應對話方塊。|  
@@ -71,7 +72,7 @@ class ATL_NO_VTABLE CAxDialogImpl : public CDialogImplBaseT<TBase>
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAxDialogImpl::m_bModal](#m_bmodal)|只存在於偵錯的變數會建置，並會設為 true，如果強制回應對話方塊。|  
   
@@ -250,6 +251,6 @@ BOOL IsDialogMessage(LPMSG pMsg);
 bool m_bModal;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDialogImpl 類別](../../atl/reference/cdialogimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

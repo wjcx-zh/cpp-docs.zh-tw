@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc9b874535e2169a1ca16bb934fb4d13029c46e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 66805c6e9331f55beb01b13a536596c53e35049c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-and-preserving-registers-in-inline-assembly"></a>在內嵌組譯碼中使用和保留暫存器
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  如果內嵌組譯碼使用 STD 或 CLD 指令變更方向旗標，您必須將旗標還原為其原始值。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [內嵌組合語言](../../assembler/inline/inline-assembler.md)

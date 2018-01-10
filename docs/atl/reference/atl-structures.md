@@ -17,18 +17,19 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8f34a1957a4af4090d5e73a54f0ef00f8b76088
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-structures"></a>ATL 結構
 
 
 Active Template Library 包含下列結構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
  包含用於轉譯為各種目標，例如印表機、 中繼檔或 ActiveX 控制項的資訊。  
   

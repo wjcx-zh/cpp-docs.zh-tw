@@ -1,46 +1,47 @@
 ---
-title: "Platform::Details::IEquatable 介面 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Details::IEquatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Details::IEquatable 介面"
+title: "Platform::Details::IEquatable 介面 |Microsoft 文件"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Details::IEquatable
+dev_langs: C++
+helpviewer_keywords: Platform::Details::IEquatable Interface
 ms.assetid: 72f15f55-f7a4-4cca-aeba-2d5a9996818c
-caps.latest.revision: 3
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fa871e003fed732e82145ae87bb4c77ecf32cee2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Details::IEquatable 介面
+# <a name="platformdetailsiequatable-interface"></a>Platform::Details::IEquatable 介面
 這個介面僅供內部使用，不適用於開發用途。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
   
 interface class IEquatable;  
 ```  
   
-## 備註  
+### <a name="remarks"></a>備註  
  這個介面只為完整性而提供，因為它可用瀏覽器進行檢查。  
   
-## 繼承階層  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `Platform`  
   
-## 需求  
- **中繼資料：**platform.winmd  
+### <a name="requirements"></a>需求  
+ **中繼資料：** platform.winmd  
   
- **命名空間：**Platform::Details  
+ **命名空間：** Platform::Details  
   
-## 請參閱  
- [\(NOTINBUILD\) Platform 命名空間](http://msdn.microsoft.com/zh-tw/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>請參閱  
+ [Platform 命名空間](platform-namespace-c-cx.md)

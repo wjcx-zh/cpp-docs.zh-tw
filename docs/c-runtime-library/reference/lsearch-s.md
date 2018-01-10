@@ -38,11 +38,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cb44e7b2c79b1e8719768634bfe028207b9e8d11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a54af825a9b9b0f0ca36c2f733d5df85d808a13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lsearchs"></a>_lsearch_s
 執行值的線性搜尋。 這是 [_lsearch](../../c-runtime-library/reference/lsearch.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -88,10 +89,10 @@ void *_lsearch_s(
   
 |`key`|`base`|`compare`|`num`|`size`|`errno`|  
 |-----------|------------|---------------|-----------|------------|-------------|  
-|`NULL`|任何|任何|任何|任何|`EINVAL`|  
-|任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
-|任何|任何|任何|any|零|`EINVAL`|  
-|any|任何|`NULL`|an|任何|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|零|`EINVAL`|  
+|any|any|`NULL`|an|任何|`EINVAL`|  
   
 ## <a name="remarks"></a>備註  
  `_lsearch_s` 函式會在 `num` 個元素的陣列中執行線性搜尋，尋找 `key` 值，每個元素 `width` 個位元組。 不同於 `bsearch_s`，`_lsearch_s` 不需要排序陣列。 如果找不到 `key`，則 `_lsearch_s` 會將其新增至陣列結尾，並遞增 `num`。  
@@ -102,13 +103,13 @@ void *_lsearch_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_lsearch_s`|\<search.h>|  
   
  如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
  [_lfind_s](../../c-runtime-library/reference/lfind-s.md)   

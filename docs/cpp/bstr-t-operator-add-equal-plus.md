@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 503f021a9ef0f798af8d82f33dac84d3eb0ccc51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ceeec1461b05b25d4bb0b42321cb9b3988ce4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrtoperator--"></a>_bstr_t::operator +=、+
 **Microsoft 特定的**  
@@ -71,7 +72,7 @@ friend _bstr_t operator+(
   
 -   **operator + (** `s3` **，***s1***)**傳回新`_bstr_t`Unicode 字串的串連，形成`s3`與`BSTR`封裝在*s1*。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

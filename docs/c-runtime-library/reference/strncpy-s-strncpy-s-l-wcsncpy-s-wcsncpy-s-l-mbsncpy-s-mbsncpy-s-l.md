@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -54,36 +52,22 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3d0d2f76b88f1518b24860b3e8efb7c2214c2845
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3d99dbf05d6ce70177b6ef3c5344e5f4059c0aac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 將某個字串的字元複製到另一個字串。  這些版本的 [strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l](../../c-runtime-library/reference/strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
 > [!IMPORTANT]
-> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsncpy_s` 和 `_mbsncpy_s_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsncpy_s` 和 `_mbsncpy_s_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -191,17 +175,17 @@ errno_t _mbsncpy_s_l(
   
 |`strDest`|`numberOfElements`|`strSource`|傳回值|`strDest` 的內容。|  
 |---------------|------------------------|-----------------|------------------|---------------------------|  
-|`NULL`|any|任何|`EINVAL`|未修改|  
-|any|任何|`NULL`|`EINVAL`|`strDest`[0] 設為 0|  
+|`NULL`|any|any|`EINVAL`|未修改|  
+|any|any|`NULL`|`EINVAL`|`strDest`[0] 設為 0|  
 |any|0|any|`EINVAL`|未修改|  
-|非 `NULL`|太小|任何|`ERANGE`|`strDest`[0] 設為 0|  
+|非 `NULL`|太小|any|`ERANGE`|`strDest`[0] 設為 0|  
   
 ## <a name="remarks"></a>備註  
  這些函式嘗試將 `strSource` 的前 `D` 個字元附加到 `strDest` 結尾，其中 `D` 是較小的 `count` 且長度為 `strSource`。 如果這些 `D` 字元適合 `strDest` (其大小指定為 `numberOfElements`)，並仍留出空間給以 Null 終止的字元，則複製這些字元並附加終止 Null；否則 `strDest`[0] 會設成 Null 字元並叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   
  上述段落有一個例外狀況。 如果 `count` 為 `_TRUNCATE`，則 `strSource` 會盡可能多地調整複製到 `strDest`，同時仍保留空間給一律要附加的終止 Null。  
   
- 例如：  
+ 例如，套用至物件的  
   
  `char dst[5];`  
   
@@ -223,9 +207,9 @@ errno_t _mbsncpy_s_l(
   
  `wcsncpy_s` 和 `_mbsncpy_s` 是寬字元和多位元組字元版本的 `strncpy_s`。 引數和傳回值`wcsncpy_s`和`mbsncpy_s`執行會隨之改變。 除此之外，這六個函式的行為相同。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -241,13 +225,13 @@ errno_t _mbsncpy_s_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strncpy_s`, `_strncpy_s_l`|\<string.h>|  
 |`wcsncpy_s`, `_wcsncpy_s_l`|\<string.h> 或 \<wchar.h>|  
 |`_mbsncpy_s`, `_mbsncpy_s_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -420,7 +404,7 @@ After strncpy_s (with null-termination):
    'mice'  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

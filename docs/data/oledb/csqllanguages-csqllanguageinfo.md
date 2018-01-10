@@ -1,67 +1,69 @@
 ---
-title: "CSQLLanguages、CSQLLanguageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSQLLanguageInfo"
-  - "m_szProgrammingLanguage"
-  - "m_szImplementation"
-  - "m_szIntegrity"
-  - "m_szBindingStyle"
-  - "m_szConformance"
-  - "m_szSource"
-  - "m_szYear"
-  - "CSQLLanguages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSQLLanguageInfo 參數類別"
-  - "CSQLLanguages typedef 類別"
-  - "m_szBindingStyle"
-  - "m_szConformance"
-  - "m_szImplementation"
-  - "m_szIntegrity"
-  - "m_szProgrammingLanguage"
-  - "m_szSource"
-  - "m_szYear"
+title: "CSQLLanguages、 CSQLLanguageInfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSQLLanguageInfo
+- m_szProgrammingLanguage
+- m_szImplementation
+- m_szIntegrity
+- m_szBindingStyle
+- m_szConformance
+- m_szSource
+- m_szYear
+- CSQLLanguages
+dev_langs: C++
+helpviewer_keywords:
+- m_szBindingStyle
+- m_szProgrammingLanguage
+- m_szYear
+- m_szImplementation
+- m_szSource
+- m_szConformance
+- CSQLLanguages typedef class
+- CSQLLanguageInfo parameter class
+- m_szIntegrity
 ms.assetid: 9c36c5bb-6917-49c3-9ac3-942339893f19
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f3bbd06f4ae6ab0b6a53007abd933017fa662d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CSQLLanguages、CSQLLanguageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 typedef 類別 **CSQLLanguages** 實作它的參數類別 **CSQLLanguageInfo**。  
+# <a name="csqllanguages-csqllanguageinfo"></a>CSQLLanguages、CSQLLanguageInfo
+呼叫 typedef 類別**CSQLLanguages**來實作其參數類別**CSQLLanguageInfo**。  
   
-## 備註  
- 如需使用 typedef 類別的詳細資訊，請參閱 [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。  
+## <a name="remarks"></a>備註  
+ 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 此類別定義由資料庫目錄中定義的 SQL 實作處理資料所支援的一致性層級、選項和用語。  
+ 這個類別會識別一致性層級、 選項和支援的目錄中定義的 SQL 實作處理資料的方言。  
   
- 下表列出類別資料成員和其對應的 OLE DB 資料行。  如需有關結構描述和資料列的詳細資訊，請參閱*OLE DB 程式設計人員參考*的[SQL\_LANGUAGES Rowset](https://msdn.microsoft.com/en-us/library/ms714374.aspx) 。  
+ 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[SQL_LANGUAGES 資料列集](https://msdn.microsoft.com/en-us/library/ms714374.aspx)中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
-|----------|----------------|  
-|m\_szSource|SQL\_LANGUAGE\_SOURCE|  
-|m\_szYear|SQL\_LANGUAGE\_YEAR|  
-|m\_szConformance|SQL\_LANGUAGE\_CONFORMANCE|  
-|m\_szIntegrity|SQL\_LANGUAGE\_INTEGRITY|  
-|m\_szImplementation|SQL\_LANGUAGE\_IMPLEMENTATION|  
-|m\_szBindingStyle|SQL\_LANGUAGE\_BINDING\_STYLE|  
-|m\_szProgrammingLanguage|SQL\_LANGUAGE\_PROGRAMMING\_LANGUAGE|  
+|------------------|--------------------|  
+|m_szSource|SQL_LANGUAGE_SOURCE|  
+|m_szYear|SQL_LANGUAGE_YEAR|  
+|m_szConformance|SQL_LANGUAGE_CONFORMANCE|  
+|m_szIntegrity|SQL_LANGUAGE_INTEGRITY|  
+|m_szImplementation|SQL_LANGUAGE_IMPLEMENTATION|  
+|m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|  
+|m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

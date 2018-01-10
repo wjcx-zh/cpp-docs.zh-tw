@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 952f6a6d9fa06c0f0c34e5769b4302c6230abb43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4afb07323cdb6b25914aabd802c4df73ee1d07c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptrarray-class"></a>CAutoPtrArray 類別
 建構智慧型指標的陣列時，這個類別會提供有用的方法。  
@@ -43,11 +44,11 @@ class CAutoPtrArray : public CAtlArray<
  `E`  
  指標類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAutoPtrArray::CAutoPtrArray](#cautoptrarray)|建構函式。|  
   
@@ -74,7 +75,7 @@ CAutoPtrArray() throw();
 ### <a name="remarks"></a>備註  
  初始化智慧型指標陣列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAtlArray 類別](../../atl/reference/catlarray-class.md)   
  [CAutoPtrElementTraits 類別](../../atl/reference/cautoptrelementtraits-class.md)   
  [CAutoPtrList 類別](../../atl/reference/cautoptrlist-class.md)   

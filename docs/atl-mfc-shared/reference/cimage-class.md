@@ -65,11 +65,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd493619bc8117a67670f1c4bc820ed00c7be165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-class"></a>CImage 類別
 `CImage`提供增強的點陣圖支援，包括載入和儲存 JPEG、 GIF、 BMP、 及可攜式網路圖形 (PNG) 格式的映像的能力。  
@@ -83,17 +84,17 @@ ms.lasthandoff: 10/24/2017
 class CImage
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CImage::CImage](#cimage)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CImage::AlphaBlend](#alphablend)|顯示具有透明或半透明的像素的點陣圖。|  
 |[CImage::Attach](#attach)|附加`HBITMAP`至`CImage`物件。 可以搭配非 DIB 區段點陣圖或 DIB 區段點陣圖。|  
@@ -137,7 +138,7 @@ class CImage
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[HBITMAP CImage::operator](#operator_hbitmap)|傳回附加至的 Windows 控制代碼`CImage`物件。|  
   
@@ -1558,7 +1559,7 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 ```
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MMXSwarm 範例](../../visual-cpp-samples.md)   
  [SimpleImage 範例](../../visual-cpp-samples.md)   
  [裝置獨立點陣圖](http://msdn.microsoft.com/library/windows/desktop/dd183562)   

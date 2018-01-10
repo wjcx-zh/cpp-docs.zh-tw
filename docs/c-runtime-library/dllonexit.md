@@ -26,11 +26,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9e59acec12c90d101ef385c379c092c7034f1ed0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3b28381b92f4f11e4be99f97a2615a8379274
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dllonexit"></a>__dllonexit
 登錄要在結束時呼叫的常式。  
@@ -66,9 +67,9 @@ _onexit_t __dllonexit(   _onexit_t func,
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要檔案|  
+|常式傳回的值|必要檔案|  
 |-------------|-------------------|  
 |__dllonexit|onexit.c|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

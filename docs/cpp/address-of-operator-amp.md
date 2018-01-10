@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&'
-dev_langs:
-- C++
+f1_keywords: '&'
+dev_langs: C++
 helpviewer_keywords:
 - address-of operator (&)
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 56e2606759cc381c1ae6f6f4f1f7cbc1d9d2d810
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-of-operator-amp"></a>傳址運算子：&amp;
 ## <a name="syntax"></a>語法  
@@ -40,7 +37,7 @@ ms.lasthandoff: 09/25/2017
   
  傳址運算子僅適用於基本、結構、類別或等位型別是在檔案範圍層級宣告的變數，或是註標的陣列參考。 在這些運算式中，未包含傳址運算子的常數運算式可以在傳址運算式中進行加法或減法運算。  
   
- 套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元為 `char` 類型，則運算式的結果為指向 `char` 的類型指標。 傳址運算子套用至**const**或`volatile`物件，會評估為**const** `type` ** \* **或`volatile` `type`** \* **，其中`type`是原始物件的類型。  
+ 套用至函式或左值時，運算式的結果會是衍生自運算元類型的指標類型 (右值)。 例如，如果運算元為 `char` 類型，則運算式的結果為指向 `char` 的類型指標。 傳址運算子套用至**const**或`volatile`物件，會評估為**const** `type`  **\*** 或`volatile` `type` **\*** ，其中`type`是原始物件的類型。  
   
  傳址運算子套用至時[限定的名稱](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df)，結果會取決於是否*限定名稱*指定靜態成員。 如果是，則結果為成員宣告中所指定類型的指標。 如果成員不是靜態的結果是成員的指標*名稱*類別所表示的*限定類別名稱*。 (請參閱[主要運算式](../cpp/primary-expressions.md)如需詳細資訊*限定類別名稱*。)下列程式碼片段將示範成員是否為靜態的結果差異：  
   
@@ -116,9 +113,8 @@ int main() {
 25  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)   
  [間接取值和傳址運算子](../c-language/indirection-and-address-of-operators.md)
-

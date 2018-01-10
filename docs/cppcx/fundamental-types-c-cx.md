@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 1984ba2b2291c14403af1237a9c990de2c0e0217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a41a5a97e94bdf9476d8345a7f9e103b81466f6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamental-types-ccx"></a>基本類型 (C++/CX)
 除了標準 c + + 內建類型，C + + /CX 支援由 Windows 執行階段基本類型對應至標準 c + + 類型，提供 typedef 的 Windows 執行階段架構所定義的型別系統... C + + /CX 實作布林值、 字元和數值基本類型。 這些 Typedef 在 `default` 命名空間中已定義，永遠不需要明確指定。 此外，C + + /CX 提供包裝函式和具象實作特定 Windows 執行階段類型和介面。  
@@ -50,8 +51,8 @@ ms.lasthandoff: 10/24/2017
   
 |名稱|定義|  
 |----------|----------------|  
-|物件|代表任何 Windows 執行階段類型。|  
-|字串|一系列代表文字的字元。|  
+|Object|代表任何 Windows 執行階段類型。|  
+|String|一系列代表文字的字元。|  
 |Rect|四個浮點數的組合，代表矩形的位置和大小。|  
 |SizeT|一對排序的浮點數，指定高度和寬度。|  
 |點|一對排序的浮點 X 座標和 Y 座標，定義二維平面中的點。|  
@@ -59,5 +60,5 @@ ms.lasthandoff: 10/24/2017
 |UIntPtr|(僅供內部使用。)作為指標的不帶正負號 64 位元值。|  
 |IntPtr|(僅供內部使用。)作為指標的帶正負號 64 位元值。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)

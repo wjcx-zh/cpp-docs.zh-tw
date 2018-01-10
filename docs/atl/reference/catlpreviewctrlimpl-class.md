@@ -30,11 +30,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 281bc00e46cf28f7cc7d5f1e072fd41ad4cce61a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl 類別
 這個類別是視窗的 ATL 的實作會放在 Shell for Rich Preview 提供主控視窗。  
@@ -48,18 +49,18 @@ ms.lasthandoff: 10/24/2017
 class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPreviewCtrl;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Destructs 預覽控制項物件。|  
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|建構預覽控制項物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::Create](#create)|若要建立 Windows 視窗的豐富預覽處理常式呼叫。|  
 |[CAtlPreviewCtrlImpl::Destroy](#destroy)|需要終結此控制項時呼叫的豐富預覽處理常式。|  
@@ -70,21 +71,21 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |[CAtlPreviewCtrlImpl::SetPreviewVisuals](#setpreviewvisuals)|由呼叫的豐富預覽處理常式需要設定豐富的預覽的視覺效果時內容。|  
 |[CAtlPreviewCtrlImpl::SetRect](#setrect)|設定這個控制項的新週框矩形。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|由架構呼叫以呈現預覽。|  
   
 ### <a name="protected-constants"></a>受保護的常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_plf](#m_plf)|用來在預覽視窗中顯示文字的字型。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|[預覽] 視窗的背景色彩。|  
 |[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|預覽視窗的文字色彩。|  
@@ -295,5 +296,5 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)

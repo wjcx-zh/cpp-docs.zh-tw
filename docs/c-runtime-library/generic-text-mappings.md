@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eea0ec7b9216f94d5a3ed017e94e90639aeb0ddd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fee6da358620281039a5dcb8fda521630f56fffc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings"></a>泛型文字對應
 為針對國際市場簡化程式碼撰寫，要在 TCHAR.H 中定義泛型文字對應，以：  
@@ -34,6 +35,6 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱[使用泛型文字對應](../c-runtime-library/using-generic-text-mappings.md)。 泛型文字對應是與 ANSI 不相容的 Microsoft 延伸模組。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料類型對應](../c-runtime-library/data-type-mappings.md)   
  [泛型文字程式範例](../c-runtime-library/a-sample-generic-text-program.md)

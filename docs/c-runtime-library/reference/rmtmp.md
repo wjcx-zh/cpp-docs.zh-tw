@@ -37,11 +37,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 79103471b09815b2ca4a99c2e9c22ed5af512ef4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12a0bef6622d8f65b450701dcfb86976da6029da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rmtmp"></a>_rmtmp
 移除暫存檔案。  
@@ -61,11 +62,11 @@ int _rmtmp( void );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_rmtmp`|\<stdio.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -73,7 +74,7 @@ int _rmtmp( void );
 ## <a name="example"></a>範例  
  請參閱 [tmpfile](../../c-runtime-library/reference/tmpfile.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [_flushall](../../c-runtime-library/reference/flushall.md)   
  [tmpfile](../../c-runtime-library/reference/tmpfile.md)   

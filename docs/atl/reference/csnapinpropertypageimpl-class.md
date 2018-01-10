@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,38 +25,23 @@ f1_keywords:
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::QuerySiblings
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::SetModified
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::m_psp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - snap-ins, property pages
 - snap-ins
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 57f43a1ab82c2441d271ac88ef712309bb1315dd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5fc1135f02c31c644d7d149900bbaa755a52c579
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csnapinpropertypageimpl-class"></a>CSnapInPropertyPageImpl 類別
 這個類別會提供實作嵌入式管理單元屬性頁物件的方法。  
@@ -71,17 +55,17 @@ ms.lasthandoff: 04/01/2017
 CSnapInPropertyPageImpl : public CDialogImplBase
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|狀態變更**確定**和**取消**按鈕。|  
 |[CSnapInPropertyPageImpl::Create](#create)|初始化新建立`CSnapInPropertyPageImpl`物件。|  
@@ -112,7 +96,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
  `CSnapInPropertyPageImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlsnap.h  
+ **標頭：** atlsnap.h  
   
 ##  <a name="canceltoclose"></a>CSnapInPropertyPageImpl::CancelToClose  
  無法復原的變更建立強制回應屬性工作表頁面中的資料之後，請呼叫此函式。  
@@ -163,7 +147,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>備註  
  您可以使用此結構來建構後即初始化屬性頁面的外觀。  
   
- 如需有關此結構，包括其成員的清單，請參閱[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如需有關此結構，包括其成員的清單，請參閱[PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) Windows SDK 中。  
   
 ##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
  此成員函式在使用者按一下時呼叫**確定**或**立即套用** 按鈕。  
@@ -311,13 +295,13 @@ LRESULT QuerySiblings(WPARAM wParam, LPARAM lParam);
  [in]指定訊息相關的其他資訊。  
   
 ### <a name="return-value"></a>傳回值  
- 為非零，如果不應將訊息轉送至下一步 屬性頁。否則為零。  
+ 為非零，如果不應該將訊息轉送至下一步 屬性頁。否則為零。  
   
 ### <a name="remarks"></a>備註  
  如果頁面傳回則為非零值，屬性工作表不會傳送訊息到後續的頁面。  
   
 ##  <a name="setmodified"></a>CSnapInPropertyPageImpl::SetModified  
- 呼叫此成員函式，啟用或停用**立即套用**按鈕時，根據是否應該套用的屬性頁中的設定套用到適當的外部物件。  
+ 呼叫此成員函式，啟用或停用**立即套用**按鈕時，根據屬性頁中的設定是否應該套用到適當的外部物件。  
   
 ```
 void SetModified(BOOL bChanged = TRUE);
@@ -330,6 +314,5 @@ void SetModified(BOOL bChanged = TRUE);
 ### <a name="remarks"></a>備註  
  屬性工作表會持續的追蹤頁面的 「 有所變更 」，也就是，您所呼叫的屬性頁**SetModified (TRUE)**。 **立即套用**按鈕將一律會啟用，如果您呼叫**SetModified (TRUE)**的其中一個頁面。 **立即套用**將停用 按鈕，當您呼叫**SetModified (FALSE)**的其中一個頁面，但如果沒有任何其他網頁 「 有所變更 」。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

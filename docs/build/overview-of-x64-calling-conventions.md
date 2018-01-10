@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b1b361bf01e067a1fe76829aa4217e87b107915
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ac42eb934692fb9eaecf345b75e7544e7078f07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-x64-calling-conventions"></a>x64 呼叫慣例概觀
 兩個重要差異 x86 和[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]是 64 位元定址功能，以及一般的 16 個 64 位元暫存器設定一般用途。 展開指定的登錄設定，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]使用[__fastcall](../cpp/fastcall.md)呼叫慣例和 risc 例外狀況處理模型。 `__fastcall`慣例是使用前四個引數和堆疊框架的暫存器傳遞其他引數。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="unwindability"></a>Unwindability  
  分葉函式是函式不會變更任何非靜態暫存器。 非分葉函式可能會變更非暫時性 RSP 比方說，呼叫函式，或為區域變數配置額外的堆疊空間。 為了進行復原靜態暫存器，在處理例外狀況時，非分葉函式都必須以靜態資料，說明如何正確回溯任意指令處函式註解。 這項資料會儲存為*pdata*，或程序資料，接著是指*xdata*、 例外狀況處理的資料。 Xdata 包含回溯的資訊，並可以指向其他 pdata 或例外狀況處理常式函式。 初構和終限於高度，讓它們可以正確 xdata 中描述。 堆疊指標必須對齊 16 位元組的程式碼除外的一部分終解或初構不在分葉函式內的任何區域中。 分葉函式可以只是藉由模擬傳回，因此不需要 pdata 和 xdata 進行回溯。 如需函式初構和終適當的結構的詳細資訊，請參閱[初構和終解](../build/prolog-and-epilog.md)。 如需例外狀況處理和例外狀況處理和 pdata 和 xdata 的回溯的詳細資訊，請參閱[例外狀況處理 (x64)](../build/exception-handling-x64.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x64 軟體慣例](../build/x64-software-conventions.md)

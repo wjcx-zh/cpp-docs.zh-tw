@@ -30,11 +30,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: daae662a39d012418b5cd178e26d731dbca1e715
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6dec5a3fd89703b3e27f9acf8c9edf976fdd18f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctype"></a>wctype
 決定寬字元代碼的分類規則。  
@@ -57,7 +58,7 @@ wctype_t wctype(
 ## <a name="remarks"></a>備註  
  此函式決定寬字元代碼的分類規則。 下列呼叫組合在所有的地區設定中都有一樣的行為 (但實作即使是在 "C" 地區設定中，也可以定義額外的分類規則)︰  
   
-|函式|同於|  
+|功能|同於|  
 |--------------|-------------|  
 |`iswalnum(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alnum" ) )`|  
 |`iswalpha(`  `c`  `)`|`iswctype(`  `c` `, wctype( "alpha" ) )`|  
@@ -73,12 +74,12 @@ wctype_t wctype(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`wctype`|\<wctype.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)

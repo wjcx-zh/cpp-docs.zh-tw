@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 987691d2eaf8ae2f6c8f724fb8bcf4f26ad68dcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 835c396c36a23d05a1e3512fa7ad5e4c4e81c795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale"></a>地區設定
 「地區設定」指的是可用來自訂程式的國家/地區和語言設定。 有些地區設定相關分類包括日期和貨幣值的顯示格式。 如需詳細資訊，請參閱[地區設定分類](../c-runtime-library/locale-categories.md)。  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="locale-dependent-routines"></a>地區設定相關常式  
   
-|常式|用法|`setlocale` 分類設定相依性|  
+|常式傳回的值|使用|`setlocale` 分類設定相依性|  
 |-------------|---------|---------------------------------------------|  
 |[atof、_atof_l、_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字元轉換為浮點值|`LC_NUMERIC`|  
 |[atoi、_atoi_l、_wtoi、_wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|將字元轉換為整數值|`LC_NUMERIC`|  
@@ -77,6 +78,6 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  針對多位元組常式，多位元組字碼頁必須等同於使用 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 所設定的地區設定。 引數為 `_MB_CP_LOCALE` 的 [_setmbcp](../c-runtime-library/reference/setmbcp.md) 可讓多位元組字碼頁與 `setlocale` 字碼頁相同。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [國際化](../c-runtime-library/internationalization.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55c388ddddb5fd774afb6c4e84d6a96a4c38bebe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb767bb3dbfbde8d73ab81acc444a772a05e7880
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constant-and-global-variable-mappings"></a>常數和全域變數對應
 這些泛型文字常數、全域變數和標準類型對應都是在 TCHAR.H 中定義，並視程式中是否定義常數 `_UNICODE` 或 `_MBCS` 而定。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
 |`_tenviron`|`_environ`|`_environ`|`_wenviron`|  
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [泛型文字對應](../c-runtime-library/generic-text-mappings.md)   
  [資料類型對應](../c-runtime-library/data-type-mappings.md)   
  [常式對應](../c-runtime-library/routine-mappings.md)   

@@ -1,115 +1,117 @@
 ---
-title: "加入控制項 (ATL 教學課程，第 2 部分) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "加入控制項 (ATL 教學課程，第 2 部分) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aed69a5dd421e967e1da33bb3a2f2c41fa80698d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 加入控制項 (ATL 教學課程，第 2 部分)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在這個步驟中，您會將控制項加入至專案、加以建置，並在網頁上進行測試。  
+# <a name="adding-a-control-atl-tutorial-part-2"></a>加入控制項 (ATL 教學課程，第 2 部分)
+在此步驟中，您將控制項加入您的專案，建置，和測試在網頁上。  
   
-## 程序  
+## <a name="procedures"></a>程序  
   
-#### 若要將物件加入至 ATL 專案。  
+#### <a name="to-add-an-object-to-an-atl-project"></a>將物件新增至 ATL 專案  
   
-1.  在 \[類別檢視\] 中以滑鼠右鍵按一下 Polygon 專案。  
+1.  在 類別檢視，以滑鼠右鍵按一下多邊形專案。  
   
-2.  指向捷徑功能表上的 \[**加入**\]，再按一下子功能表中的 \[**類別**\]。  
+2.  指向**新增**捷徑功能表，然後按一下 **類別**子功能表中。  
   
-     \[加入類別\] 對話方塊隨即出現。  不同的物件分類會在左邊的樹狀結構中列出。  
+     **加入類別** 對話方塊隨即出現。 在左側的樹狀結構中，會列出不同的物件類別。  
   
-3.  按一下 \[**ATL**\] 資料夾。  
+3.  按一下**ATL**資料夾。  
   
-4.  從右側的範本清單，選取 \[**ATL 控制項**\]。  按一下 \[**加入**\]。  ATL 控制項精靈將會開啟，您可以設定控制項。  
+4.  從右側的範本清單中，選取**ATL 控制項**。 按一下 [加入] 。 ATL 控制項精靈隨即會開啟，並且可以設定控制項。  
   
-5.  輸入 `PolyCtl` 做為簡短名稱，並注意其他欄位會自動完成。  還不要按下 \[**完成**\]，因為還要進行一些變更。  
+5.  型別`PolyCtl`簡短名稱以及其他欄位會自動完成的附註。 不要在上面按一下**完成**尚未，因為您需要進行一些變更。  
   
- ATL 控制項精靈的 \[**名稱**\] 頁面包含下列欄位：  
+ ATL 控制項精靈**名稱**頁面包含下列欄位：  
   
 |欄位|內容|  
-|--------|--------|  
-|**簡短名稱**|您為控制項輸入的名稱。|  
-|**類別**|建立來實作控制項的 C\+\+ 類別名稱。|  
-|**.h 檔案**|所建立來包含 C\+\+ 類別定義的檔案。|  
-|**.cpp 檔**|所建立來包含 C\+\+ 類別實作的檔案。|  
-|**CoClass**|此控制項之元件類別的名稱。|  
-|**介面**|介面的名稱，控制項將會在此介面上實作其自訂方法和屬性。|  
-|**型別**|控制項的描述。|  
-|**ProgID**|可用於查詢控制項 CLSID 的可讀取名稱。|  
+|-----------|--------------|  
+|**簡短名稱**|您輸入控制項的名稱。|  
+|**類別**|實作控制項建立的 c + + 類別名稱。|  
+|**.h 檔案**|若要包含的 c + + 類別定義建立的檔案。|  
+|**.cpp 檔案中**|若要包含的 c + + 類別實作所建立的檔案。|  
+|**CoClass**|這個控制項的元件類別名稱。|  
+|**Interface**|其自訂的方法和屬性，控制將實作的介面名稱。|  
+|**Type**|控制項的描述。|  
+|**ProgID**|可以用來查詢的 CLSID 控制項的可讀取的名稱。|  
   
- 您必須在 ATL 控制項精靈中進行數個不同的設定。  
+ 您必須在 ATL 控制項精靈中進行一些其他的設定。  
   
-#### 若要啟用對豐富錯誤資訊和連接點的支援  
+#### <a name="to-enable-support-for-rich-error-information-and-connection-points"></a>若要啟用支援豐富的錯誤資訊及連接點  
   
-1.  按一下 \[**選項**\] 開啟 \[**選項**\] 頁面。  
+1.  按一下**選項**開啟**選項**頁面。  
   
-2.  選取 \[**連接點**\] 核取方塊。  這會在 IDL 檔案中建立流出介面的支援。  
+2.  選取**連接點**核取方塊。 這會建立支援輸出介面 IDL 檔中。  
   
- 您也可以讓控制項可插入，這表示它可以內嵌在支援內嵌物件的應用程式，例如 Excel 或 Word。  
+ 您也可以將控制項可插入，這表示它可以內嵌入支援內嵌的物件，例如 Excel 或 Word 的應用程式。  
   
-#### 若要將控制項設為可插入  
+#### <a name="to-make-the-control-insertable"></a>將控制項設為可插入  
   
-1.  按一下 \[**外觀**\] 開啟 \[**外觀**\] 頁面。  
+1.  按一下**外觀**開啟**外觀**頁面。  
   
-2.  選取 \[**可插入的**\] 核取方塊。  
+2.  選取**Insertable**核取方塊。  
   
- 物件顯示的多邊形具有純色填滿色彩，因此您必須加入 `Fill Color` 內建屬性。  
+ 物件所顯示多邊形就會有實心填滿色彩，所以您不必加入`Fill Color`內建屬性。  
   
-#### 若要加入填滿色彩內建屬性及建立控制項  
+#### <a name="to-add-a-fill-color-stock-property-and-create-the-control"></a>若要加入的填滿色彩的內建屬性，並建立控制項  
   
-1.  按一下 \[**內建屬性**\] 開啟 \[**內建屬性**\] 頁面。  
+1.  按一下**內建屬性**開啟**內建屬性**頁面。  
   
-2.  在 \[**不支援**\] 下，向下捲動可能的內建屬性清單。  按兩下 \[`Fill Color`\]，將它移至 \[**支援**\] 清單。  
+2.  在下**不支援**，向下捲動清單的可能內建屬性。 按兩下`Fill Color`將其移至**支援**清單。  
   
-3.  這樣便完成了控制項的選項。  按一下 \[完成\]。  
+3.  如此即完成控制項的選項。 按一下 [ **完成**]。  
   
- 精靈建立控制項時，會發生數個變更程式碼和新增檔案的情況。  同時會建立以下的檔案：  
+ 精靈建立控制項時，就發生數個程式碼變更和加入檔案。 已建立下列檔案：  
   
 |檔案|描述|  
-|--------|--------|  
-|PolyCtl.h|包含大部分 C\+\+ 類別 `CPolyCtl` 的實作。|  
-|PolyCtl.cpp|包含 `CPolyCtl` 的其餘部分。|  
-|PolyCtl.rgs|包含用來註冊控制項指令碼控制項的文字檔。|  
-|PolyCtl.htm|包含新建立之控制項的 Web 參考。|  
+|----------|-----------------|  
+|PolyCtl.h|包含大部分的 c + + 類別的實作`CPolyCtl`。|  
+|PolyCtl.cpp|包含的其餘部分`CPolyCtl`。|  
+|PolyCtl.rgs|包含用來登錄此控制項的登錄指令碼的文字檔。|  
+|PolyCtl.htm|Web 網頁，其中包含新建立的控制項的參考。|  
   
- 精靈也實作了下列程式碼變更：  
+ 精靈也會執行下列程式碼變更：  
   
--   將 `#include` 陳述式加入至 stdafx.h 和 stdafx.cpp 檔，以包含支援控制項所需的 ATL 檔案。  
+-   加入`#include`stdafx.h 和 stdafx.cpp 檔案，以包括 ATL 的陳述式的檔案所需的控制項。  
   
--   變更 Polygon.idl 以加入新控制項的詳細資料。  
+-   若要包含新控制項的詳細資料的變更的 Polygon.idl。  
   
--   將新的控制項加入至 Polygon.cpp 中的物件對應。  
+-   物件中的對應 Polygon.cpp 加入新的控制項。  
   
- 您現在可以建置控制項以了解其動作。  
+ 現在您可以建立要觀看它的運作的控制項。  
   
-## 建置和測試控制項  
+## <a name="building-and-testing-the-control"></a>建置和測試控制項  
   
-#### 若要建置和測試控制項  
+#### <a name="to-build-and-test-the-control"></a>建置和測試控制項  
   
-1.  在 \[**建置**\] 功能表上，按一下 \[**建置多邊形**\]。  
+1.  在**建置**功能表上，按一下 **建置多邊形**。  
   
-     控制項完成建置後，以滑鼠右鍵按一下 \[**方案總管**\] 中的 PolyCtl.htm，並選取 \[**在瀏覽器中檢視**\]。  將會顯示包含控制項的 HTML 網頁。  您應該會看到標題為「物件 PolyCtl 的 ATL 8.0 測試頁」的頁面和文字 **PolyCtl**。  這是您的控制項。  
+     當控制項完成建置時，以滑鼠右鍵按一下在 PolyCtl.htm**方案總管 中**選取**瀏覽器中的檢視**。 包含控制項的 HTML 網頁上隨即出現。 您應該會看到 「 ATL 物件 PolyCtl 8.0 測試頁 」 的標題和文字的頁面**PolyCtl**。 這是您的控制項。  
   
 > [!NOTE]
->  當完成本教學課程時，如果您收到 DLL 檔案無法建立的錯誤訊息時，請關閉 PolyCtl.htm 檔案和 ActiveX 控制項測試容器並重新建置方案。  如果您仍然無法建立 DLL，請重新啟動電腦或登出 \(如果您使用終端機服務\)。  
+>  當完成此教學課程中，如果您收到錯誤訊息，無法建立 DLL 檔案的位置後，關閉 PolyCtl.htm 檔案和 ActiveX 控制項測試容器，並再次建置方案。 如果您仍然無法建立 DLL，將電腦重新開機或登出 （如果您正在使用終端機服務）。  
   
- 接下來將自訂屬性加入至控制項。  
+ 接下來，您會將自訂屬性加入控制項。  
   
- [回到步驟 1](../atl/creating-the-project-atl-tutorial-part-1.md) &#124; [繼續至步驟 3。](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
+ [步驟 1 至](../atl/creating-the-project-atl-tutorial-part-1.md)&#124;[至步驟 3](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
+

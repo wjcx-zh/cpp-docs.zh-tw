@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - splitpath_s
 - _splitpath_s
 - wsplitpath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - splitpath_s function
 - pathnames
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: c4c6803731deba188a4f4dba118b04f626f58564
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6cfb2d72b728b64aeb00c3b8437f9c47e02fb813
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="splitpaths-wsplitpaths"></a>_splitpath_s、_wsplitpath_s
 將一個路徑名稱分割為多個元件。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_splitpath、_wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md) 版本。  
@@ -111,31 +95,31 @@ errno_t _wsplitpath_s(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `path`  
+ [輸入] `path`  
  完整路徑。  
   
  [輸出] `drive`  
  後接冒號 (`:`) 的磁碟機代號。 如果您不需要磁碟機代號，則可以針對這個參數傳遞 `NULL`。  
   
- [in] `driveNumberOfElements`  
+ [輸入] `driveNumberOfElements`  
  以單一位元組或寬字元表示的 `drive` 緩衝區大小。 如果 `drive` 為 `NULL`，則這個值必須是 0。  
   
  [輸出] `dir`  
  目錄路徑，包括結尾斜線。 可以使用正斜線 (`/`) 和 (或) 反斜線 (`\`)。 如果您不需要目錄路徑，則可以針對這個參數傳遞 `NULL`。  
   
- [in] `dirNumberOfElements`  
+ [輸入] `dirNumberOfElements`  
  以單一位元組或寬字元表示的 `dir` 緩衝區大小。 如果 `dir` 為 `NULL`，則這個值必須是 0。  
   
  [輸出] `fname`  
  基底檔名 (不含副檔名)。 如果您不需要檔名，則可以針對這個參數傳遞 `NULL`。  
   
- [in] `nameNumberOfElements`  
+ [輸入] `nameNumberOfElements`  
  以單一位元組或寬字元表示的 `fname` 緩衝區大小。 如果 `fname` 為 `NULL`，則這個值必須是 0。  
   
  [輸出] `ext`  
  副檔名，包括前置句點 (**.**)。如果您不需要副檔名，則可以針對這個參數傳遞 `NULL`。  
   
- [in] `extNumberOfElements`  
+ [輸入] `extNumberOfElements`  
  以單一位元組或寬字元表示的 `ext` 緩衝區大小。 如果 `ext` 是 `NULL`，則這個值必須是 0。  
   
 ## <a name="return-value"></a>傳回值  
@@ -160,7 +144,7 @@ errno_t _wsplitpath_s(
  如果有任何緩衝區太短而無法保留結果，這些函式會將所有緩衝區清除成空字串、將 `errno` 設定為 `ERANGE`，並傳回 `ERANGE`。  
   
 ## <a name="remarks"></a>備註  
- `_splitpath_s` 函式會將一個路徑分割為它的四個元件。 `_splitpath_s` 會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wsplitpath_s` 是 `_splitpath_s` 的寬字元版本；`_``wsplitpath_s` 的引數是寬字元字串。 否則，這些函式的行為相同。  
+ `_splitpath_s` 函式會將一個路徑分割為它的四個元件。 `_splitpath_s` 會自動的適當處理多位元組字串引數，根據目前使用中的多位元組字碼頁來辨識多位元組字串序列。 `_wsplitpath_s` 是 `_splitpath_s` 的寬字元版本；`_wsplitpath_s` 的引數是寬字元字串。 否則，這些函式的行為相同。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -181,23 +165,23 @@ errno_t _wsplitpath_s(
   
  如果完整路徑未包含元件 (例如，檔名)，則 `_splitpath_s` 會將空字串指派給對應的緩衝區。  
   
- 在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_splitpath_s`|\<stdlib.h>|  
 |`_wsplitpath_s`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  請參閱 [_makepath_s、_wmakepath_s](../../c-runtime-library/reference/makepath-s-wmakepath-s.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_splitpath、_wsplitpath](../../c-runtime-library/reference/splitpath-wsplitpath.md)   
  [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   

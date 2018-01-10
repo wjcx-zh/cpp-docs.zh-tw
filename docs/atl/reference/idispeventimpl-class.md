@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,41 +16,25 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfo
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f052ddf0194cf28a0845ae51b9503841ca880912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 類別
 這個類別提供的實作`IDispatch`方法。  
   
 > [!IMPORTANT]
->  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -87,7 +70,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  `tihclass`  
  用來管理的類型資訊的類別`T`。 預設值是類型的類別之`CComTypeInfoHolder`; 不過，您可以藉由提供的型別類別不覆寫此範本參數`CComTypeInfoHolder`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -114,7 +97,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ## <a name="remarks"></a>備註  
  `IDispEventImpl`提供一種實作的事件分配程式介面，而不需要您提供每個方法/事件介面的實作程式碼。 `IDispEventImpl`提供的實作`IDispatch`方法。 您只需要提供您有興趣在處理事件的實作。  
   
- `IDispEventImpl`一起運作的事件接收對應至適當的處理常式函式的路由事件類別中。 若要使用此類別︰  
+ `IDispEventImpl`一起運作的事件接收對應至適當的處理常式函式的路由事件類別中。 若要使用此類別：  
   
 
  新增[SINK_ENTRY](composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)巨集，以您想要處理每個物件上的每個事件的事件接收對應。 當使用`IDispEventImpl`複合控制項的基底類別，您可以呼叫[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)若要建立的所有項目在事件接收對應中斷與事件來源的連接。 在其他情況下，或大於控制項中，呼叫[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)之間建立連線的來源物件和基底類別。 呼叫[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)中斷連線。  
@@ -125,7 +108,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  `IDispEventImpl`提供的相同功能與[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)，只不過它會從類型程式庫，而不是需要它的指標當做提供取得有關介面的型別資訊[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)結構。 使用`IDispEventSimpleImpl`當您不要有描述事件介面的型別程式庫或想要避免與使用類型程式庫相關聯的額外負荷。  
   
 > [!NOTE]
-> `IDispEventImpl`和`IDispEventSimpleImpl`提供自己的實作**iunknown:: Queryinterface**啟用每個`IDispEventImpl`和`IDispEventSimpleImpl`基底類別做為個別的 COM 識別，同時，仍允許對類別成員的直接存取主要的 COM 物件中。  
+> `IDispEventImpl`和`IDispEventSimpleImpl`提供自己的實作**iunknown:: Queryinterface**啟用每個`IDispEventImpl`和`IDispEventSimpleImpl`基底類別做為個別的 COM 識別，同時，仍允許直接存取類別主要的 COM 物件中的成員。  
   
  CE ATL 實作 ActiveX 事件接收唯一支援的傳回值類型的 HRESULT 或 void，從您的事件處理常式方法。任何其他傳回值是不支援，且其行為未定義。  
   
@@ -141,7 +124,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  `IDispEventImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="getfuncinfofromid"></a>IDispEventImpl::GetFuncInfoFromId  
  找出指定的分派識別項的函式索引。  
@@ -183,7 +166,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IDispatch::GetIDsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) Windows SDK 中。  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  擷取物件的類型資訊，可以用來取得介面的類型資訊。  
@@ -205,7 +188,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ```  
   
 ### <a name="remarks"></a>備註  
- 請參閱[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) Windows SDK 中。  
   
 ##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  擷取使用者自訂類型的基本類型。  
@@ -246,7 +229,7 @@ typedef tihclass _tihclass;
 ### <a name="remarks"></a>備註  
  根據預設，類別是`CComTypeInfoHolder`。 `CComTypeInfoHolder`管理類別的類型資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_ATL_FUNC_INFO 結構](../../atl/reference/atl-func-info-structure.md)   
  [IDispatchImpl 類別](../../atl/reference/idispatchimpl-class.md)   
  [IDispEventSimpleImpl 類別](../../atl/reference/idispeventsimpleimpl-class.md)   

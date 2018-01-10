@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8e63e071629c2647ccd8f89095fbc7c2285f1a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c2ea7a2509e58cfd4da163cc76c018d06c244fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macro-substitution"></a>巨集替換
 當*巨集名稱*叫用時，每次發生*string1*其定義的字串會被取代*string2*。  
@@ -37,5 +38,5 @@ $(macroname:string1=string2)
   
  沒有空格或定位點之前使用冒號。任何冒號後面都會解譯為常值。 如果*string2*是 null，所有出現的*string1*會刪除巨集的定義字串。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 NMAKE 巨集](../build/using-an-nmake-macro.md)

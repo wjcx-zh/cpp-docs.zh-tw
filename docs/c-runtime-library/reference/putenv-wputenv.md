@@ -45,17 +45,18 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fdb0ee73b6ee289a97e3debfb7b4b5427ba003f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 509766f9f324c1dd9488488861e7c64200d44837
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putenv-wputenv"></a>_putenv、_wputenv
 建立、修改或移除環境變數。 這些函式已有更安全的版本可用，請參閱 [_putenv_s、_wputenv_s](../../c-runtime-library/reference/putenv-s-wputenv-s.md)。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -97,17 +98,17 @@ int _wputenv(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_putenv`|\<stdlib.h>|  
 |`_wputenv`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  如需如何使用 `_putenv` 的範例，請參閱 [getenv、_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)。  
   
-## <a name="see-also"></a>另請參閱  
- [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>請參閱  
+ [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [getenv、_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   
  [_searchenv、_wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)

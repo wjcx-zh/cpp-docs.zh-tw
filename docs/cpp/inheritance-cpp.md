@@ -4,32 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - derived classes [C++]
 - derived classes [C++], about derived classes
 - classes [C++], derived
 ms.assetid: 3534ca19-d9ed-4a40-be1b-b921ad0e6956
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: dba45acbc602465db876038e83cb0cd496b2337e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 50b6b180a6def741daa47a5054f1c61d3265ebd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inheritance--c"></a>繼承 (C++)
 本節將說明如何使用衍生類別產生可擴充程式。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  可以從現有的類別使用稱為 「 繼承 」 的機制衍生新類別 (請參閱資訊一開始[單一繼承](../cpp/single-inheritance.md))。 供衍生使用的類別稱為特定衍生類別的「基底類別」。 衍生類別會使用下列語法宣告：  
   
 ```  
@@ -66,5 +64,5 @@ ms.lasthandoff: 09/25/2017
   
  [__Super](../cpp/super.md)和[__interface](../cpp/interface.md)關鍵字記載這一節。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

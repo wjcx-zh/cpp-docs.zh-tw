@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e01b39eb7393d171b2c1fb30193810f62be85b99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 319d130b9d8f17875aaa8bac15f546401457b963
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>將物件和控制項加入至 ATL 專案
 您可以使用其中一個 ATL 程式碼精靈加入 ATL 或 MFC 為基礎的專案中的物件或控制項。 針對每個 COM 物件或控制項您加入，亦即，精靈會產生的.cpp 和.h 檔案，以及指令碼為基礎的登錄支援.rgs 檔。 在 Visual Studio 中有下列的 ATL 程式碼精靈：  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
   
      或者，如果您嘗試以 ATL 物件加入不含先前將 ATL 支援加入 MFC 專案，Visual Studio 會提示您指定是否要讓 ATL 支援加入至專案。 按一下**是**將 ATL 支援加入至專案，並開啟所選的 ATL 精靈。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   

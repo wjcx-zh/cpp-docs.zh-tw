@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffebf8289b7c1eb5ccaae5a6b6a5f2a3f939cbb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlarray-class"></a>CAtlArray 類別
 這個類別會實作陣列物件。  
@@ -58,7 +59,7 @@ class CAtlArray
  *ETraits*  
  程式碼，用來複製或移動項目。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -479,7 +480,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MMXSwarm 範例](../../visual-cpp-samples.md)   
  [DynamicConsumer 範例](../../visual-cpp-samples.md)   
  [UpdatePV 範例](../../visual-cpp-samples.md)   

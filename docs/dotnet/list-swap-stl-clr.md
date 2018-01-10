@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c264e8d75b3a8f6fdd50b7f1a8e6bf03bd2d21a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d252605e35a223a6b0aa12820ac5d9fc2894b9c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listswap-stlclr"></a>list::swap (STL/CLR)
 交換兩個容器的內容。  
@@ -35,7 +38,7 @@ void swap(list<Value>% right);
  要交換內容的容器。  
   
 ## <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
+ 成員函式會交換 `*this` 和 `right` 之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
   
 ## <a name="example"></a>範例  
   
@@ -88,7 +91,7 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list:: assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
  [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

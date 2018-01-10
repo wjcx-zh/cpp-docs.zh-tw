@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 170f10d06112969d9147c37b20572f0888140d0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 660f70be8ec4ac1efcec056c694d0e2fc3256071
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供者精靈
 此精靈會建立撰寫 OLE DB 提供者的類別。  
@@ -75,6 +76,6 @@ ms.lasthandoff: 10/24/2017
  **.Cpp 檔案中資料列集**  
  提供者的實作檔。 您可以編輯此檔案的名稱，或選取現有的實作檔。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL OLE DB 提供者](../../atl/reference/adding-an-atl-ole-db-provider.md)
 

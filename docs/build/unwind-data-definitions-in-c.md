@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e69571209cdfd1a12d99d79dd14840481ac872ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09177bfef670ca425fa1328190310744c04bf92f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="unwind-data-definitions-in-c"></a>C 中的回溯資料定義
 回溯資料的 C 描述如下：  
@@ -30,7 +31,7 @@ typedef enum _UNWIND_OP_CODES {
     UWOP_SET_FPREG,       /* no info, FP = RSP + UNWIND_INFO.FPRegOffset*16 */  
     UWOP_SAVE_NONVOL,     /* info == register number, offset in next slot */  
     UWOP_SAVE_NONVOL_FAR, /* info == register number, offset in next 2 slots */  
-    UWOP_SAVE_XMM128,     /* info == XMM reg number, offset in next slot */  
+    UWOP_SAVE_XMM128 = 8, /* info == XMM reg number, offset in next slot */  
     UWOP_SAVE_XMM128_FAR, /* info == XMM reg number, offset in next 2 slots */  
     UWOP_PUSH_MACHFRAME   /* info == 0: no error-code, 1: error-code */  
 } UNWIND_CODE_OPS;  
@@ -86,5 +87,5 @@ typedef struct _RUNTIME_FUNCTION {
     ((PVOID)((PULONG)GetLanguageSpecificData(info) + 1)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理 (x64)](../build/exception-handling-x64.md)

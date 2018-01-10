@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b984448e55380dd3f2223b098a048fec57cb0ba6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1be04ba4c68b2629a5e765788af95a203ae06b34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-bit-fields"></a>位元欄位的儲存
 **ANSI 3.5.2.1**：在 int 內位元欄位的配置順序  
@@ -49,5 +50,5 @@ cccccccb bbbbaaaa
   
  由於 80x86 處理器會將整數值的低位元組儲存在高位元組之前，因此上面的整數 0x01F2 會在實體記憶體中儲存為 0xF2，後面接著 0x01。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、等位、列舉和位元欄位](../c-language/structures-unions-enumerations-and-bit-fields.md)

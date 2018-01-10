@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea315c065e6f76215939bc4ccd70bcc907361ff4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65be3d2e59a9d672db18ba332d608fdf031f16e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-declarations-and-definitions"></a>函式宣告和定義
 函式原型會建立函式的名稱、其傳回型別，以及其正式參數的類型和數目。 函式定義包括函式主體。  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  函式和變數宣告都可以出現在函式定義的內部或外部。 函式定義內的任何宣告一般會稱為出現在「內部」或「區域」層級。 在所有函式定義外部的宣告則稱為出現在「外部」、「全域」或「檔案範圍」層級。 變數定義 (像是宣告) 可能會出現在內部層級 (在函式定義內) 或外部層級 (在所有函式定義外)。 函式定義一律在外部層級發生。 函式定義將在[函式定義](../c-language/c-function-definitions.md)中進一步討論。 函式原型將涵蓋在[函式原型](../c-language/function-prototypes.md)中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)

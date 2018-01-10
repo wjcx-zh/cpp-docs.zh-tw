@@ -17,18 +17,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d9cb7faeb02a4bf2e4b52d3af6b89edd0a0d9c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b59a14c9ce384bbf59838e7412530043650603e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dll-import-and-export"></a>DLL 匯入及匯出
 **Microsoft 特定的**  
   
  dllimport 和 dllexport 儲存類別修飾詞是 Microsoft 專有的 C 語言擴充功能。 這些修飾詞會定義用戶端的 DLL 介面 (可執行檔或另一個 DLL)。 如需使用這些修飾詞的詳細資訊，請參閱 [dllexport、dllimport](../cpp/dllexport-dllimport.md)。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

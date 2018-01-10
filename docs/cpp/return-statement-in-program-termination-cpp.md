@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb3555ecb80b2f6bc8663325b500ffb2eb317ce3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a9e97c0ee52094cd3f0ccbb36c0da8b3b04c630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-statement-in-program-termination-c"></a>程式終止中的 return 陳述式 (C++)
 發出`return`陳述式從**主要**功能上相當於呼叫**結束**函式。 參考下列範例：  
@@ -38,5 +39,5 @@ int main()
   
  **結束**和`return`在上述範例中的陳述式會運作方式相同。 不過，C++ 要求使用具有傳回類型 (非 `void`) 的函式傳回一個值。 `return`陳述式可讓您傳回值，以從**主要**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式終止](../cpp/program-termination.md)

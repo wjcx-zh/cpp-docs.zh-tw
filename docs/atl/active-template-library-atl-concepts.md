@@ -14,18 +14,19 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01bd114c92b7056ead29b57c70801d2cbbacb554
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7cf2568005049cfabd9178ea4c8732a5a985954
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-template-library-atl-concepts"></a>Active Template Library (ATL) 概念
 Active Template Library (ATL) 是一組樣板架構 c + + 類別可讓您建立小型、 快速元件物件模型 (COM) 物件。 它有索引鍵的 COM 功能，包括內建實作、 雙重介面、 標準的 COM 列舉程式介面、 連接點、 tear-off 介面和 ActiveX 控制項的特殊支援。  
   
  如果您這樣做很多 ATL 的程式設計，您會想要深入了解屬性，為了簡化 COM 程式設計的 Visual c + +.NET 中的新功能。 如需詳細資訊，請參閱[屬性化程式設計](../windows/attributed-programming-concepts.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)  
  將引導您完成建立控制項，並示範一些程序中的 ATL 基本概念。  
   

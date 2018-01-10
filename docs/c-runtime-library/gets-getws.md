@@ -38,11 +38,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fc8a2277995cc9ddbb36cbceda68e0ba4a862b59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6193445dace47b62cf8793d69ad45e0f73a2f10d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gets-getws"></a>gets、_getws
 從 `stdin` 資料流取得行。 這些函式已有更安全的版本，請參閱 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
 >  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。 這些函式的安全版本，但 gets_s 及 _getws_s 仍可繼續使用。 如需這些替代函式的資訊，請參閱 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -95,12 +96,12 @@ wchar_t *_getws(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`gets`|\<stdio.h>|  
 |`_getws`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -127,7 +128,7 @@ int main( void )
 Hello there!The line entered was: Hello there!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../c-runtime-library/stream-i-o.md)   
  [fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)   
  [fputs、fputws](../c-runtime-library/reference/fputs-fputws.md)   

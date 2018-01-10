@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6bffc721ac685be91531b3d876234de8be2477c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d18ae0818dd839bee0d93bd7194dadcc9abf6627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-checking-crt"></a>類型檢查 (CRT)
 編譯器會在可接受不定數目引數的函式上執行有限的類型檢查，如下所示：  
@@ -35,9 +36,9 @@ ms.lasthandoff: 10/24/2017
 |`_open`|前兩個引數 (路徑與 `_open` 旗標)|  
 |`_sopen_s`|前三個引數 (路徑、`_open` 旗標與共用模式)|  
 |`_execl`、`_execle`、`_execlp`、`_execlpe`|前兩個引數 (路徑與第一個引數指標)|  
-|`_spawnl`、`_spawnle`、`_spawnlp`、`_spawnlpe`|前三個引數 (模式旗標、路徑與第一個引數指標)|  
+|`_spawnl`、`_spawnle`、`_spawnlp``_spawnlpe`|前三個引數 (模式旗標、路徑與第一個引數指標)|  
   
  編譯器會在這些函式的寬字元對等項目上執行相同的有限類型檢查。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

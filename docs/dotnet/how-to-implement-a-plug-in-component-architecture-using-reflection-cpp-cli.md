@@ -1,39 +1,41 @@
 ---
-title: "如何：使用反映實作外掛程式元件架構 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "外掛程式 [C++]"
-  - "反映 [C++], 外掛程式"
+title: "實作外掛程式架構 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- plug-ins [C++]
+- reflection [C++}, plug-ins
 ms.assetid: 4f31e42b-78d1-48b9-8fdc-f28c75e8e77e
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05c6c2584e39ed145a30c919ed850aac45905a85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用反映實作外掛程式元件架構 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會示範使用反映以實作簡單的「外掛程式」架構。  第一個列表是應用程式，第二個是外掛程式。  應用程式是多重文件表單，會使用任何在外掛程式 DLL \(以命令列引數的方式提供\) 中找到的表單架構類別，將資料填入表單。  
+# <a name="how-to-implement-a-plug-in-component-architecture-using-reflection-ccli"></a>如何：使用反映實作外掛程式元件架構 (C++/CLI)
+下列程式碼範例示範如何使用反映來實作簡單的 「 外掛程式 」 架構。 第一個清單是應用程式，而第二個是外掛程式。 應用程式是填入本身的任何表單為基礎的類別做為命令列引數提供的外掛程式 DLL 中找到多個文件格式。  
   
- 應用程式會使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName> 方法，嘗試載入提供的組件。  如果成功，則會使用 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName> 方法列舉組件中的型別。  接著使用 <xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName> 方法檢查每個型別的相容性。  在這個範例中，在提供的組件中找到的類別必須衍生自 <xref:System.Windows.Forms.Form> 類別，才會視為外掛程式。  
+ 應用程式嘗試載入使用提供的組件<xref:System.Reflection.Assembly.Load%2A?displayProperty=fullName>方法。 如果成功，組件內的類型會列舉使用<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=fullName>方法。 每個型別即檢查的相容性使用<xref:System.Type.IsAssignableFrom%2A?displayProperty=fullName>方法。 在此範例中，提供的組件中找到的類別必須衍生自<xref:System.Windows.Forms.Form>才能限定為外掛程式類別。  
   
- 接著相容的類別會以 <xref:System.Activator.CreateInstance%2A?displayProperty=fullName> 方法執行個體化，此方法可接受 <xref:System.Type> 做為引數並會傳回新執行個體的指標。  每個新的執行個體會附加至表單並顯示在表單中。  
+ 然後會使用具現化相容類別<xref:System.Activator.CreateInstance%2A?displayProperty=fullName>方法，它接受<xref:System.Type>做為引數和傳回的新執行個體的指標。 然後附加到表單，顯示每個新的執行個體。  
   
- 請注意 <xref:System.Reflection.Assembly.Load%2A> 方法不接受含有副檔名的組件名稱。  因為應用程式的主函式會修剪掉任何提供的副檔名，所以不管組件名稱有無副檔名，下列程式碼範例都可以運作。  
+ 請注意，<xref:System.Reflection.Assembly.Load%2A>方法不會接受包含副檔名的組件名稱。 應用程式中的 main 函式會修剪任何提供的擴充功能，因此下列程式碼範例都可以運作。  
   
-## 範例  
- 下列程式碼定義接受外掛程式的應用程式。  必須提供組件名稱做為第一個引數。  這個組件應該包含至少一個公用的 <xref:System.Windows.Forms.Form> 衍生型別。  
+## <a name="example"></a>範例  
+ 下列程式碼會定義應用程式可接受的外掛程式。必須提供組件名稱做為第一個引數。 這個組件應包含至少一個公用<xref:System.Windows.Forms.Form>衍生型別。  
   
 ```  
 // plugin_application.cpp  
@@ -77,8 +79,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列程式碼定義三個衍生自 <xref:System.Windows.Forms.Form> 的類別。  當產生的組件名稱傳遞至上面列表中的可執行檔時，雖然在編譯時期這些類別對裝載的應用程式是未知的，應用程式還是會探索並執行個體化這三個類別。  
+## <a name="example"></a>範例  
+ 下列程式碼會定義三個類別衍生自<xref:System.Windows.Forms.Form>。 當產生的組件名稱的名稱傳遞在上一個清單中的可執行檔時，這三個類別的每個會探索並具現化，儘管它們是裝載的應用程式在編譯時期未知。  
   
 ```  
 // plugin_assembly.cpp  
@@ -128,5 +130,5 @@ protected:
 };  
 ```  
   
-## 請參閱  
- [反映](../dotnet/reflection-cpp-cli.md)
+## <a name="see-also"></a>請參閱  
+ [反映 (C++/CLI)](../dotnet/reflection-cpp-cli.md)

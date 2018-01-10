@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fecb7c614320c202a1159a527b34159c01099af6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c5e71f969f86aee419a0ff9d3701f4d43be5c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwintraits-class"></a>CWinTraits 類別
 這個類別會提供建立視窗物件時所使用之樣式標準化的方法。  
@@ -49,11 +50,11 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
  `t_dwExStyle`  
  預設的延伸的視窗樣式。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWinTraits::GetWndExStyle](#getwndexstyle)|（靜態）擷取的延伸的樣式`CWinTraits`物件。|  
 |[CWinTraits::GetWndStyle](#getwndstyle)|（靜態）擷取標準樣式`CWinTraits`物件。|  
@@ -107,7 +108,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 ### <a name="return-value"></a>傳回值  
  物件的延伸的視窗樣式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別成員](http://msdn.microsoft.com/en-us/dbe6a147-3f01-4aea-a3fb-fe6ebadc31f8)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [了解視窗特性](../../atl/understanding-window-traits.md)

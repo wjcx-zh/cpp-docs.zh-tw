@@ -1,46 +1,45 @@
 ---
-title: "ML Fatal Error A1011 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1011"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1011"
+title: "ML 嚴重錯誤 A1011 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1011
+dev_langs: C++
+helpviewer_keywords: A1011
 ms.assetid: 7fbf092d-4189-4330-a884-dfa2268fc3dd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 470340e76897394e5b8ecb042ff97562b0c94c2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Error A1011
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**指示詞必須在控制區**  
+# <a name="ml-fatal-error-a1011"></a>ML 嚴重錯誤 A1011
+**指示詞必須在控制區塊**  
   
- 組譯工具找到未預期的高階指示詞。  找不到下列的指示詞其中一項：  
+ 組譯工具找到其中一個不預期的高層級指示詞。 找不到下列指示詞的其中一個：  
   
--   [.其他](../../assembler/masm/dot-else.md) 而不  [。如果](../../assembler/masm/dot-if.md)  
+-   [.其他](../../assembler/masm/dot-else.md)沒有[。如果](../../assembler/masm/dot-if.md)  
   
--   [.ENDIF](../../assembler/masm/dot-endif.md) 而不 [。如果](../../assembler/masm/dot-if.md)  
+-   [.ENDIF](../../assembler/masm/dot-endif.md)沒有[。如果](../../assembler/masm/dot-if.md)  
   
--   [.ENDW](../../assembler/masm/dot-endw.md) 而不 [。雖然](../../assembler/masm/dot-while.md)  
+-   [.ENDW](../../assembler/masm/dot-endw.md)沒有[。WHILE](../../assembler/masm/dot-while.md)  
   
--   [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md) 而不 [。重複](../../assembler/masm/dot-repeat.md)  
+-   [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)沒有[。重複](../../assembler/masm/dot-repeat.md)  
   
--   [.繼續](../../assembler/masm/dot-continue.md) 而不  [。WHILE](../../assembler/masm/dot-while.md) or [.重複](../../assembler/masm/dot-repeat.md)  
+-   [.繼續](../../assembler/masm/dot-continue.md)沒有[。雖然](../../assembler/masm/dot-while.md)或[。重複](../../assembler/masm/dot-repeat.md)  
   
--   [.中斷](../../assembler/masm/dot-break.md) 而不  [。WHILE](../../assembler/masm/dot-while.md) or [.重複](../../assembler/masm/dot-repeat.md)  
+-   [.中斷](../../assembler/masm/dot-break.md)沒有[。雖然](../../assembler/masm/dot-while.md)或[。重複](../../assembler/masm/dot-repeat.md)  
   
--   [.其他](../../assembler/masm/dot-else.md)下`.ELSE`  
+-   [.其他](../../assembler/masm/dot-else.md)下列`.ELSE`  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

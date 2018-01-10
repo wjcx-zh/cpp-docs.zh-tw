@@ -1,42 +1,42 @@
 ---
-title: "建立 .Sbr 檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".sbr 檔案"
-  - "BSCMAKE, 輸入檔"
-  - "瀏覽資訊中的區域符號"
-  - "SBR 檔案"
-  - "來源瀏覽檔"
-  - "符號"
+title: "建立。Sbr 檔案 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- SBR files
+- BSCMAKE, input files
+- .sbr files
+- source browser files
+- local symbols in browse information
+- symbols
 ms.assetid: bdb4b93c-a88a-441a-84fd-01087d03be25
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d87b71daaf5d7b37e67c2c0e56e844bd5251a490
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 建立 .Sbr 檔
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-BSCMAKE 的輸入檔是 .sbr 檔。  編譯器會為所編譯的每一個目的檔 \(.obj\) 建立一個 .sbr 檔。  當您建置或更新瀏覽資訊檔時，專案中所有的 .sbr 檔都必須在磁碟中。  
+# <a name="creating-an-sbr-file"></a>建立 .Sbr 檔
+BSCMAKE 的輸入的檔是.sbr 檔案。 編譯器會建立.sbr 檔案以供在編譯每個目的檔 (.obj)。 當您建立或更新您的瀏覽資訊檔時，為您的專案的所有.sbr 檔必須都是可用磁碟空間。  
   
- 若要建立包含所有可能資訊的 .sbr 檔，可以指定 [\/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)。  
+ 若要建立的.sbr 檔與所有可能的資訊，請指定[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)。  
   
- 若要建立不包含區域符號的 .sbr 檔，可以指定 [\/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)。  如果 .sbr 檔中已經包含了區域符號，您還是可以利用 BSCMAKE 的 [\/El 選項](../../build/reference/bscmake-options.md)在 .bsc 檔中將它們省略`。`  
+ 若要建立不含本機符號的.sbr 檔案，請指定[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md)。 如果.sbr 檔包含本機符號時，您可以仍然省略它們從.bsc 檔使用 BSCMAKE 的[/El 選項](../../build/reference/bscmake-options.md)`.`  
   
- 您不需執行完整的編譯，就可以建立 .sbr 檔。  例如，可以對編譯器指定 \/Zs 選項以執行語法檢查，且仍可以產生一個 .sbr 檔，如果指定 \/FR 或 \/Fr 的話。  
+ 您可以建立的.sbr 檔案而不執行完整的編譯。 例如，您可以指定 /Zs 選項，編譯器將執行語法檢查以及仍產生的.sbr 檔案，如果您指定 /FR 的話。  
   
- 如果先將 .sbr 檔封裝以移除未參考定義，建置過程會更有效率。  編譯器會自動封裝 .sbr 檔。  
+ 在建置程序可以更有效率的.sbr 檔案會先封裝移除未參考的定義。 編譯器會自動套件.sbr 檔案。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [建置 .Bsc 檔](../../build/reference/building-a-dot-bsc-file.md)

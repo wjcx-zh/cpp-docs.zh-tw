@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,8 +12,7 @@ f1_keywords:
 - _com_ptr_t::operatorbool
 - _com_ptr_t::operator->
 - _com_ptr_t::operator*
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - operator Interface& [C++]
 - '* operator [C++], with specific objects'
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - extractors, _com_ptr_t class
 - extractors [C++]
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 136afa55361ff25f9ad606886be938a00551393d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1c006c18b9e00e5c79ff686dfb31fa9ccf56fd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrt-extractors"></a>_com_ptr_t 擷取器
 **Microsoft 特定的**  
@@ -59,7 +57,7 @@ operator bool( ) const throw( );
   
 ## <a name="remarks"></a>備註  
   
--   **operator Interface&\* **傳回封裝的介面指標，這可能是**NULL**。  
+-   **operator Interface&\*** 傳回封裝的介面指標，這可能是**NULL**。  
   
 -   **operator Interface& &**將參考傳回給封裝的介面指標，並會發出錯誤，如果指標位於**NULL**。  
   
@@ -71,7 +69,7 @@ operator bool( ) const throw( );
   
 -   **運算子 bool**允許條件運算式中使用智慧型指標物件。 這個運算子會傳回**true**如果指標不是**NULL**。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

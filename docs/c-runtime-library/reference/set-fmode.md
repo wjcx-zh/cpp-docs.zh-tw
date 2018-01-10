@@ -35,11 +35,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 317f4ac24d44008f58deeb62e8362b2d09d8309a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d13ee80a8a3d9848841b7fa3b5463e0b5302ffeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setfmode"></a>_set_fmode
 設定檔案 I/O 作業的預設檔案轉譯模式。  
@@ -53,7 +54,7 @@ errno_t _set_fmode(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `mode`  
+ [輸入] `mode`  
  所需要的檔案轉譯模式：`_O_TEXT` 或 `_O_BINARY`。  
   
 ## <a name="return-value"></a>傳回值  
@@ -66,11 +67,11 @@ errno_t _set_fmode(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_set_fmode`|\<stdlib.h>|\<fcntl.h>、\<errno.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -135,7 +136,7 @@ Default Mode is binary
 A   B   C   D   E   F   G   H   I   J   K   L     
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_fmode](../../c-runtime-library/fmode.md)   
  [_get_fmode](../../c-runtime-library/reference/get-fmode.md)   
  [_setmode](../../c-runtime-library/reference/setmode.md)   

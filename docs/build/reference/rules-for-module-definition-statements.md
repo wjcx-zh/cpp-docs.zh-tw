@@ -1,50 +1,49 @@
 ---
-title: "模組定義陳述式的規則 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".def"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "模組定義檔"
-  - "模組定義檔, 陳述式語法"
+title: "模組定義陳述式的規則 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .def
+dev_langs: C++
+helpviewer_keywords:
+- module definition files, statement syntax
+- module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 40eb4875b195871aff8d274667e005d63424a110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 模組定義陳述式的規則
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列語法規則套用至 .def 檔中所有的陳述式。  其他套用至特定陳述式的規則，則隨著各陳述式說明。  
+# <a name="rules-for-module-definition-statements"></a>模組定義陳述式的規則
+下列語法規則套用至.def 檔案中的所有陳述式。 每個陳述式的說明特定陳述式適用於其他規則。  
   
--   陳述式、屬性關鍵字和使用者指定的識別項都是有區分大小寫的。  
+-   陳述式、 屬性關鍵字和使用者指定的識別碼會區分大小寫。  
   
--   包含空格或分號 \(;\) 的長檔名必須以引號 \("\) 括住。  
+-   長時間的檔案名稱包含空格或分號 （;） 必須括在雙引號 （"）。  
   
--   使用一個或多個空格、定位字元或新行字元，來分隔陳述式關鍵字和其引數，以及分隔各陳述式。  指定引數的冒號 \(:\) 或等號 \(\=\) 會以零個或多個空格、定位字元或新行字元括住。  
+-   使用一或多個空格、 tab 字元或換行字元分隔的引數的陳述式關鍵字以及分隔各陳述式。 冒號 （:） 或指定引數的等號 （=） 會圍繞著零或多個空格、 定位字元或新行字元。  
   
--   如果使用 **NAME** 或 **LIBRARY** 陳述式，則這兩個陳述式必須在其他所有陳述式之前。  
+-   A**名稱**或**文件庫**陳述式中，如果使用，必須在前面的所有其他陳述式。  
   
--   **SECTIONS** 和 **EXPORTS** 陳述式可在 .def 檔中出現一次以上。  每一個陳述式都可接受多個規格，而規格必須以一個或多個空格、定位字元或新行字元分隔。  陳述式關鍵字必須在第一個規格之前出現一次，並可在每個其他規格之前重複。  
+-   **區段**和**匯出**陳述式可以在.def 檔中出現一次以上。 每個陳述式可能需要多個規格，必須以一個或多個空格、 tab 字元或新行字元分隔。 陳述式關鍵字必須出現在第一次的規格之前，一次，而且可以重複在每個其他規格之前。  
   
--   很多陳述式都有相等的 LINK 命令列選項。  如需詳細資訊，請參閱對應的 LINK 選項之說明。  
+-   許多陳述式有相同的連結命令列選項。 請參閱對應的 LINK 選項，如需詳細資訊的描述。  
   
--   .def 檔中的註解是由各註解行開頭的分號 \(;\) 指定。  註解不可與陳述式共用一行，但可出現在多行陳述式中的規格之間 \(**SECTIONS** 和 **EXPORTS** 為多行陳述式\)。  
+-   .Def 檔案中的註解的分號 （;） 來指定每個註解行的開頭。 註解不能共用同一線路與陳述式，但它可以出現在多行陳述式中的規格之間。 (**區段**和**匯出**多行陳述式。)  
   
--   數值引數是以十進位或十六進位指定。  
+-   數值引數是指定基底 10 或十六進位。  
   
--   如果字串引數與[保留字](../../build/reference/reserved-words.md)相符，則該字串必須以雙引號 \("\) 括住。  
+-   如果字串引數符合[保留字](../../build/reference/reserved-words.md)，就必須括在雙引號 （"）。  
   
-## 請參閱  
- [模組定義檔案 \(.Def\)](../../build/reference/module-definition-dot-def-files.md)   
- [Frequently Asked Questions on Building](http://msdn.microsoft.com/zh-tw/56a3bb8f-0181-4989-bab4-a07ba950ab08)
+## <a name="see-also"></a>請參閱  
+ [模組定義檔 (.Def)](../../build/reference/module-definition-dot-def-files.md)  

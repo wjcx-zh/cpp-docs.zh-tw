@@ -1,83 +1,84 @@
 ---
-title: "/I (其他 Include 目錄) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories"
-  - "VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories"
-  - "/I"
-  - "VC.Project.VCNMakeTool.IncludeSearchPath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/I 編譯器選項 [C++]"
-  - "其他 Include 目錄編譯器選項"
-  - "I 編譯器選項 [C++]"
-  - "-I 編譯器選項 [C++]"
-  - "Include 目錄, 編譯器選項 [C++]"
-  - "設定 Include 目錄"
+title: "-I (其他 Include 目錄) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
+- VC.Project.VCCLCompilerTool.AdditionalIncludeDirectories
+- /I
+- VC.Project.VCNMakeTool.IncludeSearchPath
+dev_langs: C++
+helpviewer_keywords:
+- /I compiler option [C++]
+- Additional Include Directories compiler option
+- I compiler option [C++]
+- -I compiler option [C++]
+- set include directories
+- include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bfbf962a92af22d3e724c592fec6cf812b610dc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /I (其他 Include 目錄)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-將目錄加入至要搜尋 include 檔的目錄清單。  
+# <a name="i-additional-include-directories"></a>/I (其他 Include 目錄)
+將目錄加入至搜尋 include 檔的目錄清單。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /I[ ]directory  
 ```  
   
-## Arguments  
+## <a name="arguments"></a>引數  
  `directory`  
- 是要加入到搜尋包含檔之目錄清單的目錄。  
+ 要加入的目錄清單中的目錄搜尋 include 檔。  
   
-## 備註  
- 若要加入一個以上目錄，請重複使用這個選項。  這些目錄會逐一被搜尋直到找到指定的包含檔為止。  
+## <a name="remarks"></a>備註  
+ 若要加入多個目錄，一次使用此選項。 目錄會搜尋才找到指定的包含檔。  
   
- 您可以使用這個選項配合 \[忽略標準 Include 路徑\] \([\/X \(忽略標準 Include 路徑\)](../../build/reference/x-ignore-standard-include-paths.md)\) 選項。  
+ 您可以使用此選項以忽略標準 Include 路徑 ([/X （忽略標準 Include 路徑）](../../build/reference/x-ignore-standard-include-paths.md)) 選項。  
   
- 編譯器會依下列順序搜尋各目錄：  
+ 編譯器會搜尋目錄，以下列順序：  
   
-1.  含有原始程式檔的目錄。  
+1.  包含來源檔案的目錄。  
   
-2.  以 **\/I** 選項指定的目錄，依照 CL 所碰到的先後順序搜尋。  
+2.  以指定的目錄**/I**選項，CL 碰到它們的順序。  
   
-3.  在 **INCLUDE** 環境變數中指定的目錄。  
+3.  中指定的目錄**INCLUDE**環境變數。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**一般**\] 屬性頁。  
+3.  按一下**一般**屬性頁。  
   
-4.  修改 \[**其他 Include 目錄**\] 屬性。  
+4.  修改**其他 Include 目錄**屬性。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalIncludeDirectories%2A>。  
   
-## 範例  
- 以下命令會依下列順序尋找 MAIN.c 要求的包含檔：首先尋找含有 MAIN.c 的目錄，然後是 \\INCLUDE 目錄，再接下來是 \\MY\\INCLUDE 目錄，最後是指派給 INCLUDE 環境變數的目錄。  
+## <a name="example"></a>範例  
+ 下列命令會依下列順序要求 MAIN.c include 檔： 包含 MAIN.c，然後在 \INCLUDE 目錄中，然後在 \MY\INCLUDE 目錄中，以及最後的目錄中指定要包含的目錄中的第一個環境變數。  
   
 ```  
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

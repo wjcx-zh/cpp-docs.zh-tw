@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3e51322b5ac94688e39c0b4ebad1649a5a25d4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c49057153a23f0e17d09032df8781b64cef8677
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl 類別
 這個類別會實作連接點。  
@@ -55,7 +56,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IConnectionPointImpl::Advise](#advise)|建立的連接點與接收器之間的連接。|  
 |[IConnectionPointImpl::EnumConnections](#enumconnections)|建立列舉值逐一查看的連接點的連線。|  
@@ -65,7 +66,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IConnectionPointImpl::m_vec](#m_vec)|管理連接點的連線。|  
   
@@ -148,6 +149,6 @@ STDMETHOD(Unadvise)(DWORD dwCookie);
 ### <a name="remarks"></a>備註  
  請參閱[IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318)   
  [類別概觀](../../atl/atl-class-overview.md)

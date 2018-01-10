@@ -53,11 +53,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 089ad22184700509b651f31b830c6414d3455e6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a52c7643a465bfaf24db6988d531943284e6416
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 使用引數清單的指標傳回格式化的字串字元數。  
@@ -95,17 +96,17 @@ int _vscwprintf_l(
  `locale`  
  要使用的地區設定。  
   
- 如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 如需詳細資訊，請參閱 [格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="return-value"></a>傳回值  
  如果引數清單指向的字串被列印或傳送至使用指定格式化程式碼的檔案或緩衝區，`_vscprintf` 會傳回可能產生的字元數。 傳回的值不包含終止 Null 字元。 `_vscwprintf` 執行寬字元的相同函式。  
   
  這些有 `_l` 尾碼的函式版本是一樣的，不同之處在於會使用傳入的地區設定，而不使用目前的執行緒地區設定。  
   
- 如果 `format` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
+ 如果 `format` 為 null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，函式會傳回 -1，並將 `errno` 設為 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
- 每個 `argument` (如果有的話) 都是根據 `format` 中的對應格式規格進行轉換。 此格式包含一般字元，與 [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 的 `format` 引數具有相同的形式和功能。  
+ 每個 `argument` (如果有的話) 都是根據 `format` 中的對應格式規格進行轉換。 此格式包含一般字元，與 `format` printf [的](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)引數具有相同的形式和功能。  
   
 > [!IMPORTANT]
 >  請確定如果 `format` 是使用者定義的字串，它是以 Null 終止，且有正確的參數數目和類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
@@ -119,17 +120,17 @@ int _vscwprintf_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_vscprintf`, `_vscprintf_l`|\<stdio.h>|  
 |`_vscwprintf`, `_vscwprintf_l`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  請參閱 [vsprintf](../../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf、_printf_l、wprintf、_wprintf_l](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   

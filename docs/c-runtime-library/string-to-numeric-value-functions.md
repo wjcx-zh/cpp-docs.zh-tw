@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 11fca1402fbf1d740b06e2eac9632496792f7da0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68586bac573018bceb7dc982625ff6a859d18871
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-to-numeric-value-functions"></a>字串轉換為數值函式
 -   [strtod、_strtod_l、wcstod、_wcstod_l](../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md)  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  **strtod** 系列中的每個函式都會將以 null 終止的字串轉換為數值。 下表列出可用的函式。  
   
-|函式|說明|  
+|功能|描述|  
 |--------------|-----------------|  
 |`strtod`|將字串轉換為雙精確度浮點值|  
 |`strtol`|將字串轉換為 long 整數|  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/24/2017
   
  這些函式所傳回的值造成溢位或反向溢位時，或不可能轉換時，會如所示傳回特殊大小寫值︰  
   
-|函式|條件|傳回的值|  
+|功能|條件|傳回的值|  
 |--------------|---------------|--------------------|  
 |`strtod`|溢位|+/- `HUGE_VAL`|  
 |`strtod`|反向溢位或未轉換|0|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/24/2017
   
  `wcstod`、`wcstol`、`wcstoul`、`_wcstoi64` 和 `_wcstoui64` 分別是寬字元版本的 `strtod`、`strtol`、`strtoul`、`_strtoi64` 和 `_strtoui64`；所有這些寬字元函式之轉換結束引數的指標是寬字元字串。 否則，所有這些寬字元函式與其單一位元組字元對應項目的行為完全相同。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../c-runtime-library/data-conversion.md)   
  [地區設定](../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

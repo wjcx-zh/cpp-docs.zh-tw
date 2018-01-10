@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 76b3145eeb463a8e5e62f63b18b1652f39337ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d99d8953595621d8a741e5657d662e82571533fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmetadatadefaultmemberattribute-attribute"></a>Platform::Metadata::DefaultMemberAttribute 屬性
 指出在許多可能的多載函式中要叫用的慣用函式。  
@@ -48,5 +49,5 @@ public ref class DefaultMember abstract : Attribute
   
  **中繼資料：** platform.winmd  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform::Metadata 命名空間](../cppcx/platform-metadata-namespace.md)

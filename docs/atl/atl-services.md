@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b0572f4d83cfc6b098f290cda53592dbe4aa54b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d13eebbe96ba57c82e3bf1c360b0cb471a6bd975
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-services"></a>ATL 服務
 若要建立您的 ATL COM 物件，使其在服務中執行，只是服務 (EXE) 從清單中選取的伺服器選項，ATL 專案精靈 中。 精靈接著會建立一個衍生自類別`CAtlServiceModuleT`實作服務。  
@@ -55,6 +56,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [偵錯提示](../atl/debugging-tips.md)ATL 服務  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

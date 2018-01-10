@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- sizeof_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- sizeof operator
+f1_keywords: sizeof_cpp
+dev_langs: C++
+helpviewer_keywords: sizeof operator
 ms.assetid: 8bc3b6fb-54a1-4eb7-ada0-05f8c5efc532
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 67b699a93880a89e634ac024699ac79a9ea8d3ba
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 244af2a6afe87757c6a242c8a750f1bc3c99e557
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sizeof-operator"></a>sizeof 運算子
 就類型 `char` 的大小而言，會產生其運算元的大小。  
@@ -114,6 +110,6 @@ The size of the pointer is 4
 sizeof array / sizeof array[0]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)

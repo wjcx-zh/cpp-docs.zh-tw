@@ -47,11 +47,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d16ff30313a9346aa25f8febfba2f6e0d8307f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166e8f7804a3138d3e891fbe15b54cb0e270811
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmap-class"></a>CAtlMap 類別
 這個類別會提供建立和管理對應物件的方法。  
@@ -79,11 +80,11 @@ class CAtlMap
  `VTraits`  
  用於複製或移動的項目值的程式碼。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlMap::KINARGTYPE](#kinargtype)|使用索引鍵做為輸入的引數傳遞時的型別|  
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|當做輸出引數傳回一個機碼時所使用的類型。|  
@@ -92,28 +93,28 @@ class CAtlMap
   
 ### <a name="public-classes"></a>公用類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlMap::CPair 類別](#cpair_class)|類別，其中包含索引鍵和值的項目。|  
 
   
 ### <a name="cpair-data-members"></a>CPair 資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPair::m_key](#m_key)|資料成員儲存索引鍵的項目。|  
 |[CPair::m_value](#m_value)|資料成員，其儲存值的項目。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlMap::CAtlMap](#catlmap)|建構函式。|  
 |[CAtlMap:: ~ CAtlMap](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlMap::AssertValid](#assertvalid)|呼叫這個方法會造成判斷提示，如果`CAtlMap`不正確。|  
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|呼叫此方法以停用的自動重新`CAtlMap`物件。|  
@@ -141,7 +142,7 @@ class CAtlMap
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|取代或加入新的項目`CAtlMap`。|  
 
@@ -284,7 +285,7 @@ CPair* GetAt(POSITION& pos) throw();
  `key`  
  指定地圖的索引鍵的類型樣板參數。  
   
- *value*  
+ *值*  
  指定的對應值的類型樣板參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -365,7 +366,7 @@ void GetNextAssoc(
  `key`  
  指定地圖的索引鍵的類型樣板參數。  
   
- *value*  
+ *值*  
  指定的對應值的類型樣板參數。  
   
 ### <a name="remarks"></a>備註  
@@ -507,7 +508,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  指定識別的項目是要查閱的索引鍵。  
   
- *value*  
+ *值*  
  收到的查詢上值的變數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -601,7 +602,7 @@ POSITION SetAt(
  `key`  
  若要加入的索引鍵值`CAtlMap`物件。  
   
- *value*  
+ *值*  
  要加入值`CAtlMap`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -650,7 +651,7 @@ void SetValueAt(
  `pos`  
  位置計數器，先前呼叫所傳回[CAtlMap::GetNextAssoc](#getnextassoc)或[CAtlMap::GetStartPosition](#getstartposition)。  
   
- *value*  
+ *值*  
  要加入值`CAtlMap`物件。  
   
 ### <a name="remarks"></a>備註  
@@ -692,7 +693,7 @@ V  m_value;
  *V*  
  值的項目型別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [跑馬燈範例](../../visual-cpp-samples.md)   
  [UpdatePV 範例](../../visual-cpp-samples.md)   
  [類別概觀](../../atl/atl-class-overview.md)

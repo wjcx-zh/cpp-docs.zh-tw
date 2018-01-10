@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b7707234d0a1bf8abd37ae6751060ed7c7109fe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 093cbd3d2ae101bbc06c45a920f8a2c108eb3bfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-stored-procedures"></a>使用預存程序
 預存程序是儲存在資料庫中的可執行物件。 呼叫預存程序是類似於叫用 SQL 命令。 可以使用預存程序 （而不是執行或準備用戶端應用程式中的陳述式） 的資料來源上提供幾項優點，包括較高的效能、 降低的網路負荷，並改善的一致性和精確度。  
@@ -44,5 +47,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  您無法使用預存程序與 OLE DB provider for Jet 因為該提供者不支援預存程序。只允許常數查詢字串中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

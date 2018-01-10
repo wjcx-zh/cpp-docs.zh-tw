@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e6d679d634d14f3a762a6ef3d32d2ca4c5d4b6f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e783413e207ff63f2b93b31af53b0b0a44ff68f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
 判斷某個字元是否為多位元組字元的前導位元組。  
@@ -84,14 +85,14 @@ int _isleadbyte_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`isleadbyte`|\<ctype.h>|  
 |`_isleadbyte_l`|\<ctype.h>|  
   
  如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

@@ -11,11 +11,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f8742396a9ebe3780cb2c235238c9ce63986dc4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e19f72dac00d18af62e91b1466bc40f2148518e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
 
@@ -51,7 +52,7 @@ C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援�
 
 已在 UCRT 中新增或更新許多函式，可改善 ISO C99 一致性，以及解決程式碼品質和安全性問題。 在某些情況下，這需要程式庫的重大變更。 如果您的程式碼在使用舊版 CRT 時能夠正確編譯，但在使用 UCRT 編譯時中斷，則必須變更程式碼才能利用這些更新和功能。 如需通用 CRT 中找到之 CRT 的詳細重大變更和更新清單，請參閱 Visual C++ 變更歷程記錄的 [C 執行階段程式庫 (CRT)](visual-cpp-change-history-2003-2015.md#BK_CRT) 區段。 它包括受影響標頭和函式的清單，可用來識別您程式碼中所需的變更。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [Visual C++ 移植和升級指南](visual-cpp-porting-and-upgrading-guide.md)  
 [潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  

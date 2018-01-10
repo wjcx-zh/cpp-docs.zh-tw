@@ -24,17 +24,18 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f20054dac02857187ef4507b0b4ebfd6b7c6fe0e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f89c777a25da5288709683750c907114dac1e5c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environ-wenviron"></a>_environ、_wenviron
 `_environ` 變數是指標，指向多位元組字元字串之指標的陣列，而該字串構成此處理序環境。 這個全域變數已由更安全的版本 [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) 和 [_putenv_s、_wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md) 所取代，這些應該用來取代全域變數。 `_environ` 在 Stdlib.h 中宣告。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -82,7 +83,7 @@ j = _wputenv( "env_var_y=string2" );  // also results in implicit call:
   
  因此，在多位元組環境中，在第一次對 `putenv` 的隱含呼叫後，"`env_var_z`" 的值可能是 "`string1`"，但是當 "`env_var_z`" 的值設定為 "`string2`" 時，可能會在第二次對 `putenv` 的隱含呼叫時覆寫這個值。 因此 Unicode 環境 (在 `_wenviron` 中) 和多位元組環境 (在 `_environ` 中) 可能會在這一系列的呼叫後有所不同。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域變數](../c-runtime-library/global-variables.md)   
  [getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)   
  [getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)   

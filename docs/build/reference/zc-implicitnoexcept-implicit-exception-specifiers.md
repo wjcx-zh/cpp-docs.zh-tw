@@ -1,49 +1,49 @@
 ---
-title: "/Zc:implicitNoexcept (隱含的例外狀況規範) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Zc:implicitNoexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Zc:implicitNoexcept"
-  - "Zc:implicitNoexcept"
-  - "-Zc:implicitNoexcept"
+title: "-Zc: implicitNoexcept （隱含的例外狀況規範） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Zc:implicitNoexcept
+dev_langs: C++
+helpviewer_keywords:
+- /Zc:implicitNoexcept
+- Zc:implicitNoexcept
+- -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9af0a7a3a175699a4f4b738271fe0d4c5bbac4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /Zc:implicitNoexcept (隱含的例外狀況規範)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-當指定 **\/Zc:implicitNoexcept** 選項時，編譯器會將隱含的 [noexcept](../../cpp/noexcept-cpp.md) 例外狀況規範加入至編譯器定義的特殊成員函式，以及加入至使用者定義的解構函式和解除配置器。  根據預設，會啟用 **\/Zc:implicitNoexcept** 以符合 ISO C \+ \+ 11 標準。  關閉此選項會在使用者定義的解構函式和解除配置器，以及編譯器定義的特殊成員函式上停用隱含的 `noexcept`。  
+# <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (隱含的例外狀況規範)
+當**/zc: implicitnoexcept**指定選項時，編譯器會將隱含[noexcept](../../cpp/noexcept-cpp.md)編譯器定義的特殊成員函式和使用者定義解構函式的例外狀況規範和解除配置器。 根據預設， **/zc: implicitnoexcept**啟用以符合 ISO C + + 11 標準。 關閉此選項會在使用者定義的解構函式和解除配置器，以及編譯器定義的特殊成員函式上停用隱含的 `noexcept`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
-```vb  
+```cpp  
 /Zc:implicitNoexcept[-]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
   
-## 備註  
- 根據預設，如果指定 **\/Zc:implicitNoexcept**，則編譯器會遵循 ISO C \+ \+ 11 標準的第 15.4 節，並隱含地將 `noexcept` 例外狀況規範加入至每個隱含宣告或明確宣告的預設特殊成員函式—預設建構函式、複製建構函式、移動建構函式、解構函式、複製指派運算子或移動指派運算子—以及每個使用者定義的解構函式或解除配置器函式。  使用者定義的解除配置器具有隱含的 `noexcept(true)` 例外狀況規範。  若為使用者定義的解構函式，隱含的例外狀況規範為 `noexcept(true)`，除非內含的成員類別或基底類別具有不是 `noexcept(true)` 的解構函式。  若為編譯器產生的特殊成員函式，如果此函式直接叫用的任何函式實際上就是 `noexcept(false)`，則隱含的例外狀況規範為 `noexcept(false)`。  否則，隱含的例外狀況規範為 `noexcept(true)`。  
+## <a name="remarks"></a>備註  
+ 根據預設，如果**/zc: implicitnoexcept**指定，則編譯器會遵循 ISO C + + 11 標準的第 15.4 節，並會隱含地新增`noexcept`給每個例外狀況規範隱含宣告或明確的預設特殊成員函式 — 預設建構函式、 複製建構函式、 移動建構函式、 解構函式、 複製指派運算子或移動指派運算子 — 以及每個使用者定義解構函式或釋放函式。 使用者定義的解除配置器具有隱含的 `noexcept(true)` 例外狀況規範。 若為使用者定義的解構函式，隱含的例外狀況規範為 `noexcept(true)`，除非內含的成員類別或基底類別具有不是 `noexcept(true)` 的解構函式。 若為編譯器產生的特殊成員函式，如果此函式直接叫用的任何函式實際上就是 `noexcept(false)`，則隱含的例外狀況規範為 `noexcept(false)`。 否則，隱含的例外狀況規範為 `noexcept(true)`。  
   
  編譯器不會為使用明確的 `noexcept` 或 `throw` 規範或 `__declspec(nothrow)` 屬性所宣告的函式產生隱含的例外狀況規範。  
   
- 如果已藉由指定 **\/Zc:implicitNoexcept\-** 停用規範，則編譯器不會產生任何隱含的例外狀況規範。  這種行為與 Visual Studio 2013 相同，其中沒有例外狀況規範的解構函式和解除配置器可能具有 `throw` 陳述式。  根據預設，以及當指定 **\/Zc:implicitNoexcept** 時，如果在執行階段於具有隱含 `noexcept(true)` 規範的函式中遇到 `throw` 陳述式，則它會導致立即叫用 `std::terminate`,，而且不保證例外狀況處理常式的正常回溯行為。  若要協助識別這種情況，編譯器會產生 [編譯器警告 \(層級 1\) C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)。  如果 `throw` 是刻意的，我們建議您變更您的函式宣告，以具有明確的 `noexcept(false)` 規範，而不使用 **\/Zc:implicitNoexcept\-**。  
+ 如果選項已停用藉由指定**/zc: implicitnoexcept-**，編譯器會產生任何隱含的例外狀況規範。 這種行為與 Visual Studio 2013 相同，其中沒有例外狀況規範的解構函式和解除配置器可能具有 `throw` 陳述式。 根據預設，和當**/zc: implicitnoexcept**指定時，如果`throw`陳述式的執行階段具有隱含的函式中遇到`noexcept(true)`規範時，它會導致立即叫用的`std::terminate`，和不保證例外狀況處理常式的正常回溯行為。 為了協助識別這種情況下，編譯器會產生[編譯器警告 （層級 1） C4297](../../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)。 如果`throw`是刻意的我們建議您變更函式宣告有明確的`noexcept(false)`規範，而不使用**/zc: implicitnoexcept-**。  
   
- 這個範例會顯示當設定或停用 **\/Zc:implicitNoexcept** 選項時，沒有明確例外狀況規範的使用者定義的解構函式如何運作。  若要顯示設定時的行為，請使用 `cl /EHsc /W4 implicitNoexcept.cpp` 來編譯。  若要顯示停用時的行為，請使用 `cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp` 來編譯。  
+ 這個範例示範使用者定義解構函式沒有明確的例外狀況規範的行為方式時**/zc: implicitnoexcept**選項會設定或停用。 若要顯示的行為設定時，使用編譯`cl /EHsc /W4 implicitNoexcept.cpp`。 若要顯示停用時的行為，使用編譯`cl /EHsc /W4 /Zc:implicitNoexcept- implicitNoexcept.cpp`。  
   
 ```  
 // implicitNoexcept.cpp  
@@ -120,28 +120,36 @@ int main()
   
 ```  
   
- 使用預設設定 **\/Zc:implicitNoexcept** 來編譯時，範例會產生以下輸出：  
+ 使用預設設定來編譯時**/zc: implicitnoexcept**，此範例會產生以下輸出：  
   
-  **~B 攔截到例外狀況**  
-**非預期的 throw 造成 std::terminate**  
-**傳回 EXIT\_FAILURE 時結束** 使用設定 **\/Zc:implicitNoexcept\-** 來編譯時，範例會產生以下輸出：  
+```Output  
+~B Exception caught  
+Unexpected throw caused std::terminate  
+Exit returning EXIT_FAILURE  
+```  
   
-  **~B 攔截到例外狀況**  
-**~D 攔截到例外狀況**  
-**傳回 EXIT\_SUCCESS 時結束** 如需 Visual C\+\+ 中一致性問題的詳細資訊，請參閱[非標準行為](../../cpp/nonstandard-behavior.md)。  
+ 編譯設定時**/zc: implicitnoexcept-**，此範例會產生以下輸出：  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+```Output  
+~B Exception caught  
+~D Exception caught  
+Exit returning EXIT_SUCCESS  
+```  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
+ 如需 Visual C++ 中一致性問題的詳細資訊，請參閱 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)。  
   
-2.  選取 \[**C\/C\+\+**\] 資料夾。  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-3.  選取 \[**命令列**\] 屬性頁。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-4.  修改 \[**其他選項**\] 內容，以包含 **\/Zc:implicitNoexcept** 或 **\/Zc:implicitNoexcept\-**，然後選擇 \[**確定**\]。  
+2.  選取**C/c + +**資料夾。  
   
-## 請參閱  
- [\/Zc \(一致性\)](../../build/reference/zc-conformance.md)   
+3.  選取**命令列**屬性頁。  
+  
+4.  修改**其他選項**屬性，以包括**/zc: implicitnoexcept**或**/zc: implicitnoexcept-** ，然後選擇 **確定**。  
+  
+## <a name="see-also"></a>請參閱  
+ [/Zc （一致性）](../../build/reference/zc-conformance.md)   
  [noexcept](../../cpp/noexcept-cpp.md)   
- [例外狀況規格 \(throw\)](../../cpp/exception-specifications-throw-cpp.md)   
- [terminate](../Topic/terminate%20\(%3Cexception%3E\).md)
+ [例外狀況規格 (throw)](../../cpp/exception-specifications-throw-cpp.md)   
+ [terminate](../../standard-library/exception-functions.md#terminate)

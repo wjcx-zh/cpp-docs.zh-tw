@@ -25,11 +25,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9acb0a85ce469351ce1dcd34707f2125815f6c92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8db24d5162aba3ba5f0f1e01b3b1da9c8d6ab99f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-records"></a>使用者資料錄
 若要使用靜態存取子 (也就是存取子，衍生自**CAccessor)**，您取用者都必須有使用者記錄。 使用者資料錄是 c + + 類別，包含要處理輸入或輸出的資料元素。 ATL OLE DB 消費者精靈產生使用者記錄您的消費者。 您可以將方法加入至選擇性工作，例如處理命令的使用者記錄中。  
@@ -91,5 +94,5 @@ END_ACCESSOR_MAP()
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

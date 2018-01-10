@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83519f28361505b9c227c7db5522bfffcc5133a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7c80606f72e8c9ebfbd14290de1128a982433a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unwind-helpers-for-masm"></a>MASM 的回溯 Helper
 若要撰寫適當的組件常式，有一組可用以平行方式，與實際組件指示來建立適當的.pdata 和.xdata 的虛擬作業。 有一組提供的巨集也簡化最常見的用法的虛擬作業使用。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [MASM 巨集](../build/masm-macros.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理 (x64)](../build/exception-handling-x64.md)

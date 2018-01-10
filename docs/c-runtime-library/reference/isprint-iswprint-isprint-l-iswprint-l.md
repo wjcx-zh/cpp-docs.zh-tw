@@ -44,11 +44,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4bd8aa30969399eb634f8ce6872eb6438c21562d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ab79ddcf6232e8c3d4345cc1bc3cda7c7deb1dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint、iswprint、_isprint_l、_iswprint_l
 判斷整數是否代表可列印字元。  
@@ -82,7 +83,7 @@ int _iswprint_l(
 ## <a name="return-value"></a>傳回值  
  如果 `c` 表示特定的可列印字元，這些常式都會傳回非零值。 `isprint`傳回非零值，如果`c`是可列印的字元，包括空格字元 (0x20-0x7E)。 如果 `c` 是可列印的寬字元─這包括空白寬字元，`iswprint` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
- 這些函式之測試條件的結果取決於地區設定的 `LC_CTYPE` 類別設定；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本使用目前地區設定來處理任何地區設定相關行為；具有 `_l` 尾碼的版本則完全相同，但會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些函式之測試條件的結果取決於地區設定的 `LC_CTYPE` 類別設定；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本使用目前地區設定來處理任何地區設定相關行為；具有 `_l` 尾碼的版本則完全相同，但會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isprint` 和 `_isprint_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
   
@@ -94,16 +95,16 @@ int _iswprint_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`isprint`|\<ctype.h>|  
 |`iswprint`|\<ctype.h> 或 \<wchar.h>|  
 |`_isprint_l`|\<ctype.h>|  
 |`_iswprint_l`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)

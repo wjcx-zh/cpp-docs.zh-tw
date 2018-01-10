@@ -21,18 +21,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b60b1544e277ef4fece8368b6913cf686960dcaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cee24f0e5142af37681bd293a3be3600ddbd1cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="process-and-environment-control"></a>處理序控制和環境控制
 使用處理序控制常式可從程式內啟動、停止及管理處理序。 使用環境控制常式可取得和變更作業系統環境的相關資訊。  
   
 ### <a name="process-and-environment-control-functions"></a>處理序控制和環境控制函式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[abort](../c-runtime-library/reference/abort.md)|中止處理序，而不會清除緩衝區或呼叫 `atexit` 和 `_onexit` 註冊的函式|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md)|測試邏輯錯誤|  
@@ -87,12 +88,12 @@ ms.lasthandoff: 10/24/2017
 |---------------|--------------------------------------|----------------------------------|--------------------------|  
 |`_execl, _spawnl`|否|清單|繼承自呼叫處理序|  
 |`_execle, _spawnle`|否|清單|新處理序的環境表格指標，以最後一個引數傳遞|  
-|`_execlp, _spawnlp`|是|清單|繼承自呼叫處理序|  
-|`_execlpe, _spawnlpe`|是|清單|新處理序的環境表格指標，以最後一個引數傳遞|  
+|`_execlp, _spawnlp`|[是]|清單|繼承自呼叫處理序|  
+|`_execlpe, _spawnlpe`|[是]|清單|新處理序的環境表格指標，以最後一個引數傳遞|  
 |`_execv, _spawnv`|否|陣列|繼承自呼叫處理序|  
 |`_execve, _spawnve`|否|陣列|新處理序的環境表格指標，以最後一個引數傳遞|  
-|`_execvp, _spawnvp`|是|陣列|繼承自呼叫處理序|  
-|`_execvpe, _spawnvpe`|是|陣列|新處理序的環境表格指標，以最後一個引數傳遞|  
+|`_execvp, _spawnvp`|[是]|陣列|繼承自呼叫處理序|  
+|`_execvpe, _spawnvpe`|[是]|陣列|新處理序的環境表格指標，以最後一個引數傳遞|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

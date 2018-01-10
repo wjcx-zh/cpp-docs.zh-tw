@@ -40,11 +40,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df67b3dbacd4cf8fcc7652b55643371c5e59c025
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24d5ad81bb19f5a33eb70f6dc40ef41cc5d761d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
 取得檔案指標的目前位置，而不需要鎖定執行緒。  
@@ -72,14 +73,14 @@ __int64 _ftelli64_nolock(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|選擇性標頭|  
+|功能|必要的標頭|選擇性標頭|  
 |--------------|---------------------|---------------------|  
 |`ftell_nolock`|\<stdio.h>|\<errno.h>|  
 |`_ftelli64_nolock`|\<stdio.h>|\<errno.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fgetpos](../../c-runtime-library/reference/fgetpos.md)   
  [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)   

@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04eae2c263c8b26e44e8c1b05736061ad9291ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92ad08738ea2c8c748ac642c5ea15f4b0a257da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="secure-template-overloads"></a>安全範本多載
 Microsoft 已取代許多 C 執行階段程式庫 (CRT) 函數，並改為使用能增強安全性的版本。 例如，使用較安全的 `strcpy_s` 來取代 `strcpy`。 已被取代的函數是安全性錯誤的常見來源，因為它們並無法防止能覆寫記憶體的作業。 根據預設，編譯器會在您使用這些函數時產生取代警告。 CRT 針對這些函數提供 C++ 範本多載，來讓使用者能更輕鬆地轉換至較安全的版本。  
@@ -100,6 +101,6 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
                          // strcpy_s(szBuf, 10, "test");  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 的安全性功能](../c-runtime-library/security-features-in-the-crt.md)   
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

@@ -34,11 +34,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2087b5192352d4b65d1d885679b9945155cde23b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ee32f7dbb637b312a199b40190d47872c996b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pctype-pwctype-wctype-mbctype-mbcasemap"></a>_pctype、_pwctype、_wctype、_mbctype、_mbcasemap
 這些全域變數包含字元類別函式使用的資訊。 僅供內部使用。  
@@ -61,6 +62,6 @@ extern unsigned char _mbcasemap[];
 ## <a name="requirements"></a>需求  
  不提供公開使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [is、isw 常式](../c-runtime-library/is-isw-routines.md)   
  [__pctype_func](../c-runtime-library/pctype-func.md)

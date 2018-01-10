@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 886669e6c6be58f02b9b8fa49468ca8b3b19c4a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3375e39120fdc8f2b0d8d5502aa6def997511ff5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
 根據 C++ 標準將 `wchar_t` 解析為內建類型。 根據預設， **/zc: wchar_t**上。  
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/24/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.TreatWChar_tAsBuiltInType%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/Zc （一致性）](../../build/reference/zc-conformance.md)

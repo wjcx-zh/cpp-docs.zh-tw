@@ -26,11 +26,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4bd6110eba235963c4508e5a39a134ca0cc017ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb6ad2396b47932f05d9404485e4b32a7e92363b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiplicative-operators-and-the-modulus-operator"></a>乘法類運算子和模數運算子
 ## <a name="syntax"></a>語法  
@@ -75,7 +76,7 @@ f / 0.0
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
  在 Microsoft C++ 中，模數運算式的結果一律與第一個運算元的正負號相同。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
  如果兩個整數計算的除法不精確，而且只有一個運算元為負數，則結果會是小於除法運算會產生之實際值的最大整數 (範圍內，忽略正負號)。 例如，計算的值的-11 / 3 是-3.666666666。 該整數除法的結果是-3。  
   
  乘法類運算子之間的關聯性由身分識別提供 (*e1* / *e2*) \* *e2*  +  *e1* % *e2* == *e1*。  
@@ -97,7 +98,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 乘法類運算子](../c-language/c-multiplicative-operators.md)

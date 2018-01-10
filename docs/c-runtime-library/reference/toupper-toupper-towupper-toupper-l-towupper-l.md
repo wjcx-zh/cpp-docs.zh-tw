@@ -52,11 +52,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a40472922e61cbcc6c5788d575305613ae300e1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0414cd211cb9b833f24d2aac9ad9a82758c4efcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper、_toupper、towupper、_toupper_l、_towupper_l
 將字元轉換為大寫。  
@@ -100,7 +101,7 @@ int _towupper_l(
  為了讓 `toupper` 提供預期的結果，[__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) 和 [islower](../../c-runtime-library/reference/islower-iswlower-islower-l-iswlower-l.md) 必須都傳回非零值。  
   
 ## <a name="remarks"></a>備註  
- 這些常式都會將指定的小寫字母轉換為大寫字母 (如果可能且適當的話)。 `towupper` 的大小寫轉換是地區設定特性。 只有與目前地區設定相關字元的大小寫會變更。 沒有 `_l` 字尾的函式會使用目前設定的地區設定。 具有 `_l` 字尾的函式版本採用地區設定作為參數，並使用該地區設定，而不是目前設定的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些常式都會將指定的小寫字母轉換為大寫字母 (如果可能且適當的話)。 `towupper` 的大小寫轉換是地區設定特性。 只有與目前地區設定相關字元的大小寫會變更。 沒有 `_l` 字尾的函式會使用目前設定的地區設定。 具有 `_l` 字尾的函式版本採用地區設定作為參數，並使用該地區設定，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  為了讓 `toupper` 提供預期的結果，[__isascii](../../c-runtime-library/reference/isascii-isascii-iswascii.md) 和 [isupper](../../c-runtime-library/reference/isupper-isupper-l-iswupper-iswupper-l.md) 必須都傳回非零值。  
   
@@ -118,18 +119,18 @@ int _towupper_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`toupper`|\<ctype.h>|  
 |`_toupper`|\<ctype.h>|  
 |`towupper`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  請參閱 [to 函式](../../c-runtime-library/to-functions.md)中的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)   
  [to 函式](../../c-runtime-library/to-functions.md)   
  [地區設定](../../c-runtime-library/locale.md)   

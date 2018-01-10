@@ -1,64 +1,66 @@
 ---
-title: "Identifying the Elements of the DHTML Control Project | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls, ATL 支援"
-  - "HTML 控制項, ATL 支援"
+title: "DHTML 控制項專案的項目用來識別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, ATL support
+- DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 74b271f56fe7c8d3345ce53de06a18a2700175f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Identifying the Elements of the DHTML Control Project
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-大部分的 DHTML 控制代碼是完全一樣的所有 ATL 控制項建立的相同。  如需泛型程式碼，工作的基本了解透過 [ATL 教學課程](../atl/active-template-library-atl-tutorial.md)和讀取部分 [建立 ATL 專案](../atl/reference/creating-an-atl-project.md) 和 [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)。  
+# <a name="identifying-the-elements-of-the-dhtml-control-project"></a>識別 DHTML 控制項專案的項目
+大部分 DHTML 控制項的程式碼完全像那樣建立任何 ATL 的控制項。 泛型程式碼的基本了解，逐步[ATL 教學課程](../atl/active-template-library-atl-tutorial.md)，並參閱的章節[ATL 專案建立](../atl/reference/creating-an-atl-project.md)和[ATL COM 物件基礎觀念](../atl/fundamentals-of-atl-com-objects.md)。  
   
- DHTML 控制項類似於所有 ATL 控制項，除了:  
+ DHTML 控制項是類似於任何 ATL 的控制項，除了：  
   
--   除了這個規則外連接控制項實作，該實作來通訊在 C\+\+ 程式碼和 HTML 使用者介面 \(UI\) 之間的其他介面。  HTML 使用者介面的呼叫中使用這個介面的 C\+\+ 程式碼。  
+-   除了一般的介面控制項實作，它會實作其他介面，用於 c + + 程式碼和 HTML 的使用者介面 (UI) 之間進行通訊。 HTML UI 呼叫 c + + 程式碼使用此介面。  
   
--   它會建立一個 HTML 控制項的 UI 資源。  
+-   它會建立 UI 控制項的 HTML 資源。  
   
--   它會透過成員變數 `m_spBrowser`允許存取 DHTML 物件模型的存取，這個型別 [IWebBrowser2](https://msdn.microsoft.com/en-us/library/aa752127.aspx)的智慧型指標。  使用此指標來存取 DHTML 物件模型的任何部分。  
+-   它可讓您存取 DHTML 物件模型，透過成員變數`m_spBrowser`，這是類型的智慧型指標[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)。 您可以使用這個指標來存取 DHTML 物件模型的任何部分。  
   
- 下圖顯示您的 DLL、DHTML 控制項、Web 瀏覽器和 HTML 資源之間的關聯性。  
+ 下圖說明您的 DLL、 DHTML 控制項、 網頁瀏覽器和 HTML 資源之間的關聯性。  
   
- ![DHTML 控制項專案的項目](../atl/media/vc52en1.png "vc52EN1")  
+ ![DHTML 控制項專案的項目](../atl/media/vc52en1.gif "vc52en1")  
   
 > [!NOTE]
->  在圖形中的名稱是替代符號 \(Placeholder\)。  在您的控制項公開的 HTML 資源和介面的名稱會根據您在 ATL 控制項精靈指派其名稱。  
+>  此圖形上的名稱為預留位置。 HTML 資源的控制項上所公開的介面名稱根據 ATL 控制項精靈中所指派的名稱。  
   
- 在圖形中，項目是:  
+ 此圖中的元素為：  
   
--   **My DLL** 使用 ATL 專案精靈建立的 DLL。  
+-   **我的 DLL**使用 ATL 專案精靈所建立的 DLL。  
   
--   **DHTML Control** \(\)`m_spBrowser`DHTML 控制項，建立使用 ATL 物件精靈。  這個控制項透過 Web 瀏覽器物件的介面， **IWebBrowser2**存取 Web 瀏覽器物件和它的方法。  控制項會公開 \(Expose\) 下列兩個介面，除了針對控制項所需的其他標準介面之外。  
+-   **DHTML 控制項**(`m_spBrowser`) DHTML 控制項，使用 ATL 物件精靈所建立。 這個控制項可透過網頁瀏覽器物件的介面存取網頁瀏覽器物件和其方法**IWebBrowser2**。 在控制項本身會公開下列兩個介面上，除了控制所需的其他標準介面。  
   
-    -   **IDHCTL1** 控制項所公開的介面只能由容器。  
+    -   **IDHCTL1**僅可供容器使用的控制項所公開的介面。  
   
-    -   **IDHCTLUI1** 通訊的分派介面在 C\+\+ 程式碼和 HTML 使用者介面之間。  Web 瀏覽器使用控制項的分派介面顯示控制項。  您可以叫用 \(Invoke\) 呼叫這個 `window.external`分派介面的各種方法從控制項的使用者介面中，接著在此分派介面上的方法名稱與要叫用。  您從組成這個控制項的 UI 在 HTML 中的指令碼標記會存取 `window.external` 。  如需叫用在資源檔中的外部方法的詳細資訊，請參閱 [呼叫來自 DHTML 的 C\+\+ 程式碼](../atl/calling-cpp-code-from-dhtml.md)。  
+    -   **IDHCTLUI1**分派介面的 c + + 程式碼與 HTML 使用者介面之間進行通訊。 網頁瀏覽器會顯示控制項使用的控制項分派介面。 您可以從控制項的使用者介面呼叫此分派介面的各種方法，藉由叫用`window.external`，後面接著您要叫用此分派介面上的方法名稱。 會存取`window.external`從指令碼內所組成的 UI，對這個控制項的 HTML 標記。 如需叫用的資源檔中的外部方法的詳細資訊，請參閱[呼叫 c + + 程式碼從 DHTML](../atl/calling-cpp-code-from-dhtml.md)。  
   
--   **IDR\_CTL1** HTML 資源的資源 ID。  它的檔名，在這個案例中，是 DH CTL1 UI.htm。  DHTML 控制項使用文字編輯器，其中包含標準 HTML 標記，而外部視窗分派命令的 HTML 資源可以編輯。  
+-   **IDR_CTL1** HTML 資源的資源識別碼。 其檔案名稱，在此情況下，是 DHCTL1UI.htm。 DHTML 控制項，會使用包含標準的 HTML 標記和外部視窗分派命令，您可以使用文字編輯器來編輯 HTML 資源。  
   
--   **Web Browser** Web 瀏覽器以 HTML 在 HTML 表格中顯示控制項的 UI。  至 Web 瀏覽器的 **IWebBrowser2** 介面指標。可用於 DHTML 控制項允許存取 DHTML 物件模型的存取。  
+-   **Web 瀏覽器**Web 瀏覽器會顯示控制項的 UI 中，根據 HTML 資源中的 HTML。 網頁瀏覽器的指標**IWebBrowser2**介面是可在 DHTML 控制項，以允許存取 DHTML 物件模型。  
   
- ATL 控制項精靈產生程式碼的預設控制項會顯示 HTML 資源和 .cpp 檔案。  您可以編譯和執行產生的控制項是由精靈，然後檢視 \[Web 瀏覽器或 ActiveX 控制項測試容器的控制項。  下面的圖片在測試容器顯示具有三個按鈕的預設 ATL DHTML 控制項:  
+ ATL 控制項精靈產生 HTML 資源和.cpp 檔案中的預設程式碼的控制項。 您可以編譯和執行精靈所產生的控制項，然後檢視在網頁瀏覽器或 ActiveX 控制項測試容器中的控制項。 下圖顯示測試容器中的三個按鈕顯示 ATL DHTML 控制項的預設值：  
   
- ![ATL DHTML 控制項](../atl/media/vc52en2.png "vc52EN2")  
+ ![ATL DHTML 控制項](../atl/media/vc52en2.gif "vc52en2")  
   
- 請參閱 [建立 ATL DHTML 控制項](../atl/creating-an-atl-dhtml-control.md) 開始建立 DHTML 控制項。  如需如何存取測試容器的詳細資訊，請參閱 [測試屬性和事件會和測試容器](../mfc/testing-properties-and-events-with-test-container.md) 。  
+ 請參閱[建立 ATL DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)若要開始在建立 DHTML 控制項。 請參閱[使用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)如何存取測試容器的資訊。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
+

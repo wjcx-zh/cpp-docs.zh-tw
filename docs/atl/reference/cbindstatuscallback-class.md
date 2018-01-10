@@ -40,11 +40,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90546e2eb63c2b5dd9eb16a0ececfee2629562cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19aa979cb69bdbf8d74acbd96291fac9af78c845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 類別
 這個類別會實作 `IBindStatusCallback` 介面。  
@@ -69,18 +70,18 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
  *nBindFlags*  
  指定所傳回的繫結旗標[GetBindInfo](#getbindinfo)。 預設實作設定非同步繫結、 擷取資料/物件的最新版本並不會儲存在磁碟快取中擷取的資料。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|建構函式。|  
 |[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBindStatusCallback::Download](#download)|啟動下載程序的靜態方法會建立`CBindStatusCallback`物件，並呼叫`StartAsyncDownload`。|  
 |[CBindStatusCallback::GetBindInfo](#getbindinfo)|呼叫所建立的繫結的型別上的要求資訊的非同步 moniker。|  
@@ -95,7 +96,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|可讀取的位元組數目。|  
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|讀取的位元組總數。|  
@@ -489,5 +490,5 @@ HRESULT StartAsyncDownload(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Windowing#87](../../atl/codesnippet/cpp/cbindstatuscallback-class_2.h)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

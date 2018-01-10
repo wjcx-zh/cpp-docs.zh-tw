@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f65933a1cbd81c0794263dfe3fa2628f52599257
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2cb3ffb8e0bfd8eba04555286894b6f1e58cfd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-determine-the-user-interactive-state-ccli"></a>如何：判斷使用者互動狀態 (C++/CLI)
 下列程式碼範例示範如何判斷使用者互動的內容是否正在執行的程式碼。 如果<xref:System.Environment.UserInteractive%2A>為 false，則程式碼正在執行做為服務處理序，或從 Web 應用程式，在此情況下您不應嘗試與使用者互動。  
@@ -42,6 +45,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 作業 (C + + /CLI)](../dotnet/windows-operations-cpp-cli.md)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

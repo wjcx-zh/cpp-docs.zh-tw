@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1854f4c078bb6c8ce6a987961dc75444e104278c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersistpropertybagimpl-class"></a>IPersistPropertyBagImpl 類別
 這個類別會實作**IUnknown** ，並可讓用戶端提供的屬性包以儲存其屬性的物件。  
@@ -44,11 +45,11 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
  `T`  
  您的類別，衍生自`IPersistPropertyBagImpl`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|擷取物件的 CLSID。|  
 |[IPersistPropertyBagImpl::InitNew](#initnew)|初始化新建立的物件。 ATL 實作會傳回`S_OK`。|  
@@ -120,6 +121,6 @@ STDMETHOD(Save)(
   
  請參閱[IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [類別概觀](../../atl/atl-class-overview.md)

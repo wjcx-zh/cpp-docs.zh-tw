@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fb2ce8a8a2df102f2e455668ab798957b9ad46c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloc"></a>malloc
 配置記憶體區塊。  
@@ -72,7 +54,7 @@ void *malloc(
  要配置的位元組。  
   
 ## <a name="return-value"></a>傳回值  
- `malloc` 會傳回 void 指標至配置的空間；如果沒有足夠的記憶體，則為 `NULL`。 若要傳回 `void` 以外類型的指標，請對傳回值使用類型轉換。 此傳回值所指向的儲存空間保證會經過適當調整，因此可儲存對齊需求小於或等於基本對齊需求的任何物件類型 (在 Visual C++ 中，基本對齊是 `double` 所需的對齊或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。針對具有較大對齊需求的物件，請使用 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 來配置儲存空間；例如，SSE 類型 [__m128](../../cpp/m128.md) 和 `__m256`，以及使用 `__declspec(align(``n``))` 宣告的類型，其中 `n` 大於 8。 如果 `size` 為 0，`malloc` 會在堆積中配置零長度項目，並傳回該項目的有效指標。 請一律檢查 `malloc` 的傳回值，即使要求的記憶體數量很小亦然。  
+ `malloc` 會傳回 void 指標至配置的空間；如果沒有足夠的記憶體，則為 `NULL`。 若要傳回 `void` 以外類型的指標，請對傳回值使用類型轉換。 此傳回值所指向的儲存空間保證會經過適當調整，因此可儲存對齊需求小於或等於基本對齊需求的任何物件類型 (在 Visual C++ 中，基本對齊是 `double` 所需的對齊或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。針對具有較大對齊需求的物件，請使用 [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) 來配置儲存空間；例如，SSE 類型 [__m128](../../cpp/m128.md) 和 `__m256`，以及使用 `__declspec(align( n ))` 宣告的類型，其中 `n` 大於 8。 如果 `size` 為 0，`malloc` 會在堆積中配置零長度項目，並傳回該項目的有效指標。 請一律檢查 `malloc` 的傳回值，即使要求的記憶體數量很小亦然。  
   
 ## <a name="remarks"></a>備註  
  `malloc` 函式至少會配置 `size` 個位元組的記憶體區塊。 因為對齊和維護資訊需要空間，所以此區塊可能會大於 `size` 個位元組。  
@@ -102,11 +84,11 @@ void *malloc(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`malloc`|\<stdlib.h> 和 \<malloc.h>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -148,10 +130,9 @@ Memory space allocated for path name
 Memory freed  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體配置](../../c-runtime-library/memory-allocation.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

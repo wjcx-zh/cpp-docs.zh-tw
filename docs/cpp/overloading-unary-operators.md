@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unary operators [C++], plus
 - increment operators [C++], overloaded
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - pointer dereference operator overloading
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9ec200fecdebb1c39929882c6fbe4ad09eddc812
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1d124410b785e44a9dcb55890b4723ebbae2da56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overloading-unary-operators"></a>多載一元運算子
 可以多載的一元運算子如下：  
@@ -52,7 +50,7 @@ ms.lasthandoff: 09/25/2017
   
 9. 轉換運算子  
   
- 後置遞增和遞減運算子 (`++`和** -- **) 中需分開處理[遞增和遞減](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
+ 後置遞增和遞減運算子 (`++`和 **--** ) 中需分開處理[遞增和遞減](../cpp/increment-and-decrement-operator-overloading-cpp.md)。  
   
  轉換運算子也會討論不同的主題。請參閱[使用者定義型別轉換](../cpp/user-defined-type-conversions-cpp.md)。  
   
@@ -71,5 +69,5 @@ ms.lasthandoff: 09/25/2017
 > [!NOTE]
 >  一元運算子的傳回類型沒有任何限制。 例如，邏輯 NOT (`!`) 傳回整數值是合理的，但不會強制執行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算子多載](../cpp/operator-overloading.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6bd2b342f2e7b29103b08c67fa973ed4a8c64869
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 30589266bc4f9b2c083de5ccd82af5bec02cd4ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ierrorrecordsimpl-class"></a>IErrorRecordsImpl 類別
 實作 OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)介面，加入記錄和資料成員從擷取記錄 ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) 型別的**CAtlArray <** `RecordClass`**>**.  
@@ -44,7 +47,7 @@ class IErrorRecordsImpl : public IErrorRecords
  `RecordClass`  
  表示 OLE DB 錯誤物件的類別。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -76,6 +79,6 @@ class IErrorRecordsImpl : public IErrorRecords
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

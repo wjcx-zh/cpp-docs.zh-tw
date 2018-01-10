@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cda18f6148f9a1cbc39a6e7003cce6324e36eeeb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebe629a08170ce011b22595c8b821b278e16faa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="celementtraits-class"></a>CElementTraits 類別
 這個類別的集合類別用於提供方法和函式移動、 複製、 比較和雜湊作業。  
@@ -47,6 +48,6 @@ class CElementTraits : public CDefaultElementTraits<T>
 ## <a name="requirements"></a>需求  
  **標頭：** atlcoll.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

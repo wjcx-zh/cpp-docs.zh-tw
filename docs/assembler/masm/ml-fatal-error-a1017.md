@@ -1,36 +1,35 @@
 ---
-title: "ML Fatal Error A1017 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1017"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1017"
+title: "ML 嚴重錯誤 A1017 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1017
+dev_langs: C++
+helpviewer_keywords: A1017
 ms.assetid: bef0b312-5431-4e5a-b637-c19919acf01b
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0603ccb1de5767294afcfc012c1b9c8b18ac776d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Error A1017
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ml-fatal-error-a1017"></a>ML 嚴重錯誤 A1017
 **遺漏的來源檔案名稱**  
   
- 毫升找不到檔案來組合或傳遞給連結器。  
+ ML 找不到組合，或傳遞至連結器檔案。  
   
- 您未指定檔案名稱來作用於發出毫升命令列選項時，會產生這個錯誤。  若要組合沒有.asm 副檔名的檔案、 使用 **\/Ta** 命令列選項。  
+ ML 命令列選項提供但未指定要採取的檔案名稱時，會產生這個錯誤。 若要組合不.asm 副檔名的檔案、 使用**/Ta**命令列選項。  
   
- 這項錯誤也可能產生不含任何參數叫用 ML，如果毫升環境變數會包含命令列選項。  
+ 這項錯誤也可能產生不含任何參數叫用 ML，如果 ML 環境變數包含命令列選項。  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

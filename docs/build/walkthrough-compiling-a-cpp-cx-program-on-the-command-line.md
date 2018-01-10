@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3ae72f5f8cd268bae88a0b5f0be74864317ad0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：在命令列上編譯 C++/CX 程式
 您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用 C++/CX，以建置 Windows Phone 8.1、Windows 市集及 Windows 桌面的應用程式。 如需詳細資訊，請參閱[教學課程的 C + /CX](http://msdn.microsoft.com/magazine/dn166929.aspx)和[執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
     This is a C++/CX program.  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)   
  [編譯器選項](../build/reference/compiler-options.md)

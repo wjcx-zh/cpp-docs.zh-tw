@@ -41,11 +41,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4b72b82e1b8c7ae2d036d35b00e8a49b7516d64b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30a48101ea2db80f7c8a37434c1fd73c9c535286
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asctimes-wasctimes"></a>asctime_s、_wasctime_s
 將 `tm` 時間結構轉換成字元字串。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md) 版本。  
@@ -90,11 +91,11 @@ errno_t _wasctime_s(
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|`buffer`|`numberOfElements`|`tm`|返回|`buffer` 中的值|  
+|`buffer`|`numberOfElements`|`tm`|Return|`buffer` 中的值|  
 |--------------|------------------------|----------|------------|-----------------------|  
 |`NULL`|任何|任何|`EINVAL`|未修改|  
 |不是 `NULL` (指向有效的記憶體)|0|任何|`EINVAL`|未修改|  
-|不是 `NULL`|0< 大小 < 26|任何|`EINVAL`|空字串|  
+|非 `NULL`|0< 大小 < 26|任何|`EINVAL`|空字串|  
 |不是 `NULL`|>= 26|`NULL`|`EINVAL`|空字串|  
 |不是 `NULL`|>= 26|無效的時間結構或超出時間元件值的範圍|`EINVAL`|空字串|  
   
@@ -128,11 +129,11 @@ errno_t _wasctime_s(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tasctime_s`|`asctime_s`|`asctime_s`|`_wasctime_s`|  
   
- C++ 中，使用這些函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 中，使用這些函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`asctime_s`|\<time.h>|  
 |`_wasctime_s`|\<time.h> 或 \<wchar.h>|  
@@ -177,7 +178,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   
  [_ftime、_ftime32、_ftime64](../../c-runtime-library/reference/ftime-ftime32-ftime64.md)   

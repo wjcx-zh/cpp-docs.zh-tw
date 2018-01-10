@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08b440a60b23182c3efff1c0236773ad2b98bf97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 565324b4853880f8dcfafd83f9ba03439b4a7efa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker 類別
 從執行緒集區接收要求，並將它們傳遞到會建立並終結背景工作物件中，每個要求。  
@@ -48,13 +49,13 @@ class CNonStatelessWorker
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CNonStatelessWorker::RequestType](#requesttype)|實作[WorkerArchetype::RequestType](worker-archetype.md#requesttype)。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CNonStatelessWorker::Execute](#execute)|實作[WorkerArchetype::Execute](worker-archetype.md#execute)。|  
 |[CNonStatelessWorker::Initialize](#initialize)|實作[WorkerArchetype::Initialize](worker-archetype.md#initialize)。|  
@@ -116,7 +117,7 @@ void Terminate(void* /* pvParam */) throw();
 ### <a name="remarks"></a>備註  
  這個類別不會執行任何清理`Terminate`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CThreadPool 類別](../../atl/reference/cthreadpool-class.md)   
  [背景工作原型](../../atl/reference/worker-archetype.md)   
  [類別](../../atl/reference/atl-classes.md)

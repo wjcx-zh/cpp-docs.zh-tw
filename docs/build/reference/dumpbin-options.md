@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8945eb3ca53d6402e2db31c8a174d45394bcfb2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80f142071a2a6b71dd134a7fb31474f917d5348f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dumpbin-options"></a>DUMPBIN 選項
 選項包含選項規範，這是虛線 （-） 或斜線 （/），後面接著選項的名稱。 選項名稱不能為縮寫。 某些選項可接受指定的引數，在冒號 （:） 之後。 選項規格內允許任何空格或定位字元。 使用一個或多個空格或定位字元分隔命令列上的選項規格。 選項名稱及其關鍵字或檔名引數並不區分大小寫。 大部分的選項會套用到所有二進位檔案，一些適用於特定類型的檔案。 根據預設，DUMPBIN 會將資訊傳送到標準輸出。 使用[/out](../../build/reference/out-dumpbin.md)選項可將輸出傳送至檔案。  
@@ -74,6 +75,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [/ TLS](../../build/reference/tls.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   
  [DUMPBIN 參考](../../build/reference/dumpbin-reference.md)

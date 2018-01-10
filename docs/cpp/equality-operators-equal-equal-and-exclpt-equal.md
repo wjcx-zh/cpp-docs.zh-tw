@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - not_eq
 - '!='
 - ==
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '!= operator'
 - equality operator
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5412869204f088e321d2a41da407026f9447eb82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2be0d4cf45bbedc5e799b07962c05f845d5f3efe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equality-operators--and-"></a>等號比較運算子：== 和 !=
 ## <a name="syntax"></a>語法  
@@ -72,7 +70,7 @@ int main() {
   
  相等運算子可以比較相同類型成員的指標。 在這類比較時，會執行成員指標轉換。 成員指標也可以與判斷值為 0 的常數運算式進行比較。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 關係和等號比較運算子](../c-language/c-relational-and-equality-operators.md)

@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fb1a26b4e461e0d542794425008ec81191000b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7138d3853faad1268148ef7517291a849525df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp、cexpf、cexpl
 計算底數為 e 之複數的指數。  
@@ -84,13 +85,13 @@ _Lcomplex cexpl(
   
 ## <a name="requirements"></a>需求  
   
-|常式|C 標頭|C++ 標頭|  
+|常式傳回的值|C 標頭|C++ 標頭|  
 |-------------|--------------|------------------|  
 |`cexp`,               `cexpf`, `cexpl`|\<complex.h>|\<complex.h>|  
   
- 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cpow、cpowf、cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
  [clog10、clog10f、clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   

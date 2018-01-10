@@ -1,32 +1,33 @@
 ---
-title: "COLUMN_ENTRY_EX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_EX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_ENTRY_EX 巨集"
+title: "COLUMN_ENTRY_EX |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_EX
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_EX macro
 ms.assetid: dfad1b67-51c3-4289-b89a-da42d7e8bb88
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c477d2142fd64461754633593e07d86dc7f4d60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# COLUMN_ENTRY_EX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-表示資料列集的繫結至資料庫中的特定行。  
+# <a name="columnentryex"></a>COLUMN_ENTRY_EX
+表示從資料列集至資料庫的特定資料行的繫結。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -50,61 +51,61 @@ status
   
 ```  
   
-#### 參數  
- 請參閱《 *OLE DB 程式設計人員參考》的*[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) 。  
+#### <a name="parameters"></a>參數  
+ 請參閱[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中*OLE DB 程式設計人員參考*。  
   
  `nOrdinal`  
- \[的資料列數目。  
+ [in] 資料行編號。  
   
  `wType`  
- \[資料型別。  
+ [in]資料型別。  
   
  `nLength`  
- \[資料大小 \(以位元組為單位\)。  
+ [in]資料大小 （位元組）。  
   
  `nPrecision`  
- \[使用取得資料和 `wType` 時所使用的最大精確度是 `DBTYPE_NUMERIC`。  否則，會忽略這個參數。  
+ [in]取得資料時所要使用的最大有效位數和`wType`是`DBTYPE_NUMERIC`。 否則，這個參數已忽略。  
   
  `nScale`  
- \[使用取得資料和 `wType` 時要使用的小數位數是 `DBTYPE_NUMERIC` 或 **DBTYPE\_DECIMAL**。  
+ [in]要取得資料時所使用的縮放比例和`wType`是`DBTYPE_NUMERIC`或**DBTYPE_DECIMAL**。  
   
  `data`  
- \[使用者資料錄中對應的資料成員。  
+ [in] 使用者記錄中相對應的資料成員。  
   
  *length*  
- \[\] 將繫結的變數對資料行長度。  
+ [in] 要繫結至資料行長度的變數。  
   
  *status*  
- \[\] 將繫結的變數資料列狀態。  
+ [in] 要繫結至資料行狀態的變數。  
   
-## 備註  
- `COLUMN_ENTRY_EX` 巨集可在下列位置:  
+## <a name="remarks"></a>備註  
+ `COLUMN_ENTRY_EX`巨集可以用於下列狀況：  
   
--   在 [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) 和 [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md) 巨集之間。  
+-   之間[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)和[END_COLUMN_MAP](../../data/oledb/end-column-map.md)巨集。  
   
--   在 [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md) 和 [END\_ACCESSOR](../../data/oledb/end-accessor.md) 巨集之間。  
+-   之間[BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)和[END_ACCESSOR](../../data/oledb/end-accessor.md)巨集。  
   
--   在 [BEGIN\_PARAM\_MAP](../../data/oledb/begin-param-map.md) 和 [END\_PARAM\_MAP](../../data/oledb/end-param-map.md) 巨集之間。  
+-   之間[BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)和[END_PARAM_MAP](../../data/oledb/end-param-map.md)巨集。  
   
-## 範例  
- 請參閱 [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md)。  
+## <a name="example"></a>範例  
+ 請參閱[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
- [OLE DB 消費者樣板的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_PS](../../data/oledb/column-entry-ps.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH](../../data/oledb/column-entry-ps-length.md)   
- [COLUMN\_ENTRY\_LENGTH](../../data/oledb/column-entry-length.md)   
- [COLUMN\_ENTRY\_LENGTH\_STATUS](../../data/oledb/column-entry-length-status.md)   
- [COLUMN\_ENTRY\_PS\_LENGTH\_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
- [COLUMN\_ENTRY\_STATUS](../../data/oledb/column-entry-status.md)   
- [COLUMN\_ENTRY\_PS\_STATUS](../../data/oledb/column-entry-ps-status.md)   
- [END\_ACCESSOR](../../data/oledb/end-accessor.md)   
- [END\_ACCESSOR\_MAP](../../data/oledb/end-accessor-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>請參閱  
+ [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_PS](../../data/oledb/column-entry-ps.md)   
+ [COLUMN_ENTRY_PS_LENGTH](../../data/oledb/column-entry-ps-length.md)   
+ [COLUMN_ENTRY_LENGTH](../../data/oledb/column-entry-length.md)   
+ [COLUMN_ENTRY_LENGTH_STATUS](../../data/oledb/column-entry-length-status.md)   
+ [COLUMN_ENTRY_PS_LENGTH_STATUS](../../data/oledb/column-entry-ps-length-status.md)   
+ [COLUMN_ENTRY_STATUS](../../data/oledb/column-entry-status.md)   
+ [COLUMN_ENTRY_PS_STATUS](../../data/oledb/column-entry-ps-status.md)   
+ [END_ACCESSOR](../../data/oledb/end-accessor.md)   
+ [END_ACCESSOR_MAP](../../data/oledb/end-accessor-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

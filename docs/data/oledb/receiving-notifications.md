@@ -21,11 +21,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed9c82d97a1d96777ae9b7e3c28b8ffa0de4507a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 768130d8ae72ea7788d3bf0ff0fcb5756558b437
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="receiving-notifications"></a>接收告知
 OLE DB 提供介面來接收通知事件發生時。 這些述[OLE DB 物件通知](https://msdn.microsoft.com/en-us/library/ms725406.aspx)中*OLE DB 程式設計人員參考*。 這些事件的安裝程式會使用標準的 COM 連接點機制。 例如，想要擷取事件通過 ATL 物件`IRowsetNotify`實作`IRowsetNotify`介面加入`IRowsetNotify`類別衍生的清單，而且已公開其傳遞至**COM_INTERFACE_ENTRY**巨集。  
@@ -45,5 +48,5 @@ product.Open(session, _T("Products"), &propset);
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

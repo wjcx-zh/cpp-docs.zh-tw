@@ -40,11 +40,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f25c4966b567d165be8f33a0c04f58ba0ac611b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3eb18b70ea672b095dc6d24dfd45e1bdda8f88b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freopen-wfreopen"></a>freopen、_wfreopen
 重新指派檔案指標。 這些函式已有更安全的版本可用；請參閱 [freopen_s、_wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md)。  
@@ -77,7 +78,7 @@ FILE *_wfreopen(
 ## <a name="return-value"></a>傳回值  
  所有這些函式都會傳回新開啟檔案的指標。 如果發生錯誤，就會關閉原始檔案，而且函式會傳回 `NULL` 指標值。 如果 `path`、`mode` 或 `stream` 為 Null 指標，或 `filename` 為空字串，則這些函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `NULL`。  
   
- 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  這些函式已有更安全的版本，請參閱 [freopen_s、_wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md)。  
@@ -124,18 +125,18 @@ FILE *_wfreopen(
  `b`  
  在二進位 (未轉譯) 模式中開啟；會隱藏上述轉譯。  
   
- 如果 `mode` 中未指定 `t` 或 `b`，則預設轉譯模式是透過全域變數 [_fmode](../../c-runtime-library/fmode.md) 所定義。 如果引數前置 `t` 或 `b` ，則函式失敗並傳回 `NULL`。  
+ 如果 `t` 中未指定 `b` 或 `mode`，則預設轉譯模式由全域變數 [_fmode](../../c-runtime-library/fmode.md)定義。 如果引數前置 `t` 或 `b` ，則函式失敗並傳回 `NULL`。  
   
  如需文字和二進位模式的討論，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`freopen`|\<stdio.h>|  
 |`_wfreopen`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -172,7 +173,7 @@ successfully reassigned
 This will go to the file 'freopen.out'  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fclose、_fcloseall](../../c-runtime-library/reference/fclose-fcloseall.md)   
  [_fdopen、_wfdopen](../../c-runtime-library/reference/fdopen-wfdopen.md)   

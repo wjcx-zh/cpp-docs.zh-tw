@@ -1,57 +1,59 @@
 ---
-title: "CXMLAccessor::GetXMLRowData | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CXMLAccessor::GetXMLRowData"
-  - "ATL.CXMLAccessor.GetXMLRowData"
-  - "CXMLAccessor::GetXMLRowData"
-  - "CXMLAccessor.GetXMLRowData"
-  - "GetXMLRowData"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetXMLRowData 方法"
+title: "Cxmlaccessor:: Getxmlrowdata |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CXMLAccessor::GetXMLRowData
+- ATL.CXMLAccessor.GetXMLRowData
+- CXMLAccessor::GetXMLRowData
+- CXMLAccessor.GetXMLRowData
+- GetXMLRowData
+dev_langs: C++
+helpviewer_keywords: GetXMLRowData method
 ms.assetid: 156b66e3-42fd-491c-8943-38cf5e36f687
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1cfd67065b267f01704bb0658b89d9bab2186100
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CXMLAccessor::GetXMLRowData
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-由資料列擷取資料表的完整內容， XML 格式字串資料。  
+# <a name="cxmlaccessorgetxmlrowdata"></a>CXMLAccessor::GetXMLRowData
+擷取為 XML 格式的字串資料的資料表的整個內容依資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT GetXMLRowData(   
-   CSimpleStringW& strOutput,   
-   bool bAppend = false    
+      HRESULT GetXMLRowData(   
+   CSimpleStringW& strOutput,   
+   bool bAppend = false    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `strOutput`  
- \[out\] 包含資料表資料的緩衝區的參考會被擷取。  資料已格式化為與 XML 符合資料存放區的資料行名稱的標記名稱的字串。  
+ [out]包含要擷取的資料表資料之緩衝區的參考。 資料會格式化為字串資料，以符合資料存放區的資料行名稱的 XML 標記名稱。  
   
  *bAppend*  
- \[in\] 指定布林值字串附加到輸出資料流的結尾。  
+ [in]布林值，指定是否要將字串附加至輸出資料的結尾。  
   
-## 傳回值  
- 其中一個標準 `HRESULT` 列舉值。  
+## <a name="return-value"></a>傳回值  
+ 其中一個標準`HRESULT`值。  
   
-## 備註  
- 以下顯示行上資料的 XML 格式。  下面 的`DATA` 表示資料行的資料。  使用移動方法移至所要的資料行。  
+## <a name="remarks"></a>備註  
+ 下圖顯示在 XML 中格式化的資料列資料的方式。 `DATA`下面代表資料列資料。 使用 move 方法移至所需的資料列。  
   
  `<row>`  
   
@@ -59,8 +61,8 @@ caps.handback.revision: 9
   
  `</row>`  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CXMLAccessor 類別](../../data/oledb/cxmlaccessor-class.md)

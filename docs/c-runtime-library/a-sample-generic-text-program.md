@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1509860f81ffb42a4416ac10814247cac5dcb64f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b00ab2106db9b25433f721aadadf0718bef990a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-sample-generic-text-program"></a>泛型文字程式範例
 **Microsoft 特定的**  
@@ -182,9 +183,9 @@ int __cdecl main(int argc, char **argv, char **envp)
 }  
 ```  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [泛型文字對應](../c-runtime-library/generic-text-mappings.md)   
  [資料類型對應](../c-runtime-library/data-type-mappings.md)   
  [常數和全域變數對應](../c-runtime-library/constant-and-global-variable-mappings.md)   

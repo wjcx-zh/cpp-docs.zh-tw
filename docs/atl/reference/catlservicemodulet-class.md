@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8315177848b1beee9b6823ff2ee12f9ca1d02e4d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c2d059a990b9b01cdfc959284d9fe20f3dfd12af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 類別
 這個類別會實作服務。  
@@ -71,17 +72,17 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
  *nServiceNameID*  
  服務的資源識別碼。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::Handler](#handler)|服務的處理常式。|  
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|提供服務的安全性設定的預設值。|  
@@ -108,7 +109,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlServiceModuleT::m_bService](#m_bservice)|旗標，指出程式以服務方式執行。|  
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|成員變數儲存的執行緒識別項。|  
@@ -498,6 +499,6 @@ int WinMain(int nShowCmd) throw();
 ### <a name="remarks"></a>備註  
  這個方法會處理命令列 (與[CAtlServiceModuleT::ParseCommandLine](#parsecommandline))，然後啟動服務 (使用[CAtlServiceModuleT::Start](#start))。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAtlExeModuleT 類別](../../atl/reference/catlexemodulet-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

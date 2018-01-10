@@ -1,54 +1,56 @@
 ---
-title: "com::ptr 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "com::ptr"
-  - "msclr::com::ptr"
-  - "msclr.com.ptr"
-  - "com.ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr 類別"
+title: "com:: ptr 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- com::ptr
+- msclr::com::ptr
+- msclr.com.ptr
+- com.ptr
+dev_langs: C++
+helpviewer_keywords: ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ae02518b60190dd129443f00d82b377317c816b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# com::ptr 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可以當做 CLR 類別成員的 COM 物件的包裝函式。在呼叫其解構函式時，包裝函式自動化 COM 物件的存留期管理，釋出物件的任何擁有的參考。  類似於 [CComPtr Class](../atl/reference/ccomptr-class.md)。  
+# <a name="comptr-class"></a>com::ptr 類別
+可當做 CLR 類別成員使用之 COM 物件的包裝函式。  包裝函式也會將 COM 物件的存留期管理自動化，在呼叫其解構函式時，釋出物件上所有已擁有的參考。 類似於[CComPtr 類別](../atl/reference/ccomptr-class.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _interface_type>  
 ref class ptr;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_interface_type`  
- COM 介面  
+ COM 介面。  
   
-## 備註  
- `com::ptr` 也可以用於本機變數功能簡化了各種 COM 工作和自動化存留期管理。  
+## <a name="remarks"></a>備註  
+ `com::ptr` 也可以當做本機函式變數使用，以簡化各種 COM 工作並且將存留期管理自動化。  
   
- `com::ptr` 無法直接做為函式參數；請使用 [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md) 或 [物件控制代碼運算子 \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) 。  
+ A`com::ptr`不能使用做為函式參數; 請使用[追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)或[物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)改為。  
   
- `com::ptr` 無法從函式直接傳回；請使用控制代碼。  
+ `com::ptr` 無法從函式直接傳回；請改用控制代碼。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。呼叫類別結果的公用方法在呼叫中包含的 `IXMLDOMDocument` 物件。這個範例會建立 XML 文件，填滿的執行個體與一些簡單的 XML，然後進行節點的簡化查核行程在剖析的文件樹狀結構的 XML 列印到主控台。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  呼叫類別的公用方法會造成對包含的 `IXMLDOMDocument` 物件進行呼叫。  這個範例會建立 XML 文件的執行個體，填滿一些簡單的 XML，然後在剖析的文件樹狀進行節點的簡化查核行程，以將 XML 列印到主控台。  
   
 ```  
 // comptr.cpp  
@@ -158,12 +160,15 @@ int main() {
 }  
 ```  
   
-  **\<word\>persnickety\<\/word\>**   
-## 需求  
- **標頭檔**\<msclr \\ com \\ ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **命名空間** msclr::com  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
-## 請參閱  
- [C\+\+ 支援程式庫](../dotnet/cpp-support-library.md)   
+ **命名空間**msclr::com  
+  
+## <a name="see-also"></a>請參閱  
+ [C + + 支援程式庫](../dotnet/cpp-support-library.md)   
  [ptr 成員](../dotnet/ptr-members.md)

@@ -17,18 +17,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1c74c3b9f98f40b87224ae1c12da06ec55207567
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 942d0f881ed6453921f6082024be5247a1bb1b65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="buffer-manipulation"></a>緩衝區操作
 您可以使用這些常式以位元組的基礎使用記憶體區域。  
   
 ### <a name="buffer-manipulation-routines"></a>緩衝區操作常式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|從一個緩衝區複製字元到另一個緩衝區，直到已複製指定的字元或指定的字元數為止|  
 |[memchr、wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|傳回緩衝區中在指定字元數內第一個出現之指定字元的指標|  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/24/2017
   
  當來源和目標區域重疊時，只有 `memmove` 一定會正確複製完整的來源。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

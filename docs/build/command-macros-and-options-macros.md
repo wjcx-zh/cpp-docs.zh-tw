@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 22afb96f3bc20ab769f3ef18015c721218ea7339
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06f5d48395c0395a85c90096bf2dbad8627ac41a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-macros-and-options-macros"></a>命令巨集和選項巨集
 命令巨集是預先定義的 Microsoft 產品。 選項巨集代表這些產品的選項，並預設為未定義。 同時預先定義的推斷規則中使用，而且可以用於描述區塊或使用者定義的推斷規則。 命令巨集可以重新定義，來表示部分或全部的命令列，包括選項。 如果未定義選項巨集就會產生 null 字串。  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/24/2017
 |C++ 編譯器|**CXX**|cl|**CXXFLAGS**|  
 |資源編譯器|**RC**|rc|**RFLAGS**|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [特殊的 NMAKE 巨集](../build/special-nmake-macros.md)

@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- delete_cpp
-dev_langs:
-- C++
+f1_keywords: delete_cpp
+dev_langs: C++
 helpviewer_keywords:
 - delete keyword [C++], syntax
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bfc2587b4d55ae0147adf797990139356d44cd30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 36da346329341221d43af2ec96aa17be4f819bf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-operator-c"></a>delete 運算子 (C++)
 取消配置記憶體區塊。  
@@ -100,9 +97,8 @@ int main()
   
  不是類別類型的物件 ([類別](../cpp/class-cpp.md)，[結構](../cpp/struct-cpp.md)，或[union](../cpp/unions.md))，會叫用全域 delete 運算子。 對於類別類型的物件，如果刪除運算式是以一元範圍解析運算子 (::) 開頭，則會在全域範圍中解析解除配置函式的名稱。 否則，如果指標不是 Null，delete 運算子會在解除配置記憶體之前叫用物件的解構函式。 delete 運算子可以依類別來定義；如果指定類別沒有這類定義，會叫用全域 delete 運算子。 如果使用刪除運算式來解除配置靜態類型包含虛擬解構函式的類別物件，則會透過該物件之動態類型的虛擬解構函式來解析解除配置函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [new 和 delete 運算子](../cpp/new-and-delete-operators.md)   
  
-

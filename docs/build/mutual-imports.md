@@ -25,11 +25,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65b930cece9dd940da3171811fb027fccc3074b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfd31cd4e5776555137daf002c076e14d4031f89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutual-imports"></a>交互匯入
 在匯入是雙向 （或循環），匯出或匯入到另一個可執行檔的檔案將呈現的複雜性。 例如，兩個 Dll 從匯入符號彼此相互遞迴函式類似。  
@@ -90,7 +91,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ## <a name="not-exporting-the-entire-class"></a>不會匯出整個類別  
  當您在不匯出整個類別時，您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 這可藉由來重新定義`AFX_DATA`特定類別的巨集。 這應該在完成任何您不想要匯出整個類別的時間。  
   
- 例如：  
+ 例如:   
   
 ```  
 /* A.H */  
@@ -134,5 +135,5 @@ class CExampleA : public CObject
   
 -   [LIB 公用程式和 /DEF 選項](../build/reference/lib-reference.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [匯入和匯出](../build/importing-and-exporting.md)

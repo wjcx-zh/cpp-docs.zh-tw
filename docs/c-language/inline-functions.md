@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1583e12613db9d53c0d1fc7be75e21ba377ab940
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8b5adadc990bed67abe739a4d73b2973b26ca207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inline-functions"></a>內嵌函式
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 
 **END Microsoft 特定的**  
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [inline、__inline、\__forceinline](../cpp/inline-functions-cpp.md)
 

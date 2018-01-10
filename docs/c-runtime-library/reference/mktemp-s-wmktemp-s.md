@@ -42,11 +42,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d87ba7e23ccc50cb6debbdb91912f1ae3e90ce1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9515212418b4bd4e8d9957254b2fafaf451a3adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s、_wmktemp_s
 建立唯一的檔案名稱。 這些是 [_mktemp、_wmktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -86,8 +87,8 @@ errno_t _wmktemp_s(
   
 |`template`|`sizeInChars`|**傳回值**|**範本中的新值**|  
 |----------------|-------------------|----------------------|-------------------------------|  
-|`NULL`|任何|`EINVAL`|`NULL`|  
-|格式不正確 (如需正確的格式，請參閱＜`Remarks`＞一節)|任何|`EINVAL`|空字串|  
+|`NULL`|any|`EINVAL`|`NULL`|  
+|格式不正確 (如需正確的格式，請參閱＜`Remarks`＞一節)|any|`EINVAL`|空字串|  
 |any|<= X 的數目|`EINVAL`|空字串|  
   
  如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，`errno` 會設定為 `EINVAL`，且函式會傳回 `EINVAL`。  
@@ -129,16 +130,16 @@ fna12345
   
  `_mktemp_s` 最多可為任何指定的基底和範本值組合建立 26 個唯一檔案名稱。 因此，FNZ12345 是 `_mktemp_s` 可為此範例中所使用的 `base` 和 `template` 值建立的最後一個唯一檔案名稱。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_mktemp_s`|\<io.h>|  
 |`_wmktemp_s`|\<io.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -194,7 +195,7 @@ Unique filename is fnd03188
 Unique filename is fne03188  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [fopen、_wfopen](../../c-runtime-library/reference/fopen-wfopen.md)   
  [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   

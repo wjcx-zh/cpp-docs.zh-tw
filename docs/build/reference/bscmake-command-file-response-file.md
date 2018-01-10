@@ -1,47 +1,48 @@
 ---
-title: "BSCMAKE 命令檔 (回應檔) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSCMAKE, 命令檔"
-  - "BSCMAKE, 回應檔"
-  - "命令檔"
-  - "命令檔, BSCMAKE"
-  - "回應檔"
-  - "回應檔, BSCMAKE"
+title: "BSCMAKE 命令檔 （回應檔） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- BSCMAKE, response file
+- BSCMAKE, command file
+- response files, BSCMAKE
+- command files, BSCMAKE
+- response files
+- command files
 ms.assetid: abdffeea-35c7-4f2d-8c17-7d0d80bac314
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0c250af9f1af96bb051be0b2cd347ecd8d98d809
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# BSCMAKE 命令檔 (回應檔)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-您可以在命令檔 \(Command File\) 中提供部分或完整的命令列輸入。  並以下列語法指定命令檔：  
+# <a name="bscmake-command-file-response-file"></a>BSCMAKE 命令檔 (回應檔)
+您可以提供的命令檔中的命令列輸入部分或全部。 指定命令檔，請使用下列語法：  
   
 ```  
 BSCMAKE @filename  
 ```  
   
- 只允許有一個命令檔。  您可以用 *filename* 指定路徑。  並在 *filename* 前加上 @ 符號。  BSCMAKE 不會假設副檔名。  您可以於命令列上在 *filename* 之後指定其他的 *sbrfile*。  命令檔是一個包含 BSCMAKE 輸入的文字檔，內容順序與在命令列中指定的順序相同。  請以一或多個空格、Tab 字元或新行字元 \(Newline Character\) 來分隔命令列引數。  
+ 允許只能有一個命令檔。 您可以指定具有路徑*filename*。 在前面*filename*以 at 符號 (@)。 BSCMAKE 不會採用擴充功能。 您可以指定其他*sbrfiles*之後在命令列上*filename*。 命令檔是包含 BSCMAKE 相同順序的輸入，像您會在命令列上指定它的文字檔案。 與一或多個空格、 tab 字元或換行字元分隔的命令列引數。  
   
- 下列命令會使用命令檔呼叫 BSCMAKE：  
+ 下列命令會呼叫 BSCMAKE 使用命令檔：  
   
 ```  
 BSCMAKE @prog1.txt  
 ```  
   
- 下列是範例命令檔：  
+ 以下是範例指令檔：  
   
 ```  
 /n /v /o main.bsc /El  
@@ -52,5 +53,5 @@ verdate.h c:\src\inc\screen.h
 file1.sbr file2.sbr file3.sbr file4.sbr  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [BSCMAKE 參考](../../build/reference/bscmake-reference.md)

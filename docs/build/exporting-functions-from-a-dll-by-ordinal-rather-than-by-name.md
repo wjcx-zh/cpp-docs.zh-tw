@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4d5420a426f0dc1244ede19fc4abddf56469608d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17b49cc54336f596d6815a2ebe53e60ed2dd51e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exporting-functions-from-a-dll-by-ordinal-rather-than-by-name"></a>根據序數而不是名稱從 DLL 匯出函式
 從您的 DLL 匯出函式最簡單的方式是將它們匯出的名稱。 這是當您使用時，會發生什麼事**__declspec （dllexport)**，例如。 但是，您可以依序數匯出函式。 使用這項技巧，您必須使用.def 檔案，而不是**__declspec （dllexport)**。 若要指定函式的序數值，將附加至.def 檔案中的函式名稱的其序數。 指定序數的相關資訊，請參閱[使用.def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)。  
@@ -37,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用 __declspec （dllexport）](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [從 DLL 匯出](../build/exporting-from-a-dll.md)

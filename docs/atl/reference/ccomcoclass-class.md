@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 966fe76858d24e47664667c043d88a953be91716
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 969370294ed3d5d2ca2fdff5f4a106b72ed77a17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass 類別
 這個類別會提供方法來建立執行個體的類別，並取得其屬性。  
@@ -46,11 +47,11 @@ class CComCoClass
  *createtable*  
  物件的 CLSID 指標。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComCoClass::CreateInstance](#createinstance)|（靜態）建立類別和介面查詢的執行個體。|  
 |[CComCoClass::Error](#error)|（靜態）傳回用戶端豐富的錯誤資訊。|  
@@ -213,5 +214,5 @@ static LPCTSTR WINAPI GetObjectDescription();
   
  如需 ATL 專案精靈的詳細資訊，請參閱文章[ATL 專案建立](../../atl/reference/creating-an-atl-project.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

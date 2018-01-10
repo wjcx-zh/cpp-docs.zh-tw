@@ -1,33 +1,33 @@
 ---
-title: "set::generic_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::generic_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_iterator 成員 [STL/CLR]"
+title: "set::generic_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::generic_iterator
+dev_langs: C++
+helpviewer_keywords: generic_iterator member [STL/CLR]
 ms.assetid: 2ecc9fde-9fad-49a5-821e-e79304be6c3b
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b5101219a0557f8c3ccd0ead0b2b8825564bb590
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# set::generic_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-迭代器的型別，適合與容器的泛型介面一起使用。  
+# <a name="setgenericiterator-stlclr"></a>set::generic_iterator (STL/CLR)
+迭代器使用容器的泛型介面型別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
@@ -35,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::Generic::
     generic_iterator;  
 ```  
   
-## 備註  
- 描述泛型迭代器的型別，其適合與此樣本容器類別的泛型介面一起使用。  
+## <a name="remarks"></a>備註  
+ 此類型所描述泛型的迭代器，可以搭配這個範本容器類別的泛型介面。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_generic_iterator.cpp   
@@ -73,14 +73,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+a b c  
+a b c  
+a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::generic\_container](../dotnet/set-generic-container-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::generic_container (STL/CLR)](../dotnet/set-generic-container-stl-clr.md)

@@ -1,82 +1,82 @@
 ---
-title: "/MAP (產生對應檔) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/map"
-  - "VC.Project.VCLinkerTool.MapFileName"
-  - "VC.Project.VCLinkerTool.GenerateMapFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MAP 連結器選項"
-  - "產生對應檔連結器選項"
-  - "MAP 連結器選項"
-  - "-MAP 連結器選項"
-  - "mapfile 連結器選項"
-  - "對應檔, 建立連結器"
-  - "對應檔, 連結程式的相關資訊"
-  - "對應檔, 指定檔案名稱"
+title: "-對應 （產生對應檔） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /map
+- VC.Project.VCLinkerTool.MapFileName
+- VC.Project.VCLinkerTool.GenerateMapFile
+dev_langs: C++
+helpviewer_keywords:
+- mapfiles, creating linker
+- generate mapfile linker option
+- mapfile linker option
+- mapfiles, information about program being linked
+- MAP linker option
+- -MAP linker option
+- mapfiles, specifying file name
+- /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f01daff11d41263766b66ed335c60d4bf83ced45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /MAP (產生對應檔)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="map-generate-mapfile"></a>/MAP (產生對應檔)
 ```  
 /MAP[:filename]  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  其中：  
   
  *filename*  
- 使用者指定的對應檔名稱。  它會取代預設的名稱。  
+ 指定使用者定義的對應名稱。 它會取代預設的名稱。  
   
-## 備註  
- \/MAP 選項會告訴連結器建立一個對應檔。  
+## <a name="remarks"></a>備註  
+ /MAP 選項會告訴連結器，以建立對應檔。  
   
- 依預設值，連結器會以程式的主檔名和副檔名 .map 來命名對應檔。  選擇性的 *filename* 可以讓您覆寫對應檔的預設名稱。  
+ 根據預設，連結器會與基底名稱的程式及延伸.map 命名對應檔。 選擇性*filename*可讓您覆寫對應檔的預設名稱。  
   
- 對應檔是個文字檔，含有所要連結程式的下列資訊：  
+ 對應檔是文字檔，其中包含程式所連結的下列資訊：  
   
--   模組名稱，也是檔案的主檔名  
+-   模組名稱，這就是基底檔案名稱  
   
--   程式檔案標頭的 \(不是檔案系統的\) 時間戳記  
+-   程式檔案標頭 （不是從檔案系統） 的時間戳記  
   
--   程式中群組的清單，並附有每一群組的開始位址 \(如 *section*:*offset*\)、長度、群組名稱和類別  
+-   在程式中，具有每個群組的起始位址的群組清單 (做為*區段*:*位移*)，長度、 群組名稱和類別  
   
--   公用符號的清單，並附有符號被定義的每一位址 \(如 *section*:*offset*\)、符號名稱、Flat 位址和 .obj 檔  
+-   公用符號，但每個地址的清單 (做為*區段*:*位移*)，符號名稱、 一般的地址和符號位置定義的.obj 檔案  
   
--   進入點 \(如 *section*:*offset*\)  
+-   進入點 (做為*區段*:*位移*)  
   
- [\/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) 選項是指定要包括在對應檔中的其他資訊。  
+ [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)選項會指定要包含在對應檔中的其他資訊。  
   
-### 若要在 Visual Studio 開發環境中設定這個連結器選項  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[連結器\] 資料夾。  
+2.  按一下**連結器**資料夾。  
   
-3.  按一下 \[偵錯\] 屬性頁。  
+3.  按一下**偵錯**屬性頁。  
   
-4.  修改 \[產生對應檔\] 屬性。  
+4.  修改**產生對應檔**屬性。  
   
-### 若要以程式設計方式設定這個連結器選項  
+### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項  
   
-1.  請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A>以及<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>。  
+1.  請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A>和<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eacfe9584cedfd45a952dca62dae545f617b1433
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86ae6c517eaefc45c6fbeb5108efdf7e6b92b769
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variantt-relational-operators"></a>_variant_t 關係運算子
 **Microsoft 特定的**  
@@ -68,7 +69,7 @@ bool operator!=(
 ## <a name="remarks"></a>備註  
  比較`_variant_t`物件**VARIANT**、 測試是否相等或不等比較。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_variant_t 類別](../cpp/variant-t-class.md)

@@ -39,11 +39,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2218d7b563666429aeeed07059b4e32640ffefe2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 506dafbbb2f1954584af0e6be613ecbcc9292a0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha、_ismbbalpha_l
 判斷指定的多位元組字元是否為 alpha。  
@@ -73,20 +74,20 @@ int _ismbbalpha_l(
 isalpha || _ismbbkalnum  
 ```  
   
- 非零代表 `c`，0 則代表不是。 針對任何地區設定相關的字元設定，`_ismbbalpha` 會使用目前的地區設定。 `_ismbbalpha_l` 完全相同，除了它使用的是傳入的地區設定。  
+ 非零代表 `c`，0 則代表不是。 針對任何地區設定相關的字元設定，`_ismbbalpha` 會使用目前的地區設定。 `_ismbbalpha_l` 也相同，除了它使用的是傳入的地區設定。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_ismbbalpha`|\<mbctype.h>|  
 |`_ismbbalpha_l`|\<mbctype.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
  [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

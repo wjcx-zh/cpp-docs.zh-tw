@@ -1,53 +1,53 @@
 ---
-title: "檔案處理和 I/O (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], 檔案處理"
-  - ".NET Framework [C++], I/O"
-  - "檔案 [C++], .NET Framework 和"
-  - "I/O [C++], .NET Framework 應用程式"
+title: "檔案處理和我-O (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .NET Framework [C++], file handling
+- files [C++], .NET Framework and
+- I/O [C++], .NET Framework applications
+- .NET Framework [C++], I/O
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 643888b4a2bca802a9314d3468f2f416ff8a77b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 檔案處理和 I/O (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-示範使用 .NET Framework 所進行的各種檔案作業。  
+# <a name="file-handling-and-io-ccli"></a>檔案處理和 I/O (C++/CLI)
+示範如何使用.NET Framework 的各種檔案作業。  
   
- 下列主題會示範如何使用 <xref:System.IO> 命名空間中定義的類別，以執行各種檔案作業。  
+ 下列主題示範如何使用類別中定義<xref:System.IO>命名空間，以執行各種檔案作業。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本節內容  
   
--   [如何：列舉目錄中的檔案](../dotnet/how-to-enumerate-files-in-a-directory-cpp-cli.md)  
+-   [如何：列舉目錄中的檔案 (C++/CLI)](../dotnet/how-to-enumerate-files-in-a-directory-cpp-cli.md)  
   
--   [如何：監視檔案系統變更](../dotnet/how-to-monitor-file-system-changes-cpp-cli.md)  
+-   [如何：監視檔案系統變更 (C++/CLI)](../dotnet/how-to-monitor-file-system-changes-cpp-cli.md)  
   
--   [如何：讀取二進位檔案](../dotnet/how-to-read-a-binary-file-cpp-cli.md)  
+-   [如何：讀取二進位檔案 (C++/CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)  
   
--   [如何：讀取文字檔](../dotnet/how-to-read-a-text-file-cpp-cli.md)  
+-   [如何：讀取文字檔 (C++/CLI)](../dotnet/how-to-read-a-text-file-cpp-cli.md)  
   
--   [如何：擷取檔案資訊](../dotnet/how-to-retrieve-file-information-cpp-cli.md)  
+-   [如何：擷取檔案資訊 (C++/CLI)](../dotnet/how-to-retrieve-file-information-cpp-cli.md)  
   
--   [如何：寫入二進位檔案](../dotnet/how-to-write-a-binary-file-cpp-cli.md)  
+-   [如何：寫入二進位檔案 (C++/CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)  
   
--   [如何：寫入文字檔](../dotnet/how-to-write-a-text-file-cpp-cli.md)  
+-   [如何：寫入文字檔 (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)  
   
-## 相關章節  
- [檔案和資料流 I\/O](../Topic/File%20and%20Stream%20I-O.md)  
-  
-## 請參閱  
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+ 
+## <a name="see-also"></a>請參閱  
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b332e392db2ca788d041cb73e73cf42cce85906c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c75d66fcbe9ef437980878e7789a82dc94b68573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Windows 市集應用程式、Windows 執行階段和 C 執行階段
 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式是在「Windows 執行階段」(在 [!INCLUDE[win8](../build/reference/includes/win8_md.md)] 上執行) 中執行的程式。  「Windows 執行階段」是可信賴的環境，控制可供 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式使用的函式、變數和資源。 不過，根據設計，「Windows 執行階段」的限制會使得大部分 C 執行階段程式庫 (CRT) 的功能無法在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式中使用。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
   
  如需在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式無法提供使用的 CRT 函式完整清單與替代函式的建議，請參閱 [/ZW 不支援的 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [相容性](../c-runtime-library/compatibility.md)   
  [Windows 執行階段不支援的 CRT 函式](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

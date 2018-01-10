@@ -1,42 +1,42 @@
 ---
-title: "multiset::key_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::key_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_type 成員 [STL/CLR]"
+title: "multiset:: key_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::key_type
+dev_langs: C++
+helpviewer_keywords: key_type member [STL/CLR]
 ms.assetid: 8b243eb3-889b-405c-a2bd-2c2c5dfaafcd
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1ea2f3803394c09882c58ed09b09bbf54297a473
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::key_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetkeytype-stlclr"></a>multiset::key_type (STL/CLR)
 排序索引鍵的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Key key_type;  
 ```  
   
-## 備註  
- 此型別是個範本參數 `Key`之同義資料表。  
+## <a name="remarks"></a>備註  
+ 此類型是範本參數 `Key`的同義字。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multiset_key_type.cpp   
@@ -64,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::key\_compare](../dotnet/multiset-key-compare-stl-clr.md)   
- [multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)   
+ [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

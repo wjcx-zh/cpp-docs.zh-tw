@@ -33,37 +33,22 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 840e4fd2231d9eca61dc508b15a11ed75822bb6b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 333db8403e539d28de766809891a068717c738ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catan-catanf-catanl"></a>catan、catanf、catanl
 擷取複數的虛數座標軸的間隔 [-1; + 1] 以外的分支剪下的反正切值。  
@@ -100,13 +85,13 @@ _Lcomplex catanl(
   
 ## <a name="requirements"></a>需求  
   
-|常式|C 標頭|C++ 標頭|  
+|常式傳回的值|C 標頭|C++ 標頭|  
 |-------------|--------------|------------------|  
 |`catan`,               `catanf`, `catanl`|\<complex.h>|\<ccomplex>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh、catanhf、catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh、ctanhf、ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   

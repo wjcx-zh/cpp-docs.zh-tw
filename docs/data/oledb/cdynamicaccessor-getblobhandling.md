@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9bac84019f408c7a68cf6afbffe94572be44c46
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: de4ab605d4b0622d555625e71bf0aefd01cb1368
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessorgetblobhandling"></a>CDynamicAccessor::GetBlobHandling
 擷取 BLOB 處理目前的資料列的值。  
@@ -43,5 +46,5 @@ const DBBLOBHANDLINGENUM GetBlobHandling( ) const;
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

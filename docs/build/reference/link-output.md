@@ -27,11 +27,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d01f19f31f83324beab1e44efe181086d6432175
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 567a87ab5cb4badd5f32423b8fb3067b21c46e9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-output"></a>LINK 輸出
 Link 輸出包含.exe 檔、 Dll、 對應檔，以及訊息。  
@@ -56,6 +57,6 @@ Link 輸出包含.exe 檔、 Dll、 對應檔，以及訊息。
   
  連結會發出錯誤和警告訊息的形式 LNK*nnnn*。 這個錯誤前置字元和數字範圍也會使用 LIB、 DUMPBIN 和 EDITBIN。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

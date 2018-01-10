@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d238acf9bfe55052a1d6dc316f5425774737f9f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c43761189d9241e77faa67ad106f346fb8f92ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-classification"></a>字元分類
 這些每個常式都會測試指定的單一位元組字元、寬字元或滿足條件的多位元組字元。 (根據定義，介於 0 到 127 之間的 ASCII 字元集是所有多位元組字元集的子集。 例如，日文片假名包括 ASCII 以及非 ASCII 字元)。  
@@ -37,7 +38,7 @@ if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
   
 ### <a name="character-classification-routines"></a>字元分類常式  
   
-|常式|字元測試條件|  
+|常式傳回的值|字元測試條件|  
 |-------------|------------------------------|  
 |[isalnum、iswalnum, _isalnum_l、_iswalnum_l](../c-runtime-library/reference/isalnum-iswalnum-isalnum-l-iswalnum-l.md)、[_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英數字元|  
 |[_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英數字元|  
@@ -65,5 +66,5 @@ if ((c >= 'A') && (c <= 'Z')) || ((c >= 'a') && (c <= 'z'))
 |[isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l](../c-runtime-library/reference/isxdigit-iswxdigit-isxdigit-l-iswxdigit-l.md)|十六進位數字|  
 |[_mbclen、mblen、_mblen_l](../c-runtime-library/reference/mbclen-mblen-mblen-l.md)|傳回有效多位元組字元的長度。結果取決於目前地區設定的 `LC_CTYPE` 分類設定|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

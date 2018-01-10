@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9360e9446d4e42e6e6c08c97694743e14d2e0d14
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a57a54ac330e191961715440d652b9f084006b29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-updatable-provider"></a>建立可更新的提供者
 Visual c + + 支援可更新的提供者或可更新的提供者 （寫入） 資料存放區。 本主題討論如何建立可更新的提供者使用 OLE DB 樣板。  
@@ -430,5 +433,5 @@ m_rgRowData.Add(trData[0]);
   
  此程式碼指定在其他方面，資料行支援預設值是 0，可寫入的與資料行中的所有資料都具有相同的長度。 如果您想要具有可變長度的資料行中的資料，您就不會設定這個旗標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)

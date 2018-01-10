@@ -1,34 +1,33 @@
 ---
-title: "ML Fatal Error A1016 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1016"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1016"
+title: "ML 嚴重錯誤 A1016 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1016
+dev_langs: C++
+helpviewer_keywords: A1016
 ms.assetid: 440b3750-ba0b-44d8-b82d-d581f62c08b2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 493980f0c9507f15e4f9f4403d9c666cae172faa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ML Fatal Error A1016
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**內部的組譯工具錯誤**  
+# <a name="ml-fatal-error-a1016"></a>ML 嚴重錯誤 A1016
+**內部組譯工具錯誤**  
   
- MASM 驅動程式時，呼叫 ML.exe 時，會產生系統錯誤。  
+ MASM 的驅動程式，稱為 ML.exe，產生的系統錯誤。  
   
- 請注意錯誤的情況下，並通知 Microsoft 公司。  產品支援服務會在[翻譯](翻譯)。  
+ 請記錄發生錯誤的情況，並通知 Microsoft Corporation。 產品支援服務將會位於[http://support.microsoft.com/](http://support.microsoft.com/)。  
   
-## 請參閱  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>請參閱  
+ [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

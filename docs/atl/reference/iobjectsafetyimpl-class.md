@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,44 +13,29 @@ f1_keywords:
 - ATLCTL/ATL::IObjectSafetyImpl::GetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::SetInterfaceSafetyOptions
 - ATLCTL/ATL::IObjectSafetyImpl::m_dwCurrentSafety
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - controls [ATL], safe
 - safe for scripting and initialization (controls)
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: cdcc008797e94988fb42fd6239603fa300a84233
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl 類別
 這個類別提供的預設實作`IObjectSafety`介面，以允許用戶端會擷取和設定物件的安全性層級。  
   
 > [!IMPORTANT]
->  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -71,7 +55,7 @@ class IObjectSafetyImpl
   
 - **INTERFACESAFE_FOR_UNTRUSTED_DATA**所識別的介面`SetInterfaceSafetyOptions`參數`riid`應該設定成安全的未受信任的資料在初始化期間。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -89,7 +73,7 @@ class IObjectSafetyImpl
 ## <a name="remarks"></a>備註  
  類別`IObjectSafetyImpl`提供的預設實作`IObjectSafety`。 `IObjectSafety`介面可讓用戶端會擷取和設定物件的安全性層級。 例如，網頁瀏覽器可以呼叫**IObjectSafety::SetInterfaceSafetyOptions**來設定該控制項用於初始化安全或安全用於指令碼。  
   
- 請注意，使用[IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)巨集透過**CATID_SafeForScripting**和**CATID_SafeForInitializing**元件類別提供指定的元件安全的替代方式。  
+ 請注意，使用[IMPLEMENTED_CATEGORY](category-macros.md#implemented_category)巨集透過**CATID_SafeForScripting**和**CATID_SafeForInitializing**元件類別提供一個替代方式指定的元件安全的方式。  
   
  **相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)  
   
@@ -99,7 +83,7 @@ class IObjectSafetyImpl
  `IObjectSafetyImpl`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlctl.h  
+ **標頭：** atlctl.h  
   
 ##  <a name="getinterfacesafetyoptions"></a>IObjectSafetyImpl::GetInterfaceSafetyOptions  
  擷取物件所支援的安全性選項，以及目前的物件設定的安全性選項。  
@@ -117,7 +101,7 @@ HRESULT GetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  支援的任何物件`IObjectSafety`負責它自己的安全性，則會將委派的任何物件。 程式設計人員必須納入帳戶問題所引起的使用者內容中執行程式碼、 跨網站指令碼，並且執行適當的區域檢查。  
   
- 請參閱[IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IObjectSafety::GetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768223.aspx) Windows SDK 中。  
   
 ##  <a name="m_dwcurrentsafety"></a>IObjectSafetyImpl::m_dwCurrentSafety  
  儲存物件的目前安全性層級。  
@@ -142,9 +126,8 @@ HRESULT SetInterfaceSafetyOptions(
 > [!IMPORTANT]
 >  支援的任何物件`IObjectSafety`負責它自己的安全性，則會將委派的任何物件。 程式設計人員必須納入帳戶問題所引起的使用者內容中執行程式碼、 跨網站指令碼，並且執行適當的區域檢查。  
   
- 請參閱[IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 請參閱[IObjectSafety::SetInterfaceSafetyOptions](https://msdn.microsoft.com/library/aa768225.aspx) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IObjectSafety 介面](https://msdn.microsoft.com/library/aa768224.aspx)   
  [類別概觀](../../atl/atl-class-overview.md)
-

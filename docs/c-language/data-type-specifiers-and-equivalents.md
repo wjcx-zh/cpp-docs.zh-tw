@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fbc76f70eba6fab46e709978bbadcd10312af6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 596e3fcf4dab3f88abc17cac4bc32471e63b4bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-specifiers-and-equivalents"></a>資料類型規範和對應項
 本書通常會使用下表中所列類型規範的格式，而不是完整格式，同時會依預設來假設 `char` 類型為帶正負號的類型。 因此，在本書中，`char` 相當於 **signed char**。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
  您可以指定 /J 編譯器選項來將預設為帶正符號的 **char** 類型轉換為不帶正負號的類型。 當這個選項生效時，表示 **char** 與 **unsigned char** 相同；因此，您必須使用 **signed** 關鍵字來宣告帶正負號的字元值。 如果明確地將 **char** 值宣告為帶正負號類型時，/J 選項不會生效，且該值在擴展為 **int** 類型時，會以帶正負號的形式進行擴充。 **char** 類型在擴充至 **int** 類型時，是以零擴充的方式加以擴充。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 類型規範](../c-language/c-type-specifiers.md)

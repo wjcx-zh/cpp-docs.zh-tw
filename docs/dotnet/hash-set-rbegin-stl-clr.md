@@ -1,41 +1,42 @@
 ---
-title: "hash_set::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin 成員 [STL/CLR]"
+title: "hash_set:: rbegin (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: 1f2ff4ed-8557-40cf-8e61-816563acc43e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 33caee5f46436f7f2176d237c10744c66f4113b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定已還原的受控制序列開頭。  
+# <a name="hashsetrbegin-stlclr"></a>hash_set::rbegin (STL/CLR)
+指定反向受控制序列的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## 備註  
- 函式成員迴船一個反向 Iterator，用以指派受控制序列的最後一個項目，或超出空序列開頭。  因此，它會指定反向序列的 `beginning`。  您會用它來取得指定以反向順序顯示之受控制序列 `current` 開頭的 Iterator，但是如果受控制序列的長度變更，它的狀態也會變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回指定受控制序列中，或空的序列開頭以外路徑的最後一個元素的反向迭代器。 因此，它會指定`beginning`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列相反的順序出現，但其狀態的開頭。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_rbegin.cpp   
@@ -64,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*rbegin\(\) \= c**  
-**\*\+\+rbegin\(\) \= b**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)   
- [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)   
- [hash\_set::rend](../dotnet/hash-set-rend-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set:: begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)   
+ [hash_set:: end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)   
+ [hash_set::rend (STL/CLR)](../dotnet/hash-set-rend-stl-clr.md)

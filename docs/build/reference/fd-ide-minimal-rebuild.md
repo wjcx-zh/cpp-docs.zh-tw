@@ -1,36 +1,36 @@
 ---
-title: "/FD (IDE 最少重建) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/FD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FD 編譯器選項 [C++]"
-  - "FD 編譯器選項 [C++]"
-  - "-FD 編譯器選項 [C++]"
+title: "-FD （IDE 最少重建） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /FD
+dev_langs: C++
+helpviewer_keywords:
+- /FD compiler option [C++]
+- -FD compiler option [C++]
+- FD compiler option [C++]
 ms.assetid: 7ef21b8c-a448-4bb4-9585-a2a870028e17
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c0dfcf34be03204b920e5a4459c6a2d7ea6c506d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /FD (IDE 最少重建)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**\/FD** 並不向使用者公開 \(但 C\+\+ 專案之 \[**屬性頁**\] 對話方塊的[命令列](../../ide/command-line-property-pages.md)屬性頁中除外\)，除非未同時選取 [\/Gm \(啟用最少重建\)](../../build/reference/gm-enable-minimal-rebuild.md)。  **\/FD** 除了從開發環境以外，也沒有任何效用。  **\/FD** 並不在 **cl \/?** 的輸出中公開。  
+# <a name="fd-ide-minimal-rebuild"></a>/FD (IDE 最少重建)
+**/FD**不公開給使用者，除了在[命令列](../../ide/command-line-property-pages.md)c + + 專案屬性頁**屬性頁**對話方塊中，如果且只有[/Gm （啟用最少重建）](../../build/reference/gm-enable-minimal-rebuild.md)也未選取。 **/FD**以外沒有作用，從開發環境。 **/FD**的輸出中未公開**cl /？**。  
   
- 如果不在開發環境中啟用 **\/Gm**，就會使用 **\/FD**。  **\/FD** 會確保 .idb 檔有足夠的相依性資訊。  **\/FD** 只會由開發環境使用，而且不可以從命令列或建置指令檔加以使用。  
+ 如果您未啟用**/Gm**在開發環境中， **/FD**將使用。 **/FD**可確保.idb 檔具有足夠的相依性資訊。 **/FD**只供開發環境中，不應使用從命令列或組建指令碼。  
   
-## 請參閱  
- [輸出檔 \(\/F\) 選項](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>請參閱  
+ [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _gmtime64_s
 - gmtime_s
 - _gmtime32_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - gmtime_s function
 - gmtime32_s function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e130b125651c29a4ba2607b47b02b95c81468869
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f0d0fc911c052e58b1f2aeb9b656f737746bd2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 將時間值轉換成結構。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_gmtime32、_gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) 版本。  
@@ -101,9 +85,9 @@ errno_t _gmtime64_s(
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|`_tm`|`time`|返回|`_tm` 中的值|  
+|`_tm`|`time`|Return|`_tm` 中的值|  
 |-----------|------------|------------|--------------------|  
-|`NULL`|任何|`EINVAL`|未修改。|  
+|`NULL`|any|`EINVAL`|未修改。|  
 |非 `NULL` (指向有效的記憶體)|`NULL`|`EINVAL`|所有的欄位設定為 -1。|  
 |非 `NULL`|< 0|`EINVAL`|所有的欄位設定為 -1。|  
   
@@ -146,17 +130,17 @@ errno_t _gmtime64_s(
   
  使用 `__time64_t` 結構的 `_gmtime64_s`，允許表示至 3000 年 12 月 31 日 23:59:59 UTC 為止的日期，而 `gmtime32_s` 只能表示至 2038 年 1 月 18 日23:59:59 UTC 的日期。 1970 年 1 月 1 日午夜是所有這兩個函式的日期範圍下限。  
   
- `gmtime_s` 是內嵌函式，其評估 `_gmtime64_s` 和 `time_t` 是否相當於 `__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元`time_t`，您可以定義 `_USE_32BIT_TIME_T`。 如此一來，將導致 `gmtime_s` 內嵌至`_gmtime32_s`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。  
+ `gmtime_s` 是內嵌函式，其評估 `_gmtime64_s` 和 `time_t` 是否相當於 `__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元 `time_t`，您可以定義 `_USE_32BIT_TIME_T`。 如此一來，將導致 `gmtime_s` 內嵌至`_gmtime32_s`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`gmtime_s`|\<time.h>|  
 |`_gmtime32_s`|\<time.h>|  
 |`_gmtime64_s`|\<time.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -202,7 +186,7 @@ int main( void )
 Coordinated universal time is Fri Apr 25 20:12:33 2003  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   

@@ -39,11 +39,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f0dcc7490ee6b2d9468bc1c5f83a4585f073295
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c24a7426c788ac7ecfc98f3e649397912960505a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 將窄字串的第一個多位元組字元轉譯為對等的 UTF-16 或 UTF-32 字元。  
@@ -89,7 +90,7 @@ size_t mbrtoc32(
 |介於 1 和 `max_bytes`(含) 之間|傳回的值是完成有效多位元組字元的 `source` 位元組數目。 如果 `destination` 不是 null，就會儲存已轉換的寬字元。|  
 |-3|如果 `destination` 不是 null，因先前的函式呼叫所產生的下一個寬字元就已儲存在 `destination` 中。 這個函式呼叫不會消耗 `source` 任何位元組。<br /><br /> 當  `source` 指向需要多個寬字元來表示的多位元組字元時 (例如，surrogate 字組)，就會更新 `state` 值，以便下個函式呼叫寫出額外的字元。|  
 |-2|下一個 `max_bytes` 位元組代表不完整但可能有效的多位元組字元。 沒有任何值儲存於 `destination`。 如果 `max_bytes` 為零就可能發生這個結果。|  
-|-1|發生了編碼錯誤。 後 `max_bytes` 個位元組 (或更少個位元組) 不會產生完整且有效的多位元組字元。 沒有任何值儲存於 `destination`。<br /><br /> `EILSEQ` 儲存在 `errno` 中，而轉換狀態 `state` 尚未指定。|  
+|-1|發生了編碼錯誤。 後 `max_bytes` 個位元組 (或更少個位元組) 不會產生完整且有效的多位元組字元。 沒有任何值儲存在 `destination`中。<br /><br /> `EILSEQ` 儲存在 `errno` 中，而轉換狀態 `state` 尚未指定。|  
   
 ## <a name="remarks"></a>備註  
  `mbrtoc16` 函式最多從 `max_bytes` 讀取 `source` 位元組以尋找第一個完整有效的多位元組字元，然後將對等的 UTF-16 字元儲存在 `destination`。 來源位元組會根據目前執行緒的多位元組地區設定解譯。 如果多位元組字元需要多個 UTF-16 輸出字元，例如 surrogate 字組，則會設定 `state` 值，使其在下次呼叫 `destination` 時，將下一個 UTF-16字元儲存於 `mbrtoc16`。 `mbrtoc32` 函式相同，但輸出儲存為 UTF-32 字元。  
@@ -100,13 +101,13 @@ size_t mbrtoc32(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`mbrtoc16`,                `mbrtoc32`|\<uchar.h>|\<cuchar>|  
   
- 如需其他相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

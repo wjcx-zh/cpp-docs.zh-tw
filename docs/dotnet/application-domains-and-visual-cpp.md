@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57a45bd6f73040623fe90626b1c3896df3258dd8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a66731b9645458441f1c3e1f211c74be698e7231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-domains-and-visual-c"></a>應用程式定義域和 Visual C++
 如果您有`__clrcall`虛擬函式，每個應用程式定義域 (appdomain)，將會在 vtable。 如果您在一個 appdomain 中建立物件，您只可以呼叫該 appdomain 內的虛擬函式。 中定義的所有函式**/clr: pure**編譯使用`__clrcall`呼叫慣例。 因此，所有的 vtable，定義在**/clr: pure**編譯是以每個 appdomain。 在混合模式 (**/clr**) 如果您的型別沒有任何，會有每個處理序 vtable`__clrcall`虛擬函式。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
@@ -38,5 +41,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [process](../cpp/process.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)

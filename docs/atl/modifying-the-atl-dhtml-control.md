@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74ed32c0322d23cd3da1d439dcc8d8eadb246c13
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 571b7f4f52e3f6838822db39ba0bbf5148d57d1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控制項
 ATL 控制項精靈提供起始程式碼，並讓您可以建置並執行控制項，您可以看到專案檔中寫入方法的方式與 DHTML 方式呼叫控制項的 c + + 程式碼使用分派方法。 您可以新增任何分派方法的介面。 然後，您可以呼叫 HTML 資源中的方法。  
@@ -80,6 +81,6 @@ ATL 控制項精靈提供起始程式碼，並讓您可以建置並執行控制�
   
  您現在可以建置和[測試修改過的 DHTML 控制項](../atl/testing-the-modified-atl-dhtml-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
 

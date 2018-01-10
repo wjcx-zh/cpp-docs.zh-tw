@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b78d01405ca74acfa74f898b88d1c9b79625e99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4f7702e9babcc4769136d6deab63b627f8b09bd4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="naming-conventions-for-mfc-dlls"></a>MFC DLL 命名慣例
 Dll 和包含在 MFC 程式庫遵循結構化的命名慣例。 這可讓您容易知道哪一個 DLL 或程式庫您應該使用哪一個用途。  
@@ -51,5 +52,5 @@ Dll 和包含在 MFC 程式庫遵循結構化的命名慣例。 這可讓您容�
   
 -   [程式庫命名慣例](../mfc/library-naming-conventions.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)

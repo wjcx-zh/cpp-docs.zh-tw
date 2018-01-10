@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8a0d0e240e1c830763b5b7781fb3a1e536d4672
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83dfbb1792a569e359692ba55fb23a8ebb580c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlcommodule-class"></a>CAtlComModule 類別
 這個類別會實作 COM 伺服器模組。  
@@ -37,18 +38,18 @@ ms.lasthandoff: 10/24/2017
 class CAtlComModule : public _ATL_COM_MODULE
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlComModule::CAtlComModule](#catlcommodule)|建構函式。|  
 |[CAtlComModule:: ~ CAtlComModule](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlComModule::RegisterServer](#registerserver)|呼叫這個方法來更新系統登錄的物件對應中每個物件。|  
 |[CAtlComModule::RegisterTypeLib](#registertypelib)|呼叫這個方法來註冊類型程式庫。|  
@@ -166,6 +167,6 @@ HRESULT UnRegisterTypeLib();
 ### <a name="return-value"></a>傳回值  
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_ATL_COM_MODULE](atl-typedefs.md#_atl_com_module)   
  [類別概觀](../../atl/atl-class-overview.md)

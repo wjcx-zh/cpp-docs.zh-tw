@@ -1,68 +1,69 @@
 ---
-title: "/X (忽略標準 Include 路徑) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/x"
-  - "VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath"
-  - "VC.Project.VCCLWCECompilerTool.IgnoreStandardIncludePath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/X 編譯器選項 [C++]"
-  - "忽略標準 Include 路徑編譯器選項"
-  - "Include 目錄, 忽略標準的"
-  - "Include 檔, 忽略標準的路徑"
-  - "X 編譯器選項"
-  - "-X 編譯器選項 [C++]"
+title: "-X (忽略標準 Include 路徑) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /x
+- VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+dev_langs: C++
+helpviewer_keywords:
+- /X compiler option [C++]
+- include files, ignore standard path
+- -X compiler option [C++]
+- include directories, ignore standard
+- X compiler option
+- Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a15294e1a63b16124d8907639fbd2e6bb705f1aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /X (忽略標準 Include 路徑)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-防止編譯器在 PATH 和 INCLUDE 環境變數中指定的目錄中搜尋 include 檔。  
+# <a name="x-ignore-standard-include-paths"></a>/X (忽略標準 Include 路徑)
+防止編譯器搜尋 include 檔 PATH 和 INCLUDE 環境變數中指定的目錄中。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /X  
 ```  
   
-## 備註  
- 您可以使用這個選項搭配 [\/I \(其他 Include 目錄\)](../../build/reference/i-additional-include-directories.md) \(**\/I**`directory`\) 選項。  
+## <a name="remarks"></a>備註  
+ 您可以使用這個選項搭配[（其他 Include 目錄） /I](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) 選項。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**前置處理器**\] 屬性頁。  
+3.  按一下**前置處理器**屬性頁。  
   
-4.  修改 \[**忽略標準的 Include 路徑**\] 屬性。  
+4.  修改**忽略標準 Include 路徑**屬性。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.IgnoreStandardIncludePath%2A>。  
   
-## 範例  
- 在以下命令中，`/X` 是告訴編譯器忽略 PATH 和 INCLUDE 環境變數指定的位置，而 `/I` 則是指定要在其中搜尋包含檔的目錄：  
+## <a name="example"></a>範例  
+ 下列命令，在`/X`告訴編譯器忽略在 PATH 和 INCLUDE 環境變數所指定的位置和`/I`指定目錄中用來尋找 include 檔：  
   
 ```  
 CL /X /I \ALT\INCLUDE MAIN.C  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7467e503480fdb35f668628cdf4110923b28d47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ceb2cfacf27c22ea7a6a5c96907e8ab3fa0f57c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="behavior-of-identifiers"></a>識別碼的行為
 -   [沒有外部連結的有效字元數](../c-language/significant-characters-without-external-linkage.md)  
@@ -26,5 +27,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [大寫和小寫](../c-language/uppercase-and-lowercase.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)

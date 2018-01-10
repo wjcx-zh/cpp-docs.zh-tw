@@ -1,41 +1,42 @@
 ---
-title: "hash_map::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin 成員 [STL/CLR]"
+title: "hash_map:: rbegin (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: e3b6c4d5-9482-471e-b5fc-70331b082a9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4f3f87fd1ba0e2f09885a01e712a05ba99faf442
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定已還原的受控制序列開頭。  
+# <a name="hashmaprbegin-stlclr"></a>hash_map::rbegin (STL/CLR)
+指定反向受控制序列的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## 備註  
- 成員函式來傳回指定受控制序列的最後一個項目在空序列開頭的之外的反向 Iterator，則為。  因此，它會指定反向序列的 `beginning`。  您會用它來取得指定以反向順序顯示之受控制序列 `current` 開頭的 Iterator，但是如果受控制序列的長度變更，它的狀態也會變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回指定受控制序列中，或空的序列開頭以外路徑的最後一個元素的反向迭代器。 因此，它會指定`beginning`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更受控制的序列相反的順序出現，但其狀態的開頭。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_rbegin.cpp   
@@ -67,16 +68,19 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**\*rbegin \(\) \= \[c 3\]**  
-**\*\+\+rbegin \(\) \= \[b 2\]**   
-## 需求  
- **標題:** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*rbegin() = [c 3]  
+*++rbegin() = [b 2]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::begin](../dotnet/hash-map-begin-stl-clr.md)   
- [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)   
- [hash\_map::rend](../dotnet/hash-map-rend-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map:: begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)   
+ [hash_map:: end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)   
+ [hash_map::rend (STL/CLR)](../dotnet/hash-map-rend-stl-clr.md)

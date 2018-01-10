@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3a2683fbc259cbac3551840f9ebe6e7c651430bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76172804cc271a740244d06e791db35d534c69e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-your-own-helper-function"></a>開發您自己的 Helper 函式
 若要提供您自己進行匯入之 DLL 的名稱為基礎的特定處理常式的版本。 這麼做的兩種方法： 程式碼撰寫您自己，可能會根據提供的程式碼，或攔截所提供的版本，使用先前說明的告知攔截。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/24/2017
  使用啟動處理告知攔截  
  它可能會直接提供新的指標，以接收通知 dliStartProcessing 上預設協助專家為相同值的使用者提供的通知攔截函式最簡單的方式。 此時，攔截函式基本上會形成新的協助程式函式，是因為成功傳回預設協助程式將會略過所有其他以預設協助程式處理。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [延遲載入 DLL 的連結器支援](../../build/reference/linker-support-for-delay-loaded-dlls.md)

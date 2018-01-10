@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95369f7554a557677636ea9c70665424e7e80c83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e3db47ca48e52babc03923dfba7b1dcb8173cc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parsing-c-command-line-arguments"></a>剖析 C 命令列引數
 **Microsoft 特定的**  
@@ -103,7 +104,7 @@ Environment variables:
   WINDIR=c:\nt        
 ```  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [main 函式和程式執行](../c-language/main-function-and-program-execution.md)

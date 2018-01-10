@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8ecb97731c6d0f1651382be97b5f249e0f8df46d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96428c5a18c7b345f323ab377c24fe5f008bc025
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cast-operator-"></a>轉型運算子：()
 類型轉換提供了一個明確的轉換方法，可在特定情況下轉換物件的類型。  
@@ -128,7 +129,7 @@ Note that the cast changed the raw internal string
 Raw Bytes after cast:   Exciting  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [明確類型轉換運算子: （)](../cpp/explicit-type-conversion-operator-parens.md)   

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fc90c44fde4db119a8aa6dab097e9a7bd1c7f0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fda95e4517d2717a89310a8e49a0c5b337feebcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-window-traits"></a>了解視窗特性
 視窗特性類別提供標準化的樣式，用於建立 ATL 視窗物件的簡單方法。 做為範本參數所接受視窗特性[CWindowImpl](../atl/reference/cwindowimpl-class.md)與其他 ATL 視窗類別，做為提供預設視窗樣式類別層級的方式。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="atl-window-traits-templates"></a>ATL 視窗特性樣板  
  ATL 提供兩個視窗特性範本可讓您設定在編譯時期使用其樣板參數的預設樣式。  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |[CWinTraits](../atl/reference/cwintraits-class.md)|使用此範本，當您想要提供預設的呼叫中不指定任何其他樣式時，才會使用的視窗樣式**建立**。 提供在執行的階段優先順序，透過在設定的樣式的樣式會編譯時間。|  
 |[CWinTraitsOR](../atl/reference/cwintraitsor-class.md)|當您想要指定永遠必須設定的視窗類別的樣式，請使用這個類別。 在執行階段提供的樣式會與樣式設定在編譯時期使用位元 OR 運算子結合。|  
@@ -42,6 +43,6 @@ ms.lasthandoff: 10/24/2017
   
  所有這些函式會在執行階段，它可用來產生新的樣式值傳遞給某個樣式值。 如果您的視窗 traits 類別當作 ATL 視窗類別的樣板引數，傳遞給這些靜態函式的樣式值將會做為樣式引數傳遞[建立](../atl/reference/cwindowimpl-class.md#create)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [視窗類別](../atl/atl-window-classes.md)
 

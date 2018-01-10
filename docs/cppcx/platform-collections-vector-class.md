@@ -30,11 +30,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 35299f80b85432286859ed76afdd7a599809f67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c371b6805616ff0b114be24bb291469eae2dd26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 表示可依索引來個別存取的物件序列集合。  
@@ -51,7 +52,7 @@ template <typename T, typename E>
  Vector 物件中包含的元素型別。  
   
  `E`  
- 指定二元述詞，以測試是否與 `T`型別的值相等。 預設值是 `std::equal_to<T>`。  
+ 指定二元述詞，以測試是否與 `T` 型別的值相等。 預設值是 `std::equal_to<T>`。  
   
 ### <a name="remarks"></a>備註  
  可使用的型別如下：  
@@ -70,17 +71,17 @@ template <typename T, typename E>
   
  如果您嘗試在公用傳回值或參數中使用 Vector 型別，則會引發編譯器錯誤 C3986。 您可以將參數或傳回值類型變更為 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410)來修正錯誤。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Vector:: vector](#ctor)|初始化 Vector 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Vector:: append](#append)|在目前 Vector 的最後一個項目之後插入指定的項目。|  
 |[Vector:: clear](#clear)|刪除目前 Vector 的所有項目。|  
@@ -100,7 +101,7 @@ template <typename T, typename E>
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |事件[Windows::Foundation::Collection::VectorChangedEventHandler\<T > ^ VectorChanged](http://go.microsoft.com/fwlink/p/?LinkId=262644)|Vector 變更時發生。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -397,6 +398,6 @@ Vector(std::initializer_list<T> il);
 
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)   
  [在 c + + 中建立 Windows 執行階段元件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)

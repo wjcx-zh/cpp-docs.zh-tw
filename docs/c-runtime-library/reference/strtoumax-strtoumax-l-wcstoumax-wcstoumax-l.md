@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - _wcstoumax_l
 - _tcstoumax_l
 - strtoumax
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strtoumax_l function
 - conversion functions
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - _wcstoumax_l function
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3519fa6a5f1decc4bad385d4204188585afa1630
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 16ac81afeec1fece3f6a5039835b9f950a8b6768
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax、_strtoumax_l、wcstoumax、_wcstoumax_l
 將字串轉換成最大的受支援不帶正負號整數類型的整數值。  
@@ -118,7 +102,7 @@ uintmax_t _wcstoumax_l(
 ## <a name="remarks"></a>備註  
  所有這些函式都會將輸入字串 `nptr` 轉換成 `uintmax_t` 整數值。  
   
- `strtoumax` 會在它無法辨識為數字一部分的第一個字元處停止讀取字串 `nptr`。 這可能是終止的 Null 字元，或是它可能是第一個大於或等於 `base` 的數值字元。 地區設定的 `LC_NUMERIC` 類別設定會決定 `nptr` 中的基底字元辨識。 如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `strtoumax` 和 `wcstoumax` 使用目前的地區設定，`_strtoumax_l` 和 `_wcstoumax_l` 除了改用傳入的地區設定之外，其他相同。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `strtoumax` 會在它無法辨識為數字一部分的第一個字元處停止讀取字串 `nptr`。 這可能是終止的 Null 字元，或是它可能是第一個大於或等於 `base` 的數值字元。 地區設定的 `LC_NUMERIC` 類別設定會決定 `nptr` 中的基底字元辨識。 如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `strtoumax` 和 `wcstoumax` 使用目前的地區設定，`_strtoumax_l` 和 `_wcstoumax_l` 除了改用傳入的地區設定之外，其他相同。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `endptr` 不是 `NULL`，則停止掃描的字元指標會儲存在由 `endptr` 指向的位置。 如果不能執行任何轉換 (找不到任何有效的數字或指定了無效的基底)，則 `nptr` 的值會儲存在 `endptr` 所指的位置。  
   
@@ -139,19 +123,19 @@ uintmax_t _wcstoumax_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strtoumax`|\<stdlib.h>|  
 |`wcstoumax`|\<stdlib.h> 或 \<wchar.h>|  
 |`_strtoumax_l`|\<stdlib.h>|  
 |`_wcstoumax_l`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  請參閱 [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   

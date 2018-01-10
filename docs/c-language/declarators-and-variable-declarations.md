@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08165d5e6308697ec75a6d03751b26fb626dbb15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9b7ce4895d51c50185c5262664dc478af62cfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarators-and-variable-declarations"></a>宣告子和變數宣告
 本節其餘部分將說明在這份清單中摘要說明之變數類型宣告的形式和意義。 特別要提的是，其餘各節將說明如何宣告，如下所示：  
@@ -47,7 +48,7 @@ __declspec(thread) char *var;
   
  `char` 為類型指定名稱，`__declspec(thread)` 和 `*` 是修飾詞，而 `var` 為識別項的名稱。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  您可以使用宣告子來宣告值的陣列、值的指標，以及傳回指定類型值的函式。 宣告子會出現在陣列和指標宣告中，將於本節稍後說明。  
   
@@ -91,7 +92,7 @@ int *aptr[10] // Declares an array of 10 pointers
   
  Microsoft C 編譯器並不會限制可修改算術、結構或等位型別的宣告子數目。 這些數目只會受到可用記憶體的限制。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

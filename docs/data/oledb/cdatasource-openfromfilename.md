@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c807ead64a068a9797b49606d41d16664b6331e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f665f6bda3b7d220faebb76e3f6503d7c00f6029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatasourceopenfromfilename"></a>CDataSource::OpenFromFileName
 從以使用者提供的檔名指定的檔案，開啟資料來源。  
@@ -53,5 +56,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDataSource 類別](../../data/oledb/cdatasource-class.md)

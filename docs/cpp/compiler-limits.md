@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e64bedc169fb4737a7e16175099df5571df82ef2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf668ddfa1c2d7e62ca10963827056f9661b83f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-limits"></a>編譯器限制
 C++ 標準會建議各種語言的建構限制。 下列是 Visual C++ 編譯器未實作所建議之限制的案例。 第一個數字是 ISO C++ 11 標準 (INCITS/ISO/IEC 14882-2011[2012], Annex B) 所建立的限制，第二個數字是 Visual C++ 所實作的限制：  
@@ -41,5 +42,5 @@ C++ 標準會建議各種語言的建構限制。 下列是 Visual C++ 編譯器
   
 -   樣板引數的樣板宣告-c + + 標準： 1024，Visual c + + 編譯器： 2046年。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非標準行為](../cpp/nonstandard-behavior.md)

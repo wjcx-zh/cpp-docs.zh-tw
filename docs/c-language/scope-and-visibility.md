@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-and-visibility"></a>範圍和可視性
 識別項的「可視性」會判斷程式中可以參考的部分 (其「範圍」)。 識別項只有位在程式中其「範圍」所涵蓋的部分才顯示 (也就是可以使用)，該範圍可能限於該識別項出現的檔案、函式、區塊或函式原型 (依照由低到高增加的限制性)。 識別項的範圍是可以使用名稱的程式部分。 這個範圍有時稱為「語彙範圍」。 範圍可分為四種：函式、檔案、區塊和函式原型。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
  有關讓變數在其他原始程式檔中可見的適當宣告，將在[儲存類別](../c-language/c-storage-classes.md)中說明。 不過，在外部層級使用 **static** 儲存類別指定名稱宣告的變數和函式，只有在本身定義所在的原始程式碼內才可見。 所有其他函式都是全域可見。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

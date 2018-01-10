@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8149486e457feaafbf3b8553a560439ed4e6f277
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f86efb0a99343542d3b2fc1e70e565ed11161069
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="df"></a>DF
 配置並選擇性地為每個初始化 6 個位元組的儲存體`initializer`。 `DF`是的同義字[FWORD](../../assembler/masm/fword.md)。  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  也可以用為類型規範的類型是合法的任何位置。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)

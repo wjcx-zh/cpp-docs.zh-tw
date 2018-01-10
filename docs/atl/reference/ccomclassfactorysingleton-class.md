@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactorySingleton
 - ATLCOM/ATL::CComClassFactorySingleton::CreateInstance
 - ATLCOM/ATL::CComClassFactorySingleton::m_spObj
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactorySingleton class
+dev_langs: C++
+helpviewer_keywords: CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 55d8fb96dfce1b278763cc348c605f8e76b5f56f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 165bc85a0b00ac8186e5a145a75c4478335b5e0e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 類別
 此類別衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。  
@@ -62,7 +44,7 @@ class CComClassFactorySingleton : public CComClassFactory
   
  `CComClassFactorySingleton`衍生自[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)並用[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)來建構單一物件。 每次呼叫`CreateInstance`方法只會查詢此物件的介面指標。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -79,7 +61,7 @@ class CComClassFactorySingleton : public CComClassFactory
 ## <a name="remarks"></a>備註  
  ATL 物件通常由衍生自取得 class factory [CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要使用`CComClassFactorySingleton`，指定[DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)物件的類別定義中的巨集。 例如:   
   
- [!code-cpp[NVC_ATL_COM #10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `CComObjectRootBase`  
@@ -93,7 +75,7 @@ class CComClassFactorySingleton : public CComClassFactory
  `CComClassFactorySingleton`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="createinstance"></a>CComClassFactorySingleton::CreateInstance  
  呼叫`QueryInterface`透過[m_spObj](#m_spobj)擷取介面指標。  
@@ -127,11 +109,10 @@ CComPtr<IUnknown> m_spObj;
   
  請注意，目前的表單`m_spObj`呈現的方式是重大變更，`CComClassFactorySingleton`因此之前在舊版的 ATL 在舊版`CComClassFactorySingleton`做為 class factory，同時在伺服器初始化期間建立物件。 在 Visual c + +.NET 2003 中，建立物件延遲，第一次要求。 這項變更可能造成早期初始化所依賴的程式發生錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)   
  [CComClassFactory2 類別](../../atl/reference/ccomclassfactory2-class.md)   
  [CComClassFactoryAutoThread 類別](../../atl/reference/ccomclassfactoryautothread-class.md)   
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [類別概觀](../../atl/atl-class-overview.md)
-

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5b0811e88188bb29ef3153f739804cbdac66083
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99fc06e44f24b176482a6ff0b08ceed45b0f4f17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 結構
 此結構包含在 ATL 中的視窗化程式碼中的類別執行個體資料  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構](../../atl/reference/atl-structures.md)
 
 

@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 59e68b8f5c5b98c761bbccb46d09d79ba5e38163
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 381fbb4facf9c05a5167e855f039c627669e600f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data"></a>@data
 預設的資料群組的名稱。 以外的所有模型會評估為 DGROUP**一般**。 評估為**一般**下**一般**記憶體模型 （文字巨集）。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/24/2017
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [符號參考](../../assembler/masm/symbols-reference.md)

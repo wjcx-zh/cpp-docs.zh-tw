@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 500d647d11aad5db2f3b7ce06345a4ad608ac352
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e969d2ef38ed9e3dbc989bb3117962abfd951821
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrtoperator-"></a>_bstr_t::operator !
 **Microsoft 特定的**  
@@ -40,7 +41,7 @@ bool operator!( ) const throw( );
 ## <a name="return-value"></a>傳回值  
  它會傳回**true**如果是， **false**如果不是。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

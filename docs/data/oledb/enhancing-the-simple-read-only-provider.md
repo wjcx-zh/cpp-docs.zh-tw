@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30b87ecae6f479c912c937fb2ce23e1f9dc98da3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ad1ccd39ff66e4c193364549f58c78c6b743af0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enhancing-the-simple-read-only-provider"></a>增強簡單唯讀提供者
 本節說明如何增強[簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)在上一節中建立。 `IRowsetLocateImpl`建立實作`IRowsetLocate`介面，並加入您的書籤支援。  
@@ -35,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [動態決定傳回給取用者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立簡單唯讀提供者](../../data/oledb/creating-a-simple-read-only-provider.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30c8d2c26893ddf101d7084a91215c7ed55bf48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4358dc54589971c559bec48adf77252d4f4cda28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-message-handler"></a>加入 ATL 訊息處理常式
 若要加入至控制項的訊息處理常式 （成員函式會處理 Windows 訊息），第一次在 類別檢視選取的控制項。 然後開啟**屬性**視窗中，選取**訊息**圖示，並按一下下拉箭號控制相反必要的訊息方塊中。 這會將訊息處理常式的宣告中控制項的標頭檔和控制項的.cpp 檔案中的處理常式的基本架構實作。 它也會新增訊息對應，並新增處理常式項目。  
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/24/2017
   
 -   新的訊息對應項目會加入到主訊息對應。 精靈無法辨識其他的訊息對應和鏈結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作視窗](../atl/implementing-a-window.md)
 

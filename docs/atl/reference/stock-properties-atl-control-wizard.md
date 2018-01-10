@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d878f0b0c30096e49a317956e083497b31ad2de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e85dee126440007ac07d724e5da7b8651a1e167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stock-properties-atl-control-wizard"></a>內建屬性, ATL 控制項精靈
 在精靈的此頁面會識別內建控制項支援的屬性。 根據預設，會識別沒有屬性。  
@@ -29,13 +30,13 @@ ms.lasthandoff: 10/24/2017
  **支援**  
  表示控制項目前支援的屬性。  
   
-|傳送按鈕|說明|  
+|傳送按鈕|描述|  
 |---------------------|-----------------|  
 |**>**|將加入至**支援**清單中目前選取的屬性名稱**不支援**清單。|  
 |**>>**|將加入至**支援**清單中可用的所有屬性名稱**不支援**都清單。|  
 |**<**|移除在目前選取的屬性名稱**支援**清單。|  
 |**<<**|移除所有列中的屬性名稱**支援**清單。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL 控制項精靈](../../atl/reference/atl-control-wizard.md)
 

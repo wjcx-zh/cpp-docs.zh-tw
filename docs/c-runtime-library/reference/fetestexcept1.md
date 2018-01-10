@@ -33,11 +33,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a2fa4448bc71fc8b01abffaa0655f63e6ef474a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78eb884950e2175815caf2ac645dc0e70c262566
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fetestexcept"></a>fetestexcept
 決定目前設定哪一個指定的浮點例外狀況狀態旗標。  
@@ -61,7 +62,7 @@ int fetestexcept(
 ## <a name="remarks"></a>備註  
  使用 fetestexcept 函式判斷浮點運算引發的例外狀況。 使用 `excepts` 參數指定要測試的例外狀況狀態旗標。 `fetestexcept` 函式會使用在 `excepts` 中以 \<fenv.h > 定義的這些例外狀況巨集並傳回值︰  
   
-|例外狀況巨集|說明|  
+|例外狀況巨集|描述|  
 |---------------------|-----------------|  
 |FE_DIVBYZERO|在稍早的浮點運算中發生的獨一性或極錯誤，已建立無限大值。|  
 |FE_INEXACT|函式已強制四捨五入稍早的浮點運算預存結果。|  
@@ -76,13 +77,13 @@ int fetestexcept(
   
 ## <a name="requirements"></a>需求  
   
-|函式|C 標頭|C++ 標頭|  
+|功能|C 標頭|C++ 標頭|  
 |--------------|--------------|------------------|  
 |`fetestexcept`|\<fenv.h>|\<cfenv>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [feclearexcept](../../c-runtime-library/reference/feclearexcept1.md)   
  [feraiseexcept](../../c-runtime-library/reference/feraiseexcept.md)

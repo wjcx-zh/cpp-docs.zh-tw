@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 01d200e716ce4291350584ac7e2f388cca30cedf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e96e9a692622d17c24d4d73b7249f70a1593bf61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-validation"></a>參數驗證
 大部分的安全性增強 CRT 函式和許多預先存在的函式都會驗證其參數。 這可能包括檢查 NULL 指標、檢查落在有效範圍的整數，或檢查列舉值是否有效。 找到無效的參數時，就會執行無效的參數處理常式。  
@@ -32,6 +33,6 @@ ms.lasthandoff: 10/24/2017
   
  使用函式 [_set_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 或 [_set_thread_local_invalid_parameter_handler](../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) 將無效的參數處理常式設成您自己的函式，可以變更此行為。 如果您指定的函式不終止應用程式，控制權就會回到接收了無效參數的函式。 在 CRT 中，這些函式通常會停止執行函數，將 `errno` 設為錯誤碼，並傳回錯誤碼。 在許多情況下，`errno` 值和傳回值都是指出無效參數的 `EINVAL`。 在某些情況下，會傳回更具體的錯誤碼，例如不正確檔案指標的 `EBADF` 傳入為參數。 如需 `errno` 的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 的安全性功能](../c-runtime-library/security-features-in-the-crt.md)   
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

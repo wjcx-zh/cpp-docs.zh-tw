@@ -1,34 +1,36 @@
 ---
-title: "如何：擷取檔案資訊 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FileInfo 類別"
-  - "檔案 [C++], 擷取相關資訊"
+title: "如何： 擷取檔案資訊 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], retrieving information about
+- FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0536366e445995d6c4e77d58eb0a48e08207f263
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：擷取檔案資訊 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會示範使用 <xref:System.IO.FileInfo> 類別。  當您知道檔案名稱時，您可以使用這個類別擷取檔案的資訊，例如檔案大小、目錄、完整名稱以及建立和上次修改的日期和時間。  
+# <a name="how-to-retrieve-file-information-ccli"></a>如何：擷取檔案資訊 (C++/CLI)
+下列程式碼範例示範<xref:System.IO.FileInfo>類別。 當您擁有的檔案名稱時，您可以使用這個類別來擷取檔案如下的檔案大小、 目錄、 完整名稱，以及日期和時間相關的資訊建立和上次修改。  
   
- 這個程式碼會擷取 Notepad.exe 的檔案資訊。  
+ 此程式碼會擷取為 Notepad.exe 的檔案資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // file_info.cpp  
@@ -63,6 +65,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [檔案和資料流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [檔案和資料流 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

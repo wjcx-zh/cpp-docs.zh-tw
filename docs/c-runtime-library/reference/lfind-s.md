@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _lfind_s
+apiname: _lfind_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - lfind_s
 - _lfind_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - linear searching
 - keys, finding in arrays
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c50893f1dc73db9f928eaea346a381d1bd991d2f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 執行所指定索引鍵的線性搜尋。 這是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強的 [_lfind](../../c-runtime-library/reference/lfind.md) 版本。  
@@ -105,10 +88,10 @@ void *_lfind_s(
   
 |key|base|compare|num|大小|errno|  
 |---------|----------|-------------|---------|----------|-----------|  
-|`NULL`|任何|任何|任何|任何|`EINVAL`|  
-|任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
-|任何|任何|任何|any|零|`EINVAL`|  
-|any|任何|`NULL`|an|任何|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|零|`EINVAL`|  
+|any|any|`NULL`|an|任何|`EINVAL`|  
   
 ## <a name="remarks"></a>備註  
  `_lfind_s` 函式會在 `num` 個元素的陣列中執行線性搜尋，尋找 `key` 值，每個元素 `width` 個位元組。 不同於 `bsearch_s`，`_lfind_s` 不需要排序陣列。 `base` 引數是要搜尋之陣列基底的指標。 `compare` 引數是使用者所提供之常式的指標，該常式比較兩個陣列元素，然後傳回一個指定其關聯性的值。 `_lfind_s` 在搜尋時會呼叫 `compare` 常式一或多次，每次呼叫會將 `context` 指標傳遞至兩個陣列元素。 `compare` 常式必須比較項目，然後傳回非零 (表示項目不同) 或 0 (表示項目完全相同)。  
@@ -117,11 +100,11 @@ void *_lfind_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_lfind_s`|\<search.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -203,7 +186,7 @@ int main( )
 weit found  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
  [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   

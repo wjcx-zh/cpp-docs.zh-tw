@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6fdf94140b321e86df4ee25a92a2f8fc4693880
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 827d489f01187a75c822314ef79c3b77d63178b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utility-classes"></a>公用程式類別
 提供下列獨立於 MFC 的公用程式類別：  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [_U_RECT](../atl/reference/u-rect-class.md)引數配接器類別，可讓 `RECT`指標或參考傳遞至函式指標來實作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

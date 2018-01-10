@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 854f15dcc597f2fc6e32f8385c1e9d27cfb37362
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f2b3f46a463eed0d330f7e22975197f76c900b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="anonymous-class-types"></a>匿名類別類型
 您可以為匿名類別 — 也就是它們可以宣告不*識別碼*。 這種用法在您將類別名稱取代為 `typedef` 名稱時很實用，如下所示：  
@@ -100,5 +101,5 @@ int main()
 //Output: 1234567  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   

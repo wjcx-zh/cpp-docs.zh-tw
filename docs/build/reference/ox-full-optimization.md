@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 30794416ea166f6e41d8c0de81ef7812c7b71c31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85efa8a2beab34d0dcf1bdb74e3cf89008b10d6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox （讓大部分的速度最佳化）
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/24/2017
 
 - 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [/O 選項 （最佳化程式碼）](../../build/reference/o-options-optimize-code.md)  
 [編譯器選項](../../build/reference/compiler-options.md)  

@@ -1,46 +1,49 @@
 ---
-title: "選取和操作資料錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ODBC 資料錄集, 選取資料錄"
-  - "資料錄選取, MFC ODBC 類別"
-  - "資料錄, 選取"
+title: "選取和操作資料錄 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, selecting
+- record selection, MFC ODBC classes
+- ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dec5e0094405cf9d038e53959da97ba079736505
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 選取和操作資料錄
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-通常在使用 SQL **SELECT** 陳述式選取資料來源中的資料錄時，會取得結果集 \(Result Set\)，這是一個資料表或是查詢的資料錄集。  在資料庫類別中，您可以使用資料錄集物件選取或存取該結果集。  這是一個衍生自 [CRecordset](../../mfc/reference/crecordset-class.md) 類別的應用程式特定類別的物件。  您可以在定義資料錄集類別時，指定將與該類別關聯的資料來源、要使用的資料表，和資料表的資料行。  MFC 應用程式精靈或是 \[加入類別\] \(詳述於[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)\) 會以特定資料來源連接建立一個類別。  精靈會撰寫 `CRecordset` 類別的 [GetDefaultSQL](../Topic/CRecordset::GetDefaultSQL.md) 成員函式來傳回資料表名稱。  如需使用精靈建立資料錄集類別的詳細資訊，請參閱 [MFC 應用程式精靈、資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)和[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。  
+# <a name="selecting-and-manipulating-records"></a>選取和操作資料錄
+通常當您選取的記錄從資料來源，使用 SQL**選取**陳述式中，您取得結果集，也就是一組從資料表或查詢記錄。 資料庫類別中，您可以使用資料錄集物件選取，然後存取該結果集。 這是衍生自類別的特定應用程式類別的物件[CRecordset](../../mfc/reference/crecordset-class.md)。 當您定義的資料錄集類別時，您可以指定要將它與相關聯的資料來源、 使用，資料表和資料表的資料行。 MFC 應用程式精靈或**加入類別**(中所述[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 與特定資料來源的連接，建立一個類別。 精靈寫入[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)類別成員函式`CRecordset`傳回資料表的名稱。 如需有關如何使用精靈來建立資料錄集類別的詳細資訊，請參閱[MFC 應用程式精靈、 資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)和[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。  
   
- 在 Run Time 使用一個 [CRecordset](../../mfc/reference/crecordset-class.md) 物件，您可以：  
+ 使用[CRecordset](../../mfc/reference/crecordset-class.md)物件在執行階段，您可以：  
   
--   檢查目前資料錄的資料欄位  
+-   檢查目前的資料錄的資料欄位。  
   
--   篩選或是排序資料錄集  
+-   篩選或排序資料錄集。  
   
--   自訂預設的 SQL **SELECT** 陳述式  
+-   自訂預設 SQL**選取**陳述式。  
   
--   在選取的資料錄中捲動  
+-   捲動以選取的記錄。  
   
--   加入、更新或是刪除資料錄 \(若資料來源和資料錄集都是可更新的\)  
+-   加入、 更新或刪除資料錄 （如果資料來源和資料錄集是可更新）。  
   
--   測試資料錄集是否允許重新查詢，並重新整理資料錄集的內容  
+-   測試是否資料錄集可讓重新查詢並重新整理資料錄集的內容。  
   
- 結束使用資料錄集物件時，請將其關閉並終止。  如需資料錄集的詳細資訊，請參閱[資料錄集 \(ODBC\)](../../data/odbc/recordset-odbc.md) 文件。  
+ 當您完成使用資料錄集物件時，您可以關閉並終結。 如需有關資料錄集的詳細資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

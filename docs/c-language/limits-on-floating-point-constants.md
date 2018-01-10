@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ba0314abe9d70f25dc458abdbbf41f798fff263
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 715f337a4c94e65641660b4becbb33d6a151d9ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="limits-on-floating-point-constants"></a>浮點常數的限制
 **Microsoft 特定的**  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  請注意，上表中的資訊在未來實作中可能有所不同。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 浮點常數](../c-language/c-floating-point-constants.md)

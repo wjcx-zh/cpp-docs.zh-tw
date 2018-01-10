@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 28e6d025d6c2aa485b5687117d64afeb7e402a79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: eebbc955a0b44b686986e5bd1e753ec8809a3a1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>如何：呼叫 Windows Form 控制項的屬性和方法
 因為[CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol)將指標傳回至<xref:System.Windows.Forms.Control?displayProperty=fullName>，而非指標和`WindowsControlLibrary1::UserControl1`，建議您在加入使用者控制項類型的成員，並將它在初始化[IView::OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate). 現在您可以呼叫方法和屬性使用`m_ViewControl`。  
@@ -57,5 +60,5 @@ ms.lasthandoff: 10/24/2017
   
      請注意，文字方塊現在已初始化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將 Windows Form 使用者控制項裝載為 MFC 檢視](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

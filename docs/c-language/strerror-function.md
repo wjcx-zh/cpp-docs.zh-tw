@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3eaa12e4e97e72c167231c93951e0bf2ad2e36f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 117b6301eee9026f5987b4c182a63265ae78b151
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerror-function"></a>strerror 函式
 **ANSI 4.11.6.2** `strerror` 函式傳回的錯誤訊息字串內容  
@@ -65,5 +66,5 @@ ms.lasthandoff: 10/24/2017
 36  Resource deadlock would occur  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式庫函式](../c-language/library-functions.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a634d748a0960e0eda56f89bcca66463780f08f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf86c854345244eafff80392cdc575d026c61ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-management"></a>時間管理
 您可以使用這些函式取得目前的時間，以及在必要時轉換、調整及儲存該時間。 目前的時間為系統時間。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="time-routines"></a>時間常式  
   
-|函式|用法|  
+|功能|使用|  
 |--------------|---------|  
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|將時間從類型 `struct tm` 轉換為字元字串 這些具有 `_s` 尾碼的函式版本比較安全。|  
 |[時鐘](../c-runtime-library/reference/clock.md)|傳回處理序的耗用時鐘時間。|  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  在 Visual C++ 2005 之前的 Visual C++ 與 Microsoft C/C++ 版本中，`time_t` 是 `long int` (32 位元)，所以自 2038 年 1 月 19 日 3:14:07 UTC 之後便無法使用。 現在 `time_t` 預設等同於 `__time64_t`，但定義 `_USE_32BIT_TIME_T` 會將 `time_t` 變更為 `__time32_t` 並強制許多時間函式呼叫接受 32 位元 `time_t` 的版本。 如需詳細資訊，請參閱[標準類型](../c-runtime-library/standard-types.md)與個別時間函式文件中的註解。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

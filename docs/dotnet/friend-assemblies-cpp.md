@@ -14,11 +14,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 42ccf247d88efc6e0e9378ee52a4749ddc3c2b6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6646306092844f11819b81ee076c54db840c618b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="friend-assemblies-c"></a>Friend 組件 (C++)
 適用於執行階段，如*friend 組件*語言功能可讓位於命名空間範圍或全域範圍中的一個或多個用戶端組件或.netmodule 可以存取的組件元件的類型。  
@@ -186,5 +189,5 @@ int main() {
 Class1::Test_Public  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

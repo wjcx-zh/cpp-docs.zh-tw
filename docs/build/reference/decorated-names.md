@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1db1d851e72bcce893f5e49b83b95ebf3366f15a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2ad7fc8e6d9b7fa261d7811086ef02738c77e49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decorated-names"></a>裝飾名稱
 C 和 C++ 程式中的函式、資料和物件在內部以其裝飾名稱表示。 A*裝飾名稱*為編譯器所編譯的物件、 資料或函式定義期間建立編碼的字串。 它會記錄呼叫慣例、類型、函式參數和其他資訊，並連同名稱一起記錄。 此名稱裝飾，也稱為*名稱修飾 （name-mangling)*、 協助連結器尋找正確的函式和物件時可執行檔。  
@@ -108,6 +109,6 @@ Undecoration of :- "?func1@a@@AAEXH@Z"
 is :- "private: void __thiscall a::func1(int)"  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C/c + + 建置工具](../../build/reference/c-cpp-build-tools.md)   
  [使用 extern 指定連結](../../cpp/using-extern-to-specify-linkage.md)

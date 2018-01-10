@@ -1,60 +1,59 @@
 ---
-title: "/Fi (前置處理輸出檔名稱) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/Fi"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Fi 編譯器選項 (C++)"
-  - "Fi 編譯器選項 (C++)"
-  - "-Fi 編譯器選項 (C++)"
-  - "前置處理輸出檔, 檔案名稱"
+title: "-Fi （前置處理輸出檔名稱） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /Fi
+dev_langs: C++
+helpviewer_keywords:
+- Fi compiler option (C++)
+- -Fi compiler option (C++)
+- /Fi compiler option (C++)
+- preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9bc3076a529984358aed16902f509ceb01423f9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /Fi (前置處理輸出檔名稱)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定輸出檔的名稱，[\/P \(前置處理至檔案\)](../../build/reference/p-preprocess-to-a-file.md) 編譯器選項會將前置處理的輸出寫入該檔案。  
+# <a name="fi-preprocess-output-file-name"></a>/Fi (前置處理輸出檔名稱)
+指定輸出檔名稱[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)編譯器選項會將前置處理過的輸出。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /Fipathname  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
   
-|參數|說明|  
-|--------|--------|  
-|`pathname`|**\/P** 編譯器選項產生的輸出檔名稱和路徑。|  
+|參數|描述|  
+|---------------|-----------------|  
+|`pathname`|所產生的輸出檔案的路徑與名稱**/P**編譯器選項。|  
   
-## 備註  
- 使用 **\/Fi** 編譯器選項搭配 **\/P** 編譯器選項。  
+## <a name="remarks"></a>備註  
+ 使用**/Fi**編譯器選項搭配**/P**編譯器選項。  
   
- 如果您只指定 `pathname` 參數的路徑，會使用原始程式檔的主檔名做為前置處理過之輸出檔的主檔名。  `pathname` 參數並不需要特定的副檔名。  不過，如果沒有指定檔案副檔名，則會使用副檔名 ".i"。  
+ 如果您指定的路徑`pathname`參數時，原始程式檔的基底名稱作為前置處理過的輸出檔的基底名稱。 `pathname`參數不需要特定的副檔名。 不過，如果您未指定檔案的副檔名，會使用".i 」 的延伸模組。  
   
-## 範例  
- 下列命令列會前置處理 PROGRAM.cpp、保留註解、加入 [\#line](../../preprocessor/hash-line-directive-c-cpp.md) 指示詞，並將結果寫入至 MYPROCESS.i 檔案。  
+## <a name="example"></a>範例  
+ 下列命令列會前置處理 PROGRAM.cpp，保留註解，新增[#line](../../preprocessor/hash-line-directive-c-cpp.md)指示詞，並將結果寫入至 MYPROCESS.i 檔案。  
   
 ```  
 CL /P /FiMYPROCESS.I PROGRAM.CPP  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
- [\/P \(前置處理至檔案\)](../../build/reference/p-preprocess-to-a-file.md)   
+ [/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)   
  [指定路徑名稱](../../build/reference/specifying-the-pathname.md)

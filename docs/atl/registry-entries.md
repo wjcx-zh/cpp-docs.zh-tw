@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 013a5827af630e8190e622940c1fd3872a46a5d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: faef0ca0c1c9c4c2986a039b8b1a26517641acd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries"></a>登錄項目
 DCOM 導入的應用程式識別碼 (Appid)，群組的一或多個 DCOM 物件在登錄中的集中式位置的組態選項的概念。 您可以在名為物件的 CLSID 下值的 AppID 中其值，指出指定 AppID。  
@@ -33,6 +34,6 @@ DCOM 導入的應用程式識別碼 (Appid)，群組的一或多個 DCOM 物件�
   
  任何 DCOM 服務也需要建立另一個索引鍵下的`HKEY_CLASSES_ROOT\AppID`。 這個索引鍵是等於的可執行檔的名稱，做為交互參照，因為它包含 AppID 值，指出 AppID 項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [服務](../atl/atl-services.md)
 

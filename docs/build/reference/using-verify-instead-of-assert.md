@@ -1,43 +1,43 @@
 ---
-title: "使用 VERIFY 取代 ASSERT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "assert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ASSERT 陳述式"
-  - "判斷提示, 偵錯"
-  - "判斷提示, 疑難排解 ASSERT 陳述式"
-  - "偵錯 [MFC], ASSERT 陳述式"
-  - "偵錯判斷提示"
-  - "VERIFY 巨集"
+title: "使用 VERIFY 取代 ASSERT |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: assert
+dev_langs: C++
+helpviewer_keywords:
+- ASSERT statements
+- debugging [MFC], ASSERT statements
+- VERIFY macro
+- assertions, troubleshooting ASSERT statements
+- debugging assertions
+- assertions, debugging
 ms.assetid: 4c46397b-3fb1-49c1-a09b-41a72fae3797
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffe046a281bbbbefc251b48df55ecd275515e60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 使用 VERIFY 取代 ASSERT
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-假設當您執行 MFC 應用程式的偵錯版本時沒有任何問題。  然而，同一個應用程式的發行組建卻損毀、傳回不正確的結果，和 \(或\) 出現其他某些不正常的行為。  
+# <a name="using-verify-instead-of-assert"></a>使用 VERIFY 取代 ASSERT
+假設，當您執行 MFC 應用程式的偵錯版本，不會發生問題。 不過，相同的應用程式的發行版本發生當機、 傳回不正確的結果，及/或展示其他異常的行為。  
   
- 這個問題可能是因為您將重要的程式碼置於 ASSERT 陳述式中以驗證是否正確執行而導致的。  由於在 MFC 程式的發行組建中將 ASSERT 陳述式設成註解，因此該程式碼在發行的組建中無法執行。  
+ 當您將重要的程式碼放在 ASSERT 陳述式來確認正確執行，可能被造成這個問題。 ASSERT 陳述式標記為註解中的 MFC 程式的發行組建，因為程式碼不會在發行組建中執行。  
   
- 如果您要使用 ASSERT 確認函式呼叫 \(Function Call\) 是否成功，請考慮改用 [VERIFY](../Topic/VERIFY.md)。  VERIFY 巨集會在應用程式的偵錯版和發行的組建中都評估其自己的引數。  
+ 如果您使用判斷提示來確認函式呼叫成功，請考慮使用[確認](../../mfc/reference/diagnostic-services.md#verify)改為。 VERIFY 巨集評估自己的引數，在這兩個偵錯和發行組建的應用程式。  
   
- 另一個建議的方法是，將函式的傳回值指派為暫存變數，然後測試 ASSERT 陳述式中的變數。  
+ 另一個建議方法是將函式的傳回值指派給暫存變數，然後在 ASSERT 陳述式中測試變數中。  
   
- 檢查下列程式碼片段：  
+ 檢查有下列的程式碼片段：  
   
 ```  
 enum {  
@@ -49,15 +49,15 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
- 這組程式碼在 MFC 應用程式的偵錯版中執行無誤。  如果呼叫 `calloc( )` 失敗，包含檔案和行號的診斷訊息便會出現。  不過，在 MFC 應用程式的零售版中：  
+ 此程式碼偵錯版本的 MFC 應用程式中執行無誤。 如果呼叫`calloc( )`失敗，會顯示包含的檔案和行號的診斷訊息。 不過，在 MFC 應用程式的零售組建中：  
   
--   從未呼叫 `calloc( )`、保持 `buf` 未初始化，或  
+-   若要呼叫`calloc( )`絕不會發生，離開`buf`未初始化，或  
   
--   `strcpy_s( )`將 "`Hello, World`"  複製到記憶體的隨機區段，可能會損毀應用程式或導致系統停止回應，或  
+-   `strcpy_s( )`複製"`Hello, World`"編入隨機的記憶體，可能會使應用程式或造成系統停止回應，或  
   
--   `free()` 會嘗試釋放從未配置的記憶體。  
+-   `free()`嘗試釋放記憶體永遠不會取消配置。  
   
- 若要正確使用 ASSERT，程式碼範例應改成如下所示：  
+ 正確使用判斷提示，您應該變更程式碼範例，以下列：  
   
 ```  
 enum {  
@@ -70,7 +70,7 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
- 或者，您可改用 VERIFY：  
+ 或者，您可以改為使用驗證：  
   
 ```  
 enum {  
@@ -82,5 +82,5 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [解決發行組建的問題](../../build/reference/fixing-release-build-problems.md)

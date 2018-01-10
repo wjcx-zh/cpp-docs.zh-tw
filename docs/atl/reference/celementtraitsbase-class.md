@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0201ecd971b13b69e210b356ba9192bfdc89a54
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9bbea69d2265563a0da4fda8b45cc09234a7789
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="celementtraitsbase-class"></a>CElementTraitsBase 類別
 這個類別會提供預設複製並移動的集合類別的方法。  
@@ -41,18 +42,18 @@ class CElementTraitsBase
  `T`  
  若要儲存在集合中的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CElementTraitsBase::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
 |[CElementTraitsBase::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CElementTraitsBase::CopyElements](#copyelements)|呼叫此方法以複製項目儲存在集合類別物件。|  
 |[CElementTraitsBase::RelocateElements](#relocateelements)|呼叫這個方法，即可重新定位項目儲存在集合類別物件。|  
@@ -125,5 +126,5 @@ static void RelocateElements(
 ### <a name="remarks"></a>備註  
  這個方法會呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大多數的資料類型。 如果要移動的物件包含它們自己的成員的指標，必須覆寫這個方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

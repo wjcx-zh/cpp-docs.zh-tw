@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8ba8cafde365ceb31af144ac40af1daa1e1f90b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa5933c9c676b76ebe342ffa848e7b40926da08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-error-messages"></a>ML 錯誤訊息
 MASM 元件所產生的錯誤訊息可分成三個類別：  
@@ -45,7 +46,7 @@ Utility: Filename (Line) : [Error_type} (Code): Message_text
  *檔名*  
  包含產生錯誤的條件的檔案。  
   
- *線條*  
+ *程式碼*  
  錯誤狀況存在的大約行。  
   
  *Error_type*  
@@ -57,5 +58,5 @@ Utility: Filename (Line) : [Error_type} (Code): Message_text
  `Message_text`  
  短期與一般錯誤條件的描述。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft 巨集組譯工具參考](../../assembler/masm/microsoft-macro-assembler-reference.md)

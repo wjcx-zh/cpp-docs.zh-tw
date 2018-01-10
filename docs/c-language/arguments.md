@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b043dab2232e9cdfb0eb9fa90a59dab267b4e1af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54819766da9ebd002fa4990ca0b9650626b89015
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments"></a>引數
 函式呼叫中的引數具有以下格式：  
@@ -90,5 +91,5 @@ swap( &x, &y )
   
  由於 `swap` 原型包含每個參數的引數類型，因此編譯器會對 `swap` 的引數執行類型檢查。 原型和定義括號的內容識別項可能相同或不同。 引數類型與原型和定義中的參數清單都相符是很重要的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式呼叫](../c-language/function-calls.md)

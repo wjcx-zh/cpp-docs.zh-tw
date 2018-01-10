@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09873f44fbf37650e8747afd3fc19aba81603dc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a9cda26f310ec110c452394e960d3fb81d1f3e8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (程式資料庫檔名)
 指定建立程式資料庫 (PDB) 檔案的檔名[/Z7、 /Zi、 /ZI （偵錯資訊格式）](../../build/reference/z7-zi-zi-debug-information-format.md)。  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/24/2017
 CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸出檔 (/ F) 選項](../../build/reference/output-file-f-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   

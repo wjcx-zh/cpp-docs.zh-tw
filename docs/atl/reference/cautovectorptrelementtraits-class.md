@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59aaaa19d696099c45d4b25f4c41f1cedf97a255
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e69be3fa7136b0d411b92299d99d877710d5f118
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptrelementtraits-class"></a>CAutoVectorPtrElementTraits 類別
 這個類別會提供方法、 靜態函式和建立使用新的向量的智慧型指標的集合和 delete 運算子時非常實用的 typedef。  
@@ -43,11 +44,11 @@ class CAutoVectorPtrElementTraits :
  `T`  
  指標類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
 |[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
@@ -83,7 +84,7 @@ typedef CAutoVectorPtr<T>& INARGTYPE;
 typedef T*& OUTARGTYPE;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
  [CAutoVectorPtr 類別](../../atl/reference/cautovectorptr-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

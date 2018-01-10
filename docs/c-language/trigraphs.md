@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a480a38411536266c8cd4c23f8b29190550d3444
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d96088102cafe1b3bbdb7222cec33fc313774f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trigraphs"></a>三併詞
 來源字元集 C 原始程式內含在 7 位元的 ASCII 字元集中，但是它是 ISO 646-1983 Invariant Code Set 的超集。 三併詞序列允許 C 程式只使用 ISO (國際標準組織) Invariant Code Set 撰寫。 三併詞是三個字元的序列 (由兩個連續的問號引入)，編譯器會以其對應的標點符號字元取代該序列。 如果 C 原始程式檔所用的字元集不含某些標點符號字元的方便圖形表示，您可改為使用三併詞。  
@@ -71,6 +72,6 @@ printf( "What?\?!\n" );
   
  在這個 `printf` 陳述式中，第二個問號前面的反斜線逸出字元會使 `??!` 不會誤譯為三併詞。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/Zc:trigraphs (三併詞替代)](../build/reference/zc-trigraphs-trigraphs-substitution.md)   
  [C 識別項](../c-language/c-identifiers.md)

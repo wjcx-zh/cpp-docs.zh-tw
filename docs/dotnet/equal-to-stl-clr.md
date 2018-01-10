@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 264236c68e7d6f83f569692893c378c6d8fc441a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 824fe03c771e0da40f9a587ad076df03604fd53c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="equalto-stlclr"></a>equal_to (STL/CLR)
 此範本類別描述函式，呼叫時，則傳回 true 只有第一個引數是等於第二個。 您可以使用它指定其引數類型方面的函式物件。  
@@ -125,5 +128,5 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [not_equal_to (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)

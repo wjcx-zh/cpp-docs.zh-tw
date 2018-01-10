@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 014de597ffbc9a7004f821393902ffe05ac1f278
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 577b4874dd6d89c0c6c60b1a7981e74944e77ba8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 **Microsoft 特定的**  
@@ -45,7 +46,7 @@ VARIANT Detach( );
 ## <a name="remarks"></a>備註  
  擷取並傳回封裝**VARIANT**，然後清除這個`_variant_t`物件而不將其終結。 此成員函式會移除**VARIANT**來自封裝 （encapsulation） 和集合**VARTYPE**這個`_variant_t`物件`VT_EMPTY`。 您要釋放傳回**VARIANT**藉由呼叫[Vvalue](http://msdn.microsoft.com/en-us/28741d81-8404-4f85-95d3-5c209ec13835)函式。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_variant_t 類別](../cpp/variant-t-class.md)

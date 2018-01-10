@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe8d93d39d298b65b61218356f70bc65b82810bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 309d32e5cd92d37942f4267bbd7c7cc5a1bf1805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>資料錄集：宣告資料表的類別 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
 -   包含預先定義查詢的結果。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
  [資料錄集： 宣告預先定義的查詢 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   

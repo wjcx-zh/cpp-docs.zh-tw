@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cc639aa3c43fddbb371b6f4fe365695a87ce381b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9393974bc323ebb2f5b03bbac18f3c3cc3323d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wordsize"></a>@WordSize
 兩個 16 位元區段或四個 32 位元區段 （等同的數字）。  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/24/2017
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [符號參考](../../assembler/masm/symbols-reference.md)

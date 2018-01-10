@@ -4,52 +4,43 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atldef/ATL::_ATLCATCH
+- atldef/ATL::_ATLCATCHALL
+- atldef/ATL::_ATLTRY
+dev_langs: C++
 helpviewer_keywords:
 - exception handling, macros
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9d99551d8dbe116c9f4fafeb9602e471839003a7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 424a65c44d7bb22d1fef6e21e1892967ecd3e9b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-macros"></a>例外狀況處理巨集
 這些巨集提供例外狀況處理的支援。  
   
 |||  
 |-|-|  
-|[_ATLCATCH](#_atlcatch)|處理相關聯中發生之錯誤的陳述式`_ATLTRY`。|  
-|[_ATLCATCHALL](#_atlcatchall)|處理相關聯中發生之錯誤的陳述式`_ATLTRY`。|  
-|[_ATLTRY](#_atltry)|標記受保護的程式碼區段，其中可能會發生錯誤。|  
+|[_ATLCATCH](#_atlcatch)|陳述式來處理發生在相關聯的錯誤`_ATLTRY`。|  
+|[_ATLCATCHALL](#_atlcatchall)|陳述式來處理發生在相關聯的錯誤`_ATLTRY`。|  
+|[_ATLTRY](#_atltry)|標記可能發生的錯誤可能的防護程式碼區段。|  
   
+## <a name="requirements"></a>需求：
+**標頭：** atldef.h
+
 ##  <a name="_atlcatch"></a>_ATLCATCH  
- 處理相關聯中發生之錯誤的陳述式`_ATLTRY`。  
+ 陳述式來處理發生在相關聯的錯誤`_ATLTRY`。  
   
 ```
 _ATLCATCH(e)
@@ -60,10 +51,10 @@ _ATLCATCH(e)
  若要攔截例外狀況。  
   
 ### <a name="remarks"></a>備註  
- 搭配`_ATLTRY`。 解析成 c + +[攔截 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)處理 c + + 例外狀況的指定型別。  
+ 搭配`_ATLTRY`。 解析成 c + + [catch (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)處理針對給定的 c + + 例外狀況類型。  
   
 ##  <a name="_atlcatchall"></a>_ATLCATCHALL  
- 處理相關聯中發生之錯誤的陳述式`_ATLTRY`。  
+ 陳述式來處理發生在相關聯的錯誤`_ATLTRY`。  
   
 ```
 _ATLCATCHALL
@@ -73,15 +64,14 @@ _ATLCATCHALL
  搭配`_ATLTRY`。 解析成 c + + [catch](../../cpp/try-throw-and-catch-statements-cpp.md)處理所有類型的 c + + 例外狀況。  
   
 ##  <a name="_atltry"></a>_ATLTRY  
- 標記受保護的程式碼區段，其中可能會發生錯誤。  
+ 標記可能發生的錯誤可能的防護程式碼區段。  
   
 ```
 _ATLTRY
 ```  
   
 ### <a name="remarks"></a>備註  
- 搭配[_ATLCATCH](#_atlcatch)或[_ATLCATCHALL](#_atlcatchall)。 C + + 符號解析[嘗試](../../cpp/try-throw-and-catch-statements-cpp.md)。  
+ 搭配[_ATLCATCH](#_atlcatch)或[_ATLCATCHALL](#_atlcatchall)。 C + + 符號會解析[再試一次](../../cpp/try-throw-and-catch-statements-cpp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集](../../atl/reference/atl-macros.md)
-

@@ -40,17 +40,18 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d391e24a5b14bd015b43f88b2a687011d84d35fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b714d1643ae929245f93f770fe67a87b0c75b54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getenvs-wgetenvs"></a>getenv_s、_wgetenv_s
 從目前的環境取得值。 這些版本的 [getenv、_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md) 具有安全性增強功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -89,7 +90,8 @@ errno_t _wgetenv_s(
  要儲存環境變數值的緩衝區。  
   
  `numberOfElements`  
- `buffer` 的大小。  
+ 
+          `buffer` 的大小。  
   
  `varname`  
  環境變數名稱。  
@@ -101,9 +103,9 @@ errno_t _wgetenv_s(
   
 |`pReturnValue`|`buffer`|`numberOfElements`|`varname`|傳回值|  
 |--------------------|--------------|------------------------|---------------|------------------|  
-|`NULL`|任何|任何|任何|`EINVAL`|  
-|任何|`NULL`|>0|任何|`EINVAL`|  
-|任何|任何|任何|`NULL`|`EINVAL`|  
+|`NULL`|any|any|any|`EINVAL`|  
+|any|`NULL`|>0|any|`EINVAL`|  
+|any|any|any|`NULL`|`EINVAL`|  
   
  任一此種錯誤狀況都會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，函式會將 `errno` 設定為 `EINVAL` 並傳回 `EINVAL`。  
   
@@ -138,12 +140,12 @@ errno_t _wgetenv_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`getenv_s`|\<stdlib.h>|  
 |`_wgetenv_s`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -208,8 +210,8 @@ Original LIB variable is: c:\vctools\lib;c:\vctools\atlmfc\lib;c:\vctools\Platfo
 New LIB variable is: c:\mylib;c:\yourlib  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>請參閱  
+ [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [環境常數](../../c-runtime-library/environmental-constants.md)   
  [_putenv、_wputenv](../../c-runtime-library/reference/putenv-wputenv.md)   
  [_dupenv_s、_wdupenv_s](../../c-runtime-library/reference/dupenv-s-wdupenv-s.md)

@@ -1,34 +1,35 @@
 ---
-title: "使用 __declspec(dllimport) 匯入至應用程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__declspec"
-  - "dllimport"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec(dllimport) 關鍵字 [C++]"
-  - "匯入 DLL [C++], __declspec(dllimport)"
+title: "將應用程式使用 __declspec （dllimport） 匯入 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __declspec
+- dllimport
+dev_langs: C++
+helpviewer_keywords:
+- __declspec(dllimport) keyword [C++]
+- importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9766c6088e3f99711b936b10db0443da49b52c6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 使用 __declspec(dllimport) 匯入至應用程式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用 DLL 定義的公用符號之程式可以匯入這些符號。  在建立使用您的 DLL 所建置的應用程式標頭檔時，請在公用符號的宣告上使用 **\_\_declspec\(dllimport\)**。  無論您是使用 .def 檔或 **\_\_declspec\(dllexport\)** 關鍵字來匯出，關鍵字 **\_\_declspec\(dllimport\)** 都可以使用。  
+# <a name="importing-into-an-application-using-declspecdllimport"></a>使用 __declspec(dllimport) 匯入至應用程式
+使用公用符號的 DLL 所定義的程式，即稱為匯入它們。 當您建立標頭檔，用於您的 Dll，建立應用程式使用**__declspec （dllimport)**公用符號的宣告。 關鍵字**__declspec （dllimport)**不論您匯出.def 檔案，或與運作方式都**__declspec （dllexport)**關鍵字。  
   
- 若要使程式碼更好讀取，請定義 **\_\_declspec\(dllimport\)** 的巨集，接著再使用這個巨集來宣告每個匯入符號：  
+ 若要讓您的程式碼更容易閱讀，定義 巨集**__declspec （dllimport)** ，然後使用巨集來宣告的每個匯入的符號：  
   
 ```  
 #define DllImport   __declspec( dllimport )  
@@ -37,9 +38,9 @@ DllImport int  j;
 DllImport void func();  
 ```  
   
- **\_\_declspec\(dllimport\)** 在函式宣告上是可選擇性地使用，但是如果您使用了這個關鍵字，編譯器會產生更有效率的程式碼。  然而，為了要讓匯入 DLL 的可執行檔可以存取 DLL 的公用資料符號和物件，您必須使用 **\_\_declspec\(dllimport\)**。  請注意，您的 DLL 的使用者仍然需要連結到匯入程式庫。  
+ 使用**__declspec （dllimport)**上函式宣告為選擇性，但如果您使用此關鍵字，編譯器會產生更有效率的程式碼。 不過，您必須使用**__declspec （dllimport)** ，匯入可存取 DLL 的公用資料符號和物件。 請注意，您的 DLL 的使用者仍然需要匯入程式庫連結。  
   
- 您可以對 DLL 和用戶端應用程式使用相同的標頭檔。  若要進行這項作業，請使用特殊的前置處理器符號，指示您要建置 DLL 或建置用戶端應用程式。  例如：  
+ 您可以使用相同的標頭檔的 DLL 和用戶端應用程式。 若要這樣做，請使用特殊的前置處理器符號，指出是否正在建立 DLL，或建置用戶端應用程式。 例如:   
   
 ```  
 #ifdef _EXPORTING  
@@ -52,15 +53,15 @@ class CLASS_DECLSPEC CExampleA : public CObject
 { ... class definition ... };  
 ```  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [初始化 DLL](../build/initializing-a-dll.md)  
+-   [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
 -   [匯入和匯出內嵌函式](../build/importing-and-exporting-inline-functions.md)  
   
 -   [交互匯入](../build/mutual-imports.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [匯入至應用程式](../build/importing-into-an-application.md)

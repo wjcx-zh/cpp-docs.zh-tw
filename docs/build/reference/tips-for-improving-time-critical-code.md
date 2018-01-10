@@ -41,11 +41,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5efcf042932163f1e932a55622f7dddd167b8961
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23ca6fc8c18a7f2f2013ffdeabd70a7eb9fb0057
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tips-for-improving-time-critical-code"></a>改善時間關鍵程式碼的秘訣
 撰寫快速的程式碼需要瞭解應用程式的所有層面，以及它如何與系統互動。 本主題建議一些較明顯程式設計技巧的替代選擇，以協助您確定程式碼中時間關鍵的部分效能令人滿意。  
@@ -159,5 +160,5 @@ ms.lasthandoff: 10/24/2017
   
 -   若要檢視工作集的大小，請使用 Spy++。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [最佳化程式碼](../../build/reference/optimizing-your-code.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38aa9f5fae45c9d5fa1e413763bd5fa2e65ab795
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0e37779b081de457782ee59324a00cca5fedaea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="making-an-atl-object-noncreatable"></a>進行 ATL 物件變成無法建立
 您可以變更 atl COM 物件的屬性，讓用戶端無法直接建立物件。 在此情況下，物件會將透過方法呼叫所傳回的另一個物件而直接建立。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
  }  
  ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
  [Visual c + + 專案類型](../../ide/visual-cpp-project-types.md)   
  [使用應用程式精靈建立桌面專案](../../ide/creating-desktop-projects-by-using-application-wizards.md)   

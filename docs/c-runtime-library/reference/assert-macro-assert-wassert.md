@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,37 +29,22 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 97bdb002953c07aba3bf7951a6f94a058c977f9d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5a0fe8083cfc131f7e8b1f2133943a1c91f614a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 巨集、_assert、_wassert
 評估運算式；當結果為 `false`時，列印診斷資訊並中止程式。  
@@ -115,7 +99,7 @@ void _wassert(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`assert`, `_wassert`|\<assert.h>|  
   
@@ -171,7 +155,7 @@ A problem caused the program to stop working correctly. Windows will close the p
   
  如果已安裝偵錯工具，請選擇 [偵錯]  按鈕以啟動偵錯工具，或選擇 [關閉程式]  結束。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [錯誤處理](../../c-runtime-library/error-handling-crt.md)   
  [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [abort](../../c-runtime-library/reference/abort.md)   

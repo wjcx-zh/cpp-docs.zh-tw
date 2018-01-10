@@ -1,50 +1,51 @@
 ---
-title: "Testing the ATL DHTML Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls"
-  - "DHTML controls, 測試"
-  - "HTML 控制項, 測試"
-  - "testing controls"
+title: "測試 ATL DHTML 控制項 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, testing
+- testing controls
+- DHTML controls
+- DHTML controls, testing
 ms.assetid: 0e4b4358-80ce-4505-8b06-ef4f30b1d1f0
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd92900ffbb8170e942053910d3faedd1f5ab2ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Testing the ATL DHTML Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-一旦建立專案，您可以建立並測試範例控制項。  在您完成這項工作之前，請使用 \[類別檢視\] 和 \[方案總管\] 中檢查專案。  您的專案中的項目。 [識別 DHTML 控制專案的項目。](../atl/identifying-the-elements-of-the-dhtml-control-project.md)詳細說明。  
+# <a name="testing-the-atl-dhtml-control"></a>測試 ATL DHTML 控制項
+當您建立專案之後時，您可以建置及測試範例控制項。 這麼做之前，請使用類別檢視 和 方案總管 中檢查專案。 您的專案項目中更詳細說明[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)。  
   
-#### 建置和測試 ATL DHTML 控制項  
+#### <a name="to-build-and-test-the-atl-dhtml-control"></a>若要建置和測試 ATL DHTML 控制項  
   
-1.  建置專案。  在 \[**建置**\] 功能表中，按一下 \[**建置方案**\]。  
+1.  建置專案。 從**建置**功能表上，按一下 **建置方案**。  
   
-2.  當建置完成時，開啟測試容器。  如需如何存取測試容器的詳細資訊，請參閱 [測試屬性和事件會和測試容器](../mfc/testing-properties-and-events-with-test-container.md) 。  
+2.  當組建完成時，請開啟測試容器。 請參閱[使用測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)如何存取測試容器的資訊。  
   
-3.  在測試容器， **編輯** 從  功能表上，按一下 **Insert New Control**。  
+3.  在測試容器中，從**編輯**功能表上，按一下 **插入新控制項**。  
   
-4.  在 **插入控制項** 對話方塊中，選取您的控制項是清單方塊。  請記住，它的名稱會根據您在 ATL 控制項精靈指出的簡短名稱。  按一下 \[**確定**\]。  
+4.  在**插入控制項**對話方塊方塊中，從清單方塊中選取您的控制項。 請記住，其名稱根據您在 ATL 控制項精靈中指示的簡短名稱。 按一下 [確定 **Deploying Office Solutions**]。  
   
-5.  檢查控制項。  請注意它具有捲軸。  使用控制項調整大小控點啟動捲軸。  
+5.  檢查控制項。 請注意，它會有捲軸。 使用控制項的控制代碼來調整啟動捲軸控制項的大小。  
   
-6.  測試控制項的  按鈕。  背景色彩會變更為按鈕顯示的色彩。  
+6.  測試控制項的按鈕。 背景色彩變更為以按鈕的色彩。  
   
-7.  存取測試容器。  
+7.  關閉測試容器。  
   
- 接著，嘗試 [修改 DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)。  
+ 接下來，再試一次[修改 DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [DHTML 控制項的支援](../atl/atl-support-for-dhtml-controls.md)
+

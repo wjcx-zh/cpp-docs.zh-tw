@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f742963afbfbef62fb269422b9756c604e0c081e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852a2a2e7f38d049f1a97f4d3db2e33c99e3a0f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2137"></a>ML 非嚴重錯誤 A2137
 **若要叫用的引數太少**  
   
  使用傳遞的引數數目[INVOKE](../../assembler/masm/invoke.md)指示詞已在程序所叫用原型中指定的必要參數數目較少。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

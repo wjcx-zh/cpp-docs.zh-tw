@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7735c80e293bc6534700cf31715fdfdd8ab8e461
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobject-class"></a>Ccomobject< 類別
 這個類別會實作**IUnknown**非彙總的物件。  
@@ -46,14 +47,14 @@ class CComObject : public Base
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|建構函式。|  
 |[Ccomobject<:: ~ Ccomobject<](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComObject::AddRef](#addref)|在物件上的參考計數遞增。|  
 |[CComObject::CreateInstance](#createinstance)|（靜態）建立新`CComObject`物件。|  
@@ -166,7 +167,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>傳回值  
  此函式會傳回新的遞減參考計數物件上。 在偵錯組建中，傳回的值可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
  [CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   

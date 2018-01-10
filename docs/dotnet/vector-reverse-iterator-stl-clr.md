@@ -15,11 +15,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04a4048c8ebb108efef9c4a6181f864eb2d9d708
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 476cf4370e7f2a94f41b9186042b70b15df81a68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorreverseiterator-stlclr"></a>vector::reverse_iterator (STL/CLR)
 受控制序列的反向迭代器類型。  
@@ -74,7 +77,7 @@ x b a
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector:: const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)   
  [vector:: const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)   

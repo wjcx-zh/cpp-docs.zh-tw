@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8eb77bc6f99ab6b7d8ca9d51f1a7a8549d8f0c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d49ed2a56738ec784c8a1a2cc3c13239f7317270
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-up-a-static-link-to-the-registrar-code-c-only"></a>設定靜態連結的註冊機構的程式碼 （只有 c + +）
 C + + 用戶端可以建立註冊機構的程式碼的靜態連結。 靜態連結的註冊機構的剖析器會將大約 5 K，加入至發行組建。  
@@ -33,6 +34,6 @@ C + + 用戶端可以建立註冊機構的程式碼的靜態連結。 靜態連�
   
 2.  重新編譯。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [登錄元件 （登錄器）](../atl/atl-registry-component-registrar.md)
 

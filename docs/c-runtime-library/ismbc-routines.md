@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b512bad001ed86ad0720002cd49c54b21b6e555
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbe2879f031f261871676f9e11f0b6f2a0908a95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbc-routines"></a>_ismbc 常式
 每一個 **_ismbc** 常式都會測試指定的多位元組字元 `c` 是否符合指定的條件。  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
  輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。  
   
-|常式|測試條件|字碼頁 932 範例|  
+|常式傳回的值|測試條件|字碼頁 932 範例|  
 |-------------|--------------------|---------------------------|  
 |[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英數字元|只有在 `c` 是代表 ASCII 英文字母的單一位元組時，才傳回非零：請參閱 `_ismbcdigit` 和 `_ismbcalpha` 的範例。|  
 |[_ismbcalpha、_ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|字母順序|只有在 `c` 是代表 ASCII 英文字母 (請參閱 `_ismbcupper` 和 `_ismbclower` 的範例) 或片假名字母的單一位元組時，才傳回非零：0xA6<=`c`<=0xDF。|  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/24/2017
   
  下列是字碼頁 932 特定的常式。  
   
-|常式|測試條件 (限字碼頁 932)|  
+|常式傳回的值|測試條件 (限字碼頁 932)|  
 |-------------|-------------------------------------------|  
 |[_ismbchira、_ismbchira_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|雙位元組平假名：0x829F<=`c`<=0x82F1。|  
 |[_ismbckata、_ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|雙位元組片假名：0x8340<=`c`<=0x8396。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/24/2017
   
  **END 字碼頁 932 特定**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../c-runtime-library/character-classification.md)   
  [is、isw 常式](../c-runtime-library/is-isw-routines.md)   
  [_ismbb 常式](../c-runtime-library/ismbb-routines.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b1581fe5a952d1ea8e78f29e606af5ac148f3b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6860198b9acce372b710e819a17f534e793f1ead
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-relational-and-equality-operators"></a>C 關係和等號比較運算子
 二元關係運算子和相等運算子會比較其第一個運算元與第二個運算元，以測試指定的關聯性是否有效。 如果測試的關聯性是 true，則關聯運算式的結果為 1，如果是 false，結果即為 0。 結果的類型是 `int`。  
@@ -104,6 +105,6 @@ enum color { red, white, green } col;
   
  這些陳述式會宣告名為 `col` 且有 `color` 標記的列舉變數。 無論何時，此變數可能包含整數值 0、1 或 2，代表其中一個列舉元素會設定 `color`：分別為紅色、白色或綠色。 如果 `col` 在執行 **if** 陳述式時包含 0，會執行所有與 **if** 相依的陳述式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關係運算子：\<、>、\<= 與 >=](../cpp/relational-operators-equal-and-equal.md)   
  [等號比較運算子：== 和 !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

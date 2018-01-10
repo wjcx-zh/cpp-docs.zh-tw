@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- safebuffers_cpp
-dev_langs:
-- C++
+f1_keywords: safebuffers_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ceb7d5796002bd54055b74d56a136706890494c4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
 **Microsoft 特定的**  
@@ -39,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>備註  
- **/GS**編譯器選項可讓編譯器在堆疊上插入安全性檢查來測試緩衝區滿溢。 進行安全性檢查的資料結構的類型描述[/GS （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)。 如需緩衝區滿溢偵測的詳細資訊，請參閱[編譯器安全性檢查在深度](http://go.microsoft.com/fwlink/?linkid=7260)MSDN 網站上。  
+ **/GS**編譯器選項可讓編譯器在堆疊上插入安全性檢查來測試緩衝區滿溢。 進行安全性檢查的資料結構的類型描述[/GS （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)。 如需緩衝區滿溢偵測的詳細資訊，請參閱[編譯器安全性檢查在深度](http://go.microsoft.com/fwlink/p/?linkid=7260)MSDN 網站上。  
   
  某位專業人員手動檢閱程式碼或進行外部分析後，可能會判斷函式不會發生緩衝區滿溢。 在此情況下，您可以隱藏函式的安全性檢查，藉由套用`__declspec(safebuffers)`函式宣告的關鍵字。  
   
@@ -81,9 +78,9 @@ int wmain() {
 }  
 ```  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__declspec](../cpp/declspec.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [inline、 __inline、 \__forceinline](inline-functions-cpp.md)   

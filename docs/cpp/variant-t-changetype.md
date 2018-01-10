@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fea359c3f256d56f4d112fe93bb736a16892ea4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fb59090ebc4c6ff9120e813ae12a9defbe618b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="varianttchangetype"></a>_variant_t::ChangeType
 **Microsoft 特定的**  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  此成員函式會將轉換`_variant_t`為指定的物件**VARTYPE**。 如果`pSrc`是**NULL**，表示轉換已完成的位置，否則這`_variant_t`物件從複製`pSrc`，然後再轉換。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_variant_t 類別](../cpp/variant-t-class.md)

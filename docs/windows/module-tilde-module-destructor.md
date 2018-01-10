@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f829ca4de7aba26c2a457c0149326c7f96d1f691
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f297749c5bfa93397728cb8c6743adf710a9a1bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulemodule-destructor"></a>Module::~Module 解構函式
 取消初始化模組類別的目前執行個體。  
@@ -35,5 +38,5 @@ virtual ~Module();
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>另請參閱
+ ## <a name="see-also"></a>請參閱
  [Module 類別](../windows/module-class.md)

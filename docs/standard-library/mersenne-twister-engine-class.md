@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58a777a049b270702e63391ebc7bd4c1addc3b32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9db5fd19c480ac7dfa6f647a1e1bf4beec5609d1
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 類別
 根據梅森旋轉演算法，產生高品質隨機整數序列。  
@@ -53,7 +54,7 @@ class mersenne_twister_engine;
  `A`  
  **XOR 遮罩**。 **前置條件**：`A ≤ (1u<<W) - 1u`  
   
- `U`, `S`, `T`, `L`  
+ `U`、`S`、`T``L`  
  **調和移位參數**。 用做編碼 (調和) 期間的移位值。 前置條件：`U,S,T,L ≤ W`  
   
  `D`, `B`, `C`  
@@ -104,7 +105,7 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
     43, 6364136223846793005ULL> mt19937_64;  
 ```  
   
- 如需有關梅森旋轉演算法的詳細資訊，請參閱 Wikipedia 文章：[梅森旋轉算法](http://go.microsoft.com/fwlink/LinkId=402356)。  
+ 如需有關梅森旋轉演算法的詳細資訊，請參閱 Wikipedia 文章：[梅森旋轉算法](http://go.microsoft.com/fwlink/p/?linkid=402356)。  
   
 ## <a name="example"></a>範例  
  如需程式碼範例，請參閱 [\<random>](../standard-library/random.md)。  
@@ -114,6 +115,6 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<random>](../standard-library/random.md)
 

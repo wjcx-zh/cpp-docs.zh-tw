@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 583b2c0ec67c4799753fe52d74131e7238b11d46
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9792f8b7758ff5a1e5742b6643d9f73931bce6f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idl-attributes-add-method-wizard"></a>IDL 屬性, 加入方法精靈
 使用加入方法精靈的這個頁面來指定方法的任何介面定義語言 (IDL) 設定。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
  **其他屬性**  
  不能用於 MFC 分配介面。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |**hidden**|表示方法存在，但不是會顯示在使用者導向的瀏覽器中。 請參閱[隱藏](http://msdn.microsoft.com/library/windows/desktop/aa366861)中*MIDL 參考*。|  
 |**來源**|表示方法的成員是事件來源。 請參閱[來源](http://msdn.microsoft.com/library/windows/desktop/aa367166)中*MIDL 參考*。|  
@@ -57,6 +58,6 @@ ms.lasthandoff: 10/24/2017
 |**restricted**|指定此方法無法被任意呼叫。 請參閱[限制](http://msdn.microsoft.com/library/windows/desktop/aa367157)中*MIDL 參考*。|  
 |**vararg**|指定此方法採用可變引數數目。 若要達成此目的，最後一個引數必須是安全陣列的**VARIANT**包含其餘的引數的型別。 請參閱[vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304)中*MIDL 參考*。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [加入方法](../ide/adding-a-method-visual-cpp.md)   
  [新增方法精靈](../ide/add-method-wizard.md)

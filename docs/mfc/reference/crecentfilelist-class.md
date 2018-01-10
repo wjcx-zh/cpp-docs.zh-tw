@@ -33,11 +33,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 449bdf4e56377cd4464f7759f59d0f0b5bf21be8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 968c15b1382233dc166a174e4ef074033c76619c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecentfilelist-class"></a>CRecentFileList 類別
 支援最近使用的 (MRU) 檔案清單控制項。  
@@ -48,17 +49,17 @@ ms.lasthandoff: 10/24/2017
 class CRecentFileList  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRecentFileList::CRecentFileList](#crecentfilelist)|建構 `CRecentFileList` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRecentFileList::Add](#add)|將檔案加入至 MRU 檔案清單。|  
 |[CRecentFileList::GetDisplayName](#getdisplayname)|提供的 MRU 檔名的功能表顯示的顯示名稱。|  
@@ -70,7 +71,7 @@ class CRecentFileList
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRecentFileList::operator]](#operator_at)|傳回`CString`的指定位置的物件。|  
   
@@ -255,7 +256,7 @@ virtual void UpdateMenu(CCmdUI* pCmdUI);
 virtual void WriteList();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 
 

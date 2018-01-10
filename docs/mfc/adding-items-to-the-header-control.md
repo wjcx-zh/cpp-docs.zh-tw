@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 792c956d73808ef50308f8e14066f74021cc84b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4de62d534da103f17df113b04b88021561739cfc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-items-to-the-header-control"></a>將項目加入至標題控制項
 建立標題控制項之後 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 在其父視窗中，加入許多 「 標頭項目 」 所需： 通常每欄一個。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱[項目加入至標題控制項](http://msdn.microsoft.com/library/windows/desktop/bb775238)Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CHeaderCtrl](../mfc/using-cheaderctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

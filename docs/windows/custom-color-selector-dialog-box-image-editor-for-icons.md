@@ -17,11 +17,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 417e1b99066a0e2af6b58fb684bf0912f7c420ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7b85b6b650fcff46371e86e61ab96e9d864c4c53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-color-selector-dialog-box-image-editor-for-icons"></a>自訂色彩選取器對話方塊 (圖示影像編輯器)
 此對話方塊可讓您自訂您的映像您使用的色彩。 如需詳細資訊，請參閱[自訂或變更色彩](../windows/customizing-or-changing-colors-image-editor-for-icons.md)。  
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [影像功能表](../windows/image-menu-image-editor-for-icons.md)   
  [自訂或變更色彩](../windows/customizing-or-changing-colors-image-editor-for-icons.md)   
  [色彩視窗](../windows/colors-window-image-editor-for-icons.md)

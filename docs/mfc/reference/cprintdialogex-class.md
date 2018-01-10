@@ -49,11 +49,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 869a63f4fd86577a1ce8d424f7b3e3df575d9bd5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 147a3d638f76f291a9732b340335331730f5b74d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 類別
 封裝 Windows 2000 列印屬性工作表提供的服務。  
@@ -64,17 +65,17 @@ ms.lasthandoff: 10/24/2017
 class CPrintDialogEx : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|建構 `CPrintDialogEx` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|建立印表機裝置內容而不會顯示 [列印] 對話方塊。|  
 |[CPrintDialogEx::DoModal](#domodal)|顯示對話方塊，並可讓使用者進行選擇。|  
@@ -93,7 +94,7 @@ class CPrintDialogEx : public CCommonDialog
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPrintDialogEx::m_pdex](#m_pdex)|結構，用來自訂`CPrintDialogEx`物件。|  
   
@@ -338,7 +339,7 @@ BOOL PrintSelection() const;
 ### <a name="return-value"></a>傳回值  
  **TRUE**如果只有選取的項目列印，否則**FALSE**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CCommonDialog 類別](../../mfc/reference/ccommondialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CPrintInfo 結構](../../mfc/reference/cprintinfo-structure.md)

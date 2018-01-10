@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,8 +22,7 @@ f1_keywords:
 - VTS_OPTEXCLUSIVE
 - VTS_YSIZE_PIXELS
 - VTS_XSIZE_PIXELS
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - VTS_XPOS_HIMETRIC constant [MFC]
 - VTS_FONT constant [MFC]
@@ -44,16 +42,16 @@ helpviewer_keywords:
 - VTS_OPTEXCLUSIVE constant [MFC]
 - VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d9bd9af96a51697d1800eea1ef2883835375210d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: cc8daf0853a97e8903b47d29f70e190430931fd5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variant-parameter-type-constants"></a>變異參數類型常數
 本主題會列出新的常數，以指出變異參數類型設計為使用 Microsoft Foundation 類別庫的 OLE 控制項類別。  
@@ -96,6 +94,5 @@ ms.lasthandoff: 10/09/2017
 ## <a name="requirements"></a>需求  
  **標頭：** afxdisp.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)
-

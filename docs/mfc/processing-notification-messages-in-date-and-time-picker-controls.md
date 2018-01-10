@@ -1,57 +1,59 @@
 ---
-title: "處理日期時間選擇器控制項中的通知訊息 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DTN_CLOSEUP"
-  - "DTN_DATETIMECHANGE"
-  - "DTN_DROPDOWN"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDateTimeCtrl 類別, 處理告知"
-  - "DateTimePicker 控制項 [MFC]"
-  - "DateTimePicker 控制項 [MFC], 處理告知"
-  - "DTN_CLOSEUP 告知"
-  - "DTN_DATETIMECHANGE 告知"
-  - "DTN_DROPDOWN 告知"
-  - "DTN_FORMAT 告知"
+title: "處理控制項通知訊息的日期和時間選擇器 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- DTN_CLOSEUP
+- DTN_DATETIMECHANGE
+- DTN_DROPDOWN
+dev_langs: C++
+helpviewer_keywords:
+- DTN_DROPDOWN notification [MFC]
+- DTN_DATETIMECHANGE notification [MFC]
+- DTN_CLOSEUP notification [MFC]
+- DateTimePicker control [MFC], handling notifications
+- CDateTimeCtrl class [MFC], handling notifications
+- DTN_FORMAT notification [MFC]
+- DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 836714f7a7ca17d759d0d71a7cbb30d63fdfaf95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 處理日期時間選擇器控制項中的通知訊息
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當使用者使用日期時間選擇器控制項互動，控制項 \(`CDateTimeCtrl`\) 傳送通知訊息至其父視窗，通常檢視或對話物件。  如果您想要執行某個動作以回應，請處理這些訊息。  例如，在中，當使用者開啟日期時間選擇器顯示內嵌月曆控制項時， **DTN\_DROPDOWN** 通知傳送。  
+# <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>處理日期時間選擇器控制項中的通知訊息
+當使用者互動有日期和時間選擇器控制項，控制項 (`CDateTimeCtrl`) 會傳送通知訊息至其父視窗，通常是檢視或對話方塊物件。 如果您想要執行動作以作為回應，請處理這些訊息。 例如，當使用者開啟以顯示內嵌的月曆控制項，日期和時間選擇器**DTN_DROPDOWN**會傳送通知。  
   
- 使用屬性視窗將告知處理常式到您要實作的訊息的父類別。  
+ 使用 [屬性] 視窗，將通知處理常式加入您想要實作之這些訊息的父類別。  
   
- 下列清單描述日期時間選擇器控制項傳送的各種告知。  
+ 下列清單描述的日期和時間選擇器控制項所傳送的告知。  
   
--   **DTN\_DROPDOWN** 告知父嵌入月曆控制項中顯示。  當 **DTS\_UPDOWN** 樣式未設定時，這個告知只傳送。  如需這個告知的詳細資訊，請參閱 [存取內嵌月份行事曆控制項](../mfc/accessing-the-embedded-month-calendar-control.md)。  
+-   **DTN_DROPDOWN**告知父代內嵌的月曆控制項即將顯示。 此通知只會傳送時**DTS_UPDOWN**樣式未設定。 如需有關這項通知的詳細資訊，請參閱[存取內嵌月曆控制項](../mfc/accessing-the-embedded-month-calendar-control.md)。  
   
--   **DTN\_CLOSEUP** 告知父嵌入月曆控制項將會關閉。  當 **DTS\_UPDOWN** 樣式未設定時，這個告知只傳送。  
+-   **DTN_CLOSEUP**告知父代內嵌的月曆控制項即將關閉。 此通知只會傳送時**DTS_UPDOWN**樣式未設定。  
   
--   **DTN\_DATETIMECHANGE** 告知父代變更在控制項中發生。  
+-   **DTN_DATETIMECHANGE**通知已經在控制項中發生變更的父系。  
   
--   **DTN\_FORMAT** 告知父文字需要在回呼欄位中顯示。  如需這個告知和回呼欄位的詳細資訊，請參閱 [使用日期時間選擇器控制項的回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。  
+-   **DTN_FORMAT**時告知父文字所顯示的回呼欄位中。 如需有關這個通知和回呼欄位的詳細資訊，請參閱[日期和時間選擇器控制項中使用回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。  
   
--   **DTN\_FORMATQUERY** 要求父提供在回呼欄位中顯示字串的最大容許大小。  處理這個告知允許控制項一直正確顯示輸出，以減少控制項的顯示中的重繪。  如需這個告知的詳細資訊，請參閱 [使用日期時間選擇器控制項的回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。  
+-   **DTN_FORMATQUERY**要求提供之字串將會顯示在回呼欄位的允許大小上限的父系。 處理此通知會讓控制項適當地顯示在任何時間，減少重繪閃動內控制項的顯示的輸出。 如需有關這項通知的詳細資訊，請參閱[日期和時間選擇器控制項中使用回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。  
   
--   **DTN\_USERSTRING** 告知父使用者完成編輯日期時間選擇器控制項的內容。  當 **DTS\_APPCANPARSE** 樣式設定時，這個告知只傳送。  
+-   **DTN_USERSTRING**時告知父使用者已完成編輯日期和時間選擇器控制項的內容。 此通知只會傳送時**DTS_APPCANPARSE**已設定樣式。  
   
--   當使用者輸入回呼欄位時，**DTN\_WMKEYDOWN** 告知父代。  處理這個告知模擬為日期時間選擇器控制項的非回呼欄位支援的同一個鍵盤回應。  如需這個告知的詳細資訊，請參閱 [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]的 [支援 DTP 控制項的回呼欄位](http://msdn.microsoft.com/library/windows/desktop/bb761726) 。  
+-   **DTN_WMKEYDOWN**時使用者會在回呼欄位輸入通知父代。 處理這個通知可模擬支援日期和時間選擇器控制項中的非回呼欄位相同的鍵盤回應。 如需有關這項通知的詳細資訊，請參閱[DTP 控制項中支援回呼欄位](http://msdn.microsoft.com/library/windows/desktop/bb761726)Windows SDK 中。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
  [控制項](../mfc/controls-mfc.md)
+

@@ -56,11 +56,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a16876148aa73fada420a58aa4ba38b8a557ab93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94491a2df64017ea381377af8518414e80130d6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-functions"></a>資料錄欄位交換函式
 本主題列出資料錄欄位交換 （RFX，Bulk RFX 和 DFX） 使用資料錄集物件與其資料來源之間的資料傳輸自動化，以及執行其他作業資料的函數。  
@@ -144,7 +145,7 @@ void RFX_Binary(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， [CByteArray](cbytearray-class.md)，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `nMaxLength`  
@@ -178,7 +179,7 @@ void RFX_Bool(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， **BOOL**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -206,7 +207,7 @@ void RFX_Byte(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值，**位元組**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -244,7 +245,7 @@ void RFX_Date(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  指定的資料成員; 中儲存的值要傳輸的值。 各種版本的函式會採用不同的資料類型的值：  
   
  第一個版本的函式會參考[CTime](../../atl-mfc-shared/reference/ctime-class.md)物件。 從資料錄集傳輸至資料來源，這個值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
@@ -279,7 +280,7 @@ void RFX_Double(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， **double**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -307,7 +308,7 @@ void RFX_Int(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， `int`，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -336,7 +337,7 @@ value );
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值，**長**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -364,7 +365,7 @@ void RFX_LongBinary(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， `CLongBinary`，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -392,7 +393,7 @@ void RFX_Single(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， **float**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -424,7 +425,7 @@ void RFX_Text(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， `CString`，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `nMaxLength`  
@@ -697,7 +698,7 @@ void RFX_Int(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， `int`，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
 ### <a name="example"></a>範例  
@@ -873,7 +874,7 @@ void AFXAPI DFX_Binary(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， [CByteArray](cbytearray-class.md)，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `nPreAllocSize`  
@@ -915,7 +916,7 @@ void AFXAPI DFX_Bool(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， **BOOL**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -953,7 +954,7 @@ void AFXAPI DFX_Byte(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值，**位元組**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -991,7 +992,7 @@ void AFXAPI DFX_Currency(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源，這個值會取自型別的指定之資料成員[COleCurrency](colecurrency-class.md)。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -1029,7 +1030,7 @@ void AFXAPI DFX_DateTime(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 此函數會採用參考[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)物件。 從資料錄集傳輸至資料來源，這個值是取自指定的資料成員。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -1070,7 +1071,7 @@ void AFXAPI DFX_Double(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， **double**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -1108,7 +1109,7 @@ void AFXAPI DFX_Long(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值，**長**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -1148,7 +1149,7 @@ void AFXAPI DFX_LongBinary(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， [CLongBinary](clongbinary-class.md)，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  *dwPreAllocSize*  
@@ -1189,7 +1190,7 @@ void AFXAPI DFX_Short(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值，**簡短**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -1231,7 +1232,7 @@ void AFXAPI DFX_Single(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， **float**，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `dwBindOptions`  
@@ -1270,7 +1271,7 @@ void AFXAPI DFX_Text(
  `szName`  
  資料行的名稱。  
   
- *value*  
+ *值*  
  儲存在指定資料成員中的值，即要傳輸的值。 從資料錄集傳輸至資料來源類型的值， [CString](../../atl-mfc-shared/reference/cstringt-class.md)，會從指定的資料成員中取得。 從資料來源傳輸至資料錄集時，值會儲存在指定的資料成員中。  
   
  `nPreAllocSize`  
@@ -1307,7 +1308,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 ### <a name="requirements"></a>需求  
  **標頭：** afxdao.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)   
  [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)   

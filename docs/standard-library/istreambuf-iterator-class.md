@@ -29,11 +29,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 280e7c43f4541e393a828d7eeed34e72f82a0689
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2334ebd75d3a941c453950a6a99adfd99e6b1555
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istreambufiterator-class"></a>istreambuf_iterator 類別
 範本類別 istreambuf_iterator 描述一個輸入迭代器物件，此物件會從輸入資料流緩衝區擷取字元元素，其中會透過它所儲存的物件 (屬於 `basic_streambuf`\< **CharType**, **Traits** 的 pointer 類型) 來存取該緩衝區。  
@@ -101,7 +102,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ### <a name="example"></a>範例  
   
@@ -419,7 +420,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [iterator 結構](../standard-library/iterator-struct.md)   
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

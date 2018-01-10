@@ -35,11 +35,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b75a3782d1e20ccd20cd4f9271d91e2ac391d388
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 857054bd60e206cc3a563aa5f00b872f67c58d3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccaptionbutton-class"></a>CMFCCaptionButton 類別
 `CMFCCaptionButton`類別實作停駐窗格或迷你框架視窗的標題列顯示的按鈕。 Framework 通常會自動建立標題按鈕。  
@@ -54,13 +55,13 @@ class CMFCCaptionButton : public CObject
   
 ### <a name="constructors"></a>建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|建構 CMFCCaptionButton 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCCaptionButton::GetHit](#gethit)|傳回按鈕所代表的命令。|  
 |[CMFCCaptionButton::GetIconID](#geticonid)|傳回與按鈕相關聯的映像識別碼。|  
@@ -106,10 +107,10 @@ CMFCCaptionButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nHit`  
+ [輸入] `nHit`  
  命令與按鈕相關聯。  
   
- [in] `bLeftAlign`  
+ [輸入] `bLeftAlign`  
  指定按鈕是否靠左對齊。  
   
  下表列出可能的值為`nHit`參數。  
@@ -161,10 +162,10 @@ virtual CMenuImages::IMAGES_IDS GetIconID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bHorz`  
+ [輸入] `bHorz`  
  `TRUE`左或向右箭號映像識別碼;`FALSE`的向上或向下箭號影像 Id。  
   
- [in] `bMaximized`  
+ [輸入] `bMaximized`  
  `TRUE`最大化映像識別碼;`FALSE`最小化映像識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -221,10 +222,10 @@ void Move(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ptTo`  
+ [輸入] `ptTo`  
  新位置。  
   
- [in] `bHide`  
+ [輸入] `bHide`  
  是否要顯示的按鈕。  
   
 ##  <a name="ondraw"></a>CMFCCaptionButton::OnDraw  
@@ -240,19 +241,19 @@ virtual void OnDraw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  按鈕的裝置內容的指標。  
   
- [in] `bActive`  
+ [輸入] `bActive`  
  是否要繪製作用中的按鈕影像。  
   
- [in] `bHorz`  
+ [輸入] `bHorz`  
  保留供衍生類別中使用。  
   
- [in] `bMaximized`  
+ [輸入] `bMaximized`  
  是否要繪製最大化的按鈕影像。  
   
- [in] `bDisabled`  
+ [輸入] `bDisabled`  
  是否要繪製啟用的按鈕影像。  
   
 ### <a name="remarks"></a>備註  
@@ -266,10 +267,10 @@ void SetMiniFramebutton(BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  `TRUE`迷你標題列的高度;`FALSE`預設標題列的高度。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CPaneFrameWnd 類別](../../mfc/reference/cpaneframewnd-class.md)   

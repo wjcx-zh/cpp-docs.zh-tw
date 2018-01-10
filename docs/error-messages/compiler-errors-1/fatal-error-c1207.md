@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C1207
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1207
+f1_keywords: C1207
+dev_langs: C++
+helpviewer_keywords: C1207
 ms.assetid: cd31b410-9523-47db-883c-e69a9351ffa2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c794de1f9efbc99fcc7ca5f03b8eb2b0a28971f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5661ac90e8159da1c772a8960d7f43842d6db29f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1207"></a>嚴重錯誤 C1207
 所安裝的執行階段版本不支援 Managed 樣板  

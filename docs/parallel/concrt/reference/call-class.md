@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - AGENTS/concurrency::call::propagate_message
 - AGENTS/concurrency::call::send_message
 - AGENTS/concurrency::call::supports_anonymous_source
-dev_langs:
-- C++
-helpviewer_keywords:
-- call class
+dev_langs: C++
+helpviewer_keywords: call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 894540410e2768be1cb679b5108fc8c694ca02d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="call-class"></a>call 類別
 `call` 傳訊區塊是一個多來源的排序 `target_block`，它在接收訊息時會叫用指定的函式。  
@@ -59,28 +42,28 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
   
 #### <a name="parameters"></a>參數  
  `T`  
- 傳播到此區塊的訊息內容型別。  
+ 傳播到此區塊的訊息的裝載類型。  
   
  `_FunctorType`  
  這個區塊可以接受的函式簽章。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
 |----------|-----------------|  
 |[呼叫](#ctor)|多載。 建構`call`傳訊區塊。|  
-|[~ call 解構函式](#dtor)|終結`call`傳訊區塊。|  
+|[~ 呼叫解構函式](#dtor)|終結`call`傳訊區塊。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
 |名稱|描述|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|輸入訊息上執行的呼叫函式。|  
-|[process_message](#process_message)|處理已接受此訊息`call`傳訊區塊。|  
-|[propagate_message](#propagate_message)|以非同步方式傳遞訊息從`ISource`這個區塊`call`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。|  
-|[send_message](#send_message)|以同步方式傳遞訊息從`ISource`區塊至此`call`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。|  
+|[process_message](#process_message)|處理接受這訊息`call`傳訊區塊。|  
+|[propagate_message](#propagate_message)|以非同步方式傳遞訊息從`ISource`至此區塊`call`傳訊區塊。 所叫用`propagate`方法，由來源區塊呼叫時。|  
+|[send_message](#send_message)|以同步方式將傳遞訊息，以從`ISource`至此區塊`call`傳訊區塊。 所叫用`send`方法，由來源區塊呼叫時。|  
 |[supports_anonymous_source](#supports_anonymous_source)|覆寫 `supports_anonymous_source` 方法，指出這個區塊可以接受未連結的來源提供給它的訊息。 (覆寫[itarget:: Supports_anonymous_source](itarget-class.md#supports_anonymous_source)。)|  
   
 ## <a name="remarks"></a>備註  
@@ -131,23 +114,23 @@ call(
   
 ### <a name="parameters"></a>參數  
  `_Func`  
- 此函式會叫用每一個可接受的訊息。  
+ 針對每個可接受的訊息將會叫用函式。  
   
  `_Filter`  
- 篩選函式可判斷是否應該接受所提供的訊息。  
+ 篩選函數用來決定是否應該接受所提供的訊息。  
   
  `_PScheduler`  
- `Scheduler`傳播的工作的物件`call`排定傳訊區塊。  
+ `Scheduler`物件所在的傳播工作`call`排定傳訊區塊。  
   
  `_PScheduleGroup`  
- `ScheduleGroup`傳播的工作的物件`call`排定傳訊區塊。 所使用的 `Scheduler` 物件由排程群組所隱含。  
+ `ScheduleGroup`物件所在的傳播工作`call`排定傳訊區塊。 所使用的 `Scheduler` 物件由排程群組所隱含。  
   
 ### <a name="remarks"></a>備註  
  如果您未指定 `_PScheduler` 或 `_PScheduleGroup` 參數，執行階段會使用預設排程器。  
   
- 型別`_Call_method`是以簽章仿`void (T const &)`由此叫用`call`傳訊區塊來處理訊息。  
+ 型別`_Call_method`是函式簽章`void (T const &)`由此叫用`call`傳訊區塊處理訊息。  
   
- 型別`filter_method`是以簽章仿`bool (T const &)`由此叫用`call`傳訊區塊，以判斷它是否應該接受提供的訊息。  
+ 型別`filter_method`是函式簽章`bool (T const &)`由此叫用`call`傳訊區塊，以判斷它是否應該接受提供的訊息。  
   
 ##  <a name="dtor"></a>~ 呼叫 
 
@@ -170,7 +153,7 @@ virtual void process_input_messages(_Inout_ message<T>* _PMessage);
   
 ##  <a name="process_message"></a>process_message 
 
- 處理已接受此訊息`call`傳訊區塊。  
+ 處理接受這訊息`call`傳訊區塊。  
   
 ```
 virtual void process_message(_Inout_ message<T>* _PMessage);
@@ -182,7 +165,7 @@ virtual void process_message(_Inout_ message<T>* _PMessage);
   
 ##  <a name="propagate_message"></a>propagate_message 
 
- 以非同步方式傳遞訊息從`ISource`這個區塊`call`傳訊區塊。 它會叫用`propagate`方法，由來源區塊呼叫時。  
+ 以非同步方式傳遞訊息從`ISource`至此區塊`call`傳訊區塊。 所叫用`propagate`方法，由來源區塊呼叫時。  
   
 ```
 virtual message_status propagate_message(
@@ -195,14 +178,14 @@ virtual message_status propagate_message(
  `message` 物件的指標。  
   
  `_PSource`  
- 提供訊息來源區塊的指標。  
+ 供應項目訊息的來源區塊的指標。  
   
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
   
 ##  <a name="send_message"></a>send_message 
 
- 以同步方式傳遞訊息從`ISource`區塊至此`call`傳訊區塊。 它會叫用`send`方法，由來源區塊呼叫時。  
+ 以同步方式將傳遞訊息，以從`ISource`至此區塊`call`傳訊區塊。 所叫用`send`方法，由來源區塊呼叫時。  
   
 ```
 virtual message_status send_message(
@@ -215,7 +198,7 @@ virtual message_status send_message(
  `message` 物件的指標。  
   
  `_PSource`  
- 提供訊息來源區塊的指標。  
+ 供應項目訊息的來源區塊的指標。  
   
 ### <a name="return-value"></a>傳回值  
  A [message_status](concurrency-namespace-enums.md)目標決定如何處理訊息的指示。  
@@ -231,7 +214,6 @@ virtual bool supports_anonymous_source();
 ### <a name="return-value"></a>傳回值  
  `true`，因為區塊不會延後提供的訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [transformer 類別](transformer-class.md)
-

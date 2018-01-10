@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ea8f37c09c852acb0309ee7361589b6006a44d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 770dfe28b3f0278ba2682b37b71d1dd89d02ae2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reading-and-writing-files"></a>讀取和寫入檔案
 如果您使用 C 執行階段程式庫檔案處理函式，則會出現熟悉 MFC 讀取和寫入作業。 本文說明直接讀取和寫入直接`CFile`物件。 您可以也不要緩衝處理的檔案 I/O [CArchive](../mfc/reference/carchive-class.md)類別。  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  您通常應該執行輸入/輸出作業內**再試一次**/**攔截**例外狀況處理區塊。 如需詳細資訊，請參閱[例外狀況處理 (MFC)](../mfc/exception-handling-in-mfc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案](../mfc/files-in-mfc.md)
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DPathGeometry::Open
 - AFXRENDERTARGET/CD2DPathGeometry::Stream
 - AFXRENDERTARGET/CD2DPathGeometry::m_pPathGeometry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DPathGeometry [MFC], CD2DPathGeometry
 - CD2DPathGeometry [MFC], Attach
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9142b268c5f09a88883d048c35287966d9ef8aab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 5b9c6ac03757a0180f0947775d4c35b3faef953d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dpathgeometry-class"></a>CD2DPathGeometry 類別
 ID2D1PathGeometry 包裝函式。  
@@ -55,17 +53,17 @@ ID2D1PathGeometry 包裝函式。
 class CD2DPathGeometry : public CD2DGeometry;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DPathGeometry::CD2DPathGeometry](#cd2dpathgeometry)|建構 CD2DPathGeometry 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DPathGeometry::Attach](#attach)|將現有的資源物件的介面|  
 |[CD2DPathGeometry::Create](#create)|建立 CD2DPathGeometry。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
@@ -78,7 +76,7 @@ class CD2DPathGeometry : public CD2DGeometry;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|ID2D1PathGeometry 指標。|  
   
@@ -203,6 +201,5 @@ BOOL Stream(ID2D1GeometrySink* geometrySink);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

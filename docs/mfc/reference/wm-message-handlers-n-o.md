@@ -48,11 +48,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63236a8422ac45f18e4a554b784ac601918fd0e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 108afac12d47c009b423e62321eb31a78e2c09d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wm-message-handlers-n---o"></a>WM_ 訊息處理常式：N - O
 左邊的下列對應項目對應於右邊的函式原型：  
@@ -83,7 +84,7 @@ ms.lasthandoff: 10/24/2017
 |ON_WM_NEXTMENU()|afx_msg void [OnNextMenu](../../mfc/reference/cwnd-class.md#onnextmenu)UINT (LPMDINEXTMENU）;|  
 |ON_WM_NOTIFYFORMAT()|afx_msg UINT [OnNotifyFormat](../../mfc/reference/cwnd-class.md#onnotifyformat)CWnd * (UINT）;|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [訊息對應](../../mfc/reference/message-maps-mfc.md)   
  [WM_ 訊息的處理常式](../../mfc/reference/handlers-for-wm-messages.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8fae52b5a9ad1b8063003e38a4ab89d480f45f02
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3b7b6d9ae6e0c3e051e5be4243eab9258fe2f50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hierarchy-chart"></a>階層架構圖表
 下圖代表 MFC 類別衍生自`CObject`:  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  您可以從下列位置下載完整的圖表： [MFC 階層架構圖表下載](https://aka.ms/hxgg8e)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表分類](../mfc/hierarchy-chart-categories.md)   
  [類別概觀](../mfc/class-library-overview.md)
 

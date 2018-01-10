@@ -1,69 +1,69 @@
 ---
-title: "implements (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.implements"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "implements attribute"
+title: "實作 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.implements
+dev_langs: C++
+helpviewer_keywords: implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0dbe7d829ae31f53a3dbc35df66bee2d50f14f19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# implements (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定強制為 IDL coclass 的成員的分派介面。  
+# <a name="implements-c"></a>implements (C++)
+指定強制為成員的 IDL coclass 的分派介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      [ implements(   
+      [ implements(   
    interfaces={interfaces},  
    dispinterfaces={dispinterfaces}  
 )]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  **介面**  
- 使用逗號分隔的會是 IDL coclass 的成員的介面清單。  指定單一的介面的速記方法是**實作 \(***interface\_name***\)**。  
+ 以逗號分隔的 IDL coclass 的成員的介面清單。 指定單一介面的簡略方法是**實作 (***interface_name***)**。  
   
  **分配介面**  
- 使用逗號分隔清單將會成為 「 IDL coclass 的分配介面。  指定單一的分配介面的速記方法是**實作 \(分配介面** *\= dispinterface\_name***\)**。  
+ 以逗號分隔清單的成員 IDL coclass 的分配介面。 指定單一的分配介面的簡略方法是**實作 (dispinterface** *= dispinterface_name***)**。  
   
-## 備註  
- 預設情況下，只有 COM 介面 coclass 的基底類別所加入 IDL coclass。  **實作**可讓您強制執行其他的介面，可以是 IDL coclass 的成員。  
+## <a name="remarks"></a>備註  
+ 根據預設，只有 COM 介面的 coclass 的基底類別會加入 IDL coclass。 **實作**可讓您強制執行其他 IDL coclass 成員的介面。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**，`struct`|  
-|**可重複**|是|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**適用於**|**class**、 `struct`|  
+|**可重複**|[是]|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 範例  
- 以下範例將三個部分：.idl 檔案和其相關聯的.h 檔中，與 C\+\+ 檔案。  
+## <a name="example"></a>範例  
+ 下列範例是三個部分：.idl 檔案和其相關聯的.h 檔案和 c + + 檔案。  
   
- 假設下列的.idl 檔，可供使用的編譯器。  
+ 假設下列的.idl 檔案，將提供給編譯器。  
   
 ```  
 // attr_implements.idl  
@@ -112,8 +112,8 @@ library odod
 }  
 ```  
   
-## 範例  
- 下列的.h 檔案，也必須提供給編譯器。  
+## <a name="example"></a>範例  
+ 和下列的.h 檔案也必須是提供給編譯器。  
   
 ```  
 // attr_implements.h  
@@ -429,8 +429,8 @@ CBar;
 #endif  
 ```  
   
-## 範例  
- 在下列程式中，而不需實作，IBar1、 IBar2 和 ISna 不會在產生 IDL coclass 中。  
+## <a name="example"></a>範例  
+ 在下列程式中，而不實作 」，IBar1、 IBar2 和 ISna 將無法在所產生的 IDL coclass 中。  
   
 ```  
 // attr_implements.cpp  
@@ -551,7 +551,6 @@ public:
 };  
 ```  
   
-## 請參閱  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [編譯器屬性](../windows/compiler-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   

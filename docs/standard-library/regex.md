@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50aaf3f695b023d6316fdd5d601962435903e15c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7da90e13c325380cb8aad54d1af712c1567e0420
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 定義範本類別來剖析[規則運算式 (C++)](../standard-library/regular-expressions-cpp.md)，以及定義數個範本類別和函式來搜尋與規則運算式物件相符的文字。  
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/24/2017
 |[operator>=](../standard-library/regex-operators.md#op_gt_eq)|不同物件的比較 (大於或等於)。|  
 |[operator<<](../standard-library/regex-operators.md#op_lt_lt)|在資料流中插入 `sub_match`。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [規則運算式 (C++)](../standard-library/regular-expressions-cpp.md)  
 [regex_constants 類別](../standard-library/regex-constants-class.md)  
 [regex_error 類別](../standard-library/regex-error-class.md)  

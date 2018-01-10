@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0c6bb31350af030879f23d9c0a9ac105e7293480
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4519258a10937ad96528f34484a44d398a0cd0ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4274"></a>編譯器警告 （層級 1） C4274
 \#ident 忽略;請參閱 #pragma 註解 （exestr，'string'） 的文件  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
 -   移除`#ident "`*字串*`"`指示詞。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [註解 （C/c + +）](../../preprocessor/comment-c-cpp.md)   
  [連結器工具警告 LNK4229](../../error-messages/tool-errors/linker-tools-warning-lnk4229.md)   
  [使用資源檔](../../windows/working-with-resource-files.md)

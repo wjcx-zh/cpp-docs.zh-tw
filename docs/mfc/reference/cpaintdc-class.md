@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58d1c1ec052c399cf56cd145e7ee06f52483661e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 451cc5690e871c1292f0a8ff2450eca950ada65b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 類別
 裝置內容類別衍生自[CDC](../../mfc/reference/cdc-class.md)。  
@@ -38,23 +39,23 @@ ms.lasthandoff: 10/24/2017
 class CPaintDC : public CDC  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPaintDC::CPaintDC](#cpaintdc)|建構`CPaintDC`連線到指定[CWnd](../../mfc/reference/cwnd-class.md)。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPaintDC::m_ps](#m_ps)|包含[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)用來繪製工作區。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPaintDC::m_hWnd](#m_hwnd)|`HWND`這個`CPaintDC`附加物件。|  
   
@@ -122,7 +123,7 @@ PAINTSTRUCT m_ps;
 ### <a name="example"></a>範例  
   請參閱範例的[CPaintDC::m_hWnd](#m_hwnd)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 MDI](../../visual-cpp-samples.md)   
  [CDC 類別](../../mfc/reference/cdc-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

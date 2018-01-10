@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe22a58d3f7b5d19658f648343541a238ed296c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe8d012c0034354328e5a10f1fa977002639506b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 定義樣板類別位元集，以及兩個代表和操作固定大小位元序列的支援樣板函式。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[bitset 類別](../standard-library/bitset-class.md)|這個樣板類別所描述的物件類型，可儲存由固定位元數所組成的序列，以提供精簡的方式，來保留一組項目或條件的旗標。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

@@ -1,53 +1,54 @@
 ---
-title: "新增 &lt;裝置&gt; 影像類型對話方塊 (圖示影像編輯器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.newimagetype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "新增 <裝置> 影像類型對話方塊"
+title: "新&lt;裝置&gt;影像類型對話方塊 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.newimagetype
+dev_langs: C++
+helpviewer_keywords: New <Device> Image Type dialog box
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e41f62a3668174dc9a5873d9bf16617555a96092
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 新增 &lt;裝置&gt; 影像類型對話方塊 (圖示影像編輯器)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-可讓您建立指定類型的新裝置影像。  若要開啟 \[新增 \<Device\> 影像\] 對話方塊，請在 \[影像\] 功能表上按一下 \[新增影像類型\]。  如需 Windows 所使用之圖示大小的詳細資訊，請參閱 Windows SDK 文件中的[圖示](_win32_Icons_cpp)。  
+# <a name="new-ltdevicegt-image-type-dialog-box-image-editor-for-icons"></a>新&lt;裝置&gt;影像類型對話方塊 （圖示影像編輯器）
+可讓您建立指定類型的新裝置映像。 若要開啟**新增\<裝置 > 影像**對話方塊中，按一下 **新映像類型**上**映像**功能表。  
   
- **目標影像類型**  
- 列出可用的影像類型。  請選取您要開啟的影像類型：  
+ **目標映像類型**  
+ 列出可用的影像類型。 選取您想要開啟的影像類型：  
   
 ||||  
 |-|-|-|  
-|-   16 x 16，16 色|-   48 x 48，16 色|-   96 x 96，16 色|  
-|-   16 x 16，256 色|-   48 x 48，256 色|-   96 x 96，256 色|  
-|-   16 x 16，單色|-   48 x 48，單色|-   96 x 96，單色|  
-|-   32 x 32，16 色|-   64 x 64，16 色||  
-|-   32 x 32，256 色|-   64 x 64，256 色||  
-|-   32 x 32，單色|-   64 x 64，單色||  
+|-16 x 16，16 個色彩|-48 x 48，16 個色彩|-96 x 96，16 個色彩|  
+|-16x16、 256 色|-48 x 48 256 色|-96 x 96 256 色|  
+|-16 x 16，單色|-48 x 48，單色|-96 x 96，單色|  
+|-32 x 32、 16 個色彩|-64 x 64，16 個色彩||  
+|-32 x 32、 256 色|-64 x 64、 256 色||  
+|-32 x 32、 單色|-64 單色 x64||  
   
 > [!NOTE]
->  這份清單中將不會顯示任何現有的影像。  
+>  這份清單中，將不會顯示任何現有的映像。  
   
- **Custom**  
- 開啟[自訂影像對話方塊](../mfc/custom-image-dialog-box-image-editor-for-icons.md)，您可在其中以自訂的大小和色彩數建立新的影像。  
+ **自訂**  
+ 開啟[自訂影像對話方塊](custom-image-dialog-box-image-editor-for-icons.md)在其中您可以建立新的映像的自訂大小與色彩數目。  
   
-## 需求  
- None  
+## <a name="requirements"></a>需求  
+ 無  
   
-## 請參閱  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [影像功能表](../mfc/image-menu-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [圖示和游標： 顯示裝置的影像資源](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [影像功能表](../windows/image-menu-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)

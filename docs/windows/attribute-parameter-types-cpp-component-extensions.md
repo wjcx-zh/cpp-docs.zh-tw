@@ -1,29 +1,30 @@
 ---
-title: "Attribute Parameter Types  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "custom attributes, parameter types"
+title: "屬性參數類型 （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, parameter types
 ms.assetid: d9f127a3-7f08-456f-acc6-256805632712
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 95e7ec4d1a4a6b473419c23b3565fcce9d5afed6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Attribute Parameter Types  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-值傳遞至屬性必須在編譯時期編譯器知道。屬性參數可以是下列型別:  
+# <a name="attribute-parameter-types--c-component-extensions"></a>屬性參數類型 (C++ 元件擴充功能)
+在編譯時期，編譯器必須能辨識傳遞至屬性的值。  屬性參數可以是下列其中一種類型：  
   
 -   `bool`  
   
@@ -41,7 +42,7 @@ manager: "ghogen"
   
 -   `wchar_t`  
   
--   `char*` 或 `wchar_t*` 或 `System::String*`  
+-   `char*`、`wchar_t*` 或 `System::String*`  
   
 -   `System::Type ^`  
   
@@ -49,9 +50,9 @@ manager: "ghogen"
   
 -   `enum`  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // attribute_parameter_types.cpp  
@@ -74,12 +75,12 @@ ref struct MyStruct {
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 當指定屬性時，所有未命名的 \(位置\) 引數必須在任何具名引數之前。  
+### <a name="description"></a>描述  
+ 當指定屬性時，所有未命名的 (位置) 引數都必須放在任何具名引數前面。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // extending_metadata_c.cpp  
@@ -107,12 +108,12 @@ ref class ClassC {};   // Positional argument
 ref class ClassD {};   // Positional and named  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 屬性參數可以是上一個型別的一維陣列。  
+### <a name="description"></a>描述  
+ 屬性參數可以是前述類型的一維陣列。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // extending_metadata_d.cpp  
@@ -129,5 +130,5 @@ public ref struct ABC : public Attribute {
 ref struct AStruct{};  
 ```  
   
-## 請參閱  
- [User\-Defined Attributes](../windows/user-defined-attributes-cpp-component-extensions.md)
+## <a name="see-also"></a>請參閱  
+ [使用者定義的屬性](../windows/user-defined-attributes-cpp-component-extensions.md)

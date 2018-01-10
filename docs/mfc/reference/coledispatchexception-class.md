@@ -27,11 +27,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e25d83c2ae91424e80b07282bc5967a34745f412
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d90c59e4f85c871c113e51063ef1d50997bb508b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledispatchexception-class"></a>COleDispatchException 類別
 處理 OLE `IDispatch` 介面 (OLE Automation 的主要部分) 特定的例外狀況。  
@@ -42,11 +43,11 @@ ms.lasthandoff: 10/24/2017
 class COleDispatchException : public CException  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|錯誤的說明內容。|  
 |[COleDispatchException::m_strDescription](#m_strdescription)|口頭錯誤描述。|  
@@ -124,7 +125,7 @@ WORD m_wCode;
 ### <a name="remarks"></a>備註  
  這個成員由函式設定[AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception)時擲回例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)   
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

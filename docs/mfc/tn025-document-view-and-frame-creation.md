@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da86912b6d5ec1989d55cf6bffbee9732722f8e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89ca395b19a36c42163b854c8997cce424352ead
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn025-document-view-and-frame-creation"></a>TN025：文件、檢視和框架建立
 > [!NOTE]
@@ -71,7 +72,7 @@ AddDocTemplate(pTemplate);
   
  若是 MDI 框架視窗，工作區中會填入 MDICLIENT 控制項，該控制項會是所有 MDI 子框架視窗的父項。 若是 SDI 框架視窗或 MDI 子框架視窗，工作區中通常會填入 `CView` 衍生的視窗物件。 若是使用 `CSplitterWnd`，檢視的工作區中會填入 `CSplitterWnd` 視窗物件，而 `CView` 衍生的視窗物件 (每分割窗格有一個物件) 會建立為 `CSplitterWnd` 的子視窗。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

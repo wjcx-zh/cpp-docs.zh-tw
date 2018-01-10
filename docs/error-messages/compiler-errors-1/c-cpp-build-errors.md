@@ -1,11 +1,10 @@
 ---
 title: "C/c + + 建置錯誤 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -186,7 +185,6 @@ f1_keywords:
 - LNK4020
 - LNK4030
 - LNK4031
-- LNK4037
 - LNK4038
 - LNK4040
 - LNK4041
@@ -302,52 +300,31 @@ f1_keywords:
 - R6022
 - R6023
 - R6034
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - builds [C++], errors
 - errors [C++]
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1a370ddc7c314cae0cb1a048cacb704480525b0a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>C/C++ 建置錯誤
-本文件的這一節文章說明建置工具所產生的錯誤訊息。 [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] 編譯器及建置工具可以報告許多類型的錯誤和警告。 建置工具可能會對程式碼意圖做假設，並嘗試在發現錯誤或警告後繼續尋找，以便同時報告更多問題。 如果工具做的假設有誤，那麼後來的錯誤或警告可能不適用於您的專案。 當您更正專案中的問題時，務必從所報告的第一個錯誤或警告開始進行。  
-  
- 若要取得 Visual Studio 中的特定錯誤訊息的說明，請選取 中的錯誤代碼**輸出**視窗並按下 F1 鍵開啟 MSDN 頁面該錯誤。 您也可以在 MSDN 中搜尋有關錯誤的文章，或在巡覽窗格中瀏覽依分類列出的錯誤清單。  
-  
-> [!NOTE]
->  並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤或警告會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio)。  
-  
- 您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。  
-  
- 如需其他資源連結[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]，請參閱[Visual c + + 說明和社群](../../visual-cpp-help-and-community.md)。  
-  
-## <a name="see-also"></a>另請參閱  
- [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
- [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)
+
+文件的本節文章說明診斷錯誤和建置工具所產生的警告訊息。
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>另請參閱
+
+[C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
+[Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)

@@ -1,32 +1,33 @@
 ---
-title: "db_param | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.db_param"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "db_param attribute"
+title: "db_param |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.db_param
+dev_langs: C++
+helpviewer_keywords: db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b5224c406f6e10cd4ef9f0ed64fbdbd7c5cc8e62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# db_param
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將指定的成員變數以輸入或輸出參數相關聯，用來分隔的變數。  
+# <a name="dbparam"></a>db_param
+關聯的輸入或輸出參數中指定的成員變數，分隔的變數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -41,47 +42,47 @@ caps.handback.revision: 11
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `ordinal`  
- 資料行編號 \(**DBCOLUMNINFO** 序數\) 對應到要將資料繫結至資料列集的欄位。  
+ 資料行數目 (**DBCOLUMNINFO**序數) 對應至要將資料繫結至資料列集中的欄位。  
   
- *paramtype*  \(可省略\)  
- 若要設定的參數型別。  提供者都會支援僅 I\/O 的參數型別所支援的基礎資料來源。  型別是組合的一或多 **DBPARAMIOENUM** 的值：  
+ *paramtype* （選擇性）  
+ 要設定參數的類型。 提供者只支援參數 I/O 類型所支援的基礎資料來源。 型別是一或多個組合**DBPARAMIOENUM**值：  
   
--   **DBPARAMIO\_INPUT** 的輸入的參數。  
+-   **DBPARAMIO_INPUT** ：輸入參數。  
   
--   **DBPARAMIO\_OUTPUT** 輸出參數。  
+-   **DBPARAMIO_OUTPUT** ：輸出參數。  
   
--   **DBPARAMIO\_NOTPARAM** 的存取子擁有無參數。  設定 **eParamIO** 這個資料列中的值來存取子提醒使用者參數會被忽略。  
+-   **DBPARAMIO_NOTPARAM** ：存取子沒有參數。 設定**eParamIO**這個值以資料列存取子會提醒使用者參數被忽略。  
   
- *dbtype*  \(可省略\)  
- OLE DB [型別指示器](https://msdn.microsoft.com/en-us/library/ms711251.aspx)的資料行的項目。  
+ *dbtype* （選擇性）  
+ OLE DB[類型指標](https://msdn.microsoft.com/en-us/library/ms711251.aspx)的資料行項目。  
   
- *精確度* \(可省略\)  
- 資料行的項目所使用的整數位數。  如需詳細資訊，請參閱說明 **bPrecision** 中的項目 [DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *有效位數*（選擇性）  
+ 要用於資料行項目有效位數。 如需詳細資訊，請參閱描述**bPrecision**元素[DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *小數位數* \(可省略\)  
- 要用於資料行的項目小數位數。  如需詳細資訊，請參閱說明 **bScale** 中的項目 [DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
+ *標尺*（選擇性）  
+ 要用於資料行項目小數位數。 如需詳細資訊，請參閱描述**bScale**元素[DBBINDING 結構](https://msdn.microsoft.com/en-us/library/ms716845.aspx)  
   
- *狀態* \(可省略\)  
- 成員變數，用來存放本篇文章中的狀態。  狀態表示資料行的值是否為資料值或某些其他值，例如 **NULL**。  可能的值，請參閱[狀態](https://msdn.microsoft.com/en-us/library/ms722617.aspx) 在  *OLE DB 程式設計人員參考*。  
+ *狀態*（選擇性）  
+ 成員變數，用來容納此資料行的狀態。 狀態指出資料行值是否為資料值或其他值，例如**NULL**。 可能的值，請參閱[狀態](https://msdn.microsoft.com/en-us/library/ms722617.aspx)中*OLE DB 程式設計人員參考*。  
   
- *長度* \(可省略\)  
- 成員變數，用來存放資料行的大小，以位元組為單位。  
+ *長度*（選擇性）  
+ 成員變數，用來保存資料行的大小，以位元組為單位。  
   
-## 備註  
- **db\_param** 會定義您所使用的參數中命令的方式。 因此您使用與 **db\_command**。  例如，您可以使用 **db\_param** SQL 的查詢或預存程序中的參數的繫結。  問號 \(?\)、 標示出來的預存程序中的參數，您應該參數的顯示的順序中繫結的資料成員。  
+## <a name="remarks"></a>備註  
+ **db_param**定義參數，您在命令中使用，因此使用它與**db_command**。 例如，您可以使用**db_param**繫結中的 SQL 查詢或預存程序的參數。 以問號 （？），代表預存程序中的參數，您應該將資料成員繫結的參數會出現的順序。  
   
- **db\_param** 用來分隔成員資料是以 OLE DB 可參與`ICommandWithParameters`\-根據繫結。  它會將參數型別 \(輸入或輸出\)、 OLE DB 型別、 整數位數、 小數位數、 狀態和長度為指定的參數。  這個屬性會插入 OLE DB 消費者巨集 BEGIN\_PARAM\_MAP...  END\_PARAM\_MAP。  您將標記與每個成員 **db\_param** 屬性將佔用的 COLUMN\_ENTRY 形式對應中的一個項目。  
+ **db_param**分隔可以參與 OLE DB 中的成員資料`ICommandWithParameters`-基礎繫結。 它會設定參數類型 （輸入或輸出）、 OLE DB 類型、 有效位數、 小數位數、 狀態和長度為指定的參數。 這個屬性會插入 OLE DB 取用者巨集 BEGIN_PARAM_MAP...END_PARAM_MAP。 您將標記與每個成員**db_param**屬性會佔用 COLUMN_ENTRY 表單中的對應中的一個項目。  
   
- **db\_param** 為一起使用，  [db\_table](../windows/db-table.md) 或 [db\_command](../windows/db-command.md) 屬性。  
+ **db_param**搭配使用其中一種[db_table](../windows/db-table.md)或[db_command](../windows/db-command.md)屬性。  
   
- 當消費者屬性提供者會將這個屬性套用至類別時，編譯器將類別重新指定成 \_*YourClassName*存取子，其中  *YourClassName* 是類別的名稱，而且編譯器也會建立一個名為 *YourClassName，* 衍生 \_*YourClassName*存取子。  在 \[類別檢視\] 中，您會看到這兩個類別。  
+ 當取用者屬性提供者會將此屬性套用至類別中時，編譯器會重新命名的類別\_ *YourClassName*存取子，其中*YourClassName*是為您提供的名稱類別，而編譯器也會建立一種類別稱為*YourClassName*，其衍生自\_ *YourClassName*存取子。  在 [類別] 檢視中，您會看到這兩個類別。  
   
-## 範例  
- 下列範例會建立根據 SalesbyYear 預存程序，在 Northwind 資料庫的指令類別。  它將相關聯的預存程序的第一個參數`m_RETURN_VALUE`變數，並定義它為輸出參數。  它將相關聯的 \(輸入\) 的最後兩個參數，與`m_Beginning_Date`和`m_Ending_Date`。  
+## <a name="example"></a>範例  
+ 下列範例會建立 Northwind 資料庫中的 SalesbyYear 預存程序為基礎的命令類別。 它產生關聯的預存程序的第一個參數`m_RETURN_VALUE`變數，並將其定義為 output 參數。 它產生關聯的 （輸入） 的最後兩個參數，與`m_Beginning_Date`和`m_Ending_Date`。  
   
- 下列範例將`nOutput`變數使用輸出參數。  
+ 下列範例將`nOutput`變數以輸出參數。  
   
 ```  
 // db_param.cpp  
@@ -117,19 +118,18 @@ struct CSalesbyYear {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**， `struct`，成員、 方法、 本機|  
+|**適用於**|**class**、 `struct`、member、method、local|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [OLE DB Consumer Attributes](../windows/ole-db-consumer-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [OLE DB 消費者屬性](../windows/ole-db-consumer-attributes.md)   

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57ac3b4221beee40255aee9f5cb3b3e1eee551f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c94bd3a31d74f2870ae2016bf734739da212c3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-dialog-resource"></a>建立對話方塊資源
 設計[對話方塊](../mfc/dialog-boxes.md)並且建立對話方塊資源，則使用[對話方塊編輯器](../windows/dialog-editor.md)。 在對話方塊編輯器中，您可以：  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
  對話方塊的外觀，最適合您，當建立對話方塊類別並對應其訊息，如所述[使用程式碼精靈建立對話方塊類別](../mfc/creating-a-dialog-class-with-code-wizards.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

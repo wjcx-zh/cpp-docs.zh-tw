@@ -25,11 +25,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c7411a11a396627fb01d1dad1d47dc957ce968a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 960da86c5ae3efa0cb50077becfb526000f71b4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autoptr-class"></a>auto_ptr 類別
 以智慧型指標包裝資源，確保當控制離開區塊時，會自動終結該資源。  
@@ -73,7 +74,7 @@ public:
   
  您可以將 `auto_ptr<Type>` 物件當做函式呼叫的引數，以傳值方式來傳遞。 `auto_ptr` 不能是任何標準程式庫容器的項目。 您無法透過 C++ 標準程式庫容器可靠地管理一系列的 `auto_ptr<Type>` 物件。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -85,7 +86,7 @@ public:
   
 |||  
 |-|-|  
-|[element_type](#element_type)|此類型是樣板參數 `Type` 的同義字。|  
+|[element_type](#element_type)|此類型是範本參數 `Type`的同義字。|  
   
 ### <a name="member-functions"></a>成員函式  
   
@@ -521,7 +522,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [unique_ptr 類別](../standard-library/unique-ptr-class.md)
 

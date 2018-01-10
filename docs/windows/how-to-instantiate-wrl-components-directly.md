@@ -1,59 +1,62 @@
 ---
-title: "如何：直接執行個體化 WRL 元件 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "如何： 直接執行個體化 WRL 元件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f2d307304c103b62ff5ba20e1af25797745bd035
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：直接執行個體化 WRL 元件
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-了解如何使用 [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)]\([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\)[Microsoft::WRL::Make](../windows/make-function.md)和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)這兩隻函式，從定義元件的模組中具現化元件。  
+# <a name="how-to-instantiate-wrl-components-directly"></a>如何：直接執行個體化 WRL 元件
+了解如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL)[Microsoft::WRL::Make](../windows/make-function.md)和[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)函式來具現化元件，以從模組，定義它。  
   
- 您可以直接具現化元件，在您不需要 Class Factory 或其他機制時來減少額外負荷。  您可以在 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式與傳統型應用程式中直接具現化元件。  
+ 藉由直接執行個體化元件，您可以減少額外負荷時，不需要 class factory 或其他機制。 您可以直接在兩個通用 Windows 平台應用程式和桌面應用程式中的元件具現化。  
   
- 若要了解如何使用 [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] 建立基本 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 元件，以及從外部 [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] 應用程式具現化，請參閱 [逐步解說：建立基本 Windows 執行階段元件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)。  若要了解如何使用 [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] 建立典型COM 元件，以及從外部傳統型應用程式具現化，請參閱 [如何：建立傳統 COM 元件](../windows/how-to-create-a-classic-com-component-using-wrl.md) 。  
+ 若要深入了解如何使用 Windows 執行階段 c + + 樣板程式庫來建立基本 Windows 執行階段元件和外部的通用 Windows 平台應用程式具現化，請參閱[逐步解說： 建立基本 Windows 執行階段元件](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)。 若要深入了解如何使用 Windows 執行階段 c + + 樣板程式庫建立傳統 COM 元件，並從外部的桌面應用程式具現化，請參閱[How to： 建立傳統 COM 元件](../windows/how-to-create-a-classic-com-component-using-wrl.md)。  
   
- 這個文件顯示兩個範例。  第一個範例會使用 `Make` 函式產生元件。  第二個範例會使用 `MakeAndInitialize` 函式具現化在建構期間可能會失敗的元件。\(由於 COM 一般會使用 `HRESULT` 值取代例外狀況來表示錯誤， COM 型別通常不會從它的建構函式擲回。  `MakeAndInitialize` 可讓元件透過 `RuntimeClassInitialize` 方法驗證其建構函式引數\)。以上兩個範例皆會定義基本記錄器介面，並藉由定義會寫入訊息至主控台的類別實作該介面。  
+ 這份文件會顯示兩個範例。 第一個範例會使用`Make`函式來具現化元件。 第二個範例會使用`MakeAndInitialize`函式來具現化可能會在建構期間失敗的元件。 (因為通常會使用 COM`HRESULT`值，而不是例外狀況，來指出錯誤，COM 型別通常不會擲回從其建構函式。 `MakeAndInitialize`可讓元件以驗證其建構引數到`RuntimeClassInitialize`方法。)這兩個範例會定義基本記錄器介面，並藉由定義將訊息寫入主控台的類別中實作該介面。  
   
 > [!IMPORTANT]
->  您不能使用 `new` 運算子執行個體化 [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] 元件。  因此，建議您一律使用 `Make` 或 `MakeAndInitialize` 直接產生元件。  
+>  您無法使用`new`運算子來具現化的 Windows 執行階段 c + + 樣板程式庫元件。 因此，我們建議一律使用`Make`或`MakeAndInitialize`來具現化元件直接。  
   
-### 建立及初始化基本記錄器元件  
+### <a name="to-create-and-instantiate-a-basic-logger-component"></a>建立及具現化基本記錄器元件  
   
-1.  在 Visual Studio 中建立**Win32 主控台應用程式**專案。  命名專案，例如`WRLLogger`。  
+1.  在 Visual Studio 中建立**Win32 主控台應用程式**專案。 為專案命名，例如`WRLLogger`。  
   
-2.  將 \[**Midl 檔案 \(.idl\)**\] 檔案加到專案，並將檔案命名為 `ILogger.idl`，然後將下列程式碼：  
+2.  新增**Midl 檔 (.idl)**檔案加入專案中，將檔案命名`ILogger.idl`，然後新增此程式碼：  
   
      [!code-cpp[wrl-logger-make#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_1.idl)]  
   
-3.  以下列程式碼取代 WRLLogger.cpp 的內容：  
+3.  您可以使用下列程式碼取代 WRLLogger.cpp 的內容。  
   
      [!code-cpp[wrl-logger-make#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_2.cpp)]  
   
-### 處理基本記錄器元件的建構失敗  
+### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>若要處理基本記錄器元件的建構失敗  
   
-1.  以下列程式碼取代 `CConsoleWriter` 類別的定義。  此版本保留私用字串成員變數並覆寫 `RuntimeClass::RuntimeClassInitialize` 方法。  如果對 `SHStrDup` 的呼叫失敗，`RuntimeClassInitialize` 會失敗。  
+1.  使用下列程式碼的定義取代`CConsoleWriter`類別。 這個版本會保留私用 string 成員變數和覆寫`RuntimeClass::RuntimeClassInitialize`方法。 `RuntimeClassInitialize`如果失敗的呼叫`SHStrDup`失敗。  
   
      [!code-cpp[wrl-logger-makeandinitialize#1](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]  
   
-2.  將 `wmain` 的定義替換成下列程式碼。  這個版本使用 `MakeAndInitialize` 具現化 `CConsoleWriter` 物件並檢查 `HRESULT` 結果。  
+2.  使用下列程式碼的定義取代`wmain`。 此版本使用`MakeAndInitialize`來具現化`CConsoleWriter`物件並檢查`HRESULT`結果。  
   
      [!code-cpp[wrl-logger-makeandinitialize#2](../windows/codesnippet/CPP/how-to-instantiate-wrl-components-directly_4.cpp)]  
   
-## 請參閱  
- [Windows Runtime C\+\+ Template Library \(WRL\)](../windows/windows-runtime-cpp-template-library-wrl.md)   
+## <a name="see-also"></a>請參閱  
+ [Windows 執行階段 c + + 樣板程式庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [Microsoft::WRL::Make](../windows/make-function.md)   
  [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)

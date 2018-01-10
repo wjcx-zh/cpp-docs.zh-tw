@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b1b537685097d5574f85f7754c2283a682be56c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5deea89ccc9c340537b1b33563455ea91b46fe8b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpropexchange-class"></a>CPropExchange 類別
 支援 OLE 控制項的永續性實作。  
@@ -48,11 +49,11 @@ ms.lasthandoff: 10/24/2017
 class AFX_NOVTABLE CPropExchange  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|交換的二進位大型物件 (BLOB) 的屬性。|  
 |[CPropExchange::ExchangeFontProp](#exchangefontprop)|交換的字型屬性。|  
@@ -271,7 +272,7 @@ BOOL IsLoading();
 ### <a name="return-value"></a>傳回值  
  正在載入內容; 如果為非零否則便是 0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
 

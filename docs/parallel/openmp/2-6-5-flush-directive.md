@@ -1,27 +1,27 @@
 ---
-title: "2.6.5 flush Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.6.5 flush 指示詞 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a2ec5f74-9c37-424a-8376-47ab4a5829a2
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7607070692941606b863be9248b2d69f093f3a13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.5 flush Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**排清**指示詞，無論是外顯或隱含的會指定"跨執行緒"序列點的實作，才能確保小組中的所有執行緒都具有一致 \(下述\) 在記憶體中特定物件的檢視。  這表示前一個評估的運算式參考這些物件都已完成，而且還沒有開始後續的評估。  例如，編譯器必須還原從暫存器物件的值到記憶體，而硬體可能需要清除記憶體的寫入緩衝區並重新載入記憶體中物件的值。  
+# <a name="265-flush-directive"></a>2.6.5 flush 指示詞
+**排清**指示詞，是否明確或隱含的請指定"跨執行緒 「 序列點的實作，才能確保小組中的所有執行緒都有一致 （下方） 中指定特定物件的檢視記憶體。 這表示上一個評估的運算式參考那些物件都已完成，而且還沒有開始後續評估。 例如，編譯器必須從暫存器物件的值還原記憶體中，並且硬體可能需要排清寫入緩衝區的記憶體，並重新載入記憶體中物件的值。  
   
  語法**排清**指示詞時，如下所示：  
   
@@ -29,17 +29,17 @@ manager: "ghogen"
 #pragma omp flush [(variable-list)]  new-line  
 ```  
   
- 如果需要進行同步處理的物件所有被指定的變數，那麼這些變數可指定在選擇性的*變數清單*。  如果變數的指標出現在*變數清單*、 清除指標本身、 非物件指標參考。  
+ 如果需要同步處理的物件，即可所有指定的變數，則您可以指定那些變數中選擇性*變數清單*。 如果指標位於*變數清單*，指標本身會排清，不是物件指標參考。  
   
- A **排清** 指示詞，而不 *變數清單*自動存放工期與同步處理所有的共用物件，但無法存取的物件。  \(這是可能有更多的額外負荷，比**排清** 與 *變數清單*。\) A **排清** 指示詞，而不 *變數清單*隱含的下列指示詞：  
+ A**排清**指示詞沒有*變數清單*有自動儲存期，所有共用的物件，但無法存取的物件不會同步處理。 (這是可能有更多成本負擔比**排清**與*變數清單*。)A**排清**指示詞沒有*變數清單*隱含的下列指示詞：  
   
 -   `barrier`  
   
--   在進入和離開**要徑**  
+-   在進入和結束**重大**  
   
--   在進入和離開`ordered`  
+-   在進入和結束`ordered`  
   
--   在進入和離開**平行**  
+-   在進入和結束**平行**  
   
 -   在結束**的**  
   
@@ -47,23 +47,23 @@ manager: "ghogen"
   
 -   在結束**單一**  
   
--   在進入和離開**的平行**  
+-   在進入和結束**平行的**  
   
--   在進入和離開**平行的區段**  
+-   在進入和結束**平行區段**  
   
- 如果不表示該指示詞`nowait`子句會出現。  請注意， **排清**指示詞不會表示為下列其中一項：  
+ 如果指示詞都沒有隱含`nowait`子句。 請注意，**排清**指示詞沒有隱含的下列其中一項：  
   
 -   在進入**的**  
   
--   在進入或離開**母片**  
+-   在項目或從結束**master**  
   
 -   在進入**區段**  
   
 -   在進入**單一**  
   
- 存取的暫時性限定的型別物件值的參考就會當做有**排清**指示詞指定該物件在先前的序列點。  修改與靜態限定的型別物件的值的參考就會當做沒有**排清**指示詞指定該物件在後續的序列點。  
+ 存取具有 volatile 限定類型物件的值參考行為會如同沒有**排清**指示詞指定的物件，在前一個序列點。 修改的物件具有 volatile 限定類型的值參考行為會如同沒有**排清**指示詞指定該物件在後續的序列點。  
   
- 請注意，因為**排清**指示詞並沒有 c 語言陳述式做為其語法的一部分，有一些限制，在程式中的位置上。  請參閱 [＜ 附錄 c](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) 的正式的文法。  下列範例會示範這些限制。  
+ 請注意，因為**排清**指示詞沒有 C 語言陳述式，其語法的一部分，有一些限制，在程式中的位置。 請參閱[旓紵 C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md)正式文法。 下列範例會示範這些限制。  
   
 ```  
 /* ERROR - The flush directive cannot be the immediate  
@@ -83,4 +83,4 @@ if (x!=0) {
   
  若要限制**排清**指示詞如下：  
   
--   在指定的變數**排清**指示詞不可以有參考型別。
+-   中指定的變數**排清**指示詞不能參考型別。

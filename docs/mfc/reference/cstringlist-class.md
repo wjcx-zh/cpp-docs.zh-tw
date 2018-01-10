@@ -61,11 +61,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 160f85f402ee7f44f348bcb4e2ca1ed59e3b0e22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e22677bd88fe9e39b8c36734a9e5f3596c1a1224
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringlist-class"></a>CStringList 類別
 支援 `CString` 物件的清單。  
@@ -95,13 +96,13 @@ class CStringList : public CObject
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|建構空的清單。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|新增項目 （或另一個清單中的所有項目） 標頭的清單 （可讓新的標頭）。|  
 |[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|加入的清單 （可讓新的結尾） 的結尾的項目 （或另一個清單中的所有項目）。|  
@@ -142,7 +143,7 @@ class CStringList : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcoll.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

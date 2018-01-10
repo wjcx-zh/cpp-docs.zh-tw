@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3fa561d28ec402e631833310cdd76ecf41beef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0359a6cbbb1f646432b03722cdf4ba3010cffa72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-passing"></a>參數傳遞
 前四個整數引數會傳入暫存器。 整數值會在 RCX、 RDX、 R8 和 R9 中傳遞 （在由左到右的順序）。 五個引數和更新版本會在堆疊上傳遞。 所有引數是在暫存器中靠右對齊。 這是讓被呼叫端可以略過暫存器的較高的位元，如果需要可以存取暫存器所需的部分。  
@@ -68,5 +69,5 @@ func4(__m64 a, _m128 b, struct c, float d);
 // a in RCX, ptr to b in RDX, ptr to c in R8, d in XMM3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [呼叫慣例](../build/calling-convention.md)

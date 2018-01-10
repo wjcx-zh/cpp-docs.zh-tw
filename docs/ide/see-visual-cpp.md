@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25dc28c993289942d0eafd2f20fb5c849f1658c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15e1aedefe6d20c181ff208f76a61f49e15f5214
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltseegt-visual-c"></a>&lt;請參閱&gt;（Visual c + +）
 \<see> 標記可讓您在文字內指定連結。 使用[ \<seealso >](../ide/seealso-visual-cpp.md)表示您可能想要出現在另請參閱 > 一節中的文字。  
@@ -75,5 +76,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

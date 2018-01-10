@@ -1,120 +1,130 @@
 ---
-title: "非同步代理程式程式庫中的最佳做法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "最佳做法, 非同步代理程式程式庫"
-  - "非同步代理程式程式庫, 最佳做法"
-  - "非同步代理程式程式庫, 要避免的做法"
-  - "要避免的做法, 非同步代理程式程式庫"
+title: "最佳做法，非同步代理程式的文件庫中 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- best practices, Asynchronous Agents Library
+- Asynchronous Agents Library, best practices
+- Asynchronous Agents Library, practices to avoid
+- practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a8d4b52839675334ab343adf48790bdce390dd5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 非同步代理程式程式庫中的最佳做法
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本文件說明非同步代理程式程式庫的有效用法。  代理程式程式庫可提升以行動為基礎的程式撰寫模型，以及針對粗略資料流程和管線工作的同處理序訊息傳遞。  
+# <a name="best-practices-in-the-asynchronous-agents-library"></a>非同步代理程式程式庫中的最佳做法
+本文件說明如何有效地運用非同步代理程式程式庫。 以行動為基礎程式設計的模型和同處理序訊息傳遞，以進行粗略的資料流程和管線工作，將會升級代理程式程式庫。  
   
- 如需代理程式程式庫的詳細資訊，請參閱[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)。  
+ 如需有關代理程式程式庫的詳細資訊，請參閱[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)。  
   
 ##  <a name="top"></a> 章節  
- 本文件包括下列章節：  
+ 本文件包含下列章節：  
   
--   [使用代理程式隔離狀態](#isolation)  
+- [使用隔離狀態的代理程式](#isolation)  
   
--   [使用節流機制來限制資料管線中的訊息數目](#throttling)  
+- [使用節流機制，來限制在資料管線中的訊息數目](#throttling)  
   
--   [不要在資料管線中執行精細工作](#fine-grained)  
+- [不會在資料管線中執行更細緻的工作](#fine-grained)  
   
--   [不要以傳值方式傳遞大型訊息裝載](#large-payloads)  
+- [不傳值方式傳遞大型訊息承載](#large-payloads)  
   
--   [當擁有權未定義時，在資料網路中使用 shared\_ptr](#ownership)  
+- [Shared_ptr 用於資料網路時擁有權是未定義](#ownership)  
   
-##  <a name="isolation"></a> 使用代理程式隔離狀態  
- 代理程式程式庫可讓您透過非同步訊息傳遞機制來連接隔離的元件，以共用狀態以外的形式作業。  非同步代理程式在將其內部狀態與其他元件隔離時最有效。  藉由隔離狀態，多個元件通常不會作用於共用資料。  狀態隔離可讓您的應用程式延展，因為它會減少共用記憶體爭用。  狀態隔離也會減少死結和競爭條件的機率，因為元件不必同步處理對共用資料的存取。  
+##  <a name="isolation"></a>使用隔離狀態的代理程式  
+ 代理程式程式庫會提供共用狀態的替代方案，可讓您透過非同步的訊息傳遞機制連接獨立的元件。 當它們隔離其內部狀態的其他元件時，非同步代理程式時最有效。 藉由隔離狀態，多個元件不通常會在共用資料。 狀態隔離，可以啟用您的應用程式延展，因為它會減少競爭情況共用記憶體。 隔離狀態也會減少死結和競爭情形的機會，因為元件不需要同步處理對共用資料的存取。  
   
- 您通常藉由將資料成員保存在代理程式類別的 `private` 或 `protected` 區段中，或藉由使用訊息緩衝區溝通狀態變更，在代理程式中隔離狀態。  下列範例示範衍生自 [concurrency::agent](../../parallel/concrt/reference/agent-class.md) 類別的 `basic_agent` 類別。  `basic_agent` 類別使用兩個訊息緩衝區，與外部元件通訊。  一個訊息緩衝區保存傳入訊息，另一個訊息緩衝區則保存外寄訊息。  
+ 您通常隔離中代理程式狀態資料成員中的，按住`private`或`protected`的代理程式類別和訊息緩衝區使用通訊狀態變更。 下列範例所示`basic_agent`類別，衍生自[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)。 `basic_agent`類別用來與外部元件通訊的兩個訊息的緩衝區。 一個訊息緩衝區會保存內送訊息。其他訊息緩衝區會保存外寄訊息。  
   
- [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_1.cpp)]  
+ [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]  
   
- 如需如何定義及使用代理程式的完整範例，請參閱[逐步解說：建立代理程式架構應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)和[逐步解說：建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)。  
+ 如需有關如何定義及使用代理程式的完整範例，請參閱[逐步解說： 建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)和[逐步解說： 建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)。  
   
- \[[上方](#top)\]  
+ [[靠上](#top)]  
   
-##  <a name="throttling"></a> 使用節流機制來限制資料管線中的訊息數目  
- 許多訊息緩衝區類型 \(例如 [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md)\) 都會保存不限數目的訊息。  當訊息生產者傳送訊息至資料管線的速度比消費者處理這些速度更快時，應用程式可能會進入記憶體不足或記憶體用完狀態。  您可以使用節流機制 \(例如信號\)，限制資料管線中同時使用的訊息數目。  
+##  <a name="throttling"></a>使用節流機制，來限制在資料管線中的訊息數目  
+ 許多訊息緩衝區類型，例如[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)，可以保留無限的數量的訊息。 當訊息產生者在資料管線來傳送訊息的速度快過取用者可以處理這些訊息時，應用程式進入低記憶體或記憶體不足的狀態。 您可以使用節流機制，例如，一個號誌，來限制同時作用中，在資料管線中的訊息數目。  
   
- 在下列基本範例中，會示範如何使用信號來限制資料管線中的訊息數目。  資料管線使用 [concurrency::wait](../Topic/wait%20Function.md) 函式，模擬所需時間至少為 100 毫秒的作業。  因為傳送者產生訊息的速度比消費者處理這些訊息更快，所以這個範例定義了 `semaphore` 類別，讓應用程式限制使用中訊息的數目。  
+ 下列基本範例示範如何使用來限制在資料管線中的訊息數目的信號。 資料管線會使用[concurrency:: wait](reference/concurrency-namespace-functions.md#wait)函式來模擬的作業採用至少 100 毫秒。 這個範例會定義傳送者產生訊息的速度快過取用者可以處理這些訊息，因為`semaphore`類別，讓應用程式的作用中訊息數目限制。  
   
- [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_2.cpp)]  
+ [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_2.cpp)]  
   
- `semaphore` 物件會限制管線每次最多處理兩則訊息。  
+ `semaphore`物件限制管線來處理最多兩個訊息一次。  
   
- 在這個範例中，生產者會將相當少的訊息傳送給消費者。  因此，這個範例不會示範潛在的記憶體不足或記憶體用完狀況。  不過，當資料管線包含相當大量的訊息時，這個機制很實用。  
+ 在此範例中生產者傳送給取用者的相對較少的訊息。 因此，此範例不示範潛在的記憶體不足或記憶體不足的狀況。 不過，這項機制時，在資料管線包含相對較高的訊息數目。  
   
- 如需如何建立這個範例中所用信號類別的詳細資訊，請參閱 [如何：使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。  
+ 如需如何在此範例中建立信號類別所使用的詳細資訊，請參閱[How to： 使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。  
   
- \[[上方](#top)\]  
+ [[靠上](#top)]  
   
-##  <a name="fine-grained"></a> 不要在資料管線中執行精細工作  
- 當資料管線所執行的工作相當粗略時，代理程式程式庫最實用。  例如，某個應用程式元件可能從檔案或網路連接中讀取資料，並偶爾將該資料傳送至另一個元件。  代理程式程式庫用來傳播訊息的通訊協定會導致訊息傳遞機制的額外負荷大於[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md) \(PPL\) 所提供的工作平行建構。  因此，請確定資料管線所執行的工作所需時間夠長，足以抵銷此額外負荷。  
+##  <a name="fine-grained"></a>不會在資料管線中執行更細緻的工作  
+ 在資料管線所執行的工作時相當廣泛，代理程式程式庫便最有用。 例如，一個應用程式元件可能會從檔案或網路連線讀取資料，以及偶爾會將該資料傳送至另一個元件。 代理程式程式庫用來將訊息傳播通訊協定會有更多成本負擔比所提供的工作平行建構的訊息傳遞機制[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)。 因此，請確定在資料管線所執行的工作長到足以位移這項負擔。  
   
- 雖然資料管線在其工作是粗略時最有效，但資料管線的每個階段都可以使用 PPL 建構，例如工作群組和平行演算法，來執行更精細的工作。  如需在每個處理階段使用精細平行處理原則之粗略資料網路的範例，請參閱[逐步解說：建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。  
+ 雖然在資料管線最有效粗略其工作時，資料管線各階段可以使用 PPL 建構，例如工作群組和平行演算法來執行更細部的工作。 如需在每個處理階段所使用的細部平行處理原則的粗略資料網路的範例，請參閱[逐步解說： 建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)。  
   
- \[[上方](#top)\]  
+ [[靠上](#top)]  
   
-##  <a name="large-payloads"></a> 不要以傳值方式傳遞大型訊息裝載  
- 在某些情況下，執行階段會針對它從某個訊息緩衝區傳遞至另一個訊息緩衝區的每則訊息建立複本。  例如，[concurrency::overwrite\_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) 類別會針對它所收到的每則訊息，將複本提供給每個目標。  當您使用訊息傳遞函式，例如 [concurrency::send](../Topic/send%20Function.md) 和 [concurrency::receive](../Topic/receive%20Function.md)，對訊息緩衝區寫入訊息及讀取訊息時，執行階段也會建立訊息資料的複本。  雖然這個機制有助於排除同時寫入共用資料的風險，但是當訊息裝載相當大時，它可能會導致記憶體效能降低。  
+##  <a name="large-payloads"></a>不傳值方式傳遞大型訊息承載  
+
+ 在某些情況下，執行階段會建立從一個訊息緩衝區傳遞到另一個訊息緩衝區的每個訊息的複本。 例如， [concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)類別提供每個目標接收到每個訊息的複本。 執行階段也會建立一份訊息資料，當您使用訊息傳遞函式，例如[concurrency:: send](reference/concurrency-namespace-functions.md#send)和[concurrency:: receive](reference/concurrency-namespace-functions.md#receive)寫入訊息至和讀取訊息的訊息緩衝區。 雖然此機制有助於降低同時寫入至共用資料的風險，可能會導致效能不佳的記憶體時相對較大訊息裝載。  
   
- 當您傳遞大型裝載的訊息時，可以使用指標或參考改善記憶體效能。  下列範例比較兩種作法：以傳值方式傳遞大型訊息，以及傳遞相同訊息類型的指標。  範例定義兩個作用於 `message_data` 物件的代理程式類型 `producer` 和 `consumer`。  範例比較生產者傳遞數個 `message_data` 物件至消費者的所需時間與生產者代理程式傳送數個 `message_data` 物件指標至消費者的所需時間。  
+ 您可以使用指標，或改善記憶體效能，當您將訊息傳遞的參考具有大型的裝載。 下列範例會比較傳遞大型訊息所要傳遞至相同的訊息類型的指標值。 這個範例定義兩個代理程式類型，`producer`和`consumer`，作`message_data`物件。 這個範例會比較所需的生產者傳送數個時間`message_data`生產者代理程式傳送數個指標所需的時間讓取用者物件`message_data`給取用者的物件。  
   
- [!code-cpp[concrt-message-payloads#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_3.cpp)]  
+ [!code-cpp[concrt-message-payloads#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_3.cpp)]  
   
- 這個範例 \(Example\) 會產生下列範例 \(Sample\) 輸出：  
+ 這個範例會產生下列輸出範例：  
   
-  **使用 message\_data…**  
-**採用了 437ms。**  
-**使用 message\_data\*…**  
-**採用了 47ms。** 使用指標的版本效能較佳，因為它不需要執行階段針對它從生產者傳遞至消費者的每個 `message_data` 物件建立完整複本。  
+```Output  
+Using message_data...  
+took 437ms.  
+Using message_data*...  
+took 47ms.  
+```  
   
- \[[上方](#top)\]  
+ 使用指標的版本執行得更好它便不需要執行階段建立的完整複本，因為每個`message_data`從生產者傳遞到取用者的物件。  
   
-##  <a name="ownership"></a> 當擁有權未定義時，在資料網路中使用 shared\_ptr  
- 當您透過訊息傳遞管線或網路以指標方式傳送訊息時，通常會在網路前端配置每則訊息的記憶體，而在網路末端釋放該記憶體。  雖然這個機制通常運作良好，但在某些情況下難以使用或無法使用。  例如，當資料網路包含多個結束節點的情況。  在此情況下，沒有清楚位置可釋放訊息的記憶體。  
+ [[靠上](#top)]  
   
- 若要解決此問題，您可以使用讓多個元件擁有一個指標的機制，例如 [std::shared\_ptr](../../standard-library/shared-ptr-class.md)。  當擁有資源的最終 `shared_ptr` 物件終結時，同時也會釋放資源。  
+##  <a name="ownership"></a>Shared_ptr 用於資料網路時擁有權是未定義  
+ 當您透過訊息傳遞管線或網路的指標所傳送訊息時，您通常記憶體都配置給每個訊息在網路的前面，並釋放該記憶體結尾的網路。 雖然這項機制通常非常適合，但是有些的狀況中會很難或是無法使用它。 例如，請考慮包含多個終端節點之資料網路的情況。 在此情況下，沒有任何明確的位置，以釋放記憶體的訊息。  
   
- 下列範例示範如何使用 `shared_ptr`，在多個訊息緩衝區之間共用指標值。  範例將 [concurrency::overwrite\_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md) 物件連接至三個 [concurrency::call](../../parallel/concrt/reference/call-class.md) 物件。  `overwrite_buffer` 類別會將訊息提供給每個目標。  因為在資料網路末端有多個資料擁有者，所以這個範例使用 `shared_ptr` 讓每個 `call` 物件共用訊息擁有權。  
+ 若要解決這個問題，您可以例如使用一種機制， [std:: shared_ptr](../../standard-library/shared-ptr-class.md)，可由多個元件所擁有的指標。 當最終`shared_ptr`擁有資源的物件終結時，也會釋放資源。  
   
- [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-asynchronous-agents-library_4.cpp)]  
+ 下列範例示範如何使用`shared_ptr`共用在多個訊息緩衝區的指標值。 此範例會連接[concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)三個物件[concurrency:: call](../../parallel/concrt/reference/call-class.md)物件。 `overwrite_buffer`類別提供訊息給每個目標。 因為有結尾的資料網路資料的多個擁有者，所以這個範例會使用`shared_ptr`啟用各個`call`共用之訊息的擁有權的物件。  
   
- 這個範例 \(Example\) 會產生下列範例 \(Sample\) 輸出：  
+ [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_4.cpp)]  
   
-  **建立資源 42...**  
-**receiver1:接收的資源 42**  
-**建立資源 64...**  
-**receiver2:接收的資源 42**  
-**receiver1: 接收的資源 64**  
-**要終結的資源 42…**  
-**receiver2: 接收的資源 64**  
-**要終結的資源 64…**   
-## 請參閱  
+ 這個範例會產生下列輸出範例：  
+  
+```Output  
+Creating resource 42...  
+receiver1: received resource 42  
+Creating resource 64...  
+receiver2: received resource 42  
+receiver1: received resource 64  
+Destroying resource 42...  
+receiver2: received resource 64  
+Destroying resource 64...  
+```  
+  
+## <a name="see-also"></a>請參閱  
  [並行執行階段最佳作法](../../parallel/concrt/concurrency-runtime-best-practices.md)   
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
- [逐步解說：建立代理程式架構應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)   
- [逐步解說：建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)   
- [逐步解說：建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)   
+ [逐步解說： 建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)   
+ [逐步解說： 建立資料流程代理程式](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)   
+ [逐步解說： 建立影像處理網路](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)   
  [平行模式程式庫中的最佳作法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)   
- [並行執行階段中的一般最佳作法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
+ [並行執行階段中的一般最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
+

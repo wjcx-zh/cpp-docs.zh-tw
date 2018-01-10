@@ -1,42 +1,43 @@
 ---
-title: "map::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare 成員 [STL/CLR]"
+title: "map::value_compare (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: 04fab34b-c68a-4f61-97e8-a7d629b1ffed
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b64294345398afce97774996a5b68a095070b0f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# map::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-兩個項目值的排序委派。  
+# <a name="mapvaluecompare-stlclr"></a>map::value_compare (STL/CLR)
+兩個項目值順序的委派。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## 備註  
- 這個型別是用來決定其實值引數順序的委派的同義字。  
+## <a name="remarks"></a>備註  
+ 類型是委派，其值的引數的順序會決定的同義字。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_value_compare.cpp   
@@ -64,16 +65,19 @@ int main()
   
 ```  
   
-  **compare\(\[L'a', 1\], \[L'a', 1\]\) \= False**  
-**compare\(\[L'a', 1\], \[L'b', 2\]\) \= True**  
-**compare\(\[L'b', 2\], \[L'a', 1\]\) \= False**   
-## 需求  
- **標頭：** \<cliext\/map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = False  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_compare](../dotnet/map-key-compare-stl-clr.md)   
- [map::value\_comp](../dotnet/map-value-comp-stl-clr.md)   
- [map::value\_type](../dotnet/map-value-type-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: key_compare (STL/CLR)](../dotnet/map-key-compare-stl-clr.md)   
+ [map:: value_comp (STL/CLR)](../dotnet/map-value-comp-stl-clr.md)   
+ [map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)

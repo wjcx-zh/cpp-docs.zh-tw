@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aafa676a1c6b885b303634c4fc31bcbfc1c6f0ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52ab28a015fa0312a5d064401451640c2747e9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>如何：為呼叫和轉換程式類別提供工作函式
 本主題將說明幾種方式可以將工作函式提供給[concurrency:: call](../../parallel/concrt/reference/call-class.md)和[concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)類別。  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/24/2017
   
  **cl.exe /EHsc call.cpp**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)   
  [如何： 在資料管線中的使用轉換程式](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)   

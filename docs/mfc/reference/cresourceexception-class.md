@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 497ced5337a44bb0d72be734cfea35a30ead383b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2e17b859042a5712a998eaeebe9f16f81c91200
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cresourceexception-class"></a>CResourceException 類別
 當 Windows 找不到或無法配置所要求的資源時產生的。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class CResourceException : public CSimpleException  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CResourceException::CResourceException](#cresourceexception)|建構 `CResourceException` 物件。|  
   
@@ -68,7 +69,7 @@ CResourceException();
 ### <a name="remarks"></a>備註  
  請勿直接使用這個建構函式，但是而不是呼叫全域函式[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)。 如需例外狀況的詳細資訊，請參閱文章[在 MFC 中處理例外狀況](../exception-handling-in-mfc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CException 類別](cexception-class.md)   
  [階層架構圖表](../hierarchy-chart.md)
 

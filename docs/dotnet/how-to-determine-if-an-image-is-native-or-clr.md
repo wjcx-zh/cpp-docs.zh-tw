@@ -1,36 +1,39 @@
 ---
-title: "如何：判斷影像是否為原生或 CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 編譯器選項 [C++], 在編譯中的偵測用法"
-  - "Common Language Runtime, /clr 編譯器選項"
-  - "Common Language Runtime, 影像測試"
-  - "影像 [C++], CLR 驗證"
+title: "如何： 判斷影像是否為原生或 CLR |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- common language runtime, image testing
+- images [C++], CLR verification
+- /clr compiler option [C++], detecting use in compilation
+- common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b4b652be03aeb0c147ee39b141bd2df932af055
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：判斷影像是否為原生或 CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-判斷影像是否是針對 Common Language Runtime 而建置的方法之一，是使用 **dumpbin** [\/CLRHEADER](../build/reference/clrheader.md)。  
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：判斷影像是否為原生或 CLR
+其中一種方式來判斷是否已建置映像，是使用 common language runtime **dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。  
   
- 您也可以用程式設計的方式，檢查影像是否是針對 Common Language Runtime 而建置。  如需詳細資訊，請參閱[如何：偵測 \/clr 編譯](../dotnet/how-to-detect-clr-compilation.md)。  
+ 您也以程式設計方式可以檢查是否為通用語言執行平台建置映像。 如需詳細資訊，請參閱[如何： 偵測 /clr 編譯](../dotnet/how-to-detect-clr-compilation.md)。  
   
-## 範例  
- 下列範例會判斷影像是否建置在 Common Language Runtime 上執行。  
+## <a name="example"></a>範例  
+ 下列範例會決定是否要在通用語言執行平台上執行建置映像。  
   
 ```  
 // detect_image_type.cpp  
@@ -88,5 +91,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

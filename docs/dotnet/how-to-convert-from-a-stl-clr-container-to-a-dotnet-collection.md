@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 817f04af0f6d2c24296b5775a9863b8c34dccd30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aa58c8db46d1443ca5b39449222cc22e31eafb5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>如何：從 STL/CLR 容器轉換為 .NET 集合
 本主題示範如何將 STL/CLR 容器轉換成其對等的.NET 集合。 例如，我們會示範如何將轉換 STL/CLR[向量](../dotnet/vector-stl-clr.md)的.net<xref:System.Collections.Generic.ICollection%601>以及如何轉換 STL/CLR[對應](../dotnet/map-stl-clr.md)的.net <xref:System.Collections.Generic.IDictionary%602>，但程序是類似的所有集合和容器。  
@@ -118,7 +121,7 @@ Key: 42.00 Value: 42
 Key: 74.00 Value: 74  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)   
  [如何： 從.NET 集合轉換為 STL/CLR 容器](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
  [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

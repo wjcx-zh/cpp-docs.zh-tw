@@ -97,11 +97,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0900dae615bfe950655b04cbc501ef32c08f2c9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18d648f632a28214779c9424971f65e535a5e210
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimap-class"></a>multimap 類別
 「C++ 標準程式庫」multimap 類別可用來在集合中儲存及擷取資料，其中集合中的每個元素都成對，同時具有資料值和排序鍵。 索引鍵的值不需要是唯一的，用於自動排序資料。 多重對應中項目的值可以直接變更，但其關聯的索引鍵值不可以直接變更。 相反地，與舊項目相關聯的索引鍵值必須刪除，然後插入與新項目相關聯的新索引鍵值。  
@@ -126,7 +127,7 @@ class multimap;
  `Traits`  
  類型，提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在多重對應中的相對順序。 二元述詞 `less<Key>` 是預設值。  
   
- 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。  
   
  `Allocator`  
  代表預存配置器物件的類型，封裝有關對應之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 `allocator<pair <const Key, Type> >`。  
@@ -156,7 +157,7 @@ class multimap;
   
  在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -303,7 +304,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>備註  
  傳回值為 `cbegin` 時，無法修改範圍中的項目。  
   
- 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `begin()` 和 `cbegin()` 的可修改 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `begin()` 和 `cbegin()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -708,7 +709,7 @@ iterator emplace(Args&&... args);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構要插入到 multimap 中之元素的引數。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -764,7 +765,7 @@ int main()
 ```  
   
 ##  <a name="emplace_hint"></a>  multimap::emplace_hint  
- 將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。  
+ 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。  
   
 ```  
 template <class... Args>  
@@ -777,9 +778,9 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構要插入到 multimap 中之元素的引數。|  
-|`where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
+|`where`|要開始搜尋正確的插入點的地方。 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
   
 ### <a name="return-value"></a>傳回值  
  指向新插入之元素的迭代器。  
@@ -787,7 +788,7 @@ iterator emplace_hint(
 ### <a name="remarks"></a>備註  
  此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。  
   
- 在定位期間，如果擲回例外狀況，則不會修改容器的狀態。  
+ 在定位期間，如果擲回例外狀況，就不會修改容器的狀態。  
   
  元素的 [value_type](../standard-library/map-class.md#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
@@ -853,7 +854,7 @@ iterator end();
 ### <a name="remarks"></a>備註  
  **end** 是用來測試迭代器是否已超過其 multimap 的結尾。  
   
- **end** 所傳回的值不應該被取值。  
+ 不應該對 **end** 所傳回的值進行取值。  
   
  如需程式碼範例，請參閱 [multimap::find](#find)。  
   
@@ -873,7 +874,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="return-value"></a>傳回值  
  一組迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個是索引鍵的 [upper_bound](#upper_bound)。  
   
- 若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
+ 若要存取成員函式所傳回之 `pr` 配對的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
   
 ### <a name="example"></a>範例  
   
@@ -1067,7 +1068,7 @@ allocator_type get_allocator() const;
  multimap 所使用的配置器。  
   
 ### <a name="remarks"></a>備註  
- multimap 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
+ multimap 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
   
 ### <a name="example"></a>範例  
   
@@ -1499,7 +1500,7 @@ typedef Type mapped_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `mapped_type` 與範本參數 `Type` 同義。  
+ `mapped_type` 與樣板參數 `Type` 同義。  
   
  如需有關 `Type` 的詳細資訊，請參閱 [multimap 類別](../standard-library/multimap-class.md)主題。  
   
@@ -1590,7 +1591,7 @@ multimap(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Al`|要用於此 multimap 物件的儲存體配置器類別，預設為 Allocator。|  
 |`Comp`|類型為 **constTraits** 並用來排序 map 中元素的比較函式，預設為 **Traits**。|  
 |`Right`|要從中複製所建構之集合的對應。|  
@@ -1599,7 +1600,7 @@ multimap(
 |`IList`|從中複製項目的 initializer_list。|  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存一種配置器物件，此物件可管理 multimap 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
+ 所有建構函式都會儲存一種配置器物件，此物件可管理 multimap 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告以及用來取代替代配置器的前置處理巨集中，經常會省略 allocator 參數。  
   
  所有建構函式都會將其 multimap 初始化。  
   
@@ -1737,7 +1738,7 @@ multimap& operator=(multimap&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|要複製到 `multimap` 中的 [multimap](../standard-library/multimap-class.md)。|  
   
 ### <a name="remarks"></a>備註  
@@ -1788,7 +1789,7 @@ typedef typename allocator_type::pointer pointer;
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。  
+ **pointer** 類型可用來修改項目的值。  
   
  在大多數情況下，應該使用 [iterator](#iterator) 來存取 multimap 物件中的元素。  
   
@@ -2346,7 +2347,7 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<map> 成員](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

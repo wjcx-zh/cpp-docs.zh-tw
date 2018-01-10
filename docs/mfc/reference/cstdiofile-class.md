@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f87d8ac152eff3b0bdc5e3fe472920160c63cdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 868442a2936781ed24588f47dcb591cadcc48f0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstdiofile-class"></a>Cgopherfile 類別
 代表執行階段函式所開啟的 C 執行階段資料流檔案[fopen](../../c-runtime-library/reference/fopen-wfopen.md)。  
@@ -44,17 +45,17 @@ ms.lasthandoff: 10/24/2017
 class CStdioFile : public CFile  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStdioFile::CStdioFile](#cstdiofile)|建構`CStdioFile`從路徑或檔案指標的物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStdioFile::Open](#open)|多載。 開啟適用於與預設`CStdioFile`建構函式 (會覆寫[CFile::Open](../../mfc/reference/cfile-class.md#open))。|  
 |[CStdioFile::ReadString](#readstring)|讀取單行文字。|  
@@ -63,7 +64,7 @@ class CStdioFile : public CFile
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStdioFile::m_pStream](#m_pstream)|包含已開啟的檔案的指標。|  
   
@@ -277,7 +278,7 @@ virtual void WriteString(LPCTSTR lpsz);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#40](../../atl-mfc-shared/reference/codesnippet/cpp/cstdiofile-class_4.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CFile 類別](../../mfc/reference/cfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFile 類別](../../mfc/reference/cfile-class.md)   

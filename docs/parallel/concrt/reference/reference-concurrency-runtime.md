@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -454,48 +453,32 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 88de4e73c29e222009a4ca90b3b22c4701b21e70
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 33d88b6f187e80635bcc1f63077f674d6adbb74a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-concurrency-runtime"></a>參考 (並行執行階段)
-本節中的並行執行階段的參考資訊。
-**請注意**的 c + + 語言標準保留開頭的程式庫等實作是底線 (_) 字元的識別項的使用。 請勿在您的程式碼中使用這些名稱。 我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。 基於這些理由，這類程式碼項目會略過並行執行階段文件。
+本節包含並行執行階段的參考的資訊。
+**請注意**的 c + + 語言標準保留的識別項開頭是底線 (_) 字元，例如文件庫的實作使用。 請勿在您的程式碼中使用這些名稱。 我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。 基於這些理由，並行執行階段文件中會省略這類程式碼項目。
 
-## <a name="in-this-section"></a>本章節內容
-[concurrency 命名空間](concurrency-namespace.md)並行存取命名空間提供類別和函式可讓您存取並行執行階段 c + + 的並行程式設計架構。 如需詳細資訊，請參閱[並行執行階段](../concurrency-runtime.md)。
+## <a name="in-this-section"></a>本節內容
+[concurrency 命名空間](concurrency-namespace.md)concurrency 命名空間提供類別和函式可讓您存取並行執行階段，而 c + + 的並行程式設計架構。 如需詳細資訊，請參閱[並行執行階段](../concurrency-runtime.md)。
 
-[std 命名空間](std-namespace.md)
+[std 命名空間中](std-namespace.md)
 [stdx 命名空間](stdx-namespace.md)
-
 
 

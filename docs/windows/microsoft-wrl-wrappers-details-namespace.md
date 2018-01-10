@@ -22,11 +22,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ed72cd48cada79b831d89246d1338b79fdc5c9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 520871366f02ef636eef5b2cc9c19344979c6fb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Microsoft::WRL::Wrappers::Details 命名空間
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -37,18 +40,18 @@ ms.lasthandoff: 10/24/2017
 namespace Microsoft::WRL::Wrappers::Details;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="classes"></a>類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SyncLockT 類別](../windows/synclockt-class.md)|代表類型可取用獨佔或共用資源的擁有權。|  
 |[SyncLockWithStatusT 類別](../windows/synclockwithstatust-class.md)|代表類型可取用獨佔或共用資源的擁有權。|  
   
 ### <a name="methods"></a>方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CompareStringOrdinal 方法](../windows/comparestringordinal-method.md)|比較兩個指定`HSTRING`物件，並傳回一個整數，表示兩者在排序順序中的相對位置。|  
   
@@ -57,5 +60,5 @@ namespace Microsoft::WRL::Wrappers::Details;
   
  **命名空間：** Microsoft::WRL::Wrappers::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

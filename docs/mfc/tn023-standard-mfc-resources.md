@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b09fcbc0ee5744f4b52332510d2ddc54e97086d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fded011fda52dfde46804b03699dc93469e5e32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023：標準 MFC 資源
 這個附註說明 MFC 程式庫提供和需要的標準資源。  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/24/2017
 >  .rc 資源檔中內含一個特殊的 `TEXTINCLUDE` 資源，可避免您不小心儲存在標準 .rc 檔案的頂端。  
   
 ### <a name="customizing-standard-framework-resources"></a>自訂標準架構資源  
- 在應用程式的資源檔中使用 #include 命令，通常可將標準架構資源包含到應用程式中。 AppWizard 將會產生一個資源檔。 這個檔案包含適當的標準架構資源，視您選取的 AppWizard 選項而定。 藉由變更編譯時間指示詞，您可以檢閱、加入或移除已包含的資源。 若要這樣做，請開啟**資源**功能表，然後選取**Set Includes**。 請參閱「編譯時間指示詞」編輯項目。 例如：  
+ 在應用程式的資源檔中使用 #include 命令，通常可將標準架構資源包含到應用程式中。 AppWizard 將會產生一個資源檔。 這個檔案包含適當的標準架構資源，視您選取的 AppWizard 選項而定。 藉由變更編譯時間指示詞，您可以檢閱、加入或移除已包含的資源。 若要這樣做，請開啟**資源**功能表，然後選取**Set Includes**。 請參閱「編譯時間指示詞」編輯項目。 例如:   
   
 ```  
 #include "afxres.rc"  
@@ -105,7 +106,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  請勿直接在標準 .rc 檔中修改資源。 這麼做會修改每個應用程式中可用的資源，而不只是目前應用程式中可用的資源。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

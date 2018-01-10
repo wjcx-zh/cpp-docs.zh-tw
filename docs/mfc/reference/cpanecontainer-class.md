@@ -131,11 +131,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1deb136492fb7897a9f337df4e5957d81175e127
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27193084f2232c17885d3a6ee54ea901764f3d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpanecontainer-class"></a>CPaneContainer 類別
 `CPaneContainer`類別是由 MFC 實作停駐模型的基本元件。 這個類別的物件儲存兩個停駐窗格的指標或 `CPaneContainer.` 的兩個執行個體的指標，也存放分隔窗格 (或容器) 的分割線的指標。 Framework 可以將容器巢狀於容器內部，建置表示複雜停駐配置的二進位樹狀目錄。 二進位樹狀目錄的根儲存在[CPaneContainerManager](../../mfc/reference/cpanecontainermanager-class.md)物件。  
@@ -148,17 +149,17 @@ ms.lasthandoff: 10/24/2017
 class CPaneContainer : public CObject    
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPaneContainer::CPaneContainer](#cpanecontainer)|預設建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPaneContainer::AddPane](#addpane)||  
 |[CPaneContainer::AddRef](#addref)||  
@@ -242,7 +243,7 @@ CDockablePane* AddPane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -267,8 +268,8 @@ BOOL AddSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pContainer`  
- [in] `bRightNodeNew`  
+ [輸入] `pContainer`  
+ [輸入] `bRightNodeNew`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -286,10 +287,10 @@ virtual int CalcAvailablePaneSpace(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRequiredOffset`  
- [in] `pBar`  
- [in] `pContainer`  
- [in] `bLeftBar`  
+ [輸入] `nRequiredOffset`  
+ [輸入] `pBar`  
+ [輸入] `pContainer`  
+ [輸入] `bLeftBar`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -305,8 +306,8 @@ virtual CSize CalcAvailableSpace(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `sizeStretch`  
- [in] `bLeftBar`  
+ [輸入] `sizeStretch`  
+ [輸入] `bLeftBar`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -338,7 +339,7 @@ virtual CPaneContainer* Copy(CPaneContainer* pParentContainer);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParentContainer`  
+ [輸入] `pParentContainer`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -356,10 +357,10 @@ CPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pManager`  
- [in] `pLeftBar`  
- [in] `pRightBar`  
- [in] `pSlider`  
+ [輸入] `pManager`  
+ [輸入] `pLeftBar`  
+ [輸入] `pRightBar`  
+ [輸入] `pSlider`  
   
 ### <a name="remarks"></a>備註  
   
@@ -373,8 +374,8 @@ virtual void DeletePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
- [in] `barType`  
+ [輸入] `pBar`  
+ [輸入] `barType`  
   
 ### <a name="remarks"></a>備註  
   
@@ -388,8 +389,8 @@ CPaneContainer* FindSubPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pObject`  
- [in] `findCriteria`  
+ [輸入] `pObject`  
+ [輸入] `findCriteria`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -403,7 +404,7 @@ CDockablePane* FindTabbedPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -417,7 +418,7 @@ CList<UINT, UINT>* GetAssociatedSiblingPaneIDs(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -453,7 +454,7 @@ virtual void GetMinSize(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `size`  
+ [輸入] `size`  
   
 ### <a name="remarks"></a>備註  
   
@@ -465,7 +466,7 @@ virtual void GetMinSizeLeft(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `size`  
+ [輸入] `size`  
   
 ### <a name="remarks"></a>備註  
   
@@ -477,7 +478,7 @@ virtual void GetMinSizeRight(CSize& size) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `size`  
+ [輸入] `size`  
   
 ### <a name="remarks"></a>備註  
   
@@ -612,8 +613,8 @@ virtual void GetWindowRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
- [in] `bIgnoreVisibility`  
+ [輸入] `rect`  
+ [輸入] `bIgnoreVisibility`  
   
 ### <a name="remarks"></a>備註  
   
@@ -647,7 +648,7 @@ BOOL IsLeftPane(CDockablePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -672,7 +673,7 @@ BOOL IsLeftPartEmpty(BOOL bCheckVisibility = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bCheckVisibility`  
+ [輸入] `bCheckVisibility`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -686,7 +687,7 @@ BOOL IsRightPartEmpty(BOOL bCheckVisibility = FALSE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bCheckVisibility`  
+ [輸入] `bCheckVisibility`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -711,7 +712,7 @@ virtual void Move(CPoint ptNewLeftTop);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ptNewLeftTop`  
+ [輸入] `ptNewLeftTop`  
   
 ### <a name="remarks"></a>備註  
   
@@ -725,8 +726,8 @@ void OnDeleteHidePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
- [in] `bHide`  
+ [輸入] `pBar`  
+ [輸入] `bHide`  
   
 ### <a name="remarks"></a>備註  
   
@@ -740,8 +741,8 @@ virtual int OnMoveInternalPaneDivider(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nOffset`  
- [in] `hdwp`  
+ [輸入] `nOffset`  
+ [輸入] `hdwp`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -757,8 +758,8 @@ virtual void OnShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
- [in] `bShow`  
+ [輸入] `pBar`  
+ [輸入] `bShow`  
   
 ### <a name="remarks"></a>備註  
   
@@ -799,7 +800,7 @@ virtual void RemovePane(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -814,9 +815,9 @@ virtual void Resize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
- [in] `hdwp`  
- [in] `bRedraw`  
+ [輸入] `rect`  
+ [輸入] `hdwp`  
+ [輸入] `bRedraw`  
   
 ### <a name="remarks"></a>備註  
   
@@ -834,12 +835,12 @@ virtual void ResizePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nOffset`  
- [in] `pBar`  
- [in] `pContainer`  
- [in] `bHorz`  
- [in] `bLeftBar`  
- [in] `hdwp`  
+ [輸入] `nOffset`  
+ [輸入] `pBar`  
+ [輸入] `pContainer`  
+ [輸入] `bHorz`  
+ [輸入] `bLeftBar`  
+ [輸入] `hdwp`  
   
 ### <a name="remarks"></a>備註  
   
@@ -854,9 +855,9 @@ virtual void ResizePartOfPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nOffset`  
- [in] `bLeftPart`  
- [in] `hdwp`  
+ [輸入] `nOffset`  
+ [輸入] `bLeftPart`  
+ [輸入] `hdwp`  
   
 ### <a name="remarks"></a>備註  
   
@@ -868,7 +869,7 @@ void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ar`  
+ [輸入] `ar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -882,8 +883,8 @@ void SetPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
- [in] `bLeft`  
+ [輸入] `pBar`  
+ [輸入] `bLeft`  
   
 ### <a name="remarks"></a>備註  
   
@@ -897,8 +898,8 @@ void SetPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pContainer`  
- [in] `bLeft`  
+ [輸入] `pContainer`  
+ [輸入] `bLeft`  
   
 ### <a name="remarks"></a>備註  
   
@@ -910,7 +911,7 @@ void SetPaneDivider(CPaneDivider* pSlider);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pSlider`  
+ [輸入] `pSlider`  
   
 ### <a name="remarks"></a>備註  
   
@@ -922,7 +923,7 @@ void SetParentPaneContainer(CPaneContainer* p);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `p`  
+ [輸入] `p`  
   
 ### <a name="remarks"></a>備註  
   
@@ -934,7 +935,7 @@ void SetRecentPercent(int nRecentPercent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRecentPercent`  
+ [輸入] `nRecentPercent`  
   
 ### <a name="remarks"></a>備註  
   
@@ -948,8 +949,8 @@ BOOL SetUpByID(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
- [in] `pBar`  
+ [輸入] `nID`  
+ [輸入] `pBar`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -963,7 +964,7 @@ virtual void StoreRecentDockSiteInfo(CDockablePane* pBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -980,17 +981,17 @@ virtual int StretchPaneContainer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nOffset`  
- [in] `bStretchHorz`  
- [in] `bLeftBar`  
- [in] `bMoveSlider`  
- [in] `hdwp`  
+ [輸入] `nOffset`  
+ [輸入] `bStretchHorz`  
+ [輸入] `bLeftBar`  
+ [輸入] `bMoveSlider`  
+ [輸入] `hdwp`  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   

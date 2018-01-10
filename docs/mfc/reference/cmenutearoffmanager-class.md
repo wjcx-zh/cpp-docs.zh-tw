@@ -35,11 +35,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 858ea5cd0422e4f9b1e6671bf169dd84a52de119
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efb1b7acc2f4eb779de49559b5b566e89d518a0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager 類別
 管理 Tear-Off 功能表。 Tear-Off 功能表是在功能表列上的功能表。 使用者可以取下功能表列中的 Tear-Off 功能表，讓 Tear-Off 功能表浮動。  
@@ -52,17 +53,17 @@ ms.lasthandoff: 10/24/2017
 class CMenuTearOffManager : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMenuTearOffManager::CMenuTearOffManager](#cmenutearoffmanager)|建構 `CMenuTearOffManager` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMenuTearOffManager::Build](#build)||  
 |[CMenuTearOffManager::GetRegPath](#getregpath)||  
@@ -99,8 +100,8 @@ void Build(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiTearOffBarID`  
- [in] `strText`  
+ [輸入] `uiTearOffBarID`  
+ [輸入] `strText`  
   
 ### <a name="remarks"></a>備註  
   
@@ -136,13 +137,13 @@ BOOL Initialize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszRegEntry`  
+ [輸入] `lpszRegEntry`  
  字串，包含路徑的登錄項目。 您的應用程式儲存分割列設定此登錄項目中。  
   
- [in] `uiTearOffMenuFirst`  
+ [輸入] `uiTearOffMenuFirst`  
  Tear-off 功能表第一個功能表識別碼。  
   
- [in] `uiTearOffMenuLast`  
+ [輸入] `uiTearOffMenuLast`  
  Tear-off 功能表最後功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -159,7 +160,7 @@ BOOL IsDynamicID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiID`  
+ [輸入] `uiID`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -173,7 +174,7 @@ UINT Parse(CString& str);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `str`  
+ [輸入] `str`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -187,7 +188,7 @@ void Reset(HMENU hmenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hmenu`  
+ [輸入] `hmenu`  
   
 ### <a name="remarks"></a>備註  
   
@@ -201,8 +202,8 @@ void SetInUse(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiCmdId`  
- [in] `bUse`  
+ [輸入] `uiCmdId`  
+ [輸入] `bUse`  
   
 ### <a name="remarks"></a>備註  
   
@@ -214,11 +215,11 @@ void SetupTearOffMenus(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hMenu`  
+ [輸入] `hMenu`  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)

@@ -249,11 +249,12 @@ caps.latest.revision: "41"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59032e700fe81c3343959252bc28433b0f6ae460
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dd8f70ffd2568f509b8b12be2167579c4ec4475
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 實作索引標籤式視窗的基本功能。  
@@ -265,11 +266,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCBaseTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||  
 |[CMFCBaseTabCtrl::AddTab](#addtab)|將新的索引標籤加入至索引標籤式視窗。|  
@@ -385,15 +386,15 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::StartRenameTab](#startrenametab)||  
 |[CMFCBaseTabCtrl::SwapTabs](#swaptabs)||  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|為衍生自 [CWnd](../../mfc/reference/cwnd-class.md) ，但不是衍生自 `CDockablePane`的物件建立包裝函式。 若要停駐 `CMFCBaseTabCtrl` 物件，每個內嵌的控制項必須具有停駐的包裝函式或衍生自 `CDockablePane`。<br /><br /> 您可以使用 `SetDockingBayWrapperRTC`來設定包裝函式的類別。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|指定選取索引標籤的方式是按一下滑鼠左鍵或是按一下滑鼠右鍵。|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|指定是否自動終結索引標籤中包含的窗格。|  
@@ -436,10 +437,10 @@ void AddIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hIcon`  
+ [輸入] `hIcon`  
  要加入之圖示的控制代碼。  
   
- [in] `iIcon`  
+ [輸入] `iIcon`  
  以零為起始的索引中受保護的圖示`CImageList m_Images`成員。  
   
 ### <a name="remarks"></a>備註  
@@ -463,19 +464,19 @@ virtual void AddTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pTabWnd`  
+ [輸入] `pTabWnd`  
  這個方法表示為新的索引標籤視窗的指標。  
   
- [in] `lpszTabLabel`  
+ [輸入] `lpszTabLabel`  
  字串，包含新的索引標籤的標籤。  
   
- [in] `uiImageId`  
+ [輸入] `uiImageId`  
  影像清單中的影像 ID。 索引標籤控制項圖示會使用此映像，新索引標籤。  
   
- [in] `uiResTabLabel`  
+ [輸入] `uiResTabLabel`  
  標籤的資源識別碼。  
   
- [in] `bDetachable`  
+ [輸入] `bDetachable`  
  布林值參數會決定是否可以中斷連結的新索引標籤。  
   
 ### <a name="remarks"></a>備註  
@@ -489,7 +490,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bUseTabIndexes`  
+ [輸入] `bUseTabIndexes`  
   
 ### <a name="remarks"></a>備註  
   
@@ -501,7 +502,7 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAutoDestroy`  
+ [輸入] `bAutoDestroy`  
   
 ### <a name="remarks"></a>備註  
   
@@ -513,7 +514,7 @@ virtual void CalcRectEdit(CRect& rectEdit);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rectEdit`  
+ [輸入] `rectEdit`  
   
 ### <a name="remarks"></a>備註  
   
@@ -546,13 +547,13 @@ virtual CWnd* CreateWrapper(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndToWrap`  
+ [輸入] `pWndToWrap`  
  包裝框架視窗的指標。  
   
- [in] `lpszTabLabel`  
+ [輸入] `lpszTabLabel`  
  字串，包含標籤視窗。  
   
- [in] `bDetachable`  
+ [輸入] `bDetachable`  
  表示視窗是否可以中斷連結的布林參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -576,13 +577,13 @@ virtual BOOL DetachTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dockMethod`  
+ [輸入] `dockMethod`  
  列舉的資料類型所提供[CBasePane 類別](../../mfc/reference/cbasepane-class.md)。 此資料類型會指定用來卸離索引標籤的方法。  
   
- [in] `nTabNum`  
+ [輸入] `nTabNum`  
  要卸離 索引標籤的以零為起始的索引。  
   
- [in] `bHide`  
+ [輸入] `bHide`  
  表示架構是否應該隱藏中斷連結索引標籤的布林參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -599,7 +600,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bLastActive`  
+ [輸入] `bLastActive`  
   
 ### <a name="remarks"></a>備註  
   
@@ -611,7 +612,7 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  布林值參數會決定是否此架構會使用自動色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -627,7 +628,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  布林值，決定是否要使用自訂工具提示。  
   
 ### <a name="return-value"></a>傳回值  
@@ -644,7 +645,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  布林值參數，指定是否要啟用索引標籤的直接編輯。  
   
 ### <a name="remarks"></a>備註  
@@ -664,10 +665,10 @@ virtual BOOL EnableTabDetach(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤索引。  
   
- [in] `bEnable`  
+ [輸入] `bEnable`  
  布林值，指出是否要建立中斷連結索引標籤。  
   
 ### <a name="return-value"></a>傳回值  
@@ -681,7 +682,7 @@ void EnableTabSwap(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  布林值，指出是否要啟用 [交換] 索引標籤。  
   
 ### <a name="remarks"></a>備註  
@@ -695,7 +696,7 @@ virtual BOOL EnsureVisible(int iTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -723,7 +724,7 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pt`  
+ [輸入] `pt`  
  使用用戶端區域定義的點座標[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -740,7 +741,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nNewTab`  
+ [輸入] `nNewTab`  
   
 ### <a name="remarks"></a>備註  
   
@@ -752,7 +753,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nNewTab`  
+ [輸入] `nNewTab`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -833,7 +834,7 @@ virtual CWnd* GetFirstVisibleTab(
  [輸出] `iTabNum`  
  整數的參考。 這個方法會寫入此參數中的第一個可見索引標籤的以零為起始的索引。  
   
- [in] `iStartFrom`  
+ [輸入] `iStartFrom`  
  第一個索引標籤來檢查以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -895,7 +896,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTabNum`  
+ [輸入] `iTabNum`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -935,10 +936,10 @@ virtual void GetTabArea(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rectTabAreaTop`  
+ [輸入] `rectTabAreaTop`  
  對 `CRect` 物件的參考。 `GetTabArea`您可以使用此物件來儲存的大小和位置的最上層索引標籤區域。  
   
- [in] `rectTabAreaBottom`  
+ [輸入] `rectTabAreaBottom`  
  對 `CRect` 物件的參考。 `GetTabArea`您可以使用此物件來儲存的大小和位置下面的索引標籤區域。  
   
 ### <a name="remarks"></a>備註  
@@ -954,7 +955,7 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -981,7 +982,7 @@ virtual int GetTabByID(int id) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `id`  
+ [輸入] `id`  
  索引標籤的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1009,7 +1010,7 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hwnd`  
+ [輸入] `hwnd`  
  視窗控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1023,7 +1024,7 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pt`  
+ [輸入] `pt`  
  用戶端座標中的索引標籤控制項的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1037,7 +1038,7 @@ virtual int GetTabFullWidth(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1051,7 +1052,7 @@ virtual HICON GetTabHicon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  索引標籤以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1065,7 +1066,7 @@ virtual UINT GetTabIcon(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1082,7 +1083,7 @@ int GetTabID(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1098,7 +1099,7 @@ virtual BOOL GetTabLabel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
  [輸出] `strLabel`  
@@ -1122,7 +1123,7 @@ virtual BOOL GetTabRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
  [輸出] `rect`  
@@ -1160,7 +1161,7 @@ virtual void GetTabsRect(CRect& rect) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rect`  
+ [輸入] `rect`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1172,7 +1173,7 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1186,7 +1187,7 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1205,7 +1206,7 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1244,7 +1245,7 @@ virtual BOOL HasImage(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1258,7 +1259,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bHide`  
+ [輸入] `bHide`  
  布林值，指定是否要啟用隱藏單一索引標籤。  
   
 ### <a name="remarks"></a>備註  
@@ -1285,22 +1286,22 @@ virtual void InsertTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pNewWnd`  
+ [輸入] `pNewWnd`  
  這個方法會加入為新的索引標籤視窗的指標。  
   
- [in] `lpszTabLabel`  
+ [輸入] `lpszTabLabel`  
  字串，包含新的索引標籤的標籤。  
   
- [in] `nInsertAt`  
+ [輸入] `nInsertAt`  
  新的索引標籤以零為起始的索引。  
   
- [in] `uiImageId`  
+ [輸入] `uiImageId`  
  影像清單中的影像 ID。 索引標籤控制項圖示會使用此映像，新索引標籤。  
   
- [in] `bDetachable`  
+ [輸入] `bDetachable`  
  布林值參數會決定是否可以中斷連結的新索引標籤。  
   
- [in] `uiResTabLabel`  
+ [輸入] `uiResTabLabel`  
  標籤的資源識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -1314,7 +1315,7 @@ void InvalidateTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1435,8 +1436,8 @@ BOOL IsIconAdded(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hIcon`  
- [in] `iIcon`  
+ [輸入] `hIcon`  
+ [輸入] `iIcon`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1500,7 +1501,7 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  要測試的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1539,7 +1540,7 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  若要檢查索引標籤以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1556,7 +1557,7 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1586,7 +1587,7 @@ virtual BOOL IsTabVisible(int iTab) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  若要檢查索引標籤以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1633,8 +1634,8 @@ virtual void MoveTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nSource`  
- [in] `nDest`  
+ [輸入] `nSource`  
+ [輸入] `nDest`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1659,9 +1660,9 @@ virtual BOOL OnDrop(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `COleDataObject*`  
- [in] `DROPEFFECT`  
- [in] `CPoint`  
+ [輸入] `COleDataObject*`  
+ [輸入] `DROPEFFECT`  
+ [輸入] `CPoint`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1678,9 +1679,9 @@ virtual DROPEFFECT OnDragOver(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [輸入] `COleDataObject*`  
+ [輸入] `DWORD`  
+ [輸入] `CPoint`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1706,9 +1707,9 @@ virtual DROPEFFECT OnDragEnter(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `COleDataObject*`  
- [in] `DWORD`  
- [in] `CPoint`  
+ [輸入] `COleDataObject*`  
+ [輸入] `DWORD`  
+ [輸入] `CPoint`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1722,8 +1723,8 @@ virtual BOOL OnRenameTab(int, CString&);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `int`  
- [in] `CString&`  
+ [輸入] `int`  
+ [輸入] `CString&`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1737,7 +1738,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMsg`  
+ [輸入] `pMsg`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1773,10 +1774,10 @@ virtual BOOL RemoveTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤索引。  
   
- [in] `bRecalcLayout`  
+ [輸入] `bRecalcLayout`  
  布林值參數，指定是否要重新計算索引標籤的版面配置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1811,7 +1812,7 @@ virtual void Serialize(CArchive& ar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ar`  
+ [輸入] `ar`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1823,7 +1824,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引 索引標籤的`SetActiveTab`將與這個索引標籤設為作用中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1840,7 +1841,7 @@ virtual void SetActiveTabColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `clr`  
+ [輸入] `clr`  
  指定新的背景色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -1854,7 +1855,7 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `clr`  
+ [輸入] `clr`  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指定新的文字色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -1868,7 +1869,7 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `arColors`  
+ [輸入] `arColors`  
  RGB 色彩的陣列。  
   
 ### <a name="remarks"></a>備註  
@@ -1884,7 +1885,7 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pRTC`  
+ [輸入] `pRTC`  
  新的包裝函式類別的執行階段類別資訊。  
   
 ### <a name="remarks"></a>備註  
@@ -1900,10 +1901,10 @@ void SetDrawNoPrefix(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bNoPrefix`  
+ [輸入] `bNoPrefix`  
  `TRUE`如果您想要處理前置詞字元。否則`FALSE`。  
   
- [in] `bRedraw`  
+ [輸入] `bRedraw`  
  `TRUE`如果您想要重繪索引標籤式的視窗中。否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1922,16 +1923,16 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiID`  
+ [輸入] `uiID`  
  點陣圖的資源 id。 `SetImageList`載入來自此資源的影像清單。  
   
- [in] `cx`  
+ [輸入] `cx`  
  單位為像素的每個影像的寬度。  
   
- [in] `clrTransp`  
+ [輸入] `clrTransp`  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指出影像的透明色彩。  
   
- [in] `hImageList`  
+ [輸入] `hImageList`  
  預先載入的影像清單控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1952,7 +1953,7 @@ virtual void SetLocation(Location location);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `location`  
+ [輸入] `location`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1966,10 +1967,10 @@ virtual BOOL SetTabBkColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
- [in] `color`  
+ [輸入] `color`  
  若要設定色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1985,10 +1986,10 @@ virtual void SetTabBorderSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nTabBorderSize`  
+ [輸入] `nTabBorderSize`  
  新框線的大小，以像素為單位。  
   
- [in] `bRepaint`  
+ [輸入] `bRepaint`  
  表示是否架構會重新繪製控制項的布林參數。  
   
 ##  <a name="settabhicon"></a>CMFCBaseTabCtrl::SetTabHicon  
@@ -2001,10 +2002,10 @@ virtual BOOL SetTabHicon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤索引。這個方法會變更此索引標籤的圖示。  
   
- [in] `hIcon`  
+ [輸入] `hIcon`  
  圖示的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2020,10 +2021,10 @@ virtual BOOL SetTabIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  要更新的索引標籤以零為起始的索引。  
   
- [in] `uiIcon`  
+ [輸入] `uiIcon`  
  新圖示的圖示識別碼。 此識別碼參考內部[CImageList](../../mfc/reference/cimagelist-class.md)物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2040,13 +2041,13 @@ virtual BOOL SetTabIconOnly(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  若要變更索引標籤以零為起始的索引。  
   
- [in] `bIconOnly`  
+ [輸入] `bIconOnly`  
  布林值參數，決定是否要顯示只有圖示。  
   
- [in] `bShowTooltipAlways`  
+ [輸入] `bShowTooltipAlways`  
  布林值參數會決定是否在架構顯示工具提示會顯示只有圖示的索引標籤。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2065,10 +2066,10 @@ virtual BOOL SetTabLabel(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  要更新的索引標籤以零為起始的索引。  
   
- [in] `strLabel`  
+ [輸入] `strLabel`  
  包含新索引標籤的文字字串的參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2091,7 +2092,7 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `arOrder`  
+ [輸入] `arOrder`  
  陣列的以零為起始的索引定義新的索引標籤順序。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2110,10 +2111,10 @@ virtual BOOL SetTabTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  以零為起始的索引標籤的索引。  
   
- [in] `color`  
+ [輸入] `color`  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)參數，指出新的文字色彩。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2131,16 +2132,16 @@ virtual BOOL ShowTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
  索引標籤的索引，`ShowTab`會顯示或隱藏。  
   
- [in] `bShow`  
+ [輸入] `bShow`  
  布林值參數，指出是否要顯示索引標籤。  
   
- [in] `bRecalcLayout`  
+ [輸入] `bRecalcLayout`  
  布林值參數，指出是否要立即重新計算的視窗版面配置。  
   
- [in] `bActivate`  
+ [輸入] `bActivate`  
  布林值參數，指出是否要選取所指定的索引標籤`iTab`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -2157,7 +2158,7 @@ virtual BOOL StartRenameTab(int iTab);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iTab`  
+ [輸入] `iTab`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -2173,12 +2174,12 @@ virtual void SwapTabs(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nFisrtTabID`  
- [in] `nSecondTabID`  
+ [輸入] `nFisrtTabID`  
+ [輸入] `nSecondTabID`  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCTabCtrl 類別](../../mfc/reference/cmfctabctrl-class.md)   

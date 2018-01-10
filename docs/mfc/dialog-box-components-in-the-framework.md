@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9c9457e06a14412817adbaf9c1d3bd1543fc881
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 840e66def6a908b26b5021537eddee68c50a9628
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-box-components-in-the-framework"></a>架構中的對話方塊元件
 在 MFC 架構中，對話方塊具有兩個元件：  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
      對話方塊是一個視窗，會在可見時附加到 Windows 視窗。 當對話方塊視窗建立時，會使用對話方塊範本資源做為建立對話方塊子視窗控制項的範本。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

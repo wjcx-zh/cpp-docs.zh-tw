@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65cb348e19031965d70175d73ed8df94692f9db6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cd9ac613dd788b116e648e2b1fd612aa07abcab
+ms.sourcegitcommit: 669f45f11b98b71b8a0e6808c0fe0cdf17484089
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 定義可執行演算法的 C++ 標準程式庫容器範本函式。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
 -   _copy 後置詞表示演算法不僅操作項目的值，還將修改後值複製到目的範圍。 `reverse` 演算法反轉範圍內項目的順序，而 `reverse_copy` 演算法也會將結果複製到目的範圍。  
   
- C++ 標準程式庫演算法通常分類為表示其目的或需求的相關群組。 其中包括變更元素值的修改演算法，相較於不變更元素值的非修改演算法。 變動演算法變更項目的順序，但不變更項目的值。 移除演算法可以從範圍或範圍的複本排除項目。 排序演算法以各種方式重新排列範圍中的項目，而已排序範圍演算法只在已經透過特定方式排序項目的演算法上作用。  
+ C++ 標準程式庫演算法通常分類為表示其目的或需求的相關群組。 其中包括變更元素值的修改演算法，相較於不變更元素值的非修改演算法。 變動演算法變更項目的順序，但不變更項目的值。 移除演算法可以從範圍或範圍的複本排除項目。 排序演算法重新排列中的各種方法的範圍中的項目，然後排序的範圍演算法只處理的範圍已經以特定方式排序其項目。  
   
  為數值處理提供的 C++ 標準程式庫數值演算法有自己的標頭檔 [\<numeric>](../standard-library/numeric.md)，而函式物件和配接器定義於標頭 [\<functional>](../standard-library/functional.md)。傳回布林值的函式物件稱為述詞。 預設二元述詞是比較 `operator<`。 通常，排序的項目必須是小於比較，因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致在非對等元件中的排序。  
   
@@ -138,7 +139,7 @@ ms.lasthandoff: 10/24/2017
 |[unique_copy](../standard-library/algorithm-functions.md#unique_copy)|將來源範圍的項目複製到目的範圍，但是彼此相鄰的重複項目除外。|  
 |[upper_bound](../standard-library/algorithm-functions.md#upper_bound)|在已排序範圍中尋找值大於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

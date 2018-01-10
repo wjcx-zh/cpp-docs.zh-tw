@@ -55,11 +55,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc59fa4597bff59901ef77b0a661cf406bda6b29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a90db931ca53687c42263df6a4112eb478059227
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 類別
 表示動畫變數。  
@@ -70,18 +71,18 @@ ms.lasthandoff: 10/24/2017
 class CAnimationVariable;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|會建構一個動畫變數的物件。|  
 |[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|解構函式。 CAnimationVariable 物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationVariable::AddTransition](#addtransition)|新增轉換。|  
 |[CAnimationVariable::ApplyTransitions](#applytransitions)|將轉換加入從分鏡腳本的內部清單。|  
@@ -96,21 +97,21 @@ class CAnimationVariable;
 |[CAnimationVariable::GetVariable](#getvariable)|讓指標回到 IUIAnimationVariable COM 物件。|  
 |[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|設定預設值，並釋放 IUIAnimationVariable COM 物件。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|設定動畫變數的動畫物件之間的關聯性。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|指定是否應該刪除相關的轉換物件。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|指定預設值會傳播到 IUIAnimationVariable。|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|包含一份繪製這個動畫變數的轉換。|  
@@ -398,5 +399,5 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ### <a name="remarks"></a>備註  
  若要建立動畫變數封裝它的動畫物件之間的一對一關聯性是在內部呼叫這個方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

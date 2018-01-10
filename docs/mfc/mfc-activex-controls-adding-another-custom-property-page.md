@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 225535055f05fa8d6eeb08476004fbc5074e86b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e342df8bee9b69d0d84e3096f727d2c260b7493
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX 控制項：加入另一個自訂屬性頁
 有時候，ActiveX 控制項將會有更多超過可合理地容納在單一的屬性頁面上的屬性。 在此情況下，您可以將屬性頁加入 ActiveX 控制項以顯示這些屬性。  
@@ -116,6 +117,6 @@ ms.lasthandoff: 10/24/2017
   
  之後您已進行必要的修改重建您的專案，使用測試容器測試新的屬性頁。 如需測試容器存取方法的詳細資訊，請參閱 [以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

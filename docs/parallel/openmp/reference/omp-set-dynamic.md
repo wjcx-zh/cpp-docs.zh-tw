@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc9306a7babcd86c96995f4fd464ebd24b138c43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13cb098170e46b8459821156aeb8be369bbc1ffa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompsetdynamic"></a>omp_set_dynamic
 指出可以調整的執行階段的後續平行區域中的可用執行緒數目。  
@@ -73,5 +74,5 @@ int main()
 1  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../../../parallel/openmp/reference/openmp-functions.md)

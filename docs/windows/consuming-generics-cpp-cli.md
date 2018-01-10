@@ -14,11 +14,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7f5a767995ce0484552d96429573e0b355820207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="consuming-generics-ccli"></a>使用泛型 (C++/CLI)
 以某一種 .NET 語言撰寫的泛型可以在其他 .NET 語言中使用。 與範本不同的是，泛型在編譯的組件中仍然保持為泛型。 因此，您可以在不同組件中，甚至以與定義泛型類型的組件不同的語言，將泛型類型具現化。  
@@ -125,5 +128,5 @@ int main() {
 10  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

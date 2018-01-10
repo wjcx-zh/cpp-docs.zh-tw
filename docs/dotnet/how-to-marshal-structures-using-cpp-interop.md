@@ -1,38 +1,40 @@
 ---
-title: "如何：使用 C++ Interop 封送處理結構 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, 結構"
-  - "資料封送處理 [C++], 結構"
-  - "Interop [C++], 結構"
-  - "封送處理 [C++], 結構"
-  - "結構 [C++], 封送處理"
+title: "如何： 使用 c + + Interop 封送處理結構 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 85c0b4301b0fb55acdc74344d1ca3fc1b6b393d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 C++ Interop 封送處理結構
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題將示範 Visual C\+\+ 互通性的一個 Facet。  如需詳細資訊，請參閱[使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+# <a name="how-to-marshal-structures-using-c-interop"></a>如何：使用 C++ Interop 封送處理結構
+本主題會示範一個 facet 的 Visual c + + 的互通性。 如需詳細資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
- 在下列範例中，程式碼會使用 [managed、unmanaged](../preprocessor/managed-unmanaged.md) \#pragma 指示詞，在相同的檔案中實作 Managed 和 Unmanaged 函式，這些函式即使在不同的檔案中定義，也會以相同的方式互相溝通。  只包含 Unmanaged 函式的檔案，不需要以 [\/clr \(Common Language Runtime 編譯\)](../build/reference/clr-common-language-runtime-compilation.md) 編譯。  
+ 下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作的方式相同。 檔案，其中包含只在 unmanaged 函式不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 範例  
- 下列程式碼範例會示範以傳值 \(By Value\) 和傳址 \(By Reference\) 的方式，從 Managed 函式將結構傳遞至 Unmanaged 函式。  因為這個範例中的結構只包含簡單的內建型別 \(請參閱[Blittable 和非 Blittable 類型](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\)，所以不需要特別的封送處理 \(Marshaling\)。  若要封送處理非 Blittable 結構，例如包含指標的結構，請參閱 [如何：使用 C\+\+ Interop 封送處理內嵌指標](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
+## <a name="example"></a>範例  
+ 下列範例示範如何將結構傳遞從 managed 到 unmanaged 函式值和傳址。 因為此範例中的結構包含只有簡單、 內建資料類型 (請參閱[Blittable 和非 Blittable 類型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))，無須任何特殊的封送處理。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[如何： 封送處理內嵌指標使用 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
   
 ```  
 // PassStruct1.cpp  
@@ -88,8 +90,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列程式碼範例會示範以傳值和傳址的方式，從 Unmanaged 函式將結構傳遞至 Managed 函式。  因為這個範例中的結構只包含簡單的內建型別 \(請參閱[Blittable 和非 Blittable 類型](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\)，所以不需要特別的封送處理。  若要封送處理非 Blittable 結構，例如包含指標的結構，請參閱 [如何：使用 C\+\+ Interop 封送處理內嵌指標](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
+## <a name="example"></a>範例  
+ 下列範例示範如何將結構傳遞從 unmanaged 到 managed 函式，值和傳址。 因為此範例中的結構包含只有簡單、 內建資料類型 (請參閱[Blittable 和非 Blittable 類型](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3))，無須任何特殊的封送處理。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[如何： 封送處理內嵌指標使用 c + + Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。  
   
 ```  
 // PassStruct2.cpp  
@@ -154,5 +156,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

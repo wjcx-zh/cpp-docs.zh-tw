@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DGeometrySink::SetFillMode
 - AFXRENDERTARGET/CD2DGeometrySink::SetSegmentFlags
 - AFXRENDERTARGET/CD2DGeometrySink::m_pSink
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DGeometrySink [MFC], CD2DGeometrySink
 - CD2DGeometrySink [MFC], AddArc
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0e48ad7304cb505526ab5eab0b9cd1bbba62895c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometrysink-class"></a>CD2DGeometrySink 類別
 ID2D1GeometrySink 包裝函式。  
@@ -67,18 +65,18 @@ ID2D1GeometrySink 包裝函式。
 class CD2DGeometrySink;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|建構來自 CD2DPathGeometry 物件 CD2DGeometrySink 物件。|  
 |[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|解構函式。 D2D 幾何接收物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometrySink::AddArc](#addarc)|將單一圓弧加入至之路徑幾何|  
 |[CD2DGeometrySink::AddBezier](#addbezier)|在目前的點和指定的結束點之間建立三次方貝茲曲線。|  
@@ -97,13 +95,13 @@ class CD2DGeometrySink;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|傳回 ID2D1GeometrySink 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|ID2D1GeometrySink 指標。|  
   
@@ -310,6 +308,5 @@ void SetSegmentFlags(D2D1_PATH_SEGMENT vertexFlags);
  `vertexFlags`  
  要套用至新的區段加入至這個幾何接收器筆劃和聯結選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

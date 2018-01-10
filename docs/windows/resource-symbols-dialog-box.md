@@ -18,16 +18,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23095aba32846a61d4fd61f9910994892e1f5ca1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0e21f60fb2ca90e9e4825e93103fa74be3563780
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-symbols-dialog-box"></a>資源符號對話方塊
 **資源符號**對話方塊可讓您加入新的資源符號、 變更符號會顯示，或跳到原始程式碼中正在使用中的位置。  
   
- **Name**  
+ **名稱**  
  顯示的符號名稱。 如需詳細資訊，請參閱[符號名稱限制](../windows/symbol-name-restrictions.md)。  
   
  **值**  
@@ -56,5 +59,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檢視資源符號](../windows/viewing-resource-symbols.md)

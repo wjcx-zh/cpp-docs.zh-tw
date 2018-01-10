@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60d7c2276a980dfe1bfb6a6f99981a3a9d72994e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ea93e9e56b676e4dfef33ecbcabfd9754458024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relationships-among-mfc-objects"></a>MFC 物件關聯性
 為了協助放置文件/檢視建立程序，請考慮一個執行中程式：一個文件、一個用來包含檢視的框架視窗，以及與文件關聯的檢視。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  主框架視窗的指標儲存在[m_pMainWnd](../mfc/reference/cwinthread-class.md#m_pmainwnd)應用程式物件的成員變數。 在 `OnFileNew` 的 `InitInstance` 成員函式覆寫中呼叫 `CWinApp` 會為您設定 `m_pMainWnd`。 如果您未呼叫 `OnFileNew`，則必須自己在 `InitInstance` 中設定變數值 (如果命令列上存在 /Embedding，則 SDI COM 元件 (伺服器) 應用程式可能無法設定變數)。請注意，`m_pMainWnd` 現在是 `CWinThread` 類別的成員，而非 `CWinApp` 類別在的成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)   
  [建立文件範本](../mfc/document-template-creation.md)   
  [文件/檢視建立](../mfc/document-view-creation.md)   

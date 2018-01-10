@@ -62,11 +62,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 057ad4176648155e549b8b061bfe727e7ffe1876
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 967bad02cf92b0078d789e5c0b6b55f9644bb17b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dbitmap-class"></a>CD2DBitmap 類別
 ID2D1Bitmap 包裝函式。  
@@ -77,24 +78,24 @@ ID2D1Bitmap 包裝函式。
 class CD2DBitmap : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|多載。 建構從 HBITMAP CD2DBitmap 物件。|  
 |[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|解構函式。 D2D 點陣圖物件終結時呼叫。|  
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|多載。 建構 CD2DBitmap 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::Attach](#attach)|將現有的資源物件的介面|  
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|將指定的區域從指定的點陣圖複製到目前的點陣圖|  
@@ -110,21 +111,21 @@ class CD2DBitmap : public CD2DResource;
 |[CD2DBitmap::GetSize](#getsize)|傳回的點陣圖的大小，以與裝置無關的像素 (Dip)，|  
 |[CD2DBitmap::IsValid](#isvalid)|檢查資源的有效性 (會覆寫[CD2DResource::IsValid](../../mfc/reference/cd2dresource-class.md#isvalid)。)|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::CommonInit](#commoninit)|初始化物件|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|傳回 ID2D1Bitmap 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|如果應該予以終結 m_hBmpSrc;，則為 TRUE。否則為 FALSE。|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|來源點陣圖的控制代碼。|  
@@ -441,5 +442,5 @@ operator ID2D1Bitmap*();
 ### <a name="return-value"></a>傳回值  
  ID2D1Bitmap 介面或如果尚未初始化物件為 NULL 指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

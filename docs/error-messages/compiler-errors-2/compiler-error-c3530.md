@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3530
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3530
+f1_keywords: C3530
+dev_langs: C++
+helpviewer_keywords: C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a71820e6303c67e3d247c7da6dddc184e5cb41a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 0d66e76fc3e44a037f52aa6e217fae848f1338d2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3530"></a>編譯器錯誤 C3530
 'auto' 無法與任何其他類型規範結合  
@@ -48,5 +44,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)

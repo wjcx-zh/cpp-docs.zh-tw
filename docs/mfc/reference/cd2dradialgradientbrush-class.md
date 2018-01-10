@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DRadialGradientBrush::SetRadiusY
 - AFXRENDERTARGET/CD2DRadialGradientBrush::m_pRadialGradientBrush
 - AFXRENDERTARGET/CD2DRadialGradientBrush::m_RadialGradientBrushProperties
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], CD2DRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], Attach
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8cdac3e2d2df31840ae90b79755b68d916033990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: f44927e2882e168f1e466deab29b56f32a6c5c9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush 類別
 ID2D1RadialGradientBrush 包裝函式。  
@@ -67,18 +65,18 @@ ID2D1RadialGradientBrush 包裝函式。
 class CD2DRadialGradientBrush : public CD2DGradientBrush;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|建構 CD2DLinearGradientBrush 物件。|  
 |[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|解構函式。 D2D 放射狀漸層筆刷物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::Attach](#attach)|將現有的資源物件的介面|  
 |[CD2DRadialGradientBrush::Create](#create)|建立 CD2DRadialGradientBrush。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
@@ -96,13 +94,13 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|傳回 ID2D1RadialGradientBrush 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|ID2D1RadialGradientBrush 指標。|  
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|中心、 漸層的原點位移和半徑 x 和 y 半徑筆刷的漸層。|  
@@ -328,6 +326,5 @@ void SetRadiusY(FLOAT radiusY);
  `radiusY`  
  漸層的橢圓形的 y 半徑。 此值為筆刷的座標空間  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

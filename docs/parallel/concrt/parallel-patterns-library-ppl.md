@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d7850721f5005ac1a1ab47c6557dcd99cede897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-patterns-library-ppl"></a>平行模式程式庫 (PPL)
 平行模式程式庫 (PPL) 提供命令式程式設計模型，可提升開發並存應用程式時的延展性和方便性。 PPL 建置在並行執行階段的排程和資源管理元件上。 其提供在資料上平行作用的泛型、類型安全演算法和容器，可提升應用程式程式碼與基礎執行緒機制之間的抽象層級。 PPL 有提供共用狀態的替代方案，也可以讓您開發可調整大小的應用程式。  
@@ -58,7 +59,7 @@ fib(42): 267914296
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|說明 PPL 中工作和工作群組的角色。|  
 |[平行演算法](../../parallel/concrt/parallel-algorithms.md)|說明如何使用平行演算法，例如 `parallel_for` 和 `parallel_for_each`。|  

@@ -1,32 +1,33 @@
 ---
-title: "idl_module | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_module attribute"
+title: "idl_module |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_module
+dev_langs: C++
+helpviewer_keywords: idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f052692686149b247a50c0d89e77797f4f48fab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# idl_module
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定.dll 檔案中的進入點。  
+# <a name="idlmodule"></a>idl_module
+.Dll 檔中指定的進入點。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -43,44 +44,44 @@ caps.handback.revision: 11
 function declaration  
 ```  
   
-#### 參數  
- **名稱**  
- 會顯示於.idl 檔案的程式碼區塊是使用者定義名稱。  
+#### <a name="parameters"></a>參數  
+ **name**  
+ .Idl 檔中會出現在程式碼區塊的使用者定義的名稱。  
   
- **dllname** \(可省略\)  
+ **dllname** （選擇性）  
  包含匯出的.dll 檔案。  
   
- `uuid` \(選擇項\)  
- 唯一的 ID。  
+ `uuid` (選擇性)  
+ 唯一 ID。  
   
- **helpstring** \(可省略\)  
- 字元字串，用來描述型別程式庫。  
+ **helpstring** （選擇性）  
+ 字元字串，用來描述類型程式庫。  
   
- **helpstringcontext** \(可省略\)  
- 隨附.hlp 或.chm 檔中的 \[說明\] 主題的識別碼。  
+ **helpstringcontext** (選擇性)  
+ .Hlp 或.chm 檔案中的 [說明] 主題的識別碼。  
   
- **helpcontext** \(可省略\)  
- 這個型別程式庫說明 ID。  
+ **helpcontext** (選擇性)  
+ 此類型程式庫的說明識別碼。  
   
- **隱藏** \(可省略\)  
- 避免文件庫顯示為參數。  請參閱[隱藏](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 屬性，如需詳細資訊。  
+ **hidden** (選擇性)  
+ 避免程式庫顯示參數。 如需詳細資訊，請參閱 [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) MIDL 屬性。  
   
- ***限制***  \(可省略\)  
- 文件庫的成員無法被任意呼叫。  請參閱[限制](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 屬性，如需詳細資訊。  
+ ***限制***（選擇性）  
+ 無法任意呼叫的程式庫的成員。 如需詳細資訊，請參閱 [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) MIDL 屬性。  
   
  *函式宣告*  
- 您會定義函式。  
+ 您將定義的函式。  
   
-## 備註  
- `idl_module` C \+ \+ 屬性可讓您在.dll 檔案中，它可讓您的.dll 檔案匯入指定的進入點。  
+## <a name="remarks"></a>備註  
+ `idl_module` C + + 屬性可讓您指定的.dll 檔案，可讓您從.dll 檔案匯入項目點。  
   
- **Idl\_module** 屬性具有類似的功能 [模組](http://msdn.microsoft.com/library/windows/desktop/aa367099) MIDL 屬性。  
+ **Idl_module**屬性具有類似功能[模組](http://msdn.microsoft.com/library/windows/desktop/aa367099)MIDL 屬性。  
   
- 您可以匯出的任何項目從一個 COM 物件，您可以匯出.dll 檔案中，將 DLL 的進入點放在文件庫的區塊.idl 檔。  
+ 您可以從 COM 物件，您可以將 DLL 進入點放在程式庫的區塊.idl 檔中的.dll 檔案從匯出匯出任何項目。  
   
- 您必須使用`idl_module`在兩個步驟。  首先，您必須定義的名稱或 DLL 組。  然後，當您使用`idl_module`來指定進入點，請指定名稱和任何其他的屬性。  
+ 您必須使用`idl_module`分成兩個步驟。 首先，您必須定義的名稱/DLL 配對。 然後，當您使用`idl_module`来指定進入點，請指定名稱和任何其他屬性。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列程式碼示範如何使用`idl_module`屬性：  
   
 ```  
@@ -92,21 +93,20 @@ function declaration
 void FuncName(int i);  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|全螢幕輸入|  
+|**適用於**|任何位置|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [獨立屬性](../windows/stand-alone-attributes.md)   
  [entry](../windows/entry.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

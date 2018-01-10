@@ -1,51 +1,51 @@
 ---
-title: "點指示詞 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NMAKE 中的點指示詞"
-  - "NMAKE 程式, 點指示詞"
+title: "點指示詞 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- NMAKE program, dot directives
+- dot directives in NMAKE
 ms.assetid: ab35da65-30b6-48b7-87d6-61503d7faf9f
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9958b13a6f06b0024ec2d4dd304abfe93b16741e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 點指示詞
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在描述區塊之外、且必須在行首指定點指示詞。  點指示詞開頭為句號  \(.\)，後面跟隨著冒號 \(:\)。  可以使用空格和定位字元。  點指示詞名稱會區分大小寫，而且需使用大寫。  
+# <a name="dot-directives"></a>點指示詞
+指定外部描述區塊，在一行的開始點指示詞。 點指示詞以句點為開頭 (。 )，後面接著冒號 （:）。 允許空格和定位點。 點指示詞名稱會區分大小寫，且必須為大寫。  
   
 |指示詞|用途|  
-|---------|--------|  
-|**.IGNORE :**|忽略命令從指定給 Makefile 結尾的位置所傳回的非零的結束代碼 \(Exit Code\)。  根據預設，如果命令傳回非零的結束代碼，NMAKE 將會暫止。  若要還原錯誤檢查，請使用 **\!CMDSWITCHES**。  若要忽略單一命令的結束代碼，請使用破折號 \(–\) 修飾詞 \(Modifier\)。  若要忽略整個檔案的結束代碼，請使用 \/I。|  
-|**.PRECIOUS :** *targets*|如果暫止了更新 *targets* 的命令，會把它們保留在磁碟上；如果命令是透過刪除檔案來處理中斷，則會沒有作用。  使用一或多個空格或是定位字元分隔目標名稱。  根據預設，如果 CTRL\+C 或 CTRL\+BREAK 中斷了組建，NMAKE 會刪除目標。  每次使用 **.PRECIOUS** 都會套用至整個 Makefile，如果使用多個規格，其作用也會相對增加。|  
-|**.SILENT :**|從指定給 Makefile 結尾的位置上隱藏顯示執行的命令。  根據預設，NMAKE 會顯示所叫用 \(Invoke\) 的命令。  若要還原 echo，請使用 **\!CMDSWITCHES**。  若要隱藏單一命令的 echo，請使用 **@** 修飾詞。  若要隱藏整個檔案的 echo，請使用 \/S。|  
-|**.SUFFIXES :** `list`|列出推斷規則相符的副檔名，預先定義為包含下列副檔名：.exe .obj .asm .c .cpp .cxx .bas .cbl .for .pas .res .rc .f .f90|  
+|---------------|-------------|  
+|**.忽略：**|會忽略命令，其指定為 makefile 的結尾處傳回零的結束代碼。 根據預設，如果命令傳回非零結束代碼，暫止 NMAKE。 若要還原錯誤檢查，請使用**！CMDSWITCHES**。 若要忽略單一命令的結束代碼，請使用破折號 （-） 修飾詞。 若要略過整個檔案的結束代碼，請使用 / 我。|  
+|**.珍貴：** *目標*|會保留*目標*磁碟上如果更新這些指令會暫止的; 如果有任何作用命令會刪除該檔案來處理中斷。 與一個或多個空格或定位字元分隔目標名稱。 根據預設，NMAKE 會刪除目標，如果組建因 CTRL + C 或 CTRL + BREAK。 每次使用**。珍貴**整個 makefile; 適用於多個規格會累計。|  
+|**.無訊息：**|隱藏的執行命令，從指定的 makefile 結尾的位置。 根據預設，NMAKE 就會顯示它會叫用的命令。 若要還原回應，請使用**！CMDSWITCHES**。 若要隱藏單一命令的回應，使用 **@** 修飾詞。 若要隱藏整個檔案的回應，請使用/s。|  
+|**.尾碼：**`list`|列出擴充功能的推斷規則比對。預先定義包含下列副檔名：.exe.obj.asm.c.cpp.cxx.bas.cbl。 如.pas.res.rc.f.f90|  
   
- 若要變更 **.SUFFIXES** 清單順序或指定新清單，請清除清單並指定新設定。  若要清除清單，在冒號後請不要指定副檔名：  
+ 若要變更**。尾碼**清單順序，或若要指定新的清單，請清除清單並指定新的設定。 若要清除清單，指定冒號後面的任何擴充功能：  
   
 ```  
 .SUFFIXES :  
 ```  
   
- 若要加入其他後置字元至清單結尾，請指定  
+ 若要將其他尾碼新增到清單的結尾，指定  
   
 ```  
 .SUFFIXES : suffixlist  
 ```  
   
- 在此處的 *suffixlist* 是其他後置字元的清單，由一或多個空格或定位字元分隔。  若要查看 **.SUFFIXES** 的目前設定，請以 \/P 執行 NMAKE。  
+ 其中*suffixlist*是其他尾碼，以一個或多個空格或定位字元分隔的清單。 若要查看目前的設定**。尾碼**，使用 /P.執行 NMAKE  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [NMAKE 參考](../build/nmake-reference.md)

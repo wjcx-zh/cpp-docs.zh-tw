@@ -1,32 +1,33 @@
 ---
-title: "pragma | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pragma"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pragma attribute"
+title: "pragma |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pragma
+dev_langs: C++
+helpviewer_keywords: pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 36016ae4af32ead520c8d9919840d267e9d46211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# pragma
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定的字串發出到產生的.idl 檔，而不使用引號括起來。  .  
+# <a name="pragma"></a>pragma
+指定的字串發出到產生的.idl 檔案，而不使用引號。 。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,14 +36,14 @@ caps.handback.revision: 11
 ) ];  
 ```  
   
-#### 參數  
- *pragma\_statement*  
- 您想要進入 \[產生的.idl 檔 pragma。  
+#### <a name="parameters"></a>參數  
+ *pragma_statement*  
+ 您想要移入產生的.idl 檔 pragma。  
   
-## 備註  
- **Pragma** C\+\+ 屬性具有相同的功能，為 [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Pragma** c + + 屬性具有相同的功能[pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) MIDL 屬性。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_pragma.cpp  
@@ -58,21 +59,20 @@ __interface A
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|全螢幕輸入|  
+|**適用於**|任何位置|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [獨立屬性](../windows/stand-alone-attributes.md)   
  [pack](../preprocessor/pack.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

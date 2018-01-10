@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ebf163c721d8fd05c5481859cf0158ee22180e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c2326dc87c0490256972bfe23df5cc7ed13a787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 加入新項目樣板
 您可以輕鬆加入項目，則使用的 Visual c + + 專案通用**加入新項目**命令。 當您使用**加入新項目**命令， `Add New Item`  對話方塊隨即出現，並將適當的檔案加入專案的項目範本的清單。  
@@ -63,5 +64,5 @@ ms.lasthandoff: 10/24/2017
 |XML 結構描述檔案 (.xsd)|建立用來定義 XML 文件的結構描述的檔案。|  
 |XSLT 檔案 (.xslt)|建立用來轉換 XML 文件的檔案。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)

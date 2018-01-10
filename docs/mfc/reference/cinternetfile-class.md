@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45df3f03ed73a47f170fa19277842f26c840d2da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1e4b05e2aceb8fb4c8a4abed0dd6038fff6cfee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinternetfile-class"></a>CInternetFile 類別
 可讓您存取在使用網際網路通訊協定的遠端系統上的檔案。  
@@ -62,13 +63,13 @@ class CInternetFile : public CStdioFile
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInternetFile::CInternetFile](#cinternetfile)|建構 `CInternetFile` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInternetFile::Abort](#abort)|關閉檔案，忽略所有警告和錯誤。|  
 |[CInternetFile::Close](#close)|關閉`CInternetFile`並釋放其資源。|  
@@ -84,13 +85,13 @@ class CInternetFile : public CStdioFile
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInternetFile::operator HINTERNET](#operator_hinternet)|網際網路控制代碼的轉型運算子。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInternetFile::m_hFile](#m_hfile)|檔案控制代碼。|  
   
@@ -378,7 +379,7 @@ virtual void WriteString(LPCTSTR pstr);
 ### <a name="remarks"></a>備註  
  如果寫入資料時，就會發生任何錯誤，函式會擲回[CInternetException](../../mfc/reference/cinternetexception-class.md)描述錯誤的物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Cgopherfile 類別](../../mfc/reference/cstdiofile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)

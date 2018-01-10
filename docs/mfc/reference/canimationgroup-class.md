@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,8 +30,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pStoryboard
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationGroup::m_pParentController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationGroup [MFC], CAnimationGroup
 - CAnimationGroup [MFC], Animate
@@ -55,16 +53,16 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2d047940ac1ef3103168aa40b53c726ce0767b52
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9c59bd895187d0d9a047c626426736a957a4d6b5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup 類別
 實作動畫群組，其結合了動畫分鏡腳本動畫物件，定義動畫的轉換。  
@@ -75,18 +73,18 @@ ms.lasthandoff: 10/09/2017
 class CAnimationGroup;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|建構動畫群組。|  
 |[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|解構函式。 當動畫群組正在被終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationGroup::Animate](#animate)|以動畫顯示的群組。|  
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|套用至動畫物件的轉換。|  
@@ -97,9 +95,9 @@ class CAnimationGroup;
 |[CAnimationGroup::Schedule](#schedule)|排程在指定時間的動畫。|  
 |[CAnimationGroup::SetAutodestroyTransitions](#setautodestroytransitions)|會指示所有動畫物件屬於群組會自動都終結轉換。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationGroup::AddKeyframes](#addkeyframes)|加入主要畫面格的分鏡腳本 helper。|  
 |[CAnimationGroup::AddTransitions](#addtransitions)|將轉換加入至分鏡腳本 helper。|  
@@ -107,7 +105,7 @@ class CAnimationGroup;
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|指定如何清除從屬於群組的動畫物件的轉換。 如果這個成員為 TRUE 時，轉換會在已排定動畫時自動移除。 否則，您必須手動移除轉換。|  
 |[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|指定要終結動畫物件的方式。 如果此參數為 TRUE，動畫物件將會自動終結時終結該群組。 否則必須以手動方式終結動畫物件。 預設值為 FALSE。 此值設定為 TRUE，只有當屬於群組的所有動畫物件將以動態方式都配置使用 new 運算子。|  
@@ -118,7 +116,7 @@ class CAnimationGroup;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|動畫群組的唯一識別碼。|  
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|此群組所屬的動畫控制器指標。|  
@@ -357,6 +355,5 @@ void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ### <a name="remarks"></a>備註  
  您可以將此值設為 FALSE，只有當您配置在堆疊上的轉換。 預設值為 TRUE，因此強烈建議您配置轉換物件使用新的運算子。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

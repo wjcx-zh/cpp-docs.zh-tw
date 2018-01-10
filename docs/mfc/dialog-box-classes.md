@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 964b0f506b6f982c706be97666ee9b03ffea1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-box-classes"></a>對話方塊類別
 類別`CDialog`和其衍生的類別封裝對話方塊中的功能。 對話方塊是一種特殊的視窗中，因為`CDialog`衍生自`CWnd`。 衍生您的對話方塊類別從`CDialog`或其中一個使用的通用對話方塊類別為標準的對話方塊，例如開啟或儲存檔案、 列印、 選取的字型或色彩，初始化搜尋和取代作業，或執行各種 OLE 相關作業。  
@@ -132,6 +133,6 @@ ms.lasthandoff: 10/24/2017
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
  包含列印或預覽列印工作的相關資訊的結構。 使用的列印架構[CView](../mfc/reference/cview-class.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

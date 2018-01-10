@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fdedaf9b100ae85352b1514f96fe7e229e4f9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0980f048b9be411308b159dea0ceaa71f8eee563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-documents-on-the-internet"></a>網際網路上的主動式文件
 主動式文件提供傳統的內嵌物件的擴充功能。 主動式文件可能會多頁，而且會顯示整個工作區中。 它們執行傳統功能表交涉，且可以就地與伺服器應用程式中開啟的視窗中編輯。 而不是顯示為以陰影的框線括住的小矩形，主動式文件會是完整的畫面格和一律就地啟用作用中。  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/24/2017
   
  您也會變更在登錄中，輸入資訊的方式，並進行數個其他變更。 如果您的應用程式目前不有任何 COM 元件支援，您可以新增以執行應用程式精靈，並整合與您現有的應用程式的 COM 元件專屬的程式碼的伺服器支援。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)   
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

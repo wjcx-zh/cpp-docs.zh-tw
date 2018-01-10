@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7a9fe4f4a70f55061addab05f90bda389fd8949
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efdd067376d8e1430ed8636c0a77afe950858e9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fastfail"></a>__fastfail
 **Microsoft 特定的**  
@@ -31,7 +32,7 @@ void __fastfail(unsigned int code);
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `code`  
+ [輸入] `code`  
  winnt.h 或 wdm.h 中指出處理序終止原因的 `FAST_FAIL_<description>` 符號常數。  
   
 ## <a name="return-value"></a>傳回值  
@@ -66,7 +67,7 @@ void __fastfail(unsigned int code);
   
  **標頭檔** \<intrin.h >  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

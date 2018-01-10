@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d07c2f59572b5e771013d5162f974d865ed97880
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7289a843c33fbc9ba23d6006997dea8e09ba7c79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numthreads"></a>num_threads
 在執行緒小組設定執行緒的數目。  
@@ -52,5 +53,5 @@ num_threads(num)
 ## <a name="example"></a>範例  
  請參閱[平行](../../../parallel/openmp/reference/parallel.md)的使用範例`num_threads`子句。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

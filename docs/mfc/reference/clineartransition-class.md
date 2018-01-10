@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,23 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CLinearTransition::Create
 - AFXANIMATIONCONTROLLER/CLinearTransition::m_dblFinalValue
 - AFXANIMATIONCONTROLLER/CLinearTransition::m_duration
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CLinearTransition [MFC], CLinearTransition
 - CLinearTransition [MFC], Create
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7379c49ef54a86d68e5b9f47a35437befc53d8d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 4d74b32955c1b4d4682f3d2fb42c8c6e1498e56d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clineartransition-class"></a>CLinearTransition 類別
 封裝線性轉換。  
@@ -43,23 +41,23 @@ ms.lasthandoff: 10/09/2017
 class CLinearTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLinearTransition::CLinearTransition](#clineartransition)|建構線性轉換物件並初始化與持續時間和最後一個值。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLinearTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|  
 |[CLinearTransition::m_duration](#m_duration)|轉換的持續時間。|  
@@ -123,6 +121,5 @@ DOUBLE m_dblFinalValue;
 UI_ANIMATION_SECONDS m_duration;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

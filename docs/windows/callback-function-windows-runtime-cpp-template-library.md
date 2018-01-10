@@ -1,31 +1,32 @@
 ---
-title: "Callback 函式 (Windows 執行階段 C++ 樣板程式庫) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Callback"
-dev_langs: 
-  - "C++"
+title: "回呼函式 （Windows 執行階段 c + + 樣板程式庫） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Callback
+dev_langs: C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b2d83096ce4e6ff9245a9e26516d6a487155695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Callback 函式 (Windows 執行階段 C++ 樣板程式庫)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="callback-function-windows-runtime-c-template-library"></a>Callback 函式 (Windows 執行階段 C++ 樣板程式庫)
 建立成員函式是回呼方法的物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<  
@@ -198,7 +199,7 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `TDelegateInterface`  
  樣板參數，指定當事件發生時要呼叫之委派的介面。  
   
@@ -244,16 +245,16 @@ ComPtr<TDelegateInterface> Callback(
  `method`  
  當事件發生時呼叫的成員函式。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  成員函式是指定之回呼方法的物件。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  委派物件的基底必須是 IUnknown，而不是 IInspectable。  
   
-## 需求  
- **標頭：**event.h  
+## <a name="requirements"></a>需求  
+ **標頭：** event.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

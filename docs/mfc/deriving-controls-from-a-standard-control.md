@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73370659d07e38565cc3e9b4cf349a0328b921b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b93bc07fc5ab4680caaa276daaeca86189b8ce5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>從標準控制項衍生控制項
 如同使用任何[CWnd](../mfc/reference/cwnd-class.md)-衍生的類別，您可以從現有的控制項類別衍生新類別，以修改控制項的行為。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  由於衍生的控制項是內嵌在對話方塊類別中，因此會在建構對話方塊時建構該控制項，所以也會在終結對話方塊時終結該控制項。 比較這個程式碼中的範例[手動加入控制項](../mfc/adding-controls-by-hand.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立及使用控制項](../mfc/making-and-using-controls.md)   
  [控制項](../mfc/controls-mfc.md)
 

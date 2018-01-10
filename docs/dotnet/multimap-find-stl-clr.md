@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8bc962e8baf8b13b631f1346e1cf6098207a27a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 34c7bed10c7c93a10d640b3066a5fbc5c88488ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimapfind-stlclr"></a>multimap::find (STL/CLR)
 尋找符合指定之索引鍵的元素。  
@@ -78,7 +81,7 @@ find b = [b 2]
 find C = False  
 ```  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  請注意，`find`不保證它找到的數個項目。  
   
 ## <a name="requirements"></a>需求  
@@ -86,7 +89,7 @@ find C = False
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   
  [multimap:: lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)   

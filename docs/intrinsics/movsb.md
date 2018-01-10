@@ -1,69 +1,69 @@
 ---
-title: "__movsb | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsb"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "movsb 指令"
-  - "rep movsb 指令"
-  - "內建 __movsb"
+title: "__movsb |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsb
+dev_langs: C++
+helpviewer_keywords:
+- movsb instruction
+- rep movsb instruction
+- __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 92d748b9242dcf9e068774703cceba86fce747c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# __movsb
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="movsb"></a>__movsb
+**Microsoft 特定的**  
   
- 產生移動的字串 \(`rep movsb`\) 的指令。  
+ 產生的移動字串 (`rep movsb`) 指令。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-void __movsb(   
-   unsigned char* Destination,   
-   unsigned const char* Source,   
-   size_t Count   
+void __movsb(   
+   unsigned char* Destination,   
+   unsigned const char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### 參數  
- \[out\] `Destination`  
- 若要複製的目的端變數的指標。  
+#### <a name="parameters"></a>參數  
+ [輸出] `Destination`  
+ 要複製的目的地指標。  
   
- \[in\] `Source`  
- 若要複製的來源變數的指標。  
+ [輸入] `Source`  
+ 要複製的來源指標。  
   
- \[in\] `Count`  
+ [輸入] `Count`  
  要複製的位元組數目。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__movsb`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__movsb`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 結果會是第一個`Count`個位元組所指`Source`會被複製到`Destination`字串。  
+## <a name="remarks"></a>備註  
+ 結果是第一個`Count`位元組所指`Source`複製到`Destination`字串。  
   
- 只有使用與內建這個常式。  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // movsb.cpp  
@@ -83,9 +83,11 @@ int main()
 }  
 ```  
   
-  **大型的黑色小狗。**  
- **大型的黑色小狗。**   
-## 結束 Microsoft 特定  
+```Output  
+A big black dog. A big black dog.  
+```  
   
-## 請參閱  
+**結束 Microsoft 特定的**  
+  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3492
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3492
+f1_keywords: C3492
+dev_langs: C++
+helpviewer_keywords: C3492
 ms.assetid: b1dc6342-9133-4b1f-a9c3-e8c65d20d121
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cd8b70a22f24e41889c2c6d13cbb5fc2ff3e85e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a1b2626d49f759b3e694890ddb73a33e92803dc6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3492"></a>編譯器錯誤 C3492
 'var': 您無法擷取匿名等位的成員  
@@ -73,5 +69,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

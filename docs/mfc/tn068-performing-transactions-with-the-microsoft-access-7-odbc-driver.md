@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3920aea4d4d08b088831b558b220a6b2052fb7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6db31d6301f2f0937d7bb5b83e77bf59936efdfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>TN068：使用 Microsoft Access 7 ODBC 驅動程式執行異動
 > [!NOTE]
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  此提示描述如何使用 MFC ODBC 資料庫類別和 Microsoft Access 7.0 ODBC 驅動程式納入 Microsoft ODBC Desktop Driver Pack 3.0 時，執行交易。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  如果資料庫應用程式執行的交易，您必須小心呼叫`CDatabase::BeginTrans`和`CRecordset::Open`應用程式中正確的順序。 Microsoft Access 7.0 驅動程式會使用 Microsoft Jet 資料庫引擎，和 Jet 需要您的應用程式沒有開始已開啟的資料指標的任何資料庫上的交易。 MFC ODBC 資料庫類別中，開啟的資料指標等同於開啟`CRecordset`物件。  
   
  如果您開啟的資料錄集，然後再呼叫**BeginTrans**，您可能不會看到任何錯誤訊息。 不過，任何資料錄集更新您的應用程式會呼叫之後會變成永久`CRecordset::Update`，並更新將不會回復藉由呼叫**復原**。 若要避免這個問題，您必須呼叫**BeginTrans**第一次，然後開啟資料錄集。  
@@ -132,7 +133,7 @@ db.CommitTrans();
 > [!NOTE]
 >  如果您需要變更資料錄集成員變數，請勿使用這項技術**m_strFilter**或`m_strSort`交易之間。 在此情況下，您應該關閉資料錄集之後每個, **CommitTrans**或**復原**作業。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

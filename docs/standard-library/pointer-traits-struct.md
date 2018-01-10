@@ -25,11 +25,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6d40f9149a9a03e4de40713ba9c7c0ce65f0edad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b82970336c11e8060b01b9c78b48b21accdc67db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointertraits-struct"></a>pointer_traits 結構
 提供樣板類別 `allocator_traits` 的物件所需的資訊，以描述具有指標類型 `Ptr` 的配置器。  
@@ -57,7 +58,7 @@ struct Ptr
 ```
 ### <a name="typedefs"></a>Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`typedef T2 difference_type`|類型 `T2` 為 `Ptr::difference_type` (如果該類型存在)，否則為 `ptrdiff_t`。 如果 `Ptr` 為原始指標，則類型為 `ptrdiff_t`。|  
 |`typedef T1 element_type`|類型 `T1` 為 `Ptr::element_type` (如果該類型存在)，否則為 `Ty`。 如果 `Ptr` 為原始指標，則類型為 `Ty`。|  
@@ -65,7 +66,7 @@ struct Ptr
   
 ### <a name="structs"></a>結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`pointer_traits::rebind`|嘗試將基礎指標類型轉換為指定類型。|  
   
@@ -87,7 +88,7 @@ struct Ptr
 static pointer pointer_to(element_type& obj);
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<memory>](../standard-library/memory.md)   
  [allocator_traits 類別](../standard-library/allocator-traits-class.md)
 

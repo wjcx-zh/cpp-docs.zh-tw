@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fc416d6856b2b84005e4e1d66e17a3b10e93eb6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: e503c3ecbf0cd7245aadeb231030a91577e1e865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>開發 Visual C++ 的 IDE 和工具
 Visual C++ 是 Visual Studio 整合式開發環境 (IDE) 的一部分，與其他語言共用許多相同的視窗和工具。 其中，包括許多**方案總管 中**，程式碼編輯器和偵錯工具，記載下[Visual Studio IDE](/visualstudio/ide/visual-studio-ide)。 這些共用工具或視窗針對 C++ 所提供的功能集，通常會與針對 .NET 語言或 Javascript 所提供的功能集稍有不同。 有些視窗或工具只有 Visual Studio Pro 或 Visual Studio Enterprise 才會提供。   

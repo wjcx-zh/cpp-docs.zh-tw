@@ -1,32 +1,33 @@
 ---
-title: "requires_category | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.requires_category"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "requires_category attribute"
+title: "requires_category |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.requires_category
+dev_langs: C++
+helpviewer_keywords: requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 677e3c94a5db69dafb66a5cd33749c129cb35afb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# requires_category
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定目標類別所需的元件類別的目錄。  
+# <a name="requirescategory"></a>requires_category
+指定目標類別的必要的元件類別目錄。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,17 +36,17 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 參數  
- *requires\_category*  
- 「 必要 」 分類 ID。  
+#### <a name="parameters"></a>參數  
+ *requires_category*  
+ 必要的類別目錄的識別碼。  
   
-## 備註  
- **Requires\_category** C\+\+ 屬性會指定目標類別所需要的元件類別。  如需詳細資訊，請參閱 [REQUIRED\_CATEGORY](../Topic/REQUIRED_CATEGORY.md)。  
+## <a name="remarks"></a>備註  
+ **Requires_category** c + + 屬性會指定目標類別所需的元件類別。 如需詳細資訊，請參閱[REQUIRED_CATEGORY](../atl/reference/category-macros.md#required_category)。  
   
- 這個屬性不能 [coclass](../windows/coclass.md)，  [progid](../windows/progid.md)，或  [vi\_progid](../windows/vi-progid.md) 屬性 \(或另一個屬性，表示其中一種\) 也會套用到相同的項目。  
+ 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。  
   
-## 範例  
- 下列程式碼所需的物件實作控制的類別。  
+## <a name="example"></a>範例  
+ 下列程式碼需要這個物件實作控制項類別。  
   
 ```  
 // cpp_attr_ref_requires_category.cpp  
@@ -61,20 +62,19 @@ caps.handback.revision: 10
 class CMyClass {};  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**，`struct`|  
+|**適用於**|**class**、 `struct`|  
 |**可重複**|否|  
-|**必要的屬性**|一或多項動作：  **coclass**，  **progid**，或  **vi\_progid**。|  
-|**無效的屬性**|None|  
+|**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [COM Attributes](../windows/com-attributes.md)   
- [implements\_category](../windows/implements-category.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [COM 屬性](../windows/com-attributes.md)   
+ [implements_category](../windows/implements-category.md)   

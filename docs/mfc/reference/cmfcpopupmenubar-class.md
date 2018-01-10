@@ -57,11 +57,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6be3c3b6028bab04ae3d8ec32f9063d26012778e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 002e059fd905930409cb5f2745628f8ac1dea103
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar 類別
 內嵌於快顯功能表的功能表列。  
@@ -72,11 +73,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCPopupMenuBar : public CMFCToolBar  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|立即重新計算顯示窗格的配置。 (覆寫[CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate)。)|  
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|從指定的功能表資源載入快顯功能表項目。|  
@@ -100,7 +101,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|指定應用程式有 Windows XP 外觀時，是否會顯示灰色提要欄位。|  
   
@@ -140,7 +141,7 @@ virtual void AdjustSizeImmediate(BOOL bRecalcLayout);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bRecalcLayout`  
+ [輸入] `bRecalcLayout`  
  `TRUE`若要自動重新計算配置的快顯功能表列 窗格中。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -153,7 +154,7 @@ BOOL BuildOrigItems(UINT uiMenuResID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiMenuResID`  
+ [輸入] `uiMenuResID`  
  指定要載入功能表資源的功能表識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -190,7 +191,7 @@ CMFCToolBar* FindDestintationToolBar(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  在螢幕上的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -257,10 +258,10 @@ virtual BOOL ImportFromMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hMenu`  
+ [輸入] `hMenu`  
  要從中匯入的快顯功能表按鈕功能表。  
   
- [in] `bShowAllCommands`  
+ [輸入] `bShowAllCommands`  
  `TRUE`如果功能表上的所有命令匯入，或`FALSE`如果很少使用的項目可能會隱藏起來。  
   
 ### <a name="return-value"></a>傳回值  
@@ -325,7 +326,7 @@ BOOL LoadFromHash(HMENU hMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hMenu`  
+ [輸入] `hMenu`  
  載入 [封存] 功能表的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -364,10 +365,10 @@ virtual void SetButtonStyle(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  工具列按鈕的樣式是要設定的以零為起始的索引。  
   
- [in] `nStyle`  
+ [輸入] `nStyle`  
  按鈕的樣式。 請參閱[ToolBar 控制項樣式](../../mfc/reference/toolbar-control-styles.md)可用工具列按鈕樣式的清單。  
   
 ### <a name="remarks"></a>備註  
@@ -380,7 +381,7 @@ void SetOffset(int iOffset);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iOffset`  
+ [輸入] `iOffset`  
  快顯功能表列應進行位移的資料列數目。  
   
 ### <a name="remarks"></a>備註  
@@ -395,15 +396,15 @@ void StartPopupMenuTimer(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMenuButton`  
+ [輸入] `pMenuButton`  
  要設定延遲計時器的功能表按鈕的指標。  
   
- [in] `nDelayFactor`  
+ [輸入] `nDelayFactor`  
  延遲因素，等於至少一個，乘以標準功能表的延遲時間 （通常之間半秒和 5 秒）。  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCColorBar 類別](../../mfc/reference/cmfccolorbar-class.md)   

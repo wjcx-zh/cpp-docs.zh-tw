@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1fa71e0aa1dc73884ef9783824198912758592ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67921e0667267b99b3787d55fa7ff564aa543ae7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="http-basics"></a>HTTP 的基本概念
 撰寫網際網路應用程式時，通常會檢查並在 HTTP 標頭中加入資訊。 傳回碼表示所要求的事件為成功或失敗。 下表中列出數個常用的傳回碼。  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/24/2017
   
  [http://www.w3.org/pub/WWW/Protocols/](http://www.w3.org/pub/www/protocols/)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)
 

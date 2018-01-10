@@ -1,56 +1,56 @@
 ---
-title: "XML 文件 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ 文件的 /// 分隔符號"
-  - "註解, C++ 原始程式碼檔"
-  - "XML 文件"
-  - "XML, 原始程式碼中的文件註解"
+title: "XML 文件 （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- XML documentation
+- XML, documentation comments in source code
+- comments, C++ source code files
+- /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-caps.latest.revision: 18
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 17853a43d3a94be779b659b0da825467fa66f61c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# XML 文件 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 Visual C\+\+ 中，您可以將註解加入至處理至 .xml 檔案的原始程式碼。  這個檔案可以是輸入到建立類別的文件程式碼的流程。  
+# <a name="xml-documentation-visual-c"></a>XML 文件 (Visual C++)
+Visual c + + 中，您可以註解加入至.xml 檔案將會處理的原始程式碼中。 這個檔案接著可以在您的程式碼中建立類別的文件的程序的輸入。  
   
- 在 Visual C\+\+ 程式碼檔案， XML 必須直接在方法或型別定義之前位於文件註解。  註解在下列案例中可用來填入 Intellisense QuickInfo 資料提示:  
+ 在 Visual c + + 程式碼檔案中，必須直接在方法或類型定義之前位於 XML 文件註解。 註解可以用來填入 Intellisense QuickInfo 資料提示方塊，在下列案例：  
   
-1.  編譯程式碼時，有隨附的 .winmd 檔案的 Windows 執行階段元件  
+1.  當程式碼會編譯為 Windows 執行階段元件與隨附的.winmd 檔案  
   
-2.  當原始程式碼在目前中包含專案  
+2.  當目前的專案中隨附的原始程式碼  
   
-3.  在型別宣告和實作位於相同標頭檔的程式庫中。  
+3.  文件庫中的型別宣告和實作位於相同的標頭檔  
   
 > [!NOTE]
->  在目前版本中，程式碼註解沒有處理包含範本類型 \(例如，函式的範本或任何使用參數做為範本\)。  將此註解產生未定義的行為。  
+>  在目前版本中，程式碼註解不會處理範本，或包含範本類型 （例如，函式做為範本參數） 的任何項目上。 新增這類的註解，將會導致未定義的行為。  
   
- 如需建立 .xml 檔案的資料相關的文件註解的詳細資訊，請參閱下列主題。  
+ 如需與文件註解建立的.xml 檔案的詳細資訊，請參閱下列主題。  
   
-|如需下列資訊|請參閱|  
-|------------|---------|  
-|編譯器使用的選項。|[\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
-|您可以使用所提供資料的常用功能的標記。|[建議的文件註解標記](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
-|編譯器產生識別建構程式碼的 ID 字串|[處理 .xml 檔案](../ide/dot-xml-file-processing.md)|  
-|如何分隔資料標記|[Visual C\+\+ 文件標記的符號](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
-|產生 .xml 從一或多個 .xdc 檔案。|[XDCMake 參考](../ide/xdcmake-reference.md)|  
-|資訊的連結至 XML，則會與 Visual Studio 功能區域相關。|[在 Visual Studio 中的 XML](../Topic/XML%20Tools%20in%20Visual%20Studio.md)|  
+|如需以下相關資訊|請參閱|  
+|---------------------------|---------|  
+|要使用的編譯器選項|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
+|您可以使用提供常用的標記文件中使用的功能|[建議使用的文件註解標籤](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  
+|編譯器會產生以識別您的程式碼中建構的識別碼字串|[處理的.xml 檔案](../ide/dot-xml-file-processing.md)|  
+|如何分隔文件標記|[Visual C++ 文件標記的分隔符號](../ide/delimiters-for-visual-cpp-documentation-tags.md)|  
+|從一或多個.xdc 檔中產生的.xml 檔案。|[XDCMake 參考](../ide/xdcmake-reference.md)|  
+|如同 XML 的相關資訊的連結與 Visual Studio 功能區|[Visual Studio 中的 XML](/visualstudio/xml-tools/xml-tools-in-visual-studio)|  
   
- 如果您需要將 XML 文件的文字的特性註解，您必須使用 XML 實體或 CDATA 區段。  
+ 如果您需要將 XML 特殊字元放在文件註解的文字，您必須使用 XML 實體區段或 CDATA 區段。  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

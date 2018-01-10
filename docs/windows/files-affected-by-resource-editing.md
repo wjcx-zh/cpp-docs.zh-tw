@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f40d515d62d02bdbf1231dad5396f323b802f2fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3b3a5f8c8351d7056409b0e6182862213c51381a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-affected-by-resource-editing"></a>受資源編輯影響的檔案
 Visual Studio 環境會在您的資源編輯工作階段期間使用下表中顯示的檔案。  
@@ -36,5 +39,5 @@ Visual Studio 環境會在您的資源編輯工作階段期間使用下表中顯
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資源檔](../windows/resource-files-visual-studio.md)

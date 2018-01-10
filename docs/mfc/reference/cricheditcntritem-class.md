@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84cca25f52bab9af4f30f35e2eb17dadb94c20a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ebb8cf92a522b63fb88338fe9befacc7d5f1d506
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem 類別
 與[CRichEditView](../../mfc/reference/cricheditview-class.md)和[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，提供豐富的編輯控制項的 MFC 的文件檢視架構內容中的功能。  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class CRichEditCntrItem : public COleClientItem  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|建構 `CRichEditCntrItem` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|啟動為其他類型的項目。|  
   
@@ -108,7 +109,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[DVASPECT](http://msdn.microsoft.com/library/windows/desktop/ms690318) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 WORDPAD](../../visual-cpp-samples.md)   
  [COleClientItem 類別](../../mfc/reference/coleclientitem-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

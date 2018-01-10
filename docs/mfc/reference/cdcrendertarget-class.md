@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXRENDERTARGET/CDCRenderTarget::Detach
 - AFXRENDERTARGET/CDCRenderTarget::GetDCRenderTarget
 - AFXRENDERTARGET/CDCRenderTarget::m_pDCRenderTarget
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CDCRenderTarget [MFC], CDCRenderTarget
 - CDCRenderTarget [MFC], Attach
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 502c9d7cedf782c6ce23ebaf22d30c9b0e5e7409
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: e195979967ac5422be67b634d44e2f5d1afa9263
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdcrendertarget-class"></a>CDCRenderTarget 類別
 ID2D1DCRenderTarget 包裝函式。  
@@ -49,17 +47,17 @@ ID2D1DCRenderTarget 包裝函式。
 class CDCRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|建構 CDCRenderTarget 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDCRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|  
 |[CDCRenderTarget::BindDC](#binddc)|將呈現目標，就會發出繪製命令之裝置內容繫結|  
@@ -69,13 +67,13 @@ class CDCRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|傳回 ID2D1DCRenderTarget 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|ID2D1DCRenderTarget 物件的指標。|  
   
@@ -177,6 +175,5 @@ operator ID2D1DCRenderTarget*();
 ### <a name="return-value"></a>傳回值  
  ID2D1DCRenderTarget 介面或如果尚未初始化物件為 NULL 指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

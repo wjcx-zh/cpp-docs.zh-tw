@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 180039627049dee0be8ebcaf211dabc2e42086c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30ecf45c8a22dfb42917affa59152aeefbc35425
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-programming-tips"></a>多執行緒：程式設計提示
 存取資料時，多執行緒應用程式會需要更嚴格的小心比單一執行緒應用程式。 因為有多個，獨立路徑中執行的同時使用多執行緒應用程式中，演算法、 資料或兩者都必須知道該資料無法一次使用一個以上的執行緒。 本主題說明撰寫多執行緒應用程式使用 Microsoft Foundation Class (MFC) 程式庫時，避免潛在的問題的技術。  
@@ -64,5 +65,5 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_communicating_between_threads"></a>執行緒之間的通訊  
  MFC 提供類別，讓執行緒同步處理以維護執行緒安全性物件的存取權的數的字。 這些類別的用法述[多執行緒： 如何使用同步類別](../parallel/multithreading-how-to-use-the-synchronization-classes.md)和[多執行緒： 何時使用同步類別](../parallel/multithreading-when-to-use-the-synchronization-classes.md)。 如需有關這些物件的詳細資訊，請參閱[同步](http://msdn.microsoft.com/library/windows/desktop/ms686353)中[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)]。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)

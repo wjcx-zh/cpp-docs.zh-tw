@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_finalValue
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialValue
 - AFXANIMATIONCONTROLLER/CCustomInterpolator::m_initialVelocity
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CCustomInterpolator [MFC], CCustomInterpolator
 - CCustomInterpolator [MFC], GetDependencies
@@ -45,16 +43,16 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialValue
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 26763a16c4de59f33622ea904ea8aa132fe0d5f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 4198e4b694356087cccad99d8ca62da3f23ba6ec
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
 實作基本 Interpolator。  
@@ -65,17 +63,17 @@ ms.lasthandoff: 10/09/2017
 class CCustomInterpolator;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|多載。 建構自訂 interpolator 物件，並初始化持續時間和指定的值的速度。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCustomInterpolator::GetDependencies](#getdependencies)|取得 interpolator 的相依性。|  
 |[CCustomInterpolator::GetDuration](#getduration)|取得 interpolator 的持續時間。|  
@@ -88,7 +86,7 @@ class CCustomInterpolator;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|插補的值。|  
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|插補的速度。|  
@@ -301,6 +299,5 @@ virtual BOOL SetInitialValueAndVelocity(
 ### <a name="return-value"></a>傳回值  
  基本的實作一律會傳回 TRUE。 會傳回 FALSE 覆寫的實作如果您想要失敗事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

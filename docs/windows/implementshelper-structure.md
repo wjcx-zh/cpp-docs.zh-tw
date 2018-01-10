@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bb328b93231646cd3b0ceeea42382d8f8857e21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1a51de59278e476be1e99b60ef1b0ab8a6e3f3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 結構
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -50,7 +53,7 @@ friend struct Details::ImplementsHelper;
   
  此範本會周遊的介面清單，並將它們加入做為基底類別，以及啟用 QueryInterface 所需的資訊。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `ImplementsHelper`  
@@ -60,6 +63,6 @@ friend struct Details::ImplementsHelper;
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [參考 （Windows 執行階段程式庫）](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

@@ -37,11 +37,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceca13bd09483c788c430d420b53c88bb97ed34d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de1e30e6ca9f404199c6db43837f35d612a02b69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 類別
 `CMFCEditBrowseCtrl`類別支援編輯瀏覽控制項，這是選擇性包含瀏覽 按鈕可編輯的文字方塊。 當使用者按一下瀏覽按鈕時，控制項就會執行自訂動作或顯示包含檔案瀏覽器或資料夾瀏覽器的標準對話方塊。  
@@ -52,18 +53,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCEditBrowseCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|預設建構函式。|  
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|啟用或停用 （隱藏） 瀏覽 按鈕。|  
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|啟用 [瀏覽] 按鈕，然後將編輯瀏覽控制項放入*檔案瀏覽*模式。|  
@@ -198,7 +199,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
   
  下表列出可能的傳回值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`BrowseMode_Default`|`custom mode`. 程式設計人員定義的動作會執行。|  
 |`BrowseMode_File`|`file mode`. 會顯示標準檔案瀏覽器對話方塊。|  
@@ -313,6 +314,6 @@ virtual BOOL OnIllegalFileName(CString& strFileName);
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

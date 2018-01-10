@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6928fd3aa902b5ed0ab4e942950af76448e16e5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52170e08d3118b5eb0ef7bb1e34edbe29b3d38f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gslice-class"></a>gslice 類別
 valarray 的一個公用程式類別，用來定義 valarray 的多維度子集。 如果 valarray 被視為含有陣列中所有元素的多維度矩陣，則配量會從多維度陣列中擷取向量。  
@@ -343,6 +344,6 @@ The strides of vaResult are:
  vaGSlice.stride ( ) = ( 7 4 ).  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

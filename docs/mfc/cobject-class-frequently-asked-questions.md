@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de6130d1a95ae38d0dab107e5a93af8bc1533a62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecad3239510519e1c262e41bf9198358c4442912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cobject-class-frequently-asked-questions"></a>CObject 類別：常見問題集
 本章節包含 `CObject` 類別的相關問題。  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [成本多高我從 CObject 衍生類別](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CObject](../mfc/using-cobject.md)

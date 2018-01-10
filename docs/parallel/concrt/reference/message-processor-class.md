@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f93763a3d29e19feaa110b336c4cc9bb832539d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messageprocessor-class"></a>message_processor 類別
 `message_processor` 類別是處理 `message` 物件的抽象基底類別。 訊息順序方面沒有一定的保證。  
@@ -41,25 +42,25 @@ class message_processor;
  `T`  
  在訊息中裝載的資料型別由這`message_processor`物件。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`type`|類型別名`T`。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[async_send](#async_send)|在衍生類別中覆寫，放入訊息區塊以非同步的方式。|  
 |[sync_send](#sync_send)|在衍生類別中覆寫，放入訊息區塊以同步方式。|  
 |[等候](#wait)|當在衍生類別中覆寫時，等候所有完成的非同步作業。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[process_incoming_message](#process_incoming_message)|當在衍生類別中覆寫時，會執行到區塊轉送訊息的處理。 每次會加入新的訊息，而且找不到佇列為空白，請呼叫一次。|  
   
@@ -123,6 +124,6 @@ virtual void wait() = 0;
 ### <a name="remarks"></a>備註  
  處理器實作應該覆寫這個方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [ordered_message_processor 類別](ordered-message-processor-class.md)

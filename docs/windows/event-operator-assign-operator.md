@@ -1,33 +1,33 @@
 ---
-title: "Event::operator= 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Event::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 運算子"
+title: "Event:: operator = 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Event::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: d8fe9820-8856-4899-9553-56226bdc4945
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: de46ba0d6749120fc391b4a55527904ed1321ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Event::operator= 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指派給目前事件執行個體的指定事件的參考。  
+# <a name="eventoperator-operator"></a>Event::operator= 運算子
+將指定的 Event 參考指派給目前的 Event 執行個體。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 WRL_NOTHROW Event& operator=(  
@@ -35,17 +35,17 @@ WRL_NOTHROW Event& operator=(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `h`  
- 為事件執行個體的右值參考。  
+ 右值參考事件執行個體。  
   
-## 傳回值  
- 對目前執行個體的指標。  
+## <a name="return-value"></a>傳回值  
+ 到目前的事件執行個體的指標。  
   
-## 需求  
- **標題:** corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
- [Event 類別 \(Windows 執行階段 C\+\+ 樣板程式庫\)](../windows/event-class-windows-runtime-cpp-template-library.md)
+## <a name="see-also"></a>請參閱  
+ [Event 類別 (Windows 執行階段 C++ 範本庫)](../windows/event-class-windows-runtime-cpp-template-library.md)

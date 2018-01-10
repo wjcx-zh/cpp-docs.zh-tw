@@ -16,11 +16,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25919c70d1a2ffffb350a0ec3c97b429d6d5ac66
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8926e5e2432dea0e366698346df1d4b708517553
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說： 建立傳統 Windows 桌面應用程式 （c + +）
 
@@ -53,7 +56,7 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
 1. 在**新專案**對話方塊的左窗格中，展開 **已安裝**， **Visual c + +**，然後選取**Windows 桌面**。 在中間窗格中，選取**Windows 桌面精靈**。
 
-   在**名稱**方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [ **確定**]。
+   在**名稱**方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定] 。
 
    ![DesktopApp 專案的名稱，](../build/media/desktop-app-new-project-name-153.png "DesktopApp 專案的名稱")
 
@@ -77,7 +80,7 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
 1. 在**新專案**對話方塊的左窗格中，展開 **已安裝**，**範本**， **Visual c + +**，然後選取  **Win32**。 在中間窗格選取 [Win32 專案] 。
 
-   在**名稱**方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [ **確定**]。
+   在**名稱**方塊中，輸入專案的名稱，例如*DesktopApp*。 選擇 [確定] 。
 
    ![DesktopApp 專案的名稱，](../build/media/desktop-app-new-project-name-150.png "DesktopApp 專案的名稱")
 
@@ -568,6 +571,6 @@ Windows API （也稱為 Win32 應用程式開發介面、 Windows 桌面應用�
 
 恭喜您！ 當您完成此逐步解說中，並建置傳統 Windows 桌面應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad1d49bb90a5f3c0732fd81851e34485e95f3ccb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 936904f19687463a9b5c51262c8e6f7a8b9fe5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler 類別
 代表與呼叫內容相關之目前排程器的抽象概念。  
@@ -42,11 +43,11 @@ ms.lasthandoff: 10/24/2017
 class CurrentScheduler;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[建立](#create)|建立新的排程器所描述的行為`_Policy`參數並將其附加至呼叫的內容。 新建立的排程器會呼叫內容的目前排程器。|  
 |[CreateScheduleGroup](#createschedulegroup)|多載。 建立新的排程群組內呼叫內容相關聯的排程器。 接受參數的版本`_Placement`會導致新建立的排程群組會變成優先執行該參數所指定的位置中的工作。|  
@@ -251,7 +252,7 @@ static void __cdecl ScheduleTask(
 ### <a name="remarks"></a>備註  
  如果呼叫的內容目前沒有任何相關聯的排程器，則這個方法會將處理序的預設排程器建立及/或附加至呼叫的內容。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   

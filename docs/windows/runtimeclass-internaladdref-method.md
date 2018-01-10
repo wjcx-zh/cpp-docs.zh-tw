@@ -1,44 +1,45 @@
 ---
-title: "RuntimeClass::InternalAddRef 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::InternalAddRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InternalAddRef 方法"
+title: "Runtimeclass:: Internaladdref 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::InternalAddRef
+dev_langs: C++
+helpviewer_keywords: InternalAddRef method
 ms.assetid: b8ed7f93-83d8-47ec-988c-98fe65104e7a
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a7ac6c89e60a7c2f052d4455c77df69fdec3aaf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClass::InternalAddRef 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-遞增目前 RuntimeClass 物件的參考計數。  
+# <a name="runtimeclassinternaladdref-method"></a>RuntimeClass::InternalAddRef 方法
+目前的 RuntimeClass 物件的參考計數遞增。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 ULONG InternalAddRef();  
 ```  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  產生的參考計數。  
   
-## 需求  
- **標題:** implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [RuntimeClass 類別](../windows/runtimeclass-class.md)

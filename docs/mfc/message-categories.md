@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c7a463e3d2e0f11373c47f66a745c9c486a4581
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be3bc617c0f3a9915c7ae0314b0e3889ecc561f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-categories"></a>訊息分類
 哪些訊息撰寫處理常式為三個主要類別：  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_command_messages"></a>命令訊息  
  分類 3 中的訊息 (命令) 可以由更多種類的物件進行處理：文件、文件範本和應用程式物件本身 (除了視窗和檢視之外)。 當命令會直接影響一些特定物件時，擁有命令的物件控制代碼才有意義。 例如，[檔案] 功能表上的 [開啟] 命令在邏輯上與應用程式相關：應用程式會在接收命令時開啟指定的文件。 因此 [開啟] 命令的處理常式會是應用程式類別的成員函式。 如需詳細資訊命令和物件的路由方式，請參閱[架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [架構中的訊息和命令](../mfc/messages-and-commands-in-the-framework.md)
 

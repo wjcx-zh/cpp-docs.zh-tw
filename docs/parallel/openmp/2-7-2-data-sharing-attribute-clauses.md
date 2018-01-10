@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e3fbc78792034c60c94972ca6b4ed63dfac01b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c63ece0feea0426fffbafa600f578e342e85fc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="272-data-sharing-attribute-clauses"></a>2.7.2 資料共用屬性子句
 數個指示詞會接受子句可讓使用者控制共用的變數屬性區域的持續時間。 共用屬性子句僅適用於中的指示詞子句會出現語彙範圍的變數。 並非所有的下列子句允許所有指示詞。 指示詞將詳述的特定指示詞為有效的子句清單。  

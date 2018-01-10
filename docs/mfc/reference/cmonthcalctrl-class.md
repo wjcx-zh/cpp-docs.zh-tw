@@ -101,11 +101,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c23178c4883eedb40033aaa0ac744e90060482e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dad90540f74438ac17cfe1d5e14963492ee6d371
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl 類別
 封裝月曆控制項的功能。  
@@ -116,17 +117,17 @@ ms.lasthandoff: 10/24/2017
 class CMonthCalCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|建構 `CMonthCalCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMonthCalCtrl::Create](#create)|建立月曆控制項，並將它附加至`CMonthCalCtrl`物件。|  
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|擷取目前月曆控制項的框線寬度。|  
@@ -420,11 +421,11 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
   
 |值|一週的星期幾|  
 |-----------|---------------------|  
-|0|星期一|  
+|0|週一|  
 |1|星期二|  
-|2|星期三|  
+|2|週三|  
 |3|星期四|  
-|4|星期五|  
+|4|週五|  
 |5|星期六|  
 |6|星期日|  
   
@@ -733,7 +734,7 @@ void SetCalendarBorder(int cxyBorder);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `cxyBorder`|框線寬度，單位為像素。|  
+|[輸入] `cxyBorder`|框線寬度，單位為像素。|  
   
 ### <a name="remarks"></a>備註  
  如果此方法成功，設定框線寬度`cxyBorder`參數。 否則，框線寬度會重設為預設值，指定由目前[佈景主題](https://msdn.microsoft.com/library/windows/desktop/hh270423.aspx)，或如果不會使用佈景主題。  
@@ -773,7 +774,7 @@ BOOL SetCalID(CALID calid);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `calid`|其中一個[行事曆識別碼](http://msdn.microsoft.com/library/windows/desktop/dd317732)常數。|  
+|[輸入] `calid`|其中一個[行事曆識別碼](http://msdn.microsoft.com/library/windows/desktop/dd317732)常數。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -851,7 +852,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `dwNewView`|下列的值，指定每月、 每年、 十年或含世紀檢視的其中一個。<br /><br /> MCMV_MONTH： 每月 檢視<br /><br /> MCMV_YEAR： 年度檢視<br /><br /> MCMV_DECADE： 十年檢視<br /><br /> MCMV_CENTURY： 世紀檢視|  
+|[輸入] `dwNewView`|下列的值，指定每月、 每年、 十年或含世紀檢視的其中一個。<br /><br /> MCMV_MONTH： 每月 檢視<br /><br /> MCMV_YEAR： 年度檢視<br /><br /> MCMV_DECADE： 十年檢視<br /><br /> MCMV_CENTURY： 世紀檢視|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -1137,7 +1138,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，定義包含行事曆的所需的數目的矩形。|  
+|[輸入] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)結構，定義包含行事曆的所需的數目的矩形。|  
   
 ### <a name="return-value"></a>傳回值  
  指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)所定義的結構，定義的矩形的大小小於或等於矩形`lpRect`參數。  
@@ -1147,7 +1148,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
  這個方法會傳送[MCM_SIZERECTTOMIN](http://msdn.microsoft.com/library/windows/desktop/bb761020) Windows SDK 中所述的訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

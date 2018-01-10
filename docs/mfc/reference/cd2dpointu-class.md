@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d2c7525e5b4626fa2075c5f609ca2fa3affcfc4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5af7ab3327a7c3d2f1afc31ad8cc2bde144eeb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dpointu-class"></a>CD2DPointU 類別
 `D2D1_POINT_2U`的包裝函式。  
@@ -33,17 +34,17 @@ ms.lasthandoff: 10/24/2017
 class CD2DPointU : public D2D1_POINT_2U;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DPointU::CD2DPointU](#cd2dpointu)|多載。 建構`CD2DPointU`object`D2D1_POINT_2U`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DPointU::operator CPoint](#operator_cpoint)|將轉換`CD2DPointU`至`CPoint`物件。|  
   
@@ -85,5 +86,5 @@ operator CPoint();
 ### <a name="return-value"></a>傳回值  
  目前的 D2D 點值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

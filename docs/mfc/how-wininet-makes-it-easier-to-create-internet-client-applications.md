@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd3492afb8725ccc510d185c025a27f2ce07f7f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c79404f296df09afb177930897064b8455217d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet 如何讓您更輕鬆地建立網際網路用戶端應用程式
 Win32 網際網路擴充功能或 WinInet，提供一般的網際網路通訊協定，包括 gopher、 FTP 和 HTTP 存取。 使用 WinInet，您可以撰寫網際網路用戶端應用程式在更高的層級的程式設計，而不必處理 WinSock、 TCP/IP 或特定網際網路通訊協定的詳細資料。 WinInet 所有三種通訊協定，熟悉的 Win32 API 介面提供一組一致的函數。 這種一致性降到最低 （例如，從 FTP 變更為 HTTP) 會變更基礎通訊協定，進行您需要的程式碼變更。  
@@ -54,7 +55,7 @@ Win32 網際網路擴充功能或 WinInet，提供一般的網際網路通訊協
   
  您的電腦可以做為用戶端在網際網路上的其他電腦執行的許多作業可能需要很長的時間。 這些作業的速度通常只能使用您的網路連線速度，但它們可能也會受到其他網路流量和作業的複雜度。 例如，連接到遠端 FTP 伺服器，需要您的電腦先查閱該伺服器來尋找其位址的名稱。 您的應用程式會嘗試連接到該位址的伺服器。 一旦開啟連接時，您的電腦和遠端伺服器會起始與檔案傳輸通訊協定的交談才能實際擷取檔案使用的連接。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Win32 網際網路擴充功能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
  [MFC 如何讓您更輕鬆地建立網際網路用戶端應用程式](../mfc/how-mfc-makes-it-easier-to-create-internet-client-applications.md)
 

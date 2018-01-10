@@ -1,42 +1,42 @@
 ---
-title: "multiset::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_comp 成員 [STL/CLR]"
+title: "multiset:: value_comp (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: 6b418e7a-9e82-4d35-a25d-f07b79a875a6
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c0b9fead0ea6a941b09a2a19c0c4fa526babe5b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製兩個項目值的排序委派。  
+# <a name="multisetvaluecomp-stlclr"></a>multiset::value_comp (STL/CLR)
+將複製兩個項目值的順序委派。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## 備註  
- 成員函式傳回用於排序受控制序列的順序委派。  您可用它來比較兩個項目值。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回用來排序受控制的序列的順序委派。 您可以使用它來比較兩個項目值。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multiset_value_comp.cpp   
@@ -61,15 +61,18 @@ int main()
   
 ```  
   
-  **compare\(L'a', L'a'\) \= False**  
-**compare\(L'a', L'b'\) \= True**  
-**compare\(L'b', L'a'\) \= False**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::value\_compare](../dotnet/multiset-value-compare-stl-clr.md)   
- [multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset:: value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)   
+ [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

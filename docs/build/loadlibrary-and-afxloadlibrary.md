@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7de79303e414691df7b069b55b82b2ba39f6ea1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 處理呼叫[LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 明確地連結到 DLL。 如果函式成功，它對應指定的 DLL 呼叫處理序的位址空間，並將控制代碼傳回至可與其他函式中明確連結的 DLL — 比方說，`GetProcAddress`和`FreeLibrary`。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [GetProcAddress](../build/getprocaddress.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)   
  [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187)   
  [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

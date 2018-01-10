@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ff141818e05f9b5b36b6d0cfc5a58170fa97ab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01d364313420c0a950f8eba222e3ae020fbd86cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-backus-nauer-form-bnf-syntax"></a>了解 Nauer Backus-naur 格式 (BNF) 語法
 使用 ATL 登錄器指令碼會使用 BNF 語法，使用下表所示的標記法本主題中所述。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
 |慣例/符號|意義|  
 |------------------------|-------------|  
 |`::=`|對等項目|  
-|`&#124;`|或|  
+|`&#124;`|OR|  
 |`X+`|一或多個`X`s。|  
 |`[X]`|`X` 是選擇項。 以代表選擇性分隔符號`[]`。|  
 |任何**粗體**文字|字串常值。|  
@@ -106,6 +107,6 @@ val 'testhex' = d '&H55'
   
  指定的索引鍵名稱`testhex`是**DWORD**值設定為十六進位 55 (十進位 85)。 請注意，此格式符合**& H** Visual Basic 規格中找到的標記法為。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
 

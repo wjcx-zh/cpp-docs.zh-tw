@@ -1,50 +1,52 @@
 ---
-title: "Boxing  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "boxing, Visual C++"
+title: "Boxing （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: boxing, Visual C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 15fa5471280935c54cdb936af378634e2b60cacd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Boxing  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 編譯器可以將實值類型轉換為處理序中稱為 *boxing* 的物件，並將物件轉換為處理序中稱為 *unboxing* 的實值類型。  
+# <a name="boxing--c-component-extensions"></a>Boxing (C++ 元件擴充功能)
+Visual c + + 編譯器可以將實值類型轉換為呼叫處理序中的物件*boxing*，並將物件轉換為呼叫處理序中的實值型別*unboxing*。  
   
-## 所有執行階段  
- \(這個語言功能沒有適用所有執行階段的備註。\)  
+## <a name="all-runtimes"></a>所有執行階段  
+ (這個語言功能沒有適用所有執行階段的備註。)  
   
-## Windows 執行階段  
- [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)] 支援 boxing 實值類型和 unboxing 參考類型的速記語法。  指派給類型 `Object` 的變數時，會對實值類型進行 boxed 處理。  將 `Object` 變數指派給實值類型變數時會進行 unboxed 處理，並且在括號中指定 unboxed 類型；也就是說，物件變數會轉換成實值類型。  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ C + + /CX 支援 boxing 實值類型和 unboxing 參考類型的速記語法。 指派給類型 `Object` 的變數時，會對實值類型進行 boxed 處理。 將 `Object` 變數指派給實值類型變數時會進行 unboxed 處理，並且在括號中指定 unboxed 類型；也就是說，物件變數會轉換成實值類型。  
   
 ```  
   
-Platform::Object^ object_variable  = value_variable;  
+  Platform::Object^  
+  object_variable  = value_variable;  
 value_variable = (value_type) object_variable;  
   
 ```  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-### 範例  
- 下列程式碼示範對 `DateTime` 值進行 box 和 unbox 處理。  首先，範例會取得表示目前的日期和時間的 DateTime 值，並將它指派給 DateTime 變數。  然後藉由將 DateTime 指派給 Object 變數進行 boxed 處理。  最後，藉由將 boxed 值指派給另一個 DateTime 變數來進行 unboxed 處理。  
+### <a name="examples"></a>範例  
+ 下列程式碼示範對 `DateTime` 值進行 box 和 unbox 處理。 首先，範例會取得表示目前的日期和時間的 DateTime 值，並將它指派給 DateTime 變數。 然後藉由將 DateTime 指派給 Object 變數進行 boxed 處理。 最後，藉由將 boxed 值指派給另一個 DateTime 變數來進行 unboxed 處理。  
   
- 若要測試此範例，請建立 BlankApplication 專案、取代 BlankPage::OnNavigatedTo\(\) 方法，然後在在右括號指定中斷點，並指定指派給變數 str1。  當範例到達右括號時，檢查 str1。  
+ 若要測試此範例，請建立 BlankApplication 專案、取代 BlankPage::OnNavigatedTo() 方法，然後在在右括號指定中斷點，並指定指派給變數 str1。 當範例到達右括號時，檢查 str1。  
   
 ```  
   
@@ -80,27 +82,27 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
   
 ```  
   
- 如需詳細資訊，請參閱 [Boxing \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)。  
+ 如需詳細資訊，請參閱[Boxing (C + + /CX)](http://msdn.microsoft.com/library/windows/apps/hh969554.aspx)。  
   
-## Common Language Runtime  
- Visual C\+\+ 編譯器現在會將實值類型進行 box 處理為 <xref:System.Object>。  這是可行的，因為編譯器所定義的轉換可將實值類型轉換為 <xref:System.Object>。  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ Visual C++ 編譯器現在會將實值類型進行 box 處理為 <xref:System.Object>。  這是可行的，因為編譯器所定義的轉換可將實值類型轉換為 <xref:System.Object>。  
   
- boxing 和 unboxing 可讓實值類型被視為物件。  實值類型，包括結構類型和內建類型 \(如 int\)，可以往返轉換為類型 <xref:System.Object>。  
+ boxing 和 unboxing 可讓實值類型被視為物件。 實值類型，包括結構類型和內建類型 (如 int)，可以往返轉換為類型 <xref:System.Object>。  
   
  如需詳細資訊，請參閱:  
   
 -   [如何：明確要求 Boxing](../dotnet/how-to-explicitly-request-boxing.md)  
   
--   [如何：使用 gcnew 建立實值類型及使用隱含 Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
+-   [如何：使用 gcnew 建立實值型別及使用隱含 Boxing](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)  
   
 -   [如何：Unbox](../dotnet/how-to-unbox.md)  
   
 -   [標準轉換和隱含 Boxing](../dotnet/standard-conversions-and-implicit-boxing.md)  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
  下列範例示範隱含 Boxing 如何運作。  
@@ -177,14 +179,25 @@ int main() {
   
  **輸出**  
   
-  **1**  
- **xx \= 10**  
- **in A**  
- **Class V passed using implicit boxing**  
- **Class V passed with forced boxing**  
- **Interface function**  
- **in func1\(V2^\)**  
- **in func2\(System::ValueType^\)**  
- **in func2\(System::ValueType^\)**   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+1  
+  
+xx = 10  
+  
+in A  
+  
+Class V passed using implicit boxing  
+  
+Class V passed with forced boxing  
+  
+Interface function  
+  
+in func1(V2^)  
+  
+in func2(System::ValueType^)  
+  
+in func2(System::ValueType^)  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

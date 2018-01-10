@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6494e19b5e5b7cc24226f92736c96371b4cc2d9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a67e0acc99c25309fc21558a65fac55c37f76fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-classes"></a>主動式文件類別
 主動式文件可以在整個用戶端視窗中的網頁瀏覽器，例如 Internet Explorer 5.5，或在使用中的容器，例如 Microsoft Office Binder 支援主動式文件中顯示。  
@@ -33,6 +34,6 @@ ms.lasthandoff: 10/24/2017
  [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)  
  實作主動式文件內含項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

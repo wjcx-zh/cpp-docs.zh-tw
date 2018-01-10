@@ -19,11 +19,12 @@ caps.latest.revision: "50"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b2e0af195270b55f80f7eaba37f273765b3cf4b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-visual-c-files"></a>轉散發 Visual C++ 檔案
 當您部署應用程式時，您也必須部署必要的支援檔案。 如果其中有任何檔案是由 Microsoft 提供，請檢查您否有權限轉散發。 若要檢視 Visual Studio 授權條款，請參閱在 ide 中的 [關於 Microsoft Visual Studio] 對話方塊中的 [授權條款] 連結，或下載[Microsoft 軟體授權條款](http://go.microsoft.com/fwlink/p/?LinkId=831114)檔案。 若要檢視的 「 可轉散發清單 」 特定版本的 Visual Studio 的 Microsoft 軟體授權條款 < 可散發程式碼 > 一節中所參考，請參閱[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 的可散發程式碼SDK （包含公用程式與 BuildServer 檔案）](http://go.microsoft.com/fwlink/p/?LinkId=823098)，或適用於 Visual Studio 2015，請參閱[Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 可散發程式碼](http://go.microsoft.com/fwlink/p/?LinkId=523763)。 如需可轉散發檔案的詳細資訊，請參閱[判斷要轉散發哪些 Dll](../ide/determining-which-dlls-to-redistribute.md)和[部署範例](../ide/deployment-examples.md)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[使用合併模組轉散發](../ide/redistributing-components-by-using-merge-modules.md)|描述如何使用 Visual c + + 可轉散發合併模組，以 Visual c + + 執行階段程式庫安裝在 %windir%\system32\ 資料夾中的共用 Dll。|  
 |[轉散發 Visual C++ ActiveX 控制項](../ide/redistributing-visual-cpp-activex-controls.md)|描述如何轉散發使用了 ActiveX 控制項的應用程式。|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,38 +17,22 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs:
-- C++
-helpviewer_keywords:
-- task class
+dev_langs: C++
+helpviewer_keywords: task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>task 類別 (並行執行階段)
-平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 它也包含與其他工作使用接續 ( `then`)，和聯結 ( `when_all`) 和選擇 ( `when_any`) 模式。  
+平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 也可以撰寫工作與其他工作，使用接續 ( `then`)，和聯結 ( `when_all`) 和 choice ( `when_any`) 模式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -80,7 +63,7 @@ class task;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[工作](#ctor)|多載。 建構 `task` 物件。|  
   
@@ -97,7 +80,7 @@ class task;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|多載。 判斷兩個 `task` 物件是否表示不同的內部工作。|  
 |[operator=](#operator_eq)|多載。 將某個 `task` 物件的內容取代為另一個物件的內容。|  
@@ -110,7 +93,7 @@ class task;
  `task`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** ppltasks.h  
+ **標頭：** ppltasks.h  
   
  **命名空間：** concurrency  
   
@@ -131,7 +114,7 @@ void get() const;
  如果工作已取消，呼叫`get`將會擲回[task_canceled](task-canceled-class.md)例外狀況。 如果工作發生不同的例外狀況，或例外狀況從前項工作傳播至它，則呼叫 `get` 將會擲回該例外狀況。  
   
 > [!IMPORTANT]
->  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫[concurrency::task::wait](#wait)或`get`(`wait`呼叫`get`) 會在 STA 執行的程式碼中 否則，執行階段擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這些方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應。 不過，您可以呼叫`get`方法，以接收前項工作的結果，因為會立即提供結果的工作為基礎的接續。  
+>  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式時，請勿呼叫[concurrency::task::wait](#wait)或`get`(`wait`呼叫`get`) 會在 STA 執行的程式碼中 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這些方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫`get`接收以工作為基礎的接續在前項工作的結果，因為會立即提供結果的方法。  
   
 ##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
@@ -155,7 +138,7 @@ bool is_done() const;
  如果工作已完成，false 否則則為 true。  
   
 ### <a name="remarks"></a>備註  
- 如果工作已完成或已取消 （不論有無使用者例外狀況），則函數會傳回 true。  
+ 如果工作已完成或取消 （不論有無使用者例外狀況），則函數會傳回 true。  
   
 ##  <a name="operator_neq"></a>運算子 ！ = 
 
@@ -254,7 +237,7 @@ task(
  來源 `task` 物件。  
   
 ### <a name="remarks"></a>備註  
- 出現 `task` 的預設建構函式，只是為了讓工作在容器內使用。 只有在指派有效的工作給預設建構的工作之後，您才能使用它。 例如，方法`get`，`wait`或`then`將會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)預設建構的工作上被呼叫時的例外狀況。  
+ 出現 `task` 的預設建構函式，只是為了讓工作在容器內使用。 只有在指派有效的工作給預設建構的工作之後，您才能使用它。 這類方法`get`，`wait`或`then`將會擲回[invalid_argument](../../../standard-library/invalid-argument-class.md)預設建構的工作上呼叫時的例外狀況。  
   
  從 `task_completion_event` 建立的工作，會在設定工作完成事件後完成 (並排定其接續作業)。  
   
@@ -327,7 +310,7 @@ __declspec(
 ### <a name="remarks"></a>備註  
  可接受傳回 Windows::Foundation::IAsyncInfo 介面的 Lambda 或仿函數 (functor) 之 `then` 的多載，只供 Windows 市集應用程式使用。  
   
- 如需有關如何使用接續工作組成非同步工作的詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
+ 如需有關如何使用接續工作來撰寫的非同步工作的詳細資訊，請參閱[工作平行處理原則](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)。  
   
 ##  <a name="wait"></a>等候 
 
@@ -343,8 +326,7 @@ task_status wait() const;
 ### <a name="remarks"></a>備註  
   
 > [!IMPORTANT]
->  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式中，請勿呼叫`wait`在 STA 執行的程式碼 否則，執行階段擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式沒有回應。 不過，您可以呼叫[concurrency](#get)方法，以工作為基礎的接續接收前項工作的結果。  
+>  在[!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)]應用程式時，請勿呼叫`wait`在 STA 執行的程式碼 否則，執行階段會擲回[concurrency:: invalid_operation](invalid-operation-class.md)因為這個方法會封鎖目前的執行緒，而且可能會導致應用程式變成沒有回應。 不過，您可以呼叫[concurrency](#get)方法以接收以工作為基礎的接續在前項工作的結果。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

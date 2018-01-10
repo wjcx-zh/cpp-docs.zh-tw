@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 462247056f916178388ec233d7d0b9d3774bb11f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dce4b42d5e9ec05544ceb7e8c885ba93634579a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regexerror-class"></a>regex_error 類別
 回報錯誤的 basic_regex 物件。  
@@ -146,7 +147,7 @@ int main()
 regex error: unbalanced parentheses  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<regex>](../standard-library/regex.md)  
 [regex_constants 類別](../standard-library/regex-constants-class.md)  
 [\<regex> 函式](../standard-library/regex-functions.md)  

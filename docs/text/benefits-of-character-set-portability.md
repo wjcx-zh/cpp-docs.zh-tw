@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 93bd0356e8e2192e44053c9090ffb63ea72cfeca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 554137352c0a8f7275a051e4026020fce25edbb8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="benefits-of-character-set-portability"></a>字元集移植性的優點
 您可以從使用 MFC 與 C 執行階段可攜性功能，即使您目前不想要您的應用程式的國際化獲益：  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
 -   使用 MBCS，可讓您在 Windows 2000 中，例如 Windows 95 或 Windows 98 以外的 Win32 平台上支援國際市場。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
  [Unicode 的支援](../text/support-for-unicode.md)

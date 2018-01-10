@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e76d0cda4dfe1644c590c555d9589c17b67686a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94e386827ae747fb3289354ba380d390756359ff
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmstgi"></a>__svm_stgi
 **Microsoft 特定的**  
@@ -37,7 +38,7 @@ void __svm_stgi(void);
 ## <a name="remarks"></a>備註  
  `__svm_stgi`函數即相當於`STGI`機器指令。 全域中斷旗標會判斷微處理器會忽略，延後，或處理等 I/O 完成、 硬體溫度警示或偵錯例外狀況事件，而中斷。  
   
- 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/?LinkId=23746)站台。  
+ 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2： 系統程式設計中，「 在文件編號 24593，修訂 3.11， [AMD corporation](http://go.microsoft.com/fwlink/p/?linkid=23746)站台。  
   
 ## <a name="requirements"></a>需求  
   
@@ -47,8 +48,8 @@ void __svm_stgi(void);
   
  **標頭檔** \<intrin.h >  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [__svm_clgi](../intrinsics/svm-clgi.md)

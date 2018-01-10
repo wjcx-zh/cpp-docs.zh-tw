@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- shared_ptr
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
 - memory/std::shared_ptr::get
@@ -22,42 +20,34 @@ f1_keywords:
 - memory/std::shared_ptr::operator*
 - memory/std::shared_ptr::operator=
 - memory/std::shared_ptr::operator->
-- memory/std::shared_ptr::element_type
-- memory/std::shared_ptr::get
-- memory/std::shared_ptr::owner_before
-- memory/std::shared_ptr::reset
-- memory/std::shared_ptr::swap
-- memory/std::shared_ptr::unique
-- memory/std::shared_ptr::use_count
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- shared_ptr class
+- std::shared_ptr [C++]
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 03876821780ec2f4e2258b9553e936bfdda13c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sharedptr-class"></a>shared_ptr 類別
 將參考計數的智慧型指標環繞動態配置物件。  
@@ -433,7 +423,7 @@ bool owner_before(const weak_ptr<Other>& ptr);
  針對 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 參考。  
   
 ### <a name="remarks"></a>備註  
- 如果 `*this` 為 `ordered before``ptr`，則樣板成員函式會傳回 true。  
+ 如果樣板成員函式會傳回 true`*this`是`ordered before` `ptr`。  
   
 ##  <a name="reset"></a>  shared_ptr::reset  
  取代所擁有的資源。  
@@ -859,10 +849,9 @@ sp1.use_count() == 1
 sp1.use_count() == 2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [weak_ptr 類別](../standard-library/weak-ptr-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

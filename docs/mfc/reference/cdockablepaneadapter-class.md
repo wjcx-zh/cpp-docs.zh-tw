@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed6346e94c01eed32712db5b459ff4a6987a0189
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bb0e10490a381784e40167e16d1c7ec4e7e1a19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockablepaneadapter-class"></a>CDockablePaneAdapter 類別
 提供 `CWnd`衍生窗格的停駐支援。  
@@ -40,11 +41,11 @@ ms.lasthandoff: 10/24/2017
 class CDockablePaneAdapter : public CDockablePane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDockablePaneAdapter::GetWrappedWnd](#getwrappedwnd)|傳回已包裝的視窗。|  
 |[CDockablePaneAdapter::LoadState](#loadstate)|(覆寫[cdockablepane:: Loadstate](http://msdn.microsoft.com/en-us/96110136-4f46-4764-8a76-3b4abaf77917)。)|  
@@ -90,13 +91,13 @@ virtual BOOL LoadState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszProfileName`  
+ [輸入] `lpszProfileName`  
  設定檔名稱。  
   
- [in] `nIndex`  
+ [輸入] `nIndex`  
  設定檔的索引。  
   
- [in] `uiID`  
+ [輸入] `uiID`  
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -114,13 +115,13 @@ virtual BOOL SaveState(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszProfileName`  
+ [輸入] `lpszProfileName`  
  設定檔名稱。  
   
- [in] `nIndex`  
+ [輸入] `nIndex`  
  設定檔索引 （預設為視窗的控制項 ID）。  
   
- [in] `uiID`  
+ [輸入] `uiID`  
  窗格中的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -135,14 +136,14 @@ virtual BOOL SetWrappedWnd(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  將窗格配接器視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)

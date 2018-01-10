@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad32c1ed42a2a991ba9ed9bd550330bc460834cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbase-class"></a>AsyncBase 類別
 實作 Windows 執行階段非同步狀態機器。  
@@ -52,17 +55,17 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
  `resultType`  
  其中一個[AsyncResultType](../windows/asyncresulttype-enumeration.md)列舉值。 根據預設，SingleResult。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AsyncBase::AsyncBase 建構函式](../windows/asyncbase-asyncbase-constructor.md)|初始化 AsyncBase 類別的執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AsyncBase::Cancel 方法](../windows/asyncbase-cancel-method.md)|取消非同步作業。|  
 |[AsyncBase::Close 方法](../windows/asyncbase-close-method.md)|關閉的非同步作業。|  
@@ -78,9 +81,9 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
 |[AsyncBase::PutOnProgress 方法](../windows/asyncbase-putonprogress-method.md)|將進度事件處理常式的位址設定為指定的值。|  
 |[AsyncBase::Start 方法](../windows/asyncbase-start-method.md)|啟動非同步作業。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AsyncBase::CheckValidStateForDelegateCall 方法](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|測試是否可以修改委派屬性，在目前的非同步狀態。|  
 |[AsyncBase::CheckValidStateForResultsCall 方法](../windows/asyncbase-checkvalidstateforresultscall-method.md)|測試是否可以收集在目前的非同步狀態的非同步作業的結果。|  
@@ -103,5 +106,5 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

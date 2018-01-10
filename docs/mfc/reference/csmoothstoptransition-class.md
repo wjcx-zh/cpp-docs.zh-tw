@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaaa1ba7058047f8ce5c570be7ef68d64b0a5c15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50753ab65b960ac590c3f859133adf9da903aeda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csmoothstoptransition-class"></a>CSmoothStopTransition 類別
 封裝平滑停止轉換。  
@@ -40,23 +41,23 @@ ms.lasthandoff: 10/24/2017
 class CSmoothStopTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|建構平滑停止轉換，並初始化其持續時間上限和最終值。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSmoothStopTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|  
 |[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|轉換的最大持續時間。|  
@@ -120,5 +121,5 @@ DOUBLE m_dblFinalValue;
 UI_ANIMATION_SECONDS m_maximumDuration;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

@@ -13,10 +13,9 @@ f1_keywords:
 - list/std::operator&lt;
 - list/std::operator&lt;=
 - list/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8103d8f2-c30f-49ad-ac50-b3ba6a907ebe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (list)
@@ -25,12 +24,11 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: f3834fcb728d8faf0a2148a5a0c9449fef7e41c8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 運算子
 ||||  
@@ -38,7 +36,7 @@ ms.lasthandoff: 10/03/2017
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試運算子左邊的清單物件是否不等於右邊的清單物件。  
   
 ```
@@ -85,7 +83,7 @@ Lists not equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  測試運算子左邊的清單物件是否小於右邊的清單物件。  
   
 ```
@@ -136,7 +134,7 @@ List c1 is less than list c2.
 *\   
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  測試運算子左邊的清單物件是否小於或等於右邊的清單物件。  
   
 ```
@@ -187,7 +185,7 @@ List c1 is less than or equal to list c2.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試運算子左邊的清單物件是否等於右邊的清單物件。  
   
 ```
@@ -234,7 +232,7 @@ The lists are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  測試運算子左邊的清單物件是否大於右邊的清單物件。  
   
 ```
@@ -285,7 +283,7 @@ List c1 is greater than list c2.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  測試運算子左邊的清單物件是否大於或等於右邊的清單物件。  
   
 ```
@@ -337,9 +335,8 @@ List c1 is greater than or equal to list c2.
 *\  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<list>](../standard-library/list.md)
-
 
 
 

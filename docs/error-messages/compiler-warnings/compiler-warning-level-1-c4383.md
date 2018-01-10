@@ -1,38 +1,37 @@
 ---
-title: "編譯器警告 (層級 1) C4383 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4383"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4383"
+title: "編譯器警告 （層級 1） C4383 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4383
+dev_langs: C++
+helpviewer_keywords: C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7c478783c7f908125de7b97a1d21a9f1ece029
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4383
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'instance\_dereference\_operator' : 如果有使用者定義的 'operator' 運算子，控制代碼取值的含意可能會變更，請將這個運算子撰寫成對運算元很明確的靜態函式  
+# <a name="compiler-warning-level-1-c4383"></a>編譯器警告 (層級 1) C4383
+'instance_dereference_operator': 控制代碼取值的意義可以變更，當使用者定義的 'operator' 運算子存在時，將這個運算子撰寫運算元的明確宣告靜態函式  
   
- 當您在 Managed 型別中加入取值運算子的使用者定義執行個體覆寫時，很可能就會覆寫掉型別的取值運算子傳回控制代碼物件的功能。  請考慮撰寫靜態的使用者定義取值運算子。  
+ 當您在 managed 類型中新增使用者定義的執行個體的覆寫取值運算子時，您可能會覆寫類型的取值運算子傳回的控制代碼物件的能力。 請考慮撰寫靜態的使用者定義運算子取值 （dereference)。  
   
- 如需詳細資訊，請參閱[物件控制代碼運算子 \(^\)](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md)與[Tracking Reference Operator](../../windows/tracking-reference-operator-cpp-component-extensions.md)。  
+ 如需詳細資訊，請參閱[物件控制代碼運算子 (^)](../../windows/handle-to-object-operator-hat-cpp-component-extensions.md)和[追蹤參考運算子](../../windows/tracking-reference-operator-cpp-component-extensions.md)。  
   
- 而且，其他語言編譯器也不能經由參考的中繼資料使用執行個體運算子。  如需詳細資訊，請參閱[使用者定義的運算子](../../dotnet/user-defined-operators-cpp-cli.md)。  
+ 此外，執行個體運算子不適用於其他語言編譯器，透過參考的中繼資料。 如需詳細資訊，請參閱[使用者定義的運算子 (C + + /CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4383。  
   
 ```  

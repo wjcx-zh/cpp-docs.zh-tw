@@ -31,11 +31,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65c1fd6d86c153881f8674732db2b61edcfab8cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5431461c7c2cc33131f72f059edcfbd984eae5fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfont-class"></a>CFont 類別
 封裝 Windows 繪圖裝置介面 (GDI) 字型並提供操作字型的成員函式。  
@@ -46,17 +47,17 @@ ms.lasthandoff: 10/24/2017
 class CFont : public CGdiObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFont::CFont](#cfont)|建構 `CFont` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFont::CreateFont](#createfont)|初始化`CFont`與指定的特性。|  
 |[Cfont:: Createfontindirect](#createfontindirect)|初始化`CFont`物件中指定的特性`LOGFONT`結構。|  
@@ -67,7 +68,7 @@ class CFont : public CGdiObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[HFONT CFont::operator](#operator_hfont)|傳回 Windows GDI 字型控制代碼附加至`CFont`物件。|  
   
@@ -327,7 +328,7 @@ operator HFONT() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#77](../../mfc/codesnippet/cpp/cfont-class_8.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 HIERSVR](../../visual-cpp-samples.md)   
  [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

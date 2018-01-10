@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d3870564e7374d4e3faba9bc2055f04e9d2f4b63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f93a5536b73c5d62a95ff076e40304204071d83f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numput-class"></a>num_put 類別
 樣板類別，描述可以做為地區設定 facet 的物件，以控制數值轉換為類型 `CharType` 的序列。  
@@ -85,7 +86,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ##  <a name="do_put"></a>  num_put::do_put  
  虛擬函式，呼叫此函式可將數字轉換成 **CharType** 序列，以代表為特定地區設定格式化的數字。  
@@ -189,7 +190,7 @@ virtual iter_type do_put(
   
 -   如果 **iosbase**. **flags** & **ios_base::**[showbase](../standard-library/ios-functions.md#showbase) 不是零，就會在轉換規格前面加上 **#** 旗標。  
   
- 整數輸出欄位的格式會進一步由 [locale facet](../standard-library/locale-class.md#facet_class)**fac** (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 呼叫所傳回) 決定。 尤其是：  
+ 整數輸出欄位的格式會進一步由 [locale facet](../standard-library/locale-class.md#facet_class)**fac** (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [numpunct](../standard-library/numpunct-class.md)\< **Elem**>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 有效呼叫所傳回) 決定。 尤其是：  
   
 - **fac**. [grouping](../standard-library/numpunct-class.md#grouping) 會決定任何小數點左邊數字分組的方式  
   
@@ -441,7 +442,7 @@ The thousands separator is: .
 num_put( ) = 1.000,67  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [facet 類別](../standard-library/locale-class.md#facet_class)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

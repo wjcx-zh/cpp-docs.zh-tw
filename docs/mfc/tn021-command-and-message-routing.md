@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6ab2534b8314569f70809c4f2044635e070a837
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1854be249db91257228e6dab70fc7ff2f50664ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021：命令和訊息路由
 > [!NOTE]
@@ -199,7 +200,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
   
  如**CSplitterWnd**捲軸樣式套用至分割區的特殊共用的捲軸。 靜態分隔視窗，您通常不會設定任一捲軸列樣式。 動態分隔視窗，您通常會有捲軸的方向，您將分割，也就是樣式設定**WS_HSCROLL**是否可以將資料列， **WS_VSCROLL**是否可以將資料行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

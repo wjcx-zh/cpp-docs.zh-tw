@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 60b654fb107b8496921846a6f8bbfa3ee00272db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 204d5a7140c90310de5d3e96d90624f3945a7ba9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1141"></a>連結器工具錯誤 LNK1141
 建置匯出檔期間發生失敗  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/24/2017
   
  這個錯誤被加上提供其他資訊的其他錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.Exp 檔作為連結器輸入](../../build/reference/dot-exp-files-as-linker-input.md)

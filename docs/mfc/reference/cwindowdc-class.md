@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d31f2dd9ce5855a6d31bf5896643de72cb6135a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bc3219ff6570fab18b19f350f7dca3171ab4832
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwindowdc-class"></a>CWindowDC 類別
 衍生自 `CDC`。  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class CWindowDC : public CDC  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWindowDC::CWindowDC](#cwindowdc)|建構 `CWindowDC` 物件。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWindowDC::m_hWnd](#m_hwnd)|`HWND`這個`CWindowDC`附加。|  
   
@@ -97,7 +98,7 @@ HWND m_hWnd;
 ### <a name="example"></a>範例  
   請參閱範例的[CWindowDC::CWindowDC](#cwindowdc)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDC 類別](../../mfc/reference/cdc-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDC 類別](../../mfc/reference/cdc-class.md)

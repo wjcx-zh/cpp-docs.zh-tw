@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b0c3ae4f8b6cd05fa12fb0121e1b0144b45df8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60deb16628802e61ac411d576558a8659a638410
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>CMFCStandardColorsPropertyPage 類別
 表示屬性頁使用者用來在色彩對話方塊中選取標準色彩。  
@@ -29,20 +30,20 @@ ms.lasthandoff: 10/24/2017
 class CMFCStandardColorsPropertyPage : public CPropertyPage  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|預設建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |`CMFCStandardColorsPropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |`CMFCStandardColorsPropertyPage::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
   
@@ -65,7 +66,7 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
 ## <a name="requirements"></a>需求  
  **標頭：** afxstandardcolorspropertypage.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCColorDialog 類別](../../mfc/reference/cmfccolordialog-class.md)   

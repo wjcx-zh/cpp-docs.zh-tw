@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dec5db670afd169093125f2830551aec85b61e35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25313cce5d032c4c3975fffbf8ca89b232031661
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
 輸出資料流的成員函式有三種類型：相當於操作工具的類型、會執行未格式化寫入作業的類型，以及其他會修改資料流狀態，且沒有對等的操作工具或插入運算子的類型。 對於循序的格式化輸出，您可能僅會使用插入運算子和操作工具。 對於隨機存取二進位磁碟輸出，您會使用其他的成員函式 (無論搭配插入運算子與否)。  
@@ -109,7 +110,7 @@ int main( )
 ##  <a name="vclrferrorprocessingfunctionsanchor10"></a> 錯誤處理函式  
  寫入資料流時，請使用下列成員函式來測試是否發生錯誤：  
   
-|函式|傳回值|  
+|功能|傳回值|  
 |--------------|------------------|  
 |[bad](http://msdn.microsoft.com/Library/4038d331-e9c9-48b0-bf49-c6505744469c)|如果有無法復原的錯誤，則傳回 **true**。|  
 |[fail](http://msdn.microsoft.com/Library/619f1b36-1e72-4551-8b48-888ae4e370d2)|如果有無法復原的錯誤，或是「預期」的狀況 (例如轉換錯誤，或是找不到檔案)，則傳回 **true**。 在呼叫不具有引數的 **clear** 之後，通常可以繼續處理。|  
@@ -144,6 +145,6 @@ if(!cout.fail())...
   
  **void\*()** 運算子不等於 **good**，因為它並不會測試檔案結尾。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸出資料流](../standard-library/output-streams.md)
 

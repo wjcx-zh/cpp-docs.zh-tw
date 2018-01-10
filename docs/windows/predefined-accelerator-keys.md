@@ -18,16 +18,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee7aed9bfcbc105892e647c5e59b45805120ba39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b04ab7fafba9f17aeba4f15f937972389467593c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="predefined-accelerator-keys"></a>預先定義的快速鍵
 Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其中有部分是用於 Windows 環境的虛擬按鍵。 其他則支援瀏覽器或 Unicode 應用程式。 您可以在任何加速器中使用任何此類按鍵。  
   
-|索引鍵|描述|  
+|Key|描述|  
 |---------|-----------------|  
 |VK_ACCEPT|IME accept|  
 |VK_BROWSER_BACK|Windows：瀏覽器上一頁按鍵|  
@@ -86,6 +89,6 @@ Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其�
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速鍵編輯器](../windows/accelerator-editor.md)   
  [資源編輯器](../windows/resource-editors.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8138ce1d0eb313f5e84c374a35b6e9e0d58ef909
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7219ed890938493a9c470ce7c2218f8fb78cfc62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stacktopitem-stlclr"></a>stack::top_item (STL/CLR)
 存取最後一個項目。  
@@ -77,6 +80,6 @@ top_item = c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
  [stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)

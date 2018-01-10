@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14bdfdf5ab570567f78befd3c99bca5c56c5195e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 047eee60eb409e86d77faf6f637a88a56f271094
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 命名空間
 中的函式`fast_math`命名空間包含降低精確度，支援唯一的單精確度 (`float`)，並呼叫 DirectX 內建函式。 兩種版本的每個函式，例如`cos`和`cosf`。 這兩個版本，並傳回`float`，但每個呼叫相同的 DirectX 內建函式。  
@@ -29,11 +30,11 @@ ms.lasthandoff: 10/24/2017
 namespace fast_math;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[cos](concurrency-fast-math-namespace-functions.md#cos)|計算引數的反餘弦|  
 |[cosf](concurrency-fast-math-namespace-functions.md#cosf)|計算引數的反餘弦|  
@@ -106,5 +107,5 @@ namespace fast_math;
   
  **命名空間：** concurrency:: fast_math  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

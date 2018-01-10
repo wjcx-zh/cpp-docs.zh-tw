@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::sync_per_container
 - allocators/stdext::sync_per_container::equals
-dev_langs:
-- C++
-helpviewer_keywords:
-- sync_per_container class
+dev_langs: C++
+helpviewer_keywords: sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7864b6367d716ff7504982c4a8cbbed55f7784c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8628d2866fa4a180975cde1f0ea161378afc6d50
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container 類別
 描述可為每個配置器物件提供不同快取物件的[同步處理篩選](../standard-library/allocators-header.md)。  
@@ -40,7 +37,7 @@ class sync_per_container
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Cache`|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|  
   
@@ -64,7 +61,7 @@ bool equals(const sync_per_container<Cache>& Other) const;
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Cache`|同步處理篩選的快取物件。|  
 |`Other`|要比較是否相等的快取物件。|  
@@ -74,9 +71,8 @@ bool equals(const sync_per_container<Cache>& Other) const;
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

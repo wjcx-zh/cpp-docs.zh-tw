@@ -50,18 +50,18 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2ca8b085c7dcc226a216032060e628c7c7ce0a4a
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 406f92d4a13502ed784936398070f1b4a7b4eb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency:: fast_math 命名空間函式
 ||||  
@@ -118,7 +118,7 @@ inline float acosf(float _X) restrict(amp);
  傳回引數的反餘弦值  
   
 ##  <a name="asin"></a>  asin  
- 計算引數的反正弦值  
+ 計算引數的反正弦  
   
 ```  
 inline float asin(float _X) restrict(amp);
@@ -132,7 +132,7 @@ inline float asin(float _X) restrict(amp);
  傳回引數的反正弦值  
   
 ##  <a name="asinf"></a>asinf  
- 計算引數的反正弦值  
+ 計算引數的反正弦  
   
 ```  
 inline float asinf(float _X) restrict(amp);
@@ -160,7 +160,7 @@ inline float atan(float _X) restrict(amp);
  傳回引數的反正切值  
   
 ##  <a name="atan2"></a>  atan2  
- 計算 _Y/_X 的反正切  
+ 計算反正切平均數/_X  
   
 ```  
 inline float atan2(
@@ -176,10 +176,10 @@ inline float atan2(
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 _Y/_X 的反正切值  
+ 傳回平均數/_X 的反正切值  
   
 ##  <a name="atan2f"></a>atan2f  
- 計算 _Y/_X 的反正切  
+ 計算反正切平均數/_X  
   
 ```  
 inline float atan2f(
@@ -195,7 +195,7 @@ inline float atan2f(
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 _Y/_X 的反正切值  
+ 傳回平均數/_X 的反正切值  
   
 ##  <a name="atanf"></a>atanf  
  計算引數的反正切  
@@ -310,7 +310,7 @@ inline float exp(float _X) restrict(amp);
  傳回以 e 為底數的指數的引數  
   
 ##  <a name="exp2"></a>exp2  
- 計算引數的指數底數-2  
+ 計算基底 2 指數的引數  
   
 ```  
 inline float exp2(float _X) restrict(amp);
@@ -321,10 +321,10 @@ inline float exp2(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回基底&2; 指數引數  
+ 傳回基底 2 指數的引數  
   
 ##  <a name="exp2f"></a>exp2f  
- 計算引數的指數底數-2  
+ 計算基底 2 指數的引數  
   
 ```  
 inline float exp2f(float _X) restrict(amp);
@@ -335,7 +335,7 @@ inline float exp2f(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回基底&2; 指數引數  
+ 傳回基底 2 指數的引數  
   
 ##  <a name="expf"></a>expf  
  計算以 e 為底數的引數的指數  
@@ -391,7 +391,7 @@ inline float floor(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的最低限度  
+ 傳回引數的最低限度值  
   
 ##  <a name="floorf"></a>floorf  
  計算引數的最低限度值  
@@ -405,10 +405,10 @@ inline float floorf(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的最低限度  
+ 傳回引數的最低限度值  
   
 ##  <a name="fmax"></a>fmax  
- 判斷引數的最大數值  
+ 判斷的最大的數值引數  
   
 ```  
 inline float max(
@@ -424,10 +424,10 @@ inline float max(
  整數值  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的最大的數值  
+ 傳回的最大的數值引數  
   
 ##  <a name="fmaxf"></a>fmaxf  
- 判斷引數的最大數值  
+ 判斷的最大的數值引數  
   
 ```  
 inline float fmaxf(
@@ -443,7 +443,7 @@ inline float fmaxf(
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的最大的數值  
+ 傳回的最大的數值引數  
   
 ##  <a name="fmin"></a>fmin  
  判斷引數的最小數值  
@@ -484,7 +484,7 @@ inline float fminf(
  傳回引數的最小數值  
   
 ##  <a name="fmod"></a>fmod  
- 計算 _X/_Y 浮點數餘數  
+ 計算 _X/平均數的浮點數餘數  
   
 ```  
 inline float fmod(
@@ -500,10 +500,10 @@ inline float fmod(
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 _X/_Y 浮點數餘數  
+ 傳回 _X/平均數的浮點數餘數  
   
 ##  <a name="fmodf"></a>fmodf  
- 計算 _X/_Y 浮點數餘數。  
+ 計算 _X/平均數的浮點數餘數。  
   
 ```  
 inline float fmodf(
@@ -519,10 +519,10 @@ inline float fmodf(
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 _X/_Y 浮點數餘數  
+ 傳回 _X/平均數的浮點數餘數  
   
 ##  <a name="frexp"></a>frexp  
- 取得尾數和指數 _X  
+ 取得的尾數和指數的 _X  
   
 ```  
 inline float frexp(
@@ -535,13 +535,13 @@ inline float frexp(
  浮點值。  
   
  `_Exp`  
- 傳回整數的指數 _X 在浮點值。  
+ 傳回的整數指數的 _X 在浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回尾數 _X  
   
 ##  <a name="frexpf"></a>frexpf  
- 取得尾數和指數 _X  
+ 取得的尾數和指數的 _X  
   
 ```  
 inline float frexpf(
@@ -554,7 +554,7 @@ inline float frexpf(
  浮點值。  
   
  `_Exp`  
- 傳回整數的指數 _X 在浮點值。  
+ 傳回的整數指數的 _X 在浮點值。  
   
 ### <a name="return-value"></a>傳回值  
  傳回尾數 _X  
@@ -571,10 +571,10 @@ inline int isfinite(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 若引數的有限值傳回非零值  
+ 傳回非零值，並僅有的引數具有有限的值  
   
 ##  <a name="isinf"></a>isinf  
- 決定是否引數是無限值  
+ 判斷是否引數為無限  
   
 ```  
 inline int isinf(float _X) restrict(amp);
@@ -585,10 +585,10 @@ inline int isinf(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 若引數的無限值，傳回非零值  
+ 傳回非零值，並僅有引數的無限值  
   
 ##  <a name="isnan"></a>isnan  
- 決定是否該引數是 NaN  
+ 判斷引數是否為 NaN  
   
 ```  
 inline int isnan(float _X) restrict(amp);
@@ -599,10 +599,10 @@ inline int isnan(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回非零值，如果且只有引數的 NaN 值  
+ 傳回非零值，並僅有的引數具有 NaN 值  
   
 ##  <a name="ldexp"></a>ldexp  
- 計算實數尾數和指數  
+ 計算實數從尾數和指數  
   
 ```  
 inline float ldexp(
@@ -621,7 +621,7 @@ inline float ldexp(
  傳回 _X * 2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>ldexpf  
- 計算實數尾數和指數  
+ 計算實數從尾數和指數  
   
 ```  
 inline float ldexpf(
@@ -640,7 +640,7 @@ inline float ldexpf(
  傳回 _X * 2 ^ _Exp  
   
 ##  <a name="log"></a>  log  
- 計算引數以 e 為底數對數  
+ 計算引數的基底 e 對數  
   
 ```  
 inline float log(float _X) restrict(amp);
@@ -651,10 +651,10 @@ inline float log(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數以 e 為底數的對數  
+ 傳回引數的基底 e 對數  
   
 ##  <a name="log10"></a>  log10  
- 計算引數的基底&10; 對數  
+ 計算引數的基底 10 對數  
   
 ```  
 inline float log10(float _X) restrict(amp);
@@ -665,10 +665,10 @@ inline float log10(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的基底&10; 對數  
+ 傳回引數的基底 10 對數  
   
 ##  <a name="log10f"></a>log10f  
- 計算引數的基底&10; 對數  
+ 計算引數的基底 10 對數  
   
 ```  
 inline float log10f(float _X) restrict(amp);
@@ -679,10 +679,10 @@ inline float log10f(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的基底&10; 對數  
+ 傳回引數的基底 10 對數  
   
 ##  <a name="log2"></a>log2  
- 計算引數的基底&2; 對數  
+ 計算引數的底數-2 對數  
   
 ```  
 inline float log2(float _X) restrict(amp);
@@ -693,10 +693,10 @@ inline float log2(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的基底&2; 對數  
+ 傳回引數的底數-2 對數  
   
 ##  <a name="log2f"></a>log2f  
- 計算引數的基底&2; 對數  
+ 計算引數的底數-2 對數  
   
 ```  
 inline float log2f(float _X) restrict(amp);
@@ -707,10 +707,10 @@ inline float log2f(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的基底&10; 對數  
+ 傳回引數的基底 10 對數  
   
 ##  <a name="logf"></a>logf  
- 計算引數以 e 為底數對數  
+ 計算引數的基底 e 對數  
   
 ```  
 inline float logf(float _X) restrict(amp);
@@ -721,10 +721,10 @@ inline float logf(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數以 e 為底數的對數  
+ 傳回引數的基底 e 對數  
   
 ##  <a name="modf"></a>modf  
- 分割成小數 _X 和整數部分。  
+ 會分割成小數 _X 和整數部分。  
   
 ```  
 inline float modf(
@@ -739,10 +739,10 @@ inline float modf(
  `_Ip`  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的帶正負號的小數部分的 _X  
+ 傳回 _X 帶正負號的小數的部分  
   
 ##  <a name="modff"></a>modff  
- 分割成小數 _X 和整數部分。  
+ 會分割成小數 _X 和整數部分。  
   
 ```  
 inline float modff(
@@ -757,10 +757,10 @@ inline float modff(
  `_Ip`  
   
 ### <a name="return-value"></a>傳回值  
- 傳回的帶正負號的小數部分的 _X  
+ 傳回 _X 帶正負號的小數的部分  
   
 ##  <a name="pow"></a>  pow  
- 計算乘冪的 _Y _X  
+ 計算 _X 的乘冪的平均數  
   
 ```  
 inline float pow(
@@ -776,10 +776,10 @@ inline float pow(
  浮點值、 指數  
   
 ### <a name="return-value"></a>傳回值  
- 傳回 _X _Y 的乘冪數的值  
+ 傳回值的乘冪的平均數 _X  
   
 ##  <a name="powf"></a>powf  
- 計算乘冪的 _Y _X  
+ 計算 _X 的乘冪的平均數  
   
 ```  
 inline float powf(
@@ -796,8 +796,8 @@ inline float powf(
   
 ### <a name="return-value"></a>傳回值  
   
-##  <a name="round"></a>圓形  
- 四捨五入至最接近整數的 _X  
+##  <a name="round"></a>捨入  
+ 四捨五入為最接近整數 _X  
   
 ```  
 inline float round(float _X) restrict(amp);
@@ -811,7 +811,7 @@ inline float round(float _X) restrict(amp);
  傳回最接近的整數的 _X  
   
 ##  <a name="roundf"></a>roundf  
- 四捨五入至最接近整數的 _X  
+ 四捨五入為最接近整數 _X  
   
 ```  
 inline float roundf(float _X) restrict(amp);
@@ -853,7 +853,7 @@ inline float rsqrtf(float _X) restrict(amp);
  傳回對等的引數的平方根  
   
 ##  <a name="signbit"></a>signbit  
- 判斷是否為負數的 _X 正負號  
+ 判斷是否 _X 的正負號為負數  
   
 ```  
 inline int signbit(float _X) restrict(amp);
@@ -867,7 +867,7 @@ inline int signbit(float _X) restrict(amp);
  傳回非零值，如果且只有 _X 的正負號為負數  
   
 ##  <a name="signbitf"></a>signbitf  
- 判斷是否為負數的 _X 正負號  
+ 判斷是否 _X 的正負號為負數  
   
 ```  
 inline int signbitf(float _X) restrict(amp);
@@ -881,7 +881,7 @@ inline int signbitf(float _X) restrict(amp);
  傳回非零值，如果且只有 _X 的正負號為負數  
   
 ##  <a name="sin"></a>  sin  
- 計算引數的正弦函數值  
+ 計算引數的正弦值  
   
 ```  
 inline float sin(float _X) restrict(amp);
@@ -892,10 +892,10 @@ inline float sin(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的正弦函數值  
+ 傳回引數的正弦值  
   
 ##  <a name="sinf"></a>sinf  
- 計算引數的正弦函數值  
+ 計算引數的正弦值  
   
 ```  
 inline float sinf(float _X) restrict(amp);
@@ -906,10 +906,10 @@ inline float sinf(float _X) restrict(amp);
  浮點值。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回引數的正弦函數值  
+ 傳回引數的正弦值  
   
 ##  <a name="sincos"></a>sincos  
- 計算正弦和餘弦值 _X  
+ 計算正弦函數 」 與 「 餘弦值 _X  
   
 ```  
 inline void sincos(
@@ -926,10 +926,10 @@ inline void sincos(
  傳回正弦函數值 _X  
   
  `_C`  
- 傳回餘弦值 _X  
+ 傳回 _X 的餘弦值  
   
 ##  <a name="sincosf"></a>sincosf  
- 計算正弦和餘弦值 _X  
+ 計算正弦函數 」 與 「 餘弦值 _X  
   
 ```  
 inline void sincosf(
@@ -946,7 +946,7 @@ inline void sincosf(
  傳回正弦函數值 _X  
   
  `_C`  
- 傳回餘弦值 _X  
+ 傳回 _X 的餘弦值  
   
 ##  <a name="sinh"></a>  sinh  
  計算引數的雙曲正弦值  
@@ -977,7 +977,7 @@ inline float sinhf(float _X) restrict(amp);
  傳回引數的雙曲正弦值  
   
 ##  <a name="sqrt"></a>  sqrt  
- 計算引數的 squre 根  
+ 計算引數的 squre 根目錄  
   
 ```  
 inline float sqrt(float _X) restrict(amp);
@@ -991,7 +991,7 @@ inline float sqrt(float _X) restrict(amp);
  傳回引數的 squre 根目錄  
   
 ##  <a name="sqrtf"></a>sqrtf  
- 計算引數的 squre 根  
+ 計算引數的 squre 根目錄  
   
 ```  
 inline float sqrtf(float _X) restrict(amp);
@@ -1005,7 +1005,7 @@ inline float sqrtf(float _X) restrict(amp);
  傳回引數的 squre 根目錄  
   
 ##  <a name="tan"></a>  tan  
- 計算引數的正切函數值  
+ 計算引數的正切函數的值  
   
 ```  
 inline float tan(float _X) restrict(amp);
@@ -1019,7 +1019,7 @@ inline float tan(float _X) restrict(amp);
  傳回正切函數的引數的值  
   
 ##  <a name="tanf"></a>tanf  
- 計算引數的正切函數值  
+ 計算引數的正切函數的值  
   
 ```  
 inline float tanf(float _X) restrict(amp);
@@ -1033,7 +1033,7 @@ inline float tanf(float _X) restrict(amp);
  傳回正切函數的引數的值  
   
 ##  <a name="tanh"></a>  tanh  
- 計算引數的雙曲正切函數值  
+ 計算引數的雙曲正切值  
   
 ```  
 inline float tanh(float _X) restrict(amp);
@@ -1047,7 +1047,7 @@ inline float tanh(float _X) restrict(amp);
  傳回引數的雙曲正切值  
   
 ##  <a name="tanhf"></a>tanhf  
- 計算引數的雙曲正切函數值  
+ 計算引數的雙曲正切值  
   
 ```  
 inline float tanhf(float _X) restrict(amp);
@@ -1061,7 +1061,7 @@ inline float tanhf(float _X) restrict(amp);
  傳回引數的雙曲正切值  
   
 ##  <a name="trunc"></a>trunc  
- 截斷整數部分的引數  
+ 截斷的整數部分的引數  
   
 ```  
 inline float trunc(float _X) restrict(amp);
@@ -1075,7 +1075,7 @@ inline float trunc(float _X) restrict(amp);
  傳回引數的整數部分  
   
 ##  <a name="truncf"></a>truncf  
- 截斷整數部分的引數  
+ 截斷的整數部分的引數  
   
 ```  
 inline float truncf(float _X) restrict(amp);
@@ -1089,8 +1089,7 @@ inline float truncf(float _X) restrict(amp);
  傳回引數的整數部分  
 
 ## <a name="requirements"></a>需求
-**標頭︰** amp_math.h**命名空間︰** concurrency:: fast_math
+**標頭：** amp_math.h**命名空間：** concurrency:: fast_math
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::fast_math 命名空間](concurrency-fast-math-namespace.md)
-

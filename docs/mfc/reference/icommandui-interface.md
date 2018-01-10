@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +17,19 @@ f1_keywords:
 - AFXWINFORMS/ICommandUI::Index
 - AFXWINFORMS/ICommandUI::Radio
 - AFXWINFORMS/ICommandUI::Text
-dev_langs:
-- C++
-helpviewer_keywords:
-- ICommandUI interface [MFC]
+dev_langs: C++
+helpviewer_keywords: ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4971ceaea57b91ff708315a2c32c7bac2801798f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: c616d5b6a569cec5f54970f7b4cb3778841738bc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandui-interface"></a>ICommandUI 介面
 管理使用者介面的命令。  
@@ -43,11 +40,11 @@ ms.lasthandoff: 10/09/2017
 interface class ICommandUI  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[icommandui__Check](#check)|此命令的使用者介面項目設為適當的核取狀態。|  
 |[ICommandUI::ContinueRouting](#continuerouting)|會告知命令路由機制，繼續傳送處理常式的鏈結中向下目前的訊息。|  
@@ -130,6 +127,5 @@ property String^ Text;
 ## <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CCmdUI 類別](../../mfc/reference/ccmdui-class.md)
-

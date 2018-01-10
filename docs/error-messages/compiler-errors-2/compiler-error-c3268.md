@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3268
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3268
+f1_keywords: C3268
+dev_langs: C++
+helpviewer_keywords: C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c31177aa65d3a16b85e9089c6f740e2106c6fe6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: bab3adb4d6fd916eedaec36d455252b6a5ade454
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3268"></a>編譯器錯誤 C3268
 'function': 泛型類別的泛型函式或成員函式不能有變數參數清單  

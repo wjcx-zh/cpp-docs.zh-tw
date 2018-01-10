@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c76bf7708c3bbe11ee7336b4c87f195fa01297d1
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 3007e2fbae5bb0cee4472b6488be8ceb614bc1f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 當您撰寫應用程式時，您會建立單一[CWinApp](../../mfc/reference/cwinapp-class.md)-衍生物件。 有時候，您可能想要取得此物件從外部的相關資訊`CWinApp`-衍生物件。 或者，您可能需要其他全域"mananger 」 物件的存取權。
@@ -137,7 +138,7 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="requirements"></a>需求  
  **標頭：** afxcontextmenumanager.h     
 
-### <a name="see-also"></a>另請參閱   
+### <a name="see-also"></a>請參閱   
  [CContextMenuManager 類別](ccontextmenumanager-class.md)
 
   
@@ -199,7 +200,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
   
 ##  <a name="afxfreelibrary"></a>AfxFreeLibrary  
@@ -404,7 +405,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );  
 ```
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  從 `CWnd`衍生之物件的指標。  
    
 ### <a name="return-value"></a>傳回值  
@@ -428,7 +429,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CWnd 類別](cwnd-class.md)   
  [CFrameWndEx 類別](cframewndex-class.md)   
 
@@ -440,7 +441,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);  
 ```
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  從 `CWnd`衍生之物件的指標。  
    
 ### <a name="return-value"></a>傳回值  
@@ -452,7 +453,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ### <a name="requirements"></a>需求  
  **Header:** afxpriv.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CWnd 類別](cwnd-class.md)   
  [CMFCToolBar 類別](cmfctoolbar-class.md)
 
@@ -467,7 +468,7 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>需求  
  **標頭：** afxkeyboardmanager.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
 
  [巨集、 全域函式和全域變數](mfc-macros-and-globals.md)   
  [CKeyboardManager 類別](ckeyboardmanager-class.md)
@@ -530,7 +531,7 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 ### <a name="requirements"></a>需求  
  **標頭：** afxmenutearoffmanager.h  
    
-### <a name="see-also"></a>另請參閱     
+### <a name="see-also"></a>請參閱     
  [CMenuTearOffManager 類別](cmenutearoffmanager-class.md)
  
 ## <a name="afxmousemanager"></a>AfxMouseManager
@@ -543,7 +544,7 @@ CMouseManager* afxMouseManager;
 ### <a name="requirements"></a>需求  
  **標頭：** afxmousemanager.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CMouseManager 類別](cmousemanager-class.md)
  
 
@@ -634,7 +635,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`指出登錄資訊的重新導向至**HKCU**節點。`FALSE`表示，應用程式登錄資訊寫入預設的節點。 預設的節點是**HKEY_CLASSES_ROOT** ( **HKCR**)。  
   
 ### <a name="remarks"></a>備註  
@@ -677,7 +678,7 @@ CShellManager* afxShellManager;
 ### <a name="requirements"></a>需求  
  **標頭：** afxshellmanager.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CShellManager 類別](cshellmanager-class.md)
   
 ##  <a name="afxsocketinit"></a>AfxSocketInit  
@@ -711,7 +712,7 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>需求  
  **標頭：** afxusertoolsmanager.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CUserToolsManager 類別](cusertoolsmanager-class.md)
  
   
@@ -753,6 +754,6 @@ BOOL AFXAPI AfxWinInit(
 ### <a name="requirements"></a>需求  
   **標頭**afxwin.h  
     
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)   
  [CWinApp 類別](../../mfc/reference/cwinapp-class.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f19c3fa4694515ee4dafcc1e3de6d3e669321df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b9d310043a2693eaef254256385becc0bcc7d501
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property--c-component-extensions"></a>property (C++ 元件擴充功能)
 宣告*屬性*，這是成員函式的行為模式，以及存取資料成員或陣列元素。  
@@ -139,7 +142,7 @@ modifier property type default[index];
   
  `property` 關鍵字可以出現在類別、介面或實值類型中。 屬性可以有 get 函式 (唯讀)、set 函式 (唯寫)，或兩者皆有 (可讀寫)。  
   
- 屬性名稱不可與包含該屬性之 Managed 類別的名稱相符。 getter 函式的傳回類型必須符合對應 setter 函式之最後一個參數的類型。  
+ 屬性名稱不可與包含該屬性之 Managed 類別的名稱相符。 getter 函式的傳回型別必須符合對應 setter 函式之最後一個參數的類型。  
   
  對用戶端程式碼來說，屬性具有一般資料成員的外觀，並且可使用與資料成員相同的語法往返寫入或讀取。  
   
@@ -216,5 +219,5 @@ test
 21  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67f04b70b47e980455c73550e56d92f4433ee31c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97ca66036930963028681b6179ac7176b0350166
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 結構
 `CREATESTRUCT`結構會定義初始化參數傳遞至應用程式的視窗程序。  
@@ -83,7 +84,7 @@ typedef struct tagCREATESTRUCT {
 ## <a name="requirements"></a>需求  
  **標頭：** winuser.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、 樣式、 回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
 

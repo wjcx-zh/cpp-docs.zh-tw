@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 211ce72e2f2e5dcd1864cbc4374b3468f3ce70c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65aedc5dbeb8a740d5713983f66eefe693864937
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-sheets-as-wizards"></a>屬性工作表做為精靈
 精靈屬性工作表的主要特性是所提供的巡覽隨附 [下一步]、[完成]、[上一步] 和 [取消] 按鈕，而非索引標籤。 您需要呼叫[cpropertysheet:: Domodal](../mfc/reference/cpropertysheet-class.md#setwizardmode)之前先呼叫[cpropertysheet:: Setwizardmode](../mfc/reference/cpropertysheet-class.md#domodal)屬性工作表物件，利用這項功能。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性工作表](../mfc/property-sheets-mfc.md)
 

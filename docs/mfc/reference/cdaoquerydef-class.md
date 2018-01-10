@@ -77,11 +77,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e619cbc049e64c25325ab8327ec6dd9d16e071be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbade1dc41b0e195606b10598e92f86195662bba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 類別
 表示查詢定義 (或 "querydef")，通常是儲存在資料庫中的定義。  
@@ -92,17 +93,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoQueryDef : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|建構**CDaoQueryDef**物件。 接下來呼叫**開啟**或**建立**，視您的需求。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoQueryDef::Append](#append)|將 querydef 附加至資料庫的 QueryDefs 集合做為已儲存的查詢。|  
 |[CDaoQueryDef::CanUpdate](#canupdate)|傳回非零，如果查詢可更新資料庫。|  
@@ -134,7 +135,7 @@ class CDaoQueryDef : public CObject
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoQueryDef::m_pDAOQueryDef](#m_pdaoquerydef)|基本的 DAO recordset 物件的 OLE 介面指標。|  
 |[CDaoQueryDef::m_pDatabase](#m_pdatabase)|指標`CDaoDatabase`querydef 在相關聯的物件。 Querydef 可能儲存在資料庫中，或不。|  
@@ -145,7 +146,7 @@ class CDaoQueryDef : public CObject
 > [!NOTE]
 >  DAO 資料庫類別是不同的基礎上開放式資料庫連接 (ODBC) 之 MFC 資料庫類別。 所有的 DAO 資料庫類別名稱有"CDao"前置詞。 您仍然可以使用 DAO 類別存取 ODBC 資料來源。 一般情況下，根據 DAO MFC 類別會更能夠比 ODBC; 為基礎的 MFC 類別DAO 類別都可以存取資料，包括透過 ODBC 驅動程式，透過它們自己的資料庫引擎。 DAO 類別也支援資料定義語言 (DDL) 作業，例如新增而不需要直接呼叫 DAO 類別，透過資料表。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  使用 querydef 物件可能是使用現有已儲存的查詢，或建立新的儲存查詢或暫存的查詢：  
   
 1.  在所有情況下，第一次，以建構`CDaoQueryDef`物件，提供的指標[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)查詢所屬的物件。  
@@ -753,7 +754,7 @@ void SetSQL(LPCTSTR lpszSQL);
 ### <a name="remarks"></a>備註  
  典型用法`SetSQL`是 SQL 傳遞查詢中使用的 recordset 物件設定。 （如需針對目標 DBMS SQL 傳遞查詢的語法，請參閱 DBMS 的文件）。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDaoRecordset 類別](../../mfc/reference/cdaorecordset-class.md)   

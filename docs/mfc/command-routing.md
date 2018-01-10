@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 622853951c9119bb2a32e9e624966bf77579b557
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4299d5bb0f638d33714a5b5daeff60fde3f49be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-routing"></a>命令傳送
 處理命令時，您只需負責在命令與其處理函式之間建立訊息對應連接，而這項工作可透過 [屬性] 視窗來完成。 您也必須撰寫大部分的命令處理常式。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="_core_standard_command_route"></a> 標準命令路由  
   
-|當此類型的物件收到命令時。 . .|它會依照下列順序，提供機會給自己及其他命令目標物件來處理命令︰|  
+|當此類型的物件收到命令時。 。 。|它會依照下列順序，提供機會給自己及其他命令目標物件來處理命令︰|  
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|  
 |MDI 框架視窗 (`CMDIFrameWnd`)|1.使用中`CMDIChildWnd`<br />2.此框架視窗<br />3.應用程式 (`CWinApp`物件)|  
 |文件框架視窗 (`CFrameWnd`、 `CMDIChildWnd`)|1.現用檢視表<br />2.此框架視窗<br />3.應用程式 (`CWinApp`物件)|  
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/24/2017
   
  在上表第二欄的編號項目提到其他物件 (例如文件) 的情況下，請參閱第一欄的對應項目。 例如，當您在第二欄中讀到「檢視將命令轉送至其文件」時，請參閱第一欄的「文件」項目以進一步路由傳送。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [架構如何呼叫處理常式](../mfc/how-the-framework-calls-a-handler.md)
 

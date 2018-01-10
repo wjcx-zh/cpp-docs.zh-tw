@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 779ecfc7bd546e2acbd013be9cbb229df2c5e62d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 90bc58ce3d56852b983a673968df97b55f4bdeab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder 類別
 實作圖片屬性，這可讓使用者在控制項中顯示的圖片。  
@@ -54,17 +55,17 @@ ms.lasthandoff: 10/24/2017
 class CPictureHolder  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPictureHolder::CPictureHolder](#cpictureholder)|建構 `CPictureHolder` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPictureHolder::CreateEmpty](#createempty)|建立空的 `CPictureHolder` 物件。|  
 |[CPictureHolder::CreateFromBitmap](#createfrombitmap)|建立`CPictureHolder`點陣圖中的物件。|  
@@ -78,7 +79,7 @@ class CPictureHolder
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CPictureHolder::m_pPict](#m_ppict)|以圖片物件指標。|  
   
@@ -299,6 +300,6 @@ void SetPictureDispatch(LPPICTUREDISP pDisp);
  `pDisp`  
  新的指標`IPictureDisp`介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CFontHolder 類別](../../mfc/reference/cfontholder-class.md)

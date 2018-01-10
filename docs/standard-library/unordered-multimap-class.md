@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- unordered_multimap
 - unordered_map/std::unordered_multimap
 - unordered_map/std::unordered_multimap::allocator_type
 - unordered_map/std::unordered_multimap::const_iterator
@@ -55,77 +53,107 @@ f1_keywords:
 - unordered_map/std::unordered_multimap::swap
 - unordered_map/std::unordered_multimap::unordered_multimap
 - unordered_map/std::unordered_multimap::operator=
-- unordered_map/std::unordered_multimap::allocator_type
-- unordered_map/std::unordered_multimap::const_iterator
-- unordered_map/std::unordered_multimap::const_local_iterator
-- unordered_map/std::unordered_multimap::const_pointer
-- unordered_map/std::unordered_multimap::const_reference
-- unordered_map/std::unordered_multimap::difference_type
-- unordered_map/std::unordered_multimap::hasher
-- unordered_map/std::unordered_multimap::iterator
-- unordered_map/std::unordered_multimap::key_equal
-- unordered_map/std::unordered_multimap::key_type
-- unordered_map/std::unordered_multimap::local_iterator
-- unordered_map/std::unordered_multimap::mapped_type
-- unordered_map/std::unordered_multimap::pointer
-- unordered_map/std::unordered_multimap::reference
-- unordered_map/std::unordered_multimap::size_type
-- unordered_map/std::unordered_multimap::value_type
-- unordered_map/std::unordered_multimap::begin
-- unordered_map/std::unordered_multimap::bucket
-- unordered_map/std::unordered_multimap::bucket_count
-- unordered_map/std::unordered_multimap::bucket_size
-- unordered_map/std::unordered_multimap::cbegin
-- unordered_map/std::unordered_multimap::cend
-- unordered_map/std::unordered_multimap::clear
-- unordered_map/std::unordered_multimap::count
-- unordered_map/std::unordered_multimap::emplace
-- unordered_map/std::unordered_multimap::emplace_hint
-- unordered_map/std::unordered_multimap::empty
-- unordered_map/std::unordered_multimap::end
-- unordered_map/std::unordered_multimap::equal_range
-- unordered_map/std::unordered_multimap::erase
-- unordered_map/std::unordered_multimap::find
-- unordered_map/std::unordered_multimap::get_allocator
 - unordered_map/std::unordered_multimap::hash_function
-- unordered_map/std::unordered_multimap::insert
-- unordered_map/std::unordered_multimap::key_eq
-- unordered_map/std::unordered_multimap::load_factor
-- unordered_map/std::unordered_multimap::max_bucket_count
-- unordered_map/std::unordered_multimap::max_load_factor
-- unordered_map/std::unordered_multimap::max_size
-- unordered_map/std::unordered_multimap::rehash
-- unordered_map/std::unordered_multimap::size
-- unordered_map/std::unordered_multimap::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- unordered_multimap class
+- std::unordered_multimap
+- std::unordered_multimap::allocator_type
+- std::unordered_multimap::const_iterator
+- std::unordered_multimap::const_local_iterator
+- std::unordered_multimap::const_pointer
+- std::unordered_multimap::const_reference
+- std::unordered_multimap::difference_type
+- std::unordered_multimap::hasher
+- std::unordered_multimap::iterator
+- std::unordered_multimap::key_equal
+- std::unordered_multimap::key_type
+- std::unordered_multimap::local_iterator
+- std::unordered_multimap::mapped_type
+- std::unordered_multimap::pointer
+- std::unordered_multimap::reference
+- std::unordered_multimap::size_type
+- std::unordered_multimap::value_type
+- std::unordered_multimap::begin
+- std::unordered_multimap::bucket
+- std::unordered_multimap::bucket_count
+- std::unordered_multimap::bucket_size
+- std::unordered_multimap::cbegin
+- std::unordered_multimap::cend
+- std::unordered_multimap::clear
+- std::unordered_multimap::count
+- std::unordered_multimap::emplace
+- std::unordered_multimap::emplace_hint
+- std::unordered_multimap::empty
+- std::unordered_multimap::end
+- std::unordered_multimap::equal_range
+- std::unordered_multimap::erase
+- std::unordered_multimap::find
+- std::unordered_multimap::get_allocator
+- std::unordered_multimap::hash
+- std::unordered_multimap::insert
+- std::unordered_multimap::key_eq
+- std::unordered_multimap::load_factor
+- std::unordered_multimap::max_bucket_count
+- std::unordered_multimap::max_load_factor
+- std::unordered_multimap::max_size
+- std::unordered_multimap::rehash
+- std::unordered_multimap::size
+- std::unordered_multimap::swap
+- std::unordered_multimap::unordered_multimap
+- std::unordered_multimap::operator=
+- std::unordered_multimap::allocator_type
+- std::unordered_multimap::const_iterator
+- std::unordered_multimap::const_local_iterator
+- std::unordered_multimap::const_pointer
+- std::unordered_multimap::const_reference
+- std::unordered_multimap::difference_type
+- std::unordered_multimap::hasher
+- std::unordered_multimap::iterator
+- std::unordered_multimap::key_equal
+- std::unordered_multimap::key_type
+- std::unordered_multimap::local_iterator
+- std::unordered_multimap::mapped_type
+- std::unordered_multimap::pointer
+- std::unordered_multimap::reference
+- std::unordered_multimap::size_type
+- std::unordered_multimap::value_type
+- std::unordered_multimap::begin
+- std::unordered_multimap::bucket
+- std::unordered_multimap::bucket_count
+- std::unordered_multimap::bucket_size
+- std::unordered_multimap::cbegin
+- std::unordered_multimap::cend
+- std::unordered_multimap::clear
+- std::unordered_multimap::count
+- std::unordered_multimap::emplace
+- std::unordered_multimap::emplace_hint
+- std::unordered_multimap::empty
+- std::unordered_multimap::end
+- std::unordered_multimap::equal_range
+- std::unordered_multimap::erase
+- std::unordered_multimap::find
+- std::unordered_multimap::get_allocator
+- std::unordered_multimap::hash_function
+- std::unordered_multimap::insert
+- std::unordered_multimap::key_eq
+- std::unordered_multimap::load_factor
+- std::unordered_multimap::max_bucket_count
+- std::unordered_multimap::max_load_factor
+- std::unordered_multimap::max_size
+- std::unordered_multimap::rehash
+- std::unordered_multimap::size
+- std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f268454a196fe0eca5e7c3972db74342bbb96904
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a0fa73588a2ee2b593e12f98cac387d9d4323ad9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap 類別
 此樣板類別描述控制不同長度的 `std::pair<const Key, Ty>` 類型項目序列的物件。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目儲存兩個物件：排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。  
@@ -145,18 +173,18 @@ class unordered_multimap;
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Key`|索引鍵類型。|  
 |`Ty`|對應的類型。|  
 |`Hash`|雜湊函式物件類型。|  
 |`Pred`|相等比較函式物件類型。|  
 |`Alloc`|配置器類別。|  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |||  
 |-|-|  
-|類型定義|說明|  
+|類型定義|描述|  
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|  
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
 |[const_local_iterator](#const_local_iterator)|用於受控制序列的常數 Bucket 迭代器類型。|  
@@ -176,7 +204,7 @@ class unordered_multimap;
   
 |||  
 |-|-|  
-|成員函式|說明|  
+|成員函式|描述|  
 |[begin](#begin)|指定受控制序列的開頭。|  
 |[值區](#bucket)|取得索引鍵值的值區數目。|  
 |[bucket_count](#bucket_count)|取得 Bucket 的數目。|  
@@ -207,7 +235,7 @@ class unordered_multimap;
   
 |||  
 |-|-|  
-|運算子|說明|  
+|運算子|描述|  
 |[unordered_multimap::operator=](#op_eq)|複製雜湊資料表。|  
   
 ## <a name="remarks"></a>備註  
@@ -537,7 +565,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>備註  
  傳回值為 `cbegin` 時，無法修改範圍中的項目。  
   
- 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為支援 `begin()` 和 `cbegin()` 的各種可修改 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `begin()` 和 `cbegin()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -646,7 +674,7 @@ typedef T1 const_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T1`的同義字。  
+ 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T1`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -688,7 +716,7 @@ typedef T5 const_local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可作為值區之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T5`的同義字。  
+ 此類型說明可作為值區之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T5`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -929,7 +957,7 @@ begin()-end() == -3
 ```  
   
 ##  <a name="emplace"></a>  unordered_multimap::emplace  
- 插入就地建構元素 (沒有執行複製或移動作業)，其中含位置提示。  
+ 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。  
   
 ```  
 template <class... Args>  
@@ -940,7 +968,7 @@ iterator emplace(Args&&... args);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構插入 unordered_multimap 之元素的引數。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -956,7 +984,7 @@ iterator emplace(Args&&... args);
  如需程式碼範例，請參閱 [multimap::emplace](../standard-library/multimap-class.md#emplace)。  
   
 ##  <a name="emplace_hint"></a>  unordered_multimap::emplace_hint  
- 插入就地建構元素 (沒有執行複製或移動作業)，其中含位置提示。  
+ 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。  
   
 ```  
 template <class... Args>  
@@ -969,7 +997,7 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構插入 unordered 之元素的引數。|  
 |`where`|有關要從何處開始搜尋正確插入點的提示。|  
   
@@ -977,7 +1005,7 @@ iterator emplace_hint(
  指向新插入之元素的迭代器。  
   
 ### <a name="remarks"></a>備註  
- 此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。  
+ 此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。  
   
  在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。  
   
@@ -1444,7 +1472,7 @@ IList);
 |-|-|  
 |參數|描述|  
 |`Val`|要插入至 unordered_multimap 的元素值。|  
-|`Where`|要開始搜尋正確的插入點的地方|  
+|`Where`|要開始搜尋正確的插入點的地方。|  
 |`ValTy`|範本參數，指定 unordered_multimap 可用於建構 [value_type](../standard-library/map-class.md#value_type) 之元素的引數類型，並將 `Val` 做為引數完美轉送。|  
 |`First`|要複製之第一個元素的位置。|  
 |`Last`|要複製之最一個元素後方的位置。|  
@@ -1720,7 +1748,7 @@ typedef T4 local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為值區之正向迭代器的物件。 在此將其說明為實作定義類型 `T4`的同義字。  
+ 此類型說明可做為值區之正向迭代器的物件。 在此將其描述為已定義實作之 `T4`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -2039,7 +2067,7 @@ unordered_multimap& operator=(unordered_multimap&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|unordered_multimap 會被複製到 unordered_multimap。|  
   
 ### <a name="remarks"></a>備註  
@@ -2361,7 +2389,7 @@ void swap(unordered_multimap& right);
  要交換的容器。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果是 [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
+ 成員函式會交換 `*this` 和 `right` 之間受控制的序列。 如果是 [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
   
 ### <a name="example"></a>範例  
   
@@ -2673,10 +2701,9 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<unordered_map>](../standard-library/unordered-map.md)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

@@ -31,11 +31,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 705ffaa38222d83fe02e20f20c47ee4c06f22294
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2e8768fa138da74761bc581f8b9f54a2fe432776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-class"></a>priority_queue 類別
 範本容器配接器類別，它提供的限制功能可限制存取某些基礎容器類型的最上層項目，且這一律為最大或最高優先順序。 新項目可加入至 priority_queue，並且可以檢查或移除 priority_queue 的最上層項目。  
@@ -48,7 +49,7 @@ class priority_queue
 ```  
   
 #### <a name="parameters"></a>參數  
- *Type*  
+ *類型*  
  要存放在 priority_queue 中的項目資料類型。  
   
  `Container`  
@@ -111,7 +112,7 @@ typedef Container container_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型是樣板參數 `Container` 的同義字。 C++ 標準程式庫序列容器類別 `deque` 和預設類別 `vector` 都符合用來當作 priority_queue 物件之基底類別的需求。 也可以使用滿足該要求的使用者定義類型。  
+ 此類型是範本參數 `Container`的同義字。 C++ 標準程式庫序列容器類別 `deque` 和預設類別 `vector` 都符合用來當作 priority_queue 物件之基底類別的需求。 也可以使用滿足該要求的使用者定義類型。  
   
  如需有關 `Container` 的詳細資訊，請參閱 [priority_queue 類別](../standard-library/priority-queue-class.md)主題的＜備註＞一節。  
   
@@ -555,7 +556,7 @@ The value_type is AnInt = 69
 The element at the top of the priority_queue is 69.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
 

@@ -22,18 +22,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e02161133d0ea992daa147ff2ed9444ef3870b4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ddf04fdb32d34c83761623acffbcbc3bdc88d369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>在清單控制項中捲動、排列、排序和尋找
 清單控制項 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 根據預設，您可以捲動。 如需詳細資訊，請參閱[捲軸位置](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中和[捲動](../mfc/reference/clistctrl-class.md#scroll)成員函式。  
   
  您可以呼叫`CListCtrl`成員函式，來排列的清單項目在控制項中，排序項目，並尋找特定的項目。 如需詳細資訊，請參閱[排列、 排序和尋找](http://msdn.microsoft.com/library/windows/desktop/bb774736)Windows SDK 中和[CListCtrl](../mfc/reference/clistctrl-class.md)成員[排列](../mfc/reference/clistctrl-class.md#arrange)， [SortItems](../mfc/reference/clistctrl-class.md#sortitems)與[FindItem](../mfc/reference/clistctrl-class.md#finditem)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

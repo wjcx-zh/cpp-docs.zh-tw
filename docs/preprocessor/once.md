@@ -1,34 +1,35 @@
 ---
-title: "once | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.once"
-  - "once_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "once pragma"
-  - "Pragma, once"
+title: "一旦 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.once
+- once_CPP
+dev_langs: C++
+helpviewer_keywords:
+- once pragma
+- pragmas, once
 ms.assetid: c7517556-6403-4b16-8898-f2aa0a6f685f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c04d411a6b0075d2fa08d846ad3b8a1bbb020c17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# once
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定編譯原始程式碼檔案時，編譯器只能包含 \(開啟\) 檔案一次。  
+# <a name="once"></a>once
+指定編譯原始程式碼檔案時，編譯器只能包含 (開啟) 檔案一次。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,10 +37,10 @@ caps.handback.revision: 8
   
 ```  
   
-## 備註  
- 因為編譯器不會在轉譯單元中檔案的第一個 \#include 之後開啟及讀取檔案，所以使用 `#pragma once` 可以縮短建置時間。  這指的是*多個 include 最佳化*。  它的效果類似於 *\#include 防護*慣用語，其使用前置處理器巨集定義來防止多次包含檔案的內容。  這也有助於避免違反*一個定義規則* — 要求在您的程式碼中的所有範本、類型、函式和物件只能有一個定義。  
+## <a name="remarks"></a>備註  
+ 因為編譯器不會在轉譯單元中檔案的第一個 #include 之後開啟及讀取檔案，所以使用 `#pragma once` 可以縮短建置時間。 這指*多個 include 最佳化*。 它有的效果類似於*#include 防護*慣用語，使用前置處理器巨集定義來防止多次包含檔案的內容。 這也有助於避免違反*一個定義規則*-要求的所有範本、 類型、 函式和物件只能有一個定義您的程式碼中。  
   
- 例如:  
+ 例如:   
   
 ```  
 // header.h  
@@ -48,9 +49,9 @@ caps.handback.revision: 8
   
 ```  
   
- 對新程式碼我們建議 `#pragma once` 指示詞，因為它不會干擾全域命名空間與前置處理器符號。  它需要的輸入較少，較不令人分心，而且不會造成符號衝突，不同標頭檔使用相同的前置處理器符號做為防護值時造成的錯誤。  它不是 C\+\+ Standard 的一部分，但它可能由數個常見編譯器實作。  
+ 對新程式碼我們建議 `#pragma once` 指示詞，因為它不會干擾全域命名空間與前置處理器符號。 它需要的輸入較少，較不令人分心，而且不會造成符號衝突，不同標頭檔使用相同的前置處理器符號做為防護值時造成的錯誤。 它不是 C++ Standard 的一部分，但它可能由數個常見編譯器實作。  
   
- 在同一個檔案中同時使用 \#include 防護慣用語和 `#pragma once` 並沒有任何益處。  如果在此慣用語的標準形式之前或之後沒有非註解程式碼或前置處理器指示詞，編譯器會辨識 \#include 防護慣用語並以與 `#pragma once` 指示詞的相同方式實作多個 include 最佳化：  
+ 在同一個檔案中同時使用 #include 防護慣用語和 `#pragma once` 並沒有任何益處。 如果在此慣用語的標準形式之前或之後沒有非註解程式碼或前置處理器指示詞，編譯器會辨識 #include 防護慣用語並以與 `#pragma once` 指示詞的相同方式實作多個 include 最佳化：  
   
 ```  
 // header.h  
@@ -63,9 +64,9 @@ caps.handback.revision: 8
   
 ```  
   
- 必須將程式碼移植到不會實作 `#pragma once` 指示詞的編譯器或是當多個 include 最佳化不可能時，我們建議採用 \#include 防護慣用語，以維護與現有程式碼的一致性。  在檔案系統別名 include 路徑防止編譯器依正式路徑識別相同 include 檔案的複雜專案中，便可能發生此情況。  
+ 必須將程式碼移植到不會實作 `#pragma once` 指示詞的編譯器或是當多個 include 最佳化不可能時，我們建議採用 #include 防護慣用語，以維護與現有程式碼的一致性。 在檔案系統別名 include 路徑防止編譯器依正式路徑識別相同 include 檔案的複雜專案中，便可能發生此情況。  
   
- 請注意，不要在設計目的是要併入多次的標頭檔中使用 `#pragma once` 或 \#include 防護慣用語，使用前置處理器符號來控制其效果。  如需這項設計的範例，請參閱 \<assert.h\> 標頭檔。  也請小心管理 include 路徑，以避免建立多個 include 檔案的路徑，如此可以同時戰勝 \#include 防護和 `#pragma once` 的多個 include 最佳化。  
+ 請注意，不要在設計目的是要併入多次的標頭檔中使用 `#pragma once` 或 #include 防護慣用語，使用前置處理器符號來控制其效果。 如需這項設計的範例，請參閱\<assert.h > 標頭檔。 也請小心管理 include 路徑，以避免建立多個 include 檔案的路徑，如此可以同時戰勝 #include 防護和 `#pragma once` 的多個 include 最佳化。  
   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -4,48 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- integral_constant
 - type_traits/std::integral_constant
 - XTR1COMMON/std::integral_constant
-- bool_constant
 - type_traits/std::bool_constant
 - XTR1COMMON/std::bool_constant
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- integral_constant class
-- integral_constant
-- bool_constant
+- std::integral_constant [C++]
+- std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: b64b3ef25622a61fd10bca9d49d527ff232d5c1b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f694e763bb9fce65a703e8852e3f875a646f10c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant 類別、bool_constant 類別
 從類型及值建立整數常數。  
@@ -106,9 +87,8 @@ integral_constant<bool, false> == false
   
 **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [false_type](../standard-library/type-traits-typedefs.md#false_type)   
  [true_type](../standard-library/type-traits-typedefs.md#true_type)
-
 

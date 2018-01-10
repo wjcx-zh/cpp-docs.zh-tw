@@ -18,11 +18,12 @@ caps.latest.revision: "40"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 152d26874af277d742b106db29a4d9dd9c254c9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eca6960d23c43fbe27d753ab4f79a27dea7bd7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-c-program-that-targets-the-clr-in-visual-studio"></a>逐步解說：編譯針對 Visual Studio 中 CLR 的 C++ 程式
 您可以建立使用.NET 類別，並使用 Visual Studio 開發環境中進行編譯的 Visual c + + 程式。  
@@ -82,6 +83,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="whats-next"></a>後續步驟  
  **上一步：** [逐步解說： 編譯原生 c + + 程式命令列上](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)&#124;**下一步：**[逐步解說： 編譯 C 程式命令列上](../build/walkthrough-compile-a-c-program-on-the-command-line.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [建置 C/C++ 程式](../build/building-c-cpp-programs.md)

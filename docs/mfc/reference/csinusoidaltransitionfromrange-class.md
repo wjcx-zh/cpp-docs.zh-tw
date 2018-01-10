@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_duration
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_period
 - AFXANIMATIONCONTROLLER/CSinusoidalTransitionFromRange::m_slope
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], CSinusoidalTransitionFromRange
 - CSinusoidalTransitionFromRange [MFC], Create
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d53e89f1fa73926976896743ab5293d85e5d81c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: f830dcbf7ca4e17fadd0b5e7eaea14f7ee0c628e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>CSinusoidalTransitionFromRange 類別
 封裝已指定振動範圍的正弦曲線範圍轉換。  
@@ -49,23 +47,23 @@ ms.lasthandoff: 10/09/2017
 class CSinusoidalTransitionFromRange : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromRange::CSinusoidalTransitionFromRange](#csinusoidaltransitionfromrange)|建構轉換物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromRange::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|在尖峰的正弦曲線 wave 動畫變數的值。|  
 |[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|在的正弦曲線 wave 透過動畫變數的值。|  
@@ -165,6 +163,5 @@ UI_ANIMATION_SECONDS m_period;
 UI_ANIMATION_SLOPE m_slope;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

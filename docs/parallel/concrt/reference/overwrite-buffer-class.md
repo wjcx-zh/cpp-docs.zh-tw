@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a9098f6f8f0374ad10396f30cf5aa636d9843d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f41348b77d65f3ade8016c9e23a31555db2d3612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 類別
 `overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。  
@@ -50,25 +51,25 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
  `T`  
  儲存及緩衝區所傳播之訊息的裝載類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[overwrite_buffer](#ctor)|多載。 建構`overwrite_buffer`傳訊區塊。|  
 |[~ overwrite_buffer 解構函式](#dtor)|終結`overwrite_buffer`傳訊區塊。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[has_value](#has_value)|檢查是否這`overwrite_buffer`傳訊區塊尚未有值。|  
 |[value](#value)|取得參考的訊息儲存在目前裝載`overwrite_buffer`傳訊區塊。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|接受的訊息，有提供這`overwrite_buffer`傳訊區塊，一份訊息傳回給呼叫者。|  
 |[consume_message](#consume_message)|取用先前所提供的訊息`overwrite_buffer`傳訊區塊和目標，傳回的訊息複本給呼叫者所保留。|  
@@ -327,7 +328,7 @@ T value();
 ### <a name="remarks"></a>備註  
  中儲存的值`overwrite_buffer`無法在這個方法會傳回之後，立即變更。 這個方法會等候訊息到達時，如果目前沒有任何訊息儲存在`overwrite_buffer`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [unbounded_buffer 類別](unbounded-buffer-class.md)   
  [single_assignment 類別](single-assignment-class.md)

@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4937
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4937
+f1_keywords: C4937
+dev_langs: C++
+helpviewer_keywords: C4937
 ms.assetid: 2bb9f0e7-bbd6-4697-84de-95955e32ae29
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 655bf5154f66e2f641321adbd395c2bc5694e148
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c054051db1b7c765dd2b144b8bd3426593896a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4937"></a>編譯器警告 (層級 4) C4937
 難以辨別 'text1' 和 'text2' 是否為 'directive' 的引數  

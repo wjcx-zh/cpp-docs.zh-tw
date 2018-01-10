@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DMesh::IsValid
 - AFXRENDERTARGET/CD2DMesh::Open
 - AFXRENDERTARGET/CD2DMesh::m_pMesh
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DMesh [MFC], CD2DMesh
 - CD2DMesh [MFC], Attach
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - CD2DMesh [MFC], Open
 - CD2DMesh [MFC], m_pMesh
 ms.assetid: 11a2c78a-1367-40e8-a34f-44aa0509a4c9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b1a83fb222c1133e8ea59c7daf53a49b4472de2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 689d8f5a98b7dc8daf225b611a5718a22d20b67c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dmesh-class"></a>CD2DMesh 類別
 ID2D1Mesh 包裝函式。  
@@ -53,18 +51,18 @@ ID2D1Mesh 包裝函式。
 class CD2DMesh : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DMesh::CD2DMesh](#cd2dmesh)|建構 CD2DMesh 物件。|  
 |[CD2DMesh:: ~ CD2DMesh](#_dtorcd2dmesh)|解構函式。 D2D 網狀結構物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DMesh::Attach](#attach)|將現有的資源物件的介面|  
 |[CD2DMesh::Create](#create)|建立 CD2DMesh。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
@@ -76,13 +74,13 @@ class CD2DMesh : public CD2DResource;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DMesh::operator ID2D1Mesh *](#operator_id2d1mesh_star)|傳回 ID2D1Mesh 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DMesh::m_pMesh](#m_pmesh)|ID2D1Mesh 指標。|  
   
@@ -208,6 +206,5 @@ operator ID2D1Mesh*();
 ### <a name="return-value"></a>傳回值  
  ID2D1Mesh 介面或如果尚未初始化物件為 NULL 指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

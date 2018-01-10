@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4275
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4275
+f1_keywords: C4275
+dev_langs: C++
+helpviewer_keywords: C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f9ecbe931c14cfde1d48438bdb76f70452e324d3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8434194a216ba233cec26a5700cf4864a0eca8c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-2-c4275"></a>編譯器警告 (層級 2) C4275
 非 DLL 介面 classkey 'identifier' 做為基底 DLL 介面 classkey 'identifier'  
   
  匯出的類別衍生自未匯出的類別。  
   
- 若要匯出的類別時，將資料損毀的可能性降至最低[__declspec （dllexport)](../../cpp/dllexport-dllimport.md)，請確認︰  
+ 若要匯出的類別時，將資料損毀的可能性降至最低[__declspec （dllexport)](../../cpp/dllexport-dllimport.md)，請確認：  
   
 -   所有靜態資料是透過從 DLL 匯出的函式存取。  
   

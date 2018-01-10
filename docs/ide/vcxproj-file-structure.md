@@ -14,11 +14,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc57a69b71bd7fbdbf97d5c34e7e6ec0694bb5df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdfd703b819b40a2fc391c1c6cb17edd0eff4cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 檔案結構
 MSBuild 是預設的專案系統，在 Visual Studio;當您選擇**檔案 |新的專案**Visual c + + 中，您要建立其設定會儲存在副檔名的 XML 專案檔案的 MSBuild 專案`.vcxproj`。 .Props 檔案和設定儲存位置的.targets 檔案，也可以匯入專案檔。 在大部分情況下，您永遠不需要手動編輯專案檔，並事實上您不應該編輯它以手動方式除非您深入了解的 MSBuild。 可能的話您應該使用 Visual Studio 屬性頁來修改專案設定 (請參閱[使用專案屬性](working-with-project-properties.md)。 不過，在某些情況下，您可能需要手動修改專案檔或屬性工作表。 這些情況下，本文會包含檔案的結構的基本資訊。 
@@ -227,6 +228,6 @@ ItemGroup 中, 指定的參考，並有這些限制：
 ```
 若要讓屬性工作表，VCTargets 資料夾中複製其中的.props 檔案並修改您的目的。 適用於 Visual Studio 2017 Enterprise edition，預設 VCTargets 路徑是`%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`。 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [使用專案屬性](working-with-project-properties.md)
 [屬性頁面 XML 檔案](property-page-xml-files.md)

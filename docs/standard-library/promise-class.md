@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,10 +16,9 @@ f1_keywords:
 - future/std::promise::set_value
 - future/std::promise::set_value_at_thread_exit
 - future/std::promise::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 2931558c-d94a-4ba1-ac4f-20bf7b6e23f9
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -33,12 +31,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
+ms.workload: cplusplus
+ms.openlocfilehash: 12941d9fcfc1aa7123bcd68291b86c9ec3e046e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4cc20303a02fbf21fd54e18569f964e268809439
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="promise-class"></a>promise 類別
 描述「非同步提供者」。  
@@ -50,17 +48,17 @@ template <class Ty>
 class promise;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[承諾](#promise)|建構 `promise` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[get_future](#get_future)|傳回與這項承諾相關聯的 [future](../standard-library/future-class.md)。|  
 |[set_exception](#set_exception)|以不可部分完成的方式設定這項承諾的結果以指出例外狀況。|  
@@ -71,7 +69,7 @@ class promise;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[promise::operator=](#op_eq)|這個承諾物件共用狀態的指派。|  
   
@@ -241,12 +239,11 @@ void swap(promise& Other) noexcept;
  `Other`  
  `promise` 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
 
 
 
 
  
-
 

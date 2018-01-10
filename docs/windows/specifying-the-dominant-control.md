@@ -1,50 +1,54 @@
 ---
-title: "Specifying the Dominant Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dominant controls"
-  - "Dialog editor, dominant control"
-  - "controls [C++], dominant"
+title: "指定主控 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dominant controls
+- Dialog editor, dominant control
+- controls [C++], dominant
 ms.assetid: 42b523a7-192a-417b-9512-d4af795e002f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f4902e3849f72ed2d6799e07f7cd9e8412d891a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Specifying the Dominant Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-第一個選取的控制項是主控項。  
+# <a name="specifying-the-dominant-control"></a>指定主控項
+選取的控制項中第一個是主控。  
   
-### 若要指定主控項  
+### <a name="to-specify-the-dominant-control"></a>若要指定主控項  
   
-1.  按住 **CTRL** 鍵並且按一下您要用來先影響其他控制項的大小或位置的控制項。  
+1.  按住**CTRL**鍵，然後按一下您想要用來影響的大小或其他控制項的位置的控制項*第一個*。  
   
-     **請注意**：主控項的縮放控點是實心的，然而附屬控制項的縮放控點是中空的。  所有進一步調整大小或對齊是根據主控項。  
+     **請注意**中空下層控制項的控制代碼時，主控制項的調整大小控點都穩固。 所有進一步調整大小或對齊根據主控。  
   
-### 若要變更主控項  
+### <a name="to-change-the-dominant-control"></a>若要變更主控項  
   
-1.  按一下所有目前選取控制項的外部來清除選擇。  
+1.  清除目前選取範圍外的所有目前選取的控制項。  
   
-2.  重複先前程序，先選取不同的控制項。  
+2.  重複上一個程序，第一次選取不同的控制項。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  **需求**  
   
  Win32  
   
-## 請參閱  
- [Selecting Multiple Controls](../mfc/selecting-multiple-controls.md)   
- [Selecting Controls](../mfc/selecting-controls.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>請參閱  
+ [選取多個控制項](../windows/selecting-multiple-controls.md)   
+ [選取控制項](../windows/selecting-controls.md)   
+ [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)
+

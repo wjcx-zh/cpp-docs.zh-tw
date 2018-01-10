@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 05a6414f88bf6afd5eac14ac0caf665bb2b11050
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7b01146297307de92d3e79844ac0488b5ff13e29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-new-symbols"></a>建立新的符號
 當您開始新的專案時，您可能會發現先對應符號名稱，再建立將指派到的資源很方便。  
@@ -48,6 +51,6 @@ ms.lasthandoff: 10/24/2017
   
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檢視資源符號](../windows/viewing-resource-symbols.md)   
  [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

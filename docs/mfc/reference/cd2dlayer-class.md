@@ -35,11 +35,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a977e6270c9f879ca434c9e71c3438013062ccd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94345f4784254addce0deaf8bdb5061dbde6a8cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dlayer-class"></a>CD2DLayer 類別
 ID2D1Layer 包裝函式。  
@@ -50,18 +51,18 @@ ID2D1Layer 包裝函式。
 class CD2DLayer : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|建構 CD2DLayer 物件。|  
 |[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|解構函式。 D2D 圖層物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DLayer::Attach](#attach)|將現有的資源物件的介面|  
 |[CD2DLayer::Create](#create)|建立 CD2DLayer。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
@@ -73,13 +74,13 @@ class CD2DLayer : public CD2DResource;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|傳回 ID2D1Layer 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DLayer::m_pLayer](#m_player)|儲存 ID2D1Layer 物件的指標。|  
   
@@ -205,5 +206,5 @@ operator ID2D1Layer* ();
 ### <a name="return-value"></a>傳回值  
  ID2D1Layer 介面或如果尚未初始化物件為 NULL 指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

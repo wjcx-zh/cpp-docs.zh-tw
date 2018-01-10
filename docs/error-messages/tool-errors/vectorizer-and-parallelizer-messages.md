@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ce85d60f0a3dc7f7ec88e480fb17289aaaf9fa1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26d33c64fd57d9f0e9f9a33de6097601e65aa67d
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>向量化工具和平行化工具訊息
 您可以使用 Visual c + + 編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)和[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設定[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)輸出原因代碼和參考活動相關的訊息。 本文說明原因代碼和訊息。  
@@ -987,9 +988,9 @@ void code_1505(int *A, int *B)
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)   
- [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/?LinkId=263662)   
+ [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)   
  [#pragma loop （)](../../preprocessor/loop.md)   
  [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)   

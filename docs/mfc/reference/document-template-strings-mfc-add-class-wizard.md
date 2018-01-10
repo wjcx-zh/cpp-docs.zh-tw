@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 674a25bcc77c884fbda69712131d480150ad0847
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3a9d37b1a886c28d267cd7a387317edce6bf7f3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="document-template-strings-mfc-add-class-wizard"></a>MFC 加入類別精靈、文件範本字串
 精靈的這個頁面只是為了符合下列準則的類別有：  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
  **文件類別**  
  表示專案的文件類別。 根據預設，這個類別是主應用程式的文件類別，如下所示[檢視產生的類別](../../mfc/reference/generated-classes-mfc-application-wizard.md)MFC 應用程式精靈頁面。 如果您在專案中加入了其他文件類別，您可以從清單中，選取另一個文件類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 加入類別精靈](../../mfc/reference/mfc-add-class-wizard.md)   
  [MFC 類別](../../mfc/reference/adding-an-mfc-class.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)

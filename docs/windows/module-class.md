@@ -1,32 +1,33 @@
 ---
-title: "Module 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Module 類別"
+title: "模組類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module
+dev_langs: C++
+helpviewer_keywords: Module class
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d17e0dc79241fbd84e282b9cd8403259e34def0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Module 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="module-class"></a>Module 類別
 表示相關物件的集合。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -42,83 +43,83 @@ template<>
 class Module<OutOfProc> : public Module<InProc>;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `moduleType`  
- 一或多個 [RuntimeClassType](../windows/moduletype-enumeration.md) 列舉值的組合。  
+ 一或多個組合[ModuleType](../windows/moduletype-enumeration.md)列舉值。  
   
-## Members  
+## <a name="members"></a>成員  
   
-### 受保護的類別  
-  
-|名稱|描述|  
-|--------|--------|  
-|[Module::GenericReleaseNotifier 類別](../windows/module-genericreleasenotifier-class.md)|目前模組中最後一個物件被釋放時叫用事件處理常式。  事件處理常式由 Lambda、functor、或 pointer\-to\-function 指定。|  
-|[Module::MethodReleaseNotifier 類別](../windows/module-methodreleasenotifier-class.md)|目前模組中最後一個物件被釋放時叫用事件處理常式。  事件處理常式由物件及其指標方法成員指定。|  
-|[Module::ReleaseNotifier 類別](../windows/module-releasenotifier-class.md)|模組中最後一個物件釋放時會叫用一個事件處理常式。|  
-  
-### 公用建構函式  
+### <a name="protected-classes"></a>受保護的類別  
   
 |名稱|描述|  
-|--------|--------|  
-|[Module::~Module 解構函式](../windows/module-tilde-module-destructor.md)|取消初始化模組類別目前的執行個體。|  
+|----------|-----------------|  
+|[Module::GenericReleaseNotifier 類別](../windows/module-genericreleasenotifier-class.md)|發行目前的模組中的最後一個物件時，會叫用事件處理常式。 Lambda、 函式或函式指標上所指定的事件處理常式。|  
+|[Module::MethodReleaseNotifier 類別](../windows/module-methodreleasenotifier-class.md)|發行目前的模組中的最後一個物件時，會叫用事件處理常式。 物件和其指標-到-a-方法成員所指定的事件處理常式。|  
+|[Module::ReleaseNotifier 類別](../windows/module-releasenotifier-class.md)|在模組中的最後一個物件發行時，會叫用事件處理常式。|  
   
-### 受保護的建構函式  
-  
-|名稱|描述|  
-|--------|--------|  
-|[Module::Module 建構函式](../windows/module-module-constructor.md)|初始化 Module 類別的新執行個體。|  
-  
-### 公用方法  
+### <a name="public-constructors"></a>公用建構函式  
   
 |名稱|描述|  
-|--------|--------|  
+|----------|-----------------|  
+|[Module::~Module 解構函式](../windows/module-tilde-module-destructor.md)|取消初始化模組類別的目前執行個體。|  
+  
+### <a name="protected-constructors"></a>受保護的建構函式  
+  
+|名稱|描述|  
+|----------|-----------------|  
+|[Module::Module 建構函式](../windows/module-module-constructor.md)|初始化模組類別的新執行個體。|  
+  
+### <a name="public-methods"></a>公用方法  
+  
+|名稱|描述|  
+|----------|-----------------|  
 |[Module::Create 方法](../windows/module-create-method.md)|建立模組的執行個體。|  
-|[Module::DecrementObjectCount 方法](../windows/module-decrementobjectcount-method.md)|遞減模組追蹤的物件數目。|  
-|[Module::GetActivationFactory 方法](../windows/module-getactivationfactory-method.md)|取得模組的啟動 Factory。|  
-|[Module::GetClassObject 方法](../windows/module-getclassobject-method.md)|擷取類別 Factory 的快取。|  
+|[Module::DecrementObjectCount 方法](../windows/module-decrementobjectcount-method.md)|遞減模組所追蹤的物件數目。|  
+|[Module::GetActivationFactory 方法](../windows/module-getactivationfactory-method.md)|取得模組中啟動處理站。|  
+|[Module::GetClassObject 方法](../windows/module-getclassobject-method.md)|擷取快取的 class factory。|  
 |[Module::GetModule 方法](../windows/module-getmodule-method.md)|建立模組的執行個體。|  
-|[Module::GetObjectCount 方法](../windows/module-getobjectcount-method.md)|擷取這個模組所處理的物件數目。|  
-|[Module::IncrementObjectCount 方法](../windows/module-incrementobjectcount-method.md)|遞增將模組追蹤的物件數目。|  
-|[Module::RegisterCOMObject 方法](../windows/module-registercomobject-method.md)|註冊一或多個 COM 物件，讓其他應用程式可以連接至這些項目。|  
-|[Module::RegisterObjects 方法](../windows/module-registerobjects-method.md)|COM 註冊器或 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 物件，讓其他應用程式可以連接至這些項目。|  
-|[Module::RegisterWinRTObject 方法](../windows/module-registerwinrtobject-method.md)|註冊一或多個 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 物件，讓其他應用程式可以連接至這些項目。|  
-|[Module::Terminate 方法](../windows/module-terminate-method.md)|讓產生模組具現化的任何 Factory 關閉。|  
-|[Module::UnregisterCOMObject 方法](../windows/module-unregistercomobject-method.md)|解除登錄一或多個 COM 物件，以防止其他應用程式與它們連接。|  
-|[Module::UnregisterObjects 方法](../windows/module-unregisterobjects-method.md)|解除登錄在指定之模組的物件，讓其他應用程式無法連接到它們。|  
-|[Module::UnregisterWinRTObject 方法](../windows/module-unregisterwinrtobject-method.md)|解除註冊一或多個 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 物件，讓其他應用程式無法連接到它們。|  
+|[Module::GetObjectCount 方法](../windows/module-getobjectcount-method.md)|擷取這個模組所管理的物件數目。|  
+|[Module::IncrementObjectCount 方法](../windows/module-incrementobjectcount-method.md)|遞增模組所追蹤的物件數目。|  
+|[Module::RegisterCOMObject 方法](../windows/module-registercomobject-method.md)|註冊一個或多個 COM 物件，讓其他應用程式可以連接到它們。|  
+|[Module::RegisterObjects 方法](../windows/module-registerobjects-method.md)|註冊 COM 或 Windows 執行階段物件，讓其他應用程式可以連接到它們。|  
+|[Module::RegisterWinRTObject 方法](../windows/module-registerwinrtobject-method.md)|註冊一個或多個 Windows 執行階段物件，讓其他應用程式可以連接到它們。|  
+|[Module::Terminate 方法](../windows/module-terminate-method.md)|會導致所有具現化要關閉之模組的 factory。|  
+|[Module::UnregisterCOMObject 方法](../windows/module-unregistercomobject-method.md)|取消註冊一或多個 COM 物件，如此可防止其他應用程式無法連線到它們。|  
+|[Module::UnregisterObjects 方法](../windows/module-unregisterobjects-method.md)|取消註冊指定的模組中的物件，以便讓其他應用程式無法連線。|  
+|[Module::UnregisterWinRTObject 方法](../windows/module-unregisterwinrtobject-method.md)|取消註冊一或多個 Windows 執行階段物件，以便讓其他應用程式無法連線。|  
   
-### 受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
 |名稱|描述|  
-|--------|--------|  
+|----------|-----------------|  
 |[Module::Create 方法](../windows/module-create-method.md)|建立模組的執行個體。|  
   
-### 受保護的資料成員  
+### <a name="protected-data-members"></a>受保護的資料成員  
   
 |名稱|描述|  
-|--------|--------|  
-|[Module::objectCount\_ 資料成員](../windows/module-objectcount-data-member.md)|記錄多少類別是以 [認可](../windows/make-function.md) 函式建立的。|  
-|[Module::releaseNotifier\_ 資料成員](../windows/module-releasenotifier-data-member.md)|保留一個指向 ReleaseNotifier 物件的指標。|  
+|----------|-----------------|  
+|[Module::objectCount_ 資料成員](../windows/module-objectcount-data-member.md)|多少個類別以建立追蹤的[進行](../windows/make-function.md)函式。|  
+|[Module::releaseNotifier_ 資料成員](../windows/module-releasenotifier-data-member.md)|ReleaseNotifier 物件會保留指標。|  
   
-### 巨集  
+### <a name="macros"></a>巨集  
   
 |||  
 |-|-|  
-|[ActivatableClass](../windows/activatableclass-macros.md)|填入包含一個 Factory 可以建立指定的類別執行個體的內部快取。  這個巨集指定預設 Factory 和群組 ID 參數。|  
-|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|填入包含一個 Factory 可以建立指定的類別執行個體的內部快取。  這個巨集可讓您指定特定 Factory 參數。|  
-|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|填入包含一個 Factory 可以建立指定的類別執行個體的內部快取。  這個巨集可讓您指定特定 Factory 和群組 ID 參數。|  
+|[ActivatableClass](../windows/activatableclass-macros.md)|擴展內部快取，其中包含可以建立指定類別的執行個體的 factory。 這個巨集指定預設處理站和群組識別碼的參數。|  
+|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|擴展內部快取，其中包含可以建立指定類別的執行個體的 factory。 這個巨集可讓您指定特定的處理站參數。|  
+|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|擴展內部快取，其中包含可以建立指定類別的執行個體的 factory。 這個巨集可讓您指定特定的處理站和群組的識別碼參數。|  
   
-## 繼承階層架構  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `ModuleBase`  
   
  `Module`  
   
  `Module`  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
  **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

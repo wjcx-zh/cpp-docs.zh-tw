@@ -1,52 +1,55 @@
 ---
-title: "Creating a New Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes, creating"
-  - "Dialog editor, creating dialog boxes"
+title: "建立新的對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, creating
+- Dialog editor, creating dialog boxes
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c23021e6e91d7097b1989c486d053bed3a8421b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a New Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### 若要建立新的對話方塊  
+# <a name="creating-a-new-dialog-box"></a>建立新的對話方塊
+### <a name="to-create-a-new-dialog-box"></a>若要建立新的對話方塊  
   
-1.  在[資源檢視](../windows/resource-view-window.md)中，在 .rc 檔上按一下滑鼠右鍵，然後選擇捷徑功能表內的 \[加入資源\]。  
+1.  在[資源檢視](../windows/resource-view-window.md)，以滑鼠右鍵按一下.rc 檔，然後選擇 **加入資源**從捷徑功能表。  
   
     > [!NOTE]
-    >  如果您的專案並未包含 .rc 檔案，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
+    >  如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。  
   
-2.  在 \[加入資源\] 對話方塊的 \[資源類型\] 清單中選取 \[對話方塊\]，接著按一下 \[新增\]。  
+2.  在**加入資源**對話方塊中，選取**對話方塊**中**資源類型**清單，然後按一下**新增**。  
   
-     如果對話方塊資源類型的旁邊出現加號 \(\+\)，表示有對話方塊範本可供使用。  按一下加號可展開範本清單，請選取一個範本，然後按一下 \[新增\]。  
+     如果對話方塊資源類型旁邊，出現一個加號 （+），表示可以使用對話方塊範本。 按一下加號，展開範本的清單，選取範本，然後按一下 [新增]。  
   
-     新的對話方塊會在對話方塊編輯器中開啟。  
+     對話方塊編輯器中開啟新的對話方塊。  
   
-     您也可以[在對話方塊編輯器中開啟現有對話方塊以供編輯](../mfc/viewing-and-editing-resources-in-a-resource-editor.md)。  
+     您也可以[對話方塊編輯器中開啟現有的對話方塊進行編輯](../windows/viewing-and-editing-resources-in-a-resource-editor.md)。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
  Win32  
   
-## 請參閱  
- [How to: Create a Resource](../windows/how-to-create-a-resource.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>請參閱  
+ [如何： 建立資源](../windows/how-to-create-a-resource.md)   
+ [資源檔](../windows/resource-files-visual-studio.md)   
+ [對話方塊編輯器](../windows/dialog-editor.md)
+

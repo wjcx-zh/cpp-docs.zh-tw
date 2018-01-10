@@ -14,19 +14,18 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 957be55cd6f38f6ff1ea271b09dcdaa1a241c945
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 95563f5eeb70d33e3ebba4de0aead276a2230669
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 運算子
 ||||  
@@ -35,7 +34,7 @@ ms.lasthandoff: 10/03/2017
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試物件是否不相等。  
   
 ```  
@@ -242,7 +241,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  測試一個物件是否大於或等於第二個物件。  
   
 ```  
@@ -301,7 +300,7 @@ bool operator<(
  `Ty2`  
  右側指標所控制的類型。  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  測試一個物件是否小於或等於第二個物件。  
   
 ```  
@@ -360,7 +359,7 @@ bool operator>(
  `Ty2`  
  右側共用指標所控制的類型。  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
 將共用指標寫入資料流中。  
   
 ```  
@@ -411,7 +410,6 @@ int main()
 sp0 == 3f3040 (varies)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<memory>](../standard-library/memory.md)
-
 

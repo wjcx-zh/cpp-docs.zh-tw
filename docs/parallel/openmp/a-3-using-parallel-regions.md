@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba7ef5332611a9a6a66a0a0ec5a51461436ef453
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be3489e924dab7faa50d26c7cb89af67b4034ca5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a3---using-parallel-regions"></a>A.3 使用平行區域
 `parallel`指示詞 ([2.3 節](../../parallel/openmp/2-3-parallel-construct.md)在 8 頁面上) 可用於粗略平行的程式。 在下列範例中，每個執行緒在平行區域決定全域陣列的哪個部分`x`運作，根據執行緒數：  

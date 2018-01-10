@@ -15,21 +15,19 @@ f1_keywords:
 - xcomplex/std::operator-
 - xcomplex/std::operator/
 - xcomplex/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 46d469b2e9befbc1effbb4b34e47f5cd7dc4f3f4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;complex&gt; 運算子
 ||||  
@@ -38,7 +36,7 @@ ms.lasthandoff: 10/03/2017
 |[operator*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|  
 |[operator/](#op_div)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試兩個複數間的不相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。  
   
 ```  
@@ -659,7 +657,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.  
 ```  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  將指定的複數插入輸出資料流中。  
   
 ```   
@@ -717,7 +715,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試兩個複數間的相等比較，其中一個或兩個皆可能屬於實數和虛數部分的類型子集。  
   
 ```  
@@ -853,7 +851,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.  
 ```  
   
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  從輸入資料流擷取複數值。  
   
 ```  
@@ -910,7 +908,6 @@ int main( )
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<complex>](../standard-library/complex.md)
-
 

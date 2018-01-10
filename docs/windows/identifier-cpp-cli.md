@@ -17,11 +17,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9eca3bf99c0a798fd31dfa70e00769274a379b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4d68d21fc9436bff0e39fa474b97ec54138e15b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 可讓您使用 Visual c + + 關鍵字當做識別項。  
@@ -100,6 +103,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

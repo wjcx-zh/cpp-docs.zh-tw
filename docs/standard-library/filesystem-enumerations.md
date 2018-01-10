@@ -22,11 +22,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1220ec0fa20eb285af755a67fae7ae09bd3d4fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0bb076a2cfd8a97c2a3cfc5dc8f33e5390c27a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 本主題說明檔案系統標頭中的列舉。
@@ -56,7 +57,7 @@ enum class copy_options {
   
 ### <a name="values"></a>值  
   
-|`Name`|說明|  
+|`Name`|描述|  
 |------------|-----------------|  
 |`none`|執行作業的預設行為。|  
 |`skip_existing`|若檔案已經存在，請不要複製，也不要回報錯誤。|  
@@ -153,7 +154,7 @@ enum class perms {// names for permissions
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<filesystem>](../standard-library/filesystem.md)
 

@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d26913c9767f35c131605a8f7abee87396e753a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a8a2fc2d8a353b3e1c2200dcacedfaeadcfa95d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iserrorconditionenum-class"></a>is_error_condition_enum 類別
 代表針對 [error_condition](../standard-library/error-condition-class.md) 列舉進行測試的類型述詞。  
@@ -41,7 +42,7 @@ class is_error_condition_enum;
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [<system_error>](../standard-library/system-error.md)
 

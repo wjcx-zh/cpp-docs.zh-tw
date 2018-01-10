@@ -1,34 +1,35 @@
 ---
-title: "How to: Declare Interior Pointers with the const Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pointers, interior"
+title: "如何： 宣告內部指標使用 const 關鍵字 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aadd1573a5110960ba74eabe4fc6c696fad887ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Declare Interior Pointers with the const Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列範例在內部指標的宣告會示範 `const` 的用法。  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>如何：使用 const 關鍵字宣告內部指標 (C++/CLI)
+下列範例示範如何使用`const`內部指標的宣告中。  
   
 > [!IMPORTANT]
->  這個語言功能支援 **\/clr** 編譯器選項，但不是 **\/ZW** 編譯器選項。  
+>  這項語言功能會受到**/clr**編譯器選項，但不是由**/ZW**編譯器選項。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // interior_ptr_const.cpp  
@@ -87,5 +88,5 @@ int main() {
 };  
 ```  
   
-## 請參閱  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>請參閱  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

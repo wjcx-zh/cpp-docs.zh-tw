@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1569235e807fb8e6981c45d7547cae7bd6f70c56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87cdd627dd01697fa3d3718a2dc769f4017630a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="317-ompsetdynamic-function"></a>3.1.7 omp_set_dynamic 函式
 **Omp_set_dynamic**函式啟用或停用動態調整可用的平行區域執行的執行緒數目。 格式如下：  

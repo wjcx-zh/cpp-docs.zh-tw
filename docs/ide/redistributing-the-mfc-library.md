@@ -16,11 +16,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bde60a4e0c8ec9c0f9091edd40397a371e0e66e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ca153ec9ca079bf13b1c1c1dcedd6e41497307f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="redistributing-the-mfc-library"></a>轉散發 MFC 程式庫
 如果您以動態方式連結 MFC 程式庫的應用程式，您必須重新發佈比對 MFC DLL。 例如，如果使用 Visual Studio 2015 使用 MFC 所隨附的版本建置 MFC 應用程式，您必須重新發佈 mfc140.dll 或 mfc140u.dll，根據您的應用程式編譯窄字元或 Unicode 支援。  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  在 Visual Studio 2015 RTM 中的可轉散發檔案目錄已省略 mfc140.dll 檔案。 您可以使用安裝 Visual Studio 2015 的 Windows\system32 和 Windows\syswow64 目錄中的版本。  
   
- 因為所有的 MFC Dll 會使用共用的版本的 C 執行階段程式庫 (CRT)，則您可能需要重新發佈 CRT。 使用 Visual Studio 2015 的 MFC 所隨附的版本會使用通用的 CRT 程式庫，這以 Windows 10 的一部分散發。 若要執行舊版 Windows 上使用 Visual Studio 2015 建置 MFC 應用程式，您必須重新發佈通用 CRT。 如需如何轉散發通用的 CRT，做為作業系統元件或使用本機部署資訊，請參閱[簡介： 通用 CRT](http://go.microsoft.com/fwlink/?LinkId=617977)。 若要下載通用 CRT 支援的 Windows 版本上的中央部署，請參閱[Windows 10 通用 C 執行階段](http://go.microsoft.com/fwlink/p/?LinkId=619489)。 Windows SDK 中找到可轉散發套件的架構特定版本的 ucrtbase.dll 進行本機部署。 根據預設，Visual Studio 會安裝在 C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ 架構特定子目錄中。  
+ 因為所有的 MFC Dll 會使用共用的版本的 C 執行階段程式庫 (CRT)，則您可能需要重新發佈 CRT。 使用 Visual Studio 2015 的 MFC 所隨附的版本會使用通用的 CRT 程式庫，這以 Windows 10 的一部分散發。 若要執行舊版 Windows 上使用 Visual Studio 2015 建置 MFC 應用程式，您必須重新發佈通用 CRT。 如需如何轉散發通用的 CRT，做為作業系統元件或使用本機部署資訊，請參閱[簡介： 通用 CRT](http://go.microsoft.com/fwlink/p/?linkid=617977)。 若要下載通用 CRT 支援的 Windows 版本上的中央部署，請參閱[Windows 10 通用 C 執行階段](http://go.microsoft.com/fwlink/p/?LinkId=619489)。 Windows SDK 中找到可轉散發套件的架構特定版本的 ucrtbase.dll 進行本機部署。 根據預設，Visual Studio 會安裝在 C:\Program Files (x86) \Windows Kits\10\Redist\ucrt\DLLs\ 架構特定子目錄中。  
   
  如果您的應用程式使用舊版的 MFC 程式庫所建置，您必須重新發佈相符 CRT DLL 從可轉散發檔案的目錄。 例如，如果使用 Visual Studio 2013 (vc120) 工具組建置 MFC 應用程式，您必須重新發佈 msvcr120.dll。 您也需要重新發佈的比對 mfc`<version>`u.dll 或 mfc`<version>`.dll。  
   
@@ -49,9 +50,9 @@ ms.lasthandoff: 10/24/2017
   
  可轉散發套件.msm 檔案包含可用來當地語系化的 Dll。 沒有一個 DLL，針對每個支援的語言。 安裝程序會將這些 Dll 安裝在目標電腦上在 %windir%\system32\ 資料夾中。  
   
- 如需如何當地語系化 MFC 應用程式的詳細資訊，請參閱[TN057: MFC 元件的當地語系化](../mfc/tn057-localization-of-mfc-components.md)，以及[文章 208983： 如何使用 MFC LOC Dll](http://go.microsoft.com/fwlink/?LinkId=198025) Microsoft 技術支援網站上。  
+ 如需如何當地語系化 MFC 應用程式的詳細資訊，請參閱[TN057: MFC 元件的當地語系化](../mfc/tn057-localization-of-mfc-components.md)，以及[文章 208983： 如何使用 MFC LOC Dll](http://go.microsoft.com/fwlink/p/?linkid=198025) Microsoft 技術支援網站上。  
   
  您可以藉由部署應用程式本機資料夾中的 MFC DLL 轉散發 MFC 當地語系化 Dll。 如需如何轉散發 Visual c + + 程式庫的詳細資訊，請參閱[轉散發 Visual c + + 檔案](../ide/redistributing-visual-cpp-files.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [轉散發 Visual C++ 檔案](../ide/redistributing-visual-cpp-files.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aee9abf10646df6395984607544755dcb0ed802a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dd1c47cad01e0324f8027593eb4933f70cd6191
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="synchronization-data-structures"></a>同步處理資料結構
 並行執行階段提供許多可讓您從多個執行緒進行同步存取共用資料的資料結構。 當您共用不常修改的資料時，這些資料結構是很有用。 同步處理物件，例如關鍵區段，會造成其他執行緒等候，直到有可用的共用的資源。 因此，如果您使用這類物件，以同步存取經常使用的資料，您可以在應用程式中遺失延展性。 [平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)提供[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別，可讓您以共用資源在數個執行緒或工作，而不需要同步處理。 如需有關`combinable`類別，請參閱[平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="methods-and-features"></a>方法與功能  
  下表顯示所定義的重要方法`critical_section`類別。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[lock](reference/critical-section-class.md#lock)|取得重要區段。 呼叫內容封鎖，直到它取得的鎖定。|  
 |[try_lock](reference/critical-section-class.md#try_lock)|嘗試取得重要區段，但不會封鎖。|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="methods-and-features"></a>方法與功能  
  下表顯示所定義的重要方法`reader_writer_lock`類別。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[lock](reference/reader-writer-lock-class.md#lock)|取得鎖定的讀取/寫入存取。|  
 |[try_lock](reference/reader-writer-lock-class.md#try_lock)|嘗試取得鎖定、 讀取/寫入權限，但不會封鎖。|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="methods-and-features"></a>方法與功能  
  下表顯示數個重要的方法所定義的`event`類別。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[等候](reference/event-class.md#wait)|等待事件發出訊號。|  
 |[set](reference/event-class.md#set)|將事件設定為收到信號狀態。|  

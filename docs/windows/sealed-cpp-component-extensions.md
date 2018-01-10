@@ -1,77 +1,77 @@
 ---
-title: "sealed  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "sealed_cpp"
-  - "sealed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sealed keyword [C++]"
+title: "密封 （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- sealed_cpp
+- sealed
+dev_langs: C++
+helpviewer_keywords: sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb8a8b7ea695d878235898a8741adf04ba91748c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# sealed  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="sealed--c-component-extensions"></a>sealed (C++ 元件擴充功能)
 `sealed` 是表示不能覆寫虛擬成員、或類型不能用做基底類型的 ref 類別內容相關性關鍵字。  
   
 > [!NOTE]
->  ISO C\+\+11 標準語言有 Visual Studio 支援的[最終](../cpp/final-specifier.md)關鍵字。  在標準類別上使用 `final` 而在 ref 類別上使用`sealed`。  
+>  ISO C + + 11 標準語言有[最終](../cpp/final-specifier.md)支援 Visual Studio 中的關鍵字。 在標準類別上使用 `final` 而在 ref 類別上使用`sealed`。  
   
-## 所有執行階段  
- **語法**  
+## <a name="all-runtimes"></a>所有執行階段  
+  
+## <a name="syntax"></a>語法
   
 ```  
-  
 ref class identifier sealed {...};  
 virtual return-type identifier() sealed {...};  
-  
 ```  
   
- **參數**  
+### <a name="parameters"></a>參數  
   
- *識別項*  
+ *identifier*  
  函式或類別的名稱。  
   
- *傳回類型*  
+ *傳回型別*  
  由函數傳回的類型。  
   
- **備註**  
+## <a name="remarks"></a>備註  
   
- 在第一個語法範例中，已密封類別。  在第二個範例中，已密封虛擬函式。  
+ 在第一個語法範例中，已密封類別。 在第二個範例中，已密封虛擬函式。  
   
- `sealed` 關鍵字對原生目標有效，也對 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] 和 Common Language Runtime \(CLR\) 有效。  如需詳細資訊，請參閱[覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
+ `sealed`關鍵字是有效的原生目標，以及 Windows 執行階段和 common language runtime (CLR)。 如需詳細資訊，請參閱[覆寫規範和原生編譯](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)。  
   
- 您可以在編譯時期使用 `__is_sealed (``type``)` 類型特性來偵測是否已密封類型。  如需詳細資訊，請參閱[Compiler Support for Type Traits](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
+ 您可以在編譯時期偵測是否已密封類型使用`__is_sealed(type)`類型特性。 如需詳細資訊，請參閱[類型特性的編譯器支援](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)。  
   
- `sealed` 是即時線上關鍵字。  如需詳細資訊，請參閱[視內容而有所區別的關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
+ `sealed` 是即時線上關鍵字。  如需詳細資訊，請參閱[即時線上關鍵字](../windows/context-sensitive-keywords-cpp-component-extensions.md)。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- 請參閱 [Ref 類別及結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ 請參閱[Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## Common Language Runtime  
- \(這個語言功能沒有只適用於 Common Language Runtime 的備註。\)  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ (這個語言功能沒有只適用於 Common Language Runtime 的備註。)  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  這個程式碼範例顯示 `sealed` 在虛擬成員上的效果。  
   
 ```cpp  
@@ -117,11 +117,13 @@ int main() {
 }  
 ```  
   
- **輸出**  
+```Output  
+X::f override of I1::f  
+X::f override of I1::g  
+Y::f override of I1::f  
+```  
   
-  **I1::f 的 X::f 覆寫**  
- **I1::g 的 X::f 覆寫**  
- **I1::f 的 Y::f 覆寫** 下一步的程式碼範例示範如何將類別標示為已密封。  
+ 下一步的程式碼範例示範如何將類別標示為已密封。  
   
 ```cpp  
 // sealed_keyword_2.cpp  
@@ -141,5 +143,5 @@ public:
 };  
 ```  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

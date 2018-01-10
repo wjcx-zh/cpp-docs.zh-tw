@@ -145,11 +145,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dfc07d8cd923b945c04c8fb9a89e7f8ee8af1316
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ed62216483b23c75133759f0df39697e74e463a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedset-class"></a>unordered_set 類別
 此樣板類別描述控制不同長度的 `const Key` 類型項目序列的物件。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。  
@@ -169,17 +170,17 @@ class unordered_set;
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Key`|索引鍵類型。|  
 |`Hash`|雜湊函式物件類型。|  
 |`Pred`|相等比較函式物件類型。|  
 |`Alloc`|配置器類別。|  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |||  
 |-|-|  
-|類型定義|說明|  
+|類型定義|描述|  
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|  
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
 |[const_local_iterator](#const_local_iterator)|用於受控制序列的常數 Bucket 迭代器類型。|  
@@ -198,7 +199,7 @@ class unordered_set;
   
 |||  
 |-|-|  
-|成員函式|說明|  
+|成員函式|描述|  
 |[begin](#begin)|指定受控制序列的開頭。|  
 |[值區](#bucket)|取得索引鍵值的值區數目。|  
 |[bucket_count](#bucket_count)|取得 Bucket 的數目。|  
@@ -229,7 +230,7 @@ class unordered_set;
   
 |||  
 |-|-|  
-|運算子|說明|  
+|運算子|描述|  
 |[unordered_set::operator=](#op_eq)|複製雜湊資料表。|  
   
 ## <a name="remarks"></a>備註  
@@ -666,7 +667,7 @@ typedef T1 const_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T1`的同義字。  
+ 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T1`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -706,7 +707,7 @@ typedef T5 const_local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可作為值區之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T5`的同義字。  
+ 此類型說明可作為值區之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T5`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -935,7 +936,7 @@ begin()-end() == -3
 ```  
   
 ##  <a name="emplace"></a>  unordered_set::emplace  
- 插入就地建構的元素 (沒有執行複製或移動作業)。  
+ 插入就地建構 (未執行任何複製或移動作業) 的項目。  
   
 ```  
 template <class... Args>  
@@ -964,7 +965,7 @@ Args&&... args);
  如需程式碼範例，請參閱 [set::emplace](../standard-library/set-class.md#emplace)。  
   
 ##  <a name="emplace_hint"></a>  unordered_set::emplace_hint  
- 插入就地建構元素 (沒有執行複製或移動作業)，其中含位置提示。  
+ 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。  
   
 ```  
 template <class... Args>  
@@ -1416,7 +1417,7 @@ void insert(initializer_list<value_type> IList);
 |-|-|  
 |參數|描述|  
 |`Val`|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_set 中的項目值。|  
-|`Where`|要開始搜尋正確的插入點的地方|  
+|`Where`|要開始搜尋正確的插入點的地方。|  
 |`ValTy`|樣板參數，指定 unordered_set 可用於建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，完美轉送和`Val`做為引數。|  
 |`First`|要複製之第一個元素的位置。|  
 |`Last`|要複製之最一個元素後方的位置。|  
@@ -1672,7 +1673,7 @@ typedef T4 local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為值區之正向迭代器的物件。 在此將其說明為實作定義類型 `T4`的同義字。  
+ 此類型說明可做為值區之正向迭代器的物件。 在此將其描述為已定義實作之 `T4`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -1927,7 +1928,7 @@ unordered_set& operator=(unordered_set&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|[Unordered_set](../standard-library/unordered-set-class.md)複製到`unordered_set`。|  
   
 ### <a name="remarks"></a>備註  
@@ -2241,7 +2242,7 @@ void swap(unordered_set& right);
  要交換的容器。  
   
 ### <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 如果[unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間如此，就會擲回例外狀況只會在結果複製類型的預存的特性物件`Tr`，它則沒有參考時，指標，或如果迭代器指定兩個受控制序列中的項目。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
+ 成員函式會交換 `*this` 和 `right` 之間受控制的序列。 如果[unordered_set::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間如此，就會擲回例外狀況只會在結果複製類型的預存的特性物件`Tr`，它則沒有參考時，指標，或如果迭代器指定兩個受控制序列中的項目。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。  
   
 ### <a name="example"></a>範例  
   
@@ -2417,7 +2418,7 @@ int main()
  [d] [c] [b] [a]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<unordered_set>](../standard-library/unordered-set.md)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

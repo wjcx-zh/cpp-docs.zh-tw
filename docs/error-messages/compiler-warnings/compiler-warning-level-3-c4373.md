@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b8660501a679b994bfe8fa5e3ad5ff3728725667
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43523cb5f4c024ec3e937e88fca7f78c341ab19d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4373"></a>編譯器警告 (層級 3) C4373
 '%$S': 虛擬函式覆寫 '%$pS'，當參數差異只在 const/volatile 限定詞不同時，舊版本的編譯器不會覆寫  

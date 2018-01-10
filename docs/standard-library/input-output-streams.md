@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f8c9a570dc883839bd4b51cb99fd43f4f605402f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: efb67656ef5d864a5acec2dce304a8ea8fd011c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inputoutput-streams"></a>輸入/輸出資料流
 在標頭檔 \<istream> 中定義的 `basic_iostream` 是處理輸入和輸出字元型 I/O 資料流之物件的類別範本。  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  類別範本 `basic_stringstream` 及其常見的客製化 `stringstream` 經常用來與 I/O 資料流物件搭配運作，以插入和擷取字元資料。 如需詳細資訊，請參閱 [basic_stringstream 類別](../standard-library/basic-stringstream-class.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [stringstream](../standard-library/basic-stringstream-class.md)   
  [basic_stringstream 類別](../standard-library/basic-stringstream-class.md)   
  [\<sstream>](../standard-library/sstream.md)   

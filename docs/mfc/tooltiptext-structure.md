@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c0fb340f5f912cd4356be1c87bf78110a30ff7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: becbdcfcc6dbd26ae3095de098d12dbc078530cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tooltiptext-structure"></a>TOOLTIPTEXT 結構
 撰寫您[工具提示通知處理常式](../mfc/handling-ttn-needtext-notification-for-tool-tips.md)，您必須使用`TOOLTIPTEXT`結構。 成員`TOOLTIPTEXT`結構：  
@@ -64,6 +65,6 @@ ms.lasthandoff: 10/24/2017
   
 -   將字串資源的識別項複製到 `lpszText` 成員，並將包含資源的執行個體控制代碼複製到 `hinst` 成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非衍生自 CFrameWnd 之視窗中的工具提示](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
 

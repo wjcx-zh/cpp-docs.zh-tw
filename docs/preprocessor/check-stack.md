@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f6f72036e897a51b907fb41387f25fd7d20df69e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e48952788e7bbef86ade1177ce243da503ec8b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkstack"></a>check_stack
 指示編譯器關閉堆疊探查，如果**關閉**(或 **-** ) 指定，或開啟堆疊探查，如果**上**(或 **+** ) 指定。  
@@ -46,10 +47,10 @@ ms.lasthandoff: 10/24/2017
   
 |語法|使用<br /><br /> /Gs 選項編譯？|動作|  
 |------------|------------------------------------|------------|  
-|**#pragma check_stack （)**或<br /><br /> **#pragma check_stack**|是|關閉後續函式的堆疊檢查|  
+|**#pragma check_stack （)**或<br /><br /> **#pragma check_stack**|[是]|關閉後續函式的堆疊檢查|  
 |**#pragma check_stack （)**或<br /><br /> **#pragma check_stack**|否|開啟後續函式的堆疊檢查|  
 |**#pragma check_stack(on)**<br /><br /> 或**#pragma check_stack +**|是或否|開啟後續函式的堆疊檢查|  
 |**#pragma check_stack(off)**<br /><br /> 或**#pragma check_stack-**|是或否|關閉後續函式的堆疊檢查|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

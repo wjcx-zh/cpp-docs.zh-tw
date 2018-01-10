@@ -1,55 +1,57 @@
 ---
-title: "ref new, gcnew  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "gcnew"
-  - "ref new"
-  - "gcnew_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ref new keyword (C++)"
-  - "gcnew keyword [C++]"
+title: "ref 新 gcnew （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- gcnew
+- ref new
+- gcnew_cpp
+dev_langs: C++
+helpviewer_keywords:
+- ref new keyword (C++)
+- gcnew keyword [C++]
 ms.assetid: 388a62da-c2df-4a94-a9a2-205b53e577da
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 616117f7274d6f68456aa23614fb354a71982fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ref new, gcnew  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`ref new` 可彙總關鍵字，其配置當物件變成無法存取時回收之類型的執行個體，並將控制代碼 \([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)\) 傳回配置的物件。  
+# <a name="ref-new-gcnew--c-component-extensions"></a>ref new 和 gcnew (C++ 元件擴充功能)
+`ref new`彙總關鍵字，其配置的記憶體回收該物件會變成無法存取，並傳回控制代碼時所收集的類型執行個體 ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) 到配置的物件。  
   
-## 所有執行階段  
+## <a name="all-runtimes"></a>所有執行階段  
  `ref new` 配置之類型的執行個體記憶體會自動取消配置。  
   
  如果無法配置記憶體，`ref new` 作業會擲回 `OutOfMemoryException`。  
   
- 如需有關如何配置和取消配置記憶體給原生 C\+\+ 類型的詳細資訊，請參閱 [new 和 delete 運算子](../cpp/new-and-delete-operators.md)。  
+ 如需有關如何配置和解除配置記憶體給原生 c + + 類型的詳細資訊，請參閱[新和 delete 運算子](../cpp/new-and-delete-operators.md)。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- 使用 `ref new`，將記憶體配置給您想要自動管理其存留期的 Windows 執行階段物件。  當其參考計數歸零時 \(參考的最後一個複本已離開範圍之後發生\)，會自動取消配置物件。  如需詳細資訊，請參閱 [Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ 使用 `ref new`，將記憶體配置給您想要自動管理其存留期的 Windows 執行階段物件。 當其參考計數歸零時 (參考的最後一個複本已離開範圍之後發生)，會自動取消配置物件。 如需詳細資訊，請參閱[Ref 類別與結構](http://msdn.microsoft.com/library/windows/apps/hh699870.aspx)。  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- Managed 類型 \(參考或值類型\) 的記憶體是由 `gcnew` 配置，並且是使用記憶體回收以取消配置。  
+## <a name="common-language-runtime"></a>Common Language Runtime 
+ Managed 類型 (參考或值類型) 的記憶體是由 `gcnew` 配置，並且是使用記憶體回收以取消配置。  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
  下列範例會使用 `gcnew` 配置訊息物件。  
@@ -92,6 +94,9 @@ int main()
   
  **輸出**  
   
-  **32**   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+```Output  
+32  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

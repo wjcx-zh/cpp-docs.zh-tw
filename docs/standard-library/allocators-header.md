@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <allocators>
-dev_langs:
-- C++
-helpviewer_keywords:
-- allocators header
+f1_keywords: <allocators>
+dev_langs: C++
+helpviewer_keywords: allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b87e52294ccd61cd349ed6a85eca6760ace2c473
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: cf6f722eaa4f71a808ec416aa7646c7fe4de2689
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 定義數個範本，協助配置和釋放節點容器的記憶體區塊。  
@@ -175,9 +171,8 @@ ms.lasthandoff: 10/03/2017
   
  **命名空間：** stdext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

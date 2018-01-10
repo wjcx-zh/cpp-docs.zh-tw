@@ -1,52 +1,54 @@
 ---
-title: "Win32 Predefined Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Win32 [C++], predefined symbols"
-  - "symbols, Win32 predefined"
-  - "Windows API [C++], predefined symbols"
+title: "Win32 預先定義的符號 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Win32 [C++], predefined symbols
+- symbols, Win32 predefined
+- Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 865d61611546e2550aaa241220dc226cea9f9b81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Win32 Predefined Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這些符號定義於 Win32 標頭檔中，但是它們可以支援標準的 Windows 應用程式函式與其動作。  這些符號主要用於通用的 UI 項目。  當您在資源編輯器中使用控制項時，這些符號會出現在與通用控制項相關聯的[屬性視窗](../Topic/Properties%20Window.md)中。  例如，若您的工具列應顯示應用程式圖示，該圖示將與 \[屬性\] 視窗中的符號 IDI\_SMALL 相關聯。  
+# <a name="win32-predefined-symbols"></a>Win32 預先定義的符號
+這些符號定義在 Win32 標頭檔，並支援標準的 Windows 應用程式函式和動作。 常見的 UI 項目主要用於這些符號。 當您正在使用資源編輯器中的控制項時，這些符號會出現在[屬性 視窗](/visualstudio/ide/reference/properties-window)通用控制項相關聯。 比方說，如果您的工具列應該會顯示應用程式圖示，其圖示可以是與符號 IDI_SMALL 中 [屬性] 視窗相關聯。  
   
 |||  
 |-|-|  
-|IDABORT|控制項：對話方塊的 \[中止\] 按鈕|  
-|IDC\_STATIC|控制項：對話方塊中的靜態文字|  
-|IDCANCEL|控制項：對話方塊的 \[取消\] 按鈕|  
-|IDD\_ABOUTBOX|對話方塊：\[關於產品\] 對話方塊|  
-|IDI\_PROJECTNAME|圖示：目前的專案圖示|  
-|IDI\_SMALL|圖示：目前的專案小圖示|  
-|IDIGNORE|控制項：配合對話方塊上的 \[忽略\] 按鈕使用|  
-|IDM\_ABOUT|功能表項目：配合 \[說明...\] 的 \[關於...\] 使用|  
-|IDM\_EXIT|功能表項目：配合 \[檔案...\] 的 \[結束...\] 使用|  
-|IDNO|控制項：對話方塊的 \[否\] 按鈕|  
-|IDOK|控制項：對話方塊的 \[確定\] 按鈕|  
-|IDRETRY|控制項：對話方塊的 \[重試\] 按鈕|  
-|IDS\_APP\_TITLE|字串：目前的應用程式名稱|  
-|IDYES|控制項：對話方塊的 \[是\] 按鈕|  
+|IDABORT|控制： 對話方塊的 [中止] 按鈕|  
+|IDC_STATIC|在對話方塊中的控制項： 靜態文字|  
+|IDCANCEL|控制： 對話方塊的 [取消] 按鈕|  
+|IDD_ABOUTBOX|關於對話方塊 對話方塊中： 產品|  
+|IDI_PROJECTNAME|圖示： 目前的專案圖示|  
+|IDI_SMALL|圖示： 目前專案小圖示|  
+|IDIGNORE|控制： 用於對話方塊上的 [忽略] 按鈕|  
+|IDM_ABOUT|功能表項目： 搭配說明...關於...|  
+|IDM_EXIT|功能表項目： 搭配檔案...結束...|  
+|IDNO|控制項： 對話方塊沒有按鈕|  
+|IDOK|控制項： 對話方塊 [確定] 按鈕|  
+|IDRETRY|控制： 對話方塊的 [重試] 按鈕|  
+|IDS_APP_TITLE|目前應用程式名稱字串：|  
+|IDYES|控制： 對話方塊 [是] 按鈕|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)
+## <a name="see-also"></a>請參閱  
+ [預先定義的符號 Id](../windows/predefined-symbol-ids.md)   
+ [符號：資源識別項](../windows/symbols-resource-identifiers.md)

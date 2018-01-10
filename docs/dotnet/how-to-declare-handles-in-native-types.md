@@ -1,39 +1,41 @@
 ---
-title: "如何：以原生類型宣告控制代碼 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "gcroot"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gcroot 關鍵字 [C++]"
-  - "控制代碼, 宣告"
-  - "類型 [C++], 宣告控制代碼於"
+title: "如何： 宣告原生類型中的控制代碼 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords: gcroot
+dev_langs: C++
+helpviewer_keywords:
+- handles, declaring
+- gcroot keyword [C++]
+- types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 097889acd9a77cea5e0a81dd3bd13be712a70550
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：以原生類型宣告控制代碼
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您不能宣告控制代碼型別原生型別。vcclr.h 會提供型別安全包裝函式樣板 `gcroot` 參考從 C\+\+ 堆積參考 CLR 物件。  這個樣板可讓您在原生型別中內嵌虛擬控制代碼，並且將它視為基礎型別。  大部分的情況下，都可以使用 `gcroot` 物件做為內嵌型別而不用任何轉型。  不過，您也可以使用 [for each、in](../dotnet/for-each-in.md) 搭配 `static_cast` 來擷取基礎 Managed 參考。  
+# <a name="how-to-declare-handles-in-native-types"></a>如何：以原生類型宣告控制代碼
+您無法宣告原生類型中的控制代碼類型。 vcclr.h 提供類型安全包裝函式範本`gcroot`來參考 c + + 堆積的 CLR 物件。 此範本可讓您在原生類型中嵌入虛擬控制代碼，並將它視為基礎型別。 在大部分情況下，您可以使用`gcroot`物件做為內嵌類型，而不用任何轉型。 不過，在使用[針對每個，在](../dotnet/for-each-in.md)，您必須使用`static_cast`擷取基礎受管理的參考。  
   
- `gcroot` 樣板是使用數值類別 System::Runtime::InteropServices::GCHandle 的功能進行實作的，此數值類別提供「控制代碼」給記憶體回收的堆積。  請注意，控制代碼本身不會被記憶體回收，當 `gcroot` 類別中的解構函式 \(Destructor\) \(此解構函式無法以手動方式呼叫\) 不再使用控制代碼時，便會釋放控制代碼。  如果您在原生堆積上具現化 `gcroot` 物件，就必須在該資源上呼叫 Delete。  
+ `gcroot`範本記憶體回收堆積中使用的實值類別 System::Runtime::InteropServices::GCHandle，提供 「 控制代碼 」 功能實作。 請注意，本身的控制代碼不是記憶體回收，並釋放時不在使用中的解構函式`gcroot`類別 （此解構函式無法呼叫以手動方式）。 如果您具現化`gcroot`物件到原生堆積上，您必須呼叫該資源上刪除。  
   
- 執行階段將會維護控制代碼與所參考的 CLR 物件之間的關聯。  當 CLR 物件與記憶體回收的堆積一起移動時，控制代碼將會傳回物件的新位址。  將變數指派給 `gcroot` 樣板之前，不需要 Pin 變數。  
+ 執行階段會維護此控制代碼和它所參考的 CLR 物件之間的關聯。 當 CLR 物件移動時，記憶體回收堆積時，控制代碼會傳回物件的新位址。 變數沒有要指派給固定`gcroot`範本。  
   
-## 範例  
- 此範例會示範如何在原生堆疊上建立 `gcroot` 物件。  
+## <a name="example"></a>範例  
+ 這個範例示範如何建立`gcroot`原生堆疊上的物件。  
   
 ```  
 // mcpp_gcroot.cpp  
@@ -54,9 +56,12 @@ int main() {
 }  
 ```  
   
-  **hello**   
-## 範例  
- 此範例會示範如何在原生堆積上建立 `gcroot` 物件。  
+```Output  
+hello  
+```  
+  
+## <a name="example"></a>範例  
+ 這個範例示範如何建立`gcroot`原生堆積上的物件。  
   
 ```  
 // mcpp_gcroot_2.cpp  
@@ -80,9 +85,12 @@ int main() {
 }  
 ```  
   
-  **hello**   
-## 範例  
- 此範例會示範如何在 boxed 型別上使用 `gcroot`，藉以使用 `gcroot` 在原生型別中存放實值型別 \(並非參考型別\) 的參考。  
+```Output  
+hello  
+```  
+  
+## <a name="example"></a>範例  
+ 這個範例示範如何使用`gcroot`保留在原生類型中的實值類型 （不是參考類型） 的參考，使用`gcroot`boxed 型別上。  
   
 ```  
 // mcpp_gcroot_3.cpp  
@@ -108,6 +116,9 @@ int main() {
 }  
 ```  
   
-  **V: Hello 中的字串**   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+String in V: Hello  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

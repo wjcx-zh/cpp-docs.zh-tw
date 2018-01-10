@@ -1,71 +1,75 @@
 ---
-title: "非同步代理程式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "代理程式 [並行執行階段]"
-  - "非同步代理程式"
+title: "非同步代理程式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- asynchronous agents
+- agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c4ce3240041987a79657c7e8bf296f9e89acb7a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 非同步代理程式
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="asynchronous-agents"></a>非同步代理程式
+*非同步代理程式*(或簡稱*代理程式*) 是以非同步方式運作，以檢視可解決較大型的運算工作的其他代理程式的應用程式元件。 代理程式視為已設定的生命週期的工作。 例如，一個代理程式可能會讀取輸入/輸出裝置 （例如鍵盤、 在磁碟上，檔案或網路連線） 和另一個代理程式的資料可能會執行動作在該資料上成為可用。 第一個代理程式通知的第二個代理程式詳細資料可用於訊息傳遞。 並行執行階段工作排程器提供有效率的機制，若要啟用代理程式，以封鎖和相讓合作方式而不需要比較沒有效率的先佔。  
+  
 
-「*非同步代理程式*」\(Asynchronous Agent\) \(或簡稱「*代理程式*」\(Agent\)\) 是一個應用程式元件，可以用非同步方式配合其他代理程式來解決較複雜的運算工作。  請將代理程式視為已設定生命週期的工作。  例如，假設有一個代理程式負責讀取輸入\/輸出裝置 \(例如鍵盤、磁碟檔案或網路連接\) 中的資料，而另一個代理程式則負責對讀取到的資料執行動作。  第一個代理程式會傳遞訊息來通知第二個代理程式有更多資料可用。  並行執行階段工作排程器提供有效的機制，能夠以合作方式封鎖和產生代理程式，而不需要進行效率較低的先佔封鎖和產生。  
+ 代理程式程式庫定義[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)類別來代表非同步代理程式。 `agent`是一種抽象類別，宣告虛擬方法[concurrency::agent::run](reference/agent-class.md#run)。 `run`方法執行代理程式所執行的工作。 因為`run`是抽象的您必須實作這個方法中的每個類別衍生自`agent`。  
   
- 代理程式程式庫定義 [concurrency::agent](../../parallel/concrt/reference/agent-class.md) 類別來表示非同步代理程式。  `agent` 是一個宣告虛擬方法 [concurrency::agent::run](../Topic/agent::run%20Method.md) 的抽象類別。  `run` 方法會執行代理程式所執行的工作。  因為 `run` 是抽象的，所以您必須在每個衍生自 `agent` 的類別中實作這個方法。  
+## <a name="agent-life-cycle"></a>代理程式的生命週期  
+ 代理程式已設定的生命週期。 [Concurrency:: agent_status](reference/concurrency-namespace-enums.md#agent_status)列舉會定義代理程式的各個狀態。 下圖是顯示說明代理程式的進度從某個狀態到另一個狀態圖表。 在此圖中，實線代表您應用程式; 從呼叫的方法虛線代表從執行階段呼叫的方法。  
   
-## 代理程式生命週期  
- 代理程式擁有設定的生命週期。  [concurrency::agent\_status](../Topic/agent_status%20Enumeration.md) 列舉定義代理程式的各種狀態。  下圖是說明代理程式如何從某種狀態進入另一種狀態的狀態圖表。  在這張圖中，實線表示您在應用程式中呼叫的方法，虛線則表示在執行階段呼叫的方法。  
+ ![代理程式狀態圖表](../../parallel/concrt/media/agentstate.png "agentstate")  
   
- ![代理程式狀態圖表](../../parallel/concrt/media/agentstate.png "AgentState")  
+ 下表描述中的每個狀態`agent_status`列舉型別。  
   
- 下表說明 `agent_status` 列舉中的每種狀態。  
-  
-|代理程式狀態|說明|  
-|------------|--------|  
-|`agent_created`|尚未排定代理程式執行。|  
-|`agent_runnable`|執行階段已排定代理程式執行。|  
-|`agent_started`|代理程式已啟動並執行。|  
+|代理程式狀態|描述|  
+|-----------------|-----------------|  
+|`agent_created`|無法排定執行代理程式。|  
+|`agent_runnable`|執行階段排程執行的代理程式。|  
+|`agent_started`|代理程式已啟動且正在執行。|  
 |`agent_done`|代理程式已完成。|  
-|`agent_canceled`|代理程式在進入 `started` 狀態之前即已遭到取消。|  
+|`agent_canceled`|代理程式已取消之前進入`started`狀態。|  
   
- `agent_created` 是代理程式的最初狀態、`agent_runnable` 和 `agent_started` 是代理程式可作用時的狀態，而 `agent_done` 和 `agent_canceled` 則是代理程式的結束狀態。  
+ `agent_created`是代理程式的初始狀態`agent_runnable`和`agent_started`是作用中狀態，和`agent_done`和`agent_canceled`是終端機的狀態。  
   
- 若要擷取 `agent` 物件目前的狀態，請使用 [concurrency::agent::status](../Topic/agent::status%20Method.md) 方法。  雖然 `status` 方法是並行安全的，但是當 `status` 方法傳回時，代理程式的狀態可能又會變更。  例如，當您呼叫 `status` 方法時，代理程式可能為 `agent_started` 狀態，但是在 `status` 方法傳回之後，代理程式又變成 `agent_done` 狀態。  
+ 使用[concurrency::agent::status](reference/agent-class.md#status)方法來擷取目前的狀態`agent`物件。 雖然`status`方法是並行安全，因此代理程式的狀態可以變更的時間`status`方法會傳回。 例如，代理程式可能在`agent_started`狀態，當您呼叫`status`方法，但會移至`agent_done`後方狀態`status`方法會傳回。  
+
   
-## 方法和功能  
- 下表顯示 `agent` 類別底下的一些重要方法。  如需所有 `agent` 類別方法的詳細資訊，請參閱 [agent 類別](../../parallel/concrt/reference/agent-class.md)。  
+## <a name="methods-and-features"></a>方法與功能  
+ 下表顯示一些重要的方法，屬於`agent`類別。 如需所有詳細資訊`agent`類別方法，請參閱[agent 類別](../../parallel/concrt/reference/agent-class.md)。  
   
-|方法|說明|  
-|--------|--------|  
-|[start](../Topic/agent::start%20Method.md)|排定 `agent` 物件執行，並將它設定為 `agent_runnable` 狀態。|  
-|[run](../Topic/agent::run%20Method.md)|執行要由 `agent` 物件執行的工作。|  
-|[done](../Topic/agent::done%20Method.md)|將代理程式變成 `agent_done` 狀態。|  
-|[cancel](../Topic/agent::cancel%20Method.md)|如果代理程式尚未啟動，則這個方法會取消執行代理程式，並將它設定為 `agent_canceled` 狀態。|  
-|[status](../Topic/agent::status%20Method.md)|擷取 `agent` 物件的目前狀態。|  
-|[wait](../Topic/agent::wait%20Method.md)|等候 `agent` 物件進入 `agent_done` 或 `agent_canceled` 狀態。|  
-|[wait\_for\_all](../Topic/agent::wait_for_all%20Method.md)|等候所有提供的 `agent` 物件進入 `agent_done` 或 `agent_canceled` 狀態。|  
-|[wait\_for\_one](../Topic/agent::wait_for_one%20Method.md)|等候至少一個提供的 `agent` 物件進入 `agent_done` 或 `agent_canceled` 狀態。|  
+|方法|描述|  
+|------------|-----------------|  
+|[start](reference/agent-class.md#start)|排程`agent`執行的物件並將其設`agent_runnable`狀態。|  
+|[run](reference/agent-class.md#run)|執行工作所執行的`agent`物件。|  
+|[完成](reference/agent-class.md#done)|移至代理程式`agent_done`狀態。|  
+|[[取消]](../../parallel/concrt/cancellation-in-the-ppl.md#cancel)|如果代理程式並未啟動，這個方法會取消執行代理程式，並將其設`agent_canceled`狀態。|  
+|[status](reference/agent-class.md#status)|擷取目前的狀態`agent`物件。|  
+|[等候](reference/agent-class.md#wait)|等候`agent`物件進入`agent_done`或`agent_canceled`狀態。|  
+|[wait_for_all](reference/agent-class.md#wait_for_all)|等候所有提供`agent`輸入物件`agent_done`或`agent_canceled`狀態。|  
+|[wait_for_one](reference/agent-class.md#wait_for_one)|等候至少一個提供`agent`輸入物件`agent_done`或`agent_canceled`狀態。|  
   
- 建立代理程式物件之後，請呼叫 [concurrency::agent::start](../Topic/agent::start%20Method.md) 方法排定該物件執行。  執行階段會在排定代理程式並將之設定為 `agent_runnable` 狀態之後，呼叫 `run` 方法。  
+ 您建立代理程式物件之後，請呼叫[concurrency::agent::start](reference/agent-class.md#start)方法來排程執行。 執行階段呼叫`run`方法之後，它會排程代理程式，並將它設定為`agent_runnable`狀態。  
   
- 執行階段並不會管理非同步代理程式所擲回的例外狀況。  如需例外狀況處理和代理程式的詳細資訊，請參閱[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
+ 執行階段不會管理非同步代理程式所擲回的例外狀況。 如需例外狀況處理和代理程式的詳細資訊，請參閱[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。  
   
-## 範例  
- 如需示範如何建立基本的代理程式架構應用程式的範例，請參閱[逐步解說：建立代理程式架構應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)。  
+## <a name="example"></a>範例  
+ 如需示範如何建立基本的代理程式型應用程式的範例，請參閱[逐步解說： 建立代理程式為基礎的應用程式](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)
+

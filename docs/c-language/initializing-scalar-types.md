@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a580a62c8ee8588386ceb92e10a8593881f6e28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3863ea5a6edfd0c7bc605231182a8d5dfc17b9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-scalar-types"></a>初始化純量類型
 初始化純量類型時，會將 *assignment-expression* 的值指派給變數。 指派適用的轉換規則。 (如需轉換規則的詳細資訊，請參閱[類型轉換](../c-language/type-conversions-c.md))。  
@@ -115,5 +116,5 @@ int function( void )
   
  全域變數 `GLOBAL` 是在外部層次宣告，因此具有全域存留期。 區域變數 `LOCAL` 具有 **auto** 儲存類別，且在宣告該變數的函式執行期間只具有位址。 因此，不允許使用 `lp` 的位址初始化 **static** 指標變數 `LOCAL`。 因為該位址永遠相同，所以 **static** 指標變數 `gp` 可以初始化至 `GLOBAL` 的位址。 同樣地，您可以初始化 `*rp`，因為 `rp` 是區域變數，並可能具有非常數的初始設定式。 每當進入區塊時，`LOCAL` 會擁有新的位址，接著再將其指派給 `rp`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [初始化](../c-language/initialization.md)

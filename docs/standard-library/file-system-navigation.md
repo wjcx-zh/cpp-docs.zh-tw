@@ -13,16 +13,17 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ed9a10434f0128de871a426f7e6be46212d4098
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60e7e32c79965e50255c5728cad3e9d399ea2df1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-system-navigation"></a>檔案系統巡覽
 \<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 在 Windows 上一律會傳回 `false` 。   
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
 使用 \<filesystem> API 進行下列工作：  
   
 -   反覆查看指定路徑下的檔案和目錄  

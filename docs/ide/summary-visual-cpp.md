@@ -1,50 +1,50 @@
 ---
-title: "&lt;summary&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<summary>"
-  - "summary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<summary> C++ XML 標記"
-  - "summary C++ XML 標記"
+title: "&lt;摘要&gt;（Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <summary>
+- summary
+dev_langs: C++
+helpviewer_keywords:
+- <summary> C++ XML tag
+- summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 48e4401967719313d9af7924d12cf68b870f4543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;summary&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<summary\> 標記應用於描述型別或型別成員。  使用 [\<remarks\>](../ide/remarks-visual-cpp.md) 為型別描述加入補充資訊。  
+# <a name="ltsummarygt-visual-c"></a>&lt;摘要&gt;（Visual c + +）
+\<summary> 標記應該用來描述類型或類型成員。 使用 [\<remarks>](../ide/remarks-visual-cpp.md) 新增類型描述的補充資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 <summary>description</summary>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `description`  
- 為物件的摘要。  
+ 物件的摘要。  
   
-## 備註  
- \<summary\> 標記中的文字是唯一的資訊來源型別相關 IntelliSense 中也會顯示 [物件瀏覽器](http://msdn.microsoft.com/zh-tw/f89acfc5-1152-413d-9f56-3dc16e3f0470) 並在程式碼結構 Web 報告。  
+## <a name="remarks"></a>備註  
+ 文字\<摘要 > 標記會在 IntelliSense 中，類型的相關資訊的唯一來源和也會顯示於[物件瀏覽器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)和程式碼註解 Web 報告中。  
   
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 進行編譯，將文件註解處理為檔案。  
+ 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // xml_summary_tag.cpp  
@@ -65,5 +65,5 @@ public:
 };  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: edb34d3dc976034fd4040ee3d0bd6abf33dd6fab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6b0535c43ebc3e1a969f19c5d2779b54c90aa397
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimapinsert-stlclr"></a>hash_multimap::insert (STL/CLR)
 加入項目。  
@@ -142,5 +145,5 @@ insert(begin(), [L'y' 25]) = [y 25]
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08de1cfd876438b46c41aa795ab6cc2b0aab3fb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d5d535a50aaab7445f39a02967964d002fc83d49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isabstract-class"></a>is_abstract 類別
 測試類型是否為抽象類別。  
@@ -79,6 +80,6 @@ is_abstract<abstract> == true
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_polymorphic 類別](../standard-library/is-polymorphic-class.md)

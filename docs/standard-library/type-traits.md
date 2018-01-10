@@ -4,42 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <type_traits>
-dev_langs:
-- C++
+f1_keywords: <type_traits>
+dev_langs: C++
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: ec13a255f456254f89ca84488d12fbf5ce0440b4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/18/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7e0032070e20749a55a34218f7341914bc47501b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 定義提供編譯時間常數的範本，這些常數會提供其類型引數的屬性資訊或產生轉換類型。  
@@ -134,7 +117,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_constructible](../standard-library/is-constructible-class.md)|測試類型是否可使用指定的引數類型建構。|  
 |[is_default_constructible](../standard-library/type-traits-functions.md#is_default_constructible)|測試類型是否有預設建構函式。|  
 |[is_copy_constructible](../standard-library/type-traits-functions.md#is_copy_constructible)|測試類型是否有複製建構函式。|  
-|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|測試類型是否有移動建構函式。|  
+|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|測試類型是否具有移動建構函式。|  
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|測試第一個類型是否可以指派第二個類型的值。|  
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|測試類型是否可指派類型的常數參考值。|  
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|測試類型是否可指派類型的右值參考。|  
@@ -179,7 +162,7 @@ using add_const_t = typename add_const<T>::type;
 |-|-|  
 |[add_const](../standard-library/add-const-class.md)|從類型產生 `const` 類型。|  
 |[add_volatile](../standard-library/add-volatile-class.md)|從類型產生 `volatile` 類型。|  
-|[add_cv](../standard-library/add-cv-class.md)|從類型產生 `const``volatile` 類型。|  
+|[add_cv](../standard-library/add-cv-class.md)|從類型產生 `const volatile` 類型。|  
 |[remove_const](../standard-library/remove-const-class.md)|從類型產生非常數類型。|  
 |[remove_volatile](../standard-library/remove-volatile-class.md)|從類型產生非 volatile 類型。|  
 |[remove_cv](../standard-library/remove-cv-class.md)|從類型產生非常數非 volatile 類型。|  
@@ -226,9 +209,8 @@ using add_const_t = typename add_const<T>::type;
 |[result_of](../standard-library/result-of-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。|  
 |[underlying_type](../standard-library/underlying-type-class.md)|產生列舉類型的基礎整數類型。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<functional>](../standard-library/functional.md)
-
 
 
 

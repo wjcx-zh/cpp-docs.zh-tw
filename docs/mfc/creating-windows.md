@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83985689a2e696e82aae57348ab61263c0f888da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3563395020919c59acbd94bfc8653d349090ff96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-windows"></a>建立視窗
 架構會自動建立架構程式中的大部分的您所需的視窗。 [文件/檢視建立](../mfc/document-view-creation.md)示範如何在架構建立框架視窗與文件和檢視相關聯。 但為了特殊用途而您可以建立您自己的視窗，包括您自己的子視窗的框架視窗或檢視表 — 除了架構所提供的 windows。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用視窗物件](../mfc/working-with-window-objects.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [視窗物件](../mfc/window-objects.md)
 

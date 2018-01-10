@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dfa449e16e6f2f28a857150220b4b710f7a75bc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c400579603ce3385e6b4114c8c9996cab2849619
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="swap-function-autohandle"></a>swap 函式 (auto_handle)
 交換物件之間一個`auto_handle`和另一個。  
@@ -75,6 +78,6 @@ s1 = 'string two', s2 = 'string one'
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [auto_handle](../dotnet/auto-handle.md)   
  [auto_handle::swap](../dotnet/auto-handle-swap.md)

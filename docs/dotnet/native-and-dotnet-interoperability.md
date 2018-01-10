@@ -25,16 +25,19 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b9e948534f4e5417a561f8a650f666f32e707632
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6206ddf3802078c49bfc1a83e952ed79afe1ff00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="native-and-net-interoperability"></a>原生和 .NET 互通性
 Visual c + + 支援了互通性功能，可讓 managed 和 unmanaged 建構共存並交互操作在相同的組件內，甚至相同的檔案。 這項功能，例如 P/Invoke 的小型子集會受到其他.NET 語言，但大部分的 Visual c + + 所提供的互通性支援不適用於其他語言。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)  
  描述以產生組件[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項，同時包含 managed 和 unmanaged 功能。  
   
@@ -44,6 +47,6 @@ Visual c + + 支援了互通性功能，可讓 managed 和 unmanaged 建構共�
  [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)  
  描述如何使用非 CLR Dll，從.NET 應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 

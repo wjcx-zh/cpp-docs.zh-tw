@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bfac148696a40fcb8b8d054e7ce8d7da7e0daf15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d23c7cb23d9221f8f2183c666a99c70ef149db3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-server-classes"></a>OLE 伺服器類別
 伺服器應用程式會使用這些類別。 伺服器文件衍生自`COleServerDoc`而不是從**CDocument**。 請注意，因為`COleServerDoc`衍生自`COleLinkingDoc`，伺服器文件也可以支援連結的容器。  
@@ -53,6 +54,6 @@ ms.lasthandoff: 10/24/2017
  [COleException](../mfc/reference/coleexception-class.md)  
  因 OLE 處理失敗而產生的例外狀況。 容器和伺服器都使用這個類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

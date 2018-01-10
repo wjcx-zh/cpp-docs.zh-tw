@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d98297d681f3c2c377a7bccb7b988169aca76d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fd05acc351a23cc088c6491a76ecfb91583b16b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 類別
 代表在 c + + AMP 資料平行加速器上的虛擬裝置抽象概念。  
@@ -46,18 +47,18 @@ ms.lasthandoff: 10/24/2017
 class accelerator_view;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[accelerator_view 建構函式](#ctor)|初始化 `accelerator_view` 類別的新執行個體。|  
 |[~ accelerator_view 解構函式](#dtor)|終結`accelerator_view`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[create_marker](#create_marker)|傳回追蹤的所有命令提交到目前為止此完成未來`accelerator_view`物件。|  
 |[flush](#flush)|送出所有暫止命令排入佇列`accelerator_view`執行對應的物件。|  
@@ -70,7 +71,7 @@ class accelerator_view;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|比較這個`accelerator_view`與另一個物件，然後傳回`false`如果它們是相同的; 否則會傳回`true`。|  
 |[operator=](#operator_eq)|將指定的內容複製`accelerator_view`成這一個物件。|  
@@ -78,7 +79,7 @@ class accelerator_view;
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[快速鍵](#accelerator)|取得 `accelerator_view` 物件的 `accelerator` 物件。|  
 |[is_auto_selection](#is_auto_selection)|取得布林值，指出執行階段是否會自動選取適當的對應時`accelerator_view`物件傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。|  
@@ -333,5 +334,5 @@ void wait();
 ### <a name="return-value"></a>傳回值  
   
  
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

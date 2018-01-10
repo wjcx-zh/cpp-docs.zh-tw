@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d41e6f1fd4cf66b45d4f79f4f1b27b3fc4d67a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f6ad8889c9a713b3b64284b329c21d5a2cd49e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hlsl-property-pages-output-files"></a>HLSL 屬性頁：輸出檔
 若要設定下列屬性的 HLSL 編譯器 (fxc.exe)，使用其**輸出檔**屬性。 如需有關如何存取資訊**輸出檔**屬性頁的 HLSL 資料夾中，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
   
  這個屬性會對應至**/Fc [name]**和**/Fx [name]**命令列引數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [HLSL 屬性頁](../ide/hlsl-property-pages.md)   
  [HLSL 屬性頁： 一般](../ide/hlsl-property-pages-general.md)   
  [HLSL 屬性頁：進階](../ide/hlsl-property-pages-advanced.md)

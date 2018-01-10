@@ -1,32 +1,33 @@
 ---
-title: "set_symmetric_difference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set_symmetric_difference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "set_symmetric_difference 函式 [STL/CLR]"
+title: "set_symmetric_difference (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set_symmetric_difference
+dev_langs: C++
+helpviewer_keywords: set_symmetric_difference function [STL/CLR]
 ms.assetid: 4d8997c7-038e-42a8-86d4-81d714ed3775
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b34cc49c55dc8031b7df3b7facd7b0431fa7c0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# set_symmetric_difference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-聯集屬於兩個之一排序的來源範圍成單一的所有項目，排序的目的範圍，排序準則可能由二進位述詞指定。  
+# <a name="setsymmetricdifference-stlclr"></a>set_symmetric_difference (STL/CLR)
+將屬於兩個排序來源範圍之一 (但非兩者) 的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _InIt1, class _InIt2, class _OutIt> inline  
@@ -37,13 +38,13 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
         _InIt2 _First2, _InIt2 _Last2, _OutIt _Dest, _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式的行為與 STL 函式 `set_symmetric_difference` 相同。  如需詳細資訊，請參閱[set\_symmetric\_difference](../Topic/set_symmetric_difference.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`set_symmetric_difference`。 如需詳細資訊，請參閱[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)。  
   
-## 需求  
- **標頭：** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

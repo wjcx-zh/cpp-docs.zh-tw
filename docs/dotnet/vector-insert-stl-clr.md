@@ -1,32 +1,33 @@
 ---
-title: "vector::insert (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::insert"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "insert 成員 [STL/CLR]"
+title: "vector:: insert (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::insert
+dev_langs: C++
+helpviewer_keywords: insert member [STL/CLR]
 ms.assetid: f240cabf-f9d1-40c1-9cfb-975a90955546
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b330a9e0b8a11f41ceab4f604b73b93e8f1d735a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::insert (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將項目在指定的位置。  
+# <a name="vectorinsert-stlclr"></a>vector::insert (STL/CLR)
+將項目加入指定的位置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator insert(iterator where, value_type val);  
@@ -37,39 +38,39 @@ void insert(iterator where,
     System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  count  
- 插入的項目數目。  
+ 要插入的元素數目。  
   
- 首先  
- 要插入的範圍開頭。  
+ 第一  
+ 要插入範圍的開頭。  
   
  last  
- 插入範圍結尾。  
+ 要插入範圍的結尾。  
   
- right  
- 要插入的列舉型別。  
+ 向右  
+ 若要插入的列舉型別。  
   
  val  
- 要插入的元素值。  
+ 要插入之項目的值。  
   
- where  
- 只要在先前插入的容器。  
+ 其中  
+ 在前面插入的容器中的位置。  
   
-## 備註  
- 每一個成員在項目之前函式插入，指向 `where` 在受控制序列的長度，剩餘的運算元指定的序列。  
+## <a name="remarks"></a>備註  
+ 每個成員函式所指向的項目之前插入`where`其餘運算元所指定受控制序列中中, 序列。  
   
- 第 10% 成員函式插入具有會指定新插入的項目的 `val` 值的項目並傳回 Iterator。  您將它用於 Iterator 的位置插入一個項目。  
+ 第一個成員函式插入值的項目`val`並傳回指定的新插入的元素的迭代器。 您可以使用它來插入迭代器指定的位置之前的單一項目。  
   
- 第二個成員函式插入值 `val` 的 `count` 項目之複本。  您會用它來插入零或相同值的所有重複的更連續的項目。  
+ 第二個成員函式會插入 `val` 值的 `count` 個元素數重複。 您可以使用它來插入零或多個連續的項目也就是相同值的所有複本。  
   
- 如果 `InIt` 是整數型別，第三 \+ 成成員函式一般作業的 `insert(``where``, (size_type)``first``, (value_type)``last``)`。  否則，它會插入序列 `[``first``,``last``)`。  您會用它來插入零或另一個序列複製的更連續的項目。  
+ 如果 `InIt` 是整數類型，第三個成員函式的行為即與 `insert(where, (size_type)first, (value_type)last)` 相同。 否則，它會插入序列 [`first`， `last`)。 您可以使用它來插入另一個序列中複製的零或多個連續的元素。  
   
- 第四個成員函式插入 `right`指定的序列。  您會用它來插入列舉值所描述的序列。  
+ 第四個成員函式會插入所指定的序列`right`。 您可以使用它來插入列舉所描述的順序。  
   
- 當插入單一項目時，項目的複本數目是線性項目數目在插入點和序列的存取結尾之間。\(當插入一個或多個項目序列中的任一端時，項目複本不會發生\)。如果 `InIt` 是輸入 Iterator，第三 \+ 成成員函式在序列有效地執行每個項目的唯一插入。  否則，當 `N` ，插入項目時，項目的複本數目是線性在 `N` 加上項目數插入點和序列的存取結尾之間。  
+ 當插入單一項目，項目複本數目中是線性的插入點之間距離越近序列結尾的項目數。 （當插入順序的任一端的一或多個項目，沒有項目複本會發生。）如果`InIt`是輸入的迭代器，第三個成員函式會有效地執行單一插入每個項目序列中。 否則，當插入`N`項目，項目複本數目中是線性`N`加上數字的項目插入點之間距離越近序列的結尾。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_insert.cpp   
@@ -121,17 +122,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**插入 \(開始 \(\+1\)， L'x\) \= x**  
- **x b c**  
- **y y**  
- **Y 座標 x b**  
- **x b c y y x b**   
-## 需求  
- **標題:** \<cliext\/向量\>  
+```Output  
+ a b c  
+insert(begin()+1, L'x') = x  
+ a x b c  
+ y y  
+ y y a x b  
+ a x b c y y a x b  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::assign](../dotnet/vector-assign-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)

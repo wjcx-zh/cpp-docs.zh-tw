@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a0562588e27580acbe86204f7e5fe70f996103d6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5ed78be34ced8b113c5a7d9bc08bd84bc81bcd6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltdequegt-functions"></a>&lt;deque&gt; 函式
 ||  
@@ -42,7 +43,7 @@ void swap(
 ### <a name="example"></a>範例  
  請參閱 [deque::swap](../standard-library/deque-class.md#swap) 範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<deque>](../standard-library/deque.md)
 
 

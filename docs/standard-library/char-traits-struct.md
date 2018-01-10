@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ad63f077bcc018681f852d1495e9f1abd7d4fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b094e0cc34cc1a832e531cff9a5f3fa1366abcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chartraits-struct"></a>char_traits 結構
 Char_traits 結構會描述與字元相關聯的屬性。  
@@ -173,7 +174,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `char_type` 的範例，請參閱 [copy](#copy) 的範例。  
@@ -1166,6 +1167,6 @@ The recovered char_type of ch1 is equal to the original ch1.
 The recovered char_type of ch2 is equal to the original ch2.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

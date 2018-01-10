@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 34fc4ecb92e0d60715bcfa35ed41fc07f8e91574
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aca753688bd4c9f7761702581c087b567a355daa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetreference-stlclr"></a>multiset::reference (STL/CLR)
 項目的參考類型。  
@@ -70,7 +73,7 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset:: const_reference (STL/CLR)](../dotnet/multiset-const-reference-stl-clr.md)   
  [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

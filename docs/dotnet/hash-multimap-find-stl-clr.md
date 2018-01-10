@@ -1,45 +1,46 @@
 ---
-title: "hash_multimap::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find 成員 [STL/CLR]"
+title: "hash_multimap:: find (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: ce839c5e-b8c5-434e-9cc0-e4c6ee6a6bb3
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c0c49ccfad44c7504990068ffa70953b672e5e99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定之索引鍵的項目。  
+# <a name="hashmultimapfind-stlclr"></a>hash_multimap::find (STL/CLR)
+尋找符合指定之索引鍵的元素。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
+#### <a name="parameters"></a>參數  
+ key  
  要搜尋的索引鍵值。  
   
-## 備註  
- 如果在受控制序列的至少一個項目具有與 `key`相等的定序，成員函式來傳回指定項目之一的 Iterator;否則會傳回 [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`()`。  您可以使用它目前設定項目符合指定索引鍵的控制順序。  
+## <a name="remarks"></a>備註  
+ 至少一個項目是否在受控制序列中有對等順序，與`key`，成員函式會傳回指定其中一個這些項目的迭代器，否則它會傳回[hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()`. 您可以使用它來尋找元素目前受控制序列之符合指定之索引鍵。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multimap_find.cpp   
@@ -73,20 +74,23 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**尋找 A \= false**  
-**尋找 b \= \[b 2\]**  
-**尋找 C \= false**   
-## 說明  
- 需留意到 `find` 無法保證哪幾個項目找到。  
+```Output  
+ [a 1] [b 2] [c 3]  
+find A = False  
+find b = [b 2]  
+find C = False  
+```  
   
-## 需求  
- **標題:** \<cliext\/hash\_map\>  
+## <a name="description"></a>描述  
+ 請注意，`find`不保證它找到的數個項目。  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
-## 請參閱  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::equal\_range](../dotnet/hash-multimap-equal-range-stl-clr.md)   
- [hash\_multimap::lower\_bound](../dotnet/hash-multimap-lower-bound-stl-clr.md)   
- [hash\_multimap::upper\_bound](../dotnet/hash-multimap-upper-bound-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap:: equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)   
+ [hash_multimap:: lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)   
+ [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)

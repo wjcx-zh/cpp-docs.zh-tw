@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86078a8ff66eadc1cdd6b177ba074abfd1683345
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adfd7344b01360df6af3ccf7a153eda3451d2482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setapptype"></a>_set_app_type
 在啟動時使用的內部函式會告訴 CRT，應用程式是主控台應用程式或 GUI 應用程式。  
@@ -46,7 +47,7 @@ void __cdecl _set_app_type(
  `appType`  
  指出應用程式類型的值。 可能值為：  
   
-|值|說明|  
+|值|描述|  
 |----------------|-----------------|  
 |_crt_unknown_app|不明應用程式類型。|  
 |_crt_console_app|主控台 (命令列) 應用程式。|  
@@ -57,7 +58,7 @@ void __cdecl _set_app_type(
  
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |_set_app_type|process.h|
 

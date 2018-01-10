@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3f8cf68815d5c3ad21767b721b2b3570bbb7119
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9814413a77275183e6f36b49bf721f9b305d9763
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ptroperator-gt"></a>ptr::operator-&gt;
 成員存取運算子，用來在擁有的 COM 物件上呼叫方法。  
@@ -169,5 +172,5 @@ int main() {
   
  **命名空間**msclr::com  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ptr 成員](../dotnet/ptr-members.md)

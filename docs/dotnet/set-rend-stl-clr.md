@@ -1,41 +1,42 @@
 ---
-title: "set::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend 成員 [STL/CLR]"
+title: "set:: rend (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 4a98d138-ad89-4dee-b757-e798da2e0c0e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cbcbf0386930f054388884a93dfd4ded155f3a05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# set::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定已還原的受控制序列結尾。  
+# <a name="setrend-stlclr"></a>set::rend (STL/CLR)
+指定反向受控制序列的結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## 備註  
- 成員函式傳回在受控制序列的開頭之外按的反向迭代器。  因此，它會指定反向序列的 `end`。  您要用它來取得的 Iterator 可指定以相反順序顯示的受控制序列之 `current` 結尾，但是，如果受控制序列的長度變更，它的狀態也可以變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回以外的位置開始，指向受控制序列的反向迭代器。 因此，它會指定`end`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更結尾受控制的序列相反的順序出現，但它的狀態。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_rend.cpp   
@@ -65,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-rend\(\) \= b**  
-**\*\-\-rend\(\) \= a**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::begin](../dotnet/set-begin-stl-clr.md)   
- [set::end](../dotnet/set-end-stl-clr.md)   
- [set::rbegin](../dotnet/set-rbegin-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: begin (STL/CLR)](../dotnet/set-begin-stl-clr.md)   
+ [set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)   
+ [set::rbegin (STL/CLR)](../dotnet/set-rbegin-stl-clr.md)

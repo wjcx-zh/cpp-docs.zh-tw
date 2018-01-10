@@ -1,50 +1,52 @@
 ---
-title: "Converting an Image From One Format to Another (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], stand-alone editing"
-  - "Image editor [C++], converting image formats"
-  - "graphics [C++], converting formats"
-  - "images [C++], converting formats"
+title: "轉換影像的一種格式到另一個 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], stand-alone editing
+- Image editor [C++], converting image formats
+- graphics [C++], converting formats
+- images [C++], converting formats
 ms.assetid: 0409c2bd-3bd8-4d72-9c71-c683b6cf51be
-caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2defaafb1c0edb58f3fbd50ecc47ad26309ca38b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Converting an Image From One Format to Another (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可在影像編輯器中開啟 GIF 或 JPEG 影像，然後將它們另存為點陣圖。  此外，也可開啟點陣圖檔案，然後將它另存為 GIF 或 JPEG。  您使用的影像即使不是專案的一部分，也可以在開發環境內編輯 \(請參閱[獨立式影像編輯](../mfc/editing-an-image-outside-of-a-project-image-editor-for-icons.md)\)。  
+# <a name="converting-an-image-from-one-format-to-another-image-editor-for-icons"></a>轉換影像的格式 (圖示影像編輯器)
+您可以在影像編輯器中開啟 GIF 或 JPEG 影像，並將它們儲存為點陣圖。 此外，您可以開啟點陣圖檔案，並將它儲存為 GIF 或 JPEG。 您使用的影像不需要在開發環境中編輯專案的一部分 (請參閱[獨立影像編輯](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md))。  
   
-### 若要將影像從某種格式轉換成另一種格式  
+### <a name="to-convert-an-image-from-one-format-to-another"></a>若要轉換成不同的一種格式的影像  
   
-1.  在 \[影像\] 編輯器中開啟影像。  
+1.  開啟中的映像**映像**編輯器。  
   
-2.  從 \[檔案\] 功能表中選擇 \[另存 \<filename\> 為\]。  
+2.  從**檔案**功能表上，選擇**儲存*filename*為**。  
   
-3.  在 \[另存新檔\] 對話方塊中，於 \[檔名\] 方塊內，輸入檔案名稱和代表您想要格式的副檔名。  
+3.  在**另存新檔**對話方塊中，於**檔案名稱**方塊中，輸入檔案名稱和副檔名，代表您想要的格式。  
   
-4.  按一下 \[**儲存**\]。  
+4.  按一下 [儲存] 。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
- None  
+ 無  
   
-## 請參閱  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
+

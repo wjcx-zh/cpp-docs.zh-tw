@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4dcec1f501d2f05018410fcd293a4ed649e607b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e06e1d5b0a5aa34116456c342f9cec233edcb6a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overriding-a-dynamic-accessor"></a>覆寫動態存取子
 當您使用動態存取子例如`CDynamicAccessor`，命令**開啟**方法會建立存取子，會自動根據開啟的資料列集的資料行資訊。 您可以覆寫動態存取子，來控制完全資料行的繫結方式。  
@@ -76,5 +79,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

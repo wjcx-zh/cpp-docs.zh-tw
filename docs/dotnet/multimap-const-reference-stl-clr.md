@@ -1,42 +1,42 @@
 ---
-title: "multimap::const_reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::const_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reference 成員 [STL/CLR]"
+title: "multimap:: const_reference (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::const_reference
+dev_langs: C++
+helpviewer_keywords: const_reference member [STL/CLR]
 ms.assetid: ae963633-63a9-4f73-bc06-7bac13663f5a
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 14b1becbbfdb9db8deeafb377bbf13fbcb71eb79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::const_reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapconstreference-stlclr"></a>multimap::const_reference (STL/CLR)
 項目的常數參考類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef value_type% const_reference;  
 ```  
   
-## 備註  
- 此型別描述項目的常數參考。  
+## <a name="remarks"></a>備註  
+ 此類型描述項目的常數參考。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multimap_const_reference.cpp   
@@ -64,13 +64,16 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 需求  
- **標頭：** \<cliext\/map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::reference](../dotnet/multimap-reference-stl-clr.md)   
- [multimap::value\_type](../dotnet/multimap-value-type-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap:: reference (STL/CLR)](../dotnet/multimap-reference-stl-clr.md)   
+ [multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)

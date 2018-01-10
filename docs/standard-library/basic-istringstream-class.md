@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f5ba9776b27ec98967f64d3c2bfb114c62c36fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc439bd64327ad48f98de8eef380a792e54b8c4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistringstream-class"></a>basic_istringstream 類別
 描述一個物件，該物件可控制如何從 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 類別的資料流緩衝區擷取元素和編碼物件。  
@@ -184,14 +185,14 @@ void swap(basic_istringstream& right);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`right`|`basic_istringstream` 物件的 `lvalue` 參考。|  
   
 ### <a name="remarks"></a>備註  
  成員函式會將此物件的值與 `right` 的值交換。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   
  [iostream 慣例](../standard-library/iostreams-conventions.md)

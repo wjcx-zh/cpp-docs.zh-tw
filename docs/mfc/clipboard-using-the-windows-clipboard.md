@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 506e7f0d14d76203259e0bac0c34f49e72021ff3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6063a27495d46e4b54f3133b92689e4b0faaa631
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>剪貼簿：使用 Windows 剪貼簿
 本主題描述如何使用標準 Windows 剪貼簿 API，MFC 應用程式中。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [剪貼簿](../mfc/clipboard.md)
 

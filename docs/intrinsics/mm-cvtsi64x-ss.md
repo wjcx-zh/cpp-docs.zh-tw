@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: aecb28648e32e099d2381fa49b1b7f5a42618543
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a567b33e55092e7e8e0361faa0ce54b2498827a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mmcvtsi64xss"></a>_mm_cvtsi64x_ss
 **Microsoft 特定的**  
@@ -38,10 +39,10 @@ __m128 _mm_cvtsi64x_ss(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `a`  
+ [輸入] `a`  
  `__m128`結構，其中包含四個單精確度浮點值。  
   
- [in] `b`  
+ [輸入] `b`  
  要轉換成浮點值的 64 位元整數。  
   
 ## <a name="return-value"></a>傳回值  
@@ -51,7 +52,7 @@ __m128 _mm_cvtsi64x_ss(
   
 |內建|架構|  
 |---------------|------------------|  
-|`_mm_cvtsi64x_ss`|x64|  
+|`_mm_cvtsi64x_ss`|X64|  
   
  **標頭檔** \<intrin.h >  
   
@@ -92,8 +93,8 @@ int main()
 54.000000 0.000000 0.000000 0.000000  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__m128](../cpp/m128.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

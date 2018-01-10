@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 234288be0313c8e50fde08a3cb898f498ebe4174
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a61566878adc539af21e1645844eff27c5a8aec0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedule-groups"></a>排程群組
 本文件說明並行執行階段中的排程群組的角色。 A*排程群組*視為，或分組，相關的工作。 每一個排程器有一或多個排程群組。 當您需要在工作之間有高度位置關係時 (例如一個相關工作的群組可因為在相同處理器節點上執行而受益)，請使用排程群組。 當您的應用程式都有特定品質需求，例如，當您想要限制配置給一組工作的處理資源量，相反地，使用排程器執行個體。 如需排程器執行個體的詳細資訊，請參閱[排程器執行個體](../../parallel/concrt/scheduler-instances.md)。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>範例  
  如需範例，會使用排程群組來控制工作執行的順序，請參閱[How to： 使用排程群組的執行順序影響](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
  [排程器執行個體](../../parallel/concrt/scheduler-instances.md)   
  [如何：使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)

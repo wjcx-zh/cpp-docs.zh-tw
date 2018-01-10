@@ -31,11 +31,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a69f26f344fd4cdccd2ff2a700dcd7e7d473e26a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f59b48022cc448b8b06502febdaf1634998ac9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-class"></a>Scheduler 類別
 代表並行執行階段排程器的抽象概念。  
@@ -50,14 +51,14 @@ class Scheduler;
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[排程器](#ctor)|物件的`Scheduler`類別可以僅使用 factory 方法，建立或隱含的方式。|  
 |[~ Scheduler 解構函式](#dtor)|物件的`Scheduler`隱含終結類別之前就不再存在於所有外部參考時。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Attach](#attach)|將排程器附加至呼叫的內容。 這個方法傳回之後，呼叫的內容是由管理排程器並排程器會變成目前的排程器。|  
 |[建立](#create)|建立新的排程器所描述的行為`_Policy`參數，將初始參考放置於排程器，而且傳回的指標。|  
@@ -66,7 +67,7 @@ class Scheduler;
 |[GetPolicy](#getpolicy)|傳回與已建立的排程器原則的複本。|  
 |[識別碼](#id)|排程器傳回的唯一識別碼。|  
 |[IsAvailableLocation](#isavailablelocation)|判斷某一特定的位置是否可用排程器上。|  
-|[參考](#reference)|遞增排程器的參考計數。|  
+|[參考資料](#reference)|遞增排程器的參考計數。|  
 |[RegisterShutdownEvent](#registershutdownevent)|Windows 事件的控制代碼傳的原因`_Event`參數時，排程器關閉並終結本身發出信號。 事件發出信號時，所有已排程器已排程的工作已完成。 透過這個方法可以註冊多個關機的事件。|  
 |[發行](#release)|遞減排程器的參考計數。|  
 |[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|將預設排程器原則重設為執行階段預設值。 下一次建立預設排程器時，它會使用執行階段的預設原則設定。|  
@@ -312,7 +313,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ### <a name="remarks"></a>備註  
  如果`SetDefaultSchedulerPolicy`呼叫方法時，預設排程器已經存在於處理程序，將會擲回執行階段[default_scheduler_exists](default-scheduler-exists-class.md)例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [Scheduler 類別](scheduler-class.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   

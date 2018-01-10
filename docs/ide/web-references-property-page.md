@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5792191a7dcff961b2b5be39c4c15855ca99348
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc1692805c3e1bced7cb7662f0da8b7a1fea092c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="web-references-property-page"></a>Web 參考屬性頁
 **Web 參考**屬性頁可讓您指定的 XML Web 服務 proxy 類別產生的方式。 如果您加入 web 參考加入您的專案，就會產生 XML Web 服務 proxy 類別。 請參閱[加入 Web 參考](http://msdn.microsoft.com/en-us/bdf05776-c591-40af-bfd7-e1e2aa1e87b5)如需詳細資訊。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
  **隱藏程式啟始資訊**  
  不為 Web 服務描述語言工具 (Wsdl.exe) 會顯示橫幅。  
   
- **Namespace**  
+ **命名空間**  
  指定產生的 web proxy 的名稱。  
   
  **其他參考資料**  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
   
  如需有關如何存取詳細**Web 參考**屬性頁上，請參閱[使用專案屬性](../ide/working-with-project-properties.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)

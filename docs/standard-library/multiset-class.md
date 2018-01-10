@@ -97,11 +97,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba5b35c7bff46369236bf9be719e351d10a8900d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84fae58f0a1f57ca18fa053607c9d5bf60c068aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multiset-class"></a>multiset 類別
 「C++ 標準程式庫」multiset 類別可用來在集合中儲存及擷取資料，其中集合中所含的元素值不需要是唯一的，而且會作為自動排序資料時所依據的索引鍵值。 多重集中項目的索引鍵值不能直接變更。 相反地，必須刪除舊值，並插入具有新值的項目。  
@@ -120,7 +121,7 @@ class multiset
  *Compare*  
  類型，提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在多重集中的相對順序。 二元述詞 **less**\<Key> 是預設值。  
   
- 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。  
   
  `Allocator`  
  代表預存配置器物件的類型，封裝有關多重集之記憶體配置和解除配置的詳細資訊。 預設值是 **allocator***\<Key>*。  
@@ -148,7 +149,7 @@ class multiset
   
  多重集是藉由呼叫 `Compare` 類型的預存函式物件，排序它所控制的序列。 這個預存物件是可藉由呼叫成員函式 [key_comp](#key_comp) 來存取的比較函式。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 *x* 和 *y* 以及傳回值 **true** 或 **false** 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x,y*) 和 *f*( *y,x*) 皆為 false 時即相等，則施加於集合的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。  
   
- 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -225,7 +226,7 @@ typedef Allocator allocator_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `allocator_type` 與範本參數 `Allocator` 同義。  
+ `allocator_type` 與樣板參數 `Allocator` 同義。  
   
  如需有關 `Allocator` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。  
   
@@ -676,7 +677,7 @@ iterator emplace(Args&&... args);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構要插入到 multiset 中之元素的引數。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -730,7 +731,7 @@ int main()
 ```  
   
 ##  <a name="emplace_hint"></a>  multiset::emplace_hint  
- 將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。  
+ 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。  
   
 ```  
 template <class... Args>  
@@ -743,9 +744,9 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構要插入到 multiset 中之元素的引數。|  
-|`where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
+|`where`|要開始搜尋正確的插入點的地方。 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
   
 ### <a name="return-value"></a>傳回值  
  指向新插入之元素的迭代器。  
@@ -753,7 +754,7 @@ iterator emplace_hint(
 ### <a name="remarks"></a>備註  
  此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。  
   
- 在定位期間，如果擲回例外狀況，則不會修改容器的狀態。  
+ 在定位期間，如果擲回例外狀況，就不會修改容器的狀態。  
   
  如需程式碼範例，請參閱 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。  
   
@@ -815,7 +816,7 @@ iterator end();
 ### <a name="remarks"></a>備註  
  **end** 是用來測試迭代器是否已超過其 multiset 的結尾。  
   
- **end** 所傳回的值不應該被取值。  
+ 不應該對 **end** 所傳回的值進行取值。  
   
  如需程式碼範例，請參閱 [multiset::find](#find)。  
   
@@ -1025,7 +1026,7 @@ allocator_type get_allocator() const;
  multiset 所使用的配置器。  
   
 ### <a name="remarks"></a>備註  
- multiset 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
+ multiset 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
   
 ### <a name="example"></a>範例  
   
@@ -1348,7 +1349,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `key_type` 與範本參數 `Key` 同義。  
+ `key_type` 與樣板參數 `Key` 同義。  
   
  如需有關 `Key` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。  
   
@@ -1505,7 +1506,7 @@ multiset (
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Al`|要用於此 multiset 物件的儲存體配置器類別，預設為 `Allocator`。|  
 |`Comp`|類型為 `const Compare` 並用來排序 multiset 中元素的比較函式，預設為 `Compare`。|  
 |`Right`|要從中複製所建構之 multiset 的 multiset。|  
@@ -1644,7 +1645,7 @@ multiset& operator=(multiset&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|要從中複製或移除元素的 `multiset`。|  
   
 ### <a name="remarks"></a>備註  
@@ -1695,7 +1696,7 @@ typedef typename allocator_type::pointer pointer;
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。  
+ **pointer** 類型可用來修改項目的值。  
   
  在大多數情況下，應該使用 [iterator](#iterator) 來存取 multiset 物件中的元素。  
   
@@ -2150,7 +2151,7 @@ typedef key_compare value_compare;
 ```  
   
 ### <a name="remarks"></a>備註  
- `value_compare` 與範本參數 `Compare` 同義。  
+ `value_compare` 與樣板參數 `Compare` 同義。  
   
  請注意，[key_compare](#key_compare) 和 **value_compare** 都與範本參數 `Compare` 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
   
@@ -2167,7 +2168,7 @@ typedef Key value_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `value_type` 與範本參數 `Key` 同義。  
+ `value_type` 與樣板參數 `Key` 同義。  
   
  請注意，[key_type](#key_type) 和 `value_type` 都與範本參數 **Key** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
   
@@ -2208,7 +2209,7 @@ int main( )
 The multiset has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<set> 成員](http://msdn.microsoft.com/en-us/0c2d57c0-173f-4204-b579-c5f06aad8b95)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

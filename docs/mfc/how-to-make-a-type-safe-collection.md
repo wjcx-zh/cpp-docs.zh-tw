@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8ba8df138cf45ac38ac17a48d5c711f53c8fe5d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 74cb81ecc6b935c87384a8a0a315e35b4adbc465
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>如何：建立類型安全集合
 本文說明如何進行資料類型的類型安全集合。 主題包括：  
@@ -103,6 +104,6 @@ ms.lasthandoff: 10/24/2017
   
      您也可以定義擴充集合的功能而不是只包裝在類型安全包裝函式中的現有功能的新函式，來加入新的功能。 例如，文件[刪除 CObject 集合中的所有物件](../mfc/deleting-all-objects-in-a-cobject-collection.md)說明可刪除清單中的所有物件的函式。 可以將這個函式加入到衍生類別做為成員函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [集合](../mfc/collections.md)
 

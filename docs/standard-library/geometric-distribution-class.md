@@ -34,11 +34,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 796393b3e931cb1afad31809498d329e1a80ad99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 23ab208a32b193c8cf30eefd9382ac253e2518d8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 類別
 產生幾何分佈。  
@@ -98,7 +99,7 @@ public:
   
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
-如需有關卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[卡方分佈 (英文)](http://go.microsoft.com/fwlink/LinkId=400529)。  
+如需有關卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[卡方分佈 (英文)](http://go.microsoft.com/fwlink/p/?linkid=400529)。  
   
 ## <a name="example"></a>範例  
   
@@ -261,7 +262,7 @@ struct param_type {
   
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<random>](../standard-library/random.md)
 
 

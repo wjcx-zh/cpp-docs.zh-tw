@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f038a33fc46ec897b734555793a1290527f2e04b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d08fcc502ac7daf97955741d044ebf1e50afab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unicode-programming-summary"></a>Unicode 程式設計摘要
 若要充分利用 Unicode 的 MFC 與 C 執行階段支援，您需要：  
@@ -100,5 +101,5 @@ ms.lasthandoff: 10/24/2017
   
 -   執行階段程式庫提供的寬字元版本的**主要**。 使用**wmain**讓 Unicode 感知應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Unicode 的支援](../text/support-for-unicode.md)

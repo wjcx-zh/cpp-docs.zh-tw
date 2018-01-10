@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e2c8d500f8621d894439acc9a5d510e92c62914
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9f8c6db8b5359748f350d3c9da73fd0e527bf50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>編譯器內建和組件語言
 本文件章節包含關於編譯器內建功能和組合語言的資訊。  
   
 ## <a name="related-articles"></a>相關文章  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[編譯器內建](../intrinsics/compiler-intrinsics.md)|描述可以在 x86、ARM 和 x64 架構的 Microsoft C 和 C++ 中使用的內建函式。|  
 |[內嵌組合語言](../assembler/inline/inline-assembler.md)|說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言。|  

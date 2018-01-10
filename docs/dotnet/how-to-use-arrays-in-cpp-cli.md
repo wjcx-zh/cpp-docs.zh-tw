@@ -1,34 +1,35 @@
 ---
-title: "如何：在 C++/CLI 中使用陣列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "陣列 [C++], 一維"
+title: "如何： 使用陣列，在 C + + CLI |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b061437cfe34ee0ec9c00242bf0e62b1e7426f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：在 C++/CLI 中使用陣列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文將說明 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]如何使用陣列。  
+# <a name="how-to-use-arrays-in-ccli"></a>如何：在 C++/CLI 中使用陣列
+本文說明如何使用陣列，在 C + + /CLI。  
   
-## 單一維度陣列  
- 下列範例顯示如何建立一維陣列參考、實值及原生指標型別。  它也示範如何傳回函式的一維陣列和如何將一維陣列當做引數傳遞至函式。  
+## <a name="single-dimension-arrays"></a>一維陣列  
+ 下列範例會示範如何建立一維陣列的參考、 值和原生指標類型。 此外，它也會示範如何從函式會傳回一維陣列，以及如何將單一維度陣列做為引數傳遞至函式。  
   
-```  
+```cpp  
 // mcppv2_sdarrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -138,25 +139,31 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine("MyStruct1[{0}] = {1}", i, MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**MyClass1\[0\] \= 20**  
-**MyClass1\[1\] \= 21**  
-**MyClass2\[0\] \= 30**  
-**MyClass2\[1\] \= 31**  
-**MyClass2\[0\] \= 32**  
-**MyClass2\[1\] \= 33**  
-**MyStruct1\[0\] \= 40**  
-**MyStruct1\[1\] \= 41** 下一個範例顯示如何在一維 Managed 陣列的彙總初始化。  
+IntArray[0] = 10  
+IntArray[1] = 11  
   
+MyClass1[0] = 20  
+MyClass1[1] = 21  
+  
+MyClass2[0] = 30  
+MyClass2[1] = 31  
+  
+MyClass2[0] = 32  
+MyClass2[1] = 33  
+  
+MyStruct1[0] = 40  
+MyStruct1[1] = 41  
 ```  
+  
+ 下一個範例示範如何在 managed 陣列的單一維度上執行彙總初始化。  
+  
+```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -193,21 +200,23 @@ int main() {
    array<N*>^ native1 = gcnew array<N*>{new N(0), new N(1), new N(2)};  
    array<N*>^ native2 = {new N(0), new N(1), new N(2)};  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0, 0] = 0  
+MyClass0[0, 1] = 0  
+MyClass0[1, 0] = 1  
+MyClass0[1, 1] = 1  
   
-  **MyClass0\[0, 0\] \= 0**  
-**MyClass0\[0, 1\] \= 0**  
-**MyClass0\[1, 0\] \= 1**  
-**MyClass0\[1, 1\] \= 1**  
-**IntArray\[0, 0\] \= 10**  
-**IntArray\[0, 1\] \= 10**  
-**IntArray\[1, 0\] \= 11**  
-**IntArray\[1, 1\] \= 11** 這個範例顯示如何在多維度 Managed 陣列的彙總初始化:  
-  
+IntArray[0, 0] = 10  
+IntArray[0, 1] = 10  
+IntArray[1, 0] = 11  
+IntArray[1, 1] = 11  
 ```  
+  
+ 此範例顯示如何在多維度 managed 陣列上執行彙總初始設定：  
+  
+```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -249,10 +258,10 @@ int main() {
 }  
 ```  
   
-## 不規則陣列  
- 本節說明如何建立一維 Managed 陣列參考、實值及原生指標型別。  它也示範如何傳回函式的一維 Managed 陣列和如何將一維陣列當做引數傳遞至函式。  
+## <a name="jagged-arrays"></a>不規則陣列  
+ 本節說明如何建立 managed 陣列的參考、 值和原生指標類型的一維陣列。 此外，它也會示範如何從函式中傳回 managed 陣列的一維陣列，以及如何將單一維度陣列做為引數傳遞至函式。  
   
-```  
+```cpp  
 // mcppv2_array_of_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -330,23 +339,26 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine(MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**IntArray\[0\] \= 10**  
-**IntArray\[0\] \= 10**  
-**IntArray\[1\] \= 11**  
-**IntArray\[1\] \= 11**  
-**40**  
-**41** 下列範例顯示如何執行彙總初始化不規則陣列。  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
   
+40  
+41  
 ```  
+  
+ 下列範例會示範如何執行與不規則陣列的彙總初始化。  
+  
+```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -431,25 +443,28 @@ int main() {
       Console::WriteLine();  
    }  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0\[0\] \= 0**  
-**MyClass0\[0\] \= 0**  
-**MyClass0\[1\] \= 1**  
-**MyClass0\[1\] \= 1**  
-**\[ 1 2 \]**  
-**\[ 3 4 5 \]**  
-**\[ 0 1 \]**  
-**\[ 2 3 4 \]**  
-**\[ a b c d e f \]**  
-**\[ g h \]**   
-## Managed 陣列將樣板型別參數  
- 這個範例顯示如何使用 Managed 陣列當做參數傳遞給範本:  
+[ 1 2 ]  
+[ 3 4 5 ]  
   
+[ 0 1 ]  
+[ 2 3 4 ]  
+  
+[ a b c d e f ]  
+[ g h ]  
 ```  
+  
+## <a name="managed-arrays-as-template-type-parameters"></a>Managed 陣列當做樣板類型參數  
+ 此範例顯示如何使用 managed 的陣列做為範本參數：  
+  
+```cpp  
 // mcppv2_template_type_params.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -469,16 +484,16 @@ int main() {
    retval += larr->Length - 10;  
    Console::WriteLine("Return Code: {0}", retval);  
 }  
-  
 ```  
   
- **Output**  
-  
-  **Return Code: 0**   
-## Managed 陣列的 typedef  
- 這個範例顯示如何將 Managed 的 typedef 排列:  
-  
+```Output  
+Return Code: 0  
 ```  
+  
+## <a name="typedefs-for-managed-arrays"></a>managed 陣列的 typedef  
+ 此範例顯示如何建立 managed 陣列的 typedef:  
+  
+```cpp  
 // mcppv2_typedef_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -489,15 +504,14 @@ typedef array<array<G^>^> jagged_array;
 int main() {  
    jagged_array ^ MyArr = gcnew jagged_array (10);  
 }  
-  
 ```  
   
-## 排序陣列  
- 不同於標準 C\+\+ 陣列， Managed 陣列從中繼承一般行為的陣列基底類別隱含衍生。  範例是 `Sort` 方法，可用於指令在所有陣列的項目。  
+## <a name="sorting-arrays"></a>排序陣列  
+ 不同於標準 c + + 陣列，managed 的陣列是以隱含方式衍生自它們繼承的通用行為陣列基底類別。 範例是`Sort`方法，可用來排序任何陣列中的項目。  
   
- 對於包含基本的內建型別的陣列，您可以呼叫 `Sort` 方法。  您可以覆寫排序準則，且需要這樣做，當您要對某些複雜型別時排序。  在這種情況下，陣列元素型別必須實作 [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) 方法。  
+ 對於包含基本的內建類型的陣列，您可以呼叫`Sort`方法。 您可以覆寫排序準則，而且這麼做是必要時您想要排序陣列的複雜型別。 在此情況下，陣列項目類型必須實作[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
   
-```  
+```cpp  
 // array_sort.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -508,15 +522,14 @@ int main() {
    for (int i=0; i < a->Length; i++)  
       Console::Write("{0} ", a[i] );  
 }  
-  
 ```  
   
-## 排序使用自訂標準的陣列  
- 若要排序包含基本的內建型別的陣列，請呼叫 `Array::Sort` 方法。  但是，排序包含複雜型別或覆寫預設排序準則的陣列，請覆寫 [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) 方法。  
+## <a name="sorting-arrays-by-using-custom-criteria"></a>使用自訂準則排序陣列  
+ 若要排序陣列，其中包含基本的內建型別，只需要呼叫`Array::Sort`方法。 然而，若要排序的陣列，包含複雜型別，或若要覆寫預設的排序準則，覆寫[IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx)方法。  
   
- 在下列範例中，結構具名 `Element` 衍生自 <xref:System.IComparable>，並寫入提供使用平均值兩個整數做為排序準則的 <xref:System.IComparable.CompareTo%2A> 方法。  
+ 在下列範例中，結構名為`Element`衍生自<xref:System.IComparable>，並提供寫入<xref:System.IComparable.CompareTo%2A>當做排序準則使用的兩個整數平均值的方法。  
   
-```  
+```cpp  
 using namespace System;  
   
 value struct Element : public IComparable {  
@@ -558,10 +571,10 @@ int main() {
 }  
 ```  
   
-## 陣列共變數  
- 使用直接或間接基底類別 B 的特定參考類別 D，陣列型別 D 可指派給型別 B. 的陣列變數。  
+## <a name="array-covariance"></a>陣列共變數  
+ 提供參考類別 D 具有直接或間接基底類別 B，D 類型的陣列可以指派給陣列變數的類型 b。  
   
-```  
+```cpp  
 // clr_array_covariance.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -572,11 +585,11 @@ int main() {
 }  
 ```  
   
- 對陣列元素的一項工作將會與陣列的動態型別指派相容。  對具有不相容的型別的陣列元素的一項工作會導致 `System::ArrayTypeMismatchException` 擲回。  
+ 指派給陣列元素都必須指派相容動態類型的陣列。 指派至具有不相容的類型的陣列項目會導致`System::ArrayTypeMismatchException`擲回。  
   
- 陣列的共變數不適用於一些實值類別型別。  例如， Int32 陣列不能轉換成 Object^ 陣列，即使是透過 Boxing。  
+ 陣列共變數不適用於實值類別類型的陣列。 例如，陣列的 Int32 無法轉換成物件 ^ 陣列，甚至不能利用 boxing。  
   
-```  
+```cpp  
 // clr_array_covariance2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -609,5 +622,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>請參閱  
+ [陣列](../windows/arrays-cpp-component-extensions.md)

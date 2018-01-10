@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 290b48c5417aa5511b34f2e4ec2e0d4b7358b026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36631c1a23c90b875d2a2fba8a1cec23b97c2400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvt-class"></a>codecvt 類別
 樣板類別，描述可做為地區設定 facet 的物件。 它可以控制程式內部字元編碼的值序列和程式外部字元編碼的值序列之間的轉換。  
@@ -833,7 +834,7 @@ result unshift(
   
  此成員函式會傳回 [do_unshift](#do_unshift)( `_State`, `first2`, `last2`, `next2` )。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [字碼頁](../c-runtime-library/code-pages.md)   
  [地區設定名稱、語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   

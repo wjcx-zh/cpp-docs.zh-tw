@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b94db5e54089fa91c3b79c185df8b366de07c38
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5f6330c78a6bbac5f14e94c253f05515e3d29575
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper 類別
 初始化 Windows 執行階段。  
@@ -36,14 +39,14 @@ class RoInitializeWrapper
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[RoInitializeWrapper::RoInitializeWrapper 建構函式](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|初始化 RoInitializeWrapper 類別的新執行個體。|  
 |[RoInitializeWrapper::~RoInitializeWrapper 解構函式](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|終結 RoInitializeWrapper 類別的目前執行個體。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[RoInitializeWrapper::HRESULT() 運算子](../windows/roinitializewrapper-hresult-parens-operator.md)|擷取 RoInitializeWrapper 建構函式所產生的 HRESULT。|  
   
@@ -55,5 +58,5 @@ class RoInitializeWrapper
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

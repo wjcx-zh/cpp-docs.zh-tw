@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 2136f017e177cea80f6832f7c1b9ba4e2d843bcf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-mbcs-programming-advice"></a>一般 MBCS 程式設計的建議
 使用下列秘訣：  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/24/2017
   
 -   在設計您的應用程式時，決定可當地語系化的字串。 如果在不確定，請假設任何給定的字串將會進行當地語系化。 因此，請勿與無法混合可當地語系化的字串。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)   
  [增量和遞減指標](../text/incrementing-and-decrementing-pointers.md)

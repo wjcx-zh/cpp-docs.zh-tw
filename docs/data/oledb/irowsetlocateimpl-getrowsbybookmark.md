@@ -1,34 +1,36 @@
 ---
-title: "IRowsetLocateImpl::GetRowsByBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl::GetRowsByBookmark"
-  - "IRowsetLocateImpl.GetRowsByBookmark"
-  - "GetRowsByBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRowsByBookmark 方法"
+title: "Irowsetlocateimpl:: Getrowsbybookmark |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetLocateImpl::GetRowsByBookmark
+- IRowsetLocateImpl.GetRowsByBookmark
+- GetRowsByBookmark
+dev_langs: C++
+helpviewer_keywords: GetRowsByBookmark method
 ms.assetid: 07906e42-3582-427e-812a-aa19791e3c56
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ad35b152b5e7285d4dbd80c69ad60e05ddb87f62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetLocateImpl::GetRowsByBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-擷取至少一個符合指定書籤的資料行。  
+# <a name="irowsetlocateimplgetrowsbybookmark"></a>IRowsetLocateImpl::GetRowsByBookmark
+擷取符合指定的書籤的一或多個資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -42,18 +44,18 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `hReserved`  
- \[in\] 對應於 `hChapter` 參數中 [IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx)。  
+ [in]對應至`hChapter`參數[irowsetlocate:: Getrowsbybookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx)。  
   
- 如需其他參數，請參閱《 *OLE DB 程式設計人員參考》的*[IRowsetLocate::GetRowsByBookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx) 。  
+ 其他參數，請參閱[irowsetlocate:: Getrowsbybookmark](https://msdn.microsoft.com/en-us/library/ms725420.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 備註  
- 書籤可以是您所定義或 OLE DB [標準書籤](https://msdn.microsoft.com/en-us/library/ms712954.aspx) 值 \(**DBBMK\_FIRST** 和 **DBBMK\_LAST**\)。  不變更資料指標位置。  
+## <a name="remarks"></a>備註  
+ 書籤可以是您定義的值或 OLE DB[標準的書籤](https://msdn.microsoft.com/en-us/library/ms712954.aspx)(**DBBMK_FIRST**或**DBBMK_LAST**)。 不會變更游標位置。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IRowsetLocateImpl 類別](../../data/oledb/irowsetlocateimpl-class.md)   
  [IRowsetLocateImpl::GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)

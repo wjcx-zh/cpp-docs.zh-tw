@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f325e4dbdeb862b417d390bbc432917c67d7a94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7eac03b462aeec3b30b00b2f065de645209178bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptroperator-operator"></a>ComPtr::operator== 運算子
 表示兩個 ComPtr 物件是否相等。  
@@ -60,6 +63,6 @@ bool operator==(
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft:: wrl 命名空間](../windows/microsoft-wrl-namespace.md)   
  [ComPtr 類別](../windows/comptr-class.md)

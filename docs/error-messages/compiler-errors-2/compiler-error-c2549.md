@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2549
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2549
+f1_keywords: C2549
+dev_langs: C++
+helpviewer_keywords: C2549
 ms.assetid: 29310094-54a3-4605-bc6d-a312a68daf5d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b9fee101854043999c3a0259ddbcaad43c41d64f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5e5ed175c46566cfab5dc235c664880817ede3a2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2549"></a>編譯器錯誤 C2549
 使用者定義的轉換不能指定傳回型別  

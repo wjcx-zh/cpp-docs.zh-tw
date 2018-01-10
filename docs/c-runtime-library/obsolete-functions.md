@@ -38,11 +38,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8a8811703234f2c4e23dab6ad2b99b1aae316c04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 195dc17d41c2c089600958976d37dd59f2d60232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="obsolete-functions"></a>過時的函式
 某些程式庫函式已經過時，而且有較新的對等用法。 建議您將這些函式變更為更新版本。 其他過時的函式則已從 CRT 移除。 本主題列出因過時而被取代的函式，以及特定版本的 Visual Studio 中已移除的函式。  

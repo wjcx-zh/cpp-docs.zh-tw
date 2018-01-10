@@ -23,11 +23,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc2cade4bf896cb7e2f4085178c50d078aaf5f72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ad58cb0b062e25a52742eec5491489d3744a9ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncustomizepropertypage-class"></a>CMFCRibbonCustomizePropertyPage 類別
 實作自訂頁面**自訂**在功能區應用程式中的對話方塊。  
@@ -38,13 +39,13 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |[CMFCRibbonCustomizePropertyPage::CMFCRibbonCustomizePropertyPage](#cmfcribboncustomizepropertypage)|建構 `CMFCRibbonCustomizePropertyPage` 物件。|  
 |`CMFCRibbonCustomizePropertyPage::~CMFCRibbonCustomizePropertyPage`|解構函式。|  
   
@@ -52,7 +53,7 @@ class CMFCRibbonCustomizePropertyPage: public CMFCPropertyPage
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |[CMFCRibbonCustomizePropertyPage::AddCustomCategory](#addcustomcategory)|新增自訂類別以**命令**下拉式方塊。|  
 |`CMFCRibbonCustomizePropertyPage::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |`CMFCRibbonCustomizePropertyPage::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
@@ -98,8 +99,8 @@ void AddCustomCategory(
 |||  
 |-|-|  
 |參數|描述|  
-|[in] `lpszName`|指定自訂的類別名稱。|  
-|[in] `lstIDS`|包含要在自訂的類別目錄中顯示功能區命令識別碼。|  
+|[輸入] `lpszName`|指定自訂的類別名稱。|  
+|[輸入] `lstIDS`|包含要在自訂的類別目錄中顯示功能區命令識別碼。|  
   
 ### <a name="remarks"></a>備註  
  這個方法會加入名為 category`lpszName`至**命令**下拉式方塊。 當使用者選取類別目錄時，在指定的命令`lstIDS`命令清單中出現。  
@@ -112,7 +113,7 @@ CMFCRibbonCustomizePropertyPage(CMFCRibbonBar* pRibbonBar = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pRibbonBar`  
+ [輸入] `pRibbonBar`  
  在功能區控制項的指標以自訂的選項。  
   
 ##  <a name="onok"></a>CMFCRibbonCustomizePropertyPage::OnOK  
@@ -125,6 +126,6 @@ virtual void OnOK();
 ### <a name="remarks"></a>備註  
  預設實作適用於中選取的選項**自訂**快速存取工具列 對話方塊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

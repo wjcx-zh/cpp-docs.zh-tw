@@ -32,11 +32,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f510ce5459ec24a11996f02829e7d40d1ef9a37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dff8df934a0c812ca798d5a1e87188e2468902ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-basic-types"></a>基本類型的儲存空間
 下表摘要說明與每個基本類型相關聯的儲存區。  
@@ -55,5 +56,5 @@ ms.lasthandoff: 10/24/2017
   
  C 資料類型屬於一般分類。 「整數類資料類型」包括 `char`、`int`、**short**、**long**、**signed**、`unsigned` 和 `enum`。 「浮點類型」包括 **float**、**double** 和 `long double`。 「算術類型」包括所有浮點和整數類資料類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

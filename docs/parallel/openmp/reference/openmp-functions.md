@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: caa41947f43189f52333106f80cce6f58b921f8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c01967e47d8108803fdadd9c9cfe746a4d477459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-functions"></a>OpenMP 函式
 提供用於 OpenMP API 函式的連結。  
   
  OpenMP 標準的 Visual c + + 實作會包含下列功能。  
   
-|函式|說明|  
+|功能|描述|  
 |--------------|-----------------|  
 |[omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|未初始化的鎖定。|  
 |[omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|未初始化可巢狀的鎖定。|  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/24/2017
 |[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|釋放鎖定。|  
 |[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|釋出可巢狀的鎖定。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式庫參考](../../../parallel/openmp/reference/openmp-library-reference.md)

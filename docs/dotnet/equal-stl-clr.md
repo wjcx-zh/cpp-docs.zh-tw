@@ -1,32 +1,33 @@
 ---
-title: "equal (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::equal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal 函式 [STL/CLR]"
+title: "等於 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::equal
+dev_langs: C++
+helpviewer_keywords: equal function [STL/CLR]
 ms.assetid: 7f271666-2198-4e33-8e03-8b73b376c724
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7be40e27803ab907bb58918eb2643fbce586dd0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# equal (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-比較兩個元素的元素範圍二進位述詞或等值的實際上指定的相等。  
+# <a name="equal-stlclr"></a>equal (STL/CLR)
+逐一比較兩個範圍的每個項目是否相等 (或在二元述詞指定的意義上，是否對等)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _InIt1, class _InIt2> inline  
@@ -36,13 +37,13 @@ template<class _InIt1, class _InIt2, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式產生與 STL 函式的 `equal`相同的行為。  如需詳細資訊，請參閱[equal](../Topic/equal.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`equal`。 如需詳細資訊，請參閱[等於](../standard-library/algorithm-functions.md#equal)。  
   
-## 需求  
- **標頭：:** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

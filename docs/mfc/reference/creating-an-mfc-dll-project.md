@@ -19,17 +19,18 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a0f18e4be45d3728e96e8183e82385f555832e17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a7c040188db5caf46c0d58720320088967b59ea6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-an-mfc-dll-project"></a>建立 MFC DLL 專案
 MFC DLL 是二進位檔案，可做為多個應用程式可以同時使用的函式的共用程式庫。 若要建立 MFC DLL 專案的最簡單方式是使用 MFC DLL 精靈。  
   
 > [!NOTE]
->  IDE 中功能的外觀可能會相依於您目前使用的設定或版本，並可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [Visual Studio 中的自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)。  
+>  IDE 中功能的外觀可能會相依於您目前使用的設定或版本，並可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱 [在 Visual Studio 中自訂開發設定](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3)  
   
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>若要建立 MFC DLL 專案使用 MFC DLL 精靈  
   
@@ -46,7 +47,7 @@ MFC DLL 是二進位檔案，可做為多個應用程式可以同時使用的函
   
  您的專案建立之後，您可以檢視在 [方案總管] 中建立的檔案。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../ide/file-types-created-for-visual-cpp-projects.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual c + + 專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [屬性頁](../../ide/property-pages-visual-cpp.md)   

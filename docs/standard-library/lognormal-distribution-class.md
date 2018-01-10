@@ -37,11 +37,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53bef5714a90958a36c74e6dea6656f02778e78e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59d68823195d4fc975827b50225702819cd0f4e4
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 類別
 產生對數常態分佈。  
@@ -87,7 +88,7 @@ public:
   
 屬性函式 `m()` 和 `s()` 會分別傳回預存分佈參數 *m* 和 *s* 的值。  
   
-屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。  
+屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。  
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。  
   
@@ -97,7 +98,7 @@ public:
   
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
-如需有關 LogNormal 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[LogNormal 分佈 (英文)](http://go.microsoft.com/fwlink/LinkId=400917)。  
+如需有關 LogNormal 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[LogNormal 分佈 (英文)](http://go.microsoft.com/fwlink/p/?linkid=400917)。  
   
 ## <a name="example"></a>範例  
   
@@ -207,7 +208,7 @@ explicit lognormal_distribution(const param_type& parm);
 用來建構分佈的 `param_type` 結構。  
   
 ### <a name="remarks"></a>備註  
-**前置條件︰**`0.0 < s`  
+**前置條件：**`0.0 < s`  
   
 第一個建構函式會建構預存 `m` 值具有 *m* 值而預存 `s` 值具有 *s* 值的物件。  
   
@@ -242,6 +243,6 @@ struct param_type {
   
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<random>](../standard-library/random.md)
 

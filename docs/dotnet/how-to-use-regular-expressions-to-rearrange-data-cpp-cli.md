@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf60fff6c15313a6f7df1104f67c1f043f885eac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>如何：使用規則運算式重新整理資料 (C++/CLI)
 下列程式碼範例示範如何使用.NET Framework 規則運算式支援，以重新排列或重新格式化資料。 下列程式碼範例使用<xref:System.Text.RegularExpressions.Regex>和<xref:System.Text.RegularExpressions.Match>類別以從字串中擷取姓氏和名字，並以反向順序顯示這些名稱項目。  
@@ -65,6 +68,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET Framework 規則運算式](/dotnet/standard/base-types/regular-expressions)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

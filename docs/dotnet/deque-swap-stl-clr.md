@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9aefddc6658777488e0c0c499d23541f8c5c029
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2f86fa7455edfc29190593660c365e0cfe5ef629
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeswap-stlclr"></a>deque::swap (STL/CLR)
 交換兩個容器的內容。  
@@ -35,7 +38,7 @@ void swap(deque<Value>% right);
  要交換內容的容器。  
   
 ## <a name="remarks"></a>備註  
- 成員函式會交換 `*this` 和 `right`之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
+ 成員函式會交換 `*this` 和 `right` 之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
   
 ## <a name="example"></a>範例  
   
@@ -88,7 +91,7 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque:: assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)   
  [operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 908f7f595f2312bc16a01cdc3b6784c3e56f21bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7437bfe26f95b57584f294a7280540014e4a1b85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numget-class"></a>num_get 類別
 樣板類別，描述可以做為地區設定 facet 的物件，以控制類型 `CharType` 的序列轉換為數值。  
@@ -84,7 +85,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ##  <a name="do_get"></a>  num_get::do_get  
  虛擬函式，呼叫以從字元序列擷取數值或布林值。  
@@ -580,7 +581,7 @@ explicit num_get(size_t _Refs = 0);
   
  建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [facet 類別](../standard-library/locale-class.md#facet_class)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

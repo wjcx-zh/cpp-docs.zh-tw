@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3d0b0234ea6a3f63f0730b3e0dc965f1e8c8e902
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e9200c2f7d9dac0eed888cc22a29c7c4417013c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 實際上，包括 C++ 標準程式庫標頭 \<ccomplex> 和 \<cmath>，提供相當於 \<tgmath.h> 的泛型算術巨集。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<ccomplex>](../standard-library/ccomplex.md)   
  [\<cmath>](../standard-library/cmath.md)   
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   

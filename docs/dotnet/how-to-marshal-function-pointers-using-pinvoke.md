@@ -1,48 +1,51 @@
 ---
-title: "如何：使用 PInvoke 封送處理函式指標 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料封送處理 [C++], 回呼和委派"
-  - "Interop [C++], 回呼和委派"
-  - "封送處理 [C++], 回呼和委派"
-  - "平台叫用 [C++], 回呼和委派"
+title: "如何： 使用 PInvoke 封送處理函式指標 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- data marshaling [C++], callbacks and delegates
+- interop [C++], callbacks and delegates
+- platform invoke [C++], callbacks and delegates
+- marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cf7f23ea9337b499d4ec80b19e3104074429cc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 PInvoke 封送處理函式指標
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題會說明在使用 .NET Framework P\/Invoke 功能與 Unmanaged 函式互通時，Managed 委派 \(Delegate\) 如何代替函式指標。  但是，我們鼓勵 Visual C\+\+ 程式設計人員盡可能改用 C\+\+ Interop 功能，因為 P\/Invoke 提供極少的編譯時期錯誤報告，不具型別安全，而且實作時很瑣碎無聊。  如果 Unmanaged API 封裝為 DLL，而且沒有原始程式碼，則 P\/Invoke 是唯一的選擇。  否則請參閱下列主題：  
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>如何：使用 PInvoke 封送處理函式指標
+本主題說明如何在受管理的委派時與互通 unmanaged 函式使用.NET Framework P/Invoke 功能可用來代替函式指標。 不過，Visual c + + 程式設計人員會建議 （自動），而是使用 c + + Interop 功能，因為 P/Invoke 提供極少的編譯時間錯誤報告，不是類型安全，就必須等待冗長實作。 如果未受管理的應用程式開發介面會封裝為 DLL 不是可用的原始程式碼，P/Invoke 是唯一的選項。 否則，請參閱下列主題：  
   
--   [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
+-   [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)  
   
--   [如何：使用 C\+\+ Interop 封送處理回呼和委派](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
+-   [如何：使用 C++ Interop 封送處理回呼和委派](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)  
   
- 使用函式指標做為引數的 Unmanaged API，可以從 Managed 程式碼中呼叫，並使用 Managed 委派取代原生 \(Native\) 函式指標。  編譯器 \(Compiler\) 會自動將委派封送處理至 Unmanaged 函式做為函式指標，並插入必要的 Managed\/Unmanaged 轉換程式碼。  
+ Unmanaged 的 Api 的需要函式指標，可以從呼叫的引數，因為 managed 與原生函式指標取代之 managed 委派的程式碼。 編譯器會自動封送處理至 unmanaged 函式委派，函式指標，並將插入的必要轉換 managed/unmanaged 程式碼。  
   
-## 範例  
- 下列程式碼由 Unmanaged 和 Managed 的模組所組成。  Unmanaged 模組是 DLL，定義名稱為 TakesCallback 且可接受函式指標的函式。  這個位址會用來執行函式。  
+## <a name="example"></a>範例  
+ 下列程式碼是由 unmanaged 和 managed 的模組所組成。 未受管理的模組會定義稱為 TakesCallback 可接受函式指標的函式的 DLL。 此位址用來執行該函式。  
   
- Managed 模組會定義委派，而委派會封裝處理至機器碼做為函式指標，並使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性 \(Attribute\) 來將原生的 TakesCallback 函式公開 \(Expose\) 給 Managed 程式碼。  在 main 函式中，會建立委派的執行個體 \(Instance\) 並傳遞至 TakesCallback 函式。  程式輸出會示範原生的 TakesCallback 函式執行這個函式。  
+ 受管理的模組定義委派，其中會以原生程式碼，函式指標封送處理，並使用<xref:System.Runtime.InteropServices.DllImportAttribute>公開 managed 程式碼的原生 TakesCallback 函式的屬性。 在 main 函式，是建立委派的執行個體，並將其傳遞給 TakesCallback 函式中。 程式輸出會示範執行此函式時，取得原生 TakesCallback 函式。  
   
- Managed 函式會禁止 Managed 委派的記憶體回收，以避免 .NET Framework 記憶體回收在原生函式執行時重新配置委派。  
+ Managed 函式會抑制受管理的委派，若要避免.NET Framework 記憶體回收重新配置委派，而原生函式會執行記憶體回收。  
   
- Managed 模組是使用 \/clr 編譯的，但是 \/clr:pure 也一樣可以執行。  
+ 受管理的模組使用 /clr，但 /clr: pure 的運作方式。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
-```  
+```cpp  
 // TraditionalDll5.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -66,7 +69,7 @@ int TakesCallback(CALLBACK fp, int n) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalDelegate.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -94,7 +97,7 @@ int main() {
 }  
 ```  
   
- 請注意，DLL 的任何部分不會都公開給使用傳統 \#include 指示詞的 Managed 程式碼。  事實上，DLL 只會在執行階段存取，所以使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 匯入之函式所產生的問題，不會在編譯時期偵測出來。  
+ 請注意，DLL 的任何部分公開給 managed 程式碼使用的傳統 #include 指示詞。 事實上，DLL 會在執行階段存取，因此問題函式匯入與<xref:System.Runtime.InteropServices.DllImportAttribute>將不會在編譯時期偵測。  
   
-## 請參閱  
- [在 C\+\+ 中使用明確的 PInvoke \(DllImport 屬性\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>請參閱  
+ [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

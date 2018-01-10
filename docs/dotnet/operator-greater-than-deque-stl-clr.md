@@ -1,33 +1,33 @@
 ---
-title: "operator&gt; (deque) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> 成員 [STL/CLR]"
+title: "運算子&gt;(deque) (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: b207be0a-c6d8-4d70-8b8d-beb48e859441
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0a3d60a1b2f54ceb336e70f93c359793cd7cd082
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# operator&gt; (deque) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-清除佇列的大於比較。  
+# <a name="operatorgt-deque-stlclr"></a>運算子&gt;(deque) (STL/CLR)
+Deque 大於比較。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         deque<Value>% right);  
 ```  
   
-#### 參數  
- left  
- 要比較的左邊容器。  
+#### <a name="parameters"></a>參數  
+ 左  
+ 要比較的左容器。  
   
- right  
- 要比較的右邊容器。  
+ 向右  
+ 要比較的右容器。  
   
-## 備註  
- 運算子函式會傳回 `right` `<` `left`。  您會用它來測試在兩個清除佇列在逐一項目比較後，`left` 是否在 `right` 之後已排序。  
+## <a name="remarks"></a>備註  
+ 運算子函式會傳回`right` `<` `left`。 使用它來測試是否`left`排序後`right`兩個 deque 時項目所比較的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_operator_gt.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \> \[a b c\] is False**  
-**\[a b d\] \> \[a b c\] is True**   
-## 需求  
- **標頭：** \<cliext\/deque\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [operator\=\= \(deque\)](../dotnet/operator-equality-deque-stl-clr.md)   
- [deque::operator\!\=](../dotnet/deque-operator-inequality-stl-clr.md)   
- [operator\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)   
- [operator\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
- [operator\<\= \(deque\)](../dotnet/operator-less-or-equal-deque-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [運算子 = = (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)   
+ [deque:: operator ！ = (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)   
+ [運算子\<(deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)   
+ [運算子 > = (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
+ [operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)

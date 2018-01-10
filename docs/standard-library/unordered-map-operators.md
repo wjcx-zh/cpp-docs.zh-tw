@@ -9,24 +9,22 @@ ms.topic: article
 f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 9825a0073355700edbe1906e8b2cad4535085bf4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt; 運算子
 |||||  
 |-|-|-|-|  
 |[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  測試運算子左邊的 [unordered_map](../standard-library/unordered-map-class.md) 物件是否不等於右邊的 unordered_map 物件。  
   
 ```
@@ -87,7 +85,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試運算子左邊的 [unordered_map](../standard-library/unordered-map-class.md) 物件是否等於右邊的 unordered_map 物件。  
   
 ```
@@ -148,7 +146,7 @@ int main( )
   
  `um2 == um3: false`  
   
-##  <a name="op_neq_multimap"></a>  operator!=  
+##  <a name="op_neq_multimap"></a> operator!=  
  測試運算子左邊的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 物件是否不等於右邊的 unordered_multimap 物件。  
   
 ```
@@ -210,7 +208,7 @@ int main( )
   
  `um2 != um3: true`  
   
-##  <a name="op_eq_eq_multimap"></a>  operator==  
+##  <a name="op_eq_eq_multimap"></a> operator==  
  測試運算子左邊的 [unordered_multimap](../standard-library/unordered-multimap-class.md) 物件是否等於右邊的 unordered_multimap 物件。  
   
 ```
@@ -272,9 +270,8 @@ int main( )
   
  `um2 == um3: false`  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<unordered_map>](../standard-library/unordered-map.md)
-
 
 
 

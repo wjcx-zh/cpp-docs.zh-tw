@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::logical_and
-- logical_and
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::logical_and
+dev_langs: C++
 helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 8108658a9efceeb048aac2c9aa4ffd160626a31b
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 033cb6ffdfab217be5642f5ce5c9bb6ab9af68fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicaland-struct"></a>logical_and 結構
 在其引數上執行邏輯結合運算 ( `operator&&`) 的預先定義函式物件。  
@@ -75,7 +57,7 @@ struct logical_and<void>
  邏輯結合運算的右運算元。 此未特製化的範本接受 `Type` 類型的左值參考引數。 此特製化的範本會完美地轉送 `U` 推斷類型的左值和右值參考引數。  
   
 ## <a name="return-value"></a>傳回值  
- `Left``&&``Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator&&` 所傳回的類型。  
+ `Left && Right` 的結果。 此特製化的範本會完美地轉送結果，其具有 `operator&&` 所傳回的類型。  
   
 ## <a name="remarks"></a>備註  
  針對使用者定義的類型，並沒有任何最少運算的運算元評估。 兩個引數都是由 `operator&&` 評估。  
@@ -157,10 +139,9 @@ The deque which is the conjuction of d1 & d2 is:
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d6dff1e32f513007f9b99ced4000043ad27607f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f6066422056efc17052afb11d01580abc340976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tilebarrier-class"></a>tile_barrier 類別
 同步處理的使用中執行緒群組 （磚） 執行的執行緒執行`wait`方法。 執行階段可以具現化這個類別。  
@@ -37,17 +38,17 @@ ms.lasthandoff: 10/24/2017
 class tile_barrier;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[tile_barrier 建構函式](#ctor)|初始化 `tile_barrier` 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[等候](#wait)|指示來停止執行，直到在磚中的所有執行緒都完成等候的執行緒群組 （磚） 中的所有執行緒。|  
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|阻擋所有執行緒，直到完成為止所有記憶體存取在磚中的，磚中的所有執行緒的執行已達到此呼叫。|  
@@ -113,5 +114,5 @@ void wait_with_global_memory_fence() const  restrict(amp);
 void wait_with_tile_static_memory_fence() const restrict(amp);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

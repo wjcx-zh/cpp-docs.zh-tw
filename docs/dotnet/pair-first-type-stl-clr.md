@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c3f34659542e0d4a78c097a11b7ce1ac09e3e72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a60068fac82e4094a4aac0307bdc3dd102f63c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pairfirsttype-stlclr"></a>pair::first_type (STL/CLR)
 第一個包裝的值類型。  
@@ -62,7 +65,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [配對 (STL/CLR)](../dotnet/pair-stl-clr.md)   
  [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)   
  [pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)   

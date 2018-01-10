@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 078ec4a1fa1af6c4660ff1171ab1b671ee9872f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f9880364c24b1e2e5889e9e9e2666683c2237f7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsectiontraitsunlock-method"></a>CriticalSectionTraits::Unlock 方法
 特製化 CriticalSection 範本，好讓它支援釋放指定之關鍵區段物件擁有權。  
@@ -46,5 +49,5 @@ inline static void Unlock(
   
  **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CriticalSectionTraits 結構](../windows/criticalsectiontraits-structure.md)

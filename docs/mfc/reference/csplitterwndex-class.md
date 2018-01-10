@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e45a136941ccaf34108085a14ddefb64bcdb3fa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94ec633718dda81a5183a59eb46387b361d0f004
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx 類別
 
@@ -36,18 +37,18 @@ ms.lasthandoff: 10/24/2017
 class CSplitterWndEx : public CSplitterWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CSplitterWndEx::CSplitterWndEx`|預設建構函式。|  
 |`CSplitterWndEx::~CSplitterWndEx`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|由架構呼叫以繪製分隔視窗。 (覆寫[CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter)。)|  
   
@@ -80,18 +81,18 @@ virtual void OnDrawSplitter(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。 如果這個參數是`NULL`，架構會重新繪製作用中視窗。  
   
- [in] `nType`  
+ [輸入] `nType`  
  其中一個`CSplitterWnd::ESplitType`列舉值，指定要繪製的分隔視窗項目。 有效值為`splitBox`， `splitBar`， `splitIntersection`，和`splitBorder`。  
   
- [in] `rect`  
+ [輸入] `rect`  
  指定的維度和位置繪製指定的分隔器視窗項目的周框。  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../hierarchy-chart.md)   
  [類別](mfc-classes.md)   
  [CSplitterWnd 類別](csplitterwnd-class.md)   

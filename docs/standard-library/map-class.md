@@ -99,11 +99,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce9135d298a0b80cedae87f20d65f4e012502cae
-ms.sourcegitcommit: 0bbc9aac12c926b2b03726ae5b4a09d916e17d6b
+ms.workload: cplusplus
+ms.openlocfilehash: d83bebb0953ee3ed7acec9e0e732cef6e5b3816f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-class"></a>map 類別
 從每個項目都是資料值與排序鍵組的集合，用於資料儲存和擷取。 索引鍵的值是唯一的，用於自動排序資料。  
@@ -130,7 +131,7 @@ class map;
  `Traits`  
  類型，提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在對應中的相對順序。 這個引數是選用引數，且預設值是二元述詞 `less<Key>`。  
   
- 在 C++14 中，指定沒有型別參數的 std::less<> 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)  
+ 在 C++14 中，指定沒有型別參數的 std::less<> 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。  
   
  `Allocator`  
  代表預存配置器物件的類型，封裝有關對應之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 `allocator<pair<const Key, Type> >`。  
@@ -163,7 +164,7 @@ class map;
 >   
 >  在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -358,7 +359,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>備註  
  傳回值為 `cbegin` 時，無法修改範圍中的項目。  
   
- 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `begin()` 和 `cbegin()` 的可修改 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `begin()` 和 `cbegin()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -766,7 +767,7 @@ emplace(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -777,7 +778,7 @@ emplace(
 ### <a name="remarks"></a>備註  
  此函式不會使任何迭代器或參考失效。  
   
- 在定位期間，如果擲回例外狀況，則不會修改容器的狀態。  
+ 在定位期間，如果擲回例外狀況，就不會修改容器的狀態。  
   
  元素的 [value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
@@ -839,7 +840,7 @@ int main()
 ```  
   
 ##  <a name="emplace_hint"></a>  map::emplace_hint  
- 將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。  
+ 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。  
   
 ```  
 template <class... Args>  
@@ -852,19 +853,19 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|所轉接以建構要插入到對應中之元素的引數，除非該對應中已經包含該元素，或更廣泛地說，即除非它已經包含索引鍵以同等方式排序的元素。|  
 |`where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
   
 ### <a name="return-value"></a>傳回值  
- 指向新插入之元素的迭代器。  
+ 新插入項目的迭代器。  
   
  如果因為元素已經存在而插入失敗，便會傳回指向現有元素及其索引鍵的迭代器。  
   
 ### <a name="remarks"></a>備註  
  此函式不會使任何迭代器或參考失效。  
   
- 在定位期間，如果擲回例外狀況，則不會修改容器的狀態。  
+ 在定位期間，如果擲回例外狀況，就不會修改容器的狀態。  
   
  元素的 [value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。  
   
@@ -973,7 +974,7 @@ iterator end();
 ### <a name="remarks"></a>備註  
  **end** 是用來測試迭代器是否已超過其 map 的結尾。  
   
- **end** 所傳回的值不應該被取值。  
+ 不應該對 **end** 所傳回的值進行取值。  
   
  如需程式碼範例，請參閱 [map::find](#find)。  
   
@@ -991,7 +992,7 @@ pair <iterator, iterator> equal_range (const Key& key);
  要與所搜尋之對應中元素的排序鍵比較的引數索引鍵值。  
   
 ### <a name="return-value"></a>傳回值  
- 若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之 `pr` 配對的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
+ 若要存取成員函式所傳回之 `pr` 配對的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之 `pr` 配對的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
   
 ### <a name="example"></a>範例  
   
@@ -1588,7 +1589,7 @@ typedef Traits key_compare;
 ```  
   
 ### <a name="remarks"></a>備註  
- `key_compare` 與範本參數 `Traits` 同義。  
+ `key_compare` 與樣板參數 `Traits` 同義。  
   
  如需有關 `Traits` 的詳細資訊，請參閱 [map 類別](../standard-library/map-class.md)主題。  
   
@@ -1603,7 +1604,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `key_type` 與範本參數 `Key` 同義。  
+ `key_type` 與樣板參數 `Key` 同義。  
   
  如需有關 `Key` 的詳細資訊，請參閱 [map 類別](../standard-library/map-class.md)主題的＜備註＞一節。  
   
@@ -1741,7 +1742,7 @@ map(
 |`IList`|要從中複製元素的 initializer_list。|  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存一種配置器物件，此物件可管理 map 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
+ 所有建構函式都會儲存一種配置器物件，此物件可管理 map 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告以及用來取代替代配置器的前置處理巨集中，經常會省略 allocator 參數。  
   
  所有建構函式都會將其 map 初始化。  
   
@@ -1933,7 +1934,7 @@ Type& operator[](Key&& key);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`key`|所要插入之元素的索引鍵值。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -2030,7 +2031,7 @@ map& operator=(map&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|要複製到 `map` 中的 [map](../standard-library/map-class.md)。|  
   
 ### <a name="remarks"></a>備註  
@@ -2081,7 +2082,7 @@ typedef typename allocator_type::pointer pointer;
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。  
+ **pointer** 類型可用來修改項目的值。  
   
  在大多數情況下，應該使用 [iterator](#iterator) 來存取 map 物件中的元素。  
   
@@ -2518,7 +2519,7 @@ value_compare value_comp() const;
 ### <a name="remarks"></a>備註  
  就 map *m* 而言，如果兩個元素 *e*1( *k*1, *d*1) 和 *e*2( *k*2, `d`2) 是 `value_type` 類型的物件，其中 *k*1 和 *k*2 是其 `key_type` 類型的索引鍵，而 `d`1 和 `d`2 是其 `mapped_type` 類型的資料，則 *m.*`value_comp`( *e*1, *e*2) 會等於 *m.*`key_comp`*(k*1, *k*2)。 預存物件會定義成員函式  
   
- **bool operator**( **value_type&**`left`, **value_type&**`right`);  
+ **bool 運算子**( **value_type &**`left`， **value_type &**`right`);  
   
  如果 `left` 的索引鍵值在前面且在排序次序中不等於 `right` 的索引鍵值，此函式就會傳回 **true**。  
   
@@ -2629,7 +2630,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<map> 成員](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

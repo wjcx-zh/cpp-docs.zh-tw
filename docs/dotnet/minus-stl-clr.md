@@ -1,32 +1,33 @@
 ---
-title: "minus (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::minus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "minus 函式 [STL/CLR]"
+title: "減號 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::minus
+dev_langs: C++
+helpviewer_keywords: minus function [STL/CLR]
 ms.assetid: 810ec6fd-ed0e-446b-b18e-1e612fb1fff4
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 950f0fb677094c368f580fff28dd920733b9ac93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# minus (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別，描述，當呼叫，則會傳回第一個引數減掉第二的功能。  您會用它來指定函式物件根據其引數型別。  
+# <a name="minus-stlclr"></a>minus (STL/CLR)
+此範本類別描述函式，呼叫時，會傳回第一個引數減第二個。 您可以使用它指定其引數類型方面的函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### 參數  
- Arg  
- 引數和傳回值的型別。  
+#### <a name="parameters"></a>參數  
+ 引數  
+ 引數和傳回值的類型。  
   
-## 成員函式  
+## <a name="member-functions"></a>成員函式  
   
-|類型定義|說明|  
-|----------|--------|  
-|委派型別|泛型委派的型別。|  
-|第一個引數類型。|功能的第一個引數的型別。|  
-|結果型別|運算元結果的類型。|  
-|第二個引數類型。|運算元第二個引數的型別。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|delegate_type|泛型委派類型。|  
+|first_argument_type|仿函式的第一個引數型別。|  
+|result_type|仿函式結果的型別。|  
+|second_argument_type|仿函式的第二個引數的型別。|  
   
-|成員|說明|  
-|--------|--------|  
-|minus|建構運算元。|  
+|成員|描述|  
+|------------|-----------------|  
+|minus|建構仿函式。|  
   
-|運算子|說明|  
-|---------|--------|  
-|operator\(\)|計算所需的函式。|  
-|運算子 delegate\_type^|轉換子功能給委派。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|operator()|計算所需的函數。|  
+|運算子 delegate_type ^|會轉換成委派仿函式。|  
   
-## 備註  
- 樣板類別會描述兩個引數的功能。  它定義成員運算子 `operator()` ，如此一來，當物件，當做函式呼叫時，會傳回第一個引數減掉第二個。  
+## <a name="remarks"></a>備註  
+ 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回第二個減去第一個引數。  
   
- 您也可以透過物件，因為型別為 `delegate_type^` 的函式引數，它會正確轉換。  
+ 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_minus.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **2 2**   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+```Output  
+4 3  
+2 1  
+2 2  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [plus](../dotnet/plus-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [plus (STL/CLR)](../dotnet/plus-stl-clr.md)

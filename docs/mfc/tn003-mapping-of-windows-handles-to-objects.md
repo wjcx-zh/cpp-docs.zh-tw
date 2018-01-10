@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7427ca7cbe6de30581153eb6d3269a83b9b456ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e53b2569b0da6bfa63c94adb7bb163e5bcd6b7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003：將 Windows 控制代碼對應到物件
 此提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。  
@@ -87,7 +88,7 @@ myWnd.Detach();
   
  若要將這些物件從一個執行緒，一律傳送它們做為其原生`HANDLE`型別。 從一個執行緒的 c + + 包裝函式物件傳遞至另一個通常會導致非預期的結果。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

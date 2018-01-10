@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9186b7c056321dcb3ef394e44ae93d530e29810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 105685e0db4689978ef1e6f8615bb5e5f8acdd43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-creating-user-interface-threads"></a>多執行緒：建立使用者介面執行緒
 使用者介面執行緒通常用於處理使用者輸入，並回應個別執行緒執行的應用程式其他部分的使用者事件。 主應用程式執行緒 (中提供您`CWinApp`-衍生的類別) 已經建立並啟動。 本主題說明建立其他的使用者介面執行緒所需的步驟。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="functions-to-override-when-creating-a-user-interface-thread"></a>若要建立使用者介面執行緒時覆寫的函式  
   
-|函式|用途|  
+|功能|用途|  
 |--------------|-------------|  
 
 |[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|執行緒終止時，請執行清除作業。 通常覆寫。 |  
@@ -68,5 +69,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [處理序和執行緒](http://msdn.microsoft.com/library/windows/desktop/ms684841)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)

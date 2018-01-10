@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21cb751c4ee4c261db1d6a4d5efda49a1445ade7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 51d501139d0610d670f7d646dc985a694a5b741c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-directives"></a>OpenMP 指示詞
 提供使用 OpenMP API 中的指示詞連結。  
   
  Visual c + + 支援下列 OpenMP 指示詞：  
   
-|指示詞|說明|  
+|指示詞|描述|  
 |---------------|-----------------|  
 |[atomic](../../../parallel/openmp/reference/atomic.md)|指定將自動更新的記憶體位置。|  
 |[barrier](../../../parallel/openmp/reference/barrier.md)|會同步處理所有執行緒在一個小組。在屏障的所有執行緒都暫停，直到所有執行緒都執行屏障。|  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/24/2017
 |[single](../../../parallel/openmp/reference/single.md)|可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。|  
 |[threadprivate](../../../parallel/openmp/reference/threadprivate.md)|指定在執行緒私用變數。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OpenMP](../../../parallel/openmp/openmp-in-visual-cpp.md)   
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

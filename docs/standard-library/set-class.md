@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdc1385f5aafecc3608ced9e3e5ac1e89247f724
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e9ec4f9c4b4f97b3a55102cb41d83e088d55e03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-class"></a>set 類別
 C++ 標準程式庫容器類別 set 用於在集合中儲存和擷取資料，集合中包含的項目值是唯一的，並用來做為索引鍵值，據以自動排序資料。 集合中項目的索引鍵值不能直接變更。 相反地，必須刪除舊值，並插入具有新值的項目。  
@@ -755,7 +756,7 @@ iterator emplace_hint(
 |-|-|  
 |參數|描述|  
 |`args`|除非 set 已經包含該項目，或者，更常見的說法是，除非它已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|  
-|`where`|要開始搜尋正確的插入點的地方 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
+|`where`|要開始搜尋正確的插入點的地方。 (若該點緊接於 `where` 之前，則可能會在分攤常數時間插入，而不是對數時間)。|  
   
 ### <a name="return-value"></a>傳回值  
  新插入項目的迭代器。  
@@ -1617,7 +1618,7 @@ set& operator=(set&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|`set` 會提供要指派給這個 `set` 的新項目。|  
   
 ### <a name="remarks"></a>備註  
@@ -1920,7 +1921,7 @@ set(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Al`|要用於此 set 物件的儲存體配置器類別，預設為 **Allocator**。|  
 |`Comp`|`const Traits` 類型的比較函式，可用來排序 set 中的項目，預設為 `Compare`。|  
 |`Rght`|要從中複製所建構之 set 的 set。|  
@@ -2375,7 +2376,7 @@ int main( )
 The set has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<set>](../standard-library/set.md)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

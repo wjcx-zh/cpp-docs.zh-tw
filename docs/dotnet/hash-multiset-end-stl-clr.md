@@ -1,41 +1,42 @@
 ---
-title: "hash_multiset::end (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::end"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "end 成員 [STL/CLR]"
+title: "hash_multiset:: end (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::end
+dev_langs: C++
+helpviewer_keywords: end member [STL/CLR]
 ms.assetid: 6f4b222c-2f82-445e-80e5-6e2afd233d4b
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1be1fd2fe32687f27f17f6a29e0e5b97eadc4a13
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::end (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetend-stlclr"></a>hash_multiset::end (STL/CLR)
 指定受控制序列的結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator end();  
 ```  
   
-## 備註  
- 成員函式傳回一個雙向迭代器，其指向受控制序列的尾端。  您可用它來取得指向受控制序列結尾的迭代器；即使受控制序列的長度變更，它的狀態也不會變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回雙向迭代器，指向受控制序列的結尾之外。 您使用它來取得指定受控制序列的結尾的迭代器其狀態不改變受控制序列的長度變更時。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_end.cpp   
@@ -65,14 +66,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-end\(\) \= b**  
-**\*\-\-end\(\) \= c**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+*-- --end() = b  
+*--end() = c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::begin](../dotnet/hash-multiset-begin-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::begin (STL/CLR)](../dotnet/hash-multiset-begin-stl-clr.md)

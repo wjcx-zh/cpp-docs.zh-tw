@@ -84,11 +84,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 713f3545ea2604db1313abab729ec726cce3cd75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28a26910aae471d237e0f4324f7f837eff0f6240
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="float3-class"></a>float_3 類別
 表示短向量的三個浮點數。  
@@ -99,7 +100,7 @@ ms.lasthandoff: 10/24/2017
 class float_3;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -109,13 +110,13 @@ class float_3;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[float_3 建構函式](#ctor)|多載。 預設建構函式，初始化為 0 的所有項目。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |float_3::get_x||  
 |float_3::get_xy||  
@@ -156,7 +157,7 @@ class float_3;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |float_3::operator-||  
 |float_3::operator-||  
@@ -169,13 +170,13 @@ class float_3;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[大小常數](#float_3__size)||  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |float_3::b||  
 |float_3::bg||  
@@ -289,5 +290,5 @@ explicit inline float_3(
 static const int size = 3;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

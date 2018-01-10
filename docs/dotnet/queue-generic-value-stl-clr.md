@@ -1,41 +1,42 @@
 ---
-title: "queue::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value 成員 [STL/CLR]"
+title: "queue::generic_value (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: 5efd9812-6b4d-4e59-b8e8-c4975ae61667
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d4e3dbf57b9dd3535a430066cfd4c0eeda26ef92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# queue::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-項目的型別為具有泛型介面的容器使用的。  
+# <a name="queuegenericvalue-stlclr"></a>queue::generic_value (STL/CLR)
+使用容器的泛型介面的項目類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## 備註  
- 型別描述儲存的項目值為與泛型介面來使用這個樣板容器類別的型別 `GValue` 的物件。\(`GValue` 是 `value_type` 或 `value_type^` ，如果 `value_type` 為參考型別\)。  
+## <a name="remarks"></a>備註  
+ 此類型所描述型別的物件`GValue`描述使用的預存的項目值與此範本容器類別的泛型介面。 (`GValue`是`value_type`或`value_type^`如果`value_type`ref 型別。)  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_queue_generic_value.cpp   
@@ -74,15 +75,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+a b c  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)   
- [queue::value\_type](../dotnet/queue-value-type-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)   
+ [queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)

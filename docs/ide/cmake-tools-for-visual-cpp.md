@@ -13,11 +13,12 @@ ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 770b7f70e52859b1489b984d8aef3c3876a9ca83
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: d38538ce929410782eee7a0a6540bb62a05b7669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmake-projects-in-visual-c"></a>CMake 專案中 Visual c + +
 本文假設您熟悉 CMake，用於定義多個平台執行的建置流程中的跨平台、 開放原始碼工具。  
@@ -185,7 +186,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|選項|說明|  
+|選項|描述|  
 |--------------|------------|  
 | -版本  | 列印忍者版本 ("1.7.1")| 
 |   -C DIR   | 將變更為 DIR 再進行其他動作| 
@@ -212,7 +213,7 @@ CmakeSettings.json 現在支援 inherted 環境。 這項功能可讓您建立�
 
 下表顯示支援的值和其命令列的對等項目：
 
-|內容名稱|說明|  
+|內容名稱|描述|  
 |-----------|-----------------|
 |vsdev|預設的 Visual Studio 環境|
 |msvc_x86|適用於 x86 使用 x86 編譯工具|

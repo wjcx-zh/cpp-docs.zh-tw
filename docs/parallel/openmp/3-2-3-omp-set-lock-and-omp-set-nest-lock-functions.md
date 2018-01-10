@@ -1,27 +1,27 @@
 ---
-title: "3.2.3 omp_set_lock and omp_set_nest_lock Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.2.3 omp_set_lock 和 omp_set_nest_lock 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: b5323879-f72e-418e-953f-3979fdda17a2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e709e43a0b32b68bc34c4e76e8680ae371e30670
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 3.2.3 omp_set_lock and omp_set_nest_lock Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-每個函式會封鎖執行函式，直到指定的鎖定可用，並設定鎖定的執行緒。  簡單的鎖定，則它必須是未鎖定。  Nestable 鎖定是可用，如果它已解除鎖定，或如果它已經被擁有執行函式的執行緒。  格式如下：  
+# <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 omp_set_lock 和 omp_set_nest_lock 函式
+所有這些函式會封鎖執行函式，直到指定的鎖定可用，然後設定 鎖定的執行緒。 如果已解除鎖定使用簡單的鎖定。 如果已解除鎖定，或它已經由執行緒執行函式擁有使用可巢狀的鎖定。 格式如下：  
   
 ```  
 #include <omp.h>  
@@ -29,6 +29,6 @@ void omp_set_lock(omp_lock_t *lock);
 void omp_set_nest_lock(omp_nest_lock_t *lock);  
 ```  
   
- 簡單的鎖定，以引數的`omp_set_lock`函式必須指向未初始化的鎖定的變數。  執行函式的執行緒是授與鎖定的擁有權。  
+ 簡單鎖定的引數`omp_set_lock`函式必須指向初始化的鎖定變數。 鎖定擁有權會授與執行函式的執行緒。  
   
- Nestable 鎖定的引數的`omp_set_nest_lock`函式必須指向未初始化的鎖定的變數。  巢狀的計數會遞增，而執行緒被授與或會保留鎖定的擁有權。
+ 可巢狀的鎖定，以引數`omp_set_nest_lock`函式必須指向初始化的鎖定變數。 巢狀的計數會遞增，而執行緒授與，或會保留的鎖定擁有權。

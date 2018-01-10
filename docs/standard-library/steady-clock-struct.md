@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4fa9b54e4fb65fe9e3309b06c87dc713df92ec16
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd10ebcb9a068e78109c1a232b04c6beff9ebac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="steadyclock-struct"></a>steady_clock 結構
 代表 `steady` 時鐘。  
@@ -40,22 +41,22 @@ struct steady_clock;
   
 ## <a name="public-functions"></a>公用函式  
   
-|函式|描述|  
+|功能|描述|  
 |--------------|-----------------|  
 |now|傳回目前的時間做為 time_point 值。|  
   
 ## <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`system_clock::is_steady`|保有 `true` `steady_clock` 為 steady。|  
   
 ## <a name="requirements"></a>需求  
  **標頭：** \<chrono >  
   
- **命名空間：**std::chrono  
+ **命名空間：** std::chrono  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)   
  [system_clock 結構](../standard-library/system-clock-structure.md)

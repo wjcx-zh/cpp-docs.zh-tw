@@ -18,11 +18,14 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5315f13588aa22696989be208e8b5e7dce5fc586
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bd847b2641e6670a91d2edf1eb926aca423ad2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有隨機存取的物件。 使用容器`deque`管理序列的項目看起來像連續區塊存放裝置，但它可以擴張或縮小任一端而不需要複製任何剩餘的項目。 因此它可以有效實作`double-ended queue`。 (因此名稱。)  
@@ -52,9 +55,9 @@ template<typename Value>
  值  
  受控制序列中項目的類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|類型定義|說明|  
+|類型定義|描述|  
 |---------------------|-----------------|  
 |[deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
 |[deque::const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)|項目的常數參考類型。|  
@@ -70,7 +73,7 @@ template<typename Value>
 |[deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)|兩個項目之間帶正負號距離的類型。|  
 |[deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)|元素的類型。|  
   
-|成員函式|說明|  
+|成員函式|描述|  
 |---------------------|-----------------|  
 |[deque::assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)|取代所有項目。|  
 |[deque::at (STL/CLR)](../dotnet/deque-at-stl-clr.md)|存取指定位置的項目。|  
@@ -94,12 +97,12 @@ template<typename Value>
 |[deque::swap (STL/CLR)](../dotnet/deque-swap-stl-clr.md)|交換兩個容器的內容。|  
 |[deque::to_array (STL/CLR)](../dotnet/deque-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |[deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)|存取最後一個項目。|  
 |[deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)|存取第一個項目。|  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[deque::operator!= (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)|判斷兩個`deque`物件不相等。|  
 |[deque::operator (STL/CLR)](../dotnet/deque-operator-stl-clr.md)|存取指定位置的項目。|  
@@ -112,7 +115,7 @@ template<typename Value>
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|重複的物件。|  
 |<xref:System.Collections.IEnumerable>|項目順序。|  
@@ -138,7 +141,7 @@ template<typename Value>
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
  [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   

@@ -1,85 +1,89 @@
 ---
-title: "Changing the Tab Order of Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], tab order"
-  - "focus, tab order"
-  - "tab controls, tab order"
-  - "Tabstop property for controls"
-  - "controls [C++], focus"
-  - "dialog box controls, tab order"
+title: "變更控制項的定位順序 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], tab order
+- focus, tab order
+- tab controls, tab order
+- Tabstop property for controls
+- controls [C++], focus
+- dialog box controls, tab order
 ms.assetid: e2cee764-4367-42d7-9563-65a68f76f5ff
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dca6b1bb894aa2219a0352ba9c359e6f3c5a4677
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Tab Order of Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-定位順序是在對話方塊內 TAB 鍵將輸入焦點從一個控制項移往另一個的順序。  通常定位順序在對話方塊中是以由左而右和由上而下進行。  每個控制項有 **Tabstop** 屬性，決定控制項是否接受輸入焦點。  
+# <a name="changing-the-tab-order-of-controls"></a>變更控制項的定位順序
+定位順序是以 TAB 鍵輸入的焦點從某個控制項移動到下一個的對話方塊內的順序。 通常從左到右，從上到下對話方塊中，就會繼續在定位順序。 每個控制項都**Tabstop**屬性，可決定控制項是否會收到輸入的焦點。  
   
-### 若要設定控制項的輸入焦點  
+### <a name="to-set-input-focus-for-a-control"></a>若要設定控制項的輸入的焦點  
   
-1.  在[屬性視窗](../Topic/Properties%20Window.md)中，於 \[Tabstop\] 屬性中選取 \[True\] 或 \[False\]。  
+1.  在[屬性 視窗](/visualstudio/ide/reference/properties-window)，選取**True**或**False**中**Tabstop**屬性。  
   
- 即使是沒有將 Tabstop 屬性設為 True 的控制項仍需要是定位順序的一部分。  這很重要，例如，當您為無標題的控制項[定義便捷鍵 \(助憶鍵\)](../mfc/defining-mnemonics-access-keys.md)。  包含相關控制項的便捷鍵 \(Access Key\) 的靜態文字必須在定位順序時必須立刻置於相關控制項之前。  
+ 即使控制項沒有 Tabstop 屬性設定為定位順序的一部分，則為 True 的需要。 這是很重要，例如，當您[定義便捷鍵 （助憶鍵）](../windows/defining-mnemonics-access-keys.md)沒有標題的控制項。 定位順序中，包含相關控制項的便捷鍵的靜態文字必須緊接著相關的控制項。  
   
 > [!NOTE]
->  如果您的對話方塊包含重疊控制項，變更定位順序可能會變更控制項顯示的方式。  較晚進入定位順序的控制項一定會顯示在重疊控制項的上方，以定位順序排列時位於重疊控制項之前。  
+>  如果您的對話方塊包含重疊的控制項，變更定位順序可能會變更控制項的顯示的方式。 控制項定位順序中稍後一定會顯示任何重疊的控制項定位順序中之前之上。  
   
-#### 要檢視對話方塊中所有控制項的目前定位順序  
+#### <a name="to-view-the-current-tab-order-for-all-controls-in-a-dialog-box"></a>若要在對話方塊中檢視所有控制項的目前索引標籤順序  
   
-1.  在 \[格式\] 功能表上，按一下 \[定位順序\]。  
+1.  在**格式**功能表上，按一下 **定位順序**。  
   
- \-或\-  
+ \-或-  
   
--   請按 CTRL \+ D。  
+-   按下 CTRL + D  
   
-#### 若要變更對話方塊中所有控制項的目前定位順序  
+#### <a name="to-change-the-tab-order-for-all-controls-in-a-dialog-box"></a>若要變更的對話方塊中的所有控制項的定位順序  
   
-1.  在 \[格式\] 功能表上，按一下 \[定位順序\]。  
+1.  在**格式**功能表上，按一下 **定位順序**。  
   
-     每個控制項的左上角中的數字會顯示它在目前位於定位順序中的位置。  
+     每個控制項的左上角之數字會顯示目前的定位順序中其所在位置。  
   
-2.  依照您想要 TAB 鍵排列的順序按一下每個控制項來設定定位順序。  
+2.  按一下您想要遵循的 TAB 鍵順序中的每個控制項設定定位順序。  
   
-3.  按 ENTER 結束 \[定位順序\] 模式。  
+3.  按**ENTER**結束**定位順序**模式。  
   
     > [!TIP]
-    >  一旦您進入 \[定位順序\] 模式，您可以按 ESC 或 ENTER 來停用變更定位順序的功能。  
+    >  一旦您輸入 tab 鍵順序模式，您可以按 esc 鍵或 enter 鍵，若要停用變更定位順序的能力。  
   
-#### 若要變更兩個或更多控制項的定位順序  
+#### <a name="to-change-the-tab-order-for-two-or-more-controls"></a>若要變更兩個或多個控制項的定位順序  
   
-1.  從 \[格式\] 功能表中選擇 \[定位順序\]。  
+1.  從**格式**功能表上，選擇**定位順序**。  
   
-2.  指定變更要開始的順序。  若要執行此步驟，按住 **CTRL** 鍵並且按一下您要開始變更順序之前的控制項。  
+2.  指定順序中的變更開始的位置。 若要這樣做，請按住**CTRL**鍵，然後按一下您想要變更的順序開始之前的控制項。  
   
-     例如，如果您要變更控制項 7 到 9 的順序，按住 CTRL，然後先選取控制項 6。  
+     例如，如果您想要變更控制項 7 到 9 的順序，按住 ctrl 鍵，然後先選取控制項 6。  
   
     > [!NOTE]
-    >  若要將特定控制項設為編號 1 \(定位順序中的第一個\)，請按兩下該控制項。  
+    >  若要設定特定的控制項 （先在定位順序） 的數字 1，在控制項上按兩下。  
   
-3.  放開 CTRL 鍵，然後以您要 TAB 鍵從此點開始遵循的順序按一下控制項。  
+3.  釋放 CTRL 鍵，，然後按一下您要從該點遵循 TAB 鍵的順序中的控制項。  
   
-4.  按 ENTER 結束 \[定位順序\] 模式。  
+4.  按**ENTER**結束**定位順序**模式。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-### 需求  
+### <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>請參閱  
+ [在對話方塊上的控制項的排列方式](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [在對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)   
  [控制項](../mfc/controls-mfc.md)
+

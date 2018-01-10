@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2167384aca71a8bcd95240b007f84dbea6a498fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7487895fc79a9d7fba1ed7b49fb7bce934d2b724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ierrorrecordsimplgeterrorhelpcontext"></a>IErrorRecordsImpl::GetErrorHelpContext
 從錯誤記錄中取得的說明內容識別碼。  
@@ -46,5 +49,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IErrorRecordsImpl 類別](../../data/oledb/ierrorrecordsimpl-class.md)

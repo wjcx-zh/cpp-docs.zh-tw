@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f7a7dbff547a0a2f3fba04c10ad9107af2a26ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1010517799b9878ff88ddbc68a76ff4a0ed6588f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 結構
 執行緒 Proxy 可以在其上執行的硬體執行緒的抽象概念。  
@@ -36,11 +37,11 @@ ms.lasthandoff: 10/24/2017
 struct IVirtualProcessorRoot : public IExecutionResource;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Ivirtualprocessorroot:: Activate](#activate)|會導致執行內容介面相關聯的執行緒 proxy`pContext`啟動這個虛擬處理器根上執行。|  
 |[Ivirtualprocessorroot:: Deactivate](#deactivate)|造成目前在此停止分派的執行內容的虛擬處理器根上執行的執行緒 proxy。 執行緒 proxy 會繼續執行的呼叫上`Activate`方法。|  
@@ -145,5 +146,5 @@ virtual unsigned int GetId() const = 0;
 ### <a name="return-value"></a>傳回值  
  整數識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

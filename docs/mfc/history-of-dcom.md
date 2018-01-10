@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e5607fd240c7a97691189b8a3afa5e7c0171e26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ef567c39c93c3d43fdfc0fa63886144b03cd474
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="history-of-dcom"></a>DCOM 的歷史
 當早期 1993年引進自動化時，它是能夠只會在相同電腦上執行的應用程式之間所使用。 不過，因為它共用相同的 underpinnings OLE，也就是說，COM （或元件物件模型） 的其他部分，它一律是 COM 本身已更新為包含遠端執行功能時，它會變成 「 遠端 」。 它也計劃純粹的本機作業轉換至分散式作業需要少量或沒有現有的程式碼變更。  
@@ -32,10 +33,10 @@ ms.lasthandoff: 10/24/2017
   
  這類各種不同的 COM 現已存在。 DCOM （適用於 「 分散式 COM 」) 來一直隨附的 Windows NT 4.0 版開始，包括 Windows 2000 的版本。 自晚期 1996 年，它也有提供適用於 Windows 9x x。 在這兩種情況下，DCOM 會包含一組取代和其他 Dll、 與某些公用程式提供本機和遠端 COM 功能。 它現在是因此 win32 平台的固有部分，並可供其他平台上的其他組織一段時間。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [沒有 Remote Automation 適用於什麼情況](where-does-remote-automation-fit-in-q.md)  
   
  [Remote Automation 提供什麼功能](what-does-remote-automation-provide-q.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Remote Automation](../mfc/remote-automation.md)

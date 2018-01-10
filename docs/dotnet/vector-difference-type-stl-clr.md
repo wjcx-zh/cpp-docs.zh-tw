@@ -1,42 +1,42 @@
 ---
-title: "vector::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type 成員 [STL/CLR]"
+title: "vector:: difference_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 1e47c569-107b-4a44-adf4-b1473e1f8d4c
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91b4c651bdb8e801b7e10a5aaafbfc0a5c9ce105
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectordifferencetype-stlclr"></a>vector::difference_type (STL/CLR)
 兩個項目之間的帶正負號距離的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## 備註  
- 此型別描述已簽署的項目計數。  
+## <a name="remarks"></a>備註  
+ 此類型描述的帶正負號的項目計數。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_difference_type.cpp   
@@ -71,14 +71,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**  
-**begin\(\)\-end\(\) \= \-3**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::size\_type](../dotnet/vector-size-type-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)

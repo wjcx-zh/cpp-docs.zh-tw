@@ -1,39 +1,41 @@
 ---
-title: "Variable Argument Lists (...) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variable argument lists"
-  - "parameter arrays"
+title: "變數引數清單 （...）(C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- variable argument lists
+- parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-caps.latest.revision: 22
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "22"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b78b244a93bea0c669c37b5df32ec7146f7ac3b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Variable Argument Lists (...) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個範例示範如何在 Visual C\+\+ 中使用 `...` 語法來實作引數數目可變的函式。  
+# <a name="variable-argument-lists--ccli"></a>變數引數清單 (...) (C++/CLI)
+此範例示範如何使用`...`實作具有可變數目的引數的函式的 Visual c + + 語法。  
   
 > [!NOTE]
->  這個主題有關於 C\+\+\/CLI。  如需有關在 ISO Standard C\+\+ 中使用 `...` 的詳細資訊，請參閱 [省略符號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md) 和 [省略符號和預設引數](../misc/ellipses-and-default-arguments.md)。  
+>  本主題適用於 C + + /CLI。 如需使用`...`ISO 標準 c + +，請參閱[省略符號和 Variadic 樣板](../cpp/ellipses-and-variadic-templates.md)省略符號和預設引數中[後置運算式](../cpp/postfix-expressions.md)。  
   
- 使用 `...` 的參數必須是參數清單中的最後一個參數。  
+ 使用參數`...`必須是參數清單中的最後一個參數。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // mcppv2_paramarray.cpp  
@@ -54,14 +56,14 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 3  
 ```  
   
-## 程式碼範例  
- 下列範例示範如何從 C\# 呼叫接受可變數目之引數的 Visual C\+\+ 函式。  
+## <a name="code-example"></a>程式碼範例  
+ 下列範例會示範如何從 C# 呼叫接受可變數目的引數的 Visual c + + 函式。  
   
 ```  
 // mcppv2_paramarray2.cpp  
@@ -74,9 +76,9 @@ public:
 };  
 ```  
   
- 例如，可以從 C\# 或 Visual Basic 呼叫 `f` 函式，就好像是可以接受可變數目之引數的函式。  
+ 此函式`f`可以從呼叫 C# 或 Visual Basic 中，比方說，就好像是可以接受可變數目的引數的函式。  
   
- 在 C\# 中，傳遞至 `ParamArray` 參數的引數可以由可變數目的引數呼叫。  下列程式碼範例使用 C\#。  
+ 在 C# 中的引數，傳遞至`ParamArray`可變數目的引數由呼叫參數。 下列程式碼範例是以 C#。  
   
 ```  
 // mcppv2_paramarray3.cs  
@@ -93,7 +95,7 @@ public class X {
 }  
 ```  
   
- 在 Visual C\+\+ 中對 `f` 的呼叫可以傳遞初始化的陣列或可變長度的陣列。  
+ 呼叫`f`Visual c + + 可以傳遞初始化的陣列或可變長度陣列。  
   
 ```  
 // mcpp_paramarray4.cpp  
@@ -111,5 +113,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [Arrays](../windows/arrays-cpp-component-extensions.md)
+## <a name="see-also"></a>請參閱  
+ [陣列](../windows/arrays-cpp-component-extensions.md)

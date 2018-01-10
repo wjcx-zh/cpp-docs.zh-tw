@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 109c4f2e8272293ccfcb58924380c586f8078536
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d436301a979dbba2bc4a922f8427f355a398f654
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>建立和顯示對話方塊
 建立對話方塊物件作業分成兩個階段。 首先，建構對話方塊物件，然後建立對話方塊視窗。 強制回應和非強制回應對話方塊各用於建立並顯示對話方塊視窗的處理序不盡相同。 下表列出強制回應和非強制回應對話方塊通常建構及顯示的方式。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
   
  您可以如果您想，建立您的對話方塊，從[記憶體中的對話方塊範本](../mfc/using-a-dialog-template-in-memory.md)您建構而不是從對話方塊範本資源。 這是進階主題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd86ab088f23241b27e958749e54ee3ae2841a5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: be274d7bcf970795df69744324332d29f252363a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventsourcetargetspointerlock-data-member"></a>EventSource::targetsPointerLock_ 資料成員
 加入事件處理常式，此 eventsource，同時也已移除，或叫用的內部資料成員的存取會同步處理。  
@@ -35,5 +38,5 @@ Wrappers::SRWLock targetsPointerLock_;
   
  **命名空間：** Microsoft::WRL
  
- ## <a name="see-also"></a>另請參閱
+ ## <a name="see-also"></a>請參閱
  [EventSource 類別](../windows/eventsource-class.md)

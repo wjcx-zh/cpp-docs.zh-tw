@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c9241696709cf7f12a8d20315bf6f72fdf4bb1b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57d1a4cc5d06f9a2053dbf3b2e27d79b1ee18b1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umulh"></a>__umulh
 **Microsoft 特定的**  
@@ -36,7 +37,7 @@ unsigned __int64 __umulh(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `a`  
+ [輸入] `a`  
  要相乘的第一個數字。  
   
  [in] `b`  
@@ -54,7 +55,7 @@ unsigned __int64 __umulh(
  **標頭檔** \<intrin.h >  
   
 ## <a name="remarks"></a>備註  
- 這些常式只可做為內建函式。  
+ 這些常式僅以內建函式的形式供您使用。  
   
 ## <a name="example"></a>範例  
   
@@ -82,7 +83,7 @@ int main()
 0x10 * 0xfedcba9876543210 = 0xfedcba98765432100   
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

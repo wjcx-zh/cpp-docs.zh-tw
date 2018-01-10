@@ -27,11 +27,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 46a1789a535950006d37b18846d9bb3cdad46a0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340b1464983d46ea13f423ec7cf596e7c973f3a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addgsbyte-addgsword-addgsdword-addgsqword"></a>__addgsbyte、__addgsword、__addgsdword、__addgsqword
 **Microsoft 特定的**  
@@ -60,10 +61,10 @@ void __addgsqword(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `Offset`  
+ [輸入] `Offset`  
  從開頭的位移`GS`。  
   
- [in] `Data`  
+ [輸入] `Data`  
  要加入之記憶體位置的值。  
   
 ## <a name="requirements"></a>需求  
@@ -78,9 +79,9 @@ void __addgsqword(
 ## <a name="remarks"></a>備註  
  這些內建函式僅適用於核心模式，而這些常式只可做為內建函式。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)   
  [__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)   
  [__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   

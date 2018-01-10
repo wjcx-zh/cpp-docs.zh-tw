@@ -1,35 +1,33 @@
 ---
-title: "編譯器警告 (層級 1) C4715 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4715"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4715"
+title: "編譯器警告 （層級 1） C4715 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4715
+dev_langs: C++
+helpviewer_keywords: C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b060585cd3ba6b51c9c91d42e5f3fecaf74ae1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4715
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 不是所有控制路徑都傳回值  
+# <a name="compiler-warning-level-1-c4715"></a>編譯器警告 (層級 1) C4715
+'function': 不是所有控制路徑都傳回值  
   
- 指定的函式可能不會傳回值。  
+ 指定的函式可能無法傳回值。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // C4715a.cpp  
@@ -41,7 +39,7 @@ int func1( int i )
 }  
 ```  
   
- 若要預防此警告，請修改程式碼，使所有路徑都有指派函式傳回值：  
+ 若要避免這個警告，請修改程式碼，使所有路徑都指派給函式的傳回值：  
   
 ```  
 // C4715b.cpp  
@@ -53,7 +51,7 @@ int func1( int i )
 }  
 ```  
   
- 程式碼可能包含對永遠不會傳回之函式的呼叫，如下列範例所示：  
+ 它是您的程式碼，可能包含呼叫的函式從未返回，如下列範例所示：  
   
 ```  
 // C4715c.cpp  
@@ -72,4 +70,4 @@ int glue()
 }  
 ```  
   
- 此程式碼也會產生警告，因為編譯器不知道 `fatal` 永遠不會返回。  若要避免程式碼產生錯誤訊息，請使用 [\_\_declspec\(noreturn\)](../../cpp/noreturn.md) 宣告 `fatal`。
+ 這段程式碼也會產生警告，因為編譯器不知道，`fatal`永遠不會傳回。 若要避免這段程式碼產生錯誤訊息，宣告`fatal`使用[__declspec （noreturn)](../../cpp/noreturn.md)。

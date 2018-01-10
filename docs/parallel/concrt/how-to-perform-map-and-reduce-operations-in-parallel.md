@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6648933aa972ec1391afe2d9cecd37b15ad53f9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84e38dd845f3503512f48c19e226d56d9978cc21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>如何：平行執行對應和縮減作業
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
  一般而言，您只會平行處理外部或內部迴圈。 如果您的檔案數相當少，而且每個檔案包含許多單字，則請平行處理內部迴圈。 如果您的檔案數相當多，而且每個檔案包含少數單字，則請平行處理外部迴圈。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [平行演算法](../../parallel/concrt/parallel-algorithms.md)   
  [parallel_transform 函式](reference/concurrency-namespace-functions.md#parallel_transform)   
  [parallel_reduce 函式](reference/concurrency-namespace-functions.md#parallel_reduce)   

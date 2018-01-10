@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5aa02417eba0d31a56697f21baa04411ef161d4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 17690c6f99ae8f256003bf54f3bd736f52670e84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmapupperbound-stlclr"></a>hash_map::upper_bound (STL/CLR)
 尋找符合指定之索引鍵的範圍結尾。  
@@ -83,7 +86,7 @@ upper_bound(L'x')==end() = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map:: count (STL/CLR)](../dotnet/hash-map-count-stl-clr.md)   
  [hash_map:: equal_range (STL/CLR)](../dotnet/hash-map-equal-range-stl-clr.md)   

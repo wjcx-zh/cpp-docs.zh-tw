@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e60083aa67cc640dafb5c096b83d3097df04db1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e60235bb011cb130b06a51a498cd8b5b88a56232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-and-locales"></a>多執行緒和地區設定
 C 執行階段程式庫和 c + + 標準程式庫提供支援變更程式的地區設定。 本主題討論使用多執行緒應用程式中的兩個程式庫的地區設定功能時，會發生的問題。  
@@ -439,7 +440,7 @@ unsigned __stdcall RunThreadB(void *params)
 [Thread main] locale::global is set to "French_France.1252"  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [多執行緒支援對舊版程式碼 （Visual c + +）](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
  [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   

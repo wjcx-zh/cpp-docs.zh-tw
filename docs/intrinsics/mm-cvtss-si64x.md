@@ -1,63 +1,63 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cvtss2si 內建"
-  - "_mm_cvtss_si64x 內建"
+title: "_mm_cvtss_si64x |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f55ecac0a9f6318b5d60a372003e548ce41c713
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+**Microsoft 特定的**  
   
- 會產生[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]的轉換純量單一精確度浮點數值為 64 位元整數的延伸的版本 \(`cvtss2si`\) 的指令。  
+ 會產生[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]擴充的版本轉換純量單一精確度浮點數為 64 位元整數 (`cvtss2si`) 指令。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### 參數  
- \[in\] `value`  
- `__m128`結構包含浮動的點值。  
+#### <a name="parameters"></a>參數  
+ [輸入] `value`  
+ `__m128`結構，其中包含的浮動點值。  
   
-## 傳回值  
- 64 位元整數，第一個浮點數的值轉換成整數的結果。  
+## <a name="return-value"></a>傳回值  
+ 64 位元整數，第一個浮點值轉換成整數的結果。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 結構值的第一個元素會轉換成整數並傳回。  在 MXCSR 捨入的控制項位元用來判斷進位行為。  預設值捨入模式會四捨五入到最接近的偶數數字捨入，如果小數部份是 0.5。  因為`__m128`結構的表示 xmm 暫存器，此內建採用 xmm 暫存器的值，並將它寫入系統記憶體。  
+## <a name="remarks"></a>備註  
+ 結構值的第一個項目會轉換成整數並傳回。 在 MXCSR 捨入的控制位元用來決定捨入的行為。 預設的捨入模式為四捨五入到最接近捨入為偶數，如果的小數部分為 0.5。 因為`__m128`結構代表 xmm 暫存器的 XMM 暫存器，此內建函式會接受的值，並將它寫入至系統記憶體。  
   
- 只有使用與內建這個常式。  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -87,9 +87,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## 結束 Microsoft 特定  
+```Output  
+101  
+```  
   
-## 請參閱  
- [\_\_m128d](../cpp/m128d.md)   
+**結束 Microsoft 特定的**  
+  
+## <a name="see-also"></a>請參閱  
+ [__m128d](../cpp/m128d.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

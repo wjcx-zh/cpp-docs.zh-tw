@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7d7d4d2554e346f67d62f3832ed1722c35970154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d27cb58766e019d26e3cfc3d99b4d719be701f37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timeput-class"></a>time_put 類別
 此樣板類別描述可以做為地區設定 facet 的物件，以控制時間值轉換為類型 `CharType` 的序列。  
@@ -85,7 +86,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ##  <a name="do_put"></a>  time_put::do_put  
  虛擬函式，會輸出日期和時間資訊做為 **CharType** 的序列。  
@@ -252,7 +253,7 @@ explicit time_put(size_t _Refs = 0);
   
  建構函式會初始化其基底物件[locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [time_base 類別](../standard-library/time-base-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

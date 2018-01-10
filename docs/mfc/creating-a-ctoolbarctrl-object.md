@@ -17,14 +17,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eecb599d84cedd742a15c4a5572ce4c130b19669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e86fad8191c4dea2eed3ae34ec96ed853ac1deae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-ctoolbarctrl-object"></a>建立 CToolBarCtrl 物件
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件包含數個內部資料結構 — 一份按鈕影像點陣圖、 的按鈕標籤字串清單，以及一份`TBBUTTON`結構 — 的關聯一個影像和/或字串的位置、 樣式、 狀態和按鈕的命令識別碼。 每個這些資料結構的項目都有以零為起始的索引。 您可以使用之前`CToolBarCtrl`物件，您必須設定這些資料結構。 如需資料結構的清單，請參閱[工具列控制項](https://msdn.microsoft.com/library/47xcww9x.aspx)Windows SDK 中。 字串清單，只可以用於按鈕標籤。您無法從工具列擷取字串。  
+[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)物件包含數個內部資料結構 — 一份按鈕影像點陣圖、 的按鈕標籤字串清單，以及一份`TBBUTTON`結構 — 的關聯一個影像和/或字串的位置、 樣式、 狀態和按鈕的命令識別碼。 每個這些資料結構的項目都有以零為起始的索引。 您可以使用之前`CToolBarCtrl`物件，您必須設定這些資料結構。 如需資料結構的清單，請參閱[工具列控制項](controls-mfc.md)Windows SDK 中。 字串清單，只可以用於按鈕標籤。您無法從工具列擷取字串。  
   
  若要使用 `CToolBarCtrl` 物件，您通常會執行下列步驟：  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 5.  如果您想讓使用者能夠自訂工具列時，處理是主控視窗中的自訂通知訊息中所述[處理自訂告知](../mfc/handling-customization-notifications.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

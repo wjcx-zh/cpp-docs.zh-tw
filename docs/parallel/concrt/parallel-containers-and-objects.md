@@ -17,11 +17,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 695e3e07af26c709dadc70935e1e4d72705ecab8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9159b9c8170ee73afd8bee5305506a842368a231
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-containers-and-objects"></a>平行容器和物件
 平行模式程式庫 (PPL) 包含數個容器和物件，提供安全執行緒存取其項目。  
@@ -184,7 +185,7 @@ ms.lasthandoff: 10/24/2017
   
  A`concurrent_queue`迭代器周遊正向方向中的項目。 下表將顯示每個迭代器支援的運算子。  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[operator++](http://msdn.microsoft.com/en-us/4cfdd07e-927a-42f8-aaa0-d6881687f413)|前移到下一個項目在佇列中。 這個運算子多載之後可提供前置遞增和後置遞增語意。|  
 |[operator*](http://msdn.microsoft.com/en-us/a0e671fc-76e6-4fb4-b95c-ced4dd2b2017)|擷取目前項目的參考。|  
@@ -285,7 +286,7 @@ ms.lasthandoff: 10/24/2017
 ###  <a name="combinable-features"></a>方法與功能  
  下表顯示的一些重要的方法`combinable`類別。 如需所有詳細資訊`combinable`類別方法，請參閱[combinable 類別](../../parallel/concrt/reference/combinable-class.md)。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[本機](reference/combinable-class.md#local)|擷取與目前的執行緒內容相關聯的本機變數的參考。|  
 |[clear](reference/combinable-class.md#clear)|移除所有執行緒區域變數從`combinable`物件。|  

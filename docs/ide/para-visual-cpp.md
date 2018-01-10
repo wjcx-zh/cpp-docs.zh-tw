@@ -1,49 +1,49 @@
 ---
-title: "&lt;para&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<para>"
-  - "para"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<para> C++ XML 標記"
-  - "para C++ XML 標記"
+title: "&lt;para&gt; （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <para>
+- para
+dev_langs: C++
+helpviewer_keywords:
+- <para> C++ XML tag
+- para C++ XML tag
 ms.assetid: 35f2a1b3-bc14-4f13-bcb0-c39ccbf74d59
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 642b4d08f8414db19542e6a00a3718206eee8e4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;para&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<para\> 標記是使用於其他的標記內，例如：[\<summary\>](../ide/summary-visual-cpp.md)、[\<remarks\>](../ide/remarks-visual-cpp.md) 或 [\<returns\>](../ide/returns-visual-cpp.md)，因此可以讓您增加結構至文字當中。  
+# <a name="ltparagt-visual-c"></a>&lt;para&gt; （Visual c + +）
+\<para> 標記是用於 [\<summary>](../ide/summary-visual-cpp.md)、[\<remarks>](../ide/remarks-visual-cpp.md) 或 [\<returns>](../ide/returns-visual-cpp.md) 等標記內，並可讓您新增文字的結構。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 <para>content</para>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `content`  
- 為段落內的文字。  
+ 段落的文字。  
   
-## 備註  
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 進行編譯，將文件註解處理為檔案。  
+## <a name="remarks"></a>備註  
+ 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
-## 範例  
- 請參閱 [\<summary\>](../ide/summary-visual-cpp.md) 中使用 \<para\> 的範例。  
+## <a name="example"></a>範例  
+ 如需使用 \<para> 的範例，請參閱 [\<summary>](../ide/summary-visual-cpp.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c676f5bb8b667bdc3ef26f823737df5c4f97217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2285c2237001aa02c77b17241e6de62804d6b700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-overview"></a>C++ 標準程式庫概觀
 所有 C++ 程式庫實體都會在一或多個標準標頭中宣告或定義。 此實作包含 C++ Standard 不需要的額外兩個標頭 (`<hash_map>` 和 `<hash_set>`)。 如需此實作支援的完整標頭清單，請參閱[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)。  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [已檢查的迭代器](../standard-library/checked-iterators.md)  
   
--   [偵錯迭代器支援](../standard-library/debug-iterator-support.md)  
+-   [Debug Iterator Support](../standard-library/debug-iterator-support.md)  
   
 -   [C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)  
   
@@ -67,6 +68,6 @@ ms.lasthandoff: 10/24/2017
   
  如需 Visual C++ 執行階段程式庫的詳細資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)
 

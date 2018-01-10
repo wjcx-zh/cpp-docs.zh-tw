@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4c68c3dae5a8e53251d9d6724a91e753a7accc5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32377754dcb8f8098ab1f74db8fb8d4d74b0c73c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ispointer-class"></a>is_pointer 類別
 測試類型是否為指標。  
@@ -84,7 +85,7 @@ is_pointer<int *> == true
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_member_pointer 類別](../standard-library/is-member-pointer-class.md)   
  [is_reference 類別](../standard-library/is-reference-class.md)

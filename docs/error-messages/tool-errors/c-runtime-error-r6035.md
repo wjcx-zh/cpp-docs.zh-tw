@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f0f6e34ef6c95d4c1942cdc1348000213647b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6035"></a>C 執行階段錯誤 R6035
 依賴該安全性 cookie 的函式作用中時，Microsoft Visual c + + 執行階段程式庫，錯誤 R6035-此應用程式中的模組正在初始化模組的全域安全性 cookie。  呼叫 __security_init_cookie 稍早所示。  
@@ -75,5 +76,5 @@ void DllEntryHelper() {
 > [!NOTE]
 >  R6035 是錯誤訊息僅限 x86 所產生偵錯 CRT 的資訊，並只對結構化例外狀況處理，但條件所有平台，而且可用於所有形式的例外狀況的錯誤處理，例如 c + + EH。  
   
-## <a name="see-also"></a>另請參閱  
- [Compiler Security Checks In Depth](http://go.microsoft.com/fwlink/?linkid=7260) (深入了解編譯器安全性檢查)
+## <a name="see-also"></a>請參閱  
+ [Compiler Security Checks In Depth](http://go.microsoft.com/fwlink/p/?linkid=7260) (深入了解編譯器安全性檢查)

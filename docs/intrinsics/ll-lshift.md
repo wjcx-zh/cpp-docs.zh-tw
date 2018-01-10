@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0d827b375cd382ff4f298f2933fc8a3109d2f846
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 958ade238317d1577bd93d373b9e8ce4aa1f4234
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lllshift"></a>__ll_lshift
 **Microsoft 特定的**  
@@ -40,10 +41,10 @@ unsigned __int64 __ll_lshift(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `Mask`  
+ [輸入] `Mask`  
  要向左移位的 64 位元整數值。  
   
- [in] `nBit`  
+ [輸入] `nBit`  
  要移位的位元數。  
   
 ## <a name="return-value"></a>傳回值  
@@ -91,9 +92,9 @@ int main()
   
  **請注意**沒有左的移位作業的不帶正負號的版本。 這是因為`__ll_lshift`已使用不帶正負號的輸入的參數。 與向右移位，不同的是沒有正負號無關的左移，因為結果中的最小顯著性位元一定會設定為零不論移位的值的正負號。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__ll_rshift](../intrinsics/ll-rshift.md)   
  [__ull_rshift](../intrinsics/ull-rshift.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

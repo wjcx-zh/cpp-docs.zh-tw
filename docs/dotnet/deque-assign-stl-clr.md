@@ -1,32 +1,33 @@
 ---
-title: "deque::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign 成員 [STL/CLR]"
+title: "deque:: assign (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 03fafdbb-6b10-4464-b3dc-0cc5cb8ac980
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1ae8bb7a21a336987d30cb41a7a1ff9d586db830
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# deque::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeassign-stlclr"></a>deque::assign (STL/CLR)
 取代所有項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,32 +36,32 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### 參數  
- count  
+#### <a name="parameters"></a>參數  
+ `count`  
  要插入的元素數目。  
   
- first  
- 要插入的範圍開頭。  
+ `first`  
+ 要插入範圍的開頭。  
   
- last  
- 要插入的範圍結尾。  
+ `last`  
+ 要插入範圍的結尾。  
   
- right  
- 要插入的列舉。  
+ `right`  
+ 若要插入的列舉型別。  
   
- val  
- 要插入的元素值。  
+ `val`  
+ 要插入之項目的值。  
   
-## 備註  
- 第一個成員函式以具有重複性的`val` 元素值以`count`控制的序列取代。  您可以使用它以項目填滿容器有的所有相同值。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式取代重複的受控制的序列`count`值的項目`val`。 您使用它來填入項目容器全都具有相同的值。  
   
- 如果 `InIt` 是整數型別，第二個成員函式行為與 `assign((size_type)``first``, (value_type)``last``)`相同。  除此之外，以序列 `[``first``,` `last``)` 取代受控制序列。  您會用它來做受控制序列複製另一個序列。  
+ 如果`InIt`是整數類型，第二個成員函式的行為相同`assign((size_type)first, (value_type)last)`。 否則，它會取代受控制的序列的順序 [`first`， `last`)。 您使用它來進行受控制的序列複製另一個序列。  
   
- 第三成員函式是列舉值所指定的序列取代受控制序列的 `right`。  您會用它來做受控制序列列舉值所描述的複製一個序列。  
+ 第三個成員函式的列舉值所指定的順序，取代受控制的序列`right`。 您可以使用它來製作受控制的序列的序列所描述的列舉值。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cliext_deque_assign.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -96,14 +97,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **a b**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/deque\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)

@@ -55,11 +55,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53ff88665394e7333c2ced65117fbaacd17ba602
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e1ade673c13ed69912ddadc5f6a4d75e7a8e0a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 內建函式
 **Microsoft 特定的**  
@@ -132,7 +133,7 @@ __int64 _InterlockedDecrement64_nf(
   
  `lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱[對齊](../cpp/align-cpp.md)。  
   
- 這些常式只可做為內建函式。  
+ 這些常式僅以內建函式的形式供您使用。  
   
 ## <a name="example"></a>範例  
   
@@ -202,7 +203,7 @@ void __cdecl SimpleThread(void* pParam) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

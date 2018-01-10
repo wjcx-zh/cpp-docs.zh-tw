@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5f4a3606e21bbd695e0803acfcb98270dfbb48a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93567b942306b70a34bd3bd7b2d99675b4ddbd51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 **Microsoft 特定的**  
@@ -47,7 +48,7 @@ unsigned char _bittest64(
 ```  
   
 ### <a name="parameters"></a>參數  
-[in] `a`  
+[輸入] `a`  
 要檢查的記憶體指標。  
   
 [in] `b`  
@@ -106,7 +107,7 @@ Binary representation:
 0000000000000010011000010110010  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [編譯器內建](../intrinsics/compiler-intrinsics.md)

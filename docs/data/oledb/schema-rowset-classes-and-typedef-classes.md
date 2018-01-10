@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27cb8085711ae9756b9bb5c1042bbe5475619025
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a48ad06318f71b637cc0d16e577d4a15a29177cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>結構描述資料列集類別和 Typedef 類別
 結構描述是資料庫物件所擁有，或已建立的特定使用者的集合。 類別目錄可以包含一或多個結構描述，但必須永遠包含呼叫 INFORMATION_SCHEMA，包含檢視和網域資訊結構描述的結構描述。 OLE DB 中的結構描述資訊使用預先定義的結構描述資料列集，擷取，並包含型別、 資料表、 資料行、 索引、 檢視、 判斷提示和條件約束、 統計資料、 字元集、 定序，以及網域。  
@@ -66,5 +69,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

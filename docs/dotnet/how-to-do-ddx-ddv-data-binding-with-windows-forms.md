@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d339be4d907e0cfaaea1e80830b3fe77b1cc09b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9996fd10bad8578bd70739aa10b863bcea7f3c18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>如何：使用 Windows Form 執行 DDX/DDV 資料繫結
 [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)呼叫[CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol)若要建立的比對資源的控制項 id。 如果您使用`DDX_ManagedControl`如`CWinFormsControl`控制項 （在精靈產生的程式碼），您不應該呼叫`CreateManagedControl`明確地為相同的控制項。  
@@ -86,7 +89,7 @@ m_MyControl.GetControl()->textBox1->Text = "hello";
   
  您現在可以建置並執行應用程式。 請注意，在文字方塊中的任何文字將顯示快顯訊息方塊中的應用程式關閉時。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWinFormsControl 類別](../mfc/reference/cwinformscontrol-class.md)   
  [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)   
  [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: eb2b4925ba1b0c6c9a8728b66c338ea50229d0f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 175842a495bda037aca1b59ed7de12c0635b67f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="backinserter-function"></a>back_inserter 函式
 傳回迭代器，用來在指定的集合結尾插入元素。  
@@ -52,5 +53,5 @@ Platform::BackInsertIterator<T>
   
  **命名空間：** Windows::Foundation::Collections  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 34513ba6799b1f70d16867571d38185420fa3576
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e06dca827d6b5cb5d457a2eda6aa143bb5d0fe5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues （Visual c + +）
 每個 c + + 運算式具有類型，並屬於*值類別*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。 
@@ -76,7 +77,7 @@ int main()
   
  條款*左值*和*右值*經常參考的物件參考時。 多個參考的詳細資訊，請參閱[左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)和[右值參考宣告子: （& s) （& s)](../cpp/rvalue-reference-declarator-amp-amp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本概念](../cpp/basic-concepts-cpp.md)   
  [左值參考宣告子： &](../cpp/lvalue-reference-declarator-amp.md)   
  [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)

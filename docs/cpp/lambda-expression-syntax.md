@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- lambda expressions [C++], syntax
+dev_langs: C++
+helpviewer_keywords: lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9daa1ce8d7b55f71113dcf7559394715bd93c604
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e41be4a1c69f6bf39e4ca0ede5b0afbe3a09f776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lambda-expression-syntax"></a>Lambda 運算式語法
 本文示範 Lambda 運算式的語法和結構化項目。 如需 lambda 運算式的說明，請參閱[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。  
@@ -172,7 +169,7 @@ There are 4 even numbers in the vector.
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)   
  [Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)   
  [產生](../standard-library/algorithm-functions.md#generate)   

@@ -11,8 +11,7 @@ apiname:
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
-apilocation:
-- api-ms-win-crt-runtime-l1-1-0.dll
+apilocation: api-ms-win-crt-runtime-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - CORECRT/_invalid_parameter
@@ -24,15 +23,16 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 49ae87567cd311e271a0ab50d7112a4a8f0c1b4a
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4db706387387d00d754f2afe74e34e85aecc5199
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson
 C 執行階段程式庫使用這些函式處理傳遞至 CRT 程式庫函式的無效參數。 您的程式碼也可以使用這些函式，以支援預設或自訂處理無效參數。
@@ -91,15 +91,14 @@ _invoke_watson(
 當呼叫預設處理常式 `_invoke_watson` 時，如果處理器支援 [__fastfail](../../intrinsics/fastfail.md) 作業，則會使用 `FAST_FAIL_INVALID_ARG` 參數來叫用處理常式，並終止處理序。 否則，就會引發快速失敗例外狀況，這可以附加的偵錯工具來攔截。 如果允許處理序繼續，會使用例外狀況代碼狀態 `STATUS_INVALID_CRUNTIME_PARAMETER` 來呼叫 Windows`TerminateProcess` 函式，以進行終止。 
 
 ## <a name="requirements"></a>需求  
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|------------------|  
-|`_invalid_parameter`, `_invalid_parameter_noinfo`, `_invalid_parameter_noinfo_noreturn`, `_invoke_watson`|\<corecrt.h>|  
+|`_invalid_parameter`、`_invalid_parameter_noinfo`、`_invalid_parameter_noinfo_noreturn``_invoke_watson`|\<corecrt.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)  
  [_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)  
  [參數驗證](../../c-runtime-library/parameter-validation.md)
-

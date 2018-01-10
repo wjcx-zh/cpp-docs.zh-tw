@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7872e01516ea7420533cccf0398164d50603dded
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3bc721131e5cb47bf17d7e683f3a6df249f4dd38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="align-c"></a>align (C++)
 在 Visual Studio 2015 和更新版本中，使用 C + + 11 標準`alignas`控制項的對齊方式的規範。 如需詳細資訊，請參閱[對齊](../cpp/alignment-cpp-declarations.md)。  
@@ -243,9 +244,9 @@ struct S {
   
  因此，物件的位移是根據前一個物件的位移與目前封裝設定，但如果物件具有 `__declspec(align(#))` 屬性，情況就不是這樣，此時對齊是根據前一個物件的位移與物件的 `__declspec(align(#))` 值。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__declspec](../cpp/declspec.md)   
  [ARM ABI 慣例概觀](../build/overview-of-arm-abi-conventions.md)   
  [x64 呼叫慣例概觀](../build/overview-of-x64-calling-conventions.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d74dfdf716065384a1c0a65a6a2bf0e5437dc1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 94f18b8a81cfde8d45a4e9e0256dd99a21bdd6a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pointer-arithmetic"></a>指標運算
 加法類運算與指標相關，並且只有當指標運算元定址陣列成員且整數值在同一個陣列的界限內產生位移時，整數才會提供有意義的結果。 將整數值轉換為位址位移時，編譯器會假設原始位址和位址加上位移之間只有相同大小的記憶體位置。  
@@ -29,5 +30,5 @@ ms.lasthandoff: 10/24/2017
   
  同樣地，減去兩個指標值時，轉換會假設運算元指定的位址之間只有相同類型的值，而沒有空白。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 加法類運算子](../c-language/c-additive-operators.md)

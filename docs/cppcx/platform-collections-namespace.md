@@ -1,36 +1,37 @@
 ---
-title: "Platform::Collections 命名空間 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/25/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Platform::Collections"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::Collections 命名空間"
+title: "Platform:: collections 命名空間 |Microsoft 文件"
+ms.custom: 
+ms.date: 01/25/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: collection/Platform::Collections
+dev_langs: C++
+helpviewer_keywords: Platform::Collections Namespace
 ms.assetid: b5042864-5f22-40b7-b7a5-c0691f65cc47
-caps.latest.revision: 9
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "9"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0c328ebbaa18ad318981a63c717cafd614bc1521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::Collections 命名空間
-Platform::Collection 命名空間包含 `Map`、`MapView`、`Vector` 和 `VectorView` 類別。 這些類別是 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 \(例如，當 Javascript 或 C\# 程式呼叫 C\+\+ 元件時\)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作為傳回類型。 如需詳細資訊，請參閱 [集合](../cppcx/collections-c-cx.md) 與 [在 C\+\+ 中建立 Windows 執行階段元件](http://msdn.microsoft.com/library/5b7251e6-4271-4f13-af80-c1cf5b1489bf)。  
+# <a name="platformcollections-namespace"></a>Platform::Collections 命名空間
+Platform::Collection 命名空間包含 `Map`、 `MapView`、 `Vector`和 `VectorView` 類別。 這些類別是 [Windows::Foundation::Collections](http://go.microsoft.com/fwlink/p/?LinkId=262645) 命名空間中定義的相對應介面的具象實作。 實體集合類型無法橫跨 ABI 移植 (例如，當 Javascript 或 C# 程式呼叫 C++ 元件時)，但是可以隱含地轉換成對應的介面類型。 例如，如果您實作公用方法來填入和傳回集合，請使用 [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) 在內部實作集合，並使用 [Windows::Foundation::Collections::IVector](http://go.microsoft.com/fwlink/p/?LinkId=262410) 作為傳回類型。 如需詳細資訊，請參閱[集合](../cppcx/collections-c-cx.md)和[c + + 中建立 Windows 執行階段元件](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)。  
   
- 您可以從 [std::vector](../Topic/vector%20Class%201.md) 建構 Platform::Collections::Vector，也可以從 [std::map](../cppcx/platform-collections-map-class.md) 建構 [Platform::Collections::Map](../standard-library/map-class.md)。  
+ 您可以從 [std::vector](../standard-library/vector-class.md) 建構 Platform::Collections::Vector，也可以從 [std::map](../cppcx/platform-collections-map-class.md) 建構 [Platform::Collections::Map](../standard-library/map-class.md)。  
   
- 此外，Platform::Collection 命名空間還支援後端插入和輸入 Interator，以及 `Vector` 和 `VectorView` 迭代器。  
+ 此外，platform:: collection 命名空間還支援後端插入和輸入的迭代器，以及`Vector`和`VectorView`迭代器。  
   
- 您必須包含 \(`#include`\) collection.h 標頭，才能使用 Platform::Collection 命名空間中的類型。  
+ 您必須包含 (`#include`) collection.h 標頭，才能使用 Platform::Collection 命名空間中的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
   
@@ -38,29 +39,29 @@ Platform::Collection 命名空間包含 `Map`、`MapView`、`Vector` 和 `Vector
 using namespace Platform::Collection;  
 ```  
   
-## Members  
+### <a name="members"></a>成員  
  這個命名空間包含下列成員。  
   
 |名稱|描述|  
-|--------|--------|  
+|----------|-----------------|  
 |[Platform::Collections::BackInsertIterator 類別](../cppcx/platform-collections-backinsertiterator-class.md)|代表將元素插入集合結尾的迭代器。|  
 |[Platform::Collections::InputIterator 類別](../cppcx/platform-collections-inputiterator-class.md)|代表將元素插入集合開頭的迭代器。|  
 |[Platform::Collections::Map 類別](../cppcx/platform-collections-map-class.md)|代表依索引鍵存取的可修改的機碼值組集合。 類似於 [std::map](../standard-library/map-class.md)。|  
 |[Platform::Collections::MapView 類別](../cppcx/platform-collections-mapview-class.md)|代表依索引鍵存取的唯讀機碼值組集合。|  
-|[Platform::Collections::Vector 類別](../cppcx/platform-collections-vector-class.md)|代表可修改的元素序列。 類似於 [std::vector](../Topic/vector%20Class%201.md)。|  
+|[Platform::Collections::Vector Class](../cppcx/platform-collections-vector-class.md)|代表可修改的元素序列。 類似於 [std::vector](../standard-library/vector-class.md)。|  
 |[Platform::Collections::VectorIterator 類別](../cppcx/platform-collections-vectoriterator-class.md)|表示周遊 `Vector` 集合的迭代器。|  
 |[Platform::Collections::VectorView 類別](../cppcx/platform-collections-vectorview-class.md)|代表唯讀元素序列。|  
 |[Platform::Collections::VectorViewIterator 類別](../cppcx/platform-collections-vectorviewiterator-class.md)|表示周遊 `VectorView` 集合的迭代器。|  
   
-## 繼承階層  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)  
   
-## 需求  
- **中繼資料：**platform.winmd  
+### <a name="requirements"></a>需求  
+ **中繼資料：** platform.winmd  
   
- **命名空間：**Platform::Collections  
+ **命名空間：** Platform::Collections  
   
- **編譯器選項：**\/ZW  
+ **編譯器選項：** /ZW  
   
-## 請參閱  
- [\(NOTINBUILD\) Platform 命名空間](http://msdn.microsoft.com/zh-tw/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>請參閱  
+ [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

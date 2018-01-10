@@ -41,11 +41,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8206f239af5ab8be0f20eed0f73b4ad0f1ba7e2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d341aa5af2b16d1a29bc4e3dfe2f97a68b73d6ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="escape-sequences"></a>逸出序列
 由一個反斜線 (**\\**)，後面加上一個字母或數字組合所組成的字元組合，稱為「逸出序列」。 若要表示新行字元、單引號或字元常數中的某些其他字元，您必須使用逸出序列。 逸出序列視為單一字元，因此是有效的字元常數。  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/24/2017
   
  如果反斜線後接著的字元未出現在上表中，編譯器會將這個未定義的字元視為字元本身。 例如，`\c` 會被視為 `c`。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  逸出序列可用來傳送非圖形控制字元至顯示裝置。 例如，在終端機或印表機上，ESC 字元 (**\033**) 通常用來做為控制命令的第一個字元。 有些逸出序列是裝置特定的。 例如，垂直 tab 字元和換頁字元逸出序列 (**\v** 和 **\f**) 不會影響螢幕輸出，但它們可執行適當的印表機操作。  
   
@@ -88,5 +89,5 @@ ms.lasthandoff: 10/24/2017
 ( (exp) ? (void) 0:_assert( #exp, __FILE__, __LINE__ ) )  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 字元常數](../c-language/c-character-constants.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02b91ab17d29463584752a281a0c13c3ee86920a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11f6b7086fb3403402d9a3da47a596c837868d3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="columnnamelengthstatus"></a>COLUMN_NAME_LENGTH_STATUS
 表示資料列集中的特定資料行之繫結的資料列集。 類似於[COLUMN_NAME](../../data/oledb/column-name.md)，只不過此巨集也會使用資料行的長度和資料行狀態。  
@@ -57,7 +60,7 @@ status )
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
  [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   

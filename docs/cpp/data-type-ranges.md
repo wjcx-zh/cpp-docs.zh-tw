@@ -46,11 +46,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>資料類型範圍
 Visual C++ 32 位元和 64 位元編譯器會辨識本文稍後所提供表格中的類型。  
@@ -98,7 +99,7 @@ Visual C++ 32 位元和 64 位元編譯器會辨識本文稍後所提供表格�
 |long long|8|無 (但是相當於 __int64)|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|  
 |unsigned long long|8|無 (但是相當於 unsigned __int64)|0 到 18,446,744,073,709,551,615|  
 |enum|視情況而定|無| |  
-|浮動|4|無|3.4E +/- 38 (7 位數)|  
+|float|4|無|3.4E +/- 38 (7 位數)|  
 |double|8|無|1.7E +/- 308 (15 位數)|  
 |長雙精度|與 double 相同|無|與 double 相同|  
 |wchar_t|2|__wchar_t|0 到 65,535|  
@@ -115,6 +116,6 @@ Visual C++ 32 位元和 64 位元編譯器會辨識本文稍後所提供表格�
   
  列舉類型的範圍會根據語言內容和指定的編譯器旗標而變更。 如需詳細資訊，請參閱 [C 列舉宣告](../c-language/c-enumeration-declarations.md) 和 [列舉](../cpp/enumerations-cpp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [基本類型](../cpp/fundamental-types-cpp.md)

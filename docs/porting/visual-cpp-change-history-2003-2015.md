@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。 
@@ -2879,7 +2880,7 @@ C c;
   
     ```  
   
-     若要在您的程式碼中尋找舊版嘗試最佳化的位置，可使用該版本的編譯器搭配 /W3 編譯器選項一起執行，同時開啟警告 4370。 例如：  
+     若要在您的程式碼中尋找舊版嘗試最佳化的位置，可使用該版本的編譯器搭配 /W3 編譯器選項一起執行，同時開啟警告 4370。 例如:   
   
     ```cpp  
     #pragma warning(default:4370)  
@@ -3521,5 +3522,5 @@ C c;
   
 -   編譯器現在會回報無法存取的程式碼 (C4702)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [Visual Studio 之 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md)

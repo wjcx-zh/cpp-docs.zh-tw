@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d0fc645bdeec7ea9ec6df124279140fcd63f77d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cdf4d877ef1b88826d66e36a7ce24fdcff2cb348
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="continue-statement-c"></a>continue 陳述式 (C)
 `continue` 陳述式會將控制項傳遞至本身所在最靠近的封閉 `do`、`for` 或 `while` 陳述式的下一個反覆項目，並略過 `do`、`for` 或 `while` 陳述式主體中的其餘陳述式。  
@@ -50,5 +51,5 @@ while ( i-- > 0 )
   
  在此範例中，如果 `i` 大於 0，就會執行陳述式主體。 第一個 `f(i)` 會指派給 `x`，而如果 `x` 等於 1，就會執行 `continue` 陳述式。 主體中的其餘陳述式都會加以忽略，並且於迴圈的頂端透過評估迴圈的測試繼續執行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [continue 陳述式](../cpp/continue-statement-cpp.md)

@@ -16,14 +16,15 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eea2e2e723a2437c2e7f711d139a023c7740bb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb9af31a202304e59a8b3050033020e49b3e3fa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-internal-level-declarations"></a>內部層級宣告的儲存類別指定名稱
 您只能在內部層級使用四個 *storage-class-specifier* 終端項當中的任何一個，以進行變數宣告。 如果您省略此類宣告中的 *storage-class-specifier*，預設儲存類別會是 **auto**。因此，C 程式很少使用 **auto** 關鍵字。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 儲存類別](../c-language/c-storage-classes.md)

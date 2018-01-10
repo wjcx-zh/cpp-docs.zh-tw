@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81a5b6476c21ae725e89ecf81f1e05949d3a0107
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab885d5d807fe81b3058d533a70cdbaa9e3e523a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wide-characters"></a>寬字元
 **ANSI 3.1.3.4** 整數字元常數的值，其中含有多於一個字元，或者含有包括多於一個多位元組字元的寬字元常數  
@@ -27,5 +28,5 @@ ms.lasthandoff: 10/24/2017
   
  多位元組字元常數會如上述讀取，並使用 `mbtowc` 執行階段函式轉換為寬字元常數。 如果結果不是有效的寬字元常數，將發出錯誤。 在任何情況下，`mbtowc` 函式檢查的位元組數目都只限於 `MB_CUR_MAX` 的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元](../c-language/characters.md)

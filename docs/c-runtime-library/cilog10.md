@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8eb203750491475b7e615d5f7d3ff940a772f6a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36d2d21a9c533cc569fbe72ee5213d542a4ad618
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cilog10"></a>_CIlog10
 執行堆疊頂端值的 `log10` 運算。  
@@ -52,6 +53,6 @@ void __cdecl _CIlog10();
 ## <a name="requirements"></a>需求  
  **平台：**x86  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [log、logf、log10、log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)

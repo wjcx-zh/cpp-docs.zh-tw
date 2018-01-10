@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 02c1b7de9a8ed5f560a5999af453970785c487f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0899f5f617fd28d121b85183280bd28fe91ee46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="code-pages"></a>字碼頁
 `code page` 是字元集，可包括數字、標點符號和其他字符。 不同語言和地區設定可能會使用不同的字碼頁。 例如，ANSI 字碼頁 1252 用於英文和大部分的歐洲語言；OEM 字碼頁 932 用於日文漢字。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/24/2017
   
 -   "C" 地區設定是透過 ANSI 所定義，以對應至 C 程式傳統上會執行的地區設定。 "C" 地區設定的字碼頁 ("C" 字碼頁) 對應至 ASCII 字元集。 例如，在 "C" 地區設定中，`islower` 只會針對值 0x61 - 0x7A 傳回 true。 在另一個地區設定中，`islower` 可能會針對這些項目傳回 true 以及該地區設定所定義的其他值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [國際化](../c-runtime-library/internationalization.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

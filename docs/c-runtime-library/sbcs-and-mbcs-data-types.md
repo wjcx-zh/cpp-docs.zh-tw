@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>SBCS 和 MBCS 資料類型
 只處理一個多位元組字元或一個位元組多位元組字元的任何 Microsoft `MBCS` 執行階段程式庫常式，都預期 `unsigned int`引數 (其中 0x00 <= 字元值 <= 0xFFFF 和 0x00 <= 位元組值 <= 0xFF )。 在字串內容中處理多位元組位元組或字元的 `MBCS` 常式，預期以 `unsigned char` 指標表示多位元組字元字串。  
@@ -41,6 +42,6 @@ ms.lasthandoff: 10/24/2017
   
 3.  在 TCHAR.H 中使用「類型安全」的靜態連結程式庫函式。 若要這樣做，請在命令列上定義常數 `_NO_INLINING`。 這是最慢、但類型最安全的方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [國際化](../c-runtime-library/internationalization.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

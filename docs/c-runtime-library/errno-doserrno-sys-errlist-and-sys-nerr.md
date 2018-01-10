@@ -30,11 +30,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ae382ff8f7a37754951327eafdad0cec2239faa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 767b7623a231ad01b51bfc60212a23593544df8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 全域巨集，具有程式執行期間所設定的錯誤碼，以及用於顯示的錯誤碼的字串對應項目。  
@@ -117,7 +118,7 @@ ms.lasthandoff: 10/24/2017
   
  `_doserrno`、`_sys_errlist` 和 `_sys_nerr` 是 Microsoft 擴充功能。 如需相容性的詳細資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域變數](../c-runtime-library/global-variables.md)   
  [errno 常數](../c-runtime-library/errno-constants.md)   
  [perror、_wperror](../c-runtime-library/reference/perror-wperror.md)   

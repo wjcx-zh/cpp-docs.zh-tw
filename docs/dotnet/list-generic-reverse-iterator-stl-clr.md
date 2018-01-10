@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 505a00c0a10d35b48c145671ca182849ed727dce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 22117d621cc4fd38823c8764b7f1de8874f2ab0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listgenericreverseiterator-stlclr"></a>list::generic_reverse_iterator (STL/CLR)
 反向迭代器使用容器的泛型介面型別。  
@@ -82,7 +85,7 @@ a c c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
  [list::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)

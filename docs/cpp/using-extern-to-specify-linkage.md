@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- extern
-dev_langs:
-- C++
+f1_keywords: extern
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C++], linkage to non-C++ functions
 - declarations, external
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b17479bfda8dbe009d3b2381afc2d87819811bc5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: db93feb8c8fad13cf8de082858e68b89f93b5323
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-extern-to-specify-linkage"></a>使用 extern 指定連結
 ## <a name="syntax"></a>語法  
@@ -123,7 +120,7 @@ extern "C" int CFunc2(); // Error: not the first declaration of
   
  函式和物件明確宣告為**靜態**複合連結指定名稱的主體內 (**{}**) 會被視為靜態函式或物件; 連結規範會被忽略。 其他函式和物件的行為會就像使用 `extern` 關鍵字宣告一般  (請參閱[使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)如需詳細資訊`extern`關鍵字。)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [extern 儲存類別規範](../c-language/extern-storage-class-specifier.md)   
  [識別項的行為](../c-language/behavior-of-identifiers.md)   

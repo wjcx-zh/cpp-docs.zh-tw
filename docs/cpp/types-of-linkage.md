@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 154c6a1694055a65eed262055997ba88aa07b18c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f71fc6e0d0251db38cd1c3dc1032ba6c71ba3ba4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="types-of-linkage"></a>連結的類型
 物件和函式的名稱在轉譯單位之間共用的方式稱為「連結」(Linkage)。 這些名稱內可以包含：  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/24/2017
   
 -   無連結。在這種情況下，它們會參考唯一實體。 在另一個範圍內的相同名稱可能不會參考相同的物件。 範例為列舉  (不過，請注意，您可以將傳遞沒有連結之物件的指標。 這樣就可以在其他轉譯單位中存取該物件)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式和連結](../cpp/program-and-linkage-cpp.md)

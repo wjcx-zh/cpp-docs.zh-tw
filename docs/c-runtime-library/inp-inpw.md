@@ -31,11 +31,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6973fe6639f5edfa728a862b63fc715c4e9c82fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41df8b1b8220c846e65bab6db71f6e32e023c224
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inp-inpw"></a>inp、inpw
 這些 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) 。  
@@ -44,4 +45,4 @@ ms.lasthandoff: 10/24/2017
 >  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。

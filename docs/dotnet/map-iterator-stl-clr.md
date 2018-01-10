@@ -1,42 +1,42 @@
 ---
-title: "map::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator 成員 [STL/CLR]"
+title: "map:: iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: b2953b9b-0e6d-49f3-a28f-47d04d16d5f6
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5770c2ae9805cccf6da6cf83c96ed9d3e9860cd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# map::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-受控制序列中 iterator 的類型。  
+# <a name="mapiterator-stlclr"></a>map::iterator (STL/CLR)
+受控制序列之迭代器的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## 備註  
- 型別描述可以當做雙向 Iterator 為此控制序列未指定型別 `T1` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T1`，可做為受控制序列的雙向迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_iterator.cpp   
@@ -61,12 +61,15 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::const\_iterator](../dotnet/map-const-iterator-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::const_iterator (STL/CLR)](../dotnet/map-const-iterator-stl-clr.md)

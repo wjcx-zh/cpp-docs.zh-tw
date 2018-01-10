@@ -25,11 +25,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36eed0a5592b41dd4f9f57c1f2f6c395d0bb784a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe7ff6ce073f84a87e2243ab98d3b99af0dfd22c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
 內部 CRT 函式。 擷取執行緒的目前定序字碼頁。  
@@ -50,11 +51,11 @@ UINT ___lc_codepage_func(void);
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`___lc_collate_cp_func`|crt\src\setlocal.h|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
  [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
  [_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   

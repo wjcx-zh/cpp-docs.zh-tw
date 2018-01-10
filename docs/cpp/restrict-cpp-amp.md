@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - cpu_CPP
 - amp_CPP
-dev_langs:
-- C++
-helpviewer_keywords:
-- restrict clause (C++ AMP)
+dev_langs: C++
+helpviewer_keywords: restrict clause (C++ AMP)
 ms.assetid: 07d3291f-7edf-456b-8828-283ac8673661
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 13c07d1bb085663abe9492d92835b9e05b89c742
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60ac40e2cb64c307574d14c1f7cc7a5290c740ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="restrict-c-amp"></a>restrict (C++ AMP)
 限制規範可以套用到函式和 Lambda 宣告。 它會在函式中的程式碼上強制執行限制，以及在使用 C++ Accelerated Massive Parallelism (C++ AMP) 的應用程式中函式的行為上強制執行限制。  
@@ -35,7 +32,7 @@ ms.lasthandoff: 09/25/2017
   
  `restrict` 子句的格式如下：  
   
-|子句|說明|  
+|子句|描述|  
 |------------|-----------------|  
 |`restrict(cpu)`|函式可以使用完整的 C++ 語言。 只有使用 restrict(cpu) 函式宣告的其他函式可以呼叫函式。|  
 |`restrict(amp)`|函式只能使用 C++ AMP 可以加速之 C++ 語言的子集。|  
@@ -54,7 +51,7 @@ ms.lasthandoff: 09/25/2017
   
 -   Lambda 函式無法透過參考方式擷取，也無法擷取指標。  
   
--   參考和單一間接取值指標只支援區域變數、函式引數和傳回類型。  
+-   參考和單一間接取值指標只支援區域變數、函式引數和傳回型別。  
   
 -   不允許使用下列各項：  
   
@@ -116,5 +113,5 @@ void callFunctions() restrict(amp)
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)

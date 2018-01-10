@@ -1,42 +1,45 @@
 ---
-title: "如何：使用 PInvoke 封送處理陣列 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料封送處理 [C++], 陣列"
-  - "Interop [C++], 陣列"
-  - "封送處理 [C++], 陣列"
-  - "平台叫用 [C++], 陣列"
+title: "如何： 使用 PInvoke 封送處理陣列 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling [C++], arrays
+- platform invoke [C++], arrays
+- interop [C++], arrays
+- data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3694d6628005c49cc824e52d710e64e060822f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 PInvoke 封送處理陣列
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題會說明如何使用 .NET Framework Platform Invoke 支援，以 CLR 字串型別 <xref:System.String> 呼叫接受 C\-Style 字串的原生 \(Native\) 函式。  我們鼓勵 Visual C\+\+ 程式設計人員盡可能改用 C\+\+ Interop 功能，因為 P\/Invoke 提供極少的編譯時期錯誤報告，不具型別安全，而且實作時很瑣碎無聊。  如果 Unmanaged API 封裝為 DLL，而且沒有原始程式碼，則 P\/Invoke 是唯一的選擇 \(否則請參閱[使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)\)。  
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>如何：使用 PInvoke 封送處理陣列
+本主題說明如何原生函式接受 C 樣式字串可以使用 CLR 字串型別呼叫<xref:System.String>使用.NET Framework 平台叫用支援。 Visual c + + 程式設計人員會建議 （自動），而是使用 c + + Interop 功能，因為 P/Invoke 提供極少的編譯時間錯誤報告，不是類型安全，就必須等待冗長實作。 如果未受管理的應用程式開發介面會封裝為 DLL 不是可用的原始程式碼，P/Invoke 是唯一的選項 (否則請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md))。  
   
-## 範例  
- 因為原生和 Managed 陣列在記憶體中排列的方式不同，會需要轉換或封送處理 \(Marshaling\) 以便在 Managed\/Unmanaged 界限之間成功地傳遞這些物件。  本主題會示範如何從 Managed 程式碼將具有簡單 \(blitable\) 項目的陣列傳遞至原生函式。  
+## <a name="example"></a>範例  
+ 因為原生和 managed 陣列配置以不同的方式在記憶體中，已成功傳遞的 managed/unmanaged 的界限之間需要轉換，或封送處理。 本主題示範如何簡單 (blitable) 項目的陣列可以傳遞至原生函式從 managed 程式碼。  
   
- <xref:System.Runtime.InteropServices.DllImportAttribute> 屬性 \(Attribute\) 會用來為每個所用到的原生函式建立 Managed 進入點 \(對於 Managed\/Unmanaged 資料封送處理而言通常是如此\)。  對於取用陣列作為引數的函式，必須使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性並且對編譯器 \(Compiler\) 指定資料封送處理的方式。  在下列範例中，<xref:System.Runtime.InteropServices.UnmanagedType> 列舉型別會用來表示 Managed 陣列將會封送處理成 C\-Style 陣列。  
+ 如為 true 的 managed/unmanaged 資料一般情況下，封送處理的<xref:System.Runtime.InteropServices.DllImportAttribute>屬性用來建立將用於每個原生函式的 managed 的進入點。 在陣列當做引數，不接受函式的情況下<xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性必須也用來指定編譯器如何資料會封送處理。 在下列範例中，<xref:System.Runtime.InteropServices.UnmanagedType>列舉型別用來表示，managed 的陣列會封送處理為 C 樣式的陣列。  
   
- 下列程式碼由 Unmanaged 和 Managed 的模組所組成。  Unmanaged 模組是 DLL，定義接受整數陣列的函式。  第二個模組是匯入這個函式的 Managed 命令列應用程式，但是使用 Managed 陣列定義此函式，並使用 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性，指定呼叫時要將陣列轉換為原生陣列。  
+ 下列程式碼是由 unmanaged 和 managed 的模組所組成。 未受管理的模組會定義接受整數的陣列的函式的 DLL。 第二個模組是受管理的命令列應用程式匯入這個函式，但定義方面的受管理的陣列，並使用<xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性來指定陣列應該將轉換成原生陣列時呼叫。  
   
- Managed 模組是使用 \/clr 編譯的，但是 \/clr:pure 也一樣可以執行。  
+ 受管理的模組使用 /clr，但 /clr: pure 的運作方式。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
-```  
+```cpp  
 // TraditionalDll4.cpp  
 // compile with: /LD /EHsc  
 #include <iostream>  
@@ -59,7 +62,7 @@ void TakesAnArray(int len, int a[]) {
 }  
 ```  
   
-```  
+```cpp  
 // MarshalBlitArray.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -84,7 +87,7 @@ int main() {
 }  
 ```  
   
- 請注意，傳統 \#include 指示詞不會將 DLL 的任何部分公開 \(Expose\) 給 Managed 程式碼。  事實上，因為只會在執行階段存取 DLL，使用 <xref:System.Runtime.InteropServices.DllImportAttribute> 匯入之函式所產生的問題，就不會在編譯時期偵測出來。  
+ 請注意 DLL 的任何部分公開給 managed 程式碼，透過傳統 #include 指示詞。 事實上，因為在執行階段只存取 DLL 時，問題的函式匯入與<xref:System.Runtime.InteropServices.DllImportAttribute>將不會在編譯時期偵測。  
   
-## 請參閱  
- [在 C\+\+ 中使用明確的 PInvoke \(DllImport 屬性\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>請參閱  
+ [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

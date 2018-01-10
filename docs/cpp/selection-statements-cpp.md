@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99df6fac2f3ed6dfe52f94d4d0602ebe78ed1e65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db73bb8c974cd8f65a1cb62058e9b2c6a4334dd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="selection-statements-c"></a>選擇陳述式 (C++)
 C + + 選擇陳述式[如果](../cpp/if-else-statement-cpp.md)和[切換](../cpp/switch-statement-cpp.md)，提供了有條件執行的程式碼區段的方法。  
@@ -29,5 +30,5 @@ C + + 選擇陳述式[如果](../cpp/if-else-statement-cpp.md)和[切換](../cpp
   
  請參閱個別主題，了解每個陳述式的語法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)

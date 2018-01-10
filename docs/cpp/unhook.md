@@ -4,29 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - __unhook
 - __unhook_cpp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2b1909cf5d7bde440d434bb44ff2276e68679e78
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1513391aedf9a08cd1ece971d79fd5f6913d406d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unhook"></a>__unhook
 解除處理常式方法與事件的關聯。  
@@ -84,7 +82,7 @@ long  __unhook(
  `receiver` (選擇性)  
  事件接收器類別執行個體的指標。 如果您未指定接收器，則預設值是呼叫 `__unhook` 所在的接收器類別或結構。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  可以在事件接收器類別之外的任何函式範圍中使用，包括 main。  
   
 ## <a name="remarks"></a>備註  
@@ -110,7 +108,7 @@ long  __unhook(
 ## <a name="example"></a>範例  
  請參閱[原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件處理](../cpp/event-handling-in-com.md)範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [event_source](../windows/event-source.md)   
  [event_receiver](../windows/event-receiver.md)   

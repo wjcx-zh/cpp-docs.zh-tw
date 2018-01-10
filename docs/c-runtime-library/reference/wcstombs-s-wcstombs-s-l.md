@@ -40,11 +40,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5f9a386283e38c508c9e46e3302bffeacc981e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b5c57a82bef1a56925b414302fe2017df255ce2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcstombss-wcstombssl"></a>wcstombs_s、_wcstombs_s_l
 
@@ -110,7 +111,7 @@ errno_t _wcstombs_s_l(
   
 ## <a name="return-value"></a>傳回值  
 
-如果成功則為零，失敗則為錯誤碼。  
+如果成功，則為零，如果失敗，則為錯誤碼。  
   
 |錯誤狀況|傳回值和 `errno`|  
 |---------------------|------------------------------|  
@@ -143,17 +144,17 @@ errno_t _wcstombs_s_l(
 > [!IMPORTANT]
 >  請確認*wcstr*和*mbstr*沒有重疊，而且*計數*會正確反映要轉換的寬字元數目。  
   
-`wcstombs_s` 會針對任何與地區設定相關的行為使用目前的地區設定，`_wcstombs_s_l` 與 `wcstombs` 相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+`wcstombs_s` 會針對任何與地區設定相關的行為使用目前的地區設定，`_wcstombs_s_l` 與 `wcstombs` 相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`wcstombs_s`|\<stdlib.h>|  
   
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
 
@@ -200,7 +201,7 @@ Convert wide-character string:
     Multibyte character: Hello, world.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [資料轉換](../../c-runtime-library/data-conversion.md)   
 [地區設定](../../c-runtime-library/locale.md)   

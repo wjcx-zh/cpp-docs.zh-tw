@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - __virtual_inheritance
 - __multiple_inheritance_cpp
 - __single_inheritance
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __single_inheritance keyword [C++]
 - declaring derived classes [C++]
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - derived classes [C++], declaring
 - inheritance, keywords
 ms.assetid: bb810f56-7720-4fea-b8b6-9499edd141df
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6286d8e3082f0a4a3ce3e00fb3de1ad4ca41589a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 442e8958b1d2201d7261242bd9cd90da29a60a62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inheritance-keywords"></a>繼承關鍵字
 **Microsoft 特定的**  
@@ -86,7 +84,7 @@ int S::*p;
 > [!NOTE]
 >  類別成員指標表示法的同一個向前宣告應出現在宣告該類別成員指標的每一個轉譯單位中，而且宣告應在成員指標宣告之前發生。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)

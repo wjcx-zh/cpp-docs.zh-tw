@@ -14,11 +14,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bdcfea2339bfe7aac93192e88a6ec39ce919c596
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 499855ec5052c039e007df8348db094aee356411
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changes-in-constructor-initialization-order"></a>建構函式初始設定順序的變更
 類別建構函式的初始化順序已從 Managed Extensions for c + + Visual c + +。  
@@ -113,7 +116,7 @@ private:
 ## <a name="what-this-means-going-from-managed-extensions-for-c-to-visual-c-2010"></a>此意義從 Managed Extensions for c + + 移至 Visual c + + 2010年  
  在許多情況下類別建構函式的執行順序的變更應該是透明程式設計人員因為基底類別有沒有繼承的類別行為的概念。 不過，如下列程式碼範例所示，繼承類別的建構函式可能會大幅影響時的初始設定清單的值相依於基底類別成員。 當您移動您的程式碼從 Managed Extensions for c + + 的新語法時，請考慮將這類建構移至類別建構函式主體執行都一定時間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [建構函式](../cpp/constructors-cpp.md)   
  

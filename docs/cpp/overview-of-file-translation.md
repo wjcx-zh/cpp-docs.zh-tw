@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b10254ca101bcf19aff3c84abac4a122f242eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a088d2da30aa77f477f3f6e5064b6b98170e953b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-file-translation"></a>檔案轉譯概觀
 C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按下列概念順序轉譯 (實際的順序會依循 "as if" 規則：如果已依照這些步驟進行，則必須進行轉譯)：  
@@ -33,7 +34,7 @@ C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按�
   
 2.  前置處理。 這個轉譯階段會帶入所參考的附屬原始程式檔中`#include`指示詞，會處理 「 字串化 」 和 「 字元化 」 指示詞，並執行語彙基元帶入和巨集展開 (請參閱[前置處理器指示詞](../preprocessor/preprocessor-directives.md)在*前置處理器參考 》*如需詳細資訊)。 前置處理階段產生的結果是一個結合起來，定義一個「轉譯單位」的語彙基元序列。  
   
-     前置處理器指示詞一律會以數字符號開頭 (**#**) 字元 （也就是該行的第一個非泛空白字元字元必須是數字符號）。 指定行上只能有一個前置處理器指示詞。 例如：  
+     前置處理器指示詞一律會以數字符號開頭 (**#**) 字元 （也就是該行的第一個非泛空白字元字元必須是數字符號）。 指定行上只能有一個前置處理器指示詞。 例如:   
   
     ```  
     #include <iostream>  // Include text of iostream in   
@@ -56,5 +57,5 @@ C++ 程式 (類似 C 程式) 包含一個或多個檔案。 這些檔案都按�
   
 -   C 前置處理器無法辨識 c + + 運算子： **。\***，  **-> \*** ，和`::`。 請參閱[運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)和[運算式](../cpp/expressions-cpp.md)，如需運算子的詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08372f43e87ed17bd8d0c905d40a8d2c289df966
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5eac97bb87103bd72dfd721515baf58324fc851f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>資料錄欄位交換：RFX 的運作方式
 本主題說明 RFX 程序。 這是進階主題涵蓋：  
@@ -123,7 +126,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="rfx-deleting-existing-records"></a>RFX： 刪除現有的資料錄  
  當您刪除記錄時，RFX 會將所有的欄位設定為**NULL**提醒，刪除該記錄，並且您必須關閉它。 您不需要任何其他 RFX 順序資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
  [MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   
  [巨集、 全域函式和全域變數](../../mfc/reference/mfc-macros-and-globals.md)  

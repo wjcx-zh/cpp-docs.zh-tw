@@ -24,11 +24,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a655523a22c66d4b255d82d071a4efff29e6a6a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9741286ba4af5820f8d8eebadfd88d3bb14abaef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unary-arithmetic-operators"></a>一元算術運算子
 下列清單中討論 C 的一元加法、算術負數、補數和邏輯負運算子：  
@@ -65,5 +66,5 @@ if( !(x < y) )
   
  如果 `x` 的值大於或等於 `y` 的值，則運算式的結果為 1 (true)。 如果 `x` 小於 `y`，則結果為 0 (false)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)

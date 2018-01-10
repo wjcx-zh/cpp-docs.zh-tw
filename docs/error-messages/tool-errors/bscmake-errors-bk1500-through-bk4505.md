@@ -1,7 +1,7 @@
 ---
 title: "BSCMAKE 錯誤 BK1500 至 bk4505 |Microsoft 文件"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -13,11 +13,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65e34d78a473cc49225456f132be520ea33b887e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4808ff1f1edbeb3cce9a6e1ffb5669f4e186817a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bscmake-errors-bk1500-through-bk4505"></a>BSCMAKE 錯誤 BK1500 至 BK4505
-本章節提供組建工具所產生的錯誤之參考資訊。 若要取得特定錯誤訊息的說明，[輸出] 視窗中的錯誤代碼上按一下滑鼠並按下 F1、 或是輸入中的錯誤號碼**尋找**方塊中的索引。
+
+本節是錯誤的參考和 BSCMAKE 所產生的警告建置工具。
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

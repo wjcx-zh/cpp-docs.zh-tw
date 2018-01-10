@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb870adea1e13a9e97ac0cf36f6eb4960e87cf30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e5883cc7f028c2d64c038a2cdbd9b8365b7e61d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (現代 C++)
 在現代 c + + 程式設計中，標準程式庫包含*智慧型指標*、 用來協助確保程式可用的記憶體和資源流失，和例外狀況之虞。  
@@ -117,7 +118,7 @@ ms.lasthandoff: 10/24/2017
  [CAutoPtrList 類別](../atl/reference/cautoptrlist-class.md)  
  將方法封裝以操作 `CAutoPtr` 節點清單的類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)   

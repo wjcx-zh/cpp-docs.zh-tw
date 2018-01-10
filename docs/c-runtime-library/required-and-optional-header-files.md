@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45e9d2e6940955b07624b89cafd09b7d89d9cd2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dde09f2125b595ffb3d79a69b4755353a0116bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-and-optional-header-files"></a>必要和選擇性標頭檔
 每個執行階段常式的描述都包含一個清單，列出該常式必要和選擇性的 Include (或標頭 (.H)) 檔案。 必須包含必要的標頭檔以取得常式的函式宣告，或是由另一個於內部呼叫的常式所使用的定義。 選擇性標頭檔通常會包含以利用預先定義的常數、類型定義或內嵌巨集。 下表列出一些選擇性標頭檔內容的範例：  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  執行階段程式庫標頭檔會以 ANSI/ISO C 標準的建議樣式提供函式宣告。 編譯器會針對在和常式參考相關聯的函式宣告之後發生的任何常式參考執行類型檢查。 函式宣告對於傳回值的類型不是 `int` (預設值) 的常式格外重要。 對於在其宣告中沒有指定適當傳回值的常式，編譯器會將其傳回值視為 `int`，這可能會造成非預期的結果。 如需詳細資訊，請參閱[類型檢查](../c-runtime-library/type-checking-crt.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

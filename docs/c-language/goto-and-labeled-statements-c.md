@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab5bfa5b145f698b1c93c4a494802cd63bbcfb04
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea0543a13d16850be4259d2d93f763dd0edcbda3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和標記陳述式 (C)
 `goto` 陳述式會將控制項傳輸至標籤。 所指的標籤必須位於相同的函式中，而且只能出現在相同函式中的單獨一個陳述式前面。  
@@ -75,5 +76,5 @@ int main()
   
  在這個範例中，當 `goto` 等於 5 時，`stop` 陳述式會將控制項傳送至標記 `i` 的點。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [陳述式](../c-language/statements-c.md)

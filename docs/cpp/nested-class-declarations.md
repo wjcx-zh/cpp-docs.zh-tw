@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], declaring
 - declarations, class
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c66636f2780e15df83d016b604f78adae7b62143
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 247be4e212efbe2b8061deed200a8350b87fc7a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nested-class-declarations"></a>巢狀類別宣告
 可以在某個類別的範圍內宣告另一個類別。 這種類別稱為「巢狀類別」。 巢狀類別被視為在封入類別的範圍內，可在該範圍內使用。 若要在直接封入範圍以外參考巢狀類別，則必須使用完整名稱。  
@@ -75,7 +73,7 @@ int main()
 > [!NOTE]
 >  巢狀類別只能宣告類別範圍中的類型。 它們不會導致建立巢狀類別中所包含的物件。 上述範例宣告兩個巢狀類別，但不會宣告這些類別類型的任何物件。  
   
- 巢狀類別宣告範圍可視性的例外是同時宣告類型名稱和向前宣告。  在這種情況下，向前宣告所宣告的類別名稱會在封入類別以外顯示，且其範圍定義為最小的封入非類別範圍。  例如:  
+ 巢狀類別宣告範圍可視性的例外是同時宣告類型名稱和向前宣告。  在這種情況下，向前宣告所宣告的類別名稱會在封入類別以外顯示，且其範圍定義為最小的封入非類別範圍。  例如:   
   
 ```  
 // nested_class_declarations_2.cpp  
@@ -215,5 +213,5 @@ int GetExtendedErrorStatus( char *message )
   
  前述介面可讓數個類別藉由傳遞要將錯誤訊息複製到其中的記憶體位置，使用這個函式的服務。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a7f88876aed83dc9a2441142c8707b59387c0ac4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d68559e9248d7123d299f3bf5ee43a9fd05669dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="math-constants"></a>Math 常數
 ## <a name="syntax"></a>語法  
@@ -72,5 +73,5 @@ ms.lasthandoff: 10/24/2017
   
  當您的專案是以發行模式建置時，ATLComTime.h 檔案會包含 math.h。 如果您在同時包含 ATLComTime.h 的專案中使用一或多個數學常數，則必須在包含 ATLComTime.h 之前定義 `_USE_MATH_DEFINES`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域常數](../c-runtime-library/global-constants.md)

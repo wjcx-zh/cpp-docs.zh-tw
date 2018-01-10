@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ab5b54c820095b54be28a5868505d07f9b0e39d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b1ee1c7307f4e19db4ca0b7d03e218b0916538c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>錯誤和例外狀況處理 (現代 C++)
 在現代 c + +，在大部分情況下，報告和處理邏輯錯誤和執行階段錯誤的慣用的方法是使用例外狀況。 堆疊可能包含有要知道如何處理它的內容的函式偵測到錯誤的函式之間的數個函式呼叫時，這是特別有用。 例外狀況所偵測的錯誤，以傳遞到呼叫堆疊資訊的程式碼提供正式的妥善定義的方式。  
@@ -104,7 +105,7 @@ int main()
 ## <a name="exception-specifications-and-noexcept"></a>例外狀況規格與 noexcept  
  例外狀況規格是 c + + 中導入，做為指定的函式可能會擲回的例外狀況的方式。 不過，例外狀況規格證明有問題，在實務上，而且已被取代的 C + + 11 草稿標準。 我們建議您不要使用例外狀況規格，除了`throw()`，表示函式可讓任何逸出的例外狀況。 如果您必須使用類型的例外狀況規格`throw(`*類型*`)`，注意 Visual c + + 偏離標準所規定的方式。 如需詳細資訊，請參閱[例外狀況規格 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`規範做為慣用的替代方式在 C + + 11 引進`throw()`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何： 例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)   
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   

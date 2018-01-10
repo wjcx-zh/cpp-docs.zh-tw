@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cae6e69b62252f506136ecf8b7de03b09777ebf8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6fe5581721dec428480e3640e4875eda20a09b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="elements-of-c"></a>C 的元素
 本節說明 C 程式語言的項目，包括用來建構 C 程式的名稱、數字和字元。 ANSI C 語言將這些元件標記為語彙基元。  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/24/2017
   
  運算子是指定如何操作值的符號 (單一字元和字元組合)。 每個符號會解譯為單一單位，稱為語彙基元。 如需詳細資訊，請參閱[運算子](../c-language/c-operators.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言參考](../c-language/c-language-reference.md)

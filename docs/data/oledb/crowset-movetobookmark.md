@@ -1,71 +1,72 @@
 ---
-title: "CRowset::MoveToBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::MoveToBookmark"
-  - "ATL::CRowset<TAccessor>::MoveToBookmark"
-  - "ATL.CRowset.MoveToBookmark"
-  - "ATL.CRowset<TAccessor>.MoveToBookmark"
-  - "MoveToBookmark"
-  - "CRowset::MoveToBookmark"
-  - "CRowset.MoveToBookmark"
-  - "CRowset<TAccessor>::MoveToBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MoveToBookmark 方法"
+title: "Crowset:: Movetobookmark |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::MoveToBookmark
+- ATL::CRowset<TAccessor>::MoveToBookmark
+- ATL.CRowset.MoveToBookmark
+- ATL.CRowset<TAccessor>.MoveToBookmark
+- MoveToBookmark
+- CRowset::MoveToBookmark
+- CRowset.MoveToBookmark
+- CRowset<TAccessor>::MoveToBookmark
+dev_langs: C++
+helpviewer_keywords: MoveToBookmark method
 ms.assetid: 90124723-8daf-4692-ae2f-0db26b5db920
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 08e570d6d2cbc8c5943ce0591c280b74be573e2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::MoveToBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-擷取書籤指示資料列或資料行中的指定位移 \(`lSkip`\) 從該書籤。  
+# <a name="crowsetmovetobookmark"></a>CRowset::MoveToBookmark
+擷取書籤所標記的資料列或從該書籤位移至指定位置 (`lSkip`) 的資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT MoveToBookmark(   
-   const CBookmarkBase& bookmark,   
-   LONG lSkip = 0    
+      HRESULT MoveToBookmark(   
+   const CBookmarkBase& bookmark,   
+   LONG lSkip = 0    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `bookmark`  
- \[表示您要擷取資料之位置的書籤。  
+ [in] 標記您要從中擷取資料之位置的書籤。  
   
  `lSkip`  
- \[數字計數從書籤的行到目標行。  如果 `lSkip` 是零，將擷取的第一行是書籤的行。  如果 `lSkip` 為 1，將擷取的第一個資料行是資料行在書籤的資料列之後。  如果 `lSkip` 為 \-1，將擷取的第一個資料行是資料行在書籤的資料列之前。  
+ [in] 從書籤到目標資料列的資料列計數。 如果 `lSkip` 為零，將擷取的第一個資料列是已標記書籤的資料列。 如果 `lSkip` 為 1，將擷取的第一個資料列是已標記書籤的資料列之後的資料列。 如果`lSkip`為-1，將擷取的第一個資料列是已標記書籤的資料列之前的資料列。  
   
-## 傳回值  
- 標準版 `HRESULT`  
+## <a name="return-value"></a>傳回值  
+ 標準 `HRESULT`。  
   
-## 備註  
- 這個方法要求選擇性 `IRowsetLocate` 介面，可能不是所有提供者都支援;如果是這種情況，方法會傳回 **E\_NOINTERFACE**。  您也必須設定為 `VARIANT_TRUE` **DBPROP\_IRowsetLocate** 和 **DBPROP\_CANFETCHBACKWARDS** 集合至 `VARIANT_TRUE` 在呼叫以包含資料列集的資料表的 **Open** 或命令。  
+## <a name="remarks"></a>備註  
+ 此方法需要的選擇性介面`IRowsetLocate`，這可能不支援所有提供者; 如果這種情況，方法會傳回**E_NOINTERFACE**。 您也必須設定**DBPROP_IRowsetLocate**至`VARIANT_TRUE`並設定**DBPROP_CANFETCHBACKWARDS**至`VARIANT_TRUE`之前先呼叫**開啟**資料表或命令包含資料列集。  
   
- 如需使用對消費者使用書籤的資訊，請參閱 [使用書籤](../../data/oledb/using-bookmarks.md)。  
+ 使用書籤中取用者的相關資訊，請參閱[使用書籤](../../data/oledb/using-bookmarks.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)   
- [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
- [CRowset::MoveFirst](../../data/oledb/crowset-movefirst.md)   
- [IRowsetLocate::GetRowsAt](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
- [CRowset::MovePrev](../../data/oledb/crowset-moveprev.md)   
+ [Crowset:: Movenext](../../data/oledb/crowset-movenext.md)   
+ [Crowset:: Movefirst](../../data/oledb/crowset-movefirst.md)   
+ [Irowsetlocate:: Getrowsat](https://msdn.microsoft.com/en-us/library/ms723031.aspx)   
+ [Crowset:: Moveprev](../../data/oledb/crowset-moveprev.md)   
  [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)

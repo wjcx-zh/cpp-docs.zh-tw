@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 20025ae47491084436864481357125e741ccc486
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f851fe628b7ac69fe3d327c290881561219a011
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-integer-constants"></a>C 整數常數
 「整數常數」為代表整數值的十進位 (基底 10)、八進位 (基底 8) 或十六進位 (基底 16) 數字。 使用整數常數來表示無法變更的整數值。  
@@ -105,5 +106,5 @@ ms.lasthandoff: 10/24/2017
 0x7dB3 or 0X7DB3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 常數](../c-language/c-constants.md)

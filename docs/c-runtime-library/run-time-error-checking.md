@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bc3f87c5841ce99219ba0d5bac55e70852df632d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 981e8c04b305ccef12a463b0a4defd3017916b82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-error-checking"></a>執行階段錯誤檢查
 C 執行階段程式庫包含支援執行階段錯誤檢查 (RTC) 的函式。 執行階段錯誤檢查可讓您建置您的程式報告特定類型的執行階段錯誤。 您要指定報告錯誤的方式，以及報告哪些類型的錯誤。 如需詳細資訊，請參閱[如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。  
@@ -30,14 +31,14 @@ C 執行階段程式庫包含支援執行階段錯誤檢查 (RTC) 的函式。 �
   
 ### <a name="run-time-error-checking-functions"></a>執行階段錯誤檢查函式  
   
-|函式|用法|  
+|功能|使用|  
 |--------------|---------|  
 |[_RTC_GetErrDesc](../c-runtime-library/reference/rtc-geterrdesc.md)|傳回執行階段錯誤檢查類型的簡短描述。|  
 |[_RTC_NumErrors](../c-runtime-library/reference/rtc-numerrors.md)|傳回執行階段錯誤檢查可以偵測到的錯誤數總計。|  
 |[_RTC_SetErrorFunc](../c-runtime-library/reference/rtc-seterrorfunc.md)|指定函式做為報告執行階段錯誤檢查的處理常式。|  
 |[_RTC_SetErrorType](../c-runtime-library/reference/rtc-seterrortype.md)|將執行階段錯誤檢查所偵測到的錯誤與類型建立關聯。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)   
  [/RTC (執行階段錯誤檢查)](../build/reference/rtc-run-time-error-checks.md)   
  [runtime_checks](../preprocessor/runtime-checks.md)   

@@ -1,72 +1,73 @@
 ---
-title: "ICommandImpl 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandImpl 類別"
+title: "ICommandImpl 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ICommandImpl
+dev_langs: C++
+helpviewer_keywords: ICommandImpl class
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c553effb6ad6a4aa9571eed62f30e4e83910afbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ICommandImpl 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-針對 [ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx) 介面的實作。  
+# <a name="icommandimpl-class"></a>ICommandImpl 類別
+提供實作[ICommand](https://msdn.microsoft.com/en-us/library/ms709737.aspx)介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <class T, class CommandBase = ICommand>   
 class ATL_NO_VTABLE ICommandImpl : public CommandBase  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- 您的類別，衍生自 `ICommandImpl`。  
+ 您的類別，衍生自`ICommandImpl`。  
   
  `CommandBase`  
- 的命令介面。  預設為 `ICommand`。  
+ 命令介面。 預設值為 `ICommand`。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|取消目前的命令執行。|  
-|[取消](../../data/oledb/icommandimpl-cancel.md)|取消目前的命令執行。|  
+|[CancelExecution](../../data/oledb/icommandimpl-cancelexecution.md)|取消目前執行的命令。|  
+|[[取消]](../../data/oledb/icommandimpl-cancel.md)|取消目前執行的命令。|  
 |[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)|建立資料列集物件。|  
 |[執行](../../data/oledb/icommandimpl-execute.md)|執行命令。|  
-|[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|傳回介面指標建立命令的工作階段。|  
+|[GetDBSession](../../data/oledb/icommandimpl-getdbsession.md)|傳回建立命令的工作階段的介面指標。|  
 |[ICommandImpl](../../data/oledb/icommandimpl-icommandimpl.md)|建構函式。|  
   
-### 資料成員  
+### <a name="data-members"></a>資料成員  
   
 |||  
 |-|-|  
-|[m\_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|表示命令是否要取消。|  
-|[m\_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|表示命令是否要取消，在執行時執行的。|  
-|[m\_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|表示命令目前是否正在執行。|  
+|[m_bCancel](../../data/oledb/icommandimpl-m-bcancel.md)|指出是否要取消命令。|  
+|[m_bCancelWhenExecuting](../../data/oledb/icommandimpl-m-bcancelwhenexecuting.md)|指出命令是否要取消時執行。|  
+|[m_bIsExecuting](../../data/oledb/icommandimpl-m-bisexecuting.md)|指出目前是否正在執行的命令。|  
   
-## 備註  
- 在命令物件上必須的介面。  
+## <a name="remarks"></a>備註  
+ Command 物件上的強制介面。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
- [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)
+ [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

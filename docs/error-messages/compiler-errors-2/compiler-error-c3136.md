@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3136
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3136
+f1_keywords: C3136
+dev_langs: C++
+helpviewer_keywords: C3136
 ms.assetid: c77103cd-00f7-408e-b74b-4f8562039d31
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e2b4daa5076a04825cea6a96709f40716f3eaeff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 9e6a8e3c958c6c1293b20451f632910001ef24f2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3136"></a>編譯器錯誤 C3136
 'interface': COM 介面只可以繼承自其他 COM 介面，不是 COM 介面 'interface'。  

@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89cf789143d9b9852d6976cf56c6838797664cf1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bcba7748b8f5f5a413635371f87fabe62469c1a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapoperator-stlclr"></a>map::operator= (STL/CLR)
 取代受控制的序列。  
@@ -79,5 +82,5 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [map (STL/CLR)](../dotnet/map-stl-clr.md)

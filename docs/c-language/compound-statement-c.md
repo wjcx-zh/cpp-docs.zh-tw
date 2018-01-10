@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 369ff1b3097e79fa0da50a82647bbf6ac62464e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9422e3229aa5e800859f50e1ca058e32a4120074
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compound-statement-c"></a>複合陳述式 (C)
 複合陳述式 (也稱為「區塊」) 通常會以另一個陳述式主體的形式出現，例如 **if** 陳述式。 [宣告和類型](../c-language/declarations-and-types.md)會描述可能出現在複合陳述式開頭的宣告形式和意義。  
@@ -60,5 +61,5 @@ if ( i > 0 )
   
  在這個範例中，如果 `i` 大於 0，則複合陳述式內的所有陳述式會依序執行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [陳述式](../c-language/statements-c.md)

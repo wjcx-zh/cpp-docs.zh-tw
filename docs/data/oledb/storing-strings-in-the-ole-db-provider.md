@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de8fdb6583f175505fc6a77070e30412aee38ae8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 11c058bacee52eb2b1df771a27d8695113f1c71d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>將字串儲存於 OLE DB 提供者內
 MyProviderRS.h，在 ATL OLE DB 提供者精靈會建立稱為 「 預設使用者記錄`CWindowsFile`。 若要處理的兩個字串，請修改`CWindowsFile`或加入您自己的使用者記錄，如下列程式碼所示：  
@@ -54,5 +57,5 @@ END_PROVIDER_COLUMN_MAP()
   
  當您已成功測試您的提供者時，您可以藉由實作額外的介面增強其功能。 範例所示[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)

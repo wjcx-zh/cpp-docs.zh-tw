@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffd33877602ebb666ffbd11ff76aa973927f307a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6dd42eae54f61d03d4d490a17cf1282e2d2e51f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>移植到通用 Windows 平台 (C++)
 在本主題中，您可以找到有關如何移植現有 C++ 程式碼到 Windows 10 應用程式平台 (通用 Windows 平台) 的詳細資訊。 *「通用」* (Universal) 一詞表示您的程式碼可以在任何執行 Windows 10 的裝置上執行，包括桌上型電腦、手機、平板電腦及任何執行 Windows 10 的新款裝置。 您可以建立在執行 Windows 10 之任何裝置上順利運作的單一專案和單一 XAML 使用者介面。 您可以在 XAML 中使用動態配置功能，以允許應用程式的 UI 適應不同的顯示器大小。  
@@ -112,6 +113,6 @@ could not find assembly 'platform.winmd': please specify the assembly search pat
   
  若是使用 Visual Studio 建立新的通用 Windows 平台專案，應不會出現此錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++ 移植指南](../porting/porting-to-the-universal-windows-platform-cpp.md)   
  [開發適用於通用 Windows 平台 (UWP) 的應用程式](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

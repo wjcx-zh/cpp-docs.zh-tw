@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3418
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3418
+f1_keywords: C3418
+dev_langs: C++
+helpviewer_keywords: C3418
 ms.assetid: 54042c04-3c45-41c1-bad7-90f9ee05a21b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e36fa3a27a122db715f84405b0484508fb13e8a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 0ae644c17a39e574984dc8bb0689955fd1bef2be
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3418"></a>編譯器錯誤 C3418
 不支援存取規範 'specifier'  

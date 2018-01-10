@@ -1,65 +1,67 @@
 ---
-title: "Interop 的效能考量 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 編譯器選項 [C++], Interop 的效能考量"
-  - "Interop [C++], 效能考量"
-  - "互通性 [C++], 效能考量"
-  - "混合的組件 [C++], 效能考量"
-  - "平台叫用 [C++], 互通性"
+title: "Interop （c + +） 的效能考量 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /clr compiler option [C++], interop performance considerations
+- platform invoke [C++], interoperability
+- interop [C++], performance consideraitons
+- mixed assemblies [C++], performance considerations
+- interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 25d098ebb52809a36735f71eecedcc4c2a186225
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Interop 的效能考量 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題提供能協助您降低 Managed\/Unmanaged Interop 轉換對執行階段效能之影響的方針。  
+# <a name="performance-considerations-for-interop-c"></a>Interop 的效能考量 (C++)
+本主題提供指導方針，以減少對執行階段效能的 managed/unmanaged interop 轉換效果。  
   
- Visual C\+\+ 支援與其他 .NET 語言相同的互通性 \(Interoperability\) 機制，例如 Visual Basic 和 C\# \(P\/Invoke\)，但是也提供 Visual C\+\+ 特有的 Interop 支援 \(C\+\+ Interop\)。  對於影響效能的關鍵應用程式，瞭解每個 Interop 技術對效能的影響是很重要的。  
+ Visual c + + 支援 Visual Basic 和 C# (P/Invoke)，例如其他.NET 語言的交互操作性機制相同，但它也會提供 interop 支援的特定 Visual c + + (c + + interop)。 效能關鍵應用程式，請務必了解每個 interop 技術的效能影響。  
   
- 不管使用的 Interop 技術為何，每次 Managed 函式呼叫 Unmanaged 函式時，都會需要稱為 Thunk 之特殊的轉換順序，反之亦然。  Visual C\+\+ 編譯器會自動插入這些 Thunk，但是請務必注意，這些轉換累積起來，從效能的角度來看是高度耗費資源的。  
+ 不論所使用的 interop 技巧，特殊的轉換順序呼叫 thunk，會需要每次 managed 函式呼叫 unmanaged 的函式，反之亦然。 Visual c + + 編譯器會自動插入這些 thunk，但請務必記住，累積，這些轉換可能會耗用大量的效能。  
   
-## 減少轉換  
- 一個避免或減少 Interop Thunk 成本的方式，是重構使用到的介面，最小化 Managed\/Unmanaged 轉換。  針對繁冗的介面 \(頻繁地在 Managed\/Unmanaged 界限之間呼叫的介面\) 做修改，可以達成大幅度的效能改進。  例如在緊密迴圈中呼叫 Unmanaged 函式的 Managed 函式，就是重構的好目標。  如果迴圈本身移至 Unmanaged 端，或建立 Unmanaged 端呼叫的 Managed 端替代，比方在 Managed 端將資料貯列起來，於迴圈結束後全部一次封送處理 \(Marshaling\) 至 Unmanaged API，則轉換的次數可以大幅降低。  
+## <a name="reducing-transitions"></a>減少轉換  
+ 若要避免或減少 interop thunk 成本的方法之一是重構所涉及的 managed/unmanaged 轉換降到最低的介面。 將目標設為多對話介面，是指涉及經常呼叫的 managed/unmanaged 的界限之間可大幅的效能改進。 Managed 函式呼叫 unmanaged 函式在緊密迴圈中，比方說，是絕佳候選重構。 如果迴圈本身會移至 unmanaged 端，或如果受管理的替代方式，來建立 unmanaged 的呼叫 （也許是在 managed 端佇列的資料，然後封送處理至 unmanaged 的 API 迴圈後一次） 的轉換數目可以降低登ificantly。  
   
-## P\/Invoke 對 C\+\+ Interop  
- 對於 .NET 語言 \(例如 Visual Basic 和 C\#\)，與原生元件互通的建議方法是 P\/Invoke。  因為 .NET Framework 支援 P\/Invoke，所以 Visual C\+\+ 也支援此方法，但是 Visual C\+\+ 也提供自己的互通性支援，稱為 C\+\+ Interop。  C\+\+ Interop 相對於 P\/Invoke 是較佳的方式，因為 P\/Invoke 不具型別安全。  雖然這樣會使錯誤集中在執行階段回報，但是 C\+\+ Interop 相對於 P\/Invoke 也有效能上的優勢。  
+## <a name="pinvoke-vs-c-interop"></a>P/Invoke vs。C++ Interop  
+ 針對.NET 語言，例如 Visual Basic 和 C# 中，與原生元件相互操作的規定的方法是 P/Invoke。 因為.NET Framework 支援 P/Invoke，Visual c + + 也支援，但是 Visual c + + 也有提供自己的互通性支援，指 c + + Interop。 C + + Interop，透過 P/Invoke 因為 P/Invoke 不是類型安全。 如此一來，主要是在執行階段，報告錯誤，但 c + + Interop 也有透過 P/Invoke 的效能優點。  
   
- 每當 Managed 函式呼叫 Unmanaged 函式時，這兩種技術都需要數個動作同時進行：  
+ 這兩種技術需要 managed 函式呼叫 unmanaged 函式時，就可能發生的幾件事：  
   
--   函式呼叫引數從 CLR 封裝處理為原生型別。  
+-   函式呼叫引數會以原生類型，封送處理從 CLR。  
   
--   執行 Managed 至 Unmanaged 的 Thunk。  
+-   執行 managed 至 unmanaged 的 thunk。  
   
--   呼叫 Unmanaged 函式 \(使用原生版本的引數\)。  
+-   Unmanaged 函式呼叫 （使用原生的版本引數）。  
   
--   執行 Unmanaged 至 Managed 的 Thunk。  
+-   執行 unmanaged--受管理的 thunk。  
   
--   傳回型別和任何 "out" 或 "in,out" 引數，從原生型別封送處理至 CLR 型別。  
+-   傳回型別，以及任何 「 出 」 或 「 中，out 」 從原生 CLR 類型會封送處理引數。  
   
- Managed\/Unmanaged Thunk 是讓 Interop 運作的基本條件，但是所需的資料封送處理則取決於使用的資料型別、函式簽章以及資料使用的方式。  
+ Managed/unmanaged 的 thunk 所需的 interop 運作，但資料封送處理所需取決於相關的資料類型、 函式簽章，以及如何使用資料。  
   
- C\+\+ Interop 執行的資料封送處理是極簡形式：參數在 Managed\/Unmanaged 界限之間以位元為單位複製，完全不執行轉換。  對於 P\/Invoke，只有在全部的參數都是簡單的 Blittable 型別時才是如此。  否則 P\/Invoke 會執行非常完整的步驟，將每個 Managed 參數轉換為適當的原生型別。如果引數標記為 "out" 或 "in,out"，也會以相反方向執行此轉換動作。  
+ 資料封送處理由 c + + Interop 是最簡單的可能形式： 參數只會複製的 managed/unmanaged 界限之間位元的方式;在不執行任何轉換。 若為 P/Invoke，則只有如果所有參數都是簡單的則為 true blittable 類型。 否則，P/Invoke 執行非常強大的步驟，將每個受管理的參數轉換成適當的原生類型，反之亦然如果引數會標示為"out"，或"中，out"。  
   
- 換句話說，C\+\+ Interop 使用最快的資料封送處理方式，而 P\/Invoke 使用最完整的方式。  這表示 C\+\+ Interop \(C\+\+ 的典型方式\) 預設提供最佳效能，而程式設計人員則要負責處理這個行為不安全或不適當的地方。  
+ 換句話說，c + + Interop 封送處理資料，可能最快速的方法會使用而使用 P/Invoke 會使用最健全的方法。 這表示 c + + Interop (c + + 的典型方式） 根據預設，提供最佳的效能，而且程式設計人員負責定址，此行為不安全或適當的情況。  
   
- 因此 C\+\+ Interop 會要求資料封送處理必須是明確提供的，但是好處是程式設計人員可以根據資料的本質，自行決定適當的作法和使用方式。  此外，雖然 P\/Invoke 資料封送處理的行為某種程度上可以自訂修改，但是 C\+\+ Interop 讓資料封送處理可以在每次呼叫時自訂。  這是使用 P\/Invoke 時無法做到的。  
+ C + + Interop 因此需要封送處理資料必須明確提供，但的優點是程式設計人員就可以決定適當的資料本質以及它所使用的方式。 此外，雖然的 P/Invoke 資料封送處理行為可以修改在自訂到某個程度，c + + Interop 能以呼叫由呼叫基礎自訂封送處理的資料。 這是不可能使用 P/Invoke。  
   
- 如需 C\+\+ Interop 的詳細資訊，請參閱[使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+ 如需 c + + Interop 的詳細資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
   
-## 請參閱  
- [混合 \(原生和 Managed\) 組件](../dotnet/mixed-native-and-managed-assemblies.md)
+## <a name="see-also"></a>請參閱  
+ [混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)

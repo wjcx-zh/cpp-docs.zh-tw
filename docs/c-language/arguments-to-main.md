@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa4dda9a8735f0b57dd6dcefa0f16774c006da35
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cff2cb402da87cf37d2f63350088ce4256f3b44c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arguments-to-main"></a>main 的引數
 **ANSI 2.1.2.2.1**：main 的引數語意  
@@ -42,5 +43,5 @@ int main( int argc, char *argv[], char *envp[] )
   
  **argc** 和 **argv** 參數可修改，並且會保留在程式啟動和程式終止之間最後儲存的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [環境](../c-language/environment.md)

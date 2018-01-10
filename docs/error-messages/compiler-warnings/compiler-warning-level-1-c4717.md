@@ -1,34 +1,33 @@
 ---
-title: "編譯器警告 (層級 1) C4717 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4717"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4717"
+title: "編譯器警告 （層級 1） C4717 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4717
+dev_langs: C++
+helpviewer_keywords: C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f6f34baa3beb948f60247efcab9818e6fe6ed7f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4717
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 在所有控制路徑上遞迴，函式將導致執行階段堆疊溢位  
+# <a name="compiler-warning-level-1-c4717"></a>編譯器警告 (層級 1) C4717
+'function': 在所有控制路徑上的遞迴，函式會導致執行階段堆疊溢位  
   
- 每一個經過函式的路徑都包含對該函式的呼叫。  由於要結束函式前都會先遞迴呼叫本身，因此函式永遠不會結束。  
+ 透過函式的每個路徑包含函式的呼叫。 因為沒有要結束而不需本身的第一個呼叫的函式以遞迴方式，就會永遠不會結束函式。  
   
- 下列範例會產生 C4717：  
+ 下列範例會產生 C4717:  
   
 ```  
 // C4717.cpp  

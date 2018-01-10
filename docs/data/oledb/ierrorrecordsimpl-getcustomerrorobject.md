@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73babd593359a502d8d12cf1bbfb5a3c6f8c477b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 918c5800d645575f99450b1fbc3b9f2bfb303e20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ierrorrecordsimplgetcustomerrorobject"></a>IErrorRecordsImpl::GetCustomErrorObject
 傳回自訂錯誤物件介面的指標。  
@@ -46,5 +49,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IErrorRecordsImpl 類別](../../data/oledb/ierrorrecordsimpl-class.md)

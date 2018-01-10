@@ -1,33 +1,36 @@
 ---
-title: "屬性索引宣告 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "預設的索引子"
-  - "預設, 索引子"
-  - "索引屬性, C++"
-  - "索引子"
+title: "屬性索引宣告 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- indexers
+- default indexers
+- defaults, indexers
+- indexed properties, C++
 ms.assetid: d898fdbc-2106-4b6a-8c5c-9f511d80fc2f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fbd1158dce82b2cc2ae7d15e7b66d6b9058d8c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 屬性索引宣告
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，用於宣告索引屬性的語法已變更。  
+# <a name="property-index-declaration"></a>屬性索引宣告
+宣告的索引的屬性的語法已從 Managed Extensions for c + + Visual c + +。  
   
- 索引屬性的 Managed Extensions 語言支援有兩個主要缺點，第一個是無法提供類別層級的註標 \(Subscript\)，也就是說，必須提供名稱給所有的索引屬性，因此，可能會無法提供可直接套用至 `Vector` 或 `Matrix` 類別物件的 Managed 註標運算子。  第二個小缺點是，視覺上很難區分屬性與索引屬性的差別，只能藉由查看參數數目來區分。  最後，索引屬性會遭遇到與其他非索引屬性相同的問題，也就是，存取子並非被視為原子單位 \(Atomic Unit\)，而是區分成個別的方法。例如：  
+ 索引屬性的 Managed Extensions 語言支援兩個主要缺點是無法提供類別層級註標。也就是說，所有索引的屬性所提供的名稱，而因此沒有任何方法，例如，以提供可直接套用至受管理的註標運算子`Vector`或`Matrix`類別物件。 第二個小缺點是，以視覺化方式難以區分屬性與索引屬性-參數的數目是唯一的指示。 最後，索引的屬性會受影響的非索引屬性的相同問題-存取子不視為不可部分完成的單位，但分成個別的方法。  例如:   
   
 ```  
 public __gc class Vector;  
@@ -43,7 +46,7 @@ public:
 };  
 ```  
   
- 如您所見，索引子 \(Indexer\) 只會由其他參數來區別，以指定兩個或單一的維度 \(Dimension\) 索引。  在新語法中，索引子是由括號 \(\[,\]\) 後面加上索引子名稱來區別，並指示每個索引的數目及類型：  
+ 您可以在這裡看到，索引子的區別僅在於額外的參數來指定兩個或單一維度的索引。 在新語法中，索引子的括號 （[、]） 的索引子名稱後面，並指出每個索引的類型與數量來區別：  
   
 ```  
 public ref class Vector {};  
@@ -64,7 +67,7 @@ public:
 };  
 ```  
   
- 為了指示可直接套用至新語法中類別物件的類別層級索引子，便會重複使用 `default` 關鍵字代替明確的名稱。  例如：  
+ 若要表示可以直接套用到在新語法中，類別的物件類別層級索引子`default`關鍵字會重複使用明確的名稱取代。 例如:   
   
 ```  
 public ref class Matrix {  
@@ -74,10 +77,10 @@ private:
 public:  
    // ok: class level indexer now  
    //  
-   //     Matrix mat …  
+   //     Matrix mat;  
    //     mat[ 0, 0 ] = 1;   
    //  
-   // invokes the set accessor of the default indexer …  
+   // invokes the set accessor of the default indexer  
   
    property float default [int,int] {  
       float get( int r, int c );  
@@ -91,10 +94,10 @@ public:
 };  
 ```  
   
- 在新語法中，當指定了預設的索引屬性時，就會保留下列兩個名稱：`get_Item` 和 `set_Item`。  這是因為這些是為預設索引屬性所產生的基礎名稱。  
+ 在新語法中，當預設索引的屬性已指定，會保留兩個下列名稱：`get_Item`和`set_Item`。 這是因為這些是基礎產生預設索引屬性的名稱。  
   
  請注意，沒有簡單的索引語法類似於簡單的屬性語法。  
   
-## 請參閱  
- [在類別或介面中的成員宣告 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [如何：使用索引屬性](../misc/how-to-use-indexed-properties.md)
+## <a name="see-also"></a>請參閱  
+ [在類別或介面中的成員宣告 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ 

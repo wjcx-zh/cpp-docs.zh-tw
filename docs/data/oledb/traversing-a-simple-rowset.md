@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f4204027d52a5dfd4d7968732fb4d08328f12ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9f792e7a65a55cb63fb275d4d606a743e00a0e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="traversing-a-simple-rowset"></a>往返簡單資料列集
 下列範例顯示不包含命令的快速簡便的資料庫存取。 下列的消費者程式碼，在 ATL 專案中，從名為的資料表擷取記錄*演出者*在 Microsoft Access 資料庫中使用 Microsoft OLE DB Provider for ODBC。 程式碼會建立[CTable](../../data/oledb/ctable-class.md)資料表物件的存取子，根據使用者資料錄類別`CArtists`。 它會開啟連接、 開啟連線時，工作階段並開啟工作階段上的資料表。  
@@ -70,5 +73,5 @@ BEGIN_COLUMN_MAP(CArtists)
 END_COLUMN_MAP()  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

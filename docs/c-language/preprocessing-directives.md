@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5531254a987e4d8ca72249459dae92dec21f995a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5130f1edcce8491be10c4b94da63bc0aa80768fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="preprocessing-directives"></a>前置處理指示詞
 -   [字元常數和條件式包含](../c-language/character-constants-and-conditional-inclusion.md)  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [預設日期和時間](../c-language/default-date-and-time.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作定義的行為](../c-language/implementation-defined-behavior.md)

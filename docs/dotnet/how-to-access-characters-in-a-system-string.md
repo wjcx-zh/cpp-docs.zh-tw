@@ -1,37 +1,40 @@
 ---
-title: "如何：存取 System::String 中的字元 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "字元 [C++], 在 System::String 中存取"
-  - "範例 [C++], 字串"
-  - "字串 [C++], 存取字元"
+title: "如何： 存取 system:: string 中的字元 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- characters [C++], accessing in System::String
+- examples [C++], strings
+- strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 888370cac57025418bc70b322703d8569a4be3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：存取 System::String 中的字元
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可以存取 <xref:System.String> 物件的字元，以進行使用 `wchar_t*` 字串之 Unmanaged 函式的高效能呼叫。  此方法會產生內部指標，指向 <xref:System.String> 物件的第一個字元。  可以直接使用這個指標，或 Pin 並傳遞至使用一般 `wchar_t` 字串的函式。  
+# <a name="how-to-access-characters-in-a-systemstring"></a>如何：存取 System::String 中的字元
+您可以存取的字元<xref:System.String>物件的未受管理的高效能呼叫函式採用`wchar_t*`字串。 這個方法會產生的第一個字元的內部指標<xref:System.String>物件。 此指標可以可直接操作或釘選並傳遞至函式必須要有一般`wchar_t`字串。  
   
-## 範例  
- `PtrToStringChars` 會傳回 <xref:System.Char>，這是內部指標 \(也稱為 `byref`\)。  因此會適用於記憶體回收。  您不需要 Pin 這個指標，除非要傳遞至原生 \(Native\) 函式。  
+## <a name="example"></a>範例  
+ `PtrToStringChars`傳回<xref:System.Char>，這是內部指標 (也稱為`byref`)。 因此，它是受記憶體回收限制。 您不需要釘選此指標，除非您打算將它傳遞至原生函式。  
   
- 請考慮下列程式碼：不需要 Pin，因為 `ppchar` 是內部指標，如果記憶體回收行程移動此指標所指向的字串，則也會更新 `ppchar`。  若不使用 [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md)，程式碼還是可以運作，而且不會有 Pin 所導致的潛在效能影響。  
+ 請考慮下列程式碼：  Pin 不需要因為`ppchar`內部指標，且如果記憶體回收行程會移動它所指向的字串，它也會更新`ppchar`。 不含[pin_ptr (C + + /CLI)](../windows/pin-ptr-cpp-cli.md)，程式碼將會運作，而且不具有可能造成的效能衝擊釘選。  
   
- 如果您將 `ppchar`  傳遞至原生函式，則它必須是 Pin 指標，而記憶體回收行程會無法更新 Unmanaged 堆疊框架上的任何指標。  
+ 如果您要傳入`ppchar`原生函式，則它必須是 pin 指標，記憶體回收行程將無法更新任何 unmanaged 的堆疊框架上的指標。  
   
 ```  
 // PtrToStringChars.cpp  
@@ -49,9 +52,12 @@ int main() {
 }  
 ```  
   
-  **abcdefg**   
-## 範例  
- 這個範例會示範需要 Pin 的地方。  
+```Output  
+abcdefg  
+```  
+  
+## <a name="example"></a>範例  
+ 此範例所示釘選需要的位置。  
   
 ```  
 // PtrToStringChars_2.cpp  
@@ -74,9 +80,12 @@ int main() {
 }  
 ```  
   
- **7**   
-## 範例  
- 內部指標具有所有的原生 C\+\+ 指標的屬性。  例如，您可以使用這個指標逐一查看連結的資料結構，並且只使用一個指標來進行插入和刪除：  
+```Output  
+7  
+```  
+  
+## <a name="example"></a>範例  
+ 內部指標具有原生 c + + 指標的所有屬性。 例如，使用連結的資料結構並進行插入和刪除使用只有一個指標：  
   
 ```  
 // PtrToStringChars_3.cpp  
@@ -98,5 +107,5 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

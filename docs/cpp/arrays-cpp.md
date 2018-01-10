@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c"></a>陣列 (C++)
 陣列是同類物件的集合。 最簡單的陣列案例就是向量，可以依照下列順序宣告：  
@@ -176,5 +177,5 @@ The minimum cost to Market 3 is: 17.29
 ## <a name="comments"></a>註解  
  若撰寫 `FindMinToMkt` 函式，加入新的工廠時就不需要變更任何程式碼，只需要重新編譯。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  

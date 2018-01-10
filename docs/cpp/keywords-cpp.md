@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: dd09e3b7ca574203b381edb524037d5f462b5ad1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-c"></a>關鍵字 （c + +）
 關鍵字是具有特殊意義的預先定義保留識別項。 您不能在程式中將關鍵字當做識別項使用。 下列是 Microsoft C++ 的保留關鍵字。 名稱前面有底線的就是 Microsoft 擴充功能。  
@@ -54,7 +52,7 @@ ms.lasthandoff: 09/25/2017
 |[break](../cpp/break-statement-cpp.md)|[case](../cpp/switch-statement-cpp.md)|[catch](../cpp/try-throw-and-catch-statements-cpp.md)|  
 |[char](../cpp/fundamental-types-cpp.md)|[class](../cpp/class-cpp.md)|[const](../cpp/const-cpp.md)|  
 |[const_cast](../cpp/const-cast-operator.md)|[continue](../cpp/continue-statement-cpp.md)|[decltype](../cpp/decltype-cpp.md)|  
-|[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[刪除](../cpp/delete-operator-cpp.md)|  
+|[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[delete](../cpp/delete-operator-cpp.md)|  
 |[已被取代](../cpp/deprecated-cpp.md) <sup>1</sup>|[dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[dllimport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
 |[do](../cpp/do-while-statement-cpp.md)|[double](../cpp/fundamental-types-cpp.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|  
 |[else](../cpp/if-else-statement-cpp.md)|[enum](../cpp/enumerations-cpp.md)|[列舉類別](../windows/enum-class-cpp-component-extensions.md)|  
@@ -103,9 +101,8 @@ ms.lasthandoff: 09/25/2017
   
  `__based` 關鍵字用於 32 位元和 64 位元目標編譯時有所限制。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)   
  [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
-

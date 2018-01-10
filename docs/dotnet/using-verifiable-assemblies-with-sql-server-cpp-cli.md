@@ -14,11 +14,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c102d06e360c97f5c86e613ece869d4d38c4fc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d03d54dd52f95f3fbba35bb896594e90aa92e867
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>使用可驗證的組件搭配 SQL Server (C++/CLI)
 擴充預存程序，封裝成動態連結程式庫 (Dll)，提供方法來擴充 SQL Server 功能，透過使用 Visual c + + 開發的函式。 擴充預存程序會實作為 Dll 內的函式。 除了函數以外，擴充預存程序也可以定義[使用者定義型別](../cpp/classes-and-structs-cpp.md)和[彙總函式](http://msdn.microsoft.com/en-us/de255454-f45e-4281-81f9-bc61893ac5da)（例如，SUM 或 AVG）。  
@@ -82,6 +85,6 @@ go
 sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何： 移轉至 /clr: safe (C + + /CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)   
  [類別和結構](../cpp/classes-and-structs-cpp.md)

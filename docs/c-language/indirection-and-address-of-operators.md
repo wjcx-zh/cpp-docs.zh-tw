@@ -26,11 +26,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85d2510658bdf534f25ccc3efc29c88da1c93eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 715221da8ea960f19e9c4ab0e386afc61c3439fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-and-address-of-operators"></a>間接取值和傳址運算子
 間接取值運算子 (**\***) 會透過指標間接存取值。 運算元必須是指標值。 運算的結果為由運算元定址的值，即其運算元指向位址的值。 結果的類型是運算元所定址的類型。  
@@ -92,6 +93,6 @@ int  *pround  = &roundup;
   
  宣告 `roundup` 函式後，就會宣告及初始化 `roundup` 的兩個指標。 第一個指標 (`proundup`) 只使用函式的名稱初始化，而第二個指標 (`pround`) 則在初始化時使用傳址運算子。 兩個初始化相同。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [間接取值運算子：*](../cpp/indirection-operator-star.md)   
  [傳址運算子：&](../cpp/address-of-operator-amp.md)

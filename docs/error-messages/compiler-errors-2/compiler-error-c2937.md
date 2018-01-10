@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2937
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2937
+f1_keywords: C2937
+dev_langs: C++
+helpviewer_keywords: C2937
 ms.assetid: 95671ca3-79f7-4b56-a5f2-a92296da1629
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a82068c4994fa757a5345336b5132f4e64c76309
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f741a47699263eed55fd8984b9a8cc3e2a96b4fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2937"></a>編譯器錯誤 C2937
 'class': type-class-id 重複定義為全域 typedef  

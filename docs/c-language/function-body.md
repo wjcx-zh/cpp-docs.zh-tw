@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30ad1b016e0ab4814e0ac6f6f4627cdf265f59b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0c85ecf0752ff34bf5b61e42309360f2bc4d448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-body"></a>函式主體
 「函式主體」是複合陳述式，其中包含指定函式功能的陳述式。  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/24/2017
   
  如果函式應傳回值，必須執行包含運算式的 `return` 陳述式。 如果未執行 `return` 陳述式或 `return` 陳述式不包含運算式，則函式的傳回值會是未定義的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 函式定義](../c-language/c-function-definitions.md)

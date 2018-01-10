@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - __finally_cpp
 - __try_cpp
 - __finally
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - __try keyword [C++]
 - __finally keyword [C++]
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5bfaa7d2a2f75fa479f135a61c15f9fcf3bbf5ca
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c57676cace8451de266d30d4c146e3ae0c3cb1b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 **Microsoft 特定的**  
@@ -67,7 +65,7 @@ __finally {
   
  `__try` 子句後面的複合陳述式是保護的區段。 `__finally` 子句後面的複合陳述式則是終止處理常式。 處理常式會指定一組當保護區段結束時執行的動作，不管保護的區段是因例外狀況 (異常終止) 而結束，或是依標準的執行順序 (正常終止) 而結束。  
   
- 此時控制項會經由簡單的循序執行 (正常執行) 到達 `__try` 陳述式。 當控制項進入 `__try` 時，與其關聯的處理常式會變成作用中。 如果控制流程到達 try 區塊的結尾，執行程序如下所示：  
+ 此時控制權會經由簡單的循序執行 (正常執行) 到達 `__try` 陳述式。 當控制項進入 `__try` 時，與其關聯的處理常式會變成作用中。 如果控制流程到達 try 區塊的結尾，執行程序如下所示：  
   
 1.  已叫用終止處理常式。  
   
@@ -79,7 +77,7 @@ __finally {
   
  例如，假設有一系列的函式呼叫連結了函式 A 與函式 D，如下圖所示。 每個函式都具有一個終止處理常式。 如果例外狀況在函式 D 中引發，並在函式 A 中處理，則會在系統回溯堆疊時，依此順序呼叫終止處理常式：D、C、B。  
   
- ![終止 & #45 順序，則處理常式執行](../cpp/media/vc38cx1.gif "vc38CX1")  
+ ![終止 &#45;順序，則處理常式執行](../cpp/media/vc38cx1.gif "vc38CX1")  
 終止處理常式的執行順序  
   
 > [!NOTE]
@@ -97,9 +95,9 @@ __finally {
   
  如果處理序在執行 `try-finally` 陳述式的中途遭到刪除，則不會呼叫終止處理常式。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)   
  [結構化的例外處理 （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   

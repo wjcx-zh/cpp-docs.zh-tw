@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2681
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2681
+f1_keywords: C2681
+dev_langs: C++
+helpviewer_keywords: C2681
 ms.assetid: eb42da6d-8d2c-43fd-986b-e73e2b004885
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ebb9f16375ccde7e684cdeac14116657c1495bda
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 9978a520b4682e4e2c7c4856d4e42675be0ab901
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2681"></a>編譯器錯誤 C2681
 'type': 無效的運算式型別名稱  

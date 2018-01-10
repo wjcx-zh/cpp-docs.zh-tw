@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 803a455341f59aff1a0a0d09c63230a9bc6083d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 622d50db55843b6c140ba4eee98885ee60180020
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="advanced-provider-techniques"></a>進階的提供者技術
 如需進階的提供者技術的詳細資訊，請參閱下列主題：  
@@ -33,6 +36,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [OLE DB 資源共用和服務](../../data/oledb/ole-db-resource-pooling-and-services.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)   
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

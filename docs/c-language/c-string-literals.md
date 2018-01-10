@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffce371c2d8af4d0153db4ff4d032e878eda4a64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0be3ee70ef708441d20fdbbc14f25f5102d734a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-string-literals"></a>C 字串常值
 「字串常值」是以雙引號 (**" "**) 括住、來自來源字元集的一連串字元。 字串常值用於表示代表一連串字元，結合在一起會構成 Null 結束字串。 寬字串常值的前面一律要加上字母 **L**。  
@@ -50,5 +51,5 @@ char *amessage = "This is a string literal.";
   
  [逸出序列](../c-language/escape-sequences.md)表中列出的所有逸出代碼在字串常值中都是有效的。 若要在字串常值中表示雙引號，請使用逸出序列 **\\"**。 單引號 (**'**) 可以不使用逸出序列表示。 反斜線 (**\\**) 出現在字串內時，後面必須接著第二條反斜線 (**\\\\**)。 反斜線出現在行尾時，一律解譯為行接續字元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 的元素](../c-language/elements-of-c.md)

@@ -1,37 +1,39 @@
 ---
-title: "強式名稱組件 (組件簽署) (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], 組件簽署"
-  - "組件 [C++]"
-  - "組件 [C++], 簽署"
-  - "連結器 [C++], 組件簽署"
-  - "簽署組件"
-  - "強式名稱組件 [C++]"
+title: "強式名稱組件 （組件簽署） (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- assemblies [C++]
+- signing assemblies
+- .NET Framework [C++], assembly signing
+- assemblies [C++], signing
+- linker [C++], assembly signing
+- strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2099389131145838a70b579053c65698dbc3a857
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 強式名稱組件 (組件簽署) (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題討論如何簽署組件 \(Assembly\)，通常指的是提供強式名稱給組件。  
+# <a name="strong-name-assemblies-assembly-signing-ccli"></a>強式名稱組件 (組件簽署) (C++/CLI)
+本主題討論如何登入您的組件，通常稱為賦予您的組件強式名稱。  
   
-## 備註  
- 當使用 Visual C\+\+ 時，請使用連結器選項來簽署組件，以避免在組件簽署時發生與 CLR 屬性有關的問題：  
+## <a name="remarks"></a>備註  
+ 當使用 Visual c + +，使用連結器選項來簽署組件，以避免與 CLR 屬性，以簽署組件相關的問題：  
   
 -   <xref:System.Reflection.AssemblyDelaySignAttribute>  
   
@@ -39,21 +41,21 @@ manager: "ghogen"
   
 -   <xref:System.Reflection.AssemblyKeyNameAttribute>  
   
- 之所以不使用屬性，是因為在組件中繼資料中看得到金鑰名稱，而如果檔案名稱含有機密資訊，就可能造成安全性的風險。  此外，如果您使用 CLR 屬性提供強式名稱給組件，然後在組件上執行類似 mt.exe 的事後處理工具，則 Visual C\+\+ 開發環境所使用的建置處理序將會使簽署組件的金鑰失效。  
+ 不使用屬性的原因包括索引鍵的名稱會出現在組件中繼資料，可能會有安全性風險，如果檔案名稱中包含機密資訊的事實。 此外，使用 Visual c + + 開發環境的建置程序會導致無效的索引鍵，如果您使用 CLR 屬性，來為組件提供強式名稱，然後執行組件上的 後置處理這類工具 mt.exe，組件簽署的。  
   
- 如果要在命令列上建置，請使用連結器選項簽署組件，然後執行事後處理工具 \(例如，mt.exe\)，您將會需要使用 sn.exe 重新簽署組件。  或者，您也可以建置並延遲簽署組件，並在執行事後處理工具之後，再完成簽署動作。  
+ 如果您在命令列建置，用以簽署組件連結器選項，然後再執行後置處理這類工具 （mt.exe)，您必須重新簽署組件使用 sn.exe。 或者，您可以建置並延遲簽署組件以及之後執行後置處理的工具，就可以完成的簽章。  
   
- 如果您在開發環境中建置時使用簽署屬性，您可以在建置後事件中明確呼叫 sn.exe \([Sn.exe \(Strong Name Tool\)](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md)\)，以成功簽署組件。  如需詳細資訊，請參閱[指定建置事件](../ide/specifying-build-events.md)。  如果您使用屬性和建置後事件，則與使用連結器選項相較之下，可能會需要較少的建置時間。  
+ 如果您使用的簽章的屬性，在開發環境中建置時，您可以藉由明確地呼叫 sn.exe 成功簽署組件 ([Sn.exe （強式名稱工具）](/dotnet/framework/tools/sn-exe-strong-name-tool)) 中建置後事件。 如需詳細資訊，請參閱[指定建置事件](../ide/specifying-build-events.md)。 如果您使用屬性和建置後事件，相較於使用連結器選項，建置時間可能小於。  
   
- 下列連結器選項支援組件簽署：  
+ 下列連結器選項支援簽署的組件：  
   
--   [\/DELAYSIGN \(部分簽署組件\)](../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN （部分簽署組件）](../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [\/KEYFILE \(指定金鑰或金鑰組以簽署組件\)](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE （指定金鑰或金鑰組簽署組件）](../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [\/KEYCONTAINER \(指定金鑰容器以簽署組件\)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER （指定金鑰容器以簽署組件）](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
- 如需強式組件的詳細資訊，請參閱[建立和使用強式名稱的組件](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md)。  
+ 如需有關強式組件的詳細資訊，請參閱[Creating and using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)。  
   
-## 請參閱  
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

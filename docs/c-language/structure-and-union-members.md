@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a736a1e66fd857b7d959279a6b44a6d0f9ebd6f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2183aead53ee02f36bc982e4f33ad174346da5f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-and-union-members"></a>結構和等位成員
 「成員選取運算式」(Member-selection Expression) 會參考結構和等位的成員。 這類運算式具有所選取成員的值和類型。  
@@ -105,5 +106,5 @@ list[8].b = 12;
   
  這個陳述式將說明如何從結構陣列選取個別結構成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [成員存取運算子：. 和 ->](../cpp/member-access-operators-dot-and.md)

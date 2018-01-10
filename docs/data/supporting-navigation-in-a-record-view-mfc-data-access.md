@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 485d37c06624ae5ee534480b8f16bb94dad6d94f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 12ab065f0635996f495efca4853d829259242170
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-navigation-in-a-record-view--mfc-data-access"></a>支援記錄檢視的巡覽 (MFC 資料存取)
 本主題說明如何支援在記錄間移動您[CRecordView](../mfc/reference/crecordview-class.md)類別，包括下列資訊：  
@@ -30,6 +33,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用者介面更新處理常式，如捲動](../data/user-interface-updating-for-record-views-mfc-data-access.md)命令。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄檢視 （MFC 資料存取）](../data/record-views-mfc-data-access.md)   
  [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2f10c9815a78655857893becbfb9119e70dd378
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a276d13172b675cc6856e726cd7139e36fa97d41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typename"></a>typename
 在樣板定義中提供提示給編譯器未知的識別項是型別。 在樣板參數清單中，用來指定的型別參數上。  
@@ -66,6 +67,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [範本](../cpp/templates-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)

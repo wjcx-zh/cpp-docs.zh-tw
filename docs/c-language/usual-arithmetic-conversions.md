@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66736e9b131725475d6f10f4a332edaa980a54f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a73da6d96b0dc03fa3f4c4807d6a2dff4fef2879
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="usual-arithmetic-conversions"></a>一般算術轉換
 大部分的 C 運算子會執行類型轉換，將運算式的運算元轉換為一般類型，或是將短值擴充為電腦作業中使用的整數大小。 C 運算子執行的轉換取決於特定運算子與運算元的類型。 不過，許多運算子會對整數和浮動類型的運算元執行類似轉換。 這些轉換稱為「算術轉換」。 將運算元的值轉換成相容的類型並不會變更其值。  
@@ -67,5 +68,5 @@ dVal = ulVal + fVal; /* ulVal converted to float
                       */   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 運算子](../c-language/c-operators.md)

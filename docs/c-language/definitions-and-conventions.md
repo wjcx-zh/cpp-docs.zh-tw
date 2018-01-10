@@ -14,18 +14,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fcb72c4e001a087b49967c64b10974ee41cc49ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02a6cc8ffcb5748544191673de8f07e87449e806
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definitions-and-conventions"></a>定義和慣例
 終端是語法定義的端點。 沒有其他解決方式。 終端包括一組保留字和使用者定義的識別項。  
   
  非終端是語法中的預留位置，會在此語法摘要中的其他地方定義。 定義可以是遞迴式。  
   
- 選擇性的元件會以下標的 opt 表示。 例如：  
+ 選擇性的元件會以下標的 opt 表示。 例如，套用至物件的  
   
 ```  
   
@@ -37,7 +38,7 @@ expression <SUB>opt</SUB> }
   
  語法慣例會針對語法的不同元件使用不同的字型屬性。 符號和字型如下：  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |*nonterminal*|斜體類型表示非終端項。|  
 |**const**|粗體類型的終端項為必須依下述方式輸入的常值保留字和符號。 此內容中的字元一律區分大小寫。|  
@@ -46,5 +47,5 @@ expression <SUB>opt</SUB> }
   
  接著非終端項的冒號 (**:**) 會引入其定義。 除非前面加上「one of」字樣，否則替代定義另列於其他行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言語法摘要](../c-language/c-language-syntax-summary.md)

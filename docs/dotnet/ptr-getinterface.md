@@ -1,52 +1,54 @@
 ---
-title: "ptr::GetInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::GetInterface"
-  - "msclr::com::ptr::GetInterface"
-  - "GetInterface"
-  - "msclr.com.ptr.GetInterface"
-  - "ptr.GetInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInterface 方法"
+title: "ptr::GetInterface |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::GetInterface
+- msclr::com::ptr::GetInterface
+- GetInterface
+- msclr.com.ptr.GetInterface
+- ptr.GetInterface
+dev_langs: C++
+helpviewer_keywords: GetInterface method
 ms.assetid: d85553ec-fb88-4fd6-9df2-ddcaa8b2dc70
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 286a0dfa19d5d18d76dea1164d9d038667e1ef57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::GetInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-將指標傳回擁有的 COM 物件。  
+# <a name="ptrgetinterface"></a>ptr::GetInterface
+傳回擁有的 COM 物件的指標。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _interface_type * GetInterface();  
 ```  
   
-## 傳回值  
- 對主控 COM 物件的指標。  
+## <a name="return-value"></a>傳回值  
+ 擁有的 COM 物件的指標。  
   
-## 例外狀況  
- 在內部，呼叫 `QueryInterface` 所擁有的 COM 物件，以及任何錯誤的 `HRESULT` 轉換為例外狀況的 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
+## <a name="exceptions"></a>例外狀況  
+ 就內部而言，`QueryInterface`上擁有的 COM 物件和任何錯誤呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
   
-## 備註  
- `com::ptr` 將 COM 物件的參考表示呼叫端的同時保留它在 COM 物件的參考。  呼叫端必須最後釋放所傳回之物件的參考或不會終結。  
+## <a name="remarks"></a>備註  
+ `com::ptr`上代表呼叫新增 COM 物件的參考，也可以維持其本身參考 COM 物件上。 呼叫端必須發行最終版本上傳回的物件參考，或將永遠不會終結。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。  `GetDocument` 成員函式會使用 `GetInterface` 將指標傳回至 COM 物件。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `GetDocument`成員函式使用`GetInterface`来傳回的 COM 物件的指標。  
   
 ```  
 // comptr_getinterface.cpp  
@@ -162,12 +164,15 @@ int main() {
 }  
 ```  
   
-  **\<wordpersnickety\>\<\/文字\>**   
-## 需求  
- **標頭檔** \<msclr \\ com \\ ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
   
- **命名空間** msclr::com  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
-## 請參閱  
+ **命名空間**msclr::com  
+  
+## <a name="see-also"></a>請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::QueryInterface](../dotnet/ptr-queryinterface.md)

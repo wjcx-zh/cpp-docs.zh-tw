@@ -1,41 +1,42 @@
 ---
-title: "list::const_reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::const_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reference 成員 [STL/CLR]"
+title: "list:: const_reference (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::const_reference
+dev_langs: C++
+helpviewer_keywords: const_reference member [STL/CLR]
 ms.assetid: bd8f6411-b8e4-4597-abd5-c0eabdf36f64
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ebd217431ce43fdb74d805988f910036706091d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::const_reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listconstreference-stlclr"></a>list::const_reference (STL/CLR)
 項目的常數參考類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef value_type% const_reference;  
 ```  
   
-## 備註  
- 型別描述之項目的常數參考。  
+## <a name="remarks"></a>備註  
+ 此類型描述項目的常數參考。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_const_reference.cpp   
@@ -62,13 +63,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::reference](../dotnet/list-reference-stl-clr.md)   
- [list::value\_type](../dotnet/list-value-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)   
+ [list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)

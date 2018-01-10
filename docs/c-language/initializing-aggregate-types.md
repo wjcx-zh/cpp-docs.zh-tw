@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a50d9624c617904144ba9173a5e7fa0ce2064508
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8656d1c9f5f08e8736ee83705ea2daf9031c2446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-aggregate-types"></a>初始化彙總類型
 「彙總」類型是一種結構、等位或陣列類型。 如果彙總類型包含彙總類型的成員，則會以遞迴方式套用初始化規則。  
@@ -63,7 +64,7 @@ int x[ ] = { 0, 1, 2 }
   
  陣列的大小上限是由 **size_t** 所定義。 **size_t** 定義在標頭檔 STDDEF.H 中，是一個範圍從 0x00000000 到 0x7CFFFFFF 的 `unsigned int`。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
 ## <a name="examples"></a>範例  
  這個範例將示範陣列的初始設定式。  
@@ -159,5 +160,5 @@ union
   
  這個範例中的等位變數 `y` 會初始化。 等位的第一個項目是陣列，因此初始設定式是彙總初始設定式。 初始設定式清單 `{'1'}` 會將值指派給陣列的第一列。 由於清單中只有一個值，因此第一行中的元素會初始化為 `1` 字元，而根據預設，該列中的其餘兩個元素會初始化為 0 值。 同樣地，`x` 中第二列的第一個元素會初始化為 `4` 字元，該列中的其餘兩個元素則會初始化為 0 值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [初始化](../c-language/initialization.md)

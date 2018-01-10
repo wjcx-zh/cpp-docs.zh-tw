@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d6e5ea4e5f8bae3fda190ac7a7136035aea0c948
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 243956f1d85b07b5d5b810ebfd112b2cbfe16242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-printed-by-the-assert-function"></a>assert 函式所列印的診斷
 **ANSI 4.2**：由 **assert** 函式所列印的診斷，以及該函式的終止行為  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  其中 filename 是原始程式檔的名稱，而 linenumber 是原始程式檔中發生失敗的判斷提示行號。 如果運算式為 true (非零)，則不會採取任何動作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式庫函式](../c-language/library-functions.md)

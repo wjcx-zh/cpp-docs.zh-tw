@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2e8a5783a89bc0a9d3bfd8ea9ff0318b894763e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bea07ed3139240279848d94184564ec821a8cd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lvalue-reference-declarator-amp"></a>左值參考宣告子：&amp;
 保存物件的位址，但語法上的行為與物件相似。  
@@ -78,7 +79,7 @@ int main()
 Bill is 40  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [參考](../cpp/references-cpp.md)   
  [參考類型函式引數](../cpp/reference-type-function-arguments.md)   
  [參考類型函式傳回](../cpp/reference-type-function-returns.md)   

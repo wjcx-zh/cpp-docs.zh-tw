@@ -11,11 +11,12 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c0fe11f502fbfedda226e1d699a2822bdfd676a
-ms.sourcegitcommit: 78f3f8208d49b7c1d87f4240f4a1496b7c29333e
+ms.workload: cplusplus
+ms.openlocfilehash: 3a1010d7061fb8df20cc821e26e903e356050850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-and-155improvements155"></a>Visual Studio 2017 15.0、[15.3](#improvements_153) 和 [15.5](#improvements_155) 版中的 C++ 一致性改善。
 
@@ -1171,5 +1172,5 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [Visual C++ 語言一致性](visual-cpp-language-conformance.md)  

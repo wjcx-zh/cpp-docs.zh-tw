@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb8ee6db5f75a71e11a0b3dbdbca1bc6c077c3a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 444d89833d84f23099ff0de8bce29bfc9d0a1344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="service-map-macros"></a>服務對應巨集
 這些巨集會定義服務對應和項目。  
@@ -142,5 +143,5 @@ STDMETHOD(QueryService)(
   
  兩個不同的服務，例如 SID_SMyService 和 SID_SYourService，可以同時指定要使用相同的介面，即使介面的實作可能會有兩個服務之間執行任何動作。 其運作，因為呼叫`QueryService`（SID_SMyService、 IID_IDispatch） 可能會傳回不同的物件，而非`QueryService`（SID_SYourService、 IID_IDispatch）。 當您指定不同的服務識別項，不會假設物件識別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集](../../atl/reference/atl-macros.md)

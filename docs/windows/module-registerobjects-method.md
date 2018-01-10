@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fbff1d4c16c8cfb4f265760a6919637808efe28d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e73a59ff18c16a898ca1a9d7919615a2dec18bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moduleregisterobjects-method"></a>Module::RegisterObjects 方法
 註冊 COM 或 Windows 執行階段物件，讓其他應用程式可以連接到它們。  
@@ -47,5 +50,5 @@ HRESULT RegisterObjects(
   
  **命名空間：** Microsoft::WRL
  
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [Module 類別](../windows/module-class.md)

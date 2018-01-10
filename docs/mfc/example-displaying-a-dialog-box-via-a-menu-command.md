@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81cada5fdde3a510bdc26b10d46e48bf017a3a43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2715e1b64c1565d122f6eec012a8a33c2525ac9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：透過功能表命令顯示對話方塊
 本主題包含的程序：  
@@ -101,7 +102,7 @@ ms.lasthandoff: 10/24/2017
   
 -   Q251059： 如何： 提供您自己的視窗類別名稱的 MFC 對話方塊  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [強制回應和非強制回應對話方塊](../mfc/modal-and-modeless-dialog-boxes.md)
 

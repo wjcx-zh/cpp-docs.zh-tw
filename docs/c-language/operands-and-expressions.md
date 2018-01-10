@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 063e3e6e9c378ff0430e79490d74c75c2d631174
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ff9af4727bc606fcecbf9c79936c980d023865a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operands-and-expressions"></a>運算元和運算式
 「運算元」是運算子執行所在的實體。 「運算式」是運算子和運算元的序列，用於執行下列動作的任意組合：  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  C 中的運算元包括常數、識別項、字串、函式呼叫、註標運算式、成員選擇運算式，以及藉由結合運算元與運算子或是將運算元包含在括號內所構成的複雜運算式。 這些運算元的語法將在[主要運算式](../c-language/c-primary-expressions.md)中說明。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算式和指派](../c-language/expressions-and-assignments.md)

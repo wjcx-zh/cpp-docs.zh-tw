@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3defc694e2ac3f859c160a2e34aecefd42627c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa558129368559f3edddf9037f7f504933eb2563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maximum-string-length"></a>字串長度上限
 **Microsoft 特定的**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  雖然引號括住的個別字串長度不可超過 2048 個位元組，但是藉由串連字串，就可以建構大約 65535 個位元組的字串常值。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 字串常值](../c-language/c-string-literals.md)

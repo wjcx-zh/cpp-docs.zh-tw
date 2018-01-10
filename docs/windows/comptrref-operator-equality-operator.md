@@ -1,34 +1,34 @@
 ---
-title: "ComPtrRef::operator== 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator=="
-dev_langs: 
-  - "C++"
+title: "Comptrref:: Operator = = 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator==
+dev_langs: C++
 ms.assetid: 95fcf781-b473-4317-88cd-e938778d3c3e
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ea2fd557c9ae7da6c696ab8f8174ad8610a9174b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRef::operator== 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 運算子
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
-  
 bool operator==(  
    const Details::ComPtrRef<ComPtr<T>>& a,  
    const Details::ComPtrRef<ComPtr<U>>& b  
@@ -55,28 +55,28 @@ bool operator==(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `a`  
- ComPtrRef 對物件的參考。  
+ ComPtrRef 物件的參考。  
   
  `b`  
- 另一個 ComPtrRef 物件參考或指標給匿名型別 \(`void*`\)。  
+ 另一個的 ComPtrRef 物件或為匿名型別指標的參考 (`void*`)。  
   
-## 傳回值  
- 如果物件 `a` 相等的物件 `b`，第一個運算子產生 `true` ;否則， `false`。  
+## <a name="return-value"></a>傳回值  
+ 第一個運算子會產生`true`如果物件`a`是否等於物件`b`，否則`false`。  
   
- 如果物件 `a` 與 `nullptr`，等於第二個和第三個運算子產生 `true` ;否則， `false`。  
+ 第二個和第三個運算子會產生`true`如果物件`a`等於`nullptr`，否則`false`。  
   
- 如果物件 `a` 相等的物件 `b`，第四和第五個運算子產生 `true` ;否則， `false`。  
+ 第四個和第五個運算子會產生`true`如果物件`a`是否等於物件`b`，否則`false`。  
   
-## 備註  
- 表示兩個 ComPtrRef 物件是否不相等。  
+## <a name="remarks"></a>備註  
+ 指出兩個 ComPtrRef 物件是否相等。  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)   
  [ComPtrRef 類別](../windows/comptrref-class.md)

@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 150178bebc87cc3a4902bc056c9427a5a62858c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a63d3c409e671cf5f8531d161c4a713a3aa4d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="truncation-of-floating-point-values"></a>浮點值截斷
 **ANSI 3.2.1.4** 將浮點數轉換為較小的浮點數時，截斷或進位的方向  
   
  發生反向溢位時，會將浮點變數的值向下捨入為零。 溢位可能會造成執行階段錯誤，或可能會因為所指定的最佳化而產生無法預期的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點數學](../c-language/floating-point-math.md)

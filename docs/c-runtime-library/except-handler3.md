@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbbde719028df2d7b535548f4343b88e2c90efbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4fe280562d4f1278d74ae118712c9167de4b54d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="excepthandler3"></a>_except_handler3
 內部 CRT 函式。 供架構用於尋找適當的例外狀況處理常式以處理目前的例外狀況。  
@@ -50,16 +51,16 @@ int _except_handler3(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `exception_record`  
+ [輸入] `exception_record`  
  特定例外狀況的資訊。  
   
- [in] `registration`  
+ [輸入] `registration`  
  指出應該使用哪個範圍資料表尋找例外狀況處理常式的記錄。  
   
- [in] `context`  
+ [輸入] `context`  
  保留的。  
   
- [in] `dispatcher`  
+ [輸入] `dispatcher`  
  保留的。  
   
 ## <a name="return-value"></a>傳回值  
@@ -68,5 +69,5 @@ int _except_handler3(
 ## <a name="remarks"></a>備註  
  若此方法找到適當的例外狀況處理常式，會將例外狀況傳遞至處理常式。 在此情況中，此方法不會回復至呼叫它的程式碼，且傳回值亦不相關。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

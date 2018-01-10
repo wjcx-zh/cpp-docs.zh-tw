@@ -36,11 +36,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ced8ca3ec392caf29cd3cbc41fe462bd24546f26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9315791023b94fe7a2cdc97f1cec632c05ddbd2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgets-cgetws"></a>_cgets、_cgetws
 從主控台取得字元字串。 您現在已有這些函式更安全的版本可以使用，請參閱 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
 >  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。 這些函式 (_cgets_s 及 _cgetws_s) 的安全版本仍可使用。 如需這些替代函式的資訊，請參閱 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -92,12 +93,12 @@ wchar_t *_cgetws(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_cgets`|\<conio.h>|  
 |`_cgetws`|\<conio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -143,6 +144,6 @@ Line Length = 16
 Text = A line of input.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [主控台和連接埠 I/O](../c-runtime-library/console-and-port-i-o.md)   
  [_getch、_getwch](../c-runtime-library/reference/getch-getwch.md)

@@ -19,18 +19,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 352930af34a0fc10831e5862a3013b703e56b153
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72dbf8b0f24b07cae12c55e68a7c66e17ae5761c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searching-and-sorting"></a>搜尋和排序
 使用下列函式來搜尋和排序。  
   
 ### <a name="searching-and-sorting-functions"></a>搜尋和排序函式  
   
-|函式|搜尋或排序|  
+|功能|搜尋或排序|  
 |--------------|--------------------|  
 |[bsearch](../c-runtime-library/reference/bsearch.md)|二進位搜尋|  
 |[bsearch_s](../c-runtime-library/reference/bsearch-s.md)|更安全的 `bsearch` 版本|  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/24/2017
 |[qsort](../c-runtime-library/reference/qsort.md)|快速排序|  
 |[qsort_s](../c-runtime-library/reference/qsort-s.md)|更安全的 `qsort` 版本|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

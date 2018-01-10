@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70ed8ecc43f8467ca4e0bdc0856b32f3510d85a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7730fdd356b8145b771a85b8449974c2c8fa007
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimpleexception-class"></a>CSimpleException 類別
 這個類別是資源關鍵 MFC 例外狀況的基底類別。  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class AFX_NOVTABLE CSimpleException : public CException  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleException::CSimpleException](#csimpleexception)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleException::GetErrorMessage](#geterrormessage)|提供有關所發生之錯誤的文字。|  
   
@@ -116,7 +117,7 @@ virtual BOOL GetErrorMessage(
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱[CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [例外狀況處理](../../mfc/exception-handling-in-mfc.md)

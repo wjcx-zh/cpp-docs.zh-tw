@@ -1,38 +1,36 @@
 ---
-title: "NMAKE 嚴重錯誤 U1052 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1052"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1052"
+title: "NMAKE 嚴重錯誤 U1052 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1052
+dev_langs: C++
+helpviewer_keywords: U1052
 ms.assetid: b19b3691-e60b-46bd-8822-8426740a9bc7
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 15ef5b8c537848cffb7d588e2dac435084394c85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# NMAKE 嚴重錯誤 U1052
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-找不到檔案 'filename'  
+# <a name="nmake-fatal-error-u1052"></a>NMAKE 嚴重錯誤 U1052
+檔案 'filename' 找不到  
   
- NMAKE 找不到下列指定的檔案：  
+ NMAKE 找不到與下列其中一個指定的檔案：  
   
--   **\/F** 選項  
+-   **/F**選項  
   
--   **\!INCLUDE** 前置處理器指示詞  
+-   **!包含**前置處理器指示詞  
   
--   回應檔 \(Response File\) 的 **@** 符號規範  
+-   @ 記號 (**@**) 的回應檔規範  
   
- 檢查檔案是否存在及檔名的拼字是否正確。
+ 請確認檔案存在，檔案名稱的拼字正確。

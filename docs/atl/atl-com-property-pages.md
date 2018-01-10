@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de062b5c9aedb064206dfc40f7c722a298ded774
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 08b1c31aeaba25f4eadad5225dd2f5607cf7053c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-property-pages"></a>ATL COM 屬性頁
 COM 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的一或多個 COM 物件。 屬性頁大量使用 ActiveX 控制項提供豐富的使用者介面可讓要在設計階段設定控制項屬性。  
@@ -35,7 +36,7 @@ COM 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的�
   
  如需詳細資訊，請參閱[屬性工作表和屬性頁](http://msdn.microsoft.com/library/windows/desktop/ms686577)中[!INCLUDE[winSDK](../atl/includes/winsdk_md.md)]。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [指定屬性頁](../atl/specifying-property-pages.md)  
  列出指定控制項的屬性頁的步驟，並顯示範例類別。  
   
@@ -49,6 +50,6 @@ COM 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的�
  [ATL](../atl/active-template-library-atl-concepts.md)  
  提供有關如何使用 Active Template Library 進行程式設計的概念性主題連結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [概念](../atl/active-template-library-atl-concepts.md)
 

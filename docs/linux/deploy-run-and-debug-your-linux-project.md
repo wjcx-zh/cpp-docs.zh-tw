@@ -11,11 +11,14 @@ ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 237b6f3dbca8d529362a545f67ee0db4f9770d8d
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 734fc0f88d1cf8f97c7cac215f366eb6834fc517
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 
@@ -83,5 +86,5 @@ ms.lasthandoff: 11/11/2017
 
   ```handle SIGILL nostop noprint```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 [C++ 偵錯工具屬性 (Linux C++)](../linux/prop-pages/debugging-linux.md)。

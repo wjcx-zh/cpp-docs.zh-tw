@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e50dfa6c35f6f99dc1d7faf3aaf36f3d3a2177
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d82720142517468fffd4388f000f3830e8edb4ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="symbol-name-restrictions"></a>符號名稱限制
 符號名稱限制如下所示：  
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/24/2017
 |資源|IDR_ IDD_ IDC_ IDI_ IDB_|快速鍵或功能表 (和相關或自訂資源) 對話方塊游標圖示點陣圖|  
 |功能表項目|ID_|Menu item|  
 |命令|ID_|命令|  
-|控制項和子視窗|IDC_|控制|  
+|控制項和子視窗|IDC_|控制項|  
 |字串|IDS_|字串資料表中的字串|  
 |MFC|AFX_|保留給預先定義的 MFC 符號|  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [變更符號或符號名稱 (ID)](../windows/changing-a-symbol-or-symbol-name-id.md)   
  [符號值限制](../windows/symbol-value-restrictions.md)   
  [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

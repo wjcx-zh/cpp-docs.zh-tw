@@ -49,11 +49,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b151912140a2aa228b26a0afa7d620467d729386
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f870ef92296636c8d27fc166d41cdefc54d1585
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crecttracker-class"></a>CRectTracker 類別
 可讓項目以顯示、 移動和調整大小不同的方式。  
@@ -64,17 +65,17 @@ ms.lasthandoff: 10/24/2017
 class CRectTracker  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRectTracker::CRectTracker](#crecttracker)|建構 `CRectTracker` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRectTracker::AdjustRect](#adjustrect)|將矩形調整時呼叫。|  
 |[CRectTracker::Draw](#draw)|將矩形的呈現。|  
@@ -90,7 +91,7 @@ class CRectTracker
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|決定調整大小控點大小。|  
 |[CRectTracker::m_nStyle](#m_nstyle)|目前的追蹤程式 style(s)。|  
@@ -439,7 +440,7 @@ BOOL TrackRubberBand(
   
  追蹤會使用從右下方的控制代碼的拖放頻外類型選取項目來執行。 如果允許反轉，矩形可以是向上和向左或往下及往右拖曳調整大小。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例追蹤器](../../visual-cpp-samples.md)   
  [MFC 範例 DRAWCLI](../../visual-cpp-samples.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

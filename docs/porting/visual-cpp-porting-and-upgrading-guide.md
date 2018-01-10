@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 274154eb0688bc974a34b511d0aa39d08bb27b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 本主題提供升級 Visual C++ 程式碼的指南。 其中包括如何讓程式碼能夠在新版工具上正確編譯和執行，以及利用新語言和 Visual Studio 功能。 本主題也包含將舊版應用程式移轉至更新式平台的相關資訊。  
@@ -92,5 +93,5 @@ ms.lasthandoff: 10/24/2017
 |[從 UNIX 移植到 Win32](porting-from-unix-to-win32.md)|討論將 UNIX 應用程式移轉至 Windows 的選擇。|  
 |[C++/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)|詳細說明如何升級 Managed Extensions for C++ 語法，以使用新語法。 如需詳細資訊，請參閱[執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++](../visual-cpp-in-visual-studio.md)

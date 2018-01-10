@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b97509fbbfdf0bb169af1dae61e07fa6f4ba31d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0308b4d3531c52b229771629e245af0b772ec5d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-logical-operators"></a>C 邏輯運算子
 邏輯運算子會執行邏輯 AND (**&&**) 與邏輯 OR ( `||` ) 運算。  
@@ -72,6 +73,6 @@ printf( "%d" , (x == w || x == y || x == z) );
   
  在此範例中，如果 `x` 等於 `w`、`y` 或 `z`，則 `printf` 函式的第二個引數判斷值為 true，並且列印值 1。 否則，它的判斷值為 false，並且印出值 0。 只要其中一項條件的判斷值為 true，求值就會停止。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [邏輯 AND 運算子：&&](../cpp/logical-and-operator-amp-amp.md)   
  [邏輯 OR 運算子：&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)

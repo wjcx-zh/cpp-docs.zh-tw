@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-spaces"></a>命名空間
 編譯器會設定「命名空間」以區別不同類型的項目所使用的識別項。 每個命名空間內的名稱都必須是唯一的，才能避免衝突發生，但是相同的名稱可能會出現在多個命名空間中。 這表示，假設項目位於不同的命名空間中，您可以將同一個識別項用於兩個或多個不同的項目。 編譯器可以根據程式中識別項的語法內容解析參考。  
@@ -62,5 +63,5 @@ struct student {
   
  當 `student` 出現在 `struct` 關鍵字後面時，編譯器會將它辨識為結構標記。 當 `student` 出現在成員選取運算子 (**->** 或 **.**) 後面時，名稱會參考結構成員。 在其他內容中，`student` 會參考結構變數。 不過，不建議多載標記命名空間，因為它使意義含糊不清。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式結構](../c-language/program-structure.md)

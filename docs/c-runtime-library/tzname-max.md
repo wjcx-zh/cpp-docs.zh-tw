@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9508cd34a9ad97cb4a380729ddf0888c673392f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 885ea22432a45c03904437150938983002f63baa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tznamemax"></a>TZNAME_MAX
 時區名稱變數允許的字串長度上限。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
 #include <limits.h>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [環境常數](../c-runtime-library/environmental-constants.md)   
  [全域常數](../c-runtime-library/global-constants.md)   
  [_get_tzname](../c-runtime-library/reference/get-tzname.md)

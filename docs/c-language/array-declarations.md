@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74cfdf5393487ddd2cda7d478c0940c6db74b35a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06742239c48503a5917317a674a39f50a38702c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-declarations"></a>陣列宣告
 「陣列宣告」會為陣列命名並指定其元素的類型。 它也可以定義陣列中元素的數目。 具有陣列類型的變數會視為是陣列元素類型的指標。  
@@ -105,7 +106,7 @@ extern char *name[];
   
  保留陣列大小上限所需的整數類型為 **size_t** 的大小。 **size_t** 定義在標頭檔 STDDEF.H 中，是一個範圍從 0x00000000 到 0x7CFFFFFF 的 `unsigned int`。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

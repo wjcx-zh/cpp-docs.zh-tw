@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 817e710546a695addaa6cae0e266bd1ff1ddc701
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c47be3ddb2302124b233c39aaf8bd829cd481d79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarinfo-class"></a>CMFCToolBarInfo 類別
 包含在各種狀態下工具列影像的資源 ID。 `CMFCToolBarInfo`是 helper 類別，做為參數的[CMFCToolBar::LoadToolBarEx](../../mfc/reference/cmfctoolbar-class.md#loadtoolbarex)方法。  
@@ -52,7 +53,7 @@ class CMFCToolBarInfo
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarInfo::m_uiColdResID](#m_uicoldresid)|包含規則 （非作用） 中工具列影像的工具列點陣圖的資源識別碼。|  
 |[CMFCToolBarInfo::m_uiDisabledResID](#m_uidisabledresid)|包含已停用的工具列影像的工具列點陣圖的資源識別碼。|  
@@ -128,7 +129,7 @@ UINT m_uiMenuDisabledResID;
 UINT m_uiMenuResID;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBar 類別](../../mfc/reference/cmfctoolbar-class.md)

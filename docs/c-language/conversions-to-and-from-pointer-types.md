@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1751c19ba222bbdf9dfc30a290201289db1af850
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca8507d8890b1f1865ccefd6ce56a1b6f069d0f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>指標類型的轉換
 一種值類型的指標可以轉換成另一種類型的指標。 不過，由於儲存區中不同類型會有不同的對齊需求和大小，因此結果可能會是未定義。 物件指標可以轉換成類型需要較不嚴格或同等嚴格之儲存對齊的物件指標，並且在不經變更的情況下轉換回原物件指標。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
  值為 0 的整數常數運算式或是轉型為 **void \*** 的這類運算式，都可以藉由類型轉換、指派或與任何類型的指標比較的方式進行轉換。 這樣所產生的 null 指標相當於相同類型的另一個 null 指標，但是這個 null 指標不等於任何函式指標或物件指標。 常數 0 以外的整數可以轉換成指標類型，但是結果不可移植。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指派轉換](../c-language/assignment-conversions.md)

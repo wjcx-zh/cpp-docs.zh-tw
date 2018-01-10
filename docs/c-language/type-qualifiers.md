@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4fad93505a5778c23171b413654624a32e825b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fc671e624b16299db3366885f7bcd38b8518ee5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-qualifiers"></a>類型限定詞
 類型限定詞會提供兩個屬性的其中一個給識別項。 **const** 類型限定詞會將物件宣告為不可修改。 `volatile` 類型限定詞會宣告一個項目，其值可由超出項目所在程式之控制範圍的項目 (例如同時執行的執行緒) 合法變更。  
@@ -72,5 +73,5 @@ int volatile vint;     /* Volatile integer        */
   
 -   項目可以同時是 **const** 與 `volatile`，在這種情況下，項目就無法由自己的程式合法修改，但是可以由某個非同步處理序進行修改。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

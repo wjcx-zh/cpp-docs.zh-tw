@@ -32,11 +32,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55d92c5e162541b2b805074740d542a52866c48a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2286d7a6b82cf917c264cc43b82dec3939af6d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="format-specification-fields-scanf-and-wscanf-functions"></a>格式規格欄位：scanf 和 wscanf 函式
 這裡的資訊適用於整個 `scanf` 系列函式，包括安全的版本，並會說明所用符號，通知 `scanf` 函式如何將輸入資料流 (例如 `scanf` 的輸入資料流 `stdin`) 剖析為插入至程式變數中的值。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/24/2017
   
  `scanf` 系列函式的安全版本 (具有 `_s` 尾碼的版本)，需要在每個 `c`、`C`、`s`、`S` 或 `[` 類型參數之後，立即傳遞緩衝區大小參數。 如需 `scanf` 函式系列安全版本的詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [scanf 寬度規格](../c-runtime-library/scanf-width-specification.md)   
  [scanf 類型欄位字元](../c-runtime-library/scanf-type-field-characters.md)   
  [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)   

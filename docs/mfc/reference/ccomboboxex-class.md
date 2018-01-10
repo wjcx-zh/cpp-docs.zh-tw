@@ -47,11 +47,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: def9fca45f36a6e161bbd4b24431c9afd20d77c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aecbb168316b3d6416d3a41a6f6a56b04aeb990
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx 類別
 藉由提供影像清單的支援，擴充下拉式方塊控制項。  
@@ -62,17 +63,17 @@ ms.lasthandoff: 10/24/2017
 class CComboBoxEx : public CComboBox  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|建構 `CComboBoxEx` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComboBoxEx::Create](#create)|建立下拉式方塊，並將它附加至`CComboBoxEx`物件。|  
 |[CComboBoxEx::CreateEx](#createex)|使用指定的 Windows 延伸樣式建立下拉式方塊，並將它附加至**ComboBoxEx**物件。|  
@@ -419,7 +420,7 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能[CBEM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb775790)訊息、 Windows SDK 中所述。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 MFCIE](../../visual-cpp-samples.md)   
  [CComboBox 類別](../../mfc/reference/ccombobox-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

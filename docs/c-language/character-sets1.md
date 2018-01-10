@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c99f55bdfdec6858b521d8192f99207dfe9b0d58
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fca697d5a3d8d825bdac7637e87ef78aed134b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-sets"></a>字元集
 **ANSI 3.1.3.4**：來源字元集的對應成員  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
 |\\'|單引號|39|  
 |\\\|反斜線|92|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元](../c-language/characters.md)

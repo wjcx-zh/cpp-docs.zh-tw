@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c2c14f4bf492b18107aefc744d6e443fdeef3fec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81ab3701ac99aece4710208a0a5d19ce645d287a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="daylight-dstbias-timezone-and-tzname"></a>_daylight、_dstbias、_timezone 和 _tzname
 有些時間和日期常式使用 `_daylight`、`_dstbias`、`_timezone` 和 `_tzname` 調整本機時間。 這些全域變數已為更安全的函式版本所取代，它們應該用來取代全域變數。  
@@ -70,7 +71,7 @@ extern char *_tzname[2];
 |`_tzname[0]`|時區名稱衍生自 `TZ` 環境變數。 預設值是 "PST"。|  
 |`_tzname[1]`|DST 時區名稱衍生自 `TZ` 環境變數。 預設值是 "PDT" (太平洋日光節約時間)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域變數](../c-runtime-library/global-variables.md)   
  [_get_daylight](../c-runtime-library/reference/get-daylight.md)   
  [_get_dstbias](../c-runtime-library/reference/get-dstbias.md)   

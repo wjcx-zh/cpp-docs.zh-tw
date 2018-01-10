@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>檔案處理
 使用這些常式以建立、刪除和管理檔案，並設定和檢查檔案存取權限。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  這些常式會對檔案描述項所指定的檔案進行操作。  
   
-|常式|請使用|  
+|常式傳回的值|請使用|  
 |-------------|---------|  
 |[_chsize](../c-runtime-library/reference/chsize.md)、[_chsize_s](../c-runtime-library/reference/chsize-s.md)|變更檔案大小|  
 |[_filelength、_filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|取得檔案長度|  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   
  這些常式會對由路徑或檔名指定的檔案進行操作。  
   
-|常式|請使用|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md)、 [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|檢查檔案權限設定|  
 |[_chmod、_wchmod](../c-runtime-library/reference/chmod-wchmod.md)|變更檔案權限設定|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
  這些常式會開啟檔案。  
   
-|常式|請使用|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md)、 [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|開啟檔案並傳回此開啟檔案的指標。|  
 |[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|以檔案共用開啟資料流，並傳回此開啟檔案的指標。|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/24/2017
   
  這些常式提供在 `FILE` 結構、檔案描述項和 Win32 檔案控制代碼之間變更檔案表示的方式。  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|將資料流與先前針對低層級 I/O 開啟的檔案建立關聯，並傳回此開啟資料流的指標。|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|取得與資料流相關聯的檔案描述項。|  
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [CreateNamedPipe](http://msdn.microsoft.com/library/windows/desktop/aa365150.aspx) (CreateNamedPipe 函式)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)   
  [目錄控制](../c-runtime-library/directory-control.md)   
  [系統呼叫](../c-runtime-library/system-calls.md)

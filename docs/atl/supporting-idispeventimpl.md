@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81976652c14693c54980f6e0901f5db5576fbbe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bf10a68ae15743a637df2dee52bee83c3dfcbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-idispeventimpl"></a>支援 IDispEventImpl
 此範本類別[IDispEventImpl](../atl/reference/idispeventimpl-class.md)可用來對 ATL 類別中的連接點接收提供支援。 連接點接收可讓您的類別來處理從外部 COM 物件引發的事件。 這些連接點接收對應的事件接收對應，您的類別所提供。  
@@ -86,6 +87,6 @@ ms.lasthandoff: 10/24/2017
   
  COM 物件的唯一特性，因為此程序各有不同，在詳細資料和執行，不同的實作。 已超出本主題的範圍和不解決這些詳細資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)
 

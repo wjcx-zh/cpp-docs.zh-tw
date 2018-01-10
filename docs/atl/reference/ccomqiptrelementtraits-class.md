@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f292ebf00b6eff1fcfbd9e6c9d0cf175e887733
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30d4e73f3c1e4ad75b8b33442be4e64af1a11207
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomqiptrelementtraits-class"></a>CComQIPtrElementTraits 類別
 建立 COM 介面指標的集合時，這個類別會提供方法、 靜態函式和有用的 typedef。  
@@ -42,11 +43,11 @@ class CComQIPtrElementTraits :
  `piid`  
  指向 IID 的`I`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComQIPtrElementTraits::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
   
@@ -76,6 +77,6 @@ class CComQIPtrElementTraits :
 typedef I* INARGTYPE;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

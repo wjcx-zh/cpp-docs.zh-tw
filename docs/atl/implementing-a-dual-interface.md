@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4895e7b1cd0e38b33c1efe66e9070073403ee01
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae16adcc6743c7e35aae2a4121819a6df50cf4f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-a-dual-interface"></a>實作雙重介面
 您可以實作雙重介面使用[IDispatchImpl](../atl/reference/idispatchimpl-class.md)類別，可提供的預設實作`IDispatch`雙重介面中的方法。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](http://msdn.microsoft.com/en-us/0e171f7f-0022-4e9b-ac8e-98192828e945)。  
@@ -52,6 +53,6 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  ATL 提供[IDispEventImpl](../atl/reference/idispeventimpl-class.md)和[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)類別可以幫助您實作分配介面，而不需要類型程式庫包含相容的雙重介面的定義。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [雙重介面和 ATL](../atl/dual-interfaces-and-atl.md)
 

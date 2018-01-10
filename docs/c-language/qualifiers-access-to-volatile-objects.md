@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 808f1293c9d5d96a2691cf18c087990a16087144
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 488eb8f2c9bbc321595d3e89164ae6633019d36e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qualifiers-access-to-volatile-objects"></a>限定詞：對 Volatile 物件的存取
 **ANSI 3.5.5.3**：構成具有 volatile 限定類型之物件存取的條件  
   
  對 volatile 限定類型的任何參考都是存取。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作定義的行為](../c-language/implementation-defined-behavior.md)

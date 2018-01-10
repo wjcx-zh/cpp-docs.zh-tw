@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebb8a9db0e22f3b9d794859c03729b019fd65703
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20f4c2d7d33d07a5eca5a980c376056c3fe68e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 提供便利的方式，來偵測記憶體流失的問題在程式中。  
@@ -33,17 +34,17 @@ ms.lasthandoff: 10/24/2017
 struct CMemoryState  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMemoryState::CMemoryState](#cmemorystate)|控制記憶體檢查點的類似類別建構結構。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMemoryState::Checkpoint](#checkpoint)|取得目前的記憶體狀態快照 （檢查點）。|  
 |[CMemoryState::Difference](#difference)|計算類型的兩個物件之間的差異`CMemoryState`。|  
@@ -188,7 +189,7 @@ void DumpStatistics() const;
   
  您現在可以看到的輸出偵錯模式執行程式`DumpStatistics`函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 
 

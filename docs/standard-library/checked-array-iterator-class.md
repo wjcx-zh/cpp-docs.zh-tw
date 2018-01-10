@@ -4,48 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - iterator/checked_array_iterator
-- checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
 - iterator/stdext::checked_array_iterator::pointer
 - iterator/stdext::checked_array_iterator::reference
 - iterator/stdext::checked_array_iterator::base
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- checked_array_iterator, syntax
-- checked_array_iterator class
-- checked_array_iterator
+- stdext::checked_array_iterator [C++], difference_type
+- stdext::checked_array_iterator [C++], pointer
+- stdext::checked_array_iterator [C++], reference
+- stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a53cc2a5bb7bd50e41e9e01d3953465706554017
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 97e0a5f9276d6ae9f4c5b4dea289227e59437525
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator 類別
 `checked_array_iterator` 類別可讓您將陣列或指標轉換為已檢查的迭代器。 使用這個類別作為原始指標或陣列的包裝函式 (使用 [make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator) 函式)，作為提供檢查以及管理未檢查指標警告的目標方式，而非全域的關閉這些警告訊息。 如果需要，您可以使用這個類別的未檢查版本 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。  
@@ -954,10 +938,9 @@ typedef typename iterator_traits<_Iterator>::reference reference;
   
  如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

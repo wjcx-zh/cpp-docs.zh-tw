@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1cdc3bd0d6370848859b16ce30eff6a224d83a60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d472026649bbe1d72a9afba42f224b0b9159258d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-initialization"></a>CRT 初始化
 本主題描述 CRT 如何在機器碼中初始化全域狀態。  
@@ -100,5 +101,5 @@ RELOCATIONS #6
   
  因此，基於全域初始設定式清單項目於載入映像後在記憶體中的排列方式，CRT 程式庫將能使用 `__xc_a` 和 `__xc_z` 來判斷全域初始設定式清單的開頭和結尾。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

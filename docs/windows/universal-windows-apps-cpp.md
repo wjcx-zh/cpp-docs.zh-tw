@@ -13,11 +13,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 656c8ac642ae9c8a6a76e1ed52ca014b5515e65f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 應用程式 (C++)
 通用 Windows 平台 (UWP) 應用程式具體表現一組設計原則，以強調為主的不同裝置上的不同螢幕大小自動調整的內容的簡單使用者介面。 您會在 XAML 標記中建立 UI，並在原生 C++ 中建立程式碼後置。 您也可以建立元件 (DLL)，供其他語言所撰寫的 UWP 應用程式使用。 用於 UWP 應用程式開發介面是 Windows 執行階段，這是構造良好的程式庫提供各種不同的作業系統服務。  
@@ -39,6 +42,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="universal-windows-platform-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 的通用 Windows 平台應用程式 
  Windows 執行階段 c + + 樣板程式庫提供的 ISO c + + 程式碼可以存取的無例外狀況的環境中的 Windows 執行階段的低階 COM 介面。 在大部分情況下，我們建議您使用 C + + /CX 而不是 Windows 執行階段 c + + 樣板程式庫，針對通用 Windows 平台應用程式開發。 Windows 執行階段 c + + 樣板程式庫的相關資訊，請參閱[Windows 執行階段 c + + 樣板程式庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++](../visual-cpp-in-visual-studio.md)
 

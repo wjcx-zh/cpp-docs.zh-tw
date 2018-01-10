@@ -11,17 +11,20 @@ ms.assetid: 1a44230d-5dd8-4d33-93b4-e77e03e00150
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords: VC.Project.VCConfiguration.BuildLogFile
-ms.openlocfilehash: d552ef6bd5106b3db0e30214d8fbc144b9aa00eb
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 586244da6cc8c0a682146caf3ea75bdf72b5824e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="copy-sources-project-properties-linux-c"></a>複製來源專案屬性 (Linux C++)
+
 此屬性頁面上設定的屬性，會套用至專案中的所有檔案，但已設定檔案層級屬性的專案除外。
 
-屬性 | 說明
+屬性 | 描述
 --- | ---
 要複製的來源 | 指定要複製到遠端系統的來源。 變更此清單可能會造成遠端系統上作為檔案複製目標的目錄結構變更，或到受影響。
 複製來源 | 指定是否要將來源複製到遠端系統。

@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6c567c720f5dc1febe0626754721c7c6ec9af4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2c60be4501e14c1a3b55789905be1fb6e753731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbrush-class"></a>CBrush 類別
 封裝 Windows 繪圖裝置介面 (GDI) 筆刷。  
@@ -50,17 +51,17 @@ ms.lasthandoff: 10/24/2017
 class CBrush : public CGdiObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBrush::CBrush](#cbrush)|建構 `CBrush` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBrush::CreateBrushIndirect](#createbrushindirect)|初始化與樣式、 色彩和模式中指定的筆刷[LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035)結構。|  
 |[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|使用裝置獨立點陣圖 (DIB) 所指定的模式，初始化筆刷。|  
@@ -73,7 +74,7 @@ class CBrush : public CGdiObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[HBRUSH CBrush::operator](#operator_hbrush)|傳回附加至的 Windows 控制代碼`CBrush`物件。|  
   
@@ -392,7 +393,7 @@ operator HBRUSH() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 PROPDLG](../../visual-cpp-samples.md)   
  [CGdiObject 類別](../../mfc/reference/cgdiobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

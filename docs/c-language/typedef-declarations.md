@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: daffef64ab4c212a9688b05e450f226519869f7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 851776be55ce485d660aa46f4338235c3a1a413a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typedef-declarations"></a>Typedef 宣告
 typedef 宣告是將 typedef 宣告為儲存類別的宣告。 宣告子會變成新的類型。 您可以使用 typedef 宣告，針對 C 已經定義或您已經宣告的類型建構較短或更有意義的名稱。 Typedef 名稱可讓您封裝可能變更的實作詳細資料。  
@@ -72,7 +73,7 @@ typedef 宣告是將 typedef 宣告為儲存類別的宣告。 宣告子會變�
   
  請注意，typedef 宣告不會建立類型。 它會建立現有類型的同義字，或是可透過其他方式指定之類型的名稱。 將 typedef 名稱做為類型指定名稱時，它可以結合特定的類型指定名稱，但不能結合其他類型指定名稱。 可接受的修飾詞包含 **const** 與 `volatile`。  
   
- Typedef 名稱和一般識別項共用命名空間 (如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md))。 因此，程式可以具有相同名稱的 typedef 名稱和區域範圍識別項。 例如：  
+ Typedef 名稱和一般識別項共用命名空間 (如需詳細資訊，請參閱[命名空間](../c-language/name-spaces.md))。 因此，程式可以具有相同名稱的 typedef 名稱和區域範圍識別項。 例如:   
   
 ```  
 typedef char FlagType;  
@@ -166,6 +167,6 @@ DRAWF box;
 void box( int, int );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 

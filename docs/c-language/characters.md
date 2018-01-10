@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92197087e13e1de8b563f722a357aab6d914585f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b23b75e6b1a54774287e1d029ff2ddada7f740aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="characters"></a>字元
 -   [ASCII 字元集](../c-language/ascii-character-set.md)  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [char 值的範圍](../c-language/range-of-char-values.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作定義的行為](../c-language/implementation-defined-behavior.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,37 +13,19 @@ f1_keywords:
 - AFXDB_/CLongBinary::CLongBinary
 - AFXDB_/CLongBinary::m_dwDataLength
 - AFXDB_/CLongBinary::m_hData
-dev_langs:
-- C++
-helpviewer_keywords:
-- BLOB (binary large object)
-- CLongBinary class
-- BLOB (binary large object), CLongBinary class
+dev_langs: C++
+helpviewer_keywords: CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 4f06c6ef0b988a348f074d50ce7a33e8015a20fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 49661932192a32550d50edfbbc52d7967cb78dcd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clongbinary-class"></a>CLongBinary 類別
 簡化在資料庫中對極大型二進位資料物件 (通常稱為 BLOB 或「二進位大型物件」) 的處理。  
@@ -55,7 +36,7 @@ ms.lasthandoff: 03/31/2017
 class CLongBinary : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -65,7 +46,7 @@ class CLongBinary : public CObject
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CLongBinary::m_dwDataLength](#m_dwdatalength)|包含的實際大小，以位元組為單位的資料物件的控制代碼會儲存在`m_hData`。|  
 |[CLongBinary::m_hData](#m_hdata)|包含 Windows`HGLOBAL`實際影像物件控制代碼。|  
@@ -80,7 +61,7 @@ class CLongBinary : public CObject
   
  當損毀資料錄集，內嵌`CLongBinary`也終結物件，並取消配置其解構函式`HGLOBAL`資料控制代碼。  
   
- 如需有關大型物件，以及使用`CLongBinary`，請參閱文章[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)和[資料錄集︰ 使用大型資料的項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。  
+ 如需有關大型物件，以及使用`CLongBinary`，請參閱文章[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)和[資料錄集： 使用大型資料的項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)。  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  [CObject](../../mfc/reference/cobject-class.md)  
@@ -88,7 +69,7 @@ class CLongBinary : public CObject
  `CLongBinary`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** afxdb_.h  
+ **標頭：** afxdb_.h  
   
 ##  <a name="clongbinary"></a>CLongBinary::CLongBinary  
  建構 `CLongBinary` 物件。  
@@ -114,8 +95,7 @@ SQLULEN m_dwDataLength;
 HGLOBAL m_hData;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CRecordset 類別](../../mfc/reference/crecordset-class.md)
-

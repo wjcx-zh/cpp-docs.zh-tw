@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a489531113ce17cee28414a07662114e58a61341
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 213a014df3336a8a42188dc45876228a533f4a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stosd"></a>__stosd
 **Microsoft 特定的**  
@@ -43,10 +44,10 @@ void __stosd(
  [輸出] `Dest`  
  作業的目的地。  
   
- [in] `Data`  
+ [輸入] `Data`  
  要儲存的資料。  
   
- [in] `Count`  
+ [輸入] `Count`  
  要寫入的雙字組區塊的長度。  
   
 ## <a name="requirements"></a>需求  
@@ -91,7 +92,7 @@ printf_s( "%u %u %u %u",
 0 99999 99999 0  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

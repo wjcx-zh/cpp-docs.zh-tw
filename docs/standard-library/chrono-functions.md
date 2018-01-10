@@ -10,14 +10,13 @@ f1_keywords:
 - chrono/std::duration_cast
 - chrono/std::time_point_cast
 ms.assetid: d6800e15-77a1-4df3-900e-d8b2fee190c7
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 2df866e0f6fec9833c67e4d4ea405a826996dedf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltchronogt-functions"></a>&lt;chrono&gt; 函式
 ||||  
@@ -53,7 +52,6 @@ time_point<Clock, To> time_point_cast(const time_point<Clock, Duration>& Tp);
 ### <a name="remarks"></a>備註  
  除非 `To` 是 [duration](../standard-library/duration-class.md) 的具現化，否則此函式不會參與多載解析。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<chrono>](../standard-library/chrono.md)
-
 

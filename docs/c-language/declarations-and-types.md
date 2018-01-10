@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 29e7d1687946c463a2c486423da8fb9d585a3546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c40f7b236771115d9848abdfccceb0a6e1f8f2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarations-and-types"></a>宣告和類型
 本節將描述變數、函式及類型的宣告和初始化。 C 語言包括一組標準的基本資料類型。 您也可以根據已定義的類型宣告新類型，藉此加入自己的資料類型，稱為「衍生類型」(Derived Type)。 我們將討論下列主題：  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言參考](../c-language/c-language-reference.md)

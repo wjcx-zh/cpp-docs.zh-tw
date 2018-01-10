@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2d32e9da99776bf5e21805ec239c2731cc3d5f21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 789d0ae6b0b9b38312896adf079e7c10dcde7556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-readwrite-access-constants"></a>檔案讀取/寫入存取常數
 ## <a name="syntax"></a>語法  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  指定 "r+"、"w+"或 "a+" 類型時，會同時允許讀取和寫入 (表示檔案是要開啟以供「更新」之用)。 不過，當您在讀取和寫入之間切換時，必須有中間的 `fflush`、`fsetpos`、`fseek` 或 **rewind** 作業。 可以針對 `fsetpos` 或 `fseek` 作業指定目前位置。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   
  [freopen、_wfreopen](../c-runtime-library/reference/freopen-wfreopen.md)   

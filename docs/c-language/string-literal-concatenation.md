@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5974e192e32c612fe995cbc736e703f6168a3e8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de245a061ed7d269aaafc856df0a422e31fd6d77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-literal-concatenation"></a>字串常值串連
 若要形成佔用一行以上的字串常值，您可以串連兩個字串。 若要這麼做，請輸入一個反斜線，然後按下 RETURN 鍵。 反斜線會使編譯器忽略後方的新行字元。 例如，字串常值  
@@ -44,7 +45,7 @@ ken into two or more pieces."
 "Enter a number between 1 and 100\nOr press Return"  
 ```  
   
- 由於字串可能會從原始程式碼的任何一列開始，且可以在任何後續程式碼列的任意資料行上接續，因此您可以排列字串的位置以加強原始程式碼的可讀性。 在任一種情況下，其螢幕上的表示在輸出時不會受到影響。 例如：  
+ 由於字串可能會從原始程式碼的任何一列開始，且可以在任何後續程式碼列的任意資料行上接續，因此您可以排列字串的位置以加強原始程式碼的可讀性。 在任一種情況下，其螢幕上的表示在輸出時不會受到影響。 例如:   
   
 ```  
 printf_s ( "This is the first half of the string, "  
@@ -68,5 +69,5 @@ printf_s( "%s" , string ) ;
   
  在轉譯階段 6 中，由任何相鄰字串常值或相鄰寬字串常值的序列所指定的多位元組字元序列，會串連成單一多位元組字元序列。 因此，請勿將程式設計為允許執行時修改字串常值。 ANSI C 標準將修改字串的結果指定為未定義。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 字串常值](../c-language/c-string-literals.md)

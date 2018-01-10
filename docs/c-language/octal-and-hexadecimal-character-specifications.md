@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f9ff802a63aed2484407b7e5fe82848ecd69cea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf3a27dc61543482d1d6484d0edd4b5e1bb04373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="octal-and-hexadecimal-character-specifications"></a>八進位和十六進位字元規格
 **\\***ooo* 的序列表示您可以將 ASCII 字元集中的任何字元指定為三位數的八進位字元碼。 八進位整數的數值會指定所需字元或寬字元的值。  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/24/2017
 "\xab" "c" /* two characters */  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 字元常數](../c-language/c-character-constants.md)

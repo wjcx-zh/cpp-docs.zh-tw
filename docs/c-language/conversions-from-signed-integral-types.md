@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ccda8d6fa2573245f34a38f327395955bf92fdc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8977c70fc2ebdc6e9fccf22e44a04afaceae1392
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-signed-integral-types"></a>從帶正負號整數類型的轉換
 將帶正負號的整數轉換為大小相等或大小較大的不帶正負號整數時，若帶正負號整數值不為負值，則其值不變。 轉換是透過帶正負號整數的帶正負號擴充方式所進行。 若將帶正負號整數轉換為較短的帶正負號整數，則會截斷高序位的位元。 其結果會解譯為不帶正負號的值，如此範例中所示。  
@@ -76,7 +77,7 @@ printf_s( "%hu\n", u );  // Prints 65533
   
  對於 Microsoft 32 位元 C 編譯器，整數相當於 **long**。 **int** 值進行的轉換與 **long** 的轉換相同。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指派轉換](../c-language/assignment-conversions.md)

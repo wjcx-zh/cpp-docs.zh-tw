@@ -40,11 +40,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7e22f2d3c69bf4f0daf38c4f59b416d8d44a431a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ece67a7c2b50423ea9ff4610e638dcdc2b979e14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-options"></a>連結選項
 CRT lib 目錄包含多個小型物件檔案，不需要變更任何程式碼即可啟用特定的 CRT 功能。 它們稱之為「連結選項」，因為它們必須加入連結器命令列才能使用。  
@@ -68,5 +69,5 @@ CRT lib 目錄包含多個小型物件檔案，不需要變更任何程式碼即
 |threadlocale.obj|pthreadlocale.obj|所有的新執行緒預設啟用每個執行緒地區設定。|  
 |wsetargv.obj|pwsetargv.obj|啟用命令列引數萬用字元展開。 請參閱[展開萬用字元引數](../c-language/expanding-wildcard-arguments.md)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f0ac465ec20d0893add63d8b5791b9445b17f8fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa6285504a194d909dec7a446437ca9f584272a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-declarations"></a>宣告概觀
 「宣告」會指定一組識別項的解譯和屬性。 如果宣告也為以識別項命名的物件或函式保留儲存區，則稱為「定義」。 變數、函式和類型的 C 宣告具有下列語法：  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
  宣告可以包含 *attribute-seq* 中列出的一或數個選擇性屬性；*seq* 是 sequence (序列) 的縮寫。 這些 Microsoft 特定屬性可執行各種函式，本手冊中會有詳細的討論。  
   
- 在一般格式的變數宣告中，*type-specifier* 會提供變數的資料類型。 *type-specifier* 可以是複合式的，例如由 **const** 或 `volatile` 所修飾的類型。 `declarator` 會為變數命名，可能會修改變數以宣告陣列或指標類型。 例如：  
+ 在一般格式的變數宣告中，*type-specifier* 會提供變數的資料類型。 *type-specifier* 可以是複合式的，例如由 **const** 或 `volatile` 所修飾的類型。 `declarator` 會為變數命名，可能會修改變數以宣告陣列或指標類型。 例如，套用至物件的  
   
 ```  
 int const *fp;  
@@ -77,7 +78,7 @@ int const *fp;
   
  有兩個 *type-qualifier* 終端項：**const** 和 `volatile`。 這些限定詞可指定只有透過左值來存取該類型的物件時，才會相關聯的其他類型屬性。 如需 **const** 和 `volatile` 的詳細資訊，請參閱[類型限定詞](../c-language/type-qualifiers.md)。 如需左值定義的詳細資訊，請參閱[左值和右值運算式](../c-language/l-value-and-r-value-expressions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言語法摘要](../c-language/c-language-syntax-summary.md)   
  [宣告和類型](../c-language/declarations-and-types.md)   
  [宣告摘要](../c-language/summary-of-declarations.md)

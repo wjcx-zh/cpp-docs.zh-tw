@@ -20,11 +20,12 @@ caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a43837da95ef14b0a33f60a3260550fbdf80d2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8fca748d3192fcecbec5194822cd302ad78a296e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-header-files"></a>C++ 標準程式庫標頭檔
 下列為按類別區分的 C++ 標準程式庫和擴充功能的標頭檔。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/24/2017
  `Strings and Character Data`  
  [\<regex>](../standard-library/regex.md)、[\<string>](../standard-library/string.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 C++ 程式庫標頭](../standard-library/using-cpp-library-headers.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)
 

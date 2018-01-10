@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6f2638696dee29c7f162e6d8151ebf9dd0c791be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e6de903d2db315bde409a2abbbed3387143f2630
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classfactoryclassfactory-constructor"></a>ClassFactory::ClassFactory 建構函式
 ## <a name="syntax"></a>語法  
@@ -35,5 +38,5 @@ WRL_NOTHROW ClassFactory();
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ClassFactory 類別](../windows/classfactory-class.md)

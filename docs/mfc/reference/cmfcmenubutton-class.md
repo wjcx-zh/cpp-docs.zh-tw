@@ -33,11 +33,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43772dff0e09b7160c1ec28a6c62d341c124892e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fac8fe59fe5dbfb101ec0881dbf17925cf048caa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton 類別
 顯示快顯功能表和報告使用者功能表選取的按鈕。  
@@ -48,24 +49,24 @@ ms.lasthandoff: 10/24/2017
 class CMFCMenuButton : public CMFCButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|建構 `CMFCMenuButton` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|要轉譯的視窗訊息，再分派這些架構呼叫。 (覆寫 `CMFCButton::PreTranslateMessage`。)|  
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|根據其文字和影像的大小 按鈕的大小變更。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCMenuButton::m_bOSMenu](#m_bosmenu)|指定是否要顯示預設的系統快顯功能表，或者使用[CContextMenuManager::TrackPopupMenu](../../mfc/reference/ccontextmenumanager-class.md#trackpopupmenu)。|  
 |[CMFCMenuButton::m_bRightArrow](#m_brightarrow)|指定是否快顯功能表會出現下方或右邊的按鈕。|  
@@ -167,7 +168,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMsg`  
+ [輸入] `pMsg`  
  指向[MSG](../../mfc/reference/msg-structure1.md)結構，其中包含要處理的訊息。  
   
 ### <a name="return-value"></a>傳回值  
@@ -183,7 +184,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bCalcOnly`  
+ [輸入] `bCalcOnly`  
  布林值參數，指出是否此方法會調整大小的按鈕。  
   
 ### <a name="return-value"></a>傳回值  
@@ -194,7 +195,7 @@ virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
   
  新按鈕的大小計算為符合按鈕文字、 影像和箭號。 架構也會加入 10 個像素水平的邊緣和垂直邊緣 5 像素的預先定義的邊界。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCButton 類別](../../mfc/reference/cmfcbutton-class.md)

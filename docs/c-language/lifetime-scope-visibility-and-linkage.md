@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2b511a4b7cbaffb80d9f07a2491a38554682c29
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 680d3a97cec7971bf31605997e3ab2afdfae2cdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lifetime-scope-visibility-and-linkage"></a>存留期、範圍、可視性和連結
 若要了解 C 程式的運作方式，您必須了解用於判定程式中如何使用變數及函式的規則。 以下概念對於了解這些規則很重要：  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [連結](../c-language/linkage.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式結構](../c-language/program-structure.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8eeadc61c41d37247b08bdc8e3806da6d6200e4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 240b2baf8f3d59465b7b8313197086fec4c13285
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreaded-libraries-performance"></a>多執行緒程式庫效能
 單一執行緒 CRT 已不再提供使用。 本主題會討論從多執行緒程式庫取得最大效能的方法。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
 -   公開 CRT 堆積控制代碼可讓您針對 CRT 堆積啟用 Windows 低分散堆積 (LFH)，這可以大幅提升高度調整案例的效能。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

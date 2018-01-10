@@ -31,17 +31,18 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 85f13e082e25702967868d6889e575a6e261f6b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c046f9e26848edbbc609b9f3c729a0654fe3718
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapadd"></a>_heapadd
 將記憶體加入堆積。  
   
 > [!IMPORTANT]
->  此函式已被取代。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。  
+>  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -62,20 +63,20 @@ int _heapadd(
 ## <a name="return-value"></a>傳回值  
  若成功，`_heapadd` 會傳回 0；否則此函式會傳回 -1，並將 `errno` 設為 `ENOSYS`。  
   
- 如需此傳回碼與其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需此函式與其他傳回碼的詳細資訊，請參閱 [_doserrno, errno、_sys_errlist 及 _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  自 Visual C++ 4.0 版起，基礎堆積結構已移到 C 執行階段程式庫，以支援新的偵錯功能。 因此，所有採用 Win32 API 的平台將不再支援 `_heapadd` 。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_heapadd`|\<malloc.h>|\<errno.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體配置](../c-runtime-library/memory-allocation.md)   
  [free](../c-runtime-library/reference/free.md)   
  [_heapchk](../c-runtime-library/reference/heapchk.md)   

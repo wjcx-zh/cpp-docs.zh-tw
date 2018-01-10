@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 76e1e4d237e486734c734359f4844e27d80dd2a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3dacb923b2e51ddc031165e637b08c9614ee1bf3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-servers"></a>主動式文件伺服程式
 裝載其他應用程式類型文件的主動式文件伺服程式 (例如 Word、Excel、PowerPoint) 稱為主動式文件。 和 OLE 內嵌物件 (只在其他文件的頁面中顯示) 不同的是，主動式文件提供完整的介面以及建立這些物件之伺服器應用程式的完整原生功能。 使用者可以使用他們最喜愛的應用程式完整功能 (如果支援主動式文件) 來建立文件，也可以將產生的專案視為單一實體。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/24/2017
   
  `COleDocObjectItem` 類別允許讓 OLE 容器變成主動式文件容器。 您可以使用 MFC 應用程式精靈來建立主動式文件容器選取**主動式文件容器**MFC 應用程式精靈 [複合文件支援] 頁面中的核取方塊。 如需詳細資訊，請參閱[建立主動式文件容器應用程式](../mfc/creating-an-active-document-container-application.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [主動式文件內含項目](../mfc/active-document-containment.md)
 

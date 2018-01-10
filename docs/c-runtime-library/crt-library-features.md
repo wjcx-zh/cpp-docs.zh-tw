@@ -28,11 +28,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41372637e9ee68db087fbe0ad532d9e6bb4935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50ca3fd6d60e7fecf84c81d14c859f5b2f51e120
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crt-library-features"></a>CRT 程式庫功能
 本主題討論組成 C 執行階段程式庫的各種 .lib 檔案，以及其相關聯的編譯器選項與前置處理器指示詞。  
@@ -113,5 +114,5 @@ ms.lasthandoff: 10/24/2017
   
  如果您的程式使用多種版本的 CRT，在跨 DLL 界限傳遞特定 CRT 物件 (例如檔案控制代碼、地區設定及環境變數) 時，必須特別留意。 如需涉及問題及解決方法的相關資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

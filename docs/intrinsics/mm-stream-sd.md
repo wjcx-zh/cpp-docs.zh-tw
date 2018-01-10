@@ -1,35 +1,35 @@
 ---
-title: "_mm_stream_sd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_sd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建 _mm_stream_sd"
-  - "movntsd 指令"
+title: "_mm_stream_sd |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_sd
+dev_langs: C++
+helpviewer_keywords:
+- _mm_stream_sd intrinsic
+- movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da88116f58c6e33d35a69ebb6ac2433a8fe8f4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_stream_sd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="mmstreamsd"></a>_mm_stream_sd
+**Microsoft 特定的**  
   
- 將 64 位元資料寫入記憶體位置而不侵害快取。  
+ 寫入記憶體位置的 64 位元的資料不侵害快取。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void _mm_stream_sd(  
@@ -38,30 +38,30 @@ void _mm_stream_sd(
 );  
 ```  
   
-#### 參數  
- \[\] out`Dest`  
- 來源資料寫入的位置的位置指標。  
+#### <a name="parameters"></a>參數  
+ [輸出] `Dest`  
+ 要寫入的來源資料的位置指標。  
   
- \[in\] `Source`  
- 128 位元的值，包含`double`中撰寫它的下方 64 位元的值。.  
+ [輸入] `Source`  
+ 128 位元值，包含`double`64 位元在其下要寫入值...  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  無。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_mm_stream_sd`|SSE4a|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 此內建會產生`movntsd` 指令。  若要判斷硬體支援，針對這個指令，請呼叫`__cpuid`與內建`InfoType=0x80000001` ，並檢查位元 6 的`CPUInfo[2] (ECX)`。  這個位元為 1，如果硬體可支援這個指令，而 0 否則。  
+## <a name="remarks"></a>備註  
+ 此內建函式會產生`movntsd`指令。 若要判斷硬體支援此指示，請呼叫`__cpuid`與內建`InfoType=0x80000001`並檢查位元 6 的`CPUInfo[2] (ECX)`。 如果硬體可支援此指示，以及 0 否則，此位元為 1。  
   
- 如果您執行的程式碼，會使用`_mm_stream_sd`不支援的硬體上內建`movntsd`指令時，結果會發生無法預期。  
+ 如果您執行程式碼乃使用`_mm_stream_sd`內建函式不支援的硬體上`movntsd`指令，結果會產生無法預測。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -84,13 +84,15 @@ int main()
   
 ```  
   
-  **\[0\] d \=\-1，d \[1\] \= 1**   
-## 結束 Microsoft 特定  
- 藉由收益進階微裝置，及版權 2007年.人所有之商標。  重製與收益進階微裝置，及來自的使用權限.  
+```Output  
+d[0] = -1, d[1] = 1  
+```  
   
-## 請參閱  
- [\_mm\_stream\_ss](../intrinsics/mm-stream-ss.md)   
- [\_mm\_store\_sd](http://msdn.microsoft.com/zh-tw/8e672d0d-0a96-45b9-a783-392a2457de42)   
- [\_mm\_sfence](http://msdn.microsoft.com/zh-tw/b6c0d18e-3628-4318-826b-45f66782e870)   
- [Streaming SIMD Extensions that Support the Cache](http://msdn.microsoft.com/zh-tw/8f03493a-d5f5-4457-892e-0b6540494872)   
+**結束 Microsoft 特定的**  
+ 進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+  
+## <a name="see-also"></a>請參閱  
+ [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   
+ [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)   
+ [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

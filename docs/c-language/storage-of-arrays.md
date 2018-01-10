@@ -18,14 +18,15 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f475e7870c1ae093966a77a57e299dd9c007b8f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1df2be8059f67b94cd7ee068430639a27a69b43c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-arrays"></a>陣列的儲存
 與陣列類型相關的存放區是其所有項目所需要的存放區。 陣列的項目是儲存在連續且不斷增加的記憶體位置，從第一個項目到最後一個項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [陣列宣告](../c-language/array-declarations.md)

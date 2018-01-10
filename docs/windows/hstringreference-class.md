@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d09ba7fff2426f58f72b26a2c7e7681cecde8b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 97900bd44dfdcede187b20b181c64d235eac60fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringreference-class"></a>HStringReference 類別
 代表 HSTRING 建立從現有的字串。  
@@ -36,20 +39,20 @@ class HStringReference;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[HStringReference::HStringReference 建構函式](../windows/hstringreference-hstringreference-constructor.md)|初始化 HStringReference 類別的新執行個體。|  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |[HStringReference::CopyTo 方法](../windows/hstringreference-copyto-method.md)|複製目前 HStringReference HSTRING 物件的物件。|  
 |[HStringReference::Get 方法](../windows/hstringreference-get-method.md)|擷取基礎 HSTRING 控制代碼的值。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[HStringReference::Operator= 運算子](../windows/hstringreference-operator-assign-operator.md)|將另一個 HStringReference 物件的值移至目前 HStringReference 物件。|  
 |[HStringReference::Operator== 運算子](../windows/hstringreference-operator-equality-operator.md)|指出兩個參數是否相等。|  
@@ -63,5 +66,5 @@ class HStringReference;
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

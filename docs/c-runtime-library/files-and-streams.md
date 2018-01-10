@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 42237a142226d70b3cff0c07de5ed3daaeda8682
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0285d8395b5a135ac75c40914232ad820f36f00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-and-streams"></a>檔案和資料流
 透過讀取和寫入檔案，以便與目標環境溝通的程式。 檔案可以是：  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
   
  © 1989-2001 P.J. Plauger 與 Jim Brodie 著。 著作權所有，並保留一切權利。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [文字和二進位資料流](../c-runtime-library/text-and-binary-streams.md)   
  [位元組和寬資料流](../c-runtime-library/byte-and-wide-streams.md)   
  [控制資料流](../c-runtime-library/controlling-streams.md)   

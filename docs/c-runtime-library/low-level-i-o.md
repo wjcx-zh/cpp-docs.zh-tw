@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c22164fdc2bd8236b6f4819609175c80bd472abf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc923e8c638f51720aaffbb8c26aaa65bb230731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="low-level-io"></a>低層級 I/O
 這些函式會針對比資料流 I/O 所提供還要更低層級的作業，直接叫用作業系統。 低層級輸入和輸出呼叫不會對資料進行緩衝或格式化。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="low-level-io-functions"></a>低層級 I/O 函式  
   
-|函式|用法|  
+|功能|使用|  
 |--------------|---------|  
 |[_close](../c-runtime-library/reference/close.md)|關閉檔案|  
 |[_commit](../c-runtime-library/reference/commit.md)|將檔案排清到磁碟|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/24/2017
   
  `_dup` 和 `_dup2` 通常是用來將預先定義的檔案描述項關聯至不同的檔案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸入和輸出](../c-runtime-library/input-and-output.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)   
  [系統呼叫](../c-runtime-library/system-calls.md)

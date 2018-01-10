@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67d2df7d72de079a0408847c433000a652ac6aaa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8e7b8b2cf605e0f53418755b65151fd9eb2cff5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destroying-window-objects"></a>終結視窗物件
 必須小心使用您自己的子視窗終結時使用者完成與視窗的 c + + 視窗物件。 不會終結這些物件，如果您的應用程式將不會復原其記憶體。 幸運的是，架構會管理視窗的解構與框架視窗、 檢視和對話方塊的建立。 如果您建立其他視窗，您必須負責終結它們。  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [終結框架視窗](../mfc/destroying-frame-windows.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [視窗物件](../mfc/window-objects.md)
 

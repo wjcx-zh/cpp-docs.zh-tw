@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 832563b99d33fe56542fcc48a7ca144124c81e53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2af57c666cf2ee452d2707045d259ada695a2848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory 類別
 這個類別會實作[IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364)介面。  
@@ -36,11 +37,11 @@ class CComClassFactory
      public CComObjectRootEx<CComGlobalsThreadModel>
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComClassFactory::CreateInstance](#createinstance)|建立指定的 CLSID 的物件。|  
 |[CComClassFactory::LockServer](#lockserver)|鎖定在記憶體中的 class factory。|  
@@ -104,7 +105,7 @@ STDMETHOD(LockServer)(BOOL fLock);
   
  呼叫`LockServer`允許用戶端保留 class factory，以便可以快速地建立多個物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [類別概觀](../../atl/atl-class-overview.md)

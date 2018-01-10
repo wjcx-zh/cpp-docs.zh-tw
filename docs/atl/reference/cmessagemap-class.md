@@ -4,45 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CMessageMap
 - ATLWIN/ATL::CMessageMap
 - ATLWIN/ATL::CMessageMap::ProcessWindowMessage
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CMessageMap class
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 1f97bc16-a8a0-4cf0-b90f-1778813a5c8e
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 2726e73d35d01c942ac3d251579fe350be549800
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 04aff6922358048fcbd330096eb26a412cdb75ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmessagemap-class"></a>CMessageMap 類別
 這個類別可讓物件的訊息對應是由另一個物件的存取。  
@@ -56,11 +40,11 @@ ms.lasthandoff: 03/31/2017
 class ATL_NO_VTABLE CMessageMap
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMessageMap::ProcessWindowMessage](#processwindowmessage)|存取訊息對應中的`CMessageMap`-衍生的類別。|  
   
@@ -69,14 +53,14 @@ class ATL_NO_VTABLE CMessageMap
   
  使用 ATL`CMessageMap`支援包含 windows 和動態的訊息對應鏈結。 例如，任何類別包含[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)物件必須衍生自`CMessageMap`。 下列程式碼取自[SUBEDIT](../../visual-cpp-samples.md)範例。 透過[CComControl](../../atl/reference/ccomcontrol-class.md)、`CAtlEdit`類別自動衍生自`CMessageMap`。  
   
- [!code-cpp[NVC_ATL_Windowing # 90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#90](../../atl/codesnippet/cpp/cmessagemap-class_1.h)]  
   
  因為自主的視窗中， `m_EditCtrl`，會使用訊息對應中包含的類別，`CAtlEdit`衍生自`CMessageMap`。  
   
  如需訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)本文 < ATL 視窗類別 >。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="processwindowmessage"></a>CMessageMap::ProcessWindowMessage  
  存取所識別的訊息對應`dwMsgMapID`中`CMessageMap`-衍生的類別。  
@@ -116,9 +100,8 @@ virtual BOOL ProcessWindowMessage(
 ### <a name="remarks"></a>備註  
  由視窗程序的呼叫[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)物件或物件的以動態方式鏈結至訊息對應。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicChain 類別](../../atl/reference/cdynamicchain-class.md)   
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [類別概觀](../../atl/atl-class-overview.md)
-

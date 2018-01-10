@@ -11,11 +11,14 @@ ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 31309f961b392cb7548c3114e1af8604ac872cf3
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 8b9eda4c238ae1a3ea3e59d0e5c39ee6b59cff02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-linux-project"></a>建立新的 Linux 專案
 為 Linux 撰寫程式碼時，您可以選擇建立 Visual Studio 專案或 CMake 專案。 本主題描述如何建立 Visual Studio 專案。 如需 CMake 專案的資訊，請參閱[設定 Linux CMake 專案](cmake-linux-project.md)。

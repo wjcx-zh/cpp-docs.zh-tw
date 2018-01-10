@@ -17,18 +17,19 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0bd0bdcdfd8f7f367c90787cb7ffdf5f888482dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 468f63d8e98dd161baec0b0db33f5dab8e750695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-enhanced-versions-of-crt-functions"></a>CRT 函式的安全性增強版本
 執行階段程式庫常式已有更安全的版本可用。 如需 CRT 中安全性增強的進一步資訊，請參閱 [CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。  
   
  **安全函式**  
   
-|CRT 函式|安全性增強功能|用法|  
+|CRT 函式|安全性增強功能|使用|  
 |------------------|--------------------------------|---------|  
 |[_access、_waccess](../c-runtime-library/reference/access-waccess.md)|[_access_s、_waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|判斷檔案存取權限|  
 |[_alloca](../c-runtime-library/reference/alloca.md)|[_malloca](../c-runtime-library/reference/malloca.md)|在堆疊上配置記憶體|  
@@ -110,5 +111,5 @@ ms.lasthandoff: 10/24/2017
 |[wcstombs、_wcstombs_l](../c-runtime-library/reference/wcstombs-wcstombs-l.md)|[wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)|將寬字元序列轉換為對應的多位元組字元序列|  
 |[wctomb、_wctomb_l](../c-runtime-library/reference/wctomb-wctomb-l.md)|[wctomb_s、_wctomb_s_l](../c-runtime-library/reference/wctomb-s-wctomb-s-l.md)|將寬字元轉換為對應的多位元組字元|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

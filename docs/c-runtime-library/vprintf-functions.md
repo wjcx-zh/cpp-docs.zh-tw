@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>vprintf 函式
 每個 `vprintf` 函式都會接受引數清單的指標，然後設定指定資料的格式，並將其寫入到特定目的地。 函式在執行參數驗證方面有所不同，取決於函式接受寬字元字串或單一位元組字元字串、輸出目的地，以及是否支援在參數所在格式字串中指定順序。  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   
  這些函式會設定要輸出到目的地的資料格式，如下所示。  
   
-|函式|對應函式|輸出目的地|參數驗證|位置參數支援|  
+|功能|對應函式|輸出目的地|參數驗證|位置參數支援|  
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|  
 |`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|主控台|檢查是否 Null。|否|  
 |`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|主控台|檢查是否 Null。|否|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/24/2017
 |`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|由 *buffer* 所指向的記憶體|檢查是否 Null。|否|  
 |`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|由 *buffer* 所指向的記憶體|檢查是否 Null。|否|  
 |`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|由 *buffer* 所指向的記憶體|檢查是否 Null。|否|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|由 *buffer* 所指向的記憶體|檢查是否 Null。|no|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|由 *buffer* 所指向的記憶體|檢查是否 Null。|否|  
   
  `argptr` 引數的類型是 `va_list`，它是在 VARARGS.H 與 STDARG.H 中所定義。 `argptr` 變數必須由 **va_start** 初始化，而且可能由後續 `va_arg` calls; `argptr` 重新初始化，然後根據 *format* 引數中的對應規格指向已針對輸出而轉換並傳輸的引數清單開頭。 *format* 具有與 [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) 之 *format* 引數相同的形式與功能。 這些函式都不會叫用 `va_end`。 如需有關每個 `vprintf` 函式的完整描述，請參閱上表所列之對應函式的描述。  
   
@@ -90,7 +91,7 @@ ms.lasthandoff: 10/24/2017
 > [!IMPORTANT]
 >  確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 若使用這些函式的安全版本 (不論是 **_s** 或 **_p** 尾碼)，使用者提供的格式字串可能觸發無效的參數例外狀況 (若使用者提供的字串包含無效的格式設定字元)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../c-runtime-library/stream-i-o.md)   
  [fprintf、_fprintf_l、fwprintf、_fwprintf_l](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)   
  [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)   

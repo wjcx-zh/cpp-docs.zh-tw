@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: be9a3cf9c91fecedd596ae7db74158f376ffc00c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a481f8c461cb4fddd4acb090edb2f2b5fd18636d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-parts-syntax"></a>檔名部分語法
 在命令中的檔名部分語法表示第一個相依檔案名稱 （這可能是隱含的相依性） 的元件。 檔名元件是檔案的磁碟機、 路徑、 基底名稱和副檔名為指定的不存在於磁碟上。 使用**%s**來代表完整的檔名。 使用**%&#124;**[*部分*]**F** (分隔號字元後面的百分比符號) 來代表組件的檔名，其中*部分*可以是零或多個下列的字母，以任何順序。  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/24/2017
   
 -   %&#124; eF 會成為 exe  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Makefile 中的命令](../build/commands-in-a-makefile.md)

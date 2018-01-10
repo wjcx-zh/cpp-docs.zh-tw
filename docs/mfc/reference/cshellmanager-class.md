@@ -39,11 +39,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 550851e383acf988aa9a816ab1d15675da5b54b9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3e1e3fcff06b2937df8218ce1ab32b91ddf22a7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cshellmanager-class"></a>CShellManager 類別
 實作數個可讓您使用識別項清單指標 (PIDL) 的方法。  
@@ -54,17 +55,17 @@ ms.lasthandoff: 10/24/2017
 class CShellManager : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CShellManager::CShellManager](#cshellmanager)|建構 `CShellManager` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CShellManager::BrowseForFolder](#browseforfolder)|顯示對話方塊，可讓使用者選取 shell 資料夾。|  
 |[CShellManager::ConcatenateItem](#concatenateitem)|串連兩個 Pidl。|  
@@ -107,16 +108,16 @@ BOOL BrowseForFolder(
  [輸出] `strOutFolder`  
  字串，此方法用來儲存所選資料夾的路徑。  
   
- [in] `pWndParent`  
+ [輸入] `pWndParent`  
  父視窗的指標。  
   
- [in] `lplszInitialFolder`  
+ [輸入] `lplszInitialFolder`  
  字串，包含 對話方塊顯示時，依預設會選取的資料夾。  
   
- [in] `lpszTitle`  
+ [輸入] `lpszTitle`  
  對話方塊標題。  
   
- [in] `ulFlags`  
+ [輸入] `ulFlags`  
  指定的對話方塊選項旗標。 請參閱[BROWSEINFO](http://msdn.microsoft.com/library/windows/desktop/bb773205)詳細描述。  
   
  [輸出] `piFolderImage`  
@@ -143,10 +144,10 @@ LPITEMIDLIST ConcatenateItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pidl1`  
+ [輸入] `pidl1`  
  第一個項目中。  
   
- [in] `pidl2`  
+ [輸入] `pidl2`  
  第二個項目中。  
   
 ### <a name="return-value"></a>傳回值  
@@ -163,7 +164,7 @@ LPITEMIDLIST CopyItem(LPCITEMIDLIST pidlSource);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pidlSource`  
+ [輸入] `pidlSource`  
  原始的項目清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -180,7 +181,7 @@ LPITEMIDLIST CreateItem(UINT cbSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `cbSize`  
+ [輸入] `cbSize`  
  項目清單的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -204,7 +205,7 @@ void FreeItem(LPITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pidl`  
+ [輸入] `pidl`  
  若要刪除項目清單。  
   
 ##  <a name="getitemcount"></a>CShellManager::GetItemCount  
@@ -215,7 +216,7 @@ UINT GetItemCount(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pidl`  
+ [輸入] `pidl`  
  項目清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -229,7 +230,7 @@ UINT GetItemSize(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pidl`  
+ [輸入] `pidl`  
  項目清單的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -243,7 +244,7 @@ LPITEMIDLIST GetNextItem(LPCITEMIDLIST pidl);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pidl`  
+ [輸入] `pidl`  
  要逐一查看的項目清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -262,7 +263,7 @@ int GetParentItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpidl`  
+ [輸入] `lpidl`  
  PIDL，將擷取其父代。  
   
  [輸出] `lpidlParent`  
@@ -284,7 +285,7 @@ HRESULT ItemFromPath(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszPath`  
+ [輸入] `lpszPath`  
  字串，指定項目的路徑。  
   
  [輸出] `pidl`  
@@ -293,6 +294,6 @@ HRESULT ItemFromPath(
 ### <a name="return-value"></a>傳回值  
  傳回`NOERROR`成功; 如果 OLE 定義的錯誤值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

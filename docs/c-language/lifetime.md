@@ -28,11 +28,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac1e1904ea5b1d7280f614ec65af2be71f862104
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ce98025001529313260f62e8f45e85add148c77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lifetime"></a>存留期
 「存留期」是有變數或函式的程式執行的期間。 識別項儲存期決定其存留期。  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/24/2017
   
  如果是利用 `malloc` 之類的特殊程式庫常式建立記憶體，則可視需要 (動態) 配置記憶體。 因為動態記憶體配置使用程式庫常式，因此不被視為語言的一部分。 請參閱《執行階段程式庫參考》中的 [malloc](../c-runtime-library/reference/malloc.md) 函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

@@ -17,18 +17,19 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a711a8087fef7978eceaadece317d4aac95d6340
-ms.sourcegitcommit: 2a5d0e9e6829150cbc22c6de3395ec13008e3266
+ms.workload: cplusplus
+ms.openlocfilehash: 11b28793e5e659e3135061e3a6fd410d9b1c9f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-conversion"></a>資料轉換
 這些常式會將資料從一種形式轉換成另一種形式。 這些常式的執行速度通常比您撰寫的轉換還快。 開頭為 `to` 前置詞的每個常式都會實作為函式和巨集。 如需選擇實作的資訊，請參閱[選擇函式與巨集](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。  
   
 ### <a name="data-conversion-routines"></a>資料轉換常式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|尋找整數的絕對值|  
 |[atof、_atof_l、_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將字串轉換為 `float`|  
@@ -69,5 +70,5 @@ ms.lasthandoff: 10/27/2017
 |[_atoi64、_atoi64_l、_wtoi64、_wtoi64_l](../c-runtime-library/reference/atoi64-atoi64-l-wtoi64-wtoi64-l.md)|將寬字元字串轉換為 `__int64`|  
 |[atol、_atol_l、_wtol、_wtol_l](../c-runtime-library/reference/atol-atol-l-wtol-wtol-l.md)|將寬字元字串轉換為 `long`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

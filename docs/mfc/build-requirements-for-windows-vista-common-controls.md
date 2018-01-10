@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6f6dabd14ddb95f1b4c2b49389c27f61a69970f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 76919bcdd416ed7195e94ed1fa0b2e3f3a4d573d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 通用控制項的組建需求
 Microsoft Foundation Class (MFC) 程式庫支援 Windows 通用控制項 6.1 版。 通用控制項包含在 [!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)] 中，而程式庫則包含在 [!INCLUDE[vsipsdk](../mfc/includes/vsipsdk_md.md)] 中。 程式庫會提供新的方法，以增強現有類別，以及新的類別和方法，可支援[!INCLUDE[windowsver](../build/reference/includes/windowsver_md.md)]通用控制項。 當您建置應用程式時，您應該遵循下列章節中描述的編譯和移轉需求。  
@@ -60,7 +61,7 @@ Microsoft Foundation Class (MFC) 程式庫支援 Windows 通用控制項 6.1 版
 #endif  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [一般 MFC 主題](../mfc/general-mfc-topics.md)   
  [階層架構圖表](../mfc/hierarchy-chart.md)   
  [已被取代的 ANSI API](../mfc/deprecated-ansi-apis.md)

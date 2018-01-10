@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4c886ef46fd7ff8b519235e70f781e399aef53c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ca6a78f19b43ded59efb56b87f9fe3f44887a31a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002：持續性物件資料格式
 此提示描述支援持續性的 c + + 物件和物件資料的格式，它會儲存在檔案中的 MFC 常式。 這只適用於具有類別[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)和[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)巨集。  
@@ -110,7 +111,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
   
  如前文所述，您應該編碼版本和類別資訊自行呼叫時`Serialize`直接管理，讓您可以稍後變更格式，同時仍維持回溯相容性的較舊的檔案。 `CArchive::SerializeClass`之前直接序列化物件或之前呼叫的基底類別函式也可以明確地呼叫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45c906cb109ff0e40d79119e4cf4d140c6e544ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f92790965ffb8cb96fd59c9333a1a99c9fcfbe5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>陣列、清單和對應的樣板類別
 這些集合類別是參數會判斷存放在彙總中物件類型的範本。 `CArray`、`CMap` 和 `CList` 類別會使用通常必須自訂的全域 helper 函式。 如需這些 helper 函式的詳細資訊，請參閱[集合類別 Helper](../mfc/reference/collection-class-helpers.md)。 具有類型的指標類別是類別庫中其他類別的包裝函式。 使用這些包裝函式，您可以讓編譯器進行類型檢查，以協助您避免錯誤。 如需有關使用這些類別的詳細資訊，請參閱[集合](../mfc/collections.md)。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/24/2017
  [CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)  
  類型安全之對應與指標的範本類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../mfc/class-library-overview.md)
 

@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 35d71154ccbfc5f2d3147c55aaedff8cf85a06de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84c8f800e0b68e23fe33ca0a7e1c1d977bcc344e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccrtallocator-class"></a>CCRTAllocator 類別
 這個類別會提供用來管理記憶體使用 CRT 記憶體常式方法。  
@@ -35,11 +36,11 @@ ms.lasthandoff: 10/24/2017
 class ATL::CCRTAllocator
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Ccrtallocator:: Allocate](#allocate)|（靜態）呼叫這個方法來配置記憶體。|  
 |[Ccrtallocator:: Free](#free)|（靜態）呼叫此方法以釋放記憶體。|  
@@ -102,7 +103,7 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  調整配置的記憶體數量。 請參閱[realloc](../../c-runtime-library/reference/realloc.md)如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CHeapPtr 類別](../../atl/reference/cheapptr-class.md)   
  [CComAllocator 類別](../../atl/reference/ccomallocator-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

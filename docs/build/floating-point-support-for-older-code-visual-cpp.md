@@ -13,14 +13,15 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ddc151a2a0f74c6f77be68cd026147a318a595a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 130b6efb1c05775cd7859144d91a30051fb4ca53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-support-for-older-code-visual-c"></a>舊版程式碼的浮點支援 (Visual C++)
 MMX 和浮點的堆疊暫存器 (MM0-MM7/ST0-ST7) 會保留在內容切換。  對這些暫存器沒有明確呼叫慣例。  核心模式程式碼中嚴格禁止您使用這些暫存器。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [呼叫慣例](../build/calling-convention.md)

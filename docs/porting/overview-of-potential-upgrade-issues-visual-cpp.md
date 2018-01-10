@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 多年來，Visual C++ 編譯器經過許多變更，以及 C++ 語言本身、C++ 標準程式庫、C 執行階段 (CRT) 以及 MFC 和 ATL 這類其他程式庫的變更。 因此，從舊版 Visual C++ 升級應用程式時，您可能會在先前正常編譯的程式碼中遇到編譯器和連結器錯誤及警告。 原始程式碼基底越舊，這類錯誤的可能性就越大。 本概觀摘要說明您可能會遇到的最常見問題類別，並提供更多詳細資訊的連結。  
@@ -165,5 +166,5 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
   
  如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 如需 MBCS 與Unicode 的一般資訊，請參閱 [Visual C++ 中的文字和字串](../text/text-and-strings-in-visual-cpp.md)和[國際化](../c-runtime-library/internationalization.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md) [Visual Studio 2017 中的 C++ 一致性改善](../cpp-conformance-improvements-2017.md)

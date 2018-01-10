@@ -1,72 +1,71 @@
 ---
-title: "Visual C++ 中的 MBCS 支援 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mbcs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "亞洲語言 [C++]"
-  - "字元集 [C++], 多位元組"
-  - "中文字元 [C++]"
-  - "程式碼編輯器 [C++], MBCS 支援"
-  - "偵錯工具 [C++], MBCS 支援"
-  - "雙位元組字元集 [C++]"
-  - "IME [C++]"
-  - "IME [C++], MBCS"
-  - "輸入法 [C++]"
-  - "輸入法 [C++], MBCS"
-  - "日文字元 [C++]"
-  - "漢字字元支援 [C++]"
-  - "MBCS [C++], 啟用"
-  - "多位元組字元 [C++]"
-  - "NMAKE 程式, MBCS 支援"
-  - "資源編輯器 [C++], MBCS 支援"
-  - "工具 [C++], MBCS 支援"
+title: "Visual c + + 中的 MBCS 支援 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mbcs
+dev_langs: C++
+helpviewer_keywords:
+- tools [C++], MBCS support
+- Asian languages [C++]
+- Code Editor [C++], MBCS support
+- IME [C++]
+- Chinese characters [C++]
+- Input Method Editor [C++], MBCS
+- resource editors [C++], MBCS support
+- debugger [C++], MBCS support
+- character sets [C++], multibyte
+- Japanese characters [C++]
+- multibyte characters [C++]
+- Kanji character support [C++]
+- NMAKE program, MBCS support
+- double-byte character sets [C++]
+- IME [C++], MBCS
+- Input Method Editor [C++]
+- MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Visual C++ 中的 MBCS 支援
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-執行於支援 MBCS 的 Windows 2000 或 Windows XP 作業系統版本時，Visual C\+\+ 的開發系統 \(包含整合的原始程式碼編輯器、偵錯工具和命令列工具\) 除了記憶體視窗以外，其餘都支援 MBCS。  
+# <a name="mbcs-support-in-visual-c"></a>Visual C++ 中的 MBCS 支援
+在 Windows 2000 或 Windows XP 作業系統的 mbcs 的版本上執行時，Visual c + + 開發系統 （包括整合式原始檔的程式碼編輯器中，偵錯工具，以及命令列工具） 已 MBCS 啟用，除了 [記憶體] 視窗。  
   
- 記憶體視窗不會將資料的位元組解譯為 MBCS 字元，不過能解譯為 ANSI 或 Unicode 字元。  ANSI 字元大小固定為 1 個位元組，而 Unicode 字元大小為 2 位元組。  使用 MBCS 時，字元可以是 1 個或 2 個位元組大小，而其說明視正在使用中字碼頁而定。  因此，確實地顯示 MBCS 字元記憶體視窗非常困難。  記憶體視窗不知道哪個位元是字元的開頭。  開發人員可以在記憶體視窗中檢視位元組值，並在資料表中查詢值，以判斷字元表示。  這可能是因為開發人員根據原始程式碼，得知字串的開始位址。  
+ 記憶體視窗不會將資料的位元組解譯為 MBCS 字元，不過能解譯為 ANSI 或 Unicode 字元 ANSI 字元固定為 1 個位元組大小，而 Unicode 字元則是 2 個位元組大小。 使用 MBCS 時，字元可以是 1 個或 2 個位元組大小，解譯則是根據所使用的字碼頁而定。 因此，記憶體視窗很難順利顯示 MBCS 字元， 記憶體視窗不知道哪個位元組是字元的開頭。 開發人員可以在 [記憶體] 視窗中檢視的位元組值，並查閱資料表，判斷字元表示法中的值。 這可能是因為開發人員知道根據原始碼字串的起始位址。  
   
- Visual C\+\+ 會在任何適當的時候接受雙位元組字元。  這包括在對話方塊中的路徑名稱和檔案名稱，以及 Visual C\+\+ 資源編輯器的文字項目 \(例如，對話編輯器裡的靜態文字和圖示編輯器裡的靜態文字項目\)。  除此之外，前置處理器 \(Preprocessor\) 辨識一些雙字元組指示詞─例如，`#include` 陳述式裡的檔案名稱，做為 **code\_seg** 和 **data\_seg** 程式的引數。  在原始程式碼編輯器裡，會接受註解和字串常值裡的雙位元組字元，雖然不是在 C\/C\+\+ 語言項目 \(例如變數名稱\) 中。  
+ Visual c + + 可接受雙位元組字元，若要這樣做適當的位置。 此對話方塊和 Visual c + + 資源編輯器 （例如，在對話方塊編輯器中靜態文字） 和靜態文字項目在圖示編輯器中的文字項目中包含路徑名稱和檔案名稱。 此外，前置處理器會辨識某些雙位元組指示詞 — 例如，檔案名稱中的`#include`陳述式，並做為引數**code_seg**和**data_seg** pragma。 在原始碼程式碼編輯器中，會接受在註解和字串常值的雙位元組字元，雖然不是在 C/c + + 語言的項目 （例如變數名稱）。  
   
-##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a> 輸入法 \(IME\) 的支援  
- 為使用 MBCS 的東亞市場 \(例如，日本\) 所撰寫的應用程式，通常支援 Windows IME 來輸入單一位元組和雙位元組字元。  Visual C\+\+ 開發環境包含 IME 的完整支援。  如需詳細資訊，請參閱 [IME 範例：示範如何控制 IME 模式和實作 IME 層級 3](http://msdn.microsoft.com/zh-tw/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
+##  <a name="_core_support_for_the_input_method_editor_.28.ime.29"></a>支援的輸入法 (IME)  
+ 通常使用 MBCS （例如，日本） 的東亞洲市場支援 Windows IME 輸入這兩個單一位元組和雙位元組字元所撰寫的應用程式。 Visual c + + 開發環境包含完整 IME 支援。 如需詳細資訊，請參閱[輸入法範例： 示範如何控制 IME 模式和實作 IME 層級 3](http://msdn.microsoft.com/en-us/87ebdf65-cef0-451d-a6fc-d5fb64178b14)。  
   
- 日語鍵盤並不直接支援漢字字元。  IME 將以其他日文字母 \(Romaji、片假名或平假名\) 輸入的音標字串轉換成可能的漢字表示。  如果有模稜兩可，您可以從許多替代方法裡選擇。  一旦您選定預定的漢字字元之後，IME 會將兩個 `WM_CHAR` 訊息傳遞至控制應用程式。  
+ 日文鍵盤不直接支援漢字字元。 IME 轉換發音字串，其中一種其他日文字母 （羅馬字母、 片假名或平假名） 輸入可能的漢字表示。 如果有模稜兩可，您可以選取從多個替代方案。 當您選取了預定的漢字字元時，輸入法會傳遞兩個`WM_CHAR`控制的應用程式的訊息。  
   
- IME 是由 ALT\+\` 鍵組合來啟動，以一組按鈕 \(指示器\) 和轉換視窗出現。  應用程式在文字插入點調整視窗。  應用程式必須處理 `WM_MOVE` 和 `WM_SIZE` 訊息，藉著重新調整轉換視窗以遵照新位置或目標視窗的大小。  
+ 輸入法，啟動 ALT +\`按鍵組合，會顯示為一組按鈕 （指標） 和轉換視窗。 應用程式會將文字插入點的視窗。 應用程式必須處理`WM_MOVE`和`WM_SIZE`以符合新的位置或目標視窗大小重新調整位置轉換視窗訊息。  
   
- 如果您要應用程式的使用者能夠輸入漢字字元，應用程式必須處理 Windows IME 訊息。  如需 IME 程式設計的詳細資訊，請參閱[輸入法 \(IME\)](https://msdn.microsoft.com/en-us/library/ms776145.aspx)。  
+ 如果您希望使用者有能力輸入日文漢字字元的應用程式，應用程式必須處理 Windows IME 訊息。 如需輸入法程式設計的詳細資訊，請參閱[輸入法編輯器](https://msdn.microsoft.com/en-us/library/ms776145.aspx)。  
   
-## Visual C\+\+ 偵錯工具  
- Visual C\+\+ 偵錯工具提供在 IME 訊息上設定中斷點的功能。  除此之外，\[記憶體\] 視窗可以顯示雙位元組字元。  
+## <a name="visual-c-debugger"></a>Visual c + + 偵錯工具  
+ Visual c + + 偵錯工具提供的輸入法的訊息上設定中斷點的能力。 此外，[記憶體] 視窗可以顯示雙位元組字元。  
   
-## 命令列工具  
- Visual C\+\+ 命令列工具，包括編譯器、NMAKE 和資源編譯器 \(RC.EXE\)，都支援 MBCS。  當您編譯您的應用程式資源時，您可以使用資源編譯器的 \/c 選項來更改預設字碼頁。  
+## <a name="command-line-tools"></a>命令列工具  
+ Visual c + + 命令列工具，包括編譯器、 NMAKE 及資源編譯器 (RC。EXE)，MBCS 啟用。 您可以使用資源編譯器 /c 選項來編譯應用程式的資源時，變更預設字碼頁。  
   
- 若要在原始程式碼編譯時更改預設地區設定 \(Locale\)，請使用 [\#pragma setlocale](../preprocessor/setlocale.md)。  
+ 若要變更預設的地區設定來源的程式碼編譯時期，使用[#pragma setlocale](../preprocessor/setlocale.md)。  
   
-## 圖形工具  
- Visual C\+\+ 以 Windows 為基礎所開發的工具，例如 Spy\+\+ 和資源編輯工具，完整支援 IME 字串。  
+## <a name="graphical-tools"></a>圖形化工具  
+ Visual c + + windows 工具，例如 Spy + + 和資源的編輯工具，完全支援輸入法的字串。  
   
-## 請參閱  
- [多位元組字元集 \(MBCS\) 的支援](../text/support-for-multibyte-character-sets-mbcss.md)   
+## <a name="see-also"></a>請參閱  
+ [針對多位元組字元集 (Mbcs) 支援](../text/support-for-multibyte-character-sets-mbcss.md)   
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)

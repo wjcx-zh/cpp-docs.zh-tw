@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 943639ed97798369bd4efa24561fd5b174f81579
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d8aad77236e5c1b2cdc8fe5958d87d8c53b8f05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-improve-performance-with-generics-visual-c"></a>如何：使用泛型改善效能 (Visual C++)
 使用泛型可以根據型別參數建立可重複使用的程式碼。 型別參數的實際類型會延後，直到用戶端程式碼呼叫它為止。 如需有關泛型的詳細資訊，請參閱[泛型](../windows/generics-cpp-component-extensions.md)。  
@@ -130,5 +133,5 @@ int main()
 14  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [泛型](../windows/generics-cpp-component-extensions.md)

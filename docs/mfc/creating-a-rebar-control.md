@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0f1cc709bf09d03f211f3123bd47c82bb590348
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 263541d9dc462b067caf763fe969f3809f1daa7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-rebar-control"></a>建立 Rebar 控制項
 [CReBarCtrl](../mfc/reference/crebarctrl-class.md)應該建立物件，在父物件顯示之前。 如此可以將繪製發生問題的可能性降到最低。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 6.  呼叫[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)插入現有的子視窗 (例如`m_wndReToolBar`) 插入新的 rebar 控制項。 如需有關如何將群組列插入現有 rebar 控制項的詳細資訊，請參閱[Rebar 控制項和群組列](../mfc/rebar-controls-and-bands.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

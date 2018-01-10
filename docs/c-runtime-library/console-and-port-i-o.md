@@ -21,18 +21,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d262e27b47de0826024cb26e7f19280c6ed54e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a741008b894c5349bd198c2abfd13e11a158c4b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-and-port-io"></a>主控台和連接埠 I/O
 這些常式會在您的主控台或指定的連接埠上進行讀取和寫入。 主控台 I/O 常式與資料流 I/O 或低層級 I/O 程式庫常式並不相容。 主控台或連接埠在執行 I/O 之前並不需要開啟或關閉，因此本類別中不會有 Open 或 Close 常式。 在 Windows 作業系統中，來自這些函式的輸出將會一律導向主控台，而無法重新導向。  
   
 ### <a name="console-and-port-io-routines"></a>主控台和連接埠 I/O 常式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)、[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|從主控台讀取字串|  
 |[_cprintf、_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)、[_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|將格式化資料寫入主控台|  
@@ -50,6 +51,6 @@ ms.lasthandoff: 10/24/2017
 |[_putch、_putwch](../c-runtime-library/reference/putch-putwch.md)|將字元寫入主控台|  
 |[_ungetch、_ungetwch](../c-runtime-library/reference/ungetch-ungetwch-ungetch-nolock-ungetwch-nolock.md)|「取消取得」從主控台讀取的最後一個字元，使它成為要讀取的下一個字元|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸入和輸出](../c-runtime-library/input-and-output.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

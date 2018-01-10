@@ -1,48 +1,52 @@
 ---
-title: "Toolbar Button Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size, toolbar buttons"
-  - "toolbar buttons (in Toolbar editor), setting properties"
-  - "Toolbar editor, toolbar button properties"
-  - "status bars, active toolbar button text"
-  - "command IDs, toolbar buttons"
-  - "width, toolbar buttons"
+title: "工具列按鈕屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- size, toolbar buttons
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- status bars, active toolbar button text
+- command IDs, toolbar buttons
+- width, toolbar buttons
 ms.assetid: b2705814-7c5d-4f24-8f77-07559b0cdda2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e179cd400b0b8bcc621a7c69a4814eab098fbaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Toolbar Button Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-工具列按鈕的屬性：  
+# <a name="toolbar-button-properties"></a>工具列按鈕屬性
+工具列按鈕的屬性包括：  
   
 |屬性|描述|  
-|--------|--------|  
-|**ID**|定義按鈕的 ID。  下拉式清單提供了常用的 **ID** 名稱。|  
-|**Width**|設定按鈕的寬度。  建議採用 16 像素。|  
-|**Height**|設定按鈕的高度。  請注意，改變一個按鈕的高度將改變工具列所有按鈕的高度。  建議採用 15 像素。|  
-|**提示**|定義顯示於狀態列的訊息。  加入 \\n 和一個名稱，可將工具提示加入工具列按鈕。  如需詳細資訊，請參閱[建立工具提示](../mfc/creating-a-tool-tip-for-a-toolbar-button.md)。|  
+|--------------|-----------------|  
+|**ID**|定義按鈕的識別碼。 下拉式清單提供常用**識別碼**名稱。|  
+|**寬度**|設定按鈕的寬度。 建議使用 16 個像素。|  
+|**高度**|設定按鈕的高度。 請注意一個按鈕的高度變更工具列上的所有按鈕的高度。 建議 15 像素。|  
+|**提示**|定義顯示在狀態列中的訊息。 加入 \n 和名稱將以工具提示加入至工具列按鈕。 如需詳細資訊，請參閱[建立工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|  
   
- **Width** 和 **Height** 會套用至所有按鈕。  用來建立工具列的點陣圖最多可容許 2048 的寬度。  因此，如果您將按鈕寬度設成 512，您只能有四個按鈕，如果將寬度設成 513，則只能有三個按鈕。  
+ **寬度**和**高度**套用於所有按鈕。 用來建立工具列點陣圖的最大寬度為 2048年。 因此如果您將按鈕寬度為 512，只能有四個按鈕，如果您將寬度設 513 時，您只能有三個按鈕。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  MFC 或 ATL  
   
-## 請參閱  
- [Changing the Properties of a Toolbar Button](../mfc/changing-the-properties-of-a-toolbar-button.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>請參閱  
+ [變更工具列按鈕屬性](../windows/changing-the-properties-of-a-toolbar-button.md)   
+ [工具列編輯器](../windows/toolbar-editor.md)
+

@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b3f343eee6c6512bb30434aa428f3a4b9bd7a6df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f02c6d2a6dcdc4c858fe92b2cf5e1eecdba1a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tmpmax-ltmpnam"></a>TMP_MAX、L_tmpnam
 ## <a name="syntax"></a>語法  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  `TMP_MAX` 是 `tmpnam` 函式可以產生的唯一檔案名稱數目。 `L_tmpnam` 是 `tmpnam` 產生的暫存檔案名稱長度。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域常數](../c-runtime-library/global-constants.md)

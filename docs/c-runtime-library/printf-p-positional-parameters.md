@@ -24,11 +24,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 83b3630addfe94c438be21ca2470ade01193a997
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 10d48a899b2d2e6ad644c385c2b2116353c20f8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printfp-positional-parameters"></a>printf_p 位置參數
 位置參數會提供根據數字指定的功能，其中引數會取代至格式字串中的欄位。 您可以使用下列位置參數 `printf` 函式：  
@@ -72,7 +73,7 @@ _printf_p("%2$s %1$s", "November", "10");
 10 November  
 ```  
   
-不同於傳統的格式字串，位置參數可以在格式字串中使用超過一次。 例如：  
+不同於傳統的格式字串，位置參數可以在格式字串中使用超過一次。 例如，套用至物件的  
   
 ```C  
 _printf_p("%1$d times %1$d is %2$d", 10, 100);  
@@ -87,7 +88,7 @@ _printf_p("%1$d times %1$d is %2$d", 10, 100);
 所有引數都必須在格式字串中的某處至少使用一次。 格式字串中允許的位置參數最大數目是由 `_ARGMAX` 所指定。  
   
 ### <a name="width-and-precision"></a>寬度和精確度  
-您可以使用 `*n$` 指定位置參數為寬度或精確度規範，其中 `n` 是寬度或精確度參數在參數清單中的位置。 寬度或精確度值的位置必須緊接在 \* 符號之後出現。 例如：  
+您可以使用 `*n$` 指定位置參數為寬度或精確度規範，其中 `n` 是寬度或精確度參數在參數清單中的位置。 寬度或精確度值的位置必須緊接在 \* 符號之後出現。 例如，套用至物件的  
   
 ```C  
 _printf_p("%1$*2$s","Hello", 10);  
@@ -152,5 +153,5 @@ ghi abc def
 333.333300 2.22 0.100
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [格式規格語法：printf 和 wprintf 函式](../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)

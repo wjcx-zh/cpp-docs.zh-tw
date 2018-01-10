@@ -45,11 +45,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6cfc812351da16f175e6e7d652d57a11d3a62c79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 067f683b5322b11a4ca33f015d64850c8113ce18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crect-class"></a>CRect 類別
 類似於 Windows [RECT](../../mfc/reference/rect-structure1.md)結構。  
@@ -60,17 +61,17 @@ ms.lasthandoff: 10/24/2017
 class CRect : public tagRECT  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRect::CRect](#crect)|建構 `CRect` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRect::BottomRight](#bottomright)|傳回的右下方點`CRect`。|  
 |[CRect::CenterPoint](#centerpoint)|傳回的中心點`CRect`。|  
@@ -97,7 +98,7 @@ class CRect : public tagRECT
 |[CRect::Width](#width)|計算的寬度`CRect`。|  
   
 ### <a name="public-operators"></a>公用運算子    
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRect::operator-](#operator_-)|減去指定的位移，從`CRect`或 「 洩氣 」`CRect`並傳回產生`CRect`。|  
 |[LPCRECT CRect::operator](#operator_lpcrect)|將轉換`CRect`至**LPCRECT**。|  
@@ -1441,7 +1442,7 @@ int nWid = rect.Width();
    // nWid is now 60
    ASSERT(nWid == 60);   
 ```
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CPoint 類別](cpoint-class.md)   
  [CSize 類別](csize-class.md)   
  [RECT](../../mfc/reference/rect-structure1.md)

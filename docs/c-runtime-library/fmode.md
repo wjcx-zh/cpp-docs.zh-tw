@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9007cceacb150b13796e395799f2037704976802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4fdaeb0e67832f4f9e0c657e48fe74a88b86292
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmode"></a>_fmode
 `_fmode` 變數會設定文字或二進位轉譯的預設檔案轉譯模式。 這個全域變數已為 [_get_fmode](../c-runtime-library/reference/get-fmode.md) 和 [_set_fmode](../c-runtime-library/reference/set-fmode.md) 的更安全版本所取代，它們應該用來取代全域變數。 它會在 Stdlib.h 中宣告，如下所示。  
@@ -46,7 +47,7 @@ extern int _fmode;
   
 -   在您的程式中設定它，直接變更 `_fmode` 值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域變數](../c-runtime-library/global-variables.md)   
  [_get_fmode](../c-runtime-library/reference/get-fmode.md)   
  [_set_fmode](../c-runtime-library/reference/set-fmode.md)

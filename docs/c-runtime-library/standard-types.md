@@ -171,11 +171,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b80a4b8c947064886d6afa18e9c24d62195a049a
-ms.sourcegitcommit: c9108f0c45b7a634d4e6e5c2d2ec192d50ffdbab
+ms.workload: cplusplus
+ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-types"></a>標準類型
 Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。  
@@ -262,5 +263,5 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`wctype_t` 整數|可以表示任何語言字元集的所有字元。|WCHAR.H,<br /><br /> CRTDEFS.H|  
 |`wint_t` 整數|可以保留任何寬字元或寬檔案結尾值的資料物件類型。|WCHAR.H,<br /><br /> CRTDEFS.H|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

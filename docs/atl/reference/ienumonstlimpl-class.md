@@ -25,11 +25,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 50cb78893eeca685f0b538fad397aca445502776
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38d645f7841cb71af9812bd1d62a979752a0343d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 類別
 這個類別定義根據 c + + 標準程式庫集合的列舉程式介面。  
@@ -62,7 +63,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::Clone](#clone)|實作[IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx)。|  
 |[IEnumOnSTLImpl::Init](#init)|初始化列舉值。|  
@@ -72,7 +73,7 @@ class ATL_NO_VTABLE IEnumOnSTLImpl : public Base
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IEnumOnSTLImpl::m_iter](#m_iter)|迭代器，表示集合中的列舉值的目前位置。|  
 |[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|C + + 標準程式庫容器保留要列舉的項目指標。|  
@@ -208,5 +209,5 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

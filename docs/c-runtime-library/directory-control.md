@@ -17,18 +17,19 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 74d0bd9011c77d67383e36b15817a71f853a409b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4674029fe5bdfc4323f580fcc0567b2ceeb1929
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="directory-control"></a>目錄控制
 這些常式會存取、修改和取得目錄結構的相關資訊。  
   
 ### <a name="directory-control-routines"></a>目錄控制常式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[_chdir、_wchdir](../c-runtime-library/reference/chdir-wchdir.md)|變更目前工作目錄|  
 |[_chdrive](../c-runtime-library/reference/chdrive.md)|變更目前的磁碟機|  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 |[_rmdir、_wrmdir](../c-runtime-library/reference/rmdir-wrmdir.md)|移除目錄|  
 |[_searchenv、_wsearchenv](../c-runtime-library/reference/searchenv-wsearchenv.md)、[_searchenv_s、_wsearchenv_s](../c-runtime-library/reference/searchenv-s-wsearchenv-s.md)|在指定的路徑上搜尋指定的檔案|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)   
  [檔案處理](../c-runtime-library/file-handling.md)   
  [系統呼叫](../c-runtime-library/system-calls.md)

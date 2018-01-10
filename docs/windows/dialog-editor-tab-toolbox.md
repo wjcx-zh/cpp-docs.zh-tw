@@ -1,41 +1,43 @@
 ---
-title: "工具箱、對話方塊編輯器索引標籤 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "工具箱 [C++], [對話方塊編輯器] 索引標籤"
-  - "控制項 [C++], 類型"
-  - "對話方塊中的 SysLink 控制項"
-  - "自訂控制項 [Visual Studio], 對話方塊"
-  - "控制項 [C++], 標準"
-  - "對話方塊編輯器, 建立控制項"
-  - "控制項 [C++], 加入對話方塊"
+title: "工具箱、 對話方塊編輯器索引標籤 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Toolbox [C++], Dialog Editor tab
+- controls [C++], types
+- syslink controls ino dialog boxes
+- custom controls [Visual Studio], dialog boxes
+- controls [C++], standard
+- Dialog editor, creating controls
+- controls [C++], adding to dialog boxes
 ms.assetid: 253885c2-dcb9-4d8e-ac9b-805ea31cbf5e
-caps.latest.revision: 12
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9db31d6e152be10f2c4934b7b1f239d1e08387f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 工具箱、對話方塊編輯器索引標籤
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您在對話方塊編輯器中工作時，\[對話方塊編輯器\] 索引標籤會出現在 [&#91;工具箱&#93; 視窗](../Topic/Toolbox.md)中。 若要將控制項加入新的對話方塊中，請將控制項從 \[工具箱\] 拖曳至您所建立的對話方塊 \(如需詳細資訊，請參閱[將控制項加入對話方塊中](../mfc/adding-a-control-to-a-dialog-box.md)\)。 然後移動控制項，或變更其大小和形狀。  
+# <a name="dialog-editor-tab-toolbox"></a>工具箱、對話方塊編輯器索引標籤
+對話方塊編輯器索引標籤會出現在[工具箱視窗](/visualstudio/ide/reference/toolbox)當您正在對話方塊編輯器中。 若要將控制項加入新的對話方塊中，將控制項從 [工具箱] 拖曳至您所建立的對話方塊 (如需詳細資訊，請參閱[將控制項加入對話方塊](adding-a-control-to-a-dialog-box.md))。 然後移動控制項，或變更其大小和形狀。  
   
- \[工具箱\] 中提供的標準控制項為：  
+ [工具箱] 中提供的標準控制項為：  
   
--   [Button 控制項](../mfc/reference/cbutton-class.md)  
+-   [按鈕控制項](../mfc/reference/cbutton-class.md)  
   
--   [核取方塊控制項](../mfc/reference/button-styles.md)  
+-   [核取方塊控制項](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
 -   [下拉式方塊控制項](../mfc/reference/ccombobox-class.md)  
   
@@ -45,7 +47,7 @@ manager: "ghogen"
   
 -   [清單方塊控制項](../mfc/reference/clistbox-class.md)  
   
--   [選項按鈕控制項](../mfc/reference/button-styles.md)  
+-   [選項按鈕控制項](../mfc/reference/styles-used-by-mfc.md#button-styles)  
   
 -   [靜態文字控制項](../mfc/reference/cstatic-class.md)  
   
@@ -55,9 +57,9 @@ manager: "ghogen"
   
 -   [捲軸控制項](../mfc/reference/cscrollbar-class.md)  
   
- \[工具箱\] 提供的 [Windows 通用控制項](../mfc/controls-mfc.md)可提升應用程式的功能。 包括：  
+ [Windows 通用控制項](../mfc/controls-mfc.md)可用 [工具箱] 中提供您的應用程式中的增強的功能。 包括：  
   
--   [Slider 控制項](../mfc/slider-control-styles.md)  
+-   [滑桿控制項](../mfc/slider-control-styles.md)  
   
 -   [微調控制項](../mfc/using-cspinbuttonctrl.md)  
   
@@ -67,7 +69,7 @@ manager: "ghogen"
   
 -   [清單控制項](../mfc/list-control-and-list-view.md)  
   
--   [樹狀結構控制項](../mfc/tree-control-styles.md)  
+-   [樹狀目錄控制項](../mfc/tree-control-styles.md)  
   
 -   [索引標籤控制項](../mfc/tab-controls-and-property-sheets.md)  
   
@@ -81,26 +83,27 @@ manager: "ghogen"
   
 -   [擴充的下拉式方塊控制項](../mfc/creating-an-extended-combo-box-control.md)  
   
--   [自訂控制項](../mfc/custom-controls-in-the-dialog-editor.md)  
+-   [自訂控制項](custom-controls-in-the-dialog-editor.md)  
   
- 您可以選取 \[工具箱\] 中的**自訂控制項**圖示，將它拖曳到您的對話方塊中，將自訂控制項加入對話方塊中。 若要加入 Syslink 控制項，請加入自訂控制項，然後將控制項的 \[類別\] 屬性變更為 \[Syslink\]。 這會重新整理屬性，並顯示 Syslink 控制項屬性。 如需 MFC 包裝函式類別的相關資訊，請參閱 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)。  
+ 您可以將自訂控制項加入對話方塊中選取**自訂控制項**工具箱，並將它拖曳到您的對話方塊中的圖示。 若要加入 Syslink 控制項，加入自訂控制項，然後變更控制項的**類別**屬性**Syslink**。 這會重新整理屬性，並顯示 Syslink 控制項屬性。 如需 MFC 包裝函式類別資訊，請參閱[CLinkCtrl](../mfc/reference/clinkctrl-class.md)。  
   
- 您也可以[將 ActiveX 控制項加入對話方塊中](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
+ 您也可以[ActiveX 控制項加入您的對話方塊](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
   
- 您也可以自訂 \[工具箱\] 視窗，讓它更好用。 如需詳細資訊，請參閱[管理 &#91;工具箱&#93; 中的項目和索引標籤](http://msdn.microsoft.com/zh-tw/21285050-cadd-455a-b1f5-a2289a89c4db)。 例如，您可以將控制項放置於 \[工具箱\] 視窗中，以方便存取。 如需詳細資訊，請參閱[自訂 &#91;工具箱&#93; 對話方塊](http://msdn.microsoft.com/zh-tw/bd07835f-18a8-433e-bccc-7141f65263bb)。  
+ 您也可以自訂 [工具箱] 視窗，讓它更好用。 如需詳細資訊，請參閱[使用工具箱](/visualstudio/ide/using-the-toolbox)。  
+
+ 如需有關使用 RichEdit 1.0 控制項與 MFC 的詳細資訊，請參閱[使用 RichEdit 1.0 控制項與 MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
   
- 如需使用 RichEdit 1.0 控制項與 MFC 的詳細資訊，請參閱[使用 RichEdit 1.0 控制項與 MFC](../mfc/using-the-richedit-1-0-control-with-mfc.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
- 如需將資源加入 Managed 專案的相關資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
-  
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [控制項](../mfc/controls-mfc.md)   
  [控制項類別](../mfc/control-classes.md)   
  [對話方塊類別](../mfc/dialog-box-classes.md)   
- [捲軸樣式](../mfc/reference/scroll-bar-styles.md)   
+ [捲軸樣式](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)   
  [Rich Edit 控制項範例](../mfc/rich-edit-control-examples.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
+ [加入對話方塊控制項的事件處理常式](../windows/adding-event-handlers-for-dialog-box-controls.md)   
  [對話方塊控制項和變數類型](../ide/dialog-box-controls-and-variable-types.md)
+

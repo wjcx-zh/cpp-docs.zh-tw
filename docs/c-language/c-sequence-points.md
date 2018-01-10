@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f86bd3feacbabdd11d6c8ec04b4aec96ec2f5e1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9c874c0093b55c44f900e7eab06019d75cb930
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-sequence-points"></a>C 序列點
 在連續「序列點」之間，只能以運算式修改物件的值一次。 C 語言定義下列序列點：  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 -   `return` 陳述式中的運算式。 會完整評估運算式，並且所有副作用會在控制項回到呼叫函式之前完成。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算式評估](../c-language/expression-evaluation-c.md)

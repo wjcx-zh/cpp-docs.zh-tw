@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81148525b70f3c5ff351feb9561699f3b9b5e932
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee213f1aa381415444288dbab4473cae6f5fc7b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-using-def-files"></a>使用 .DEF 檔匯入
 如果您選擇使用**__declspec （dllimport)** .def 檔，以及您應該變更.def 檔案，使用常數取代的資料來減少撰寫程式碼不正確會導致問題的可能性：  
@@ -70,5 +71,5 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
   
  如果看到.def 檔案中的常數來說明此情況下，目前的 Visual c + + 連結器就會發出警告。 使用常數的唯一實際原因是如果您不能重新編譯的標頭檔未列出的某些物件檔案**__declspec （dllimport)**原型上啟動。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [匯入至應用程式](../build/importing-into-an-application.md)

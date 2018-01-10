@@ -14,16 +14,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 93d01c31c5aa765723b9d479ef97a08b4c087b70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7aa21fb3c2ae3e7f3b0e53d95b09a3c91b36827
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abort-function-c"></a>abort 函式 (C)
 **ANSI 4.10.4.1** 與已開啟檔案和暫存檔案相關的 **abort** 函式行為  
   
  **abort** 函式不會關閉已開啟的檔案或暫存檔案。 它不會清除資料流緩衝區。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式庫函式](../c-language/library-functions.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6dd54fcfc9612b5c20288b78b60d84257ab8f2f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-features-in-the-crt"></a>CRT 中的安全性功能
 許多舊的 CRT 函式都有較新且更安全的版本。 如果存在較安全的函式，則較舊且較不安全的版本會被標示為已取代，而且新的版本會有 `_s` (「安全」) 後置詞。  
@@ -93,7 +94,7 @@ strcpy(szBuf, "test"); // warning: deprecated
   
 -   `Format string syntax checking`. 偵測到無效字串，例如在 `printf` 格式字串中使用不正確的類型欄位字元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [參數驗證](../c-runtime-library/parameter-validation.md)   
  [安全範本多載](../c-runtime-library/secure-template-overloads.md)   
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

@@ -19,18 +19,19 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 176e744423441711715cc32b355278db20491e8f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f40b2deb5c78667e5343bd2be0948252e2f2e154
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="error-handling-crt"></a>錯誤處理 (CRT)
 您可以使用這些常式來處理程式錯誤。  
   
 ### <a name="error-handling-routines"></a>錯誤處理常式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 巨集|測試程式設計邏輯錯誤。適用於發行和偵錯版本的執行階段程式庫。|  
 |[_ASSERT、_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) 巨集|類似於 `assert`，但僅適用於偵錯版本的執行階段程式庫。|  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
 |[_set_error_mode](../c-runtime-library/reference/set-error-mode.md)|修改 `__error_mode` 來判斷非預設位置，其中 C 執行階段寫入可能會結束程式之錯誤的錯誤訊息。|  
 |[_set_purecall_handler](../c-runtime-library/reference/get-purecall-handler-set-purecall-handler.md)|設定純虛擬函式呼叫的處理常式。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

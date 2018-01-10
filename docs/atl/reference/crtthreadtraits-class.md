@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c591efee96af92aea263dca9c9a95f96932087e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6fbe71ff23db8dba431b9d46d71fc6c924fbc5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtthreadtraits-class"></a>CRTThreadTraits 類別
 這個類別會提供 CRT 執行緒建立函式。 如果執行緒會使用 CRT 函式，請使用這個類別。  
@@ -39,11 +40,11 @@ ms.lasthandoff: 10/24/2017
 class CRTThreadTraits
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRTThreadTraits::CreateThread](#createthread)|（靜態）呼叫此函式可建立的執行緒，可以使用 CRT 函式。|  
   
@@ -101,5 +102,5 @@ static HANDLE CreateThread(
   
  此函數會呼叫[_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)建立執行緒。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

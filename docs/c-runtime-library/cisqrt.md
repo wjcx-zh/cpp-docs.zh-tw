@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 625ed6e48c25f32f64c2e9cc75ce486325396e40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5662683c53323d103105f04e872e91e137dbfe26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cisqrt"></a>_CIsqrt
 計算堆疊頂端值的平方根。  
@@ -52,6 +53,6 @@ void __cdecl _CIsqrt();
 ## <a name="requirements"></a>需求  
  **平台：**x86  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)

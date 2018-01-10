@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 128b670302683208680fbf1499c26af474c72c3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dd4873d8f9b3a658996bfd057372e8fb29e3478
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commit-to-disk-constants"></a>認可到磁碟常數
 **Microsoft 特定的**  
@@ -50,9 +51,9 @@ ms.lasthandoff: 10/24/2017
   
  在產生的可執行檔中，對 `fflush` 的呼叫會將緩衝區的內容直接寫入磁碟，而對 `_flushall` 的呼叫則會將所有緩衝區的內容寫入磁碟。 這兩個函式是唯一會受到 COMMODE.OBJ 影響的函式。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../c-runtime-library/stream-i-o.md)   
  [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)   
  [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)   

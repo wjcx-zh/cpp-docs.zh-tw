@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc4f9bc1b34ed884548a2614444c75efd2277287
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 473a91651e52d04dbeb15301520c6c8984808551
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-c-statements"></a>C 陳述式概觀
 C 陳述式包含語彙基元、運算式和其他陳述式。 形成另一個陳述式元件的陳述式稱為封入陳述式的「主體」。 本節中討論由下列語法指定的每種陳述式類型。  
@@ -52,5 +53,5 @@ C 陳述式包含語彙基元、運算式和其他陳述式。 形成另一個�
   
  所有 C 陳述式都可以使用包含名稱和冒號的識別標籤做為開頭。 因為只有 `goto` 陳述式會辨識陳述式標籤，因此將與 `goto` 一起討論陳述式標籤。 如需詳細資訊，請參閱 [goto 和標記陳述式](../c-language/goto-and-labeled-statements-c.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [陳述式](../c-language/statements-c.md)

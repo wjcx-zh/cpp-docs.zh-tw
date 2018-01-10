@@ -1,31 +1,32 @@
 ---
-title: "operator== 運算子 (Microsoft::WRL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator=="
-dev_langs: 
-  - "C++"
+title: "運算子 = = 運算子 (microsoft:: wrl) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator==
+dev_langs: C++
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 92f87671b5efa9d4013ffd1d5d622ec225d65940
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# operator== 運算子 (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[ComPtr](../windows/comptr-class.md) 和 [ComPtrRef](../windows/comptrref-class.md) 物件的等號比較運算子。  
+# <a name="operator-operator-microsoftwrl"></a>operator== 運算子 (Microsoft::WRL)
+等號比較運算子，如[ComPtr](../windows/comptr-class.md)和[ComPtrRef](../windows/comptrref-class.md)物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 WRL_NOTHROW bool operator==(  
@@ -62,20 +63,20 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `a`  
  左物件。  
   
  `b`  
  右物件。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  如果物件相等則為 `true`，否則為 `false`。  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

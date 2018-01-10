@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4603b01f7daa4573035f57b520dcb1dc5d4eab66
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5092c61860b4d7308ef6d1762363ee905b56b10b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency 命名空間列舉
 ||||  
@@ -45,7 +46,7 @@ enum agent_status;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`agent_canceled`|已取消 `agent`。|  
 |`agent_created`|`agent`已建立但不是會啟動。|  
@@ -68,7 +69,7 @@ enum Agents_EventType;
 
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`AGENTS_EVENT_CREATE`|表示建立物件的事件類型|  
 |`AGENTS_EVENT_DESTROY`|表示刪除物件的事件類型|  
@@ -90,7 +91,7 @@ enum ConcRT_EventType;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CONCRT_EVENT_ATTACH`|事件類型，表示附加至排程器中的動作。|  
 |`CONCRT_EVENT_BLOCK`|表示內容封鎖的動作的事件類型。|  
@@ -113,7 +114,7 @@ enum Concrt_TraceFlags;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`AgentEventFlag`||  
 |`AllEventsFlag`||  
@@ -134,7 +135,7 @@ enum CriticalRegionType;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`InsideCriticalRegion`|指出內容是關鍵區域內。 在關鍵區域中，內部非同步的暫止會隱藏排程器的。 應暫止發生，資源管理員將會等候執行緒成為可執行，並只需繼續它而非一次叫用的排程器。 採用這種區域內的任何鎖定，必須採取與必須特別小心。|  
 |`InsideHyperCriticalRegion`|表示內容位於超關鍵區域。 在 hyper-v 關鍵的區域中，內部同步和非同步的暫止會隱藏排程器的。 應該在這類暫停或封鎖情形可能發生資源管理員將會等候執行緒成為可執行，並只需繼續它而非一次叫用的排程器。 在這種區域內的鎖定必須永遠不會共用以這種區域外部執行的程式碼。 這樣會導致無法預期的死結。|  
@@ -151,7 +152,7 @@ enum DynamicProgressFeedbackType;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`ProgressFeedbackDisabled`|排程器不會收集進度資訊。 重新平衡是根據完全以基礎硬體執行緒的訂用帳戶層級。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)。<br /><br /> 這個值被保留供執行階段。|  
 |`ProgressFeedbackEnabled`|排程器收集進度資訊，並將它傳遞給資源管理員。 資源管理員會利用此重新平衡資源代表除了訂用帳戶層級基礎的硬體執行緒的排程器的統計資訊。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](IExecutionResource-structure.md)。|  
@@ -163,7 +164,7 @@ enum join_type;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`greedy`|窮盡`join`傳訊區塊會立即接受傳播後的訊息。 這會更有效率，但有即時鎖定視網路組態而定的可能性。|  
 |`non_greedy`|非窮盡`join`傳訊區塊延後訊息並再試一次及後所有已到達，請使用它們。 這些會保證可以運作，但較慢。|  
@@ -179,7 +180,7 @@ enum message_status;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`accepted`|目標接受訊息。|  
 |`declined`|目標不接受訊息。|  
@@ -197,7 +198,7 @@ enum PolicyElementKey;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`ContextPriority`|作業系統執行緒排程器中的每個內容的優先順序。 如果此機碼設定為值`INHERIT_THREAD_PRIORITY`排程器中的內容會繼承建立排程器執行緒的優先權。<br /><br /> 有效值： 任何有效的值，適用於 Windows`SetThreadPriority`函式和特殊值`INHERIT_THREAD_PRIORITY`<br /><br /> 預設值：`THREAD_PRIORITY_NORMAL`|  
 |`ContextStackSize`|每個內容，以 kb 為單位排程器中保留的堆疊大小。<br /><br /> 有效值： 正整數<br /><br /> 預設值： `0`，表示可用於處理序的堆疊大小的預設值。|  
@@ -223,7 +224,7 @@ enum SchedulerType;
 
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`ThreadScheduler`|表示明確要求的一般 Win32 執行緒。|  
 |`UmsThreadDefault`|在 Visual Studio 2013 並行執行階段不支援使用者模式可排程 (UMS) 執行緒。 使用 `UmsThreadDefault` 做為 `SchedulerType` 原則的值不會產生錯誤。 然而，以這個原則建立的排程器將會預設為使用 Win32 執行緒。|  
@@ -239,7 +240,7 @@ enum SchedulingProtocolType;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`EnhanceForwardProgress`|排程器偏好透過排程群組的循環之後執行每項工作。 解除封鎖的內容通常會以先進先出 (FIFO) 方式排程。 虛擬處理器不會快取解除封鎖的內容。|  
 |`EnhanceScheduleGroupLocality`|排程器偏好繼續處理目前的排程群組中的工作再移至另一個排程群組。 解除封鎖的內容會快取每個虛擬處理器，而且通常會以先進先出 (LIFO) 方式排定解除封鎖它們的虛擬處理器。|  
@@ -255,7 +256,7 @@ enum SwitchingProxyState;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`Blocking`|表示以合作方式封鎖呼叫執行緒，而且應該以獨佔方式擁有由呼叫端直到之後再次執行，並執行其他動作。|  
 |`Idle`|表示呼叫執行緒已不再需要排程器，而且會傳回資源管理員。 已發送的內容不再能夠使用資源管理員。|  
@@ -274,7 +275,7 @@ enum task_group_status;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`canceled`|`task_group` 或 `structured_task_group` 物件已取消。 可能有一個或多個工作尚未執行。|  
 |`completed`|在 `task_group` 或 `structured_task_group` 物件列隊的工作已順利完成。|  
@@ -291,7 +292,7 @@ enum WinRTInitializationType;
 ```  
 ### <a name="values"></a>值  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`DoNotInitializeWinRT`|如果應用程式是在 Windows 8 (含) 以後版本的作業系統上執行，則排程器內的執行緒將不會初始化 Windows 執行階段。|  
 |`InitializeWinRTAsMTA`|如果應用程式是在 Windows 8 (含) 以後版本的作業系統上執行，排程器內的每個執行緒將會初始化 Windows 執行階段，並將它宣告為多執行緒 Apartment 的一部分。|  
@@ -299,5 +300,5 @@ enum WinRTInitializationType;
 ## <a name="requirements"></a>需求  
  **標頭：** concrt.h  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 276d93489a714dda5edd721c532c28c03b3ca41f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d5f2c1cce980f97e7a99ff2347daceac05f984f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
 明確連結的 DLL 呼叫的處理序[FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)函式時不再需要 DLL 模組。 這個函式會遞減模組的參考計數，並參考計數為零，如果取消對應從處理序的位址空間。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [GetProcAddress](../build/getprocaddress.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual c + + 中的 Dll](../build/dlls-in-visual-cpp.md)   
  [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
  [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

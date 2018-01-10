@@ -4,13 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::hash_multiset
-- hash_multiset
 - hash_set/stdext::hash_multiset
 - hash_set/stdext::hash_multiset::allocator_type
 - hash_set/stdext::hash_multiset::const_iterator
@@ -52,35 +49,60 @@ f1_keywords:
 - hash_set/stdext::hash_multiset::swap
 - hash_set/stdext::hash_multiset::upper_bound
 - hash_set/stdext::hash_multiset::value_comp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- hash_multiset class
+- stdext::hash_multiset
+- stdext::hash_multiset::allocator_type
+- stdext::hash_multiset::const_iterator
+- stdext::hash_multiset::const_pointer
+- stdext::hash_multiset::const_reference
+- stdext::hash_multiset::const_reverse_iterator
+- stdext::hash_multiset::difference_type
+- stdext::hash_multiset::iterator
+- stdext::hash_multiset::key_compare
+- stdext::hash_multiset::key_type
+- stdext::hash_multiset::pointer
+- stdext::hash_multiset::reference
+- stdext::hash_multiset::reverse_iterator
+- stdext::hash_multiset::size_type
+- stdext::hash_multiset::value_compare
+- stdext::hash_multiset::value_type
+- stdext::hash_multiset::begin
+- stdext::hash_multiset::cbegin
+- stdext::hash_multiset::cend
+- stdext::hash_multiset::clear
+- stdext::hash_multiset::count
+- stdext::hash_multiset::crbegin
+- stdext::hash_multiset::crend
+- stdext::hash_multiset::emplace
+- stdext::hash_multiset::emplace_hint
+- stdext::hash_multiset::empty
+- stdext::hash_multiset::end
+- stdext::hash_multiset::equal_range
+- stdext::hash_multiset::erase
+- stdext::hash_multiset::find
+- stdext::hash_multiset::get_allocator
+- stdext::hash_multiset::insert
+- stdext::hash_multiset::key_comp
+- stdext::hash_multiset::lower_bound
+- stdext::hash_multiset::max_size
+- stdext::hash_multiset::rbegin
+- stdext::hash_multiset::rend
+- stdext::hash_multiset::size
+- stdext::hash_multiset::swap
+- stdext::hash_multiset::upper_bound
+- stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 62e57be73010ca5fd73e47873700d0bb5e4bd107
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 132ea24bd65ae4bf79922c811c03ef9cc7c13c42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultiset-class"></a>hash_multiset 類別
 > [!NOTE]
@@ -131,8 +153,6 @@ class hash_multiset
  受控制序列中實際的項目順序取決於雜湊函式、排序函式以及儲存於此容器物件中雜湊資料表目前的大小。 您無法判斷目前雜湊資料表的大小，因此一般而言，無法預測受控制序列中項目的順序。 插入項目不會使任何迭代器無效，移除項目則僅會使特別指向被移除項目的迭代器無效。  
   
  hash_multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 insert 和 hash_multiset 擁有以較弱的輸入迭代器作為範本參數的版本，其功能需求比雙向迭代器的類別所保證的還要少。 不同的迭代器概念因其功能的修改而形成關聯的系列。 每個迭代器概念有自己的 hash_multiset 需求，因此使用它們的演算法必須將其假設限制為該迭代器類型的需求。 可假設輸入迭代器可能已取值來參考某個物件，而且可能會遞增為序列中的下一個迭代器。 這是最基本的功能 hash_multiset，但已足以在類別成員函式的內容中，有意義地溝通迭代器 [ `first`, `last`) 的範圍。  
-  
- 在 Visual C++ .NET 2003 中，<hash_map> 和 <hash_set> 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -234,7 +254,7 @@ iterator begin();
 ### <a name="remarks"></a>備註  
  如果將 **begin** 的傳回值指派給 `const_iterator`，便無法修改 hash_multiset 物件中的元素。 如果將 **begin** 的傳回值指派給 **iterator**，則可以修改 hash_multiset 物件中的元素。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -293,7 +313,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>備註  
  有 `cbegin` 的傳回值時，無法修改 `hash_multiset` 物件中的元素。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -340,7 +360,7 @@ const_iterator cend() const;
 ### <a name="remarks"></a>備註  
  `cend` 是用來測試迭代器是否已到達其 `hash_multiset` 的結尾。 `cend` 所傳回的值不應該取值。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -383,7 +403,7 @@ void clear();
 ```  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -430,7 +450,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>備註  
  類型 `const_iterator` 無法用來修改元素的值。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需使用 `const_iterator` 的範例，請參閱 [begin](#begin) 的範例。  
@@ -451,7 +471,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
   
  在大多數情況下，應該使用 [const_iterator](#const_iterator) 來存取 **const** hash_multiset 物件中的元素。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ##  <a name="const_reference"></a>  hash_multiset::const_reference  
   
@@ -465,7 +485,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ```  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -515,7 +535,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ### <a name="remarks"></a>備註  
  類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 hash_multiset。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `const_reverse_iterator` 的範例，請參閱 [rend](#rend) 的範例。  
@@ -543,7 +563,7 @@ size_type count(const Key& key) const;
   
  [ `lower_bound` (_ `Key` ), `upper_bound` (\_ `Key` ) ).  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   下列範例示範如何使用 hash_multiset::count 成員函式。  
@@ -602,7 +622,7 @@ const_reverse_iterator crbegin() const;
   
  `crbegin` 可用來向後逐一查看 `hash_multiset`。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -654,7 +674,7 @@ const_reverse_iterator crend() const;
   
  `crend` 可以用來測試反轉迭代器是否已到達其 hash_multiset 的結尾。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -702,7 +722,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::di
   
  請注意，儘管 `difference_type` 適用於符合輸入迭代器需求的所有迭代器，其中包括可反轉容器 (例如 set) 所支援之雙向迭代器的類別， 但只有隨機存取容器 (例如 vector 或 deque) 所提供的隨機存取迭代器，才支援迭代器之間的減法。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -783,14 +803,14 @@ iterator insert(ValTy&& val);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|  
   
 ### <a name="return-value"></a>傳回值  
  `emplace` 成員函式會傳回迭代器，此迭代器指向新元素的插入位置。  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -836,9 +856,9 @@ iterator insert(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|  
-|`_Where`|要開始搜尋正確的插入點的地方 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
+|`_Where`|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
   
 ### <a name="return-value"></a>傳回值  
  [hash_multiset::emplace](#emplace) 成員函式會傳回迭代器，此迭代器指向新元素在 `hash_multiset` 中的插入位置。  
@@ -846,7 +866,7 @@ iterator insert(
 ### <a name="remarks"></a>備註  
  如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -889,7 +909,7 @@ bool empty() const;
  如果 hash_multiset 是空的，即為 **true**；如果 hash_multiset 不是空的，則為 **false**。  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -940,9 +960,9 @@ iterator end();
  雙向迭代器，定址對象是 hash_multiset 中最後一個元素後面的位置。 如果 hash_multiset 是空的，則 hash_multiset::end == hash_multiset::begin。  
   
 ### <a name="remarks"></a>備註  
- **end** 是用來測試迭代器是否已到達其 hash_multiset 的結尾。 **end** 所傳回的值不應該被取值。  
+ **end** 是用來測試迭代器是否已到達其 hash_multiset 的結尾。 不應該對 **end** 所傳回的值進行取值。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1006,9 +1026,9 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="return-value"></a>傳回值  
  一對迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個則是索引鍵的 [upper_bound](#upper_bound)。  
   
- 若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
+ 若要存取成員函式所傳回之 `pr` 配對的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1107,7 +1127,7 @@ size_type erase(const key_type& key);
 ### <a name="remarks"></a>備註  
  成員函式永遠不會擲回例外狀況。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   下列範例示範使用 hash_multiset:: erase 成員函式。  
@@ -1219,7 +1239,7 @@ const_iterator find(const Key& key) const;
   
  如果將 **find** 的傳回值指派給 `const_iterator`，便無法修改 hash_multiset 物件。 如果將 **find** 的傳回值指派給 **iterator**，則可以修改 hash_multiset 物件。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1288,9 +1308,9 @@ Allocator get_allocator() const;
  如需有關 `Allocator` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題的＜備註＞一節。  
   
 ### <a name="remarks"></a>備註  
- hash_multiset 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
+ hash_multiset 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1409,7 +1429,7 @@ hash_multiset(
 |`IList`|包含要複製之項目的 initializer_list。|  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存一種配置器物件，此物件可管理 `hash_multiset` 的記憶體儲存，且之後藉由呼叫 [hash_multiset::get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
+ 所有建構函式都會儲存一種配置器物件，此物件可管理 `hash_multiset` 的記憶體儲存，且之後藉由呼叫 [hash_multiset::get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告以及用來取代替代配置器的前置處理巨集中，經常會省略 allocator 參數。  
   
  所有建構函式都會將其 hash_multiset 初始化。  
   
@@ -1417,7 +1437,7 @@ hash_multiset(
   
  前三個建構函式會指定空的初始 `hash_multiset`，第二個建構函式會指定建立元素順序時所要使用的比較函式類型 ( `Comp`)，而第三個建構函式則會明確指定所要使用的配置器類型 ( `Al`)。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。  
   
- 第四個建構函式會移動 `hash_multiset``Right`。  
+ 第四個建構函式移動`hash_multiset` `Right`。  
   
  第五、第六及第七個建構函式會使用 initializer_list。  
   
@@ -1469,9 +1489,9 @@ iterator insert(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Val`|要插入到 hash_multiset 中之元素的值，除非 hash_multiset 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|  
-|`Where`|要開始搜尋正確的插入點的地方 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
+|`Where`|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
 |`First`|要從 hash_multiset 複製之第一個元素的位置。|  
 |`Last`|緊接在要從 hash_multiset 複製之最後一個元素後面的位置。|  
 |`IList`|包含要複製之元素的 initializer_list。|  
@@ -1500,7 +1520,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ### <a name="remarks"></a>備註  
  類型 **iterator** 可用來修改元素的值。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 **iterator** 的範例，請參閱 [begin](#begin) 的範例。  
@@ -1528,9 +1548,9 @@ key_compare key_comp() const;
   
  如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。  
   
- 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與範本參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1599,7 +1619,7 @@ typedef Traits key_compare;
   
  請注意，`key_compare` 和 value_compare 都與範本參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `key_compare` 的範例，請參閱 [key_comp](#key_comp) 的範例。  
@@ -1622,7 +1642,7 @@ typedef Key key_type;
   
  如需有關 `Key` 的詳細資訊，請參閱 [hash_multiset 類別](../standard-library/hash-multiset-class.md)主題的＜備註＞一節。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `key_type` 的範例，請參閱 [value_type](#value_type) 的範例。  
@@ -1648,7 +1668,7 @@ iterator lower_bound(const Key& key);
  [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_multiset 中索引鍵等於或大於引數索引鍵的第一個元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_multiset 中最後一個元素後面的位置。  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1708,7 +1728,7 @@ size_type max_size() const;
  hash_multiset 的最大可能長度。  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1748,7 +1768,7 @@ hash_multiset& operator=(hash_multiset&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|要複製到 `hash_multiset` 中的 [hash_multiset](../standard-library/hash-multiset-class.md)。|  
   
 ### <a name="remarks"></a>備註  
@@ -1804,11 +1824,11 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。  
+ **pointer** 類型可用來修改項目的值。  
   
  在大多數情況下，應該使用 [iterator](#iterator) 來存取 multiset 物件中的元素。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ##  <a name="rbegin"></a>  hash_multiset::rbegin  
   
@@ -1833,7 +1853,7 @@ reverse_iterator rbegin();
   
  `rbegin` 可用來向後逐一查看 hash_multiset。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1905,7 +1925,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::re
 ```  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -1967,7 +1987,7 @@ reverse_iterator rend();
   
  `rend` 可以用來測試反轉迭代器是否已到達其 hash_multiset 的結尾。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -2044,7 +2064,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 ### <a name="remarks"></a>備註  
  類型 `reverse_iterator` 是用來反向逐一查看 hash_multiset。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `reverse_iterator` 的範例，請參閱 [rbegin](#rbegin) 的範例。  
@@ -2064,7 +2084,7 @@ size_type size() const;
  hash_multiset 的目前長度。  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -2108,7 +2128,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 ```  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例  
@@ -2131,7 +2151,7 @@ void swap(hash_multiset& right);
 ### <a name="remarks"></a>備註  
  任何參考、指標或迭代器只要指定的元素是在交換元素的兩個 hash_multiset 中，成員函式就不會使其失效。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -2208,7 +2228,7 @@ iterator upper_bound(const Key& key);
  [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_multiset 中索引鍵大於引數索引鍵的第一個元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_multiset 中最後一個元素後面的位置。  
   
 ### <a name="remarks"></a>備註  
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -2288,9 +2308,9 @@ value_compare value_comp() const;
   
  如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。  
   
- 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與範本參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   
@@ -2364,7 +2384,7 @@ typedef key_compare value_compare;
   
  請注意，[key_compare](#key_compare) 和 **value_compare** 都與範本參數 **Traits** 同義。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。  
   
- 在 Visual C++ .NET 2003 中，[<hash_map>](../standard-library/hash-map.md) 和 [<hash_set>](../standard-library/hash-set.md) 標頭檔的成員不再位於 std 命名空間中，而是已移到 stdext 命名空間中。 如需詳細資訊，請參閱 [stdext 命名空間](../standard-library/stdext-namespace.md)。  
+   
   
 ### <a name="example"></a>範例  
   如需如何宣告及使用 `value_compare` 的範例，請參閱 [value_comp](#value_comp) 的範例。  
@@ -2420,8 +2440,7 @@ int main( )
 The hash_multiset has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 60a2131b08b9f0ac119bdcd414f2d4d1761a9b6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 961ede0b381555b3e41d0432f2aa4093ee496ac1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-support"></a>浮點支援
 Microsoft C 執行階段程式庫 (CRT) 提供許多浮點數學程式庫函式，包括 ISO C99 需要的所有項目。 實作這些函式可以平衡效能與正確性。 因為產生正確的四捨五入結果可能極為昂貴，所以這些函式會設計成有效率產生最接近正確四捨五入結果的近似值。 在大部分情況下，產生的結果是在正確四捨五入結果的 +/-1 ulp 內，但也可能出現較大的誤差。  
@@ -255,5 +256,5 @@ Microsoft C 執行階段程式庫 (CRT) 提供許多浮點數學程式庫函式�
   
  [_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

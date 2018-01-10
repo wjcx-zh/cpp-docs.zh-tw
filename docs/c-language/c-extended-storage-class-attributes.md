@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 119de1e705a0e3de93aadc61d38ecdde2fc43fe9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 972a8dc27283839ce1eade0e1e9b81dc92998b15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-extended-storage-class-attributes"></a>C 擴充的儲存類別屬性
 **Microsoft 特定的**  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/24/2017
   
  thread、naked、dllimport 和 dllexport 儲存類別屬性 (Attribute) 是只屬於其套用所在資料或函式宣告的屬性 (Property)，這些屬性 (Attribute) 並不會重新定義函式本身的類別屬性 (Attribute)。 thread 屬性只會影響資料。 naked 屬性只會影響函式。 dllimport 和 dllexport 屬性會同時影響函式和資料。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

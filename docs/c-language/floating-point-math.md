@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9cc0b0252997c203efd656cb274609330a6a76fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be5e8aea4e41d2baf0c7dbf6f09ab2d6408934db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-math"></a>浮點數數學
 -   [值](../c-language/values.md)  
@@ -26,5 +27,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [浮點值截斷](../c-language/truncation-of-floating-point-values.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作定義的行為](../c-language/implementation-defined-behavior.md)

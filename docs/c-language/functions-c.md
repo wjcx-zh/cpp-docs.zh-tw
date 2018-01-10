@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d37cfce894d3a08f8429e37f1365e70e8bc4d4d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7935b355042ed7221684fe60a69b5286cd39f00d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>函式 (C)
 函式是 C 中的基本模組化單位。函式通常設計用來執行特定工作，且其名稱通常會反映該工作。 函式包含宣告和陳述式。 本節將描述如何宣告、定義及呼叫 C 函式。 其他討論的主題包括：  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [參數](../c-language/parameters.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言參考](../c-language/c-language-reference.md)

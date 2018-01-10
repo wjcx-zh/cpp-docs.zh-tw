@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2853c40a5eaa3ccb8dbbf5855b92b4cba9b3a140
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="virtual-list-controls"></a>虛擬清單控制項
 虛擬清單控制項是具有清單檢視控制項**LVS_OWNERDATA**樣式。 這個樣式可讓控制項最多支援項目計數`DWORD`(預設項目計數只會延伸到`int`)。 不過，此樣式所提供的最大優點是能夠一次只能有在記憶體中的資料項目的子集。 這可讓虛擬清單檢視控制項本身的資訊，大型資料庫搭配使用特定的方法，存取資料的已備妥。  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
   
  您應該備妥要搜尋的項目符合指定的清單檢視控制項的資訊。 如果找到相符的項目，您應該傳回的項目，如果成功，則為-1 的索引。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

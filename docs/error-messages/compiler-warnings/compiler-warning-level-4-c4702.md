@@ -1,36 +1,35 @@
 ---
-title: "編譯器警告 (層級 4) C4702 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4702"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4702"
+title: "編譯器警告 （層級 4） C4702 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4702
+dev_langs: C++
+helpviewer_keywords: C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ef7420f3699363d33d195e2455ab9fddf88de40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 4) C4702
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-不可能執行到的程式碼  
+# <a name="compiler-warning-level-4-c4702"></a>編譯器警告 (層級 4) C4702
+無法連線到程式碼  
   
- 這個警告是對 Visual Studio .NET 2003 的編譯器完成符合標準處理後的結果：不可能執行到的程式碼。  當編譯器 \(後端\) 偵測到有不可能執行到的程式碼時，它會產生屬於層級 4 警告的 C4702。  
+ 這項警告是針對 Visual Studio.NET 2003年所進行的編譯器一致性工作的結果： 無法連線到程式碼。 當編譯器 （後端） 偵測到無法連線到程式碼時，它將會產生 C4702，層級 4 警告。  
   
- 若要使程式碼在 Visual C\+\+ 的 Visual Studio .NET 2003 和 Visual Studio .NET 版本都有效，請移除不可能執行到的程式碼，或確定部分執行流程可執行到的所有原始程式碼是否正確。  
+ 有效的 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中的程式碼，移除無法到達的程式碼，或確保所有原始程式碼都都可到達的某些工作流程的執行。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4702。  
   
 ```  
@@ -44,10 +43,10 @@ int main() {
 }  
 ```  
   
-## 範例  
- 以 **\/GX**、**\/EHc**、**\/EHsc** 或  **\/EHac** 編譯，並使用外部 C 函式時，程式碼可能會因為假設外部 C 函式不擲回而變得不可能執行到，因此使得攔截區塊不可能執行到。如果您覺得因為函式可以擲回而使得這個警告無效，請以 **\/EHa** 或 **\/EHs** 編譯，依例外狀況擲回而定。  
+## <a name="example"></a>範例  
+ 編譯時**/GX**， **/EHc**， **/EHsc**，或**/EHac**和使用 extern C 函式，程式碼可能會變得無法連線到因為 extern C函式假設不會擲回，所以不可以連線的 catch 區塊。  如果您認為這項警告不正確，因為函式可以擲回，以編譯**/EHa**或**/EHs**，取決於擲回的例外狀況。  
   
- 如需詳細資訊，請參閱 [\/EH \(例外狀況處理模型\)](../../build/reference/eh-exception-handling-model.md)。  
+ 如需詳細資訊，請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md)如需詳細資訊。  
   
  下列範例會產生 C4702。  
   

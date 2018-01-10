@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba55de8c308e7f2a76559006ff5dad0a7fe6f5d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 390f094b05994dcf2b3b2351a24f163b06554f84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messages-and-commands-in-the-framework"></a>架構中的訊息和命令
 Microsoft windows 所撰寫的應用程式是 「 訊息導向 」。 為了回應事件，例如滑鼠點按動作、 按鍵、 視窗移動等等，Windows 會將訊息傳送至適當視窗。 架構應用程式處理 Windows 訊息，就像適用於 Windows 的任何其他應用程式。 但是，framework 也提供一些增強功能使處理訊息更輕鬆、 更易於維護，且更好封裝。  
@@ -45,6 +46,6 @@ Microsoft windows 所撰寫的應用程式是 「 訊息導向 」。 為了回�
   
 -   [命令目標](../mfc/command-targets.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [訊息處理和對應](../mfc/message-handling-and-mapping.md)
 

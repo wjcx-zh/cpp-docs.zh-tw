@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b8d8bcd21128b6d2d78d936e68f60040a75496c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e27b737a76b30e7193a9afb7797a20951294032e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn057-localization-of-mfc-components"></a>TN057：MFC 元件的當地語系化
 > [!NOTE]
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
  此提示會描述一些您可以用來當地語系化元件 (如果該元件是一個應用程式或 OLE 控制項，或是使用 MFC 的 DLL) 的設計和程序。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  在當地語系化使用 MFC 的元件時，有兩個問題需要解決。 首先，您必須當地語系化您的資源，即字串、對話方塊和專屬於您元件的其他資源。 大部分使用 MFC 建置的元件也包括並使用許多由 MFC 定義的資源。 您也必須提供當地語系化的 MFC 資源。 所幸，MFC 本身已經提供數種語言。  
   
  此外，您應該準備好在其目標環境下執行元件 (歐洲或支援 DBCS 的環境)。 在大部分的情況下，這取決於您的應用程式如何正確處理設定高位元的字元，以及如何處理使用雙位元組字元的字串。 根據預設，在啟用 MFC 時，針對這兩種環境，可以在所有平台上使用單一的全球二進位檔，同時在安裝時插入不同的資源。  
@@ -78,7 +79,7 @@ CMyApp::InitInstance()
   
  最簡單且最安全的方法是將當地語系化的 MFC 資源放在應用程式或 DLL (或其附屬 DLL，如果您有使用的話) 中。 這麼做可避免安裝正確版本 MFC7xLOC.DLL 的問題。 若要這麼做，請按照上述與靜態連結狀況相同的指示執行 (正確地將 RC 命令列設定為指向當地語系化的資源)，不過，您還必須移除預設由 AppWizard 加入的 `/D_AFXDLL` 定義。 當定義了 `/D_AFXDLL` 時，AFXRES.H (和其他 MFC RC 檔案) 實際上不會定義任何資源 (因為改從 MFC DLL 提取它會)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

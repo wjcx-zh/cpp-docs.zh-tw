@@ -1,46 +1,49 @@
 ---
-title: "插入 ActiveX 控制項對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.insertActiveXControls"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "插入 ActiveX 控制項對話方塊"
-  - "ActiveX 控制項 [C++], 加入對話方塊"
+title: "插入 ActiveX 控制項對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.insertActiveXControls
+dev_langs: C++
+helpviewer_keywords:
+- Insert ActiveX Control dialog box
+- ActiveX controls [C++], adding to dialog boxes
 ms.assetid: 06638ea3-0726-40da-a989-9b89292d0e3d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 148bdb20ed274b5bb3a9365f1e4c9fad160667c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 插入 ActiveX 控制項對話方塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個對話方塊可讓您在使用[對話方塊編輯器](../mfc/dialog-editor.md)時[將 ActiveX 控制項插入至您的對話方塊](../mfc/viewing-and-adding-activex-controls-to-a-dialog-box.md)。  
+# <a name="insert-activex-control-dialog-box"></a>插入 ActiveX 控制項對話方塊
+此對話方塊可讓您[插入您的對話方塊中的 ActiveX 控制項](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)時使用[對話方塊編輯器](../windows/dialog-editor.md)。  
   
  **ActiveX 控制項**  
- 顯示 ActiveX 控制項的清單。  從這個對話方塊插入控制項不會產生包裝函式類別。  如果您需要包裝函式類別，請使用[類別檢視](http://msdn.microsoft.com/zh-tw/8d7430a9-3e33-454c-a9e1-a85e3d2db925)來建立 \(如需詳細資訊，請參閱[加入類別](../ide/adding-a-class-visual-cpp.md)\)。  如果 ActiveX 控制項沒有出現在這個對話方塊中，試著依據廠商的指示來安裝控制項。  
+ 顯示一份 Active X 控制項。 從這個對話方塊中插入控制項不會產生包裝函式類別。 如果您需要的包裝函式類別，使用[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)加以建立 (如需詳細資訊，請參閱[將類別加入](../ide/adding-a-class-visual-cpp.md))。 如果 Active X 控制項不會出現此對話方塊中，再次嘗試安裝的控制項，根據廠商的指示。  
   
  **路徑**  
- 顯示在 ActiveX 控制項中找到的檔案。  
+ 顯示 ActiveX 控制項在其中找到的檔案。  
   
- 您可以將控制項置於工具箱視窗以方便存取。  如需詳細資訊，請參閱[自訂工具箱對話方塊](http://msdn.microsoft.com/zh-tw/bd07835f-18a8-433e-bccc-7141f65263bb)。  
+ 您可以將控制項置於 [工具箱] 視窗內，以便於存取。 如需詳細資訊，請參閱 [自訂 [工具箱] 對話方塊](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [工具箱、對話方塊編輯器索引標籤](../mfc/dialog-editor-tab-toolbox.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>請參閱  
+ [工具箱、 對話方塊編輯器索引標籤](../windows/dialog-editor-tab-toolbox.md)   
+ [資源檔](../windows/resource-files-visual-studio.md)   
+ [對話方塊中的控制項](../windows/controls-in-dialog-boxes.md)
+

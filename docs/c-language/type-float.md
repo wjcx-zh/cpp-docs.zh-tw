@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb53ac2375a5afa9ac3c2f1d2d7b2ba9de1b7141
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b1362d5cb0451f5190ca63ab0344f557256190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-float"></a>類型 float
 浮點數使用的是 IEEE (電子電機工程師協會) 格式。 浮點類型的單精確度值有 4 個位元組，包括正負號位元、8 位元的超 127 二進位指數和 23 位元的尾數。 尾數表示介於 1.0 和 2.0 之間的數字。 因為尾數的高序位位元永遠為 1，因此不會儲存在數字中。 若是 float 類型，此表示的範圍大約從 3.4E-38 到 3.4E+38。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 |類型|有效數字|位元組數|  
 |----------|------------------------|---------------------|  
-|浮動|6 - 7|4|  
+|float|6 - 7|4|  
 |double|15 - 16|8|  
   
  浮點變數由尾數 (包含數字的值) 和指數 (包含數字範圍的順序) 表示。  
@@ -89,5 +90,5 @@ f_short = f_short * f_long;
 f_longer = f_short * f_short;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本類型的儲存空間](../c-language/storage-of-basic-types.md)

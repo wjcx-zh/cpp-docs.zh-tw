@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e360e075cf8c721b9357746b2afa3a08df3c851a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 733a7cacebfcad6702d471425de7b617a241884f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="b-stubs-for-run-time-library-functions"></a>B. 執行階段程式庫函式的虛設常式
 此章節提供 OpenMP C 和 c + + 應用程式開發介面中定義的執行階段程式庫函式的虛設常式。 虛設常式可供啟用 OpenMP C 和 c + + 應用程式開發介面不支援的平台的可攜性。 在這些平台，必須與包含這些虛設常式函式的程式庫連結 OpenMP 程式。 虛設常式函式假設 OpenMP 程式中的指示詞會被忽略。 因此，它們會模擬序列的語意。  

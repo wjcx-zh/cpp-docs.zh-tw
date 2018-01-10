@@ -205,11 +205,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c78414e5262ef8157e5b0706835ab20d0490f4bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a855100aaab28e5fead062d4a0941741742cf1a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 在 MFC 的文件/檢視架構內容中提供 WebBrowser 控制項的功能。  
@@ -220,11 +221,11 @@ ms.lasthandoff: 10/24/2017
 class CHtmlView : public CFormView  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHtmlView::Create](#create)|建立 WebBrowser 控制項。|  
 |[CHtmlView::CreateControlSite](#createcontrolsite)|可覆寫，用來建立主控表單上之控制項的控制項網站執行個體。|  
@@ -1966,7 +1967,7 @@ void Stop();
 ### <a name="remarks"></a>備註  
  適用於 Internet Explorer 和 WebBrowser。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 MFCIE](../../visual-cpp-samples.md)   
  [CFormView 類別](../../mfc/reference/cformview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

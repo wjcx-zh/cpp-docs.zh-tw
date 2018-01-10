@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e66984fc7a7be45ea80dc894fcf0d11cc8febd45
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicchain-class"></a>CDynamicChain 類別
 這個類別會提供支援動態鏈結的訊息對應的方法。  
@@ -42,18 +43,18 @@ ms.lasthandoff: 10/24/2017
 class CDynamicChain
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|建構函式。|  
 |[CDynamicChain:: ~ CDynamicChain](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDynamicChain::CallChain](#callchain)|將導向至另一個物件的訊息對應 Windows 訊息。|  
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|從集合中移除訊息對應項目。|  
@@ -182,6 +183,6 @@ BOOL SetChainEntry(
 ### <a name="remarks"></a>備註  
  如果`dwChainID`值已經存在集合中，其相關聯的物件和訊息對應會取代`pObject`和`dwMsgMapID`分別。 否則，會加入新項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

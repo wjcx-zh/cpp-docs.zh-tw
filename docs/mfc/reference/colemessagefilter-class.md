@@ -39,11 +39,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c8ad9086520a7a9f12869cf35e3a11a10673659
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6ea5972a46d6e8d5ff106ddcc1c8692a3cdd8ff3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter 類別
 管理 OLE 應用程式互動所需的並行。  
@@ -54,17 +55,17 @@ ms.lasthandoff: 10/24/2017
 class COleMessageFilter : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleMessageFilter::COleMessageFilter](#colemessagefilter)|建構 `COleMessageFilter` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleMessageFilter::BeginBusyState](#beginbusystate)|讓應用程式處於忙碌狀態。|  
 |[COleMessageFilter::EnableBusyDialog](#enablebusydialog)|啟用和停用時呼叫的應用程式正在忙碌中出現的對話方塊。|  
@@ -263,7 +264,7 @@ void SetRetryReply(DWORD nRetryReply = 0);
   
  對話方塊會停用時，目前 「 重試回覆 」 永遠用於呼叫忙碌的應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)

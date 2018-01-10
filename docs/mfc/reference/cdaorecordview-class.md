@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ec582c6a5abafebbe6a130cacb7b8d30f571961
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fffeed33d5b966faf511f60da740c39f2b91581
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaorecordview-class"></a>CDaoRecordView 類別
 在控制項中顯示資料庫記錄的檢視。  
@@ -46,13 +47,13 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoRecordView::CDaoRecordView](#cdaorecordview)|建構 `CDaoRecordView` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|傳回非零，如果目前的記錄中相關聯的資料錄集的第一個記錄。|  
 |[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|傳回非零，如果目前的記錄中相關聯的資料錄集的最後一個記錄。|  
@@ -203,7 +204,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 > [!CAUTION]
 >  呼叫`OnMove`擲回例外狀況，如果資料錄集不有任何記錄。 呼叫適當的使用者介面更新處理常式函式 — **OnUpdateRecordFirst**， **OnUpdateRecordLast**， **OnUpdateRecordNext**，或**OnUpdateRecordPrev** — 之前對應移動運算，判斷資料錄集是否有任何記錄。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CFormView 類別](../../mfc/reference/cformview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDaoRecordset 類別](../../mfc/reference/cdaorecordset-class.md)   

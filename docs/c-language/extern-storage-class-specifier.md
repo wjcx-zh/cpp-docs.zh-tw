@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 448a659afaf7a0251d500da3d9878d30550b9180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extern-storage-class-specifier"></a>extern 儲存類別指定名稱
 使用 `extern` 儲存類別規範宣告的變數是一個變數的參考，其與在任何程式原始程式檔的外部層級定義的變數具有相同名稱。 內部 `extern` 宣告用來使外部層級的變數定義在區塊內可見。 除非另外在外部層次宣告，否則使用 `extern` 關鍵字宣告的變數只有在其宣告的區塊中才可見。  
@@ -82,5 +83,5 @@ void other( void )
   
  變數 `a` 會增加 2，結果會是 4。 如果在同一個程式內再次呼叫 `other` 函式，`a` 的初始值將會是 4。 當程式結束然後重新進入其宣告區塊時，內部 **static** 變數會保留其值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [內部層級宣告的儲存類別規範](../c-language/storage-class-specifiers-for-internal-level-declarations.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>外部層級宣告的儲存類別指定名稱
 外部變數是指在檔案範圍的變數。 這些變數是在任何函式之外定義，因此可能可供許多函式使用。 由於函式只能在外部層級定義，因此不可為巢狀。 根據預設，對相同名稱之外部變數和函式的所有參考都是相同物件的參考，這表示它們具有「外部連結」 (您可以使用 **static** 關鍵字覆寫此項。 如需有關 **static** 的詳細資訊，請參閱本節稍後的資訊)。  
@@ -133,5 +134,5 @@ int x = 0;
   
  如果變數 `i` 尚未初始化，則會自動設為 0。 在這種情況下會列印值 1、2 和 3。 如需變數初始化的詳細資訊，請參閱[初始化](../c-language/initialization.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 儲存類別](../c-language/c-storage-classes.md)

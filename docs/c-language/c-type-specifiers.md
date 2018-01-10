@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78cd6292c97f41cb7e862389113404346da80460
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28712275312bf653e082a9f8e32424f26534fb93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-type-specifiers"></a>C 類型指定名稱
 宣告中的類型指定名稱會定義變數或函式宣告的類型。  
@@ -77,7 +78,7 @@ short *ps;
 ps = pi;  /* Now generates warning */  
 ```  
   
- Microsoft C 編譯器也會產生是否帶正負號之差異的警告。 例如：  
+ Microsoft C 編譯器也會產生是否帶正負號之差異的警告。 例如:   
   
 ```  
 signed int *pi;  
@@ -90,9 +91,9 @@ pi = pu;  /* Now generates warning */
   
  為符合 ANSI 規格，不能將 **void\*\*** 作為 **int\*\*** 使用。 只有 **void\*** 能夠當作未指定類型的指標使用。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  您可以使用 `typedef` 宣告建立其他類型指定名稱，如 [Typedef 宣告](../c-language/typedef-declarations.md)中所述。 如需每種類型之大小的詳細資訊，請參閱[基本類型的儲存區](../c-language/storage-of-basic-types.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

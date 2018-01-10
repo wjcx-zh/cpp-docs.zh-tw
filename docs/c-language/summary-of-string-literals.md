@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee39e85c7b0521171c79a0082bfe76087f403c91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f264db255dd08c47ba5d4fee13c9180a2c6f2ebb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-string-literals"></a>字串常值的摘要
 *string-literal*:  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
  *s-char*:  
  原始程式碼字元集的任何成員，但雙引號 (")、反斜線 (\\) 或新行字元 *escape-sequence* 除外  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [語彙文法](../c-language/lexical-grammar.md)

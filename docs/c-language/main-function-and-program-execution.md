@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7635595adedf961c014bf8792316ca4943dc84a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9967481734c49d40d3121f825783b1824ad6f4f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-function-and-program-execution"></a>main 函式和程式執行
 每個 C 程式都必須有一個命名為 **main** 的主要 (main) 函式。 如果您的程式碼遵守 Unicode 程式設計模型，則可以使用寬字元版本的 **main**，即 **wmain**。 **main** 函式為程式執行的起點。 它通常會透過直接呼叫程式中的其他函式，以控制程式的執行。 程式通常會在 **main** 的結尾處停止執行，不過，它可能會因為各種理由而在程式的其他位置終止。 通常，在偵測到某個錯誤時，您可能會想要強制終止程式。 若要這麼做，請使用 **exit** 函式。 如需詳細資訊及使用 [exit](../c-runtime-library/reference/exit-exit-exit.md) 函式的範例，請參閱《執行階段程式庫參考》。  
@@ -44,5 +45,5 @@ main( int argc, char *argv[ ], char *envp[ ] )
   
  如需寬字元版本 **main** 的說明，請參閱[使用 wmain](../c-language/using-wmain.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [main：程式啟動](../cpp/main-program-startup.md)

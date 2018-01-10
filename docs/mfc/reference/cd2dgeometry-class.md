@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -31,8 +30,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DGeometry::Tessellate
 - AFXRENDERTARGET/CD2DGeometry::Widen
 - AFXRENDERTARGET/CD2DGeometry::m_pGeometry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DGeometry [MFC], CD2DGeometry
 - CD2DGeometry [MFC], Attach
@@ -55,16 +53,16 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3b9d8373bdf1cba1c57936dfb4d98c5401c80476
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 352a825476bccada1ac33e2d1082f2cfcbb6fec3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometry-class"></a>CD2DGeometry 類別
 ID2D1Geometry 包裝函式。  
@@ -75,18 +73,18 @@ ID2D1Geometry 包裝函式。
 class CD2DGeometry : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometry::CD2DGeometry](#cd2dgeometry)|建構 CD2DGeometry 物件。|  
 |[CD2DGeometry:: ~ CD2DGeometry](#_dtorcd2dgeometry)|解構函式。 D2D 幾何物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometry::Attach](#attach)|將現有的資源物件的介面|  
 |[CD2DGeometry::CombineWithGeometry](#combinewithgeometry)|結合這種幾何形狀與指定的幾何，並將結果儲存 ID2D1SimplifiedGeometrySink。|  
@@ -109,13 +107,13 @@ class CD2DGeometry : public CD2DResource;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometry::operator ID2D1Geometry *](#operator_id2d1geometry_star)|傳回 ID2D1Geometry 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGeometry::m_pGeometry](#m_pgeometry)|ID2D1Geometry 指標。|  
   
@@ -559,6 +557,5 @@ BOOL Widen(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

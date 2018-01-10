@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: afb5230ae5ee15061988f9e426393c7de16a788e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 552ce3e1e1f535cf01f458af28c44aeb5cf8980b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-constants"></a>全域常數
 Microsoft 執行階段程式庫包含程式庫常式所使用之全域常數的定義。 若要使用這些常數，請包含適當的標頭檔，如每個常數說明中所示。 下表列出全域常數。  
@@ -50,7 +51,7 @@ Microsoft 執行階段程式庫包含程式庫常式所使用之全域常數的�
 |[TZNAME_MAX](../c-runtime-library/tzname-max.md)|[_WAIT_CHILD、_WAIT_GRANDCHILD](../c-runtime-library/wait-child-wait-grandchild.md)|  
 |[WCHAR_MAX](../c-runtime-library/wchar-max.md)|[WCHAR_MIN](../c-runtime-library/wchar-min.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)   
  [全域變數](../c-runtime-library/global-variables.md)   
  [撰寫初構/終解程式碼的考量](../cpp/considerations-for-writing-prolog-epilog-code.md)

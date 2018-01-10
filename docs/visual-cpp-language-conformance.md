@@ -9,11 +9,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e9d4d86abd15f59e94ce7e51d40e119f8ebd336
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 語言一致性
 
@@ -246,7 +247,7 @@ __VS 2017 15.5__表示 Visual Studio 2017 15.5 版所支援的功能。
 <a name="note_C11"></a>__C11__ 通用 CRT 已實作 C++17 所需的 C11 標準程式庫組件，除了 C99 `strftime()` E/O 替代轉換規範、C11 `fopen()` 獨佔模式，以及 C11 `aligned_alloc()`之外。 最後一個項目最有可能尚未實作，因為 C11 指定 `aligned_alloc()` 的方式與 Microsoft 的 `free()` 實作並不相容，亦即 `free()` 必須能夠處理高度對齊的配置。  
 <a name="note_rem"></a>__rem__ 當指定 [/std:c++17](./build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) 編譯器選項時，將會移除這些功能。 這些功能具有退出巨集：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`，以及 `_HAS_UNEXPECTED`。
   
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](cpp/cpp-language-reference.md)  
 [C++ 標準程式庫](standard-library/cpp-standard-library-reference.md)   

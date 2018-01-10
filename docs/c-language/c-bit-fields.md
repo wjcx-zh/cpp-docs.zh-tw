@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ebc62a975e534d89fd99dbb05a65e8d6cb379bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1102c43677fd58a254f36c92698b9353c20fe32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bit-fields"></a>C 位元欄位
 除了結構或等位成員的宣告子之外，結構宣告子也可以指定為位元數目 (稱為「位元欄位」)。 其長度是依冒號從欄位名稱的宣告子所設定。 位元欄位會以整數類型解譯。  
@@ -89,7 +90,7 @@ cccccccb bbbbaaaa
   
  因為 8086 系列處理器會先儲存整數值的低位元組，再儲存高位元組，上面的整數 `0x01F2` 將儲存到實體記憶體作為 `0xF2`，後面接著 `0x01`。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構宣告](../c-language/structure-declarations.md)

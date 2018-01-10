@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ed4ca1b131e56b2735b3a6e4ba408f3ad79b8de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 148a3da3c904f5c314c75fb71deede3c92163cc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-implementing-a-server"></a>伺服器：實作伺服器
 本文說明 MFC 應用程式精靈建立視覺化編輯伺服器應用程式的程式碼。 如果您不使用應用程式精靈，這篇文章會列出，您必須撰寫程式碼以實作伺服器應用程式的區域。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱[COleServerItem](../mfc/reference/coleserveritem-class.md)， [COleServerDoc](../mfc/reference/coleserverdoc-class.md)，和[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)中*類別庫參考*。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [伺服器](../mfc/servers.md)   
  [容器](../mfc/containers.md)   
  [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)   

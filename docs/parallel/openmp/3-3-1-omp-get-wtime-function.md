@@ -1,34 +1,34 @@
 ---
-title: "3.3.1 omp_get_wtime Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.3.1 omp_get_wtime 函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 90188bd2-c53e-4398-8946-d3ecc92fa0f6
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f89a71d1b91a27dfdd0abf13be4a5f0e30b3fd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 3.3.1 omp_get_wtime Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`omp_get_wtime`函式會傳回雙精度浮點數值等於 24 小時制的牆上的時鐘時間以秒為單位，因為某些 」 時間在過去 」。  實際"時間過去"是任意的但可保證不變更應用程式執行期間。  格式如下：  
+# <a name="331-ompgetwtime-function"></a>3.3.1 omp_get_wtime 函式
+`omp_get_wtime`函式會傳回雙精確度浮點數值等於耗用的時鐘時間 （秒），因為某些 「 時間過去 」。  實際"過去的時間 」 是任意的但它保證不會在應用程式執行期間變更。 格式如下：  
   
 ```  
 #include <omp.h>  
 double omp_get_wtime(void);  
 ```  
   
- 它被預期的函式將用於測量已耗用時間，如下列範例所示：  
+ 它會預期函式，可用來測量已耗用時間，如下列範例所示：  
   
 ```  
 double start;  
@@ -39,4 +39,4 @@ end = omp_get_wtime();
 printf_s("Work took %f sec. time.\n", end-start);  
 ```  
   
- 傳回的時間都 「 每一執行緒時段"這是不需要是全域一致參與應用程式的所有執行緒。
+ 傳回的時間都不需要它們參與應用程式中的所有執行緒都是全域一致適 「 每個執行緒的時間 」。

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b5ce16963e027771bd82a8e2820e0b9ba319806
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e324976d0054cd1b32188b6ebe0f10ab4e1bdd69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integer-types"></a>整數類型
 每個整數常數都會根據其值和表示方式而被指定特定類型。 您可以將所有整數常數的類型強制指定為 **long**，方法是在常數結尾加上字母 **l** 或 **L**；也可以將其類型強制指定為 `unsigned`，方法是在其值後面加上 **u** 或 **U**。 小寫字母 **l** 與數字 1 容易混淆，應予以避免。 部分 **long** 形式的整數常數如下：  
@@ -57,5 +58,5 @@ ms.lasthandoff: 10/24/2017
   
 -   指派給尾碼為 **u** 或 **U** 及 **l** 或 **L** 之常數的類型是 **unsigned long int**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 整數常數](../c-language/c-integer-constants.md)

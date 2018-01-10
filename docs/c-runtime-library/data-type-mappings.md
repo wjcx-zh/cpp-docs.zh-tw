@@ -40,11 +40,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 217290399a03174e599117077b27116a86808f7f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f52c6e5664292469ef33a88e9d5458c07ec69454
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-mappings"></a>資料類型對應
 這些資料類型對應都是在 TCHAR.H 中定義，並視程式中是否定義常數 `_UNICODE` 或 `_MBCS` 而定。  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/24/2017
 |`_TXCHAR`|`char`|`unsigned char`|`wchar_t`|  
 |`_T` 或 `_TEXT`|無效果 (已由前置處理器移除)|無效果 (已由前置處理器移除)|`L` (將下列字元或字串轉換成其 Unicode 對應項目)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [泛型文字對應](../c-runtime-library/generic-text-mappings.md)   
  [常數和全域變數對應](../c-runtime-library/constant-and-global-variable-mappings.md)   
  [常式對應](../c-runtime-library/routine-mappings.md)   

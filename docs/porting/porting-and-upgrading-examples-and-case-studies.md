@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 554134b71c4dc45a828595c0c7dfb639940494df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 212b51f417fc84b602e6231f2e769cb73c9a1460
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="porting-and-upgrading-examples-and-case-studies"></a>移植和升級：範例和案例研究
 您可以藉由檢閱成功移轉案例，來了解從舊版 Visual C++ 移轉至目前版本時可能會遇到的問題類型。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [Spy++](../porting/porting-guide-spy-increment.md) 是會檢查執行中應用程式並提供其中 UI 項目相關資訊的應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

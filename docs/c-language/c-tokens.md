@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d4db358543430b5bba0da93bb3525398b3e675a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9efdcdc0863105f4a07a69c99a30fcd7f7f2ac92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-tokens"></a>C 語彙基元
 在 C 原始程式中，編譯器會辨識的基本項目為「語彙基元」。 語彙基元為編譯器無法解析為元件項目的原始程式文字。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
   
  本節所述的關鍵字、識別項、常數、字串常值和運算子為語彙基元的範例。 標點符號字元如方括弧 (**[ ]**)、大括弧 (**{ }**)、圓括弧 ( **( )** ) 和逗號 (**,**) 也是語彙基元。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 的元素](../c-language/elements-of-c.md)

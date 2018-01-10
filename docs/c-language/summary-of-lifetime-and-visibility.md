@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e8c676a950979906bbc741679735ba452baec18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ee45ec7a2a842cc45c01c0e6f43ab49ba55aa3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>存留期和可視性的摘要
 下表是多數識別項的存留期和可視性的特性摘要。 前三欄註明定義存留期和可視性的屬性。 若識別項帶有前三欄指定的屬性，其存留期和可視性就如第四和第五欄所示。 不過，此表只包含部分可能的情況。 如需詳細資訊，請參閱[儲存類別](../c-language/c-storage-classes.md)。  
@@ -73,5 +74,5 @@ int main()  // main function defined at external level
 ### <a name="comments"></a>註解  
  在此範例中，可視性共有四個層級：外部層級和三個區塊層級。 值會列印至螢幕，如每個陳述式之後的註解所示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [存留期、範圍、可見度和連結](../c-language/lifetime-scope-visibility-and-linkage.md)

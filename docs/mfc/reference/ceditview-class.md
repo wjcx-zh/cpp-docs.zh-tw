@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38b8389418657499d43263399f1a05b3a0326c84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78aa34f1790b2e86dae183b96c88b4ed35483927
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceditview-class"></a>CEditView 類別
 檢視類別的類型，這個類型提供 Windows 編輯控制項功能，而且可用於實作簡單的文字編輯器功能。  
@@ -66,17 +67,17 @@ ms.lasthandoff: 10/24/2017
 class CEditView : public CCtrlView  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CEditView::CEditView](#ceditview)|建構類型 `CEditView` 的物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CEditView::FindText](#findtext)|搜尋文字內的字串。|  
 |[CEditView::GetBufferLength](#getbufferlength)|取得字元緩衝區的長度。|  
@@ -90,9 +91,9 @@ class CEditView : public CCtrlView
 |[CEditView::SetTabStops](#settabstops)|設定定位停駐點的螢幕顯示和列印。|  
 |[CEditView::UnlockBuffer](#unlockbuffer)|解除鎖定緩衝區。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CEditView::OnFindNext](#onfindnext)|尋找下一個出現的文字字串。|  
 |[CEditView::OnReplaceAll](#onreplaceall)|新字串，取代所有出現的指定字串。|  
@@ -101,7 +102,7 @@ class CEditView : public CCtrlView
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CEditView::dwStyleDefault](#dwstyledefault)|預設型別物件的樣式**CEditView。**|  
   
@@ -448,7 +449,7 @@ void UnlockBuffer() const;
 ### <a name="remarks"></a>備註  
  呼叫`UnlockBuffer`完成使用所傳回的指標之後[LockBuffer](#lockbuffer)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 SUPERPAD](../../visual-cpp-samples.md)   
  [CCtrlView 類別](../../mfc/reference/cctrlview-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

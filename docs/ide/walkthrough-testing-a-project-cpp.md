@@ -1,73 +1,73 @@
 ---
-title: "逐步解說：測試專案 (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "專案測試 [C++]"
-  - "專案 [C++], 測試"
-  - "測試專案"
+title: "逐步解說： 測試專案 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- project testing [C++]
+- testing projects
+- projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba928d4a81252b76856273160af63ed8707e7e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 逐步解說：測試專案 (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在偵錯模式中執行程式時，可使用中斷點來暫停程式，以檢查變數和物件的狀態。  
+# <a name="walkthrough-testing-a-project-c"></a>逐步解說：測試專案 (C++)
+當您在偵錯模式執行程式時，您可以使用中斷點暫停程式，以檢查變數和物件的狀態。  
   
- 在此逐步解說中，您會在程式執行時監看某個變數的值，並推斷變數值不在預期之中的原因。  
+ 在本逐步解說中，您可以監看變數的值所執行的程式，並且推論出值不如預期的原因。  
   
-## 必要條件  
+## <a name="prerequisites"></a>必要條件  
   
--   本逐步解說假設您已了解 C\+\+ 語言的基礎。  
+-   本逐步解說假設您已了解 C++ 語言的基本概念。  
   
--   它也會假設，您已完成[使用 Visual Studio IDE 進行 C\+\+ 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)中所列的先前的相關逐步解說。  
+-   它也會假設您已完成的稍早相關逐步解說中所列[使用 c + + 桌面開發的 Visual Studio IDE](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。  
   
-### 若要在偵錯模式中執行程式  
+### <a name="to-run-a-program-in-debug-mode"></a>若要偵錯模式執行程式  
   
-1.  開啟要編輯的 TestGames.cpp。  
+1.  開啟 TestGames.cpp 進行編輯。  
   
-2.  選擇這一行程式碼：  
+2.  選取這行程式碼：  
   
      `Cardgame.solitaire(1);`  
   
-3.  若要在該行設定中斷點，請在功能表列上選擇 \[**偵錯**\]、\[**切換中斷點**\]，或選擇 F9 鍵。  程式碼左邊會出現一個紅色圓圈，表示設定了中斷點。  若要移除中斷點，您可以再次選擇功能表命令或 F9 鍵。  
+3.  若要設定中斷點，在該行，功能表列上選擇 **偵錯**，**切換中斷點**，或選擇 F9 鍵。 行的左邊會出現一個紅色圓圈它會指出已設定中斷點。 若要移除中斷點，您可以選擇功能表命令或 F9 鍵一次。  
   
-     如果您使用滑鼠，您也可以按一下左邊界來設定或移除中斷點。  
+     如果您使用滑鼠，您也可以設定或移除中斷點，左邊界中按一下。  
   
-4.  在功能表列上，選擇 \[**偵錯**\]、\[**開始偵錯**\]，或選擇 F5 鍵。  
+4.  在功能表列上選擇 **偵錯**，**開始偵錯**，或選擇 F5 鍵。  
   
-     當程式執行到設有中斷點的那行程式碼時，就會暫時停止執行 \(因為此時程式處於中斷模式\)。  程式碼行左邊的黃色箭號表示此行是要執行的下一行程式碼。  
+     當程式到達中斷點的程式時，執行會停止，因為您的程式處於中斷模式。 黃色箭號左邊的一行程式碼，表示它是要執行的下一行。  
   
-5.  若要檢查 `Cardgame::totalParticipants` 變數的值，請將游標移至 `Cardgame` 上方，然後再移至工具提示視窗左邊的展開控制項上方。  此時會顯示變數名稱 `totalParticipants` 及其值 12。  
+5.  若要檢查的值`Cardgame::totalParticipants`變數，將指標移`Cardgame`然後將它移擴充控制工具提示視窗的左邊。 變數名稱`totalParticipants`並顯示其值為 12。  
   
-     開啟 `Cardgame::totalParticipants` 變數的捷徑功能表，然後選擇 \[**加入監看式**\] 將該變數顯示在 \[**監看式 1**\] 視窗中。  您也可以選取變數，然後將它拖曳至 \[**監看式 1**\] 視窗。  
+     開啟快顯功能表`Cardgame::totalParticipants`變數，然後選擇 **加入監看式**顯示在該變數**監看式 1**視窗。 您也可以選取變數，並將它拖曳至**監看式 1**視窗。  
   
-6.  若要前進至下一行程式碼，請在功能表列上選擇 \[**偵錯**\]、\[**不進入函式**\]，或選擇 F10 鍵。  
+6.  若要跳至下一行程式碼，在功能表列上選擇**偵錯**，**不進入函式**，或選擇 F10 鍵。  
   
-     \[**監看式 1**\] 視窗中的 `Cardgame::totalParticipants` 值現在顯示為 13。  
+     值`Cardgame::totalParticipants`中**監看式 1**視窗現在會顯示為 13。  
   
-7.  開啟 `return 0;` 陳述式的捷徑功能表，然後選擇 \[**執行至游標處**\]。  程式碼左邊的黃色箭號代表它是接下來要執行的陳述式。  
+7.  開啟快顯功能表`return 0;`陳述式，然後選擇 **執行至游標處**。 在程式碼左側的黃色箭號會指向下一個陳述式，來執行。  
   
-8.  當 Cardgame 結束時，`Cardgame::totalParticipants` 數目應該會減少。  此時，`Cardgame::totalParticipants` 應該等於 0，這是因為所有 Cardgame 執行個體都已經刪除，但 \[**監看式 1**\] 視窗卻指出 `Cardgame::totalparticipants` 等於 18。  這表示程式碼中有 Bug，您可以完成下一個逐步解說[逐步解說：偵錯專案 \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)，偵測並修正這個錯誤。  
+8.  `Cardgame::totalParticipants` Cardgame 終止時，應該降低數字。 此時，`Cardgame::totalParticipants`應該等於 0，因為已刪除所有 Cardgame 執行個體，但**監看式 1**視窗表示`Cardgame::totalparticipants`等於 18。 這表示在程式碼中，您可以偵測並修正藉由完成下一個逐步解說，是 bug[逐步解說： 偵錯專案 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)。  
   
-9. 若要停止程式，請在功能表列上，選擇 \[**偵錯**\]、\[**停止偵錯**\] 或選擇 Shift\+F5 鍵盤快速鍵。  
+9. 若要停止程式，在功能表列上，選擇 **偵錯**，**停止偵錯**，或選擇 Shift + F5 鍵盤快速鍵。  
   
-## 後續步驟  
- **上一個主題：** [逐步解說：建置專案 \(C\+\+\)](../ide/walkthrough-building-a-project-cpp.md) &#124; **下一個主題**：[逐步解說：偵錯專案 \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)  
+## <a name="next-steps"></a>後續步驟  
+ **上一步：** [逐步解說： 建置專案 （c + +）](../ide/walkthrough-building-a-project-cpp.md) &#124;**下一步：**[逐步解說： 偵錯專案 （c + +）](../ide/walkthrough-debugging-a-project-cpp.md)  
   
-## 請參閱  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/zh-tw/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [DELETE\_PENDING\_Building and Debugging](http://msdn.microsoft.com/zh-tw/9f6ba537-5ea0-46fb-b6ba-b63d657d84f1)
+## <a name="see-also"></a>請參閱  
+ [C + + 語言參考](../cpp/cpp-language-reference.md)   
+ [建置 C/C++ 程式](../build/building-c-cpp-programs.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8998437389fecabb07293b1e1bb087fea8f39944
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bafc912500c617db7d97d80665577ee9b74423d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="naked-functions"></a>Naked 函式
 **Microsoft 特定的**  
@@ -65,7 +66,7 @@ __declspec( naked ) int func();   /* Error--naked attribute not */
                      /* permitted on function declarations.    */   \  
 ```  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 函式定義](../c-language/c-function-definitions.md)

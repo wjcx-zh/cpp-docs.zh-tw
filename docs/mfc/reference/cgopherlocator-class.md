@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 477debc5c64924e885a296a88b4d6e047f79b9ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ffe833195e665fad37c6638c83170a1913197d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 類別
 從 gopher 伺服器取得 gopher 「 定位器 」，判斷定位器的類型，並將定位器提供給[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)。  
@@ -39,23 +40,23 @@ ms.lasthandoff: 10/24/2017
 class CGopherLocator : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CGopherLocator::CGopherLocator](#cgopherlocator)|建構 `CGopherLocator` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CGopherLocator::GetLocatorType](#getlocatortype)|剖析 gopher 定位器，並判斷它的屬性。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|直接存取儲存在字元`CGopherLocator`物件做為 C 樣式字串。|  
   
@@ -147,7 +148,7 @@ operator LPCTSTR () const;
 ### <a name="remarks"></a>備註  
  沒有字元會複製;只有指標會傳回。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CGopherFileFind 類別](../../mfc/reference/cgopherfilefind-class.md)

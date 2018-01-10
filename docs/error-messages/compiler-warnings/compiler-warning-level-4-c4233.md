@@ -1,37 +1,35 @@
 ---
-title: "編譯器警告 (層級 4) C4233 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4233"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4233"
+title: "編譯器警告 （層級 4） C4233 |Microsoft 文件"
+ms.custom: 
+ms.date: 10/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4233
+dev_langs: C++
+helpviewer_keywords: C4233
 ms.assetid: 9aa51fc6-8ef3-43b5-bafb-c9333cf60de3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad27d2ec3d59df147d8bfc26372a2d25397e651f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 4) C4233
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="compiler-warning-level-4-c4233"></a>編譯器警告 (層級 4) C4233
 
-使用非標準的擴充 : 僅在 C\+\+ 中支援 'keyword' 關鍵字，C 不支援  
-  
- 編譯器將您的來源程式碼編譯為 C 而不是 C\+\+，而且您使用了只在 C\+\+ 中有效的關鍵字。  如果來源程式檔的副檔名是 .c 或者您使用 [\/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)，編譯器會將您的來源程式檔編譯為 C。  
-  
- 此警告會自動提升為錯誤。  如果您要修改此行為，請使用 [\#pragma warning](../../preprocessor/warning.md)。  例如，若要在您的來源程式碼檔案，將 C4233 歸類為層級 4 的警告事件。  
-  
-```  
-#pragma warning(2:4233)  
-```  
-  
- 。
+> 使用非標準擴充: '*關鍵字*' 關鍵字在 c + +，不是 C 中才支援
+
+編譯器將編譯為 C，而不是 c + +，您的原始程式碼，而且您使用的關鍵字，在 c + + 中才有效。 編譯器會編譯為 C 原始程式檔如果來源檔案的副檔名為.c 或您使用[/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md)。
+
+這個警告會自動升級為錯誤。 如果您想要修改此行為，使用[#pragma 警告](../../preprocessor/warning.md)。 比方說，若要將層級 4 警告問題 c4233，將這一行加入至您的原始程式碼檔：
+
+```cpp
+#pragma warning(4:4233)
+```

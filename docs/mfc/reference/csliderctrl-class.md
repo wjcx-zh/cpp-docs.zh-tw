@@ -85,11 +85,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db6c2a8b72e559b733e5d487262c67342d65759e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2788777b9a5014790e094cf39871b3e4d40750fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl 類別
 提供 Windows 通用滑桿控制項的功能。  
@@ -100,17 +101,17 @@ ms.lasthandoff: 10/24/2017
 class CSliderCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|建構 `CSliderCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSliderCtrl::ClearSel](#clearsel)|清除目前的選取範圍中的滑桿控制項。|  
 |[CSliderCtrl::ClearTics](#cleartics)|移除滑桿控制項的目前刻度標記。|  
@@ -633,7 +634,7 @@ void SetThumbLength(int nLength);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nLength`|滑桿，像素為單位的長度。|  
+|[輸入] `nLength`|滑桿，像素為單位的長度。|  
   
 ### <a name="remarks"></a>備註  
  此方法需要 trackbar 控制項設定為[TBS_FIXEDLENGTH](http://msdn.microsoft.com/library/windows/desktop/bb760147)樣式。  
@@ -711,7 +712,7 @@ void SetToolTips(CToolTipCtrl* pWndTip);
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[TBM_SETTOOLTIPS](http://msdn.microsoft.com/library/windows/desktop/bb760242)、 Windows SDK 中所述。 滑桿控制項與建立時**TBS_TOOLTIPS**樣式，它會建立預設工具提示控制項的滑桿旁，顯示目前的滑桿的位置出現。 如需滑桿控制項樣式的說明，請參閱[Trackbar 控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760147)Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CMNCTRL2](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

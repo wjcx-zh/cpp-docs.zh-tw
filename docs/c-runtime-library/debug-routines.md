@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25bbbfae7e12154f9e64540ce9f5e8bdb7ebef42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 158a3b782ffedc7bd206f400c066c052062ad402
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-routines"></a>偵錯常式
 C 執行階段程式庫的偵錯版本提供許多診斷服務，使得偵錯程式容易使用，並允許開發人員︰  
@@ -41,7 +42,7 @@ C 執行階段程式庫的偵錯版本提供許多診斷服務，使得偵錯程
   
 ### <a name="debug-versions-of-the-c-run-time-library-routines"></a>C 執行階段程式庫常式的偵錯版本  
   
-|常式|用法|  
+|常式傳回的值|用法|  
 |-------------|---------|  
 |[_ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|評估運算式，並在結果為 FALSE 時產生偵錯報告|  
 |[_ASSERTE](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)|類似 `_ASSERT`，但產生的報表中會包含失敗的運算式。|  
@@ -113,6 +114,6 @@ C 執行階段程式庫的偵錯版本提供許多診斷服務，使得偵錯程
 |C [abort](../c-runtime-library/reference/abort.md) 常式|C++ [delete](../cpp/delete-operator-cpp.md) 運算子|  
 |C [assert](../c-runtime-library/reference/assert-macro-assert-wassert.md) 常式|C++ [new](../cpp/new-operator-cpp.md) 運算子|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)   
  [執行階段錯誤檢查](../c-runtime-library/run-time-error-checking.md)

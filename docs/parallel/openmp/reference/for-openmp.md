@@ -1,69 +1,68 @@
 ---
-title: "for (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "for"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "for OpenMP directive"
+title: "針對 (OpenMP) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 97c32bd93ca208d76fbcb418c6e851e3c50f49ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# for (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-使完成的工作執行緒之間分割為在平行區域內的迴圈。  
+# <a name="for-openmp"></a>for (OpenMP)
+會導致在執行工作分割為個執行緒在平行區域內的迴圈。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma omp [parallel] for [clauses]  
    for_statement  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
- `clause` \(選擇項\)  
- 零個或多個子句。  請參閱 ＜ 備註 ＞ 一節清單所支援的子句的**的**。  
+ `clause` (選擇性)  
+ 零個或多個子句。 請參閱 < 備註 > 一節如需所支援的子句**如**。  
   
  `for_statement`  
- 答： for 迴圈。  如果使用者的程式碼，就會產生未定義的行為迴圈變成 index 變數。  
+ For 迴圈的。 如果使用者程式碼中，將會產生未定義的行為如迴圈變更的索引變數。  
   
-## 備註  
- **的**指示詞可支援下列 OpenMP 子句：  
+## <a name="remarks"></a>備註  
+ **如**指示詞可支援下列 OpenMP 子句：  
   
 -   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
 -   [lastprivate](../../../parallel/openmp/reference/lastprivate.md)  
   
--   [&#91;不等待](../../../parallel/openmp/reference/nowait.md)  
+-   [nowait](../../../parallel/openmp/reference/nowait.md)  
   
 -   [排序](../../../parallel/openmp/reference/ordered-openmp-directives.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [縮小](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [排程](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- 如果**平行**指定了， `clause`可以任何子句所接受**平行**或**的**指示詞，除非 **\[不等待**。  
+ 如果**平行**也指定`clause`可以任何子句接受**平行**或**如**指示詞，除了**nowait**.  
   
- 如需詳細資訊，請參閱 [2.4.1 建構](../../../parallel/openmp/2-4-1-for-construct.md)。  
+ 如需詳細資訊，請參閱[2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_for.cpp  
@@ -122,6 +121,10 @@ int main() {
 }  
 ```  
   
-  **4 OpenMP 執行緒所使用。  1 到 10 的總和是 55**    
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+4 OpenMP threads were used.  
+The sum of 1 through 10 is 55  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

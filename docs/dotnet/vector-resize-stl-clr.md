@@ -1,49 +1,50 @@
 ---
-title: "vector::resize (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resize 成員 [STL/CLR]"
+title: "vector:: resize (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: a3556fbc-67d9-463a-9ffc-cb43ee15657f
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b4fbc196f9e4ca14ee8d8e744da380e08ec4d8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::resize (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-變更項目的數目。  
+# <a name="vectorresize-stlclr"></a>vector::resize (STL/CLR)
+變更項目數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### 參數  
- new\_size  
- 受控制序列的新大小。  
+#### <a name="parameters"></a>參數  
+ new_size  
+ 新的受控制序列的大小。  
   
  val  
  填補項目的值。  
   
-## 備註  
- 這些成員函式同時確保 [vector::size](../dotnet/vector-size-stl-clr.md)`()` 從此傳回 `new_size`。  如果必須讓受控制序列更長，第一個成員函式以 `value_type()` 值附加至項目，而第二個成成員函式以 `val` 值附加至項目。  若要讓受控制序列較短，兩個成員函式有效地清除最後項目 [vector::size](../dotnet/vector-size-stl-clr.md)`() -` `new_size` 次。  您可以使用它以修減或附加受控制序列的方式確保受控制序列的大小為 `new_size`。  
+## <a name="remarks"></a>備註  
+ 成員函式同時確保[vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `()`從此以後傳回`new_size`。 如果第一個成員函式必須讓受控制的序列更長，即會將 `value_type()` 值附加至元素，而第二個成員函式會將 `val` 值附加至元素。 若要使較短的受控制的序列，這兩個成員函式有效地清除最後一個項目[vector:: size (STL/CLR)](../dotnet/vector-size-stl-clr.md) `() -` `new_size`時間。 您使用它來確保受控制的序列的大小`new_size`、 修剪或填補目前受控制的序列。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_resize.cpp   
@@ -74,17 +75,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0 0**  
-**size\(\) \= 0**  
- **x x x x x**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::clear](../dotnet/vector-clear-stl-clr.md)   
- [vector::erase](../dotnet/vector-erase-stl-clr.md)   
- [vector::insert](../dotnet/vector-insert-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)   
+ [vector:: erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)   
+ [vector::insert (STL/CLR)](../dotnet/vector-insert-stl-clr.md)

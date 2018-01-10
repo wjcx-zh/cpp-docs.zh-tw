@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89bb772976050c8ebf0b7745aa0541c2de3e2fed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d527a4e0647fe0e8471e168841a93512f4d1a9e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 和 Visual Studio 2017 之間的 C++ 二進位相容性
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
 
 2) 應用程式所取用的可轉散發程式庫版本號碼小於用來編譯應用程式的工具組時。 換句話說，如果您使用平台工具組 v141 編譯程式，應用程式所取用的所有可轉散發程式庫都必須使用 v141 或以上進行編譯。  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [Visual C++ 變更歷程記錄](..\porting\visual-cpp-change-history-2003-2015.md)
 

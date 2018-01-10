@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5393c937520eeb76acff0149949077205115f5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d073a932eff9a73d861902c3bb8a2ef00870e74b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompsetnestlock"></a>omp_set_nest_lock
 區塊執行緒執行，直到鎖定可用為止。  
@@ -44,5 +45,5 @@ void omp_set_nest_lock(
 ## <a name="examples"></a>範例  
  請參閱[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)的使用範例`omp_set_nest_lock`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../../../parallel/openmp/reference/openmp-functions.md)

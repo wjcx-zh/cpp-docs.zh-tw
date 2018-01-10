@@ -4,45 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - unorm
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 6817568b7dc111776033e935fd2ba3ad5dc4a69a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fffce416bebda4bcc1d5aa0078135aff27bdb7e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorm-class"></a>unorm 類別
-表示 unorm 數字。 每個項目是浮點數中的 [0.0，1.0 f] 範圍。  
+表示 unorm 數字。 每個項目是浮點數 [0.0，1.0 f] 範圍內。  
   
 ## <a name="syntax"></a>語法  
   
@@ -50,7 +33,7 @@ ms.lasthandoff: 03/17/2017
 class unorm;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -63,7 +46,7 @@ class unorm;
 |名稱|描述|  
 |----------|-----------------|  
 |unorm::operator-||  
-|unorm::operator 浮點數|轉換運算子。 Unorm 數字轉換成浮點數值。|  
+|unorm::operator float|轉換運算子。 將 unorm 數字轉換成浮點值。|  
 |unorm::operator * =||  
 |unorm::operator / =||  
 |unorm::operator + +||  
@@ -75,9 +58,9 @@ class unorm;
  `unorm`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** amp_short_vectors.h  
+ **標頭：** amp_short_vectors.h  
   
- **命名空間︰** concurrency:: graphics  
+ **命名空間：** concurrency:: graphics  
   
 ##  <a name="ctor"></a>unorm 
 
@@ -126,6 +109,5 @@ inline explicit unorm(
  `_Other`  
  用來初始化 norm 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

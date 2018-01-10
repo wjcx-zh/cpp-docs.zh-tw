@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2dba94eabd7505e9e8e4340e933a08736222b461
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 142d4f8e8ce36cabfb15e757ea561a5bc3bebabc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ciexp"></a>_CIexp
 計算堆疊頂端值的指數。  
@@ -52,6 +53,6 @@ void __cdecl _CIexp();
 ## <a name="requirements"></a>需求  
  **平台：**x86  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [exp、expf、expl](../c-runtime-library/reference/exp-expf.md)

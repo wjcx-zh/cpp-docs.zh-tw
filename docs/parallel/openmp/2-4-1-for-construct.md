@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92f3af3fa84043d9e8755136ab66e345e455ff1b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd861da77b549a73edf9aeface714b0066d88344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="241-for-construct"></a>2.4.1 for 建構
 **如**指示詞會識別反覆性工作共用建構，可指定相關聯的迴圈的反覆項目，則會以平行方式執行。 反覆項目**如**迴圈分散於存在於小組執行的平行建構，它會繫結的執行緒。 語法**如**建構如下所示：  

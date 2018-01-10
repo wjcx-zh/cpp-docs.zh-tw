@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5bc3947dc31c1355a67864e509c28dc3569b488b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cfa27e2d76e546748258a5f6c1af1df9ded28f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-time-routines-by-category"></a>依分類區分的執行階段常式
 本節列出並依分類說明 Microsoft 執行階段程式庫常式。 為了參考方便起見，某些常式分別列在一個以上的分類。 多位元組字元常式和寬字元常式會使用其所在的單一位元組字元對應項目來分組。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
 |[搜尋和排序](../c-runtime-library/searching-and-sorting.md)|[字串操作](../c-runtime-library/string-manipulation-crt.md)|  
 |[系統呼叫](../c-runtime-library/system-calls.md)|[時間管理](../c-runtime-library/time-management.md)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

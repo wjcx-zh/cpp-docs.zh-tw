@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce36666b93823db13c455bcdefd2182a87267df1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 499b665bcf69c0077f5f587e66941cba468650a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uppercase-and-lowercase"></a>大寫和小寫
 **ANSI 3.1.2** 是否區分大小寫  
@@ -26,5 +27,5 @@ ms.lasthandoff: 10/24/2017
   
  Microsoft 連結器會區分大小寫。 您必須根據大小寫一致地指定所有的識別項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [識別項的行為](../c-language/behavior-of-identifiers.md)

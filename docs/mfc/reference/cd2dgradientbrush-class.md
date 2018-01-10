@@ -29,11 +29,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96d916467c524d54f58a9bdd1095e1d58d7ca0a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c03d489b3059ddadf5783719f297371433a599e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush 類別
 CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 類別的基底類別。  
@@ -44,24 +45,24 @@ CD2DLinearGradientBrush 和 CD2DRadialGradientBrush 類別的基底類別。
 class CD2DGradientBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|建構 CD2DGradientBrush 物件。|  
 |[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|解構函式。 D2D 漸層筆刷物件終結時呼叫。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGradientBrush::Destroy](#destroy)|CD2DGradientBrush 物件已遭終結。 (覆寫[CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy)。)|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|D2D1_GRADIENT_STOP 結構的陣列。|  
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|在哪種色彩漸層停駐點之間的插補執行空間。|  
@@ -158,5 +159,5 @@ D2D1_EXTEND_MODE m_extendMode;
 ID2D1GradientStopCollection* m_pGradientStops;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

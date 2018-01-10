@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f5a6c98d53c73a6913c9ed8e63b2a1fce43b97d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84d8c3f5a1b43fdec5554003e32db4f23b4f0406
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prefix-increment-and-decrement-operators"></a>前置遞增和遞減運算子
 當遞增或遞減運算子出現在運算元前面時，一元運算子 (`++` 和 **--**) 稱為「前置」遞增或遞減運算子。 後置遞增和遞減的優先順序高於前置遞增和遞減。 運算元必須有整數類資料、浮點或指標類型，並且必須是可修改的左值運算式 (沒有 **const** 屬性的運算式)。 結果為左值。  
@@ -40,5 +41,5 @@ if( line[--i] != '\n' )
   
  在這個範例中，`i` 變數會先遞減，再做為 `line` 的註標使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 一元運算子](../c-language/c-unary-operators.md)

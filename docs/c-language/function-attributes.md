@@ -18,18 +18,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b995bc74afceb2ce0288e30f7e0be88ba5958f7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 809537cceac4a0b18f4a5efff883863e9a5ac2b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-attributes"></a>函式屬性
 **Microsoft 特定的**  
   
  選擇性的 *attribute-seq* 非終結端可讓您依據函式來選取呼叫慣例。 您也可以將函式指定為 `__fastcall` 或 `__inline`。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 函式定義](../c-language/c-function-definitions.md)

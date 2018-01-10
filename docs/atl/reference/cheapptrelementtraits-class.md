@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8d673b530f67507cd72e6f14a1c0d0ebd48a8f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fb646e6f6d2358018c38439e5bea4c651e9d994
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptrelementtraits-class"></a>CHeapPtrElementTraits 類別
 建立的堆積的指標集合時，這個類別會提供方法、 靜態函式和有用的 typedef。  
@@ -50,7 +51,7 @@ class CHeapPtrElementTraits :
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHeapPtrElementTraits::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
 |[CHeapPtrElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
@@ -88,7 +89,7 @@ typedef CHeapPtr<T, Allocator>& INARGTYPE;
 typedef T *& OUTARGTYPE;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDefaultElementTraits 類別](../../atl/reference/cdefaultelementtraits-class.md)   
  [CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

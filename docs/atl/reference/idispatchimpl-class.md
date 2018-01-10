@@ -25,11 +25,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e20a9edee01480aa529ffcd0441f7096d30715fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3008d42986fcdc4b98ba6a1f9c85c437f2d335c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 類別
 提供的預設實作`IDispatch`雙重介面的一部分。  
@@ -50,35 +51,35 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `T`  
+ [輸入] `T`  
  雙重介面。  
   
- [in] `piid`  
+ [輸入] `piid`  
  指向 IID 的`T`。  
   
- [in] `plibid`  
+ [輸入] `plibid`  
  包含介面的相關資訊的類型程式庫的 LIBID 指標。 根據預設，會傳遞伺服器層級類型程式庫。  
   
- [in] `wMajor`  
+ [輸入] `wMajor`  
  類型程式庫的主要版本。 根據預設，值為 1。  
   
- [in] `wMinor`  
+ [輸入] `wMinor`  
  類型程式庫的次要版本。 根據預設，值為 0。  
   
- [in] `tihclass`  
+ [輸入] `tihclass`  
  用來管理的類型資訊的類別`T`。 預設值為 `CComTypeInfoHolder`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IDispatchImpl::IDispatchImpl](#idispatchimpl)|建構函式。 呼叫`AddRef`雙重介面的型別資訊會管理受保護的成員變數上。 此解構函式會呼叫 `Release`。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|將一組名稱對應至一組對應的分派識別項 (Dispatch Identifier)。|  
 |[IDispatchImpl::GetTypeInfo](#gettypeinfo)|擷取雙重介面的型別資訊。|  
@@ -167,5 +168,5 @@ STDMETHOD(Invoke)(
 ### <a name="remarks"></a>備註  
  請參閱[idispatch:: Invoke](http://msdn.microsoft.com/en-us/964ade8e-9d8a-4d32-bd47-aa678912a54d) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

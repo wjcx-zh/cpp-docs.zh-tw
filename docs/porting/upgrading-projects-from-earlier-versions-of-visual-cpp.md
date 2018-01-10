@@ -16,11 +16,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b141efa2ffa7d382278365101fca25b66ea25614
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 628a1263a93c6dea642429480f4b77b8347016f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>從舊版的 Visual C++ 升級專案
 在大部分情況下，您都可以開啟在舊版 Visual Studio 中建立的專案。 不過，開啟時 Visual Studio 會將專案升級。 如果您儲存此升級的專案，在舊版本中便無法開啟。  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
  如需如何更新目標 Windows 版本的資訊，請參閱[修改 WINVER 和 _WIN32_WINNT](../porting/modifying-winver-and-win32-winnt.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建置系統變更](../build/build-system-changes.md)  
  [Visual Studio 2017 中 Visual C++ 的新功能](../what-s-new-for-visual-cpp-in-visual-studio.md) [Visual C++ 變更歷程記錄 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)   
  [非標準行為](../cpp/nonstandard-behavior.md)

@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd1a7f406754f8de985ae5273d7104947a7c7631
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dac320a32a555fd6586b6f68545f9bdb17a3cac3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cifmod"></a>_CIfmod
 計算堆疊兩個頂端值的浮點餘數。  
@@ -52,6 +53,6 @@ void __cdecl _CIfmod();
 ## <a name="requirements"></a>需求  
  **平台：**x86  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [fmod、fmodf](../c-runtime-library/reference/fmod-fmodf.md)

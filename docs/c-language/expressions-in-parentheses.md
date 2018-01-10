@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dd05385c8753414403116704f15e26bf9486cf14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c09209a323a06f883a54e7ecaec17c55a3bc6205
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-in-parentheses"></a>括號內的運算式
 您可以將任何運算元包含在括號內，而不會變更括號內運算式的類型或值。 例如，在下列運算式中：  
@@ -48,5 +49,5 @@ ms.lasthandoff: 10/24/2017
   
  副作用所造成的例外狀況將在[副作用](../c-language/side-effects.md)中討論。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 主要運算式](../c-language/c-primary-expressions.md)

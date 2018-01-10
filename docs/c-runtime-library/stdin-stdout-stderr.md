@@ -24,11 +24,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8350cb0cea07298eefb9b3aa54b69a5b9d786d88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7683a0ed1e40a0b65ea3a400c460dcd23ecef2d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 ## <a name="syntax"></a>語法  
@@ -58,6 +59,6 @@ FILE *stderr;
   
  這些指標是常數，且無法指派新值給它們。 `freopen` 函式可用來將資料流重新導向到磁碟檔案或其他裝置。 作業系統可讓您在命令層級對程式的標準輸入和輸出進行重新導向。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../c-runtime-library/stream-i-o.md)   
  [全域常數](../c-runtime-library/global-constants.md)

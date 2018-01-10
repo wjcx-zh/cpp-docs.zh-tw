@@ -30,17 +30,18 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 851c4a72a4313867f06985e2c77a7035c6a5e9ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 069a13626c2fcfab62c47d3142f2f5b810f0945a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lock"></a>_lock
 取得多執行緒的鎖定。  
   
 > [!IMPORTANT]
->  此函式已被取代。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。  
+>  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -60,6 +61,6 @@ void __cdecl _lock
 ## <a name="requirements"></a>需求  
  **來源：** mlock.c  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [_unlock](../c-runtime-library/unlock.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d2cde10bdfd530429911cbe7f1d85c455488a14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6898c011a4e2e907cd745ccb206b0e0f0b37e78f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-forwarding-ccli"></a>類型轉送 (C++/CLI)
 *類型轉送*可讓您進入類型一個組件 （A） 從另一個組件 （B），這樣就表示您不需要重新編譯使用組件 a 的用戶端  

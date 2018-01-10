@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f8355dd04376e73618a215fa73160dc1ee64dae2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06d237478a790437eea433d6060c8d7dca977782
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-files-and-source-programs"></a>原始程式檔和來源程式
 一個原始程式可分成一個或多個「原始程式檔」或「轉譯單位」。 輸入到編譯器者稱為「轉譯單位」。  
@@ -49,5 +50,5 @@ ms.lasthandoff: 10/24/2017
   
  原始程式檔不需要包含可執行的陳述式。 例如，將變數的定義放在某個原始程式檔中，再於使用這些變數的其他原始程式檔中宣告這些變數的參考，可能會對您有幫助。 這項技術在必要時可讓您更容易尋找及更新定義。 基於相同原因，常數和巨集通常會組織為稱為「Include 檔」或「標頭檔」的檔案，這些檔案可在原始程式檔中視需要加以參考。 如需[巨集](../preprocessor/macros-c-cpp.md)和 [include 檔](../preprocessor/hash-include-directive-c-cpp.md)的詳細資訊，請參閱《前置處理器參考》。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式結構](../c-language/program-structure.md)

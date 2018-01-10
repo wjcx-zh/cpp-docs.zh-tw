@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c3a87f1277abb9d5cf3b9d87c6713104ba8e108
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cd8dc389f4a4140b78a78753f7f5a91168bd984
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="padding-and-alignment-of-structure-members"></a>結構成員的填補和對齊
 **ANSI 3.5.2.1**：結構成員的填補和對齊，以及位元欄位是否可以跨儲存單位邊界  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
   
  如果整數類資料類型的大小相同，而且下一個位元欄位符合目前配置單位，不需因為位元欄位的一般對齊需求而加上跨越界限，則相鄰的位元欄位會封裝為相同的 1 個、2 個或 4 個位元組配置單位。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、等位、列舉和位元欄位](../c-language/structures-unions-enumerations-and-bit-fields.md)

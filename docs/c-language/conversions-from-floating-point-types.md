@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a95596b2c9e7312d4581d1a4c641c2466420158
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>從浮點類型的轉換
 轉換成 **double** 或 `long double` 的 **float** 值，或轉換成 `long double` 的 **double** 值，其值不會變更。 轉換成 **float** 值的 **double** 值會盡可能確切表示。 如果無法正確表示值，則精確度可能會喪失。 如果結果超出範圍，則行為會是未定義。 如需浮點類型的範圍，請參閱[浮點常數的限制](../c-language/limits-on-floating-point-constants.md)。  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
  將 **double** 或 `long double` 浮點數轉換成較小的浮點數時，浮點變數的值會在發生反向溢位時從小數點以下截斷。 溢位會造成執行階段錯誤。 請注意，Microsoft C 編譯器會將 `long double` 對應至 **double** 類型。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  下表摘要說明從浮點類型進行轉換。  
   
@@ -62,5 +63,5 @@ ms.lasthandoff: 10/24/2017
   
  如果要轉換的值大於 **long** 的最大正數值，則從 **float**、**double** 或 `long double` 值轉換為 `unsigned long` 會變得不精確。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指派轉換](../c-language/assignment-conversions.md)

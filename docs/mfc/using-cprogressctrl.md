@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89fc982eba1a4eeeb291a33440cfae71c4b2a745
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 09d7673450834fbe6824e731679c1a6517c247a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cprogressctrl"></a>使用 CProgressCtrl
 您可以使用進度列控制項來指示長時間作業的進度。 它是一個矩形，會隨著作業的進度逐漸填滿系統的醒目提示色彩。  
@@ -40,6 +41,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [管理進度控制項](../mfc/manipulating-the-progress-control.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [控制項](../mfc/controls-mfc.md)
 

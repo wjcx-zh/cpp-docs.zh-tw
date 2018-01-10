@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 021fddcbc63fdfb6faf4c0a3919293046649bab5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01a153011ad0cd571762c6473f6121a55045396c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>撰寫初構/終解程式碼時的考量
 **Microsoft 特定的**  
@@ -86,7 +87,7 @@ __declspec ( naked ) func()
 }     
 ```  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Naked 函式](../c-language/naked-functions.md)

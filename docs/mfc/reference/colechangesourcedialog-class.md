@@ -35,11 +35,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba886a97f4f09027ace4896d55d7e619566657ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a9eccd25a175479c18a83b5d6ab96753a946e386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colechangesourcedialog-class"></a>COleChangeSourceDialog 類別
 用於 OLE 的 [變更來源] 對話方塊。  
@@ -50,17 +51,17 @@ ms.lasthandoff: 10/24/2017
 class COleChangeSourceDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::COleChangeSourceDialog](#colechangesourcedialog)|建構 `COleChangeSourceDialog` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::DoModal](#domodal)|顯示 OLE 變更來源 對話方塊。|  
 |[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|取得完整的來源顯示名稱。|  
@@ -72,7 +73,7 @@ class COleChangeSourceDialog : public COleDialog
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleChangeSourceDialog::m_cs](#m_cs)|結構，控制對話方塊中的行為。|  
   
@@ -246,7 +247,7 @@ BOOL IsValidSource();
   
  如需詳細資訊，請參閱[OLEUICHANGESOURCE](http://msdn.microsoft.com/library/windows/desktop/ms682160) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)

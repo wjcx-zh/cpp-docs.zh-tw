@@ -17,18 +17,19 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b64e6c167df00d072b70a2f39e882a84357b4eab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69fae15b7a12d990d2fb2c8e457bfdc0407f7702
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environment-variable-macros"></a>環境變數巨集
 NMAKE 繼承巨集定義的工作階段開始之前就存在的環境變數。 如果作業系統環境中設定變數，並使用 NMAKE 巨集。 繼承的名稱會轉換成大寫。 前置處理早繼承。 您可以使用 /E 選項，讓繼承自環境變數，以覆寫具有相同名稱 makefile 中的任何巨集的巨集。  
   
  在工作階段，可以重新定義環境變數巨集，這會變更對應的環境變數。 您也可以變更利用 SET 命令的環境變數。 若要變更環境變數的工作階段中使用 SET 命令不會變更對應的巨集，不過。  
   
- 例如：  
+ 例如:   
   
 ```  
 PATH=$(PATH);\nonesuch  
@@ -41,5 +42,5 @@ all:
   
  如果環境變數定義為字串，它會是 makefile 中語法不正確，會建立任何巨集，並不會產生警告。 如果變數的值包含錢幣符號 （$），NMAKE 會解譯為開頭的巨集引動過程。 使用巨集可能會導致非預期的行為。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [特殊的 NMAKE 巨集](../build/special-nmake-macros.md)

@@ -851,11 +851,12 @@ ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2b3dea72647bc4c4f0d49b0af1de9d6bcb0f116
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: bab5e5e8316ff181ce8b2a190c721336fb5032cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internal-crt-globals-and-functions"></a>內部 CRT 全域和函式  
   
@@ -1188,6 +1189,6 @@ C 執行階段 (CRT) 程式庫包含僅用於支援公用程式庫介面的函�
 |_Xbad_alloc|  
 |_Xlength_error|  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

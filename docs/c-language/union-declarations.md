@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 57e7db99e90e68e71dae4fc00f271b3831a5fc39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4088aea4025e7c51aba75efe28978d05c0e48730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="union-declarations"></a>等位宣告
 「等位宣告」會指定一組變數值，以及選擇性地指定命名等位的標記。 變數值稱為等位的「成員」，而且可以具有不同的類型。 等位類似其他語言中的「變異記錄」。  
@@ -131,7 +132,7 @@ struct x
   
  如需參考等位的詳細資訊，請參閱[結構和等位成員](../c-language/structure-and-union-members.md)。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

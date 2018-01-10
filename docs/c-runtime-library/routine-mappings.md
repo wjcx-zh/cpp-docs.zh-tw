@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="routine-mappings"></a>常式對應
 泛型文字常式對應是在 TCHAR.H 中定義。 `_tccpy` 和 `_tclen` 對應至 MBCS 模型中的函式，為求完整性，它們會對應至 SBCS 和 Unicode 模式中的巨集或內嵌函式。 如需泛型文字常式的相關資訊，請參閱對應的 `SBCS`、`_MBCS` 或 `_UNICODE` 相關常式的＜說明＞主題。  
@@ -270,7 +271,7 @@ ms.lasthandoff: 10/24/2017
 |`_vtprintf`|`vprintf`|`vprintf`|`vwprintf`|  
 |`_vtprintf_s`|`vprintf_s`|`vprintf_s`|`vwprintf_s`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [泛型文字對應](../c-runtime-library/generic-text-mappings.md)   
  [資料類型對應](../c-runtime-library/data-type-mappings.md)   
  [常數和全域變數對應](../c-runtime-library/constant-and-global-variable-mappings.md)   

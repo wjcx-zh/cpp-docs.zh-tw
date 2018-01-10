@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- system_error/std::system_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- system_error class
+f1_keywords: system_error/std::system_error
+dev_langs: C++
+helpviewer_keywords: system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3795f289a454503e80aa06d281543cd94aaa0a55
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 053dc577c884be5ef0878d0caf82107ecaf21239
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="systemerror-class"></a>system_error 類別
 代表已擲回以報告低階系統錯誤之所有例外狀況的基底類別。  
@@ -63,7 +59,6 @@ const error_code& code() const throw();
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<system_error>](../standard-library/system-error.md)
-
 

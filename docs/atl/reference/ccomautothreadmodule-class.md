@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d07a29ff12edcd590379f9bb30cdc122806a83c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 094d10069b854d122e835f7d12f9ef095775db2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule 類別
 為準，ATL 7.0`CComAutoThreadModule`已過時： 請參閱[ATL 模組類別](../../atl/atl-module-classes.md)如需詳細資訊。  
@@ -239,6 +240,6 @@ LONG Unlock();
   
  模組鎖定計數為零時，模組可以卸載。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [模組類別](../../atl/atl-module-classes.md)

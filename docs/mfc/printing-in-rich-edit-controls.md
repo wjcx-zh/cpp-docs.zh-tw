@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d93611d66d394d4ed182261d3bba3121464931d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab8e15e25e2d419bb7c3ac67fc2c6f3453fb03c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="printing-in-rich-edit-controls"></a>Rich Edit 控制項中的列印
 您所見的 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)) 來呈現指定的裝置，例如印表機其輸出。 您也可以指定的 rich edit 控制項的輸出裝置格式化的文字。  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
  您可以使用[SetTargetDevice](../mfc/reference/cricheditctrl-class.md#settargetdevice)來指定目標裝置的 rich edit 控制項的成員函式將其文字格式化。 此函式可用於所見即所得 （所見即所得） 格式，在其中應用程式將使用預設印表機字型度量資訊，而不螢幕的文字。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -22,11 +22,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c82128fb40577544b28eb50dc0a107e14c41cbd0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 432b5fa5041a7997c9df0593dc511c29854387ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hint-files"></a>提示檔案
 A*提示檔案*可協助 Visual Studio 整合式的開發環境 (IDE) 解譯 Visual c + + 識別項，例如函式和巨集的名稱。 當您開啟的 Visual c + + 專案，在 IDE 的*剖析系統*會分析每個專案中的來源檔案中的程式碼，並收集每個識別項的相關資訊。 然後 IDE 使用該資訊來支援的功能，例如**類別檢視**瀏覽器和**導覽列**。  
@@ -314,8 +315,8 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
   
 -   `#undef`提示中`A2`目錄中移除的提示`OBRACE`和`CBRACE`中`Debug`目錄提示檔案。  
   
-## <a name="see-also"></a>另請參閱  
- [為 Visual c + + 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)    
+## <a name="see-also"></a>請參閱  
+ [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)    
  [#define 指示詞 （C/c + +）](../preprocessor/hash-define-directive-c-cpp.md)   
  [#undef 指示詞 （C/c + +）](../preprocessor/hash-undef-directive-c-cpp.md)   
  [SAL 註釋](../c-runtime-library/sal-annotations.md)   

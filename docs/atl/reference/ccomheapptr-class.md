@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d851e2c6fb4892bd65cf26ea747a6b99a8006cee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8619c050ecc356e1445991b625da00c04f462848
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomheapptr-class"></a>CComHeapPtr 類別
 用來管理堆積指標的智慧型指標類別。  
@@ -38,11 +39,11 @@ class CComHeapPtr : public CHeapPtr<T, CComAllocator>
  `T`  
  要儲存在堆積上的物件類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComHeapPtr::CComHeapPtr](#ccomheapptr)|建構函式。|  
   
@@ -74,7 +75,7 @@ explicit CComHeapPtr(T* pData) throw();
 ### <a name="remarks"></a>備註  
  堆積指標可以選擇性地建立使用現有`CComHeapPtr`物件。 如果是的話，新`CComHeapPtr`物件負責管理新的指標和資源。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CHeapPtr 類別](../../atl/reference/cheapptr-class.md)   
  [CHeapPtrBase 類別](../../atl/reference/cheapptrbase-class.md)   
  [CComAllocator 類別](../../atl/reference/ccomallocator-class.md)   

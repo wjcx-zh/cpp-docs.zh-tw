@@ -59,11 +59,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 60e9427b569c7f3e15b779b0764e0316945880b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4f7bdc964da8df8d8a402ae70b38eec1dbbf436
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl 類別
 包含日期和時間選擇器控制項的工具列按鈕。  
@@ -74,18 +75,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|建構 `CMFCToolBarDateTimeCtrl` 物件。|  
 |`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|指定使用者是否可以在自訂期間延伸按鈕。 (覆寫[CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)。)|  
 |[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|將另一個工具列按鈕的內容複製到目前的按鈕。 (覆寫[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom)。)|  
@@ -155,16 +156,16 @@ CMFCToolBarDateTimeCtrl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiID`  
+ [輸入] `uiID`  
  控制項 id。  
   
- [in] `iImage`  
+ [輸入] `iImage`  
  在工具列上的映像的索引`CMFCToolBarImages`物件。  
   
- [in] `dwStyle`  
+ [輸入] `dwStyle`  
  樣式`CMFCToolBarDateTimeCtrlImpl`當使用者按一下按鈕時所建立的視窗。  
   
- [in] `iWidth`  
+ [輸入] `iWidth`  
  控制項的寬度 (單位為像素)。  
   
 ### <a name="remarks"></a>備註  
@@ -183,7 +184,7 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `src`  
+ [輸入] `src`  
  要從中複製來源 按鈕參考。  
   
 ### <a name="remarks"></a>備註  
@@ -197,7 +198,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `menuButton`  
+ [輸入] `menuButton`  
  目標功能表按鈕的參考。  
   
 ### <a name="return-value"></a>傳回值  
@@ -214,7 +215,7 @@ static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiCmd`  
+ [輸入] `uiCmd`  
  要擷取按鈕的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -325,7 +326,7 @@ virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iNotifyCode`  
+ [輸入] `iNotifyCode`  
  與命令相關聯的通知訊息。  
   
 ### <a name="return-value"></a>傳回值  
@@ -356,7 +357,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndParent`  
+ [輸入] `pWndParent`  
  新的父視窗。  
   
 ### <a name="remarks"></a>備註  
@@ -372,10 +373,10 @@ virtual BOOL OnClick(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  未使用。  
   
- [in] `bDelay`  
+ [輸入] `bDelay`  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -394,10 +395,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容顯示的按鈕。  
   
- [in] `nCtlColor`  
+ [輸入] `nCtlColor`  
  未使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -438,7 +439,7 @@ virtual void OnShow(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
+ [輸入] `bShow`  
  指定按鈕是否可見。 如果這個參數是`TRUE`，按鈕會顯示。 否則，按鈕看不到。  
   
 ### <a name="remarks"></a>備註  
@@ -452,7 +453,7 @@ virtual void OnSize(int iSize);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iSize`  
+ [輸入] `iSize`  
  新按鈕，像素為單位的寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -470,13 +471,13 @@ virtual BOOL OnUpdateToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndParent`  
+ [輸入] `pWndParent`  
  父視窗。  
   
- [in] `iButtonIndex`  
+ [輸入] `iButtonIndex`  
  父代按鈕集合中的按鈕之以零為起始索引。  
   
- [in] `wndToolTip`  
+ [輸入] `wndToolTip`  
  在顯示工具提示文字的控制項。  
   
  [輸出] `str`  
@@ -543,7 +544,7 @@ static BOOL SetTimeAll(
 ### <a name="remarks"></a>備註  
  會尋找具有指定的命令 ID 的工具列按鈕，並設定日期和時間選擇器控制項中的時間，藉由呼叫[CMFCToolBarDateTimeCtrl::SetTime](#settime)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)   

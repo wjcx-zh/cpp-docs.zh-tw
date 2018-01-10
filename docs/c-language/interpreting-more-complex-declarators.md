@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae753f1a483c05843797268641c4cc0c5d64c52a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67d66667d169a95ae4d62ccadd2b56a136cd0a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interpreting-more-complex-declarators"></a>解譯更複雜的宣告子
 您可以用括號括住所有宣告子，以指定「複雜宣告子」的特定解譯。 複雜宣告子是以一個以上的陣列、指標或函式修飾詞限定的識別項。 您可以將各種不同的陣列、指標及函式修飾詞組合套用至單一識別項。 通常可使用 `typedef` 簡化宣告。 請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。  
@@ -134,5 +135,5 @@ union sign *(*var[5])[5]; /* Array of pointers to arrays
   
  這個範例示範括號位置如何改變宣告的意義。 在此範例中，`var` 是等位五個元素陣列指標的五個元素陣列指標。 如需如何使用 `typedef` 避免複雜宣告的範例，請參閱 [Typedef 宣告](../c-language/typedef-declarations.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和類型](../c-language/declarations-and-types.md)

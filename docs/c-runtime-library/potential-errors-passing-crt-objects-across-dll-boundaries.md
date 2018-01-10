@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤
 當您將 C 執行階段 (CRT) 物件 (例如檔案控制代碼、地區設定和環境變數) 傳遞進出 DLL (跨 DLL 界限的函式呼叫) 時，如果 DLL 以及呼叫 DLL 的檔案使用不同複本的 CRT 程式庫，可能會發生未預期的行為。  
@@ -127,5 +128,5 @@ MYLIB has not been set.
 New MYLIB variable is: c:\mylib;c:\yourlib  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)

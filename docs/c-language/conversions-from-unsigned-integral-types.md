@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15e1bc61e9b15293290098b9414642d8edf46707
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2ecc7c4a0308a1a7d182cc0bdaf04c2ed6b6e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>從不帶正負號整數類型的轉換
 不帶正負號的整數會藉由截斷高序位位元，轉換為較短的不帶正負號或帶正負號的整數，或是藉由零擴充轉換為較長的不帶正負號或帶正負號的整數 (請參閱[從不帶正負號整數類型的轉換](#_clang_table_4..3)表格)。  
@@ -77,7 +78,7 @@ printf_s( "%hd\n", j );   // Prints -3
   
  對於 Microsoft 32 位元 C 編譯器，`unsigned int` 類型相當於 `unsigned long` 類型。 `unsigned int` 值的轉換與 `unsigned long` 的轉換使用相同的方式進行。 如果要轉換的值大於最大的正數帶正負號 **long** 值，則從 `unsigned long` 值轉換為 **float** 會變得不精確。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指派轉換](../c-language/assignment-conversions.md)

@@ -97,11 +97,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-constants"></a>資料類型常數
 資料類型常數是整數資料類型所允許值的實作相關範圍。 下列常數指定整數資料類型的範圍，並定義於 LIMITS.H 中。  
@@ -158,5 +159,5 @@ ms.lasthandoff: 10/24/2017
 |**FLT_RADIX**|2|指數基數|  
 |**FLT_ROUNDS**|1|加法四捨五入︰接近|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域常數](../c-runtime-library/global-constants.md)

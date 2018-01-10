@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e922872f302e6a6fb00170878a5033ba75e6b8a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59898a5ad6af6728b16163c766f6295c850dc577
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="floating-point-migration-issues"></a>浮點數的移轉問題  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
 在大部分情況下，最新的編譯器和程式庫中的浮點數變更可帶來更快及/或更正確的行為。 當 SSE2 指示取代 x87 指示時，您甚至可能會發覺更好的處理器電源效能。 但是，如果您的程式碼必須精確地複寫舊版編譯器的浮點數行為，請考慮使用 Visual Studio 原生多目標功能，並使用舊版工具組來建置受影響的專案。 如需詳細資訊，請參閱[在 Visual Studio 中使用原生多目標來建置舊專案](use-native-multi-targeting.md)。  
   
-## <a name="see-also"></a>請參閱  
+## <a name="see-also"></a>另請參閱  
   
 [從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
 [潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  

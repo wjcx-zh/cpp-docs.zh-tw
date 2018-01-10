@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f20860d036b667c95f16924f67ff306bf66ce238
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0b2c07429e4401bbecb5e989ac8fd2ece772e29
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multibyte-and-wide-characters"></a>多位元組字元和寬字元
 多位元組字元是由一個或多個位元組序列組成的字元。 每個位元組序列表示擴充字元集的單一字元。 多位元組字元用於如漢字等字元集。  
@@ -44,5 +45,5 @@ ms.lasthandoff: 10/24/2017
   
  Unicode 規格是寬字元的規格。 要在多位元組和寬字元之間轉換的執行階段程式庫常式包括 `mbstowcs`、`mbtowc`、`wcstombs` 和 `wctomb`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 識別項](../c-language/c-identifiers.md)

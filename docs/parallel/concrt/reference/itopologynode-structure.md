@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b2c53761a47162e3dae17a1447612d2e16fe16c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c2e989dca783e90d975bd46a6f5f44cdfa469ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 結構
 資源管理員所定義的拓撲節點介面。 節點可包含一個或多個執行資源。  
@@ -37,11 +38,11 @@ ms.lasthandoff: 10/24/2017
 struct ITopologyNode;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Itopologynode:: Getexecutionresourcecount](#getexecutionresourcecount)|傳回結合在這個節點下的執行資源數目。|  
 |[Itopologynode:: Getfirstexecutionresource](#getfirstexecutionresource)|傳回依列舉順序在這個節點下設為群組的第一個執行資源。|  
@@ -118,5 +119,5 @@ virtual unsigned long GetNumaNode() const = 0;
 ### <a name="remarks"></a>備註  
  屬於此節點虛擬處理器根上執行的執行緒 proxy 必須至少為親和性的 NUMA 節點，這個方法所傳回的 NUMA 節點層級。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

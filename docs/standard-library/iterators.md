@@ -16,13 +16,14 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0a9b850100d78a18e39e5cc552cb8461b3726a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f03b62e045fe0130f981d55767c756df89bca9c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="iterators"></a>Iterator
+# <a name="iterators"></a>迭代器
 迭代器是一種物件，可逐一查看「C++ 標準程式庫」容器中的元素，並提供個別元素的存取途徑。 「C++ 標準程式庫」容器都有提供迭代器，因此演算法能以標準方式存取其元素，而不需要考慮元素儲存所在容器的類型。  
   
  您可以透過使用成員與全域函式 (例如 begin() 與 end()) 以及運算子 (例如 ++ 與 --) 來前後移動，以明確地使用迭代器。 您也可以搭配 range-for 迴圈或 (對於某些迭代器型別) 註標運算子 []，以隱含的方式使用迭代器。  
@@ -106,7 +107,7 @@ forward iterator
   
  Visual c + + 現在提供已檢查的迭代器和偵錯迭代器，以確保您不要覆寫容器的界限。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)和[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

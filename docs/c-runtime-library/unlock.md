@@ -30,11 +30,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 99626e7039def77c99347f93f681b69733637240
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e057bb0ee2b9e90d111ec4ba8b5783d9f8c32738
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unlock"></a>_unlock
 釋放多執行緒的鎖定。  
@@ -57,6 +58,6 @@ void __cdecl _unlock(
 ## <a name="requirements"></a>需求  
  **來源：** mlock.c  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [_lock](../c-runtime-library/lock.md)

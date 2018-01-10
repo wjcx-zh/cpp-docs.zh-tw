@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 395480259f1ff89408b7ecedba5be111f6b7e41c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f19063c29c7cbb08fadad4d55724dbbdad3ff58d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dsizef-class"></a>CD2DSizeF 類別
 D2D1_SIZE_F 包裝函式。  
@@ -36,23 +37,23 @@ D2D1_SIZE_F 包裝函式。
 class CD2DSizeF : public D2D1_SIZE_F;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DSizeF::CD2DSizeF](#cd2dsizef)|多載。 建構`CD2DSizeF`物件從`D2D1_SIZE_F`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DSizeF::IsNull](#isnull)|傳回`boolean`值，指出運算式是否包含任何有效的資料 ( `null`)。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DSizeF::operator CSize](#operator_csize)|將轉換`CD2DSizeF`至`CSize`物件。|  
   
@@ -108,5 +109,5 @@ operator CSize();
 ### <a name="return-value"></a>傳回值  
  目前的 D2D 大小值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

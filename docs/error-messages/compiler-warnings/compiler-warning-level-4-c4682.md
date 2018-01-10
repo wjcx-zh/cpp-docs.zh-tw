@@ -4,49 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4682
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4682
+f1_keywords: C4682
+dev_langs: C++
+helpviewer_keywords: C4682
 ms.assetid: 858ea157-1244-4a61-85df-97b3de43d418
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 718382c17fd0b108322a29f99c3b3a2d2c813d6c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/12/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d367203113ea8fad20cd914d381b4c941856d6b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-4-c4682"></a>編譯器警告 (層級 4) C4682
 'parameter' : 沒有指定方向參數屬性，預設為 [in]  
   
- 方法的參數屬性介面中沒有任何一個方向的屬性︰[中](../../windows/in-cpp.md)或[out](../../windows/out-cpp.md)。 此參數預設為 in。  
+ 屬性介面中的參數方法沒有方向屬性 [in](../../windows/in-cpp.md) 或 [out](../../windows/out-cpp.md)。此參數預設為 in。  
   
- 此警告預設為關閉。 請參閱[編譯器警告為關閉的預設](../../preprocessor/compiler-warnings-that-are-off-by-default.md)如需詳細資訊。  
+ 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。  
   
  下列範例會產生 C4682：  
   

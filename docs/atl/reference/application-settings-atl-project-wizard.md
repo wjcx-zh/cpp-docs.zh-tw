@@ -1,62 +1,62 @@
 ---
-title: "應用程式設定, ATL 專案精靈 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.atl.com.appset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 專案精靈, 應用程式設定"
+title: "應用程式設定，ATL 專案精靈 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.appwiz.atl.com.appset
+dev_langs: C++
+helpviewer_keywords: ATL Project Wizard, application settings
 ms.assetid: d48c9fc5-f439-49fd-884c-8bcfa7d52991
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 12b7e383716d7cfa330bdfdebe21c33550669cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 應用程式設定, ATL 專案精靈
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-您可使用 ATL 專案精靈的 \[**應用程式設定**\] 頁面來設計基本功能並將其加入至新的 ATL 專案。  
+# <a name="application-settings-atl-project-wizard"></a>應用程式設定, ATL 專案精靈
+使用**應用程式設定**設計基本功能並將新的 ATL 專案在 ATL 專案精靈 頁面。  
   
-## 伺服器類型  
- 從下列三種伺服器類型中任選其一：  
+## <a name="server-type"></a>伺服器類型  
+ 選擇三種伺服器類型之一：  
   
- **動態連結程式庫 \(DLL\)**  
- 選取來建立同處理序伺服程式。  
+ **動態連結程式庫 (DLL)**  
+ 選取即可建立同處理序伺服器。  
   
- **可執行檔 \(EXE\)**  
- 選取來建立本機跨處理序 \(Out\-Of\-Process\) 伺服程式。  這個選項不允許 MFC 或 COM\+ 1.0 的支援。  也不允許合併 proxy\/stub 程式碼。  
+ **可執行檔 (EXE)**  
+ 選取即可建立本機的跨處理序伺服器。 這個選項不允許支援 MFC 或 COM + 1.0。 它不允許合併 proxy/stub 程式碼。  
   
- **服務 \(EXE\)**  
- 選取來建立當 Windows 啟動時在背景 \(Background\) 執行的 Windows 應用程式。  這個選項不允許 MFC 或 COM\+ 1.0 的支援，也不允許合併 proxy\/stub 程式碼。  
+ **服務 (EXE)**  
+ 選取即可建立 Windows 啟動時，會在背景中執行的 Windows 應用程式。 此選項不允許支援 MFC 或 COM + 1.0，或不允許合併 proxy/stub 程式碼。  
   
-## 其他選項  
+## <a name="additional-options"></a>其他選項  
   
 > [!NOTE]
->  所有其他選項都僅供 DLL 專案使用。  
+>  所有其他選項都適用於 DLL 專案。  
   
- **允許合併 proxy\/stub 程式碼**  
- 選取 \[**允許合併 Proxy\/Stub 程式碼**\] 核取方塊，方便您因應處理封送處理 \(Marshaling\) 介面的需求。  這個選項會將 MIDL 產生的 proxy 和 stub 程式碼放置在與伺服器相同的可執行檔中。  
+ **允許合併 proxy/stub 程式碼**  
+ 選取**允許合併 proxy/stub 程式碼**核取方塊，以便於需要封送處理介面時。 此選項會將在相同可執行檔做為伺服器的 MIDL 產生 proxy 和虛設常式程式碼。  
   
- **支援 MFC**  
- 選取來指定您的物件包含 MFC 支援。  這個選項會將專案和 MFC 程式庫連結，讓您能夠存取程式庫中包含的任何類別和函式。  
+ **MFC 支援**  
+ 選取即可指定您的物件包含 MFC 支援。 這個選項會連結您的專案到 MFC 程式庫，讓您可以存取的任何類別及它們包含的功能。  
   
- **支援 COM\+ 1.0**  
- 選取來修改專案組建 \(Build\) 設定以支援 COM\+ 1.0 元件。  除了標準的程式庫清單之外，精靈還會加入 COM\+ 1.0 元件特定的程式庫 comsvcs.lib。  
+ **支援 COM + 1.0**  
+ 選取要修改專案的組建設定，以支援 COM + 1.0 元件。 除了標準的程式庫清單中，精靈會新增 COM + 1.0 元件特定的程式庫 comsvcs.lib  
   
- 除此之外，當啟動應用程式時，mtxex.dll 會延遲載入到主機系統上。  
+ 此外，mtxex.dll 是您的應用程式啟動時載入主機系統上的延遲。  
   
--   \[**支援元件管理員**\] ，如果您的 ATL 專案包含支援的 COM\+ 元件，您可以設定選項。  元件登錄器允許您的 COM\+ 1.0 物件取得元件、登錄元件或未登錄元件的清單 \(一次一個或全部\)。  
+-   **支援元件登錄器**如果您的 ATL 專案包含 COM + 1.0 元件的支援，您可以設定這個選項。 元件的註冊機構可讓您取得的元件清單中，登錄元件，或取消登錄元件 （個別或全部） 的 COM + 1.0 物件。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)   
- [建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)   
- [預設的 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
+ [建立的 ATL 專案](../../atl/reference/creating-an-atl-project.md)   
+ [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)
+

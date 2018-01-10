@@ -31,11 +31,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bd386aba0f5693538d9aae61bcf7c2384b6052bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 232f3eb49d2800ac43f2ef86d1a6f113afe9f67f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs、__wgetmainargs
 叫用命令列剖析，並將 `main()` 的引數複製回傳入的指標。  
@@ -83,7 +84,7 @@ _startupinfo * _StartInfo);
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |__getmainargs|internal.h|  
 |__wgetmainargs|internal.h|

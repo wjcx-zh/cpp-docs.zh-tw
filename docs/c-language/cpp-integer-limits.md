@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c1596f035da98524238e558ffe23816730aa42b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 861310be7e13c0ca5e656edc4214e59f5dacd659
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-integer-limits"></a>C++ 整數限制
 **Microsoft 特定的**  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  如果值超過最大的整數表示，Microsoft 編譯器會產生錯誤。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 整數常數](../c-language/c-integer-constants.md)

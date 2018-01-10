@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9abb23be750a4c707b7a2d73ee2650bf3b786731
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 093400e5d98b0b5e0336c2f640ed0937bdb157b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-functions"></a>函式概觀
 函式必須具有定義，而且應該具有宣告，不過，如果宣告在呼叫函式之前出現，則定義可以做為宣告。 函式定義包括函式主體，也就是呼叫函式時執行的程式碼。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
   
  函式呼叫會將執行控制項從發出呼叫的函式傳遞至所呼叫的函式。 引數 (如果有的話) 會以傳值的方式傳遞至所呼叫的函式。 在所呼叫函式中執行 `return` 陳述式會將控制項傳回發出呼叫的函式，而且可能包含值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式](../c-language/functions-c.md)

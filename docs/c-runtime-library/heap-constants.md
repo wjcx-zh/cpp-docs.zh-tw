@@ -34,11 +34,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b5b529519840df87d829c34cd8bddf123b96754e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2e1a15b371aa4f2997d453e2543123b279ac0df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heap-constants"></a>堆積常數
 ## <a name="syntax"></a>語法  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
 |`_HEAPEND`|已成功到達堆積的結尾 (僅限 `_heapwalk` 常式)。|  
 |`_HEAPOK`|堆積一致 (僅限 `_heapset` 和 `_heapchk` 常式)。 目前為止沒有錯誤；**_HEAPINFO** 結構包含下一個項目的相關資訊 (僅限 `_heapwalk` 常式)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_heapchk](../c-runtime-library/reference/heapchk.md)   
  [_heapset](../c-runtime-library/heapset.md)   
  [_heapwalk](../c-runtime-library/reference/heapwalk.md)   

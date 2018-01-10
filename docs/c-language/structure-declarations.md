@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c91c3834b5a4647f7c9cd41820dc04e5597277f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aada86ec63ccade17577f5410ced62cb4d5cf03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structure-declarations"></a>結構宣告
 「結構宣告」會命名一個類型，並指定可能具有不同類型之變數值的序列 (稱為結構的「成員」或「欄位」)。 選擇性識別項 (稱為「標記」) 會為結構類型提供名稱，並且可以在後續參考結構類型時使用。 該結構類型的變數會保留由該類型定義的整個序列。 C 中的結構類似於其他語言中稱為「記錄」的類型。  
@@ -136,7 +137,7 @@ struct sample   /* Defines a structure named x */
   
  結構的前兩個成員為 `char` 變數和 **float** 值的指標。 第三個成員 `next` 宣告為所定義結構類型 (`sample`) 的指標。  
   
- 不需要標記名稱時，匿名結構會很有用。 當某個宣告會定義所有結構執行個體時，就會發生這種情況。 例如：  
+ 不需要標記名稱時，匿名結構會很有用。 當某個宣告會定義所有結構執行個體時，就會發生這種情況。 例如:   
   
 ```  
 struct  
@@ -189,5 +190,5 @@ p_s->b = 100;  /* A reference to a field in the s structure */
   
  **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告子和變數宣告](../c-language/declarators-and-variable-declarations.md)

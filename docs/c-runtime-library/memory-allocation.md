@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdaf9fe5b2d41491683d34ea029a546433cd709d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e419cbd30b523121ae1902b49a25d60c0b9d21eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-allocation"></a>記憶體配置
 使用這些常式配置、釋放及重新配置記憶體。  
   
 ### <a name="memory-allocation-routines"></a>記憶體配置常式  
   
-|常式|用法|  
+|常式傳回的值|使用|  
 |-------------|---------|  
 |[_alloca](../c-runtime-library/reference/alloca.md)、[_malloca](../c-runtime-library/reference/malloca.md)|配置堆疊的記憶體|  
 |[calloc](../c-runtime-library/reference/calloc.md)|配置陣列的記憶體，將配置的區塊中的每個位元組初始化為 0|  
@@ -60,5 +61,5 @@ ms.lasthandoff: 10/24/2017
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|當 `new` 運算子 (為了配置記憶體) 失敗時，啟用錯誤處理機制，並啟用 C++ 標準程式庫的編譯|  
 |[_set_new_mode](../c-runtime-library/reference/set-new-mode.md)|為 `malloc` 設定新處理常式模式|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

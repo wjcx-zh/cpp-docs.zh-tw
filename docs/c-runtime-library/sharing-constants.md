@@ -31,11 +31,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 941cf63dd7a5eb761881e7068fa141d5e6b87a33
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 635c6eee50f5d1dfb19f0c1b823dab018922c490
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sharing-constants"></a>共用常數
 檔案共用模式的常數。  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
 |`_SH_DENYNO`|允許讀取和寫入存取|  
 |`_SH_SECURE`|設定安全模式 (共用讀取、獨佔寫入存取)。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_sopen、_wsopen](../c-runtime-library/reference/sopen-wsopen.md)   
  [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)   
  [全域常數](../c-runtime-library/global-constants.md)

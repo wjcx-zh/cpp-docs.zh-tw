@@ -49,11 +49,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b745bb345377336377e46b9e49a45b340a2609b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd7c1b23e3c586bf89a86e17d85ee5b5050fbf37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmap-class"></a>CMap 類別
 字典集合類別，這個類別會將唯一索引鍵對應至值。  
@@ -77,23 +78,23 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
  `ARG` *_* `VALUE`  
  資料型別用於`VALUE`引數; 通常參考`VALUE`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-structures"></a>公用結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMap::CPair](#cpair)|巢狀的結構，包含索引鍵的值，以及相關聯之物件的值。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMap::CMap](#cmap)|建構將索引鍵對應至值的集合。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMap::GetCount](#getcount)|在此對應中傳回的項目數。|  
 |[CMap::GetHashTableSize](#gethashtablesize)|傳回雜湊表中的項目數目。|  
@@ -112,7 +113,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMap::operator]](#operator_at)|將項目插入對應 — 運算子替代`SetAt`。|  
   
@@ -213,7 +214,7 @@ void GetNextAssoc(
  `rNextPosition`  
  指定的參考**位置**傳回先前值`GetNextAssoc`或`GetStartPosition`呼叫。  
   
- *索引鍵*  
+ *KEY*  
  指定地圖的索引鍵的類型樣板參數。  
   
  `rKey`  
@@ -474,7 +475,7 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)  

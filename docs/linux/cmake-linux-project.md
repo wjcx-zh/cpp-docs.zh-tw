@@ -11,11 +11,14 @@ ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4e3baa9b6e362f93e7b2cda59d34cabf87324292
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 67665f3271caf71d16788b2e102d0e756d9f702f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-a-linux-cmake-project"></a>設定 Linux CMake 專案
   
@@ -132,6 +135,6 @@ sudo make install
 cmake -E capabilities
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [使用專案屬性](../ide/working-with-project-properties.md)  
 [Visual C++ 的 CMake 工具](../ide/cmake-tools-for-visual-cpp.md)

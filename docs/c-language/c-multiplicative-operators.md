@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77b87e796f71258086aadd5aa6da9845de8095c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8fbcbb5579c63ef0cab375ec19e2afee47e97ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法類運算子
 乘法類運算子會執行乘法 (**\***)、除法 (**/**) 和餘數 (`%`) 運算。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  C 乘法類運算子描述如下：  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |**\***|乘法運算子會使它的兩個運算元相乘。|  
 |**/**|除法運算子會使第一個運算元除以第二個運算元。 如果兩個整數運算元相除且結果不是整數，則會根據下列規則截斷：|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/24/2017
   
  如果具有餘數運算子的除法中任一項運算為負數，則結果的正負號會與被除數 (運算式中的第一個運算元) 相同。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
 ## <a name="examples"></a>範例  
  下面顯示的宣告用於下列範例：  
@@ -101,7 +102,7 @@ n = i % j;
   
  **Microsoft 特定的**  
   
- 餘數的正負號與被除數的正負號相同。 例如：  
+ 餘數的正負號與被除數的正負號相同。 例如:   
   
 ```  
 50 % -6 = 2  
@@ -110,7 +111,7 @@ n = i % j;
   
  在每個案例中，`50` 和 `2` 具有相同的正負號。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [乘法類運算子和模數運算子](../cpp/multiplicative-operators-and-the-modulus-operator.md)

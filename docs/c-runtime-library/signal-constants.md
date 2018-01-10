@@ -28,11 +28,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fddb279acfbb6d8841ac17a27cd43de205dc9dbc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e47e3e7bce5a41e055f251d906ec72d98c5b285
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="signal-constants"></a>signal 常數
 ## <a name="syntax"></a>語法  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/24/2017
  `SIG_ERR`  
  指出已發生錯誤之訊號的傳回類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [signal](../c-runtime-library/reference/signal.md)   
  [raise](../c-runtime-library/reference/raise.md)   
  [全域常數](../c-runtime-library/global-constants.md)

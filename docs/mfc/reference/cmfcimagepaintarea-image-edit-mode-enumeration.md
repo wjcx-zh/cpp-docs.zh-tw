@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd59e80dfd019627c0ebe88e116e225f92e3a8ec
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22e3b00bed830052c2abbc988152f4a14f1267ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcimagepaintareaimageeditmode-enumeration"></a>CMFCImagePaintArea::IMAGE_EDIT_MODE 列舉
 指定您用來修改影像編輯器 對話方塊中的影像繪圖模式。  
@@ -42,7 +43,7 @@ enum IMAGE_EDIT_MODE
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |`IMAGE_EDIT_MODE_PEN`|用來繪製個別像素為單位。|  
 |`IMAGE_EDIT_MODE_FILL`|用來填滿所有相鄰區域包含在目前游標位置的色彩。|  
 |`IMAGE_EDIT_MODE_LINE`|用來繪製一條線。|  
@@ -58,7 +59,7 @@ enum IMAGE_EDIT_MODE
 ## <a name="requirements"></a>需求  
  **標頭：** afximagepaintarea.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   

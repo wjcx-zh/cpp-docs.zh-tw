@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3eb7d6c18e1a1fd77e0c0c8506d46536add5cb21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9956e48f88988dfec7e04cda5bba95e514ec109
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets：搭配使用通訊端與封存
 本文說明[CSocket 程式設計模型](#_core_the_csocket_programming_model)。 類別[CSocket](../mfc/reference/csocket-class.md)提供通訊端支援，在較高層級的抽象類別比[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 `CSocket`使用 MFC 序列化通訊協定的版本來傳遞資料，經由 MFC 通訊端物件來回[CArchive](../mfc/reference/carchive-class.md)物件。 `CSocket` 會提供封鎖 (同時管理 Windows 訊息的背景處理)，並且可讓您存取 `CArchive`，它可管理有關通訊的多個層面，否則您必須使用原始 API 或 `CAsyncSocket` 類別才能自行管理這些層面。  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Windows Sockets：資料通訊端](../mfc/windows-sockets-datagram-sockets.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 中的 Windows Sockets](../mfc/windows-sockets-in-mfc.md)   
  [CSocket::Create](../mfc/reference/csocket-class.md#create)
 

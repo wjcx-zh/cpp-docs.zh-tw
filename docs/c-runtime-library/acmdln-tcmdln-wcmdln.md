@@ -32,11 +32,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a713978e44762d5e4c771112ef5adf256a9475c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8250822adb801365fca826f33899a7ae3d1d06a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln、_tcmdln、_wcmdln
 內部 CRT 全域變數。 命令列。  
@@ -56,5 +57,5 @@ wchar_t * _wcmdln;
 ## <a name="remarks"></a>備註  
  這些 CRT 內部變數會儲存完整的命令列。 這些變數會在 CRT 的已匯出符號中公開，而不是供您用於程式碼中。 `_acmdln` 將資料儲存為字元字串。 `_wcmdln` 將資料儲存為寬字元字串。 `_tcmdln` 可定義為 `_acmdln` 或 `_wcmdln`，這要取決於哪個較合適。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域變數](../c-runtime-library/global-variables.md)

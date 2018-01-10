@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fd9cfcc54e672d16b631662d9d41c02327ac2a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1665ff1551ffe94b475c463d8f93eba2184eaa27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="text-and-binary-streams"></a>文字和二進位資料流
 文字資料流是由一或多行可寫入到文字導向顯示器以便供讀取的文字所組成。 從文字資料流讀取時，程式會讀取每一行結尾的 `NL` (新行)。 寫入到文字資料流時，程式會寫入 `NL` 以表示行尾。 為符合目標環境中表示檔案中之文字的不同慣例，程式庫函式可以修改在程式與文字資料流之間傳輸的字元數目與表示數目。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
  位元組資料流會將檔案視為位元組順序。 在程式中，資料流看起來會像相同的位元組順序，但上面所述的可能修改除外。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案和資料流](../c-runtime-library/files-and-streams.md)

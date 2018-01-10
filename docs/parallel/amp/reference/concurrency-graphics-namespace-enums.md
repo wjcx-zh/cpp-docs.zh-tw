@@ -9,40 +9,39 @@ ms.topic: article
 f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a630d8672feed9c5045ca81a9db875c47bfdd096
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ef3f6fa8807a348388e34d2cb68cccc7cc684cff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace-enums"></a>Concurrency:: graphics 命名空間列舉
 |||  
 |-|-|  
-|[_mode 列舉型別](#address_mode)|[filter_mode 列舉](#filter_mode)|  
+|[_mode 列舉](#address_mode)|[filter_mode 列舉](#filter_mode)|  
   
 ##  <a name="address_mode"></a>address_mode 列舉  
- 列舉型別使用來表示支援紋理取樣位址模式。  
+ 代表地址模式支援紋理取樣用於列舉型別。  
   
 ```  
 enum address_mode;  
 ```  
   
 ##  <a name="filter_mode"></a>filter_mode 列舉  
- 列舉型別使用來表示支援紋理取樣的篩選模式。  
+ 列舉型別使用代表支援紋理取樣的篩選模式。  
   
 ```  
 enum filter_mode;  
 ```  
 ## <a name="requirements"></a>需求
-**標頭︰** amp_graphics.h**命名空間︰** concurrency:: graphics
+**標頭：** amp_graphics.h**命名空間：** concurrency:: graphics
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)
-

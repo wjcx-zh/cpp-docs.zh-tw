@@ -29,11 +29,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 630b8a5160eaa808c12c16ec8dd45a96a621b7bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2aa296c04d81fcdea2000ab8e2dbc1ae5523673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 管理要在結束時呼叫的常式。  
@@ -59,7 +60,7 @@ int _execute_onexit_table(
  [inout] `table`  
  onexit 函式表的指標。  
   
- [in] `function`  
+ [輸入] `function`  
  要加入 onexit 函式表中的函式指標。  
   
 ## <a name="return-value"></a>傳回值  
@@ -76,13 +77,13 @@ int _execute_onexit_table(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|\<process.h>|  
   
  `_initialize_onexit_table`、`_register_onexit_function` 與 `_execute_onexit_table` 函式為 Microsoft 特定的。 如需相容性資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [atexit](../c-runtime-library/reference/atexit.md)   
  [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)   
  [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

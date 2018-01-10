@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ce5b34e11df4b2bb0f37f8d7874d531f184f5539
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ba36455be1a516d083e78296f62e128699eca49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug"></a>_DEBUG
 當您指定 /MTd 或 /MDd 選項時，編譯器會定義 `_DEBUG`。 這些選項指定 C 執行階段程式庫的偵錯版本。  
   
  如需詳細資訊，請參閱 [CRT 偵錯技術](/visualstudio/debugger/crt-debugging-techniques)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [控制旗標](../c-runtime-library/control-flags.md)

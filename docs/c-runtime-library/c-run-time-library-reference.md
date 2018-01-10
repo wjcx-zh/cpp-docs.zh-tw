@@ -18,18 +18,19 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b1c9965b221002a38428d3d813f4568e937cf52d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b393bc72bbc6722d353295dc244f75f504b9730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-run-time-library-reference"></a>C 執行階段程式庫參考
 Microsoft 執行階段程式庫提供一些為 Microsoft Windows 作業系統設計程式所需的常式。 這些常式會自動執行 C 和 C++ 語言所未提供的許多常見的程式設計工作。  
   
  程式庫大部分常式的個別參考主題都隨附範例程式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [C 執行階段程式庫](../c-runtime-library/crt-library-features.md)  
  討論組成 C 執行階段程式庫的 .lib 檔案。  
   
@@ -67,5 +68,5 @@ Microsoft 執行階段程式庫提供一些為 Microsoft Windows 作業系統設
  [偵錯](/visualstudio/debugger/debugging-in-visual-studio)  
  提供使用 Visual Studio 偵錯工具來更正應用程式或預存程序 (Stored Procedure) 中邏輯錯誤的連結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual C++ 程式庫參考](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)

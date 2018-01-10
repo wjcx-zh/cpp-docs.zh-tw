@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3abe7a18e2fc0b7e5df6ed010874fefd48559f94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2639923778f51201b66ed1a5c6b4a98886d7e319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bits-per-character"></a>每個字元位元數
 **ANSI 2.2.4.2.1** 字元中的位元數  
   
  字元中的位元數是以資訊清單常數 **CHAR_BIT** 表示。 LIMITS.H 檔案將 **CHAR_BIT** 定義為 8。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元](../c-language/characters.md)

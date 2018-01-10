@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 40f86574e849bae8c1defafcfeab46fced2d77b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26a7cef5e023c0fb0d5e24fe68fed6b33bc8ae75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="do-while-statement-c"></a>do-while 陳述式 (C)
 `do-while` 陳述式可讓您重複陳述式或複合陳述式，直到指定的運算式變成 false 為止。  
@@ -52,5 +53,5 @@ do
   
  在這個 `do-while` 陳述式中，會執行 `y = f( x );` 和 `x--;` 兩個陳述式，無論 `x` 的初始值為何。 接下來會評估 `x > 0`。 如果 `x` 大於 0，會再次執行陳述式主體，並重新評估 `x > 0`。 只要 `x` 保持大於 0，陳述式主體就會重複執行。 `do-while` 變成 0 或負值時，`x` 陳述式會終止執行。 迴圈主體至少執行一次。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [do-while 陳述式 (C++)](../cpp/do-while-statement-cpp.md)

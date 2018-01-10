@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7438899eb9c1c2f17b4e74c859d454e2b69af600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75bad42ddff5f20d14d627e3f036659f030bb3f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expression-statement-c"></a>運算陳述式 (C)
 執行運算陳述式時，會根據[運算式和指派](../c-language/expressions-and-assignments.md)中所列的規則，以求出運算式的值。  
@@ -43,5 +44,5 @@ y = z = ( f( x ) + 3 );   /* A function-call expression        */
   
  在最後一個陳述式中，函式呼叫運算式、運算式的值 (包括由函式傳回的所有值) 會增加 3，然後指派給變數 `y` 和 `z`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [陳述式](../c-language/statements-c.md)

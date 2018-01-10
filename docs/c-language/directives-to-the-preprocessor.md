@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39f1e29a2bc8b72d5b2467c248a4d12b63baa26b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 764bfd086612a10076e5c4800768b7b850ddbc7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="directives-to-the-preprocessor"></a>前置處理器的指示詞
 「指示詞」會指示 C 前置處理器在編譯之前，於程式文字上執行特定動作。 [前置處理器指示詞](../preprocessor/preprocessor-directives.md)已在《前置處理器參考》中完整說明。 這個範例會使用前置處理器指示詞 `#define`：  
@@ -33,5 +34,5 @@ ms.lasthandoff: 10/24/2017
 |`#elif`|`#error`|**#ifndef**|**#pragma**|  
 |`#else`|`#if`|`#include`|`#undef`|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)

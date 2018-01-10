@@ -41,11 +41,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d510973a7b7c12185f5cde32a49af3537a436c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c839538b94ff8f80eabed98dbaf16e4009d3e500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-assignment-operators"></a>C 指派運算子
 指派作業會將右方運算元的值指派到左方運算元命名的儲存位置。 因此，指派運算的左方運算元必須是可修改的左值。 在進行指派之後，指派運算式會具有左運算元的值，但不是左值。  
@@ -78,5 +79,5 @@ ms.lasthandoff: 10/24/2017
   
  在指派之中，右方值的類型會轉換為左方值的類型，因此，在完成指派之後，值會儲存在左運算元中。 左運算元不可以是陣列、函式或常數。 特定的轉換路徑取決於轉換的兩個類型，並詳述於[類型轉換](../c-language/type-conversions-c.md)中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指派運算子](../cpp/assignment-operators.md)

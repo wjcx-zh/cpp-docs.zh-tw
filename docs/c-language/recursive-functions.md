@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cca28b41b15ae14504ac5692a3e8a7063a11e862
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fcbe38eb67a31f6bb62750b44df57aa9d64b9272
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursive-functions"></a>遞迴函式
 C 程式中的所有函式可以透過遞迴方式呼叫，即函式可以呼叫本身。 遞迴呼叫的數目受限於堆疊的大小。 如需設定堆疊大小的連結器選項相關資訊，請參閱 [/STACK (堆疊配置)](../build/reference/stack-stack-allocations.md) (/STACK) 連結器選項。 每次呼叫函式就會為參數及 **auto** 和 **register** 變數配置新的儲存空間，以避免覆寫先前尚未完成呼叫的值。 只有在建立參數的函數執行個體中才能直接存取這些參數。 之前的參數無法直接存取，以確保函式的執行個體。  
@@ -55,5 +56,5 @@ int factorial( int num )      /* Function definition */
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式呼叫](../c-language/function-calls.md)

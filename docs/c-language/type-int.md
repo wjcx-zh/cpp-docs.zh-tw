@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cdf2a76e75b7ca453b908af586954454f7ce09f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a796626d604417a15d39f90823fc7fc8fca580dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-int"></a>類型 int
 帶正負號或不帶正負號 `int` 項目的大小是特定電腦上整數的標準大小。 例如，在 16 位元作業系統中，`int` 類型通常是 16 位元或 2 個位元組。 在 32 位元作業系統中，`int` 類型通常是 32 位元或 4 個位元組。 因此，根據目標環境而定，`int` 類型相當於 `short int` 或 **long int** 類型，而 `unsigned int` 類型相當於 **unsigned short** 或 `unsigned long` 類型。 除非另有指定，否則 `int` 類型皆表示帶正負號的值。  
@@ -33,10 +34,10 @@ ms.lasthandoff: 10/24/2017
   
  帶正負號的整數以二補數格式表示。 最高有效位元會保存此正負號：1 為負數，0 為正數及零。 值的範圍在 [C++ 整數限制](../c-language/cpp-integer-limits.md)中指定 (可從 LIMITS.H 標頭檔中取得)。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
 > [!NOTE]
 >  int 和 unsigned int 類型指定名稱廣泛使用在 C 程式中，因為它們允許特定電腦以該電腦的最有效的方法處理整數值。 不過，由於 int 和 unsigned int 類型的大小不同，取決於特定 int 大小的程式可能無法移植至其他電腦。 若要使程式更具有可移植性，您可以使用含 sizeof 運算子的運算式 (如 [sizeof 運算子](../c-language/sizeof-operator-c.md)中所述) 而不是硬式編碼的資料大小。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本類型的儲存空間](../c-language/storage-of-basic-types.md)

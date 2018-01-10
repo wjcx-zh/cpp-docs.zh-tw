@@ -4,30 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - ATL::_U_RECT
 - _U_RECT
 - ATL._U_RECT
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1b7efb94f5afdd2f6daa6fa047d36ea51c957d31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: a8c7d4e7b34256d9544cd75dc71dbfb8294db30b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="urect-class"></a>_U_RECT 類別
 這個引數的配接器類別，可讓 `RECT`指標或參考傳遞至函式指標來實作。  
@@ -87,4 +85,3 @@ _U_RECT (LPRECT lpRect);
   
 ## See Also  
  [Class Overview](../../atl/atl-class-overview.md)
-

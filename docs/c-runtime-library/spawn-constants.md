@@ -31,11 +31,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8f5f30cbf6598e4ac8d88652a6a842dcd6209273
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 891080cb7740285aba2ac7d9f2542b5604c210bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawn-constants"></a>spawn 常數
 ## <a name="syntax"></a>語法  
@@ -54,6 +55,6 @@ ms.lasthandoff: 10/24/2017
 |`_P_NOWAIT`, `_P_NOWAITO`|同時繼續執行呼叫處理序與新的處理序 (非同步的 `_spawn`)。|  
 |`_P_DETACH`|繼續執行呼叫處理序，新處理序在背景執行，但無法存取主控台或鍵盤。 針對新處理序呼叫 `_cwait` 將會失敗。 這是非同步 `_spawn`。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_spawn、_wspawn 函式](../c-runtime-library/spawn-wspawn-functions.md)   
  [全域常數](../c-runtime-library/global-constants.md)

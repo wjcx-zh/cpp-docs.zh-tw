@@ -32,17 +32,18 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e9449637887a05c64179c6b9d31712c8becfa87b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71e763e39c3d5e2f1a192e7408ee02758f26e6b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapset"></a>_heapset
 檢查堆積是否達到基本的一致性，並將可用的項目設定為指定的值。  
   
 > [!IMPORTANT]
->  此函式已被取代。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。  
+>  此函式已過時。 自 Visual Studio 2015 起，此函式即無法在 CRT 中使用。  
   
 ## <a name="syntax"></a>語法  
   
@@ -80,7 +81,7 @@ int _heapset(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_heapset`|\<malloc.h>|\<errno.h>|  
   
@@ -128,7 +129,7 @@ int main( void )
 OK - heap is fine  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [記憶體配置](../c-runtime-library/memory-allocation.md)   
  [_heapadd](../c-runtime-library/heapadd.md)   
  [_heapchk](../c-runtime-library/reference/heapchk.md)   

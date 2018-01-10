@@ -1,34 +1,34 @@
 ---
-title: "2.8 Directive Binding | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.8 指示詞繫結 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7bdac45e-ab55-42f0-bd47-a2e3d5bbab3e
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 731c509c0c2f300d7a9d4e39261ffedd1c22a094
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 2.8 Directive Binding
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="28-directive-binding"></a>2.8 指示詞繫結
 動態繫結的指示詞必須遵守下列規則：  
   
--   **的**， **章節**， **單一**， **主要**，和 **障盾** 指示詞將繫結到動態封入 **平行**，如果有的話，無論任何屬性的值 **如果**可能會出現在該指示詞的子句。  如果沒有平行區域目前正在執行中，指示詞被執行主要的執行緒所組成的小組。  
+-   **如**，**區段**，**單一**，**主要**，和**屏障**指示詞繫結至以動態方式封入**平行**，如果有的話，不論任何的值**如果**可能會存在於該指示詞上的子句。 如果目前正在執行任何平行區域，指示詞會不執行由小組，只有主要執行緒所組成。  
   
--   **訂購** 指示詞會繫結到動態封入 **的**。  
+-   **排序**指示詞繫結至封入動態**如**。  
   
--   **不可部分完成** 指示詞強制大幅度地的獨占存取 **不可部分完成**指示詞中所有的執行緒，而不只是目前的小組。  
+-   **不可部分完成**指示詞會強制執行有關的獨佔存取**不可部分完成**所有執行緒，而不只是目前的小組中的指示詞。  
   
--   **要徑** 指示詞強制大幅度地的獨占存取 **重要**指示詞中所有的執行緒，而不只是目前的小組。  
+-   **重大**指示詞會強制執行有關的獨佔存取**重大**所有執行緒，而不只是目前的小組中的指示詞。  
   
--   指示詞可以永遠不會以最接近以外的任何指示詞動態繫結封入**平行**。
+-   指示詞可以永遠不會繫結至任何外部的最接近的指示詞動態封入**平行**。

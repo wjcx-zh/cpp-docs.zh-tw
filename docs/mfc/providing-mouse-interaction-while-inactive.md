@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c136e2d73256c78768e8b712d901e4fe4f819673
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a2f8991b6cc827c35c94b0989ef82e32422fd5c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-mouse-interaction-while-inactive"></a>非現用時提供滑鼠互動
 如果未立即啟動您的控制項，您可能仍然希望它處理`WM_SETCURSOR`和`WM_MOUSEMOVE`訊息，即使控制項有沒有自己的視窗。 這可藉由啟用`COleControl`的實作`IPointerInactive`介面，預設會停用。 (請參閱*ActiveX SDK*此介面的說明。)若要啟用它，包括`pointerInactive`旗標所傳回的集合中的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags):  
@@ -39,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[NVC_MFC_AxOpt#12](../mfc/codesnippet/cpp/providing-mouse-interaction-while-inactive_5.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC ActiveX 控制項：最佳化](../mfc/mfc-activex-controls-optimization.md)
 

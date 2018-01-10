@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 51028023d222b9b4491c84c3400de91a697e0047
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2e965795a6fd113369b35d2daba07d1efc77e1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="environmental-constants"></a>環境常數
 ## <a name="syntax"></a>語法  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/24/2017
 |--------------|-------------|  
 |`_MAX_ENV`|環境字串的最大字串大小。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [全域常數](../c-runtime-library/global-constants.md)

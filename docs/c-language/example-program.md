@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-program"></a>範例程式
 下列 C 原始程式包含兩個原始程式檔。 它提供 C 程式中各種宣告和定義的概觀。 本書的其餘章節說明如何撰寫這些宣告、定義和初始化，以及如何使用 **static** 和 `extern` 之類的 C 關鍵字。 `printf` 函式會在 C 標頭檔 STDIO.H 中宣告。  
@@ -82,5 +83,5 @@ int max( int a, int b )          // Note formal parameters are
   
  [存留期、範圍、可視性和連結](../c-language/lifetime-scope-visibility-and-linkage.md)中會討論識別項的存留期和可視性。 如需函式的詳細資訊，請參閱[函式](../c-language/functions-c.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [原始程式檔和來源程式](../c-language/source-files-and-source-programs.md)

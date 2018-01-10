@@ -151,11 +151,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c317390f804e90ed2faf4302ab0a46d783dd49ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b557a56b1d525941c96b9a6a96fd367b64afcaf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages 類別
 在工具列上的影像。 `CMFCToolBarImages`類別會管理從應用程式資源，或從檔案載入工具列影像。  
@@ -166,17 +167,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBarImages : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|建構 `CMFCToolBarImages` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||  
 |[CMFCToolBarImages::AddIcon](#addicon)|將圖示加入至工具列影像。|  
@@ -243,15 +244,15 @@ class CMFCToolBarImages : public CObject
 |[CMFCToolBarImages::SmoothResize](#smoothresize)|順暢地調整大小加上底線的映像。|  
 |[CMFCToolBarImages::UpdateImage](#updateimage)|更新使用者定義工具列按鈕影像的點陣圖。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE`如果已停用 truecolor alpha 混色 （32 位元色彩）。|  
   
@@ -282,8 +283,8 @@ void AdaptColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `clrBase`  
- [in] `clrTone`  
+ [輸入] `clrBase`  
+ [輸入] `clrTone`  
   
 ### <a name="remarks"></a>備註  
   
@@ -297,10 +298,10 @@ int AddIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hIcon`  
+ [輸入] `hIcon`  
  要加入之圖示的控制代碼。  
   
- [in] `bAlphaBlend`  
+ [輸入] `bAlphaBlend`  
  `TRUE`如果使用 alpha 混色; 使用這個圖示否則`FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -320,16 +321,16 @@ int AddImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hbmp`  
+ [輸入] `hbmp`  
  要將點陣圖的控制代碼。  
   
- [in] `bSetBitPerPixel`  
+ [輸入] `bSetBitPerPixel`  
  `TRUE`如果`CMFCToolBarImages`物件會使用新的映像; 的色彩深度 （每個像素的位元）`FALSE`如果`CMFCToolbarImages`物件會保留目前的色彩深度。  
   
- [in] `imageList`  
+ [輸入] `imageList`  
  若要參考`CMFCToolbarImages`物件，其中包含要加入的映像。  
   
- [in] `nIndex`  
+ [輸入] `nIndex`  
  在來源中的索引`CMFCToolbarImages`映像來新增的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -369,7 +370,7 @@ BOOL CopyImageToClipboard(int iImage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iImage`  
+ [輸入] `iImage`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -383,7 +384,7 @@ BOOL CopyTo(CMFCToolBarImages& imageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `imageList`  
+ [輸入] `imageList`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -397,7 +398,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `imageList`  
+ [輸入] `imageList`  
  要用於做為來源工具列影像的映像清單。  
   
 ### <a name="return-value"></a>傳回值  
@@ -416,8 +417,8 @@ static HRGN __stdcall CreateRegionFromImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bmp`  
- [in] `clrTransparent`  
+ [輸入] `bmp`  
+ [輸入] `clrTransparent`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -431,7 +432,7 @@ BOOL DeleteImage(int iImage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iImage`  
+ [輸入] `iImage`  
  指定要刪除的映像的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -455,34 +456,34 @@ BOOL Draw(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `x`  
+ [輸入] `x`  
  左側影像要繪製的矩形的 X 座標。  
   
- [in] `y`  
+ [輸入] `y`  
  影像要繪製的矩形頂端的 Y 座標。  
   
- [in] `iImageIndex`  
+ [輸入] `iImageIndex`  
  顯示影像的以零為起始的索引。  
   
- [in] `bHilite`  
+ [輸入] `bHilite`  
  `TRUE`如果映像會反白顯示。否則`FALSE`。  
   
- [in] `bDisabled`  
+ [輸入] `bDisabled`  
  `TRUE`如果影像繪製停用的樣式。否則`FALSE`。  
   
- [in] `bIndeterminate`  
+ [輸入] `bIndeterminate`  
  `TRUE`如果影像繪製不定狀態的樣式。否則`FALSE`。  
   
- [in] `bShadow`  
+ [輸入] `bShadow`  
  `TRUE`如果影像是以陰影; 繪製否則`FALSE`。  
   
- [in] `bInactive`  
+ [輸入] `bInactive`  
  `TRUE`如果影像繪製非作用中狀態樣式;否則`FALSE`。  
   
- [in] `alphaSrc`  
+ [輸入] `alphaSrc`  
  Alpha 色板 （不透明） 值。 值為 255 表示影像時繪製不透明。 值為 0 表示影像繪製透明。 僅適用於 32 位元色彩映像，並顯示 Windows Vista 玻璃樣式的映像，則會使用此值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -506,15 +507,15 @@ BOOL DrawEx(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `rect`  
- [in] `iImageIndex`  
- [in] `horzAlign`  
- [in] `vertAlign`  
- [in] `rectSrc`  
- [in] `0`  
- [in] `0)`  
- [in] `alphaSrc`  
+ [輸入] `pDC`  
+ [輸入] `rect`  
+ [輸入] `iImageIndex`  
+ [輸入] `horzAlign`  
+ [輸入] `vertAlign`  
+ [輸入] `rectSrc`  
+ [輸入] `0`  
+ [輸入] `0)`  
+ [輸入] `alphaSrc`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -528,7 +529,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bIsRTL`  
+ [輸入] `bIsRTL`  
   
 ### <a name="remarks"></a>備註  
   
@@ -540,7 +541,7 @@ void EndDrawImage(CAfxDrawState& ds);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ds`  
+ [輸入] `ds`  
  若要參考`CAfxDrawState`物件傳遞給`PrepareDrawImage`方法。  
   
 ##  <a name="extracticon"></a>CMFCToolBarImages::ExtractIcon  
@@ -551,7 +552,7 @@ HICON ExtractIcon(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  要以圖示擷取映像所在的影像清單中以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -567,10 +568,10 @@ static void FillDitheredRect(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rect`  
+ [輸入] `rect`  
  要填滿的矩形座標。  
   
 ### <a name="remarks"></a>備註  
@@ -629,7 +630,7 @@ SIZE GetImageSize(BOOL bDest=FALSE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bDest`  
+ [輸入] `bDest`  
  `TRUE`擷取目的地大小;`FALSE`要擷取之來源影像的大小。  
   
 ### <a name="return-value"></a>傳回值  
@@ -705,7 +706,7 @@ HBITMAP GetMask(int iImage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iImage`  
+ [輸入] `iImage`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -719,7 +720,7 @@ int GetResourceOffset(UINT uiResId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiResId`  
+ [輸入] `uiResId`  
  影像資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -744,7 +745,7 @@ BOOL GrayImages(int nGrayImageLuminancePercentage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nGrayImageLuminancePercentage`  
+ [輸入] `nGrayImageLuminancePercentage`  
  亮度百分比。  
   
 ### <a name="return-value"></a>傳回值  
@@ -844,19 +845,19 @@ BOOL Load(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiResID`  
+ [輸入] `uiResID`  
  點陣圖資源的識別碼。  
   
- [in] `hinstRes`  
+ [輸入] `hinstRes`  
  資源 DLL 的執行個體。  
   
- [in] `bAdd`  
+ [輸入] `bAdd`  
  `TRUE`若要加入到現有的點陣圖，載入的點陣圖或`FALSE`來取代現有的點陣圖。  
   
- [in] `lpszBmpFileName`  
+ [輸入] `lpszBmpFileName`  
  要從中載入點陣圖到磁碟檔案的路徑。  
   
- [in] `nMaxFileSize`  
+ [輸入] `nMaxFileSize`  
  點陣圖檔案中的位元組數目上限或是 0，表示載入點陣圖，不論檔案大小。 如果檔案的大小會超過此大小上限，則方法會傳回`FALSE`而且無法載入點陣圖。  
   
 ### <a name="return-value"></a>傳回值  
@@ -876,9 +877,9 @@ BOOL LoadStr(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszResourceName`  
- [in] `hinstRes`  
- [in] `bAdd`  
+ [輸入] `lpszResourceName`  
+ [輸入] `hinstRes`  
+ [輸入] `bAdd`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -894,8 +895,8 @@ static COLORREF __stdcall MapFromSysColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [輸入] `color`  
+ [輸入] `bUseRGBQUAD`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -912,9 +913,9 @@ BOOL MapTo3dColors(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bUseRGBQUAD`  
- [in] `clrSrc`  
- [in] `clrDest`  
+ [輸入] `bUseRGBQUAD`  
+ [輸入] `clrSrc`  
+ [輸入] `clrDest`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -930,8 +931,8 @@ static COLORREF __stdcall MapToSysColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `color`  
- [in] `bUseRGBQUAD`  
+ [輸入] `color`  
+ [輸入] `bUseRGBQUAD`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -945,7 +946,7 @@ static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `color`  
+ [輸入] `color`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -977,7 +978,7 @@ static BOOL MirrorBitmap(
  [in、out] `hbmp`  
  點陣圖鏡像控制代碼。  
   
- [in] `cxImage`  
+ [輸入] `cxImage`  
  單位為像素影像的寬度。  
   
 ### <a name="return-value"></a>傳回值  
@@ -996,8 +997,8 @@ static BOOL __stdcall MirrorBitmapVert(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hbmp`  
- [in] `cyImage`  
+ [輸入] `hbmp`  
+ [輸入] `cyImage`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1035,8 +1036,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hbmp`  
- [in] `bAutoCheckPremlt`  
+ [輸入] `hbmp`  
+ [輸入] `bAutoCheckPremlt`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -1066,13 +1067,13 @@ BOOL PrepareDrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `ds`  
+ [輸入] `ds`  
  若要參考`CAfxDrawState`結構，其中儲存影像轉譯階段之間配置的資源。  
   
- [in] `sizeImageDest`  
+ [輸入] `sizeImageDest`  
  指定目的地映像的大小。  
   
- [in] `bFadeInactive`  
+ [輸入] `bFadeInactive`  
  `TRUE`如果您想要非作用中要繪製的映像將會取消。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1106,7 +1107,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAlwaysLight`  
+ [輸入] `bAlwaysLight`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1118,7 +1119,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nValue`  
+ [輸入] `nValue`  
  Alpha 色板新值。  
   
 ### <a name="remarks"></a>備註  
@@ -1132,7 +1133,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nValue`  
+ [輸入] `nValue`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1146,7 +1147,7 @@ void SetImageSize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `sizeImage`  
+ [輸入] `sizeImage`  
  工具列影像的新大小。  
   
 ### <a name="remarks"></a>備註  
@@ -1160,7 +1161,7 @@ void SetLightPercentage(int nValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nValue`  
+ [輸入] `nValue`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1172,7 +1173,7 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bMapTo3DColors`  
+ [輸入] `bMapTo3DColors`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1184,7 +1185,7 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAuto`  
+ [輸入] `bAuto`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1205,7 +1206,7 @@ COLORREF SetTransparentColor(COLORREF clrTransparent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `clrTransparent`  
+ [輸入] `clrTransparent`  
  RGB 值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1224,10 +1225,10 @@ BOOL UpdateImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iImage`  
+ [輸入] `iImage`  
  若要更新的映像以零為起始的索引。  
   
- [in] `hbmp`  
+ [輸入] `hbmp`  
  控制代碼點陣圖要更新映像。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1298,7 +1299,7 @@ BOOL SmoothResize(double dblImageScale);
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   

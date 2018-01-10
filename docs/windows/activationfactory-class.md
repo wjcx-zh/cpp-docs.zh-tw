@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6876fb3d418a4dac8a68449da5d0eae855daa440
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="activationfactory-class"></a>ActivationFactory 類別
 讓 Windows 執行階段啟動一或多個類別。  
@@ -60,13 +63,13 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ActivationFactory::ActivationFactory 建構函式](../windows/activationfactory-activationfactory-constructor.md)|初始化 ActivationFactory 類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ActivationFactory::AddRef 方法](../windows/activationfactory-addref-method.md)|遞增目前 ActivationFactory 物件的參考計數。|  
 |[ActivationFactory::GetIids 方法](../windows/activationfactory-getiids-method.md)|擷取實作的介面 Id 的陣列。|  
@@ -101,5 +104,5 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

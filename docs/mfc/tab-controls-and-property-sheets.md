@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 041f7c4425be59e275bb6ca8bb90b20523385370
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 826467c13fd8469112466ab893f15af2dabcf31d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tab-controls-and-property-sheets"></a>索引標籤控制項和屬性工作表
 屬性工作表具有多頁對話方塊或 「 索引標籤對話方塊 」 可以顯示最多 24 對話方塊範本資源給使用者。 屬性工作表的範例，請參閱 Windows 顯示內容 對話方塊或下列 MFC 範例應用程式：  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
  屬性工作表可以輕鬆地實作使用 MFC 類別[CPropertySheet](../mfc/reference/cpropertysheet-class.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

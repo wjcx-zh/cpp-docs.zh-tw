@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CAccelerateDecelerateTransition
 - afxanimationcontroller/CAccelerateDecelerateTransition
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAccelerateDecelerateTransition class [MFC]
+dev_langs: C++
+helpviewer_keywords: CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6251451607a31caad44e8507466c555d39847a1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 10712925645549f637ffea343e5ab6ce4220b5e3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>CAccelerateDecelerateTransition 類別
 實作加速減速轉換。  
@@ -36,23 +33,23 @@ ms.lasthandoff: 10/09/2017
 class CAccelerateDecelerateTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|建構轉換物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|所花費的時間，加快持續時間的比率。|  
 |[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|時間的比率在減速至持續時間。|  
@@ -140,6 +137,5 @@ UI_ANIMATION_SECONDS m_duration;
 DOUBLE m_finalValue;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

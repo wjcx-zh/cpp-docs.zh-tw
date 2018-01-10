@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6787786022d0cc58fae6b4510a3675f0da21ba6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 298fc14c57ad006228da39d1eb7d664debebd904
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-winver-and-win32winnt"></a>修改 WINVER 和 _WIN32_WINNT
 
@@ -65,6 +66,6 @@ Visual C++ 不再支援將 Windows 95、Windows 98、Windows ME、Windows NT 或
   
 如需這些巨集的意義的相關資訊，請參閱 [使用 Windows 標頭](https://msdn.microsoft.com/library/windows/desktop/aa383745)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [Visual C++ 變更歷程記錄](..\porting\visual-cpp-change-history-2003-2015.md)

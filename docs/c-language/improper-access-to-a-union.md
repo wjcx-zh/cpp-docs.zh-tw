@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54eeffebcc20846666c6ebb6a2951f8d55a5b8c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71fe791e776450d21878144447cf95cdedb34875
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="improper-access-to-a-union"></a>不適當的等位存取
 **ANSI 3.3.2.3**：使用不同類型的成員存取等位物件的成員  
@@ -26,5 +27,5 @@ ms.lasthandoff: 10/24/2017
   
  例如，宣告了 **float** 與 `int` 的等位。 儲存了 **float** 值，但是程式之後將值當作 `int` 來存取。 在這種情況下，值會取決於 **float** 值的內部儲存區。 整數值會變得不可靠。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、等位、列舉和位元欄位](../c-language/structures-unions-enumerations-and-bit-fields.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2dc617eeb58594262ea272a0a4ef7da2865b73f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3acd4d91082d79cff0e945f841389fb2428396f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectroot-class"></a>CComObjectRoot 類別
 此 typedef 的[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)執行緒模型的伺服器預設值根據。  
@@ -40,7 +41,7 @@ typedef CComObjectRootEx<CComObjectThreadModel> CComObjectRoot;
 ## <a name="requirements"></a>需求  
  **標頭：** atlcom.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComObjectRootEx 類別成員](http://msdn.microsoft.com/en-us/e3ce9c3d-9c8e-4fe5-b682-8e56740a0164)   
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   

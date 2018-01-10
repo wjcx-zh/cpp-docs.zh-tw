@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4876d2b05f7124a12976e87022700f9be660b8fc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f3a9597ca8807c8ac1a3182b3daa1891a195c39c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-description"></a>引數描述
 **main** 與 **wmain** 函式中的 `argc` 參數是整數，負責指定要從命令列傳遞到程式的引數數目。 由於程式名稱會視為引數，因此 `argc` 的值至少會是一。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  `envp` 參數是以 null 終止之字串的陣列指標，表示使用者的環境變數中設定的值。 `envp` 參數可以宣告為 `char` 的指標陣列 (`char *envp[]`)，或是宣告為 `char` 指標的指標 (`char **envp`)。 在 **wmain** 函式中， `envp` 參數可以宣告為 `wchar_t` 的指標陣列 (`wchar_t *envp[]`)，或是宣告為 `wchar_t` 指標的指標 (`wchar_t **envp`)。 陣列的結尾會以 **NULL** \* 指標表示。 請注意，傳遞至 **main** 或 **wmain** 的環境區塊是目前環境的「凍結」複本。 如果您後續透過呼叫_**putenv** 或 `_wputenv` 變更環境，則目前環境 (如 `getenv`/`_wgetenv` 與 `_environ` 或 `_wenviron` 變數所傳回) 將會變更，不過 `envp` 所指向的區塊將不會變更。 `envp` 參數在 C 中可與 ANSI 相容，但是在 C++ 中則不相容。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [main 函式和程式執行](../c-language/main-function-and-program-execution.md)

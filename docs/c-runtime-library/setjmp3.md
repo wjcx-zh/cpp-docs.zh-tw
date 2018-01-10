@@ -29,11 +29,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba68e059224d2d15046730a9ee0058e3114d52ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 72bc1e833ddaa72979e25274b7328d8987f62763
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setjmp3"></a>_setjmp3
 內部 CRT 函式。 `setjmp` 函式的新實作。  
@@ -52,10 +53,10 @@ int _setjmp3(
  [輸出] `env`  
  用於儲存狀態資訊之緩衝區的位址。  
   
- [in] `count`  
+ [輸入] `count`  
  儲存在 `DWORD` 中之資訊的其他 `optional parameters` 數目。  
   
- [in] `optional parameters`  
+ [輸入] `optional parameters`  
  `setjmp` 內建函式向下推展的其他資料。 第一個 `DWORD` 是用於回溯額外資料並回復至非暫時性註冊狀態的函式指標。 第二個 `DWORD` 是要還原的嘗試層級。 所有進一步資料都會以泛型資料陣列儲存在 `jmp_buf` 中。  
   
 ## <a name="return-value"></a>傳回值  
@@ -66,6 +67,6 @@ int _setjmp3(
   
 ## <a name="requirements"></a>需求  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [setjmp](../c-runtime-library/reference/setjmp.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 129e549b4151d913cf0ad026faff967d30f87e44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8465a467ddfe799c64ee89ff30bd3c1f969aa07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="byte-classification"></a>位元組分類
 這些每個常式都會測試多位元組字元的指定位元組是否滿足條件。 除了另行指定之處，輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="multibyte-character-byte-classification-routines"></a>多位元組字元位元組分類常式  
   
-|常式|位元組測試條件|  
+|常式傳回的值|位元組測試條件|  
 |-------------|-------------------------|  
 |[isleadbyte、_isleadbyte_l](../c-runtime-library/reference/isleadbyte-isleadbyte-l.md)|前導位元組；測試結果會取決於目前地區設定的 `LC_CTYPE` 分類設定|  
 |[_ismbbalnum、_ismbbalnum_l](../c-runtime-library/reference/ismbbalnum-ismbbalnum-l.md)|`isalnum &#124;&#124; _ismbbkalnum`|  
@@ -56,5 +57,5 @@ ms.lasthandoff: 10/24/2017
   
  `MB_LEN_MAX` 巨集，定義於 LIMITS.H，會展開至任何多位元組字元可具備的最大長度，以位元組為單位。 `MB_CUR_MAX` 定義於 STDLIB.H，會展開至目前地區設定中任何多位元組字元的最大長度，以位元組為單位。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

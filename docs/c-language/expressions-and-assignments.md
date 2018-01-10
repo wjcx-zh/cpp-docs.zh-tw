@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ab58e3e787afa24114c1bbad2713a7ab2e51a99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3465272e2d582c36a16b9a68a165bd6d371055f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-and-assignments"></a>運算式和指派
 本節說明如何構成運算式以及在 C 語言中指派值。 常數、識別項、字串和函式呼叫全都是在運算式中管理的運算元。 C 語言包含所有常用的語言運算子。 本節將涵蓋這些運算子，以及 C 或 Microsoft C 獨有的運算子。討論的主題包括：  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [型別轉換](../c-language/type-cast-conversions.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言參考](../c-language/c-language-reference.md)

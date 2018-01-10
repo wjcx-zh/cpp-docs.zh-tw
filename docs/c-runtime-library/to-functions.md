@@ -30,11 +30,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a77c4b80dc83f64b61fdd3b98f7971b5ef6e5e27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef97b5e5ab2c21b375814cf117d6155b4a502795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="to-functions"></a>to 函式
 每個 **to** 函式和其相關聯巨集 (如果有的話) 都會將單一字元轉換為另一個字元。  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  **to** 函式和巨集轉換如下。  
   
-|常式|巨集|說明|  
+|常式傳回的值|巨集|描述|  
 |-------------|-----------|-----------------|  
 |`__toascii`|`__toascii`|將 `c` 轉換為 ASCII 字元|  
 |`tolower`|`tolower`|適用時，將 `c` 轉換為小寫|  
@@ -119,7 +120,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../c-runtime-library/data-conversion.md)   
  [地區設定](../c-runtime-library/locale.md)   
  [is、isw 常式](../c-runtime-library/is-isw-routines.md)

@@ -29,11 +29,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8ad37d66e0e73e7ee75e2c44869c59c545025bd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b0c027623f5b562219e46c67ef730754538d602
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localunwind2"></a>_local_unwind2
 內部 CRT 函式。 執行指定範圍資料表中列出的終止處理常式。  
@@ -48,10 +49,10 @@ void _local_unwind2(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `xr`  
+ [輸入] `xr`  
  與某個範圍資料表相關的註冊記錄。  
   
- [in] `stop`  
+ [輸入] `stop`  
  指出 `_local_unwind2` 應停止的語彙層級。  
   
 ## <a name="remarks"></a>備註  
@@ -59,5 +60,5 @@ void _local_unwind2(
   
  當此方法執行終止處理常式時，會從目前的語彙層級開始進行，直到達到 `stop` 指定的層級為止。 此方法不會執行 `stop` 所指定之層級上的終止處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

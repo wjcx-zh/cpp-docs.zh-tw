@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82795e3494267f953875136bb29c701c93dbc934
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f45f8f2f152cdbfee1ee1ca3c3acfdb93a249d7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 結構
 工作排程器抽象概念的介面，需要並行執行階段的資源管理員將可使用者模式排程的 (UMS) 執行緒傳遞給它。 資源管理員會使用這個介面與 UMS 執行緒排程器進行通訊。 `IUMSScheduler` 介面繼承自 `IScheduler` 介面。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 struct IUMSScheduler : public IScheduler;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Iumsscheduler:: Setcompletionlist](#setcompletionlist)|指派`IUMSCompletionList`UMS 執行緒排程器的介面。|  
   
@@ -72,7 +73,7 @@ virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ### <a name="remarks"></a>備註  
  資源管理員會叫用指定的排程器已要求資源的初始配置之後，它會想 UMS 執行緒排程器上的這個方法。 排程器可以使用`IUMSCompletionList`介面，以判斷當 UMS 執行緒 proxy 已解除封鎖。 它只適用於從指派給 UMS 排程器的虛擬處理器根上執行的執行緒 proxy 存取這個介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [IScheduler 結構](ischeduler-structure.md)   

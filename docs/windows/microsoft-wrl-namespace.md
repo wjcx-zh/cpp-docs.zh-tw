@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b3c3bef713bd63b7b82761ce36ab039556e63c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 64c8b82320e0b402c06432438cd49a23be5d1f2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 命名空間
 定義 Windows 執行階段 c + + 樣板程式庫所組成的基本類型。  
@@ -48,7 +51,7 @@ namespace Microsoft::WRL;
   
 ### <a name="classes"></a>類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ActivationFactory 類別](../windows/activationfactory-class.md)|讓 Windows 執行階段啟動一或多個類別。|  
 |[AsyncBase 類別](../windows/asyncbase-class.md)|實作 Windows 執行階段非同步狀態機器。|  
@@ -65,7 +68,7 @@ namespace Microsoft::WRL;
   
 ### <a name="structures"></a>結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[ChainInterfaces 結構](../windows/chaininterfaces-structure.md)|指定可以套用至一組介面 ID 的驗證和初始化函式。|  
 |[CloakedIid 結構](../windows/cloakediid-structure.md)|指出 RuntimeClass、Implements 和 ChainInterfaces 範本指定介面無法在 IID 清單中存取。|  
@@ -75,7 +78,7 @@ namespace Microsoft::WRL;
   
 ### <a name="enumerations"></a>列舉  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AsyncResultType 列舉](../windows/asyncresulttype-enumeration.md)|指定 GetResults() 方法所傳回的結果類型。|  
 |[ModuleType 列舉](../windows/moduletype-enumeration.md)|指定模組是否應支援同處理序伺服程式或跨處理序伺服程式。|  
@@ -83,7 +86,7 @@ namespace Microsoft::WRL;
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[AsWeak 函式](../windows/asweak-function.md)|擷取指定執行個體的弱式參考。|  
 |[回呼函式](../windows/callback-function-windows-runtime-cpp-template-library.md)|建立成員函式是回呼方法的物件。|  
@@ -96,5 +99,5 @@ namespace Microsoft::WRL;
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Wrappers 命名空間](../windows/microsoft-wrl-wrappers-namespace.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9f7f9cfe98e243cb9eaa0252889b61e6c6019d89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1ee6738d55f2a925c510ff342cd289f26bc8669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>單位元組和多位元組字元集
 ASCII 字元集定義 0x00 - 0x7F 範圍內的字元。 有數個其他字元集 (主要是歐洲) 定義 0x00 - 0x7F 範圍內與 ASCII 字元集相同的字元，其也會定義 0x80 - 0xFF 的擴充字元集。 因此，8 位元單一位元組字元集 (`SBCS`) 就足以代表 ASCII 字元集，以及許多歐洲語言的字元集。 不過，有些非歐洲字元集 (例如日文漢字) 所含的字元數多於可用單一位元組編碼配置表示的字元數，因此需要多位元組字元集 (`MBCS`) 編碼。  
@@ -33,6 +34,6 @@ ASCII 字元集定義 0x00 - 0x7F 範圍內的字元。 有數個其他字元集
   
  多位元組字元集可能包含單位元組和雙位元組字元。 因此，多位元組字元字串可能混合單一位元組和雙位元組字元。 雙位元組多位元組字元會有一個前導位元組和一個後隨位元組。 在特定多位元組字元集中，前導位元組落在特定範圍內，後隨位元組也是如此。 這些範圍重疊時，可能需要評估特定內容，以決定指定的位元組是否作為前導位元組或後隨位元組。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [國際化](../c-runtime-library/internationalization.md)   
  [依類別區分的執行階段常式](../c-runtime-library/run-time-routines-by-category.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>控制資料流
 [fopen](../c-runtime-library/reference/fopen-wfopen.md) 會傳回類型為 `FILE` 之物件的位址。 您可以使用此位址作為數個程式庫函式的 `stream` 引數，以在開啟檔案上執行各種作業。 針對位元組資料流，所有輸入發生的情況都會有如每個字元是透過呼叫 [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md) 的方式讀取，且所有輸出發生的情況都會有如每個字元是透過呼叫 [fputc](../c-runtime-library/reference/fputc-fputwc.md) 的方式寫入。 針對寬資料流，所有輸入發生的情況都會有如每個字元是透過呼叫 [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md) 的方式讀取，且所有輸出發生的情況都會有如每個字元是透過呼叫 [fputwc](../c-runtime-library/reference/fputc-fputwc.md) 的方式寫入。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
  請不要變更儲存在 `FILE` 物件中，或是您指定搭配該物件使用之檔案緩衝區中的任何值。 您不能複製 `FILE` 物件，並改為使用該複本的位址作為針對程式庫函式的 `stream` 引數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案和資料流](../c-runtime-library/files-and-streams.md)

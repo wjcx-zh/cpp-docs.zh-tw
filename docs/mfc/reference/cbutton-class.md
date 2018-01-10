@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5eb955843d2390864a7fbc2c45025dca39ce498b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e6e92efe5b5a99042426dd2e6a7594f2de46f2ce
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbutton-class"></a>CButton 類別
 提供 Windows 按鈕控制項的功能。  
@@ -100,17 +101,17 @@ ms.lasthandoff: 10/24/2017
 class CButton : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CButton::CButton](#cbutton)|建構 `CButton` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CButton::Create](#create)|建立 Windows 按鈕控制項，並將它附加至`CButton`物件。|  
 |[CButton::DrawItem](#drawitem)|覆寫可繪製主控描繪`CButton`物件。|  
@@ -527,7 +528,7 @@ UINT GetState() const;
 ### <a name="return-value"></a>傳回值  
  位元欄位，其中包含值，指出按鈕控制項的目前狀態的組合。 下表列出可能的值。  
   
-|按鈕狀態|值|說明|  
+|按鈕狀態|值|描述|  
 |------------------|-----------|-----------------|  
 |`BST_UNCHECKED`|0x0000|初始狀態。|  
 |`BST_CHECKED`|0x0001|選取按鈕控制項。|  
@@ -687,7 +688,7 @@ BOOL SetDropDownState(BOOL fDropDown);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `fDropDown`|`true`若要設定`BST_DROPDOWNPUSHED`狀態; 否則`false`。|  
+|[輸入] `fDropDown`|`true`若要設定`BST_DROPDOWNPUSHED`狀態; 否則`false`。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -718,13 +719,13 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `fElevationRequired`|`true`若要設定`elevation required`狀態; 否則`false`。|  
+|[輸入] `fElevationRequired`|`true`若要設定`elevation required`狀態; 否則`false`。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
   
 ### <a name="remarks"></a>備註  
- 如果按鈕或命令的連結控制需要提高權限的安全性權限執行的動作，將控制項設為`elevation required`狀態。 接著，Windows 會顯示在控制項上的使用者帳戶控制 (UAC) 保護盾圖示。 如需詳細資訊，請參閱 「 使用者帳戶控制 」 在[MSDN](http://go.microsoft.com/fwlink/linkid=18507)。  
+ 如果按鈕或命令的連結控制需要提高權限的安全性權限執行的動作，將控制項設為`elevation required`狀態。 接著，Windows 會顯示在控制項上的使用者帳戶控制 (UAC) 保護盾圖示。 如需詳細資訊，請參閱 「 使用者帳戶控制 」 在[MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)。  
   
  這個方法會傳送[BCM_SETSHIELD](http://msdn.microsoft.com/library/windows/desktop/bb775979) Windows SDK 中所述的訊息。  
   
@@ -790,7 +791,7 @@ BOOL SetNote(LPCTSTR lpszNote);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `lpszNote`|設定為命令連結控制項的註解文字的 Unicode 字串指標。|  
+|[輸入] `lpszNote`|設定為命令連結控制項的註解文字的 Unicode 字串指標。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -821,7 +822,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `chGlyph`|指定要做為分割按鈕的下拉箭號圖像字元。|  
+|[輸入] `chGlyph`|指定要做為分割按鈕的下拉箭號圖像字元。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -844,7 +845,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pSplitImageList`|指標[CImageList](../../mfc/reference/cimagelist-class.md)来指派給目前的分割按鈕控制項的物件。|  
+|[輸入] `pSplitImageList`|指標[CImageList](../../mfc/reference/cimagelist-class.md)来指派給目前的分割按鈕控制項的物件。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -865,7 +866,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pInfo`|指標[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構，定義目前的分割按鈕控制項。|  
+|[輸入] `pInfo`|指標[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構，定義目前的分割按鈕控制項。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -896,7 +897,7 @@ BOOL SetSplitSize(LPSIZE pSize);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `pSize`|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構描述的周框。|  
+|[輸入] `pSize`|指標[大小](http://msdn.microsoft.com/library/windows/desktop/dd145106)結構描述的周框。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -929,7 +930,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `uSplitStyle`|分割按鈕樣式的位元組合。 如需詳細資訊，請參閱`uSplitStyle`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。|  
+|[輸入] `uSplitStyle`|分割按鈕樣式的位元組合。 如需詳細資訊，請參閱`uSplitStyle`隸屬[BUTTON_SPLITINFO](http://msdn.microsoft.com/library/windows/desktop/bb775955)結構。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -987,7 +988,7 @@ BOOL SetTextMargin(RECT* pmargin);
 ### <a name="remarks"></a>備註  
  此成員函式模擬的功能**BCM_SETTEXTMARGIN**訊息中所述[按鈕](http://msdn.microsoft.com/library/windows/desktop/bb775943)> 一節的 Windows sdk。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

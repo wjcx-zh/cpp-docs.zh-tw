@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed56c0c9ab3186200d3cbb47224dedc60adddb2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dbf2d3d269f5df3a028a5c416f8adca015be6dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conversions-from-other-types"></a>從其他類型轉換
 由於 `enum` 值在定義上為 `int` 值，因此與 `enum` 值之間來回轉換的方式與 `int` 類型相同。 對於 Microsoft C 編譯器，整數相當於 **long**。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  `void` 類型在定義上不具任何值。 因此，它無法轉換成任何其他類型，而其他類型也不能藉由指派轉換成 `void`。 不過，您可以將值明確轉型為 `void` 類型，如[類型轉換](../c-language/type-cast-conversions.md)中所述。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指派轉換](../c-language/assignment-conversions.md)

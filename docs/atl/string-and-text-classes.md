@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c494da428dedcf5a326acacbec006e9d9efd8d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f0a760be49d04208aedefee1bfe7768208e3d92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-and-text-classes"></a>字串和文字類別
 這些類別會提供用於字串和文字字串轉換支援。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [_U_STRINGorID](../atl/reference/u-stringorid-class.md)這個引數的介面卡類別可讓任一資源名稱 (`LPCTSTR`s) 或資源識別碼 (**UINT**s) 而不需要呼叫者使用的字串轉換成識別碼傳遞至函式**MAKEINTRESOURCE**巨集。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)   
  [ATL 和 MFC 字串轉換巨集](reference/string-conversion-macros.md)
 

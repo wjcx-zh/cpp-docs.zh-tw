@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationSize::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cxValue
 - AFXANIMATIONCONTROLLER/CAnimationSize::m_cyValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationSize [MFC], CAnimationSize
 - CAnimationSize [MFC], AddTransition
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cxValue
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 418bba617261ee11322a3d5a83ba07b197c83427
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationsize-class"></a>CAnimationSize 類別
 實作可以動畫顯示其維度的大小物件功能。  
@@ -55,17 +53,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationSize : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationSize::CAnimationSize](#canimationsize)|多載。 建構的動畫大小的物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationSize::AddTransition](#addtransition)|新增轉換寬度和高度。|  
 |[CAnimationSize::GetCX](#getcx)|提供存取權 CAnimationVariable 代表寬度。|  
@@ -74,22 +72,22 @@ class CAnimationSize : public CAnimationBaseObject;
 |[CAnimationSize::GetValue](#getvalue)|傳回目前的值。|  
 |[CAnimationSize::SetDefaultValue](#setdefaultvalue)|設定預設值。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|將封裝的動畫變數放入清單。 (覆寫[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationSize::operator CSize](#operator_csize)|將 CSize CAnimationSize。|  
 |[CAnimationSize::operator =](#operator_eq)|將 szSrc 指派給 CAnimationSize。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|封裝的動畫變數，表示動畫大小的寬度。|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|封裝的動畫變數，表示動畫大小的高度。|  
@@ -280,6 +278,5 @@ void SetDefaultValue(const CSize& szDefault);
 ### <a name="remarks"></a>備註  
  使用此函式設動畫物件的預設值。 這個方法會將預設值指派給動畫大小的寬度和高度。 如果尚未建立，它也會重建基礎 COM 物件。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

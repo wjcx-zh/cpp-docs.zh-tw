@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd4d90d50ecfe2514b53df6b0137caa866feeea3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d09e110fd428b13e501647d97a0878df0e9392a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="byte-and-wide-streams"></a>位元組和寬資料流
 位元組資料流會將檔案視為位元組順序。 在程式內，資料流是相同的位元組順序。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
  在寬資料流中定位面臨與文字資料流相同的限制。 此外，檔案位置指標可能必須處理狀態相依編碼。 它通常同時包含資料流內的位元組位移。以及類型為 `mbstate_t` 的物件。 因此，取得寬資料流內檔案位置的唯一可靠方式是呼叫 [fgetpos](../c-runtime-library/reference/fgetpos.md)，而還原以此方式取得之位置的唯一可靠方式是呼叫 [fsetpos](../c-runtime-library/reference/fsetpos.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案和資料流](../c-runtime-library/files-and-streams.md)   
  [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)

@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c142d9c7dca6c46453317e056ec573cbc960f51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6739e179843864c952a5e864de1389b466d7ca7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 類別
 這個類別會提供處理的工作項目佇列的背景工作執行緒集區。  
@@ -53,18 +54,18 @@ class CThreadPool : public IThreadPoolConfig
  `ThreadTraits`  
  提供用來建立執行緒集區中的函數類別。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CThreadPool::CThreadPool](#cthreadpool)|執行緒集區的建構函式。|  
 |[CThreadPool:: ~ CThreadPool](#dtor)|執行緒集區的解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CThreadPool::AddRef](#addref)|實作`IUnknown::AddRef`。|  
 |[CThreadPool::GetNumThreads](#getnumthreads)|呼叫這個方法來取得集區中的執行緒數目。|  
@@ -309,7 +310,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 ### <a name="remarks"></a>備註  
  這個方法會公佈關機要求的所有執行緒集區中。 如果在逾時到期時，會呼叫這個方法[TerminateThread](http://msdn.microsoft.com/library/windows/desktop/ms686717)任何未結束的執行緒。 從類別的解構函式自動呼叫這個方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IThreadPoolConfig 介面](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [類別](../../atl/reference/atl-classes.md)

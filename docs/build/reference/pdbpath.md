@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 024e6bae368a171b4bd35434d99261155947d4ae
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0ccbcedbf9cdd376fa7d9bced5c9d49542cee9f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdbpath"></a>/PDBPATH
 ```  
@@ -57,6 +58,6 @@ ms.lasthandoff: 10/24/2017
   
 -   請檢查 Windows 目錄中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)   
  [/PDBALTPATH （使用替代 PDB 路徑）](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)

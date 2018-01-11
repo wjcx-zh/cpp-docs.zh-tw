@@ -19,18 +19,21 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5861a4931a1241a213157b94ca189c6b95f0fb6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1dcbb3b54cbde323cda0856ca68b2281d669cb7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccli-migration-primer"></a>C++/CLI 移轉入門
 這是前往 Visual c + + 程式從 Managed Extensions for c + + Visual c + + 的指引。 如需檢查清單的摘要語法變更，請參閱[(NOTINBUILD) Managed Extensions for c + + 語法升級檢查清單](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada)。  
   
  C + + CLI 延伸 ISO c + + 標準語言的動態元件程式設計典範。 新的語言提供顯著的改善了許多透過 Managed Extensions。 本章節會提供 Managed Extensions for c + + 語言功能的列舉的清單以及其對應至 Visual c + +，這類對應存在，而且將點出對應不存在，這些建構。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [變更的大綱 (C++/CLI)](../dotnet/outline-of-changes-cpp-cli.md)  
  提供快速參考五大類別提供的變更清單的重要概述。  
   
@@ -49,6 +52,6 @@ ms.lasthandoff: 10/24/2017
  [一般的語言變更 (C++/CLI)](../dotnet/general-language-changes-cpp-cli.md)  
  詳細資料的語意變更支援轉型的表示法，例如字串常值的行為，以及變更在語意 ISO c + + 和 C + + /CLI。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)   
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

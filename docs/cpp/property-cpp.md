@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c4ec1ed2351b37f88e9cb6b0ce7efd2824e431a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: afc8fb6ad9808bf0a0139e838982a08820d2fb88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-c"></a>property (C++)
 **Microsoft 特定的**  
@@ -40,7 +41,7 @@ __declspec( property( get=get_func_name, put=put_func_name ) ) declarator
 ## <a name="remarks"></a>備註  
  當編譯器查看成員選取運算子右側以此屬性宣告的資料成員 (「**。**「 或 」**->**")，它將作業轉換成**取得**或**放**函式，視這類運算式為左值或右值。 在更複雜的內容，例如"`+=`」，請重寫藉由同時執行**取得**和**放**。  
   
- 在類別或結構定義中也可以使用這個屬性宣告空陣列。 例如：  
+ 在類別或結構定義中也可以使用這個屬性宣告空陣列。 例如:   
   
 ```  
 __declspec(property(get=GetX, put=PutX)) int x[];  
@@ -48,7 +49,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
   
  上述陳述式表示可以同時使用 `x[]` 和一個或多個陣列索引。 在這種情況下，`i=p->x[a][b]` 會轉換為 `i=p->GetX(a, b)`，而 `p->x[a][b] = i` 則會轉換為 `p->PutX(a, b, i);`  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
 ## <a name="example"></a>範例  
   
@@ -74,6 +75,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__declspec](../cpp/declspec.md)   
  [關鍵字](../cpp/keywords-cpp.md)

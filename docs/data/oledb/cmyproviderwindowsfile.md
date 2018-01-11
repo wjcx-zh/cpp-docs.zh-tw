@@ -1,31 +1,33 @@
 ---
-title: "CMyProviderWindowsFile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyproviderwindowsfile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderWindowsFile 類別"
-  - "OLE DB 提供者, 精靈產生的檔案"
+title: "CMyProviderWindowsFile |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cmyproviderwindowsfile
+dev_langs: C++
+helpviewer_keywords:
+- CMyProviderWindowsFile class
+- OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fef6896df77ff3bcbf9251e2aabba0f810b7f4db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderWindowsFile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-精靈會建立一個包含資料列的類別 \(Class\)；在本範例中，該類別名為 `CMyProviderWindowsFile`。  下列是由精靈產生的 `CMyProviderWindowsFile` 程式碼，它使用 **WIN32\_FIND\_DATA** 結構列出了目錄中的所有檔案。  `CMyProviderWindowsFile` 繼承自 **WIN32\_FIND\_DATA** 結構：  
+# <a name="cmyproviderwindowsfile"></a>CMyProviderWindowsFile
+精靈會建立類別可以包含一個資料列的資料;在此情況下，它會呼叫`CMyProviderWindowsFile`。 下列程式碼的`CMyProviderWindowsFile`是產生的精靈，並列出目錄中的所有檔案使用**WIN32_FIND_DATA**結構。 `CMyProviderWindowsFile`繼承自**WIN32_FIND_DATA**結構：  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -45,9 +47,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- `CMyProviderWindowsFile` 稱為[使用者資料錄類別](../../data/oledb/user-record.md)，因為它也包含用來描述提供者資料列集內資料行的對應。  提供者資料行對應包含了使用 PROVIDER\_COLUMN\_ENTRY 巨集之資料列集的每個欄位項目。  巨集指定了資料行名稱、序數以及結構項目的位移 \(Offset\)。  上述程式碼內的提供者資料行項目包含了 **WIN32\_FIND\_DATA** 結構的位移。  當消費者呼叫 **IRowset::GetData** 時，資料將在一個連續的緩衝區內傳輸。  這個對應不只可讓您進行指標算術，還可讓您指定資料成員。  
+ `CMyProviderWindowsFile`呼叫[使用者記錄類別](../../data/oledb/user-record.md)因為它也包含描述提供者的資料列集中的資料行的對應。 提供者資料行對應會包含每個欄位中使用 PROVIDER_COLUMN_ENTRY 巨集的資料列集的項目。 巨集指定資料行名稱，序數，和位移結構項目。 上述程式碼中的提供者的資料行項目包含位移到**WIN32_FIND_DATA**結構。 當取用者呼叫**irowset:: Getdata**，以一個連續緩衝區傳輸資料。 而不是讓您進行算術的指標，地圖可讓您指定的資料成員。  
   
- `CMyProviderRowset` 類別也包含 `Execute` 方法。  `Execute` 會實際地自原生 \(Native\) 來源讀取資料。  下列程式碼會顯示精靈產生的 `Execute` 方法。  此函式使用 Win32 **FindFirstFile** 和 `FindNextFile` API 來擷取目錄內檔案的相關資訊，並將它們放在 `CMyProviderWindowsFile` 類別的執行個體 \(Instance\) 內。  
+ `CMyProviderRowset`類別也包含`Execute`方法。 `Execute`是什麼實際讀取的資料來源的原生。 下列程式碼會顯示精靈產生`Execute`方法。 此函數會使用 Win32 **FindFirstFile**和`FindNextFile`擷取目錄中檔案的相關資訊，並將它們放在執行個體 Api`CMyProviderWindowsFile`類別。  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -80,9 +82,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- `m_strCommandText` 會表示要搜尋的目錄；它包含了命令物件的 `ICommandText` 介面所表示的文字。  如果沒有指定任何目錄，它會使用目前的目錄。  
+ 要搜尋之目錄由`m_strCommandText`; 這個項目包含所代表的文字`ICommandText`命令物件中的介面。 如果未不指定任何目錄，它會使用目前的目錄。  
   
- 這種方法可以為每個檔案建立項目 \(對應至一資料列\)，並將它放在 **m\_rgRowData** 資料成員內。  `CRowsetImpl` 類別定義了 **m\_rgRowData** 資料成員。  這個陣列內的資料會表示整個資料表，且會套用於樣板內。  
+ 方法會建立一個項目 （對應至一個資料列） 的每個檔案，並將它放入**m_rgRowData**資料成員。 `CRowsetImpl`類別會定義**m_rgRowData**資料成員。 此陣列中的資料代表整個資料表，而且是所有範本。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)

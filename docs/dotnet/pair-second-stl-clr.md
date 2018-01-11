@@ -1,42 +1,42 @@
 ---
-title: "pair::second (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::second"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "second 成員 [STL/CLR]"
+title: "pair::second (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::second
+dev_langs: C++
+helpviewer_keywords: second member [STL/CLR]
 ms.assetid: f30d3d1f-c7be-45d2-92ff-6861b96a92ff
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e313a8fbc4961e046132abc0bda36292874fa112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# pair::second (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-第二個包裝值。  
+# <a name="pairsecond-stlclr"></a>pair::second (STL/CLR)
+第二個換行的值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Value2 second;  
 ```  
   
-## 備註  
- 物件會儲存第二個包裝值。  
+## <a name="remarks"></a>備註  
+ 此物件會儲存已包裝的第二個值。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_pair_second.cpp   
@@ -56,14 +56,17 @@ int main()
   
 ```  
   
-  **\[x 3\]，**   
-## 需求  
- **標題:** \<cliext\/公用程式\>  
+```Output  
+[x, 3]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/公用程式 >  
   
-## 請參閱  
- [pair](../dotnet/pair-stl-clr.md)   
- [pair::first](../dotnet/pair-first-stl-clr.md)   
- [pair::first\_type](../dotnet/pair-first-type-stl-clr.md)   
- [pair::second\_type](../dotnet/pair-second-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [配對 (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)   
+ [pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)   
+ [pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)

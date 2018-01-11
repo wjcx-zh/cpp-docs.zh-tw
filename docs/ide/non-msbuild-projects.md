@@ -13,11 +13,12 @@ ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da81f8731be97c69a73eddb96e9e56e49c59c91b
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 72106bd363987d39fb11c9ec1a6d3fd0ceb5665d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-folder-projects-in-visual-c"></a>在 Visual c + + 中開啟專案資料夾
 Visual Studio 2017 導入了 「 開啟資料夾 」 功能，可讓您開啟來源檔案的資料夾並立即開始撰寫程式碼以支援 IntelliSense、 瀏覽、 重構、 偵錯等等。 會不載入任何.sln 或.vcxproj 檔案;如有需要您可以指定自訂工作，以及建置並啟動參數，透過簡單的.json 檔案。 由開啟的資料夾，Visual c + + 現在可以支援不僅鬆散集合的檔案，而且也幾乎任何建置系統，包括 CMake、 忍者一樣，QMake （適用於 Qt 專案），又試過 gyp、 SCons、 Gradle、 Buck、 請等等。 
@@ -25,7 +26,7 @@ Visual Studio 2017 導入了 「 開啟資料夾 」 功能，可讓您開啟來
 若要使用開啟的資料夾，請從主功能表選取*檔案 |開啟 |資料夾*或按*Ctrl + Shift + Alt + O*。方案總管 中立即顯示所有檔案的資料夾中。 您可以按一下任何檔案來開始編輯。 在背景中，Visual Studio 會啟動編製索引的檔案啟用 IntelliSense、 導覽和重構的功能。 當您編輯、 建立、 移動或刪除檔案時，Visual Studio 會自動追蹤變更，並持續更新其 IntelliSense 的索引。 
   
 ## <a name="cmake-projects"></a>CMake 專案
-CMake 已 Visual c + +、 c + + 桌面工作負載的元件，Visual Studio IDE 中整合 CMake 的工具。 如需詳細資訊，請參閱[CMake 工具，Visual c + +](cmake-tools-for-visual-cpp.md)。
+CMake 已 Visual c + +、 c + + 桌面工作負載的元件，Visual Studio IDE 中整合 CMake 的工具。 如需詳細資訊，請參閱 [Visual C++ 的 CMake 工具](cmake-tools-for-visual-cpp.md)。
  
 ## <a name="qmake-projects-that-target-the-qt-framework"></a>QMake Qt framework 為目標的專案
 您可以使用 CMake 工具 Visual c + + 為目標 Qt 建置 Qt 專案，或您可以使用 Qt Visual Studio 擴充功能。 附註： 自年 8 月 2017年[Qt Visual Studio 擴充功能支援 Visual Studio 2017](https://download.qt.io/development_releases/vsaddin/)可做為測試版。
@@ -228,6 +229,6 @@ CppProperties.json 支援環境變數展開將包含路徑和其他屬性值。 
 
 當您儲存此檔案時，新的組態會顯示在偵錯目標下拉式清單中，您可以選取它，以便開始偵錯工具。 您可以建立許多偵錯組態，各代表任何數目的可執行檔。 如果您按下**F5**現在，偵錯工具會啟動，來叫用已設定任何中斷點。 熟悉的偵錯工具的所有視窗和其功能現在會是可用項目。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 [開發 Visual C++ 的 IDE 和工具](ide-and-tools-for-visual-cpp-development.md)
 

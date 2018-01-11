@@ -16,16 +16,19 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 114725aad521edc30b9e33f0be699dc6019d15d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0644d1c08b73442f07585c359f29dfeeee886d84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-mfc-odbc-recordsets"></a>使用 MFC ODBC 資料錄集
 這些主題說明如何使用透過 MFC 的 ODBC 資料錄集。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 ### <a name="general-recordset-tasks"></a>資料錄集的一般工作  
   
@@ -85,5 +88,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [動態繫結資料行中資料錄集在執行階段](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

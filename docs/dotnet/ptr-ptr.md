@@ -1,35 +1,37 @@
 ---
-title: "ptr::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::ptr"
-  - "ptr.ptr"
-  - "msclr.com.ptr.ptr"
-  - "msclr::com::ptr::ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::ptr"
+title: "ptr::ptr |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::ptr
+- ptr.ptr
+- msclr.com.ptr.ptr
+- msclr::com::ptr::ptr
+dev_langs: C++
+helpviewer_keywords: ptr::ptr
 ms.assetid: 4f5883b4-7c0a-46c6-aa9f-4e49eed463eb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 49013e718ad540e88a1cbd00eceb6bb3dc0071b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構 `com::ptr` 包裝 COM 物件。  
+# <a name="ptrptr"></a>ptr::ptr
+建構`com::ptr`包裝的 COM 物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 ptr();  
@@ -38,19 +40,19 @@ ptr(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `P`  
  COM 的介面指標。  
   
-## 備註  
- 無參數建構函式指定的 `nullptr` 加入至基礎物件控制代碼。  對 `com::ptr` 的後續呼叫會驗證內部物件和無訊息地失敗，直到物件實際上會建立或附加。  
+## <a name="remarks"></a>備註  
+ 無引數的建構函式指派`nullptr`基礎物件控制代碼。 後續呼叫`com::ptr`會驗證內部的物件，並以無訊息模式失敗，直到物件實際上是建立或附加。  
   
- 一個引數的建構函式加入至 COM 物件的參考，但不會釋放呼叫端的參考，因此，呼叫端必須呼叫 COM 物件的 `Release` 真正中止控制。  當 `com::ptr` 呼叫解構函式就會自動釋放它在 COM 物件的參考。  
+ 單一引數的建構函式會將 COM 物件的參考，但不會釋放呼叫者的參考，因此呼叫端必須呼叫`Release`真正放棄控制項之 COM 物件。 當`com::ptr`的解構函式呼叫就會自動釋放 COM 物件上的其參考。  
   
- 傳遞 `NULL` 給這個建構函式相當於呼叫無引數。  
+ 傳遞`NULL`此建構函式相當於呼叫沒有引數版本。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。  它會示範建構函式的兩個版本的使用方式。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 它會示範兩個版本的建構函式的使用方式。  
   
 ```  
 // comptr_ptr.cpp  
@@ -111,12 +113,12 @@ int main() {
 }  
 ```  
   
-## 需求  
- **標頭檔**\<msclr \\ com \\ ptr.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
- **命名空間** msclr::com  
+ **命名空間**msclr::com  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

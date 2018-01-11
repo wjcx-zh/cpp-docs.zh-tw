@@ -1,32 +1,33 @@
 ---
-title: "list::sort (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::sort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sort 成員 [STL/CLR]"
+title: "list:: sort (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::sort
+dev_langs: C++
+helpviewer_keywords: sort member [STL/CLR]
 ms.assetid: f811d5f4-a19e-4194-8765-1e68097c52f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159391bc7d362c755c194f478692b2a271d779ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::sort (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-排序受控制序列。  
+# <a name="listsort-stlclr"></a>list::sort (STL/CLR)
+受控制的序列的訂單。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void sort();  
@@ -34,18 +35,18 @@ template<typename Pred2>
     void sort(Pred2 pred);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  pred  
- 對項目的比較子。  
+ 項目配對的比較子。  
   
-## 備註  
- 第 10% 成員函式重新整理超過受控制序列的項目，讓它們之間的 `operator<` 排序\-\-然後，當您逐一查看序列，進度項目不減少值。  您可以使用這個成員函式來排序序列以遞增順序。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式重新排列受控制序列中的項目，以便依排序`operator<`-項目不要降低在值隨著您循序完成進度。 您可以使用此成員函式來排序的順序，以遞增的順序。  
   
- 第二 \+ 成成員函式一般作業的第一個相同，但是有一點例外，就是 `pred` 序列排序\-\- `pred``(X, Y)` 為遵循結果序列的項目 `Y` 的所有項目的 `X` 是錯誤的。  您會用它來排序序列會以所述詞函式或委派中所指定的順序。  
+ 第二個成員函式的行為與第一個相同之處在於會依據排序順序`pred`  --  `pred(X, Y)`為 false 的任何項目`X`的項目後面`Y`結果的順序。 您可以使用它來排序的順序，您指定的述詞函式或委派中的順序。  
   
- 兩個函式執行穩定的排序\-\-對原始受控制序列的項目在結果序列中沒有反轉。  
+ 同時函式會執行穩定的排序--在原始的受控制序列中的項目沒有任何一對已反轉結果的受控制序列中。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_sort.cpp   
@@ -80,17 +81,20 @@ int main()
   
 ```  
   
-  **a b c**  
- **c b。**  
- **a b c**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+a b c  
+c b a  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::merge](../dotnet/list-merge-stl-clr.md)   
- [list::reverse](../dotnet/list-reverse-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)   
- [list::unique](../dotnet/list-unique-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)   
+ [list:: reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)   
+ [list:: splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)   
+ [list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)

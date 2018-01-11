@@ -42,11 +42,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72568970159c1b334232bb81f0295d829a5221af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a75cc474d66a42f3faeb7444f3168c7cc3283514
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 將浮點值分割成小數和整數部分。  
@@ -89,17 +90,17 @@ long double modfl(
 ## <a name="remarks"></a>備註  
  `modf` 函式會將浮點值 `x` 分解成小數和整數部分，每一部分的正負號都與 `x` 相同。 `x` 的帶正負號小數部分會傳回。 整數部分則儲存為 `intptr.` 的浮點值  
   
- `modf` 具有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
+ `modf` 有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md)。  
   
  C++ 允許多載，因此您可以呼叫採用並傳回 `float` 或 `long double` 參數之 `modf` 的多載。 在 C 程式中，`modf` 會一律採用兩個雙精確度值並傳回一個雙精確度值。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`modf`, `modff`, `modfl`|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -130,7 +131,7 @@ int main( void )
 For -14.876543, the fraction is -0.876543 and the integer is -14  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

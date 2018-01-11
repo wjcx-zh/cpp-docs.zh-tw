@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 842562478ab3734b3dd6c0b02475a09b1a331e69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de9db1c9ebf6e95670a36f44c9233458badd74c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isintegral-class"></a>is_integral 類別
 測試類型是否為整數。  
@@ -80,7 +81,7 @@ is_integral<float> == false
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_enum 類別](../standard-library/is-enum-class.md)   
  [is_floating_point 類別](../standard-library/is-floating-point-class.md)

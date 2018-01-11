@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369ef30758b687c94c97e5fb0cf18bb7565ea83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cc0b9f85392a69191ee3c948985c61bd2d1f494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleresizebar-class"></a>COleResizeBar 類別
 支援就地 OLE 項目調整大小的控制列類型。  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class COleResizeBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleResizeBar::COleResizeBar](#coleresizebar)|建構 `COleResizeBar` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleResizeBar::Create](#create)|建立和初始化 Windows 子視窗，並產生關聯來`COleResizeBar`物件。|  
   
@@ -104,7 +105,7 @@ virtual BOOL Create(
 ### <a name="return-value"></a>傳回值  
  如果已建立的大小調整列; 非零，否則便是 0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 SUPERPAD](../../visual-cpp-samples.md)   
  [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

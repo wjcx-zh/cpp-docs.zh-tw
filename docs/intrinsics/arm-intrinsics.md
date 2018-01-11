@@ -1942,11 +1942,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de33fd0baf8ffb5ccce5fc5a532413f27a2b42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ecdf6a3e736cfe2876d7ea68a8f113e6b120b40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-intrinsics"></a>ARM 內建
 Visual C++ 編譯器讓 ARM 架構上可使用下列內建函式。 如需有關 ARM 的詳細資訊，請參閱[ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?LinkId=522049)和[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 資訊中心網站上。  
@@ -2579,7 +2580,7 @@ void _MoveFromCoprocessor64(
   
  [[NEON](#top)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [ARM 組合程式參考](../assembler/arm/arm-assembler-reference.md)   
  [C++ 語言參考](../cpp/cpp-language-reference.md)

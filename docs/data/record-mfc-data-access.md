@@ -17,14 +17,17 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02d5b302bd8407109bf845d80de8803ff0eb9353
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f15be890b69f559e304fdab39e53a696cbb7c34d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-mfc-data-access"></a>記錄 (MFC 資料存取)
 記錄是單一實體的資料收集，例如一個帳戶或客戶儲存在資料表中 (資料表的資料列)。 記錄由包含各類資料的連續資料行 (有時候稱為欄位) 群組所組成。 一組從資料來源選取的記錄 (在資料庫詞彙中通常稱為結果集)，在 MFC 中稱為記錄集。 如需詳細資訊，請參閱[資料錄集 (ODBC)](../data/odbc/recordset-odbc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

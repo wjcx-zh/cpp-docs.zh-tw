@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04fb17130f82c4b34b461f9d4fe0880b1363d3c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4fcda1d1c288e6fe8d6a3dfafea287e79ab6738f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
 使字串指標前進一個字元。  
@@ -95,7 +96,7 @@ unsigned char *_mbsinc_l(
  這些常式每個都會傳回緊接在 `current` 之後的字元的指標。  
   
 ## <a name="remarks"></a>備註  
- `_mbsinc` 會傳回緊接在 `current` 之後的多位元組字元中第一個位元組的指標。 `_mbsinc` 會根據目前使用的[多位元組字碼頁](../../c-runtime-library/code-pages.md)來辨識多位元組字元序列；`_mbsinc_l` 與其相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `_mbsinc` 會傳回緊接在 `current` 之後的多位元組字元中第一個位元組的指標。 `_mbsinc` 會根據目前使用的[多位元組字碼頁](../../c-runtime-library/code-pages.md)來辨識多位元組字元序列；`_mbsinc_l` 與其相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  若已定義 `_tcsinc`，定義於 Tchar.h 中的一般文字函式 `_mbsinc` 會對應至 `_MBCS`；若已定義 `_wcsinc`，則該函式會對應至 `_UNICODE`。 若兩者皆否，則 `_tcsinc` 會對應至 `_strinc`。 `_strinc` 和 `_wcsinc` 分別是單一位元組字元版本和寬字元版本的 `_mbsinc`。 只有針對此對應才提供 `_strinc` 和 `_wcsinc`，除此之外都不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。  
   
@@ -106,7 +107,7 @@ unsigned char *_mbsinc_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_mbsinc`|\<mbstring.h>|  
 |`_mbsinc_l`|\<mbstring.h>|  
@@ -115,7 +116,7 @@ unsigned char *_mbsinc_l(
   
  如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [_strdec、_wcsdec、_mbsdec、_mbsdec_l](../../c-runtime-library/reference/strdec-wcsdec-mbsdec-mbsdec-l.md)   
  [_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   

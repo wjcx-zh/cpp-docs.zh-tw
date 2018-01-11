@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff76d78cd3f624e3bdb0d21af550a340a2aa498e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl 類別
 實作 OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx)介面，從資料列集擷取任意資料列。  
@@ -69,7 +72,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
  `BookmarkMapClass`  
  書籤所持有的所有資料列控制代碼的儲存體單元。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="interface-methods"></a>介面方法  
   
@@ -98,7 +101,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 ## <a name="requirements"></a>需求  
  **標頭**： 為 atldb  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   

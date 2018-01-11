@@ -1,42 +1,42 @@
 ---
-title: "vector::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成員 [STL/CLR]"
+title: "vector::to_array (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 00e1f1c6-6ef5-4238-b95a-411059e0b69b
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3ba05cb75f3ff2d67343b5acff715919edb8aede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製受控制序列到新陣列。  
+# <a name="vectortoarray-stlclr"></a>vector::to_array (STL/CLR)
+將受控制的序列複製到新的陣列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## 備註  
- 成員函式會傳回包含受控制序列的陣列。  您會用它來取得控制序列的陣列形式的複本。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列的陣列。 您可以使用它來取得陣列的形式受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_to_array.cpp   
@@ -67,12 +67,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+a b c d  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)

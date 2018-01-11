@@ -1,35 +1,35 @@
 ---
-title: "__vmx_vmread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VMREAD 指令"
-  - "內建 __vmx_vmread"
+title: "__vmx_vmread |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmread
+dev_langs: C++
+helpviewer_keywords:
+- VMREAD instruction
+- __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f4bc649f35eb2e3d3ce203529bf4010a3d4f53fe
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmread
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="vmxvmread"></a>__vmx_vmread
+**Microsoft 特定的**  
   
- 讀取指定的欄位從目前的虛擬機器控制結構 \(VMCS\)，並將它放在指定的位置。  
+ 從目前的虛擬機器控制結構 (VMCS) 讀取指定的欄位，並將它放在指定的位置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned char __vmx_vmread(  
@@ -38,34 +38,34 @@ unsigned char __vmx_vmread(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
   
 |參數|描述|  
-|--------|--------|  
-|\[in\] `Field`|讀取 \[VMCS\] 欄位中。|  
-|\[in\] `FieldValue`|從 \[VMCS\] 欄位所指定的變數的指標，來儲存值的位置讀取`Field`參數。|  
+|---------------|-----------------|  
+|[輸入] `Field`|要讀取的 VMCS 欄位。|  
+|[輸入] `FieldValue`|從所指定的 VMCS 欄位，讀取儲存的值位置的指標`Field`參數。|  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
   
 |值|意義|  
-|-------|--------|  
-|0|操作順利完成。|  
-|1|作業失敗，並在 \[可用的延伸狀態`VM-instruction error field`的目前的 VMCS。|  
-|2|作業失敗，沒有可用的狀態。|  
+|-----------|-------------|  
+|0|作業成功。|  
+|1|作業失敗，在目前 VMCS的 `VM-instruction error field` 中有擴充狀態。|  
+|2|作業失敗，無可用的狀態。|  
   
-## 備註  
- `__vmx_vmread`函式相當於`VMREAD`機器指令。  值為`Field`參數是一個 Intel 文件中所述的已編碼的欄位索引。  如需詳細資訊，搜尋文件中，"Intel 虛擬化技術規格的 ia\-32 Intel 架構，「 文件編號 C97063\-002，在[Intel 公司](http://go.microsoft.com/fwlink/?LinkId=127)網站的 url，然後請參閱 ＜ 附錄 c ＞ 文件。  
+## <a name="remarks"></a>備註  
+ `__vmx_vmread`函數即相當於`VMREAD`機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件，而 < Intel 虛擬化技術規格的 ia-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站台，然後參閱該文件的附錄 C.  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 結束 Microsoft 特定  
+**結束 Microsoft 特定的**  
   
-## 請參閱  
- [編譯器內建](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmwrite](../intrinsics/vmx-vmwrite.md)
+## <a name="see-also"></a>請參閱  
+ [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
+ [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f9152384522725dc932d0ce5e1c4cc81827160b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5c128a2a2e32b5e4854725354ed484a335ab0c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-a-document-class-from-cdocument"></a>從 CDocument 衍生文件類別
 文件包含並管理您的應用程式資料。 若要使用 MFC 應用程式精靈提供的文件類別，您必須執行下列作業：  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="other-document-functions-often-overridden"></a>通常被覆寫的其他文件函式  
  您也可以覆寫其他**CDocument**成員函式。 特別是，您通常需要覆寫[OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument)和[OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument)來初始化文件的資料成員和[DeleteContents](../mfc/reference/cdocument-class.md#deletecontents)終結動態配置的資料。 如需覆寫成員的資訊，請參閱類別[CDocument](../mfc/reference/cdocument-class.md)中*MFC 參考*。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用文件](../mfc/using-documents.md)
 

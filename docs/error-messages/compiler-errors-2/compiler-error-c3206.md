@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3206
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3206
+f1_keywords: C3206
+dev_langs: C++
+helpviewer_keywords: C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5f4318aabb2ecc616f08e98dfd08a2edd537d87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 600ea77821fc457a631f96d48b2416f958dce667
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3206"></a>編譯器錯誤 C3206
 'function' : 'param' 的類型引數無效，類別類型 'typename' 遺漏類型引數清單  
@@ -96,11 +92,8 @@ int main() {
 }  
 ```  
   
- 此錯誤也可能因為 Visual C++ .NET 2003 中的編譯器一致性處理而產生，其中類別樣板不允許作為範本類型引數。  
-  
- 類別樣板不允許作為範本類型引數。 這過去在 Visual C++ .NET 2003 中可行，但它現在是無效的 C++。  
-  
- 下列範例可在 Visual C++ .NET 2002 中編譯，但在 Visual C++ .NET 2003 中將會失敗：  
+ 
+ 類別樣板不允許作為範本類型引數。 下列範例會產生 C3206:  
   
 ```  
 // C3206e.cpp  
@@ -134,7 +127,7 @@ int main() {
 }  
 ```  
   
- 如果樣板類樣板參數是必要的，則 Visual C++ .NET 2003 和 Visual C++ .NET 2002 版本中都有效的錯誤解決方法需要您將函式包裝在使用樣板類樣板參數的樣板類別中：  
+ 如果樣板類樣板參數是必要的您必須包裝函數的函數會採用樣板類樣板參數的樣板類別中：  
   
 ```  
 // C3206g.cpp  

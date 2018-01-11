@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3515b9da7513080e825457d98aa06bccb63a1029
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 329461338579dc0787c6e3d208abac89ec762004
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-conversions-ccli"></a>使用者定義轉換 (C++/CLI)
 項目中的型別轉換為參考或值類型或參考類型的執行個體時，本節會討論使用者定義轉換 (UDC)。  
@@ -323,5 +326,5 @@ int main() {
 2000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

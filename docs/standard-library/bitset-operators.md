@@ -12,10 +12,9 @@ f1_keywords:
 - bitset/std::operator&lt;&lt;
 - bitset/std::operator^
 - bitset/std::operator|
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 運算子
 ||||  
@@ -85,7 +84,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  將位元序列的文字表示插入輸出資料流。  
   
 ```  
@@ -106,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>備註  
  此樣板函式會多載 **operator<<**，允許寫出 bitset，而不先將它轉換為字串。 樣板函式有效地執行：  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
 ### <a name="example"></a>範例  
   
@@ -139,7 +138,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  將位元字元的字串讀入 bitset。  
   
 ```  
@@ -163,7 +162,7 @@ _Istr,
  此樣板函式會傳回字串 `_Istr`。  
   
 ### <a name="remarks"></a>備註  
- 此樣板函式會多載 **operator>>** 將值 bitset( `str`) 儲存在 bitset _ *Right* 中，其中 `str` 是從 `_Istr` 中擷取之 [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** 類型的物件。  
+ 此樣板函式會多載 **operator>>** 將值 bitset( `str`) 儲存在 bitset _ *Right* 中，其中 `str` 是從 `_Istr` 中擷取之 [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** 類型的物件。  
   
  此樣板函式會從 `_Istr` 中擷取元素，並將其插入 bitset，直到：  
   
@@ -320,7 +319,6 @@ bitset 2: 0011
 bitset 3: 0111  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<bitset>](../standard-library/bitset.md)
-
 

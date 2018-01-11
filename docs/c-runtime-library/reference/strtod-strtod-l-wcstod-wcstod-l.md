@@ -53,11 +53,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 91bcf833efb25945dbf6cb33d31c666feec34b56
-ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.workload: cplusplus
+ms.openlocfilehash: 1d46e6402efe69a9099d53d9d93b5b367f6dd18c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
@@ -131,12 +132,12 @@ double wcstod_l(
 
 ## <a name="requirements"></a>需求
 
-|常式|必要的標頭|
+|常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |`strtod`, `_strtod_l`|C: &lt;stdlib.h> C++: &lt;cstdlib> 或 &lt;stdlib.h> |
 |`wcstod`, `_wcstod_l`|C:&lt;stdlib.h> 或 &lt;wchar.h> C++: &lt;cstdlib>、&lt;stdlib.h> 或 &lt;wchar.h> |
 
-如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
+如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -203,7 +204,7 @@ string = 10110134932
    Stopped scan at: 932
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)   
 [浮點支援](../../c-runtime-library/floating-point-support.md)   

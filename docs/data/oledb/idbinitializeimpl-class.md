@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a7a51023f167eee5fbd4082486409f4e11a15547
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 059d88673fe26dd1381818c474a440309dcafa73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl 類別
 提供的實作[IDBInitialize](https://msdn.microsoft.com/en-us/library/ms713706.aspx)介面。  
@@ -40,7 +43,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
  `T`  
  您的類別，衍生自`IDBInitializeImpl`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -52,7 +55,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
   
 |||  
 |-|-|  
-|[初始化](../../data/oledb/idbinitializeimpl-initialize.md)|啟動提供者。|  
+|[Initialize](../../data/oledb/idbinitializeimpl-initialize.md)|啟動提供者。|  
 |[解除初始化](../../data/oledb/idbinitializeimpl-uninitialize.md)|停止提供者。|  
   
 ### <a name="data-members"></a>資料成員  
@@ -68,6 +71,6 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

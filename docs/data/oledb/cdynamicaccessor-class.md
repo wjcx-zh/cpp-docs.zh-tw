@@ -1,77 +1,79 @@
 ---
-title: "CDynamicAccessor 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor"
-  - "ATL::CDynamicAccessor"
-  - "CDynamicAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicAccessor 類別"
+title: "CDynamicAccessor 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor
+- ATL::CDynamicAccessor
+- CDynamicAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicAccessor class
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f88c3eff9c8160a0e322c93dacf6985dc7b8a20b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-讓您能在不知道資料庫結構描述 \(資料庫的基礎結構\) 的情況下，存取資料來源。  
+# <a name="cdynamicaccessor-class"></a>CDynamicAccessor 類別
+讓您能在不知道資料庫結構描述 (資料庫的基礎結構) 的情況下，存取資料來源。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CDynamicAccessor : public CAccessorBase  
 ```  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
-|[AddBindEntry](../../data/oledb/cdynamicaccessor-addbindentry.md)|覆寫預設存取子時，加入繫結項目至輸出資料行。|  
-|[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)|執行個體化及初始化 `CDynamicAccessor` 物件。|  
-|[關閉](../../data/oledb/cdynamicaccessor-close.md)|解除所有資料行的繫結，釋放配置的記憶體，並釋放類別中的 [IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx) 介面指標。|  
-|[GetBookmark](../../data/oledb/cdynamicaccessor-getbookmark.md)|擷取目前行的書籤。|  
-|[GetBlobHandling](../../data/oledb/cdynamicaccessor-getblobhandling.md)|擷取目前行的 BLOB 控制碼值。|  
-|[GetBlobSizeLimit](../../data/oledb/cdynamicaccessor-getblobsizelimit.md)|擷取最大的 BLOB 大小 \(以位元組為單位\)。|  
-|[GetColumnCount](../../data/oledb/cdynamicaccessor-getcolumncount.md)|擷取資料列集的資料行數目。|  
-|[GetColumnFlags](../../data/oledb/cdynamicaccessor-getcolumnflags.md)|擷取資料列的特性。|  
+|[AddBindEntry](../../data/oledb/cdynamicaccessor-addbindentry.md)|覆寫預設存取子時，請將繫結項目加入至輸出資料行中。|  
+|[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)|執行個體化並初始化`CDynamicAccessor`物件。|  
+|[關閉](../../data/oledb/cdynamicaccessor-close.md)|所有資料行解除繫結，釋放配置的記憶體，並釋放[IAccessor](https://msdn.microsoft.com/en-us/library/ms719672.aspx)類別中的介面指標。|  
+|[GetBookmark](../../data/oledb/cdynamicaccessor-getbookmark.md)|擷取目前的資料列的書籤。|  
+|[GetBlobHandling](../../data/oledb/cdynamicaccessor-getblobhandling.md)|擷取 BLOB 處理目前的資料列的值。|  
+|[GetBlobSizeLimit](../../data/oledb/cdynamicaccessor-getblobsizelimit.md)|擷取最大 BLOB 大小 （位元組）。|  
+|[GetColumnCount](../../data/oledb/cdynamicaccessor-getcolumncount.md)|擷取資料列集中的資料行的數目。|  
+|[GetColumnFlags](../../data/oledb/cdynamicaccessor-getcolumnflags.md)|擷取的資料行的特性。|  
 |[GetColumnInfo](../../data/oledb/cdynamicaccessor-getcolumninfo.md)|擷取資料行中繼資料。|  
-|[GetColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|擷取指定資料行的名稱。|  
-|[GetColumnType](../../data/oledb/cdynamicaccessor-getcolumntype.md)|擷取指定資料行的資料型別。|  
-|[GetLength](../../data/oledb/cdynamicaccessor-getlength.md)|擷取資料行的可能上限 \(以位元組為單位\)。|  
-|[GetOrdinal](../../data/oledb/cdynamicaccessor-getordinal.md)|擷取指定資料行名稱的資料行索引。|  
-|[GetStatus](../../data/oledb/cdynamicaccessor-getstatus.md)|擷取指定資料行的狀態。|  
+|[GetColumnName](../../data/oledb/cdynamicaccessor-getcolumnname.md)|擷取指定之資料行名稱。|  
+|[GetColumnType](../../data/oledb/cdynamicaccessor-getcolumntype.md)|擷取指定之資料行的資料類型。|  
+|[GetLength](../../data/oledb/cdynamicaccessor-getlength.md)|擷取的資料行，以位元組為單位的最大可能長度。|  
+|[GetOrdinal](../../data/oledb/cdynamicaccessor-getordinal.md)|擷取指定的資料行名稱的資料行索引。|  
+|[GetStatus](../../data/oledb/cdynamicaccessor-getstatus.md)|擷取指定之資料行的狀態。|  
 |[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)|從緩衝區中擷取資料。|  
-|[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)|設置目前行的 BLOB 控制碼值。|  
-|[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)|設置 BLOB 大小上限 \(以位元組為單位\)。|  
-|[SetLength](../../data/oledb/cdynamicaccessor-setlength.md)|設置資料行的長度 \(以位元組為單位\)。|  
-|[SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)|設置指定資料行的狀態。|  
-|[SetValue](../../data/oledb/cdynamicaccessor-setvalue.md)|儲存資料至緩衝區。|  
+|[SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)|設定 BLOB 處理目前的資料列的值。|  
+|[SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)|設定最大 BLOB 大小 （位元組）。|  
+|[SetLength](../../data/oledb/cdynamicaccessor-setlength.md)|設定資料行的長度，以位元組為單位。|  
+|[SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)|設定指定之資料行的狀態。|  
+|[SetValue](../../data/oledb/cdynamicaccessor-setvalue.md)|儲存至緩衝區的資料。|  
   
-## 備註  
- 使用 `CDynamicAccessor` 方法取得資料行資訊，例如資料行名稱、資料行計數和資料型別等等。  接下來您可以在執行階段使用這些資料行資訊，動態地建立存取子。  
+## <a name="remarks"></a>備註  
+ 使用`CDynamicAccessor`方法，取得資料行資訊，例如資料行名稱、 資料行計數、 資料類型，等等。 然後，您會使用此資料行資訊在執行階段動態建立存取子。  
   
- 資料行資訊儲存於這個類別所建立和管理的暫存區中。  使用 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) 方法從緩衝區取得資料。  
+ 資料行資訊會儲存在緩衝區中，建立和管理由這個類別。 取得資料緩衝區使用[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)。  
   
- 如需使用動態存取子類別的詳細資訊和範例，請參閱 [使用動態存取子](../../data/oledb/using-dynamic-accessors.md)。  
+ 討論和使用動態存取子類別的範例，請參閱[使用動態存取子](../../data/oledb/using-dynamic-accessors.md)。  
   
-## 需求  
- **標頭**：atldbcli.h  
+## <a name="requirements"></a>需求  
+ **標頭檔**：atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 類別](../../data/oledb/caccessor-class.md)   

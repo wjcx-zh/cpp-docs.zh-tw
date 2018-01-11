@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1067
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1067
+f1_keywords: C1067
+dev_langs: C++
+helpviewer_keywords: C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8889ccbfcac31917948da719444dab68a2d1b9c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7ef424de5d375f2d198a5f358976d058d556c506
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1067"></a>嚴重錯誤 C1067
 編譯器限制： 已超過類型記錄的大小的 64k 限制  

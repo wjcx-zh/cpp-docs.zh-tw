@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 6542519d0069ed42bacf8d9566c40320fd32d946
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 92dd4ea8251a0131fa9b7224aa5ea0aa021584fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lrotl-lrotr"></a>_lrotl、_lrotr
 將位元向左 (`_lrotl`) 或向右 (`_lrotr`) 旋轉。  
@@ -83,7 +67,7 @@ unsigned long _lrotr(
 ```  
   
 #### <a name="parameters"></a>參數  
- *value*  
+ *值*  
  要旋轉的值。  
   
  `shift`  
@@ -97,7 +81,7 @@ unsigned long _lrotr(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_lrotl`|\<stdlib.h>|  
 |`_lrotr`|\<stdlib.h>|  
@@ -133,6 +117,6 @@ int main( void )
 0xfac35791 rotated right four times is 0x1fac3579  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [_rotl、_rotl64、_rotr、_rotr64](../../c-runtime-library/reference/rotl-rotl64-rotr-rotr64.md)

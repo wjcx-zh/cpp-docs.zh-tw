@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse
 - AFXRENDERTARGET/CD2DEllipse::CD2DEllipse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CD2DEllipse [MFC], CD2DEllipse
+dev_langs: C++
+helpviewer_keywords: CD2DEllipse [MFC], CD2DEllipse
 ms.assetid: e9f02f54-acf2-427e-b349-db50cd9a77df
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8629268e838fb6e3ad25a8b62a4ff8bf334799e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 97a14391eda7716b71560a5f1e65a4bd65a329d1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse 類別
 `D2D1_ELLIPSE` 的包裝函式。  
@@ -37,11 +34,11 @@ ms.lasthandoff: 10/09/2017
 class CD2DEllipse : public D2D1_ELLIPSE;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DEllipse::CD2DEllipse](#cd2dellipse)|多載。 建構`CD2DEllipse`物件從`D2D1_ELLIPSE`物件。|  
   
@@ -80,6 +77,5 @@ CD2DEllipse(
  `sizeRadius`  
  X 半徑和橢圓形的 Y 半徑。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

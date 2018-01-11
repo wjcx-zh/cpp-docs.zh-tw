@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9380ada48041a502a4be41fbb9ba8b954fff3ae6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e94865ad7a44abff5d62842f41097462d7da4c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 類別
 regex_traits for wchar_t 的特製化。  
@@ -39,7 +40,7 @@ class regex_traits<wchar_t>
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<regex>](../standard-library/regex.md)  
 [regex_constants 類別](../standard-library/regex-constants-class.md)  
 [regex_error 類別](../standard-library/regex-error-class.md)  

@@ -1,45 +1,47 @@
 ---
-title: "ptr::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.Release"
-  - "ptr::Release"
-  - "msclr.com.ptr.Release"
-  - "msclr::com::ptr::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Release 方法"
+title: "ptr::Release |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.Release
+- ptr::Release
+- msclr.com.ptr.Release
+- msclr::com::ptr::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 7855781e-e4f6-4ad5-86a5-a81e2c3d90db
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3959ea6f1c48c22af15272a768cb73923911829a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-會釋放 COM 物件的所有擁有的參考。  
+# <a name="ptrrelease"></a>ptr::Release
+釋放 COM 物件上擁有的所有參考。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void Release();  
 ```  
   
-## 備註  
- 呼叫這個函式會釋放 COM 物件的所有擁有的參考並設定內部控制代碼傳遞給 `nullptr`的 COM 物件。如果在 COM 物件的其他參考不存在，將會刪除它。  
+## <a name="remarks"></a>備註  
+ 呼叫此函式釋放 COM 物件上的所有已擁有的參考和 COM 物件，以設定的內部控制代碼`nullptr`。  如果不存在其他參考的 COM 物件上，也會終結。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。`ReplaceDocument` 成員函式使用 `Release` 在附加新文件之前釋放所有先前的資料物件。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。  `ReplaceDocument`成員函式使用`Release`附加新的文件前釋放任何先前的文件物件。  
   
 ```  
 // comptr_release.cpp  
@@ -113,11 +115,11 @@ int main() {
 }  
 ```  
   
-## 需求  
- **標頭檔**\<msclr \\ com \\ ptr.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
- **命名空間** msclr::com  
+ **命名空間**msclr::com  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::Detach](../dotnet/ptr-detach.md)

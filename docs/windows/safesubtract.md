@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 98114ebc7baee41970177e9c390f65fa5521544a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5b94d84e6a348b68258fc1b57c2e0ad9ad30e36d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safesubtract"></a>SafeSubtract
 兩個數字的方式防止溢位。  
@@ -36,10 +39,10 @@ inline bool SafeSubtract (
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `t`  
+ [輸入] `t`  
  減法運算中的第一個數字。 這必須為類型 T。  
   
- [in] `u`  
+ [輸入] `u`  
  要減去的數字`t`。 這必須為類型 U。  
   
  [輸出] `result`  
@@ -61,7 +64,7 @@ inline bool SafeSubtract (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

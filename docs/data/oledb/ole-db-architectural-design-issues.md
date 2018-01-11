@@ -1,53 +1,55 @@
 ---
-title: "OLE DB 架構設計問題 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB, 應用程式設計考量"
+title: "OLE DB 架構設計問題 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b894ec1cbd227663d46e98e523ffe8c1c5d84475
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
-# OLE DB 架構設計問題
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-開始 OLE DB 應用程式之前，您應當考慮下列問題：  
+# <a name="ole-db-architectural-design-issues"></a>OLE DB 架構設計問題
+啟動 OLE DB 應用程式之前，您應該考慮下列問題：  
   
- **您要使用何種程式設計實作來撰寫 OLE DB 應用程式？**  
- Microsoft 提供的多種程式庫可完成這項工作：OLE DB 樣板程式庫、OLE DB 屬性和 OLE DB SDK 中的原始 OLE DB 介面。  除此之外，還有可幫助您撰寫程式的精靈。  在 [OLE DB 樣板、屬性和其他實作](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)中說明了這些實作。  
+ **您將使用何種程式設計實作來撰寫您的 OLE DB 應用程式？**  
+ Microsoft 提供數個程式庫，以完成這項作業： OLE DB 樣板程式庫、 OLE DB 屬性和 OLE DB SDK 中的原始 OLE DB 介面。 此外，還有精靈可幫助您撰寫您的程式。 這些實作中所述[OLE DB 樣板、 屬性和其他實作](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)。  
   
- **您需要撰寫自己的提供者嗎？**  
- 大多數開發人員不需要撰寫自己的提供者。  Microsoft 提供了數個提供者。  每當建立一個資料連接時 \(例如，使用 ATL OLE DB 消費者精靈將消費者加入至專案時\)，\[**資料連結屬性**\] 對話方塊會列出登錄在您系統上的所有可用提供者。  如果其中一個提供者適用於您自己的資料存放區和資料存取應用程式，則最簡單的方式就是使用它。  然而，如果您的資料存放區不適用於這些目錄的其中任何一種，就必須建立自己的提供者。  如需建立提供者的詳細資訊，請參閱 [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)。  
+ **您需要撰寫您自己的提供者嗎？**  
+ 大部分的開發人員不需要撰寫自己的提供者。 Microsoft 提供數個提供者。 每當您建立資料連線 （例如，當您將加入您專案中使用 ATL OLE DB 消費者精靈的取用者），**資料連結屬性**對話方塊會列出所有可用的提供者註冊您的系統上。 如果其中一個提供者是適用於您自己的資料存放區和資料存取應用程式，最簡單的做法是使用下列其中一種。 不過，如果您的資料存放區不符合其中一個類別，您必須建立自己的提供者。 建立提供者的相關資訊，請參閱[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)。  
   
- **您的消費者需要何種層次的支援？**  
- 有些消費者是很基本的，有些則是非常複雜。  OLE DB 物件的功能由屬性 \(Property\) 所指定。  當您使用 ATL OLE DB 消費者精靈來建立消費者，或使用資料庫提供者精靈來建立提供者時，它會為您設定適當的物件屬性，提供您一組標準的功能。  然而，如果精靈產生的消費者或提供者類別不支援您的所有需求，您就需要參考 [OLE DB 樣板程式庫](../../data/oledb/ole-db-templates.md)中那些類別的介面。  這些介面包裝原始的 OLE DB 介面，並提供了額外的實作，讓您使用起來更容易。  
+ **您需要使用您的消費者的支援層級？**  
+ 部分取用者可以是非常基本;當其他人可能會很複雜。 屬性會指定 OLE DB 物件的功能。 當您使用 ATL OLE DB 消費者精靈建立消費者或資料庫提供者精靈來建立提供者時，它會設定適當的物件屬性，以提供您一組標準的功能。 不過，如果精靈產生的取用者或提供者類別不支援所需的所有他們這麼做，您需要在類別的介面，請參閱[OLE DB 樣板程式庫](../../data/oledb/ole-db-templates.md)。 這些介面包裝原始的 OLE DB 介面，提供額外的實作，讓您使用起來更容易為您。  
   
- 例如，如果您想要更新資料列集內的資料，但在使用精靈建立消費者時忘記指定這項作業，則您可以在事後設定命令物件上的 **DBPROP\_IRowsetChange** 和 **DBPROP\_UPDATABILITY** 屬性來指定這項功能。  然後，在建立了資料列集以後，它會有 `IRowsetChange` 介面。  
+ 例如，如果您想要更新資料列集中的資料，但忘記使用精靈建立消費者時指定此，您可以指定功能事後藉由設定**DBPROP_IRowsetChange**和**DBPROP_UPDATABILITY**命令物件上的屬性。 然後，資料列集建立時，它會使`IRowsetChange`介面。  
   
- **您是否有使用另一項資料存取技術 \(ADO、ODBC 或 DAO\) 的舊程式碼？**  
- 由於可能會合併使用多種技術 \(例如將 ADO 元件和 OLE DB 元件搭配在一起使用以及將 ODBC 程式碼轉換成 OLE DB\)，Visual C\+\+ 文件無法涵蓋所有的範圍。  不過，下列的 Microsoft 網站有許多涵蓋各種案例的文件：  
+ **您有舊版的程式碼使用其他資料存取技術 （ADO、 ODBC 或 DAO） 嗎？**  
+ 提供技術 （例如 ADO 元件使用 OLE DB 元件和 ODBC 程式碼移轉至 OLE DB） 的可能組合，涵蓋所有情況下是超出範圍的 Visual c + + 文件。 不過，許多文章涵蓋各種案例，有下列 Microsoft 網站：  
   
--   [Microsoft 說明及支援](http://go.microsoft.com/fwlink/?LinkId=148218)  
+-   [Microsoft 說明和支援](http://go.microsoft.com/fwlink/p/?linkid=148218)  
   
--   [Microsoft 資料存取技術文件概觀](http://go.microsoft.com/fwlink/?LinkId=148217)  
+-   [Microsoft 資料存取技術文件概觀](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Visual Studio 方案中心](http://go.microsoft.com/fwlink/?LinkId=148215)  
+-   [Visual Studio 方案中心](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [搜尋 Microsoft.com](http://search.microsoft.com/)  
   
- 執行搜尋時，請輸入最符合您專案的關鍵字組合。例如：如果您搭配使用了 ADO 物件和 OLE DB 提供者，請試著使用 **ADO AND "OLE DB"** 來進行 Boolean 搜尋。  如果您想要將舊版的 DAO 程式碼轉換成 ODBC，請選取 \[all words\]，並指定 **migrating DAO** 或 DAO legacy 這類的字串。  
+ 當您執行搜尋時，輸入關鍵字的組合最適合您的案例。例如： 如果您使用 ADO 物件具有 OLE DB 提供者，再試一次的布林值搜尋與**ADO 和 「 OLE DB 」**。 如果您想要將舊版的 DAO 程式碼移轉到 ODBC，選取 「 所有文字 」，並指定字串，例如**移轉 DAO**。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)

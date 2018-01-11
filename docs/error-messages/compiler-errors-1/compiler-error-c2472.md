@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed41a3d78ab9652d1e88ceefe29011eb5b2225a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5267f20aaed4ebf1c320d3d960684376e29814ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2472"></a>編譯器錯誤 C2472
 'function' 無法在 Managed 程式碼中產生: 'message'，請以 /clr 編譯以便產生混合影像  
@@ -48,5 +49,5 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/clr （common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)

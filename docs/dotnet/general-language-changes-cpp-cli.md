@@ -13,11 +13,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f9d5a04a5613d9a8ee10fbd115672234034b9dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 87ff7f55b67c4e8a84d15099432962ee0939d13a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-language-changes-ccli"></a>一般的語言變更 (C++/CLI)
 從 Managed Extensions for c + + 變更為 Visual c + + CLR 語言功能的數字。  
@@ -39,5 +42,5 @@ ms.lasthandoff: 10/24/2017
  [safe_cast<> 的轉換標記法和簡介](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md)  
  討論變更為轉換標記法，尤其是引進的`safe_cast`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)

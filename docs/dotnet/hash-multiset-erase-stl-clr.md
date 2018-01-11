@@ -1,32 +1,33 @@
 ---
-title: "hash_multiset::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 成員 [STL/CLR]"
+title: "hash_multiset:: erase (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: bddd329d-aece-4b93-8355-005351c3aa45
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9e2e35eeecab632371922705cc95848e84a46d1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除指定位置的項目。  
+# <a name="hashmultiseterase-stlclr"></a>hash_multiset::erase (STL/CLR)
+移除位於指定位置的項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +35,29 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)  
 ```  
   
-#### 參數  
- 首先  
- 要清除之範圍的開頭。  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要清除範圍的開頭。  
   
- Key \- 索引鍵  
- 要清除的索引鍵值。  
+ key  
+ 若要清除的機碼值。  
   
  last  
- 要清除之範圍結尾。  
+ 若要清除的範圍的結尾。  
   
- where  
- 要清除的元素。  
+ 其中  
+ 若要清除的項目。  
   
-## 備註  
- 第 10% 成員函式中將維持在項目外的第一個項目中移除受控制序列的項目所指向的 `where`，並傳回 Iterator，或 [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()` ，如果沒有此類項目存在則為。  您會用它來移除單一項目。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式中移除指向受控制序列的項目`where`，並傳回指定移除的項目之外剩餘的第一個元素的迭代器或[hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md)`()`如果沒有這類元素存在。 您可以使用它來移除單一項目。  
   
- 第二 \+ 成成員函式中受控制序列的項目。將保持在所有項目外的第一個項目被移除的範圍 `[``first``,``last``)`，並傳回 Iterator，則為 `end()` ，如果沒有此類項目存在則為。  您會用它來移除零或多個連續的項目。  
+ 第二個成員函式範圍中移除受控制序列的項目 [`first`， `last`)，並傳回指定任何移除的項目之外剩餘的第一個元素的迭代器或`end()`如果沒有這個項目存在... 您可以使用它來移除零或多個連續的項目。  
   
- 第三 \+ 成成員函式中的索引鍵相同 Bucket 的項目為 `key`控制項序列的所有項目，並傳回項目數的計數中移除的。  您會用它來移除和計數符合指定索引鍵的項目。  
+ 第三個成員函式中移除索引鍵具有對等順序受控制任何的序列項目至`key`，並傳回已移除項目的數目的計數。 您可以使用它來移除並計算所有符合指定之索引鍵的項目。  
   
- 每個項目所花費的時間比例與項目數目的對數超過受控制序列的。  
+ 每個項目清除接受受控制序列的項目數目對數值成比例的時間。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_erase.cpp   
@@ -97,16 +98,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**清除 \(啟動 \(\)\)\= b**  
- **b c d e**  
-**清除 \(啟動 \(\)， end\(\)\-1\) \= e**  
-**大小 \(\) \= 1**   
-## 需求  
- **標題:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::clear](../dotnet/hash-multiset-clear-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::clear (STL/CLR)](../dotnet/hash-multiset-clear-stl-clr.md)

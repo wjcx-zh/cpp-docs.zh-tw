@@ -1,55 +1,54 @@
 ---
-title: "加入類別 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.adding"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL 專案, 加入類別"
-  - "類別 [C++], 加入"
-  - "類別 [C++], 建立"
+title: "加入類別 （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes.adding
+dev_langs: C++
+helpviewer_keywords:
+- ATL projects, adding classes
+- classes [C++], creating
+- classes [C++], adding
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-caps.latest.revision: 24
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d767bd0afa85bc417cd33ce305ffe0061104bf64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 加入類別 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-若要在 Visual C\+\+ 專案中加入類別，請在 \[**方案總管**\] 中，以滑鼠右鍵按一下專案，按一下 \[**加入**\]，然後按一下 \[**類別**\]。  這樣會開啟[加入類別對話方塊](../ide/add-class-dialog-box.md)對話方塊。  
+# <a name="adding-a-class-visual-c"></a>加入類別 (Visual C++)
+若要新增的類別，在 Visual c + + 專案中，在**方案總管] 中**，以滑鼠右鍵按一下專案，按一下**新增**，然後按一下 [**類別**。 這會開啟[加入類別對話方塊](../ide/add-class-dialog-box.md) 對話方塊。  
   
- 當加入類別時，您所指定的類別名稱必須不同於 MFC 或 ATL 中已存在的類別名稱。  如果您所指定的類別名稱已存在於任何這些類別庫，則 Visual C\+\+ 會顯示訊息，表示所指定的類別名稱是保留的名稱。  
+ 當您新增的類別時，您必須指定不同於 MFC 或 ATL 中已存在的類別名稱 如果您指定的名稱已存在於其中一個程式庫時，Visual c + + 會顯示一個訊息，指出指定的名稱已保留。  
   
- 如果您的專案命名慣例要求使用現有名稱，則可只變更名稱中一個或多個字母的大小寫，因為 Visual C\+\+ 會區分大小寫。  例如，雖然無法將類別命名為 `CDocument`，但可以將類別命名為 `cdocument`。  
+ 如果您的專案命名慣例會要求您使用現有的名稱，然後您可以只變更名稱中的一個或多個字母的大小寫因為 Visual c + + 會區分大小寫。 例如，雖然您無法命名類別`CDocument`，您可以將檔案命名`cdocument`。  
   
-## 您要加入什麼類型的類別？  
- 在 \[**加入類別**\] 對話方塊中，當您展開左窗格的 \[**Visual C\+\+**\] 節點時，會顯示數個已安裝範本群組。  這些群組包括 **CLR**、**ATL**、**MFC** 和 **C\+\+**。  當您選取群組時，中間窗格會列出該群組中的可用範本。  每個範本都包含某個類別所需的檔案和原始程式碼。  
+## <a name="what-kind-of-class-do-you-want-to-add"></a>您要新增什麼類型的類別  
+ 在**加入類別**對話方塊中，當您展開**Visual c + +**節點會顯示已安裝的範本數個群組的左窗格中。 群組包含**CLR**， **ATL**， **MFC**，和**c + +**。 當您選取的群組時，該群組中的可用範本的清單會顯示在中間窗格中。 每個範本包含的檔案和原始程式碼所需的類別。  
   
- 若要產生新類別，請在中間窗格選取某個範本，在 \[**名稱**\] 方塊中輸入類別名稱，然後按一下 \[**加入**\]。  這樣會開啟 **\[加入類別精靈\]** 對話方塊，讓您可以指定類別的選項。  
+ 若要產生新的類別，在中間窗格中選取範本中，輸入中的類別名稱**名稱**方塊，然後按一下**新增**。 這會開啟**加入類別精靈**，因此您可以指定類別的選項。  
   
 -   如需如何建立 MFC 類別的詳細資訊，請參閱[MFC 類別](../mfc/reference/adding-an-mfc-class.md)。  
   
--   如需如何建立 ATL 類別的詳細資訊，請參閱[ATL Simple Object](../atl/reference/adding-an-atl-simple-object.md)。  
+-   如需如何建立 ATL 類別的詳細資訊，請參閱[ATL 簡單物件](../atl/reference/adding-an-atl-simple-object.md)。  
   
 > [!NOTE]
->  \[**將 ATL 支援加入至 MFC**\] 範本不會建立類別，而是設定專案使用 ATL。  如需詳細資訊，請參閱[MFC 專案中的 ATL 支援](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。  
+>  範本**加入 ATL 支援加入至 MFC**並不會建立一個類別，但改為設定要使用 ATL 專案 如需詳細資訊，請參閱[MFC 專案中的 ATL 支援](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。  
   
- 若要建立不使用 MFC、ATL 或 CLR 的 C\+\+ 類別，請使用 \[**C\+\+**\] 這個已安裝範本群組中的 \[**C\+\+ 類別**\] 範本。  如需詳細資訊，請參閱[加入泛型 C\+\+ 類別](../ide/adding-a-generic-cpp-class.md)。  
+ 若要讓不使用 MFC，ATL 或 CLR 的 c + + 類別，使用**c + + 類別**中的範本**c + +**群組已安裝的範本。 如需詳細資訊，請參閱[加入泛型 c + + 類別](../ide/adding-a-generic-cpp-class.md)。  
   
- 有兩種表單架構 C\+\+ 類別可供使用。  第一個 [CFormView Class](../mfc/reference/cformview-class.md) 會建立 MFC 類別，  第二個會建立 CLR 類別 Windows Form 類別。  
+ 使用兩種類型的表單架構 c + + 類別。 第一個， [CFormView 類別](../mfc/reference/cformview-class.md)建立 MFC 類別。 第二個建立 CLR Windows Form 的類別。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [建立表單架構的 MFC 應用程式](../mfc/reference/creating-a-forms-based-mfc-application.md)   
  [加入類別對話方塊](../ide/add-class-dialog-box.md)   
  [使用應用程式精靈建立桌面專案](../ide/creating-desktop-projects-by-using-application-wizards.md)   

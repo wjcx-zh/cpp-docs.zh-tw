@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 919a448a33bae03cfb1da9ba8bbed864cc92129d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2b2523e37c3015bb49d123e99f39c1ea4bdb9045
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet 類別
 繼承自**DBPROPSET**結構，並將建構函式會初始化索引鍵欄位，以及`AddProperty`存取方法。  
@@ -55,7 +58,7 @@ class CDBPropSet : public tagDBPROPSET
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CDBPropIDSet 類別](../../data/oledb/cdbpropidset-class.md)   

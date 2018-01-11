@@ -1,41 +1,42 @@
 ---
-title: "set::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 成員 [STL/CLR]"
+title: "set:: size (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: f231c515-b07e-4e18-90fd-535b13c2db70
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3e8e19c7ff7e4dedd34cf2c4cd6a5300ab17e7c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# set::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-計數項目的數目。  
+# <a name="setsize-stlclr"></a>set::size (STL/CLR)
+計算元素的數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_type size();  
 ```  
   
-## 備註  
- 成員函式傳回受控制序列的長度。  您會用它來決定目前項目數目超過受控制序列。  如果您想要的是序列是否具有非零的大小，請參閱 [set::empty](../dotnet/set-empty-stl-clr.md)`()`。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的項目數。 如果您在意順序是否具有非零的大小，請參閱[set:: empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)`()`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_size.cpp   
@@ -69,15 +70,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**大小 \(\) \= 3 開始的 3**  
-**大小 \(\) \= 0 在清除之後**  
-**大小 \(\) \= 2 加 2 之後。**   
-## 需求  
- **標題:** \<cliext\/設定\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::empty](../dotnet/set-empty-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)

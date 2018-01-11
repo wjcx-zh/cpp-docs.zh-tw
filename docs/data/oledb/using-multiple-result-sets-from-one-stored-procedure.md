@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 787c2123981f894eb4b6ba088cfcef774b6ed6f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ec887f01e377ffa6295086bbeeb56dcd884d6276
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>從預存程序使用多重結果集
 大多數的預存程序傳回多個結果集。 這類預存程序通常包含一個或多個 select 陳述式。 取用者必須考慮此選項可處理所有結果集。  
@@ -35,5 +38,5 @@ ms.lasthandoff: 10/24/2017
   
 4.  呼叫`GetNextResult`上`CCommand`類別。 如果另一個結果資料列集可供使用，`GetNextResult`傳回 S_OK，如果您使用手動存取子，應該重建您的資料行。 如果`GetNextResult`會傳回錯誤，有可用的任何進一步的結果集合。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用預存程序](../../data/oledb/using-stored-procedures.md)

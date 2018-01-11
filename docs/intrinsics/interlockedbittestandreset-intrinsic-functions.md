@@ -29,11 +29,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c3ac1ceee45678b9d763e2045b420234f56d88f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 143f067dda7558bf51085d4cb8b873b9e593c706
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset 內建函式
 **Microsoft 特定的**  
@@ -82,7 +83,7 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `a`  
+ [輸入] `a`  
  要檢查的記憶體指標。  
   
  [in] `b`  
@@ -108,10 +109,10 @@ unsigned char _interlockedbittestandreset64_HLERelease(
   
  在支援 Hardware Lock Elision (HLE) 指令的 Intel 處理器上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 (lock write) 的階段以加速效能。 如果這些內建函式在不支援 HLE 的處理器上被呼叫，則會忽略提示。  
   
- 這些常式只可做為內建函式。  
+ 這些常式僅以內建函式的形式供您使用。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

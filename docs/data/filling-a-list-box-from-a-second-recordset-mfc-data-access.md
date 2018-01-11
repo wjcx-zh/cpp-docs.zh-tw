@@ -21,11 +21,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de1282b80517a1c264121fbc0b749d3ca4ca2add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6e411ebcf40099a2236048dd8f151b438fe5b947
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>以第二個記錄集填入清單方塊 (MFC 資料存取)
 根據預設，資料錄檢視與單一資料錄集物件相關聯，其欄位會對應至資料錄檢視的控制項。 有時您可能想要將清單方塊或下拉式方塊控制項置於資料錄檢視中，並填入第二個資料錄集物件中的值。 使用者可以使用清單方塊來選取要在資料錄檢視中顯示的新類別的資訊。 本主題將說明如何和何時執行該操作。  
@@ -77,6 +80,6 @@ void CSectionForm::OnInitialUpdate()
   
  此函式會從文件取得 `m_courseSet` 並開啟它。 然後它會清空 `m_ctlCourseList` 並捲動 `m_courseSet`。 針對每一個資料錄，此函式會呼叫下拉式方塊的 `AddString` 成員函式，從資料錄加入課程 ID 值。 最後，程式碼會設定下拉式方塊的選取項目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄檢視 （MFC 資料存取）](../data/record-views-mfc-data-access.md)   
  [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

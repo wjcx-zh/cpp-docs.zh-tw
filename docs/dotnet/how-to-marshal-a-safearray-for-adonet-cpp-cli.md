@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: abf3df95a41fe3e2ebc0eb15bb4ee9bc0787e96c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 397312a5cc8ef4869f5ce8576e5787e141c1a414
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-marshal-a-safearray-for-adonet-ccli"></a>如何：封送處理 ADO.NET 的 SAFEARRAY (C++/CLI)
 示範如何將原生`SAFEARRAY`到資料庫及如何封送處理為原生資料庫從 managed 的陣列`SAFEARRAY`。  
@@ -176,7 +179,7 @@ int main()
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  包含 ADO.NET 的安全性問題的資訊，請參閱[保護 ADO.NET 應用程式](/dotnet/framework/data/adonet/securing-ado-net-applications)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Runtime.InteropServices>   
  [使用 ADO.NET 資料存取 (C + + /CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
  [ADO.NET](/dotnet/framework/data/adonet/index)   

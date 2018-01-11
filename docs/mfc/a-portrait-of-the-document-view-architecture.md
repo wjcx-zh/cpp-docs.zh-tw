@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e79222f908a7b71e81033fb34517834987e6590
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ceadc55945a31e4787287beb6943897784aeaad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文件/檢視架構的簡介
 在一般 MFC 應用程式中文件和檢視是成對的。 資料會儲存在文件中，不過檢視具有資料的存取權限。 將文件從檢視中分離，會將資料的儲存和維護從其顯示分隔開來。  
@@ -51,6 +52,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [文件/檢視架構的替代方案](../mfc/alternatives-to-the-document-view-architecture.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [文件/檢視架構](../mfc/document-view-architecture.md)
 

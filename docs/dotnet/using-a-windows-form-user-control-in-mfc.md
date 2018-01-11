@@ -20,11 +20,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e836730942b3293ff8adc6aa7f8c75f4d2376cc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59b4d974a6b25b896067bce0042d9a5ff9221cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>在 MFC 中使用 Windows Form 使用者控制項
 使用 MFC Windows Form 支援類別，您可以裝載 Windows Form 控制項在 MFC 應用程式為 ActiveX 控制項，MFC 對話方塊或檢視內。 此外，Windows Form 表單可以裝載為 MFC 對話方塊。  
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
  如果您的 MFC 應用程式使用 Windows Form，您需要重新發佈 mfcmifc90.dll 與您的應用程式。 如需詳細資訊，請參閱[轉散發 MFC 程式庫](../ide/redistributing-the-mfc-library.md)。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [將 Windows Forms 使用者控制項裝載至 MFC 對話方塊中](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
   
  [將 Windows Form 使用者控制項裝載為 MFC 檢視](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
@@ -82,6 +85,6 @@ ms.lasthandoff: 10/24/2017
   
  [Windows Forms 控制項](/dotnet/framework/winforms/controls/index)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
  [表單檢視](../mfc/form-views-mfc.md)

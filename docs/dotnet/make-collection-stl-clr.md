@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08c0730567b327896ee3e5b5d7ed86b8de4b391a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 718483b6d95e1eb1eb67f66d2b9c18a8e17cae20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makecollection-stlclr"></a>make_collection (STL/CLR)
 請`range_adapter`迭代器配對。  
@@ -102,5 +105,5 @@ SyncRoot not nullptr = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

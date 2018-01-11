@@ -1,37 +1,35 @@
 ---
-title: "編譯器警告 (層級 4) C4266 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4266"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4266"
+title: "編譯器警告 （層級 4） C4266 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4266
+dev_langs: C++
+helpviewer_keywords: C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e7d94cc47d6df61a286d97f5a6d3a382ad3820cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 4) C4266
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 基底類別 'type' 的虛擬成員函式沒有覆寫; 函式已被隱藏  
+# <a name="compiler-warning-level-4-c4266"></a>編譯器警告 (層級 4) C4266
+'function': 沒有覆寫的基底 'type'; 虛擬成員函式函式已隱藏  
   
- 衍生類別並未覆寫虛擬函式的所有多載。  
+ 在衍生的類別不會覆寫虛擬函式的所有多載。  
   
- 此警告在預設情況下為關閉的。如需詳細資訊，請參閱[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 此警告預設為關閉。  如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。  
   
- 下列範例會產生 C4266：  
+ 下列範例會產生 C4266:  
   
 ```  
 // C4266.cpp  
@@ -48,7 +46,7 @@ class LocalBinding : private Engine {
 };   // C4266  
 ```  
   
- 可能的解決方案：  
+ 可能的解決方式：  
   
 ```  
 // C4266b.cpp  

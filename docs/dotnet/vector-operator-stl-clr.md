@@ -1,45 +1,46 @@
 ---
-title: "vector::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator[] 成員 [STL/CLR]"
+title: "vector::operator(STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator[]
+dev_langs: C++
+helpviewer_keywords: operatormember [] [STL/CLR]
 ms.assetid: 379a7029-460d-4de8-918b-c79e3e13b9d4
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4fa87557c7df4560abf77999d414d630de7e6da1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-存取在指定位置的項目。  
+# <a name="vectoroperatorstlclr"></a>vector::operator(STL/CLR)
+存取指定位置的項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reference operator[](size_type pos);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  pos  
- 要存取之項目的位置。  
+ 要存取的項目的位置。  
   
-## 備註  
- 成員運算子傳回指向位於 `pos` 的項目之參考。  您可用它來存取您知道位置的項目。  
+## <a name="remarks"></a>備註  
+ 成員運算子會傳回 referene 位置的項目至`pos`。 您可以使用它來存取您知道其位置的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_operator_sub.cpp   
@@ -68,13 +69,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a x c**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+a b c  
+a x c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::at](../dotnet/vector-at-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)

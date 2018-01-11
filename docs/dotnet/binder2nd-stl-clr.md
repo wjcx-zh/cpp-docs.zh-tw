@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 237bf8bee11234939d93c5af0aa0114f9379cd3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b22c435952602afe96a7f310b931bda8a5bbb13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binder2nd-stlclr"></a>binder2nd (STL/CLR)
 此範本類別描述一個引數函式，呼叫時，會傳回與提供的第一個引數和其預存的第二個引數呼叫其預存的雙引數函式。 您可以使用它指定根據其預存函式的函式物件。  
@@ -129,5 +132,5 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)

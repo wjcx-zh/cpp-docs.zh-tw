@@ -1,41 +1,42 @@
 ---
-title: "list::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend 成員 [STL/CLR]"
+title: "list:: rend (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: b51030ad-1bca-42b0-b890-db47111d2921
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c69549fe4524b15f1fcac53d8a418ff346f3afb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定已還原的受控制序列結尾。  
+# <a name="listrend-stlclr"></a>list::rend (STL/CLR)
+指定反向受控制序列的結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## 備註  
- 成員函式傳回在受控制序列的開頭之外按的反向 Iterator。  因此，它會指定反向序列的 `end`。  您要用它來取得的 Iterator 可指定以相反順序顯示的受控制序列之 `current` 結尾，但是，如果受控制序列的長度變更，它的狀態也可以變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回以外的位置開始，指向受控制序列的反向迭代器。 因此，它會指定`end`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更結尾受控制的序列相反的順序出現，但它的狀態。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_rend.cpp   
@@ -71,17 +72,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-rend\(\) \= b**  
-**\*\-\-盡可能 \(\=\)。**  
- **y x c**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+ y x c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::begin](../dotnet/list-begin-stl-clr.md)   
- [list::end](../dotnet/list-end-stl-clr.md)   
- [list::rbegin](../dotnet/list-rbegin-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)   
+ [list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)   
+ [list::rbegin (STL/CLR)](../dotnet/list-rbegin-stl-clr.md)

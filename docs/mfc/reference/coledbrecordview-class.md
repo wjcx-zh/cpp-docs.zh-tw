@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb13fc956ffffe2e58953aa29f02c56344b07a44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd827d729af5186d6872536cdaa3d8863d1f8d10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView 類別
 在控制項中顯示資料庫記錄的檢視。  
@@ -42,13 +43,13 @@ class COleDBRecordView : public CFormView
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleDBRecordView::COleDBRecordView](#coledbrecordview)|建構 `COleDBRecordView` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleDBRecordView::OnGetRowset](#ongetrowset)|傳回標準`HRESULT`值。|  
 |[COleDBRecordView::OnMove](#onmove)|更新資料來源上目前的記錄 （如果已變更），然後將移至指定的記錄 （下一步、 前一個、 第一個或最後一個）。|  
@@ -157,7 +158,7 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
   
  如果您移動超過資料錄集中的最後一筆記錄，資料錄檢視會繼續顯示最後一筆記錄。 如果您向後移動超過第一筆資料錄，資料錄檢視會繼續顯示第一筆記錄。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 
 

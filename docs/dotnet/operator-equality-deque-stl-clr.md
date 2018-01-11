@@ -1,33 +1,33 @@
 ---
-title: "operator== (deque) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator== 成員 [STL/CLR]"
+title: "運算子 = = (deque) (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: b97de473-8a30-4278-b25f-79429f55a764
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 609a3f20a2a93ed8735565911e57ceef47f36e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# operator== (deque) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-雙向佇列相等比較。  
+# <a name="operator-deque-stlclr"></a>operator== (deque) (STL/CLR)
+Deque 相等比較。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         deque<Value>% right);  
 ```  
   
-#### 參數  
- left  
- 要比較的左邊容器。  
+#### <a name="parameters"></a>參數  
+ 左  
+ 要比較的左容器。  
   
- right  
- 要比較的正確的容器。  
+ 向右  
+ 要比較的右容器。  
   
-## 備註  
- 只有當順序是由 `left` 和 `right` 具有相同的長度，而且，每個位置的 `i`，則 `left``[i] ==``right``[i]`，運算子函式傳回 true。  您會用它來測試 `left` 是否已排序與 `right` 相同，這兩個雙佇列是比較項目由項目時。  
+## <a name="remarks"></a>備註  
+ 運算子函式會傳回 true，只有當所控制的序列`left`和`right`具有相同長度和每個位置`i`， `left[i] ==` `right[i]`。 使用它來測試是否`left`排序相同`right`兩個 deque 時項目所比較的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_operator_eq.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **b d**  
-**\[b c\] \[\=\= b c\] 為 true**  
-**\[b c \=\= b\] \[\!\] 為 false**   
-## 需求  
- **標題:** \<cliext\/雙向佇列\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::operator\!\=](../dotnet/deque-operator-inequality-stl-clr.md)   
- [operator\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)   
- [operator\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
- [operator\> \(deque\)](../dotnet/operator-greater-than-deque-stl-clr.md)   
- [operator\<\= \(deque\)](../dotnet/operator-less-or-equal-deque-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: operator ！ = (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)   
+ [運算子\<(deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)   
+ [運算子 > = (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
+ [運算子 > (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)   
+ [operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95c6e0655bcb5868a3c8eefa7a990ceea5dc6371
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a179934a0a94c552ea7dc81e3f4dbdc5a4458d70
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：將 Unmanaged 資源載入至位元組陣列
 本主題將討論幾種方式可以載入到 unmanaged 的資源<xref:System.Byte>陣列。  
@@ -81,5 +84,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

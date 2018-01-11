@@ -19,11 +19,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 090d461a8f11d47d25119f5949f9f570093244fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7285a974b788fd2f6e885a67dab9257a83886d6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lockoperator"></a>lock::operator!=
 不等比較運算子。  
@@ -73,6 +76,6 @@ Inequal!
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [lock 成員](../dotnet/lock-members.md)   
  [lock::operator==](../dotnet/lock-operator-equality.md)

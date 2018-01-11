@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bd43266b88d48cea0b680f97b8f498a1ff5a859
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bffab7b72e99dc6587f1d2cbff84407949dd374b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-the-rich-edit-control"></a>Rich Edit 控制項的概觀
 > [!IMPORTANT]
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
  如需通知的詳細資訊，請參閱[來自 Rich Edit 控制項的通知](../mfc/notifications-from-a-rich-edit-control.md)本主題稍後。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CRichEditCtrl](../mfc/using-cricheditctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

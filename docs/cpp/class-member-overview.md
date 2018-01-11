@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d9a8d274f162e64dc20c5f257d09c84e9871d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-member-overview"></a>類別成員概觀
 類別或結構包含其成員。 類別所執行的工作是由其成員函式執行。 它所維護的狀態會儲存在其資料成員中。 初始化成員檢查方式是建構函式，並清除工作，例如釋放的記憶體和資源的釋放是解構函式。 在 C++11 和更新版本中，可以 (且通常應該) 在宣告時初始化資料成員。  
@@ -174,5 +175,5 @@ int CanInit2::j = i;
 > [!NOTE]
 >  類別名稱 `CanInit2` 前面必須加上 `i`，才能將所要定義的 `i` 指定為 `CanInit2` 類別的成員。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

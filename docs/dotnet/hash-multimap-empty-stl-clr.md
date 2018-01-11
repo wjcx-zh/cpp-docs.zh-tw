@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成員 [STL/CLR]"
+title: "hash_multimap:: empty (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 5fd29e90-e33a-460f-9d42-491b82dbaa40
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 55c103ff31a734f137cd96c083ceb39662d7bec2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-測試是否不存在項目。  
+# <a name="hashmultimapempty-stlclr"></a>hash_multimap::empty (STL/CLR)
+測試項目是否不存在。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool empty();  
 ```  
   
-## 備註  
- 成員函式傳回 true 表示一個空的控制順序。  它就相當於 [hash\_multimap::size](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`。  您會用它來測試 hash\_multimap是否是空的。  
+## <a name="remarks"></a>備註  
+ 成員函式會對空的受控制序列傳回 true。 它相當於[hash_multimap:: size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否 hash_multimap 是空的。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multimap_empty.cpp   
@@ -66,16 +67,19 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= False**  
-**size\(\) \= 0**  
-**empty\(\) \= True**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::size](../dotnet/hash-multimap-size-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md)

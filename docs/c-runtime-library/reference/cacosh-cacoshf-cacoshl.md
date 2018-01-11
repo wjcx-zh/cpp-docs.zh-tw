@@ -43,11 +43,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d1d726f9a2c5176a110f1c7b8f282fc237c59772
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd38830687af7f51329f67b3c886dff7863348b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 擷取複數的反雙曲餘弦值，而且實際軸中有值小於 1 的分支部分。 。  
@@ -84,13 +85,13 @@ _Lcomplex cacoshl(
   
 ## <a name="requirements"></a>需求  
   
-|常式|C 標頭|C++ 標頭|  
+|常式傳回的值|C 標頭|C++ 標頭|  
 |-------------|--------------|------------------|  
 |`cacosh`,               `cacoshf`, `cacoshl`|\<complex.h>|\<ccomplex>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh、catanhf、catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh、ctanhf、ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   

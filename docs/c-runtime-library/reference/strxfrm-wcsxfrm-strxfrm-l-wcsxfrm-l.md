@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - strxfrm
 - _tcsxfrm
 - wcsxfrm
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strxfrm_l function
 - _tcsxfrm function
@@ -44,30 +42,16 @@ helpviewer_keywords:
 - strings [C++], comparing locale
 - _wcsxfrm_l function
 ms.assetid: 6ba8e1f6-4484-49aa-83b8-bc2373187d9e
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: b05ec00ae2144670844cd54de0900aa1412128ff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bc61e1f1dee03d0604b4a7fab97dc4236c1f705c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strxfrm-wcsxfrm-strxfrml-wcsxfrml"></a>strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l
 根據地區設定特定資訊轉換字串。  
@@ -116,7 +100,7 @@ size_t wcsxfrm_l(
  傳回已轉換字串的長度，不計入結束的 Null 字元。 如果傳回值大於或等於 `count`，則無法預測 `strDest` 的內容。 發生錯誤時，每個函式會設定 `errno`，並傳回 `INT_MAX`。 對於無效的字元，`errno` 會設定為 `EILSEQ`。  
   
 ## <a name="remarks"></a>備註  
- `strxfrm` 函式將由 `strSource` 指向的字串轉換成新的定序格式，其儲存在 `strDest`。 轉換並放入結果字串的字元數不會超過 `count` 個字元，包括 Null 字元。 轉換是使用地區設定的 `LC_COLLATE` 分類設定進行。 如需 `LC_COLLATE` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `strxfrm` 會針對與其地區設定相關的行為使用目前的地區設定；`_strxfrm_l` 與其相同，只不過它會使用傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `strxfrm` 函式將由 `strSource` 指向的字串轉換成新的定序格式，其儲存在 `strDest`。 轉換並放入結果字串的字元數不會超過 `count` 個字元，包括 Null 字元。 轉換是使用地區設定的 `LC_COLLATE` 分類設定進行。 如需 `LC_COLLATE` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `strxfrm` 會針對與其地區設定相關的行為使用目前的地區設定；`_strxfrm_l` 與其相同，只不過它會使用傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  轉換之後，對兩個已轉換字串呼叫 `strcmp`，會產生與呼叫套用至原始兩個字串的 `strcoll` 完全相同的結果。 如同 `strcoll` 和 `stricoll`，`strxfrm` 會自動適當地處理多位元組字元字串。  
   
@@ -131,7 +115,7 @@ size_t wcsxfrm_l(
 |`_tcsxfrm`|`strxfrm`|`strxfrm`|`wcsxfrm`|  
 |`_tcsxfrm_l`|`_strxfrm_l`|`_strxfrm_l`|`_wcsxfrm_l`|  
   
- 在 "C" 地區設定中，字元集 (ASCII 字元集) 的字元順序與字元的詞典編纂順序相同。 不過，其他地區設定中，字元集的字元順序可能與詞典編纂字元順序不同。 例如，在特定歐洲地區設定中，字元集中的字元 'a' (值 0x61) 會在字元 '&\#x00E4;' (值 0xE4) 之前，但以詞典編纂而言，字元 'ä' 是在字元 'a' 之前。  
+ 在 "C" 地區設定中，字元集 (ASCII 字元集) 的字元順序與字元的詞典編纂順序相同。 不過，其他地區設定中，字元集的字元順序可能與詞典編纂字元順序不同。 比方說，在某些歐洲地區設定中，字元 'a' （值 0x61） 前面的字元 ' （& s)\#x00E4;'（值 0xE4） 中的字元集，但字元 'ä' 前面的字元 'a' 辭典編纂順序。  
   
  在字元集和詞典編纂字元順序不同的地區設定，請對原始字串使用 `strxfrm`，然後對產生的字串使用 `strcmp`，以產生根據目前地區設定之 `LC_COLLATE` 分類設定的詞典編纂字串比較。 如此，若要依詞典編纂順序比較上述地區設定中的兩個字串，請對原始字串使用 `strxfrm`，然後對產生的字串使用 `strcmp`。 或者，您可以對原始字串使用 `strcoll` 而不是 `strcmp`。  
   
@@ -152,7 +136,7 @@ return( strlen( _string1 ) );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strxfrm`|\<string.h>|  
 |`wcsxfrm`|\<string.h> 或 \<wchar.h>|  
@@ -161,7 +145,7 @@ return( strlen( _string1 ) );
   
  如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [localeconv](../../c-runtime-library/reference/localeconv.md)   
  [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)   

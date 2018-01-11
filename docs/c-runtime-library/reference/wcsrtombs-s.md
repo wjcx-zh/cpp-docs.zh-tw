@@ -32,11 +32,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f8045010875713588fb20a8f05a230717a21a9a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 025acdf18d0e5322ef43de800e3577233a93cb86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 將寬字元字串轉換為其多位元組字元字串表示法。 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) 版本。  
@@ -72,17 +73,17 @@ errno_t wcsrtombs_s(
  [輸出] `sizeInBytes`  
  `mbstr` 緩衝區的大小，以位元組為單位。  
   
- [in] `wcstr`  
+ [輸入] `wcstr`  
  指向要轉換的寬字元字串。  
   
- [in] `count`  
+ [輸入] `count`  
  要儲存在 `mbstr` 緩衝區中的位元組數目上限，或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
   
- [in] `mbstate`  
+ [輸入] `mbstate`  
  `mbstate_t` 轉換狀態物件的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功則為零，失敗則為錯誤碼。  
+ 如果成功，則為零，如果失敗，則為錯誤碼。  
   
 |錯誤狀況|傳回值和 `errno`|  
 |---------------------|------------------------------|  
@@ -116,7 +117,7 @@ errno_t wcsrtombs_s(
   
  `wcsrtombs_s` 函式因為可以重新開機，而與 [wcstombs_s、_wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md) 不同。 針對相同或其他可重新啟動的函式的後續呼叫，轉換狀態會儲存在 `mbstate` 中。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了 `wcsrtombs_s` 的後續呼叫，而不是 `wcstombs_s.`，應用程式應該使用 `wcsrlen`，而不是 `wcslen`。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="exceptions"></a>例外狀況  
  `wcsrtombs_s` 函式是安全多執行緒，但前提是當這個函式執行中、且 `mbstate` 為 Null 時，目前執行緒中沒有任何函式呼叫 `setlocale`。  
@@ -170,11 +171,11 @@ The string was successfully converted.
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`wcsrtombs_s`|\<wchar.h>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

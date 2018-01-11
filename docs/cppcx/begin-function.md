@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4bd4d94d2e65a4ad285a1a87c211169482cee1a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d47244e6428979f5319c9ee02f252ef3e559f7ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="begin-function"></a>begin 函式
 傳回迭代器，指向指定的介面參數所存取之集合的開頭。  
@@ -69,5 +70,5 @@ template <typename T>
   
  **命名空間：** Windows::Foundation::Collections  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

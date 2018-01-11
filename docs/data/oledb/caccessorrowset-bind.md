@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5e744d80e0f95f6938a19ed31f403be5728fd0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 87cdf5def79ed212ba90fe2737309f12b0f1e687
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccessorrowsetbind"></a>CAccessorRowset::Bind
 建立繫結，如果您指定**bBind**為 false [ccommand:: Open](../../data/oledb/ccommand-open.md)。  
@@ -40,5 +43,5 @@ HRESULT Bind( );
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAccessorRowset 類別](../../data/oledb/caccessorrowset-class.md)

@@ -4,39 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- output streams, one-argument manipulators
+dev_langs: C++
+helpviewer_keywords: output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9a2162085b6a78cb376c5bbd7d76943f76115d30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 916a39d284666eebd3398423471991602509e9de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>其他單一引數輸出資料流操作工具
 以下範例使用類型為 `long` 的類別 `money`。 `setpic` 操作工具會附加格式「圖片」字串到類別，可由類別 `money` 的多載資料流插入運算子使用。 圖片字串會當作靜態變數儲存於 `money` 類別，而不是資料流類別的資料成員，因此您不需要衍生新的輸出資料流類別。  
@@ -101,7 +84,6 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有引數的自訂操作工具](../standard-library/custom-manipulators-with-arguments.md)
-
 

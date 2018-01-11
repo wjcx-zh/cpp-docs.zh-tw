@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 500e5b5e6014b7141c000a4e453341ceb5e822d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 48d52a2697289197555438847ba2fcb86aeb3235
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sealing-a-virtual-function"></a>密封虛擬函式
 密封虛擬函式的語法已從 Managed Extensions for c + + Visual c + +。  
@@ -48,7 +51,7 @@ public:
 };  
 ```  
   
- 如果沒有`virtual`這個執行個體中的關鍵字會導致錯誤。 在新語法，也就是內容關鍵字`abstract`可用取代`=0`表示純虛擬函式。 這不是支援 Managed Extensions。 例如：  
+ 如果沒有`virtual`這個執行個體中的關鍵字會導致錯誤。 在新語法，也就是內容關鍵字`abstract`可用取代`=0`表示純虛擬函式。 這不是支援 Managed Extensions。 例如:   
   
 ```  
 __gc class base { public: virtual void f()=0; };  
@@ -60,6 +63,6 @@ __gc class base { public: virtual void f()=0; };
 ref class base { public: virtual void f() abstract; };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在類別或介面中的成員宣告 (C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [sealed](../windows/sealed-cpp-component-extensions.md)

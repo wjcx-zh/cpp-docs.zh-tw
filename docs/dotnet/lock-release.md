@@ -1,47 +1,49 @@
 ---
-title: "lock::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock.release"
-  - "msclr::lock::release"
-  - "lock::release"
-  - "msclr.lock.release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::release"
+title: "lock::release |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock.release
+- msclr::lock::release
+- lock::release
+- msclr.lock.release
+dev_langs: C++
+helpviewer_keywords: lock::release
 ms.assetid: b73d48fc-cf98-4b78-b39d-813d4a12fa84
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e702ffda531d43a2ff8a0d41b10d1f053bdc6e11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# lock::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="lockrelease"></a>lock::release
 釋放鎖定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void release();  
 ```  
   
-## 備註  
- 如果鎖定不保留， `release` 不會有任何作用。  
+## <a name="remarks"></a>備註  
+ 如果沒有被鎖定，`release`不做任何動作。  
   
- 您不需要明確地呼叫這個函式;當 `lock` 物件超出範圍時，其解構函式呼叫 `release`。  
+ 您沒有明確; 呼叫此函式當`lock`物件超出範圍，其解構函式呼叫`release`。  
   
-## 範例  
- 這個範例使用類別的單一執行個體跨多個執行緒的。類別會使用自己的鎖定確保對其內部資料的存取權為每個執行緒是一致的。主應用程式執行緒使用類別的同一個執行個體上具有鎖定定期檢查任何背景工作執行緒是否仍存在，而且會結束，直到所有背景工作執行緒完成其工作。  
+## <a name="example"></a>範例  
+ 這個範例會跨多個執行緒使用單一類別的執行個體。  類別本身會使用鎖定，以確保其內部資料存取都是一致的每個執行緒。  主應用程式執行緒會定期檢查以查看是否仍然存在任何背景工作執行緒，並等候結束，直到所有的工作者執行緒完成其工作使用相同類別的執行個體上的鎖定。  
   
 ```  
 // msl_lock_release.cpp  
@@ -115,22 +117,25 @@ int main() {
 }  
 ```  
   
-  **在執行緒 3，計數器 \= 0**  
-**在執行緒 3，計數器 \= 10**  
-**在執行緒 5，計數器 \= 0**  
-**在執行緒 5，計數器 \= 10**  
-**在執行緒 7，計數器 \= 0**  
-**在執行緒 7，計數器 \= 10**  
-**在執行緒 4，計數器 \= 0**  
-**在執行緒 4，計數器 \= 10**  
-**在執行緒 6，計數器 \= 0**  
-**在執行緒 6，計數器 \= 10**  
-**任何執行緒完成。**   
-## 需求  
- **標頭檔** \<msclr \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\lock.h >  
   
-## 請參閱  
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>請參閱  
  [lock 成員](../dotnet/lock-members.md)   
  [lock::~lock](../dotnet/lock-tilde-lock.md)

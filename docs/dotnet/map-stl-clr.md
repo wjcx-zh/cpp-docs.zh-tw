@@ -18,11 +18,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b6e535dac08e473e281f45e45a084d856c931b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c90fcb415b186257cd2aef801867918b367413b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`map`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -62,9 +65,9 @@ template<typename Key,
  對應  
  受控制序列中項目的其他元件的類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|類型定義|說明|  
+|類型定義|描述|  
 |---------------------|-----------------|  
 |[map::const_iterator (STL/CLR)](../dotnet/map-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
 |[map::const_reference (STL/CLR)](../dotnet/map-const-reference-stl-clr.md)|項目的常數參考類型。|  
@@ -84,7 +87,7 @@ template<typename Key,
 |[map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)|兩個項目值順序的委派。|  
 |[map::value_type (STL/CLR)](../dotnet/map-value-type-stl-clr.md)|元素的類型。|  
   
-|成員函式|說明|  
+|成員函式|描述|  
 |---------------------|-----------------|  
 |[map::begin (STL/CLR)](../dotnet/map-begin-stl-clr.md)|指定受控制序列的開頭。|  
 |[map::clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)|移除所有項目。|  
@@ -107,7 +110,7 @@ template<typename Key,
 |[map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍結尾。|  
 |[map::value_comp (STL/CLR)](../dotnet/map-value-comp-stl-clr.md)|將複製兩個項目值的順序委派。|  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[map::operator= (STL/CLR)](../dotnet/map-operator-assign-stl-clr.md)|取代受控制的序列。|  
 |[map::operator (STL/CLR)](../dotnet/map-operator-stl-clr.md)|將索引鍵對應至其相關聯的對應值。|  
@@ -120,7 +123,7 @@ template<typename Key,
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|重複的物件。|  
 |<xref:System.Collections.IEnumerable>|項目順序。|  
@@ -162,7 +165,7 @@ template<typename Key,
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   

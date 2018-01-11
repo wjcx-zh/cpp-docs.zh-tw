@@ -1,35 +1,34 @@
 ---
-title: "編譯器警告 (層級 4) C4701 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4701"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4701"
+title: "編譯器警告 （層級 4） C4701 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4701
+dev_langs: C++
+helpviewer_keywords: C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d001827c1d3e73ee4724aa52543231a43d41af5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 4) C4701
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可能是未初始化的區域變數" name "  
+# <a name="compiler-warning-level-4-c4701"></a>編譯器警告 (層級 4) C4701
+可能未初始化的區域變數 'name' 使用  
   
- 區域變數 *name* 可能已經使用了，不會指派值。  這會導致不可預測的結果。  
+ 本機變數*名稱*可能使用不含指派值。 這可能導致無法預期的結果。  
   
-## 範例  
- 下列程式碼會產生 C4701 and C4703。  
+## <a name="example"></a>範例  
+ 下列程式碼會產生 C4701 和 C4703。  
   
 ```cpp  
 #include <malloc.h>  
@@ -51,8 +50,13 @@ void main()
 }  
 ```  
   
-  **c:\\src\\test.cpp \(10\)：警告的 C4701:可能是'p'使用的未初始化的區域變數**  
- **c:\\src\\test.cpp \(10\)：警告的 C4703：可能是'p'使用的未初始化的區域指標變數** 若要更正這則警告，請將變數初始化，如此範例所示：  
+```Output  
+c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p' used  
+c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used  
+  
+```  
+  
+ 若要更正這則警告，請將變數初始化，如這個範例所示：  
   
 ```cpp  
 #include <malloc.h>  
@@ -74,6 +78,6 @@ void main()
 }  
 ```  
   
-## 請參閱  
- [編譯器警告 \(層級 4\) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)   
- [警告， \/sdl 和改善未初始化的變數偵測](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)
+## <a name="see-also"></a>請參閱  
+ [編譯器警告 （層級 4） C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)   
+ [警告、 /sdl 和改善未初始化的變數偵測](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

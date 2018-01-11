@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d1f1a4c84c4567b325bb19e3696170f7960b46b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 061766f73b554895f8d7ad8952dc6172fd381169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="output-parameters"></a>輸出參數
 呼叫預存程序是類似於叫用 SQL 命令。 主要差異在於預存程序使用輸出參數 （或 「 outparameters"） 和傳回值。  
@@ -63,5 +66,5 @@ return 0
   
  @_rowcount具報告測試資料表實際上未傳回資料列數目。 不過，此預存程序最多 50 個資料列數目限制。 例如，如果測試中有 100 個資料列，資料列計數會是 50 （因為這段程式碼會擷取前 50 資料列）。 如果資料表中只是有 30 個資料列，資料列計數就是 30。 您必須呼叫**關閉**或**CloseAll**填入具之前擷取其值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用預存程序](../../data/oledb/using-stored-procedures.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 246fd73cdc3b380dae7ea9a6a3d02fcd9290ba1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b7bd3b8a9b455ebb01af7140830446847145b77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unlockfile"></a>_unlock_file
 解除鎖定檔案，並允許其他處理序存取檔案。  
@@ -61,13 +62,13 @@ void _unlock_file(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_unlock_file`|\<stdio.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   
  [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)   

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1c148803da11ea85857cb77753d2e6af6a6ae22e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: da662cf9cbe17539381766d37255e63d958fb7b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unaligned"></a>__unaligned
 當您使用 `__unaligned` 修飾詞宣告指標時，編譯器會假設指標位址資料並未對齊。 因此，對於以 Itanium 處理器系列 (Itanium Processor Family，IPF) 電腦為目標的應用程式，編譯器會產生一次讀取一個未對齊之資料位元組的程式碼。  
@@ -65,5 +66,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)

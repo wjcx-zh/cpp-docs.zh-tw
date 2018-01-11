@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_container 成員 [STL/CLR]"
+title: "priority_queue::get_container (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: bd3cc63b-776f-495c-bf81-a9e8ba189a56
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60f2a5d1fa3a5e00d7b3aeb066672464381d45a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuegetcontainer-stlclr"></a>priority_queue::get_container (STL/CLR)
 存取基礎容器。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 container_type get_container();  
 ```  
   
-## 備註  
- 成員函式傳回基礎容器。  您會用它來略過由容器包裝函式所加的限制。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回基礎容器。 您可以使用它來略過容器包裝函式所加諸的限制。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_priority_queue_get_container.cpp   
@@ -59,12 +60,15 @@ int main()
   
 ```  
   
-  **c b**   
-## 需求  
- **標題:** \<cliext\/佇列\>  
+```Output  
+c a b  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
-## 請參閱  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::container\_type](../dotnet/priority-queue-container-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::container_type (STL/CLR)](../dotnet/priority-queue-container-type-stl-clr.md)

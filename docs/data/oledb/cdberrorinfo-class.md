@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d1ecd29e32686e8cc91ec9716625beeee2cef25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed20f02b51afcd338b0a84f92def104c079869b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo 類別
 支援使用 OLE DB 的 OLE DB 錯誤處理[IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)介面。  
@@ -52,7 +55,7 @@ class CDBErrorInfo
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DBViewer](../../visual-cpp-samples.md)   
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

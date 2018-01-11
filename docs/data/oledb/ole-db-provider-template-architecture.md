@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 289d1d5f09f60b829c6dd7d1f1b00c0de3562518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8c1baa921f4a12aae40a01995cfd0b638cf614d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB 提供者樣板架構
 ## <a name="data-sources-and-sessions"></a>資料來源和工作階段  
@@ -62,6 +65,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用者資料錄](../../data/oledb/user-record.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 介面](https://msdn.microsoft.com/en-us/library/ms709709.aspx)

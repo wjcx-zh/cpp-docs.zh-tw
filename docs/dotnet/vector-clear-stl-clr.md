@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8b03883d25aed8528d972cbc3569c67c56b83df2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 63bb863d6503fa66d3a8b19e002d9a912f953298
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorclear-stlclr"></a>vector::clear (STL/CLR)
 移除所有項目。  
@@ -82,6 +85,6 @@ size() = 0
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)

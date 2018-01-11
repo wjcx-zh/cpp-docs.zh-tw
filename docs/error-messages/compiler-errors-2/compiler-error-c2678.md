@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2678
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2678
+f1_keywords: C2678
+dev_langs: C++
+helpviewer_keywords: C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b28f29f1f0f509200cabe8dad46a9ad7f0b2da1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: d743ba1fbd9b65a7aa8b0f83634848e16b56c407
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2678"></a>編譯器錯誤 C2678
 二元 'operator'：未定義使用左方運算元類型 'type' 的運算子 (或是沒有可接受的轉換)  
@@ -80,4 +76,3 @@ public:
    S test;  
 };  
 ```  
-

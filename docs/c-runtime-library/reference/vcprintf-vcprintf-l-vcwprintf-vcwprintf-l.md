@@ -54,17 +54,18 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b2d16f390503dac45d765804c7577159fdb58453
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fd761e434b9fa9d9db694955d17cac0f33d84b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 使用引數清單的指標，將格式化輸出寫入主控台。 這些函式已有更安全的版本可供使用，請參閱 [_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l](../../c-runtime-library/reference/vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -99,10 +100,10 @@ int _vcwprintf_l(
  `locale`  
  要使用的地區設定。  
   
- 如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 如需詳細資訊，請參閱 [格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="return-value"></a>傳回值  
- 寫入的字元數，或是當發生輸出錯誤時為負值。 如果 `format` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則 `errno` 會設定為 `EINVAL`，並傳回 -1。  
+ 寫入的字元數，或是當發生輸出錯誤時為負值。 如果 `format` 為 null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則 `errno` 會設定為 `EINVAL`，並傳回 -1。  
   
 ## <a name="remarks"></a>備註  
  所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 `_vcwprintf` 是寬字元版本的 `_vcprintf`。 它接受寬字元字串作為引數。  
@@ -121,14 +122,14 @@ int _vcwprintf_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|----------------------|  
 |`_vcprintf`, `_vcprintf_l`|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|  
 |`_vcwprintf`, `_vcwprintf_l`|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
   
  \* UNIX V 相容性的必要項目。  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -162,7 +163,7 @@ int main()
   (Related to symbol '<symbol>' defined on line 5).  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 函式](../../c-runtime-library/vprintf-functions.md)   
  [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   

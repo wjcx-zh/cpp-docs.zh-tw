@@ -31,11 +31,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 711e93f9de1713cd14b297c49f6322b2d4f5fbc5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b51ec2810ddb982d53c3073bdf860b26100859d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conditionvariable-class"></a>condition_variable 類別
 當您具有 `unique_lock<mutex>` 類型的 `mutex` 時，可使用 `condition_variable` 類別來等候事件。 此類型的物件可能比 [condition_variable_any<unique_lock\<mutex>>](../standard-library/condition-variable-any-class.md) 類型的物件效能更好。  
@@ -46,17 +47,17 @@ ms.lasthandoff: 10/24/2017
 class condition_variable;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[condition_variable](#condition_variable)|建構 `condition_variable` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[native_handle](#native_handle)|傳回代表 condition_variable 控制代碼的實作特定類型。|  
 |[notify_all](#notify_all)|解除封鎖所有等候 `condition_variable` 物件的執行緒。|  
@@ -231,8 +232,8 @@ return true;
   
  第三個和第四個方法會使用 `xtime` 類型的物件指標來取代 `chrono::time_point` 物件。 `xtime` 物件可指定等待訊號的時間量上限。  
   
-## <a name="see-also"></a>另請參閱  
- [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>請參閱  
+ [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [<condition_variable>](../standard-library/condition-variable.md)
 
 

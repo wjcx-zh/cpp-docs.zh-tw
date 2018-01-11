@@ -1,44 +1,46 @@
 ---
-title: "auto_gcroot::release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::release"
-  - "auto_gcroot::release"
-  - "auto_gcroot.release"
-  - "msclr.auto_gcroot.release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "release 方法"
+title: "auto_gcroot::release |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::release
+- auto_gcroot::release
+- auto_gcroot.release
+- msclr.auto_gcroot.release
+dev_langs: C++
+helpviewer_keywords: release method
 ms.assetid: 40b253f0-154e-4d79-80a4-ff13199c3ff0
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ea93fa37ab895bd1b96c4955a3edc8fd773f4a86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# auto_gcroot::release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 `auto_gcroot` 管理釋放物件。  
+# <a name="autogcrootrelease"></a>auto_gcroot::release
+釋放物件從`auto_gcroot`管理。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 _element_type release();  
 ```  
   
-## 傳回值  
- 釋放的物件。  
+## <a name="return-value"></a>傳回值  
+ 發行的物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_gcroot_release.cpp  
@@ -81,16 +83,19 @@ int main()
 }  
 ```  
   
-  **ClassA constructor: first**  
-**ClassA constructor: second**  
-**ClassA destructor: second**  
-**Hello from first A\!**  
-**done**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_gcroot.h\>  
+```Output  
+ClassA constructor: first  
+ClassA constructor: second  
+ClassA destructor: second  
+Hello from first A!  
+done  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_gcroot.h >  
   
-## 請參閱  
- [auto\_gcroot 成員](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::~auto\_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>請參閱  
+ [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::~auto_gcroot](../dotnet/auto-gcroot-tilde-auto-gcroot.md)

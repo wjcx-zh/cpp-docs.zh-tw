@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cfa736c83dd76ff8b8f677daad54104ff507df03
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63fff00222aa083bcb392e0d71411bfcf5c0f418
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-handling-differences"></a>例外狀況處理差異
 結構化例外狀況處理和 C++ 例外狀況處理之間的主要差異，在於 C++ 例外狀況處理模型是處理類型，而 C 結構化例外狀況處理模型則是處理某種類型的例外狀況 (明確地說即 `unsigned int`)。 也就是說，C 例外狀況是以不帶正負號的整數值來識別，而 C++ 例外狀況則是以資料類型來識別。 在 C 中引發例外狀況時，每個可能的處理常式都會執行一個篩選器，以檢查 C 例外狀況內容並判斷應接受該例外狀況、將其傳遞至其他處理常式，或是要予以忽略。 C++ 中擲回例外狀況時，它可能是任何類型。  
@@ -150,5 +151,5 @@ Caught a __try exception with SE_Exception.
 nSE = 0xc0000094  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [混合 C (結構化) 和 C++ 例外狀況](../cpp/mixing-c-structured-and-cpp-exceptions.md)

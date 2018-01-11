@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f33266931a2a66b4e349da76625523bb15449e0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 454db96f4fe970870654734c410393dad8cb14fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetrbegin-stlclr"></a>multiset::rbegin (STL/CLR)
 指定反向受控制序列的開頭。  
@@ -73,7 +76,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset:: begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)   
  [multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)   

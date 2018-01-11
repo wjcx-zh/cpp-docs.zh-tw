@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a38c2edeffbdd2c37e69ce0886c24ca0d2f0b68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB 消費者樣板 (C++)
 OLE DB 消費者樣板可以支援 OLE DB 2.6 版規格 (OLE DB 消費者樣板是以 OLE DB 2.6 做為測試對象，但並不支援規格裡的每一個介面)。消費者樣板可將為實作 OLE DB 消費者而必須撰寫的程式碼數量降到最低。 此樣板提供了：  
@@ -64,7 +67,7 @@ OLE DB 消費者樣板可以支援 OLE DB 2.6 版規格 (OLE DB 消費者樣板�
   
 -   [通用 OLE DB 消費者案例 (範例)](../../data/oledb/working-with-ole-db-consumer-templates.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [資料存取](../data-access-in-cpp.md)   
  [OLE DB SDK 文件](https://msdn.microsoft.com/en-us/library/ms722784.aspx)   

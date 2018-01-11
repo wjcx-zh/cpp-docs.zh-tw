@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba12271fa4614b5ec0c7c70b3a7773152ebfec3c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d9a92a5fef96932f1d6a58503fe6355b5a410ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>逐步解說：將 Visual C++ 應用程式部署至應用程式本機資料夾
 描述如何部署 Visual c + + 應用程式檔案複製到其資料夾。  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/24/2017
   
      應用程式執行成功，因為 Visual c + + 程式庫中可用的應用程式的本機資料夾。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [部署範例](../ide/deployment-examples.md)

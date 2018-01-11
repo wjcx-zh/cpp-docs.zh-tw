@@ -17,16 +17,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46d08372e96ef28e45a27da4c16680645d8d50e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f072d9b23a39f82f8a8fd3e8482dffacad48d70c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-support-library"></a>C++ 支援程式庫
 C + + 支援程式庫提供支援 c + + 中的 managed 的程式設計的類別。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [C++ 中封送處理的概觀](../dotnet/overview-of-marshaling-in-cpp.md)  
   
  [資源管理類別](../dotnet/resource-management-classes.md)  

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1017
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1017
+f1_keywords: C1017
+dev_langs: C++
+helpviewer_keywords: C1017
 ms.assetid: 5542e604-599d-4e36-8f83-1d454c5753c9
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e28a4b09ef4d62edd97d734e4a3ad64b8a0c2f86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 478a0a17ef8e0f0e6cb6589798d901837e7aff75
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1017"></a>嚴重錯誤 C1017
 無效的整數常數運算式  

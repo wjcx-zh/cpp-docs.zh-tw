@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a628d0ce3d85a2bdcae9c7d25550cbd36386e67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93652274432e5ae84bc7336f233f1cdfd278dc00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 類別
 這個類別描述因為無法建立並行執行階段中的背景工作執行內容而擲回的例外狀況。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scheduler_worker_creation_error](#ctor)|多載。 建構 `scheduler_worker_creation_error` 物件。|  
   
@@ -76,5 +77,5 @@ explicit _CRTIMP scheduler_worker_creation_error(
  `_Hresult`  
  `HRESULT`錯誤造成的例外狀況的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

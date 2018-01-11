@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - splitpath
 - _wsplitpath
 - _tsplitpath
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _splitpath function
 - pathnames
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: bbd6a163df9daf8e699f3ecf52325786fe89d8ea
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ad76dd59e0119e46030eb19223d678927b3fd077
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="splitpath-wsplitpath"></a>_splitpath、_wsplitpath
 將一個路徑名稱分割為多個元件。 這些函式已有更安全的版本可供使用，請參閱 [_splitpath_s、_wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)。  
@@ -106,7 +90,7 @@ void _wsplitpath(
  副檔名，包括前置句點 (`.`)。 如果您不需要副檔名，則可以針對這個參數傳遞 `NULL`。  
   
 ## <a name="remarks"></a>備註  
- `_splitpath` 函式會將一個路徑分割為它的四個元件。 `_splitpath` 會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wsplitpath` 是 `_splitpath` 的寬字元版本；`_wsplitpath` 的引數是寬字元字串。 除此之外，這些函式的行為相同。  
+ `_splitpath` 函式會將一個路徑分割為它的四個元件。 `_splitpath` 會自動的適當處理多位元組字串引數，根據目前使用中的多位元組字碼頁來辨識多位元組字串序列。 `_wsplitpath` 是 `_splitpath` 的寬字元版本；`_wsplitpath` 的引數是寬字元字串。 除此之外，這些函式的行為相同。  
   
  **安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。 這些函式已有更安全的版本可供使用，請參閱 [_splitpath_s、_wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)。  
   
@@ -137,17 +121,17 @@ void _wsplitpath(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_splitpath`|\<stdlib.h>|  
 |`_wsplitpath`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  請參閱 [_makepath](../../c-runtime-library/reference/makepath-wmakepath.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
  [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   

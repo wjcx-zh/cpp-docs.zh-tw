@@ -1,34 +1,35 @@
 ---
-title: "如何：在 C++/CLI 中使用追蹤參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLR 類型, 以傳址方式傳遞"
+title: "如何： 使用追蹤參考的 C + + CLI |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1774484414ba40ce36730004e84da5f75752a284
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：在 C++/CLI 中使用追蹤參考
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本文說明如何使用追蹤參考 \(%\) 在 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 透過 Common Language Runtime \(CLR\) 型別參考。  
+# <a name="how-to-use-tracking-references-in-ccli"></a>如何：在 C++/CLI 中使用追蹤參考
+本文示範如何使用追蹤參考 （%），在 C + + CLI 依參考傳遞 common language runtime (CLR) 型別。  
   
-## 透過 CLR 型別參考  
- 下列範例顯示如何以傳址方式來傳遞 CLR 型別的追蹤參考。  
+## <a name="to-pass-clr-types-by-reference"></a>依參考傳遞 CLR 型別  
+ 下列範例會示範如何依參考傳遞 CLR 類型使用追蹤參考。  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -75,11 +76,13 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **Zip \=\= 20100** 下一個範例顯示使用追蹤參考的位址傳回 [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)的，並顯示如何透過追蹤參考修改和存取資料。  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ 下一個範例會顯示該採取的追蹤參考的位址傳回[interior_ptr (C + + /CLI)](../windows/interior-ptr-cpp-cli.md)，並示範如何修改，並利用追蹤參考來存取資料。  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -124,14 +127,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor:R \(int\)**  
-**ctor:N \(int i\)**   
-## 追蹤參考和內部指標  
- 下列程式碼範例，您可以將追蹤參考和內部指標之間。  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>%追蹤參考和內部指標  
+ 下列程式碼範例示範您可以將追蹤參考和內部指標之間轉換。  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -177,20 +181,30 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor:R \(int\)**  
-**ctor:N \(int i\)**   
-## 追蹤參考和實值型別  
- 這個範例會傳遞至實值型別的追蹤參考顯示簡單 Boxing:  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- 下一個範例中，您可以追蹤參考和原生參考實值型別。  
+## <a name="tracking-references-and-value-types"></a>%追蹤參考和實值類型  
+ 這個範例會示範簡單實值類型的追蹤參考透過 boxing:  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ 下一個範例顯示，您可以有追蹤參考和實值類型的原生參考。  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -207,13 +221,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **13**  
-**13**  
-**13** 下列範例顯示，您可以使用實值型別和原生型別一起使用追蹤參考。  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ 下列範例會顯示您可以使用追蹤參考，以及實值類型和原生類型。  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -239,14 +255,16 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **4**  
-**4**  
-**5**  
-**5** 這個範例，您可以繫結至實值型別的追蹤參考在記憶體回收堆積:  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ 這個範例示範您可以在記憶體回收堆積上結合實值類型的追蹤參考：  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -275,16 +293,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **原始 v:2，追蹤參考的虛擬機器:1**  
-**追蹤參考的虛擬機器:3**  
-**Boxed 新複本 v:1**  
-**原始 v:4，對最初 Boxed V 控制代碼的參考:1**   
-## 樣板函式採用該原生、值或參考參數  
- 使用樣板函式的簽章的追蹤參考，可確保函式可由原生型別的參數， CLR 值或 CLR 參考呼叫。  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>樣板函式採用原生、 值或參考參數  
+ 使用的樣板函式的簽章中的追蹤參考，您可以確保，可以是原生的型別參數、 CLR 值或 CLR 參考所呼叫函式。  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -305,7 +324,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -323,10 +342,11 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **T %**  
-**T %**  
-**T &**   
-## 請參閱  
- [Tracking Reference Operator](../windows/tracking-reference-operator-cpp-component-extensions.md)
+## <a name="see-also"></a>請參閱  
+ [追蹤參考運算子](../windows/tracking-reference-operator-cpp-component-extensions.md)

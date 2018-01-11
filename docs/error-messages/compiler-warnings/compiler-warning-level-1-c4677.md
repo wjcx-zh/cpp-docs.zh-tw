@@ -1,35 +1,34 @@
 ---
-title: "編譯器警告 (層級 1) C4677 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4677"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4677"
+title: "編譯器警告 （層級 1） C4677 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4677
+dev_langs: C++
+helpviewer_keywords: C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7af724ad56c3a84ffb8ef48e13d14bee97db14df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4677
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function': 非私用成員的簽章含有組件私用型別 'private\_type'  
+# <a name="compiler-warning-level-1-c4677"></a>編譯器警告 (層級 1) C4677
+'function': 非私用成員簽章含有組件私用類型 'private_type'  
   
- 具有不在組件內之公用存取範圍的型別，使用了具有不在組件內之私用存取權限的型別。  參考了公用組件型別的元件，將無法使用參考了組件私用型別的型別成員。  
+ 具有公用存取範圍，在組件外部的型別會使用具有私用組件外部存取的類型。 參考公用組件類型的元件不能使用的型別成員或成員參考之組件私用類型。  
   
-## 範例  
- 下列範例會產生 C4677：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C4677。  
   
 ```  
 // C4677.cpp  

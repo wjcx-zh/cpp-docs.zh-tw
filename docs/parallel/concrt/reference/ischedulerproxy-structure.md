@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d650df9c77b6a99c7ee9982caa88e8eb7c1b8d9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b151e68c9cce0113c46f0eaffff8e19ed4d5c896
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 結構
 排程器用來與並行執行階段的資源管理員通訊，以協調資源配置的介面。  
@@ -38,11 +39,11 @@ ms.lasthandoff: 10/24/2017
 struct ISchedulerProxy;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Ischedulerproxy:: Bindcontext](#bindcontext)|如果它尚未與一個，關聯的執行緒 proxy，將執行內容。|  
 |[Ischedulerproxy:: Createoversubscriber](#createoversubscriber)|建立新的虛擬處理器根上現有的執行資源相關聯的硬體執行緒。|  
@@ -164,7 +165,7 @@ virtual void UnbindContext(_Inout_ IExecutionContext* pContext) = 0;
  `pContext`  
  要解除其執行緒 proxy 的執行內容。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [IScheduler 結構](ischeduler-structure.md)   
  [IThreadProxy 結構](ithreadproxy-structure.md)   

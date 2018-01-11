@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f347e8d7f5212900878c645e0c0594935c306088
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e9fe31190eb340e619bd2ed9266056dba13062d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="replacecopy-stlclr"></a>replace_copy (STL/CLR)
 檢查來源範圍內的每個項目，如果符合指定的值則予以取代，同時將結果複製到新目的範圍。  
@@ -40,5 +43,5 @@ template<class _InIt, class _OutIt, class _Ty> inline
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

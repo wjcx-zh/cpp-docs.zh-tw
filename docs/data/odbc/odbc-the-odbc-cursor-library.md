@@ -1,76 +1,80 @@
 ---
-title: "ODBC：ODBC 資料指標程式庫 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料指標程式庫 [ODBC]"
-  - "資料指標程式庫 [ODBC], 快照"
-  - "游標, ODBC 資料指標程式庫"
-  - "層級 1 ODBC 驅動程式"
-  - "ODBC 資料指標程式庫 [ODBC]"
-  - "ODBC 驅動程式, 資料指標支援"
-  - "ODBC 驅動程式, 層級 1"
-  - "ODBC, 時間戳記"
-  - "定位更新"
-  - "資料指標位置"
-  - "快照, ODBC 中的支援"
-  - "靜態資料指標"
-  - "時間戳記, ODBC 時間戳記資料行"
+title: "ODBC: ODBC 資料指標程式庫 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- cursor library [ODBC]
+- snapshots, support in ODBC
+- timestamps, ODBC timestamp columns
+- ODBC cursor library [ODBC]
+- static cursors
+- ODBC drivers, Level 1
+- ODBC drivers, cursor support
+- positioned updates
+- cursors, ODBC cursor library
+- Level 1 ODBC drivers
+- cursor library [ODBC], snapshots
+- ODBC, timestamp
+- positioning cursors
 ms.assetid: 6608db92-82b1-4164-bb08-78153c227be3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3d849580ce3e9b264c854633c6bb9f274874c21d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ODBC：ODBC 資料指標程式庫
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-這個主題會說明 ODBC 資料指標程式庫以及如何使用它。  如需詳細資訊，請參閱：  
+# <a name="odbc-the-odbc-cursor-library"></a>ODBC：ODBC 資料指標程式庫
+本主題描述 ODBC 資料指標程式庫，並說明如何使用它。 如需詳細資訊，請參閱:  
   
 -   [資料指標程式庫和層級 1 ODBC 驅動程式](#_core_the_cursor_library_and_level_1_odbc_drivers)  
   
--   [定位更新和時間戳記資料行](#_core_positioned_updates_and_timestamp_columns)  
+-   [定位的更新及時間戳記資料行](#_core_positioned_updates_and_timestamp_columns)  
   
 -   [使用資料指標程式庫](#_core_using_the_cursor_library)  
   
- ODBC 資料指標程式庫是位於 ODBC 驅動程式管理員和驅動程式之間的動態連結程式庫 \(DLL\)。  在 ODBC 方面，驅動程式會維持資料指標來追蹤在資料錄集中的位置。  資料指標會標記您在資料錄集中已捲動過的位置 ─ 即目前的資料錄。  
+ ODBC 資料指標程式庫是位於 ODBC 驅動程式管理員與驅動程式之間的動態連結程式庫 (DLL)。 在 ODBC 詞彙中，驅動程式會維護資料指標來追蹤其中資料錄集的位置。 資料指標會標記要您已捲動資料錄集中的位置-目前的記錄。  
   
-##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a> 資料指標程式庫和層級 1 ODBC 驅動程式  
- ODBC 資料指標程式庫將提供層級 1 驅動程式下述新功能：  
+##  <a name="_core_the_cursor_library_and_level_1_odbc_drivers"></a>資料指標程式庫和層級 1 ODBC 驅動程式  
+ ODBC 資料指標程式庫提供下列新功能的層級 1 驅動程式：  
   
--   向前和向後捲動。  由於層級 2 驅動程式已經是可捲動，因此並不需要資料指標程式庫。  
+-   向前及向後捲動。 因為它們已在可捲動層級 2 的驅動程式不需要資料指標程式庫。  
   
--   快照集支援。  資料指標程式庫可以管理包含快照集資料錄的緩衝區。  這個緩衝區會反映程式對資料錄的刪除和編輯，但不會反映其他使用者的加入、刪除或編輯。  所以，快照集只會跟資料指標程式庫的緩衝區一樣新。  這個緩衝區只會在您呼叫 **Requery** 時反映您自己的加入情形。  動態集不會使用到資料指標程式庫。  
+-   快照集的支援。 資料指標程式庫管理緩衝區，其中包含快照集的記錄。 這個緩衝區會反映您的程式刪除和編輯記錄，但不是新增、 刪除或其他使用者的編輯。 因此，快照集只會做為資料指標程式庫的緩衝區。 緩衝區也不會反映您自己新增項目直到您呼叫**Requery**。 Dynaset 不會使用資料指標程式庫。  
   
- 資料指標程式庫會提供快照集 \(靜態資料指標\)，雖然您的驅動程式通常並不支援快照集。  如果驅動程式已經支援靜態資料指標，就不需要載入資料指標程式庫來取得快照集支援。  如果沒有使用資料指標程式庫，則只能使用快照集和順向 \(Forward\-only\) 的資料錄集。  如果驅動程式支援動態集 \(KEYSET\_DRIVEN 資料指標\) 而且想要望使用，則千萬不要使用該資料指標程式庫。  如果您希望同時使用快照集和動態集，那麼除非驅動程式可同時支援這兩種類型，否則必須將這兩種類型分別建立在不同的 `CDatabase` 物件上 \(兩種不同的連接\)。  
+ 資料指標程式庫會提供快照集 （靜態資料指標） 即使您的驅動程式不正常支援。 如果您的驅動程式已經可以支援靜態資料指標，您不需要載入的資料指標程式庫來取得快照集支援。 如果您使用資料指標程式庫，您可以只使用快照集和順向資料錄集。 如果您的驅動程式支援動態集 （KEYSET_DRIVEN 資料指標），而且您想要使用它們，您不能使用資料指標程式庫。 如果您想要使用快照集和動態集，您必須根據兩個不同`CDatabase`物件 （兩個不同的連接），除非您的驅動程式同時支援。  
   
-##  <a name="_core_positioned_updates_and_timestamp_columns"></a> 定位更新和時間戳記資料行  
-  
-> [!NOTE]
->  ODBC 資料來源可透過 MFC ODBC 類別存取 \(如本主題所述\)，或透過 MFC 資料存取物件 \(DAO\) 類別存取。  
+##  <a name="_core_positioned_updates_and_timestamp_columns"></a>定位的更新及時間戳記資料行  
   
 > [!NOTE]
->  如果 ODBC 驅動程式支援 \(如果有，MFC 便會使用的\) **SQLSetPos**，則這個主題就不適用於您。  
+>  ODBC 資料來源是透過 MFC ODBC 類別，如本主題中所述，或透過 MFC 資料存取物件 (DAO) 類別存取。  
   
- 大多數的層級 1 驅動程式無法支援定位更新。  這種驅動程式會因這種因素，而使用資料指標程式庫來模擬層級 2 驅動程式的功能。  資料指標程式庫會在未變更欄位上製作一個已查詢的更新，以模擬定位更新支援。  
+> [!NOTE]
+>  如果您的 ODBC 驅動程式支援**SQLSetPos**，如果有的話，會使用 MFC，本主題不適用於您。  
   
- 在某些情況下，資料錄集可能會包含時間戳記資料行，做為其中一個未變更的欄位。  利用包含時間戳記資料行的資料表來使用 MFC 資料錄集時會產生兩個問題。  
+ 大部分的層級 1 驅動程式不支援定位的更新。 這類驅動程式會依賴資料指標程式庫，在這方面模擬層級 2 驅動程式的功能。 資料指標程式庫會藉由搜尋的更新未變更的欄位上模擬定位的更新支援。  
   
- 第一個問題與具有時間戳記資料行的資料表中的可更新快照集有關。  如果快照集所繫結的資料表包含了一個時間戳記資料行，就應該在呼叫 **Edit** 和 **Update** 之後呼叫 **Requery**。  如果沒有，您就可能無法再次編輯相同的資料錄。  當您呼叫 **Edit** 後又接著呼叫 **Update**，資料來源就會寫入該資料錄，而該時間戳記資料行也會完成更新。  如果您未呼叫 **Requery**，快照集資料錄的時間戳記值就不再符合在資料來源相對應的時間戳記。  當您嘗試再次更新該資料錄時，資料來源可能會因為不相符而不允許更新。  
+ 在某些情況下，資料錄集可能包含時間戳記資料行，做為其中一個未變更的欄位。 在使用 MFC 資料錄集包含時間戳記資料行的資料表，會發生兩個問題。  
   
- 第二個問題則與使用 `RFX_Date` 函式傳輸時間、日期資訊到資料表或是取自資料表時 [CTime](../../atl-mfc-shared/reference/ctime-class.md) 類別所產生的限制有關。  `CTime` 物件處理會在資料傳輸過程中使用其他中繼處理形式之配置方式。  `CTime` 物件的資料範圍對某些應用程式來說，也可能會產生相當大的限制。  `RFX_Date` 函式的新版本會接收一個 ODBC **TIMESTAMP\_STRUCT** 參數，而不是接收一個 `CTime` 物件。  如需詳細資訊，請參閱《MFC 參考》中[巨集和全域變數](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md)的 `RFX_Date`。  
+ 第一個問題是有關可更新的快照集時間戳記資料行之資料表上。 如果您的快照集繫結的資料表包含時間戳記資料行，您應該呼叫**Requery**呼叫之後**編輯**和**更新**。 如果沒有，您可能無法再次編輯同一筆記錄。 當您呼叫**編輯**然後**更新**、 在記錄寫入至資料來源和更新時間戳記資料行。 如果您不會呼叫**Requery**，快照集記錄的時間戳記值不再符合資料來源上對應的時間戳記。 當您嘗試再次更新記錄時，資料來源可能不允許更新，因為不相符。  
   
-##  <a name="_core_using_the_cursor_library"></a> 使用資料指標程式庫  
- 當您利用呼叫 [CDatabase::OpenEx](../Topic/CDatabase::OpenEx.md) 或 [CDatabase::Open](../Topic/CDatabase::Open.md) 連接到一個資料來源時，您可以指定該資料來源是否需要使用資料指標程式庫。  若您將要在該資料來源上建立快照集，請指定在 `OpenEx` 的 `dwOptions` 參數中的 **CDatabase::useCursorLib** 選項，或將 **Open** 的 **bUseCursorLib** 參數指定為 **TRUE** \(預設值為 **TRUE**\)。  若您的 ODBC 驅動程式支援動態集 \(Dynaset\)，且您希望在資料來源上開啟動態集，就千萬不要使用資料指標程式庫 \(其會遮罩某些動態集所需的驅動程式功能\)。  在那種情況下，請勿指定 `OpenEx` 的 **CDatabase::useCursorLib**，或是將 **Open**  的 **bUseCursorLib** 參數指定為 **FALSE**。  
+ 第二個的問題是關於類別的限制[CTime](../../atl-mfc-shared/reference/ctime-class.md)搭配使用時`RFX_Date`傳輸或從資料表的日期和時間資訊的函式。 處理`CTime`物件會加諸額外中繼資料傳輸期間處理的表單中的一些額外負荷。 日期範圍`CTime`物件可能也限制太大對於某些應用程式。 新版`RFX_Date`函式會採用 ODBC **TIMESTAMP_STRUCT**參數，而不是`CTime`物件。 如需詳細資訊，請參閱`RFX_Date`中[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 參考*。  
+
   
-## 請參閱  
- [ODBC 的基本概念](../../data/odbc/odbc-basics.md)
+##  <a name="_core_using_the_cursor_library"></a>使用資料指標程式庫  
+ 當您連接到資料來源，藉由呼叫[CDatabase::OpenEx](../../mfc/reference/cdatabase-class.md#openex)或[CDatabase::Open](../../mfc/reference/cdatabase-class.md#open) — 您可以指定是否要針對資料來源使用資料指標程式庫。 如果您將該資料來源上建立快照集，指定**CDatabase::useCursorLib**選項`dwOptions`參數`OpenEx`或指定**TRUE**如**bUseCursorLib**參數**開啟**(預設值是**TRUE**)。 如果 ODBC 驅動程式支援動態集，而且您想要開啟資料來源上的動態集，請勿使用 （它會遮罩某些驅動程式的功能所需的動態集） 資料指標程式庫。 在此情況下，未指定**CDatabase::useCursorLib**中`OpenEx`或指定**FALSE**如**bUseCursorLib**中的參數**開啟**.  
+  
+## <a name="see-also"></a>請參閱  
+ [ODBC 基本概念](../../data/odbc/odbc-basics.md)

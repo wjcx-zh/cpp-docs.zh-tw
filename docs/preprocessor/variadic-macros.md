@@ -1,36 +1,37 @@
 ---
-title: "Variadic 巨集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "variadic 巨集 [C++]"
-  - "__VA_ARGS__ variadic 巨集規範"
+title: "Variadic 巨集 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- variadic macros [C++]
+- __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bf4d669f1a716751d02e06c2c52de5df5128b1a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Variadic 巨集
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Variadic 巨集（macros）是包含引數的變數數字、類似函式的巨集。  
+# <a name="variadic-macros"></a>Variadic 巨集
+Variadic 巨集是包含引數數目可變、類似函式的巨集。  
   
-## 備註  
- 若要使用 variadic 巨集，省略符號在巨集定義中可能被指定為最終的正式引數，並且取代識別項 `__VA_ARGS__` 在這個定義可用作插入額外的引數。 `__VA_ARGS__` 由符合省略符號的引數取代，包括在它們之間的逗號。  
+## <a name="remarks"></a>備註  
+ 若要使用 variadic 巨集，省略符號可能指定的巨集定義，並取代識別項中的最後一個型式引數為`__VA_ARGS__`可能在定義中用來插入多餘的引數。  `__VA_ARGS__`取代為所有符合的省略符號，包括它們之間的逗號分隔的引數。  
   
- C 標準指定必須將至少一個引數傳遞給這個省略符號，確保巨集不會將它解析成結尾的逗號。如果沒有傳遞引數至省略符號， Visual C\+\+ 實作時會隱藏一個結尾的逗號。  
+ C 標準指定必須將至少一個引數傳遞給省略符號，確保巨集不會解析成具有尾端逗號的運算式。  如果沒有傳遞引數至省略符號，Visual C++ 實作會隱藏尾端逗號。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```cpp  
 // variadic_macros.cpp  
@@ -59,7 +60,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 here are some varargs1(1)  
@@ -67,8 +68,7 @@ here are some varargs2(4)
 here are some varargs3(5)  
 hello, world  
 error  
-  
 ```  
   
-## 請參閱  
- [巨集](../preprocessor/macros-c-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [巨集 (C/C++)](../preprocessor/macros-c-cpp.md)

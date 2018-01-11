@@ -1,41 +1,42 @@
 ---
-title: "編譯器警告 (層級 1) C4436 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "編譯器警告 （層級 1） C4436 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
-caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1018d678b6105f2d727f7806326218c168d8f728
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4436
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-虛擬基底從 'class1' 到 'class2' 的 dynamic\_cast 在建構函式或解構函式中實際上可能無法與部分建構的物件以 \/vd2 編譯或定義 'class2' 與 \#pragma vtordisp \(2\)  
+# <a name="compiler-warning-level-1-c4436"></a>編譯器警告 (層級 1) C4436
+建構函式或解構函式中從虛擬基底 'class1' 到 'class2' 的 dynamic_cast 在使用部分建構的物件時可能會失敗        使用 /vd2 編譯，或在 #pragma vtordisp(2) 有效的情況下定義 'class2'  
   
  編譯器遇到具有下列特性的 `dynamic_cast` 作業。  
   
--   轉換是從基底類別指標到衍生類別的指標。  
+-   轉換是從基底類別指標到衍生類別指標。  
   
--   衍生的類別由基底類別進行虛擬繼承。  
+-   衍生類別虛擬繼承基底類別。  
   
--   衍生類別不具備虛擬基底的 `vtordisp` 欄位。  
+-   衍生類別沒有虛擬基底的 `vtordisp` 欄位。  
   
--   在衍生類別的建構函式或解構函式中，或從衍生類別進一步繼承的一些類別中找到模型。  
+-   在衍生類別 (或從衍生類別進一步繼承的特定類別) 的建構函式或解構函式中找到轉換。  
   
- 警告表示如果在部分建構的物件上作業，`dynamic_cast` 可能無法正確執行。如果衍生的建構函式\/解構函式在一些進階衍生物件的子物件上作業，就會發生這種情況。如果在警告的衍生類別名稱會是進一步衍生，警告可以忽略。  
+ 警告表示如果在部分建構的物件上作業，`dynamic_cast` 可能無法正確執行。  如果衍生的建構函式/解構函式在進一步衍生物件的子物件上作業，就會發生這種情況。  如果在警告中指名的衍生類別絕不是進一步衍生，警告可以忽略。  
   
-## 範例  
- 下列範例會產生 C4436 並示範從遺漏 `vtordisp` 欄位出現的程式碼產生問題。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C4436 並示範從遺漏的 `vtordisp` 欄位中出現的程式碼產生問題。  
   
 ```cpp  
 // C4436.cpp  
@@ -77,7 +78,7 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [dynamic\_cast 運算子](../../cpp/dynamic-cast-operator.md)   
+## <a name="see-also"></a>請參閱  
+ [dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)   
  [vtordisp](../../preprocessor/vtordisp.md)   
- [編譯器警告 \(層級 4\) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)
+ [編譯器警告 (層級 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)

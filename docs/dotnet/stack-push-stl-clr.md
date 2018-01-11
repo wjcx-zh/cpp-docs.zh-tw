@@ -1,41 +1,42 @@
 ---
-title: "stack::push (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::push"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push 成員 [STL/CLR]"
+title: "stack:: push (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::push
+dev_langs: C++
+helpviewer_keywords: push member [STL/CLR]
 ms.assetid: 60e5b076-c80f-4af0-a018-62cda7e081db
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0ce5d9faba3e9dfd7e92cf603f9f6cb9b5f46486
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# stack::push (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-加入新的最後一個元素。  
+# <a name="stackpush-stlclr"></a>stack::push (STL/CLR)
+加入新的最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void push(value_type val);  
 ```  
   
-## 備註  
- 成員函式在受控制序列尾端插入具有值 `val` 的項目。  用來附加另一個項目到堆疊。  
+## <a name="remarks"></a>備註  
+ 成員函式插入值的項目`val`受控制序列的結尾。 您可以使用它來附加至堆疊的另一個項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_push.cpp   
@@ -59,12 +60,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標頭：** \<cliext\/stack\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [stack::pop](../dotnet/stack-pop-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::pop (STL/CLR)](../dotnet/stack-pop-stl-clr.md)

@@ -33,11 +33,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f607d6145d08617151a64845bc23a58f2849dbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc8b547b72a7094bb6337e9e412f8548a48820f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 `CMFCColorDialog`類別代表色彩選取對話方塊。  
@@ -48,18 +49,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCColorDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|建構 `CMFCColorDialog` 物件。|  
 |`CMFCColorDialog::~CMFCColorDialog`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCColorDialog::GetColor](#getcolor)|傳回目前選取的色彩。|  
 |[CMFCColorDialog::GetPalette](#getpalette)|傳回色彩的調色盤。|  
@@ -72,7 +73,7 @@ class CMFCColorDialog : public CDialogEx
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`m_bIsMyPalette`|`TRUE`如果色彩選取對話方塊使用自己的色彩調色盤，或`FALSE`如果對話方塊中，將會使用調色盤中指定`CMFCColorDialog`建構函式。|  
 |`m_bPickerMode`|`TRUE`當使用者從選取範圍 對話方塊中，選取一個色彩否則， `FALSE`。|  
@@ -125,16 +126,16 @@ CMFCColorDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `clrInit`  
+ [輸入] `clrInit`  
  預設的色彩選擇。 如果未不指定任何值，則預設為 RGB(0,0,0) （黑色）。  
   
- [in] `dwFlags`  
+ [輸入] `dwFlags`  
  （保留）。  
   
- [in] `pParentWnd`  
+ [輸入] `pParentWnd`  
  對話方塊的父系或擁有者視窗的指標。  
   
- [in] `hPal`  
+ [輸入] `hPal`  
  色彩調色盤的控制代碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -182,7 +183,7 @@ void SetCurrentColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rgb`  
+ [輸入] `rgb`  
  RGB 色彩值  
   
 ### <a name="remarks"></a>備註  
@@ -195,7 +196,7 @@ void SetNewColor(COLORREF rgb);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rgb`  
+ [輸入] `rgb`  
  A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449)指定 RGB 色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -211,13 +212,13 @@ void SetPageOne(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `R`  
+ [輸入] `R`  
  指定 RGB 值的紅色元件。  
   
- [in] `G`  
+ [輸入] `G`  
  指定 RGB 值的綠色元件。  
   
- [in] `B`  
+ [輸入] `B`  
  指定 RGB 值的藍色元件。  
   
 ### <a name="remarks"></a>備註  
@@ -233,18 +234,18 @@ void SetPageTwo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `R`  
+ [輸入] `R`  
  指定 RGB 值的紅色的元件  
   
- [in] `G`  
+ [輸入] `G`  
  指定 RGB 值的綠色的元件  
   
- [in] `B`  
+ [輸入] `B`  
  指定 RGB 值的藍色的元件  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)

@@ -1,42 +1,42 @@
 ---
-title: "list::front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front 成員 [STL/CLR]"
+title: "list:: front (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::front
+dev_langs: C++
+helpviewer_keywords: front member [STL/CLR]
 ms.assetid: ead6aaaa-b518-4a9c-af80-7189bf872cad
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a0ec34ee2bff0a494b09b70b19a08c25e041121d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listfront-stlclr"></a>list::front (STL/CLR)
 存取第一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reference front();  
 ```  
   
-## 備註  
- 成員函式以傳回受控制序列的第一個項目的參考，必須為非空白。  用來讀取或寫入第一個項目，也就是說，當您知道它時。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列必須為非空白的第一個元素的參考。 您可以使用它來讀取或寫入第一個項目中，當您知道它存在。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_front.cpp   
@@ -68,16 +68,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**前面 \(\=\)。**  
- **x b c**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+ a b c  
+front() = a  
+ x b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../dotnet/list-back-item-stl-clr.md)   
- [list::front\_item](../dotnet/list-front-item-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)

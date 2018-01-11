@@ -1,53 +1,55 @@
 ---
-title: "IDBPropertiesImpl::SetProperties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl.SetProperties"
-  - "SetProperties"
-  - "IDBPropertiesImpl::SetProperties"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetProperties 方法"
+title: "Idbpropertiesimpl:: Setproperties |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl.SetProperties
+- SetProperties
+- IDBPropertiesImpl::SetProperties
+dev_langs: C++
+helpviewer_keywords: SetProperties method
 ms.assetid: 2f9fc1de-7f35-4bca-bab3-7b427bf92c26
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d835810a2ca14c8e0631ed7dda8fcaddeb859d71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IDBPropertiesImpl::SetProperties
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-為了資料來源物件在資料來源和初始化屬性群組中設定屬性，或是為了列舉程式初始化屬性群組。  
+# <a name="idbpropertiesimplsetproperties"></a>IDBPropertiesImpl::SetProperties
+列舉值的資料來源和初始化屬性群組，資料來源物件或初始化屬性群組中，設定屬性。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      STDMETHOD(SetProperties)(   
-   ULONG cPropertySets,   
-   DBPROPSET rgPropertySets[]    
+      STDMETHOD(SetProperties)(   
+   ULONG cPropertySets,   
+   DBPROPSET rgPropertySets[]    
 );  
 ```  
   
-#### 參數  
- 請參閱《 *OLE DB 程式設計人員參考》的*[IDBProperties::SetProperties](https://msdn.microsoft.com/en-us/library/ms723049.aspx) 。  
+#### <a name="parameters"></a>參數  
+ 請參閱[idbproperties:: Setproperties](https://msdn.microsoft.com/en-us/library/ms723049.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 備註  
- 如果提供者已初始化，這個方法會設定目前在資料來源物件的 **DBPROPSET\_DATASOURCE**，**DBPROPSET\_DATASOURCEINFO**，**DBPROPSET\_DBINIT** 屬性群組的屬性值。  如果提估者未初始化，則只會設定 **DBPROPSET\_DBINIT** 群組屬性。  
+## <a name="remarks"></a>備註  
+ 如果提供者初始化時，這個方法會設定中的屬性值**DBPROPSET_DATASOURCE**， **DBPROPSET_DATASOURCEINFO**， **DBPROPSET_DBINIT**屬性資料來源物件的群組。 如果未初始化提供者，它會設定**DBPROPSET_DBINIT**群組只包含內容。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IDBPropertiesImpl 類別](../../data/oledb/idbpropertiesimpl-class.md)   
- [IDBPropertiesImpl::GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
+ [Idbpropertiesimpl:: Getproperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
  [IDBPropertiesImpl::GetPropertyInfo](../../data/oledb/idbpropertiesimpl-getpropertyinfo.md)

@@ -1,42 +1,44 @@
 ---
-title: "如何：使用 C++ Interop 封送處理 COM 字串 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, 字串"
-  - "COM [C++], 封送處理字串"
-  - "資料封送處理 [C++], 字串"
-  - "Interop [C++], 字串"
-  - "封送處理 [C++], 字串"
+title: "如何： 使用 c + + Interop 封送處理 COM 字串 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 45a79f3aa78d229c71aba5a1d1144d05afe7bbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 C++ Interop 封送處理 COM 字串
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個主題會示範如何將 BSTR \(COM 程式設計中偏好使用的基本字串格式\) 從 Managed 函式傳遞至 Unmanaged 函式，以及如何從 Unmanaged 函式傳遞至 Managed 函式。  如需與其他字串型別互通的資訊，請參閱下列主題：  
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 COM 字串
+本主題會示範如何 BSTR （偏好在 COM 程式設計中的基本字串格式） 傳遞從 managed 到 unmanaged 函式，反之亦然。 與其他字串類型間的互通性，請參閱下列主題：  
   
--   [如何：使用 C\+\+ Interop 封送處理 Unicode 字串](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [如何：使用 C++ Interop 封送處理 Unicode 字串](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [如何：使用 C\+\+ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
+-   [如何：使用 C++ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
- 在下列範例中，程式碼會使用 [managed、unmanaged](../preprocessor/managed-unmanaged.md) \#pragma 指示詞，在相同的檔案中實作 Managed 和 Unmanaged 函式，這些函式即使在不同的檔案中定義，也會以相同的方式互相溝通。  只包含 Unmanaged 函式的檔案，不需要以 [\/clr \(Common Language Runtime 編譯\)](../build/reference/clr-common-language-runtime-compilation.md) 編譯。  
+ 下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作的方式相同。 檔案，其中包含只在 unmanaged 函式不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。  
   
-## 範例  
- 下列範例會示範如何將 BSTR \(COM 程式設計中使用的字串格式\) 從 Managed 函式傳遞至 Unmanaged 函式。  呼叫的 Managed 函式會使用 <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> 來取得 .NET System.String 內容之 BSTR 表示的位址。  這個指標使用 [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) 來執行 Pin，以確定執行 Unmanaged 函式時，它的實體位址在記憶體回收期間不會改變。  在 [pin\_ptr \(C\+\+\/CLI\)](../windows/pin-ptr-cpp-cli.md) 超出範圍之前，記憶體回收行程都無法移動記憶體。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何將傳遞 BSTR （在 COM 程式設計中使用字串格式） 從 managed 到 unmanaged 函式。 呼叫 managed 函式會使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>取得內容的.NET System.String BSTR 表示的位址。 此指標固定使用[pin_ptr (C + + /CLI)](../windows/pin-ptr-cpp-cli.md)以確保其實體位址為不變更在記憶體回收循環期間 unmanaged 函式執行時。 記憶體回收行程禁止移動記憶體中的，直到[pin_ptr (C + + /CLI)](../windows/pin-ptr-cpp-cli.md)超出範圍。  
   
 ```  
 // MarshalBSTR1.cpp  
@@ -71,8 +73,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列範例示範如何將 BSTR 從 Unmanaged 函式傳遞至 Managed 函式。  接收的 Managed 函式可以使用字串做為 BSTR，或使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> 將它轉換為 <xref:System.String>，以搭配其他 Managed 函式使用。  由於表示 BSTR 的記憶體是配置在 Unmanaged 堆積 \(Heap\) 上，因此不需要執行 Pin，因為 Unmanaged 堆疊上不會有記憶體回收。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何將傳遞 BSTR 從 unmanaged 至 unmanaged 的函式。 接收 managed 函式可以使用中的字串為 BSTR 或<xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>將它轉換為<xref:System.String>用於與其他 managed 函式。 Unmanaged 堆積上配置記憶體表示 BSTR，因為沒有釘選是有必要，因為沒有未受管理的堆積上沒有記憶體回收。  
   
 ```  
 // MarshalBSTR2.cpp  
@@ -109,5 +111,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>請參閱  
+ [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

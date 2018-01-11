@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2624
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2624
+f1_keywords: C2624
+dev_langs: C++
+helpviewer_keywords: C2624
 ms.assetid: 32f2ec15-a7cd-4049-a64b-131746d3152b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3636cf84696067e78e3baf54b66410e6c05ca827
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: c70165fc0d57d753dadd2bed207a00e3dd3498aa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2624"></a>編譯器錯誤 C2624
 區域類別不能用來宣告 'extern' 變數  

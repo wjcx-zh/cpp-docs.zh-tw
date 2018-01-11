@@ -1,6 +1,6 @@
 ---
 title: "編譯器警告 C4800 透過 C5999 |Microsoft 文件"
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -97,22 +97,20 @@ ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bf919fbb1959af6fad031a7f32262466f6f49ff
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 6f3c9a15c61a859564bb5613a3b8059cb011ca80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>編譯器警告 C4800 透過 C5999
 
-這一部分的文件中的文章包含 Visual c + + 編譯器警告的資訊子集。 您可以在此存取資訊或者，在 Visual Studio 中的 輸出 視窗中，您可以選取錯誤代碼，然後按下 F1 鍵。
+文件的本節文章說明編譯器所產生的警告訊息的子集。
 
-> [!NOTE]
-> 並非每個[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]錯誤或警告會記載於 MSDN 中。 在許多情況下，診斷訊息會提供所有可用的資訊。 如果您認為錯誤訊息需要補充說明，請告訴我們。 您可以使用這個頁面上的回函表單或移至 Visual Studio 中的功能表列並選擇**協助**，**回報 Bug**，或您可以提出建議或 bug 報告上[Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-您可能會發現其他協助的 MSDN 公共論壇上錯誤及警告。 [Visual c + + 語言](http://go.microsoft.com/fwlink/?LinkId=158195)論壇是關於問題及討論[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]語言語法和編譯器。 [Visual c + + 一般](http://go.microsoft.com/fwlink/?LinkId=158194)論壇是關於問題[!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)]其他論壇中沒有討論之。 您也可能會在找到關於錯誤和警告的說明[堆疊溢位](http://stackoverflow.com/)。
-
-## <a name="in-this-section"></a>本章節內容
+## <a name="warning-messages"></a>警告訊息
 
 |警告|訊息|
 |-------------|-------------|

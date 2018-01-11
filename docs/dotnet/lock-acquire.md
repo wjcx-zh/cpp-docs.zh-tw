@@ -1,37 +1,38 @@
 ---
-title: "lock::acquire | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::acquire"
-  - "acquire"
-  - "msclr.lock.acquire"
-  - "msclr::lock::acquire"
-  - "lock.acquire"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acquire 方法"
+title: "lock::acquire |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::acquire
+- acquire
+- msclr.lock.acquire
+- msclr::lock::acquire
+- lock.acquire
+dev_langs: C++
+helpviewer_keywords: acquire method
 ms.assetid: c214274e-7519-4739-82aa-91b04a32d3f9
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 622d308b04edc1793da792c6f371753b80c37680
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# lock::acquire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取得鎖定物件，並選擇性地等待一定保護不會鎖定，一個經過指定的時間的或。  
+# <a name="lockacquire"></a>lock::acquire
+取得物件，選擇性地等候一段指定的時間，或完全不用，取得鎖定的鎖定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void acquire();  
@@ -43,20 +44,20 @@ void acquire(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_timeout`  
- 逾時值 \(以毫秒為單位\) 或 <xref:System.TimeSpan>。  
+ 逾時值以毫秒為單位，或做為<xref:System.TimeSpan>。  
   
-## 例外狀況  
- 如果鎖定作業不在逾時之前，就會擲回 <xref:System.ApplicationException> 。  
+## <a name="exceptions"></a>例外狀況  
+ 擲回<xref:System.ApplicationException>如果取得鎖定逾時前不會發生。  
   
-## 備註  
- 如果沒有提供逾時值，預設逾時是 <xref:System.Threading.Timeout.Infinite>。  
+## <a name="remarks"></a>備註  
+ 如果未提供的逾時值的預設逾時是<xref:System.Threading.Timeout.Infinite>。  
   
- 如果鎖定已取得，這個函式不會執行任何動作。  
+ 如果已取得鎖定，此函式沒有任何作用。  
   
-## 範例  
- 這個範例使用類別的單一執行個體跨多個執行緒的。類別會使用自己的鎖定確保對其內部資料的存取權為每個執行緒是一致的。主應用程式執行緒使用類別的同一個執行個體上具有鎖定定期檢查任何背景工作執行緒是否仍存在，而且會結束，直到所有背景工作執行緒完成其工作。  
+## <a name="example"></a>範例  
+ 這個範例會跨多個執行緒使用單一類別的執行個體。  類別本身會使用鎖定，以確保其內部資料存取都是一致的每個執行緒。  主應用程式執行緒會定期檢查以查看是否仍然存在任何背景工作執行緒，並等候結束，直到所有的工作者執行緒完成其工作使用相同類別的執行個體上的鎖定。  
   
 ```  
 // msl_lock_acquire.cpp  
@@ -130,22 +131,25 @@ int main() {
 }  
 ```  
   
-  **在執行緒 3，計數器 \= 0**  
-**在執行緒 3，計數器 \= 10**  
-**在執行緒 5，計數器 \= 0**  
-**在執行緒 5，計數器 \= 10**  
-**在執行緒 7，計數器 \= 0**  
-**在執行緒 7，計數器 \= 10**  
-**在執行緒 4，計數器 \= 0**  
-**在執行緒 4，計數器 \= 10**  
-**在執行緒 6，計數器 \= 0**  
-**在執行緒 6，計數器 \= 10**  
-**任何執行緒完成。**   
-## 需求  
- **標頭檔** \<msclr \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\lock.h >  
   
-## 請參閱  
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>請參閱  
  [lock 成員](../dotnet/lock-members.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

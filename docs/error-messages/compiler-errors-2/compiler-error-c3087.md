@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3087
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3087
+f1_keywords: C3087
+dev_langs: C++
+helpviewer_keywords: C3087
 ms.assetid: 4f5bdd52-a853-4f02-b160-6868e9190b9d
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8553611e131904df8c2a67928cc695456598fe8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: d786cb3f8c04e5d8ff32aebe30915d4aca3cfb2f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3087"></a>編譯器錯誤 C3087
 'named_argument: 'attribute' 的呼叫已將此成員初始化  

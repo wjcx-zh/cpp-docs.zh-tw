@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2683
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2683
+f1_keywords: C2683
+dev_langs: C++
+helpviewer_keywords: C2683
 ms.assetid: db605e4f-601b-4d05-92a1-c43ca24de08d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b02f157fbbb2e5b3e271f5df0803ece6ef0585a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: b3e79c1a05ac0d1fab713e2dfa97c9da740088bb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2683"></a>編譯器錯誤 C2683
 'cast': 'type' 不是多型類型  

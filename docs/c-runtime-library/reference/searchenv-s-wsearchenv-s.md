@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -45,36 +43,22 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 3b7b1d4165edb3a7e34cda665de195759784eedc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6f1089aa1f772832417168a2262fa72069b3ede7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s、_wsearchenv_s
 使用環境路徑來搜尋檔案。 這些版本的 [_searchenv、_wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -106,16 +90,16 @@ errno_t _wsearchenv_s(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `filename`  
+ [輸入] `filename`  
  要搜尋的檔案名稱。  
   
- [in] `varname`  
+ [輸入] `varname`  
  要搜尋的環境。  
   
  [輸出] `pathname`  
  要儲存此完整路徑的緩衝區。  
   
- [in] `numberOfElements`  
+ [輸入] `numberOfElements`  
  大小`pathname`緩衝區。  
   
 ## <a name="return-value"></a>傳回值  
@@ -127,9 +111,9 @@ errno_t _wsearchenv_s(
   
 |`filename`|`varname`|`pathname`|`numberOfElements`|傳回值|`pathname` 的內容。|  
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|  
-|any|任何|`NULL`|any|`EINVAL`|N/A|  
-|`NULL`|任何|任何|任何|`EINVAL`|未變更|  
-|any|任何|any|<= 0|`EINVAL`|未變更|  
+|any|any|`NULL`|any|`EINVAL`|N/A|  
+|`NULL`|any|any|any|`EINVAL`|未變更|  
+|any|any|any|<= 0|`EINVAL`|未變更|  
   
  如果發生上述任何錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
   
@@ -142,7 +126,7 @@ errno_t _wsearchenv_s(
   
  `_wsearchenv_s` 是 `_searchenv_s` 的寬字元版本；`_wsearchenv_s` 的引數是寬字元字串。 否則，`_wsearchenv_s` 和 `_searchenv_s` 的行為即會相同。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -152,12 +136,12 @@ errno_t _wsearchenv_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_searchenv_s`|\<stdlib.h>|  
 |`_wsearchenv_s`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -195,7 +179,7 @@ Path for CL.EXE:
 C:\Program Files\Microsoft Visual Studio 2010\VC\BIN\CL.EXE  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [目錄控制](../../c-runtime-library/directory-control.md)   
  [_searchenv、_wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md)   
  [getenv、_wgetenv](../../c-runtime-library/reference/getenv-wgetenv.md)   

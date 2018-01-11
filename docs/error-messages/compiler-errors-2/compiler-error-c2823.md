@@ -1,36 +1,38 @@
 ---
-title: "編譯器錯誤 C2823 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2823"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2823"
+title: "編譯器錯誤 C2823 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C2823
+dev_langs: C++
+helpviewer_keywords: C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 84640d17479c27047919016525272ee5a87d178b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器錯誤 C2823
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-typedef 樣板不合法  
+# <a name="compiler-error-c2823"></a>編譯器錯誤 C2823  
   
- [typedef](http://msdn.microsoft.com/zh-tw/cc96cf26-ba93-4179-951e-695d1f5fdcf1) 定義中不允許有樣板 \(Template\)。  
+> typedef 範本是不合法  
   
- 下列範例會產生 C2823：  
+範本中不允許`typedef`定義。  
   
-```  
+## <a name="example"></a>範例  
+  
+下列範例會產生 C2823，並示範修正此問題的一種方法：  
+  
+```cpp  
 // C2823.cpp  
 template<class T>  
 typedef struct x {  

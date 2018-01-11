@@ -1,33 +1,33 @@
 ---
-title: "logical_not (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not 函式 [STL/CLR]"
+title: "logical_not (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_not
+dev_langs: C++
+helpviewer_keywords: logical_not function [STL/CLR]
 ms.assetid: 32a2c6e2-1c58-41ac-8827-f3ee5adfe81d
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8d27e18d540d9638caf819636a37f243b362d369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# logical_not (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個樣板類別描述一個功能子，其被呼叫時，只有在任一其引數測試結果為 false 時傳回 true。  您可用它來根據引數型別指定函式物件。  
+# <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
+此範本類別描述函式，呼叫時，則傳回 true，才可能是它的引數為 false 會測試。 您可以使用它指定其引數類型方面的函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Arg>  
@@ -48,33 +48,33 @@ public:
     };  
 ```  
   
-#### 參數  
- Arg  
+#### <a name="parameters"></a>參數  
+ 引數  
  引數的型別。  
   
-## 成員函式  
+## <a name="member-functions"></a>成員函式  
   
-|型別定義|說明|  
-|----------|--------|  
-|argument\_type|功能子引數的型別。|  
-|delegate\_type|泛型委派的型別。|  
-|result\_type|功能子結果的型別。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|argument_type|仿函式引數的型別。|  
+|delegate_type|泛型委派類型。|  
+|result_type|仿函式結果的型別。|  
   
-|成員|說明|  
-|--------|--------|  
-|logical\_not|建構功能子。|  
+|成員|描述|  
+|------------|-----------------|  
+|logical_not|建構仿函式。|  
   
-|運算子|說明|  
-|---------|--------|  
-|operator\(\)|計算所需的函式。|  
-|operator delegate\_type^|轉換功能子給委派。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|operator()|計算所需的函數。|  
+|運算子 delegate_type ^|會轉換成委派仿函式。|  
   
-## 備註  
- 這個樣板類別描述單一引數的功能子。  它定義成員運算子 `operator()` ，如此一來，當物件被當做函式呼叫時，它只會在其引數測試結果為 false 時傳回 true。  
+## <a name="remarks"></a>備註  
+ 此範本類別描述一個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 當其引數測試才會為 false。  
   
- 您也可以將物件當作型別為 `delegate_type^` 的函式引數來傳遞，它會適當地轉換。  
+ 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_logical_not.cpp   
@@ -107,12 +107,15 @@ int main()
   
 ```  
   
-  **4 0**  
- **0 1**   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+```Output  
+4 0  
+0 1  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [negate](../dotnet/negate-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [negate (STL/CLR)](../dotnet/negate-stl-clr.md)

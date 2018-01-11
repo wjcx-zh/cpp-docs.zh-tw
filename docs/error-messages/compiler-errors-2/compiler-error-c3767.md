@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3767
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3767
+f1_keywords: C3767
+dev_langs: C++
+helpviewer_keywords: C3767
 ms.assetid: 5247cdcd-639c-4527-bd37-37e74c4e8fab
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 731327af2c4c220a3779ddce007c6544db0a3128
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 6ebbcbe30a0c9359116d259c36d702a968b333c9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3767"></a>編譯器錯誤 C3767
 無法存取的 'function' 候選函式  
@@ -87,42 +83,4 @@ ref class Der : public Base {
 };  
 ```  
   
- 在 Visual c + +.NET 2002 中，編譯器會變更它查閱符號的方式。 在某些情況下，它會自動尋找指定的命名空間中的符號。 現在，它會使用引數相依查閱。  
-  
- 下列範例會產生 C3767:  
-  
-```  
-// C3767e.cpp  
-namespace N {  
-   class C {  
-      friend void FriendFunc() {}  
-      friend void AnotherFriendFunc(C* c) {}  
-   };  
-}  
-  
-int main() {  
-   using namespace N;  
-   FriendFunc();   // C3767 error  
-   C* pC = new C();  
-   AnotherFriendFunc(pC);   // found via argument-dependent lookup  
-}  
-```  
-  
- 針對 Visual c + +.NET 2003年和 Visual c + +.NET 2002年中有效的程式碼，宣告在類別範圍中的為 friend，並在命名空間範圍中定義它：  
-  
-```  
-// C3767f.cpp  
-class MyClass {  
-   int m_private;  
-   friend void func();  
-};  
-  
-void func() {  
-   MyClass s;  
-   s.m_private = 0;  
-}  
-  
-int main() {  
-   func();  
-}  
-```
+ 

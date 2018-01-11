@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2383
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2383
+f1_keywords: C2383
+dev_langs: C++
+helpviewer_keywords: C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7f89545b9428bd5e901c72d895b5c23317646c26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 20f6fa7626541f5fcd06bc2c2c513f52ec443ba4
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2383"></a>編譯器錯誤 C2383
 '*符號*': 預設引數不允許在這個符號  

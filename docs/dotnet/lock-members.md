@@ -1,43 +1,45 @@
 ---
-title: "lock 成員 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "lock 成員 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 33413b81-3ae8-4544-99c8-27a7364e7e05
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c5f811cf875f8f846a6092f9974b8a451cd16c39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# lock 成員
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[lock 類別](../dotnet/lock-class.md) 的成員。  
+# <a name="lock-members"></a>lock 成員
+成員[鎖定類別](../dotnet/lock-class.md)。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本節內容  
  [lock::lock](../dotnet/lock-lock.md)  
   
  [lock::~lock](../dotnet/lock-tilde-lock.md)  
   
  [lock::acquire](../dotnet/lock-acquire.md)  
   
- [lock::is\_locked](../dotnet/lock-is-locked.md)  
+ [lock::is_locked](../dotnet/lock-is-locked.md)  
   
  [lock::release](../dotnet/lock-release.md)  
   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)  
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)  
   
  [lock::operator bool](../dotnet/lock-operator-bool.md)  
   
- [lock::operator\=\=](../dotnet/lock-operator-equality.md)  
+ [lock::operator==](../dotnet/lock-operator-equality.md)  
   
- [lock::operator\!\=](../dotnet/lock-operator-inequality.md)
+ [lock::operator!=](../dotnet/lock-operator-inequality.md)

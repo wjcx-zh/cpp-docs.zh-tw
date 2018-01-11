@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0843e3e9798087a1ed5d9415e8397149b0cd74f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 159b80fcc015db2999309fe99e9617f7dcd409ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 Common language runtime 提供的平台叫用服務或 PInvoke，可讓 managed 程式碼能夠呼叫 C 樣式函式在原生動態連結程式庫 (Dll)。 相同的資料封送處理會用於執行階段和 「 它只著作 」 或 IJW、 機制的 COM 互通性。  
@@ -229,5 +232,5 @@ int main() {
   
  為提升效能，有較少越好，而不是封送處理較少的資料，每個呼叫的多個呼叫，最多資料封送處理的 PInvoke 呼叫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

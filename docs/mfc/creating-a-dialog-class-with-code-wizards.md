@@ -18,18 +18,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99a1784de9385e39d79168f7532f7da64489bfc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c4df515940500fd81d1d85c793d77a35785832d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-dialog-class-with-code-wizards"></a>使用程式碼精靈建立對話方塊類別
 下表列出程式碼精靈會協助您管理的對話方塊相關工作。  
   
 ### <a name="dialog-related-tasks"></a>對話方塊相關工作  
   
-|工作|套用至 . 。|  
+|工作|套用至 。 。|  
 |----------|--------------------|  
 |[建立新的 CDialog 衍生類別](../mfc/creating-your-dialog-class.md)來管理您的對話方塊。|每個對話方塊。|  
 |[Windows 訊息對應](../mfc/handling-windows-messages-in-your-dialog-box.md)到對話方塊類別。|您要處理的每個訊息。|  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [對話方塊](../mfc/dialog-boxes.md)   
  [對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
 

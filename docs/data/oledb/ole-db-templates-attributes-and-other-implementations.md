@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0dc00e20d1177de7532e0da121874476ad9fde2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a859e455bb0c1569c401a865e9cfffbf6bdf2c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB 樣板、屬性和其他實作
 ## <a name="atl-ole-db-templates"></a>ATL OLE DB 樣板  
@@ -56,6 +59,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK 介面  
  在 OLE DB 範本不支援 OLE DB 功能的情況下，您需要使用 OLE DB 介面本身。 如需詳細資訊，請參閱[OLE DB 程式設計人員參考](https://msdn.microsoft.com/en-us/library/ms713643.aspx)Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)

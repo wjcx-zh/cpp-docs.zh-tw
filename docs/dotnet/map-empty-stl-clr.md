@@ -1,41 +1,42 @@
 ---
-title: "map::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty 成員 [STL/CLR]"
+title: "map:: empty (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: ce41d37a-2896-48df-87ea-d3f3b3e5ab45
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9b2b0a94d416d4b84e46a89bd3013f06f063741a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# map::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapempty-stlclr"></a>map::empty (STL/CLR)
 測試項目是否不存在。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool empty();  
 ```  
   
-## 備註  
- 成員函式傳回 true 表示一個空的控制順序。  它與 [map::size](../dotnet/map-size-stl-clr.md)`() == 0`。  您會用它來測試對應是否是空的。  
+## <a name="remarks"></a>備註  
+ 成員函式會對空的受控制序列傳回 true。 它相當於[map:: size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`。 您可以使用它來測試是否是空的對應。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_empty.cpp   
@@ -66,16 +67,19 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**大小 \(\) \= 3**  
-**空白 \(\) \= false**  
-**大小 \(\) \= 0**  
-**空白 \(\) \= true**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::size](../dotnet/map-size-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)

@@ -31,11 +31,14 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f400ed3e93af8f7e0727d3fe378d0ac471bd18f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3a5f6b6cd68906753bc4f9a5fbc1d9e00bad02f8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ Interop (隱含 PInvoke)
 不同於其他.NET 語言中，Visual c + + 已經在同一個應用程式，甚至相同的檔案，可讓存在於 managed 和 unmanaged 程式碼的互通性支援 (使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓 Visual c + + 開發人員整合至現有的 Visual c + + 應用程式的.NET 功能，也不會干擾其餘的應用程式。  
@@ -89,7 +92,7 @@ Begin beep
 Done  
 ```  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 -   [如何：使用 C++ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
@@ -143,5 +146,5 @@ Done
   
  如需在 interop 案例中使用委派資訊，請參閱[委派 （c + + 元件擴充功能）](../windows/delegate-cpp-component-extensions.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)

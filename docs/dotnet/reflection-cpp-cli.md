@@ -1,54 +1,56 @@
 ---
-title: "反映 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/13/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], 反映"
-  - "資料類型 [C++], 反映"
-  - "GetType 方法"
-  - "中繼資料, 反映"
-  - "反映 [C++]"
-  - "反映 [C++], 關於反映"
-  - "typeid 關鍵字 [C++]"
+title: "反映 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- typeid keyword [C++]
+- reflection [C++}, about reflection
+- metadata, reflection
+- GetType method
+- .NET Framework [C++], reflection
+- data types [C++], reflection
+- reflection [C++}
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-caps.latest.revision: 24
-caps.handback.revision: 22
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 反映 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-反映 \(Reflection\) 允許在執行階段檢查已知的資料型別。  反映允許指定組件中資料型別列舉，並且會發現指定類別的成員或實值型別。  不管該型別是已知的或者在編譯時才參考的，它都會這樣做。  這樣會讓反映成為開發及程式碼管理工具的有用功能。  
+# <a name="reflection-ccli"></a>反映 (C++/CLI)
+反映可讓您在執行階段檢查已知的資料類型。 反映可讓資料類型的列舉中指定的組件，並可以探索到指定的類別或實值類型的成員。 這是不論是否型別是已知的參考在編譯時期，則為 true。 這可讓反映一個實用的功能，用於開發和程式碼管理工具。  
   
- 請注意，提供的組件名稱為強式名稱 \(請參閱[強式名稱的組件](../Topic/Creating%20and%20Using%20Strong-Named%20Assemblies.md)\)，其中包括組件版本、文化特性和簽章資訊。  同時也請注意，可以在擷取基底類別名稱時一起擷取命名空間的名稱 \(資料型別是在此命名空間中定義的\)。  
+ 請注意，提供的組件名稱是強式名稱 (請參閱[Creating and using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies))，其中包含組件版本、 文化特性，以及簽章資訊。 請注意，在其中定義資料類型的命名空間名稱無法擷取，以及基底類別的名稱。  
   
- 存取反映功能最常用的方式就是透過 <xref:System.Object.GetType%2A> 方法。  這個方法是由 [System::Object](https://msdn.microsoft.com/en-us/library/system.object.aspx) 提供，所有的記憶體回收類別也衍生於此。  
+ 若要存取反映功能最常見的方式是透過<xref:System.Object.GetType%2A>方法。 這個方法由[system:: object](https://msdn.microsoft.com/en-us/library/system.object.aspx)，從衍生所有記憶體回收的類別。  
   
- 如果使用 **\/clr:pure** 或 **\/clr:safe** 編譯器選項建置 .exe，則在以 Visual C\+\+ 編譯器建置的 .exe 上允許反映。  如需詳細資訊，請參閱[\/clr \(Common Language Runtime 編譯\)](../build/reference/clr-common-language-runtime-compilation.md)。  
+ 使用 Visual c + + 編譯器建置的.exe 的反射才允許使用.exe 所建置**/clr: pure**或**/clr: safe**編譯器選項。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。 請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。  
   
  本節主題：  
   
--   [如何：使用反映實作外掛程式元件架構](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
+-   [如何：使用反映實作外掛程式元件架構 (C++/CLI)](../dotnet/how-to-implement-a-plug-in-component-architecture-using-reflection-cpp-cli.md)  
   
--   [如何：使用反映以列舉組件中的資料類型](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
+-   [如何：使用反映以列舉組件中的資料類型 (C++/CLI)](../dotnet/how-to-enumerate-data-types-in-assemblies-using-reflection-cpp-cli.md)  
   
- 如需詳細資訊，請參閱 [System.Reflection 命名空間](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)。  
+ 如需詳細資訊，請參閱[System.Reflection 命名空間](https://msdn.microsoft.com/en-us/library/system.reflection.aspx)  
   
-## 範例  
- `GetType` 方法會傳回 <xref:System.Type> 類別物件的指標，此指標會描述所依據之物件的型別\(**Type** 物件不包含任何特定執行個體的資訊\)。這樣的項目即是該型別的完整名稱，可顯示如下：  
+## <a name="example"></a>範例  
+ `GetType`方法將指標傳回至<xref:System.Type>類別物件，描述在以物件為基礎的類型。 (**類型**物件不包含任何執行個體的特定資訊。)一個這類項目是屬於型別，可以顯示，如下所示的完整名稱：  
   
- 請注意，型別名稱包括定義型別的完整範圍 \(包含命名空間\)，而且它是以 .NET 語法顯示 \(含有做為範圍解析運算子的點\)。  
+ 請注意，型別名稱包含完整的範圍，其中型別定義，包括命名空間，而且，它會顯示在.NET 語法中，以點號做為範圍解析運算子。  
   
 ```  
 // vcpp_reflection.cpp  
@@ -60,9 +62,12 @@ int main() {
 }  
 ```  
   
-  **'sample string' 的完整類型名稱是 'System.String'**   
-## 範例  
- 實值型別也可以與 `GetType` 函式一起使用，但必須先執行 box 動作。  
+```Output  
+full type name of 'sample string' is 'System.String'  
+```  
+  
+## <a name="example"></a>範例  
+ 實值型別可以搭配`GetType`函式，但它們必須先 boxed。  
   
 ```  
 // vcpp_reflection_2.cpp  
@@ -75,11 +80,14 @@ int main() {
 }  
 ```  
   
-  **i 的型別 \= 'System.Int32'**   
-## 範例  
- 如果使用 `GetType` 方法，[typeid](../windows/typeid-cpp-component-extensions.md) 運算子會將指標傳回至 \[**Type**\] 物件，因此這項程式碼會指出型別名稱 **System.Int32**。  顯示型別名稱是反映的最基本功能，但是反映還具備另一項可能更有用的技術，就是檢查或探索 \(Discover\) 列舉型別的有效值。  若要達成此目的，可以使用靜態 **Enum::GetNames** 函式，它會傳回字串陣列，在文字表單中每個字串都包含列舉值。下列範例會擷取字串陣列 \(該字串描述 \[**Options**\] \(CLR\) 列舉的列舉值\)，並在迴圈中顯示它們。  
+```Output  
+type of i = 'System.Int32'  
+```  
   
- 如果第四個選項加入至 \[**Options**\] 列舉型別，此程式碼將會報告新選項而不會重新編譯，即使列舉型別是在其他組件中定義的也一樣。  
+## <a name="example"></a>範例  
+ 如同`GetType`方法， [typeid](../windows/typeid-cpp-component-extensions.md)運算子將指標傳回至**類型**物件，因此這段程式碼中指出的型別名稱**System.Int32**。 顯示型別名稱是最基本功能反映，但可能更實用的方法是檢查或探索列舉類型的有效值。 作法是使用靜態**enum:: getnames**函式，其傳回字串陣列，每一個都會包含文字格式的列舉值。  下列範例會擷取說明的值列舉值的字串陣列**選項**列舉 (CLR) 並將其顯示在迴圈中。  
+  
+ 如果是第四個選項加入至**選項**列舉型別，此程式碼會報告不需重新編譯，即使列舉型別在不同的組件中定義新的選項。  
   
 ```  
 // vcpp_reflection_3.cpp  
@@ -104,13 +112,16 @@ int main() {
 }  
 ```  
   
-  **在 'Options' 列舉中有 3 個選項**  
-**0: Option1**  
-**1: Option2**  
-**2: Option3**  
-**'o' 的值是 Option2**   
-## 範例  
- `GetType` 物件支援許多成員和用來檢查型別的屬性。  此程式碼會擷取並顯示一些資訊：  
+```Output  
+there are 3 options in enum 'Options'  
+0: Option1  
+1: Option2  
+2: Option3  
+value of 'o' is Option2  
+```  
+  
+## <a name="example"></a>範例  
+ `GetType`物件支援的成員和屬性，可以用來檢查類型的數字。 此程式碼會擷取並顯示此資訊的某些部分：  
   
 ```  
 // vcpp_reflection_4.cpp  
@@ -137,15 +148,18 @@ int main() {
 }  
 ```  
   
-  **'String' 的型別資訊：**  
-**組譯碼名稱: mscorlib, Version\=1.0.5000.0, 文化特性\=neutral,**  
-**PublicKeyToken\=b77a5c561934e089**  
-**命名空間：System**  
-**基底類型: System.Object**  
-**是陣列：False**  
-**是類別： True**   
-## 範例  
- 反映也允許組件內可以有列舉型別和類別內可以有成員。  若要示範此功能，請定義簡單類別：  
+```Output  
+type information for 'String':  
+assembly name: mscorlib, Version=1.0.5000.0, Culture=neutral,   
+PublicKeyToken=b77a5c561934e089  
+namespace: System  
+base type: System.Object  
+is array: False  
+is class: True  
+```  
+  
+## <a name="example"></a>範例  
+ 反映也可讓組件中的型別和成員類別中的列舉型別。 若要示範這項功能，定義簡單的類別：  
   
 ```  
 // vcpp_reflection_5.cpp  
@@ -165,14 +179,14 @@ public:
 };  
 ```  
   
-## 範例  
- 如果將上述程式碼編譯至名為 vcpp\_reflection\_6.dll 的 DLL，就可以使用反映檢查此組件的內容。  這牽涉到使用靜態反映 API 函式 [Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx) 以載入組件，  這個函式會傳回 **Assembly** 物件的位址，之後便可在其內查詢物件的模組和型別。  
+## <a name="example"></a>範例  
+ 如果上述程式碼編譯成 DLL 呼叫 vcpp_reflection_6.dll，您可以再使用反映來檢查這個組件的內容。 這涉及到使用靜態反映 API 函數[Assembly::Load](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.load.aspx)載入組件。 此函式傳回的位址**組件**然後可查詢有關模組和類型內的物件。  
   
- 一旦反映系統成功地載入組件，就會以 [Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx) 函式擷取 \[**Type**\] 物件陣列。  每個陣列元素都會包含不同型別的相關資訊 \(即使在這個範例中只定義一個類別\)。  若使用迴圈，就可使用 **Type::GetMembers** 函式查詢此陣列中每個 **Type** 的型別成員。  這個函式會傳回 **MethodInfo** 物件陣列，其中每個物件都包含成員函式、資料成員或型別屬性 \(Property\) 的相關資訊。  
+ 一旦反映系統成功載入的組件的陣列**類型**與擷取物件[Assembly::GetTypes](https://msdn.microsoft.com/en-us/library/system.reflection.assembly.gettypes.aspx)函式。 雖然只有一個類別定義在此情況下，每個陣列元素會包含不同類型的相關資訊。 使用迴圈，每個**類型**此陣列中查詢使用的型別成員相關**Type::GetMembers**函式。 此函式傳回的陣列**MethodInfo**物件、 每個物件，其中包含成員函式、 資料成員或類型中的屬性的相關資訊。  
   
- 請注意，方法清單包括 **TestClass** 中明確定義的函式，以及從 **System::Object** 類別中隱含繼承的函式。  由於是用 .NET 而非 Visual C\+\+ 語法來描述的部分，屬性 \(Property\) 會顯示為基礎資料成員，須以 get\/set 函式來存取。  get\/set 函式會以規則性方法出現在此清單中。  反映的支援不是透過 Visual C\+\+ 編譯器，而是透過 Common Language Runtime。  
+ 請注意方法的清單包含明確的函數定義中**TestClass**及函式隱含繼承自**system:: object**類別。 在.NET 中，而不是在 Visual c + + 語法中所描述的一部分，屬性會顯示為基礎的資料成員存取的 get/set 函式。 Get/set 函式會出現在這份清單中，做為一般方法。 不是由 Visual c + + 編譯器透過 common language runtime 支援反映。  
   
- 雖然可以使用此程式碼檢查所定義的組件，但是也可以使用此程式碼檢查 .NET 組件。  例如，如果您將 TestAssembly 變更為 mscorlib，您將會看到 mscorlib.dll 中定義的各種型別和方法的清單。  
+ 雖然您可以使用此程式碼來檢查您定義的組件，您也可以使用此程式碼來檢查.NET 組件。 例如，如果您變更 TestAssembly mscorlib 時，您會看到每個型別和方法在 mscorlib.dll 中定義的清單。  
   
 ```  
 // vcpp_reflection_6.cpp  
@@ -221,5 +235,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

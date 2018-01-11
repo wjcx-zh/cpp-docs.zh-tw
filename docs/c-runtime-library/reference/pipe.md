@@ -35,17 +35,18 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7c46eff8faabb52f514e2711a065d7fc1fed8b75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a14fa401b2a46bbfb3d5aafcda4d05c0167b3d9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pipe"></a>_pipe
 建立用於讀取和寫入的管道。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -97,7 +98,7 @@ int _pipe(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_pipe`|\<io.h>|\<fcntl.h>1、\<errno.h>2|  
   
@@ -105,7 +106,7 @@ int _pipe(
   
  2 `errno` 定義。  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -343,6 +344,6 @@ This is speaker beep number 9...
 This is speaker beep number 10...  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [處理序和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>請參閱  
+ [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [_open、_wopen](../../c-runtime-library/reference/open-wopen.md)

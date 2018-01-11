@@ -1,33 +1,33 @@
 ---
-title: "編譯器警告 (層級 1) C4799 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4799"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4799"
+title: "編譯器警告 （層級 1） C4799 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4799
+dev_langs: C++
+helpviewer_keywords: C4799
 ms.assetid: 8ecbd06f-c778-4371-a2fb-c690b6743ec8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9f41535c01d67e28baa2569ace2684865407a1d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4799
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-函式 'function' 結尾沒有 EMMS  
+# <a name="compiler-warning-level-1-c4799"></a>編譯器警告 (層級 1) C4799  
   
- 函式至少有一個 MMX 指令，但沒有 EMMS 指令。  使用多媒體指令時，也應該使用 EMMS 指令來清除 MMX 程式碼結尾的多媒體標記文字。  如需關於 EMMS 指令的詳細資訊，請參閱[何時使用 EMMS 的規定](http://msdn.microsoft.com/zh-tw/a0c3b1e4-01a4-419c-a58f-ff1e97dea7d3)。  
+> 在函式的結尾處沒有 EMMS '*函式*'  
   
- 當使用 ivec.h 時可能會產生 C4799，表示程式碼在返回前未正確執行 EMMS 指令。  這是這些標頭的假警告。  您可以在 ivec.h 中定義 \_SILENCE\_IVEC\_C4799 以關閉它們。  然而，請小心這麼做也會使編譯器不再對此類型提供正確的警告。  
+函式具有一個以上的 MMX 指令，但沒有`EMMS`指令。 當使用多媒體指令時，`EMMS`指令或`_mm_empty`內建函式應該也可用來清除多媒體標記文字 MMX 程式碼的結尾。  
   
- 如需相關資訊，請參閱 [Intel MMX 指令集](../../assembler/inline/intel-s-mmx-instruction-set.md)。
+使用 ivec.h，指出程式碼不會正確地使用 execute EMMS 指令，再傳回時，可能會收到 C4799。 這是這些標頭，則為 false 的警告。 您可以關閉這些藉由定義 _SILENCE_IVEC_C4799 ivec.h 中。 不過，請注意，這也會使編譯器提供此類型正確的警告。  
+  
+如需相關資訊，請參閱[Intel 的 MMX 指令集](../../assembler/inline/intel-s-mmx-instruction-set.md)。

@@ -1,41 +1,42 @@
 ---
-title: "RuntimeClassFlags::value 常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClassFlags::value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value 常數"
+title: "Runtimeclassflags:: Value 常數 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClassFlags::value
+dev_langs: C++
+helpviewer_keywords: value constant
 ms.assetid: df5e6939-a424-489f-a5da-0027b0eee230
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 564c5185bd5414d2b0194abb8b16a4522439afb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# RuntimeClassFlags::value 常數
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-包含 [RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md) 值的欄位。  
+# <a name="runtimeclassflagsvalue-constant"></a>RuntimeClassFlags::value 常數
+包含的欄位[RuntimeClassType 列舉](../windows/runtimeclasstype-enumeration.md)值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 static const unsigned int value = flags;  
 ```  
   
-## 需求  
- **標題:** implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [RuntimeClassFlags 結構](../windows/runtimeclassflags-structure.md)

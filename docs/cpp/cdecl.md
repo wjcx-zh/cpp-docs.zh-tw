@@ -15,18 +15,19 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f11414914bb1682c0bd5e05d80ab2ebbbe3ae72a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d73de8b2a158c09ebd61306683f6fdc1ad0f514e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdecl"></a>__cdecl
 **Microsoft 特定的**  
   
  `__cdecl` 是 C 和 C++ 程式的預設呼叫慣例。 因為堆疊已清除的呼叫端，它可以執行**vararg**函式。 `__cdecl`呼叫慣例會建立較大的可執行檔比[__stdcall](../cpp/stdcall.md)，因為它需要每個函式呼叫都包含堆疊清除程式碼。 下列清單會顯示這個呼叫慣例的實作。  
   
-|項目|實作|  
+|元素|實作|  
 |-------------|--------------------|  
 |引數傳遞順序|由右至左。|  
 |堆疊維護責任|呼叫函式會從堆疊取出引數。|  
@@ -70,6 +71,6 @@ int __cdecl system(const char *);
 typedef BOOL (__cdecl *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
  [關鍵字](../cpp/keywords-cpp.md)

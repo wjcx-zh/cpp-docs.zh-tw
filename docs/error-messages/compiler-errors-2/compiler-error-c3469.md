@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3469
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3469
+f1_keywords: C3469
+dev_langs: C++
+helpviewer_keywords: C3469
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1881010e729b854f6a5199d520548c08581fc46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 64a82be68ec8722db40bb3f39e4898219e9e16c2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3469"></a>編譯器錯誤 C3469
 'type': 泛型類別無法轉送  

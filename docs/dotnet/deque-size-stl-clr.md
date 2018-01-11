@@ -1,41 +1,42 @@
 ---
-title: "deque::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size 成員 [STL/CLR]"
+title: "deque:: size (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 81db82c1-7fe7-4eb4-8785-6d36197e4681
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 34e3bed306da78876a5c232d258fc18cae84bb36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# deque::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-計數項目的數目。  
+# <a name="dequesize-stlclr"></a>deque::size (STL/CLR)
+計算元素的數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_type size();  
 ```  
   
-## 備註  
- 成員函式傳回受控制序列的長度。  您可用它來決定受控制序列中目前的項目數目。  如果您只想知道序列的大小是否非零，請參閱 [deque::empty](../dotnet/deque-empty-stl-clr.md)`()`。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制序列的長度。 您可以使用它來判斷目前在受控制序列中的項目數。 如果您在意順序是否具有非零的大小，請參閱[deque:: empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)`()`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_size.cpp   
@@ -68,15 +69,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3 starting with 3**  
-**size\(\) \= 0 after clearing**  
-**size\(\) \= 2 after adding 2**   
-## 需求  
- **標頭：** \<cliext\/deque\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::empty](../dotnet/deque-empty-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)

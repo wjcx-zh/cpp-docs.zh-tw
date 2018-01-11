@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ad77e459d32ed0fc0b3798d2a37b4754d556f20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>如何：讀取 Windows 效能計數器 (C++/CLI)
 某些應用程式和 Windows 子系統公開透過 Windows 的效能系統的效能資料。 這些計數器可以使用存取<xref:System.Diagnostics.PerformanceCounterCategory>和<xref:System.Diagnostics.PerformanceCounter>類別位於<xref:System.Diagnostics?displayProperty=fullName>命名空間。  
@@ -124,7 +127,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [監視效能簡介](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
  [Windows 作業 (C + + /CLI)](../dotnet/windows-operations-cpp-cli.md)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

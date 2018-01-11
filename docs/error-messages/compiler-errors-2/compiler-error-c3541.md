@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 78b4c228999560807aa28dbaecfaa8f0af7b379a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeef2650dd772784ceee5e7802a46650e4cfcbe1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3541"></a>編譯器錯誤 C3541
 'type': typeid 無法套用至包含 'auto' 的類型  
@@ -41,7 +42,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)   
  [/Zc: auto （推算變數類型）](../../build/reference/zc-auto-deduce-variable-type.md)   
  [typeid](../../windows/typeid-cpp-component-extensions.md)

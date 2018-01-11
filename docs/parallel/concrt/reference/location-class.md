@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aafe0500568cd9d4c9419345560272e18008df83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26a45809ce41beb36a5f69d2ab219b85e3aafcdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="location-class"></a>location 類別
 硬體實體位置的抽象概念。  
@@ -35,25 +36,25 @@ ms.lasthandoff: 10/24/2017
 class location;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[位置](#ctor)|多載。 建構 `location` 物件。|  
 |[~ location 解構函式](#dtor)|終結 `location` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[目前](#current)|傳回 `location` 物件，表示呼叫執行緒執行的最特定位置。|  
 |[from_numa_node](#from_numa_node)|傳回 `location` 物件，該物件代表某一特定的 NUMA 節點。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator!=](#operator_neq)|判斷兩個 `location` 物件是否表示不同的位置。|  
 |[operator=](#operator_eq)|將不同 `location` 物件的內容指派給這一個。|  
@@ -170,5 +171,5 @@ bool operator== (const location& _Rhs) const;
 ### <a name="return-value"></a>傳回值  
  `true`如果兩個位置都相同，和`false`否則。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

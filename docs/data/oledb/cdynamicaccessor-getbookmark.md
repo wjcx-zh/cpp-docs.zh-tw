@@ -1,57 +1,58 @@
 ---
-title: "CDynamicAccessor::GetBookmark | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetBookmark"
-  - "GetBookmark"
-  - "CDynamicAccessor::GetBookmark"
-  - "ATL.CDynamicAccessor.GetBookmark"
-  - "ATL::CDynamicAccessor::GetBookmark"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetBookmark 方法"
+title: "Cdynamicaccessor:: Getbookmark |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetBookmark
+- GetBookmark
+- CDynamicAccessor::GetBookmark
+- ATL.CDynamicAccessor.GetBookmark
+- ATL::CDynamicAccessor::GetBookmark
+dev_langs: C++
+helpviewer_keywords: GetBookmark method
 ms.assetid: 6d0a2970-0c62-4a34-bac7-149d8e990f81
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e090df30db8abfcd2aee4dc87543be72183f7960
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetBookmark
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-擷取目前行的書籤。  
+# <a name="cdynamicaccessorgetbookmark"></a>CDynamicAccessor::GetBookmark
+擷取目前的資料列的書籤。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT GetBookmark(   
-   CBookmark< >* pBookmark    
+      HRESULT GetBookmark(   
+   CBookmark< >* pBookmark    
 ) const throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pBookmark`  
- \[out\] [CBookmark](../../data/oledb/cbookmark-class.md) 物件的指標。  
+ [out]指標[CBookmark](../../data/oledb/cbookmark-class.md)物件。  
   
-## 傳回值  
- 其中一個標準 `HRESULT` 列舉值。  
+## <a name="return-value"></a>傳回值  
+ 其中一個標準`HRESULT`值。  
   
-## 備註  
- 您必須將 **DBPROP\_IRowsetLocate** 設定為 `VARIANT_TRUE` 以擷取書籤。  
+## <a name="remarks"></a>備註  
+ 您需要設定**DBPROP_IRowsetLocate**至`VARIANT_TRUE`擷取書籤。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

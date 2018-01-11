@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1094
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1094
+f1_keywords: C1094
+dev_langs: C++
+helpviewer_keywords: C1094
 ms.assetid: 9e1193b2-cb95-44f9-bf6f-019e0d41dd97
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 630ed1979656351f6816ac5c24a7cbe386e62cce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 032eee2edf1570e46359d22379843157c6889b4b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1094"></a>嚴重錯誤 C1094
 '-Zmval1': 命令列選項不一致，用來建置先行編譯標頭的值 ('-Zmval2')  

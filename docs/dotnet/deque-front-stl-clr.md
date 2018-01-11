@@ -15,11 +15,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bcf649af1b9b1b3bbd3442a7d957eab89dc80118
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 967b58323740a3cb6ef1c3c99b4db821faf45725
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequefront-stlclr"></a>deque::front (STL/CLR)
 存取第一個項目。  
@@ -76,7 +79,7 @@ front() = a
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque:: back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
  [deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2831
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2831
+f1_keywords: C2831
+dev_langs: C++
+helpviewer_keywords: C2831
 ms.assetid: c8c04288-0889-4265-a077-17f94cbcdcc9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 19aea7100d3e4916fcce63301bb4fe2192e7ce9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 93eaffe8f94f7d0b5606f403a7f4fbd27560240b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2831"></a>編譯器錯誤 C2831
 'operator operator' 不能有預設參數  

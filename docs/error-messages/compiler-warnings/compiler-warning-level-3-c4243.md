@@ -1,34 +1,33 @@
 ---
-title: "編譯器警告 (層級 3) C4243 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4243"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4243"
+title: "編譯器警告 （層級 3） C4243 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4243
+dev_langs: C++
+helpviewer_keywords: C4243
 ms.assetid: ca72f9ad-ce0b-43a9-a68c-106e1f8b90ef
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b3449dc305495848517687b7404dbdab5528e9a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 3) C4243
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'conversion type' : 從 'type1' 至 'type2' 的轉換已經存在，但無法存取  
+# <a name="compiler-warning-level-3-c4243"></a>編譯器警告 (層級 3) C4243
+'轉換 type' 的轉換有從 'type1' 到 'type2'，但無法存取  
   
- 衍生類別的指標轉換為基底類別的指標，但衍生類別繼承了基底類別的私用或保護存取。  
+ 在衍生類別的指標會轉換成基底類別的指標，但在衍生的類別繼承的基底類別的私用或受保護的存取。  
   
- 下列範例會產生 C4243：  
+ 下列範例會產生 C4243:  
   
 ```  
 // C4243.cpp  

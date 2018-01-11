@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c07cc20c344e6ccd5c3f7798cfd471e7111fe47d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d71c8b5c7f6c90dc0193626e57b736a549be87e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformwrongthreadexception-class"></a>Platform::WrongThreadException 類別
 當執行緒透過不屬於執行緒 Apartment 的 Proxy 物件的介面指標來呼叫時擲回。  
@@ -44,5 +45,5 @@ public ref class WrongThreadException : COMException,    IException,    IPrintab
   
  **中繼資料：** platform.winmd  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform::COMException 類別](../cppcx/platform-comexception-class.md)

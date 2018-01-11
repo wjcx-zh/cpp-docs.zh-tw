@@ -1,39 +1,40 @@
 ---
-title: "IColumnsInfoImpl::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "ATL::IColumnsInfoImpl::GetColumnInfo"
-  - "ATL.IColumnsInfoImpl.GetColumnInfo"
-  - "ATL::IColumnsInfoImpl<T>::GetColumnInfo"
-  - "IColumnsInfoImpl::GetColumnInfo"
-  - "IColumnsInfoImpl<T>::GetColumnInfo"
-  - "IColumnsInfoImpl.GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo 方法"
+title: "Icolumnsinfoimpl:: Getcolumninfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- ATL::IColumnsInfoImpl::GetColumnInfo
+- ATL.IColumnsInfoImpl.GetColumnInfo
+- ATL::IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl::GetColumnInfo
+- IColumnsInfoImpl<T>::GetColumnInfo
+- IColumnsInfoImpl.GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: a6739a39-7402-496a-b544-a5b1ed05fadf
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f2b21f37d8e71390a43a25b486466c99771ff649
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IColumnsInfoImpl::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳回大部分消費者所需的資料行中繼資料。  
+# <a name="icolumnsinfoimplgetcolumninfo"></a>IColumnsInfoImpl::GetColumnInfo
+傳回所需的大部分取用者的資料行中繼資料。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -44,12 +45,12 @@ manager: "ghogen"
 );  
 ```  
   
-#### 參數  
- 如需詳細資訊，請參閱 *OLE DB 程式設計人員參考* 中的 [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)。  
+#### <a name="parameters"></a>參數  
+ 請參閱[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IColumnsInfoImpl 類別](../../data/oledb/icolumnsinfoimpl-class.md)   
  [IColumnsInfoImpl::MapColumnIDs](../../data/oledb/icolumnsinfoimpl-mapcolumnids.md)

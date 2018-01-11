@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1a9f290b6b4a76ac561a8b03bb7a686543b947b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4f258f5872a68931a40d21f7079e4089678baac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatapathproperty-class"></a>CDataPathProperty 類別
 實作可以非同步載入的 OLE 控制項屬性。  
@@ -46,17 +47,17 @@ ms.lasthandoff: 10/24/2017
 class CDataPathProperty : public CAsyncMonikerFile  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|建構 `CDataPathProperty` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDataPathProperty::GetControl](#getcontrol)|擷取與相關聯的非同步 OLE 控制項`CDataPathProperty`物件。|  
 |[CDataPathProperty::GetPath](#getpath)|擷取屬性的路徑名稱。|  
@@ -206,7 +207,7 @@ void SetPath(LPCTSTR lpszPath);
  `lpszPath`  
  路徑，但它可能是絕對或相對的以非同步方式載入的屬性。 `CDataPathProperty`使用 Url，而不是檔名。 如果您想`CDataPathProperty`物件的檔案，請在前面加上`file://`的路徑。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例影像](../../visual-cpp-samples.md)   
  [CAsyncMonikerFile 類別](../../mfc/reference/casyncmonikerfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

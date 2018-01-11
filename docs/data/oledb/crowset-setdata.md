@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0daa66111e2b9657218e42d66c9f9b5b9364cd4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0aafc521e130a7f737083390fe5f825c88aa5844
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetsetdata"></a>CRowset::SetData
 設定資料列的一個或多個資料行中的資料值。  
@@ -60,6 +63,6 @@ HRESULT SetData(
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)   
  [CRowset::Update](../../data/oledb/crowset-update.md)

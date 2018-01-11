@@ -1,36 +1,35 @@
 ---
-title: "編譯器警告 (層級 1) C4905 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4905"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4905"
+title: "編譯器警告 （層級 1） C4905 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4905
+dev_langs: C++
+helpviewer_keywords: C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 93225b21aa8fbe834589c689a465b508593cc64b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4905
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4905"></a>編譯器警告 (層級 1) C4905
 寬字串常值轉換成 'LPSTR'  
   
- 編譯器偵測到不安全的轉換。  轉換確實會完成，但您應該使用轉換常式。  
+ 編譯器偵測到不安全的轉換。 轉換未成功，但您應該使用的轉換常式。  
   
- 此警告在預設情況下為關閉的。  如需詳細資訊，請參閱[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4905。  
   
 ```  

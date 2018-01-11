@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- cgets
+apiname: cgets
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,26 +20,23 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- cgets
-dev_langs:
-- C++
-helpviewer_keywords:
-- cgets function
+f1_keywords: cgets
+dev_langs: C++
+helpviewer_keywords: cgets function
 ms.assetid: 54faf257-5ed6-4301-be19-66d953e901fa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0ec12a9da8a468d3b81e30961eb3eff25de9894a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 20f916f9168789dc9d95952ae05b087fdeab7ec8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgets"></a>cgets
 此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_cgets](../../c-runtime-library/cgets-cgetws.md) 或增強安全性的 [_cgets_s](../../c-runtime-library/reference/cgets-s-cgetws-s.md)。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [HYPERLINK "http://msdn.microsoft.com/en-us/library/windows/apps/jj606124.aspx" \o "CRT functions not supported with /ZW" /ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [HYPERLINK "http://msdn.microsoft.com/en-us/library/windows/apps/jj606124.aspx" \o "CRT functions not supported with /ZW" /ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cf53177e0d24777a5447c6655e7b801955610168
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: deb9a96d5096b489f8e4dcbaf987509d60bd5024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="drawing-images-from-an-image-list"></a>從影像清單描繪影像
 若要繪製影像，請使用[cimagelist:: Draw](../mfc/reference/cimagelist-class.md#draw)成員函式。 您將會指定裝置內容物件指標、繪製之影像索引、裝置內容中要繪製影像的位置，以及指出繪製樣式的一組旗標。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  除了繪製成員函式，另一個函式， [DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)，呈現影像的能力。 `DrawIndirect`時間越長，做為參數， [IMAGELISTDRAWPARAMS](http://msdn.microsoft.com/library/windows/desktop/bb761395)結構。 這個結構可以用來自訂目前影像的呈現，包括使用點陣化操作 (ROP) 程式碼。 如需有關 ROP 代碼的詳細資訊，請參閱[點陣作業程式碼](http://msdn.microsoft.com/library/windows/desktop/dd162892)和[點陣圖另存為筆刷](http://msdn.microsoft.com/library/windows/desktop/dd183378)Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CImageList](../mfc/using-cimagelist.md)   
  [控制項](../mfc/controls-mfc.md)
 

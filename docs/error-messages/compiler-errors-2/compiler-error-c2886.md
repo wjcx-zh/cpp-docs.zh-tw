@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2886
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2886
+f1_keywords: C2886
+dev_langs: C++
+helpviewer_keywords: C2886
 ms.assetid: c01588a1-484c-4dc9-a3f1-f900c6e44543
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 464b593c3639f66a6afc7a165a22b5d327c86671
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: cbb4ab1d50a4a6c5bb9ea3c392febf786197e0fa
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2886"></a>編譯器錯誤 C2886
 'class::identifier': 符號不能在成員 using 宣告  

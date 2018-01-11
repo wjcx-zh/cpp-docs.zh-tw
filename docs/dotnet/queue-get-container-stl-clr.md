@@ -1,42 +1,42 @@
 ---
-title: "queue::get_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::get_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "get_container 成員 [STL/CLR]"
+title: "queue::get_container (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::get_container
+dev_langs: C++
+helpviewer_keywords: get_container member [STL/CLR]
 ms.assetid: d87e7433-a352-4bea-8041-1ffc03287436
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 183a8ac80e11a8991741014347f56ad37fcee728
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# queue::get_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuegetcontainer-stlclr"></a>queue::get_container (STL/CLR)
 存取基礎容器。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 container_type^ get_container();  
 ```  
   
-## 備註  
- 成員函式傳回基礎容器。  您會用它來略過由容器包裝函式所加的限制。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回基礎容器。 您可以使用它來略過容器包裝函式所加諸的限制。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_queue_get_container.cpp   
@@ -60,12 +60,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標題:** \<cliext\/佇列\>  
+```Output  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
-## 請參閱  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::container\_type](../dotnet/queue-container-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::container_type (STL/CLR)](../dotnet/queue-container-type-stl-clr.md)

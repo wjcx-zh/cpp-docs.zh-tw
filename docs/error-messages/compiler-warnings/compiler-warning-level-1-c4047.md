@@ -1,35 +1,34 @@
 ---
-title: "編譯器警告 (層級 1) C4047 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4047"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4047"
+title: "編譯器警告 （層級 1） C4047 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4047
+dev_langs: C++
+helpviewer_keywords: C4047
 ms.assetid: b75ad6fb-5c93-4434-a85f-c4083051a5de
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d42913533129fad2cbdc803e6f3d81bdea3ebd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4047
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'operator' : 'identifier1' 和 'identifier2' 的間接取值層級不同  
+# <a name="compiler-warning-level-1-c4047"></a>編譯器警告 （層級 1） C4047
+'operator' : 'identifier1' 在間接層級中不同於 'identifier2'  
   
- 指標可以指向變數 \(一個層級的間接取值 \(Indirection\)\)、指向另一個指向變數的指標 \(兩個層級的間接取值\)，等等。  
+ 指標可以指向的變數 （一個層級的間接取值），與另一個指標指向變數 （兩個層級的間接取值），依此類推。  
   
-## 範例  
- 下列範例會產生 C4047：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C4047:  
   
 ```  
 // C4047.c  
@@ -47,8 +46,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列範例會產生 C4047：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C4047:  
   
 ```  
 // C4047b.c  

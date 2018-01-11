@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2379
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2379
+f1_keywords: C2379
+dev_langs: C++
+helpviewer_keywords: C2379
 ms.assetid: 37dc3015-a4af-4341-bbf3-da6150df7e51
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d39a94722563a9feef7914f092968f1754d0d429
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 69be5132451269f7eba9c2e9186a9c25d4629ae7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2379"></a>編譯器錯誤 C2379
 型式參數數目有不同的類型，當升級  

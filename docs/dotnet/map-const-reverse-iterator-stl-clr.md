@@ -1,42 +1,42 @@
 ---
-title: "map::const_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::const_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reverse_iterator 成員 [STL/CLR]"
+title: "map:: const_reverse_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::const_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: const_reverse_iterator member [STL/CLR]
 ms.assetid: 056a765c-4f59-4bd8-99f4-c308a6f29c12
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ea55945736a73e9d7391e1d97383b1ad0487c6af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# map::const_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用於受控制序列的常數反向迭代器類型。  
+# <a name="mapconstreverseiterator-stlclr"></a>map::const_reverse_iterator (STL/CLR)
+受控制序列的常數反向迭代器型別...  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T4 const_reverse_iterator;  
 ```  
   
-## 備註  
- 此型別描述其可以為此控制序列當做常數反向迭代器之未指定型別 `T4` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T4`，可做為受控制序列的常數反向迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_const_reverse_iterator.cpp   
@@ -61,12 +61,15 @@ int main()
   
 ```  
   
-  **\[c 3\] \[b 2\] \[a 1\]**   
-## 需求  
- **標頭：** \<cliext\/map\>  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::reverse\_iterator](../dotnet/map-reverse-iterator-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::reverse_iterator (STL/CLR)](../dotnet/map-reverse-iterator-stl-clr.md)

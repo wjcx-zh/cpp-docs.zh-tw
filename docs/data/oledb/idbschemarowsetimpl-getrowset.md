@@ -1,104 +1,90 @@
 ---
-title: "IDBSchemaRowsetImpl::GetRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IDBSchemaRowsetImpl::GetRowset"
-  - "ATL.IDBSchemaRowsetImpl.GetRowset"
-  - "IDBSchemaRowsetImpl<SessionClass>::GetRowset"
-  - "IDBSchemaRowsetImpl.GetRowset"
-  - "IDBSchemaRowsetImpl::GetRowset"
-  - "ATL::IDBSchemaRowsetImpl<SessionClass>::GetRowset"
-  - "GetRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRowset 方法"
+title: "Idbschemarowsetimpl:: Getrowset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IDBSchemaRowsetImpl::GetRowset
+- ATL.IDBSchemaRowsetImpl.GetRowset
+- IDBSchemaRowsetImpl<SessionClass>::GetRowset
+- IDBSchemaRowsetImpl.GetRowset
+- IDBSchemaRowsetImpl::GetRowset
+- ATL::IDBSchemaRowsetImpl<SessionClass>::GetRowset
+- GetRowset
+dev_langs: C++
+helpviewer_keywords: GetRowset method
 ms.assetid: 3ae28c22-e186-4a15-8591-b0192e784a6f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5164bcd56c61868649af6185c8b84ebf20098b18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IDBSchemaRowsetImpl::GetRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="idbschemarowsetimplgetrowset"></a>IDBSchemaRowsetImpl::GetRowset
 傳回結構描述資料列集。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-STDMETHOD (GetRowset)(  
-   IUnknown *  
-pUnkOuter  
-,  
-   REFGUID   
-rguidSchema  
-,  
-   ULONG   
-cRestrictions  
-,  
-   const VARIANT   
-rgRestrictions  
-[],  
-   REFIID   
-riid  
-,  
-   ULONG   
-cPropertySets  
-,  
-   DBPROPSET   
-rgPropertySets  
-[],  
-   IUnknown **  
-ppRowset  
+      STDMETHOD (GetRowset)(  
+   IUnknown *pUnkOuter,  
+   REFGUID rguidSchema,  
+   ULONG cRestrictions,  
+   const VARIANT rgRestrictions[],  
+   REFIID riid,  
+   ULONG cPropertySets,  
+   DBPROPSET rgPropertySets[],  
+   IUnknown **ppRowset   
 );  
-  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pUnkOuter`  
- \[in\] 彙總時即為外部 **IUnknown**；否則為 **NULL**。  
+ [in] 彙總時即為外部 **IUnknown** ；否則為 **NULL**。  
   
  `rguidSchema`  
- \[in\] 所要求之結構描述資料列集 GUID 的參考 \(例如 `DBSCHEMA_TABLES`\)。  
+ [in] 所要求之結構描述資料列集 GUID 的參考 (例如 `DBSCHEMA_TABLES`)。  
   
  `cRestrictions`  
- \[in\] 要套用至資料列集的限制計數。  
+ [in] 要套用至資料列集的限制計數。  
   
  `rgRestrictions`  
- \[in\] 代表限制的 `cRestrictions` **VARIANT** 陣列。  
+ [in] 代表限制的 `cRestrictions`**VARIANT**陣列。  
   
  `riid`  
- \[in\] 新建立之結構描述資料列集的要求 IID。  
+ [in] 新建立之結構描述資料列集的要求 IID。  
   
  `cPropertySets`  
- \[in\] 要設定的屬性集數目。  
+ [in] 要設定的屬性集數目。  
   
  `rgPropertySets`  
- \[in\/out\] 要在新建立的結構描述資料列集上設定的 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 結構陣列。  
+ [in/out] 要在新建立的結構描述資料列集上設定的 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 結構陣列。  
   
  `ppRowset`  
- \[out\] 新建立之結構描述資料列集上所要求的介面指標。  
+ [out] 新建立之結構描述資料列集上所要求的介面指標。  
   
-## 備註  
- 此方法需要使用者具有工作階段類別中的結構描述對應。 如果 `rguidSchema` 參數等於其中一個對應項目 GUID，則 `GetRowset` 可以使用此結構描述對應資訊建立指定的資料列集物件。 如需對應項目的說明，請參閱 [SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)。  
+## <a name="remarks"></a>備註  
+ 此方法需要使用者具有工作階段類別中的結構描述對應。 如果 `GetRowset` 參數等於其中一個對應項目 GUID，則 `rguidSchema` 可以使用此結構描述對應資訊建立指定的資料列集物件。 如需對應項目的說明，請參閱 [SCHEMA_ENTRY](../../data/oledb/schema-entry.md) 。  
   
- 請參閱 [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] 中的 [IDBSchemaRowset::GetRowset](https://msdn.microsoft.com/en-us/library/ms722634.aspx)。  
+ 請參閱[idbschemarowset:: Getrowset](https://msdn.microsoft.com/en-us/library/ms722634.aspx) Windows SDK 中。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IDBSchemaRowsetImpl 類別](../../data/oledb/idbschemarowsetimpl-class.md)   
- [IDBSchemaRowsetImpl Class Members](http://msdn.microsoft.com/zh-tw/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
- [IDBSchemaRowsetImpl::GetSchemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)   
+ [IDBSchemaRowsetImpl 類別成員](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [Idbschemarowsetimpl:: Getschemas](../../data/oledb/idbschemarowsetimpl-getschemas.md)   
  [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

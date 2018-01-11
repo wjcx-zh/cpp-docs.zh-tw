@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac0b4cd7783cd41d480777fe8116a0facea58a28
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5748077731b07a0deeb4e601221b0ba412be391f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
 複製緩衝區之間的位元組。 這些是 [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -81,10 +82,10 @@ errno_t wmemcpy_s(
   
 |`dest`|`destSize`|`src`|`count`|傳回值|`dest` 的內容。|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|任何|任何|0|0|未修改|  
-|`NULL`|任何|任何|非零|`EINVAL`|未修改|  
-|任何|任何|`NULL`|非零|`EINVAL`|`dest` 已歸零|  
-|任何|< `count`|任何|非零|`ERANGE`|`dest` 已歸零|  
+|any|any|any|0|0|未修改|  
+|`NULL`|any|any|非零|`EINVAL`|未修改|  
+|any|any|`NULL`|非零|`EINVAL`|`dest` 已歸零|  
+|any|< `count`|any|非零|`ERANGE`|`dest` 已歸零|  
   
 ## <a name="remarks"></a>備註  
  `memcpy_s` 會將 `count` 位元組從 `src` 複製至 `dest`；`wmemcpy_s` 會複製 `count` 個寬字元 (兩個位元組)。 如果來源和目的地重疊，則 `memcpy_s` 的行為是未定義。 使用 `memmove_s` 處理重疊的區域。  
@@ -93,12 +94,12 @@ errno_t wmemcpy_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`memcpy_s`|\<memory.h> 或 \<string.h>|  
 |`wmemcpy_s`|\<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -140,7 +141,7 @@ int main()
 0 1 4 9 16 25 36 49 64 81   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
  [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr、wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   

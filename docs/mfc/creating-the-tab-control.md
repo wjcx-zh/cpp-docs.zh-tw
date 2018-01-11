@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db477a8966e7a7ec5368e5ed9e783b466acbf103
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91349f46e577a2a433217f84d9e028139eb09c9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-tab-control"></a>建立索引標籤控制項
 建立索引標籤控制項的方式取決於您是使用控制項在對話方塊中還是非對話方塊視窗中建立。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/24/2017
   
  這將會移除顯示的按鈕之間的分隔符號您`CTabCtrl`物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CTabCtrl](../mfc/using-ctabctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

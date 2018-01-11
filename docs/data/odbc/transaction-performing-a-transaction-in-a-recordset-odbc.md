@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1451775374b94bbefb6396e7afeda2396df84ba4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bd412549c86c3ca8ddc004016183b64248bdf292
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>異動：在一個資料錄集內執行異動 (ODBC)
 本主題說明如何在資料錄集執行交易。  
@@ -89,7 +92,7 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 > [!NOTE]
 >  呼叫**BeginTrans**一次而不需呼叫**CommitTrans**或**復原**是錯誤。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [異動 (ODBC)](../../data/odbc/transaction-odbc.md)   
  [異動： 異動如何影響更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
  [CDatabase 類別](../../mfc/reference/cdatabase-class.md)   

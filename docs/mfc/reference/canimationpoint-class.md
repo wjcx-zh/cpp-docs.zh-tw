@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationPoint::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_xValue
 - AFXANIMATIONCONTROLLER/CAnimationPoint::m_yValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationPoint [MFC], CAnimationPoint
 - CAnimationPoint [MFC], AddTransition
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_xValue
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ab685c223c4a86c35ba0feb578d93f58844734b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 81e4221ca2aa9ee653d391d9808666628010a325
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationpoint-class"></a>CAnimationPoint 類別
 實作可以動畫顯示其座標的點功能。  
@@ -55,17 +53,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationPoint : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationPoint::CAnimationPoint](#canimationpoint)|多載。 建構 CAnimationPoint 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationPoint::AddTransition](#addtransition)|新增轉換 X 和 Y 座標。|  
 |[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|傳回預設值為 X 和 Y 座標。|  
@@ -74,22 +72,22 @@ class CAnimationPoint : public CAnimationBaseObject;
 |[CAnimationPoint::GetY](#gety)|CAnimationVariable 可存取的 Y 座標。|  
 |[CAnimationPoint::SetDefaultValue](#setdefaultvalue)|設定預設值。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|將封裝的動畫變數放入清單。 (覆寫[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationPoint::operator CPoint](#operator_cpoint)|將 CPoint CAnimationPoint。|  
 |[CAnimationPoint::operator =](#operator_eq)|將 ptSrc 指派給 CAnimationPoint。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationPoint::m_xValue](#m_xvalue)|表示 X 之封裝的動畫變數的動畫點座標。|  
 |[CAnimationPoint::m_yValue](#m_yvalue)|封裝的動畫變數，表示動畫點的 Y 座標。|  
@@ -278,6 +276,5 @@ void SetDefaultValue(const POINT& ptDefault);
 ### <a name="remarks"></a>備註  
  使用此函式設動畫物件的預設值。 這個方法會指派預設值的動畫點的 X 和 Y 座標。 如果尚未建立，它也會重建基礎 COM 物件。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

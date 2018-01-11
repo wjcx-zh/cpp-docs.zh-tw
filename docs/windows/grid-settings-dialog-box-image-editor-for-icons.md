@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eada827f54bc04a22b5aa0b9fb61b3a786c0b25c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1b3df26fc7612c236197903ecb9ce0e1d9de6b14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="grid-settings-dialog-box-image-editor-for-icons"></a>格線設定對話方塊 (圖示影像編輯器)
 可讓您指定格線設定您的映像，並顯示格線透過編輯映像。 格線可用於編輯映像，但不是會儲存為影像本身的一部分。  
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [調整影像大小](../windows/resizing-an-image-image-editor-for-icons.md)   
  [圖示影像編輯器](../windows/image-editor-for-icons.md)
 

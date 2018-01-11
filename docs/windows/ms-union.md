@@ -1,32 +1,33 @@
 ---
-title: "ms_union | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ms_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ms_union attribute"
+title: "ms_union |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ms_union
+dev_langs: C++
+helpviewer_keywords: ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b187c23c60c7294170a66a819f78bebfd5e5f8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ms_union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-控制網路資料表示對齊，nonencapsulated 的聯集。  
+# <a name="msunion"></a>ms_union
+控制 nonencapsulated 等位的網路資料表示對齊方式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,11 +35,11 @@ caps.handback.revision: 9
   
 ```  
   
-## 備註  
- **Ms\_union** C\+\+ 屬性具有相同的功能，為 [ms\_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Ms_union** c + + 屬性具有相同的功能[ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) MIDL 屬性。  
   
-## 範例  
- 下列程式碼顯示的位置 **ms\_union**：  
+## <a name="example"></a>範例  
+ 下列程式碼顯示的位置**ms_union**:  
   
 ```  
 // cpp_attr_ref_ms_union.cpp  
@@ -63,20 +64,19 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|Nonencapsulated 的等位|  
+|**適用於**|Nonencapsulated 等位|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|**dispinterface**|  
+|**必要屬性**|無|  
+|**無效屬性**|**dispinterface**|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   

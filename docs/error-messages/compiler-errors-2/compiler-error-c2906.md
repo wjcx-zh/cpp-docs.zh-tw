@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2906
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2906
+f1_keywords: C2906
+dev_langs: C++
+helpviewer_keywords: C2906
 ms.assetid: 30f652f1-6af6-4a2f-a69e-a1a4876cc8c6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fa79e97d21ffff7dd54ff59a18452994999aa4e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: da2806a0a945533fcc90e0a3d1045ff4f3c3b766
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2906"></a>編譯器錯誤 C2906
 'specialization'：明確特製化必須有 'template <>'  

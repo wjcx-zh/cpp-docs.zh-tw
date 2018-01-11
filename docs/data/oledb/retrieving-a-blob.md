@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ac10d34fbb5e0cc6320d6c7f8ff1a52efc36f1b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 36ffc4fca7859b49067517e1085e1d854f733e24
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-a-blob"></a>擷取 BLOB
 您可以擷取各種二進位大型物件 (BLOB)。 您可以使用**DBTYPE_BYTES**擷取 BLOB 以位元組為單位的序列，或使用像介面`ISequentialStream`。 如需詳細資訊，請參閱[BLOB 與 OLE 物件](https://msdn.microsoft.com/en-us/library/ms711511.aspx)中*OLE DB 程式設計人員參考*。  
@@ -57,6 +60,6 @@ while (categories.MoveNext() == S_OK)
   
  處理 BLOB 資料的巨集的詳細資訊，請參閱"資料行對應巨集 」，在[巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)   
  [OLE DB 消費者範本的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d551c3875a2c8aca235437579db2f467f680380
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 010df3546a6ac2b6276281c39efdd76abd5ec222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-interface-entry-points"></a>COM 介面進入點
 COM 介面的成員函式，使用[METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue)巨集來維護適當的全域狀態，當呼叫匯出介面的方法。  
@@ -51,6 +52,6 @@ COM 介面的成員函式，使用[METHOD_PROLOGUE](com-interface-entry-points.m
   
  在此運算式中， *m_pModuleState*假設為包含物件的成員變數。 將物件具現話化時，運算式會由 `CCmdTarget` 基底類別實作，並且由 `COleObjectFactory` 初始化為適當的值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [管理 MFC 模組的狀態資料](../mfc/managing-the-state-data-of-mfc-modules.md)
 

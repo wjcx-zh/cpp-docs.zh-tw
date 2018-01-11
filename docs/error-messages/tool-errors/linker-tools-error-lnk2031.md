@@ -1,35 +1,34 @@
 ---
-title: "連結器工具錯誤 LNK2031 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2031"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2031"
+title: "連結器工具錯誤 LNK2031 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2031
+dev_langs: C++
+helpviewer_keywords: LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a519b4241c9ffabaeeb387cc8e4997125d57781
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 連結器工具錯誤 LNK2031
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-無法產生 "function\_declaration" decorated\_name 的 p\/invoke；中繼資料內遺漏呼叫慣例  
+# <a name="linker-tools-error-lnk2031"></a>連結器工具錯誤 LNK2031
+無法產生 p/invoke，如"function_declaration"decorated_name;中繼資料中遺漏的呼叫慣例  
   
- 嘗試將原生函式匯入純粹影像中時，切記隱含式呼叫慣例在原生與純粹編譯之間有差異。  如需純影像的詳細資訊，請參閱[純粹的和可驗證的程式碼](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
+ 當嘗試以原生函式匯入純映像，請記住，隱含的呼叫慣例，原生或純編譯之間不同而有所不同。 如需純映像的詳細資訊，請參閱[純粹的和可驗證程式碼 (C + + /CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   
-## 範例  
- 這個程式碼範例會以其呼叫慣例為隱含式 [\_\_cdecl](../../cpp/cdecl.md) 的已匯出、原生函式產生元件。  
+## <a name="example"></a>範例  
+ 此程式碼範例會產生含匯出、 原生函式的呼叫慣例是隱含的元件[__cdecl](../../cpp/cdecl.md)。  
   
 ```  
 // LNK2031.cpp  
@@ -39,8 +38,8 @@ extern "C" {
 };  
 ```  
   
-## 範例  
- 下列範例會建立使用原生函式的純粹用戶端。  但是 **\/clr:pure** 之下的呼叫慣例是 [\_\_clrcall](../../cpp/clrcall.md)。  下列範例會產生 LNK2031。  
+## <a name="example"></a>範例  
+ 下列範例會建立使用原生函式的純用戶端。 不過，下方的呼叫慣例**/clr: pure**是[__clrcall](../../cpp/clrcall.md)。 下列範例會產生 LNK2031。  
   
 ```  
 // LNK2031_b.cpp  
@@ -53,8 +52,8 @@ int main() {
 }  
 ```  
   
-## 範例  
- 下列範例會示範如何從純粹影像使用原生函式。  請注意明確的 **\_\_cdecl** 呼叫慣例規範。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何使用純映像的原生函式。 請注意明確**__cdecl**呼叫慣例的規範。  
   
 ```  
 // LNK2031_c.cpp  

@@ -1,42 +1,42 @@
 ---
-title: "hash_set::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成員 [STL/CLR]"
+title: "hash_set::to_array (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 2aa61f13-85b8-4aa4-91b4-69ddcc5064dc
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 03b7087d448a158ddd65b514c5ade0ce810a3c53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製受控制序列至新陣列。  
+# <a name="hashsettoarray-stlclr"></a>hash_set::to_array (STL/CLR)
+將受控制的序列複製到新的陣列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## 備註  
- 成員函式會傳回包含受控制序列的任何陣列。  您可用它來取得控制序列的複本 \(陣列形式\)。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列的陣列。 您可以使用它來取得陣列的形式受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_to_array.cpp   
@@ -68,12 +68,15 @@ int main()
   
 ```  
   
-  **a b c d**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+a b c d  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)

@@ -1,106 +1,92 @@
 ---
-title: "IDBSchemaRowsetImpl::CreateSchemaRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBSchemaRowsetImpl::CreateSchemaRowset"
-  - "ATL::IDBSchemaRowsetImpl::CreateSchemaRowset"
-  - "CreateSchemaRowset"
-  - "IDBSchemaRowsetImpl.CreateSchemaRowset"
-  - "ATL.IDBSchemaRowsetImpl.CreateSchemaRowset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateSchemaRowset 方法"
+title: "Idbschemarowsetimpl:: Createschemarowset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBSchemaRowsetImpl::CreateSchemaRowset
+- ATL::IDBSchemaRowsetImpl::CreateSchemaRowset
+- CreateSchemaRowset
+- IDBSchemaRowsetImpl.CreateSchemaRowset
+- ATL.IDBSchemaRowsetImpl.CreateSchemaRowset
+dev_langs: C++
+helpviewer_keywords: CreateSchemaRowset method
 ms.assetid: ad3e3e4d-45b9-461c-b7b8-3af6843631b1
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25d8149cb2e32505d87ef845b525684746d2b8da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IDBSchemaRowsetImpl::CreateSchemaRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="idbschemarowsetimplcreateschemarowset"></a>IDBSchemaRowsetImpl::CreateSchemaRowset
 為範本參數所指定的物件實作 COM 物件建立者函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-template < class   
-SchemaRowsetClass  
- >  
+      template < class   
+      SchemaRowsetClass  
+       >  
 HRESULT CreateSchemaRowset(  
-   IUnknown *  
-pUnkOuter  
-,  
-   ULONG   
-cRestrictions  
-,  
-   const VARIANT   
-rgRestrictions  
-[],  
-   REFIID   
-riid  
-,  
-   ULONG   
-cPropertySets  
-,  
-   DBPROPSET   
-rgPropertySets  
-[],  
-   IUnknown**   
-ppRowset  
-,  
-   SchemaRowsetClass*&   
-pSchemaRowset  
+   IUnknown *pUnkOuter,  
+   ULONG cRestrictions,  
+   const VARIANT rgRestrictions[],  
+   REFIID riid,  
+   ULONG cPropertySets,  
+   DBPROPSET rgPropertySets[],  
+   IUnknown** ppRowset,  
+   SchemaRowsetClass*& pSchemaRowset   
 );  
-  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pUnkOuter`  
- \[in\] 彙總時即為外部 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)；否則為 **NULL**。  
+ [in] 彙總時即為外部 [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) ；否則為 **NULL**。  
   
  `cRestrictions`  
- \[in\] 套用至結構描述資料列集的限制計數。  
+ [in] 套用至結構描述資料列集的限制計數。  
   
  `rgRestrictions`  
- \[in\] 要套用至資料列集的 `cRestrictions` **VARIANT** 陣列。  
+ [in] 要套用至資料列集的 `cRestrictions`**VARIANT**陣列。  
   
  `riid`  
- \[in\] 輸出 **IUnknown** 時的 [QueryInterface](../../atl/queryinterface.md) 介面  
+ [in] 輸出 [IUnknown](../../atl/queryinterface.md) 時的 **QueryInterface**介面  
   
  `cPropertySets`  
- \[in\] 要設定的屬性集數目。  
+ [in] 要設定的屬性集數目。  
   
  `rgPropertySets`  
- \[in\] 指定要設定之屬性的 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 結構陣列。  
+ [in] 指定要設定之屬性的 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 結構陣列。  
   
  `ppRowset`  
- \[out\] `riid` 要求的傳出 **IUnknown**。 此 **IUnknown** 是結構描述資料列集物件上的介面。  
+ [out] **要求的傳出** IUnknown `riid`。 此 **IUnknown** 是結構描述資料列集物件上的介面。  
   
  `pSchemaRowset`  
- \[out\] 結構描述資料列集類別執行個體的指標。 一般而言，您不會使用此參數；但如果您必須對結構描述資料列集執行更多工作，才能送出至 COM 物件，則可以使用此參數。`pSchemaRowset` 的存留期受限於 `ppRowset`。  
+ [out] 結構描述資料列集類別執行個體的指標。 一般而言，您不會使用此參數；但如果您必須對結構描述資料列集執行更多工作，才能送出至 COM 物件，則可以使用此參數。 `pSchemaRowset` 的存留期受限於 `ppRowset`。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  此函式會對所有類型的結構描述資料列集實作一般建立者。 一般而言，使用者不會呼叫此函式， 而是由結構描述對應的實作進行呼叫。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IDBSchemaRowsetImpl 類別](../../data/oledb/idbschemarowsetimpl-class.md)   
- [IDBSchemaRowsetImpl Class Members](http://msdn.microsoft.com/zh-tw/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
- [SCHEMA\_ENTRY](../../data/oledb/schema-entry.md)   
+ [IDBSchemaRowsetImpl 類別成員](http://msdn.microsoft.com/en-us/e74f6f82-541c-42e7-b4c6-e2d4656a0649)   
+ [SCHEMA_ENTRY](../../data/oledb/schema-entry.md)   
  [結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

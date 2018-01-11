@@ -1,37 +1,38 @@
 ---
-title: "stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/stack> 標頭 [STL/CLR]"
-  - "<stack> 標頭 [STL/CLR]"
-  - "stack 類別 [STL/CLR]"
+title: "堆疊 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack
+dev_langs: C++
+helpviewer_keywords:
+- <stack> header [STL/CLR]
+- <cliext/stack> header [STL/CLR]
+- stack class [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別描述物件控制存取後進先出項目的變更長度序列。  您使用容器配接器 `stack` 處理基礎容器做為下壓縮堆疊上。  
+# <a name="stack-stlclr"></a>stack (STL/CLR)
+此範本類別描述控制不同長度序列的項目可存取後進先出的物件。 您可以使用容器配接器`stack`管理向下推送堆疊基礎容器。  
   
- 在如下解譯， `GValue` 相當於 `Value` ，除非後面是參考型別，在這種情況下，它是 `Value^`的情況下。  同樣地，`GContainer` 與 `Container` ，除非後面是參考型別，在這種情況下，它是 `Container^`的情況下  
+ 在以下描述`GValue`相同`Value`後者是 ref 型別，除非在這種情況下很`Value^`。 同樣地，`GContainer`相同`Container`後者是 ref 型別，除非在這種情況下很`Container^`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value,  
@@ -43,71 +44,71 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  值  
- 受控制序列中項目的型別。  
+ 受控制序列中項目的類型。  
   
  容器  
- 基礎容器的型別。  
+ 基礎容器的類型。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-|型別定義|說明|  
-|----------|--------|  
-|[stack::const\_reference](../dotnet/stack-const-reference-stl-clr.md)|項目的常數參考類型。|  
-|[stack::container\_type](../dotnet/stack-container-type-stl-clr.md)|基礎容器的型別。|  
-|[stack::difference\_type](../dotnet/stack-difference-type-stl-clr.md)|兩個項目之間的帶正負號距離的類型。|  
-|[stack::generic\_container](../dotnet/stack-generic-container-stl-clr.md)|泛型介面的型別的容器配接器。|  
-|[stack::generic\_value](../dotnet/stack-generic-value-stl-clr.md)|容器適配器的泛型介面的元素的型別。|  
-|[stack::reference](../dotnet/stack-reference-stl-clr.md)|項目的參考類型。|  
-|[stack::size\_type](../dotnet/stack-size-type-stl-clr.md)|兩個項目之間的帶正負號距離的類型。|  
-|[stack::value\_type](../dotnet/stack-value-type-stl-clr.md)|項目的類型。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|[stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|項目的常數參考類型。|  
+|[stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|基礎容器的類型。|  
+|[stack::difference_type (STL/CLR)](../dotnet/stack-difference-type-stl-clr.md)|兩個項目之間帶正負號距離的類型。|  
+|[stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)|容器配接器的泛型介面的型別。|  
+|[stack::generic_value (STL/CLR)](../dotnet/stack-generic-value-stl-clr.md)|容器配接器的泛型介面的項目類型。|  
+|[stack::reference (STL/CLR)](../dotnet/stack-reference-stl-clr.md)|項目的參考類型。|  
+|[stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|兩個項目之間帶正負號距離的類型。|  
+|[stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|元素的類型。|  
   
-|成員函式|說明|  
-|----------|--------|  
-|[stack::assign](../dotnet/stack-assign-stl-clr.md)|取代所有項目。|  
-|[stack::empty](../dotnet/stack-empty-stl-clr.md)|測試是否不存在項目。|  
-|[stack::get\_container](../dotnet/stack-get-container-stl-clr.md)|存取基礎容器。|  
-|[stack::pop](../dotnet/stack-pop-stl-clr.md)|移除最後一個項目。|  
-|[stack::push](../dotnet/stack-push-stl-clr.md)|加入新的最後一個元素。|  
-|[stack::size](../dotnet/stack-size-stl-clr.md)|計數項目的數目。|  
-|[stack::stack](../dotnet/stack-stack-stl-clr.md)|建構一個容器物件。|  
-|[stack::top](../dotnet/stack-top-stl-clr.md)|存取最後一個項目。|  
-|[stack::to\_array](../dotnet/stack-to-array-stl-clr.md)|複製受控制序列至新陣列。|  
+|成員函式|描述|  
+|---------------------|-----------------|  
+|[stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)|取代所有項目。|  
+|[stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)|測試項目是否不存在。|  
+|[stack::get_container (STL/CLR)](../dotnet/stack-get-container-stl-clr.md)|存取基礎容器。|  
+|[stack::pop (STL/CLR)](../dotnet/stack-pop-stl-clr.md)|移除最後一個項目。|  
+|[stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)|加入新的最後一個項目。|  
+|[stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)|計算元素的數目。|  
+|[stack::stack (STL/CLR)](../dotnet/stack-stack-stl-clr.md)|建構容器物件。|  
+|[stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)|存取最後一個項目。|  
+|[stack::to_array (STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
   
-|屬性|說明|  
-|--------|--------|  
-|[stack::top\_item](../dotnet/stack-top-item-stl-clr.md)|存取最後一個項目。|  
+|屬性|描述|  
+|--------------|-----------------|  
+|[stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|存取最後一個項目。|  
   
-|運算子|說明|  
-|---------|--------|  
-|[stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)|取代受控制序列。|  
-|[operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)|判斷 `stack` 物件是否不等於另一個 `stack` 物件。|  
-|[operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)|判斷 `stack` 物件是否小於另一個 `stack` 物件。|  
-|[operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|判斷 `stack` 物件是否小於或等於另外一個 `stack` 物件。|  
-|[operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)|判斷 `stack` 物件是否等於另一個 `stack` 物件。|  
-|[operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)|判斷 `stack` 物件是否大於另一個 `stack` 物件。|  
-|[operator\>\= \(stack\)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|判斷 `stack` 物件是否大於或等於另外一個 `stack` 物件。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|[stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|取代受控制的序列。|  
+|[operator!= (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|決定如果`stack`物件是否不等於另一個`stack`物件。|  
+|[operator< (stack) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)|決定如果`stack`物件是否小於另一個`stack`物件。|  
+|[operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|決定如果`stack`物件是否小於或等於另一個`stack`物件。|  
+|[operator== (stack) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)|決定如果`stack`物件是否等於另一個`stack`物件。|  
+|[operator> (stack) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)|決定如果`stack`物件是否大於另一個`stack`物件。|  
+|[operator>= (stack) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|決定如果`stack`物件是否大於或等於另一個`stack`物件。|  
   
-## 介面  
+## <a name="interfaces"></a>介面  
   
-|介面|說明|  
-|--------|--------|  
-|<xref:System.ICloneable>|複製物件。|  
-|IStack\<Value, Container\>|維護泛型容器配接器。|  
+|介面|描述|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|重複的物件。|  
+|IStack\<值、 容器 >|維護泛型容器配接器。|  
   
-## 備註  
- 物件配置和未使用的記憶體區域透過基礎容器的序列，型別控制 `Container`，儲存 `Value` 項目並增加在要求時。  物件會限制對推入和移除最後一個項目的存取，實作後進先出的佇列 \(也稱為 LIFO 佇列或堆疊\)。  
+## <a name="remarks"></a>備註  
+ 物件可配置及釋放的序列型別的基礎容器中，透過它所控制的儲存體`Container`，其中存放`Value`項目，而且視成長。 物件會限制存取推進和拉出剛才的最後一個元素，實作後進先出佇列 （也稱為 LIFO 佇列或堆疊）。  
   
-## 需求  
- **標頭：** \<cliext\/stack\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [向量](../dotnet/vector-stl-clr.md)   
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

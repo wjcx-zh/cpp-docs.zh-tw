@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1060
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1060
+f1_keywords: C1060
+dev_langs: C++
+helpviewer_keywords: C1060
 ms.assetid: feaf305c-c84c-4160-b974-50e283412849
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c551ed3a6befbf646394929a6bcc6406ea93b19f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 36abe3a63515dcb3b8f07ce5d0d169329ed5f7ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="fatal-error-c1060"></a>嚴重錯誤 C1060
 編譯器堆積空間不足  
@@ -39,7 +35,7 @@ ms.lasthandoff: 10/10/2017
   
 2.  如果您是在 64 位元平台上編譯，請使用 64 位元編譯器工具組。 如需資訊，請參閱[How to： 啟用在命令列上的 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。  
   
-3.  在 32 位元 Windows，請嘗試使用[3 GB](http://go.microsoft.com/fwlink/?LinkId=177831) boot.ini 參數。  
+3.  在 32 位元 Windows，請嘗試使用[3 GB](http://go.microsoft.com/fwlink/p/?linkid=177831) boot.ini 參數。  
   
 4.  增加 Windows 交換檔的大小。  
   

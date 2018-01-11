@@ -1,45 +1,46 @@
 ---
-title: "set::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find 成員 [STL/CLR]"
+title: "set:: find (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 916e581c-2815-4c07-a51a-6c5ddfa730c1
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 82296d6da1a2b995026d75a2e2973335cd00ef5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# set::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定之索引鍵的項目。  
+# <a name="setfind-stlclr"></a>set::find (STL/CLR)
+尋找符合指定之索引鍵的元素。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 要搜尋的索引值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
   
-## 備註  
- 如果在受控制序列的至少一個項目具有與 `key`相等的定序，成員函式來傳回指定項目之一的 Iterator;否則會傳回 [set::end](../dotnet/set-end-stl-clr.md)`()`。  您可以使用它目前設定項目符合指定索引鍵的控制順序。  
+## <a name="remarks"></a>備註  
+ 受控制序列中的至少一個項目是否具有對等順序`key`，成員函式會傳回指定其中一個這些項目的迭代器，否則它會傳回[set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`。 您可以使用它來尋找元素目前受控制序列之符合指定之索引鍵。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_find.cpp   
@@ -70,20 +71,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**尋找 A \= false**  
-**尋找 b \= b**  
-**尋找 C \= false**   
-## 說明  
- 需留意到 `find` 無法保證哪幾個項目找到。  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## 需求  
- **標頭：** \<cliext\/set\>  
+## <a name="description"></a>描述  
+ 請注意，`find`不保證它找到的數個項目。  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::equal\_range](../dotnet/set-equal-range-stl-clr.md)   
- [set::lower\_bound](../dotnet/set-lower-bound-stl-clr.md)   
- [set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)   
+ [set:: lower_bound (STL/CLR)](../dotnet/set-lower-bound-stl-clr.md)   
+ [set::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)

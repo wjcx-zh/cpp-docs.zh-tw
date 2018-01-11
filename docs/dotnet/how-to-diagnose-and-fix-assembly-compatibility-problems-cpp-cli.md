@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9968981e8fd06a5c94383e1dee40c9b44169b4ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a175705bd5d303187a11bf3e7779669a3a30e483
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-diagnose-and-fix-assembly-compatibility-problems-ccli"></a>如何：診斷和修正組件相容性問題 (C++/CLI)
 本主題說明在編譯時期參考的組件的版本不符合在執行階段，參考的組件版本時，會發生什麼情況以及如何避免發生問題。  
@@ -99,6 +102,6 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [#using 指示詞](../preprocessor/hash-using-directive-cpp.md)   
  [Managed 類型 (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

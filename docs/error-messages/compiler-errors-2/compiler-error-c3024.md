@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3024
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3024
+f1_keywords: C3024
+dev_langs: C++
+helpviewer_keywords: C3024
 ms.assetid: 1c031c28-ce37-4de3-aead-cfe76b261856
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cb84d3f03290e75a16605dd06eed27eaba26eb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: a6d1512df35b7ac6042ee1aef05d15eb4392b9d9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3024"></a>編譯器錯誤 C3024
 'schedule(runtime)' : 不允許 chunk_size 運算式  

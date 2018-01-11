@@ -1,41 +1,42 @@
 ---
-title: "vector::pop_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::pop_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_back 成員 [STL/CLR]"
+title: "vector:: pop_back (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::pop_back
+dev_langs: C++
+helpviewer_keywords: pop_back member [STL/CLR]
 ms.assetid: 7e9fb72c-e733-4434-a71c-e4389629a821
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fd4d93caf98a9a79ccf88799239d93bcefc830f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::pop_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除最後的項目。  
+# <a name="vectorpopback-stlclr"></a>vector::pop_back (STL/CLR)
+移除最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void pop_back();  
 ```  
   
-## 備註  
- 成員函式中受控制序列的最後一個項目，此序列必須為非空白。  您可以使用它由項目縮短向量在後面。  
+## <a name="remarks"></a>備註  
+ 成員函式中移除受控制的序列必須為非空白的最後一個元素。 您可以使用它來縮短向量在最後一個項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_pop_back.cpp   
@@ -64,13 +65,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+a b c  
+a b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::push\_back](../dotnet/vector-push-back-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)

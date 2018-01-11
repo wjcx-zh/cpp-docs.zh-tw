@@ -1,36 +1,38 @@
 ---
-title: "multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/set> 標頭 [STL/CLR]"
-  - "<set> 標頭 [STL/CLR]"
-  - "multiset 類別 [STL/CLR]"
+title: "多重集 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/set> header [STL/CLR]
+- <set> header [STL/CLR]
+- multiset class [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9f964fd511d87d2fd5ca460eb72dc5c9db8351ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別描述一個物件，其控制一個可雙向存取項目的變更長度序列。  您使用容器 `multiset` 處理項目序列，做為 \(幾乎\) 平衡且排序的樹，其每個節點儲存一個項目。  
+# <a name="multiset-stlclr"></a>multiset (STL/CLR)
+此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`multiset`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。  
   
- 在如下解譯， `GValue` 與 `GKey`，而 `Key` 相同，除非後面是參考型別，在這種情況下，它是 `Key^`的情況下。  
+ 在以下描述`GValue`相同`GKey`，這又是相同`Key`後者是 ref 型別，除非在這種情況下很`Key^`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Key>  
@@ -46,113 +48,113 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  Key  
- 受控制序列中項目的主要元件型別。  
+ 受控制序列中項目的索引鍵的元件類型。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-|型別定義|說明|  
-|----------|--------|  
-|[multiset::const\_iterator](../dotnet/multiset-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
-|[multiset::const\_reference](../dotnet/multiset-const-reference-stl-clr.md)|項目的常數參考類型。|  
-|[multiset::const\_reverse\_iterator](../dotnet/multiset-const-reverse-iterator-stl-clr.md)|用於受控制序列的常數反向迭代器型別。|  
-|[multiset::difference\_type](../dotnet/multiset-difference-type-stl-clr.md)|兩個項目之間的 \(可能帶正負號\) 距離的型別。|  
-|[multiset::generic\_container](../dotnet/multiset-generic-container-stl-clr.md)|容器的泛型介面的型別。|  
-|[multiset::generic\_iterator](../dotnet/multiset-generic-iterator-stl-clr.md)|容器的泛型介面的迭代器的型別。|  
-|[multiset::generic\_reverse\_iterator](../dotnet/multiset-generic-reverse-iterator-stl-clr.md)|容器的泛型介面的反向迭代器的型別。|  
-|[multiset::generic\_value](../dotnet/multiset-generic-value-stl-clr.md)|容器的泛型介面的元素的型別。|  
-|[multiset::iterator](../dotnet/multiset-iterator-stl-clr.md)|受控制序列中 iterator 的類型。|  
-|[multiset::key\_compare](../dotnet/multiset-key-compare-stl-clr.md)|兩個金鑰的排序委派。|  
-|[multiset::key\_type](../dotnet/multiset-key-type-stl-clr.md)|排序索引鍵的類型。|  
-|[multiset::reference](../dotnet/multiset-reference-stl-clr.md)|項目的參考類型。|  
-|[multiset::reverse\_iterator](../dotnet/multiset-reverse-iterator-stl-clr.md)|用於受控制序列的反向迭代器型別。|  
-|[multiset::size\_type](../dotnet/multiset-size-type-stl-clr.md)|兩個項目之間的 \(非負數\) 距離的型別。|  
-|[multiset::value\_compare](../dotnet/multiset-value-compare-stl-clr.md)|兩個項目值的排序委派。|  
-|[multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)|項目的類型。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|[multiset::const_iterator (STL/CLR)](../dotnet/multiset-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
+|[multiset::const_reference (STL/CLR)](../dotnet/multiset-const-reference-stl-clr.md)|項目的常數參考類型。|  
+|[multiset::const_reverse_iterator (STL/CLR)](../dotnet/multiset-const-reverse-iterator-stl-clr.md)|用於受控制序列的常數反向迭代器類型。|  
+|[multiset::difference_type (STL/CLR)](../dotnet/multiset-difference-type-stl-clr.md)|兩個項目之間的 （可能是帶正負號） 距離的類型。|  
+|[multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)|容器的泛型介面型別。|  
+|[multiset::generic_iterator (STL/CLR)](../dotnet/multiset-generic-iterator-stl-clr.md)|泛型介面，該容器的迭代器類型。|  
+|[multiset::generic_reverse_iterator (STL/CLR)](../dotnet/multiset-generic-reverse-iterator-stl-clr.md)|容器的泛型介面的反向迭代器類型。|  
+|[multiset::generic_value (STL/CLR)](../dotnet/multiset-generic-value-stl-clr.md)|泛型介面的容器項目的類型。|  
+|[multiset::iterator (STL/CLR)](../dotnet/multiset-iterator-stl-clr.md)|受控制序列之迭代器的類型。|  
+|[multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)|兩個索引鍵排序的委派。|  
+|[multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)|排序索引鍵的類型。|  
+|[multiset::reference (STL/CLR)](../dotnet/multiset-reference-stl-clr.md)|項目的參考類型。|  
+|[multiset::reverse_iterator (STL/CLR)](../dotnet/multiset-reverse-iterator-stl-clr.md)|受控制序列的反向迭代器類型。|  
+|[multiset::size_type (STL/CLR)](../dotnet/multiset-size-type-stl-clr.md)|（非負數） 之間的距離的兩個項目類型。|  
+|[multiset::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)|兩個項目值順序的委派。|  
+|[multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)|元素的類型。|  
   
-|成員函式|說明|  
-|----------|--------|  
-|[multiset::begin](../dotnet/multiset-begin-stl-clr.md)|指定受控制序列的開頭。|  
-|[multiset::clear](../dotnet/multiset-clear-stl-clr.md)|移除所有項目。|  
-|[multiset::count](../dotnet/multiset-count-stl-clr.md)|計算符合指定索引鍵的項目。|  
-|[multiset::empty](../dotnet/multiset-empty-stl-clr.md)|測試是否不存在項目。|  
-|[multiset::end](../dotnet/multiset-end-stl-clr.md)|指定受控制序列的結尾。|  
-|[multiset::equal\_range](../dotnet/multiset-equal-range-stl-clr.md)|尋找符合指定索引鍵的範圍。|  
-|[multiset::erase](../dotnet/multiset-erase-stl-clr.md)|移除指定位置的項目。|  
-|[multiset::find](../dotnet/multiset-find-stl-clr.md)|尋找符合指定之索引鍵的項目。|  
-|[multiset::insert](../dotnet/multiset-insert-stl-clr.md)|加入項目。|  
-|[multiset::key\_comp](../dotnet/multiset-key-comp-stl-clr.md)|為兩個金鑰複製排序委派。|  
-|[multiset::lower\_bound](../dotnet/multiset-lower-bound-stl-clr.md)|尋找符合指定索引鍵的範圍之開頭。|  
-|[multiset::make\_value](../dotnet/multiset-make-value-stl-clr.md)|建構一個值物件。|  
-|[multiset::multiset](../dotnet/multiset-multiset-stl-clr.md)|建構一個容器物件。|  
-|[multiset::rbegin](../dotnet/multiset-rbegin-stl-clr.md)|指定已還原的受控制序列開頭。|  
-|[multiset::rend](../dotnet/multiset-rend-stl-clr.md)|指定已還原的受控制序列結尾。|  
-|[multiset::size](../dotnet/multiset-size-stl-clr.md)|計數項目的數目。|  
-|[multiset::swap](../dotnet/multiset-swap-stl-clr.md)|交換兩個容器的內容。|  
-|[multiset::to\_array](../dotnet/multiset-to-array-stl-clr.md)|複製受控制序列至新陣列。|  
-|[multiset::upper\_bound](../dotnet/multiset-upper-bound-stl-clr.md)|尋找符合指定索引鍵的範圍之結尾。|  
-|[multiset::value\_comp](../dotnet/multiset-value-comp-stl-clr.md)|複製兩個項目值的排序委派。|  
+|成員函式|描述|  
+|---------------------|-----------------|  
+|[multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)|指定受控制序列的開頭。|  
+|[multiset::clear (STL/CLR)](../dotnet/multiset-clear-stl-clr.md)|移除所有項目。|  
+|[multiset::count (STL/CLR)](../dotnet/multiset-count-stl-clr.md)|計算指定的索引鍵相符的項目。|  
+|[multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)|測試項目是否不存在。|  
+|[multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)|指定受控制序列的結尾。|  
+|[multiset::equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)|尋找符合指定之索引鍵的範圍。|  
+|[multiset::erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)|移除位於指定位置的項目。|  
+|[multiset::find (STL/CLR)](../dotnet/multiset-find-stl-clr.md)|尋找符合指定之索引鍵的元素。|  
+|[multiset::insert (STL/CLR)](../dotnet/multiset-insert-stl-clr.md)|加入項目。|  
+|[multiset::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)|將複製兩個索引鍵的順序委派。|  
+|[multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍開頭。|  
+|[multiset::make_value (STL/CLR)](../dotnet/multiset-make-value-stl-clr.md)|建構值物件。|  
+|[multiset::multiset (STL/CLR)](../dotnet/multiset-multiset-stl-clr.md)|建構容器物件。|  
+|[multiset::rbegin (STL/CLR)](../dotnet/multiset-rbegin-stl-clr.md)|指定反向受控制序列的開頭。|  
+|[multiset::rend (STL/CLR)](../dotnet/multiset-rend-stl-clr.md)|指定反向受控制序列的結尾。|  
+|[multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)|計算元素的數目。|  
+|[multiset::swap (STL/CLR)](../dotnet/multiset-swap-stl-clr.md)|交換兩個容器的內容。|  
+|[multiset::to_array (STL/CLR)](../dotnet/multiset-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
+|[multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍結尾。|  
+|[multiset::value_comp (STL/CLR)](../dotnet/multiset-value-comp-stl-clr.md)|將複製兩個項目值的順序委派。|  
   
-|運算子|說明|  
-|---------|--------|  
-|[multiset::operator\=](../dotnet/multiset-operator-assign-stl-clr.md)|取代受控制序列。|  
-|[operator\!\= \(multiset\)](../dotnet/operator-inequality-multiset-stl-clr.md)|判斷 `multiset` 物件是否不等於另一個 `multiset` 物件。|  
-|[operator\< \(multiset\)](../dotnet/operator-less-than-multiset-stl-clr.md)|判斷 `multiset` 物件是否小於另一個 `multiset` 物件。|  
-|[operator\<\= \(multiset\)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)|判斷 `multiset` 物件是否小於或等於另外一個 `multiset` 物件。|  
-|[operator\=\= \(multiset\)](../dotnet/operator-equality-multiset-stl-clr.md)|判斷 `multiset` 物件是否等於另一個 `multiset` 物件。|  
-|[operator\> \(multiset\)](../dotnet/operator-greater-than-multiset-stl-clr.md)|判斷 `multiset` 物件是否大於另一個 `multiset` 物件。|  
-|[operator\>\= \(multiset\)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)|判斷 `multiset` 物件是否大於或等於另外一個 `multiset` 物件。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|[multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)|取代受控制的序列。|  
+|[operator!= (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)|決定如果`multiset`物件是否不等於另一個`multiset`物件。|  
+|[operator< (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)|決定如果`multiset`物件是否小於另一個`multiset`物件。|  
+|[operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)|決定如果`multiset`物件是否小於或等於另一個`multiset`物件。|  
+|[operator== (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)|決定如果`multiset`物件是否等於另一個`multiset`物件。|  
+|[operator> (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)|決定如果`multiset`物件是否大於另一個`multiset`物件。|  
+|[operator>= (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)|決定如果`multiset`物件是否大於或等於另一個`multiset`物件。|  
   
-## 介面  
+## <a name="interfaces"></a>介面  
   
-|介面|說明|  
-|--------|--------|  
-|<xref:System.ICloneable>|複製物件。|  
-|<xref:System.Collections.IEnumerable>|序列傳遞項目。|  
-|<xref:System.Collections.ICollection>|維護項目的群組。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|序列傳遞型別項目。|  
-|<xref:System.Collections.Generic.ICollection%601>|維護型別項目的群組。|  
-|ITree\<Key, Value\>|維護泛型容器。|  
+|介面|描述|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|重複的物件。|  
+|<xref:System.Collections.IEnumerable>|項目順序。|  
+|<xref:System.Collections.ICollection>|維護群組的項目。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的項目順序。|  
+|<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|  
+|ITree\<索引鍵、 值 >|維護泛型容器。|  
   
-## 備註  
- 物件配置和釋放其控制的序列之記憶體區域，如同個別的節點。  它會將項目插入 \(幾乎\) 平衡的樹狀結構，以修改節點之間的連結 \(而非複製節點的內容至另一個節點\) 來保持排序。  這表示您可以自由地插入和移除項目，而不會干擾其他項目。  
+## <a name="remarks"></a>備註  
+ 物件可配置及釋放它做為個別的節點所控制的序列的儲存體。 它會將元素插入 （幾乎） 平衡樹狀目錄中，它會保留排序會改變節點，而非由複製到另一個節點的內容之間的連結。 這表示您可以插入和移除項目，自由地不干擾其餘項目。  
   
- 它會藉由呼叫 [multiset::key\_compare](../dotnet/multiset-key-compare-stl-clr.md)型別所儲存的委派物件控制物件的排序序列。  您可以在建構多點集合時指定儲存的委派物件；如果您不指定委派物件，預設為比較 `operator<(key_type, key_type)`。  您可以呼叫成員函式存取這個儲存物件的`()`[multiset::key\_comp](../dotnet/multiset-key-comp-stl-clr.md)。  
+ 物件，排序它藉由呼叫預存的委派類型的物件所控制的序列[multiset:: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md)。 當您建構 multiset; 時，您可以指定預存的委派物件如果您指定沒有委派的物件時，預設值是比較`operator<(key_type, key_type)`。 您藉由呼叫成員函式中存取這個預存的物件[multiset:: key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`。  
   
- 這類委派物件必須實行嚴格弱式順序在 [multiset::key\_type](../dotnet/multiset-key-type-stl-clr.md) 型別的索引鍵上。  這表示，對於任何兩個索引鍵的 `X` 和 `Y`：  
+ 這類委派的物件必須強制執行嚴格弱式排序索引鍵的型別[multiset:: key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)。 這表示任何兩個索引鍵`X`和`Y`:  
   
- `key_comp()(X, Y)` 會在每次呼叫時傳回相同的布林值結果。  
+ `key_comp()(X, Y)`傳回的相同的布林值結果，在每次呼叫。  
   
- 如果 `key_comp()(X, Y)` 為 true，則 `key_comp()(Y, X)` 必須為 false。  
+ 如果`key_comp()(X, Y)`是 true，則`key_comp()(Y, X)`必須為 false。  
   
- 如果 `key_comp()(X, Y)` 為 true，則 `X` 會在 `Y` 之前排序。  
+ 如果`key_comp()(X, Y)`是 true，則`X`稱為排序之前`Y`。  
   
- 如果 `!key_comp()(X, Y) && !key_comp()(Y, X)` 為 true，則 `X` 和 `Y` 會有相等排序。  
+ 如果`!key_comp()(X, Y) && !key_comp()(Y, X)`是 true，則`X`和`Y`被視為具有對等順序。  
   
- 對於在受控制序列中任何在 `Y` 之前的項目 `X`， `key_comp()(Y, X)` 會是 false。\(預設委派物件的金鑰值永遠不會減少。\)不同於樣板類別 [set](../dotnet/set-stl-clr.md)，樣板類別 `multiset` 物件不需要所有項目的索引鍵是唯一的。\(兩個以上的索引鍵可能有相等的排序。\)  
+ 對於任何項目`X`前面`Y`受控制序列中`key_comp()(Y, X)`為 false。 （預設委派物件索引鍵永遠不會減少值中。）與不同的範本類別是[設定 (STL/CLR)](../dotnet/set-stl-clr.md)，樣板類別的物件`multiset`不需要的所有元素的索引鍵是唯一。 （兩個或多個索引鍵可能有對等順序）。  
   
- 每個項目做為索引鍵和值。  序列顯示的方式允許以和序列中 \(對數時間\) 項目數的對數成比例的作業數目，進行搜尋、插入和移除一個任意的項目。  而且，插入項目不會使迭代器失效，而移除項目只會使指向移除項目的迭代器失效。  
+ 每個項目做為金鑰和值。 序列表示允許查閱、 插入和移除任意項目以數字的項目數目之對數成正比的作業順序 （也就是對數時間） 中的方式。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。  
   
- 多點集合支援雙向迭代器，這表示您可以逐步執行至指定的迭代器在受控制序列中指定的相鄰項目。  特殊前端節點對應於 [multiset::end](../dotnet/multiset-end-stl-clr.md)所傳回的 Iterator`()`。  如果存在，您可以這個迭代器到達受控制序列的最後一個項目。  您可以增加多點集合迭代器以到達前端節點，然後它會與 `end()` 比較是否相等。  但是，您無法對 `end()` 傳回的迭代器取值。  
+ 多重集支援雙向迭代器，這表示您可以逐步執行至指定的迭代器，指定受控制序列中的項目相鄰的項目。 特殊的前端節點對應至所傳回的迭代器[multiset:: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`。 如果有的話，可以減少此連線到受控制序列中，最後一個元素的迭代器。 可以遞增到前端節點的多重集迭代器，然後它會比較等於`end()`。 您無法取值 （dereference） 所傳回的迭代器，但`end()`。  
   
- 請注意您無法直接以數值位置參考指定的多點集合元素，這需要一個隨機存取迭代器。  
+ 請注意，您不能參考多重集的項目，直接指定其數值位置-需要的隨機存取迭代器。  
   
- 多點集合會儲存控制代碼至關聯的多點集合節點，其會接著儲存控制代碼至關聯的容器。  您只能將迭代器與其關聯的容器物件一起使用。  只要其關聯的多點集合節點與某一多點集合相關聯，則多點集合迭代器會保持有效。  而且，有效迭代器是可取值的，您可以使用它存取或替換它指派的值，只要不等於 `end()`。  
+ Multiset 的迭代器會儲存至其相關聯的多重集節點，接著將儲存到其相關聯的容器的控制代碼的控制代碼。 您可以使用迭代器，只能使用其相關聯的容器物件。 只要其相關聯的多重集的節點是某些多重集相關聯的多重集的迭代器會保持有效。 此外，有效的迭代器是 dereferencable--您可用它來存取或修改項目值，它會指定-，只要不等於`end()`。  
   
- 清除或移除元素會呼叫它的儲存值的解構函式。  終結容器清除所有項目。  因此，項目型別是 ref 類別的容器會確保沒有項目的存在時間比容器久。  然而，請注意控制碼的容器使用 `not` 終結其項目。  
+ 清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼，並會`not`摧毀其項目。  
   
-## 需求  
- **標頭：** \<cliext\/set\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [multiset](../dotnet/multiset-stl-clr.md)   
- [set](../dotnet/set-stl-clr.md)   
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [多重集](../dotnet/multiset-stl-clr.md)   
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

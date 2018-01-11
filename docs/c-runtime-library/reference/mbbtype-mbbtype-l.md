@@ -39,17 +39,18 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: badaf05406cc74c4cbf0112f948360fffb93c4c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae66b1c0765f496dcfe460c4ea7ff4f84e9333ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype、_mbbtype_l
 根據上一個位元組傳回位元組類型。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -89,13 +90,13 @@ int _mbbtype_l(
 ## <a name="remarks"></a>備註  
  `_mbbtype` 函式會判斷多位元組字元中的位元組類型。 如果 `type` 的值為 1 以外的任何值，則 `_mbbtype` 會針對多位元組字元之有效的單一位元組或前導位元組進行測試。 如果 `type` 的值為 1，則 `_mbbtype` 會針對多位元組字元之有效的後隨位元組進行測試。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個函式的 `_mbbtype` 版本會針對地區設定相關的行為使用目前的地區設定；而 `_mbbtype_l` 版本也一樣，除了改用傳入的地區設定以外。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個函式的 `_mbbtype` 版本會針對地區設定相關的行為使用目前的地區設定；而 `_mbbtype_l` 版本也一樣，除了改用傳入的地區設定以外。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  在舊版中，`_mbbtype` 名為 `chkctype`。 對於新的程式碼，請改用 `_mbbtype`。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_mbbtype`|\<mbstring.h>|\<mbctype.h>*|  
 |`_mbbtype_l`|\<mbstring.h>|\<mbctype.h>*|  
@@ -104,5 +105,5 @@ int _mbbtype_l(
   
  如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)

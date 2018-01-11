@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b22be2b4d04350a25fcb59bd3dee49114504b547
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea0f8210993e494cbd4795a2c4cf7c6c0afa8aa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarations-and-definitions-c"></a>宣告和定義 (C++)
 宣告會導入的名稱在程式中，例如變數、 命名空間、 函式和類別的名稱。 宣告也會指定類型資訊，以及所宣告物件的其他特性。 名稱必須先宣告才能使用；在 C++ 中，名稱的宣告位置可決定編譯器是否可以看到它。 您不能參考函式或在稍後編譯單位; 宣告為類別您可以使用*向前宣告*來克服這項限制。  
@@ -94,6 +95,6 @@ char *strchr( const char *Str, const char Target );
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本概念](../cpp/basic-concepts-cpp.md)   
  [宣告點](../cpp/point-of-declaration-in-cpp.md)

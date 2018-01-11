@@ -16,18 +16,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="temporary-objects"></a>暫存物件
 在某些情況下，編譯器必須建立暫存物件。 可能需要建立這些暫存物件的原因如下：  
   
 -   為了初始化 `const` 參考而使用的初始設定式類型，與所要初始化之參考的基礎類型初始設定式不同。  
   
--   為了儲存傳回使用者定義類型之函式的傳回值。 只有在您的程式不會將傳回值複製到物件時，才會建立這些暫存物件。 例如：  
+-   為了儲存傳回使用者定義類型之函式的傳回值。 只有在您的程式不會將傳回值複製到物件時，才會建立這些暫存物件。 例如:   
   
     ```  
     UDT Func1();    //  Declare a function that returns a user-defined  

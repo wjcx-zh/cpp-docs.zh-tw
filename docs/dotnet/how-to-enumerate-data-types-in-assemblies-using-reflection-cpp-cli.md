@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d89324e49cb08014892d08a046221b9a1e28d2e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 209124e6d4e8afa7930a4c74d2cce1acd7e279b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-enumerate-data-types-in-assemblies-using-reflection-ccli"></a>如何：使用反映以列舉組件中的資料類型 (C++/CLI)
 下列程式碼示範的公用類型和成員使用列舉<xref:System.Reflection>。  
@@ -82,5 +85,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [反映 (C++/CLI)](../dotnet/reflection-cpp-cli.md)

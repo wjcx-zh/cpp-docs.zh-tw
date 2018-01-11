@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3830
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3830
+f1_keywords: C3830
+dev_langs: C++
+helpviewer_keywords: C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 692a2480a161a97595d3e1b2212bbddb008b7efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: f2f821b1ba6dc523ba3a664fb9c8b658dee1c78f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3830"></a>編譯器錯誤 C3830
 'type1': 無法繼承自 'type2'，值類型只能繼承自介面類別  
@@ -53,4 +49,3 @@ public:
    virtual void i(){}  
 };  
 ```  
-

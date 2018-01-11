@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e4d3f6b2b7617705b38c0b8e13ca2ed65fcf8d81
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71117aed66d83c2c2ae1651c4de9c91e06a43653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s、_wstrdate_s
 將目前的系統日期複製到緩衝區。 這些是 [_strdate、_wstrdate](../../c-runtime-library/reference/strdate-wstrdate.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -78,7 +79,7 @@ errno_t _wstrdate_s(
  [輸出] `buffer`  
  將填入格式化日期字串之緩衝區的指標。  
   
- [in] `numberOfElements`  
+ [輸入] `numberOfElements`  
  緩衝區的大小。  
   
 ## <a name="return-value"></a>傳回值  
@@ -86,7 +87,7 @@ errno_t _wstrdate_s(
   
 ## <a name="error-conditions"></a>錯誤狀況  
   
-|`buffer`|`numberOfElements`|返回|`buffer` 的內容。|  
+|`buffer`|`numberOfElements`|Return|`buffer` 的內容。|  
 |--------------|------------------------|------------|--------------------------|  
 |`NULL`|(任何)|`EINVAL`|未修改|  
 |不是 `NULL` (指向有效的緩衝區)|0|`EINVAL`|未修改|  
@@ -105,7 +106,7 @@ errno_t _wstrdate_s(
   
  如果 `buffer` 為 `NULL` 指標，或是 `numberOfElements` 小於 9 個字元，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 -1，並將 `errno` 設定為 `EINVAL` (如果緩衝區為 `NULL` 或是 `numberOfElements` 小於或等於 0)，或將 `errno` 設定為 `ERANGE` (如果 `numberOfElements` 小於 9)。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mapping"></a>一般文字常式對應  
   
@@ -115,7 +116,7 @@ errno_t _wstrdate_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_strdate`|\<time.h>|  
 |`_wstrdate`|\<time.h> 或 \<wchar.h>|  
@@ -124,7 +125,7 @@ errno_t _wstrdate_s(
 ## <a name="example"></a>範例  
  請參閱 [time](../../c-runtime-library/reference/time-time32-time64.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   
  [ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)   

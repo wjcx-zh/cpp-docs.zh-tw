@@ -71,11 +71,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88362cf0100a7b8d118f38632e9751afa79ae4e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f211a64dca335433c8da779f6d3674f47ba33ce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 將字串轉換成大寫。 這些函式已有更安全的版本可供使用，請參閱 [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](../../c-runtime-library/reference/strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)。  
@@ -147,7 +148,7 @@ unsigned char *_mbsupr_l(
  傳回變更後字串的指標。 因為修改已就地完成，所以傳回的指標和傳遞為輸入引數的指標相同。 未保留表示錯誤的傳回值。  
   
 ## <a name="remarks"></a>備註  
- `_strupr` 函式會就地將 `str` 中的任何小寫字母轉換成大寫。 轉換由地區設定的 `LC_CTYPE` 分類設定來決定。 不會影響其他字元。 如需 `LC_CTYPE` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 字尾的函式版本會使用目前的地區設定；具有 `_l` 字尾的版本與其相同，只不過它們會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `_strupr` 函式會就地將 `str` 中的任何小寫字母轉換成大寫。 轉換由地區設定的 `LC_CTYPE` 分類設定來決定。 不會影響其他字元。 如需 `LC_CTYPE` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 字尾的函式版本會使用目前的地區設定；具有 `_l` 字尾的版本與其相同，只不過它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  `_wcsupr` 和 `_mbsupr` 是寬字元和多位元組字元版本的 `_strupr`。 `_wcsupr` 的引數和傳回值是寬字元字串；`_mbsupr` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
@@ -164,18 +165,18 @@ unsigned char *_mbsupr_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_strupr`, `_strupr_l`|\<string.h>|  
 |`_wcsupr`, `_wcsupr_l`|\<string.h> 或 \<wchar.h>|  
 |`_mbsupr`, `_mbsupr_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  請參閱 [strncmp](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](../../c-runtime-library/reference/strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)

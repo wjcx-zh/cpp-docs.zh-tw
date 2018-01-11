@@ -33,11 +33,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834441e90cb6656f308673e8475b1cc2e38fd3a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 333473d0b0b7e50e2b0faebef02835dcaf577440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsorts"></a>qsort_s
 執行快速排序。 這是 [qsort](../../c-runtime-library/reference/qsort.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -93,20 +94,20 @@ compare( context, (void *) & elem1, (void *) & elem2 );
   
 |key|base|compare|num|寬度|errno|  
 |---------|----------|-------------|---------|-----------|-----------|  
-|`NULL`|任何|任何|任何|任何|`EINVAL`|  
-|任何|`NULL`|任何|!= 0|任何|`EINVAL`|  
-|任何|任何|任何|any|<= 0|`EINVAL`|  
-|任何|任何|`NULL`|任何|任何|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|<= 0|`EINVAL`|  
+|any|any|`NULL`|any|any|`EINVAL`|  
   
  `qsort_s` 的行為與 `qsort` 相同，但具有 `context` 參數且會設定 `errno`。 藉由傳遞 `context` 參數，比較函式可以使用物件指標，來存取物件功能或其他無法透過元素指標存取的資訊。 新增`context`參數，會使`qsort_s`更安全，因為`context`可用來避免將共用的資訊提供給使用靜態變數所導入的重新進入 bug`compare`函式。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`qsort_s`|\<stdlib.h> 和 \<search.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
  **程式庫︰**所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。  
   
@@ -265,7 +266,7 @@ España Español espantado
 table tablet tableux  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch_s](../../c-runtime-library/reference/bsearch-s.md)   
  [_lsearch_s](../../c-runtime-library/reference/lsearch-s.md)   

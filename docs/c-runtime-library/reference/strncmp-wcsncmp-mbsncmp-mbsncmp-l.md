@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - strncmp
 - _mbsncmp
 - wcsncmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tcsnccmp function
 - ftcsncmp function
@@ -57,36 +55,22 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4a66ac6c57b2e4ae25c7496152b4e113f3bbf751
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1871879a1a2b3c5737fd44946c4b95c8b0777f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 比較最多兩個字串的指定字元計數。  
   
 > [!IMPORTANT]
-> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsncmp` 和 `_mbsncmp_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsncmp` 和 `_mbsncmp_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -146,7 +130,7 @@ int _mbsncmp_l(
   
  此外，`_mbsncmp` 和 `_mbsncmp_l` 也會驗證參數。 如果 `string1` 或 `string2` 為 Null 指標，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則 `_mbsncmp` 和 `_mbsncmp_l` 會傳回 `_NLSCMPERROR`，且 `errno` 設為 `EINVAL`。 `strncmp` 和 `wcsncmp` 不會驗證其參數。 除此之外，這些函式的行為相同。  
   
- 比較 `_mbsncmp` 和 `_mbsncmp_l` 的行為會受到地區設定的 `LC_CTYPE` 分類設定所影響。 這會控制對多位元組字元的開頭和結尾位元組的偵測。 如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `_mbsncmp` 函式使用目前的地區設定進行這項與地區設定相關的行為。 `_mbsncmp_l` 函式相同，但會改用 `locale` 參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。 如果地區設定是單一位元組的地區設定，則這些函式的行為等同於 `strncmp`。  
+ 比較 `_mbsncmp` 和 `_mbsncmp_l` 的行為會受到地區設定的 `LC_CTYPE` 分類設定所影響。 這會控制對多位元組字元的開頭和結尾位元組的偵測。 如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 `_mbsncmp` 函式使用目前的地區設定進行這項與地區設定相關的行為。 `_mbsncmp_l` 函式相同，但會改用 `locale` 參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。 如果地區設定是單一位元組的地區設定，則這些函式的行為等同於 `strncmp`。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -159,13 +143,13 @@ int _mbsncmp_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strncmp`|\<string.h>|  
 |`wcsncmp`|\<string.h> 或 \<wchar.h>|  
 |`_mbsncmp`, `_mbsncmp_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -216,7 +200,7 @@ Function:   strnicmp _strnicmp (first 10 characters only)
 Result:      String 1 is equal to string 2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

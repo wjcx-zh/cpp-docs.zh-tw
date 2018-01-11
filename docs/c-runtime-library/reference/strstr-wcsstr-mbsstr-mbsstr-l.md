@@ -54,11 +54,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5699f3771e75016e0e7db636416a31eb1e6a8957
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d67a57a698fdc4069c2de15520e014c7c3491e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 傳回字串中第一次出現的搜尋字串指標。  
@@ -143,24 +144,24 @@ const unsigned char *_mbsstr_l(
   
  在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 巨集`_CRT_CONST_CORRECT_OVERLOADS`如果兩個定義`const`和非-`const`這些函式的版本可供使用。 如果您需要非`const`行為對於這兩個 c + + 多載中，定義符號`_CONST_RETURN`。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本，會針對此地區設定的相關行為使用目前的地區設定，而具有 `_l` 尾碼的函式與其相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 尾碼的函式版本，會針對此地區設定的相關行為使用目前的地區設定，而具有 `_l` 尾碼的函式與其相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsstr`|`strstr`|`_mbsstr`|`wcsstr`|  
-|**不適用**|**不適用**|`_mbsstr_l`|**n/a**|  
+|**n/a**|**不適用**|`_mbsstr_l`|**n/a**|  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strstr`|\<string.h>|  
 |`wcsstr`|\<string.h> 或 \<wchar.h>|  
 |`_mbsstr`, `_mbsstr_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -199,7 +200,7 @@ String to be searched:
 lazy found at position 36  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

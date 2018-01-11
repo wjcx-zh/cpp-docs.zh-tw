@@ -1,5 +1,5 @@
 ---
-title: "#<a name=\"import-directive-c--microsoft-docs\"></a>匯入指示詞 （c + +） |Microsoft 文件"
+title: "#匯入指示詞 （c + +） |Microsoft 文件"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 

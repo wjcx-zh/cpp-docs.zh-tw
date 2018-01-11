@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f130c5d17a1a753d97cded0ab987305cc6a75c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: df532b1ffdc8eba635af93f34e0d77fd3da0d115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming"></a>OLE DB 程式設計
 Microsoft OLE DB 是舊版技術。新的應用程式則是必要的資料存取 API 針對連結的 SQL 伺服器。 所有其他新的應用程式應該使用 ODBC。 目前的 OLE DB provider for SQL Server 是 SQLNCLI11。DLL。 SQL Server 2016 仍會出貨的提供者。 這份文件適用於開發人員會維護已經使用 OLE DB 的現有應用程式。
@@ -44,5 +47,5 @@ Microsoft OLE DB 是舊版技術。新的應用程式則是必要的資料存取
 |ODBC 概念性主題|[開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|  
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料存取](../data-access-in-cpp.md)

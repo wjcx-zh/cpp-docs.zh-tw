@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - attributes [C++], event handling
 - intrinsic functions [C++], event handling
 - event handling [C++], Visual C++
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a05886ade7ff9369dfae29accf7c47d1890998b8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4167a76d3e301f76ebba09f78abcd7e64fc7f108
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling"></a>事件處理
 事件處理主要是支援 COM 類別 (c + + 類別可實作 COM 物件，通常會使用 ATL 類別或[coclass](../windows/coclass.md)屬性)。  如需詳細資訊，請參閱[COM 中的事件處理](../cpp/event-handling-in-com.md)。  
@@ -35,7 +33,7 @@ ms.lasthandoff: 09/25/2017
   
  Visual C++ 包含用於宣告事件和事件處理常式的屬性和關鍵字。 事件屬性和關鍵字可以在 CLR 程式與原生 C++ 程式中使用。  
   
-|主題|說明|  
+|主題|描述|  
 |-----------|-----------------|  
 |[event_source](../windows/event-source.md)|建立事件來源。|  
 |[event_receiver](../windows/event-receiver.md)|建立事件接收器 (接收)。|  
@@ -44,7 +42,7 @@ ms.lasthandoff: 09/25/2017
 |[__hook](../cpp/hook.md)|建立處理常式方法與事件的關聯。|  
 |[__unhook](../cpp/unhook.md)|解除處理常式方法與事件的關聯。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [事件處理範例](http://msdn.microsoft.com/en-us/cc0287d4-f92b-4da5-85fc-a0f186e16424)

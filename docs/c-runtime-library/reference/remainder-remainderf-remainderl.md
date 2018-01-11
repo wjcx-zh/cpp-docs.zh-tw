@@ -38,11 +38,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 78ba9803ab4eddd862d407fa79f7fa99fc0b565c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a0da3e4a6e785b73ebf2bfb8a529581d52dcfe2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 計算兩個浮點值商數的餘數，四捨五入為最接近的整數值。  
@@ -90,11 +91,11 @@ long double remainderl(
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|  
+|功能|必要的標頭|  
 |--------------|---------------------|  
 |`remainder`, `remainderf`, `remainderl`|\<math.h>|  
   
- 如需相容性資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -118,7 +119,7 @@ int main( void )
 The remainder of -10.00 / 3.00 is -1.000000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [ldiv、lldiv](../../c-runtime-library/reference/ldiv-lldiv.md)   
  [imaxdiv](../../c-runtime-library/reference/imaxdiv.md)   

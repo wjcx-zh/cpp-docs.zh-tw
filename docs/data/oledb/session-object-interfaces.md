@@ -19,28 +19,31 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2748756a4355b8f0befcf1287f8f30f6ece8ef84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: abb869becff4f2a4af9d489736c21b66674cc112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="session-object-interfaces"></a>工作階段物件介面
 下表顯示 OLE DB 所定義的工作階段物件的必要和選擇性介面。  
   
 |介面|是否為必要項？|實作 OLE DB 範本嗎？|  
 |---------------|---------------|--------------------------------------|  
-|[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)|強制|是|  
-|[IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx)|強制|是|  
-|[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)|強制|是|  
+|[IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx)|強制|[是]|  
+|[IOpenRowset](https://msdn.microsoft.com/en-us/library/ms716946.aspx)|強制|[是]|  
+|[ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx)|強制|[是]|  
 |[IAlterIndex](https://msdn.microsoft.com/en-us/library/ms714943.aspx)|Optional|否|  
 |[IAlterTable](https://msdn.microsoft.com/en-us/library/ms719764.aspx)|Optional|否|  
 |[IBindResource](https://msdn.microsoft.com/en-us/library/ms714936.aspx)|Optional|否|  
 |[ICreateRow](https://msdn.microsoft.com/en-us/library/ms716832.aspx)|Optional|否|  
-|[IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx)|Optional|是|  
-|[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)|Optional|是|  
+|[IDBCreateCommand](https://msdn.microsoft.com/en-us/library/ms711625.aspx)|Optional|[是]|  
+|[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)|Optional|[是]|  
 |[IIndexDefinition](https://msdn.microsoft.com/en-us/library/ms711593.aspx)|Optional|否|  
-|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|是|  
+|[ISupportErrorInfo](https://msdn.microsoft.com/en-us/library/ms715816.aspx)|Optional|[是]|  
 |[ITableCreation](https://msdn.microsoft.com/en-us/library/ms713639.aspx)|Optional|否|  
 |[ITableDefinition](https://msdn.microsoft.com/en-us/library/ms714277.aspx)|Optional|否|  
 |[ITableDefinitionWithConstraints](https://msdn.microsoft.com/en-us/library/ms720947.aspx)|Optional|否|  
@@ -53,5 +56,5 @@ ms.lasthandoff: 10/24/2017
   
  ![提供者概念圖](../../data/oledb/media/vc4u551.gif "vc4u551")  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -42,11 +42,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0b7c3342550a65941c84b7902d7ed3e3ff11b3e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78213f97021ad1e7c89d5dfde6c1cea8b6e12a7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gmtime-gmtime32-gmtime64"></a>gmtime、_gmtime32、_gmtime64
 將時間值轉換成結構。 這些函式有更安全的版本可供使用；請參閱 [gmtime_s、_gmtime32_s、_gmtime64_s](../../c-runtime-library/reference/gmtime-s-gmtime32-s-gmtime64-s.md)。  
@@ -105,7 +106,7 @@ struct tm *_gmtime64(
   
  `gmtime` 是內嵌函式，其評估為 `_gmtime64`，且除非 `_USE_32BIT_TIME_T` 已定義，否則 `time_t` 相當於 `__time64_t`。 如果您必須強制編譯器將 `time_t` 解譯為舊的 32 位元 `time_t`，您可以定義 `_USE_32BIT_TIME_T`，但是這樣做會導致`gmtime` 內嵌至 `_gmtime32`，且 `time_t` 被定義為 `__time32_t`。 我們建議您不要這麼做，因為 64 位元平台上不允許這種定義，而且在任何情況下，您的應用程式可能會在 2038 年 1 月 18 日之後失敗。  
   
- 這些函式會驗證它們的參數。 如果 `timer` 是 Null 指標，或如果計時器值為負值，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回 `NULL`，並將 `errno` 設為 `EINVAL`。  
+ 這些函式會驗證它們的參數。 如果 `timer` 是 Null 指標，或如果計時器值為負值，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `NULL`，並將 `errno` 設定為 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
  `_gmtime32` 函式會細分`timer` 值，並將它儲存在 `tm` 類型的結構中，如 TIME.H 中所定義。 `timer` 的值通常取自對 `time` 函式的呼叫。  
@@ -115,13 +116,13 @@ struct tm *_gmtime64(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`gmtime`|\<time.h>|  
 |`_gmtime32`|\<time.h>|  
 |`_gmtime64`|\<time.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -156,7 +157,7 @@ int main( void )
 Coordinated universal time is Tue Feb 12 23:11:31 2002  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   

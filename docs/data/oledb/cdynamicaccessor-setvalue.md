@@ -1,79 +1,80 @@
 ---
-title: "CDynamicAccessor::SetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.SetValue"
-  - "ATL::CDynamicAccessor::SetValue"
-  - "ATL::CDynamicAccessor::SetValue<ctype>"
-  - "CDynamicAccessor.SetValue"
-  - "ATL.CDynamicAccessor.SetValue<ctype>"
-  - "CDynamicAccessor::SetValue"
-  - "CDynamicAccessor::SetValue<ctype>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetValue 方法"
+title: "Cdynamicaccessor:: Setvalue |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.SetValue
+- ATL::CDynamicAccessor::SetValue
+- ATL::CDynamicAccessor::SetValue<ctype>
+- CDynamicAccessor.SetValue
+- ATL.CDynamicAccessor.SetValue<ctype>
+- CDynamicAccessor::SetValue
+- CDynamicAccessor::SetValue<ctype>
+dev_langs: C++
+helpviewer_keywords: SetValue method
 ms.assetid: ecc18850-96e5-4845-abe5-ab34ad467238
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bdd334f916257d3688658e941522b6cc20b12b40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-將資料儲存至指定的資料行。  
+# <a name="cdynamicaccessorsetvalue"></a>CDynamicAccessor::SetValue
+儲存至指定的資料行的資料。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      template < class ctype >    
-bool SetValue(   
-   DBORDINAL nColumn,   
-   const ctype& data    
+      template < class ctype >    
+bool SetValue(   
+   DBORDINAL nColumn,   
+   const ctype& data    
 ) throw( );  
-template < class ctype >    
-bool SetValue(   
-   const CHAR * pColumnName,   
-   const ctype& data    
+template < class ctype >    
+bool SetValue(   
+   const CHAR * pColumnName,   
+   const ctype& data    
 ) throw( );  
-template <class ctype>   
+template <class ctype>   
 bool SetValue(  
    const WCHAR *pColumnName,  
    const ctype& data   
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `ctype`  
- \[A 樣板化處理不同資料型別的參數 \(**CHAR\***， **WCHAR\***\) 的任何資料型別，則需要特殊處理。  `GetValue` 使用根據適當的資料型別您在這裡指定。  
+ [in]處理字串類型之外任何資料類型的樣板參數 (**CHAR\***， **WCHAR\***)，而這需要特殊處理。 `GetValue`會根據您指定這裡的適當資料類型。  
   
  `pColumnName`  
- \[out 包含資料行名稱的字串的指標。  
+ [in] 指向包含資料行名稱之字元字串的指標。  
   
  `data`  
- \[out 包含資料的記憶體指標。  
+ [in]包含資料的記憶體指標。  
   
  `nColumn`  
- \[的資料列數目。  資料行的以 1。  值為 0 表示書籤資料行，，如果有的話。  
+ [in] 資料行編號。 資料行數字開頭為 1。 值為 0 參考的書籤資料行中，如果有的話。  
   
-## 傳回值  
- 如果您要將字串資料，請使用 `GetValue`nontemplated 版本。  這個方法 nontemplated 版本傳回 **void\***，指向緩衝區中包含指定之資料行的資料。  如果找不到，則會傳回 **NULL** 。  
+## <a name="return-value"></a>傳回值  
+ 如果您想要設定字串資料，使用非樣板化版本的`GetValue`。 非樣板化版本，這個方法會傳回**void\***，指向包含指定之資料行資料的緩衝區的一部分。 傳回**NULL**如果找不到資料行。  
   
- 對其他資料型別，是較簡單的使用 `GetValue`樣板化版本。  樣板化版本會在成功的在失敗的 **true** 或 **false**。  
+ 對於所有其他資料類型，它是更容易使用的樣板化版本`GetValue`。 樣板化版本會傳回**true**成功或**false**失敗。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

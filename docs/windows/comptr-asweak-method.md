@@ -1,32 +1,33 @@
 ---
-title: "ComPtr::AsWeak 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::AsWeak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsWeak 方法"
+title: "Comptr:: Asweak 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::AsWeak
+dev_langs: C++
+helpviewer_keywords: AsWeak method
 ms.assetid: 23e29dcd-39cb-423f-abe6-6df4428213bf
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f24554b42115da870c023aa78cf016734157757b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::AsWeak 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="comptrasweak-method"></a>ComPtr::AsWeak 方法
 擷取目前物件的弱式參考。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 HRESULT AsWeak(  
@@ -34,17 +35,17 @@ HRESULT AsWeak(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pWeakRef`  
- 這個作業完成時，為弱式參考物件的指標。  
+ 這項作業完成時，弱式參考物件的指標。  
   
-## 傳回值  
- 如果成功，則為 S\_OK，否則，表示錯誤的 HRESULT。  
+## <a name="return-value"></a>傳回值  
+ 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [ComPtr 類別](../windows/comptr-class.md)

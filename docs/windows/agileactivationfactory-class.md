@@ -1,31 +1,32 @@
 ---
-title: "AgileActivationFactory 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::AgileActivationFactory"
-dev_langs: 
-  - "C++"
+title: "AgileActivationFactory 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::AgileActivationFactory
+dev_langs: C++
 ms.assetid: fab98f32-bb93-4c0f-badb-49fbddb194b0
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8e7856026125d91d8665bad52420b49f936eb31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# AgileActivationFactory 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-表示一個 apartment 友善啟動的 Factory，實作 [FtmBase](../windows/ftmbase-class.md)。  
+# <a name="agileactivationfactory-class"></a>AgileActivationFactory 類別
+表示 apartment 易記啟用 factory 實作[FtmBase](../windows/ftmbase-class.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
 template <  
@@ -34,15 +35,14 @@ template <
    typename I2 = Details::Nil,   
 FactoryCacheFlags cacheFlagValue = FactoryCacheDefault>  
 class AgileActivationFactory :   
-   public ActivationFactory<Implements<FtmBase, I0>, I1, I2, cacheFlagValue>  
-{};  
+   public ActivationFactory<Implements<FtmBase, I0>, I1, I2, cacheFlagValue>{};  
 ```  
   
-## 需求  
- **標題:** module.h  
+## <a name="requirements"></a>需求  
+ **標頭：** module.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
- [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)   
+## <a name="see-also"></a>請參閱  
+ [Microsoft:: wrl 命名空間](../windows/microsoft-wrl-namespace.md)   
  [ActivationFactory 類別](../windows/activationfactory-class.md)

@@ -1,63 +1,66 @@
 ---
-title: "Saving Bitmaps as GIFs or JPEGs (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.editing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".gif files, saving bitmaps as"
-  - "jpg files, saving bitmaps as"
-  - "jpeg files, saving bitmaps as"
-  - ".jpg files, saving bitmaps as"
-  - "Image editor [C++], converting image formats"
-  - "gif files, saving bitmaps as"
-  - "bitmaps [C++], converting formats"
-  - ".jpeg files, saving bitmaps as"
-  - "graphics [C++], converting formats"
-  - "images [C++], converting formats"
+title: "將點陣圖儲存為 Gif 或 Jpeg （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.editing
+dev_langs: C++
+helpviewer_keywords:
+- .gif files, saving bitmaps as
+- jpg files, saving bitmaps as
+- jpeg files, saving bitmaps as
+- .jpg files, saving bitmaps as
+- Image editor [C++], converting image formats
+- gif files, saving bitmaps as
+- bitmaps [C++], converting formats
+- .jpeg files, saving bitmaps as
+- graphics [C++], converting formats
+- images [C++], converting formats
 ms.assetid: 115df69f-10fb-4e6f-906b-853c1e4a54af
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f3fe626357283dde8d8f283c6d0aa406ec6c1db0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Saving Bitmaps as GIFs or JPEGs (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您建立點陣圖時，影像是以點陣圖格式 \(.bmp\) 建立的。  不過，您可將影像儲存為 GIF 或 JPEG 或是其他圖形格式。  
+# <a name="saving-bitmaps-as-gifs-or-jpegs-image-editor-for-icons"></a>將點陣圖儲存為 GIF 或 JPEG (圖示影像編輯器)
+當您建立點陣圖時，影像會建立以點陣圖格式 (.bmp)。 為 GIF 或 JPEG 或其他圖形的格式，不過，可以儲存映像。  
   
 > [!NOTE]
->  這項程序不適用於圖示和游標。  
+>  此程序不適用於圖示和游標。  
   
-### 若要建立點陣圖並將其儲存為 .gif 或 .jpeg  
+### <a name="to-create-and-save-a-bitmap-as-a-gif-or-jpeg"></a>若要建立並將點陣圖儲存為.gif 或.jpeg  
   
-1.  在 \[檔案\] 功能表上，選擇 \[開啟\]，再按一下 \[檔案\]。  
+1.  從**檔案**功能表上，選擇**開啟**，然後按一下 **檔案**。  
   
-2.  在 \[**新增檔案**\] 對話方塊中，按一下 \[Visual C\+\+\] 資料夾，然後在 \[範本\] 方塊內選取 \[點陣圖檔 \(.bmp\)\]，接著按一下 \[開啟\]。  
+2.  在**新檔案] 對話方塊**，按一下 [ **Visual c + +**資料夾，然後選取**點陣圖 (.bmp)**中**範本**方塊，然後按一下**開啟**。  
   
-     點陣圖即開啟於 \[影像\] 編輯器內。  
+     點陣圖會在中開啟**映像**編輯器。  
   
-3.  依需要變更新的點陣圖。  
+3.  視需要進行變更為新的點陣圖。  
   
-4.  在點陣圖仍開啟於 \[影像編輯器\] 內時，按一下 \[檔案\] 功能表上的 \[另存 filename.bmp 為\]。  
+4.  與仍在中開啟點陣圖**映像**編輯器 中，按一下**儲存*filename*為.bmp**上**檔案**功能表。  
   
-5.  在 \[另存新檔\] 對話方塊中，於 \[檔名\] 方塊內輸入代表您要的檔案格式之檔名和副檔名，  例如 myfile.gif。  
+5.  在**另存新檔**對話方塊方塊中，輸入您想要提供檔案，代表您要的檔案格式的延伸模組的名稱**檔案名稱**方塊。 例如，myfile.gif。  
   
-     **注意**：您必須在專案外建立或開啟點陣圖，才能將它儲存為另一種檔案格式。  如果您在專案內建立或開啟它，則將無法使用 \[另存新檔\] 命令。  如需詳細資訊，請參閱[在專案外 \(獨立式\) 檢視資源指令碼檔中的資源](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
+     **請注意**您必須建立或開啟您專案外的點陣圖，才能將它儲存為其他檔案格式。 如果您建立或開啟您的專案內**存**命令將會無法使用。 如需詳細資訊，請參閱[檢視資源的資源指令碼檔案外部的專案 （獨立）](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)。  
   
-6.  按一下 \[**儲存**\]。  
+6.  按一下 [儲存] 。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 請參閱  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
+

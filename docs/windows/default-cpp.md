@@ -1,62 +1,61 @@
 ---
-title: "default (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default 屬性"
-  - "屬性 [C#], default 屬性"
-  - "default, default 屬性"
+title: "預設值 （c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.default
+dev_langs: C++
+helpviewer_keywords:
+- default attribute
+- attributes [C#], default attribute
+- defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6b24b0ed9b8e547a52388b6f93a4955da782331b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# default (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="default-c"></a>default (C++)
 表示 coclass 內定義的自訂或 dispinterface，用以代表預設可程式性介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-[ default(  
-interface1  
-,  
+      [ default(  
+   interface1,  
    interface2  
 ) ]  
-  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *interface1*  
  可讓指令碼環境使用的預設介面，會根據使用 **default** 屬性定義的類別來建立物件。  
   
  如果未指定預設介面，預設會使用第一個出現的非來源介面。  
   
- *interface2* \(選擇性\)  
+ *interface2*(選擇性)  
  預設來源介面。 您也必須使用 [source](../windows/source-cpp.md) 屬性來指定此介面。  
   
  如果未指定預設來源介面，預設會使用第一個來源介面。  
   
-## 備註  
- **default** C\+\+ 屬性具有與 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 屬性相同的功能。**default** 屬性也可搭配 [case](../windows/case-cpp.md) 屬性使用。  
+## <a name="remarks"></a>備註  
+ **default** C++ 屬性具有與 [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) MIDL 屬性相同的功能。 **default** 屬性也可搭配 [case](../windows/case-cpp.md) 屬性使用。  
   
-## 範例  
- 下列程式碼示範如何在 coclass 的定義中使用 **default**，以將 **ICustomDispatch** 指定為預設可程式性介面︰  
+## <a name="example"></a>範例  
+ 下列程式碼示範如何在 coclass 的定義中使用 **default** ，以將 **ICustomDispatch** 指定為預設可程式性介面︰  
   
 ```  
 // cpp_attr_ref_default.cpp  
@@ -109,21 +108,20 @@ int main() {
   
  [source](../windows/source-cpp.md) 屬性也會示範如何使用 **default**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**class**、`struct`、資料成員|  
+|**適用於**|**class**、 `struct`、資料成員|  
 |**可重複**|否|  
-|**必要屬性**|**coclass** \(套用至 **class** 或 `struct` 時\)|  
+|**必要屬性**|**coclass** (套用至 **class** 或 `struct`時)|  
 |**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

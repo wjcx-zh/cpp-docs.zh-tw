@@ -1,47 +1,50 @@
 ---
-title: "Stand-Alone Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "standalone attributes"
-  - "attributes [C++], standalone"
+title: "獨立屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- standalone attributes
+- attributes [C++], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a3098fec700a498f73a86f8e1fd40609628a77d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Stand-Alone Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-獨立的屬性不能進行 C\+\+ 關鍵字，但更像一行程式碼。  獨立屬性陳述式需要的線條結尾的分號。  
+# <a name="stand-alone-attributes"></a>獨立屬性
+獨立屬性不能進行 c + + 關鍵字，但更像一行程式碼。 獨立屬性陳述式需要在行尾的分號。  
   
 |屬性|描述|  
-|--------|--------|  
-|[cpp\_quote](../windows/cpp-quote.md)|指定的字串，不能包含引號的字元，發出至產生的標頭檔。|  
-|[custom](../windows/custom-cpp.md)|讓您定義您自己的屬性。|  
-|[db\_command](../windows/db-command.md)|建立 OLE DB 命令一樣。|  
-|[emitidl](../windows/emitidl.md)|決定是否所有後續的 IDL 屬性將加以處理並放置在產生的.idl 檔。|  
-|[idl\_module](../windows/idl-module.md)|指定在 DLL 的進入點。|  
-|[idl\_quote](../windows/idl-quote.md)|可讓您使用最新版的 Visual C\+\+ 中不支援的 IDL 建構，並將它們下載到產生的.idl 檔。|  
-|[import](../windows/import.md)|指定包含您想要參考主要的.idl 檔中定義的另一個.idl、.odl 或.h 檔案。|  
-|[importidl](../windows/importidl.md)|將指定的.idl 檔插入至產生的.idl 檔|  
-|[importlib](../windows/importlib.md)|讓已編譯成另一個型別程式庫所建立的型別程式庫，您可以使用的型別。|  
-|[包含](../windows/include-cpp.md)|指定要包含在產生的.idl 檔中的一或多個標頭檔。|  
-|[includelib](../windows/includelib-cpp.md)|會造成.idl 或.h 檔被包含在產生的.idl 檔。|  
-|[library\_block](../windows/library-block.md)|將.idl 檔案的媒體櫃區塊內的建構函式。|  
-|[Module \- 模組](../windows/module-cpp.md)|定義文件庫區塊.idl 檔中。|  
-|[no\_injected\_text](../windows/no-injected-text.md)|可以防止編譯器插入的屬性使用的程式碼。|  
-|[pragma](../windows/pragma.md)|指定的字串，不能包含引號的字元，發出至產生的.idl 檔。|  
+|---------------|-----------------|  
+|[cpp_quote](../windows/cpp-quote.md)|指定的字串，不能包含引號字元，發出至產生的標頭檔。|  
+|[自訂](../windows/custom-cpp.md)|可讓您定義您自己的屬性。|  
+|[db_command](../windows/db-command.md)|建立 OLE DB 命令。|  
+|[emitidl](../windows/emitidl.md)|判斷是否會處理並放在產生的.idl 檔中所有後續的 IDL 屬性。|  
+|[idl_module](../windows/idl-module.md)|指定的進入點 DLL 中。|  
+|[idl_quote](../windows/idl-quote.md)|可讓您使用目前版本的 Visual c + + 中不支援的 IDL 建構函式，並將它們傳遞至產生的.idl 檔案。|  
+|[import](../windows/import.md)|指定包含的定義您想要從主要的.idl 檔案參考的另一個.idl、.odl 或.h 檔案。|  
+|[importidl](../windows/importidl.md)|指定的.idl 檔案插入產生的.idl 檔案|  
+|[importlib](../windows/importlib.md)|讓已編譯成其他類型程式庫的類型可供正在建立的類型程式庫使用。|  
+|[include](../windows/include-cpp.md)|指定要包含在產生的.idl 檔中的一個或多個標頭檔。|  
+|[includelib](../windows/includelib-cpp.md)|會導致的.idl 或.h 檔案包含在產生的.idl 檔案。|  
+|[library_block](../windows/library-block.md)|將.idl 檔案的程式庫區塊內的建構。|  
+|[模組](../windows/module-cpp.md)|在 .idl 檔案中定義程式庫區塊。|  
+|[no_injected_text](../windows/no-injected-text.md)|防止編譯器插入程式碼，因為屬性使用。|  
+|[pragma](../windows/pragma.md)|指定的字串，不能包含引號字元，發出至產生的.idl 檔案。|  
   
-## 請參閱  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>請參閱  
+ [依使用方式分類的屬性](../windows/attributes-by-usage.md)

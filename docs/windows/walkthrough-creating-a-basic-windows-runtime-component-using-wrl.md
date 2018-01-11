@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0c57e6b8ffb501ea4c6b75429bab88bbe5dc93eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5859f3ebfcb55427e239a0018d539e2f4df13800
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-basic-windows-runtime-component-using-wrl"></a>逐步解說：使用 WRL 建立基本 Windows 執行階段元件
 本文件說明如何使用 Windows 執行階段 c + + 樣板程式庫 (WRL) 來建立基本 Windows 執行階段元件。 元件會將兩個數字相加，結果為質數時引發事件。 本文件也會示範如何從使用 JavaScript 之通用 Windows 平台應用程式使用元件。  
@@ -115,7 +118,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="next-steps"></a>後續步驟  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Windows 執行階段 c + + 樣板程式庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [類別庫專案範本](../windows/wrl-class-library-project-template.md)   
  [C/c + + 程式碼分析工具](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)

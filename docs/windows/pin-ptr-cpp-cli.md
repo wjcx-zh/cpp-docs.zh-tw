@@ -1,107 +1,109 @@
 ---
-title: "pin_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "pin_ptr_cpp"
-  - "stdcli::language::pin_ptr"
-  - "pin_ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pinning pointers"
-  - "pin_ptr keyword [C++]"
+title: "pin_ptr (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- pin_ptr_cpp
+- stdcli::language::pin_ptr
+- pin_ptr
+dev_langs: C++
+helpviewer_keywords:
+- pinning pointers
+- pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-caps.latest.revision: 28
-caps.handback.revision: 26
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "28"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7205718a3564a3929fe2a9f8b7d8049a320ae1cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# pin_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-宣告*Pin 指標*，只使用與 Common Language Runtime。  
+# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+宣告*pin 指標*，這僅適用於 common language runtime。  
   
-## 所有執行階段  
- \(這個語言功能沒有適用於所有執行階段的備註\)。  
+## <a name="all-runtimes"></a>所有執行階段  
+ (這個語言功能沒有適用所有執行階段的備註。)  
   
-## Windows Runtime \- Windows 執行階段  
- \(這個語言功能在 Windows 執行階段不支援\)  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ （這個語言功能不支援在 Windows 執行階段）。  
   
-## Common Language Runtime  
- *Pin 指標*是防止物件會繼續執行記憶體回收的堆積的內部指標。  即 Common Language Runtime 不會變更 Pin 指標的值。  利用這種方式將 Managed 類別的位址傳遞至 Unmanaged 函式是必須的，所以位址不會在解析 Unmanaged 函式呼叫時意外變更。  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ A *pin 指標*可防止物件的內部指標指向記憶體回收堆積上移動。 也就是通用語言執行平台不會變更 pin 指標的值。 這是必要的當您將傳遞 managed 類別的位址至 unmanaged 函式，以便位址不會變更非預期地在解析 unmanaged 函式呼叫的期間。  
   
-### 語法  
+### <a name="syntax"></a>語法  
   
 ```cpp  
-[cli::]pin_ptr<cv_qualifier type> var = &initializer;  
+[cli::]pin_ptr<cv_qualifiertype>var = &initializer;  
 ```  
   
-### 參數  
- *cv\_qualifier*  
- `const` 或 `volatile` 限定詞。  根據預設， Pin 指標是 `volatile`。  它是重複，但不是錯誤宣告 Pin 指標 `volatile`。  
+### <a name="parameters"></a>參數  
+ *cv_qualifier*  
+ `const`或`volatile`限定詞。 根據預設，pin 指標是`volatile`。 它是重複，但不是錯誤來宣告 pin 指標`volatile`。  
   
  *type*  
- `initializer` 的型別。  
+ `initializer` 的類型。  
   
  *var*  
- `pin_ptr`變數的名稱。  
+ `pin_ptr` 變數的名稱。  
   
  *initializer*  
- 參考型別，項目的 Managed 陣列，或任何其他的成員可以指派到原生指標的物件。  
+ 參考類型的成員，Managed 陣列的元素，或是其他任何可以指派至原生指標的物件。  
   
-### 備註  
- `pin_ptr` 表示原生指標功能的超集。  因此，可以指派至原生指標的任何物件也可以指派至 `pin_ptr`。  內部指標被允許執行同一組作業與原生指標，包括比較和指標算術。  
+### <a name="remarks"></a>備註  
+ A`pin_ptr`代表功能的原生指標的超集。 因此，任何可以指派給原生指標的項目也可指派給`pin_ptr`。 內部指標可以執行與原生指標相同的一組作業，包括比較和指標算術。  
   
- 在 Common Language Runtime 不會在記憶體回收期間的情況下，將它移至 Managed 類別的物件或子物件可停駐。  對這個用途是將指標傳遞給 Managed 資料做為 Unmanaged 函式呼叫的實質參數。  在集合週期，執行階段會檢查建立的中繼資料所指向的 Pin 指標，並不會移動項目。  
+ 物件或子物件的 managed 類別可以釘選，在此情況下 common language runtime 不會移動它在記憶體回收期間。 這主要用途是要當做 unmanaged 函式呼叫的實質參數，傳遞至 managed 資料的指標。 在集合的週期中，執行階段會檢查為 pin 指標建立的中繼資料，並不會移動它所指向的項目。  
   
- 固定物件也修正其值欄位；即原始或實值型別欄位。  然而，追蹤宣告的欄位控制代碼 \(`%`\) 沒有內建。  
+ 固定物件也釘選它值的欄位。也就是基本類型的欄位或值類型。 不過，將欄位宣告藉由追蹤控制代碼 (`%`) 不會固定。  
   
- 固定在 Managed 物件定義的子物件具有固定整個物件的效果。  
+ 釘選受管理物件中定義的子物件的效果釘選整個物件。  
   
- 如果 Pin 指標重新指派給對新值，前一個執行個體指向不再視為固定。  
+ 如果 pin 指標會指派以指向新的值，指向上一個執行個體已不再視為固定。  
   
- 物件只有在為 `pin_ptr` 時固定。  物件不再固定，當它 Pin 指標超出範圍時，或設定為 [nullptr](../windows/nullptr-cpp-component-extensions.md)。  在 `pin_ptr` 超出範圍之後， Pin 物件可在堆積由記憶體回收行程移動。  仍然指向物件的任何原生指標不會更新和取值其中一個可能引發無法復原的例外狀況。  
+ 已釘選物件時，才`pin_ptr`指向它。 其 pin 指標超出範圍，或設為當物件不再固定[nullptr](../windows/nullptr-cpp-component-extensions.md)。 之後`pin_ptr`超出範圍，已釘選的物件可以藉由記憶體回收行程移動堆積中。 仍然指向該物件任何原生指標將不會更新，並取消參考其中一個可能會引發例外狀況無法復原。  
   
- 如果物件的 Pin 指標點 \(所有內建的指標超出的範圍，重新指派給其他物件的點或者是指定 [nullptr](../windows/nullptr-cpp-component-extensions.md)\)，物件不保證不固定。  
+ 如果沒有 pin 指標指向的物件 (所有 pin 指標超出範圍，已重新指派至指向其他物件，或已指派[nullptr](../windows/nullptr-cpp-component-extensions.md))，不保證物件固定。  
   
- Pin 指標可以指向 Managed 型別的控制代碼取值、實值型別或 Boxed 型別控制代碼，成員或 Managed 陣列的元素。  它無法指向參考型別。  
+ Pin 指標可以指向參考控制代碼、 實值型別或 boxed 的類型控制代碼、 managed 型別的成員或 managed 陣列的項目。 它無法指向參考類型。  
   
- 取得指向原生物件 `pin_ptr` 的位址會產生未定義的行為。  
+ 位址`pin_ptr`指向原生的物件會導致未定義的行為。  
   
- Pin 指標只能宣告在堆疊上的非靜態區域變數。  
+ Pin 指標在堆疊上只能宣告為非靜態區域變數。  
   
- Pin 指標無法使用如下:  
+ Pin 指標不能當做：  
   
 -   函式參數  
   
--   函式的傳回型別。  
+-   函式的傳回型別  
   
--   類別的成員  
+-   類別成員  
   
--   轉換的目標類型。  
+-   轉換目標類型。  
   
- `pin_ptr`在`cli`命名空間中。  如需詳細資訊，請參閱[Platform, default, and cli Namespaces](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)。  
+ `pin_ptr`處於`cli`命名空間。 如需詳細資訊，請參閱[平台、 default 和 cli 命名空間](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md)。  
   
- 如需內部指標的詳細資訊，請參閱[interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)。  
+ 如需內部指標的詳細資訊，請參閱[interior_ptr (C + + /CLI)](../windows/interior-ptr-cpp-cli.md)。  
   
- 如需 Pin 指標的詳細資訊，請參閱[How to: Pin Pointers and Arrays](../windows/how-to-pin-pointers-and-arrays.md) 和[How to: Declare Pinning Pointers and Value Types](../windows/how-to-declare-pinning-pointers-and-value-types.md)。  
+ 如需 pin 指標的詳細資訊，請參閱[How to: Pin 指標和陣列](../windows/how-to-pin-pointers-and-arrays.md)和[如何： 宣告固定指標和實值類型](../windows/how-to-declare-pinning-pointers-and-value-types.md)。  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
- 下列範例會使用 `pin_ptr` 限制陣列的第一個項目的位置。  
+ 下列範例會使用`pin_ptr`限制陣列的第一個元素的位置。  
   
 ```  
 // pin_ptr_1.cpp  
@@ -147,11 +149,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **45** **範例**  
+```Output  
+45  
+```  
   
- 下列範例顯示內部指標可以轉換為 Pin 指標，且傳址運算子 \(`&`\) 的傳回型別是內部指標，當運算元在 Managed 堆積上。  
+ **範例**  
+  
+ 下列範例顯示的內部指標可以轉換成 pin 指標，和傳址運算子的傳回類型 (`&`) 是內部指標，如果運算元為 managed 堆積上。  
   
 ```  
 // pin_ptr_2.cpp  
@@ -181,11 +187,15 @@ int main() {
 };  
 ```  
   
- **Output**  
+ **輸出**  
   
- **1** **範例**  
+```Output  
+1  
+```  
   
- 下列範例中，示範了 Pin 指標可以轉換成其他型別。  
+ **範例**  
+  
+ 下列範例顯示的 pin 指標可以轉換成其他類型。  
   
 ```  
 // pin_ptr_3.cpp  
@@ -209,7 +219,9 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
- **8**   
-**255**
+```Output  
+8  
+255  
+```

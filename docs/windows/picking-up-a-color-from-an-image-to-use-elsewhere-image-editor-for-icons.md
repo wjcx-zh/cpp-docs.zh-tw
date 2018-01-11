@@ -1,55 +1,57 @@
 ---
-title: "Picking up a Color from an Image to Use Elsewhere (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.color"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colors [C++], image"
-  - "images [C++], colors"
-  - "colors [C++], selection tools"
-  - "Image editor [C++], colors"
-  - "Select Color tool"
+title: "中揀選色彩從映像以用於他處 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.color
+dev_langs: C++
+helpviewer_keywords:
+- colors [C++], image
+- images [C++], colors
+- colors [C++], selection tools
+- Image editor [C++], colors
+- Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6a42e514c3b13a1e958c4ff08d51bb330653ce18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Picking up a Color from an Image to Use Elsewhere (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**選取色彩**的工具或色彩揀選工具會使影像上的任何色彩成為目前的前景色彩或背景色彩，視您按滑鼠左鍵或滑鼠右鍵而定。  若要取消**選取色彩**工具，請選擇另一組工具。  
+# <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>從影像中揀選色彩以用於他處 (圖示影像編輯器)
+**選取色彩**，或色彩揀選工具可讓任何色彩為影像上的目前的前景色彩或背景色彩，視您按左邊或右邊的滑鼠按鈕。 若要取消**選取色彩**工具，請選擇另一個工具。  
   
 > [!TIP]
->  當您將游標移到工具列按鈕上時，即出現工具提示。  這些提示可協助您識別每一個按鈕的功能。  
+>  將游標停留在工具列按鈕時，就會出現工具提示。 這些提示可協助您識別每個按鈕的功能。  
   
-### 若要揀選色彩  
+### <a name="to-pick-up-a-color"></a>挑選色彩  
   
-1.  在 \[影像編輯器\] 工具列上 \(或自 \[影像\] 功能表中的 \[工具\] 命令\)，按一下 \[選取色彩\] 工具。  
+1.  在**影像編輯器**工具列 (或從**映像**功能表上，**工具**命令)，按一下 **選取色彩**工具。  
   
-2.  選取要從影像中揀選的色彩。  
+2.  選取您想要挑選從映像的色彩。  
   
     > [!NOTE]
-    >  在揀選色彩之後，影像編輯器會重新啟動最近使用的工具。  
+    >  您揀選色彩之後，影像編輯器重新啟動最近使用的工具。  
   
-3.  使用滑鼠左鍵以前景色彩繪圖，或是使用滑鼠右鍵以背景色彩繪圖。  
+3.  繪製使用滑鼠左鍵的前景色彩或滑鼠按鈕的背景色彩。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
- None  
+ 無  
   
-## 請參閱  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [使用色彩](../windows/working-with-color-image-editor-for-icons.md)

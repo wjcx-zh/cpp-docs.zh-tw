@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4091c8ae127077acbfe87d50a23a986d468d67ff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 31d56b56b104473ffe3edbcf8672aa8b5a92243d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="include-c"></a>include (C++)
 指定要包含在產生的.idl 檔中的一個或多個標頭檔。  
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDL 屬性](../windows/idl-attributes.md)   
  [獨立屬性](../windows/stand-alone-attributes.md)   
  [匯入](../windows/import.md)   

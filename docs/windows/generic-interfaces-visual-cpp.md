@@ -1,74 +1,76 @@
 ---
-title: "Generic Interfaces (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic interfaces"
-  - "interfaces, generic [C++}"
+title: "泛型介面 （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- generic interfaces
+- interfaces, generic [C++}
 ms.assetid: f3da788a-ba83-4db7-9dcf-9b95a8fb9d1a
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b08ab6585cd4d8c7a4da93273f99d47c0265608c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Interfaces (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-套用至類別中的參數的限制與套用至介面中的參數的項目 \(請參閱 [Generic Classes \(C\+\+\/CLI\)](../windows/generic-classes-cpp-cli.md)\)。  
+# <a name="generic-interfaces-visual-c"></a>泛型介面 (Visual C++)
+套用至類別型別參數的限制會套用至型別參數在介面上的相同 (請參閱[泛型類別 (C + + /CLI)](../windows/generic-classes-cpp-cli.md))。  
   
- 控制函式多載的規則與泛型類別或泛型介面中的函式相同。  
+ 控制函式多載的規則都相同的泛型類別或泛型介面中的函式。  
   
- 明確介面成員實作與建構的介面型別，以使用與簡單介面型別的方式 \(請參閱以下範例\)。  
+ 建構的介面類型 （請參閱下列範例） 的簡單介面類型做為以相同方式使用明確介面成員實作。  
   
- 如需介面的詳細資訊，請參閱[interface class](../windows/interface-class-cpp-component-extensions.md)。  
+ 如需有關介面的詳細資訊，請參閱[介面類別](../windows/interface-class-cpp-component-extensions.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 [attributes] generic <class-key type-parameter-identifier[, ...]>  
 [type-parameter-constraints-clauses][accesibility-modifiers] interface class identifier [: base-list] {   interface-body} [declarators] ;  
 ```  
   
-## 備註  
- *屬性* \(選擇性的\)。  
- 補充宣告資訊。  如需關於屬性及屬性類別的詳細資訊，請參閱屬性。  
+## <a name="remarks"></a>備註  
+ *屬性*（選擇性）  
+ 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。  
   
- *class\-key*  
- **class** 和 **typename**  
+ *類別索引鍵*  
+ **類別**或**類型名稱**  
   
  `type-parameter-identifier(s)`  
- 逗號分隔識別項的清單。  
+ 以逗號分隔的識別項清單。  
   
  `type-parameter-constraints-clauses`  
- 指定在 [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 中拿到表格。  
+ 中指定的形式[泛型型別參數的條件約束 (C + + /CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)  
   
- *存取範圍修飾詞* \(選擇性\)  
- Accessibility modifiers \(如  **public, private**\)。  
+ *存取範圍修飾詞*（選擇性）  
+ 存取範圍修飾詞 (例如**公用、 私用**)。  
   
  *identifier*  
  介面名稱。  
   
- *基底清單* \(選擇性\)  
- 包含一個或多個明確基底以逗號分隔介面的清單。  
+ *基底清單*（選擇性）  
+ 包含一或多個明確的基底介面以逗號分隔的清單。  
   
- *介面主體*  
+ *介面主體內*  
  介面成員的宣告。  
   
- *宣告子* \(選擇性\)  
- 根據型別變數的宣告。  
+ *宣告子*（選擇性）  
+ 根據此類型的變數的宣告。  
   
-## 範例  
- 下列範例示範如何宣告及執行個體化泛型介面。  在此範例中， `IList<ItemType>` 泛型介面宣告。  它是由兩個泛型類別， `List1<ItemType>` 和 `List2<ItemType>`來實作，以不同的實作。  
+## <a name="example"></a>範例  
+ 下列範例會示範如何宣告和具現化泛型介面。 在範例中，泛型介面`IList<ItemType>`宣告。 兩個泛型類別，然後實作`List1<ItemType>`和`List2<ItemType>`，與不同的實作。  
   
 ```  
 // generic_interface.cpp  
@@ -236,12 +238,15 @@ int main() {
 }  
 ```  
   
-  **Linked List**  
-**List1**  
-**Array List**  
-**List2**   
-## 範例  
- 這個範例會宣告一個泛型介面`IMyGenIface`和非泛型介面`IMySpecializedInt` 和 `ImySpecializedString`，特製化 `IMyGenIface`。  兩個特定介面是由兩個類別 `MyIntClass` 和 `MyStringClass`來實作。  這個範例顯示如何特製化泛型介面，具現化泛型和非泛型介面並呼叫介面的明確實作的成員。  
+```Output  
+Linked List  
+List1  
+Array List  
+List2  
+```  
+  
+## <a name="example"></a>範例  
+ 這個範例會宣告泛型介面， `IMyGenIface`，和兩個非泛型介面，`IMySpecializedInt`和`ImySpecializedString`的特製化`IMyGenIface`。 將兩個特製化的介面，則由兩個類別，實作`MyIntClass`和`MyStringClass`。 此範例示範如何特製化的泛型介面具現化泛型和非泛型介面，明確實作的成員呼叫的介面。  
   
 ```  
 // generic_interface2.cpp  
@@ -311,7 +316,10 @@ int main() {
 }  
 ```  
   
-  **The integer field contains: 1234**  
-**The String field contains: My string**   
-## 請參閱  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+The integer field contains: 1234  
+The String field contains: My string  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [泛型](../windows/generics-cpp-component-extensions.md)

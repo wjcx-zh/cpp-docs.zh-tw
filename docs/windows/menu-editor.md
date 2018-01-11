@@ -1,35 +1,37 @@
 ---
-title: "Menu Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.menu.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resource editors, Menu editor"
-  - "editors, menus"
-  - "Menu editor"
-  - "menus, Menu editor"
+title: "功能表編輯器 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.menu.F1
+dev_langs: C++
+helpviewer_keywords:
+- resource editors, Menu editor
+- editors, menus
+- Menu editor
+- menus, Menu editor
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5580c32b76af4b1115c9327b3387aa6de4baa32a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Menu Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="menu-editor"></a>功能表編輯器
 功能表允許您以有邏輯和容易尋找的方式排列命令。 使用功能表編輯器，您可以直接使用非常接近已完成應用程式的功能表列來建立和編輯功能表。  
   
- 在 Visual C\+\+ 專案中，您可以使用功能表編輯器：  
+ 在 Visual C++ 專案中，您可以使用功能表編輯器：  
   
 -   [建立功能表](../windows/creating-a-menu.md)  
   
@@ -61,16 +63,17 @@ caps.handback.revision: 9
     >  使用功能表編輯器時，在許多情況下，按一下滑鼠右鍵可以顯示常用命令的快顯功能表。 可用的命令取決於指標所指項目。  
   
     > [!NOTE]
-    >  若為 MFC 程式庫程式和 ATL 程式，您可以使用程式碼精靈連結功能表命令和程式碼。 如需詳細資訊，請參閱[加入事件](../ide/adding-an-event-visual-cpp.md)。  
+    >  若為 MFC 程式庫程式和 ATL 程式，您可以使用程式碼精靈連結功能表命令和程式碼。 如需詳細資訊，請參閱 [加入事件](../ide/adding-an-event-visual-cpp.md)。  
   
- 如需將資源加入 Managed 專案的相關資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。如需手動將資源檔加入 Managed 專案、存取資源、顯示靜態資源及指派資源字串給屬性的相關資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [Working with Resource Files](../mfc/working-with-resource-files.md)   
- [Resource Editors](../mfc/resource-editors.md)   
- [使用者介面物件和命令 ID](../mfc/user-interface-objects-and-command-ids.md)   
- [Menus](../mfc/menus-mfc.md)   
- [Menus](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
+## <a name="see-also"></a>請參閱  
+ [使用資源檔](../windows/working-with-resource-files.md)   
+ [資源編輯器](../windows/resource-editors.md)   
+ [使用者介面物件和命令 Id](../mfc/user-interface-objects-and-command-ids.md)   
+ [功能表](../mfc/menus-mfc.md)   
+ [功能表](http://msdn.microsoft.com/library/windows/desktop/ms646977.aspx)
+

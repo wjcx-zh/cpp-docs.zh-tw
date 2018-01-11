@@ -243,7 +243,6 @@
 ## [視窗類別巨集](window-class-macros.md)
 ## [Windows 訊息巨集](windows-messages-macros.md)
 # [ATL 全域變數](atl-global-variables.md)
-## [_pAtlModule](patlmodule.md)
 # [ATL 精靈和對話方塊](atl-wizards-and-dialog-boxes.md)
 ## [ATL 專案精靈、應用程式設定](application-settings-atl-project-wizard.md)
 ## [ATL Active Server Page 元件精靈、ASP](asp-atl-active-server-page-component-wizard.md)

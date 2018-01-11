@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7f23265601411c0a1913b1e06b9fffa62bfa07f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ac591a1d27792d3b825336ed46e38fa5d002fa73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray 類別
 支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
@@ -39,14 +42,14 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[EventTargetArray::EventTargetArray 建構函式](../windows/eventtargetarray-eventtargetarray-constructor.md)|初始化 EventTargetArray 類別的新執行個體。|  
 |[EventTargetArray::~EventTargetArray 解構函式](../windows/eventtargetarray-tilde-eventtargetarray-destructor.md)|取消初始化目前 EventTargetArray 類別。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[EventTargetArray::AddTail 方法](../windows/eventtargetarray-addtail-method.md)|將指定的事件處理常式附加至事件處理常式內部陣列的結尾。|  
 |[EventTargetArray::Begin 方法](../windows/eventtargetarray-begin-method.md)|取得內部陣列中的事件處理常式的第一個元素的位址。|  
@@ -61,5 +64,5 @@ class EventTargetArray : public Microsoft::WRL::RuntimeClass<Microsoft::WRL::Run
   
  **命名空間：** Microsoft::WRL::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

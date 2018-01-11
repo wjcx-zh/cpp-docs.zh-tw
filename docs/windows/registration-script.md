@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2260006e45407051f37e220d01cebd0ba8f797d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 40790788fdb5ce73a6c33e62b6ee55d2da4c5364
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registrationscript"></a>registration_script
 執行指定的自訂註冊指令碼。  
@@ -77,7 +80,7 @@ class CMyClass:public IFace {};
   
  如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [COM 屬性](../windows/com-attributes.md)   
  [類別屬性](../windows/class-attributes.md)   
  [rdx](../windows/rdx.md)   

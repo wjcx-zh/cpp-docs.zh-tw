@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80f444e48d786b0543aeb5de64e5659cdca6ff5d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1d905f962af6a9cf07ecb0926503fc24e21c0136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="double-thunking-c"></a>Double Thunking (C++)
 Double thunking 指的是效能的 Visual c + + managed 函式，以及在程式執行的受管理的內容呼叫的函式呼叫才能呼叫 managed 函式呼叫函式的原生進入點時，您可能遇到損失。 本主題討論 double thunking 的發生位置，以及避免可改善效能。  
@@ -143,5 +146,5 @@ int main() {
 after calling struct S  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [混合 (原生和 Managed) 組件](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -33,11 +33,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 792407af9497148bea95333ee18028e0f8c953e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3149c1be671566785f67963368a50cdf2eee3809
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rtcgeterrdesc"></a>_RTC_GetErrDesc
 傳回執行階段錯誤檢查 (RTC) 類型的簡短描述。  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_RTC_GetErrDesc`|\<rtcapi.h>|  
   
@@ -69,6 +70,6 @@ ms.lasthandoff: 10/24/2017
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_RTC_NumErrors](../../c-runtime-library/reference/rtc-numerrors.md)   
  [執行階段錯誤檢查](../../c-runtime-library/run-time-error-checking.md)

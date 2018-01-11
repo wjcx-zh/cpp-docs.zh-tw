@@ -1,42 +1,42 @@
 ---
-title: "vector::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend 成員 [STL/CLR]"
+title: "vector:: rend (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 8dc1927f-9214-468d-877e-eda20c03e90d
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d322895e2421bfd11d6d402f332aa84daff74ece
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定已還原的受控制序列結尾。  
+# <a name="vectorrend-stlclr"></a>vector::rend (STL/CLR)
+指定反向受控制序列的結尾。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## 備註  
- 成員函式傳回在受控制序列的開頭之外按的反向迭代器。  因此，它會指定反向序列的 `end`。  您要用它來取得的 Iterator 可指定以相反順序顯示的受控制序列之 `current` 結尾，但是，如果受控制序列的長度變更，它的狀態也可以變更。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回以外的位置開始，指向受控制序列的反向迭代器。 因此，它會指定`end`反向序列。 您使用它來取得指定的迭代器`current`受控制序列的長度變更時，可以變更結尾受控制的序列相反的順序出現，但它的狀態。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_rend.cpp   
@@ -72,17 +72,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-rend\(\) \= b**  
-**\*\-\-rend\(\) \= a**  
- **y x c**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+ y x c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::begin](../dotnet/vector-begin-stl-clr.md)   
- [vector::end](../dotnet/vector-end-stl-clr.md)   
- [vector::rbegin](../dotnet/vector-rbegin-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector:: begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)   
+ [vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md)   
+ [vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)

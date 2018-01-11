@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f9fb195bfb5e6e35d035ba5a3660bb91644a04ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aa6fc5331340c110f2325762bbe46409d53d1b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-stream-member-functions"></a>輸入資料流成員函式
 輸入資料流成員函式是用於磁碟輸入。 成員函式包括：  
@@ -199,6 +200,6 @@ int main( )
 ##  <a name="vclrftheclosefunctionforinputstreamsanchor15"></a> 輸入資料流的 close 函式  
  **close** 成員函式會關閉與輸入檔案資料流關聯的磁碟檔案，然後釋出作業系統控制代碼。 [ifstream](../standard-library/basic-ifstream-class.md) 解構函式會為您關閉檔案，但如果您需要為相同的資料流物件開啟另一個檔案，則可以使用 **close** 函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [輸入資料流](../standard-library/input-streams.md)
 

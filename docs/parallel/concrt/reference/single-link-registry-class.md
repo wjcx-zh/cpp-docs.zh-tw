@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18e0ebe846a8ee0bf583ad342e43959e4996cd87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry 類別
 `single_link_registry` 物件是只管理單一來源或目標區塊的 `network_link_registry`。  
@@ -43,18 +44,18 @@ class single_link_registry : public network_link_registry<_Block>;
  `_Block`  
  封鎖資料類型儲存在`single_link_registry`物件。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[single_link_registry](#ctor)|建構 `single_link_registry` 物件。|  
 |[~ single_link_registry 解構函式](#dtor)|終結`single_link_registry`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[add](#add)|新增連結`single_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|  
 |[begin](#begin)|傳回迭代器中的第一個項目`single_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|  
@@ -161,6 +162,6 @@ virtual ~single_link_registry();
 ### <a name="remarks"></a>備註  
  方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果它在移除的連結之前呼叫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [multi_link_registry 類別](multi-link-registry-class.md)

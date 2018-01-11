@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&&'
-dev_langs:
-- C++
+f1_keywords: '&&'
+dev_langs: C++
 helpviewer_keywords:
 - logical AND operator
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5a594efcc987fba69ceb17e7e09d10470adab75f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0612b9c2430d316aa9ba3a6d2dd9351342b5d352
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logical-and-operator-ampamp"></a>邏輯 AND 運算子：&amp;&amp;
 ## <a name="syntax"></a>語法  
@@ -57,7 +54,7 @@ char *pch = 0;
  如果 `pch` 是 null (0)，則永遠不會評估運算式的右邊。 因此，您無法透過 null 指標來進行指派。  
   
 ## <a name="operator-keyword-for-"></a>&& 的運算子關鍵字  
- **和**運算子相當於文字的** && **。 有兩種方式來存取**和**您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
+ **和**運算子相當於文字的 **&&** 。 有兩種方式來存取**和**您程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。  
   
 ## <a name="example"></a>範例  
   
@@ -81,6 +78,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md) [c + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 邏輯運算子](../c-language/c-logical-operators.md)

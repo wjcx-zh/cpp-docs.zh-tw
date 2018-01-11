@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 797ef6e17f1681e0e44af2f131e5b324a607297d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d104f25dfc45a0d2b24650289b6ce49f8468c39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-directive-c"></a>#import 指示詞 (C++)
 **C + + 特定的**  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/24/2017
 -   可以辨識的任何其他檔案格式**LoadTypeLib**應用程式開發介面。  
   
  `attributes`  
- 一或多個[#import 屬性](#_predir_the_23import_directive_import_attributes)。 使用空格或逗號分隔屬性。 例如：  
+ 一或多個[#import 屬性](#_predir_the_23import_directive_import_attributes)。 使用空格或逗號分隔屬性。 例如:   
   
 ```  
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/24/2017
 |角括弧形式|指示前置處理器依照下列路徑搜尋類型程式庫檔案：<br /><br /> 1.**路徑**環境變數路徑清單<br />2.**LIB**環境變數路徑清單<br />3./I 所指定的路徑 (其他 include 目錄) 編譯器選項，但是編譯器搜尋類型程式庫已從另一個類型程式庫，與參考它[no_registry](../preprocessor/no-registry.md)屬性。|  
   
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a>指定當地語系化 ID 和版本號碼  
- 當您指定 ProgID 時，也可以指定 ProgID 的當地語系化 ID 和版本號碼。 例如：  
+ 當您指定 ProgID 時，也可以指定 ProgID 的當地語系化 ID 和版本號碼。 例如:   
   
 ```  
 #import "progid:my.prog.id" lcid("0") version("4.0)  
@@ -196,6 +197,6 @@ using namespace MyLib;
   
  **END c + + 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [前置處理器指示詞](../preprocessor/preprocessor-directives.md)   
  [編譯器 COM 支援](../cpp/compiler-com-support.md)

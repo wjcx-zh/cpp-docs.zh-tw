@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4bb50f4471aed2af6de0ae20e2e3c85ab0cb5d9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd1bc4f017a90bf2f42972831eadc02e77868151
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-definitions"></a>引數定義
 原型中的引數  
@@ -51,7 +52,7 @@ argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar
  `envp`  
  `envp` 陣列 (許多 UNIX 系統中常見的擴充功能) 可用於 Microsoft C++。 它是一個字串的陣列，表示在使用者的環境中設定的變數。 這個陣列會以結尾**NULL**項目。 它可以宣告為陣列的指標**char (char** \*envp []**)**或作為指標的指標**char (char** \* \*envp**)**。 如果您的程式使用**wmain**而不是**主要**，使用`wchar_t`資料類型，而不是`char`。 環境區塊傳遞至**主要**和**wmain**目前環境的 「 凍結 」 複本。 如果您後續又變更環境中的，透過呼叫**putenv**或`_wputenv`，目前的環境 (傳回`getenv` / `_wgetenv`和`_environ` /  `_wenviron`變數) 變更，不過 envp 所指向的區塊將不會變更。 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)如需隱藏環境處理的資訊。 此引數在 C 中可與 ANSI 相容，但是在 C++ 中則不相容。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
 ## <a name="example"></a>範例  
  下列範例示範如何使用`argc`， `argv`，和`envp`引數**主要**:  
@@ -80,5 +81,5 @@ int main( int argc, char *argv[], char *envp[] ) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [main：程式啟動](../cpp/main-program-startup.md)

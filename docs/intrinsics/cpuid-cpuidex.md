@@ -1,37 +1,38 @@
 ---
-title: "__cpuid __cpuidex | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__cpuid_cpp"
-  - "__cpuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建的 __cpuid"
-  - "cpuid 指令"
-  - "內建的 cpuid"
+title: "__cpuid，__cpuidex |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __cpuid_cpp
+- __cpuid
+dev_langs: C++
+helpviewer_keywords:
+- __cpuid intrinsic
+- cpuid instruction
+- cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-caps.latest.revision: 38
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 36
+caps.latest.revision: "38"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cc20732fa9a79765f4cd56e53ddd990a4d1ea1a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# __cpuid __cpuidex
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 **Microsoft 特定的**  
   
- 產生可在 x86 和 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 上使用的 `cpuid` 指令。  此指令會查詢處理器，以取得受支援功能及 CPU 類型的相關資訊。  
+ 產生可在 x86 和 `cpuid` 上使用的 [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] 指令。 此指令會查詢處理器，以取得受支援功能及 CPU 類型的相關資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void __cpuid(  
@@ -46,42 +47,42 @@ void __cpuidex(
 );  
 ```  
   
-#### 參數  
- \[輸出\] `cpuInfo`  
+#### <a name="parameters"></a>參數  
+ [輸出] `cpuInfo`  
  四個整數的陣列，包含 EAX、EBX、ECX 及 EDX 中傳回之受支援 CPU 功能的相關資訊。  
   
- \[in\] `function_id`  
+ [in] `function_id`  
  指定要擷取之資訊的程式碼，在 EAX 中傳遞。  
   
- \[in\] `subfunction_id`  
+ [in] `subfunction_id`  
  指定要擷取之資訊的其他程式碼，在 ECX 中傳遞。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`__cpuid`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`__cpuidex`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 此內建物件會在 `cpuInfo` \(4 個 32 位元整數的陣列，以 EAX、EBX、ECX 及 EDX 暫存器 \(以該順序\) 的值進行填寫\) 中，儲存受支援功能及 `cpuid` 指令傳回的 CPU 資訊。  所傳回的資訊根據作為 `function_id` 參數傳遞的值，而具有不同的意義。  以各種 `function_id` 值傳回的資訊因處理器而異。  
+## <a name="remarks"></a>備註  
+ 此內建物件會在 `cpuid` (4 個 32 位元整數的陣列，以 EAX、EBX、ECX 及 EDX 暫存器 (以該順序) 的值進行填寫) 中，儲存受支援功能及 `cpuInfo` 指令傳回的 CPU 資訊。 所傳回的資訊根據作為 `function_id` 參數傳遞的值，而具有不同的意義。 以各種 `function_id` 值傳回的資訊因處理器而異。  
   
- `__cpuid` 內建物件會在呼叫 `cpuid` 指令之前，清除 ECX 暫存器。  `__cpuidex` 內建物件會在 ECX 暫存器產生 `cpuid` 指令之前，將其值設定為 `subfunction_id`。  這可讓您收集處理器的其他資訊。  
+ `__cpuid` 內建物件會在呼叫 `cpuid` 指令之前，清除 ECX 暫存器。 `__cpuidex` 內建物件會在 ECX 暫存器產生 `subfunction_id` 指令之前，將其值設定為 `cpuid`。 這可讓您收集處理器的其他資訊。  
   
- 如需 Intel 處理器上要使用的特定參數，和這些內建函式傳回之值的詳細資訊，請參閱 [Intel 64 和 IA\-32 架構軟體開發人員手冊第 2 冊：指令集參考](http://go.microsoft.com/fwlink/p/?LinkID=510021) 中的 `cpuid` 指令，以及 [Intel 架構指令集擴充功能程式設計參考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。  Intel 文件對在 EAX 和 ECX 中傳遞的 `function_id` 和 `subfunction_id` 參數，使用詞彙「分葉」和「子分葉」。  
+ 如需使用和傳回值的這些內建的 Intel 處理器上的特定參數的詳細資訊，請參閱文件`cpuid`中的指示[Intel 64 和 ia-32 架構軟體開發人員手冊磁碟區 2： 指令集參考](http://go.microsoft.com/fwlink/p/?LinkID=510021)和[Intel 架構指令集延伸程式設計參考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文件對在 EAX 和 ECX 中傳遞的 `function_id` 和 `subfunction_id` 參數，使用詞彙「分葉」和「子分葉」。  
   
- 如需 AMD 處理器上要使用的特定參數，和這些內建函式傳回之值的詳細資訊，請參閱 [AMD64 架構程式設計人員手冊第 3 冊：一般用途和系統指令](http://go.microsoft.com/fwlink/p/?LinkId=510023)中的 `cpuid` 指令資料，和特定處理器系列的[修訂指南](http://go.microsoft.com/fwlink/p/?LinkId=510023)。  AMD 文件對在 EAX 和 ECX 中傳遞的 `function_id` 和 `subfunction_id` 參數，使用詞彙「函式號碼」和「子函式號碼」。  
+ 如需使用和 AMD 處理器這些內建函式傳回的值的特定參數的詳細資訊，請參閱文件`cpuid`中的指示[AMD64 架構程式設計人員手動磁碟區 3:一般用途和系統指示](http://go.microsoft.com/fwlink/p/?LinkId=510023)和[修訂指南](http://go.microsoft.com/fwlink/p/?LinkId=510023)特定處理器系列。 AMD 文件對在 EAX 和 ECX 中傳遞的 `function_id` 和 `subfunction_id` 參數，使用詞彙「函式號碼」和「子函式號碼」。  
   
- 當 `function_id` 引數為 0，`cpuInfo[0]` 會傳回處理器支援且最高可用的非擴充 `function_id`。  處理器製造商編碼在 `cpuInfo[1]`、`cpuInfo[2]` 和 cpuInfo\[3\] 中。  
+ 當 `function_id` 引數為 0，`cpuInfo[0]` 會傳回處理器支援且最高可用的非擴充 `function_id`。 處理器製造商編碼在 `cpuInfo[1]`、`cpuInfo[2]` 和 cpuInfo[3] 中。  
   
- 對特定指令集擴充功能和 CPU 功能的支援，會編碼在針對較高 function\_id 值傳回的 `cpuInfo` 結果中。  如需詳細資訊，請參閱上述連結的手冊，和下列範例程式碼。  
+ 對特定指令集擴充功能和 CPU 功能的支援，會編碼在針對較高 function_id 值傳回的 `cpuInfo` 結果中。 如需詳細資訊，請參閱上述連結的手冊，和下列範例程式碼。  
   
- 部分處理器支援擴充功能 CPUID 資訊。  如果支援此項目，則可能會使用從 0x80000000 開始的 `function_id` 值，以傳回資訊。  若要判定所容許的最大有意義值，請將 `function_id` 設定為 0x80000000。  針對擴充功能所支援的 `function_id` 最大值會寫入 `cpuInfo[0]`。  
+ 部分處理器支援擴充功能 CPUID 資訊。 如果支援此項目，則可能會使用從 0x80000000 開始的 `function_id` 值，以傳回資訊。 若要判定所容許的最大有意義值，請將 `function_id` 設定為 0x80000000。 針對擴充功能所支援的 `function_id` 最大值會寫入 `cpuInfo[0]`。  
   
-## 範例  
- 本範例示範可透過 `__cpuid` 和 `__cpuidex` 內建函式取得的一些資訊。  應用程式會列出目前的處理器所支援的指令集擴充功能。  輸出會顯示特定處理器的可能結果。  
+## <a name="example"></a>範例  
+ 本範例示範可透過 `__cpuid` 和 `__cpuidex` 內建函式取得的一些資訊。 應用程式會列出目前的處理器所支援的指令集擴充功能。 輸出會顯示特定處理器的可能結果。  
   
 ```  
 // InstructionSet.cpp   
@@ -346,60 +347,64 @@ int main()
 }  
 ```  
   
-  **GenuineIntel**  
-**Intel\(R\) Core\(TM\) i5\-2500 CPU @ 3.30GHz**  
-**3DNOW not supported**  
-**3DNOWEXT not supported**  
-**ABM not supported**  
-**ADX not supported**  
-**AES supported**  
-**AVX supported**  
-**AVX2 not supported**  
-**AVX512CD not supported**  
-**AVX512ER not supported**  
-**AVX512F not supported**  
-**AVX512PF not supported**  
-**BMI1 not supported**  
-**BMI2 not supported**  
-**CLFSH supported**  
-**CMPXCHG16B supported**  
-**CX8 supported**  
-**ERMS not supported**  
-**F16C not supported**  
-**FMA not supported**  
-**FSGSBASE not supported**  
-**FXSR supported**  
-**HLE not supported**  
-**INVPCID not supported**  
-**LAHF supported**  
-**LZCNT not supported**  
-**MMX supported**  
-**MMXEXT not supported**  
-**MONITOR not supported**  
-**MOVBE not supported**  
-**MSR supported**  
-**OSXSAVE supported**  
-**PCLMULQDQ supported**  
-**POPCNT supported**  
-**PREFETCHWT1 not supported**  
-**RDRAND not supported**  
-**RDSEED not supported**  
-**RDTSCP supported**  
-**RTM not supported**  
-**SEP supported**  
-**SHA not supported**  
-**SSE supported**  
-**SSE2 supported**  
-**SSE3 supported**  
-**SSE4.1 supported**  
-**SSE4.2 supported**  
-**SSE4a not supported**  
-**SSSE3 supported**  
-**SYSCALL supported**  
-**TBM not supported**  
-**XOP not supported**  
-**XSAVE supported**   
-## END Microsoft 特定的  
+```Output  
+GenuineIntel  
+        Intel(R) Core(TM) i5-2500 CPU @ 3.30GHz  
+3DNOW not supported  
+3DNOWEXT not supported  
+ABM not supported  
+ADX not supported  
+AES supported  
+AVX supported  
+AVX2 not supported  
+AVX512CD not supported  
+AVX512ER not supported  
+AVX512F not supported  
+AVX512PF not supported  
+BMI1 not supported  
+BMI2 not supported  
+CLFSH supported  
+CMPXCHG16B supported  
+CX8 supported  
+ERMS not supported  
+F16C not supported  
+FMA not supported  
+FSGSBASE not supported  
+FXSR supported  
+HLE not supported  
+INVPCID not supported  
+LAHF supported  
+LZCNT not supported  
+MMX supported  
+MMXEXT not supported  
+MONITOR not supported  
+MOVBE not supported  
+MSR supported  
+OSXSAVE supported  
+PCLMULQDQ supported  
+POPCNT supported  
+PREFETCHWT1 not supported  
+RDRAND not supported  
+RDSEED not supported  
+RDTSCP supported  
+RTM not supported  
+SEP supported  
+SHA not supported  
+SSE supported  
+SSE2 supported  
+SSE3 supported  
+SSE4.1 supported  
+SSE4.2 supported  
+SSE4a not supported  
+SSSE3 supported  
+SYSCALL supported  
+TBM not supported  
+XOP not supported  
+XSAVE supported  
   
-## 請參閱  
+```  
+  
+**結束 Microsoft 特定的**  
+  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

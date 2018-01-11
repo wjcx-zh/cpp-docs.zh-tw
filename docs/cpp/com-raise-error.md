@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_raise_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- _com_raise_error function
+f1_keywords: _com_raise_error
+dev_langs: C++
+helpviewer_keywords: _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f2072a6f3a6f78bc6751e39e0c79d978845fe97
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cfb51d4188917ebcdbad2fead13a9792875d2f11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comraiseerror"></a>_com_raise_error
 **Microsoft 特定的**  
@@ -61,13 +57,13 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 }  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
  **標頭：** comdef.h  
   
  **Lib:**如果**wchar_t 是原生類型**編譯器選項已開啟，請使用 comsuppw.lib 或 comsuppwd.lib。 如果**wchar_t 是原生類型**已關閉，請使用 comsupp.lib。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器 COM 全域函式](../cpp/compiler-com-global-functions.md)   
  [_set_com_error_handler](../cpp/set-com-error-handler.md)

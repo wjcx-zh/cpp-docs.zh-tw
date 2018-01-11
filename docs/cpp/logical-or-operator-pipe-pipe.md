@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '||'
-dev_langs:
-- C++
+f1_keywords: '||'
+dev_langs: C++
 helpviewer_keywords:
 - OR operator [C++], logical
 - '|| operator'
 - OR operator
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1784a3f0e7d069f7f7e2976fc7b71ea130d7c34b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a826b23f94c4eae4a4fdb5379563b015f05dde71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logical-or-operator-"></a>邏輯 OR 運算子：||
 ## <a name="syntax"></a>語法  
@@ -78,6 +75,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [C + + 內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md) [c + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 邏輯運算子](../c-language/c-logical-operators.md)

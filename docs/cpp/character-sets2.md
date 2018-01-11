@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9261cf2573a5494a49f2f544772738afcdbbb0c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db505809c1fbc2c49e116b9c2f850f6e14dfbdf6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-sets"></a>字元集
 C++ 程式的文字會儲存在使用特定字元編碼方式的原始程式檔中。 C++ 標準指定原始程式檔的基本來源字元集，以及編譯檔的基本執行字元集。 Visual C++ 允許在原始程式檔和編譯檔中使用一組額外的地區設定特定字元。  
@@ -44,7 +45,7 @@ C++ 程式的文字會儲存在使用特定字元編碼方式的原始程式檔�
   
  Visual C++ 包含 `$` 字元做為基本來源字元集的成員。 根據檔案編碼方式，Visual C++ 也允許在原始程式檔中使用一組額外的字元。 根據預設，Visual Studio 會使用預設字碼頁來儲存原始程式檔。 當使用地區設定特定字碼頁或 Unicode 字碼頁來儲存原始程式檔時，Visual C++ 可讓您在原始程式碼中使用該字碼頁的任何字元，但不包括基本來源字元集中未明確允許的控制碼。 例如，如果您使用日文字碼頁來儲存檔案，則可以將日文字元放在註解、識別項或字串常值中。 Visual C++ 不允許無法轉譯為有效的多位元組字元或 Unicode 字碼指標的字元序列。 根據編譯器選項，並非所有允許的字元都可出現在識別項中。 如需詳細資訊，請參閱 [Identifiers](../cpp/identifiers-cpp.md)。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
 ### <a name="universal-character-names"></a>通用字元名稱  
  由於 C++ 程式可以使用比基本來源字元集所指定的字元還要多的字元，因此您可以使用 *「通用字元名稱」*(Universal Character Name)，透過移植的方式來指定這些字元。 通用字元名稱是由代表 Unicode 字碼指標的字元序列所組成。  這些字元採用兩種格式。 使用 `\UNNNNNNNN` 來表示 U+NNNNNNNN 格式的 Unicode 字碼指標，其中 NNNNNNNN 是八位數的十六進位字碼指標數字。 使用四位數的 `\uNNNN` 來表示 U+0000NNNN 格式的 Unicode 字碼指標。  
@@ -63,7 +64,7 @@ if (キ == 42) return true; // \u30AD and キ are the same to the compiler
   
  Windows [剪貼簿] 上的擴充字元格式會因應用程式地區設定而有所不同。 將這些字元從另一個應用程式剪下並貼到您的程式碼可能會採用未預期的字元編碼方式。 這會導致程式碼中出現沒有明顯原因的剖析錯誤。 建議您先將原始程式檔編碼方式設定為 Unicode 字碼頁，再剖析擴充字元。 此外，也建議您使用 IME 或字元對應表應用程式來產生擴充字元。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
 ### <a name="basic-execution-character-set"></a>「基本執行字元集」  
  *「基本執行字元集」* (Basic Execution Character Set) 和 *「基本執行寬字元集」* (Basic Execution Wide-Character Set) 包含基本來源字元集中的所有字元，以及代表警示、Backspace、歸位字元和 null 字元的控制字元。   *「執行字元集」* (Execution Character Set) 和 *「執行寬字元集」* (Execution Wide-Character Set) 是基本集合的超集。 這些超集包含基本來源字元集以外已定義實作的來源字元。 執行字元集具有地區設定特定表示法。

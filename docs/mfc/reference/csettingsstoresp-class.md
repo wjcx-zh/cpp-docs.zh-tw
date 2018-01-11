@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30ca86898aa94a2c42f73b2f589c7fc7fc93634
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cf9659b6c367146a565834bd65fdfc9f28a9812
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csettingsstoresp-class"></a>CSettingsStoreSP 類別
 `CSettingsStoreSP`類別是協助程式類別可讓您建立的執行個體[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
@@ -38,24 +39,24 @@ ms.lasthandoff: 10/24/2017
 class CSettingsStoreSP  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|建構 `CSettingsStoreSP` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSettingsStoreSP::Create](#create)|建立衍生自類別的執行個體`CSettingsStore`。|  
 |[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|設定執行階段類別。 `Create`方法來判斷哪些類別的物件，以建立會使用執行階段類別。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`m_dwUserData`|自訂使用者資料儲存在`CSettingsStoreSP`物件。 您提供的建構函式中的這個資料`CSettingsStoreSP`物件。|  
 |`m_pRegistry`|`CSettingsStore`-衍生物件`Create`方法會建立。|  
@@ -88,10 +89,10 @@ CSettingsStore& CSettingsStoreSP Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAdmin`  
+ [輸入] `bAdmin`  
  布林值參數會決定是否`CSettingsStore`系統管理員模式中建立物件。  
   
- [in] `bReadOnly`  
+ [輸入] `bReadOnly`  
  布林值參數會決定是否`CSettingsStore`建立物件的唯讀存取權。  
   
 ### <a name="return-value"></a>傳回值  
@@ -117,7 +118,7 @@ CSettingsStoreSP::CSettingsStoreSP(DWORD dwUserData = 0);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwUserData`  
+ [輸入] `dwUserData`  
  使用者定義資料的`CSettingsStoreSP`物件存放區。  
   
 ### <a name="remarks"></a>備註  
@@ -131,7 +132,7 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pRTI`  
+ [輸入] `pRTI`  
  從衍生類別的執行階段類別資訊指標[CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)。  
   
 ### <a name="return-value"></a>傳回值  
@@ -140,7 +141,7 @@ static BOOL __stdcall CSettingsStoreSP::SetRuntimeClass(CRuntimeClass* pRTI);
 ### <a name="remarks"></a>備註  
  您可以使用[CSettingsStoreSP 類別](../../mfc/reference/csettingsstoresp-class.md)衍生類別，從`CSettingsStore`。 使用方法`SetRuntimeClass`如果您想要建立的自訂類別，衍生自物件`CSettingsStore`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CSettingsStore 類別](../../mfc/reference/csettingsstore-class.md)

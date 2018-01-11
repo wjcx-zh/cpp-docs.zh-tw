@@ -1,70 +1,69 @@
 ---
-title: "__stosq | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rep stosq 指令"
-  - "stosq 指令"
-  - "__stosq 內建"
+title: "__stosq |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosq
+dev_langs: C++
+helpviewer_keywords:
+- rep stosq instruction
+- stosq instruction
+- __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4f64f8414ea0ec99a4e484db0527e101102c4f88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# __stosq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="stosq"></a>__stosq
+**Microsoft 特定的**  
   
- 會產生存放字串指示 \(`rep stosq`\)。  
+ 會產生存放區字串指令 (`rep stosq`)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
+void __stosb(   
+   unsigned __int64* Dest,   
+   unsigned __int64 Data,   
+   size_t Count   
 );  
 ```  
   
-#### 參數  
- \[out\] `Dest`  
+#### <a name="parameters"></a>參數  
+ [輸出] `Dest`  
  作業的目的地。  
   
- \[in\] `Data`  
+ [輸入] `Data`  
  要儲存的資料。  
   
- \[in\] `Count`  
- 要寫入的 quadwords 的區塊的長度。  
+ [輸入] `Count`  
+ 要寫入的 quadwords 區塊的長度。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`__stosq`|AMD64|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 結果是 quadword `Data`會寫入一段內`Count`中的 quadwords `Dest`字串。  
+## <a name="remarks"></a>備註  
+ 結果是 quadword`Data`撰寫成一個區塊`Count`中的 quadwords`Dest`字串。  
   
- 只有使用與內建這個常式。  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // stosq.c  
@@ -84,13 +83,13 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>輸出  
   
 ```  
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-### 結束 Microsoft 特定  
+**結束 Microsoft 特定的**  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

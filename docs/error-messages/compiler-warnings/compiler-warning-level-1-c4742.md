@@ -1,39 +1,38 @@
 ---
-title: "編譯器警告 (層級 1) C4742 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4742"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4742"
+title: "編譯器警告 (層級 1) C4742 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4742
+dev_langs: C++
+helpviewer_keywords: C4742
 ms.assetid: e520881d-1eeb-48b1-9df0-8017ee8ba076
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da12d4d1e5e8b6f9be6c21601e04f08d1b269cec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4742
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'var' 在 'file1' 和 'file2' 中有不同的對齊: number 和 number  
+# <a name="compiler-warning-level-1-c4742"></a>編譯器警告 (層級 1) C4742
+'var' 有 'file1' 和 'file2' 在不同的對齊： 和號碼  
   
- 在兩個檔案中參考或定義的外部變數在這兩個檔案中有不同的對齊。  當編譯器發現在 *file1* 中變數的 `__alignof` 與在 *file2* 中變數的 `__alignof` 不同，就會發出這項警告。  造成這種情況的原因可能是：在不同檔案中宣告變數時，使用了不相容的型別，或是在不同檔案中使用了不相符的 `#pragma pack`。  
+ 外部變數已被參考，或在兩個檔案中定義的那些檔案中有不同的對齊。 當編譯器發現的就會發出這個警告`__alignof`中變數*file1*不同於`__alignof`中變數*file2*。 這可能使用不相容的類型時宣告變數在不同的檔案，或使用不相符造成`#pragma pack`不同檔案中。  
   
- 若要解除這項警告，請使用相同的型別定義，或使用不同的變數名稱。  
+ 若要解決這個警告，請使用相同的類型定義，或使用不同的變數名稱。  
   
- 如需詳細資訊，請參閱[pack](../../preprocessor/pack.md)與[\_\_alignof 運算子](../../cpp/alignof-operator.md)。  
+ 如需詳細資訊，請參閱[套件](../../preprocessor/pack.md)和[__alignof 運算子](../../cpp/alignof-operator.md)。  
   
-## 範例  
- 這是定義型別的第一個檔案。  
+## <a name="example"></a>範例  
+ 這是定義類型的第一個檔案。  
   
 ```  
 // C4742a.c  
@@ -43,7 +42,7 @@ struct X {
 } global;  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4742。  
   
 ```  

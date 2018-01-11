@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a90218b8cfc0dcc23475bb5e9fb531b2cebe4078
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ed672aed333a23b1f7722c3990e024b21bcc56a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-c-library-headers"></a>使用 C++ 程式庫標頭
 您可以透過在 include 指示詞中命名標準標頭來包含其內容。  
@@ -62,7 +63,7 @@ using namespace std;
   
  除非特別指出，否則您不能定義程式內 `std` 命名空間中，或是巢狀於 `std` 命名空間內之命名空間中的名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

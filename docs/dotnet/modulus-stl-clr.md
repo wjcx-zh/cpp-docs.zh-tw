@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 84540ff24938826f61c4454aa30a293ed648e8e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: db51146858db1d1f6624943aa4fc5f357f918334
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modulus-stlclr"></a>modulus (STL/CLR)
 此範本類別描述函式，呼叫時，會傳回第一個引數，第二個模數。 您可以使用它指定其引數類型方面的函式物件。  
@@ -125,6 +128,6 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將分割 (STL/CLR)](../dotnet/divides-stl-clr.md)   
  [multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)

@@ -1,39 +1,38 @@
 ---
-title: "連結器工具警告 LNK4078 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4078"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4078"
+title: "連結器工具警告 LNK4078 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4078
+dev_langs: C++
+helpviewer_keywords: LNK4078
 ms.assetid: 5a16796d-6caf-42d9-8f65-b042843eafb8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8109ef98237f545a2139be8f0502acd11407314b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 連結器工具警告 LNK4078
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-發現多個 'section name' 區段有不同的屬性  
+# <a name="linker-tools-warning-lnk4078"></a>連結器工具警告 LNK4078
+多個 '區段名稱' 區段有不同的屬性  
   
- LINK 找到兩個或多個有相同名稱但屬性不同的區段。  
+ 連結兩個或多個具有相同的區段名稱但不同的屬性。  
   
- 匯入程式庫或匯出檔是由舊版的 LINK 或 LIB 建立時，可能會產生這項警告。  
+ 這個警告可能因舊版的連結或 LIB 所建立的匯入程式庫或匯出檔案。  
   
- 請重建該檔案並重新連結。  
+ 重新建立檔案並重新連結。  
   
-## 範例  
- LNK4078 也可能會因為中斷變更而產生：在 x86 上由 [init\_seg](../../preprocessor/init-seg.md) 指名的區段是讀\/寫，現在則是唯讀。  
+## <a name="example"></a>範例  
+ LNK4078 也可能因重大變更： 所命名的區段[init_seg](../../preprocessor/init-seg.md) x86 上讀取/寫入，它現在為唯讀。  
   
  下列範例會產生 LNK4078。  
   

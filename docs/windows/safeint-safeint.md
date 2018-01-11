@@ -1,35 +1,36 @@
 ---
-title: "SafeInt::SafeInt | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeInt::SafeInt"
-  - "SafeInt"
-  - "SafeInt.SafeInt"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeInt 類別, 建構函式"
+title: "Safeint:: Safeint |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- SafeInt::SafeInt
+- SafeInt
+- SafeInt.SafeInt
+dev_langs: C++
+helpviewer_keywords: SafeInt class, constructor
 ms.assetid: 39e6f632-a396-40e6-9ece-cc3d4c5a78ef
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a9820227384866cdb1a6470ebd9650187848334c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# SafeInt::SafeInt
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safeintsafeint"></a>SafeInt::SafeInt
 建構 `SafeInt` 物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 SafeInt() throw  
@@ -53,34 +54,34 @@ SafeInt (
 )  
 ```  
   
-#### 參數  
- \[in\] `i`  
- 新 `SafeInt` 物件的值。  這必須是型別 T 或 U 的參數，取決於建構函式。  
+#### <a name="parameters"></a>參數  
+ [輸入] `i`  
+ 新的值`SafeInt`物件。 這必須是類型 T 或 U，根據建構函式的參數。  
   
- \[in\] `b`  
- 新 `SafeInt` 物件的布林值。  
+ [輸入] `b`  
+ 新的布林值`SafeInt`物件。  
   
- \[in\] `u`  
- 型別為 U 的 `SafeInt`。  新的 `SafeInt` 物件將擁有和 `u` 相同的值，但是型別將會是 T。  
+ [輸入] `u`  
+ A`SafeInt`為類型 u。新`SafeInt`物件會具有相同的值做為`u`，但會為類型 t。  
   
  U  
- 儲存在 `SafeInt` 內的資料型別。  這可以是布林值、字元或整數型別。  如果是整數型別，它可以是帶正負號或不帶正負號，而且是在 8 和 64 位元組之間。  
+ 中儲存的資料型別`SafeInt`。 這可以是布林值、 字元或整數類型。 如果是整數類型，它可以是帶正負號或不帶正負號和介於 8 到 64 位元。  
   
-## 備註  
- 如需此範本類型 `T` 和 `E` 的詳細資訊，請參閱 [SafeInt 類別](../windows/safeint-class.md)。  
+## <a name="remarks"></a>備註  
+ 如需有關範本類型`T`和`E`，請參閱[SafeInt 類別](../windows/safeint-class.md)。  
   
- 建構函式的 `i` 或 `u` 輸入參數，必須是布林值、字元或整數型別。  如果是另一個型別的參數，`SafeInt` 類別會呼叫 [static\_assert](../cpp/static-assert.md) 表示無效的輸入參數。  
+ 輸入的參數的建構函式，`i`或`u`，必須是布林值、 字元或整數類型。 如果它是另一個類型的參數，`SafeInt`類別會呼叫[static_assert](../cpp/static-assert.md)表示無效的輸入的參數。  
   
- 使用範本型別 `U` 的建構函式會自動轉換輸入參數為 `T` 所指定的型別。  `SafeInt` 類別會轉換資料，而且不會有任何資料遺失。  如果無法將資料轉換為型別 `T` 且沒有資料遺失，則會回報給錯誤處理常式 `E` 。  
+ 使用範本類型的建構函式`U`自動轉換為所指定之類型的 輸入的參數`T`。 `SafeInt`類別會轉換成沒有遺失任何資料的資料。 它會報告錯誤處理常式`E`如果它無法轉換輸入資料`T`不會遺失資料。  
   
- 如果您從布林參數建立 `SafeInt` ，您需要立即初始化值。  您無法使用程式碼 `SafeInt<bool> sb;` 來建構 `SafeInt`。  這會產生編譯錯誤。  
+ 如果您建立`SafeInt`從布林值參數，您需要立即初始化值。 無法建構`SafeInt`使用程式碼`SafeInt<bool> sb;`。 這會產生編譯錯誤。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** safeint.h  
   
  **命名空間：** msl::utilities  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   
  [SafeIntException 類別](../windows/safeintexception-class.md)

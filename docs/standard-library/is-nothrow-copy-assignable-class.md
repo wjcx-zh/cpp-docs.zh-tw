@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 798bd496504dafe2f4d9ac2510fef37b5bce0b91
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fe17d40b104c1ae06ac8158db79925c0731d3ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable 類別
 測試類型是否具有編譯器已知不會擲回的複製指派運算子。  
@@ -43,7 +44,7 @@ struct is_nothrow_copy_assignable;
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)   
  [is_nothrow_assignable 類別](../standard-library/is-nothrow-assignable-class.md)   
 

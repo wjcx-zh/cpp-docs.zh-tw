@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- utility/std::identity
-dev_langs:
-- C++
+f1_keywords: utility/std::identity
+dev_langs: C++
 helpviewer_keywords:
 - identity class
 - identity structure
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c9166383cbe79835cc3790826fc2e617eca22484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: dd840dba1de5e389e2fa1d8585d677d3be255f8e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identity-structure"></a>identity 結構
 一種提供類型定義來作為範本參數的結構。  
@@ -53,9 +50,8 @@ struct identity {
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<utility>](../standard-library/utility.md)
-
 
 
 

@@ -41,11 +41,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a800ff5c8c071e966bbc1e5297fb706627c8d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a20ee1e3de4d5c9f61437c79bd2eda4240947947
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 類別
 管理您與網際網路伺服器的 FTP 連接，並允許直接操作該伺服器上目錄和檔案。  
@@ -56,17 +57,17 @@ ms.lasthandoff: 10/24/2017
 class CFtpConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFtpConnection::CFtpConnection](#cftpconnection)|建構 `CFtpConnection` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFtpConnection::Command](#command)|將命令直接傳送至 FTP 伺服器。|  
 |[CFtpConnection::CreateDirectory](#createdirectory)|在伺服器上建立目錄。|  
@@ -494,7 +495,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
   
  使用[GetCurrentDirectory](#getcurrentdirectory)判斷 FTP 伺服器的目前工作目錄。 請勿假設遠端系統已連接您的根目錄。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   

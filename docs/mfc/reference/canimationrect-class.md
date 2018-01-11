@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,8 +26,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_rightValue
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_szInitial
 - AFXANIMATIONCONTROLLER/CAnimationRect::m_topValue
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationRect [MFC], CAnimationRect
 - CAnimationRect [MFC], AddTransition
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b38b1225dbce3f747efeaa7aa1e5384f7931efe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a3fd5f20fae543583a0307b81a3b7310a300e167
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationrect-class"></a>CAnimationRect 類別
 實作可以動畫顯示其邊緣的矩形功能。  
@@ -67,17 +65,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationRect : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationRect::CAnimationRect](#canimationrect)|多載。 會建構一個動畫 rect 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationRect::AddTransition](#addtransition)|將加入左框線、 頂端、 右側和底部座標的轉換。|  
 |[CAnimationRect::GetBottom](#getbottom)|提供存取權 CAnimationVariable 表示下方座標。|  
@@ -88,28 +86,28 @@ class CAnimationRect : public CAnimationBaseObject;
 |[CAnimationRect::GetValue](#getvalue)|傳回目前的值。|  
 |[CAnimationRect::SetDefaultValue](#setdefaultvalue)|設定預設值。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationRect::GetAnimationVariableList](#getanimationvariablelist)|將封裝的動畫變數放入清單。 (覆寫[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationRect::operator RECT](#operator_rect)|CAnimationRect 將 RECT|  
 |[CAnimationRect::operator =](#operator_eq)|將矩形指派給 CAnimationRect。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationRect::m_bFixedSize](#m_bfixedsize)|指定矩形是否具有固定大小。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|表示下之封裝的動畫變數繫結的動畫矩形。|  
 |[CAnimationRect::m_leftValue](#m_leftvalue)|表示左邊之封裝的動畫變數繫結的動畫矩形。|  
@@ -404,6 +402,5 @@ void SetDefaultValue(const CRect& rect);
 ### <a name="remarks"></a>備註  
  使用此函式設動畫物件的預設值。 這個方法會將預設值指派給矩形的界限。 如果尚未建立，它也會重建基礎 COM 物件。 如果您已訂閱事件 （ValueChanged 或 IntegerValueChanged） 這個動畫物件時，您需要重新啟用這些事件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

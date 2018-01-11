@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], handling exceptions in C++
 - structured exception handling [C++]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9098ac4914bdb9e054d4db27c0a5498c0f9d9ea8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 37d5a89ebf95d8852664dcd50e44e82009ebd95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 雖然 Windows 和 Visual C++ 支援結構化例外狀況處理 (SEH)，但是建議您使用 ISO 標準 C++ 例外狀況處理，因為它可提升程式碼的可攜性和彈性。 儘管如此，在現有程式碼中或針對特定類型的程式，您仍然必須使用 SEH。  
@@ -150,9 +148,9 @@ Executing SEH __except block
   
  如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [\<exception>](../standard-library/exception.md)   

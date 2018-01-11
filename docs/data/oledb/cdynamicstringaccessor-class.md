@@ -1,32 +1,33 @@
 ---
-title: "CDynamicStringAccessor 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicStringAccessor 類別"
+title: "CDynamicStringAccessor 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CDynamicStringAccessor
+dev_langs: C++
+helpviewer_keywords: CDynamicStringAccessor class
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d6c24e6eaac83d72f8710b039b312f40517fd7e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-讓您能在不知道資料庫結構描述 \(資料庫的基礎結構\) 的情況下，存取資料來源。  
+# <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor 類別
+讓您能在不知道資料庫結構描述 (資料庫的基礎結構) 的情況下，存取資料來源。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,30 +35,30 @@ caps.handback.revision: 10
 class CDynamicStringAccessorT : public CDynamicAccessor  
 ```  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 方法  
+### <a name="methods"></a>方法  
   
 |||  
 |-|-|  
 |[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)|擷取指定資料行的資料做為字串。|  
 |[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)|設定指定資料行的資料做為字串。|  
   
-## 備註  
- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 要求資料必須是提供者報告時的原型格式，而 `CDynamicStringAccessor` 則要求提供者以字串資料方式擷取從資料存放區存取的所有資料。  這個對於不需要計算資料存放區值的簡單工作 \(例如，顯示或列印資料存放區的內容\) 來說相當有用。  
+## <a name="remarks"></a>備註  
+ 雖然[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)要求提供者，所報告的原生格式資料`CDynamicStringAccessor`要求提供者擷取從資料存放區做為字串資料存取的所有資料。 這是不需要計算值的資料存放區，例如顯示或列印的資料存放區內容的簡單工作特別有用。  
   
- 資料行資料的原生型別在資料存放區不重要;只要提供者可以支援資料轉換，它會提供資料格式的資料。  如果提供者不支援從原生資料型別轉換為字串\(不常見\) ，要求的呼叫將傳回成功值 **DB\_S\_ERRORSOCCURED**，和對應的資料列的狀態會指出一個轉譯問題與 **DBSTATUS\_E\_CANTCONVERTVALUE**。  
+ 資料存放區中資料行資料的原生類型是什麼並不重要，只要提供者可以支援資料轉換即可，它會以字串格式提供資料。 如果提供者不支援從原生資料類型轉換成字串 （這是不常見），要求的呼叫會傳回成功值**DB_S_ERRORSOCCURED**，並將對應的資料行的狀態指出轉換問題**DBSTATUS_E_CANTCONVERTVALUE**。  
   
- 使用 `CDynamicStringAccessor` 方法取得資料行資訊。  您可以在執行階段使用這些資料行資訊，動態地建立存取子。  
+ 使用`CDynamicStringAccessor`方法，取得資料行資訊。 您可以使用此資料行資訊在執行階段動態建立存取子。  
   
- 資料行資訊是儲存在這個類別所建立和管理的暫存區中。  使用 [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) 從緩衝區取得這份資料，或使用 [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md) 將它儲存在緩衝區中。  
+ 資料行資訊會儲存在緩衝區中建立和管理由這個類別。 取得資料緩衝區使用[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)，或將它存放至緩衝區使用[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)。  
   
- 如需使用動態存取子類別的詳細資訊和範例，請參閱 [使用動態存取子](../../data/oledb/using-dynamic-accessors.md)。  
+ 討論和使用動態存取子類別的範例，請參閱[使用動態存取子](../../data/oledb/using-dynamic-accessors.md)。  
   
-## 需求  
- **標頭**：atldbcli.h  
+## <a name="requirements"></a>需求  
+ **標頭檔**：atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 類別](../../data/oledb/caccessor-class.md)   

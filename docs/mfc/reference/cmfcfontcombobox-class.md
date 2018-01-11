@@ -27,11 +27,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 53958d1a9f2a2647a42405a2b535441dee162b70
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1bb549d61f147d24c2eea0a578cda3663c078eb4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfontcombobox-class"></a>CMFCFontComboBox 類別
 `CMFCFontComboBox`類別會建立包含字型清單的下拉式方塊控制項。  
@@ -42,18 +43,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCFontComboBox : public CComboBox  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|建構 `CMFCFontComboBox` 物件。|  
 |`CMFCFontComboBox::~CMFCFontComboBox`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CMFCFontComboBox::CompareItem`|由架構呼叫以判斷目前的字型下拉式方塊控制項的已排序的清單方塊中的新項目相對位置。 (覆寫[CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem)。)|  
 |`CMFCFontComboBox::DrawItem`|由架構呼叫以在目前的字型下拉式方塊控制項中繪製指定的項目。 (覆寫[CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem)。)|  
@@ -65,7 +66,7 @@ class CMFCFontComboBox : public CComboBox
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|向架構指出哪一種用來繪製目前的字型下拉式方塊中的項目標籤的字型。|  
   
@@ -132,13 +133,13 @@ BOOL SelectFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDesc`  
+ [輸入] `pDesc`  
  指向字型描述物件。  
   
- [in] `lpszName`  
+ [輸入] `lpszName`  
  指定的字型名稱。  
   
- [in] `nCharSet`  
+ [輸入] `nCharSet`  
  指定的字元集。 預設值是 DEFAULT_CHARSET。 如需詳細資訊，請參閱`lfCharSet`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
 ### <a name="return-value"></a>傳回值  
@@ -164,13 +165,13 @@ BOOL Setup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nFontType`  
+ [輸入] `nFontType`  
  指定的字型類型。 預設值為 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
   
- [in] `nCharSet`  
+ [輸入] `nCharSet`  
  指定字型的字元集。 預設值是 DEFAULT_CHARSET。  
   
- [in] `nPitchAndFamily`  
+ [輸入] `nPitchAndFamily`  
  指定字型的字距和系列。 預設值是 DEFAULT_PITCH。  
   
 ### <a name="return-value"></a>傳回值  
@@ -185,7 +186,7 @@ BOOL Setup(
  [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]  
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarFontComboBox 類別](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   

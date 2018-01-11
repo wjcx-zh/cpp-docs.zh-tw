@@ -1,67 +1,71 @@
 ---
-title: "Default Control Events | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, default control events"
-  - "controls [C++], default control events"
-  - "events [C++], controls"
-  - "dialog box controls, events"
+title: "預設控制項事件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, default control events
+- controls [C++], default control events
+- events [C++], controls
+- dialog box controls, events
 ms.assetid: 75556b23-18f5-4390-97a4-2ecad3309741
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 83c7b6e4d019b895973345805027d428d7af766d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Default Control Events
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列控制項名稱具有預設事件：  
+# <a name="default-control-events"></a>預設控制項事件
+下列控制項名稱有隨附的預設事件：  
   
 |控制項名稱|預設事件|  
-|-----------|----------|  
-|Animate|**ACN\_START**|  
-|Check box|**BN\_CLICKED**|  
-|Combo box|**CBN\_SELCHANGE**|  
-|Custom|**TTN\_GETDISPINFO**|  
-|Date time picker|**DTN\_DATETIMECHANGE**|  
-|Edit box|**EN\_CHANGE**|  
-|Group Box|\(不適用\)|  
-|Hot key|**NM\_OUTOFMEMORY**|  
-|IP 位址|**IPN\_FIELDCHANGED**|  
-|List|**LVN\_ITEMCHANGE**|  
-|List box|**LBN\_SELCHANGE**|  
-|Month calendar|**MCN\_SELCHANGE**|  
-|Picture Control|\(不適用\)|  
-|Progress|**NM\_CUSTOMDRAW**|  
-|Push button|**BN\_CLICKED**|  
-|Radio button|**BN\_CLICKED**|  
-|Rich Edit|**EN\_CHANGE**|  
-|Scroll bar|**NM\_THEMECHANGED**|  
-|Slider|**NM\_CUSTOMDRAW**|  
-|Spin|**UDN\_DELTAPOS**|  
-|Static Text|\(不適用\)|  
-|Tab|**TCN\_SELCHANGE**|  
-|Tree|**TVN\_SELCHANGE**|  
+|------------------|-------------------|  
+|動畫|**ACN_START**|  
+|核取方塊|**BN_CLICKED**|  
+|下拉式方塊|**CBN_SELCHANGE**|  
+|自訂|**TTN_GETDISPINFO**|  
+|日期時間選擇器|**DTN_DATETIMECHANGE**|  
+|編輯方塊|**EN_CHANGE**|  
+|群組方塊|（不適用）|  
+|熱鍵|**NM_OUTOFMEMORY**|  
+|IP 位址|**IPN_FIELDCHANGED**|  
+|清單|**LVN_ITEMCHANGE**|  
+|清單方塊|**LBN_SELCHANGE**|  
+|月曆|**MCN_SELCHANGE**|  
+|圖片控制項|（不適用）|  
+|進度|**NM_CUSTOMDRAW**|  
+|按鈕|**BN_CLICKED**|  
+|選項按鈕|**BN_CLICKED**|  
+|豐富的編輯|**EN_CHANGE**|  
+|捲軸|**NM_THEMECHANGED**|  
+|滑桿|**NM_CUSTOMDRAW**|  
+|微調|**UDN_DELTAPOS**|  
+|靜態文字|（不適用）|  
+|索引標籤|**TCN_SELCHANGE**|  
+|樹狀結構|**TVN_SELCHANGE**|  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [Defining Member Variables for Dialog Controls](../mfc/defining-member-variables-for-dialog-controls.md)   
- [與使用者介面物件關聯的訊息類型](../mfc/reference/message-types-associated-with-user-interface-objects.md)   
+## <a name="see-also"></a>請參閱  
+ [定義對話方塊控制項的成員變數](../windows/defining-member-variables-for-dialog-controls.md)   
+ [使用者介面物件相關聯的訊息類型](../mfc/reference/message-types-associated-with-user-interface-objects.md)   
  [編輯訊息處理常式](../mfc/reference/editing-a-message-handler.md)   
  [定義反映訊息的訊息處理常式](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)   
- [根據新控制項類別來宣告變數](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
- [覆寫 Virtual 函式](../ide/overriding-a-virtual-function-visual-cpp.md)
+ [宣告變數根據新的控制項類別](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)   
+ [覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)
+

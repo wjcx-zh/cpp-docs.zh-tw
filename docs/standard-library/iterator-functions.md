@@ -7,29 +7,43 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- iterator/std::advance
-- iterator/std::back_inserter
-- iterator/std::begin
-- iterator/std::cbegin
-- iterator/std::cend
-- iterator/std::distance
-- iterator/std::end
-- iterator/std::front_inserter
-- iterator/std::inserter
-- iterator/std::make_checked_array_iterator
-- iterator/std::make_move_iterator
-- iterator/std::make_unchecked_array_iterator
-- iterator/std::next
-- iterator/std::prev
+- xutility/std::advance
+- xutility/std::back_inserter
+- xutility/std::begin
+- xutility/std::cbegin
+- xutility/std::cend
+- xutility/std::distance
+- xutility/std::end
+- xutility/std::front_inserter
+- xutility/std::inserter
+- xutility/std::make_checked_array_iterator
+- xutility/std::make_move_iterator
+- xutility/std::make_unchecked_array_iterator
+- xutility/std::next
+- xutility/std::prev
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
-caps.latest.revision: 16
+caps.latest.revision: "16"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 171fd87608b0afed1ebb0c2ae82d6118adff727f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::advance [C++]
+- std::back_inserter [C++]
+- std::begin [C++]
+- std::cbegin [C++]
+- std::cend [C++]
+- std::distance [C++]
+- std::end [C++]
+- std::front_inserter [C++]
+- std::inserter [C++]
+- std::make_checked_array_iterator [C++]
+- std::make_move_iterator [C++]
+- std::make_unchecked_array_iterator [C++]
+- std::next [C++]
+- std::prev [C++]
+ms.openlocfilehash: 0474e52f9d5f0f68ec4a404ebe9c60d9e48f64d2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函式
 ||||  
@@ -297,7 +311,7 @@ auto cbegin(const Container& cont)   `
 ### <a name="remarks"></a>備註  
  這個函式可以與所有「C++ 標準程式庫」容器和與 [initializer_list](../standard-library/initializer-list-class.md) 搭配運作。  
   
- 您可以使用此成員函式取代 `begin()` 樣板函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `begin()` 和 `cbegin()` 的可修改 (非 `const`) 容器或 `initializer_list`。  
+ 您可以使用此成員函式取代 `begin()` 樣板函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為任何一種支援 `begin()` 和 `cbegin()` 的可修改 (非 `const`) 容器或 `initializer_list`。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -675,7 +689,7 @@ make_move_iterator(const Iterator& _It);
  儲存在新移動迭代器中的迭代器。  
   
 ### <a name="remarks"></a>備註  
- 此範本函式會傳回 `move_iterator``<Iterator>(``_It``)`。  
+ 範本函式會傳回`move_iterator` `<Iterator>(_It)`。  
   
 ##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
  建立其他演算法可使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。  
@@ -795,7 +809,6 @@ BidirectionalIterator prev(
 ### <a name="remarks"></a>備註  
  此範本函式會傳回遞減 `off` 次後的 `next`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<iterator>](../standard-library/iterator.md)
-
 

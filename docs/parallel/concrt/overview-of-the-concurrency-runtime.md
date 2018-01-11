@@ -18,11 +18,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 022d4576127d068ea31a215de1adbb6edffb2d75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce1967b04770f53c2e1acbd49342f9080a7e3c12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>並行執行階段概觀
 本文件提供並行執行階段的總覽。 內容描述並行執行階段的優點、使用時機，以及其元件如何與彼此、與作業系統及應用程式互動。  

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a95212d3774e9befeccbd8f0da3773305041d11c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25685991222b02f4c622f344b06e9faaea4caf02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="threadprivate"></a>threadprivate
 指定在執行緒私用變數。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
   
  因為`threadprivate`根據**__declspec （thread)**、`threadprivate`變數會存在於任何啟動程序，不只是由在平行區域產生的執行緒小組的一部分的執行緒的執行緒。  這是要留意，因為您可能會注意到，例如，建構函式的實作詳細資料`threadprivate`呼叫通常則預期更多的使用者定義型別。  
   
- A `threadprivate` destructable 類型的變數不能保證具有呼叫其解構函式。  例如：  
+ A `threadprivate` destructable 類型的變數不能保證具有呼叫其解構函式。  例如:   
   
 ```  
 struct MyType   
@@ -71,5 +72,5 @@ int main()
 ## <a name="example"></a>範例  
  如需使用範例`threadprivate`，請參閱[私人](../../../parallel/openmp/reference/private-openmp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

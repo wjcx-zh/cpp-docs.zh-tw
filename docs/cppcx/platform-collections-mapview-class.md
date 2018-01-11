@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 349dbfd081301e8bf3661c8a6cf18766adaaf238
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db25b79476490ccc6bfc3f68370f30b7e8f2afac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 類別
 表示 *對應 (Map)*(機碼值組的集合) 的唯讀檢視。  
@@ -53,17 +54,17 @@ ref class MapView sealed;
 ### <a name="remarks"></a>備註  
  MapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView \<K，V >](http://go.microsoft.com/fwlink/p/?LinkId=262409)應用程式二進位介面 (ABI) 之間傳遞的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Mapview:: Mapview](#ctor)|初始化 MapView 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Mapview:: First](#first)|傳回迭代器，初始化為對應檢視中的第一個元素。|  
 |[Mapview:: Haskey](#haskey)|判斷目前 MapView 是否包含指定的機碼。|  
@@ -216,5 +217,5 @@ void Split(
 ### <a name="remarks"></a>備註  
  這個方法無法操作，不會執行任何動作。  
     
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

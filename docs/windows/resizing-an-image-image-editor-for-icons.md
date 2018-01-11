@@ -1,60 +1,63 @@
 ---
-title: "Resizing an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.image.editing"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], resizing images"
-  - "graphics [C++], resizing"
-  - "images [C++], resizing"
-  - "resizing images"
+title: "調整大小的影像 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.image.editing
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], resizing images
+- graphics [C++], resizing
+- images [C++], resizing
+- resizing images
 ms.assetid: d83a02c4-4dfe-4586-a0df-51a50c2ba71d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8f856c5cf825fd9032ce64afbd09d3bed83ea40f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Resizing an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-影像編輯器在調整影像大小時的行為，視您是[選取](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md)整個影像或只是一部分影像而定。  
+# <a name="resizing-an-image-image-editor-for-icons"></a>調整影像大小 (圖示影像編輯器)
+影像編輯器時調整影像大小的行為取決於您是否曾[選取](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)只是部分或整個影像。  
   
- 當選取範圍只包含影像的一部分時，影像編輯器會縮小選取範圍，其作法為刪除幾列或幾欄的像素，並以目前的背景色彩填滿空白的區域，或是藉由複製幾列或幾欄的像素來延伸選取範圍。  
+ 當選取範圍包含部分影像時，影像編輯器是刪除資料列縮小選取範圍或像素為單位，並填入空白的區域與目前的背景色彩，或它的資料行重複的資料列或資料行的像素為單位延伸選取範圍。  
   
- 當選取範圍包含整個影像時，影像編輯器會縮小及延伸影像，或是加以裁剪及擴充。  
+ 當選取範圍包含整個影像時，影像編輯器是壓縮和映像，會自動縮放或裁剪並進行擴充。  
   
- 有兩項調整影像大小的機制：縮放控點 \(Sizing Handle\) 和[屬性視窗](../Topic/Properties%20Window.md)。  您可拖曳縮放控點來變更影像的全部或部分大小。  可拖曳的縮放控點為實心。  您無法拖曳中空的控點。  使用 \[屬性\] 視窗只能調整整個影像的大小，不能調整選定部分的大小。  
+ 有兩種機制來調整影像大小： 調整大小控點和[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您可以拖曳調整大小控點，若要變更所有的大小或影像的一部分。 可讓您拖曳調整大小控點都穩固。 您無法將拖曳空心的控制代碼。 您可以使用 [屬性] 視窗，僅將整個影像調整不選取組件。  
   
- ![點陣圖上的縮放控點](../mfc/media/vcimageeditorsizinghandles.png "vcImageEditorSizingHandles")  
-調整控點大小  
+ ![調整大小控點，在點陣圖](../mfc/media/vcimageeditorsizinghandles.gif "vcImageEditorSizingHandles")  
+縮放控點  
   
 > [!NOTE]
->  如果您選取了[格線設定對話方塊](../mfc/grid-settings-dialog-box-image-editor-for-icons.md)中的 \[磚狀格線\] 選項，調整大小會貼齊下一條磚狀格線。  如果只選取了 \[像素格線\] 選項 \(預設設定\)，則調整大小會貼齊至下一個可用的像素。  
+>  如果您有中選取的磚方格選項[格線設定對話方塊](../windows/grid-settings-dialog-box-image-editor-for-icons.md)，然後調整 貼齊至下一個圖格格線。 如果只選取 像素格線選項 （預設值），調整大小的下一個可用的像素貼齊。  
   
--   [調整整個影像大小](../mfc/resizing-an-entire-image-image-editor-for-icons.md)  
+-   [調整整個影像大小](../windows/resizing-an-entire-image-image-editor-for-icons.md)  
   
--   [裁剪或擴充整個影像](../mfc/cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
+-   [裁剪或擴充整個影像](cropping-or-extending-an-entire-image-image-editor-for-icons.md)  
   
--   [縮小或延伸整個影像](../mfc/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
+-   [縮小或延伸整個影像](../windows/shrinking-or-stretching-an-entire-image-image-editor-for-icons.md)  
   
--   [縮小或延伸影像的一部分](../mfc/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
+-   [縮小或延伸影像的一部分](../windows/shrinking-or-stretching-part-of-an-image-image-editor-for-icons.md)  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。 如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
-## 需求  
- None  
+## <a name="requirements"></a>需求  
+ 無  
   
-## 請參閱  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
+

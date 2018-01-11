@@ -1,68 +1,70 @@
 ---
-title: "CDynamicAccessor::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "ATL.CDynamicAccessor.GetColumnInfo"
-  - "ATL::CDynamicAccessor::GetColumnInfo"
-  - "CDynamicAccessor.GetColumnInfo"
-  - "CDynamicAccessor::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo 方法"
+title: "Cdynamicaccessor:: Getcolumninfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- ATL.CDynamicAccessor.GetColumnInfo
+- ATL::CDynamicAccessor::GetColumnInfo
+- CDynamicAccessor.GetColumnInfo
+- CDynamicAccessor::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 7f2102ea-b7cc-4714-812f-3ca2857f4b9a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ece75eeb539dff60b29396e3076cd2465571453a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳回大部分消費者所需的資料行中繼資料。  
+# <a name="cdynamicaccessorgetcolumninfo"></a>CDynamicAccessor::GetColumnInfo
+傳回所需的大部分取用者的資料行中繼資料。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT GetColumnInfo(   
-   IRowset* pRowset,   
-   DBORDINAL* pColumns,   
-   DBCOLUMNINFO** ppColumnInfo,   
-   OLECHAR** ppStringsBuffer    
+      HRESULT GetColumnInfo(   
+   IRowset* pRowset,   
+   DBORDINAL* pColumns,   
+   DBCOLUMNINFO** ppColumnInfo,   
+   OLECHAR** ppStringsBuffer    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pRowset`  
- \[in\] [IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx) 介面的指標。  
+ [in]指標[IRowset](https://msdn.microsoft.com/en-us/library/ms720986.aspx)介面。  
   
  *pColumns*  
- \[out\] 要在其中傳回資料列集中資料行數目的記憶體指標，這個數目包含書籤資料行 \(如果有的話\)。  
+ [out]記憶體中的資料列集; 傳回的資料行數目的指標如果有的話，此數值包含書籤資料行。  
   
  *ppColumnInfo*  
- \[out\] 要在其中傳回 **DBCOLUMNINFO** 結構陣列的記憶體指標。  請參閱 DBCOLUMNINFO 《 *OLE DB 程式設計人員參考》的*[IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) 結構」。  
+ [out]這是要傳回的陣列中的記憶體指標**DBCOLUMNINFO**結構。 請參閱中的"DBCOLUMNINFO 結構" [icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程式設計人員參考*。  
   
  `ppStringsBuffer`  
- \[out\] 記憶體指標，要在其中傳回單一配置區塊內所有字串值 \(*columnid* 或 *pwszName* 內使用的名稱\) 的儲存指標。  
+ [out]要在其中儲存的所有字串值會傳回指標記憶體的指標 (使用名稱內*columnid*或*pwszName*) 單一配置區塊內。  
   
-## 傳回值  
- 其中一個標準 `HRESULT` 列舉值。  
+## <a name="return-value"></a>傳回值  
+ 其中一個標準`HRESULT`值。  
   
-## 備註  
- 如需資料型別 **DBORDINAL**和 **DBCOLUMNINFO**和 **OLECHAR**的詳細資訊，請參閱《 *OLE DB 程式設計人員參考》的*[IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) 。  
+## <a name="remarks"></a>備註  
+ 請參閱[icolumnsinfo:: Getcolumninfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx)中*OLE DB 程式設計人員參考*如需資料類型資訊**DBORDINAL**， **DBCOLUMNINFO**，和**OLECHAR**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

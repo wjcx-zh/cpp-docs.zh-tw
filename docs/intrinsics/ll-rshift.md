@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b247be12c40746cb8662093518be1eb8eeff2fa1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0bb658051a4eab579e2c0d2fbb4d6bd525381b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="llrshift"></a>__ll_rshift
 **Microsoft 特定的**  
@@ -40,10 +41,10 @@ __int64 __ll_rshift(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `Mask`  
+ [輸入] `Mask`  
  要向右移位的 64 位元整數值。  
   
- [in] `nBit`  
+ [輸入] `nBit`  
  要移位模數 64，在 x64 上及模數 x86 上的 32 位元數目。  
   
 ## <a name="return-value"></a>傳回值  
@@ -95,9 +96,9 @@ fffffffffffffff0
   
  **請注意**如果`_ull_rshift`已被使用，向右移位值的 MSB 已經是零，因此想要的結果會尚未取得在負數值的情況下。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [__ll_lshift](../intrinsics/ll-lshift.md)   
  [__ull_rshift](../intrinsics/ull-rshift.md)

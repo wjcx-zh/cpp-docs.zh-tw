@@ -1,39 +1,38 @@
 ---
-title: "連結器工具錯誤 LNK2013 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2013"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2013"
+title: "連結器工具錯誤 LNK2013 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2013
+dev_langs: C++
+helpviewer_keywords: LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8cf88f768f05eee06ae8ffaa66f8de5a9c443f82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 連結器工具錯誤 LNK2013
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-修正型別修復溢位。目標 'symbol name' 超出範圍  
+# <a name="linker-tools-error-lnk2013"></a>連結器工具錯誤 LNK2013
+修復類型修復溢位。 目標 'symbol name' 超出範圍  
   
- 連結器無法提供指定指令所需的位址或位移，因為目標符號離該指令位置太遠。  
+ 連結器無法容納所需的位址或位移指定的指令，所以目標符號太遠從指示的位置。  
   
- 您可以建立多個映像或使用 [\/ORDER](../../build/reference/order-put-functions-in-order.md) 選項使指令與目標更接近，便可解決這個問題。  
+ 您可以解決這個問題，藉由建立多個映像，或使用[/](../../build/reference/order-put-functions-in-order.md)選項使指令與目標更接近。  
   
- 當符號名稱為使用者定義符號 \(且不是編譯器產生的符號\) 時，您也可以嘗試下列動作來解決錯誤：  
+ 符號名稱的使用者定義符號 （且不是編譯器產生的符號） 時，您也可以嘗試下列動作以解決此錯誤：  
   
--   變更靜態函式為非靜態。  
+-   變更為非靜態的靜態函數。  
   
--   重新將包含靜態函式的程式碼區段命名為與呼叫端相同的名稱。  
+-   重新命名包含靜態函式與呼叫端相同的程式碼區段。  
   
- 使用 `DUMPBIN /SYMBOLS`，查看是否為靜態函式。
+ 使用`DUMPBIN /SYMBOLS`、 函式是否為靜態。

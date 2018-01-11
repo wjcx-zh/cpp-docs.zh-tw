@@ -1,45 +1,46 @@
 ---
-title: "auto_handle::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_handle.operator!"
-  - "msclr::auto_handle::operator!"
-  - "auto_handle.operator!"
-  - "auto_handle::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!"
+title: auto_handle::operator! | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_handle.operator!
+- msclr::auto_handle::operator!
+- auto_handle.operator!
+- auto_handle::operator!
+dev_langs: C++
+helpviewer_keywords: operator!
 ms.assetid: 3f6c7729-3260-4842-87f9-c491c140b299
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d6b37b4f5eaaec603ee457558fb6a68161e6e1e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在條件運算式中用於 `auto_handle` 的運算子。  
+# <a name="autohandleoperator"></a>auto_handle::operator!
+使用運算子`auto_handle`條件運算式中。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 bool operator!();  
 ```  
   
-## 傳回值  
- 如果包裝的物件無效則為 `true`；否則為 `false` 。  
+## <a name="return-value"></a>傳回值  
+ `true`如果所包裝的物件無效。`false`否則。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_handle_operator_not.cpp  
@@ -62,14 +63,17 @@ int main() {
 }  
 ```  
   
-  **s1 無效。**  
-**s2 有效**  
-**s2 現在無效**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_handle.h\>  
+```Output  
+s1 is invalid  
+s2 is valid  
+s2 is now invalid  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_handle.h >  
   
-## 請參閱  
- [auto\_handle 成員](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator bool](../dotnet/auto-handle-operator-bool.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>請參閱  
+ [auto_handle 成員](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator bool](../dotnet/auto-handle-operator-bool.md)

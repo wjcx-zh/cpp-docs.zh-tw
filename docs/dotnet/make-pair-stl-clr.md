@@ -1,32 +1,33 @@
 ---
-title: "make_pair (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_pair 函式 [STL/CLR]"
+title: "make_pair (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_pair
+dev_langs: C++
+helpviewer_keywords: make_pair function [STL/CLR]
 ms.assetid: 74733f2c-97b0-4d69-b431-5ab8f0de9e3e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 34f86aefd9a7bad7b3b1f03f98d3df8965020e48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# make_pair (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-由一組值執行 `pair` 。  
+# <a name="makepair-stlclr"></a>make_pair (STL/CLR)
+請`pair`從一組值。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value1,  
@@ -34,25 +35,25 @@ template<typename Value1,
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
-#### 參數  
- Value1  
- 第一個包裝值的型別。  
+#### <a name="parameters"></a>參數  
+ `Value1`  
+ 第一個包裝的值類型。  
   
- Value2  
- 第二個包裝值的型別。  
+ `Value2`  
+ 第二個包裝值類型。  
   
- first  
- 包裝的第一個值。  
+ `first`  
+ 要包裝的第一個值。  
   
- 第二  
- 包裝的第二個值。  
+ `second`  
+ 第二個換行的值。  
   
-## 備註  
- 樣板函式會傳回 `pair<``Value1``,` `Value2``>(``first``,` `second``)`。  您可以使用它從一組的 `pair``<``Value1`, `Value2``>` 物件。  
+## <a name="remarks"></a>備註  
+ 此範本函式會傳回 `pair<Value1, Value2>(first, second)`。 使用它來建構`pair<Value1, Value2>`從一組值的物件。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // cliext_make_pair.cpp   
 // compile with: /clr   
 #include <cliext/utility>   
@@ -69,12 +70,15 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[y, 4\]**   
-## 需求  
- **標頭 ：** \<cliext\/utility\>  
+```Output  
+[x, 3]  
+[y, 4]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/公用程式 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

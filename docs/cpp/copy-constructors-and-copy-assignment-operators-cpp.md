@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - = operator [C++], copying objects
 - assignment statements [C++], copying objects
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cf4bda1b14450a5be3ffa9a95661db7d1ad360d2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1f2ebf51f28912c3cb798acc1ff4aa377c1bebb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>複製建構函式和複製指派運算子 (C++)
 > [!NOTE]
@@ -82,14 +80,14 @@ int main()
 ```  
   
 > [!NOTE]
->  請複製建構函式的引數的型別*常數的類別名稱*** & **盡可能。 這樣可避免複製建構函式意外變更做為複製來源的物件。 它也可讓複製**const**物件。  
+>  請複製建構函式的引數的型別*常數的類別名稱* **&** 盡可能。 這樣可避免複製建構函式意外變更做為複製來源的物件。 它也可讓複製**const**物件。  
   
 ## <a name="compiler-generated-copy-constructors"></a>編譯器產生的複製建構函式  
  編譯器產生的複製建構函式，像是使用者定義的複製建構函式中，有類型的單一引數 」 參考*類別名稱*。 」 例外狀況是當所有的基底類別和成員類別將複製建構函式宣告為接受單一引數的型別**const** *類別名稱***&**。 在這種情況下，編譯器產生的複製建構函式的引數也是**const**。  
   
  當複製建構函式的引數類型不**const**，藉由複製初始化**const**物件會產生錯誤。 反向執行則不成立： 如果引數是**const**，您可以藉由複製不是物件初始化**const**。  
   
- 編譯器產生的指派運算子遵循相同的模式與**const。** 則會接受單一引數的型別*類別名稱*** & **除非所有基底和成員類別中的指派運算子的型別引數**const** *類別名稱 （& s)。* 在此情況下，類別產生的指派運算子會接受**const**引數。  
+ 編譯器產生的指派運算子遵循相同的模式與**const。** 則會接受單一引數的型別*類別名稱* **&** 除非所有基底和成員類別中的指派運算子的型別引數**const** *類別名稱 （& s)。* 在此情況下，類別產生的指派運算子會接受**const**引數。  
   
 > [!NOTE]
 >  虛擬基底類別是由複製建構函式進行初始化、由編譯器所產生或使用者所定義時，只會在建構時初始化一次。  
@@ -98,4 +96,3 @@ int main()
   
  如需有關多載的指派運算子的詳細資訊，請參閱[指派](../cpp/assignment.md)。  
   
-

@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2da7827afe8bed49c514eda10ce16c16b434c9f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 876023cbc559364a51f7c0774b7b5d04a11a65d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="improperlock-class"></a>improper_lock 類別
 這個類別描述以不當的方式取得鎖定時擲回的例外狀況。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class improper_lock : public std::exception;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[improper_lock](#ctor)|多載。 建構 `improper_lock exception`。|  
   
@@ -68,7 +69,7 @@ improper_lock() throw();
  `_Message`  
  錯誤的描述性訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [critical_section 類別](critical-section-class.md)   
  [reader_writer_lock 類別](reader-writer-lock-class.md)

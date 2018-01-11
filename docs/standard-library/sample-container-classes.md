@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 614a6850faffcf48768e75cc23b16bdd71057f6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aaf322e9c1f7a7939382c2f1f22dbc355c01f4f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsample-containergt-classes"></a>&lt;sample container&gt; 類別
 如需 \<sample container> 中類別的詳細資訊，請參閱 [\<sample container>](../standard-library/sample-container.md)。

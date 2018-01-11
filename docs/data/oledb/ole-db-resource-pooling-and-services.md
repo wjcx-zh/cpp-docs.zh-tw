@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e2b3500c90455c7f180f16eae3c56433f57d0492
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5d3d9ddba2039c1b4445bdb8d4ee77e9a68d9796
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-resource-pooling-and-services"></a>OLE DB 資源集中化和服務
 若要與 OLE DB 共用，或與任何 OLE DB 服務工作，您的提供者必須支援所有物件的彙的總。 這是任何 OLE DB 1.5 或更新版本的提供者的需求。 它是利用服務的關鍵。 不支援彙總的提供者無法共用，而沒有其他服務所提供。  
@@ -37,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
  最後，自動交易登記通常無法運作除非它共用，就會發生相同的層級實作。 支援自動交易登記自己的提供者應該支援公開停用這個登記**DBPROP_INIT_OLEDBSERVICES**屬性，如果停用登記**DBPROPVAL_OS_TXNENLISTMENT**取消選取。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

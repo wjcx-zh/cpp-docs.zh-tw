@@ -1,37 +1,38 @@
 ---
-title: "文法摘要的定義 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "前置處理器"
-  - "前置處理器, 定義"
+title: "文法摘要的定義 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor, definitions
+- preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 36ce8a4f1bf6e4c5e9c79298899c871c74c1707b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 文法摘要的定義
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-終端是語法定義的端點。  沒有其他解決方式。  終端包括一組保留字和使用者定義的識別項。  
+# <a name="definitions-for-the-grammar-summary"></a>文法摘要的定義
+終端是語法定義的端點。 沒有其他解決方式。 終端包括一組保留字和使用者定義的識別項。  
   
- 非終端在語法中是預留位置。  大部分是在此語法摘要中的其他位置定義。  定義可以是遞迴式。  《C\+\+ 語言參考》的[文法摘要](../misc/grammar-summary-cpp.md)中定義了下列非終端：  
+非終端在語法中是預留位置。 大部分是在此語法摘要中的其他位置定義。 定義可以是遞迴式。 下列非終端項定義於[語彙慣例](../cpp/lexical-conventions.md)區段*c + + 語言參考*:  
   
- `constant`、*constant\-expression*、*identifier*、*keyword*、`operator`、`punctuator`  
+`constant`*常數運算式*，*識別碼*，*關鍵字*， `operator`，`punctuator`  
   
- 選擇性的元件會以下標的 opt 表示。  例如，以下表示以大括號括住的選擇性運算式：  
+選擇性的元件會以下標的 opt 表示。 例如，以下表示以大括號括住的選擇性運算式：  
   
- **{** *expression*opt **}**  
+**{** *運算式*選擇**}**  
   
-## 請參閱  
- [文法摘要](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>請參閱  
+[文法摘要 (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

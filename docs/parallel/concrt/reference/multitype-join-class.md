@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a53206c32b59ab5cac9f14d51bed42a4870b94fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b87dda35c2ea031424af3ab2aa8ebdccdb3750fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multitypejoin-class"></a>multitype_join 類別
 `multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。  
@@ -53,24 +54,24 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
  `_Jtype`  
  此種類的`join`區塊這有`greedy`或`non_greedy`  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`type`|類型別名`T`。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[multitype_join](#ctor)|多載。 建構 `multitype_join` 傳訊區塊。|  
 |[~ multitype_join 解構函式](#dtor)|終結`multitype_join`傳訊區塊。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[接受](#accept)|接受的訊息，有提供這`multitype_join`區塊中，將擁有權傳送給呼叫者。|  
 |[acquire_ref](#acquire_ref)|取得這個參考計數`multitype_join`傳訊區塊，導致無法刪除。|  
@@ -289,7 +290,7 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
 virtual void unlink_targets();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [choice 類別](choice-class.md)   
  [join 類別](join-class.md)

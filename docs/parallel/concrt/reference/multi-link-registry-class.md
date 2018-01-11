@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,19 @@ f1_keywords:
 - AGENTS/concurrency::multi_link_registry::count
 - AGENTS/concurrency::multi_link_registry::remove
 - AGENTS/concurrency::multi_link_registry::set_bound
-dev_langs:
-- C++
-helpviewer_keywords:
-- multi_link_registry class
+dev_langs: C++
+helpviewer_keywords: multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b52ee20ed16a4ce8d0b9f11b6acf25112464b49b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c5d95a98d56ea666ed823f3caef2190dea1591cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 類別
 `multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。  
@@ -60,9 +43,9 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 #### <a name="parameters"></a>參數  
  `_Block`  
- 區塊資料型別儲存在`multi_link_registry`物件。  
+ 封鎖資料類型儲存在`multi_link_registry`物件。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -102,10 +85,10 @@ virtual void add(_EType _Link);
   
 ### <a name="parameters"></a>參數  
  `_Link`  
- 要加入的區塊的指標。  
+ 要加入區塊的指標。  
   
 ### <a name="remarks"></a>備註  
- 方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況或連結是否已存在於登錄中，如果繫結已設定使用`set_bound`函式和連結已被移除。  
+ 方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況或連結是否已存在於登錄中，如果繫結至已設定使用`set_bound`函式和連結已被移除。  
   
 ##  <a name="begin"></a>開始 
 
@@ -131,7 +114,7 @@ virtual bool contains(_EType _Link);
   
 ### <a name="parameters"></a>參數  
  `_Link`  
- 要搜尋中的區塊的指標`multi_link_registry`物件。  
+ 在搜尋區塊的指標`multi_link_registry`物件。  
   
 ### <a name="return-value"></a>傳回值  
  `true`如果找不到指定的區塊，`false`否則。  
@@ -164,7 +147,7 @@ virtual ~multi_link_registry();
 ```  
   
 ### <a name="remarks"></a>備註  
- 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況，如果呼叫前會移除所有連結。  
+ 方法會擲回[invalid_operation](invalid-operation-class.md)例外狀況會移除所有的連結之前呼叫。  
   
 ##  <a name="remove"></a>移除 
 
@@ -179,7 +162,7 @@ virtual bool remove(_EType _Link);
  要移除，如果在區塊的指標找到。  
   
 ### <a name="return-value"></a>傳回值  
- `true`如果找到並移除連結`false`否則。  
+ `true`如果找到並移除，連結`false`否則。  
   
 ##  <a name="set_bound"></a>set_bound 
 
@@ -196,7 +179,6 @@ void set_bound(size_t _MaxLinks);
 ### <a name="remarks"></a>備註  
  繫結設定後，取消連結項目將導致 `multi_link_registry` 物件進入不可變的狀態，後續在這種狀態下呼叫 `add` 將會擲回 `invalid_link_target` 例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [single_link_registry 類別](single-link-registry-class.md)
-

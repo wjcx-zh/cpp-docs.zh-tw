@@ -16,17 +16,20 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 294fd39545a91503b356f0a344ffa9aa159bbbcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 00b6799e91469056da2c8aeb1a26020bc29d4c4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>呼叫特定應用程式定義域的函式
 支援特定應用程式定義域呼叫函式。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [call_in_appdomain 函式](../dotnet/call-in-appdomain-function.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 支援程式庫](../dotnet/cpp-support-library.md)

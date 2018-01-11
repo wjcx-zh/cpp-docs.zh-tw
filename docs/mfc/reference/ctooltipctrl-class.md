@@ -83,11 +83,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b55d466e62ed306e41877b855c06b9fe8bc8577d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f67a9ccb25216c6f7546d9d906f91cfe5102bc4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 封裝「工具提示控制項」的功能，這個小型快顯視窗顯示說明應用程式中工具用途的單行文字。  
@@ -98,17 +99,17 @@ ms.lasthandoff: 10/24/2017
 class CToolTipCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|建構 `CToolTipCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CToolTipCtrl::Activate](#activate)|啟用和停用工具提示控制項。|  
 |[CToolTipCtrl::AddTool](#addtool)|工具提示控制項註冊工具。|  
@@ -830,7 +831,7 @@ void UpdateTipText(
  `nIDText`  
  包含工具的文字字串資源的識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CToolBar 類別](../../mfc/reference/ctoolbar-class.md)

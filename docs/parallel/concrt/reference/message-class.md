@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f0c62e8b783b7d97a6158a3f4a55501ed4450b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55d1744d67156bcfcf6f76c757fc97ab0d4fd380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-class"></a>message 類別
 基本訊息封套，其中包含在傳訊區塊之間傳遞的資料承載。  
@@ -42,24 +43,24 @@ class message : public ::Concurrency::details::_Runtime_object;
  `T`  
  訊息內裝載的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`type`|類型別名`T`。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[message](#ctor)|多載。 建構 `message` 物件。|  
 |[~ message 解構函式](#dtor)|終結`message`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[add_ref](#add_ref)|將加入的參考計數`message`物件。 用於需要參考計數來判斷訊息的存留期的訊息區塊。|  
 |[msg_id](#msg_id)|傳回的識別碼`message`物件。|  
@@ -67,7 +68,7 @@ class message : public ::Concurrency::details::_Runtime_object;
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[裝載](#payload)|承載`message`物件。|  
   
@@ -163,5 +164,5 @@ long remove_ref();
 ### <a name="return-value"></a>傳回值  
  參考計數的新值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)

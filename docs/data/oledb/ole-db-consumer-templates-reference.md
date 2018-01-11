@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c401cebf9fd09686a532031322793fd9bedac50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 681654f79f0cb3574b0893bb9f726bea78435e74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-templates-reference"></a>OLE DB 消費者樣板參考
 OLE DB 消費者樣板包含下列類別。 參考資料也包含在主題[OLE DB 消費者樣板的巨集](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)。  
@@ -141,6 +144,6 @@ OLE DB 消費者樣板包含下列類別。 參考資料也包含在主題[OLE D
  [CDBErrorInfo](../../data/oledb/cdberrorinfo-class.md)  
  用來擷取 OLE DB 錯誤資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板參考](../../data/oledb/ole-db-provider-templates-reference.md)   
  [OLE DB 範本](../../data/oledb/ole-db-templates.md)

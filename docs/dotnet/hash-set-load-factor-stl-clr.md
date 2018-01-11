@@ -1,41 +1,42 @@
 ---
-title: "hash_set::load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "load_factor 成員 [STL/CLR]"
+title: "hash_set::load_factor (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::load_factor
+dev_langs: C++
+helpviewer_keywords: load_factor member [STL/CLR]
 ms.assetid: 84fbcdd8-0457-4a20-9f54-0a7c9612f4dd
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2627a50d457e548df4e29cce7ae7a8b9383c3ee0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-計數平均項目每個 Bucket。  
+# <a name="hashsetloadfactor-stlclr"></a>hash_set::load_factor (STL/CLR)
+計算每個值區的平均項目數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 float load_factor();  
 ```  
   
-## 備註  
- 成員函式傳回 `(float)`[hash\_set::size](../dotnet/hash-set-size-stl-clr.md)`() /` [hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)`()`。  您會用它來判斷平均 Bucket 大小。  
+## <a name="remarks"></a>備註  
+ 成員函式傳回`(float)` [hash_set:: size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md) `() /` [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)`()`。 您可以使用它來判斷平均的貯體大小。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_load_factor.cpp   
@@ -81,22 +82,27 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0.0234375**  
-**max\_load\_factor\(\) \= 0.25**   
-## 需求  
- **標頭：** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)   
- [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)   
+ [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)

@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4398
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4398
+f1_keywords: C4398
+dev_langs: C++
+helpviewer_keywords: C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 18270bb89bcc5d1855750c572a5b6fb9e51c2ba3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d5ce6355e50c1ea2594820388edc34c69ea0e899
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-3-c4398"></a>編譯器警告 (層級 3) C4398
-'variable': 每個處理程序的全域物件可能無法正常運作具有多個 appdomain。請考慮使用 __declspec(appdomain)  
+'variable': 處理序專屬全域物件可能無法與多個 appdomain; 正常運作請考慮使用 __declspec(appdomain)  
   
- 虛擬函式與[__clrcall](../../cpp/clrcall.md)呼叫慣例在原生型別會建立每個應用程式網域 vtable。 使用多個應用程式定義域中時，這類變數可能無法正確地修正。  
+ 虛擬函式與[__clrcall](../../cpp/clrcall.md)原生類型中呼叫慣例會導致建立每個應用程式網域 vtable。 使用多個應用程式定義域中時，這類變數可能無法正確地修正。  
   
- 您可以明確地標示變數來解決這個警告`__declspec(appdomain)`。 在 Visual Studio 2017 之前的 Visual Studio 版本中，您可以解決這個警告使用編譯**/clr: pure**，因此依預設每個 appdomain 全域變數。  
+ 您可以明確地標示變數來解決這個警告`__declspec(appdomain)`。 在 Visual Studio 2017 之前的 Visual Studio 版本中，您可以解決這個警告編譯**/clr: pure**，讓預設 appdomain 的全域變數。  
   
  如需詳細資訊，請參閱[appdomain](../../cpp/appdomain.md)和[應用程式定義域和 Visual c + +](../../dotnet/application-domains-and-visual-cpp.md)。  
   

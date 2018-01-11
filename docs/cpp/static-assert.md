@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- static_assert_cpp
-dev_langs:
-- C++
+f1_keywords: static_assert_cpp
+dev_langs: C++
 helpviewer_keywords:
 - C++ keywords, static_assert
 - C2338
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1428d890fe079c7ac1fce175686e9776f9c21746
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 660b91f4902e42d393509aa190172e53839b2621
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staticassert"></a>static_assert
 在編譯時期測試軟體判斷提示。 如果指定的常數運算式是`false`，所提供，則編譯器會顯示指定的訊息，並編譯會失敗並產生錯誤 C2338，否則宣告沒有任何作用。  
@@ -43,7 +40,7 @@ static_assert( constant-expression );
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`constant-expression`|可以轉換為布林值的整數常數運算式。<br /><br /> 如果求出的運算式的值為零 (false)，則會顯示 `string-literal` 參數，且編譯會失敗並產生錯誤。 如果運算式為非零 (true)，則 `static_assert` 宣告沒有任何作用。|  
 |`string-literal`|`constant-expression` 參數為零時顯示的訊息。 訊息是中的字元字串[基底字元集](../c-language/ascii-character-set.md)編譯器; 的而非[多位元組或寬字元](../c-language/multibyte-and-wide-characters.md)。|  
@@ -114,7 +111,7 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [判斷提示和使用者提供的訊息 （c + +）](../cpp/assertion-and-user-supplied-messages-cpp.md)   
  [#error 指示詞 （C/c + +）](../preprocessor/hash-error-directive-c-cpp.md)   
  [assert 巨集、_assert、_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)   

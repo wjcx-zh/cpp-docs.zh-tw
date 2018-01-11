@@ -41,11 +41,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c5627aba75f7eca9680d369c805dc910403b2647
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b64f1efd16a1ac372f6e8ce9ea9e0781046f1892
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctaskspanetask-class"></a>CMFCTasksPaneTask 類別
 `CMFCTasksPaneTask`類別是 helper 類別，表示工作窗格控制項的工作 ( [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md))。 工作物件，代表工作群組中的項目 ( [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md))。 每個工作可以有命令，當使用者按一下工作與工作名稱左邊的圖示時，Framework 就會執行這個命令。  
@@ -56,24 +57,24 @@ ms.lasthandoff: 10/24/2017
 class CMFCTasksPaneTask : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::CMFCTasksPaneTask](#cmfctaskspanetask)|建立並初始化`CMFCTasksPaneTask`物件。|  
 |`CMFCTasksPaneTask::~CMFCTasksPaneTask`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::SetACCData](#setaccdata)|判斷目前的工作的協助工具資料。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCTasksPaneTask::m_bAutoDestroyWindow](#m_bautodestroywindow)|判斷是否會自動終結 [工作] 視窗。|  
 |[CMFCTasksPaneTask::m_bIsBold](#m_bisbold)|決定是否架構會以粗體文字繪製工作標籤。|  
@@ -252,7 +253,7 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParent`  
+ [輸入] `pParent`  
  表示目前工作的父視窗。  
   
  [輸出] `data`  
@@ -261,7 +262,7 @@ virtual BOOL SetACCData(
 ### <a name="return-value"></a>傳回值  
  `TRUE`如果`data`參數已成功填入目前的工作的協助工具資料，否則`FALSE`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)

@@ -1,46 +1,46 @@
 ---
-title: "priority_queue::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成員 [STL/CLR]"
+title: "priority_queue::operator = (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 796b4ad2-3e40-49e8-8462-87460d086fe4
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e97c065f42e6be5563d11bbc22af3715c173cef4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取代受控制序列。  
+# <a name="priorityqueueoperator-stlclr"></a>priority_queue::operator= (STL/CLR)
+取代受控制的序列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% right);  
 ```  
   
-#### 參數  
- right  
- 複製的容器配接器。  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 若要複製容器配接器。  
   
-## 備註  
- 成員運算子複製 `right` 到物件後，再傳回 `*this`。  您會用它將受控制序列取代為它在 `right`的副本。  
+## <a name="remarks"></a>備註  
+ 成員運算子複製`right`物件，然後傳回`*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_priority_queue_operator_as.cpp   
@@ -71,13 +71,16 @@ int main()
   
 ```  
   
-  **c a b**  
- **c a b**   
-## 需求  
- **標頭：** \<cliext\/queue\>  
+```Output  
+c a b  
+c a b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)

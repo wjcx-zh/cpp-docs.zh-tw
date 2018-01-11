@@ -14,11 +14,14 @@ caps.latest.revision: "2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45977f169cb6aedd9985cad1a64da2b691f22d80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8f4f8c5b040c5f338caf805d5b2c74f3721c9180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstringisvalid-method"></a>HString::IsValid 方法
 指出目前的 HString 物件是否為空白。  
@@ -37,5 +40,5 @@ bool IsValid() const throw()
   
  **命名空間：** Microsoft::WRL::Wrappers  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [HString 類別](../windows/hstring-class.md)

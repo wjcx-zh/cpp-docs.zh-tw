@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b28aa56905271da3e60cdfc08da855b6b4a23cc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6aa2a61dff4f20c5da7157a8a60700d9a8a10c06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-call-operator-"></a>函式呼叫運算子：()
 函式呼叫運算子，後面是後置運算式**（)**，指定函式呼叫。  
@@ -182,7 +183,7 @@ int main() {
   
  函式可以透過遞迴方式呼叫。 如需函式宣告的詳細資訊，請參閱[函式](functions-cpp.md)。 相關的資料位於[程式和連結](../cpp/program-and-linkage-cpp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [後置運算式](../cpp/postfix-expressions.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [函式呼叫](../c-language/function-call-c.md)   

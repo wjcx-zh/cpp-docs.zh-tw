@@ -1,32 +1,33 @@
 ---
-title: "DEFINE_COMMAND_EX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DEFINE_COMMAND_EX"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DEFINE_COMMAND_EX 巨集"
+title: "DEFINE_COMMAND_EX |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DEFINE_COMMAND_EX
+dev_langs: C++
+helpviewer_keywords: DEFINE_COMMAND_EX macro
 ms.assetid: d3e2ef20-1455-46d2-8499-8ab84bbb90a4
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 851b346c8fac955f1d82c0c43fdf75c4784ca04c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# DEFINE_COMMAND_EX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-指定將用來建立資料列時， [CCommand](../../data/oledb/ccommand-class.md) 類別中的命令。  支援 ANSI 和 Unicode 應用程式。  
+# <a name="definecommandex"></a>DEFINE_COMMAND_EX
+指定將用來建立資料列集，使用時的命令[CCommand](../../data/oledb/ccommand-class.md)類別。 支援 Unicode 和 ANSI 應用程式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -38,23 +39,23 @@ wszCommand
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *x*  
- \[使用者資料錄 \(\) 命令類別的名稱。  
+ [in]使用者資料錄 （命令） 類別的名稱。  
   
  `wszCommand`  
- \[\] 將用來建立資料列集， [CCommand](../../data/oledb/ccommand-class.md)時的命令字串。  
+ [in]將用來建立資料列集，使用時的命令字串[CCommand](../../data/oledb/ccommand-class.md)。  
   
-## 備註  
- 您指定的命令字串會當預設值，如果您在 [CCommand::Open](../../data/oledb/ccommand-open.md) 方法不指定命令文字。  
+## <a name="remarks"></a>備註  
+ 如果您未指定命令文字中的，將做為預設使用您指定的命令字串[ccommand:: Open](../../data/oledb/ccommand-open.md)方法。  
   
- 不論應用程式類型，此巨集接受 Unicode 字串。  因為它支援 Unicode 和 ANSI 應用程式，這個巨集會優先於 [DEFINE\_COMMAND](../../data/oledb/define-command.md) 。  
+ 這個巨集接受 Unicode 字串，不論應用程式類型。 這個巨集是透過慣用[DEFINE_COMMAND](../../data/oledb/define-command.md)因為它支援 Unicode 和 ANSI 應用程式。  
   
-## 範例  
- 請參閱 [BOOKMARK\_ENTRY](../../data/oledb/bookmark-entry.md)。  
+## <a name="example"></a>範例  
+ 請參閱[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
- [OLE DB 消費者樣板的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)
+## <a name="see-also"></a>請參閱  
+ [OLE DB 消費者範本的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)

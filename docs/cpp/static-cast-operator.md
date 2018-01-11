@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- static_cast_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- static_cast keyword [C++]
+f1_keywords: static_cast_cpp
+dev_langs: C++
+helpviewer_keywords: static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0c8d041ff7b615e4fd8b6e0e54365e92aca2ebc9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3913937d9099304c478404c4c55a09fa54392785
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staticcast-operator"></a>static_cast 運算子
 將轉換*運算式*的型別*類型 id*只根據出現在運算式中的類型。  
@@ -62,7 +58,7 @@ void f(B* pb, D* pd) {
   
  相對於[dynamic_cast](../cpp/dynamic-cast-operator.md)，任何執行階段檢查對`static_cast`轉換`pb`。 `pb` 所指向的物件可能不是 `D` 類型的物件，在此情況下，使用 `*pd2` 可能會得不償失。 例如，呼叫屬於 `D` 類別但不屬於 `B` 類別的成員函式時，可能會造成存取違規。  
   
- `dynamic_cast` 和 `static_cast` 運算子會在整個類別階層中移動指標。 不過，`static_cast` 完全依賴 cast 陳述式所提供的資訊，因此可能不安全。 例如：  
+ `dynamic_cast` 和 `static_cast` 運算子會在整個類別階層中移動指標。 不過，`static_cast` 完全依賴 cast 陳述式所提供的資訊，因此可能不安全。 例如:   
   
 ```  
 // static_cast_Operator_2.cpp  
@@ -87,7 +83,7 @@ void f(B* pb) {
   
  此行為也適用於類別類型以外的類型。 例如，您可以使用 `static_cast` 將 int 轉換為 `char`。 不過，產生的 `char` 的位元可能不足以表示整個 `int` 值。 同樣地，它就可讓您確認程式設計人員的結果`static_cast`是安全的轉換。  
   
- `static_cast` 運算子也可用於執行所有隱含轉換，包括標準轉換和使用者定義的轉換。 例如：  
+ `static_cast` 運算子也可用於執行所有隱含轉換，包括標準轉換和使用者定義的轉換。 例如:   
   
 ```  
 // static_cast_Operator_3.cpp  
@@ -116,6 +112,6 @@ void f() {
   
  由於在重新配置的記憶體回收行程之上執行未檢查的轉換並不安全，因此，除非您確定在效能嚴重不足的程式碼中可以正確執行，否則請勿使用 `static_cast`。 如果您必須使用`static_cast`在發行模式中取代[safe_cast](../windows/safe-cast-cpp-component-extensions.md)在偵錯組建中，以確保成功。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [轉型運算子](../cpp/casting-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)

@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator 成員 [STL/CLR]"
+title: "hash_multimap:: iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: 3395078b-10fd-4c3a-827f-274ba29372d3
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 40c12c68a2344072cc1ec212ff0fba37ee39802d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-受控制序列中 iterator 的類型。  
+# <a name="hashmultimapiterator-stlclr"></a>hash_multimap::iterator (STL/CLR)
+受控制序列之迭代器的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## 備註  
- 此型別描述未指定型別 `T1` 的物件，其可以在控制序列中作為雙向迭代器。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T1`，可做為受控制序列的雙向迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multimap_iterator.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::const\_iterator](../dotnet/hash-multimap-const-iterator-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::const_iterator (STL/CLR)](../dotnet/hash-multimap-const-iterator-stl-clr.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c40e7d0c6861f4815d98ad4388aade8227b43dcb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 266d3284716647fa073f76ef6ef871a3abd179bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-assignment"></a>字元設定
 請考慮下列範例中的，在其中`while`迴圈會掃描字串，將 'X' 以外的所有字元都複製到另一個字串：  
@@ -51,6 +52,6 @@ while( *sz2 )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MBCS 程式設計提示](../text/mbcs-programming-tips.md)   
  [字元比較](../text/character-comparison.md)

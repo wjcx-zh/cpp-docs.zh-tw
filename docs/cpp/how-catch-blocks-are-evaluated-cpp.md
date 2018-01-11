@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - try-catch keyword [C++], catchable types
 - catch keyword [C++], types of catch handlers
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1098529effb3a15d8f6260ed7167c5553b226857
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 744f75f86fd7d3e2ca2a2545a7914f923c4454b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>評估 Catch 區塊的方式 (C++)
 C++ 可讓您擲回任何類型的例外狀況，不過，一般建議擲回衍生自 std::exception 的類型。 可以攔截 c + + 例外狀況**攔截**指定相同的型別，擲回的例外狀況，或可以攔截任何類型的例外狀況處理常式的處理常式。  
@@ -76,5 +74,5 @@ catch( CExcptClass E )
   
  在此範例中，省略符號**攔截**處理常式是唯一會進行檢查的處理常式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 例外狀況處理](../cpp/cpp-exception-handling.md)

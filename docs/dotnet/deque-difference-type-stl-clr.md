@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ae72f643d6c2f567667a0bae740dd56ed05a5b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: afe6714852272a49c0b37f0b3892cfda7937701e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequedifferencetype-stlclr"></a>deque::difference_type (STL/CLR)
 兩個項目之間的帶正負號距離的類型。  
@@ -79,6 +82,6 @@ begin()-end() = -3
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque::size_type (STL/CLR)](../dotnet/deque-size-type-stl-clr.md)

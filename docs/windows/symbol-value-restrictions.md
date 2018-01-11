@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c3edccbf88ea6aeb975b9861ebd80817362c245
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5f2188d6904274fabce0f8626fa2f440ac324ff5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="symbol-value-restrictions"></a>符號值限制
 符號值可以是針對 #define 前置處理器指示詞以正常方式表示的任何整數。 以下是符號值的一些範例：  
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/24/2017
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported  
     ```  
   
--   您無法使用具有引數的前置處理器巨集做為值定義。 例如:  
+-   您無法使用具有引數的前置處理器巨集做為值定義。 例如:   
   
     ```  
     #define   IDD_ABOUT  ID(7) //not supported  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [變更符號的數值](../windows/changing-a-symbol-s-numeric-value.md)   
  [符號名稱限制](../windows/symbol-name-restrictions.md)   
  [預先定義的符號識別碼](../windows/predefined-symbol-ids.md)

@@ -37,11 +37,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f07115db4d627a1116f9eaefd0f1731841be83ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22c801b95eff65093a6ff93bfbe99b0ea83358ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAnd 內建函式
 **Microsoft 特定的**  
@@ -113,7 +114,7 @@ __int64 _InterlockedAdd64_rel(
 ## <a name="remarks"></a>備註  
  這些函式的 `_acq` 或 `_rel` 版本後置字元在取得或發行語意之後執行連鎖相加。 取得語意表示在任何後續的記憶體讀取和寫入之前，會使所有執行緒和處理器都看見運算的結果。 在進入關鍵區段時，取得非常有用。 發行語意表示，在使運算的結果本身可見之前，會強制使所有的執行緒和處理器都看見所有的記憶體讀取和寫入。 離開關鍵區段時，發行非常有用。 搭配 `_nf` (「無範圍」) 字尾的內建函式，不會當做記憶體屏障。  
   
- 這些常式只可做為內建函式。  
+ 這些常式僅以內建函式的形式供您使用。  
   
 ## <a name="example"></a>範例  
   
@@ -173,8 +174,8 @@ ff0000000000 + ff0000ffffffff = ffff00ffffffff
 Return value: ffff00ffffffff  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

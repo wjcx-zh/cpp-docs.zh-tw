@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c3567a16981d4abb16ace70cc2d0509bf9c886e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 53b5e19fbeaccfb61380054426315ad9b92f624a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl 類別
 提供的實作[ICommandText](https://msdn.microsoft.com/en-us/library/ms714914.aspx)介面。  
@@ -57,6 +60,6 @@ class ATL_NO_VTABLE ICommandTextImpl
 ## <a name="requirements"></a>需求  
  **標頭：** altdb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

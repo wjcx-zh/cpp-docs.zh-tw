@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b67307078e80360fbe4e9b076ebbf9c1e4ac6f7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58f5af7906e7c55b58dcb1adec63c774a6af88d8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-errors-rw1004-through-rw4004"></a>資源編譯器錯誤s RW1004 through RW4004
 本章節提供組建工具所產生的錯誤之參考資訊。 若要取得特定錯誤訊息的說明，[輸出] 視窗中的錯誤代碼上按一下滑鼠並按下 F1、 或是輸入中的錯誤號碼**尋找**方塊中的索引。

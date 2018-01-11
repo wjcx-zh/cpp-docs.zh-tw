@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e7a6aad126312809e2964cf227cb59769292156d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 32e7f63cb550a538e28db44eeb19cfd8c21ea83b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="endparammap"></a>END_PARAM_MAP
 參數對應項目結束標記。  
@@ -38,7 +41,7 @@ END_PARAM_MAP( )
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
  [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md)   
  [SET_PARAM_TYPE](../../data/oledb/set-param-type.md)

@@ -39,11 +39,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ceed1a7127d86ced1c68d92269a6b1a55f41991f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfaec077501173fade6fa15fba3516cde534b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager 類別
 `CContextMenuManager`物件管理捷徑功能表，也稱為內容功能表。  
@@ -54,18 +55,18 @@ ms.lasthandoff: 10/24/2017
 class CContextMenuManager : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|建構 `CContextMenuManager` 物件。|  
 |`CContextMenuManager::~CContextMenuManager`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CContextMenuManager::AddMenu](#addmenu)|加入新的快顯功能表。|  
 |[CContextMenuManager::GetMenuById](#getmenubyid)|傳回與提供的資源識別碼相關聯的功能表的控制代碼|  
@@ -115,13 +116,13 @@ BOOL AddMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiMenuNameResId`  
+ [輸入] `uiMenuNameResId`  
  包含新的功能表名稱的字串資源識別碼。  
   
- [in] `uiMenuResId`  
+ [輸入] `uiMenuResId`  
  功能表上的資源 id。  
   
- [in] `lpszName`  
+ [輸入] `lpszName`  
  包含新的功能表名稱的字串。  
   
 ### <a name="return-value"></a>傳回值  
@@ -148,7 +149,7 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nMenuResId`  
+ [輸入] `nMenuResId`  
  功能表資源識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -164,7 +165,7 @@ HMENU GetMenuByName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszName`  
+ [輸入] `lpszName`  
  包含要擷取的功能表名稱的字串。  
   
  [輸出] `puiOrigResID`  
@@ -195,7 +196,7 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszProfileName`  
+ [輸入] `lpszProfileName`  
  字串，包含相對路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -227,7 +228,7 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszProfileName`  
+ [輸入] `lpszProfileName`  
  字串，包含相對路徑的登錄機碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -246,7 +247,7 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  布林值參數可控制是否要關閉使用中的快顯功能表。 值為`TRUE`指出未關閉使用中的快顯功能表。 `FALSE`表示已關閉使用中的快顯功能表。  
   
 ### <a name="remarks"></a>備註  
@@ -276,28 +277,28 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiMenuResId`  
+ [輸入] `uiMenuResId`  
  這個方法會顯示的功能表資源識別碼。  
   
- [in] `x`  
+ [輸入] `x`  
  在水平位移的用戶端座標中的捷徑功能表時。  
   
- [in] `y`  
+ [輸入] `y`  
  垂直位移用戶端座標中的捷徑功能表  
   
- [in] `pWndOwner`  
+ [輸入] `pWndOwner`  
  快顯功能表的父視窗指標。  
   
- [in] `bOwnMessage`  
+ [輸入] `bOwnMessage`  
  表示訊息會路由傳送的布林參數。 如果`bOwnMessage`是`FALSE`，標準 MFC 路由可用於。 否則，`pWndOwner`接收訊息。  
   
- [in] `hmenuPopup`  
+ [輸入] `hmenuPopup`  
  這個方法會顯示功能表的控制代碼。  
   
- [in] `bAutoDestroy`  
+ [輸入] `bAutoDestroy`  
  布林值參數，指出是否會自動終結功能表。  
   
- [in] `bRightAlign`  
+ [輸入] `bRightAlign`  
  布林值參數，指出功能表項目對齊的方式。 如果`bRightAlign`是`TRUE`，是由右至左讀取順序為靠右對齊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -321,19 +322,19 @@ virtual UINT TrackPopupMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hmenuPopup`  
+ [輸入] `hmenuPopup`  
  這個方法會顯示快顯功能表的控制代碼。  
   
- [in] `x`  
+ [輸入] `x`  
  在水平位移的用戶端座標中的捷徑功能表時。  
   
- [in] `y`  
+ [輸入] `y`  
  垂直位移的用戶端座標中的捷徑功能表。  
   
- [in] `pWndOwner`  
+ [輸入] `pWndOwner`  
  快顯功能表的父視窗指標。  
   
- [in] `bRightAlign`  
+ [輸入] `bRightAlign`  
  布林值參數，指出功能表項目對齊的方式。 如果`bRightAlign`是`TRUE`，是由右至左讀取順序為靠右對齊。 如果`bRightAlign`是`FALSE`，功能表是靠左對齊，以由左至右的讀取順序。  
   
 ### <a name="return-value"></a>傳回值  
@@ -342,7 +343,7 @@ virtual UINT TrackPopupMenu(
 ### <a name="remarks"></a>備註  
  此方法做為強制回應的呼叫，顯示快顯功能表。 在使用者關閉快顯功能表，或選取命令之前，應用程式將不會繼續為下列一行程式碼中。 您可以使用顯示快顯功能表的替代方法是[CContextMenuManager::ShowPopupMenu](#showpopupmenu)。 該方法不是強制回應的呼叫，而且不會傳回選取的命令識別碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CWinAppEx 類別](../../mfc/reference/cwinappex-class.md)

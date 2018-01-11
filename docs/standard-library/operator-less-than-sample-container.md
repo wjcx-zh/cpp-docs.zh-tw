@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3f7aab9f32e51123f15169f5ccbb591ff2d30b67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 554ceba328a0688ab11e7d66ece26204aad598e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;範例容器&gt;)
 > [!NOTE]
@@ -49,7 +50,7 @@ bool operator<(
 ## <a name="return-value"></a>傳回值  
  傳回 `lexicographical_compare(left.begin, left.end, right.begin, right.end)`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<範例容器>](../standard-library/sample-container.md)  
 [begin](../standard-library/container-class-begin.md)  
 [end](../standard-library/container-class-end.md)  

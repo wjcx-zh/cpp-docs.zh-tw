@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d34fdaa37901d8bdce3dce312d674024a84ad0e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cba03cfdda0b7a55c8f4719d5340566ee5dc6050
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl 類別
 提供的實作[IRowsetInfo](https://msdn.microsoft.com/en-us/library/ms724541.aspx)介面。  
@@ -43,7 +46,7 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
  `PropClass`  
  預設為使用者定義的屬性類別`T`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="interface-methods"></a>介面方法  
   
@@ -59,6 +62,6 @@ class ATL_NO_VTABLE IRowsetInfoImpl :
 ## <a name="requirements"></a>需求  
  **標頭：** altdb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

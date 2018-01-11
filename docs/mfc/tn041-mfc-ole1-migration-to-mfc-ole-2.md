@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81f4ca65bcde12154caf3a85411ea581d0cc1fd4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 894c171c025ef125495faad21dba2a98c08e8b88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn041-mfcole1-migration-to-mfcole-2"></a>TN041：MFC/OLE1 移轉到 MFC/OLE 2
 > [!NOTE]
@@ -747,7 +748,7 @@ pMenu->TrackPopupMenu(TPM_CENTERALIGN | TPM_RIGHTBUTTON,
   
  MFC 3.0 HIERSVR 範例也會使用其伺服器項目稍有不同的設計。 這有助於節省記憶體，並使您的連結更有彈性。 HIERSVR 2.0 版與每個節點在樹狀目錄中*是 a* `COleServerItem`。 `COleServerItem`會更多的負擔，而不是絕對必要，每個這些節點，但`COleServerItem`需要為每個作用中的連結。 但大部分的情況下，有極少數的作用中連結在任何指定時間。 若要進行更有效率，在這個版本的 MFC HIERSVR 分隔節點從`COleServerItem`。 它有兩個 CServerNode 和**CServerItem**類別。 **CServerItem** (衍生自`COleServerItem`)，才會建立在必要時。 一旦容器 （或） 容器停止使用該特定連結至該特定節點，會刪除相關聯 CServerNode CServerItem 物件。 這項設計會更有效率且更有彈性。 當處理多個選取項目連結的成為它的彈性。 HIERSVR 下列兩個版本都不支援多重選取，但它會更輕鬆地新增 （並以支援這類的選取項目連結） 與 HIERSVR，MFC 3.0 版因為`COleServerItem`分開原生資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

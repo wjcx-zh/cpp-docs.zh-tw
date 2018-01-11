@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 148c39f1ef38b6b20de6d50cc75352a4f30a9090
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8263595bdd564c313a8783a3a9baf0c6d562494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakref-class"></a>WeakRef 類別
 代表 *弱式參考* 僅供 Windows 執行階段使用，而不供傳統 COM 使用。 弱式參考代表不一定可存取的物件。  
@@ -69,14 +72,14 @@ if (strongRef == nullptr)
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[WeakRef::WeakRef 建構函式](../windows/weakref-weakref-constructor.md)|初始化 WeakRef 類別的新執行個體。|  
 |[WeakRef::~WeakRef 解構函式](../windows/weakref-tilde-weakref-destructor.md)|取消初始化 WeakRef 類別目前的執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[WeakRef::As 方法](../windows/weakref-as-method.md)|設定指定的 ComPtr 指標參數代表指定的介面。|  
 |[WeakRef::AsIID 方法](../windows/weakref-asiid-method.md)|設定指定的 ComPtr 指標參數，以代表指定的介面識別碼。|  
@@ -84,7 +87,7 @@ if (strongRef == nullptr)
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[WeakRef::operator& 運算子](../windows/weakref-operator-ampersand-operator.md)|傳回表示目前 WeakRef 物件的 ComPtrRef 物件。|  
   
@@ -98,5 +101,5 @@ if (strongRef == nullptr)
   
  **命名空間：** Microsoft::WRL  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL 命名空間](../windows/microsoft-wrl-namespace.md)

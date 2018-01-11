@@ -61,11 +61,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efeb16478d78648bb813d0e25a53380ec305d5ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6aeaa64b0b665449ee9216070cdebbc2632948b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatabase-class"></a>CDatabase 類別
 表示資料來源的連接，您可以透過這個連接來操作資料來源。  
@@ -76,17 +77,17 @@ ms.lasthandoff: 10/24/2017
 class CDatabase : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDatabase::CDatabase](#cdatabase)|建構 `CDatabase` 物件。 您必須藉由呼叫初始化物件`OpenEx`或**開啟**。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDatabase::BeginTrans](#begintrans)|啟動 「 交易 」 — 一系列的回復呼叫`AddNew`，**編輯**，**刪除**，和**更新**類別成員函式`CRecordset`— 上連接的資料來源。 資料來源必須支援的交易**BeginTrans**才能發生效用。|  
 |[CDatabase::BindParameters](#bindparameters)|可讓您將繫結參數，然後再呼叫`CDatabase::ExecuteSQL`。|  
@@ -111,7 +112,7 @@ class CDatabase : public CObject
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDatabase::m_hdbc](#m_hdbc)|開啟資料庫連接 (ODBC) 資料來源的連接控制代碼。 型別**HDBC**。|  
   
@@ -574,7 +575,7 @@ void SetQueryTimeout(DWORD dwSeconds);
   
  查詢逾時的預設值是 15 秒。 並非所有的資料來源都支援可設定查詢逾時值的功能。 如果您設定的查詢逾時值為 0 時，不會逾時，就會發生。與資料來源之間的通訊可能會停止回應。 在開發期間，此行為可能很有用的。 如果資料來源不支援逾時，您會收到追蹤輸出，但未發生例外狀況。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CRecordset 類別](../../mfc/reference/crecordset-class.md)

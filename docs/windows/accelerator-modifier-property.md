@@ -1,44 +1,45 @@
 ---
-title: "快速鍵輔助按鍵屬性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Modifier 屬性"
+title: "快速鍵輔助按鍵屬性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Modifier property
 ms.assetid: f05a9379-e037-4cfb-b6ef-d2c655bcfa7f
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 63d6a4b526fc1f2aeb2a942e682a8c7cc6f9b58c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 快速鍵輔助按鍵屬性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下表列出快速鍵 \(Accelerator\) 對應表中輔助按鍵屬性的合法項目。  
+# <a name="accelerator-modifier-property"></a>快速鍵輔助按鍵屬性
+以下是合法的快速鍵對應表中的修飾詞屬性的項目。  
   
 |值|描述|  
-|-------|--------|  
-|**None**|使用者只按下按鍵值。  這最常用於 001 到 026 的 ASCII\/ANSI 值，它們分別解譯為 ^A 到 ^Z \(CTRL\-A 到 CTRL\-Z\)。|  
-|**ALT**|使用者必須在按下按鍵值之前先按下 ALT 鍵。|  
-|**Ctrl**|使用者必須在按下按鍵值之前先按下 CTRL 鍵。  不適用於 ASCII 類型。|  
-|**Shift**|使用者必須在按下按鍵值之前先按下 SHIFT 鍵。|  
-|**CTRL\+ALT**|使用者必須在按下按鍵值之前先按下 CTRL 鍵和 ALT 鍵。  不適用於 ASCII 類型。|  
-|**CTRL\+SHIFT**|使用者必須在按下按鍵值之前先按下 CTRL 鍵和 SHIFT 鍵。  不適用於 ASCII 類型。|  
-|**ALT\+SHIFT**|使用者必須在按下按鍵值之前先按下 ALT 鍵和 SHIFT 鍵。  不適用於 ASCII 類型。|  
-|**CTRL\+ALT\+SHIFT**|使用者必須在按下按鍵值之前先按下 CTRL、ALT 和 SHIFT 鍵。  不適用於 ASCII 類型。|  
+|-----------|-----------------|  
+|**無**|使用者按下按鍵值。 這最有效地用於 ASCII/ANSI 值 001 026，透過可解譯為 ^ A 到 ^ Z (CTRL-透過 CTRL-Z 的 A)。|  
+|**Alt 鍵**|使用者必須按下 ALT 鍵之前的金鑰值。|  
+|**Ctrl**|使用者必須按下 CTRL 鍵之前的金鑰值。 ASCII 類型不正確。|  
+|**Shift 鍵**|使用者必須按 SHIFT 鍵之前的金鑰值。|  
+|**Ctrl + Alt**|使用者必須按下 CTRL 鍵和 ALT 鍵之前的金鑰值。 ASCII 類型不正確。|  
+|**Ctrl + shift 鍵**|使用者必須按下 CTRL 鍵和 SHIFT 鍵之前的金鑰值。 ASCII 類型不正確。|  
+|**Alt + Shift**|使用者必須按下 ALT 鍵和 SHIFT 鍵之前的金鑰值。 ASCII 類型不正確。|  
+|**Ctrl + Alt + Shift**|使用者必須按 CTRL、 ALT 和 SHIFT 之前的金鑰值。 ASCII 類型不正確。|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  Win32  
   
-## 請參閱  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../mfc/accelerator-editor.md)
+## <a name="see-also"></a>請參閱  
+ [設定快速鍵屬性](../windows/setting-accelerator-properties.md)   
+ [快速鍵編輯器](../windows/accelerator-editor.md)

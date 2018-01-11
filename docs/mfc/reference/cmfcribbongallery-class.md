@@ -89,11 +89,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5d5de8001f328a4f4b75b94c26974d02768fd85c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6cb4772f685a38db39c946a5e6f4e77df87998a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery 類別
 實作 Office 2007 樣式的功能區組件庫。  
@@ -105,17 +106,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonGallery : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|建構並初始化 `CMFCRibbonGallery` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::AddGroup](#addgroup)|將新的群組加入至組件庫。|  
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|將新的功能表項目加入至下拉式選單。|  
@@ -154,7 +155,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
   
 ### <a name="protected-methods"></a>受保護的方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|繪製圖庫圖示時，由架構呼叫。|  
   
@@ -195,19 +196,19 @@ void AddGroup(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszGroupName`  
+ [輸入] `lpszGroupName`  
  指定群組的名稱。  
   
- [in] `uiImagesPaletteResID`  
+ [輸入] `uiImagesPaletteResID`  
  指定的資源識別碼的影像清單，其中包含群組的映像。  
   
- [in] `cxPaletteImage`  
+ [輸入] `cxPaletteImage`  
  指定映像素為單位的寬度。  
   
- [in] `imagesGroup`  
+ [輸入] `imagesGroup`  
  影像清單，其中包含群組影像參考。  
   
- [in] `nIconsNum`  
+ [輸入] `nIconsNum`  
  指定群組中的圖示數目。 應該指定這個參數，只會針對自訂 （擁有者繪製） 群組。  
   
 ### <a name="remarks"></a>備註  
@@ -224,13 +225,13 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pSubItem`  
+ [輸入] `pSubItem`  
  要加入功能表項目的指標。  
   
- [in] `nIndex`  
+ [輸入] `nIndex`  
  指定的位置以零為起始的索引位置插入項目。  
   
- [in] `bOnTop`  
+ [輸入] `bOnTop`  
  `TRUE`若要指定功能區圖庫; 之前，應插入項目否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -325,10 +326,10 @@ void EnableMenuResize(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`若要啟用 調整大小功能表;否則， `FALSE`。  
   
- [in] `bVertcalOnly`  
+ [輸入] `bVertcalOnly`  
  `TRUE`若要指定的圖庫可以垂直調整大小只;`FALSE`來指定組件庫，可能會調整大小同時垂直和水平。  
   
 ### <a name="remarks"></a>備註  
@@ -342,7 +343,7 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`若要指定的提要欄位已啟用。否則， `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -356,7 +357,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -381,7 +382,7 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nGroupIndex`  
+ [輸入] `nGroupIndex`  
  指定您想要擷取其名稱的群組以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -420,7 +421,7 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nItemIndex`  
+ [輸入] `nItemIndex`  
  指定要擷取的工具提示文字的項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -436,7 +437,7 @@ static int GetLastSelectedItem(UINT uiCmdID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiCmdID`  
+ [輸入] `uiCmdID`  
  指定功能表項目，開啟功能區圖庫的命令識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -464,7 +465,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -547,7 +548,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="remarks"></a>備註  
   
@@ -559,7 +560,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="remarks"></a>備註  
   
@@ -576,19 +577,19 @@ virtual void OnDrawPaletteIcon(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  用於繪製的裝置內容的指標。  
   
- [in] `rectIcon`  
+ [輸入] `rectIcon`  
  指定的週框的圖示，以繪製。  
   
- [in] `nIconIndex`  
+ [輸入] `nIconIndex`  
  影像清單的組件庫圖示的圖示，以繪製在指定的以零為起始的索引。  
   
- [in] `pIcon`  
+ [輸入] `pIcon`  
  正在繪製之圖示的指標。  
   
- [in] `clrText`  
+ [輸入] `clrText`  
  指定要繪製的項目文字的色彩。  
   
 ### <a name="remarks"></a>備註  
@@ -602,7 +603,7 @@ virtual void OnEnable(BOOL bEnable);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
   
 ### <a name="remarks"></a>備註  
   
@@ -614,7 +615,7 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bIsRTL`  
+ [輸入] `bIsRTL`  
   
 ### <a name="remarks"></a>備註  
   
@@ -645,7 +646,7 @@ void SelectItem(int nItemIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nItemIndex`  
+ [輸入] `nItemIndex`  
   
 ### <a name="remarks"></a>備註  
   
@@ -659,7 +660,7 @@ virtual BOOL SetACCData(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParent`  
+ [輸入] `pParent`  
  功能區圖庫視窗的父視窗。  
   
  [輸出] `data`  
@@ -678,7 +679,7 @@ void SetButtonMode(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  `TRUE`若要以下拉功能表按鈕; 顯示功能區圖庫`FALSE`在功能區上直接顯示功能區圖庫的內容。  
   
 ### <a name="remarks"></a>備註  
@@ -693,10 +694,10 @@ void SetGroupName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nGroupIndex`  
+ [輸入] `nGroupIndex`  
  指定的群組名稱要變更的以零為起始的索引。  
   
- [in] `lpszGroupName`  
+ [輸入] `lpszGroupName`  
  指定群組的新名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -710,7 +711,7 @@ void SetIconsInRow(int nIconsInRow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIconsInRow`  
+ [輸入] `nIconsInRow`  
  指定要在組件庫的每個資料列中顯示的項目數。  
   
 ### <a name="remarks"></a>備註  
@@ -726,10 +727,10 @@ void SetItemToolTip(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nItemIndex`  
+ [輸入] `nItemIndex`  
  與相關聯的工具提示的調色盤項目以零為起始的索引。  
   
- [in] `lpszToolTip`  
+ [輸入] `lpszToolTip`  
  在工具提示上顯示的文字。  
   
 ### <a name="remarks"></a>備註  
@@ -747,13 +748,13 @@ void SetPalette(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `imagesPalette`  
+ [輸入] `imagesPalette`  
  指定包含要顯示在組件庫上圖示的影像清單。  
   
- [in] `uiImagesPaletteResID`  
+ [輸入] `uiImagesPaletteResID`  
  指定影像清單，其中包含出現在組件庫圖示的資源識別碼。  
   
- [in] `cxPaletteImage`  
+ [輸入] `cxPaletteImage`  
  組件庫映像素為單位指定的寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -766,13 +767,13 @@ void SetPaletteID(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  指定傳送中的命令識別碼**WM_COMMAND**訊息當使用者選取主機庫項目。  
   
 ### <a name="remarks"></a>備註  
  若要判斷使用者選取 從組件庫的特定項目，請呼叫[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)靜態方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonButton 類別](../../mfc/reference/cmfcribbonbutton-class.md)   

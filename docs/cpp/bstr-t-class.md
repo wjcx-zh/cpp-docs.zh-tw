@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0af38fe5e88540bf7e8947808c49c5283d742a4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34af81829c90aa5e56c7358a3e0b23d6f6ab949f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrt-class"></a>_bstr_t 類別
 **Microsoft 特定的**  
@@ -58,12 +59,12 @@ ms.lasthandoff: 10/24/2017
 |[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比較兩個 `_bstr_t` 物件。|  
 |[運算子 wchar_t * &#124;char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|將指標擷取至封裝的 Unicode 或多位元組的 `BSTR` 物件。|  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
  **標頭：** comutil.h  
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)

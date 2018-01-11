@@ -1,35 +1,37 @@
 ---
-title: "IErrorRecordsImpl::GetRecordCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IErrorRecordsImpl::GetRecordCount"
-  - "ATL::IErrorRecordsImpl::GetRecordCount"
-  - "IErrorRecordsImpl.GetRecordCount"
-  - "ATL.IErrorRecordsImpl.GetRecordCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetRecordCount 方法"
+title: "Ierrorrecordsimpl:: Getrecordcount |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IErrorRecordsImpl::GetRecordCount
+- ATL::IErrorRecordsImpl::GetRecordCount
+- IErrorRecordsImpl.GetRecordCount
+- ATL.IErrorRecordsImpl.GetRecordCount
+dev_langs: C++
+helpviewer_keywords: GetRecordCount method
 ms.assetid: 44388bc3-1c64-4491-a1c5-28f3497ef040
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2683e250b24ef5856d1f36d4d36623bb2555ce79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IErrorRecordsImpl::GetRecordCount
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳回 OLE DB 紀錄物件中的紀錄數目。  
+# <a name="ierrorrecordsimplgetrecordcount"></a>IErrorRecordsImpl::GetRecordCount
+OLE DB 記錄物件中傳回記錄的數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -38,11 +40,11 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
- 請參閱 *OLE DB 程式設計人員參考資訊* 中的 [IErrorRecords::GetRecordCount](https://msdn.microsoft.com/en-us/library/ms722724.aspx)。  
+#### <a name="parameters"></a>參數  
+ 請參閱[IErrorRecords::GetRecordCount](https://msdn.microsoft.com/en-us/library/ms722724.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IErrorRecordsImpl 類別](../../data/oledb/ierrorrecordsimpl-class.md)

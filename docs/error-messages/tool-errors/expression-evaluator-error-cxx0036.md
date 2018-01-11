@@ -1,51 +1,50 @@
 ---
-title: "運算式評估工具錯誤 CXX0036 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0036"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0036"
-  - "CXX0036"
+title: "運算式評估工具錯誤 CXX0036 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0036
+dev_langs: C++
+helpviewer_keywords:
+- CXX0036
+- CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fdf6ddf412786a53ec8da995c2824274da2da3b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 運算式評估工具錯誤 CXX0036
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-內容 {...} 規格錯誤  
+# <a name="expression-evaluator-error-cxx0036"></a>運算式評估工具錯誤 CXX0036
+內容錯誤 {...} 規格  
   
- 使用內容運算子 \(**{}**\) 所產生的數個錯誤其中一種，就可能會產生這個訊息。  
+ 可以由任何使用內容運算子中的幾個錯誤產生這則訊息 (**{}**)。  
   
--   所給定的內容運算子 \(**{}**\) 語法不正確。  
+-   內容運算子語法 (**{}**) 有不正確。  
   
-     內容運算子的語法為：  
+     內容運算子語法如下：  
   
-     {*function*,*module*,*dll*}*expression*  
+     {*函式*，*模組*，*dll*}*運算式*  
   
-     這會指定運算式的內容。  內容運算子和型別轉換具有相同的優先順序及用法。  
+     這會指定內容*運算式*。 內容運算子有相同的優先順序和使用方式，型別轉換。  
   
-     後面的逗號可以省略。  如果任何函式、模組，或 *dll* 中包含常值逗號，您必須將整個名稱置於括弧內。  
+     可以省略尾端逗號。 如果任何一個*函式*，*模組*，或*dll*包含常值的逗號，您必須將整個名稱括在括號中。  
   
--   函式名稱的拼字錯誤，或是函式名稱不存在於指定的模組或動態連結程式庫中。  
+-   函式名稱拼字不正確或不存在於指定的模組或動態連結程式庫。  
   
-     由於 C 是會區分大小寫的語言，因此所指定的函式必須與來源定義的大小寫完全相符。  
+     因為 C 是區分大小寫的語言，*函式*必須在來源中定義指定在大小寫完全相符。  
   
--   找不到模組或 DLL。  
+-   找不到 DLL 的模組。  
   
-     檢查指定的模組或 DLL 的完整路徑名稱。  
+     請檢查指定的模組或 DLL 的完整路徑名稱。  
   
- 此錯誤與 CAN0036 相同。
+ 這個錯誤是與 can0036 相同。

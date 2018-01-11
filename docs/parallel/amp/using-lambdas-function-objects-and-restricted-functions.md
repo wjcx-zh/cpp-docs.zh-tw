@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6507d3b43372f3e68e81ac44f896d7a6e7984a09
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: afec84ba6e3c007e576c37b4a7afc71fe62691ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>使用 Lambda、函式物件和限制函式
 做為引數的呼叫中指定您想要在加速器上執行的 c + + AMP 程式碼[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 您可以提供 lambda 運算式或函式物件 （仿函式），當做該引數。 此外，lambda 運算式或函式物件可以呼叫 c + + AMP 限制函式。 本主題會使用陣列加法演算法，來示範 lambda、 函式物件和限制函式。 下列範例會顯示沒有 c + + AMP 程式碼的演算法。 會建立兩個長度相同的 1 維陣列。 對應的整數項目都會加入，並儲存在第三個 1 維陣列。 不使用 c + + AMP。  
@@ -173,7 +174,7 @@ void AddArraysWithFunction() {
   
  受限的函式必須包含`restrict(amp)`符合所述的限制和[限制 (c + + AMP)](../../cpp/restrict-cpp-amp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)   
  [函式呼叫](../../cpp/function-call-cpp.md)   

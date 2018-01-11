@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47355ea2c7db35b32c69e91bf8445efe7671ccce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 物件
 您可以使用[accelerator](../../parallel/amp/reference/accelerator-class.md)和[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)類別來指定裝置或模擬器上執行您的 c + + AMP 程式碼。 系統可能會有數個裝置或不同的記憶體數量、 共用的記憶體支援，偵錯支援或雙精確度支援模擬器。 C + + Accelerated Massive Parallelism (c + + AMP) 提供 Api，可用來檢查可用的快速鍵、 設定另一個做為預設值，指定多個位於 accelerator_views 的多個呼叫 parallel_for_each，並執行特殊的偵錯工作。  
@@ -175,12 +176,12 @@ bool pick_accelerator()
   
 - [accelerator:: direct3d_warp 資料成員](reference/accelerator-class.md#direct3d_warp)： 這個加速器 」 提供後援方案使用 Streaming SIMD 擴充功能 (SSE) 中的多核心 Cpu 上執行 c + + AMP 程式碼。  
   
-- [accelerator:: cpu_accelerator 資料成員](reference/accelerator-class.md#cpu_accelerator)： 您可以使用這個快速鍵設定暫存陣列。 它無法執行 c + + AMP 程式碼。 如需詳細資訊，請參閱[c + + AMP 中的暫存陣列](http://go.microsoft.com/fwlink/p/LinkId=248485)上進行平行程式設計原生程式碼的部落格文章。  
+- [accelerator:: cpu_accelerator 資料成員](reference/accelerator-class.md#cpu_accelerator)： 您可以使用這個快速鍵設定暫存陣列。 它無法執行 c + + AMP 程式碼。 如需詳細資訊，請參閱[c + + AMP 中的暫存陣列](http://go.microsoft.com/fwlink/p/?linkId=248485)上進行平行程式設計原生程式碼的部落格文章。  
   
 ## <a name="interoperability"></a>互通性  
- C + + AMP 執行階段會支援之間的互通性`accelerator_view`類別和 Direct3D [ID3D11Device 介面](http://go.microsoft.com/fwlink/p/LinkId=248488)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法會採用`IUnknown`介面，並傳回`accelerator_view`物件。 [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439)方法會採用`accelerator_view`物件並傳回`IUknown`介面。  
+ C + + AMP 執行階段會支援之間的互通性`accelerator_view`類別和 Direct3D [ID3D11Device 介面](http://go.microsoft.com/fwlink/p/?linkId=248488)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法會採用`IUnknown`介面，並傳回`accelerator_view`物件。 [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439)方法會採用`accelerator_view`物件並傳回`IUknown`介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)   
  [accelerator_view 類別](../../parallel/amp/reference/accelerator-view-class.md)

@@ -1,76 +1,77 @@
 ---
-title: "Explicit Overrides  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "overriding, override [C++]"
+title: "明確覆寫 （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-caps.latest.revision: 21
-caps.handback.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 346dd73952934d514b2741c41d5a27816b7152ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Explicit Overrides  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題討論如何明確覆寫基底類別或介面的成員。  應該只用於具名 \(明確\) 覆寫與具有不同名稱的衍生方法中呼叫方法。  
+# <a name="explicit-overrides--c-component-extensions"></a>明確覆寫 (C++ 元件擴充功能)
+本主題討論如何明確覆寫基底類別或介面的成員。 具名 （明確） 覆寫只應該用於覆寫具有名稱不同之衍生方法的方法。  
   
-## 所有執行階段  
+## <a name="all-runtimes"></a>所有執行階段  
  **語法**  
   
 ```  
   
-        overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
+      overriding-function-declarator = type::function [,type::function] { overriding-function-definition }  
 overriding-function-declarator = function { overriding-function-definition }  
 ```  
   
  **參數**  
   
- *overriding\-function\-declarator*  
- 覆寫函式的傳回型別、名稱和引數清單。請注意覆寫函式不能有名稱和要覆寫的函式相同。  
+ *覆寫函式宣告子*  
+ 覆寫的函式的傳回類型、 名稱和引數清單。  請注意，覆寫的函式不需要有相同的名稱和覆寫的函式。  
   
  *type*  
- 包含函式覆寫的基底型別。  
+ 包含函式來覆寫基底類型。  
   
  *function*  
- 覆寫的一或多個函式名稱的逗號分隔清單。  
+ 若要覆寫的一或多個函式名稱的逗號分隔清單。  
   
- *overriding\-function\-definition*  
- 定義覆寫函式的函式主體陳述式。  
+ *覆寫函式定義*  
+ 定義覆寫的函式的函式主體陳述式。  
   
  **備註**  
   
- 建立方法的簽章別名，或提供不同的實作中使用明確覆寫的有相同的簽章的方法。  
+ 使用明確覆寫來建立別名方法簽章，或提供不同的實作方法 witht 相同的簽章的。  
   
- 如需修改繼承型別和繼承型別成員行為的詳細資訊，請參閱 [覆寫規範](../windows/override-specifiers-cpp-component-extensions.md)。  
+ 如需修改繼承型別和繼承的型別成員的行為的詳細資訊，請參閱[覆寫規範](../windows/override-specifiers-cpp-component-extensions.md)。  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
+## <a name="windows-runtime"></a>Windows 執行階段  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **備註**  
   
- 如需明確覆寫的資訊以機器碼或程式碼編譯 **\/clr:oldSyntax**，請參閱 [明確覆寫](../cpp/explicit-overrides-cpp.md)。  
+ 明確的相關資訊會覆寫原生程式碼或程式碼使用編譯**/clr:oldSyntax**，請參閱[明確覆寫](../cpp/explicit-overrides-cpp.md)。  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
- 下列程式碼範例顯示成員的簡單，隱含覆寫和實作的基底介面，而非使用明確覆寫。  
+ 下列程式碼範例顯示簡單、 隱含覆寫和成員的實作在基底介面中，不使用明確覆寫。  
   
 ```  
 // explicit_override_1.cpp  
@@ -92,11 +93,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **I1::f 的 X::f 覆寫** **範例**  
+```Output  
+X::f override of I1::f  
+```  
   
- 下列程式碼範例示範如何使用明確覆寫語法實作具有通用簽章的所有介面成員。  
+ **範例**  
+  
+ 下列程式碼範例示範如何實作所有介面成員具有通用的簽章中，使用明確覆寫語法。  
   
 ```  
   
@@ -124,12 +129,16 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **X::f override of I1::f and I2::f**  
- **X::f override of I1::f and I2::f** **範例**  
+```Output  
+X::f override of I1::f and I2::f  
+X::f override of I1::f and I2::f  
+```  
   
- 下列程式碼範例顯示了函式覆寫方式都有自己從函式不同的名稱實作。  
+ **範例**  
+  
+ 下列程式碼範例顯示如何函式覆寫可以有不同的名稱，從它所實作的函式。  
   
 ```  
 // explicit_override_3.cpp  
@@ -151,11 +160,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **X::g** **範例**  
+```Output  
+X::g  
+```  
   
- 下列程式碼範例將示範實作型別安全集合的明確介面實作。  
+ **範例**  
+  
+ 下列程式碼範例將示範實作型別安全的集合是明確介面實作。  
   
 ```  
 // explicit_override_4.cpp  
@@ -180,5 +193,5 @@ public:
 };  
 ```  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

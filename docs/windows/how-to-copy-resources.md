@@ -23,11 +23,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e3ec6fad52a5f999ada9e4ce6df608098c28399c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4ac30e57c0c833f5d26cf9aa8a9ed4ba43946bb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-copy-resources"></a>如何：複製資源
 您可以從一個檔案複製資源，到另一個，而不需要變更它們，或者您可以[變更語言或條件的資源，同時將它複製](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md)。  
@@ -64,13 +67,13 @@ ms.lasthandoff: 10/24/2017
     > [!NOTE]
     >  若要避免衝突的符號名稱或現有的檔案中的值，Visual c + + 可能會變更傳送的資源的符號值或符號名稱和值時將它複製到新的檔案。  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何： 開啟專案 （獨立） 外的資源指令碼檔案](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
  [資源檔](../windows/resource-files-visual-studio.md)   
  [資源編輯器](../windows/resource-editors.md)

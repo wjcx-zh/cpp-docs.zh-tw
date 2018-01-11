@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a30ad3887ace197276556aab929a7d16ae7922e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa4c69e79a918d7b8cf77e03f76c81e846d5a5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread-safety-in-the-c-standard-library"></a>C++ 標準程式庫中的執行緒安全
 下列執行緒安全性規則適用於 C++ 標準程式庫中的所有類別 (這包括 `shared_ptr`)，如下所述。  有時會提供較強的保證，例如，標準 iostream 物件 (如下所述)，以及特別用來進行多執行緒處理的類型 (如 [\<atomic>](../standard-library/atomic.md) 中的類型)。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  從資料流緩衝區中讀取，不視為讀取作業。 而是視為寫入作業，因為類別的狀態已變更。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
 
 

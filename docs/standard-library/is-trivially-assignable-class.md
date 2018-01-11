@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_trivially_assignable
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_trivially_assignable
+f1_keywords: type_traits/std::is_trivially_assignable
+dev_langs: C++
+helpviewer_keywords: is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 888c57de7cf83dda35f5d0cc114abed30fbb2115
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: d37d4c827a082f7db179d4fb7014cba371103e71
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable 類別
 測試是否可將 `From` 類型的值透過極簡方式指派給 `To` 類型  
@@ -52,9 +49,8 @@ struct is_trivially_assignable;
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

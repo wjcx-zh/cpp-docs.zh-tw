@@ -39,11 +39,12 @@ caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8b4172167a60425603bb25acff5670a5901c307
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 770a1cec528355d6f7be7800ba1f77f2394bef79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl 類別
 `CMFCListCtrl`類別會擴充功能的[CListCtrl 類別](../../mfc/reference/clistctrl-class.md)類別所支援的進階標頭控制項功能[CMFCHeaderCtrl 類別](../../mfc/reference/cmfcheaderctrl-class.md)。  
@@ -54,11 +55,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCListCtrl : public CListCtrl  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCListCtrl::EnableMarkSortedColumn](#enablemarksortedcolumn)|可讓您將已排序的資料行具有不同的背景色彩標示。|  
 |[CMFCListCtrl::EnableMultipleSort](#enablemultiplesort)|可讓多個排序模式。|  
@@ -105,10 +106,10 @@ void EnableMarkSortedColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bMark`  
+ [輸入] `bMark`  
  布林值參數，決定是否要啟用不同的背景色彩。  
   
- [in] `bRedraw`  
+ [輸入] `bRedraw`  
  布林值參數，決定是否要立即重繪控制項。  
   
 ### <a name="remarks"></a>備註  
@@ -122,7 +123,7 @@ void EnableMultipleSort(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  布林值，指定是否要啟用多個資料行排序模式。  
   
 ### <a name="remarks"></a>備註  
@@ -165,13 +166,13 @@ virtual int OnCompareItems(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lParam1`  
+ [輸入] `lParam1`  
  要比較的第一個項目。  
   
- [in] `lParam2`  
+ [輸入] `lParam2`  
  要比較的第二個項目。  
   
- [in] `iColumn`  
+ [輸入] `iColumn`  
  這個方法會排序資料行的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -190,10 +191,10 @@ virtual COLORREF OnGetCellBkColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRow`  
+ [輸入] `nRow`  
  有問題的儲存格的資料列。  
   
- [in] `nColumn`  
+ [輸入] `nColumn`  
  有問題的儲存格的資料行。  
   
 ### <a name="return-value"></a>傳回值  
@@ -213,13 +214,13 @@ virtual HFONT OnGetCellFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRow`  
+ [輸入] `nRow`  
  有問題的儲存格的資料列。  
   
- [in] `nColumn`  
+ [輸入] `nColumn`  
  有問題的儲存格的資料行。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  使用者定義的資料。 預設實作不使用這個參數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -238,10 +239,10 @@ virtual COLORREF OnGetCellTextColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nRow`  
+ [輸入] `nRow`  
  有問題的儲存格的資料列。  
   
- [in] `nColumn`  
+ [輸入] `nColumn`  
  有問題的儲存格的資料行。  
   
 ### <a name="return-value"></a>傳回值  
@@ -258,7 +259,7 @@ void RemoveSortColumn(int iColumn);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iColumn`  
+ [輸入] `iColumn`  
  若要移除資料行。  
   
 ### <a name="remarks"></a>備註  
@@ -275,13 +276,13 @@ void SetSortColumn(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iColumn`  
+ [輸入] `iColumn`  
  若要排序資料行。  
   
- [in] `bAscending`  
+ [輸入] `bAscending`  
  布林值，指定排序次序。  
   
- [in] `bAdd`  
+ [輸入] `bAdd`  
  布林值，指定方法是否會將所指定的資料行`iColumn`排序資料行的清單。  
   
 ### <a name="remarks"></a>備註  
@@ -298,16 +299,16 @@ virtual void Sort(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iColumn`  
+ [輸入] `iColumn`  
  若要排序資料行。  
   
- [in] `bAscending`  
+ [輸入] `bAscending`  
  布林值，指定排序次序。  
   
- [in] `bAdd`  
+ [輸入] `bAdd`  
  布林值，指定是否此方法會將所指定的資料行`iColumn`排序資料行的清單。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CListCtrl 類別](../../mfc/reference/clistctrl-class.md)

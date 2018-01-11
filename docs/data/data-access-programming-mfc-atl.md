@@ -1,79 +1,47 @@
 ---
-title: "Data Access Programming (MFC/ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料 [C++], 資料存取技術"
-  - "資料存取 [C++], 資料庫的類別庫"
-  - "資料庫 [C++], MFC"
-  - "MFC [C++], 資料存取應用程式"
-  - "OLE DB [C++], 資料存取技術"
+title: "資料存取程式設計 (MFC ATL) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], data access applications
+- databases [C++], MFC
+- OLE DB [C++], data access technologies
+- data [C++], data access technologies
+- data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 06ab0ff17db77975d365280b6ee95cafb094db3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Data Access Programming (MFC/ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="data-access-programming-mfcatl"></a>Data Access Programming (MFC/ATL)
+Visual C++ 多年來提供了數種使用資料庫的方式。 2011 年，Microsoft 宣佈它正在校準 ODBC 做為慣用技術，以從原生程式碼存取 SQL Server 產品。 ODBC 是一種業界標準，使用它可讓您在多個平台和資料來源間自由攜帶程式碼。 大多數的 SQL 資料庫產品和許多 NoSQL 產品都支援 ODBC。 您可以呼叫低階的 ODBC API 直接使用 ODBC，或者可以使用 MFC ODBC 包裝函式類別，或協力廠商的 C++ 包裝函式程式庫。 
 
-Visual C\+\+ 提供數種使用資料庫的方式。  慣用方法是使用其中一種類別庫，例如 Active Template Class Library \(ATL\) 或 Microsoft Foundation Class \(MFC\) 程式庫，簡化使用資料庫 API。  
+OLE DB 是以 COM 規格為基礎的低階高效 API，只有 Windows 提供支援。 如果您的程式正在存取[連結的伺服器](/sql/relational-databases/linked-servers/linked-servers-database-engine)，請使用 OLE DB。 ATL 提供 OLE DB 範本，讓您更容易建立自訂的 OLE DB 提供者和取用者。 OLE DB 最新版本隨附於 SQL Native Client 11。  
+
+如果舊版應用程式使用 OLE DB 或更高階的 ADO 介面連接到 SQL Server，而您存取的不是連結的伺服器，您應該考慮於近期移轉到 ODBC。 如果您不需要跨平台可攜性或最新的 SQL Server 功能，您可能可以使用 Microsoft OLE DB Provider for ODBC (MSDASQL)。  MSDASQL 讓建置在 OLE DB 和 ADO (在內部使用 OLEDB) 上的應用程式透過 ODBC 驅動程式存取資料來源。 和所有的轉譯層一樣，MSDASQL 會影響資料庫效能。 您應該測試以判斷此影響對您的應用程式是否太過。 MSDASQL 隨附於 Windows 作業系統，而 Windows Server 2008 和 Windows Vista SP1 是第一批包含此技術 64 位元版本的 Windows 版本。
+
+將 OLE DB 和 ODBC 驅動程式封裝在單一 DLL 的 SQL Native Client 元件 (SNAC)，已被 ODBC 應用程式取代。 SNAC 的 SQL Server 2012 版本 (SQLNCLI11.DLL) 隨附於 SQL Server 2016，因為其他的 SQL Server 元件都依存於它。 但是，透過 ODBC 連接到 SQL Server 或 Azure SQL Database 的新 C++ 應用程式，都應該使用[最新版的 ODBC 驅動程式](https://docs.microsoft.com/en-us/sql/connect/odbc/download-odbc-driver-for-sql-server)。 如需詳細資訊，請參閱 [SQL Server Native Client Programming](/sql/relational-databases/native-client/sql-server-native-client-programming) (SQL Server Native Client 程式設計)
+
+如果您使用 C++/CLI，就可以繼續像平常一樣使用 ADO.NET。 如需詳細資訊，請參閱[使用 ADO.NET 存取資料 (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md) 和[存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)。  
   
-> [!NOTE]
->  本主題內容涵蓋可用於 Visual C\+\+ 資料庫程式設計的舊技術。  如需使用 Visual C\+\+ 和 SQL Server 2005 的資料存取程式設計資訊，請參閱[資料存取](../dotnet/data-access-using-adonet-cpp-cli.md)、[存取 Visual Studio 中的資料](../Topic/Accessing%20data%20in%20Visual%20Studio.md) 和[Creating SQL Server 2005 Objects In Managed Code](http://msdn.microsoft.com/zh-tw/5358a825-e19b-49aa-8214-674ce5fed1da)。  
-  
- 程式庫類別支援下列幾種資料存取：  
-  
--   ATL 提供 OLE DB 範本和資料庫屬性。  
-  
--   MFC 提供開放式資料庫連接 \(ODBC\) 和 ODBC 驅動程式。  
-  
- 這些程式庫提供抽象概念，以簡化使用資料庫，完整獲得 C\+\+ 的速度、強大功能及彈性。  它們會將您的資料存取工作與程式庫的應用程式架構加以整合。  
-  
- 或者，您可以從 COM、ODBC 或 DAO 軟體開發套件 \(SDK\)，直接呼叫資料庫 API 函式。  如需直接以 COM、DAO 或 ODBC API 函式進行程式設計的相關資訊，請參閱 COM SDK、DAO SDK 或 ODBC SDK。  
-  
- 如果您需要存取資料，請使用 ATL OLE DB，不論它是以何種形式儲存。  當您不使用 Microsoft Jet \(.mdb\) 資料庫，並且想要針對完整且獨立的資料來源使用 ODBC API，則請使用 MFC ODBC 類別。  當您想要使用 Microsoft Jet \(.mdb\) 資料庫，或使用 ODBC 資料來源之類的外部資料庫，請使用 MFC DAO 類別。  
-  
-> [!NOTE]
->  Microsoft 建議為新專案使用 OLE DB 或 ODBC。  DAO 應僅用於維護現有應用程式。  
-  
- 除了撰寫獨立的資料庫應用程式，您通常還可以在其他種類的程式中有效地使用資料庫，當做方便的儲存體和擷取媒體。  
-  
-|若要深入了解|請參閱|  
-|------------|---------|  
-|**選取資料庫技術**||  
-|ODBC 與  DAO|[我應該使用 DAO 或是 ODBC？](../data/should-i-use-dao-or-odbc-q.md)|  
-|使用「Microsoft 知識庫」找到由產品支援工程師所撰寫的其他資料庫主題文章。|[Microsoft 知識庫](../data/where-can-i-find-microsoft-knowledge-base-articles-on-database-topics-q.md)|  
-|**ATL 資料庫支援 \(OLE DB\)**||  
-|OLE DB 程式設計 \(概念性主題\)|[OLE DB 程式設計概觀](../data/oledb/ole-db-programming-overview.md)|  
-|使用 OLE DB 取用者範本 \(概念性主題\)|[OLE DB 消費者樣板](../data/oledb/ole-db-consumer-templates-cpp.md)|  
-|OLE DB 取用者屬性|[OLE DB 消費者屬性](../windows/ole-db-consumer-attributes.md)|  
-|使用 OLE DB 提供者範本 \(概念性主題\)|[OLE DB 提供者樣板](../data/oledb/ole-db-provider-templates-cpp.md)|  
-|將 OLE DB 取用者加入至 MFC 專案|[建立 OLE DB 消費者](../data/oledb/creating-an-ole-db-consumer.md)|  
-|**MFC 資料庫支援 \(ODBC 和 DAO\)**||  
-|什麼是 DAO 和 ODBC|[什麼是 DAO 和 ODBC？](../data/what-are-dao-and-odbc-q.md)|  
-|何時使用 MFC 資料庫類別|[我何時應該使用資料庫類別？](../data/when-should-i-use-the-database-classes-q.md)|  
-|深入了解 MFC 資料庫程式設計模型|[MFC 資料庫程式撰寫模型是什麼？](../data/what-is-the-mfc-database-programming-model-q.md)|  
-|MFC DAO 類別和 MFC ODBC 類別間的選擇|[我應該使用 DAO 或是 ODBC？](../data/should-i-use-dao-or-odbc-q.md)|  
-|您可以使用 DAO 和 ODBC 存取的資料來源|[我可以使用 DAO 和 ODBC 存取何種資料來源？](../data/what-data-sources-can-i-access-with-dao-and-odbc-q.md)|  
-|開放式資料庫連接 \(ODBC\)|[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)|  
-|使用類別時是否可以直接呼叫 DAO 或 ODBC API|[我可以直接呼叫 DAO 或 ODBC 嗎？](../data/can-i-call-dao-or-odbc-directly-q.md)|  
-|提供哪些 ODBC 驅動程式|[ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)|  
-|資料庫類別搭配 MFC 的文件\/檢視架構的運作方式|[MFC：使用具有文件和檢視的資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)|  
-|安裝 MFC 資料庫支援；預設會在 Visual C\+\+ 中安裝哪些 ODBC 驅動程式；會安裝哪些 ODBC 和 DAO SDK 元件|[安裝 MFC 資料庫支援](../data/installing-mfc-database-support.md)|  
-|**資料繫結控制項 \(ADO 和 RDO\)**||  
-|撰寫使用資料繫結控制項的程式|[資料繫結控制項 \(ADO 和 RDO\)](../data/ado-rdo/data-bound-controls-ado-and-rdo.md)|  
-|使用 ActiveX 控制項的資料繫結|[MFC ActiveX 控制項：在 ActiveX 控制項中使用資料繫結](../mfc/mfc-activex-controls-using-data-binding-in-an-activex-control.md)|  
-|散發 ActiveX 控制項|[MFC ActiveX 控制項：散發 ActiveX 控制項](../mfc/mfc-activex-controls-distributing-activex-controls.md)|  
-  
-## 請參閱  
- [資料存取](../Topic/Data%20Access%20in%20Visual%20C++.md)
+-   除了 ODBC 包裝函式類別，MFC 也提供資料存取物件 (DAO) 包裝函式類別連接到 Access 資料庫。  不過，DAO 已淘汰。 所有以 CDaoDatabase 或 CDaoRecordset 為基礎的程式碼都應該升級。 
+
+如需 Microsoft Windows 資料存取技術記錄的相關資訊，請參閱 [Microsoft Data Access Components (Wikipedia)](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components) (Microsoft 資料存取元件 (維基百科))。  
+
+## <a name="see-also"></a>請參閱  
+ [資料存取](data-access-in-cpp.md) [Microsoft 開啟資料庫連接 (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc) [資料存取技術藍圖](https://msdn.microsoft.com/en-us/library/ms810810.aspx)

@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb052c27888bf168206c80fc06edd24034880433
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 42af11d58804a000e630d916cd5887c5005aa955
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="marshalcontextmarshalcontext"></a>marshal_context::~marshal_context
 終結 `marshal_context` 物件。  
@@ -45,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
  **命名空間：** msclr::interop  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 中封送處理概觀](../dotnet/overview-of-marshaling-in-cpp.md)   
  [marshal_as](../dotnet/marshal-as.md)   
  [marshal_context 類別](../dotnet/marshal-context-class.md)

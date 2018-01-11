@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ea8e4e4478b47a333facfbb38bfeb856ef08fe3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b86ce9f5b27e7dc51cbebdbbd24b90dd9effa5fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessorgetordinal"></a>CDynamicAccessor::GetOrdinal
 擷取指定資料行名稱的資料行數目。  
@@ -56,5 +59,5 @@ bool GetOrdinal(
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54ca4b0d1306eb30343b405b21dd56d8419ba1b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 48c88a01bbab5bb6fe6742d568db2f6c8cf11bcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-deque-stlclr"></a>運算子&lt;(deque) (STL/CLR)
 Deque 小於比較。  
@@ -93,7 +96,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [運算子 = = (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)   
  [deque:: operator ！ = (STL/CLR)](../dotnet/deque-operator-inequality-stl-clr.md)   

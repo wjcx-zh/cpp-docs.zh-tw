@@ -1,92 +1,91 @@
 ---
-title: "init_seg | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.init_seg"
-  - "init_seg_CPP"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "資料區段初始化 [C++]"
-  - "init_seg pragma"
-  - "Pragma, init_seg"
+title: "init_seg |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.init_seg
+- init_seg_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, init_seg
+- init_seg pragma
+- data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 69036ffba2143d166c9ac5c55a5b3ec9008b75bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# init_seg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**C\+\+ 專有的**  
+# <a name="initseg"></a>init_seg
+**C + + 特定的**  
   
  指定會影響啟始程式碼執行順序的關鍵字或程式碼區段。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
 #pragma init_seg({ compiler | lib | user | "section-name" [, func-name]} )  
 ```  
   
-## 備註  
- 在本主題中，「*區段*」\(Segment\) 和「*區段*」\(Section\) 這兩個詞的意義可互換。  
+## <a name="remarks"></a>備註  
+ 意義*區段*和*區段*是本主題中的可互換的。  
   
- 由於全域靜態物件的初始化可能牽涉到執行程式碼，因此您必須指定關鍵字以定義何時建構物件。  在需要初始化的動態連結程式庫 \(DLL\) 或程式庫中使用 **init\_seg** pragma 特別重要。  
+ 由於全域靜態物件的初始化可能牽涉到執行程式碼，因此您必須指定關鍵字以定義何時建構物件。 請務必特別使用**init_seg** pragma 在動態連結程式庫 (Dll) 或程式庫需要初始化。  
   
- **init\_seg** pragma 的選項包括：  
+ 所要的選項**init_seg** pragma 會：  
   
- **compiler**  
- 針對 Microsoft C 執行階段程式庫初始化保留。  這個群組中的物件會最先結構。  
+ **編譯器**  
+ 針對 Microsoft C 執行階段程式庫初始化保留。 這個群組中的物件會最先結構。  
   
  **lib**  
- 可供協力廠商類別程式庫廠商進行初始化。  這個群組中的物件會在標記為 **compiler** 的物件之後、任何其他物件之前建構。  
+ 可供協力廠商類別程式庫廠商進行初始化。 此群組中的物件建構後不久標示為**編譯器**之前的任何其他。  
   
- **User \- 使用者**  
- 可供任何使用者使用。  這個群組中的物件會最後結構。  
+ **使用者**  
+ 可供任何使用者使用。 這個群組中的物件會最後結構。  
   
- *section\-name*  
- 允許明確指定初始化區段。  在使用者指定之 *section\-name* 中的物件不會隱含建構，不過，其位址會放在以 *section\-name* 命名的區段中。  
+ *區段名稱*  
+ 允許明確指定初始化區段。 在使用者指定的物件*區段名稱*不會隱含建構; 不過，其位址會放在名為區段*區段名稱*。  
   
  您提供的區段名稱將包含 Helper 函式的指標，這類函式將建構在該模組中 pragma 後面宣告的全域物件。  
   
- 如需建立區段時不應該使用的名稱清單，請參閱 [\/SECTION](../build/reference/section-specify-section-attributes.md)。  
+ 如需建立區段時，不應該使用的名稱，請參閱[/section](../build/reference/section-specify-section-attributes.md)。  
   
- *func\-name*  
- 指定程式結束時，要取代 `atexit` 呼叫的函式。  這個 Helper 函式也會使用全域物件的解構函式指標呼叫 [atexit](../c-runtime-library/reference/atexit.md)。  如果您使用下列形式的 pragma 指定函式識別項：  
+ *函式名稱*  
+ 指定程式結束時，要取代 `atexit` 呼叫的函式。 這個 helper 函式也會呼叫[atexit](../c-runtime-library/reference/atexit.md)與全域物件的解構函式的指標。 如果您使用下列形式的 pragma 指定函式識別項：  
   
 ```  
 int __cdecl myexit (void (__cdecl *pf)(void))  
 ```  
   
- 那麼將會呼叫您的函式，而不是 C 執行階段程式庫的 `atexit`。  這樣可讓您建立在您準備好終結物件時，需要呼叫的解構函式清單。  
+ 那麼將會呼叫您的函式，而不是 C 執行階段程式庫的 `atexit`。 這樣可讓您建立在您準備好終結物件時，需要呼叫的解構函式清單。  
   
- 如果您需要延遲初始化 \(例如在 DLL 中\)，可以選擇明確指定區段名稱。  然後您必須呼叫每個靜態物件的建構函式。  
+ 如果您需要延遲初始化 (例如在 DLL 中)，可以選擇明確指定區段名稱。 然後您必須呼叫每個靜態物件的建構函式。  
   
  取代 `atexit` 的識別項前後沒有引號。  
   
- 您的物件仍將放在其他 XXX\_seg pragma 所定義的區段中。  
+ 您的物件仍將放在其他 XXX_seg pragma 所定義的區段中。  
   
- C 執行階段將不會自動初始化模組中宣告的物件。  您將需要自行進行這項作業。  
+ C 執行階段將不會自動初始化模組中宣告的物件。 您將需要自行進行這項作業。  
   
- 根據預設，`init_seg` 區段是唯讀的。  如果區段名稱是 .CRT，即使屬性標記為讀取、寫入，編譯器仍會以無訊息方式將屬性變更為唯讀。  
+ 根據預設，`init_seg` 區段是唯讀的。 如果區段名稱是 .CRT，即使屬性標記為讀取、寫入，編譯器仍會以無訊息方式將屬性變更為唯讀。  
   
- 在轉譯單位中不可以重複指定 **init\_seg**。  
+ 您無法指定**init_seg**不止一次的轉譯單位中。  
   
- 即使您的物件沒有使用者定義的建構函式 \(未在程式碼中明確定義的建構函式\)，編譯器仍可能會產生這類建構函式 \(例如，用於繫結 v\-table 指標\)。因此，您的程式碼必須呼叫編譯器產生的建構函式。  
+ 即使您的物件沒有使用者定義的建構函式 (未在程式碼中明確定義的建構函式)，編譯器仍可能會產生這類建構函式 (例如，用於繫結 v-table 指標)。  因此，您的程式碼必須呼叫編譯器產生的建構函式。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // pragma_directive_init_seg.cpp  
@@ -158,11 +157,14 @@ int main () {
 }  
 ```  
   
-  **A\(\)**  
-**A\(\)**  
-**A\(\)**  
-**~A\(\)**  
-**~A\(\)**  
-**~A\(\)**   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+A()  
+A()  
+A()  
+~A()  
+~A()  
+~A()  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

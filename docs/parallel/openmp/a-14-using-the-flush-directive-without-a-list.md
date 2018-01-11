@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb948476b52cdf76e0a114bed5c95f46bb6ba86e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2a88558de3c04f1ae05922b1ad5bc7f63aed996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a14---using-the-flush-directive-without-a-list"></a>A.14 使用 flush 指示詞不搭配清單
 下列範例 (如[區段 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md)在 20 頁面上) 區分出受影響的共用的物件`flush`指示詞沒有從共用不受影響的物件清單：  

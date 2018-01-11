@@ -43,17 +43,18 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d19a16635f3e7d0469b8be8244c3484e733ef94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fb036640c10a803eb5dd910c51335409ffdfcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat、_mbsnbcat_l
 最多將某個多位元組字元字串的前 `n` 個位元組附加到另一個多位元組字元字串。 這些函式已有更安全的版本可用，請參閱 [_mbsnbcat_s、_mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md)。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -103,7 +104,7 @@ unsigned char *_mbsnbcat_l(
 ## <a name="remarks"></a>備註  
  `_mbsnbcat` 函式最多會將 `src` 的前 `count` 個位元組附加至 `dest`。 如果緊接在 `dest` 中之 Null 字元之前的位元組是前導位元組，則 `src` 的初始位元組會覆寫此前導位元組。 否則，`src` 的初始位元組會覆寫 `dest` 之結束的 null 字元。 如果在已附加 `count` 個位元組之前，於 `src` 出現 null 位元組，則 `_mbsnbcat` 會附加 `src` 之中直到該 null 字元為止的所有位元組。 如果 `count` 大於 `src` 的長度，則會使用 `src` 的長度來取代 `count`。 此產生的字串會以 Null 字元結束。 如果在重疊的字串之間執行複製，則行為是未定義的。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個函式的 `_mbsnbcat` 版本會針對此與地區設定相關的行為使用目前的地區設定；`_mbsnbcat_l` 版本與其相同，只不過它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這個函式的 `_mbsnbcat` 版本會針對此與地區設定相關的行為使用目前的地區設定；`_mbsnbcat_l` 版本與其相同，只不過它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  **安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](http://msdn.microsoft.com/library/windows/desktop/ms717795)。  
   
@@ -120,14 +121,14 @@ unsigned char *_mbsnbcat_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_mbsnbcat`|\<mbstring.h>|  
 |`_mbsnbcat_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [_mbsnbcmp、_mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
  [_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   

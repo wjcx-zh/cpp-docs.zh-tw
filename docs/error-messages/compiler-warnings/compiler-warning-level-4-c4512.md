@@ -1,48 +1,47 @@
 ---
-title: "編譯器警告 (層級 4) C4512 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4512"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4512"
+title: "編譯器警告 （層級 4） C4512 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4512
+dev_langs: C++
+helpviewer_keywords: C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dd2e50f97cfc0242e1ac4af93f2d6609ff4b59cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 4) C4512
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-4-c4512"></a>編譯器警告 (層級 4) C4512
 'class'：無法產生指派運算子  
   
- 編譯器無法為指定的類別產生指派運算子。  未建立任何指派運算子。  
+ 編譯器無法為指定的類別產生指派運算子。 未建立任何指派運算子。  
   
  衍生類別所無法存取的基底類別之指派運算子可能會導致此警告。  
   
  若要避免這個警告，請為該類別指定使用者定義的指派運算子。  
   
- 編譯器也會為未定義的類別產生指派運算子函式。  此指派運算子是物件資料成員的成員複本。  由於在初始設定之後無法修改 `const` 資料項目，因此如果類別含有 `const` 項目，則預設指派運算子將無法運作。  C4512 警告的另一個原因是宣告參考類型的非靜態資料成員。  如果目的是要建立不可複製的類型，您也必須防止建立預設複製建構函式。  
+ 編譯器也會為未定義的類別產生指派運算子函式。 此指派運算子是物件資料成員的成員複本。 由於在初始設定之後無法修改 `const` 資料項目，因此如果類別含有 `const` 項目，則預設指派運算子將無法運作。 C4512 警告的另一個原因是宣告參考類型的非靜態資料成員。 如果目的是要建立不可複製的類型，您也必須防止建立預設複製建構函式。  
   
  您可以用三種方式之一來解決程式碼的 C4512 警告：  
   
 -   明確地定義類別的指派運算子。  
   
--   從類別中的資料項目移除 **const** 或參考運算子。  
+-   移除**const**或參考運算子，從資料中的項目類別。  
   
--   使用 \#pragma [warning](../../preprocessor/warning.md) 陳述式隱藏警告。  
+-   使用 #pragma[警告](../../preprocessor/warning.md)來隱藏警告的陳述式。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4512。  
   
 ```  
@@ -94,5 +93,4 @@ int main() {
    Base3 first3(c);  
    Base3 second3 = first3; // C2280 if no default copy ctor  
 }  
-  
 ```

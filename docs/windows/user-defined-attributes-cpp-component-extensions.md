@@ -1,67 +1,69 @@
 ---
-title: "User-Defined Attributes  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "metadata, extending"
-  - "custom attributes, extending metadata"
+title: "使用者定義屬性 （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- metadata, extending
+- custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-caps.latest.revision: 27
-caps.handback.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d974e8526f983801ed011520f7f78ff8c6cb564
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# User-Defined Attributes  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-自訂屬性可讓您擴充介面的中繼資料、類別或結構、方法、參數或列舉型別。  
+# <a name="user-defined-attributes--c-component-extensions"></a>使用者定義屬性 (C++ 元件擴充功能)
+自訂屬性可讓您擴充的介面、 類別或結構、 方法、 參數或列舉型別中繼資料。  
   
-## 所有執行階段  
- 所有執行階段支援自訂屬性。  
+## <a name="all-runtimes"></a>所有執行階段  
+ 所有執行階段支援的自訂屬性。  
   
-## Windows Runtime \- Windows 執行階段  
- C\+\+\/C 屬性僅支援屬性，不過，沒有屬性的建構函式或方法。  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ C + + /CX 屬性支援只有屬性，但不是屬性建構函式或方法。  
   
-### 備註  
+### <a name="remarks"></a>備註  
   
-### 需求  
- 編譯器選項：**\/ZW**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/ZW**  
   
-## Common Language Runtime  
- 自訂屬性可以讓您擴充 Managed 項目的中繼資料。  如需詳細資訊，請參閱[屬性](../Topic/Extending%20Metadata%20Using%20Attributes.md)。  
+## <a name="common-language-runtime"></a>Common Language Runtime  
+ 自訂屬性可以讓您擴充的受管理的項目中繼資料。 如需詳細資訊，請參閱[屬性](/dotnet/standard/attributes/index)。  
   
-### 備註  
- 本主題和語法提出的資訊視為代替 [attribute](../windows/attribute.md)中顯示的資訊。  
+### <a name="remarks"></a>備註  
+ 此主題中呈現的語法與資訊用來取代所顯示的資訊[屬性](../windows/attribute.md)。  
   
- 您可以定義型別且 <xref:System.Attribute> 型別的基底類別和選擇性套用 <xref:System.AttributeUsageAttribute> 屬性定義自訂屬性。  
+ 您可以定義自訂屬性定義型別，並進行<xref:System.Attribute>基底類別的類型和選擇性地套用<xref:System.AttributeUsageAttribute>屬性。  
   
- 例如，在 Microsoft 交易 Server \(MTS\) 1.0，如需交易的行為，同步，負載平衡，依此類推使用 ODL 自訂屬性將自訂 GUID 指定的插入至型別程式庫。  因此， MTS 伺服器的用戶端可以讀取型別判斷其特性程式庫。  在 .NET Framework 中，這個型別程式庫的類比是中繼資料，因此，ODL 自訂屬性的型別會是自訂屬性。  此外，讀取型別程式庫類似於使用型別上的反應。  
+ 比方說，在 Microsoft 交易伺服器 (MTS) 1.0，同步處理的交易而言，行為負載平衡，並透過自訂插入使用 ODL 自訂屬性的型別程式庫的 Guid 指定等等。 因此，MTS 伺服器的用戶端無法讀取類型程式庫來判斷其特性。 在.NET Framework 中，類型程式庫的類比是中繼資料，而 ODL 自訂屬性的類比是自訂屬性。 此外，讀取類型程式庫是類似於使用反映的類型。  
   
  如需詳細資訊，請參閱：  
   
--   [Attribute Targets](../windows/attribute-targets-cpp-component-extensions.md)  
+-   [屬性目標](../windows/attribute-targets-cpp-component-extensions.md)  
   
--   [Attribute Parameter Types](../windows/attribute-parameter-types-cpp-component-extensions.md)  
+-   [屬性參數類型](../windows/attribute-parameter-types-cpp-component-extensions.md)  
   
- 如需在 Visual C\+\+ 專案中簽署組件的詳細資訊，請參閱[強式名稱組件 \(組件簽署\)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
+ Visual c + + 中的簽署組件上的資訊，請參閱[強式名稱組件 （組件簽署） (C + + /CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
- 下列範例顯示如何定義一個自訂屬性：  
+ 下列範例會示範如何定義自訂屬性。  
   
 ```cpp  
 // user_defined_attributes.cpp  
@@ -80,7 +82,7 @@ ref class MyClass {};
   
  **範例**  
   
- 下列範例說明如何自訂屬性的一些重要功能。  例如，這個範例顯示自訂屬性的常見用法: 具現化可完整描述自己給用戶端的伺服器。  
+ 下列範例將說明一些重要功能的自訂屬性。 例如，此範例示範常見的自訂屬性的用法： 具現化完整用戶端描述自己的伺服器。  
   
 ```cpp  
 // extending_metadata_b.cpp  
@@ -155,20 +157,29 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **Service Priority \= 0**  
- **Service Access \= Write**  
- **Service Priority \= 3**  
- **Service Access \= Write**  
- **Service Priority \= 1**  
- **Service Access \= Read** **範例**  
+```Output  
+Service Priority = 0  
   
- Object^ 型別取代不同的資料型別。  下列範例會定義取得陣列 Object^ 做為參數的自訂屬性。  
+Service Access = Write  
   
- 屬性引數必須是編譯時期常數；在大部分情況下，它們應該是常數的文字。  
+Service Priority = 3  
   
- 請參閱 [typeid](../windows/typeid-cpp-component-extensions.md) 知道如何從自訂屬性區塊中傳回 System::Type 值的資訊。  
+Service Access = Write  
+  
+Service Priority = 1  
+  
+Service Access = Read  
+```  
+  
+ **範例**  
+  
+ 物件 ^ 類型會取代 variant 資料類型。 下列範例會定義的自訂屬性，會採用物件的陣列 ^ 做為參數。  
+  
+ 屬性引數必須是編譯時間常數。在大部分情況下，它們應該是常數常值。  
+  
+ 請參閱[typeid](../windows/typeid-cpp-component-extensions.md)如需有關如何從自訂屬性區塊中傳回值為 system:: type 資訊。  
   
 ```cpp  
 // extending_metadata_e.cpp  
@@ -188,7 +199,7 @@ public ref class SomeClass {};
   
  **範例**  
   
- 執行階段需要自訂屬性類別的 public 區段必須可序列化。當建立自訂屬性時，您的自訂屬性的具名引數僅限於編譯時期常數。\(想像為位元組序列附加至中繼資料的類別配置\)。  
+ 執行階段需要之公開部分的自訂屬性類別必須是可序列化。  撰寫自訂屬性時，您的自訂屬性的具名引數會受限於編譯時間常數。  （將其視為附加至您的類別配置的中繼資料中的位元的序列。）  
   
 ```cpp  
 // extending_metadata_f.cpp  
@@ -207,5 +218,5 @@ ref struct A : Attribute {
 ref struct B {};  
 ```  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

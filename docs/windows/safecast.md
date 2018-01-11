@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 24b1d0c99ebc4ea543ef9d3fd1bc269d4874f706
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4c3c9bb208cc2be2f91d8a464787d3299cd0b386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safecast"></a>SafeCast
 會轉換成其他類型的數字的一種類型。  
@@ -35,7 +38,7 @@ inline bool SafeCast (
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `From`  
+ [輸入] `From`  
  要轉換的來源點數。 這必須為類型 T。  
   
  [輸出] `To`  
@@ -57,7 +60,7 @@ inline bool SafeCast (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)

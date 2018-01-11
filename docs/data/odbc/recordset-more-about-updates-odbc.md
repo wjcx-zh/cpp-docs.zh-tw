@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f996a206ebac40a469f2fc540c5e23ce0f5c2733
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ad9042c4001fc1a0e0c8c8d19e5ac53b6312875
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-more-about-updates-odbc"></a>資料錄集：更多更新的詳細資訊 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -103,7 +106,7 @@ ms.lasthandoff: 10/24/2017
   
 -   **AFX_SQL_ERROR_MULTIPLE_ROWS_AFFECTED**當您要更新的資料表沒有主索引鍵或唯一索引，而且您沒有足夠的資料行中唯一識別資料表的資料列的資料錄集。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)   
  [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)   

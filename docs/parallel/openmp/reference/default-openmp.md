@@ -1,41 +1,40 @@
 ---
-title: "default (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default OpenMP clause"
-  - "defaults, OpenMP clause"
+title: "預設值 (OpenMP) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: default
+dev_langs: C++
+helpviewer_keywords:
+- default OpenMP clause
+- defaults, OpenMP clause
 ms.assetid: 96055106-a8f0-40b3-8319-e412b6e07bf8
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 25b1dd9eb2dcdd5a0a41992ed562ddd290014e25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# default (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定在平行區域中的 unscoped 變數的行為。  
+# <a name="default-openmp"></a>default (OpenMP)
+指定在平行區域不限範圍變數的行為。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 default(shared | none)  
 ```  
   
-## 備註  
- `shared`這實際上是如果`default`未指定子句，則表示在平行區域中的任何變數將會被視為如同在它被指定為使用[shared](../../../parallel/openmp/reference/shared-openmp.md)子句。  `none`指的不是範圍與在平行區域中使用的任何變數[private](../../../parallel/openmp/reference/private-openmp.md)， [shared](../../../parallel/openmp/reference/shared-openmp.md)， [reduction](../../../parallel/openmp/reference/reduction.md)， [firstprivate](../../../parallel/openmp/reference/firstprivate.md)，或[lastprivate](../../../parallel/openmp/reference/lastprivate.md)子句會引起編譯器錯誤。  
+## <a name="remarks"></a>備註  
+ `shared`這實際上是如果`default`未指定子句，表示，在平行區域中的任何變數會視為與指定[共用](../../../parallel/openmp/reference/shared-openmp.md)子句。 `none`表示不在範圍與在平行區域中所使用的任何變數[私人](../../../parallel/openmp/reference/private-openmp.md)，[共用](../../../parallel/openmp/reference/shared-openmp.md)，[減少](../../../parallel/openmp/reference/reduction.md)， [firstprivate](../../../parallel/openmp/reference/firstprivate.md)，或[lastprivate](../../../parallel/openmp/reference/lastprivate.md)子句會造成編譯器錯誤。  
   
  `default`適用於下列指示詞：  
   
@@ -43,12 +42,12 @@ default(shared | none)
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 如需詳細資訊，請參閱 [2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md)。  
+ 如需詳細資訊，請參閱[2.7.2.5 預設](../../../parallel/openmp/2-7-2-5-default.md)。  
   
-## 範例  
- 請參閱[private](../../../parallel/openmp/reference/private-openmp.md)的使用範例， `default`。  
+## <a name="example"></a>範例  
+ 請參閱[私人](../../../parallel/openmp/reference/private-openmp.md)的使用範例`default`。  
   
-## 請參閱  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>請參閱  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

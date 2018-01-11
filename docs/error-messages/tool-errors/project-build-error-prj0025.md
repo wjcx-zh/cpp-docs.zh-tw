@@ -1,35 +1,34 @@
 ---
-title: "專案建置錯誤 PRJ0025 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0025"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0025"
+title: "專案建置錯誤 PRJ0025 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0025
+dev_langs: C++
+helpviewer_keywords: PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8f99a57439e87e1841555c90326072ba1667b6b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 專案建置錯誤 PRJ0025
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-批次檔 'file' 包含無法轉譯成使用者 ANSI 字碼頁的 Unicode 內容。  
+# <a name="project-build-error-prj0025"></a>專案建置錯誤 PRJ0025
+批次檔 'file' 包含無法轉譯為使用者 ANSI 字碼頁的 Unicode 內容。  
   
- ***UNICODE 檔案內容***  
+ ***UNICODE 檔案的內容***  
   
- 專案系統發現：自訂組建 \(Build\) 規則或建置事件中的 Unicode 內容無法適當地轉譯為使用者目前的 ANSI 字碼頁。  
+ 專案系統找到 Unicode 內容中自訂建置規則，或建置無法正確轉譯成使用者的目前 ANSI 字碼頁的事件。  
   
- 這個錯誤的解決方法是，更新建置規則或建置事件的內容來使用 ANSI，或在您的電腦上安裝該字碼頁，並將它設為系統預設值。  
+ 此錯誤的解決方法是更新的建置規則的內容，或建置事件來使用 ANSI，或是在電腦上安裝的字碼頁，並將它設為系統預設值。  
   
- 如需自訂建置步驟和建置事件的詳細資訊，請參閱[瞭解自訂建置步驟和建置事件](../../ide/understanding-custom-build-steps-and-build-events.md)。
+ 如需有關自訂建置步驟和建置事件，請參閱[了解自訂建置步驟和建置事件](../../ide/understanding-custom-build-steps-and-build-events.md)。

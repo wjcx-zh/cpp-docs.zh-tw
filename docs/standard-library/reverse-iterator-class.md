@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 810f50a17dcdef3aac53462ac059a4aedd4343a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator 類別
 此樣板類別是迭代器配接器，描述行為類似隨機存取或雙向迭代器，只不過是反向方向的反向迭代器物件。 它啟用範圍的向後周遊。  
@@ -978,7 +979,7 @@ int main( )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<iterator>](../standard-library/iterator.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

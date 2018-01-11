@@ -18,11 +18,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 99cac71e9de9e4022b6d3f005dff2ff6520b99e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cdf9ccb65299af688fde2fbff7b3d6cedad6de96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 定義容器樣板函式執行數值處理提供的演算法。  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="functions"></a>函式  
   
-|函式|說明|  
+|功能|描述|  
 |--------------|-----------------|  
 |[accumulate (STL/CLR)](../dotnet/accumulate-stl-clr.md)|藉由計算連續的部分總和來計算指定範圍內所有元素 (包括某個初始值) 的總和，或是計算連續部分結果 (同樣是使用指定的二進位運算而非加總來計算出) 的結果。|  
 |[adjacent_difference (STL/CLR)](../dotnet/adjacent-difference-stl-clr.md)|計算在輸入範圍中每個項目及其前置項之間的後續差異並將結果輸出至目的範圍，或計算一般化程序的結果，其中由另一個指定的二進位運算取代差異作業。|  
@@ -47,5 +50,5 @@ ms.lasthandoff: 10/24/2017
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

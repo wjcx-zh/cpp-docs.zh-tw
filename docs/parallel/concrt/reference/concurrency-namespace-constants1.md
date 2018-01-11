@@ -19,18 +19,18 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae7ceb640e7b92829e4134350a6e6c97747bfd77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-constants"></a>concurrency 命名空間常數
 ||||  
@@ -195,6 +195,5 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
     { 0x2f27805f, 0x1676, 0x4ecc, { 0x96, 0xfa, 0x7e, 0xb0, 0x9d, 0x44, 0x30, 0x2f } };
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

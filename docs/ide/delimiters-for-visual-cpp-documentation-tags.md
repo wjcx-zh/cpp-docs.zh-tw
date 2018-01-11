@@ -1,49 +1,48 @@
 ---
-title: "Visual C++ 文件標記的分隔符號 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "XML 文件, 分隔符號"
+title: "Visual c + + 文件標籤的分隔符號 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 134605f86ef8019d34f5246fd75abbbf94d40fbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Visual C++ 文件標記的分隔符號
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用資料標記需要符號，指示編譯器文件註解開始處開始和結束。  
+# <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文件標記的分隔符號
+文件標籤的使用需要分隔符號，這表示編譯器的文件註解開始及結束的位置。  
   
- 您可以使用下列幾種分隔符號，以搭配 XML 文件標記使用：  
+ 您可以搭配使用下列類型的分隔符號與 XML 文件標記︰  
   
  `///`  
- 這是在文件範例顯示和 Visual C\+\+ 專案範本使用的表單。  
+ 這是文件範例所示，和 Visual c + + 專案範本所使用的表單。  
   
  `/** */`  
- 這些是多行的符號。  
+ 這些是多行的分隔符號。  
   
- 有一些格式化規則，當使用 `/** */` 符號時:  
+ 沒有使用格式化規則`/** */`分隔符號：  
   
--   包含 `/**`分隔符號的程式碼行，則為，如果程式碼行的其餘部分是空白字元，線條沒有為註解處理。  如果第一個字元是泛空白字元，該泛空白字元會被忽略，而且一行的其餘部分處理。  否則，在 `/**` 分隔符號之後的所有內容，都會當做註解的一部分來處理。  
+-   包含列`/**`分隔符號，如果該行的其餘部分為泛空白字元，則不會處理註解。 如果第一個字元是空白字元，空白字元會被忽略，與處理其餘的列。 否則，會將 `/**` 分隔符號後面的整行文字處理為註解的一部分。  
   
--   包含 `*/`符號的線條，則為，如果只有空白字元由 `*/` 符號決策，行被忽略。  否則，在 `*/` 分隔符號之前，程式碼行的文字將會當做註解的一部分來處理，並受制於下列項目符號中所描述的模式比對規則。  
+-   包含的那一行的`*/`分隔符號，如果有最多是只有空白字元`*/`分隔符號，該行會被忽略。 否則，根據下列項目符號中所述的模式比對規則，會將到 `*/` 分隔符號為止的整行文字都處理為註解的一部分。  
   
--   指定線條，從 `/**` 符號後開始，則編譯器會包含選擇性泛空白字元和星號的每一行開頭尋找一般模式 \(`*`\)，再加上更選擇性泛空白字元。  如果編譯器尋找通用字元在每一行的開頭，它在 `/**` 符號之後將忽略所有行的該模式，而且可以包含 `*/` 分隔符號的程式碼行。  
+-   之後的開頭行`/**`分隔符號，則編譯器會尋找常見的模式包含選擇性泛空白字元和星號每一行的開頭 (`*`)，後面接著選擇性更多的泛空白字元。 如果編譯器發現的每一行開頭的一組常用的字元，就會忽略所有的程式碼行之後, 該模式`/**`分隔符號，甚至可能包含的那一行`*/`分隔符號。  
   
- 以下是部分範例：  
+ 一些範例如下：  
   
--   下列註解中唯一會進行處理的部分，是以 `<summary>` 開頭的那行程式碼。  下列兩個標記格式會產生相同的註解:  
+-   下列註解中唯一會處理的部分是開頭為 `<summary>` 的那一行。 下列兩個標記格式會產生相同的註解：  
   
     ```  
     /**  
@@ -52,7 +51,7 @@ manager: "ghogen"
     /** <summary>text</summary> */  
     ```  
   
--   編譯器將樣式「\*」在第二和第三行首忽略。  
+-   編譯器套用模式，"*"要略過第二個和第三個線條的開頭。  
   
     ```  
     /**  
@@ -60,7 +59,7 @@ manager: "ghogen"
      *  text </summary>*/  
     ```  
   
--   因為在第二行中，星號編譯器不會出現在此註解的樣式。  因此，當做註解的一部分，在第二和第三行的所有文字，直到 `*/`，處理。  
+-   編譯器在這個註解中尋找任何模式，因為在第二行沒有任何星號。 因此，第二個和第三個線條上的所有文字向上到`*/`，將會處理做為註解的一部分。  
   
     ```  
     /**  
@@ -68,7 +67,7 @@ manager: "ghogen"
        text </summary>*/  
     ```  
   
--   編譯器原因有兩個不會出現在此註解的樣式。  首先，沒有從空間統一的一個星號之前的行。  其次，第五行程式碼以標籤做為開頭，與空白字元不相符。  因此，當做註解的一部分，從第二行中的所有文字直到 `*/` 處理。  
+-   編譯器在這個註解中尋找任何模式，原因有兩個。 首先，沒有列的開頭是星號前面的空格數一致。 其次，第五行的開頭是 Tab，這與空白字元不符。 因此，所有文字的第二行，直到從`*/`將註解的一部分處理。  
   
     ```  
     /**  
@@ -79,5 +78,5 @@ manager: "ghogen"
     */  
     ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

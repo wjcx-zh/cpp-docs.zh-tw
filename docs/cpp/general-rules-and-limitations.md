@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7295cfad3d5194de6a80a15e8e186089a0f033f
-ms.sourcegitcommit: ce115fcfb20b4fbc198f0f7b6d0ca3e94d7ce947
+ms.workload: cplusplus
+ms.openlocfilehash: 51f92844e993671a3423c04523ccf4e03f7f7e48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-rules-and-limitations"></a>一般規則和限制
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
                                      // dllexport takes precedence.  
     ```  
   
--   C + + 中，您可以初始化全域宣告或靜態區域資料指標或以宣告的資料物件位址**dllimport**屬性，會產生錯誤，在 c 中。此外，您可以初始化靜態區域函式指標宣告的函式的位址**dllimport**屬性。 在 C 中，此類指派會將指標設定為 DLL 匯入 Thunk (將控制權傳送至函式的程式碼 Stub) 的位址，而不是設定為函式的位址。 在 C++ 中，它會將指標設定為函式的位址。 例如：  
+-   C + + 中，您可以初始化全域宣告或靜態區域資料指標或以宣告的資料物件位址**dllimport**屬性，會產生錯誤，在 c 中。此外，您可以初始化靜態區域函式指標宣告的函式的位址**dllimport**屬性。 在 C 中，此類指派會將指標設定為 DLL 匯入 Thunk (將控制權傳送至函式的程式碼 Stub) 的位址，而不是設定為函式的位址。 在 C++ 中，它會將指標設定為函式的位址。 例如:   
   
     ```  
     __declspec( dllimport ) void func1( void );  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
   
 -   如果您套用`dllexport`未標示為基底類別的一般類別`dllexport`，編譯器會產生 C4275。  
   
-     如果基底類別是類別樣板的特製化，則編譯器會產生相同的警告。 若要解決這個問題，請為基底類別加上 `dllexport` 標記。 類別樣板的特製化的問題是放置**__declspec （dllexport)**; 不允許您標記類別樣板。 相反地，您可以明確的具現化類別樣板，以及明確地使用 `dllexport` 標記具現化。 例如：  
+     如果基底類別是類別樣板的特製化，則編譯器會產生相同的警告。 若要解決這個問題，請為基底類別加上 `dllexport` 標記。 類別樣板的特製化的問題是放置**__declspec （dllexport)**; 不允許您標記類別樣板。 相反地，您可以明確的具現化類別樣板，以及明確地使用 `dllexport` 標記具現化。 例如:   
   
     ```  
     template class __declspec(dllexport) B<int>;  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/31/2017
     // ...  
     ```  
   
-     如果樣板引數為衍生類別，則這個解決方法會失敗。 例如：  
+     如果樣板引數為衍生類別，則這個解決方法會失敗。 例如:   
   
     ```  
     class __declspec(dllexport) D : public B<D> {  
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/31/2017
     // ...  
     ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [dllexport、dllimport](../cpp/dllexport-dllimport.md)

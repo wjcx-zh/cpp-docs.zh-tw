@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f2d286bcc9e5119e373af6ae2e02d7e39190dc3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24d9992b8a9db679b30624d85ede1a35bfd9826d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callback-items-and-the-callback-mask"></a>回呼項目和回呼遮罩
 對於其各個項目中，清單檢視控制項通常會儲存標籤文字、項目圖示的影像清單索引，和一組用於項目狀態的位元旗標。 如果您的應用程式已經儲存某個項目的一些資訊，將個別項目定義為回呼項目會很有用。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
  如需擷取和設定這個遮罩的進一步資訊，請參閱[clistctrl:: Getcallbackmask](../mfc/reference/clistctrl-class.md#getcallbackmask)和[clistctrl:: Setcallbackmask](../mfc/reference/clistctrl-class.md#setcallbackmask)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CListCtrl](../mfc/using-clistctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

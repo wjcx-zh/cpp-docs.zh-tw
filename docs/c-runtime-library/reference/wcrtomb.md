@@ -33,11 +33,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c3da63f898e1bf1b218ae71d6918d09388667c6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c9dfe3b112754d573226fe992d346d57de56406
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcrtomb"></a>wcrtomb
 將寬字元轉換為其多位元組字元表示法。 此函式已有更安全的版本，請參閱 [wcrtomb_s](../../c-runtime-library/reference/wcrtomb-s.md)。  
@@ -65,7 +66,7 @@ size_t wcrtomb(
  [in] `wchar`  
  要轉換的寬字元。  
   
- [in] `mbstate`  
+ [輸入] `mbstate`  
  `mbstate_t` 物件的指標。  
   
 ## <a name="return-value"></a>傳回值  
@@ -78,7 +79,7 @@ size_t wcrtomb(
   
  `wcrtomb` 函式因為可以重新開機，而與 [wctomb、_wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) 不同。 針對相同或其他可重新啟動的函式的後續呼叫，轉換狀態會儲存在 `mbstate` 中。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了 `wcsrtombs` 的後續呼叫，而不是 `wcstombs`，應用程式應該使用 `wcsrlen`，而不是 `wcsnlen`。  
   
- 在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="exceptions"></a>例外狀況  
  `wcrtomb` 函式是安全多執行緒，但前提是當這個函式執行中、且 `mbstate` 為 Null 時，目前執行緒中沒有任何函式呼叫 `setlocale`。  
@@ -128,11 +129,11 @@ The corresponding wide character "Q" was converted to the "Q" multibyte characte
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`wcrtomb`|\<wchar.h>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

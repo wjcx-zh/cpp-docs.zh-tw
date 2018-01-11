@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,33 +13,19 @@ f1_keywords:
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1c4d02cf83401e6a6dce3fa079d43dea0fce6270
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords: std::chrono [C++], time_point
+ms.workload: cplusplus
+ms.openlocfilehash: 4b8f6880968b899bcf28b60fa69edf1e4250d4d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timepoint-class"></a>time_point 類別
 `time_point` 描述可代表時間點的類型。 其會保留類型 [duration](../standard-library/duration-class.md) 的物件，儲存自樣板引數 `Clock` 所表示的 epoch 之後的已耗用時間。  
@@ -53,11 +38,11 @@ template <class Clock,
 class time_point;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`time_point::clock`|`Clock` 樣板參數的同義字。|  
 |`time_point::duration`|`Duration` 樣板參數的同義字。|  
@@ -66,13 +51,13 @@ class time_point;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[time_point](#time_point)|建構 `time_point` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[max](#max)|指定 `time_point::ref` 的上限。|  
 |[min](#min)|指定 `time_point::ref` 的下限。|  
@@ -86,9 +71,9 @@ class time_point;
 |[time_point::operator-=](#operator-_eq)|從預存的 duration 值減去指定的值。|  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \<chrono >  
+ **標頭：** \<chrono >  
   
- **命名空間：**std::chrono  
+ **命名空間：** std::chrono  
   
 ##  <a name="max"></a>time_point:: max
  靜態方法會傳回型別 `time_point::ref` 的上限值。  
@@ -171,8 +156,7 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 constexpr duration time_since_epoch() const;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<chrono>](../standard-library/chrono.md)
-
 

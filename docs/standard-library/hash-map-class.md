@@ -99,11 +99,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f13c8057b28a2dfcae09a8f1ae2e57d02bfb9a24
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 056d517779ca085152fea081271757329f7f3be8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmap-class"></a>hash_map 類別
 > [!NOTE]
@@ -263,7 +264,7 @@ const Type& at(const Key& key) const;
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`key`|所要尋找之元素的索引鍵值。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -887,7 +888,7 @@ emplace(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|用來移動建構要插入到 [hash_map](../standard-library/hash-map-class.md) 中之元素的值，除非 `hash_map` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -945,9 +946,9 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|用來移動建構要插入到 [hash_map](../standard-library/hash-map-class.md) 中之元素的值，除非 `hash_map` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|  
-|`_Where`|一個有關要從哪裡開始搜尋正確插入點的提示。|  
+|`_Where`|有關要從何處開始搜尋正確插入點的提示。|  
   
 ### <a name="return-value"></a>傳回值  
  [hash_multimap::emplace](../standard-library/hash-multimap-class.md#emplace) 成員函式會傳回迭代器，此迭代器指向新元素在 `hash_map` 中的插入位置，或具有對等排序之現有元素的所在位置。  
@@ -1126,7 +1127,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="return-value"></a>傳回值  
  一組迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個是索引鍵的 [upper_bound](#upper_bound)。  
   
- 若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
+ 若要存取成員函式所傳回之 `pr` 配對的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。  
   
 ### <a name="remarks"></a>備註  
   
@@ -1405,7 +1406,7 @@ Allocator get_allocator() const;
  hash_map 所使用的配置器。  
   
 ### <a name="remarks"></a>備註  
- hash_map 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
+ hash_map 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
   
   
 ### <a name="example"></a>範例  
@@ -1520,7 +1521,7 @@ hash_map(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Al`|要用於此 hash_map 物件的儲存體配置器類別，預設為 **Allocator**。|  
 |`Comp`|類型為 const `Traits` 並用來排序 hash_map 中元素的比較函式，預設為 `hash_compare`。|  
 |`Right`|要從中複製所建構之對應的 hash_map。|  
@@ -1529,7 +1530,7 @@ hash_map(
 |`IList`|initializer_list|  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存一種配置器物件，此物件可管理 hash_map 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
+ 所有建構函式都會儲存一種配置器物件，此物件可管理 hash_map 的記憶體儲存，且之後藉由呼叫 [get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告以及用來取代替代配置器的前置處理巨集中，經常會省略 allocator 參數。  
   
  所有建構函式都會將其 hash_map 初始化。  
   
@@ -1838,7 +1839,7 @@ typedef Key key_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- `key_type` 與範本參數 `Key` 同義。  
+ `key_type` 與樣板參數 `Key` 同義。  
   
  如需有關 `Key` 的詳細資訊，請參閱 [hash_map 類別](../standard-library/hash-map-class.md)主題的＜備註＞一節。  
   
@@ -1998,7 +1999,7 @@ Type& operator[](Key&& key);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`key`|所要插入之元素的索引鍵值。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -2094,7 +2095,7 @@ hash_map& operator=(hash_map&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|要複製到 `hash_map` 中的 [hash_map 類別](../standard-library/hash-map-class.md)。|  
   
 ### <a name="remarks"></a>備註  
@@ -2150,7 +2151,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。  
+ **pointer** 類型可用來修改項目的值。  
   
  在大多數情況下，應該使用 [iterator](#iterator) 來存取 hash_map 物件中的元素。  
   
@@ -2479,7 +2480,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
   
   
 ### <a name="example"></a>範例  
-  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例  
+  如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例。  
   
 ##  <a name="swap"></a>  hash_map::swap  
   
@@ -2773,7 +2774,7 @@ The keys of the mapped elements are: 1 2 3.
 The values of the mapped elements are: 10 20 30.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
 

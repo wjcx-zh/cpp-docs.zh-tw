@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 297d11731a16ecbe69793f2a29944470206acc18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2d0c4c714cb9cf605de5cf42cf922a74d09146c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-iterate-over-a-user-defined-collection-with-for-each"></a>如何：使用 for each 反覆查看使用者定義的集合
 Managed 集合的類別需要一個將控制代碼傳回至列舉值類別或介面的非私用 GetEnumerator 函式。  列舉值類別必須包含非靜態 MoveNext 函式和 Current 屬性的宣告。  
@@ -102,5 +105,5 @@ int main() {
 Return Code: 0  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [for each, in](../dotnet/for-each-in.md)

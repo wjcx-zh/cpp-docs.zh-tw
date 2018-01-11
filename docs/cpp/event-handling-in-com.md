@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3173d01898fc63327c5e4d4c6ce4f536b1245450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c57b8429a05ab3989dce318f4c16a58475560a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-com"></a>COM 中的事件處理
 在 COM 事件處理中，您將使用的事件來源和事件接收器設定[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = **com**。這些屬性會從自訂、分派和雙重介面插入適當的程式碼，以允許它們所套用的類別透過 COM 連接點引發事件和處理事件。  
@@ -216,5 +217,5 @@ public:
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件處理](../cpp/event-handling.md)

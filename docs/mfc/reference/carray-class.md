@@ -28,7 +28,7 @@ f1_keywords:
 - AFXTEMPL/CArray::SetAt
 - AFXTEMPL/CArray::SetAtGrow
 - AFXTEMPL/CArray::SetSize
-dev_langs: C++
+dev_langs: CPP
 helpviewer_keywords:
 - CArray [MFC], CArray
 - CArray [MFC], Add
@@ -53,11 +53,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4087cfb584059923e4e05620c1f33d3cc11c3bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 85e7bf9518ad96e5a67f2d19d3729e5813d3f84d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="carray-class"></a>CArray 類別
 支援類似 C 陣列，但可以動態減少或增加視的陣列。  
@@ -76,17 +77,17 @@ class CArray : public CObject
  `ARG` *_* `TYPE`  
  指定用來存取儲存在陣列中物件的引數類型的樣板參數。 通常參考`TYPE`。 `ARG_TYPE`為參數傳遞給`CArray`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CArray::CArray](#carray)|建構空陣列。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CArray::Add](#add)|將項目加入至陣列結尾；必要時讓陣列增長。|  
 |[Carray:: Append](#append)|將其他陣列附加至陣列。如有必要，讓陣列成長|  
@@ -108,7 +109,7 @@ class CArray : public CObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator&#91;&#93;](#operator_at)|設定或取得指定索引處的項目。|  
   
@@ -556,7 +557,7 @@ void SetSize(
 ### <a name="example"></a>範例  
   請參閱範例的[GetData](#getdata)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

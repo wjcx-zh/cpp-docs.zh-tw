@@ -27,11 +27,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 692f02f6ad2d7486c8460d3dae42500f165f60b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf8577b9fcb5ac734ee9eb935688002dbfe162da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>工作排程器 (並行執行階段)
 文件中這一部分的主題將說明並行執行階段工作排程器的重要功能。 工作排程器適用於您想要微調使用並行執行階段之現有程式碼的效能時。  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[排程器執行個體](../../parallel/concrt/scheduler-instances.md)|描述排程器執行個體，以及如何使用 `concurrency::Scheduler` 和 `concurrency::CurrentScheduler` 類別加以管理。 當您想要建立明確排程原則與特定類型工作負載的關聯時，請使用排程器執行個體。|  
 |[排程器原則](../../parallel/concrt/scheduler-policies.md)|描述排程器原則的角色。 當您想要控制排程器在管理工作時使用的策略，請使用排程器原則。|  

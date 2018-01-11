@@ -1,87 +1,91 @@
 ---
-title: "Editing Parts of an Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], editing images"
-  - "Clipboard [C++], pasting"
-  - "images [C++], editing"
-  - "images [C++], deleting selected parts"
-  - "images [C++], copying selected parts"
-  - "images [C++], moving selected parts"
-  - "images [C++], dragging and replicating selected parts"
-  - "images [C++], pasting into"
-  - "graphics [C++], editing"
+title: "編輯影像 （圖示影像編輯器） 的部分 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], editing images
+- Clipboard [C++], pasting
+- images [C++], editing
+- images [C++], deleting selected parts
+- images [C++], copying selected parts
+- images [C++], moving selected parts
+- images [C++], dragging and replicating selected parts
+- images [C++], pasting into
+- graphics [C++], editing
 ms.assetid: ff4f5fef-71a4-4fd8-825e-049399fed391
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: acd4859bf7c80cf2bbe6cd2d86c39d0fc596351d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Editing Parts of an Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可對某個[選取範圍](../mfc/selecting-an-area-of-an-image-image-editor-for-icons.md) \(無論是整個影像或只是影像的一部分\) 執行標準的編輯作業 — 剪下、複製、清除及移動。  由於影像編輯器使用 Windows 剪貼簿，您可以將影像在影像編輯器和其他應用程式之間的視窗。  
+# <a name="editing-parts-of-an-image-image-editor-for-icons"></a>編輯影像部分範圍 (圖示影像編輯器)
+您可以執行標準的編輯作業： 剪下、 複製、 清除和移動 — 上[選取](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、 選取範圍是整個映像或只是它的一部分。 由於影像編輯器會使用 Windows 剪貼簿，您可以在影像編輯器和其他 Windows 應用程式之間傳輸映像。  
   
- 此外，無論選取範圍是包含整個影像或只是一部分，您都可調整其大小。  
+ 此外，您可以調整選取項目，是否包含整個影像或組件。  
   
-### 若要剪下目前的選取範圍並將其移至剪貼簿  
+### <a name="to-cut-the-current-selection-and-move-it-to-the-clipboard"></a>剪下目前的選取範圍，並將它移到剪貼簿  
   
-1.  按一下 \[編輯\] 功能表上的 \[剪下\]。  
+1.  按一下**剪下**上**編輯**功能表。  
   
-### 若要複製選取範圍  
+### <a name="to-copy-the-selection"></a>複製選取項目  
   
-1.  將指標置於選取範圍框線內或其上的任何位置 \(縮放控點除外\)。  
+1.  內部選取框線或任何位置將指標放在其上，調整大小控點除外。  
   
-2.  按住 **CTRL** 鍵，同時將選取範圍拖曳至新的位置。  原有的選取範圍區域不變。  
+2.  按住**CTRL**鍵您將選取項目拖曳至新位置。 原始選取項目的區域保持不變。  
   
-3.  若要在其目前的位置將選取範圍複製到影像中，請在選取範圍游標外按一下。  
+3.  若要複製其目前位置的映像選取項目，按一下選取範圍的資料指標外部。  
   
-### 若要將剪貼簿內容貼到影像中  
+### <a name="to-paste-the-clipboard-contents-into-an-image"></a>若要將剪貼簿內容貼到影像  
   
-1.  在 \[編輯\] 功能表上選擇 \[貼上\]。  
+1.  從**編輯**功能表上，選擇**貼上**。  
   
-     剪貼簿內容 \(以選取範圍框線框住\) 會出現在窗格的左上角。  
+     剪貼簿的內容，以選取項目框線括住會出現在窗格的左上角。  
   
-2.  將指標置於選取範圍框線內，並將影像拖曳到影像上的理想位置。  
+2.  選取框線中的將指標放在與映像上，將影像拖曳至想要的位置。  
   
-3.  若要將影像錨定於其新位置，請在選取範圍框線外按一下。  
+3.  若要錨定在其新位置的映像，按一下 外部選取框線。  
   
-### 若要在未移入剪貼簿的情況下刪除目前的選取範圍  
+### <a name="to-delete-the-current-selection-without-moving-it-to-the-clipboard"></a>若要刪除目前選取範圍，而不將它移到剪貼簿  
   
-1.  從 \[編輯\] 功能表中選擇 \[刪除\]。  
+1.  從**編輯**功能表上，選擇**刪除**。  
   
-     選取範圍的原始區域會填滿目前的背景色彩。  
+     選取項目的原始的區域填滿目前的背景色彩。  
   
     > [!NOTE]
-    >  您可以在 \[資源檢視\] 視窗內按一下滑鼠右鍵，存取 \[剪下\]、\[複製\]、\[貼上\] 及 \[刪除\] 等命令。  
+    >  您可以存取 剪下、 複製、 貼上，並刪除命令，以滑鼠右鍵按一下 資源檢視 視窗中。  
   
-### 若要移動選取範圍  
+### <a name="to-move-the-selection"></a>移動選取範圍  
   
-1.  將指標置於選取範圍框線內或其上的任何位置 \(縮放控點除外\)。  
+1.  內部選取框線或任何位置將指標放在其上，調整大小控點除外。  
   
-2.  將選取範圍拖曳到其新位置。  
+2.  將選取項目拖曳至其新位置。  
   
-3.  若要將影像中的選取範圍錨定其新位置上，請在選取範圍框線外按一下。  
+3.  若要錨定在其新位置的映像選取項目，按一下選取範圍框線外。  
   
- 如需繪製選取範圍的詳細資訊，請參閱[建立自訂筆刷](../mfc/creating-a-custom-brush-image-editor-for-icons.md)。  
+ 如需有關繪製選取範圍的詳細資訊，請參閱[建立自訂筆刷](../windows/creating-a-custom-brush-image-editor-for-icons.md)。  
   
- 如需將資源加入至 Managed 專案的詳細資訊，請參閱《.NET Framework 開發人員手冊》中的[應用程式中的資源](../Topic/Resources%20in%20Desktop%20Apps.md)。如需手動將資源加入至 Managed 專案、存取資源、顯示靜態資源和指定屬性的資源字串等詳細資訊，請參閱[逐步解說：將 Windows Form 當地語系化](http://msdn.microsoft.com/zh-tw/9a96220d-a19b-4de0-9f48-01e5d82679e5)和[Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
  需求  
   
- None  
+ 無  
   
-## 請參閱  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
+ [圖示影像編輯器](../windows/image-editor-for-icons.md)
+

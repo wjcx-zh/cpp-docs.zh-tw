@@ -53,11 +53,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f91d8af5b76cb48c884c8eb4466738a544b744b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de4f4914589c5803733bdcd279b3d0a3fa00e360
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sin-sinf-sinl-sinh-sinhf-sinhl"></a>sin、sinf、sinl、sinh、sinhf、sinhl
 計算正弦值和雙曲正弦值。  
@@ -103,12 +104,12 @@ long double sinhl(
 ## <a name="return-value"></a>傳回值  
  `sin` 函式會傳回 `x` 的正弦值。 如果`x`是大於或等於 263，或小於或等於-263，就會發生遺失精確度結果。  
   
- `sinh` 函式會傳回 `x` 的雙曲正弦值。 根據預設，如果結果太大，則 `sinh` 會將 `errno` 設為 `ERANGE`，並傳回 ±`HUGE_VAL`。  
+ `sinh` 函式會傳回 `x` 的雙曲正弦值。 根據預設，如果結果太大，`sinh`設定`errno`至`ERANGE`並傳回 ±`HUGE_VAL`。  
   
 |輸入|SEH 例外狀況|Matherr 例外狀況|  
 |-----------|-------------------|-----------------------|  
 |± QNAN、IND|無|_DOMAIN|  
-|± ∞ (sin、sinf、sinl)|INVALID|_DOMAIN|  
+|± ∞ （sin、 sinf、 sinl）|INVALID|_DOMAIN|  
 |&#124;x&#124; ≥ 7.104760e+002 (sinh、sinhf、sinhl)|OVERFLOW+INEXACT|OVERFLOW|  
   
  如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
@@ -118,11 +119,11 @@ long double sinhl(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`sin`, `sinf`, `sinl`, `sinh`, `sinhf`, `sinhl`|\<math.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -159,7 +160,7 @@ cos( 1.570796 ) = 0.000000
 cosh( 1.570796 ) = 2.509178  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [acos、acosf、acosl](../../c-runtime-library/reference/acos-acosf-acosl.md)   
  [asin、asinf、asinl](../../c-runtime-library/reference/asin-asinf-asinl.md)   

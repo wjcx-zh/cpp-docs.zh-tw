@@ -43,11 +43,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de31d57f3b9724cf8a3075b34be45a21556aea2f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 546e251f3387175812e6ba7f8cfed5d8a878d658
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 類別
 提供可在 ActiveX 控制項 (先前稱為 OLE 控制項) 中使用非同步 Moniker 的功能。  
@@ -58,26 +59,26 @@ ms.lasthandoff: 10/24/2017
 class CAsyncMonikerFile : public CMonikerFile  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncMonikerFile::CAsyncMonikerFile](#casyncmonikerfile)|建構 `CAsyncMonikerFile` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncMonikerFile::Close](#close)|關閉並釋放所有資源。|  
 |[CAsyncMonikerFile::GetBinding](#getbinding)|擷取非同步傳輸繫結的指標。|  
 |[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|擷取資料流中的資料的格式。|  
 |[CAsyncMonikerFile::Open](#open)|以非同步方式開啟檔案。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|建立 COM 物件實作`IBindStatusCallback`。|  
 |[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|呼叫由 OLE 系統程式庫上要建立的繫結類型的要求資訊。|  
@@ -406,7 +407,7 @@ virtual BOOL Open(
   
  [!code-cpp[NVC_MFCWinInet#7](../../mfc/codesnippet/cpp/casyncmonikerfile-class_3.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CMonikerFile 類別](../../mfc/reference/cmonikerfile-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CMonikerFile 類別](../../mfc/reference/cmonikerfile-class.md)   

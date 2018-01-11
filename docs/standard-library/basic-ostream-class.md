@@ -31,11 +31,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3834e557b4060fd214be137490580412fd2902b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d08410c68a2cff5a1c85733c4a2a2ed1775754b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicostream-class"></a>basic_ostream 類別
 此樣板類別描述一個物件，該物件可控制如何將元素和編碼物件插入具有 **Elem** 類型 (也稱為 [char_type](../standard-library/basic-ios-class.md#char_type)) 之元素的資料流緩衝區；其中該類型的字元特性是由 **Tr** 類別 (也稱為 [traits_type](../standard-library/basic-ios-class.md#traits_type)) 所決定。  
@@ -514,7 +515,7 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 ### <a name="example"></a>範例  
   如需 `write` 的使用範例，請參閱 [streamsize](../standard-library/ios-typedefs.md#streamsize)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   
  [iostream 慣例](../standard-library/iostreams-conventions.md)

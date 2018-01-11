@@ -1,49 +1,51 @@
 ---
-title: "IDBCreateSessionImpl::CreateSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBCreateSessionImpl::CreateSession"
-  - "IDBCreateSessionImpl.CreateSession"
-  - "CreateSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateSession 方法"
+title: "Idbcreatesessionimpl:: Createsession |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBCreateSessionImpl::CreateSession
+- IDBCreateSessionImpl.CreateSession
+- CreateSession
+dev_langs: C++
+helpviewer_keywords: CreateSession method
 ms.assetid: 035e5ddb-56e6-43b1-874d-89c0e40b103b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5a9cc97b66e9fb27ac91100b936ba537ff28018b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IDBCreateSessionImpl::CreateSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-從資料來源物件中建立新工作階段，並傳回這個新建立的工作階段所要求的介面。  
+# <a name="idbcreatesessionimplcreatesession"></a>IDBCreateSessionImpl::CreateSession
+從資料來源物件建立新的工作階段，並傳回要求的介面上新建立的工作階段。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      STDMETHOD(CreateSession)(   
-   IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppDBSession    
+      STDMETHOD(CreateSession)(   
+   IUnknown * pUnkOuter,   
+   REFIID riid,   
+   IUnknown ** ppDBSession    
 );  
 ```  
   
-#### 參數  
- 請參閱 *OLE DB 程式設計人員參考* 中的 [IDBCreateSession::CreateSession](https://msdn.microsoft.com/en-us/library/ms714942.aspx)。  
+#### <a name="parameters"></a>參數  
+ 請參閱[:: Createsession](https://msdn.microsoft.com/en-us/library/ms714942.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IDBCreateSessionImpl 類別](../../data/oledb/idbcreatesessionimpl-class.md)

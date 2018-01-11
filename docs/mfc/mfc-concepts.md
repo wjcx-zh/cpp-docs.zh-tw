@@ -1,78 +1,79 @@
 ---
-title: "MFC 概念 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Concepts"
-dev_langs: 
-  - "C++"
+title: "MFC 概念 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Concepts
+dev_langs: C++
 ms.assetid: b3d2f6b2-0508-4630-a9a1-649d89000563
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d949486867200c0349d52805a94b6cddf48d357f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# MFC 概念
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本節提供概念性與工作架構的主題協助您使用 Microsoft Foundation Class \(MFC\) 程式庫撰寫程式。  
+# <a name="mfc-concepts"></a>MFC 概念
+本節提供概念和以工作為基礎的主題可協助您使用 Microsoft Foundation Class (MFC) 程式庫進行程式設計。  
   
-## 本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [一般 MFC 主題](../mfc/general-mfc-topics.md)  
  討論 MFC 程式庫的技術詳細資料。  
   
  [使用 CObject](../mfc/using-cobject.md)  
- 提供 using `CObject` \(MFC 中大部分類別的基底類別\) 的連結。  
+ 提供使用連結`CObject`，大部分的類別，MFC 中的基底類別。  
   
  [集合](../mfc/collections.md)  
- 討論從 C\+\+ 範本建立和不是從中建立的集合類別。  
+ 討論從建立，而不是從 c + + 樣板建立的集合類別。  
   
  [日期和時間](../atl-mfc-shared/date-and-time.md)  
- 提供討論搭配使用 MFC 與日期時間的主題連結。  
+ 提供主題連結，討論與 MFC 一起使用的日期和時間。  
   
  [檔案](../mfc/files-in-mfc.md)  
- 討論 `CFile` 以及如何處理 MFC 中的檔案。  
+ 討論`CFile`以及如何處理在 MFC 中的檔案。  
   
- [記憶體管理 \(MFC\)](../mfc/memory-management.md)  
- 描述如何利用與記憶體管理相關的通用服務。  
+ [記憶體管理 (MFC)](../mfc/memory-management.md)  
+ 描述如何利用記憶體管理相關的通用服務。  
   
  [訊息處理和對應](../mfc/message-handling-and-mapping.md)  
- 描述 MFC 架構如何處理訊息和命令以及如何連接至其處理函式。  
+ 描述如何處理訊息和命令由 MFC 架構以及如何將它們連接至其處理常式函式。  
   
  [序列化](../mfc/serialization-in-mfc.md)  
- 說明提供的序列化機制，允許物件在程式執行之間保存。  
+ 說明提供允許之間保存物件的序列化機制執行您的程式。  
   
  [Unicode](../mfc/unicode-in-mfc.md)  
- 描述 Windows NT、Windows 2000 和 Windows XP 平台上編碼寬字元的 Unicode 標準的 MFC 支援。  
+ 描述 MFC 支援的 Unicode 標準的 Windows NT、 Windows 2000 和 Windows XP 平台上編碼寬字元。  
   
-## 相關章節  
- [例外狀況處理 \(MFC\)](../mfc/exception-handling-in-mfc.md)  
- 說明 MFC 中可用的例外狀況處理機制。  
+## <a name="related-sections"></a>相關章節  
+ [例外狀況處理 (MFC)](../mfc/exception-handling-in-mfc.md)  
+ 說明在 MFC 中的例外狀況處理機制。  
   
- [MFC 網際網路程式設計基本知識](../mfc/mfc-internet-programming-basics.md)  
- 討論支援網際網路程式設計的 MFC 類別。  
+ [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)  
+ 討論 MFC 類別，可支援網際網路程式設計。  
   
  [MFC 網際網路程式設計工作](../mfc/mfc-internet-programming-tasks.md)  
- 討論如何將網際網路支援加入至應用程式。  
+ 討論如何將網際網路支援加入至您的應用程式。  
   
  [MFC COM](../mfc/mfc-com.md)  
- 討論 MFC 的子集，是設計為支援 COM，而大部分的 Active Template Library \(ATL\) 是專為 COM 程式設計而設計的。  
+ 討論 MFC，雖然大部分的 Active Template Library (ATL) 設計，為了支援 COM，子集 COM 程式設計。  
   
- [使用 C\+\+ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)  
- 說明處理序和執行緒的意義，並探討進行多執行緒處理的 MFC 方法。  
+ [使用 C++ 和 MFC 進行多執行緒處理](../parallel/multithreading-with-cpp-and-mfc.md)  
+ 說明處理序和執行緒是什麼，並討論 MFC 方法多執行緒。  
   
  [MFC 中的 Windows Sockets](../mfc/windows-sockets.md)  
- 涵蓋 Windows Sockets 的 MFC 實作。  
+ 涵蓋 MFC Windows Sockets 實作。  
   
  [MFC 參考](../mfc/mfc-desktop-applications.md)  
- 提供 MFC 程式庫 \(一組專為 Windows API 所撰寫的應用程式架構的類別\) 的參考資料。  
+ 提供 MFC 程式庫的參考資料，包含一組構成應用程式架構的類別，這是為 Windows API 撰寫的應用程式架構。  
   
- [MFC 範例](../top/visual-cpp-samples.md)  
- 提供示範如何在桌面應用程式、DLL、資料庫應用程式、控制項、Web 應用程式等使用 MFC 之範例的連結。
+ [MFC 範例](../visual-cpp-samples.md)  
+ 提供範例，示範如何使用 MFC 桌面應用程式、 Dll、 資料庫應用程式、 控制項、 Web 應用程式，以及更多的連結。
+

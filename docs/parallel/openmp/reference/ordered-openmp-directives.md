@@ -1,46 +1,45 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: "ordered （OpenMP 指示詞） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa5db4e92603519314750886c28db7d097183b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定在平行化程式碼，如應該像循序迴圈中執行迴圈。  
+# <a name="ordered-openmp-directives"></a>ordered (OpenMP 指示詞)
+指定應該執行迴圈，像是循序迴圈平行化該程式碼。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## 備註  
- **訂購**指示詞必須是動態的範圍內[for](../../../parallel/openmp/reference/for-openmp.md)或**平行的**建構包含**訂購**子句。  
+## <a name="remarks"></a>備註  
+ **排序**指示詞必須是動態的範圍內[如](../../../parallel/openmp/reference/for-openmp.md)或**平行的**建構包含**排序**子句。  
   
- **訂購**指示詞可支援任何 OpenMP 子句。  
+ **排序**指示詞可支援不含 OpenMP 子句。  
   
- 如需詳細資訊，請參閱 [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md)。  
+ 如需詳細資訊，請參閱[2.6.6 ordered 建構](../../../parallel/openmp/2-6-6-ordered-construct.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_ordered.cpp  
@@ -82,14 +81,17 @@ int main( )
 }  
 ```  
   
-  **test\(\) 反覆項目 1**  
-**test\(\) 的反覆項目 3**  
-**test\(\) 的反覆項目 5**  
-**test\(\) 的反覆項目 7**  
-**test2\(\) 反覆項目 0**  
-**test2\(\) 反覆項目 1**  
-**test2\(\) 的反覆項目 2**  
-**test2\(\) 的反覆項目 3**  
-**test2\(\) 的反覆項目 4**   
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

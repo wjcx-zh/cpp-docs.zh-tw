@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3cd1a75df607678546c53b53df134f45eb87026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
 結構描述資料列集可讓取用者取得的資料存放區的相關資訊，而不需要知道其基礎結構描述。 例如，資料存放區可能會不有組織成使用者定義階層，所以會有任何方式可以讀取它確保知識以外的結構描述的資料表。 （另一個範例，請注意，Visual c + + 精靈會產生取用者的存取子使用結構描述資料列）。若要讓取用者，若要這樣做，提供者的工作階段物件會公開方法上[IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx)介面。 在 Visual c + + 應用程式，您可以使用[IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)類別來實作**IDBSchemaRowset**。  
@@ -264,5 +267,5 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
   
  如需支援結構描述資料列集提供者的範例，請參閱[UpdatePV](http://msdn.microsoft.com/en-us/c8bed873-223c-4a7d-af55-f90138c6f38f)範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

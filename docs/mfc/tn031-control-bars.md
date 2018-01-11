@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18bc2ce03f4868a942d118a8f597df5b5f6eb4df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e4ea57f77c615ba439f2d07c3926cde5efa0c27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn031-control-bars"></a>TN031：控制列
 > [!NOTE]
@@ -228,7 +229,7 @@ BOOL CMyControlBar::Create(CWnd* pParentWnd,
   
  您可以透過標準視窗管理員 API 完成自訂。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

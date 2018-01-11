@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7576d1a5635cf30084c1f36b4ec14ad2a9f9b74d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3f11f7e329b623639fb1441e4d9e18720a6b6b94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chwndrendertarget-class"></a>CHwndRenderTarget 類別
 ID2D1HwndRenderTarget 包裝函式。  
@@ -52,17 +53,17 @@ ID2D1HwndRenderTarget 包裝函式。
 class CHwndRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHwndRenderTarget::CHwndRenderTarget](#chwndrendertarget)|建構從 HWND CHwndRenderTarget 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHwndRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|  
 |[CHwndRenderTarget::CheckWindowState](#checkwindowstate)|指出是否要 occluded 此呈現目標相關聯的 HWND。|  
@@ -75,13 +76,13 @@ class CHwndRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHwndRenderTarget::operator ID2D1HwndRenderTarget *](#operator_id2d1hwndrendertarget_star)|傳回 ID2D1HwndRenderTarget 介面。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHwndRenderTarget::m_pHwndRenderTarget](#m_phwndrendertarget)|ID2D1HwndRenderTarget 物件的指標。|  
   
@@ -216,5 +217,5 @@ BOOL Resize(const CD2DSizeU& size);
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

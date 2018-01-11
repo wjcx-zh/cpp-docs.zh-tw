@@ -1,32 +1,33 @@
 ---
-title: "progid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.progid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "progid attribute"
+title: "progid |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.progid
+dev_langs: C++
+helpviewer_keywords: progid attribute
 ms.assetid: afcf559c-e432-481f-aa9a-bd3bb72c02a8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 862629af7e279cf1f03a5e9adc9424b330ee1d90
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# progid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="progid"></a>progid
 指定 COM 物件的 ProgID。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,42 +36,41 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *name*  
- 代表物件的程式識別碼。  
+ 代表物件的 ProgID。  
   
- Progid 呈現用來識別 COM\/ActiveX 物件的類別識別項 \(CLSID\) 的人們可讀取版本。  
+ Progid 呈現人類看得懂的版本，用來識別 COM/ActiveX 物件的類別識別項 (CLSID)。  
   
-## 備註  
- **Progid** C\+\+ 屬性可讓您指定 COM 物件的 ProgID。  與 ProgID 有表單 *name1*。*name2*.*version*.  如果您未指定*版本*與 ProgID，預設版本是 1。  如果您未指定 *name1*。 *name2*，預設名稱是  *classname*。 *classname*。  如果您未指定 **progid** 而您指定 **vi\_progid**，  *name1*。 *name2* 取自 **vi\_progid** 和 \(下一個序號\) 會加入版本。  
+## <a name="remarks"></a>備註  
+ **Progid** c + + 屬性可讓您指定 COM 物件的 ProgID。 ProgID 已表單*name1.name2.version*。 如果您未指定*版本*ProgID 的預設版本為 1。 如果您未指定*name1.name2*的預設名稱是*classname.classname*。 如果您未指定**progid** ，而且您指定**vi_progid**， *name1.name2*摘錄自**vi_progid**和 (下一個循序附加數字） 版本。  
   
- 如果使用的屬性區塊 **progid** 也不使用`uuid`，編譯器會檢查是否已登錄`uuid`存在於指定的 **progid**。  如果 **progid** 未指定，則版本 \(和 coclass 名稱，如果建立 coclass\) 將用來產生 **progid**。  
+ 如果使用屬性區塊**progid**也不使用`uuid`，編譯器會檢查登錄，以查看是否`uuid`存在指定**progid**。 如果**progid**未指定，版本 （和 coclass 的名稱，如果建立在 coclass） 會用來產生**progid**。  
   
- **progid** 表示 **coclass** 屬性，亦即，如果您指定 **progid**，它是相同的動作，以指定  **coclass** 和 **progid** 屬性。  
+ **progid**意味著**coclass**屬性，也就是如果您指定**progid**，這是與指定的相同動作**coclass**和**progid**屬性。  
   
- **Progid** 屬性會造成自動註冊指定的名稱下的類別。  將不會顯示產生的.idl 檔 **progid** 的值。  
+ **Progid**屬性會造成自動註冊指定的名稱下的類別。 將不會顯示產生的.idl 檔案**progid**值。  
   
- 使用 ATL 專案中使用這個屬性時，便會變更屬性的行為。  除了上述的行為，請使用這個屬性指定此資訊用在 **GetProgID** 函式，由插入 **coclass** 屬性。  如需詳細資訊，請參閱 [coclass](../windows/coclass.md) 屬性。  
+ 使用 ATL 專案中使用這個屬性時，屬性的行為變更。 除了上述的行為，使用這個屬性指定的資訊用於**GetProgID**函式，由插入**coclass**屬性。 如需詳細資訊，請參閱[coclass](../windows/coclass.md)屬性。  
   
-## 範例  
- 請參閱範例的 [coclass](../windows/coclass.md) 的範例使用 **progid**。  
+## <a name="example"></a>範例  
+ 請參閱範例的[coclass](../windows/coclass.md)的範例使用**progid**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**，`struct`|  
+|**適用於**|**class**、 `struct`|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [ProgID Key](http://msdn.microsoft.com/library/windows/desktop/dd542719)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [ProgID 的索引鍵](http://msdn.microsoft.com/library/windows/desktop/dd542719)   

@@ -35,11 +35,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a26d3635e0beca799581e99d4b2d482907795642
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67c775f314cc70da1b662ca9b9c5f0a2e68eb2bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 類別
 提供 Windows 通用 IP 位址控制項的功能。  
@@ -50,17 +51,17 @@ ms.lasthandoff: 10/24/2017
 class CIPAddressCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|建構 `CIPAddressCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CIPAddressCtrl::ClearAddress](#clearaddress)|清除 IP 位址控制項的內容。|  
 |[CIPAddressCtrl::Create](#create)|建立 IP 位址控制項，並將它附加至`CIPAddressCtrl`物件。|  
@@ -308,7 +309,7 @@ void SetFieldRange(
 ### <a name="remarks"></a>備註  
  此成員函式實作的 Win32 訊息行為[IPM_SETRANGE](http://msdn.microsoft.com/library/windows/desktop/bb761382)、 Windows SDK 中所述。 您可以使用兩個參數，`nLower`和`nUpper`，以表示的下限和上限的限制和欄位，而不是*wRange*參數搭配的 Win32 訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)
 

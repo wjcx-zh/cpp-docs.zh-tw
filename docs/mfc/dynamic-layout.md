@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6b92185e8be3e66a89a6278ba7b7b1051b8b409f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e309d8ef023346c0e37babeabe23f7e6e1762939
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamic-layout"></a>動態版面配置
 Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以調整大小，而且您可以控制配置調整大小的變更的方式。 例如，您可以將對話方塊底部的按鈕附加至下邊緣，使其永遠保持在底部。 您也可以設定特定的控制項，例如清單方塊、編輯方塊和文字欄位，在使用者展開對話方塊時展開。  

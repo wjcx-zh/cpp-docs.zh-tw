@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - strrchr
 - wcsrchr
 - _mbsrchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsrchr function
 - tcsrchr function
@@ -50,36 +48,22 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: a545d1813bb03160495c331b3213f947603b20b9
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7f498dc526d6989e18aaf8aea916ad9fc602cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 掃描字串尋找最後一個字元。  
   
 > [!IMPORTANT]
-> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsrchr` 和 `_mbsrchr_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsrchr` 和 `_mbsrchr_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -155,33 +139,33 @@ const unsigned char *_mbsrchr_l(
   
  `wcsrchr` 和 `_mbsrchr` 是寬字元和多位元組字元版本的 `strrchr`。 `wcsrchr` 的引數和傳回值是寬字元字串；`_mbsrchr` 的引數則是多位元組字元字串。  
   
- 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 如果這些函式的 `const` 和非`const` 版本都可以使用，即會定義巨集 _CONST_CORRECT_OVERLOADS。 如果兩個 C++ 多載都需要非 `const` 行為，請定義符號 _CONST_RETURN。  
+ 在 C 中，這些函式接受第一個引數的 `const` 指標。 在 C++ 中，可使用兩個多載。 接受 `const` 指標的多載會傳回 `const` 的指標，接受非 `const` 指標的版本會傳回非 `const` 的指標。 巨集`_CRT_CONST_CORRECT_OVERLOADS`如果兩個定義`const`和非-`const`這些函式的版本可供使用。 如果您需要非`const`行為對於這兩個 c + + 多載中，定義符號`_CONST_RETURN`。  
   
  `_mbsrchr` 會驗證其參數。 如果 `str` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`errno` 會設為 `EINVAL`，且 `_mbsrchr` 會傳回 0。 `strrchr` 和 `wcsrchr` 不會驗證其參數。 除此之外，這三個函式的行為相同。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
 |TCHAR.H 常式|未定義 _UNICODE 和 _MBCS|_MBCS 已定義|_UNICODE 已定義|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsrchr`|`strrchr`|`_mbsrchr`|`wcsrchr`|  
-|**不適用**|**不適用**|`_mbsrchr_l`|**n/a**|  
+|**n/a**|**不適用**|`_mbsrchr_l`|**n/a**|  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strrchr`|\<string.h>|  
 |`wcsrchr`|\<string.h> 或 \<wchar.h>|  
 |`_mbsrchr`, `_mbsrchr_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  如需使用 `strrchr` 的範例，請參閱 [strchr](../../c-runtime-library/reference/strchr-wcschr-mbschr-mbschr-l.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

@@ -75,11 +75,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b839096e87feee970491e393998eb4049df820af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3731d6d7a1455dc51ee03ea942666cbfc0f48e27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 提供 Windows 通用標頭控制項的功能。  
@@ -90,17 +91,17 @@ ms.lasthandoff: 10/24/2017
 class CHeaderCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|建構 `CHeaderCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|清除所有標頭控制項的篩選。|  
 |[CHeaderCtrl::ClearFilter](#clearfilter)|清除標頭控制項的篩選。|  
@@ -490,7 +491,7 @@ BOOL GetItemDropDownRect(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `iItem`|其樣式為標頭項目的以零為起始的索引`HDF_SPLITBUTTON`。 如需詳細資訊，請參閱`fmt`隸屬[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構。|  
+|[輸入] `iItem`|其樣式為標頭項目的以零為起始的索引`HDF_SPLITBUTTON`。 如需詳細資訊，請參閱`fmt`隸屬[HDITEM](http://msdn.microsoft.com/library/windows/desktop/bb775247)結構。|  
 |[輸出] `lpRect`|指標[RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897)接收週框矩形資訊的結構。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -726,7 +727,7 @@ BOOL SetFocusedItem(int iItem);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `iItem`|標頭項目的以零為起始的索引。|  
+|[輸入] `iItem`|標頭項目的以零為起始的索引。|  
   
 ### <a name="return-value"></a>傳回值  
  如果此方法成功為 `true`；否則為 `false`。  
@@ -835,7 +836,7 @@ BOOL SetOrderArray(
 ### <a name="example"></a>範例  
   請參閱範例的[cheaderctrl:: Getorderarray](#getorderarray)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CTabCtrl 類別](../../mfc/reference/ctabctrl-class.md)   

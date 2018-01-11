@@ -53,11 +53,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5195f5a47fc2bff667849e7afffedd8cf4a4ae8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b45de74c53ce24d64dc93e73f2195df76bd1152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbytearray-class"></a>CByteArray 類別
 支援動態位元組陣列。  
@@ -79,13 +80,13 @@ class CByteArray : public CObject
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|建構空陣列。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|將項目加入至陣列結尾；必要時讓陣列增長。|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|將其他陣列附加至該陣列；必要時讓陣列成長。|  
@@ -107,7 +108,7 @@ class CByteArray : public CObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|設定或取得指定索引處的項目。|  
   
@@ -129,7 +130,7 @@ class CByteArray : public CObject
 ## <a name="requirements"></a>需求  
  **標頭：** afxcoll.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CObArray 類別](../../mfc/reference/cobarray-class.md)

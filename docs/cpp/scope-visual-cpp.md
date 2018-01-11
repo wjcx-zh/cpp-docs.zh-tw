@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3502a16c0cbbccdfd5d73aafe776d907c9845c1f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 55baa4496522336a5a64ee81daa7a8ce484534c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-visual-c"></a>範圍 (Visual C++)
 C++ 名稱只可以在程式的某些區域使用。 這個區域稱為名稱的「範圍」。 範圍會決定不是代表靜態延伸物件之名稱的「存留期」。 範圍也會決定名稱的可視性，即當呼叫類別建構函式和解構函式時，以及當變數的區域範圍初始化時。 (如需詳細資訊，請參閱[建構函式](../cpp/constructors-cpp.md)和[解構函式](../cpp/destructors-cpp.md)。)範圍有五種：  
@@ -49,7 +47,7 @@ C++ 名稱只可以在程式的某些區域使用。 這個區域稱為名稱的
   
      在 C++ 中，檔案範圍也稱為命名空間範圍。  
   
--   **類別範圍**類別成員的名稱具有類別範圍。 類別成員函式可以存取使用成員選取運算子 (**。** 或** -> **) 或成員指標運算子 (**。\***或** -> \* **) 上的物件或該類別; 的物件指標非靜態類別成員資料會被視為本機該類別的物件。 請考慮下列類別宣告：  
+-   **類別範圍**類別成員的名稱具有類別範圍。 類別成員函式可以存取使用成員選取運算子 (**。** 或 **->** ) 或成員指標運算子 (**。\***或 **-> \*** ) 上的物件或該類別; 的物件指標非靜態類別成員資料會被視為本機該類別的物件。 請考慮下列類別宣告：  
   
     ```  
     class Point  
@@ -158,5 +156,5 @@ Block-scoped i has the value: 5
 File-scoped i has the value: 7  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [基本概念](../cpp/basic-concepts-cpp.md)

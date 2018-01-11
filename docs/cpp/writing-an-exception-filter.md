@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33492c0cdab2429f1d8ccfc0ad50247cd457a9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40afc6872ac04522c4c42f0a0d890b791ac03d53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-exception-filter"></a>撰寫例外狀況篩選條件
 您可以藉由跳至例外狀況處理常式的層級或繼續執行的方式處理例外狀況。 除了使用例外狀況處理常式程式碼處理例外狀況並繼續之外，您可以使用*篩選*清除問題，然後傳回-1，繼續正常流程，而不清除堆疊。  
@@ -85,6 +86,6 @@ __except( GetExceptionCode() == STATUS_INTEGER_OVERFLOW ) {
 __except( nCode = GetExceptionCode(), nCode == STATUS_INTEGER_OVERFLOW )  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

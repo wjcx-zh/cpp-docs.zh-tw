@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0569f745c1531e59d9b45f54c957176de4896f25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 97e151d8c3ec44286807baf5e68d4e4eac17e306
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deriving-a-class-from-cobject"></a>從 CObject 衍生類別
 這篇文章描述最小的步驟，自[CObject](../mfc/reference/cobject-class.md)。 其他`CObject`類別文章說明利用特定的所需的步驟`CObject`功能，例如序列化和診斷的偵錯支援。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
 |基本`CObject`功能|否|否|否|  
 |`DECLARE_DYNAMIC`|是|否|否|  
 |`DECLARE_DYNCREATE`|是|是|否|  
-|`DECLARE_SERIAL`|是|是|是|  
+|`DECLARE_SERIAL`|是|是|[是]|  
   
 #### <a name="to-use-basic-cobject-functionality"></a>若要使用基本 CObject 功能  
   
@@ -71,6 +72,6 @@ ms.lasthandoff: 10/24/2017
   
  發行項[指定功能層級](../mfc/specifying-levels-of-functionality.md)描述如何指定其他層級的功能，包括執行階段類別資訊、 動態物件建立和序列化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CObject](../mfc/using-cobject.md)
 

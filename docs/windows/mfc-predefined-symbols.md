@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e682435989c520b5212b412741e1f3549b4b7852
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1fcee2cff1867fc57cc15914c304cd121954d9b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-predefined-symbols"></a>MFC 預先定義的符號
 MFC 專案一定會包含數個支援 windows 的標頭檔。 新增這些透過 #include 陳述式在 StdAfx.h 檔案中：  
@@ -219,6 +222,6 @@ MFC 專案一定會包含數個支援 windows 的標頭檔。 新增這些透過
 ## <a name="requirements"></a>需求  
  MFC  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [預先定義的符號 Id](../windows/predefined-symbol-ids.md)   
  [符號：資源識別項](../windows/symbols-resource-identifiers.md)

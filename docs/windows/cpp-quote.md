@@ -1,32 +1,33 @@
 ---
-title: "cpp_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.cpp_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cpp_quote attribute"
+title: "cpp_quote |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.cpp_quote
+dev_langs: C++
+helpviewer_keywords: cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 95b43856401b5bccfa9a0bef12fdc93ec886cea1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# cpp_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定的字串，不能包含引號的字元，發出至產生的.idl 檔。  
+# <a name="cppquote"></a>cpp_quote
+指定的字串，不能包含引號字元，發出至產生的.idl 檔案。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,34 +36,33 @@ caps.handback.revision: 10
 ) ];  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *statement*  
- C 的指令。  
+ C 指令。  
   
-## 備註  
- **Cpp\_quote** C\+\+ 屬性非常好用，如果您想要放置的.idl 檔的前置處理器指示詞。  
+## <a name="remarks"></a>備註  
+ **Cpp_quote** c + + 屬性才有用，如果您想要將前置處理器指示詞放在.idl 檔案。  
   
- 您也可以使用 **cpp\_quote** ，且產生的.h 檔案 MIDL 編譯的一部分。  比方說，如果您有使用 C\+\+ IDL 屬性，但有些工作無法使用這個檔的 C\+\+ 標頭檔，然後您可以編譯它建立一個 MIDL 產生的.h 檔案，您可以使用。  
+ 您也可以使用**cpp_quote**和的 MIDL 編譯時產生的.h 檔案。 例如，如果您有使用 c + + IDL 屬性，但是某些工作不能使用此檔案的 c + + 標頭檔，然後您可以編譯它建立 MIDL 產生的.h 檔案，您應該能夠使用。  
   
- **Cpp\_quote** 屬性具有相同的功能，為 [cpp\_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 屬性。  
+ **Cpp_quote**屬性具有相同的功能[cpp_quote](http://msdn.microsoft.com/library/windows/desktop/aa366765) MIDL 屬性。  
   
-## 範例  
- 請參閱範例的[雙](../windows/dual.md) 的範例使用如何使用  **cpp\_quote**。  
+## <a name="example"></a>範例  
+ 請參閱範例的[雙重](../windows/dual.md)範例使用使用方式**cpp_quote**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|全螢幕輸入|  
+|**適用於**|任何位置|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../windows/stand-alone-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [獨立屬性](../windows/stand-alone-attributes.md)   

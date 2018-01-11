@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5a12ca508478b04a5485ad3f088009d7cd6b0b48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15c2309e8080892bdca2753c1ea6128ce419862f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>TN026：DDX 和 DDV 常式
 > [!NOTE]
@@ -69,7 +70,7 @@ DDV_Custom(pDX,
   
  對話方塊資料僅是： 在成員資料**CMyDialog**類別。 它不會儲存在結構或類似的任何項目。  
   
-## <a name="notes"></a>備註  
+## <a name="notes"></a>注意  
  雖然我們呼叫 「 對話方塊資料 」 時，所有功能都都可在任何衍生自的類別中`CWnd`並都不限於只是對話方塊。  
   
  起始值的資料在標準 c + + 建構函式，通常是在含有的區塊中設定`//{{AFX_DATA_INIT`和`//}}AFX_DATA_INIT`註解。  
@@ -262,7 +263,7 @@ ExtraDDX=<keys>;<vb-keys>; <prompt>; <type>; <initValue>; <DDX_Proc>
   
  s = 字串  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

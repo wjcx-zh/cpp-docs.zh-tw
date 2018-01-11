@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::extreme_value_distribution::param_type::b
 - random/std::extreme_value_distribution::param_type::operator==
 - random/std::extreme_value_distribution::param_type::operator!=
-- random/std::extreme_value_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::extreme_value_distribution [C++]
 - std::extreme_value_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b0825641039828073da4520c2f0704f50e0e6f21
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 5cf43efdbe6f7c0cd79bee18e8a696986d0b5446
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 類別
 產生極值分佈。  
@@ -98,7 +95,7 @@ public:
   
  如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。  
   
- 如需極值分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Extreme Value Distribution](http://go.microsoft.com/fwlink/LinkId=401110) (極值分佈)。  
+ 如需極值分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Extreme Value Distribution](http://go.microsoft.com/fwlink/p/?linkid=401110) (極值分佈)。  
   
 ## <a name="example"></a>範例  
   
@@ -211,7 +208,7 @@ explicit extreme_value_distribution(const param_type& parm);
   
  第一個建構函式建構的物件，其預存的 `a` 值具有 *a_value* 值，而該值的預存 `b` 值則具有 *b_value* 值。  
   
- 第二個建構函式建構的物件，其預存參數是從 *parm* 初始化而來。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
+ 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。  
   
 ##  <a name="param_type"></a>  extreme_value_distribution::param_type  
 儲存分佈的參數。  
@@ -243,9 +240,8 @@ struct param_type {
   
  此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<random>](../standard-library/random.md)
-
 
 
 

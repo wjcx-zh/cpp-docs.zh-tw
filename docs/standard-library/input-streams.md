@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e708f1cbb9db3cc546aac172291facfa95acfb83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a753216cd8dfe0975d1d92451863b1ee2a88ddd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-streams"></a>輸入資料流
 輸入資料流物件是位元組的來源。 三種最重要的輸入資料流類別為 [istream](../standard-library/basic-istream-class.md)、[ifstream](../standard-library/basic-ifstream-class.md) 及 [istringstream](../standard-library/basic-istringstream-class.md)。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  與程式庫函式 `sscanf_s` 相同，`istringstream` 類別也支援從記憶體內的字串輸入。 若要從具有 Null 結束字元的字元陣列中擷取資料，請配置字串並將其初始化，然後建構 `istringstream` 類別的物件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [建構輸入資料流物件](../standard-library/constructing-input-stream-objects.md)  
   
  [使用擷取運算子](../standard-library/using-extraction-operators.md)  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/24/2017
   
  [為您的自訂類別多載 >> 運算子](../standard-library/overloading-the-input-operator-for-your-own-classes.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [iostream 程式設計](../standard-library/iostream-programming.md)

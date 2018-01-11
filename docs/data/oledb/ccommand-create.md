@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 425e86008b97defe50e2c47e099b3b21c900bc1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f4bbd236c2ec7ae6857ede1ac64f738ca8600774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommandcreate"></a>CCommand::Create
 呼叫[ccommand:: Createcommand](../../data/oledb/ccommand-createcommand.md)建立命令指定的工作階段，然後呼叫[icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709825.aspx)指定的命令文字。  
@@ -64,5 +67,5 @@ HRESULT CCommandBase::Create(
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CCommand 類別](../../data/oledb/ccommand-class.md)

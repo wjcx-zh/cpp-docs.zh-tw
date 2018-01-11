@@ -33,11 +33,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ba1751a62feb417902c56880289011353b184e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fab339300de907169ab7f4471d9892feadffad81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonfontcombobox-class"></a>CMFCRibbonFontComboBox 類別
 實作包含字型清單的下拉式方塊。 您可以在功能區面板上放置下拉式方塊。  
@@ -48,23 +49,23 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonFontComboBox : public CMFCRibbonComboBox  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CMFCRibbonFontComboBox::~CMFCRibbonFontComboBox`|解構函式。|  
   
 ### <a name="protected-constructors"></a>受保護的建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|建構並初始化 `CMFCRibbonFontComboBox` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonFontComboBox::BuildFonts](#buildfonts)|在功能區字型下拉式方塊中填入指定字型類型的字型、字元集，及字距和系列。|  
 |`CMFCRibbonFontComboBox::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
@@ -106,13 +107,13 @@ void BuildFonts(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nFontType`  
+ [輸入] `nFontType`  
  指定要加入字型的字型類型。  
   
- [in] `nCharSet`  
+ [輸入] `nCharSet`  
  指定要加入字型的字元集。  
   
- [in] `nPitchAndFamily`  
+ [輸入] `nPitchAndFamily`  
  指定字距和系列新增的字型。  
   
 ##  <a name="cmfcribbonfontcombobox"></a>CMFCRibbonFontComboBox::CMFCRibbonFontComboBox  
@@ -128,19 +129,19 @@ CMFCRibbonFontComboBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  當使用者從下拉式方塊選取項目時執行命令的命令識別碼。  
   
- [in] `nFontType`  
+ [輸入] `nFontType`  
  指定要顯示在下拉式方塊中的哪一種字型類型。 有效的選項為**DEVICE_FONTTYPE**， **RASTER_FONTTYPE**，和**TRUETYPE_FONTTYPE**，或任何位元組合。  
   
- [in] `nCharSet`  
+ [輸入] `nCharSet`  
  篩選出隸屬於指定的字元集的下拉式方塊中的字型...  
   
- [in] `nPitchAndFamily`  
+ [輸入] `nPitchAndFamily`  
  指定的字距和下拉式方塊中顯示的字型系列。  
   
- [in] `nWidth`  
+ [輸入] `nWidth`  
  像素為單位的下拉式方塊中指定的寬度。  
   
 ### <a name="remarks"></a>備註  
@@ -156,7 +157,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex = -1) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `iIndex`  
+ [輸入] `iIndex`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -233,7 +234,7 @@ BYTE GetPitchAndFamily() const;
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonComboBox 類別](../../mfc/reference/cmfcribboncombobox-class.md)

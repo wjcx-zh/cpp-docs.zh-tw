@@ -1,33 +1,32 @@
 ---
-title: "資源編譯器警告 RW4004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RW4004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RW4004"
+title: "資源編譯器警告 RW4004 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RW4004
+dev_langs: C++
+helpviewer_keywords: RW4004
 ms.assetid: 596b6a89-9ce7-4ba7-bdcb-e8054c7efafa
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0249f7d01ee344f0fa17bdc39e58e9fce26c9b25
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 資源編譯器警告 RW4004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ASCII 字元與虛擬按鍵碼不同  
+# <a name="resource-compiler-warning-rw4004"></a>資源編譯器警告 RW4004
+ASCII 字元不等同虛擬按鍵碼  
   
- VIRTKEY 類型快速鍵中的虛擬按鍵碼 \(Virtual Key Code\) 使用了字串常值 \(String Literal\)。  
+ 針對 VIRTKEY 類型快速鍵中的虛擬按鍵碼使用了字串常值。  
   
- 這項警告允許您繼續編譯，但請注意，如此所產生的快速鍵可能與您指定的字串不相符 \(VIRTKEY 使用的按鍵碼與 ASCII 快速鍵不同\)。  
+ 這則警告允許您繼續進行；但請注意，所產生的快速鍵可能不符合您指定的字串 (VIRTKEY 使用不同於 ASCII 快速鍵的按鍵碼)。  
   
- 儘管字串常值在句法上有效，但您只能在使用 WINDOWS.h 中 **VK\_\*\#define** 值的情況下，才可確保獲得所需要的快速鍵。
+ 雖然字串常值的語法有效，才能確保您能取得您想要使用的快速鍵**VK_\* #define**在 WINDOWS.h 中的值。

@@ -167,11 +167,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 397572f735fc6392be875c95fd57749e0503b77b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3d5080f86760c997c2036e766db66a5c4215f1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 透過擴充功能[CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)，Windows 多重文件介面 (MDI) 框架視窗。  
@@ -182,11 +183,11 @@ ms.lasthandoff: 10/24/2017
 class CMDIFrameWndEx : public CMDIFrameWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|重新計算使用中的項目的配置。|  
 |`CMDIFrameWndEx::AddDockSite`|不使用這個方法。|  
@@ -268,7 +269,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMDIFrameWndEx::m_bCanCovertControlBarToMDIChild](#m_bcancovertcontrolbartomdichild)|決定是否停駐窗格可以轉換成 MDI 子視窗。|  
 |[CMDIFrameWndEx::m_bDisableSetRedraw](#m_bdisablesetredraw)|啟用或停用 MDI 子視窗的重繪最佳化。|  
@@ -314,10 +315,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
  若要註冊的窗格的指標。  
   
- [in] `bTail`  
+ [輸入] `bTail`  
  指定是否要將這個窗格加入至清單的結尾。  
   
 ### <a name="return-value"></a>傳回值  
@@ -341,7 +342,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hdwp`  
+ [輸入] `hdwp`  
  識別多個視窗位置結構。 您可以取得此值，藉由呼叫`BeginDeferWindowPos`。  
   
 ### <a name="remarks"></a>備註  
@@ -414,10 +415,10 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpcszDocName`  
+ [輸入] `lpcszDocName`  
  文字字串，包含文件的識別項。 通常，它是文件檔案的完整路徑。  
   
- [in] `pObj`  
+ [輸入] `pObj`  
  使用者定義物件的指標。 例如，開發人員可以建立的應用程式特定的資料結構描述文件，並告訴您如何在文件應該啟動時初始化。  
   
 ### <a name="return-value"></a>傳回值  
@@ -445,10 +446,10 @@ virtual CMDIChildWndEx* CreateNewWindow(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpcszDocName`  
+ [輸入] `lpcszDocName`  
  文件名稱。  
   
- [in] `pObj`  
+ [輸入] `pObj`  
  保留供未來使用。  
   
 ### <a name="return-value"></a>傳回值  
@@ -465,13 +466,13 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  若要停駐窗格的指標。  
   
- [in] `nDockBarID`  
+ [輸入] `nDockBarID`  
  指定框架視窗停駐的側的邊。  
   
- [in] `lpRect`  
+ [輸入] `lpRect`  
  未使用。  
   
 ### <a name="remarks"></a>備註  
@@ -492,10 +493,10 @@ BOOL DockPaneLeftOf(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  停駐窗格的指標。  
   
- [in] `pLeftOf`  
+ [輸入] `pLeftOf`  
  做為停駐窗格的指標。 。  
   
 ### <a name="return-value"></a>傳回值  
@@ -517,7 +518,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwDockStyle`  
+ [輸入] `dwDockStyle`  
  指定要啟用的主框架視窗的側邊。 使用一或多個下列旗標。  
   
 - `CBRS_ALIGN_LEFT`  
@@ -546,7 +547,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwDockStyle`  
+ [輸入] `dwDockStyle`  
  指定您想要套用的停駐樣式。  
   
 ### <a name="return-value"></a>傳回值  
@@ -567,7 +568,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnableMenu`  
+ [輸入] `bEnableMenu`  
  `TRUE`在全螢幕模式中，顯示在主功能表或`FALSE`隱藏它。  
   
 ### <a name="remarks"></a>備註  
@@ -580,7 +581,7 @@ void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiFullScreenCmd`  
+ [輸入] `uiFullScreenCmd`  
  啟用或停用全螢幕模式的命令識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -594,7 +595,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`若要啟用的停駐狀態載入`FALSE`停用的銜接狀態載入。  
   
 ### <a name="remarks"></a>備註  
@@ -609,10 +610,10 @@ void EnableMDITabbedGroups(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  如果`TRUE`，啟用 MDI 索引的群組功能; 如果`FALSE`，已停用 MDI 索引的群組功能。  
   
- [in] `params`  
+ [輸入] `params`  
  指定架構適用於在 MDI 工作區中建立子視窗的參數。  
   
 ### <a name="remarks"></a>備註  
@@ -695,7 +696,7 @@ void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bLastActiveTab`  
+ [輸入] `bLastActiveTab`  
  如果`TRUE`，啟動 [最後一個使用中] 索引標籤。如果`FALSE`，停用啟用的最後一個使用中的索引標籤。  
   
 ### <a name="remarks"></a>備註  
@@ -723,22 +724,22 @@ void EnablePaneMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  如果`TRUE`，啟用自動處理窗格功能表; 如果`FALSE`，停用自動處理。  
   
- [in] `uiCustomizeCmd`  
+ [輸入] `uiCustomizeCmd`  
  命令 ID 的**自訂**功能表項目。 此功能表項目通常會加到窗格的清單結尾中。  
   
- [in] `strCustomizeLabel`  
+ [輸入] `strCustomizeLabel`  
  要顯示的文字**自訂**功能表項目 （適用於當地語系化）。  
   
- [in] `uiViewToolbarsMenuEntryID`  
+ [輸入] `uiViewToolbarsMenuEntryID`  
  指定開啟窗格功能表的工具列功能表項目識別碼。 這通常是**工具列** 子功能表**檢視**功能表。  
   
- [in] `bContextMenuShowsToolbarsOnly`  
+ [輸入] `bContextMenuShowsToolbarsOnly`  
  如果`TRUE`，窗格功能表會顯示一份工具列。 如果`FALSE`，功能表顯示的工具列和停駐列清單。  
   
- [in] `bViewMenuShowsToolbarsOnly`  
+ [輸入] `bViewMenuShowsToolbarsOnly`  
  如果`TRUE`，窗格功能表會顯示一份工具列。 如果`FALSE`，功能表顯示的工具列和停駐列清單。  
   
 ### <a name="remarks"></a>備註  
@@ -768,16 +769,16 @@ void EnableWindowsDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiMenuId`  
+ [輸入] `uiMenuId`  
  指定功能表的資源識別碼。  
   
- [in] `lpszMenuText`  
+ [輸入] `lpszMenuText`  
  指定項目的文字。  
   
- [in] `bShowHelpButton`  
+ [輸入] `bShowHelpButton`  
  指定是否要顯示**協助**windows 的 [管理] 對話方塊上的按鈕。  
   
- [in] `uiMenuTextResId`  
+ [輸入] `uiMenuTextResId`  
  包含項目的文字字串的字串資源識別碼。  
   
 ### <a name="remarks"></a>備註  
@@ -884,7 +885,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  控制項 id。  
   
 ### <a name="return-value"></a>傳回值  
@@ -925,10 +926,10 @@ virtual BOOL GetToolbarButtonToolTipText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pButton`  
+ [輸入] `pButton`  
  在工具列按鈕的指標。  
   
- [in] `strTTText`  
+ [輸入] `strTTText`  
  若要為按鈕顯示工具提示文字。  
   
 ### <a name="return-value"></a>傳回值  
@@ -947,13 +948,13 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
  要插入窗格指標。  
   
- [in] `pTarget`  
+ [輸入] `pTarget`  
  窗格前後插入窗格的指標。  
   
- [in] `bAfter`  
+ [輸入] `bAfter`  
  如果`TRUE`，`pControlBar`後面插入`pTarget`。 如果`FALSE`，`pControlBar`插入之前`pTarget`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -996,7 +997,7 @@ BOOL IsMemberOfMDITabGroup(CWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  索引標籤式視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1023,13 +1024,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  在螢幕座標中指定的點。  
   
- [in] `dwBarAlignment`  
+ [輸入] `dwBarAlignment`  
  指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，和`CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [輸入] `bOuterEdge`  
  `TRUE`如果點附近外框的停駐位置。`FALSE`否則。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1062,16 +1063,16 @@ virtual BOOL LoadFrame(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIDResource`  
+ [輸入] `nIDResource`  
  框架視窗相關聯的共用資源的識別碼。  
   
- [in] `dwDefaultStyle`  
+ [輸入] `dwDefaultStyle`  
  框架視窗的樣式。  
   
- [in] `pParentWnd`  
+ [輸入] `pParentWnd`  
  畫面格的父指標。  
   
- [in] `pContext`  
+ [輸入] `pContext`  
  指標[CCreateContext 結構](../../mfc/reference/ccreatecontext-structure.md)。 這個參數可以是 `NULL`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1085,7 +1086,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszProfileName`  
+ [輸入] `lpszProfileName`  
  指定的設定檔名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1115,7 +1116,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bNext`  
+ [輸入] `bNext`  
  如果`TRUE`，移至下一個索引標籤式群組的索引標籤。 如果`FALSE`，將它移至前一個索引標籤式群組。  
   
 ##  <a name="mditabnewgroup"></a>CMDIFrameWndEx::MDITabNewGroup  
@@ -1126,7 +1127,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bVert`  
+ [輸入] `bVert`  
  指定新群組對齊方式。 如果`TRUE`，新的群組會以垂直方式對齊。 如果`FALSE`，新的群組水平對齊。  
   
 ### <a name="remarks"></a>備註  
@@ -1178,7 +1179,7 @@ virtual BOOL NegotiateBorderSpace(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nBorderCmd`  
+ [輸入] `nBorderCmd`  
  列舉中的以下值的其中一個`CFrameWnd::BorderCmd`:  
   
 - `borderGet` = 1  
@@ -1204,7 +1205,7 @@ virtual BOOL OnCloseDockingPane(CDockablePane* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  [關閉] 窗格的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1223,7 +1224,7 @@ virtual BOOL OnCloseMiniFrame(CPaneFrameWnd*);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  正在關閉迷你框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1242,7 +1243,7 @@ virtual void OnClosePopupMenu(CMFCPopupMenu* pMenuPopup);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMenuPopup`  
+ [輸入] `pMenuPopup`  
  快顯功能表的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1260,13 +1261,13 @@ virtual BOOL OnCmdMsg(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  命令 ID。  
   
- [in] `nCode`  
+ [輸入] `nCode`  
  識別命令通知程式碼。 請參閱[CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)如需有關值`nCode`。  
   
- [in] `pExtra`  
+ [輸入] `pExtra`  
  依據的值來使用`nCode`。 請參閱[CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)如需有關`pExtra`。  
   
  [in、out] `pHandlerInfo`  
@@ -1286,13 +1287,13 @@ virtual BOOL OnDrawMenuImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `pMenuButton`  
+ [輸入] `pMenuButton`  
  功能表按鈕的指標。  
   
- [in] `rectImage`  
+ [輸入] `rectImage`  
  影像的週框。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1337,7 +1338,7 @@ virtual BOOL OnMenuButtonToolHitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pButton`  
+ [輸入] `pButton`  
  工具列按鈕。  
   
  [輸出] `pTI`  
@@ -1357,7 +1358,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pFrame`  
+ [輸入] `pFrame`  
  迷你框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1373,10 +1374,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bPreview`  
+ [輸入] `bPreview`  
  如果`TRUE`，設定預覽列印模式。 如果`FALSE`，取消預覽模式。  
   
- [in] `pState`  
+ [輸入] `pState`  
  指標`CPrintPreviewState`結構。  
   
 ### <a name="remarks"></a>備註  
@@ -1392,10 +1393,10 @@ virtual BOOL OnShowCustomizePane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMenuPane`  
+ [輸入] `pMenuPane`  
  快速自訂窗格指標。  
   
- [in] `uiToolbarID`  
+ [輸入] `uiToolbarID`  
  若要自訂 控制項工具列的識別碼。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1417,10 +1418,10 @@ virtual BOOL OnShowMDITabContextMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  在螢幕座標中功能表的位置。  
   
- [in] `dwAllowedItems`  
+ [輸入] `dwAllowedItems`  
  位元 OR 組合的旗標，指出目前的索引標籤允許何種動作：  
   
 - `BCGP_MDI_CREATE_VERT_GROUP`-可以建立垂直索引標籤群組。  
@@ -1433,7 +1434,7 @@ virtual BOOL OnShowMDITabContextMenu(
   
 - `BCGP_MDI_CAN_BE_DOCKED`-停駐狀態 （如索引標籤式文件相關） 中切換索引標籤式文件。  
   
- [in] `bTabDrop`  
+ [輸入] `bTabDrop`  
  `TRUE`若要顯示的結果 索引標籤拖曳到另一個索引標籤式群組功能表。 `FALSE`若要顯示為目前作用中 索引標籤上的快顯功能表的功能表。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1455,7 +1456,7 @@ virtual BOOL OnShowPanes(BOOL bShow);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
+ [輸入] `bShow`  
  `TRUE`若要顯示的窗格，`FALSE`隱藏窗格。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1491,10 +1492,10 @@ virtual void OnSizeMDIClient(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rectOld`  
+ [輸入] `rectOld`  
  目前的 MDI 用戶端視窗大小。  
   
- [in] `rectNew`  
+ [輸入] `rectNew`  
  新的 MDI 用戶端視窗大小。  
   
 ### <a name="remarks"></a>備註  
@@ -1509,14 +1510,14 @@ virtual BOOL OnTearOffMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMenuPopup`  
+ [輸入] `pMenuPopup`  
  快顯功能表指標。  
   
- [in] `pBar`  
+ [輸入] `pBar`  
  Tear-off 列指標。  
   
 ### <a name="return-value"></a>傳回值  
- `TRUE`允許快顯功能表與 tear-off 列，將會啟動。否則`FALSE`。 預設為 `TRUE`。  
+ `TRUE`允許快顯功能表與 tear-off 列，將會啟動。否則`FALSE`。 預設值為 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
  當您想要實作特殊的安裝程式分割列時，覆寫這個函式。 預設實作不做任何動作。  
@@ -1529,7 +1530,7 @@ virtual void OnUpdateFrameMenu(HMENU hMenuAlt);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hMenuAlt`  
+ [輸入] `hMenuAlt`  
  功能表的控點。  
   
 ##  <a name="panefrompoint"></a>CMDIFrameWndEx::PaneFromPoint  
@@ -1550,16 +1551,16 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  （在螢幕座標表示） 的點。  
   
- [in] `nSensitivity`  
+ [輸入] `nSensitivity`  
  每個已選取窗格的視窗矩形變大時所有方向此值。  
   
- [in] `bExactBar`  
+ [輸入] `bExactBar`  
  如果`TRUE`、`nSensitivity`參數已忽略。  
   
- [in] `pRTCBarType`  
+ [輸入] `pRTCBarType`  
  如果非`NULL`，方法會逐一查看指定之類型的窗格。  
   
  [輸出] `dwAlignment`  
@@ -1579,7 +1580,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bNotify`  
+ [輸入] `bNotify`  
  決定框架視窗的使用中就地項目是否要接收的版面配置變更通知。 如果`TRUE`，項目，則通知，否則`FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1598,19 +1599,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
  要移除窗格的指標。  
   
- [in] `bDestroy`  
+ [輸入] `bDestroy`  
  `TRUE`若要摧毀移除的窗格。 `FALSE`若要不損毀。  
   
- [in] `bAdjustLayout`  
+ [輸入] `bAdjustLayout`  
  `TRUE`若要立即調整停駐的配置。 如果`FALSE`，調整將會發生只重繪事件發生時針對其他原因 （使用者調整視窗大小時，拖曳主要畫面格等等）。  
   
- [in] `bAutoHide`  
+ [輸入] `bAutoHide`  
  `TRUE`若要移除的自動隱藏窗格清單 窗格。 `FALSE`若要移除規則窗格的清單 窗格。  
   
- [in] `pBarReplacement`  
+ [輸入] `pBarReplacement`  
  取代 [移除] 窗格之窗格的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1626,7 +1627,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszProfileName`  
+ [輸入] `lpszProfileName`  
  指定的設定檔名稱。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1660,7 +1661,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWnd`  
+ [輸入] `pWnd`  
  預覽列印框架視窗的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1676,13 +1677,13 @@ void SetupToolbarMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `menu`  
+ [輸入] `menu`  
  若要參考[CMenu 類別](../../mfc/reference/cmenu-class.md)要修改物件。  
   
- [in] `uiViewUserToolbarCmdFirst`  
+ [輸入] `uiViewUserToolbarCmdFirst`  
  指定的使用者定義的第一個命令。  
   
- [in] `uiViewUserToolbarCmdLast`  
+ [輸入] `uiViewUserToolbarCmdLast`  
  指定的使用者定義的最後一個命令。  
   
 ##  <a name="showfullscreen"></a>CMDIFrameWndEx::ShowFullScreen  
@@ -1706,16 +1707,16 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  顯示或隱藏窗格的指標。  
   
- [in] `bShow`  
+ [輸入] `bShow`  
  `TRUE`若要顯示的窗格。 `FALSE`若要隱藏窗格。  
   
- [in] `bDelay`  
+ [輸入] `bDelay`  
  `TRUE`若要延遲停駐配置的重新計算。 `FALSE`若要立即重新計算停駐的配置。  
   
- [in] `bActivate`  
+ [輸入] `bActivate`  
  `TRUE`若要顯示的窗格應該為作用中。 `FALSE`若要顯示為非作用中 窗格。  
   
 ### <a name="remarks"></a>備註  
@@ -1786,16 +1787,16 @@ virtual void WinHelp(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwData`  
+ [輸入] `dwData`  
  指定資料為 `nCmd`所指定之說明類型的必要項目。  
   
- [in] `nCmd`  
+ [輸入] `nCmd`  
  指定要求的說明類型。 如需可能的值清單以及它們如何影響 `dwData` 參數的相關資訊，請參閱 Windows SDK 中的 [WinHelp 函式](http://msdn.microsoft.com/library/windows/desktop/bb762267) 。  
   
 ### <a name="remarks"></a>備註  
  這個方法會覆寫[CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMDIFrameWnd](../../mfc/reference/cframewnd-class.md)   

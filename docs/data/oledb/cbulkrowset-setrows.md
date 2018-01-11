@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 543ea1fcc1a87319e9a9ca952417f76f140663f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 87fdb1f634c39062252c2593ae0a5b92d6265660
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbulkrowsetsetrows"></a>CBulkRowset::SetRows
 設定每個呼叫所擷取的資料列控制代碼數。  
@@ -52,5 +55,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CBulkRowset 類別](../../data/oledb/cbulkrowset-class.md)

@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::length_error
-- length_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- length_error class
+f1_keywords: stdexcept/std::length_error
+dev_langs: C++
+helpviewer_keywords: length_error class
 ms.assetid: d53c46c5-4626-400d-bd76-bf3e1e0f64ae
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8720ad32638442d134f3b3d4c3e638ca048f719e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d33195d1c2215c28122d7a9a536942afc1dc512f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lengtherror-class"></a>length_error 類別
 此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告嘗試產生的物件太長而無法指定。  
@@ -106,8 +87,7 @@ Type class std::length_error
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [logic_error 類別](../standard-library/logic-error-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

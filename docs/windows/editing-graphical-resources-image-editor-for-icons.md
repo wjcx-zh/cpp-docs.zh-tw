@@ -21,11 +21,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f875fd9a45e10be481a43989e523726cf917887
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8ffdc026c53a9f26e68d9f0e8626ebb03fac6ffc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="editing-graphical-resources-image-editor-for-icons"></a>編輯圖形資源 (圖示影像編輯器)
 圖形化資源是您定義您的應用程式的影像。 您可以繪製徒手，或使用圖形繪製。 您可以選取組件映像的編輯、 翻轉或調整大小，或您可以從選取的組件的映像來建立自訂筆刷，並使用該筆刷繪製。 您可以定義映像內容，以不同的格式，儲存映像，然後將影像從一種格式轉換為另一個。  
@@ -62,7 +65,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [影像編輯器視窗窗格](../windows/window-panes-image-editor-for-icons.md)  
   
- 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](https://msdn.microsoft.com/library/f45fce5x.aspx)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](https://msdn.microsoft.com/library/xbx3z216.aspx)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](https://msdn.microsoft.com/library/h6270d0z.aspx)。  
+ 如需將資源加入至 managed 專案的詳細資訊，請參閱[桌面應用程式中的資源](/dotnet/framework/resources/index)中*.NET Framework 開發人員手冊 》。* 如需手動將資源檔加入 managed 專案、 存取資源、 顯示靜態資源及指派資源字串給屬性的資訊，請參閱[建立桌面應用程式的資源檔](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)。 全球化和當地語系化的受管理應用程式的資源上的資訊，請參閱[全球化和當地語系化的.NET Framework 應用程式](/dotnet/standard/globalization-localization/index)。  
   
 > [!NOTE]
 >  您可以使用影像編輯器來檢視 32 位元影像，但是無法編輯這類影像。  
@@ -70,7 +73,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [快速鍵](../windows/accelerator-keys-image-editor-for-icons.md)   
  [圖示影像編輯器](../windows/image-editor-for-icons.md)   
 

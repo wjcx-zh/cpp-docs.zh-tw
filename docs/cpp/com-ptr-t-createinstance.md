@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_ptr_t::CreateInstance
-dev_langs:
-- C++
-helpviewer_keywords:
-- CreateInstance method [C++]
+f1_keywords: _com_ptr_t::CreateInstance
+dev_langs: C++
+helpviewer_keywords: CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1c07f7366c76c96580fc989475bd7f5ea23a38fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e4764cf615bf04e9f2b1c3c816becc5a58da35f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
 **Microsoft 特定的**  
@@ -71,13 +67,13 @@ HRESULT CreateInstance(
 ## <a name="remarks"></a>備註  
  這些成員函式會呼叫 `CoCreateInstance` 建立新的 COM 物件，然後查詢這個智慧型指標的介面類型。 然後產生的指標就會封裝在這個 `_com_ptr_t` 物件內。 **發行**呼叫以讓先前封裝之指標的參考計數遞減。 這個常式會傳回 `HRESULT`，表示成功或失敗。  
   
--   **CreateInstance (** `rclsid` **，**`dwClsContext`**)**建立新的執行執行個體的指定物件**CLSID**。        
+-   **CreateInstance (** `rclsid` **，**`dwClsContext`**)**建立新的執行執行個體的指定物件**CLSID**。  
   
--   **CreateInstance (** `clsidString` **，**`dwClsContext`**)**建立新的執行執行個體的物件指定的 Unicode 字串保留**CLSID**(開頭為"**{**") 或**ProgID**。        
+-   **CreateInstance (** `clsidString` **，**`dwClsContext`**)**建立新的執行執行個體的物件指定的 Unicode 字串保留**CLSID**(開頭為"**{**") 或**ProgID**。  
   
--   **CreateInstance (** `clsidStringA` **，**`dwClsContext`**)**建立新的執行執行個體的物件，指定保留的多位元組字元字串**CLSID** (開頭為"**{**") 或**ProgID**。       呼叫[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)，它會假設字串位於 ANSI 字碼頁，而不是 OEM 字碼頁。  
+-   **CreateInstance (** `clsidStringA` **，**`dwClsContext`**)**建立新的執行執行個體的物件，指定保留的多位元組字元字串**CLSID** (開頭為"**{**") 或**ProgID**。 呼叫[MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)，它會假設字串位於 ANSI 字碼頁，而不是 OEM 字碼頁。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

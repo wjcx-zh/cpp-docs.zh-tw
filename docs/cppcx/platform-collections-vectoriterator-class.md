@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 703035c7a5b2b32df95f83b42327b0965c98b4fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4dc6ca358959f6842cc16dcd2372094d5d7425b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator 類別
 衍生自 Windows Runtime IVector 介面的物件提供標準樣板程式庫迭代器。  
@@ -37,7 +38,7 @@ class VectorIterator;
  `T`  
  VectorIterator 樣板類別的 typename。  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -51,13 +52,13 @@ class VectorIterator;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Vectoriterator:: Vectoriterator](#ctor)|初始化 VectorIterator 類別的新執行個體。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[VectorIterator::operator- 運算子](#operator-minus)|從目前迭代器減去指定的項目數而產生新的迭代器，或從目前迭代器減去指定的迭代器而產生迭代器之間的項目數。|  
 |[VectorIterator::operator-- 運算子](#operator-decrement)|遞減目前 VectorIterator。|  
@@ -401,5 +402,5 @@ explicit VectorIterator(
 
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

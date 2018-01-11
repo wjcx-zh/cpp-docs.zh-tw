@@ -63,11 +63,12 @@ caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4850299b43b805c93136a59d5ee227e8bf79d2dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 710f4119ef943be5b58e4b617c1da1bc75e01c3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsnprintf-vsnprintf-vsnprintfl-vsnwprintf-vsnwprintfl"></a>vsnprintf、_vsnprintf、_vsnprintf_l、_vsnwprintf、_vsnwprintf_l
 使用引數清單的指標，寫入格式化輸出。 這些函式已有更安全的版本，請參閱 [vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](../../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)。  
@@ -162,7 +163,7 @@ int _vsnwprintf_l(
  `locale`  
  要使用的地區設定。  
   
- 如需詳細資訊，請參閱[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
+ 如需詳細資訊，請參閱 [格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。  
   
 ## <a name="return-value"></a>傳回值  
  `vsnprintf` 函式會傳回寫入的字元數，不計入結束的 Null 字元。 如果 `count` 指定的緩衝區大小不足以包含 `format` 和 `argptr` 所指定的輸出，則 `vsnprintf` 的傳回值是當 `count` 足夠大時可寫入的字元數 (不計入 Null 字元)。 如果傳回值大於 `count` -1，則輸出已被截斷。 傳回值 -1 表示發生編碼錯誤。  
@@ -199,7 +200,7 @@ int _vsnwprintf_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭 (C)|必要的標頭 (C++)|  
+|常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|  
 |-------------|---------------------------|-------------------------------|  
 |`vsnprintf`, `_vsnprintf`, `_vsnprintf_l`|\<stdio.h>|\<stdio.h> 或 \<cstdio>|  
 |`_vsnwprintf`, `_vsnwprintf_l`|\<stdio.h> 或 \<wchar.h>|\<stdio.h>、\<wchar.h>、\<cstdio> 或 \<cwchar>|  
@@ -284,7 +285,7 @@ nSize: 9, buff: Hi there!
 nSize: 10, buff: Hi there!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 函式](../../c-runtime-library/vprintf-functions.md)   
  [格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)   

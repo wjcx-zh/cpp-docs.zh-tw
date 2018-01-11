@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 289c505cc66e70a9634e3c183ae9511d99276940
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ce629f81d952a274a86aafba71da126c65946f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 類別
 `SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。  
@@ -36,18 +37,18 @@ ms.lasthandoff: 10/24/2017
 class SchedulerPolicy;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[SchedulerPolicy](#ctor)|多載。 建構新的排程器原則，並填入值[原則機碼](concurrency-namespace-enums.md)並行執行階段排程器和資源管理員支援。|  
 |[~ SchedulerPolicy 解構函式](#dtor)|終結的排程器原則。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[GetPolicyValue](#getpolicyvalue)|擷取的原則機碼值當做提供`key`參數。|  
 |[SetConcurrencyLimits](#setconcurrencylimits)|同時設定`MinConcurrency`和`MaxConcurrency`上的原則`SchedulerPolicy`物件。|  
@@ -55,7 +56,7 @@ class SchedulerPolicy;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|指派給另一個排程器原則的排程器原則。|  
   
@@ -192,7 +193,7 @@ unsigned int SetPolicyValue(
   
  請注意，這個方法不允許設定`MinConcurrency`或`MaxConcurrency`原則。 若要設定這些值，請使用[SetConcurrencyLimits](#setconcurrencylimits)方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [PolicyElementKey](concurrency-namespace-enums.md)   
  [CurrentScheduler 類別](currentscheduler-class.md)   

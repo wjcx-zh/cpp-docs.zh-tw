@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8842141b1c6e8159023da9a7cc486e81460ef36b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cd3fb56898107b1eca7cd30e06d75d253a02655e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importidl"></a>importidl
 將指定的.idl 檔案插入至產生的.idl 檔案。  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器屬性](../windows/compiler-attributes.md)   
  [獨立屬性](../windows/stand-alone-attributes.md)   
  [匯入](../windows/import.md)   

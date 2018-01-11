@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,8 +18,7 @@ f1_keywords:
 - scoped_allocator/std::scoped_allocator_adaptor::max_size
 - scoped_allocator/std::scoped_allocator_adaptor::outer_allocator
 - scoped_allocator/std::scoped_allocator_adaptor::select_on_container_copy_construction
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::scoped_allocator_adaptor
 - std::scoped_allocator_adaptor::allocate
@@ -32,16 +30,16 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 66c188c490861e0b632791755b2d9914a7919865
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: cc02ef4e65fc2762ab1c4eca0f0727d1e1258639
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 類別
 表示巢狀配置器。  
@@ -68,7 +66,7 @@ class scoped_allocator_adaptor;
   
  有三種類型是基於說明目的而定義：  
   
-|類型|說明|  
+|類型|描述|  
 |----------|-----------------|  
 |`Outermost`|`OUTERMOST(*this)` 的類型。|  
 |`Outermost_traits`|`allocator_traits<Outermost>`|  
@@ -76,13 +74,13 @@ class scoped_allocator_adaptor;
   
 ### <a name="constructors"></a>建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor](#scoped_allocator_adaptor)|建構 `scoped_allocator_adaptor` 物件。|  
   
 ### <a name="typedefs"></a>Typedef  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`const_pointer`|此類型是與 `Outer` 配置器相關聯之 `const_pointer` 的同義字。|  
 |`const_void_pointer`|此類型是與 `Outer` 配置器相關聯之 `const_void_pointer` 的同義字。|  
@@ -99,13 +97,13 @@ class scoped_allocator_adaptor;
   
 ### <a name="structs"></a>結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[scoped_allocator_adaptor::rebind 結構](#rebind_struct)|將 `Outer::rebind\<Other>::other` 類型定義為 `scoped_allocator_adaptor\<Other, Inner...>` 的同義字。|  
   
 ### <a name="methods"></a>方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[allocate](#allocate)|使用 `Outer` 配置器來配置記憶體。|  
 |[construct](#construct)|建構物件。|  
@@ -310,9 +308,8 @@ scoped_allocator_adaptor select_on_container_copy_construction();
 ### <a name="return-value"></a>傳回值  
  這個方法會有效地傳回 `scoped_allocator_adaptor(Outer_traits::select_on_container_copy_construction(*this), inner_allocator().select_on_container_copy_construction())`。 結果是新的 `scoped_allocator_adaptor` 物件，以及對於對應配置器 `al` 呼叫 `al.select_on_container_copy_construction()` 來初始化的每個預存配置器物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

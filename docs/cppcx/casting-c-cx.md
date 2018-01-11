@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f1373686ca960f86ca9e8b2ea4756911906fd66d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18963860b1f9398343370378140ebee7314690b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casting-ccx"></a>轉型 (C++/CX)
 適用於 Windows 執行階段類型的四個不同的轉換運算子： [static_cast 運算子](../cpp/static-cast-operator.md)， [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)， **safe_cast 運算子**，和[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。 如果無法執行轉換，`safe_cast` 和 `static_cast` 會擲回例外狀況。此外， [static_cast 運算子](../cpp/static-cast-operator.md) 也可以執行編譯階段類型檢查。 如果`dynamic_cast` 無法轉換類型，則會傳回 `nullptr` 。 雖然 `reinterpret_cast` 會傳回非 null 值，但是可能無效。 因此，我們建議您不要使用 `reinterpret_cast` ，除非您知道轉型成功。 此外，我們建議您不要使用 c-style 轉型您 C + /CX 程式碼，因為它們是相同`reinterpret_cast`。  
@@ -119,7 +120,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 |IDefault-interface-of-RuntimeClass*|same-RefClass-from-winmd^|  
 |IDefault-interface-of-RuntimeClass**|same-RefClass-from-winmd^*|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   
  [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

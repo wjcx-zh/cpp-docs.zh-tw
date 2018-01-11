@@ -24,11 +24,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a5f7b9d6eeda8192fe05a73d25c04527bea2ee80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5421cf47214d4ceeb7f8388835cb7a1cc57110ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="criticalsection-class"></a>critical_section 類別
 其為並行執行階段明確察覺且不可重新進入的 Mutex。  
@@ -39,30 +40,30 @@ ms.lasthandoff: 10/24/2017
 class critical_section;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`native_handle_type`|對 `critical_section` 物件的參考。|  
   
 ### <a name="public-classes"></a>公用類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[critical_section:: scoped_lock 類別](#critical_section__scoped_lock_class)|例外狀況安全 RAII 包裝函式`critical_section`物件。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[critical_section](#ctor)|建構新的重要區段。|  
 |[~ critical_section 解構函式](#dtor)|終結的重要區段。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[lock](#lock)|取得此重要區段。|  
 |[native_handle](#native_handle)|傳回平台特定原生控制代碼，如果存在的話。|  
@@ -188,6 +189,6 @@ bool try_lock_for(unsigned int _Timeout);
 void unlock();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [reader_writer_lock 類別](reader-writer-lock-class.md)

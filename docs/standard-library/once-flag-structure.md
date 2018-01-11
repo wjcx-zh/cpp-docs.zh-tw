@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dded28d846ded9472ff9cee140366e5bab18b49a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc66f322490bc728ab6d25e185f6b8d4ce0f0179
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="onceflag-structure"></a>once_flag 結構
 表示搭配樣板函式 [call_once](../standard-library/mutex-functions.md#call_once) 使用的 `struct`，以確保即使執行多個執行緒，該初始化程式碼僅會呼叫一次。  
@@ -37,7 +38,7 @@ struct once_flag { constexpr once_flag() noexcept; once_flag(const once_flag&); 
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 

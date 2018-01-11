@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b396ef048172c1cd8458346db2dc7b1dd5de9bfc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2cd32c4df0465426d99ca6246648520d160f382e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crebar-class"></a>CReBar 類別
 提供 Rebar 控制項配置、持續性和狀態資訊的控制列。  
@@ -38,11 +39,11 @@ ms.lasthandoff: 10/24/2017
 class CReBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CReBar::AddBar](#addbar)|將 rebar 群組列。|  
 |[CReBar::Create](#create)|建立 rebar 控制項，並將它附加至`CReBar`物件。|  
@@ -167,7 +168,7 @@ CReBarCtrl& GetReBarCtrl() const;
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CReBarCtrl#2](../../mfc/reference/codesnippet/cpp/crebar-class_2.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 MFCIE](../../visual-cpp-samples.md)   
  [CControlBar 類別](../../mfc/reference/ccontrolbar-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

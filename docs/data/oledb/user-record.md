@@ -1,33 +1,35 @@
 ---
-title: "使用者資料錄 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供者, 使用者資料錄"
-  - "資料錄, 使用者"
-  - "資料列集, 使用者資料錄"
-  - "使用者資料錄"
-  - "使用者資料錄, 說明"
+title: "使用者資料錄 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, user
+- OLE DB providers, user record
+- user records
+- user records, described
+- rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 587f10c14a360d2c5bbf447d13a161f985edf5b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 使用者資料錄
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用者資料錄可提供程式碼，以及可表示資料列集的資料行資料之資料結構。  使用者資料錄可在編譯時間或執行階段建立。  當使用 ATL OLE DB 提供者精靈建立提供者時，精靈會建立如下所示的預設使用者資料錄 \(假設您已指定 "MyProvider" 的提供者名稱 \[簡短名稱\]\)：  
+# <a name="user-record"></a>使用者資料錄
+使用者資料錄提供代表資料列集的資料行資料的程式碼和資料結構。 在編譯時期或執行階段，就可以建立使用者資料錄。 當您建立使用 ATL OLE DB 提供者精靈提供者時，精靈會建立預設使用者記錄，看起來像這樣 （假設您指定"MyProvider"的提供者名稱 [簡短名稱]）：  
   
 ```  
 class CWindowsFile:  
@@ -46,35 +48,35 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- OLE DB 提供者樣板會處理所有與用戶端互動相關的 OLE DB 細節。  為了取得回應所需的資料行資料，提供者會呼叫必須先放在使用者資料錄的 `GetColumnInfo` 函式。  您可明確地覆寫使用者資料錄內的 `GetColumnInfo`，例如以下列方式將它宣告在 .h 檔：  
+ OLE DB 提供者樣板處理用戶端之間的互動有關的所有 OLE DB 規格。 若要取得回應所需的資料行資料，提供者會呼叫`GetColumnInfo`函式，您必須將它放在使用者記錄中。 您可以明確覆寫`GetColumnInfo`使用者資料錄，比方說，藉由宣告它的.h 檔案中如下所示：  
   
 ```  
 template <class T>  
 static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)   
 ```  
   
- 這種做法相當於：  
+ 這相當於：  
   
 ```  
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)  
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)  
 ```  
   
- 您也必須在使用者資料錄的 .cpp 檔內實作 `GetColumnInfo`。  
+ 您也必須實作`GetColumnInfo`使用者資料錄的.cpp 檔案中。  
   
- PROVIDER\_COLUMN\_MAP 巨集可協助您建立 `GetColumnInfo` 函式：  
+ PROVIDER_COLUMN_MAP 巨集協助建立`GetColumnInfo`函式：  
   
--   BEGIN\_PROVIDER\_COLUMN\_MAP 定義函式原型 \(Prototype\) 和 **ATLCOLUMNINFO** 結構的靜態陣列。  
+-   BEGIN_PROVIDER_COLUMN_MAP 定義函式原型和靜態陣列**ATLCOLUMNINFO**結構。  
   
--   PROVIDER\_COLUMN\_ENTRY 定義並初始化單一 **ATLCOLUMNINFO**。  
+-   PROVIDER_COLUMN_ENTRY 定義和初始化單一**ATLCOLUMNINFO**。  
   
--   END\_PROVIDER\_COLUMN\_MAP 關閉陣列和函式。  它也會在 `pcCols` 參數內放置陣列元素計數。  
+-   END_PROVIDER_COLUMN_MAP 關閉陣列和函式。 它也會為陣列項目計數`pcCols`參數。  
   
- 當使用者資料錄於 Run Time 建立時，**GetColumnInfo**  會使用 `pThis` 參數來接收資料列集或命令執行個體的指標。  命令和資料列集必須支援 `IColumnsInfo` 介面，這樣才能從這個指標取得資料行資訊。  
+ 在執行階段，建立使用者資料錄時**GetColumnInfo**使用`pThis`參數，以接收的資料列集或命令的執行個體的指標。 命令和資料列集必須支援`IColumnsInfo`介面，以便可以從這個指標取得資料行資訊。  
   
- **CommandClass** 和 **RowsetClass** 為使用這個使用者資料錄的命令和資料列集。  
+ **CommandClass**和**RowsetClass**是命令，並使用使用者資料錄的資料列集。  
   
- 如需覆寫使用者資料錄 `GetColumnInfo` 的詳細範例，請參閱[動態決定傳回給消費者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
+ 如需如何覆寫的更詳細的範例`GetColumnInfo`使用者記錄，請參閱[動態決定資料行傳回給消費者](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
-## 請參閱  
- [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)
+## <a name="see-also"></a>請參閱  
+ [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

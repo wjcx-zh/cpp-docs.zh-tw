@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec9ba16d4d600a06cdc5e4fa3de5bf40a67de8d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>動態決定傳回給消費者的資料行
 PROVIDER_COLUMN_ENTRY 巨集通常處理**icolumnsinfo:: Getcolumnsinfo**呼叫。 不過，取用者可能會選擇使用書籤，因為提供者必須是能夠變更傳回根據取用者是否要求書籤的資料行。  
@@ -156,5 +159,5 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
   
  您現在可以編譯並執行增強型提供者。 若要測試提供者，請修改測試消費者中所述[實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)。 提供者執行測試的取用者。 驗證，測試取用者正確的字串從提供者擷取當您按一下**執行**按鈕**測試消費者** 對話方塊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)

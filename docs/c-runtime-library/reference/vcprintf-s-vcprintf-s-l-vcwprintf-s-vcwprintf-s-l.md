@@ -54,17 +54,18 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14b8d90fb017d55362f320f8504ca4d4bbb94d67
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e47d35c4f827351f76099c748f483a82f0e04d36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 使用引數清單的指標，將格式化輸出寫入主控台。 這些版本的 [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](../../c-runtime-library/reference/vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -123,14 +124,14 @@ int _vcwprintf_s_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|----------------------|  
 |`_vcprintf_s`, `_vcprintf_s_l`|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|  
 |`_vcwprintf_s`, `_vcwprintf_s_l`|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|  
   
  \* UNIX V 相容性的必要項目。  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -163,7 +164,7 @@ int main()
   (Related to symbol '<symbol>' defined on line 5).  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [vprintf 函式](../../c-runtime-library/vprintf-functions.md)   
  [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   

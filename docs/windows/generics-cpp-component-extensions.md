@@ -17,16 +17,19 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74b7be820479b2ef9fa742ee343e0aa33c26dfe8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 415da036c9ac2f285b97096368754f176d655eff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generics--c-component-extensions"></a>泛型 (C++ 元件擴充功能)
 泛型是參數化的類型和方法。 在這一節中，您將了解 Windows 執行階段和通用語言執行平台 (CLR) 都支援的泛型功能，以及只有通用語言執行平台 (CLR) 支援的泛型功能。 此外，您還會了解如何在 Visual C++ 中撰寫自己的泛型方法和類型，以及如何在 Visual C++ 中使用以 .NET Framework 語言撰寫的泛型類型。 最後，本節將提供泛型和 C++ 範本的比較。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  **Windows 執行階段和通用語言執行平台支援**  
   
  [Visual C++ 中的泛型概觀](../windows/overview-of-generics-in-visual-cpp.md)  
@@ -59,5 +62,5 @@ ms.lasthandoff: 10/24/2017
  [如何：使用 for each 反覆查看泛型集合](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)  
  使用[針對每個，在](../dotnet/for-each-in.md)泛型集合上的關鍵字。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

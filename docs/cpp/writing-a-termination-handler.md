@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - structured exception handling [C++], termination handlers
 - exceptions [C++], terminating
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 06fb01f2ee2782f8786308554923b3c5597a4574
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b9d4099a7f40acf0b5bfcc89f1c95cb880683b86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-a-termination-handler"></a>撰寫終止處理常式
 不同於例外狀況處理常式，無論程式碼保護區塊是否正常終止，都一定會執行終止處理常式。 終止處理常式的唯一用途應該是確保資源 (例如記憶體、控制代碼和檔案) 適當地關閉，而不管程式碼區段的執行如何完成。  
@@ -46,5 +44,5 @@ ms.lasthandoff: 09/25/2017
   
 -   [終止處理常式的限制](../cpp/restrictions-on-termination-handlers.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

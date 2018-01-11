@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b198c9a46666e1d344512e7cb391b0f1883be6ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e155880c6cf1ffb83feb2345ec26086bb113df15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-list-stlclr"></a>operator== (list) (STL/CLR)
 列出相等比較。  
@@ -93,7 +96,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [運算子 ！ = （清單） (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   
  [運算子\<（清單） (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)   

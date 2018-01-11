@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 351541763039abb4095785d562ee9ab22b30b74a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16364843ca5d85181b84e56f56b43ca4856a1667
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection 類別
 代表 「 關鍵區段 」，讓一個執行緒存取資源或程式碼區段的一次同步處理物件。  
@@ -40,30 +41,30 @@ ms.lasthandoff: 10/24/2017
 class CCriticalSection : public CSyncObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCriticalSection::CCriticalSection](#ccriticalsection)|建構 `CCriticalSection` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCriticalSection::Lock](#lock)|用來存取`CCriticalSection`物件。|  
 |[CCriticalSection::Unlock](#unlock)|釋出 `CCriticalSection` 物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCriticalSection::operator CRITICAL_SECTION *](#operator_critical_section_star)|擷取到內部指標**CRITICAL_SECTION**物件。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCriticalSection::m_sect](#m_sect)|A **CRITICAL_SECTION**物件。|  
   
@@ -170,7 +171,7 @@ BOOL Unlock();
 ### <a name="example"></a>範例  
   請參閱範例的[CCriticalSection::Lock](#lock)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CSyncObject 類別](../../mfc/reference/csyncobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CMutex 類別](../../mfc/reference/cmutex-class.md)

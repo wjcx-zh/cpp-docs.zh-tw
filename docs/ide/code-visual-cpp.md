@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7ce06201d816cb91928f569ef3afe8422d5fecb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 863ad36def9b32269ff4b1a0c131f46e67189a45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcodegt-visual-c"></a>&lt;程式碼&gt;（Visual c + +）
 \<程式碼 > 標記可讓您指定為程式碼的一或多行的方式。  
@@ -46,5 +47,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="example"></a>範例  
  如需如何使用 \<code> 標記的範例，請參閱 [\<example>>](../ide/example-visual-cpp.md) 主題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

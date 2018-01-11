@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49f17f1d5dd850034a802103ebd9208dc9bf8e87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17d5063db9eb76e0fc6db9eecfe183b63276b874
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 精靈加入 ATL 支援的詳細資訊
 當您[將 ATL 支援加入至現有的 MFC 可執行檔或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)，Visual c + + 可讓下列修改現有的 MFC 專案 (在此範例中，稱為專案`MFCEXE`):  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="notes-for-dll-projects"></a>DLL 專案的附註  
  當您將 ATL 支援加入 MFC DLL 專案時，您會看到的一些差異。 程式碼加入至**DLLRegisterServer**和**DLLUnregisterServer**註冊及取消註冊 DLL 函式。 程式碼也會加入至[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)和[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 專案中的 ATL 支援](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)   
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   

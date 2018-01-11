@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a254b89d7d3007f639c961371b9f1560b4c5f406
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff4fc72d2a40cc52ec614cbd5b470738ad1aa391
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="special-member-functions"></a>特殊成員函式  
   
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
 預設複製和移動建構和指派作業執行成員的位元模式複製或移動的非靜態資料成員。 移動作業只會產生當宣告時沒有解構函式或移動或複製作業。 宣告複製建構函式時，才會產生預設複製建構函式。 它是隱含地刪除宣告移動作業。 只有在沒有複製指派運算子已明確宣告時，會產生預設複製指派運算子。 它是隱含地刪除宣告移動作業。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [C++ 語言參考](cpp-language-reference.md)  
 
 

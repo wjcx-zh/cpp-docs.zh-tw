@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe9203a94d698aa21ddd861df75c63a76253ce9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 58db951b2c9459eb9511e0a354e1daec4b29b53d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parsing-c-command-line-arguments"></a>剖析 C++ 命令列引數
 **Microsoft 特定的**  
@@ -78,7 +79,7 @@ int main( int argc,      // Number of strings in array argv
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [main：程式啟動](../cpp/main-program-startup.md)

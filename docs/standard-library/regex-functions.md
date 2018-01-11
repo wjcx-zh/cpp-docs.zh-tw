@@ -11,11 +11,9 @@ f1_keywords:
 - regex/std::regex_replace
 - regex/std::regex_search
 - regex/std::swap
-- regex/std::swap
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 91a8314b-6f7c-4e33-b7d6-d8583dd75585
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
 helpviewer_keywords:
 - std::regex_match [C++]
@@ -23,12 +21,11 @@ helpviewer_keywords:
 - std::regex_search [C++]
 - std::swap [C++]
 - std::swap [C++]
+ms.openlocfilehash: f9ac58b6022d1497f0f06ff08edd29f2e012000f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 82b4ea038efad847c8c6f50873fa4cdd8250c453
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函式
 ||||  
@@ -101,7 +98,7 @@ bool regex_match(
  符合結果配置器類別。  
   
  `Elem`  
- 要比對的項目類型。 在一般情況下，這會是 string、wstring、char* 或 wchar_t\*。  
+ 要符合之項目的類型。 在一般情況下，這會是 string、wstring、char* 或 wchar_t\*。  
   
  `RXtraits`  
  項目的 Traits 類別。  
@@ -231,7 +228,7 @@ basic_string<Elem> regex_replace(
  規則運算式配置器類別。  
   
  `Elem`  
- 要比對的項目類型。  
+ 要符合之項目的類型。  
   
  `flags`  
  比對的旗標。  
@@ -356,7 +353,7 @@ bool regex_search(
  符合結果配置器類別。  
   
  `Elem`  
- 要比對的項目類型。  
+ 要符合之項目的類型。  
   
  `RXtraits`  
  項目的 Traits 類別。  
@@ -512,7 +509,7 @@ length == 3
 string == aaa  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 [\<regex>](../standard-library/regex.md)  
 [regex_constants 類別](../standard-library/regex-constants-class.md)  
 [regex_error 類別](../standard-library/regex-error-class.md)  
@@ -521,5 +518,4 @@ string == aaa
 [regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)  
 [regex_traits 類別](../standard-library/regex-traits-class.md)  
 [\<regex> typedefs](../standard-library/regex-typedefs.md)  
-
 

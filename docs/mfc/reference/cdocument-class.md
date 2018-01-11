@@ -131,11 +131,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c6cfe4dc779fb4ad50f2171ef8811785f48275a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dad4a2bb3da49b0163367761aeefe85384ecdfb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdocument-class"></a>CDocument 類別
 提供使用者定義的文件類別的基本功能。  
@@ -146,17 +147,17 @@ ms.lasthandoff: 10/24/2017
 class CDocument : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDocument::CDocument](#cdocument)|建構 `CDocument` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDocument::AddView](#addview)|將檢視附加至文件。|  
 |[CDocument::BeginReadChunks](#beginreadchunks)|初始化區塊讀取。|  
@@ -207,16 +208,16 @@ class CDocument : public CCmdTarget
 |[CDocument::SetTitle](#settitle)|設定文件的標題。|  
 |[CDocument::UpdateAllViews](#updateallviews)|通知所有文件的檢視已經過修改。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDocument::OnFileSendMail](#onfilesendmail)|傳送郵件訊息與附加的文件。|  
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|如果存在郵件支援，可讓傳送郵件命令。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|指定`CDocument`縮圖的 dllhost 式建立物件。 應該簽入`CView::OnDraw`。|  
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|指定`CDocument`物件所建立的 prevhost `Rich Preview`。 應該簽入`CView::OnDraw`。|  
@@ -659,7 +660,7 @@ virtual void OnDocumentEvent(DocumentEvent deEvent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `deEvent`  
+ [輸入] `deEvent`  
  描述事件的型別列舉的資料型別。  
   
 ### <a name="remarks"></a>備註  
@@ -1115,7 +1116,7 @@ void UpdateAllViews(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCDocView#64](../../mfc/codesnippet/cpp/cdocument-class_9.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 MDIDOCVW](../../visual-cpp-samples.md)   
  [MFC 範例 SNAPVW](../../visual-cpp-samples.md)   
  [MFC 範例 NPP](../../visual-cpp-samples.md)   

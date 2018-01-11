@@ -1,50 +1,47 @@
 ---
-title: "在 Visual C++ 專案中加入參考 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.References"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework (C++), 加入參考對話方塊"
-  - "加入參考對話方塊 (C++)"
+title: "在 Visual c + + 專案中加入參考 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.References
+dev_langs: C++
+helpviewer_keywords:
+- Add References Dialog Box (C++)
+- .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-caps.latest.revision: 32
-caps.handback.revision: 32
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "32"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7bacb5663d8e06ee5a10629c547de6f96219697e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 在 Visual C++ 專案中加入參考
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="adding-references-in-visual-c-projects"></a>在 Visual C++ 專案中加入參考
 程式通常會在 DLL、Windows 執行階段元件、擴充功能 SDK、COM 元件和 .NET 組件等其他二進位檔中，呼叫應用程式開發介面。 您的程式尋找這些二進位檔的方式，取決於您專案的類型和二進位檔類型。  
   
- 在原生 C\+\+ 專案中，如果您想要使用不是由方案中的另一個專案所產生的原生 DLL 或 COM 元件，您可以使用 LoadLibrary 或 CoCreateInstance 來指定該二進位檔的路徑，或是讓系統在妥善定義的特定位置中查詢並找出該路徑。  
+ 在原生 C++ 專案中，如果您想要使用不是由方案中的另一個專案所產生的原生 DLL 或 COM 元件，您可以使用 LoadLibrary 或 CoCreateInstance 來指定該二進位檔的路徑，或是讓系統在妥善定義的特定位置中查詢並找出該路徑。  
   
- 在 UWP 專案或 C\+\+\/CLI 專案等其他專案類型中，或是當二進位檔是由方案中的另一個專案所產生時，您可以在組件、元件或專案中加入*「參考」*\(Reference\)。   參考基本上是可讓您的程式找到二進位檔並與其通訊的一組資料。       當您加入參考時，Visual Studio 會處理低階詳細資料 若要將來自 C\+\+ 專案的參考設定為 [!INCLUDE[dnprdnshort](../error-messages/tool-errors/includes/dnprdnshort_md.md)] 組件 \(僅限 C\+\+\/CLI\)、COM 元件、方案中的其他專案 \(包括共用專案\) 或已連接服務，請以滑鼠右鍵按一下方案總管中的 \[參考\] 節點，以顯示 \[參考管理員\]。 您在 \[參考管理員\] 中看到的內容會視專案類型而有所不同。  
+ 在 UWP 專案或 C++/CLI 專案等其他專案類型中，或是當二進位檔是由方案中的另一個專案所產生時，您可以在組件、元件或專案中加入 *「參考」* (Reference)。   參考基本上是可讓您的程式找到二進位檔並與其通訊的一組資料。       當您加入參考時，Visual Studio 會處理低階詳細資料 若要將來自 c + + 專案的參考設定至.NET Frameworkassemblies (C + + CLI 只)、 COM 元件，包括您方案中的其他專案共用的專案，或已連接服務，以滑鼠右鍵按一下**參考**節點**方案總管 中**啟動**參考管理員**。 您在 [參考管理員] 中看到的內容會視專案類型而有所不同。  
   
- 在原生 C\+\+ 專案 \(ATL\) 中，*「參考」*\(Reference\) 的概念僅適用於方案中的其他專案 \(包括共用專案\)，因此您只會在 \[參考管理員\] 中看到這些專案：  
+ 在原生 C++ 專案 (ATL) 中， *「參考」* (Reference) 的概念僅適用於方案中的其他專案 (包括共用專案)，因此您只會在 [參考管理員] 中看到這些專案：  
   
- ![Visual C&#43;&#43; 參考管理員 &#40;ATL 專案&#41;](../Image/Visual%20C++%20Reference%20Manager%20\(ATL%20Projects\).png "Visual C\+\+ Reference Manager \(ATL Projects\)")  
+ ![Visual C# 43; &#43;參考管理員 &#40;ATL 專案 &#41;] (../ide/media/visual-c---reference-manager--atl-projects-.png "Visual c + + 參考管理員 （ATL 專案）")  
   
- 在 C\+\+\/CLI 或通用 Windows 平台專案中，參考的概念除了適用於方案中的其他專案之外，還適用於更多類型的二進位檔。  這些類型全部都會在 \[參考管理員\] 中公開：  
+ 在 C++/CLI 或通用 Windows 平台專案中，參考的概念除了適用於方案中的其他專案之外，還適用於更多類型的二進位檔。  這些所有中公開**參考管理員**。
   
- ![C&#43;&#43;&#47;CLI 專案的 Visual C&#43;&#43; 參考管理員](../Image/Visual%20C++%20Reference%20Manager%20for%20C++/CLI%20projects.png "Visual C\+\+ Reference Manager for C\+\+\/CLI projects")  
+## <a name="reference-properties"></a>參考屬性  
+ 每種參考類型都包含屬性。 您可以在方案總管中選取參考，然後按 **Alt + Enter**，或按一下滑鼠右鍵並選擇 [屬性] ，來檢視屬性。 部分屬性是唯讀的，而部分屬性則可以修改。 不過，您通常不需要手動修改這些屬性。  
   
-## 參考屬性  
- 每種參考類型都包含屬性。 您可以在方案總管中選取參考，然後按 **Alt \+ Enter**，或按一下滑鼠右鍵並選擇 \[屬性\]，來檢視屬性。 部分屬性是唯讀的，而部分屬性則可以修改。 不過，您通常不需要手動修改這些屬性。  
-  
-### ActiveX 參考屬性  
- ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 \[參考\] 窗格中選取 COM 元件時才會顯示。 屬性不能修改。  
+### <a name="activex-reference-properties"></a>ActiveX 參考屬性  
+ ActiveX 參考屬性僅適用於 COM 元件的參考。 這些屬性僅在 [參考]  窗格中選取 COM 元件時才會顯示。 屬性不能修改。  
   
  **控制項完整路徑**  
  顯示參考控制項的目錄路徑。  
@@ -61,37 +58,37 @@ manager: "ghogen"
  **包裝函式工具**  
  顯示用來從參考 COM 程式庫或 ActiveX 控制項建置 Interop 組件的工具。  
   
-### 組件參考屬性  
- 組件參考屬性僅適用於 C\+\+\/CLI 專案中 [!INCLUDE[dnprdnshort](../error-messages/tool-errors/includes/dnprdnshort_md.md)] 組件的參考。 這些屬性僅在 \[參考\] 窗格中選取 [!INCLUDE[dnprdnshort](../error-messages/tool-errors/includes/dnprdnshort_md.md)] 組件時才會顯示。 屬性不能修改。  
+### <a name="assembly-reference-properties"></a>組件參考屬性  
+ 組件參考屬性是僅適用於參考.NET Frameworkassemblies 在 C + + /CLI 專案。 這些屬性會顯示在選取.NET Frameworkassembly 時才**參考**窗格。 屬性不能修改。  
   
  **相對路徑**  
  顯示從專案目錄到參考組件的相對路徑。  
   
-### 組建屬性  
+### <a name="build-properties"></a>組建屬性  
  各種參考類型都會提供下列屬性。 這些屬性可讓您指定如何使用參考進行建置。  
   
  **複製到本機**  
  指定是否要在建置期間，自動將參考組件複製到目標位置。  
   
  **複製附屬組件到本機**  
- 指定是否要在建置期間，自動將參考組件的附屬組件複製到目標位置。 僅在 \[複製到本機\]為 `true` 時才會使用。  
+ 指定是否要在建置期間，自動將參考組件的附屬組件複製到目標位置。 僅在 [複製到本機]  為 `true`時才會使用。  
   
  **參考組件輸出**  
  指定這個組件用於建置流程。 如果為 `true`，則組件會在建置期間用於編譯器命令列上。  
   
-### 專案對專案參考屬性  
- 下列屬性會將 \[參考\] 窗格中所選取專案的*「專案對專案參考」*\(Project\-to\-Project Reference\) 定義至相同方案的另一個專案。 如需詳細資訊，請參閱[管理專案中的參考](../Topic/Managing%20references%20in%20a%20project.md)。  
+### <a name="project-to-project-reference-properties"></a>專案對專案參考屬性  
+ 下列屬性會將 [參考]  窗格中所選取專案的 **「專案對專案參考」** (Project-to-Project Reference) 定義至相同方案的另一個專案。 如需詳細資訊，請參閱[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)。  
   
  **連結程式庫相依性**  
- 當這個屬性為 **True** 時，專案系統會將獨立專案所產生的 .lib 檔案連結至相依專案。 一般而言，您將指定為 **True**。  
+ 當這個屬性為 **True**時，專案系統會將獨立專案所產生的 .lib 檔案連結至相依專案。 一般而言，您將指定為 **True**。  
   
  **專案識別項**  
  用來唯一識別獨立專案。 屬性值是無法修改的內部系統 GUID。  
   
  **使用程式庫相依性輸入**  
- 當這個屬性為 **False** 時，專案系統不會將獨立專案所產生的程式庫 .obj 檔案連結至相依專案。 因此，這個值會停用累加連結。 一般而言，您將指定為 **False**，因為若有許多的獨立專案，建置應用程式可能會花很長的時間。  
+ 當這個屬性為 **False**時，專案系統不會將獨立專案所產生的程式庫 .obj 檔案連結至相依專案。 因此，這個值會停用累加連結。 一般而言，您將指定為 **False** ，因為若有許多的獨立專案，建置應用程式可能會花很長的時間。  
   
-### 參考屬性  
+### <a name="reference-properties"></a>參考屬性  
  下列屬性位於 COM 和 .NET 組件參考中，而且無法修改。  
   
  **組件名稱**  
@@ -106,10 +103,10 @@ manager: "ghogen"
  **完整路徑**  
  顯示參考組件的目錄路徑。  
   
- **識別**  
- 針對 [!INCLUDE[dnprdnshort](../error-messages/tool-errors/includes/dnprdnshort_md.md)] 組件，則會顯示完整路徑。 針對 COM 元件，則會顯示 GUID。  
+ **身分識別**  
+ 針對.NET Frameworkassemblies 中，顯示的完整路徑。 針對 COM 元件，則會顯示 GUID。  
   
- **標籤**  
+ **Label**  
  顯示參考的標籤。  
   
  **名稱**  
@@ -124,6 +121,6 @@ manager: "ghogen"
  **版本**  
  顯示參考組件的版本。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../ide/property-pages-visual-cpp.md)   
- [如何：開啟專案屬性頁](../misc/how-to-open-project-property-pages.md)
+ [使用專案屬性](../ide/working-with-project-properties.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee1ac1ddbd78bba8a6d01f29d45f94e63644dc5a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4530b4710b7e4e9ea074c11f53f210ba6bf9dfbf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binarydelegatenoreturn-stlclr"></a>binary_delegate_noreturn (STL/CLR)
 Genereic 類別描述兩個引數委派，會傳回`void`。 您可以使用它指定的委派，根據其引數。  
@@ -94,7 +97,7 @@ compare(b, a) = False
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
  [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)   
  [unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)

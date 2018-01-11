@@ -1,54 +1,58 @@
 ---
-title: "文字工具字型對話方塊 (圖示影像編輯器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文字工具字型對話方塊"
-  - "字型, 在影像上變更"
-  - "文字, 在影像上"
+title: "文字工具字型對話方塊 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Text Tool Font dialog box
+- fonts, changing on an image
+- text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2f5df3215f2d3487b919c2c89215dab17d288d4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 文字工具字型對話方塊 (圖示影像編輯器)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-當您使用[影像編輯器](../mfc/image-editor-for-icons.md)的 [文字工具對話方塊](../mfc/text-tool-dialog-box-image-editor-for-icons.md)時，指定字型設定。  
+# <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>文字工具字型對話方塊 (圖示影像編輯器)
+指定當您使用的字型設定[文字工具對話方塊](../windows/text-tool-dialog-box-image-editor-for-icons.md)的[影像編輯器](../windows/image-editor-for-icons.md)。  
   
- 使用這個對話方塊來：  
+ 使用此對話方塊：  
   
--   [變更影像上的文字字型](../mfc/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
+-   [將映像上的文字字型變更](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- 若要存取此對話方塊，請按一下 \[文字工具\] 對話方塊的 \[字型\] 按鈕。  
+ 若要存取此對話方塊中，按一下**字型**文字工具對話方塊方塊中的按鈕。  
   
- **Font**  
+ **字型**  
  列出可用的字型。  
   
  **字型樣式**  
- 列出指定字型的可用樣式。  
+ 列出指定之字型的可用樣式。  
   
  **Size**  
- 列示出指定字型的可用點數大小。  
+ 列出可用的大小指定的字型。  
   
  **範例**  
- 顯示在指定的字型設定下文字會如何顯示的範例。  
+ 顯示具有指定的字型設定的文字會如何出現的範例。  
   
- **Script**  
- 列出指定字型的可用字集。  當您選取不同的字集時，即可使用該語言的字元集 \(Character Set\) 來建立多語言文件。  
+ **指令碼**  
+ 列出指定之字型的可用語言指令碼。 當您選取不同的語言指令碼時，字元集的語言會變成可用於建立多國語言的文件。  
   
-## 需求  
- None  
+## <a name="requirements"></a>需求  
+ 無  
   
-## 請參閱  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)
+

@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 358d217a131ec3e282775604619f1ff265baf490
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38da8f97dfd689037f52f5e7c67bb51f4577a05a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
 `task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。  
@@ -40,18 +41,18 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
  `_Function`  
  將要叫用以執行該工作所表示的函式物件類型`task_handle`物件。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[task_handle](#ctor)|建構新`task_handle`物件。 工作的工作會執行叫用指定做為參數的建構函式的函式。|  
 |[~ task_handle 解構函式](#dtor)|終結`task_handle`物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator （)](#task_handle__operator_call)|執行階段會叫用來執行的工作控制代碼的工作函式呼叫運算子。|  
   
@@ -105,7 +106,7 @@ task_handle(const _Function& _Func);
 ~task_handle();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [task_group 類別](task-group-class.md)   
  [structured_task_group 類別](structured-task-group-class.md)

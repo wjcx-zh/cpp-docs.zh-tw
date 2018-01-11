@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95ce4882f05dece5fc00b6a00cb994e5e78b479d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bfaad06571a8648db24497c46d55cb2eb1ce2157
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>在日期時間選擇器控制項中使用自訂格式字串
 根據預設，日期時間選擇器控制項會以三種格式類型 (每種格式對應一獨特的樣式) 顯示目前的日期或時間：  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  除了自訂格式字串，日期和時間選擇器控制項也支援[回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

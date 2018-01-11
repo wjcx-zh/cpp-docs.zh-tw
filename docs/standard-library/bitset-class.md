@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,8 +23,7 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -43,16 +41,16 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f1bdd59695e7c1be32d65bcb9f49e01fa8903eaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 2f53256a15485619268a4b1dce42395857d29a1e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bitset-class"></a>bitset 類別
 描述物件類型，其可儲存由固定位元數所組成的序列，以提供精簡的方式，來保留一組項目或條件的旗標。 bitset 類別支援類型 bitset 物件上的作業，該作業包含位元的集合，並提供每一個位元的常數時間存取。  
@@ -1177,7 +1175,7 @@ public:
 ### <a name="remarks"></a>備註  
  類別 `reference` 只有作為 bitset `operator[]` 的協助程式類別時才會出現。 此成員類別描述可存取 bitset 中個別位元的物件。 讓 *b* 成為 `bool` 類型的物件、讓 *x* 和 *y* 物件屬於 **bitset\<***N***>** 類型，並讓 *i* 和 *j* 成為這類物件中的有效位置。 標記法 *x [i]* 參考位於 bitset *x* 中位置 *i* 的位元。 `reference` 類別的成員函式會依序提供下列作業：  
   
-|作業|定義|  
+|運算|定義|  
 |---------------|----------------|  
 |*x*[*i*] = *b*|將 `bool` 值 *b* 儲存在 bitset *x* 中的位元位置 *i*。|  
 |*x*[*i*] = *y*[*j*]|將位元 *y*[ *j*] 的值儲存在 bitset *x* 中的位元位置 *i*。|  
@@ -1442,5 +1440,4 @@ bool test(size_t _Pos) const;
   
 ### <a name="remarks"></a>備註  
  此成員函式會擲回 [out_of_range](../standard-library/out-of-range-class.md)
-
 

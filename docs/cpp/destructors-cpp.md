@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 37aa5ab5cad2367bfc37e2e1b6fd886540eada8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="destructors-c"></a>解構函式 (C++)
 解構函式是會自動叫用當物件超出範圍或明確地被終結由呼叫成員函式`delete`。 解構函式具有相同的名稱為類別，加上波狀符號 (`~`)。 例如，`String` 類別的解構函式宣告為：`~String()`。 如果未定義解構函式，編譯器會提供一個; 預設值許多類別就足夠了。 您只需要定義自訂的解構函式，此類別會儲存需要釋放系統資源的控制代碼時，或擁有記憶體的指標指向。
@@ -71,7 +72,7 @@ int main() {
   
  在上述範例中，解構函式 `String::~String` 使用 `delete` 運算子，取消配置動態配置給文字儲存的空間。  
   
-## <a name="delcaring-destructors"></a>宣告解構函式  
+## <a name="declaring-destructors"></a>宣告解構函式  
  解構函式是名稱與類別相同的函式，但其名稱前面會加上波狀符號 (`~`)。  
   
  有數種規則用於管理解構函式的宣告。 解構函式：  

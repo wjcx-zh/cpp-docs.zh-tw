@@ -1,39 +1,38 @@
 ---
-title: "資源編譯器嚴重錯誤 RC1120 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "RC1120"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RC1120"
+title: "資源編譯器嚴重錯誤 RC1120 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: RC1120
+dev_langs: C++
+helpviewer_keywords: RC1120
 ms.assetid: 4e462931-e42e-42e3-8bfc-847677194286
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 28a35cc2f932cdf655324d05c10bdb875aa895a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 資源編譯器嚴重錯誤 RC1120
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-out of memory, needed number bytes  
+# <a name="resource-compiler-fatal-error-rc1120"></a>資源編譯器嚴重錯誤 RC1120
+記憶體不足，請需要位元組數  
   
- 資源編譯器儲存在堆積 \(Heap\) 中項目的儲存體已用完。  這通常是由於具有過多的符號所引起。  
+ 資源編譯器已用完存放裝置，它會儲存其堆積中的項目。 這通常是有太多符號。  
   
-### 若要採用下列可能解決方式以進行修正  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正  
   
-1.  增加 Windows 交換檔 \(Swap File\) 空間。  如需增加交換檔空間的詳細資訊，請參閱 Windows 說明中的虛擬記憶體部分。  
+1.  增加 Windows 交換檔空間。 如需有關如何增加分頁檔空間的詳細資訊，請參閱 Windows 說明中的虛擬記憶體。  
   
-2.  排除不必要的包含檔案，特別是不需要的 `#define` 以及函式原型 \(Prototype\)。  
+2.  排除不必要包含檔案，特別是不必要的`#define`s 和函式原型。  
   
-3.  將目前的檔案分割成兩個以上的檔案，然後分別進行編譯。  
+3.  目前的檔案分割成兩個或多個檔案，然後分別進行編譯。  
   
-4.  將系統上正在執行的其他程式或驅動程式移除，因為這些程式可能會消耗大量的記憶體。
+4.  移除其他程式或系統，可能會消耗大量的記憶體中執行的驅動程式。

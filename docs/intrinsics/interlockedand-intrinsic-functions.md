@@ -67,11 +67,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd2fd7ce59633e8b437095886ae7b209828e88ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 38507a9a2b09c091305478a1e596c8c3485cd754
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 內建函式
 **Microsoft 特定的**  
@@ -193,7 +194,7 @@ __int64 _InterlockedAnd64_rel(
   
 |內建|架構|標頭|  
 |---------------|------------------|------------|  
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedAnd`、`_InterlockedAnd8`、`_InterlockedAnd16``_InterlockedAnd64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h >|  
 |`_InterlockedAnd_np`、`_InterlockedAnd8_np`、`_InterlockedAnd16_np``_InterlockedAnd64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
 |`_InterlockedAnd_HLEAcquire`、`_InterlockedAnd_HLERelease`、`_InterlockedAnd64_HLEAcquire``_InterlockedAnd64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
@@ -231,8 +232,8 @@ int main()
 0xff00 0xffff00 0xff00ff00  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

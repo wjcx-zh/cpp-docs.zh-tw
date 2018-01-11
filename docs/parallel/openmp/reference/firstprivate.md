@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0645eee74ab162c444531c141b297665653907b8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c7d4a5ba23e343f7858bf3320ed05ebce84f1c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="firstprivate"></a>firstprivate
 指定每個執行緒都應該有自己的變數中，執行個體和具有變數的值，應該先初始化變數，因為它存在於平行建構之前。  
@@ -32,7 +33,7 @@ firstprivate(var)
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`var`|具有執行個體中每個執行緒，變數會初始化變數的值，因為它存在於之前平行建構。 如果指定了多個變數，請以逗號分隔變數名稱。|  
   
@@ -54,5 +55,5 @@ firstprivate(var)
 ## <a name="example"></a>範例  
  如需使用`firstprivate`，請參閱中的範例[私人](../../../parallel/openmp/reference/private-openmp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

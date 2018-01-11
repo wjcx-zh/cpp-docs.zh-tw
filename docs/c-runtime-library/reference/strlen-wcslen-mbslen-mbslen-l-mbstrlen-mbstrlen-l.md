@@ -59,11 +59,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: faa9a7eee796bddcdfe67e43ced5e2f10c566bd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c7277a52dfbc77bb41fe0603129813ee682b4bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strlen-wcslen-mbslen-mbslenl-mbstrlen-mbstrlenl"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 使用目前的地區設定或指定的地區設定取得字串的長度。 這些函式已有更安全的版本可供使用，請參閱 [strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l](../../c-runtime-library/reference/strnlen-strnlen-s.md)。  
@@ -121,18 +122,18 @@ size_t _mbstrlen_l(
   
  `_mbslen` 和 `_mbslen_l` 會傳回多位元組字元字串中的多位元組字元數，但不會測試多位元組字元的有效性。 `_mbstrlen` 和 `_mbstrlen_l` 會測試多位元組字元的有效性，並辨識多位元組字元的序列。 若傳遞至 `_mbstrlen` 或 `_mbstrlen_l` 包含對字碼頁而言為無效的多位元組字元，則函式會傳回 -1，並將 `errno` 設為 `EILSEQ`。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 類別設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strlen`|\<string.h>|  
 |`wcslen`|\<string.h> 或 \<wchar.h>|  
 |`_mbslen`, `_mbslen_l`|\<mbstring.h>|  
 |`_mbstrlen`, `_mbstrlen_l`|\<stdlib.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -197,7 +198,7 @@ Length of 'ABCァD' : 5
 Bytes in 'ABCァD' : 6  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   
  [地區設定](../../c-runtime-library/locale.md)   

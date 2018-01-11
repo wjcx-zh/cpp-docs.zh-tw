@@ -6,16 +6,43 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 運算子
 ||||  
@@ -198,7 +225,7 @@ The remainders from the element-by-element division is the
 *\  
 ```  
   
-##  <a name="op_amp"></a>  operator&amp;  
+##  <a name="op_amp"></a> operator&amp;  
  取得兩個相同大小 valarray 對應項目之間，或 valarray 和該項目型別指定值之間的位元 **AND**。  
   
 ```  
@@ -232,7 +259,7 @@ operator&(
  Valarray，其中的項目是項目組合的位元 AND 運算的`left`和`right`。  
   
 ### <a name="remarks"></a>備註  
- 位元運算僅能用於操作 `char` 和 `int` 資料型別及變體的位元，並且無法用於 **float**、**double**、**longdouble**、`void``bool`，或是其他更複雜的資料型別。  
+ 位元運算僅能用於操作 `char` 和 `int` 資料型別及變體的位元，並且無法用於 **float**、**double**、**longdouble**、`void`、`bool`，或是其他更複雜的資料型別。  
   
  位元 **AND** 與邏輯 **AND** 有相同的真值表，但是適用於個別位元層級上的資料型別。 [operator&&](../standard-library/valarray-operators.md#amp) 適用於項目層級，會將所有非零的值視為 true，且結果為布林值的 valarray。 相反地，位元 **ANDoperator&** 會導致 valarray 的值非 0 即 1，取決於位元運算的結果。  
   
@@ -283,7 +310,7 @@ The element-by-element result of the bitwise operator & is the
 *\  
 ```  
   
-##  <a name="op_amp_amp"></a>  operator&amp;&amp;  
+##  <a name="op_amp_amp"></a> operator&amp;&amp;  
  取得兩個相同大小 valarray 對應項目之間，或 valarray 和該 valarray 的項目型別指定值之間的邏輯 **AND**。  
   
 ```  
@@ -366,7 +393,7 @@ The element-by-element result of the logical AND operator&& is the
 *\  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  測試一個 valarray 的項目是否大於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或小於指定值。  
   
 ```  
@@ -540,7 +567,7 @@ The element-by-element result of the greater than or equal test is the
 *\  
 ```  
   
-##  <a name="op_gt_gt"></a>  operator&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  依位置的指定數目或依第二個 valarray 指定的項目數量，將 valarray 的每個項目之位元右移。  
   
 ```  
@@ -623,7 +650,7 @@ The element-by-element result of the right shift is the
 *\  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  測試一個 valarray 的項目是否小於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或小於指定值。  
   
 ```  
@@ -710,7 +737,7 @@ The element-by-element result of the less-than comparson test is the
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  測試一個 valarray 的項目是否小於或等於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或等於、小於或等於指定值。  
   
 ```  
@@ -797,7 +824,7 @@ The element-by-element result of the less than or equal test is the
 *\  
 ```  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  依位置的指定數目或依第二個 valarray 指定的項目數量，將 valarray 的每個項目之位元左移。  
   
 ```  
@@ -1210,7 +1237,7 @@ The element-by-element result of the quotient is the
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  測試兩個大小相等之 valarray 的對應項目是否相等，或測試 valarray 的所有項目是否都和指定值相等。  
   
 ```  
@@ -1331,7 +1358,7 @@ operator^(
  Valarray，其中的項目是項目組合的位元**XOR**作業`left`和`right`。  
   
 ### <a name="remarks"></a>備註  
- 位元運算僅能用於操作 `char` 和 `int` 資料型別及變體的位元，並且無法用於 **float**、**double**、`long double`、`void``bool`，或是其他更複雜的資料型別。  
+ 位元運算只可用來操作中的位元`char`和`int`資料型別和 variant 而不是在**float**， **double**， `long double`， `void`， `bool`或其他更複雜的資料類型。  
   
  位元互斥 `OR` (**XOR**) 具有下列語意：假設位元 *b*1 和 *b*2，如果其中只有一個位元為 true，則 *b*1 **XOR** *b*2 為 **true**；如果兩個位元均為 true 或 false，則為 **false**。  
   
@@ -1509,7 +1536,7 @@ operator||(
  Valarray 的項目屬於型別`bool`邏輯 OR 運算的項目組合和`left`和`right`。  
   
 ### <a name="remarks"></a>備註  
- 邏輯 `OR``operator||` 適用於項目層級，會將所有非零的值視為 **true**，且結果為布林值的 valarray。 相反地，位元版本的 `OR`、[operator&#124;](../standard-library/valarray-operators.md#op_or)，會導致 valarray 的值非 0 即 1，取決於位元運算的結果。  
+ 邏輯`OR``operator||`計算所有的非零值，做為項目層級上套用**true**，且結果為布林值的 valarray。 相反地，位元版本的 `OR`、[operator&#124;](../standard-library/valarray-operators.md#op_or)，會導致 valarray 的值非 0 即 1，取決於位元運算的結果。  
   
 ### <a name="example"></a>範例  
   
@@ -1562,7 +1589,6 @@ The element-by-element result of the logical OR operator|| is the
 *\  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<valarray>](../standard-library/valarray.md)
-
 

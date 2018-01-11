@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - localtime32
 - localtime
 - _localtime32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - localtime32 function
 - _localtime32 function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6dcb9a6f0d7187722a769a28cfb624e4621c181f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 77a0a297413c053dee3e165ece07034487535b06
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime，_localtime32，_localtime64
 轉換時間值，並依本地時區進行校正。 這些函式有更安全的版本可供使用；請參閱 [localtime_s、_localtime32_s、_localtime64_s](../../c-runtime-library/reference/localtime-s-localtime32-s-localtime64-s.md)。  
@@ -98,7 +82,7 @@ struct tm *_localtime64(
   
  使用 `__time64_t` 結構的`_localtime64`，允許表示至國際標準時間 (UTC) 3000 年 12 月 31 日 23:59:59 為止的日期，而 `_localtime32` 則表示至 2038 年 1 月 18 日23:59:59 UTC為止的日期。  
   
- `localtime` 是內嵌函式，其評估 `_localtime64` 和`time_t` 是否相當於`__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元`time_t`，您可以定義 `_USE_32BIT_TIME_T`。 如此一來，將導致 `localtime` 評估 `_localtime32`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。  
+ `localtime` 是內嵌函式，其評估 `_localtime64` 和`time_t` 是否相當於`__time64_t`。 如果您要強制編譯器將 `time_t` 解譯為舊的 32 位元 `time_t`，您可以定義 `_USE_32BIT_TIME_T`。 如此一來，將導致 `localtime` 評估 `_localtime32`。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。  
   
  結構類型 [tm](../../c-runtime-library/standard-types.md) 的欄位儲存下列值，每個值都是 `int`：  
   
@@ -139,17 +123,17 @@ struct tm *_localtime64(
 > [!NOTE]
 >  目標環境應該嘗試判斷日光節約時間是否生效。  
   
- 這些函式會驗證它們的參數。 如果 `timer` 是 Null 指標，或如果計時器值為負值，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回 `NULL`，並將 `errno` 設為 `EINVAL`。  
+ 這些函式會驗證它們的參數。 如果 `timer` 是 Null 指標，或如果計時器值為負值，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `NULL`，並將 `errno` 設定為 `EINVAL`。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`localtime`|\<time.h>|  
 |`_localtime32`|\<time.h>|  
 |`_localtime64`|\<time.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -195,7 +179,7 @@ int main( void )
 Tue Feb 12 10:05:58 AM  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   

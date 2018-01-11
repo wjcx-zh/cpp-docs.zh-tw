@@ -14,10 +14,9 @@ f1_keywords:
 - thread/std::operator&lt;&lt;
 - thread/std::operator&lt;=
 - thread/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (thread)
@@ -27,12 +26,11 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: ff0fa361845c7bf64dd15bfc4e23be7b92b6cc39
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 運算子
 ||||  
@@ -41,7 +39,7 @@ ms.lasthandoff: 10/03/2017
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[operator==](#op_eq_eq)|  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  判斷某個 `thread::id` 物件是否大於或等於另一個。  
   
 ```cpp  
@@ -63,7 +61,7 @@ bool operator>= (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  判斷某個 `thread::id` 物件是否大於另一個。  
   
 ```cpp  
@@ -85,7 +83,7 @@ bool operator> (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  判斷某個 `thread::id` 物件是否小於或等於另一個。  
   
 ```cpp  
@@ -131,7 +129,7 @@ bool operator<(
   
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  比較兩個 `thread::id` 物件是否不相等。  
   
 ```cpp  
@@ -153,7 +151,7 @@ bool operator!= (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  比較兩個 `thread::id` 物件是否相等。  
   
 ```cpp  
@@ -175,7 +173,7 @@ bool operator== (
 ### <a name="remarks"></a>備註  
  這個函式不會擲回任何例外狀況。  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  將 `thread::id` 物件的文字表示插入資料流。  
   
 ```cpp  
@@ -199,9 +197,8 @@ basic_ostream<Elem, Tr>& operator<<(
   
  如果有兩個 `thread::id` 物件要比較是否相等，則這些物件插入的文字表示會一樣。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<thread>](../standard-library/thread.md)
-
 
 
 

@@ -16,18 +16,21 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08ba4800e0ca924652b9749298169902261d453e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ebe070b31ab6fcbf4ef6392df2736486a8dcee02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-attributes"></a>模組屬性
 下列屬性只能套用至[模組](../windows/module-cpp.md)屬性。  
   
-|屬性|說明|  
+|屬性|描述|  
 |---------------|-----------------|  
 |[helpstringdll](../windows/helpstringdll.md)|指定用來執行文件字串查閱 （當地語系化） 的 dll 名稱。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依使用方式分類的屬性](../windows/attributes-by-usage.md)

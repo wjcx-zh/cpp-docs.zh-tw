@@ -1,32 +1,33 @@
 ---
-title: "helpstringcontext | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstringcontext"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstringcontext attribute [C++]"
+title: "helpstringcontext |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstringcontext
+dev_langs: C++
+helpviewer_keywords: helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3c5492d18085d78e20d6654898a6c66647e3bbe0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# helpstringcontext
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定.hlp 或.chm 檔中的 \[說明\] 主題的識別碼。  
+# <a name="helpstringcontext"></a>helpstringcontext
+指定.hlp 或.chm 檔案中的說明主題的識別碼。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,14 +36,14 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `contextID`  
- 在 \[說明\] 檔案 32 位元說明主題代碼。  
+ 說明檔中的 32 位元說明內容識別碼。  
   
-## 備註  
- **Helpstringcontext** C\+\+ 屬性具有相同的功能，為 [helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 屬性。  
+## <a name="remarks"></a>備註  
+ **Helpstringcontext** c + + 屬性具有相同的功能[helpstringcontext](http://msdn.microsoft.com/library/windows/desktop/aa366858) ODL 屬性。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_helpstringcontext.cpp  
@@ -61,23 +62,22 @@ __interface IMyI
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
 |**適用於**|**類別**， `interface`，介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|None|  
-|**無效的屬性**|None|  
+|**必要屬性**|無|  
+|**無效屬性**|無|  
   
- 如需詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [module](../windows/module-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [介面屬性](../windows/interface-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   
+ [模組](../windows/module-cpp.md)   

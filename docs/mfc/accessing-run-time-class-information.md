@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5cdc520118c0d50590927a88de816a593ea5e146
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0b74c76e5cc156d106f8358fe729df0bb7026422
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-run-time-class-information"></a>存取執行階段類別資訊
 本文說明如何在執行階段存取物件之類別的資訊。  
@@ -70,6 +71,6 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，在序列化和執行階段類別資訊，請參閱文章[MFC 中的檔案](../mfc/files-in-mfc.md)和[序列化](../mfc/serialization-in-mfc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CObject](../mfc/using-cobject.md)
 

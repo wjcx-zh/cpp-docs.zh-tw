@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8476743513fa4373b267af3891c59680d2657cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c2f229f5706902eac1c0326cfb446b4dc650c54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 包含 `iostreams` 標準標頭 `<iomanip>` 來定義數個操作工具，每個接受單一引數。  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/24/2017
 |[setprecision](../standard-library/iomanip-functions.md#setprecision)|設定浮點值的有效位數。|  
 |[setw](../standard-library/iomanip-functions.md#setw)|指定顯示欄位的寬度。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   

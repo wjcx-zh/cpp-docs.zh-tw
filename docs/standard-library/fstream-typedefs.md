@@ -16,14 +16,13 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 55a148c472048c5531521cd6f4574477e7c31cac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; typedefs
 ||||  
@@ -130,9 +129,8 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 ### <a name="remarks"></a>備註  
  這個類型與 [basic_filebuf](../standard-library/basic-filebuf-class.md) 範本類別同義，該範本類別是專為具有預設字元特性的 `wchar_t` 類型元素所特製化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<fstream>](../standard-library/fstream.md)
-
 
 
 

@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear 成員 [STL/CLR]"
+title: "hash_multimap:: clear (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 8ad99f08-93b3-42b7-be07-f9a8ec556554
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 581579af2aae110bcf36166c58d671b1a27dfd71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapclear-stlclr"></a>hash_multimap::clear (STL/CLR)
 移除所有項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void clear();  
 ```  
   
-## 備註  
- 成員函式有效地呼叫 [hash\_multimap::erase](../dotnet/hash-multimap-erase-stl-clr.md)`(` [hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`。  您會用它來確保受控制序列是空的。  
+## <a name="remarks"></a>備註  
+ 成員函式可有效地呼叫[hash_multimap:: erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap:: begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap:: end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md)`())`. 您可以使用它來確定受控制的序列是空白。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multimap_clear.cpp   
@@ -73,15 +74,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**size\(\) \= 0**  
- **\[a 1\] \[b 2\]**  
-**size\(\) \= 0**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::erase](../dotnet/hash-multimap-erase-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)

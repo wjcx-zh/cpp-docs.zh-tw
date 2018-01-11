@@ -1,36 +1,34 @@
 ---
-title: "專案建置錯誤 PRJ0035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0035"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0035"
+title: "專案建置錯誤 PRJ0035 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0035
+dev_langs: C++
+helpviewer_keywords: PRJ0035
 ms.assetid: 0667116d-338c-40a4-972c-da875f778cb5
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b80fa6c7068d46ceed13b357c68cf30179ff0469
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 專案建置錯誤 PRJ0035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-XML 檔案 'file' 包含無法轉譯成使用者 ANSI 字碼頁的 Unicode 內容。  
+# <a name="project-build-error-prj0035"></a>專案建置錯誤 PRJ0035
+XML 檔案 'file' 包含無法轉譯為使用者 ANSI 字碼頁的 Unicode 內容。  
   
- ***UNICODE 檔案內容***  
+ ***UNICODE 檔案的內容***  
   
- ***file***  為 XML 檔案，建立為 Web 部署工具的命令列。  
+ ***檔案***是做為 Web Deployment tool 命令列建立的 XML 檔案。  
   
- 專案系統發現 Web 部署屬性頁的某種屬性之 Unicode 字元，無法正確地轉譯為 ANSI。  
+ 專案系統無法正確轉譯成 ANSI Web 部署屬性頁上某些屬性中找到 Unicode 字元。  
   
- 這個錯誤的解決方法是，更新使用 ANSI 的屬性內容，或在您電腦上安裝該字碼頁，並將它設為系統預設值。
+ 此錯誤的解決方法是，更新來使用 ANSI 或要在電腦上安裝的字碼頁，並將它設定為系統預設值之屬性的內容。

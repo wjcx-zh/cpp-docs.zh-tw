@@ -1,39 +1,41 @@
 ---
-title: "CDynamicParameterAccessor::SetParam | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicParameterAccessor::SetParam"
-  - "ATL::CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor.SetParam"
-  - "ATL.CDynamicParameterAccessor.SetParam"
-  - "SetParam"
-  - "CDynamicParameterAccessor:SetParam"
-  - "CDynamicParameterAccessor::SetParam<ctype>"
-  - "CDynamicParameterAccessor::SetParam"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParam 方法"
+title: "Cdynamicparameteraccessor:: Setparam |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicParameterAccessor::SetParam
+- ATL::CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor.SetParam
+- ATL.CDynamicParameterAccessor.SetParam
+- SetParam
+- CDynamicParameterAccessor:SetParam
+- CDynamicParameterAccessor::SetParam<ctype>
+- CDynamicParameterAccessor::SetParam
+dev_langs: C++
+helpviewer_keywords: SetParam method
 ms.assetid: e2349220-545c-46ad-90da-9113ac52551a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b092dad600c1698d3cbe550f16e05a8307f030fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::SetParam
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-使用指定的 \(非字串\) 資料，請將參數設定為緩衝區。  
+# <a name="cdynamicparameteraccessorsetparam"></a>CDynamicParameterAccessor::SetParam
+設定使用指定的 （非字串） 資料的參數緩衝區。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -52,31 +54,31 @@ bool SetParam(
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `ctype`  
- 是資料型別的範本參數。  
+ 範本參數的資料類型。  
   
  `nParam`  
- \[參數的數目 \(從 1\) 的位移。  參數 0 為傳回值。  參數的數目是根據其在 SQL 或預存程序呼叫順序的參數的索引。  例如：  
+ [in] 參數編號 (從 1 開始位移)。 參數 0 保留作為傳回值。 參數編號是根據參數在 SQL 或預存程序呼叫中的順序編制的索引。 例如:   
   
- [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/CPP/cdynamicparameteraccessor-setparam_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#8](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-setparam_1.cpp)]  
   
  `pParamName`  
- \[in\] 參數名稱。  
+ [in]參數名稱。  
   
  `pData`  
- \[out 包含資料的記憶體的指標會寫入緩衝區。  
+ [in]要包含的資料寫入緩衝區的記憶體的指標。  
   
  *status*  
- \[ `DBSTATUS` 的狀態。  如需 `DBSTATUS` 值的詳細資訊，請參閱《 *OLE DB 程式設計人員參考》的*[狀態](https://msdn.microsoft.com/en-us/library/ms722617.aspx) 或搜尋 oledb.h 的 `DBSTATUS` 。  
+ [in]`DBSTATUS`資料行狀態。 如需有關詳細`DBSTATUS`值，請參閱[狀態](https://msdn.microsoft.com/en-us/library/ms722617.aspx)中*OLE DB 程式設計人員參考*，或搜尋`DBSTATUS`在 oledb.h。  
   
-## 傳回值  
- 在成功傳回 **true** 和 **false** 發生錯誤。  
+## <a name="return-value"></a>傳回值  
+ 傳回**true**成功或**false**失敗。  
   
- 使用 `SetParam` 設定緩衝區的非字串參數資料。  使用 [SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md) 將資料從緩衝區的參數資料。  
+ 使用`SetParam`設定緩衝區中的非字串參數的資料。 使用[SetParamString](../../data/oledb/cdynamicparameteraccessor-setparamstring.md)設定緩衝區中的字串參數的資料。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)

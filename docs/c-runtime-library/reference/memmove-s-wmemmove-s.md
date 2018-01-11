@@ -35,11 +35,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 834cd18283874bc975d896f319bb6f8ebf962792
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8194acf1a8a0708d2584745a7a49449ca7f554c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s、wmemmove_s
 將某個緩衝區移到另一個緩衝區。 這些是 [memmove、wmemmove](../../c-runtime-library/reference/memmove-wmemmove.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -82,9 +83,9 @@ errno_t wmemmove_s(
   
 |`dest`|`numberOfElements`|`src`|傳回值|`dest` 的內容。|  
 |------------|------------------------|-----------|------------------|------------------------|  
-|`NULL`|any|任何|`EINVAL`|未修改|  
-|any|任何|`NULL`|`EINVAL`|未修改|  
-|any|< `count`|任何|`ERANGE`|未修改|  
+|`NULL`|any|any|`EINVAL`|未修改|  
+|any|any|`NULL`|`EINVAL`|未修改|  
+|any|< `count`|any|`ERANGE`|未修改|  
   
 ## <a name="remarks"></a>備註  
  複製`count`位元組的字元從`src`至`dest`。 如果來源區域與目的地的某些區域重疊，`memmove_s` 可確保先複製重疊區域中的原始來源位元組，再進行覆寫。  
@@ -93,12 +94,12 @@ errno_t wmemmove_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`memmove_s`|\<string.h>|  
 |`wmemmove_s`|\<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -136,7 +137,7 @@ Before: 0123456789
  After: 0012345789  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
  [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memcpy、wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)   

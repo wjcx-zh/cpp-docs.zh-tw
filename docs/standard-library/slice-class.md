@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,24 +12,23 @@ f1_keywords:
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::slice [C++]
 - std::slice [C++], size
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c49abb87a3a1b9c480c9267f21f6fc9d3de55b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: f2fdeb6f751fa40d74c2557341279529bca6a8d7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="slice-class"></a>slice 類別
 valarray 的一個公用程式類別，用來定義父代 valarray 的一維子集。 如果 valarray 被視為含有陣列中所有元素的二維矩陣，則配量會從二維陣列中擷取一維的向量。  
@@ -310,7 +308,6 @@ The slice of valarray va is vaResult = va[slice( 4, 5, 3)] =
 The stride of slice vaSlice is: 3.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -24,11 +24,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6cf6b49714f8549f5e5c940b00fcaccc39667933
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 497dd21bba3e807349b793e3b37e774c833ccb40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>應用程式精靈所建立的框架視窗類別
 當您使用[應用程式精靈](../ide/creating-desktop-projects-by-using-application-wizards.md)應用程式精靈建立基本架構應用程式，應用程式、 文件和檢視類別，除了建立應用程式的主框架視窗的衍生的框架視窗類別。 此類別預設稱為 `CMainFrame`，包含此類別的檔案名稱為 MAINFRM.H 和 MAINFRM.CPP。  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
  這些框架視窗類別建立時即會運作，不過為了提高其功能，您必須新增成員變數和成員函式。 您也可以讓視窗類別處理其他 Windows 訊息。 如需詳細資訊，請參閱[變更 MFC 所建立的視窗樣式](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [框架視窗類別](../mfc/frame-window-classes.md)   
  [MFC 程式或控制項原始程式檔和標頭檔](../ide/mfc-program-or-control-source-and-header-files.md)
 

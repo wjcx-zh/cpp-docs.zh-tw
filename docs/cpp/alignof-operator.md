@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94940b15e185866d8f24a20c417e730c52b8502c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8d6e524847d46d62b5f1da134332f35edcf92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignof-operator"></a>__alignof 運算子
 C++11 引進 `alignof` 運算子，以傳回所指定類型的對齊 (位元組)。 若要獲得最高可攜性，您應該使用 alignof 運算子，而不是 Microsoft-specific __alignof 運算子。  
@@ -99,8 +100,8 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)

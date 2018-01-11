@@ -4,57 +4,55 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- ctype
 - xlocale/std::ctype
-- locale/std::ctype::char_type
-- locale/std::ctype::do_is
-- locale/std::ctype::do_narrow
-- locale/std::ctype::do_scan_is
-- locale/std::ctype::do_scan_not
-- locale/std::ctype::do_tolower
-- locale/std::ctype::do_toupper
-- locale/std::ctype::do_widen
-- locale/std::ctype::is
-- locale/std::ctype::narrow
-- locale/std::ctype::scan_is
-- locale/std::ctype::scan_not
-- locale/std::ctype::tolower
-- locale/std::ctype::toupper
-- locale/std::ctype::widen
-dev_langs:
-- C++
+- xlocale/std::ctype::char_type
+- xlocale/std::ctype::do_is
+- xlocale/std::ctype::do_narrow
+- xlocale/std::ctype::do_scan_is
+- xlocale/std::ctype::do_scan_not
+- xlocale/std::ctype::do_tolower
+- xlocale/std::ctype::do_toupper
+- xlocale/std::ctype::do_widen
+- xlocale/std::ctype::is
+- xlocale/std::ctype::narrow
+- xlocale/std::ctype::scan_is
+- xlocale/std::ctype::scan_not
+- xlocale/std::ctype::tolower
+- xlocale/std::ctype::toupper
+- xlocale/std::ctype::widen
+dev_langs: C++
 helpviewer_keywords:
-- ctype class
+- std::ctype [C++]
+- std::ctype [C++], char_type
+- std::ctype [C++], do_is
+- std::ctype [C++], do_narrow
+- std::ctype [C++], do_scan_is
+- std::ctype [C++], do_scan_not
+- std::ctype [C++], do_tolower
+- std::ctype [C++], do_toupper
+- std::ctype [C++], do_widen
+- std::ctype [C++], is
+- std::ctype [C++], narrow
+- std::ctype [C++], scan_is
+- std::ctype [C++], scan_not
+- std::ctype [C++], tolower
+- std::ctype [C++], toupper
+- std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 2e99ceb296bd3f620ce1bd58e8b0de6b6132299b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 866ec8b37852f6c4fea6fdeeefa5eb9fdf21d819
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctype-class"></a>ctype 類別
 類別，提供用於字元分類、大小寫轉換，以及原生字元集和地區設定所用字元集之間轉換的 facet。  
@@ -71,7 +69,7 @@ class ctype : public ctype_base;
  用於程式內部字元編碼的類型。  
   
 ## <a name="remarks"></a>備註  
- 如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。 基底類別 ctype_base 中為分類準則提供巢狀位元遮罩類型。  
+ 如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。基底類別 ctype_base 中為分類準則提供巢狀位元遮罩類型。  
   
  C++ 標準程式庫定義了這個範本類別的兩個明確特製化：  
   
@@ -131,7 +129,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ### <a name="example"></a>範例  
   請參閱成員函式 [widen](#widen) 的範例，其會使用 `char_type` 作為傳回值。  
@@ -154,7 +152,7 @@ explicit ctype(size_t _Refs = 0);
   
 -   1：物件的存留期必須以手動方式管理。  
   
--   \>1︰ 未定義這些值。  
+-   \>1： 未定義這些值。  
   
  無法提供任何直接範例，因為解構函式受到保護。  
   
@@ -240,7 +238,7 @@ virtual const CharType* do_narrow(
  第二個受保護的成員函式會傳回原生字元 (從 `CharType` 類型字元轉換而來) 目的範圍的指標。  
   
 ### <a name="remarks"></a>備註  
- 第二個受保護的成員樣板函式存放區中的`dest`[ `I`] 值`do_narrow`( `first` [ `I`]， `default`)，如`I`間隔 [0， `last`  -  `first`)。  
+ 第二個受保護的成員樣板函式存放區中的`dest`[ `I`] 值`do_narrow`( `first` [ `I`]， `default`)，如`I`間隔 [0， `last`  - `first`).  
   
 ### <a name="example"></a>範例  
   請參閱 [narrow](#narrow) 的範例，其會呼叫 `do_narrow`。  
@@ -329,7 +327,7 @@ virtual const CharType *do_tolower(
  第一個受保護的成員函式會傳回 `ch` 參數的小寫形式。 如果沒有任何小寫形式存在，它會傳回 `ch`。 第二個受保護的成員函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 第二個受保護的成員樣板函式會取代每個項目`first`[ `I`]，如`I`間隔 [0， `last`  -  `first`)，與`do_tolower`( `first` [ `I`])。  
+ 第二個受保護的成員樣板函式會取代每個項目`first`[ `I`]，如`I`間隔 [0， `last`  -  `first`)，與`do_tolower`( `first` [ `I`]).  
   
 ### <a name="example"></a>範例  
   請參閱 [tolower](#tolower) 的範例，其會呼叫 `do_tolower`。  
@@ -360,7 +358,7 @@ virtual const CharType *do_toupper(
  第一個受保護的成員函式會傳回 `ch` 參數的大寫形式。 如果沒有任何大寫形式存在，它會傳回 `ch`。 第二個受保護的成員函式會傳回 `last`。  
   
 ### <a name="remarks"></a>備註  
- 第二個受保護的成員樣板函式會取代每個項目`first`[ `I`]，如`I`間隔 [0， `last`  -  `first`)，與`do_toupper`( `first` [ `I`])。  
+ 第二個受保護的成員樣板函式會取代每個項目`first`[ `I`]，如`I`間隔 [0， `last`  -  `first`)，與`do_toupper`( `first` [ `I`]).  
   
 ### <a name="example"></a>範例  
   請參閱 [toupper](#toupper) 的範例，其會呼叫 `do_toupper`。  
@@ -509,7 +507,7 @@ const CharType* narrow(
  在目的範圍 (其會儲存轉換的字元範圍) 中，第一個 `char` 類型字元的 const 指標。  
   
 ### <a name="return-value"></a>傳回值  
- 第一個成員函式會傳回對應於 `CharType``default` 類型參數字元的 `char` 類型原生字元 (如果沒有定義對應項目的話)。  
+ 第一個成員函式會傳回對應於 `CharType default` 類型參數字元的 `char` 類型原生字元 (如果沒有定義對應項目的話)。  
   
  第二個成員函式會傳回原生字元 (從 `CharType` 類型字元轉換而來) 目的範圍的指標。  
   
@@ -809,8 +807,7 @@ Hello everyone!
 Hello everyone!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

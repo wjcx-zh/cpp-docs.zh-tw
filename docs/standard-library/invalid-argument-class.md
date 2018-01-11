@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- stdexcept/std::invalid_argument
-- invalid_argument
-dev_langs:
-- C++
-helpviewer_keywords:
-- invalid_argument class
+f1_keywords: stdexcept/std::invalid_argument
+dev_langs: C++
+helpviewer_keywords: invalid_argument class
 ms.assetid: af6c227d-ad7c-4e63-9dee-67af81d83506
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3cb196cc07756d9af9193c9c04a56a67f627530a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 11f8c6741359efec629cb9aa9f98c65dab8371eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidargument-class"></a>invalid_argument 類別
 此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告無效的引數。  
@@ -92,8 +73,7 @@ Type class std::invalid_argument
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [logic_error 類別](../standard-library/logic-error-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4054b95dc4c62c645f4e8e9ba1eb7d64e690784
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortvectortraits-structure"></a>short_vector_traits 結構
 short_vector_traits 允許擷取基礎向量長度和短向量類型的純量型別或純量類型  
@@ -97,13 +98,13 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[short_vector_traits:: short_vector_traits 建構函式](#ctor)||  
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[short_vector_traits:: size 常數](#size)||  
   
@@ -127,5 +128,5 @@ short_vector_traits();
 static int const size = 1;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

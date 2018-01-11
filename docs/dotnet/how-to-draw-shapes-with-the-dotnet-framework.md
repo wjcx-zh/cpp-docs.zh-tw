@@ -1,37 +1,39 @@
 ---
-title: "如何：使用 .NET Framework 繪製圖案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "繪製, 圖案"
-  - "GDI+, 繪製圖案"
-  - "圖案"
-  - "圖案, 繪製"
+title: "如何： 使用.NET Framework 繪製圖案 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- GDI+, drawing shapes
+- drawing, shapes
+- shapes
+- shapes, drawing
 ms.assetid: ffad5ae7-6ef4-4550-8940-be3f209a101d
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 62579ca21ba4a4dcf89aea6ff717ce6c884073b3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 01/03/2018
 ---
-# 如何：使用 .NET Framework 繪製圖案
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會使用 <xref:System.Drawing.Graphics> 類別 \(Class\)，修改 <xref:System.Windows.Forms.Form.OnPaint%2A> 事件處理常式，為主要表單擷取指向 <xref:System.Drawing.Graphics> 物件的指標。  接著會使用這個指標設定表單的背景色彩，並使用 <xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName> 和 <xref:System.Drawing.Graphics.DrawArc%2A> 方法繪製線條和弧形。  
+# <a name="how-to-draw-shapes-with-the-net-framework"></a>如何：使用 .NET Framework 繪製圖案
+下列程式碼範例使用<xref:System.Drawing.Graphics>類別以修改<xref:System.Windows.Forms.Form.OnPaint%2A>事件處理常式來擷取指標<xref:System.Drawing.Graphics>主要表單的物件。 此指標然後用來設定表單的背景色彩和繪製一條線與弧線使用<xref:System.Drawing.Graphics.DrawLine%2A?displayProperty=fullName>和<xref:System.Drawing.Graphics.DrawArc%2A>方法。  
   
 > [!NOTE]
->  GDI\+ 內含在 Windows XP 中，而在 Windows NT 4.0 SP 6、Windows 2000、Windows 98 和 Windows Me 上則是以可轉散發檔案的方式提供。  若要下載最新的可轉散發套件，請 [http:\/\/go.microsoft.com\/fwlink\/?linkid\=11232](http://go.microsoft.com/fwlink/?linkid=11232)參閱。  如需詳細資訊，請參閱 [GDI\+](_gdiplus_GDI_start_cpp)。  
+>  GDI + 隨附於 Windows XP 中，並且可做為 Windows NT 4.0 SP 6、 Windows 2000、 Windows 98 和 Windows me 的可轉散發 若要下載最新版本可轉散發，請參閱[http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232)。 
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 #using <system.drawing.dll>  
@@ -61,6 +63,6 @@ virtual Void Form1::OnPaint(PaintEventArgs^ pe ) override
 }  
 ```  
   
-## 請參閱  
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
+## <a name="see-also"></a>請參閱  
+ [.NET 程式設計使用 C + + /CLI （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)   
  [System::Drawing 命名空間](https://msdn.microsoft.com/en-us/library/system.drawing.aspx)

@@ -145,11 +145,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9033d754830a173e261ca7977302da09ef4a809b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a958bf441809da24b317b777fd2f79946f3dc727
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset 類別
 此樣板類別描述控制不同長度的 `const Key` 類型項目序列的物件。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目同時做為排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。  
@@ -168,17 +169,17 @@ class unordered_multiset;
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Key`|索引鍵類型。|  
 |`Hash`|雜湊函式物件類型。|  
 |`Pred`|相等比較函式物件類型。|  
 |`Alloc`|配置器類別。|  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |||  
 |-|-|  
-|類型定義|說明|  
+|類型定義|描述|  
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|  
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|  
 |[const_local_iterator](#const_local_iterator)|用於受控制序列的常數 Bucket 迭代器類型。|  
@@ -197,7 +198,7 @@ class unordered_multiset;
   
 |||  
 |-|-|  
-|成員函式|說明|  
+|成員函式|描述|  
 |[begin](#begin)|指定受控制序列的開頭。|  
 |[值區](#bucket)|取得索引鍵值的值區數目。|  
 |[bucket_count](#bucket_count)|取得 Bucket 的數目。|  
@@ -228,7 +229,7 @@ class unordered_multiset;
   
 |||  
 |-|-|  
-|運算子|說明|  
+|運算子|描述|  
 |[unordered_multiset::operator=](#op_eq)|複製雜湊資料表。|  
   
 ## <a name="remarks"></a>備註  
@@ -558,7 +559,7 @@ const_iterator cbegin() const;
 ### <a name="remarks"></a>備註  
  傳回值為 `cbegin` 時，無法修改範圍中的項目。  
   
- 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為支援 `begin()` 和 `cbegin()` 的各種可修改 (非 `const`) 容器。  
+ 您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮將 `Container` 視為任何支援 `begin()` 和 `cbegin()` 且可修改 (非 `const`) 的容器類型。  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -667,7 +668,7 @@ typedef T1 const_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T1`的同義字。  
+ 此類型說明可做為受控制序列之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T1`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -709,7 +710,7 @@ typedef T5 const_local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可作為值區之常數正向迭代器的物件。 在此將其說明為實作定義類型 `T5`的同義字。  
+ 此類型說明可作為值區之常數正向迭代器的物件。 在此將其描述為已定義實作之 `T5`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -961,14 +962,14 @@ iterator emplace(Args&&... args);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構插入 unordered_multiset 之元素的引數。|  
   
 ### <a name="return-value"></a>傳回值  
  指向新插入之元素的迭代器。  
   
 ### <a name="remarks"></a>備註  
- 此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。  
+ 此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。  
   
  在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。  
   
@@ -988,7 +989,7 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`args`|轉送以建構插入 unordered_multiset 之元素的引數。|  
 |`where`|有關要從何處開始搜尋正確插入點的提示。|  
   
@@ -996,7 +997,7 @@ iterator emplace_hint(
  指向新插入之元素的迭代器。  
   
 ### <a name="remarks"></a>備註  
- 此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。  
+ 此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。  
   
  在插入期間，如果擲回例外狀況，但不是發生在容器的雜湊函式中，則不會修改容器。 若雜湊函式中擲回例外狀況，則結果為未定義。  
   
@@ -1454,7 +1455,7 @@ IList);
 |-|-|  
 |參數|描述|  
 |`Val`|要插入至 unordered_multiset 的元素值。|  
-|`Where`|要開始搜尋正確的插入點的地方|  
+|`Where`|要開始搜尋正確的插入點的地方。|  
 |`ValTy`|範本參數，指定 unordered_multiset 可用於建構 [value_type](../standard-library/map-class.md#value_type) 之元素的引數類型，並將 `Val` 做為引數完美轉送。|  
 |`First`|要複製之第一個元素的位置。|  
 |`Last`|要複製之最一個元素後方的位置。|  
@@ -1697,7 +1698,7 @@ typedef T4 local_iterator;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型說明可做為值區之正向迭代器的物件。 在此將其說明為實作定義類型 `T4`的同義字。  
+ 此類型說明可做為值區之正向迭代器的物件。 在此將其描述為已定義實作之 `T4`類型的同義字。  
   
 ### <a name="example"></a>範例  
   
@@ -1962,7 +1963,7 @@ unordered_multiset& operator=(unordered_multiset&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|複製到 `unordered_multiset` 的 [unordered_multiset](../standard-library/unordered-multiset-class.md)。|  
   
 ### <a name="remarks"></a>備註  
@@ -2474,7 +2475,7 @@ int main()
 [d] [c] [b] [a]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<unordered_set>](../standard-library/unordered-set.md)   
  [容器](../cpp/containers-modern-cpp.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   

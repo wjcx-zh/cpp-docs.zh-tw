@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: d075ccda653ed04722026d5f1ab71ff83a4936db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce0210546dafd354d0d62225c97df8b36a8d84e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="international-enabling"></a>啟用國際化
 大部分傳統的 C 和 c + + 程式碼可進行假設字元和字串操作，不適用於國際化應用程式。 MFC 和執行階段程式庫支援 MBCS 或 Unicode，仍會有您必須執行的工作。 若要引導您，本節會說明 Visual c + + 中的 「 國際啟用 」 的意義：  
@@ -47,6 +48,6 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  歐洲和 MBCS 字元集具有某些字元，例如字元碼大於 0x80 重音字母。 因為大部分的程式碼使用帶正負號的字元，所以大於 0x80 這些字元都是帶正負號擴充時轉換成`int`。 這是陣列編製索引的問題，因為陣列外部的帶正負號擴充字元，為負數，編製索引。 使用 MBCS，例如日文，日文的語言也是唯一的。 因為字元可能會由 1 或 2 個位元組所組成，您應該一律在相同的時間來管理兩個位元組。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Unicode 和 MBCS](../text/unicode-and-mbcs.md)   
  [國際化策略](../text/internationalization-strategies.md)

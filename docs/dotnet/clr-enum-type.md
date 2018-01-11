@@ -17,16 +17,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 154904eb201f39852b57f253b97fba864084381a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ad82c1d867c511121cd024f2affd5df98b4642bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clr-enum-type"></a>CLR 列舉類型
 宣告和列舉的行為已變更從 Managed Extensions for c + + 為 Visual c + +。  
   
- Managed Extensions 列舉宣告加`__value`關鍵字。 這裡的做法是原生列舉區別衍生自 CLR 列舉`System::ValueType`，同時建議類似的功能。 例如：  
+ Managed Extensions 列舉宣告加`__value`關鍵字。 這裡的做法是原生列舉區別衍生自 CLR 列舉`System::ValueType`，同時建議類似的功能。 例如:   
   
 ```  
 __value enum e1 { fail, pass };  
@@ -177,6 +180,6 @@ public:
   
  Visual c + + 列舉，具有不再封裝列舉類別內任何令人信服的好處。 事實上，如果您看一下`System`命名空間，您會看到該列舉、 類別和介面全都位於相同的宣告空間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實值類型和它們的行為 (C + + /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [列舉類別](../windows/enum-class-cpp-component-extensions.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,8 +29,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_pStartKeyframe
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_transition
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBaseTransition [MFC], CBaseTransition
 - CBaseTransition [MFC], AddToStoryboard
@@ -53,16 +51,16 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a925de05d301d213d67bb699af47d0453478ffc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 2bb7fb5599e508656686637477b776ab7a9708d0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition 類別
 表示基本轉換。  
@@ -77,20 +75,20 @@ class CBaseTransition : public CObject;
   
 ### <a name="public-enumerations"></a>公用列舉類型  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBaseTransition::TRANSITION_TYPE 列舉](#transition_type_enumeration)|定義目前 Windows 動畫 API 的 MFC 實作所支援的轉換類型。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBaseTransition::CBaseTransition](#cbasetransition)|建構的基底轉換物件。|  
 |[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|解構函式。 轉換物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|將轉換加入至分鏡腳本。|  
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|將轉換加入至分鏡腳本。|  
@@ -107,7 +105,7 @@ class CBaseTransition : public CObject;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBaseTransition::m_bAdded](#m_badded)|指定轉換是否已加入至分鏡腳本。|  
 |[CBaseTransition::m_pEndKeyframe](#m_pendkeyframe)|儲存指定在轉換結束的主要畫面格指標。|  
@@ -381,6 +379,5 @@ enum TRANSITION_TYPE;
 ### <a name="remarks"></a>備註  
  轉換類型會設定特定轉換的建構函式。 例如，CSinusoidalTransitionFromRange 其類型設定為 SINUSOIDAL_FROM_RANGE。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

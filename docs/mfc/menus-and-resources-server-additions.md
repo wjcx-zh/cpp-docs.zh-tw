@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 65417079c3241feca9c43e058026674c6e35d18b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c7aaf4a087fbcfc28686e7ec8d2411d6f7531466
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-server-additions"></a>功能表和資源：伺服器新增
 這篇文章會說明需要功能表和其他視覺編輯伺服器 （元件） 應用程式中的資源進行的變更。 伺服器應用程式需要許多的新增項目，功能表結構和其他資源，因為它可以啟動在三種模式之一： 獨立、 內嵌的或在地方。 中所述[功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)發行項，最多四組功能表。 所有四個用於 MDI 全伺服應用程式，而只有三個適用於迷你伺服程式。 應用程式精靈會建立功能表配置所需的您想要的伺服器類型。 您可能需要某項自訂作業。  
@@ -67,14 +68,14 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_string_table_additions_for_server_applications"></a>字串資料表加入伺服器應用程式  
  只能有一個字串資料表是必要的伺服器應用程式，以表示 OLE 初始化失敗的字串。 例如，以下是應用程式精靈產生的字串資料表項目：  
   
-|ID|字串|  
+|識別碼|String|  
 |--------|------------|  
 |**IDP_OLE_INIT_FAILED**|OLE 初始化失敗。 請確定 OLE 程式庫的正確版本。|  
   
 ##  <a name="_core_mini.2d.server_additions"></a>Miniserver 新增項目  
  加入項目套用與以上所列的迷你伺服程式的完整伺服器。 迷你伺服程式無法在獨立模式中執行，因為其主功能表是小很多。 應用程式精靈所建立的主功能表還包含只有檔案 功能表，只包含項目結束和關於。 內嵌和就地功能表和迷你伺服程式的快速鍵都與完整伺服器相同的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)   
  [功能表和資源：功能表合併](../mfc/menus-and-resources-menu-merging.md)
 

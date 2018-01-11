@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,38 +26,22 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 822a7058afd6588be6f953c5c2b89d41ec02c87f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s、_mbstowcs_s_l
 將多位元組字元序列轉換成對應的寬字元序列。 這些是 [mbstowcs、_mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -105,20 +88,20 @@ errno_t _mbstowcs_s_l(
  [輸出] `wcstr`  
  所產生之已轉換寬字元字串的緩衝區位址。  
   
- [in] `sizeInWords`  
+ [輸入] `sizeInWords`  
  `wcstr` 緩衝區的大小 (以字組為單位)。  
   
  [in]`mbstr`  
  以 Null 結束之多位元組字元序列的位址。  
   
- [in] `count`  
+ [輸入] `count`  
  儲存在 `wcstr` 緩衝區的寬字元數目上限，不包括結束 Null 或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
   
- [in] `locale`  
+ [輸入] `locale`  
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果成功則為零，失敗則為錯誤碼。  
+ 如果成功，則為零，如果失敗，則為錯誤碼。  
   
 |錯誤狀況|傳回值和 `errno`|  
 |---------------------|------------------------------|  
@@ -142,29 +125,29 @@ errno_t _mbstowcs_s_l(
   
  如果 `count` 是特殊值 [_TRUNCATE](../../c-runtime-library/truncate.md)，則 `mbstowcs_s` 會盡量轉換符合目的緩衝區的字串量，同時仍留出空間給 Null 結束字元。  
   
- 如果 `mbstowcs_s` 成功轉換來源字串，則會將包括 Null 結束字元在內之轉換後的字串大小 (寬字元)，放入 `*``pReturnValue` (假設 `pReturnValue` 不是 `NULL`)。 即使 `wcstr` 引數為 `NULL`，且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果 `wcstr` 為 `NULL`，則會略過 `count`，且 `sizeInWords` 必須是 0。  
+ 如果 `mbstowcs_s` 成功轉換來源字串，則會將包括 Null 結束字元在內之轉換後的字串大小 (寬字元)，放入 `*pReturnValue` (假設 `pReturnValue` 不是 `NULL`)。 即使 `wcstr` 引數為 `NULL`，且可讓您決定所需的緩衝區大小，也會發生這種情況。 請注意，如果 `wcstr` 為 `NULL`，則會略過 `count`，且 `sizeInWords` 必須是 0。  
   
- 如果 `mbstowcs_s` 遇到無效的多位元組字元，則會將 0 放入 `*``pReturnValue`，將目的緩衝區設定為空字串，將 `errno` 設定為 `EILSEQ`，並傳回 `EILSEQ`。  
+ 如果 `mbstowcs_s` 遇到無效的多位元組字元，則會將 0 放入 `*pReturnValue`，將目的緩衝區設定為空字串，將 `errno` 設定為 `EILSEQ`，並傳回 `EILSEQ`。  
   
  如果 `mbstr` 和 `wcstr` 所指向的序列重疊，`mbstowcs_s` 的行為不明。  
   
 > [!IMPORTANT]
 >  確定 `wcstr` 和 `mbstr` 沒有重疊，而且 `count` 正確反映要轉換的多位元組字元數。  
   
- `mbstowcs_s` 會針對任何與地區設定相關的行為使用目前的地區設定；`_mbstowcs_s_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `mbstowcs_s` 會針對任何與地區設定相關的行為使用目前的地區設定，`_mbstowcs_s_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`mbstowcs_s`|\<stdlib.h>|  
 |`_mbstowcs_s_l`|\<stdlib.h>|  
   
  如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072)   

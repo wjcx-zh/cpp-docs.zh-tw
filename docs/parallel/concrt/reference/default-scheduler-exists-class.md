@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - default_scheduler_exists
 - CONCRT/concurrency::default_scheduler_exists
 - CONCRT/concurrency::default_scheduler_exists::default_scheduler_exists
-dev_langs:
-- C++
-helpviewer_keywords:
-- default_scheduler_exists class
+dev_langs: C++
+helpviewer_keywords: default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 4272c4658a6dbd85c838ccfd2586eb6a8ec08d81
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 22de55fa88090a869f559f790902558c5937ffa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defaultschedulerexists-class"></a>default_scheduler_exists 類別
 這個類別描述預設排程器已經存在於處理序中時呼叫 `Scheduler::SetDefaultSchedulerPolicy` 方法所擲回的例外狀況。  
@@ -51,11 +34,11 @@ ms.lasthandoff: 03/17/2017
 class default_scheduler_exists : public std::exception;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[default_scheduler_exists](#ctor)|多載。 建構 `default_scheduler_exists` 物件。|  
   
@@ -65,7 +48,7 @@ class default_scheduler_exists : public std::exception;
  `default_scheduler_exists`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** concrt.h  
+ **標頭：** concrt.h  
   
  **命名空間：** concurrency  
   
@@ -83,6 +66,5 @@ default_scheduler_exists() throw();
  `_Message`  
  錯誤的描述性訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

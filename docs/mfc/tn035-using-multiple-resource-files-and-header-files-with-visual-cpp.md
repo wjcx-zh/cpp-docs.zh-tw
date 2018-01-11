@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c03c642dfc3524f69f4aa8d1a397f750b42db27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035：在 Visual C++ 中使用多個資源檔和標頭檔
 > [!NOTE]
@@ -115,7 +116,7 @@ RESOURCE.H     AFXRES.H
   
  如果您使用自訂格式的資源，可以使用 Visual C++ 文字編輯器，將這些資源加入至 RES\MYAPP.RC2 並進行編輯。  
   
- AFXRES.RC 和 AFXPRINT.RC 包含 Framework 某些功能所需的標準資源。 就像 RES\MYAPP.RC2，這兩個 Framework 提供的資源檔以 #include 包含在 MYAPP.RC 結尾，並且是在 [Set Includes] 對話方塊的編譯時期指示詞中指定。 因此，當您在 Visual C++ 中編輯 MYAPP.RC 時，這些 Framework 資源無法直接加以檢視或編輯，但還是會編譯至應用程式的二進位 .RES 檔案與最終 .EXE 檔案。 如需有關標準架構資源，包括程序修改它們，請參閱[技術提示 23](../mfc/tn023-standard-mfc-resources.md)。  
+ AFXRES.RC 和 AFXPRINT.RC 包含 Framework 某些功能所需的標準資源。 就像 RES\MYAPP.RC2，這兩個 Framework 提供的資源檔以 #include 包含在 MYAPP.RC 結尾，並且是在 [Set Includes] 對話方塊的編譯時間指示詞中指定。 因此，當您在 Visual C++ 中編輯 MYAPP.RC 時，這些 Framework 資源無法直接加以檢視或編輯，但還是會編譯至應用程式的二進位 .RES 檔案與最終 .EXE 檔案。 如需有關標準架構資源，包括程序修改它們，請參閱[技術提示 23](../mfc/tn023-standard-mfc-resources.md)。  
   
  AFXRES.H 會定義標準符號，例如 Framework 所使用 (特別是用在 AFXRES.RC 中) 的 `ID_FILE_NEW`。 AFXRES.H 也會以 #include 包含 WINRES.H，後者含有 Visual C++ 產生之 .RC 檔以及 AFXRES.RC 所需的 WINDOWS.H 子集。 AFXRES.H 中定義的符號可供您在編輯應用程式資源檔 (MYAPP.RC) 時使用。 例如，`ID_FILE_NEW` 是用於 MYAPP.RC 功能表資源中的 [開新檔案] 功能表項目。 您無法變更或刪除這些 Framework 定義的符號。  
   
@@ -214,7 +215,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC 
 ```  
   
- 您可以使用編譯時期指示詞，將 Visual C++ 可編輯與不可編輯的資源組織在多個 .RC 檔案，其中「主要」MYAPP.RC 除了藉由 #include 包含其他 .RC 檔外，就什麼事也不做。 如果您要使用 Visual C++ 專案 .MAK 檔案，則必須在專案中包含「主要」.RC 檔，這樣才能讓所有 #include 的資源與您的應用程式一起編譯。  
+ 您可以使用編譯時間指示詞，將 Visual C++ 可編輯與不可編輯的資源組織在多個 .RC 檔案，其中「主要」MYAPP.RC 除了藉由 #include 包含其他 .RC 檔外，就什麼事也不做。 如果您要使用 Visual C++ 專案 .MAK 檔案，則必須在專案中包含「主要」.RC 檔，這樣才能讓所有 #include 的資源與您的應用程式一起編譯。  
   
  **強制執行設定不可編輯 Visual c + + 檔案**  
   
@@ -318,7 +319,7 @@ MYSTRS.H   / MYSHARED.H  \  MYMENUS.H
 |-----------------------------|--------------------------------------|  
 |1|符號標頭檔|  
 |2|唯讀符號指示詞|  
-|3|編譯時期指示詞|  
+|3|編譯時間指示詞|  
   
  AppWizard 建立的預設 MYAPP.RC 和 RESOURCE.H 檔案會示例說明三種 Set Includes 資訊中的每一個類型，如下所述。 BEGIN 和 END 區塊之間的額外 \0 和 "" 語彙基元是基於 RC 語法的需求，分別用來指定以零結尾的字串和雙引號字元。  
   
@@ -355,7 +356,7 @@ BEGIN
 END  
 ```  
   
-## <a name="compile-time-directives"></a>編譯時期指示詞  
+## <a name="compile-time-directives"></a>編譯時間指示詞  
  編譯時期指示詞是以資源編譯器可解譯的下列形式包含在 MYAPP.RC 結尾：  
   
 ```  
@@ -386,7 +387,7 @@ BEGIN
 END  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

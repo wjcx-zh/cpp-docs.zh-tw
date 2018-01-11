@@ -71,11 +71,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db8a7ee97c414a7775df393d419c7d12d61cdbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7a2b0e1dd95b460d6b6007e79378bc69f1b4ce
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cfile-class"></a>CFile 類別
 MFC 檔案類別的基底類別。  
@@ -86,17 +87,17 @@ MFC 檔案類別的基底類別。
 class CFile : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFile::CFile](#cfile)|建構`CFile`從路徑或檔案的控制代碼的物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Cfile:: Abort](#abort)|關閉檔案，忽略所有警告和錯誤。|  
 |[CFile::Close](#close)|關閉檔案，並刪除的物件。|  
@@ -124,20 +125,20 @@ class CFile : public CObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFile::operator 控制代碼](#operator_handle)|控制代碼`CFile`物件。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFile::hFileNull](#hfilenull)|決定如果`CFile`物件都有有效的控制代碼。|  
 |[CFile::m_hFile](#m_hfile)|通常會包含作業系統檔案控制代碼。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFile::m_pTM](#m_ptm)|指標`CAtlTransactionManager`物件。|  
   
@@ -183,7 +184,7 @@ virtual void Abort();
 ```  
 CFile();  
 CFile(CAtlTransactionManager* pTM);  
-  CFile(HANDLE hFile);
+CFile(HANDLE hFile);
 
  
 CFile(
@@ -240,7 +241,7 @@ CAtlTransactionManager* pTM);
   
  請選擇下列檔案的第一個，或兩者都選，以建立模式選項。 預設建立模式為 `CFile::modeNoTruncate`，其為開啟現有項目。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`CFile::modeCreate`|建立新檔案，如果檔案不存在。;如果檔案已經存在， [CFileException](../../mfc/reference/cfileexception-class.md) ，就會引發。|  
 |`CFile::modeNoTruncate`|如果檔案不存在，則建立新檔案；否則，如果檔案已經存在，則連結至 `CFile` 物件。|  
@@ -559,8 +560,8 @@ virtual BOOL Open(
 |--------------|------------------------|------------------|----------------------------|  
 |**NULL**|否|**為 TRUE**|N/A|  
 |若要 ptr`CFileException`|否|**為 TRUE**|未變更|  
-|**NULL**|是|**FALSE**|N/A|  
-|若要 ptr`CFileException`|是|**FALSE**|初始化為描述錯誤|  
+|**NULL**|[是]|**FALSE**|N/A|  
+|若要 ptr`CFileException`|[是]|**FALSE**|初始化為描述錯誤|  
   
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCFiles#13](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_9.cpp)]  
@@ -670,7 +671,7 @@ UINT nFrom);
 ### <a name="remarks"></a>備註  
  下表列出可能的值為`nFrom`參數。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`CFile::begin`|搜尋從檔案開頭。|  
 |`CFile::current`|搜尋檔案指標的目前位置。|  
@@ -829,7 +830,7 @@ virtual void Write(
   
  此外，請參閱範例[CFile::CFile](#cfile)和[CFile::Open](#open)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 DRAWCLI](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

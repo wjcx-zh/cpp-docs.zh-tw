@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb1fb4094e5a54f82aa6aeebffe576965838cf7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033：MFC 的 DLL 版本
 此提示描述如何使用 MFCxx.DLL 和 mfcxxd.dll （其中 x 是 MFC 版本號碼） 指共用 MFC 應用程式與 MFC 擴充 Dll 的動態連結程式庫。 如需 MFC 的標準 Dll 的詳細資訊，請參閱[將 MFC 當成 DLL 的一部分](../mfc/tn011-using-mfc-as-part-of-a-dll.md)。  
@@ -253,7 +254,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ### <a name="not-exporting-the-entire-class"></a>不會匯出整個類別  
  同樣地，您必須採取特別注意，當您不想要匯出整個類別。 您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 作法是藉由重新定義**AFX_DATA**特定類別的巨集。 這應該在完成任何您不想要匯出整個類別的時間。  
   
- 例如：  
+ 例如:   
   
 ```  
 // A.H  
@@ -473,7 +474,7 @@ extern "C" extern void WINAPI InitXxxDLL()
   
  意思就是所有為何，我們可以將封裝大量 MFCxx.DLL 才約 800 KB，而不危害多執行或載入速度的版本中的功能。 MFCxx.DLL 已經 100k 較大這項技術尚未使用。 這也可讓以新增其他的進入點的結尾。允許簡單的版本控制，而不會危害速度和大小的效率依序數匯出.DEF 檔案。 MFC 類別庫中的主要版本修訂將會變更程式庫名稱。 也就是說，MFC30。DLL 是包含 MFC 類別程式庫 3.0 版可轉散發 DLL。 此 dll，升級說，假設 MFC 3.1 中，DLL 會名為 MFC31。DLL 改為。 同樣地，如果您修改 MFC 原始程式碼來產生自訂版本的 MFC DLL，請使用不同的名稱 （，最好是一個不是以名稱中的 「 MFC"）。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依數字的技術提示](../mfc/technical-notes-by-number.md)   
  [依分類區分的技術提示](../mfc/technical-notes-by-category.md)
 

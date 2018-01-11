@@ -177,11 +177,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9742093585283350ce2c40ae533cc9e530d94bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 類別
 表示選取自資料來源的資料錄集。  
@@ -192,17 +193,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoRecordset : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoRecordset::CDaoRecordset](#cdaorecordset)|建構 `CDaoRecordset` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDaoRecordset::AddNew](#addnew)|準備新增新的記錄。 呼叫[更新](#update)完成加入。|  
 |[CDaoRecordset::CanAppend](#canappend)|傳回非零，如果新的記錄可以加入至資料錄集透過[AddNew](#addnew)成員函式。|  
@@ -279,7 +280,7 @@ class CDaoRecordset : public CObject
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[M_bcheckcachefordirtyfields](#m_bcheckcachefordirtyfields)|包含旗標，指出是否欄位會自動標示為已變更。|  
 |[CDaoRecordset::m_nFields](#m_nfields)|包含資料錄集類別中的欄位資料成員的數目和資料來源的資料錄集選取資料行數目。|  
@@ -997,7 +998,7 @@ short GetEditMode();
   
 ### <a name="remarks"></a>備註  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**dbEditNone**|沒有編輯作業正在進行中。|  
 |**dbEditInProgress**|**編輯**已呼叫。|  
@@ -1373,9 +1374,9 @@ BOOL IsBOF() const;
   
 ||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
-|`IsBOF`= 是非零值，<br /><br /> `IsEOF`=0|Allowed|例外狀況|例外狀況|Allowed|  
-|`IsBOF`=0,<br /><br /> `IsEOF`= 為非零，|Allowed|Allowed|例外狀況|例外狀況|  
-|兩者都為非零，|例外狀況|例外狀況|例外狀況|例外狀況|  
+|`IsBOF`= 是非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|  
+|`IsBOF`=0,<br /><br /> `IsEOF`= 為非零，|Allowed|Allowed|例外|例外|  
+|兩者都為非零，|例外|例外|例外|例外|  
 |這兩個 0|Allowed|Allowed|Allowed|Allowed|  
   
  允許在移動操作並不表示作業將會成功找到某筆記錄。 此外，它只會指出可以嘗試執行指定的移動作業，而且不會產生例外狀況。 值`IsBOF`和`IsEOF`成員函式可能會因為嘗試的移動而變更。  
@@ -1440,9 +1441,9 @@ BOOL IsEOF() const;
   
 ||MoveFirst、 MoveLast|MovePrev，<br /><br /> 移動 < 0|移動 0|MoveNext，<br /><br /> 移動 > 0|  
 |------|-------------------------|-----------------------------|------------|-----------------------------|  
-|`IsBOF`= 是非零值，<br /><br /> `IsEOF`=0|Allowed|例外狀況|例外狀況|Allowed|  
-|`IsBOF`=0,<br /><br /> `IsEOF`= 為非零，|Allowed|Allowed|例外狀況|例外狀況|  
-|兩者都為非零，|例外狀況|例外狀況|例外狀況|例外狀況|  
+|`IsBOF`= 是非零值，<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|  
+|`IsBOF`=0,<br /><br /> `IsEOF`= 為非零，|Allowed|Allowed|例外|例外|  
+|兩者都為非零，|例外|例外|例外|例外|  
 |這兩個 0|Allowed|Allowed|Allowed|Allowed|  
   
  允許在移動操作並不表示作業將會成功找到某筆記錄。 此外，它只會指出可以嘗試執行指定的移動作業，而且不會產生例外狀況。 值`IsBOF`和`IsEOF`成員函式可能會因為嘗試的移動而變更。  
@@ -1909,7 +1910,7 @@ BOOL Seek(
  下列字串運算式的其中一個:"<"，"\<="，"="、"> ="，或 「 > 」。  
   
  `pKey1`  
- 指標[COleVariant](../../mfc/reference/colevariant-class.md)其值會對應到索引中的第一個欄位。 必要項。  
+ 指標[COleVariant](../../mfc/reference/colevariant-class.md)其值會對應到索引中的第一個欄位。 必要。  
   
  *pKey2*  
  指標`COleVariant`其值會對應到在索引中，第二個欄位，如果有的話。 預設為**NULL**。  
@@ -2311,7 +2312,7 @@ virtual void Update();
   
  如需相關資訊，請參閱主題 < AddNew 方法 >、 < CancelUpdate 方法 >、"Delete 方法 」、 「 LastModified 屬性 」，< 更新方法 > 和 DAO [說明] 中的 「 EditMode 屬性 」。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CDaoTableDef 類別](../../mfc/reference/cdaotabledef-class.md)   

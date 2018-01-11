@@ -14,16 +14,17 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c355a0ec75912ab9ef8b20cc980bc920de96b37b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54e0da32736f00a8ba1f01e6cf3ce2d0f38c8ee9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="technical-notes-by-number"></a>依編號顯示的技術提示
 下面的技術附註會列出數值與最近寫入的技術提示第一次。 如需依類別目錄的清單，請參閱[依分類區分的技術提示](../mfc/technical-notes-by-category.md)。  
   
-|數字|標題|  
+|number|標題|  
 |------------|-----------|  
 |71|[MFC IOleCommandTarget 實作](../mfc/tn071-mfc-iolecommandtarget-implementation.md)|  
 |70|[MFC 視窗類別名稱](../mfc/tn070-mfc-window-class-names.md)|  

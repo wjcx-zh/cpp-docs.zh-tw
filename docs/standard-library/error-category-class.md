@@ -27,11 +27,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40ca15541b9035a82869cdfed7f304eeaeeb2553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcategory-class"></a>error_category 類別
 表示物件的抽象、通用基底，以描述錯誤碼的分類。  
@@ -104,7 +105,7 @@ virtual bool equivalent(const error_code& _Code,
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`_Errval`|要比較的錯誤碼值。|  
 |`_Cond`|要比較的 [error_condition](../standard-library/error-condition-class.md) 物件。|  
@@ -195,7 +196,7 @@ bool operator<(const error_category& right) const;
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`right`|要比較的 `error_category` 物件。|  
   
@@ -215,7 +216,7 @@ typedef int value_type;
 ### <a name="remarks"></a>備註  
  此類型定義與 `int` 同義。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<system_error>](../standard-library/system-error.md)
 
 

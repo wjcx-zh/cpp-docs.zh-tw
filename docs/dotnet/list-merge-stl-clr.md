@@ -1,33 +1,33 @@
 ---
-title: "list::merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "merge 成員 [STL/CLR]"
+title: "list:: merge (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::merge
+dev_langs: C++
+helpviewer_keywords: merge member [STL/CLR]
 ms.assetid: f8e93cd3-bd08-4086-859b-08a2899cc9a6
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0fdf7ee26bdb465e8a86109a4450353c4dc642a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-合併兩個已排序的受控制序列。  
+# <a name="listmerge-stlclr"></a>list::merge (STL/CLR)
+合併兩個受控制的序列的已排序。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void merge(list<Value>% right);  
@@ -35,21 +35,21 @@ template<typename Pred2>
     void merge(list<Value>% right, Pred2 pred);  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  pred  
- 對項目的比較子。  
+ 項目配對的比較子。  
   
- right  
- 合併的容器。  
+ 向右  
+ 若要在合併的容器。  
   
-## 備註  
- 第 10% 成員函式在受控制序列的所有項目順序由 `right` 並將它們插入。  必須由 `operator<` 之前訂購兩個序列。\-\-，當您將序列，進度項目不能減少值。  產生的序列會由 `operator<`來排序。  您可以使用這個成員函式來合併兩個序列的加入至的順序加入。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式所控制序列中移除所有項目`right`並將它們插入受控制序列中。 兩個序列必須依先前排序`operator<`-項目必須不能減少值中當您逐步任一順序進行。 所產生的順序也會依據排序`operator<`。 您可以使用此成員函式來合併兩個值增加到也會增加值的序列的序列。  
   
- 第二 \+ 成成員函式一般作業的第一個相同，但是有一點例外，就是 `pred` 序列排序\-\- `pred``(X, Y)` 必須為 false 為遵循序列中的所有 `Y` 項目的 `X` 。  您會用它來合併述詞函式排序兩個序列或委派所指定。  
+ 第二個成員函式的行為與第一個相同之處在於會依排序順序`pred`  --  `pred(X, Y)`必須為 false 的任何項目`X`的項目後面`Y`序列中。 您可以使用它來合併兩個序列依述詞函式或您指定的委派。  
   
- 兩個函式執行穩定組合\-\-中項目的原始順序顯示在結果序列中沒有反轉。  此外，如果有，會在產生的受控制序列的項目 `X` 與 `Y` 相同 Bucket 的項目\-\- `!(X < Y) && !(X < Y)` \-\-從原始的受控制序列的項目上的一個項目之前出現順序由 `right`。  
+ 同時函式會執行穩定的合併式--在原始的受控制序列的項目沒有任何一對已反轉結果的受控制序列中。 此外，如果項目的配對`X`和`Y`產生受控制序列中有對等順序- `!(X < Y) && !(X < Y)` -從原始的受控制序列的項目會顯示項目之前與所控制的序列`right`.  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_merge.cpp   
@@ -108,20 +108,23 @@ int main()
   
 ```  
   
-  **C\+\+. e**  
- **b d f**  
- **a b c d e f**  
-**c2.size \(\) \= 0**  
- **e.c。**  
- **f\-e 的 d c b。**  
- **f\-e 的 e d c c b。**  
-**c1.size \(\) \= 0**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+ a c e  
+ b d f  
+ a b c d e f  
+c2.size() = 0  
+ e c a  
+ f e d c b a  
+ f e e d c c b a a  
+c1.size() = 0  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)   
- [list::splice](../dotnet/list-splice-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)   
+ [list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)

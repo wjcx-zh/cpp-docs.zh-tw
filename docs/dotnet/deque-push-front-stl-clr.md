@@ -1,42 +1,42 @@
 ---
-title: "deque::push_front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::push_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_front 成員 [STL/CLR]"
+title: "deque:: push_front (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::push_front
+dev_langs: C++
+helpviewer_keywords: push_front member [STL/CLR]
 ms.assetid: a452c94e-abad-4e28-af41-c73ec805ec6f
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 68543ee04105843386c1062f31eff8a339f0333d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# deque::push_front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequepushfront-stlclr"></a>deque::push_front (STL/CLR)
 加入新的第一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void push_front(value_type val);  
 ```  
   
-## 備註  
- 成員函式在受控制序列開頭插入具有值 `val` 的項目。  您可以使用它在清除佇列加入另一個項目。  
+## <a name="remarks"></a>備註  
+ 成員函式插入值的項目`val`受控制序列的開頭。 您可以使用它前面加上另一個要 deque 的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_push_front.cpp   
@@ -59,14 +59,17 @@ int main()
   
 ```  
   
-  **c b a**   
-## 需求  
- **標頭：** \<cliext\/deque\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::pop\_back](../dotnet/deque-pop-back-stl-clr.md)   
- [deque::pop\_front](../dotnet/deque-pop-front-stl-clr.md)   
- [deque::push\_back](../dotnet/deque-push-back-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: pop_back (STL/CLR)](../dotnet/deque-pop-back-stl-clr.md)   
+ [deque:: pop_front (STL/CLR)](../dotnet/deque-pop-front-stl-clr.md)   
+ [deque::push_back (STL/CLR)](../dotnet/deque-push-back-stl-clr.md)

@@ -13,17 +13,15 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c336ed5e11a7db00475da735c827c23dadfa56c7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttuplegt-operators"></a>&lt;tuple&gt; 運算子
 ||||  
@@ -31,7 +29,7 @@ ms.lasthandoff: 10/03/2017
 |[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  比較兩個 `tuple` 物件是否不相等。  
   
 ```  
@@ -93,7 +91,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  比較 `tuple` 物件為小於。  
   
 ```  
@@ -155,7 +153,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  比較 `tuple` 物件為小於或等於。  
   
 ```  
@@ -217,7 +215,7 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  比較兩個 `tuple` 物件是否相等。  
   
 ```  
@@ -279,7 +277,7 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  比較 `tuple` 物件為大於。  
   
 ```  
@@ -341,7 +339,7 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  比較 `tuple` 物件為大於或等於。  
   
 ```  
@@ -403,7 +401,6 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<tuple>](../standard-library/tuple.md)
-
 

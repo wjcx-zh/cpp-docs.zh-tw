@@ -27,11 +27,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32b100915d4b643b7d558d970b496301b94dc5b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 62a2006423f8e6196f9fac4d8f336ced8b5416f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar 類別
 實作內容快顯工具列。  
@@ -42,18 +43,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|預設建構函式。|  
 |`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CMFCRibbonMiniToolBar::CreateObject`|由建立此類別類型的動態執行個體架構所使用。|  
 |`CMFCRibbonMiniToolBar::GetThisClass`|由架構用來取得指向[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)與此類別類型相關聯的物件。|  
@@ -98,10 +99,10 @@ void SetCommands(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pRibbonBar`  
+ [輸入] `pRibbonBar`  
  要顯示的按鈕搜尋迷你工具列功能區列。  
   
- [in] `lstCommands`  
+ [輸入] `lstCommands`  
  顯示迷你工具列上的命令清單。 所有的功能區分類會搜尋以尋找相關聯的按鈕。  
   
 ### <a name="remarks"></a>備註  
@@ -122,10 +123,10 @@ BOOL Show(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `x`  
+ [輸入] `x`  
  指定螢幕座標的迷你工具列的水平位置。  
   
- [in] `y`  
+ [輸入] `y`  
  指定螢幕座標的迷你工具列的垂直位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -143,16 +144,16 @@ BOOL ShowWithContextMenu(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `x`  
+ [輸入] `x`  
  在螢幕座標中指定的內容功能表的水平位置。  
   
- [in] `y`  
+ [輸入] `y`  
  在螢幕座標中指定的內容功能表的垂直位置。  
   
- [in] `uiMenuResID`  
+ [輸入] `uiMenuResID`  
  指定要顯示內容功能表中的資源 ID。  
   
- [in] `pWndOwner`  
+ [輸入] `pWndOwner`  
  識別視窗操作功能表中接收訊息的視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -183,6 +184,6 @@ virtual BOOL IsRibbonMiniToolBar() const;
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

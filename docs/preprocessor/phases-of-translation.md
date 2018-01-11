@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cfecdabea3a65815600c36b0ece1b14778305e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22d73156d4f03a32bd9aa382dd0cc610f8a5f03f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="phases-of-translation"></a>轉譯階段
 C 和 C++ 程式是由一個或多個原始程式檔所組成，每個原始程式檔會包含一些程式文字。 原始程式檔連同其 include 檔 (使用 `#include` 前置處理器指示詞所包含的檔案) 稱為「轉譯單位」，但不包括條件式編譯指示詞 (例如 `#if`) 所移除的程式碼區段。  
@@ -73,5 +74,5 @@ C 和 C++ 程式是由一個或多個原始程式檔所組成，每個原始程�
   
  連結器會解析所有外部參考，並透過結合一個或多個分別處理的轉譯單位與標準程式庫建立可執行程式或 DLL。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [前置處理器](../preprocessor/preprocessor.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cc8e24c8fd1524ebaaf6c2a8edaec05ab865733
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb0682a246cc2cd2acd8f22228fd25c99755f1cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 ||||  
@@ -275,5 +276,5 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="return-value"></a>傳回值  
  第一個指定的引數模數第二個指定的引數的結果。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間](concurrency-namespace-cpp-amp.md)

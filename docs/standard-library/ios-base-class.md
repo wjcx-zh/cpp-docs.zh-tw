@@ -119,11 +119,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04605ec5df5512549822d0e585bf1b28eb0b42e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 39098fc501ba94c4fa2cd6cf779e7c5c71cc2f1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iosbase-class"></a>ios_base 類別
 此類別說明未依存於範本參數的輸入和輸出資料流通用的儲存體和成員函式。 (範本類別 [basic_ios](../standard-library/basic-ios-class.md) 描述通用且與範本參數相依的項目)。  
@@ -1062,7 +1063,7 @@ int main( )
 testing  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [iostream 程式設計](../standard-library/iostream-programming.md)   
  [iostream 慣例](../standard-library/iostreams-conventions.md)

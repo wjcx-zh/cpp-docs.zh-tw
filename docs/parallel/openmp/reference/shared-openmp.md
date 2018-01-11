@@ -1,46 +1,44 @@
 ---
-title: "shared (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Shared"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "shared OpenMP clause"
+title: "共用 (OpenMP) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Shared
+dev_langs: C++
+helpviewer_keywords: shared OpenMP clause
 ms.assetid: 7887dc95-67a2-462f-a3a2-8e0632bf5d04
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 26f8618a0340216215c3432576b6adbba3e70f80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# shared (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-指定一或多個變數應該分擔所有執行緒。  
+# <a name="shared-openmp"></a>shared (OpenMP)
+指定一個或多個變數，應該所有執行緒之間共用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 shared(var)  
 ```  
   
-## 備註  
- 其中，  
+## <a name="remarks"></a>備註  
+ 其中：  
   
  `var`  
- 若要共用的一個更多個變數。  如果指定一個以上的變數，請以逗號分隔變數名稱。  
+ 共用一個以上的變數。 如果指定了多個變數，請以逗號分隔變數名稱。  
   
-## 備註  
- 共用變數在執行緒之間的另一個解決方式是使用[copyprivate](../../../parallel/openmp/reference/copyprivate.md)子句。  
+## <a name="remarks"></a>備註  
+ 共用變數在執行緒之間的另一個方法是使用[copyprivate](../../../parallel/openmp/reference/copyprivate.md)子句。  
   
  `shared`適用於下列指示詞：  
   
@@ -48,12 +46,12 @@ shared(var)
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
- 如需詳細資訊，請參閱 [2.7.2.4 shared](../../../parallel/openmp/2-7-2-4-shared.md)。  
+ 如需詳細資訊，請參閱[2.7.2.4 共用](../../../parallel/openmp/2-7-2-4-shared.md)。  
   
-## 範例  
- 請參閱[private](../../../parallel/openmp/reference/private-openmp.md)的使用範例， `shared`。  
+## <a name="example"></a>範例  
+ 請參閱[私人](../../../parallel/openmp/reference/private-openmp.md)的使用範例`shared`。  
   
-## 請參閱  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>請參閱  
+ [子句](../../../parallel/openmp/reference/openmp-clauses.md)

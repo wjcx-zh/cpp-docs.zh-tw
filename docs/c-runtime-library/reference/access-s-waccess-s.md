@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - access_s
 - _waccess_s
 - _access_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - access_s function
 - taccess_s function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 051c2e6a6b0315e2ca4ab3192f28a370d969ec5b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f562d62f3edb1f09fe6d7ebe7b509411ad2dc8c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accesss-waccesss"></a>_access_s、_waccess_s
 決定檔案的讀取/寫入權限。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [_access、_waccess](../../c-runtime-library/reference/access-waccess.md) 版本。  
@@ -125,7 +109,7 @@ errno_t _waccess_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_access_s`|\<io.h>|\<errno.h>|  
 |`_waccess_s`|\<wchar.h> 或 \<io.h>|\<errno.h>|  
@@ -173,7 +157,7 @@ File crt_access_s.c exists.
 File crt_access_s.c does not have write permission.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_access、_waccess](../../c-runtime-library/reference/access-waccess.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   

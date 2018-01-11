@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5aafec3bb4213ec8785cb6f05e0cc5e2ecc72e4a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f1c07145f42e1ad71fb6c2a3542d9014b7e33b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-build-error-prj0031"></a>專案建置錯誤 PRJ0031
 自訂建置的 '輸出' 屬性 'macro_expansion' 跳檔案 'file' 包含 '巨集' 而它評估。  

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71e912d5043c1b908d875dca50af12e38fd05f64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>在 Windows 市集應用程式中使用 C++ AMP
 您可以使用 c + + AMP (c + + Accelerated Massive Parallelism) 中您[!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)]GPU （圖形處理單元） 或其他計算加速器上執行計算的應用程式。 然而，C++ AMP 並未提供可直接搭配 Windows 執行階段類型使用的 API，而 Windows 執行階段也未提供 C++ AMP 的包裝函式。 當您在程式碼中使用 Windows 執行階段類型 (包括您自行建立的類型) 時，必須將這些類型轉換成與 C++ AMP 相容的類型。  
@@ -118,9 +119,9 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
     });
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [建立第一個 Windows 市集應用程式使用 c + +](http://go.microsoft.com/fwlink/p/linkid=249073)   
- [在 c + + 中建立 Windows 執行階段元件](http://go.microsoft.com/fwlink/p/linkid=249076)
+## <a name="see-also"></a>請參閱  
+ [建立第一個 Windows 市集應用程式使用 c + +](http://go.microsoft.com/fwlink/p/?linkid=249073)   
+ [在 c + + 中建立 Windows 執行階段元件](http://go.microsoft.com/fwlink/p/?linkid=249076)
 
 
 

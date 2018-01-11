@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdb482dd71e19ad784e0e878432d800a384d57fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fc5ba9a34ee5c1a29892e4ba6ebc25366e408be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="futureerror-class"></a>future_error 類別
 描述可由管理 [future](../standard-library/future-class.md) 物件之類型的方法擲回的例外狀況物件。  
@@ -42,7 +43,7 @@ const char *what() const throw();
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [logic_error 類別](../standard-library/logic-error-class.md)   
  [error_code 類別](../standard-library/error-code-class.md)

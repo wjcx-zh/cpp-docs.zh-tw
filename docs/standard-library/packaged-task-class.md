@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,33 +17,26 @@ f1_keywords:
 - future/std::packaged_task::valid
 - future/std::packaged_task::operator()
 - future/std::packaged_task::operator bool
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3ca8c4c008daa02af2bba0df8468bea3c063c28a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::packaged_task [C++]
+- std::packaged_task [C++], packaged_task
+- std::packaged_task [C++], get_future
+- std::packaged_task [C++], make_ready_at_thread_exit
+- std::packaged_task [C++], reset
+- std::packaged_task [C++], swap
+- std::packaged_task [C++], valid
+ms.workload: cplusplus
+ms.openlocfilehash: e060a7d9a73cd275810541fc57ad34a2c62c4097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="packagedtask-class"></a>packaged_task 類別
 描述「非同步提供者」，它是呼叫簽章為 `Ty(ArgTypes...)` 的呼叫包裝函式。 除了可能的結果外，它的「相關聯非同步狀態」會保存其可呼叫物件的複本。  
@@ -56,18 +48,18 @@ template <class>
 class packaged_task;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[packaged_task](#packaged_task)|建構 `packaged_task` 物件。|  
 |[packaged_task::~packaged_task 解構函式](#dtorpackaged_task_destructor)|終結 `packaged_task` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[get_future](#get_future)|傳回 [future](../standard-library/future-class.md) 物件，該物件具有相同的相關聯非同步狀態。|  
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|呼叫儲存在相關聯非同步狀態中的可呼叫物件，並以不可部分完成的方式儲存傳回的值。|  
@@ -84,7 +76,7 @@ class packaged_task;
 |[packaged_task::operator bool](#op_bool)|指定物件是否具有相關聯的非同步狀態。|  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** \<未來 >  
+ **標頭：** \<未來 >  
   
  **命名空間：** std  
   
@@ -231,10 +223,9 @@ bool valid() const;
 ### <a name="return-value"></a>傳回值  
  如果物件有關聯的非同步狀態，就是 `true`，否則為 `false`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
-
 
 
 

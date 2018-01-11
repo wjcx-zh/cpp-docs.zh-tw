@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ffe52194796a6bf92bafd2a79021b709b07d9cec
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 123c8a2d9bcf45d28817e0e9256a86748eae97ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation"></a>遠端 Automation
 > [!NOTE]
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
  本文說明如何建立可從遠端叫用及執行的 Automation 物件，以及如何建立可以使用這些 Remote Automation 物件的 Automation 控制器。 它也會檢查組態選項並指出 Remote Automation 和 DCOM (COM 和 OLE 的分散式版本，允許從遠端叫用及執行除了與 Automation 相關以外的介面) 之間的主要差異。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [DCOM （分散式的元件物件模型） 的歷程記錄](../mfc/history-of-dcom.md)  
   
  [沒有 Remote Automation 適用於什麼情況](where-does-remote-automation-fit-in-q.md)  
@@ -59,6 +60,6 @@ ms.lasthandoff: 10/31/2017
   
  [使用 AUTOCLIK 和 AUTODRIV 執行 Remote Automation](../mfc/running-remote-automation-using-autoclik-and-autodriv.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC COM](../mfc/mfc-com.md)   
  [Automation](../mfc/automation.md)

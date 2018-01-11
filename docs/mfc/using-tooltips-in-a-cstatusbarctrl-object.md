@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e2d7f2ee90b7389ad3602e808213c3803dd5ad1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf522d17d8abfc4b8dbf53baa24255ab23cfa621
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tooltips-in-a-cstatusbarctrl-object"></a>在 CStatusBarCtrl 物件中使用工具提示
 若要啟用狀態列控制項的工具提示，請建立`CStatusBarCtrl`物件**SBT_TOOLTIPS**樣式。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  當工具提示設定時，只有在組件沒有圖示和文字才會顯示，或者無法在組件中顯示所有文字時才顯示。 在簡單模式中不支援工具提示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

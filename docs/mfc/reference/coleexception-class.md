@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a26ab8bb81487346908a4d1d7596ad33b5c3c31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e895e893c6032a8f8d7db0549f872c82cd0d9b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleexception-class"></a>COleException 類別
 表示與 OLE 作業相關的例外狀況。  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class COleException : public CException  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleException::Process](#process)|將轉譯成 OLE 傳回程式碼攔截的例外狀況。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleException::m_sc](#m_sc)|包含指出例外狀況原因的狀態碼。|  
   
@@ -106,7 +107,7 @@ static SCODE PASCAL Process(const CException* pAnyException);
 ### <a name="example"></a>範例  
   請參閱範例的[coledispatchdriver:: Createdispatch](../../mfc/reference/coledispatchdriver-class.md#createdispatch)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CALCDRIV](../../visual-cpp-samples.md)   
  [CException 類別](../../mfc/reference/cexception-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)

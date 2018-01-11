@@ -1,45 +1,46 @@
 ---
-title: "hash_multiset::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 成員 [STL/CLR]"
+title: "hash_multiset:: swap (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: b79372ab-ca51-494a-89cf-4e2da3ee3ff7
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 28dfb2a37e2ffc68f92f7c976ae83c98b4f89e4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultisetswap-stlclr"></a>hash_multiset::swap (STL/CLR)
 交換兩個容器的內容。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void swap(hash_multiset<Key>% right);  
 ```  
   
-#### 參數  
- right  
+#### <a name="parameters"></a>參數  
+ 向右  
  要交換內容的容器。  
   
-## 備註  
- 成員函式交換在 `this` 和 `right`的控制順序。  它在常數時間執行，而且不會擲回例外狀況。  您將它當做一個快速的方法交換兩個容器的內容。  
+## <a name="remarks"></a>備註  
+ 成員函式會交換 `this` 和 `right` 之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_swap.cpp   
@@ -82,15 +83,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **EF 的 d**  
- **EF 的 d**  
- **a b c**   
-## 需求  
- **標題:** \<cliext\/hash\_set\>  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::operator\=](../dotnet/hash-multiset-operator-assign-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::operator= (STL/CLR)](../dotnet/hash-multiset-operator-assign-stl-clr.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - AFXRENDERTARGET/CBitmapRenderTarget::GetBitmap
 - AFXRENDERTARGET/CBitmapRenderTarget::GetBitmapRenderTarget
 - AFXRENDERTARGET/CBitmapRenderTarget::m_pBitmapRenderTarget
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CBitmapRenderTarget [MFC], CBitmapRenderTarget
 - CBitmapRenderTarget [MFC], Attach
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - CBitmapRenderTarget [MFC], GetBitmapRenderTarget
 - CBitmapRenderTarget [MFC], m_pBitmapRenderTarget
 ms.assetid: c89a4437-812e-4943-acb2-b429a04cc4d2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f07e3783de7efe4e279a4f8d69563349cb72a362
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 9438bbdeef811019003cd53c426ff688ce178ea7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbitmaprendertarget-class"></a>CBitmapRenderTarget 類別
 ID2D1BitmapRenderTarget 包裝函式。  
@@ -47,17 +45,17 @@ ID2D1BitmapRenderTarget 包裝函式。
 class CBitmapRenderTarget : public CRenderTarget;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::CBitmapRenderTarget](#cbitmaprendertarget)|建構 CBitmapRenderTarget 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|  
 |[CBitmapRenderTarget::Detach](#detach)|中斷連結物件中的呈現目標介面|  
@@ -66,13 +64,13 @@ class CBitmapRenderTarget : public CRenderTarget;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::operator ID2D1BitmapRenderTarget *](#operator_id2d1bitmaprendertarget_star)|傳回 ID2D1BitmapRenderTarget 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CBitmapRenderTarget::m_pBitmapRenderTarget](#m_pbitmaprendertarget)|ID2D1BitmapRenderTarget 物件的指標。|  
   
@@ -155,6 +153,5 @@ operator ID2D1BitmapRenderTarget*();
 ### <a name="return-value"></a>傳回值  
  ID2D1BitmapRenderTarget 介面或如果尚未初始化物件為 NULL 指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

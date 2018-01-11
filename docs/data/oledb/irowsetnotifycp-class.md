@@ -15,11 +15,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1d110b3bc304664681532ae7511a9e886a05058b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bae872c90a6df76e3efc1fce1aab6e77bc8fd313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP 類別
 實作連接點介面的提供者站台[IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx)。  
@@ -73,7 +76,7 @@ class IRowsetNotifyCP :
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [通知 (COM)](http://msdn.microsoft.com/library/windows/desktop/ms678433)   

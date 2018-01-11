@@ -19,11 +19,12 @@ caps.latest.revision: "60"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54823d53cfe6e83879db70dac7809a1b40217bd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 C + + Accelerated Massive Parallelism (c + + AMP) 藉由運用在獨立圖形顯示卡的圖形處理單元 (GPU) 之類的資料平行硬體加速執行 c + + 程式碼。 藉由使用 c + + AMP，您可以撰寫多維度資料的演算法，因此可加快執行異質硬體上使用平行處理原則。 C + + AMP 程式撰寫模型包含多維度陣列、 索引、 記憶體傳輸、 並排顯示和數學函式程式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何將 cpu 移到 GPU 上, 一步，這樣可以改善效能。  
@@ -427,7 +428,7 @@ for (int i = 0; i <4; i++) {
 ```  
   
 ## <a name="math-libraries"></a>數學程式庫  
- C + + AMP 包含兩個數學程式庫。 中的雙精確度程式庫[concurrency:: precise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)提供支援的雙精確度函式。 它也提供支援單精確度函式，雖然雙精度支援的硬體上仍需要。 它符合[C99 規格 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/linkid=225887)。 加速器必須支援完整的雙精確度。 您可以判斷它是否會檢查的值[accelerator:: supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)。 快速數學程式庫，請在[concurrency:: fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一組的數學函式。 這些函式僅支援`float`運算元，更快速地執行，但不精確的雙精確度數學程式庫中。 函式都包含在\<amp_math.h > 標頭檔和所有的宣告與`restrict(amp)`。 中的函式\<h > 標頭檔匯入同時`fast_math`和`precise_math`命名空間。 `restrict`關鍵字用來區別\<cmath > 版本和 c + + AMP 版本。 下列程式碼會計算使用快速方法，在計算網域中每個值的基底 10 對數。  
+ C + + AMP 包含兩個數學程式庫。 中的雙精確度程式庫[concurrency:: precise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)提供支援的雙精確度函式。 它也提供支援單精確度函式，雖然雙精度支援的硬體上仍需要。 它符合[C99 規格 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必須支援完整的雙精確度。 您可以判斷它是否會檢查的值[accelerator:: supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)。 快速數學程式庫，請在[concurrency:: fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一組的數學函式。 這些函式僅支援`float`運算元，更快速地執行，但不精確的雙精確度數學程式庫中。 函式都包含在\<amp_math.h > 標頭檔和所有的宣告與`restrict(amp)`。 中的函式\<h > 標頭檔匯入同時`fast_math`和`precise_math`命名空間。 `restrict`關鍵字用來區別\<cmath > 版本和 c + + AMP 版本。 下列程式碼會計算使用快速方法，在計算網域中每個值的基底 10 對數。  
 
   
 ```cpp  
@@ -469,13 +470,13 @@ void MathExample() {
   
 - [在 Windows 市集應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
-- [逐步解說： 以 c + + 建立基本 Windows 執行階段元件，然後從 JavaScript 呼叫該](http://go.microsoft.com/fwlink/p/linkid=249077)  
+- [逐步解說： 以 c + + 建立基本 Windows 執行階段元件，然後從 JavaScript 呼叫該](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
-- [Bing 地圖服務路線最佳化程式的 JavaScript 和 c + + 中的 Windows 市集應用程式](http://go.microsoft.com/fwlink/p/linkid=249078)  
+- [Bing 地圖服務路線最佳化程式的 JavaScript 和 c + + 中的 Windows 市集應用程式](http://go.microsoft.com/fwlink/p/?linkid=249078)  
   
-- [如何使用 c + + AMP 從 C# 使用 Windows 執行階段](http://go.microsoft.com/fwlink/p/linkid=249080)  
+- [如何使用 c + + AMP 從 C# 使用 Windows 執行階段](http://go.microsoft.com/fwlink/p/?linkid=249080)  
   
-- [如何使用 c + + AMP 從 C#](http://go.microsoft.com/fwlink/p/linkid=249081)  
+- [如何使用 c + + AMP 從 C#](http://go.microsoft.com/fwlink/p/?linkid=249081)  
   
 - [從 Managed 程式碼呼叫原生函式](../../dotnet/calling-native-functions-from-managed-code.md)  
   
@@ -492,13 +493,13 @@ void MathExample() {
   
 - [通道 (執行緒檢視)](/visualstudio/profiling/channels-threads-view)  
   
-- [分析 c + + AMP 程式碼，使用 並行視覺化檢視](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)  
+- [分析 c + + AMP 程式碼，使用 並行視覺化檢視](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
   
 ## <a name="performance-recommendations"></a>效能建議  
  模數和不帶正負號整數的除法有效能明顯優於模數和帶正負號整數的除法。 我們建議您使用盡可能不帶正負號的整數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + AMP (c + + Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)   
  [參考 (c + + AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
- [機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/linkid=238472)
+ [機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=238472)

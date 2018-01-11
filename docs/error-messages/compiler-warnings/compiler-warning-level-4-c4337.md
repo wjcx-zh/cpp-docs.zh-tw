@@ -1,34 +1,33 @@
 ---
-title: "編譯器警告 (層級 4) C4337 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4337"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4337"
+title: "編譯器警告 （層級 4） C4337 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4337
+dev_langs: C++
+helpviewer_keywords: C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b620d43e595ca959622cd8fca1396a96718e80df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 4) C4337
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-已自動匯入交互參考型別程式庫 'typelib1' 於 'typelib2'  
+# <a name="compiler-warning-level-4-c4337"></a>編譯器警告 (層級 4) C4337
+自動匯入交互參考的類型程式庫 'typelib1' 中 'typelib2'  
   
- [\#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)的 auto\_search 屬性導致型別程式庫被隱含匯入。  
+ 之 auto_search 屬性的[#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)造成隱含地匯入類型程式庫。  
   
- 假設磁碟上有兩個型別程式庫是根據下列兩個檔案建立的 \(用 midl.exe 編譯\)：  
+ 下列兩個檔案 （使用 midl.exe 編譯） 中建立的磁碟上的指定兩個型別程式庫：  
   
 ```  
 // C4337a.idl  
@@ -47,7 +46,7 @@ library C4337aLib
 };  
 ```  
   
- 然後第二個 .idl 檔案是：  
+ 然後第二個.idl 檔案，  
   
 ```  
 // C4337b.idl  
@@ -67,7 +66,7 @@ library C4337bLib
 };  
 ```  
   
- 下列範例會產生 C4337：  
+ 下列範例會產生 C4337:  
   
 ```  
 // C4337.cpp  

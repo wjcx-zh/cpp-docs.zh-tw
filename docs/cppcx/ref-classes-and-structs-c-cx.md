@@ -12,11 +12,12 @@ caps.latest.revision: "42"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f02bbb91563233e4e49537dd8f7a5290aad64b6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405f1890dc99e5a20102b7602ac83534cb5ded8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 類別與結構 (C++/CX)
 C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*值類別*和*值結構*。 這些資料結構是主要的容器的 C + /CX 支援 Windows 執行階段類型系統。 其內容會根據某些特定規則，中繼資料中發出，這樣可讓他們在 Windows 執行階段元件和以 c + + 或其他語言撰寫的通用 Windows 平台應用程式之間傳遞。  
@@ -45,7 +46,7 @@ C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*
   
  [!code-cpp[cx_classes#04](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#04)]  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  下一個程式碼範例則說明用戶端程式碼如何使用 `Person` ref 類別。  
   
  [!code-cpp[cx_classes#05](../cppcx/codesnippet/CPP/classesstructs/class1.cpp#05)]  
@@ -67,7 +68,7 @@ C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*
   
  具現化 C++/CX ref 類別時，會在呼叫其建構函式之前，將其記憶體初始設定為零；因此，不需要對個別成員進行歸零初始設定作業 (包括屬性)。 如果 C++/CX 類別衍生自 Windows Runtime C++ Library (WRL) 類別，只會對 C++/CX 衍生類別部分進行歸零初始設定。  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
  ref 類別可包含 `public`、 `protected`和 `private` 函式成員，其中只有 `public` 和 `protected` 成員會發出至中繼資料。 允許巢狀類別和 ref 類別，但不可以是 `public`。 不允許公用欄位；公用資料成員必須宣告為屬性。 私用或受保護的內部資料成員可以是欄位。 根據預設，在 ref 類別中，所有成員的存取範圍都是 `private`。  
   
  ref 結構與 ref 類別相同，差別在於前者的成員依預設具有 `public` 存取範圍。  
@@ -128,7 +129,7 @@ C + + /CX 支援使用者定義*ref 類別*和*ref 結構*，和使用者定義*
   
  [!code-cpp[cx_classes#09](../cppcx/codesnippet/CPP/classesstructs/class1.h#09)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類型系統](../cppcx/type-system-c-cx.md)   
  [實值類別與結構](../cppcx/value-classes-and-structs-c-cx.md)   
  [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)   

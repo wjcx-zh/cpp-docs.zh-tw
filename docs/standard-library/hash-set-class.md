@@ -97,11 +97,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df9bc7c0bd614206dc3c0d5e419b59d5029b8077
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 3dd9f781b39db5e8c9df5e70a4a291db44e61cbc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashset-class"></a>hash_set 類別
 > [!NOTE]
@@ -126,7 +127,7 @@ class hash_set
  包含兩個函式物件的類型：一個是屬於 compare 類別 (此為二元述詞，能夠將兩個元素值以排序索引鍵做比較來判斷其相對順序)；一個是雜湊函式 (此為一元述詞，可將元素的索引鍵值對應到 **size_t** 類型的不帶正負號整數)。 這個引數是選用引數，且預設值是 `hash_compare`*<Key,* **less***\<Key> >*。  
   
  `Allocator`  
- 代表預存配置器物件的類型，其會封裝有關 hash_set 之記憶體配置與解除配置的詳細資訊。 這個引數是選用引數，且預設值是 **allocator***\<Key>*。  
+ 代表預存配置器物件的類型，其會封裝有關 hash_set 之記憶體配置與解除配置的詳細資訊。 這是選用引數，而預設值為 **allocator***\<Key>*。  
   
 ## <a name="remarks"></a>備註  
  hash_set 是：  
@@ -813,7 +814,7 @@ emplace(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|要插入到 [hash_set](../standard-library/hash-set-class.md) 中之元素的值，除非 `hash_set` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|  
   
 ### <a name="return-value"></a>傳回值  
@@ -866,9 +867,9 @@ iterator emplace(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`val`|要插入到 [hash_set](../standard-library/hash-set-class.md) 中之元素的值，除非 `hash_set` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|  
-|`_Where`|要開始搜尋正確的插入點的地方 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
+|`_Where`|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
   
 ### <a name="return-value"></a>傳回值  
  [hash_set::emplace](#emplace) 成員函式會傳回迭代器，此迭代器指向新元素在 `hash_set` 中的插入位置，或具有對等排序之現有元素的所在位置。  
@@ -970,7 +971,7 @@ iterator end();
  雙向迭代器，定址對象是 hash_set 中最後一個元素後面的位置。 如果 hash_set 是空的，則 hash_set::end == hash_set::begin。  
   
 ### <a name="remarks"></a>備註  
- **end** 是用來測試迭代器是否已到達其 hash_set 的結尾。 **end** 所傳回的值不應該被取值。  
+ **end** 是用來測試迭代器是否已到達其 hash_set 的結尾。 不應該對 **end** 所傳回的值進行取值。  
   
    
   
@@ -1312,7 +1313,7 @@ Allocator get_allocator() const;
  如需有關 `Allocator` 的詳細資訊，請參閱 [hash_set 類別](../standard-library/hash-set-class.md)主題的＜備註＞一節。  
   
 ### <a name="remarks"></a>備註  
- hash_set 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
+ hash_set 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。  
   
    
   
@@ -1437,7 +1438,7 @@ hash_set(
 |`Last`|超出要複製之元素範圍的第一個元素的位置。|  
   
 ### <a name="remarks"></a>備註  
- 所有建構函式都會儲存一種配置器物件，此物件可管理 `hash_set` 的記憶體儲存，且之後藉由呼叫 [hash_set::get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告中經常會省略 allocator 參數，而前處理巨集會用來取代替代配置器。  
+ 所有建構函式都會儲存一種配置器物件，此物件可管理 `hash_set` 的記憶體儲存，且之後藉由呼叫 [hash_set::get_allocator](#get_allocator) 即可傳回此物件。 在類別宣告以及用來取代替代配置器的前置處理巨集中，經常會省略 allocator 參數。  
   
  所有建構函式都會將其 hash_set 初始化。  
   
@@ -1482,9 +1483,9 @@ void insert(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`Val`|要插入到 `hash_set` 中之元素的值，除非 `hash_set` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|  
-|`Where`|要開始搜尋正確的插入點的地方 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
+|`Where`|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|  
 |`First`|要從 `hash_set` 複製之第一個元素的位置。|  
 |`Last`|緊接在要從 `hash_set` 複製之最後一個元素後面的位置。|  
 |`IList`|從中複製項目的 initializer_list。|  
@@ -1543,7 +1544,7 @@ key_compare key_comp() const;
   
  如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。  
   
- 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與範本參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_compare](#key_compare) 和 [value_compare](#value_compare) 都與樣板參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
   
    
   
@@ -1608,7 +1609,7 @@ typedef Traits key_compare;
 ```  
   
 ### <a name="remarks"></a>備註  
- `key_compare` 與範本參數 `Traits` 同義。  
+ `key_compare` 與樣板參數 `Traits` 同義。  
   
  如需有關 `Traits` 的詳細資訊，請參閱 [hash_set 類別](../standard-library/hash-set-class.md)主題。  
   
@@ -1635,7 +1636,7 @@ typedef Key key_type;
   
  如需有關 `Key` 的詳細資訊，請參閱 [hash_set 類別](../standard-library/hash-set-class.md)主題的＜備註＞一節。  
   
- 請注意，`key_type` 和 [value_type](#value_type) 都與範本參數 **Key** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
+ 請注意，`key_type` 和 [value_type](#value_type) 都與樣板參數 **Key** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
   
    
   
@@ -1770,7 +1771,7 @@ hash_set& operator=(hash_set&& right);
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`right`|要複製到 `hash_set` 中的 [hash_set](../standard-library/hash-set-class.md)。|  
   
 ### <a name="remarks"></a>備註  
@@ -1826,7 +1827,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
 ```  
   
 ### <a name="remarks"></a>備註  
- 類型 **pointer** 可用來修改元素的值。  
+ **pointer** 類型可用來修改項目的值。  
   
  在大多數情況下，應該使用 [iterator](#iterator) 來存取 hash_set 物件中的元素。  
   
@@ -2374,7 +2375,7 @@ typedef key_compare value_compare;
   
  如需有關 `Traits` 的詳細資訊，請參閱 [hash_set 類別](../standard-library/hash-set-class.md)主題。  
   
- 請注意，[key_compare](#key_compare) 和 **value_compare** 都與範本參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
+ 請注意，[key_compare](#key_compare) 和 **value_compare** 都與樣板參數 **Traits** 同義。 針對 hash_set 和 hash_multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 hash_map 和 hash_multimap 類別相容，其中兩者就會不同。  
   
    
   
@@ -2428,7 +2429,7 @@ int main( )
 The hash_set has elements: 10 20.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
 

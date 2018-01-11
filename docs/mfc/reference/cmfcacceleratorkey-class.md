@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 79719ba2d029fc210aff94f78f00783f694a0156
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3303be9f37749436d140028cd5fa45cd4454c8c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey 類別
 實作虛擬按鍵對應和格式化的協助程式類別。  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCAcceleratorKey : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|建構 `CMFCAcceleratorKey` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCAcceleratorKey::Format](#format)|將轉譯成它的視覺表示的快速鍵結構。|  
 |[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|設定的快速鍵`CMFCAcceleratorKey`物件。|  
@@ -80,7 +81,7 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpAccel`  
+ [輸入] `lpAccel`  
  攠摝坫指標。  
   
 ### <a name="remarks"></a>備註  
@@ -108,13 +109,13 @@ void SetAccelerator(LPACCEL lpAccel);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpAccel`  
+ [輸入] `lpAccel`  
  攠摝坫指標。  
   
 ### <a name="remarks"></a>備註  
  使用此方法來設定的快速鍵`CMFCAcceleratorKey`如果您未提供攠摝坫您在建立時`CMFCAcceleratorKey`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CKeyboardManager 類別](../../mfc/reference/ckeyboardmanager-class.md)

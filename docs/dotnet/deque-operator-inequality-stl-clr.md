@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4b682b5d125f21e8212e2ac442caf51f8c2832e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 17a5fb91f77e1b0a83e63bf498568690001acebd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequeoperator-stlclr"></a>deque::operator!= (STL/CLR)
 Deque 不等於比較。  
@@ -93,7 +96,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [運算子 = = (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)   
  [運算子\<(deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)   

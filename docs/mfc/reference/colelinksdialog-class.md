@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be6c812864c6b5284b8db27d212ce82f8307e70c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9b998cc18ac0c357b57bc841f6db13700b078063
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 類別
 用於 OLE 的 [編輯連結] 對話方塊。  
@@ -38,23 +39,23 @@ ms.lasthandoff: 10/24/2017
 class COleLinksDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleLinksDialog::COleLinksDialog](#colelinksdialog)|建構 `COleLinksDialog` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleLinksDialog::DoModal](#domodal)|顯示 OLE [編輯連結] 對話方塊。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[COleLinksDialog::m_el](#m_el)|型別的結構**OLEUIEDITLINKS**控制對話方塊的行為。|  
   
@@ -144,7 +145,7 @@ OLEUIEDITLINKS m_el;
   
  如需詳細資訊，請參閱[OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) Windows SDK 中的結構。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [COleDialog 類別](../../mfc/reference/coledialog-class.md)

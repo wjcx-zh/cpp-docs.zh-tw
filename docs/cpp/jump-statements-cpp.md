@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- jump statements
+dev_langs: C++
+helpviewer_keywords: jump statements
 ms.assetid: 7d8ff59c-b1bd-4164-85e9-f508851ed62c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f3b4187928587d564a3c608edefebea2573b976e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 84fb6cf5b1710389bbe0f2065a3d8f46606656a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="jump-statements-c"></a>跳躍陳述式 (C++)
 C ++ 跳躍陳述式會立即轉移區域的控制權。  
@@ -47,5 +44,5 @@ goto identifier;
   
 -   [goto 陳述式](../cpp/goto-statement-cpp.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 陳述式概觀](../cpp/overview-of-cpp-statements.md)

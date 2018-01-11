@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cb2597352fcc4a263dc2ceb93121a95dcd493f44
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0d19985271648e66aa86946c685608f805b1dfe1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-members-c"></a>靜態成員 (C++)
 類別可以包含靜態資料成員和成員函式。 當資料成員宣告為**靜態**，只能有一個複本的資料會保留類別的所有物件。
@@ -86,5 +87,5 @@ long nBytes = Console.bytecount;
   
  靜態成員的類型未以類別名稱限定。 因此，`BufferedOutput::bytecount` 的類型是 `long`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

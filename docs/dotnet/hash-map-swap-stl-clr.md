@@ -1,45 +1,46 @@
 ---
-title: "hash_map::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 成員 [STL/CLR]"
+title: "hash_map:: swap (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: bc1349e0-9be2-4767-a87b-4834615cb52a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 344efc07f3e9596a345a3d727d091a57d58ee7c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapswap-stlclr"></a>hash_map::swap (STL/CLR)
 交換兩個容器的內容。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void swap(hash_map<Key, Mapped>% right);  
 ```  
   
-#### 參數  
- right  
+#### <a name="parameters"></a>參數  
+ 向右  
  要交換內容的容器。  
   
-## 備註  
- 成員函式交換在 `this` 和 `right`的控制順序。  它在常數時間執行，而且不會擲回例外狀況。  您將它當做一個快速的方法交換兩個容器的內容。  
+## <a name="remarks"></a>備註  
+ 成員函式會交換 `this` 和 `right` 之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_map_swap.cpp   
@@ -82,15 +83,18 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
- **d \[4\] \[5\] \[ef 6\]**  
- **d \[4\] \[5\] \[ef 6\]**  
- **\[1\] \[2\] \[bc 3\]**   
-## 需求  
- **標題:** \<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[d 4] [e 5] [f 6]  
+[d 4] [e 5] [f 6]  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
-## 請參閱  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::operator\=](../dotnet/hash-map-operator-assign-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)

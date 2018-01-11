@@ -1,50 +1,50 @@
 ---
-title: "list::resize (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resize 成員 [STL/CLR]"
+title: "list:: resize (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: c4b8d41f-a62b-4dbc-8568-0e0a9da24016
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ca91c9764f1fe438d0d7dfb66c52797d5d97aae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::resize (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-變更項目的數目。  
+# <a name="listresize-stlclr"></a>list::resize (STL/CLR)
+變更項目數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### 參數  
- new\_size  
- 受控制序列的新大小。  
+#### <a name="parameters"></a>參數  
+ new_size  
+ 新的受控制序列的大小。  
   
  val  
  填補項目的值。  
   
-## 備註  
- 這個成員函式同時確保 [list::size](../dotnet/list-size-stl-clr.md)從這個`()` 傳回 `new_size`。  如果必須啟用受控制序列更長，第 10% 成員函式附加與值的項目，則為 `value_type()`，而第二 \+ 成成員函式附加與 `val`值的項目。  若要讓受控制序列較短，兩個成員函式有效地清除最後項目 [list::size](../dotnet/list-size-stl-clr.md)`() -``new_size` 逾時。  您可以使用會修剪或邊框距離確保受控制序列的大小 `new_size`，目前受控制序列。  
+## <a name="remarks"></a>備註  
+ 成員函式同時確保[list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()`從此以後傳回`new_size`。 如果第一個成員函式必須讓受控制的序列更長，即會將 `value_type()` 值附加至元素，而第二個成員函式會將 `val` 值附加至元素。 若要使較短的受控制的序列，這兩個成員函式有效地清除最後一個項目[list:: size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size`時間。 您使用它來確保受控制的序列的大小`new_size`、 修剪或填補目前受控制的序列。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_resize.cpp   
@@ -75,17 +75,20 @@ int main()
   
 ```  
   
-  **大小 \(\) \= 0**  
- **0 0 0 0**  
-**大小 \(\) \= 0**  
- **x x x x x**   
-## 需求  
- **標題:** \<cliext\/清單\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [list:: erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)

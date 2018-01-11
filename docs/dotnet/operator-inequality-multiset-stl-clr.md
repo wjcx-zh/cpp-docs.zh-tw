@@ -1,33 +1,33 @@
 ---
-title: "operator!= (multiset) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!= 成員 [STL/CLR]"
+title: "運算子 ！ = (multiset) (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: d4bad562-b58b-4578-94ab-0aa0e191b3ca
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c29e9de16a3c909b7294d425599093f2b80c62f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# operator!= (multiset) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="operator-multiset-stlclr"></a>operator!= (multiset) (STL/CLR)
 列出不相等比較。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Key>  
@@ -35,17 +35,17 @@ template<typename Key>
         multiset<Key>% right);  
 ```  
   
-#### 參數  
- left  
- 要比較的左邊容器。  
+#### <a name="parameters"></a>參數  
+ 左  
+ 要比較的左容器。  
   
- right  
- 要比較的正確的容器。  
+ 向右  
+ 要比較的右容器。  
   
-## 備註  
- 運算子函式會傳回 `!(``left``==``right``)`。  您會用它來測試 `left` 是否未排序與 `right` 相同，這兩個多重集是比較項目由項目時。  
+## <a name="remarks"></a>備註  
+ 運算子函式會傳回`!(left == right)`。 使用它來測試是否`left`未經過排序相同`right`兩個 （semantics） 與項目所比較的項目時。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multiset_operator_ne.cpp   
@@ -85,19 +85,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **b d**  
-**\[b c\]\! \= b " \[\] 為 false**  
-**\[b c\]\! \= b d \[\] 為 true**   
-## 需求  
- **標題:** \<cliext\/設定\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
-## 請參閱  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [operator\=\= \(multiset\)](../dotnet/operator-equality-multiset-stl-clr.md)   
- [operator\< \(multiset\)](../dotnet/operator-less-than-multiset-stl-clr.md)   
- [operator\>\= \(multiset\)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)   
- [operator\> \(multiset\)](../dotnet/operator-greater-than-multiset-stl-clr.md)   
- [operator\<\= \(multiset\)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [運算子 = = (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)   
+ [運算子\<(multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)   
+ [運算子 > = (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)   
+ [運算子 > (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)   
+ [operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)

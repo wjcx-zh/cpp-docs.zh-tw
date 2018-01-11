@@ -1,41 +1,42 @@
 ---
-title: "list::back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back 成員 [STL/CLR]"
+title: "list:: back (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::back
+dev_langs: C++
+helpviewer_keywords: back member [STL/CLR]
 ms.assetid: 3241e497-42ab-4108-8598-3f90eac76f07
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7b0e654f5df9452177b3017f045b5db2f217031a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listback-stlclr"></a>list::back (STL/CLR)
 存取最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 reference back();  
 ```  
   
-## 備註  
- 成員函式傳回參考給受控制序列的最後一個項目，此序列不能為空序列。  您會用它來存取，最後一個項目，當您知道它存在。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列必須為非空白的最後一個元素的參考。 您可以使用它來存取最後一個項目中，當您知道它存在。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_back.cpp   
@@ -67,16 +68,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\(\) \= c**  
- **a b x**   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::back\_item](../dotnet/list-back-item-stl-clr.md)   
- [list::front](../dotnet/list-front-stl-clr.md)   
- [list::front\_item](../dotnet/list-front-item-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list:: front (STL/CLR)](../dotnet/list-front-stl-clr.md)   
+ [list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)

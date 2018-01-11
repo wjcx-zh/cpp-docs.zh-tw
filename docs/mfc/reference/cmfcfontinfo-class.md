@@ -29,11 +29,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27d3a1fc08dea41add59b19ec42d4b18db940648
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0ea0572667ef45264fd52934cd2d4ee750a6d4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo 類別
 `CMFCFontInfo`類別所描述的名稱和字型的其他屬性。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
 class CMFCFontInfo : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -54,13 +55,13 @@ class CMFCFontInfo : public CObject
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCFontInfo::GetFullName](#getfullname)|擷取的字型和它的字元串連的名稱集 （指令碼）。|  
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCFontInfo::m_nCharSet](#m_ncharset)|值，指定與字型相關聯的字集 （指令碼）。|  
 |[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|值，指定字距和系列的字型。|  
@@ -94,22 +95,22 @@ CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszName`  
+ [輸入] `lpszName`  
  字型的名稱。 如需詳細資訊，請參閱`lfFaceName`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
- [in] `lpszScript`  
+ [輸入] `lpszScript`  
  指令碼 （字元集） 的字型名稱。  
   
- [in] `nCharSet`  
+ [輸入] `nCharSet`  
  指定字型的字元集 （指令碼） 的值。 如需詳細資訊，請參閱`lfCharSet`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
- [in] `nPitchAndFamily`  
+ [輸入] `nPitchAndFamily`  
  值，指定字距和系列的字型。 如需詳細資訊，請參閱`lfPitchAndFamily`隸屬[LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037)結構。  
   
- [in] `nType`  
+ [輸入] `nType`  
  指定的字型類型的值。 這個參數可以是 DEVICE_FONTTYPE、 RASTER_FONTTYPE 和 TRUETYPE_FONTTYPE 合 (OR)。  
   
- [in] `src`  
+ [輸入] `src`  
  現有`CMFCFontInfo`其成員會用來建構這個物件`CMFCFontInfo`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -180,7 +181,7 @@ const CString m_strScript;
 ### <a name="remarks"></a>備註  
  如需詳細資訊，請參閱`lpszScript`參數[CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo)建構函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCToolBarFontComboBox 類別](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   

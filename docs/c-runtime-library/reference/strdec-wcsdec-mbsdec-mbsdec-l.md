@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - mbsdec
 - wcsdec
 - _wcsdec
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mbsdec_l function
 - mbsdec function
@@ -49,36 +47,22 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 08ab806a3f2852109dda05d40e7264dbd8571298
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 46e905408faed138b1509362a1ec56e727742ce9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 將字串指標後移一個字元。  
   
 > [!IMPORTANT]
-> 不可在於  `mbsdec` 中執行的應用程式中使用 `mbsdec_l` 和 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `mbsdec` 和 `mbsdec_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -118,7 +102,7 @@ unsigned char *_mbsdec_l(
 ## <a name="remarks"></a>備註  
  `_mbsdec` 和 `_mbsdec_l` 函式會傳回緊接在包含 `start` 的字串中 `current` 之前的多位元組字元的第一個位元組指標。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  `_mbsdec` 會根據目前使用的地區設定來辨識多位元組字元序列，而 `_mbsdec_l` 與其相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale、_wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。  `_mbsdec` 會根據目前使用的地區設定來辨識多位元組字元序列，而 `_mbsdec_l` 與其相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `start` 或 `current` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會傳回 `EINVAL`，並將 `errno` 設為 `EINVAL`。  
   
@@ -137,14 +121,14 @@ unsigned char *_mbsdec_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_mbsdec`|\<mbstring.h>|\<mbctype.h>|  
 |`_mbsdec_l`|\<mbstring.h>|\<mbctype.h>|  
 |`_strdec`|\<tchar.h>||  
 |`_wcsdec`|\<tchar.h>||  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  下列範例示範 `_tcsdec` 的用法。  
@@ -199,7 +183,7 @@ int main()
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [_strinc、_wcsinc、_mbsinc、_mbsinc_l](../../c-runtime-library/reference/strinc-wcsinc-mbsinc-mbsinc-l.md)   
  [_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l](../../c-runtime-library/reference/strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)   

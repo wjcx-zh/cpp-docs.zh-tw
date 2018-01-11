@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: f926b400e1cfa2b7b4649efcd0bac73de1faa062
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df7f97271a0173ea7844abc82978bf68aa9d90a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap 類別
 代表未排序的 *Map*，這是機碼值組的集合。  
@@ -64,13 +65,13 @@ ref class Map sealed;
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Unorderedmap:: Unorderedmap](#ctor)|初始化 Map 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Unorderedmap:: Clear](#clear)|從目前 Map 物件移除所有機碼值組。|  
 |[Unorderedmap:: First](#first)|傳回迭代器，指定 Map 中的第一個項目。|  
@@ -85,7 +86,7 @@ ref class Map sealed;
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |[Map:: mapchanged](#mapchanged)`event`|發生於 Map 變更時。|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
@@ -363,7 +364,7 @@ UnorderedMap();
 
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)   
  [Platform:: collections 命名空間](../cppcx/platform-collections-namespace.md)   
  [Std:: map 類別](../cppcx/platform-collections-map-class.md)   

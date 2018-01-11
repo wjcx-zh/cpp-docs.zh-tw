@@ -1,32 +1,32 @@
 ---
-title: "運算式評估工具錯誤 CXX0008 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0008"
-  - "CXX0008"
+title: "運算式評估工具錯誤 CXX0008 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0008
+dev_langs: C++
+helpviewer_keywords:
+- CXX0008
+- CAN0008
 ms.assetid: 49e0968c-a6ce-4ba9-9762-02a55c08124e
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 683fadfc1bbb40e0933d94bcc10234a11d51f12e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 運算式評估工具錯誤 CXX0008
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**字串結尾處遺漏雙引號 \("\)**  
+# <a name="expression-evaluator-error-cxx0008"></a>運算式評估工具錯誤 CXX0008
+**「 在字串結尾處遺漏**  
   
- 預期出現在字串常值結尾處的雙引號遺漏。  重新輸入運算式，將字串常值 \(String Literal\) 置於雙引號之間。  
+ 缺少預期結尾的字串常值雙引號括住。 請重新輸入運算式，字串常值雙引號括住。  
   
- 此錯誤與 CAN0008 相同。
+ 這個錯誤是與 can0008 相同。

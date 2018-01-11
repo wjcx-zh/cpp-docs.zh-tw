@@ -57,11 +57,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33ffe578169721453211c183a190f663b5b38810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2f98125e8e84ec0271bb3dff2eab01e0cfef368
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>CMFCFilterChunkValueImpl 類別
 這是可簡化區塊和屬性值組邏輯的類別。  
@@ -72,18 +73,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCFilterChunkValueImpl:: ~ CMFCFilterChunkValueImpl](#_dtorcmfcfilterchunkvalueimpl)|Destructs 物件。|  
 |[CMFCFilterChunkValueImpl::CMFCFilterChunkValueImpl](#cmfcfilterchunkvalueimpl)|建構物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCFilterChunkValueImpl::Clear](#clear)|清除 ChunkValue。|  
 |[CMFCFilterChunkValueImpl::CopyChunk](#copychunk)|將此區塊複製到結構描述的區塊 (chunk) 的特性。|  
@@ -104,9 +105,9 @@ class CMFCFilterChunkValueImpl : public ATL::IFilterChunkValue;
 |[CMFCFilterChunkValueImpl::SetSystemTimeValue](#setsystemtimevalue)|將屬性設定成 SystemTime 的索引鍵。|  
 |[CMFCFilterChunkValueImpl::SetTextValue](#settextvalue)|將屬性設定為 Unicode 字串的索引鍵。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCFilterChunkValueImpl::SetChunk](#setchunk)|設定區塊的通用屬性的 helper 函式。|  
   
@@ -650,5 +651,5 @@ HRESULT SetTextValue(
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

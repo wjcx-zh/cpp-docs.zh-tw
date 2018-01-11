@@ -1,33 +1,33 @@
 ---
-title: "SafeDivide | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeDivide"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeDivide 函式"
+title: "SafeDivide |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeDivide
+dev_langs: C++
+helpviewer_keywords: SafeDivide function
 ms.assetid: b5b27484-ad6e-46b1-ba9f-1c7120dd103b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0d6d3b774cb014b8257cf412bf2dec2827abeda2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# SafeDivide
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-除以兩個數字會防止除以零的方法。  
+# <a name="safedivide"></a>SafeDivide
+兩數相除防止除以零的方式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename T, typename U>  
@@ -38,33 +38,33 @@ inline bool SafeDivide (
 ) throw ();  
 ```  
   
-#### 參數  
- \[in\] `t`  
- 除數。  這必須是型別 T。  
+#### <a name="parameters"></a>參數  
+ [輸入] `t`  
+ 除數。 這必須為類型 T。  
   
- \[in\] `u`  
- 被除數。  這必須是型別 U。  
+ [輸入] `u`  
+ 被除數。 這必須為類型 U。  
   
- \[out\] `result`  
- 參數 `SafeDivide` 儲存結果的位置。  
+ [輸出] `result`  
+ 參數所在`SafeDivide`儲存結果。  
   
-## 傳回值  
- `true` ，如果沒有錯誤發生; `false` ，如果發生錯誤。  
+## <a name="return-value"></a>傳回值  
+ `true`如果沒有發生錯誤。`false`如果發生錯誤。  
   
-## 備註  
- 這個方法是 [SafeInt 程式庫](../windows/safeint-library.md) 的一部分並提供單一分割作業設計，而不必建立 [SafeInt 類別](../windows/safeint-class.md)的執行個體。  
+## <a name="remarks"></a>備註  
+ 這個方法是一部分[SafeInt 程式庫](../windows/safeint-library.md)，而不需要建立的執行個體適用於單一除法運算[SafeInt 類別](../windows/safeint-class.md)。  
   
 > [!NOTE]
->  這個方法，則必須保護時，才應該使用單一數學運算。  如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
+>  此方法應只有在必須保護單一數學作業時才使用。 如果有多個作業，您應該使用 `SafeInt` 類別而不是呼叫個別獨立函式。  
   
- 如需範本型別 T 和 U 的詳細資訊，請參閱 [SafeInt 函式](../windows/safeint-functions.md)。  
+ 如需範本型別 T 和 U，請參閱[SafeInt 函式](../windows/safeint-functions.md)。  
   
-## 需求  
- **標題:** safeint.h  
+## <a name="requirements"></a>需求  
+ **標頭：** safeint.h  
   
- **命名空間:** Microsoft::Utilities  
+ **命名空間：** Microsoft::Utilities  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

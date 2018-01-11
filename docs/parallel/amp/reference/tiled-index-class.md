@@ -29,11 +29,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4acda08cac0e67559db48525e634cd21cdf5a8f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledindex-class"></a>tiled_index 類別
 提供的索引[tiled_extent](tiled-extent-class.md)物件。 此類別具有存取項目相對於本機的並排顯示來源和相對於來源通用的屬性。 如需並排顯示空間的詳細資訊，請參閱[使用磚](../../../parallel/amp/using-tiles.md)。  
@@ -70,18 +71,18 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  `_Dim2`  
  最小顯著性維度的長度。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[tiled_index 建構函式](#ctor)|初始化 `tile_index` 類別的新執行個體。|  
 
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[get_tile_extent](#tiled_index__get_tile_extent)|傳回[範圍](extent-class.md)物件的值，`tiled_index`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
 
@@ -89,7 +90,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>公用常數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[barrier 常數](#tiled_index__barrier)|存放區[tile_barrier](tile-barrier-class.md)物件，代表目前執行緒的磚中的一條界線。|  
 |||  
@@ -105,7 +106,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[tile_extent](#tile_extent)|取得[範圍](extent-class.md)物件的值，`tiled_index`樣板引數`tiled_index`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|  
 
@@ -161,7 +162,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|名稱|說明|  
+|名稱|描述|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|初始化的新執行個體`tile_index`類別從索引的磚全域座標和座標的磚中的相對位置。 `_Global`和`_Tile_origin`參數都計算。|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|初始化的新執行個體`tile_index`藉由複製指定的類別`tiled_index`物件。|  
 
@@ -265,5 +266,5 @@ const index<rank> tile_origin
 __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

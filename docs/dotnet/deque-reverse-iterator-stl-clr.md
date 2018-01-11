@@ -1,41 +1,42 @@
 ---
-title: "deque::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator 成員 [STL/CLR]"
+title: "deque:: reverse_iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 82bdfda7-496d-4f8a-8eb8-96bee83b5708
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bf68ad79146a80a1026015034c5ae986ad00cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# deque::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-用於受控制序列的反向迭代器類型。  
+# <a name="dequereverseiterator-stlclr"></a>deque::reverse_iterator (STL/CLR)
+受控制序列的反向迭代器類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## 備註  
- 此型別描述其可以為此控制序列當做反向迭代器之未指定型別 `T3` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型 `T3` 的物件，其可用作受控制序列的反向迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_reverse_iterator.cpp   
@@ -66,15 +67,18 @@ int main()
   
 ```  
   
-  **c b a**  
- **x b a**   
-## 需求  
- **標頭：** \<cliext\/deque\>  
+```Output  
+c b a  
+x b a  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::const\_iterator](../dotnet/deque-const-iterator-stl-clr.md)   
- [deque::const\_reverse\_iterator](../dotnet/deque-const-reverse-iterator-stl-clr.md)   
- [deque::iterator](../dotnet/deque-iterator-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)   
+ [deque:: const_reverse_iterator (STL/CLR)](../dotnet/deque-const-reverse-iterator-stl-clr.md)   
+ [deque::iterator (STL/CLR)](../dotnet/deque-iterator-stl-clr.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38771656be017cadf9d12dd1279e6b0a53d29d37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95b5b3f729a6fe9b039b33b5a2c0169dd7e34c43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="movsd"></a>__movsd
 **Microsoft 特定的**  
@@ -43,10 +44,10 @@ void __movsd(
  [輸出] `Dest`  
  作業的目的地。  
   
- [in] `Source`  
+ [輸入] `Source`  
  作業的來源。  
   
- [in] `Count`  
+ [輸入] `Count`  
  若要複製的雙字組數目。  
   
 ## <a name="requirements"></a>需求  
@@ -89,7 +90,7 @@ int main()
 950 850 750 650 550 450 350 250 150 50   
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

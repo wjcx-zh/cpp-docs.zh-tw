@@ -1,43 +1,44 @@
 ---
-title: "實值類型和行為 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "實值類型"
+title: "實值類型和它們的行為 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: value types
 ms.assetid: 5cb872a6-1e0a-429d-853d-df4ab47e8f2a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ccb26e1f054e6914f24982b36f6655fa62fc9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 實值類型和行為 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，實值型別 \(Value Type\) 已有許多方面的改變。  在本節中，將會探討 CLR 列舉型別以及實值類別型別、在 CLR 堆積 \(Heap\) 上 Boxing 和存取 Boxed 執行個體，以及內部和 Pin 指標。  在本區域中已有許多語言變更。  
+# <a name="value-types-and-their-behaviors-ccli"></a>實值類型和行為 (C++/CLI)
+實值型別已變更以各種方式從 Managed Extensions for c + + Visual c + +。 在本節中，我們查看 CLR 列舉型別和值的類別類型，以及查看 boxing 和 boxed 到 CLR 堆積上，執行個體存取，以及查看內部和 pin 指標。 此區域中已有更詳盡的語言變更。  
   
-## 本章節內容  
- [CLR Enum Type](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
- 討論列舉宣告和行為的變更。  
+## <a name="in-this-section"></a>本節內容  
+ [CLR 列舉類型](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
+ 討論中的宣告和列舉的行為變更。  
   
- [實值類型的隱含 Boxing](../dotnet/implicit-boxing-of-value-types.md)  
- 討論針對實值型別之隱含 Boxing 的動機，以及在行為上隨之而來的變更。  
+ [實值型別的隱含 Boxing](../dotnet/implicit-boxing-of-value-types.md)  
+ 討論的動機隱含 boxing 實值類型和行為的後續變更。  
   
  [Boxed 值的追蹤控制代碼](../dotnet/a-tracking-handle-to-a-boxed-value.md)  
- 討論如何將實值型別的隱含 Boxing 轉譯至追蹤控制代碼，再轉譯至 Boxed 實值物件。  
+ 討論如何隱含 boxing 值的型別會轉譯為 boxed 實的值物件的追蹤控制代碼。  
   
- [實值類型語意](../dotnet/value-type-semantics.md)  
- 討論實值型別語意 \(Semantics\) 的變更，包括繼承的虛擬方法、類別預設建構函式 \(Constructor\)、內部指標和 Pin 指標。  
+ [實值型別語意](../dotnet/value-type-semantics.md)  
+ 討論對實值類型語意，包括繼承的虛擬方法、 類別預設建構函式、 內部指標，pin 指標。  
   
-## 請參閱  
- [C\+\+\/CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)   
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+## <a name="see-also"></a>請參閱  
+ [C + + /CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)   
+ [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

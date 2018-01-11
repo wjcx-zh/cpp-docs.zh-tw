@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 675c2280cbec819ec52fe7f0c79ca3448e9935cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05c8bf37df18b640f32c3c0b4509804ad42aac84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformdetailsheapallocationtrackinglevel-enumeration"></a>Platform::Details::HeapAllocationTrackingLevel 列舉
 這個列舉僅供內部使用，不適用於開發用途。  
@@ -42,5 +43,5 @@ enumm class HeapAllocationTrackingLevel;
   
  **命名空間：** Platform::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

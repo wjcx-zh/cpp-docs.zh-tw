@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 086552c72e37822920e0afa213c7966befa052f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3a76a950d547effccf0b50fa04799814597bc5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="252-parallel-sections-construct"></a>2.5.2 parallel sections 建構
 **平行區段**指示詞提供快顯表單來指定**平行**包含只有一個區域**區段**指示詞。 語意都完全相同，若要明確指定**平行**指示詞後面緊跟著**區段**指示詞。 語法**平行區段**指示詞時，如下所示：  

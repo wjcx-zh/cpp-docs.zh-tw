@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 834825b38eb8d5c81752dfed85f44202fbce3299
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4a7d60f11457e509ae67da83aa6bc589af1ce43a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-administrator"></a>ODBC 管理員
 ODBC 管理員註冊及設定[資料來源](../../data/odbc/data-source-odbc.md)可供您在本機或網路上。 精靈會在您的使用者連接到資料來源的應用程式中建立的程式碼使用 ODBC 管理員所提供的資訊。  
@@ -59,6 +62,6 @@ ODBC 管理員註冊及設定[資料來源](../../data/odbc/data-source-odbc.md)
   
  安裝驅動程式之後，您可以設定資料來源使用 ODBC 管理員。 在控制台中，您會發現 [ODBC] 圖示。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [資料來源 (ODBC)](../../data/odbc/data-source-odbc.md)

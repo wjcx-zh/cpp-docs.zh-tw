@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14dbbb29226ff72060567ffac8475696bd3a5154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed0a6e63fa11a531f090e367e9ae8cd82242608b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="randomshuffle-stlclr"></a>random_shuffle (STL/CLR)
 重新排列一系列`N`的其中一個範圍中的項目`N`！ 排列方式隨機選取的其中一個。  
@@ -41,5 +44,5 @@ template<class _RanIt, class _Fn1> inline
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

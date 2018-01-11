@@ -1,32 +1,33 @@
 ---
-title: "CriticalSection::Lock 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Lock 方法"
+title: "Criticalsection:: Lock 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::Lock
+dev_langs: C++
+helpviewer_keywords: Lock method
 ms.assetid: 37cb184c-e13c-49ef-b6a0-13908a956414
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: af996faeebd0fcddb85993badd71ceecd32d494e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CriticalSection::Lock 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-等候指定的關鍵區段物件的擁有權。  在授與呼叫執行緒釋出 Mutex 時，函式會傳回。  
+# <a name="criticalsectionlock-method"></a>CriticalSection::Lock 方法
+等候指定的重要區段物件的擁有權。 函數會傳回擁有權授與呼叫執行緒時。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 SyncLock Lock();  
@@ -36,20 +37,20 @@ SyncLock Lock();
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `cs`  
- 使用者指定的關鍵區段物件。  
+ 使用者指定的重要區段物件。  
   
-## 傳回值  
- 可以用來啟動目前的關鍵區段的鎖定物件。  
+## <a name="return-value"></a>傳回值  
+ 鎖定物件可以用來解除鎖定目前的重要區段。  
   
-## 備註  
- 第一 **Lock** 函式會影響目前的關鍵區段物件。  第二 **Lock** 函式影響一個使用者指定的關鍵區段。  
+## <a name="remarks"></a>備註  
+ 第一個**鎖定**函式會影響目前的重要區段物件。 第二個**鎖定**函式會影響使用者指定的重要區段。  
   
-## 需求  
- **標題:** corewrappers.h  
+## <a name="requirements"></a>需求  
+ **標頭：** corewrappers.h  
   
- **命名空間：**Microsoft::WRL::Wrappers  
+ **命名空間：** Microsoft::WRL::Wrappers  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CriticalSection 類別](../windows/criticalsection-class.md)

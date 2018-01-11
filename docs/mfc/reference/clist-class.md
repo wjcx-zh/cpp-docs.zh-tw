@@ -61,11 +61,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed7cd5ca4a1c3ef08707efc722c8f6ee299295c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d96a9c1a1b91d7738f768387bf0c24abd01ba22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clist-class"></a>CList 類別
 支援可循序或依值存取之非唯一物件的排序清單。  
@@ -77,17 +78,17 @@ template<class TYPE, class ARG_TYPE = const TYPE&>
 class CList : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CList::CList](#clist)|建構空的已排序的清單。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CList::AddHead](#addhead)|新增項目 （或另一個清單中的所有項目） 標頭的清單 （可讓新的標頭）。|  
 |[CList::AddTail](#addtail)|加入的清單 （可讓新的結尾） 的結尾的項目 （或另一個清單中的所有項目）。|  
@@ -604,7 +605,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFCCollections#55](../../mfc/codesnippet/cpp/clist-class_21.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例收集](../../visual-cpp-samples.md)   
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

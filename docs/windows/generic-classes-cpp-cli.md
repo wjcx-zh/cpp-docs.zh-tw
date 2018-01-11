@@ -1,35 +1,37 @@
 ---
-title: "Generic Classes (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "classes [C++], generic"
-  - "generic classes [C++], about generic classes"
-  - "data types [C++], generic"
-  - "generic classes"
-  - "generics [C++], declaring generic classes"
+title: "泛型類別 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- classes [C++], generic
+- generic classes [C++], about generic classes
+- data types [C++], generic
+- generic classes
+- generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-caps.latest.revision: 33
-caps.handback.revision: 31
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "33"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 22f2d00c4f8e07ea9d04e03c2e95190be056cbd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Generic Classes (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-泛型類別會使用下列形式宣告：  
+# <a name="generic-classes-ccli"></a>泛型類別 (C++/CLI)
+泛型類別宣告使用下列格式：  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 [attributes]  
@@ -38,49 +40,49 @@ generic <class-key type-parameter-identifier(s)>
 [accessibility-modifiers] ref class identifier  [modifiers]  
 [: base-list]   
 {  
-   class-body  
+class-body  
 } [declarators] [;]  
 ```  
   
-## 備註  
- 上列語法中，會使用下列術語。  
+## <a name="remarks"></a>備註  
+ 在上述語法中，使用下列詞彙：  
   
- `attributes` \(選擇性\)  
- 補充宣告資訊。  如需關於屬性及屬性類別的詳細資訊，請參閱屬性。  
+ `attributes` (選擇性)  
+ 其他宣告資訊。 如需關於屬性及屬性類別的詳細資訊，請參閱＜屬性＞。  
   
- *class\-key*  
- `class` 或 `typename`。  
+ *類別索引鍵*  
+ 可能是`class`或`typename`  
   
- *type\-parameter\-identifier\(s\)*,  
- 以逗點分隔的識別碼清單指定型別參數的名稱。  
+ *類型為參數的識別項*，  
+ 以逗號分隔清單的指定名稱的型別參數的識別項。  
   
- *constraint\-clauses*  
- **where** 子句的清單\(非逗點分隔\)指定型別參數的限制。  採用格式：  
+ *條件約束子句*  
+ （不以逗號分隔） 的清單**其中**子句指定的型別參數條件約束。 採用下列格式：  
   
- `where`  *type\-parameter\-identifier*  `:`  *constraint\-list*  `...`  
+ `where`  *型別參數識別碼*`:`*條件約束清單*   `...`  
   
- *constraint\-list*  
- *class\-or\-interface*\[`,` *...*\]  
+ *條件約束清單*  
+ *類別或介面*[`,` *...*]  
   
- *accessibility\-modifiers*  
- 泛型類別的可視性修飾語  對於 [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]，唯一允許的修飾語為 `private`。  對於 common language runtime，允許的修飾語為 `private` 和 `public`。  
+ *存取範圍修飾詞*  
+ 泛型類別存取範圍修飾詞。 為 Windows 執行階段中，唯一允許的修飾詞是`private`。 允許的修飾詞的 common language runtime`private`和`public`。  
   
  *identifier*  
- 泛型類別的名稱，任何有效的 C\+\+ 識別碼。  
+ 泛型類別，也就是任何有效的 c + + 識別項名稱。  
   
- *修飾詞*\(選擇性\)  
- 允許的修飾詞包含`sealed` 和 **abstract**。  
+ *修飾詞*（選擇性）  
+ 允許修飾詞包含`sealed`和**抽象**。  
   
- *base\-list*  
- 包含一個基底類別及任和實作介面的清單，皆以逗點分隔。  
+ *基底清單*  
+ 清單，其中包含一個基底類別，以及任何實作介面，以逗號分隔。  
   
- *class\-body*  
- 類別的主體，包含域、成員函式等等。  
+ *在類別主體*  
+ 類別包含的欄位、 成員函式等的內文。  
   
  *宣告子*  
- 這個型別的任何變數的宣告。  例如： `^`*識別項* \[`,` …\]  
+ 此類型的任何變數的宣告。 例如： `^`*識別碼*[`,` ...]  
   
- 您可以宣告如這些的泛型類別 \(請注意可能使用關鍵字 **class** 而非 **typename**\)。  在此範例中， `ItemType`、 `KeyType` 和 `ValueType` 所指定的屬性型別的型別不明。  `HashTable<int, int>` 是泛型型別 `HashTable<KeyType, ValueType>`的建構型別。  許多不同的建構型別可以從單一泛型型別建構。  從泛型類別建構的建構型別被視為其他的 ref 類別型別。  
+ 您可以宣告泛型類別，這類 (請注意，關鍵字**類別**可能而不是使用**typename**)。 在此範例中， `ItemType`，`KeyType`和`ValueType`是未知的型別指定點的位置類型。 `HashTable<int, int>`為建構的類型的泛型型別`HashTable<KeyType, ValueType>`。 可以從單一泛型類型建構不同結構類型的數目。 建構自泛型類別的建構的類型會視為任何其他 ref 類別類型。  
   
 ```  
 // generic_classes_1.cpp  
@@ -104,9 +106,9 @@ int main() {
 }  
 ```  
   
- 實值型別 \(或內建型別例如 `int` 或 `double`或使用者定義的實值型別\) 和參考型別皆可做為泛型型別引數。  在泛型定義中的語法無論如何都是相同的。  在語句構造上，未知的型別會像參考型別般被看待。  不過，執行階段可以決定，如果實際使用的型別是實值型別 \(Value Type\) 且對直接存取成員替代適當產生的程式碼。  做為泛型型別引數的實值型別沒有 boxed，因此不會損失與 Boxing 相關的效能。  在泛型主體中使用的語法應該是 **T^** 和 '**\-\>**' 而非 '**.**'。  如果型別引數是實值型別，對型別參數之 [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) 的使用要在執行階段正確解譯為實值型別的簡單建立。  
+ 同時實值類型 (其中一個內建類型，例如`int`或`double`，或使用者定義的實值類型) 和參考型別可能會用做為泛型型別引數。 泛型定義中的語法是相同而定。 在語法上，如同它是參考型別，被視為未知的類型。 不過，執行階段就能判斷實際使用的型別是否為實值類型，並以取代適當產生的程式碼直接成員的存取權。 實值類型做為泛型型別引數不會進行 boxed 處理，因此不會發生 boxing 相關聯的效能負面影響。 泛型主體內使用的語法應該是**T ^**和 '**->**' 而不是 '**。**'。 使用的任何[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)類型參數會適當地解譯由執行階段為實值類型的簡單建立如果型別引數是實值類型。  
   
- 您也可以使用可作為型別參數的型別之 [Constraints on Generic Type Parameters \(C\+\+\/CLI\)](../windows/constraints-on-generic-type-parameters-cpp-cli.md) 來宣告泛型類別。  在下列範例中用於 `ItemType` 的任何型別都必須實作 `IItem` 介面。  嘗試使用 `int`，例如，不實作 `IItem`，將會導致編譯時期錯誤，因為型別引數未滿足條件約束。  
+ 您也可以宣告泛型類別與[泛型型別參數的條件約束 (C + + CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)上可以使用的型別參數的型別。 在下列範例中任何類型用於`ItemType`必須實作`IItem`介面。 嘗試使用`int`，比方說，這不會實作`IItem`，會產生編譯時間錯誤，因為型別引數未滿足的條件約束。  
   
 ```  
 // generic_classes_2.cpp  
@@ -117,7 +119,7 @@ where ItemType : IItem
 ref class Stack {};  
 ```  
   
- 在相同命名空間的泛型類別不可以只變更數字或型別參數的型別多載。  不過，如果每個類別位在不同的命名空間，它們可以多載。  例如，請考量下列兩個類別， `MyClass` 與 `MyClass<ItemType>`，在命名空間 `A` 和 `B` 中。  兩個類別在第三個命名空間 C\# 可以多載：  
+ 無法多載相同的命名空間中的泛型類別，藉由只變更數或型別參數的型別。 不過，如果每個類別位於不同的命名空間，但可以在多載。 例如，請考慮下列兩個類別：`MyClass`和`MyClass<ItemType>`，命名空間中`A`和`B`。 兩個類別可以再多載中的第三個命名空間為 c:  
   
 ```  
 // generic_classes_3.cpp  
@@ -144,7 +146,7 @@ namespace C {
 }  
 ```  
   
- 基底類別和基底介面無法為型別參數。  不過，基底類別可以包含型別參數做為引數，如下列情形：  
+ 基底類別和基底介面不能是型別參數。 然而，基底類別可以包含型別參數做為引數，如下列範例所示：  
   
 ```  
 // generic_classes_4.cpp  
@@ -156,16 +158,16 @@ generic <typename ItemType>
 ref class MyClass : IInterface<ItemType> {};  
 ```  
   
- 建構函式和解構函式為每個執行個體一次執行 \(照常\)：靜態建構函式為每個建構型別執行一次。  
+ 建構函式和解構函式會執行一次針對每個物件執行個體 （如往常般）;靜態建構函式會執行一次，每個建構的類型。  
   
-## 泛型類別的欄位。  
- 本節示範泛型類別的執行個體和靜態欄位。  
+## <a name="fields-in-generic-classes"></a>泛型類別中的欄位  
+ 本節示範如何使用執行個體和泛型類別中的靜態欄位。  
   
-### 執行個體變數。  
- 泛型類別的執行個體變數可能會包含從封入類別的任何型別參數的型別和變數初始設定式。  
+### <a name="instance-variables"></a>執行個體變數  
+ 泛型類別的執行個體變數可以有型別和包含任何從封入類別的型別參數的變數初始設定式。  
   
-## 範例  
- 在下列範例中，泛型類別 MyClass\<ItemType\> 的三個不同的執行個體由使用適合的型別引數\(`int`、 **double** 和 **string**\)所建立。  
+## <a name="example"></a>範例  
+ 在下列範例中，三個不同的執行個體的泛型類別為 MyClass\<ItemType >，會建立使用適當的型別引數 (`int`， **double**，和**字串**).  
   
 ```  
 // generics_instance_fields1.cpp  
@@ -199,16 +201,19 @@ int main() {
    }  
 ```  
   
-  **Integer field \= 123**  
-**Double field \= 1.23**  
-**String field \= ABC**   
-## 靜態變數。  
- 在泛型型別的建立，任何靜態變數的新執行個體被建立且任何該型別的靜態建構函式被執行。  
+```Output  
+Integer field = 123  
+Double field = 1.23  
+String field = ABC  
+```  
   
- 靜態變數可以從封入類別中使用任何型別參數。  
+## <a name="static-variables"></a>靜態變數  
+ 建立新的泛型型別時，會建立任何靜態變數的新執行個體，該型別的任何靜態建構函式會執行。  
   
-## 範例  
- 下列範例示範在泛型類別內使用靜態欄位和靜態建構函式。  
+ 靜態變數可以使用從封入類別的任何型別參數。  
+  
+## <a name="example"></a>範例  
+ 下列範例示範如何使用靜態欄位和泛型類別內的靜態建構函式。  
   
 ```  
 // generics_static2.cpp  
@@ -256,30 +261,33 @@ int main() {
 }  
 ```  
   
-  **Static constructor called.**  
-**Static constructor called.**  
-**Static constructor called.**  
-**Test1**   
-## 在泛型類別的方法  
- 在泛型類別的方法可以是泛型自己：非泛型方法會由類別型別參數的隱含參數化。  
+```Output  
+Static constructor called.  
+Static constructor called.  
+Static constructor called.  
+Test1  
+```  
   
- 下列特殊規則套用至泛型類別內的方法：  
+## <a name="methods-in-generic-classes"></a>泛型類別中的方法  
+ 泛型類別中的方法可以是泛型本身;非泛型方法會由類別型別參數隱含參數化。  
   
--   在泛型類別的方法可以使用型別參數做為參數、傳回型別或區域變數。  
+ 下列的特殊規則套用至泛型類別內的方法：  
   
--   在泛型類別的方法可以使用開放式或封閉式建構型別做為參數、傳回型別或區域變數。  
+-   泛型類別中的方法可以當做參數、 傳回型別或本機變數的型別參數。  
   
-### 在泛型類別的非泛型方法  
- 在沒有其他型別參數的泛型類別的方法通常是指非泛型，但這些由封入泛型類別隱含參數化。  
+-   泛型類別中的方法可以當做參數、 傳回型別或本機變數使用開放式或封閉式的建構的類型。  
   
- 非泛型方法的簽章可能包含一或多個封入類別的型別參數，直接或以開放式建構型別。  例如：  
+### <a name="non-generic-methods-in-generic-classes"></a>泛型類別中的非泛型方法  
+ 沒有任何其他型別參數的泛型類別中的方法通常稱為非泛型雖然它們隱含參數化的封入泛型類別。  
+  
+ 非泛型方法的簽章可以包含一或多個封入類別的型別參數，直接或開放式建構類型。 例如:   
   
  `void MyMethod(MyClass<ItemType> x) {}`  
   
- 這類方法的主體也可以使用這些型別參數。  
+ 這類方法的主體，也可以使用這些型別參數。  
   
-## 範例  
- 下列範例會宣告非泛型方法`ProtectData`，在泛型類別內，則為 `MyClass<ItemType>`。  此方法使用在開放式建構型別的簽章之類別型別參數 `ItemType` 。  
+## <a name="example"></a>範例  
+ 下列範例會宣告非泛型方法， `ProtectData`，在泛型類別， `MyClass<ItemType>`。 此方法會使用類別型別參數`ItemType`開放式建構類型在其簽章中。  
   
 ```  
 // generics_non_generic_methods1.cpp  
@@ -329,12 +337,15 @@ int main() {
 }  
 ```  
   
-  **Name: Jeff Smith**  
-**Amount: $123.00\*\***   
-## 在泛型類別的泛型方法  
- 您可以在泛型和非泛型類別中宣告泛型方法。  例如：  
+```Output  
+Name: Jeff Smith  
+Amount: $123.00**  
+```  
   
-## 範例  
+## <a name="generic-methods-in-generic-classes"></a>泛型類別中的泛型方法  
+ 您可以宣告泛型和非泛型類別中的泛型方法。 例如:   
+  
+## <a name="example"></a>範例  
   
 ```  
 // generics_method2.cpp  
@@ -356,12 +367,12 @@ public:
 };  
 ```  
   
- 非泛型方法依然是泛型，因為它會由類別的型別參數不同，不過它不具有不同的型別參數。  
+ 非泛型方法仍為泛型，因為它由類別的型別參數，參數化，但它有沒有其他的型別參數。  
   
- 泛型類別中方法的所有型別可以是泛型，包括靜態、執行個體和虛擬方法。  
+ 所有類型的泛型類別中的方法可以都是泛型，包括靜態、 執行個體和虛擬方法。  
   
-## 範例  
- 下列範例示範如何宣告和使用泛型類別的泛型方法：  
+## <a name="example"></a>範例  
+ 下列範例會示範宣告和使用泛型類別內的泛型方法：  
   
 ```  
 // generics_generic_method2.cpp  
@@ -402,11 +413,14 @@ int main() {
 }  
 ```  
   
-  **MyMethod returned: 12**  
-**MyMethod returned: Hello \#1**  
-**MyMethod returned: Hello World\!**   
-## 使用泛型類別的巢狀型別  
- 如同原本的類別，您可以在泛型類別內宣告其他型別。  巢狀類別宣告由外部類別宣告的型別參數的隱含參數化。  因此，不同的巢狀類別為每個建構的外部型別定義。  例如，在宣告中，  
+```Output  
+MyMethod returned: 12  
+MyMethod returned: Hello #1  
+MyMethod returned: Hello World!  
+```  
+  
+## <a name="using-nested-types-in-generic-classes"></a>泛型類別中使用巢狀的類型  
+ 就像一般類別中，您可以宣告泛型類別內的其他類型。 巢狀的類別宣告隱含外部類別宣告的型別參數所參數化。 因此，每個建構外部型別定義不同的巢狀的類別。 例如，在宣告中，  
   
 ```  
 // generic_classes_5.cpp  
@@ -417,9 +431,9 @@ ref struct Outer {
 };  
 ```  
   
- 這個型別 Outer\<int\>::Inner 與型別 Outer\<double\>::Inner 不同。  
+ 類型為 Outer\<int >:: 內部不是外部的類型相同\<雙 >:: 內部。  
   
- 在泛型類別的泛型方法，其他型別參數可以為巢狀型別定義。  如果您在內部和外部類別使用相同型別參數名稱，這個內部型別參數會隱藏這個外部型別參數。  
+ 如同在泛型類別中的泛型方法，可以定義其他的型別參數的巢狀類型。 如果您使用相同的型別參數名稱，內部和外部類別中，內部型別參數就會隱藏外部型別參數。  
   
 ```  
 // generic_classes_6.cpp  
@@ -435,13 +449,13 @@ ref class Outer {
 };  
 ```  
   
- 在這種情況下因為無法參考外部型別參數，編譯器將會產生警告。  
+ 因為沒有任何方法可以參考外部型別參數，編譯器會產生警告，以在此情況下。  
   
- 當建構的巢狀泛型型別被命名時，這個外部型別的型別參數在這個內建型別的型別參數清單中未包含，即使這個內部型別由外部型別的型別參數的隱含參數化。  上述情況，建構型別的名稱將會是 Outer\<int\>::Inner\<string\>。  
+ 當命名巢狀建構的泛型類型時，外部型別之型別參數不在型別參數清單，做為內部的類型，即使隱含外部型別的型別參數所參數化內部型別。 在上述情況中，建構類型的名稱就是外部\<int >:: 內部\<字串 >。  
   
- 下列範例示範如何使用泛型類別的巢狀型別建置和讀取連結清單。  
+ 下列範例示範如何建立和讀取在泛型類別中使用巢狀的類型的連結的清單。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // generics_linked_list.cpp  
@@ -517,30 +531,33 @@ int main() {
 }  
 ```  
   
-  **Building the list:**  
-**0.1**  
-**0.2**  
-**0.3**  
-**0.4**  
-**0.5**  
-**Reading nodes:**  
-**0.5**  
-**0.4**  
-**0.3**  
-**0.2**  
-**0.1**   
-## 泛型中的屬性、事件、索引子和運算子  
+```Output  
+Building the list:  
+0.1  
+0.2  
+0.3  
+0.4  
+0.5  
+Reading nodes:  
+0.5  
+0.4  
+0.3  
+0.2  
+0.1  
+```  
   
--   屬性、事件、索引子和運算子可以使用封入泛型類別的型別參數做為傳回值、參數或區域變數，例如在 `ItemType` 是類別的型別參數時：  
+## <a name="properties-events-indexers-and-operators-in-generic-classes"></a>屬性、 事件、 索引子和泛型類別中的運算子  
+  
+-   屬性、 事件、 索引子和運算子可以使用封入泛型類別的型別參數做為傳回值、 參數或區域變數，例如當`ItemType`是類別的型別參數：  
   
     ```  
     public ItemType MyProperty {}  
     ```  
   
--   屬性、事件、索引子、運算子無法自己參數化。  
+-   屬性、 事件、 索引子和運算子不能自行進行參數化。  
   
-## 範例  
- 這個範例會顯示一個執行個體的屬性宣告在泛型類別中。  
+## <a name="example"></a>範例  
+ 此範例顯示泛型類別內的執行個體屬性的宣告。  
   
 ```  
 // generics_generic_properties1.cpp  
@@ -574,9 +591,12 @@ int main() {
 }  
 ```  
   
-  **John, 234**   
-## 範例  
- 下一個範例會顯示具有事件的泛型類別。  
+```Output  
+John, 234  
+```  
+  
+## <a name="example"></a>範例  
+ 下一個範例顯示泛型類別與事件。  
   
 ```  
 // generics_generic_with_event.cpp  
@@ -637,11 +657,11 @@ int main() {
 }  
 ```  
   
-## 泛型結構  
- 宣告和使用泛型結構的規則與泛型類別的相同，除了在 Visual C\+\+ 語言參考中記錄的那些不同。  
+## <a name="generic-structs"></a>泛型結構  
+ 宣告和使用泛型結構的規則是一樣的泛型類別，除了在 Visual c + + 語言參考中所述的差異之外。  
   
-## 範例  
- 下列範例宣告泛型結構，`MyGenStruct`，具有一個欄位則為 `myField`，並指派不同的型別 \(`int`、**double**、**String^**\) 的值給欄位。  
+## <a name="example"></a>範例  
+ 下列範例會宣告為泛型結構， `MyGenStruct`，具有一個欄位， `myField`，並指派不同類型的值 (`int`， **double**，**字串 ^**) 為此欄位。  
   
 ```  
 // generics_generic_struct1.cpp  
@@ -680,8 +700,11 @@ int main() {
 }  
 ```  
   
-  **The field is assigned the integer value: 123**  
-**The field is assigned the double value: 0.123**  
-**The field is assigned the string: Hello Generics\!**   
-## 請參閱  
- [Generics](../windows/generics-cpp-component-extensions.md)
+```Output  
+The field is assigned the integer value: 123  
+The field is assigned the double value: 0.123  
+The field is assigned the string: Hello Generics!  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [泛型](../windows/generics-cpp-component-extensions.md)

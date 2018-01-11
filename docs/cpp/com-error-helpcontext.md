@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7c350a2c8879ecf927974aa48650c59247716c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2dbdd52b311a35d390a61a0601a63c1b680f79b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorhelpcontext"></a>_com_error::HelpContext
 **Microsoft 特定的**  
@@ -40,7 +41,7 @@ DWORD HelpContext( ) const throw( );
 ## <a name="remarks"></a>備註  
  呼叫時的任何失敗**Gethelpcontext**方法會被忽略。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_com_error 類別](../cpp/com-error-class.md)

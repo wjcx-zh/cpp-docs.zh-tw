@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d210ea66faa89023dcdcfb914ca423086d6eddb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fde90f5d7c7822155e36b77c74cd80cdf56b10d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-resource-dialog-box"></a>加入資源對話方塊
 使用這個對話方塊將資源加入至 C++ Windows 桌面應用程式專案。  
@@ -48,5 +51,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  無  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何：建立資源](../windows/how-to-create-a-resource.md)

@@ -1,57 +1,55 @@
 ---
-title: "new (new slot in vtable)  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "new keyword [C++]"
+title: "new （新 vtable 中的位置） （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# new (new slot in vtable)  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`new` 關鍵字表示虛擬成員會取得 vtable 的新位置。  
+# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (vtable 中的新位置) (C++ 元件擴充功能)
+`new`關鍵字表示虛擬成員會收到在 vtable 中的新位置。  
   
-> [!NOTE]
->  `new` 關鍵字有許多用途和意義。  如需詳細資訊，請參閱[new](../misc/new.md)主題中的＜澄清＞。  
+## <a name="all-runtimes"></a>所有執行階段  
+ (這個語言功能沒有適用所有執行階段的備註。)  
   
-## 所有執行階段  
- \(這個語言功能沒有適用於所有執行階段的備註\)。  
+## <a name="windows-runtime"></a>Windows 執行階段  
+ 不支援 Windows 執行階段中。  
   
-## Windows 執行階段  
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]不支援此項  
-  
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+## <a name="common-language-runtime"></a>Common Language Runtime 
  **備註**  
   
- 在 **\/clr** 編輯， `new` 表示虛擬成員會取得 vtable 的新位置；函式不會覆寫基底類別方法。  
+ 在**/clr**編譯`new`表示虛擬成員會收到在 vtable 中的新位置; 此函式不覆寫基底類別方法。  
   
- `new` 會導致 newslot 修飾詞加入至函式的 IL。如需 newslot 的詳細資訊，請參閱 。  
+ `new`會導致 newslot 修飾詞加入至函式的 IL。  如需 newslot 的詳細資訊，請參閱：  
   
--   [\<caps:sentence id\="tgt11" sentenceid\="e9bb59a12f97840a5c3173bb77c6b5b1" class\="tgtSentence"\>MethodInfo.GetBaseDefinition 方法\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [MethodInfo.GetBaseDefinition 方法](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [\<caps:sentence id\="tgt12" sentenceid\="f6ceddd85a425f38e7ed06e94a9808a9" class\="tgtSentence"\>MethodAttributes 列舉\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+-   [MethodAttributes 列舉](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
-### 需求  
- 編譯器選項：**\/clr**  
+### <a name="requirements"></a>需求  
+ 編譯器選項： **/clr**  
   
-### 範例  
+### <a name="examples"></a>範例  
  **範例**  
   
- 下列範例示範 `new` 的效用。  
+ 下列範例顯示的效果`new`。  
   
 ```  
 // newslot.cpp  
@@ -100,13 +98,20 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **輸出**  
   
-  **C::f\(\) called**  
- **D::f\(\) called**  
- **D::g\(\) called**  
- **D::g\(\) called**  
- **E::f\(\) called**   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)   
+```Output  
+C::f() called  
+  
+D::f() called  
+  
+D::g() called  
+  
+D::g() called  
+  
+E::f() called  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件擴充功能](../windows/component-extensions-for-runtime-platforms.md)   
  [覆寫規範](../windows/override-specifiers-cpp-component-extensions.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 43b53b1d8a9165abb093f0071ece4e3dd8e891f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6db1fe614de8a3f47bae989ccb26512c375cec50
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isource-class"></a>ISource 類別
 `ISource` 類別是所有來源區塊的介面。 來源區塊會將訊息傳播至 `ITarget` 區塊。  
@@ -46,23 +47,23 @@ class ISource;
  `T`  
  來源區塊所產生的訊息內裝載的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`source_type`|類型別名`T`。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[~ ISource 解構函式](#dtor)|終結`ISource`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[接受](#accept)|當在衍生類別中覆寫時，接受有提供此訊息`ISource`區塊中，將擁有權傳送給呼叫者。|  
 |[acquire_ref](#acquire_ref)|當在衍生類別中覆寫時，取得這個參考計數`ISource`區塊，導致無法刪除。|  
@@ -241,6 +242,6 @@ virtual void unlink_target(_Inout_ ITarget<T>* _PTarget) = 0;
 virtual void unlink_targets() = 0;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [ITarget 類別](itarget-class.md)

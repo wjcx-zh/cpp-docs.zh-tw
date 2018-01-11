@@ -1,45 +1,44 @@
 ---
-title: "single | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Single"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "single OpenMP directive"
+title: "單一 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Single
+dev_langs: C++
+helpviewer_keywords: single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8eabac06acc78aec46c86cf8a7dcbb2d5854c941
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# single
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-讓您指定一段程式碼應該會在單一執行緒，不一定是主執行緒上執行。  
+# <a name="single"></a>single
+可讓您指定一段程式碼，應該會在單一執行緒，而不一定是主要的執行緒上執行。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-#pragma omp single [clauses]   
+#pragma omp single [clauses]   
 {  
    code_block   
 }  
 ```  
   
-#### 參數  
- `clause` \(選擇項\)  
- 零個或多個子句。  請參閱 ＜ 備註 ＞ 一節清單所支援的子句的**單一**。  
+#### <a name="parameters"></a>參數  
+ `clause` (選擇性)  
+ 零個或多個子句。 請參閱 < 備註 > 一節如需所支援的子句**單一**。  
   
-## 備註  
+## <a name="remarks"></a>備註  
  **單一**指示詞可支援下列 OpenMP 子句：  
   
 -   [copyprivate](../../../parallel/openmp/reference/copyprivate.md)  
@@ -50,11 +49,11 @@ caps.handback.revision: 11
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [master](../../../parallel/openmp/reference/master.md)指示詞可讓您指定一段程式碼應該只在主執行緒上執行。  
+ [主要](../../../parallel/openmp/reference/master.md)指示詞可讓您指定的一段程式碼應該只能在執行主要執行緒。  
   
- 如需詳細資訊，請參閱 [2.4.3 single Construct](../../../parallel/openmp/2-4-3-single-construct.md)。  
+ 如需詳細資訊，請參閱[2.4.3 單一建構](../../../parallel/openmp/2-4-3-single-construct.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // omp_single.cpp  
@@ -79,9 +78,12 @@ int main() {
 }  
 ```  
   
-  **讀取輸入**  
-**計算結果**  
-**計算結果**  
-**寫入輸出**   
-## 請參閱  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+read input  
+compute results  
+compute results  
+write output  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [指示詞](../../../parallel/openmp/reference/openmp-directives.md)

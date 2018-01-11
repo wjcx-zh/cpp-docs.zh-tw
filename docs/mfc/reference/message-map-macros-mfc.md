@@ -39,11 +39,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70f88d493ad557515cfac1f8cffeaa305c849f63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bf56b243118ceb7fdd995fc6970f6c49e0a5499
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="message-map-macros-mfc"></a>訊息對應巨集 (MFC)
 若要支援訊息對應，MFC 提供下列巨集：  
@@ -253,7 +254,7 @@ ON_COMMAND_EX(id,  memberFxn);
 ### <a name="requirements"></a>需求  
  標頭檔： afxmsg_.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [ON_COMMAND](message-map-macros-mfc.md#on_command)   
  [TN006： 訊息對應] tm006-訊息-maps.md)
 
@@ -312,7 +313,7 @@ ON_MESSAGE( message, memberFxn )
  應該有正好一個`ON_MESSAGE`巨集的每一個都必須對應至訊息處理常式函式的使用者定義訊息的訊息對應中的陳述式。  
   
 > [!NOTE]
->  使用者定義的訊息，除了`ON_MESSAGE`處理較不常見的 Windows 訊息。 如需詳細資訊，請參閱知識庫文件[99848： 資訊： 使用 ON_MESSAGE() 巨集對應較不常見訊息](http://go.microsoft.com/fwlink/?linkId=192022)。  
+>  使用者定義的訊息，除了`ON_MESSAGE`處理較不常見的 Windows 訊息。 如需詳細資訊，請參閱知識庫文件[99848： 資訊： 使用 ON_MESSAGE() 巨集對應較不常見訊息](http://go.microsoft.com/fwlink/p/?linkid=192022)。  
   
  如需詳細資訊和範例，請參閱[訊息處理和對應的主題](../../mfc/message-handling-and-mapping.md)和[使用者定義的處理常式](user-defined-handlers.md)  
   
@@ -466,7 +467,7 @@ ON_OLECMD( pguid, olecmdid, id )
 ### <a name="requirements"></a>需求  
  **標頭：** afxdocob.h  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [COleCmdUI 類別](colecmdui-class.md)   
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
@@ -504,7 +505,7 @@ END_MESSAGE_MAP()
 ### <a name="requirements"></a>需求  
  **標頭：** afxmsg_.h  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
  [使用者定義的處理常式](user-defined-handlers.md)
 
@@ -576,7 +577,7 @@ ON_UPDATE_COMMAND_UI( id, memberFxn )
 ### <a name="requirements"></a>需求  
  **標頭：** afxole.h  
   
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CCmdUI 類別](ccmdui-class.md)
 
 ## <a name="on_command_range"></a>ON_COMMAND_RANGE  

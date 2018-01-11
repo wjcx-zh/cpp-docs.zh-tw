@@ -33,11 +33,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e7a37fd636d376f379503d1dd1b95f05ac1828cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7753e2be6699bc789417d8afe9e9f49e55af7010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 類別
 範本類別 `wstring_convert` 會執行寬字串與位元組字串之間的轉換。  
@@ -135,7 +136,7 @@ wide_string from_bytes(const char* first, const char* last);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Byte`|要轉換的單一元素位元組序列。|  
 |`ptr`|要轉換的 C-style、以 Null 結束的字元序列。|  
@@ -195,7 +196,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`Char`|要轉換的寬字元。|  
 |`Wptr`|要轉換的 C-style、以 Null 結束的序列 (開始於 `wptr`)。|  
@@ -229,7 +230,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`*Pcvt`|`Codecvt` 類型的物件，用以執行轉換。|  
 |`_State`|[state_type](#state_type) 類型的物件，代表轉換狀態。|  

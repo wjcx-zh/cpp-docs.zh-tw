@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86d4eeaadd8c2afcd5b223e7431614436ab8a786
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 119969860f031acbc2f1764a34a456d2e8a16437
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-implementing-futures"></a>逐步解說：實作未來
 本主題說明如何在您的應用程式中實作未來。 本主題示範如何結合現有的功能在並行執行階段中轉換成的更多。  
@@ -100,7 +101,7 @@ caught exception: error
   
  **cl.exe /EHsc futures.cpp**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [task_group 類別](reference/task-group-class.md)   

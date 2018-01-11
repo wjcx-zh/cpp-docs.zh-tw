@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4763dd9048f1d43bde1bd9b67126f85533f6f0c8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aaf02f645ae61c75fb4ede3f5bc8e820039d1cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 在 C++ 中，您有數個選項可以連接到 Web 和雲端。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 10/24/2017
 [Windows 網際網路 (WinInet)](http://msdn.microsoft.com/library/windows/desktop/aa385331\(v=vs.85\).aspx)  
  您可以在 Windows 桌面應用程式中使用，以便連接到網際網路的 Windows 應用程式開發介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Visual c + +](../visual-cpp-in-visual-studio.md)   
  [連線到網路和 web 服務 （Windows 市集應用程式使用 C# /vb/c + + 和 XAML）](http://msdn.microsoft.com/library/windows/apps/br229573.aspx)

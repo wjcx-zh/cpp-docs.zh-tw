@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbc32b173d3f0d0f1130fff50bdca09a6010937b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1555812fb3607f3271ba87c88839767ce79f9ecc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 描述一個物件，該物件會儲存一組類型皆為 **float** 之物件的有序對，第一個代表複數的實數部分，而第二個代表虛數部分。  
@@ -124,7 +125,7 @@ Argument of c3 is recovered from c3 using:
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [complex 類別](../standard-library/complex-class.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753c840fe1b4c9850408b53fa0adf09ed1bc121
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>enable_if 類別
 有條件地建立類型的執行個體，以進行 SFINAE 多載解析。 只有 `enable_if<Condition,Type>::type` 為 `Type` 時，才會有巢狀 typedef `Condition` (而且是 `true` 的同義字)。  
@@ -52,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- 在 C++ 中，範本參數的替代失敗本身並非錯誤；這稱為 *SFINAE* (替代失敗不是錯誤)。 `enable_if` 通常用來從多載解析移除候選 (亦即，它會選出多載集)，因此可能會拒絕某個定義，而使用另一個定義。 這符合 SFINAE 行為。 如需 SFINAE 的詳細資訊，請參閱 Wikipedia 上的 [Substitution failure is not an error](http://go.microsoft.com/fwlink/LinkId=394798) (替代失敗不是錯誤)。  
+ 在 C++ 中，範本參數的替代失敗本身並非錯誤；這稱為 *SFINAE* (替代失敗不是錯誤)。 `enable_if` 通常用來從多載解析移除候選 (亦即，它會選出多載集)，因此可能會拒絕某個定義，而使用另一個定義。 這符合 SFINAE 行為。 如需 SFINAE 的詳細資訊，請參閱 Wikipedia 上的 [Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798) (替代失敗不是錯誤)。  
   
  以下是四個範例情節：  
   
@@ -141,7 +142,7 @@ func(make_pair("foo", "bar"));
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)
 
 

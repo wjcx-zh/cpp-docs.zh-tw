@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 56b05c85212630b8e368817006098aeff2ceb832
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c3de04fbbfa9f2d0b55b7e31ca02faeddfa5c12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX 控制項：建立 Automation 伺服程式
 您可以為 Automation 伺服程式為了以程式設計方式將該控制項內嵌在另一個應用程式和控制項中呼叫方法，從應用程式開發 MFC ActiveX 控制項。 這類控制項仍可裝載 ActiveX 控制項容器中。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 10/24/2017
   
  如果應用程式中使用後，您可以加入 ActiveX 控制項的方法，您可以開始在應用程式中使用控制項的最新版本，刪除您匯入類型程式庫時所建立的檔案。 然後再次匯入類型程式庫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)
 

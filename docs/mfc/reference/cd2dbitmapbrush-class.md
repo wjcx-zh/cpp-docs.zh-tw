@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -29,8 +28,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmap
 - AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmapBrush
 - AFXRENDERTARGET/CD2DBitmapBrush::m_pBitmapBrushProperties
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DBitmapBrush [MFC], CD2DBitmapBrush
 - CD2DBitmapBrush [MFC], Attach
@@ -51,16 +49,16 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3dd588a26b73fb6e5f1b205b20f21aab8272c439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: ab94b243d57e60492682c90faf1a6a795757ff30
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush 類別
 ID2D1BitmapBrush 包裝函式。  
@@ -71,18 +69,18 @@ ID2D1BitmapBrush 包裝函式。
 class CD2DBitmapBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|多載。 建構 CD2DBitmapBrush 物件檔案。|  
 |[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|解構函式。 D2D 點陣圖筆刷物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::Attach](#attach)|將現有的資源物件的介面|  
 |[CD2DBitmapBrush::Create](#create)|建立 CD2DBitmapBrush。 (覆寫[CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create)。)|  
@@ -98,21 +96,21 @@ class CD2DBitmapBrush : public CD2DBrush;
 |[CD2DBitmapBrush::SetExtendModeY](#setextendmodey)|指定如何筆刷垂直並排延伸超過其點陣圖的區域|  
 |[CD2DBitmapBrush::SetInterpolationMode](#setinterpolationmode)|指定使用筆刷點陣圖縮放或旋轉時的插補模式|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::CommonInit](#commoninit)|初始化物件|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|傳回 ID2D1BitmapBrush 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CD2DBitmapBrush::m_pBitmap](#m_pbitmap)|儲存 CD2DBitmap 物件的指標。|  
 |[CD2DBitmapBrush::m_pBitmapBrush](#m_pbitmapbrush)|儲存 ID2D1BitmapBrush 物件的指標。|  
@@ -370,6 +368,5 @@ void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
  `interpolationMode`  
  筆刷點陣圖是縮放或旋轉時使用的插補模式  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

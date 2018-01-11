@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- vector
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
 - vector/std::vector::const_pointer
@@ -51,35 +49,60 @@ f1_keywords:
 - vector/std::vector::shrink_to_fit
 - vector/std::vector::size
 - vector/std::vector::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
-- vector class
+- std::vector [C++], allocator_type
+- std::vector [C++], const_iterator
+- std::vector [C++], const_pointer
+- std::vector [C++], const_reference
+- std::vector [C++], const_reverse_iterator
+- std::vector [C++], difference_type
+- std::vector [C++], iterator
+- std::vector [C++], pointer
+- std::vector [C++], reference
+- std::vector [C++], reverse_iterator
+- std::vector [C++], size_type
+- std::vector [C++], value_type
+- std::vector [C++], assign
+- std::vector [C++], at
+- std::vector [C++], back
+- std::vector [C++], begin
+- std::vector [C++], capacity
+- std::vector [C++], cbegin
+- std::vector [C++], cend
+- std::vector [C++], crbegin
+- std::vector [C++], crend
+- std::vector [C++], clear
+- std::vector [C++], data
+- std::vector [C++], emplace
+- std::vector [C++], emplace_back
+- std::vector [C++], empty
+- std::vector [C++], end
+- std::vector [C++], erase
+- std::vector [C++], front
+- std::vector [C++], get_allocator
+- std::vector [C++], insert
+- std::vector [C++], max_size
+- std::vector [C++], pop_back
+- std::vector [C++], push_back
+- std::vector [C++], rbegin
+- std::vector [C++], rend
+- std::vector [C++], reserve
+- std::vector [C++], resize
+- std::vector [C++], shrink_to_fit
+- std::vector [C++], size
+- std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c8936502aaf18dbc2ef4bca7836f4e854e18a3a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f38fb67c20da6b1022c6365e66b1626cd8276313
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vector-class"></a>vector 類別
 C++ 標準程式庫 vector 類別是序列容器的範本類別，以線性排列方式排列指定類型的項目，並允許快速隨機存取任何項目。 當隨機存取效能很重要時，這應該要當成慣用的序列容器。  
@@ -92,7 +115,7 @@ class vector
 ```  
   
 #### <a name="parameters"></a>參數  
- *Type*  
+ *類型*  
  要儲存在向量中的項目資料類型  
   
  `Allocator`  
@@ -107,7 +130,7 @@ class vector
   
  [vector\<bool> reference 類別](../standard-library/vector-bool-class.md#reference_class)是巢狀類別，其物件可提供 vector\<bool> 物件中的項目 (單一位元) 參考。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="constructors"></a>建構函式  
   
@@ -837,7 +860,7 @@ iterator emplace(
   
 |||  
 |-|-|  
-|參數|說明|  
+|參數|描述|  
 |`_Where`|第一個項目插入[向量](../standard-library/vector-class.md)中的位置。|  
 |`val`|插入 `vector` 的項目值。|  
   
@@ -2106,8 +2129,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)
-
 

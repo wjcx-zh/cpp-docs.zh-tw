@@ -1,42 +1,44 @@
 ---
-title: "ComPtr::operator Microsoft::WRL::Details::BoolType 運算子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Comptr:: booltype 運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: cfba6521-fb30-4fb8-afb2-cfab1cb5e0b8
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f98ca8068495be46b795d361c969c4feb2c24169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtr::operator Microsoft::WRL::Details::BoolType 運算子
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指出 ComPtr 是否管理介面的物件存留期 \(Lifetime\)。  
+# <a name="comptroperator-microsoftwrldetailsbooltype-operator"></a>ComPtr::operator Microsoft::WRL::Details::BoolType 運算子
+表示 ComPtr 是否正在管理介面的物件存留期。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;  
 ```  
   
-## 傳回值  
- 如果介面與這個 ComPtr 有關聯， [BoolStruct::Member](../windows/boolstruct-member-data-member.md) 資料成員的位址，否則， `nullptr`。  
+## <a name="return-value"></a>傳回值  
+ 如果介面都與這個 ComPtr，位址[boolstruct:: Member](../windows/boolstruct-member-data-member.md)資料成員，否則`nullptr`。  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
- **命名空間：**Microsoft::WRL  
+ **命名空間：** Microsoft::WRL  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [ComPtr 類別](../windows/comptr-class.md)   
  [ComPtr::Get 方法](../windows/comptr-get-method.md)

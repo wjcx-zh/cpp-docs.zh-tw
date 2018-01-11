@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,8 +20,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetCustomInterpolator
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetDuration
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetInitialValueAndVelocity
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CInterpolatorBase [MFC], CInterpolatorBase
 - CInterpolatorBase [MFC], CreateInstance
@@ -35,16 +33,16 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 79cea720391127f52d441de8f02c53756790d4b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 6bf2a6b11f64b5ec7e7f2e311c62e7f1ce9144d8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 類別
 實作回呼，當動畫 API 必須計算動畫變數的新值時由此 API 呼叫。  
@@ -55,17 +53,17 @@ ms.lasthandoff: 10/09/2017
 class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|建構`CInterpolatorBase`物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInterpolatorBase::CreateInstance](#createinstance)|建立的執行個體`CInterpolatorBase`和儲存自訂 interpolator，將會處理事件的指標。|  
 |[CInterpolatorBase::GetDependencies](#getdependencies)|取得 interpolator 的相依性。 (覆寫 `CUIAnimationInterpolatorBase::GetDependencies`。)|  
@@ -248,6 +246,5 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 ### <a name="return-value"></a>傳回值  
  如果此方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE 從 SetInitialValueAndVelocity 方法，它會傳回 E_FAIL。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

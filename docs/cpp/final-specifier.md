@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- final_CPP
-dev_langs:
-- C++
-helpviewer_keywords:
-- final Identifier
+f1_keywords: final_CPP
+dev_langs: C++
+helpviewer_keywords: final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c9f0a638707466778e75a3eabfe838c84b0355d7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a3f7c5afd4010983ea943193b7abfb99f22eda38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="final-specifier"></a>final 規範
 您可以使用 `final` 關鍵字指定無法在衍生類別中覆寫的虛擬函式。 您也可以用它來指定無法被繼承的類別。  
@@ -77,6 +73,6 @@ class DerivedClass: public BaseClass // compiler error: BaseClass is
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [override 規範](../cpp/override-specifier.md)

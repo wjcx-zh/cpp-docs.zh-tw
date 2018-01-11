@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 655c8e2cc900aa369055e5f1b9975e02c1a8ac88
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2f0c028eaf58e828366ae9534ff06b53254e3601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions--mfc-data-access"></a>交易 (MFC 資料存取)
 異動的概念是特別開發來處理一些情況，其中資料庫的結果狀態取決於一系列的作業是否全部成功。 之所以如此，是因為後續的作業可能會修改之前作業的結果。 在這種情況下，如果任何一個作業失敗，產生的狀態可能會不確定。  
@@ -44,5 +47,5 @@ ms.lasthandoff: 10/24/2017
   
  分散式的異動是更新分散式資料的異動，也就是一個以上的網路電腦系統上的資料。 如果您想要透過分散式系統支援交易，您應該使用 ADO.NET，而不是 OLE DB 交易支援。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

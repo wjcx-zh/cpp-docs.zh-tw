@@ -1,92 +1,94 @@
 ---
-title: "CColumnPrivileges、CColumnPrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "CColumnPrivileges"
-  - "m_bIsGrantable"
-  - "m_nColumnPropID"
-  - "m_szPrivilegeType"
-  - "COLUMN_GUID"
-  - "IS_GRANTABLE"
-  - "m_szColumnName"
-  - "m_szTableCatalog"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "COLUMN_PROPID"
-  - "m_guidColumn"
-  - "COLUMN_PRIVILEGES"
-  - "m_szTableName"
-  - "CColumnPrivilegeInfo"
-  - "m_szGrantee"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CColumnPrivilegeInfo 參數類別"
-  - "CColumnPrivileges typedef 類別"
-  - "COLUMN_GUID"
-  - "COLUMN_NAME"
-  - "COLUMN_PRIVILEGES"
-  - "COLUMN_PROPID"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_guidColumn"
-  - "m_nColumnPropID"
-  - "m_szColumnName"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szPrivilegeType"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CColumnPrivileges、 CColumnPrivilegeInfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- CColumnPrivileges
+- m_bIsGrantable
+- m_nColumnPropID
+- m_szPrivilegeType
+- COLUMN_GUID
+- IS_GRANTABLE
+- m_szColumnName
+- m_szTableCatalog
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- COLUMN_PROPID
+- m_guidColumn
+- COLUMN_PRIVILEGES
+- m_szTableName
+- CColumnPrivilegeInfo
+- m_szGrantee
+dev_langs: C++
+helpviewer_keywords:
+- COLUMN_PROPID
+- GRANTOR
+- m_szPrivilegeType
+- m_szTableSchema
+- TABLE_CATALOG
+- TABLE_NAME
+- COLUMN_PRIVILEGES
+- IS_GRANTABLE
+- m_nColumnPropID
+- TABLE_SCHEMA
+- m_szColumnName
+- COLUMN_NAME
+- m_szTableCatalog
+- m_szGrantee
+- m_szGrantor
+- m_szTableName
+- CColumnPrivileges typedef class
+- COLUMN_GUID
+- GRANTEE
+- m_guidColumn
+- CColumnPrivilegeInfo parameter class
+- m_bIsGrantable
 ms.assetid: 245df365-421f-43c6-9fcd-fb2197c871c6
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ae6f0d10b3c7dca22ded5a65ac5930258c89ca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CColumnPrivileges、CColumnPrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-呼叫 typedef 類別 **CColumnPrivileges** 實作它的參數類別 **CColumnPrivilegeInfo**。  
+# <a name="ccolumnprivileges-ccolumnprivilegeinfo"></a>CColumnPrivileges、CColumnPrivilegeInfo
+呼叫 typedef 類別**CColumnPrivileges**來實作其參數類別**CColumnPrivilegeInfo**。  
   
-## 備註  
- 如需使用 typedef 類別的詳細資訊，請參閱 [結構描述資料列集類別及 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) 。  
+## <a name="remarks"></a>備註  
+ 請參閱[結構描述資料列集類別和 Typedef 類別](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)如需使用 typedef 類別的詳細資訊。  
   
- 此類別定義在資料庫目錄中所定義資料表之資料行上的權限；指定之使用者可以取得或授與這些權限。  
+ 這個類別會識別資料行的資料表定義的類別目錄中的可用或授與的指定使用者的權限。  
   
- 下表列出類別資料成員和其對應的 OLE DB 資料行。  有關結構描述和資料列的詳細資訊請參閱《 *OLE DB 程式設計人員參考*》的[COLUMN\_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms715800.aspx) 。  
+ 下表列出類別資料成員和其相對應的 OLE DB 資料行。 請參閱[COLUMN_PRIVILEGES 資料列集](https://msdn.microsoft.com/en-us/library/ms715800.aspx)中*OLE DB 程式設計人員參考*如需有關結構描述和資料行。  
   
 |資料成員|OLE DB 資料行|  
-|----------|----------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szColumnName|COLUMN\_NAME|  
-|m\_guidColumn|COLUMN\_GUID|  
-|m\_nColumnPropID|COLUMN\_PROPID|  
-|m\_szPrivilegeType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szColumnName|COLUMN_NAME|  
+|m_guidColumn|COLUMN_GUID|  
+|m_nColumnPropID|COLUMN_PROPID|  
+|m_szPrivilegeType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

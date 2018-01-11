@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d216e196f4b23deb7916bd4d9255c32d782ababb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d11211e90f0517c11213d7bdd2815c2f937fc79a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clrcall"></a>__clrcall
 **Microsoft 特定的**  
@@ -97,6 +98,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
  [關鍵字](../cpp/keywords-cpp.md)

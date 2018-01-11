@@ -13,11 +13,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a37b20af7ee9ef43c64fc0df24b47a380000eb6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e742b5509fd9a7889321e5e8c576e4fa3c8401cd
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和使用 Windows 執行階段元件的範本庫。  
@@ -115,7 +118,7 @@ Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和�
 ### <a name="runtimeclass"></a>RuntimeClass  
  [RuntimeClass](../windows/runtimeclass-class.md)表示繼承一組指定之介面的具現化的類別。 A`RuntimeClass`物件可以提供的一或多個 Windows 執行階段 COM 介面或元件的弱式參考支援的組合。  
   
-### <a name="module"></a>模組  
+### <a name="module"></a>Module  
  [模組](../windows/module-class.md)表示相關物件的集合。 `Module` 物件管理 Class Factory 和註冊，前者會建立物件，後者讓其他應用程式使用物件。  
   
 ### <a name="callback"></a>回呼  
@@ -141,6 +144,6 @@ Windows 執行階段 c + + 樣板程式庫 (WRL) 是提供低階方式撰寫和�
 |-|-|  
 |[類別庫專案範本](../windows/wrl-class-library-project-template.md)|說明如何存取 WRL 類別庫專案範本。 這個範本可協助簡化使用 Visual Studio 建立 Windows 執行階段元件的工作。|  
 |[依類別目錄的索引鍵 Api](../windows/key-wrl-apis-by-category.md)|反白顯示主要的 Windows 執行階段 c + + 樣板程式庫類型、 函數和巨集。|  
-|[參考](../windows/wrl-reference.md)|包含 Windows 執行階段 c + + 樣板程式庫的參考資訊。|  
-|[快速參考 （Windows 執行階段和 Visual c + +）](http://go.microsoft.com/fwlink/?LinkId=229180)|簡短描述 C + + /CX 支援 Windows 執行階段的功能。|  
-|[在 Visual c + + 中使用 Windows 執行階段元件](http://go.microsoft.com/fwlink/?LinkId=229155)|示範如何使用 C + + /CX 建立基本 Windows 執行階段元件。|
+|[參考資料](../windows/wrl-reference.md)|包含 Windows 執行階段 c + + 樣板程式庫的參考資訊。|  
+|[快速參考 （Windows 執行階段和 Visual c + +）](http://go.microsoft.com/fwlink/p/?linkid=229180)|簡短描述 C + + /CX 支援 Windows 執行階段的功能。|  
+|[在 Visual c + + 中使用 Windows 執行階段元件](http://go.microsoft.com/fwlink/p/?linkid=229155)|示範如何使用 C + + /CX 建立基本 Windows 執行階段元件。|

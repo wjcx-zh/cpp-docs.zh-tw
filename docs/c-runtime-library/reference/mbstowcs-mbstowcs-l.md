@@ -34,11 +34,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8020f2004a44776ad84b36a6392c27d789e89d0c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 63036262536adea68a4c44bde735a48b2f896b5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbstowcs-mbstowcsl"></a>mbstowcs、_mbstowcs_l
 將多位元組字元序列轉換成對應的寬字元序列。 這些函式已有更安全的版本可用，請參閱 [mbstowcs_s、_mbstowcs_s_l](../../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)。  
@@ -76,13 +77,13 @@ size_t _mbstowcs_l(
  [輸出] `wcstr`  
  寬字元序列的位址。  
   
- [in] `mbstr`  
+ [輸入] `mbstr`  
  以 Null 結束之多位元組字元序列的位址。  
   
- [in] `count`  
+ [輸入] `count`  
  要轉換的多位元組字元數上限。  
   
- [in] `locale`  
+ [輸入] `locale`  
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
@@ -98,18 +99,18 @@ size_t _mbstowcs_l(
   
  如果 `mbstr` 引數為 `NULL`，或 `count` > `INT_MAX`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，errno 會設定為 `EINVAL`，且函式會傳回 -1。  
   
- `mbstowcs` 會針對任何與地區設定相關的行為使用目前的地區設定；`_mbstowcs_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `mbstowcs` 會針對任何與地區設定相關的行為使用目前的地區設定；`_mbstowcs_l` 與其相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
- 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`mbstowcs`|\<stdlib.h>|  
 |`_mbstowcs_l`|\<stdlib.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -206,7 +207,7 @@ Convert back to wide-character string:
   Hex value of first 2 wide characters: 0x3042 0x3043  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

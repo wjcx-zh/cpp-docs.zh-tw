@@ -1,47 +1,50 @@
 ---
-title: "文字工具對話方塊 (圖示影像編輯器) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.texttool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "文字, 加入影像"
-  - "文字工具對話方塊"
+title: "文字工具對話方塊 （圖示影像編輯器） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.texttool
+dev_langs: C++
+helpviewer_keywords:
+- text, adding to an image
+- Text Tool dialog box
 ms.assetid: a6036ef4-1871-40db-8239-6ddbe8f422f5
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ed1a15dbe8947bc52c8a91d94ca12fee6badcf77
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 文字工具對話方塊 (圖示影像編輯器)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用 \[文字工具\] 對話方塊，可將文字加至游標、點陣圖或圖示資源。  
+# <a name="text-tool-dialog-box-image-editor-for-icons"></a>文字工具對話方塊 (圖示影像編輯器)
+使用**文字工具**對話方塊，即可將文字加入至資料指標、 點陣圖或圖示的資源。  
   
- 若要存取此對話方塊，請開啟[影像編輯器](../mfc/window-panes-image-editor-for-icons.md)。  從 \[影像\] 功能表選取 \[工具\]，然後選取 \[文字工具\] 命令。  
+ 若要存取此對話方塊中，開啟[影像編輯器](../windows/window-panes-image-editor-for-icons.md)。 選取**工具**從**映像** 功能表，然後選取**文字工具**命令。  
   
- **字型按鈕**  
- 開啟[文字工具字型對話方塊](../mfc/text-tool-font-dialog-box-image-editor-for-icons.md)，您可在其中變更游標字型的字型、樣式或大小。  變更會套用至顯示在文字區域內的文字。  
+ **[字型] 按鈕**  
+ 開啟[文字工具字型對話方塊](../windows/text-tool-font-dialog-box-image-editor-for-icons.md)，可以變更字型、 樣式或游標字型的大小。 變更會套用至文字區域中顯示的文字。  
   
  **文字區域**  
- 出現顯示為資源之一部分的文字。  一開始，這個區域是空白的。  
+ 顯示會顯示為資源的組件的文字。 一開始此區域是空的。  
   
 > [!NOTE]
->  如果設定 \[透明背景\]，則只有文字會放入影像中。  如果設定 \[不透明背景\]，文字的後面會出現填入[背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)的週框 \(Bounding Rectangle\)。  如需詳細資訊，請參閱[選擇不透明和透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
+>  如果**透明背景**已經設定，只有文字會放入映像。 如果**不透明背景**設定週框的矩形中，以填滿[背景色彩](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)，將會放置文字的背景。 如需詳細資訊，請參閱[選擇不透明和透明背景](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)。  
   
- 在 \[文字工具\] 對話方塊上按一下滑鼠右鍵，以存取預設捷徑功能表，其中包含一份標準 Windows 命令的清單。  
+ 您可以以滑鼠右鍵按一下**文字工具**對話方塊，即可存取預設快顯功能表包含標準 Windows 命令的清單。  
   
-## 需求  
- None  
+## <a name="requirements"></a>需求  
+ 無  
   
-## 請參閱  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)
+## <a name="see-also"></a>請參閱  
+ [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)
+

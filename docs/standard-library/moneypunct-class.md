@@ -57,11 +57,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2c475dc3a992ef31c90f3be184428d8c9aa79fe1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 569aa946ac324c833e651e6b9b74b8cc402a4d04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneypunct-class"></a>moneypunct 類別
 此樣板類別描述可以做為地區設定 facet 的物件，以描述用來表示貨幣輸入欄位或貨幣輸出欄位之 `CharType` 類型的序列。 如果樣板參數 `Intl` 為 `true`，則遵守國際慣例。  
@@ -134,7 +135,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>備註  
- 此類型與範本參數 **CharType** 同義。  
+ 此類型與樣板參數 **CharType** 同義。  
   
 ##  <a name="curr_symbol"></a>  moneypunct::curr_symbol  
  傳回地區設定特定的項目序列，做為貨幣符號。  
@@ -778,7 +779,7 @@ English_Canada.1252 international thousands separator: ,
 English_Canada.1252 domestic thousands separator: ,  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<locale>](../standard-library/locale.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 

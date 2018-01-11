@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <future>
-dev_langs:
-- C++
+f1_keywords: <future>
+dev_langs: C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7894e47b14dffc1685fbce8194f0fc45ed6b5d1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fa19a2df51eb53d7cbd66b13b650580df61d9877
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 包含標準標頭 \<future> 除了可以定義範本類別之外，也可以定義單純執行函式 (可能在個別的執行緒中) 並擷取其結果的支援範本。 結果會是函式所傳回的值，或是函式所發出但未在函式中攔截到的例外狀況。  
@@ -54,7 +51,7 @@ ms.lasthandoff: 10/03/2017
   
  範本類別 `future` 和 `shared_future` 除了為回溯相容性保留的情況之外，一律不會在其解構函式中進行封鎖：與所有其他 future 不同，針對連結至開頭為 `std::async` 之工作的 `future` (或最後一個 `shared_future`)，如果該工作尚未完成，解構函式就會進行封鎖；也就是說，如果此執行緒尚未呼叫 `.get()` 或 `.wait()` 且該工作仍在執行，解構函式就會進行封鎖。 下列可用性附註已經在草稿標準中新增到 `std::async` 的描述：「[附註：如果將從 std::async 取得的 future 移到區域範圍外，其他使用該 future 的程式碼必須知悉該 future 的解構函式可能進行封鎖來讓共用狀態變成就緒。—結束附註]」在所有其他情況下，都必須要有 `future` 和 `shared_future` 解構函式，並且保證它們一律不進行封鎖。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="classes"></a>類別  
   
@@ -75,7 +72,7 @@ ms.lasthandoff: 10/03/2017
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[async](../standard-library/future-functions.md#async)|代表非同步提供者。|  
 |[future_category](../standard-library/future-functions.md#future_category)|傳回對 `error_category` 物件的參考，此物件會描述 `future` 物件之相關錯誤的特性。|  
@@ -85,15 +82,14 @@ ms.lasthandoff: 10/03/2017
   
 ### <a name="enumerations"></a>列舉  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[future_errc](../standard-library/future-enums.md#future_errc)|為 `future_error` 類別所回報的錯誤提供符號名稱。|  
 |[future_status](../standard-library/future-enums.md#future_status)|為計時的 wait 函式可傳回的原因提供符號名稱。|  
 |[啟動](../standard-library/future-enums.md#launch)|代表一種位元遮罩類型，描述範本函式 `async` 可能的模式。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

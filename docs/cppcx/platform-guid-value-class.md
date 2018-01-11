@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 0f7e2ad1ac32e9f811ff9c4351035167c2c5d0e4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e65f4d046f35656cb91374c085ef2a6e4a507302
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 代表 Windows 執行階段類型系統中的 [GUID](http://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) 類型。  
@@ -162,5 +163,5 @@ Platform::Guid operator()
  Guid 結構。  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

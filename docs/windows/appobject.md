@@ -1,32 +1,33 @@
 ---
-title: "appobject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.appobject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "appobject attribute"
+title: "appobject |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.appobject
+dev_langs: C++
+helpviewer_keywords: appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 19462987cf4f9b5cc295766a694f01b8b4fac8ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# appobject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-識別做為應用程式物件，與完整的.exe 應用程式相關聯，並指出函式和屬性 coclass 的全域可用在這個 coclass [型別程式庫](../mfc/automation-clients-using-type-libraries.md)。  
+# <a name="appobject"></a>appobject
+識別為的應用程式物件，這是完整的.exe 應用程式相關聯，並指出函數和屬性的 coclass 供全域使用在這個 coclass[類型程式庫](../mfc/automation-clients-using-type-libraries.md)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,11 +35,11 @@ caps.handback.revision: 10
   
 ```  
   
-## 備註  
- **Appobject** C\+\+ 屬性具有相同的功能，為 [appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Appobject** c + + 屬性具有相同的功能[appobject](http://msdn.microsoft.com/library/windows/desktop/aa366726) MIDL 屬性。  
   
-## 範例  
- 下列程式碼將示範簡單的類別定義加上屬性區塊，包括 **appobject**：  
+## <a name="example"></a>範例  
+ 下列程式碼示範簡單的類別定義，其中包含屬性區塊前面有**appobject**:  
   
 ```  
 // cpp_attr_ref_appobject.cpp  
@@ -55,21 +56,20 @@ class A : public ICustom {
 };  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**，`struct`|  
+|**適用於**|**class**、 `struct`|  
 |**可重複**|否|  
-|**必要的屬性**|**coclass**|  
-|**無效的屬性**|None|  
+|**必要屬性**|**coclass**|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
+ [Typedef、Enum、Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   

@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be954451335deef88ad459b9de6b865ff45ed909
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 610e970ad84c6c89d91182b7a61bb759112fcd7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-includes-dialog-box"></a>資源包含對話方塊
 您可以使用**Resource Includes**對話方塊來修改環境的一般工作安排儲存專案.rc 檔和所有中的所有資源的[符號](../windows/symbols-resource-identifiers.md)Resource.h 中。  
@@ -52,7 +55,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  Win32  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [如何： 指定資源的 Include 目錄](../windows/how-to-specify-include-directories-for-resources.md)   
  [符號： 資源識別項](../windows/symbols-resource-identifiers.md)   
  [資源檔](../windows/resource-files-visual-studio.md)   

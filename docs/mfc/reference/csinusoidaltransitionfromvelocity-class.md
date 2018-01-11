@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3eff9a1314f5ea69e6dbc0685bdc01c60482d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9189a7ea43591509767346737566a40f5961ec3b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csinusoidaltransitionfromvelocity-class"></a>CSinusoidalTransitionFromVelocity 類別
 封裝由動畫變數的初始速度決定其幅度的正弦曲線速度轉換。  
@@ -40,23 +41,23 @@ ms.lasthandoff: 10/24/2017
 class CSinusoidalTransitionFromVelocity : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromVelocity::CSinusoidalTransitionFromVelocity](#csinusoidaltransitionfromvelocity)|建構轉換物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromVelocity::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSinusoidalTransitionFromVelocity::m_duration](#m_duration)|轉換的持續時間。|  
 |[CSinusoidalTransitionFromVelocity::m_period](#m_period)|以秒為單位的正弦曲線 wave 振動期間。|  
@@ -120,5 +121,5 @@ UI_ANIMATION_SECONDS m_duration;
 UI_ANIMATION_SECONDS m_period;  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

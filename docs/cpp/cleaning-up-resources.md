@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], cleaning up resources
 - exception handling [C++], cleaning up resources
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 830fd773536b9ab16aeced2b64d2a4062961bd1b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fd84fdd041a3b3715c4fbfa9b4c1d78fdf2ba464
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cleaning-up-resources"></a>清除資源
 在終止處理常式執行期間，您可能不知道在呼叫終止處理常式之前實際配置了哪些資源。 有可能在配置所有資源之前，`__try` 陳述式區塊就已中斷，此時並非所有資源皆已開啟。  
@@ -81,6 +79,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)   
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

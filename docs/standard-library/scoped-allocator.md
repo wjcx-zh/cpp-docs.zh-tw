@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ca0015ede5a202aac4360e5b0604e5d94eba4db5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cd4174aa01ae531ae5588c329fdff8379aba652
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltscopedallocatorgt"></a>&lt;scoped_allocator&gt;
 定義容器樣板類別 scoped_allocator。  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[scoped_allocator_adaptor 類別](../standard-library/scoped-allocator-adaptor-class.md)|樣板類別，會封裝巢狀的一或多個配置器。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)   
  [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

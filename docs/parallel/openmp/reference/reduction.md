@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- reduction
-dev_langs:
-- C++
-helpviewer_keywords:
-- reduction OpenMP clause
+f1_keywords: reduction
+dev_langs: C++
+helpviewer_keywords: reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c9b2d13ac10005590c51275cc9ecbab0407e5a9e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 67e8b7740c4e346b3e6a0751376c4cecb3437e82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reduction"></a>reduction
-指定私用的每個執行緒的一個或多個變數是降低作業平行區域結尾處的主題。  
+指定每個執行緒私用的一個或多個變數是減少作業在平行區域結尾處的主題。  
   
 ## <a name="syntax"></a>語法  
   
@@ -53,17 +35,17 @@ reduction(operation:var)
  其中：  
   
  `operation`  
- 在變數上執行作業的運算子 (`var`) 結尾的平行區域。  
+ 在變數上執行作業的運算子 (`var`) 在平行區域結尾處。  
   
  `var`  
- 在其上執行純量減少一個以上的變數。 如果指定多個變數，請以逗號分隔變數名稱。  
+ 在其上執行純量減少一個以上的變數。 如果指定了多個變數，請以逗號分隔變數名稱。  
   
 ## <a name="remarks"></a>備註  
- `reduction`適用於下列指示詞︰  
+ `reduction`適用於下列指示詞：  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [平行](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [區段](../../../parallel/openmp/reference/sections-openmp.md)  
   
@@ -182,5 +164,5 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the the functions, func1 through func5 succeeded!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [子句](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d0e475da616c56f7867ce28bf253ddcff8f581be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc46d934c99e24b63ef314ef1f63402893c6bb18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox 類別
 `CMFCRibbonCheckBox` 類別實作可以加入至功能區面板、快速存取工具列或快顯功能表的核取方塊。  
@@ -50,17 +51,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonCheckBox : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(覆寫[cmfcribbonbutton:: Getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize)。)|  
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(覆寫[cmfcribbonbutton:: Getintermediatesize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize)。)|  
@@ -103,10 +104,10 @@ CMFCRibbonCheckBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  指定命令識別碼。  
   
- [in] `lpszText`  
+ [輸入] `lpszText`  
  指定文字標籤。  
   
 ### <a name="return-value"></a>傳回值  
@@ -125,7 +126,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  指標`CDC`相關聯的核取方塊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -142,7 +143,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  指標`CDC`此核取方塊相關聯。  
   
 ### <a name="return-value"></a>傳回值  
@@ -159,7 +160,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  指標`CDC`此核取方塊相關聯的物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -188,7 +189,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  指標`CDC`要在其中繪製此核取方塊。  
   
 ### <a name="remarks"></a>備註  
@@ -201,10 +202,10 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `CDC*`  
+ [輸入] `CDC*`  
  指標`CDC`相關聯的核取方塊。  
   
- [in] `CRect`  
+ [輸入] `CRect`  
  A`CRect`物件，指定要在其中繪製的功能表影像的矩形。  
   
 ### <a name="return-value"></a>傳回值  
@@ -227,22 +228,22 @@ virtual void OnDrawOnList(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  在其中繪製此核取方塊的裝置內容的指標。  
   
- [in] `strText`  
+ [輸入] `strText`  
  顯示文字。  
   
- [in] `nTextOffset`  
+ [輸入] `nTextOffset`  
  距離，單位為像素，從清單方塊來顯示文字的左邊。  
   
- [in] `rect`  
+ [輸入] `rect`  
  核取方塊的顯示矩形。  
   
- [in] `bIsSelected`  
+ [輸入] `bIsSelected`  
  `TRUE`如果選取此核取方塊，或`FALSE`如果不是。  
   
- [in] `bHighlighted`  
+ [輸入] `bHighlighted`  
  `TRUE`如果核取方塊會反白顯示，或`FALSE`如果不是。  
   
 ### <a name="remarks"></a>備註  
@@ -269,7 +270,7 @@ virtual BOOL SetACCData(
 ### <a name="remarks"></a>備註  
  依預設這個方法會設定協助工具資料的核取方塊，一律會傳回`TRUE`。 覆寫此方法以設定協助工具資料並傳回值，以指出成功或失敗。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCRibbonPanel 類別](../../mfc/reference/cmfcribbonpanel-class.md)

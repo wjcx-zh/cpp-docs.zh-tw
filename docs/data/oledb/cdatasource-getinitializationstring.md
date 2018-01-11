@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0cc70e9cb1c775cf9c19f7269a5305624d27210b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d2dd5f7263e6972e788f46f43036991e12555771
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatasourcegetinitializationstring"></a>CDataSource::GetInitializationString
 擷取目前已開啟的資料來源初始化字串。  
@@ -55,5 +58,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDataSource 類別](../../data/oledb/cdatasource-class.md)

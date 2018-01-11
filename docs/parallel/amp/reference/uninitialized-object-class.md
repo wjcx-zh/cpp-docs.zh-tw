@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c0e30cefa99a52d0dfbc0725c3274e52f2a76c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 75d3050c128b067833352ea82aee38bcd2a7019d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object 類別
 使用未初始化的物件時就會擲回例外狀況。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class uninitialized_object : public runtime_exception;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[uninitialized_object 建構函式](#ctor)|初始化 `uninitialized_object` 類別的新執行個體。|  
 
@@ -73,5 +74,5 @@ unsupported_feature() throw();
 ### <a name="return-value"></a>傳回值  
  `unsupported_feature` 物件。 
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency 命名空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

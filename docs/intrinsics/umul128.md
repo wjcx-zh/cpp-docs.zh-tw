@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81a408540d2606cb81d92a3e93cbcff888d4a3e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9853b7ac0f57a48341f1f301aa9a1276843a811d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umul128"></a>_umul128
 **Microsoft 特定的**  
@@ -37,7 +38,7 @@ unsigned __int64 _umul128(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `Multiplier`  
+ [輸入] `Multiplier`  
  要相乘的第一個 64 位元整數。  
   
  [in] `Multiplicand`  
@@ -82,7 +83,7 @@ int main()
 0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

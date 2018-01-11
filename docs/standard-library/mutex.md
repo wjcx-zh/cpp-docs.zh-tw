@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <mutex>
-dev_langs:
-- C++
+f1_keywords: <mutex>
+dev_langs: C++
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 78c6476712f17c5a730b54f7db1a87e187af3720
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 包含標準標頭 \<mutex> 以定義類別 `mutex`、`recursive_mutex`、`timed_mutex` 和 `recursive_timed_mutex`；範本 `lock_guard` 和 `unique_lock`；以及用來定義互斥程式碼區域的支援類型與函式。  
@@ -61,7 +58,7 @@ ms.lasthandoff: 10/03/2017
   
 ### <a name="classes"></a>類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[lock_guard 類別](../standard-library/lock-guard-class.md)|表示可以具現化的範本，用來建立解構函式會解除鎖定 `mutex` 的物件。|  
 |[mutex 類別 (C++ 標準程式庫)](../standard-library/mutex-class-stl.md)|表示 mutex 型別。 使用這個型別的物件來強制程式內的互斥。|  
@@ -72,14 +69,14 @@ ms.lasthandoff: 10/03/2017
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[call_once](../standard-library/mutex-functions.md#call_once)|提供用來呼叫指定之可呼叫物件一次執行期間的機制。|  
 |[lock](../standard-library/mutex-functions.md#lock)|會嘗試鎖定所有不包含死結的引數。|  
   
 ### <a name="structs"></a>結構  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[adopt_lock_t 結構](../standard-library/adopt-lock-t-structure.md)|表示用來定義 `adopt_lock` 的型別。|  
 |[defer_lock_t 結構](../standard-library/defer-lock-t-structure.md)|表示定義 `defer_lock` 物件的型別，該物件用來選取 `unique_lock` 的其中一個多載建構函式。|  
@@ -88,15 +85,14 @@ ms.lasthandoff: 10/03/2017
   
 ### <a name="variables"></a>變數  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|表示可以針對 `lock_guard` 和 `unique_lock` 傳遞至建構函式的物件，指出也會傳遞至建構函式的 mutex 物件已鎖定。|  
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|表示可以針對 `unique_lock` 傳遞至建構函式的物件，指出建構函式不應鎖定也會傳遞至建構函式的 mutex 物件。|  
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|表示可以針對 `unique_lock` 傳遞至建構函式的物件，指出建構函式應嘗試解除鎖定也會未經封鎖傳遞至建構函式的 `mutex`。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

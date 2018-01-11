@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ec9f0814c976a5ea175e0cd62ab8e57b02f1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-com-support-classes"></a>編譯器 COM 支援類別
 **Microsoft 特定的**  
@@ -35,9 +36,9 @@ ms.lasthandoff: 10/24/2017
 |[_com_ptr_t](../cpp/com-ptr-t-class.md)|封裝 COM 介面指標，以及自動化所需的呼叫`AddRef`，**發行**，和`QueryInterface`。|  
 |[_variant_t](../cpp/variant-t-class.md)|包裝**VARIANT**可提供有用的運算子和方法的型別。|  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器 COM 支援](../cpp/compiler-com-support.md)   
  [編譯器 COM 全域函式](../cpp/compiler-com-global-functions.md)   
  [C++ 語言參考](../cpp/cpp-language-reference.md)

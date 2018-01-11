@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebd990da1520af7d15d4c993050eaefd92c48e26
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 176d8fe48e5719c345ab39135468edf324eeeaa5
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmptrst"></a>__vmx_vmptrst
 **Microsoft 特定的**  
@@ -43,7 +44,7 @@ void __vmx_vmptrst(
 ## <a name="remarks"></a>備註  
  VMCS 指標是 64 位元的實體位址。  
   
- `__vmx_vmptrst`函數即相當於`VMPTRST`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件，而 < Intel 虛擬化技術規格的 ia-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/?LinkId=127)站台。  
+ `__vmx_vmptrst`函數即相當於`VMPTRST`機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件，而 < Intel 虛擬化技術規格的 ia-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](http://go.microsoft.com/fwlink/p/?linkid=127)站台。  
   
 ## <a name="requirements"></a>需求  
   
@@ -53,8 +54,8 @@ void __vmx_vmptrst(
   
  **標頭檔** \<intrin.h >  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

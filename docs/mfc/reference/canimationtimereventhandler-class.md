@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], CreateInstance
 - CAnimationTimerEventHandler [MFC], OnPostUpdate
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1f47caa836a93ecce28e77f9bf768aeb4d1ea3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: dc2dd4ddc96ab589d88b34d3d31fb131ab49fbc2
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler 類別
 實作回呼，當發生計時事件時由動畫 API 呼叫。  
@@ -45,11 +43,11 @@ ms.lasthandoff: 10/09/2017
 class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAnimationTimerEventHandler>;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationTimerEventHandler::CreateInstance](#createinstance)|建立的執行個體`CAnimationTimerEventHandler`回呼。|  
 |[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|處理動畫更新完成之後發生的事件。 (覆寫 `CUIAnimationTimerEventHandlerBase::OnPostUpdate`。)|  
@@ -132,6 +130,5 @@ void SetAnimationController(CAnimationController* pAnimationController);
  `pAnimationController`  
  動畫控制器，將會收到事件指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

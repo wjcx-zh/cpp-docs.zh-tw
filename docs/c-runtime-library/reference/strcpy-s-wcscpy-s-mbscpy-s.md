@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -42,36 +40,22 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 390272a4fdeba5633df3ecabff4b4f4f57d97e83
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7a07af46cda1e3ce9c567b12bd83e2d3fd055a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s、wcscpy_s、_mbscpy_s
 複製字串。 這些是 [strcpy、wcscpy、_mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
   
 > [!IMPORTANT]
-> 不可在於  `_mbscpy_s` 中執行的應用程式中使用 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbscpy_s`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -125,9 +109,9 @@ errno_t _mbscpy_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|傳回值|`strDestination` 的內容。|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`|any|任何|`EINVAL`|未修改|  
-|any|任何|`NULL`|`EINVAL`|`strDestination`[0] 設為 0|  
-|任何|0 或太小|任何|`ERANGE`|`strDestination`[0] 設為 0|  
+|`NULL`|any|any|`EINVAL`|未修改|  
+|any|any|`NULL`|`EINVAL`|`strDestination`[0] 設為 0|  
+|any|0 或太小|any|`ERANGE`|`strDestination`[0] 設為 0|  
   
 ## <a name="remarks"></a>備註  
  `strcpy_s` 函式會將 `strSource` 位址中的內容 (包含結束的 null 字元) 複製到 `strDestination` 所指定的位置。 目的字串必須大到足以保留來源字串及其結束的 null 字元。 如果來源和目的字串重疊，則 `strcpy_s` 的行為未定義。  
@@ -138,7 +122,7 @@ errno_t _mbscpy_s(
   
  成功執行後，目的字串永遠是以 null 終止的。  
   
- 在 C++ 中，樣板多載簡化了這些函式的使用方式，樣板多載可自動推斷緩衝區長度 (因而您不須指定大小引數)，也可以自動將較舊且較不安全的函式取代成其較新且較安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，樣板多載簡化了這些函式的使用方式，樣板多載可自動推斷緩衝區長度 (因而您不須指定大小引數)，也可以自動將較舊且較不安全的函式取代成其較新且較安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  這些函式的偵錯版本會先用 0xFE 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -150,13 +134,13 @@ errno_t _mbscpy_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strcpy_s`|\<string.h>|  
 |`wcscpy_s`|\<string.h> 或 \<wchar.h>|  
 |`_mbscpy_s`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -189,7 +173,7 @@ int main( void )
 String = Hello world from strcpy_s and strcat_s!  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcat、wcscat、_mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md)   
  [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)   

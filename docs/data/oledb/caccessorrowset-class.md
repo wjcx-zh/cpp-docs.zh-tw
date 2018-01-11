@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b7340baabb24ef18806442504a4bd5dadf73a41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9750393a96a504b20ce861624ba94f8336fd9d4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset 類別
 封裝資料列集，以及其相關聯的存取子中的單一類別。  
@@ -46,7 +49,7 @@ class CAccessorRowset :
  `TRowset`  
  資料列集類別。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -64,6 +67,6 @@ class CAccessorRowset :
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

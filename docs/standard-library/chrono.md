@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe8917c18937856a6ca310a2bbf8380840202699
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 包含標準標頭 \<chrono> 來定義類別和函式，以表示和管理持續期間和瞬間時刻。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 
 ### <a name="classes"></a>類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[duration 類別](../standard-library/duration-class.md)|描述保存時間間隔的類型。|  
 |[time_point 類別](../standard-library/time-point-class.md)|描述可代表時間點的類型。|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|將 `duration` 物件轉換為指定的類型。|  
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|將 `time_point` 物件轉換為指定的類型。|  
@@ -118,7 +119,7 @@ constexpr auto my_duration_unit = 108ms;
 ```  
 ## <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)
 
 

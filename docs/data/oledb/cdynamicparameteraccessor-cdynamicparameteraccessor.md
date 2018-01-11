@@ -1,56 +1,59 @@
 ---
-title: "CDynamicParameterAccessor::CDynamicParameterAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::CDynamicParameterAccessor"
-  - "CDynamicParameterAccessor.CDynamicParameterAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicParameterAccessor 類別, 建構函式"
-  - "CDynamicParameterAccessor 方法"
+title: "Cdynamicparameteraccessor:: Cdynamicparameteraccessor |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::CDynamicParameterAccessor
+- CDynamicParameterAccessor.CDynamicParameterAccessor
+dev_langs: C++
+helpviewer_keywords:
+- CDynamicParameterAccessor class, constructor
+- CDynamicParameterAccessor method
 ms.assetid: a1cce5e4-dfb9-43a2-bfb8-0435c653674a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e08c26c7ba9d07c5e845aea3443c824498354b74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::CDynamicParameterAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a>CDynamicParameterAccessor::CDynamicParameterAccessor
 建構函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
       typedef CDynamicParameterAccessor _ParamClass;  
 CDynamicParameterAccessor(   
-   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
-   DBLENGTH nBlobSize = 8000 )   
-   : CDynamicAccessor( eBlobHandling, nBlobSize )  
+   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
+   DBLENGTH nBlobSize = 8000 )   
+   : CDynamicAccessor( eBlobHandling, nBlobSize )  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `eBlobHandling`  
- 指定 BLOB 資料的方式處理。  預設值為 **DBBLOBHANDLING\_DEFAULT**。  為 **DBBLOBHANDLINGENUM** 值的說明請參閱 [CDynamicAccessor::SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) 。  
+ 指定 BLOB 資料的處理方式。 預設值是**DBBLOBHANDLING_DEFAULT**。 請參閱[cdynamicaccessor:: Setblobhandling](../../data/oledb/cdynamicaccessor-setblobhandling.md)的說明**cdynamicaccessor:: SETBLOBHANDLING**值。  
   
  `nBlobSize`  
- 最大 BLOB 的大小 \(以位元組為單位\);此值的資料行視為 BLOB。  預設值為 8,000。  請參閱 [CDynamicAccessor::SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) 以取得詳細資訊。  
+ 最大 BLOB 的大小 (以位元組為單位)；此值的資料行資料被視為 BLOB。 預設值為 8000。 請參閱[cdynamicaccessor:: Setblobsizelimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md)如需詳細資訊。  
   
-## 備註  
- 請參閱 [CDynamicAccessor::CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) 建構函式有關 BLOB 處理的詳細資訊。  
+## <a name="remarks"></a>備註  
+ 請參閱[cdynamicaccessor:: Cdynamicaccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md)建構函式，如需 BLOB 處理的詳細資訊。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)

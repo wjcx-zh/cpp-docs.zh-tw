@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4c452280997a843966bb7580c241a312ebf4662
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22a8b584c309cd6698ddd73449fcbba866111190
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>處理 Rebar 控制項中的通知訊息
 在 Rebar 控制項的父類別中，請為任何一個您要處理的 Rebar 控制項 (`OnChildNotify`) 通知訊息建立一個 switch 陳述式的 `CReBarCtrl` 處理常式函式。 當使用者拖曳物件到 Rebar 控制項上方、變更 Rebar 群組列的配置、從 Rebar 控制項刪除群組列等等時，就會傳送通知給父視窗。  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/24/2017
   
  如需有關這些通知的詳細資訊，請參閱[Rebar 控制項參考](http://msdn.microsoft.com/library/windows/desktop/bb774375)Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

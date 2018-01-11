@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a1f598b0aba0f5f697fc6603728e2735f0cd50f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7dac0e574122342c96b28a2f5ccbeb1ea5088ae9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 定義 STL/CLR 容器樣板函式執行的演算法。  
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="functions"></a>函式  
   
-|函式|說明|  
+|功能|描述|  
 |--------------|-----------------|  
 |[adjacent_find (STL/CLR)](../dotnet/adjacent-find-stl-clr.md)|搜尋兩個相鄰的項目相等。|  
 |[binary_search (STL/CLR)](../dotnet/binary-search-stl-clr.md)|測試是否已排序的序列包含指定的值。|  
@@ -109,5 +112,5 @@ ms.lasthandoff: 10/24/2017
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

@@ -22,15 +22,16 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a10f66a52dfacca20fed2732a107b35630ffd76d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be516725520cb408d9fd8663eaa82d3617396a5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="responding-to-dynamic-data-exchange-dde"></a>回應動態資料交換 (DDE)
 (如果副檔名已向應用程式註冊或關聯)，框架視窗可以回應動態資料交換 (DDE) 要求，從檔案管理員開啟檔案。 請參閱[殼層註冊](../mfc/special-cwinapp-services.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用框架視窗](../mfc/using-frame-windows.md)
 

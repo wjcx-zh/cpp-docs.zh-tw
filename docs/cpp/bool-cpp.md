@@ -4,29 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bool_cpp
 - __BOOL_DEFINED
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f2437d831ae155f916b69cc6b35d3b586be9819e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 564d2f4849d1725d46d92562e2ce75b2ea2e2d44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bool-c"></a>bool (C++)
 這個關鍵字是內建類型。 此類型的變數可以有值[true](../cpp/true-cpp.md)和[false](../cpp/false-cpp.md)。 條件運算式具有 `bool` 類型，因此具有 `bool` 類型的值。 例如，`i!=0`現在具有**true**或**false**的值而定`i`。  
@@ -55,6 +53,6 @@ if (condexpr1) statement1;
   
  `bool` 類型會參與整數提升。 類型的右`bool`可以轉換成類型的右`int`，與**false**變成零和**true**變成一。 `bool` 為不同類型，它會參與多載解析。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [基本類型](../cpp/fundamental-types-cpp.md)

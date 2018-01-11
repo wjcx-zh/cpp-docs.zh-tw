@@ -39,11 +39,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe432aec3a68889ad70ab7c229df3c2f7529df3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64e22176d0df2408db8a8c9435fde5b4c6775d21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox 類別
 提供 Windows 檢查清單方塊的功能。  
@@ -54,17 +55,17 @@ ms.lasthandoff: 10/24/2017
 class CCheckListBox : public CListBox  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCheckListBox::CCheckListBox](#cchecklistbox)|建構 `CCheckListBox` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CCheckListBox::Create](#create)|建立 Windows 檢查清單方塊，並將它附加至`CCheckListBox`物件。|  
 |[CCheckListBox::DrawItem](#drawitem)|當主控描繪清單方塊中變更的視覺外觀時，架構呼叫。|  
@@ -231,7 +232,7 @@ int GetCheck(int nIndex);
 ### <a name="return-value"></a>傳回值  
  指定的核取方塊的狀態。 下表列出可能的值。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |`BST_CHECKED`|核取方塊。|  
 |`BST_UNCHECKED`|不會檢查核取方塊。|  
@@ -319,7 +320,7 @@ void SetCheck(
 ### <a name="remarks"></a>備註  
  下表列出可能的值為`nCheck`參數。  
   
-|值|說明|  
+|值|描述|  
 |-----------|-----------------|  
 |**BST_CHECKED**|選取指定的核取方塊。|  
 |**BST_UNCHECKED**|清除指定的核取方塊。|  
@@ -349,7 +350,7 @@ void SetCheckStyle(UINT nStyle);
   
  如需這些樣式資訊，請參閱[按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 TSTCON](../../visual-cpp-samples.md)   
  [CListBox 類別](../../mfc/reference/clistbox-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

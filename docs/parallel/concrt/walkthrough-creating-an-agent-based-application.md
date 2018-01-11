@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 245952bd8dfb9acc8fc8550955232a30b9dbfe9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式架構應用程式
 本主題描述如何建立基本的代理程式架構應用程式。 在本逐步解說，您可以建立以非同步方式從文字檔讀取資料的代理程式。 應用程式使用 adler-32 總和檢查碼演算法計算總和檢查碼的該檔案的內容。  
@@ -187,7 +188,7 @@ Adler-32 sum is fefb0d75
 ## <a name="next-steps"></a>後續步驟  
  如需代理程式為基礎的應用程式的其他範例，請參閱[逐步解說： 使用聯結以避免死結](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)   
  [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)   
  [訊息傳遞函式](../../parallel/concrt/message-passing-functions.md)   

@@ -1,32 +1,33 @@
 ---
-title: "InterfaceTraits::CanCastTo 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CanCastTo 方法"
+title: "Interfacetraits:: Cancastto 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::CanCastTo
+dev_langs: C++
+helpviewer_keywords: CanCastTo method
 ms.assetid: 275847cb-69ea-42bf-910f-05ba6ef8b48d
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3d8dfe6c1873d9cf897494eb6157c2be3baeb435
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# InterfaceTraits::CanCastTo 方法
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo 方法
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,29 +40,29 @@ static __forceinline bool CanCastTo(
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `ptr`  
- 指向型別的指標名稱。  
+ 類型的指標的名稱。  
   
  `riid`  
- `Base`的介面 ID。  
+ 介面 ID `Base`。  
   
  `ppv`  
- 如果作業成功， `ppv` 將會指向由 `Base`指定的介面。  否則， `ppv` 將會設為 `nullptr`。  
+ 如果這項作業成功，`ppv`指向所指定介面`Base`。 否則，`ppv`設`nullptr`。  
   
-## 傳回值  
- `true` ，如果此作業成功和 `ptr` 轉換至 `Base`的指標；否則， `false` 。  
+## <a name="return-value"></a>傳回值  
+ `true`如果此作業成功，`ptr`轉換成指標`Base`，否則`false`。  
   
-## 備註  
- 指示指定的指標是否可轉換成 `Base`的指標。  
+## <a name="remarks"></a>備註  
+ 指出指定的指標是否可以轉換成指標`Base`。  
   
- 如需 `Base`的詳細資訊，請參閱 [InterfaceTraits 結構](../windows/interfacetraits-structure.md)的公用 Typedefs 部分。  
+ 如需有關`Base`，請參閱公用 Typedefs 節[InterfaceTraits 結構](../windows/interfacetraits-structure.md)。  
   
-## 需求  
- **標題:** implements.h  
+## <a name="requirements"></a>需求  
+ **標頭：** implements.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [InterfaceTraits 結構](../windows/interfacetraits-structure.md)   
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

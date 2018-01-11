@@ -1,63 +1,65 @@
 ---
-title: "IDBPropertiesImpl::GetPropertyInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDBPropertiesImpl::GetPropertyInfo"
-  - "IDBPropertiesImpl.GetPropertyInfo"
-  - "GetPropertyInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetPropertyInfo 方法"
+title: "Idbpropertiesimpl:: Getpropertyinfo |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IDBPropertiesImpl::GetPropertyInfo
+- IDBPropertiesImpl.GetPropertyInfo
+- GetPropertyInfo
+dev_langs: C++
+helpviewer_keywords: GetPropertyInfo method
 ms.assetid: 170e9640-5010-4e0d-8a54-f50b23af08ad
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6b1eb8bc9a859c29a28291dd77e5664df2f185cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IDBPropertiesImpl::GetPropertyInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="idbpropertiesimplgetpropertyinfo"></a>IDBPropertiesImpl::GetPropertyInfo
 傳回資料來源所支援的屬性資訊。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      STDMETHOD(GetPropertyInfo)(   
-   ULONG cPropertySets,   
-   const DBPROPIDSET rgPropertySets[],   
-   ULONG * pcPropertyInfoSets,   
-   DBPROPINFOSET ** prgPropertyInfoSets,   
-   OLECHAR ** ppDescBuffer    
+      STDMETHOD(GetPropertyInfo)(   
+   ULONG cPropertySets,   
+   const DBPROPIDSET rgPropertySets[],   
+   ULONG * pcPropertyInfoSets,   
+   DBPROPINFOSET ** prgPropertyInfoSets,   
+   OLECHAR ** ppDescBuffer    
 );  
 ```  
   
-#### 參數  
- 請參閱 *OLE DB 程式設計人員參考*的[IDBProperties::GetPropertyInfo](https://msdn.microsoft.com/en-us/library/ms718175.aspx) 。  
+#### <a name="parameters"></a>參數  
+ 請參閱[idbproperties:: Getpropertyinfo](https://msdn.microsoft.com/en-us/library/ms718175.aspx)中*OLE DB 程式設計人員參考*。  
   
- 有些參數對應至在 **IDBProperties::GetPropertyInfo**中說明的不同名稱的 *OLE DB* 參數:  
+ 有些參數會對應至*OLE DB 程式設計人員參考*參數不同的名稱，如下所述的**idbproperties:: Getpropertyinfo**:  
   
-|OLE DB 樣版參數|*OLE DB 程式設計人員參考* 參數|  
-|-----------------|--------------------------|  
+|OLE DB 樣板參數|*OLE DB 程式設計人員參考*參數|  
+|--------------------------------|------------------------------------------------|  
 |`cPropertySets`|`cPropertyIDSets`|  
 |`rgPropertySets`|`rgPropertyIDSets`|  
   
-## 備註  
- 使用 [IDBInitializeImpl::m\_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) 實作這項功能。  
+## <a name="remarks"></a>備註  
+ 使用[idbinitializeimpl:: M_pcutlpropinfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md)來實作這項功能。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IDBPropertiesImpl 類別](../../data/oledb/idbpropertiesimpl-class.md)   
- [IDBPropertiesImpl::GetProperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
+ [Idbpropertiesimpl:: Getproperties](../../data/oledb/idbpropertiesimpl-getproperties.md)   
  [IDBPropertiesImpl::SetProperties](../../data/oledb/idbpropertiesimpl-setproperties.md)

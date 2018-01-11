@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0ba1075095381229667c7164aa7de7f3e4537486
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5d4b522286a727f428cd445bf67d12a1360b49b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>例外狀況處理的時機：摘要
 無論 `__try` 陳述式區塊以何種方式終止，都會執行終止處理常式。 原因包括跳出 `__try` 區塊、`longjmp` 陳述式將控制權傳輸到區塊外部，以及因為進行例外狀況處理而回溯堆疊。  
@@ -59,6 +57,6 @@ ms.lasthandoff: 09/25/2017
   
     -   控制權會傳遞給這個例外狀況處理常式結尾後方的程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)   
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

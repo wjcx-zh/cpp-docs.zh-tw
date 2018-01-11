@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8ecfe35d61762b8beaa217eaacc4202a588debb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ff6e953bf706e0e8767fe6f97fe1d31b70431d08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>修改 RMyProviderRowset 的繼承
 若要加入`IRowsetLocate`介面的簡單唯讀提供者範例，請修改繼承的**RMyProviderRowset**。 一開始， **RMyProviderRowset**繼承自`CRowsetImpl`。 您需要修改它繼承自**CRowsetBaseImpl**。  
@@ -60,5 +63,5 @@ class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCo
   
  完成此動作後，您可以[動態決定傳回給消費者的資料行](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2f66112e24abd2eb12a1bac66be3aac5553e36b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c0e932cbe58ccf708ef313369335d183aefc1a20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dequegenericvalue-stlclr"></a>deque::generic_value (STL/CLR)
 使用容器的泛型介面的項目類型。  
@@ -81,7 +84,7 @@ a a c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)   
  [deque::generic_iterator (STL/CLR)](../dotnet/deque-generic-iterator-stl-clr.md)   

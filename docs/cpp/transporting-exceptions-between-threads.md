@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccbda062d28cdbdaafcbae68793b6583f31a3be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transporting-exceptions-between-threads"></a>在執行緒之間傳輸例外狀況
 Visual c + + 支援*傳輸例外狀況*從另一個執行緒。 傳輸例外狀況可以讓您在某個執行緒攔截例外狀況，再使該例外狀況看似在另一個執行緒中擲回。 舉例來說，您可以使用此功能撰寫多執行緒應用程式，其中由主執行緒處理其次要執行緒所擲回的所有例外狀況。 傳輸例外狀況對於建立平行程式設計程式庫或系統的開發人員最有用。 若要實作傳輸例外狀況，Visual c + + 提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型別和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函式。  
@@ -49,7 +50,7 @@ namespace std
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`unspecified`|用於實作 `exception_ptr` 類型的未指定內部類別。|  
 |`p`|參考例外狀況的 `exception_ptr` 物件。|  
@@ -95,7 +96,7 @@ namespace std
     > [!IMPORTANT]
     >  我們建議您指定**/EHsc**編譯器選項並只攔截 c + + 例外狀況。 您會在安全性威脅如果您使用**/EHa**或**/CLR**編譯器選項和**攔截**陳述式，以省略符號*例外狀況宣告*(`catch(...)`)。 也許您會使用 `catch` 陳述式擷取特定的例外狀況。 不過，`catch(...)` 陳述式會擷取所有 C++ 和 SEH 例外狀況，其中包括嚴重的非預期例外狀況。 如果您忽略非預期的例外狀況或處理不當，惡意程式碼可能會利用此機會破壞程式的安全性。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  下列各節說明如何使用傳輸例外狀況`exception_ptr`型別，而`current_exception`， `rethrow_exception`，和`make_exception_ptr`函式。  
   
 ### <a name="exceptionptr-type"></a>exception_ptr 類型  
@@ -252,7 +253,7 @@ exception_ptr 1: Caught a  myException exception.
 ## <a name="requirements"></a>需求  
  **標頭：**\<exception>  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)     
  [/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)   
  [/clr （common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)

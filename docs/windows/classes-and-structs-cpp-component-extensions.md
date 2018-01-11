@@ -18,11 +18,14 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 45fc41430fbbf04f8b1b56fe6355fb0b81f8e1ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8d75bc7f0935ef7444d37f3708379598a549417e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>類別和結構 (C++ 元件擴充功能)
 宣告類別或結構的*物件存留期*會自動管理。 當物件不再可存取或超出範圍時，Visual C++ 會自動捨棄配置給物件的記憶體。  
@@ -123,5 +126,5 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 27b03278e3f6cdf526f6df4bdded67be640caab0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37ea091136521fc83fc63a8fb752e0f4f72cb49f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safemultiply"></a>SafeMultiply
 兩個數目相乘在一起的方式，防止溢位。  
@@ -36,10 +39,10 @@ inline bool SafeMultiply (
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `t`  
+ [輸入] `t`  
  要相乘的第一個數字。 這必須為類型 T。  
   
- [in] `u`  
+ [輸入] `u`  
  要相乘的第二個數字。 這必須為類型 U。  
   
  [輸出] `result`  
@@ -61,7 +64,7 @@ inline bool SafeMultiply (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

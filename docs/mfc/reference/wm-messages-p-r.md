@@ -44,11 +44,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 120560ee857cfcbb276d7da2e8c129f9535243bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6e00b8ebe66fe08b620d43430dbee338d69a455f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wm-messages-p---r"></a>WM_ 訊息：P - R
 下列的對應項目對應至函式原型：  
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/24/2017
 |ON_WM_RENDERALLFORMATS()|afx_msg void [OnRenderAllFormats](../../mfc/reference/cwnd-class.md#onrenderallformats)（);|  
 |ON_WM_RENDERFORMAT()|afx_msg void [OnRenderFormat](../../mfc/reference/cwnd-class.md#onrenderformat)(UINT);|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [訊息對應](../../mfc/reference/message-maps-mfc.md)   
  [WM_ 訊息的處理常式](../../mfc/reference/handlers-for-wm-messages.md)
 

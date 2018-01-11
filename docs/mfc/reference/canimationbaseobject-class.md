@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -33,8 +32,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nGroupID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_nObjectID
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject::m_pParentController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationBaseObject [MFC], CAnimationBaseObject
 - CAnimationBaseObject [MFC], ApplyTransitions
@@ -59,16 +57,16 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 35af11c38c70513cb2225bbeb8e74c4ab61c8cc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 0e866ec4858ecc32c4608d1fd9cbd9d42d4b1eee
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject 類別
 所有動畫物件的基底類別。  
@@ -79,18 +77,18 @@ ms.lasthandoff: 10/09/2017
 class CAnimationBaseObject : public CObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|多載。 建構的動畫物件。|  
 |[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|解構函式。 動畫物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationBaseObject::ApplyTransitions](#applytransitions)|加入分鏡腳本與封裝的動畫變數的轉換。|  
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|移除所有相關的轉換。|  
@@ -107,16 +105,16 @@ class CAnimationBaseObject : public CObject;
 |[CAnimationBaseObject::SetID](#setid)|設定新的識別碼。|  
 |[CAnimationBaseObject::SetUserData](#setuserdata)|設定使用者定義的資料。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|會收集包含的動畫變數的指標。|  
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|建立動畫物件和其容器中所包含的動畫變數之間的關聯性。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|指定是否應該自動終結相關的轉換。|  
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|儲存使用者定義的資料。|  
@@ -442,6 +440,5 @@ void SetUserData (DWORD dwUserData);
 ### <a name="remarks"></a>備註  
  您可以使用這個方法將自訂資料與動畫物件產生關聯。 這項資料可能會稍後在執行階段由擷取 GetUserData。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

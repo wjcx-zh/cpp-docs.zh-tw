@@ -30,11 +30,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8a55f100bb23f098f927231331e727fc2972eb4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45c9e8e7cd2b9396592416ea9845c97d75a7d648
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagnostic-services"></a>診斷服務
 MFC 程式庫提供許多診斷服務，可讓您更輕鬆地對程式進行偵錯。 這些診斷服務包含巨集和全域函式，可讓您追蹤程式的記憶體配置、在執行階段傾印物件的內容，以及在執行階段列印偵錯訊息。 診斷服務的巨集和全域函式可分為下列分類：  
@@ -293,7 +294,7 @@ ENSURE_VALID( booleanExpression  )
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [確認](#verify)   
  [ATLENSURE](#altensure)
@@ -323,7 +324,7 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [判斷提示](#assert)   
  [VERIFY](#verify)
@@ -415,7 +416,7 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CObject::Dump](cobject-class.md#dump)   
 
 
@@ -516,7 +517,7 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>需求  
  **標頭：** afx.h  
 
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [CObject::Dump](cobject-class.md#dump)   
 
 
@@ -593,7 +594,7 @@ void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
   
  例如下, 表描述上述輸出第一行：  
   
-|輸出|說明|  
+|輸出|描述|  
 |------------|-----------------|  
 |`00427D55:`|最後一個函式呼叫的傳回位址。|  
 |`DUMP2\DEBUG\DUMP2.EXE!`|包含函式呼叫的模組完整路徑名稱。|  
@@ -618,7 +619,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bDump`  
+ [輸入] `bDump`  
  `TRUE` 表示已啟用記憶體流失傾印；`FALSE` 則表示已停用記憶體流失傾印。  
   
 ### <a name="return-value"></a>傳回值  
@@ -847,5 +848,5 @@ void AfxDoForAllObjects(
   
  [!code-cpp[NVC_MFCCollections#116](../../mfc/codesnippet/cpp/diagnostic-services_19.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

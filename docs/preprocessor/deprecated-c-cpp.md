@@ -1,50 +1,52 @@
 ---
-title: "deprecated (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.deprecated"
-  - "deprecated_CPP"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "deprecated pragma"
-  - "Pragma, deprecated"
+title: "已被取代 （C/c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.deprecated
+- deprecated_CPP
+dev_langs: C++
+helpviewer_keywords:
+- deprecated pragma
+- pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7ee6f8c77c1596789fcb731833a1fb432e77d7e0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# deprecated (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**deprecated** pragma 可讓您指出，在未來版本中可能不再支援或不應該再使用某個函式、類型或任何其他識別項。  
+# <a name="deprecated-cc"></a>deprecated (C/C++)
+**取代**pragma 可讓您指出，函式、 類型或任何其他識別項可能不再支援未來版本，或應該不會再使用。  
+> [!NOTE]
+> 如需 C + + 14`[[deprecated]]`屬性，以及何時使用該指引屬性 vs Microsoft declspec 或 pragma，請參閱[c + + 標準屬性](../cpp/attributes2.md)屬性。
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-  
 #pragma deprecated( identifier1 [,identifier2, ...] )  
 ```  
   
-## 備註  
- 當編譯器遇到取代符號時，就會發出 [C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)。  
+## <a name="remarks"></a>備註  
+ 當編譯器遇到所指定的識別項**取代**pragma，就會發出編譯器警告[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)。   
   
- 您可以取代巨集名稱。  為巨集名稱加上引號，否則會發生巨集展開。  
+ 您可以取代巨集名稱。 為巨集名稱加上引號，否則會發生巨集展開。  
   
- [deprecated](../cpp/deprecated-cpp.md) `__declspec` 修飾詞可讓您為特定形式的多載函式指定取代狀態。  
+ 因為**取代**pragma 適用於所有符合的識別項，而且不會計入帳戶的簽章，無法淘汰的多載函式的特定版本的最佳選項。 帶入範圍觸發程序警告任何比對函式名稱。
+
+  我們建議您在使用 C + + 14`[[deprecated]]`屬性，如果可能的話，而不是**取代**pragma。 Microsoft 專有[__declspec （deprecated)](../cpp/deprecated-cpp.md)宣告修飾詞也是較佳的選擇，在許多情況下，比**取代**pragma。 `[[deprecated]]`屬性和`__declspec(deprecated)`修飾詞可讓您指定特定形式的多載函式已被取代的狀態。 診斷的警告，才會出現在特定的多載函式的參考屬性或修飾詞套用至。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // pragma_directive_deprecated.cpp  
@@ -81,5 +83,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

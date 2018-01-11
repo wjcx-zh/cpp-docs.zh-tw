@@ -1,41 +1,42 @@
 ---
-title: "collection_adapter::base (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "基底成員 [STL/CLR]"
+title: "collection_adapter::base (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::base
+dev_langs: C++
+helpviewer_keywords: base member [STL/CLR]
 ms.assetid: 44928046-3fda-4974-817f-bc61a6f11b9f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 920235952f57bf82c6d8607b9732592053941b9c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::base (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定要包裝的 BCL 介面。  
+# <a name="collectionadapterbase-stlclr"></a>collection_adapter::base (STL/CLR)
+將指定的已包裝的 BCL 介面。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 Coll^ base();  
 ```  
   
-## 備註  
- 成員函式傳回儲存的 BCL 介面控制代碼。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回儲存的 BCL 介面控制代碼。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_collection_adapter_base.cpp   
@@ -61,12 +62,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**base\(\) same \= True**   
-## 需求  
- **標頭:** \<cliext\/adapter\>  
+```Output  
+ x x x x x x  
+base() same = True  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<配接器 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

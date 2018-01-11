@@ -117,11 +117,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6d5766a883c8bec143a7a635a657ba2545d1d612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5c27f27b8369aeb5fdb15d37dc196556a5f508d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 提供 Windows 單一文件介面 (SDI) 重疊或快顯框架視窗的功能，以及管理視窗的成員。  
@@ -132,17 +133,17 @@ ms.lasthandoff: 10/24/2017
 class CFrameWnd : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFrameWnd::CFrameWnd](#cframewnd)|建構 `CFrameWnd` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFrameWnd::ActivateFrame](#activateframe)|對使用者的畫面格查看及使用。|  
 |[CFrameWnd::BeginModalState](#beginmodalstate)|將框架視窗設定為強制回應。|  
@@ -189,9 +190,9 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::ShowControlBar](#showcontrolbar)|呼叫以顯示控制項列。|  
 |[CFrameWnd::ShowOwnedWindows](#showownedwindows)|顯示所有視窗的子`CFrameWnd`物件。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFrameWnd::OnCreateClient](#oncreateclient)|建立用戶端視窗框架。|  
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|隱藏目前的 MFC 應用程式中的功能表之前呼叫。|  
@@ -199,7 +200,7 @@ class CFrameWnd : public CWnd
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|控制項的自動啟用和停用功能表項目的功能。|  
 |[CFrameWnd::rectDefault](#rectdefault)|將此變數傳遞靜態`CRect`做為參數建立時`CFrameWnd`物件可讓 Windows 在選擇視窗的初始大小和位置。|  
@@ -247,7 +248,7 @@ class CFrameWnd : public CWnd
   
 -   如果主應用程式視窗框架視窗，框架視窗會是執行 WinHelp 的內容。 關閉框架視窗會關閉 WINHELP。如果它的啟動此應用程式的，EXE。  
   
- 不使用 c + +**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow` 。 `CFrameWnd`實作`PostNcDestroy`當視窗終結時，將會刪除 c + + 物件。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。  
+ 不使用 c + +**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow`。 `CFrameWnd`實作`PostNcDestroy`當視窗終結時，將會刪除 c + + 物件。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。  
   
  如需有關`CFrameWnd`，請參閱[框架視窗](../../mfc/frame-windows.md)。  
   
@@ -986,7 +987,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nState`|指定是否要顯示或隱藏功能表。 `nState`參數可以是下列值：<br /><br /> -如果它隱藏的但如果它會顯示就沒有作用，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02)-會隱藏功能表。|  
+|[輸入] `nState`|指定是否要顯示或隱藏功能表。 `nState`參數可以是下列值：<br /><br /> -如果它隱藏的但如果它會顯示就沒有作用，AFX_MBS_VISIBLE (0x01)-會顯示功能表。<br />-如果它是可見的但沒有任何作用，如果它隱藏 AFX_MBS_HIDDEN (0x02)-會隱藏功能表。|  
   
 ### <a name="return-value"></a>傳回值  
  `true`如果此方法已成功變更功能表檢視狀態。，否則， `false`。  
@@ -1005,7 +1006,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `nStyle`|指定功能表預設隱藏此項目，或為可見和具有焦點。 `nStyle`參數可以是下列值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示在任何時候，而依預設並沒有焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設隱藏功能表。 如果隱藏功能表上，按下 ALT 鍵以顯示功能表，並將焦點提供。 如果顯示的功能表上，按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124;AFX_MBV_DISPLAYONF10 (0X04)<br />     （合 (OR)）-預設為隱藏功能表。 如果隱藏功能表上，按 F10 鍵，顯示功能表，並將焦點提供。 如果顯示的功能表上，按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵，以便隱藏，則會顯示功能表。|  
+|[輸入] `nStyle`|指定功能表預設隱藏此項目，或為可見和具有焦點。 `nStyle`參數可以是下列值：<br /><br /> -AFX_MBV_KEEPVISIBLE (0X01)-<br />     功能表會顯示在任何時候，而依預設並沒有焦點。<br />-AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     預設隱藏功能表。 如果隱藏功能表上，按下 ALT 鍵以顯示功能表，並將焦點提供。 如果顯示的功能表上，按 alt 鍵或 ESC 鍵以隱藏功能表。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124;AFX_MBV_DISPLAYONF10 (0X04)<br />     （合 (OR)）-預設為隱藏功能表。 如果隱藏功能表上，按 F10 鍵，顯示功能表，並將焦點提供。 如果顯示的功能表上，按 F10 鍵來切換開啟或關閉功能表的焦點。 直到您按 alt 鍵或 ESC 鍵，以便隱藏，則會顯示功能表。|  
   
 ### <a name="remarks"></a>備註  
  如果值`nStyle`參數不是有效的這個方法會判斷提示中偵錯模式而且引發[CInvalidArgException](../../mfc/reference/cinvalidargexception-class.md)在發行模式中。 發生其他執行階段錯誤時，這個方法偵錯模式中的判斷提示，並引發例外狀況衍生自[CException](../../mfc/reference/cexception-class.md)類別。  
@@ -1145,7 +1146,7 @@ void ShowOwnedWindows(BOOL bShow);
  `bShow`  
  指定擁有的 windows 是否要顯示或隱藏。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

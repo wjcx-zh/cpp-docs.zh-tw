@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
 - AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationValue::m_value
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationValue [MFC], CAnimationValue
 - CAnimationValue [MFC], AddTransition
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b37801619fae84519dde000c922d34c4b9e1509
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: e56217b4cf92583d965b221360803ce4b4de3b44
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvalue-class"></a>CAnimationValue 類別
 實作有一個值的動畫物件功能。  
@@ -49,32 +47,32 @@ ms.lasthandoff: 10/09/2017
 class CAnimationValue : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationValue::CAnimationValue](#canimationvalue)|多載。 建構 CAnimationValue 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationValue::AddTransition](#addtransition)|將轉換套用至值。|  
 |[CAnimationValue::GetValue](#getvalue)|多載。 擷取目前的值。|  
 |[CAnimationValue::GetVariable](#getvariable)|提供封裝的動畫變數的存取。|  
 |[CAnimationValue::SetDefaultValue](#setdefaultvalue)|設定預設值。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|將封裝的動畫變數放入清單。 (覆寫[CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist)。)|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationValue::operator 雙](#operator_double)|提供 CAnimationValue 雙之間轉換。|  
 |[CAnimationValue::operator INT32](#operator_int32)|提供 CAnimationValue INT32 之間轉換。|  
@@ -82,7 +80,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|表示動畫值之封裝的動畫變數。|  
   
@@ -255,6 +253,5 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 ### <a name="remarks"></a>備註  
  使用這個方法可以設定預設值。 尚未啟動動畫及/或基礎 COM 物件尚未建立時，預設值被傳回應用程式。 如果已經建立封裝在 CAnimationVarible 基礎 COM 物件，這個方法會重新建立它，因此您可能需要再次呼叫 EnableValueChanged/EnableIntegerValueChanged 方法。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

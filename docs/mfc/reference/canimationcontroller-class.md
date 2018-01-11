@@ -114,11 +114,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e8f76e8ace4eff6bd02efeba8a42554a27618bc1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79343615b633b583775a482f0a9d2155e79ede10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController 類別
 實作動畫控制器，提供用來建立和管理動畫的中央介面。  
@@ -129,18 +130,18 @@ ms.lasthandoff: 10/24/2017
 class CAnimationController : public CObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationController::CAnimationController](#canimationcontroller)|建構動畫控制器。|  
 |[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|解構函式。 動畫控制器物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationController::AddAnimationObject](#addanimationobject)|將動畫物件加入至動畫控制器所屬的群組。|  
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|加入到群組的主要畫面格。|  
@@ -181,16 +182,16 @@ class CAnimationController : public CObject;
 |[CAnimationController::SetRelatedWnd](#setrelatedwnd)|建立動畫控制器，並在視窗之間的關聯性。|  
 |[CAnimationController::UpdateAnimationManager](#updateanimationmanager)|指示要更新所有動畫變數的值的動畫管理員。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|多載。 Helper 會清除群組。|  
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|指定群組的動畫只排程時，由架構呼叫。|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|主要畫面格，表示啟動分鏡腳本。|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|指定動畫控制器是否為有效。 這個成員是設定為 FALSE，如果目前作業系統不支援 Windows 動畫 API。|  
@@ -998,5 +999,5 @@ virtual void UpdateAnimationManager();
 ### <a name="remarks"></a>備註  
  呼叫這個方法將動畫管理員，為目前時間往前推、 視需要變更分鏡腳本的狀態和更新任何動畫變數設為適當插補值。 在內部這個方法會呼叫 IUIAnimationTimer::GetTime(timeNow) IUIAnimationManager::Update(timeNow)。 覆寫此方法以自訂此行為衍生類別中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)

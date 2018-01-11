@@ -1,66 +1,68 @@
 ---
-title: "CManualAccessor::CreateParameterAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::CreateParameterAccessor"
-  - "ATL.CManualAccessor.CreateParameterAccessor"
-  - "CManualAccessor.CreateParameterAccessor"
-  - "CreateParameterAccessor"
-  - "CManualAccessor::CreateParameterAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateParameterAccessor 方法"
+title: "Cmanualaccessor:: Createparameteraccessor |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::CreateParameterAccessor
+- ATL.CManualAccessor.CreateParameterAccessor
+- CManualAccessor.CreateParameterAccessor
+- CreateParameterAccessor
+- CManualAccessor::CreateParameterAccessor
+dev_langs: C++
+helpviewer_keywords: CreateParameterAccessor method
 ms.assetid: d0a2095b-b37c-4472-accc-45ef365a18c8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8ef1fc30c9188395d90171a250b96d116c2913aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::CreateParameterAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-參數繫結配置記憶體結構並初始化參數資料成員。  
+# <a name="cmanualaccessorcreateparameteraccessor"></a>CManualAccessor::CreateParameterAccessor
+參數繫結結構配置記憶體並初始化參數資料成員。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT CreateParameterAccessor(   
-   int nBindEntries,   
-   void* pBuffer,   
-   DBLENGTH nBufferSize    
+      HRESULT CreateParameterAccessor(   
+   int nBindEntries,   
+   void* pBuffer,   
+   DBLENGTH nBufferSize    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `nBindEntries`  
- \[的欄數。  
+ [in]資料行數目。  
   
  `pBuffer`  
- \[in 儲存輸入資料行的緩衝區的指標。  
+ [in]儲存輸入資料行緩衝區的指標。  
   
  `nBufferSize`  
- \[緩衝區的大小 \(以位元組為單位\)。  
+ [in]以位元組為單位的緩衝區大小。  
   
-## 傳回值  
- 其中一個 `HRESULT` 值。  
+## <a name="return-value"></a>傳回值  
+ 其中一個標準`HRESULT`值。  
   
-## 備註  
- 您必須在呼叫 [AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)之前呼叫這個函式。  
+## <a name="remarks"></a>備註  
+ 您必須呼叫此函式呼叫之前[AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)   
- [CManualAccessor::CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)   
+ [Cmanualaccessor:: Createaccessor](../../data/oledb/cmanualaccessor-createaccessor.md)   
  [CManualAccessor::AddParameterEntry](../../data/oledb/cmanualaccessor-addparameterentry.md)

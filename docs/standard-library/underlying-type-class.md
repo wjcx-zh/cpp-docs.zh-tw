@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::underlying_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- underlying_type
+f1_keywords: type_traits/std::underlying_type
+dev_langs: C++
+helpviewer_keywords: underlying_type
 ms.assetid: 691ddce3-2677-4480-bd35-d933fab85d3e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8c345c6751ac962602a863d52addce2a7d4f0fcb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 8d5af1b1115d2845fcfa4dbd89dc3776e7e66ccf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="underlyingtype-class"></a>underlying_type 類別
 產生列舉類型的基礎整數類型。  
@@ -49,9 +46,8 @@ struct underlying_type;
   
  **命名空間：** std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

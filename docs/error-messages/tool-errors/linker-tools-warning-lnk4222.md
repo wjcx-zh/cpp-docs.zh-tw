@@ -1,32 +1,31 @@
 ---
-title: "連結器工具警告 LNK4222 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4222"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4222"
+title: "連結器工具警告 LNK4222 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4222
+dev_langs: C++
+helpviewer_keywords: LNK4222
 ms.assetid: b7bb1794-41fb-4c83-b9b0-59c0d786a7da
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a54c452a5df6f99260d6d01fbf4bb9f2f17b955
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 連結器工具警告 LNK4222
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-不可指派序數給已匯出的符號 'symbol'  
+# <a name="linker-tools-warning-lnk4222"></a>連結器工具警告 LNK4222
+匯出的符號 'symbol' 不可指派序數  
   
- 下列符號不可用序數匯出：  
+ 不應該依序數匯出下列符號：  
   
 -   `DllCanUnloadNow`  
   
@@ -42,7 +41,7 @@ caps.handback.revision: 8
   
 -   `DllUnregisterServer`  
   
- 這些函式一律都使用 `GetProcAddress`，按照名稱來尋找。  連結器將對這種匯出方式發出警告，因為這會產生較大的映像。  當序數匯出範圍很大，而相對地僅少數匯出時，就會發生這種問題。  例如：  
+ 這些函式一定會位於依名稱、 使用`GetProcAddress`。 連結器警告這種匯出是的因為它可能會導致較大的影像。 如果序數匯出的範圍很大，而相對較少的匯出，則會發生此問題。 例如，套用至物件的  
   
 ```  
 EXPORTS  
@@ -50,7 +49,7 @@ EXPORTS
    MyOtherAPI      @100  
 ```  
   
- 將會在匯出位址表要求 100 個位置，但其中 98 個 \(2\-99\) 沒有真正使用到。  另一方面，  
+ 將會需要 100 個匯出位址表格中具有 98 個 (2-99) 沒有真正位置。 相反地，  
   
 ```  
 EXPORTS  
@@ -58,4 +57,4 @@ EXPORTS
    MyOtherAPI      @100  
 ```  
   
- 只需要兩個位置 \(請注意，您也可以使用 [\/EXPORT](../../build/reference/export-exports-a-function.md) 連結器選項匯出\)。
+ 將需要兩個位置。 (請注意，您也可以匯出與[/EXPORT](../../build/reference/export-exports-a-function.md)連結器選項。)

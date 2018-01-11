@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9c32cc76c27b89bd3820e24bc7f38da0d12e0add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81eb92a93b60259abdb90020bb6e89cb0664eea5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-c"></a>規則運算式 (C++)
 C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可用的文法變化時使用規則運算式。  
@@ -34,7 +35,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
 -   `extended`： 規則運算式或 ERE 的擴充 POSIX。
 -   `awk`： 這是`extended`，但它還有其他非列印字元的逸出。
 -   `grep`： 這是`basic`，但它也可讓新行字元 ('\n') 字元來分隔替代。
--   `egrep`： 這是`extended`，但它也可讓新行字元來分隔 alternatios。
+-   `egrep`： 這是`extended`，但它也可讓新行字元來分隔替代。
 
 根據預設，如果已指定沒有文法，`ECMAScript`假設。 您可以指定只有一個文法。  
   
@@ -46,7 +47,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
 零或多個旗標可能會結合指定的規則運算式引擎行為的文法。 如果只指定旗標，`ECMAScript`會假定為文法。
 
-### <a name="element"></a>項目  
+### <a name="element"></a>元素  
  項目可以是下列其中一項：  
   
 -   「一般字元」，符合目標序列中的相同字元。  
@@ -73,7 +74,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
 -   格式為 "\\`k`" 的「識別逸出」，其符合目標序列中的字元 `k`。  
   
- 範例：  
+ 例如：  
   
 -   "a" 符合目標序列 "a"，但不符合目標序列 "B"、"b" 或 "c"。  
   
@@ -109,7 +110,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
 -   格式為 "\d"、"\D"、"\s"、"\S"、"\w"、"\W" 的「DSW 逸出字元」。 為字元類別提供簡短名稱。  
   
- 範例：  
+ 例如：  
   
 -   "(:a)" 符合目標序列 "a"，但 "(:a)\1" 無效，因為沒有擷取群組 1。  
   
@@ -176,7 +177,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
 ##  <a name="grammarsummary"></a> 文法摘要  
  下表摘要說明各種規則運算式文法的功能：  
   
-|項目|基本|延伸|ECMAScript|grep|egrep|awk|  
+|元素|基本|延伸|ECMAScript|grep|egrep|awk|  
 |-------------|---------|---------|----------|----------|-----------|---------|  
 |使用 '&#124;' 的替代||+|+||+|+|  
 |使用 '\n' 的替代||||+|+||  
@@ -348,7 +349,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
  在 `ECMAScript` 中，使用 '\\]' 來代表括號運算式中的字元 ']'。  
   
- 範例：  
+ 例如：  
   
 -   "[]a" 符合目標序列 "a"，因為括號運算式為空白。  
   
@@ -378,7 +379,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
  在 `basic` 和 `grep` 中，下列字元有特殊意義：  
   
--   .   [   \  
+-   。   [   \  
   
  此外，在 `basic` 和 `grep`，下列字元於特定內容中使用時有特殊意義：  
   
@@ -390,7 +391,7 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
   
  在 `extended`、`egrep` 和 `awk` 中，下列字元有特殊意義：  
   
--   .   [   \   (   *   +   ?   {   &#124;  
+-   。   [   \   (   *   +   ?   {   &#124;  
   
  此外，在 `extended`、`egrep` 和 `awk`，下列字元於特定內容中使用時有特殊意義。  
   
@@ -461,6 +462,6 @@ C + + 標準程式庫支援多個規則運算式文法中。 本主題討論可�
 ||"\\\n"|"\n"|  
 |"$nn"||符合位置之擷取群組的字元序列`nn`，其中`nn`是介於 10 到 99 之間的數字 (`[match[nn].first, match[nn].second)`)|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)
 

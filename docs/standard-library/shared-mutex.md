@@ -56,11 +56,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cdca4861161a82521fab07a8d503d5d0dd84fbf9
-ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.workload: cplusplus
+ms.openlocfilehash: 2cdfa90b137da2e1a4c7460dfa54663ddb9a3581
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex >
 
@@ -68,13 +69,13 @@ ms.lasthandoff: 11/15/2017
 
 標頭&lt;shared_mutex > 定義類別`shared_mutex`和`shared_timed_mutex`，此範本類別`shared_lock`，和樣板函式`swap`共用 mutex 支援。
 
-|類別|說明|
+|類別|描述|
 |-------------|-----------------|
 |[shared_mutex 類別](../standard-library/shared-mutex.md#class_shared_mutex)|共用的 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
 |[shared_timed_mutex 類別](../standard-library/shared-mutex.md#class_shared_timed_mutex)|共用的計時 mutex 類型，可由一個代理程式以獨佔方式鎖定，或者由多個代理程式以非獨佔方式共用。|
 |[shared_lock 類別](../standard-library/shared-mutex.md#class_shared_lock)|樣板類別，會包裝共用的 mutex 包裝以支援計時鎖定作業，並以非獨佔方式供多個執行緒共用。|
 
-|函式|說明|
+|函式|描述|
 |---------------|-----------------|
 |[swap](../standard-library/shared-mutex.md#function_swap)|交換函式參數所參考的共用 mutex 物件內容。|
 
@@ -242,7 +243,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 
  **命名空間：** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)  
 [&lt;mutex>](../standard-library/mutex.md)

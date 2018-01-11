@@ -1,48 +1,48 @@
 ---
-title: "&lt;example&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<example>"
-  - "example"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<example> C++ XML 標記"
-  - "example C++ XML 標記"
+title: "&lt;範例&gt;（Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <example>
+- example
+dev_langs: C++
+helpviewer_keywords:
+- <example> C++ XML tag
+- example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 939c14d0a0e04ad8970dea7da7888a94bb4de08f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;example&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<example\> 標記讓您指定一個範例，說明如何使用方法或其他程式庫成員。  通常，這也會牽涉到 [\<code\>](../ide/code-visual-cpp.md) 標記的用途。  
+# <a name="ltexamplegt-visual-c"></a>&lt;範例&gt;（Visual c + +）
+\<example> 標記可讓您指定如何使用方法或其他程式庫成員的範例。 通常，這也會涉及使用[\<程式碼 >](../ide/code-visual-cpp.md)標記。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 <example>description</example>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `description`  
- 為程式碼範例的描述。  
+ 程式碼範例的描述。  
   
-## 備註  
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 進行編譯，將文件註解處理為檔案。  
+## <a name="remarks"></a>備註  
+ 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // xml_example_tag.cpp  
@@ -69,5 +69,5 @@ public:
 };  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

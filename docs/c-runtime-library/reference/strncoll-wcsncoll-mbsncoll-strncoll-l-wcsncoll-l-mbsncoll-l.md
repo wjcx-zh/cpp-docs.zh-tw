@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -43,8 +42,7 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -69,36 +67,22 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d9498ca8aaab36e7443488a1c98b70ad4b7604d5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 51777605e24d9bb3ddf6fa7e6b9ad9c332165881
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 使用地區設定特定資訊，以比較字串。  
   
 > [!IMPORTANT]
-> 不可在於  `_mbsncoll` 中執行的應用程式中使用 `_mbsncoll_l` 和 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsncoll` 和 `_mbsncoll_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -160,7 +144,7 @@ int _mbsncoll_l(
  所有這些函式都會傳回 `_NLSCMPERROR`。 若要使用 `_NLSCMPERROR`，請包括 STRING.h 或 MBSTRING.h。 如果 `string1` 或 `string2` 包含定序順序之網域外部的寬字元碼，則 `_wcsncoll` 可能會失敗。 發生錯誤時，`_wcsncoll` 可能會將 `errno` 設定為 `EINVAL`。 若要檢查呼叫 `_wcsncoll` 時是否發生錯誤，請將 `errno` 設定為 0，然後在呼叫 `_wcsncoll` 之後檢查 `errno`。  
   
 ## <a name="remarks"></a>備註  
- 所有這些函式都會根據目前使用中的字碼頁來執行 `string1` 與 `string2` 中第一個 `count` 字元的區分大小寫比較。 只有在字元集順序與字碼頁中的字典編撰字元順序不同時，以及字串比較注意這項差異時，才使用這些函式。 字元集順序是地區設定相關。 這些沒有 `_l` 後置詞之函式的版本會使用目前的地區設定，但具有 `_l` 後置詞的版本會使用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 所有這些函式都會根據目前使用中的字碼頁來執行 `string1` 與 `string2` 中第一個 `count` 字元的區分大小寫比較。 只有在字元集順序與字碼頁中的字典編撰字元順序不同時，以及字串比較注意這項差異時，才使用這些函式。 字元集順序是地區設定相關。 這些沒有 `_l` 後置詞之函式的版本會使用目前的地區設定，但具有 `_l` 後置詞的版本會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  這些函式全都會驗證它們的參數。 如果 `string1` 或 `string2` 是 Null 指標，或者 `count` 大於 `INT_MAX`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 `_NLSCMPERROR`，並將 `errno` 設為 `EINVAL`。  
   
@@ -173,7 +157,7 @@ int _mbsncoll_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_strncoll`, `_strncoll_l`|\<string.h>|  
 |`_wcsncoll`, `_wcsncoll_l`|\<wchar.h> 或 \<string.h>|  
@@ -181,7 +165,7 @@ int _mbsncoll_l(
   
  如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [strcoll 函式](../../c-runtime-library/strcoll-functions.md)   

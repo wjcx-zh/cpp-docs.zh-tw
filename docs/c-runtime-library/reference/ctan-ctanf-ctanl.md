@@ -43,11 +43,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5abde9e27f432ee3ac71696cb1e254c23c6d0d87
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8cf5ceb03a91210ed7ce03c59cef38b36bea487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan、ctanf、ctanl
 擷取複數的正切值。  
@@ -82,20 +83,20 @@ _Lcomplex ctanl(
 |輸入|SEH 例外狀況|`_matherr` 例外狀況|  
 |-----------|-------------------|--------------------------|  
 |± ∞、QNAN、IND|無|_DOMAIN|  
-|± ∞ (`tan`, `tanf`)|無效|_DOMAIN|  
+|± ∞ (`tan`, `tanf`)|INVALID|_DOMAIN|  
   
 ## <a name="remarks"></a>備註  
  因為 C++ 允許多載，所以您可以呼叫採用並傳回 `ctan` 和 `_Fcomplex` 值的 `_Lcomplex` 的多載。 在 C 程式中， `ctan` 會一律採用及傳回 `_Dcomplex` 。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|C 標頭|C++ 標頭|  
+|常式傳回的值|C 標頭|C++ 標頭|  
 |-------------|--------------|------------------|  
 |`ctan`,               `ctanf`, `ctanl`|\<complex.h>|\<ccomplex>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [依字母順序排列的函式參考](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh、catanhf、catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh、ctanhf、ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   

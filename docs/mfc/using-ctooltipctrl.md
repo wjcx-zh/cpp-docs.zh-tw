@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d73e5cf0ac096d0cce13de296fbb3b290b27db7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82785d29d57fcdbd64addbe69dcc90ed3d2c9829
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctooltipctrl"></a>Using CToolTipCtrl
 [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)類別會封裝工具提示控制項，小型的快顯視窗顯示單行文字描述的應用程式中工具用途的功能。 工具提示大部分時間都在隱藏狀態，只有在使用者將游標放置在工具上並停留約二分之一秒時才會顯現。 工具提示會出現在游標周圍，在使用者按一下滑鼠按鈕或將游標移開工具時就會消失。  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [管理工具提示控制項](../mfc/manipulating-the-tool-tip-control.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

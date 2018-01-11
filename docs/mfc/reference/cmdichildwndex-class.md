@@ -123,11 +123,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8259103f719fadb0543ae91ffc3334d38affdea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21b302c14d2b4aa17b2818e489a1400230332521
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx 類別
 `CMDIChildWndEx`類別會提供功能的 Windows 多重文件介面 (MDI) 子視窗。 它會擴充功能的[CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)。 當 MDI 應用程式使用特定 MFC 類別時，Framework 必須有這個類別。  
@@ -141,11 +142,11 @@ ms.lasthandoff: 10/24/2017
 class CMDIChildWndEx : public CMDIChildWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|在內部，由架構呼叫以啟動上層框架時應該啟動應用程式，從工作列 索引標籤。|  
 |`CMDIChildWndEx::AddDockSite`|這個方法不會使用或實作。|  
@@ -239,10 +240,10 @@ BOOL AddPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
  在窗格的指標。  
   
- [in] `bTail`  
+ [輸入] `bTail`  
  `TRUE`若要窗格的清單結尾加入窗格，停駐的管理員。否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -256,7 +257,7 @@ void AddTabbedPane(CDockablePane* pControlBar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
  在窗格的指標。  
   
 ##  <a name="adjustdockinglayout"></a>CMDIChildWndEx::AdjustDockingLayout  
@@ -267,7 +268,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `hdwp`  
+ [輸入] `hdwp`  
  延後的視窗位置結構的控制代碼。  
   
 ##  <a name="canshowonmditabs"></a>CMDIChildWndEx::CanShowOnMDITabs  
@@ -305,13 +306,13 @@ void DockPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  在窗格的指標。  
   
- [in] `nDockBarID`  
+ [輸入] `nDockBarID`  
  窗格的識別碼。  
   
- [in] `lpRect`  
+ [輸入] `lpRect`  
  矩形的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -349,7 +350,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwDockStyle`  
+ [輸入] `dwDockStyle`  
  指定已啟用的主框架視窗的側邊。 使用一或多個下列旗標。  
   
 - `CBRS_ALIGN_LEFT`  
@@ -371,7 +372,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwDockStyle`  
+ [輸入] `dwDockStyle`  
  指定要啟用的停駐對齊。  
   
 ### <a name="return-value"></a>傳回值  
@@ -453,7 +454,7 @@ CBasePane* GetPane(UINT nID);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  若要尋找窗格的控制項 ID。  
   
 ### <a name="return-value"></a>傳回值  
@@ -506,13 +507,13 @@ BOOL InsertPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
  要插入窗格指標。  
   
- [in] `pTarget`  
+ [輸入] `pTarget`  
  在相鄰的窗格指標。  
   
- [in] `bAfter`  
+ [輸入] `bAfter`  
  如果`TRUE`，`pControlBar`後面插入`pTarget`。 如果`FALSE`，`pControlBar`插入之前`pTarget`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -529,13 +530,13 @@ BOOL IsPointNearDockSite(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  指定的點。  
   
- [in] `dwBarAlignment`  
+ [輸入] `dwBarAlignment`  
  指定的點是附近的邊緣。 可能的值為`CBRS_ALIGN_LEFT`， `CBRS_ALIGN_RIGHT`， `CBRS_ALIGN_TOP`，和`CBRS_ALIGN_BOTTOM`  
   
- [in] `bOuterEdge`  
+ [輸入] `bOuterEdge`  
  `TRUE`如果點附近外框的停駐位置。`FALSE`否則。  
   
 ### <a name="return-value"></a>傳回值  
@@ -580,7 +581,7 @@ virtual BOOL OnMoveMiniFrame(CWnd* pFrame);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pFrame`  
+ [輸入] `pFrame`  
  迷你框架視窗的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -596,10 +597,10 @@ virtual void OnSetPreviewMode(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bPreview`  
+ [輸入] `bPreview`  
  如果`TRUE`，輸入 預覽列印模式。 如果`FALSE`，結束預覽列印模式。  
   
- [in] `pState`  
+ [輸入] `pState`  
  預覽列印狀態結構的指標。  
   
 ##  <a name="onupdateframetitle"></a>CMDIChildWndEx::OnUpdateFrameTitle  
@@ -610,7 +611,7 @@ virtual void OnUpdateFrameTitle(BOOL bAddToTitle);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAddToTitle`  
+ [輸入] `bAddToTitle`  
  如果`TRUE`，標題中加入文件名稱。  
   
 ##  <a name="panefrompoint"></a>CMDIChildWndEx::PaneFromPoint  
@@ -631,19 +632,19 @@ CBasePane* PaneFromPoint(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  指定的點，若要檢查的螢幕座標。  
   
- [in] `nSensitivity`  
+ [輸入] `nSensitivity`  
  搜尋區域增加此數量。 如果指定的點落在增加區域窗格可滿足搜尋條件。  
   
- [in] `bExactBar`  
+ [輸入] `bExactBar`  
  `TRUE`表示忽略`nSensitivity`參數，否則`FALSE`。  
   
- [in] `pRTCBarType`  
+ [輸入] `pRTCBarType`  
  如果沒有`NULL`，方法會搜尋窗格指定的型別。  
   
- [in] `dwAlignment`  
+ [輸入] `dwAlignment`  
  如果窗格找到指定的點，此參數會包含已最接近指定位置的窗格的側邊。 如需詳細資訊，請參閱＜備註＞一節。  
   
 ### <a name="return-value"></a>傳回值  
@@ -662,7 +663,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bNotify`  
+ [輸入] `bNotify`  
  如果`TRUE`，使用中視窗的就地項目接收的版面配置變更通知。  
   
 ##  <a name="removepanefromdockmanager"></a>CMDIChildWndEx::RemovePaneFromDockManager  
@@ -678,19 +679,19 @@ void RemovePaneFromDockManager(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pControlBar`  
+ [輸入] `pControlBar`  
  若要移除窗格指標。  
   
- [in] `bDestroy`  
+ [輸入] `bDestroy`  
  如果`TRUE`，[移除] 窗格會終結。  
   
- [in] `bAdjustLayout`  
+ [輸入] `bAdjustLayout`  
  如果`TRUE`，立即調整停駐的配置。  
   
- [in] `bAutoHide`  
+ [輸入] `bAutoHide`  
  如果`TRUE`，停駐的配置相關的自動隱藏列清單。 如果`FALSE`，停駐的配置相關規則窗格的清單。  
   
- [in] `pBarReplacement`  
+ [輸入] `pBarReplacement`  
  取代 [移除] 窗格之窗格的指標。  
   
 ##  <a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup  
@@ -701,7 +702,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `p`  
+ [輸入] `p`  
   
 ### <a name="remarks"></a>備註  
   
@@ -717,10 +718,10 @@ void ShowPane(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
- [in] `bShow`  
- [in] `bDelay`  
- [in] `bActivate`  
+ [輸入] `pBar`  
+ [輸入] `bShow`  
+ [輸入] `bDelay`  
+ [輸入] `bActivate`  
   
 ### <a name="remarks"></a>備註  
   
@@ -1066,7 +1067,7 @@ virtual void ActivateTopLevelFrame();
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMDIChildWnd 類別](../../mfc/reference/cmdichildwnd-class.md)   

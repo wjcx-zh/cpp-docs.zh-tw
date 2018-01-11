@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a925f476d67ac4bc5abd2270f6c0b96df67c4466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sampler-class"></a>sampler 類別
 取樣器類別會彙總使用的紋理取樣的取樣組態資訊。  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class sampler;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[取樣器建構函式](#ctor)|多載。 建構的取樣器執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[get_address_mode](#get_address_mode)|傳回`address_mode`的取樣器物件與相關聯。|  
 |[get_border_color](#get_border_color)|傳回之取樣器物件與相關聯的框線色彩。|  
@@ -56,13 +57,13 @@ class sampler;
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[operator=](#operator_eq)|多載。 指派運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[address_mode](#address_mode)|取得的地址模式`sampler`物件。|  
 |[border_color](#border_color)|取得框線的色彩`sampler`物件。|  
@@ -214,5 +215,5 @@ sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(a
 ### <a name="return-value"></a>傳回值  
  此取樣器執行個體的參考。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Concurrency::graphics 命名空間](concurrency-graphics-namespace.md)

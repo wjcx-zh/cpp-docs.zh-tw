@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46550d95675983db6d90cde6c846d6b3fcd6ab59
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa80911ff14d329dc483cd6497393c6c5595ef2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="containers-client-items"></a>容器：用戶端項目
 本文說明哪些用戶端項目以及應用程式應該從哪些類別衍生其用戶端項目。  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  `CDocItem`是基底類別`COleClientItem`和`COleServerItem`。 分別從這兩個衍生的類別物件會做為 OLE 項目以及用戶端和伺服器應用程式之間的媒介。 每次新的 OLE 項目加入至文件，MFC 架構就會將用戶端應用程式的 `COleClientItem` 衍生類別的新物件，加入到 `CDocItem` 物件的文件集合中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [容器](../mfc/containers.md)   
  [容器： 複合檔案](../mfc/containers-compound-files.md)   
  [容器： 使用者介面問題](../mfc/containers-user-interface-issues.md)   

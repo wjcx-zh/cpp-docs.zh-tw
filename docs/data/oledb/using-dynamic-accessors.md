@@ -1,38 +1,41 @@
 ---
-title: "使用動態存取子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "存取子 [C++], 動態"
-  - "動態存取子"
+title: "使用動態存取子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
 ms.assetid: e5d5bfa6-2b1d-49d0-8ced-914666422431
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b3d2e722ce96ff7a2f1add779377079a0eaecfc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 使用動態存取子
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-動態存取子可以讓您在不知道資料庫結構描述 \(基礎結構\) 時存取資料來源。  OLE DB 樣板程式庫提供了幾種可以幫助您達成此目的之類別。  
+# <a name="using-dynamic-accessors"></a>使用動態存取子
+動態存取子會讓您存取資料來源，當您在不知道資料庫結構描述 （基礎結構）。 OLE DB 樣板程式庫提供數種類別可以幫助您執行這項操作。  
   
- [DynamicConsumer](http://msdn.microsoft.com/zh-tw/2ccc4c61-6749-4e83-aa81-00f8009c0dc3) 範例將顯示使用動態存取子類別取得資料行資訊和動態地建立存取子的方法。  
+ [DynamicConsumer](http://msdn.microsoft.com/en-us/2ccc4c61-6749-4e83-aa81-00f8009c0dc3)範例示範如何使用動態存取子類別，以擷取資料行資訊，以動態方式建立存取子。  
   
-## 使用 CDynamicAccessor  
- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 能讓您在不知道資料庫結構描述 \(資料庫的基礎結構\) 的情況下，存取資料來源。  `CDynamicAccessor` 方法會取得資料行資訊，例如資料行名稱、計數和資料型別。  您可以在執行階段使用這些資料行資訊，動態地建立存取子。  資料行資訊儲存於這個類別所建立和管理的暫存區中。  使用 [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) 方法便可以取得這份位於暫存區的資料。  
+## <a name="using-cdynamicaccessor"></a>使用 CDynamicAccessor  
+ [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)可讓您存取資料來源，當您在不知道資料庫結構描述 （資料庫的基礎結構）。 `CDynamicAccessor`方法會取得資料行資訊，例如資料行名稱、 計數和資料類型。 您可以使用此資料行資訊在執行階段動態建立存取子。 資料行資訊會儲存在緩衝區中，建立和管理由這個類別。 取得資料緩衝區使用[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)方法。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // Using_Dynamic_Accessors.cpp  
@@ -98,14 +101,14 @@ int main( int argc, char* argv[] )
 }  
 ```  
   
-## 使用 CDynamicStringAccessor  
- 除了某個重要部分，[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) 的作用很相似於 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)。  `CDynamicAccessor` 要求資料必須是提供者報告時的原型格式，而 `CDynamicStringAccessor` 則要求提供者以字串資料方式擷取從資料存放區存取的所有資料。  這個對於不需要計算資料存放區值的簡單工作 \(例如，顯示或列印資料存放區的內容\) 來說相當有用。  
+## <a name="using-cdynamicstringaccessor"></a>使用 CDynamicStringAccessor  
+ [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)運作方式類似[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，除非有一個重要的差異。 雖然`CDynamicAccessor`要求提供者，所報告的原生格式資料`CDynamicStringAccessor`要求提供者擷取從資料存放區做為字串資料存取的所有資料。 這是不需要計算值的資料存放區，例如顯示或列印的資料存放區內容的簡單工作特別有用。  
   
- 使用 `CDynamicStringAccessor` 方法取得資料行資訊。  您可以在執行階段使用這些資料行資訊，動態地建立存取子。  資料行資訊是儲存在這個類別所建立和管理的暫存區中。  使用 [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) 從緩衝區取得這份資料，或使用 [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md) 將它儲存在緩衝區中。  
+ 使用`CDynamicStringAccessor`方法，取得資料行資訊。 您可以使用此資料行資訊在執行階段動態建立存取子。 資料行資訊會儲存在緩衝區中建立和管理由這個類別。 取得資料緩衝區使用[cdynamicstringaccessor:: Getstring](../../data/oledb/cdynamicstringaccessor-getstring.md)或將它存放至緩衝區使用[cdynamicstringaccessor:: Setstring](../../data/oledb/cdynamicstringaccessor-setstring.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // Using_Dynamic_Accessors_b.cpp  
@@ -160,16 +163,16 @@ int main( int argc, char* argv[] )
 }  
 ```  
   
-## 使用 CDynamicParameterAccessor  
- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) 的作用和 [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) 相類似，除了 `CDynamicParameterAccessor` 是呼叫 [ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx) 介面以取得設定的參數資訊。  提供者必須支援消費者的 `ICommandWithParameters` 才能使用這個類別。  
+## <a name="using-cdynamicparameteraccessor"></a>使用 CDynamicParameterAccessor  
+ [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)類似於[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)，不同之處在於`CDynamicParameterAccessor`取得參數資訊，將藉由呼叫[ICommandWithParameters](https://msdn.microsoft.com/en-us/library/ms712937.aspx)介面。 提供者必須支援 `ICommandWithParameters` 讓取用者使用這個類別。  
   
- 參數資訊是儲存於這個類別所建立和管理的暫存區中。  使用 [CDynamicParameterAccessor::GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) 和 [CDynamicParameterAccessor::GetParamType](../../data/oledb/cdynamicparameteraccessor-getparamtype.md) 便可以取得暫存區的參數資料。  
+ 參數資訊會儲存在這個類別建立和管理的緩衝區中。 從緩衝區取得參數資料使用[cdynamicparameteraccessor:: Getparam](../../data/oledb/cdynamicparameteraccessor-getparam.md)和[cdynamicparameteraccessor:: Getparamtype](../../data/oledb/cdynamicparameteraccessor-getparamtype.md)。  
   
- 如需示範使用這個類別以執行 SQL Server 預存程序和取得輸出參數值的方法範例，請參閱知識庫 \(Knowledge Base\) 文件 Q058860＜HOWTO: Execute Stored Procedure using CDynamicParameterAccessor＞。知識庫文件位於 MSDN Library for Visual Studio 文件中或是 [http:\/\/support.microsoft.com](http://support.microsoft.com/)。  
+ 如需如何使用這個類別執行 SQL Server 預存程序並取得輸出參數值的範例示範，請參閱知識庫文章 Q058860＜如何：使用 CDynamicParameterAccessor 執行預存程序＞。 知識庫文件可在 MSDN Library 中的 Visual Studio 文件或在[http://support.microsoft.com](http://support.microsoft.com/)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)   
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicStringAccessor 類別](../../data/oledb/cdynamicstringaccessor-class.md)   
  [CDynamicParameterAccessor 類別](../../data/oledb/cdynamicparameteraccessor-class.md)   
- [DynamicConsumer Sample](http://msdn.microsoft.com/zh-tw/2ccc4c61-6749-4e83-aa81-00f8009c0dc3)
+ [DynamicConsumer 範例](http://msdn.microsoft.com/en-us/2ccc4c61-6749-4e83-aa81-00f8009c0dc3)

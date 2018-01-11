@@ -18,11 +18,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba9228a92fe74b70494d75027c0e9656db749bdb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5558e106ead5b56e982c6280fecc8a8418b3ebc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-documents-and-views"></a>使用文件和檢視
 Microsoft Foundation Classes (MFC) 程式庫會依賴許多其功能的文件/檢視架構。 一般來說，文件會儲存您的資料，並檢視顯示在框架視窗的工作區中，並管理使用者與資料互動。 檢視會與取得及更新資料的文件通訊。 您可以使用資料庫類別的架構，或未安裝。  
@@ -33,5 +36,5 @@ Microsoft Foundation Classes (MFC) 程式庫會依賴許多其功能的文件/�
   
  您也可以使用資料庫類別，而不需要使用完整的文件/檢視架構。 如需詳細資訊，請參閱[MFC： 使用資料庫類別不具文件和檢視表](../../data/mfc-using-database-classes-without-documents-and-views.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

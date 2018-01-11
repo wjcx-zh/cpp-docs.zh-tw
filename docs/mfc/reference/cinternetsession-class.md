@@ -43,11 +43,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12648a44b30e7e9cc883db6395b1c806cb7d6513
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7aad2f6ce26fd5ca9ed0ec323a8fcb05ac17f7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 建立和初始化單一或多個同時網際網路工作階段，並視需要描述您與 Proxy 伺服器的連接。  
@@ -58,17 +59,17 @@ ms.lasthandoff: 10/24/2017
 class CInternetSession : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInternetSession::CInternetSession](#cinternetsession)|建構 `CInternetSession` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInternetSession::Close](#close)|網際網路工作階段結束時，關閉網際網路連線。|  
 |[CInternetSession::EnableStatusCallback](#enablestatuscallback)|建立狀態回呼常式。|  
@@ -85,7 +86,7 @@ class CInternetSession : public CObject
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInternetSession::operator HINTERNET](#operator_hinternet)|目前的網際網路工作階段控制代碼。|  
   
@@ -583,7 +584,7 @@ BOOL SetOption(
 ### <a name="return-value"></a>傳回值  
  如果作業成功，值為**TRUE**傳回。 如果發生錯誤，值為**FALSE**傳回。 如果呼叫失敗，Win32 函式[GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CObject 類別](../../mfc/reference/cobject-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CInternetConnection 類別](../../mfc/reference/cinternetconnection-class.md)   

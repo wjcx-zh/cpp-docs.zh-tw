@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,8 +13,7 @@ f1_keywords:
 - type_traits/std::integer_sequence
 - type_traits/std::make_integer_sequence
 - type_traits/std::index_sequence_for
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::index_sequence
 - std::make_index_sequence
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1765d6852248727e808cd9d8a98b56427abd6273
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e2502b627a40b40ee6942a24fdc1b8c0d16ecc31
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integersequence-class"></a>integer_sequence 類別
 表示整數序列。 可用來推算並展開作為引數傳遞給函式之 variadic 類型 (例如 std::tuple\<T...>) 中的參數封裝。  
@@ -51,7 +49,7 @@ struct integer_sequence
  Vals  
  非類型參數封裝，表示整數類型 T 之值的序列。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 |||  
 |-|-|  
@@ -133,7 +131,6 @@ int main()
   
  命名空間：std  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [省略符號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md)
-
 

@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: db0ab662735a29e1b37536ebbccf3e94fa056070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 821992a6a0684e965f804729b470075038310ef1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="weakptr-class"></a>weak_ptr 類別
 包裝弱式連結的指標。  
@@ -550,6 +551,6 @@ wp0.expired() == true
 *wp2.lock() == 5  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [shared_ptr 類別](../standard-library/shared-ptr-class.md)
 

@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c314e224bbbc9b7d232ee9e2cb9bbc20ec8ead71
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7937e0eec53a800c7bcef2842310af368949bcca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="override-specifiers--c-component-extensions"></a>覆寫規範 (C++ 元件擴充功能)
 *覆寫規範*修改如何繼承的型別和繼承型別的成員在衍生類型中的行為。  
@@ -56,5 +59,5 @@ ms.lasthandoff: 10/24/2017
 ### <a name="requirements"></a>需求  
  編譯器選項： **/clr**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

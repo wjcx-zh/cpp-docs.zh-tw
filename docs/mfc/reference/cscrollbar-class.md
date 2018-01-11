@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2fb2b5478d6f8af793baf0fc801bdb114999739b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d458fe5f7bcaf25fc5bb0685bb382a72d44d183
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 類別
 提供 Windows 捲軸控制項的功能。  
@@ -56,17 +57,17 @@ ms.lasthandoff: 10/24/2017
 class CScrollBar : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CScrollBar::CScrollBar](#cscrollbar)|建構 `CScrollBar` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CScrollBar::Create](#create)|建立 Windows 捲軸，並將它附加至`CScrollBar`物件。|  
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|啟用或停用一個捲軸的一或兩個箭號。|  
@@ -384,7 +385,7 @@ void ShowScrollBar(BOOL bShow = TRUE);
 ### <a name="example"></a>範例  
   請參閱範例的[CScrollBar::Create](#create)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   

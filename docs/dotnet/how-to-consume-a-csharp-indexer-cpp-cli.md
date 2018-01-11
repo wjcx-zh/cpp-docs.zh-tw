@@ -1,39 +1,39 @@
 ---
-title: "如何：使用 C# 索引子 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, 索引子"
-  - "索引子, 使用 C#"
+title: "如何： 使用 C# 索引子 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
 ms.assetid: 5a11850c-a1a2-4a0a-b95e-f6dc5a87f439
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ed069e1f9d7effa686cd572bd505a41dcf60c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：使用 C# 索引子 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 不包含索引子 \(Indexer\)，但是有索引屬性。  若要使用 C\# 索引子，請將索引子當做索引屬性來存取。  
+# <a name="how-to-consume-a-c-indexer-ccli"></a>如何：使用 C# 索引子 (C++/CLI)
+Visual c + + 不包含索引子。它具有索引的屬性。 若要使用 C# 索引子，存取索引子，就好像索引的屬性。  
   
  如需索引子的詳細資訊，請參閱：  
   
--   [索引子](../Topic/Indexers%20\(C%23%20Programming%20Guide\).md)  
+-   [索引子](/dotnet/csharp/programming-guide/indexers/index)  
   
--   [如何：使用索引屬性](../misc/how-to-use-indexed-properties.md)  
-  
-## 範例  
- 下列 C\# 程式會定義索引子。  
+## <a name="example"></a>範例  
+ 下列 C# 程式會定義索引子。  
   
 ```  
 // consume_cs_indexers.cs  
@@ -71,8 +71,8 @@ public class MainClass {
 */  
 ```  
   
-## 範例  
- 這個 Visual C\+\+ 程式會使用此索引子。  
+## <a name="example"></a>範例  
+ 此 Visual c + + 程式中，會使用索引子。  
   
 ```  
 // consume_cs_indexers_2.cpp  
@@ -88,16 +88,19 @@ int main() {
 }  
 ```  
   
-  **項目 \#0 \= 21**  
-**項目 \#1 \= 0**  
-**項目 \#2 \= 0**  
-**項目 \#3 \= 0**  
-**項目 \#4 \= 0**  
-**項目 \#5 \= 0**  
-**項目 \#6 \= 0**  
-**項目 \#7 \= 0**  
-**項目 \#8 \= 0**  
-**項目 \#9 \= 0**  
-**項目 \#10 \= 0**   
-## 請參閱  
- [與其他 .NET 程式設計語言間的互通性](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [與其他 .NET 語言間的互通性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

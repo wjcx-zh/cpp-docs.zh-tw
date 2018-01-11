@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0beb14c2ddb159616f7cbb34b83b68e84ef0a1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 510e6ed244fb8920c55c4b3ffedcbd0801c3e202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bypassing-the-serialization-mechanism"></a>略過序列化機制
 如您所見，架構提供了預設的方式從檔案讀取和寫入資料。 將封存物件序列化符合許許多多應用程式的需求。 這類應用程式會將檔案完全讀入記憶體，讓使用者更新檔案，然後再將更新的版本寫入磁碟。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/24/2017
   
  在此案例中，您的 `Serialize` 覆寫不會執行任何動作，除非例如您在文件關閉時要其讀取和寫入檔案標頭以使其保持最新。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用文件](../mfc/using-documents.md)
 

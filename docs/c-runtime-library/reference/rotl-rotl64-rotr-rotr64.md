@@ -51,11 +51,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e00fc9738bba81ba1aabe304bc7a887bf414f982
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cd52d08ccb5c75e58bc96ee490b70b99217555d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotl-rotl64-rotr-rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
 將位元向左 (`_rotl`) 或向右 (`_rotr`) 旋轉。  
@@ -83,7 +84,7 @@ unsigned __int64 _rotr64(
 ```  
   
 #### <a name="parameters"></a>參數  
- *value*  
+ *值*  
  要旋轉的值。  
   
  `shift`  
@@ -97,7 +98,7 @@ unsigned __int64 _rotr64(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |**_rotl、_rotl64**|\<stdlib.h>|  
 |**_rotr、_rotr64**|\<stdlib.h>|  
@@ -143,6 +144,6 @@ int main( void )
 101010101010101 rotated right four times is 1010101010101010  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [_lrotl、_lrotr](../../c-runtime-library/reference/lrotl-lrotr.md)

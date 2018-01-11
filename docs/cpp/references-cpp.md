@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4178d9d6a48e10510bb739bc2e1a55ecbe2714e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7453fbab0ade6cfe2cbdd836d7d59ba49c3ccfd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-c"></a>參考 (C++)
 參考 (例如指標) 會儲存位在記憶體中其他位置之物件的位址。 與指標不同，參考在初始化之後不能參照不同的物件，或設為 null。 有兩種類型的參考： 左值參考參照具名變數，右值參考參照[暫存物件](../cpp/temporary-objects.md)。 & 運算子表示左值參考，而 && 運算子根據內容會表示右值參考或通用參考 (右值或左值)。  
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/24/2017
   
  更複雜的宣告子形式的指標陣列和函式也適用於參考陣列和函式，請參閱[指標](../cpp/pointers-cpp.md)和[宣告子](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838)。  
   
- 多個宣告子和初始設定式可能會出現在逗號分隔清單中，後面接著一個宣告指定名稱。 例如:  
+ 多個宣告子和初始設定式可能會出現在逗號分隔清單中，後面接著一個宣告指定名稱。 例如:   
   
 ```  
 int &i;   

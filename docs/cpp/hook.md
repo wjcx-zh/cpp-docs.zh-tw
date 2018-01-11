@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98a18a7e145a2b23b13e38bd07d5b29c5a397d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dfc9112c79279e3e5c419efbd12f5883349c0e94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hook"></a>__hook
 建立處理常式方法與事件的關聯。  
@@ -76,7 +77,7 @@ long __hook(
  `receiver` (選擇性)  
  事件接收器類別執行個體的指標。 如果您未指定接收器，則預設值是呼叫 `__hook` 所在的接收器類別或結構。  
   
-## <a name="usage"></a>使用方式  
+## <a name="usage"></a>使用量  
  可以在事件接收器類別之外的任何函式範圍中使用，包括 main。  
   
 ## <a name="remarks"></a>備註  
@@ -102,7 +103,7 @@ long __hook(
 ## <a name="example"></a>範例  
  請參閱[原生 c + + 中的事件處理](../cpp/event-handling-in-native-cpp.md)和[COM 中的事件處理](../cpp/event-handling-in-com.md)範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [事件處理](../cpp/event-handling.md)   
  [event_source](../windows/event-source.md)   

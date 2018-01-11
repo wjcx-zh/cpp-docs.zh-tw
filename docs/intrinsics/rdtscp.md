@@ -1,36 +1,36 @@
 ---
-title: "__rdtscp | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtscp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdtscp 內建"
-  - "__rdtscp 內建"
-  - "rdtscp 指令"
+title: "__rdtscp |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtscp
+dev_langs: C++
+helpviewer_keywords:
+- rdtscp intrinsic
+- __rdtscp intrinsic
+- rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 972c789e17b2b42e0df7229b94b4f10aaa5ff470
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# __rdtscp
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="rdtscp"></a>__rdtscp
+**Microsoft 特定的**  
   
- 會產生`rdtscp`指令時，會將`TSC_AUX[31:0`\] 的記憶體，並傳回 64 位元的時間戳記計數器 \(`TSC)`的結果。  
+ 會產生`rdtscp`指令，將寫入`TSC_AUX[31:0`] 記憶體，並傳回 64 位元時間戳記計數器 (`TSC)`結果。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned __int64 __rdtscp(  
@@ -38,32 +38,32 @@ unsigned __int64 __rdtscp(
 );  
 ```  
   
-#### 參數  
- \[out\] `Aux`  
- 將包含的特定電腦的暫存器內容的位置指標`TSC_AUX[31:0]`。  
+#### <a name="parameters"></a>參數  
+ [輸出] `Aux`  
+ 將包含特定電腦的暫存器內容的位置指標`TSC_AUX[31:0]`。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  64 位元不帶正負號的整數的滴答計數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__rdtscp`|AMD NPT 家族 0Fh 或更新的版本|  
+|---------------|------------------|  
+|`__rdtscp`|AMD NPT 系列 0Fh 或更新版本|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 此內建會產生`rdtscp`指令。  若要判斷硬體支援，針對這個指令，請呼叫`__cpuid` 與內建`InfoType=0x80000001` ，並檢查一些 27 `CPUInfo[3] (EDX)`。  可說這個位元是 1，如果在指令都有支援，而 0。  如果您執行的程式碼會使用此內建不支援的硬體上`rdtscp`指令時，結果會發生無法預期。  
+## <a name="remarks"></a>備註  
+ 此內建函式會產生`rdtscp`指令。 若要判斷硬體支援此指示，請呼叫`__cpuid`與內建`InfoType=0x80000001`並檢查的 27 位元`CPUInfo[3] (EDX)`。 此位元否則就會支援該指令，則為 1 和 0。  如果您執行程式碼會使用此內建物件不支援的硬體上`rdtscp`指令，結果會產生無法預測。  
   
 > [!CAUTION]
->  不像`rdtsc`， `rdtscp`是序列化的指令。 不過，編譯器可以移動此程式碼內建。  
+>  不同於`rdtsc`，`rdtscp`是序列化的指示; 不過，編譯器可以移動解決這個問題的程式碼內建函式。  
   
- 與 TSC 值的解譯方式，在這個層代硬體的不同，在舊版的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  請參閱硬體手冊，如需詳細資訊。  
+ 在這個層代的硬體 TSC 值的解譯不同於在舊版的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  請參閱硬體手冊，如需詳細資訊。  
   
- 在 \[值的意義`TSC_AUX[31:0]`的作業系統而定。  
+ 中值的意義`TSC_AUX[31:0]`作業系統而定。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 #include <intrin.h>   
@@ -78,10 +78,14 @@ int main()
 }  
 ```  
   
-  **3363423610155519 刻度已 0**   
-## 結束 Microsoft 特定  
- 藉由收益進階微裝置，及版權 2007年.人所有之商標。  重製與收益進階微裝置，及來自的使用權限.  
+```Output  
+3363423610155519 ticks  
+TSC_AUX was 0  
+```  
   
-## 請參閱  
- [\_\_rdtsc](../intrinsics/rdtsc.md)   
+**結束 Microsoft 特定的**  
+ 進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
+  
+## <a name="see-also"></a>請參閱  
+ [__rdtsc](../intrinsics/rdtsc.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 5f86d24c693cfcd5eecf8b37f0e4567c9c7af3a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a68475447ed520298b0eab7949386c2e8d078ac6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-libraries-ccx"></a>靜態程式庫 (C++/CX)
 在通用 Windows 平台應用程式中使用的靜態程式庫可包含 ISO 標準 c + + 程式碼，包括 STL 型別，以及未從通用 Windows 平台應用程式平台排除的 Win32 Api 呼叫。 靜態程式庫會使用 Windows 執行階段元件，並可能會建立 Windows 執行階段元件特定限制。  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/24/2017
   
  只有當靜態程式庫不會產生在程式庫本身以外使用的 Windows 執行階段元件，您可以放心忽略此警告。 如果程式庫不會使用它所定義的元件，則連結器最佳化會將實作去除，即使公用中繼資料包含型別資訊。 這表示靜態程式庫中的公用元件會進行編譯，但不會在執行階段啟動。 基於這個理由，必須在動態連結程式庫 (DLL) 中實作 Windows 執行階段的任何元件預定由其他元件或應用程式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)

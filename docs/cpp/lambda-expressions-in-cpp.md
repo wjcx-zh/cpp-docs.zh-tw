@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 07/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: eaf06a81979294b20f3b9b2f15cfcaab6be0008b
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 035fe5c222f6de5b3f0d71c0ce9133c1101f2993
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 在 C + + 11 和更新版本中，lambda 運算式，通常稱為*lambda*— 是方便的方式定義匿名函式物件的 ( *closure*) 叫用，或是做為引數的位置函式。 Lambda 通常用來封裝要傳遞給演算法或非同步方法的數行程式碼。 本文定義什麼是 Lambda、Lambda 與其他程式設計技術的比較、描述 Lamdba 的優點並提供基本範例。  
@@ -141,7 +139,7 @@ pNums = make_unique<vector<int>>(nums);
  除了擷取變數之外，Lambda 還可以接受輸入參數。 參數清單 (*ambda* Standard 語法中) 是選擇性的而且在大部分的方面類似於函式參數清單。  
   
 ```cpp  
-int y = [] (int first, int second)  
+auto y = [] (int first, int second)  
 {  
     return first + second;  
 };  
@@ -378,7 +376,7 @@ auto Sqr = [](int t) __declspec(code_seg("PagedMem")) -> int { return t*t; };
   
  除了 C + + 11 標準 lambda 功能，Visual Studio 支援無狀態 lambda，可完全轉換為使用任意呼叫慣例的函式指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C + + 標準程式庫中的函式物件](../standard-library/function-objects-in-the-stl.md)   
  [函式呼叫](../cpp/function-call-cpp.md)   

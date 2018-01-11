@@ -16,11 +16,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 955de592b5e065164f16a4f78c9faaaffcdd3efb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23f254ad76a080c7dadfc03e354e29bce4a31070
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-modify-reference-class-in-a-native-function"></a>如何：修改原生函式中的參考類別
 您可以將參考類別與 CLR 陣列傳遞至原生函式，並修改類別中，使用 PInvoke 服務。  
@@ -95,5 +98,5 @@ In native: intarr: 100, 200
 In managed: intarr: 300, 400  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

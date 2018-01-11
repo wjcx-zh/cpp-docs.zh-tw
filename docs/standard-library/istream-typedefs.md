@@ -12,14 +12,13 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: cc53eb1fed0dfc562ddb59ad239d716dd6057ebd
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt; typedef
 ||||  
@@ -67,7 +66,6 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 ### <a name="remarks"></a>備註  
  此類型與範本類別 [basic_istream](../standard-library/basic-istream-class.md) 同義，該範本類別是為具有預設字元特性之 `wchar_t` 類型的元素特製化的範本類別。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<istream>](../standard-library/istream.md)
-
 

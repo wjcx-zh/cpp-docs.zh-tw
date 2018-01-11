@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f44ce838feab8fd03cbc7ad459617f1b6d52beba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49def56fe4a04e495033b9823e1da8735c6e0319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotl8-rotl16"></a>_rotl8, _rotl16
 **Microsoft 特定的**  
@@ -44,7 +45,7 @@ unsigned short _rotl16(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `value`  
+ [輸入] `value`  
  要旋轉的值。  
   
  [in] `shift`  
@@ -104,8 +105,8 @@ Rotating 0x41 left by 7 bits gives 0xa0
 Rotating unsigned short 0x12 left by 10 bits gives 0x4800  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_rotr8 _rotr16](../intrinsics/rotr8-rotr16.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

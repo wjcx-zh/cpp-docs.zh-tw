@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 182478ffdd0175fc2b5f80b4a534b85bb97190a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>參考類型的 C++ 堆疊語意
 Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個體，這麼做會在記憶體回收堆積上建立物件。 不過，您現在可以使用與您用來在堆疊上建立原生類型之執行個體相同的語法建立參考類型的執行個體。 因此，您不需要使用[ref 新 gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)建立參考類型的物件。 然後，當物件超出範圍時，編譯器會呼叫物件的解構函式。  
@@ -26,7 +29,7 @@ Visual C++ 2005 之前只能使用 `new` 運算子建立參考類型的執行個
 ## <a name="remarks"></a>備註  
  當您使用堆疊語意建立參考類型的執行個體時，編譯器會在內部的記憶體回收堆積上建立執行個體 (使用 `gcnew`)。  
   
- 當函式的簽章或傳回類型是一個傳值參考類型的執行個體時，函式在中繼資料中會被標記為需要進行特殊處理 (使用 modreq)。 這項特殊處理目前只提供給 Visual C++ 用戶端使用，其他語言目前不支援使用以堆疊語意建立之參考類型的函式或資料。  
+ 當函式的簽章或傳回型別是一個傳值參考類型的執行個體時，函式在中繼資料中會被標記為需要進行特殊處理 (使用 modreq)。 這項特殊處理目前只提供給 Visual C++ 用戶端使用，其他語言目前不支援使用以堆疊語意建立之參考類型的函式或資料。  
   
  其中一個使用 `gcnew` (動態配置) 而不使用堆疊語意的理由是該類型沒有解構函式。 此外，如果想要讓 Visual C++ 以外的語言使用函式，則無法在函式簽章中使用以堆疊語意建立的參考類型。  
   
@@ -117,5 +120,5 @@ int main() {
 13  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

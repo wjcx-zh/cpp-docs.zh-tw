@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dca7c6bc7c423018959a9ff38b5c54fa43f06c5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68cd21e21c14a34122f1b26345fab767728ac6a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar vs。CReBarCtrl
 MFC 提供兩個類別來建立 rebar: [CReBar](../mfc/reference/crebar-class.md)和[CReBarCtrl](../mfc/reference/crebarctrl-class.md) （包裝 Windows 通用控制項 API）。 **CReBar**提供所有 rebar 通用控制項的功能，也可以為您處理許多必要的通用控制項設定和結構。  
@@ -42,7 +43,7 @@ MFC 提供兩個類別來建立 rebar: [CReBar](../mfc/reference/crebar-class.md
   
  任何一個方法都可讓您存取 Rebar 控制項的成員函式。 當您呼叫 `CReBar::GetReBarCtrl`時，會傳回 `CReBarCtrl` 物件的參考，因此您可以使用任一組成員函式。 請參閱[CReBar](../mfc/reference/crebar-class.md)建構和建立 rebar，使用如**CReBar**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ea4ac4e5f88df6d6e5de35377a4cf13f34abf900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
 本文包含安全性工具和作法的相關資訊。 使用它們不會讓應用程式免受攻擊，但是可能可以減少成功的攻擊。  
@@ -84,16 +85,16 @@ ms.lasthandoff: 10/24/2017
 -   測試常見程式設計錯誤所造成的潛在應用程式相容性錯誤。  
   
 -   檢查應用程式是否有記憶體相關問題。  
-  s
+  秒
 -   找出應用程式中的潛在安全性問題。  
   
- AppVerifier 的應用程式相容性工具組，可從屬於[應用程式相容性](http://go.microsoft.com/fwlink/?LinkId=91277)TechNet 網站上。  
+ AppVerifier 的應用程式相容性工具組，可從屬於[應用程式相容性](http://go.microsoft.com/fwlink/p/?linkid=91277)TechNet 網站上。  
   
 
 ## <a name="windows-user-accounts"></a>Windows 使用者帳戶  
  使用屬於 Administrators 群組的 Windows 使用者帳戶，讓開發人員和客戶暴露在安全性風險下。 如需詳細資訊，請參閱[Users 群組的成員身分執行](running-as-a-member-of-the-users-group.md)和[使用者帳戶控制的方式 (UAC) 會影響您的應用程式](how-user-account-control-uac-affects-your-application.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  <xref:System.Security>   
  [安全性](/dotnet/standard/security/index)   
  [使用者帳戶控制 (UAC) 如何影響應用程式](how-user-account-control-uac-affects-your-application.md)

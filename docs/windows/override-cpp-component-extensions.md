@@ -16,11 +16,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c16b79d50ad0494956ee27f0928daabfefdacaed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 88138001a9767bbe9752c1de0577910fca8bc914
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="override--c-component-extensions"></a>override (C++ 元件擴充功能)
 `override` 即時線上關鍵字表示，類型成員會覆寫基底類別或基底介面成員。  
@@ -65,7 +68,7 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Requirements**  
+ **需求**  
   
  編譯器選項： **/ZW**  
   
@@ -85,10 +88,10 @@ ref struct X : public I1 {
 };  
 ```  
   
- **Requirements**  
+ **需求**  
   
  編譯器選項： **/clr**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [覆寫規範](../cpp/override-specifier.md)   
  [覆寫規範](../windows/override-specifiers-cpp-component-extensions.md)

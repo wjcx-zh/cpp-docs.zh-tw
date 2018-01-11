@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ab1066d9a1f56906fcbecca968da07b12a126c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5febdc019f5e575f685e4e93c892b7f5e777b776
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-simple-consumer"></a>建立簡單消費者
 使用 ATL 專案精靈 和 ATL OLE DB 消費者精靈產生的 OLE DB 樣板取用者。  
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
 2.  在 專案類型 窗格中，按一下  **Visual c + + 專案**資料夾，然後再按一下**Win32 專案**在範本窗格中的圖示。 在**名稱**方塊中，輸入您的專案的名稱，例如**MyCons**。  
   
-3.  按一下 [確定]。  
+3.  按一下 [確定 **Deploying Office Solutions**]。  
   
      Win32 專案精靈 隨即出現。  
   
@@ -78,7 +81,7 @@ ms.lasthandoff: 10/24/2017
   
 6.  您可以使用樹狀目錄控制項來選取資料表、 檢視或預存程序。 為了此程序中，選取從 Northwind 資料庫的 Products 資料表。  
   
-7.  按一下 [確定]。 這會讓您回到 ATL OLE DB 消費者精靈。  
+7.  按一下 [確定 **Deploying Office Solutions**]。 這會讓您回到 ATL OLE DB 消費者精靈。  
   
 8.  在精靈完成的名稱`Class`和**.h 檔案**依據的資料表、 檢視名稱或預存程序，您選取。 如果您想要您可以編輯這些名稱。  
   
@@ -106,5 +109,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  這一行可防止消費者應用程式無法編譯，並提醒您若要檢查您的連接字串的硬式編碼的密碼。 檢查您的連接字串之後, 您可以移除這行程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

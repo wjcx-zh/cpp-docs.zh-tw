@@ -1,46 +1,46 @@
 ---
-title: "vector::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成員 [STL/CLR]"
+title: "vector:: operator = (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: c2de9d74-9de7-4560-866f-3d55952e9bd7
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4aa930bcfb470a0fd76cc114d34a48e78ce66601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取代受控制序列。  
+# <a name="vectoroperator-stlclr"></a>vector::operator= (STL/CLR)
+取代受控制的序列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 vector<Value>% operator=(vector<Value>% right);  
 ```  
   
-#### 參數  
- right  
- 複製的容器。  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 要複製的容器。  
   
-## 備註  
- 運算子複製 `right` 物件的成員，則傳回 `*this`。  您會用它來在受控制序列的複製到 `right`的取代受控制序列。  
+## <a name="remarks"></a>備註  
+ 成員運算子複製`right`物件，然後傳回`*this`。 您使用它將受控制序列取代為 `right` 中受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_operator_as.cpp   
@@ -70,13 +70,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 需求  
- **標題:** \<cliext\/向量\>  
+```Output  
+a b c  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::assign](../dotnet/vector-assign-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)

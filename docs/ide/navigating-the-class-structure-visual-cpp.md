@@ -1,39 +1,38 @@
 ---
-title: "巡覽類別結構 (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.structure"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "類別 [C++], 結構"
-  - "物件瀏覽器, 巡覽"
+title: "巡覽類別結構 （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes.structure
+dev_langs: C++
+helpviewer_keywords:
+- classes [C++], structure
+- Object Browser, navigating
 ms.assetid: 3bd9427d-c920-41fd-b27c-3063dd924e0c
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 79178784f705997103923406982e3b1ac93d5b3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 巡覽類別結構 (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-您可以使用[類別檢視](http://msdn.microsoft.com/zh-tw/8d7430a9-3e33-454c-a9e1-a85e3d2db925)或[物件瀏覽器](http://msdn.microsoft.com/zh-tw/f89acfc5-1152-413d-9f56-3dc16e3f0470)巡覽專案類別結構，包含函式、繼承 \(Inheritance\) 及介面。  
+# <a name="navigating-the-class-structure-visual-c"></a>巡覽類別結構 (Visual C++)
+您可以瀏覽專案的類別結構，包括函式、 繼承和介面使用[類別檢視](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925)或[物件瀏覽器](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470)。  
   
- 您可按兩下 \[類別檢視\] 中的函式名稱，就可移至函式宣告。  您可按兩下 \[類別檢視\] 中的類別名稱，就可移至類別定義。  
+ 您可以在 類別檢視中的函數名稱上按兩下，就可移至函式宣告。 您可以在類別檢視中的類別名稱上按兩下，移至類別定義。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../ide/adding-a-class-visual-cpp.md)   
  [加入成員函式](../ide/adding-a-member-function-visual-cpp.md)   
  [加入成員變數](../ide/adding-a-member-variable-visual-cpp.md)   
- [覆寫 Virtual 函式](../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [覆寫虛擬函式](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [MFC 訊息處理常式](../mfc/reference/adding-an-mfc-message-handler.md)

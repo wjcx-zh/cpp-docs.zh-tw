@@ -1,35 +1,34 @@
 ---
-title: "編譯器警告 (層級 3) C4995 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4995"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4995"
+title: "編譯器警告 （層級 3） C4995 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4995
+dev_langs: C++
+helpviewer_keywords: C4995
 ms.assetid: c6b61755-4730-4947-ad4d-d1c2bc82585a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4c8bf04670f8899209a42e2cc8d20420d522ef4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 3) C4995
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 已將名稱標記為 \#pragma 取代  
+# <a name="compiler-warning-level-3-c4995"></a>編譯器警告 （層級 3） C4995
+'function': 名稱被標示為已被取代的 #pragma  
   
- 編譯器遇到以 pragma [deprecated](../../preprocessor/deprecated-c-cpp.md) 標記的函式。  未來的版本可能不再支援此函式。  您可以使用 [warning](../../preprocessor/warning.md) pragma 關閉此警告 \(下面的範例\)。  
+ 編譯器遇到函式已標記使用 pragma[取代](../../preprocessor/deprecated-c-cpp.md)。 未來的版本可能不再支援此函式。 您可以關閉此警告，與[警告](../../preprocessor/warning.md)pragma （下面的範例）。  
   
-## 範例  
- 下列範例會產生 C4995：  
+## <a name="example"></a>範例  
+ 下列範例會產生 C4995:  
   
 ```  
 // C4995.cpp  

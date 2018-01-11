@@ -74,11 +74,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 217379d94ca4c44e04837a7f777fce9e0e42cba6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41f300f285fb4eaf1a6154a21cbbabc0253fc730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afx-messages"></a>AFX 訊息
 MFC 中使用這些訊息。  
@@ -88,7 +89,7 @@ MFC 中使用這些訊息。
   
 ||||||  
 |-|-|-|-|-|  
-|訊息|描述|[in] `wParam`|`lParam`（所有參數都是 [in] 除非另有指明）。|傳回值|  
+|訊息|描述|[輸入] `wParam`|`lParam`（所有參數都是 [in] 除非另有指明）。|傳回值|  
 |AFX_WM_ACCGETOBJECT|未使用。|未使用。|不適用。|不適用。|  
 |AFX_WM_ACCGETSTATE|用於協助工具支援。 傳送此訊息可`CMFCPopupMenu`或`CMFCRibbonPanelMenu`擷取目前項目的狀態。|可能是功能表按鈕或分隔符號項目的索引。|未使用。|項目狀態。 如果索引是無效的則為-1 0，表示功能表按鈕沒有任何特殊的屬性。 否則，它是下列旗標的組合：<br /><br /> TBBS_DISABLED： 項目已停用<br /><br /> TBBS_CHECKED — 檢查項目<br /><br /> TBBS_BUTTON — 項目是標準按鈕<br /><br /> TBBS_PRESSED： 按鈕已按下<br /><br /> TBBS_INDETERMINATE： 未定義的狀態<br /><br /> TBBS_SEPARATOR-而不是功能表按鈕，其他功能表項目之間的分隔的這個項目表單|  
 |AFX_WM_CHANGE_ACTIVE_TAB|架構會傳送此訊息可調整大小的控制列控制項。 處理此訊息，以接收來自通知`CMFCTabCtrl`物件當使用者變更作用中的索引標籤。|索引標籤的索引。|未使用。|為非零。|  
@@ -163,5 +164,5 @@ MFC 中使用這些訊息。
 |AFX_TOOLTIP_TYPE_TOOLBOX|0x0080|  
 |AFX_TOOLTIP_TYPE_ALL|0xFFFF|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

@@ -1,34 +1,33 @@
 ---
-title: "strict_gs_check | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "strict_gs_check"
-  - "strict_gs_check_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strict_gs_check pragma"
+title: "strict_gs_check |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- strict_gs_check
+- strict_gs_check_CPP
+dev_langs: C++
+helpviewer_keywords: strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5c355bd385a997e8ff3fd9ec323d50bb33b9c6fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# strict_gs_check
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="strictgscheck"></a>strict_gs_check
 這個 pragma 提供增強的安全性檢查。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 #pragma strict_gs_check([push,] on )   
@@ -36,17 +35,17 @@ manager: "ghogen"
 #pragma strict_gs_check(pop)  
 ```  
   
-## 備註  
- 指示編譯器在函式堆疊中隨機插入 Cookie，協助偵測部分堆疊型緩衝區滿溢分類。  根據預設，\/GS \(緩衝區安全性檢查\) 編譯器選項不會插入所有函式皆適用的 Cookie。  如需詳細資訊，請參閱 [\/GS \(緩衝區安全性檢查\)](../build/reference/gs-buffer-security-check.md)。  
+## <a name="remarks"></a>備註  
+ 指示編譯器在函式堆疊中隨機插入 Cookie，協助偵測部分堆疊型緩衝區滿溢分類。 根據預設，/GS (緩衝區安全性檢查) 編譯器選項不會插入所有函式皆適用的 Cookie。 如需詳細資訊，請參閱 [/GS (緩衝區安全性檢查)](../build/reference/gs-buffer-security-check.md)。  
   
- 您必須以 \/GS \(緩衝區安全性檢查\) 編譯，才能啟用 strict\_gs\_check。  
+ 您必須以 /GS (緩衝區安全性檢查) 編譯，才能啟用 strict_gs_check。  
   
- 請在可能接觸到有害資料的程式碼模組中使用這個 pragma。  這個 pragma 非常主動，且可套用至可能不需要這個防禦機制的函式，不過這個 pragma 經過最佳化後，可將對所產生應用程式的效能的影響降至最低。  
+ 請在可能接觸到有害資料的程式碼模組中使用這個 pragma。 這個 pragma 非常主動，且可套用至可能不需要這個防禦機制的函式，不過這個 pragma 經過最佳化後，可將對所產生應用程式的效能的影響降至最低。  
   
- 即使您使用這個 pragma，仍應盡可能撰寫安全的程式碼。  也就是說，請確定您的程式碼沒有緩衝區滿溢。strict\_gs\_check 可以保護應用程式，免於遭到仍存在於程式碼中的緩衝區滿溢的損害。  
+ 即使您使用這個 pragma，仍應盡可能撰寫安全的程式碼。 也就是說，請確定您的程式碼已無緩衝區滿溢。 strict_gs_check 可能從不要保留在您的程式碼的緩衝區滿溢保護您的應用程式。  
   
-## 範例  
- 在下列程式碼中，當我們將陣列複製到本機陣列時，即發生緩衝區滿溢。  當您使用 \/GS 編譯此程式碼時，不會在堆疊中插入任何 Cookie，因為陣列資料類型是指標。  新增 strict\_gs\_check pragma 會強制堆疊 Cookie 插入函式堆疊。  
+## <a name="example"></a>範例  
+ 在下列程式碼中，當我們將陣列複製到本機陣列時，即發生緩衝區滿溢。 當您使用 /GS 編譯此程式碼時，不會在堆疊中插入任何 Cookie，因為陣列資料類型是指標。 新增 strict_gs_check pragma 會強制堆疊 Cookie 插入函式堆疊。  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -74,6 +73,6 @@ void ** ReverseArray(void **pData,
   
 ```  
   
-## 請參閱  
- [Pragma 指示詞和 \_\_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [\/GS \(緩衝區安全性檢查\)](../build/reference/gs-buffer-security-check.md)
+## <a name="see-also"></a>請參閱  
+ [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ [/GS （緩衝區安全性檢查）](../build/reference/gs-buffer-security-check.md)

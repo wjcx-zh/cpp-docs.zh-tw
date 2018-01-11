@@ -1,58 +1,60 @@
 ---
-title: "Exception Handling  (C++ Component Extensions) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "structured exception handling, managed exceptions"
-  - "Exception class, managed applications"
-  - "exception handling"
-  - "C++ exception handling"
-  - "exception handling, types of"
-  - "managed exceptions"
-  - "System::Exception class in managed applications"
+title: "例外狀況處理 （c + + 元件擴充功能） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- structured exception handling, managed exceptions
+- Exception class, managed applications
+- exception handling
+- C++ exception handling
+- exception handling, types of
+- managed exceptions
+- System::Exception class in managed applications
 ms.assetid: ccb11fe8-6938-41ac-b477-a183e85865b9
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d6f43bd1953cc13189f53d97090d3913a49072ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Exception Handling  (C++ Component Extensions)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-以編譯的應用程式 **\/ZW** 編譯器選項或 **\/clr** 編譯器選項都使用 *例外狀況* 在程式執行期間處理錯誤。  下列主題在 C\+\+\/CX 或 C\+\+\/CLI 應用程式討論例外處理。  
+# <a name="exception-handling--c-component-extensions"></a>例外狀況處理 (C++ 元件擴充功能)
+使用應用程式編譯**/ZW**編譯器選項或**/clr**編譯器選項都使用*例外狀況*處理程式執行期間發生意外的錯誤。 下列主題將討論 C++/CX 或 C++/CLI 應用程式中的例外狀況處理。  
   
-## 在本節中  
- [使用 Managed 例外狀況中的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
- 敘述所擲回的例外狀況和使用 `try`\/`catch` 區塊。  
+## <a name="in-this-section"></a>本節內容  
+ [使用 Managed 例外狀況的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)  
+ 描述擲回例外狀況，並使用`try` / `catch`區塊。  
   
- [例外狀況處理行為的差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
- 討論 C\+\+ 例外狀況處理標準行為的差異。  
+ [例外狀況處理在 /CLR 下的行為差異](../dotnet/differences-in-exception-handling-behavior-under-clr.md)  
+ 討論與標準 C++ 例外狀況處理行為的差異。  
   
  [finally](../dotnet/finally.md)  
- 討論如何最後使用關鍵字。  
+ 討論如何使用 finally 關鍵字。  
   
  [如何：定義與安裝全域例外狀況處理常式](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
- 示範未處理的例外狀況如何擷取。  
+ 示範如何擷取未處理的例外狀況。  
   
  [如何：攔截 MSIL 擲回之機器碼的例外狀況](../dotnet/how-to-catch-exceptions-in-native-code-thrown-from-msil.md)  
- 討論如何攔截機器碼的 CLR 和 C\+\+ 例外狀況。  
+ 討論如何攔截機器碼中的 CLR 和 C++ 例外狀況。  
   
  [如何：定義與安裝全域例外狀況處理常式](../dotnet/how-to-define-and-install-a-global-exception-handler.md)  
  示範如何攔截所有未處理的例外狀況。  
   
-## 相關章節  
+## <a name="related-sections"></a>相關章節  
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)  
- 在 C\+\+ 說明例外狀況處理。  
+ 描述 C++ 中的例外狀況處理。  
   
-## 請參閱  
- [Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)
+## <a name="see-also"></a>請參閱  
+ [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)

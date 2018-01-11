@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2bdee025575c538f95b46bb1042f46fef4ae587c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e1525d116a391fca2dab676528706d831f435f8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="listend-stlclr"></a>list::end (STL/CLR)
 指定受控制序列的結尾。  
@@ -81,7 +84,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
  [list:: back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
  [list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   

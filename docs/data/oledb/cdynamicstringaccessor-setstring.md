@@ -1,33 +1,35 @@
 ---
-title: "CDynamicStringAccessor::SetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor::SetString"
-  - "CDynamicStringAccessor.SetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetString 方法"
+title: "Cdynamicstringaccessor:: Setstring |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor::SetString
+- CDynamicStringAccessor.SetString
+dev_langs: C++
+helpviewer_keywords: SetString method
 ms.assetid: 94846d8b-4c1b-47fe-acdc-1752981cee25
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c05186d8ea7f62ad07cae9a4b4689083543e485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor::SetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
 設定指定資料行的資料做為字串。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 HRESULT SetString(  
@@ -44,26 +46,26 @@ HRESULT SetString(
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `nColumn`  
- \[in\]資料行編號。  資料行編號從 1 開始。  特殊值 0 代表書籤資料行，，如果有的話。  
+ [in] 資料行編號。 資料行數字開頭為 1。 特殊值為 0 參考的書籤資料行中，如果有的話。  
   
  `pColumnName`  
- \[in\] 包含資料行名稱的字串的指標。  
+ [in]包含資料行名稱的字元字串指標。  
   
  `data`  
- \[in\]寫入指定的資料行要寫入的字串資料之的指標。  
+ [in]要寫入至指定的資料行的字串資料指標。  
   
-## 傳回值  
- 設定指定之資料行的字串值的指標。  值屬於型別 `BaseType`，則會是 `CHAR` 或 `WCHAR` 是 `_UNICODE` 中定義。  
+## <a name="return-value"></a>傳回值  
+ 設定指定之資料行的字串值指標。 值為類型`BaseType`，這將成為`CHAR`或`WCHAR`取決於是否`_UNICODE`未定義。  
   
-## 備註  
- 當做 ANSI 字串和第三個覆寫表單接受資料行名稱指定為 Unicode 字串，第二個覆寫表單接受資料行名稱。  
+## <a name="remarks"></a>備註  
+ 第二個覆寫表單會採用資料行名稱做為 ANSI 字串和第三個覆寫表單會以 Unicode 字串資料行名稱。  
   
- 如果 `_SECURE_ATL` 定義為具有非零的值，執行階段判斷提示失敗時產生，如果輸入字串的 `data` 參考的資料行可允許的最大長度。  否則，如果它超過允許的最大長度，其輸入字串將被截斷。  
+ 如果`_SECURE_ATL`定義具有非零值，執行階段判斷提示失敗則會產生輸入`data`字串的長度超過參考的資料行的最大容許長度。 否則，請輸入的字串會被截斷，如果它是長度超過最大容許長度。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicStringAccessor 類別](../../data/oledb/cdynamicstringaccessor-class.md)

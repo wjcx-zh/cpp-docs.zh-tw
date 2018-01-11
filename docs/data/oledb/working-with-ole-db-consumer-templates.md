@@ -1,29 +1,32 @@
 ---
-title: "使用 OLE DB 消費者樣板 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 消費者樣板, 關於消費者樣板"
-  - "範例應用程式 [C++], OLE DB 樣板"
+title: "使用 OLE DB 消費者樣板 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sample applications [C++], OLE DB Templates
+- OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 333b72f2ad27fb079380ea8f2fb07c06f32e5b26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 使用 OLE DB 消費者樣板
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列主題中提供了一些在通用案例中使用 OLE DB 消費者樣板的範例：  
+# <a name="working-with-ole-db-consumer-templates"></a>使用 OLE DB 消費者樣板
+下列主題提供如何在一般情況下使用 OLE DB 消費者樣板的部分範例：  
   
 -   [以資料庫屬性簡化資料存取](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
@@ -43,7 +46,7 @@ caps.handback.revision: 8
   
 -   [使用結構描述資料列集取得中繼資料](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
--   [支援 OLE DB 中的交易](../../data/oledb/supporting-transactions-in-ole-db.md)  
+-   [支援 OLE DB 中的異動](../../data/oledb/supporting-transactions-in-ole-db.md)  
   
 -   [使用 OLE DB 資料錄檢視](../../data/oledb/using-ole-db-record-views.md)  
   
@@ -55,17 +58,17 @@ caps.handback.revision: 8
   
 -   [擷取 BLOB](../../data/oledb/retrieving-a-blob.md)  
   
--   [接收告知](../../data/oledb/receiving-notifications.md)  
+-   [接收通知](../../data/oledb/receiving-notifications.md)  
   
  如需建立和實作 OLE DB 消費者的範例，請參閱[建立簡單消費者](../../data/oledb/creating-an-ole-db-consumer.md)。  
   
- 您也可以在下列範例中找到 OLE DB 消費者樣板的使用範例：  
+ 您也可以找到如何在下列範例中使用 OLE DB 消費者樣板的範例：  
   
--   [CatDB](http://msdn.microsoft.com/zh-tw/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/zh-tw/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/zh-tw/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

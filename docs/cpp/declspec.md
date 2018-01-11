@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __declspec_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- __declspec keyword [C++]
+f1_keywords: __declspec_cpp
+dev_langs: C++
+helpviewer_keywords: __declspec keyword [C++]
 ms.assetid: 832db681-e8e1-41ca-b78c-cd9d265cdb87
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b29b6243611f1ca59a579869469c803d3735f9df
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0351b5ba8469918dfe52462485ebf36255db56fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declspec"></a>__declspec
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -90,13 +86,13 @@ ms.lasthandoff: 09/25/2017
   
  `__declspec` 關鍵字應該放置在簡單宣告的開頭。 編譯器會忽略位在宣告中 * 或 & 後面的任何 `__declspec` 關鍵字，以及位在宣告中變數識別項前面的這類關鍵字，不顯示警告。  
   
- 使用者定義類型宣告開頭所指定的 `__declspec` 屬性會套用至該類型的變數。 例如：  
+ 使用者定義類型宣告開頭所指定的 `__declspec` 屬性會套用至該類型的變數。 例如:   
   
 ```  
 __declspec(dllimport) class X {} varX;  
 ```  
   
- 在本案例中，屬性會套用至 `varX`。 `__declspec` 屬性會放在 `class` 或 `struct` 關鍵字後面，適用於使用者定義類型。 例如：  
+ 在本案例中，屬性會套用至 `varX`。 `__declspec` 屬性會放在 `class` 或 `struct` 關鍵字後面，適用於使用者定義類型。 例如:   
   
 ```  
 class __declspec(dllimport) X {};  
@@ -127,8 +123,8 @@ int * __declspec(selectany) pi3 = 0;   //ERROR, selectany is not part of a decla
 __declspec( thread ) int tls_i = 1;  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [C 擴充的儲存類別屬性](../c-language/c-extended-storage-class-attributes.md)

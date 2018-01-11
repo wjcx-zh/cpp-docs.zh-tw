@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3f018796bcb0e41196f473ec8a07644a5b0cfb68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f20a93135a6f310b626cbe12f68f72c64e4ce8e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>CMFCWindowsManagerDialog 類別
 `CMFCWindowsManagerDialog`物件可讓使用者管理 MDI 應用程式中的 MDI 子視窗。  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCWindowsManagerDialog : public CDialog  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|建構 `CMFCWindowsManagerDialog` 物件。|  
   
@@ -75,16 +76,16 @@ CMFCWindowsManagerDialog(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pMDIFrame`  
+ [輸入] `pMDIFrame`  
  父系或擁有者視窗的指標。  
   
- [in] `bHelpButton`  
+ [輸入] `bHelpButton`  
  布林值參數，指定是否要顯示架構**協助** 按鈕。  
   
 ### <a name="remarks"></a>備註  
  如需視覺管理員的詳細資訊，請參閱[視覺化管理員](../../mfc/visualization-manager.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMDIFrameWndEx 類別](../../mfc/reference/cmdiframewndex-class.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 271708c8908e6d213047283c431e03726946e059
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-operator-"></a>間接取值運算子：*
 ## <a name="syntax"></a>語法  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
  如果運算元指向某個函式，則結果為函式指示項。 如果運算元指向某個儲存位置，則結果為指定儲存位置的左值。  
   
- 間接運算子可以累計用於將指標取值成為指標。 例如：  
+ 間接運算子可以累計用於將指標取值成為指標。 例如:   
   
 ```  
 // expre_Indirection_Operator.cpp  
@@ -69,7 +70,7 @@ int main() {
   
 -   指標指定了執行中程式未使用的位址。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [傳址運算子: （& s)](../cpp/address-of-operator-amp.md)   

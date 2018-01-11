@@ -4,30 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::allocators::allocator_fixed_size
 - allocators/stdext::allocator_fixed_size
 - stdext::allocators::allocator_fixed_size
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::allocators [C++], allocator_fixed_size
 - stdext::allocator_fixed_size
 ms.assetid: 138f3ef8-b0b3-49c3-9486-58f2213c172f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 808bf0c48da659df79e808948ad568d137c98d0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: a5d05284ff23e0b99e67c23d1ed3658095f5a3e6
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorfixedsize-class"></a>allocator_fixed_size 類別
 描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_fixed_size](../standard-library/max-fixed-size-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。  
@@ -53,9 +51,8 @@ class allocator_fixed_size;
   
  **命名空間：** stdext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

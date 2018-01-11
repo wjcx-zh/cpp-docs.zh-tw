@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,39 +15,22 @@ f1_keywords:
 - PPLTASKS/concurrency::task_continuation_context::use_current
 - PPLTASKS/concurrency::task_continuation_context::use_default
 - PPLTASKS/concurrency::task_continuation_context::use_synchronous_execution
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_continuation_context class
+dev_langs: C++
+helpviewer_keywords: task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 8afd599e5ee489500d7f8c498d03c91ace6b99ed
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c8178ca25aaf1abe9047317673a9f47354112407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 類別
-`task_continuation_context` 類別可讓您指定要執行接續的位置。 只有從 Windows 市集應用程式使用這個類別才有用。 對於非 Windows 市集應用程式，工作接續的執行內容取決於執行階段，而且不可設定。  
+`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 只有從 Windows 市集應用程式使用這個類別才有用。 針對非 Windows 市集應用程式，工作接續的執行內容是由執行階段決定，而且無法設定。  
   
 ## <a name="syntax"></a>語法  
   
@@ -56,7 +38,7 @@ ms.lasthandoff: 03/17/2017
 class task_continuation_context : public details::_ContextCallback;
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -74,7 +56,7 @@ class task_continuation_context : public details::_ContextCallback;
  `task_continuation_context`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** ppltasks.h  
+ **標頭：** ppltasks.h  
   
  **命名空間：** concurrency  
 
@@ -88,14 +70,14 @@ static task_continuation_context get_current_winrt_context();
 ```  
   
 ## <a name="return-value"></a>傳回值  
- 目前的 Windows 執行階段執行緒內容。 如果從非 Windows 執行階段內容呼叫會傳回空的 task_continuation_context。  
+ 目前的 Windows 執行階段執行緒內容。 如果從非 Windows 執行階段內容中呼叫會傳回空的 task_continuation_context。  
   
 ## <a name="remarks"></a>備註  
- `get_current_winrt_context`方法會擷取呼叫端的 Windows 執行階段的執行緒內容。 它會傳回空的內容給非 Windows 執行階段呼叫者。  
+ `get_current_winrt_context`方法會擷取呼叫端的 Windows 執行階段執行緒內容。 非 Windows 執行階段呼叫端，它就會傳回空的內容。  
   
- 所傳回的值`get_current_winrt_context`可以用來向執行階段，執行接續公寓模型中的擷取內容 (STA vs MTA)，而不論前項工作是否 apartment 注意。 瞭解工作是解除包裝 Windows 執行階段的工作 apartment`IAsyncInfo`介面或從這類工作繼承而來的工作。  
+ 所傳回的值`get_current_winrt_context`可以用來向執行階段，執行接續 apartment 模型中的擷取的內容 (STA vs MTA)，不論前項工作是感知的 apartment。 注意工作是解除包裝 Windows 執行階段的工作 apartment`IAsyncInfo`介面或從這類工作繼承而來的工作。  
   
- 這個方法很類似`use_current`方法，但它也會提供原生 c + + 程式碼，而不需要 C + + /cli CX 延伸支援。 它適用於使用進階使用者撰寫 C + + /cli CX 無從原生和 Windows 執行階段呼叫端的程式庫程式碼。 除非您需要這項功能，我們建議`use_current`方法，只會提供給 C + + /cli CX 用戶端。  
+ 這個方法是類似於`use_current`方法，但它也會提供原生 c + + 程式碼沒有 C + + /CX 延伸模組支援。 它適用於供進階使用者撰寫 C + + /CX 無從驗證原生和 Windows 執行階段呼叫端的程式庫程式碼。 除非您需要這項功能，我們建議`use_current`方法，才可以使用 C + /CX 用戶端。  
   
   
 ##  <a name="use_arbitrary"></a>use_arbitrary 
@@ -107,12 +89,12 @@ static task_continuation_context use_arbitrary();
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 代表任意位置的工作接續內容。  
+ 表示任意位置的工作接續內容。  
   
 ### <a name="remarks"></a>備註  
- 當使用這個接續內容接續會執行在執行階段會選擇即使前項工作為 apartment 感知的內容中。  
+ 使用此接續內容時將會執行階段會選擇即使前項工作為 apartment 注意內容中執行接續。  
   
- `use_arbitrary`可以用來關閉 建立在 STA apartment 知道工作的接續的預設行為  
+ `use_arbitrary`可用來關閉 建立在 STA apartment 知道工作的接續的預設行為  
   
  這個方法只適用於 Windows 市集應用程式。  
   
@@ -128,9 +110,9 @@ static task_continuation_context use_current();
  目前執行內容。  
   
 ### <a name="remarks"></a>備註  
- 這個方法會擷取呼叫端的 Windows 執行階段內容，以便可以正確 apartment 中執行接續。  
+ 這個方法會擷取呼叫端的 Windows 執行階段內容，以便可以在右邊的 apartment 中執行接續。  
   
- 所傳回的值`use_current`可以用來向執行階段，不論前項工作是否為 apartment 注意擷取的內容 (STA vs MTA) 中執行的接續。 瞭解工作是解除包裝 Windows 執行階段的工作 apartment`IAsyncInfo`介面或從這類工作繼承而來的工作。  
+ 所傳回的值`use_current`可以用來向執行階段，不論前項工作為 apartment 注意擷取的內容 (STA vs MTA) 在執行接續。 注意工作是解除包裝 Windows 執行階段的工作 apartment`IAsyncInfo`介面或從這類工作繼承而來的工作。  
   
  這個方法只適用於 Windows 市集應用程式。  
   
@@ -146,11 +128,11 @@ static task_continuation_context use_default();
  預設接續內容。  
   
 ### <a name="remarks"></a>備註  
- 如果您不指定接續內容呼叫時使用的預設內容`then`方法。 在 Windows 應用程式的 Windows 7 及之前的版本，以及桌面應用程式在 Windows 8 和更新版本，執行階段會決定執行的工作接續。 不過，在 Windows 市集應用程式 apartment 知道工作的接續的預設接續內容會 apartment 其中`then`叫用。  
+ 如果您不指定接續內容呼叫時使用的預設內容`then`方法。 在 Windows 應用程式中的，使用 Windows 7 和其下，以及桌面應用程式在 Windows 8 和更新版本，執行階段會決定執行的工作接續。 不過，在 Windows 市集應用程式 apartment 知道工作的接續的預設接續內容會在 apartment 其中`then`叫用。  
   
- 瞭解工作是解除包裝 Windows 執行階段的工作 apartment`IAsyncInfo`介面或從這類工作繼承而來的工作。 因此，如果您排程在 Windows 執行階段 STA apartment 知道工作的接續，接續會執行在該 sta。  
+ 注意工作是解除包裝 Windows 執行階段的工作 apartment`IAsyncInfo`介面或從這類工作繼承而來的工作。 因此，如果您排程在 Windows 執行階段 STA apartment 知道工作的接續，接續會執行在該 sta。  
   
- 在執行階段會選擇的內容中，將會執行非 apartment 知道工作的接續。  
+ 非 apartment 知道工作的接續會在執行階段會選擇的內容中執行。  
 
 ## <a name="use_synchronous_execution"></a>task_continuation_context::use_synchronous_execution  
 傳回表示同步執行內容的工作接續內容物件。  
@@ -165,11 +147,10 @@ static task_continuation_context use_synchronous_execution();
  同步執行內容。  
   
 ## <a name="remarks"></a>備註  
- `use_synchronous_execution`方法會強制執行同步的內容，使其前項工作完成接續工作。  
+ `use_synchronous_execution`方法會強制執行以同步方式上的內容，導致其前項工作完成接續工作。  
   
- 如果附加接續時前項工作已完成，接續會同步執行接續工作會將附加的內容。  
+ 如果附加接續時前項工作已完成，接續將會在附加接續的內容以同步方式執行。  
   
  
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)
-

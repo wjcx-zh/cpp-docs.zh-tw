@@ -1,32 +1,33 @@
 ---
-title: "aggregatable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.aggregatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aggregatable attribute"
+title: "彙總 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.aggregatable
+dev_langs: C++
+helpviewer_keywords: aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ec044e18fdd8bcd21fbad8d2e46c847c876cc00d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# aggregatable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指示此類別支援彙總。  
+# <a name="aggregatable"></a>aggregatable
+表示此類別支援彙總。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -35,32 +36,32 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### 參數  
- *值* \(可省略\)  
- 參數，以指出 COM 物件可以彙總：  
+#### <a name="parameters"></a>參數  
+ *值*（選擇性）  
+ 表示 COM 物件可以彙總的參數：  
   
--   **永遠不會**的 COM 物件無法彙總。  
+-   **永遠不會**無法彙總的 COM 物件。  
   
--   **允許**可直接建立的 COM 物件，或可彙總。  這是預設值。  
+-   **允許**可以直接建立 COM 物件，或可以彙總。 這是預設值。  
   
--   **總是**的 COM 物件不能直接建立，並只可彙總。  當您呼叫`CoCreateInstance`對此物件中，您必須指定彙總物件的 **IUnknown** 介面 \(控制 **IUnknown**\)。  
+-   **一律**COM 物件無法直接建立，且只會彙總。 當您呼叫`CoCreateInstance`此物件，您必須指定彙總物件的**IUnknown**介面 (控制**IUnknown**)。  
   
-## 備註  
- **可集成** C\+\+ 屬性具有相同的功能，為 [可集成](http://msdn.microsoft.com/library/windows/desktop/aa366721) MIDL 屬性。  這表示編譯器會將傳遞**可集成**透過屬性設定為產生的.idl 檔。  
+## <a name="remarks"></a>備註  
+ **彙總**c + + 屬性具有相同的功能[彙總](http://msdn.microsoft.com/library/windows/desktop/aa366721)MIDL 屬性。 這表示編譯器將會通過**彙總**透過屬性設定為產生的.idl 檔案。  
   
- 這個屬性不能 [coclass](../windows/coclass.md)，  [progid](../windows/progid.md)，或  [vi\_progid](../windows/vi-progid.md) 屬性 \(或另一個屬性，表示其中一種\) 也會套用到相同的項目。  如果使用任何的單一屬性時，會自動套用其他兩個。  比方說，如果 **progid** 被套用的話，  **vi\_progid** 和 **coclass** 也會套用。  
+ 此屬性需要 [coclass](../windows/coclass.md)、 [progid](../windows/progid.md)或 [vi_progid](../windows/vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果套用 **progid** ，則也會套用 **vi_progid** 和 **coclass** 。  
   
  **ATL 專案**  
   
- 如果使用 ATL 專案中使用這個屬性，屬性的行為就會變更。  除了先前所說明的行為，屬性也會將加入下列的巨集的其中一個目標類別：  
+ 如果在使用 ATL 的專案內使用此屬性，則屬性的行為會變更。 除了上述的行為，此屬性也會加入下列巨集的其中一個目標類別：  
   
 |參數值|插入的巨集|  
-|---------|-----------|  
-|**永不**|[DECLARE\_NOT\_AGGREGATABLE](../Topic/DECLARE_NOT_AGGREGATABLE.md)|  
-|**允許**|[DECLARE\_POLY\_AGGREGATABLE](../Topic/DECLARE_POLY_AGGREGATABLE.md)|  
-|**永遠**|[DECLARE\_ONLY\_AGGREGATABLE](../Topic/DECLARE_ONLY_AGGREGATABLE.md)|  
+|---------------------|--------------------|  
+|**永遠不會**|[DECLARE_NOT_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|  
+|**允許**|[DECLARE_POLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|  
+|**永遠**|[DECLARE_ONLY_AGGREGATABLE](../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cpp_attr_ref_aggregatable.cpp  
@@ -76,22 +77,21 @@ caps.handback.revision: 10
 class CMyClass {};  
 ```  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|**類別**，`struct`|  
+|**適用於**|**class**、 `struct`|  
 |**可重複**|否|  
-|**必要的屬性**|一或多項動作：  **coclass**，  **progid**，或  **vi\_progid**。|  
-|**無效的屬性**|None|  
+|**必要屬性**|下列一或多個項目： **coclass**、 **progid**或 **vi_progid**。|  
+|**無效屬性**|無|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Aggregation](http://msdn.microsoft.com/library/windows/desktop/ms686558)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [類別屬性](../windows/class-attributes.md)   
+ [Typedef、 Enum、 Union 和 Struct 屬性](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [彙總](http://msdn.microsoft.com/library/windows/desktop/ms686558)   

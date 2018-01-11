@@ -1,32 +1,33 @@
 ---
-title: "retval | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.retval"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "retval attribute"
+title: "retval |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.retval
+dev_langs: C++
+helpviewer_keywords: retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cf7aa0cf8dd9767f603807ee18e23fe02d3446c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# retval
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-指定接收成員傳回值的參數。  
+# <a name="retval"></a>retval
+指定接收成員的傳回值的參數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -34,29 +35,28 @@ caps.handback.revision: 9
   
 ```  
   
-## 備註  
- **Retval** C\+\+ 屬性具有相同的功能，為 [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL 屬性。  
+## <a name="remarks"></a>備註  
+ **Retval** c + + 屬性具有相同的功能[retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) MIDL 屬性。  
   
- **retval** 必須出現在函式宣告中的最後一個引數。  
+ **retval**必須出現在函式宣告中的最後一個引數。  
   
-## 範例  
- 請參閱範例的[可繫結](../windows/bindable.md) 的範例使用  **retval**。  
+## <a name="example"></a>範例  
+ 請參閱範例的[可繫結](../windows/bindable.md)的範例使用**retval**。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
-### 屬性內容  
+### <a name="attribute-context"></a>屬性內容  
   
 |||  
 |-|-|  
-|**適用於**|介面參數，介面方法|  
+|**適用於**|介面參數，在介面方法|  
 |**可重複**|否|  
-|**必要的屬性**|**out**|  
-|**無效的屬性**|**in**|  
+|**必要屬性**|**out**|  
+|**無效屬性**|**in**|  
   
- 如需有關屬性內容的詳細資訊，請參閱[屬性內容](../windows/attribute-contexts.md)。  
+ 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](../windows/attribute-contexts.md)。  
   
-## 請參閱  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/zh-tw/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>請參閱  
+ [IDL 屬性](../windows/idl-attributes.md)   
+ [參數屬性](../windows/parameter-attributes.md)   
+ [方法屬性](../windows/method-attributes.md)   

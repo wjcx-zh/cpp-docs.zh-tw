@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49ddbc29762ea07cf1f7b5fa24fafd3cfa5e8612
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ffffa6c446487752974549f4a070cf8e86e91aea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-preview-architecture"></a>預覽列印架構
 本文說明 MFC 架構如何實作預覽列印功能。 涵蓋的主題包括：  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/24/2017
   
  `CPrintInfo`結構也包含名為**m_strPageDesc**，用來格式化單頁和多頁模式中螢幕的底部顯示的字串。 這些字串是表單的預設 「 頁面 *n* "和"頁面 *n*   -  *m*，"，但您可以修改**m_strPageDesc**從`OnPreparePrinting`並將字串設定為更複雜的項目。 請參閱[CPrintInfo 結構](../mfc/reference/cprintinfo-structure.md)中*MFC 參考*如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [列印和預覽列印](../mfc/printing-and-print-preview.md)   
  [列印](../mfc/printing.md)   
  [CView 類別](../mfc/reference/cview-class.md)   

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eebe8ffefedbc28be1f16a0d02a195d4af4ac0c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd8dac513b5eec049fbb739ab79628d9f41c96b0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mutextraits-structure"></a>MutexTraits 結構
 定義的一般特性[Mutex](../windows/mutex-class1.md)類別。  
@@ -30,11 +33,11 @@ ms.lasthandoff: 10/24/2017
 struct MutexTraits : HANDLENullTraits;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[MutexTraits::Unlock 方法](../windows/mutextraits-unlock-method.md)|版本的共用資源的獨佔控制。|  
   
@@ -48,5 +51,5 @@ struct MutexTraits : HANDLENullTraits;
   
  **命名空間：** Microsoft::WRL::Wrappers::HandleTraits  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Wrappers::HandleTraits 命名空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

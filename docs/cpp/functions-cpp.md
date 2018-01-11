@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e5794cd9ec0eb5afc879507bcf8942d6481ebca4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5fa20f0a2236d6458490784d2fa0f1b53b13241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-c"></a>函式 (C++)
 函式是執行某項作業的程式碼區塊。 函式可以選擇性地定義輸入參數，以讓呼叫端將引數傳遞給函式。 函式可以選擇性地傳回值做為輸出。 函式適用於將一般作業封裝在單一可重複使用的區塊中，而且其名稱最好可清楚描述該函式的作用。 下列函式接受呼叫端的兩個整數並傳回其總和;`a`和`b`是*參數*型別的`int`。  
@@ -173,7 +174,7 @@ void DoSomething(const std::string& input){...}
 void DoSomething(const std::string&& input){...}  
 ```  
   
- 只要關鍵字 `void` 是引數宣告清單中的第一個且是唯一的成員，使用參數宣告清單中單一關鍵字 `void` 所宣告的函式就不會採用引數。 清單中其他位置的 `void` 類型引數都會產生錯誤。 例如:  
+ 只要關鍵字 `void` 是引數宣告清單中的第一個且是唯一的成員，使用參數宣告清單中單一關鍵字 `void` 所宣告的函式就不會採用引數。 清單中其他位置的 `void` 類型引數都會產生錯誤。 例如:   
   
 ```  
   
@@ -392,7 +393,7 @@ int (*myFunction(char* s))(int);
   
  上述宣告相當於上面使用 typedef 的宣告。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式多載](../cpp/function-overloading.md)   
  [具有變數引數清單的函式](../cpp/functions-with-variable-argument-lists-cpp.md)   
  [明確預設和刪除函式](../cpp/explicitly-defaulted-and-deleted-functions.md)   

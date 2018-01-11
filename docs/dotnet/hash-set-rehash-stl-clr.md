@@ -1,41 +1,42 @@
 ---
-title: "hash_set::rehash (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::rehash"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rehash 成員 [STL/CLR]"
+title: "hash_set::rehash (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::rehash
+dev_langs: C++
+helpviewer_keywords: rehash member [STL/CLR]
 ms.assetid: f62bae81-4321-44e1-97d0-77174a13e0de
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60fbc2cc0b0d8520fd2d682c369a7f7feffd04d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::rehash (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-重新建置雜湊資料表。  
+# <a name="hashsetrehash-stlclr"></a>hash_set::rehash (STL/CLR)
+重建雜湊資料表。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void rehash();  
 ```  
   
-## 備註  
- 成員函式重建雜湊表，確保 [hash\_set::load\_factor](../dotnet/hash-set-load-factor-stl-clr.md)`() <=`[hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md)。  否則，雜湊資料表大小增加只需要在插入後。\(它的大小會自動縮小\)。您會用它來調整雜湊資料表的大小。  
+## <a name="remarks"></a>備註  
+ 成員函式會重建雜湊表，如此可確保[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md) `() <=` [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)。 否則，雜湊表的大小會增加只有在必要時插入後。 （它永遠不會自動減少大小。）您可以使用它來調整的雜湊資料表大小。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_set_rehash.cpp   
@@ -81,23 +82,28 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count \(\) \= 16**  
-**load\_factor \(\) \= 0.1875**  
-**max\_load\_factor \(\) \= 4**  
-**bucket\_count \(\) \= 16**  
-**load\_factor \(\) \= 0.1875**  
-**max\_load\_factor \(\) \= 0.25**  
-**bucket\_count \(\) \= 128**  
-**load\_factor \(\) \= 0.0234375**  
-**max\_load\_factor \(\) \= 0.25**   
-## 需求  
- **標題:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **命名空間:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## 請參閱  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)   
- [hash\_set::load\_factor](../dotnet/hash-set-load-factor-stl-clr.md)   
- [hash\_set::max\_load\_factor](../dotnet/hash-set-max-load-factor-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
+  
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)   
+ [hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)   
+ [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 02909b9b42ca781f7a178aa4b9dc7440bd89f2a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d316505939b22149b53a1012113a7aba88e2dcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="additive-operators--and--"></a>加法類運算子：+ 和 -
 ## <a name="syntax"></a>語法  
@@ -119,7 +120,7 @@ for( int i = 0; i < 10; ++i )
   
  兩個運算元中的第二個運算元可以是整數類資料類型。 減法運算的結果與原始指標的類型相同。 減法的值是指標 (*n* - *我*) 個陣列元素，其中 *n* 指向元素原始指標和*我*是第二個運算元的整數值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 加法類運算子](../c-language/c-additive-operators.md)

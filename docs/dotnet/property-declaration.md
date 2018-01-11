@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c695bfded782ca4db60618ee556af2b4d2dd69be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c047e1efbe030591e26fb410c9b2df254734e08b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-declaration"></a>屬性宣告
 宣告 managed 類別中的屬性的方法已從 Managed Extensions for c + + Visual c + +。  
@@ -106,6 +109,6 @@ public:
   
  速記屬性語法的有趣的副作用是，雖然幕後狀態成員會由編譯器所產生，但它不能存取在類別內除非透過 set/get 存取子。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [在類別或介面中的成員宣告 (C + + /CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
  [屬性](../windows/property-cpp-component-extensions.md)

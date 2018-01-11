@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 16a13e49cb33698810c536839eb434109557466e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0e475214e38a69f3d6656b1a01ca4207604471fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="safegreaterthanequals"></a>SafeGreaterThanEquals
 比較兩個數字。  
@@ -35,10 +38,10 @@ inline bool SafeGreaterThanEquals (
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `t`  
+ [輸入] `t`  
  要比較的第一個數字。 這必須為類型 T。  
   
- [in] `u`  
+ [輸入] `u`  
  要比較的第二個數字。 這必須為類型 U。  
   
 ## <a name="return-value"></a>傳回值  
@@ -59,7 +62,7 @@ inline bool SafeGreaterThanEquals (
   
  **命名空間：** Microsoft::Utilities  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [SafeInt 函式](../windows/safeint-functions.md)   
  [SafeInt 程式庫](../windows/safeint-library.md)   
  [SafeInt 類別](../windows/safeint-class.md)   

@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 182cb637351f722677d8da97c7a7b880c3241311
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c9e9aba6d2a0485a94385be5b8712d7552261ff1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declaration-of-a-managed-class-type"></a>Managed 類別類型的宣告
 若要宣告參考類別的型別，從 Managed Extensions for c + + 變更為 Visual c + + 方法。  
@@ -131,7 +134,7 @@ __gc class Derived : Base {};
 ref class Derived : Base{};  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
  [abstract](../windows/abstract-cpp-component-extensions.md)   

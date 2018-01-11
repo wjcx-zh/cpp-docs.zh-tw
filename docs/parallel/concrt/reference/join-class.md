@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 25a65dae7b030cc1728194cce5d989c34fa06667
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5166dd4d8c57d3d64fb9d794319b7f2b0398e3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-class"></a>join 類別
 `join` 傳訊區塊是單一目標、多來源的排序 `propagator_block`，會與來自其每個來源的 `T` 類型訊息合併。  
@@ -51,18 +52,18 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
  `_Jtype`  
  此種類的`join`區塊這有`greedy`或`non_greedy`  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[join](#ctor)|多載。 建構`join`傳訊區塊。|  
 |[~ join 解構函式](#dtor)|終結`join`區塊。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|接受的訊息，有提供這`join`傳訊區塊，將擁有權傳送給呼叫者。|  
 |[consume_message](#consume_message)|取用先前所提供的訊息`join`傳訊區塊和目標，將擁有權傳送給呼叫者所保留。|  
@@ -256,7 +257,7 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 virtual void resume_propagation();
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [concurrency 命名空間](concurrency-namespace.md)   
  [choice 類別](choice-class.md)   
  [multitype_join 類別](multitype-join-class.md)

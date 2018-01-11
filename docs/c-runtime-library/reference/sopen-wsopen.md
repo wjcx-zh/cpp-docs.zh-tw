@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - wsopen
 - _sopen
 - _tsopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - sopen function
 - sharing files
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - files [C++], sharing
 - _wsopen function
 ms.assetid: a9d4cccf-06e9-414d-96fa-453fca88cc1f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aac10cebd0f967944403837283e9008b0b1047fc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bce1d0aac8b6b4d835b956a9ac05eece4e2e6428
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sopen-wsopen"></a>_sopen、_wsopen
 開啟檔案以供共用。 這些函式已有更安全的版本可供使用，請參閱 [_sopen_s、_wsopen_s](../../c-runtime-library/reference/sopen-s-wsopen-s.md)。  
@@ -108,7 +92,7 @@ int _wsopen(
  指定的路徑為目錄，或是檔案為唯讀，但已嘗試「開啟以供寫入」作業。  
   
  `EEXIST`  
-指定了  `_O_CREAT` 和 `_O_EXCL` 旗標，但 `filename` 已存在。  
+ 指定了 `_O_CREAT` 和 `_O_EXCL` 旗標，但 `filename` 已存在。  
   
  `EINVAL`  
  無效的 `oflag` 或 `shflag` 引數。  
@@ -119,7 +103,7 @@ int _wsopen(
  `ENOENT`  
  找不到檔案或路徑。  
   
- 如需這些傳回碼和其他傳回碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
+ 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。  
   
 ## <a name="remarks"></a>備註  
  `_sopen` 函式會開啟 `filename` 指定的檔案，並準備檔案，以供共用讀取或寫入 (由 `oflag` 和 `shflag` 指定)。 `_wsopen` 是寬字元版本的 `_sopen`；`filename` 的 `_wsopen` 引數是寬字元字串。 否則，`_wsopen` 和 `_sopen` 的行為即會相同。  
@@ -225,17 +209,17 @@ int _wsopen(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_sopen`|\<io.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|  
 |`_wsopen`|\<io.h> 或 \<wchar.h>|\<fcntl.h>、\<sys\types.h>、\<sys\stat.h>、\<share.h>|  
   
- 如需相容性詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  請參閱 [_locking](../../c-runtime-library/reference/locking.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_close](../../c-runtime-library/reference/close.md)   
  [_creat、_wcreat](../../c-runtime-library/reference/creat-wcreat.md)   

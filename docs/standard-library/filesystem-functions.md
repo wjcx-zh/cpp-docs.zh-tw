@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -49,75 +48,59 @@ f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::system_complete
 - FILESYSTEM/std::experimental::filesystem::temp_directory_path
 - FILESYSTEM/std::experimental::filesystem::u8path
-- filesystem/std::absolute
-- filesystem/std::begin
-- filesystem/std::canonical
-- filesystem/std::copy
-- filesystem/std::copy_file
-- filesystem/std::copy_symlink
-- filesystem/std::create_directories
-- filesystem/std::create_directory
-- filesystem/std::create_directory_symlink
-- filesystem/std::create_hard_link
-- filesystem/std::create_symlink
-- filesystem/std::current_path
-- filesystem/std::end
-- filesystem/std::equivalent
-- filesystem/std::exists
-- filesystem/std::file_size
-- filesystem/std::hard_link_count
-- filesystem/std::hash_value
-- filesystem/std::is_block_file
-- filesystem/std::is_character_file
-- filesystem/std::is_directory
-- filesystem/std::is_empty
-- filesystem/std::is_fifo
-- filesystem/std::is_other
-- filesystem/std::is_regular_file
-- filesystem/std::is_socket
-- filesystem/std::is_symlink
-- filesystem/std::last_write_time
-- filesystem/std::permissions
-- filesystem/std::read_symlink
-- filesystem/std::remove
-- filesystem/std::remove_all
-- filesystem/std::rename
-- filesystem/std::resize_file
-- filesystem/std::space
-- filesystem/std::status
-- filesystem/std::status_known
-- filesystem/std::swap
-- filesystem/std::symlink_status
-- filesystem/std::system_complete
-- filesystem/std::temp_directory_path
-- filesystem/std::u8path
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: be3cb821-4728-4d47-ab78-858fa8aa5045
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 31a7a65ed759ec552e11f2eccc5d425c2b2b765d
-ms.openlocfilehash: 253af6748b2d46ee1421604ed6f16fd97bf5a459
-ms.contentlocale: zh-tw
-ms.lasthandoff: 02/24/2017
-
+helpviewer_keywords:
+- std::experimental::filesystem::absolute
+- std::experimental::filesystem::canonical
+- std::experimental::filesystem::copy
+- std::experimental::filesystem::copy_file
+- std::experimental::filesystem::copy_symlink
+- std::experimental::filesystem::create_directories
+- std::experimental::filesystem::create_directory
+- std::experimental::filesystem::create_directory_symlink
+- std::experimental::filesystem::create_hard_link
+- std::experimental::filesystem::create_symlink
+- std::experimental::filesystem::current_path
+- std::experimental::filesystem::equivalent
+- std::experimental::filesystem::exists
+- std::experimental::filesystem::file_size
+- std::experimental::filesystem::hard_link_count
+- std::experimental::filesystem::hash_value
+- std::experimental::filesystem::is_block_file
+- std::experimental::filesystem::is_character_file
+- std::experimental::filesystem::is_directory
+- std::experimental::filesystem::is_empty
+- std::experimental::filesystem::is_fifo
+- std::experimental::filesystem::is_other
+- std::experimental::filesystem::is_regular_file
+- std::experimental::filesystem::is_socket
+- std::experimental::filesystem::is_symlink
+- std::experimental::filesystem::last_write_time
+- std::experimental::filesystem::permissions
+- std::experimental::filesystem::read_symlink
+- std::experimental::filesystem::remove
+- std::experimental::filesystem::remove_all
+- std::experimental::filesystem::rename
+- std::experimental::filesystem::resize_file
+- std::experimental::filesystem::space
+- std::experimental::filesystem::status
+- std::experimental::filesystem::status_known
+- std::experimental::filesystem::swap
+- std::experimental::filesystem::symlink_status
+- std::experimental::filesystem::system_complete
+- std::experimental::filesystem::temp_directory_path
+- std::experimental::filesystem::u8path
+ms.workload: cplusplus
+ms.openlocfilehash: edd850087249769fce9e96110dfa29ca37450b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 函式
 [\<filesystem>](../standard-library/filesystem.md) 標頭中的這些免費函式會對路徑、檔案、符號連結、目錄和磁碟區執行修改及查詢作業。 如需詳細資訊與程式碼範例，請參閱[檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)。  
@@ -616,6 +599,5 @@ path u8path(InIt first, InIt last);
 ```  
   
  第一個函式的行為與 path(source) 相同，第二個函式的行為與 path(first, last) 相同，不同之處在於每個案例中指定的來源會被視為一串 UTF-8 編碼的 char 元素，不論檔案系統為何。
-
 
 

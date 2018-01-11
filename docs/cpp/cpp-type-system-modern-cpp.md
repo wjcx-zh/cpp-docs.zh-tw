@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47d8fdec93c9d77e6648c5f648171a8ff349474d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c4e86ffe91c2c0bf6a914e8f735b5faca6ae45f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 概念*類型*c + + 中非常重要。 每個變數、函式引數和函式傳回值都必須有類型才能編譯。 此外，在評估之前，編譯器會以隱含的方式指定每一個運算式 (包括常值) 的類型。 類型的一些範例包括`int`儲存整數值，`double`儲存浮點數值 (也稱為*純量*資料型別)，或標準程式庫類別[std::basic_string](../standard-library/basic-string-class.md)儲存文字。 您可以藉由定義 `class` 或 `struct`，建立自己的類型。 此類型會指定配置給變數 (或運算式結果) 的記憶體數量、可在該變數中存放的值種類、這些值 (位元模式) 的解譯方式，以及可對其執行的作業。 本文包含 C++ 類型系統主要功能的簡略概觀。  
@@ -167,7 +168,7 @@ void someFunction() {
 ## <a name="windows-data-types"></a>Windows 資料類型  
  在 C 和 C++ 的傳統 Win32 程式設計中，大部分函式會使用 Windows 專有的 typedef 和 #define 巨集 (定義於 `windef.h`) 來指定參數和傳回值的類型。 這些 Windows 資料類型是大部分只特殊名稱 （別名） 給 C/c + + 內建型別。 如需這些 typedef 和前置處理器定義的完整清單，請參閱[Windows 資料類型](http://msdn.microsoft.com/en-us/4553cafc-450e-4493-a4d4-cb6e2f274d46)。 這些 Typedef (例如 HRESULT 和 LCID) 很有用而且是描述性的。 其他如 INT，並無特殊意義，只是基本 C++ 類型的別名而已。 其他 Windows 資料類型有從 C 程式設計和 16 位元處理器時代保留下來的名稱，在現代硬體或作業系統上並無用處或意義。 也有與 Windows 執行階段程式庫列為相關聯的特殊資料型別[Windows 執行階段基底資料型別](http://msdn.microsoft.com/en-us/b5735851-ec07-48c1-92b4-ca9f768096f6)。 在現代 C++ 中，一般的方針就是，除非 Windows 類型傳達有關如何解譯值的額外涵義，否則優先使用 C++ 基本類型。  
   
-## <a name="more-information"></a>其他資訊  
+## <a name="more-information"></a>更多資訊  
  如需 C++ 類型系統的詳細資訊，請參閱下列主題：  
   
 |||  
@@ -175,7 +176,7 @@ void someFunction() {
 |[實值型別](../cpp/value-types-modern-cpp.md)|描述*實值型別的*以及與其用途相關的問題。|  
 |[型別轉換和類型安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)|描述一般類型轉換問題並顯示如何避免這些問題。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

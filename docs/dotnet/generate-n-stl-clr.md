@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15a6d68913bd64d8f5022efa4344c1e3749451f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bf312c5ed2404f32cdee6fd3b955e673048d9308
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generaten-stlclr"></a>generate_n (STL/CLR)
 將函式物件產生的值指派給範圍內的指定項目數，並返回到超過最後一個指定值的位置。  
@@ -39,5 +42,5 @@ template<class _OutIt, class _Diff, class _Fn0> inline
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

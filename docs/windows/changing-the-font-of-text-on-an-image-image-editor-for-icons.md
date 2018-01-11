@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86942af0085bf749c8e1bbbab27a9a674164da79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 07dc7d7fd74ad9d4b0229ffef7cf4e96a4ea44b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-font-of-text-on-an-image-image-editor-for-icons"></a>變更影像上的文字字型 (圖示影像編輯器)
 下列程序是如何的範例：  
@@ -51,7 +54,7 @@ ms.lasthandoff: 10/24/2017
   
 11. 按一下**關閉**文字工具對話方塊上的按鈕。 可調整文字周圍方塊就會消失從影像編輯器。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編輯圖形資源](../windows/editing-graphical-resources-image-editor-for-icons.md)   
  [工具列](../windows/toolbar-image-editor-for-icons.md)
 

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21d8e601956e0afb943c3739e531b3b677c7454a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2fe196eb561c336e45402de6c390146a0d77bea4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="servers-server-items"></a>伺服器：伺服器項目
 當容器啟動伺服器以便使用者可以編輯內嵌或連結的 OLE 項目時，伺服器應用程式會建立「伺服器項目」。 伺服器項目是其類別衍生自 `COleServerItem` 的物件，在伺服器文件和容器應用程式之間提供介面。  
@@ -56,6 +57,6 @@ ms.lasthandoff: 10/24/2017
   
  如需詳細資訊，請參閱[cview:: Ondraw](../mfc/reference/cview-class.md#ondraw)， [COleServerItem](../mfc/reference/coleserveritem-class.md)， [coleserveritem:: Ondraw](../mfc/reference/coleserveritem-class.md#ondraw)，和[Coleserveritem](../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)中*類別程式庫參考*。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [伺服器](../mfc/servers.md)
 

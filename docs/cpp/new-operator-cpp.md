@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- new keyword [C++]
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a7386d45f5188e7217ebfd4c235c0763bfd70044
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-operator-c"></a>new 運算子 (C++)
 為物件或物件的陣列配置記憶體*型別名稱*從可用存放區，並傳回具適當類型，則為非零的指標物件。  
@@ -258,7 +255,7 @@ T *TObject =::new TObject;
   
  範圍解析運算子 (`::`) 會強制使用全域**新**運算子。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [新和 delete 運算子](../cpp/new-and-delete-operators.md)

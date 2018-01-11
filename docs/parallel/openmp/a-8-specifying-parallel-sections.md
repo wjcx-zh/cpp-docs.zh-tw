@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d369c2e3a0d326ab4c835a30681f3dbe50f789f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db7decc4efb1a3f6bb457623489c84e0ad1ae1f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a8---specifying-parallel-sections"></a>A.8 指定平行處理區段
 在下列範例中，(如[區段 2.4.2](../../parallel/openmp/2-4-2-sections-construct.md)在頁面上 14) 函式*xaxis*， *y 軸*，和*zaxis*可同時執行。 第一個`section`指示詞是選擇性的。  請注意，所有`section`指示詞需要的語彙範圍中出現`parallel sections`建構。  

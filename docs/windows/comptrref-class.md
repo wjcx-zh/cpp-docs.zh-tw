@@ -1,32 +1,33 @@
 ---
-title: "ComPtrRef 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRef 類別"
+title: "ComPtrRef 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef
+dev_langs: C++
+helpviewer_keywords: ComPtrRef class
 ms.assetid: d6bdfd20-e977-45b4-9ac1-1b8efbdb77de
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9b1bbe134f15fdba6863f1725cbcc7effcb6d94f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ComPtrRef 類別
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-支援 WRL 基礎結構，而且不是為了要直接從您的程式碼中使用而設計。  
+# <a name="comptrref-class"></a>ComPtrRef 類別
+支援 WRL 基礎結構，並不是直接從您的程式碼使用。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template <  
@@ -35,48 +36,48 @@ template <
 class ComPtrRef : public ComPtrRefBase<T>;  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `T`  
- [ComPtr\<T\>](../windows/comptr-class.md) 型別或衍生自其本身的型別，而不僅是 ComPtr 表示的介面。  
+ A [ComPtr\<T >](../windows/comptr-class.md)型別或型別衍生自它不只是 ComPtr 所代表的介面。  
   
-## 備註  
- 表示型別 ComPtr\<T\> 物件的參考。  
+## <a name="remarks"></a>備註  
+ 表示 ComPtr 類型的物件參考\<T >。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-### 公用建構函式  
+### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
-|--------|--------|  
-|[ComPtrRef::ComPtrRef 建構函式](../windows/comptrref-comptrref-constructor.md)|初始化 ComPtrRef 類別的新執行個體，從指定指標到另一 ComPtrRef 物件。|  
+|名稱|描述|  
+|----------|-----------------|  
+|[ComPtrRef::ComPtrRef 建構函式](../windows/comptrref-comptrref-constructor.md)|初始化指定的指標到另一個的 ComPtrRef 物件的 ComPtrRef 類別的新執行個體。|  
   
-### 公用方法  
+### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
-|--------|--------|  
-|[ComPtrRef::GetAddressOf 方法](../windows/comptrref-getaddressof-method.md)|擷取 ComPtrRef 目前物件所表示的介面的指標位址。|  
-|[ComPtrRef::ReleaseAndGetAddressOf 方法](../windows/comptrref-releaseandgetaddressof-method.md)|刪除目前 ComPtrRef 物件並傳回指標的指標到由 ComPtrRef 物件所代表的介面。|  
+|名稱|描述|  
+|----------|-----------------|  
+|[ComPtrRef::GetAddressOf 方法](../windows/comptrref-getaddressof-method.md)|擷取目前的 ComPtrRef 物件所代表之介面的指標位址。|  
+|[ComPtrRef::ReleaseAndGetAddressOf 方法](../windows/comptrref-releaseandgetaddressof-method.md)|刪除目前的 ComPtrRef 物件，並傳回已 ComPtrRef 物件所代表的介面指標至 a 的指標。|  
   
-### 公用運算子  
+### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
-|--------|--------|  
-|[ComPtrRef::operator InterfaceType\*\* 運算子](../windows/comptrref-operator-interfacetype-star-star-operator.md)|刪除目前 ComPtrRef 物件並傳回指標的指標到由 ComPtrRef 物件所代表的介面。|  
-|[ComPtrRef::operator T\* 運算子](../windows/comptrref-operator-t-star-operator.md)|傳回目前 ComPtrRef 物件的 [ptr\_](../windows/comptrrefbase-ptr-data-member.md) 資料成員的值。|  
-|[ComPtrRef::operator void\*\* 運算子](../windows/comptrref-operator-void-star-star-operator.md)|刪除目前 ComPtrRef 物件，並將 ComPtrRef 物件代表的指標轉換成指向 `void`的指標的指標，然後傳回轉型指標。|  
-|[ComPtrRef::operator\* 運算子](../windows/comptrref-operator-star-operator.md)|擷取指到目前 ComPtrRef 物件所表示的介面的指標。|  
-|[ComPtrRef::operator\=\= 運算子](../windows/comptrref-operator-equality-operator.md)|表示兩個 ComPtrRef 物件是否不相等。|  
-|[ComPtrRef::operator\!\= 運算子](../windows/comptrref-operator-inequality-operator.md)|表示兩個 ComPtrRef 物件是否不相等。|  
+|名稱|描述|  
+|----------|-----------------|  
+|[ComPtrRef::operator InterfaceType** 運算子](../windows/comptrref-operator-interfacetype-star-star-operator.md)|刪除目前的 ComPtrRef 物件，並傳回已 ComPtrRef 物件所代表的介面指標至 a 的指標。|  
+|[ComPtrRef::operator T* 運算子](../windows/comptrref-operator-t-star-operator.md)|傳回的值[ptr_](../windows/comptrrefbase-ptr-data-member.md)目前 ComPtrRef 物件的資料成員。|  
+|[ComPtrRef::operator void** 運算子](../windows/comptrref-operator-void-star-star-operator.md)|刪除目前的 ComPtrRef 物件，會轉換至已做為指標--指標-將 ComPtrRef 物件所代表的介面指標`void`，然後傳回轉型指標。|  
+|[ComPtrRef::operator* 運算子](../windows/comptrref-operator-star-operator.md)|擷取目前的 ComPtrRef 物件所代表之介面指標。|  
+|[ComPtrRef::operator== 運算子](../windows/comptrref-operator-equality-operator.md)|指出兩個 ComPtrRef 物件是否相等。|  
+|[ComPtrRef::operator!= 運算子](../windows/comptrref-operator-inequality-operator.md)|指出兩個 ComPtrRef 物件是否不相等。|  
   
-## 繼承階層  
+## <a name="inheritance-hierarchy"></a>繼承階層  
  `ComPtrRefBase`  
   
  `ComPtrRef`  
   
-## 需求  
- **標題:** client.h  
+## <a name="requirements"></a>需求  
+ **標頭：** client.h  
   
  **命名空間：** Microsoft::WRL::Details  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft::WRL::Details 命名空間](../windows/microsoft-wrl-details-namespace.md)

@@ -1,40 +1,42 @@
 ---
-title: "How to: Declare Value Types with the interior_ptr Keyword (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr keyword"
-  - "value types, declaring"
+title: "如何： 使用 interior_ptr 關鍵字宣告實值類型 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4b42cbbbc175b3d48baa7b7b2e1c1a5b0e4cbf15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Declare Value Types with the interior_ptr Keyword (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`interior_ptr` 可與實值型別一起使用。  
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>如何：使用 interior_ptr 關鍵字宣告實值類型 (C++/CLI)
+`interior_ptr` 可與實值類型一起使用。  
   
 > [!IMPORTANT]
->  這個語言功能支援於 **\/clr** 編譯器選項，但不支援於 **\/ZW** 編譯器選項。  
+>  這項語言功能會受到**/clr**編譯器選項，但不是由**/ZW**編譯器選項。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 下列 [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] 範例會示範如何使用具有實值型別的 `interior_ptr` 。  
+### <a name="description"></a>描述  
+ 下列 C + + /CLI 範例示範如何使用`interior_ptr`值型別。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -64,7 +66,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 1  
@@ -75,14 +77,14 @@ int main() {
 3  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 在實值型別，對 interior\_ptr 的 `this` 指標評估。  
+### <a name="description"></a>描述  
+ 在實值類型中，`this` 指標會判斷值為 interior_ptr。  
   
- 在實值型別 `V`的非靜態成員函式的主體中， `this` 是其值為物件位址函式呼叫 `interior_ptr<V>` 型別的運算式。  
+ 在實值類型 `V` 的非靜態成員函式主體中，`this` 是 `interior_ptr<V>` 類型的運算式，其值為函式呼叫所在的目標物件位址。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -96,14 +98,14 @@ value struct V {
 };  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 下列範例顯示如何使用有靜態成員的傳址運算子。  
+### <a name="description"></a>描述  
+ 下列範例將示範如何使用具有靜態成員的傳址運算子。  
   
- 靜態 Visual C\+\+ 型別成員的位址產生原生指標。因為實值型別成員在執行階段堆積上，而且可以由記憶體回收行程移動，靜態實值型別成員的位址是 Managed 指標。  
+ 靜態 Visual C++ 類型成員的位址會產生原生指標。  因為實值類型成員會配置在執行階段堆積上，而且可以由記憶體回收行程移動，所以靜態實值類型成員的位址是 Managed 指標。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -129,7 +131,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
 22  
@@ -137,5 +139,5 @@ int main() {
 hello  
 ```  
   
-## 請參閱  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>請參閱  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

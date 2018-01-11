@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1531c0ceb34711153fb2577255d7d6fe463ee021
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d44a347f8f6cf6e502d3cc22435ed441a000f894
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="intrinsic"></a>intrinsic
 指定 pragma 引數清單中指定的函式呼叫為內建 (Intrinsic)。  
@@ -96,6 +97,6 @@ int main() {
   
  請參閱[# pragma 函式](../preprocessor/function-c-cpp.md)資訊以及有關如何啟用/停用內建函式的原始程式文字區塊的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

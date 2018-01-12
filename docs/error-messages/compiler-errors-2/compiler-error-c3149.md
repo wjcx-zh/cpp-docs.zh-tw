@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3149
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3149
+f1_keywords: C3149
+dev_langs: C++
+helpviewer_keywords: C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 154ae99c5e47438f6fca3b85ac8318c1b14f7a30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3149"></a>編譯器錯誤 C3149
 'type': 不能使用這個型別此處卻沒有最上層的 'char'  
@@ -57,4 +53,3 @@ delegate int MyDelegate(const int, int);
 void Test1(MyDelegate m) {}   // C3149  
 void Test2(MyDelegate ^ m) {}   // OK  
 ```  
-

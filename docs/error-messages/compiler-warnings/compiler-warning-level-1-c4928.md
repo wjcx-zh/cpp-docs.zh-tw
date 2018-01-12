@@ -1,36 +1,35 @@
 ---
-title: "編譯器警告 (層級 1) C4928 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4928"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4928"
+title: "編譯器警告 （層級 1） C4928 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4928
+dev_langs: C++
+helpviewer_keywords: C4928
 ms.assetid: 77235d7f-9360-45cb-8348-d148c605c4a3
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5f096ada450818f8175a8807d074b407afd2d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4928
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-不合法的 copy\-initialization; 已經隱含套用一個以上的使用者定義的轉換  
+# <a name="compiler-warning-level-1-c4928"></a>編譯器警告 (層級 1) C4928
+不合法的 copy-initialization; 已經隱含套用一個以上的使用者定義的轉換  
   
- 找到一個以上的使用者定義的轉換常式。  編譯器會執行在所有這樣的常式中的程式碼。  
+ 找不到一個以上的使用者定義的轉換常式。 編譯器會在所有這類常式中執行程式碼。  
   
- 此警告在預設情況下為關閉的。  如需詳細資訊，請參閱[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。  
+ 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。  
   
- 下列範例會產生 C4928：  
+ 下列範例會產生 C4928:  
   
 ```  
 // C4928.cpp  

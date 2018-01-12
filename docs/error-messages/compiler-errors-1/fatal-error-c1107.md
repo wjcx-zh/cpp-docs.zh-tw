@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1107
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1107
+f1_keywords: C1107
+dev_langs: C++
+helpviewer_keywords: C1107
 ms.assetid: 541a4d9f-10bc-4dd8-b68e-15e548f3dc0a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 50a8524cdaddf3d160a2a718a1efbac2562f4127
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7746c880b251eccfa1d2688d3ab91b7893970f5c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1107"></a>嚴重錯誤 C1107
 找不到組件 'file': 請指定組件搜尋路徑，請使用 /AI 或設定 LIBPATH 環境變數  

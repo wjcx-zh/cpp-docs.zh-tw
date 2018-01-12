@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3763
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3763
+f1_keywords: C3763
+dev_langs: C++
+helpviewer_keywords: C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a299d6caafc0c6cc4349a602a4849d05cad7015d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3763"></a>編譯器錯誤 C3763
 'type': 'retval' 和 'out' 只能出現在資料指標類型  

@@ -1,34 +1,33 @@
 ---
-title: "編譯器警告 (層級 1) C4079 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4079"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4079"
+title: "編譯器警告 （層級 1） C4079 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4079
+dev_langs: C++
+helpviewer_keywords: C4079
 ms.assetid: 549759f0-e168-47e9-8c9a-de93ac843689
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ead27a4a9cf2da2b97089cef207ccf518d268ff7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4079
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-非預期的語彙基元 'token'  
+# <a name="compiler-warning-level-1-c4079"></a>編譯器警告 （層級 1） C4079
+未預期的語彙基元 'token'  
   
- 未預期的分隔符號語彙基元 \(Token\) 發生在 pragma 引數清單。  忽略 pragma 的其餘部分。  
+ Pragma 引數清單中，就會發生未預期的分隔符號語彙基元。 已忽略 pragma 的其餘部分。  
   
- 下列範例會產生 C4079：  
+ 下列範例會產生 C4079:  
   
 ```  
 // C4079.cpp  

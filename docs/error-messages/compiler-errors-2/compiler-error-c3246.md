@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3246
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3246
+f1_keywords: C3246
+dev_langs: C++
+helpviewer_keywords: C3246
 ms.assetid: ad85224a-e540-479b-a5eb-a3bc3964c30b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b55a604a45aa7b8dc37659ca3a4f9affa4106d21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 262dc8bde5dcb4c12909c69bce3fa867685245eb
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3246"></a>編譯器錯誤 C3246
 'class': 無法繼承自 'type'，因為它已經宣告為 'sealed'  
@@ -40,4 +36,3 @@ ref class X sealed {};
   
 ref class Y : public X {}; // C3246  
 ```  
-

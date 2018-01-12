@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43ab77f153b6e53709422a1826a6beee25d65b2a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee9ec0e197d51f76ff57ef06f5584c55df0a4746
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1237"></a>連結器工具錯誤 LNK1237
 程式碼在產生期間，編譯器引入了符號 'symbol' 'module' 以 /GL 編譯的模組中定義的參考  

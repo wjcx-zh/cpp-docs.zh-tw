@@ -1,35 +1,37 @@
 ---
-title: "ptr::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.QueryInterface"
-  - "ptr::QueryInterface"
-  - "msclr::com::ptr::QueryInterface"
-  - "msclr.com.ptr.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface 方法"
+title: "ptr::QueryInterface |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.QueryInterface
+- ptr::QueryInterface
+- msclr::com::ptr::QueryInterface
+- msclr.com.ptr.QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: c2619517-3fde-493b-b12d-da8f62d5d803
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 687c57c32d4f270d397e3ed8fd068d603cbcb9b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-查詢介面的主控 COM 物件並將結果指派給其他 `com::ptr`。  
+# <a name="ptrqueryinterface"></a>ptr::QueryInterface
+查詢自有的 COM 物件的介面，並將結果附加至另一個`com::ptr`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _other_type>  
@@ -38,18 +40,18 @@ void QueryInterface(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `other`  
- 會取得介面的 `com::ptr` 。  
+ `com::ptr` ，會取得介面。  
   
-## 例外狀況  
- 在內部，呼叫 `QueryInterface` 所擁有的 COM 物件，以及任何錯誤的 `HRESULT` 轉換為例外狀況的 <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
+## <a name="exceptions"></a>例外狀況  
+ 就內部而言，`QueryInterface`上擁有的 COM 物件和任何錯誤呼叫`HRESULT`轉換成例外狀況由<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>。  
   
-## 備註  
- 使用這個方法會建立目前包裝函式擁有的 COM 物件的不同介面的 COM 包裝函式。  這個方法會將擁有的 COM 物件呼叫 `QueryInterface` 要求指標至 COM 物件的特定介面並將傳回的介面指標傳入 `com::ptr`。  
+## <a name="remarks"></a>備註  
+ 若要建立 COM 物件目前的包裝函式所擁有的其他介面的 COM 包裝函式中使用這個方法。 這個方法會呼叫`QueryInterface`透過自有的 COM 物件，來要求特定的 COM 介面指標的物件，並將傳回的介面指標附加至傳入`com::ptr`。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。  `WriteTopLevelNode` 成員函式會使用 `QueryInterface` 將 `IXMLDOMNode` 填滿區域 `com::ptr` 傳遞 `com::ptr` \(藉由追蹤參考\) 給主控台節點名稱和文字屬性的私用成員函式。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `WriteTopLevelNode`成員函式使用`QueryInterface`填滿本機`com::ptr`與`IXMLDOMNode`然後將傳遞`com::ptr`（藉由追蹤參考） 將節點的名稱和文字屬性寫入主控台的私用成員函式。  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -150,12 +152,15 @@ int main() {
 }  
 ```  
   
-  **\<\#documentpersnickety\/\#document\>\<\>**   
-## 需求  
- **標頭檔** \<msclr \\ com \\ ptr.h\>  
+```Output  
+<#document>persnickety</#document>  
+```  
   
- **命名空間** msclr::com  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
-## 請參閱  
+ **命名空間**msclr::com  
+  
+## <a name="see-also"></a>請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

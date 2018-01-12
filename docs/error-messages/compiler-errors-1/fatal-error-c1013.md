@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C1013
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1013
+f1_keywords: C1013
+dev_langs: C++
+helpviewer_keywords: C1013
 ms.assetid: 5514a679-efe7-4055-bdd3-5693ca0c332f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6bdc830c526c7093dcc1219df22a41a096aeaf9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 72196927de45c639b8aea7e26bb721c57b6d7c1d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1013"></a>嚴重錯誤 C1013
 編譯器限制 : 左括號太多，請簡化運算式或分為數個陳述式  

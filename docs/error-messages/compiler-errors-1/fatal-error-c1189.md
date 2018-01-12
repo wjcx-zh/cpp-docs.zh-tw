@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1189
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1189
+f1_keywords: C1189
+dev_langs: C++
+helpviewer_keywords: C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2330d49f817012fc2e0381a0991f709ada74ea32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 6e8d3c9ff44a436688accfe267141390d23c0eb5
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1189"></a>嚴重錯誤 C1189
 \#錯誤： 使用者提供錯誤訊息  
@@ -57,5 +53,5 @@ ms.lasthandoff: 10/10/2017
   
 -   使用**進階**中的 屬性頁**MIDL**要移除的屬性頁面資料夾**/ 強固**切換，然後指定**/no_robust**切換。 如需詳細資訊，請參閱[MIDL 屬性頁： 進階](../../ide/midl-property-pages-advanced.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [#define 指示詞 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

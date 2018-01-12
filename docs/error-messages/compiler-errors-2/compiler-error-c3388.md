@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3388
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3388
+f1_keywords: C3388
+dev_langs: C++
+helpviewer_keywords: C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4362617295ccbce8f71aeff3e5258f85835fa9bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: dce412e8998448cdbf746b4598804f2645e10237
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3388"></a>編譯器錯誤 C3388
 'type': 不允許作為條件約束，假設是 'ref class' 以繼續剖析  

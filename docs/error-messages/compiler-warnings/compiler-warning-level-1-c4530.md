@@ -1,36 +1,35 @@
 ---
-title: "編譯器警告 (層級 1) C4530 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4530"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4530"
+title: "編譯器警告 （層級 1） C4530 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4530
+dev_langs: C++
+helpviewer_keywords: C4530
 ms.assetid: a04dcdb2-84db-459d-9e5e-4e743887465f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: adfa006e3b84517601237bbd844ac983115e74ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4530
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-已使用 C\+\+ 例外狀況處理常式，但沒有啟用回溯語意 \(Unwind Semantics\)。請指定 \/EHsc  
+# <a name="compiler-warning-level-1-c4530"></a>編譯器警告 (層級 1) C4530
+C + + 例外狀況處理常式使用，但回溯語意不會啟用。 指定 /EHsc  
   
- 已使用 C\+\+ 例外狀況處理，但未選擇 [\/EHsc](../../build/reference/eh-exception-handling-model.md)。  
+ 已在使用 c + + 例外狀況處理，但[/EHsc](../../build/reference/eh-exception-handling-model.md)未選取。  
   
- 當沒有啟用 \/EHsc 選項時，框架 \(Frame\) 中位於函式擲出與捕捉擲出之間的自動儲存物件不會被終結。  然而，建立於 **try** 或 **catch** 區段的自動儲存物件會被終結。  
+ /EHsc 選項尚未啟用，都不會終結在框架中，函式擲出與攔截擲回，此函式之間的自動儲存的物件。 不過，在具有自動儲存的物件建立**再試一次**或**攔截**區塊將被終結。  
   
- 下列範例會產生 C4530：  
+ 下列範例會產生 C4530:  
   
 ```  
 // C4530.cpp  
@@ -40,4 +39,4 @@ int main() {
 }  
 ```  
   
- 以 \/EHsc 編譯範例，以解除警告。
+ 編譯此範例使用 /EHsc 才能解決這個警告。

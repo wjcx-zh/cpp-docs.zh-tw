@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7eb84d1979d3655c49e5fe089fe04d44708d16a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b7d1459da07f7e392a2da1fbf5d6e9d72c8f4653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 此範本類別描述控制不同長度排序項目序列的有限存取的物件。 您可以使用容器配接器`priority_queue`來管理其優先順序佇列為基礎容器。  
@@ -47,9 +50,9 @@ template<typename Value,
  容器  
  基礎容器的類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|類型定義|說明|  
+|類型定義|描述|  
 |---------------------|-----------------|  
 |[priority_queue::const_reference (STL/CLR)](../dotnet/priority-queue-const-reference-stl-clr.md)|項目的常數參考類型。|  
 |[priority_queue::container_type (STL/CLR)](../dotnet/priority-queue-container-type-stl-clr.md)|基礎容器的類型。|  
@@ -61,7 +64,7 @@ template<typename Value,
 |[priority_queue::value_compare (STL/CLR)](../dotnet/priority-queue-value-compare-stl-clr.md)|兩個項目順序的委派。|  
 |[priority_queue::value_type (STL/CLR)](../dotnet/priority-queue-value-type-stl-clr.md)|元素的類型。|  
   
-|成員函式|說明|  
+|成員函式|描述|  
 |---------------------|-----------------|  
 |[priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)|取代所有項目。|  
 |[priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)|測試項目是否不存在。|  
@@ -74,17 +77,17 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](../dotnet/priority-queue-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
 |[priority_queue::value_comp (STL/CLR)](../dotnet/priority-queue-value-comp-stl-clr.md)|將複製兩個項目順序的委派。|  
   
-|屬性|說明|  
+|屬性|描述|  
 |--------------|-----------------|  
 |[priority_queue::top_item (STL/CLR)](../dotnet/priority-queue-top-item-stl-clr.md)|存取最高優先權項目。|  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)|取代受控制的序列。|  
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|重複的物件。|  
 |IPriorityQueue\<值、 容器 >|維護泛型容器配接器。|  
@@ -121,7 +124,7 @@ template<typename Value,
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
  [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   

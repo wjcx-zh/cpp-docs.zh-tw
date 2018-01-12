@@ -1,32 +1,33 @@
 ---
-title: "upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound 函式 [STL/CLR]"
+title: "upper_bound (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound function [STL/CLR]
 ms.assetid: a377a77b-8005-496e-85ae-b431a9b2f0b9
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f71f58990d413cea1f34cb1bcf40e6187a9f9707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在包含的值大於指定值的已排序範圍中尋找第一個項目的位置，其中排序準則可藉由二元述詞指定。  
+# <a name="upperbound-stlclr"></a>upper_bound (STL/CLR)
+在已排序範圍中尋找值大於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _FwdIt, class _Ty> inline  
@@ -36,13 +37,13 @@ template<class _FwdIt, class _Ty, class _Pr> inline
         const _Ty% _Val, _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式的行為與 STL 函式 `upper_bound` 相同。  如需詳細資訊，請參閱[upper\_bound](../Topic/upper_bound.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`upper_bound`。 如需詳細資訊，請參閱[upper_bound](../standard-library/algorithm-functions.md#upper_bound)。  
   
-## 需求  
- **標頭：** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

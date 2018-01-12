@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3068
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3068
+f1_keywords: C3068
+dev_langs: C++
+helpviewer_keywords: C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 448a0b9e9c626523c08a0bd30ab285ef2c29312c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 413376428e33cbc703b3371589777ba4fed0c1f7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3068"></a>編譯器錯誤 C3068
 'function': 'naked' 函式不能包含需要的物件會回溯發生 c + + 例外狀況  

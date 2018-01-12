@@ -1,37 +1,35 @@
 ---
-title: "編譯器警告 (層級 4) C4487 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4487"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4487"
+title: "編譯器警告 （層級 4） C4487 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4487
+dev_langs: C++
+helpviewer_keywords: C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4c992385c9bd2a7f2c918956ba128ea45afa0752
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 4) C4487
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'derived\_class\_function' : 符合繼承的非虛擬方法 'base\_class\_function'，但未明確標記為 'new'  
+# <a name="compiler-warning-level-4-c4487"></a>編譯器警告 (層級 4) C4487
+'derived_class_function': 符合繼承的非虛擬方法 'base_class_function'，但未明確標記為 'new'  
   
- 衍生類別中的函式具有與非虛擬基底類別函式相同的簽章。  C4487 是提醒您，衍生類別函式不會覆寫基底類別函式。  請明確地將衍生類別標記為 `new`，以解除這項警告。  
+ 在衍生類別中的函式有相同的簽章的非虛擬基底類別函式。 C4487 提醒您在衍生的類別函式不覆寫基底類別函式。 將衍生的類別函式明確標示`new`若要解決這個警告。  
   
- 如需詳細資訊，請參閱[new \(new slot in vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)。  
+ 如需詳細資訊，請參閱[新 (新 vtable 中的位置）](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4487。  
   
 ```  

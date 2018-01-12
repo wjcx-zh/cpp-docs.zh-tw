@@ -1,39 +1,38 @@
 ---
-title: "編譯器錯誤 C3533 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3533"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3533"
+title: "編譯器錯誤 C3533 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3533
+dev_langs: C++
+helpviewer_keywords: C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e7bcd9c710ac5cdd50b966a72291918459d984be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器錯誤 C3533
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'type': 參數不能有包含 'auto' 的型別  
+# <a name="compiler-error-c3533"></a>編譯器錯誤 C3533
+'type': 參數不能有包含 'auto' 類型  
   
- 如果預設 [\/Zc:auto](../../build/reference/zc-auto-deduce-variable-type.md) 編譯器選項仍在作用中，則無法以 `auto` 關鍵字來宣告方法或範本參數。  
+ 方法或樣板參數不可以宣告`auto`關鍵字如果預設[/zc: auto](../../build/reference/zc-auto-deduce-variable-type.md)作用中時，編譯器選項。  
   
-### 更正這個錯誤  
+### <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  移除參數宣告中的 `auto` 關鍵字。  
+1.  移除`auto`從參數宣告的關鍵字。  
   
-## 範例  
- 下列範例會產生 C3535 錯誤，因為使用了 `auto` 關鍵字宣告函式參數，並且使用 **\/Zc:auto** 來編譯。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3535，因為它會宣告函式參數與`auto`關鍵字，它會使用編譯**/zc: auto**。  
   
 ```  
 // C3533a.cpp  
@@ -41,8 +40,8 @@ caps.handback.revision: 6
 void f(auto j){} // C3533  
 ```  
   
-## 範例  
- 下列範例會產生 C3535 錯誤，因為使用了 `auto` 關鍵字宣告範本參數，並且使用 **\/Zc:auto** 編譯範例。  
+## <a name="example"></a>範例  
+ 下列範例會產生 C3535，因為它會宣告與樣板參數`auto`關鍵字，它會使用編譯**/zc: auto**。  
   
 ```  
 // C3533b.cpp  
@@ -50,6 +49,6 @@ void f(auto j){} // C3533
 template<auto T> class C{}; // C3533  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [auto 關鍵字](../../cpp/auto-keyword.md)   
- [\/Zc:auto \(推算變數類型\)](../../build/reference/zc-auto-deduce-variable-type.md)
+ [/Zc: auto （推算變數類型）](../../build/reference/zc-auto-deduce-variable-type.md)

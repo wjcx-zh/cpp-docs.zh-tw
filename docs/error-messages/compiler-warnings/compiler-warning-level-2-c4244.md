@@ -1,38 +1,37 @@
 ---
-title: "編譯器警告 (層級 2) C4244 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4244"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4244"
+title: "編譯器警告 （層級 2） C4244 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4244
+dev_langs: C++
+helpviewer_keywords: C4244
 ms.assetid: 2c19d157-21d1-42c2-a6c0-3f30f2ce3813
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6d1920fbc2ed78cf498df61c7177796645730cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 2) C4244
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'argument' : 將 'type1' 轉換為 'type2'，資料可能遺失  
+# <a name="compiler-warning-level-2-c4244"></a>編譯器警告 (層級 2) C4244
+'argument': 從 'type1' 轉換成 'type2'，資料可能遺失  
   
- 浮點型別已轉換成整數型別。可能會發生資料遺失的情形。  
+ 浮點類型轉換成整數類型。  資料可能會遺失。  
   
- 如果接到 C4244，應該要變更程式或使用相容的型別，或是加入一些邏輯至您的程式碼，以確保可能值的範圍一定會與要使用的型別相容。  
+ 如果出現 C4244，您應變更程式以使用相容的類型，或在您的程式碼中加入某些邏輯，以確保可能值的範圍一定會與您所使用的類型相容。  
   
- C4244 也可能會在層級 3 和 4 上引發；如需詳細資訊，請參閱[編譯器警告 \(層級s 3 and 4\) C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)。  
+ C4244 也可能引發層級 3 和 4。請參閱[編譯器警告 （層級 3 和 4） C4244](../../error-messages/compiler-warnings/compiler-warning-levels-3-and-4-c4244.md)如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4244：  
   
 ```  

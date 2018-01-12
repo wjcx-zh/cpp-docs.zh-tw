@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1b88f51aa9365c0795c8d3d944ba9f3a8db059d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f92bae0e75d9a09de874cd999c044e703b3f3171
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-c4746"></a>編譯器警告 C4746
 暫時性存取 '\<運算式 >' 受限於 /volatile: [iso &#124; ms] 設定; 請考慮使用 __iso_volatile_load/store 內建函式。  

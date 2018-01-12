@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2599
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2599
+f1_keywords: C2599
+dev_langs: C++
+helpviewer_keywords: C2599
 ms.assetid: 88515f36-7589-47e2-862e-0de8b18d6668
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ca22554fbff05e5067ac01044785ef6b4cf6cffb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: e71bf7f08591ed80489b6e83590696cabdb57c03
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2599"></a>編譯器錯誤 C2599
 'enum': 不允許向前宣告列舉類型  

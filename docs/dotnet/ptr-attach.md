@@ -1,35 +1,37 @@
 ---
-title: "ptr::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::com::ptr::Attach"
-  - "ptr::Attach"
-  - "ptr.Attach"
-  - "msclr.com.ptr.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach 方法"
+title: "ptr::Attach |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::com::ptr::Attach
+- ptr::Attach
+- ptr.Attach
+- msclr.com.ptr.Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: 81d930de-cb2a-4c30-9bd6-94d65942c47a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8e3a107bef12ca7f1bcd89098d35ed6a124775f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-附加至 `com::ptr`的 COM 物件。  
+# <a name="ptrattach"></a>ptr::Attach
+將 COM 物件，以附加`com::ptr`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void Attach(  
@@ -37,20 +39,20 @@ void Attach(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_right`  
- COM 介面要附加的指標。  
+ 要附加的 COM 介面指標。  
   
-## 例外狀況  
- 如果 `com::ptr` 已經擁有對 COM 物件的參考， `Attach` 會擲回 <xref:System.InvalidOperationException>。  
+## <a name="exceptions"></a>例外狀況  
+ 如果`com::ptr`已經擁有的 COM 物件，參考`Attach`會擲回<xref:System.InvalidOperationException>。  
   
-## 備註  
- 呼叫 `Attach` 的方式參考 COM 物件，但是不會釋放它的呼叫端的參考。  
+## <a name="remarks"></a>備註  
+ 呼叫`Attach`參考 COM 物件，但不會釋放呼叫者的參考。  
   
- 傳遞 `NULL` 給 `Attach` 產生不會採取的動作。  
+ 傳遞`NULL`至`Attach`不導致正在採取任何動作。  
   
-## 範例  
- 這個範例會使用 `com::ptr` 包裝其私用成員 `IXMLDOMDocument` 物件的 CLR 類別。  在任何的 `ReplaceDocument` 成員函式會先呼叫 `Release` 之前主控物件接著會呼叫 `Attach` 附加新的資料物件。  
+## <a name="example"></a>範例  
+ 這個範例實作 CLR 類別，此類別使用 `com::ptr` 來包裝其私用成員 `IXMLDOMDocument` 物件。 `ReplaceDocument`成員函式的第一個呼叫`Release`任何先前擁有物件，然後呼叫`Attach`附加新的文件物件。  
   
 ```  
 // comptr_attach.cpp  
@@ -124,12 +126,12 @@ int main() {
 }  
 ```  
   
-## 需求  
- **標頭檔**\<msclr \\ com \\ ptr.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\com\ptr.h >  
   
- **命名空間** msclr::com  
+ **命名空間**msclr::com  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [ptr 成員](../dotnet/ptr-members.md)   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)   
+ [ptr::operator =](../dotnet/ptr-operator-assign.md)   
  [ptr::Release](../dotnet/ptr-release.md)

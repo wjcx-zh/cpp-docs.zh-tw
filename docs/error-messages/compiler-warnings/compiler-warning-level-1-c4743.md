@@ -1,40 +1,38 @@
 ---
-title: "編譯器警告 (層級 1) C4743 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4743"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4743"
+title: "編譯器警告 (層級 1) C4743 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4743
+dev_langs: C++
+helpviewer_keywords: C4743
 ms.assetid: 2ee76ea3-77f3-4c2f-9a57-0751823c89fd
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1a7169afdf7fb4c9a03e509f0332e738a66a06f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 1) C4743
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'*type*' 在 '*file1*' 和 '*file2*' 中有不同的大小：*number* 和 *number* 位元組  
+# <a name="compiler-warning-level-1-c4743"></a>編譯器警告 (層級 1) C4743
+'*類型*'有不同的大小'*file1*'和'*file2*':*數目*和*數目*位元組  
   
- 在兩個檔案中已參考或已定義的外部變數各有不同的型別，而編譯器也已判斷 *file1* 中的變數大小與 *file2* 中的變數大小不同。  
+ 外部變數定義在兩個檔案或參考這些檔案，具有不同類型，編譯器判斷出中變數的大小*file1*中變數的大小與*file2*.  
   
- 在重要的情況下，會為 C\+\+ 發出這項警告。  如果在兩個不同的檔案中，用相同的名稱宣告相同的型別，如果這些宣告包含虛擬函式，而且如果宣告不相同，則編譯器可以為虛擬函式表 \(Virtual Function Table\) 發出 C4744 警告。  因為相同的型別而有兩個不同大小的虛擬函式表，所以發生警告，而連結器必須選擇其中一 個，以納入可執行檔中。這項作業很可能會讓您的程式呼叫不正確的虛擬函式。  
+ 時，重要的情況下可以用於 c + + 發出這個警告。 如果您宣告相同的型別具有相同名稱在兩個不同的檔案，如果這些宣告包含虛擬函式，而且如果宣告並不相同時，編譯器可發出警告 C4744 虛擬函式的資料表。 針對相同的類型，兩個不同大小的虛擬函式資料表，而連結器必須選擇其中一個，將合併到可執行檔，就會發生警告。  所以這會導致您的程式錯誤的虛擬函式的呼叫。  
   
- 若要解除這項警告，請使用相同的型別定義，或使用該型別或變數的不同名稱。  
+ 若要解決這個警告，請使用相同的類型定義，或使用不同的類型或變數的名稱。  
   
-## 範例  
- 這個範例包含一個型別的定義。  
+## <a name="example"></a>範例  
+ 此範例包含一個類型的定義。  
   
 ```  
 // C4743a.cpp  
@@ -52,7 +50,7 @@ void C::f3(void) {}
 C q;  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
  下列範例會產生 C4743。  
   
 ```  

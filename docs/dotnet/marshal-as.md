@@ -1,34 +1,36 @@
 ---
-title: "marshal_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "marshal_as"
-  - "msclr.interop.marshal_as"
-  - "msclr::interop::marshal_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_as 樣板 [C++]"
+title: "marshal_as |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- marshal_as
+- msclr.interop.marshal_as
+- msclr::interop::marshal_as
+dev_langs: C++
+helpviewer_keywords: marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a209b1ee657d6ae6773ee88c64225a7dc5b4f49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# marshal_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個方法會在原生和 Managed 環境之間轉換。  
+# <a name="marshalas"></a>marshal_as
+這個方法會將原生和 managed 環境之間的資料轉換。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 To_Type marshal_as<To_Type>(  
@@ -36,22 +38,22 @@ To_Type marshal_as<To_Type>(
 );  
 ```  
   
-#### 參數  
- \[in\] `input`  
- 要封送處理到 `To_Type` 變數的值。  
+#### <a name="parameters"></a>參數  
+ [輸入] `input`  
+ 您想要封送處理的值`To_Type`變數。  
   
-## 傳回值  
- 為 `input`的轉換值型別 `To_Type` 的變數。  
+## <a name="return-value"></a>傳回值  
+ 類型的變數`To_Type`也就是轉換的值的`input`。  
   
-## 備註  
- 這個方法是轉換在原生及 Managed 資料和 Managed 型別的簡化的方式。  若要判斷哪些資料型別被支援，請參閱 [C\+\+ 中封送處理的概觀](../dotnet/overview-of-marshaling-in-cpp.md)。  有些資料轉換需要內容。  使用 [marshal\_context 類別](../dotnet/marshal-context-class.md)，您可以轉換資料型別。  
+## <a name="remarks"></a>備註  
+ 這個方法是一個簡化的方式將原生與 managed 型別之間的資料轉換。 若要判斷支援哪些資料型別，請參閱[概觀的封送處理 c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。 某些資料轉換需要內容。 您可以將這些資料型別轉換使用[marshal_context 類別](../dotnet/marshal-context-class.md)。  
   
- 如果您嘗試封送處理不支援的一組資料型別， `marshal_as` 會在編譯時期產生錯誤 [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。  讀取提供給此錯誤資訊的訊息。  `C4996` 錯誤可以超過被取代的函式產生。  這個範例會嘗試封送處理不支援的一組資料型別。  
+ 如果您嘗試封送處理不支援的資料類型的一組`marshal_as`會產生錯誤[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在編譯時間。 請閱讀隨附此錯誤，如需詳細資訊訊息。 `C4996`以上就已被取代的函式可能會產生錯誤。 一個範例是嘗試封送處理一對不支援的資料類型。  
   
- 封送處理程式庫包含數個標頭檔。  所有轉換只需要一個檔案，不過您可以包含其他檔案，如果您其他轉換需要。  要了解哪些轉換和哪些檔案相關，請看在 `Marshaling Overview`中的資料表。  不管您想要做什麼轉換，命名空間要求一定會生效。  
+ 封送處理程式庫包含數個標頭檔。 任何轉換必須只有一個檔案，但您可以加入其他檔案，如果您需要進行其他轉換。 若要查看哪些檔案與相關聯的轉換，查詢中的資料表`Marshaling Overview`。 無論何種轉換的您想要執行，其命名空間需求是一律作用中。  
   
-## 範例  
- 從 `const char*` 封送處理到 `System::String` 變數型別的範例。  
+## <a name="example"></a>範例  
+ 此範例中封送處理從`const char*`至`System::String`變數型別。  
   
 ```  
 // marshal_as_test.cpp  
@@ -71,11 +73,11 @@ int main() {
 }  
 ```  
   
-## 需求  
- **標頭檔:** \<msclr\\marshal.h\>、\<msclr\\ marshal\_windows.h\>、\<msclr\\ marshal\_cppstd.h\> 或 \<msclr\\ marshal\_atl.h\>  
+## <a name="requirements"></a>需求  
+ **標頭檔：** \<msclr\marshal.h >， \<msclr\marshal_windows.h >， \<msclr\marshal_cppstd.h >，或\<msclr\marshal_atl.h >  
   
- **命名空間:** msclr::interop  
+ **命名空間：** msclr::interop  
   
-## 請參閱  
- [C\+\+ 中封送處理的概觀](../dotnet/overview-of-marshaling-in-cpp.md)   
- [marshal\_context 類別](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>請參閱  
+ [C + + 中封送處理概觀](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [marshal_context 類別](../dotnet/marshal-context-class.md)

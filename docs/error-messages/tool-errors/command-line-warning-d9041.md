@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9f80de8e9bbbf7c754ac8e13061ef3ae50c4715a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 307d290bb525ee879f29853c6823d5b9565aba4b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-warning-d9041"></a>命令列警告 D9041
 無效的值 'value' 的 '/option';假設 'value';加入 '/analyze' 命令列選項時指定這項警告  
@@ -35,6 +36,6 @@ cl /EHsc /LD /wd6001 filename.cpp
   
  若要修正警告，加入**/ 分析**命令列選項。 如果**/ 分析**不是支援您的編譯器版本上，移除無效的警告編號，從**/wd**選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [命令列錯誤 D8000 至 D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
  [編譯器選項](../../build/reference/compiler-options.md)

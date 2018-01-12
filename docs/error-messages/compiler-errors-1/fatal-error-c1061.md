@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1061
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1061
+f1_keywords: C1061
+dev_langs: C++
+helpviewer_keywords: C1061
 ms.assetid: 9366c0bc-96e0-4967-aa7d-4ebf098de806
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81963b0fffdf1b86b56b10c0776874b37ae9daa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 57766a4ff0b58fdc599a7124e217892e4b28539d
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fatal-error-c1061"></a>嚴重錯誤 C1061
 編譯器限制：區塊巢狀結構太深  

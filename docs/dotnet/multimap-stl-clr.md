@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b944be379b851410a7c45af5aa05e72dbf63037c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2c42fc8d71871a70e3a2d3ffa93a78a4e42d2f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`multimap`管理項目序列 （幾乎） 平衡排序樹狀結構的節點，各儲存一個項目。 項目所組成的索引鍵，排序順序，以及對應的值，會大功告成了。  
@@ -61,9 +64,9 @@ template<typename Key,
  對應  
  受控制序列中項目的其他元件的類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
-|類型定義|說明|  
+|類型定義|描述|  
 |---------------------|-----------------|  
 |[multimap::const_iterator (STL/CLR)](../dotnet/multimap-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
 |[multimap::const_reference (STL/CLR)](../dotnet/multimap-const-reference-stl-clr.md)|項目的常數參考類型。|  
@@ -83,7 +86,7 @@ template<typename Key,
 |[multimap::value_compare (STL/CLR)](../dotnet/multimap-value-compare-stl-clr.md)|兩個項目值順序的委派。|  
 |[multimap::value_type (STL/CLR)](../dotnet/multimap-value-type-stl-clr.md)|元素的類型。|  
   
-|成員函式|說明|  
+|成員函式|描述|  
 |---------------------|-----------------|  
 |[multimap::begin (STL/CLR)](../dotnet/multimap-begin-stl-clr.md)|指定受控制序列的開頭。|  
 |[multimap::clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)|移除所有項目。|  
@@ -106,7 +109,7 @@ template<typename Key,
 |[multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)|尋找符合指定之索引鍵的範圍結尾。|  
 |[multimap::value_comp (STL/CLR)](../dotnet/multimap-value-comp-stl-clr.md)|將複製兩個項目值的順序委派。|  
   
-|運算子|說明|  
+|運算子|描述|  
 |--------------|-----------------|  
 |[multimap::operator= (STL/CLR)](../dotnet/multimap-operator-assign-stl-clr.md)|取代受控制的序列。|  
 |[operator!= (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)|決定如果`multimap`物件是否不等於另一個`multimap`物件。|  
@@ -118,7 +121,7 @@ template<typename Key,
   
 ## <a name="interfaces"></a>介面  
   
-|介面|說明|  
+|介面|描述|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|重複的物件。|  
 |<xref:System.Collections.IEnumerable>|項目順序。|  
@@ -159,7 +162,7 @@ template<typename Key,
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
  [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
  [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   

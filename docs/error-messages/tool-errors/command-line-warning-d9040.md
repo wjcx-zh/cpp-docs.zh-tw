@@ -15,17 +15,18 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a4e826419e5b56a348d29a7fa77ade8904b32ba2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e32f4cc17bfd091b4475d3dbdde280d5c410f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-warning-d9040"></a>命令列警告 D9040
 忽略選項 '/analyze';程式碼分析警告都無法使用此版本的編譯器  
   
  **/ 分析**命令列選項不適用於所有版本的 Visual Studio。 若要補救這個警告，請切換到支援的 Visual Studio 版本，或移除命令列選項。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [命令列錯誤 D8000 至 D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)   
  [編譯器選項](../../build/reference/compiler-options.md)

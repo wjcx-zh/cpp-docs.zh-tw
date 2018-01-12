@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20b7f6a918bc8da215f0de33d0a4989250e28d64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd2c5bc238c9858e204d0a96729aa722dac18a9a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-warning-d9035"></a>命令列警告 D9035
 選項 'option' 已被取代，未來版本將移除  
@@ -28,5 +29,5 @@ ms.lasthandoff: 10/24/2017
   
  指定的選項仍能運作，但您應該更新現在的組建組態。 如此一來，您的專案是較容易升級編譯器時繼續建置。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [命令列警告 D9036](../../error-messages/tool-errors/command-line-warning-d9036.md)

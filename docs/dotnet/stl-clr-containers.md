@@ -16,11 +16,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 21ebfee07e9faa35046ccfd1cb88894b45dab7c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1b8aa8ef5b1425d4aa41b1811dca5ec5d56acd1c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 STL/CLR 程式庫已在 c + + 標準程式庫中找到的相同容器，但它的.NET framework 的 managed 環境中執行。 如果您已經熟悉 c + + 標準程式庫，STL/CLR 是以繼續使用您升級至目標 common language runtime (CLR) 的程式碼時已開發之技巧的最佳方式。  
@@ -308,5 +311,5 @@ int main()
   
  當您呼叫控制代碼物件的容器之清除或清理方法時，不會從記憶體釋放控制代碼所參考的物件。 您必須明確地刪除該物件，或者 (因為這些物件位於 Managed 堆積中) 在決定不再使用物件時允許記憶體回收行程釋放記憶體。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

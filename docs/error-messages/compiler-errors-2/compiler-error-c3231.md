@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3231
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3231
+f1_keywords: C3231
+dev_langs: C++
+helpviewer_keywords: C3231
 ms.assetid: fe5dc352-e634-45fa-9534-3da176294c98
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 284f92378c52475e23f0ddf9f206d6a143f3091f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5d3cf8747f25fdccda1467e894f95d8bcfb3525c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3231"></a>編譯器錯誤 C3231
 'arg': 樣板類型引數不能使用泛型型別參數  

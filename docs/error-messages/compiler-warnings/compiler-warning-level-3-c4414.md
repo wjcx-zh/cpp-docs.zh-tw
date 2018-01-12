@@ -1,34 +1,33 @@
 ---
-title: "編譯器警告 (層級 3) C4414 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4414"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4414"
+title: "編譯器警告 （層級 3） C4414 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4414
+dev_langs: C++
+helpviewer_keywords: C4414
 ms.assetid: bc81d3ad-55dc-4a6b-a6f2-ec0ef38347df
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 76745a1cf505a685bcb9a6d2e74faf98bad77556
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 編譯器警告 (層級 3) C4414
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : 至函式的 SHORT 跳躍指令被轉換為 NEAR  
+# <a name="compiler-warning-level-3-c4414"></a>編譯器警告 (層級 3) C4414
+'function': 函式的 short 跳躍指令被轉換為 near  
   
- Short 跳躍指令會產生精簡指令，形成分支，移至距離該指令有限範圍內的位址。  指令包括代表跳躍點與目標位址 \(即函式定義\) 之間的短距離位移 \(Offset\)。  在進行連結時，函式可能會遭移除，或因連結時的最佳化而導致函式被移出短距離位移可達到的範圍。  編譯器必須產生特別的跳躍點記錄，跳躍點指令必須是 NEAR 或 FAR。  編譯器會進行轉換。  
+ Short 跳躍點產生精簡指令，從指令分支為有限範圍內的位址。 指示包含簡短的位移，代表跳躍和目標位址，函式定義之間的距離。 在連結函式可能會移動，或因移出範圍可從簡短的位移，函式會連結時間最佳化。 編譯器必須產生一種特殊記錄，這需要是不久或目前的 jmp 指令跳躍。 編譯器會進行轉換。  
   
- 例如，下列程式碼會產生 C4414：  
+ 例如，下列程式碼會產生 C4414:  
   
 ```  
 // C4414.cpp  

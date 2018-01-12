@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2665
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2665
+f1_keywords: C2665
+dev_langs: C++
+helpviewer_keywords: C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fdf6737c881df52793e1f59f04a1821a3c788134
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 5a349df2c60d746b6b090953362c7c6801e1f2a3
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c2665"></a>編譯器錯誤 C2665
 'function': 沒有任何數字 1 多載可以轉換參數 number2 從類型 'type'  

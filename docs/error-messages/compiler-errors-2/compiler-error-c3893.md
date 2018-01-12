@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3893
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3893
+f1_keywords: C3893
+dev_langs: C++
+helpviewer_keywords: C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4fee017305c90d9da69f5432815c0005eb84352c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 49097d988175e7571c5825b4d54e1dd496fb2ba7
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3893"></a>編譯器錯誤 C3893
 'var': initonly 資料成員的左值使用只允許用於 'type_name' 類別的執行個體建構函式  

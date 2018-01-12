@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 450bd97efc9cfbf07eac84a3e6a693af698fc64f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be8a55c6033150c5f1c4220885b01b4af8b8a6bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3551"></a>編譯器錯誤 C3551
 "必須是晚期指定的傳回類型"  
@@ -30,5 +31,5 @@ ms.lasthandoff: 10/24/2017
 auto myFunction()->int(*)[4];   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [auto](../../cpp/auto-cpp.md)

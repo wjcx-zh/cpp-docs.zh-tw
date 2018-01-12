@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 432f147c7eded15909fd503b82891f52948072b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: df07b78644f277347e6fe612b676b841cd262afe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setsizetype-stlclr"></a>set::size_type (STL/CLR)
 兩個項目之間的帶正負號距離的類型。  
@@ -73,6 +76,6 @@ end()-begin() = 3
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set::empty (STL/CLR)](../dotnet/set-empty-stl-clr.md)

@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3923
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3923
+f1_keywords: C3923
+dev_langs: C++
+helpviewer_keywords: C3923
 ms.assetid: db8838e9-6344-4cd6-83e0-a8abeb12c4c0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1615f0ad270491fde5e4ec0285006f8f28de94e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 863273ec0e9922a6a0b4e7355fe47178a7dd5bbe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3923"></a>編譯器錯誤 C3923
 'member'：WinRT 或 Managed 類別的成員函式中不允許有區域類別、結構或等位定義  

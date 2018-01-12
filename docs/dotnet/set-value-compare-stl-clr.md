@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ed347c8c732eccf04c3b33763c6dd8671b0fc0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 15898355764cad67c0df44d6701fd58f334009b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setvaluecompare-stlclr"></a>set::value_compare (STL/CLR)
 兩個項目值順序的委派。  
@@ -70,7 +73,7 @@ compare(L'b', L'a') = False
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set:: key_compare (STL/CLR)](../dotnet/set-key-compare-stl-clr.md)   
  [set:: value_comp (STL/CLR)](../dotnet/set-value-comp-stl-clr.md)   

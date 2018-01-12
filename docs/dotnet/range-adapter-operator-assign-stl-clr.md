@@ -1,47 +1,48 @@
 ---
-title: "range_adapter::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::operator="
-  - "cliext::range_adapter::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= 成員 [STL/CLR]"
+title: "range_adapter::operator = (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::operator=
+- cliext::range_adapter::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: ac378ccc-a42c-4a90-bc27-9b416bee7fa9
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 41b3e9e197347525ca64a549871c0ae44a4ba274
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# range_adapter::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取代儲存的迭代器對。  
+# <a name="rangeadapteroperator-stlclr"></a>range_adapter::operator= (STL/CLR)
+取代預存迭代器組。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 range_adapter<Iter>% operator=(range_adapter<Iter>% right);  
 ```  
   
-#### 參數  
- right  
- 要複製的配接器。  
+#### <a name="parameters"></a>參數  
+ 向右  
+ 若要複製的配接器。  
   
-## 備註  
- 成員運算子複製 `right` 到物件後，再傳回 `*this`。  您可以使用它以 `right` 中儲存的迭代器對拷貝取代儲存的迭代器對。  
+## <a name="remarks"></a>備註  
+ 成員運算子複製`right`物件，然後傳回`*this`。 您使用它來取代副本中的預存迭代器組中的預存迭代器組`right`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_range_adapter_operator_as.cpp   
@@ -75,12 +76,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## 需求  
- **標頭:** \<cliext\/adapter\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<配接器 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

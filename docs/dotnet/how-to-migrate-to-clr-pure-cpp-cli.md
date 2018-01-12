@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebff4ae1ac304ee0af073de49f4ee988922247d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>如何：移轉至 /clr:pure (C++/CLI)
 本主題討論問題可能會發生移轉到使用純的 MSIL 時**/clr: pure** (請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊)。 本主題假設程式碼移轉目前編譯為使用混合的組件**/clr**選項，因為純的 MSIL 從 unmanaged 程式碼的移轉路徑不是直接的工作。 Unmanaged 程式碼，請參閱[How to： 移轉至 /clr](../dotnet/how-to-migrate-to-clr.md)然後再嘗試將移轉至純的 MSIL。  
@@ -54,5 +57,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="linking-limitations"></a>連結的限制  
  Visual c + + 連結器不會嘗試連線混合或純 OBJ 檔案，因為不同的儲存體的範圍和呼叫慣例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [純粹的和可驗證的程式碼 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

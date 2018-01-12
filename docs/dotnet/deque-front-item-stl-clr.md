@@ -1,41 +1,42 @@
 ---
-title: "deque::front_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item 成員 [STL/CLR]"
+title: "deque::front_item (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::front_item
+dev_langs: C++
+helpviewer_keywords: front_item member [STL/CLR]
 ms.assetid: 6243e52d-47fb-45d8-ade8-70debd97887d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ae097c2d7c69c6fa23f24c0cdd6a127798d8d5bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# deque::front_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequefrontitem-stlclr"></a>deque::front_item (STL/CLR)
 存取第一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 property value_type front_item;  
 ```  
   
-## 備註  
- 屬性存取受控制序列的第一個項目，此序列不能為空序列。  當您知道它存在時，您可用它來讀取或寫入第一個項目。  
+## <a name="remarks"></a>備註  
+ 屬性存取受控制的序列必須為非空白的第一個項目。 您可以使用它來讀取或寫入第一個項目中，當您知道它存在。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_front_item.cpp   
@@ -67,16 +68,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\_item \= a**  
- **x b c**   
-## 需求  
- **標頭：** \<cliext\/deque\>  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::back\_item](../dotnet/deque-back-item-stl-clr.md)   
- [deque::front](../dotnet/deque-front-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque:: back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque::front (STL/CLR)](../dotnet/deque-front-stl-clr.md)

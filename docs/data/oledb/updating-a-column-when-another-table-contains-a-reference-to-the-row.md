@@ -1,28 +1,30 @@
 ---
-title: "在其他資料表包含資料列參考時更新資料行 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料列集, 資料行更新"
+title: "另一個資料表包含資料列參考時更新資料行 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: rowsets, column updates
 ms.assetid: abb5db69-055d-431f-b12d-ad2940a661ba
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4c5fdf37cedd2c20430f87e15446244321c68bdf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 在其他資料表包含資料列參考時更新資料行
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-某些提供者可以偵測資料列中有哪些資料行變更，但是大部分的提供者不具這個功能。  因此，當您嘗試更新的資料列具有參考時，更新該資料行可能就會產生錯誤。  若要解決這個問題，請建立另一個只包含要變更資料行的存取子。  將該存取子的編號傳遞給 `SetData`。  
+# <a name="updating-a-column-when-another-table-contains-a-reference-to-the-row"></a>在其他資料表包含資料列參考時更新資料行
+某些提供者可以偵測資料列變更，哪些資料行，但許多提供者不能。 如此一來，更新的資料行可能會導致發生錯誤時嘗試更新資料列的參考。 若要解決此問題，請建立包含您想要變更的資料行的個別存取子。 傳遞至該存取子數目`SetData`。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

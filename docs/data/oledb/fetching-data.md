@@ -1,37 +1,40 @@
 ---
-title: "擷取資料 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料 [C++], 擷取"
-  - "擷取"
-  - "OLE DB 消費者樣板 [C++], 擷取資料"
-  - "資料列集 [C++], 擷取"
+title: "將資料擷取 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data [C++], fetching
+- rowsets [C++], fetching
+- fetching
+- OLE DB consumer templates [C++], fetching data
 ms.assetid: b07f747f-9855-4f27-a03d-b1d5b10fa284
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b18847666d4f0f57d23e9b179e3e186a1b3ff736
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 擷取資料
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-您可以在開啟資料來源、工作階段和資料列集物件之後擷取資料。  根據所使用的存取子型別而定，您可能需要繫結資料行。  
+# <a name="fetching-data"></a>擷取資料
+開啟資料來源、 工作階段，以及資料列集物件之後，您可以擷取資料。 根據您使用存取子類型，您可能需要繫結資料行。  
   
-### 若要擷取資料  
+### <a name="to-fetch-data"></a>若要擷取資料  
   
-1.  使用適當的 \[開啟\] 命令開啟資料列集。  
+1.  開啟使用適當的資料列集**開啟**命令。  
   
-2.  如果您正在使用 `CManualAccessor`，請繫結輸出資料行 \(如果您還沒完成這個動作\)。  若要繫結資料行，請呼叫 `GetColumnInfo`，然後按照下列範例所示，以繫結建立存取子：  
+2.  如果您使用`CManualAccessor`，繫結之輸出資料行，如果您有不這樣做。 若要繫結資料行，呼叫`GetColumnInfo`，然後再建立存取子繫結，如下列範例所示：  
   
     ```  
     // From the DBViewer Sample CDBTreeView::OnQueryEdit  
@@ -48,7 +51,7 @@ caps.handback.revision: 8
     rs.Bind();  
     ```  
   
-3.  撰寫一個 `while` 迴圈以擷取資料。  依照下列範例所示，在這個迴圈中呼叫 `MoveNext`，將游標往前移，並測試傳回值是否為 S\_OK：  
+3.  寫入`while`迴圈來擷取資料。 在迴圈中，呼叫`MoveNext`演進資料指標，測試對 S_OK 時，傳回的值，如下列範例所示：  
   
     ```  
     while (rs.MoveNext() == S_OK)  
@@ -58,9 +61,9 @@ caps.handback.revision: 8
     }  
     ```  
   
-4.  您可以在這個 `while` 迴圈內，根據您的存取子型別擷取資料。  
+4.  內`while`迴圈中，您可以根據存取子類型擷取資料。  
   
-    -   如果您使用的是 [CAccessor](../../data/oledb/caccessor-class.md) 類別，您應該有包含資料成員的使用者資料錄。  依照下列範例所示，使用那些資料成員存取資料：  
+    -   如果您使用[CAccessor](../../data/oledb/caccessor-class.md)類別，您應該有包含資料成員的使用者記錄。 您可以存取資料，可使用這些資料成員，如下列範例所示：  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -72,7 +75,7 @@ caps.handback.revision: 8
         }  
         ```  
   
-    -   如果使用的是 `CDynamicAccessor` 或 `CDynamicParameterAccessor` 類別，您可以依照下列範例所示，使用 `GetValue` 和 `GetColumn` 存取函式以擷取資料。  如果您要決定您正在使用的資料型別，請使用 `GetType`。  
+    -   如果您使用`CDynamicAccessor`或`CDynamicParameterAccessor`類別，您可以使用存取函式擷取資料`GetValue`和`GetColumn`，如下列範例所示。 如果您想要判斷的資料類型使用，請使用`GetType`。  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -87,7 +90,7 @@ caps.handback.revision: 8
         }  
         ```  
   
-    -   如果使用的是 `CManualAccessor` ，就必須依照下列範例所示，指定擁有的資料成員並繫結它們，然後再直接進行存取：  
+    -   如果您使用`CManualAccessor`，您必須指定您自己的資料成員、 繫結您自己，並直接存取它們，如下列範例所示：  
   
         ```  
         while (rs.MoveNext() == S_OK)  
@@ -99,5 +102,5 @@ caps.handback.revision: 8
         }  
         ```  
   
-## 請參閱  
- [使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>請參閱  
+ [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

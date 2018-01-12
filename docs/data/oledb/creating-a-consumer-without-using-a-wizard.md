@@ -1,33 +1,34 @@
 ---
-title: "未使用精靈建立消費者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 消費者, 建立"
+title: "不使用精靈建立消費者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b31f1ad51d9015c491439650060ab3cefaf3270b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 未使用精靈建立消費者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下列範例假設您要將 OLE DB 消費者支援加入現有 ATL 專案。  如果您要將 OLE DB 消費者支援加入 MFC 應用程式，您應該執行 MFC 應用程式精靈，它會建立所有必要的支援，並叫用 \(Invoke\) 執行該應用程式所需的 MFC 常式。  
+# <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
+下列範例假設您要加入至現有的 ATL 專案 OLE DB 取用者支援。 如果您想要將 OLE DB 取用者支援加入至 MFC 應用程式，您應該執行 MFC 應用程式精靈，以建立所有支援的必要和 MFC 常式所需執行應用程式會叫用。  
   
- 若要在未使用 ATL OLE DB 消費者精靈情況下加入 OLE DB 消費者支援：  
+ 若要新增 OLE DB 取用者支援，而不使用 ATL OLE DB 消費者精靈：  
   
--   在您的 Stdafx.h 檔內附加下列 `#include` 陳述式 \(Statement\)：  
+-   在 Stdafx.h 檔案中，附加下列`#include`陳述式：  
   
     ```  
     #include <atlbase.h>  
@@ -35,14 +36,14 @@ manager: "ghogen"
     #include <atldbsch.h> // if you are using schema templates  
     ```  
   
- 就程式設計觀點，消費者通常會執行下列操作順序：  
+ 以程式設計的方式，取用者通常會執行下列一系列的作業：  
   
--   建立一個可將資料行繫結至區域變數的使用者資料錄類別。  在這個範例中，`CMyTableNameAccessor` 是使用者資料錄類別 \(請參閱[使用者資料錄](../../data/oledb/user-records.md)\)。  此類別包含資料行對應和參數對應。  在使用者資料錄類別內替您指定於資料行對應內的每個欄位宣告資料成員；針對這些資料成員中的每一項，也宣告一個狀態資料成員和一個長度資料成員。  如需詳細資訊，請參閱[在精靈產生的存取子中的欄位狀態資料成員](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
+-   建立繫結至區域變數的資料行的使用者記錄類別。 在此範例中，`CMyTableNameAccessor`是使用者記錄類別 (請參閱[使用者資料錄](../../data/oledb/user-records.md))。 這個類別包含的資料行對應和參數對應。 宣告在您指定資料行對應; 中的每個欄位的使用者記錄類別中的資料成員針對每個這些資料成員，同時宣告狀態資料成員和長度資料成員。 如需詳細資訊，請參閱[精靈產生的存取子中的欄位狀態資料成員](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)。  
   
     > [!NOTE]
-    >  如果您撰寫自己的消費者，資料變數就必須出現在狀態和長度變數之前。  
+    >  如果您撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。  
   
--   執行個體化一個資料來源和一個工作階段。  決定要使用哪種類型的存取子和資料列集，接著對使用 [CCommand](../../data/oledb/ccommand-class.md) 或 [CTable](../../data/oledb/ctable-class.md) 的資料列集執行個體化：  
+-   具現化的資料來源和工作階段。 決定何種存取子和資料列集使用，然後再具現化資料列集使用[CCommand](../../data/oledb/ccommand-class.md)或[CTable](../../data/oledb/ctable-class.md):  
   
     ```  
     CDataSource ds;  
@@ -50,15 +51,15 @@ manager: "ghogen"
     class CMyTableName : public CCommand<CAccessor<CMyTableNameAccessor> >  
     ```  
   
--   呼叫 **CoInitialize** 以初始化 COM。  這通常呼叫於主程式碼內。  例如：  
+-   呼叫**CoInitialize**初始化 com。 這通常稱為主要的程式碼中。 例如:   
   
     ```  
     HRESULT hr = CoInitialize(NULL);  
     ```  
   
--   呼叫 [CDataSource::Open](../../data/oledb/cdatasource-open.md) 或其分支之一。  
+-   呼叫[cdatasource:: Open](../../data/oledb/cdatasource-open.md)或其中一個其變化。  
   
--   開啟一連到資料來源的連接，開啟工作階段，並開啟與初始化資料列集 \(若為命令的話，也請執行它\)：  
+-   開啟資料來源的連接、 開啟工作階段，然後開啟初始化資料列集 （並命令也執行）：  
   
     ```  
     hr = ds.Open();  
@@ -66,11 +67,11 @@ manager: "ghogen"
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
--   您也可使用 `CDBPropSet::AddProperty` 來設定資料列集屬性，並將它們當做參數傳給 `rs.Open`。  如需如何完成這項作業的範例，請參閱[消費者精靈產生的方法](../../data/oledb/consumer-wizard-generated-methods.md)內的「GetRowsetProperties」。  
+-   （選擇性） 設定資料列集屬性使用`CDBPropSet::AddProperty`並將其傳遞為參數，以`rs.Open`。 如需執行方式的範例，請參閱中的 GetRowsetProperties[消費者精靈產生方法](../../data/oledb/consumer-wizard-generated-methods.md)。  
   
--   現在您可使用資料列集來擷取\/處理資料。  
+-   您現在可以使用資料列集來擷取/處理資料。  
   
--   當您的應用程式完成之後，可關閉連接、工作階段和資料列集：  
+-   完成您的應用程式時，請關閉連線、 session 和資料列集：  
   
     ```  
     rs.Close();  
@@ -78,13 +79,13 @@ manager: "ghogen"
     ds.Close();  
     ```  
   
-     若您正在使用一命令，可在 **Close** 之後呼叫 `ReleaseCommand`。  [CCommand::Close](../../data/oledb/ccommand-close.md) 內的程式碼範例顯示如何呼叫 **Close** 和 `ReleaseCommand`。  
+     如果您使用命令時，您可能想要呼叫`ReleaseCommand`之後**關閉**。 中的程式碼範例[ccommand:: Close](../../data/oledb/ccommand-close.md)示範如何呼叫**關閉**和`ReleaseCommand`。  
   
--   呼叫 **CoUnInitialize** 以取消初始化 COM。  這通常呼叫於主程式碼內。  
+-   呼叫**CoUnInitialize**停止初始化 com。 這通常稱為主要的程式碼中。  
   
     ```  
     CoUninitialize();  
     ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer.md)

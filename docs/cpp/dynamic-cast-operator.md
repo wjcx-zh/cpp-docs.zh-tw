@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- dynamic_cast_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- dynamic_cast keyword [C++]
+f1_keywords: dynamic_cast_cpp
+dev_langs: C++
+helpviewer_keywords: dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3137207566a6df16c420493afa93269540de2bae
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 29add795c7adeca67fc85c7cf3b1b90d17f804fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 運算子
 將運算元轉換`expression`物件的型別`type-id`。  
@@ -47,7 +43,7 @@ dynamic_cast < type-id > ( expression )
   
 -   `dynamic_cast`將不會再擲回例外狀況時`type-id`是實值類型，以轉換在執行階段失敗的內部指標。  轉型現在會傳回 0 的指標值，而不是擲回。  
   
- 如果`type-id`是模稜兩可存取直接或間接基底類別指標`expression`，唯一的子物件類型的指標`type-id`是結果。 例如：  
+ 如果`type-id`是模稜兩可存取直接或間接基底類別指標`expression`，唯一的子物件類型的指標`type-id`是結果。 例如:   
   
 ```  
 // dynamic_cast_1.cpp  
@@ -66,7 +62,7 @@ void f(D* pd) {
   
  這種轉換稱為 「 向上轉型 」，因為它移動從它衍生自的類別衍生類別的類別階層架構往上的指標。 向上轉型為隱含轉換。  
   
- 如果`type-id`是 void * 進行執行階段檢查，以決定實際的類型`expression`。 結果為指向完整物件的指標`expression`。 例如：  
+ 如果`type-id`是 void * 進行執行階段檢查，以決定實際的類型`expression`。 結果為指向完整物件的指標`expression`。 例如:   
   
 ```  
 // dynamic_cast_2.cpp  
@@ -87,7 +83,7 @@ void f() {
   
  如果`type-id`不是 void * 若要查看如果指向的物件進行執行階段檢查`expression`可以轉換成所指向的類型`type-id`。  
   
- 如果類型`expression`基底類別的型別`type-id`，進行執行階段檢查，以查看是否`expression`確實指向完整物件的型別`type-id`。 如果為 true，結果會是完整的物件類型的指標`type-id`。 例如：  
+ 如果類型`expression`基底類別的型別`type-id`，進行執行階段檢查，以查看是否`expression`確實指向完整物件的型別`type-id`。 如果為 true，結果會是完整的物件類型的指標`type-id`。 例如:   
   
 ```  
 // dynamic_cast_3.cpp  
@@ -136,7 +132,7 @@ int main() {
  ![類別階層顯示多重繼承的](../cpp/media/vc39011.gif "vc39011")  
 顯示多重繼承的類別階層架構  
   
- 類型的物件的指標`D`可以安全地轉換成`B`或`C`。 不過，如果`D`轉型為指向`A`物件，哪一個執行個體`A`會產生嗎？ 這會導致模稜兩可的轉換錯誤。 若要解決這個問題，您可以執行兩個明確的轉換 （cast）。 例如：  
+ 類型的物件的指標`D`可以安全地轉換成`B`或`C`。 不過，如果`D`轉型為指向`A`物件，哪一個執行個體`A`會產生嗎？ 這會導致模稜兩可的轉換錯誤。 若要解決這個問題，您可以執行兩個明確的轉換 （cast）。 例如:   
   
 ```  
 // dynamic_cast_4.cpp  
@@ -164,7 +160,7 @@ void f() {
  ![類別階層顯示重複基底類別的](../cpp/media/vc39013.gif "vc39013")  
 顯示重複基底類別的類別階層  
   
- 指定型別的物件`E`以及一個指向`D`子物件，從瀏覽`D`最左邊的子物件`A`子物件，才能進行三個轉換。 您可以執行`dynamic_cast`從轉換`D`指標`E`指標，則轉換 (可能是`dynamic_cast`或隱含轉換) 從`E`至`B`，以及最後的隱含轉換`B`至`A`。 例如：  
+ 指定型別的物件`E`以及一個指向`D`子物件，從瀏覽`D`最左邊的子物件`A`子物件，才能進行三個轉換。 您可以執行`dynamic_cast`從轉換`D`指標`E`指標，則轉換 (可能是`dynamic_cast`或隱含轉換) 從`E`至`B`，以及最後的隱含轉換`B`至`A`。 例如:   
   
 ```  
 // dynamic_cast_5.cpp  
@@ -184,7 +180,7 @@ void f(D* pd) {
   
  `dynamic_cast`運算子也可用來執行 「 交叉轉換 」。 使用相同的類別階層架構，便可從範例中，轉換為指標，`B`子物件至`D`子物件，只要完成的物件屬於類型`E`。  
   
- 考慮跨轉型，您可實際執行從指標轉換`D`最左邊指標`A`只有兩個步驟中的子物件。 您可以執行轉換成交叉`D`至`B`，然後從的隱含轉換`B`至`A`。 例如：  
+ 考慮跨轉型，您可實際執行從指標轉換`D`最左邊指標`A`只有兩個步驟中的子物件。 您可以執行轉換成交叉`D`至`B`，然後從的隱含轉換`B`至`A`。 例如:   
   
 ```  
 // dynamic_cast_6.cpp  
@@ -203,7 +199,7 @@ void f(D* pd) {
   
  Null 指標值會轉換成目的地類型的 null 指標值`dynamic_cast`。  
   
- 當您使用`dynamic_cast < type-id > ( expression )`，如果`expression`無法安全地轉換成輸入`type-id`，執行階段檢查會導致轉換失敗。 例如：  
+ 當您使用`dynamic_cast < type-id > ( expression )`，如果`expression`無法安全地轉換成輸入`type-id`，執行階段檢查會導致轉換失敗。 例如:   
   
 ```  
 // dynamic_cast_7.cpp  
@@ -299,6 +295,6 @@ in GlobalTest
 Can't cast to C  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [轉型運算子](../cpp/casting-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 467e432f9086198577d76c3624f5cb45562c7283
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a002071bdb4e271df525b138647b0544cfe9f3c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="goto-statement-c"></a>goto 陳述式 (C++)
 `goto` 陳述式無條件地將控制項傳送至所指定識別項標記的陳述式。  
@@ -83,6 +84,6 @@ Outer loop executing. i = 3
 Jumped to stop. i = 3  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [跳躍陳述式](../cpp/jump-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)

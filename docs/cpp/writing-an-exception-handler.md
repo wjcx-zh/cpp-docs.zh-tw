@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68836230c731130a6bb710d2c29a2f6b1d5f3f8c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 52d102f29a015ea077e9ec94a9f1ed63f44f7c1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-exception-handler"></a>撰寫例外狀況處理常式
 例外狀況處理常式通常用來回應特定錯誤。 除了知道如何處理的項目之外，您可以使用例外狀況處理語法篩選出所有例外狀況。 其他例外狀況應該傳遞給為了尋找這些特定例外狀況所撰寫的其他處理常式 (可能位於執行階段程式庫或作業系統中)。  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [例外狀況處理常式的限制](../cpp/restrictions-on-exception-handlers.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

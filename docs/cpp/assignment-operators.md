@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,8 +21,7 @@ f1_keywords:
 - or_eq
 - +=
 - '*='
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - or_eq operator
 - '&= operator'
@@ -45,16 +43,16 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 34ed921ed7eb690372f1635ed845271fa7520a86
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c84244a619873dcd61b52dee317a751ff28ec3ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assignment-operators"></a>指派運算子
 ## <a name="syntax"></a>語法  
@@ -128,7 +126,7 @@ int main() {
   
  類別類型 (結構、等位和類別類型) 之物件的指派作業是由名為 operator= 的函式執行。 這個運算子函式的預設行為是執行位元複製；不過可以使用多載運算子修改此行為  (請參閱[多載運算子](../cpp/operator-overloading.md)如需詳細資訊。)  
   
- 只要物件是從指定基底類別明確衍生的任何類別，就可以指派給該基底類別的物件。 反向則不成立，因為可從衍生類別隱含轉換為基底類別，但無法從基底類別轉換為衍生類別。 例如:  
+ 只要物件是從指定基底類別明確衍生的任何類別，就可以指派給該基底類別的物件。 反向則不成立，因為可從衍生類別隱含轉換為基底類別，但無法從基底類別轉換為衍生類別。 例如:   
   
 ```  
 // expre_SimpleAssignment.cpp  
@@ -205,7 +203,7 @@ B = A;
   
  在 ANSI C 中，指派運算式的結果不是左值。 因此，合法的 C++ 運算式 `(a += b) += c` 在 C 中是不合法的。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [具有二元運算子的運算式](../cpp/expressions-with-binary-operators.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [C 指派運算子](../c-language/c-assignment-operators.md)

@@ -1,47 +1,47 @@
 ---
-title: "CDynamicStringAccessorW 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessorW"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicStringAccessorW 類別"
+title: "CDynamicStringAccessorW 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CDynamicStringAccessorW
+dev_langs: C++
+helpviewer_keywords: CDynamicStringAccessorW class
 ms.assetid: 9b7fd5cc-3a9b-4b57-b907-f1e35de2c98f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 90c97da001d6c8cfb10ddff2a61069adeccc8112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessorW 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-允許可以讓您在不知道資料庫結構描述 \(基礎結構\) 時存取資料來源。  
+# <a name="cdynamicstringaccessorw-class"></a>CDynamicStringAccessorW 類別
+可讓您存取資料來源，當您在不知道資料庫結構描述 （基礎結構）。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef CDynamicStringAccessorT<WCHAR, DBTYPE_WSTR> CDynamicStringAccessorW;  
 ```  
   
-## 備註  
- 使用者要求所有資料存放區存取以字串資料的提供者擷取，不過， `CDynamicStringAccessor` 要求 Unicode 字串資料。  
+## <a name="remarks"></a>備註  
+ 它們都要求提供者擷取從資料存放區做為字串資料存取的所有資料，但`CDynamicStringAccessor`要求 Unicode 字串資料。  
   
- 繼承自`CDynamicStringAccessorW` **GetString** 和 `SetString` 從 `CDynamicStringAccessor`。  當您使用時在 `CDynamicStringAccessorW` 的這些方法物件， ***BaseType*** 是 **WCHAR**。  
+ `CDynamicStringAccessorW`繼承**GetString**和`SetString`從`CDynamicStringAccessor`。 當您使用這些方法進行`CDynamicStringAccessorW`物件***BaseType***是**WCHAR**。  
   
-## 需求  
- **標頭** ：atldbcli.h  
+## <a name="requirements"></a>需求  
+ **標頭檔**：atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [CAccessor 類別](../../data/oledb/caccessor-class.md)   

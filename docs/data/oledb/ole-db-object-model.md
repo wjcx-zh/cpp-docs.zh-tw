@@ -16,11 +16,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b91198d4280a271c775b7be79ecab3da7271fb57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 533142115a4811c0f03f585b995b83383a33d831
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-object-model"></a>OLE DB 物件模型
 OLE DB 物件模型包含下列物件或元件。 第四個物件或 （資料來源、 工作階段、 命令和資料列集） 所列出的元件，可讓您連接到資料來源並加以檢視。 顯示時使用的資料與相關聯的其餘部分，從存取子中，開始。  
@@ -74,6 +77,6 @@ OLE DB 物件模型包含下列物件或元件。 第四個物件或 （資料�
 ## <a name="notifications"></a>通知  
  通知會使用的共用資料列集的合作取用者群組 （其中共用表示取用者會假設在相同交易中無法運作）。 通知可讓共用一個資料列集合作取用者能夠得知其對等所執行的資料列集上的動作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [OLE DB 程式設計概觀](../../data/oledb/ole-db-programming-overview.md)

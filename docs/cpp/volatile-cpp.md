@@ -19,11 +19,12 @@ caps.latest.revision: "43"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: efee0b7f789862a6dad4f9bbe85b0ba55dd8a8b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 02560da98c583281cc05921f2e924a12f41688c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="volatile-c"></a>volatile (C++)
 類型限定詞，可以用來宣告程式中的物件可以由硬體修改。  
@@ -73,9 +74,9 @@ volatile declarator ;
 > [!NOTE]
 >  當它是倚賴時具有所提供的增強型保證**/volatile: ms**編譯器選項時，程式碼是不可移植。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  [const](../cpp/const-cpp.md)   
  [const 和 volatile 指標](../cpp/const-and-volatile-pointers.md)

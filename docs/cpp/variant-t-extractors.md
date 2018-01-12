@@ -59,11 +59,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db692b4847bf6a8aa7fb1ffca3f4a2d96de833c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8876cd486662ec1c20aea7148563fd28e8790a47
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variantt-extractors"></a>_variant_t 擷取器
 **Microsoft 特定的**  
@@ -119,7 +120,7 @@ operator unsigned __int64() const;
   
 -   **運算子 IUnknown\*（)**從封裝擷取 COM 介面指標**VARIANT**。 `AddRef`呼叫產生的指標，所以您必須呼叫**發行**將它釋放。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_variant_t 類別](../cpp/variant-t-class.md)

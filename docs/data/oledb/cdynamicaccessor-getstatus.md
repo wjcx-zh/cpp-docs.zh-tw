@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fd1c55e78cdc4a0ec8bd5c24c7010ec133b043bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1b6e2316c3dfc02c841e893a1426f35f509b808a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicaccessorgetstatus"></a>CDynamicAccessor::GetStatus
 擷取指定之資料行的狀態。  
@@ -62,6 +65,6 @@ bool GetStatus(
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDynamicAccessor 類別](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::SetStatus](../../data/oledb/cdynamicaccessor-setstatus.md)

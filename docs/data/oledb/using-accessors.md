@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4124ab3d8606ef36b19d6196f680b41bc65fc5a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7ce54717a65630089b4bfa0cafe0af70f0292206
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-accessors"></a>使用存取子
 下列主題說明如何判斷哪一種存取子是最適合您資料的應用程式以及如何使用不同類型的存取子可用：  
@@ -36,5 +39,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [存取 XML 資料](../../data/oledb/accessing-xml-data.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

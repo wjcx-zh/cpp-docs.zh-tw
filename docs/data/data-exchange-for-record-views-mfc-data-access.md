@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 564ff17037bfa86000329ed66b67a9b9ba76c879
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1db5adaab66fec2b587f7a15005caa3a9374ff12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-exchange-for-record-views---mfc-data-access"></a>記錄檢視的資料交換 (MFC 資料存取)
 當您使用[加入類別](../mfc/reference/adding-an-mfc-odbc-consumer.md)資料錄檢視的對話方塊範本資源中的控制項對應至資料錄集的欄位，架構會管理雙向的資料交換 — 從記錄集到控制項和控制項至資料錄集。 使用 DDX 機制意味著您不需要自行撰寫程式碼以來回傳輸資料。  
@@ -37,6 +40,6 @@ ms.lasthandoff: 10/24/2017
   
  如需有關 DDX 的詳細資訊，請參閱[對話方塊資料交換和驗證](../mfc/dialog-data-exchange-and-validation.md)。 如需 RFX 的詳細資訊，請參閱[資料錄欄位交換 (RFX)](../data/odbc/record-field-exchange-rfx.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄檢視 （MFC 資料存取）](../data/record-views-mfc-data-access.md)   
  [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

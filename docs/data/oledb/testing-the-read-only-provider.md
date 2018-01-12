@@ -1,55 +1,57 @@
 ---
-title: "測試唯讀提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供者, 呼叫"
-  - "OLE DB 提供者, 測試"
-  - "測試提供者"
-  - "測試, OLE DB 提供者"
+title: "測試唯讀提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- testing, OLE DB providers
+- testing providers
+- OLE DB providers, calling
+- OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 測試唯讀提供者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-為了測試提供者，您要有一個消費者。  如果消費者可和提供者配合使用，這將助益許多。  OLE DB 消費者樣板 \(Consumer Template\) 是 OLE DB 周圍的小型包裝函式，並可搭配使用提供者 COM 物件。  由於原始程式碼隨附於消費者樣板，因此您可輕鬆地使用這些原始程式碼來偵錯提供者。  消費者樣板可快速地開發消費者應用程式並使程式更小巧。  
+# <a name="testing-the-read-only-provider"></a>測試唯讀提供者
+若要測試的提供者，您需要取用者。 如果取用者可以比對與提供者，它可幫助。 OLE DB 消費者樣板是 OLE DB 的精簡型包裝函式，而且與提供者 COM 物件相符。 來源隨附的取用者範本，因為很容易進行偵錯與它們的提供者。 消費者樣板也是開發取用者應用程式非常小且更快速的方式。  
   
- 本主題範例將為一個測試消費者，建立預設的 MFC 應用程式精靈應用程式。  測試應用程式是加入 OLE DB 消費者樣板程式碼的簡單對話方塊。  
+ 本主題中的範例會建立預設的 MFC 應用程式精靈應用程式測試取用者。 測試應用程式是以 OLE DB 消費者範本程式碼加入簡單的對話方塊。  
   
-### 若要建立測試應用程式  
+### <a name="to-create-the-test-application"></a>若要建立測試應用程式  
   
-1.  在 \[**檔案**\] 功能表上，按一下 \[**新增**\]，然後按一下 \[**專案**\]。  
+1.  按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。  
   
-2.  在 \[專案類型\] 窗格中選取 \[**Visual C\+\+ 專案**\] 資料夾。  在 \[樣板\] 窗格中選取 \[**MFC 應用程式**\]。  
+2.  在 [專案類型] 窗格中，選取**Visual c + + 專案**資料夾。 在 [範本] 窗格中，選取**MFC 應用程式**。  
   
-3.  輸入 **TestProv** 做為專案名稱，然後按一下 \[**確定**\]。  
+3.  專案名稱輸入**TestProv**，然後按一下 **確定**。  
   
-     將出現 MFC 應用程式精靈。  
+     MFC 應用程式精靈 隨即出現。  
   
-4.  在 \[**應用程式類型**\] 頁面中選取 \[對話方塊架構\]。  
+4.  在**應用程式類型**頁面上，選取**對話方塊架構**。  
   
-5.  在 \[**進階功能**\] 頁面選取 \[Automation\]，然後按一下 \[完成\]。  
+5.  在**進階功能**頁面上，選取**自動化**，然後按一下 **完成**。  
   
 > [!NOTE]
->  如果您在 **CTestProvApp::InitInstance** 加入 **CoInitialize**，應用程式就不需要 Automation 支援。  
+>  如果您加入應用程式不需要自動化支援**CoInitialize**中**CTestProvApp::InitInstance**。  
   
- 您可以在資源檢視中選取 TestProv 對話方塊 \(IDD\_TESTPROV\_DIALOG\) 來檢視和編輯。  放置兩個清單方塊，一個是為了資料列集的每個字串，另一個是為了對話方塊字串所設置。  若要關閉這兩個清單方塊的排序屬性，可選取清單方塊，然後按 ALT\+Enter，按一下 \[樣式\] 標籤，並清除 \[排序\] 核取方塊。  此外，可將 \[執行\] 按鈕放在對話方塊中來擷取檔案。  已經完成的 TestProv 對話方塊應該有兩個清單方塊，分別標為 "String 1" 和 "String 2"，並且還具有 \[**確定**\]、\[取消\] 和 \[執行\] 按鈕。  
+ 您可以檢視和編輯 TestProv 對話方塊 (IDD_TESTPROV_DIALOG) 在 資源檢視中選取。 將兩個清單方塊中，一個用於每個字串中的資料列集，放在對話方塊中。 關閉的排序屬性，讓同時按下 ALT + Enter 在選取清單方塊時，按一下清單方塊**樣式**索引標籤，然後清除**排序**核取方塊。 此外，放置**執行**來擷取檔案對話方塊上的按鈕。 完成的 TestProv 對話方塊應該有兩個清單方塊標示為 「 字串 1 」 和 「 字串 2"，分別;它也有**確定**，**取消**，和**執行**按鈕。  
   
- 開啟對話方塊類別的標頭檔 \(在此例中為 TestProvDlg.H\)。  將下列程式碼加入至標頭檔 \(在任何類別宣告之外\)：  
+ 開啟對話方塊類別 （在此案例的 TestProvDlg.h) 的標頭檔。 將下列程式碼加入至標頭檔 （之外的任何類別宣告）：  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -70,9 +72,9 @@ END_COLUMN_MAP()
 };  
 ```  
   
- 這段程式碼表示了可定義資料列集將出現的資料行之使用者資料錄。  當用戶端呼叫 **IAccessor::CreateAccessor** 時，會使用這些項目來指定要繫結哪些資料行。  OLE DB 消費者樣板也可讓您動態繫結資料行。  COLUMN\_ENTRY 巨集為用戶端版本的 PROVIDER\_COLUMN\_ENTRY 巨集。  兩個 COLUMN\_ENTRY 巨集指定了兩個字串的序數、型別、長度和資料成員。  
+ 此代碼表示定義欄將會在資料列集的使用者記錄。 當用戶端呼叫**iaccessor:: Createaccessor**，它會使用這些項目指定要繫結的資料行。 OLE DB 消費者樣板也可讓您動態繫結資料行。 COLUMN_ENTRY 巨集是 PROVIDER_COLUMN_ENTRY 巨集的用戶端版本。 兩個 COLUMN_ENTRY 巨集指定序數、 兩個字串的類型、 長度和資料成員。  
   
- 按下 CTRL，並按兩下 \[執行\] 按鈕，來為 \[執行\] 按鈕加入處理函式。  將下列程式碼放入函式中：  
+ 加入處理常式函式的**執行**按住 ctrl 鍵並按兩下按鈕**執行** 按鈕。 下列程式碼置於函式：  
   
 ```  
 ///////////////////////////////////////////////////////////////////////  
@@ -101,7 +103,7 @@ void CtestProvDlg::OnRun()
 }  
 ```  
   
- `CCommand`、`CDataSource` 和 `CSession` 類別全都屬於 OLE DB 消費者樣板。  每個類別都模仿提供者的一個 COM 物件。  `CCommand` 物件會以標頭檔中宣告的 `CProvider` 類別做為樣板參數。  `CProvider` 參數表示您會用來存取提供者資料的繫結。  這個資料來源、工作階段和命令的 `Open` 程式碼:  
+ `CCommand`， `CDataSource`，和`CSession`所有屬於 OLE DB 消費者樣板的類別。 每個類別會模擬 COM 物件提供者中。 `CCommand`物件會使用`CProvider`標頭檔，做為範本參數中所宣告的類別。 `CProvider`參數表示您用來從提供者存取資料繫結。 以下是`Open`資料來源、 工作階段和命令的程式碼：  
   
 ```  
 if (source.Open("MyProvider.MyProvider.1", NULL) != S_OK)  
@@ -114,13 +116,13 @@ if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
    return;  
 ```  
   
- 開啟每個類別的程式碼列會在提供者內建立每個 COM 物件。  若要尋找提供者，請使用提供者的 ProgID。  您可自系統登錄取得 ProgID，或在 MyProvider.rgs 檔內尋找 \(開啟提供者目錄，並搜尋 ProgID 機碼\)。  
+ 若要開啟每個類別建立每個 COM 物件提供者中。 若要尋找的提供者，使用提供者的 ProgID。 從系統登錄或查詢 MyProvider.rgs 檔案中，您可以取得 ProgID （開啟提供者的目錄和 ProgID 的索引鍵搜尋）。  
   
- MyProv 範例內包含 myData.txt 檔。  若要建立您自己的檔案，請使用編輯器，並輸入偶數的字串，每個字串之間都要按 ENTER。  如果您移動了檔案，請變更路徑。  
+ MyData.txt 檔案隨附於 MyProv 範例。 若要建立您自己的檔案，使用編輯器，並輸入字串，按 ENTER，每個字串之間的偶數。 如果您移動的檔案，變更路徑名稱。  
   
- 在 `table.Open` 程式碼行中傳入字串 "c:\\\\samples\\\\myprov\\\\MyData.txt"。  如果您逐步執行 `Open` 呼叫，就會看到這個字串傳入提供者的 `SetCommandText` 方法內。  請注意，`ICommandText::Execute` 方法會使用該字串。  
+ 傳遞字串"c:\\\samples\\\myprov\\\MyData.txt 」 中`table.Open`列。 如果您將逐步執行`Open`呼叫時，您會看到這個字串會傳遞至`SetCommandText`提供者中的方法。 請注意，`ICommandText::Execute`使用該字串的方法。  
   
- 若要擷取資料，請在資料表上呼叫 `MoveNext`。  `MoveNext` 會呼叫 **IRowset::GetNextRows**、`GetRowCount` 和 `GetData` 函式。  若已經沒有資料列 \(也就是說，目前資料列集的位置大於 `GetRowCount`\)，迴圈 \(Loop\) 就會結束：  
+ 若要擷取的資料，呼叫`MoveNext`資料表上。 `MoveNext`呼叫**irowset:: Getnextrows**， `GetRowCount`，和`GetData`函式。 當沒有任何多個資料列 (亦即，資料列集的目前位置是大於`GetRowCount`)，迴圈會終止：  
   
 ```  
 while (table.MoveNext() == S_OK)  
@@ -130,9 +132,9 @@ while (table.MoveNext() == S_OK)
 }  
 ```  
   
- 請注意，沒有資料列時，提供者便會傳回 **DB\_S\_ENDOFROWSET**。  **DB\_S\_ENDOFROWSET** 值不能是個錯誤。  您應該要一直檢查 `S_OK`，來取消資料擷取迴圈，且不要使用 SUCCEEDED 巨集。  
+ 請注意，沒有其他資料列時，提供者就會傳回**DB_S_ENDOFROWSET**。 **DB_S_ENDOFROWSET**值不是錯誤。 您應該永遠會檢查對`S_OK`取消資料擷取迴圈，而不使用 SUCCEEDED 巨集。  
   
- 現在您應可建置 \(Build\) 此程式並測試。  
+ 您現在應該能夠建置並測試的程式。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)

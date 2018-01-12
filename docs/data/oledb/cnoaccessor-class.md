@@ -1,71 +1,73 @@
 ---
-title: "CNoAccessor 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CNoAccessor"
-  - "CNoAccessor"
-  - "ATL.CNoAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoAccessor 類別"
+title: "CNoAccessor 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CNoAccessor
+- CNoAccessor
+- ATL.CNoAccessor
+dev_langs: C++
+helpviewer_keywords: CNoAccessor class
 ms.assetid: eb669ae5-0a56-49a3-9646-c4ae6239da31
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 799fe151b22748da25901139a5aefe67460b2484
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CNoAccessor 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-可以當做樣板引數 \(`TAccessor`\) 為樣板類別，例如 `CCommand` 和 `CTable`，需要存取子類別引數。  
+# <a name="cnoaccessor-class"></a>CNoAccessor 類別
+可用來當做範本引數 (`TAccessor`) 範本的類別，例如`CCommand`和`CTable`，需要的引數存取子類別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CNoAccessor  
 ```  
   
-## 備註  
- 當您不要類別支援參數或輸出資料行時，請使用 `CNoAccessor` 做為樣板引數。  
+## <a name="remarks"></a>備註  
+ 使用`CNoAccessor`作為範本引數時，您不想要支援的參數或輸出資料行的類別。  
   
- `CNoAccessor` 會實作下列 Stub 方法，其中每個型別都對應到其他存取子類別方法:  
+ `CNoAccessor`會實作下列的虛設常式方法，其中每一個都對應至其他存取子類別的方法：  
   
--   **BindColumns** 的屬性存取子的繫結資料行。  
+-   **BindColumns** -繫結至存取子的資料行。  
   
--   `BindParameters` \-繫結至資料行的建立參數。  
+-   `BindParameters`-將繫結的建立的參數的資料行。  
   
--   **Bind** \-建立繫結。  
+-   **繫結**-建立繫結。  
   
--   **Close** \-關閉存取子。  
+-   **關閉**-關閉存取子。  
   
--   `ReleaseAccessors` \-版本類別建立存取子。  
+-   `ReleaseAccessors`-釋放存取子類別建立的。  
   
--   `FreeRecordMemory` \-自由需要釋放在目前資料錄的任何資料列。  
+-   `FreeRecordMemory`-會釋出不再需要將目前記錄中的任何資料行。  
   
--   `GetColumnInfo` \-從開啟資料列集取得資料行資訊。  
+-   `GetColumnInfo`-從開啟的資料列集取得資料行資訊。  
   
--   `GetNumAccessors` \-擷取類別建立存取子的數目。  
+-   `GetNumAccessors`-擷取類別所建立的存取子的數目。  
   
--   `IsAutoAccessor` \-傳回 true，如果資料為存取子自動擷取在移動作業期間。  
+-   `IsAutoAccessor`-如果資料自動擷取存取子在移動操作傳回 true。  
   
--   `GetHAccessor` \-擷取指定的存取子存取子的控制代碼。  
+-   `GetHAccessor`-擷取指定的存取子的存取子控制代碼。  
   
--   `GetBuffer` \-擷取指標書籤緩衝區。  
+-   `GetBuffer`-擷取書籤緩衝區的指標。  
   
--   **NoBindOnNullRowset** \-防止在空白資料列集的資料繫結。  
+-   **NoBindOnNullRowset** -可防止在空白資料列集上的資料繫結。  
   
-## 需求  
- **Header:** atldbcli.h  
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

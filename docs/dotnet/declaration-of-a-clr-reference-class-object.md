@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 973500cc276d95e523859a5fcc1b9a5f7a707bb0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0e026855abef535e0ca58662335772e49dc5fa1f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declaration-of-a-clr-reference-class-object"></a>CLR 參考類別物件的宣告
 語法來宣告和具現化參考類別類型的物件已從 Managed Extensions for c + + Visual c + +。  
@@ -73,7 +76,7 @@ private:
 ```  
   
 ## <a name="dynamic-allocation-of-an-object-on-the-clr-heap"></a>CLR 堆積上物件的動態配置  
- 在 Managed Extensions，有兩個`new`運算式之間的原生和 managed 堆積配置已大致。 在幾乎在所有情況下，編譯器就能夠使用內容來判斷是否要從原生或 managed 堆積配置記憶體。 例如：  
+ 在 Managed Extensions，有兩個`new`運算式之間的原生和 managed 堆積配置已大致。 在幾乎在所有情況下，編譯器就能夠使用內容來判斷是否要從原生或 managed 堆積配置記憶體。 例如，套用至物件的  
   
 ```  
 Button *button1 = new Button; // OK: managed heap  
@@ -126,7 +129,7 @@ Object * obj = 0;
 Object * obj2 = 1;  
 ```  
   
- 在新語法中，初始化或指派的值輸入至`Object`會導致該實值型別的隱含 boxing。 在新語法中，同時`obj`和`obj2`定址 boxed 的 Int32 物件分別存放值 0 和 1，會初始化。 例如：  
+ 在新語法中，初始化或指派的值輸入至`Object`會導致該實值型別的隱含 boxing。 在新語法中，同時`obj`和`obj2`定址 boxed 的 Int32 物件分別存放值 0 和 1，會初始化。 例如:   
   
 ```  
 // causes the implicit boxing of both 0 and 1  
@@ -264,7 +267,7 @@ f( 0 );
   
  因為`0`屬於整數型別。 已`f(int)`不存在，呼叫會明確地符合`f(char*)`透過標準轉換。 比對規則提供完全相符的優先順序高於標準轉換。 如果沒有完全相符，標準轉換會優先於隱含 boxing 實值類型。 這就是為什麼沒有任何模稜兩可。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Managed 類型 (C + + CL)](../dotnet/managed-types-cpp-cl.md)   
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
  [物件控制代碼運算子 (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)   

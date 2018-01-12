@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 38c00e7d7c5eb9f4a1076ae3814c17a8062fe322
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 312e4a63803f3661799c6ad832fdfee22af876c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy、wmemcpy
 複製緩衝區之間的位元組。 這些函式已有更安全的版本可用，請參閱 [memcpy_s、wmemcpy_s](../../c-runtime-library/reference/memcpy-s-wmemcpy-s.md)。  
@@ -98,17 +99,17 @@ wchar_t *wmemcpy(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`memcpy`|\<memory.h> 或 \<string.h>|  
 |`wmemcpy`|\<wchar.h>|  
   
- 如需其他相容性資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  如需如何使用 `memcpy` 的範例，請參閱 [memmove](../../c-runtime-library/reference/memmove-wmemmove.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)   
  [_memccpy](../../c-runtime-library/reference/memccpy.md)   
  [memchr、wmemchr](../../c-runtime-library/reference/memchr-wmemchr.md)   

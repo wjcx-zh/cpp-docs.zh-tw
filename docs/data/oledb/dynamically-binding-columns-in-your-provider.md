@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d942ea203b018e39a98bd731fe2ca9e89b55d3e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95dde27d6958bd9f1ad40bc411c7c434634879b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>在提供者內動態繫結資料行
 請確定您真正需要的是動態的資料行繫結。 因為您可能需要它：  
@@ -95,5 +98,5 @@ ms.lasthandoff: 10/24/2017
     }  
     ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 OLE DB 提供者範本](../../data/oledb/working-with-ole-db-provider-templates.md)

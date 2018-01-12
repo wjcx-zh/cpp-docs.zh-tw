@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs
+apiname: wcsrtombs
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,40 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs
-dev_langs:
-- C++
+f1_keywords: wcsrtombs
+dev_langs: C++
 helpviewer_keywords:
 - wcsrtombs function
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 6dfe7e2293f9544b64a0dfd7dfaa1889e65a64dc
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7fb18e5f66f431afb86e86815f50217782902b8d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 將寬字元字串轉換為其多位元組字元字串表示法。 此函式已有更安全的版本，請參閱 [wcsrtombs_s](../../c-runtime-library/reference/wcsrtombs-s.md)。  
@@ -83,13 +64,13 @@ size_t wcsrtombs(
  [輸出] `mbstr`  
  產生的已轉換多位元組字串的位址位置。  
   
- [in] `wcstr`  
+ [輸入] `wcstr`  
  間接指向要轉換的寬字元字串位置。  
   
- [in] `count`  
+ [輸入] `count`  
  要轉換的字元數。  
   
- [in] `mbstate`  
+ [輸入] `mbstate`  
  `mbstate_t` 轉換狀態物件的指標。  
   
 ## <a name="return-value"></a>傳回值  
@@ -104,7 +85,7 @@ size_t wcsrtombs(
   
  如果 `mbstr` 引數為 `NULL`，則 `wcsrtombs` 會傳回目的字串所需的大小 (以位元組為單位)。 如果 `mbstate` 為 Null，則使用內部的 `mbstate_t` 轉換狀態。 如果字元序列 `wchar` 沒有對應的多位元組字元表示法，則傳回 -1，並將 `errno` 設為 `EILSEQ`。  
   
- 在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ## <a name="exceptions"></a>例外狀況  
  `wcsrtombs` 函式是安全多執行緒，但前提是當這個函式執行中、且 `mbstate` 不為 Null 時，目前執行緒中沒有任何函式呼叫 `setlocale`。  
@@ -157,11 +138,11 @@ The string was successfuly converted.
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`wcsrtombs`|\<wchar.h>|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

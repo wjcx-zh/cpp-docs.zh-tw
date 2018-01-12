@@ -41,11 +41,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b19cbd69d5045ee51b3a1a8ae621300b0ba4b545
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7846d9169db45f4176ad97dfc3c0b9d5a3c346c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s、_wtmpnam_s
 產生可用來建立暫存檔的名稱。 這些是 [tmpnam 和 _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -75,7 +76,7 @@ errno_t _wtmpnam_s(
  [輸出] `str`  
  將保留所產生名稱的指標。  
   
- [in] `sizeInChars`  
+ [輸入] `sizeInChars`  
  緩衝區的大小 (以字元為單位)。  
   
 ## <a name="return-value"></a>傳回值  
@@ -86,10 +87,10 @@ errno_t _wtmpnam_s(
 |||||  
 |-|-|-|-|  
 |`str`|`sizeInChars`|**傳回值**|`str` **的內容**。|  
-|`NULL`|任何|`EINVAL`|未修改|  
+|`NULL`|any|`EINVAL`|未修改|  
 |非 `NULL` (指向有效的記憶體)|太短|`ERANGE`|未修改|  
   
- 如果 `str` 為 `NULL`，則會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
+ 如果 `str` 為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。  
   
 ## <a name="remarks"></a>備註  
  這些函式均會傳回目前不存在的檔案名稱。 `tmpnam_s` 傳回在目前工作目錄中唯一的名稱。 請注意，當檔案名稱前面附加反斜線且沒有路徑資訊時，例如 \fname21，這表示名稱對於目前工作目錄有效。  
@@ -98,7 +99,7 @@ errno_t _wtmpnam_s(
   
  `tmpnam_s` 會自動適當地處理多位元組字元字串引數，並根據從作業系統取得的 OEM 字碼頁辨識多位元組字元序列。 `_wtmpnam_s` 是 `tmpnam_s` 的寬字元版本，`_wtmpnam_s` 的引數與傳回值是寬字元字串。 `_wtmpnam_s` 與 `tmpnam_s` 的運作方式完全相同，不同之處在於 `_wtmpnam_s` 不會處理多位元組字元字串。  
   
- 在 C++ 中，使用這些函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ 在 C++ 中，使用這些函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -108,12 +109,12 @@ errno_t _wtmpnam_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`tmpnam_s`|\<stdio.h>|  
 |`_wtmpnam_s`|\<stdio.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -148,7 +149,7 @@ int main( void )
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [_getmbcp](../../c-runtime-library/reference/getmbcp.md)   
  [malloc](../../c-runtime-library/reference/malloc.md)   

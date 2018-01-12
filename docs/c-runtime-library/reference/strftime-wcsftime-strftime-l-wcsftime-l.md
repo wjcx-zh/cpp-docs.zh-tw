@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _tcsftime
 - strftime
 - wcsftime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strftime_l function
 - strftime function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 1a5331b77e218c5fe5796b2df6d0f61578657758
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 785ad16e8f86f74252c4391044d2def96091fe61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strftime-wcsftime-strftimel-wcsftimel"></a>strftime、wcsftime、_strftime_l、_wcsftime_l
 設定時間字串的格式。  
@@ -130,7 +113,7 @@ size_t _wcsftime_l(
 > [!NOTE]
 >  Visual C++ 2005 之前的版本文件將 `wcsftime` 的 `format` 參數描述成具有資料類型 `const wchar_t *`，但 `format` 資料類型的實際實作為 `const char *`。 實作`format`資料類型已更新以反映的先前和目前文件，也就是`const wchar_t *`。  
   
- 這個函式會驗證它的參數。 如果`strDest`， `format`，或`timeptr`為 null 指標，或如果`tm`資料結構所定址`timeptr`無效 （例如，如果它包含超出範圍值的時間或日期），或如果`format`字串包含無效的格式化程式碼、 無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。  
+ 這個函式會驗證它的參數。 如果`strDest`， `format`，或`timeptr`為 null 指標，或如果`tm`資料結構所定址`timeptr`無效 （例如，如果它包含超出範圍值的時間或日期），或如果`format`字串包含無效格式化程式碼無效參數處理常式會叫用中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回 0 並將 `errno` 設定為 `EINVAL`。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -138,7 +121,7 @@ size_t _wcsftime_l(
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcsftime`|`strftime`|`strftime`|`wcsftime`|  
   
- `format` 引數是由一或多個程式碼所組成；例如在 `printf` 中，格式代碼前會加上百分比符號 (`%`)。 不是以字元`%`會複製到不變`strDest`。 目前地區設定的 `LC_TIME` 分類會影響 `strftime` 的輸出格式 (如需 `LC_TIME` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md))。沒有 `_l` 後置字元的函式會使用目前設定的地區設定。 具有 `_l` 後置字元的函式版本與其相同，只不過它會採用地區設定作為參數，並使用該地區設定，而不是目前設定的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `format` 引數是由一或多個程式碼所組成；例如在 `printf` 中，格式代碼前會加上百分比符號 (`%`)。 不是以字元`%`會複製到不變`strDest`。 目前地區設定的 `LC_TIME` 分類會影響 `strftime` 的輸出格式 (如需 `LC_TIME` 的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md))。沒有 `_l` 後置字元的函式會使用目前設定的地區設定。 具有 `_l` 後置字元的函式版本與其相同，只不過它會採用地區設定作為參數，並使用該地區設定，而不是目前設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  以下列出 `strftime` 的格式代碼：  
   
@@ -219,19 +202,19 @@ size_t _wcsftime_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strftime`|\<time.h>|  
 |`wcsftime`|\<time.h> 或 \<wchar.h>|  
 |`_strftime_l`|\<time.h>|  
 |`_wcsftime_l`|\<time.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  請參閱 [time](../../c-runtime-library/reference/time-time32-time64.md) 的範例。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [地區設定](../../c-runtime-library/locale.md)   
  [時間管理](../../c-runtime-library/time-management.md)   
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   

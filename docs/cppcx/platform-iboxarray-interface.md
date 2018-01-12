@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 74afe390f91227a5ebad2246f9b2ad0f8c87a7de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 421f8517b8a96c40bb44dd959eba90b1bf903113
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 介面
 `IBoxArray` 是實值類型陣列的包裝函式，這些實值類型會在不同的應用程式二進位介面 (ABI) 之間傳遞或是儲存在 `Platform::Object^` 元素的集合中，例如在 XAML 控制項中。  
@@ -67,5 +68,5 @@ property T Value {T get();}
  如需範例，請參閱[Boxing](../cppcx/boxing-c-cx.md)。  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

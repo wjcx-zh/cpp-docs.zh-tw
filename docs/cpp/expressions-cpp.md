@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- expressions [C++]
+dev_langs: C++
+helpviewer_keywords: expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 3348fe95cec36108a05e61dee61cad66da5b51bf
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 73f06fc8b0a37d0e8a2362735b6d80f1e4ee11f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-c"></a>運算式 (C++)
 本節將描述 C++ 運算式。 運算式是提供下列其中一種或多種用途的運算子和運算元序列：  
@@ -66,5 +63,5 @@ ms.lasthandoff: 09/25/2017
     > [!NOTE]
     >  內建類型的運算子無法多載，其行為已預先定義。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

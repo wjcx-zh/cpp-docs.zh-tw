@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 08/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- namespace_CPP
-dev_langs:
-- C++
+f1_keywords: namespace_CPP
+dev_langs: C++
 helpviewer_keywords:
 - namespaces [C++], C++
 - namespaces [C++]
@@ -19,16 +16,16 @@ helpviewer_keywords:
 - global namespace
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: deb5926f15e4efad4378a9930f1e353e9af58516
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-c"></a>命名空間 (C++)
 命名空間是提供其內識別項 (類型、函式、變數等的名稱) 範圍的宣告式區域。 命名空間用來將程式碼組織成邏輯群組，以及防止特別在程式碼基底包含多個程式庫時可能會發生的名稱衝突。 在命名空間範圍的所有識別項都可以看得到彼此，沒有限制。 命名空間外部的識別項可以使用完整的名稱，每個識別項，例如存取成員`std::vector<std::string> vec;`，或藉由[using 宣告](../cpp/using-declaration.md)單一識別項 (`using std::string`)，或[using 指示詞](../cpp/namespaces-cpp.md#using_directives)針對命名空間中的所有識別項 (`using namespace std;`)。 標頭檔中的程式碼應該一律使用完整命名空間名稱。  
@@ -114,7 +111,7 @@ int ContosoDataServer::Bar(){return 0;}
   
  命名空間可以宣告在單一檔案的多個區塊中以及多個檔案中。 編譯器會在前置處理期間將組件加在一起，而產生的命名空間包含所有組件中宣告的所有成員。 其中一個範例是標準程式庫之每個標頭檔中所宣告的 std 命名空間。  
   
- 具名命名空間的成員可以明確定義的名稱限定所宣告的命名空間外部定義。 不過，定義必須出現在命名空間中含括宣告之命名空間的宣告位置後面。 例如:  
+ 具名命名空間的成員可以明確定義的名稱限定所宣告的命名空間外部定義。 不過，定義必須出現在命名空間中含括宣告之命名空間的宣告位置後面。 例如:   
   
 ```cpp  
 // defining_namespace_members.cpp  
@@ -258,7 +255,7 @@ namespace Contoso
 ```  
   
 ## <a id="namespace_aliases"></a>命名空間別名  
- 命名空間名稱必須是唯一的，這表示通常應該不會太短。 如果名稱長度導致難以讀取程式碼，或在不能使用 using 指示詞的標頭檔中所輸入的名稱長度過於冗長，則可以建立命名空間別名做為實際名稱的縮寫。 例如:  
+ 命名空間名稱必須是唯一的，這表示通常應該不會太短。 如果名稱長度導致難以讀取程式碼，或在不能使用 using 指示詞的標頭檔中所輸入的名稱長度過於冗長，則可以建立命名空間別名做為實際名稱的縮寫。 例如:   
   
 ```cpp  
 namespace a_very_long_namespace_name { class Foo {}; }  
@@ -279,6 +276,5 @@ namespace
   
  這稱為未命名或匿名命名空間，而且您想要讓其他檔案中的變數宣告看不到程式碼時很有用 （也就是提供其內部連結） 而不需要建立具名命名空間。 相同檔案中的所有程式碼都可以看到未命名的命名空間中的識別項，但在該檔案外部 (或更精確地來說是外部轉譯單位) 看不到識別碼以及命名空間本身。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和定義](declarations-and-definitions-cpp.md)
-

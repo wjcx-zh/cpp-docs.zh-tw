@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f4e36523d2fffd4f90897daf2fd22c4dba66c8fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 3b0d46ac3164f7f609e8a8a8099d500d04d91bf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowset-class"></a>CRowset 類別
 封裝 OLE DB 資料列集物件，以及數個相關的介面，並提供操作的資料列集資料的方法。  
@@ -38,9 +41,9 @@ class CRowset
   
 #### <a name="parameters"></a>參數  
  `TAccessor`  
- 存取子類別。 預設為 `CAccessorBase`。  
+ 存取子類別。 預設值為 `CAccessorBase`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -79,7 +82,7 @@ class CRowset
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DBViewer 範例](../../visual-cpp-samples.md)   
  [MultiRead 的範例](../../visual-cpp-samples.md)   
  [MultiRead 的屬性範例](../../visual-cpp-samples.md)   

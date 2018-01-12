@@ -23,11 +23,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7304d83eca004952eb65ed6c5d16e4ce816bb56
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 51fde2bb7ea73a2655c0b771dabfe14d2c833fb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC：直接呼叫 ODBC API 函式
 資料庫類別提供更簡單的介面，以[資料來源](../../data/odbc/data-source-odbc.md)比 ODBC。 如此一來，這些類別不會封裝所有 ODBC API。 類別的功能之外的任何功能，您必須直接呼叫 ODBC API 函式。 例如，您必須呼叫 ODBC 目錄函數 (**:: SQLColumns**， **:: SQLProcedures**， **:: SQLTables**，等等) 直接。  
@@ -52,5 +55,5 @@ ms.lasthandoff: 10/24/2017
  除了這些步驟中，您需要採取額外步驟以檢查函式傳回值，請確定您的程式不等候非同步呼叫完成，然後依此類推。 您可以使用，以簡化這些最後幾個步驟`AFX_SQL_ASYNC`和`AFX_SQL_SYNC`巨集。 如需詳細資訊，請參閱[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)中*MFC 參考*。  
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ODBC 基本概念](../../data/odbc/odbc-basics.md)

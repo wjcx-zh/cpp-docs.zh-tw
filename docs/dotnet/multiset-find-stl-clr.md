@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cc04dba0a9638047ea199cefdbcd3851d45c432e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 84a04f31c0833222d4bbef598a463d35efc816fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multisetfind-stlclr"></a>multiset::find (STL/CLR)
 尋找符合指定之索引鍵的元素。  
@@ -75,7 +78,7 @@ find b = b
 find C = False  
 ```  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  請注意，`find`不保證它找到的數個項目。  
   
 ## <a name="requirements"></a>需求  
@@ -83,7 +86,7 @@ find C = False
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
  [multiset:: equal_range (STL/CLR)](../dotnet/multiset-equal-range-stl-clr.md)   
  [multiset:: lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)   

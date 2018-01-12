@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5896c1c50b6e7d73c259ba19e6e2bbab77e86d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 581d7798f4f3aaa409d843f8b7f3b5869b47407e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linkage-in-names-with-file-scope"></a>檔案範圍的名稱連結
 下列連結規則適用於具有檔案範圍的名稱 (除了 `typedef` 和列舉程式名稱以外)：  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
 -   如果具有檔案範圍的函式名稱明確宣告為**內嵌**，其具有外部連結，如果具現化，或參考其位址。 因此，具有檔案範圍的函式可以有內部或外部連結。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  若下列條件成立，類別會有內部連結：  
   
@@ -50,5 +51,5 @@ ms.lasthandoff: 10/24/2017
   
 -   類別未在具有外部連結的另一個名稱宣告中使用。 這個條件約束表示，若將類別類型的物件傳遞至具有外部連結的函式，會造成類別擁有外部連結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式和連結](../cpp/program-and-linkage-cpp.md)

@@ -1,41 +1,42 @@
 ---
-title: "list::pop_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::pop_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_back 成員 [STL/CLR]"
+title: "list:: pop_back (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::pop_back
+dev_langs: C++
+helpviewer_keywords: pop_back member [STL/CLR]
 ms.assetid: 03fe8e0e-461b-41c4-8e20-97d0d4ed0feb
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e6794af1a04a9e5fdf756de6470eed6e62bbb0c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::pop_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listpopback-stlclr"></a>list::pop_back (STL/CLR)
 移除最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void pop_back();  
 ```  
   
-## 備註  
- 成員函式移除受控制序列的最後一個項目，此序列不能為空序列。  您可以使用它，從清單的尾端縮短一個項目。  
+## <a name="remarks"></a>備註  
+ 成員函式中移除受控制的序列必須為非空白的最後一個元素。 您可以使用它來縮短在最後一個項目清單。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_pop_back.cpp   
@@ -64,15 +65,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b**   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+```Output  
+a b c  
+a b  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::pop\_front](../dotnet/list-pop-front-stl-clr.md)   
- [list::push\_back](../dotnet/list-push-back-stl-clr.md)   
- [list::push\_front](../dotnet/list-push-front-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list:: pop_front (STL/CLR)](../dotnet/list-pop-front-stl-clr.md)   
+ [list:: push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)   
+ [list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)

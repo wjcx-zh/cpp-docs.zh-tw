@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3e968a3b9814aeec898d4e157781b58c40a87e25
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 642078d84f72a553e9b2407b279265a3a7e77522
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorerrorinfo"></a>_com_error::ErrorInfo
 **Microsoft 特定的**  
@@ -40,7 +41,7 @@ IErrorInfo * ErrorInfo( ) const throw( );
 ## <a name="remarks"></a>備註  
  擷取封裝**IErrorInfo**中的項目`_com_error`物件，或**NULL**有**IErrorInfo**項目記錄。 呼叫端必須呼叫**發行**上傳回的物件完成時使用它。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_com_error 類別](../cpp/com-error-class.md)

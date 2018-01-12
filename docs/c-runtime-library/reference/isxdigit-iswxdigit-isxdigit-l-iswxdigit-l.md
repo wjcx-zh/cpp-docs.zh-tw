@@ -45,11 +45,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 363a1b30e410bbb13a9101c268d48a2cb6ff1787
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1ba714f78696cd806cbf1f200e72e09a03168d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l
 判斷整數是否為代表十六進位數字的字元。  
@@ -85,7 +86,7 @@ int _iswxdigit_l(
   
  針對 "C"地區設定，`iswxdigit` 函式不支援 Unicode 全形十六進位字元。  
   
- 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數來處理其地區設定相關行為，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數來處理其地區設定相關行為，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isxdigit` 和 `_isxdigit_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
   
@@ -97,16 +98,16 @@ int _iswxdigit_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`isxdigit`|\<ctype.h>|  
 |`iswxdigit`|\<ctype.h> 或 \<wchar.h>|  
 |`_isxdigit_l`|\<ctype.h>|  
 |`_iswxdigit_l`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)

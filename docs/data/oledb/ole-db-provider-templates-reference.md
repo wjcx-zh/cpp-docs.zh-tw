@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4b8271e7a5a69c91612a3bda13ad4b1cc817f012
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供者樣板參考
 類別和介面的 OLE DB 提供者樣板可以分為下列類別。 參考資料也包含下列資訊[OLE DB 提供者樣板巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)。  
@@ -113,6 +116,6 @@ ms.lasthandoff: 10/24/2017
   
  實作 OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx)介面，加入記錄和資料成員從擷取記錄。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)   
  [OLE DB 範本](../../data/oledb/ole-db-templates.md)

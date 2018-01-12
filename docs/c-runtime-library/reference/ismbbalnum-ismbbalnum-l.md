@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebfeefa7a0a0e5f065ad397e71dfcbc26012aa65
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 830e86fad45d77a90fcc7ce22d484ad36d6b03b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbalnum-ismbbalnuml"></a>_ismbbalnum、_ismbbalnum_l
 判斷指定的多位元組字元為 alpha 或數值。  
@@ -73,22 +74,22 @@ int _ismbbalnum_l(
 isalnum || _ismbbkalnum  
 ```  
   
- 的 `c`為非零，否則會傳回 0。  
+ 非零代表 `c`，0 則代表不是。  
   
  尾碼為 `_l` 的這個函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_ismbbalnum`|\<mbctype.h>|  
 |`_ismbbalnum_l`|\<mbctype.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
  [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

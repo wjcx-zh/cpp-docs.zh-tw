@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 552452d7da81836c5f88ad98b5168d6ceee47bf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3177896b8cfdff78b0af2aeb40873f31099ce7d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 運算式的範例
 本文說明如何在您的程式中使用 Lambda 運算式。 如需 lambda 運算式的概觀，請參閱[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。 如需 lambda 運算式結構的詳細資訊，請參閱[Lambda 運算式語法](../cpp/lambda-expression-syntax.md)。  
@@ -518,7 +519,7 @@ Hello!
   
  [[本文內容](#top)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)   
  [Lambda 運算式語法](../cpp/lambda-expression-syntax.md)   
  [自動](../cpp/auto-cpp.md)   

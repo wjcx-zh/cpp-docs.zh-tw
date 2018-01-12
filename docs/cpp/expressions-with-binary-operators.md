@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 374e62aa6489ef7e817b263921010119e4565eaf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: beed0eaa26b025cec56252e6d82588019e0d467a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-with-binary-operators"></a>具有二元運算子的運算式
 二元運算子會在運算式中的兩個運算元上作用。 二元運算子為：  
@@ -100,5 +101,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [逗號運算子](../cpp/comma-operator.md)（，）  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算式的類型](../cpp/types-of-expressions.md)

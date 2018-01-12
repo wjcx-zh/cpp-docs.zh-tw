@@ -40,17 +40,18 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 85d5f0f745f66aebc526759be192af508510be92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c470717d48836fd405e98f5fccca222e87a9c33
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 執行命令。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -99,12 +100,12 @@ int _wsystem(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`system`|\<process.h> 或 \<stdlib.h>|  
 |`_wsystem`|\<process.h> 或 \<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
  這個範例會使用 `system` 來「輸入」文字檔案。  
@@ -134,8 +135,8 @@ Line one.
 Line two.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
- [ 和環境控制](../../c-runtime-library/process-and-environment-control.md)   
+## <a name="see-also"></a>請參閱  
+ [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)   
  [_exec、_wexec 函式](../../c-runtime-library/exec-wexec-functions.md)   
  [exit、_Exit、_exit](../../c-runtime-library/reference/exit-exit-exit.md)   
  [_flushall](../../c-runtime-library/reference/flushall.md)   

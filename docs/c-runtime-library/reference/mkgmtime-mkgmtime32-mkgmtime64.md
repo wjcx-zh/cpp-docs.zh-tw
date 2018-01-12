@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - mkgmtime
 - mkgmtime64
 - _mkgmtime
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mkgmtime32 function
 - time functions
@@ -45,33 +43,19 @@ helpviewer_keywords:
 - _mkgmtime32 function
 - time, converting
 ms.assetid: b4ca2b67-e198-4f43-b3e2-e8ad6bd01867
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 7f73bffc2971b535f393cef7e0e2f957b01eee42
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f99e367d263d3ba49837b269fd04159a70cf549
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mkgmtime-mkgmtime32-mkgmtime64"></a>_mkgmtime、_mkgmtime32、_mkgmtime64
-將以 `tm``struct` 表示的 UTC 時間，轉換成以 `time_t` 類型表示的 UTC 時間。  
+將以 `tm struct` 表示的 UTC 時間，轉換成以 `time_t` 類型表示的 UTC 時間。  
   
 ## <a name="syntax"></a>語法  
   
@@ -90,7 +74,7 @@ __time64_t _mkgmtime64(
   
 #### <a name="parameters"></a>參數  
  `timeptr`  
- 要轉換之 UTC 時間的指標，以 `struct``tm` 表示。  
+ 要轉換之 UTC 時間的指標，以 `struct tm` 表示。  
   
 ## <a name="return-value"></a>傳回值  
  `__time32_t` 或 `__time64_t` 類型的數量，代表自國際標準時間 (UTC) 1970 年 1 月 1 日午夜以來所經過的秒數。 如果日期超出範圍 （請參閱 < 備註 > 一節） 或輸入無法解譯為有效的時間，傳回的值為-1。  
@@ -209,7 +193,7 @@ After calling _mkgmtime, t1 = Wed Feb 12 00:00:00 2003
  t.tm_yday = 42  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   

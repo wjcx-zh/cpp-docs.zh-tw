@@ -53,17 +53,18 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 501c2d1fe8978b75d1f5e0321f12d5a933a00d75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b0ab65644f4a7bcb93ceb2156a5354a81358e47c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcoll-mbsnbcolll-mbsnbicoll-mbsnbicolll"></a>_mbsnbcoll、_mbsnbcoll_l、_mbsnbicoll、_mbsnbicoll_l
 使用多位元組字碼頁資訊，比較兩個多位元組字元字串的 `n` 個位元組。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -116,11 +117,11 @@ int _mbsnbicoll_l(
 ## <a name="remarks"></a>備註  
  所有這些函式最多會對照 `string1` 和 `string2` 中的前 `count` 個位元組，並傳回指出所產生的 `string1` 子字串和 `string2` 子字串之間關聯性的值。 如果 `string1` 子字串或 `string2` 子字串中的最後一個位元組是前導位元組，則不會包含在比較中；這些函式只會比較子字串中的字元。 `_mbsnbicoll` 是不區分大小寫版本的 `_mbsnbcoll`。 如同 `_mbsnbcmp` 和 `_mbsnbicmp`，`_mbsnbcoll` 和 `_mbsnbicoll` 會根據目前使用的多位元組[字碼頁](../../c-runtime-library/code-pages.md)所指定的詞典編纂順序，來對照兩個多位元組字元字串。  
   
- 針對某些字碼頁和對應的字元集，字元集中的字元順序可能與詞典編纂的字元順序不同。 在 "C" 地區設定中則不然：ASCII 字元集中的字元順序會與詞典編纂的字元順序相同。 不過，在特定歐洲字碼頁中，字元集中的字元 'a' (值 0x61) 會在字元 'ä' (值 0xE4) 之前，但以詞典編纂而言，字元 'ä' 是在字元 'a' 之前。 若要在此情況下逐字元組執行字串的詞典編纂比較，請使用 `_mbsnbcoll` 而不是 `_mbsnbcmp`；若只要檢查字串是否相等，請使用 `_mbsnbcmp`。  
+ 針對某些字碼頁和對應的字元集，字元集中的字元順序可能與詞典編纂的字元順序不同。 在 "C" 地區設定中則不然：ASCII 字元集中的字元順序會與詞典編纂的字元順序相同。 不過，在某些歐洲字碼頁中，例如，字元 'a' （值 0x61） 前面的字元 'ä' （值 0xE4） 中的字元設定，但字元 'ä' 前面的字元 'a' 辭典編纂順序。 若要在此情況下逐字元組執行字串的詞典編纂比較，請使用 `_mbsnbcoll` 而不是 `_mbsnbcmp`；若只要檢查字串是否相等，請使用 `_mbsnbcmp`。  
   
  因為 `coll` 函式會以詞典編纂方式對照字串以進行比較，而 `cmp` 函式只會測試字串是否相等，所以 `coll` 函式比對應的 `cmp` 版本慢很多。 因此，只有在字元集順序與目前字碼頁中的字典編纂字元順序不同時，以及比較注意這項差異時，才應該使用 `coll` 函式。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -133,16 +134,16 @@ int _mbsnbicoll_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_mbsnbcoll`|\<mbstring.h>|  
 |`_mbsnbcoll_l`|\<mbstring.h>|  
 |`_mbsnbicoll`|\<mbstring.h>|  
 |`_mbsnbicoll_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [_mbsnbcat、_mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
  [_mbsnbcmp、_mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   

@@ -53,17 +53,18 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25dbe5ba2808e0050f494e05b0ae33c42ccc96e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 057b6ee50934561662becbcf258910ee292664ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 檢查多位元組字元是否為合法或符號字元。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -97,9 +98,9 @@ int _ismbcsymbol_l(
 ## <a name="remarks"></a>備註  
  這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。  
   
- 尾碼為 `_l` 的這些函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 尾碼為 `_l` 的這些函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
-|常式|測試條件|字碼頁 932 範例|  
+|常式傳回的值|測試條件|字碼頁 932 範例|  
 |-------------|--------------------|---------------------------|  
 |`_ismbclegal`|有效的多位元組|只在 `c` 的第一個位元組介於 0x81 - 0x9F 或 0xE0 - 0xFC 的範圍內，同時第二個位元組介於 0x40 - 0x7E 或 0x80 - FC 的範圍內時，才傳回非零。|  
 |`_ismbcsymbol`|多位元組的符號|只在 0x8141<=`c`<=0x81AC 時，才傳回非零。|  
@@ -113,14 +114,14 @@ int _ismbcsymbol_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_ismbclegal,_ismbclegal_l`|\<mbstring.h>|  
 |`_ismbcsymbol,_ismbcsymbol_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [_ismbc 常式](../../c-runtime-library/ismbc-routines.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)   

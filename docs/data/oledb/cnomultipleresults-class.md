@@ -1,45 +1,47 @@
 ---
-title: "CNoMultipleResults 類別 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CNoMultipleResults"
-  - "ATL.CNoMultipleResults"
-  - "ATL::CNoMultipleResults"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CNoMultipleResults 類別"
+title: "CNoMultipleResults 類別 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CNoMultipleResults
+- ATL.CNoMultipleResults
+- ATL::CNoMultipleResults
+dev_langs: C++
+helpviewer_keywords: CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cbb5873ca504cac72489c612e9bb3b4177e2e96b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CNoMultipleResults 類別
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-用來作為對 [CCommand](../../data/oledb/ccommand-class.md)的樣板引數 \(*TMultiple*\)，以建立處理單一結果集的最佳化命令。  
+# <a name="cnomultipleresults-class"></a>CNoMultipleResults 類別
+做為樣板引數 (*TMultiple*) 至[CCommand](../../data/oledb/ccommand-class.md)建立最佳化的命令處理單一結果集。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 class CNoMultipleResults  
 ```  
   
-## 備註  
- 如果您想要命令處理多個結果集，請使用 [CMultipleResults](../../data/oledb/cmultipleresults-class.md)。  
+## <a name="remarks"></a>備註  
+ 如果您想要處理多個結果集的命令，使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)改為。  
   
-## 需求  
- **標頭：** atldbcli.h  
+## <a name="requirements"></a>需求  
+ **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [OLE DB 消費者樣板參考](../../data/oledb/ole-db-consumer-templates-reference.md)
+ [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

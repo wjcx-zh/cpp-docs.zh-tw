@@ -19,11 +19,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b0b75ea559cac35ef764818d3a99162a72cfc62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ba75c40b87da01052cd6511cdfd4b8b08219742d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-monitor-file-system-changes-ccli"></a>如何：監視檔案系統變更 (C++/CLI)
 下列程式碼範例使用<xref:System.IO.FileSystemWatcher>以註冊事件對應至建立、 變更、 刪除或重新命名的檔案。 而不是定期輪詢變更檔案的目錄，您可以使用<xref:System.IO.FileSystemWatcher>類別引發事件時偵測到變更。  
@@ -90,7 +93,7 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [System.IO 命名空間](https://msdn.microsoft.com/en-us/library/system.io.aspx)   
  [檔案和資料流 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,36 +1,38 @@
 ---
-title: "CManualAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CManualAccessor::AddBindEntry"
-  - "ATL.CManualAccessor.AddBindEntry"
-  - "CManualAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CManualAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry 方法"
+title: "Cmanualaccessor:: Addbindentry |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CManualAccessor::AddBindEntry
+- ATL.CManualAccessor.AddBindEntry
+- CManualAccessor::AddBindEntry
+- AddBindEntry
+- CManualAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8556dda9-dda1-4f67-96bc-6031e6c6a271
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 14a2fbae8ee29728d145b3ff8d20a02b4000b5a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CManualAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-將繫結項目加入輸出資料行。  
+# <a name="cmanualaccessoraddbindentry"></a>CManualAccessor::AddBindEntry
+將繫結項目加入至輸出資料行。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -44,33 +46,33 @@ caps.handback.revision: 9
 ) throw ( );  
 ```  
   
-#### 參數  
- 請參閱 *OLE DB 程式設計人員參考* 中的 [DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)。  
+#### <a name="parameters"></a>參數  
+ 請參閱[DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)中*OLE DB 程式設計人員參考*。  
   
  `nOrdinal`  
- \[in\] 欄編號。  
+ [in]資料行編號。  
   
  `wType`  
- \[in\] 資料型別  
+ [in]資料型別。  
   
  `nColumnSize`  
- \[in\] 資料列大小 \(以位元組為單位\)。  
+ [in]資料行大小 （位元組）。  
   
  `pData`  
- \[至緩衝區中的資料行之的指標。  
+ [in]儲存在緩衝區資料行的資料指標。  
   
  `pLength`  
- \[out 欄位長度的指標，如果必須。  
+ [in]必要的欄位長度指標。  
   
  `pStatus`  
- \[in 要繫結之變數的指標的狀態，如果必須。  
+ [in]如果需要繫結至資料行狀態中，變數的指標。  
   
-## 備註  
- 若要使用此功能，您必須先呼叫 [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。  要在 `CreateAccessor`中指定的欄位不能加入更多項目。  
+## <a name="remarks"></a>備註  
+ 若要使用此函式，您必須先呼叫[CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md)。 您無法加入更多的項目中指定的資料行數目比`CreateAccessor`。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CManualAccessor 類別](../../data/oledb/cmanualaccessor-class.md)   
- [DBViewer 範例](../../top/visual-cpp-samples.md)
+ [DBViewer 範例](../../visual-cpp-samples.md)

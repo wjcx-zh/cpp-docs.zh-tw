@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c0765dde0ee0e910fe9bc865f68e0d4edeeb67e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 46a9301904d3293c242ca631c161b7e71304f283
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-for-simple-matching-ccli"></a>如何：使用規則運算式進行簡單對應 (C++/CLI)
 下列程式碼範例會使用規則運算式來尋找正確的子字串相符項目。 搜尋由靜態<xref:System.Text.RegularExpressions.Regex.IsMatch%2A>方法，這個方法會採用兩個字串做為輸入。 第一個是要搜尋的字串和第二個是要在其中搜尋的模式。  
@@ -62,6 +65,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET Framework 規則運算式](/dotnet/standard/base-types/regular-expressions)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a130e60403c9570d647955a6ad2d86f2ba49d1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36272def7cf37d53e219011bef0e5151628d2299
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hardware-exceptions"></a>硬體例外狀況
 大部分可由作業系統辨識的標準例外狀況是硬體定義的例外狀況。 Windows 可辨識某些低階軟體例外狀況，不過，作業系統通常最適合處理這些例外狀況。  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/24/2017
   
  上表中列出的許多例外狀況主要是要由偵錯工具、作業系統，或其他低階程式碼處理。 除了整數和浮點數的錯誤之外，您的程式碼不應該處理這些錯誤。 因此，您通常應該使用例外狀況處理篩選條件來忽略例外狀況 (運算結果為 0)。 否則，您可以透過適當的回應來防止低階機制執行。 您可以不過，採取適當的預防措施，針對這些低階錯誤的潛在影響[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

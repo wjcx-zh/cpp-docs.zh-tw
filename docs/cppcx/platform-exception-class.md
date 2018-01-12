@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c2a6ee18779bbd1f54cf33a7b13a60725701c34c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 70d497275a0af7cfec12123f169240ced47fa958
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformexception-class"></a>Platform::Exception 類別
 代表應用程式執行期間所發生的錯誤。 自訂例外狀況類別不能衍生自 `Platform::Exception`類別。 如果您需要自訂例外狀況，您可以使用 `Platform::COMException` 並指定應用程式特定的 HRESULT。  
@@ -41,21 +42,21 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
   
 ### <a name="constructors"></a>建構函式  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |[Exception:: exception](#ctor)|初始化 `Exception` 類別的新執行個體。|  
   
 ### <a name="methods"></a>方法  
  `Exception`類別會繼承`Equals()`， `Finalize()`，`GetHashCode()`，`GetType()`，`MemberwiseClose()`，和`ToString()`方法[platform:: object 類別](../cppcx/platform-object-class.md)。 `Exception` 類別也有下列方法。  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |[Exception:: createexception](#createexception)|建立表示指定 HRESULT 值的例外狀況。|  
   
 ### <a name="properties"></a>屬性  
  Exception 類別也有下列屬性。  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |[Exception:: hresult](#hresult)|對應於例外狀況的 HRESULT。|  
 |[Exception:: message](#message)|描述例外狀況的訊息。 此值是唯讀，在 `Exception` 建構之後就無法修改。|  
@@ -150,5 +151,5 @@ public:property String^ Message;
   
 
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

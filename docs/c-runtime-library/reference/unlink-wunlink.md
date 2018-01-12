@@ -43,11 +43,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e98fb76faad72cedf48d8cc6baa7113870273d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8494b4a379f0e484ed98f6240dd76ccd4ef15bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unlink-wunlink"></a>_unlink、_wunlink
 刪除檔案。  
@@ -83,12 +84,12 @@ int _wunlink(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_unlink`|\<io.h> 和 \<stdio.h>|  
 |`_wunlink`|\<io.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="code-example"></a>程式碼範例  
  此程式會使用 _unlink 來刪除 CRT_UNLINK.TXT。  
@@ -119,7 +120,7 @@ This file will be deleted.
 Deleted 'CRT_UNLINK.TXT'  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_close](../../c-runtime-library/reference/close.md)   
  [remove、_wremove](../../c-runtime-library/reference/remove-wremove.md)

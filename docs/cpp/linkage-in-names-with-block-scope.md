@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0549538ba2af256d3a98b83dcb691327e387de9c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fed200614ef6385aab24755e5eb202fd875494c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linkage-in-names-with-block-scope"></a>區塊範圍的名稱連結
 下列連結規則適用於具有區塊範圍的名稱 (區域名稱)：  
@@ -32,5 +33,5 @@ ms.lasthandoff: 10/24/2017
   
 -   具有區塊範圍的所有其他名稱都不具有連結。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [程式和連結](../cpp/program-and-linkage-cpp.md)

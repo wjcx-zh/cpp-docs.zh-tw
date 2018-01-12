@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8651fd1aa1400b366c6db369eff7bfde8751507
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48adac5a394e782e60d03cc5aadfa094627331b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umask"></a>_umask
 設定預設檔案權限遮罩。 目前有比這個函式更安全的版本；請參閱 [_umask_s](../../c-runtime-library/reference/umask-s.md)。  
@@ -65,7 +66,7 @@ int _umask(
  整數運算式 `pmode` 包含 SYS\STAT.H 中所定義的下列其中一或兩個資訊清單常數：  
   
  `_S_IWRITE`  
- 允許寫入。  
+ 允許寫入  
   
  `_S_IREAD`  
  允許讀取。  
@@ -79,11 +80,11 @@ int _umask(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_umask`|\<io.h>、\<sys/stat.h>、\<sys/types.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -117,7 +118,7 @@ int main( void )
 Oldmask = 0x0000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   

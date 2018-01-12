@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd65dc8a684ea4a6395fa25b081598cbce064394
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 360a5fbbb848ac1c3a44ec93343575852838b7ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmultipleresults-class"></a>CMultipleResults 類別
 如果您想要處理多個結果集的命令，使用`CMultipleResults`如`CCommand`樣板引數*TMultiple*。  
@@ -39,6 +42,6 @@ class CMultipleResults
 ## <a name="requirements"></a>需求  
  **標頭：** atldbcli  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

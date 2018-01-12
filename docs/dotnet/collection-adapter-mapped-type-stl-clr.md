@@ -1,41 +1,42 @@
 ---
-title: "collection_adapter::mapped_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::mapped_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "mapped_type 成員 [STL/CLR]"
+title: "collection_adapter::mapped_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::mapped_type
+dev_langs: C++
+helpviewer_keywords: mapped_type member [STL/CLR]
 ms.assetid: eece6a47-611a-47d4-8dfc-cfbbc4aeb67b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3b3e9f01c99333a292e934535785c695df2b9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::mapped_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadaptermappedtype-stlclr"></a>collection_adapter::mapped_type (STL/CLR)
 字典值的型別。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef Value mapped_type;  
 ```  
   
-## 備註  
- 這個型別是樣板參數 `Value`的同義字，在 `IDictionary` 或 `IDictionary<Value>`的特製化;否則不會定義。  
+## <a name="remarks"></a>備註  
+ 類型是樣板參數的同義字`Value`中的特製化，`IDictionary`或`IDictionary<Value>`; 否則為未定義。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_collection_adapter_mapped_type.cpp   
@@ -68,12 +69,15 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**   
-## 需求  
- **標題:** \<cliext\/配接器\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<配接器 cliext/>  
   
-## 請參閱  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [collection\_adapter::key\_type](../dotnet/collection-adapter-key-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::key_type (STL/CLR)](../dotnet/collection-adapter-key-type-stl-clr.md)

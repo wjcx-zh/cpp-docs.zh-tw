@@ -53,11 +53,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e158e5ad1380ec36383fac7bca8329af192857aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d6f60436d0ae412489862d07a79f4d42e6c568ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccolumndomainusage-ccolumndomainusageinfo"></a>CColumnDomainUsage、CColumnDomainUsageInfo
 呼叫 typedef 類別**CColumnDomainUsage**來實作其參數類別**CColumnDomainUsageInfo**。  
@@ -84,5 +87,5 @@ ms.lasthandoff: 10/24/2017
 ## <a name="requirements"></a>需求  
  **標頭：** atldbsch.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRestrictions 類別](../../data/oledb/crestrictions-class.md)

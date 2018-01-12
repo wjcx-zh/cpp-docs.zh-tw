@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ae0c7a99ca64287c91cb1392f81ac82db103d29d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ee718205aa235ee2d93183f131f06ba9f01e40e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformobject-class"></a>Platform::Object 類別
 為 Windows 市集應用程式中的 ref 類別或 ref 結構提供一般行為。 所有 ref 類別和 ref 結構執行個體都會隱含轉換為 Platform::Object^，而且也都能覆寫其虛擬 ToString 方法。  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 public ref class Object : Object  
 ```  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Object:: object](#ctor)|初始化 Object 類別的新執行個體。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Object:: equals](#equals)|判斷指定的物件是否等於目前的物件。|  
 |[Object:: gethashcode](#gethashcode)|傳回這個執行個體的雜湊碼。|  
@@ -127,7 +128,7 @@ Object::GetType()
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform:: type 類別](../cppcx/platform-type-class.md)   
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)   
  [型別 System](../cppcx/type-system-c-cx.md
@@ -184,5 +185,5 @@ public:
     };  
 };  
 ```  
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

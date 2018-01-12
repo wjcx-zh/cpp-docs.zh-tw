@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 666c0d0b3d358360426a7cf1184917b524a7030a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 25e9533752e47e5cf3ea50e594a23b99e19355ee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="access-to-odbc-and-sql"></a>存取 ODBC 和 SQL
 Mfc 程式庫封裝的多個 Windows 應用程式開發介面呼叫，並仍然可讓您直接呼叫任何 Windows API 函式。 資料庫類別可讓您充分 ODBC API 相同的彈性。 資料庫類別可避免您的 ODBC 的複雜性，而您可以直接從任何地方呼叫 ODBC API 函式在程式中。  
@@ -33,5 +36,5 @@ Mfc 程式庫封裝的多個 Windows 應用程式開發介面呼叫，並仍然�
   
  如需詳細資訊，請參閱[ODBC： 直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)和[SQL： 製作直接 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ODBC 和 MFC](../../data/odbc/odbc-and-mfc.md)

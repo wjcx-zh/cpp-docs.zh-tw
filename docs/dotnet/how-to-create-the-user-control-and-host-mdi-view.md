@@ -16,11 +16,14 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 298a08689d6c4aa69d4a52af5fad965e3e353b5c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8b9b3c8ff385aed22785386c035ed537d8d97e97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>如何：建立使用者控制項並裝載 MDI 檢視
 下列步驟示範如何建立.NET Framework 使用者控制項，撰寫使用者控制項中的控制項類別程式庫 （特別是，Windows 控制項程式庫專案），然後將專案編譯成組件。 從 MFC 應用程式使用衍生自的類別可以使用控制項[CView 類別](../mfc/reference/cview-class.md)和[CWinFormsView 類別](../mfc/reference/cwinformsview-class.md)。  
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
      在**檔案**功能表上，選取**新增**，然後按一下 **專案**。 在**Visual c + +**資料夾中，選取**MFC 應用程式**。  
   
-     在**名稱**方塊中，輸入`MFC02`並變更**方案**設**將加入至方案**。 按一下 [確定]。  
+     在**名稱**方塊中，輸入`MFC02`並變更**方案**設**將加入至方案**。 按一下 [確定 **Deploying Office Solutions**]。  
   
      在**MFC 應用程式精靈**，接受所有預設值，然後按**完成**。 這會建立多重文件介面 MFC 應用程式。  
   
@@ -109,5 +112,5 @@ ms.lasthandoff: 10/24/2017
   
      在**偵錯**功能表上，按一下 **啟動但不偵錯**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [將 Windows Form 使用者控制項裝載為 MFC 檢視](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

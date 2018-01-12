@@ -46,11 +46,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b6f14e43556a9b066f9dc34520c327cff7fa1004
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 681f9d125a7f45dae2a8e604df655facdd246067
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get、_timespec32_get、_timespec64_get
 使用第一個引數，依據指定的時間基礎，將間隔設定成指向目前的月曆時間。  
@@ -90,17 +91,17 @@ int _timespec64_get(
   
  這些函式只可以 `TIME_UTC` 的 `base` 值提供支援。 這會將 `time_spec` 值設定為自 Epoch 啟動之後 (國際標準時間 (UTC) 1970 年 1 月 1 日的午夜) 所經歷的秒數與奈秒數。 在 `struct _timespec32`中， `tv_sec` 為 `__time32_t` 值。 在 `struct _timespec64`中， `tv_sec` 為 `__time64_t` 值。 在 `struct timespec`, ， `tv_sec` 為 `time_t` 類型，其長度為 32 位元或 64 位元，取決於有無定義前置處理器巨集 _USE_32BIT_TIME_T。 `timespec_get` 函式是內嵌函式。如有定義 _USE_32BIT_TIME_T，將會呼叫 `_timespec32_get` ，否則會呼叫 `_timespec64_get`。  
   
- **結束 Microsoft 特定的**  
+ **結束 Microsoft 專有**  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
-|`timespec_get`, `_timespec32_get`, `_timespec64_get`|C: \<time.h>，C++： \<ctime> 或 \<time.h>|  
+|`timespec_get`中， `_timespec32_get`中， `_timespec64_get`|C: \<time.h>，C++： \<ctime> 或 \<time.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [asctime_s、_wasctime_s](../../c-runtime-library/reference/asctime-s-wasctime-s.md)   

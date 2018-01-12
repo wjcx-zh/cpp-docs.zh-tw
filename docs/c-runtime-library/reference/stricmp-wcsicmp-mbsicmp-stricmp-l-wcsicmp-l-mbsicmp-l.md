@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -42,8 +41,7 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -65,36 +63,22 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3502f864ce5450e86acd673d2911ed7f5393e5fe
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 執行字串的不區分大小寫比較。  
   
 > [!IMPORTANT]
-> 在 Windows 執行階段中執行的應用程式中無法使用  `_mbsicmp` 和 `_mbsicmp_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  在 Windows 執行階段中執行的應用程式中無法使用 `_mbsicmp` 和 `_mbsicmp_l`。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -147,7 +131,7 @@ int _mbsicmp_l(
  發生錯誤時，`_mbsicmp` 會傳回 `_NLSCMPERROR` (定義於 \<string.h> 和 \<mbstring.h> 中)。  
   
 ## <a name="remarks"></a>備註  
- `_stricmp` 函式一般會在每個字元轉換成小寫之後，比較 `string1` 和 `string2`，並傳回表示它們關聯性的值。 `_stricmp` 與 `_stricoll` 不同之處為，`_stricmp` 比較只會受到 `LC_CTYPE` 的影響，它會決定哪些字元為大寫和小寫。 `_stricoll` 函式會根據地區設定的 `LC_CTYPE` 和 `LC_COLLATE` 分類，其中包括大小寫和定序排序，來比較字串。 如需 `LC_COLLATE` 分類的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 和[地區設定分類](../../c-runtime-library/locale-categories.md)。 沒有 `_l` 字尾的這些函式版本，會針對與地區設定相依的行為，使用目前的地區設定。 具有字尾的版本也一樣，只不過它們改用傳入的地區設定。 如果尚未設定地區設定，會使用 C 地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ `_stricmp` 函式一般會在每個字元轉換成小寫之後，比較 `string1` 和 `string2`，並傳回表示它們關聯性的值。 `_stricmp` 與 `_stricoll` 不同之處為，`_stricmp` 比較只會受到 `LC_CTYPE` 的影響，它會決定哪些字元為大寫和小寫。 `_stricoll` 函式會根據地區設定的 `LC_CTYPE` 和 `LC_COLLATE` 分類，其中包括大小寫和定序排序，來比較字串。 如需 `LC_COLLATE` 分類的詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) 和[地區設定分類](../../c-runtime-library/locale-categories.md)。 沒有 `_l` 字尾的這些函式版本，會針對與地區設定相依的行為，使用目前的地區設定。 具有字尾的版本也一樣，只不過它們改用傳入的地區設定。 如果尚未設定地區設定，會使用 C 地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 > [!NOTE]
 >  `_stricmp` 相當於 `_strcmpi`。 它們可以交替使用，但 `_stricmp` 是慣用的標準。  
@@ -192,13 +176,13 @@ int main() {
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_stricmp`, `_stricmp_l`|\<string.h>|  
 |`_wcsicmp`, `_wcsicmp_l`|\<string.h> 或 \<wchar.h>|  
 |`_mbsicmp`, `_mbsicmp_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -249,7 +233,7 @@ Compare strings:
    _stricmp:  String 1 is equal to string 2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [memcmp、wmemcmp](../../c-runtime-library/reference/memcmp-wmemcmp.md)   
  [_memicmp、_memicmp_l](../../c-runtime-library/reference/memicmp-memicmp-l.md)   

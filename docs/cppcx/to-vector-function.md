@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 2f9df89c398e943af3c422b7e025ad371a3e8285
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5aa6698306f06fb5d63a8e351054aa2c123749fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tovector-function"></a>to_vector 函式
 傳回 `std::vector` ，其值與指定的 IVector 或 IVectorView 參數的基礎集合相同。  
@@ -48,5 +49,5 @@ inline ::std::vector<T> to_vector(IVectorView<T>^ v);
   
  **命名空間：** Windows::Foundation::Collections  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

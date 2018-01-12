@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d0750884c9d7d5bfb1b9566b26cdce5c8c1962c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5c8a1dd1b126b77f14815a90e7b4599fe0ce14bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>如何：將 char * 字串轉換為 System::Byte 陣列
 要轉換的最有效方式`char *`字串至<xref:System.Byte>陣列是使用<xref:System.Runtime.InteropServices.Marshal>類別。  
@@ -59,5 +62,5 @@ int main() {
 Native String  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

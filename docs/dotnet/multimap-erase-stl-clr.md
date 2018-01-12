@@ -1,32 +1,33 @@
 ---
-title: "multimap::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 成員 [STL/CLR]"
+title: "multimap:: erase (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 94623cfc-4464-44a6-afd4-90a36828ac2b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 23682b9aea37b13fa399f045e22c6148ef384f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除指定位置的項目。  
+# <a name="multimaperase-stlclr"></a>multimap::erase (STL/CLR)
+移除位於指定位置的項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +35,29 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)  
 ```  
   
-#### 參數  
- first  
- 要清除之範圍的開頭。  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要清除範圍的開頭。  
   
- Key \- 索引鍵  
- 要清除的索引鍵值。  
+ key  
+ 若要清除的機碼值。  
   
  last  
- 要清除之範圍的結尾。  
+ 若要清除的範圍的結尾。  
   
- where  
- 要清除的項目。  
+ 其中  
+ 若要清除的項目。  
   
-## 備註  
- 第一個成員函式移除受控制序列中 `where` 指向的項目，並且回傳迭代器，其委派移除的項目之上的第一個剩餘項目，若沒有這樣的項目存在則傳回 [multimap::end](../dotnet/multimap-end-stl-clr.md)`()`。  您可用它來移除單一項目。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式中移除指向受控制序列的項目`where`，並傳回指定移除的項目之外剩餘的第一個元素的迭代器或[multimap:: end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`如果沒有這類元素存在。 您可以使用它來移除單一項目。  
   
- 第二個成員函式移除受控制序列中範圍 `[``first``,` `last``)` 的項目，並且傳回迭代器，其委派移除的任何項目之上的第一個剩餘項目，若沒有這樣的項目存在則傳回 `end()`。  您可用它來移除零或多個連續的項目。  
+ 第二個成員函式範圍中移除受控制序列的項目 [`first`， `last`)，並傳回指定任何移除的項目之外剩餘的第一個元素的迭代器或`end()`如果沒有這個項目存在... 您可以使用它來移除零或多個連續的項目。  
   
- 第三個成員函式移除受控制序列中擁有和 `key` 相等排序的索引值的任何項目，並且回傳移除的項目數。  您可用它來移除和計數符合指定索引鍵的項目。  
+ 第三個成員函式中移除索引鍵具有對等順序受控制任何的序列項目至`key`，並傳回已移除項目的數目的計數。 您可以使用它來移除並計算所有符合指定之索引鍵的項目。  
   
- 每個項目消除所需花費的時間與受控制序列中的項目數之對數成比例。  
+ 每個項目清除接受受控制序列的項目數目對數值成比例的時間。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multimap_erase.cpp   
@@ -104,18 +105,21 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**erase\(begin\(\)\) \= \[b 2\]**  
- **\[b 2\] \[c 3\] \[d 4\] \[e 5\]**  
-**erase\(begin\(\), end\(\)\-1\) \= \[e 5\]**  
-**size\(\) \= 1**  
-**erase\(L'x'\) \= 0**  
-**erase\(L'e'\) \= 1**   
-## 需求  
- **標頭：** \<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+erase(begin()) = [b 2]  
+ [b 2] [c 3] [d 4] [e 5]  
+erase(begin(), end()-1) = [e 5]  
+size() = 1  
+erase(L'x') = 0  
+erase(L'e') = 1  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::clear](../dotnet/multimap-clear-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::clear (STL/CLR)](../dotnet/multimap-clear-stl-clr.md)

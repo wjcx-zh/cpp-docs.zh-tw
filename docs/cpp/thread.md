@@ -4,35 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- thread_cpp
-dev_langs:
-- C++
+f1_keywords: thread_cpp
+dev_langs: C++
 helpviewer_keywords:
 - thread local storage (TLS)
 - thread __declspec keyword
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 7261dc1d6d76eeac8a6b2959bc9bb6fc3c98a66e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b26487e7f5f11bb32f418b438e9d0396b5854a91
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="thread"></a>thread
 
 **Microsoft 特定的**  
-**執行緒**擴充的儲存類別修飾詞用來宣告執行緒區域變數。 用於可攜式相當於 C + + 11 和更新版本、 [thread_local](../cpp/storage-classes-cpp.md#thread_local)儲存類別規範。
+**執行緒**擴充的儲存類別修飾詞用來宣告執行緒區域變數。 用於可攜式相當於 C + + 11 和更新版本、 [thread_local](../cpp/storage-classes-cpp.md#thread_local)可攜式程式碼的儲存類別規範。 在 Windows 上**thread_local**實作與**__declspec （thread)**。
 
 ## <a name="syntax"></a>語法
 
@@ -50,13 +47,18 @@ __declspec( thread ) declarator
 __declspec( thread ) int tls_i = 1;  
 ```
 
-在宣告執行緒區域物件和變數時，您必須遵守下列方針：
+使用執行緒區域變數中時以動態方式載入程式庫，您需要留意的因素可能會導致不正確地初始化執行緒區域變數：
+
+1) 如果變數初始化函式呼叫 （包括建構函式），執行緒造成二進位/DLL 載入程序，以及載入二進位檔/DLL 之後，啟動這些執行緒只會呼叫此函式。 初始化函式不會針對已經在已載入 DLL 時執行的其他任何執行緒呼叫。 動態初始化，就會發生 DLL_THREAD_ATTACH，DllMain 呼叫而 DLL 永遠不會取得，如果在執行緒啟動時 DLL 不是程序中的訊息。 
+
+2) 執行緒區域變數初始化靜態的常數值通常會在所有執行緒上正確初始化。 不過，自 2017 年 12 月沒有已知的一致性問題讓接收 constexpr 變數時，Microsoft c + + 編譯器中動態而不是靜態初始設定。  
+  
+   注意： 這兩種問題應該會固定在未來的編譯器的更新。
+
+
+此外，您必須在宣告執行緒區域物件和變數時，遵守下列方針：
 
 - 您可以套用**執行緒**屬性只能加入類別以及資料宣告和定義;**執行緒**不能在函式宣告或定義。
-
-- 使用**執行緒**屬性可能會干擾[延遲載入](../build/reference/linker-support-for-delay-loaded-dlls.md)DLL 匯入。
-
-- 在 XP 系統上**執行緒**可能無法正確運作如果 DLL 使用 __declspec （thread） 資料，而且它透過 LoadLibrary 動態載入。
 
 - 您可以指定**執行緒**只能在具有靜態儲存期的資料項目上的屬性。 這包括全域資料物件 (同時**靜態**和**extern**)、 區域靜態物件和類別的靜態資料成員。 您無法宣告自動資料物件與**執行緒**屬性。
 
@@ -93,11 +95,10 @@ __declspec( thread ) int tls_i = 1;
 
      請注意， **sizeof**運算式，其中包含所要初始化的物件不會構成其本身的參考，並允許在 C 和 c + + 中。
 
-**END Microsoft 特定的**
+**結束 Microsoft 特定的**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [__declspec](../cpp/declspec.md)  
 [關鍵字](../cpp/keywords-cpp.md)  
 [執行緒區域儲存區 (TLS)](../parallel/thread-local-storage-tls.md)
-

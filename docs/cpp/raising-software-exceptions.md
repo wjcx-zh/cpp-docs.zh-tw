@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b19503d60629011621ef320b46325e17a217804c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 98601b9d4293417d03dcdcc96b2ae0bb54defdc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="raising-software-exceptions"></a>引發軟體例外狀況
 某些常見的程式錯誤來源是系統未標示為例外狀況。 例如，如果您嘗試配置記憶體區塊，但是沒有足夠的記憶體，執行階段或 API 函式不會引發例外狀況，而是傳回錯誤碼。  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  WINERROR.H 檔案會顯示例外狀況代碼的格式。 為確保您定義的代碼不會與現有的例外狀況代碼發生衝突，請將第三個最高有效位元設為 1。 四個最高有效位元都應該依照下表所示進行設定。  
   
-|位元|建議的二進位設定|描述|  
+|Bits|建議的二進位設定|描述|  
 |----------|--------------------------------|-----------------|  
 |31-30|11|這兩個位元負責描述程式碼的基本狀態：11 = 錯誤、00 = 成功、01 = 告知性、10 = 警告。|  
 |29|1|用戶端位元。 設為 1，表示使用者定義的程式碼。|  
@@ -80,6 +81,6 @@ __except (GetExceptionCode() == STATUS_INSUFFICIENT_MEM ||
         GetExceptionCode() == STATUS_FILE_BAD_FORMAT )  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)   
  [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

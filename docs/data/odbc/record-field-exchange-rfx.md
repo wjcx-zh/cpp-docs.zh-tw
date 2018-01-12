@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6494773de5bd64e66c2031a618d7a8d899215c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 50fc0aea1ef50124cd98b0d0498b767d1f00e5c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-field-exchange-rfx"></a>資料錄欄位交換 (RFX)
 MFC ODBC 資料庫類別自動化資料來源之間移動資料和[資料錄集](../../data/odbc/recordset-odbc.md)物件。 當您衍生自[CRecordset](../../mfc/reference/crecordset-class.md) ，請勿使用大量資料列擷取的資料傳輸的資料錄欄位交換 (RFX) 機制。  
@@ -53,7 +56,7 @@ MFC ODBC 資料庫類別自動化資料來源之間移動資料和[資料錄集]
   
 -   [資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)   
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ca2c849c7ab825dfdfa609d680851de5432f012
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d8978e38745f088884bbf28ffb0ab98cfb87895
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-resolution-for-dependent-types"></a>相依類型的名稱解析
 使用**typename**在給定的限定的名稱識別的類型會告訴編譯器樣板定義中的限定名稱。 如需詳細資訊，請參閱[typename](../cpp/typename.md)。  
@@ -129,5 +130,5 @@ int main() {
   
  遵循去除混淆規則是必要條件，因為根據預設，C++ 會假設 `AY::Rebind` 不是樣板，因此編譯器會將下列 "`<`" 解譯為小於。 編譯器必須知道 `Rebind` 是樣板，才能將 "`<`" 正確剖析為角括號。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [名稱解析](../cpp/templates-and-name-resolution.md)

@@ -1,32 +1,33 @@
 ---
-title: "BEGIN_PARAM_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BEGIN_PARAM_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BEGIN_PARAM_MAP 巨集"
+title: "BEGIN_PARAM_MAP |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BEGIN_PARAM_MAP
+dev_langs: C++
+helpviewer_keywords: BEGIN_PARAM_MAP macro
 ms.assetid: 32f3f70e-c7c6-4b80-ab98-e02c8eb3a894
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 448558ad32bb558f9daa417b49ebc733664295d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# BEGIN_PARAM_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="beginparammap"></a>BEGIN_PARAM_MAP
 標記參數對應項目的開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -36,20 +37,20 @@ x
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *x*  
- \[in\] 使用者資料記錄類別的名稱。  
+ [in] 使用者資料錄類別的名稱。  
   
-## 備註  
- [命令](https://msdn.microsoft.com/en-us/library/ms724608.aspx) 會使用的參數。  
+## <a name="remarks"></a>備註  
+ 使用參數[命令](https://msdn.microsoft.com/en-us/library/ms724608.aspx)。  
   
-## 範例  
- 請參閱 [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md) 巨集的範例。  
+## <a name="example"></a>範例  
+ 請參閱範例的[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)巨集。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
- [OLE DB 消費者樣板的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [END\_PARAM\_MAP](../../data/oledb/end-param-map.md)   
- [SET\_PARAM\_TYPE](../../data/oledb/set-param-type.md)
+## <a name="see-also"></a>請參閱  
+ [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [END_PARAM_MAP](../../data/oledb/end-param-map.md)   
+ [SET_PARAM_TYPE](../../data/oledb/set-param-type.md)

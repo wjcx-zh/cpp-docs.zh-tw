@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9a9cfd88e2c1ce141da2a4b345a926cdb412a2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 342a8074f61a6f05505534ff497010b8a752293c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdataconnectionoperator-bool"></a>CDataConnection::operator BOOL
 判斷目前的工作階段是否為開啟。  
@@ -44,6 +47,6 @@ operator BOOL( ) throw( );
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CDataConnection 類別](../../data/oledb/cdataconnection-class.md)   
  [Cdataconnection:: Operator bool](../../data/oledb/cdataconnection-operator-bool-ole-db.md)

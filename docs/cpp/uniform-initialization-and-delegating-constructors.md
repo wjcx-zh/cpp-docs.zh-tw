@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ac0de591f894aa7f29d4999de1931508c6152b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68d8f9724ba7f26ac9df9b81c1e4c3f6213f76a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>統一初始設定和委派建構函式
 在現代 c + + 中，您可以使用*大括號初始化*任何型別，而不等號。 此外，您可以使用委派建構函式，來簡化您的程式碼，當您有多個建構函式會執行類似的工作。  

@@ -1,45 +1,47 @@
 ---
-title: "default::(type_name)::ToString 方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Object::ToString"
-dev_langs: 
-  - "C++"
+title: "預設:: (type_name):: ToString 方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Object::ToString
+dev_langs: C++
 ms.assetid: 2541955f-d844-4bd8-944d-185198c86579
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2a3e45985694bb74b21d25994a214d7914280e62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# default::(type_name)::ToString 方法
+# <a name="defaulttypenametostring-method"></a>default::(type_name)::ToString 方法
 傳回字串，表示目前的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```cpp  
   
 String^ ToString()  
 ```  
   
-## 傳回值  
+### <a name="return-value"></a>傳回值  
  表示目前物件的字串。  
   
-## 需求  
- **最低支援用戶端：** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>需求  
+ **最低支援用戶端：** Windows 8  
   
- **最低支援伺服器：** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **最低支援伺服器：** Windows Server 2012  
   
- **命名空間：**default  
+ **命名空間：** default  
   
- **標頭：**vccorlib.h  
+ **標頭：** vccorlib.h  
   
-## 請參閱  
- [default 命名空間](../cppcx/default-namespace.md)
+## <a name="see-also"></a>請參閱  
+ [預設命名空間](../cppcx/default-namespace.md)

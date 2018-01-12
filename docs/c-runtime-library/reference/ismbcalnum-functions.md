@@ -57,17 +57,18 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ad428851bd89dd2e9efd49a900ccdc28066b246
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40566a3f4f6855da3a7ee7d122357f392d234ff0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 檢查多位元組字元是否為英數字元、英文字元或數字字元。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -114,9 +115,9 @@ int _ismbcdigit_l
 ## <a name="remarks"></a>備註  
  這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。  
   
- 尾碼為 `_l` 的這些函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 尾碼為 `_l` 的這些函式版本是一樣的，只不過與地區設定相關的行為使用了傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
-|常式|測試條件|字碼頁 932 範例|  
+|常式傳回的值|測試條件|字碼頁 932 範例|  
 |-------------|--------------------|---------------------------|  
 |`_ismbcalnum,_ismbcalnum_l`|英數字元|只有在 `c` 是代表 ASCII 英文字母的單一位元組時，才傳回非零：請參閱 `_ismbcdigit` 和 `_ismbcalpha` 的範例。|  
 |`_ismbcalpha,_ismbcalpha_l`|字母順序|只有在 `c` 是代表 ASCII 英文字母的單一位元組時，才傳回非零︰0x41<=`c`<=0x5A 或 0x61<=`c`<=0x7A；或是片假名字母：0xA6<=`c`<=0xDF。|  
@@ -124,15 +125,15 @@ int _ismbcdigit_l
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_ismbcalnum,_ismbcalnum_l`|\<mbstring.h>|  
 |`_ismbcalpha,_ismbcalpha_l`|\<mbstring.h>|  
 |`_ismbcdigit,_ismbcdigit_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [_ismbc 常式](../../c-runtime-library/ismbc-routines.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)   

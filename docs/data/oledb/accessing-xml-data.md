@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4cccb224553bc217bbbcd37030f03419f6f5d55e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 654fab0aa5a5bf96e145f37ae4855f556f79bebf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-xml-data"></a>存取 XML 資料
 有兩種不同的方法，從資料來源擷取 XML 資料： 一個是使用[CStreamRowset](../../data/oledb/cstreamrowset-class.md)和其他用途[CXMLAccessor](../../data/oledb/cxmlaccessor-class.md)。  
@@ -92,5 +95,5 @@ while( SUCCEEDED(hr) && hr != DB_S_ENDOFROWSET )
   
  您可以使用[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)擷取為 XML 格式的字串資料的資料行 （資料類型） 資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

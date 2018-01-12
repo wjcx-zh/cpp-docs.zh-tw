@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _bstr_t::Attach
-dev_langs:
-- C++
-helpviewer_keywords:
-- Attach method [C++]
+f1_keywords: _bstr_t::Attach
+dev_langs: C++
+helpviewer_keywords: Attach method [C++]
 ms.assetid: 8cad867e-40fc-435b-841f-0d412c2f58d3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0541fadf224fd3f13377111d1bb1b7f5aca2f995
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0c6d60347b9b5be10923e23e839d99ddd0f1cee4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bstrtattach"></a>_bstr_t::Attach
 **Microsoft 特定的**  
@@ -50,7 +46,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="example"></a>範例  
  請參閱[_bstr_t:: assign](../cpp/bstr-t-assign.md)的使用範例**附加**。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_bstr_t 類別](../cpp/bstr-t-class.md)

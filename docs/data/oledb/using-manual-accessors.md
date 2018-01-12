@@ -1,58 +1,61 @@
 ---
-title: "使用手動存取子 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "存取子 [C++], 手動"
-  - "命令處理, OLE DB 樣板"
-  - "手動存取子"
+title: "使用手動存取子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- command handling, OLE DB Templates
+- manual accessors
+- accessors [C++], manual
 ms.assetid: 29f00a89-0240-482b-8413-4120b9644672
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dd628baa51ec790686f185c49ff33e7c6984150f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 使用手動存取子
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-在處理未知命令時，要完成四件事情：  
+# <a name="using-manual-accessors"></a>使用手動存取子
+有四個項目時處理未知的命令：  
   
--   決定參數  
+-   判斷參數  
   
 -   執行命令  
   
 -   決定輸出資料行  
   
--   查看是否有多個傳回資料列集  
+-   查看是否有多個傳回的資料列集  
   
- 若要使用 OLE DB 消費者樣板達成這個目的，請使用 `CManualAccessor` 類別並遵循這些步驟：  
+ 若要使用 OLE DB 消費者範本這樣做，請使用`CManualAccessor`類別，並遵循下列步驟：  
   
-1.  將 `CManualAccessor` 當做範例參數以開啟 `CCommand` 物件。  
+1.  開啟`CCommand`物件`CManualAccessor`做為範本參數。  
   
     ```  
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-2.  查詢 **IDBSchemaRowset** 介面的工作階段，並使用程序參數資料列集。  如果無法使用 **IDBSchemaRowset** 介面，請查詢 `ICommandWithParameters` 介面。  呼叫 `GetParameterInfo` 以取得資訊。  如果兩個介面都無法使用，您可以假設沒有參數存在。  
+2.  查詢的工作階段**IDBSchemaRowset**介面，並且使用程序參數的資料列集。 如果**IDBSchemaRowset**介面，則無法使用查詢`ICommandWithParameters`介面。 呼叫`GetParameterInfo`資訊。 如果沒有介面可供使用，您可以假設沒有任何參數。  
   
-3.  為每個參數呼叫 `AddParameterEntry` 以加入參數並設定他們。  
+3.  針對每個參數，呼叫`AddParameterEntry`加入參數，並加以設定。  
   
-4.  開啟資料列集但是將繫結參數設成 **false**。  
+4.  開啟資料列集，但將繫結參數設定為**false**。  
   
-5.  呼叫 `GetColumnInfo` 以擷取輸出資料行。  使用 `AddBindEntry` 將輸出資料行加入至繫結。  
+5.  呼叫`GetColumnInfo`来擷取之輸出資料行。 使用`AddBindEntry`將輸出資料行新增至繫結。  
   
-6.  呼叫 `GetNextResult` 以決定是否有更多可使用的資料列集。  重複步驟 2 到 5。  
+6.  呼叫`GetNextResult`來判斷是否可以使用多個資料列集。 重複步驟 2 至 5。  
   
- 如需手動存取子的範例，請參閱 [DBVIEWER](http://msdn.microsoft.com/zh-tw/07620f99-c347-4d09-9ebc-2459e8049832) 範例中的 **CDBListView::CallProcedure**。  
+ 如需手動存取子的範例，請參閱**CDBListView::CallProcedure**中[DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)範例。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

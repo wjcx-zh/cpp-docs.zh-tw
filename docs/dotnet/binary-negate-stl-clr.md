@@ -1,32 +1,33 @@
 ---
-title: "binary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binary_negate 函式 [STL/CLR]"
+title: "binary_negate (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binary_negate
+dev_langs: C++
+helpviewer_keywords: binary_negate function [STL/CLR]
 ms.assetid: 0c3b47eb-0f37-4cb2-b879-4c9f0e57d275
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3780c89c178c0c71f3388d2bd846ed7d52af3ceb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# binary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別描述，呼叫時，會傳回其儲存的雙引數功能的邏輯否定的功能。  您會用它來指定函式物件根據其儲存的運算元。  
+# <a name="binarynegate-stlclr"></a>binary_negate (STL/CLR)
+此範本類別描述函式，呼叫時，會傳回邏輯不屬於其預存的兩個引數函式。 您可以使用它指定根據其預存函式的函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Fun>  
@@ -50,35 +51,35 @@ public:
     };  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  Fun  
- 儲存功能子型別。  
+ 預存仿函式的類型。  
   
-## 成員函式  
+## <a name="member-functions"></a>成員函式  
   
-|型別定義|說明|  
-|----------|--------|  
-|delegate\_type|泛型委派的型別。|  
-|first\_argument\_type|功能子的第一個引數的型別。|  
-|result\_type|功能子結果的型別。|  
-|second\_argument\_type|功能子的第二個引數的型別。|  
-|stored\_function\_type|功能子的型別。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|delegate_type|泛型委派類型。|  
+|first_argument_type|仿函式的第一個引數型別。|  
+|result_type|仿函式結果的型別。|  
+|second_argument_type|仿函式的第二個引數的型別。|  
+|stored_function_type|仿函式的類型。|  
   
-|成員|說明|  
-|--------|--------|  
-|binary\_negate|建構功能子。|  
+|成員|描述|  
+|------------|-----------------|  
+|binary_negate|建構仿函式。|  
   
-|運算子|說明|  
-|---------|--------|  
-|operator\(\)|Computes the desired function.|  
-|運算子 delegate\_type^\(\)|轉換功能子給委派。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|operator()|計算所需的函數。|  
+|運算子 delegate_type^()|會轉換成委派仿函式。|  
   
-## 備註  
- 樣板類別描述中另一個雙引數功能讓雙另一個引數的功能。  它定義成員運算子 `operator()` ，如此一來，當物件當做函式呼叫時，它會傳回儲存功能的邏輯 NOT 呼叫雙引數。  
+## <a name="remarks"></a>備註  
+ 此範本類別描述兩個引數函式儲存其他兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它會傳回邏輯的預存仿函式未呼叫兩個引數。  
   
- 您也可以將物件當作型別為 `delegate_type^` 的函式引數來傳遞，它會適當地轉換。  
+ 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_binary_negate.cpp   
@@ -128,14 +129,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [not2](../dotnet/not2-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [not2 (STL/CLR)](../dotnet/not2-stl-clr.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7559bdf725727b79f99ed3bfcd4d6b7301528110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>例外狀況規格 （throw、 noexcept） （c + +）
 例外狀況規格是 c + + 語言功能，以指出例外狀況類型的函式進行傳播相關的程式設計人員的目的。 您可以指定函式可能會或可能不會結束例外狀況使用*例外狀況規格*。 編譯器可以使用這項資訊來最佳化呼叫函式，並以結束程式。 如果預期的例外狀況逸出函式。 有兩種類型的例外狀況規格。 *Noexcept 規格*C + + 11 的新功能。 它會指定可能的例外狀況可以逸出函式的集合是否為空白。 *動態例外狀況規格*，或`throw(optional_type_list)`規格，在 C + + 11 中已被取代，僅部分支援 Visual Studio。 此例外狀況規格設計來提供離函式，可以擲回例外狀況的摘要資訊，但實際上它找不到問題。 經過證明有些許用處一個動態例外狀況規格是無條件`throw()`規格。 例如，函式宣告：  
@@ -62,11 +63,11 @@ void MyFunction(int i) noexcept;
   
  下表摘要說明是否可能會在各種編譯器例外狀況處理選項可能會擲回 c + + 函式：  
   
-|函式|/EHsc|/EHs|/EHa|/EHac|  
+|功能|/EHsc|/EHs|/EHa|/EHac|  
 |--------------|------------|-----------|-----------|------------|  
-|沒有例外狀況規格的 C++ 函式|是|是|是|是|  
-|具有 c + + 函式`noexcept`， `noexcept(true)`，或`throw()`例外狀況規格|否|否|是|是|  
-|具有 c + + 函式`noexcept(false)`， `throw(...)`，或`throw(type)`例外狀況規格|是|是|是|是|  
+|沒有例外狀況規格的 C++ 函式|[是]|是|是|[是]|  
+|具有 c + + 函式`noexcept`， `noexcept(true)`，或`throw()`例外狀況規格|否|否|是|[是]|  
+|具有 c + + 函式`noexcept(false)`， `throw(...)`，或`throw(type)`例外狀況規格|[是]|是|是|[是]|  
   
 ## <a name="example"></a>範例  
   
@@ -137,6 +138,6 @@ About to throw 1
 in handler  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [try、throw 和 catch 陳述式 (C++)](../cpp/try-throw-and-catch-statements-cpp.md)   
  [C++ 例外狀況處理](../cpp/cpp-exception-handling.md)

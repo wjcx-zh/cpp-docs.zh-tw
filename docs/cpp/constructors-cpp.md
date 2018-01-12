@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77007b3d3805bb2fa159680c88d8e41825336da2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57854ec15d3104d80e8dbba68ebc33937222172f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 建構函式是一種初始化其類別執行個體的成員函式。 建構函式的名稱與類別的名稱相同，但沒有傳回值。 建構函式可以有任意數目的參數，而類別可以有任意數目的多載建構函式。 建構函式可能有任何協助工具、公用、受保護或私用。 如果您未定義任何建構函式，則編譯器會產生不接受任何參數的預設建構函式；將預設建構函式宣告為已刪除，即可覆寫這個行為。  

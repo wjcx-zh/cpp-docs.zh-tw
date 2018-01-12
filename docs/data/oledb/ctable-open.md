@@ -1,35 +1,37 @@
 ---
-title: "CTable::Open | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CTable.Open"
-  - "ATL::CTable::Open"
-  - "CTable::Open"
-  - "CTable.Open"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Open 方法"
+title: "Ctable:: Open |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CTable.Open
+- ATL::CTable::Open
+- CTable::Open
+- CTable.Open
+dev_langs: C++
+helpviewer_keywords: Open method
 ms.assetid: 5d006d95-74d7-4e2b-b243-a33bc53b5455
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e664ddb310892004b95c81c8c7d93d8035b82cd3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CTable::Open
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ctableopen"></a>CTable::Open
 開啟資料表。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -53,33 +55,33 @@ HRESULT Open(
 ) throw ( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `session`  
- \[in\] 資料表開啟的工作階段。  
+ [in]工作階段，開啟該表格。  
   
  *wszTableName*  
- \[in\] 開啟的資料表名稱，以 Unicode 字串。  
+ [in]若要開啟，資料表的名稱傳遞為 Unicode 字串。  
   
  *szTableName*  
- \[in\] 開啟的資料表名稱，以 ANSI 字串。  
+ [in]若要開啟，資料表的名稱傳遞為 ANSI 字串。  
   
  *dbid*  
- \[in\] 要開啟的資料表之**DBID**。  
+ [in]**DBID**来開啟的資料表。  
   
- *pPropSet*  
- \[in\] 物件陣列的指標包含設定的屬性和值的 [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 結構。  請參閱 *《 OLE DB 程式設計人員參考》*的[屬性集合和屬性群組](https://msdn.microsoft.com/en-us/library/ms713696.aspx) [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  NULL 的預設值沒有指定屬性。  
+ *Dbpropset*  
+ [in]陣列的指標[DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)結構，其中包含要設定屬性和值。 請參閱[屬性集和屬性群組](https://msdn.microsoft.com/en-us/library/ms713696.aspx)中*OLE DB 程式設計人員參考*Windows SDK 中。 預設值是 NULL，指定沒有屬性。  
   
  `ulPropSets`  
- \[in\] [DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx) 結構的數目傳入*pPropSet* 作為引數。  
+ [in]數目[DBPROPSET](https://msdn.microsoft.com/en-us/library/ms714367.aspx)結構傳入*Dbpropset*引數。  
   
-## 傳回值  
- 標準版 `HRESULT`  
+## <a name="return-value"></a>傳回值  
+ 標準 `HRESULT`。  
   
-## 備註  
- 如需詳細資訊，請參閱 *OLE DB Programmer's Reference* 中的 [IOpenRowset::OpenRowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)。  
+## <a name="remarks"></a>備註  
+ 如需詳細資訊，請參閱[iopenrowset:: Openrowset](https://msdn.microsoft.com/en-us/library/ms716724.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CTable 類別](../../data/oledb/ctable-class.md)

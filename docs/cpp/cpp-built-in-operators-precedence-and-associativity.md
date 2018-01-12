@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 內建運算子、 優先順序和關聯性
 
@@ -58,12 +59,12 @@ C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運
 |[前置遞減](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|[--](../cpp/prefix-increment-and-decrement-operators-increment-and-decrement.md)|
 |[一補數](../cpp/one-s-complement-operator-tilde.md)|[~](../cpp/one-s-complement-operator-tilde.md)|
 |[邏輯 not](../cpp/logical-negation-operator-exclpt.md)|[!](../cpp/logical-negation-operator-exclpt.md)|
-|[一元負運算](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
+|[一元否定運算](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[一元加號](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[傳址](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[間接取值](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[建立物件](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
-|[終結物件](../cpp/delete-operator-cpp.md)|[刪除](../cpp/delete-operator-cpp.md)|
+|[終結物件](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[轉型](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**群組 4 優先順序，由左到右的順序關聯性**|
 |[-成員指標 （物件或指標）](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[。 &#42;或-> &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
@@ -83,8 +84,8 @@ C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運
 |[小於或等於](../cpp/relational-operators-equal-and-equal.md)|[<=](../cpp/relational-operators-equal-and-equal.md)|
 |[大於或等於](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
 |**群組 9 優先順序，由左到右的順序關聯性**|
-|[等號比較](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
-|[不等比較](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|[相等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|[不等](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |**群組 10 優先順序由左到右的順序關聯性**|
 |[位元 AND](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
 |**群組 11 優先順序，由左到右的順序關聯性**|
@@ -114,7 +115,7 @@ C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運
 |**群組 18 優先順序，由左到右的順序關聯性**|
 |[逗號](../cpp/comma-operator.md)|[、](../cpp/comma-operator.md)|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [運算子多載](operator-overloading.md)
 

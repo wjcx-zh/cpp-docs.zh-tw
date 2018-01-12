@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issuing-a-parameterized-query"></a>發出參數型查詢
 下列範例會發出簡單參數化的查詢，以便從 Microsoft Access 資料庫中的資料表擷取時間欄位 （亦即超過 30） 的記錄。 若要支援此參數，使用者資料錄必須擁有其他的對應。 下列程式碼，在 ATL 專案中，使用`CCommand`類別而不是`CTable`中前一個範例中，使用類別[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)。  
@@ -75,5 +78,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 OLE DB 消費者範本](../../data/oledb/working-with-ole-db-consumer-templates.md)

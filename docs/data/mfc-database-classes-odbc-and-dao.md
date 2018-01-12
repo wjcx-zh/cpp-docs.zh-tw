@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8b2da7c45875ed78d40873cbbd481cdcd38f2d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8a8f34bbe05a01c2015b74dca04a5408ec2ad1a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-database-classes"></a>MFC 資料庫類別 
 > [!NOTE]
@@ -37,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

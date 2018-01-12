@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4d209e8f5e00460f1183a154f90bbdafd459b755
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
 存取控制可讓您區隔[公用](../cpp/public-cpp.md)介面的類別，以從[私人](../cpp/private-cpp.md)實作詳細資料和[保護](../cpp/protected-cpp.md)成員只使用在衍生的類別。 除非發現下一個存取規範，否則存取規範會套用至在其後宣告的所有成員。  
@@ -189,7 +187,7 @@ int Derived2::ShowCount()
  衍生類別的成員和 friend (即 `T`) 可以將 `T` 的指標轉換為 `T` 的私用直接基底類別的指標。  
   
 ## <a name="access-to-virtual-functions"></a>存取虛擬函式  
- 存取控制套用至[虛擬](../cpp/virtual-cpp.md)函式由用來進行呼叫的函式的類型。 覆寫函式的宣告不會影響特定類型的存取控制。 例如:  
+ 存取控制套用至[虛擬](../cpp/virtual-cpp.md)函式由用來進行呼叫的函式的類型。 覆寫函式的宣告不會影響特定類型的存取控制。 例如:   
   
 ```  
 // access_to_virtual_functions.cpp  
@@ -232,5 +230,5 @@ int main()
   
  在圖中，類別 `VBase` 中宣告的名稱一定會透過類別 `RightPath` 進行存取。 正確的路徑會更容易存取，因為 `RightPath` 會將 `VBase` 宣告為公用基底類別，`LeftPath` 則是將 `VBase` 宣告為私用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

@@ -1,32 +1,33 @@
 ---
-title: "logical_or (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_or"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_or 函式 [STL/CLR]"
+title: "logical_or (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_or
+dev_langs: C++
+helpviewer_keywords: logical_or function [STL/CLR]
 ms.assetid: 3b5eac9b-4aaf-4395-8d76-49100487d85a
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7d80fd86c0426d54a803c3111911f284507bcb11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# logical_or (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個樣板類別描述一個功能子，其被呼叫時，只會在第一個或第二個引數測試為 true時，回傳 true。  您可用它來根據引數型別指定函式物件。  
+# <a name="logicalor-stlclr"></a>logical_or (STL/CLR)
+此範本類別描述函式，呼叫時，則傳回 true 的第一個引數或第二個測試，做為 true 時，才。 您可以使用它指定其引數類型方面的函式物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### 參數  
- Arg  
- 引數型別。  
+#### <a name="parameters"></a>參數  
+ 引數  
+ 引數的型別。  
   
-## 成員函式  
+## <a name="member-functions"></a>成員函式  
   
-|型別定義|說明|  
-|----------|--------|  
-|delegate\_type|泛型委派的型別。|  
-|first\_argument\_type|功能子的第一個引數的型別。|  
-|result\_type|功能子結果的型別。|  
-|second\_argument\_type|功能子的第二個引數的型別。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|delegate_type|泛型委派類型。|  
+|first_argument_type|仿函式的第一個引數型別。|  
+|result_type|仿函式結果的型別。|  
+|second_argument_type|仿函式的第二個引數的型別。|  
   
-|成員|說明|  
-|--------|--------|  
-|logical\_or|建構功能子。|  
+|成員|描述|  
+|------------|-----------------|  
+|logical_or|建構仿函式。|  
   
-|運算子|說明|  
-|---------|--------|  
-|operator\(\)|計算所需的函式。|  
-|operator delegate\_type^|轉換功能子給委派。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|operator()|計算所需的函數。|  
+|運算子 delegate_type ^|會轉換成委派仿函式。|  
   
-## 備註  
- 這個樣板類別描述兩個引數的功能子。  它定義成員運算子 `operator()` ，如此一來，當物件被當做函式呼叫時，它會在第一個或第二個引數測試為 true 時傳回 true。  
+## <a name="remarks"></a>備註  
+ 此範本類別描述兩個引數函式。 它會定義此成員運算子`operator()`使物件做為函式呼叫時，它只會傳回 true 的第一個引數或做為第二個測試為 true。  
   
- 您也可以將物件當作型別為 `delegate_type^` 的函式引數來傳遞，它會適當地轉換。  
+ 您也可以傳遞物件做為函式引數的型別`delegate_type^`並會適當地加以轉換。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_logical_or.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **2 0**  
- **0 0**  
- **1 0**   
-## 需求  
- **標頭：** \<cliext\/functional\>  
+```Output  
+2 0  
+0 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [logical\_and](../dotnet/logical-and-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [logical_and (STL/CLR)](../dotnet/logical-and-stl-clr.md)

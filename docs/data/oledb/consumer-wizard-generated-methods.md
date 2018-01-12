@@ -1,59 +1,62 @@
 ---
-title: "消費者精靈產生的方法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "插入屬性的類別和方法"
-  - "CloseAll 方法"
-  - "CloseDataSource 方法"
-  - "消費者精靈產生的類別和方法"
-  - "GetRowsetProperties 方法"
-  - "方法 [C++], OLE DB 消費者精靈產生的"
-  - "OLE DB 消費者, 精靈產生的類別和方法"
-  - "OpenAll 方法"
-  - "OpenDataSource 方法"
-  - "OpenRowset 方法"
-  - "精靈產生的類別和方法"
+title: "消費者精靈產生的方法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OpenAll method
+- attribute-injected classes and methods
+- wizard-generated classes and methods
+- OLE DB consumers, wizard-generated classes and methods
+- methods [C++], OLE DB Consumer Wizard-generated
+- CloseDataSource method
+- consumer wizard-generated classes and methods
+- OpenDataSource method
+- CloseAll method
+- OpenRowset method
+- GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2578de53cfab40ee779f0d0444b227b214e3caa9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 消費者精靈產生的方法
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-ATL OLE DB 消費者精靈和 MFC 應用程式會產生某些您應該瞭解的函式。  請注意某些方法在使用屬性的專案內的實作方式不同，因此有一些特殊狀況；每種狀況的說明如下。  如需檢視插入程式碼的詳細資訊，請參閱[偵錯插入程式碼](../Topic/How%20to:%20Debug%20Injected%20Code.md)。  
+# <a name="consumer-wizard-generated-methods"></a>消費者精靈產生的方法
+ATL OLE DB 消費者精靈和 MFC 應用程式精靈產生的您應該注意的特定功能。 請注意，某些方法會實作以不同的方式在屬性化專案中，因此有一些警告。以下被涵蓋每個案例。 如需檢視插入程式碼的相關資訊，請參閱 [插入程式碼偵錯](/visualstudio/debugger/how-to-debug-injected-code)。  
   
--   `OpenAll` 將會開啟資料來源、資料列集，若書籤可用也會開啟它們。  
+-   `OpenAll`開啟資料來源，資料列集，並在有提供書籤會開啟。  
   
--   `CloseAll` 會關閉所有開啟的資料列集，並釋放所有的命令執行。  
+-   `CloseAll`關閉所有開啟的資料列集並釋放所有的命令執行。  
   
--   `OpenRowset` 是由 OpenAll 呼叫來開啟消費者的一或多個資料列集。  
+-   `OpenRowset`會呼叫 OpenAll 開啟取用者的資料列集或資料列集。  
   
--   `GetRowsetProperties` 會擷取資料列集屬性集合的指標，有了它就可以設定屬性。  
+-   `GetRowsetProperties`擷取資料列集的屬性集的屬性可以設定的指標。  
   
--   `OpenDataSource` 會使用您指定於 \[**資料連結內容**\] 對話方塊中的初始化字串來開啟資料來源。  
+-   `OpenDataSource`使用初始化字串中指定的資料來源就會開啟**資料連結屬性** 對話方塊。  
   
--   `CloseDataSource` 會以適當的方式關閉資料來源。  
+-   `CloseDataSource`關閉資料來源中適當的方式。  
   
-## OpenAll 和 CloseAll  
+## <a name="openall-and-closeall"></a>OpenAll 和 CloseAll  
   
 ```  
-HRESULT OpenAll();   
+HRESULT OpenAll();   
 void CloseAll();  
 ```  
   
- 下列範例顯示當您重複地執行相同的命令時，呼叫 `OpenAll` 和 `CloseAll` 。  相較於 [CCommand::Close](../../data/oledb/ccommand-close.md) 內的程式碼範例，則顯示了呼叫 **Close** 和 `ReleaseCommand` 的不同作法，而不是 `CloseAll`。  
+ 下列範例會示範如何呼叫`OpenAll`和`CloseAll`當您重複執行相同的命令。 中的程式碼範例做比較[ccommand:: Close](../../data/oledb/ccommand-close.md)，其中顯示會呼叫一種變化**關閉**和`ReleaseCommand`而不是`CloseAll`。  
   
 ```  
 int main(int argc, char* argv[])  
@@ -86,19 +89,19 @@ int main(int argc, char* argv[])
 }  
 ```  
   
-## 備註  
- 請注意，如果您定義了 `HasBookmark` 方法，則 `OpenAll`  程式碼會設定 DBPROP\_IRowsetLocate 屬性，請確認只有在您的提供者支援該屬性時才這麼做。  
+## <a name="remarks"></a>備註  
+ 請注意，如果您定義`HasBookmark`方法，`OpenAll`程式碼會設定 DBPROP_IRowsetLocate 屬性; 請確定您只有這樣如果您的提供者支援該屬性。  
   
-## OpenRowset  
+## <a name="openrowset"></a>OpenRowset  
   
 ```  
-// OLE DB Template version:   
+// OLE DB Template version:   
 HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)  
 // Attribute-injected version:  
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);  
 ```  
   
- **OpenAll** 會呼叫此方法來開啟消費者內的一或多個資料列集。  通常，您不需要呼叫 `OpenRowset`，除非您想要使用多個資料來源、工作階段或資料錄集。  `OpenRowset` 是在命令或資料表類別標頭檔中宣告：  
+ **OpenAll**呼叫此方法來開啟資料列集或資料列集取用者。 一般而言，您不需要呼叫`OpenRowset`除非您想要使用多個資料來源/工作階段/資料列集。 `OpenRowset`在命令或資料表類別標頭檔宣告：  
   
 ```  
 // OLE DB Template version:  
@@ -113,7 +116,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
- 屬性將以不同的方式實作此方法。  此版本將接受一工作階段 \(Session\) 物件和一預設值為 db\_command 所指定命令字串的命令字串，不過您仍可傳入不同的資料。  請注意，如果您定義了 `HasBookmark` 方法，則 `OpenRowset`  程式碼將會設定 DBPROP\_IRowsetLocate 屬性，請確認您只有在提供者支援該屬性時才如此做。  
+ 屬性會以不同的方式實作這個方法。 這個版本會接受工作階段物件和預設值為 db_command 中, 指定的命令字串，雖然您可以傳遞不同的命令字串。 請注意，如果您定義`HasBookmark`方法，`OpenRowset`程式碼會設定 DBPROP_IRowsetLocate 屬性; 請確定您只有這樣如果您的提供者支援該屬性。  
   
 ```  
 // Attribute-injected version:  
@@ -132,13 +135,13 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 }  
 ```  
   
-## GetRowsetProperties  
+## <a name="getrowsetproperties"></a>GetRowsetProperties  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
- 此方法可擷取資料列集之屬性集合的指標；您可使用此指標來設定屬性，例如 DBPROP\_IRowsetChange。  `GetRowsetProperties` 可用於使用者資料錄類別，如下所示。  您可修改此程式碼來設定額外的資料列集屬性：  
+ 這個方法會擷取資料列集的屬性集; 的指標若要設定屬性，例如 DBPROP_IRowsetChange，您可以使用這個指標。 `GetRowsetProperties`用於使用者記錄類別，如下所示。 您可以修改這個程式碼以設定其他資料列集屬性：  
   
 ```  
 void GetRowsetProperties(CDBPropSet* pPropSet)  
@@ -150,18 +153,18 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }  
 ```  
   
-## 備註  
- 您不應定義全域的 `GetRowsetProperties` 方法，因為它可能與精靈定義的方法相衝突。  請注意這是您透過使用樣板和屬性專案取得的精靈產生方法；屬性並不會插入此程式碼。  
+## <a name="remarks"></a>備註  
+ 您不應定義為全域`GetRowsetProperties`方法因為它可能與其中一個衝突所定義的精靈。 請注意，這個精靈產生的方法，您會得到與建立樣板並屬性化專案;屬性不會插入這個程式碼。  
   
-## OpenDataSource 和 CloseDataSource  
+## <a name="opendatasource-and-closedatasource"></a>OpenDataSource 和 CloseDataSource  
   
 ```  
-HRESULT OpenDataSource();   
+HRESULT OpenDataSource();   
 void CloseDataSource();  
 ```  
   
-## 備註  
- 精靈會定義方法 `OpenDataSource` 和 `CloseDataSource`，`OpenDataSource` 則會呼叫 [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)。  
+## <a name="remarks"></a>備註  
+ 在精靈中定義的方法`OpenDataSource`和`CloseDataSource`;`OpenDataSource`呼叫[cdatasource:: Openfrominitializationstring](../../data/oledb/cdatasource-openfrominitializationstring.md)。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [使用精靈建立 OLE DB 消費者](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38c5d65e89aa4fb76ff96fa82cd52e42475e2353
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e698cad29405fce4b5a0d23e166217502753dc1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="record-views--mfc-data-access"></a>記錄檢視 (MFC 資料存取)
 本節僅適用於 MFC ODBC 類別。 OLE DB 資料錄檢視的相關資訊，請參閱[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)和[使用 OLE DB 資料錄檢視](../data/oledb/using-ole-db-record-views.md)。  
@@ -54,6 +57,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [使用資料錄檢視](../data/using-a-record-view-mfc-data-access.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料存取程式設計 (MFC/ATL)](../data/data-access-programming-mfc-atl.md)   
  [ODBC 驅動程式清單](../data/odbc/odbc-driver-list.md)

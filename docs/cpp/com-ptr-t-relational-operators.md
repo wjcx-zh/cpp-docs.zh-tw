@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - _com_ptr_t::operator==
 - _com_ptr_t::operator!=
 - _com_ptr_t::operator<
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '>= operator [C++], comparing specific objects'
 - '!= operator'
@@ -37,16 +35,16 @@ helpviewer_keywords:
 - operator< [C++], pointers
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 5ae4028c-33ee-485d-bbda-88d2604d6d4b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 25ec5c27afcc6374f4f450a3fc290aad2cf6bfac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 23dd24116fe279cc44c95b627d7420b11a2a8361
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrt-relational-operators"></a>_com_ptr_t 關係運算子
 **Microsoft 特定的**  
@@ -189,7 +187,7 @@ bool operator>=(
 ## <a name="remarks"></a>備註  
  比較智慧型指標物件與另一個智慧型指標、 一般介面指標或**NULL**。 除了**NULL**指標測試，這些運算子會先查詢兩個指標**IUnknown**，並比較結果。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_com_ptr_t 類別](../cpp/com-ptr-t-class.md)

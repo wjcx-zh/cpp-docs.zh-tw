@@ -1,48 +1,49 @@
 ---
-title: "hash_multiset::max_load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::max_load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "max_load_factor 成員 [STL/CLR]"
+title: "hash_multiset::max_load_factor (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::max_load_factor
+dev_langs: C++
+helpviewer_keywords: max_load_factor member [STL/CLR]
 ms.assetid: ca0a6e8e-b889-47e4-9edd-c5a321fdeb8f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ad7b0361f0ca2172fbe2c9386acdb559f09ef420
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::max_load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-取得或設定最大元素每個 Bucket。  
+# <a name="hashmultisetmaxloadfactor-stlclr"></a>hash_multiset::max_load_factor (STL/CLR)
+取得或設定每個 Bucket 最大項目數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 float max_load_factor();  
 void max_load_factor(float new_factor);  
 ```  
   
-#### 參數  
- new\_factor  
- 儲存新的最大的負載荷因素。  
+#### <a name="parameters"></a>參數  
+ new_factor  
+ 新的最大載入因數來儲存。  
   
-## 備註  
- 第 10% 成員函式傳回目前儲存的最大的負載荷因素。  您會用它來判斷最大平均 Bucket 大小。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式會傳回目前儲存的最大載入因數。 您可以使用它來判斷最大平均貯體大小。  
   
- 第二 \+ 成成員函式以 `new_factor`取代存放最大的負載荷因素。  自動重新撰寫不會發生在後續插入。  
+ 第二個成員函式會取代使用存放區的最大載入因數`new_factor`。 沒有自動重新後續插入之前發生。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_max_load_factor.cpp   
@@ -88,23 +89,28 @@ int main()
   
 ```  
   
-  **a b c**  
-**bucket\_count \(\) \= 16**  
-**load\_factor \(\) \= 0.1875**  
-**max\_load\_factor \(\) \= 4**  
-**bucket\_count \(\) \= 16**  
-**load\_factor \(\) \= 0.1875**  
-**max\_load\_factor \(\) \= 0.25**  
-**bucket\_count \(\) \= 128**  
-**load\_factor \(\) \= 0.0234375**  
-**max\_load\_factor \(\) \= 0.25**   
-## 需求  
- **標題:** \<cliext\/hash\_set\>  
+```Output  
+ a b c  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
   
- **命名空間:** cliext  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::bucket\_count](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
- [hash\_multiset::load\_factor](../dotnet/hash-multiset-load-factor-stl-clr.md)   
- [hash\_multiset::rehash](../dotnet/hash-multiset-rehash-stl-clr.md)
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
+  
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset::bucket_count (STL/CLR)](../dotnet/hash-multiset-bucket-count-stl-clr.md)   
+ [hash_multiset::load_factor (STL/CLR)](../dotnet/hash-multiset-load-factor-stl-clr.md)   
+ [hash_multiset::rehash (STL/CLR)](../dotnet/hash-multiset-rehash-stl-clr.md)

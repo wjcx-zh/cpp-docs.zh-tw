@@ -14,11 +14,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c4c88f29cd0ad7989c079a17f66f1f48e4874a6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e798b3e85bbb5d6b362900c25d4c3414458ea63d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>將字串讀入 OLE DB 提供者內
 `RMyProviderRowset::Execute`函式的形式開啟檔案，並讀取字串。 取用者傳遞給提供者的檔案名稱，藉由呼叫[icommandtext:: Setcommandtext](https://msdn.microsoft.com/en-us/library/ms709757.aspx)。 提供者接收的檔案名稱，並將它儲存在成員變數`m_szCommandText`。 `Execute`讀取的檔案名稱`m_szCommandText`。 如果檔案名稱無效，或檔案無法使用，`Execute`會傳回錯誤。 否則，它會開啟檔案，並在呼叫`fgets`來擷取字串。 針對每個設定的字串讀取`Execute`建立使用者資料錄的執行個體 (`CAgentMan`) 並將它放入陣列。  
@@ -104,5 +107,5 @@ public:
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作簡單唯讀提供者](../../data/oledb/implementing-the-simple-read-only-provider.md)

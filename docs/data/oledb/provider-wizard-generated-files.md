@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 24da0ab4b3ab27cdb9a70c0f9cc05e3ca86e117d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 27fb95e5dc1c417d3dfb03217463a8ef683f3710
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-wizard-generated-files"></a>提供者精靈產生的檔案
 ATL OLE DB 提供者精靈會產生下列檔案。 下列主題會使用簡短名稱"MyProvider"，但是實際的檔案名稱取決於建立提供者時所做的選擇。  
@@ -31,5 +34,5 @@ ATL OLE DB 提供者精靈會產生下列檔案。 下列主題會使用簡短�
 |MyProviderSess.h|實作的工作階段物件。 此標頭檔包含工作階段屬性的屬性對應。|  
 |MyProvider.rgs|包含已註冊的物件 OLE DB 提供者精靈所產生。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)

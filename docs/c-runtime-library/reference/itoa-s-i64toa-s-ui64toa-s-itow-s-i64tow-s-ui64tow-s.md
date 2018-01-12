@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -46,8 +45,7 @@ f1_keywords:
 - _ui64tot_s
 - i64tow_s
 - itot_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ui64toa_s function
 - _itow_s function
@@ -67,30 +65,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 7e163c78f3a6b011c8670ad71277fb6770935066
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s、_i64toa_s、_ui64toa_s、_itow_s、_i64tow_s、_ui64tow_s
 將整數轉換成字串。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強的 [_itoa、_i64toa、_ui64toa、_itow、_i64tow、_ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) 版本。  
@@ -149,16 +133,16 @@ errno_t _itow_s(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `value`  
+ [輸入] `value`  
  要轉換的數字。  
   
  [輸出] `buffer`  
  使用轉換的結果填入。  
   
- [in] `sizeInCharacters`  
+ [輸入] `sizeInCharacters`  
  以單一位元組字元或寬字元表示緩衝區的大小。  
   
- [in] `radix`  
+ [輸入] `radix`  
  基底`value`; 它必須在範圍 2-36。  
   
 ## <a name="return-value"></a>傳回值  
@@ -166,12 +150,12 @@ errno_t _itow_s(
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|value|buffer|sizeInCharacters|radix|傳回|  
+|value|buffer|sizeInCharacters|radix|Return|  
 |-----------|------------|----------------------|-----------|------------|  
-|任何|`NULL`|任何|任何|`EINVAL`|  
-|任何|any|<=0|any|`EINVAL`|  
-|任何|any|<= 需要的結果字串長度|任何|`EINVAL`|  
-|任何|任何|any|`radix` < 2 或`radix` > 36|`EINVAL`|  
+|any|`NULL`|any|any|`EINVAL`|  
+|any|any|<=0|any|`EINVAL`|  
+|any|any|<= 需要的結果字串長度|any|`EINVAL`|  
+|any|any|any|`radix` < 2 或`radix` > 36|`EINVAL`|  
   
  **安全性問題**  
   
@@ -180,7 +164,7 @@ errno_t _itow_s(
 ## <a name="remarks"></a>備註  
  除了參數和傳回值，`_itoa_s` 函式的行為與相對較不安全的版本相同。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -194,7 +178,7 @@ errno_t _itow_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_itoa_s`|\<stdlib.h>|  
 |`_i64toa_s`|\<stdlib.h>|  
@@ -203,7 +187,7 @@ errno_t _itow_s(
 |`_i64tow_s`|\<stdlib.h> 或 \<wchar.h>|  
 |`_ui64tow_s`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -270,7 +254,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [_ltoa、_ltow](../../c-runtime-library/reference/ltoa-ltow.md)   
  [_ultoa、_ultow](../../c-runtime-library/reference/ultoa-ultow.md)

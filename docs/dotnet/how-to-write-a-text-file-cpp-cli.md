@@ -1,34 +1,36 @@
 ---
-title: "如何：寫入文字檔 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "檔案 [C++], 文字"
-  - "文字檔, 以 C++ 撰寫"
+title: "如何： 寫入文字檔 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], text
+- text files, writing in C++
 ms.assetid: 39ecdba6-84e0-485c-a202-84cf6d7b8d4a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 58b53159bab17ef0fddf5b26606889f89412856e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：寫入文字檔 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會示範如何使用 <xref:System.IO.StreamWriter> 類別建立文字檔，並將文字寫入檔案，而該類別是在 <xref:System.IO> 命名空間中定義。  <xref:System.IO.StreamWriter> 建構函式會使用所要建立之檔案的名稱。  如果檔案已存在，它就會被覆寫 \(除非您傳遞 True 做為第二個 <xref:System.IO.StringWriter> 建構函式引數\)。  
+# <a name="how-to-write-a-text-file-ccli"></a>如何：寫入文字檔 (C++/CLI)
+下列程式碼範例示範如何建立文字檔案，並將文字寫入至使用<xref:System.IO.StreamWriter>類別，定義於<xref:System.IO>命名空間。 <xref:System.IO.StreamWriter>建構函式會採用要建立檔案的名稱。 如果檔案存在，則會覆寫 (除非您將為 true，則當做第二個<xref:System.IO.StringWriter>建構函式引數)。  
   
- 接著，這個檔案會使用 <xref:System.IO.StreamWriter.Write%2A> 和 <xref:System.IO.TextWriter.WriteLine%2A> 函式存檔。  
+ 檔案然後歸檔使用<xref:System.IO.StreamWriter.Write%2A>和<xref:System.IO.TextWriter.WriteLine%2A>函式。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // text_write.cpp  
@@ -54,6 +56,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [檔案和資料流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [檔案和資料流 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

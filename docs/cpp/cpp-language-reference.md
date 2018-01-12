@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5421447cfbe1e1bd8f5d25d80c492d10b1469e0f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 本參考資料將說明 Microsoft Visual C++ 中實作的 C++ 程式語言。 組織根據*標註 c + + 參考手冊*作者 Margaret Ellis 和 Bjarne Stroustrup 與 ANSI/ISO c + + 國際標準 (ISO/IEC FDIS 14882)。 已包含 Microsoft 專有 C++ 語言功能實作。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [C++ 運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
 
  [語彙慣例](../cpp/lexical-conventions.md)  
  C ++ 程式的基本語彙元素：語彙基元、註解、運算子、關鍵字、標點符號、常值。 另外還有檔案轉譯、運算子優先順序/關聯性。  
@@ -118,5 +119,5 @@ ms.lasthandoff: 10/24/2017
  [Visual C++ 程式庫](../standard-library/cpp-standard-library-reference.md)  
  各種 Visual C++ 程式庫之參考起始頁的連結清單。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C 語言參考](../c-language/c-language-reference.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - makepath_s
 - _makepath_s
 - wmakepath_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _makepath_s function
 - wmakepath_s function
@@ -38,31 +36,16 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0d3ac02a0ac8dfa7f681c8585be7e1b6f41f0f82
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9b808d41bfb0d9da3f709f8f655a86c168b15e00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s、_wmakepath_s
 從元件建立路徑名稱。 這些是 [_makepath、_wmakepath](../../c-runtime-library/reference/makepath-wmakepath.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -108,22 +91,22 @@ errno_t _wmakepath_s(
  [輸出] `path`  
  完整路徑緩衝區。  
   
- [in] `sizeInWords`  
+ [輸入] `sizeInWords`  
  以字組為單位的緩衝區大小。  
   
- [in] `sizeInBytes`  
+ [輸入] `sizeInBytes`  
  以位元組為單位的緩衝區大小。  
   
- [in] `drive`  
+ [輸入] `drive`  
  包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 `_makepath_s` 會在複合路徑中自動插入遺漏的冒號。 如果 `drive` 為 `NULL` 或指向空字串，複合 `path` 字串中就不會出現磁碟機代號。  
   
- [in] `dir`  
+ [輸入] `dir`  
  包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 後置斜線是選擇性的，而且可以在單一 `dir` 引數中使用正斜線 (/) 及 (或) 反斜線 (\\)。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果 `dir` 為 `NULL` 或指向空字串，複合 `path` 字串中就不會插入目錄路徑。  
   
- [in] `fname`  
+ [輸入] `fname`  
  包含基底檔案名稱，但不包含任何副檔名。 如果 `fname` 為 `NULL` 或指向空字串，複合 `path` 字串中就不會插入檔名。  
   
- [in] `ext`  
+ [輸入] `ext`  
  包含實際副檔名，可包含或不含前置句號 (.)。 如果 `ext` 中沒有句號，`_makepath_s` 會自動插入句號。 如果 `ext` 為 `NULL` 或指向空字串，複合 `path` 字串中就不會插入副檔名。  
   
 ## <a name="return-value"></a>傳回值  
@@ -131,9 +114,9 @@ errno_t _wmakepath_s(
   
 ### <a name="error-conditions"></a>錯誤狀況  
   
-|`path`|`sizeInWords` / `sizeInBytes`|返回|`path` 的內容。|  
+|`path`|`sizeInWords` / `sizeInBytes`|Return|`path` 的內容。|  
 |------------|------------------------------------|------------|------------------------|  
-|`NULL`|任何|`EINVAL`|未修改|  
+|`NULL`|any|`EINVAL`|未修改|  
 |any|<= 0|`EINVAL`|未修改|  
   
  如果發生上述任何一種錯誤狀況，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，`errno` 會設定為 `EINVAL`，且函式會傳回 `EINVAL`。 參數 `drive`、`fname` 和 `ext` 可使用 `NULL`。 如需這些參數為 null 指標或空字串時之行為的資訊，請參閱＜備註＞一節。  
@@ -151,18 +134,18 @@ errno_t _wmakepath_s(
   
  如果路徑為 `NULL`，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外，`errno` 會設定為 `EINVAL`。 所有其他參數都可使用 `NULL` 值。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_makepath_s`|\<stdlib.h>|  
 |`_wmakepath_s`|\<stdlib.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -216,7 +199,7 @@ Path extracted with _splitpath_s:
   Ext: .c  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [_fullpath、_wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md)   
  [_splitpath_s、_wsplitpath_s](../../c-runtime-library/reference/splitpath-s-wsplitpath-s.md)   

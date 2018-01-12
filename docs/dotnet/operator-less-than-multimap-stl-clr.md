@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cad3253ad8b4f558fce16da37a4b56c53fb8efa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 35e464ef5a9df212deca765e24a081d328b811a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-multimap-stlclr"></a>運算子&lt;(multimap) (STL/CLR)
 清單小於比較。  
@@ -95,7 +98,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [運算子 = = (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)   
  [運算子 ！ = (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)   

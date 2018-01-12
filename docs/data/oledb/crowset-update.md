@@ -1,72 +1,74 @@
 ---
-title: "CRowset::Update | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset.Update"
-  - "ATL.CRowset.Update"
-  - "ATL.CRowset<TAccessor>.Update"
-  - "ATL::CRowset<TAccessor>::Update"
-  - "CRowset<TAccessor>::Update"
-  - "CRowset::Update"
-  - "CRowset<TAccessor>.Update"
-  - "ATL::CRowset::Update"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Update 方法"
+title: "Crowset |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset.Update
+- ATL.CRowset.Update
+- ATL.CRowset<TAccessor>.Update
+- ATL::CRowset<TAccessor>::Update
+- CRowset<TAccessor>::Update
+- CRowset::Update
+- CRowset<TAccessor>.Update
+- ATL::CRowset::Update
+dev_langs: C++
+helpviewer_keywords: Update method
 ms.assetid: cd5fedc8-2b85-4cb8-8c40-c79576316903
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 26cbada107bbefe4c5e32243f2761193b1912a0d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::Update
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳送至這個對目前資料列，自上次擷取或 **Update** 呼叫所有暫止的變更。  
+# <a name="crowsetupdate"></a>CRowset::Update
+傳輸任何暫止的變更與目前資料列自上次擷取或**更新**上呼叫。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      HRESULT Update(   
-   DBCOUNTITEM* pcRows = NULL,   
-   HROW* phRow = NULL,   
-   DBROWSTATUS* pStatus = NULL    
+      HRESULT Update(   
+   DBCOUNTITEM* pcRows = NULL,   
+   HROW* phRow = NULL,   
+   DBROWSTATUS* pStatus = NULL    
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pcRows`  
- \[out **Update** 傳回行數就會嘗試更新位置的指標，如果必須。  
+ [out]位置指標，其中**更新**傳回它嘗試更新，請視需要的資料列數目。  
   
  `phRow`  
- \[out **Update** 傳回資料列控制代碼其位置的指標嘗試更新。  如果 `phRow` 是空的，控制代碼不會傳回。  
+ [out]位置指標，其中**更新**傳回它嘗試更新的資料列控制代碼。 如果沒有控制代碼會傳回`phRow`為 null。  
   
  `pStatus`  
- \[out **Update** 傳回資料列狀態值的位置的指標。  如果 `pStatus` 是 null，則的狀態，則會傳回。  
+ [out]位置指標，其中**更新**傳回的資料列狀態的值。 如果傳回任何狀態`pStatus`為 null。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  標準 `HRESULT`。  
   
-## 備註  
- 傳輸即完成所有暫止的變更對目前資料列上次擷取或更新的 \(使用 **Update** 或 [UpdateAll](../../data/oledb/crowset-updateall.md)\)。  您通常會呼叫 [SetData](../../data/oledb/crowset-setdata.md) 會設定資料行中的資料值，然後呼叫 **Update** 傳輸這些變更。  
+## <a name="remarks"></a>備註  
+ 傳輸任何暫止的變更與目前資料列自上次擷取或更新該資料列 (使用**更新**或[UpdateAll](../../data/oledb/crowset-updateall.md))。 您通常會呼叫[SetData](../../data/oledb/crowset-setdata.md) ，在資料列，資料行中設定資料值，然後再呼叫**更新**傳輸這些變更。  
   
- 這個方法要求選擇性介面 `IRowsetUpdate`，在所有提供者可能不支援;如果是這種情況，方法會傳回 **E\_NOINTERFACE**。  您也必須設定 **DBPROP\_IRowsetUpdate** 到 `VARIANT_TRUE` 在呼叫以包含資料列集的資料表的 **Open** 或命令。  
+ 此方法需要的選擇性介面`IRowsetUpdate`，這可能不支援所有提供者; 如果這種情況，方法會傳回**E_NOINTERFACE**。 您也必須設定**DBPROP_IRowsetUpdate**至`VARIANT_TRUE`之前先呼叫**開啟**的資料表上包含資料列集的命令。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)   
- [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
- [CRowset::UpdateAll](../../data/oledb/crowset-updateall.md)   
+ [Irowsetupdate:: Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx)   
+ [Updateall](../../data/oledb/crowset-updateall.md)   
  [CRowset::SetData](../../data/oledb/crowset-setdata.md)

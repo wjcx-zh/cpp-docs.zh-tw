@@ -1,55 +1,57 @@
 ---
-title: "CDataConnection::CDataConnection | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.CDataConnection"
-  - "ATL.CDataConnection.CDataConnection"
-  - "CDataConnection::CDataConnection"
-  - "ATL::CDataConnection::CDataConnection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataConnection 類別, 建構函式"
+title: "Cdataconnection:: Cdataconnection |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.CDataConnection
+- ATL.CDataConnection.CDataConnection
+- CDataConnection::CDataConnection
+- ATL::CDataConnection::CDataConnection
+dev_langs: C++
+helpviewer_keywords: CDataConnection class, constructor
 ms.assetid: ac25c9a0-44d3-4083-b13f-76c07772e12d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: fd2deb3978ef3c01d5d70297599be54aabb90cb6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CDataConnection::CDataConnection
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-執行個體化及初始化 `CDataConnection` 物件。  
+# <a name="cdataconnectioncdataconnection"></a>CDataConnection::CDataConnection
+執行個體化並初始化`CDataConnection`物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
-      CDataConnection();   
+      CDataConnection();   
 CDataConnection(  
    const CDataConnection &ds  
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `ds`  
- \[in\] 現有資料連接的參考。  
+ [in]參考現有的資料連接。  
   
-## 備註  
- 第一個覆寫建立具有預設值的新 `CDataConnection` 物件。  
+## <a name="remarks"></a>備註  
+ 建立新的第一個覆寫`CDataConnection`物件以預設設定。  
   
- 第二個覆寫建立與您指定之資料連接物件的設定相同的新的 `CDataConnection` 物件。  
+ 建立新的第二個覆寫`CDataConnection`設定等於所指定的資料連線物件的物件。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CDataConnection 類別](../../data/oledb/cdataconnection-class.md)

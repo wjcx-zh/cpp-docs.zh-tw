@@ -22,11 +22,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5f849dc66746fe5740f47182a4fbacbc4d6c60d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c42422c156a51cac161f0cc75dfd1947b92eb20e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commands-and-tables"></a>命令和資料表
 命令和資料表可讓您存取資料列集。也就是開啟資料列集、 執行命令和資料行繫結。 [CCommand](../../data/oledb/ccommand-class.md)和[CTable](../../data/oledb/ctable-class.md)類別具現化的命令和資料表的物件，分別。 這些類別衍生自[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)如下圖所示。  
@@ -44,5 +47,5 @@ ms.lasthandoff: 10/24/2017
   
      **CCommand**有三個範本引數： 存取子類型、 資料列集型別，且結果型別 (`CNoMultipleResults`，根據預設，或`CMultipleResults`)。 如果您指定`CMultipleResults`、`CCommand`類別支援**IMultipleResults**介面，並處理多個資料列集。 [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)範例示範如何處理多個結果。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

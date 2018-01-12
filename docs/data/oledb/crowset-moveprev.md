@@ -24,11 +24,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 388cc44f78e01a2c15e54b19d1a1dcf295978b3f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0dc22504efde2b32311dea998f2ed5d157ea9122
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetmoveprev"></a>CRowset::MovePrev
 將游標移至前一筆記錄。  
@@ -50,7 +53,7 @@ HRESULT MovePrev( ) throw( );
 ## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRowset 類別](../../data/oledb/crowset-class.md)   
  [Crowset:: Movenext](../../data/oledb/crowset-movenext.md)   
  [Crowset:: Movetobookmark](../../data/oledb/crowset-movetobookmark.md)   

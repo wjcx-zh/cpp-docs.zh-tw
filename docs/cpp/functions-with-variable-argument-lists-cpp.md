@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], variable number of
 - variable argument lists
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>函式具有變數引數清單 （c + +）
 最後一個成員是省略符號 (...) 的函式宣告可以接受可變數目的引數。 在這些情況下，C++ 只會針對明確宣告的引數提供類型檢查。 需要撰寫連引數數目和類型都可以不同的一般函式時，您可以使用變數引數清單。 系列的函式是使用變數引數清單的函式的範例。`printf`*引數宣告清單*  
@@ -39,7 +37,7 @@ ms.lasthandoff: 09/25/2017
   
  如果省略符號是最後一個引數，且省略符號在逗號之後，則 Microsoft C++ 允許將省略符號指定為引數。 因此，`int Func( int i, ... );` 宣告是合法的，`int Func( int i ... );` 則不合法。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  宣告接受可變引數數目的函式至少需要一個預留位置引數 (即使不使用該引數)。 如果未提供這個預留位置引數，就無法存取其餘引數。  
   

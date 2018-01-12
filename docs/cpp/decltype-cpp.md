@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 472b09b268fe9f493a4df025950a3565fd6c944c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee3c83512929e4592a5ee75b954bc6c19f52f448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decltype--c"></a>decltype （c + +）
 `decltype` 類型規範會產生指定之運算式的類型。 `decltype`搭配類型規範， [auto 關鍵字](../cpp/auto-cpp.md)，適合主要用於開發人員撰寫樣板程式庫。 使用 `auto` 和 `decltype` 來宣告其傳回類型視樣板引數而定的樣板函式。 或是使用 `auto` 和 `decltype` 來宣告包裝對其他函式的呼叫，再傳回所包裝函式之類型的樣板函式。  
@@ -36,7 +37,7 @@ decltype( expression )
   
 ### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`expression`|一個運算式。 如需詳細資訊，請參閱[運算式](../cpp/expressions-cpp.md)。|  
   
@@ -104,7 +105,7 @@ decltype(auto) myFunc(T&& t, U&& u)
 ```  
   
 ## <a name="decltype-and-forwarding-functions-c11"></a>decltype 和轉送函式 (C++11)  
- 轉送函式會包裝對其他函式的呼叫。 試想一個轉送其引數，或者包含這些引數的運算式結果到其他函式的函式樣板。 此外，轉送函式會傳回呼叫其他函式的結果。 在這個案例中，轉送函式的傳回類型應該會與包裝函式的傳回類型相同。  
+ 轉送函式會包裝對其他函式的呼叫。 試想一個轉送其引數，或者包含這些引數的運算式結果到其他函式的函式樣板。 此外，轉送函式會傳回呼叫其他函式的結果。 在這個案例中，轉送函式的傳回型別應該會與包裝函式的傳回型別相同。  
   
  在這個案例中，您必須使用 `decltype` 類型規範才能撰寫適當的類型運算式。 `decltype` 類型規範可進行泛型轉送函式，因為它不會遺失函式是否傳回參考類型的必要資訊。 如需轉送函式的程式碼範例，請參閱先前的 `myFunc` 樣板函式範例。  
   

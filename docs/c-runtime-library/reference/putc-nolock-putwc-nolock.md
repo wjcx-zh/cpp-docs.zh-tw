@@ -45,11 +45,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8da1041a5d719145625470aaed542cc3030bd80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad994b11cecb304bd91d357516aa7c81a7351917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock、_putwc_nolock
 將一個字元寫入資料流，而不需要鎖定執行緒。  
@@ -81,7 +82,7 @@ wint_t _putwc_nolock(
 ## <a name="remarks"></a>備註  
  `_putc_nolock` 和 `_putwc_nolock` 與沒有 **_nolock** 後置字元的版本相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。  
   
- `_putwc_nolock` 是寬字元版本的 `_putc_nolock`；如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 `_putc_nolock` 目前不支援輸出至 UNICODE 資料流。  
+ `_putwc_nolock` 是 `_putc_nolock` 的寬字元版本；如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 `_putc_nolock` 目前不支援輸出至 UNICODE 資料流。  
   
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應  
   
@@ -91,12 +92,12 @@ wint_t _putwc_nolock(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_putc_nolock`|\<stdio.h>|  
 |`_putwc_nolock`|\<stdio.h> 或 \<wchar.h>|  
   
- [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式不支援主控台。 與主控台 (`stdin`、`stdout` 和 `stderr`) 關聯的標準資料流控制代碼必須重新導向，之後 C 執行階段函式才能在 [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="libraries"></a>程式庫  
  所有版本的 [C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)。  
@@ -132,7 +133,7 @@ int main( void )
 This is the line of output  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料流 I/O](../../c-runtime-library/stream-i-o.md)   
  [fputc、fputwc](../../c-runtime-library/reference/fputc-fputwc.md)   
  [getc、getwc](../../c-runtime-library/reference/getc-getwc.md)

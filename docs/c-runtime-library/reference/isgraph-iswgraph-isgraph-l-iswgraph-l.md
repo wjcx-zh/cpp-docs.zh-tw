@@ -48,11 +48,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5141944b387de8866e2d4c5009e818e3359ee65c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc1dd32d2b427f6d22fad330cc25804ac528ea83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 判斷整數是否代表圖形字元。  
@@ -83,7 +84,7 @@ int _iswgraph_l(
 ## <a name="return-value"></a>傳回值  
  如果 `c` 表示空白以外的特定可列印字元，則這些常式都會傳回非零。 如果 `c` 是空白以外的可列印字元，`isgraph` 會傳回非零值。 如果 `c` 是寬字元空白以外的可列印寬字元，`iswgraph` 會傳回非零值。 如果 `c` 不符合測試條件，這些常式都會傳回 0。  
   
- 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數來處理其地區設定相關行為，而不使用目前的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 這些具有 `_l` 尾碼的函式版本會使用傳入的地區設定參數來處理其地區設定相關行為，而不使用目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
  如果 `c` 不是 EOF 或介於 0 到 0xFF 的內含範圍中，則 `isgraph` 和 `_isgraph_l` 的行為是未定義的。 當使用 CRT 偵錯程式庫，而 `c` 不是其中一個值時，函式會引發判斷提示。  
   
@@ -96,16 +97,16 @@ int _iswgraph_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`isgraph`|\<ctype.h>|  
 |`iswgraph`|\<ctype.h> 或 \<wchar.h>|  
 |`_isgraph_l`|\<ctype.h>|  
 |`_iswgraph_l`|\<ctype.h> 或 \<wchar.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字元分類](../../c-runtime-library/character-classification.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [is、isw 常式](../../c-runtime-library/is-isw-routines.md)

@@ -1,32 +1,33 @@
 ---
-title: "nth_element (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::nth_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nth_element 函式 [STL/CLR]"
+title: "nth_element (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::nth_element
+dev_langs: C++
+helpviewer_keywords: nth_element function [STL/CLR]
 ms.assetid: 19fc1695-62a9-4f85-9920-d153c1c6481f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3bad46035c7d31250c6d4beddee70819f4a648e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# nth_element (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-分割正確設定序列的 `n`th 項目範圍範圍，以便在它前面的所有項目小於或等於，而且後面序列中的所有項目大於或等於它。  
+# <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
+分割範圍的項目正確放`n`th 項目範圍中的順序，讓它前面的所有元素小於或等於它，而且序列中在它後面的所有項目會大於或等於它。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class _RanIt> inline  
@@ -36,13 +37,13 @@ template<class _RanIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## 備註  
- 這個函式的行為與 STL 函式 `nth_element` 相同。  如需詳細資訊，請參閱[nth\_element](../Topic/nth_element.md)。  
+## <a name="remarks"></a>備註  
+ 此函式的行為與 c + + 標準程式庫函式相同`nth_element`。 如需詳細資訊，請參閱[nth_element](../standard-library/algorithm-functions.md#nth_element)。  
   
-## 需求  
- **標頭：** \<cliext\/algorithm\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<演算法 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [algorithm](../dotnet/algorithm-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

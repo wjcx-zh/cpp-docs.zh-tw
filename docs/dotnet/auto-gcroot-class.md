@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd39306e7a56506937d0084ee3167ab121eb26c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bb203193d1568056c631d90a2e1f5b1cf1d00e5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="autogcroot-class"></a>auto_gcroot 類別
 自動資源管理 (例如[auto_ptr 類別](../standard-library/auto-ptr-class.md)) 可用來將原生類型中嵌入虛擬控制代碼。  
@@ -43,7 +46,7 @@ class auto_gcroot;
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [auto_gcroot](../dotnet/auto-gcroot.md)   
  [auto_gcroot 成員](../dotnet/auto-gcroot-members.md)   
  [如何： 宣告原生類型中的控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)   

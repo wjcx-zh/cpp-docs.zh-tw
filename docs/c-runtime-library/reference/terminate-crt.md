@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: daf280ba64288a92f7b1deb60a429c56ffc98498
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b04cd56f2239bcee291a0de37f23f7eb2e699f1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 呼叫 `abort` 或您使用 `set_terminate` 指定的函式。  
@@ -55,15 +56,15 @@ void terminate( void );
   
 -   堆疊在擲回例外狀況之後損毀。  
   
- `terminate` 預設會呼叫 `abort`。 您可以變更這個預設值，方法是撰寫您自己的終止函式，並使用您的函式名稱作為引數呼叫 `set_terminate`。 `terminate` 會呼叫指定為 `set_terminate` 引數的最後一個函式。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。  
+ `terminate` 預設會呼叫 `abort`。 您可以變更這個預設值，方法是撰寫您自己的終止函式，並使用您的函式名稱作為引數呼叫 `set_terminate`。 `terminate` 會呼叫指定為 `set_terminate` 之引數的最後一個函式。 如需詳細資訊，請參閱[未處理的 C++ 例外狀況](../../cpp/unhandled-cpp-exceptions.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`terminate`|\<eh.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -111,7 +112,7 @@ void term_func()
 term_func() was called by terminate().  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理常式](../../c-runtime-library/exception-handling-routines.md)   
  [abort](../../c-runtime-library/reference/abort.md)   
  [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)   

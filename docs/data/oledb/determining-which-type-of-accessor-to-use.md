@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6eebc119186a5a57fa1cf2c5e0c80479ef4cdcf3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cb2e18c8b0c5ab110b9818e46e7fc68c08656274
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
 在編譯時期或執行階段，您可以判斷資料列集的資料類型。  
@@ -40,5 +43,5 @@ ms.lasthandoff: 10/24/2017
 |`CManualAccessor`|手動使用`AddBindEntry`。|使用手動`AddParameterEntry`。|速度非常快。參數和資料行繫結一次。 您決定要使用資料的類型。 (請參閱[DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)範例的範例。)需要更多的程式碼比`CDynamicAccessor`或`CAccessor`。 它則更像直接呼叫 OLE DB。|  
 |`CXMLAccessor`|自動的。|否。|擷取從資料存放區做為字串資料存取的資料，並將它格式化為 XML 標記的資料。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用存取子](../../data/oledb/using-accessors.md)

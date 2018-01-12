@@ -58,11 +58,12 @@ caps.latest.revision: "42"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55b71dc2cd76894a948bac8443a8961409cf21d3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 789ac892ab4d91ea88e563079599ae4422e55a79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 將字元附加至字串。 這些版本的 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](../../c-runtime-library/reference/strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -166,7 +167,7 @@ errno_t _mbsncat_s_l(
  [in]`count`  
  要附加的字元數或 [_TRUNCATE](../../c-runtime-library/truncate.md)。  
   
- [in] `locale`  
+ [輸入] `locale`  
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
@@ -176,16 +177,16 @@ errno_t _mbsncat_s_l(
   
 |`strDestination`|`numberOfElements`|`strSource`|傳回值|`strDestination` 的內容。|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` 或未終止的|any|任何|`EINVAL`|未修改|  
-|any|任何|`NULL`|`EINVAL`|未修改|  
-|any|0 或太小|任何|`ERANGE`|未修改|  
+|`NULL` 或未終止的|any|any|`EINVAL`|未修改|  
+|any|any|`NULL`|`EINVAL`|未修改|  
+|any|0 或太小|any|`ERANGE`|未修改|  
   
 ## <a name="remarks"></a>備註  
  這些函式嘗試將 `strSource` 的前 `D` 個字元附加到 `strDest` 結尾，其中 `D` 是較小的 `count` 且長度為 `strSource`。 如果尾部附加這些 `D` 字元適合 `strDest` (其大小指定為 `numberOfElements`)，並仍留出空間給以 Null 終止的字元，則附加這些字元，從 `strDest` 的原始終止 Null 開始，再附加新的終止 Null；否則 `strDest`[0] 會設成 Null 字元並叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。  
   
  上述段落有一個例外狀況。 如果 `count` 是 [_TRUNCATE](../../c-runtime-library/truncate.md)，則 `strSource` 會盡量多地調整附加至 `strDest`，同時保留附加終止 Null 的空間。  
   
- 例如：  
+ 例如，套用至物件的  
   
  `char dst[5];`  
   
@@ -209,9 +210,9 @@ errno_t _mbsncat_s_l(
   
  `wcsncat_s` 和 `_mbsncat_s` 是寬字元和多位元組字元版本的 `strncat_s`。 `wcsncat_s` 的字串引數與傳回值是寬字元字串；`_mbsncat_s` 的引數和傳回值則是多位元組字元字串。 除此之外，這三個函式的行為相同。  
   
- 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 輸出值會受到地區設定的 `LC_CTYPE` 分類設定影響；如需詳細資訊，請參閱 [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md)。 這些沒有 `_l` 後置字元的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 `_l` 後置字元的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
- C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
@@ -226,13 +227,13 @@ errno_t _mbsncat_s_l(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`strncat_s`|\<string.h>|  
 |`wcsncat_s`|\<string.h> 或 \<wchar.h>|  
 |`_mbsncat_s`, `_mbsncat_s_l`|\<mbstring.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -371,7 +372,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [字串操作](../../c-runtime-library/string-manipulation-crt.md)   
  [地區設定](../../c-runtime-library/locale.md)   
  [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)   

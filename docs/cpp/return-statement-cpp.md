@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db65a7762659bfc71f7ef33dc9f8b9b732fda091
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6857983412b2037b8958c2b1a0bee9d9dda053
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="return-statement-c"></a>return 陳述式 (C++)
 終止函式執行並將控制項傳回至進行呼叫的函式 (或者，如果您是從 `main` 函式傳送控制項，則傳回至作業系統)。 執行作業會在進行呼叫的函式中緊接著呼叫之後繼續進行。  
@@ -63,6 +64,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [跳躍陳述式](../cpp/jump-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)

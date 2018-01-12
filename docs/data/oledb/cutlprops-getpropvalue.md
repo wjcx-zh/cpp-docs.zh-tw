@@ -1,34 +1,36 @@
 ---
-title: "CUtlProps::GetPropValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps::GetPropValue"
-  - "CUtlProps.GetPropValue"
-  - "GetPropValue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetPropValue 方法"
+title: "Cutlprops:: Getpropvalue |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CUtlProps::GetPropValue
+- CUtlProps.GetPropValue
+- GetPropValue
+dev_langs: C++
+helpviewer_keywords: GetPropValue method
 ms.assetid: 9a3fbadb-7814-48f7-96a4-b960fc4ecf2e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f6af9c8d909039927a7b4ad1f4840adac4353c97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CUtlProps::GetPropValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-從屬性集合取得屬性。  
+# <a name="cutlpropsgetpropvalue"></a>CUtlProps::GetPropValue
+從屬性集合取得的屬性。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -39,21 +41,21 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `pguidPropSet`  
- \[in\] PropSet 的 GUID。  
+ [in]PropSet GUID。  
   
  `dwPropId`  
- \[in\] 屬性索引。  
+ [in]屬性的索引。  
   
  `pvValue`  
- \[out\] 包含新屬性值的 VARIANT 的指標。  
+ [out]包含新的屬性值為 variant 的指標。  
   
-## 傳回值  
- 在發生失敗和 `S_OK` 的`Failure` ，如果成功。  
+## <a name="return-value"></a>傳回值  
+ `Failure`失敗和`S_OK`如果成功的話。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CUtlProps 類別](../../data/oledb/cutlprops-class.md)

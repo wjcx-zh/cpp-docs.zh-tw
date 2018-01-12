@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1259fb7731e188bdb5a02a7a573b5eddd6a47df5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad47c85a8815d8a1a77f15788c3b312267cb055b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tilestatic-keyword"></a>tile_static 關鍵字
 `tile_static` 關鍵字用於宣告可供執行緒磚中所有執行緒存取的變數。 變數的存留期從執行達到宣告點時開始，並在核心函式傳回時結束。 如需有關如何使用圖格的詳細資訊，請參閱[使用磚](../parallel/amp/using-tiles.md)。  
@@ -151,7 +152,7 @@ for (int i = 0; i < 4; i++) {
   
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)   
  [C + + AMP 概觀](../parallel/amp/cpp-amp-overview.md)   
  [parallel_for_each 函式 (c + + AMP)](../parallel/amp/reference/concurrency-namespace-functions-amp.md#parallel_for_each)   

@@ -14,11 +14,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a986dcea2eec183ae09eb9af275082922257ef76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: baae8c5317f1e5c9c5acf5bef26a4b79de281a3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a-tracking-handle-to-a-boxed-value"></a>Boxed 值的追蹤控制代碼
 參考實值類型的追蹤控制代碼的使用方式已經從 Managed Extensions for c + + Visual c + +。  
@@ -97,6 +100,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實值類型和它們的行為 (C + + /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [如何：明確要求 Boxing](../dotnet/how-to-explicitly-request-boxing.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a6004236c02868787235441d92466b24c9a3d79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59838fa1797fc87561b081d40143693dea385668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-interface-between-exceptional-and-non-exceptional-code"></a>如何：例外狀況和非例外狀況代碼之間的介面
 本文說明如何在 C++ 模組實作一致的例外狀況處理，以及如何將這些例外狀況與在例外狀況界限上的錯誤碼來回轉譯。  
@@ -242,6 +243,6 @@ bool DiffFiles3(const string& file1, const string& file2)
   
  如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)   
  [如何：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)

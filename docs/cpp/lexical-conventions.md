@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 317fdaadd622571f6e90be11a2b55a778806c39e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c132def87ce2ba2fbe72f8a4696071ab62fda82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lexical-conventions"></a>語彙慣例
 本節將介紹 C++ 程式的基本項目。 您可以使用這些稱為「語彙項目」或「語彙基元」的項目，建構用來建構完整程式的陳述式、定義，宣告等等。 本節將討論下列語彙項目：  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
  本節也提供 [檔案轉譯概觀](../cpp/cpp-built-in-operators-precedence-and-associativity.md) 主題。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C++ 語言參考](../cpp/cpp-language-reference.md)

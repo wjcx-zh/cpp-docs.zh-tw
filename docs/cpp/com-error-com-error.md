@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 440151fd8b8cd7d28b1e2a9ad951e238ae41dffb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: df04357afd35b546fb43c90a102b7dc0cacdc95e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorcomerror"></a>_com_error::_com_error
 **Microsoft 特定的**  
@@ -66,7 +67,7 @@ _com_error err(hr, perrinfo, true);
 ## <a name="remarks"></a>備註  
  第一個建構函式會建立新的物件，指定`HRESULT`和選擇性**IErrorInfo**物件。 第二個方法會建立現有 `_com_error` 物件的複本。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_com_error 類別](../cpp/com-error-class.md)

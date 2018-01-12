@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5bd11ed833b54082d7ea2a394bdd4cad3c3e1321
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2342354528811f415a9c9aeb819e2c0e7cec6646
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ifnotexists-statement"></a>__if_not_exists 陳述式
 `__if_not_exists` 陳述式會測試指定識別項是否存在。 如果識別項不存在，就會執行指定的陳述式區塊。  
@@ -34,7 +35,7 @@ statements
   
 #### <a name="parameters"></a>參數  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`identifier`|要測試其是否存在的識別項。|  
 |`statements`|如果執行的一或多個陳述式`identifier`不存在。|  
@@ -57,7 +58,7 @@ statements
 ## <a name="example"></a>範例  
  如需如何使用`__if_not_exists`，請參閱[__if_exists 陳述式](../cpp/if-exists-statement.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [選擇陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [__if_exists 陳述式](../cpp/if-exists-statement.md)

@@ -4,32 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- partial ordering of function templates
+dev_langs: C++
+helpviewer_keywords: partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
-ms.openlocfilehash: 252f80416f581ecc2c126bc44ab22c1b63c50130
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cddc0f1680a3354276a2135dd28c31a2037a8202
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-
 # <a name="partial-ordering-of-function-templates-c"></a>函式樣板的部分排序 (C++)
 
 提供多個符合函式呼叫之引數清單的函式樣板。 C++ 可定義函式樣板的部分排序，以指定應呼叫哪些函式。 進行部分排序是因為某些樣板會被視為等同於特製化。
 
-編譯器會從可能相符的項目中選取最特殊的範本函式。 比方說，如果函式樣板採用類型__T__，和另一個的函式樣板採用__T\* __可用， __T\* __稱為版本為多個特製化和泛型優於__T__版本每當引數是指標類型，即使兩者都是允許的相符項目。
+編譯器會從可能相符的項目中選取最特殊的範本函式。 比方說，如果函式樣板採用類型__T__，和另一個的函式樣板採用__T\*__ 可用， __T\*__ 稱為版本為多個特製化和泛型優於__T__版本每當引數是指標類型，即使兩者都是允許的相符項目。
 
 請使用下列程序來判斷某個函式樣板是否為特製化程度較高的候選項目：
 
@@ -47,11 +43,11 @@ ms.lasthandoff: 09/25/2017
 
      1. 特定類型的樣板特製化比採用泛型型別引數的樣板特製化程度更高。
 
-     2. 只接受一個範本__T\* __更具特製化比一個將只__T__，因為假設輸入__X\* __是有效引數__T__樣板引數，但__X__不是有效的引數，如__T\* __樣板引數。
+     2. 只接受一個範本__T\*__ 更具特製化比一個將只__T__，因為假設輸入__X\*__ 是有效引數__T__樣板引數，但__X__不是有效的引數，如__T\*__ 樣板引數。
 
      3. __const T__更具特製化比__T__，因為__const X__是有效的引數，如__T__樣板引數，但__X__不是有效的引數，如__const T__樣板引數。
 
-     4. __const T\* __更具特製化比__T\*__，因為__const X\* __是有效的引數，如__T\*__樣板引數，但__X\* __不是有效的引數，如__const T\* __樣板引數。
+     4. __const T\*__ 更具特製化比__T\*__，因為__const X\*__ 是有效的引數，如__T\*__樣板引數，但__X\*__ 不是有效的引數，如__const T\*__ 樣板引數。
 
 ## <a name="example"></a>範例
 
@@ -96,7 +92,6 @@ More specialized function called
 Even more specialized function for const T*  
 ```  
   
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式樣板](../cpp/function-templates.md)
-

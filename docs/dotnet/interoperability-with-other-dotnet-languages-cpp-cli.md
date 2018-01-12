@@ -1,34 +1,36 @@
 ---
-title: "與其他 .NET 程式設計語言間的互通性 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "與其他.NET 語言互通性 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2d3ec38f4c5607b2dbb1739af9449df0f427e93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 與其他 .NET 程式設計語言間的互通性 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本章節中的主題示範如何在 Visual C\+\+ 中建立組件 \(Assembly\)，這些組件會使用以 C\# 或 Visual Basic 撰寫而成的組件，或提供功能給以 C\# 或 Visual Basic 撰寫的組件。  
+# <a name="interoperability-with-other-net-languages-ccli"></a>與其他 .NET 程式設計語言間的互通性 (C++/CLI)
+本節中的主題顯示如何在 Visual c + +，從使用或提供的功能，以 C# 或 Visual Basic 撰寫的組件中建立組件。  
   
-## 在本節中  
- [如何：實作 is 和 as C\# 關鍵字](../dotnet/how-to-implement-is-and-as-csharp-keywords-cpp-cli.md)  
+## <a name="in-this-section"></a>本節內容  
+ [如何：實作 is 和 as C# 關鍵字 (C++/CLI)](../dotnet/how-to-implement-is-and-as-csharp-keywords-cpp-cli.md)  
   
- [如何：實作鎖定 C\# 關鍵字](../dotnet/how-to-implement-the-lock-csharp-keyword-cpp-cli.md)  
+ [如何：實作 lock C# 關鍵字 (C++/CLI)](../dotnet/how-to-implement-the-lock-csharp-keyword-cpp-cli.md)  
   
- [如何：使用 C\# 索引子](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)  
+ [如何：使用 C# 索引子 (C++/CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)  
   
-## 請參閱  
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

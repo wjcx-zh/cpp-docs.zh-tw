@@ -14,20 +14,21 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c404caf0090381af1697516d25358daa29c70d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e30e9259a5b3e59b9f8c2f3af877bca3a98c84dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-handling-in-native-c"></a>原生 C++ 中的事件處理
 在原生 c + + 事件處理中，您將使用的事件來源和事件接收器設定[event_source](../windows/event-source.md)和[event_receiver](../windows/event-receiver.md)分別屬性，指定`type` = `native`. 這些屬性可讓套用它們的類別引發事件，以及在原生的非 COM 內容中處理事件。  
   
 ## <a name="declaring-events"></a>宣告事件  
- 在 事件來源類別中，使用[__event](../cpp/event.md)關鍵字來宣告為事件的方法在方法宣告。 請務必宣告方法，但不要定義方法；這樣會產生編譯器錯誤，因為編譯器會在將方法變成事件時隱含定義該方法。 原生事件可以是包含零個或多個參數的方法。 傳回類型可為 void 或任何整數類型。  
+ 在 事件來源類別中，使用[__event](../cpp/event.md)關鍵字來宣告為事件的方法在方法宣告。 請務必宣告方法，但不要定義方法；這樣會產生編譯器錯誤，因為編譯器會在將方法變成事件時隱含定義該方法。 原生事件可以是包含零個或多個參數的方法。 傳回型別可為 void 或任何整數類型。  
   
 ## <a name="defining-event-handlers"></a>定義事件處理常式  
- 在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回類型、呼叫慣例和引數)，符合將處理之事件的方法。  
+ 在事件接收器類別中，您會定義事件處理常式，其為具有簽章 (傳回型別、呼叫慣例和引數)，符合將處理之事件的方法。  
   
 ## <a name="hooking-event-handlers-to-events"></a>攔截事件的事件處理常式  
  也在事件接收器類別中，您要使用內建函式[__hook](../cpp/hook.md)使事件與事件處理常式和[__unhook](../cpp/unhook.md)來取消事件的事件處理常式。 您可以在事件處理常式中攔截多個事件，或在事件中攔截多個事件處理常式。  
@@ -91,5 +92,5 @@ MyHandler2 was called with value 123.
 MyHandler1 was called with value 123.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件處理](../cpp/event-handling.md)

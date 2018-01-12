@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a468091b1563c016982f512e46d47183472b147
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 79c4aa00038f2d4d7e5cc3d1c86d2e28c6d44229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constcast-operator"></a>const_cast 運算子
 移除**const**， `volatile`，和**__unaligned**自類別的屬性。  
@@ -76,6 +77,6 @@ int main() {
   
  在包含 `const_cast` 的程式碼行上，`this` 指標的資料類型為 `const CCTest *`。 `const_cast` 運算子會將 `this` 指標的資料類型變更為 `CCTest *`，允許修改成員 `number`。 轉換只會在其出現之陳述式的其餘部分中持續進行。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [轉型運算子](../cpp/casting-operators.md)   
  [關鍵字](../cpp/keywords-cpp.md)

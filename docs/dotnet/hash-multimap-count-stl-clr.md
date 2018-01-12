@@ -1,46 +1,46 @@
 ---
-title: "hash_multimap::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::Count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count 成員 [STL/CLR]"
+title: "hash_multimap:: count (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::Count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: a4bc5b19-e025-4063-9797-304ab4ba08aa
-caps.latest.revision: 18
-caps.handback.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aae26d26dfebe9d951cc13c02234b50ec28a76f5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapcount-stlclr"></a>hash_multimap::count (STL/CLR)
 尋找符合指定索引鍵的項目數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 要搜尋的索引值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式傳回具有與 `key`相等排序的項目數目超過受控制序列的。  您會用它來判斷目前在受控制序列中，符合指定之索引鍵的項目數目。  
+## <a name="remarks"></a>備註  
+ 成員函式具有對等順序，與受控制序列中傳回的項目數`key`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目數目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multimap_count.cpp   
@@ -68,15 +68,18 @@ int main()
   
 ```  
   
-  **\[a 1\] \[b 2\] \[c 3\]**  
-**count\(L'A'\) \= 0**  
-**count\(L'b'\) \= 1**  
-**count\(L'C'\) \= 0**   
-## 需求  
- **標頭：** \<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_map >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::equal\_range](../dotnet/hash-multimap-equal-range-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)

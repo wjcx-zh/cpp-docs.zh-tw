@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b60c0f74cd350382b6cf8669361087dee601fe4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8690c23acf6e42d355cf122f59f54e19cc36d66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
 **Microsoft 特定的**  
@@ -40,7 +41,7 @@ const TCHAR * ErrorMessage( ) const throw( );
 ## <a name="remarks"></a>備註  
  擷取記錄在 `HRESULT` 物件中之 `_com_error` 的適當系統訊息文字。 系統訊息文字透過呼叫 Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351)函式。 傳回的字串會由 `FormatMessage` API 配置，並且在終結 `_com_error` 物件時釋放。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_com_error 類別](../cpp/com-error-class.md)

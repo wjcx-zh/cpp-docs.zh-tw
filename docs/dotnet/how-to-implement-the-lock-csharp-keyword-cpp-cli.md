@@ -1,34 +1,36 @@
 ---
-title: "如何：實作鎖定 C# 關鍵字 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock C# 關鍵字 [C++]"
-  - "lock 陳述式"
+title: "如何： 實作鎖定 C# 關鍵字 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e016a0f481063711cb5daafe45110a1d53b16253
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：實作鎖定 C# 關鍵字 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-本主題說明如何在 Visual C\+\+ 中實作 C\# `lock` 關鍵字。  如需詳細資訊，請參閱[lock 陳述式](../Topic/lock%20Statement%20\(C%23%20Reference\).md)。  
+# <a name="how-to-implement-the-lock-c-keyword-ccli"></a>如何：實作鎖定 C# 關鍵字 (C++/CLI)
+本主題示範如何實作 C# `lock` Visual c + + 中的關鍵字。 
   
- 您也可以使用 C\+\+ 支援程式庫中的 `lock` 類別。  如需詳細資訊，請參閱[同步處理 \(lock 類別\)](../dotnet/synchronization-lock-class.md)。  
+ 您也可以使用`lock`c + + 支援程式庫中的類別。 請參閱[同步處理 (lock 類別)](../dotnet/synchronization-lock-class.md)如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // CS_lock_in_CPP.cpp  
@@ -65,5 +67,5 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [與其他 .NET 程式設計語言間的互通性](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+## <a name="see-also"></a>請參閱  
+ [與其他 .NET 語言間的互通性 (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

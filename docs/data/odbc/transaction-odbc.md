@@ -1,61 +1,63 @@
 ---
-title: "異動 (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "資料庫 [C++], 異動"
-  - "ODBC [C++], 異動"
-  - "ODBC 資料錄集 [C++], 異動"
-  - "ODBC 資料錄集 [C++], 更新"
-  - "資料錄集 [C++], 異動"
-  - "資料錄集 [C++], 更新"
-  - "異動 [C++], MFC ODBC 類別"
+title: "異動 (ODBC) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets [C++], updating
+- transactions [C++], MFC ODBC classes
+- ODBC [C++], transactions
+- recordsets [C++], updating
+- databases [C++], transactions
+- recordsets [C++], transactions
+- ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2816e1cfe3c62fecede5c909bc1593779aa90d54
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 異動 (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-本文件適用於 MFC ODBC 類別。  
+# <a name="transaction-odbc"></a>異動 (ODBC)
+本主題適用於 MFC ODBC 類別。  
   
- 交易是對[資料來源](../../data/odbc/data-source-odbc.md)以群組或批次一系列更新的方法，使得所有更新一次認可，或在您復原交易時不認可任何更新。  如果您不使用交易，資料來源的變動將會自動地認可，而非視需求來認可。  
+ 交易是群組，或批次，一系列的更新方式[資料來源](../../data/odbc/data-source-odbc.md)，讓所有已認可一次，或如果您回復交易，不會認可。 如果您未使用交易，就無法認可自動而不是認可視資料來源的變更。  
   
 > [!NOTE]
->  不是所有的 ODBC 資料庫驅動程式都支援交易。  您可呼叫 [CDatabase](../../mfc/reference/cdatabase-class.md) 或 [CRecordset](../../mfc/reference/crecordset-class.md) 物件的 `CanTransact` 成員函式，以決定驅動程式是否支援指定資料庫的交易。  請注意，`CanTransact` 並不會告訴您資料來源是否提供完整的交易支援。  您同時必須在 **CommitTrans** 和 **Rollback** 後呼叫 `CDatabase::GetCursorCommitBehavior` 和 `CDatabase::GetCursorRollbackBehavior` 以檢查所開啟的 `CRecordset` 物件之交易效果。  
+>  並非所有 ODBC 資料庫驅動程式都支援交易。 呼叫`CanTransact`成員函式的程式[CDatabase](../../mfc/reference/cdatabase-class.md)或[CRecordset](../../mfc/reference/crecordset-class.md)物件來判斷您的驅動程式是否支援給定的資料庫交易。 請注意，`CanTransact`不會告訴您是否由資料來源提供完整的交易支援。 您也必須呼叫`CDatabase::GetCursorCommitBehavior`和`CDatabase::GetCursorRollbackBehavior`之後**CommitTrans**和**復原**來檢查交易的效果，在開啟`CRecordset`物件。  
   
- 對於 `CRecordset` 物件的 `AddNew` 和 **Edit** 成員函式的呼叫將會在呼叫 **Update** 時立即影響資料來源。  **Delete** 呼叫也會立即生效。  反之，您可使用一筆包含多個呼叫 `AddNew`、**Edit**、**Update** 和 **Delete** 的交易，它雖會執行但卻不認可直到您明確地呼叫 **CommitTrans** 為止。  藉由建立交易，您可執行一系列這種呼叫卻仍能保留將其復原的能力。  若一個重要的資源已不適用或某些其他的情況造成整個交易不能完成，您可復原此交易而不用認可它。  在這種情況下，交易所做的所有變更將不會影響資料來源。  
-  
-> [!NOTE]
->  目前，如果您實作大量資料列擷取 \(Bulk Row Fetching\)，`CRecordset` 類別並不支援資料來源的更新。  這意謂您不能呼叫 `AddNew`、**Edit**、**Delete** 或 **Update**。  然而，您可撰寫您自己的函式來執行更新，並在給予的交易下呼叫這些函式。  如需關於大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量資料錄 \(ODBC\)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
+ 呼叫`AddNew`和**編輯**的成員函式`CRecordset`物件的影響的資料來源，當您呼叫立即**更新**。 **刪除**呼叫也會立即生效。 相反地，您可以使用交易組成的多次呼叫`AddNew`，**編輯**，**更新**，和**刪除**，它會執行，但未認可之前您呼叫**CommitTrans**明確。 藉由建立交易，您可以執行一系列的這類呼叫，同時保留其復原的能力。 如果重要的資源無法使用，或某個其他狀況會防止標記為已完成整個交易，您可以回復而不是認可交易。 在此情況下，屬於交易的變更都不會影響資料來源。  
   
 > [!NOTE]
->  除了影響您的資料錄集 \(Recordset\) 以外，只要您使用與 `CDatabase` 物件相關的 ODBC **HDBC**  或依據此 **HDBC** 的 ODBC **HSTMT**，交易就會影響您直接執行的 SQL 陳述式 \(Statement\)。  
-  
- 當您需要同時更新多重資料錄時，交易尤其有用。  在這種情況下，您想要避免交易只完成一半，例如若在完成最後更新之前擲回例外狀況 \(Exception\)，就可能會發生。  將這樣的更新群組成一筆交易將允許從變更中復原，並使得資料錄回到尚未交易的狀態。  例如，若一間銀行將錢由 A 帳戶轉帳到 B 帳戶，從 A 提錢和存錢至 B 都必須成功才能正確地處理存款，否則整筆交易必定會失敗。  
-  
- 在資料庫類別中，您是透過 `CDatabase` 物件來執行交易。  一個 `CDatabase` 物件代表對一個資料來源的連接，而一或多個和 `CDatabase` 物件相關的資料錄集是透過資料錄集成員函式在資料庫內的資料表上作業。  
+>  目前類別`CRecordset`不支援更新資料來源，如果您已實作大量資料列擷取。 這表示您不能呼叫`AddNew`，**編輯**，**刪除**，或**更新**。 不過，您可以撰寫自己的函式來執行更新，然後呼叫這些函式中指定的交易。 如需大量資料列擷取的詳細資訊，請參閱[資料錄集： 擷取記錄中大量 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。  
   
 > [!NOTE]
->  只支援一個層級的交易。  您不能使用巢狀交易，也無法將一筆交易擴展成多個資料庫物件。  
+>  除了影響您的資料錄集，異動會影響 SQL 陳述式，只要您使用 ODBC 直接執行**HDBC**聯您`CDatabase`物件或 ODBC **HSTMT**根據**HDBC**。  
+  
+ 當您有必須同時更新多筆記錄時，交易是特別有用。 在此情況下，您會想要避免半完成交易，例如，如果最後的更新之前，所擲回例外狀況可能會發生。 將這類更新分組到某交易內可以回復 （復原） 所做的變更，並傳回回到交易前的狀態記錄。 例如，如果銀行轉帳從帳戶 A 到 B 帳戶，同時提款從以及存錢至 B 必須成功，才能正確處理款項或整筆交易就算失敗。  
+  
+ 資料庫類別中，在您執行的是透過交易`CDatabase`物件。 A`CDatabase`物件都代表資料來源連接，以及一或多個資料錄集相關聯的`CDatabase`操作資料錄集成員函式透過資料庫的資料表上的物件。  
+  
+> [!NOTE]
+>  只有一個層級的交易支援。 您無法巢狀交易也不在交易可以跨越多個資料庫物件。  
   
  下列主題提供如何執行交易的詳細資訊：  
   
--   [交易：在一個資料錄集內執行交易 \(ODBC\)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
+-   [異動：在一個資料錄集內執行異動 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)  
   
--   [交易：交易如何影響更新 \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
+-   [異動：異動如何影響更新 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)  
   
-## 請參閱  
- [開放式資料庫連接 \(ODBC\)](../../data/odbc/open-database-connectivity-odbc.md)
+## <a name="see-also"></a>請參閱  
+ [開放式資料庫連接 (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _umask_s
+apiname: _umask_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -36,30 +33,16 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 5c8efcdf5d3f44a6cd3bbcc39f2a98e3659c95ab
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71279b111e50c40bb974d9a5da68b575aecc1ebc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umasks"></a>_umask_s
 設定預設檔案權限遮罩。 這是 [_umask](../../c-runtime-library/reference/umask.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。  
@@ -74,7 +57,7 @@ errno_t _umask_s(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `mode`  
+ [輸入] `mode`  
  預設權限設定。  
   
  [輸出] `oldMode`  
@@ -87,8 +70,8 @@ errno_t _umask_s(
   
 |`mode`|`pOldMode`|**傳回值**|`oldMode` **的內容**。|  
 |------------|----------------|----------------------|--------------------------------|  
-|任何|`NULL`|`EINVAL`|未修改|  
-|無效的模式|任何|`EINVAL`|未修改|  
+|any|`NULL`|`EINVAL`|未修改|  
+|無效的模式|any|`EINVAL`|未修改|  
   
  如果發生上述其中一種狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，`_umask_s` 會傳回 `EINVAL`，且 `errno` 設為 `EINVAL`。  
   
@@ -98,7 +81,7 @@ errno_t _umask_s(
  整數運算式 `pmode` 包含 SYS\STAT.H 中所定義的下列其中一或兩個資訊清單常數：  
   
  `_S_IWRITE`  
- 允許寫入。  
+ 允許寫入  
   
  `_S_IREAD`  
  允許讀取。  
@@ -112,11 +95,11 @@ errno_t _umask_s(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_umask_s`|\<io.h> 和 \<sys/stat.h> 和 \<sys/types.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
   
@@ -152,7 +135,7 @@ int main( void )
 Oldmask = 0x0000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [檔案處理](../../c-runtime-library/file-handling.md)   
  [低層級 I/O](../../c-runtime-library/low-level-i-o.md)   
  [_chmod、_wchmod](../../c-runtime-library/reference/chmod-wchmod.md)   

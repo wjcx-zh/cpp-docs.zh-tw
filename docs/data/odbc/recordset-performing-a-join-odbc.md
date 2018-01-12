@@ -21,11 +21,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5366484ab4e2b08ababd887e0f09c9f97ce6c02f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4091cd8e60eed569782021c811f12af227e79673
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordset-performing-a-join-odbc"></a>資料錄集：執行聯結 (ODBC)
 本主題適用於 MFC ODBC 類別。  
@@ -43,7 +46,7 @@ ms.lasthandoff: 10/24/2017
   
  您也可以納入方程式多對資料行，每個配對會以 SQL 關鍵字相同的方式加入兩個以上資料表**AND**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)   
  [資料錄集： 宣告預先定義的查詢 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
  [資料錄集： 宣告資料表 (ODBC) 的類別](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)   

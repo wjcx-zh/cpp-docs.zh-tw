@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f681f7db329ac186dcfa2e2e7796d2979f7a3d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 321b7150c2bf1bfced1fc83dc73327540c52572a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplerowmdwref"></a>CSimpleRow::m_dwRef
 現有的資料列控制代碼的參考計數。  
@@ -37,7 +40,7 @@ DWORD m_dwRef;
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CSimpleRow 類別](../../data/oledb/csimplerow-class.md)   
  [Csimplerow:: Addrefrow](../../data/oledb/csimplerow-addrefrow.md)   
  [CSimpleRow::ReleaseRow](../../data/oledb/csimplerow-releaserow.md)

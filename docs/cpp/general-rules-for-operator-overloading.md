@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92bcbc85a3edf683d00818a4c1da76849dbc29cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 199db318eb847687d10044e0376b70c8d6d44feb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>運算子多載的一般規則
 下列規則限制多載運算子的實作方式。 不過，它們不會套用到[新](../cpp/new-operator-cpp.md)和[刪除](../cpp/delete-operator-cpp.md)個別說明的運算子。  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/24/2017
   
 -   將運算子套用於內建資料類型時，您就無法重新定義運算子的意義。  
   
--   多載運算子必須為非靜態類別成員函式或全域函式。 全域函式需要存取私用的或受保護的類別成員，必須宣告為該類別的 friend。 全域函式必須至少接受一個為類別或列舉類型或為類別或列舉類型參考的引數。 例如：  
+-   多載運算子必須為非靜態類別成員函式或全域函式。 全域函式需要存取私用的或受保護的類別成員，必須宣告為該類別的 friend。 全域函式必須至少接受一個為類別或列舉類型或為類別或列舉類型參考的引數。 例如:   
   
     ```  
     // rules_for_operator_overloading.cpp  
@@ -76,5 +77,5 @@ var++;
 > [!NOTE]
 >  為求一致，最好的作法通常是在定義多載運算子時遵循內建類型的模型。 如果多載運算子的語意與其在其他內容中的意義大不相同，可能會比較容易混淆。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算子多載](../cpp/operator-overloading.md)

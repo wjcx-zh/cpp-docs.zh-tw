@@ -34,11 +34,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2353929ea112777561697928c4f12b3e8f80a47a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e6ff28df1645446e159e4fc3b0658a8b209ba2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seterrno"></a>_set_errno
 設定 `errno` 全域變數的值。  
@@ -52,7 +53,7 @@ errno_t _set_errno(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `value`  
+ [輸入] `value`  
  `errno` 的新值。  
   
 ## <a name="return-value"></a>傳回值  
@@ -81,12 +82,12 @@ Oops: Illegal byte sequence
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|選擇性標頭|  
+|常式傳回的值|必要的標頭|選擇性標頭|  
 |-------------|---------------------|---------------------|  
 |`_set_errno`|\<stdlib.h>|\<errno.h>|  
   
- 如需相容性詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性詳細資訊，請參閱簡介中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_get_errno](../../c-runtime-library/reference/get-errno.md)   
  [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

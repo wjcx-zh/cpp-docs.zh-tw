@@ -1,45 +1,46 @@
 ---
-title: "pair::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap 成員 [STL/CLR]"
+title: "pair::swap (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 7f5cbfa0-3702-40ab-a3f4-ffde02126095
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: af5f109fe4e0b132c42054eb37263b82285d8dc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# pair::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pairswap-stlclr"></a>pair::swap (STL/CLR)
 交換兩對的內容。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void swap(pair<Value1, Value2>% right);  
 ```  
   
-#### 參數  
- right  
+#### <a name="parameters"></a>參數  
+ 向右  
  要交換內容的配對。  
   
-## 備註  
- 成員函式交換儲存至 `*this` 和 `right`之間的值。  
+## <a name="remarks"></a>備註  
+ 成員函式會交換預存的值之間的配對`*this`和`right`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_pair_swap.cpp   
@@ -83,15 +84,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **x x x x x**  
- **x x x x x**  
- **a b c**   
-## 需求  
- **標頭 ：** \<cliext\/utility\>  
+```Output  
+a b c  
+x x x x x  
+x x x x x  
+a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/公用程式 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [pair](../dotnet/pair-stl-clr.md)   
- [pair::operator\=](../dotnet/pair-operator-assign-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [配對 (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [pair::operator= (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)

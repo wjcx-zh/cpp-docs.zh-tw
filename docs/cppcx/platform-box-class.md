@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 101c3b3bc5572dbf8bf87ed3730abbbee3157404
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac0940d9a7277b7b3f5b66e8d27750a593081471
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformbox-class"></a>Platform::Box 類別
 允許將實值類型 (例如 `Windows::Foundation::DateTime` ) 或純量類型 (例如 `int` ) 儲存在 `Platform::Object` 類型中。 通常不需要明確使用 `Box` ，因為當您將實值類型轉換成 `Object^`時，將會隱含地進行 Boxing 作業。  
@@ -35,7 +36,7 @@ ref class Box abstract;
  **標頭：** vccorlib.h  
   
  **命名空間：** Platform
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|
 |[Box](#ctor)|建立`Box`其可封裝指定類型的值。|
 |[運算子方塊&lt;const T&gt;^](#box-const-t)|可以透過 Boxing 處理，從 `const` 實值類別 `T` 或 `enum` 類別 `T` 轉換為 `Box<T>`。|
@@ -152,6 +153,6 @@ virtual property T Value{
  傳回 Boxed 值，與該值進行 Boxed 處理之前的原始類型相同。  
   
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)   
  [Boxing](../cppcx/boxing-c-cx.md)

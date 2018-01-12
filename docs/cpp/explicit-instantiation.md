@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: acfaf9b36cfde4399815571807a6a82903dc980e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e272652ecc82b65d0251194f17a746ddde58fcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-instantiation"></a>明確初始化
 您可以使用明確具現化，建立樣板化類別或函式的具現化，而在程式碼中實際使用它。 由於當您建立使用樣板散發的程式庫 (.lib) 檔案時，這樣做很有用的，未具現化的樣板定義不會進入目的檔 (.obj)。  
@@ -42,7 +43,7 @@ template MyStack<int, 6>::MyStack( void );
   
  您可以明確具現化函式樣板中的範例所示，使用特定的型別引數來重新宣告變數，[函式樣板具現化](../cpp/function-template-instantiation.md)。  
   
- 您可以使用 `extern` 關鍵字防止成員自動具現化。 例如：  
+ 您可以使用 `extern` 關鍵字防止成員自動具現化。 例如:   
   
 ```cpp  
 extern template class MyStack<int, 6>;  
@@ -59,5 +60,5 @@ extern template MyStack<int, 6>::MyStack( void );
 > [!NOTE]
 >  在特製化的 `extern` 關鍵字只適用於類別主體之外定義的成員函式。 類別宣告內定義的函式被視為內嵌函式，永遠會具現化。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [函式樣板](../cpp/function-templates.md)

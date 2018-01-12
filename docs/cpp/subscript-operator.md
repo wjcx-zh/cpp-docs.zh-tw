@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '[]'
-dev_langs:
-- C++
+f1_keywords: '[]'
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], subscript
 - postfix operators [C++]
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21831cbd727477336c53e9d72e4bea95e123aa81
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbcb3657af276cdfc9aa05d461c090b76f6de0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscript-operator"></a>註標運算子：
 ## <a name="syntax"></a>語法  
@@ -52,7 +49,7 @@ cout << 2[nArray] << endl;            // prints "2"
   
  在上述範例中，運算式 `nArray[2]` 與 `2[nArray]` 相同。 原因在於註標運算式的結果*e1***[** *e2* **]**由所提供：  
   
- **\*((** *e2* **)** * + * **(***e1***))**  
+ **\*((** *e2* **)**  *+*  **(***e1***))**  
   
  運算式所產生的位址不是*e2*位元組從位址*e1*。 相反地，位址會產生陣列中的下一個物件進行縮放*e2*。 例如:   
   
@@ -115,7 +112,7 @@ int main() {
   
  註標運算子可以交替。 因此，運算式*陣列*[*索引*] 和*陣列*[*陣列*] 都保證會是相當只要註標運算子未多載 (請參閱[多載運算子](../cpp/operator-overloading.md))。 第一種形式是最常用的程式撰寫作法，但兩種都可以運作。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [後置運算式](../cpp/postfix-expressions.md)   
  [C + + 內建運算子、 優先順序和關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [陣列](../cpp/arrays-cpp.md)   

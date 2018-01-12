@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ed7868a1f9c0f5d163928c85a09577b9d6db2f37
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd6a2440ea5f3ad708fcd6f569e701e2f47f74a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 命名空間 (C++/CX)
 C + + /CX 補充 collections 命名空間的功能，以簡化使用 Vector、 VectorView、 地圖和 MapView 集合類別。  
@@ -37,7 +38,7 @@ namespace Windows {
   
 ### <a name="functions"></a>函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[back_inserter 函式](../cppcx/back-inserter-function.md)|傳回可用來在集合結尾插入值的迭代器。|  
 |[begin 函式](../cppcx/begin-function.md)|傳回指向集合開頭的迭代器。|  

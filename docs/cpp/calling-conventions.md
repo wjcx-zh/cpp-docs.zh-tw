@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13003d247e1fb90ff078746af0cbbe2d7255ea18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d2b5dbd0821516f5de1d05bc2069ee165e762241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-conventions"></a>呼叫慣例
 Visual C/C++ 編譯器提供數個用於呼叫內部和外部函式的不同慣例。 了解這些不同的方法可協助您偵錯程式，並將您的程式碼與組合語言常式連結。  
@@ -39,5 +40,5 @@ Visual C/C++ 編譯器提供數個用於呼叫內部和外部函式的不同慣�
   
 -   [過時呼叫慣例](../cpp/obsolete-calling-conventions.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)

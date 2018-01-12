@@ -30,11 +30,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 747ee64a701250c83b3b0401a5fbb3d82496a99e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b100f1ee61b06639e75290fafd01dca6a10a820c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 陳述式 (C++)
 若要在 C++ 中實作例外狀況處理，您可以使用 `try`、`throw` 和 `catch` 運算式。  
@@ -100,7 +101,7 @@ catch(...) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 例外狀況處理](../cpp/cpp-exception-handling.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [未處理的 c + + 例外狀況](../cpp/unhandled-cpp-exceptions.md)   

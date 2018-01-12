@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: b1c3c876b050e776d1a02e1ac19ad66a3c991e7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 01e13b89e964fe1803acaa8b14041a1e75eedf99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformdetailsheapentryhandler-delegate"></a>Platform::Details::HeapEntryHandler 委派
 這個委派僅供內部使用，不適用於開發用途。  
@@ -42,5 +43,5 @@ delegate HeapEntryHandler;
   
  **命名空間：** Platform::Details  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

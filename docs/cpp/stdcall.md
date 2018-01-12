@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1134ef0c0c9854d76ff2c87b3650ec6e91e54180
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec45f93331178f62799fb826ff31dfb6e66c3337
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stdcall"></a>__stdcall
 **Microsoft 特定的**  
@@ -36,7 +37,7 @@ return-type __stdcall function-name[(argument-list)]
 ## <a name="remarks"></a>備註  
  下列清單會顯示這個呼叫慣例的實作。  
   
-|項目|實作|  
+|元素|實作|  
 |-------------|--------------------|  
 |引數傳遞順序|由右至左。|  
 |引數傳遞慣例|以傳值方式，除非傳遞指標或參考類型。|  
@@ -80,6 +81,6 @@ void __stdcall CMyClass::mymethod() { return; }
 typedef BOOL (__stdcall *funcname_ptr)(void * arg1, const char * arg2, DWORD flags, ...);  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [引數傳遞和命名慣例](../cpp/argument-passing-and-naming-conventions.md)   
  [關鍵字](../cpp/keywords-cpp.md)

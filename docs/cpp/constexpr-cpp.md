@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ff111b73d81fd3c008e53db0f5e41b82f9e3753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1094be23074fe71e65a3077de51263f01a81c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 關鍵字 `constexpr` 是在 C++11 中引進，並在 C++14 中改進。 這表示*常數運算式*。 就像 `const`，它可以套用至變數，以便在任何程式碼嘗試修改值時引發編譯器錯誤。 不同於 `const` 的是，`constexpr` 也可以套用至函式和類別建構函式。 `constexpr` 表示值或傳回值為常數，而且可能的話，會在編譯時期計算。  只要在需要 const 整數 (例如在樣板引數和陣列宣告中) 之處，便可以使用 `constexpr` 整數值。 而且，當可以計算出的值，而不是執行階段編譯時期，它可讓您的程式更快速執行並使用較少的記憶體。  
@@ -193,6 +194,6 @@ int main()
 ## <a name="requirements"></a>需求  
  Visual Studio 2015  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [宣告和定義](../cpp/declarations-and-definitions-cpp.md)   
  [const](../cpp/const-cpp.md)

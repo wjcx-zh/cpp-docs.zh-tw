@@ -21,11 +21,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4acb38dc8619123fe2f0640366e506f77993edb2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71498f2a075bed78fab2bb073e5c93c62936c29d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformagile-class"></a>Platform::Agile 類別
 以 Agile 物件來表示具有 MashalingBehavior=Standard 的物件，可大幅降低發生執行階段執行緒例外狀況的機會。 `Agile<T>` 可讓非 Agile 物件呼叫相同或不同的執行緒，或者從中被呼叫。 如需詳細資訊，請參閱[執行緒和封送處理](../cppcx/threading-and-marshaling-c-cx.md)。  
@@ -46,11 +47,11 @@ class Agile;
   
  `Agile<T>` 類別是原生、標準 C++ 類別，需要 `agile.h`。 它代表非 Agile 物件和 Agile 物件的 *「內容」*(context)。 內容指定 Agile 物件的執行緒模型和封送處理行為。 作業系統使用內容來決定如何將物件封送處理。  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Agile:: agile](#ctor)|初始化 Agile 類別的新執行個體。|  
 |[Agile::~Agile 解構函式](#dtor)|終結 Agile 類別的目前執行個體。|  
@@ -254,5 +255,5 @@ const throw();
   
  指派作業會自動保存目前 Agile 物件的內容。 
        
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](platform-namespace-c-cx.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4cbc1937617885e845163ed7dd307cc02b86a314
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5d0d34b3dee1fb4983f60c7e437c14025b4e3022
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="updating-rowsets"></a>更新資料列集
 更新或將資料寫入資料存放區是一種基本資料庫作業。 OLE DB 的更新機制很簡單：您的消費者應用程式會設定繫結資料成員值，接著將這些值寫入資料列集；消費者即可要求提供者更新該資料存放區。  
@@ -203,7 +206,7 @@ product.Update();                 // Update row 101 now
   
  最後，延後變更的主要原因是為了可以復原這些變更。 呼叫 [CRowset::Undo](../../data/oledb/crowset-undo.md) 可以將本機快取區變更的部分復原到任何暫止變更發生之前的資料存放區狀態。 請注意， **Undo** 不會將本機快取區的狀態復原到上一個步驟 (僅最近一次變更之前的狀態)；相反地，它會清除該資料列的本機快取區。 此外， **Undo** 只會影響目前的資料列。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 OLE DB 消費者樣板](../../data/oledb/working-with-ole-db-consumer-templates.md)   
  [CRowset 類別](../../data/oledb/crowset-class.md)   
  [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx)

@@ -21,11 +21,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4dc31fc66f28f6fd9a8d9e9bc7122bf2aa7b2b73
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 4ff5057bed4f6f74511355f4675dd2bc69ad5262
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl 類別
 OLE DB 樣板實作[IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) OLE DB 規格中的介面。  
@@ -59,7 +62,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
  `MapClass`  
  提供者所持有的所有資料列控制代碼的儲存體單元。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="interface-methods-used-with-irowsetchange"></a>（搭配 IRowsetChange） 的介面方法  
   
@@ -94,6 +97,6 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 ## <a name="requirements"></a>需求  
  **Header:** atldb.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

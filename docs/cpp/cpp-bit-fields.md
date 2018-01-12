@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 01a346054fff0f8f3a9a1407c17e28e8dc234a57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff6b2a37c511313bd129705da38e66380e89edae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-bit-fields"></a>C++ 位元欄位
 類別和結構可包含比整數類型佔用較少儲存區的成員。 這些成員指定為位元欄位。 位元欄位的語法*成員宣告子*規格如下所示：  
@@ -63,7 +64,7 @@ Date 物件的記憶體配置
   
  宣告為位元欄位的資料之順序是由低至高位元，如上面的圖所示。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
  如果結構的宣告包含未命名且長度為 0 的欄位，如下列範例所示：  
   
@@ -93,5 +94,5 @@ struct Date {
   
 2.  使用位元欄位初始化參考。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)

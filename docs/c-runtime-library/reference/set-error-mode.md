@@ -33,17 +33,18 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 12152137e899fbc5e8d73679bcda57fce5ff5f72
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7987686fb0b9faa03cf4d5e4795116e9f0a608bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seterrormode"></a>_set_error_mode
 修改 `__error_mode` 來判斷非預設位置，其中 C 執行階段寫入可能結束程式之錯誤的錯誤訊息。  
   
 > [!IMPORTANT]
->  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
+>  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [/ZW 不支援 CRT 函式](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -65,7 +66,7 @@ int _set_error_mode(
   
  可以將 `modeval` 參數設為下列其中一個值。  
   
-|參數|說明|  
+|參數|描述|  
 |---------------|-----------------|  
 |`_OUT_TO_DEFAULT`|錯誤接收是透過 `__app_type` 所決定。|  
 |`_OUT_TO_STDERR`|錯誤接收是標準錯誤。|  
@@ -78,7 +79,7 @@ int _set_error_mode(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_set_error_mode`|\<stdlib.h>|  
   
@@ -104,5 +105,5 @@ This application has requested the Runtime to terminate it in an unusual way.
 Please contact the application's support team for more information.  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [assert 巨集、_assert、_wassert](../../c-runtime-library/reference/assert-macro-assert-wassert.md)

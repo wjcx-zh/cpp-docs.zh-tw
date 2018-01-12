@@ -28,11 +28,12 @@ caps.latest.revision: "7"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 744ec295f7bcb86e3228d8f3c62637ad17c53450
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2bf0a8e9c768425fc55b1c819b01d6c3cf4b88dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
 用來代表文字之 Unicode 字元的循序集合。 如需詳細資訊和範例，請參閱[字串](../cppcx/strings-c-cx.md)。  
@@ -47,7 +48,7 @@ public ref class String sealed : Object,
     IPrintable  
 ```  
   
-## <a name="iterators"></a>Iterator  
+## <a name="iterators"></a>迭代器  
  有兩個 Iterator 函式 (不是字串類別的成員) 可與 `std::for_each` 樣板搭配使用，以列舉 String 物件中的字元。  
   
 |成員|描述|  
@@ -55,14 +56,14 @@ public ref class String sealed : Object,
 |`const char16* begin(String^ s)`|讓指標回到指定 String 物件的開頭。|  
 |`const char16* end(String^ s)`|讓指標回到指定 String 物件的結尾之後。|  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>成員  
  字串類別繼承自 Object 以及 IDisposable、IEquatable 與 IPrintable 介面。  
   
  字串類別也有下列幾種型别的成員。  
   
  **建構函式**  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |[String:: string](#ctor)|初始化字串類別的新執行個體。|  
   
@@ -70,7 +71,7 @@ public ref class String sealed : Object,
   
  字串類別會從 [Platform::Object Class](../cppcx/platform-object-class.md)繼承 Equals()、Finalize()、GetHashCode()、GetType()、MemberwiseClose() 與 ToString() 等方法。 字串也有下列方法。  
   
-|方法|說明|  
+|方法|描述|  
 |------------|-----------------|  
 |[String:: begin](#begin)|讓指標回到目前字串的開頭。|  
 |[String:: compareordinal](#compareordinal)|評估物件所代表之兩個字串值中的對應字元數值，藉以比較兩個 `String` 物件。|  
@@ -89,7 +90,7 @@ public ref class String sealed : Object,
   
  字串類別具有下列運算子。  
   
-|成員|說明|  
+|成員|描述|  
 |------------|-----------------|  
 |[String:: operator = = 運算子](#operator-equality)|指出兩個指定的 String 物件是否具有相同的值。|  
 |[operator+ 運算子](#operator-plus)|將兩個 String 物件串連成新的 String 物件。|  
@@ -484,5 +485,5 @@ String^ String::ToString()
 ### <a name="return-value"></a>傳回值  
  值與目前字串相同的 String 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Platform 命名空間](../cppcx/platform-namespace-c-cx.md)

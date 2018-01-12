@@ -17,14 +17,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c51d50cb52562b60c1d9615e0617a02bef0cbcf3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 05bd576e6e55c94306a8dd648c57a4d606bed696
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-maps"></a>屬性對應
 除了工作階段、 資料列集，並選擇性的命令物件，每個提供者會支援一或多個屬性。 這些屬性會定義在 OLE DB 提供者精靈 所建立的標頭檔中所包含的屬性對應。 每個標頭檔包含的物件或該檔案中定義的物件定義的 OLE DB 屬性群組中的屬性對應。 標頭檔，其中包含資料來源物件也包含的屬性對應[DataSource 屬性](https://msdn.microsoft.com/en-us/library/ms724188\(v=vs.140\).aspx)。 Session.h 包含的屬性對應[工作階段屬性](https://msdn.microsoft.com/en-us/library/ms714221.aspx)。 資料列集和命令物件位於單一標頭檔，稱為*projectname*RS.h。 這些屬性屬於[資料列集屬性](https://msdn.microsoft.com/en-us/library/ms711252.aspx)群組。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 642a811f1be5afcda31d83abfd22c122e7d1b369
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c77b7269ae70d24878ff02c0661b60365c76d1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>類型轉換和類型安全 (現代 C++)
 這份文件識別常見問題的型別轉換，並說明如何避免這些在 c + + 程式碼中。  
@@ -186,7 +187,7 @@ int(x); // old-style cast, functional syntax
   
      如需詳細資訊，請參閱[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 類型系統](../cpp/cpp-type-system-modern-cpp.md)   
  [歡迎回到 c + +](../cpp/welcome-back-to-cpp-modern-cpp.md)   
  [C + + 語言參考](../cpp/cpp-language-reference.md)   

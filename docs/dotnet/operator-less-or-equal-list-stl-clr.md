@@ -1,33 +1,33 @@
 ---
-title: "operator&lt;= (list) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= 成員 [STL/CLR]"
+title: "運算子&lt;= （清單） (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: af677e20-f529-4055-b101-af9728bc090b
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 376c2fd83284bacbf3e4c38e4a25c14d5c9c24c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt;= (list) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-列舉小於或等於比較。  
+# <a name="operatorlt-list-stlclr"></a>運算子&lt;= （清單） (STL/CLR)
+小於或等於清單比較。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         list<Value>% right);  
 ```  
   
-#### 參數  
- left  
- 要比較的左邊容器。  
+#### <a name="parameters"></a>參數  
+ 左  
+ 要比較的左容器。  
   
- right  
- 要比較的右邊容器。  
+ 向右  
+ 要比較的右容器。  
   
-## 備註  
- 運算子函式會傳回 `!(``right` `<` `left``)`。  您會用它來測試在兩個清單在逐一項目比較後，`left` 是否在 `right` 之後非已排序。  
+## <a name="remarks"></a>備註  
+ 運算子函式會傳回`!(right < left)`。 使用它來測試是否`left`未經過排序之後`right`兩份清單時項目所比較的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_operator_le.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b d**  
-**\[a b c\] \<\= \[a b c\] is True**  
-**\[a b d\] \<\= \[a b c\] is False**   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [operator\=\= \(list\)](../dotnet/operator-equality-list-stl-clr.md)   
- [operator\!\= \(list\)](../dotnet/operator-inequality-list-stl-clr.md)   
- [operator\< \(list\)](../dotnet/operator-less-than-list-stl-clr.md)   
- [operator\>\= \(list\)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
- [operator\> \(list\)](../dotnet/operator-greater-than-list-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [運算子 = = （清單） (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
+ [運算子 ！ = （清單） (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   
+ [運算子\<（清單） (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)   
+ [運算子 > = （清單） (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
+ [operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)

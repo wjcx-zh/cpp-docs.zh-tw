@@ -1,32 +1,33 @@
 ---
-title: "COLUMN_ENTRY_TYPE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_ENTRY_TYPE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_ENTRY_TYPE 巨集"
+title: "COLUMN_ENTRY_TYPE |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_ENTRY_TYPE
+dev_langs: C++
+helpviewer_keywords: COLUMN_ENTRY_TYPE macro
 ms.assetid: ac424261-ff6c-443b-a197-2cec8d78d738
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cc2501f38ca93192bd0d74a3d49ca829b19cc1ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# COLUMN_ENTRY_TYPE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-表示繫結至資料庫中的特定資料行。  支援 `type` 參數。  
+# <a name="columnentrytype"></a>COLUMN_ENTRY_TYPE
+表示在資料庫中的特定資料行的繫結。 支援`type`參數。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -40,23 +41,23 @@ data
   
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `nOrdinal`  
- \[in\] 資料行編號。  
+ [in] 資料行編號。  
   
  `wType`  
- \[in\] 資料行輸入資料型別。  
+ [in]資料類型資料行項目。  
   
  `data`  
- \[in\] 使用者資料錄中對應的資料成員。  
+ [in] 使用者記錄中相對應的資料成員。  
   
-## 備註  
- 這個巨集為提供指定資料型別的 [COLUMN\_ENTRY](../../data/oledb/column-entry.md) 巨集的特殊變化。  
+## <a name="remarks"></a>備註  
+ 這個巨集是特殊的[COLUMN_ENTRY](../../data/oledb/column-entry.md)巨集，提供一種指定資料型別。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
- [OLE DB 消費者樣板的巨集和全域函式](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
- [BEGIN\_COLUMN\_MAP](../../data/oledb/begin-column-map.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)
+## <a name="see-also"></a>請參閱  
+ [巨集和全域函式的 OLE DB 消費者樣板](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)

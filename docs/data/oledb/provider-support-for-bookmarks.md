@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 445aa5a2a609c3cf2da83e9ff876195a05a33d6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cb3c0d60c4b339d7ed2ae8bc4eee503036ac9097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-support-for-bookmarks"></a>提供者書籤支援
 本主題中的此範例會將`IRowsetLocate`介面`CMyProviderRowset`類別。 幾乎在所有情況下，在您開始將介面加入至現有的 COM 物件。 然後就可以測試它，藉由新增更多呼叫從取用者範本。 此範例示範如何：  
@@ -273,5 +276,5 @@ END_ACCESSOR_MAP()
   
  更新程式碼之後，您應該能夠建置並執行的提供者`IRowsetLocate`介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [進階的提供者技術](../../data/oledb/advanced-provider-techniques.md)

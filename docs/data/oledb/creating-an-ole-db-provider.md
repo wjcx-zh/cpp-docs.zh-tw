@@ -1,47 +1,50 @@
 ---
-title: "建立 OLE DB 提供者 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OLE DB 提供者樣板, 建立提供者"
-  - "OLE DB 提供者, 建立"
+title: "建立 OLE DB 提供者 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, creating
+- OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 97d5edb8e65729f8bee68043b316fa74f78fb0da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 建立 OLE DB 提供者
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-建立 OLE DB 提供者的建議方式是，使用精靈來建立 ATL COM 專案和提供者，然後再使用 OLE DB 樣板來修改檔案。  當您自訂提供者時，可將不要的屬性設成註解，並加入選擇項介面。  
+# <a name="creating-an-ole-db-provider"></a>建立 OLE DB 提供者
+若要建立 OLE DB 提供者的建議的方式是使用精靈來建立 ATL COM 專案和提供者，然後修改使用 OLE DB 範本的檔案。 自訂您的提供者，您可以標記為註解的不必要的屬性，並加入選擇性的介面。  
   
- 基本的步驟如下所示  
+ 基本步驟如下：  
   
-1.  使用 ATL 專案精靈來建立基本的專案檔，並使用 ATL OLE DB 提供者精靈建立提供者 \(在 \[加入類別\] 的 \[Visual C\+\+\] 資料夾內選取 \[ATL OLE DB 提供者\]\)。  
+1.  若要建立基本專案檔和 ATL OLE DB 提供者精靈來建立提供者使用 ATL 專案精靈 (選取**ATL OLE DB 提供者**Visual c + + 資料夾中**加入類別**)。  
   
-2.  修改在 CMyProviderRS.h 中 `Execute` 方法的程式碼。  如需範例，請參閱[將字串讀入 OLE DB 提供者內](../../data/oledb/reading-strings-into-the-ole-db-provider.md)。  
+2.  修改中的程式碼`Execute`CMyProviderRS.h 中的方法。 如需範例，請參閱[讀取字串至 OLE DB 提供者](../../data/oledb/reading-strings-into-the-ole-db-provider.md)。  
   
-3.  編輯對應於 MyProviderDS.h、MyProviderSess.h 和 MyProviderRS.h 的屬性。  精靈會建立屬性對應，裡面包含提供者可能實作的所有屬性。  瀏覽一遍屬性對應，並將提供者不需要支援的屬性移除或設成註解。  
+3.  編輯 MyProviderDS.h、 MyProviderSess.h 和 MyProviderRS.h 中的屬性對應。 精靈會建立包含可能會實作提供者的所有屬性的屬性對應。 瀏覽屬性對應，移除或註解您的提供者不需要支援的屬性。  
   
-4.  更新 MyProviderRS.h 中的 PROVIDER\_COLUMN\_MAP。  如需範例，請參閱[將字串儲存於 OLE DB 提供者內](../../data/oledb/storing-strings-in-the-ole-db-provider.md)。  
+4.  更新 PROVIDER_COLUMN_MAP MyProviderRS.h 中可以找到。 如需範例，請參閱[儲存字串中 OLE DB 提供者](../../data/oledb/storing-strings-in-the-ole-db-provider.md)。  
   
-5.  當您要測試提供者時，可藉著在提供者列舉型別中尋找提供者來測試它。  如需可在列舉型別內尋找提供者的測試程式碼範例，請參閱 [CATDB](http://msdn.microsoft.com/zh-tw/003d516b-2bf6-444e-8be5-4ebaa0b66046)、和 [DBVIEWER](http://msdn.microsoft.com/zh-tw/07620f99-c347-4d09-9ebc-2459e8049832) 範例或[實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)的範例。  
+5.  當您準備好要測試您的提供者時，您可以藉由嘗試在提供者的列舉中尋找的提供者來進行測試。 例如在列舉中尋找的提供者的測試程式碼的詳細資訊，請參閱[CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)和[DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)範例或中的範例[實作簡單消費者](../../data/oledb/implementing-a-simple-consumer.md)。  
   
-6.  加入任何其他您想要的介面。  如需範例，請參閱[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  
+6.  加入您想要的任何其他介面。 如需範例，請參閱[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。  
   
     > [!NOTE]
-    >  根據預設，精靈可產生與 OLE DB 層級 0 相容的程式碼。  若要確保應用程式可以相容於層級 0，請不要從程式碼中移除任何精靈產生的介面。  
+    >  根據預設，精靈會產生 OLE DB 層級 0 相容的程式碼。 若要確保您的應用程式層級 0 相容，請勿從程式碼中移除任何精靈產生的介面。  
   
-## 請參閱  
- [CATDB](http://msdn.microsoft.com/zh-tw/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
- [DBVIEWER](http://msdn.microsoft.com/zh-tw/07620f99-c347-4d09-9ebc-2459e8049832)
+## <a name="see-also"></a>請參閱  
+ [CATDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)   
+ [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)

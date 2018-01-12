@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3075e2ea1c2511f959d7f4a6bfc620361c76e16c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 10987b351ebc34b7b17963e17047e32ee0d9bc5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>遞增和遞減運算子多載 (C++)
 遞增和遞減運算子屬於特殊的分類，因為每個運算子都有兩種變數：  
@@ -135,5 +136,5 @@ int main()
   
  除了明確的引動過程之外，沒有其他語法會使用遞增或遞減運算子來傳遞這些值，如上述程式碼所示。 實作這項功能較簡單的方式是多載加法/指派運算子 (`+=`)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算子多載](../cpp/operator-overloading.md)

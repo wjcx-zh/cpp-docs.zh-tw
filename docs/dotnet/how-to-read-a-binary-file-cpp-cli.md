@@ -1,34 +1,36 @@
 ---
-title: "如何：讀取二進位檔案 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "二進位檔案, 在 C++ 中讀取"
-  - "檔案 [C++], 二進位"
+title: "如何： 讀取二進位檔案 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], binary
+- binary files, reading in C++
 ms.assetid: 41ad9ad1-5cac-489c-874e-4bb3a649073a
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3714ba3df6d44559db66b56ea1a0f8a3ff7f3f44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：讀取二進位檔案 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例示範如何從檔案讀取二進位資料，作法是使用 <xref:System.IO?displayProperty=fullName> 命名空間中的兩個類別：<xref:System.IO.FileStream> 或 <xref:System.IO.BinaryReader>。  <xref:System.IO.FileStream> 表示實際的檔案。  <xref:System.IO.BinaryReader> 則提供可進行二進位存取的資料流介面。  
+# <a name="how-to-read-a-binary-file-ccli"></a>如何：讀取二進位檔案 (C++/CLI)
+下列程式碼範例示範如何從檔案讀取二進位資料，使用兩個類別從<xref:System.IO?displayProperty=fullName>命名空間：<xref:System.IO.FileStream>和<xref:System.IO.BinaryReader>。 <xref:System.IO.FileStream>代表實際檔案。 <xref:System.IO.BinaryReader>提供可讓您存取二進位資料流介面。  
   
- 程式碼範例會讀取名為 data.bin 且包含二進位格式整數的檔案。  如需這個檔案類型的詳細資訊，請參閱 [如何：寫入二進位檔案](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。  
+ 程式碼範例讀取的檔案具有名為 data.bin 且包含二進位格式的整數。 如需這類檔案的詳細資訊，請參閱[如何： 寫入二進位檔案 (C + + /CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // binary_read.cpp  
@@ -63,6 +65,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [檔案和資料流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [檔案和資料流 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

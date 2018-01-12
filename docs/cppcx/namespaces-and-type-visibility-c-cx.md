@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 09d0000dd7ac6fbe7c57d0b903694754e2d390e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03e86a7cbb36a0cfdf0ad2d32d625eae0102b25a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空間和類型可視性 (C++/CX)
 命名空間是標準 C++ 建構，可將具有相關功能的類型組合在一起，並防止程式庫中發生名稱衝突。 Windows 執行階段類型系統會要求所有 Windows 執行階段的公用類型，包括您自己的程式碼中，必須都宣告在命名空間範圍的命名空間中。 在全域範圍中宣告或以巢狀方式存在於其他類別中的公用型別會造成編譯時期錯誤。  
@@ -39,8 +40,8 @@ ms.lasthandoff: 10/24/2017
 |修飾詞|意義|發出至中繼資料？|  
 |private|預設存取範圍。 等同於在 Standard C++ 中。|否|  
 |protected|等同於在 Standard C++ 中，同時在應用程式 (或元件) 和中繼資料內。|是|  
-|public|等同於在 Standard C++ 中。|是|  
-|`public protected`-或者-`protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|是|  
+|public|等同於在 Standard C++ 中。|[是]|  
+|`public protected`-或者-`protected public`|在中繼資料內為受保護存取範圍，在應用程式或元件內是公用的。|[是]|  
 |`protected private` 或 `private protected`|在中繼資料內是不可見的，在應用程式或元件內為受保護存取範圍。||  
 |`internal` 或 `private public`|此成員在應用程式或元件內是公用的，但是在中繼資料內是不可見的。|否|  
   
@@ -52,11 +53,11 @@ ms.lasthandoff: 10/24/2017
   
 |||  
 |-|-|  
-|**Namespace**|**描述**|  
+|**命名空間**|**描述**|  
 |default|包含內建的數字和 char16 類型。 這些類型在每個命名空間的範圍內，不需要 `using` 陳述式。|  
 |平台|包含這類對應至 Windows 執行階段類型的主要公用型別`Array<T>`， `String`， `Guid`，和`Boolean`。 同時也包含特製化協助程式類型，例如 `Platform::Agile<T>` 和 `Platform::Box<T>`。|  
 |Platform::Collections|包含實作 Windows 執行階段集合介面的具象集合類別`IVector`， `IMap`，依此類推。 這些類型在標頭檔 collection.h 中定義，而不是在 platform.winmd 中。|  
 |Platform::Details|包含編譯器使用的類型，而不開放使用。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類型系統 (C++/CX)](../cppcx/type-system-c-cx.md)

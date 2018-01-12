@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- struct_cpp
-dev_langs:
-- C++
-helpviewer_keywords:
-- struct constructors
+f1_keywords: struct_cpp
+dev_langs: C++
+helpviewer_keywords: struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4918adb779a620afd4a0c1e4ef64ef9892de1ba8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 331244a7f9c8e719756c8cf691946f3babc594cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="struct-c"></a>struct (C++)
 `struct` 關鍵字會定義結構類型和 (或) 結構類型的變數。  
@@ -116,4 +112,3 @@ int main() {
 // my_cell.character = 1  
 ```  
   
-

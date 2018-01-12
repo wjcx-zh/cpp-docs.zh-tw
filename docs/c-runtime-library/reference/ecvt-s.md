@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _ecvt_s
+apiname: _ecvt_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,38 +24,23 @@ apitype: DLLExport
 f1_keywords:
 - ecvt_s
 - _ecvt_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ecvt_s function
 - ecvt_s function
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 81bcb9fe1306f5affa49672269890d6f5888a3ac
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: af4b49b0fd0e4de74a3f454a544c07f08c89b81d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ecvts"></a>_ecvt_s
 將 `double` 數字轉換為字串。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_ecvt](../../c-runtime-library/reference/ecvt.md) 版本。  
@@ -87,13 +70,13 @@ errno_t _ecvt_s(
  [輸出] `_Buffer`  
  填入轉換結果的位數字串指標。  
   
- [in] `_SizeInBytes`  
+ [輸入] `_SizeInBytes`  
  以位元組為單位的緩衝區大小。  
   
- [in] `_Value`  
+ [輸入] `_Value`  
  要轉換的數字。  
   
- [in] `_Count`  
+ [輸入] `_Count`  
  儲存的位數。  
   
  [輸出] `_Dec`  
@@ -111,10 +94,10 @@ errno_t _ecvt_s(
   
 |`_Buffer`|`_SizeInBytes`|_Value|_Count|_Dec|_Sign|傳回值|`buffer` 中的值|  
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|  
-|`NULL`|任何|任何|任何|任何|任何|`EINVAL`|未修改。|  
-|非 `NULL` (指向有效的記憶體)|<=0|any|任何|任何|任何|`EINVAL`|未修改。|  
-|any|任何|任何|任何|`NULL`|任何|`EINVAL`|未修改。|  
-|any|任何|任何|任何|任何|`NULL`|`EINVAL`|未修改。|  
+|`NULL`|any|any|any|any|any|`EINVAL`|未修改。|  
+|非 `NULL` (指向有效的記憶體)|<=0|any|any|any|any|`EINVAL`|未修改。|  
+|any|any|any|any|`NULL`|any|`EINVAL`|未修改。|  
+|any|any|any|any|any|`NULL`|`EINVAL`|未修改。|  
   
  **安全性問題**  
   
@@ -127,15 +110,15 @@ errno_t _ecvt_s(
   
  長度 `_CVTBUFSIZE` 的緩衝區足可供任何浮點值使用。  
   
- `_ecvt_s` 和 `_fcvt_s` 之間的差異位在 `_Count` 參數解譯中。 `_ecvt_s` 將 `_Count` 解譯為輸出字串的位數總數，而 `_fcvt_s` 將 `_Count` 解譯為小數點後的位數。  
+ `_ecvt_s` 和 `_fcvt_s` 之間的差異位於 `_Count` 參數解譯中。 `_ecvt_s` 將 `_Count` 解譯為輸出字串的位數總數，而 `_fcvt_s` 將 `_Count` 解譯為小數點後的位數。  
   
- C++ 中，使用這個函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。  
+ C++ 中，使用這個函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。  
   
  此函式的偵錯版本會先用 0xFD 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|函式|必要的標頭|選擇性標頭|  
+|功能|必要的標頭|選擇性標頭|  
 |--------------|---------------------|---------------------|  
 |`_ecvt_s`|\<stdlib.h>|\<errno.h>|  
   
@@ -174,7 +157,7 @@ int main( )
 Converted value: 12000  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [資料轉換](../../c-runtime-library/data-conversion.md)   
  [浮點支援](../../c-runtime-library/floating-point-support.md)   
  [atof、_atof_l、_wtof、_wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)   

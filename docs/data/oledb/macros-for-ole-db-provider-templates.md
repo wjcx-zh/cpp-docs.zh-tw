@@ -19,11 +19,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11a5ae3d0ba5c3da517a380adf795e579d0dce51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2a61e8156b39b9f0afec477f541920570d4af823
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB 提供者樣板的巨集
 OLE DB 樣板提供者巨集提供下列分類中的功能：  
@@ -64,7 +67,7 @@ OLE DB 樣板提供者巨集提供下列分類中的功能：
 |[SCHEMA_ENTRY](../../data/oledb/schema-entry.md)|關聯類別的 GUID。|  
 |[END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)|結束標記的結構描述對應。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [OLE DB 提供者樣板架構](../../data/oledb/ole-db-provider-template-architecture.md)   
  [建立 OLE DB 提供者](../../data/oledb/creating-an-ole-db-provider.md)   

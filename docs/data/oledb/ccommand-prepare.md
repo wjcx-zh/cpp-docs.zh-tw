@@ -1,35 +1,36 @@
 ---
-title: "CCommand::Prepare | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Prepare"
-  - "CCommand::Prepare"
-  - "Prepare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Prepare 方法"
+title: "Ccommand:: Prepare |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Prepare
+- CCommand::Prepare
+- Prepare
+dev_langs: C++
+helpviewer_keywords: Prepare method
 ms.assetid: f0e473fc-2f7a-4d29-96c2-1328dc21e702
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 68bce43b0b3fe1799cbbc51841fc1232c5527700
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# CCommand::Prepare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-驗證並最佳化目前命令。  
+# <a name="ccommandprepare"></a>CCommand::Prepare
+驗證並最佳化目前的命令。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -38,18 +39,18 @@ manager: "ghogen"
 ) throw( );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  *cExpectedRuns*  
- \[您預期執行命令的次數。  
+ [in]您要執行命令的次數。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  標準 `HRESULT`。  
   
-## 備註  
- 這個方法會包裝 OLE DB 方法 [ICommandPrepare::Prepare](https://msdn.microsoft.com/en-us/library/ms718370.aspx)。  
+## <a name="remarks"></a>備註  
+ 這個方法會包裝 OLE DB 方法[icommandprepare:: Prepare](https://msdn.microsoft.com/en-us/library/ms718370.aspx)。  
   
-## 需求  
+## <a name="requirements"></a>需求  
  **標題:** atldbcli.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [CCommand 類別](../../data/oledb/ccommand-class.md)

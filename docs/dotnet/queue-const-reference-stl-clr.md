@@ -1,41 +1,42 @@
 ---
-title: "queue::const_reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::const_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reference 成員 [STL/CLR]"
+title: "queue::const_reference (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::const_reference
+dev_langs: C++
+helpviewer_keywords: const_reference member [STL/CLR]
 ms.assetid: e2398b75-e072-4769-82df-f2607e29c6e4
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: be7021809c5e89a2e76236d6bbee0360fee5f625
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# queue::const_reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queueconstreference-stlclr"></a>queue::const_reference (STL/CLR)
 項目的常數參考類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef value_type% const_reference;  
 ```  
   
-## 備註  
- 型別描述之項目的常數參考。  
+## <a name="remarks"></a>備註  
+ 此類型描述項目的常數參考。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_queue_const_reference.cpp   
@@ -62,13 +63,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## 需求  
- **標題:** \<cliext\/佇列\>  
+```Output  
+a b c  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
-## 請參閱  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::reference](../dotnet/queue-reference-stl-clr.md)   
- [queue::value\_type](../dotnet/queue-value-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::reference (STL/CLR)](../dotnet/queue-reference-stl-clr.md)   
+ [queue::value_type (STL/CLR)](../dotnet/queue-value-type-stl-clr.md)

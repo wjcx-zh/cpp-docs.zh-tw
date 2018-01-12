@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 77a5e1c01254a67151d5b8577676537709bdba4e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9371aaf978f2ea9498445d0124b9be16cf3b0fa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unions"></a>等位
 `union` 是所有成員都共用相同記憶體位置的使用者定義類型。 這表示等位的成員清單在任何指定時間都只能包含一個物件。 這也表示不論等位有多少成員，都一律會使用剛好的記憶體來儲存最大成員。  
@@ -657,7 +658,7 @@ union  {  member-list  }
   
 -   它們不能有成員函式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別和結構](../cpp/classes-and-structs-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  [class](../cpp/class-cpp.md)   

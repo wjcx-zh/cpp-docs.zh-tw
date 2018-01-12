@@ -1,41 +1,42 @@
 ---
-title: "deque::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type 成員 [STL/CLR]"
+title: "deque:: size_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: c598871c-0ce8-4599-ab4c-2d0ea5f3f8e4
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 37aabb7704857c887555d46bbff5590cf2d4712e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# deque::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-帶正負號的距離的型別兩個項目之間的間距。  
+# <a name="dequesizetype-stlclr"></a>deque::size_type (STL/CLR)
+兩個項目之間的帶正負號距離的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef int size_type;  
 ```  
   
-## 備註  
- 型別描述非負數項目計數。  
+## <a name="remarks"></a>備註  
+ 此類型描述負的項目計數。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_deque_size_type.cpp   
@@ -62,13 +63,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**結束 \(\) \-啟動 \(\) \= 3**   
-## 需求  
- **標題:** \<cliext\/雙向佇列\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/deque >  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::empty](../dotnet/deque-empty-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::empty (STL/CLR)](../dotnet/deque-empty-stl-clr.md)

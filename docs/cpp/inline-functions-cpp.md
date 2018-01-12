@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9b4d4ad6a2fbfbb30fe5f0b465c8bb70753cd701
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de370d8dbff1f1340539adc825f7f5316c59a468
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inline-functions-c"></a>內嵌函式 (C++)
 在類別宣告的主體中定義的函式是內嵌函式。  
@@ -155,7 +156,7 @@ private:
   
  遞迴函式可以內嵌替代到所指定的深度[inline_depth](../preprocessor/inline-depth.md) pragma，最多 16 個呼叫。 該深度之後，遞迴函式呼叫視為函式執行個體的呼叫。  由內嵌啟發學習法所檢查之遞迴函式的深度不能超過 16。 [Inline_recursion](../preprocessor/inline-recursion.md) pragma 控制目前底下展開的函式的內嵌展開。 請參閱[內嵌函式展開](../build/reference/ob-inline-function-expansion.md)(/ Ob) 編譯器選項，如需相關資訊。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
  如需有關使用**內嵌**規範，請參閱：  
   
 -   [內嵌類別成員函式](../cpp/inline-functions-cpp.md)  
@@ -264,6 +265,6 @@ Sample Input: a
 Sample Output: A  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [noinline](../cpp/noinline.md)   
  [auto_inline](../preprocessor/auto-inline.md)

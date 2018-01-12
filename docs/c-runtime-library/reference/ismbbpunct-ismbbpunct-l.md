@@ -39,11 +39,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 960ded27c68e5e22825375f7242cbaef08f4b5c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3b64f00a805fc54f295d4cf86df6c4a780bb7bdb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct、_ismbbpunct_l
 判斷特定字元是否為標點符號字元。  
@@ -68,17 +69,17 @@ int _ismbbpunct_l(
  要使用的地區設定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果整數 `c` 是非 ASCII 標點符號，則 `_ismbbpunct` 會傳回非零值。 針對任何地區設定相關的字元設定，`_ismbbpunct` 會使用目前的地區設定。 `_ismbbpunct_l` 也相同，但是它會用傳入的地區設定。 如需詳細資訊，請參閱[地區設定](../../c-runtime-library/locale.md)。  
+ 如果整數 `c` 是非 ASCII 標點符號，則 `_ismbbpunct` 會傳回非零值。 針對任何地區設定相關的字元設定，`_ismbbpunct` 會使用目前的地區設定。 `_ismbbpunct_l` 也相同，但是它會用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。  
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`_ismbbpunct`|\<mbctype.h>|  
 |`_ismbbpunct_l`|\<mbctype.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [位元組分類](../../c-runtime-library/byte-classification.md)   
  [_ismbb 常式](../../c-runtime-library/ismbb-routines.md)

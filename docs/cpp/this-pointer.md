@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e77139cdf93d385b92eb87483c1b03541b18650
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 814e7518c6ed7052abc93b9e4705be93172b1e7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="this-pointer"></a>this 指標
 **這**指標是只能在非靜態成員函式中存取指標**類別**， `struct`，或**union**型別。 它會指向針對其呼叫成員函式的物件。 靜態成員函式沒有**這**指標。  
@@ -198,6 +199,6 @@ int main()
 > [!NOTE]
 >  建構函式和解構函式不能宣告為**const**或`volatile`。 不過，它們可以是在叫用**const**或`volatile`物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [關鍵字](../cpp/keywords-cpp.md)   
  

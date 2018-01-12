@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73e1d52d1c13e2defa51a5cab9da625b75aac757
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明確的預設和被刪除的函式
 在 C++11 中，預設和已刪除的函式可讓您明確控制是否要自動產生特殊成員函式。 被刪除的函式也提供您簡單語言，防止在所有類型函式 (特殊成員函式，一般成員函式和非成員函式) 的引數中發生有問題的類型提升 (原本可能會導致不必要的函式呼叫)。  

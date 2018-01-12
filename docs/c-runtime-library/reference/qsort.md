@@ -34,11 +34,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 671bc9f6f21871e27cc6edc54f4fc45de4317e10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e3f6d964f4cf4debefa3044a458704554233447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsort"></a>qsort
 執行快速排序。 目前有比這個函式更安全的版本；請參閱 [qsort_s](../../c-runtime-library/reference/qsort-s.md)。  
@@ -90,11 +91,11 @@ compare( (void *) & elem1, (void *) & elem2 );
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要的標頭|  
+|常式傳回的值|必要的標頭|  
 |-------------|---------------------|  
 |`qsort`|\<stdlib.h> 和 \<search.h>|  
   
- 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。  
   
 ## <a name="example"></a>範例  
   
@@ -140,7 +141,7 @@ int compare( const void *arg1, const void *arg2 )
 boy deserves every favor good  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [搜尋和排序](../../c-runtime-library/searching-and-sorting.md)   
  [bsearch](../../c-runtime-library/reference/bsearch.md)   
  [_lsearch](../../c-runtime-library/reference/lsearch.md)

@@ -1,36 +1,38 @@
 ---
-title: "list (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/list> 標頭 [STL/CLR]"
-  - "<list> 標頭 [STL/CLR]"
-  - "清單類別 [STL/CLR]"
+title: "清單 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/list> header [STL/CLR]
+- list class [STL/CLR]
+- <list> header [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 40046e2b7263559765c2aab2bef13a17c341f7c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-樣板類別描述物件控制存取雙向項目的變更長度序列。  您使用容器 `list` 處理項目序列做為節點雙向連結串列，每個儲存一個項目。  
+# <a name="list-stlclr"></a>list (STL/CLR)
+此範本類別描述控制不同長度序列的項目具有雙向存取的物件。 使用容器`list`管理項目序列以雙向連結清單的節點，各儲存一個項目。  
   
- 在如下解譯， `GValue` 相當於 `Value` ，除非後面是參考型別，在這種情況下，它是 `Value^`的情況下。  
+ 在以下描述`GValue`相同`Value`後者是 ref 型別，除非在這種情況下很`Value^`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value>  
@@ -45,104 +47,104 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  值  
- 受控制序列中項目的型別。  
+ 受控制序列中項目的類型。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-|型別定義|說明|  
-|----------|--------|  
-|[list::const\_iterator](../dotnet/list-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
-|[list::const\_reference](../dotnet/list-const-reference-stl-clr.md)|項目的常數參考類型。|  
-|[list::const\_reverse\_iterator](../dotnet/list-const-reverse-iterator-stl-clr.md)|用於受控制序列的常數反向迭代器類型。|  
-|[list::difference\_type](../dotnet/list-difference-type-stl-clr.md)|兩個項目之間的帶正負號距離的類型。|  
-|[list::generic\_container](../dotnet/list-generic-container-stl-clr.md)|泛型介面的型別的容器。|  
-|[list::generic\_iterator](../dotnet/list-generic-iterator-stl-clr.md)|容器的泛型介面的迭代器的型別。|  
-|[list::generic\_reverse\_iterator](../dotnet/list-generic-reverse-iterator-stl-clr.md)|容器的泛型介面的反向迭代器的型別。|  
-|[list::generic\_value](../dotnet/list-generic-value-stl-clr.md)|容器的泛型介面的元素的型別。|  
-|[list::iterator](../dotnet/list-iterator-stl-clr.md)|受控制序列中 iterator 的類型。|  
-|[list::reference](../dotnet/list-reference-stl-clr.md)|項目的參考類型。|  
-|[list::reverse\_iterator](../dotnet/list-reverse-iterator-stl-clr.md)|用於受控制序列的反向迭代器類型。|  
-|[list::size\_type](../dotnet/list-size-type-stl-clr.md)|兩個項目之間的帶正負號距離的類型。|  
-|[list::value\_type](../dotnet/list-value-type-stl-clr.md)|項目的類型。|  
+|類型定義|描述|  
+|---------------------|-----------------|  
+|[list::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)|用於受控制序列的常數迭代器類型。|  
+|[list::const_reference (STL/CLR)](../dotnet/list-const-reference-stl-clr.md)|項目的常數參考類型。|  
+|[list::const_reverse_iterator (STL/CLR)](../dotnet/list-const-reverse-iterator-stl-clr.md)|用於受控制序列的常數反向迭代器類型。|  
+|[list::difference_type (STL/CLR)](../dotnet/list-difference-type-stl-clr.md)|兩個項目之間帶正負號距離的類型。|  
+|[list::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)|容器的泛型介面型別。|  
+|[list::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)|泛型介面，該容器的迭代器類型。|  
+|[list::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)|容器的泛型介面的反向迭代器類型。|  
+|[list::generic_value (STL/CLR)](../dotnet/list-generic-value-stl-clr.md)|泛型介面的容器項目的類型。|  
+|[list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)|受控制序列之迭代器的類型。|  
+|[list::reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)|項目的參考類型。|  
+|[list::reverse_iterator (STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)|受控制序列的反向迭代器類型。|  
+|[list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)|兩個項目之間帶正負號距離的類型。|  
+|[list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)|元素的類型。|  
   
-|成員函式|說明|  
-|----------|--------|  
-|[list::assign](../dotnet/list-assign-stl-clr.md)|取代所有項目。|  
-|[list::back](../dotnet/list-back-stl-clr.md)|存取最後一個項目。|  
-|[list::begin](../dotnet/list-begin-stl-clr.md)|指定受控制序列的開頭。|  
-|[list::clear](../dotnet/list-clear-stl-clr.md)|移除所有項目。|  
-|[list::empty](../dotnet/list-empty-stl-clr.md)|測試項目是否不存在。|  
-|[list::end](../dotnet/list-end-stl-clr.md)|指定受控制序列的結尾。|  
-|[list::erase](../dotnet/list-erase-stl-clr.md)|移除指定位置的項目。|  
-|[list::front](../dotnet/list-front-stl-clr.md)|存取第一個項目。|  
-|[list::insert](../dotnet/list-insert-stl-clr.md)|將項目加至指定的位置。|  
-|[list::list](../dotnet/list-list-stl-clr.md)|建構一個容器物件。|  
-|[list::merge](../dotnet/list-merge-stl-clr.md)|合併兩個已排序的受控制序列。|  
-|[list::pop\_back](../dotnet/list-pop-back-stl-clr.md)|移除最後一個項目。|  
-|[list::pop\_front](../dotnet/list-pop-front-stl-clr.md)|移除第一個項目。|  
-|[list::push\_back](../dotnet/list-push-back-stl-clr.md)|加入新的最後一個元素。|  
-|[list::push\_front](../dotnet/list-push-front-stl-clr.md)|加入新的第一個項目。|  
-|[list::rbegin](../dotnet/list-rbegin-stl-clr.md)|指定已還原的受控制序列開頭。|  
-|[list::remove](../dotnet/list-remove-stl-clr.md)|移除具有指定的值的項目。|  
-|[list::remove\_if](../dotnet/list-remove-if-stl-clr.md)|移除通過指定測試的項目。|  
-|[list::rend](../dotnet/list-rend-stl-clr.md)|指定已還原的受控制序列結尾。|  
-|[list::resize](../dotnet/list-resize-stl-clr.md)|變更項目的數目。|  
-|[list::reverse](../dotnet/list-reverse-stl-clr.md)|反轉受控制序列。|  
-|[list::size](../dotnet/list-size-stl-clr.md)|計數項目的數目。|  
-|[list::sort](../dotnet/list-sort-stl-clr.md)|排序受控制序列。|  
-|[list::splice](../dotnet/list-splice-stl-clr.md)|Restitches 節點之間的連結。|  
-|[list::swap](../dotnet/list-swap-stl-clr.md)|交換兩個容器的內容。|  
-|[list::to\_array](../dotnet/list-to-array-stl-clr.md)|複製受控制序列到新陣列。|  
-|[list::unique](../dotnet/list-unique-stl-clr.md)|移除通過指定測試的相鄰項目。|  
+|成員函式|描述|  
+|---------------------|-----------------|  
+|[list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)|取代所有項目。|  
+|[list::back (STL/CLR)](../dotnet/list-back-stl-clr.md)|存取最後一個項目。|  
+|[list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)|指定受控制序列的開頭。|  
+|[list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)|移除所有項目。|  
+|[list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)|測試項目是否不存在。|  
+|[list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)|指定受控制序列的結尾。|  
+|[list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)|移除位於指定位置的項目。|  
+|[list::front (STL/CLR)](../dotnet/list-front-stl-clr.md)|存取第一個項目。|  
+|[list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)|將項目加入指定的位置。|  
+|[list::list (STL/CLR)](../dotnet/list-list-stl-clr.md)|建構容器物件。|  
+|[list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)|合併兩個受控制的序列的已排序。|  
+|[list::pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)|移除最後一個項目。|  
+|[list::pop_front (STL/CLR)](../dotnet/list-pop-front-stl-clr.md)|移除第一個項目。|  
+|[list::push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)|加入新的最後一個項目。|  
+|[list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)|加入新的第一個項目。|  
+|[list::rbegin (STL/CLR)](../dotnet/list-rbegin-stl-clr.md)|指定反向受控制序列的開頭。|  
+|[list::remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)|移除具有指定值的項目。|  
+|[list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)|移除通過指定的測試的項目。|  
+|[list::rend (STL/CLR)](../dotnet/list-rend-stl-clr.md)|指定反向受控制序列的結尾。|  
+|[list::resize (STL/CLR)](../dotnet/list-resize-stl-clr.md)|變更項目數目。|  
+|[list::reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)|反轉受控制的序列。|  
+|[list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)|計算元素的數目。|  
+|[list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)|受控制的序列的訂單。|  
+|[list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)|重新拼接節點之間的連結。|  
+|[list::swap (STL/CLR)](../dotnet/list-swap-stl-clr.md)|交換兩個容器的內容。|  
+|[list::to_array (STL/CLR)](../dotnet/list-to-array-stl-clr.md)|將受控制的序列複製到新的陣列。|  
+|[list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|移除通過指定測試的相鄰項目。|  
   
-|屬性|說明|  
-|--------|--------|  
-|[list::back\_item](../dotnet/list-back-item-stl-clr.md)|存取最後一個項目。|  
-|[list::front\_item](../dotnet/list-front-item-stl-clr.md)|存取第一個項目。|  
+|屬性|描述|  
+|--------------|-----------------|  
+|[list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)|存取最後一個項目。|  
+|[list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)|存取第一個項目。|  
   
-|運算子|說明|  
-|---------|--------|  
-|[list::operator\=](../dotnet/list-operator-assign-stl-clr.md)|取代受控制序列。|  
-|[operator\!\= \(list\)](../dotnet/operator-inequality-list-stl-clr.md)|判斷 `list` 物件是否不等於另一個 `list` 物件。|  
-|[operator\< \(list\)](../dotnet/operator-less-than-list-stl-clr.md)|判斷 `list` 物件是否小於另一個 `list` 物件。|  
-|[operator\<\= \(list\)](../dotnet/operator-less-or-equal-list-stl-clr.md)|判斷 `list` 物件是否小於或等於另外一個 `list` 物件。|  
-|[operator\=\= \(list\)](../dotnet/operator-equality-list-stl-clr.md)|判斷 `list` 物件是否等於另一個 `list` 物件。|  
-|[operator\> \(list\)](../dotnet/operator-greater-than-list-stl-clr.md)|判斷 `list` 物件是否大於另一個 `list` 物件。|  
-|[operator\>\= \(list\)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|判斷 `list` 物件是否大於或等於另外一個 `list` 物件。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|[list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|取代受控制的序列。|  
+|[operator!= (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|決定如果`list`物件是否不等於另一個`list`物件。|  
+|[operator< (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)|決定如果`list`物件是否小於另一個`list`物件。|  
+|[operator<= (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)|決定如果`list`物件是否小於或等於另一個`list`物件。|  
+|[operator== (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)|決定如果`list`物件是否等於另一個`list`物件。|  
+|[operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)|決定如果`list`物件是否大於另一個`list`物件。|  
+|[operator>= (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|決定如果`list`物件是否大於或等於另一個`list`物件。|  
   
-## 介面  
+## <a name="interfaces"></a>介面  
   
-|介面|說明|  
-|--------|--------|  
-|<xref:System.ICloneable>|重複物件。|  
-|<xref:System.Collections.IEnumerable>|序列傳遞項目。|  
-|<xref:System.Collections.ICollection>|維護項目的群組。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|序列傳遞型別項目。|  
-|<xref:System.Collections.Generic.ICollection%601>|維護型別項目的群組。|  
-|IList\<Value\>|維護泛型容器。|  
+|介面|描述|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|重複的物件。|  
+|<xref:System.Collections.IEnumerable>|項目順序。|  
+|<xref:System.Collections.ICollection>|維護群組的項目。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|透過具類型的項目順序。|  
+|<xref:System.Collections.Generic.ICollection%601>|維護群組的具類型的項目。|  
+|IList\<值 >|維護泛型容器。|  
   
-## 備註  
- 物件配置和未使用的記憶體區域的控制項會以個別節點在雙向連結串列的序列。  它可以用修改節點之間的連結的方式重新排列項目，絕不會透過複製的節點內容到另一個。  這表示您可以自由地插入和移除項目，而不會干擾其他項目。  因此，清單是類別 [queue](../dotnet/queue-stl-clr.md) 或樣板類別的 [堆疊](../dotnet/stack-stl-clr.md) 的基礎容器候選樣板。  
+## <a name="remarks"></a>備註  
+ 物件可配置及釋放它為雙向連結清單中的個別節點所控制的序列的儲存體。 它會改變節點，而非由複製到另一個節點的內容之間的連結，重新排列項目。 這表示您可以插入和移除項目，自由地不干擾其餘項目。 因此，清單是適合做為基礎的容器樣板類別[佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)或樣板類別[堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)。  
   
- `list` 物件支援雙向迭代器，這表示您可以逐步執行至指定的相鄰項目的迭代器在受控制序列的項目。  特殊前端節點對應於 [list::end](../dotnet/list-end-stl-clr.md)所傳回的 Iterator`()`。  如果您以這個 Iterator 到達受控制序列的最後一個項目。  您可以增加清單迭代器以到達前端節點，因此，它與 `end()`會比較是否相等。  但是，您無法取值 `end()`所傳回的 Iterator。  
+ A`list`物件支援雙向迭代器，這表示您可以逐步執行至指定的迭代器，指定受控制序列中的項目相鄰的項目。 特殊的前端節點對應至所傳回的迭代器[list:: end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`。 如果有的話，可以減少此連線到受控制序列中，最後一個元素的迭代器。 您可以遞增到前端節點的清單迭代器，然後它會比較等於`end()`。 您無法取值 （dereference） 所傳回的迭代器，但`end()`。  
   
- 請注意您無法直接參考指定的清單元素其數值位置\-\-該要求隨機存取 Iterator。  因此清單是 `not` 能用以作為 [priority\_queue](../dotnet/priority-queue-stl-clr.md)的基礎容器樣板類別。  
+ 請注意，您不能直接提供其數值位置-需要的隨機存取迭代器的清單項目參考。 清單是`not`可用做為基礎容器樣板類別[priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)。  
   
- 清單迭代器中儲存關聯的清單節點的控制代碼，接著儲存的控制代碼關聯的容器。  您只能使用 Iterator 與其關聯的容器物件。  只要其關聯的清單節點與某一個清單相關連，清單迭代器保持有效。  而且，有效 Iterator dereferencable\-\-您可以使用它所指派它存取或修改項目的值\-\-只要不等於 `end()`。  
+ 清單的迭代器會儲存其相關的清單 節點，接著會儲存到其相關聯的容器的控制代碼的控制代碼。 您可以使用迭代器，只能使用其相關聯的容器物件。 只要其相關的清單節點是與一些清單相關聯的清單迭代器會保持有效。 此外，有效的迭代器是 dereferencable--您可用它來存取或修改項目值，它會指定-，只要不等於`end()`。  
   
- 清除或移除元素呼叫它的儲存值的解構函式。  終結容器清除所有項目。  因此，項目型別是 ref 類別的容器確保項目不使用得比容器的。  請注意，然而，容器控制碼做 `not` 終結的項目。  
+ 清除，或移除項目會呼叫解構函式的儲存值。 終結容器清除所有項目。 因此，其項目類型是 ref 類別的容器可確保，任何項目存留期比長容器。 不過請注意，容器的控制代碼，並會`not`摧毀其項目。  
   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [deque](../dotnet/deque-stl-clr.md)   
- [priority\_queue](../dotnet/priority-queue-stl-clr.md)   
- [queue](../dotnet/queue-stl-clr.md)   
- [堆疊](../dotnet/stack-stl-clr.md)   
- [向量](../dotnet/vector-stl-clr.md)   
- [STL\/CLR 程式庫](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>請參閱  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

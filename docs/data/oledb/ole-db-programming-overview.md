@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f3d97dda514b3cdb0773adb3d7830e611bca3d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 17e80f5a1fbe94a1d2bd4c7fc3b77525a77bbd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB 程式設計概觀
 OLE DB 是一種高效能、 以 COM 為基礎的資料庫技術。 它提供存取資料，不論它會儲存的表單的常見方式。 在一般商務的情況下，大量的資訊會儲存在公司資料庫外部。 循序編製索引的檔案、 個人資料庫 （例如存取）、 試算表 （例如 Excel)、 專案計劃應用程式 （例如專案） 和 （例如 Outlook) 的電子郵件 （例如 FAT 或 NTFS） 的檔案系統中找到這項資訊。 OLE DB 可讓您以相同的方式，存取任何種類的資料存放區，只要資料存放區有 OLE DB 提供者。
@@ -33,7 +36,7 @@ OLE DB 是一種高效能、 以 COM 為基礎的資料庫技術。 它提供存
  COM 規格為基礎，OLE DB 定義的可延伸和可維護的集合的因素，並將封裝的 DBMS 功能一致、 可重複使用部分的介面。 這些介面會定義 DBMS 元件，例如資料列的容器，查詢處理器和交易協調器，啟用各種資訊來源的統一交易式存取的界限。  
  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 程式設計](../../data/oledb/ole-db-programming.md)   
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)   

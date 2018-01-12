@@ -1,41 +1,44 @@
 ---
-title: "資料來源和工作階段 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "連接 [C++], 資料來源"
-  - "資料來源 [C++], OLE DB"
-  - "OLE DB 消費者樣板 [C++], 資料來源"
+title: "資料來源和工作階段 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data sources [C++], OLE DB
+- connections [C++], data source
+- OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2bb675897e29a26446b3070b2192b4f5c3e8fd2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 資料來源和工作階段
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-下圖顯示了可以支援資料來源連接和存取的類別。  每個類別都是根據標準 OLE DB 元件的實作。  
+# <a name="data-sources-and-sessions"></a>資料來源和工作階段
+下圖顯示連接和存取資料來源支援的類別。 每個類別為基礎的標準 OLE DB 元件實作。  
   
- ![資料來源和工作階段類別](../../data/oledb/media/vcdatasourcesessionclasses.png "vcDataSourceSessionClasses")  
-資料來源和工作階段類別  
+ ![資料來源和工作階段類別](../../data/oledb/media/vcdatasourcesessionclasses.gif "vcdatasourcesessionclasses")  
+資料來源與工作階段類別  
   
- 這些類別是：  
+ 類別包括：  
   
--   [CDataSource](../../data/oledb/cdatasource-class.md)：這個類別會產生資料來源物件，該物件會透過 OLE DB 提供者 \(Provider\) 建立和管理資料來源的連接。  資料來源會以連接字串 \(Connection String\) 形式取得如資料來源位址和驗證資訊的資訊。  
+-   [CDataSource](../../data/oledb/cdatasource-class.md)這個類別具現化的資料來源物件，以建立和管理透過 OLE DB 提供者的資料來源的連接。 資料來源取得資訊，例如資料來源地址和驗證資訊的連接字串的形式。  
   
-     值得注意的是，Helper 類別 [CEnumerator](../../data/oledb/cenumerator-class.md) 在任何連接建立之前，經常會用來取得已登錄於系統中的可用提供者之清單。  這樣您便可以像選取資料來源一樣地選取提供者。  例如，\[**資料連結內容**\] 對話方塊會在 \[提供者\] 索引標籤使用這個類別來填入 \(Populate\) 提供者清單。  它的作用相當於 **SQLBrowseConnect** 或 **SQLDriverConnect** 函式。  
+     它也值得注意的是，協助程式類別[CEnumerator](../../data/oledb/cenumerator-class.md)常用來取得一份可用的提供者登錄在系統上建立任何連接之前。 這可讓您選取的提供者做為資料來源。 例如，**資料連結屬性**對話方塊會使用這個類別提供者清單填入上**提供者** 索引標籤。它相當於**SQLBrowseConnect**或**SQLDriverConnect**函式。  
   
--   [CSession](../../data/oledb/csession-class.md)：這個類別會產生工作階段物件，此物件可以代表該資料來源的單一存取工作階段。  但是，您也可以在資料來源上建立多個工作階段。  您可以針對每個工作階段，建立其資料列集、命令和其他物件，以存取資料來源的資料。  此工作階段可以處理交易。  
+-   [CSession](../../data/oledb/csession-class.md)這個類別具現化的工作階段物件，表示單一的存取工作階段資料來源。 不過，您可以在資料來源上建立多個工作階段。 每個工作階段，您可以建立資料來源存取資料的資料列集、 命令及其他物件。 工作階段會處理交易。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)

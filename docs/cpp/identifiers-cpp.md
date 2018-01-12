@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 84b0aafe5c5327e175791bb5107c72500f9834b1
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c2b2c3899076206d3ce3b0094f3d85426bd321c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="identifiers-c"></a>識別項 （c + +）
 識別項是字元序列，用來表示下列其中一項：  
@@ -109,5 +107,5 @@ int main() {
   
  在識別項開頭使用兩個連續底線字元 ( **__** )，或者單一前置底線後面接著一個大寫字母，皆為保留給 C++ 在所有範圍中實作。 因為可能與目前或未來保留的識別項相衝突，您應該避免在具有檔案範圍的名稱中使用一個後面接著小寫字母的前置底線。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)

@@ -1,36 +1,38 @@
 ---
-title: "IRowsetChangeImpl::DeleteRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetChangeImpl.DeleteRows"
-  - "ATL::IRowsetChangeImpl::DeleteRows"
-  - "IRowsetChangeImpl.DeleteRows"
-  - "DeleteRows"
-  - "IRowsetChangeImpl::DeleteRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DeleteRows 方法"
+title: "Irowsetchangeimpl:: Deleterows |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetChangeImpl.DeleteRows
+- ATL::IRowsetChangeImpl::DeleteRows
+- IRowsetChangeImpl.DeleteRows
+- DeleteRows
+- IRowsetChangeImpl::DeleteRows
+dev_langs: C++
+helpviewer_keywords: DeleteRows method
 ms.assetid: 462ad4f1-3b2a-4134-9733-be65708aa1d9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 92ae29bc2a9e3d7e2fc246b4f43e3a7f586475da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetChangeImpl::DeleteRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-刪除列集合中的列。  
+# <a name="irowsetchangeimpldeleterows"></a>IRowsetChangeImpl::DeleteRows
+從資料列集刪除資料列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
   
@@ -42,11 +44,11 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### 參數  
- 請參閱 *OLE DB 程式設計人員參考資訊* 中的 [IRowsetChange::DeleteRows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)。  
+#### <a name="parameters"></a>參數  
+ 請參閱[irowsetchange:: Deleterows](https://msdn.microsoft.com/en-us/library/ms724362.aspx)中*OLE DB 程式設計人員參考*。  
   
-## 需求  
- **標頭：** atldb.h  
+## <a name="requirements"></a>需求  
+ **Header:** atldb.h  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [IRowsetChangeImpl 類別](../../data/oledb/irowsetchangeimpl-class.md)

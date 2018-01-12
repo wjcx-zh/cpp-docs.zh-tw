@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 085266bea35e59de593d9aa8437be71bc48c71a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 62707fbcb0fd78c019fea886f4975973abbcc5aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
 此範本類別描述函式，呼叫時，則傳回 true 的第一個引數和第二個測試為 true 時，才。 您可以使用它指定其引數類型方面的函式物件。  
@@ -125,5 +128,5 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)

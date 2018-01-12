@@ -69,11 +69,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08e3cd90e4c86365694c098973f45d667621ea98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d65be96e49d5f6cceeb6b61259cb790d4265978d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 設定檔案修改時間。  
@@ -160,13 +161,13 @@ int _wutime64(
   
 ## <a name="requirements"></a>需求  
   
-|常式|必要標頭|選擇性標頭|  
+|常式傳回的值|必要標頭|選擇性標頭|  
 |-------------|----------------------|----------------------|  
 |`_utime`, `_utime32`, `_utime64`|\<sys/utime.h>|\<errno.h>|  
 |`_utime64`|\<sys/utime.h>|\<errno.h>|  
 |`_wutime`|\<utime.h> 或 \<wchar.h>|\<errno.h>|  
   
- 如需相容性的詳細資訊，請參閱＜簡介＞中的[相容性](../../c-runtime-library/compatibility.md)。  
+ 如需其他相容性資訊，請參閱＜簡介＞中的 [相容性](../../c-runtime-library/compatibility.md) 。  
   
 ## <a name="example"></a>範例  
  此程式會使用 `_utime`，以將檔案修改時間設為目前時間。  
@@ -238,7 +239,7 @@ File time modified
                0 Dir(s)  20,742,955,008 bytes free  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [時間管理](../../c-runtime-library/time-management.md)   
  [asctime、_wasctime](../../c-runtime-library/reference/asctime-wasctime.md)   
  [ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)   

@@ -1,34 +1,37 @@
 ---
-title: "轉換運算子的變更 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "轉換運算子"
-  - "轉換, explicit"
-  - "explicit 關鍵字 [C++]"
-  - "運算子 [C++], 明確類型轉換"
-  - "類型轉換, 明確轉換"
+title: "變更為轉換運算子 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- conversion operators
+- operators [C++], explicit type conversion
+- type conversion, explicit conversions
+- conversions, explicit
+- explicit keyword [C++]
 ms.assetid: 9b83925c-71b7-4bd3-ac2e-843dd7c7f184
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f89c49035e2e48dde8d502b1d61fa33d198f69a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 轉換運算子的變更
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-從 Managed Extensions for C\+\+ 升級為 [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 之後，轉換運算子的語法已變更。  
+# <a name="changes-to-conversion-operators"></a>轉換運算子的變更
+轉換運算子的語法已從 Managed Extensions for c + + Visual c + +。  
   
- 一個範例是撰寫 `op_Implicit` 來指定轉換。  下列是取自語言規格之 `MyDouble` 的定義：  
+ 其中一個範例是撰寫`op_Implicit`指定轉換。 以下是定義`MyDouble`取自語言規格：  
   
 ```  
 __gc struct MyDouble {  
@@ -38,9 +41,9 @@ __gc struct MyDouble {
 };  
 ```  
   
- 這是指，如果指定一個整數，則將該整數轉換為 `MyDouble` 的演算法是由 `op_Implicit` 運算子提供。  此外，該轉換必須由編譯器 \(Compiler\) 隱含地執行。  同樣地，若指定 `MyDouble` 物件，則兩個 `op_Explicit` 運算子會提供個別的運算法，以便將該物件轉換為整數或 Managed `String` 實體 \(Entity\)。  不過，只有在使用者明確要求時，編譯器才會執行這項轉換。  
+ 這指出可在指定的整數，將轉換成整數的演算法`MyDouble`係由`op_Implicit`運算子。 此外，該轉換會隱含地執行編譯器。 同樣地，指定`MyDouble`物件，這兩個`op_Explicit`運算子提供的個別演算法將該物件轉換為整數或 managed`String`實體。 不過，編譯器不會執行轉換，除非使用者明確要求。  
   
- 在 C\# 中，程式碼看起來如下：  
+ 在 C# 中，這看起來如下：  
   
 ```  
 class MyDouble {  
@@ -50,13 +53,13 @@ class MyDouble {
 };  
 ```  
   
- C\# 程式碼看起比 Managed Extensions for C\+\+ 更像 C\+\+，  但採用新語法之後就不是這樣了。  
+ C# 程式碼看起來更像 c + + Managed Extensions for c + + 一樣。 這不是新語法中的案例。  
   
- ISO\-C\+\+ 委員會引入 `explicit` 關鍵字，來減輕誤用的後果，例如 `Array` 類別會接收單一整數引數做為維度，此類別會隱含將任何整數轉換成 `Array` 物件，而這並不是您要的。  這裡的一個防止方法就是依設計慣例，為建構函式引進空的第二個引數。  
+ ISO c + + committee 導入關鍵字`explicit`，來降低非預期的結果集，例如`Array`類別可接受單一整數引數，因為維度會隱含地轉換成任何整數`Array`物件的是不是您想要的功能相同。 為防止這個情況的其中一個方法是虛擬的第二個引數的建構函式的設計用語  
   
- 另一方面，您在 C\+\+ 中設計類別型別時不應該提供轉換組。  最好的範例就是標準字串類別。  隱含轉換就是使用 C\-Style 字串的單一引數建構函式。  然而，它不會提供對應的隱含轉換運算子 \(將字串物件轉換為 C\-Style 字串的運算子\)，但是會要求使用者必須明確地叫用 \(Invoke\) 具名函式，在此情況下為 `c_str()`。  
+ 相反地，您不應提供一組轉換設計在 c + + 類別型別時。 最好的範例，這是標準字串類別。 隱含轉換為單一引數建構函式接受 C 樣式字串。 不過，它不提供對應的隱含轉換運算子-，轉換為字串的物件為 C 樣式字串，但是會要求明確叫用具名函式-在此情況下，使用者`c_str()`。  
   
- 所以，建立轉換運算子上隱含\/明確行為的關聯性 \(而且隨著將一組轉換封裝成單一的宣告形式\) 似乎改善了原本 C\+\+ 的轉換運算子支援，最終不免產生 `explicit` 關鍵字。  [!INCLUDE[cpp_current_long](../Token/cpp_current_long_md.md)] 語言對轉換運算子的支援如下所示，它比 C\# 的轉換運算子更為簡潔，因為運算子的預設行為支援轉換演算法的隱含使用：  
+ 因此，將相關聯的轉換運算子 （以及將封裝轉換成單一的宣告形式的集合） 的隱含/明確行為似乎是原始的 c + + 支援的轉換運算子，最終導致改善`explicit`關鍵字。 轉換運算子的 Visual c + + 語言支援，如下所示，外觀的轉換演算法的隱含應用程式支援的運算子的預設行為因為這是比 C#:  
   
 ```  
 ref struct MyDouble {  
@@ -67,7 +70,7 @@ public:
 };  
 ```  
   
- 另一項變更是，單一引數建構函式被視為宣告為 `explicit` 處理。  這表示必須經過明確轉換，才會觸發 \(Trigger\) 引動過程。  不過，請注意，如果定義明確轉換運算子，則會叫用明確轉換運算子，而不會叫用單一引數建構函式。  
+ 另一項變更是，單一引數的建構函式會被視為宣告為`explicit`。 這表示，以便觸發其引動過程，明確轉換，就需要。 不過請注意，是否定義明確的轉換運算子，它並沒有單一引數建構函式，會叫用。  
   
-## 請參閱  
- [在類別或介面中的成員宣告 \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>請參閱  
+ [在類別或介面中的成員宣告 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

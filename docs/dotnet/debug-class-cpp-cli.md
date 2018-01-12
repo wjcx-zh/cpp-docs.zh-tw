@@ -1,41 +1,43 @@
 ---
-title: "Debug 類別 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], Debug 類別"
-  - "Debug 類別"
-  - "Trace 類別, Visual C++"
+title: "Debug 類別 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Trace class, Visual C++
+- .NET Framework [C++], Debug class
+- Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 236a40873d3cbd660f9999880d46df4f91632b2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Debug 類別 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在 Visual C\+\+ 應用程式中使用 <xref:System.Diagnostics.Debug> 時，偵錯的組建 \(Debug Build\) 和發行的組建 \(Release Build\) 之間行為並未變更。  
+# <a name="debug-class-ccli"></a>Debug 類別 (C++/CLI)
+當使用<xref:System.Diagnostics.Debug>Visual c + + 應用程式中的行為不會偵錯和發行組建之間變更。  
   
-## 備註  
- <xref:System.Diagnostics.Trace> 的行為與偵錯類別的行為完全相同，只是必須根據所定義的符號 TRACE 而定，  也就是說，您必須使用 `#ifdef` 定義任何與 Trace 相關的程式碼，才可以在發行的組建中避免偵錯行為。  
+## <a name="remarks"></a>備註  
+ 行為<xref:System.Diagnostics.Trace>偵錯類別的行為相同，但是相依於追蹤所定義的符號。 這表示，您必須使用`#ifdef`任何與追蹤相關的程式碼來避免在發行組建的偵錯行為。  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 下列範例一定會執行輸出陳述式，不論您是以 **\/DDEBUG** 還是 **\/DTRACE** 進行編譯。  
+### <a name="description"></a>描述  
+ 下列範例執行的速度輸出陳述式，不論您是否使用編譯**/DDEBUG**或**/DTRACE**。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // mcpp_debug_class.cpp  
@@ -57,7 +59,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>輸出  
   
 ```  
     Entering Main  
@@ -66,12 +68,12 @@ Hello World.
 test  
 ```  
   
-## 範例  
+## <a name="example"></a>範例  
   
-### 說明  
- 若要達到預期的行為 \(也就是不為發行的組建列印 "test" 輸出\)，您必須使用 `#ifdef` 和 `#endif` 指示詞。  以下是之前程式碼範例的修正，以示範這種修復 \(Fix\)：  
+### <a name="description"></a>描述  
+ 若要取得預期的行為 （也就是沒有 「 測試 」 的輸出列印的發行組建），您必須使用`#ifdef`和`#endif`指示詞。 上述程式碼範例示範此修正修改如下：  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 // mcpp_debug_class2.cpp  
@@ -98,5 +100,5 @@ int main() {
 }  
 ```  
   
-## 請參閱  
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

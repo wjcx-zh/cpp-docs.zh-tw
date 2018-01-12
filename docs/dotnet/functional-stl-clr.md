@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7e80a97ca54dae725a31e9d203ecd4710a4c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8e731767401964045307635a428d7606d628aca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 包括 STL/CLR 標頭`<cliext/functional>`來定義範本類別和相關的範本委派函式的數目。  
@@ -35,14 +38,14 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="declarations"></a>宣告  
   
-|委派|說明|  
+|Delegate - 委派|描述|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)|兩個引數的委派。|  
 |[binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)|傳回兩個引數委派`void`。|  
 |[unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)|其中一個引數的委派。|  
 |[unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)|傳回的單一引數委派`void`。|  
   
-|類別|說明|  
+|類別|描述|  
 |-----------|-----------------|  
 |[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)|要變換正負號的雙引數函式的函式。|  
 |[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)|若要將第一個引數繫結至兩個引數函式的函式。|  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/24/2017
 |[plus (STL/CLR)](../dotnet/plus-stl-clr.md)|新增仿函式。|  
 |[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)|要變換正負號的單一引數函式的函式。|  
   
-|函式|說明|  
+|功能|描述|  
 |--------------|-----------------|  
 |[bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)|會產生 binder1st 引數和函式。|  
 |[bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)|會產生 binder2nd 引數和函式。|  
@@ -76,5 +79,5 @@ ms.lasthandoff: 10/24/2017
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [STL/CLR 程式庫參考](../dotnet/stl-clr-library-reference.md)

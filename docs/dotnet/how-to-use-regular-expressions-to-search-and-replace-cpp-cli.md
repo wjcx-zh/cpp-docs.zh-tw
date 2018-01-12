@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f66df471d66a82a565fc5c072757664567d1f25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>如何：使用規則運算式進行搜尋和取代 (C++/CLI)
 下列程式碼範例示範如何規則運算式類別<xref:System.Text.RegularExpressions.Regex>可用來執行搜尋和取代。 做法是使用<xref:System.Text.RegularExpressions.Regex.Replace%2A>方法。 使用的版本會採用兩個字串做為輸入： 將修改字串和要插入的區段取代 （如果有的話） 字串的比對模式提供給<xref:System.Text.RegularExpressions.Regex>物件。  
@@ -54,6 +57,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.NET Framework 規則運算式](/dotnet/standard/base-types/regular-expressions)   
  [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

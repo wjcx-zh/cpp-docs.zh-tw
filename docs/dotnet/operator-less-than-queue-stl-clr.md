@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8706d0f4c4ee2aa0a01fa9b260771d799290f6ed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a4cebd9330dd58d93a0afa4b87ed09ddeab51373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operatorlt-queue-stlclr"></a>運算子&lt;（佇列） (STL/CLR)
 佇列小於比較。  
@@ -95,7 +98,7 @@ int main()
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
  [運算子 = = （佇列） (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
  [運算子 ！ = (queue) (STL/CLR)](../dotnet/operator-inequality-queue-stl-clr.md)   

@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d395b6981e167bf759e0e26577dca962632a22c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44179c3c34207b8f1bf3abbef2efd9505df47181
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 類別
 **Microsoft 特定的**  
@@ -63,12 +64,12 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比較智慧型指標物件與另一個智慧型指標、 一般介面指標或**NULL**。|  
 |[擷取器](../cpp/com-ptr-t-extractors.md)|擷取封裝的 COM 介面指標。|  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
  **標頭：** comip.h  
   
  **Lib:** comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)

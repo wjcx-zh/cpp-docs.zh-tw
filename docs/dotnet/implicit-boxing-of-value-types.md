@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f489c686a182840e142264476c3906d0cbfe97b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0c4725cdd7e8630131f77e02eedc2af14a469d20
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implicit-boxing-of-value-types"></a>實值類型的隱含 Boxing
 實值類型的 boxing 已從 Managed Extensions for c + + Visual c + +。  
@@ -64,6 +67,6 @@ Console::WriteLine( "{0}\t{1}\t{2}", 0,
    my1DIntArray->GetUpperBound( 0 ) );  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實值類型和它們的行為 (C + + /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [Boxing](../windows/boxing-cpp-component-extensions.md)

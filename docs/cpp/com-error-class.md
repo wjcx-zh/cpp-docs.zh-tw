@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_error
-dev_langs:
-- C++
-helpviewer_keywords:
-- _com_error class
+f1_keywords: _com_error
+dev_langs: C++
+helpviewer_keywords: _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 670be1988adb3ef5afa9113b9988ceafb249801f
-ms.contentlocale: zh-tw
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerror-class"></a>_com_error 類別
 **Microsoft 特定的**  
@@ -55,7 +51,7 @@ ms.lasthandoff: 09/25/2017
   
 |||  
 |-|-|  
-|[說明](../cpp/com-error-description.md)|呼叫`IErrorInfo::GetDescription`函式。|  
+|[描述](../cpp/com-error-description.md)|呼叫`IErrorInfo::GetDescription`函式。|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|呼叫`IErrorInfo::GetHelpContext`函式。|  
 |[說明檔](../cpp/com-error-helpfile.md)|呼叫`IErrorInfo::GetHelpFile`函式|  
 |[Source](../cpp/com-error-source.md)|呼叫`IErrorInfo::GetSource`函式。|  
@@ -74,13 +70,13 @@ ms.lasthandoff: 09/25/2017
 |[HRESULTToWCode](../cpp/com-error-hresulttowcode.md)|32 位元會對應`HRESULT`至 16 位元`wCode`。|  
 |[WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)|將 16 位元的 `wCode` 對應至 32 位元的 `HRESULT`。|  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
 ## <a name="requirements"></a>需求  
  **標頭：** comdef.h  
   
  `Lib:`comsuppw.lib 或 comsuppwd.lib (請參閱[/zc: wchar_t （wchar_t 是原生類型）](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)如需詳細資訊)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器 COM 支援類別](../cpp/compiler-com-support-classes.md)   
  [IErrorInfo 介面](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

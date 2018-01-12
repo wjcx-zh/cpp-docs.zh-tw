@@ -1,36 +1,37 @@
 ---
-title: "auto_handle::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::operator="
-  - "msclr.auto_handle.operator="
-  - "msclr::auto_handle::operator="
-  - "auto_handle.operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator="
+title: "auto_handle::operator = |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::operator=
+- msclr.auto_handle.operator=
+- msclr::auto_handle::operator=
+- auto_handle.operator=
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator=
 ms.assetid: 503ca172-e766-4a78-af98-36fd48c931ee
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d7f4e8ef0408f6358b8e7978d4327d6836cc722
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleoperator"></a>auto_handle::operator=
 指派運算子。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 auto_handle<_element_type> % operator=(  
@@ -42,14 +43,14 @@ auto_handle<_element_type> % operator=(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_right`  
- 將指定的 `auto_handle` 套用至目前 `auto_handle`。  
+ `auto_handle`要指派給目前`auto_handle`。  
   
-## 傳回值  
- 目前的 `auto_handle`，現在擁有 `_right`。  
+## <a name="return-value"></a>傳回值  
+ 目前`auto_handle`，現在擁有`_right`。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // msl_auto_handle_op_assign.cpp  
@@ -99,18 +100,21 @@ int main()
 }  
 ```  
   
-  **in ClassA constructor:first**  
-**Hello from first A\!**  
-**in ClassA constructor: second**  
-**Hello from second B\!**  
-**in ClassA destructor:first**  
-**Hello from second A\!**  
-**done**  
-**in ClassA destructor: second**   
-## 需求  
- **標頭檔** \<msclr \\ auto\_handle.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+Hello from second B!  
+in ClassA destructor: first  
+Hello from second A!  
+done  
+in ClassA destructor: second  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\auto_handle.h >  
   
-## 請參閱  
- [auto\_handle 成員](../dotnet/auto-handle-members.md)
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>請參閱  
+ [auto_handle 成員](../dotnet/auto-handle-members.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 91f79a2703dee8a162b971a78eba7e13a9849b43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>數值、 布林值和指標常值 （c + +）
 常值是直接代表值的程式項目。 本文涵蓋整數、浮點、布林值和指標類型的常值。 字串和字元常值的相關資訊，請參閱[字串和字元常值 （c + +）](../cpp/string-and-character-literals-cpp.md)。 您也可以定義任何分類，根據您自己常值如需詳細資訊，請參閱[使用者定義常值 （c + +）](../cpp/user-defined-literals-cpp.md)  
@@ -45,7 +46,7 @@ MyClass* mc = nullptr;      // pointer literal
   
  沒有前置詞或後置詞時，如果值符合，則編譯器會為整數提供常值型別 `int` (32 位元)，否則它會提供 `long long` (64 位元)。  
   
- 若要指定十進位整數常值，請使用非零數字開始指定。 例如：  
+ 若要指定十進位整數常值，請使用非零數字開始指定。 例如:   
   
 ```  
 int i = 157;   // Decimal literal  
@@ -55,7 +56,7 @@ int m = 36'000'000  // digit separators make large values more readable
 int   
 ```  
   
- 若要指定八進位整數常值，請使用 0 開始指定，後接範圍 0 到 7 的一連串數字。 數字 8 和 9 是在指定八進位常值中的錯誤。 例如：  
+ 若要指定八進位整數常值，請使用 0 開始指定，後接範圍 0 到 7 的一連串數字。 數字 8 和 9 是在指定八進位常值中的錯誤。 例如:   
   
 ```  
 int i = 0377;   // Octal literal  
@@ -145,7 +146,7 @@ if (num < 100)
   
  在先前的範例中，可能最好使用傳達清楚意義的具名常數 (例如 "MAXIMUM_ERROR_THRESHOLD")。 而且，如果使用者看到傳回值「成功」，則可能最好使用具名字串常數，而具名字串常數可以儲存於可將其當地語系化為其他語言之檔案的單一位置中。 使用具名常數，可協助他人和您自己了解程式碼的用途。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [語彙慣例](../cpp/lexical-conventions.md)   
  [C + + 字串常值](../cpp/string-and-character-literals-cpp.md)   
  [C + + 使用者定義常值](../cpp/user-defined-literals-cpp.md)

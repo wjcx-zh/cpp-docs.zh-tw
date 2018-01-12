@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85f26c61e1e4fa996f73b4f61f4f961ba59dec98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9974b86f99164257e854bffd07393b96998040ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="casting"></a>轉型
 C++ 語言會假設，如果類別是從包含虛擬函式的基底類別衍生，則該基底類別類型的指標可以用來呼叫衍生類別物件內虛擬函式的實作。 包含虛擬函式的類別有時稱為「多型類別」(Polymorphic Class)。  
@@ -52,5 +53,5 @@ C++ 語言會假設，如果類別是從包含虛擬函式的基底類別衍生�
   
 -   [執行階段類型資訊](../cpp/run-time-type-information.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算式](../cpp/expressions-cpp.md)

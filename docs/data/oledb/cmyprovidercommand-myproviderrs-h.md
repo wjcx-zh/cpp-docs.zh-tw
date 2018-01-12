@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 68846352d3e6b407a4ec7ef6b7993969371a89de
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
 `CMyProviderCommand`類別是提供者命令物件的實作。 它提供的實作`IAccessor`， `ICommandText`，和**ICommandProperties**介面。 `IAccessor`介面是一個資料列集相同。 命令物件會使用存取子，指定繫結參數。 資料列集物件會使用它們來指定繫結的輸出資料行。 `ICommandText`介面是有用的方式，指定的命令加 1。 這個範例會使用`ICommandText`稍後介面時，它會加入自訂程式碼; 它也會覆寫`ICommand::Execute`方法。 **ICommandProperties**介面會處理所有命令和資料列集物件的屬性。  
@@ -47,5 +50,5 @@ class ATL_NO_VTABLE CMyProviderCommand :
   
  提供者也包含稱為介面`IObjectWithSite`。 `IObjectWithSite`介面 ATL 2.0 中已實作，並可讓實作器決定將與其本身相關的資訊傳遞給它的子系。 命令物件會使用`IObjectWithSite`資訊來判斷任何產生資料列集物件，關於建立者是誰。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [提供者精靈產生的檔案](../../data/oledb/provider-wizard-generated-files.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 71cd25420f25e5069b874d382df9c0d6fb92e7d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e668756e8cabafbdef522d6754487efe452f96de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switch-statement-c"></a>switch 陳述式 (C++)
 根據整數運算式的值，允許在多個程式碼區段中選取範圍。  
@@ -127,7 +128,7 @@ int main()
         };
 ```
 
- 只要初始化是可執行到的，也就是所有可能的執行路徑都不略過，`switch` 陳述式的內部區塊可以包含有初始化的定義。 使用這些宣告引入的名稱有區域範圍。 例如：  
+ 只要初始化是可執行到的，也就是所有可能的執行路徑都不略過，`switch` 陳述式的內部區塊可以包含有初始化的定義。 使用這些宣告引入的名稱有區域範圍。 例如:   
   
 ```cpp  
 // switch_statement2.cpp  
@@ -170,9 +171,9 @@ int main(int argc, char *argv[])
   
  Microsoft C 預設會啟用 Microsoft 擴充功能。 使用[/Za](../build/reference/za-ze-disable-language-extensions.md)編譯器選項，來停用這些擴充功能。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [選擇陳述式](../cpp/selection-statements-cpp.md)   
  [關鍵字](../cpp/keywords-cpp.md)   
  

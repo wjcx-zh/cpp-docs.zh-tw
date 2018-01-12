@@ -14,11 +14,12 @@ caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e33918193e92e432845052f875cba2e4baf22600
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 307ce6ab87ca36de561ebcf1ad8bd30eb73e4192
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr c + + 中的 Lambda 運算式
 **Visual Studio 2017 15.3 和更新版本**(適用於[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 可能會做為宣告的 lambda 運算式`constexpr`或 contant 運算式中使用時的每個資料成員初始設定它擷取或導入了常數運算式中允許使用。  
@@ -57,7 +58,7 @@ Lambda 會隱含地`constexpr`如果它的結果符合需求的`constexpr`函式
     constexpr int(*inc)(int) = Increment;
 ```
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + 語言參考](../cpp/cpp-language-reference.md)   
  [C + + 標準程式庫中的函式物件](../standard-library/function-objects-in-the-stl.md)   
  [函式呼叫](../cpp/function-call-cpp.md)   

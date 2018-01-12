@@ -1,41 +1,42 @@
 ---
-title: "list::iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iterator 成員 [STL/CLR]"
+title: "list:: iterator (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::iterator
+dev_langs: C++
+helpviewer_keywords: iterator member [STL/CLR]
 ms.assetid: a62893c5-a53c-48ca-9f95-1eb3306b5ddf
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 31ce5165c9f6168b1dcfa708282babf8e64e3ac2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# list::iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-受控制序列中 iterator 的類型。  
+# <a name="listiterator-stlclr"></a>list::iterator (STL/CLR)
+受控制序列之迭代器的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef T1 iterator;  
 ```  
   
-## 備註  
- 此型別描述其可以為此控制序列當做隨機讀取迭代器之未指定型別 `T1` 的物件。  
+## <a name="remarks"></a>備註  
+ 此類型描述未指定類型的物件`T1`，可做為受控制序列之隨機存取迭代器。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_list_iterator.cpp   
@@ -66,13 +67,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **x b c**   
-## 需求  
- **標頭 ：** \<cliext\/list\>  
+```Output  
+a b c  
+x b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/清單 >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [list](../dotnet/list-stl-clr.md)   
- [list::const\_iterator](../dotnet/list-const-iterator-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [清單 (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)

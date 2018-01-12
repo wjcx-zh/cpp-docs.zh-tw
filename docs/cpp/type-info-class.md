@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 61e26b60916712e10c1c0fa5b255aa7bf2bc1fd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9cd5a1844bfeec798ee25a3cb8e65efd019e65e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typeinfo-class"></a>type_info 類別
 **Type_info**類別描述編譯器所產生的程式中的型別資訊。 這個類別的物件會實際儲存類型的名稱指標。 **Type_info**類別也會儲存編碼的值，適用於比較是否相等的兩個型別或其排序順序。 類型的編碼規則和排序法則不會指定，而且在不同的程式之間也會有所差異。  
@@ -55,5 +56,5 @@ public:
   
  多型類別才會產生型別資訊[/GR （啟用執行階段類型資訊）](../build/reference/gr-enable-run-time-type-information.md)編譯器選項已指定。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行階段類型資訊](../cpp/run-time-type-information.md)

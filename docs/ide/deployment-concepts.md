@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3b3aaf970e51f867d36cae288e8d025730093937
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b40865266548067e2dda3782e66802c0dbe2844e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deployment-concepts"></a>部署概念
 本章節將討論部署 c + + 應用程式的主要考量。  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [疑難排解 C/c + + 隔離應用程式和-並存組件](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)   
  [了解 Visual c + + 應用程式的相依性](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)   
  [Windows Installer 部署](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)

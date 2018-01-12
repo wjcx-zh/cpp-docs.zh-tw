@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 80a9fbeb3609f10f0f10b050b8e59601045396c0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44634bd99e485e444ffe9cee7747f31374becf4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-warning-lnk4049"></a>連結器工具警告 LNK4049
 本機定義的符號 'symbol' 匯入  
@@ -77,6 +78,6 @@ int main()
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [連結器工具警告 LNK4217](../../error-messages/tool-errors/linker-tools-warning-lnk4217.md)   
  [dllexport、dllimport](../../cpp/dllexport-dllimport.md)

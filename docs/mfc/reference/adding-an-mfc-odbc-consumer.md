@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb3cfd8a2f8f4c28892962f451501245f14aa41c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d9aa31db069479a35b6a06335d95d1260c7a6e89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>加入 MFC ODBC 消費者
 MFC ODBC 消費者包含 ODBC 資料錄集類別和資料繫結的必要存取資料來源。  
@@ -35,6 +36,6 @@ MFC ODBC 消費者包含 ODBC 資料錄集類別和資料繫結的必要存取�
   
 4.  按一下**完成**關閉精靈，將您的專案中插入新建立的 ODBC 消費者程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

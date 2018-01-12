@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1781d5c5bba0d818111673594a5526354a490bd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec7d357d53cb93ad5ba81c02fc3ccf1931cdd1cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-debug-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>從現有的程式碼檔建立新專案精靈、指定偵錯組態設定
 使用 從現有的程式碼檔建立新專案精靈的這個頁面來指定偵錯組態專案設定。  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
  指定新專案的偵錯組態的輸出檔的目錄路徑。 會啟用此選項時**使用外部建置系統**中選取選項**指定專案設定**頁面; 否則就無法使用。  
   
  **前置處理器定義 (/ D)**  
- 定義前置處理器符號為新的專案。 如需詳細資訊，請參閱 [/D (前置處理器定義)](../build/reference/d-preprocessor-definitions.md)。  
+ 定義前置處理器符號為新的專案。 如需詳細資訊，請參閱 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)。  
   
  **包含搜尋路徑 (/ I)**  
  指定要加入的編譯器要搜尋的目錄清單來解析檔案參考傳遞至新的專案中的前置處理器指示詞的目錄路徑。 如需詳細資訊，請參閱 [/I (其他 Include 目錄)](../build/reference/i-additional-include-directories.md)。  
@@ -54,5 +55,5 @@ ms.lasthandoff: 10/24/2017
  **強制使用.NET 組件 (/ FU)**  
  指定要處理時建置新專案的.NET 組件。 如需詳細資訊，請參閱 [/FU (指定強制的 #using 檔)](../build/reference/fu-name-forced-hash-using-file.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [從現有的程式碼檔建立新專案精靈、指定專案設定](../ide/specify-project-settings-create-new-project-from-existing-code-files-wizard.md)

@@ -1,76 +1,77 @@
 ---
-title: "_InterlockedCompareExchange 內建函式 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_InterlockedCompareExchange_HLERelease"
-  - "_InterlockedCompareExchange8_nf"
-  - "_InterlockedCompareExchange16_acq_cpp"
-  - "_InterlockedCompareExchange_acq_cpp"
-  - "_InterlockedCompareExchange16_rel_cpp"
-  - "_InterlockedCompareExchange64_rel_cpp"
-  - "_InterlockedCompareExchange_cpp"
-  - "_InterlockedCompareExchange16_cpp"
-  - "_InterlockedCompareExchange64_acq_cpp"
-  - "_InterlockedCompareExchange_acq"
-  - "_InterlockedCompareExchange64_rel"
-  - "_InterlockedCompareExchange64_nf"
-  - "_InterlockedCompareExchange_rel_cpp"
-  - "_InterlockedCompareExchange16_nf"
-  - "_InterlockedCompareExchange8"
-  - "_InterlockedCompareExchange64_np"
-  - "_InterlockedCompareExchange16_rel"
-  - "_InterlockedCompareExchange64_acq"
-  - "_InterlockedCompareExchange8_rel"
-  - "_InterlockedCompareExchange_HLEAcquire"
-  - "_InterlockedCompareExchange64_HLERelease"
-  - "_InterlockedCompareExchange64_cpp"
-  - "_InterlockedCompareExchange_np"
-  - "_InterlockedCompareExchange8_acq"
-  - "_InterlockedCompareExchange16_acq"
-  - "_InterlockedCompareExchange_rel"
-  - "_InterlockedCompareExchange64_HLEAcquire"
-  - "_InterlockedCompareExchange64"
-  - "_InterlockedCompareExchange16"
-  - "_InterlockedCompareExchange"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建的 _InterlockedCompareExchange"
-  - "內建的 _InterlockedCompareExchange_acq"
-  - "內建的 _InterlockedCompareExchange_rel"
-  - "內建的 _InterlockedCompareExchange16"
-  - "內建的 _InterlockedCompareExchange64"
-  - "內建的 _InterlockedCompareExchange64_acq"
-  - "內建的 _InterlockedCompareExchange64_rel"
-  - "內建的 InterlockedCompareExchange"
-  - "內建的 InterlockedCompareExchange_acq"
-  - "內建的 InterlockedCompareExchange_rel"
-  - "內建的 InterlockedCompareExchange16"
-  - "內建的 InterlockedCompareExchange64"
-  - "內建的 InterlockedCompareExchange64_acq"
-  - "內建的 InterlockedCompareExchange64_rel"
+title: "_InterlockedCompareExchange 內建函式 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _InterlockedCompareExchange_HLERelease
+- _InterlockedCompareExchange8_nf
+- _InterlockedCompareExchange16_acq_cpp
+- _InterlockedCompareExchange_acq_cpp
+- _InterlockedCompareExchange16_rel_cpp
+- _InterlockedCompareExchange64_rel_cpp
+- _InterlockedCompareExchange_cpp
+- _InterlockedCompareExchange16_cpp
+- _InterlockedCompareExchange64_acq_cpp
+- _InterlockedCompareExchange_acq
+- _InterlockedCompareExchange64_rel
+- _InterlockedCompareExchange64_nf
+- _InterlockedCompareExchange_rel_cpp
+- _InterlockedCompareExchange16_nf
+- _InterlockedCompareExchange8
+- _InterlockedCompareExchange64_np
+- _InterlockedCompareExchange16_rel
+- _InterlockedCompareExchange64_acq
+- _InterlockedCompareExchange8_rel
+- _InterlockedCompareExchange_HLEAcquire
+- _InterlockedCompareExchange64_HLERelease
+- _InterlockedCompareExchange64_cpp
+- _InterlockedCompareExchange_np
+- _InterlockedCompareExchange8_acq
+- _InterlockedCompareExchange16_acq
+- _InterlockedCompareExchange_rel
+- _InterlockedCompareExchange64_HLEAcquire
+- _InterlockedCompareExchange64
+- _InterlockedCompareExchange16
+- _InterlockedCompareExchange
+dev_langs: C++
+helpviewer_keywords:
+- _InterlockedCompareExchange16 intrinsic
+- _InterlockedCompareExchange_acq intrinsic
+- InterlockedCompareExchange_acq intrinsic
+- _InterlockedCompareExchange intrinsic
+- InterlockedCompareExchange64 intrinsic
+- _InterlockedCompareExchange64_acq intrinsic
+- InterlockedCompareExchange16 intrinsic
+- _InterlockedCompareExchange_rel intrinsic
+- InterlockedCompareExchange intrinsic
+- InterlockedCompareExchange64_acq intrinsic
+- InterlockedCompareExchange_rel intrinsic
+- _InterlockedCompareExchange64 intrinsic
+- InterlockedCompareExchange64_rel intrinsic
+- _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-caps.latest.revision: 26
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "26"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e6a29141e233e7e95cc35e6229e9bd37237cf1d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# _InterlockedCompareExchange 內建函式
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange 內建函式
 **Microsoft 特定的**  
   
  執行連鎖比較和交換。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 long _InterlockedCompareExchange(  
@@ -185,47 +186,47 @@ __int64 _InterlockedCompareExchange64_rel(
 );  
 ```  
   
-#### 參數  
- \[in、out\] `Destination`  
- 目的地值的指標。  會忽略正負號。  
+#### <a name="parameters"></a>參數  
+ [in、out] `Destination`  
+ 目的地值的指標。 會忽略正負號。  
   
- \[in\] `Exchange`  
- 交換值。  會忽略正負號。  
+ [in] `Exchange`  
+ 交換值。 會忽略正負號。  
   
- \[in\] `Comparand`  
- 要與目的地比較的值。  會忽略正負號。  
+ [in] `Comparand`  
+ 要與目的地比較的值。 會忽略正負號。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  傳回值是 `Destination` 指標的初始值。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|標頭|  
-|--------|--------|--------|  
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
-|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h\>|  
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h\>|  
-|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h\>|  
+|---------------|------------------|------------|  
+|`_InterlockedCompareExchange`、`_InterlockedCompareExchange8`、`_InterlockedCompareExchange16``_InterlockedCompareExchange64`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h >|  
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<intrin.h >|  
+|`_InterlockedCompareExchange_HLEAcquire`、`_InterlockedCompareExchange_HLERelease`、`_InterlockedCompareExchange64_HLEAcquire``_InterlockedCompareExchange64_HLERelease`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<immintrin.h >|  
   
-## 備註  
- `_InterlockedCompareExchange` 會執行不可部分完成的 `Destination` 值與 `Comparand` 值的比較。  如果 `Destination` 值等於 `Comparand` 值，則 `Exchange` 值會儲存在 `Destination` 所指定的位址。  否則，不會執行任何作業。  
+## <a name="remarks"></a>備註  
+ `_InterlockedCompareExchange` 會執行不可部分完成的 `Destination` 值與 `Comparand` 值的比較。 如果 `Destination` 值等於 `Comparand` 值，則 `Exchange` 值會儲存在 `Destination` 所指定的位址。 否則，不會執行任何作業。  
   
- `_InterlockedCompareExchange` 提供 Win32 [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx) 函式的編譯器內建支援。  
+ `_InterlockedCompareExchange`提供 Win32 的編譯器內建支援[!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] [InterlockedCompareExchange](http://msdn.microsoft.com/library/ms683560.aspx)函式。  
   
  在 `_InterlockedCompareExchange` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。  
   
  `_InterlockedCompareExchange` 函式在長整數值上運算；`_InterlockedCompareExchange8` 在 8 位元整數值上運算；`_InterlockedCompareExchange16` 在短整數值上運算；`_InterlockedCompareExchange64` 在 64 位元整數值上運算。  
   
- 在 ARM 平台上，搭配取得和釋放語意的 `_acq` 和 `_rel` 字尾使用內建函式，例如在重要區段的開頭和結尾處。  搭配 `_nf` \(「無範圍」\) 字尾的 ARM 內建函式不會當做記憶體屏障。  
+ 在 ARM 平台上，搭配取得和釋放語意的 `_acq` 和 `_rel` 字尾使用內建函式，例如在重要區段的開頭和結尾處。 搭配 `_nf` (「無範圍」) 字尾的 ARM 內建函式不會當做記憶體屏障。  
   
- 搭配 `_np` \(「不預先擷取」\) 字尾使用內建函式，可避免編譯器插入可能的預先提取作業。  
+ 搭配 `_np` (「不預先擷取」) 字尾使用內建函式，可避免編譯器插入可能的預先提取作業。  
   
- 在支援 Hardware Lock Elision \(HLE\) 指令的 Intel 平台上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 \(lock write\) 的階段以加速效能。  如果在不支援 HLE 的平台上呼叫這些內建函式，會忽略該提示。  
+ 在支援 Hardware Lock Elision (HLE) 指令的 Intel 平台上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 (lock write) 的階段以加速效能。 如果在不支援 HLE 的平台上呼叫這些內建函式，會忽略該提示。  
   
- 這些常式只可做為內建函式。  
+ 這些常式僅以內建函式的形式供您使用。  
   
-## 範例  
- 在下列範例中，`_InterlockedCompareExchange` 會用於簡單的低層級執行緒同步處理。  此方法針對多執行緒程式設計有其基礎限制；它會以示範連鎖內建函式的一般用法的方式呈現。  為求最佳結果，請使用 Windows API。  如需多執行緒程式設計的進一步資訊，請參閱[撰寫多執行緒 Win32 程式](../parallel/writing-a-multithreaded-win32-program.md)。  
+## <a name="example"></a>範例  
+ 在下列範例中，`_InterlockedCompareExchange` 會用於簡單的低層級執行緒同步處理。 此方法針對多執行緒程式設計有其基礎限制；它會以示範連鎖內建函式的一般用法的方式呈現。 為求最佳結果，請使用 Windows API。 如需多執行緒程式設計的詳細資訊，請參閱[撰寫多執行緒 Win32 程式](../parallel/writing-a-multithreaded-win32-program.md)。  
   
 ```  
 // intrinExample.cpp  
@@ -403,41 +404,44 @@ int main(
 }  
 ```  
   
-  **\<0**  
-**\<1**  
-**\<2**  
-**\<3**  
-**\<4**  
-**\<5**  
-**\<6**  
-**\<7**  
-**\<8**  
-**\<9**  
-**\<10**  
-**\<11**  
-**\<12**  
-**\<13**  
-**\<14**  
-**\<15**  
-**\<16**  
-**\<17**  
-**\<18**  
-**\<19**  
-**\<20**  
-**\<21**  
-**\<22**  
-**\<23**  
-**\<24**  
-**\<25**  
-**\<26**  
-**\<27**  
-**\<28**  
-**\<29**   
-## END Microsoft 特定的  
+```Output  
+<0  
+<1  
+<2  
+<3  
+<4  
+<5  
+<6  
+<7  
+<8  
+<9  
+<10  
+<11  
+<12  
+<13  
+<14  
+<15  
+<16  
+<17  
+<18  
+<19  
+<20  
+<21  
+<22  
+<23  
+<24  
+<25  
+<26  
+<27  
+<28  
+<29  
+```  
   
-## 請參閱  
- [\_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   
- [\_InterlockedCompareExchangePointer 內建函式](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
- [編譯器內建](../intrinsics/compiler-intrinsics.md)   
- [C\+\+ 關鍵字](../cpp/keywords-cpp.md)   
+**結束 Microsoft 特定的**  
+  
+## <a name="see-also"></a>請參閱  
+ [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)   
+ [_InterlockedCompareExchangePointer 內建函式](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)   
+ [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
+ [關鍵字](../cpp/keywords-cpp.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

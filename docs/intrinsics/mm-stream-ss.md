@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 17d20339a311b65aef6d15c32d7c0517b7dcd9df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4b9f4f8334552acde7b8a18fa3d3b6110183234
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss  
   
@@ -43,7 +44,7 @@ void _mm_stream_ss(
  [輸出] `Dest`  
  來源資料所寫入之位置指標。  
   
- [in] `Source`  
+ [輸入] `Source`  
  包含 128 位元數字`float`32 位元在其下要寫入值...  
   
 ## <a name="return-value"></a>傳回值  
@@ -96,11 +97,11 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
 
 進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [_mm_stream_sd](../intrinsics/mm-stream-sd.md)   
  [_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)   
  [_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)   

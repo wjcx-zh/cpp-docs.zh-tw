@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8ae663d5371626162cf3b98c1048128a61b1e1a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eda9c4a1a173087688c1fd3182845d6517f27ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deployment-in-visual-c"></a>Visual C++ 中的部署
 
@@ -56,6 +57,6 @@ ms.lasthandoff: 10/24/2017
 
 Visual c + + 程式庫的載入順序是系統而定。 若要診斷載入器問題，請使用 depends.exe 或 where.exe。 如需詳細資訊，請參閱[動態連結程式庫搜尋順序 (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms682586.aspx)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

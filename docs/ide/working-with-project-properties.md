@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70fc1210df4600fd63c938a7721f09dcdd206cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-project-properties"></a>使用專案屬性
 在 ide 中建置專案所需的所有資訊會都公開為*屬性*。 此資訊包括應用程式名稱、 副檔名 （例如 DLL、 LIB、 EXE）、 編譯器選項、 連結器選項、 偵錯工具設定、 自訂建置步驟，以及許多其他項目。 通常，您會使用*屬性頁*(**專案 &#124;屬性**) 來檢視和修改這些屬性。 
@@ -188,7 +189,7 @@ ms.lasthandoff: 10/24/2017
 3.  在**屬性管理員**，開啟新的屬性工作表，然後設定您想要包含的屬性。  
   
 ##  <a name="bkmkPropertyInheritance"></a>屬性繼承  
- 專案屬性是有層次的。 每一層都會繼承上一層的值，但是繼承的值可以藉由明確設定屬性來覆寫。 以下是基本繼承樹狀結構：  
+ 專案屬性是有層次的。 每一層都會繼承上一層的值，但是繼承的值可以藉由明確設定屬性來覆寫。 以下是基本繼承樹狀：  
   
 1.  MSBuild CPP Toolset 的預設設定 (..\Program Files\MSBuild\Microsoft.Cpp\v4.0\Microsoft.Cpp.Default.props，由 .vcxproj 檔案匯入)。  
   
@@ -263,5 +264,5 @@ ms.lasthandoff: 10/24/2017
 <Import Project==" C:\sources\my_target.targets"" />
 ```  
 
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立和管理 Visual c + + 專案](../ide/creating-and-managing-visual-cpp-projects.md) [.vcxproj 和.props 檔案結構](vcxproj-file-structure.md)[屬性頁的 XML 檔案](property-page-xml-files.md)

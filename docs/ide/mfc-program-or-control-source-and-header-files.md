@@ -14,18 +14,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81964c410f01505ef49c75b51ef2629daed2f6ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adb4ba4fdcc141438b2eeb87b4e3c9151bb9a5c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程式或控制項原始程式檔和標頭檔
 當您建立 MFC 專案在 Visual Studio 中，根據您選取您建立專案的選項時，會建立下列檔案。 例如，您的專案包含*Projname*dlg.cpp 和*Projname*dlg.h 檔案，只有當您建立對話方塊架構的專案或類別。  
   
  所有這些檔案位於*Projname*目錄下，而標頭檔 （.h 檔案） 的資料夾或方案總管 中的原始程式檔 （.cpp 檔） 資料夾中。  
   
-|檔案名稱|說明|  
+|檔案名稱|描述|  
 |---------------|-----------------|  
 |*Projname*.h|主要的 include 程式或 DLL 檔。 它包含所有全域符號和`#include`其他標頭檔的指示詞。 它衍生`CPrjnameApp`類別從`CWinApp`並宣告`InitInstance`成員函式。 控制項，`CPrjnameApp`類別衍生自`COleControlModule`。|  
 |*Projname*.cpp|主要原始程式檔。 它會建立一個物件類別的`CPrjnameApp`，其衍生自`CWinApp`，並覆寫`InitInstance`成員函式。<br /><br /> 針對可執行檔，`CPrjnameApp::InitInstance`會執行數個。 它會註冊文件範本，做為文件和檢視; 之間的連線建立主框架視窗。並建立空的文件 （或開啟文件，如果其中一個指定為應用程式的命令列引數）。<br /><br /> 針對 Dll 和 ActiveX (先前稱為 OLE) 控制項，`CProjNameApp::InitInstance`向 OLE 註冊控制項的物件 factory，藉由呼叫`COleObjectFactory::RegisterAll`及會呼叫`AfxOLEInit`。 此外，此成員函式`CProjNameApp::ExitInstance`用來卸除從記憶體呼叫控制項**AfxOleTerm**。<br /><br /> 這個檔案也會註冊和取消註冊 Windows 系統註冊資料庫中的控制項，藉由實作`DllRegisterServer`和`DllUnregisterServer`函式。|  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
 |Mainfrm.cpp Mainfrm.h|衍生**CMainFrame**類別從其中[CFrameWnd](../mfc/reference/cframewnd-class.md) （適用於 SDI 應用程式） 或[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) （對於 MDI 應用程式）。 **CMainFrame**類別會負責建立工具列按鈕和 [狀態] 列中，如果應用程式精靈中選取對應的選項**應用程式選項**頁面 （步驟 4 的 6）。 如需使用**CMainFrame**，請參閱[框架視窗類別建立應用程式精靈](../mfc/frame-window-classes-created-by-the-application-wizard.md)。|  
 |Childfrm.cpp Childfrm.h|衍生**CChildFrame**類別從[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)。 **CChildFrame**類別用於 MDI 文件框架視窗。 如果您選取 MDI 選項，一律會建立這些檔案。|  
   
-## <a name="see-also"></a>另請參閱  
- [為 Visual c + + 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)   
+## <a name="see-also"></a>請參閱  
+ [為 Visual C++ 專案建立的檔案類型](../ide/file-types-created-for-visual-cpp-projects.md)   
  [ATL 程式或控制項原始檔和標頭檔](../ide/atl-program-or-control-source-and-header-files.md)   
  [CLR 專案](../ide/files-created-for-clr-projects.md)

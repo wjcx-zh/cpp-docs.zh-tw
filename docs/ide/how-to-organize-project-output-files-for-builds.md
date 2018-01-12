@@ -1,80 +1,81 @@
 ---
-title: "如何：組織組建的專案輸出檔案 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "輸出檔, 組織"
-  - "Visual C++, 輸出檔"
+title: "如何： 組織組建的專案輸出檔案 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, output files
+- output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 648321c41fe02541eeb746bae24236c40dc5325e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：組織組建的專案輸出檔案
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-這個主題會說明組織專案輸出檔的最佳作法。  當專案輸出檔的設定不正確時，有可能會發生建置錯誤。  這個主題也概述了每一種組織專案輸出檔之作法的優點和缺點。  
+# <a name="how-to-organize-project-output-files-for-builds"></a>如何：組織組建的專案輸出檔案
+本主題描述組織專案輸出檔的最佳作法。 建置不正確地設定專案輸出檔時，可能會發生錯誤。 本主題也概述每一種組織專案輸出檔的優缺點。  
   
-## 參考 CLR 組件  
+## <a name="referencing-clr-assemblies"></a>參考 CLR 組件  
   
-#### 若要使用 \#using 來參考組件  
+#### <a name="to-reference-assemblies-with-using"></a>參考組件的 #using  
   
-1.  您可以使用 \#using 指示詞，直接從程式碼中參考組件，例如 `#using <System.Data.dll>`。  如需詳細資訊，請參閱[\#using 指示詞](../preprocessor/hash-using-directive-cpp.md)。  
+1.  您可以直接從程式碼參考的組件，透過 #using 指示詞，例如`#using <System.Data.dll>`。 如需詳細資訊，請參閱[#using 指示詞](../preprocessor/hash-using-directive-cpp.md)。  
   
-     只要是使用 MSIL，指定的檔案可以是 .dll、.exe、.netmodule 或 .obj。  所參考的元件可以使用任何語言建置。  使用這個選項時，您可以存取 Intellisense，因為中繼資料會從 MSIL 中抽取出來。  這個特定的檔案必須位於專案路徑當中；否則專案將不會編譯，也無法使用 Intellisense。  要判斷檔案是否位於路徑當中，最簡單的方法就是以滑鼠右鍵按一下 \#using 這一行，然後選擇 \[**開啟文件**\] 命令。  如果找不到檔案，您將接獲通知。  
+     指定的檔案可以是.dll、.exe、.netmodule 或.obj，只要它會在 MSIL。 以任何語言，可以建立參考的元件。 使用此選項，您可以存取 intellisense 因為會從 MSIL 擷取中繼資料。 有問題的檔案必須位於專案的路徑否則，將不會編譯專案，並將無法使用 Intellisense。 判斷檔案是否在路徑中的簡單方法是以滑鼠右鍵按一下 #using 列，並選擇**開啟的文件**命令。 如果找不到檔案，系統會通知您。  
   
-     如果您不想放檔案的完整路徑，您可以使用 **\/AI** 編譯器選項來編輯 \#using 參考的搜尋路徑。  如需詳細資訊，請參閱[\/AI \(指定中繼資料目錄\)](../build/reference/ai-specify-metadata-directories.md)。  
+     如果您不想要放置檔案的完整路徑，您可以使用**/AI**編譯器選項，若要編輯的搜尋路徑 #using 參考。 如需詳細資訊，請參閱 [/AI (指定中繼資料目錄)](../build/reference/ai-specify-metadata-directories.md)。  
   
-#### 若要使用 \/FU 來參考組件  
+#### <a name="to-reference-assemblies-with-fu"></a>參考組件與 /FU  
   
-1.  除了上述直接從程式碼檔案中參考組件的方法之外，您也可以使用 **\/FU** 編譯器選項。  這種方法的優點是您不需要在每個參考指定組件的檔案中，另外加入一個 \#using 陳述式。  
+1.  而不是直接從程式碼檔參考組件，如上面所述，您可以使用**/FU**編譯器選項。 這個方法的優點是，您不需要另外加 #using 陳述式會參考指定組件的每個檔案。  
   
-     若要設定這個選項，請開啟專案的 \[**屬性頁**\]。  展開 \[**組態屬性**\] 節點，然後展開 \[**C\/C\+\+**\] 節點並選取 \[**進階**\]。  在 \[**強制 \#using**\] 旁加入所要參考的組件。  如需詳細資訊，請參閱[\/FU \(命名強制的 \#using 檔案\)](../build/reference/fu-name-forced-hash-using-file.md)。  
+     若要設定此選項，開啟**屬性頁**專案。 展開**組態屬性** 節點，然後展開**C/c + +**節點，然後選取**進階**。 加入所需的組件旁**強制 #using**。 如需詳細資訊，請參閱 [/FU (指定強制的 #using 檔)](../build/reference/fu-name-forced-hash-using-file.md)。  
   
-#### 若要使用加入新參考來參考組件  
+#### <a name="to-reference-assemblies-with-add-new-reference"></a>若要加入新參考與參考組件  
   
-1.  這是使用 CLR 組件最簡單的方法。  首先，確定專案是使用 **\/clr** 編譯器選項編譯的。  接著在 \[**方案總管**\] 中，以滑鼠右鍵按一下專案，並選取 \[**加入**\]、\[**參考**\]。  \[**屬性頁**\] 對話方塊便會出現。  
+1.  這是最簡單的方式來使用 CLR 組件。 首先，請確定專案會編譯與**/clr**編譯器選項。 然後，以滑鼠右鍵按一下專案，從**方案總管 中**選取**新增**，**參考**。 **屬性頁**對話方塊隨即出現。  
   
-2.  從 \[**屬性頁**\] 對話方塊中，選取 \[**加入新參考**\]。  將會出現一個對話方塊，列出所有 .NET、COM 以及目前專案中可使用的其他組件。  選取要參考的組件，再按一下 \[**確定**\]。  
+2.  從**屬性頁**對話方塊中，選取**加入新參考**。 會出現一個對話方塊，列出所有.NET、 COM 及目前的專案中可用的其他組件。 選取所需的組件，然後按一下**確定**。  
   
-     設定好專案參考之後，會自動處理對應的相依性。  此外，因為中繼資料是組件的一部分，因此不需要再加上標頭檔，而且從 Managed 組件中使用的項目也不必設為原型。  
+     一旦設定專案參考，會自動處理對應的相依性。 此外，因為中繼資料是組件的一部分，不是需要加入標頭檔或原型正在使用的項目從 managed 組件。  
   
-## 參考原生 DLL 或靜態程式庫  
+## <a name="referencing-native-dlls-or-static-libraries"></a>原生 Dll 或靜態程式庫參考  
   
-#### 若要參考原生 DLL 或靜態程式庫  
+#### <a name="to-reference-native-dlls-or-static-libraries"></a>以參考原生 Dll 或靜態程式庫  
   
-1.  在程式碼中使用 \#include 指示詞來參考適當的標頭檔。  標頭檔必須位於 Include 路徑當中，或屬於目前專案的一部分。  如需詳細資訊，請參閱[\#include 指示詞](../preprocessor/hash-include-directive-c-cpp.md)。  
+1.  參考適當的標頭檔，在程式碼中使用 #include 指示詞。 標頭檔必須在 include 路徑或目前專案的一部分。 如需詳細資訊，請參閱[#include 指示詞 （C/c + +）](../preprocessor/hash-include-directive-c-cpp.md)。  
   
-2.  您也可以設定專案的相依性。  設定專案相依性可以保證兩件事情。  首先，它可以確保各個專案能以正確的順序建置，而且專案永遠都能找到各自所需的相依檔案。  再者，它在路徑中隱含地加入了相依專案的輸出路徑，在連結階段很容易就可以找到檔案。  
+2.  您也可以設定專案相依性。 設定專案相依性，可確保兩件事。 首先，它會確保專案建置以正確的順序，讓專案可以總是找出它所需的相依檔案。 第二，它以隱含方式加入相依專案的輸出目錄路徑，可以輕鬆地找到檔案，在連結時間。  
   
-3.  若要部署應用程式，您必須將 DLL 放置在適當的位置。  這會是下列的其中一個：  
+3.  若要部署應用程式，您必須將 DLL 放在適當的位置。 這可以是下列其中一項：  
   
-    1.  與可執行檔相同的路徑。  
+    1.  可執行檔相同的路徑。  
   
-    2.  系統路徑 \(由 **path** 環境變數指定\) 中的任何地方。  
+    2.  在系統路徑中的任何位置 (**路徑**環境變數)。  
   
-    3.  位於並存組件當中。  如需詳細資訊，請參閱[建置 C\/C\+\+ 並存組件](../build/building-c-cpp-side-by-side-assemblies.md)。  
+    3.  中的-並存組件。 如需詳細資訊，請參閱[建置 C/c + + 並存組件](../build/building-c-cpp-side-by-side-assemblies.md)。  
   
-## 使用多個專案  
- 根據預設，當專案建置時，所有輸出檔都會建立在專案目錄的子目錄當中。  目錄名稱會根據組建組態   \(例如偵錯或發行\) 來為目錄命名。  為了讓同層級的專案可以互相參考，每個專案都必須在其路徑中明確加入其他專案的輸出目錄，才能夠順利連結。  這個動作會在您設定專案相依性時自動完成。  不過，如果您不使用相依性，則您必須謹慎處理，因為組建可能會變得難以管理。  例如，當一個專案具備偵錯和發行組態，而且包含來自同層級專案的外部程式庫時，根據專案建置時所使用的組態，必須使用不同的程式庫檔案。  如此一來，要將這些路徑以程式碼撰寫就需要一點技巧了。  
+## <a name="working-with-multiple-projects"></a>使用多個專案  
+ 根據預設，專案建置時，所有輸出檔案都建立專案目錄的子目錄中。 目錄的名稱為根據的組建組態 （例如偵錯或發行）。 為了讓同層級的專案彼此參考，每個專案必須明確地加入其他專案輸出目錄其路徑中的連結才會成功。 當您設定專案相依性，這會自動完成。 不過，如果您不使用相依性，您必須謹慎處理，因為組建可能會變得難以管理。 比方說，當專案偵錯和發行組態，且其中包含同層級專案中的外部程式庫，它應該使用不同的程式庫檔案，根據的建置組態。 因此，硬式編碼這些路徑可能很困難。  
   
- 所有必要的輸出檔 \(例如可執行檔、累加連結檔案以及 PDB 檔案\) 都會複製到一個通用方案目錄當中。  因此，當使用的方案包含了數個組態相同的 C\+\+ 專案時，所有的輸出檔都會集中在一起，以方便連結和部署。  如果輸出檔都保存在一起，您就可以確定這些應用程式和程式庫都能如預期般的運作，因為所需的檔案都一定會在路徑中。  
+ （例如可執行檔、 incremental 連結器檔案和 PDB 檔案） 的所有必要的輸出檔會複製到通用的方案目錄中。 因此，當使用包含數個對等設定的 c + + 專案的方案，所有輸出檔為集中都式的簡化連結和部署中。 您可以確定其應用程式/程式庫能夠如預期般如果它們保持這些檔案 （因為檔案一定會在路徑中）。  
   
- 在實際執行環境中部署時，輸出檔的位置會是一個重要問題。  而在整合式開發環境中執行專案時，所包括的程式庫之路徑則不一定要和實際執行環境中相同。  例如，如果您的程式碼中包含了 `#using "../../lib/debug/mylib.dll"`，但是您將 mylib.dll 部署到一個不同的相對位置，則應用程式在執行階段將會發生錯誤。  要預防發生這種情況，您應該避免在程式碼的 \#include 陳述式中使用相對路徑。  最好能確定所有必要的檔案都已經在專案的建置路徑中，而且所有相關的工作檔案都放置在正確的位置。  
+ 部署至生產環境時，輸出檔案的位置可能是主要的問題。 在 IDE 中執行專案，包括的程式庫路徑不一定是實際執行環境相同。 例如，如果您有`#using "../../lib/debug/mylib.dll"`但然後程式碼中將 mylib.dll 部署到不同的相對位置、 應用程式將會在執行階段失敗。 若要避免這個問題，您應該避免使用中的相對路徑 #include 陳述式在程式碼中。 最好是確定必要的檔案位於專案的建置路徑，而且所有相關的工作檔案的位置是正確。  
   
-#### 如何指定輸出檔儲存的位置  
+#### <a name="how-to-specify-where-output-files-go"></a>如何指定輸出檔位置  
   
-1.  您可以在專案的 \[**屬性頁**\] 中找到專案的輸出設定。  展開 \[**組態屬性**\] 旁邊的節點，然後選取 \[**一般**\]。  輸出位置可以在 \[**輸出目錄**\] 旁邊指定。  如需詳細資訊，請參閱[一般屬性頁 \(專案\)](../ide/general-property-page-project.md)。  
+1.  專案的位置輸出的專案中可以找到設定**屬性頁**。 展開節點旁**組態屬性**選取**一般**。 指定的輸出位置旁**輸出目錄**。 如需詳細資訊，請參閱[一般屬性頁 （專案）](../ide/general-property-page-project.md)。  
   
-## 請參閱  
- [Visual C\+\+ 專案類型](../ide/visual-cpp-project-types.md)
+## <a name="see-also"></a>請參閱  
+ [Visual C++ 專案類型](../ide/visual-cpp-project-types.md)

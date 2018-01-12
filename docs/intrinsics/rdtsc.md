@@ -1,58 +1,58 @@
 ---
-title: "__rdtsc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtsc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__rdtsc 內建"
-  - "rdtsc 指令"
-  - "讀取時間戳記計數器指令"
+title: "__rdtsc |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtsc
+dev_langs: C++
+helpviewer_keywords:
+- __rdtsc intrinsic
+- rdtsc instruction
+- Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bd108c36dc60f6186d247cd3cf61d27d1dad3239
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# __rdtsc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="rdtsc"></a>__rdtsc
+**Microsoft 特定的**  
   
- 會產生`rdtsc`指令時，它會傳回處理器的時間戳記。  處理器時間戳記會記錄上次重設後的時脈週期數。  
+ 會產生`rdtsc`指令，它會傳回處理器時間戳記。 處理器時間戳記記錄自上次重設的時脈週期數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned __int64 __rdtsc();  
 ```  
   
-## 傳回值  
- 64 位元不帶正負號的整數，表示滴答計數。  
+## <a name="return-value"></a>傳回值  
+ 64 位元不帶正負號的整數，代表滴答計數。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__rdtsc`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__rdtsc`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 使用僅當做內建這個常式。  
+## <a name="remarks"></a>備註  
+ 這個常式可只做為內建函式。  
   
- 與 TSC 值的解譯方式，在這個層代硬體的不同，在舊版的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。  請參閱硬體手冊，如需詳細資訊。  
+ 在這個層代的硬體 TSC 值的解譯不同於在舊版的[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]。 請參閱硬體手冊，如需詳細資訊。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // rdtsc.cpp  
@@ -70,8 +70,11 @@ int main()
 }  
 ```  
   
-  **3363423610155519 的刻度**   
-## 結束 Microsoft 特定  
+```Output  
+3363423610155519 ticks  
+```  
   
-## 請參閱  
+**結束 Microsoft 特定的**  
+  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

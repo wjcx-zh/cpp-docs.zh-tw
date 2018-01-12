@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 58c96e365a7ce3858f57ba9626c0181b60ddeec1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a97d2469fdec35c73e830d4a616a9e4487ffef86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>在所有架構上內建
 x86、AMD64 和 ARM 架構可以使用下列內建函式：  
@@ -180,7 +181,7 @@ x86、AMD64 和 ARM 架構可以使用下列內建函式：
 |[wcslen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|string.h|  
 |[_wcsset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|string.h|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ARM 內建函式](../intrinsics/arm-intrinsics.md)   
  [x86 內建函式清單](../intrinsics/x86-intrinsics-list.md)   
  [x64 (amd64) 內建清單](../intrinsics/x64-amd64-intrinsics-list.md)

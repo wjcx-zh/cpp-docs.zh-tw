@@ -1,33 +1,32 @@
 ---
-title: "專案建置錯誤 PRJ0020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0020"
+title: "專案建置錯誤 PRJ0020 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0020
+dev_langs: C++
+helpviewer_keywords: PRJ0020
 ms.assetid: 54bb8cd4-af7c-4d62-8125-3ab5ff5f2cc4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: acecbce30434a06c1c0c2835873846d8411ffc31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 專案建置錯誤 PRJ0020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-工具 'tool' 的屬性 'property' 所含的檔案名稱 'file' 無效。  
+# <a name="project-build-error-prj0020"></a>專案建置錯誤 PRJ0020
+工具 '工具' 屬性 'property' 包含無效的檔名 'file'。  
   
- 在屬性 ***property*** 中對工具 ***tool*** 所指定的檔名 ***file*** 無效。  
+ 檔案名稱，***檔案***屬性中指定***屬性***，工具***工具***，不正確。  
   
  您可能使用了未知或無效的巨集。  
   
- 如需存取專案屬性的詳細資訊，請參閱[設定 Visual C\+\+ 專案屬性](../../ide/working-with-project-properties.md)。
+ 請參閱[設定 Visual c + + 專案屬性](../../ide/working-with-project-properties.md)如何存取您的專案屬性的資訊。

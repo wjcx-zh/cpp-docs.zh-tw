@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55310ba91513da342cc51a2982a4bb9992e92b2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e764e42cb558d2e13e0609cb139e9538a72d09ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="redistributing-web-client-applications"></a>轉散發 Web 用戶端應用程式
 如果您的應用程式會使用實作 WebBrowser 控制項的 MFC 類別 (例如，`CHtmlView`或`CHtmlEditView`)，Microsoft Internet Explorer 4.0 或更新版本必須至少使用最低限度安裝在目標電腦上。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
   
  您可以在 MSDN Library 中，或在找到知識庫文章[http://support.microsoft.com](http://support.microsoft.com)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

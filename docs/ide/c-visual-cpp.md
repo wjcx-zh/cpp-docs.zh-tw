@@ -1,47 +1,46 @@
 ---
-title: "&lt;c&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<c>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<c> C++ XML 標記"
-  - "c C++ XML 標記"
+title: "&lt;c&gt; （Visual c + +） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: <c>
+dev_langs: C++
+helpviewer_keywords:
+- <c> C++ XML tag
+- c C++ XML tag
 ms.assetid: 3b23fc0f-e10d-4dd0-b197-48a46cbddd9f
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b8d4ea984864975196251c9f362283a0df1932cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;c&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-\<c\> 標記表示應在一段描述中應該標記為程式碼的。  使用 [\<code\>](../ide/code-visual-cpp.md) 將多行指定為程式碼。  
+# <a name="ltcgt-visual-c"></a>&lt;c&gt; （Visual c + +）
+\<c > 標記代表描述內的文字應該標記為程式碼。 請使用 [\<code>](../ide/code-visual-cpp.md) 將多行指定為程式碼。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 <c>text</c>  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `text`  
- 要表示為程式碼的文字。  
+ 您要指定為程式碼的文字。  
   
-## 備註  
- 使用 [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 進行編譯，將文件註解處理為檔案。  
+## <a name="remarks"></a>備註  
+ 編譯搭配 [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // xml_c_tag.cpp  
@@ -62,5 +61,5 @@ public:
 };  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [XML 文件](../ide/xml-documentation-visual-cpp.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f51593b5a122fbc3720d22afe56ba3cddd2bd5ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6cb11329c01e7d3f6496de6015b36b4ad79624cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outwordstring"></a>__outwordstring
 **Microsoft 特定的**  
@@ -40,13 +41,13 @@ void __outwordstring(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `Port`  
+ [輸入] `Port`  
  將資料傳送至連接埠。  
   
- [in] `Buffer`  
+ [輸入] `Buffer`  
  指定的連接埠外的資料指標。  
   
- [in] `Count`  
+ [輸入] `Count`  
  若要傳送的字組數目。  
   
 ## <a name="requirements"></a>需求  
@@ -60,7 +61,7 @@ void __outwordstring(
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

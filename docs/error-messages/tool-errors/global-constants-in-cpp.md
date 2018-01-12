@@ -1,34 +1,34 @@
 ---
-title: "C++ 的全域常數 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "常數, 全域"
-  - "全域常數"
+title: "C + + 中的全域常數 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- global constants
+- constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 766e1a6f48ecf3f64110e64d916c50d92c89345d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# C++ 的全域常數
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-C\+\+ 全域常數具有靜態連結。  這點與 C 不同。  如果您嘗試在多個檔案中使用 C\+\+ 的全域常數，就會發生無法在外部之程式庫中找到或連結所需之資料型別或函式的錯誤。  編譯器最佳化時會排除全域常數，不會為變數保留空間。  
+# <a name="global-constants-in-c"></a>C++ 的全域常數
+C + + 的全域常數具有靜態連結。 這是不同於 c。如果您嘗試使用的全域常數在多個檔案的 c + + 中，就會發生無法解析的外部錯誤。 編譯器最佳化全域常數，保留供變數沒有留下。  
   
- 解決這項錯誤的方法之一就是：在標頭檔中包含該 const 的初始化設定，必要時，並將該標頭檔包含在您的 CPP 檔中，將它當成函式原型。  另一種可行方法是將變數設成非常數，並用常數參考來評估它。  
+ 若要解決此錯誤的一個方法是包含標頭檔中的 const 初始化設定，並在必要時，就如同它是函式原型 CPP 檔案中包含該標頭。 另一個可能性是將變數設為非常數，並使用常數參考評估它。  
   
- 下列範例會產生 C2019：  
+ 下列範例會產生 C2019:  
   
 ```  
 // global_constants.cpp  
@@ -53,5 +53,5 @@ void test() {
 }  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [連結器工具錯誤 LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

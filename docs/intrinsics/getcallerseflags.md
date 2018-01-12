@@ -1,55 +1,55 @@
 ---
-title: "__getcallerseflags | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_getcallerseflags"
-  - "_getcallerseflags_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_getcallerseflags 內建"
+title: "__getcallerseflags |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _getcallerseflags
+- _getcallerseflags_cpp
+dev_langs: C++
+helpviewer_keywords: _getcallerseflags intrinsic
 ms.assetid: 2386596f-33aa-4cc7-b026-5a834637270a
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 79944e3d661edd047758dd0c1e92a480d1e184d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# __getcallerseflags
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 專有的**  
+# <a name="getcallerseflags"></a>__getcallerseflags
+**Microsoft 特定的**  
   
- 傳回的 EFLAGS 值從呼叫者的內容。  
+ EFLAGS 值傳回呼叫端的內容。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 unsigned int __getcallerseflags(void);  
 ```  
   
-## 傳回值  
- EFLAGS 值從呼叫者的內容。  
+## <a name="return-value"></a>傳回值  
+ 呼叫端的內容中的 EFLAGS 值。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
-|`__getcallerseflags`|x86，[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__getcallerseflags`|x86、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
- 只有使用與內建這個常式。  
+## <a name="remarks"></a>備註  
+ 此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // getcallerseflags.cpp  
@@ -80,8 +80,12 @@ int main()
 }  
 ```  
   
-  **EFLAGS 0X202 EFLAGS 0X206**   
-## 結束 Microsoft 特定  
+```Output  
+EFLAGS 0x202  
+EFLAGS 0x206  
+```  
   
-## 請參閱  
+**結束 Microsoft 特定的**  
+  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

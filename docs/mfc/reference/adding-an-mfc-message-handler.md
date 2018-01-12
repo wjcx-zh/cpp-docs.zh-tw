@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed68a99e35d5ab234e567e01ea264bea64579fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 170e8314759d24ce1cfe7413b0c41e81a5617445
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
 您可以[加入訊息處理常式中使用 [屬性] 視窗](../../mfc/reference/mapping-messages-to-functions.md)（成員函式會處理 Windows 訊息） 類別和對應的 Windows 訊息至訊息處理常式。 您也可以加入[任何對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  您可以將訊息處理常式加入 ATL 類別使用 [屬性] 視窗中。不過，某些結果會有所不同。 如需詳細資訊，請參閱 ATL 主題[加入 ATL 訊息處理常式](../../atl/adding-an-atl-message-handler.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   
  [加入成員函式](../../ide/adding-a-member-function-visual-cpp.md)   

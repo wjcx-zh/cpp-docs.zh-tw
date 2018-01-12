@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8353c8e6baf8072ee45acaa3f4635bc333c03add
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a915768f0668a4ce276962f9eafd1f905980e2be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-tools-error-lnk1112"></a>連結器工具錯誤 LNK1112
 模組電腦類型 'type1' 與目標電腦類型 'type2' 衝突  
@@ -34,5 +35,5 @@ ms.lasthandoff: 10/24/2017
   
  如果您在 [組態管理員]  中變更 [使用中的方案組態]  ，然後在刪除中繼專案檔之前就嘗試建置專案，也會發生這個錯誤。 若要解決這個錯誤，請從 [建置]  功能表選取 [重建方案]  。 您也可以從 [建置]  功能表選取 [清除方案]  ，然後再建置方案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [連結器工具錯誤和警告](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

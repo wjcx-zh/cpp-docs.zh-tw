@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c2179d3745f42164ef8cf70162ed560b331d783
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d224546eb8bb06421c2e84206e1f4d4dc77f9668
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implement-interface-wizard"></a>實作介面精靈
 此精靈會實作 COM 物件的介面。 許多介面的實作會包含在 Visual Studio 和 Windows 中提供的 COM 程式庫。 時建立該物件的執行個體，並提供物件所提供的服務與物件相關聯的介面實作。  
@@ -29,10 +30,10 @@ ms.lasthandoff: 10/24/2017
  **從實作介面**  
  指定的位置建立該介面的類型程式庫。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**Project**|類型程式庫是專案的一部分。|  
-|**登錄**|類型程式庫會在系統中註冊。 已註冊型別程式庫中所列**可用的型別程式庫**。|  
+|**Registry**|類型程式庫會在系統中註冊。 已註冊型別程式庫中所列**可用的型別程式庫**。|  
 |**檔案**|類型程式庫不一定登錄在系統中，但是包含在檔案中。 您必須提供中的檔案位置**位置**。|  
   
  **可用的型別程式庫**  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  因為已實作所選取的物件不會顯示在具有相同名稱的介面**介面**方塊。  
   
-|傳送按鈕|說明|  
+|傳送按鈕|描述|  
 |---------------------|-----------------|  
 |**>**|將加入至**實作介面**中目前選取的介面名稱**介面**清單。|  
 |**>>**|將加入至**實作介面**清單中可用的所有介面名稱**介面**都清單。|  
@@ -60,5 +61,5 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  如果您包含多個介面衍生自`IDispatch`，或者如果您嘗試實作的介面，衍生自另一個介面上您的類別，則您必須區分 COM_MAP 項目。 請參閱[COM_INTERFACE_ENTRY2](../atl/reference/com-interface-entry-macros.md#com_interface_entry2)如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實作介面](../ide/implementing-an-interface-visual-cpp.md)

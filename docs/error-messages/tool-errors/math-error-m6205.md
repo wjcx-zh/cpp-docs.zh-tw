@@ -1,31 +1,30 @@
 ---
-title: "運算錯誤 M6205 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "M6205"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "M6205"
+title: "運算錯誤 M6205 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: M6205
+dev_langs: C++
+helpviewer_keywords: M6205
 ms.assetid: fd28e7c9-a463-4a9c-a863-cc9e75315550
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f235c709e0289e1007beaade6ac4d77def4b4e8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 運算錯誤 M6205
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function': \_TLOSS 錯誤  
+# <a name="math-error-m6205"></a>運算錯誤 M6205
+'function': _TLOSS 錯誤  
   
- 發生合計數字精確度 \(precision\) 喪失。  
+ 發生總遺失精確度 （有效位數）。  
   
- 此錯誤可能是因為給定非常大的值做為 sin、cos 或 tan 的運算元所造成，因為運算元必須減少為 0 到 2\*pi 間的數字。
+ 這個錯誤可能是因為 sin、 運算元，提供非常大量 cos 或 tan 因為運算元必須減少為介於 0 到 2 之間的數字 * pi。

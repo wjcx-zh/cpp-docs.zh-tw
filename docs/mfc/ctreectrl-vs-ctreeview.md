@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5a0dfd4f7b658cc585972ace1335a80b9bbd93a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb0c1b7a7bf73ab70bbccca6f2a9ccc2ab385516
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs。CTreeView
 MFC 提供封裝樹狀目錄控制項的兩個類別： [CTreeCtrl](../mfc/reference/ctreectrl-class.md)和[CTreeView](../mfc/reference/ctreeview-class.md)。 每個類別是在不同情況下很有用。  
@@ -34,7 +35,7 @@ MFC 提供封裝樹狀目錄控制項的兩個類別： [CTreeCtrl](../mfc/refer
   
  使用`CTreeView`當您想要做為文件/檢視架構中的 [檢視] 視窗樹狀目錄控制項，以及樹狀目錄控制項。 A`CTreeView`會佔用整個工作區的框架視窗或分隔視窗。 它會自動調整大小調整其父視窗的大小，而且它可以處理命令訊息，從功能表中，對應鍵和工具列。 樹狀目錄控制項包含顯示樹狀結構所需的資料，對應的文件物件不會有太複雜，甚至可以使用[CDocument](../mfc/reference/cdocument-class.md)做為文件範本中的文件類型。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CTreeCtrl](../mfc/using-ctreectrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

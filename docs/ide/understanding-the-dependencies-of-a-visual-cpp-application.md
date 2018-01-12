@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 94e1978c5c0188410cf8d6d6bfdfe08d9af620e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 64b7974b16767d226df5e71e7f3ae0e61514ed37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>了解 Visual C++ 應用程式的相依性
 若要判斷應用程式依存的 Visual c + + 程式庫，您可以檢視專案屬性。 (在 [方案總管] 中，以滑鼠右鍵按一下專案，然後選擇 [**屬性**開啟**屬性頁**] 對話方塊。)您也可以使用 Dependency Walker (depends.exe)，更全面性地了解相依性。  
@@ -41,5 +42,5 @@ ms.lasthandoff: 10/24/2017
   
  當您知道應用程式所相依的 DLL，您可以判斷當部署到另一部電腦時，必須要與應用程式一起轉散發的 DLL。 在大部分情況下，您不需要轉散發系統 Dll，但您可能必須轉散發 Visual c + + 程式庫 Dll。 如需詳細資訊，請參閱[判斷要轉散發哪些 Dll](../ide/determining-which-dlls-to-redistribute.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [部署桌面應用程式](../ide/deploying-native-desktop-applications-visual-cpp.md)

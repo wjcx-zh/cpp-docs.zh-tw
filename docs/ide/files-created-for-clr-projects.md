@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 355b22ecf40251e3bb0b9910660e56bf9fe763a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a4abf5415e9b252a7cc92408fb273d226106fc16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-created-for-clr-projects"></a>為 CLR 專案建立的檔案
 當您使用 Visual c + + 範本來建立您的專案時，會建立數個檔案，在您使用根據哪一個範本。 下表列出.NET Framework 專案的專案範本所建立的所有檔案。  

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1e1eb73bf0b4a3eb91be63f3953959fa67e0737
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 603504025bf4069f7a56b705e50a176975dbf244
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp 和 MFC 應用程式精靈
 MFC 應用程式精靈建立基本架構應用程式時, 宣告應用程式類別衍生自[CWinApp](../mfc/reference/cwinapp-class.md)。 MFC 應用程式精靈也會產生實作檔包含下列項目：  
@@ -39,7 +40,7 @@ MFC 應用程式精靈建立基本架構應用程式時, 宣告應用程式類�
   
  標準實作和訊息對應提供足夠用於許多用途，但您可以視需要修改它們。 這些實作最有趣的是`InitInstance`成員函式。 一般來說，您會加入程式碼的架構實作`InitInstance`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWinApp： 應用程式類別](../mfc/cwinapp-the-application-class.md)   
  [可覆寫的 CWinApp 成員函式](../mfc/overridable-cwinapp-member-functions.md)   
  [特殊 CWinApp 服務](../mfc/special-cwinapp-services.md)

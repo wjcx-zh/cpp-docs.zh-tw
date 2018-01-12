@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 62810da5c0f90006fd6024f973d12eb0bc4d29e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cbf4e29e02670b4532a4be82864cf3cf040df73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 **Microsoft 特定的**  
@@ -45,10 +46,10 @@ unsigned char _InterlockedCompareExchange128(
  [in、out] `Destination`  
  目的地，也就是兩個 64 位元整數的陣列指標會視為 128 位元欄位。 目的地資料必須是 16 位元組對齊，以避免一般性保護錯誤。  
   
- [in] `ExchangeHigh`  
+ [輸入] `ExchangeHigh`  
  可能會與目的地的較高部份交換 64 位元整數。  
   
- [in] `ExchangeLow`  
+ [輸入] `ExchangeLow`  
  可能會與目的地的較低部份交換 64 位元整數。  
   
  [in、out] `ComparandResult`  
@@ -128,10 +129,10 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
  進階微裝置，inc.著作權 2007著作權所有，並保留一切權利。 重製進階微裝置，Inc.的權限。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [_InterlockedCompareExchange 內建函式](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

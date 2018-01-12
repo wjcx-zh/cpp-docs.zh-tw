@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 245948bf090990590b22c3b790858f8cffe00427
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1cfb3ed19fce5c737e7b30139ccaf01739888fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shiftleft128"></a>__shiftleft128
 **Microsoft 特定的**  
@@ -37,7 +38,7 @@ unsigned __int64 __shiftleft128(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `LowPart`  
+ [輸入] `LowPart`  
  要移位的 128 位元數量的較低 64 個位元。  
   
  [in] `HighPart`  
@@ -98,8 +99,8 @@ int main()
 0x100000000000000001 >> 1 = 0x080000000000000000  
 ```  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [__shiftright128](../intrinsics/shiftright128.md)   
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

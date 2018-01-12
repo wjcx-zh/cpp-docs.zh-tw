@@ -1,68 +1,75 @@
 ---
-title: "_BitScanForward _BitScanForward64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_BitScanForward"
-  - "_BitScanForward_cpp"
-  - "_BitScanForward64_cpp"
-  - "_BitScanForward64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建的 _BitScanForward"
-  - "內建的 BitScanForward"
-  - "bsf 指令"
+title: "_BitScanForward，_BitScanForward64 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _BitScanForward
+- _BitScanForward_cpp
+- _BitScanForward64_cpp
+- _BitScanForward64
+dev_langs: C++
+helpviewer_keywords:
+- _BitScanForward intrinsic
+- bsf instruction
+- BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eec7487b88b58e3d2a3cceff78893dbd82f3acf8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# _BitScanForward _BitScanForward64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
 **Microsoft 特定的**  
   
- 從遮罩資料的最低有效位元 \(MSB\) 到最高有效位元 \(LSB\) 搜尋設定位元 \(1\)。  
+ 從遮罩資料的最低有效位元 (MSB) 到最高有效位元 (LSB) 搜尋設定位元 (1)。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-unsigned char _BitScanForward(    unsigned long * Index,    unsigned long Mask ); unsigned char _BitScanForward64(    unsigned long * Index,    unsigned __int64 Mask );  
+unsigned char _BitScanForward(  
+   unsigned long * Index,  
+   unsigned long Mask  
+);  
+unsigned char _BitScanForward64(  
+   unsigned long * Index,  
+   unsigned __int64 Mask  
+);  
 ```  
   
-#### 參數  
- \[輸出\] `Index`  
- 會使用找到的第一個設定位元 \(1\) 的位元位置載入。  
+#### <a name="parameters"></a>參數  
+ [輸出] `Index`  
+ 會使用找到的第一個設定位元 (1) 的位元位置載入。  
   
- \[in\] `Mask`  
+ [in] `Mask`  
  要搜尋的 32 位元或 64 位元值。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  如果遮罩是零，則為 0；否則為非零。  
   
-## 備註  
- 如果找到設定位元，會在第一個參數中傳回找到的第一個設定位元的位元位置。  如果找不到設定位元，就會傳回 0；否則，會傳回 1。  
+## <a name="remarks"></a>備註  
+ 如果找到設定位元，會在第一個參數中傳回找到的第一個設定位元的位元位置。 如果找不到設定位元，就會傳回 0；否則，會傳回 1。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_BitScanForward`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_BitScanForward64`|ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // BitScanForward.cpp  
@@ -93,20 +100,20 @@ int main()
 }  
 ```  
   
-## 輸入  
+## <a name="input"></a>輸入  
   
 ```  
 12  
 ```  
   
-## 範例輸出  
+## <a name="sample-output"></a>範例輸出  
   
 ```  
 Enter a positive integer as the mask:   
 Mask: 12 Index: 2  
 ```  
   
-### END Microsoft 特定的  
+**結束 Microsoft 特定的**  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

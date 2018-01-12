@@ -1,46 +1,45 @@
 ---
-title: "進階、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManifestTool.KeyFile"
-  - "VC.Project.VCManifestTool.UpdateFileHashes"
-  - "VC.Project.VCManifestTool.UpdateFileHashesSearchPath"
-  - "VC.Project.VCManifestTool.ValidateSignature"
-  - "VC.Project.VCManifestTool.KeyContainer"
-dev_langs: 
-  - "C++"
+title: "進階、 資訊清單工具、 組態屬性、 &lt;Projectname&gt;屬性頁對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManifestTool.KeyFile
+- VC.Project.VCManifestTool.UpdateFileHashes
+- VC.Project.VCManifestTool.UpdateFileHashesSearchPath
+- VC.Project.VCManifestTool.ValidateSignature
+- VC.Project.VCManifestTool.KeyContainer
+dev_langs: C++
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c756da4ef7b89113ce26e7218011d708ff4c935c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 進階、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-使用這個對話方塊可以指定 [Mt.exe](http://msdn.microsoft.com/library/aa375649) 的進階選項。  
+# <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>進階、 資訊清單工具、 組態屬性、 &lt;Projectname&gt;屬性頁對話方塊
+使用此對話方塊即可指定進階的選項[Mt.exe](http://msdn.microsoft.com/library/aa375649)。  
   
- 若要存取這個屬性頁對話方塊，請開啟專案的屬性頁或屬性工作表。  展開 \[**組態屬性**\] 下的 \[**資訊清單工具**\] 節點，然後選取 \[**進階**\]。  
+ 若要存取此屬性頁對話方塊中，開啟您的專案或屬性工作表的屬性頁。 展開**資訊清單工具**節點下的**組態屬性**，然後選取**進階**。  
   
-## UIElement 清單  
+## <a name="uielement-list"></a>UIElement 清單  
  **更新檔案雜湊**  
- 使用 \/hashupdate 選項指定，資訊清單工具將計算 `<file>` 項目中所指定檔案的雜湊，然後使用計算出的值更新雜湊屬性。  
+ 會使用 /hashupdate 選項來指定資訊清單工具將會計算中指定檔案的雜湊`<file>`項目，並更新屬性的計算值的雜湊。  
   
  **更新檔案雜湊搜尋路徑**  
- 指定 `<file>` 項目中所參考檔案的搜尋路徑。  這個選項也使用 \/hashupdate 選項。  
+ 指定檔案中所參考的搜尋路徑`<file>`項目。 此選項也會使用 /hashupdate 選項。  
   
-## 請參閱  
- [\<file\> 項目](../Topic/%3Cfile%3E%20Element%20\(ClickOnce%20Application\).md)   
- [ClickOnce 應用程式資訊清單](../Topic/ClickOnce%20Application%20Manifest.md)   
+## <a name="see-also"></a>請參閱  
+ [\<檔案 > 項目](/visualstudio/deployment/file-element-clickonce-application)   
+ [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)   
  [資訊清單工具屬性頁](../ide/manifest-tool-property-pages.md)   
- [如何：開啟專案屬性頁](../misc/how-to-open-project-property-pages.md)   
- [如何：編輯專案屬性工作表](../misc/how-to-edit-project-property-sheets.md)
+ [使用專案屬性](../ide/working-with-project-properties.md)   

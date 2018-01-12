@@ -1,68 +1,75 @@
 ---
-title: "_bittestandreset _bittestandreset64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandreset64_cpp"
-  - "_bittestandreset"
-  - "_bittestandreset_cpp"
-  - "_bittestandreset64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "內建的 _bittestandreset"
-  - "內建的 _bittestandreset64"
-  - "btr 指令"
+title: "_bittestandreset，_bittestandreset64 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandreset64_cpp
+- _bittestandreset
+- _bittestandreset_cpp
+- _bittestandreset64
+dev_langs: C++
+helpviewer_keywords:
+- btr instruction
+- _bittestandreset intrinsic
+- _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 738ac3b667d284b8bb051cb98d7d5e31278656f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# _bittestandreset _bittestandreset64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
 **Microsoft 特定的**  
   
- 產生的指令會檢查位址 `a` 的位元 `b`、傳回其目前值，並將位元重設為 0。  
+ 產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元重設為 0。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
-unsigned char _bittestandreset(    long *a,    long b ); unsigned char _bittestandreset64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandreset(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandreset64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### 參數  
- \[in, out\] `a`  
+#### <a name="parameters"></a>參數  
+ [in、out] `a`  
  要檢查的記憶體指標。  
   
- \[in\] `b`  
+ [in] `b`  
  要測試的位元位置。  
   
-## 傳回值  
+## <a name="return-value"></a>傳回值  
  位於指定位置的位元。  
   
-## 需求  
+## <a name="requirements"></a>需求  
   
 |內建|架構|  
-|--------|--------|  
+|---------------|------------------|  
 |`_bittestandreset`|x86、ARM、[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
 |`_bittestandreset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **標頭檔** \<intrin.h\>  
+ **標頭檔** \<intrin.h >  
   
-## 備註  
+## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // bittestandreset.cpp  
@@ -95,8 +102,11 @@ int main()
 }  
 ```  
   
-  **數字是負值。**   
-## END Microsoft 特定的  
+```Output  
+The number was negative.  
+```  
   
-## 請參閱  
+**結束 Microsoft 特定的**  
+  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 100d17c3b5594c7c44e6002d4f65577bb2ee701e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d9d7319f23741f683e31cfd683a8ebd6d25acdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-bars"></a>對話方塊列
 對話方塊列是工具列、 一種的[控制列](../mfc/control-bars.md)可以包含任何類型的控制項。 因為它具有非強制回應對話方塊的特性[CDialogBar](../mfc/reference/cdialogbar-class.md)物件提供功能更強大的工具列。  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/24/2017
   
  當其正常從 `CDialog` 衍生您自己的對話方塊類別時，您通常不會為對話方塊列衍生您自己的類別。 對話方塊列是延伸主視窗以及所有對話方塊列控制通知訊息，例如**BN_CLICKED**或**EN_CHANGE**，將會傳送到對話方塊列的主視窗的父代。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用者介面項目](../mfc/user-interface-elements-mfc.md)   
  [範例](../visual-cpp-samples.md)
 

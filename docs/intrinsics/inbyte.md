@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: adf3e2ccd864eee1a92c24551cfc73bb080e572e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20781d2e8f925cec9bacb8ca125f68c3e9f7c201
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inbyte"></a>__inbyte
 **Microsoft 特定的**  
@@ -39,7 +40,7 @@ unsigned char __inbyte(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `Port`  
+ [輸入] `Port`  
  要讀取的連接埠。  
   
 ## <a name="return-value"></a>傳回值  
@@ -53,10 +54,10 @@ unsigned char __inbyte(
   
  **標頭檔** \<intrin.h >  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
 ## <a name="remarks"></a>備註  
  此常式僅可作為內建常式使用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f82905dd2ef788962929203b3371f0b1fde316ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a4b60fcc303afcb0c645561009279dd9fced8db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writemsr"></a>__writemsr
 **Microsoft 特定的**  
@@ -39,10 +40,10 @@ void __writemsr(
 ```  
   
 #### <a name="parameters"></a>參數  
- [in] `Register`  
+ [輸入] `Register`  
  模型特定暫存器。  
   
- [in] `Value`  
+ [輸入] `Value`  
  要寫入的值。  
   
 ## <a name="requirements"></a>需求  
@@ -56,7 +57,7 @@ void __writemsr(
 ## <a name="remarks"></a>備註  
  此函式只可用在核心模式中，此常式僅可作為內建。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建](../intrinsics/compiler-intrinsics.md)

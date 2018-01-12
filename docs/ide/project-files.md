@@ -1,34 +1,35 @@
 ---
-title: "專案檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".vcproj 檔案"
-  - "專案檔 [C++], .vcproj 檔案格式"
-  - "VCPROJ (Visual C++ 專案檔) 格式"
-  - "Visual C++ 專案, 專案檔格式"
+title: "專案檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .vcproj files
+- Visual C++ projects, project file format
+- VCPROJ (Visual C++ project file) format
+- project files [C++], .vcproj file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ac1b6d01bc454e2bcc7f1c8fd125f9d6ff96c90f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 專案檔
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ 專案檔是副檔名為 .vcxproj 的 XML 架構檔案，其中包含建置 Visual C\+\+ 專案所需的資訊。  
+# <a name="project-files"></a>專案檔
+Visual c + + 專案檔是以 XML 為基礎的檔案，副檔名為.vcxproj 檔案名稱並包含建置 Visual c + + 專案所需的資訊。  
   
-## 範例  
- 下列範例 .vcxproj 檔是在 \[**新增專案**\] 對話方塊中指定 \[**Win32 主控台應用程式**\] 而產生。  若要處理專案檔，請在命令列中使用 msbuild.exe 工具，或在 [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)] 中使用 \[**建置**\] 命令 \(無法處理此範例，因為未提供所需的原始程式檔和標頭檔\)。如需專案檔中 XML 項目的詳細資訊，請參閱 [Project File Schema Reference](../Topic/MSBuild%20Project%20File%20Schema%20Reference.md)。  
+## <a name="example"></a>範例  
+ 下列範例.vcxproj 檔案由指定**Win32 主控台應用程式**中**新專案** 對話方塊。 若要處理專案檔案，請使用在命令列的 msbuild.exe 工具或**建置**命令[!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]。 （此範例無法處理，因為未提供必要的原始檔和標頭檔。）如需專案檔中的 XML 元素的詳細資訊，請參閱[專案檔案結構描述參考](/visualstudio/msbuild/msbuild-project-file-schema-reference)。  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -128,6 +129,6 @@ Visual C\+\+ 專案檔是副檔名為 .vcxproj 的 XML 架構檔案，其中包�
 </Project>  
 ```  
   
-## 請參閱  
- [在 Visual Studio 中建置 C\+\+ 專案](../ide/building-cpp-projects-in-visual-studio.md)   
+## <a name="see-also"></a>請參閱  
+ [在 Visual Studio 中建置 c + + 專案](../ide/building-cpp-projects-in-visual-studio.md)   
  [使用專案屬性](../ide/working-with-project-properties.md)

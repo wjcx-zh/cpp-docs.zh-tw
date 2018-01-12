@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7930f1411c419fbf5f47164029fe42dd82455ff8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1d9e61abc6ac531fe489465b1d81e167bdde5242
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 **Microsoft 特定的**  
@@ -43,7 +44,7 @@ long _InterlockedAddLargeStatistic(
  [in、out] `Addend`  
  若要加入作業的第一個運算元指標。 指向的值取代相加的結果。  
   
- [in] `Value`  
+ [輸入] `Value`  
  第二個運算元中。若要加入的第一個運算元的值。  
   
 ## <a name="return-value"></a>傳回值  
@@ -62,8 +63,8 @@ long _InterlockedAddLargeStatistic(
   
  此函式的行為為讀寫屏障。 如需詳細資訊，請參閱[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)。  
   
-**END Microsoft 特定的**  
+**結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器內建函式](../intrinsics/compiler-intrinsics.md)   
  [與 x86 編譯器衝突](../build/conflicts-with-the-x86-compiler.md)

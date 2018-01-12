@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc9e78f38f911feac117023fc46b9c15d43e9128
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6426a25746858ed5bd7c0d8ef70575e029453bae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 控制項和群組列
 Rebar 控制項的主要用途是做為子視窗、 通用對話方塊控制項、 功能表、 工具列和等等的容器。 這個內含項目會受到概念的 「 矩形 」。 每個 rebar 群組列可以包含移駐夾列、 點陣圖、 文字標籤和子視窗的任何組合。  
@@ -47,7 +48,7 @@ Rebar 控制項的主要用途是做為子視窗、 通用對話方塊控制項�
   
  [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用 CReBarCtrl](../mfc/using-crebarctrl.md)   
  [控制項](../mfc/controls-mfc.md)
 

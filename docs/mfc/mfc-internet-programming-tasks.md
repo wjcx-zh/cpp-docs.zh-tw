@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c99ee29adb900154b3e9943f4f40d6301af5ce5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd726860e181eb352d7368f31a31d2cbd7489000
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC 網際網路程式設計工作
 本節包含將網際網路支援加入至您應用程式的詳細步驟。 其中的主題包含如何使用 MFC 類別以使您現有的應用程式支援網際網路，以及如何將主動式文件支援加入至現有的 COM 元件。 您要建立包含文件最新股價、 匹茲堡橄欖球分數和南極洲 microsoft 最新溫度提供數個技術可幫助您這樣做，透過網際網路。  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [網際網路安全性](../mfc/internet-security-cpp.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 網際網路程式設計基本概念](../mfc/mfc-internet-programming-basics.md)   
  [依工作分類的網際網路資訊](../mfc/internet-information-by-task.md)
 

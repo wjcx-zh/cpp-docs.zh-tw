@@ -16,16 +16,17 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8712e75aad6eeaa50227989043a2aaad6973193d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bbc721669d51860c01c760a8d1f9fb899e019e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stock-properties"></a>內建屬性
 如果您要將屬性加入 MFC dispinterface 使用[加入屬性精靈](../ide/idl-attributes-add-property-wizard.md)，您可以選擇從內建屬性**屬性名稱**清單中[名稱](../ide/names-add-property-wizard.md)頁面精靈。 這些屬性如下所示：  
   
-|屬性名稱|說明|  
+|屬性名稱|描述|  
 |-------------------|-----------------|  
 |**外觀**|傳回或設定值，這個值會決定控制項的外觀。 控制項的**外觀**屬性可以包含或省略 3d 顯示效果。 這是環境的讀取/寫入屬性。|  
 |`BackColor`|傳回或設定控制項的環境`BackColor`調色盤 (RGB) 色彩或預先定義的系統色彩屬性。 根據預設，其值會對應至控制項容器的前景色彩。 這是環境的讀取/寫入屬性。|  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/24/2017
 |**ReadyState**|傳回或設定控制項的**ReadyState**屬性。 控制項可以是未初始化、 初始化、 載入、 互動式或完成。 請參閱[READYSTATE](https://msdn.microsoft.com/en-us/library/aa768362.aspx)中*網際網路 SDK*如需詳細資訊。|  
 |**Text**|傳回或設定控制項中包含的文字。 **文字**之中未包含任何**成員變數**實作類型。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [加入屬性](../ide/adding-a-property-visual-cpp.md)   
  [新增屬性精靈、IDL 屬性](../ide/idl-attributes-add-property-wizard.md)

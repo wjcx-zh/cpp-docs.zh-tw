@@ -1,81 +1,82 @@
 ---
-title: "使用者定義的運算子 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr 底下的使用者定義運算子"
+title: "使用者定義的運算子 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 使用者定義的運算子 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Managed 型別的使用者定義的運算子允許為靜態成員或是執行個體成員，或在全域範圍。  不過，只有靜態運算子是在以 Visual C\+\+ 之外的語言撰寫的用戶端之中繼資料是可取得的。  
+# <a name="user-defined-operators-ccli"></a>使用者定義的運算子 (C++/CLI)
+Managed 類型的使用者定義運算子允許為靜態成員或是執行個體成員，或位於全域範圍。 不過，不是以 Visual C++ 語言撰寫的程式中，只有靜態運算子可以透過用戶端的中繼資料可取得。  
   
- 在參考型別中，其中一個靜態的使用者定義運算子的參數必須是下列其中一個：  
+ 在參考類型中，其中一個靜態使用者定義運算子的參數必須是下列其中一個：  
   
--   對封入型別的執行個體之控制代碼 \(`type` ^\)。  
+-   封入類型的執行個體之控制代碼 (`type` ^)。  
   
--   對封入型別執行個體的控制代碼之參考型別 \(Reference Type\) 的間接取值 \(`type`^& 或 type^%\)。  
+-   對封入類型之執行個體的控制代碼進行參考類型的間接取值 (`type`^& 或 type^%)。  
   
- 在實值型別中，其中一個靜態的使用者定義運算子的參數必須是下列其中一個：  
+ 在實值類型中，其中一個靜態使用者定義運算子的參數必須是下列其中一個：  
   
--   與封入值型別相同。  
+-   與封入實值類型相同的類型。  
   
--   對封入型別的指標型別間接取值 \(`type`^\)。  
+-   對封入類型的指標類型進行間接取值 (`type`^)。  
   
--   對封入型別的參考型別 \(Reference Type\) 之間接取值 \(`type`% 或 `type`&\)。  
+-   對封入類型的參考類型進行間接取值 (`type`% 或 `type`&)。  
   
--   對控制代碼的參考型別 \(Reference Type\) 之間接取值 \(`type`^% 或 `type`^&\)。  
+-   對控制代碼的參考類型進行間接取值 (`type`^% 或 `type`^&)。  
   
  您可以定義下列運算子：  
   
-|運算子|一元\/二元表單?|  
-|---------|---------------|  
-|\!|一元|  
-|\!\=|Binary|  
-|%|Binary|  
+|運算子|一元/二元表單？|  
+|--------------|--------------------------|  
+|!|一元|  
+|!=|二元|  
+|%|二元|  
 |&|一元和二元|  
-|&&|Binary|  
-|\*|一元和二元|  
-|\+|一元和二元|  
-|\+\+|一元|  
-|,|Binary|  
-|\-|一元和二元|  
-|\-\-|一元|  
-|\-\>|一元|  
-|\/|Binary|  
-|\<|Binary|  
-|\<\<|Binary|  
-|\<\=|Binary|  
-|\=|Binary|  
-|\=\=|Binary|  
-|\>|Binary|  
-|\>\=|Binary|  
-|\>\>|Binary|  
-|^|Binary|  
-|false|一元|  
+|&&|二元|  
+|*|一元和二元|  
+|+|一元和二元|  
+|++|一元|  
+|,|二元|  
+|-|一元和二元|  
+|--|一元|  
+|->|一元|  
+|/|二元|  
+|<|二元|  
+|<<|二元|  
+|\<=|二元|  
+|=|二元|  
+|==|二元|  
+|>|二元|  
+|>=|二元|  
+|>>|二元|  
+|^|二元|  
+|False|一元|  
 |true|一元|  
-|&#124;|Binary|  
-|&#124;&#124;|Binary|  
+|&#124;|二元|  
+|&#124;&#124;|二元|  
 |~|一元|  
   
-## 範例  
+## <a name="example"></a>範例  
   
-```  
+```cpp  
 // mcppv2_user-defined_operators.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -135,17 +136,20 @@ int main() {
 }  
 ```  
   
-  **\-5**  
-**\-4**  
-**\-3**  
-**\-2**  
-**\-1**  
-**\-2**  
-**\-3**   
-## 範例  
- 下列範例將示範運算子複合，當您使用 **\/clr** 編譯時才可使用。  如果沒有定義二元運算子的工作表單，運算子複合會建立它，其中指派運算子左方會有一個 CLR 型別。  
-  
+```Output  
+-5  
+-4  
+-3  
+-2  
+-1  
+-2  
+-3  
 ```  
+  
+## <a name="example"></a>範例  
+ 下列範例將示範運算子合成，但只有當您使用**/clr**編譯。 如果沒有定義任何一個二元運算子的工作表單，運算子合成會建立它，其中指派運算子左方會使用 CLR 類型。  
+  
+```cpp  
 // mcppv2_user-defined_operators_2.cpp  
 // compile with: /clr  
 ref struct A {  
@@ -165,6 +169,9 @@ int main() {
 }  
 ```  
   
-  **30**   
-## 請參閱  
- [Classes and Structs](../windows/classes-and-structs-cpp-component-extensions.md)
+```Output  
+30  
+```  
+  
+## <a name="see-also"></a>請參閱  
+ [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a0fa27045b1d699c084c795d31ca7e25378f19b6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 63aafd2c817da8143512a777feed47feda03c62a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorempty-stlclr"></a>vector::empty (STL/CLR)
 測試項目是否不存在。  
@@ -76,6 +79,6 @@ empty() = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
  [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4161f3d2d5d1424a3645a8025576865f7d05603f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f35deabbcfdaca4a655d56224aa1b62c15407a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setswap-stlclr"></a>set::swap (STL/CLR)
 交換兩個容器的內容。  
@@ -35,7 +38,7 @@ void swap(set<Key>% right);
  要交換內容的容器。  
   
 ## <a name="remarks"></a>備註  
- 成員函式會交換 `this` 和 `right`之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
+ 成員函式會交換 `this` 和 `right` 之間受控制的序列。 它會以常數時間如此，就會擲回任何例外狀況。 您可以使用它做為交換兩個容器的內容的快速方式。  
   
 ## <a name="example"></a>範例  
   
@@ -92,6 +95,6 @@ a b c
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
  [set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)

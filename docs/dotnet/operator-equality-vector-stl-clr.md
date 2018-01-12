@@ -1,33 +1,33 @@
 ---
-title: "operator== (vector) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator== 成員 [STL/CLR]"
+title: "運算子 = = （向量） (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: b552c9a1-8d06-4090-b394-d08a84947594
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 860f25b0d38f6689927eebd5cb1359d33d03332d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# operator== (vector) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-向量的相等比較。  
+# <a name="operator-vector-stlclr"></a>operator== (vector) (STL/CLR)
+向量相等比較。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         vector<Value>% right);  
 ```  
   
-#### 參數  
- left  
- 要比較的左邊容器。  
+#### <a name="parameters"></a>參數  
+ 左  
+ 要比較的左容器。  
   
- right  
- 要比較的正確的容器。  
+ 向右  
+ 要比較的右容器。  
   
-## 備註  
- 只有當順序是由 `left` 和 `right` 具有相同的長度，而且，每個位置的 `i`，則 `left``[i] ==``right``[i]`，運算子函式傳回 true。  您會用它來測試 `left` 是否已排序與 `right` 相同，這兩個向量是比較項目由項目時。  
+## <a name="remarks"></a>備註  
+ 運算子函式會傳回 true，只有當所控制的序列`left`和`right`具有相同長度和每個位置`i`， `left[i] ==` `right[i]`。 使用它來測試是否`left`排序相同`right`兩個向量時項目所比較的項目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_operator_eq.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **b d**  
-**\[b c\] \[\=\= b c\] 為 true**  
-**\[b c \=\= b\] \[\!\] 為 false**   
-## 需求  
- **標題:** \<cliext\/向量\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [operator\!\= \(vector\)](../dotnet/operator-inequality-vector-stl-clr.md)   
- [operator\< \(vector\)](../dotnet/operator-less-than-vector-stl-clr.md)   
- [operator\>\= \(vector\)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
- [operator\> \(vector\)](../dotnet/operator-greater-than-vector-stl-clr.md)   
- [operator\<\= \(vector\)](../dotnet/operator-less-or-equal-vector-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [運算子 ！ = （向量） (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)   
+ [運算子\<（向量） (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)   
+ [運算子 > = （向量） (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)   
+ [運算子 > （向量） (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)   
+ [operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)

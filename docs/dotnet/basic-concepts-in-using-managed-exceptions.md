@@ -21,11 +21,14 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 530bf529faa3fc5c08ea850f8ae390e12d49ac14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5e2faf56f050610e6c98ff82cdca10333a54fd93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>使用 Managed 例外狀況中的基本概念
 本主題討論在 managed 應用程式中處理的例外狀況。 也就是使用編譯的應用程式**/clr**編譯器選項。  
@@ -150,7 +153,7 @@ In 'catch(MyStruct^ catchException)'
   
 -   不過，如果**攔截**型別的子句**SEHException**或其任何基底類別的第一次會進行檢查，子句會攔截的例外狀況。 因此，您應該將任何攔截的 CLR 型別子句之前，先攔截原生 c + + 類型的所有 catch 子句。  
   
- 請注意  
+ 請注意：  
   
 ```  
 catch(Object^)  
@@ -168,7 +171,7 @@ catch(...)
   
  當擲回或攔截 unmanaged 例外狀況時，我們建議您使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項，而非**/EHs**或**/EHa**。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [例外狀況處理](../windows/exception-handling-cpp-component-extensions.md)   
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)   
  [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)

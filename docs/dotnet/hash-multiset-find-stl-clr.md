@@ -1,45 +1,46 @@
 ---
-title: "hash_multiset::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find 成員 [STL/CLR]"
+title: "hash_multiset:: find (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: fbedeb37-242e-4c2a-b1f8-234bcfd9cd25
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b2635ad3ad0b5c1573d7691bf1ad17028c19c315
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定之索引鍵的項目。  
+# <a name="hashmultisetfind-stlclr"></a>hash_multiset::find (STL/CLR)
+尋找符合指定之索引鍵的元素。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
+#### <a name="parameters"></a>參數  
+ key  
  要搜尋的索引鍵值。  
   
-## 備註  
- 如果在受控制序列的至少一個項目具有與 `key`相等的定序，成員函式來傳回指定項目之一的 Iterator;否則會傳回 [hash\_multiset::end](../dotnet/hash-multiset-end-stl-clr.md)`()`。  您可以使用它目前設定項目符合指定索引鍵的控制順序。  
+## <a name="remarks"></a>備註  
+ 至少一個項目是否在受控制序列中有對等順序，與`key`，成員函式會傳回指定其中一個這些項目的迭代器，否則它會傳回[hash_multiset:: end (STL/CLR)](../dotnet/hash-multiset-end-stl-clr.md) `()`. 您可以使用它來尋找元素目前受控制序列之符合指定之索引鍵。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_hash_multiset_find.cpp   
@@ -70,20 +71,23 @@ int main()
   
 ```  
   
-  **a b c**  
-**尋找 A \= false**  
-**尋找 b \= b**  
-**尋找 C \= false**   
-## 說明  
- 需留意到 `find` 無法保證哪幾個項目找到。  
+```Output  
+ a b c  
+find A = False  
+find b = b  
+find C = False  
+```  
   
-## 需求  
- **標題:** \<cliext\/hash\_set\>  
+## <a name="description"></a>描述  
+ 請注意，`find`不保證它找到的數個項目。  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/hash_set >  
   
-## 請參閱  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)   
- [hash\_multiset::equal\_range](../dotnet/hash-multiset-equal-range-stl-clr.md)   
- [hash\_multiset::lower\_bound](../dotnet/hash-multiset-lower-bound-stl-clr.md)   
- [hash\_multiset::upper\_bound](../dotnet/hash-multiset-upper-bound-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)   
+ [hash_multiset:: equal_range (STL/CLR)](../dotnet/hash-multiset-equal-range-stl-clr.md)   
+ [hash_multiset:: lower_bound (STL/CLR)](../dotnet/hash-multiset-lower-bound-stl-clr.md)   
+ [hash_multiset::upper_bound (STL/CLR)](../dotnet/hash-multiset-upper-bound-stl-clr.md)

@@ -1,41 +1,42 @@
 ---
-title: "stack::pop (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::pop"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop 成員 [STL/CLR]"
+title: "stack:: pop (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::pop
+dev_langs: C++
+helpviewer_keywords: pop member [STL/CLR]
 ms.assetid: b7565385-9e6b-432d-8c71-c62c9c6ad90d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 059e65ff61f478a854364c7c128573f2b3486bd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# stack::pop (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stackpop-stlclr"></a>stack::pop (STL/CLR)
 移除最後一個項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 void pop();  
 ```  
   
-## 備註  
- 成員函式中受控制序列的最後一個項目，此序列必須為非空白。  您可以使用它由項目縮短堆疊上一頁。  
+## <a name="remarks"></a>備註  
+ 成員函式中移除受控制的序列必須為非空白的最後一個元素。 您可以使用它來縮短在最後一個項目堆疊。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_stack_pop.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **b**   
-## 需求  
- **標題:** \<cliext\/堆疊\>  
+```Output  
+a b c  
+a b  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<堆疊 cliext/>  
   
-## 請參閱  
- [堆疊](../dotnet/stack-stl-clr.md)   
- [stack::push](../dotnet/stack-push-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [堆疊 (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)

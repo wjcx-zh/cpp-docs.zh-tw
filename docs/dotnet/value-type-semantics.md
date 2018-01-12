@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d04f84fa98c61161bc7f03eb5b38004e6d6659cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 21a7d6bcba2fca3fddd6f5e234663d6791398f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-type-semantics"></a>實值類型語意
 實值類型語意已從 Managed Extensions for c + + Visual c + +。  
@@ -46,7 +49,7 @@ __box V* pvbx = 0; // Form (4) must be local
 ```  
   
 ## <a name="invoking-inherited-virtual-methods"></a>叫用繼承虛擬方法  
- `Form (1)`不標準值物件，而且它是合理充分了解，除了當有人嘗試叫用的繼承虛擬方法時，例如`ToString()`。 例如：  
+ `Form (1)`不標準值物件，而且它是合理充分了解，除了當有人嘗試叫用的繼承虛擬方法時，例如`ToString()`。 例如:   
   
 ```  
 v.ToString(); // error!  
@@ -197,7 +200,7 @@ void f( G * g ) {
 };  
 ```  
   
- 在新語法中，釘選整個物件來傳回`new`不支援運算式。 而是需要釘選內部成員的位址。 例如：  
+ 在新語法中，釘選整個物件來傳回`new`不支援運算式。 而是需要釘選內部成員的位址。 例如，套用至物件的  
   
 ```  
 ref class G {  
@@ -214,7 +217,7 @@ void f( G^ g ) {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [實值類型和它們的行為 (C + + /CLI)](../dotnet/value-types-and-their-behaviors-cpp-cli.md)   
  [類別和結構](../windows/classes-and-structs-cpp-component-extensions.md)   
  [interior_ptr (C + + /CLI)](../windows/interior-ptr-cpp-cli.md)   

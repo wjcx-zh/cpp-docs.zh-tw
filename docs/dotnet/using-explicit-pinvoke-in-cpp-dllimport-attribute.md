@@ -1,39 +1,41 @@
 ---
-title: "在 C++ 中使用明確的 PInvoke (DllImport 屬性) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++ Interop, 平台叫用"
-  - "資料封送處理 [C++], 平台叫用"
-  - "Interop [C++], 平台叫用"
-  - "封送處理 [C++], 平台叫用"
-  - "平台叫用 [C++], C++ 中的封送處理"
+title: "C + + （DllImport 屬性） 中使用明確的 PInvoke |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- marshaling [C++], platform invoke
+- C++ Interop, platform invoke
+- interop [C++], platform invoke
+- platform invoke [C++], marshaling in C++
+- data marshaling [C++], platform invoke
 ms.assetid: 18e5218c-6916-48a1-a127-f66e22ef15fc
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d05c88167629bcb6bf86dc600afde0ea3162064f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 在 C++ 中使用明確的 PInvoke (DllImport 屬性)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-.NET Framework 為 `Dllimport` 屬性 \(Attribute\) 提供明確的平台叫用 \(或 PInvoke\) 功能，可讓 Managed 應用程式呼叫封裝於 DLL 內部的 Unmanaged 函式。  當 API 封裝成 DLL 且無法取得原始程式碼時，就需要使用明確的 PInvoke。  例如，呼叫 Win32 函式時必須使用 PInvoke，  其他情形則使用隱含的 P{Invoke。如需詳細資訊，請參閱[使用 C\+\+ Interop \(隱含 PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。  
+# <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>在 C++ 中使用明確的 PInvoke (DllImport 屬性)
+.NET Framework 提供明確的平台叫用 （或 PInvoke） 功能與`Dllimport`屬性，以允許受管理的應用程式呼叫 Dll 內封裝的 unmanaged 函式。 Unmanaged 的 Api 會封裝為 Dll，以及不提供原始程式碼的情況下需要明確的 PInvoke。 呼叫 Win32 函式，例如，需要 PInvoke。 否則，請使用隱含 P {叫用，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)如需詳細資訊。  
   
- PInvoke 是利用 <xref:System.Runtime.InteropServices.DllImportAttribute> 來運作。  這個屬性使用 DLL 的名稱做為第一個引數，它應該置於每個要使用之 DLL 進入點 \(Entry Point\) 的函式宣告之前。  函式的簽章 \(Signature\) 必須與 DLL 匯出的函式名稱相符 \(但是就 Managed 型別而言，某些型別轉換可以藉由定義 `DllImport` 宣告隱含地執行\)。  
+ PInvoke 的運作方式是使用<xref:System.Runtime.InteropServices.DllImportAttribute>。 這個屬性，會為其第一個引數的 dll 名稱，將會使用每個 DLL 進入點的函式宣告之前放置。 函式的簽章必須符合的 dll 匯出的函式的名稱 (但可以隱含地執行某些類型轉換，藉由定義`DllImport`宣告以受管理的型別。)  
   
- 結果就是會為每個原生 \(Native\) DLL 函式 \(包含必要的轉換代碼 \(或 Thunk\) 和簡單的資料轉換\) 產生 Managed 進入點。  然後，Managed 函式就可以透過這些進入點，呼叫到 DLL。  插入模組做為 PInvoke 結果的程式碼完全屬於 Managed 程式碼，並且 **\/clr**、**\/clr:pure** 和 **\/clr:safe** 等編譯支援明確 PInvoke。  如需詳細資訊，請參閱[純粹的和可驗證的程式碼](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
+ 結果是必要的轉換程式碼 （或 thunk） 包含每個原生 DLL 函式的 managed 的進入點和簡單的資料轉換。 透過這些的進入點 DLL 然後可以呼叫 managed 函式。 將程式碼插入模組的 PInvoke 結果完全受管理和支援明確的 PInvoke **/clr**， **/clr: pure**，和**/clr: safe**編譯。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。 如需詳細資訊，請參閱[純粹的和可驗證程式碼 (C + + /CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。  
   
-## 在本節中  
+## <a name="in-this-section"></a>本節內容  
   
 -   [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)  
   
@@ -49,5 +51,5 @@ manager: "ghogen"
   
 -   [如何：使用 PInvoke 封送處理內嵌指標](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)

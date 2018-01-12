@@ -1,42 +1,42 @@
 ---
-title: "queue::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type 成員 [STL/CLR]"
+title: "queue::difference_type (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: d7a716e1-b331-4928-bda3-f3c74a57307e
-caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e38149ad3e591b9c9df49523dfc27a6b4c3d87d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# queue::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-帶正負號的距離的型別有兩個項目之間的間距。  
+# <a name="queuedifferencetype-stlclr"></a>queue::difference_type (STL/CLR)
+兩個項目之間的帶正負號距離的類型。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## 備註  
- 型別描述的可能負數項目計數。  
+## <a name="remarks"></a>備註  
+ 此類型描述負可能是項目計數。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_queue_difference_type.cpp   
@@ -75,14 +75,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**推入 2 \= \-2**  
-**快顯 3 \= 3**   
-## 需求  
- **標題:** \<cliext\/佇列\>  
+```Output  
+ a b c  
+pushing 2 = -2  
+popping 3 = 3  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/佇列 >  
   
-## 請參閱  
- [queue](../dotnet/queue-stl-clr.md)   
- [queue::size\_type](../dotnet/queue-size-type-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [佇列 (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)

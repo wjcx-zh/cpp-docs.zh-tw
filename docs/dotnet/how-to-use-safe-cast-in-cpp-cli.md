@@ -14,11 +14,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7b15eddc8aa7454d98122b92ffc03c07a315390
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1d6dedd414d916ec3ecc7ec6ecf3e856deaa3fe3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-safecast-in-ccli"></a>如何：在 C++/CLI 中使用 safe_cast
 本文將說明如何使用 safe_cast 在 C + + /CLI 應用程式。 如需在 safe_cast [!INCLUDE[cppwrt_short](../build/reference/includes/cppwrt_short_md.md)]，請參閱[safe_cast](../windows/safe-cast-cpp-component-extensions.md)。  
@@ -333,5 +336,5 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [safe_cast](../windows/safe-cast-cpp-component-extensions.md)

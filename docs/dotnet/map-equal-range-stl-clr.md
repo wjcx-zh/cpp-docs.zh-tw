@@ -1,45 +1,46 @@
 ---
-title: "map::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range 成員 [STL/CLR]"
+title: "map:: equal_range (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: c0d7409c-344d-4102-99c4-aeab8643a073
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 665475d63129bab1c1413d51f6324aba52806fc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# map::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定索引鍵的範圍。  
+# <a name="mapequalrange-stlclr"></a>map::equal_range (STL/CLR)
+尋找符合指定之索引鍵的範圍。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
+#### <a name="parameters"></a>參數  
+ key  
  要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式傳回一組 Iterator `cliext::pair<iterator, iterator>(`[map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)`(``key``),`[map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)`(``key``))`。  您會用它來決定目前符合指定索引鍵之項目範圍超過受控制序列。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回迭代器的一組`cliext::pair<iterator, iterator>(` [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map:: upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目範圍。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_map_equal_range.cpp   
@@ -76,17 +77,20 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[bc 3\]**  
-**equal\_range \(L'x\) 空 \= true**  
- **\[b 2\]**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [map](../dotnet/map-stl-clr.md)   
- [map::count](../dotnet/map-count-stl-clr.md)   
- [map::find](../dotnet/map-find-stl-clr.md)   
- [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)   
- [map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map:: count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
+ [map:: find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)   
+ [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)

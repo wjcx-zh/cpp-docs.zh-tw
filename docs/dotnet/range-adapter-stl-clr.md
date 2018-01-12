@@ -1,32 +1,33 @@
 ---
-title: "range_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::range_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range_adapter 類別 [STL/CLR]"
+title: "range_adapter (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::range_adapter
+dev_langs: C++
+helpviewer_keywords: range_adapter class [STL/CLR]
 ms.assetid: 3fbe2a65-1216-46a0-a182-422816b80cfb
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# range_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-封裝一對迭代器 \(用來實作數個基底類別程式庫 \(BCL\) 介面\) 的樣板類別。  您可以使用 range\_adapter 操作 STL\/CLR 範圍，如同它是 BCL 集合一般。  
+# <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
+樣板類別，包裝一組迭代器，可用來實作數個基底類別程式庫 (BCL) 介面。 您可以使用 range_adapter 來操作 STL/CLR 範圍，就好像 BCL 集合。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Iter>  
@@ -39,37 +40,37 @@ template<typename Iter>
     { ..... };  
 ```  
   
-#### 參數  
- Iter  
- 與封裝的迭代器相關聯的型別。  
+#### <a name="parameters"></a>參數  
+ iter  
+ 對已包裝的迭代器相關聯的類型。  
   
-## 成員  
+## <a name="members"></a>成員  
   
-|成員函式|說明|  
-|----------|--------|  
-|[range\_adapter::range\_adapter](../dotnet/range-adapter-range-adapter-stl-clr.md)|建構配接器物件。|  
+|成員函式|描述|  
+|---------------------|-----------------|  
+|[range_adapter::range_adapter (STL/CLR)](../dotnet/range-adapter-range-adapter-stl-clr.md)|建構的配置器物件。|  
   
-|運算子|說明|  
-|---------|--------|  
-|[range\_adapter::operator\=](../dotnet/range-adapter-operator-assign-stl-clr.md)|取代儲存的迭代器對。|  
+|運算子|描述|  
+|--------------|-----------------|  
+|[range_adapter::operator= (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)|取代預存迭代器組。|  
   
-## 介面  
+## <a name="interfaces"></a>介面  
   
-|介面|說明|  
-|--------|--------|  
+|介面|描述|  
+|---------------|-----------------|  
 |<xref:System.Collections.IEnumerable>|逐一查看集合中的項目。|  
-|<xref:System.Collections.ICollection>|維護一組項目。|  
-|<xref:System.Collections.Generic.IEnumerable%601>|逐一查看集合中的型別項目。|  
-|<xref:System.Collections.Generic.ICollection%601>|維護型別項目的群組。|  
+|<xref:System.Collections.ICollection>|會維護一組項目。|  
+|<xref:System.Collections.Generic.IEnumerable%601>|逐一查看集合中具類型的項目...|  
+|<xref:System.Collections.Generic.ICollection%601>|會維護一組具類型的項目。|  
   
-## 備註  
- range\_adapter 儲存一組迭代器，其最後分隔一個項目序列。  物件實作四個 BCL 介面讓您可以順序的逐一查看項目。  您可以使用這個範本類別操作 STL\/CLR 範圍，如同操作 BCL 容器。  
+## <a name="remarks"></a>備註  
+ Range_adapter 儲存一組的迭代器，依序分隔的項目序列。 物件會實作四個 BCL 介面，可讓您逐一查看項目，依序。 您可以使用此範本類別來操作非常類似 BCL 容器 STL/CLR 範圍。  
   
-## 需求  
- **標頭：** \<cliext\/adapter\>  
+## <a name="requirements"></a>需求  
+ **標頭：** \<配接器 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [collection\_adapter](../dotnet/collection-adapter-stl-clr.md)   
- [make\_collection](../dotnet/make-collection-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

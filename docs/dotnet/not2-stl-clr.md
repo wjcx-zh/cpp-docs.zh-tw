@@ -1,50 +1,51 @@
 ---
-title: "not2 (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not2 函式 [STL/CLR]"
+title: "not2 (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not2
+dev_langs: C++
+helpviewer_keywords: not2 function [STL/CLR]
 ms.assetid: f8aedcca-e4d1-4430-93b4-83dd55579d04
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 183ddc8d55f6948901118ba47ee237127a632020
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# not2 (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-產生工具功能的 `binary_negate` 。  
+# <a name="not2-stlclr"></a>not2 (STL/CLR)
+會產生`binary_negate`的函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
-## Template Parameters  
- 有趣。  
- 功能的類型。  
+## <a name="template-parameters"></a>範本參數  
+ Fun  
+ 仿函式的類型。  
   
-## 函式參數  
- 功能。  
- 包裝的功能\)。  
+## <a name="function-parameters"></a>函式參數  
+ 仿函式  
+ 包裝函式。  
   
-## 備註  
- 樣板函式會傳回 [binary\_negate](../dotnet/binary-negate-stl-clr.md)`<``Fun``>(functor)`。  您將它當做一個便利包裝在傳遞其邏輯 NOT 功能中的一或兩個引數的功能。  
+## <a name="remarks"></a>備註  
+ 範本函式會傳回[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`。 您可以將它當做方便的方式將兩個引數函式包裝在函式，提供其邏輯 NOT。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_not2.cpp   
@@ -94,14 +95,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## 需求  
- **標題:** \<cliext\/功能\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<功能 cliext/>  
   
-## 請參閱  
- [binary\_negate](../dotnet/binary-negate-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c63d6a9161eab707b0eab2b831d02210c57a25d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: da2372f513d9799cfddbebeefa7e9160d1a6b135
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 取得等待指定的時間量，且傳回物件的鎖定`bool`回報成功的擷取，而不是擲回例外狀況。  
@@ -144,6 +147,6 @@ All threads completed.
   
  **命名空間**msclr  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [lock 成員](../dotnet/lock-members.md)   
  [lock::acquire](../dotnet/lock-acquire.md)

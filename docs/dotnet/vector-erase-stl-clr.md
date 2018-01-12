@@ -1,58 +1,59 @@
 ---
-title: "vector::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase 成員 [STL/CLR]"
+title: "vector:: erase (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 624905eb-83c0-499b-a07a-c10aebd7acc3
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f6f0b8fcef4715355038c3eaca88ee9c69b3375c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# vector::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-移除指定位置的項目。  
+# <a name="vectorerase-stlclr"></a>vector::erase (STL/CLR)
+移除位於指定位置的項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### 參數  
- first  
- 要清除之範圍的開頭。  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要清除範圍的開頭。  
   
  last  
- 要清除之範圍的結尾。  
+ 若要清除的範圍的結尾。  
   
- where  
- 要清除的項目。  
+ 其中  
+ 若要清除的項目。  
   
-## 備註  
- 第一成員函式中受控制序列中所指向的 `where`。  您可用它來移除單一項目。  
+## <a name="remarks"></a>備註  
+ 第一個成員函式會移除 `where` 所指向之受控制序列中的項目。 您可以使用它來移除單一項目。  
   
- 第二 \+ 成成員函式中受控制序列的項目介於 `[``first``,` `last``)`。  您可用它來移除零或多個連續的項目。  
+ 第二個成員函式會移除 [`first`, `last`) 範圍中受控制序列中的元素。 您可以使用它來移除零或多個連續的項目。  
   
- 兩個成員函式都傳回迭代器，其指定在所有項目外的第一個項目中移除，或如果沒有此類項目存在，則為 [vector::end](../dotnet/vector-end-stl-clr.md)`()`。  
+ 這兩個成員函式會傳回指定任何移除的項目之外剩餘的第一個元素的迭代器或[vector:: end (STL/CLR)](../dotnet/vector-end-stl-clr.md) `()`如果沒有這類元素存在。  
   
- 當清除項目時，項目的複本數目是線性項目數目在清除結尾和序列的存取結尾之間。\(當清除一個或多個項目序列中的任一端時，項目複本不會發生\)。  
+ 當清除項目，項目複本數目中是線性清除結尾之間距離越近序列結尾的項目數。 （當清除序列的任一端的一或多個項目，沒有項目複本會發生。）  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_vector_erase.cpp   
@@ -92,16 +93,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= b**  
- **b c d e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## 需求  
- **標頭：** \<cliext\/vector\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<向量 cliext/>  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [向量](../dotnet/vector-stl-clr.md)   
- [vector::clear](../dotnet/vector-clear-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [向量 (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)

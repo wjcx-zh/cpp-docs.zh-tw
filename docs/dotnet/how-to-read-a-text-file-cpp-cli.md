@@ -1,34 +1,36 @@
 ---
-title: "如何：讀取文字檔 (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "讀取文字檔"
-  - "文字檔, 讀取"
+title: "如何： 讀取文字檔 (C + + /CLI) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reading text files
+- text files, reading
 ms.assetid: 80551c01-d769-4b6d-8db7-fd53bde21b62
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a1924a918d8a3255ca4a8488adc366155c1110dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：讀取文字檔 (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-下列程式碼範例會示範如何使用 <xref:System.IO?displayProperty=fullName> 命名空間中定義的 <xref:System.IO.StreamReader> 類別開啟文字檔，一次讀取一行文字。  範例會使用這個類別的執行個體來開啟文字檔案，然後使用 <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> 方法來擷取每一行。  
+# <a name="how-to-read-a-text-file-ccli"></a>如何：讀取文字檔 (C++/CLI)
+下列程式碼範例示範如何開啟並使用一次讀取文字檔案一行<xref:System.IO.StreamReader>中定義的類別<xref:System.IO?displayProperty=fullName>命名空間。 這個類別的執行個體用來開啟文字檔，然後<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>方法用來擷取每一行。  
   
- 這個程式碼範例會讀取名為 textfile.txt 且包含文字的檔案。  如需這個檔案類型的詳細資訊，請參閱 [如何：寫入文字檔](../dotnet/how-to-write-a-text-file-cpp-cli.md)。  
+ 這個程式碼範例會讀取具有名為 textfile.txt 且包含文字的檔案。 如需這類檔案的詳細資訊，請參閱[如何： 寫入文字檔 (C + + /CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // text_read.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## 請參閱  
- [檔案和資料流 I\/O](../Topic/File%20and%20Stream%20I-O.md)   
- [以 C\+\+\/CLI 進行 .NET 程式設計](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>請參閱  
+ [檔案和資料流 I/O](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

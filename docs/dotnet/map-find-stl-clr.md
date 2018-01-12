@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 805ddfc8e2e8194df38703011a90c62d96475ddd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 44db80acf715cb68d426831a3b187cb2214a2ef2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapfind-stlclr"></a>map::find (STL/CLR)
 尋找符合指定之索引鍵的元素。  
@@ -78,7 +81,7 @@ find b = [b 2]
 find C = False  
 ```  
   
-## <a name="description"></a>說明  
+## <a name="description"></a>描述  
  請注意，`find`不保證它找到的數個項目。  
   
 ## <a name="requirements"></a>需求  
@@ -86,7 +89,7 @@ find C = False
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [地圖 (STL/CLR)](../dotnet/map-stl-clr.md)   
  [map:: equal_range (STL/CLR)](../dotnet/map-equal-range-stl-clr.md)   
  [map:: lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)   

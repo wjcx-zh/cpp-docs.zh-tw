@@ -1,46 +1,46 @@
 ---
-title: "set::count (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::Count"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "count 成員 [STL/CLR]"
+title: "set:: count (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::Count
+dev_langs: C++
+helpviewer_keywords: count member [STL/CLR]
 ms.assetid: 78855f8c-3de5-4d3e-800b-0bbea5e829dd
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 847154691aa7919b708c36777d2016494c72d21b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# set::count (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setcount-stlclr"></a>set::count (STL/CLR)
 尋找符合指定索引鍵的項目數目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 size_type count(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
- 要搜尋的索引值。  
+#### <a name="parameters"></a>參數  
+ key  
+ 要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式傳回具有與 `key`相等排序的項目數目超過受控制序列的。  您會用它來判斷目前在受控制序列中，符合指定之索引鍵的項目數目。  
+## <a name="remarks"></a>備註  
+ 成員函式具有對等順序，與受控制序列中傳回的項目數`key`。 您可以使用它來判斷目前在受控制序列中符合指定之索引鍵的項目數目。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_count.cpp   
@@ -68,15 +68,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**count\(L'A'\) \= 0**  
-**count\(L'b'\) \= 1**  
-**count\(L'C'\) \= 0**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+ a b c  
+count(L'A') = 0  
+count(L'b') = 1  
+count(L'C') = 0  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::equal\_range](../dotnet/set-equal-range-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)

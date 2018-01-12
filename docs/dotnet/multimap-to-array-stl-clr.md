@@ -1,41 +1,42 @@
 ---
-title: "multimap::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array 成員 [STL/CLR]"
+title: "multimap::to_array (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: eb4872dd-5e32-4a82-8ad4-37b533eb6814
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 623af4746595ba587ec2f0eef2c21e7e11256249
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-複製受控制序列的新陣列。  
+# <a name="multimaptoarray-stlclr"></a>multimap::to_array (STL/CLR)
+將受控制的序列複製到新的陣列。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## 備註  
- 成員函式會傳回包含受控制序列的陣列。  您會用它來取得控制序列的陣列形式的複本。  
+## <a name="remarks"></a>備註  
+ 成員函式會傳回受控制的序列的陣列。 您可以使用它來取得陣列的形式受控制序列的複本。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_multimap_to_array.cpp   
@@ -67,12 +68,15 @@ int main()
   
 ```  
   
-  **\[1\] \[b 2\] \[3\] \[cd 4\]**  
- **\[1\] \[2\] \[bc 3\]**   
-## 需求  
- **標題:** \<cliext\/對應\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/對應 >  
   
-## 請參閱  
- [multimap](../dotnet/multimap-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)

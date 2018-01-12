@@ -1,35 +1,37 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock 建構函式"
+title: "lock::lock |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構 `lock` 物件，並選擇性地等候取得鎖定不一定，在指定的時間或。  
+# <a name="locklock"></a>lock::lock
+建構`lock`物件，並選擇性地等候一段指定的時間，或完全不用，取得鎖定。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 template<class T> lock(  
@@ -49,27 +51,27 @@ template<class T> lock(
 );  
 ```  
   
-#### 參數  
+#### <a name="parameters"></a>參數  
  `_object`  
  要鎖定的物件。  
   
  `_timeout`  
- 逾時值 \(以毫秒為單位\) 或 <xref:System.TimeSpan>。  
+ 逾時值以毫秒為單位，或做為<xref:System.TimeSpan>。  
   
-## 例外狀況  
- 如果鎖定作業不在逾時之前，就會擲回 <xref:System.ApplicationException> 。  
+## <a name="exceptions"></a>例外狀況  
+ 擲回<xref:System.ApplicationException>如果取得鎖定逾時前不會發生。  
   
-## 備註  
- 建構函式的前三個表單嘗試取得 `_object` 的鎖定在指定的逾時週期 \(或 <xref:System.Threading.Timeout.Infinite> \)，如果沒有指定\)。  
+## <a name="remarks"></a>備註  
+ 前三個表單的建構函式嘗試取得的鎖定上`_object`在指定的逾時期限內 (或<xref:System.Threading.Timeout.Infinite>如果未指定)。  
   
- 建構函式的第四個表單不會取得 `_object`的鎖定。  `lock_later` 是 [lock\_when 列舉](../dotnet/lock-when-enum.md)的成員。  使用 [lock::acquire](../dotnet/lock-acquire.md) 或 [lock::try\_acquire](../dotnet/lock-try-acquire.md) 在這種情況下取得鎖定。  
+ 第四個表單的建構函式不會在取得鎖定`_object`。 `lock_later`成員的[lock_when 列舉](../dotnet/lock-when-enum.md)。 使用[lock::acquire](../dotnet/lock-acquire.md)或[lock::try_acquire](../dotnet/lock-try-acquire.md)在此情況下取得的鎖定。  
   
- 鎖定時，解構函式呼叫，將會自動釋放。  
+ 解構函式呼叫時，會自動釋放鎖定。  
   
- `_object` 不可以是 <xref:System.Threading.ReaderWriterLock>。如果是，編譯器將會發生錯誤。  
+ `_object` 不可以是 <xref:System.Threading.ReaderWriterLock>。  如果是，編譯器會產生錯誤。  
   
-## 範例  
- 這個範例使用類別的單一執行個體跨多個執行緒的。類別會使用自己的鎖定確保對其內部資料的存取權為每個執行緒是一致的。主應用程式執行緒使用類別的同一個執行個體上具有鎖定定期檢查任何背景工作執行緒是否仍存在，而且會結束，直到所有背景工作執行緒完成其工作。  
+## <a name="example"></a>範例  
+ 這個範例會跨多個執行緒使用單一類別的執行個體。  類別本身會使用鎖定，以確保其內部資料存取都是一致的每個執行緒。  主應用程式執行緒會定期檢查以查看是否仍然存在任何背景工作執行緒，並等候結束，直到所有的工作者執行緒完成其工作使用相同類別的執行個體上的鎖定。  
   
 ```  
 // msl_lock_lock.cpp  
@@ -143,24 +145,27 @@ int main() {
 }  
 ```  
   
-  **在執行緒 3，計數器 \= 0**  
-**在執行緒 3，計數器 \= 10**  
-**在執行緒 5，計數器 \= 0**  
-**在執行緒 5，計數器 \= 10**  
-**在執行緒 7，計數器 \= 0**  
-**在執行緒 7，計數器 \= 10**  
-**在執行緒 4，計數器 \= 0**  
-**在執行緒 4，計數器 \= 10**  
-**在執行緒 6，計數器 \= 0**  
-**在執行緒 6，計數器 \= 10**  
-**任何執行緒完成。**   
-## 需求  
- **標頭檔** \<msclr \\ lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
   
- **命名空間** msclr  
+## <a name="requirements"></a>需求  
+ **標頭檔** \<msclr\lock.h >  
   
-## 請參閱  
+ **命名空間**msclr  
+  
+## <a name="see-also"></a>請參閱  
  [lock 成員](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
+ [lock:: ~ 鎖定](../dotnet/lock-tilde-lock.md)   
  [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../dotnet/lock-try-acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

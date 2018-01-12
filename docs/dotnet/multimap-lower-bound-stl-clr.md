@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d1eb75c97c94a08b452609f4fe4b1137b8057843
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1ac99d460062c1cc2aef8dabb90bf45b11467487
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multimaplowerbound-stlclr"></a>multimap::lower_bound (STL/CLR)
 尋找符合指定之索引鍵的範圍開頭。  
@@ -83,7 +86,7 @@ lower_bound(L'x')==end() = True
   
  **命名空間：** cliext  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [multimap (STL/CLR)](../dotnet/multimap-stl-clr.md)   
  [multimap:: count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
  [multimap:: equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   

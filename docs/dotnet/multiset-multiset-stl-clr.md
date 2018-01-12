@@ -1,32 +1,33 @@
 ---
-title: "multiset::multiset (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::multiset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "multiset 成員 [STL/CLR]"
+title: "multiset:: multiset (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::multiset
+dev_langs: C++
+helpviewer_keywords: multiset member [STL/CLR]
 ms.assetid: a6ddb2df-d7cd-4b12-aee7-81da1f67f57f
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9d6698941c0660cb7a2bf72f68621ad049640373
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::multiset (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-建構一個容器物件。  
+# <a name="multisetmultiset-stlclr"></a>multiset::multiset (STL/CLR)
+建構容器物件。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 multiset();  
@@ -43,79 +44,71 @@ multiset(System::Collections::Generic::IEnumerable<GValue>^ right,
     key_compare^ pred);  
 ```  
   
-#### 參數  
- first  
- 要插入的範圍開頭。  
+#### <a name="parameters"></a>參數  
+ 第一  
+ 要插入範圍的開頭。  
   
  last  
- 要插入的範圍結尾。  
+ 要插入範圍的結尾。  
   
  pred  
- 為控制序列預先定義的述詞。  
+ 排序受控制序列的述詞。  
   
- right  
- 要插入的物件或範圍 。  
+ 向右  
+ 要插入的物件或範圍。  
   
-## 備註  
- 建構函式:  
+## <a name="remarks"></a>備註  
+ 建構函式：  
   
  `multiset();`  
   
- 以空項目初始化控制序列，使用預設定序述詞 `key_compare()`。  您會用它來指定一個空的初始控制序列，與預設定序述詞。  
+ 使用預設排序述詞，初始化受控制的序列的任何項目， `key_compare()`。 您可以使用它來指定空的初始受控制的序列，使用預設排序述詞。  
   
- 建構函式:  
+ 建構函式：  
   
  `explicit multiset(key_compare^ pred);`  
   
- 以空項目初始化控制序列，使用序述詞 `pred`。  您會用它來指定一個空的初始控制序列，與指定序述詞。  
+ 初始化受控制的序列沒有項目時，順序的述詞`pred`。 您可以使用它來指定空的初始受控制的序列，以指定順序的述詞。  
   
- 建構函式:  
+ 建構函式：  
   
  `multiset(multiset<Key>% right);`  
   
- 使用序列 `[``right``.`[multiset::begin](../dotnet/multiset-begin-stl-clr.md)`(),` `right``.`[multiset::end](../dotnet/multiset-end-stl-clr.md)`())` 與預設定序述詞初始化控制項序列。  您會用它來指定為由多重集物件 `right`控制的序列的拷貝的初始控制序列，以及預設定序述詞。  
+ 初始化受控制的序列與順序 [`right.begin()`， `right.end()`)，使用預設排序述詞。 您用它來指定多重集的物件所控制之序列的複本初始受控制的序列`right`，排序述詞的預設值。  
   
- 建構函式:  
+ 建構函式：  
   
  `multiset(multiset<Key>^ right);`  
   
- 使用序列 `[``right``->`[multiset::begin](../dotnet/multiset-begin-stl-clr.md)`(),` `right``->`[multiset::end](../dotnet/multiset-end-stl-clr.md)`())` 與預設定序述詞初始化控制項序列。  您會用它來指定為由多重集物件 `right`控制的序列的拷貝的初始控制序列，以及預設定序述詞。  
+ 初始化受控制的序列與順序 [`right->begin()`， `right->end()`)，使用預設排序述詞。 您用它來指定多重集的物件所控制之序列的複本初始受控制的序列`right`，排序述詞的預設值。  
   
- 建構函式:  
+ 建構函式：  
   
- `template<typename InIter>`  
+ `template<typename InIter> multiset(InIter first, InIter last);`  
   
- `multiset(InIter first, InIter last);`  
+ 初始化受控制的序列與順序 [`first`， `last`)，使用預設排序述詞。 您可以使用它來製作受控制的序列的其他順序，排序述詞的預設值。  
   
- 使用序列 `[``first``,` `last``)` 與預設定序述詞初始化控制項序列。  您會用它加上預設定序述詞來為受控制序列複製另一個序列。  
+ 建構函式：  
   
- 建構函式:  
+ `template<typename InIter> multiset(InIter first, InIter last, key_compare^ pred);`  
   
- `template<typename InIter>`  
+ 初始化受控制的序列與順序 [`first`， `last`)，與順序的述詞`pred`。 您可以使用它來進行受控制的序列的指定順序的述詞的另一個序列的複本。  
   
- `multiset(InIter first, InIter last,`  
-  
- `key_compare^ pred);`  
-  
- 使用序列 `[``first``,` `last``)` 與序述詞初始化控制項序列 `pred`。  您會用它加上指定序述詞來為受控制序列複製另一個序列。  
-  
- 建構函式:  
+ 建構函式：  
   
  `multiset(System::Collections::Generic::IEnumerable<Key>^ right);`  
   
- 由預設定序述詞加上列舉值 `right` 指定的序列初始化控制項序列。  您會用它加上預設定序述詞來作為列舉值所描述的另一個序列複製的控制序列。  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，排序述詞的預設值。 您可以使用它來進行受控制的序列排序述詞的預設值所列舉值，描述的另一個序列的複本。  
   
- 建構函式:  
+ 建構函式：  
   
- `multiset(System::Collections::Generic::IEnumerable<Key>^ right,`  
+ `multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`  
   
- `key_compare^ pred);`  
+ 初始化受控制的序列的列舉值所指定的順序與`right`，順序的述詞`pred`。 您可以使用它來進行受控制的序列的列舉值，指定順序的述詞所描述的另一個序列的複本。  
   
- 由序述詞加上列舉值 `right` 指定的序列初始化控制項序列 `pred`。  您會用它加上指定序述詞來作為列舉值所描述的另一個序列複製的控制序列。  
+## <a name="example"></a>範例  
   
-## 範例  
-  
-```  
+```cpp  
 // cliext_multiset_construct.cpp   
 // compile with: /clr   
 #include <cliext/set>   
@@ -187,22 +180,25 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **a b c**  
-**size\(\) \= 0**  
- **c b a**  
- **a b c**  
- **c b a**  
- **a b c**  
- **c b a**  
- **c b a**  
- **a b c**   
-## 需求  
- **標頭：** \<cliext\/set\>  
+```Output  
+size() = 0  
+ a b c  
+size() = 0  
+ c b a  
+ a b c  
+ c b a  
+ a b c  
+ c b a  
+ c b a  
+ a b c  
+```  
+  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
  **命名空間：** cliext  
   
-## 請參閱  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::generic\_container](../dotnet/multiset-generic-container-stl-clr.md)   
- [multiset::operator\=](../dotnet/multiset-operator-assign-stl-clr.md)
+## <a name="see-also"></a>請參閱  
+ [多重集 (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::generic_container (STL/CLR)](../dotnet/multiset-generic-container-stl-clr.md)   
+ [multiset::operator= (STL/CLR)](../dotnet/multiset-operator-assign-stl-clr.md)

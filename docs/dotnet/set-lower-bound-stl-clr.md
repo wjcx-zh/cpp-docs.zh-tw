@@ -1,45 +1,46 @@
 ---
-title: "set::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound 成員 [STL/CLR]"
+title: "set:: lower_bound (STL/CLR) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: d4da5b8b-ddf2-4d36-8092-f1be81b42348
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 05dada3a53a5cd31997ff6ce21ec835d5b4e842b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# set::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-尋找符合指定索引鍵的項目範圍的開頭。  
+# <a name="setlowerbound-stlclr"></a>set::lower_bound (STL/CLR)
+尋找符合指定之索引鍵的範圍開頭。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### 參數  
- Key \- 索引鍵  
+#### <a name="parameters"></a>參數  
+ key  
  要搜尋的索引鍵值。  
   
-## 備註  
- 成員函式來判斷在相同 Bucket 的項目為 `key`之受控制序列的第一個項目的 `X` 。  如果沒有此類項目存在，便會傳回 [set::end](../dotnet/set-end-stl-clr.md)`()`;否則會指定 `X`的會傳回 Iterator。  您可以使用它目前所在項目的開頭符合指定索引鍵受控制序列。  
+## <a name="remarks"></a>備註  
+ 成員函式判斷第一個項目`X`具有對等順序，來控制序列中`key`。 如果沒有這類元素存在，它會傳回[set:: end (STL/CLR)](../dotnet/set-end-stl-clr.md)`()`; 否則它會傳回迭代器，指定`X`。 您可以使用它來尋找項目序列的開頭目前受控制序列之符合指定之索引鍵。  
   
-## 範例  
+## <a name="example"></a>範例  
   
 ```  
 // cliext_set_lower_bound.cpp   
@@ -71,18 +72,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**lower\_bound \(L'x\) \=\=end \(\) \= true**  
-**\*lower\_bound \(L'a\) \=。**  
-**\*lower\_bound \(L'b \= b\)**   
-## 需求  
- **標題:** \<cliext\/設定\>  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
   
- **命名空間:** cliext  
+## <a name="requirements"></a>需求  
+ **標頭：** \<cliext/set >  
   
-## 請參閱  
- [set](../dotnet/set-stl-clr.md)   
- [set::count](../dotnet/set-count-stl-clr.md)   
- [set::equal\_range](../dotnet/set-equal-range-stl-clr.md)   
- [set::find](../dotnet/set-find-stl-clr.md)   
- [set::upper\_bound](../dotnet/set-upper-bound-stl-clr.md)
+ **命名空間：** cliext  
+  
+## <a name="see-also"></a>請參閱  
+ [設定 (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set:: count (STL/CLR)](../dotnet/set-count-stl-clr.md)   
+ [set:: equal_range (STL/CLR)](../dotnet/set-equal-range-stl-clr.md)   
+ [set:: find (STL/CLR)](../dotnet/set-find-stl-clr.md)   
+ [set::upper_bound (STL/CLR)](../dotnet/set-upper-bound-stl-clr.md)

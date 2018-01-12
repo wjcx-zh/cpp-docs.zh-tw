@@ -13,11 +13,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a17ad8aca031d6345f3ded4839dbb543c1edf133
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fdc0015bda5f0a6678b1d274c79445aba4e4aab0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="outline-of-changes-ccli"></a>變更大綱 (C++/CLI)
 此外框會顯示某些變更的範例中的語言，從 Managed Extensions for c + +，Visual c + +。 請遵循隨附的每個項目，如需詳細資訊的連結。  
@@ -517,7 +520,7 @@ Array^ myIntArray =
   
  請參閱[typeof 變成 t:: typeid](../dotnet/typeof-goes-to-t-typeid.md)如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C + + /CLI 移轉入門](../dotnet/cpp-cli-migration-primer.md)   
  [執行階段平台的元件延伸模組](../windows/component-extensions-for-runtime-platforms.md)
 

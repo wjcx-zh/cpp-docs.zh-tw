@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,22 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 類別
 這個類別會實作包含在另一個物件內的視窗。  
@@ -74,12 +58,12 @@ class CContainedWindowT : public TBase
  您的新類別的基底類別。 預設基底類別是`CWindow`。  
   
  `TWinTraits`  
- 定義視窗樣式 traits 類別。 預設為 `CControlWinTraits`。  
+ 定義視窗樣式 traits 類別。 預設值為 `CControlWinTraits`。  
   
 > [!NOTE]
 > [CContainedWindow](ccontainedwindowt-class.md)的特製化`CContainedWindowT`。 如果您想要變更基底類別或特性，使用`CContainedWindowT`直接。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -119,20 +103,20 @@ class CContainedWindowT : public TBase
 > [!NOTE]
 >  任何給定的`CContainedWindowT`物件，呼叫**建立**或`SubclassWindow`。 您不應叫用相同的物件上的這兩種方法。  
   
- 當您使用**加入控制項根據**選項在 ATL 專案精靈中，精靈會自動將`CContainedWindowT`来實作此控制項的類別資料成員。 下列範例會示範如何宣告，包含的視窗︰  
+ 當您使用**加入控制項根據**選項在 ATL 專案精靈中，精靈會自動將`CContainedWindowT`来實作此控制項的類別資料成員。 下列範例會示範如何宣告，包含的視窗：  
   
- [!code-cpp[NVC_ATL_Windowing # 38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing # 39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[NVC_ATL_Windowing # 40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
 |如需詳細資訊|請參閱|  
 |--------------------------------|---------|  
 |建立控制項|[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)|  
 |在 ATL 中使用視窗|[ATL 視窗類別](../../atl/atl-window-classes.md)|  
 |ATL 專案精靈|[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)和本節中的後續主題[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595)和後續 Windows SDK 中的主題|  
   
 ## <a name="inheritance-hierarchy"></a>繼承階層  
  `TBase`  
@@ -140,7 +124,7 @@ class CContainedWindowT : public TBase
  `CContainedWindowT`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT  
  建構函式初始化資料成員。  
@@ -170,7 +154,7 @@ CContainedWindowT(
 ### <a name="remarks"></a>備註  
  如果您想要建立新的視窗，透過[建立](#create)，您必須傳遞的現有視窗類別名稱`lpszClassName`參數。 如需範例，請參閱[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)概觀。  
   
- 有三個建構函式︰  
+ 有三個建構函式：  
   
 -   具有三個引數的建構函式是通常稱為。  
   
@@ -237,16 +221,16 @@ HWND Create(
  [in]指定視窗的名稱。 預設值是**NULL**。  
   
  `dwStyle`  
- [in]視窗樣式。 預設值是**WS_CHILD |WS_VISIBLE**。 如需可能的值，請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]視窗樣式。 預設值是**WS_CHILD &#124;WS_VISIBLE**。 如需可能值的清單，請參閱[CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) Windows SDK 中。  
   
  `dwExStyle`  
- [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ [in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) Windows SDK 中。  
   
  `MenuOrID`  
  [in]子視窗的視窗識別項。 最上層視窗中，請在視窗的功能表控制代碼。 預設值是**0U**。  
   
  `lpCreateParam`  
- [in]視窗建立資料指標。 完整的說明，請參閱的最後一個參數的描述[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)。  
+ [in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680)。  
   
 ### <a name="return-value"></a>傳回值  
  如果成功，新建立的視窗; 的控制代碼否則， **NULL**。  
@@ -443,11 +427,10 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="remarks"></a>備註  
  `WindowProc`會指示訊息所識別的訊息對應至[m_dwMsgMapID](#m_dwmsgmapid)。 如有必要，`WindowProc`呼叫[DefWindowProc](#defwindowproc)進行額外的訊息處理。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWindow 類別](../../atl/reference/cwindow-class.md)   
  [CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
  [CMessageMap 類別](../../atl/reference/cmessagemap-class.md)   
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [類別概觀](../../atl/atl-class-overview.md)
-

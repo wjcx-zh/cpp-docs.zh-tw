@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54a1cebd11fbb1d7fffad69fadd5a588c0c1a04d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr 類別
 這個類別會提供處理介面指標的方法和全域介面表 (GIT)。  
@@ -44,18 +45,18 @@ class CComGITPtr
  `T`  
  要儲存在 GIT 中的介面指標的類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|建構函式。|  
 |[CComGITPtr:: ~ CComGITPtr](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComGITPtr::Attach](#attach)|呼叫此方法以在全域介面表 (GIT) 中註冊的介面指標。|  
 |[CComGITPtr::CopyTo](#copyto)|呼叫此方法以將介面從全域介面表 (GIT) 複製到傳入的指標。|  
@@ -65,14 +66,14 @@ class CComGITPtr
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComGITPtr::operator DWORD](#operator_dword)|傳回從 cookie`CComGITPtr`物件。|  
 |[CComGITPtr::operator =](#operator_eq)|指派運算子。|  
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|Cookie。|  
   
@@ -119,16 +120,16 @@ CComGITPtr(CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `p`  
+ [輸入] `p`  
  要儲存在全域介面表 (GIT) 介面指標。  
   
- [in] `git`  
+ [輸入] `git`  
  若要將現有的參考`CComGITPtr`物件。  
   
- [in] `dwCookie`  
+ [輸入] `dwCookie`  
  此 cookie 會用來識別的介面指標。  
   
- [in] `rv`  
+ [輸入] `rv`  
  來源`CComGITPtr`可以移動資料的物件。  
   
 ### <a name="remarks"></a>備註  
@@ -210,16 +211,16 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `p`  
+ [輸入] `p`  
  介面的指標。  
   
- [in] `git`  
+ [輸入] `git`  
  對 `CComGITPtr` 物件的參考。  
   
- [in] `dwCookie`  
+ [輸入] `dwCookie`  
  此 cookie 會用來識別的介面指標。  
   
- [in] `rv`  
+ [輸入] `rv`  
  `CComGITPtr`移動的資料。  
   
 ### <a name="return-value"></a>傳回值  
@@ -251,7 +252,7 @@ HRESULT Revoke() throw();
 ### <a name="remarks"></a>備註  
  從 GIT 中移除介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [無限制執行緒封送處理器](../../atl/atl-and-the-free-threaded-marshaler.md)   
  [存取在 Apartment 之間的介面](http://msdn.microsoft.com/library/windows/desktop/ms682353)   
  [使用全域介面資料表的時機](http://msdn.microsoft.com/library/windows/desktop/ms693729)   

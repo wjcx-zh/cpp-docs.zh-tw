@@ -15,17 +15,18 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49586d72b4fa2b44fb5754f2b0247991598df02a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15e121f54ae1567910e361564dcb8833edee434e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="service-provider-support-classes"></a>服務提供者支援類別
 下列類別會提供服務提供者的支援：  
   
 -   [IServiceProviderImpl](../atl/reference/iserviceproviderimpl-class.md)找出其 GUID 所指定的服務，並傳回服務的要求之介面的介面指標。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

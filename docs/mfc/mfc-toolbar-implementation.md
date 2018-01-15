@@ -28,11 +28,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: defb0dc6faa5438dc7f040fbd09f318b60b5a2ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 540f3240588b8e6fde119a167eace8103ef58c5a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC 工具列實作
 工具列是[控制列](../mfc/control-bars.md)包含控制項的點陣圖影像。 這些映像可像按鈕、 核取方塊或選項按鈕。 MFC 提供類別[CToolbar](../mfc/reference/ctoolbar-class.md)管理工具列。  
@@ -108,7 +109,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [CToolBar](../mfc/reference/ctoolbar-class.md)和[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)類別  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [工具列](../mfc/toolbars.md)   
  [工具列編輯器](../windows/toolbar-editor.md)
 

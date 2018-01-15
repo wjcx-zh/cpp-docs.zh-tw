@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a69d78f0abf67ad01ea7108bb4f104e93f41332
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ac9b52d45ab857b20ead047eb598542070b1bf5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tbyte"></a>TBYTE
 配置並選擇性地為每個初始化儲存體的 10 個位元組`initializer`。 也可用以做為類型指定型別是合法的任何位置。  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
 [[name]] TBYTEinitializer [[, initializer]]...  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)   
  [DT](../../assembler/masm/dt.md)

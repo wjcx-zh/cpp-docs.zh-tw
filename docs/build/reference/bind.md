@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 64d3269bda732ad16941a433674ed1c1ec2bf6e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50f2f1856b4718af8e87728a79511d9b18654efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bind"></a>/BIND
 ```  
@@ -39,5 +40,5 @@ ms.lasthandoff: 10/24/2017
   
  根據預設，程式載入器載入程式時設定的進入點的位址。 此程序所花費的時間會有所差異，取決於 Dll 的數字和程式中參考的進入點的數目。 如果程式已修改其中 /BIND，且基底位址的可執行檔和 Dll 不會衝突已經載入的 Dll，如果作業系統不需要設定這些位址。 不正確地以檔案的情況下，作業系統重新放置到程式的 Dll，並重新計算的進入點位址，以將新增到程式的載入時間。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [EDITBIN 選項](../../build/reference/editbin-options.md)

@@ -1,40 +1,41 @@
 ---
-title: "將 __asm 區塊定義為 C 巨集 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__asm 關鍵字 [C++], 做為 C 巨集"
-  - "巨集, __asm 區塊"
-  - "Visual C, 巨集"
+title: "將 __asm 區塊定義為 C 巨集 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- macros, __asm blocks
+- Visual C, macros
+- __asm keyword [C++], as C macros
 ms.assetid: 677ba11c-21c8-4609-bba7-cd47312243b0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: af95f7b2c74d797203a0e6b3ddd6a92ddcb51e5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 將 __asm 區塊定義為 C 巨集
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Microsoft 特定**  
+# <a name="defining-asm-blocks-as-c-macros"></a>將 __asm 區塊定義為 C 巨集
+**Microsoft 特定的**  
   
- C 的巨集提供便利的方式將組譯程式碼插入程式碼中，但它們會要求額外進行處理，因為巨集展開成單一邏輯行。  若要建立簡單的巨集，請依照下列這些規則：  
+ C 巨集提供便利的方式，可將組譯程式碼插入原始程式碼中，但是，因為巨集會展開成單一邏輯程式敘述行，所以必須特別小心。 為了使建立的巨集不會發生任何錯誤，請遵循這些規則：  
   
--   括住`__asm`封鎖大括弧括住。  
+-   使用大括號將 `__asm` 區塊括住。  
   
--   將`__asm`在每個組件指令之前的關鍵字。  
+-   將 `__asm` 關鍵字放在每個組譯碼指令前面。  
   
--   使用舊式 C 註解 \(  `/* comment */`\) 而不是組件樣式註解 \(   `; comment`\) 或單行 C 註解 \(   `// comment`\)。  
+-   使用舊式的 C 註解 ( `/* comment */`) 而不是組譯碼樣式的註解 (`; comment`) 或單行的 C 註解 (`// comment`)。  
   
- 為了說明，下列範例會定義簡單的巨集：  
+ 為了說明，下列範例會定義一個簡單的巨集：  
   
 ```  
 #define PORTIO __asm      \  
@@ -46,23 +47,23 @@ caps.handback.revision: 7
 }  
 ```  
   
- 第一眼看，其中最後三個`__asm`關鍵字起來好像多餘。  有需要，不過，因為巨集展開的單一行中：  
+ 乍看之下，最後三個 `__asm` 關鍵字看起來似乎是多餘的。 不過，因為巨集會展開成單一行，因此它們仍是必要的：  
   
 ```  
 __asm /* Port output */ { __asm mov al, 2  __asm mov dx, 0xD007 __asm out dx, al }  
 ```  
   
- 第三個和第四個`__asm`關鍵字所需做為陳述式分隔符號。  在中辨識唯一的陳述式分隔符號`__asm`區塊是新行字元和  `__asm`關鍵字。  因為區塊定義為巨集是一個邏輯程式敘述行，您必須分隔與每個指示 `__asm`.  
+ 第三和第四個 `__asm` 關鍵字也是必要的，做為陳述式分隔符號。 在 `__asm` 區塊中唯一可辨識的陳述式分隔符號為新行字元與 `__asm` 關鍵字。 由於定義為巨集的區塊即是一個邏輯程式敘述行，您必須分隔 `__asm` 中的每個指令。  
   
- 在大括號也很重要。  如果您省略它們，編譯器可以在同一行右邊的 \[巨集引動過程的 C 或 c \+ \+ 陳述式所混淆。  沒有右括號，編譯器無法分辨在組件程式碼會停止，而它看到 C 或 c \+ \+ 的陳述式`__asm`為組件的指令區塊。  
+ 大括號也非常重要。 如果您省略它們，編譯器會因為 C 或 C++ 陳述式位於巨集引動過程右邊的同一行而混淆。 少了右邊的大括號，編譯器無法分辨出組譯程式碼從何處停止，因此，它會將 `__asm` 區塊後的 C 或 C++ 陳述式視為組譯碼指令。  
   
- 以分號開頭的組件樣式註解 \(**;**\) 繼續至行結尾。  在巨集中中，因為編譯器會忽略所有項目之後的註解，一直到邏輯程式敘述行的結尾，這會造成問題。  單行 C 或 c \+ \+ 註解也是一樣 \(  `// comment`\)。  若要避免錯誤，請使用 \[舊式 C 註解 \(  `/* comment */`\) 在  `__asm`區塊定義為巨集。  
+ 分號為開頭的組譯碼樣式註解 (**;**) 繼續到一行的結尾。 因為編譯器會忽略註釋後方的所有項目，一直到邏輯程式敘述行的結尾，所以會在巨集中產生問題。 同樣的情形也會出現在單行 C 或 C++ 註解 ( `// comment`)。 若要避免這個錯誤，請在定義為巨集的 `/* comment */` 區塊中使用舊式的 C 註解 (`__asm`)。  
   
- `__asm`撰寫 C 巨集可以取得引數的區塊。  與一般 C 巨集，但是，不同的是`__asm`巨集無法傳回值。  因此您無法在 C 或 c \+ \+ 運算式中使用這類巨集。  
+ 以 C 巨集形式撰寫的 `__asm` 區塊可以接受引數。 不過，和一般的 C 巨集不同的是，`__asm` 巨集無法傳回值。 因此您無法在 C 或 C++ 運算式中使用此類的巨集。  
   
- 請小心不要隨意叫用這種類型的巨集。  舉個例說，叫用一個組合語言的巨集函式中宣告的`__fastcall`慣例可能會造成未預期的結果。  \(請參閱[使用，並保留在內嵌組譯碼中的暫存器](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。\)  
+ 請務必小心，不要隨意叫用此類巨集。 例如，在使用 `__fastcall` 慣例宣告的函式中叫用組合語言巨集可能會導致未預期的結果。 (請參閱[使用和保留暫存器中內嵌組譯碼](../../assembler/inline/using-and-preserving-registers-in-inline-assembly.md)。)  
   
- **結束 Microsoft 特定**  
+ **結束 Microsoft 特定的**  
   
-## 請參閱  
- [內嵌組譯工具](../../assembler/inline/inline-assembler.md)
+## <a name="see-also"></a>請參閱  
+ [內嵌組合語言](../../assembler/inline/inline-assembler.md)

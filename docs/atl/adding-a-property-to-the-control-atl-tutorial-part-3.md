@@ -1,68 +1,70 @@
 ---
-title: "將屬性加入至控制項 (ATL 教學課程，第 3 部分) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
+title: "將屬性加入至控制項 (ATL 教學課程，第 3 部分) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a316ba56c551d0ee47261160058b00eca5e51a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 將屬性加入至控制項 (ATL 教學課程，第 3 部分)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-`IPolyCtl` 是包含控制項的自訂方法和屬性的介面，然後，您會將屬性加入至其中。  
+# <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>將屬性加入至控制項 (ATL 教學課程，第 3 部分)
+`IPolyCtl`是包含控制項的自訂方法和屬性的介面，您會將屬性加入它。  
   
-### 使用加入屬性精靈，將屬性  
+### <a name="to-add-a-property-using-the-add-property-wizard"></a>若要加入屬性，使用 加入屬性精靈  
   
-1.  在 \[類別檢視\] 中，展開多邊形分支。  
+1.  在 類別檢視中，展開 多邊形分支。  
   
 2.  以滑鼠右鍵按一下 IPolyCtl。  
   
-3.  在捷徑功能表上，按一下 \[**新增**\]，然後按一下 \[**加入屬性**\]。  
+3.  在捷徑功能表，按一下 **新增**，然後按一下 **加入屬性**。  
   
-     加入屬性精靈\] 隨即出現。  
+     加入屬性精靈 會出現。  
   
-4.  在屬性型別下拉式清單中，選取 `SHORT`。  
+4.  在下拉式清單中的屬性類型，選取`SHORT`。  
   
-5.  輸入 `邊界` 做為 \[**屬性名稱。**\]  
+5.  型別`Sides`為**屬性名稱。**  
   
-6.  按一下  完成的 \[**完成**\] 加入屬性。  
+6.  按一下**完成**完成 新增屬性。  
   
- 當您將屬性加入至 .idl 檔編譯\) 的介面， MIDL \(程式定義擷取其值的 `Get` 方法和設定新的值。 `Put` 方法。  方法會透過加上 `put_` 和 `get_` 命名的屬性名稱。  
+ 當您新增屬性至介面時，MIDL （編譯.idl 檔案的程式） 會定義`Get`擷取其值的方法和`Put`設定新值的方法。 方法的命名方式是將`put_`和`get_`屬性名稱。  
   
- 加入屬性精靈會將需要的程式碼行加入至 .idl 檔。  它也會將 `Get` 和 `Put` 函式原型加入至 PolyCtl.h 的類別定義並加入空白實作加入至 PolyCtl.cpp。  您可以開啟 PolyCtl.cpp 和搜尋函式則會檢查這個 `get_Sides` 和 `put_Sides`。  
+ 加入屬性精靈 會將必要的行加入至.idl 檔案。 它也會加入`Get`和`Put`函式原型中 PolyCtl.h 的類別定義，並將空白的實作加入至 PolyCtl.cpp。 您可以開啟 PolyCtl.cpp 並尋找函式檢查此`get_Sides`和`put_Sides`。  
   
- 雖然您現在有擷取最基本的函式會設定和屬性，需要位置來儲存它。  您會建立變數以儲存屬性和據以更新函式。  
+ 雖然您現在可以設定及擷取屬性的基本架構函式，它需要的儲存位置。 您將建立變數，以儲存屬性，並且據以更新函式。  
   
-#### 建立變數以儲存屬性和更新放置和取得方法  
+#### <a name="to-create-a-variable-to-store-the-property-and-update-the-put-and-get-methods"></a>若要建立一個變數來儲存屬性，並且更新 put 和 get 的方法  
   
-1.  從 \[方案總管\] 中，開啟 PolyCtl.h 和在 `m_clrFillColor`的定義之後加入下列程式碼:  
+1.  從 方案總管 中，開啟 PolyCtl.h 和之後的定義中加入下行`m_clrFillColor`:  
   
-     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/CPP/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]  
+     [!code-cpp[NVC_ATL_Windowing#44](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_1.h)]  
   
-2.  設定預設值 `m_nSides`。  藉由加入行進行預設圖案三角形至 PolyCtl.h 的建構函式:  
+2.  設定的預設值`m_nSides`。 請將這一行加入建構函式中 PolyCtl.h 圖形三角形的預設值：  
   
-     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/CPP/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]  
+     [!code-cpp[NVC_ATL_Windowing#45](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_2.h)]  
   
-3.  實作 `Get` 和 `Put` 方法。  `get_Sides` 和 `put_Sides` 函式宣告加入至 PolyCtl.h。  使用下列程式碼取代 PolyCtl.cpp `get_Sides` 的和 `put_Sides` 的程式碼:  
+3.  實作`Get`和`Put`方法。 `get_Sides`和`put_Sides`PolyCtl.h 已加入函式宣告。 取代為 PolyCtl.cpp 中的程式碼`get_Sides`和`put_Sides`為下列程式碼：  
   
-     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/CPP/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
+     [!code-cpp[NVC_ATL_Windowing#46](../atl/codesnippet/cpp/adding-a-property-to-the-control-atl-tutorial-part-3_3.cpp)]  
   
- `get_Sides` 方法傳遞 `pVal` 指標傳回 `Sides` 屬性目前的值。  在 `put_Sides` 方法中，程式碼會確保使用者設定 `Sides` 屬性設定為可接受值。  最少必須是介於 2 和，因為點陣列的每一邊將使用， 100 是最大值的合理的限制。  
+ `get_Sides`方法會傳回目前的值`Sides`透過屬性`pVal`指標。 在`put_Sides`方法，該程式碼可確保使用者會設定`Sides`屬性設為可接受的值。 最小值必須是 2，而且因為將使用的點陣列，為每個邊，100 限制為最大值。  
   
- 您現在有一個名為 `Sides`的屬性。  在下一個步驟中，您將變更繪圖程式碼使用。  
+ 您現在有一個屬性呼叫`Sides`。 在下一個步驟中，您會變更繪圖程式碼使用它。  
   
- [回到步驟 2](../atl/adding-a-control-atl-tutorial-part-2.md) &#124; [在 &#91;步驟 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
+ [步驟 2 至](../atl/adding-a-control-atl-tutorial-part-2.md)&#124;[至步驟 4](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
+

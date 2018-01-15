@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3a8fb59d03bed295d28a88d9659205bd173a5355
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0bb02425c906a9d468d53691469dd7e418afcad3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersiststorageimpl-class"></a>IPersistStorageImpl 類別
 這個類別會實作[IPersistStorage](http://msdn.microsoft.com/library/windows/desktop/ms679731)介面。  
@@ -49,11 +50,11 @@ class ATL_NO_VTABLE IPersistStorageImpl : public IPersistStorage
  `T`  
  您的類別，衍生自`IPersistStorageImpl`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IPersistStorageImpl::GetClassID](#getclassid)|擷取物件的 CLSID。|  
 |[IPersistStorageImpl::HandsOffStorage](#handsoffstorage)|指示要釋放所有的儲存體物件並輸入 HandsOff 模式的物件。 ATL 實作會傳回`S_OK`。|  
@@ -162,7 +163,7 @@ STDMETHOD(SaveCompleted)(IStorage*);
 ### <a name="remarks"></a>備註  
  請參閱[IPersistStorage:SaveCompleted](http://msdn.microsoft.com/library/windows/desktop/ms679713) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [儲存體和資料流](http://msdn.microsoft.com/library/windows/desktop/aa380352)   
  [IPersistStreamInitImpl 類別](../../atl/reference/ipersiststreaminitimpl-class.md)   
  [IPersistPropertyBagImpl 類別](../../atl/reference/ipersistpropertybagimpl-class.md)   

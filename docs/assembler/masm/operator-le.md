@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81ba9804c3a349ede8056b21bfad2847db2bf78c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4fa1ada451235ff486d09ce09b78d858d018d74e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-le"></a>運算子 LE
 如果為 true (-1) *expression1*小於或等於*expression2*，或如果不是傳回 false (0)。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
 expression1 LE expression2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算子參考](../../assembler/masm/operators-reference.md)

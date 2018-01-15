@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c45a2174650c7df3c3685472a36bdf306e8e7321
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 025c9aa66a8647fd5d8ca9803aedb50b27ed3be1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringelementtraits-class"></a>CStringElementTraits 類別
 這個類別會提供所儲存的集合類別使用的靜態函式`CString`物件。  
@@ -44,18 +45,18 @@ class CStringElementTraits
  `T`  
  若要儲存在集合中的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStringElementTraits::INARGTYPE](#inargtype)|要用來將項目加入至集合的類別物件的資料類型。|  
 |[CStringElementTraits::OUTARGTYPE](#outargtype)|要用來擷取元素的集合類別物件的資料類型。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStringElementTraits::CompareElements](#compareelements)|（靜態）呼叫此函式來比較兩個字串元素相等。|  
 |[CStringElementTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式來比較兩個字串元素。|  
@@ -180,7 +181,7 @@ static void RelocateElements(
 ### <a name="remarks"></a>備註  
  此靜態函式呼叫[memmove](../../c-runtime-library/reference/memmove-wmemmove.md)，即足以應付大多數的資料類型。 如果要移動的物件包含它們自己的成員的指標，此靜態函式必須覆寫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)   
  [CStringElementTraitsI 類別](../../atl/reference/cstringelementtraitsi-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

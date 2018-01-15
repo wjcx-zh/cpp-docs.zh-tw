@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 733fbfd1a215ecf9a19990e38d0d4f11be8bd560
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c89a1e0d87550614fb8991ac3efe6bf369d147e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringrefelementtraits-class"></a>CStringRefElementTraits 類別
 這個類別提供靜態函式與儲存在集合類別物件的字串。 字串物件做為參考人選。  
@@ -40,11 +41,11 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
  `T`  
  若要儲存在集合中的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CStringRefElementTraits::CompareElements](#compareelements)|呼叫此靜態函式來比較兩個字串元素相等。|  
 |[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|呼叫此靜態函式來比較兩個字串元素。|  
@@ -111,6 +112,6 @@ static ULONG Hash(INARGTYPE str) throw();
 ### <a name="return-value"></a>傳回值  
  傳回使用字串的內容來計算雜湊值。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CElementTraitsBase 類別](../../atl/reference/celementtraitsbase-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

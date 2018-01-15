@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
-- ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::InternalAddRef
 - ATLCOM/ATL::InternalRelease
@@ -25,35 +23,19 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
-helpviewer_keywords:
-- reference counting
+dev_langs: C++
+helpviewer_keywords: reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ff699c5d4620de01bd1f2ed1e3b87a4d77aa8396
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bab27a9d8b5af8315d9d3468933ea016b12e3399
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 這個類別會提供方法來處理非彙總及彙總物件的物件參考計數管理。  
@@ -70,7 +52,7 @@ class CComObjectRootEx : public CComObjectRootBase
  類別，其方法實作所需的執行緒模型。 您可以藉由設定明確選擇的執行緒模型`ThreadModel`至[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)， [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)，或[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)。 您可以藉由設定接受伺服器的預設執行緒模型`ThreadModel`至[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)或[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)。  
 
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -113,7 +95,7 @@ class CComObjectRootEx : public CComObjectRootBase
   
  如果您的類別定義指定[DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)巨集，ATL 建立的執行個體**CComPolyObject\<CYourClass >**時**IClassFactory::CreateInstance**呼叫。 在建立期間，會檢查的外部未知的值。 如果是**NULL**， **IUnknown**實作非彙總的物件。 如果不是外部未知**NULL**， **IUnknown**彙總物件，則實作。  
   
- 如果您的類別未指定`DECLARE_POLY_AGGREGATABLE`巨集，ATL 建立的執行個體**CAggComObject\<CYourClass >**彙總的物件或執行個體的**Ccomobject<\<CYourClass >**非彙總的物件。  
+ 如果您的類別未指定`DECLARE_POLY_AGGREGATABLE`巨集，ATL 建立的執行個體**CAggComObject\<CYourClass >**彙總的物件或執行個體的**Ccomobject<\<CYourClass>**非彙總的物件。  
   
  使用的優點`CComPolyObject`是，您可以避免必須同時`CComAggObject`和`CComObject`處理彙總及非彙總的情況下在模組中。 單一`CComPolyObject`物件會處理這兩種情況。 因此，只能有一個複本 vtable 和一份函式存在於您可以在模組中。 如果您的 vtable 很大，這可以大幅降低模組大小。 不過，如果您的 vtable 很小，使用`CComPolyObject`會造成較大的模組大小因為沒有最佳化彙總或非彙總物件，因為`CComAggObject`和`CComObject`。  
   
@@ -122,7 +104,7 @@ class CComObjectRootEx : public CComObjectRootBase
  如果您的物件不會彙總， **IUnknown**藉由`CComObject`或`CComPolyObject`。 在此情況下，呼叫`QueryInterface`， `AddRef`，和**發行**委派給`CComObjectRootEx`的`InternalQueryInterface`， `InternalAddRef`，和`InternalRelease`執行實際的作業。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="ccomobjectrootex"></a>CComObjectRootEx::CComObjectRootEx  
  建構函式會初始化為 0 的參考計數。  
@@ -144,7 +126,7 @@ HRESULT FinalConstruct();
 ### <a name="remarks"></a>備註  
  根據預設，`CComObjectRootEx::FinalConstruct`只會傳回`S_OK`。  
   
- 有執行中的初始設定的優點`FinalConstruct`而不是類別的建構函式︰  
+ 有執行中的初始設定的優點`FinalConstruct`而不是類別的建構函式：  
   
 -   您無法從建構函式，傳回狀態碼，但是您可以傳回`HRESULT`藉由`FinalConstruct`的傳回值。 您的類別物件在建立時使用 ATL 所提供的標準的 class factory，這個傳回值會傳播回到 COM 用戶端可讓您為他們提供詳細的錯誤資訊。  
   
@@ -157,11 +139,11 @@ HRESULT FinalConstruct();
 ### <a name="example"></a>範例  
  一般而言，覆寫這個方法中的類別衍生自`CComObjectRootEx`建立任何彙總物件。 例如:   
   
- [!code-cpp[NVC_ATL_COM #40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
  如果建構失敗，您可以傳回錯誤。 您也可以使用巨集[DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct)來保護您的外部物件無法刪除，如果在建立時，內部彙總的物件會遞增參考計數則遞減計數設為 0。  
   
- 以下是建立彙總的典型方式︰  
+ 以下是建立彙總的典型方式：  
   
 -   新增**IUnknown**指向您的類別物件，並將它初始化來**NULL**建構函式中。  
   
@@ -259,7 +241,7 @@ long m_dwRef;
 ```  
   
 ### <a name="remarks"></a>備註  
- 與`m_pOuterUnknown`聯集的一部分︰  
+ 與`m_pOuterUnknown`聯集的一部分：  
   
  `union`  
   
@@ -282,7 +264,7 @@ IUnknown*
 ```     
   
 ### <a name="remarks"></a>備註  
- 與`m_dwRef`聯集的一部分︰  
+ 與`m_dwRef`聯集的一部分：  
   
  `union`  
   
@@ -310,10 +292,10 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>備註  
  值`bStarting`參數會指出是否模組正在初始化或終止。 預設實作`ObjectMain`不做任何動作，但您可以在初始化或清除您想要的類別配置的資源類別中覆寫這個函式。 請注意，`ObjectMain`要求類別的任何執行個體之前呼叫。  
   
- `ObjectMain`會呼叫 DLL 的進入點，因此的進入點函式可以執行的作業類型是受限制。 如需有關這些限制的詳細資訊，請參閱[執行階段程式庫行為](../../build/run-time-library-behavior.md)和[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)。  
+ `ObjectMain`會呼叫 DLL 的進入點，因此的進入點函式可以執行的作業類型是受限制。 如需有關這些限制的詳細資訊，請參閱[Dll 和 Visual c + + 執行階段程式庫行為](../../build/run-time-library-behavior.md)和[DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583)。  
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  遞增參考計數的彙總的外部未知。  
@@ -364,9 +346,8 @@ void Unlock();
   
  如果執行緒模型為單一執行緒，這個方法沒有任何作用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
  [Ccomobject< 類別](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)
-

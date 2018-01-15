@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d07abc5e2579ac0764d32223b4ded15265e827fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44b5528a2d6bedaaaa7ddce582f58042e084b3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>建立發行組建時的常見問題
 在開發期間，您通常將建置和測試您的專案的偵錯組建。 如果您再建置您的應用程式的發行組建時，您可能會發生存取違規。  
@@ -68,6 +69,6 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_optimizations"></a>最佳化  
  根據特定的程式碼區段的本質，最佳化編譯器可能會產生非預期的程式碼。 這是最不可能的原因的發行組建的問題，但在某些情況下，它並未發生。 如需解決方案，請參閱[最佳化程式碼](../../build/reference/optimizing-your-code.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [發行組建](../../build/reference/release-builds.md)   
  [解決發行組建的問題](../../build/reference/fixing-release-build-problems.md)

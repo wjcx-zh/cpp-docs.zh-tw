@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- shared classes, classes
+dev_langs: C++
+helpviewer_keywords: shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e881c303fc61ee7b72f067b0c9c3378e1e2c1858
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 5e74a0fb32a9f0dc95837b9c8d633001ac79da8a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>類別由 MFC 和 ATL 共用。
 下表列出 MFC 和 ATL 之間共用的類別  
@@ -46,8 +43,7 @@ ms.lasthandoff: 10/09/2017
 |[CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)|在內部儲存為時間範圍中的秒數的時間量。|atltime.h|  
 |[IAtlStringMgr](../../atl-mfc-shared/reference/iatlstringmgr-class.md)|代表介面，以`CStringT`記憶體管理員。|atlsimpstr.h|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL/MFC 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
 
 

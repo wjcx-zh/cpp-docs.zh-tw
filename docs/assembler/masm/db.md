@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ae9af847892823f640fd12eaa5b57ec9d6d97d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b713851af8b6dc11ea458eba55369ac613dae79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="db"></a>DB
 配置並選擇性地為每個初始化一個位元組的儲存體`initializer`。 `DB`是的同義字[位元組](../../assembler/masm/byte-masm.md)  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  也可用以做為類型指定型別是合法的任何位置。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)   
  [DB](../../assembler/masm/db.md)   
  [SBYTE](../../assembler/masm/sbyte-masm.md)

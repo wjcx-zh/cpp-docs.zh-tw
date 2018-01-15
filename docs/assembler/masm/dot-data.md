@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ea5718869bcd211dd1ab7e1721f95504f215e0dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6d3d4221fe3663ba3fdc7d61e57ab45c5eeadf78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data"></a>.DATA
 當搭配[。模型](../../assembler/masm/dot-model.md)，啟動附近的資料區段為初始化的資料 （區段名稱 （_d））。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
 .DATA  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)   
  [.資料？](../../assembler/masm/dot-data-q.md)   
  [.CONST](../../assembler/masm/dot-const.md)   

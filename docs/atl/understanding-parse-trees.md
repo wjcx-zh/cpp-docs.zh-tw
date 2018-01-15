@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 091ad40625c85f465e3989dd2dff790c630f6538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8ce648a541f6e0e2d4fac2e6ee19226e41f20ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-parse-trees"></a>了解剖析樹狀結構
 您可以定義一個或多個剖析樹狀結構中登錄器指令碼，其中每個剖析樹狀目錄具有下列格式：  
@@ -66,6 +67,6 @@ HKEY_CLASSES_ROOT
   
  在這裡，註冊機構初次開啟 （建立） `HKEY_CLASSES_ROOT\MyVeryOwnKey`。 然後會看到的`MyVeryOwnKey`具有子機碼。 而不是關閉的索引鍵`MyVeryOwnKey`，註冊機構會保留此控制代碼，並開啟 （建立）`HasASubKey`使用此父控制代碼。 （沒有父控制代碼開啟時系統登錄可以是速度較慢）。因此，開啟`HKEY_CLASSES_ROOT\MyVeryOwnKey`，然後開啟`HasASubKey`與`MyVeryOwnKey`為父系的速度比開啟`MyVeryOwnKey`，正在關閉`MyVeryOwnKey`，，然後開啟`MyVeryOwnKey\HasASubKey`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [建立登錄器指令碼](../atl/creating-registrar-scripts.md)
 

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f6a32ebf3ab59679ee3f5fff3aabaf6866011e76
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e0251e33eb6b6ae2af920181077071c90c61192
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-simple-object"></a>加入 ATL 簡單物件
 ATL (Active Template Library) 將物件加入至您的專案，您的專案必須已建立以 ATL 應用程式，或包含 ATL 支援的 MFC 應用程式。 您可以使用[ATL 專案精靈](../../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[MFC 應用程式中加入 ATL 物件](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)實作 MFC 應用程式的 ATL 支援。  
@@ -41,7 +42,7 @@ ATL (Active Template Library) 將物件加入至您的專案，您的專案必�
   
 5.  按一下**完成**將物件加入至您的專案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [加入類別](../../ide/adding-a-class-visual-cpp.md)   
  [ATL 專案中加入新的介面](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
  [將連接點加入物件](../../atl/adding-connection-points-to-an-object.md)   

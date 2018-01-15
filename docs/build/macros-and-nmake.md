@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f5a93576e4d2429b0fb17618f36cbce2b9490cb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b2e1da7e1b8945043e3374b050186ece6526c82f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macros-and-nmake"></a>巨集和 NMAKE
 巨集取代另一個字串的 makefile 中的特定字串。 使用巨集，您可以：  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/24/2017
   
  [特殊的 NMAKE 巨集](../build/special-nmake-macros.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [NMAKE 參考](../build/nmake-reference.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6dc816dfa46e905dc8e9d0badb5fc54b53cbf043
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ea081d3868c1226638d01be9505eb9d0e01ed10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplearray-class"></a>CSimpleArray 類別
 這個類別會提供管理簡單陣列的方法。  
@@ -49,18 +50,18 @@ class CSimpleArray
  `TEqual`  
  定義項目類型的等號比較測試特性物件`T`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleArray::CSimpleArray](#csimplearray)|簡單陣列建構函式。|  
 |[CSimpleArray:: ~ CSimpleArray](#dtor)|簡單陣列解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleArray::Add](#add)|將新的項目加入至陣列。|  
 |[CSimpleArray::Find](#find)|陣列中尋找的項目。|  
@@ -73,7 +74,7 @@ class CSimpleArray
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleArray::operator\[\]](#operator_at)|從陣列中擷取項目。|  
 |[CSimpleArray::operator =](#operator_eq)|指派運算子。|  
@@ -273,5 +274,5 @@ BOOL SetAtIndex(
 ### <a name="return-value"></a>傳回值  
  如果，傳回 TRUE 成功，則為 FALSE 如果索引不正確。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

@@ -1,36 +1,36 @@
 ---
-title: "相依性 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "相依性"
-  - "相依性, NMAKE"
-  - "NMAKE 程式, 相依性"
+title: "相依性 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dependents
+- NMAKE program, dependents
+- dependents, NMAKE
 ms.assetid: 0a7b4499-ac6e-4c99-a304-027dd3818ab2
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 99d1bae16c79d5714cf7ca6488853b9c5d2a6d21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 相依性
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-在相依性行中，使用任何有效檔名或[虛擬目標](../build/pseudotargets.md)，在冒號 \(:\) 或雙冒號 \(::\) 之後指定零或多個相依性。  使用一個或多個空格或定位字元分隔多個相依性。  相依性不區分大小寫。  允許使用檔名做為路徑。  
+# <a name="dependents"></a>相依性
+在相依性的行中，指定零或多個相依項目之後的冒號 （:） 或雙冒號 （:），使用任何有效的檔名或[虛擬目標](../build/pseudotargets.md)。 使用一或多個空格或定位點分隔多個相依性。 相依性不區分大小寫。 允許使用路徑與檔名。  
   
-## 您還想知道關於哪些方面的詳細資訊？  
- [推斷相依](../build/inferred-dependents.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
+ [推斷的相依](../build/inferred-dependents.md)  
   
  [相依的搜尋路徑](../build/search-paths-for-dependents.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [描述區塊](../build/description-blocks.md)

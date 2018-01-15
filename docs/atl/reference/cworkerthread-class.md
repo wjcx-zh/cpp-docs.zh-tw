@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,19 @@ f1_keywords:
 - ATLUTIL/ATL::CWorkerThread::Initialize
 - ATLUTIL/ATL::CWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 25d102e7e47898ee2f93326756b3d50e8bb3bbff
-ms.contentlocale: zh-tw
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread 類別
 這個類別建立背景工作執行緒或使用現有，等候一或多個核心物件控點，而且其中一個控點會收到信號時，執行指定的用戶端函式。  
@@ -66,7 +49,7 @@ class CWorkerThread
  `ThreadTraits`  
  類別提供執行緒的建立函式，例如[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)或[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="protected-structures"></a>受保護的結構  
   
@@ -114,7 +97,7 @@ class CWorkerThread
 6.  若要終止執行緒，呼叫[CWorkerThread::Shutdown](#shutdown)。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlutil.h  
+ **標頭：** atlutil.h  
   
 ##  <a name="addhandle"></a>CWorkerThread::AddHandle  
  呼叫此方法，將可等候物件的控制代碼加入至背景工作執行緒所維護的清單。  
@@ -228,7 +211,7 @@ HRESULT Initialize(CWorkerThread<ThreadTraits>* pThread) throw();
  傳回 S_OK，如果成功或失敗的錯誤 HRESULT。  
   
 ### <a name="remarks"></a>備註  
- 這個方法應該呼叫以初始化物件，在建立之後，或是呼叫之後[CWorkerThread::Shutdown](#shutdown)。  
+ 應該呼叫這個方法，以初始化物件，在建立之後，或是呼叫後[CWorkerThread::Shutdown](#shutdown)。  
   
  若要有兩個或多個`CWorkerThread`物件使用相同的工作者執行緒，其中一個，而不傳遞任何引數然後將指標傳遞給該物件來初始化`Initialize`的其他方法。 使用指標初始化的物件應該關閉之前用來初始化的物件。  
   
@@ -270,9 +253,8 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
  請注意，呼叫**關機**物件的指標，另一個以初始化`CWorkerThread`物件沒有任何作用，而且一律會傳回 S_OK。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [類別](../../atl/reference/atl-classes.md)   
- [多執行緒︰ 建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)   
+ [多執行緒： 建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)   
  [IWorkerThreadClient 介面](../../atl/reference/iworkerthreadclient-interface.md)
-

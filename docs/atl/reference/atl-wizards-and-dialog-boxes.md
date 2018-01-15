@@ -14,18 +14,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c335d5146e28d3331fac8b0073a6bd6c7d1def5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7197ce84098961623ea95ccf22a7cec47ac6cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-wizards-and-dialog-boxes"></a>ATL 精靈和對話方塊
 Active Template Library (ATL) 精靈產生的各種 COM 物件的未定案程式碼。 您可以藉由開啟的專案中的捷徑功能表執行精靈**方案總管 中**，然後選擇**新增**，**類別**。  
   
 ## <a name="related-articles"></a>相關文章  
   
-|標題|說明|  
+|標題|描述|  
 |-----------|-----------------|  
 |[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)|描述 ATL 專案精靈和它的設定。|  
 |[ATL 簡單物件](../../atl/reference/adding-an-atl-simple-object.md)|建立基本的物件。|  

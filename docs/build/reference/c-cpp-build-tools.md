@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2db4e697f50c98197041ad3470ae553371dda85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b21ebd2adf20eb0812e9a0fb5b900e657f8eddc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-tools"></a>C/C++ 建置工具
 Visual c + + 會提供下列的命令列工具來檢視或操作組建輸出：  
@@ -38,7 +39,7 @@ Visual c + + 會提供下列的命令列工具來檢視或操作組建輸出：
   
 -   [ERRLOOK](../../build/reference/value-edit-control.md)，錯誤查詢公用程式中，擷取系統錯誤訊息或輸入的值為基礎的模組錯誤訊息。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [裝飾的名稱](../../build/reference/decorated-names.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   

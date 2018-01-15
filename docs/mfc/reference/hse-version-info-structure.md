@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 78b1ed79093db179e00f262b61934ff9c293ff18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 108f826ffaa17de65dafe246ab6724fac2b134f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hseversioninfo-structure"></a>HSE_VERSION_INFO 結構
 `pVer` 成員函式的 `CHttpServer::GetExtensionVersion` 參數會指向這個結構。 它提供 ISA 版本號碼和 ISA 的文字描述。  
@@ -43,6 +44,6 @@ typedef struct _HSE_VERSION_INFO {
 ## <a name="requirements"></a>需求  
  **標頭：** httpext.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 

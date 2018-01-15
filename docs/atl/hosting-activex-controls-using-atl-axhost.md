@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb2e7da3ed12b48f82f5769dd8436f0440031226
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2aac8a8b9cbf0b72378a286943faa6e36a8f3f74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hosting-activex-controls-using-atl-axhost"></a>裝載 ActiveX 控制項使用 ATL 類別
 本主題中的範例將示範如何建立 AXHost 以及如何裝載 ActiveX 控制項使用不同的 ATL 函式。 它也示範如何存取控制與接收事件 (使用[IDispEventImpl](../atl/reference/idispeventimpl-class.md)) 從裝載的控制項。 此範例會裝載子視窗或主視窗中的日曆控制項。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
   
  [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [控制項內含項目常見問題集](../atl/atl-control-containment-faq.md)   
  [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
  [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   

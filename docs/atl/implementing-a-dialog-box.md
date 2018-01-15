@@ -1,56 +1,58 @@
 ---
-title: "Implementing a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, 對話方塊"
-  - "CAxDialogImpl class, implementing dialog boxes in ATL"
-  - "CSimpleDialog class, implementing dialog boxes in ATL"
-  - "對話方塊, ATL"
+title: "實作對話方塊 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CSimpleDialog class, implementing dialog boxes in ATL
+- dialog boxes, ATL
+- CAxDialogImpl class, implementing dialog boxes in ATL
+- ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b3ff0e58623a241160da21266d085753be1c457
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Implementing a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-有兩種方式可以將對話方塊加入至 ATL 專案:使用 ATL 對話方塊精靈或手動加入。  
+# <a name="implementing-a-dialog-box"></a>實作對話方塊
+ATL 專案中加入對話方塊中的兩種方式： 使用 ATL 對話方塊精靈或手動將它加入。  
   
-## 加入 ATL 對話方塊精靈的對話方塊。  
- 在 [加入類別對話方塊。](../ide/add-class-dialog-box.md)，選取 ATL 對話方塊物件將對話方塊加入至 ATL 專案。  填入 ATL 對話方塊精靈為適當並按一下 **完成**。  精靈會將 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) 從衍生的類別加入至專案。  開啟 \[**檢視**\] 從  功能表上的 \[資源檢視\] 中，找出您的對話方塊，然後按兩下以開啟 \[資源編輯器。  
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>加入 ATL 對話方塊精靈與對話方塊  
+ 在[加入類別對話方塊](../ide/add-class-dialog-box.md)，選取要加入您的 ATL 專案對話方塊中的 ATL 對話方塊物件。 填入適當 ATL 對話方塊精靈，並按一下**完成**。 精靈會新增一個衍生自類別[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)至您的專案。 開啟 資源檢視，從**檢視**功能表上，找到您的對話方塊，然後按兩下該在資源編輯器中開啟它。  
   
 > [!NOTE]
->  如果您的對話方塊 `CAxDialogImpl`從衍生自類別，它可以裝載 ActiveX 控制項和視窗。  如果您不想要額外負荷在您的對話方塊類別的 ActiveX 控制項支援，請使用 [CSimpleDialog](../atl/reference/csimpledialog-class.md) 或 [CDialogImpl](../atl/reference/cdialogimpl-class.md) 。  
+>  如果您的對話方塊衍生自`CAxDialogImpl`，它可以裝載兩個 ActiveX 和 Windows 控制項。 如果您不想 ActiveX 控制項支援的額外負荷，在您的對話方塊類別中，使用[CSimpleDialog](../atl/reference/csimpledialog-class.md)或[CDialogImpl](../atl/reference/cdialogimpl-class.md)改為。  
   
- 訊息和事件處理常式可以加入至對話方塊類別從 \[類別檢視\]。  如需詳細資訊，請參閱[加入 ATL 訊息處理常式](../atl/adding-an-atl-message-handler.md)。  
+ 訊息和事件處理常式可以加入您的對話方塊類別，從 類別檢視。 如需詳細資訊，請參閱[加入 ATL 訊息處理常式](../atl/adding-an-atl-message-handler.md)。  
   
-## 手動加入對話方塊  
- 實作對話方塊類似於實作視窗。  您從 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)、 [CDialogImpl](../atl/reference/cdialogimpl-class.md)或 [CSimpleDialog](../atl/reference/csimpledialog-class.md) 衍生類別並宣告 [訊息對應](../atl/message-maps-atl.md) 處理訊息。  不過，您可以在您的衍生類別也必須指定對話方塊樣板資源 ID。  您的類別必須有資料成員呼叫這個運算式值的 `IDD` 。  
+## <a name="adding-a-dialog-box-manually"></a>手動加入對話方塊  
+ 實作視窗的相似實作對話方塊。 從衍生類別[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)， [CDialogImpl](../atl/reference/cdialogimpl-class.md)，或[CSimpleDialog](../atl/reference/csimpledialog-class.md)並宣告[訊息對應](../atl/message-maps-atl.md)來處理訊息。 不過，您也必須在衍生類別中指定對話方塊範本資源識別碼。 您的類別必須要有一個名為的資料成員`IDD`來儲存這個值。  
   
 > [!NOTE]
->  使用 ATL 對話方塊精靈時，當您建立對話方塊，則會自動將 `IDD` 成員做為 `enum` 型別。  
+>  當您建立使用 ATL 對話方塊精靈的對話方塊時，精靈會自動新增`IDD`成員`enum`型別。  
   
- `CDialogImpl` 可讓您實作該強制回應或非強制回應對話方塊主視窗控制項。  `CAxDialogImpl` 可讓您實作裝載 ActiveX 控制項和視窗的強制回應或非強制回應對話方塊。  
+ `CDialogImpl`可讓您實作的強制回應或裝載 Windows 控制項的強制回應對話方塊。 `CAxDialogImpl`可讓您實作的強制回應或主控 ActiveX 和 Windows 控制項的強制回應對話方塊。  
   
- 若要建立強制回應對話方塊，請建立您自己的執行個體 `CDialogImpl`衍生的 \(或 `CAxDialogImpl`衍生\) 類別來呼叫 [DoModal](../Topic/CDialogImpl::DoModal.md) 方法。  若要關閉強制回應對話方塊，請呼叫從訊息處理常式的 [EndDialog](../Topic/CDialogImpl::EndDialog.md) 方法。  若要建立非強制回應對話方塊，請呼叫 [建立](../Topic/CDialogImpl::Create.md) 方法 \(而不是 `DoModal`。  若要終結非強制回應對話方塊，請呼叫 [DestroyWindow](../Topic/CDialogImpl::DestroyWindow.md)。  
+ 若要建立強制回應對話方塊中，建立的執行個體您`CDialogImpl`-衍生 (或`CAxDialogImpl`-衍生) 類別，然後呼叫[DoModal](../atl/reference/cdialogimpl-class.md#domodal)方法。 若要關閉強制回應對話方塊，請呼叫[EndDialog](../atl/reference/cdialogimpl-class.md#enddialog)從訊息處理常式方法。 若要建立非強制回應對話方塊，請呼叫[建立](../atl/reference/cdialogimpl-class.md#create)方法，而非`DoModal`。 若要損毀非強制回應對話方塊，請呼叫[DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow)。  
   
- 接收事件。 [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)自動呼叫。  實作對話方塊的訊息處理常式，您會 `CWindowImpl`之處理常式的衍生類別。  如果有特定訊息傳回值，請將它當做 `LRESULT`。  傳回的 `LRESULT` 值由適當處理 ATL 對應由 Windows 對話方塊處理常式。  如需詳細資訊，請為 atlwin.h 的 [CDialogImplBaseT::DialogProc](../Topic/CDialogImpl::DialogProc.md) 請參閱原始程式碼。  
+ 在 自動完成接收事件[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)。 實作對話方塊的訊息處理常式一樣中的處理常式`CWindowImpl`-衍生的類別。 如果沒有特定訊息的傳回值，將其傳回做為`LRESULT`。 傳回`LRESULT`ATL 來對應值的正確 Windows 對話方塊管理員處理。 如需詳細資訊，請參閱的原始程式碼[CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) atlwin.h 中。  
   
-## 範例  
- 下列類別會實作一個對話方塊:  
+## <a name="example"></a>範例  
+ 下列類別可實作對話方塊：  
   
- [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/CPP/implementing-a-dialog-box_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [視窗類別](../atl/atl-window-classes.md)
+

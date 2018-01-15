@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a963c1fba2d3eda9c86fa1e6db74de739bf45182
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bb88a4c7827fcd43c26819a6f546779e35863cc0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="changing-the-default-class-factory-and-aggregation-model"></a>變更預設 Class Factory 和彙總模型
 使用 ATL [CComCoClass](../atl/reference/ccomcoclass-class.md)來定義物件的預設類別處理站和彙總模型。 `CComCoClass`指定下列兩個巨集：  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
  也會使用 ATL`typedef`機制來實作預設行為。 例如，`DECLARE_AGGREGATABLE`巨集使用`typedef`定義類型，稱為**_CreatorClass**，然後參考整個 ATL 在衍生類別中，請注意，`typedef`使用相同名稱的基底類別`typedef`導致 ATL 使用您的定義，並覆寫預設行為。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)   
  [彙總和 Class Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)
 

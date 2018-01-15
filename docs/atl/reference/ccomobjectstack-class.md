@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a4e00fc1f703df824daf7c0f1fc5fbaed05beb32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1b7fa9d14a27277d4c26fc6e7589400e19ef1395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectstack-class"></a>CComObjectStack 類別
 這個類別會建立暫存的 COM 物件，並提供的架構實作**IUnknown**。  
@@ -47,14 +48,14 @@ class CComObjectStack
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|建構函式。|  
 |[CComObjectStack:: ~ CComObjectStack](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComObjectStack::AddRef](#addref)|傳回零。 在偵錯模式中，呼叫`_ASSERTE`。|  
 |[CComObjectStack::QueryInterface](#queryinterface)|傳回**E_NOINTERFACE**。 在偵錯模式中，呼叫`_ASSERTE`。|  
@@ -62,7 +63,7 @@ class CComObjectStack
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|包含**HRESULT**在建構期間傳回`CComObjectStack`物件。|  
   
@@ -150,7 +151,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="remarks"></a>備註  
  在偵錯模式中，呼叫`_ASSERTE`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComAggObject 類別](../../atl/reference/ccomaggobject-class.md)   
  [Ccomobject< 類別](../../atl/reference/ccomobject-class.md)   
  [CComObjectGlobal 類別](../../atl/reference/ccomobjectglobal-class.md)   

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e42c349436bd0df4f1e26b35d238b6e1ee75c32
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a711b2f4a484a6370af828c5d0aad522686ca3f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cl-command-files"></a>CL 命令檔
 命令檔是文字檔，其中包含選項和檔名，否則輸入[命令列](../../build/reference/compiler-command-line-syntax.md)或指定使用[CL 環境變數](../../build/reference/cl-environment-variables.md)。 CL 可以接受做為引數在 CL 環境變數，或在命令列編譯器命令檔。 與命令列或 CL 環境變數不同的是，命令檔可讓您使用多行選項和檔名。  
@@ -53,6 +54,6 @@ CL /Ob2 /Og MYAPP.C /link LIBC.LIB
   
  請注意有效地合併 命令列和的命令檔命令。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
  [編譯器選項](../../build/reference/compiler-options.md)

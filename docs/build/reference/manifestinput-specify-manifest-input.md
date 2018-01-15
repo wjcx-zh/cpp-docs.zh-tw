@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a32eb8c65e14684b818341121714ce0359f6521a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1eec78675845e3f738bb0b6b440b3a71f1fd572
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (指定資訊清單輸入)
 指定要包含在內嵌於影像中的資訊清單中的資訊清單輸入的檔。  
@@ -37,6 +38,6 @@ ms.lasthandoff: 10/24/2017
   
  無法設定此選項，直接在[!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]。 請改用**額外的資訊清單檔案**要指定其他要包含的資訊清單檔案的專案屬性。 如需詳細資訊，請參閱[輸入和輸出、 資訊清單工具、 組態屬性、\<專案名稱 > 屬性頁對話方塊](../../ide/input-and-output-manifest-tool.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

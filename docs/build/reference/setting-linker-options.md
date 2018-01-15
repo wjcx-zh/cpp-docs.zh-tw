@@ -1,47 +1,47 @@
 ---
-title: "設定連結器選項 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "檔案 [C++], LINK"
-  - "輸入檔 [C++]"
-  - "輸入檔 [C++], 連結器"
-  - "連結器 [C++], 參數"
-  - "連結器 [C++], 設定選項的方法"
-  - "物件/程式庫模組"
+title: "設定連結器選項 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], LINK
+- input files [C++], linker
+- linker [C++], ways to set options
+- linker [C++], switches
+- input files [C++]
+- object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ba42921f1e192c90e302b437b9a7d1b4e5eb34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 設定連結器選項
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-連結器選項在開發環境內、外都可以設定。  每一項連結器選項的主題都會討論如何在開發環境中設定。  如需完整的清單，請參閱[連結器選項](../../build/reference/linker-options.md)。  
+# <a name="setting-linker-options"></a>設定連結器選項
+內部或外部的開發環境，可以設定連結器選項。 每個連結器選項的主題討論如何在開發環境中設定。 請參閱[連結器選項](../../build/reference/linker-options.md)如需完整清單。  
   
- 當您在開發環境之外執行 LINK 時，您可以用下列一種或數種方式指定輸入：  
+ 當您在開發環境外部執行連結時，您可以指定輸入中一或多個方法：  
   
--   在[命令列](../../build/reference/linker-command-line-syntax.md)上  
+-   在[命令列](../../build/reference/linker-command-line-syntax.md)  
   
 -   使用[命令檔](../../build/reference/link-command-files.md)  
   
--   在[環境變數](../../build/reference/link-environment-variables.md)中  
+-   在[環境變數](../../build/reference/link-environment-variables.md)  
   
- LINK 首先會處理 LINK 環境變數中指定的選項，接下來依照命令列及命令檔中所指定選項的順序處理。  如果某一選項重複出現而且具有不同引數，則以最後處理的一個為準。  
+ 連結第一個程序中指定選項 LINK 環境變數，後面接著選項的命令列指定的順序和命令檔中。 如果選項隨不同的引數重複顯示，最後一個處理的優先順序較高。  
   
- 各種選項均套用至整個組建；任何選項都不能只套用至特定的輸入檔案。  
+ 選項會套用至整個建置;沒有選項可以套用至特定的輸入檔中。  
   
-## 請參閱  
- [C\/C\+\+ 建置參考](../../build/reference/c-cpp-building-reference.md)   
+## <a name="see-also"></a>請參閱  
+ [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [連結器選項](../../build/reference/linker-options.md)

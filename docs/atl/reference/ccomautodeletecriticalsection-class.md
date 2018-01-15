@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d073e392030db72d6371a798875daf3d7a90e247
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0a0c5fdd45e819105a3f47e98c02bb5ad3d51be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>CComAutoDeleteCriticalSection 類別
 這個類別會提供方法來取得及釋放重要區段物件的擁有權。  
@@ -48,7 +49,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 ## <a name="requirements"></a>需求  
  **標頭：** atlcore.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComSafeDeleteCriticalSection 類別](../../atl/reference/ccomsafedeletecriticalsection-class.md)   
  [CComCriticalSection 類別](../../atl/reference/ccomcriticalsection-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

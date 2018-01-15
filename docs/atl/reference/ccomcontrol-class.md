@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ddbd18ac39721dd80eb547e53c7708891b94aa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae81e2b6beac11f94f8d117b004da2f8d0db8724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontrol-class"></a>CComControl 類別
 這個類別會提供方法來建立及管理 ATL 的控制項。  
@@ -61,13 +62,13 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComControl::CComControl](#ccomcontrol)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|擷取所要求介面的指標。|  
 |[CComControl::CreateControlWindow](#createcontrolwindow)|建立控制項的視窗。|  
@@ -213,7 +214,7 @@ int MessageBox(
 ### <a name="remarks"></a>備註  
  `MessageBox`在開發期間，以輕鬆地向使用者顯示的錯誤或警告訊息，則會很有用。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CWindowImpl 類別](../../atl/reference/cwindowimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [CComControlBase 類別](../../atl/reference/ccomcontrolbase-class.md)   

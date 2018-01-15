@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b71664847041d54d6aa86b1c013627e7ad7029d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7268d1996bbe64d364c2add478509983e7b863
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>加入 ATL OLE DB 提供者
 使用此精靈將 ATL OLE DB 提供者加入至專案。 ATL OLE DB 提供者是由資料來源、 工作階段、 命令和資料列集類別所組成。 專案必須已建立為 ATL COM 應用程式。  
@@ -38,6 +39,6 @@ ms.lasthandoff: 10/24/2017
   
 4.  按一下**完成**關閉精靈，將在您的專案中插入新建立的 OLE DB 提供者程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [使用程式碼精靈加入功能](../../ide/adding-functionality-with-code-wizards-cpp.md)
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,22 @@ f1_keywords:
 - ATLCOM/ATL::CComPolyObject::QueryInterface
 - ATLCOM/ATL::CComPolyObject::Release
 - ATLCOM/ATL::CComPolyObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ee44fcec146ef8a8c68b917020ae52e2300eed5e
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3518fd5936c4871e99eaf597f12fb3ab7cc8aff6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject 類別
 這個類別會實作**IUnknown**彙總或非彙總物件。  
@@ -66,7 +50,7 @@ class CComPolyObject : public IUnknown,
  `contained`  
  您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如您想要在物件上支援從任何其他介面呼叫也一樣。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -80,7 +64,7 @@ class CComPolyObject : public IUnknown,
 |名稱|描述|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|物件的參考計數遞增。|  
-|[CComPolyObject::CreateInstance](#createinstance)|（靜態）可讓您建立新**CComPolyObject** `contained` **>**物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComPolyObject::CreateInstance](#createinstance)|（靜態）可讓您建立新**CComPolyObject <** `contained`  **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|會執行最後的初始化`m_contained`。|  
 |[CComPolyObject::FinalRelease](#finalrelease)|執行最終解構`m_contained`。|  
 |[CComPolyObject::QueryInterface](#queryinterface)|擷取所要求介面的指標。|  
@@ -88,7 +72,7 @@ class CComPolyObject : public IUnknown,
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComPolyObject::m_contained](#m_contained)|委派**IUnknown**呼叫的外部未知，如果物件彙總或**IUnknown**如果物件不會彙總的物件。|  
   
@@ -115,7 +99,7 @@ class CComPolyObject : public IUnknown,
  `CComPolyObject`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="addref"></a>CComPolyObject::AddRef  
  在物件上的參考計數遞增。  
@@ -154,7 +138,7 @@ CComPolyObject(void* pv);
  會釋放所有配置的資源，呼叫[FinalRelease](#finalrelease)，並遞減模組鎖定計數。  
   
 ##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
- 可讓您建立新**CComPolyObject** `contained` **>**物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 可讓您建立新**CComPolyObject <** `contained`  **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -164,7 +148,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>參數  
  `pp`  
- [out]指標**CComPolyObject** `contained` **>**指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
+ [out]指標**CComPolyObject <** `contained`  **>** 指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
@@ -243,8 +227,7 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>傳回值  
  在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)   
  [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
  [類別概觀](../../atl/atl-class-overview.md)
-

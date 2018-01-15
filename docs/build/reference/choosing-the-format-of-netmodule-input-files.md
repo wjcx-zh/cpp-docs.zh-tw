@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0be66a528585bd86c4dbc39c17917229c3353bd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a46c2fa9ce553948c03cd2ab6ad20001d0021bed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>選擇 .netmodule 輸入檔的格式
 為 MSIL 的.obj 檔案 (以編譯[/clr](../../build/reference/clr-common-language-runtime-compilation.md)) 也可用來當作.netmodule 檔。  .obj 檔案包含中繼資料和原生符號。  .netmodule 僅包含中繼資料。  
@@ -45,5 +46,5 @@ ms.lasthandoff: 10/24/2017
   
 -   如果您的模組會用來建置 managed 程式庫，而且會以 /clr 產生連結器的一或多個模組輸入，.obj 檔做為模組輸入至連結器，並產生.dll （組件）。  如果您想要公開 （expose） 從程式庫的 managed 型別，而且如果也想使用的原生型別程式庫中的 c + + 應用程式，您的程式庫所組成 （您也要出貨每個模組的.h 檔案的元件程式庫模組的.obj 檔案以便它們可以參考以 #include 從來源程式碼)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [.netmodule 檔作為連結器輸入](../../build/reference/netmodule-files-as-linker-input.md)

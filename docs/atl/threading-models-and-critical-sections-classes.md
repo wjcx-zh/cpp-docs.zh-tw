@@ -1,58 +1,58 @@
 ---
-title: "Threading Models and Critical Sections Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.threads.models"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL, critical sections"
-  - "ATL, 多執行緒"
-  - "critical sections"
-  - "執行緒 [ATL], 模型"
+title: "執行緒模型和關鍵區段類別 (ATL) |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.threads.models
+dev_langs: C++
+helpviewer_keywords:
+- ATL, critical sections
+- ATL, multithreading
+- threading [ATL], models
+- critical sections
 ms.assetid: 759f05ef-6285-4be6-a2cc-78572dd75146
-caps.latest.revision: 10
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1501fe4f761b9bc8775018d6566ceff5fb0aa477
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Threading Models and Critical Sections Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="threading-models-and-critical-sections-classes"></a>執行緒模型和關鍵區段類別
+下列類別定義的執行緒模型和關鍵區段：  
+  
+-   [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md)實作在集區執行緒的 apartment model COM 伺服器。  
+  
+-   [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md)提供方法來實作在集區執行緒的 apartment model COM 伺服器。  
+  
+-   [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md)遞增和遞減的變數提供安全執行緒的方法。 提供的重要區段。  
+  
+-   [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md)遞增和遞減的變數提供安全執行緒的方法。 不提供重要區段。  
+  
+-   [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md)遞增和遞減的變數提供的方法。 不提供重要區段。  
+  
+-   [CComObjectThreadModel](../atl/reference/atl-typedefs.md#ccomobjectthreadmodel)決定適當的執行緒模型類別，為單一物件類別。  
+  
+-   [CComGlobalsThreadModel](../atl/reference/atl-typedefs.md#ccomglobalsthreadmodel)決定適當的執行緒模型類別的全域可用的物件。  
+  
+-   [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md)包含方法取得和釋放重要區段。 自動初始化重要區段。  
+  
+-   [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md)包含方法取得和釋放重要區段。 關鍵區段必須先明確初始化。  
+  
+-   [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md)鏡像處理中的方法`CComCriticalSection`而不需提供重要區段。 中的方法`CComFakeCriticalSection`不執行任何動作。  
+  
+-   [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md)提供 CRT 執行緒建立函式。 如果執行緒會使用 CRT 函式，請使用這個類別。  
+  
+-   [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md)提供 Windows 執行緒建立函式。 如果執行緒不會使用 CRT 函式，請使用這個類別。  
+  
+## <a name="see-also"></a>請參閱  
+ [類別概觀](../atl/atl-class-overview.md)
 
-下列類別會定義一個執行緒模型和關鍵區段:  
-  
--   [CAtlAutoThreadModule](../atl/reference/catlautothreadmodule-class.md) 實作執行緒集區， Apartment Model COM 伺服器。  
-  
--   [CAtlAutoThreadModuleT](../atl/reference/catlautothreadmodulet-class.md) 用於實作執行緒集區提供了方法， Apartment Model COM 伺服器。  
-  
--   [CComMultiThreadModel](../atl/reference/ccommultithreadmodel-class.md) 為遞增和遞減變數提供執行緒安全的方法。  提供關鍵區段。  
-  
--   [CComMultiThreadModelNoCS](../atl/reference/ccommultithreadmodelnocs-class.md) 為遞增和遞減變數提供執行緒安全的方法。  不提供關鍵區段。  
-  
--   [CComSingleThreadModel](../atl/reference/ccomsinglethreadmodel-class.md) 為遞增和遞減變數的方法。  不提供關鍵區段。  
-  
--   [CComObjectThreadModel](../Topic/CComObjectThreadModel.md) 決定單一物件類別的適當的執行緒模型類別。  
-  
--   [CComGlobalsThreadModel](../Topic/CComGlobalsThreadModel.md) 判斷是全域可用物件的適當的執行緒模型類別。  
-  
--   [CComAutoCriticalSection](../atl/reference/ccomautocriticalsection-class.md) 包含取得和釋放的關鍵區段 \(Critical Section\) 方法。  這個關鍵區段執行。會自動初始化。  
-  
--   [CComCriticalSection](../atl/reference/ccomcriticalsection-class.md) 包含取得和釋放的關鍵區段 \(Critical Section\) 方法。  必須明確初始化關鍵區段。  
-  
--   [CComFakeCriticalSection](../atl/reference/ccomfakecriticalsection-class.md) 反映在 `CComCriticalSection` 的方法，但不提供關鍵區段。  在 `CComFakeCriticalSection` 的方法不會有任何作用。  
-  
--   [CRTThreadTraits](../atl/reference/crtthreadtraits-class.md) CRT 針對執行緒提供建立函式。  如果執行緒是使用 CRT 函式，請使用這個類別。  
-  
--   [Win32ThreadTraits](../atl/reference/win32threadtraits-class.md) 為 Windows 執行緒提供建立函式。  如果執行緒不會使用 CRT 函式，請使用這個類別。  
-  
-## 請參閱  
- [Class Overview](../atl/atl-class-overview.md)

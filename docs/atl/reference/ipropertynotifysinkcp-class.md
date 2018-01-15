@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 91e2bcff0b168e9238351cff623f888221b583b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa15ef6706010154151c696eca320d464cdfee6a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipropertynotifysinkcp-class"></a>IPropertyNotifySinkCP 類別
 這個類別會公開[IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638)介面做為可連接物件上的輸出介面。  
@@ -59,7 +60,7 @@ class IPropertyNotifySinkCP
 ## <a name="requirements"></a>需求  
  **標頭：** atlctl.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IConnectionPointImpl 類別](../../atl/reference/iconnectionpointimpl-class.md)   
  [IConnectionPointContainerImpl 類別](../../atl/reference/iconnectionpointcontainerimpl-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

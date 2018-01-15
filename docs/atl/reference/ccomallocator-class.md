@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1ba2b12110e4c312b84b2a24831687e782cc339
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 370a52e87bcbb4849883ea03016cc462030ad028
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomallocator-class"></a>CComAllocator 類別
 這個類別會提供用來管理記憶體使用 COM 記憶體常式方法。  
@@ -35,11 +36,11 @@ ms.lasthandoff: 10/24/2017
 class CComAllocator
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComAllocator::Allocate](#allocate)|呼叫此靜態方法，以配置記憶體。|  
 |[CComAllocator::Free](#free)|呼叫此靜態方法，以釋放已配置的記憶體。|  
@@ -102,7 +103,7 @@ static void* Reallocate(void* p, size_t nBytes) throw();
 ### <a name="remarks"></a>備註  
  調整配置的記憶體數量。 請參閱[CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)如需詳細資訊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComHeapPtr 類別](../../atl/reference/ccomheapptr-class.md)   
  [CCRTAllocator 類別](../../atl/reference/ccrtallocator-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaab86ab72ef41bfe97a67c6d8845e8ce3d3c899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-property-page-wizard"></a>ATL 屬性頁精靈
 此精靈[加入 ATL 專案屬性頁](../../atl/reference/adding-an-atl-property-page.md)或具有 ATL 支援的 MFC 專案。 ATL 屬性頁來設定屬性提供使用者介面 （或呼叫的方法） 的一或多個 COM 物件。  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/24/2017
  **ProgID**  
  設定容器可以使用而不是物件的 CLSID 的名稱。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [選項，ATL 屬性頁精靈](../../atl/reference/options-atl-property-page-wizard.md)   
  [字串，ATL 屬性頁精靈](../../atl/reference/strings-atl-property-page-wizard.md)   
  [範例︰實作屬性頁](../../atl/example-implementing-a-property-page.md)

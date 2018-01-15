@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d7af6be73ebcd541aeb2c0a9a9eab72cd9bbb7af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a22026ed4d22e5bfe54d4545cf1e9af9668ae09d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-gt"></a>運算子 GT
 如果為 true (-1) *expression1*大於*expression2*，或如果不是傳回 false (0)。  
@@ -35,5 +36,5 @@ ms.lasthandoff: 10/24/2017
 expression1 GT expression2  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [運算子參考](../../assembler/masm/operators-reference.md)

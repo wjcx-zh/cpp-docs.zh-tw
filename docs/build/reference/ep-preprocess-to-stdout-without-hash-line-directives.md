@@ -1,77 +1,77 @@
 ---
-title: "/EP (前置處理至 stdout 不加 #line 指示詞) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ep"
-  - "VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/EP 編譯器選項 [C++]"
-  - "複製前置處理器輸出至 stdout"
-  - "EP 編譯器選項 [C++]"
-  - "-EP 編譯器選項 [C++]"
-  - "前置處理器輸出, 複製至 stdout"
+title: "-EP （前置處理至 stdout 不 #line 指示詞） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /ep
+- VC.Project.VCCLCompilerTool.GeneratePreprocessedFileNoLines
+dev_langs: C++
+helpviewer_keywords:
+- copy preprocessor output to stdout
+- preprocessor output, copy to stdout
+- -EP compiler option [C++]
+- EP compiler option [C++]
+- /EP compiler option [C++]
 ms.assetid: 6ec411ae-e33d-4ef5-956e-0054635eabea
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9d7b2a64ec8fa7565d17ab04683fec07c48aea3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /EP (前置處理至 stdout 不加 #line 指示詞)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-前置處理 C 和 C\+\+ 原始程式檔，並將前置處理過的檔案複製至標準輸出裝置。  
+# <a name="ep-preprocess-to-stdout-without-line-directives"></a>/EP (前置處理至 stdout 不加 #line 指示詞)
+前置處理 C 和 c + + 原始程式檔，並將前置處理過的檔案複製到標準輸出裝置。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /EP  
 ```  
   
-## 備註  
- 在這個處理序中會執行所有前置處理器指示詞 \(Preprocessor Directive\)，展開巨集，並且移除註解。  若要在前置處理過的輸出中保留註解，請配合 **\/EP** 使用 [\/C \(前置處理時保留註解\)](../../build/reference/c-preserve-comments-during-preprocessing.md) 選項。  
+## <a name="remarks"></a>備註  
+ 在過程中，會執行所有前置處理器指示詞、 巨集展開會執行，而且會移除註解。 若要保留的前置處理過的輸出中的註解，請使用[/C （保留註解在前置處理）](../../build/reference/c-preserve-comments-during-preprocessing.md)選項與**/EP**。  
   
- **\/EP** 選項會隱藏編譯。  您必須重新送出前置處理過的檔案，進行編譯。  **\/EP** 也會隱藏 **\/FA**、**\/Fa** 和 **\/Fm** 選項的輸出檔。  如需詳細資訊，請參閱[\/FA、\/Fa \(清單檔\)](../../build/reference/fa-fa-listing-file.md)與[\/Fm \(命名對應檔\)](../../build/reference/fm-name-mapfile.md)。  
+ **/EP**選項會抑制編譯。 您必須重新提交編譯的前置處理過的檔案。 **/EP**也會隱藏輸出檔案從**/FA**， **/Fa**，和**/Fm**選項。 如需詳細資訊，請參閱[/FA、 /Fa （清單檔）](../../build/reference/fa-fa-listing-file.md)和[/Fm （命名對應檔）](../../build/reference/fm-name-mapfile.md)。  
   
- 在處理的稍後階段中產生的錯誤會參考前置處理過的檔案的行號，而不是原來的原始程式檔。  如果要讓行號指向原來的原始程式檔，請改用 [\/E \(前置處理至 stdout\)](../../build/reference/e-preprocess-to-stdout.md)。  **\/E** 選項會針對這個目的將 `#line` 指示詞加入至輸出。  
+ 前置處理過的檔案，而不是原始程式檔的行號，請參閱後續階段中處理期間產生錯誤。 如果您想要參考原始程式檔行號，請使用[/E （前置處理至 stdout）](../../build/reference/e-preprocess-to-stdout.md)改為。 **/E**選項會增加`#line`指示詞，可針對此用途的輸出。  
   
- 若要將具有 `#line` 指示詞的前置處理輸出傳送至檔案，請改用 [\/P \(前置處理至檔案\)](../../build/reference/p-preprocess-to-a-file.md) 選項。  
+ 前置處理過的輸出，傳送與`#line`指示詞檔案中，使用[/P （前置處理至檔案）](../../build/reference/p-preprocess-to-a-file.md)選項。  
   
- 若要將具有 `#line` 指示詞的前置處理輸出傳送至 stdout，請同時使用 **\/P** 和 **\/EP**。  
+ 使用將前置處理過的輸出傳送至 stdout，`#line`指示詞，使用**/P**和**/EP**在一起。  
   
- 您無法配合 **\/EP** 選項使用先行編譯標頭。  
+ 您無法使用先行編譯標頭與**/EP**選項。  
   
-### 在 Visual Studio 開發環境中設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 \[**屬性頁**\] 對話方塊。  如需詳細資訊，請參閱 [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md)。  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  按一下 \[**C\/C\+\+**\] 資料夾。  
+2.  按一下 [C/C++]  資料夾。  
   
-3.  按一下 \[**前置處理器**\] 屬性頁。  
+3.  按一下**前置處理器**屬性頁。  
   
-4.  修改 \[**產生前置處理過的檔案**\] 屬性。  
+4.  修改**產生前置處理過的檔案**屬性。  
   
-### 若要以程式方式設定這個編譯器選項  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GeneratePreprocessedFile%2A>。  
   
-## 範例  
- 以下命令列會前置處理檔案 `ADD.C`，保留註解，並且將結果顯示在標準輸出裝置上：  
+## <a name="example"></a>範例  
+ 下列命令列前置處理檔`ADD.C`、 保留註解，並將結果顯示在標準輸出裝置：  
   
 ```  
 CL /EP /C ADD.C  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

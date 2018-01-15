@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05b718b20ad941764158f2de461614885b0627fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 50bb10acda1175d2cca12e7e4aff6fc9e5bae73a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rebase"></a>/REBASE
 ```  
@@ -43,5 +44,5 @@ ms.lasthandoff: 10/24/2017
 |BASEFILE|建立名為 COFFBASE 檔案。TXT、 是文字檔案中所連結的預期格式 / 基底選項。|  
 |向下|會告知 EDITBIN 重新指派基底往下的從結束位址。 指定時，使用位於以下位址範圍的結尾可能最高的位址中的第一個檔案的順序重新指派檔案。 基底必須搭配清單，以確保足夠的位址空間為基礎的檔案。 若要判斷指定的檔案所需的位址空間，請執行 /REBASE EDITBIN 檔案並加入 64 KB 顯示的總大小。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [EDITBIN 選項](../../build/reference/editbin-options.md)

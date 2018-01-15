@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 594e6bd026d214e2dd5d12e702d26a5942cfc872
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 082214794b2caa66e8be1127c664e0ffec18a394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlautothreadmodulet-class"></a>CAtlAutoThreadModuleT 類別
 這個類別會提供實作在集區執行緒的 apartment model COM 伺服器的方法。  
@@ -49,11 +50,11 @@ class ATL_NO_VTABLE CAtlAutoThreadModuleT : public IAtlAutoThreadModule
  `dwWait`  
  指定的逾時間隔，以毫秒為單位。 預設為無限，表示永遠不會超過方法的逾時間隔。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlAutoThreadModuleT::GetDefaultThreads](#getdefaultthreads)|此靜態函式會動態計算，並傳回 EXE 模組，根據處理器數目的執行緒數目上限。|  
   
@@ -84,7 +85,7 @@ static int GetDefaultThreads();
 ### <a name="remarks"></a>備註  
  如果您想要使用不同的方法來計算的執行緒數目，請覆寫這個方法。 根據預設，執行緒數目根據處理器數目。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [IAtlAutoThreadModule 類別](../../atl/reference/iatlautothreadmodule-class.md)   

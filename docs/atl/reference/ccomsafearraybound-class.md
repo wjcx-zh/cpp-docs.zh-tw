@@ -4,34 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComSafeArrayBound
-- ATLSAFE/ATL::CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
 - ATLSAFE/ATL::GetCount
 - ATLSAFE/ATL::GetLowerBound
 - ATLSAFE/ATL::GetUpperBound
 - ATLSAFE/ATL::SetCount
 - ATLSAFE/ATL::SetLowerBound
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArrayBound class
+dev_langs: C++
+helpviewer_keywords: CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4de823b4cdb2d7926b2a9d640b2e8f7352e389fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 01198e8de5f2eb1cbe0787bd287820d222875c20
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound 類別
 這個類別是包裝函式[SAFEARRAYBOUND](http://msdn.microsoft.com/en-us/303a9bdb-71d6-4f14-8747-84cf84936c6d)結構。  
@@ -176,6 +172,5 @@ LONG SetLowerBound(LONG lLowerBound) throw();
   
  上限取決於項目和下限值的數量。 例如，如果下限為 0，而項目數目為 10，上限將自動設 9。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)
-

@@ -1,39 +1,39 @@
 ---
-title: "/DEPENDENTS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/dependents"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DEPENDENTS dumpbin 選項"
-  - "DEPENDENTS dumpbin 選項"
-  - "-DEPENDENTS dumpbin 選項"
+title: "-DEPENDENTS |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /dependents
+dev_langs: C++
+helpviewer_keywords:
+- -DEPENDENTS dumpbin option
+- /DEPENDENTS dumpbin option
+- DEPENDENTS dumpbin option
 ms.assetid: 9b31da2a-75ac-4bbf-a3f1-adf8b0ecbbb4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 18010cb60346656ec8f56e82ad7463837a71e52c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /DEPENDENTS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dependents"></a>/DEPENDENTS
 ```  
 /DEPENDENTS  
 ```  
   
-## 備註  
- 傾印 \(Dump\) 影像檔從其中匯入函式的 DLL 的名稱，  並不會傾印已匯入函式的名稱。  
+## <a name="remarks"></a>備註  
+ 傾印的映像匯入函式的 dll 名稱。 無法傾印的匯入的函式的名稱。  
   
- 只有 [\/HEADERS](../../build/reference/headers.md) DUMPBIN 選項可用在以 [\/GL](../../build/reference/gl-whole-program-optimization.md) 編譯器選項所產生的檔案上。  
+ 只有[/HEADERS](../../build/reference/headers.md) DUMPBIN 選項僅適用於所產生的檔案上[/GL](../../build/reference/gl-whole-program-optimization.md)編譯器選項。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [DUMPBIN 選項](../../build/reference/dumpbin-options.md)

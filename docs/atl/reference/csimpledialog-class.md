@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0196d5e0e1516b47936837e1282471161a191365
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e497d5f1646ab890b7dafa3e1fb7e1c711a8a09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimpledialog-class"></a>CSimpleDialog 類別
 這個類別會實作基本的強制回應對話方塊。  
@@ -50,7 +51,7 @@ class CSimpleDialog : public CDialogImplBase
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleDialog::DoModal](#domodal)|建立強制回應對話方塊。|  
   
@@ -88,5 +89,5 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ### <a name="remarks"></a>備註  
  對話方塊中為使用中時，這個方法會處理所有使用者互動。 這是讓對話方塊強制回應。也就是說，使用者無法互動與其他 windows 中，直到關閉對話方塊。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

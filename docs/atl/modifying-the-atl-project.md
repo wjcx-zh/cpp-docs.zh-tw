@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0385903a0580d06c03d3973e697e7a7fc88bbd1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-project"></a>修改 ATL 專案
 此時，複合控制項專案實作複合控制項所需的物件。 下一個步驟是加入任何控制項將會包含複合控制項，並處理任何必要的事件。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  若要處理任何必要的事件從 ActiveX 控制項，請參閱[加入至複合控制項的功能](../atl/adding-functionality-to-the-composite-control.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [複合控制項基本概念](../atl/atl-composite-control-fundamentals.md)   
  [如何：建立資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)
 

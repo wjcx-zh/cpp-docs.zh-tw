@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e952c19d5cb52be1f2d2ab727049e92cf3625f5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bba4b6743477ae3c3d345a20f1c2e672e73261e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-class-macros"></a>視窗類別巨集
 這些巨集會定義視窗類別的公用程式。  
@@ -139,7 +140,7 @@ DECLARE_WND_CLASS_EX( WndClassName, style, bkgnd )
   
  如果您想要使用的預設樣式和背景色彩，使用[DECLARE_WND_CLASS](#declare_wnd_class)巨集。 如需使用 windows ATL 中的詳細資訊，請參閱文章[ATL 視窗類別](../../atl/atl-window-classes.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集](atl-macros.md)
 
 

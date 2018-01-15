@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0df8e487f2f79029c73adfbf44cb3873bcfcaa3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43c9a182046ff148621151107a98932cc39835f2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (自動向量化工具報告層級)
 可讓編譯器的報告功能[Auto-vectorizer](../../parallel/auto-parallelization-and-auto-vectorization.md) ，並在編譯期間指定的層級的資訊訊息輸出。  
@@ -49,8 +50,8 @@ ms.lasthandoff: 10/24/2017
   
 -   請使用 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> 中的範例程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
- [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [原生程式碼以進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)

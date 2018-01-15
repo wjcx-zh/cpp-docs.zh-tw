@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 286d68484709c171ddcca35862c0329ffe555c15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fe45700a941a8a59439b816124728f43e5f54f44
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipointerinactiveimpl-class"></a>IPointerInactiveImpl 類別
 這個類別會實作**IUnknown**和[IPointerInactive](http://msdn.microsoft.com/library/windows/desktop/ms693712)介面方法。  
@@ -46,11 +47,11 @@ class IPointerInactiveImpl
  `T`  
  您的類別，衍生自`IPointerInactiveImpl`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|擷取目前物件的啟用原則。 ATL 實作會傳回**E_NOTIMPL**。|  
 |[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|通知物件，將滑鼠指標移過它，表示物件可以引發滑鼠事件。 ATL 實作會傳回**E_NOTIMPL**。|  
@@ -121,5 +122,5 @@ HRESULT OnInactiveSetCursor(
 ### <a name="remarks"></a>備註  
  請參閱[IPointerInactive::OnInactiveSetCursor](http://msdn.microsoft.com/library/windows/desktop/ms694336) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,22 @@ f1_keywords:
 - ATLCOM/ATL::CComAggObject::QueryInterface
 - ATLCOM/ATL::CComAggObject::Release
 - ATLCOM/ATL::CComAggObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 2f580a33b5b92f44e40a3da2e1f7111cbb8ede88
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bd06518978b37705a98e4d8b7212b8dd03a2d7b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject 類別
 這個類別會實作[IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509)彙總物件的介面。 根據定義，彙總的物件會包含在外部物件。 `CComAggObject`類別是類似於[Ccomobject< 類別](../../atl/reference/ccomobject-class.md)，只不過它會公開給外部用戶端直接存取的介面。  
@@ -66,7 +50,7 @@ class CComAggObject : public IUnknown,
  `contained`  
  您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，如您想要在物件上支援從任何其他介面呼叫也一樣。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
@@ -77,10 +61,10 @@ class CComAggObject : public IUnknown,
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComAggObject::AddRef](#addref)|在彙總物件的參考計數遞增。|  
-|[CComAggObject::CreateInstance](#createinstance)|此靜態函式可讓您建立新**CComAggObject** `contained` **>**物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
+|[CComAggObject::CreateInstance](#createinstance)|此靜態函式可讓您建立新**CComAggObject <** `contained`  **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。|  
 |[CComAggObject::FinalConstruct](#finalconstruct)|會執行最後的初始化`m_contained`。|  
 |[CComAggObject::FinalRelease](#finalrelease)|執行最終解構`m_contained`。|  
 |[CComAggObject::QueryInterface](#queryinterface)|擷取所要求介面的指標。|  
@@ -107,7 +91,7 @@ class CComAggObject : public IUnknown,
  `CComAggObject`  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlcom.h  
+ **標頭：** atlcom.h  
   
 ##  <a name="addref"></a>CComAggObject::AddRef  
  在彙總物件的參考計數遞增。  
@@ -146,7 +130,7 @@ CComAggObject(void* pv);
  會釋放所有配置的資源，呼叫[FinalRelease](#finalrelease)，並遞減模組鎖定計數。  
   
 ##  <a name="createinstance"></a>CComAggObject::CreateInstance  
- 此靜態函式可讓您建立新**CComAggObject** `contained` **>**物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
+ 此靜態函式可讓您建立新**CComAggObject <** `contained`  **>** 物件沒有的額外負荷[CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615)。  
   
 ```
 static HRESULT WINAPI CreateInstance(
@@ -156,7 +140,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>參數  
  `pp`  
- [out]指標**CComAggObject\<***包含* **>**指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
+ [out]指標**CComAggObject\<***包含*  **>** 指標。 如果`CreateInstance`不成功，`pp`設**NULL**。  
   
 ### <a name="return-value"></a>傳回值  
  標準 `HRESULT` 值。  
@@ -232,11 +216,10 @@ STDMETHOD_(ULONG, Release)();
 ### <a name="return-value"></a>傳回值  
  在偵錯組建**發行**傳回值，可能有助於診斷或測試。 在非偵錯組建**發行**一律傳回 0。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [Ccomobject< 類別](../../atl/reference/ccomobject-class.md)   
  [CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)   
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [類別概觀](../../atl/atl-class-overview.md)
-

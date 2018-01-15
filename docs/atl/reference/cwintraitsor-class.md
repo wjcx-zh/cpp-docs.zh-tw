@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14796948369b92c9137dc7e02a8399910d46997c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR 類別
 這個類別會提供建立視窗物件時所使用之樣式標準化的方法。  
@@ -49,11 +50,11 @@ class CWinTraitsOR
  `t_dwExStyle`  
  預設的延伸的視窗樣式。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|擷取的延伸的樣式`CWinTraitsOR`物件。|  
 |[CWinTraitsOR::GetWndStyle](#getwndstyle)|擷取標準樣式`CWinTraitsOR`物件。|  
@@ -96,7 +97,7 @@ static DWORD GetWndExStyle(DWORD dwExStyle);
 ### <a name="return-value"></a>傳回值  
  傳入的延伸樣式的組合`dwExStyle`及所指定的預設`t_dwExStyle`，使用邏輯 OR 運算子  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [了解視窗特性](../../atl/understanding-window-traits.md)
 

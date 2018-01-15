@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e14ffb58ba19c6c3c8d3e59181a045532f5cfb92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>偵錯和錯誤報告巨集
 這些巨集提供有用的偵錯和追蹤功能。  
@@ -210,7 +211,7 @@ ATLTRACE2(
   
 ### <a name="atl-trace-flags"></a>ATL 追蹤旗標  
   
-|ATL 類別|說明|  
+|ATL 類別|描述|  
 |------------------|-----------------|  
 |`atlTraceGeneral`|報告所有的 ATL 應用程式。 預設值。|  
 |`atlTraceCOM`|報告 COM 方法。|  
@@ -228,7 +229,7 @@ ATLTRACE2(
   
 ### <a name="mfc-trace-flags"></a>MFC 追蹤旗標  
   
-|MFC 類別|說明|  
+|MFC 類別|描述|  
 |------------------|-----------------|  
 |**traceAppMsg**|一般用途，MFC 訊息。 一律建議。|  
 |**traceDumpContext**|從訊息[CDumpContext](../../mfc/reference/cdumpcontext-class.md)。|  
@@ -266,6 +267,6 @@ ATLTRACE2(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [巨集](../../atl/reference/atl-macros.md)   
  [偵錯和錯誤報告全域函式](../../atl/reference/debugging-and-error-reporting-global-functions.md)

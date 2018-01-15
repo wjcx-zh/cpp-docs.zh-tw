@@ -17,11 +17,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b30586116fff517818822f484b1285a59fd2a98b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9767c8b92316ffb9e458ba650e28db9ddf1a095b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 |||  
 |-|-|  
@@ -52,7 +53,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
  
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
@@ -98,7 +99,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 ### <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [如何：新增命令傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
  
 ##  <a name="commanduihandler"></a>CommandUIHandler
@@ -123,7 +124,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ### <a name="requirements"></a>需求  
  **標頭：** afxwinforms.h （定義於組件 atlmfc\lib\mfcmifc80.dll）  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [如何： 新增命令傳送至 Windows Form 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)   
  [CommandHandler](#commandhandler)
 
@@ -141,7 +142,7 @@ END_DELEGATE_MAP();
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
 
  [如何：從原生 C++ 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
@@ -160,7 +161,7 @@ END_INTERFACE_MAP( )
 ### <a name="requirements"></a>需求  
  **標題:** afxwin.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [巨集和全域變數](mfc-macros-and-globals.md)   
  [BEGIN_INTERFACE_MAP](#begin_interface_map)
  
@@ -198,7 +199,7 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [MAKE_DELEGATE](#make_delegate)   
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)
@@ -261,7 +262,7 @@ void CMyView::OnInitialUpdate()
 ### <a name="requirements"></a>需求  
  **標頭：** msclr\event.h  
    
-### <a name="see-also"></a>另請參閱  
+### <a name="see-also"></a>請參閱  
  [BEGIN_DELEGATE_MAP](#begin_delegate_map)   
  [END_DELEGATE_MAP](#end_delegate_map)   
  [EVENT_DELEGATE_ENTRY](#event_delegate_entry)

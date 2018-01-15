@@ -1,61 +1,62 @@
 ---
-title: "如何：將多個 PGO 設定檔合併至單一設定檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "合併設定檔"
-  - "特性指引最佳化, 合併設定檔"
+title: "如何： 多個 PGO 設定檔合併至單一設定檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- merging profiles
+- profile-guided optimizations, merging profiles
 ms.assetid: aab686b5-59dd-40d1-a04b-5064690f65a6
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 880e9fbba7852a9a7919e73f80b73e34394cd037
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 如何：將多個 PGO 設定檔合併至單一設定檔
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-特性指引最佳化 \(PGO\) 是一個很好用的工具，它可以依據已剖析的案例來建立最佳化的二進位檔。  但如果應用程式具有幾個重要而又不同的案例，您要如何建立單一設定檔，讓 PGO 可以在數個不同的案例中使用呢？  在 Visual Studio 中，PGO 管理員 Pgomgr.exe 會替您解決這個問題。  
+# <a name="how-to-merge-multiple-pgo-profiles-into-a-single-profile"></a>如何：將多個 PGO 設定檔合併至單一設定檔
+特性指引最佳化 (PGO) 是用於建立最佳化的二進位檔會分析的案例為基礎的絕佳工具。 但如果您有應用程式，有幾個重要、 但不同的案例;如何建立單一設定檔 PGO 可以使用數個不同的案例？ 在 Visual Studio 中，PGO 管理員 Pgomgr.exe，會為您執行這項作業。  
   
- 合併設定檔的語法如下：  
+ 合併設定檔的語法為：  
   
 ```  
 pgomgr /merge[:num] [.pgc_files] .pgd_files  
 ```  
   
- 其中 `num` 是一個用於這項合併作業的選擇性權數。  如果有某些案例比其他案例重要，或者如果有必須執行多次的案例，通常會使用權數。  
+ 其中`num`是用於在此合併選擇性權數。 如果是更重要的是比其他某些情況下，或要多次執行的情況下，常用於加權。  
   
 > [!NOTE]
->  PGO 管理員不會處理過時的設定檔資料。  若要將 .pgc 檔合併成 .pgd 檔，則產生 .pgc 檔的可執行檔必須是由產生 .pgd 檔的相同引動過程所建立。  
+>  PGO 管理員不會使用過時的設定檔資料。 若要合併的.pgc 檔案到.pgd 檔，.pgc 檔案必須產生可執行檔所建立的相同連結引動過程，產生的.pgd 檔。  
   
-## 範例  
- 在本範例中，PGO 管理員會將 pgcFile.pgc 加入至 pgdFile.pgd 六次。  
+## <a name="example"></a>範例  
+ 在此範例中，PGO 管理員將會加入 pgcFile.pgc pgdFile.pgd 六倍。  
   
 ```  
 pgomgr /merge:6 pgcFile.pgc pgdFile.pgd  
 ```  
   
-## 範例  
- 在本範例中，PGO 管理員會將 pgcFile1.pgc 和 pgcFile2.pgc 加入至 pgdFile.pgd，每一個 .pgc 檔都加入兩次。  
+## <a name="example"></a>範例  
+ 在此範例中，PGO 管理員將會加入 pgcFile1.pgc 和 pgcFile2.pgc pgdFile.pgd，兩次，每個.pgc 檔案。  
   
 ```  
 pgomgr /merge:2 pgcFile1.pgc pgcFile2.pgc pgdFile.pgd  
 ```  
   
-## 範例  
- 如果 PGO 管理員是在沒有指定 .pgc 檔的情況下執行，它會搜尋本機目錄，以便找出和 .pgd 檔具有相同名稱並且附加了驚嘆號 \(\!\) 後面又跟著任意字元的所有 .pgc 檔。  如果本機目錄中有 test.pgd、test\!1.pgc、test2.pgc 以及 test\!hello.pgc 等檔案，並且下列命令是從該本機目錄中執行，那麼 test\!1.pgc 和 test\!hello.pgc 就會被合併到 test.pgd 中。  
+## <a name="example"></a>範例  
+ 如果不使用.pgc 檔案執行 PGO 管理員，則它會搜尋所有加上驚嘆號 （！） 後面接著任意字元的.pgd 檔案具有相同名稱的.pgc 檔案的本機目錄。 如果本機目錄含有檔案 test.pgd、 test!1.pgc、 test2.pgc 和 test!hello.pgc，並從本機目錄執行下列命令，然後 test!1.pgc 和 test!hello.pgc 將合併到 test.pgd。  
   
 ```  
 pgomgr /merge test.pgd  
 ```  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [特性指引最佳化](../../build/reference/profile-guided-optimizations.md)

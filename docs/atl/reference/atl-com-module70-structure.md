@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a269820c5a0965553989bc57d7c239aa95e527ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f5d1e1d2716c5ab97c2b805a943ffe4587341dc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlcommodule70-structure"></a>_ATL_COM_MODULE70 結構
 使用 COM 相關 ATL 中的程式碼  
@@ -63,7 +64,7 @@ struct _ATL_COM_MODULE70 {
 ## <a name="requirements"></a>需求  
  **標頭：** atlbase.h  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [結構](../../atl/reference/atl-structures.md)
 
 

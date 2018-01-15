@@ -37,11 +37,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f9014233631eda9d1f3576382e71e377a3f7fcfd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8f436a3661f027ba1026a60982cb18b48a2c48cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbtree-class"></a>CRBTree 類別
 這個類別會提供建立和使用紅黑樹狀結構的方法。  
@@ -69,11 +70,11 @@ class CRBTree
  `VTraits`  
  用於複製或移動的項目值的程式碼。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBTree::KINARGTYPE](#kinargtype)|機碼傳遞做為輸入的引數時所使用的類型。|  
 |[CRBTree::KOUTARGTYPE](#koutargtype)|當做輸出引數傳回一個機碼時所使用的類型。|  
@@ -82,19 +83,19 @@ class CRBTree
   
 ### <a name="public-classes"></a>公用類別  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBTree::CPair 類別](#cpair_class)|類別，其中包含索引鍵和值的項目。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBTree:: ~ CRBTree](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|呼叫這個方法，以找出該位置會使用下一個可用的索引鍵的項目。|  
 |[CRBTree::GetAt](#getat)|呼叫這個方法來取得在樹狀目錄中的指定位置的項目。|  
@@ -183,7 +184,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
  `key`  
  變數會接收索引鍵。  
   
- *value*  
+ *值*  
  變數接收值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -269,7 +270,7 @@ void GetNextAssoc(
  `key`  
  指定的樹狀目錄索引鍵的類型樣板參數。  
   
- *value*  
+ *值*  
  指定的樹狀目錄值的類型樣板參數。  
   
 ### <a name="remarks"></a>備註  
@@ -415,7 +416,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
  `pos`  
  位置計數器，例如先前方法呼叫所傳回[CRBTree::GetHeadPosition](#getheadposition)或[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)。  
   
- *value*  
+ *值*  
  要加入值`CRBTree`物件。  
   
 ### <a name="remarks"></a>備註  
@@ -435,5 +436,5 @@ typedef VTraits::INARGTYPE VINARGTYPE;
 typedef VTraits::OUTARGTYPE VOUTARGTYPE;
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ea192e863fe9813a762c0c948cc141b068c3f43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9226cf2630ad18651f9bda2f154f49b5b739a433
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-the-event-handling-interface"></a>實作事件處理介面
 ATL 可協助您處理事件所需的全部三個元素： 實作事件介面、 通知事件來源，並取消通知事件來源。 您必須採取的確切步驟取決於事件介面和應用程式的效能需求的型別。  
@@ -46,6 +47,6 @@ ATL 可協助您處理事件所需的全部三個元素： 實作事件介面、
   
  `IDispEventImpl`和`IDispEventSimpleImpl`類別為您管理 cookie。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [事件處理](../atl/event-handling-and-atl.md)
 

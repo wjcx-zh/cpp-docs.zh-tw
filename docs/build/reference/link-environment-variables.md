@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 76eee66ff45d30f78675036f11dce9b40953badb
-ms.sourcegitcommit: fb540c28941b4c501c35675b559adbaf7048ca6e
+ms.workload: cplusplus
+ms.openlocfilehash: 67b36afce92140c4f205f8e5a4a46dfc7ac2d300
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="link-environment-variables"></a>LINK 環境變數
 
@@ -37,9 +38,9 @@ LINK 工具使用下列環境變數：
   
 -   TMP，在連結 OMF 或 .res 檔案時指定目錄。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
 
 [設定連結器選項](../../build/reference/setting-linker-options.md)   
 [連結器選項](../../build/reference/linker-options.md)   
-[在命令列上建置 C/c + + 程式碼](../../build/building-on-the-command-line.md)  
-[設定命令列建置的路徑和環境變數](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)
+[在命令列上建置 C/C++ 程式碼](../../build/building-on-the-command-line.md)  
+[設定命令列建置的路徑及環境變數](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)

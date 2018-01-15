@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,36 +19,21 @@ f1_keywords:
 - ATLWIN/ATL::OnFinalMessage
 - ATLWIN/ATL::DialogProc
 - ATLWIN/ATL::StartDialogProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 76a95ed5c32b2125112b64ef4368e4a82f0acec0
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl 類別
 這個類別會提供方法來建立強制回應或非強制回應對話方塊。  
@@ -74,7 +58,7 @@ template <class T,
  *TBase*  
  您的新類別的基底類別。 預設基底類別是[CWindow](../../atl/reference/cwindow-class.md)。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -108,9 +92,9 @@ template <class T,
  `CDialogImpl`衍生自**CDialogImplBaseT**，而後者又衍生自**CWindowImplRoot**。  
   
 > [!NOTE]
->  您的類別必須定義**IDD**成員，可指定對話方塊範本資源識別碼。 比方說，ATL 專案精靈自動將下列行加入至您的類別︰  
+>  您的類別必須定義**IDD**成員，可指定對話方塊範本資源識別碼。 比方說，ATL 專案精靈自動將下列行加入至您的類別：  
   
- [!code-cpp[NVC_ATL_Windowing # 41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#41](../../atl/codesnippet/cpp/cdialogimpl-class_1.h)]  
   
  其中`MyDlg`是**簡短名稱**進入精靈的**名稱**頁面。  
   
@@ -119,10 +103,10 @@ template <class T,
 |建立控制項|[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)|  
 |使用 ATL 中的對話方塊|[ATL 視窗類別](../../atl/atl-window-classes.md)|  
 |ATL 專案精靈|[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)|  
-|對話方塊|[對話方塊](http://msdn.microsoft.com/library/windows/desktop/ms632588)和本節中的後續主題[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|對話方塊|[對話方塊](http://msdn.microsoft.com/library/windows/desktop/ms632588)和後續 Windows SDK 中的主題|  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlwin.h  
+ **標頭：** atlwin.h  
   
 ##  <a name="create"></a>CDialogImpl::Create  
  建立非強制回應對話方塊。  
@@ -323,6 +307,6 @@ static LRESULT CALLBACK StartDialogProc(
 ### <a name="remarks"></a>備註  
  一次呼叫之後`StartDialogProc`，`DialogProc`為設定的對話方塊程序，並進一步呼叫前往該處。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [類別概觀](../../atl/atl-class-overview.md)

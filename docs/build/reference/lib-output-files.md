@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecfb3df6f503e91dbf96a6da4bd1dd79b4f9ee3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f9796a7e6d2e91abd1fd064fb54079ea0364a828
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-output-files"></a>LIB 輸出檔案
 Lib 產生的輸出檔會根據其中它正在使用的模式下, 表所示。  
@@ -30,5 +31,5 @@ Lib 產生的輸出檔會根據其中它正在使用的模式下, 表所示。
 |擷取具有 /EXTRACT 的成員|目的檔 (.obj)|  
 |建立匯出檔案，並匯入與 /DEF 程式庫|匯入程式庫 (.lib) 和匯出 (.exp) 檔案|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [LIB 概觀](../../build/reference/overview-of-lib.md)

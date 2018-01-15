@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c73f7f4c0061a16d9a3696067eee6fcf28de115a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 865b5e0fa7039a0b60f524c2f13a367569757d92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (建立先行編譯標頭檔)
 指示編譯器建立代表某一點的編譯狀態的先行編譯標頭 (.pch) 檔案。  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
  如需先行編譯標頭的詳細資訊，請參閱：  
   
--   [/Y （先行編譯標頭）](../../build/reference/y-precompiled-headers.md)  
+-   [/Y (先行編譯標頭檔)](../../build/reference/y-precompiled-headers.md)  
   
 -   [建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)  
   
@@ -90,6 +91,6 @@ ms.lasthandoff: 10/24/2017
   
 此程式碼與命令的編譯時`CL /YcMYAPP.H PROG.CPP`、 編譯器儲存 AFXWIN.h，命名為 RESOURCE.h 的所有前置處理和 MYAPP.h 先行編譯標頭檔中的呼叫 MYAPP.pch。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)[建立先行編譯標頭檔](../../build/reference/creating-precompiled-header-files.md)

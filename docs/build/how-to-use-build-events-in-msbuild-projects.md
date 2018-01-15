@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ebbccf147cc45ce5e3dab512e13a8b059f104cdd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc8b3b21cdc9aad183f39bf709f93e022e790eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>如何：在 MSBuild 專案中使用建置事件
 建置事件是一個命令，[!INCLUDE[vstecmsbuild](../build/includes/vstecmsbuild_md.md)]執行建置流程中的特定階段。 *建置前*建置開始前，就會發生事件;*連結前*連結步驟開始; 之前發生的事件和*建置後*組建之後發生的事件已成功結束。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如，連結前事件不會發生連結步驟不會執行。  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  下表列出每個組建事件 XML 項目：  
   
-|XML 項目|說明|  
+|XML 項目|描述|  
 |-----------------|-----------------|  
 |`PreBuildEvent`|在建置開始之前，就會執行此事件。|  
 |`PreLinkEvent`|連結步驟開始之前，就會執行此事件。|  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  下表列出每個*在組建中使用*項目：  
   
-|XML 項目|說明|  
+|XML 項目|描述|  
 |-----------------|-----------------|  
 |`PreBuildEventUseInBuild`|指定是否要執行*建置前*事件。|  
 |`PreLinkEventUseInBuild`|指定是否要執行*連結前*事件。|  
@@ -76,6 +77,6 @@ ms.lasthandoff: 10/24/2017
 </PropertyGroup>  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MSBuild （Visual c + +）](../build/msbuild-visual-cpp.md)   
  [逐步解說：使用 MSBuild 來建立 Visual C++ 專案](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

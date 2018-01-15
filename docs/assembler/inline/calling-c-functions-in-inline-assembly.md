@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3cd162026792bf8458c3725011b583d1eeb00772
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d337e7a276318d6a1d39087b6809e3f62838cad8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calling-c-functions-in-inline-assembly"></a>在內嵌組譯碼中呼叫 C 函式
 ## <a name="microsoft-specific"></a>Microsoft 特定的  
@@ -66,7 +67,7 @@ printf( format, hello, world );
   
  這個範例會將指標依序推入 `world`、`hello` 和 `format`，然後呼叫 `printf`。  
   
- **END Microsoft 特定的**  
+ **結束 Microsoft 特定的**  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [內嵌組合語言](../../assembler/inline/inline-assembler.md)

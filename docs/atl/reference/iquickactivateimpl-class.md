@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c11185314c06e0e576d1832cef62899dd2151538
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7c6f5bc1798bc8ec40fb6f6d9d22f48c06b19745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iquickactivateimpl-class"></a>IQuickActivateImpl 類別
 這個類別會結合至單一呼叫容器的控制項初始化。  
@@ -47,11 +48,11 @@ class ATL_NO_VTABLE IQuickActivateImpl : public IQuickActivate
  `T`  
  您的類別，衍生自`IQuickActivateImpl`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[IQuickActivateImpl::GetContentExtent](#getcontentextent)|擷取目前的顯示大小執行控制項。|  
 |[IQuickActivateImpl::QuickActivate](#quickactivate)|執行快速初始化的控制項正在載入。|  
@@ -108,6 +109,6 @@ STDMETHOD(SetContentExtent)(LPSIZEL pSize);
   
  請參閱[IQuickActivate::SetContentExtent](http://msdn.microsoft.com/library/windows/desktop/ms678806) Windows SDK 中。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

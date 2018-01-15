@@ -4,41 +4,37 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- COM interfaces, COM interface entry macros
+f1_keywords:
+- atlcom/ATL::COM_INTERFACE_ENTRY
+- atlcom/ATL::COM_INTERFACE_ENTRY_IID
+- atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE
+- atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE
+- atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_BREAK
+- atlcom/ATL::COM_INTERFACE_ENTRY_CACHED_TEAR_OFF
+- atlcom/ATL::COM_INTERFACE_ENTRY_TEAR_OFF
+- atlcom/ATL::COM_INTERFACE_ENTRY_CHAIN
+- atlcom/ATL::COM_INTERFACE_ENTRY_FUNC
+- atlcom/ATL::COM_INTERFACE_ENTRY_FUNC_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_NOINTERFACE
+dev_langs: C++
+helpviewer_keywords: COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7e9eb155d10a0a05916fc5f74cbe58fdf14b7475
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 76352cf2015661bc970b2987b9794f3bf023cc15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集  
  這些巨集會輸入至其 COM 對應物件的介面，以便存取它們所`QueryInterface`。 COM 對應中的項目順序是順序介面會檢查相符**IID**期間`QueryInterface`。  
 
@@ -51,7 +47,7 @@ ms.lasthandoff: 03/31/2017
 |[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|當介面由`iid`查詢，`COM_INTERFACE_ENTRY_AGGREGATE`轉送給`punk`。|  
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`。|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非`punk`是**NULL**，它會自動建立所描述的彙總`clsid`。|  
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`，而且如果`punk`是**NULL**，會自動建立所描述的彙總`clsid`。|  
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`，而且如果`punk`是**NULL**、 自動建立所描述的彙總`clsid`。|  
 |[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時指定的介面中查詢。|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|將每個執行個體的特定介面的資料儲存。|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|會公開您 tear-off 介面。|  
@@ -60,6 +56,8 @@ ms.lasthandoff: 03/31/2017
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|與相同[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)，不同之處在於任何 IID 的查詢會導致呼叫`func`。|  
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|傳回**E_NOINTERFACE**並終止 COM 對應處理時，查詢指定的介面。|  
 
+## <a name="requirements"></a>需求
+**標頭：** atlcom.h
 
 ## <a name="com_interface_entry"></a>COM_INTERFACE_ENTRY
 輸入的 COM 介面對應的介面。
@@ -85,7 +83,7 @@ BEGIN_COM_MAP(CThisExample)
 END_COM_MAP()
 ```
 ### <a name="requirements"></a>需求
-**標頭︰** atlcom.h
+**標頭：** atlcom.h
   
 ##  <a name="com_interface_entry2"></a>COM_INTERFACE_ENTRY2  
  使用這個巨集，以釐清兩個繼承的分支。  
@@ -106,7 +104,7 @@ COM_INTERFACE_ENTRY2(x, x2)
   
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Windowing # 118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
   
 ##  <a name="com_interface_entry_iid"></a>COM_INTERFACE_ENTRY_IID  
  使用此巨集輸入到 COM 對應的介面，並指定其 IID。  
@@ -124,7 +122,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
   
  
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Windowing # 117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
   
 ##  <a name="com_interface_entry2_iid"></a>COM_INTERFACE_ENTRY2_IID  
  與相同[COM_INTERFACE_ENTRY2](#com_interface_entry2)，不過您可以指定不同的 IID。  
@@ -163,7 +161,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
   
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Windowing # 112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
+ [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
   
 ##  <a name="com_interface_entry_aggregate_blind"></a>COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
  與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`。  
@@ -182,7 +180,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
   
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Windowing # 113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
+ [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
   
 
 ##  <a name="com_interface_entry_autoaggregate"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE  
@@ -206,10 +204,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
   
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Windowing # 114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
+ [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
   
 ##  <a name="com_interface_entry_autoaggregate_blind"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
- 與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`，而且如果`punk`是**NULL**，會自動建立所描述的彙總`clsid`。  
+ 與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，不同之處在於任何 IID 的查詢會產生轉送查詢`punk`，而且如果`punk`是**NULL**、 自動建立所描述的彙總`clsid`。  
   
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
@@ -228,7 +226,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
   
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_Windowing # 115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
+ [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>COM_INTERFACE_ENTRY_BREAK  
  會導致您的程式來呼叫[DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297)時指定的介面中查詢。  
@@ -269,7 +267,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
   
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
+ [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
   
 ##  <a name="com_interface_entry_tear_off"></a>COM_INTERFACE_ENTRY_TEAR_OFF  
  會公開您 tear-off 介面。  
@@ -291,7 +289,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
   
   
 ### <a name="example"></a>範例  
- [!code-cpp[NVC_ATL_COM #1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
+ [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
 ##  <a name="com_interface_entry_chain"></a>COM_INTERFACE_ENTRY_CHAIN  
  處理 COM 對應的基底類別處理到達這個 COM 對應中的項目時。  
@@ -301,17 +299,17 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 ```  
   
 ### <a name="parameters"></a>參數  
- *類別名稱*  
+ *classname*  
  [in]目前物件的基底類別。  
   
 ### <a name="remarks"></a>備註  
- 例如，在下列程式碼︰  
+ 例如，在下列程式碼：  
   
- [!code-cpp[NVC_ATL_Windowing 116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
+ [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
   
  請注意 COM 對應中的第一個項目必須包含 COM 對應的物件上的介面。 因此，您無法啟動您的 COM 對應項目與`COM_INTERFACE_ENTRY_CHAIN`，因而導致 COM 對應，不同處要搜尋的物件位置**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)**會出現在物件的 COM 對應。 如果您想要搜尋的另一個物件的 COM 對應，首先，新增介面項目**IUnknown**到 COM 對應，然後鏈結的其他物件的 COM 對應。 例如:   
   
- [!code-cpp[NVC_ATL_Windowing # 111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
+ [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
   
   
   
@@ -333,7 +331,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
  [in]將傳回的函式指標`iid`。  
   
 ### <a name="remarks"></a>備註  
- 如果*iid*符合介面中查詢，則函式所指定的 IID`func`呼叫。 函式宣告應該是︰  
+ 如果*iid*符合介面中查詢，則函式所指定的 IID`func`呼叫。 函式宣告應該是：  
   
  `HRESULT WINAPI func(void* pv, REFIID riid, LPVOID* ppv, DWORD_PTR dw);`  
   

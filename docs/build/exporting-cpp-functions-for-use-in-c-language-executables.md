@@ -1,60 +1,61 @@
 ---
-title: "匯出 C++ 函式以用於 C 語言可執行檔 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "匯出 DLL [C++], C 可執行檔中的 C++ 函式"
-  - "匯出函式 [C++], C 可執行檔中的 C++ 函式"
-  - "函式 [C++], C 可執行檔中的 C++ 函式"
-  - "函式 [C++], 匯出"
+title: "匯出 c + + 函式以用於 C 語言可執行檔 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], C++ functions in C executables
+- exporting DLLs [C++], C++ functions in C executables
+- exporting functions [C++], C++ functions in C executables
+- functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0511ae4c16332b2a8e98c2319e148249b66c8461
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 匯出 C++ 函式以用於 C 語言可執行檔
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-如果您在 DLL 裡有用 C\+\+ 撰寫且希望從 C 語言模組裡存取的函式，您便應該使用 C 連結而不是 C\+\+ 連結來宣告這些函式。  除非有其他的指定，否則 C\+\+ 編譯器會使用 C\+\+ 型別安全命名 \(也稱為名稱裝飾 \(Name Decoration\)\) 和 C\+\+ 呼叫慣例，但是如此要從 C 呼叫就會比較困難。  
+# <a name="exporting-c-functions-for-use-in-c-language-executables"></a>匯出 C++ 函式以用於 C 語言可執行檔  
   
- 若要指定 C 連結，請為您的函式宣告指定 **extern** "**C**"。  例如：  
+如果您想要存取從 C 語言的模組，您會需要宣告具有 C 連結，而不是 c + + 連結的這些函式，以 c + + 撰寫的 DLL 中有函式。 除非另行指定，c + + 編譯器會使用 c + + 型別安全命名 （也稱為名稱裝飾） 和 c + + 呼叫慣例，很難從 C.呼叫  
+  
+若要指定 C 連結，請指定`extern "C"`函式宣告。 例如:   
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  
 ```  
   
-## 您想要執行甚麼工作？  
+## <a name="what-do-you-want-to-do"></a>請您指定選項。  
   
--   [使用 .def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
+-   [使用.def 檔從 DLL 匯出](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [使用 \_\_declspec\(dllexport\) 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [使用 __declspec （dllexport） 從 DLL 匯出](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [使用 AFX\_EXT\_CLASS 匯出和匯入](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [匯出和匯入使用 AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [匯出 C 函式以用於 C 或 C\+\+ 語言可執行檔](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [判斷要使用哪一種匯出方法](../build/determining-which-exporting-method-to-use.md)  
+-   [決定要使用哪一個匯出方法](../build/determining-which-exporting-method-to-use.md)  
   
--   [使用 \_\_declspec\(dllimport\) 匯入至應用程式](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [匯入應用程式使用 __declspec （dllimport）](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [初始化 DLL](../build/initializing-a-dll.md)  
+-   [初始化 DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## 您還想知道關於哪些方面的詳細資訊？  
+## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？  
   
--   [裝飾名稱](../build/reference/decorated-names.md)  
+-   [裝飾的名稱](../build/reference/decorated-names.md)  
   
--   [連結規格](http://msdn.microsoft.com/zh-tw/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)  
+-   [使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [從 DLL 匯出](../build/exporting-from-a-dll.md)

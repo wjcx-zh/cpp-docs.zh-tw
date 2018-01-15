@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04f2871af749091e97ec1731650f998739995781
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96314b4b8ba7696f784354c2353070ca3873c11c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-implementing-a-property-page"></a>範例： 實作屬性頁
 這個範例示範如何建置會顯示 （並可讓您變更） 的屬性的屬性頁[文件類別](../mfc/document-classes.md)介面。  
@@ -165,7 +166,7 @@ End Module
   
  當您執行這個巨集時，將顯示的檔案名稱和目前現用的文字文件的唯讀狀態顯示屬性頁。 文件的唯讀狀態只會反映寫入在開發環境; 文件的能力它不會影響磁碟上檔案的唯讀屬性。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [屬性頁](../atl/atl-com-property-pages.md)   
  [ATLPages 範例](../visual-cpp-samples.md)
 

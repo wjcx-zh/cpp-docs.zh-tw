@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33b93084a99154aea671c877aae7d80e48485202
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a3b55cb078dc5db1f0bf727a10f2a77ebfddd260
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="com-10-support-in-atl-projects"></a>COM + 1.0 支援在 ATL 專案
 您可以使用[ATL 專案精靈](../../atl/reference/creating-an-atl-project.md)建立專案與 COM + 1.0 元件的基本支援。  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  如果您選取**支援 COM + 1.0**核取方塊，您也可以選取**支援元件登錄器**。 元件的註冊機構可讓您取得元件的清單、 登錄元件，或取消登錄元件 （個別或全部） 的 COM + 1.0 物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)   
  [ATL 和 C 執行階段程式碼的程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)

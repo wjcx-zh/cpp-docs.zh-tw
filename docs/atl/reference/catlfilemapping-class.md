@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a028c2458b0a5085a1f46bf31f377e6ed9e4d346
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2dce8e219c2a64ecc6e9b307533ecc0ea11d2792
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlfilemapping-class"></a>CAtlFileMapping 類別
 此類別代表記憶體對應檔案，加入的方法中的轉換運算子[CAtlFileMappingBase](../../atl/reference/catlfilemappingbase-class.md)。  
@@ -40,11 +41,11 @@ class CAtlFileMapping : public CAtlFileMappingBase
  `T`  
  用於轉換運算子的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CAtlFileMapping::operator T *](#operator_t_star)|允許的隱含轉換`CAtlFileMapping`物件加入至`T`  **\*** 。|  
   
@@ -72,6 +73,6 @@ operator T*() const throw();
 ### <a name="remarks"></a>備註  
  呼叫[CAtlFileMappingBase::GetData](../../atl/reference/catlfilemappingbase-class.md#getdata)和轉換做為傳回的指標`T`  **\*** 其中*T*是做為範本的類型這個類別的參數。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAtlFileMappingBase 類別](../../atl/reference/catlfilemappingbase-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

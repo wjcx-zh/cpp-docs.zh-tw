@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86e92f86896ac7c5a06b73a68e2d6889d10ea87b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bd8817b325ebb9a9d8899211416dcbecfcd3f79
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList 類別
 建構 COM 介面指標的清單時，這個類別會提供有用的方法。  
@@ -43,11 +44,11 @@ class CInterfaceList
  `piid`  
  指向 IID 的`I`。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CInterfaceList::CInterfaceList](#cinterfacelist)|建構函式的介面清單。|  
   
@@ -78,7 +79,7 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 ### <a name="remarks"></a>備註  
  區塊大小是記憶體的配置新的項目時所需數量的量值。 較大的區塊大小減少記憶體配置常式，呼叫，但使用較多資源。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAtlList 類別](../../atl/reference/catllist-class.md)   
  [CComQIPtr 類別](../../atl/reference/ccomqiptr-class.md)   
  [CComQIPtrElementTraits 類別](../../atl/reference/ccomqiptrelementtraits-class.md)   

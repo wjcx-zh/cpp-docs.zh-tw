@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: da373672c51dd47b67ee4457bd0d21f82a09c540
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fbd91deb1d80c49dd403e8e08cc50f5fd8c8ec3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch 介面
 要剖析的 Microsoft HTML 和轉譯引擎的介面。  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 interface IDocHostUIHandlerDispatch : IDispatch
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
@@ -71,7 +72,7 @@ interface IDocHostUIHandlerDispatch : IDispatch
 |IDL|ATLIFace.idl|  
 |C++|ATLIFace.h （也包含在 ATLBase.h）|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IDocUIHostHandler](https://msdn.microsoft.com/library/aa753260.aspx)
 
 

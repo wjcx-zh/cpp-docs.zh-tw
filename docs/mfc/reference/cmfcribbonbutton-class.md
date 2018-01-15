@@ -125,11 +125,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5215adddf92cee7ff0bc079cf42d6dceea3f99b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 219d305b382d80e4015578b16531158c0f8d643d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 類別
 `CMFCRibbonButton` 類別實作可以放置在功能區列項目 (例如面板、快速存取工具列和快顯功能表) 上的按鈕。  
@@ -142,17 +143,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonButton : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|建構功能區按鈕物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonButton::AddSubItem](#addsubitem)|將功能表項目加入至與按鈕相關聯的快顯功能表。|  
 |[CMFCRibbonButton::CanBeStretched](#canbestretched)|(覆寫[cmfcribbonbaseelement:: Canbestretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched)。)|  
@@ -207,9 +208,9 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|將快顯功能表對齊按鈕右邊。|  
 |[CMFCRibbonButton::SetText](#settext)|設定功能區項目的文字。 (覆寫[cmfcribbonbaseelement:: Settext](../../mfc/reference/cmfcribbonbaseelement-class.md#settext)。)|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCRibbonButton::OnClick](#onclick)|使用者按一下按鈕時由架構呼叫。|  
   
@@ -261,10 +262,10 @@ void AddSubItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pSubItem`  
+ [輸入] `pSubItem`  
  指定要加入的新元素的指標。  
   
- [in] `nIndex`  
+ [輸入] `nIndex`  
  指定要加入的按鈕，功能表項目陣列項目索引若要加入功能表項目的陣列結尾處的項目-1。  
   
 ##  <a name="canbestretched"></a>CMFCRibbonButton::CanBeStretched  
@@ -318,19 +319,19 @@ CMFCRibbonButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nID`  
+ [輸入] `nID`  
  指定按鈕的命令識別碼。  
   
- [in] `lpszText`  
+ [輸入] `lpszText`  
  指定按鈕的文字標籤。  
   
- [in] `nSmallImageIndex`  
+ [輸入] `nSmallImageIndex`  
  指定之以零為起始的索引按鈕的小型影像的影像清單中的父類別。  
   
- [in] `nLargeImageIndex`  
+ [輸入] `nLargeImageIndex`  
  指定之以零為起始的索引按鈕的大型影像的影像清單中的父類別。  
   
- [in] `hIcon`  
+ [輸入] `hIcon`  
  指定應用程式做為按鈕的影像所使用之圖示的控制代碼。  
   
 ### <a name="example"></a>範例  
@@ -348,8 +349,8 @@ CSize DrawBottomText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `bCalcOnly`  
+ [輸入] `pDC`  
+ [輸入] `bCalcOnly`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -366,9 +367,9 @@ virtual void DrawImage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `type`  
- [in] `rectImage`  
+ [輸入] `pDC`  
+ [輸入] `type`  
+ [輸入] `rectImage`  
   
 ### <a name="remarks"></a>備註  
   
@@ -385,11 +386,11 @@ virtual int DrawRibbonText(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
- [in] `strText`  
- [in] `rectText`  
- [in] `uiDTFlags`  
- [in] `clrText`  
+ [輸入] `pDC`  
+ [輸入] `strText`  
+ [輸入] `rectText`  
+ [輸入] `uiDTFlags`  
+ [輸入] `clrText`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -403,7 +404,7 @@ int FindSubItemIndexByID(UINT uiID) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiID`  
+ [輸入] `uiID`  
  指定命令識別碼的快顯功能表項目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -428,7 +429,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -442,7 +443,7 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bLargeIcon`  
+ [輸入] `bLargeIcon`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -456,7 +457,7 @@ int GetImageIndex(BOOL bLargeImage) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bLargeImage`  
+ [輸入] `bLargeImage`  
  如果`TRUE`，映像的清單中，會包含大型影像，否則傳回包含小型影像的影像清單中的 映像索引傳回映像的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -470,7 +471,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `type`  
+ [輸入] `type`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -484,7 +485,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -519,7 +520,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -751,7 +752,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="remarks"></a>備註  
   
@@ -763,7 +764,7 @@ virtual void OnClick(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  指定滑鼠點選的位置。  
   
 ### <a name="remarks"></a>備註  
@@ -777,7 +778,7 @@ virtual void OnDraw(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="remarks"></a>備註  
   
@@ -789,7 +790,7 @@ virtual void OnDrawBorder(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="remarks"></a>備註  
   
@@ -801,7 +802,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
   
 ### <a name="return-value"></a>傳回值  
   
@@ -822,7 +823,7 @@ BOOL RemoveSubItem(int nIndex);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  指定您想要移除的功能表項目以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -857,7 +858,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  如果`TRUE`，按鈕會顯示大型影像。 否則，按鈕會顯示的小型影像。  
   
 ##  <a name="setdefaultcommand"></a>CMFCRibbonButton::SetDefaultCommand  
@@ -868,7 +869,7 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  如果`TRUE`，按鈕可以執行它的預設命令。 如果`FALSE`，按鈕無法執行其預設命令。  
   
 ### <a name="remarks"></a>備註  
@@ -882,7 +883,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszText`  
+ [輸入] `lpszText`  
   
 ### <a name="remarks"></a>備註  
   
@@ -896,10 +897,10 @@ void SetImageIndex(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  指定映像索引。  
   
- [in] `bLargeImage`  
+ [輸入] `bLargeImage`  
  如果`TRUE`，是指大型影像清單指定的索引。 否則，索引參考的小型影像清單。  
   
 ##  <a name="setmenu"></a>CMFCRibbonButton::SetMenu  
@@ -941,7 +942,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pParent`  
+ [輸入] `pParent`  
   
 ### <a name="remarks"></a>備註  
   
@@ -953,7 +954,7 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bSet`  
+ [輸入] `bSet`  
  如果`TRUE`，是靠右對齊。 否則，功能表是靠左對齊  
   
 ##  <a name="settext"></a>CMFCRibbonButton::SetText  
@@ -964,10 +965,10 @@ virtual void SetText(LPCTSTR lpszText);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszText`  
+ [輸入] `lpszText`  
   
 ### <a name="remarks"></a>備註  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)

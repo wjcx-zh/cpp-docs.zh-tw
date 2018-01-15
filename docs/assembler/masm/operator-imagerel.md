@@ -1,44 +1,44 @@
 ---
-title: "operator IMAGEREL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator IMAGEREL"
-  - "IMAGEREL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator IMAGEREL"
-  - "IMAGEREL operator"
+title: "運算子 IMAGEREL |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator IMAGEREL
+- IMAGEREL
+dev_langs: C++
+helpviewer_keywords:
+- operator IMAGEREL
+- IMAGEREL operator
 ms.assetid: 5b5ea425-36f0-467c-9262-62c484b7fdb4
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e8cc4c78e1bb45da5fa69d5610a7c7812f4abbf1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# operator IMAGEREL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-傳回影像的相對位移的`expression`。  
+# <a name="operator-imagerel"></a>運算子 IMAGEREL
+傳回的映像相對位移`expression`。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 IMAGEREL expression  
 ```  
   
-## 備註  
+## <a name="remarks"></a>備註  
  產生的值通常稱為 RVA 或相對虛擬位址。  
   
- IMAGEREL 是只適用於 COFF 物件發出的。  
+ IMAGEREL 是只能搭配 COFF 物件發出。  
   
-## 請參閱  
- [Operators Reference](../../assembler/masm/operators-reference.md)
+## <a name="see-also"></a>請參閱  
+ [運算子參考](../../assembler/masm/operators-reference.md)

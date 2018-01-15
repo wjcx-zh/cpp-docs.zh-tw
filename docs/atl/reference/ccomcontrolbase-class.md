@@ -90,11 +90,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8e7e3ab049a7fc7935b9027746fc4cdebb3428cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d6109bfaf29ee26053bc1dcbb5af8f56a0612215
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase 類別
 這個類別會提供方法來建立及管理 ATL 的控制項。  
@@ -108,24 +109,24 @@ ms.lasthandoff: 10/24/2017
 class ATL_NO_VTABLE CComControlBase
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComControlBase::AppearanceType](#appearancetype)|如果覆寫您`m_nAppearance`內建屬性的類型不`short`。|  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|建構函式。|  
 |[CComControlBase:: ~ CComControlBase](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|擷取所要求介面的指標。|  
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|檢查`iVerb`所使用的參數`IOleObjectImpl::DoVerb`是啟動控制項的使用者介面 (`iVerb`等於`OLEIVERB_UIACTIVATE`)，定義當使用者按兩下控制項時所採取的動作 (`iVerb`等於`OLEIVERB_PRIMARY`)，顯示控制項 (`iVerb`等於`OLEIVERB_SHOW`)，或啟動控制項 (`iVerb`等於**OLEIVERB_INPLACEACTIVATE**)。|  
@@ -176,7 +177,7 @@ class ATL_NO_VTABLE CComControlBase
   
 ### <a name="public-data-members"></a>公用資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComControlBase::m_bAutoSize](#m_bautosize)|表示控制項的任何其他大小不能為旗標。|  
 |[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|旗標指出`IDataObjectImpl::GetData`和`CComControlBase::GetZoomInfo`應該設定中的控制項大小`m_sizeNatural`而不是從`m_sizeExtent`。|  
@@ -1161,7 +1162,7 @@ LRESULT OnKillFocus(UINT /* nMsg */,
  保留的。  
   
  `bHandled`  
- 旗標，指出是否已成功處理的視窗訊息。 預設為 `FALSE`。  
+ 旗標，指出是否已成功處理的視窗訊息。 預設值為 `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  一定會傳回 1。  
@@ -1187,7 +1188,7 @@ LRESULT OnMouseActivate(UINT /* nMsg */,
  保留的。  
   
  `bHandled`  
- 旗標，指出是否已成功處理的視窗訊息。 預設為 `FALSE`。  
+ 旗標，指出是否已成功處理的視窗訊息。 預設值為 `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  一定會傳回 1。  
@@ -1242,7 +1243,7 @@ LRESULT OnSetFocus(UINT /* nMsg */,
  保留的。  
   
  `bHandled`  
- 旗標，指出是否已成功處理的視窗訊息。 預設為 `FALSE`。  
+ 旗標，指出是否已成功處理的視窗訊息。 預設值為 `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
  一定會傳回 1。  
@@ -1376,6 +1377,6 @@ void SetDirty(BOOL bDirty);
 ### <a name="remarks"></a>備註  
  **SetDirty(TRUE)**應該加上旗標已變更的控制項，自上次儲存後呼叫。 值`m_bRequiresSave`擷取與[CComControlBase::GetDirty](#getdirty)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComControl 類別](../../atl/reference/ccomcontrol-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

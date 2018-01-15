@@ -16,19 +16,20 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9726262e515f0b7aeb9df85fb02681ad6ba1f888
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0b808f153a8508e57ceabc10a963d7e83791d94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atlmfc-concepts"></a>ATL/MFC 概念
 本節提供概念和以工作為基礎的主題可協助您使用 Active Template Library (ATL) 和 Microsoft Foundation Class (MFC) 程式庫之間共用的類別進行程式設計。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
  [字串 (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)  
  描述如何管理應用程式中的字串資料。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL/MFC 共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)
 

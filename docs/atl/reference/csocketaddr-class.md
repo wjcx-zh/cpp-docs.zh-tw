@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ed1224fd00d5decb8dc99910563b47e4ba60350
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cadd771e6c3a9e7addb6893b4427183cfff293c9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr 類別
 這個類別會提供主機名稱轉換成主機位址，支援 IPv4 和 IPV6 格式的方法。  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class CSocketAddr
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSocketAddr::CSocketAddr](#csocketaddr)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSocketAddr::FindAddr](#findaddr)|呼叫此方法以提供的主機名稱轉換成主機位址。|  
 |[CSocketAddr::FindINET4Addr](#findinet4addr)|呼叫此方法，將 IPv4 主機名稱轉換為主機位址。|  
@@ -207,7 +208,7 @@ addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>傳回值  
- 連結清單的一或多個指標`addrinfo`結構，其中包含主機的回應資訊。 如需有關`addrinfo`結構時，請參閱 「 addrinfo 」 文件中的[MSDN 文件庫](http://go.microsoft.com/fwlink/linkid=556)  
+ 連結清單的一或多個指標`addrinfo`結構，其中包含主機的回應資訊。 如需詳細資訊，請參閱[addrinfo 結構](https://msdn.microsoft.com/library/windows/desktop/ms737530)。
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

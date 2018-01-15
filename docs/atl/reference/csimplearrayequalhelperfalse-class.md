@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b42c7717757d3648db368e7d9633162fa87afe9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 28d43b6a83842373c2fc169ce43022f1912c4e0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse 類別
 這個類別是 helper [CSimpleArray](../../atl/reference/csimplearray-class.md)類別。  
@@ -38,11 +39,11 @@ class CSimpleArrayEqualHelperFalse
  `T`  
  在衍生的類別中。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|（靜態）傳回 false。|  
   
@@ -65,6 +66,6 @@ static bool IsEqual(const T&, const T&);
 ### <a name="remarks"></a>備註  
  這個方法一律會傳回 false，並將呼叫`ATLASSERT`是 false，如果參考的引數。 目的`CSimpleArrayEqualHelperFalse::IsEqual`是強制方法使用的比較時沒有充分定義等號比較測試，以妥善定義的方式失敗。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CSimpleArrayEqualHelper 類別](../../atl/reference/csimplearrayequalhelper-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

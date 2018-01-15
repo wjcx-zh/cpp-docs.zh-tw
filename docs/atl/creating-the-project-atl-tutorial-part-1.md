@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2d10aa6a3f7220103ae6a3b9e57b9b3c42cd8739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1a9a5fc9a0d2175a419bbc0fb1aacbc9ea25006c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 本教學課程會逐步引導您完成未使用屬性的 ATL 專案來建立顯示多邊形 ActiveX 物件。 物件包含的選項讓使用者變更邊的多邊形和程式碼以重新整理顯示的數目。  
@@ -66,12 +67,12 @@ ms.lasthandoff: 10/24/2017
   
 3.  按一下**連結器**。 變更**每 UserRedirection**選項設定為**是**。  
   
-4.  按一下 [確定]。  
+4.  按一下 [確定 **Deploying Office Solutions**]。  
   
  在下一個步驟中，您將控制項加入您的專案。  
   
  [至步驟 2](../atl/adding-a-control-atl-tutorial-part-2.md)  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [教學課程](../atl/active-template-library-atl-tutorial.md)
 

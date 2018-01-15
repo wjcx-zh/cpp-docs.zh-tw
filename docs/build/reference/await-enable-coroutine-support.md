@@ -19,11 +19,12 @@ ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c49c55d8203797dfc8fbee881e5f521883daabb4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 47134532b16d1b5a907e4ed3170a0827316d7c65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="await-enable-coroutine-support"></a>/await （啟用協同程式不支援）  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
   
 [編譯器選項](../../build/reference/compiler-options.md)   
 [設定編譯器選項](../../build/reference/setting-compiler-options.md)

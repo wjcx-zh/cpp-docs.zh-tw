@@ -26,11 +26,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14c2b7e05ed303d8b18ae40619bc63a75f025662
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ca462648a43869b11984e4582c8eb2c3dfaece7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomunkarray-class"></a>CComUnkArray 類別
 這個類別會儲存**IUnknown**指標，以及設計用於為參數，以[IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md)範本類別。  
@@ -50,13 +51,13 @@ class CComUnkArray
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComUnkArray::CComUnkArray](#ccomunkarray)|建構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CComUnkArray::Add](#add)|呼叫此方法以新增**IUnknown**陣列的指標。|  
 |[CComUnkArray::begin](#begin)|讓指標回到第一個**IUnknown**指標集合中的。|  
@@ -179,6 +180,6 @@ BOOL Remove(DWORD dwCookie);
 ### <a name="return-value"></a>傳回值  
  傳回**TRUE**如果移除指標， **FALSE**否則。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CComDynamicUnkArray 類別](../../atl/reference/ccomdynamicunkarray-class.md)   
  [類別概觀](../../atl/atl-class-overview.md)

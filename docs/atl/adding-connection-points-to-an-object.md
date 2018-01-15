@@ -1,73 +1,75 @@
 ---
-title: "Adding Connection Points to an Object | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "連接點 [C++], 加入至 ATL 物件"
-  - "Implement Connection Point ATL wizard"
+title: "將連接點加入物件 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- connection points [C++], adding to ATL objects
+- Implement Connection Point ATL wizard
 ms.assetid: 843531be-4a36-4db0-9d54-e029b1a72a8b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f63ec5bd9029302192e640e42a3d012df347219d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Connection Points to an Object
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[ATL 教學課程](../atl/active-template-library-atl-tutorial.md) 示範如何建立控制項以支援連接點時，如何將事件，以及如何實作連接點。  ATL 所 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) 類別的實作連接點。  
+# <a name="adding-connection-points-to-an-object"></a>將連接點加入物件
+[ATL 教學課程](../atl/active-template-library-atl-tutorial.md)示範如何建立具有連接點支援的控制項、 如何加入事件，以及如何實作連接點。 ATL 實作連接點與[IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)類別。  
   
- 若要實作連接點，您有兩個選擇:  
+ 若要實作連接點，您有兩個選擇：  
   
--   藉由將物件加入至控制項或物件的連接點實作您輸出的事件來源。  
+-   實作您自己外寄的事件來源，將連接點加入至控制項或物件。  
   
--   重複使用在另一個型別定義的連接點介面程式庫。  
+-   重複使用另一個類型程式庫中定義的連接點介面。  
   
- 在任何情況下，實作連接點精靈使用型別程式庫完成其工作。  
+ 在任一情況下，實作連接點精靈會使用型別程式庫來執行其工作。  
   
-### 將物件加入至控制項的連接點或物件。  
+### <a name="to-add-a-connection-point-to-a-control-or-object"></a>若要加入的控制項或物件的連接點  
   
-1.  在 .idl 檔案中定義的程式庫區塊的分派介面。  如果您啟用支援連接點，當您使用 ATL 控制項精靈的控制項， dispinterface 已經建立。  如果您未啟用支援連接點，當您建立控制項，您必須手動加入分配介面加入至 .idl 檔。  以下是分配介面 \(Dispinterface\) 的範例。  不需要輸出介面是分派介面，但是大部分的指令碼語言 \(例如 JScript 和 VBScript 需要，因此，這個範例會使用兩個介面:  
+1.  .Idl 檔案的程式庫區塊中定義的分配介面。 如果您使用 ATL 控制項精靈 」 建立控制項時，您就會啟用連接點的支援，將已建立的分配介面。 如果您未啟用的連接點支援您在建立控制項時，您必須手動加入 dispinterface.idl 檔案。 以下是分配介面的範例。 外寄的介面並不一定要分派介面，但許多指令碼語言，例如 VBScript 和 JScript 需要，因此這個範例會使用兩種分配介面：  
   
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/CPP/adding-connection-points-to-an-object_1.idl)]  
+     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]  
   
-     使用這個 uuidgen.exe guidgen.exe 或公用程式產生 GUID。  
+     使用 uuidgen.exe 或 guidgen.exe 公用程式產生的 GUID。  
   
-2.  加入分配介面 \(Dispinterface\)， Coclass 的 `[default,source]` 介面在專案的 .idl 檔的物件。  同樣地，因此，如果您啟用支援連接點，當您建立控制項， ATL 控制項精靈來建立 `[default,source`\] 項目。  手動加入這個項目，將以粗體顯示的程式碼行:  
+2.  加入做為 dispinterface`[default,source]`介面的 coclass 專案的.idl 檔中的物件中。 同樣地，如果您在建立控制項時，您就會啟用連接點的支援，ATL 控制項精靈將會建立`[default,source`] 項目。 若要手動新增此項目，加入線條以粗體顯示：  
   
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/CPP/adding-connection-points-to-an-object_2.idl)]  
+     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]  
   
-     如需範例查看 [Circ](../top/visual-cpp-samples.md) ATL 範例的 .idl 檔案。  
+     請參閱中的.idl 檔案[Circ](../visual-cpp-samples.md) ATL 範例的範例。  
   
-3.  使用類別檢視加入方法和屬性加入至事件介面。  以滑鼠右鍵按一下類別在類別檢視中，指向捷徑功能表上的 **新增** ，然後按一下 **新增Connection Point**。  
+3.  使用類別檢視，來將方法和屬性加入至事件介面。 以滑鼠右鍵按一下 類別檢視中的類別，並指向**新增**捷徑功能表，然後按一下 **加入連接點**。  
   
-4.  在實作連接點精靈的 **Source Interfaces** 清單方塊中，選取 **Project's interfaces**。  如果您選取之控制項的介面並按 **確定**，您將會:  
+4.  在**來源介面**實作連接點精靈中，選取清單方塊**專案介面**。 如果您選擇您的控制項和按介面**確定**，您將會：  
   
-    -   產生具有實作程式碼將對事件的傳出呼叫事件的 Proxy 類別的標頭檔。  
+    -   產生與實作的程式碼，將會發出連出呼叫事件的事件 proxy 類別的標頭檔。  
   
-    -   將項目加入至連接點對應。  
+    -   加入連接點對應的項目。  
   
-     您也會看見所有清單在您電腦上的型別程式庫。  您應該只使用其中一個其他型別程式庫定義自己的連接點是否要實作實際在其他型別上找到的相同輸出介面程式庫。  
+     您也會看到您的電腦上的所有型別程式庫的清單。 您只應該使用這些其他類型程式庫的其中一個定義您的連接點，如果您想要實作完全相同的輸出介面另一個類型程式庫中找到。  
   
-### 重複使用在另一個型別定義的連接點介面程式庫  
+### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>若要重複使用的連接點介面定義中另一個類型程式庫  
   
-1.  在 \[類別檢視\] 中，以滑鼠右鍵按一下實作 **BEGIN\_COM\_MAP** 巨集的類別，並在捷徑功能表上的 **新增** ，然後按一下 **新增Connection Point**。  
+1.  在 類別檢視，以滑鼠右鍵按一下類別可實作**BEGIN_COM_MAP**巨集，指向**新增**捷徑功能表，然後按一下 **加入連接點**。  
   
-2.  在實作連接點精靈，請在型別程式庫中的型別程式庫和介面並按一下 **新增**。  
+2.  在實作連接點精靈中，選取型別程式庫和介面類型程式庫中，按一下 **新增**。  
   
-3.  編輯 .idl 檔為:  
+3.  編輯.idl 檔案為：  
   
-    -   複製分配介面從使用事件來源的物件的 .idl 檔案。  
+    -   Dispinterface 複製正在使用其事件來源物件的.idl 檔案。  
   
-    -   使用在該型別程式庫的 **importlib** 指令。  
+    -   使用**importlib**該型別程式庫的指示。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [連接點](../atl/atl-connection-points.md)
+

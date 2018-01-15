@@ -1,47 +1,48 @@
 ---
-title: "/Gd、/Gr、/Gv、/Gz (呼叫慣例) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/gr"
-  - "/Gv"
-  - "/gz"
-  - "/Gd"
-  - "VC.Project.VCCLCompilerTool.CallingConvention"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gd 編譯器選項 [C++]"
-  - "/Gr 編譯器選項 [C++]"
-  - "/Gv 編譯器選項 [C++]"
-  - "/Gz 編譯器選項 [C++]"
-  - "Gd 編譯器選項 [C++]"
-  - "-Gd 編譯器選項 [C++]"
-  - "Gr 編譯器選項 [C++]"
-  - "-Gr 編譯器選項 [C++]"
-  - "Gv 編譯器選項 [C++]"
-  - "-Gv 編譯器選項 [C++]"
-  - "Gz 編譯器選項 [C++]"
-  - "-Gz 編譯器選項 [C++]"
+title: "-Gd，ε λ，-Gv，-Gz （呼叫慣例） |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /gr
+- /Gv
+- /gz
+- /Gd
+- VC.Project.VCCLCompilerTool.CallingConvention
+dev_langs: C++
+helpviewer_keywords:
+- -Gd compiler option [C++]
+- -Gv compiler option [C++]
+- /Gv compiler option [C++]
+- -Gr compiler option [C++]
+- Gd compiler option [C++]
+- Gr compiler option [C++]
+- /Gz compiler option [C++]
+- -Gz compiler option [C++]
+- /Gd compiler option [C++]
+- Gz compiler option [C++]
+- Gv compiler option [C++]
+- /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 26e88abf30c0f67fe5b104d560c40dd2adc57752
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# /Gd、/Gr、/Gv、/Gz (呼叫慣例)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-這些選項決定函式引數推入至堆疊上的順序；不管是呼叫端函式或是被呼叫的函式在呼叫結束時從堆疊移除引數；以及編譯器用來辨認各個函式的名稱裝飾慣例。  
+# <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (呼叫慣例)
+這些選項會決定函式引數會推入堆疊中，是否呼叫的函式的呼叫端函式從結尾的呼叫堆疊中移除引數的順序和編譯器用來識別的名稱裝飾慣例個別的函式。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 /Gd  
@@ -50,79 +51,79 @@ caps.handback.revision: 19
 /Gz  
 ```  
   
-## 備註  
- 除了 C\+\+ 成員函式和標記了 [\_\_stdcall](../../cpp/stdcall.md)、[\_\_fastcall](../../cpp/fastcall.md) 或 [\_\_vectorcall](../../cpp/vectorcall.md) 的函式以外，**\/Gd** \(預設設定\) 會指定所有函式的 [\_\_cdecl](../../cpp/cdecl.md) 呼叫慣例 \(Calling Convention\)。  
+## <a name="remarks"></a>備註  
+ **/Gd**、 預設值，指定[__cdecl](../../cpp/cdecl.md)函式和標記的函式，呼叫慣例的 c + + 成員除外的所有函式[__stdcall](../../cpp/stdcall.md)， [__fastcall](../../cpp/fastcall.md)，或[__vectorcall](../../cpp/vectorcall.md)。  
   
- 除了 C\+\+ 成員函式、名為 `main` 的函式和標記了 `__cdecl`、`__stdcall` 或 `__vectorcall` 的函式以外，**\/Gr** 會指定所有函式的 `__fastcall` 呼叫慣例 \(Calling Convention\)。  所有 `__fastcall` 函式必須有原型。  這個呼叫慣例僅供以 x86 為目標的編譯器使用，以其他架構為目標的編譯器會忽略它。  
+ **/Gr**指定`__fastcall`呼叫慣例的 c + + 成員函式以外的所有函式，名為函式`main`，和函式標示為`__cdecl`， `__stdcall`，或`__vectorcall`。 所有`__fastcall`函式都必須有原型。 這個呼叫慣例僅供以 x86 為目標的編譯器，以及其他架構為目標的編譯器會忽略。  
   
- 除了 C\+\+ 成員函式、名為 `main` 的函式和標記了 `__cdecl`、`__fastcall` 或 `__vectorcall` 的函式以外，**\/Gz** 會指定所有函式的 `__stdcall` 呼叫慣例 \(Calling Convention\)。  所有 `__stdcall` 函式必須有原型。  這個呼叫慣例僅供以 x86 為目標的編譯器使用，以其他架構為目標的編譯器會忽略它。  
+ **/Gz**指定`__stdcall`呼叫慣例的 c + + 成員函式以外的所有函式，名為函式`main`，和函式標示為`__cdecl`， `__fastcall`，或`__vectorcall`。 所有`__stdcall`函式都必須有原型。 這個呼叫慣例僅供以 x86 為目標的編譯器，以及其他架構為目標的編譯器會忽略。  
   
- 除了 C\+\+ 成員函式，名為 main 的函式、有 `vararg` 變數引數清單的函式，或是標記 `__cdecl`, `__stdcall` 或  `__fastcall` 屬性衝突的函式，**\/Gv** 會指定所有函式的 `__vectorcall` 呼叫慣例。  這個呼叫慣例只適用於支援 \/arch:SSE2 以上的 x86 和 x64 架構，以 ARM 架構為目標的編譯器會忽略它。  
+ **/Gv**指定`__vectorcall`呼叫慣例的 c + + 成員函式以外的所有函式，名為的 main 函式、 函式與`vararg`變數引數清單或標示為衝突的函式`__cdecl`，`__stdcall`，或`__fastcall`屬性。 這個呼叫慣例只有使用支援 /arch:SSE2 的 x86 和 x64 架構和更高版本，且 ARM 架構為目標的編譯器會忽略。  
   
- 採用數目不定之引數的函式必須標記 `__cdecl`。  
+ 接受可變數目的引數的函式必須標示為`__cdecl`。  
   
- **\/Gd**、**\/Gr**、**\/Gv** 及 **\/Gz**，與 [\/clr:safe](../../build/reference/clr-common-language-runtime-compilation.md) 或 **\/clr:pure** 不相容。  
-  
-> [!NOTE]
->  如果是 x86 處理器，C\+\+ 成員函式預設會使用 [\_\_thiscall](../../cpp/thiscall.md)。  
-  
- 對所有處理器來說，明確標記為 `__cdecl`、`__fastcall`、`__vectorcall` 或 `__stdcall` 的成員函式會使用指定的呼叫慣例 \(如果未在該架構上忽略的話\)。  接受可變引數數目的成員函式永遠使用 `__cdecl` 呼叫慣例。  
-  
- 這些編譯器選項對於 C\+\+ 方法和函式的名稱裝飾 \(Name Decoration\) 沒有作用。  除非宣告為 `extern "C"`，否則 C\+\+ 方法和函式會使用不同的名稱裝飾配置。  如需詳細資訊，請參閱[裝飾名稱](../../build/reference/decorated-names.md)。  
-  
- 如需關於呼叫慣例的詳細資訊，請參閱[呼叫慣例](../../cpp/calling-conventions.md)。  
-  
-## \_\_cdecl 專屬資訊  
- x86 處理器上，所有函式引數都是在堆疊上由右至左傳遞。  在 x64 和 ARM 結構中，有些引數是由暫存器傳遞，而其他則是在堆疊上由右至左傳遞。  發出呼叫的常式會從堆疊中顯示引數。  
-  
- 如果是 C，`__cdecl` 命名慣例是使用函式名稱，前面加上底線 \(`_`\)；不會執行大小寫轉譯。  除非宣告為 `extern "C"`，否則 C\+\+ 函式會使用不同的名稱裝飾配置。  如需詳細資訊，請參閱[裝飾名稱](../../build/reference/decorated-names.md)。  
-  
-## \_\_fastcall 專屬資訊  
- 有些 `__fastcall` 函式的引數是在暫存器中傳遞 \(在 x86 處理器上有 ECX 和 EDX\)，其餘的則是從右至左推入到堆疊上。  被呼叫的常式會在返回前將這些引數由堆疊取出。  通常，**\/Gr** 會縮短執行時間。  
+ **/Gd**， **/Gr**， **/Gv**和**/Gz**與不相容[/clr: safe](../../build/reference/clr-common-language-runtime-compilation.md)或**/clr: pure**. **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代。  
   
 > [!NOTE]
->  對任何以內嵌組譯碼語言撰寫的函式使用 `__fastcall` 呼叫慣例時要特別留意。  您對暫存器的使用可能會與編譯器對它們的使用衝突。  
+>  根據預設，適用於 x86 處理器，c + + 成員函式使用[__thiscall](../../cpp/thiscall.md)。  
   
- 如果是 C，`__fastcall` 命名慣例是使用函式名稱，前面加上 at 符號 \(`@`\)，後面跟著以位元組為單位的函式引數大小。  不會執行大小寫轉譯。  編譯器會使用這個範本做為命名慣例：  
+ 適用於所有處理器，成員函式，明確地標示為`__cdecl`， `__fastcall`， `__vectorcall`，或`__stdcall`會使用指定的呼叫慣例，如果它不會忽略在該架構上。 成員函式接受可變數目的引數一律會使用`__cdecl`呼叫慣例。  
   
-```c  
+ 這些編譯器選項會有任何影響，在 c + + 方法和函式的裝飾名稱。 除非宣告為`extern "C"`，c + + 方法和函式使用不同的名稱裝飾配置。 如需詳細資訊，請參閱[裝飾名稱](../../build/reference/decorated-names.md)。  
+  
+ 如需有關呼叫慣例的詳細資訊，請參閱[呼叫慣例](../../cpp/calling-conventions.md)。  
+  
+## <a name="cdecl-specifics"></a>__cdecl 細節  
+ 在 x86 上的處理器，所有函式引數會在堆疊上傳遞由右至左。 在 ARM 和 x64 架構中，某些引數會由暫存器中傳遞，其餘部分會在堆疊上傳遞由右至左。 呼叫常式會出現從堆疊的引數。  
+  
+ 對於 C，`__cdecl`命名慣例是使用函式名稱加上底線 ( `_` ); 不會執行任何大小寫轉譯。 除非宣告為`extern "C"`，c + + 函式會使用不同的名稱裝飾配置。 如需詳細資訊，請參閱[裝飾名稱](../../build/reference/decorated-names.md)。  
+  
+## <a name="fastcall-specifics"></a>__fastcall 細節  
+ 部分`__fastcall`函式的引數會傳遞暫存器中 (適用於 x86 處理器、 ECX 及 EDX)，以及其他會由右至左推入堆疊。 在傳回這些引數，從堆疊取出所呼叫的常式。 一般而言， **/Gr**減少執行時間。  
+  
+> [!NOTE]
+>  當您使用時請格外小心`__fastcall`內嵌組件語言撰寫的任何函式的呼叫慣例。 貴用戶使用暫存器可能會使用編譯器的衝突。  
+  
+ 對於 C，`__fastcall`命名慣例是使用函式名稱前面加上 @ 記號 (`@`) 後面接著函式的引數，以位元組為單位的大小。 不是任何大小寫轉譯。 編譯器會使用此範本的命名慣例：  
+  
+```  
 @function_name@number  
 ```  
   
- 使用 `__fastcall` 命名慣例時，請使用標準 Include 檔案。  否則您將會得到未解析的外部參考。  
+ 當您使用`__fastcall`命名慣例，使用標準 include 檔案。 否則，您會收到未解析外部參考。  
   
-## \_\_stdcall 專屬資訊  
- `__stdcall` 函式的引數會由右至左推入堆疊，而且被呼叫的函式會在返回前將這些引數由堆疊取出。  
+## <a name="stdcall-specifics"></a>__stdcall 細節  
+ A`__stdcall`函式的引數會推入堆疊由右至左，和呼叫的函式會在它傳回之前將這些引數從堆疊取出。  
   
- 如果是 C，`__stdcall` 命名慣例是使用函式名稱，前面加上底線 \( `_` \)，後面跟著 at 符號 \(@\) 和以位元組為單位的函式引數大小。  不會執行大小寫轉譯。  編譯器會使用這個範本做為命名慣例：  
+ 對於 C，`__stdcall`命名慣例是使用函式名稱加上底線 ( `_` )，後面接著 at 符號 (@)，以及函式的引數，以位元組為單位的大小。 不會執行大小寫轉譯。 編譯器會使用此範本的命名慣例：  
   
-```c  
+```  
 _functionname@number  
 ```  
   
-## \_\_vectorcall 特定  
- `__vectorcall` 函式的整數引數由值傳遞，最多使用兩個 \(在 x86\) 或四個 \(在 x64\) 整數暫存器，以及六個 XMM 暫存器為浮點和巡覽值，其他在堆疊中從右至左傳遞。  呼叫的函式會在傳回前清除堆疊。  向量和浮點傳回值是在 XMM0 中傳回。  
+## <a name="vectorcall-specifics"></a>__vectorcall 細節  
+ A`__vectorcall`函式的整數引數傳遞的值，並使用最多兩個 （在 x86) 或 （在 x64) 的四個整數暫存器，以及最多六個 XMM 暫存器的浮點數和向量值以及其餘部分會在堆疊上傳遞由右至左。 在傳回呼叫的函式就會清除堆疊。 向量和浮點數的傳回值會在 XMM0 中傳回。  
   
- 如果是 C，`__vectorcall` 命名慣例是使用函式名稱，後面跟隨兩個 @ 記號 \(@@\)，再加上函式引數大小 \(以位元組為單位\)。  不會執行大小寫轉譯。  編譯器會使用這個範本做為命名慣例：  
+ 對於 C，`__vectorcall`命名慣例是使用函式名稱後面加上兩個 @ 符號 （@ @） 和函式的引數，以位元組為單位的大小。 不會執行大小寫轉譯。 編譯器會使用此範本的命名慣例：  
   
-```c  
+```  
 functionname@@number  
 ```  
   
-### To set this compiler option in the Visual Studio development environment  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  Open the project's **Property Pages** dialog box.  For details, see [如何：開啟專案屬性頁](../../misc/how-to-open-project-property-pages.md).  
+1.  開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[使用專案屬性](../../ide/working-with-project-properties.md)。  
   
-2.  Select the **C\/C\+\+** folder.  
+2.  選取**C/c + +**資料夾。  
   
-3.  Select the **Advanced** property page.  
+3.  選取**進階**屬性頁。  
   
-4.  Modify the **Calling Convention** property.  
+4.  修改**呼叫慣例**屬性。  
   
-### To set this compiler option programmatically  
+### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項  
   
--   See <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>.  
+-   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CallingConvention%2A>。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

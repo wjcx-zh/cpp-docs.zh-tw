@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 72949601269dea510ba7b9078b022a28905349c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csacl-class"></a>CSacl 類別
 這個類別是 SACL （系統存取控制清單） 結構的包裝函式。  
@@ -40,18 +41,18 @@ ms.lasthandoff: 10/24/2017
 class CSacl : public CAcl
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|建構函式。|  
 |[CSacl:: ~ CSacl](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSacl::AddAuditAce](#addauditace)|將稽核存取控制項目 (ACE) 加入至`CSacl`物件。|  
 |[CSacl::GetAceCount](#getacecount)|傳回中的存取控制項目 (Ace) 數目`CSacl`物件。|  
@@ -60,7 +61,7 @@ class CSacl : public CAcl
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSacl::operator =](#operator_eq)|指派運算子。|  
   
@@ -205,7 +206,7 @@ void RemoveAllAces() throw();
 ### <a name="remarks"></a>備註  
  移除每個**ACE**結構 （如果有的話）`CSacl`物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAcl 類別](../../atl/reference/cacl-class.md)   
  [Acl](http://msdn.microsoft.com/library/windows/desktop/aa374872)   
  [Ace](http://msdn.microsoft.com/library/windows/desktop/aa374868)   

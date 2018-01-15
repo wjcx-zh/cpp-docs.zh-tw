@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bb74d68bb8974f820ac09a0c56930d835a3fe7f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54f237a629c4af9ea7ae30aeca21c03786abcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="implementing-ccomobject-ccomaggobject-and-ccompolyobject"></a>實作 Ccomobject<、 CComAggObject 和 CComPolyObject
 樣板類別[Ccomobject<](../atl/reference/ccomobject-class.md)， [CComAggObject](../atl/reference/ccomaggobject-class.md)，和[CComPolyObject](../atl/reference/ccompolyobject-class.md)一律會繼承鏈結中最常衍生的類別。 他們要負責處理的方法中的所有**IUnknown**: `QueryInterface`， `AddRef`，和**發行**。 此外，`CComAggObject`和`CComPolyObject`（當用於彙總的物件） 提供特殊的參考計數和`QueryInterface`內部未知所需的語意。  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/24/2017
   
  使用的優點`CComPolyObject`是，您可以避免必須同時`CComAggObject`和`CComObject`處理彙總及非彙總的情況下在模組中。 單一`CComPolyObject`物件會處理這兩種情況。 這表示您可以在模組中存在 vtable 只能有一個複本和一份函式。 如果您的 vtable 很大，這可以大幅降低模組大小。 不過，如果您的 vtable 很小，使用`CComPolyObject`會造成較大的模組大小因為沒有最佳化彙總或非彙總物件，因為`CComAggObject`和`CComObject`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ATL COM 物件的基本概念](../atl/fundamentals-of-atl-com-objects.md)   
  [彙總和 Class Factory 巨集](../atl/reference/aggregation-and-class-factory-macros.md)
 

@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e42bbe4f724f711f407072c12a61ae9abbaca07d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 043ad96ada12467ce9c2ff39c9e337e0da9d2391
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="masm-macros"></a>MASM 巨集
 為了簡化使用[未經處理的虛擬作業](../build/raw-pseudo-operations.md)，有一組巨集，ksamd64.inc，可用來建立一般的程序序言和結尾中定義。  
@@ -67,5 +68,5 @@ ret
 sample2 ENDP  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MASM 的回溯協助程式](../build/unwind-helpers-for-masm.md)

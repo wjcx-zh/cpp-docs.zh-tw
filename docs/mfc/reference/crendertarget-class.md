@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -65,8 +64,7 @@ f1_keywords:
 - AFXRENDERTARGET/CRenderTarget::m_lstResources
 - AFXRENDERTARGET/CRenderTarget::m_pRenderTarget
 - AFXRENDERTARGET/CRenderTarget::m_pTextFormatDefault
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CRenderTarget [MFC], CRenderTarget
 - CRenderTarget [MFC], Attach
@@ -123,16 +121,16 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a52a2add3306aaf684f9a48a06d1add229205233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: a12ec4bd293901ed1b8928ecd4e425b335e11890
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 類別
 ID2D1RenderTarget 包裝函式。  
@@ -143,18 +141,18 @@ ID2D1RenderTarget 包裝函式。
 class CRenderTarget : public CObject;  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRenderTarget::CRenderTarget](#crendertarget)|建構 CRenderTarget 物件。|  
 |[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|解構函式。 呈現目標物件終結時呼叫。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|  
 |[CRenderTarget::BeginDraw](#begindraw)|初始化這個呈現目標上繪製。|  
@@ -206,21 +204,21 @@ class CRenderTarget : public CObject;
 |[CRenderTarget::SetTextRenderingParams](#settextrenderingparams)|指定要套用到所有後續文字和繪製作業的圖像的文字呈現選項。|  
 |[CRenderTarget::SetTransform](#settransform)|多載。 將指定的轉換套用至呈現目標，取代現有的轉換。 後續的所有繪圖作業發生在轉換後的空間。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRenderTarget::VerifyResource](#verifyresource)|驗證 CD2DResource 物件的有效性。如果它已不存在，請建立的物件。|  
   
 ### <a name="public-operators"></a>公用運算子  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|傳回 ID2D1RenderTarget 介面|  
   
 ### <a name="protected-data-members"></a>受保護的資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|CD2DResource 物件指標的清單。|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|ID2D1RenderTarget 物件的指標。|  
@@ -1047,6 +1045,5 @@ BOOL VerifyResource(CD2DResource* pResource);
 ### <a name="return-value"></a>傳回值  
  是物件，如果有效，則為 TRUE否則為 FALSE。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別](../../mfc/reference/mfc-classes.md)
-

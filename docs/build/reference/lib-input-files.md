@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f956dedb8be270eb9974fa035d38e7fbb6714499
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fea7a8700eb2f5a5deee7afd05af8b0de0e4e71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lib-input-files"></a>LIB 輸入檔
 LIB 所預期的輸入的檔而定的模式，這正在使用它下, 表所示。  
@@ -33,5 +34,5 @@ LIB 所預期的輸入的檔而定的模式，這正在使用它下, 表所示�
 > [!NOTE]
 >  16 位元版本的 LIB 所建立的 OMF 程式庫不能做為輸入 32 位元版本的 LIB。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [LIB 概觀](../../build/reference/overview-of-lib.md)

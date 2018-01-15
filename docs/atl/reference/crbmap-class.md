@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 127f8b0448d141917193d41d11d5ed95576ff482
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbmap-class"></a>CRBMap 類別
 此類別代表對應結構，使用 紅黑二進位樹狀目錄。  
@@ -53,18 +54,18 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
  `VTraits`  
  用於複製或移動的項目值的程式碼。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBMap::CRBMap](#crbmap)|建構函式。|  
 |[CRBMap:: ~ CRBMap](#dtor)|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CRBMap::Lookup](#lookup)|呼叫這個方法來查詢索引鍵或值`CRBMap`物件。|  
 |[CRBMap::RemoveKey](#removekey)|呼叫這個方法來移除的項目從`CRBMap`物件，指定的索引鍵。|  
@@ -135,7 +136,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  指定識別的項目是要查閱的索引鍵。  
   
- *value*  
+ *值*  
  收到的查詢上值的變數。  
   
 ### <a name="return-value"></a>傳回值  
@@ -180,7 +181,7 @@ POSITION SetAt(
  `key`  
  若要加入的索引鍵值`CRBMap`物件。  
   
- *value*  
+ *值*  
  要加入值`CRBMap`物件。  
   
 ### <a name="return-value"></a>傳回值  
@@ -194,7 +195,7 @@ POSITION SetAt(
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_ATL_Utilities#84](../../atl/codesnippet/cpp/crbmap-class_4.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CRBTree 類別](../../atl/reference/crbtree-class.md)   
  [CAtlMap 類別](../../atl/reference/catlmap-class.md)   
  [CRBMultiMap 類別](../../atl/reference/crbmultimap-class.md)   

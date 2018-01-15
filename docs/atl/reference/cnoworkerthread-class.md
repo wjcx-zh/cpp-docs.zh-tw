@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,21 +17,19 @@ f1_keywords:
 - ATLUTIL/ATL::CNoWorkerThread::Initialize
 - ATLUTIL/ATL::CNoWorkerThread::RemoveHandle
 - ATLUTIL/ATL::CNoWorkerThread::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CNoWorkerThread class
+dev_langs: C++
+helpviewer_keywords: CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 36af37fae778a572d790a137073c62cfde22019c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 9d5722ece0c85c07445f22d93e4840b9188b246c
-ms.contentlocale: zh-tw
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnoworkerthread-class"></a>CNoWorkerThread 類別
 使用此類別做為引數`MonitorClass`樣板參數，如果您想要停用動態快取維護的快取類別。  
@@ -46,11 +43,11 @@ ms.lasthandoff: 10/09/2017
 class CNoWorkerThread
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CNoWorkerThread::AddHandle](#addhandle)|非功能上的等同[CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle)。|  
 |[CNoWorkerThread::AddTimer](#addtimer)|非功能上的等同[CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer)。|  
@@ -171,4 +168,3 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
   
 ### <a name="remarks"></a>備註  
  這個類別所提供的實作沒有任何作用。
-

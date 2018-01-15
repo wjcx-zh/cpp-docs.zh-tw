@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1de5d46375a48b3d0a97ee76486a11e8a6e71b6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d54ea3cabbbe631006cc22a80fdbf500585ff20f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv (一般用途表示)
 使用時機[/vmb、 /vmg （表示方法）](../../build/reference/vmb-vmg-representation-method.md)當做[表示方法](../../build/reference/vmb-vmg-representation-method.md)。 這些選項表示尚未發生類別定義的繼承模型。  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>備註  
  請參閱下表描述的選項。  
   
-|選項|說明|  
+|選項|描述|  
 |------------|-----------------|  
 |**/vmm**|指定要使用多個繼承的類別成員指標的最常見的表示。<br /><br /> 對應[繼承關鍵字](../../cpp/inheritance-keywords.md)和引數[#pragma pointers_to_members](../../preprocessor/pointers-to-members.md)是**multiple_inheritance**。<br /><br /> 此表示法大於所需的單一繼承。<br /><br /> 如果虛擬繼承模型，為其成員指標宣告的類別定義，編譯器會產生錯誤。|  
 |**/vms**|指定的指標類別的成員，才能不使用任何繼承 」 或 「 單一繼承最常見的表示。<br /><br /> 對應[繼承關鍵字](../../cpp/inheritance-keywords.md)和引數[#pragma pointers_to_members](../../preprocessor/pointers-to-members.md)是**single_inheritance**。<br /><br /> 這是類別的最小成員指標表示。<br /><br /> 如果宣告成員指標類別定義的繼承模型為多重或虛擬，編譯器會產生錯誤。|  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/24/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [/vmb、 /vmg （表示方法）](../../build/reference/vmb-vmg-representation-method.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

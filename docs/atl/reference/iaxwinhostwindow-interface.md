@@ -4,54 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
-- No header/ATL::IAxWinHostWindow
-- No header/ATL::AttachControl
-- No header/ATL::CreateControl
-- No header/ATL::CreateControlEx
-- No header/ATL::QueryControl
-- No header/ATL::SetExternalDispatch
-- No header/ATL::SetExternalUIHandler
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinHostWindow interface
+- ATLIFACE/ATL::IAxWinHostWindow
+- ATLIFACE/ATL::AttachControl
+- ATLIFACE/ATL::CreateControl
+- ATLIFACE/ATL::CreateControlEx
+- ATLIFACE/ATL::QueryControl
+- ATLIFACE/ATL::SetExternalDispatch
+- ATLIFACE/ATL::SetExternalUIHandler
+dev_langs: C++
+helpviewer_keywords: IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ecf88a3a6b115088dd605fff2b633bff86fb086a
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 791ef9de69646efc82361f8afbed3e17dbe56453
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow 介面
 這個介面會提供管理控制項和其主機物件的方法。  
   
 > [!IMPORTANT]
->  這個類別及其成員無法在 [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]中執行的應用程式內使用。  
+>  這個類別及其成員不能在 Windows 執行階段中執行的應用程式。  
   
 ## <a name="syntax"></a>語法  
   
@@ -59,7 +42,7 @@ ms.lasthandoff: 03/31/2017
 interface IAxWinHostWindow : IUnknown
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="methods"></a>方法  
   
@@ -101,7 +84,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
  標準 `HRESULT` 值。  
   
 ##  <a name="createcontrol"></a>IAxWinHostWindow::CreateControl  
- 建立控制項、 初始化，然後將它裝載於視窗所識別`hWnd`。  
+ 建立控制項，它初始化，它裝載於視窗所識別`hWnd`。  
   
 ```
 STDMETHOD(CreateControl)(
@@ -220,11 +203,10 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="remarks"></a>備註  
  此函式由查詢主機的站台的控制項 （例如 Web 瀏覽器控制項）`IDocHostUIHandlerDispatch`介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [IAxWinAmbientDispatch 介面](../../atl/reference/iaxwinambientdispatch-interface.md)   
  [CAxWindow::QueryHost](../../atl/reference/caxwindow-class.md#queryhost)   
  [AtlAxGetHost](composite-control-global-functions.md#atlaxgethost)
-
 
 
 

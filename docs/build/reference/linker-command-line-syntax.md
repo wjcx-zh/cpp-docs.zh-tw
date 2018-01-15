@@ -1,46 +1,47 @@
 ---
-title: "連結器命令列語法 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LINK 工具 [C++], 命令列語法"
-  - "連結器 [C++], 語法"
-  - "連結器命令列 [C++]"
+title: "連結器命令列語法 |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- linker [C++], syntax
+- linker command line [C++]
+- LINK tool [C++], command-line syntax
 ms.assetid: e2a31e17-77bd-4e74-9305-75b105b26539
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3ce42aa031b91d5a4ec21ed14ac7cb47643e1325
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# 連結器命令列語法
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-若要執行 LINK.EXE，請使用下列命令語法：  
+# <a name="linker-command-line-syntax"></a>連結器命令列語法
+若要執行連結。EXE，使用下列命令語法：  
   
 ```  
 LINK arguments  
 ```  
   
- `arguments` 包括選項和檔名，而且可以任何順序指定。  選項會首先被處理，然後才是檔案。  請使用一個以上的空格或 Tab 字元來分隔引數。  
+ `arguments`包括選項和檔名，以及可以任何順序指定。 選項為已處理的第一個，然後才是檔案。 使用一個或多個空格或定位字元分隔引數。  
   
 > [!NOTE]
->  您只能從 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 命令提示字元啟動這個工具。  您不能從系統命令提示字元或從檔案總管來啟動它。  
+>  您只能從 [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] 命令提示字元啟動此工具。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。  
   
- 在命令列上，選項是由選項規範 \(短橫線 \(–\) 或正斜線 \(\/\)\) 後接選項名稱所構成。  選項名稱不可縮寫。  某些選項可接受於冒號 \(:\) 之後指定的引數。  除了在 \/COMMENT 選項中以引號括起來的字串之外，選項規格內均不允許有空格或 Tab 字元。  請以十進位數或 C 語言標記法指定數字引數。  選項名稱及其關鍵字或檔名引數並不區分大小寫，但是做為引數的識別項則必須區分大小寫。  
+ 命令列選項選項規範組成，破折號 （-） 或斜線 （/），後面接著選項的名稱。 選項名稱不能為縮寫。 某些選項可接受於冒號 （:） 之後指定為引數。 沒有空格或定位點內的選項規格，除了允許 /COMMENT 選項中有引號的字串內。 指定以十進位數或 C 語言標記法的數值引數。 選項名稱及其關鍵字或檔名引數並不區分大小寫，但做為引數的識別碼會區分大小寫。  
   
- 若要將檔案傳遞給連結器，請在命令列上的 LINK 命令之後指定檔名。  您可以在檔名指定絕對或相對路徑，您也可以在檔名中使用萬用字元。  如果您省略句號 \(.\) 和副檔名，LINK 會假設要尋找 .obj 檔案。  LINK 不使用副檔名或在缺少副檔名的情況下對檔案內容進行假設；它是藉由檢查檔案來判斷檔案的類型，並且進行相對的處理。  
+ 連結命令之後將檔案傳遞至連結器，請在命令列上指定檔名。 您可以指定為絕對或相對路徑與檔名，以及您可以使用萬用字元在檔名。 如果您省略的點 （.） 和檔案名稱副檔名，連結會假設.obj 為了尋找檔案。 連結未使用的副檔名或缺乏猜測內容的檔案。它會檢查它，來判斷檔案類型，並加以處理。  
   
- link.exe 傳回零代表成功 \(沒有錯誤\)。否則，連結器會傳回停止連結的錯誤編號。例如，如果連結器產生 LNK1104，連結器會傳回 1104。因此，在由連結器所傳回錯誤的最低錯誤編號是 1000。傳回值 128 代表作業系統或組態檔的組態問題；載入器也未載入 link.exe 或 c2.dll。  
+ link.exe 會傳回成功 （沒有錯誤） 的零。  否則，連結器會傳回停止連結的錯誤號碼。  例如，如果連結器產生 LNK1104，連結器會傳回 1104年。  因此，連結器發生錯誤時傳回的錯誤編號最小為 1000年。  傳回值為 128 代表作業系統或.config 檔案中，有設定問題載入器未載入 link.exe 或 c2.dll。  
   
-## 請參閱  
+## <a name="see-also"></a>請參閱  
  [設定連結器選項](../../build/reference/setting-linker-options.md)   
  [連結器選項](../../build/reference/linker-options.md)

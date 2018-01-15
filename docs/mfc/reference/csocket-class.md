@@ -31,11 +31,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67fa709c0f58becfa18b286ba9c84d01c4c853dc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ae8a30697783b478e9ffdb1c247f52d7b9f2ac2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csocket-class"></a>CSocket 類別
 衍生自`CAsyncSocket`、 繼承其封裝的 Windows 通訊端應用程式開發介面，並代表比更高的抽象層級`CAsyncSocket`物件。  
@@ -46,17 +47,17 @@ ms.lasthandoff: 10/24/2017
 class CSocket : public CAsyncSocket  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSocket::CSocket](#csocket)|建構 `CSocket` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSocket::Attach](#attach)|附加**通訊端**的控制代碼`CSocket`物件。|  
 |[CSocket::CancelBlockingCall](#cancelblockingcall)|取消目前正在進行封鎖呼叫。|  
@@ -64,9 +65,9 @@ class CSocket : public CAsyncSocket
 |[CSocket::FromHandle](#fromhandle)|將指標傳回至`CSocket`物件，指定**通訊端**處理。|  
 |[CSocket::IsBlocking](#isblocking)|決定封鎖的呼叫是否正在進行中。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CSocket::OnMessagePending](#onmessagepending)|等待封鎖的呼叫完成時呼叫的擱置中訊息的處理序。|  
   
@@ -238,7 +239,7 @@ virtual BOOL OnMessagePending();
   
  如需詳細資訊，請參閱[Windows Sockets： 使用通訊端與封存](../../mfc/windows-sockets-using-sockets-with-archives.md)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [CAsyncSocket 類別](../../mfc/reference/casyncsocket-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [CAsyncSocket 類別](../../mfc/reference/casyncsocket-class.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6bbd0adbfa7ccc51093ac087d908360b893ea518
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7794cea8906440c0adca94791d08e3ced6af747e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mxcsr"></a>MxCsr
 暫存器狀態也會包含 MxCsr。 呼叫慣例會將此暫存器分割為變動性部分與靜態部分。 動態部分所組成的 6 的狀態旗標，MXCSR [0:5]，而 MXCSR [6:15] 暫存器的其餘部分會被視為靜態。  
@@ -41,5 +42,5 @@ MXCSR[15]      : Flush to zero for masked underflow - 0 (off)
   
  除非特別函式的文件所述，您可以不進行任何假設不同的函式，MXCSR 動態部分的狀態。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [呼叫慣例](../build/calling-convention.md)

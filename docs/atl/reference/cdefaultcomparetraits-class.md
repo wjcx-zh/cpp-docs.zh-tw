@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a5a9a68bd220112d6e8065e273c47fdb7247096
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13c8bfd8ac02979f82e205ec86269b7ac40c8b08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits 類別
 這個類別會提供預設的比較函式項目。  
@@ -39,11 +40,11 @@ class CDefaultCompareTraits
  `T`  
  若要儲存在集合中的資料類型。  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDefaultCompareTraits::CompareElements](#compareelements)|（靜態）呼叫此函式可比較兩個項目相等。|  
 |[CDefaultCompareTraits::CompareElementsOrdered](#compareelementsordered)|（靜態）呼叫此函式可判斷大於且較少的項目。|  
@@ -102,5 +103,5 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 ### <a name="remarks"></a>備註  
  此函式的預設實作會使用`==`，  **\<** ，和 **>** 運算子。 物件的簡單資料類型以外，此函式可能需要覆寫。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)

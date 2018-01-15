@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c382f3a35b87dd6eeb21975ef692afd4127816d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 700b467065d17a61dcfabf9dcaa6577a7ecffc11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prolog-and-epilog"></a>初構和終解
 配置堆疊空間每個函式，呼叫其他函式，將儲存靜態暫存器，或使用例外狀況處理必須有個別的函式表格項目相關聯的回溯資料中所述的位址限制的初構 (請參閱[例外狀況處理 (x64)](../build/exception-handling-x64.md))。 初構儲存暫存器，在他們的住家地址中如有需要，將推入靜態暫存器堆疊上的引數、 區域變數和暫存檔，配置堆疊的固定的部分，並選擇性地建立框架指標。 關聯的回溯資料必須描述初構中的動作，因此必須提供要復原的初構程式碼的效果所需的資訊。  
@@ -60,7 +61,7 @@ lea      R13, 128[RSP]
   
  終解程式碼必須遵循嚴格的回溯程式碼的規則集合，才能可靠地回溯例外狀況和插斷。 如此能縮短的回溯資料所需，因為不需要任何額外的資料來描述每個終解。 相反地，回溯程式碼可以判斷終解正在執行的掃描來識別終解程式碼資料流。  
   
- 如果沒有框架指標用在函式，則終解必須先解除配置堆疊的固定的部分、 取出靜態暫存器，並將控制權傳回給呼叫的函式。 例如：  
+ 如果沒有框架指標用在函式，則終解必須先解除配置堆疊的固定的部分、 取出靜態暫存器，並將控制權傳回給呼叫的函式。 例如，套用至物件的  
   
 ```  
 add      RSP, fixed-allocation-size  
@@ -98,5 +99,5 @@ ret
   
  遵循這些規則可讓以判斷終解目前正在執行，並模擬的終解中，以重新建立的內容呼叫的函式的其餘部分執行的回溯程式碼。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [x64 軟體慣例](../build/x64-software-conventions.md)

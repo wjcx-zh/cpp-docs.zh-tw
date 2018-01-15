@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: bb5548d74544ba4277fa1d901ffa9f0b91b83f2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13cbe4806d8b3960cbf80df41c7cce6e7657ba7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exit-codes-from-nmake"></a>NMAKE 的結束代碼
 NMAKE 會傳回下列結束代碼：  
@@ -36,5 +37,5 @@ NMAKE 會傳回下列結束代碼：
 |4|系統錯誤： 記憶體不足|  
 |255|目標不是最新的 （只有在使用 /Q 時才會發出）|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [執行 NMAKE](../build/running-nmake.md)

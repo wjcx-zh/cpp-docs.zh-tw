@@ -29,11 +29,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1e1d0c5f76c0eb71b631ef9bffbc1e60e5ceb069
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6866ccaac789ab2cd5af4703d7f81e30f554db84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze (停用語言擴充功能)
 **/Za**編譯器選項會發出錯誤 ANSI C89 或 ISO C + + 11 與不相容的語言建構的。 **/Ze**編譯器選項，預設會啟用，啟用 Microsoft 擴充功能。  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/24/2017
   
 -   請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)   
- [/Zc （一致性）](../../build/reference/zc-conformance.md)
+ [/Zc (一致性)](../../build/reference/zc-conformance.md)

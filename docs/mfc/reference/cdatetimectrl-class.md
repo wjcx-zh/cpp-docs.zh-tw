@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ced7bfbb2cedd8cad4353cdbb2d5627864de5ad7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3359b506217d2828207e06341fbf1fe53b3c0719
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl 類別
 封裝日期與時間選擇器控制項的功能。  
@@ -66,17 +67,17 @@ ms.lasthandoff: 10/24/2017
 class CDateTimeCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|建構 `CDateTimeCtrl` 物件。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|關閉目前的日期和時間選擇器控制項。|  
 |[CDateTimeCtrl::Create](#create)|建立日期和時間選擇器控制項，並將它附加至`CDateTimeCtrl`物件。|  
@@ -458,7 +459,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `dwStyle`|新的月份行事曆控制項樣式，也就是的位元組合 (OR) 月份行事曆控制項樣式。 如需詳細資訊，請參閱[月份行事曆控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。|  
+|[輸入] `dwStyle`|新的月份行事曆控制項樣式，也就是的位元組合 (OR) 月份行事曆控制項樣式。 如需詳細資訊，請參閱[月份行事曆控制項樣式](http://msdn.microsoft.com/library/windows/desktop/bb760919)。|  
   
 ### <a name="return-value"></a>傳回值  
  下拉式月曆控制項先前的樣式。  
@@ -531,7 +532,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 ### <a name="example"></a>範例  
  [!code-cpp[NVC_MFC_CDateTimeCtrl#8](../../mfc/reference/codesnippet/cpp/cdatetimectrl-class_13.cpp)]  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [MFC 範例 CMNCTRL1](../../visual-cpp-samples.md)   
  [CWnd 類別](../../mfc/reference/cwnd-class.md)   
  [階層架構圖表](../../mfc/hierarchy-chart.md)   

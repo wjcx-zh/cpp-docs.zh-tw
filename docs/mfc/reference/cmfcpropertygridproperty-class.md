@@ -177,11 +177,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b5f31a6c16e14152f624c3bc6225337621cc887b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b60e2355636ca0cf30ed0a0141ec07f1312f760f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty 類別
 A`CMFCPropertyGridProperty`物件都代表屬性清單控制項中的清單項目。  
@@ -194,18 +195,18 @@ A`CMFCPropertyGridProperty`物件都代表屬性清單控制項中的清單項�
 class CMFCPropertyGridProperty : public CObject  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|建構 `CMFCPropertyGridProperty` 物件。|  
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::AddOption](#addoption)|將新的清單項目加入至屬性清單控制項。|  
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|將項目子系加入至屬性。|  
@@ -276,9 +277,9 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::SetValue](#setvalue)|設定屬性方格中屬性的值。|  
 |[CMFCPropertyGridProperty::Show](#show)|顯示或隱藏屬性。|  
   
-### <a name="protected-methods"></a>受保護的方法  
+### <a name="protected-methods"></a>保護方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|由架構呼叫以將下拉式方塊加入至屬性。|  
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|指出屬性是否包含一個按鈕。|  
@@ -291,7 +292,7 @@ class CMFCPropertyGridProperty : public CObject
   
 ### <a name="data-members"></a>資料成員  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|類型 double 的值的格式字串。|  
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Float 類型值的格式字串。|  
@@ -326,10 +327,10 @@ BOOL AddOption(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszOption`  
+ [輸入] `lpszOption`  
  清單項目 （選項），來加入。  
   
- [in] `bInsertUnique`  
+ [輸入] `bInsertUnique`  
  `TRUE`將清單加入只在已經存在; 如果項目否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -345,7 +346,7 @@ BOOL AddSubItem(CMFCPropertyGridProperty* pProp);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pProp`  
+ [輸入] `pProp`  
  要加入屬性的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -397,7 +398,7 @@ void AllowEdit(BOOL bAllow=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bAllow`  
+ [輸入] `bAllow`  
  `TRUE`若要將屬性設為可編輯;`FALSE`屬性設為唯讀。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -423,31 +424,31 @@ CMFCPropertyGridProperty(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strGroupName`  
+ [輸入] `strGroupName`  
  群組名稱。 A*群組*是在屬性方格控制項的相關屬性的集合。 如果控制項以階層方式，顯示*群組名稱*會顯示為群組的上方資料列中的類別目錄標題。  
   
- [in] `dwData`  
+ [輸入] `dwData`  
  應用程式特定資料，例如整數或其他與屬性相關聯的資料指標。 預設值為 0。  
   
- [in] `strName`  
+ [輸入] `strName`  
  屬性的名稱。  
   
- [in] `varValue`  
+ [輸入] `varValue`  
  屬性值。  
   
- [in] `lpszDescr`  
+ [輸入] `lpszDescr`  
  屬性描述。 預設值是 `NULL`。  
   
- [in] `lpszEditMask`  
+ [輸入] `lpszEditMask`  
  如果屬性是遮罩的編輯控制項編輯遮罩。 預設值是 `NULL`。  
   
- [in] `lpszEditTemplate`  
+ [輸入] `lpszEditTemplate`  
  如果屬性是遮罩的編輯控制項編輯範本。 預設值是 `NULL`。  
   
- [in] `lpszValidChars`  
+ [輸入] `lpszValidChars`  
  如果屬性是遮罩的編輯控制項的有效字元的清單。 預設值是 `NULL`。  
   
- [in] `bIsValueList`  
+ [輸入] `bIsValueList`  
  `TRUE`如果屬性表示的值; 清單`FALSE`如果屬性表示的單一值。 預設值是 `FALSE`。  
   
 ### <a name="remarks"></a>備註  
@@ -462,10 +463,10 @@ virtual CComboBox* CreateCombo(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pWndParent`  
+ [輸入] `pWndParent`  
  下拉式方塊的父視窗的指標。  
   
- [in] `rect`  
+ [輸入] `rect`  
  下拉式方塊的週框。  
   
 ### <a name="return-value"></a>傳回值  
@@ -483,10 +484,10 @@ virtual CWnd* CreateInPlaceEdit(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rectEdit`  
+ [輸入] `rectEdit`  
  可編輯的控制項目的週框。  
   
- [in] `bDefaultFormat`  
+ [輸入] `bDefaultFormat`  
  `TRUE`若要使用的預設屬性的格式設定的可編輯的控制項; 文字否則， `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -505,7 +506,7 @@ virtual CSpinButtonCtrl* CreateSpinControl(CRect rectSpin);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `rectSpin`  
+ [輸入] `rectSpin`  
  矩形，定義建立的可編輯的微調按鈕控制項的位置。  
   
 ### <a name="return-value"></a>傳回值  
@@ -522,7 +523,7 @@ void Enable(BOOL bEnable=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`若要啟用的屬性。`FALSE`來停用的屬性。 已停用的屬性不回應滑鼠或鍵盤輸入。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -538,13 +539,13 @@ void EnableSpinControl(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bEnable`  
+ [輸入] `bEnable`  
  `TRUE`若要啟用微調按鈕控制項。`FALSE`停用微調按鈕控制項。 預設值是 `TRUE`。  
   
- [in] `nMin`  
+ [輸入] `nMin`  
  微調按鈕控制項的最小的值。 預設值為 0。  
   
- [in] `nMax`  
+ [輸入] `nMax`  
  微調按鈕控制項的最大值。 預設值為 0。  
   
 ### <a name="remarks"></a>備註  
@@ -560,7 +561,7 @@ void Expand(BOOL bExpand=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bExpand`  
+ [輸入] `bExpand`  
  `TRUE`若要展開的屬性。若要摺疊屬性，則為 FALSE。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -615,7 +616,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `bIncludeHidden`|`TRUE`要納入計數; 隱藏的子項目否則， `FALSE`。 預設值是 `TRUE`。|  
+|[輸入] `bIncludeHidden`|`TRUE`要納入計數; 隱藏的子項目否則， `FALSE`。 預設值是 `TRUE`。|  
   
 ### <a name="return-value"></a>傳回值  
  展開子的項目數目。  
@@ -734,7 +735,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nIndex`  
+ [輸入] `nIndex`  
  要擷取之屬性的以零為起始的索引。 這個參數是不正確，如果它小於零或大於或等於子屬性數目。  
   
 ### <a name="return-value"></a>傳回值  
@@ -810,16 +811,16 @@ CMFCPropertyGridProperty* HitTest(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  要測試，請在工作區座標的點。 此參數通常是目前的滑鼠指標位置。  
   
- [in] `pt`  
+ [輸入] `pt`  
  要測試，請在工作區座標的點。  
   
  [輸出] `pnArea`  
  此方法傳回時，表示包含指定的點的區域。 如需詳細資訊，請參閱＜備註＞。 預設值是 `NULL`。  
   
- [in] `bPropsOnly`  
+ [輸入] `bPropsOnly`  
  `TRUE`若要測試的任何區域中屬性的控制項;`FALSE`測試只描述區域。 預設值是 `FALSE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -830,7 +831,7 @@ CMFCPropertyGridProperty* HitTest(
   
  下表列出的值會傳回給`pnArea`參數。  
   
-|區域圖|說明|  
+|區域圖|描述|  
 |----------|-----------------|  
 |`ClickArea::ClickExpandBox`|展開方塊控制項，指定以加號 （+）。|  
 |`ClickArea::ClickName`|屬性名稱。|  
@@ -951,7 +952,7 @@ BOOL IsSubItem(CMFCPropertyGridProperty* pProp) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pProp`  
+ [輸入] `pProp`  
  指標的屬性。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1025,7 +1026,7 @@ virtual void OnClickButton(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  用戶端座標中的點。  
   
 ### <a name="remarks"></a>備註  
@@ -1042,7 +1043,7 @@ virtual void OnClickName(CPoint C);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `C`|用戶端座標中的點。|  
+|[輸入] `C`|用戶端座標中的點。|  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法沒有任何作用。  
@@ -1057,10 +1058,10 @@ virtual BOOL OnClickValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiMsg`  
+ [輸入] `uiMsg`  
  滑鼠訊息。  
   
- [in] `point`  
+ [輸入] `point`  
  用戶端座標中的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1088,10 +1089,10 @@ virtual HBRUSH OnCtlColor(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `nCtlColor`  
+ [輸入] `nCtlColor`  
  （不使用這個參數。）  
   
 ### <a name="return-value"></a>傳回值  
@@ -1107,7 +1108,7 @@ virtual BOOL OnDblClk(CPoint point);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `point`  
+ [輸入] `point`  
  用戶端座標中的點。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1135,10 +1136,10 @@ virtual void OnDrawButton(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rectButton`  
+ [輸入] `rectButton`  
  週框矩形，指定繪製按鈕的位置。  
   
 ### <a name="remarks"></a>備註  
@@ -1153,10 +1154,10 @@ virtual void OnDrawDescription(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rect`  
+ [輸入] `rect`  
  週框矩形，指定要繪製的屬性描述。  
   
 ### <a name="remarks"></a>備註  
@@ -1172,10 +1173,10 @@ virtual void OnDrawExpandBox(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rectExpand`  
+ [輸入] `rectExpand`  
  週框矩形，指定繪製展開方塊控制項的位置。  
   
 ### <a name="remarks"></a>備註  
@@ -1191,10 +1192,10 @@ virtual void OnDrawName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rect`  
+ [輸入] `rect`  
  週框矩形，指定要繪製的屬性名稱。  
   
 ### <a name="remarks"></a>備註  
@@ -1209,10 +1210,10 @@ virtual void OnDrawValue(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pDC`  
+ [輸入] `pDC`  
  裝置內容的指標。  
   
- [in] `rect`  
+ [輸入] `rect`  
  週框矩形，指定要繪製的屬性值。  
   
 ### <a name="remarks"></a>備註  
@@ -1225,7 +1226,7 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lptClick`  
+ [輸入] `lptClick`  
  （不使用這個參數。）用戶端座標中的點，指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1258,7 +1259,7 @@ virtual BOOL OnKillFocus(CWnd*);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `CWnd`|（不使用）。視窗的指標。|  
+|[輸入] `CWnd`|(未使用。)視窗的指標。|  
   
 ### <a name="return-value"></a>傳回值  
  這個方法一律會傳回 `TRUE`。  
@@ -1274,7 +1275,7 @@ virtual void OnKillSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `CMFCPropertyGridProperty*`  
+ [輸入] `CMFCPropertyGridProperty*`  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法沒有任何作用。  
@@ -1287,7 +1288,7 @@ virtual void OnPosSizeChanged(CRect);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `CRect`  
+ [輸入] `CRect`  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法沒有任何作用。  
@@ -1303,7 +1304,7 @@ virtual void OnRClickName(CPoint C);
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `C`|用戶端座標中的點。|  
+|[輸入] `C`|用戶端座標中的點。|  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法沒有任何作用。  
@@ -1321,8 +1322,8 @@ virtual void OnRClickValue(
   
 |參數|描述|  
 |---------------|-----------------|  
-|[in] `C`|用戶端座標中的點。|  
-|[in] `B`|布林值。|  
+|[輸入] `C`|用戶端座標中的點。|  
+|[輸入] `B`|布林值。|  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法不會執行任何動作和`B`參數沒有任何預先定義的用途。  
@@ -1358,7 +1359,7 @@ virtual void OnSetSelection(CMFCPropertyGridProperty*);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `CMFCPropertyGridProperty*`  
+ [輸入] `CMFCPropertyGridProperty*`  
   
 ### <a name="remarks"></a>備註  
  根據預設，這個方法沒有任何作用。  
@@ -1383,7 +1384,7 @@ virtual BOOL PushChar(UINT nChar);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nChar`  
+ [輸入] `nChar`  
  字元。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1421,10 +1422,10 @@ BOOL RemoveSubItem(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pProp`  
+ [輸入] `pProp`  
  指標的子屬性的項目。  
   
- [in] `bDelete`  
+ [輸入] `bDelete`  
  `TRUE`若要刪除所指定的屬性物件`pProp`參數，否則`FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="return-value"></a>傳回值  
@@ -1449,7 +1450,7 @@ void SetData(DWORD_PTR dwData);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `dwData`  
+ [輸入] `dwData`  
  特定應用程式的 32 位元值，例如整數或其他資料的指標。  
   
 ### <a name="remarks"></a>備註  
@@ -1463,7 +1464,7 @@ void SetDescription(const CString& strDescr);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `strDescr`  
+ [輸入] `strDescr`  
  描述目前屬性的文字。  
   
 ### <a name="remarks"></a>備註  
@@ -1478,10 +1479,10 @@ void SetName(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszName`  
+ [輸入] `lpszName`  
  屬性名稱。  
   
- [in] `bRedraw`  
+ [輸入] `bRedraw`  
  `TRUE`若要立即; 重繪屬性否則， `FALSE`。 預設值是 `TRUE`。  
   
 ### <a name="remarks"></a>備註  
@@ -1494,7 +1495,7 @@ virtual void SetOriginalValue(const COleVariant& varValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `varValue`  
+ [輸入] `varValue`  
  一個值。  
   
 ### <a name="remarks"></a>備註  
@@ -1508,7 +1509,7 @@ virtual void SetValue(const _variant_t& varValue);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `varValue`  
+ [輸入] `varValue`  
  值的參考。  
   
 ### <a name="remarks"></a>備註  
@@ -1523,13 +1524,13 @@ void Show(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bShow`  
+ [輸入] `bShow`  
  `TRUE`若要顯示之目前屬性和其子項目。`FALSE`要隱藏目前的屬性和其子項目。 預設值是 `TRUE`。  
   
- [in] `bAdjustLayout`  
+ [輸入] `bAdjustLayout`  
  `TRUE`若要重新計算如何繪製屬性的值與標籤，然後繪製的屬性。`FALSE`用來繪製之屬性的現有的計算。 預設值是 `TRUE`。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CMFCPropertyGridCtrl 類別](../../mfc/reference/cmfcpropertygridctrl-class.md)

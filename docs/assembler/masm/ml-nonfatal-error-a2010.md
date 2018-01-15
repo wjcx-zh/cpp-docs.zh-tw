@@ -15,16 +15,17 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d81c3c4ea3dfd91344f54b8e8157d6f4f9608f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d0a2e5625166b9325931d905deb38b0147972816
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ml-nonfatal-error-a2010"></a>ML 非嚴重錯誤 A2010
 **無效的型別運算式**  
   
  運算元[THIS](../../assembler/masm/operator-this.md)或[PTR](../../assembler/masm/operator-ptr.md)不是有效的型別運算式。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 693a0ce139c35b804325e9ef5dcb7beb1e4da6a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 566d9fac60f082b8dbf46724b463a9ac07732449
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cglobalheap-class"></a>CGlobalHeap 類別
 這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) Win32 全域堆積函式的使用。  
@@ -39,11 +40,11 @@ ms.lasthandoff: 10/24/2017
 class CGlobalHeap : public IAtlMemMgr
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[Cglobalheap:: Allocate](#allocate)|呼叫這個方法來配置記憶體區塊。|  
 |[Cglobalheap:: Free](#free)|呼叫此方法以釋放此記憶體管理員所配置的記憶體區塊。|  
@@ -139,7 +140,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
   
  使用實作[GlobalReAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366590)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../../atl/atl-class-overview.md)   
  [CComHeap 類別](../../atl/reference/ccomheap-class.md)   
  [CWin32Heap 類別](../../atl/reference/cwin32heap-class.md)   

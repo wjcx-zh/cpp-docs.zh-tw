@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bef78ba6047305ccb20e5740ae03535ca2c366b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be6aff46df500a55665f85f6f462514985885b9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-counting"></a>參考計數
 COM 本身不會自動嘗試從記憶體移除物件，其認定不再使用物件時。 相反地，物件的程式設計人員必須移除未使用的物件。 程式設計人員決定是否可以移除物件根據參考計數。  
@@ -41,7 +42,7 @@ COM 本身不會自動嘗試從記憶體移除物件，其認定不再使用物�
 > [!NOTE]
 >  當`CComObject`-衍生的物件建構使用**新**運算子，參考計數為 0。 因此，呼叫`AddRef`必須成功建立後進行`CComObject`-衍生物件。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [COM 簡介](../atl/introduction-to-com.md)   
  [管理透過參考計數的物件存留期](http://msdn.microsoft.com/library/windows/desktop/ms687260)
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,35 +24,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSid class
+dev_langs: C++
+helpviewer_keywords: CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f1e731c82892c5622dcb437498d2d318086f66d8
-ms.contentlocale: zh-tw
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csid-class"></a>CSid 類別
 這個類別是包裝函式`SID`（安全性識別碼） 結構。  
@@ -67,7 +50,7 @@ ms.lasthandoff: 03/31/2017
 class CSid
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-typedefs"></a>公用 Typedefs  
   
@@ -122,10 +105,10 @@ class CSid
   
  應用程式不應修改`SID`結構直接，但是改為使用這個包裝函式中提供的方法。 另請參閱[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)， [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)， [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)，和[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。  
   
- 在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]。  
+ 如需在 Windows 中的存取控制模型的簡介，請參閱[存取控制](http://msdn.microsoft.com/library/windows/desktop/aa374860)Windows SDK 中。  
   
 ## <a name="requirements"></a>需求  
- **標頭︰** atlsecurity.h  
+ **標頭：** atlsecurity.h  
   
 ##  <a name="accountname"></a>CSid::AccountName  
  傳回與相關聯的帳戶名稱`CSid`物件。  
@@ -236,10 +219,10 @@ bool EqualPrefix(const CSid& rhs) const throw();
  `SID` （安全性識別碼） 的結構或`CSid`来比較的物件。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**成功時， **false**上失敗。  
+ 傳回**true**成功時， **false**失敗。  
   
 ### <a name="remarks"></a>備註  
- 請參閱[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)中[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]如需詳細資訊。  
+ 請參閱[EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621)更多詳細資料的 Windows SDK 中。  
   
 ##  <a name="getlength"></a>CSid::GetLength  
  傳回的長度`CSid`物件。  
@@ -352,7 +335,7 @@ bool LoadAccount(
  指標[SID](http://msdn.microsoft.com/library/windows/desktop/aa379594\(v=vs.85\).aspx)結構。  
   
 ### <a name="return-value"></a>傳回值  
- 傳回**true**成功時， **false**上失敗。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
+ 傳回**true**成功時， **false**失敗。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。  
   
 ### <a name="remarks"></a>備註  
  `LoadAccount`嘗試尋找指定之名稱的安全性識別碼。 請參閱[LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx)如需詳細資訊。  
@@ -531,9 +514,8 @@ SID_NAME_USE SidNameUse() const throw();
 ### <a name="remarks"></a>備註  
  呼叫[CSid::LoadAccount](#loadaccount)更新`CSid`物件之前先呼叫`SidNameUse`来傳回其狀態。 `SidNameUse`不會變更物件的狀態 (藉由呼叫至**LookupAccountName**或**LookupAccountSid**)，但只會傳回目前的狀態。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [安全性範例](../../visual-cpp-samples.md)   
  [類別概觀](../../atl/atl-class-overview.md)   
  [安全性全域函式](../../atl/reference/security-global-functions.md)   
  [運算子](../../atl/reference/atl-operators.md)
-

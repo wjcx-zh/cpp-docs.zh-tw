@@ -1,49 +1,47 @@
 ---
-title: ".PUSHREG | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".PUSHREG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".PUSHREG directive"
+title: ".PUSHREG |Microsoft 文件"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .PUSHREG
+dev_langs: C++
+helpviewer_keywords: .PUSHREG directive
 ms.assetid: e0c83758-dfed-40ea-afe6-cb833c8d2d30
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f85e1082c38eb2880ff6ad3c15b4842ebf015ca6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 12/21/2017
 ---
-# .PUSHREG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-會產生`UWOP_PUSH_NONVOL`回溯程式碼項目，針對指定的暫存器使用目前的初構中位移的號碼。  
+# <a name="pushreg"></a>.PUSHREG
+會產生`UWOP_PUSH_NONVOL`針對指定的暫存器號碼使用目前的時差，以序言回溯程式碼項目。  
   
-## 語法  
+## <a name="syntax"></a>語法  
   
 ```  
 .PUSHREG register  
 ```  
   
-## 備註  
- .PUSHREG 允許 ml64.exe 洏峈會指定如何框架函式回溯時，以及只允許在初構中，從延伸[PROC](../../assembler/masm/proc.md)框架宣告，以[.ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。  這些指示詞並不會產生程式碼路徑。 它們只會產生`.xdata`和`.pdata`。  .PUSHREG 前面必須有實際實作卸載動作的指示進行。  它是很好的作法，以包裝回溯指示詞，並將程式碼是在巨集中的回溯可確保合約。  
+## <a name="remarks"></a>備註  
+ .PUSHREG 允許 ml64.exe 使用者指定框架的函式的回溯時，如何，而且只允許序言，會從延伸內[PROC](../../assembler/masm/proc.md)框架宣告[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼。它們只會產生`.xdata`和`.pdata`。 .PUSHREG 之前應該加實際實作卸載動作的指示。 它是最好的作法是包裝回溯指示詞，以確保協議為了在巨集中的回溯程式碼。  
   
- 如需詳細資訊，請參閱 [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
+ 如需詳細資訊，請參閱[MASM (ml64.exe) x64](../../assembler/masm/masm-for-x64-ml64-exe.md)。  
   
-## 範例  
+## <a name="sample"></a>範例  
   
-### 描述  
- 下列範例會示範如何將推入靜態 tegisters。  
+### <a name="description"></a>描述  
+ 下列範例會示範如何推入靜態 tegisters。  
   
-### 程式碼  
+### <a name="code"></a>程式碼  
   
 ```  
 ; ml64 ex1.asm /link /entry:Example1 /SUBSYSTEM:CONSOLE  
@@ -65,5 +63,5 @@ _text ENDS
 END  
 ```  
   
-## 請參閱  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>請參閱  
+ [指示詞參考](../../assembler/masm/directives-reference.md)

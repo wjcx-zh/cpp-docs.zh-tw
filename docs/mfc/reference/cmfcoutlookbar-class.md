@@ -49,11 +49,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00988ef4a0b70561ec3a5687502ddae95508dad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 257b9157059f20d9023abee092c38ad8c1a57167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar 類別
 具有 Microsoft Outlook 2000 或 Outlook 2003 [ **巡覽窗格** ] 視覺外觀的索引標籤式窗格。 `CMFCOutlookBar`物件包含[CMFCOutlookBarTabCtrl 類別](../../mfc/reference/cmfcoutlookbartabctrl-class.md)物件及一系列的索引標籤。 索引標籤可以是[CMFCOutlookBarPane 類別](../../mfc/reference/cmfcoutlookbarpane-class.md)物件或`CWnd`-衍生物件。 對於使用者，Outlook 功能區會顯示為一系列按鈕與一個顯示區域。 當使用者按一下按鈕時，對應的控制項或按鈕窗格隨即顯示。  
@@ -64,18 +65,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCOutlookBar : public CBaseTabbedPane  
 ```  
   
-## <a name="members"></a>Members  
+## <a name="members"></a>成員  
   
 ### <a name="public-constructors"></a>公用建構函式  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |`CMFCOutlookBar::CMFCOutlookBar`|預設建構函式。|  
 |`CMFCOutlookBar::~CMFCOutlookBar`|解構函式。|  
   
 ### <a name="public-methods"></a>公用方法  
   
-|名稱|說明|  
+|名稱|描述|  
 |----------|-----------------|  
 |[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|指定是否可以終結空的索引標籤式的窗格。 (覆寫[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane)。)|  
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|判斷另一個窗格是否可以固定到 Outlook 功能區窗格。 （覆寫 CDockablePane::CanAcceptPane）。|  
@@ -207,7 +208,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  正在停駐此窗格的另一個窗格的指標。  
   
 ### <a name="return-value"></a>傳回值  
@@ -250,25 +251,25 @@ virtual BOOL Create(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszCaption`  
+ [輸入] `lpszCaption`  
  指定的視窗標題。  
   
- [in] `pParentWnd`  
+ [輸入] `pParentWnd`  
  指定的父視窗的指標。 它不得為 NULL。  
   
- [in] `rect`  
+ [輸入] `rect`  
  指定軸的大小和位置單位為像素 outlook。  
   
- [in] `nID`  
+ [輸入] `nID`  
  指定控制項 id。 必須與其他控制項的應用程式中使用的 Id 不同。  
   
- [in] `dwStyle`  
+ [輸入] `dwStyle`  
  指定所要的控制項列樣式。 可能的值，請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。  
   
- [in] `dwControlBarStyle`  
+ [輸入] `dwControlBarStyle`  
  指定特殊的程式庫定義樣式。  
   
- [in] `pContext`  
+ [輸入] `pContext`  
  建立內容。  
   
 ### <a name="return-value"></a>傳回值  
@@ -297,16 +298,16 @@ CMFCOutlookBarPane* CreateCustomPage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `lpszPageName`  
+ [輸入] `lpszPageName`  
  頁面的標籤。  
   
- [in] `bActivatePage`  
+ [輸入] `bActivatePage`  
  如果`TRUE`，頁面會變成作用中，在建立時。  
   
- [in] `dwEnabledDocking`  
+ [輸入] `dwEnabledDocking`  
  卸離頁面時，指定已啟用的停駐邊 CBRS_ALIGN_ 旗標的組合。  
   
- [in] `bEnableTextLabels`  
+ [輸入] `bEnableTextLabels`  
  如果`TRUE`，啟用頁面上的按鈕文字標籤。  
   
 ### <a name="return-value"></a>傳回值  
@@ -347,16 +348,16 @@ virtual BOOL FloatTab(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pBar`  
+ [輸入] `pBar`  
  Float 窗格指標。  
   
- [in] `nTabID`  
+ [輸入] `nTabID`  
  浮動索引標籤以零為起始的索引。  
   
- [in] `dockMethod`  
+ [輸入] `dockMethod`  
  指定要用來讓窗格浮動方法。  如需詳細資訊，請參閱[cbasetabbedpane:: Floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)。  
   
- [in] `bHide`  
+ [輸入] `bHide`  
  `TRUE`若要隱藏窗格之前浮點數;否則， `FALSE`。 不同於這個方法的基底類別版本，此參數沒有預設值。  
   
 ### <a name="return-value"></a>傳回值  
@@ -422,7 +423,7 @@ virtual void OnAfterAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nPage`  
+ [輸入] `nPage`  
  索引標籤頁已成為作用中以零為起始的索引。  
   
 ### <a name="remarks"></a>備註  
@@ -436,7 +437,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `nPage`  
+ [輸入] `nPage`  
  設定作用中的索引標籤頁的以零為起始的索引。  
   
 ### <a name="return-value"></a>傳回值  
@@ -452,7 +453,7 @@ virtual void OnScroll(BOOL bDown);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bDown`  
+ [輸入] `bDown`  
  `TRUE`如果捲動 outlook 功能區，或`FALSE`如果它向上捲動。  
   
 ### <a name="remarks"></a>備註  
@@ -467,10 +468,10 @@ BOOL RemoveCustomPage(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `uiPage`  
+ [輸入] `uiPage`  
  父 Outlook 視窗中頁面的以零為起始的索引。  
   
- [in] `pTargetWnd`  
+ [輸入] `pTargetWnd`  
  Pointerto 父 Outlook 視窗。  
   
 ### <a name="return-value"></a>傳回值  
@@ -493,10 +494,10 @@ void SetButtonsFont(
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `pFont`  
+ [輸入] `pFont`  
  指定新的字型。  
   
- [in] `bRedraw`  
+ [輸入] `bRedraw`  
  如果`TRUE`，將會重繪 outlook 功能區。  
   
 ### <a name="remarks"></a>備註  
@@ -510,7 +511,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 ```  
   
 ### <a name="parameters"></a>參數  
- [in] `bMode2003`  
+ [輸入] `bMode2003`  
  如果為 TRUE，則會啟用 Office 2003 模式。  
   
 ### <a name="remarks"></a>備註  
@@ -521,7 +522,7 @@ void SetMode2003(BOOL bMode2003=TRUE);
 > [!NOTE]
 >  之前必須先呼叫此函式[CMFCOutlookBar::Create](#create)。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [階層架構圖表](../../mfc/hierarchy-chart.md)   
  [類別](../../mfc/reference/mfc-classes.md)   
  [CBaseTabbedPane 類別](../../mfc/reference/cbasetabbedpane-class.md)   

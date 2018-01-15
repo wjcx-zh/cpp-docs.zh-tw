@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7c94da1fad52999a05f5da1789ccf1b639009db
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5ea122780f3735980616c8ab6492c58dfb31a3d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tear-off-interfaces-classes"></a>Tear-off 介面類別
 下列類別會提供 tear-off 介面的支援：  
@@ -30,6 +31,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [CComCachedTearOffObject](../atl/reference/ccomcachedtearoffobject-class.md)實作**IUnknown** 「 快取的 「 分割介面。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

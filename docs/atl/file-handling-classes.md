@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bdb64cc1897ec6a08c64d081779132f40fa36f49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96391d1a887f9799e8bd6def11eb2c60d428a590
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling-classes"></a>檔案處理類別
 這些類別會提供方法來處理檔案、 暫存檔案，以及記憶體對應檔。  
@@ -31,6 +32,6 @@ ms.lasthandoff: 10/24/2017
   
 -   [CAtlTemporaryFile](../atl/reference/catltemporaryfile-class.md)這個類別提供方法，建立和使用的暫存檔案。  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [類別概觀](../atl/atl-class-overview.md)
 

@@ -14,11 +14,12 @@ caps.latest.revision: "64"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50589e18914ed452381a416cfb0f59d87b4be6a3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec2b8f0f05da535fd6a4f212a08af847c997a860
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 本文包含編譯器選項的分類清單。 如需依字母順序排列的清單，請參閱 [Compiler Options Listed Alphabetically](../../build/reference/compiler-options-listed-alphabetically.md)。  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/24/2017
 |[/Qpar](../../build/reference/qpar-auto-parallelizer.md)|啟用迴圈自動平行處理。|  
 |[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)|啟用自動平行處理的報告層級。|  
 |[/Qsafe_fp_loads](../../build/reference/qsafe-fp-loads.md)|使用浮點值的整數移動指令，並停用特定浮點數負載最佳化。|  
-|[/Qvec-report （自動向量化工具報告層級）](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|啟用自動向量化的報告層級。|  
+|[/Qvec-report (自動向量化工具報告層級)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)|啟用自動向量化的報告層級。|  
 |[/RTC](../../build/reference/rtc-run-time-error-checks.md)|啟用執行階段錯誤檢查。|  
 |[/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|  
   
@@ -219,7 +220,7 @@ ms.lasthandoff: 10/24/2017
 |[/Ze](../../build/reference/za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|  
 |[/Zg](../../build/reference/zg-generate-function-prototypes.md)|已從 Visual C++ 2015 移除。 產生函式原型。|  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)   
  [編譯器選項](../../build/reference/compiler-options.md)   
  [設定編譯器選項](../../build/reference/setting-compiler-options.md)

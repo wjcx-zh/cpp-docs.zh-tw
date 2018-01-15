@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20557bf243db1c004d6ec62dcb589cfb8605a285
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87846cc3b7887cd763c1b1707118a9350de55038
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack"></a>.STACK
 當搭配[。模型](../../assembler/masm/dot-model.md)，定義堆疊區段 （使用堆疊的區段名稱）。 選擇性`size`指定堆疊 （預設值是 1,024） 的位元組數目。 `.STACK`指示詞就會自動關閉堆疊陳述式。  
@@ -31,5 +32,5 @@ ms.lasthandoff: 10/24/2017
 .STACK [[size]]  
 ```  
   
-## <a name="see-also"></a>另請參閱  
+## <a name="see-also"></a>請參閱  
  [指示詞參考](../../assembler/masm/directives-reference.md)
